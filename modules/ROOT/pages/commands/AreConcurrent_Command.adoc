@@ -1,0 +1,22 @@
+ +
+
+AreConcurrent( <Line>, <Line>, <Line> )::
+  Decides if the lines are concurrent. If the lines are parallel, they
+  considered to have a common point in infinity, thus this command
+  returns _true_ in this case.
+
+Normally this command computes the result numerically. This behavior can
+be changed by using the link:/en/Prove_Command[Prove] command.
+
+[.block-content]#*Example:*
+`AreConcurrent(Line((1, 2), (3, 4)), Line((1, 2), (3, 5)), Line((1, 2), (3, 6)))`
+yields _true_ since all three lines contain the point (1,2).#
+
+[.block-contents]# *Note:* See also
+link:/en/AreCollinear_Command[AreCollinear],
+link:/en/AreConcyclic_Command[AreConcyclic],
+link:/en/AreCongruent_Command[AreCongruent],
+link:/en/AreEqual_Command[AreEqual],
+link:/en/ArePerpendicular_Command[ArePerpendicular],
+link:/en/AreParallel_Command[AreParallel],
+link:/en/IsTangent_Command[IsTangent] commands.#

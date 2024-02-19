@@ -1,0 +1,25 @@
+ +
+
+Axes( <Conic> )::
+  Returns the equations of the major and minor axes of a conic section.
+
+[.block-contents]# *Note:* See also
+link:/en/MajorAxis_Command[MajorAxis] and
+link:/en/MinorAxis_Command[MinorAxis] commands.#
+
+Axes( <Quadric> )::
+  Creates the 3 axes of the given quadric.
+  +
+  [.block-content]#*Example:* #
+
+  `Axes(x^2 + y^2 + z^2= 3)` returns the three lines
+
+  _a_: _X_ = (0, 0, 0) + _λ_ (1, 0, 0), _b_: _X_ = (0, 0, 0) + _λ_ (0,
+  1, 0) and _c_: _X_ = (0, 0, 0) + _λ_ (0, 0, 1)
+
+[.block-contents]# *Notes:* Specifically: #
+
+* if the given quadric is a _cylinder_, the command yields the two axes
+of the bottom circle and the rotation axis.
+* if the given quadric is a _sphere_, the command yields the three axes
+parallel to the coordinate system axes.

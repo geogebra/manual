@@ -1,0 +1,142 @@
+ +
+
+Angle( <Object> )
+
+* *Conic:* Returns the angle of twist of a conic section’s major axis
+(see command link:/en/Axes_Command[Axes]).
+
+[.block-content]#*Example:* `Angle(x²/4+y²/9=1)` yields _90°_ or _1.57_
+if the default angle unit is _radians_.#
+
+[.block-contents]# *Note:* It is not possible to change the Angle Unit
+to Radian in GeoGebra 5.0 Web and Tablet App Version.#
+
+* *Vector:* Returns the angle between the _x_‐axis and given vector.
+
+[.block-content]#*Example:* `Angle(Vector((1, 1)))` yields _45°_ or the
+corresponding value in _radians_.#
+
+* *Point:* Returns the angle between the _x_‐axis and the position
+vector of the given point.
+
+[.block-content]#*Example:* `Angle((1, 1))` yields _45°_ or the
+corresponding value in _radians_.#
+
+* *Number:* Converts the number into an angle (result in [0,360°] or
+[0,2π] depending on the default angle unit).
+
+[.block-content]#*Example:* `Angle(20)` yields _65.92°_ when the default
+unit for angles is _degrees_.#
+
+* *Polygon:* Creates all angles of a polygon in mathematically positive
+orientation (counter clockwise).
+
+[.block-content]#*Example:* `Angle(Polygon((4, 1), (2, 4), (1, 1)))`
+yields _56.31°_, _52.13°_ and _71.57°_ or the corresponding values in
+_radians_.#
+
+[.block-contents]# *Note:* If the polygon was created in counter
+clockwise orientation, you get the interior angles. If the polygon was
+created in clockwise orientation, you get the exterior angles.#
+
+ +
+
+Angle( <Vector>, <Vector> )::
+  Returns the angle between two vectors (result in [0,360°] or [0,2π]
+  depending on the default angle unit).
+  +
+  [.block-content]#*Example:* #
+
+  `Angle(Vector((1, 1)), Vector((2, 5)))` yields _23.2°_ or the
+  corresponding value in _radians_.
+
+ +
+
+Angle( <Line>, <Line> )::
+  Returns the angle between the direction vectors of two lines (result
+  in [0,360°] or [0,2π] depending on the default angle unit).
+  +
+  [.block-content]#*Example:* #
+
+  * `Angle(y = x + 2, y = 2x + 3)` yields _18.43°_ or the corresponding
+  value in _radians_..
+  * `Angle(Line((-2, 0, 0), (0, 0, 2)), Line((2, 0, 0), (0, 0, 2)))`
+  yields _90°_ or the corresponding value in _radians_.
+
+  and in _CAS View_ :
+
+  * `Angle(x + 2,  2x + 3)` yields acos \left( 3 \cdot
+  \frac\{\sqrt\{10}}\{10} \right).
+  * Define `f(x) := x + 2` and `g(x) := 2x + 3` then command
+  `Angle(f(x), g(x))` yields acos \left(3 \cdot \frac\{\sqrt\{10}}\{10}
+  \right).
+
+ +
+
+Angle( <Line>, <Plane> )::
+  Returns the angle between the line and the plane.
+  +
+  [.block-content]#*Example:* #
+
+  * `Angle(Line((1, 2, 3),(-2, -2, 0)), z = 0)` yields _30.96°_ or the
+  corresponding value in _radians_.
+
+Angle( <Plane>, <Plane> )::
+  Returns the angle between the two given planes.
+  +
+  [.block-content]#*Example:* #
+
+  * `Angle(2x - y + z = 0, z = 0)` yields _114.09°_ or the corresponding
+  value in _radians_.
+
+Angle( <Point>, <Apex>, <Point> )::
+  Returns the angle defined by the given points (result in [0,360°] or
+  [0,2π] depending on the default angle unit).
+  +
+  [.block-content]#*Example:* #
+
+  `Angle((1, 1), (1, 4), (4, 2))` yields _56.31°_ or the corresponding
+  value in _radians_.
+
+ +
+
+Angle( <Point>, <Apex>, <Angle> )::
+  Returns the angle of size _α_ drawn from _point_ with _apex_.
+  +
+  [.block-content]#*Example:* #
+
+  :*`Angle((0, 0), (3, 3), 30°)` yields _30°_ and the point _(1.9,
+  -1.1)_.
+
+ +
+
+[.block-contents]# *Note:* The point _Rotate( <Point>, <Angle>, <Apex>
+)_ is created as well.#
+
+ +
+
+Angle( <Point>, <Point>, <Point>, <Direction> )::
+  Returns the angle defined by the points and the given _Direction_,
+  that may be a line or a plane (result in [0,360°] or [0,2π] depending
+  on the default angle unit).
+  +
+  [.block-contents]# *Note:* Using a _Direction_ allows to bypass the
+  standard display of angles in 3__D__ which can be set as just [0,180°]
+  or [180°,360°], so that given three points _A_, _B_, _C_ in 3__D__ the
+  commands `Angle(A, B, C)` and `Angle(C, B, A)` return their real
+  measure instead of the one restricted to the set intervals.#
+  +
+  [.block-content]#*Example:* #
+
+  `Angle((1, -1, 0),(0, 0, 0),(-1, -1, 0), zAxis)` yields _270°_ and
+  `Angle((-1, -1, 0),(0, 0, 0),(1, -1, 0), zAxis)` yields _90°_ or the
+  corresponding values in _radians_.
+
+ +
+
+[.block-contents]# *Note:* See also
+image:https://wiki.geogebra.org/uploads/thumb/3/30/Mode_angle.svg/20px-Mode_angle.svg.png[Mode
+angle.svg,width=20,height=20] link:/en/Angle_Tool[Angle] and
+image:https://wiki.geogebra.org/uploads/thumb/c/ca/Mode_anglefixed.svg/20px-Mode_anglefixed.svg.png[Mode
+anglefixed.svg,width=20,height=20]
+link:/en/Angle_with_Given_Size_Tool[Angle with Given Size] tools.#
