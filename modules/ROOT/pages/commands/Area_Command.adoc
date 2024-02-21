@@ -1,25 +1,43 @@
- +
+= Area Command
 
 Area( <Point>, ..., <Point> )::
   Calculates the area of the polygon defined by the given points.
   +
-  [.block-content]#*Example:* `Area((0, 0), (3, 0), (3, 2), (0, 2))`
-  yields _6_.#
+
+[EXAMPLE]
+
+====
+
+*Example:* `Area((0, 0), (3, 0), (3, 2), (0, 2))` yields _6_.
+
+====
 
 Area( <Conic> )::
   Calculates the area of a conic section (circle or ellipse).
   +
-  [.block-content]#*Example:* `Area(x^2 + y^2 = 2)` yields _6.28_.#
+
+[EXAMPLE]
+
+====
+
+*Example:* `Area(x^2 + y^2 = 2)` yields _6.28_.
+
+====
 
 Area( <Polygon> )::
   Calculates the area of the polygon.
 
-[.block-contents]# *Notes:* #
+[NOTE]
 
-* for Polygons, the absolute value of the Algebraic Area is calculated
-(which gives unexpected answers for self-intersecting polygons)
-* In order to calculate the area between two function graphs, you need
-to use the command link:/en/IntegralBetween_Command[IntegralBetween].
-* See also the
-image:https://wiki.geogebra.org/uploads/thumb/f/f1/Mode_area.svg/24px-Mode_area.svg.png[Mode
-area.svg,width=24,height=24] link:/en/Area_Tool[Area] tool.
+====
+
+*Notes:*
+
+* for Polygons, the absolute value of the Algebraic Area is calculated (which gives unexpected answers for
+self-intersecting polygons)
+* In order to calculate the area between two function graphs, you need to use the command
+link:/en/IntegralBetween_Command[IntegralBetween].
+* See also the image:../assets/images/24px-Mode_area.svg.png[Mode area.svg,width=24,height=24] link:/en/Area_Tool[Area]
+tool.
+
+====

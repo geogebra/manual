@@ -1,35 +1,54 @@
-=== AttachCopyToView( <Object>, <View 0|1|2> )
+= AttachCopyToView Command
 
-If _View = 0_, a copy of given object is created. For _View = 1_ or
-_View = 2_ this command creates a dependent copy of given object whose
-size in given
-image:https://wiki.geogebra.org/uploads/thumb/c/c8/Menu_view_graphics.svg/16px-Menu_view_graphics.svg.png[Menu
-view graphics.svg,width=16,height=16] link:/en/Graphics_View[Graphics
-View] is constant.
+AttachCopyToView( <Object>, <View 0|1|2> )::
+  If _View = 0_, a copy of given object is created. For _View = 1_ or _View = 2_ this command creates a dependent copy
+  of given object whose size in given image:../assets/images/16px-Menu_view_graphics.svg.png[Menu view
+  graphics.svg,width=16,height=16] link:/en/Graphics_View[Graphics View] is constant.
+  +
 
-[example]
-Let `poly = Polygon\((0, 0), (1, 0), (1, 1), (0, 1))`. +
-If Graphics View 1 is active, `AttachCopyToView(poly, 1)` creates a
-square with the same size at the same position.
+[EXAMPLE]
 
-NOTE: Once the copy is created, three other arguments are added to the command definition.
+====
 
-=== AttachCopyToView( <Object>, <View 012>, <Point 1>, <Point 2>, <ScreenPoint 1>, <Screen Point 2> )
+*Example:*
 
-If _View = 0_, a copy of given object is created. For _View = 1_ or
-_View = 2_ this command creates a dependent copy of given object whose
-size in given
-image:https://wiki.geogebra.org/uploads/thumb/c/c8/Menu_view_graphics.svg/16px-Menu_view_graphics.svg.png[Menu
-view graphics.svg,width=16,height=16] link:/en/Graphics_View[Graphics View]
-is transformed using the affine transform that maps _Point 1_ to a
-point whose screen coordinates (in pixels) are equal to _Screen Point
-1_, and _Point 2_ to a point with screen coordinates equal to _Screen
-Point 2_.
-[example]
-Let `poly = Polygon\((0, 0), (1, 0), (1, 1), (0, 1))`. +
-If Graphics View 1 is active,
-`AttachCopyToView(poly, 1, (0, 0), (1, 1), (0, 0), (100, 100))` creates
-a _100px x 100px_ square in the top left corner of the Graphics View.
+Let `poly = Polygon((0, 0), (1, 0), (1, 1), (0, 1))`. If Graphics View 1 is active, `AttachCopyToView(poly, 1)` creates
+a square with the same size at the same position.
 
-NOTE: All points of the object are copied, even if
-they lie outside the view.
+====
+
+AttachCopyToView( <Object>, <View 0|1|2>, <Point 1>, <Point 2>, <Screen Point 1>, <Screen Point 2> )
+
+If _View = 0_, a copy of given object is created. For _View = 1_ or _View = 2_ this command creates a dependent copy of
+given object whose size in given image:../assets/images/16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] link:/en/Graphics_View[Graphics View] is transformed using the affine transform that
+maps _Point 1_ to a point whose screen coordinates (in pixels) are equal to _Screen Point 1_, and _Point 2_ to a point
+with screen coordinates equal to _Screen Point 2_.
+
+[EXAMPLE]
+
+====
+
+*Example:*
+
+Let `poly = Polygon((0, 0), (1, 0), (1, 1), (0, 1))`. If Graphics View 1 is active,
+`AttachCopyToView(poly, 1, (0, 0), (1, 1), (0, 0), (100, 100))` creates a _100px x 100px_ square in the top left corner
+of the Graphics View.
+
+====
+
+[NOTE]
+
+====
+
+*Note:* Once the copy is created, three other arguments are added to the command definition.
+
+====
+
+[NOTE]
+
+====
+
+*Note:* All points of the object are copied, even if they lie outside the view.
+
+====
