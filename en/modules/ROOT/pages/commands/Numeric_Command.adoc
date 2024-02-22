@@ -1,0 +1,58 @@
+= Numeric Command
+
+== [#CAS_Syntax]#CAS Syntax#
+
+Numeric( <Expression> )::
+  Tries to determine a numerical approximation of the given expression. The number of decimals depends on the global
+  rounding you choose in the xref:/Options_Menu.adoc[Options Menu].
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `Numeric(3 / 2)` yields _1.5_.
+
+====
+
+Numeric( <Expression>, <Significant Figures> )::
+  Tries to determine a numerical approximation of the given expression, using the entered number of significant figures.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `Numeric(sin(1), 20)` yields _0.84147098480789650665_.
+
+====
+
+[NOTE]
+
+====
+
+*Note:* If you don't specify enough digits then you can get an apparently wrong answer due to
+http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html[floating point cancelation].
+
+[EXAMPLE]
+
+====
+
+*Example:*
+`Numeric(-500000000/785398163*sin(785398163/500000000)*1258025227.19^2+500000000/785398163*1258025227.19^2,10)` will
+give _4096_ but
+`Numeric(-500000000/785398163*sin(785398163/500000000)*1258025227.19^2+500000000/785398163*1258025227.19^2,30)` will
+give _0.318309886345536696694580314215_.
+
+====
+
+====
+
+[NOTE]
+
+====
+
+*Note:* See also image:24px-Mode_nsolve.svg.png[Mode nsolve.svg,width=24,height=24]
+xref:/tools/Numeric_Tool.adoc[Numeric] tool.
+
+====

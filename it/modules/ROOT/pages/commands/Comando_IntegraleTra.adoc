@@ -1,0 +1,55 @@
+= Comando IntegraleTra
+
+IntegraleTra(Funzione, Funzione, Numero, Numero)::
+  Calcola l'integrale definito della differenza tra la prima e la seconda funzione indicate, nell'intervallo chiuso
+  definito dai due numeri indicati.
+  +
+  +
+
+[EXAMPLE]
+
+====
+
+`IntegraleTra(sin(x), cos(x), 0, pi)` restituisce 2.
+
+====
+
+[NOTE]
+
+====
+
+Questo comando evidenzia anche l'area compresa tra i grafici delle due funzioni.
+
+====
+
+IntegraleTra(Funzione, Funzione, Numero, Numero, Booleano _Valutazione_)::
+  Calcola l'integrale definito della differenza tra la prima e la seconda funzione indicate, nell'intervallo chiuso
+  definito dai due numeri indicati ed evidenzia graficamente la relativa area quando _Valutazione = true_. Se
+  _Valutazione = false_ viene evidenziata l'area ma non viene calcolato il valore dell'integrale.
+
+== [#Sintassi_CAS]#Sintassi CAS#
+
+IntegraleTra(Funzione, Funzione, Numero, Numero)::
+  Calcola l'integrale definito della differenza tra la prima e la seconda funzione indicate, nell'intervallo chiuso
+  definito dai due numeri indicati.
+  +
+IntegraleTra(Funzione, Funzione, Variabile, Numero, Numero)::
+  Calcola l'integrale definito rispetto alla variabile indicata della differenza tra le due funzioni, nell'intervallo
+  chiuso definito dai due numeri indicati,.
+  +
+
+[EXAMPLE]
+
+====
+
+`IntegraleTra(a*sin(t), a*cos(t), t, pi/4, pi*5/4)` restituisce stem:[2 \sqrt\{2} a].
+
+====
+
+[EXAMPLE]
+
+====
+
+`IntegraleTra(sin(x), cos(x), pi/4, pi*5/4)` restituisce stem:[2 \sqrt\{2}].
+
+====

@@ -1,0 +1,36 @@
+= Comando Superficie
+
+Superficie(Espressione, Espressione, Espressione, Parametro variabile 1, Valore iniziale, Valore finale, Parametro
+variabile 2, Valore iniziale, Valore finale)::
+  Genera e traccia il grafico cartesiano della superficie parametrica 3D le cui equazioni per _x_, _y_ e _z_ sono
+  definite nell'ordine dalle tre espressioni indicate, dipendenti da due parametri, variabili negli intervalli [_Valore
+  iniziale_, _Valore finale_].
+  +
+  +
+
+[EXAMPLE]
+
+====
+
+Siano _r_ e _R_ due numeri reali positivi:
+`Superficie((R + r cos( u)) cos(v) , (R + r cos( u)) sin(v) , r sin(u ), u, 0, 2 π , v, 0, 2 π)  ` crea il toro generato
+da un cerchio di raggio _r_ il cui centro ruota ad una distanza _R_ attorno all'asse Z.
+
+====
+
+[NOTE]
+
+====
+
+* Il _Valore finale_ di ciascun parametro deve essere maggiore o uguale del relativo _Valore iniziale_, ed entrambi
+devono essere finiti.
+* Non è possibile utilizzare _x_, _y_, _z_ come parametri
+
+====
+
+Superficie(Funzione, Angolo)::
+  Genera la superficie ottenuta ruotando la funzione indicata attorno all'asse x, di un angolo compreso tra 0 e il
+  valore indicato.
+
+Superficie(Curva, Angolo, Retta)::
+  Genera la superficie ottenuta ruotando la curva attorno alla retta, di un angolo compreso tra 0 e l'angolo indicato.

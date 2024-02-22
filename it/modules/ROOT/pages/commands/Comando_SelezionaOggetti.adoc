@@ -1,0 +1,28 @@
+= Comando SelezionaOggetti
+
+SelezionaOggetti( )::
+  Deseleziona tutti gli oggetti selezionati.
+
+SelezionaOggetti(Oggetto, Oggetto, ...)::
+  Deseleziona tutti gli oggetti e seleziona gli oggetti indicati come parametri. Tutti i parametri devono essere oggetti
+  xref:/Etichette_e_legende.adoc[etichettati].
+
+[EXAMPLE]
+
+====
+
+*Esempi:*
+
+* Dati i punti A, B e C, il comando `SelezionaOggetti(A, B, C)` seleziona i punti A, B, C.
+* Il comando `SelezionaOggetti(PuntoMedio(A,B))` non ha alcun effetto, a parte quello di deselezionare tutti gli oggetti
+selezionati.
+
+====
+
+[NOTE]
+
+====
+
+Questo comando ora annulla qualsiasi trascinamento in corso (utile negli script).
+
+====

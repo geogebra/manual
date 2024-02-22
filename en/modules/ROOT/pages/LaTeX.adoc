@@ -1,0 +1,88 @@
+= LaTeX
+
+In GeoGebra you can write formulas as well. To do so, check the box LaTeX formula in the dialog window of the
+image:24px-Mode_text.svg.png[Mode text.svg,width=24,height=24] xref:/tools/Text_Tool.adoc[Text Tool] and enter your
+formula in LaTeX syntax.
+
+[NOTE]
+
+====
+
+*Note:* In order to create text that contains a LaTeX formula as well as text you may enter the text inside \text\{},
+while _LaTex Formula_ is activated.
+
+====
+
+[EXAMPLE]
+
+====
+
+*Example:* `\text{The length of the diagonal is } \sqrt{ 2 }`
+
+====
+
+[NOTE]
+
+====
+
+*Note:* You can also use the xref:/commands/FormulaText_Command.adoc[FormulaText Command] to enter your formula within
+quotes.
+
+====
+
+[EXAMPLE]
+
+====
+
+*Example:* `FormulaText["\text{The length of the diagonal is } \sqrt{ 2 }"]`
+
+====
+
+[NOTE]
+
+====
+
+*Note:* You can simply obtain a LaTeX text containing the value of an object listed in the
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] xref:/Algebra_View.adoc[Algebra View] by
+dragging that object in the image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _Algebra
+View_ and dropping it in a selected location of the image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Graphics_View.adoc[Graphics View] .
+
+====
+
+You can find the syntax for common formula symbols from the drop-down menu next to the LaTeX checkbox (GeoGebra Desktop
+Version) or in the _Advanced_ menu below the input field (GeoGebra Web and Tablet Apps Version). This inserts the
+corresponding LaTeX code into the text field and places the cursor in between a set of curly brackets. The Symbols
+drop-down menu contains a list of common math symbols, Greek letters and operators. If you would like to create dynamic
+text within the formula, you need to select the relating objects from the image:16px-GeoGebra_48.png[GeoGebra
+48.png,width=16,height=16] Objects drop-down list, causing GeoGebra to insert their names as well as the syntax for
+mixed text.
+
+Some important LaTeX commands are explained in following table. Please have a look at any LaTeX documentation for
+further information.
+
+[cols=",",options="header",]
+|===
+|LaTeX input |Result
+|a \cdot b |stem:[a \cdot b]
+|\frac\{a}\{b} |stem:[\frac\{a}\{b}]
+|\sqrt\{x} |stem:[\sqrt\{x}]
+|\sqrt[n]\{x} |stem:[\sqrt[n]\{x}]
+|\vec\{v} |stem:[\vec\{v}]
+|\overline\{AB} |stem:[\overline\{AB}]
+|x^\{2} |stem:[x^\{2}]
+|a_\{1} |stem:[a_\{1}]
+|\sin\alpha + \cos\beta |stem:[\sin\alpha + \cos\beta]
+|\int_\{a}^\{b} x dx |stem:[\int_\{a}^\{b} x dx]
+|\sum_\{i=1}^\{n} i^2 |stem:[\sum_\{i=1}^\{n} i^2]
+|===
+
+It is also possible to enter nicely formatted chemical formulas, using syntaxes
+`\ce, \mathchoice, \mskip, \lower, \raise, \mkern`.
+
+Please refer to https://mhchem.github.io/MathJax-mhchem/[this document] for further information.
+
+== [#See_also]#See also#
+
+* http://folk.uio.no/knutm/mmcs2008/lshort2e.pdf[The Not So Short Introduction To LaTeX]
+* http://www.tug.org[TeX user group]

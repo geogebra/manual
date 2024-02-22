@@ -1,0 +1,44 @@
+= Comando Tetraedro
+
+Tetraedro(Punto, Punto, Oggetto)::
+  Genera un tetraedro avente per spigolo il segmento individuato dai due punti indicati.
+  +
+  Gli altri vertici sono determinati univocamente da un _Oggetto_, che indica la _direzione_ di creazione, che può
+  essere:
+  +
+  * un vettore, un segmento, una retta o una semiretta, perpendicolari al segmento, oppure
+  * un poligono o un piano, paralleli al segmento.
+  +
+  Il tetraedro così creato avrà:
+  +
+  * una faccia avente per spigolo il segmento, in un piano perpendicolare al vettore/segmento/retta/semiretta indicati,
+  oppure
+  * una faccia avente per spigolo il segmento, in un piano parallelo a quello del poligono/piano indicato.
+
+Tetraedro(Punto, Punto, Punto)::
+  Genera il tetraedro avente i tre punti indicati come vertici della prima faccia. I punti devono formare un triangolo
+  equilatero, per fare in modo che il tetraedro risulti definito.
+
+Tetraedro(Punto, Punto)::
+  Genera il tetraedro avente per spigolo della prima faccia il segmento il segmento individuato dai punti indicati,
+  mentre il terzo vertice della faccia è individuato su una circonferenza, in modo che il tetraedro possa ruotare
+  attorno allo spigolo.
+  +
+
+[NOTE]
+
+====
+
+`Tetraedro(A, B)` è una sintassi abbreviata di `Tetraedro(A, B, C)`, con
+`C = Punto(Circonferenza(PuntoMedio(A, B), Distanza(A, B) sqrt(3) / 2, Segmento(A, B)))`.
+
+====
+
+[NOTE]
+
+====
+
+Vedere anche i comandi xref:/commands/Comando_Cubo.adoc[Cubo], xref:/commands/Comando_Ottaedro.adoc[Ottaedro],
+xref:/commands/Comando_Icosaedro.adoc[Icosaedro], xref:/commands/Comando_Dodecaedro.adoc[Dodecaedro].
+
+====

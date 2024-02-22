@@ -1,0 +1,41 @@
+= Comando Curvatura
+
+Curvatura(Punto, Funzione)::
+  Calcola la curvatura della funzione nel punto indicato.
+  +
+
+[EXAMPLE]
+
+====
+
+`Curvatura((0,0), x^2)` restituisce _2_.
+
+====
+
+Curvatura(Punto, Curva)::
+  Calcola la curvatura della curva nel punto indicato.
+  +
+
+[EXAMPLE]
+
+====
+
+`Curvatura((0, 0), Curva(cos(t), sin(2t), t, 0, π))` restituisce _0_.
+
+====
+
+Curvatura(Punto, Oggetto)::
+  Calcola la curvatura dell'oggetto (funzione, curva, conica), nel punto indicato.
+  +
+
+[EXAMPLE]
+
+====
+
+*Esempi:*
+
+* `Curvatura((0 ,0), x^2)` restituisce _2_
+* `Curvatura((0, 0), Curva[cos(t), sin(2t), t, 0, π))` restituisce _0_
+* `Curvatura((-1, 0), Conica({1, 1, 1, 2, 2, 3}))` restituisce _2_
+
+====

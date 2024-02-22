@@ -1,0 +1,59 @@
+= Comando PrimoMembro
+
+PrimoMembro(Equazione)::
+  Restituisce il primo membro dell'equazione semplificata.
+  +
+
+[EXAMPLE]
+
+====
+
+`PrimoMembro(4x=1-3y) ` restituisce _4x + 3y_.
+
+====
+
+== [#Sintassi_CAS]#Sintassi CAS#
+
+PrimoMembro(Equazione)::
+  Restituisce il primo membro dell'equazione.
+  +
+
+[EXAMPLE]
+
+====
+
+`PrimoMembro(x+3=3x+1)` restituisce _x + 3_.
+
+====
+
+PrimoMembro(\{Lista di equazioni})::
+  Restituisce la lista dei primi membri delle equazioni indicate.
+  +
+
+[EXAMPLE]
+
+====
+
+`PrimoMembro({a^2+b^2=c^2, x+2=3x+1})` restituisce stem:[ \left\\{a^2+ b^2, x + 2\right\}].
+
+====
+
+PrimoMembro(\{Lista di equazioni}, Indice)::
+  Restituisce il primo membro dell'equazione che si trova nella posizione dell'indice.
+  +
+
+[EXAMPLE]
+
+====
+
+`PrimoMembro({a^2+b^2=c^2, x+2=3x+1}, 1)` restituisce stem:[a^2+b^2].
+
+====
+
+[NOTE]
+
+====
+
+Vedere anche il xref:/commands/Comando_SecondoMembro.adoc[comando SecondoMembro].
+
+====

@@ -1,0 +1,38 @@
+= SetDecoration Command
+
+SetDecoration( <Object>, <Number> )::
+  Sets the decoration of the given object (see also the _Style_ tab in the _Properties_ window of the object). The
+  object must be an angle, a segment or a "fillable object". The second argument in the command is the numeric code of
+  the decoration / fill-style, as described in the following table.
+
+[cols=",,,",options="header",]
+|===
+|Value |Segment decoration |Angle decoration |Fill-style
+|0 |Remove decoration |Remove decoration |Solid fill
+|1 |One tick |Two arcs |Hatched
+|2 |Two ticks |Three arcs |Cross-hatched
+|3 |Three ticks |One tick |Chessboard
+|4 |One arrow |Two ticks |Dotted
+|5 |Two arrows |Three ticks |Honeycomb
+|6 |Three arrows |Clockwise arrow |Brick
+|7 |(None) |Anticlockwise arrow |Weave pattern
+|===
+
+SetDecoration(<Segment>, <Number>, <Number>)::
+  Sets the aspect of the line start and end of a segment. In order to view the decoration, it's necessary to hide the
+  two points that define the vertices of the segment. The segment decoration can also be set in the _Style_ tab of the
+  _Properties_ window of the segment. The first number used as command parameter defines the style of the line segment
+  start, and the second number sets the style of the line segment end, as described in the following table.
+
+[cols=",",options="header",]
+|===
+|Value |Decoration
+|0 |No decoration
+|1 |vertical bar
+|2 |empty square
+|3 |filled square
+|4 |arrow
+|5 |filled arrow
+|6 |empty dot
+|7 |filled dot
+|===

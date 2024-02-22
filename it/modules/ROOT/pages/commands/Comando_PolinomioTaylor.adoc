@@ -1,0 +1,56 @@
+= Comando PolinomioTaylor
+
+PolinomioTaylor(Funzione, Numero a, Numero n)::
+  Determina lo sviluppo in serie di potenze di ordine _n_ della funzione, con centro nel punto _x = a_.
+  +
+
+[EXAMPLE]
+
+====
+
+`PolinomioTaylor(x^2, 3, 1)` restituisce 9 + 6 (_x_ - 3), lo sviluppo in serie di potenze di _x^2^_ centrato
+in _x_ = 3, di ordine 1.
+
+====
+
+== [#Sintassi_CAS]#Sintassi CAS#
+
+PolinomioTaylor(Funzione, Numero a, Numero n)::
+  Determina lo sviluppo in serie di potenze di ordine _n_ della funzione, con centro nel punto _x = a_.
+  +
+
+[EXAMPLE]
+
+====
+
+`PolinomioTaylor(x^2, a, 1)` restituisce __a__^2^ + 2__a__ (_x_ - _a_), lo sviluppo in serie di potenze di
+_x^2^_ centrato in _x_ = _a_, di ordine 1.
+
+====
+
+PolinomioTaylor(Funzione, Variabile, Numero a, Numero n)::
+  Determina lo sviluppo in serie di potenze di ordine _n_ della funzione, rispetto alla _variabile_ indicata e centrato
+  nel punto _variabile_ = _a_.
+  +
+
+[EXAMPLE]
+
+====
+
+*Esempi:*
+
+* `PolinomioTaylor(x^3 sin(y), x, 3, 2)` restituisce 27 _sin_(_y_) + 27 _sin_(_y_) (_x_ - 3) + 9 _sin_(_y_) (_x_ -
+3)^2^, lo sviluppo in serie di potenze rispetto ad _x_ di _x^3^ sin_(_y_), centrato in _x_ = 3, di ordine 2.
+* `PolinomioTaylor(x^3 sin(y), y, 3, 2)` restituisce _x^3^ sin(3) + x^3^ cos(3) (y - 3) - x^3^ stem:[\frac\{sin(3)
+}\{2}] (y - 3)^2^_, lo sviluppo in serie di potenze rispetto ad _y_ di __x__^3^ _sin_(_y_), centrato in _y_ = 3, di
+ordine 2.
+
+====
+
+[NOTE]
+
+====
+
+L'ordine _n_ deve essere un intero positivo.
+
+====

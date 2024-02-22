@@ -1,0 +1,47 @@
+= Comando Regressione
+
+Regressione(Lista di punti, Lista di Funzioni)::
+  Calcola una funzione che è combinazione lineare delle _funzioni_ e meglio approssima i _punti_ della lista.
+  +
+
+[EXAMPLE]
+
+====
+
+*Esempi:*
+
+* `Regressione({(-2, 3), (0, 1), (2, 1), (2, 3)}, {x^2, x})` restituisce 0.625 __x__^2 - 0.25__x__.
+* Dati _L=\{A, B, C,...}, f(x) = 1, g(x) = x, h(x) = e^x, F = \{f, g, h}_, il comando ` Regressione(L,F)` calcola una
+funzione del tipo _a + b x + c e^x_ che approssima i punti della lista.
+
+====
+
+Regressione(Lista di punti, Funzione)::
+  Calcola una funzione di errore quadratico minimo, utilizzando i punti della lista. La _Funzione_ deve dipendere da uno
+  o più slider, presi come valori iniziali dei parametri da ottimizzare. L'iterazione è di tipo non lineare e può non
+  convergere: in questo caso provare a modificare i valori degli slider in modo da ricercare un migliore valore
+  iniziale.
+  +
+
+[EXAMPLE]
+
+====
+
+Sia _a_ uno slider con intervallo da _-5_ a _5_ e incremento 1. Il comando
+`Regressione({(-2, 3), (0, 1), (2, 1), (2, 3)}, a + x^2)` restituisce _-1 + x^2_.
+
+====
+
+[NOTE]
+
+====
+
+* Altri comandi di regressione: xref:/commands/Comando_RegExp.adoc[RegExp],
+xref:/commands/Comando_RegCrescita.adoc[RegCrescita], xref:/commands/Comando_RegLin.adoc[RegLin],
+xref:/commands/Comando_RegLinX.adoc[RegLinX], xref:/commands/Comando_RegLog.adoc[RegLog],
+xref:/commands/Comando_RegLogistica.adoc[RegLogistica], xref:/commands/Comando_RegPol.adoc[RegPol],
+xref:/commands/Comando_RegPot.adoc[RegPot] e xref:/commands/Comando_RegSin.adoc[RegSin].
+* Se si lavora con numeri piccoli o grandi, conviene normalizzare i valori in modo da ottenere risultati più accurati.
+Vedere il xref:/commands/Comando_Normalizza.adoc[comando Normalizza].
+
+====

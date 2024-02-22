@@ -1,0 +1,39 @@
+= Vertex Command
+
+Vertex( <Conic> )::
+  Returns (all) vertices of the conic section.
+
+Vertex( <Inequality> )::
+  Returns the points of intersection of the borders.
+  +
+
+[EXAMPLE]
+
+====
+
+*Examples:*
+
+* `Vertex((x + y < 3) && (x - y > 1))` returns point _A = (2, 1)_.
+* `{Vertex((x + y < 3) ∧ (x - y > 1) && (y > - 2))}` returns _list1 = \{(2, 1), (5, -2), (-1, -2)}_.
+* `Vertex((y > x²) ∧ (y < x))` returns two points _A = (0, 0)_ and _B = (1, 1)_.
+* `{Vertex((y > x²) ∧ (y < x))}` returns _list1 = \{(0, 0), (1, 1)}_.
+
+====
+
+Vertex( <Polygon> )::
+  Returns (all) vertices of the polygon.
+
+Vertex( <Polygon>, <Index n> )::
+  Returns _n_-th vertex of the polygon.
+
+[NOTE]
+
+====
+
+*Note:* To get the vertices of the objects polygon / conic / inequality in a xref:/Lists.adoc[list], use
+`{Vertex(Object)}`.
+
+====
+
+Vertex( <Segment>, <Index> )::
+  Returns the start-point (Index = 1) or end-point (Index = 2) of the Segment.

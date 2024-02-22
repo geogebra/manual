@@ -1,0 +1,39 @@
+= ScientificText Command
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:64px-Globe.png[Globe.png,width=64,height=64]
+
+a|
+This command differs among variants of English:  
+
+* StandardForm (UK)  
+* ScientificText (US + Aus) 
+
+|===
+
+ScientificText( <Number> )::
+  Displays the number in http://en.wikipedia.org/wiki/Scientific_notation[scientific notation]
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `ScientificText(0.002)` gives _2 × 10^-3^._
+
+====
+
+ScientificText( <Number>, <Precision> )::
+  Displays the number in http://en.wikipedia.org/wiki/Scientific_notation[scientific notation], rounded to the number of
+  significant digits specified by *precision*
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `ScientificText(e,5)` gives _2.7183 × 10^0^._
+
+====

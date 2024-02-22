@@ -1,0 +1,43 @@
+= Comando RegPol
+
+RegPol(Lista di punti, Grado del polinomio)::
+  Genera il polinomio di regressione avente il grado indicato.
+  +
+
+[EXAMPLE]
+
+====
+
+`RegPol({(-1, -1), (0, 1), (1, 1), (2, 5)}, 3)` restituisce _f(x) = x^3^ - 1 x^2^ + 1_.
+
+====
+
+RegPol(Funzione a mano libera, Grado del polinomio)::
+  Genera il polinomio di regressione di grado indicato di una funzione creata con lo strumento
+  xref:/tools/Strumento_Grafico_a_mano_libera.adoc[Grafico a mano libera]
+
+[NOTE]
+
+====
+
+* Per ottenere un polinomio di ordine _n_ è necessario che la lista contenga almeno _n_ + _1_ punti.
+* Vedere anche i comandi xref:/commands/Comando_RegExp.adoc[RegExp], xref:/commands/Comando_RegLog.adoc[RegLog],
+xref:/commands/Comando_RegPot.adoc[RegPot] e xref:/commands/Comando_RegSin.adoc[RegSin].
+* Se si lavora con numeri piccoli o grandi, conviene normalizzare i valori in modo da ottenere risultati più accurati.
+Vedere il xref:/commands/Comando_Normalizza.adoc[comando Normalizza].
+
+====
+
+== [#Sintassi_CAS]#Sintassi CAS#
+
+RegPol(Lista di punti, Grado del polinomio)::
+  Genera il polinomio di regressione avente il grado indicato.
+  +
+
+[EXAMPLE]
+
+====
+
+`RegPol({(-1, -1), (0, 1), (1, 1), (2, 5)}, 3)` restituisce _x^3^ - x^2^ + 1_.
+
+====

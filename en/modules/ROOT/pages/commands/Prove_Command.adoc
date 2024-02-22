@@ -1,0 +1,43 @@
+= Prove Command
+
+Prove( <Boolean Expression> )::
+  Returns whether the given boolean expression is true or false in general.
+
+Normally, GeoGebra decides whether a xref:/Boolean_values.adoc[boolean expression] is true or not by using numerical
+computations. However, the Prove command uses http://en.wikipedia.org/wiki/Symbolic_computation[symbolic methods] to
+determine whether a statement is _true_ or _false_ in general. If GeoGebra cannot determine the answer, the result is
+_undefined_.
+
+[EXAMPLE]
+
+====
+
+*Example:*
+
+We define three free points, `A=(1,2)`, `B=(3,4)`, `C=(5,6)`. The command `AreCollinear(A,B,C)` yields _true_, since a
+numerical check is used on the current coordinates of the points. Using `Prove(AreCollinear(A,B,C))` you will get
+_false_ as an answer, since the three points are not collinear in general, i.e. when we change the points.
+
+====
+
+[EXAMPLE]
+
+====
+
+*Example:*
+
+Let us define a triangle with vertices _A_, _B_ and _C_, and define `D=MidPoint(B,C)`, `E=MidPoint(A,C)`, `p=Line(A,B)`,
+`q=Line(D,E)`. Now both `p∥q` and `Prove(p∥q)` yield _true_, since a midline of a triangle will always be parallel to
+the appropriate side.
+
+[[ggbContainer1138d346d4acd9a059692ae18a8d195c]]====
+
+[NOTE]
+
+====
+
+*Note:* See also xref:/commands/ProveDetails_Command.adoc[ProveDetails] command, xref:/Boolean_values.adoc[Boolean
+values], https://github.com/kovzol/gg-art-doc/tree/master/pdf/english.pdf[GeoGebra Automated Reasoning Tools: A
+Tutorial] and http://dev.geogebra.org/trac/wiki/TheoremProving[technical details of the algorithms].
+
+====

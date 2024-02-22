@@ -1,0 +1,49 @@
+= Tool Creation Dialog
+
+First, create the construction your tool should be able to create later on. In the
+image:18px-Menu-tools.svg.png[Menu-tools.svg,width=18,height=18] xref:/Tools_Menu.adoc[Tools menu], select
+image:18px-Menu-tools-new.svg.png[Menu-tools-new.svg,width=18,height=18] _Create New Tool_ in order to open the
+corresponding dialog box. Now you need to fill in the three tabs _Output Objects_, _Input Objects_, and _Name and Icon_
+in order to create your custom tool.
+
+[EXAMPLE]
+
+====
+
+*Example:* Create a Square-tool that creates a square whenever you click on two existing points or on two empty spots in
+the image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Graphics_View.adoc[Graphics
+View].
+
+* Construct a square starting with two points A and B. Construct the other vertices and connect them with the tool
+image:22px-Mode_polygon.svg.png[Mode polygon.svg,width=22,height=22] Polygon to get the square poly1.
+* Select image:18px-Menu-tools-new.svg.png[Menu-tools-new.svg,width=18,height=18] _Create New Tool_ in the
+image:18px-Menu-tools.svg.png[Menu-tools.svg,width=18,height=18] _Tools Menu_.
+* Specify the Output Objects: Click on the square or select it from the drop down menu. Also, specify the edges of the
+square as Output Objects.
+* Specify the Input Objects: GeoGebra automatically specifies the Input Objects for you (here: points A and B). You can
+also modify the selection of input objects using the drop down menu or by clicking on them in your construction.
+* Specify the Tool Name and Command Name for your new tool.
+
+[NOTE]
+
+====
+
+*Note:* The Tool Name will appear in GeoGebra's xref:/Toolbar.adoc[Toolbar], while the Command Name can be used in
+GeoGebra's xref:/Input_Bar.adoc[Input Bar].
+
+====
+
+* You may also enter text to be shown in the xref:/Toolbar.adoc[Toolbar Help].
+* You can also choose an image from you computer for the Toolbar icon. GeoGebra resizes your image automatically to fit
+on a Toolbar button.
+
+====
+
+[NOTE]
+
+====
+
+*Note:* Outputs of the tool are not moveable, even if they are defined as `Point[<Path>]`. In case you need moveable
+output, you can define a list of commands and use it with xref:/commands/Execute_Command.adoc[Execute Command].
+
+====

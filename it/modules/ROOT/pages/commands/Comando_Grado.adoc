@@ -1,0 +1,44 @@
+= Comando Grado
+
+Grado(Polinomio)::
+  Determina il http://en.wikipedia.org/wiki/en:degree_of_a_polynomial[grado] del polinomio indicato (rispetto alla
+  variabile principale).
+  +
+
+[EXAMPLE]
+
+====
+
+`Grado(x^4 + 2x^2)` restituisce _4_.
+
+====
+
+== [#Sintassi_CAS]#Sintassi CAS#
+
+Grado(Polinomio)::
+  Determina il grado del polinomio indicato (rispetto alla variabile o al monomio principale).
+  +
+
+[EXAMPLE]
+
+====
+
+*Esempi:*
+
+* `Grado(x^4 + 2 x^2 + 7 y^3)` restituisce _4_,
+* `Grado(x^6 y^3 + 2 x^2 y^3)` restituisce _9_.
+
+====
+
+Grado(Polinomio, Variabile)::
+  Determina il grado del polinomio rispetto alla variabile indicata.
+  +
+
+[EXAMPLE]
+
+====
+
+* `Grado(x^4 y^3 + 2 x^2 y^3, x)` restituisce _4_,
+* `Grado(x^4 y^3 + 2 x^2 y^3, y)` restituisce _3_.
+
+====

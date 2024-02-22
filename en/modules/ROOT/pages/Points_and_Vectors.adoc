@@ -1,0 +1,94 @@
+= Points and Vectors
+
+Points and vectors may be entered via xref:/Input_Bar.adoc[Input Bar] in Cartesian or polar coordinates (see
+xref:/Numbers_and_Angles.adoc[Numbers and Angles]). Points can also be created using image:24px-Mode_point.svg.png[Mode
+point.svg,width=24,height=24] xref:/Point_tools.adoc[Point tools] and vectors can be created using the
+image:24px-Mode_vectorfrompoint.svg.png[Mode vectorfrompoint.svg,width=24,height=24]
+xref:/tools/Vector_from_Point_Tool.adoc[Vector from Point Tool] or the image:24px-Mode_vector.svg.png[Mode
+vector.svg,width=24,height=24] xref:/tools/Vector_Tool.adoc[Vector Tool] and a variety of xref:/Commands.adoc[commands].
+
+[NOTE]
+
+====
+
+*Note:* Upper case labels denote points, whereas lower case labels refer to vectors. This convention is not mandatory.
+
+====
+
+[EXAMPLE]
+
+====
+
+*Examples:*
+
+* To enter a point _P_ or a vector _v_ in 2D in Cartesian coordinates you may use `P = (1, 0)` or `v = (0, 5)`.
+* To enter a point _P_ or a vector _v_ in 3D in Cartesian coordinates you may use `P = (1, 0, 2)` or `v = (0, 5, -1)`.
+* To enter a point _P_ in 2D in polar coordinates, you may use `P = (1; 0°)` or `v = (5; 90°)`.
+* To enter a point _P_ in 3D in spherical coordinates, enter three coordinates of the type (ρ, θ, φ) like e.g.
+`P = (1; 60°; 30°)`.
+* To enter a point in the image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+xref:/Spreadsheet_View.adoc[Spreadsheet View], name it using its cell address, e.g.: `A2 = (1, 0)`
+
+====
+
+[NOTE]
+
+====
+
+*Notes:*
+
+* You need to use a semicolon to separate polar coordinates. If you don’t type the degree symbol, GeoGebra will treat
+the angle as if entered in radians
+* Coordinates of points and vectors can be accessed using xref:/Predefined_Functions_and_Operators.adoc[predefined
+functions] `x()` and `y()` (and `z()` for 3D points).
+* Polar coordinates of point _Q_ can be obtained using `abs(Q)` and `arg(Q)` (and also `alt(Q)` for 3D points).
+
+====
+
+[EXAMPLE]
+
+====
+
+*Examples:*
+
+* If `P=(1,2)` is a point and `v=(3,4)` is a vector, `x(P)` returns 1 and `y(v)` returns 4.
+* `abs(P)` returns 2.24 and `arg(P)` returns 26.57°.
+
+====
+
+== [#Calculations]#Calculations#
+
+In GeoGebra, you can also do calculations with points and vectors.
+
+[EXAMPLE]
+
+====
+
+*Example:*
+
+* You can create the midpoint M of two points A and B by entering `M = (A + B) / 2` into the Input Bar.
+* You may calculate the _length_ of a vector _v_ using `length = sqrt(v * v)` or `length = Length(v)`
+* You can get the coordinates of the _starting and terminal point_ of a vector _v_ using the commands `Point(v, 0) ` and
+`Point(v, 1) ` respectively.
+* If _A = (a, b)_, then `A + 1` returns _(a + 1, b + 1)_. If _A_ is a xref:/Complex_Numbers.adoc[complex number] _a+bί_,
+then `A+1` returns _a + 1 + bί_.
+
+====
+
+== [#Vector_Product]#Vector Product#
+
+Let _(a, b)_ and _(c, d)_ be two points or vectors. Then `(a, b) ⊗ (c, d)` returns the z-coordinate of vector product
+_(a, b, 0) ⊗ (c, d, 0)_ as single number.
+
+Similar syntax is valid for lists, but the result in such case is a list.
+
+[EXAMPLE]
+
+====
+
+*Example:*
+
+* `{1, 2} ⊗ {4, 5}` returns _\{0, 0, -3}_
+* `{1, 2, 3} ⊗ {4, 5, 6}` returns _\{3, 6, -3}_.
+
+====

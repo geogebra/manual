@@ -1,0 +1,71 @@
+= Comando IntersezioneCammini
+
+IntersezioneCammini(Retta, Poligono)::
+  Crea il cammino che rappresenta l'intersezione tra la retta e il poligono indicati.
+  +
+
+[EXAMPLE]
+
+====
+
+Se _a_ è una retta e _tri1_ un triangolo, `IntersezioneCammini(a, tri1)`crea il segmento avente per estremi i
+due punti di intersezione della retta _a_ con il triangolo _tri1_.
+
+====
+
+IntersezioneCammini(Poligono, Poligono)::
+  Crea il poligono intersezione dei due poligoni indicati.
+  +
+  +
+
+[EXAMPLE]
+
+====
+
+`IntersezioneCammini(quadrilatero, triangolo)` genera un nuovo poligono, intersezione dei due poligoni
+indicati.
+
+====
+
+[NOTE]
+
+====
+
+Il nuovo poligono può essere un quadrilatero, un pentagono o un esagono: ciò dipende dalla posizione dei vertici
+dei poligoni indicati.
+
+====
+
+IntersezioneCammini(Piano, Poligono)::
+  Restituisce il cammino che rappresenta l'intersezione tra il piano e il poligono indicati.
+  +
+
+[EXAMPLE]
+
+====
+
+`IntersezioneCammini(a, triangolo)` genera un segmento tra il primo e il secondo punto di intersezione del
+piano _a_ con il poligono _triangolo_, nel piano contenente il triangolo.
+
+====
+
+IntersezioneCammini(Piano, Quadrica)::
+  Restituisce il cammino che rappresenta l'intersezione tra il piano e la quadrica indicati.
+  +
+
+[EXAMPLE]
+
+====
+
+`IntersezioneCammini(a, sfera)` genera la circonferenza intersezione del piano _a_ e della quadrica _sfera_.
+
+====
+
+[NOTE]
+
+====
+
+Vedere anche i comandi xref:/commands/Comando_Intersezione.adoc[Intersezione] e
+xref:/commands/Comando_IntersezioneConica.adoc[IntersezioneConica].
+
+====

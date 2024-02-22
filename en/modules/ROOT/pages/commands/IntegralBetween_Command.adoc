@@ -1,0 +1,56 @@
+= IntegralBetween Command
+
+IntegralBetween( <Function>, <Function>, <Number>, <Number> )::
+  Gives the definite integral of the difference _f(x) ‐ g(x)_ of two function _f_ and _g_ over the interval _[a, b]_,
+  where _a_ is the first number and _b_ the second, with respect to the main variable.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `IntegralBetween(sin(x), cos(x), 0, pi)`
+
+====
+
+IntegralBetween( <Function>, <Function>, <Number>, <Number>, <Boolean Evaluate> )
+
+Gives the definite integral of the difference _f(x) ‐ g(x)_ of two function _f_ and _g_ over the interval _[a, b]_,
+where _a_ is the first number and _b_ the second, with respect to the main variable and shadows the related area if
+_Evaluate_ is _true_. In case _Evaluate_ is _false_ the related area is shaded but the integral value is not calculated.
+
+[NOTE]
+
+====
+
+*Note:* This command also shades the area between the function graphs of _f_ and _g_.
+
+====
+
+== [#CAS_Syntax]#CAS Syntax#
+
+IntegralBetween( <Function>, <Function>, <Number>, <Number> )::
+  Gives the definite integral of the difference _f(x) ‐ g(x)_ of two function _f_ and _g_ over the interval _[a, b]_,
+  where _a_ is the first number and _b_ the second, with respect to the main variable.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `IntegralBetween(sin(x), cos(x), pi / 4, pi * 5 / 4)` yields stem:[2 \sqrt\{2}].
+
+====
+
+IntegralBetween( <Function>, <Function>, <Variable>, <Number>, <Number> )::
+  Gives the definite integral of a variable of the difference _f(x) ‐ g(x)_ of two function _f_ and _g_ over the
+  interval _[a, b]_, where _a_ is the first number and _b_ the second, with respect to the given variable.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `IntegralBetween(a * sin(t), a * cos(t), t, pi / 4, pi * 5 / 4)` yields stem:[2 \sqrt\{2} a].
+
+====

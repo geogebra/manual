@@ -1,0 +1,126 @@
+= Strumento Immagine
+
+Per inserire un'immagine nella image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Vista_Grafici.adoc[vista Grafici], selezionare lo strumento image:20px-Mode_image.svg.png[Mode
+image.svg,width=20,height=20] _Immagine_ nella casella _Strumenti Oggetti speciali_ (terza da destra)
+/File:Mode_Image_It.png.adoc[image:Mode_Image_It.png[Mode Image It.png,width=624,height=328]] quindi specificare la
+posizione dell'immagine in uno dei seguenti modi:
+
+* Fare clic nella image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _vista Grafici_ per
+definire la posizione dell'angolo in basso a sinistra dell'immagine
+
+oppure
+
+* Fare clic su un punto per definirlo come angolo in basso a sinistra dell'immagine.
+
+Verrà visualizzata una finestra di dialogo che consente la selezione dell'immagine tra i file salvati nel computer.
+
+[NOTE]
+
+====
+
+* Nella versione desktop, dopo avere selezionato lo strumento image:20px-Mode_image.svg.png[Mode
+image.svg,width=20,height=20] _Immagine_, è possibile incollare direttamente nella
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _vista Grafici_ un'immagine memorizzata
+negli _Appunti_ con la combinazione [.kcode]#Alt# _clic_.
+* Sono supportati file [http://en.wikipedia.org/wiki/Graphics_Interchange_Format[GIF]] con trasparenza e file
+[http://en.wikipedia.org/wiki/Portable_Network_Graphics[PNG]]; per utilizzare file in formato _PNG_ è necessario
+modificarli in modo che dispongano di un canale alpha. Ad esempio se si utilizza [http://www.irfanview.com/[IrfanView]]
+per la modifica, è necessario salvare utilizzando il plugin PNGOUT, selezionando l'opzione *RGB+Alpha*.
+* Le immagini inserite sono classificate per impostazione predefinita come _oggetti ausiliari_.
+
+====
+
+== [#Proprietà_delle_immagini]####[#Propriet.C3.A0_delle_immagini]##Proprietà delle immagini##
+
+La posizione di un'immagine nello schermo può essere assoluta o relativa al sistema di coordinate: è possibile
+specificare l'impostazione desiderata nella scheda _Generali_ della
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Finestra_di_dialogo_Propriet%C3%A0.adoc[finestra di dialogo Proprietà] dell'immagine.
+
+Nella scheda _Posizione_ della finestra di dialogo _Proprietà_ è possibile specificare fino a tre "corner"
+dell'immagine: ciò consente la flessibilità necessaria per scalare, ruotare e perfino distorcere le immagini (vedere
+inoltre il comando xref:/commands/Comando_Corner.adoc[Corner]).
+
+* _Corner 1_: posizione dell'angolo in basso a sinistra dell'immagine
+* _Corner 2_: posizione dell'angolo in basso a destra dell'immagine
+
+[NOTE]
+
+====
+
+Questo corner, che controlla la larghezza dell'immagine, può essere impostato solo se il _Corner 1_ è stato
+definito in precedenza.
+
+====
+
+* Corner 4: posizione dell'angolo in alto a sinistra dell'immagine
+
+[NOTE]
+
+====
+
+Questo corner, che controlla l'altezza dell'immagine, può essere impostato solo se il _Corner 1_ è stato
+definito in precedenza.
+
+====
+
+[EXAMPLE]
+
+====
+
+Creare tre punti _A_, _B_ e _C_ e inserire un'immagine nella image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _vista Grafici_ per sperimentare gli effetti dei punti corner.
+
+* Impostare i punti _A_ e _B_ rispettivamente come primo e secondo _corner_ dell'immagine. Trascinando i punti _A_ e _B_
+in modalità image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22] _Muovi_ è possibile modificare la larghezza
+dell'immagine.
+* Rimuovere ora il punto _B_ come secondo _corner_ dell'immagine e impostare _A_ come primo _corner_ e _C_ come quarto
+_corner_. Trascinando i punti _A_ e _C_ in modalità image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22]
+_Muovi_ è possibile modificare l'altezza dell'immagine.
+* È infine possibile impostare tutti e tre i punti _corner_ e distorcere l'immagine trascinando tali punti.
+
+====
+
+[EXAMPLE]
+
+====
+
+Per collegare l'immagine a un punto _A_ e assegnare ad essa dimensioni fissate (ad esempio larghezza = 3,
+altezza = 4 unità):
+
+* Impostare _A_ come _Corner 1_
+* Impostare _A + (3, 0)_ come _Corner 2_
+* Impostare _A + (0, 4)_ come _Corner 4_
+
+====
+
+[NOTE]
+
+====
+
+Trascinando il punto _A_ in modalità image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22]
+xref:/tools/Strumento_Muovi.adoc[Muovi], le dimensioni dell'immagine rimangono invariate.
+
+====
+
+È inoltre possibile impostare un'immagine come _Sfondo_, nella scheda _Generali_ della
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Finestra_di_dialogo_Propriet%C3%A0.adoc[finestra di dialogo Proprietà]. Un'immagine di sfondo viene posizionata ad
+un livello al di sotto degli assi cartesiani, e non può essere selezionata con il mouse.
+
+[NOTE]
+
+====
+
+Per modificare le impostazioni di un'immagine di sfondo, aprire la
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] finestra di dialogo _Proprietà_ selezionando
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Proprietà…_ nel
+image:16px-Menu-edit.svg.png[Menu-edit.svg,width=16,height=16] xref:/Menu_Modifica.adoc[menu Modifica].
+
+====
+
+È possibile modificare la _Trasparenza_ di un'immagine, in modo da visualizzare agevolmente gli oggetti o gli assi che
+si trovano al di sotto di essa: nella scheda _Stile_ della
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] finestra di dialogo _Proprietà_ è possibile
+specificare una percentuale di _Riempimento_ compresa tra 0 % e 100 %.

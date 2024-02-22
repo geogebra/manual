@@ -1,0 +1,89 @@
+= Labels and Captions
+
+In GeoGebra, each object has its unique *label*. For labeling you can choose one or more letters, possibly with
+subscript. For details see xref:/Naming_Objects.adoc[Naming Objects].
+
+== [#Show_and_Hide_Labels]#Show and Hide Labels#
+
+You can show or hide the objects labels in the image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Graphics_View.adoc[Graphics View] in different ways:
+
+* Select the image:22px-Mode_showhidelabel.svg.png[Mode showhidelabel.svg,width=22,height=22]
+xref:/tools/Show_/_Hide_Label_Tool.adoc[Show / Hide Label Tool] and select the object whose label you would like to show
+or hide.
+* Open the xref:/Context_Menu.adoc[Context Menu] for the desired object and select
+image:22px-Mode_showhidelabel.svg.png[Mode showhidelabel.svg,width=22,height=22] _Show Label_.
+* Open the image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Properties_Dialog.adoc[Properties
+Dialog] for the desired object and check or un-check the checkbox _Show Label_ on tab _Basic_.
+
+== [#Name_and_Value]#Name and Value#
+
+In GeoGebra, every object has a unique name that can be used to label the object in the
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Graphics View_. In addition, an object
+can also be labeled using its value or its name and value. You can change this label setting in the
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Properties Dialog_ on tab _Basic_ by selecting the
+corresponding option _Name_, _Value_, or _Name & Value_ from the drop down menu next to the checkbox _Show Label_.
+
+[NOTE]
+
+====
+
+*Note:* The value of a point is its coordinates, while the value of a function is its equation.
+
+====
+
+== [#Caption]#Caption#
+
+However, sometimes you might want to give several objects the same label, for example, to label the four edges of a
+square _a_. In this case, GeoGebra offers captions for all objects, in addition to the three labeling options mentioned
+above. You can set the caption of an object on tab _Basic_ of the
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Properties Dialog_ by entering the desired caption
+into the text field called "Caption". Afterwards, you can select the labeling option "Caption" from the drop down menu
+next to the checkbox "Show Label".
+
+You can use following placeholders in captions:
+
+[cols=",",options="header",]
+|===
+|Placeholder |Meaning
+|%c |The value of the adjacent spreadsheet cell (to the right), which should be an independent textNot dynamic: i.e. the
+caption won't be updated unless you press [.kcode]#F9# or [.kcode]#Ctrl# + [.kcode]#R#
+
+|%v |Value
+
+|%n |Name
+
+|%d |Description
+
+|%f |Definition
+
+|%x |x coordinate (or x coefficient for the line a x + b y + c = 0)
+
+|%y |y coordinate (or y coefficient for the line a x + b y + c = 0)
+
+|%z |z coordinate (or constant _c' term for the line a x + b y + c = 0)_
+|===
+
+[EXAMPLE]
+
+====
+
+*Example:* Let A be a point and (1,2) be its coordinates. Setting the caption to "Point %n has coordinates %v" results
+in caption "Point A has coordinates (1,2)"
+
+====
+
+=== [#LaTeX_in_Captions]#LaTeX in Captions#
+
+You can also use xref:/LaTeX.adoc[LaTeX] in your labels, enclosing the desired LaTeX command in dollar characters (e.g.
+`$ x^{2} $`), and choose from a list of most commonly used Greek letters and operators, just clicking on the little box
+displayed at the end of the _Caption_ field.
+
+[EXAMPLE]
+
+====
+
+*Example:* If you want to display a nicely formatted math text, use LaTeX in captions, e.g. to display a fraction like
+stem:[ \frac\{a}\{b} ], in the caption field type: *`$\frac{a}{b}$`*.
+
+====

@@ -1,0 +1,41 @@
+= Comando VettoreCurvatura
+
+VettoreCurvatura(Punto, Funzione)::
+  Genera il vettore curvatura della funzione nel punto indicato.
+  +
+
+[EXAMPLE]
+
+====
+
+`VettoreCurvatura((0,0), x^2)` restituisce il vettore _(0, 2)_.
+
+====
+
+VettoreCurvatura(Punto, Curva)::
+  Genera il vettore curvatura della curva nel punto indicato.
+  +
+
+[EXAMPLE]
+
+====
+
+`VettoreCurvatura((0, 0), Curva(cos(t), sin(2t), t, 0, π))` restituisce il vettore _(0, 0)_.
+
+====
+
+VettoreCurvatura(Punto, Oggetto)::
+  Genera il vettore curvatura dell'oggetto (funzione, curva, conica), nel punto indicato.
+  +
+
+[EXAMPLE]
+
+====
+
+*Esempi:*
+
+* `VettoreCurvatura((0 ,0), x^2)` restituisce il vettore _(0, 2)_
+* `VettoreCurvatura((0, 0), Curva(cos(t), sin(2t), t, 0, π))` restituisce il vettore _(0, 0)_
+* `VettoreCurvatura((-1, 0), Conica({1, 1, 1, 2, 2, 3}))` restituisce il vettore _(0, -2)_
+
+====

@@ -1,0 +1,52 @@
+= Valori booleani
+
+In GeoGebra è possibile utilizzare i valori booleani _true_ e _false_, semplicemente digitando ad esempio, `a = true` o
+`b = false` nella xref:/Barra_di_inserimento.adoc[barra di inserimento] e premendo successivamente il tasto
+[.kcode]#Invio#. Le variabili booleane consentono ad esempio di definire la
+xref:/Visibilit%C3%A0_condizionata.adoc[visibilità condizionata] di un oggetto.
+
+== [#Caselle_di_controllo_e_tasti_freccia]#Caselle di controllo e tasti freccia#
+
+Le variabili booleane libere possono essere visualizzate come caselle di controllo nella
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Vista_Grafici.adoc[vista Grafici]
+(vedere lo image:22px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=22,height=22]
+xref:/tools/Strumento_Casella_di_controllo.adoc[strumento Casella di controllo]). Per modificare il valore di una
+variabile booleana selezionata in image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _vista
+Algebra_ utilizzare i tasti freccia della tastiera (vedere la sezione xref:/Animazione.adoc[Animazione manuale]).
+
+[NOTE]
+
+====
+
+È inoltre possibile indicare le variabili booleane in forma numerica (valori 0 oppure 1). In questo modo si può
+utilizzare una casella di controllo per controllare l'avvio e l'interruzione dell'animazione di uno slider: il pulsante
+di animazione verrà visualizzato nella image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+_vista Grafici_ solo se è presente anche uno slider animato con velocità statica (cioè non dinamica).
+
+====
+
+== [#Operazioni]#Operazioni#
+
+Le operazioni elencate di seguito sono applicabili alle variabili booleane e alle condizioni. Tali operazioni possono
+essere selezionate dall'elenco visualizzato accanto alla barra di inserimento, oppure digitate direttamente da tastiera.
+
+[cols=",,,,",options="header",]
+|===
+|Operazione |Elenco |Tastiera |Esempio |Tipi di oggetto
+|Uguale |≟ |== |a ≟ b oppure a == b |numeri, punti, rette, coniche, funzioni (richiede CAS), piani, a, b
+|Diverso |≠ |!= |a ≠ b oppure a != b |numeri, punti, rette, coniche, funzioni (richiede CAS), piani, a, b
+|Minore | |< |a < b |numeri a, b
+|Maggiore | |> |a > b |numeri a, b
+|Minore o uguale |≤ |<= |a ≤ b oppure a <= b |numeri a, b
+|Maggiore o uguale |≥ |>= |a ≥ b oppure a >= b |numeri a, b
+|E (et, and) |∧ |&& |a ∧ b oppure a && b |booleani a, b
+|O (vel, or) |∨ || | |a ∨ b oppure a || b |booleani a, b
+|Non (not) |¬ |! |¬a oppure !a |booleano a
+|O esclusivo (or esclusivo) | |[.kcode]##Alt##[.kcode]##+## |a ⊕ b |booleani a, b
+|Implicazione |→ |-> |a -> b |booleani a, b
+|Parallelo |∥ | |a ∥ b |rette a, b
+|Perpendicolare |⊥ | |a ⊥ b |rette a, b
+|Appartenente |∈ | |a ∈ lista1 |numero a, lista di numeri lista1
+|Sottoinsieme |⊆ | |lisat1 ⊆ lista2 |liste lista1, lista2
+|Sottoinsieme proprio |⊂ | |lista1 ⊂ lista2 |liste lista1, lista2
+|===

@@ -1,0 +1,63 @@
+= Comando IperGeometrica
+
+IperGeometrica(Dimensione popolazione, Numero successi, Dimensione campione)::
+  Restituisce un diagramma a barre di una http://en.wikipedia.org/wiki/it:Distribuzione_ipergeometrica[distribuzione
+  ipergeometrica] (http://en.wikipedia.org/wiki/Hypergeometric_distribution[versione in inglese con l'esempio di
+  riferimento]).
+  +
+  _Parametri:_
+  +
+  * _Dimensione popolazione_: numero di palline nell'urna
+  * _Numero successi_: numero di palline bianche nell'urna
+  * _Dimensione campione_: numero di palline estratte dall'urna
+  +
+  Il diagramma a barre mostra la funzione di probabilità del numero di palline bianche nel campione.
+
+IperGeometrica(Dimensione popolazione, Numero successi, Dimensione campione, Booleano Cumulativa)::
+  Sia _X_ una variabile casuale ipergeometrica.
+  +
+  * Restituisce un diagramma a barre di una distribuzione ipergeometrica, quando _Cumulativa_ = false.
+  * Restituisce il grafico di una distribuzione ipergeometrica cumulata quando _Cumulativa_ = true.
+  +
+  I primi tre parametri sono spiegati nella sintassi precedente.
+
+IperGeometrica(Dimensione popolazione, Numero successi, Dimensione campione, Valore variabile v, Booleano Cumulativa)::
+  Sia _X_ una variabile casuale ipergeometrica.
+  +
+  * Restituisce P( X = _v_) quando _Cumulativa_ = false.
+  * Restituisce P( X ≤ _v_) quando _Cumulativa_ = true.
+  +
+  I primi tre parametri sono spiegati nella prima sintassi della pagina.
+
+== [#Sintassi_CAS]#Sintassi CAS#
+
+Nella image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[vista CAS] è
+disponibile esclusivamente la seguente sintassi:
+
+IperGeometrica(Dimensione popolazione, Numero successi, Dimensione campione, Valore variabile v, Booleano Cumulativa)::
+  Sia _X_ una variabile casuale ipergeometrica.
+  +
+  * Restituisce P( X = _v_) quando _Cumulativa_ = false.
+  * Restituisce P( X ≤ _v_) quando _Cumulativa_ = true.
+  +
+  I primi tre parametri sono spiegati nella prima sintassi della pagina.
+  +
+
+[EXAMPLE]
+
+====
+
+Supponiamo di estrarre due palline da un'urna contenente 10 palline, di cui 2 sono bianche, senza reimmissione.
+
+* `IperGeometrica(10, 2, 2, 0, false)` restituisce stem:[\frac\{28}\{45}], la probabilità di estrarre 0 palline bianche,
+* `IperGeometrica(10, 2, 2, 1, false)` restituisce stem:[\frac\{16}\{45}], la probabilità di estrarre 1 pallina bianca,
+* `IperGeometrica(10, 2, 2, 2, false)` restituisce stem:[\frac\{1}\{45}], la probabilità di estrarre 2 palline bianche,
+* `IperGeometrica(10, 2, 2, 3, false)` restituisce _0_, la probabilità di estrarre 3 palline bianche.
+* `IperGeometrica(10, 2, 2, 0, true)` restituisce stem:[\frac\{28}\{45}], la probabilità di estrarre 0 (o meno) palline
+bianche,
+* `IperGeometrica(10, 2, 2, 1, true)` restituisce stem:[\frac\{44}\{45}], la probabilità di estrarre 1 o meno palline
+bianche,
+* `IperGeometrica(10, 2, 2, 2, true)` restituisce _1_, la probabilità di estrarre 2 o meno palline bianche
+* `IperGeometrica(10, 2, 2, 3, true)` restituisce _1_, la probabilità di estrarre 3 o meno palline bianche.
+
+====

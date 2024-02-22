@@ -1,0 +1,74 @@
+= Redefine Dialog
+
+Redefining objects is a very versatile way to change a construction. Please note that this may also change the order of
+the construction steps in the image:16px-Menu_view_construction_protocol.svg.png[Menu view construction
+protocol.svg,width=16,height=16] xref:/Construction_Protocol.adoc[Construction Protocol].
+
+[NOTE]
+
+====
+
+*Note:* The redefined element can only depend on elements defined earlier in the construction order, so you may need to
+change order of the elements in image:16px-Menu_view_construction_protocol.svg.png[Menu view construction
+protocol.svg,width=16,height=16] xref:/Construction_Protocol.adoc[Construction Protocol].
+
+====
+
+In GeoGebra, an object may be redefined in different ways:
+
+* Select image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22]xref:/tools/Move_Tool.adoc[Move Tool] and double
+click on any object in the image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+xref:/Algebra_View.adoc[Algebra View].
+** For free objects an editing field is opened allowing you to directly change the algebraic representation of the
+object. Hit the [.kcode]#Enter# key in order to apply these changes.
+** For dependent objects the Redefine dialog is opened allowing you to redefine the object.
+* Select image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22]xref:/tools/Move_Tool.adoc[Move Tool] and double
+click on any object in the image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Graphics_View.adoc[Graphics View]. This opens the Redefine dialog and allows you to redefine the object.
+* Change any object by entering its name and the new definition into the xref:/Input_Bar.adoc[Input Bar].
+* Open the image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Properties_Dialog.adoc[Properties
+Dialog] and change the definition of an object on tab _Basic_.
+
+[NOTE]
+
+====
+
+*Note:*
+
+Fixed objects cannot be redefined. In order to redefine a fixed object, you need to free it first using tab _Basic_ of
+the image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Properties Dialog_.
+
+====
+
+[NOTE]
+
+====
+
+*Note:*
+
+You can also redefine existing objects in the _Input Bar_. For example type `a:Segment[A, B]` to redefine `a` to be a
+segment.
+
+====
+
+== [#Examples]#Examples#
+
+[EXAMPLE]
+
+====
+
+*Example:* In order to place an existing free point A onto an existing line h, you first need to double click on the
+point A to open the Redefine dialog window. Then change the definition to `Point[h]` in the appearing text field and
+press [.kcode]#Enter#. To remove point A from this line and make it free again, you need to redefine it to some free
+coordinates, e.g. (1, 2).
+
+====
+
+[EXAMPLE]
+
+====
+
+*Example:* Another example is the conversion of a line h through two points A and B into a segment. Open the Redefine
+dialog for line h and change `Line[A, B]` into `Segment[A, B]`
+
+====

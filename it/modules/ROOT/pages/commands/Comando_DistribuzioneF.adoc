@@ -1,0 +1,28 @@
+= Comando DistribuzioneF
+
+DistribuzioneF(Gradi di libertà numeratore, Gradi di libertà denominatore, x)::
+  Genera la funzione di distribuzione cumulativa di una
+  http://en.wikipedia.org/wiki/it:Distribuzione_di_Fisher-Snedecor[distribuzione di Fisher-Snedecor] di parametri _n,
+  d_, dove _n_ è il numero di gradi di libertà del numeratore e _d_ il numero di gradi di libertà del denominatore.
+
+DistribuzioneF(Gradi di libertà numeratore, Gradi di libertà denominatore, x, Booleano Cumulativa)::
+  Se _Cumulativa_ è _true_, genera la funzione di distribuzione cumulativa della distribuzione di Fisher-Snedecor di
+  parametri _n, d_, dove _n_ è il numero di gradi di libertà del numeratore e _d_ il numero di gradi di libertà del
+  denominatore, in caso contrario genera la funzione di densità di probabilità della distribuzione di Fisher-Snedecor .
+
+DistribuzioneF(Gradi di libertà numeratore, Gradi di libertà denominatore, Valore variabile)::
+  Calcola il valore della funzione di distribuzione cumulativa di Fisher-Snedecor in corrispondenza del valore della
+  variabile _v_ indicato cioè la probabilità _P(X ≤ v)_, dove _X_ è una variabile casuale con distribuzione di
+  Fisher-Snedecor, di parametri _n, d_, dove _n_ è il numero di gradi di libertà del numeratore e _d_ il numero di gradi
+  di libertà del denominatore.
+
+[NOTE]
+
+====
+
+* Restituisce la probabilità relativa a un determinato valore di _x_ (ovvero l'area sottesa dalla curva della
+distribuzione di Fisher-Snedecor alla sinistra dell'ascissa _x_ indicata).
+* Questo comando è disponibile anche nella image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/Vista_CAS.adoc[vista CAS].
+
+====

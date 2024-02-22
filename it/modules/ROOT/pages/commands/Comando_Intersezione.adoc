@@ -1,0 +1,135 @@
+= Comando Intersezione
+
+Intersezione(Oggetto, Oggetto)::
+  Restituisce i punti di intersezione di due oggetti.
+  +
+
+[EXAMPLE]
+
+====
+
+*Esempi:*
+
+* Siano _a_: -3__x__ + 7__y__ = -10 una retta e _c_: __x__^2 + 2__y__^2 = 8 un ellisse. `Intersezione(a, c)` restituisce
+i loro punti di intersezione (-1.02, -1,87), (2.81, -0.22).
+* `Intersezione(y = x + 3, Curva(t, 2t, t, 0, 10))` restituisce il punto __A__=(3, 6).
+* `Intersezione(Curva(2s, 5s, s,-10, 10 ), Curva(t, 2t, t, -10, 10))` restituisce il punto __A__=(0,0).
+
+====
+
+[NOTE]
+
+====
+
+Se gli oggetti sono due funzioni non polinomiali, il comando restituisce solo una delle intersezioni. In questo
+caso è necessario utilizzare la sintassi `{Intersezione(Funzione, Funzione, x iniziale, x finale)}`.
+
+====
+
+Intersezione(Oggetto, Oggetto, Numero n)::
+  Restituisce l'n^esimo^ punto di intersezione dei due oggetti. Gli oggetti supportati sono rette, coniche, funzioni
+  polinomiali o curve implicite.
+  +
+
+[EXAMPLE]
+
+====
+
+Siano _a_(_x_) = __x__^3 + __x__^2 - _x_ una funzione e _b_: -3__x__ + 5__y__ = 4 una retta.
+`Intersezione(a, b, 2)` restituisce il secondo punto di intersezione della funzione con la retta, di coordinate (-0.43,
+0.54).
+
+====
+
+Intersezione(Oggetto, Oggetto, Punto iniziale)::
+  Restituisce un punto di intersezione dei due oggetti, utilizzando un metodo numerico iterativo con punto iniziale
+  assegnato.
+  +
+
+[EXAMPLE]
+
+====
+
+Siano _a_(_x_) = __x__^3 + __x__^2 - _x_ una funzione e _b_: -3__x__ + 5__y__ = 4 una retta. Sia _C_ = (0,
+0.8) il punto iniziale. `Intersezione(a, b, C)` restituisce il punto di intersezione della funzione con la retta di
+coordinate (-0.43, 0.54), utilizzando un metodo numerico iterativo con punto iniziale _C_.
+
+====
+
+Intersezione(Funzione, Funzione, x iniziale, x finale)::
+  Restituisce i punti di intersezione delle due funzioni appartenenti all'intervallo indicato.
+  +
+
+[EXAMPLE]
+
+====
+
+Siano _a_(_x_) = __x__^3 + __x__^2 - _x_ e _g_(_x_) = 4 / 5 + 3 / 5 _x_ due funzioni.
+`Intersezione(f, g, -1, 2)` restituisce i punti di intersezione _A_ = (-0.43, 0.54) e _B_ = (1.1, 1.46) delle due
+funzioni relativamente all'intervallo [ -1, 2 ].
+
+====
+
+Intersezione(Curva1, Curva2, Parametro1, Parametro2)::
+  Determina un punto di intersezione tra le due curve utilizzando un metodo numerico iterativo nell'intervallo
+  specificato dai due parametri indicati.
+  +
+
+[EXAMPLE]
+
+====
+
+Siano _a_ = _Curva_(cos(t), sin(t), t, 0, π) e _b_ = _Curva_(cos(t) + 1, sin(t), t, 0, π).
+`Intersezione(a, b, 0, 2)` restituisce il loro punto di intersezione _A_ = (0.5, 0.87).
+
+====
+
+== [#Sintassi_CAS]#Sintassi CAS#
+
+Intersezione(Funzione, Funzione)::
+  Restituisce una lista contenente i punti di intersezione delle due funzioni.
+  +
+
+[EXAMPLE]
+
+====
+
+Siano _f_(_x_):= __x__^3 + __x__^2 - _x_ e _g_(_x_):= _x_ due funzioni. `Intersezione(f(x), g(x))`
+restituisce la lista \{(1, 1), (0, 0), (-2, -2)} dei punti di intersezione delle due funzioni.
+
+====
+
+Intersezione(Oggetto, Oggetto)::
+  Restituisce i punti di intersezione di due oggetti, anche 3D.
+  +
+
+[EXAMPLE]
+
+====
+
+*Esempi:*
+
+* Intersezione(Retta , Oggetto): Crea il punto di intersezione di una retta e un piano, segmento, poligono, ecc.
+* Intersezione(Piano , Oggetto): Crea il punto di intersezione di un piano e un segmento, poligono, ecc.
+* Intersezione(Piano, Piano): Crea la retta intersezione di due piani
+* Intersezione(Piano, Poliedro): Crea il/i poligoni intersezione di un piano e un poliedro
+* Intersezione(Sfera, Sfera): Crea il cerchio intersezione di due sfere
+* Intersezione(Piano, Quadrica): Crea la conica intersezione di un piano e una quadrica (sfera, cono, cilindro, ...)
+
+====
+
+[NOTE]
+
+====
+
+* Per ottenere tutti i punti di intersezione in una lista utilizzare un comando del tipo `{Intersezione(a,b)}`
+* In _vista CAS_ il comando determina _tutti_ i punti di intersezione di due funzioni solo se queste sono algebriche
+razionali o irrazionali. Per determinare le intersezioni di altri tipi di funzione, restringere la ricerca delle
+soluzioni su appositi intervalli, utilizzando una sintassi del tipo
+`Intersezione(Funzione, Funzione, x iniziale, x finale)`.
+* Vedere anche lo image:22px-Mode_intersect.svg.png[Mode intersect.svg,width=22,height=22]
+xref:/tools/Strumento_Intersezione.adoc[strumento Intersezione].
+* Vedere anche i comandi xref:/commands/Comando_IntersezioneConica.adoc[IntersezioneConica] e
+xref:/commands/Comando_IntersezioneCammini.adoc[IntersezioneCammini].
+
+====

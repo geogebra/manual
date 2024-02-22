@@ -1,0 +1,67 @@
+= Comando ImpColore
+
+ImpColore(Oggetto, Rosso, Verde, Blu)::
+  Imposta il colore dell'oggetto indicato. _Rosso_, _Verde_ e _Blu_ devono essere tre numeri compresi tra 0 e 1, e
+  rappresentano la quantità della corrispondente componente del colore. Un numero _t_ esterno a questo intervallo viene
+  ricondotto ad esso tramite la funzione stem:[2\left|\frac\{t}2-\mathrm round\left(\frac\{t}2\right)\right|].
+
+ImpColore(Oggetto, "Colore")::
+  Imposta il colore dell'oggetto indicato. Il colore deve essere inserito tra virgolette, perchè deve essere un
+  xref:/Testi.adoc[testo], che può essere:
+  +
+  * un nome di colore in inglese, tra quelli disponibili alla pagina
+  https://wiki.geogebra.org/en/Reference:Colors[Colors], oppure uno tra quelli disponibili in italiano, elencati di
+  seguito.
+  +
+
+[NOTE]
+
+====
+
+Se il comando è utilizzato all'interno di un GeoGebraScript è necessario utilizzare il nome del colore in
+inglese (vedere https://wiki.geogebra.org/en/Reference:Colors[Colors])
+
+====
+
+* una stringa esadecimale del tipo #AARRGGBB o #RRGGBB, dove _AA_ definisce la trasparenza (01 trasparenza totale, fino
+a _FF_ opacità totale), _RR_ definisce la componente del rosso, _GG_ quella del verde e _BB_ quella del blu.
+
+[EXAMPLE]
+
+====
+
+`ImpColore(testo1, "#80FF0000")` imposta il colore del _testo1_ già esistente in rosso, con una trasparenza
+di bianco del 50%
+
+====
+
+*_Tabella colori in italiano_*
+
+* Grigio scuro
+* Acqua
+* Nero
+* Blu
+* Verde
+* Verde chiaro
+* Marrone scuro
+* Porpora
+* Rosso
+* Argento
+* Bianco
+* Giallo
+* Marrone
+
+* Cremisi
+* Celeste
+* Blu scuro
+* Grigio
+* Grigio chiaro
+* Oro
+* Magenta
+* Indaco
+* Rosa
+* Arancione
+* Viola
+* Turchese
+
+ 

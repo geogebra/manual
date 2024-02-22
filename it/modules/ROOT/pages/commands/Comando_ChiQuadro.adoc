@@ -1,0 +1,34 @@
+= Comando ChiQuadro
+
+ChiQuadro(Gradi di libertà, x)::
+  Genera la funzione di distribuzione cumulativa di una
+  http://en.wikipedia.org/wiki/it:Distribuzione_chi_quadrato[distribuzione Chi quadro] avente i gradi di libertà
+  indicati.
+
+ChiQuadro(Gradi di libertà, x, Booleano Cumulativa)::
+  Se _Cumulativa_ è _true_, genera la funzione di distribuzione cumulativa di una distribuzione _Chi quadro_, altrimenti
+  genera la funzione densità di probabilità di una distribuzione _Chi quadro_.
+
+ChiQuadro(Gradi di libertà, Valore variabile)::
+  Calcola il valore della funzione di distribuzione cumulativa di una distribuzione _Chi quadro_ in 'corrispondenza del
+  valore della variabile 'v _indicato, cioè la probabilità_ P(X ≤ v) _dove_ X _è una variabile casuale con distribuzione
+  Chi quadro avente i gradi di libertà indicati._
+  +
+  +
+
+[EXAMPLE]
+
+====
+
+`ChiQuadro(4, 3)` restituisce stem:[\gamma(2, \frac\{3}\{2})], che vale circa _0.44_.
+
+====
+
+[NOTE]
+
+====
+
+Restituisce la probabilità relativa al valore indicato dell'ascissa (ovvero l'area sottesa dalla curva della
+distribuzione Chi quadro alla sinistra dell'ascissa indicata).
+
+====

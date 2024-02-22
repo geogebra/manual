@@ -1,0 +1,69 @@
+= LeftSide Command
+
+LeftSide( <Equation> )::
+  Gives the left-hand side of the simplified equation.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:*
+
+`LeftSide(4x = 1 - 3y)` yields _4x + 3y_.
+
+====
+
+== [#CAS_Syntax]#CAS Syntax#
+
+LeftSide( <Equation> )::
+  Gives the left-hand side of the equation.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:*
+
+`LeftSide(x + 2 = 3 x + 1)` yields _x + 2_.
+
+====
+
+LeftSide( <List of Equations> )::
+  Gives the list of the left-hand sides of the equations.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:*
+
+`LeftSide({a^2 + b^2 = c^2, x + 2 = 3 x + 1})` yields stem:[ \left\\{a^2 + b^2, x + 2 \right\} ] .
+
+====
+
+LeftSide( <List of Equations>, <Index> )::
+  Gives the left-hand side of the equation specified by the index.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:*
+
+`LeftSide({a^2 + b^2 = c^2, x + 2 = 3 x + 1}, 1)` yields stem:[a^2 + b^2].
+
+====
+
+[NOTE]
+
+====
+
+*Note:*
+
+See also xref:/commands/RightSide_Command.adoc[RightSide Command].
+
+====

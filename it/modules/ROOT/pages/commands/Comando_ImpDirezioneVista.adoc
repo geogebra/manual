@@ -1,0 +1,56 @@
+= Comando ImpDirezioneVista
+
+ImpDirezioneVista(Direzione)::
+  Imposta la visualizzazione 3D in funzione dalla direzione dell'oggetto geometrico indicato.
+  +
+
+[EXAMPLE]
+
+====
+
+*Esempi:*
+
+* `ImpDirezioneVista((0, 0, 1))`
+* `ImpDirezioneVista((0, 0, 1))`
+* `ImpDirezioneVista(x + y + z = 1)`
+
+====
+
+ImpDirezioneVista( )::
+  Imposta la visualizzazione 3D nella posizione predefinita.
+  +
+
+[EXAMPLE]
+
+====
+
+`ImpDirezioneVista()`
+
+====
+
+ImpDirezioneVista(Direzione, Booleano Animazione)::
+  Imposta la visualizzazione 3D in funzione dalla direzione dell'oggetto geometrico indicato, con possibilità di
+  animazione.
+  +
+
+[EXAMPLE]
+
+====
+
+Per ruotare la vista 3D in funzione dei valori assunti da uno slider _α_ precedentemente creato, inserire
+nella scheda _All'aggiornamento_ dello slider _α_ l'istruzione `ImpDirezioneVista(Vettore((1; α; -30°)), false)`
+
+====
+
+[NOTE]
+
+====
+
+* La direzione di visualizzazione può essere una retta, un segmento, un piano, ecc..
+* Applicando ad esempio `ImpDirezioneVista(x + y + z = 1)` due volte, si potrebbe ottenere alla seconda applicazione del
+comando una rotazione della Vista di 180° indesiderata. Per evitare tali ambiguità, utilizzare ad esempio un comando del
+tipo `ImpDirezioneVista(Vettore((0, 0, 1)))`
+* Vedere anche lo strumento image:24px-Mode_viewinfrontof.png[Mode viewinfrontof.png,width=24,height=24]
+xref:/tools/Strumento_Vista_frontale.adoc[Vista frontale].
+
+====

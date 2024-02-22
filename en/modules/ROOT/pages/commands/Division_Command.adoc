@@ -1,0 +1,49 @@
+= Division Command
+
+Division( <Dividend Number>, <Divisor Number> )::
+  Gives the quotient (integer part of the result) and the remainder of the division of the two numbers.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:*
+
+`Division(16, 3)` yields _\{5, 1}_.
+
+====
+
+Division( <Dividend Polynomial>, <Divisor Polynomial> )::
+  Gives the quotient and the remainder of the division of the two polynomials.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:*
+
+`Division(x^2 + 3 x + 1, x - 1)` yields _\{x + 4, 5}_.
+
+====
+
+[NOTE]
+
+====
+
+*Note:* In the _Algebra View_ only one variable can be used and it will always be renamed to _x_. In the _CAS View_
+multivariable division is also supported.
+
+[EXAMPLE]
+
+====
+
+*Examples:*
+
+* `Division(x^2+y^2, x+y)` yields _\{x - y, 2y^2}_.
+* `Division(x^2+y^2, y+x)` yields _\{y - x, 2x^2}_.
+
+====
+
+====

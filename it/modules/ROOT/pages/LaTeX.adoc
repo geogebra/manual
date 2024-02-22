@@ -1,0 +1,90 @@
+= LaTeX
+
+In GeoGebra è possibile inserire formule matematiche: basta selezionare la casella Formula LaTeX nella finestra di
+dialogo dello strumento image:24px-Mode_text.svg.png[Mode
+text.svg,width=24,height=24]xref:/tools/Strumento_Testo.adoc[Testo] e digitare la formula, utilizzando la sintassi
+LaTeX.
+
+[NOTE]
+
+====
+
+Per creare un testo contenente una formula LaTeX e del testo statico, digitare la parte statica del testo
+all'interno di \text\{} (l'opzione _Formula LaTeX_ deve essere attivata).
+
+====
+
+[EXAMPLE]
+
+====
+
+` \text{La lunghezza della diagonale è } \sqrt{ 2 }`.
+
+====
+
+[NOTE]
+
+====
+
+È inoltre possibile utilizzare il xref:/commands/Comando_LaTeX.adoc[comando LaTeX] per digitare direttamente la
+formula, racchiusa tra virgolette.
+
+====
+
+[EXAMPLE]
+
+====
+
+`LaTeX["\text{La lunghezza della diagonale è } \sqrt{ 2 }"]`
+
+====
+
+[NOTE]
+
+====
+
+Per ottenere velocemente un testo LaTeX contenente il valore di un oggetto presente nella
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _vista Algebra_, basta trascinare
+l'oggetto dalla image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _vista Algebra_ alla
+posizione desiderata nella image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _vista
+Grafici_.
+
+====
+
+È inoltre possibile selezionare la sintassi relativa ai simboli matematici di uso comune, utilizzando la casella di
+riepilogo a discesa accanto alla casella _Formula LaTeX_ (GeoGebra versione desktop) oppure nel menu _Avanzate_ al di
+sotto del campo di inserimento (GeoGebra Web e app per tablet). In questo modo il codice LaTeX viene inserito nel campo
+testo, e il cursore viene automaticamente posizionato all'interno di una coppia di parentesi graffe. La casella di
+riepilogo a discesa _Simboli_ contiene una lista di simboli matematici di uso comune, lettere greche e operatori. Per
+creare testo dinamico all'interno di una formula, è necessario selezionare gli oggetti di cui si desidera visualizzare
+il valore dall'elenco di riepilogo a discesa image:16px-GeoGebra_48.png[GeoGebra 48.png,width=16,height=16] _Oggetti_:
+in questo modo GeoGebra genera automaticamente la sintassi corretta relativa al testo misto.
+
+I principali comandi LaTeX sono elencati nella tabella seguente. Consultare la documentazione LaTeX per ulteriori
+informazioni.
+
+[cols=",",options="header",]
+|===
+|Inserimento LaTeX |Risultato
+|a \cdot b |stem:[a \cdot b]
+|\frac\{a}\{b} |stem:[\frac\{a}\{b}]
+|\sqrt\{x} |stem:[\sqrt\{x}]
+|\sqrt[n]\{x} |stem:[\sqrt[n]\{x}]
+|\vec\{v} |stem:[\vec\{v}]
+|\overline\{AB} |stem:[\overline\{AB}]
+|x^\{2} |stem:[x^\{2}]
+|a_\{1} |stem:[a_\{1}]
+|\sin\alpha + \cos\beta |stem:[\sin\alpha + \cos\beta]
+|\int_\{a}^\{b} x dx |stem:[\int_\{a}^\{b} x dx]
+|\sum_\{i=1}^\{n} i^2 |stem:[\sum_\{i=1}^\{n} i^2]
+|===
+
+È inoltre possibile inserire formule chimiche, utilizzando le sintassi
+`\ce, \mathchoice, \mskip, \lower, \raise, \mkern`.
+
+Fare riferimento a https://mhchem.github.io/MathJax-mhchem/[questo documento] per ulteriori informazioni.
+
+== [#Vedere_anche]#Vedere anche#
+
+* http://folk.uio.no/knutm/mmcs2008/lshort2e.pdf[The Not So Short Introduction To LaTeX]
+* http://www.guit.sssup.it/[Gruppo utilizzatori italiani di TeX]

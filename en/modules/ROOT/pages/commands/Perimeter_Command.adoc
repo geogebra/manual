@@ -1,0 +1,37 @@
+= Perimeter Command
+
+Perimeter( <Polygon> )::
+  Returns the perimeter of the polygon.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `Perimeter(Polygon((1, 2), (3, 2), (4, 3)))` yields _6.58_.
+
+====
+
+Perimeter( <Conic> )::
+  If the given conic is a circle or ellipse, this command returns its perimeter. Otherwise the result is undefined.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `Perimeter(x^2 + 2y^2 = 1)` yields _5.4_.
+
+====
+
+Perimeter( <Locus> )
+
+If the given locus is finite, this command returns its approximate perimeter. Otherwise the result is undefined.
+
+[NOTE]
+
+====
+
+*Note:* See also xref:/commands/Circumference_Command.adoc[Circumference] command.
+
+====

@@ -1,0 +1,91 @@
+= Finestra di dialogo Esporta Grafici
+
+[NOTE]
+
+====
+
+I contenuti di questa pagina wiki sono relativi esclusivamente a GeoGebra Classico 5. Per le altre versioni fare
+riferimento al comando xref:/commands/Comando_EsportaImmagine.adoc[EsportaImmagine].
+
+====
+
+Questa finestra di dialogo è accessibile tramite il sotto-menu _Esporta_ del xref:/Menu_File.adoc[menu File] (opzione
+image:Image-x-generic.png[Image-x-generic.png,width=16,height=16] _vista Grafici come Immagine_ (png, eps)….)
+
+Tasti di scelta rapida: [.kcode]#Ctrl# + [.kcode]#Maiusc# + [.kcode]#U# (Mac OS: [.kcode]#Cmd# + [.kcode]#Maiusc# +
+[.kcode]#U#)
+
+Questa finestra di dialogo consente il salvataggio della image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Vista_Grafici.adoc[vista Grafici] di GeoGebra in formato immagine. Verrà
+visualizzata una finestra di dialogo in cui è possibile selezionare il _Formato_, modificare la _Scala_ (in cm) e la
+_Risoluzione_ (in dpi), e impostare l'immagine come _Trasparente_.
+
+[NOTE]
+
+====
+
+Creando i punti _Export_1_ e _Export_2_ è possibile definire il rettangolo da esportare; in caso contrario sarà
+esportata la porzione di image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _vista
+Grafici_ visibile.
+
+====
+
+Quando si esporta la image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _vista Grafici_
+come immagine, è possibile scegliere tra uno dei seguenti formati:
+
+PNG – http://en.wikipedia.org/wiki/it:Portable_Network_Graphics[Portable Network Graphics]::
+  Questo è un formato pixel. Più alta è la risoluzione (dpi), migliore sarà la qualità dell'immagine (in genere 300dpi
+  sono sufficienti). I grafici in formato PNG non dovrebbero essere ridimensionati, per evitare una perdita di qualità
+  dell'immagine.
+  +
+  I file grafici in formato PNG sono particolarmente indicati per l'utilizzo nelle pagine Web (HTML) e nei documenti di
+  testo.
+  +
+
+[NOTE]
+
+====
+
+Quando si inserisce un'immagine in formato PNG in un elaboratore di testi (menu Inserisci, Immagine da file),
+assicurarsi che le dimensioni siano impostate al 100 %: in caso contrario la scala impostata (in cm) potrebbe risultare
+modificata.
+
+====
+
+EPS – http://en.wikipedia.org/wiki/it:Encapsulated_PostScript[Encapsulated Postscript]::
+  Questo è un formato grafico vettoriale. Le immagini in formato EPS possono essere scalate senza alcuna perdita di
+  qualità. I file grafici EPS sono ideali per l'utilizzo con programmi di grafica vettoriale (ad es. Corel Draw) e con
+  programmi di elaborazione testi professionali (ad es. xref:/LaTeX.adoc[LaTeX]).
+  +
+  La risoluzione di un grafico in formato EPS è sempre 72dpi. Tale valore viene utilizzato esclusivamente per calcolare
+  le dimensioni reali di un'immagine in centimetri, e non ha alcun effetto sulla qualità dell'immagine.
+  +
+
+[NOTE]
+
+====
+
+L'effetto di trasparenza con i poligoni riempiti o le coniche non è applicabile in formato EPS.
+
+====
+
+PDF – http://en.wikipedia.org/wiki/it:Portable_Document_Format[Portable Document Format]::
+  (vedere il formato EPS)
+  +
+
+[NOTE]
+
+====
+
+Quando si esporta in formato SVG e PDF è disponibile l'opzione di esportazione del testo come testo modificabile
+o come forma: ciò significa che nel primo caso il testo viene salvato come testo puro (che può essere modificato ad es.
+con InkScape), mentre nel secondo caso il testo viene salvato come curva di Bézier (così il testo verrà visualizzato
+esattamente come è, anche se il carattere utilizzato non è installato nel sistema).
+
+====
+
+SVG – http://en.wikipedia.org/wiki/it:Scalable_Vector_Graphics[Scalable Vector Graphics]::
+  (vedere il formato EPS)
+
+EMF – http://en.wikipedia.org/wiki/Enhanced_Meta_Format[Enhanced Meta Format]::
+  (vedere il formato EPS)

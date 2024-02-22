@@ -1,0 +1,30 @@
+= Comando Sostituisci
+
+== [#Sintassi_CAS]#Sintassi CAS#
+
+Sostituisci(Espressione, Termine, Sostituzione)::
+  Sostituisce nell'_espressione_ il _Termine_ con la _Sostituzione_.
+  +
+
+[EXAMPLE]
+
+====
+
+*Esempi:*
+
+* `Sostituisci((x^2/(4x+6))^2+6(x^2/(4x+6))+8, x^2, a*(4x+6))` restituisce _a^2^ + 6 a + 8_.
+* `Sostituisci((3m-3)^2-(m+3)^2, m, a)` restituisce _8 a^2^ - 24 a_.
+
+====
+
+Sostituisci(Espressione, Lista sostituzioni)::
+  Sostituisce nell'_espressione_ ciascuna variabile della lista con la variabile o il numero corrispondenti.
+  +
+
+[EXAMPLE]
+
+====
+
+`Sostituisci(2x+3y-z, {x=a, y=2, z=b})` restituisce _2a - b + 6_.
+
+====

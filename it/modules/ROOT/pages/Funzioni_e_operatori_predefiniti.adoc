@@ -1,0 +1,170 @@
+= Funzioni e operatori predefiniti
+
+GeoGebra integra le seguenti funzioni e operatori predefiniti, utili per definire numeri, coordinate o equazioni nella
+xref:/Barra_di_inserimento.adoc[barra di inserimento]. Gli operatori e le funzioni logiche sono elencati nella pagina
+degli xref:/Valori_booleani.adoc[operatori booleani].
+
+[NOTE]
+
+====
+
+Gli argomenti delle funzioni predefinite vanno inseriti tra parentesi, senza inserire spazi tra il nome della
+funzione e la parentesi.
+
+====
+
+[cols=",",options="header",]
+|===
+|Operazione / Funzione |Inserimento
+|ℯ (http://en.wikipedia.org/wiki/it:E_(costante_matematica)[costante _e_ - numero di Nepero]) |[.kcode]#Alt# +
+[.kcode]#e#
+
+|ί (http://en.wikipedia.org/wiki/it:Unit%C3%A0_immaginaria[Unità immaginaria]) |[.kcode]#Alt# + [.kcode]#i#
+
+|π |[.kcode]#Alt# + [.kcode]#p# oppure _pi_
+
+|° (http://en.wikipedia.org/wiki/it:Grado_(simbolo)[Simbolo di grado]) |[.kcode]#Alt# + [.kcode]#o# oppure _deg_
+
+|Addizione |+
+
+|Sottrazione |-
+
+|Moltiplicazione |* oppure Spazio
+
+|Prodotto scalare |* oppure Spazio
+
+|Prodotto vettoriale (vedere xref:/Punti_e_vettori.adoc[Punti e vettori]) |⊗
+
+|Divisione |/
+
+|Esponente |^ oppure Apice (`x^2` o `x2`)
+
+|Fattoriale |!
+
+|Parentesi |( )
+
+|Coordinata x |x( )
+
+|Coordinata y |y( )
+
+|Coordinata z |z( )
+
+|Argomento (applicabile anche a punti e vettori 3D) |arg( )
+
+|Coniugato |coniugato()
+
+|xref:/commands/Comando_ParteReale.adoc[Parte Reale] |partereale( )
+
+|xref:/commands/Comando_ParteImmaginaria.adoc[Parte Immaginaria] |parteimmaginaria( )
+
+|Valore assoluto |abs( )
+
+|Angolo con il piano xy |alt( )
+
+|Segno |sgn( ) oppure sign( )
+
+|Più grande intero minore o uguale |floor( )
+
+|Più piccolo intero maggiore o uguale |ceil( )
+
+|Arrotondamento all'intero più vicino oppure a _y_ cifre decimali |round(x) oppure round (x, n)
+
+|Radice quadrata |sqrt( )
+
+|Radice cubica |cbrt( )
+
+|Radice n-esima di x |nroot(x, n)
+
+|Numero casuale tra 0 e 1 |random( )
+
+|Funzione esponenziale |exp( ) oppure ℯ^x^
+
+|Logaritmo (naturale, in base e) |ln( )
+
+|Logaritmo in base 2 |log₂() o ld( )
+
+|Logaritmo in base 10 |log₁₀( ) o log( ) or lg( )
+
+|Logaritmo in base _b_ di _x_ |log(b, x )
+
+|Coseno |cos( )
+
+|Seno |sin( )
+
+|Tangente |tan( )
+
+|Secante |sec( )
+
+|Cosecante |csc() o cosec()
+
+|Cotangente |cot( ) o cotan( )
+
+|ArcoCoseno (valore in radianti) |acos( ) o arccos( )
+
+|ArcoCoseno (valore in gradi) |acosd( )
+
+|ArcoSeno (valore in radianti) |asin( ) o arcsin( )
+
+|ArcoSeno (valore in gradi) |asind( )
+
+|ArcoTangente (valore in radianti, compreso tra -π/2 e π/2) |atan( ) o arctan( )
+
+|ArcoTangente (valore in gradi, compreso tra -90° e 90°) |atand( )
+
+|http://it.wikipedia.org/wiki/Arcotangente2[ArcoTangente a 2 argomenti (valore in radianti, compreso tra -π e π)]
+|atan2(y, x)
+
+|http://it.wikipedia.org/wiki/Arcotangente2[ArcoTangente a 2 argomenti (valore in gradi, compreso tra -180° e 180°)]
+|atan2d(y, x)
+
+|Coseno iperbolico |cosh( )
+
+|Seno iperbolico |sinh( )
+
+|Tangente iperbolica |tanh( )
+
+|Secante iperbolica |sech( )
+
+|Cosecante iperbolica |csch( )
+
+|Cotangente iperbolica |coth( ) o cotanh( )
+
+|Coseno iperbolico inverso |acosh( ) o arccosh( )
+
+|Seno iperbolico inverso |asinh( ) o arcsinh( )
+
+|Tangente iperbolica inversa |atanh( ) o arctanh( )
+
+|http://mathworld.wolfram.com/BetaFunction.html[Funzione Beta] Β(a, b) |beta(a, b)
+
+|http://mathworld.wolfram.com/IncompleteBetaFunction.html[Funzione Beta incompleta] Β(x;a, b) |beta(a, b, x)
+
+|http://mathworld.wolfram.com/RegularizedBetaFunction.html[Funzione Beta incompleta regolarizzata] I(x; a, b)
+|betaRegularized(a, b, x)
+
+|http://en.wikipedia.org/wiki/it:Funzione_gamma[Funzione Gamma Γ(x)] |gamma( )
+
+|(Inferiore) http://mathworld.wolfram.com/IncompleteGammaFunction.html[Funzione Gamma incompleta P(a,x) = γ(a, x) /
+Γ(a)] |gamma(a, x)
+
+|(Inferiore) http://mathworld.wolfram.com/RegularizedGammaFunction.html[Funzione Gamma incompleta regolarizzata]
+|gammaRegularized(a, x)
+
+|http://en.wikipedia.org/wiki/it:Funzione_degli_errori[Funzione degli errori di Gauss] |erf(x)
+
+|http://en.wikipedia.org/wiki/it:Funzione_digamma[Funzione Digamma] |psi(x)
+
+|La http://it.wikipedia.org/wiki/Funzione_poligamma[funzione Poligamma] è la (m+1)-esima derivata del logaritmo naturale
+della http://it.wikipedia.org/wiki/Funzione_Gamma[funzione Gamma, gamma(x)] (m=0,1) |polygamma(m, x)
+
+|Funzione http://mathworld.wolfram.com/SineIntegral.html[Seno integrale] |sinIntegral(x)
+
+|Funzione http://mathworld.wolfram.com/CosineIntegral.html[Coseno integrale] |cosIntegral(x)
+
+|Funzione http://mathworld.wolfram.com/ExponentialIntegral.html[Esponenziale integrale] |expIntegral(x)
+
+|Funzione http://it.wikipedia.org/wiki/Funzione_zeta_di_Riemann[Zeta di Riemann] ζ(x) |zeta(x)
+
+|https://it.wikipedia.org/wiki/Funzione_W_di_Lambert[Funzione W di Lambert] LambertW(x, ramo) |LambertW(x, 0),
+LambertW(x, -1)
+|===

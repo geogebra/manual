@@ -1,0 +1,104 @@
+= Comando Istogramma
+
+Istogramma(Lista degli estremi delle classi, Lista altezze)::
+  Genera un istogramma aventi le barre dell'altezza indicata. Gli estremi delle classi determinano la larghezza e la
+  posizione di ciascuna barra dell'istogramma.
+
+[EXAMPLE]
+
+====
+
+`Istogramma({0, 1, 2, 3, 4, 5}, {2, 6, 8, 3, 1})` genera un istogramma avente 5 barre, ciascuna avente
+altezza ordinatamente indicata nella seconda lista. La prima barra occupa l'intervallo [_0, 1_], la seconda occupa
+l'intervallo [_1, 2_], e così via.
+
+====
+
+Istogramma(Lista degli estremi delle classi, Lista dei dati grezzi, Booleano _Usa densità_, Fattore di scala densità
+(facoltativo))::
+  Genera un istogramma utilizzando i dati grezzi. Gli estremi delle classi determinano la larghezza e la posizione di
+  ciascuna barra dell'istogramma e vengono utilizzati per determinare il numero degli elementi appartenenti a ciascuna
+  classe. L'altezza delle barre è determinata come segue:
+  +
+  * Se _Usa densità_ = _true_, allora _Altezza_ = (_Fattore di scala densità_) * (_Frequenza della classe_) / (_Ampiezza
+  della classe_)
+  * Se _Usa densità_ = _false_, allora _Altezza_ = _Frequenza della classe_
+  +
+  I valori predefiniti sono: _Usa densità_ = _true_ e _Fattore di scala densità_ = 1. Con queste impostazioni l'area
+  totale dell'istogramma è uguale al numero _n_ dei dati.
+  +
+
+[NOTE]
+
+====
+
+* Tutti gli elementi della lista dei dati grezzi devono essere compresi nell'intervallo definito dagli estremi delle
+classi, altrimenti questo comando restituisce “non definito”.
+* Per convenzione questo comando utilizza la regola _a_ ≤ _x_ < _b_ per ogni classe, tranne che per l'ultima, per la
+quale _a_ ≤ _x_ ≤ _b_
+
+====
+
+[EXAMPLE]
+
+====
+
+*Esempi:*
+
+* _Istogramma predefinito_:
+
+`Istogramma({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true)` genera un istogramma avente 3 barre, di altezze
+rispettivamente 0.5, 0.2 e 0.1 L'area totale dell'istogramma è 0.5*10 + 0.2*10 + 0.1*10 = 8.
+
+* _Istogramma conteggio_:
+
+`Istogramma({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, false)` genera un istogramma avente 3 barre, di altezze
+rispettivamente 5, 2 e 1. Questo istogramma non utilizza un fattore di scala della densità, e le altezze delle barre
+sono uguali al numero dei valori contenuti in ciascuna classe.
+
+* _Istogramma di frequenza relativa_:
+
+`Istogramma({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 1/8) ` genera un istogramma avente 3 barre, di
+altezze rispettivamente 5/8, 2/8 e 1/8. Questo istogramma utilizza un fattore di scala della densità, e le altezze delle
+barre sono uguali alla proporzione dei valori dei dati contenuti in ciascuna classe, rispetto al totale dei dati.
+
+====
+
+[NOTE]
+
+====
+
+* Dividendo o moltiplicando il comando _Istogramma_ per un numero, le altezze di ciascuna barra vengono divise o
+moltiplicate per tale numero. In questo esempio il comando _Istogramma_ è stato diviso per il numero di dati.
+* Se si hanno _n_ dati, e le classi hanno ampiezza costante _a_, allora ponendo il _Fattore di scala densità_ = _a_/_n_
+si ottiene un istogramma relativo.
+
+====
+
+[EXAMPLE]
+
+====
+
+* _Istogramma normalizzato_
+
+`Istogramma({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 1/8) ` genera un istogramma avente 3 barre, di
+altezze rispettivamente 0.0625, 0.025 e 0.0125 . L'area totale dell'istogramma è 0.0625*10 + 0.025*10 + 0.0125*10 = 1.
+Se _n_ è il numero di valori dei dati, allora ponendo il _Fattore di scala densità_ = _1/n_ si genera un istogramma
+normalizzato avente area totale 1. Questo tipo di impostazione è utile per approssimare un istogramma con una curva di
+densità.
+
+====
+
+Istogramma(Booleano _Cumulativa_, Lista degli estremi delle classi, Lista dei dati grezzi, Booleano _Usa densità_,
+Fattore di scala densità (facoltativo))::
+  Se il booleano _Cumulativa_ è _true_, genera un istogramma in cui l'altezza di ciascuna barra è uguale alla frequenza
+  della classe, più la somma di tutte le frequenze precedenti.
+
+[EXAMPLE]
+
+====
+
+`Istogramma(true, {10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true) ` genera un istogramma avente 3
+barre, di altezze rispettivamente 0.5, 0.7 e 0.8
+
+====

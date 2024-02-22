@@ -1,0 +1,35 @@
+= Mod Command
+
+Mod( <Dividend Number>, <Divisor Number> )::
+  Yields the remainder when dividend number is divided by divisor number.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `Mod(9, 4)` yields _1_.
+
+====
+
+Mod( <Dividend Polynomial>, <Divisor Polynomial> )::
+  Yields the remainder when the dividend polynomial is divided by the divisor polynomial.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `Mod(x^3 + x^2 + x + 6, x^2 - 3)` yields _4 x + 9_.
+
+====
+
+[NOTE]
+
+====
+
+*Note:*
+
+If you want a function to do this, you can define it yourself, e.g. `mod(x, y) = y (x / y - floor(x / y))`.
+
+====

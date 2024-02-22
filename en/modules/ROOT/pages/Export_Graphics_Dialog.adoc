@@ -1,0 +1,88 @@
+= Export Graphics Dialog
+
+[NOTE]
+
+====
+
+*Note:* The following only applies to *GeoGebra Classic 5*. For newer versions please see the
+xref:/commands/ExportImage_Command.adoc[ExportImage()] command
+
+====
+
+This dialog is accessible via the _Export_ submenu of xref:/File_Menu.adoc[File Menu] (item
+image:Image-x-generic.png[Image-x-generic.png,width=16,height=16] Graphics View as Picture (png, eps)….)
+
+Keyboard shortcut: [.kcode]#Ctrl# + [.kcode]#Shift# + [.kcode]#U# (Mac OS: [.kcode]#Cmd# + [.kcode]#Shift# +
+[.kcode]#U#)
+
+This dialog allows you to save GeoGebra's image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Graphics_View.adoc[Graphics View] as a picture file on your computer. In the
+appearing dialog window, you can select the picture file _Format_, change the _Scale_ (in cm) and _Resolution_ (in dpi)
+of the picture, and set the image as _Transparent_.
+
+[NOTE]
+
+====
+
+*Note:* If you create points called _Export_1_ and _Export_2_ then these will define the rectangle that is exported,
+otherwise just the visible image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Graphics
+View_ is exported
+
+====
+
+When exporting the image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Graphics View_ as a
+picture you can choose out of the following formats:
+
+PNG – http://en.wikipedia.org/wiki/Portable_Network_Graphics[Portable Network Graphics]::
+  This is a pixel graphics format. The higher the resolution (dpi), the better the quality (300dpi will usually
+  suffice). PNG graphics should not be scaled subsequently to avoid a loss of quality.
+  +
+  PNG graphic files are well suited for the use on web pages (HTML) and in word processing documents.
+  +
+
+[NOTE]
+
+====
+
+*Note:* Whenever you insert a PNG graphic file into a word processing document (menu Insert, Image from file) make sure
+that the size is set to 100 %. Otherwise the given scale (in cm) would be changed.
+
+====
+
+EPS – http://en.wikipedia.org/wiki/Encapsulated_Postscript[Encapsulated Postscript]::
+  This is a vector graphics format. EPS pictures may be scaled without loss of quality. EPS graphic files are well
+  suited for the use with vector graphics programs (e.g. Corel Draw) and professional text processing systems (e.g.
+  xref:/LaTeX.adoc[LaTeX]).
+  +
+  The resolution of an EPS graphic is always 72dpi. This value is only used to calculate the true size of an image in
+  centimeters and has no effect on the image's quality.
+  +
+
+[NOTE]
+
+====
+
+*Note:* The transparency effect with filled polygons or conic sections is not possible with EPS. Objects can only be
+either 100% opaque or transparent.
+
+====
+
+PDF – http://en.wikipedia.org/wiki/Portable_Document_Format[Portable Document Format]::
+  (see EPS format above)
+  +
+
+[NOTE]
+
+====
+
+*Note:* In SVG and PDF export you have the option to export text as editable text or shapes. This stores the text either
+as text (this lets you edit the text in e.g. InkScape) or as Bézier curves (this guarantees that the text looks the same
+even if the correct font is not installed).
+
+====
+
+SVG – http://en.wikipedia.org/wiki/Scalable_Vector_Graphic[Scalable Vector Graphic]::
+  (see EPS format above)
+
+EMF – http://en.wikipedia.org/wiki/Windows_Metafile[Enhanced Metafile]::
+  (see EPS format above)

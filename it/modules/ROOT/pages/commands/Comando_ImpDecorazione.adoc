@@ -1,0 +1,53 @@
+= Comando ImpDecorazione
+
+ImpDecorazione( Oggetto, Numero )::
+  Modifica la decorazione o il riempimento dell'oggetto indicato (vedere la scheda _Stile_ nella finestra di dialogo
+  _Proprietà_ dell'oggetto). L'oggetto deve essere un angolo, un segmento o qualsiasi oggetto "riempibile"; il secondo
+  argomento del comando è il numero che indica il tipo di decorazione o lo stile di riempimento, come descritto nella
+  tabella seguente.
+
+[cols=",,,",options="header",]
+|===
+|Valore |Decorazione segmento |Decorazione angolo |Stile riempimento
+|0 |Rimuovi decorazione |Rimuovi decorazione |Riempimento solido
+
+|1 |/File:D1M.png.adoc[image:24px-D1M.png[D1M.png,width=24,height=23]] 1 tacca
+|/File:A2A.png.adoc[image:24px-A2A.png[A2A.png,width=24,height=24]] 2 archi |Tratteggio
+
+|2 |/File:D2M.png.adoc[image:24px-D2M.png[D2M.png,width=24,height=23]] 2 tacche
+|/File:A3A.png.adoc[image:24px-A3A.png[A3A.png,width=24,height=23]] 3 archi |Tratteggio incrociato
+
+|3 |/File:D3M.png.adoc[image:24px-D3M.png[D3M.png,width=24,height=23]] 3 tacche
+|/File:A1M.png.adoc[image:24px-A1M.png[A1M.png,width=24,height=24]] 1 tacca |Scacchi
+
+|4 |/File:D1C.png.adoc[image:24px-D1C.png[D1C.png,width=24,height=24]] 1 freccia
+|/File:A2M.png.adoc[image:24px-A2M.png[A2M.png,width=24,height=24]] 2 tacche |Puntini
+
+|5 |/File:D2C.png.adoc[image:24px-D2C.png[D2C.png,width=24,height=23]] 2 frecce
+|/File:A2M.png.adoc[image:24px-A2M.png[A2M.png,width=24,height=24]] 3 tacche |Nido d'ape
+
+|6 |/File:D3C.png.adoc[image:24px-D3C.png[D3C.png,width=24,height=24]] 3 frecce
+|/File:AOP.png.adoc[image:24px-AOP.png[AOP.png,width=24,height=23]] orientazione + |Mattoni
+
+|7 |(Nessuno) |/File:AOM.png.adoc[image:24px-AOM.png[AOM.png,width=24,height=25]] orientazione - |Intreccio
+|===
+
+ImpDecorazione(Segmento, Numero, Numero)::
+  Imposta l'aspetto dell'estremo iniziale e finale del segmento indicato. Per visualizzare le decorazioni è necessario
+  nascondere i due punti che definiscono gli estremi del segmento. L'aspetto degli estremi può essere anche modificato
+  nella scheda _Stile_ della finestra di dialogo _Proprietà_ del segmento. Il primo numero nel comando si riferisce allo
+  stile dell'estremo iniziale, e il secondo numero allo stile dell'estremo finale del segmento, come illustrato nella
+  tabella che segue.
+
+[cols=",",options="header",]
+|===
+|Valore |Decorazione estremo
+|0 |Nessuna decorazione
+|1 |barretta
+|2 |quadrato vuoto
+|3 |quadrato pieno
+|4 |freccia
+|5 |freccia piena
+|6 |pallino vuoto
+|7 |pallino pieno
+|===

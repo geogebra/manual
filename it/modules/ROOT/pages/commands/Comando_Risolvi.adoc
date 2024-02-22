@@ -1,0 +1,106 @@
+= Comando Risolvi
+
+[NOTE]
+
+====
+
+I comandi _Risolvi_ e xref:/commands/Comando_Soluzioni.adoc[Soluzioni] risolvono un'equazione o un sistema
+simbolicamente, nel campo dei numeri reali. Per risolvere numericamente le equazioni, utilizzare il comando
+xref:/commands/Comando_RisolviN.adoc[RisolviN]. Per risolvere equazioni nel campo dei numeri complessi, utilizzare il
+comando xref:/commands/Comando_RisolviC.adoc[RisolviC].
+
+====
+
+I seguenti comandi sono disponibili esclusivamente nella image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[vista CAS]:
+
+Risolvi(Equazione in x)::
+  Risolve l'equazione indicata rispetto alla variabile principale e restituisce la lista delle soluzioni.
+  +
+
+[EXAMPLE]
+
+====
+
+`Risolvi(x^2=4x)` restituisce _\{x = 4, x = 0}_.
+
+====
+
+Risolvi(Equazione, Variabile)::
+  Risolve l'equazione rispetto alla variabile indicata e restituisce la lista delle soluzioni.
+  +
+
+[EXAMPLE]
+
+====
+
+`Risolvi(x*a^2=4a, a)` restituisce \{stem:[a = \frac\{4}\{x}, a = 0]}.
+
+====
+
+Risolvi(Equazione in x, Condizione)::
+  Risolve un'equazione in x che soddisfa la condizione data.
+  +
+
+[EXAMPLE]
+
+====
+
+`Risolvi(x^2=1, x>0)` restituisce stem:[\{x = 1}]
+
+====
+
+Risolvi(Lista di equazioni, Lista di variabili)::
+  Risolve un sistema di equazioni rispetto alle variabili indicate e restituisce la lista delle soluzioni.
+  +
+
+[EXAMPLE]
+
+====
+
+*Esempi:*
+
+* `Risolvi({x=4x+y, y+x=2}, {x, y})` restituisce _\{\{x = -1, y = 3}}_.
+* `Risolvi({2a^2+5a+3=b, a+b=3}, {a, b})` restituisce _\{\{a = 0, b = 3}, \{a = -3, b = 6}}_.
+
+====
+
+Risolvi(Equazione, Variabile, Lista di condizioni)::
+  Risolve un'equazione in una data variabile secondo le condizioni indicate e restituisce la lista delle soluzioni.
+  +
+
+[EXAMPLE]
+
+====
+
+*Esempi:*
+
+* `Risolvi(u*x<a, x, u>0)` restituisce _\{x <a/u}_, la soluzione di _u *x<a_ con _u>0_
+* `Risolvi(u*x<a, x, {u<0, a<0})` restituisce _\{x>a/u}_.
+
+====
+
+Risolvi(Lista di equazioni parametriche, Lista di variabili)::
+  Risolve un sistema di equazioni parametriche rispetto alle variabili indicate, e restituisce la lista delle soluzioni.
+  +
+
+[EXAMPLE]
+
+====
+
+* `Risolvi({(x, y) = (3, 2) + t*(5, 1), (x, y) = (4, 1) + s*(1, -1)}, {x, y, t, s})` restituisce _\{\{x = 3, y = 2, t =
+0, s = -1}}_.
+
+====
+
+[NOTE]
+
+====
+
+* È possibile omettere il secondo membro dell'equazione inserita: in questo caso il secondo membro viene interpretato
+come 0.
+* A volte è necessario applicare alcune manipolazioni per consentire al CAS di risolvere l'equazione, come ad esempio in
+` Risolvi(TrigSviluppa(sin(5/4π+x)-cos(x-3/4π)=sqrt(6)*cos(x)-sqrt(2)))`
+* Per funzioni definite a tratti è necessario utilizzare il comando xref:/commands/Comando_RisolviN.adoc[RisolviN]
+
+====

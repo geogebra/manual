@@ -1,0 +1,23 @@
+= SetAxesRatio Command
+
+SetAxesRatio( <Number>, <Number> )::
+  Changes the axes ratio of active image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/Graphics_View.adoc[Graphics View] so that X units on xref:/Lines_and_Axes.adoc[_x_-axis] correspond to the same
+  number of pixels as Y units on _y_-axis and point (0,0) stays on its coordinates. If a unitary ratio is used, the
+  related axis is fixed with the unit value, and the other one is adjusted as indicated.
+  +
+
+[EXAMPLE]
+
+====
+
+*Examples:*
+
+* `SetAxesRatio(1,2)` fixes the _x_-axis and compresses the _y_-axis
+* `SetAxesRatio(2,1)` fixes the _y_-axis and shrinks the _x_-axis.
+
+====
+
+SetAxesRatio( <Number>, <Number>, <Number> )::
+  Similar to above syntax, works with image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra
+  3Dgraphics.svg,width=16,height=16] xref:/3D_Graphics_View.adoc[3D Graphics View].

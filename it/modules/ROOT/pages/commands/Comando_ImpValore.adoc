@@ -1,0 +1,41 @@
+= Comando ImpValore
+
+ImpValore(Oggetto, Oggetto)::
+  Se il primo parametro è un xref:/Oggetti_liberi,_dipendenti_e_ausiliari.adoc[oggetto libero] o un
+  xref:/Punti_e_vettori.adoc[punto] vincolato a un xref:/Oggetti_geometrici.adoc[cammino o regione], il suo valore sarà
+  posto uguale al valore corrente del secondo oggetto indicato (quindi il primo oggetto non cambia valore se il secondo
+  viene successivamente modificato).
+  +
+
+[EXAMPLE]
+
+====
+
+Se _f_ è una funzione, `ImpValore(f,ElementoCasuale({cos(x),3x+2,ln(x)}))` definisce _f_ in modo casuale come
+una delle funzioni presenti nella lista.
+
+====
+
+ImpValore(Booleano, 0 | 1)::
+  Imposta lo stato di un valore booleano / casella di controllo. I valori accettabili sono 1 = _true_ e 0 = _false_.
+  +
+
+[EXAMPLE]
+
+====
+
+Sia _b_ un valore booleano: ` ImpValore(b,19)` imposta il booleano _b_ come _true_.
+
+====
+
+ImpValore(Lista, Numero, Oggetto)::
+  Imposta l'n-esimo elemento della lista libera indicata uguale al valore corrente dell'oggetto. Il _Numero_ indicato
+  può assumere il valore massimo _1 + Lunghezza(lista)_.
+
+ImpValore(Oggetto dipendente, ? )::
+  Questa sintassi consente di impostare un oggetto dipendente come non definito, per evitare di ridefinirlo utilizzando
+  `=`.
+
+ImpValore((xref:/Oggetti_azione.adoc[Elenco a discesa)], Numero)::
+  Imposta il numero indicato come xref:/commands/Comando_ElementoSelezionato.adoc[indice dell'elemento selezionato]
+  nell'elenco a discesa.

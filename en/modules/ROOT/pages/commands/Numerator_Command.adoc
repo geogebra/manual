@@ -1,0 +1,45 @@
+= Numerator Command
+
+Numerator( <Function> )::
+  Returns the numerator of the function.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `Numerator((3x² + 1) / (2x - 1))` yields _f(x) = 3x² + 1_.
+
+====
+
+Numerator( <Number> )::
+  For a rational number returns its numerator. It uses a numerical method, which limits this command to numbers with
+  small denominator. For irrational input the numerator of its xref:/commands/ContinuedFraction_Command.adoc[continued
+  fraction] is returned.
+
+[NOTE]
+
+====
+
+*Note:* See also xref:/commands/Denominator_Command.adoc[Denominator Command] and
+xref:/commands/FractionText_Command.adoc[FractionText Command].
+
+====
+
+== [#CAS_Syntax]#CAS Syntax#
+
+Numerator( <Expression> )::
+  Returns the numerator of a rational number or expression.
+  +
+
+[EXAMPLE]
+
+====
+
+*Examples:*
+
+* `Numerator(2/3 + 1/15)` yields _11_.
+* If variables _a, b_ and _c_ haven't been previously defined in GeoGebra, then `Numerator(a/b)` yields _a_ and
+`Numerator(Simplify(a + b/c))` yields _a c + b_
+
+====

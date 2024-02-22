@@ -1,0 +1,68 @@
+= Funzioni
+
+Per definire una funzione è possibile inserire anche le variabili precedentemente definite (ad es. numeri, punti,
+vettori), oltre ad altre funzioni.
+
+[EXAMPLE]
+
+====
+
+* Funzione _f_: `f(x) = 3 x^3 – x^2`
+* Funzione _g_: `g(x) = tan(f(x))`
+* Funzione senza nome: `sin(3 x) + tan(x)`
+* Funzione potenza ad esponente razionale (con dominio ℝ): `h(x) = x^(1/5)`
+* Funzione potenza ad esponente reale (restrizione della precedente in ℝ⁺): `p(x) = x^(0.2)`
+
+====
+
+[NOTE]
+
+====
+
+le funzioni predefinite disponibili (ad es. _sin_, _cos_, _tan_) sono descritte nella sezione
+xref:/Funzioni_e_operatori_predefiniti.adoc[Funzioni e operatori predefiniti].
+
+====
+
+In GeoGebra è inoltre possibile utilizzare vari comandi, ad esempio per ottenere
+l'xref:/commands/Comando_Integrale.adoc[integrale] e la xref:/commands/Comando_Derivata.adoc[derivata] di una funzione.
+Il xref:/commands/Comando_Se.adoc[Comando Se] consente la definizione di xref:/commands/Comando_Se.adoc[funzioni
+definite a tratti].
+
+[NOTE]
+
+====
+
+È inoltre possibile ottenere le derivate di una funzione _f_(_x_) precedentemente definita digitando _f'_ (x) o
+_f"_ (x), e così via.
+
+====
+
+[EXAMPLE]
+
+====
+
+Dopo avere definito la funzione `f(x) = 3 x^3 – x^2`, digitando `g(x) = cos(f' (x + 2))` si ottiene la
+funzione composta _g_.
+
+====
+
+Per traslare le funzioni di un vettore basta utilizzare il xref:/commands/Comando_Trasla.adoc[comando Trasla] o lo
+image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22] xref:/tools/Strumento_Traslazione.adoc[strumento
+Traslazione]; una funzione libera può essere comunque traslata nella xref:/Vista_Grafici.adoc[vista Grafici] con il
+mouse, utilizzando lo /File:Tool_Move.gif.adoc[image:Tool_Move.gif[Tool Move.gif,width=32,height=32]]
+xref:/tools/Strumento_Muovi.adoc[strumento Muovi]. È inoltre possibile applicare anche altri
+xref:/commands/Comandi_Trasformazioni.adoc[comandi Trasformazioni] alle funzioni, tenendo presente il fatto che alcune
+trasformazioni generano curve, non necessariamente funzioni.
+
+== [#Limitare_una_funzione_in_un_intervallo]#Limitare una funzione in un intervallo#
+
+Per limitare una funzione in un intervallo [a, b] è necessario utilizzare il xref:/commands/Comando_Se.adoc[comando Se].
+
+[EXAMPLE]
+
+====
+
+`Se(3<=x<=5, x^2)` definisce la restrizione della funzione _x^2^_ sull'intervallo [3,5]
+
+====

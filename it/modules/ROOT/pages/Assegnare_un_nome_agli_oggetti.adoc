@@ -1,0 +1,104 @@
+= Assegnare un nome agli oggetti
+
+È possibile assegnare un determinato nome a un oggetto mentre lo si crea nella xref:/Barra_di_inserimento.adoc[barra di
+inserimento]:
+
+* xref:/Punti_e_vettori.adoc[Punti]: in GeoGebra, i punti sono sempre identificati con lettere maiuscole. Digitare il
+nome (ad esempio _A_, _P_) e un simbolo di uguale prima delle relative coordinate o di un comando.
+
+[EXAMPLE]
+
+====
+
+`C = (2, 4)`, ` P = (1; 180°)`
+
+====
+
+* xref:/Punti_e_vettori.adoc[Vettori]: per distinguere i punti dai vettori, questi ultimi sono identificati in GeoGebra
+con lettere minuscole. Digitare il nome (ad esempio _v_, _u_) e un simbolo di uguale prima delle relative coordinate o
+di un comando.
+
+[EXAMPLE]
+
+====
+
+`v = (1, 3)`, ` u = (3; 90°)`,
+
+====
+
+* xref:/Rette_e_assi.adoc[Rette], circonferenze e xref:/Coniche.adoc[coniche]: per assegnare un nome a questi oggetti
+basta digitarne il nome, seguito da un simbolo di due punti (:) prima della relativa equazione o di un comando.
+
+[EXAMPLE]
+
+====
+
+`g: y = x + 3`, `c: (x-1)^2 + (y – 2)^2 = 4`, `ip: x^2 – y^2 = 2`
+
+====
+
+* xref:/Funzioni.adoc[Funzioni]: per assegnare un nome digitare, ad esempio, `f(x) =` o `g(x)=` prima dell'equazione che
+definisce la funzione o di un comando.
+
+[EXAMPLE]
+
+====
+
+`h(x) = 2 x + 4`, `q(x) = x^2, trigo(x) = sin(x)`
+
+====
+
+[NOTE]
+
+====
+
+* Se non viene assegnato manualmente un nome a un oggetto, GeoGebra assegna i nomi ai nuovi oggetti in ordine
+alfabetico.
+* Per creare nomi di oggetti con indici utilizzare il simbolo di trattino basso (_). Ad esempio, per ottenere A~1~
+digitare in barra di inserimento `A_1` e per ottenere s~AB~ digitare `s_{AB}`.
+
+====
+
+== [#Etichette_riservate]#Etichette riservate#
+
+Alcune etichette non possono essere assegnate come nomi agli oggetti: x, y, z, AsseX, AsseY, AsseZ, abs, sgn, sqrt, exp,
+log, ln, ld, lg, cos, sin, tan, acos, arcos, arccos, asin, arcsin, atan, arctan, cosh, sinh, tanh, acosh, arcosh,
+arccosh, asinh, arcsinh, atanh, arctanh, atan2, erf, floor, ceil, round, random, conjugate, arg, gamma,
+gammaRegularized, beta, betaRegularized, sec, csc, cosec, cot, sech, csch, coth
+
+L'elenco dei simboli presente al termine della barra di inserimento contiene i caratteri speciali relativi alle seguenti
+costanti:
+
+* π - la costante pi greco, che può essere ottenuta anche con la combinazione di tasti [.kcode]#Alt# + [.kcode]#p#
+* ℯ - il numero di Nepero, utile ad esempio per le funzioni esponenziali del tipo ℯ^x, che può essere ottenuto anche con
+la combinazione di tasti [.kcode]#Alt# + [.kcode]#e#
+* ί - l'unità immaginaria, utile per definire i numeri complessi come ad esempio z = 3 + ί, che può essere ottenuta
+anche con la combinazione di tasti [.kcode]#Alt# + [.kcode]#i#
+
+Se i nomi di variabile _e_ ed _i_ non sono stati già utilizzati, vengono automaticamente interpretati da GeoGebra come ℯ
+ed ί .
+
+== [#Rinominare_gli_oggetti]#Rinominare gli oggetti#
+
+Il modo più semplice per rinominare un oggetto è selezionarlo, quindi digitarne il nuovo nome.
+
+In alternativa è possibile fare doppio clic sull'oggetto, quindi selezionare l'opzione
+image:18px-Menu-edit-rename.svg.png[Menu-edit-rename.svg,width=18,height=18] _Rinomina_ nel menu contestuale
+visualizzato, oppure aprire la image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Finestra_di_dialogo_Propriet%C3%A0.adoc[Finestra di dialogo Proprietà] dell'oggetto e digitarne il nuovo nome nel
+campo _Nome_ della scheda _Generali_.
+
+[NOTE]
+
+====
+
+* Le dipendenze sono in genere risolte direttamente: ciò significa che il nome dell'oggetto viene automaticamente
+modificato anche nella relativa definizione. Gli script contenenti oggetti rinominati vanno invece modificati
+manualmente.
+* Se si assegna a un oggetto un nome di un oggetto già presente nella costruzione, il nome di quest'ultimo verrà
+modificato. Ad esempio, se il punto _B_ viene rinominato come _A_, ma un punto _A_ è già presente nella costruzione,
+tale punto verrà automaticamente rinominato in _A~1~_.
+
+====
+
+Vedere anche xref:/Etichette_e_legende.adoc[Etichette e legende].

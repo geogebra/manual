@@ -1,6 +1,6 @@
 = Comando ApplicaMatrice
 
-ApplicaMatrice(link:/it/Matrici[Matrice], link:/it/Oggetti_geometrici[Oggetto])::
+ApplicaMatrice(xref:/Matrici.adoc[Matrice], xref:/Oggetti_geometrici.adoc[Oggetto])::
   Applica la matrice di trasformazione all'oggetto, in modo tale che ogni punto _P_ appartenente all'oggetto abbia come
   immagine:
 
@@ -18,7 +18,7 @@ _M_: data _M_ = stem:[\begin\{pmatrix}a&b\\ c&d \end\{pmatrix}] allora _N_ = ste
 
 ====
 
-*Esempio:* Siano `M={{1,1,0},{0,1,1},{1,0,1}}` la matrice della trasformazione e `u=(2,1)` un vettore assegnato.
+Siano `M={{1,1,0},{0,1,1},{1,0,1}}` la matrice della trasformazione e `u=(2,1)` un vettore assegnato.
 `ApplicaMatrice(M,u)` restituisce il vettore _u'=(1,0.67)_. Infatti stem:[\begin\{pmatrix}1&1&0\\ 0&1&1\\1&0&1
 \end\{pmatrix}] stem:[\begin\{pmatrix}2\\ 1\\1 \end\{pmatrix}] = stem:[\begin\{pmatrix}3\\ 2\\3 \end\{pmatrix}], e (3/3
 = 1, 2/3 ≈ 0.67) (con un arrotondamento a 2 cifre decimali)
@@ -29,7 +29,7 @@ _M_: data _M_ = stem:[\begin\{pmatrix}a&b\\ c&d \end\{pmatrix}] allora _N_ = ste
 
 ====
 
-*Esempio:* Siano `M={{cos(π/2),-sin(π/2)}, {sin(π/2), cos(π/2)}}` la matrice della trasformazione e `u=(2,1)` un vettore
+Siano `M={{cos(π/2),-sin(π/2)}, {sin(π/2), cos(π/2)}}` la matrice della trasformazione e `u=(2,1)` un vettore
 assegnato. `ApplicaMatrice(M,u)` restituisce il vettore _u'=(-1,2)_, che è l'immagine di _u_ nella rotazione in senso
 antiorario di 90°.
 
@@ -39,7 +39,7 @@ antiorario di 90°.
 
 ====
 
-*Note:* Questo comando è applicabile anche alle quadriche e alle link:/it/Strumento_Immagine[immagini]: se il
+Questo comando è applicabile anche alle quadriche e alle xref:/tools/Strumento_Immagine.adoc[immagini]: se il
 determinante della matrice della trasformazione è 0, il comando restituisce "non definito".
 
 ====

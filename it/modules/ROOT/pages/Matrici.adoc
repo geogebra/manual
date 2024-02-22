@@ -1,0 +1,137 @@
+= Matrici
+
+GeoGebra supporta le matrici reali, che vengono rappresentate con una lista di xref:/Liste.adoc[liste], contenenti le
+righe della matrice.
+
+[EXAMPLE]
+
+====
+
+In GeoGebra, \{\{1, 2, 3}, \{4, 5, 6}, \{7, 8, 9}} rappresenta la matrice 3x3 stem:[\begin\{pmatrix}1&2&3\\
+4&5&6\\ 7&8&9\end\{pmatrix}].
+
+====
+
+Per visualizzare una matrice in formato _LaTeX_ nella image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _vista Grafici_ , utilizzare il comando xref:/LaTeX.adoc[LaTeX] o trascinare con il
+mouse l'espressione della matrice dalla _Vista Algebra_ alla _Vista Grafici_.
+
+[EXAMPLE]
+
+====
+
+Digitare `LaTeX[{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}]` nella barra di inserimento per visualizzare la
+corrispondente matrice in formato LaTeX.
+
+====
+
+== [#Accedere_agli_elementi_di_una_matrice]#Accedere agli elementi di una matrice#
+
+Per selezionare ed utilizzare determinati elementi di una matrice, utilizzare il
+xref:/commands/Comando_Elemento.adoc[comando Elemento] o la sintassi semplificata illustrata nell'esempio che segue:
+
+[EXAMPLE]
+
+====
+
+Sia `matrice={{1, 2}, {3, 4}}`, allora:
+
+* `matrice(1, 1) ` restituisce il primo elemento della prima riga: _1_
+* `matrice(2, 2)`, `matrice(-1,2)`, `matrice(2,-1) ` e `matrice(-1,-1) ` restituiscono tutti il secondo elemento della
+seconda riga: _4_.
+* In generale, `matrice(i, j) `, dove _i_ e _j_ sono interi, restituisce l'elemento di che occupa l'_i-esima_ riga e la
+_j-esima_ colonna.
+
+====
+
+== [#Operazioni_con_matrici]#Operazioni con matrici#
+
+Le operazioni tra matrici sono dunque _operazioni tra liste_, quindi le sintassi descritte di seguito restituiscono i
+risultati descritti.
+
+[NOTE]
+
+====
+
+Alcune sintassi rappresentano operazioni non definite allo stesso modo nell'insieme delle matrici.
+
+====
+
+=== [#Somma_e_sottrazione]#Somma e sottrazione#
+
+* `Matrice1 + Matrice2`: somma gli elementi corrispondenti di due matrici compatibili.
+* `Matrice1 – Matrice2`: sottrae gli elementi corrispondenti di due matrici compatibili.
+
+=== [#Prodotto]#Prodotto#
+
+* `Matrice * Numero`: moltiplica ogni elemento della _Matrice_ per il _Numero_ indicato.
+* `Matrice1 * Matrice2`: Calcola il prodotto matriciale delle due matrici.
+
+[EXAMPLE]
+
+====
+
+\{\{1, 2}, \{3, 4}, \{5, 6}} * \{\{1, 2, 3}, \{4, 5, 6}} restituisce la matrice \{\{9, 12, 15}, \{19, 26,
+33}, \{29, 40, 51}}.
+
+====
+
+[NOTE]
+
+====
+
+Il numero di righe della prima matrice deve essere uguale al numero di colonne della seconda.
+
+====
+
+* `Matrice 2x2  * Punto (o Vettore)`: moltiplica la _Matrice_ per il _Punto / Vettore_ indicato e restituisce un punto.
+
+[EXAMPLE]
+
+====
+
+\{\{1, 2}, \{3, 4}} * (3, 4) restituisce il punto A = (11, 25).
+
+====
+
+* `Matrice 3x3 * Punto (o Vettore)`: moltiplica la _Matrice_ per il _Punto / Vettore_ indicato e restituisce un punto.
+
+[EXAMPLE]
+
+====
+
+\{\{1, 2, 3}, \{4, 5, 6}, \{0, 0, 1}} * (1, 2) restituisce il punto A = (8, 20).
+
+====
+
+[NOTE]
+
+====
+
+Per le trasformazioni affini in cui si utilizzano coordinate omogenee: (x, y, 1) denota un punto e (x, y, 0) un
+vettore. L'esempio precedente è quindi equivalente a: `{{1, 2, 3}, {4, 5, 6}, {0, 0, 1}} * {1, 2, 1}`.
+
+====
+
+* `Matrice1 / Matrice2`: divide ciascun elemento della _Matrice1_ per il corrispondente elemento della _Matrice2_.
+
+[NOTE]
+
+====
+
+Naturalmente GeoGebra supporta la sintassi `Matrice1 * Matrice2 ^(-1)` .
+
+====
+
+== [#Altri_esempi]#Altri esempi#
+
+La sezione xref:/commands/Comandi_Vettori_e_matrici.adoc[Comandi Vettori e matrici] contiene l'elenco di tutti i comandi
+applicabili alle matrici, come ad esempio:
+
+* xref:/commands/Comando_Determinante.adoc[Determinante][Matrice]: calcola il determinante della matrice indicata.
+* xref:/commands/Comando_Inversa.adoc[Inversa][Matrice]: determina l'inversa della matrice indicata.
+* xref:/commands/Comando_Trasposta.adoc[Trasposta][Matrice]: determina la trasposta della matrice indicata.
+* xref:/commands/Comando_ApplicaMatrice.adoc[ApplicaMatrice][Matrice, Oggetto]: applica all'oggetto la trasformazione
+affine definita dalla matrice.
+* xref:/commands/Comando_MatriceRigheRidotte.adoc[MatriceRigheRidotte][Matrice]: converte la matrice indicata nella
+forma a righe ridotte.

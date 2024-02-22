@@ -1,0 +1,34 @@
+= Comando RangoMatrice
+
+RangoMatrice(Matrice)::
+  Restituisce il http://en.wikipedia.org/wiki/it:Rango_(algebra_lineare)[rango] della matrice indicata.
+  +
+
+[EXAMPLE]
+
+====
+
+*Esempi:*
+
+* `RangoMatrice({{2, 2}, {1, 1}})` restituisce 1
+* `RangoMatrice({{1, 2}, {3, 4}})` restituisce 2
+* Sia A = \{\{1, 2, 3}, \{1, 1, 1}, \{2, 2, 2}} una matrice 3x3, allora `RangoMatrice(A)` restituisce 2.
+
+====
+
+[NOTE]
+
+====
+
+Nella image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[vista CAS],
+questo comando è applicabile anche a matrici contenenti variabili non definite.
+
+[EXAMPLE]
+
+====
+
+`RangoMatrice({{1, 2}, {k*1, k*2}})` restituisce 1.
+
+====
+
+====

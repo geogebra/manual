@@ -1,0 +1,37 @@
+= Comando Weibull
+
+Weibull(Forma, Scala, x)::
+  Genera la funzione di distribuzione cumulativa di una
+  http://en.wikipedia.org/wiki/it:Distribuzione_di_Weibull[distribuzione di Weibull] di parametri forma e scala
+  indicati.
+
+Weibull(Forma, Scala, x, Booleano Cumulativa)::
+  Se _Cumulativa_ è _true_, genera la funzione di distribuzione cumulativa della distribuzione di Weibull; in caso
+  contrario genera la funzione di densità di probabilità della distribuzione di Weibull.
+
+Weibull(Forma, Scala, Valore variabile)::
+  Calcola il valore della funzione di distribuzione cumulativa della distribuzione di Weibull in corrispondenza del
+  valore indicato _v_ della variabile, cioè la probabilità _P(X ≤ v)_ dove _X_ è una variabile casuale di Weibull di
+  parametri di forma e scala indicati
+  +
+  +
+
+[EXAMPLE]
+
+====
+
+*Esempi:*
+
+* `Weibull(0.5, 1, 0)` restituisce _0_.
+* `Weibull(0.5, 1, 1)` restituisce _stem:[1 - \frac\{1} \{ e } ]_
+
+====
+
+[NOTE]
+
+====
+
+Restituisce la probabilità relativa al valore di _x_ indicato (cioè l'area sottesa dalla curva della
+distribuzione di Weibull alla sinistra dell'ascissa indicata).
+
+====

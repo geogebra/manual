@@ -1,0 +1,106 @@
+= Customizing the Graphics View
+
+In order to adjust the visible part of the image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Graphics_View.adoc[Graphics View], you can drag it by using tool
+image:24px-Mode_translateview.svg.png[Mode translateview.svg,width=24,height=24]
+xref:/tools/Move_Graphics_View_Tool.adoc[Move Graphics View Tool] and use the following ways of zooming:
+
+* You may use the image:24px-Mode_zoomin.svg.png[Mode zoomin.svg,width=24,height=24] xref:/tools/Zoom_In_Tool.adoc[Zoom
+In Tool] and image:24px-Mode_zoomout.svg.png[Mode zoomout.svg,width=24,height=24] xref:/tools/Zoom_Out_Tool.adoc[Zoom
+Out Tool] in order to zoom in the image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+_Graphics View_.
++
+[NOTE]
+
+====
+
+*Note:* The position of your click determines the center of zoom.
+
+====
+* You may use the scroll wheel of your mouse in order to zoom in the image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Graphics View_.
+* You may use keyboard shortcuts to zoom in [.kcode]#Ctrl# + [.kcode]#+# and to zoom out [.kcode]#Ctrl # + [.kcode]# -#.
+* After right clicking (Mac OS: Ctrl-click) on an empty spot in the image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Graphics View_ a context menu appears which allows you to zoom.
+* You may also specify range of _x_- and _y_-axis in the
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Properties_Dialog.adoc[Properties Dialog] for
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Graphics View_ (see
+xref:/.adoc[below]).
+
+== [#Showing_and_hiding_objects]#Showing and hiding objects#
+
+In the image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] xref:/Algebra_View.adoc[Algebra
+View], the icon to the left of every object shows its current visibility state (shown or hidden). You may directly click
+on the little marble icon in order to change the visibility status of an object. For more information see
+xref:/Object_Properties.adoc[visibility].
+
+== [#Properties_of_Graphics_View_(Properties_Dialog)]####[#Properties_of_Graphics_View_.28Properties_Dialog.29]##Properties of Graphics View (Properties Dialog)##
+
+Coordinate axes, grid and some other properties can be customized using the
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Properties_Dialog.adoc[Properties Dialog] of
+the image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Graphics View_. After right
+clicking (Mac OS: Ctrl-click) in the image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+_Graphics View_, you can open this dialog window by selecting _Graphics..._ from the appearing
+xref:/Context_Menu.adoc[Context Menu].
+
+== [#Customizing_Coordinate_Axes_and_Grid]#Customizing Coordinate Axes and Grid#
+
+To show or hide the axes and the grid, right click (Mac OS: Ctrl-click) on the drawing pad and select the corresponding
+items image:20px-Stylingbar_graphicsview_show_or_hide_the_axes.svg.png[Stylingbar graphicsview show or hide the
+axes.svg,width=20,height=20] _Axes_ or image:20px-Stylingbar_graphicsview_show_or_hide_the_grid.svg.png[Stylingbar
+graphicsview show or hide the grid.svg,width=20,height=20] _Grid_ from the appearing context menu. For further setting
+you need to open the image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Properties Dialog_.
+
+* On tab _Basic_, you can, for example, change the line style and color of the coordinate axes, and set the the ratio
+between the axes. To make sure the axes ratio cannot be changed by any command or user action, you may lock it using the
+lock icon.
+
+* Clicking on tabs _xAxis_ and _yAxis_ allows you to customize the axes individually, set the distance of the tickmarks,
+labeling, axes visibility, units and more. If you want the cross of the axes to be at point _(a,b)_, you can set _Cross
+at_ parameter for _xAxis_ to _b_ and for _yAxis_ to _a_. Option _Stick to edge_ means that the line remains close to the
+bottom or left border of the screen. To draw only the part of the axis to the right or to the top of the axes
+intersection, you can select _Positive direction only_.
+
+* On tab _Grid_, you can change the color and line style of the coordinate grid, set the distance and ratio for grid
+lines to a certain value, and the grid visibility. Three types of grid are available: Cartesian, polar and isometric.
+
+[NOTE]
+
+====
+
+*Note:*
+
+* Axes scaling is possible in every mode by pressing and holding the [.kcode]#Shift#-key (PC: also [.kcode]#Ctrl#-key)
+while dragging the axis.
+* Range of the axes may be given dynamically, e.g. in _Basic_ tab you can set _X Min_ to `x(A)` and _Y Min_ to `y(A)` to
+ensure the lower left corner of the view remains in point _A_. In such setting, the view cannot be zoomed.
+
+====
+
+== [#Showing_Navigation_Bar]#Showing Navigation Bar#
+
+You can add the xref:/Navigation_Bar.adoc[Navigation Bar for Construction Steps] to the
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Graphics View_ by enabling it in
+_Basic_ tab of the image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Properties Dialog_. You can
+also add the _Play_ button to allow animating the construction steps and a button to show the
+image:16px-Menu_view_construction_protocol.svg.png[Menu view construction protocol.svg,width=16,height=16]
+xref:/Construction_Protocol.adoc[Construction Protocol].
+
+== [#Miscellaneous_settings]#Miscellaneous settings#
+
+These settings are located in the last part of the _Basic_ tab of
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Properties Dialog_.
+
+Background color
+
+Allows you to change background color of the image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Graphics View_.
+
+Tooltips
+
+Allows you to set the behavior of tooltips in the image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Graphics View_. See article on xref:/Tooltips.adoc[Tooltips] for details.
+
+Show mouse coordinates
+
+Enables display of mouse coordinates next to the mouse pointer.

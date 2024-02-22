@@ -1,0 +1,31 @@
+= FitLogistic Command
+
+FitLogistic( <List of Points> )::
+  Calculates the regression curve in the form a/(1 + b e^(-kx)).
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `FitLogistic({(-6, 2), (0, 2), (3, 4), (3.4, 8)})` yields stem:[ \frac\{1.98}\{1 - 0.03 e^\{1x}}].
+
+====
+
+[NOTE]
+
+====
+
+*Note:*
+
+* The first and last data points should be fairly close to the curve. The list should have at least 3 points, preferably
+more.
+* See also xref:/commands/Fit_Command.adoc[Fit], xref:/commands/FitExp_Command.adoc[FitExp],
+xref:/commands/FitGrowth_Command.adoc[FitGrowth], xref:/commands/FitLine_Command.adoc[FitLine],
+xref:/commands/FitLineX_Command.adoc[FitLineX], xref:/commands/FitLog_Command.adoc[FitLog],
+xref:/commands/FitPoly_Command.adoc[FitPoly], xref:/commands/FitPow_Command.adoc[FitPow] and
+xref:/commands/FitSin_Command.adoc[FitSin].
+* If you work with big/small numbers, you should consider normalizing them for a more accurate result, see
+xref:/commands/Normalize_Command.adoc[Normalize Command].
+
+====

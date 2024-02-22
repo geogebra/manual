@@ -1,0 +1,27 @@
+= Comando RegSin
+
+RegSin(Lista di punti)::
+  Genera la curva di regressione nella forma _a + b sin(cx + d)_.
+  +
+
+[EXAMPLE]
+
+====
+
+`RegSin({(1, 1), (2, 2), (3, 1), (4, 0), (5, 1), (6, 2)})` restituisce la funzione di equazione _1 + 1
+sin(1.57x - 1.57)_.
+
+====
+
+[NOTE]
+
+====
+
+* È consigliabile che la lista contenga almeno 4 punti, preferibilmente di più. Inoltre la lista dovrebbe contenere
+almeno due estremanti, e i primi due estremi locali non devono essere troppo diversi dagli estremi assoluti.
+* Vedere anche i comandi xref:/commands/Comando_RegExp.adoc[RegExp], xref:/commands/Comando_RegLog.adoc[RegLog],
+xref:/commands/Comando_RegPol.adoc[RegPol] e xref:/commands/Comando_RegPot.adoc[RegPot].
+* Se si lavora con numeri piccoli o grandi, conviene normalizzare i valori in modo da ottenere risultati più accurati.
+Vedere il xref:/commands/Comando_Normalizza.adoc[comando Normalizza].
+
+====

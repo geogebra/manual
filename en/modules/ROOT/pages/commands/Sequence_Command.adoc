@@ -1,0 +1,92 @@
+= Sequence Command
+
+Sequence( <Expression>, <Variable k>, <Start Value a>, <End Value b> )::
+  Yields a list of objects created using the given expression and the index _k_ that ranges from start value _a_ to end
+  value _b_.
+  +
+
+[EXAMPLE]
+
+====
+
+*Examples:*
+
+* `Sequence((2, k), k, 1, 5)` creates a list of points whose _y_-coordinates range from 1 to 5: _\{(2, 1), (2, 2), (2,
+3), (2, 4), (2, 5)}_
+* `Sequence(x^k, k, 1, 10)` creates the list \{_x, x², x³, x⁴, x⁵, x⁶, x⁷, x⁸, x⁹, x¹⁰_}
+
+====
+
+Sequence( <Expression>, <Variable k>, <Start Value a>, <End Value b>, <Increment> )::
+  Yields a list of objects created using the given expression and the index _k_ that ranges from start value _a_ to end
+  value _b_ with given increment.
+  +
+
+[EXAMPLE]
+
+====
+
+*Examples:*
+
+* `Sequence((2, k), k, 1, 3, 0.5)` creates a list of points whose _y_-coordinates range from 1 to 3 with an increment of
+_0.5_: _\{(2, 1), (2, 1.5), (2, 2), (2, 2.5), (2, 3)}_
+* `Sequence(x^k, k, 1, 10, 2)` creates the list \{_x, x³, x⁵, x⁷, x⁹_}.
+
+====
+
+Sequence( <End Value > )
+
+Creates a list of integers from 1 to the given end value.
+
+[EXAMPLE]
+
+====
+
+*Examples:*
+
+* `Sequence(4)` creates the list _\{1, 2, 3, 4}_.
+* `2^Sequence(4)` creates the list _\{2, 4, 8, 16}_.
+
+====
+
+[NOTE]
+
+====
+
+*Note:* Since the parameters _a_ and _b_ are dynamic you could use xref:/tools/Slider_Tool.adoc[slider] variables in
+both cases above as well.
+
+====
+
+Sequence( <Start value k >, <End value n > )::
+  Creates a list of integers from _k_ to _n_ (increasing or decreasing).
+  +
+
+[EXAMPLE]
+
+====
+
+*Examples:*
+
+* `Sequence(7,13)` creates the list \{_7, 8, 9, 10, 11, 12, 13_}
+* `Sequence(18,14)` creates the list \{_18, 17, 16, 15, 14_}
+* `Sequence(-5, 5)` creates the list \{_-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5_}.
+
+[NOTE]
+
+====
+
+*Note:* This syntax can be further simplified: instead of using e.g. the formal `Sequence(7,13)` it is possible to
+obtain the same result by typing in the input bar `7..13` .
+
+====
+
+====
+
+[NOTE]
+
+====
+
+*Note:* See xref:/Lists.adoc[Lists] for more information on list operations.
+
+====

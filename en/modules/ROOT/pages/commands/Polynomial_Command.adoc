@@ -1,0 +1,59 @@
+= Polynomial Command
+
+Polynomial( <Function> )::
+  Yields the expanded polynomial function.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `Polynomial((x - 3)^2)` yields _x^2^ - 6x + 9_.
+
+====
+
+[EXAMPLE]
+
+====
+
+*Example:* `Polynomial(f(x,y)=y^2+(x+y)^2)` yields _x^2^+2xy+2x^2^_.
+
+====
+
+Polynomial( <List of Points> )::
+  Creates the interpolation polynomial of degree _n-1_ through the given _n_ points.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `Polynomial({(1, 1), (2, 3), (3, 6)})` yields _0.5 x^2^ + 0.5 x_.
+
+====
+
+== [#CAS_Syntax]#CAS Syntax#
+
+Polynomial( <Function> )::
+  Expands the function and writes it as a polynomial in x (grouping the coefficients).
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `Polynomial((x - 3)^2 + (a + x)^2)` yields _2 x^2^ + (2a - 6) x + a^2^ + 9_.
+
+====
+
+Polynomial( <Function>, <Variable> )::
+  Expands the function and writes it as a polynomial in the variable (grouping the coefficients).
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `Polynomial((x - 3)^2 + (a + x)^2, a)` yields _a^2^ + 2 x a + 2 x^2^ - 6 x + 9_.
+
+====

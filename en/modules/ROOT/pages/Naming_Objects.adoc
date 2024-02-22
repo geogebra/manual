@@ -1,0 +1,102 @@
+= Naming Objects
+
+You can assign a certain name to an object when you create it using the xref:/Input_Bar.adoc[Input Bar]:
+
+* xref:/Points_and_Vectors.adoc[Points]: In GeoGebra, points are always named using upper case letters. Just type in the
+name (e.g. A, P) and an equal sign in front of the coordinates or commands.
+
+[EXAMPLE]
+
+====
+
+*Example:* `C = (2, 4)`, ` P = (1; 180°)`
+
+====
+
+* xref:/Points_and_Vectors.adoc[Vectors]: In order to distinguish between points and vectors, vectors need to have a
+lower case name in GeoGebra. Again, type in the name (e.g. v, u) and an equal sign in front of the coordinates or
+commands.
+
+[EXAMPLE]
+
+====
+
+*Example:* `v = (1, 3)`, ` u = (3; 90°)`
+
+====
+
+* xref:/Lines_and_Axes.adoc[Lines], circles, and xref:/Conic_sections.adoc[conic sections]: These objects can be named
+by typing in the name and a colon in front of their equations or commands.
+
+[EXAMPLE]
+
+====
+
+*Example:* `g: y = x + 3`, `c: (x-1)^2 + (y – 2)^2 = 4`, `hyp: x^2 – y^2 = 2`
+
+====
+
+* xref:/Functions.adoc[Functions]: You can name functions by typing, for example, `f(x) =` or `g(x) =` in front of the
+function’s equation or commands.
+
+[EXAMPLE]
+
+====
+
+*Example:* `h(x) = 2 x + 4`, `q(x) = x^2, trig(x) = sin(x)`
+
+====
+
+[NOTE]
+
+====
+
+*Notes:*
+
+* If you don’t manually assign a name to an object, GeoGebra assigns the names of new objects in alphabetical order.
+* You can create indices within the names of objects by using an underscore. For example A~1~ is entered as `A_1` and
+s~AB~ is entered as `s_{AB}` into the _Input Bar_.
+
+====
+
+== [#Reserved_labels]#Reserved labels#
+
+These are the labels you can't use for objects: x, y, z, xAxis, yAxis, zAxis, abs, sgn, sqrt, exp, log, ln, ld, lg, cos,
+sin, tan, acos, arcos, arccos, asin, arcsin, atan, arctan, cosh, sinh, tanh, acosh, arcosh, arccosh, asinh, arcsinh,
+atanh, arctanh, atan2, erf, floor, ceil, round, random, conjugate, arg, gamma, gammaRegularized, beta, betaRegularized,
+sec, csc, cosec, cot, sech, csch, coth
+
+In the symbol list of the _Input Bar_, you will find special characters for the following constants:
+
+* π - the circle constant pi, which you can also type with [.kcode]#Alt# + [.kcode]#p#
+* ℯ - the Euler number, e.g. for the exponential function ℯ^x, which you can also type with [.kcode]#Alt# + [.kcode]#e#
+* ί - the imaginary unit, e.g. for complex numbers like z = 3 + ί, which you can also type with [.kcode]#Alt# +
+[.kcode]#i#
+
+When the variable names e and i are not used yet, they are automatically read as ℯ and ί respectively for convenience.
+
+== [#Renaming_objects]#Renaming objects#
+
+The easiest way to change the name of an existing object is to select it, then start typing its new name.
+
+You can also rename an object by then selecting the
+image:18px-Menu-edit-rename.svg.png[Menu-edit-rename.svg,width=18,height=18] _Rename_ option in the
+xref:/Context_Menu.adoc[Context Menu] of the object or opening the
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Properties_Dialog.adoc[Properties Dialog]
+window of the object and typing the new name in the _Name_ box of the _Basic_ tab.
+
+[NOTE]
+
+====
+
+*Notes:*
+
+* Dependencies are usually automatically resolved: this means that the name of the object is also changed in its
+definition. Scripting involving objects that were assigned a new name need to be changed manually.
+* If you assign to an object a name that is already in use by another object, the name of this last object will be
+changed, e.g. if you change the name of point _B_ to _A_ and a point _A_ already exists, the former point _A_ gets the
+new name _A~1~_.
+
+====
+
+See also xref:/Labels_and_Captions.adoc[Labels and Captions].

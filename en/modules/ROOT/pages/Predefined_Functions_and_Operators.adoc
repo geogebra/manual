@@ -1,0 +1,174 @@
+= Predefined Functions and Operators
+
+To create numbers, coordinates, or equations using the xref:/Input_Bar.adoc[Input Bar] you may also use the following
+pre-defined functions and operations. Logic operators and functions are listed in article about
+xref:/Boolean_values.adoc[Boolean values].
+
+[NOTE]
+
+====
+
+*Note:* The predefined functions need to be entered using parentheses. You must not put a space between the function
+name and the parentheses.
+
+====
+
+[cols=",",options="header",]
+|===
+|Operation / Function |Input
+|ℯ (http://en.wikipedia.org/wiki/E_(mathematical_constant)[Euler's number]) |[.kcode]#Alt# + [.kcode]#e#
+
+|ί (http://en.wikipedia.org/wiki/Imaginary_unit[Imaginary unit]) |[.kcode]#Alt# + [.kcode]#i#
+
+|π |[.kcode]#Alt# + [.kcode]#p# or pi
+
+|° (http://en.wikipedia.org/wiki/Degree_symbol[Degree symbol]) |[.kcode]#Alt# + [.kcode]#o# or deg
+
+|Addition |+
+
+|Subtraction |-
+
+|Multiplication |* or Space key
+
+|Scalar product |* or Space key
+
+|Vector product(see xref:/Points_and_Vectors.adoc[Points and Vectors]) |⊗
+
+|Division |/
+
+|Exponentiation |^ or superscript (`x^2` or `x2`)
+
+|Factorial |!
+
+|Parentheses |( )
+
+|x-coordinate |x( )
+
+|y-coordinate |y( )
+
+|z-coordinate |z( )
+
+|Argument (also works for 3D points / vectors) |arg( )
+
+|Conjugate |conjugate( )
+
+|xref:/Real_Function.adoc[Real] |real( )
+
+|xref:/Imaginary_Function.adoc[Imaginary] |imaginary( )
+
+|Absolute value |abs( )
+
+|Altitude angle (for 3D points / vectors) |alt( )
+
+|Sign |sgn( ) or sign()
+
+|Greatest integer less than or equal |floor( )
+
+|Least integer greater than or equal |ceil( )
+
+|Round to nearest integer (or to y decimal places) |round(x) or round(x, y)
+
+|Square root |sqrt( )
+
+|Cubic root |cbrt( )
+
+|The nth root of x |nroot(x, n)
+
+|Random number between 0 and 1 |random( )
+
+|Exponential function |exp( ) or ℯ^x^
+
+|Logarithm (natural, to base e) |ln( )
+
+|Logarithm to base 2 |log₂() or ld( )
+
+|Logarithm to base 10 |log₁₀( ) or log( ) or lg( )
+
+|Logarithm of _x_ to base _b_ |log(b, x )
+
+|Cosine |cos( )
+
+|Sine |sin( )
+
+|Tangent |tan( )
+
+|Secant |sec()
+
+|Cosecant |csc() or cosec()
+
+|Cotangent |cot() or cotan()
+
+|Arc cosine (answer in radians) |acos( ) or arccos( )
+
+|Arc cosine (answer in degrees) |acosd( )
+
+|Arc sine (answer in radians) |asin( ) or arcsin( )
+
+|Arc sine (answer in degrees) |asind( )
+
+|Arc tangent (answer in radians, between -π/2 and π/2) |atan( ) or arctan( )
+
+|Arc tangent (answer in degrees, between -90° and 90°) |atand( )
+
+|http://en.wikipedia.org/wiki/Atan2[Arc tangent (answer in radians, between -π and π)] |atan2(y, x)
+
+|http://en.wikipedia.org/wiki/Atan2[Arc tangent (answer in degrees, between -180° and 180°)] |atan2d(y, x)
+
+|Hyperbolic cosine |cosh( )
+
+|Hyperbolic sine |sinh( )
+
+|Hyperbolic tangent |tanh( )
+
+|Hyperbolic secant |sech( )
+
+|Hyperbolic cosecant |csch( )
+
+|Hyperbolic cotangent |coth( ) or cotanh()
+
+|Antihyperbolic cosine |acosh( ) or arccosh( )
+
+|Antihyperbolic sine |asinh( ) or arcsinh( )
+
+|Antihyperbolic tangent |atanh( ) or arctanh( )
+
+|http://mathworld.wolfram.com/BetaFunction.html[Beta function] Β(a, b) |beta(a, b)
+
+|http://mathworld.wolfram.com/IncompleteBetaFunction.html[Incomplete beta function] Β(x;a, b) |beta(a, b, x)
+
+|http://mathworld.wolfram.com/RegularizedBetaFunction.html[Incomplete regularized beta function] I(x; a, b)
+|betaRegularized(a, b, x)
+
+|http://en.wikipedia.org/wiki/Gamma_function[Gamma function Γ(x)] |gamma( x)
+
+|(Lower) http://mathworld.wolfram.com/IncompleteGammaFunction.html[incomplete gamma function] γ(a, x) |gamma(a, x)
+
+|(Lower) http://mathworld.wolfram.com/RegularizedGammaFunction.html[incomplete regularized gamma function P(a,x) = γ(a,
+x) / Γ(a)] |gammaRegularized(a, x)
+
+|http://en.wikipedia.org/wiki/Error_function[Gaussian Error Function] |erf(x)
+
+|http://en.wikipedia.org/wiki/Digamma_function[Digamma function] |psi(x)
+
+|The http://en.wikipedia.org/wiki/Polygamma_function[Polygamma function] is the (m+1)th derivative of the natural
+logarithm of the http://en.wikipedia.org/wiki/Gamma_function[Gamma function, gamma(x)] (m=0,1) |polygamma(m, x)
+
+|The http://mathworld.wolfram.com/SineIntegral.html[Sine Integral] function |sinIntegral(x)
+
+|The http://mathworld.wolfram.com/CosineIntegral.html[Cosine Integral] function |cosIntegral(x)
+
+|The http://mathworld.wolfram.com/ExponentialIntegral.html[Exponential Integral] function |expIntegral(x)
+
+|The http://en.wikipedia.org/wiki/Riemann_zeta_function[Riemann-Zeta] function ζ(x) |zeta(x)
+
+|https://en.wikipedia.org/wiki/Lambert_W_function[Lambert's W function] LambertW(x, branch) |LambertW(x, 0), LambertW(x,
+-1)
+|===
+
+[NOTE]
+
+====
+
+*Note:* The x, y, z operators can be used to get corresponding coefficients of a line.
+
+====

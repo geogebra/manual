@@ -1,0 +1,56 @@
+= Lines and Axes
+
+== [#Lines]#Lines#
+
+You can enter a line as a linear equation in _x_ and _y_ or in parametric form into the Input Bar. In both cases
+previously defined variables (e.g. numbers, points, vectors) can be used within the equation.
+
+[NOTE]
+
+====
+
+*Note:* You can enter a line’s name at the beginning of the input followed by a colon.
+
+====
+
+[EXAMPLE]
+
+====
+
+*Example:* 2D
+
+* Type in `g: 3x + 4y = 2` to enter line _g_ as a linear equation.
+* You can enter a line in parametric form thus: `g: X = (-5, 5) + t (4, -3)`
+* Define the parameters _m_ = 2 and _b_ = -1. Then, you can enter the equation `h: y = m*x + b` to get a line _h_ in
+y-intercept-form.
+
+====
+
+[EXAMPLE]
+
+====
+
+*Example:* 3D
+
+* You can enter a line in parametric form thus:
+** `g: X = (1, 6, 3) + λ (7, -4, 4)` ; or via
+** `g: Line[(1, 6, 3), Vector[(7, -4, 4)]]`
+* You can enter a line as an intersection of 2 planes, by one of the following 3 equivalent input :
+** `IntersectPath[4x+7y=46,y+z=9]`
+** `(4x + 7y = 46, y + z = 9)`
+** `7y = 46 - 4x = 7(9 - z)`
+
+====
+
+== [#Axes]#Axes#
+
+The two coordinate axes are available in commands using the names _xAxis_ and _yAxis_.
+
+[EXAMPLE]
+
+====
+
+*Example:* The command `PerpendicularLine[A, xAxis]` constructs the perpendicular line to the x-axis through a given
+point A.
+
+====

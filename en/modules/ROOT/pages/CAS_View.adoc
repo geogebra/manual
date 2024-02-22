@@ -1,0 +1,247 @@
+= CAS View
+
+== [#CAS_View_User_Interface]#image:24px-Menu_view_cas.svg.png[Menu view cas.svg,width=24,height=24] CAS View User Interface#
+
+By default, the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS View_ is opened next to the
+image:16px-Menu_view_graphics.svg.png[Graphics View,title="Graphics View",width=16,height=16]
+_xref:/Graphics_View.adoc[Graphics View]_. Depending on which one of these two _Views_ is active, either the
+xref:/tools/CAS_Tools.adoc[_CAS View Toolbar_] or the xref:/tools/Graphics_Tools.adoc[_Graphics View Toolbar_] is
+displayed at the top of the GeoGebra window, with the
+image:16px-Menu-edit-undo.svg.png[Menu-edit-undo.svg,width=16,height=16]image:16px-Menu-edit-redo.svg.png[Menu-edit-redo.svg,width=16,height=16]
+_Undo / Redo_ buttons in the top right corner.
+
+[width="100%",cols="100%",]
+|===
+a|
+image:314px-CAS-View.png[CAS-View.png,width=314,height=220]
+
+CAS View
+
+|===
+
+The image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS View_ is part of the
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Perspectives.adoc[_CAS Perspective_],
+although you may xref:/GeoGebra_5.0_Desktop_vs._Web_and_Tablet_App.adoc[change the layout] of GeoGebra's user interface
+according to your needs.
+
+== [#Creating_Mathematical_Objects]#Creating Mathematical Objects#
+
+=== [#Direct_Input]#Direct Input#
+
+The image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS View_ allows you to use GeoGebra's CAS
+(Computer Algebra System) for symbolic computations. It consists of cells with an _Input Field_ at the top and output
+display at the bottom. You can use these _Input Fields_ in the same way as the normal _xref:/Input_Bar.adoc[Input Bar]_,
+with the following differences:
+
+* You can use variables that were not assigned any value.
+* `=` is used for equations and `:=` for assignments. This means that the input `a=2` will not assign value 2 to _a_.
+See the xref:/.adoc[section about assignments] for details.
+* Multiplication needs to be marked explicitly. While in the _xref:/Input_Bar.adoc[Input Bar]_ you can use both `a(b+c)`
+and `a*(b+c)` for multiplication, in the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS
+View_ only `a*(b+c)` is valid.
+
+=== [#Keyboard_Shortcuts_for_Direct_Input]#Keyboard Shortcuts for Direct Input#
+
+In the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS View_ of GeoGebra´s Desktop Version
+the following keyboard shortcuts help you to evaluate or check your input.
+
+[NOTE]
+
+====
+
+*Note:* Instead of using these keyboard shortcuts, you may also use the corresponding
+xref:/tools/CAS_Tools.adoc[_Tools_] of the xref:/.adoc[_CAS View Toolbar_].
+
+====
+
+* [.kcode]#Enter#: Evaluates your input.
+
+[NOTE]
+
+====
+
+*Notes:*
+
+* Assignments are always evaluated, e.g. `a := 5`
+* You may suppress any output with a semicolon at the end of your input, e.g. `a := 5;`
+
+.
+
+====
+
+=== [#Variable_Assignments_and_Connection_with_other_Views]#Variable Assignments and Connection with other Views#
+
+You may use the `:=` notation for assignments, e.g. `b := 5`, `a(n) := 2n + 3`.
+
+* _Free up a name_: Use `Delete[b]` in order to free up a variable name again.
+* _Redefine a variable or function_: You may redefine a variable or function, but you must do so *in the same cell*,
+otherwise it will be treated as a new variable and automatically renamed.
+
+Variables and functions are always shared between the image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] _CAS View_ and the other _Views_ if possible. For example:
+
+* If you define `b:=5` in the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS View_, then
+you can use _b_ in all the other _Views_ of GeoGebra.
+* If you define a function `f(x)=x^2` in another _View_, you can also use this function in the
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS View_.
+
+[NOTE]
+
+====
+
+*Note:*
+
+The output will always be just the expression *after* the `:=`, e.g. if you type `b:=5` the output will be _5_. Please
+also note, that for clarification actually _b := 5_ will be displayed.
+
+====
+
+=== [#Equations]#Equations#
+
+* You may write equations using the simple _Equals_ sign, e.g. `3x + 5 = 7`.
+* _Arithmetic operations_: You can perform arithmetic operations on equations, which is useful for manual equation
+solving.
++
+[EXAMPLE]
+
+====
+
+*Example:* `(3x + 5 = 7) - 5` subtracts 5 from both sides of the equation.
+
+====
+
+* _Extracting one Side_: You may extract either the left or right side of an equation by using the commands `LeftSide[]`
+and `RightSide[]`.
++
+[EXAMPLE]
+
+====
+
+*Example:* `LeftSide[3x + 5 = 7]` returns _3 x + 5_ and `RightSide[3x + 5 = 7]` returns _7_
+
+====
+
+=== [#Row_References]#Row References#
+
+You can refer to other rows in the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS View_ in
+two ways:
+
+* *Static row references* copy the output and *won't be updated* if the _referenced_ row is subsequently changed
+** `#`: Copies the previous output.
+** `#5`: Copies the output of row 5.
+* *Dynamic row references* insert a reference to another row instead of the actual output and therefore *will be
+updated* if the _referenced_ row is subsequently changed
+** `$`: Inserts a reference to the previous output.
+** `$5`: Inserts a reference to the output of row 5
+
+== [#CAS_Commands]#CAS Commands#
+
+GeoGebra also offers a wide range of _xref:/commands/CAS_Commands.adoc[CAS Commands]_ that can be used to create objects
+in the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS View_. Just start typing the name of
+a _Command_ into the _Input Field_ and GeoGebra will offer you a list of _Commands_ that match your input.
+
+[NOTE]
+
+====
+
+*Note:* For a complete list of _Commands_ see section xref:/commands/CAS_Commands.adoc[CAS Commands].
+
+====
+
+[NOTE]
+
+====
+
+*Note:* From GeoGebra 5.0 onwards, the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS View_
+supports exact versions of xref:/commands/CAS_View_Supported_Geometry_Commands.adoc[some _Geometry Commands_]
+
+====
+
+.
+
+== [#CAS_View_Toolbar]#CAS View Toolbar#
+
+The xref:/tools/CAS_Tools.adoc[_CAS View Toolbar_] provides a range of _xref:/tools/CAS_Tools.adoc[CAS Tools]_ that
+allow you to evaluate input and perform calculations. Just enter your input and select the corresponding _CAS Tool_
+afterwards in order to apply it to your input.
+
+xref:/tools/CAS_Tools.adoc[image:315px-Toolbar-CAS.png[Toolbar-CAS.png,width=315,height=32]]
+
+[NOTE]
+
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Hint:* In GeoGebra Classic 5 you may select part of the
+input text to only apply the operation to this selected part. This feature is not available in Classic 6 at the moment.
+
+====
+
+[NOTE]
+
+====
+
+*Note:* For a complete list of _Tools_ see _xref:/tools/CAS_Tools.adoc[CAS Tools]_.
+
+====
+
+== [#Context_Menus]#Context Menus#
+
+=== [#Row_Header_Context_Menu]#Row Header Context Menu#
+
+In the GeoGebra Desktop Version you can right click (MacOS: [.kcode]#Ctrl#-click) on a row header in order to show a
+_Context Menu_ with the following options:
+
+* *Insert Above*: Inserts an empty row above the current one.
+* *Insert Below*: Inserts an empty row below the current one.
+* *Delete Row*: Deletes the contents of the current row.
+* *Text*: Toggles between the current result and a text showing the current result contained in the row, which allows
+the user to insert comments.
+* *Copy as LaTeX* (GeoGebra Desktop): Copies the contents of the current row to your computer’s clipboard, allowing you
+to paste the contents e.g. in a xref:/Text.adoc[Text] object.
+
+[NOTE]
+
+====
+
+*Note:* To copy the contents of more than one CAS row as LaTeX, select the rows you want with [.kcode]#Ctrl#-click
+(MacOS: [.kcode]#Cmd#-click), then right-click (MacOS: [.kcode]#Ctrl#-click) on the row header and select _Copy as
+LaTeX_.
+
+====
+
+=== [#Cell_Context_Menu]#Cell Context Menu#
+
+In the GeoGebra Desktop Version you can right click (MacOS: [.kcode]#Ctrl#-click) on a CAS output cell in order to show
+a _Context Menu_ with the following options:
+
+* *Copy*: Copies the cell contents to the your computer’s clipboard. Then, right click on a new cell in order to show
+the *Paste* option.
+* *Copy as LaTeX*: Copies the cell contents in LaTeX format to the your computer’s clipboard, so it can be pasted into a
+xref:/Text.adoc[Text] object or a LaTeX editor.
+* *Copy as LibreOffice Formula*: Copies the cell contents in LibreOffice formula format to your computer’s clipboard, so
+it can be pasted in a word processing document.
+* *Copy as Image*: Copies the cell contents in PNG format to your computer’s clipboard, so it can be pasted into an
+xref:/tools/Image_Tool.adoc[Image] object or in a word processing document.
+
+== [#Display_of_Mathematical_Objects]#Display of Mathematical Objects#
+
+=== [#CAS_View_Style_Bar]#xref:/Style_Bar.adoc[CAS View Style Bar]#
+
+The xref:/Style_Bar.adoc[_CAS View Style Bar_] provides buttons to
+
+* image:16px-Stylingbar_text.svg.png[Stylingbar text.svg,width=16,height=16] change the text style
+(image:16px-Stylingbar_text_bold.svg.png[Stylingbar text bold.svg,width=16,height=16] *bold* and
+image:16px-Stylingbar_text_italic.svg.png[Stylingbar text italic.svg,width=16,height=16] _italics_) and
+image:16px-Stylingbar_color_white.svg.png[Stylingbar color white.svg,width=16,height=16] color
+* display a image:16px-Cas-keyboard.png[Cas-keyboard.png,width=16,height=16] virtual keyboard (GeoGebra Desktop)
+* display additional image:16px-Stylingbar_dots.svg.png[Stylingbar dots.svg,width=16,height=16]
+xref:/Views.adoc[_Views_] in the GeoGebra window (GeoGebra Web and Tablet Apps)
+
+=== [#Showing_CAS_Objects_in_the_Graphics_View]#Showing CAS Objects in the image:20px-Menu_view_graphics.svg.png[Graphics View,title="Graphics View",width=20,height=20] _Graphics View_#
+
+In the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS View_, the icon to the left of every
+row shows the current visibility state (shown or hidden) of the object defined in it (when possible). You may directly
+click on the little image:16px-Mode_showhideobject.svg.png[Mode showhideobject.svg,width=16,height=16] _Show / Hide
+Object_ icon in order to change the visibility status of the object in the
+image:16px-Menu_view_graphics.svg.png[Graphics View,title="Graphics View",width=16,height=16]
+_xref:/Graphics_View.adoc[Graphics View]_.

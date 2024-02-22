@@ -1,0 +1,35 @@
+= Comando Zipf
+
+Zipf(Numero di elementi, Esponente)::
+  Restituisce un diagramma a barre di una http://en.wikipedia.org/wiki/it:Legge_di_Zipf[distribuzione Zipf].
+  +
+  Parametri:
+  +
+  * _Numero di elementi_: numero degli elementi di cui si studia la posizione
+  * _Esponente_: esponente caratteristico della distribuzione
+
+Zipf(Numero di elementi, Esponente, Booleano Cumulativa)::
+  Restituisce un diagramma a barre di una distribuzione Zipf quando _Cumulativa_ = false.
+  +
+  Restituisce il grafico di una distribuzione Zipf cumulativa quando _Cumulativa_ = true.
+  +
+  I primi due parametri sono descritti nella sintassi precedente.
+
+Zipf(Numero di elementi, Esponente, Valore variabile v, Booleano Cumulativa)::
+  Sia X una variabile casuale Zipf.
+  +
+  Restituisce P( X = _v_) quando _Cumulativa_ = false.
+  +
+  Restituisce P( X ≤ _v_) quando _Cumulativa_ = true.
+  +
+  I primi due parametri sono descritti nella prima sintassi.
+
+[EXAMPLE]
+
+====
+
+`Zipf(10, 1 , 5, false)` restituisce _0.07_ nella image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] _vista Algebra_ e _stem:[\frac\{504}\{7381}]_ nella
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _vista CAS_.
+
+====

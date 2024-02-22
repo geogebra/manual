@@ -1,0 +1,94 @@
+= Etichette e legende
+
+In GeoGebra, ciascun oggetto dispone di un'*etichetta* univoca. Per etichettare un oggetto è possibile utilizzare una o
+più lettere, compresi i pedici. Per ulteriori dettagli vedere xref:/Assegnare_un_nome_agli_oggetti.adoc[Assegnare un
+nome agli oggetti].
+
+== [#Mostrare_e_nascondere_le_etichette]#Mostrare e nascondere le etichette#
+
+È possibile mostrare o nascondere le etichette degli oggetti presenti nella image:16px-Menu_view_graphics.svg.png[Menu
+view graphics.svg,width=16,height=16] _vista Grafici_ in vari modi:
+
+* Selezionare lo image:22px-Mode_showhidelabel.svg.png[Mode showhidelabel.svg,width=22,height=22]
+xref:/tools/Strumento_Mostra_/_Nascondi_etichetta.adoc[strumento Mostra / Nascondi etichetta] e selezionare l'oggetto di
+cui si vuole mostrare o nascondere l'etichetta.
+* Aprire il xref:/Menu_contestuale.adoc[menu contestuale] relativo all'oggetto e selezionare
+image:22px-Mode_showhidelabel.svg.png[Mode showhidelabel.svg,width=22,height=22] _Mostra etichetta_.
+* Aprire la image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Finestra_di_dialogo_Propriet%C3%A0.adoc[finestra di dialogo Proprietà] relativa all'oggetto e selezionare o
+deselezionare la casella _Mostra etichetta_ nella scheda _Generali_.
+
+== [#Nome_e_valore]#Nome e valore#
+
+In GeoGebra, ciascun oggetto ha un nome univoco che può essere utilizzato per etichettarlo nella
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _vista Grafici_. Inoltre ogni oggetto
+può essere etichettato utilizzandone il valore, oppure il nome e il valore. Le impostazioni di etichettatura possono
+essere modificate nella scheda _Generali_ della image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+finestra di dialogo _Proprietà_ , selezionando l'opzione _Nome_, _Valore_ o _Nome e Valore_ dalla casella di riepilogo a
+discesa accanto alla casella di controllo _Mostra etichetta_.
+
+[NOTE]
+
+====
+
+Per valore di un punto si intendono le relative coordinate, mentre il valore di una funzione è la relativa
+equazione.
+
+====
+
+== [#Legenda]#Legenda#
+
+In alcuni casi può essere utile assegnare a più oggetti la stessa etichetta, ad esempio ai lati di un quadrato. Per
+questo motivo tutti gli oggetti di GeoGebra dispongono di una legenda, oltre ai tre metodi di etichettatura già
+menzionati. Per assegnare la legenda a un oggetto utilizzare la scheda _Generali_ nella
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] finestra di dialogo _Proprietà_ dell'oggetto e
+digitare la legenda desiderata nel campo testo _Legenda_, quindi selezionare l'opzione di etichettatura _Legenda_ nella
+casella di riepilogo a discesa accanto alla casella di controllo _Mostra etichetta_.
+
+Nelle legende è inoltre possibile utilizzare alcuni segnaposto:
+
+[cols=",",options="header",]
+|===
+|Segnaposto |Significato
+|%c |(a partire dalla versione 4.2.27.0) Il valore della cella adiacente a destra nel foglio di calcolo, che dovrà
+essere un testo indipendente.Questa legenda non è dinamica: non sarà aggiornata finché non si preme il tasto
+[.kcode]#F9# o la combinazione [.kcode]#Ctrl# + [.kcode]#R#.
+
+|%v |Valore
+
+|%n |Nome
+
+|%d |Descrizione
+
+|%f |Definizione
+
+|%x |Coordinata x (o coefficiente della x in una retta in forma a x + b y + c = 0)
+
+|%y |Coordinata y (o coefficiente della y in una retta in forma a x + b y + c = 0)
+
+|%z |Coordinata z (o termine noto 'c' di una retta in forma a x + b y + c = 0)
+|===
+
+[EXAMPLE]
+
+====
+
+Sia A un punto, di coordinate (1,2). Impostando la legenda come "Il punto %n ha coordinate %v" verrà
+visualizzato "Il punto A ha coordinate (1,2)"
+
+====
+
+=== [#LaTeX_nelle_legende]#LaTeX nelle legende#
+
+Per utilizzare xref:/LaTeX.adoc[LaTeX] in una legenda basta racchiudere il comando LaTeX desiderato tra simboli di
+dollaro (ad es. ` $x^{2}$ `), e semplicemente scegliere da un elenco dei simboli e operatori di uso comune i caratteri
+desiderati, con un clic sulla casella visualizzata alla fine del campo _Legenda_.
+
+[EXAMPLE]
+
+====
+
+Se si desidera un testo matematicamente elegante conviene utilizzare LaTeX nelle legende. Ad esempio, per
+visualizzare una frazione del tipo stem:[ \frac\{a}\{b} ], digitare `$\frac{a}{b}$` nel campo _Legenda_
+
+====

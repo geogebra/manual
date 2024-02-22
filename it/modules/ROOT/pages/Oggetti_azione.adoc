@@ -1,0 +1,71 @@
+= Oggetti azione
+
+Gli _oggetti azione_ sono utili per dare ulteriore interattività ai fogli di lavoro, utilizzando anche degli
+xref:/Scripting.adoc[scripting]. Sono disponibili quattro tipi di oggetti azione:
+
+== [#Caselle_di_controllo]#Caselle di controllo#
+
+Le caselle di controllo sono rappresentazioni grafiche dei xref:/Valori_booleani.adoc[valori booleani]. Per creare una
+casella di controllo è possibile utilizzare lo image:22px-Mode_showcheckbox.svg.png[Mode
+showcheckbox.svg,width=22,height=22] xref:/tools/Strumento_Casella_di_controllo.adoc[strumento Casella di controllo] o
+il xref:/commands/Comando_CasellaControllo.adoc[comando CasellaControllo].
+
+== [#Campi_di_inserimento]#Campi di inserimento#
+
+I campi di inserimento sono degli input di tipo testuale per gli xref:/Scripting.adoc[script]. Ogni script viene
+attivato dalla modifica del testo in un campo di inserimento e dalla pressione del tasto [.kcode]#INVIO# o
+dall'abbandono del campo di inserimento. Per accedere al valore inserito, utilizzare la variabile %0.
+
+[EXAMPLE]
+
+====
+
+Un campo di inserimento contenente `a = a + %0` nello script _Al clic_ incrementa il numero _a_ del valore
+indicato. Questa istruzione è applicabile solo se _a_ è un oggetto
+xref:/Oggetti_liberi,_dipendenti_e_ausiliari.adoc[libero].
+
+====
+
+Se si desidera che il contenuto di un campo di inserimento vada a modificare il valore di un oggetto libero (oppure
+ridefinisca un oggetto dipendente), basta definire tale oggetto come collegato: in questo modo non sarà necessario
+utilizzare alcuno script. Per creare un campo di inserimento utilizzare lo image:22px-Mode_textfieldaction.svg.png[Mode
+textfieldaction.svg,width=22,height=22] xref:/tools/Strumento_Campo_di_inserimento.adoc[strumento Campo di inserimento]
+o il xref:/commands/Comando_CampoInserimento.adoc[comando CampoInserimento].
+
+== [#Pulsanti]#Pulsanti#
+
+I pulsanti servono per attivare gli script, quando vengono premuti col puntatore del mouse. Sebbene sia possibile
+attivare gli script con un clic su qualsiasi oggetto (ad es. un'xref:/tools/Strumento_Immagine.adoc[immagine]),
+l'utilizzo dei pulsanti rende l'uso del foglio di lavoro più intuitivo. Per creare un pulsante utilizzare lo
+image:22px-Mode_buttonaction.svg.png[Mode buttonaction.svg,width=22,height=22]
+xref:/tools/Strumento_Pulsante.adoc[strumento Pulsante] o il xref:/commands/Comando_Pulsante.adoc[comando Pulsante].
+
+== [#Elenchi_a_discesa]#Elenchi a discesa#
+
+Per visualizzare il contenuto di una lista in un elenco a discesa:
+
+* nella image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Vista_Grafici.adoc[vista
+Grafici]: selezionare la casella _Mostra gli elementi in un elenco a discesa_ nella scheda _Generali_ della
+image:18px-Menu-options.svg.png[Menu-options.svg,width=18,height=18] finestra di dialogo _Proprietà_ della lista.
+* nella image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+xref:/Vista_Foglio_di_calcolo.adoc[vista Foglio di calcolo]: inserire una lista nel foglio di calcolo, quindi
+selezionare l'opzione _Usa pulsanti e caselle di controllo_ nella scheda _Layout_ della
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+xref:/Finestra_di_dialogo_Opzioni.adoc[finestra di dialogo Opzioni].
+
+Per ottenere l'elemento selezionato in un elenco a discesa è inoltre possibile utilizzare i comandi
+xref:/commands/Comando_IndiceSelezionato.adoc[IndiceSelezionato] ed
+xref:/commands/Comando_ElementoSelezionato.adoc[ElementoSelezionato].
+
+[EXAMPLE]
+
+====
+
+Per creare un elenco a discesa con tre funzioni: `x+1`, `x^2`, e `sqrt(x)` è necessario innanzitutto creare
+nella barra di inserimento la lista `L={x+1, x^2,sqrt(x)}`. Quindi fare clic con il tasto destro del mouse nella _vista
+Algebra_ e selezionare "Proprietà". Nella finestra di dialogo visualizzata, selezionare l'opzione _Mostra gli elementi
+in un elenco a discesa_. È inoltre possibile inserire una legenda che descrive il contenuto dell'elenco a discesa. Per
+visualizzare la funzione selezionata nella _vista Grafici_, inserire il comando `ElementoSelezionato(L)` nella barra di
+inserimento.
+
+====

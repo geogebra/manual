@@ -1,0 +1,76 @@
+= Finestra di dialogo Ridefinisci
+
+La finestra di dialogo _Ridefinisci_ è uno strumento molto versatile per modificare una costruzione. È necessario però
+tenere presente che la ridefinizione di un oggetto può cambiare l'ordine dei passi della costruzione nel
+image:16px-Menu_view_construction_protocol.svg.png[Menu view construction protocol.svg,width=16,height=16]
+xref:/Protocollo_di_Costruzione.adoc[Protocollo di Costruzione].
+
+[NOTE]
+
+====
+
+L'elemento ridefinito può dipendere solo dagli oggetti definiti in precedenza, quindi potrebbe essere necessario
+modificare l'ordine dei vari elementi nel image:16px-Menu_view_construction_protocol.svg.png[Menu view construction
+protocol.svg,width=16,height=16] xref:/Protocollo_di_Costruzione.adoc[Protocollo di Costruzione].
+
+====
+
+In GeoGebra, un oggetto può essere ridefinito in vari modi:
+
+* Selezionare lo image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22]
+xref:/tools/Strumento_Muovi.adoc[strumento Muovi], quindi fare un doppio clic del mouse su qualsiasi oggetto nella
+xref:/Vista_Algebra.adoc[vista Algebra].
+** Per gli oggetti liberi viene visualizzato un campo di modifica, che consente la ridefinizione algebrica dell'oggetto.
+Premere il tasto [.kcode]#Invio# per applicare le modifiche effettuate.
+** Per gli oggetti dipendenti viene visualizzata la finestra _Ridefinisci_, che consente la ridefinizione dell'oggetto.
+* Selezionare lo image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22]
+xref:/tools/Strumento_Muovi.adoc[strumento Muovi], quindi fare un doppio clic del mouse su qualsiasi oggetto nella
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Vista_Grafici.adoc[vista
+Grafici]. Si aprirà la finestra di dialogo _Ridefinisci_ che consente la ridefinizione dell'oggetto.
+** Modificare un oggetto digitandone il nome e la nuova definizione nella barra di inserimento.
+** Aprire la finestra di dialogo image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Proprietà_ e
+modificare la definizione dell'oggetto nella scheda _Generali_.
+* A partire da GeoGebra 4.2, la finestra di dialogo _Ridefinisci_ relativa ad un oggetto appena creato si aprirà
+immediatamente premendo un tasto qualsiasi della tastiera del computer.
+
+[NOTE]
+
+====
+
+Gli oggetti fissati non possono essere ridefiniti. Per ridefinire un oggetto fissato, è necessario renderlo
+libero utilizzando la scheda _Generali_ della image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Finestra_di_dialogo_Propriet%C3%A0.adoc[finestra di dialogo Proprietà].
+
+====
+
+[NOTE]
+
+====
+
+È possibile inoltre ridefinire gli oggetti già esistenti direttamente dalla barra di inserimento. Ad esempio digitare
+`a:Segmento[A, B]` per ridefinire la retta `a` come segmento.
+
+====
+
+== [#Esempi]#Esempi#
+
+[EXAMPLE]
+
+====
+
+Per vincolare un punto libero A, già esistente, a una retta h già esistente, fare doppio clic sul punto A per
+aprire la finestra di dialogo _Ridefinisci_, quindi ridefinire il punto come `Punto[h]` nel campo testo visualizzato e
+premere il tasto [.kcode]#Invio# per confermare. Per rimuovere il punto A dalla retta e renderlo nuovamente libero, è
+necessario ridefinirlo attribuendogli delle coordinate libere come ad es. (1, 2).
+
+====
+
+[EXAMPLE]
+
+====
+
+Per convertire una retta _h_ passante per due punti A e B in un segmento, aprire la finestra di dialogo
+_Ridefinisci_ relativa alla retta _h_ e modificare la definizione `Retta[A, B]` in `Segmento[A, B]` nel campo testo
+visualizzato, quindi premere il tasto [.kcode]#Invio# per confermare.
+
+====

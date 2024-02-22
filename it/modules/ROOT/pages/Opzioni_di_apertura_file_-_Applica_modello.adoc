@@ -1,0 +1,66 @@
+= Opzioni di apertura file - Applica modello
+
+== [#Applica_modello]#Applica modello#
+
+Nella versione desktop è possibile creare un foglio di stile personalizzato (modello), contenente le impostazioni di
+visualizzazione di uno o più oggetti dello stesso tipo o di tipo diverso, in modo da potere successivamente applicare
+tali impostazioni agli oggetti di un altro foglio di lavoro di GeoGebra.
+
+=== [#Creare_un_file_modello]#Creare un file modello#
+
+Innanzitutto è necessario creare un file di GeoGebra (che salveremo con il nome ad es. _stile.ggb_) contenente gli
+oggetti che definiranno gli stili personalizzati, che potrebbero essere ad es. alcuni punti, rette e poligoni. A questo
+punto, utilizzando la xref:/Vista_Grafici.adoc[barra di stile] o la
+xref:/Finestra_di_dialogo_Propriet%C3%A0.adoc[finestra di dialogo Proprietà] di ciascun oggetto ne si modifica lo stile
+predefinito, applicando ad esempio un diverso colore, riempimento o modificandone le dimensioni.
+
+Ora è necessario attribuire un nome allo stile personalizzato di ciascun oggetto: nella scheda _Generali_ della
+xref:/Finestra_di_dialogo_Propriet%C3%A0.adoc[finestra di dialogo Proprietà] di ciascun oggetto digitare
+`%style=NomeStile` nel campo _Legenda_, indicando al posto di _NomeStile_ il nome da attribuire allo stile
+personalizzato dell'oggetto.
+
+Nell'esempio in figura, è stato attribuito allo stile del punto visualizzato il nome `%style=ArDxNoEt`, in modo da
+creare un collegamento di tipo mnemonico allo stile: colore arancione (_Ar_) - forma del punto a triangolo, orientato a
+destra (_Dx_) - nessuna etichetta (_NoEt_). Allo stesso modo potremmo creare un punto con le stesse caratteristiche, ma
+di colore blu, ed assegnargli ad esempio nel campo _Legenda_ il nome `%style=BluDxNoEt`
+
+[EXAMPLE]
+
+====
+
+/File:Foglio_Stile_Pto.PNG.adoc[image:500px-Foglio_Stile_Pto.PNG[Foglio Stile Pto.PNG,width=500,height=222]]
+
+====
+
+Se si desidera che lo stile definito per un oggetto sia applicato a tutti gli oggetti dello stesso tipo (nel caso
+dell'esempio, a tutti i punti) è necessario attribuire all'oggetto che definisce lo stile il nome riservato:
+`%style=defaultStyle`.
+
+Salvare quindi il file contenente i modelli degli stili personalizzati.
+
+=== [#Applicare_un_modello_a_un_file_.ggb]#Applicare un modello a un file .ggb#
+
+Aprire o creare il file a cui dovrà essere applicato un modello di stile, quindi nel campo _Legenda_ di ciascun oggetto
+a cui si desidera applicare uno degli stili precedentemente creati stile digitare `%style=NomeStile`, sostituendo
+_NomeStile_ con il nome dello stile corrispondente.
+
+Facendo riferimento all'esempio precedente, dovremo digitare `%style=ArDxNoEt` nel campo _Legenda_ dei punti da
+visualizzare nello stile _arancione_ precedentemente definito, e `%style=BluDxNoEt` nel campo _Legenda_ dei punti da
+visualizzare nello stile _blu_. Tale operazione non è necessaria per gli oggetti a cui dovrà essere applicato lo stile
+`%style=defaultStyle`.
+
+Verificare che nessun oggetto risulti selezionato e salvare il file, quindi fare clic quindi su _File - Apri ..._.
+
+Selezionare l'opzione _Applica modello (.ggb)_ dall'elenco _Tipo file_, presente in basso, nella finestra di dialogo
+visualizzata. Selezionare infine il file contenente il modello di stile (facendo riferimento all'esempio precedente
+selezioneremo il file _stile.ggb_) per applicare gli stili personalizzati agli oggetti assegnati .
+
+/File:Applica_Modello_Lista.PNG.adoc[image:Applica_Modello_Lista.PNG[Applica Modello Lista.PNG,width=470,height=110]]
+
+[NOTE]
+
+====
+
+Se alcuni oggetti sono selezionati, gli stili saranno applicati solo a tali oggetti.
+
+====

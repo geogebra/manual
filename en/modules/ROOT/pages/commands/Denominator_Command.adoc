@@ -1,0 +1,41 @@
+= Denominator Command
+
+Denominator( <Function> )::
+  Returns the denominator of a function.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `Denominator(5 / (x^2 + 2))` yields _f(x)=(x^2^ + 2)_.
+
+====
+
+Denominator( <Number> )::
+  For a rational number returns its denominator. It uses a numerical method, which limits this command to numbers with
+  small denominator. For irrational input the denominator of its xref:/commands/ContinuedFraction_Command.adoc[continued
+  fraction] is returned.
+
+[NOTE]
+
+====
+
+*Note:* See also xref:/commands/Numerator_Command.adoc[Numerator Command] and
+xref:/commands/FractionText_Command.adoc[FractionText Command].
+
+====
+
+== [#CAS_Syntax]#CAS Syntax#
+
+Denominator( <Expression> )::
+  Returns the denominator of a rational number or expression.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `Denominator(2 / 3 + 1 / 15)` yields _15_.
+
+====

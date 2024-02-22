@@ -1,0 +1,248 @@
+= Vista Foglio di calcolo
+
+== [#Interfaccia_utente_della_vista_Foglio_di_calcolo]#Interfaccia utente della vista Foglio di calcolo#
+
+La image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _vista Foglio di calcolo_ si
+apre per impostazione predefinita accanto alla image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _xref:/Vista_Grafici.adoc[vista Grafici]_: la relativa
+xref:/tools/Strumenti_Foglio_di_calcolo.adoc[_barra degli strumenti_] è visualizzata in alto, con i pulsanti
+image:16px-Menu-edit-undo.svg.png[Menu-edit-undo.svg,width=16,height=16]image:16px-Menu-edit-redo.svg.png[Menu-edit-redo.svg,width=16,height=16]
+_Annulla / Ripristina_ nell'angolo in alto a destra.
+
+[width="100%",cols="100%",]
+|===
+a|
+image:314px-Spreadsheet-View.png[Spreadsheet-View.png,width=314,height=220]
+
+Vista Foglio di calcolo
+
+|===
+
+Questa _Vista_ fa parte della image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+xref:/Raccolta_Viste.adoc[_Raccolta viste Foglio di calcolo_]: è comunque possibile in qualsiasi istante
+xref:/Confronto_tra_le_diverse_versioni_di_GeoGebra.adoc[modificare il layout] dell'interfaccia utente di GeoGebra e
+adattarlo alle proprie necessità di lavoro.
+
+=== [#Personalizzare_la_vista_Foglio_di_calcolo]#Personalizzare la image:24px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=24,height=24] vista Foglio di calcolo#
+
+La image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _vista Foglio di calcolo_ può
+essere personalizzata in due modi:
+
+* aprendo la image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+_xref:/Finestra_di_dialogo_Propriet%C3%A0.adoc[finestra di dialogo Proprietà]_ e selezionando l'opzione
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Foglio di calcolo_ (GeoGebra
+Desktop)
+* aprendo la image:16px-Stylingbar_icon_spreadsheet.svg.png[Stylingbar icon spreadsheet.svg,width=16,height=12]
+xref:/Barra_di_stile.adoc[_barra di stile della vista Foglio di calcolo_] e selezionando
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Preferenze_ (GeoGebra Web e app per tablet)
+
+Nella finestra di dialogo visualizzata è possibile modificare il layout, decidendo se:
+
+* mostrare la _xref:/Barra_di_inserimento.adoc[barra di inserimento]_
+* mostrare le _linee della griglia_
+* mostrare le _intestazioni_ di _riga_ o _colonna_
+* mostrare le _barre di scorrimento verticali_ o _orizzontali_
+
+È inoltre possibile modificare le funzionalità del image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Foglio di calcolo_, decidendo se:
+
+* consentire l'uso di _pulsanti e caselle di controllo_ o _tooltip_
+* richiedere l'inserimento del simbolo _"=" prima di un comando_
+* utilizzare le funzionalità di _auto-completamento_
+
+== [#Creare_oggetti_matematici]#Creare oggetti matematici#
+
+Nella image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _vista Foglio di calcolo_
+di GeoGebra ogni cella possiede un nome univoco, per facilitare l'indirizzamento.
+
+[EXAMPLE]
+
+====
+
+La cella corrispondente alla posizione di colonna _A_ e riga _1_ ha nome _A1_.
+
+====
+
+[NOTE]
+
+====
+
+I nomi delle celle possono essere utilizzati all'interno di espressioni e comandi, che ne utilizzeranno i
+corrispondenti valori.
+
+====
+
+=== [#Inserimento_diretto,_selezione_e_comandi]####[#Inserimento_diretto.2C_selezione_e_comandi]##Inserimento diretto, selezione e comandi##
+
+Nelle _celle_ è possibile inserire non solo numeri, ma ogni tipo di xref:/Oggetti_generali.adoc[oggetti generali] e
+xref:/Oggetti_geometrici.adoc[oggetti geometrici] che sono supportati da GeoGebra (ad es. coordinate di punti,
+xref:/Funzioni.adoc[funzioni], xref:/Comandi.adoc[comandi]).
+
+Per selezionare due celle o colonne non adiacenti, utilizzare la combinazione di tasti [.kcode]#Ctrl# + [.kcode]#Clic#.
+
+=== [#Nomi_di_celle_relativi]#Nomi di celle relativi#
+
+Quando si copia da una cella a un'altra, per impostazione predefinita tutti i riferimenti vengono modificati
+relativamente alla posizione finale.
+
+[EXAMPLE]
+
+====
+
+Siano `A1=1`, `A2=2`. Nella cella _B1_ digitare `(A1, A1)`. Copiando _B1_ in _B2_ (tramite [.kcode]#Ctrl# +
+[.kcode]#C#, [.kcode]#Ctrl# + [.kcode]#V# oppure trascinando l'angolo della cella) si ottiene _(A2, A2)_ nella cella
+_B2_.
+
+====
+
+Per indirizzare le celle in modo assoluto, in modo da evitare l'aggiornamento degli indici come nell'esempio precedente,
+basta inserire il simbolo `$` prima della riga/colonna della cella di riferimento.
+
+[NOTE]
+
+====
+
+Su sistemi Mac i xref:/Tasti_di_scelta_rapida.adoc[tasti di scelta rapida] per copiare e incollare sono
+[.kcode]#Cmd# + [.kcode]#C# e [.kcode]#Cmd# + [.kcode]#V#
+
+====
+
+== [#Inserire_dati_nella_vista_Foglio_di_calcolo]#Inserire dati nella image:24px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=24,height=24] vista Foglio di calcolo#
+
+=== [#Inserimento_manuale,_comandi_e_registrazione]####[#Inserimento_manuale.2C_comandi_e_registrazione]##Inserimento manuale, comandi e registrazione##
+
+Oltre alla possibilità di inserire manualmente i dati nel image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Foglio di calcolo_, è possibile utilizzare i comandi
+xref:/commands/Comando_RiempiColonna.adoc[_RiempiColonna_], xref:/commands/Comando_RiempiRiga.adoc[_RiempiRiga_] o
+xref:/commands/Comando_RiempiCelle.adoc[_RiempiCelle_]. È inoltre disponibile un'opzione per
+xref:/Tracciamento.adoc[registrare nel Foglio di calcolo] i valori di alcuni oggetti.
+
+=== [#Copiare_dati_dalla_vista_Algebra]#Copiare dati dalla image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] vista Algebra#
+
+Per copiare un oggetto basta trascinarlo con il mouse dalla image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] _vista Algebra_ alla image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _vista Foglio di calcolo_: se l'oggetto copiato è una lista, i suoi elementi
+verranno inseriti orizzontalmente, a partire dalla cella in cui si rilascia il tasto sinistro del mouse. Premendo e
+mantenendo premuto il tasto [.kcode]#Maiusc# della tastiera, al termine del trascinamento si apre una finestra di
+dialogo che consente di scegliere se gli oggetti copiati dovranno essere
+xref:/Oggetti_liberi,_dipendenti_e_ausiliari.adoc[liberi o dipendenti], oltre ad offrire l'opzione _Trasponi_, utile per
+disporre verticalmente gli elementi di una lista .
+
+=== [#Copiare_dati_da_altro_software_di_tipo_foglio_di_calcolo]#Copiare dati da altro software di tipo foglio di calcolo#
+
+GeoGebra consente l'importazione di dati da altri software nella image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _vista Foglio di calcolo_.
+
+* Selezionare e copiare i dati da importare, ad esempio utilizzando la combinazione di tasti [.kcode]#Ctrl# +
+[.kcode]#C# (Mac OS: [.kcode]#Cmd# + [.kcode]#C#) per copiare i dati negli _Appunti_ del sistema.
+* Aprire una finestra di GeoGebra e visualizzare la image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _vista Foglio di calcolo_.
+* Fare clic sulla cella della _vista Foglio di calcolo_ che dovrà contenere il primo dato (ad es. la cella _A1_)
+* Incollare i dati dagli _Appunti_ del sistema nella image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _vista Foglio di calcolo_ di GeoGebra, ad esempio utilizzando la combinazione di
+tasti [.kcode]#Ctrl# + [.kcode]#V# (Mac OS: [.kcode]#Cmd# + [.kcode]#V#).
+
+=== [#Importare_file_di_dati_da_altre_applicazioni]#Importare file di dati da altre applicazioni#
+
+È possibile importare dati da altre applicazioni, se sono in formato ._txt_, ._csv_ e ._dat_: basta fare clic con il
+tasto destro del mouse in una cella vuota della _vista Foglio di calcolo_, quindi scegliere l'opzione _Importa file di
+dati..._ nel menu contestuale visualizzato.
+
+[NOTE]
+
+====
+
+GeoGebra utilizza il punto [.kcode]#.# come separatore decimale, e la virgola [.kcode]#,# come separatore di
+campo: verificare prima dell'importazione se il file contenente i dati rispetta queste impostazioni.
+
+====
+
+=== [#Barra_degli_strumenti_della_vista_Foglio_di_calcolo]#Barra degli strumenti della vista Foglio di calcolo#
+
+La xref:/tools/Strumenti_Foglio_di_calcolo.adoc[_barra degli strumenti della vista Foglio di calcolo_] dispone di una
+scelta di _xref:/Strumenti.adoc[strumenti]_ che consentono la creazione di oggetti nella
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _vista Foglio di calcolo_. Ogni
+icona della _xref:/Barra_degli_strumenti.adoc[barra degli strumenti]_ rappresenta una _xref:/Strumenti.adoc[casella
+degli strumenti]_, e contiene una selezione di strumenti. Per aprire una _casella degli strumenti_ basta fare clic sullo
+_strumento predefinito_ visualizzato nella _barra degli strumenti_ (GeoGebra Web e app per tablet) oppure sulla freccina
+presente in basso a destra in ogni icona della _barra degli strumenti_ (GeoGebra Desktop).
+
+image:146px-Toolbar-Spreadsheet.png[Strumenti Foglio di calcolo,title="Strumenti Foglio di calcolo",width=146,height=32]
+
+[NOTE]
+
+====
+
+Gli _strumenti_ disponibili sono organizzati sulla base degli oggetti risultanti o rispetto alle relative
+funzionalità: quindi ad esempio gli strumenti relativi all'analisi dei dati sono raccolti nella casella
+image:16px-Mode_onevarstats.svg.png[Strumenti Analisi dati,title="Strumenti Analisi dati",width=16,height=16]
+xref:/tools/Strumenti_Foglio_di_calcolo.adoc[_Analisi dati_].
+
+====
+
+== [#Visualizzare_gli_oggetti_matematici]#Visualizzare gli oggetti matematici#
+
+=== [#Visualizzare_gli_oggetti_del_Foglio_di_calcolo_in_altre_Viste]#Visualizzare gli oggetti del Foglio di calcolo in altre Viste#
+
+Se possibile, GeoGebra visualizza immediatamente nella image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Vista_Grafici.adoc[vista Grafici] la rappresentazione grafica dell'oggetto
+inserito in una cella del foglio di calcolo. Il nome dell'oggetto sarà quello della cella in cui è stato definito (ad
+es. A5, C1).
+
+[NOTE]
+
+====
+
+Per impostazione predefinita, gli oggetti del _Foglio di calcolo_ vengono classificati come
+xref:/Oggetti_liberi,_dipendenti_e_ausiliari.adoc[oggetti ausiliari] nella image:16px-Menu_view_algebra.svg.png[Menu
+view algebra.svg,width=16,height=16] xref:/Vista_Algebra.adoc[vista Algebra]. Per visualizzare o nascondere gli oggetti
+ausiliari, selezionare "Oggetti ausiliari" nel xref:/Menu_contestuale.adoc[menu contestuale], oppure fare clic
+sull'icona image:16px-Stylingbar_algebraview_auxiliary_objects.svg.png[Stylingbar algebraview auxiliary
+objects.svg,width=16,height=16] nella barra di stile della _vista Algebra_.
+
+====
+
+=== [#Utilizzare_i_dati_del_Foglio_di_calcolo_nelle_altre_Viste]#Utilizzare i dati del Foglio di calcolo nelle altre _Viste_#
+
+I dati contenuti nel foglio di calcolo possono essere raggruppati e utilizzati nelle altre _Viste_ selezionando una o
+più celle, quindi facendo clic con il tasto destro del mouse e successivamente scegliendo un'opzione nel sotto-menu
+_Crea_ del menu contestuale visualizzato. Le opzioni disponibili sono: _Lista_, _Lista di punti_, _Matrice_, _Tabella_,
+_Spezzata aperta_, _Tabella delle operazioni_.
+
+=== [#Tabella_delle_operazioni]#Tabella delle operazioni#
+
+Per le funzioni in due variabili è possibile creare una _tabella delle operazioni_, cioè una tabella a doppia entrata,
+contenente i valori della prima variabile elencati nella prima riga, e i valori relativi alla seconda variabile elencati
+nella prima colonna a sinistra. La funzione deve essere inserita nella prima cella in alto a sinistra. Dopo avere
+inserito la funzione e i valori da applicare alle variabili, selezionare l'area rettangolare in cui creare la _tabella
+delle operazioni_, fare clic con il tasto destro del mouse su di essa (Mac OS: [.kcode]#Cmd#-clic) , quindi selezionare
+_Crea > Tabella delle operazioni_ nel xref:/Menu_contestuale.adoc[menu contestuale] visualizzato.
+
+[EXAMPLE]
+
+====
+
+Siano `A1 = x y`, `A2 = 1`, `A3 = 2`, `A4 = 3`, `B1 = 1`, `C1 = 2` e `D1 = 3`. Selezionare le celle A1:D4 e
+fare clic con il tasto destro del mouse (Mac OS: [.kcode]#Cmd#-clic) su di esse, quindi selezionare _Crea > Tabella
+delle operazioni_ nel menu contestuale visualizzato per generare la tabella contenente i risultati dell'applicazione dei
+valori specificati alla funzione inserita.
+
+====
+
+=== [#Barra_di_stile_della_vista_Foglio_di_calcolo]#Barra di stile della vista Foglio di calcolo#
+
+La xref:/Barra_di_stile.adoc[_Barra di stile della vista Foglio di calcolo_] dispone di appositi pulsanti per:
+
+* mostrare / nascondere la _xref:/Barra_di_inserimento.adoc[barra di inserimento]_ (GeoGebra Desktop)
+* modificare lo stile del testo in image:16px-Stylingbar_text_bold.svg.png[Stylingbar text bold.svg,width=16,height=16]
+_grassetto_ o image:16px-Stylingbar_text_italic.svg.png[Stylingbar text italic.svg,width=16,height=16] _corsivo_
+* modificare l'allineamento del testo image:16px-Stylingbar_spreadsheet_align_left.svg.png[Stylingbar spreadsheet align
+left.svg,width=16,height=16] a _sinistra_, image:16px-Stylingbar_spreadsheet_align_center.svg.png[Stylingbar spreadsheet
+align center.svg,width=16,height=16] _centrato_, oppure image:16px-Stylingbar_spreadsheet_align_right.svg.png[Stylingbar
+spreadsheet align right.svg,width=16,height=16] a _destra_
+* modificare il [File:Stylingbar_color_white.svg|link=|16px]] colore di sfondo delle celle
+* modificare i bordi delle celle (GeoGebra Desktop)
+* aprire la image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+_xref:/Finestra_di_dialogo_Propriet%C3%A0.adoc[finestra di dialogo Proprietà]_ (GeoGebra Web e app per tablet)
+* visualizzare ulteriori image:16px-Stylingbar_dots.svg.png[Stylingbar dots.svg,width=16,height=16]
+_xref:/Viste.adoc[Viste]_ nella finestra di GeoGebra (GeoGebra Web e app per tablet)

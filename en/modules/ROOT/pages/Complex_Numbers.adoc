@@ -1,0 +1,94 @@
+= Complex Numbers
+
+GeoGebra does not support complex numbers directly, but you may use xref:/Points_and_Vectors.adoc[points] to simulate
+operations with complex numbers.
+
+[EXAMPLE]
+
+====
+
+*Example:* If you enter the complex number 3 + 4ί into the Input Bar, you get the point (3, 4) in the
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Graphics_View.adoc[Graphics
+View]. This point’s coordinates are shown as 3 + 4ί in the image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/Algebra_View.adoc[Algebra View].
+
+====
+
+[NOTE]
+
+====
+
+*Note:* You can display any point as a complex number in the image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] _Algebra View_. Open the
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Properties_Dialog.adoc[Properties Dialog] for
+the point and select _Complex Number_ from the list of Coordinates formats on tab _Algebra_.
+
+====
+
+The imaginary unit ί can be chosen from the symbol box in the xref:/Input_Bar.adoc[Input Bar] or written using
+[.kcode]#Alt# + [.kcode]#i#. Unless you are typing the input in image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] xref:/CAS_View.adoc[CAS View] or you defined variable i previously, variable i is recognized
+as the ordered pair i = (0, 1) or the complex number 0 + 1ί. This also means, that you can use this variable i in order
+to type complex numbers into the _Input Bar_ (e.g. q = 3 + 4i), but not in the CAS.
+
+[EXAMPLE]
+
+====
+
+*Examples:* Addition and subtraction:
+
+* `(2 + 1ί) + (1 – 2ί)` gives you the complex number 3 – 1ί.
+* `(2 + 1ί) - (1 – 2ί)` gives you the complex number 1 + 3ί.
+
+====
+
+[EXAMPLE]
+
+====
+
+*Examples:* Multiplication and division:
+
+* `(2 + 1ί) * (1 – 2ί)` gives you the complex number 4 – 3ί.
+* `(2 + 1ί) / (1 – 2ί)` gives you the complex number 0 + 1ί.
+
+====
+
+[NOTE]
+
+====
+
+*Note:* The usual multiplication `(2, 1)*(1, -2)` gives you the scalar product of the two vectors.
+
+====
+
+The following commands and xref:/Predefined_Functions_and_Operators.adoc[predefined operators] can also be used:
+
+* `x(w)` or `real(w)` return the real part of the complex number _w_
+* `y(w)` or `imaginary(w)` return the imaginary part of the complex number _w_
+* `abs(w)` or `Length[w]` return the absolute value of the complex number _w_
+* `arg(w)` or `Angle[w]` return the argument of the complex number _w_
+
+[NOTE]
+
+====
+
+*Note:* arg(w) is a number between -180° and 180°, while Angle[w] returns values between 0° and 360°.
+
+====
+
+* `conjugate(w)` or `Reflect[w,xAxis]` return the conjugate of the complex number _w_
+
+GeoGebra also recognizes expressions involving xref:/Numbers_and_Angles.adoc[real] and complex numbers.
+
+[EXAMPLE]
+
+====
+
+*Examples:*
+
+* `3 + (4 + 5ί)` gives you the complex number 7 + 5ί.
+* `3 - (4 + 5ί)` gives you the complex number -1 - 5ί.
+* `3 / (0 + 1ί)` gives you the complex number 0 - 3ί.
+* `3 * (1 + 2ί)` gives you the complex number 3 + 6ί.
+
+====

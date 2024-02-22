@@ -1,0 +1,68 @@
+= Colori dinamici
+
+Per modificare i colori degli oggetti basta utilizzare la scheda _Colore_ della
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Finestra_di_dialogo_Propriet%C3%A0.adoc[finestra di dialogo Proprietà]. È inoltre possibile rendere dinamica la
+colorazione di un oggetto: aprire la finestra di dialogo
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Proprietà_ dell'oggetto, quindi selezionare la
+scheda _Avanzate_. Nella sezione _Colori dinamici_, compilare i campi di inserimento relativi alle componenti di colore
+_Rosso_, _Verde_ e _Blu_ inserendone i relativi valori, compresi tra 0 e 1.
+
+[NOTE]
+
+====
+
+* I codici numerici RGB dei principali colori sono disponibili alla destra della casella _Anteprima_ nella scheda
+_Colore_ della image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Finestra_di_dialogo_Propriet%C3%A0.adoc[finestra di dialogo Proprietà]. Per ottenere il valore corretto da
+inserire nei campi che definiscono la colorazione dinamica, basta dividere ciascuno di tali codici per 255.
+* In ciascuno di questi campi è inoltre possibile inserire una funzione a valori in [0, 1].
+
+====
+
+[EXAMPLE]
+
+====
+
+* Creare tre xref:/tools/Strumento_Slider.adoc[slider] _a_, _b_, _c_ con intervallo da 0 a 1.
+* Creare un poligono il cui colore dovrà essere influenzato dai valori assunti dagli slider.
+* Aprire la image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Finestra_di_dialogo_Propriet%C3%A0.adoc[finestra di dialogo Proprietà] del poligono, quindi digitare i nomi dei
+tre slider nei campi di inserimento relativi alle componenti di colore.
+* Chiudere la finestra di dialogo image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Proprietà_ e
+modificare i valori degli slider, per vedere come ciascuna componente di colore influenza il colore risultante del
+poligono.
+
+[NOTE]
+
+====
+
+xref:/Animazione.adoc[Animando] automaticamente gli slider con velocità diverse, si avrà un effetto di
+colorazione dinamica automatica.
+
+====
+
+====
+
+La sezione _Colori dinamici_ contiene anche un campo di inserimento che consente la personalizzazione dell'_Opacità_
+dell'oggetto selezionato. I valori utilizzabili devono appartenere all'intervallo [0,1] (dove 0 significa trasparente e
+1 significa opaco al 100%): valori esterni a tale intervallo saranno ignorati. Per ottenere un'opacità dinamica basta
+utilizzare uno slider nel campo testo _Opacità_.
+
+== [#RGB_/_HSV_/_HSL]####[#RGB_.2F_HSV_.2F_HSL]##RGB / HSV / HSL##
+
+Per ottenere effetti visivi di diverso impatto a volte è necessario cambiare il modello colore. Per questo motivo sono
+disponibili i modelli http://en.wikipedia.org/wiki/it:Hue_Saturation_Brightness[HSV] e
+http://en.wikipedia.org/wiki/it:Hue_Saturation_Brightness[HSL] in alternativa al modello
+http://en.wikipedia.org/wiki/it:RGB[RGB] predefinito. Selezionare il modello colore desiderato nella casella a discesa
+presente nella zona inferiore della sezione _Colori dinamici_ della scheda _Avanzate_ nella finestra di dialogo
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Proprietà_ dell'oggetto.
+
+[EXAMPLE]
+
+====
+
+Per fare assumere al punto _A_ tutti i colori dell'arcobaleno al variare della propria posizione, selezionare
+il modello colore _HSV_, impostare _Saturazione_ e _Valore_ pari a 1 e digitare `x(A)` nel campo testo _Tonalità_.
+
+====

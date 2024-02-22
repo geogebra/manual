@@ -1,0 +1,58 @@
+= Comando Circonferenza
+
+Circonferenza(Punto, Raggio)::
+  Genera la circonferenza con centro nel punto indicato e raggio assegnato.
+
+Circonferenza(Punto, Segmento)::
+  Genera la circonferenza con centro nel punto e raggio uguale alla lunghezza del segmento indicato.
+
+Circonferenza(Punto, Punto)::
+  Genera la circonferenza con centro nel primo punto e passante per il secondo punto indicato.
+
+Circonferenza(Punto, Punto, Punto)::
+  Genera la circonferenza passante per i tre punti indicati.
+
+[NOTE]
+
+====
+
+Vedere anche gli strumenti image:20px-Mode_compasses.svg.png[Mode compasses.svg,width=20,height=20]
+xref:/tools/Strumento_Compasso.adoc[Compasso], image:20px-Mode_circle2.svg.png[Mode circle2.svg,width=20,height=20]
+xref:/tools/Strumento_Circonferenza_-_dati_il_centro_e_un_punto.adoc[Circonferenza - dati il centro e un punto],
+image:20px-Mode_circlepointradius.svg.png[Mode circlepointradius.svg,width=20,height=20]
+xref:/tools/Strumento_Circonferenza_-_dati_centro_e_raggio.adoc[Circonferenza - dati centro e raggio], e
+image:20px-Mode_circle3.svg.png[Mode circle3.svg,width=20,height=20]
+xref:/tools/Strumento_Circonferenza_-_per_tre_punti.adoc[Circonferenza - per tre punti] .
+
+====
+
+Circonferenza(Retta, Punto)::
+  Genera la circonferenza avente per asse la retta e passante per il punto indicato.
+
+Circonferenza(Punto, Raggio, Direzione)::
+  Genera la circonferenza con centro e raggio assegnati, e asse parallelo alla _direzione_ indicata, che può essere una
+  retta, un vettore o un piano.
+  +
+
+[EXAMPLE]
+
+====
+
+`Circonferenza(Punto, Raggio, Piano)` restituisce una circonferenza parallela al piano e avente come asse il
+vettore perpendicolare al piano.
+
+====
+
+Circonferenza(Punto, Punto, Direzione)::
+  Genera la circonferenza con centro nel primo punto, passante per il secondo punto indicato e asse parallelo alla
+  _direzione_ indicata.
+
+[NOTE]
+
+====
+
+Non utilizzare `x = 0` oppure `y = 0` per la _Direzione_, in quanto tali equazioni possono rappresentare rette
+in 2D e piani in 3D, determinando ambiguità nella definizione. Per specificare ad esempio il piano `x = 0`, utilizzare
+un'espressione del tipo `x + 0y + 0z = 0`
+
+====

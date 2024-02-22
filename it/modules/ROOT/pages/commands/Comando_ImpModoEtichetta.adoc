@@ -1,0 +1,26 @@
+= Comando ImpModoEtichetta
+
+ImpModoEtichetta(Oggetto, Numero)::
+  Modifica la modalità dell'etichetta dell'oggetto dato in base al numero indicato, secondo la corrispondenza indicata
+  nella seguente tabella.
+  +
+
+[NOTE]
+
+====
+
+* Interi diversi da quelli elencati nella tabella vengono considerati come 0.
+* L'impostazione predefinita per l'etichetta di un oggetto è _Nome_.
+* Per le opzioni 3 e 9, se il campo _Legenda_ dell'oggetto è vuoto, viene utilizzato il _Nome_ dell'oggetto.
+
+====
+
+[cols=",",options="header",]
+|===
+|Numero |Modalità
+|0 |Nome
+|1 |Nome + Valore
+|2 |Valore
+|3 |xref:/Etichette_e_legende.adoc[Legenda]
+|9 |xref:/Etichette_e_legende.adoc[Legenda] + Valore
+|===

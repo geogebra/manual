@@ -1,0 +1,56 @@
+= LocusEquation Command
+
+LocusEquation( <Locus> )::
+  Calculates the equation of a Locus and plots this as an Implicit Curve.
+LocusEquation( <Point Creating Locus Line Q>, <Point P> )::
+  Calculates the equation of a Locus by using inputs tracer point _Q_ and mover point _P_, and plots this as an Implicit
+  Curve.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:*
+
+Let us construct a parabola as a locus: Create free Points _A_ and _B_, and Line _d_ lying through them (this will be
+the directrix of the parabola). Create free point _F_ for the focus. Now create _P_ on Line _d_ (the mover point), then
+create line _p_ as a perpendicular line to _d_ through _P_. Also create line _b_ as perpendicular bisector of Line
+Segment _FP_. Finally, point _Q_ (the point creating locus line) is to be created as intersection of Lines _p_ and _b_.
+Now `LocusEquation(Q,P)` will find and plot the exact equation of the locus.
+
+====
+
+LocusEquation( <Boolean Expression>, <Free Point> )::
+  Calculates the locus of the free point such that the boolean condition is satisified.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `LocusEquation(AreCollinear(A, B, C), A)` for free points _A_, _B_, _C_ calculates the set of positions of
+_A_ that make _A_, _B_ and _C_ collinear—i.e. a line through _B_ and C__.__
+
+====
+
+[NOTE]
+
+====
+
+*Notes:*
+
+* The Locus must be made from a Point (not from a Slider)
+* Works only for a restricted set of geometric loci, i.e. using points, lines, circles, conics. (Rays and line segments
+will be treated as (infinite) lines.)
+* If the locus is too complicated then it will return 'undefined'.
+* If there is no locus then the implicit curve is the empty set 0=1.
+* If the locus is the whole plane then the implicit curve is the equation 0=0.
+* The calculation is done using http://en.wikipedia.org/wiki/Gr%C3%B6bner_basis[Gröbner bases], so sometimes extra
+branches of the curve will appear that were not in the original locus.
+* Further informations and examples on https://www.geogebra.org/m/KZVzqVEM[geogebra.org]. A
+https://www.geogebra.org/m/mbXQuvUV[collection of implicit locus examples] is also available.
+* See also xref:/commands/Locus_Command.adoc[Locus] command and
+https://github.com/kovzol/gg-art-doc/tree/master/pdf/english.pdf[GeoGebra Automated Reasoning Tools: A Tutorial].
+
+====

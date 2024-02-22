@@ -1,0 +1,68 @@
+= Testi
+
+Gli oggetti testo possono essere creati utilizzando i xref:/commands/Comandi_Testo.adoc[comandi Testo] o lo
+image:24px-Mode_text.svg.png[Mode text.svg,width=24,height=24] xref:/tools/Strumento_Testo.adoc[strumento Testo], oppure
+trascinando un oggetto dalla image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] vista
+_Algebra_ alla image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] vista _Grafici_. Gli
+*utenti esperti* possono digitare il testo direttamente nella xref:/Barra_di_inserimento.adoc[barra di inserimento],
+come descritto in seguito.
+
+== [#Terminologia]#Terminologia#
+
+Testo statico::
+  non dipende da alcun oggetto matematico e in genere non è influenzato dalle modifiche apportate alla costruzione.
+
+Testo dinamico::
+  contiene i valori degli oggetti della costruzione, che si adattano alle eventuali modifiche apportate.
+
+Testo misto::
+  è una combinazione di testo statico e dinamico. Per creare un testo misto è necessario digitare la parte statica da
+  tastiera (ad es. Punto A =), quindi fare clic sull'oggetto di cui si desidera visualizzare il valore nella parte
+  dinamica del testo.
+
+== [#Input_tramite_barra_di_inserimento]#Input tramite barra di inserimento#
+
+Se si inseriscono testi dalla barra di inserimento è necessario includere la sintassi che distingue il testo statico da
+quello dinamico.
+
+[NOTE]
+
+====
+
+GeoGebra aggiunge automaticamente la sintassi ("Punto A = " + A ) necessaria alla creazione del testo misto:
+virgolette che racchiudono la parte statica del testo e un simbolo di più (+) che collega la parte statica a quella
+dinamica del testo.
+
+====
+
+[cols=",",options="header",]
+|===
+|Inserimento |Descrizione
+|Questo è un testo statico |Testo statico
+|A |Testo dinamico (se il punto A esiste)
+|"Punto A = " + A |Testo misto in due parti, che utilizza il valore del punto A
+|"a = " + a + "cm" |Testo misto in tre parti che utilizza il valore del numero a
+|===
+
+[NOTE]
+
+====
+
+Se un oggetto avente il nome xx è già esistente e si desidera creare un testo statico contenente il nome
+dell'oggetto, è necessario racchiudere il nome tra virgolette ("xx"), altrimenti GeoGebra crea automaticamente un testo
+dinamico contenente il valore dell'oggetto xx al posto del relativo nome. È comunque possibile digitare un testo
+qualsiasi (diverso dal nome degli oggetti contenuti nella costruzione), senza racchiudere tale testo tra virgolette.
+
+====
+
+[NOTE]
+
+====
+
+All'interno di un testo misto la parte statica deve sempre essere racchiusa tra virgolette. Le parti statica e
+dinamica di un testo possono essere collegate utilizzando il simbolo di più (+). Comunque, a partire dalla versione 4.0,
+i simboli di + non sono più obbligatori.
+
+====
+
+Per ottenere formule matematiche dall'aspetto gradevole, utilizzare xref:/LaTeX.adoc[LaTeX].

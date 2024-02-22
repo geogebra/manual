@@ -1,0 +1,72 @@
+= Comando Estremo
+
+Estremo(Polinomio)::
+  Determina e visualizza graficamente tutti gli estremi locali della funzione polinomiale.
+  +
+  +
+
+[EXAMPLE]
+
+====
+
+`Estremo(x³ + 3x² - 2x + 1)` crea gli estremi locali `(0.29, 0.70)` e `(-2.3, 9.3)` e li visualizza nella
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Vista_Grafici.adoc[Vista
+Grafici].
+
+====
+
+[NOTE]
+
+====
+
+Per ottenere la lista di tutti gli estremi locali del polinomio, racchiudere il comando in una coppia di
+parentesi graffe, come ad es. `{Estremo(x³ + 3x² - 2x + 1)}`.
+
+====
+
+Estremo(Funzione, _x_ iniziale, _x_ finale)::
+  Determina (numericamente) l'estremo della funzione nell'intervallo aperto (_x_ iniziale, _x_ finale).
+  +
+  +
+
+[EXAMPLE]
+
+====
+
+`Estremo((x⁴ - 3x³ - 4x² + 4) / 2, 0, 5)` determina e visualizza l'estremo locale (2.93, -16.05).
+
+====
+
+[NOTE]
+
+====
+
+La funzione deve essere continua nell'intervallo specificato, altrimenti potrebbe essere calcolato un falso
+estremo nell'intorno di ciascun punto di discontinuità.
+
+====
+
+== [#Sintassi_CAS]#Sintassi CAS#
+
+Estremo(Funzione)::
+  Prova a restituire tutti gli estremi locali della funzione (che deve essere continua e derivabile).
+
+[EXAMPLE]
+
+====
+
+`Assumi(0 < x < 20, Estremo(15/2 * sin( 2/15*pi * x) + 56/5))` restituisce i flessi locali nell'intervallo
+indicato _stem:[ \left\\{ \left(\frac\{15}\{4}, \frac\{187}\{10} \right), \left(\frac\{45}\{4}, \frac\{37}\{10} \right),
+\left(\frac\{75}\{4}, \frac\{187}\{10} \right) \right\} ]_.
+
+====
+
+[EXAMPLE]
+
+====
+
+`Estremo(x³ + 3x² - 2x + 1)` crea e visualizza graficamente la lista dei punti _stem:[ \left\\{
+\left(\frac\{-\sqrt\{15} - 3}\{3}, \frac\{10 \; \sqrt\{15} + 45}\{9} \right), \left(\frac\{\sqrt\{15} - 3}\{3},
+\frac\{-10 \; \sqrt\{15} + 45}\{9} \right) \right\}]_.
+
+====

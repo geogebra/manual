@@ -1,0 +1,48 @@
+= Fit Command
+
+Fit( <List of Points>, <List of Functions> )::
+  Calculates a linear combination of the _functions_ that best fit the _points_ in the list.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:*
+
+* `Fit({(-2, 3), (0, 1), (2, 1), (2, 3)}, {x^2, x})` yields _0.625 x^2 - 0.25x_.
+* Let _L = \{A, B, C, ...}_, _f(x) = 1_, _g(x) = x_, _h(x) = e^x_, _F = \{f, g, h}_. `Fit(L, F)` calculates a function
+of the form _a + b x + c e^x_ that fits the points in the list.
+
+====
+
+Fit( <List of points>, <Function> )::
+  Calculates a minimum squared error function to the points in the list. The _function_ must depend on one or more
+  sliders, that are taken as start values of parameters to be optimized. The non-linear iteration might not converge,
+  but adjusting the sliders to a better starting point might help.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* Let _a_ be slider with interval from _-5_ to _5_ and increment 1.
+`Fit({(-2, 3), (0, 1), (2, 1), (2, 3)}, a + x^2)` yields _-1 + x^2_.
+
+====
+
+[NOTE]
+
+====
+
+*Note:*
+
+* See also xref:/commands/FitExp_Command.adoc[FitExp], xref:/commands/FitGrowth_Command.adoc[FitGrowth],
+xref:/commands/FitLine_Command.adoc[FitLine], xref:/commands/FitLineX_Command.adoc[FitLineX],
+xref:/commands/FitLog_Command.adoc[FitLog], xref:/commands/FitLogistic_Command.adoc[FitLogistic],
+xref:/commands/FitPoly_Command.adoc[FitPoly], xref:/commands/FitPow_Command.adoc[FitPow] and
+xref:/commands/FitSin_Command.adoc[FitSin]
+* If you work with big/small numbers, you should consider normalizing them for a more accurate result, see
+xref:/commands/Normalize_Command.adoc[Normalize Command].
+
+====

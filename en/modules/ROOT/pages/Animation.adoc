@@ -1,0 +1,102 @@
+= Animation
+
+== [#Automatic_Animation]#Automatic Animation#
+
+GeoGebra allows you to animate not only free numbers and/or angles at the same time, but also dependent points that are
+constrained on an object (segment, line, function, curve, etc.). In order to be automatically animated, free numbers /
+angles need to be shown as sliders in the image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Graphics_View.adoc[Graphics View].
+
+If you want to animate a free number or angle in GeoGebra, as well as a dependent point, you need to select _Animation
+On_ in the xref:/Context_Menu.adoc[Context Menu] of that number, angle or point. In order to stop the animation, you
+need to un-check _Animation On_ in the same context menu.
+
+[NOTE]
+
+====
+
+*Note:* After animating a free number, a free angle or a dependent point, an animation button appears in the lower left
+corner of the image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Graphics View_. It
+allows you to either image:18px-Nav_pause_circle.svg.png[Nav pause circle.svg,width=18,height=18] pause or
+image:18px-Nav_play_circle.svg.png[Nav play circle.svg,width=18,height=18] continue an animation.
+
+====
+
+In the image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Properties_Dialog.adoc[Properties
+Dialog] on tab _Slider_ you can change the behavior of the animation:
+
+On the one hand, you may control the _Speed_ of the animation.
+
+[NOTE]
+
+====
+
+*Note:* A speed of 1 means that the animation takes about 10 seconds to run once through the interval of the slider.
+
+====
+
+On the other hand, you can decide how the animation cycle is repeated:
+
+⇔ _Oscillating_::
+  +
+  The animation cycle alternates between Decreasing and Increasing.
+⇒ _Increasing_::
+  +
+  The slider value is always increasing. After reaching the maximum value of the slider, it jumps back to the minimum
+  value and continues the animation.
+⇐ _Decreasing_::
+  +
+  The slider value is always decreasing. After reaching the minimum value of the slider, it jumps back to the maximum
+  value and continues the animation.
+⇒ _Increasing_ (_Once_)::
+  +
+  The slider value is always increasing. After reaching the maximum value of the slider, it stops at this value and ends
+  the animation.
+
+[NOTE]
+
+====
+
+*Note:* while an automatic animation is activated, GeoGebra remains fully functional. This allows you to make changes to
+your construction while the animation is playing.
+
+====
+
+== [#Manual_Animation]#Manual Animation#
+
+To manually change a number, angle or point position continuously, select the image:20px-Mode_move.svg.png[Mode
+move.svg,width=20,height=20]xref:/tools/Move_Tool.adoc[Move Tool]. Then, click on a free number, angle or a dependent
+point and press either the [.kcode]#+# or [.kcode]#–# key or the arrow keys on you keyboard. Keeping one of these keys
+pressed allows you to produce manual animations.
+
+[EXAMPLE]
+
+====
+
+*Example:* If the point coordinates depend on a number _t_ like in P = (2 t, t), the point will move along a straight
+line when _t_ is changed continuously.
+
+====
+
+[NOTE]
+
+====
+
+*Note:* You can adjust the increment of the slider on tab _Slider_ of the
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Properties Dialog_ of this object.
+
+====
+
+== [#Keyboard_Shortcuts]#Keyboard Shortcuts#
+
+* [.kcode]#Shift# + arrow key gives you a step width of 0.1 units
+* [.kcode]#Ctrl# + arrow key gives you a step width of 10 units
+* [.kcode]#Alt# + arrow key gives you a step width of 100 units
+
+[NOTE]
+
+====
+
+*Note:* A point on a line can also be moved along that line using the [.kcode]#+# or [.kcode]#–# key.
+
+====

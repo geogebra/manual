@@ -1,0 +1,24 @@
+= Comando ImpRapportoAssi
+
+ImpRapportoAssi(Numero X, Numero Y)::
+  Modifica il rapporto tra le distanze fissate sugli assi nella image:16px-Menu_view_graphics.svg.png[Menu view
+  graphics.svg,width=16,height=16] xref:/Vista_Grafici.adoc[vista Grafici] attiva, in modo tale che X unità
+  sull'xref:/Rette_e_assi.adoc[asse _x_] corrispondono allo stesso numero di pixel di Y unità sull'asse _y_, mentre il
+  punto (0,0) mantiene la propria posizione. Se il rapporto è unitario, l'asse corrispondente viene fissato con la
+  distanza tra due valori successivi corrente, mentre l'altro asse viene adattato alla trasformazione indicata.
+  +
+
+[EXAMPLE]
+
+====
+
+*Esempi:*
+
+* `ImpRapportoAssi(1,2)` fissa l'asse _x_ e comprime l'asse _y'._
+* `ImpRapportoAssi(2,1)` fissa l'asse _y_ e comprime l'asse _x_.
+
+====
+
+ImpRapportoAssi(Numero X, Numero Y, Numero Z)::
+  La sintassi è la stessa, ma è applicabile anche nella image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+  algebra 3Dgraphics.svg,width=16,height=16] _vista Grafici 3D_.

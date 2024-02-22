@@ -1,0 +1,52 @@
+= OsculatingCircle Command
+
+OsculatingCircle( <Point>, <Function> )::
+  Yields the osculating circle of the function in the given point.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `OsculatingCircle((0, 0), x^2)` yields _x² + y² - y = 0_.
+
+====
+
+OsculatingCircle( <Point>, <Curve> )::
+  Yields the osculating circle of the curve in the given point.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `OsculatingCircle((1, 0), Curve(cos(t), sin(2t), t, 0, 2π))` yields _x² + y² + 6x = 7_.
+
+====
+
+OsculatingCircle( <Point>, <Object> )::
+  Yields the osculating circle of the object (function, curve, conic) in the given point.
+  +
+
+[EXAMPLE]
+
+====
+
+*Examples:*
+
+* `OsculatingCircle((0, 0), x^2)` yields _x² + y² - y = 0_
+* `OsculatingCircle((1, 0), Curve(cos(t), sin(2t), t, 0, 2π))` yields _x² + y² + 6x = 7_
+* `OsculatingCircle((-1, 0), Conic({1, 1, 1, 2, 2, 3}))` yields _x² + y² + 2x + 1y = -1_
+
+====
+
+[NOTE]
+
+====
+
+*Note:*
+
+* This command is for 2D objects only. For 3D, you can make a custom tool for example
+https://www.geogebra.org/m/tan7dxjt
+
+====

@@ -1,0 +1,247 @@
+= Spreadsheet View
+
+== [#Spreadsheet_View_User_Interface]#Spreadsheet View User Interface#
+
+By default, the image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Spreadsheet
+View_ is opened next to the image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+_xref:/Graphics_View.adoc[Graphics View]_. The xref:/tools/Spreadsheet_Tools.adoc[_Spreadsheet View Toolbar_] is
+displayed at the top of the GeoGebra window, with the
+image:16px-Menu-edit-undo.svg.png[Menu-edit-undo.svg,width=16,height=16]image:16px-Menu-edit-redo.svg.png[Menu-edit-redo.svg,width=16,height=16]
+_Undo / Redo_ buttons in the top right corner.
+
+[width="100%",cols="100%",]
+|===
+a|
+image:314px-Spreadsheet-View.png[Spreadsheet-View.png,width=314,height=220]
+
+Spreadsheet View
+
+|===
+
+The image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Spreadsheet View_ is part of
+the image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+xref:/Perspectives.adoc[_Spreadsheet Perspective_], although you may
+xref:/GeoGebra_5.0_Desktop_vs._Web_and_Tablet_App.adoc[change the layout] of GeoGebra's user interface according to your
+needs.
+
+=== [#Customizing_the_Spreadsheet_View]#Customizing the image:24px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=24,height=24] Spreadsheet View#
+
+The image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Spreadsheet View_ can be
+customized according to your preferences by
+
+* opening the image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+_xref:/Preferences_Dialog.adoc[Preferences Dialog]_ and selecting the option
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Spreadsheet_ (GeoGebra Desktop)
+* opening the image:16px-Stylingbar_icon_spreadsheet.svg.png[Stylingbar icon spreadsheet.svg,width=16,height=12]
+xref:/Style_Bar.adoc[_Spreadsheet View Style Bar_] and selecting
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Preferences_ (GeoGebra Web and Tablet Apps)
+
+In the appearing dialog window you may change the layout by choosing whether to
+
+* Show the _xref:/Input_Bar.adoc[Input Bar]_
+* Show _Gridlines_
+* Show the _Column_ or _Row Header_
+* Show _Vertical_ or _Horizontal Scrollbars_
+
+In addition, you may change the behavior of the image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Spreadsheet View_ by
+
+* allowing _Use of Buttons and Checkboxes_ or _Tooltips_
+* requiring _"=" before Commands_
+* using _Auto-complete_
+
+== [#Creating_Mathematical_Objects]#Creating Mathematical Objects#
+
+In GeoGebra’s image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Spreadsheet View_
+every cell has a specific name that allows you to directly address each cell.
+
+[EXAMPLE]
+
+====
+
+*Example:* The cell in column _A_ and row _1_ is named _A1_.
+
+====
+
+[NOTE]
+
+====
+
+*Note:* These cell names can be used in expressions and _xref:/Commands.adoc[Commands]_ in order to address the content
+of the corresponding cell.
+
+====
+
+=== [#Direct_Input,_Selection_and_Commands]####[#Direct_Input.2C_Selection_and_Commands]##Direct Input, Selection and Commands##
+
+In the _Spreadsheet Cells_ you can enter not only numbers, but all types of xref:/General_Objects.adoc[General Objects]
+and xref:/Geometrical_Objects.adoc[Geometrical Objects] that are supported by GeoGebra (e.g. coordinates of points,
+xref:/Functions.adoc[Functions], xref:/Commands.adoc[Commands]).
+
+To select non adjacent columns or cells in the spreadsheet, use the shortcut [.kcode]#Ctrl# + [.kcode]#Click#.
+
+=== [#Relative_Cell_Names]#Relative Cell Names#
+
+If you copy content from one cell to another, by default all references are changed accordingly to the target position.
+
+[EXAMPLE]
+
+====
+
+*Example:* Let `A1=1`, `A2=2`. In _B1_ put `(A1, A1)`. By copying _B1_ to _B2_ (either via [.kcode]#Ctrl# + [.kcode]#C#,
+[.kcode]#Ctrl# + [.kcode]#V# or by dragging the cell corner) you get _(A2, A2)_ in _B2_.
+
+====
+
+To prevent this behavior, you can insert `$` before the column and/or row of the referenced cell.
+
+[NOTE]
+
+====
+
+*Note:* On Mac OS the Copy & Paste xref:/Keyboard_Shortcuts.adoc[shortcuts] are [.kcode]#Cmd# + [.kcode]#C# and
+[.kcode]#Cmd# + [.kcode]#V#
+
+====
+
+== [#Input_Data_into_the_Spreadsheet_View]#Input Data into the image:24px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=24,height=24] Spreadsheet View#
+
+=== [#Manual_Entry,_Commands,_and_Tracing]####[#Manual_Entry.2C_Commands.2C_and_Tracing]##Manual Entry, Commands, and Tracing##
+
+Besides manually adding entries into the image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Spreadsheet View_ cells, you may use the commands
+xref:/commands/FillColumn_Command.adoc[_FillColumn_], xref:/commands/FillRow_Command.adoc[_FillRow_] or
+xref:/commands/FillCells_Command.adoc[_FillCells_]. You can also enter data by using the feature
+xref:/Tracing.adoc[_Tracing to Spreadsheet_].
+
+=== [#Copy_Data_from_the_Algebra_View]#Copy Data from the image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] Algebra View#
+
+With a simple drag and drop operation it is also possible to copy objects from the
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _xref:/Algebra_View.adoc[Algebra View]_
+to the image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Spreadsheet View_. If you
+drag a list, its elements will be pasted horizontally, starting from the cell in which you release the left mouse button
+or touchscreen. Pressing the [.kcode]#Shift# key while dragging opens a dialog window when the mouse button is released,
+allowing you to choose whether the pasted objects will be xref:/Free,_Dependent_and_Auxiliary_Objects.adoc[Free or
+Dependent], as well as to choose the vertical placement of the copied objects (check option _Transpose_).
+
+=== [#Copy_Data_from_Other_Spreadsheet_Software]#Copy Data from Other Spreadsheet Software#
+
+GeoGebra allows you to import data from other spreadsheet software into the
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Spreadsheet View_.
+
+* Select and copy the data you want to import. For example, you may use the keyboard shortcut [.kcode]#Ctrl# +
+[.kcode]#C# (Mac OS: [.kcode]#Cmd# + [.kcode]#C#) in order to copy the data to your computer’s clipboard.
+* Open a GeoGebra window and show the image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Spreadsheet View_.
+* Click on the spreadsheet cell that should contain the first data value (e.g. cell _A1_)
+* Paste the data from your computer’s clipboard into GeoGebra’s image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Spreadsheet View_. For example, you may select a cell and use the keyboard shortcut
+[.kcode]#Ctrl# + [.kcode]#V# (Mac OS: [.kcode]#Cmd# + [.kcode]#V#) in order to paste the data into the highlighted
+spreadsheet cell.
+
+.
+
+=== [#Import_Data_Files_from_other_Applications]#Import Data Files from other Applications#
+
+You can also import data from other applications, if stored using ._txt_, ._csv_ and ._dat_ formats. Simply right click
+on a free cell of the image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+_Spreadsheet View_, then choose the _Import Data File..._ option.
+
+[NOTE]
+
+====
+
+*Note:* GeoGebra uses the dot [.kcode]#.# as decimal separator, and the comma [.kcode]#,# as field separator. Ensure to
+check if your data file matches these settings before importing.
+
+====
+
+=== [#Spreadsheet_View_Toolbar]#Spreadsheet View Toolbar#
+
+The xref:/tools/Spreadsheet_Tools.adoc[_Spreadsheet View Toolbar_] provides a range of _xref:/Tools.adoc[Tools]_ that
+allow you to create objects in the image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Spreadsheet View_. Every icon in the _xref:/Toolbar.adoc[Toolbar]_ represents a
+xref:/Tools.adoc[_Toolbox_] that contains a selection of related _xref:/Tools.adoc[Tools]_. In order to open a
+_Toolbox_, you need to click on the corresponding default _Tool_ shown in the _Spreadsheet View Toolbar_ (GeoGebra Web
+and Tablet Apps) or on the small arrow in the lower right corner of the _Toolbar_ icon (GeoGebra Desktop).
+
+image:146px-Toolbar-Spreadsheet.png[Spreadsheet Tools,title="Spreadsheet Tools",width=146,height=32]
+
+[NOTE]
+
+====
+
+*Note:* The _Tools_ of the _Spreadsheet View Toolbar_ are organized by the nature of resulting objects or their
+functionality. For example, you will find _Tools_ that analyze data in the image:16px-Mode_onevarstats.svg.png[One
+Variable Analysis Tool,title="One Variable Analysis Tool",width=16,height=16] xref:/tools/Spreadsheet_Tools.adoc[_Data
+Analysis Toolbox_].
+
+====
+
+== [#Display_of_Mathematical_Objects]#Display of Mathematical Objects#
+
+=== [#Display_of_Spreadsheet_Objects_in_other_Views]#Display of Spreadsheet Objects in other Views#
+
+If possible, GeoGebra immediately displays the graphical representation of the object you entered in a _Spreadsheet
+Cell_ in the image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+_xref:/Graphics_View.adoc[Graphics View]_ as well. Thereby, the name of the object matches the name of the _Spreadsheet
+Cell_ used to initially create it (e.g. _A5_, _C1_).
+
+[NOTE]
+
+====
+
+*Note:* By default, _Spreadsheet Objects_ are classified as xref:/Free,_Dependent_and_Auxiliary_Objects.adoc[_Auxiliary
+Objects_] in the image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+_xref:/Algebra_View.adoc[Algebra View]_. You can show or hide these _Auxiliary Objects_ by selecting _Auxiliary Objects_
+from the _xref:/Context_Menu.adoc[Context Menu]_ or by clicking on the
+image:16px-Stylingbar_algebraview_auxiliary_objects.svg.png[Stylingbar algebraview auxiliary
+objects.svg,width=16,height=16] icon in the xref:/Algebra_View.adoc[_Algebra View Style Bar_]
+
+====
+
+=== [#Using_Spreadsheet_Data_in_other_Views]#Using Spreadsheet Data in other _Views_#
+
+You may process the _Spreadsheet Data_ by selecting multiple cells and right-clicking (Mac OS: [.kcode]#Cmd#-clicking)
+on the selection. In the appearing _xref:/Context_Menu.adoc[Context Menu]_, choose the submenu _Create_ and select the
+appropriate option (_List_, _List of points_, _Matrix_, _Table_, _Polyline_ and _Operation table_).
+
+=== [#Operation_Table]#Operation Table#
+
+For a function with two parameters you can create an _Operation Table_ with values of the first parameter written in the
+top row and values of second parameter written in the left column. The function itself must be entered in the top left
+cell.
+
+After entering the function and the parameter values in the appropriate cells, select the rectangular area of the
+desired _Operation Table_ with the mouse. Then, right click (Mac OS: [.kcode]#Cmd#-click) on the selection and choose
+option _Create > Operation Table_ of the appearing _xref:/Context_Menu.adoc[Context Menu]_.
+
+[EXAMPLE]
+
+====
+
+*Example:* Let `A1 = x y`, `A2 = 1`, `A3 = 2`, `A4 = 3`, `B1 = 1`, `C1 = 2` and `D1 = 3`. Select cells _A1:D4_ with the
+mouse. Then, right click (Mac OS: [.kcode]#Cmd#-click) on the selection and choose _Create > Operation Table_ in the
+_xref:/Context_Menu.adoc[Context Menu]_ to create a table containing the results of substitution of the inserted values
+in the given function.
+
+====
+
+=== [#Spreadsheet_View_Style_Bar]#Spreadsheet View Style Bar#
+
+The xref:/Style_Bar.adoc[_Spreadsheed View Style Bar_] provides buttons to
+
+* show / hide the _xref:/Input_Bar.adoc[Input Bar]_ (GeoGebra Desktop)
+* change the text style to image:16px-Stylingbar_text_bold.svg.png[Stylingbar text bold.svg,width=16,height=16] *bold*
+or image:16px-Stylingbar_text_italic.svg.png[Stylingbar text italic.svg,width=16,height=16] _italic_
+* set the text alignment to image:16px-Stylingbar_spreadsheet_align_left.svg.png[Stylingbar spreadsheet align
+left.svg,width=16,height=16] _left_, image:16px-Stylingbar_spreadsheet_align_center.svg.png[Stylingbar spreadsheet align
+center.svg,width=16,height=16] _center_, or image:16px-Stylingbar_spreadsheet_align_right.svg.png[Stylingbar spreadsheet
+align right.svg,width=16,height=16] _right_
+* change the image:16px-Stylingbar_color_white.svg.png[Stylingbar color white.svg,width=16,height=16] background color
+of a cell
+* change the cell borders (GeoGebra Desktop)
+* open the image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _xref:/Properties_Dialog.adoc[Properties
+Dialog]_ (GeoGebra Web and Tablet Apps)
+* display additional image:16px-Stylingbar_dots.svg.png[Stylingbar dots.svg,width=16,height=16]
+xref:/Views.adoc[_Views_] in the GeoGebra window (GeoGebra Web and Tablet Apps)

@@ -1,0 +1,61 @@
+= IndexOf Command
+
+IndexOf( <Object>, <List> )::
+  Returns position of first occurrence of Object in List.
+  +
+
+[EXAMPLE]
+
+====
+
+*Examples:* `IndexOf(5, {1, 3, 5, 2, 5, 4})` returns _3_.
+
+====
+
+[NOTE]
+
+====
+
+*Note:* When the object is not found, result is _undefined_.
+
+====
+
+IndexOf( <Object>, <List>, <Start Index> )::
+  Same as above, but the search starts at given index.
+  +
+
+[EXAMPLE]
+
+====
+
+*Examples:*
+
+* `IndexOf(5, {1, 3, 5, 2, 5, 4}, 3)` returns _3_.
+* `IndexOf(5, {1, 3, 5, 2, 5, 4}, 4)` returns _5_.
+* `IndexOf(5, {1, 3, 5, 2, 5, 4}, 6)` returns _undefined_.
+
+====
+
+IndexOf( <Text>, <Text> )::
+  Specifies the position at which the short text appears for the first time in the whole text.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `IndexOf("Ge", "GeoGebra")` returns _1_.
+
+====
+
+IndexOf( <Text>, <Text>, <Start Index> )::
+  Same as above, but the search starts at given index.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `IndexOf("Ge", "GeoGebra",2)` returns _4_.
+
+====

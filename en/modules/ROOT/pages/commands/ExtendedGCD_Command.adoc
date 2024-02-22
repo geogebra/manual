@@ -1,0 +1,47 @@
+= ExtendedGCD Command
+
+== [#CAS_Syntax]#CAS Syntax#
+
+ExtendedGCD( <Integer>,<Integer> )::
+  Returns a list containing the integer coefficients stem:[s, t] of Bézout's identity stem:[as+bt= GCD(a,b)] and the
+  greatest common divisor of the given integers stem:[a] and stem:[b].
+  +
+  Results are calculated by applying the http://en.wikipedia.org/wiki/Extended_Euclidean_algorithm[Extended Euclidean
+  algorithm].
+
+[EXAMPLE]
+
+====
+
+*Example:* `ExtendedGCD(240,46)` yields \{stem:[-9,47,2]}. (Plugging the result into the Bézout's identity we have:
+stem:[-9 \cdot 240+47 \cdot 46=2]).
+
+====
+
+ExtendedGCD( <Polynomial>, <Polynomial> )::
+  Returns a list containing the polynomial coefficients stem:[S(x), T(x)] of Bézout's identity for polynomials
+  stem:[A(x)S(x) + B(x)T(x) = GCD(A(x), B(x))] and the greatest common divisor of the given polynomialsstem:[A(x)] and
+  stem:[B(x)].
+  +
+  Results are calculated by applying the http://en.wikipedia.org/wiki/Extended_Euclidean_algorithm[Extended Euclidean
+  algorithm].
+
+[EXAMPLE]
+
+====
+
+*Example:* `ExtendedGCD(x^2-1,x+4)` yields \{stem:[1,-x+4,15]}. (Plugging the result into the Bézout's identity for
+polynomials we have: stem:[1 \cdot (x^2-1) + (-x+4) \cdot (x+4) = 15]).
+
+====
+
+[NOTE]
+
+====
+
+*Notes:*
+
+* The GCD of two polynomials is not unique (it's unique up to a scalar multiple).
+* See also xref:/commands/GCD_Command.adoc[GCD Command].
+
+====

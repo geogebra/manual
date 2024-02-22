@@ -1,0 +1,53 @@
+= CSolve Command
+
+== [#CAS_Syntax]#CAS Syntax#
+
+CSolve( <Equation> )::
+  Solves a given equation for the main variable and returns a list of all solutions, allowing for complex solutions.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `CSolve(x^2 = -1)` yields _\{x = ί, x = -ί}_, the complex solutions of _x^2^ = -1_.
+
+====
+
+CSolve( <Equation>, <Variable> )::
+  Solves an equation for a given unknown variable and returns a list of all solutions, allowing for complex solutions.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `CSolve(a^2 = -1, a)` yields _\{a = ί, a = -ί}_, the complex solutions of _a^2^ = -1_.
+
+====
+
+CSolve( <List of Equations>, <List of Variables> )::
+  Solves a set of equations for a given set of unknown variables and returns a list of all solutions, allowing for
+  complex solutions.
+  +
+
+[EXAMPLE]
+
+====
+
+*Example:* `CSolve({y^2 = x - 1, x = 2 * y - 1}, {x, y})` yields _\{\{x = 1 - 2 ί, y = 1 + ί}, \{x = 1 + 2 ί, y = 1 -
+ί}}_, the complex solutions of _y^2^ = x_ and _x = 2 * y - 1_.
+
+====
+
+[NOTE]
+
+====
+
+*Notes:*
+
+* The complex ί is obtained by pressing [.kcode]#ALT # + [.kcode]# i#.
+* See also xref:/commands/CSolutions_Command.adoc[CSolutions Command] and xref:/commands/Solve_Command.adoc[Solve
+Command].
+
+====

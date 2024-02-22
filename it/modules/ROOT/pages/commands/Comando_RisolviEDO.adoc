@@ -1,0 +1,200 @@
+= Comando RisolviEDO
+
+*→ Soluzione formale :*
+
+RisolviEDO(f'(x, y))::
+  Determina, se possibile, la soluzione formale dell'equazione differenziale (EDO) del primo ordine
+  stem:[\frac\{dy}\{dx}(x)=f'(x, y(x))].
+  +
+  +
+
+[EXAMPLE]
+
+====
+
+`RisolviEDO(2x / y)` restituisce _stem:[\sqrt\{2} \sqrt\{-c_\{1}+x^\{2}}]_, con stem:[c_\{1}] costante
+arbitraria.
+
+====
+
+[NOTE]
+
+====
+
+Verrà creato anche l'oggetto ausiliario stem:[c_\{1}] e lo slider corrispondente.
+
+====
+
+RisolviEDO(f'(x, y), Punto di _f_)::
+  Determina, se possibile, la soluzione formale dell'equazione differenziale (EDO) del primo ordine
+  stem:[\frac\{dy}\{dx}(x)=f'(x, y(x))] indicando la soluzione passante per il punto indicato.
+  +
+
+[EXAMPLE]
+
+====
+
+`RisolviEDO(y / x, (1, 2))` restituisce _y = 2x_.
+
+====
+
+*→ Soluzione numerica:*
+
+RisolviEDO(f'(x, y), x iniziale, y iniziale, x finale, Passo)::
+  Risolve numericamente equazioni differenziali ordinarie di primo ordine (EDO) del tipo:
+  stem:[\frac\{dy}\{dx}=f'(x,y)], dati i punti iniziale e finale e il passo per la _x_.
+  +
+
+[EXAMPLE]
+
+====
+
+`RisolviEDO(-x*y, x(A), y(A), 5, 0.1)` risolve l'equazione differenziale stem:[\frac\{dy}\{dx}=-xy], con
+punto iniziale _A_, precedentemente definito.
+
+====
+
+[NOTE]
+
+====
+
+* Utilizzare il comando xref:/commands/Comando_Lunghezza.adoc[Lunghezza](Luogo) per scoprire quanti punti appartengono
+al luogo calcolato, e il comando xref:/commands/Comando_Primo.adoc[Primo](Luogo, Numero) per estrarre i punti in una
+lista, ad esempio `Primo(luogo1, Lunghezza(luogo1))`
+* Per ottenere la soluzione "complementare", indicare un valore negativo in _x finale_ come ad esempio in
+`RisolviEDO(-x*y, x(A), y(A), -5, 0.1)`.
+
+====
+
+RisolviEDO(f(x,y), g(x,y), x iniziale, y iniziale, t finale, Passo)::
+  Risolve una EDO di primo ordine del tipo: stem:[\frac\{dy}\{dx}=\frac\{f(x,y)}\{g(x,y)}], dati il punto iniziale, il
+  valore massimo di un parametro interno _t_ e il passo per _t_. Questa versione del comando è applicabile quando la
+  precedente versione fallisce, ad esempio quando la curva soluzione ha punti a tangente verticale.
+  +
+  +
+
+[EXAMPLE]
+
+====
+
+`RisolviEDO(-x, y, x(A), y(A), 5, 0.1)` risolve l'equazione differenziale stem:[\frac\{dy}\{dx}=-
+\frac\{x}\{y} ] con punto iniziale _A_, precedentemente definito.
+
+====
+
+[NOTE]
+
+====
+
+Per ottenere la soluzione "complementare", indicare un valore negativo in _t finale_, come ad esempio in
+`RisolviEDO(-x*y, x(A), y(A), -5, 0.1)`
+
+====
+
+RisolviEDO(b(x), c(x), f(x), x iniziale, y iniziale, y' iniziale, x finale, Passo)::
+  Risolve EDO del secondo ordine del tipo: stem:[y'' + b(x) y' + c(x) y = f(x)].
+  +
+  +
+
+[EXAMPLE]
+
+====
+
+`RisolviEDO(x^2, 2x, 2x^2 + x, x(A), y(A), 0, 5, 0.1)` risolve l'EDO del secondo ordine indicata utilizzando
+come punto iniziale il punto _A_ precedentemente definito.
+
+====
+
+[NOTE]
+
+====
+
+Questo comando restituisce sempre il risultato come luogo. Gli algoritmi di calcolo sono basati sui metodi
+numerici di Runge-Kutta.
+
+====
+
+[NOTE]
+
+====
+
+Vedere anche il comando xref:/commands/Comando_CampoDirezioni.adoc[CampoDirezioni]
+
+====
+
+== [#Sintassi_CAS]#Sintassi CAS#
+
+RisolviEDO(Equazione)::
+  Determina, se possibile, la soluzione formale di una EDO del primo o secondo ordine. Per indicare la derivata prima e
+  seconda di _y_ utilizzare la simbologia _y'_ e _y''_.
+  +
+
+[EXAMPLE]
+
+====
+
+`RisolviEDO(y' = y / x)` restituisce _y = c~1~ x_.
+
+====
+
+RisolviEDO(Equazione, Punto di f)::
+  Determina, se possibile, la soluzione formale di una EDO del primo o secondo ordine del tipo
+  stem:[\frac\{dy}\{dx}(x)=f'(x, y(x))] passante per il punto indicato (che è un punto o una lista di punti).
+  +
+
+[EXAMPLE]
+
+====
+
+`RisolviEDO(y' = y / x, (1,2))` restituisce _y = 2x_.
+
+====
+
+RisolviEDO(Equazione, Punto/i di f, Punto/i di f')::
+  Determina, se possibile, la soluzione formale di una EDO del primo o secondo ordine passante per il primo punto (o
+  lista di punti) indicato, con _f'_ passante per il secondo punto (o lista di punti) indicato.
+  +
+
+[EXAMPLE]
+
+====
+
+`RisolviEDO((y'' - 3y' + 2 = x, (2, 3), (1, 2))` restituisce stem:[ y = \frac\{-9 x^2 e^3 + 30 x e^3 - 32
+\{(e^3)}^2 + 138 e^3 + 32 e^\{3 x} }\{54 e^3} ].
+
+====
+
+RisolviEDO(Equazione, Variabile dipendente, Variabile indipendente, Punto/i)::
+  Determina, se possibile, la soluzione formale di una EDO di primo o secondo ordine passante per il punto (o i punti)
+  indicato.
+  +
+
+[EXAMPLE]
+
+====
+
+`RisolviEDO(v' = v / w, v,  w, (1, 2))` restituisce _v = 2w_.
+
+====
+
+RisolviEDO(Equazione differenziale, Variabile dipendente, Variabile indipendente, Punto/i, Punto/i di f')::
+  Determina, se possibile, la soluzione formale di una EDO del primo o secondo ordine passante per il primo punto (o
+  lista di punti) indicato, con _f'_ passante per il secondo punto (o lista di punti) indicato.
+  +
+
+[EXAMPLE]
+
+====
+
+`RisolviEDO(v' = v / w, v,  w, (1, 2), (0, 2))` restituisce _v = 2w_.
+
+====
+
+[NOTE]
+
+====
+
+Per compatibilità con l'input nella barra di inserimento, se il primo parametro è un'espressione non contenente
+_y'_ o _y''_ , questo viene interpretato come il secondo membro di una EDO avente al primo membro _y'_ .
+
+====

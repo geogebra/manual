@@ -1,0 +1,34 @@
+= Comando RuotaTesto
+
+RuotaTesto(Testo, Angolo)::
+  Restituisce il testo ruotato dell'angolo indicato. Il risultato è reso in formato xref:/LaTeX.adoc[LaTeX].
+
+[EXAMPLE]
+
+====
+
+`RuotaTesto("a = 5", 45°)`
+
+====
+
+[NOTE]
+
+====
+
+* Il testo da ruotare deve essere racchiuso tra doppie virgolette ` " `.
+* Il testo viene ruotato attorno all'angolo in alto a sinistra (il Corner 4) della casella che lo contiene, e
+posizionato nell'origine del sistema di riferimento.
+
+[EXAMPLE]
+
+====
+
+Per posizionare il testo "GeoGebra", ruotato di 42°, nel punto (6,6) inserire il comando
+`Testo(RuotaTesto("GeoGebra", 42°), (6, 6),true,true)`
+
+====
+
+* L'impostazione predefinita per gli angoli è in radianti, se non specificato diversamente utilizzando il simbolo dei
+gradi °.
+
+====

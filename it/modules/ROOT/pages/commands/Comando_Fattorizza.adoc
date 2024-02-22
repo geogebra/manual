@@ -1,0 +1,61 @@
+= Comando Fattorizza
+
+Fattorizza(Polinomio)::
+  Fattorizza il polinomio indicato in termini aventi radici razionali.
+  +
+
+[EXAMPLE]
+
+====
+
+`Fattorizza(x^2 + x - 6)` restituisce (_x_ - 2) (_x_ + 3).
+
+====
+
+[NOTE]
+
+====
+
+Questo comando necessita del caricamento del CAS (Computer Algebra System), quindi potrebbe causare
+rallentamenti su alcuni computer.
+
+====
+
+Nella image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[vista CAS] sono
+inoltre disponibili le seguenti sintassi:
+
+Fattorizza(Numero)::
+  Scompone il numero indicato in fattori primi
+  +
+
+[EXAMPLE]
+
+====
+
+`Fattorizza(360)` restituise _2³ 3² 5_.
+
+====
+
+Fattorizza(Espressione, Variabile)::
+  Fattorizza l'epressione rispetto alla variabile indicata, in termini a radici razionali.
+  +
+
+[EXAMPLE]
+
+====
+
+*Esempi:*
+
+* `Fattorizza(x^2 - y^2, x)` restituisce (_x_ - _y_) (_x_ + _y_), la fattorizzazione di _x^2^ - y^2^_ rispetto a _x_
+* `Fattorizza(x^2 - y^2, y)` restituisce -(_y_ - _x_) (_y_ + _x_), la fattorizzazione di _x^2^ - y^2^_ rispetto a _y_.
+
+====
+
+[NOTE]
+
+====
+
+FattorizzaI)]. Per fattorizzare in termini a radici nel campo complesso utilizzare i comandi
+xref:/commands/Comando_FattorizzaC.adoc[FattorizzaC] e xref:/commands/Comando_FattorizzaCI.adoc[FattorizzaCI].
+
+====

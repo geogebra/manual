@@ -1,0 +1,42 @@
+= Comando Esegui
+
+Esegui(Lista di testi)::
+  Esegue la lista di comandi inseriti come testo.
+  +
+  I nomi dei comandi da eseguire devono essere sempre inseriti *in Inglese (US)*, anche se la lingua in cui viene
+  eseguito GeoGebra è diversa.
+
+[EXAMPLE]
+
+====
+
+*Esempi:*
+
+* `Esegui({"A=(1,1)","B=(3,3)","C=MidPoint(A,B)"})` genera i punti _A, B_ e il loro punto medio _C_.
+* `Esegui(Join({"f_{1}=1","f_{2}=1"}, Sequence("f_{"+(i+2)+"}=f_{"+(i+1)+"}+f_{"+i+"}",i,1,10)))` genera i primi 10
+elementi della http://en.wikipedia.org/wiki/it:_Successione_di_Fibonacci[successione di Fibonacci].
+
+====
+
+Esegui(Lista di testi, Parametro,...., Parametro)::
+  Sostituisce il primo parametro indicato a %1, il secondo a %2 e così via, in ciascun testo della lista. Possono essere
+  specificati fino a 9 parametri. Dopo le sostituzioni, vengono eseguiti gli script risultanti.
+  +
+  I nomi dei comandi da eseguire devono essere sempre inseriti *in Inglese (US)*, anche se la lingua in cui viene
+  eseguito GeoGebra è diversa.
+
+[EXAMPLE]
+
+====
+
+`Esegui({"Segment(%1,%2)","Midpoint(%1,%2)"}, A, B)` genera il segmento _AB_ e il suo punto medio.
+
+====
+
+[NOTE]
+
+====
+
+Per inserire le virgolette (`"`), utilizzare `UnicodeInLettera(34)`
+
+====

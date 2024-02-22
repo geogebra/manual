@@ -1,0 +1,45 @@
+= Comando Ordina
+
+Ordina(Lista)::
+  Ordina una lista di numeri, oggetti testo o punti.
+  +
+  +
+
+[EXAMPLE]
+
+====
+
+*Esempi:*
+
+* `Ordina({3, 2, 1})` genera la lista _\{1, 2, 3}_.
+* `Ordina({"pere", "mele", "fichi"})` genera una lista con gli elementi in ordine alfabetico.
+* `Ordina({(3, 2), (2, 5), (4, 1)})` genera _\{(2, 5), (3, 2), (4, 1)}_.
+
+====
+
+[NOTE]
+
+====
+
+Le liste di punti sono ordinate rispetto all'ascissa.
+
+====
+
+Ordina(Valori, Chiavi)::
+  ordina la lista di _Valori_ secondo la lista di _Chiavi_ corrispondenti.
+  +
+
+[EXAMPLE]
+
+====
+
+*Esempi:*
+
+* Per ordinare una lista di polinomi: `lista1 = {x^3, x^2, x^6}` secondi il grado, creare la lista dei gradi
+`lista2 = Compatta(Grado(a), a, lista1)`, quindi utilizzare il comando ` Ordina(lista1, lista2)` per ottenere la
+richiesta _lista3 = \{x^2, x^3, x^6}_.
+* Per tracciare il poligono avente per vertici le radici complesse di stem:[x^\{10}-1], ordinate secondo i rispettivi
+argomenti, creare la ` lista1 = {RadiciComplesse(x^10-1)}`, quindi digitare il comando
+`Poligono(Ordina(lista1, arg(lista1))) `: si avrà in _vista Algebra_ _poli1 = 2.94_
+
+====
