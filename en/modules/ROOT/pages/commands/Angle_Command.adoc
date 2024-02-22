@@ -9,7 +9,7 @@ xref:/commands/Axes_Command.adoc[Axes]).
 
 ====
 
-*Example:* `Angle(x²/4+y²/9=1)` yields _90°_ or _1.57_ if the default angle unit is _radians_.
+`Angle(x²/4+y²/9=1)` yields _90°_ or _1.57_ if the default angle unit is _radians_.
 
 ====
 
@@ -17,7 +17,7 @@ xref:/commands/Axes_Command.adoc[Axes]).
 
 ====
 
-*Note:* It is not possible to change the Angle Unit to Radian in GeoGebra 5.0 Web and Tablet App Version.
+It is not possible to change the Angle Unit to Radian in GeoGebra 5.0 Web and Tablet App Version.
 
 ====
 
@@ -27,7 +27,7 @@ xref:/commands/Axes_Command.adoc[Axes]).
 
 ====
 
-*Example:* `Angle(Vector((1, 1)))` yields _45°_ or the corresponding value in _radians_.
+`Angle(Vector((1, 1)))` yields _45°_ or the corresponding value in _radians_.
 
 ====
 
@@ -37,7 +37,7 @@ xref:/commands/Axes_Command.adoc[Axes]).
 
 ====
 
-*Example:* `Angle((1, 1))` yields _45°_ or the corresponding value in _radians_.
+`Angle((1, 1))` yields _45°_ or the corresponding value in _radians_.
 
 ====
 
@@ -47,7 +47,7 @@ xref:/commands/Axes_Command.adoc[Axes]).
 
 ====
 
-*Example:* `Angle(20)` yields _65.92°_ when the default unit for angles is _degrees_.
+`Angle(20)` yields _65.92°_ when the default unit for angles is _degrees_.
 
 ====
 
@@ -57,8 +57,8 @@ xref:/commands/Axes_Command.adoc[Axes]).
 
 ====
 
-*Example:* `Angle(Polygon((4, 1), (2, 4), (1, 1)))` yields _56.31°_, _52.13°_ and _71.57°_ or the corresponding values
-in _radians_.
+`Angle(Polygon((4, 1), (2, 4), (1, 1)))` yields _56.31°_, _52.13°_ and _71.57°_ or the corresponding values in
+_radians_.
 
 ====
 
@@ -66,8 +66,8 @@ in _radians_.
 
 ====
 
-*Note:* If the polygon was created in counter clockwise orientation, you get the interior angles. If the polygon was
-created in clockwise orientation, you get the exterior angles.
+If the polygon was created in counter clockwise orientation, you get the interior angles. If the polygon was created in
+clockwise orientation, you get the exterior angles.
 
 ====
 
@@ -78,8 +78,6 @@ Angle( <Vector>, <Vector> )::
 [EXAMPLE]
 
 ====
-
-*Example:*
 
 `Angle(Vector((1, 1)), Vector((2, 5)))` yields _23.2°_ or the corresponding value in _radians_.
 
@@ -93,8 +91,6 @@ Angle( <Line>, <Line> )::
 [EXAMPLE]
 
 ====
-
-*Example:*
 
 * `Angle(y = x + 2, y = 2x + 3)` yields _18.43°_ or the corresponding value in _radians_..
 * `Angle(Line((-2, 0, 0), (0, 0, 2)), Line((2, 0, 0), (0, 0, 2)))` yields _90°_ or the corresponding value in _radians_.
@@ -115,8 +111,6 @@ Angle( <Line>, <Plane> )::
 
 ====
 
-*Example:*
-
 * `Angle(Line((1, 2, 3),(-2, -2, 0)), z = 0)` yields _30.96°_ or the corresponding value in _radians_.
 
 ====
@@ -128,8 +122,6 @@ Angle( <Plane>, <Plane> )::
 [EXAMPLE]
 
 ====
-
-*Example:*
 
 * `Angle(2x - y + z = 0, z = 0)` yields _114.09°_ or the corresponding value in _radians_.
 
@@ -143,8 +135,6 @@ Angle( <Point>, <Apex>, <Point> )::
 
 ====
 
-*Example:*
-
 `Angle((1, 1), (1, 4), (4, 2))` yields _56.31°_ or the corresponding value in _radians_.
 
 ====
@@ -157,8 +147,6 @@ Angle( <Point>, <Apex>, <Angle> )::
 
 ====
 
-*Example:*
-
 :*`Angle((0, 0), (3, 3), 30°)` yields _30°_ and the point _(1.9, -1.1)_.
 
 ====
@@ -167,7 +155,7 @@ Angle( <Point>, <Apex>, <Angle> )::
 
 ====
 
-*Note:* The point _Rotate( <Point>, <Angle>, <Apex> )_ is created as well.
+The point _Rotate( <Point>, <Angle>, <Apex> )_ is created as well.
 
 ====
 
@@ -181,8 +169,6 @@ Angle( <Point>, <Point>, <Point>, <Direction> )::
 
 ====
 
-*Example:*
-
 `Angle((1, -1, 0),(0, 0, 0),(-1, -1, 0), zAxis)` yields _270°_ and `Angle((-1, -1, 0),(0, 0, 0),(1, -1, 0), zAxis)`
 yields _90°_ or the corresponding values in _radians_.
 
@@ -192,8 +178,8 @@ yields _90°_ or the corresponding values in _radians_.
 
 ====
 
-*Note:* Using a _Direction_ allows to bypass the standard display of angles in 3__D__ which can be set as just [0,180°]
-or [180°,360°], so that given three points _A_, _B_, _C_ in 3__D__ the commands `Angle(A, B, C)` and `Angle(C, B, A)`
+Using a _Direction_ allows to bypass the standard display of angles in 3__D__ which can be set as just [0,180°] or
+[180°,360°], so that given three points _A_, _B_, _C_ in 3__D__ the commands `Angle(A, B, C)` and `Angle(C, B, A)`
 return their real measure instead of the one restricted to the set intervals.
 
 ====
@@ -202,7 +188,7 @@ return their real measure instead of the one restricted to the set intervals.
 
 ====
 
-*Note:* See also image:20px-Mode_angle.svg.png[Mode angle.svg,width=20,height=20] xref:/tools/Angle_Tool.adoc[Angle] and
+See also image:20px-Mode_angle.svg.png[Mode angle.svg,width=20,height=20] xref:/tools/Angle_Tool.adoc[Angle] and
 image:20px-Mode_anglefixed.svg.png[Mode anglefixed.svg,width=20,height=20]
 xref:/tools/Angle_with_Given_Size_Tool.adoc[Angle with Given Size] tools.
 

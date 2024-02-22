@@ -10,7 +10,7 @@ of the object you want to assign a script to.
 
 ====
 
-*Note:* The _Properties_ panel needs to be closed for scripts to work.
+The _Properties_ panel needs to be closed for scripts to work.
 
 ====
 
@@ -49,8 +49,6 @@ After triggering the script, every command is executed, in the same order they a
 
 ====
 
-*Example:*
-
 * _a_ is an integer-valued xref:/tools/Slider_Tool.adoc[slider] ranging from 1 to 3 (therefore Increment equals 1)
 * type in: `list1 = {"red", "green", "blue"}`
 * in properties of _a_, set "On Update" script to `SetColor(a, Element(list1, a))`
@@ -65,7 +63,7 @@ value of _a_ is used to get one color from the list and change the color of the 
 
 ====
 
-*Note:* You can use `#` to start a comment
+You can use `#` to start a comment
 
 ====
 
@@ -91,8 +89,6 @@ of these methods see /Reference:JavaScript.adoc[Reference:JavaScript].
 
 ====
 
-*Example:*
-
 ....
 for(var i =0;i<10;i++) 
    ggbApplet.evalCommand("A_"+i+"=(random()*10,random()*10)");
@@ -106,8 +102,7 @@ This script creates 10 points _A~0~_ to _A~9~_ at random coordinates.
 
 ====
 
-*Note:* Scripting with JavaScript is very versatile, but many tasks can also be achieved using the simpler
-GeoGebraScript.
+Scripting with JavaScript is very versatile, but many tasks can also be achieved using the simpler GeoGebraScript.
 
 ====
 
@@ -122,8 +117,6 @@ _listeners_, as shown below.
 [EXAMPLE]
 
 ====
-
-*Example:*
 
 ....
 function onAdd(name){
@@ -149,7 +142,7 @@ You can also use _listeners_ for actions like rename, delete and clear construct
 
 ====
 
-*Note:* Using any ggbApplet methods in _Global JavaScript_ outside of ggbOnInit will not work as intended since they
-will be called before the construction is loaded.
+Using any ggbApplet methods in _Global JavaScript_ outside of ggbOnInit will not work as intended since they will be
+called before the construction is loaded.
 
 ====

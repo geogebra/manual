@@ -25,8 +25,8 @@ If( <Condition>, <Then>, <Else> )::
 
 ====
 
-*Example:* Let _n_ be a number. `If(n==3, x + y = 4, x - y = 4)` yields line _x_ + _y_ = 4 when _n_ = 3, and line _x_ -
-_y_ = 4 for all _n_ not equal to 3.
+Let _n_ be a number. `If(n==3, x + y = 4, x - y = 4)` yields line _x_ + _y_ = 4 when _n_ = 3, and line _x_ - _y_ = 4 for
+all _n_ not equal to 3.
 
 ====
 
@@ -39,8 +39,8 @@ If( <Condition 1>, <Then 1>, <Condition 2>, <Then 2>, ... , <Else (optional)> ):
 
 ====
 
-*Example:* `If(a ≟ 1, "Matthew", a ≟ 2,"Larry", a ≟ 3, "Vivian", "Alex")` When __a__=1 this returns the text "Matthew",
-for __a__=2' it returns "Larry", for __a__=3 "Vivian" and for all other values of _a_ it yields "Alex".
+`If(a ≟ 1, "Matthew", a ≟ 2,"Larry", a ≟ 3, "Vivian", "Alex")` When __a__=1 this returns the text "Matthew", for
+__a__=2' it returns "Larry", for __a__=3 "Vivian" and for all other values of _a_ it yields "Alex".
 
 ====
 
@@ -48,7 +48,7 @@ for __a__=2' it returns "Larry", for __a__=3 "Vivian" and for all other values o
 
 ====
 
-*Note:* This syntax isn't supported in the CAS View
+This syntax isn't supported in the CAS View
 
 ====
 
@@ -72,7 +72,7 @@ otherwise).
 
 ====
 
-*Note:* A shorter syntax for this is `f(x) = sin(x), 0 <= x <= 3`
+A shorter syntax for this is `f(x) = sin(x), 0 <= x <= 3`
 
 ====
 
@@ -101,9 +101,9 @@ at the critical points.
 
 ====
 
-*Example:* Let _n_ be a number, and _A_ a point. The command
-`If(Mod(n, 7) == 0, SetCoords(A, n, 0), SetCoords(A, n, 1))` modifies the coordinates of point _A_ according to the
-given condition. In this case it would be easier to use ` SetCoords(A, n, If(Mod(n, 7) == 0,0,1))`.
+Let _n_ be a number, and _A_ a point. The command `If(Mod(n, 7) == 0, SetCoords(A, n, 0), SetCoords(A, n, 1))` modifies
+the coordinates of point _A_ according to the given condition. In this case it would be easier to use
+` SetCoords(A, n, If(Mod(n, 7) == 0,0,1))`.
 
 ====
 
@@ -111,8 +111,7 @@ given condition. In this case it would be easier to use ` SetCoords(A, n, If(Mod
 
 ====
 
-*Note:* Arguments of *If* must be Objects or xref:/commands/Scripting_Commands.adoc[Scripting Commands], not
-assignments. Syntax `b = If(a > 1, 2, 3)` is correct, but _b = 2_ or _b = 3_ would not be accepted as parameters of
-*If*.
+Arguments of *If* must be Objects or xref:/commands/Scripting_Commands.adoc[Scripting Commands], not assignments. Syntax
+`b = If(a > 1, 2, 3)` is correct, but _b = 2_ or _b = 3_ would not be accepted as parameters of *If*.
 
 ====

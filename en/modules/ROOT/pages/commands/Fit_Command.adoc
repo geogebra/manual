@@ -8,8 +8,6 @@ Fit( <List of Points>, <List of Functions> )::
 
 ====
 
-*Example:*
-
 * `Fit({(-2, 3), (0, 1), (2, 1), (2, 3)}, {x^2, x})` yields _0.625 x^2 - 0.25x_.
 * Let _L = \{A, B, C, ...}_, _f(x) = 1_, _g(x) = x_, _h(x) = e^x_, _F = \{f, g, h}_. `Fit(L, F)` calculates a function
 of the form _a + b x + c e^x_ that fits the points in the list.
@@ -26,16 +24,14 @@ Fit( <List of points>, <Function> )::
 
 ====
 
-*Example:* Let _a_ be slider with interval from _-5_ to _5_ and increment 1.
-`Fit({(-2, 3), (0, 1), (2, 1), (2, 3)}, a + x^2)` yields _-1 + x^2_.
+Let _a_ be slider with interval from _-5_ to _5_ and increment 1. `Fit({(-2, 3), (0, 1), (2, 1), (2, 3)}, a + x^2)`
+yields _-1 + x^2_.
 
 ====
 
 [NOTE]
 
 ====
-
-*Note:*
 
 * See also xref:/commands/FitExp_Command.adoc[FitExp], xref:/commands/FitGrowth_Command.adoc[FitGrowth],
 xref:/commands/FitLine_Command.adoc[FitLine], xref:/commands/FitLineX_Command.adoc[FitLineX],

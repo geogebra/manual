@@ -8,7 +8,7 @@ Max( <List> )::
 
 ====
 
-*Example:* `Max({-2, 12, -23, 17, 15})` yields _17_.
+`Max({-2, 12, -23, 17, 15})` yields _17_.
 
 ====
 
@@ -20,7 +20,7 @@ Returns the upper bound of the interval.
 
 ====
 
-*Example:* `Max(2 < x < 3)` yields _3_.
+`Max(2 < x < 3)` yields _3_.
 
 ====
 
@@ -28,8 +28,8 @@ Returns the upper bound of the interval.
 
 ====
 
-*Note:* If the input consists of non-numeric objects, then this command considers the numbers associated with those
-objects. If you have a list of segments for example, the command _Max( <List> )_ will yield the maximum segment length.
+If the input consists of non-numeric objects, then this command considers the numbers associated with those objects. If
+you have a list of segments for example, the command _Max( <List> )_ will yield the maximum segment length.
 
 ====
 
@@ -41,7 +41,7 @@ Returns the maximum of the two given numbers.
 
 ====
 
-*Example:* `Max(12, 15)` yields _15_.
+`Max(12, 15)` yields _15_.
 
 ====
 
@@ -49,7 +49,7 @@ Returns the maximum of the two given numbers.
 
 ====
 
-*Note:* Open and closed intervals are treated the same.
+Open and closed intervals are treated the same.
 
 ====
 
@@ -63,7 +63,7 @@ Max( <Function>, <Start x-Value>, <End x-Value> )::
 
 ====
 
-*Example:* `Max(exp(x)x^2,-3,-1)` creates the point (-2, 0.54134).
+`Max(exp(x)x^2,-3,-1)` creates the point (-2, 0.54134).
 
 ====
 
@@ -71,7 +71,7 @@ Max( <Function>, <Start x-Value>, <End x-Value> )::
 
 ====
 
-*Note:* For polynomials you should use the xref:/commands/Extremum_Command.adoc[Extremum Command].
+For polynomials you should use the xref:/commands/Extremum_Command.adoc[Extremum Command].
 
 ====
 
@@ -83,16 +83,13 @@ Max(<List of Data>, <List of Frequencies> )::
 
 ====
 
-*Example:* `Max({1, 2, 3, 4, 5}, {5, 3, 4, 2, 0})` yields 4, the highest number of the list whose frequency is greater
-than 0.
+`Max({1, 2, 3, 4, 5}, {5, 3, 4, 2, 0})` yields 4, the highest number of the list whose frequency is greater than 0.
 
 ====
 
 [NOTE]
 
 ====
-
-*Note:*
 
 * If you want the maximum of two functions `f(x)` and `g(x)` then you can define `(f(x) + g(x) + abs(f(x) - g(x)))/2`
 * See also xref:/commands/Extremum_Command.adoc[Extremum Command], xref:/commands/Min_Command.adoc[Min Command] and
@@ -109,8 +106,6 @@ Max( <Function>, <Start x-Value>, <End x-Value> )::
 [EXAMPLE]
 
 ====
-
-*Example:*
 
 * `Max(x^2,-1,2)` yields the point _(2,4)_
 * `Max(-x^2,-1,2)` yields the point _(0,0)_

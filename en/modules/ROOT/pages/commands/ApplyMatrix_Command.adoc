@@ -9,9 +9,9 @@ ApplyMatrix( <xref:/Matrices.adoc[Matrix]>, <xref:/Geometric_Objects.adoc[Object
 
 ====
 
-*Example:* Let `M={{cos(π/2),-sin(π/2)}, {sin(π/2), cos(π/2)}}` be the transformation matrix and `u = (2,1)` a given
-vector (object). `ApplyMatrix(M,u)` yields the vector _u'=(-1,2)_, i.e. the result of a mathematically positive rotation
-by 90° of vector _u_.
+Let `M={{cos(π/2),-sin(π/2)}, {sin(π/2), cos(π/2)}}` be the transformation matrix and `u = (2,1)` a given vector
+(object). `ApplyMatrix(M,u)` yields the vector _u'=(-1,2)_, i.e. the result of a mathematically positive rotation by 90°
+of vector _u_.
 
 ====
 
@@ -22,7 +22,7 @@ point _(x, y, z)_ to _(x/z, y/z)_.
 
 ====
 
-*Example:* Let `M={{1,1,0},{0,1,1},{1,0,1}}` be a matrix and `u=(2,1)` a given vector. `ApplyMatrix(M,u)` yields vector
+Let `M={{1,1,0},{0,1,1},{1,0,1}}` be a matrix and `u=(2,1)` a given vector. `ApplyMatrix(M,u)` yields vector
 _u'=(1,0.67)_. In effect stem:[\begin\{pmatrix}1&1&0\\ 0&1&1\\1&0&1 \end\{pmatrix}] stem:[\begin\{pmatrix}2\\ 1\\1
 \end\{pmatrix}] = stem:[\begin\{pmatrix}3\\ 2\\3 \end\{pmatrix}], and (3/3 = 1, 2/3 ≈ 0.67) (rounding to 2 decimal
 places)
@@ -38,7 +38,7 @@ given _M_ = stem:[\begin\{pmatrix}a&b\\ c&d \end\{pmatrix}] then _N_ = stem:[\be
 
 ====
 
-*Note:* This command also works with quadrics and xref:/Images.adoc[images]: it will return "undefined" when the
-determinant of the transformation matrix is 0.
+This command also works with quadrics and xref:/Images.adoc[images]: it will return "undefined" when the determinant of
+the transformation matrix is 0.
 
 ====

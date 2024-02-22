@@ -8,7 +8,7 @@ Integral( <Function> )::
 
 ====
 
-*Example:* `Integral(x^3)` yields stem:[x^4 \cdot 0.25].
+`Integral(x^3)` yields stem:[x^4 \cdot 0.25].
 
 ====
 
@@ -20,7 +20,7 @@ Integral( <Function>, <Variable> )::
 
 ====
 
-*Example:* `Integral(x³+3x y, x)` gives _stem:[\frac\{1}\{4}x^4] + stem:[\frac\{3}\{2}] x² y_ .
+`Integral(x³+3x y, x)` gives _stem:[\frac\{1}\{4}x^4] + stem:[\frac\{3}\{2}] x² y_ .
 
 ====
 
@@ -36,7 +36,7 @@ Integral( <Function>, <Start x-Value>, <End x-Value>, <Boolean Evaluate> )::
 
 ====
 
-*Note:* This command also shades the area between the function graph of _f_ and the _x_-axis.
+This command also shades the area between the function graph of _f_ and the _x_-axis.
 
 ====
 
@@ -49,7 +49,7 @@ variables are allowed as input as well.
 
 ====
 
-*Example:* `Integral(cos(a t), t)` yields stem:[\frac\{sin(a t)}\{a} + c_1].
+`Integral(cos(a t), t)` yields stem:[\frac\{sin(a t)}\{a} + c_1].
 
 ====
 
@@ -64,15 +64,13 @@ Integral( <Function>, <Variable>, <Start x-Value>, <End x-Value> )::
 
 ====
 
-*Example:* `Integral(cos(t), t, a, b)` yields stem:[- sin(a) + sin(b)].
+`Integral(cos(t), t, a, b)` yields stem:[- sin(a) + sin(b)].
 
 ====
 
 [NOTE]
 
 ====
-
-*Note:*
 
 * The answer isn't guaranteed to be continuous, eg `Integral(floor(x))`, that is the integral of the function ⌊x⌋ - in
 that case you can define your own function to use eg `F(x)=(floor(x)² - floor(x))/2 + x floor(x) - floor(x)²`, i.e. the

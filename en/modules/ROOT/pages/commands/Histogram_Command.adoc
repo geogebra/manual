@@ -8,8 +8,8 @@ Histogram( <List of Class Boundaries>, <List of Heights> )::
 
 ====
 
-*Example:* `Histogram({0, 1, 2, 3, 4, 5}, {2, 6, 8, 3, 1})` creates a histogram with 5 bars of the given heights. The
-first bar is positioned at the interval [_0, 1_], the second bar is positioned at the interval [_1, 2_], and so on.
+`Histogram({0, 1, 2, 3, 4, 5}, {2, 6, 8, 3, 1})` creates a histogram with 5 bars of the given heights. The first bar is
+positioned at the interval [_0, 1_], the second bar is positioned at the interval [_1, 2_], and so on.
 
 ====
 
@@ -27,8 +27,7 @@ data values.
 
 ====
 
-*Note:* All elements of Raw Data must be within the interval of the class boundaries, otherwise “undefined” will be
-returned.
+All elements of Raw Data must be within the interval of the class boundaries, otherwise “undefined” will be returned.
 
 ====
 
@@ -36,7 +35,7 @@ returned.
 
 ====
 
-*Note:* By convention this uses the a ≤ x < b rule for each class except for the last class which is a ≤ x ≤ b
+By convention this uses the a ≤ x < b rule for each class except for the last class which is a ≤ x ≤ b
 
 ====
 
@@ -44,7 +43,7 @@ returned.
 
 ====
 
-*Example:* (_Default Histogram_)
+(_Default Histogram_)
 
 `Histogram({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true)` creates a histogram with 3 bars, with the heights
 0.5 (first bar), 0.2 (second bar), and 0.1 (third bar).
@@ -57,7 +56,7 @@ This histogram has total area = 0.5*10 + 0.2*10 + 0.1*10 = 8.
 
 ====
 
-*Example:* (_Count Histogram_)
+(_Count Histogram_)
 
 `Histogram({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, false)` creates a histogram with 3 bars, with the heights
 5 (first bar), 2 (second bar), and 1 (third bar). This histogram does not use density scaling and gives bar heights that
@@ -69,7 +68,7 @@ equal the count of values in each class.
 
 ====
 
-*Example:* (_Relative Frequency Histogram_)
+(_Relative Frequency Histogram_)
 
 `Histogram({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 10/ 8)` creates a histogram with 3 bars, with the
 heights 0.625 (first bar), 0.25 (second bar), and 0.125 (third bar). This histogram uses density scaling to give bar
@@ -84,7 +83,7 @@ relative histogram.
 
 ====
 
-*Example:* (_Normalized Histogram_)
+(_Normalized Histogram_)
 
 `Histogram({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 1/8)` creates a histogram with 3 bars, with the
 heights .0625 (first bar), .025 (second bar), and .0125 (third bar).
@@ -105,7 +104,7 @@ Factor> (optional) )::
 
 ====
 
-*Example:* :`Histogram(true, {10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true)` creates a histogram with 3 bars,
-with the heights 0.5 (first bar), 0.7 (second bar), and 0.8 (third bar).
+ :`Histogram(true, {10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true)` creates a histogram with 3 bars, with the
+heights 0.5 (first bar), 0.7 (second bar), and 0.8 (third bar).
 
 ====

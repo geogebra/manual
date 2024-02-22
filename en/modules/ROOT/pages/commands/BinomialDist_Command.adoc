@@ -26,8 +26,8 @@ BinomialDist( <Number of Trials>, <Probability of Success>, <Variable Value>, <B
 
 ====
 
-*Note:* A simplified syntax is available to calculate P(_u_ ≤ X ≤ _v_): e.g. `BinomialDist(10, 0.2, 1..3)` yields
-_0.77175_, that is the same as BinomialDist(10, 0.2, \{1, 2, 3}). This syntax also works in the CAS View
+A simplified syntax is available to calculate P(_u_ ≤ X ≤ _v_): e.g. `BinomialDist(10, 0.2, 1..3)` yields _0.77175_,
+that is the same as BinomialDist(10, 0.2, \{1, 2, 3}). This syntax also works in the CAS View
 
 ====
 
@@ -35,7 +35,7 @@ _0.77175_, that is the same as BinomialDist(10, 0.2, \{1, 2, 3}). This syntax al
 
 ====
 
-*Note:* *BinomialDist( <Number of Trials>, <Probability of Success>,<List of values>)* is also available.
+*BinomialDist( <Number of Trials>, <Probability of Success>,<List of values>)* is also available.
 
 ====
 
@@ -55,8 +55,6 @@ BinomialDist( <Number of Trials>, <Probability of Success>, <Variable Value>, <B
 
 ====
 
-*Example:*
-
 You can plot a graph with eg `f(x):=BinomialDist(100,x,36,true)-BinomialDist(100,x,23,true)`
 
 ====
@@ -64,8 +62,6 @@ You can plot a graph with eg `f(x):=BinomialDist(100,x,36,true)-BinomialDist(100
 [EXAMPLE]
 
 ====
-
-*Example:*
 
 Assume transfering three packets of data over a faulty line. The chance an arbitrary packet transfered over this line
 becomes corrupted is stem:[\frac\{1}\{10}], hence the propability of transfering an arbitrary packet successfully is

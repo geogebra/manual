@@ -4,9 +4,9 @@
 
 ====
 
-*Note:* Starting from version 823 this command behaves as xref:/commands/Solve_Command.adoc[Solve] command, except for
-the format of the result: command _Solutions_ returns a list of values, while command _Solve_ returns a list of
-equations in the form _variable name = value_.
+Starting from version 823 this command behaves as xref:/commands/Solve_Command.adoc[Solve] command, except for the
+format of the result: command _Solutions_ returns a list of values, while command _Solve_ returns a list of equations in
+the form _variable name = value_.
 
 ====
 
@@ -20,7 +20,7 @@ Solutions( <Equation> )::
 
 ====
 
-*Example:* `Solutions(x^2 = 4x)` yields _\{0, 4}_, the solutions of _x^2^ = 4x_.
+`Solutions(x^2 = 4x)` yields _\{0, 4}_, the solutions of _x^2^ = 4x_.
 
 ====
 
@@ -32,7 +32,7 @@ Solutions( <Equation>, <Variable> )::
 
 ====
 
-*Example:* `Solutions(x * a^2 = 4a, a)` yields \{stem:[\frac\{4}\{x},0]}, the solutions of _xa^2^ = 4a_.
+`Solutions(x * a^2 = 4a, a)` yields \{stem:[\frac\{4}\{x},0]}, the solutions of _xa^2^ = 4a_.
 
 ====
 
@@ -56,8 +56,6 @@ stem:[\begin\{pmatrix}-3&6\\0&3\end\{pmatrix}].
 [NOTE]
 
 ====
-
-*Note:*
 
 * Sometimes you need to do some manipulation to allow the automatic solver to work, for example
 ` Solutions(TrigExpand(sin(5/4 π + x) - cos(x - 3/4 π) = sqrt(6) * cos(x) - sqrt(2))) `

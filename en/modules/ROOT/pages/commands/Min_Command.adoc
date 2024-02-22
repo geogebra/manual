@@ -8,7 +8,7 @@ Min( <List> )::
 
 ====
 
-*Example:* `Min({-2, 12, -23, 17, 15})` yields _-23_.
+`Min({-2, 12, -23, 17, 15})` yields _-23_.
 
 ====
 
@@ -20,7 +20,7 @@ Returns the lower bound of the interval.
 
 ====
 
-*Example:* `Min(2 < x < 3)` yields _2_ .
+`Min(2 < x < 3)` yields _2_ .
 
 ====
 
@@ -28,8 +28,8 @@ Returns the lower bound of the interval.
 
 ====
 
-*Note:* If the input consists of non-numeric objects, then this command considers the numbers associated with those
-objects. If you have a list of segments for example, the command Min( <List> ) will yield the minimum segment length.
+If the input consists of non-numeric objects, then this command considers the numbers associated with those objects. If
+you have a list of segments for example, the command Min( <List> ) will yield the minimum segment length.
 
 ====
 
@@ -41,7 +41,7 @@ Returns the minimum of the two given numbers.
 
 ====
 
-*Example:* `Min(12, 15)` yields _12_.
+`Min(12, 15)` yields _12_.
 
 ====
 
@@ -49,7 +49,7 @@ Returns the minimum of the two given numbers.
 
 ====
 
-*Note:* Open and closed intervals are not distinguished.
+Open and closed intervals are not distinguished.
 
 ====
 
@@ -63,7 +63,7 @@ Min( <Function>, <Start x-Value>, <End x-Value> )::
 
 ====
 
-*Example:* `Min(exp(x) x^3,-4,-2)` creates the point (-3, -1.34425) .
+`Min(exp(x) x^3,-4,-2)` creates the point (-3, -1.34425) .
 
 ====
 
@@ -71,7 +71,7 @@ Min( <Function>, <Start x-Value>, <End x-Value> )::
 
 ====
 
-*Note:* For polynomials you should use the xref:/commands/Extremum_Command.adoc[Extremum Command].
+For polynomials you should use the xref:/commands/Extremum_Command.adoc[Extremum Command].
 
 ====
 
@@ -83,16 +83,13 @@ Min( <List of Data>, <List of Frequencies> )::
 
 ====
 
-*Example:* `Min({1, 2, 3, 4, 5}, {0, 3, 4, 2, 3})` yields 2, the lowest number of the first list whose frequency is
-greater than 0.
+`Min({1, 2, 3, 4, 5}, {0, 3, 4, 2, 3})` yields 2, the lowest number of the first list whose frequency is greater than 0.
 
 ====
 
 [NOTE]
 
 ====
-
-*Note:*
 
 * If you want the minimum of two functions `f(x)` and `g(x)` then you can define `(f(x) + g(x) - abs(f(x) - g(x)))/2`
 * See also xref:/commands/Max_Command.adoc[Max Command], xref:/commands/Extremum_Command.adoc[Extremum Command] and
@@ -109,8 +106,6 @@ Min( <Function>, <Start x-Value>, <End x-Value> )::
 [EXAMPLE]
 
 ====
-
-*Example:*
 
 * `Min(x^2,-1,2)` yields the point _(0,0)_
 * `Min(-x^2,-1,2)` yields the point _(2,-4)_

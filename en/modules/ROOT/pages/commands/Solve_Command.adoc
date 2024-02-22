@@ -4,8 +4,8 @@
 
 ====
 
-*Note:* Commands *Solve* and xref:/commands/Solutions_Command.adoc[Solutions] solve an equation or a system of equations
-over the real numbers symbolically. To solve equations numerically, use the xref:/commands/NSolve_Command.adoc[NSolve
+Commands *Solve* and xref:/commands/Solutions_Command.adoc[Solutions] solve an equation or a system of equations over
+the real numbers symbolically. To solve equations numerically, use the xref:/commands/NSolve_Command.adoc[NSolve
 Command]. For solving equations in complex numbers see xref:/commands/CSolve_Command.adoc[CSolve Command].
 
 ====
@@ -21,7 +21,7 @@ Solve( <Equation in x> )::
 
 ====
 
-*Example:* `Solve(x^2 = 4x)` yields _\{x = 4, x = 0}_, the solutions of _x^2^ = 4x_.
+`Solve(x^2 = 4x)` yields _\{x = 4, x = 0}_, the solutions of _x^2^ = 4x_.
 
 ====
 
@@ -33,7 +33,7 @@ Solve( <Equation>, <Variable> )::
 
 ====
 
-*Example:* `Solve(x * a^2 = 4a, a)` yields \{stem:[a = \frac\{4}\{x}, a = 0]}, the solutions of _xa^2^ = 4a_.
+`Solve(x * a^2 = 4a, a)` yields \{stem:[a = \frac\{4}\{x}, a = 0]}, the solutions of _xa^2^ = 4a_.
 
 ====
 
@@ -45,7 +45,7 @@ Solve( <Equation in x>, <Assumption> )::
 
 ====
 
-*Example:* `Solve(x^2=1, x>0)` yields stem:[\{x = 1}]
+`Solve(x^2=1, x>0)` yields stem:[\{x = 1}]
 
 ====
 
@@ -88,8 +88,6 @@ Solve( <List of Parametric Equations>, <List of Variables> )::
 
 ====
 
-*Example:*
-
 * `Solve({(x, y) = (3, 2) + t*(5, 1), (x, y) = (4, 1) + s*(1, -1)}, {x, y, t, s})` yields _\{\{x = 3, y = 2, t = 0, s =
 -1}}_.
 
@@ -98,8 +96,6 @@ Solve( <List of Parametric Equations>, <List of Variables> )::
 [NOTE]
 
 ====
-
-*Note:*
 
 * The right hand side of equations (in any of the above syntaxes) can be omitted. If the right hand side is missing, it
 is treated as 0.
