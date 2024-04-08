@@ -12,8 +12,7 @@ RisolviEDO(f'(x, y))::
 
 ====
 
-`RisolviEDO(2x / y)` restituisce _stem:[\sqrt\{2} \sqrt\{-c_\{1}+x^\{2}}]_, con stem:[c_\{1}] costante
-arbitraria.
+`RisolviEDO(2x / y)` restituisce _stem:[\sqrt\{2} \sqrt\{-c_\{1}+x^\{2}}]_, con stem:[c_\{1}] costante arbitraria.
 
 ====
 
@@ -49,8 +48,8 @@ RisolviEDO(f'(x, y), x iniziale, y iniziale, x finale, Passo)::
 
 ====
 
-`RisolviEDO(-x*y, x(A), y(A), 5, 0.1)` risolve l'equazione differenziale stem:[\frac\{dy}\{dx}=-xy], con
-punto iniziale _A_, precedentemente definito.
+`RisolviEDO(-x*y, x(A), y(A), 5, 0.1)` risolve l'equazione differenziale stem:[\frac\{dy}\{dx}=-xy], con punto iniziale
+_A_, precedentemente definito.
 
 ====
 
@@ -77,8 +76,8 @@ RisolviEDO(f(x,y), g(x,y), x iniziale, y iniziale, t finale, Passo)::
 
 ====
 
-`RisolviEDO(-x, y, x(A), y(A), 5, 0.1)` risolve l'equazione differenziale stem:[\frac\{dy}\{dx}=-
-\frac\{x}\{y} ] con punto iniziale _A_, precedentemente definito.
+`RisolviEDO(-x, y, x(A), y(A), 5, 0.1)` risolve l'equazione differenziale stem:[\frac\{dy}\{dx}=- \frac\{x}\{y} ] con
+punto iniziale _A_, precedentemente definito.
 
 ====
 
@@ -100,8 +99,8 @@ RisolviEDO(b(x), c(x), f(x), x iniziale, y iniziale, y' iniziale, x finale, Pass
 
 ====
 
-`RisolviEDO(x^2, 2x, 2x^2 + x, x(A), y(A), 0, 5, 0.1)` risolve l'EDO del secondo ordine indicata utilizzando
-come punto iniziale il punto _A_ precedentemente definito.
+`RisolviEDO(x^2, 2x, 2x^2 + x, x(A), y(A), 0, 5, 0.1)` risolve l'EDO del secondo ordine indicata utilizzando come punto
+iniziale il punto _A_ precedentemente definito.
 
 ====
 
@@ -109,8 +108,8 @@ come punto iniziale il punto _A_ precedentemente definito.
 
 ====
 
-Questo comando restituisce sempre il risultato come luogo. Gli algoritmi di calcolo sono basati sui metodi
-numerici di Runge-Kutta.
+Questo comando restituisce sempre il risultato come luogo. Gli algoritmi di calcolo sono basati sui metodi numerici di
+Runge-Kutta.
 
 ====
 
@@ -159,8 +158,8 @@ RisolviEDO(Equazione, Punto/i di f, Punto/i di f')::
 
 ====
 
-`RisolviEDO((y'' - 3y' + 2 = x, (2, 3), (1, 2))` restituisce stem:[ y = \frac\{-9 x^2 e^3 + 30 x e^3 - 32
-\{(e^3)}^2 + 138 e^3 + 32 e^\{3 x} }\{54 e^3} ].
+`RisolviEDO((y'' - 3y' + 2 = x, (2, 3), (1, 2))` restituisce stem:[ y = \frac\{-9 x^2 e^3 + 30 x e^3 - 32 \{(e^3)}^2 +
+138 e^3 + 32 e^\{3 x} }\{54 e^3} ].
 
 ====
 
@@ -194,7 +193,7 @@ RisolviEDO(Equazione differenziale, Variabile dipendente, Variabile indipendente
 
 ====
 
-Per compatibilità con l'input nella barra di inserimento, se il primo parametro è un'espressione non contenente
-_y'_ o _y''_ , questo viene interpretato come il secondo membro di una EDO avente al primo membro _y'_ .
+Per compatibilità con l'input nella barra di inserimento, se il primo parametro è un'espressione non contenente _y'_ o
+_y''_ , questo viene interpretato come il secondo membro di una EDO avente al primo membro _y'_ .
 
 ====
