@@ -11,8 +11,8 @@ If( <Condition>, <Then> )::
 
 *Examples:*
 
-* Let _n_ = 3. `If(n==3, x + y = 4)` yields line _x_ + _y_ = 4, because the condition on number _n_ is met.
-* Let _n_ = 4. `If(n==3, x + y = 4)` creates an _undefined_ object, because the condition on number _n_ is not met .
+* Let _n_ = 3. `++If(n==3, x + y = 4)++` yields line _x_ + _y_ = 4, because the condition on number _n_ is met.
+* Let _n_ = 4. `++If(n==3, x + y = 4)++` creates an _undefined_ object, because the condition on number _n_ is not met .
 
 ====
 
@@ -25,8 +25,8 @@ If( <Condition>, <Then>, <Else> )::
 
 ====
 
-Let _n_ be a number. `If(n==3, x + y = 4, x - y = 4)` yields line _x_ + _y_ = 4 when _n_ = 3, and line _x_ - _y_ = 4 for
-all _n_ not equal to 3.
+Let _n_ be a number. `++If(n==3, x + y = 4, x - y = 4)++` yields line _x_ + _y_ = 4 when _n_ = 3, and line _x_ - _y_ = 4
+for all _n_ not equal to 3.
 
 ====
 
@@ -39,7 +39,7 @@ If( <Condition 1>, <Then 1>, <Condition 2>, <Then 2>, ... , <Else (optional)> ):
 
 ====
 
-`If(a ≟ 1, "Matthew", a ≟ 2,"Larry", a ≟ 3, "Vivian", "Alex")` When __a__=1 this returns the text "Matthew", for
+`++If(a ≟ 1, "Matthew", a ≟ 2,"Larry", a ≟ 3, "Vivian", "Alex")++` When __a__=1 this returns the text "Matthew", for
 __a__=2' it returns "Larry", for __a__=3 "Vivian" and for all other values of _a_ it yields "Alex".
 
 ====
@@ -56,20 +56,21 @@ xref:/commands/Integral_Command.adoc[Integral], and xref:/commands/Intersect_Com
 
 *Examples:*
 
-* `f(x) = If(x < 3, sin(x), x^2)` yields a piecewise function that equals _sin(x)_ for _x < 3_ and _x^2^_ for _x ≥ 3_.
-* `f(x) = If(0 <= x <= 3, sin(x))` yields a function that equals _sin(x)_ for x between 0 and 3 (and undefined
+* `++f(x) = If(x < 3, sin(x), x^2)++` yields a piecewise function that equals _sin(x)_ for _x < 3_ and _x^2^_ for _x ≥
+3_.
+* `++f(x) = If(0 <= x <= 3, sin(x))++` yields a function that equals _sin(x)_ for x between 0 and 3 (and undefined
 otherwise).
 
 [NOTE]
 
 ====
 
-A shorter syntax for this is `f(x) = sin(x), 0 <= x <= 3`
+A shorter syntax for this is `++f(x) = sin(x), 0 <= x <= 3++`
 
 ====
 
-* `f(x) =If(x<-1,x²,-1<=x<=1,1,-x²+2)` yields the piecewise function stem:[f(x) = \left\\{\begin\{matrix}\{} x^\{2}& :
-&x < -1\\ 1& :& -1 ≤ x ≤ 1\\ -x^\{2} + 2& : &\text\{otherwise} \end\{matrix}\right ].
+* `++f(x) =If(x<-1,x²,-1<=x<=1,1,-x²+2)++` yields the piecewise function stem:[f(x) = \left\\{\begin\{matrix}\{}
+x^\{2}& : &x < -1\\ 1& :& -1 ≤ x ≤ 1\\ -x^\{2} + 2& : &\text\{otherwise} \end\{matrix}\right ].
 
 ====
 
@@ -82,10 +83,10 @@ pieces of the given function must contain all the variables of the given functio
 
 ====
 
-Let `sliderVal = 1` be a slider in the interval [1,3]. The command
-`f(x,y,a,b,c) = If(sliderVal==1, x + 0y +a + 0b + c, sliderVal==2, 0x+ y^2 + 0a +2b +0c, x + y + 0a + b +0c)` yields a
-multivariate function that equals _x+a+c_ when the slider value is 1, _y^2^ + 2b_ when the slider value is 2, and _x + y
-+ b_ when the slider value is 3.
+Let `++sliderVal = 1++` be a slider in the interval [1,3]. The command
+`++f(x,y,a,b,c) = If(sliderVal==1, x + 0y +a + 0b + c, sliderVal==2, 0x+ y^2 + 0a +2b +0c, x + y + 0a + b +0c)++` yields
+a multivariate function that equals _x+a+c_ when the slider value is 1, _y^2^ + 2b_ when the slider value is 2, and _x +
+y + b_ when the slider value is 3.
 
 ====
 
@@ -109,9 +110,9 @@ at the critical points.
 
 ====
 
-Let _n_ be a number, and _A_ a point. The command `If(Mod(n, 7) == 0, SetCoords(A, n, 0), SetCoords(A, n, 1))` modifies
-the coordinates of point _A_ according to the given condition. In this case it would be easier to use
-` SetCoords(A, n, If(Mod(n, 7) == 0,0,1))`.
+Let _n_ be a number, and _A_ a point. The command `++If(Mod(n, 7) == 0, SetCoords(A, n, 0), SetCoords(A, n, 1))++`
+modifies the coordinates of point _A_ according to the given condition. In this case it would be easier to use
+`++ SetCoords(A, n, If(Mod(n, 7) == 0,0,1))++`.
 
 ====
 
@@ -120,6 +121,6 @@ the coordinates of point _A_ according to the given condition. In this case it w
 ====
 
 Arguments of *If* must be Objects or xref:/commands/Scripting_Commands.adoc[Scripting Commands], not assignments. Syntax
-`b = If(a > 1, 2, 3)` is correct, but _b = 2_ or _b = 3_ would not be accepted as parameters of *If*.
+`++b = If(a > 1, 2, 3)++` is correct, but _b = 2_ or _b = 3_ would not be accepted as parameters of *If*.
 
 ====

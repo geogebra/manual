@@ -18,8 +18,8 @@ you selected for GeoGebra.
 
 *Examples:*
 
-* `Execute({"A=(1,1)","B=(3,3)","C = Midpoint(A, B)"})` creates points _A, B_ and their midpoint _C_.
-* `Execute(Join({"f_{1} = 1", "f_{2} = 1"}, Sequence("f_{"+(i + 2) + "} = f_{" + (i+1) + "} + f_{"+ i +"}", i, 1, 10)))`
+* `++Execute({"A=(1,1)","B=(3,3)","C = Midpoint(A, B)"})++` creates points _A, B_ and their midpoint _C_.
+* `++Execute(Join({"f_{1} = 1", "f_{2} = 1"}, Sequence("f_{"+(i + 2) + "} = f_{" + (i+1) + "} + f_{"+ i +"}", i, 1, 10)))++`
 creates first 10 elements of http://en.wikipedia.org/wiki/Fibonacci_sequence[Fibonacci sequence].
 
 ====
@@ -33,7 +33,7 @@ Execute( <List of Texts>, <Parameter>, ... , <Parameter> )::
 
 ====
 
-`Execute({"Segment(%1,%2)","Midpoint(%1,%2)"}, A, B)` creates the segment _AB_ and its midpoint.
+`++Execute({"Segment(%1,%2)","Midpoint(%1,%2)"}, A, B)++` creates the segment _AB_ and its midpoint.
 
 ====
 
@@ -41,7 +41,7 @@ Execute( <List of Texts>, <Parameter>, ... , <Parameter> )::
 
 ====
 
-If you need to use a quote (`"`) then you can use `UnicodeToLetter(34)`
+If you need to use a quote (`++"++`) then you can use `++UnicodeToLetter(34)++`
 
 ====
 

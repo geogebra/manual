@@ -6,11 +6,11 @@ Using curly braces you can create a _list_ of several objects (e.g. points, segm
 
 ====
 
-* `L = {A, B, C}` gives you a list consisting of three prior defined points _A_, _B_, and _C_.
-* `L = {(0, 0), (1, 1), (2, 2)}` produces a list that consists of the entered points and also creates these nameless
+* `++L = {A, B, C}++` gives you a list consisting of three prior defined points _A_, _B_, and _C_.
+* `++L = {(0, 0), (1, 1), (2, 2)}++` produces a list that consists of the entered points and also creates these nameless
 points.
-* The short syntax `..` creates a list of successive integers: e.g. `-5..5` creates the list \{_-5, -4, -3, -2, -1, 0,
-1, 2, 3, 4, 5_}.
+* The short syntax `++..++` creates a list of successive integers: e.g. `++-5..5++` creates the list \{_-5, -4, -3, -2,
+-1, 0, 1, 2, 3, 4, 5_}.
 
 ====
 
@@ -36,14 +36,14 @@ simplified syntax shown in the example below:
 
 ====
 
-Let `list = {1, 2, 3, 4, 5}`, then:
+Let `++list = {1, 2, 3, 4, 5}++`, then:
 
-* `list(1)` returns the first element of the list: _1_
-* `list(2)` returns the second element of the list: _2_
+* `++list(1)++` returns the first element of the list: _1_
+* `++list(2)++` returns the second element of the list: _2_
 * .../...
-* `list(-1)` returns the last element of the list: _5_
-* `list(-5)` returns the first element of the list: _1_
-* `list(0)` returns _undefined_, as well as `list(k)` for k > 5 or k < -5
+* `++list(-1)++` returns the last element of the list: _5_
+* `++list(-5)++` returns the first element of the list: _1_
+* `++list(0)++` returns _undefined_, as well as `++list(k)++` for k > 5 or k < -5
 
 ====
 
@@ -51,25 +51,25 @@ Let `list = {1, 2, 3, 4, 5}`, then:
 
 You can compare two lists of objects by using the following syntaxes and commands:
 
-* `List1 == List2`: checks if the two lists are equal as ordered http://en.wikipedia.org/wiki/Tuple[tuples], and yields
-_true_ or _false_.
-* `List1 != List2`: checks if the two lists are not equal as ordered tuples, and yields _true_ or _false_.
-* `Unique[list1] == Unique[list2]` or `list1 \ list2 == {}` : checks if the two lists are equal as sets (i.e. all
-repeated elements are ignored, as well as the elements order) and yields _true_ or _false_.
-* `Sort[list1] == Sort[list2]`: checks if the two lists are equal as http://en.wikipedia.org/wiki/Multiset[multisets]
-(i.e. the elements order is ignored) and yields _true_ or _false_.
+* `++List1 == List2++`: checks if the two lists are equal as ordered http://en.wikipedia.org/wiki/Tuple[tuples], and
+yields _true_ or _false_.
+* `++List1 != List2++`: checks if the two lists are not equal as ordered tuples, and yields _true_ or _false_.
+* `++Unique[list1] == Unique[list2]++` or `++list1 \ list2 == {}++` : checks if the two lists are equal as sets (i.e.
+all repeated elements are ignored, as well as the elements order) and yields _true_ or _false_.
+* `++Sort[list1] == Sort[list2]++`: checks if the two lists are equal as
+http://en.wikipedia.org/wiki/Multiset[multisets] (i.e. the elements order is ignored) and yields _true_ or _false_.
 
 See also xref:/commands/Unique_Command.adoc[Unique] and xref:/commands/Sort_Command.adoc[Sort] commands.
 
 == [#List_Operators]#List Operators#
 
-`<Object> ∈ <List>`: returns _true_ if _Object_ is an element of _List_
+`++<Object> ∈ <List>++`: returns _true_ if _Object_ is an element of _List_
 
-`<List1> ⊆ <List2>`: returns _true_ if _List1_ is subset of _List2_
+`++<List1> ⊆ <List2>++`: returns _true_ if _List1_ is subset of _List2_
 
-`<List1> ⊂ <List2>`: returns _true_ if _List1_ is a strict subset of _List2_
+`++<List1> ⊂ <List2>++`: returns _true_ if _List1_ is a strict subset of _List2_
 
-`<List1> \ <List2>`: creates the set difference of _List1_ and _List2_
+`++<List1> \ <List2>++`: creates the set difference of _List1_ and _List2_
 
 == [#Apply_Predefined_Operations_and_Functions_to_Lists]#Apply Predefined Operations and Functions to Lists#
 
@@ -78,7 +78,7 @@ get a new list as a result.
 
 === [#Addition_and_subtraction]#Addition and subtraction#
 
-* `List1 + List2`: adds the corresponding elements of two lists.
+* `++List1 + List2++`: adds the corresponding elements of two lists.
 +
 [NOTE]
 
@@ -87,8 +87,8 @@ get a new list as a result.
 The two lists need to be of the same length.
 
 ====
-* `List + Number`: adds _Number_ to every element of _List_.
-* `List1 – List2`: subtracts the elements of _List2_ from corresponding elements of _List1_.
+* `++List + Number++`: adds _Number_ to every element of _List_.
+* `++List1 – List2++`: subtracts the elements of _List2_ from corresponding elements of _List1_.
 +
 [NOTE]
 
@@ -97,11 +97,11 @@ The two lists need to be of the same length.
 The lists need to be of the same length.
 
 ====
-* `List – Number`: subtracts _Number_ from every element of _List_.
+* `++List – Number++`: subtracts _Number_ from every element of _List_.
 
 === [#Multiplication_and_division]#Multiplication and division#
 
-* `List1 * List2`: multiplies the corresponding elements of two lists.
+* `++List1 * List2++`: multiplies the corresponding elements of two lists.
 +
 [NOTE]
 
@@ -110,8 +110,8 @@ The lists need to be of the same length.
 The lists need to be of the same length. If the two lists are compatible matrices, matrix multiplication is used.
 
 ====
-* `List * Number`: multiplies every _List_ element by the given _Number_.
-* `List1 / List2`: divides the elements of _List1_ by the corresponding elements of _List2_.
+* `++List * Number++`: multiplies every _List_ element by the given _Number_.
+* `++List1 / List2++`: divides the elements of _List1_ by the corresponding elements of _List2_.
 +
 [NOTE]
 
@@ -120,8 +120,8 @@ The lists need to be of the same length. If the two lists are compatible matrice
 The two lists need to be of the same length.
 
 ====
-* `List / Number`: divides every _List_ element by _Number_.
-* `Number / List`: divides _Number_ by every element of _List_.
+* `++List / Number++`: divides every _List_ element by _Number_.
+* `++Number / List++`: divides _Number_ by every element of _List_.
 
 [NOTE]
 
@@ -133,9 +133,10 @@ See also xref:/Points_and_Vectors.adoc[Vector product].
 
 === [#Other_examples]#Other examples#
 
-* `List ^ 2`: squares every element of _List_.
-* `2 ^ List`: creates a list of powers of two, using the _List_ elements as exponents.
-* `List1 ^ List2`: creates a list containing _a^b_, where _a_ and _b_ are corresponding elements of _List1_ and _List2_.
-* `sin(List)`: applies the sine function to every element of _List_.
+* `++List ^ 2++`: squares every element of _List_.
+* `++2 ^ List++`: creates a list of powers of two, using the _List_ elements as exponents.
+* `++List1 ^ List2++`: creates a list containing _a^b_, where _a_ and _b_ are corresponding elements of _List1_ and
+_List2_.
+* `++sin(List)++`: applies the sine function to every element of _List_.
 
 User defined xref:/Functions.adoc[functions] can be applied the same way as well.

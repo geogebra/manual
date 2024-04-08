@@ -50,8 +50,8 @@ After triggering the script, every command is executed, in the same order they a
 ====
 
 * _a_ is an integer-valued xref:/tools/Slider_Tool.adoc[slider] ranging from 1 to 3 (therefore Increment equals 1)
-* type in: `list1 = {"red", "green", "blue"}`
-* in properties of _a_, set "On Update" script to `SetColor(a, Element(list1, a))`
+* type in: `++list1 = {"red", "green", "blue"}++`
+* in properties of _a_, set "On Update" script to `++SetColor(a, Element(list1, a))++`
 * by moving the slider you change its color
 
 ====
@@ -63,7 +63,7 @@ value of _a_ is used to get one color from the list and change the color of the 
 
 ====
 
-You can use `#` to start a comment
+You can use `++#++` to start a comment
 
 ====
 
@@ -79,11 +79,12 @@ list of these command is available in the xref:/commands/Scripting_Commands.adoc
 == [#JavaScript]#JavaScript#
 
 JavaScript is a programming language used by many Internet technologies. Unlike GeoGebra Script, in Javascript commands
-don't have to be executed as a simple sequence, but a control flow (`if`, `while`, `for`) can be used. For generic
-JavaScript you can find a nice tutorial on https://developer.mozilla.org/en/JavaScript/Guide[developer.mozilla.org]. In
-GeoGebra, you can use special JavaScript methods which allow you to change the construction. These methods belong to
-ggbApplet object, which means that you call them as `ggbApplet.method_name(parameter,..,parameter)`. For complete list
-of these methods see /Reference:JavaScript.adoc[Reference:JavaScript].
+don't have to be executed as a simple sequence, but a control flow (`++if++`, `++while++`, `++for++`) can be used. For
+generic JavaScript you can find a nice tutorial on
+https://developer.mozilla.org/en/JavaScript/Guide[developer.mozilla.org]. In GeoGebra, you can use special JavaScript
+methods which allow you to change the construction. These methods belong to ggbApplet object, which means that you call
+them as `++ggbApplet.method_name(parameter,..,parameter)++`. For complete list of these methods see
+/Reference:JavaScript.adoc[Reference:JavaScript].
 
 [EXAMPLE]
 

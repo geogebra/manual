@@ -8,7 +8,7 @@ Integral( <Function> )::
 
 ====
 
-`Integral(x^3)` yields stem:[x^4 \cdot 0.25].
+`++Integral(x^3)++` yields stem:[x^4 \cdot 0.25].
 
 ====
 
@@ -20,7 +20,7 @@ Integral( <Function>, <Variable> )::
 
 ====
 
-`Integral(x³+3x y, x)` gives _stem:[\frac\{1}\{4}x^4] + stem:[\frac\{3}\{2}] x² y_ .
+`++Integral(x³+3x y, x)++` gives _stem:[\frac\{1}\{4}x^4] + stem:[\frac\{3}\{2}] x² y_ .
 
 ====
 
@@ -49,7 +49,7 @@ variables are allowed as input as well.
 
 ====
 
-`Integral(cos(a t), t)` yields stem:[\frac\{sin(a t)}\{a} + c_1].
+`++Integral(cos(a t), t)++` yields stem:[\frac\{sin(a t)}\{a} + c_1].
 
 ====
 
@@ -64,7 +64,7 @@ Integral( <Function>, <Variable>, <Start x-Value>, <End x-Value> )::
 
 ====
 
-`Integral(cos(t), t, a, b)` yields stem:[- sin(a) + sin(b)].
+`++Integral(cos(t), t, a, b)++` yields stem:[- sin(a) + sin(b)].
 
 ====
 
@@ -72,10 +72,10 @@ Integral( <Function>, <Variable>, <Start x-Value>, <End x-Value> )::
 
 ====
 
-* The answer isn't guaranteed to be continuous, eg `Integral(floor(x))`, that is the integral of the function ⌊x⌋ - in
-that case you can define your own function to use eg `F(x)=(floor(x)² - floor(x))/2 + x floor(x) - floor(x)²`, i.e. the
-function stem:[\frac\{⌊x⌋² - ⌊x⌋}\{2} + x \cdot⌊x⌋ - ⌊x⌋²]
+* The answer isn't guaranteed to be continuous, eg `++Integral(floor(x))++`, that is the integral of the function ⌊x⌋ -
+in that case you can define your own function to use eg `++F(x)=(floor(x)² - floor(x))/2 + x floor(x) - floor(x)²++`,
+i.e. the function stem:[\frac\{⌊x⌋² - ⌊x⌋}\{2} + x \cdot⌊x⌋ - ⌊x⌋²]
 * in some versions of GeoGebra, a numerical algorithm is used so integrating up to an asypmtote or similar eg
-`Integral(ln(x), 0, 1)` won't work. In this case try `Integral(ln(x), 0, 1, false)`
+`++Integral(ln(x), 0, 1)++` won't work. In this case try `++Integral(ln(x), 0, 1, false)++`
 
 ====

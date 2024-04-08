@@ -10,10 +10,10 @@ Intersect( <Object>, <Object> )::
 
 *Examples:*
 
-* Let `a: -3x + 7y = -10` be a line and `c: x^2 + 2y^2 = 8` be an ellipse. `Intersect(a, c)` yields the intersection
-points _E_ = (-1.02, -1,87) and _F_ = (2.81, -0.22) of the line and the ellipse.
-* `Intersect(y = x + 3, Curve(t, 2t, t, 0, 10))` yields __A__=(3,6).
-* `Intersect(Curve(2s, 5s, s,-10, 10), Curve(t, 2t, t, -10, 10))` yields __A__=(0,0).
+* Let `++a: -3x + 7y = -10++` be a line and `++c: x^2 + 2y^2 = 8++` be an ellipse. `++Intersect(a, c)++` yields the
+intersection points _E_ = (-1.02, -1,87) and _F_ = (2.81, -0.22) of the line and the ellipse.
+* `++Intersect(y = x + 3, Curve(t, 2t, t, 0, 10))++` yields __A__=(3,6).
+* `++Intersect(Curve(2s, 5s, s,-10, 10), Curve(t, 2t, t, -10, 10))++` yields __A__=(0,0).
 
 ====
 
@@ -26,8 +26,8 @@ Intersect( <Object>, <Object>, <Index of Intersection Point> )::
 
 ====
 
-Let `a(x) = x^3 + x^2 - x` be a function and `b: -3x + 5y = 4` be a line. `Intersect(a, b, 2)` yields the intersection
-point _C_ = (-0.43, 0.54) of the function and the line.
+Let `++a(x) = x^3 + x^2 - x++` be a function and `++b: -3x + 5y = 4++` be a line. `++Intersect(a, b, 2)++` yields the
+intersection point _C_ = (-0.43, 0.54) of the function and the line.
 
 ====
 
@@ -39,8 +39,8 @@ Intersect( <Object>, <Object>, <Initial Point> )::
 
 ====
 
-Let `a(x) = x^3 + x^2 - x` be a function, `b: -3x + 5y = 4` be a line, and _C_ = (0, 0.8) be the initial point.
-`Intersect(a, b, C)` yields the intersection point _D_ = (-0.43, 0.54) of the function and the line by using a
+Let `++a(x) = x^3 + x^2 - x++` be a function, `++b: -3x + 5y = 4++` be a line, and _C_ = (0, 0.8) be the initial point.
+`++Intersect(a, b, C)++` yields the intersection point _D_ = (-0.43, 0.54) of the function and the line by using a
 numerical, iterative method.
 
 ====
@@ -53,8 +53,8 @@ Intersect( <Function>, <Function>, <Start x-Value>, <End x-Value> )::
 
 ====
 
-Let `f(x) = x^3 + x^2 - x` and `g(x) = 4 / 5 + 3 / 5 x` be two functions. `Intersect(f, g, -1, 2)` yields the
-intersection points _A_ = (-0.43, 0.54) and _B_ = (1.1, 1.46) of the two functions in the interval [ -1, 2 ].
+Let `++f(x) = x^3 + x^2 - x++` and `++g(x) = 4 / 5 + 3 / 5 x++` be two functions. `++Intersect(f, g, -1, 2)++` yields
+the intersection points _A_ = (-0.43, 0.54) and _B_ = (1.1, 1.46) of the two functions in the interval [ -1, 2 ].
 
 ====
 
@@ -66,8 +66,8 @@ Intersect( <Curve 1>, <Curve 2>, <Parameter 1>, <Parameter 2> )::
 
 ====
 
-Let `a = Curve(cos(t), sin(t), t, 0, π)` and `b = Curve(cos(t) + 1, sin(t), t, 0, π)`. `Intersect(a, b, 0, 2)` yields
-the intersection point _A = (0.5, 0.87)_.
+Let `++a = Curve(cos(t), sin(t), t, 0, π)++` and `++b = Curve(cos(t) + 1, sin(t), t, 0, π)++`.
+`++Intersect(a, b, 0, 2)++` yields the intersection point _A = (0.5, 0.87)_.
 
 ====
 
@@ -81,8 +81,8 @@ Intersect( <Function>, <Function> )::
 
 ====
 
-Let `f(x):= x^3 + x^2 - x` and `g(x):= x` be two functions. `Intersect(f(x), g(x))` yields the intersection points list:
-_\{(1, 1), (0, 0), (-2, -2)}_ of the two functions.
+Let `++f(x):= x^3 + x^2 - x++` and `++g(x):= x++` be two functions. `++Intersect(f(x), g(x))++` yields the intersection
+points list: _\{(1, 1), (0, 0), (-2, -2)}_ of the two functions.
 
 ====
 
@@ -94,15 +94,15 @@ Intersect( <Object>, <Object> )::
 
 *Examples:*
 
-* `Intersect( <Line> , <Object> )` creates the intersection point(s) of a line and a plane, segment, polygon, conic,
+* `++Intersect( <Line> , <Object> )++` creates the intersection point(s) of a line and a plane, segment, polygon, conic,
 etc.
-* `Intersect( <Plane> , <Object> )` creates the intersection point(s) of a plane and segment, polygon, conic, etc.
-* `Intersect( <Conic>, <Conic> )` creates the intersection point(s) of two conics
-* `Intersect( <Plane>, <Plane> )` creates the intersection line of two planes
-* `Intersect( <Plane>, <Polyhedron> )` creates the polygon(s) intersection of a plane and a polyhedron.
-* `Intersect( <Sphere>, <Sphere> )` creates the circle intersection of two spheres
-* `Intersect( <Plane>, <Quadric> )` creates the conic intersection of the plane and the quadric (sphere, cone, cylinder,
-...)
+* `++Intersect( <Plane> , <Object> )++` creates the intersection point(s) of a plane and segment, polygon, conic, etc.
+* `++Intersect( <Conic>, <Conic> )++` creates the intersection point(s) of two conics
+* `++Intersect( <Plane>, <Plane> )++` creates the intersection line of two planes
+* `++Intersect( <Plane>, <Polyhedron> )++` creates the polygon(s) intersection of a plane and a polyhedron.
+* `++Intersect( <Sphere>, <Sphere> )++` creates the circle intersection of two spheres
+* `++Intersect( <Plane>, <Quadric> )++` creates the conic intersection of the plane and the quadric (sphere, cone,
+cylinder, ...)
 
 ====
 
@@ -112,7 +112,7 @@ etc.
 
 *Notes:*
 
-* to get all the intersection points in a list you can use eg `{Intersect(a,b)}`
+* to get all the intersection points in a list you can use eg `++{Intersect(a,b)}++`
 * See also xref:/commands/IntersectConic_Command.adoc[IntersectConic] and
 xref:/commands/IntersectPath_Command.adoc[IntersectPath] commands.
 * See also image:22px-Mode_intersect.svg.png[Mode intersect.svg,width=22,height=22]

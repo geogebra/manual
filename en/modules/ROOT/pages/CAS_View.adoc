@@ -34,11 +34,11 @@ display at the bottom. You can use these _Input Fields_ in the same way as the n
 with the following differences:
 
 * You can use variables that were not assigned any value.
-* `=` is used for equations and `:=` for assignments. This means that the input `a=2` will not assign value 2 to _a_.
-See the xref:/.adoc[section about assignments] for details.
-* Multiplication needs to be marked explicitly. While in the _xref:/Input_Bar.adoc[Input Bar]_ you can use both `a(b+c)`
-and `a*(b+c)` for multiplication, in the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS
-View_ only `a*(b+c)` is valid.
+* `++=++` is used for equations and `++:=++` for assignments. This means that the input `++a=2++` will not assign value
+2 to _a_. See the xref:/.adoc[section about assignments] for details.
+* Multiplication needs to be marked explicitly. While in the _xref:/Input_Bar.adoc[Input Bar]_ you can use both
+`++a(b+c)++` and `++a*(b+c)++` for multiplication, in the image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] _CAS View_ only `++a*(b+c)++` is valid.
 
 === [#Keyboard_Shortcuts_for_Direct_Input]#Keyboard Shortcuts for Direct Input#
 
@@ -62,8 +62,8 @@ xref:/.adoc[_CAS View Toolbar_].
 
 *Notes:*
 
-* Assignments are always evaluated, e.g. `a := 5`
-* You may suppress any output with a semicolon at the end of your input, e.g. `a := 5;`
+* Assignments are always evaluated, e.g. `++a := 5++`
+* You may suppress any output with a semicolon at the end of your input, e.g. `++a := 5;++`
 
 .
 
@@ -71,32 +71,32 @@ xref:/.adoc[_CAS View Toolbar_].
 
 === [#Variable_Assignments_and_Connection_with_other_Views]#Variable Assignments and Connection with other Views#
 
-You may use the `:=` notation for assignments, e.g. `b := 5`, `a(n) := 2n + 3`.
+You may use the `++:=++` notation for assignments, e.g. `++b := 5++`, `++a(n) := 2n + 3++`.
 
-* _Free up a name_: Use `Delete[b]` in order to free up a variable name again.
+* _Free up a name_: Use `++Delete[b]++` in order to free up a variable name again.
 * _Redefine a variable or function_: You may redefine a variable or function, but you must do so *in the same cell*,
 otherwise it will be treated as a new variable and automatically renamed.
 
 Variables and functions are always shared between the image:16px-Menu_view_cas.svg.png[Menu view
 cas.svg,width=16,height=16] _CAS View_ and the other _Views_ if possible. For example:
 
-* If you define `b:=5` in the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS View_, then
-you can use _b_ in all the other _Views_ of GeoGebra.
-* If you define a function `f(x)=x^2` in another _View_, you can also use this function in the
+* If you define `++b:=5++` in the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS View_,
+then you can use _b_ in all the other _Views_ of GeoGebra.
+* If you define a function `++f(x)=x^2++` in another _View_, you can also use this function in the
 image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS View_.
 
 [NOTE]
 
 ====
 
-The output will always be just the expression *after* the `:=`, e.g. if you type `b:=5` the output will be _5_. Please
-also note, that for clarification actually _b := 5_ will be displayed.
+The output will always be just the expression *after* the `++:=++`, e.g. if you type `++b:=5++` the output will be _5_.
+Please also note, that for clarification actually _b := 5_ will be displayed.
 
 ====
 
 === [#Equations]#Equations#
 
-* You may write equations using the simple _Equals_ sign, e.g. `3x + 5 = 7`.
+* You may write equations using the simple _Equals_ sign, e.g. `++3x + 5 = 7++`.
 * _Arithmetic operations_: You can perform arithmetic operations on equations, which is useful for manual equation
 solving.
 +
@@ -104,18 +104,18 @@ solving.
 
 ====
 
-`(3x + 5 = 7) - 5` subtracts 5 from both sides of the equation.
+`++(3x + 5 = 7) - 5++` subtracts 5 from both sides of the equation.
 
 ====
 
-* _Extracting one Side_: You may extract either the left or right side of an equation by using the commands `LeftSide[]`
-and `RightSide[]`.
+* _Extracting one Side_: You may extract either the left or right side of an equation by using the commands
+`++LeftSide[]++` and `++RightSide[]++`.
 +
 [EXAMPLE]
 
 ====
 
-`LeftSide[3x + 5 = 7]` returns _3 x + 5_ and `RightSide[3x + 5 = 7]` returns _7_
+`++LeftSide[3x + 5 = 7]++` returns _3 x + 5_ and `++RightSide[3x + 5 = 7]++` returns _7_
 
 ====
 
@@ -125,12 +125,12 @@ You can refer to other rows in the image:16px-Menu_view_cas.svg.png[Menu view ca
 two ways:
 
 * *Static row references* copy the output and *won't be updated* if the _referenced_ row is subsequently changed
-** `#`: Copies the previous output.
-** `#5`: Copies the output of row 5.
+** `++#++`: Copies the previous output.
+** `++#5++`: Copies the output of row 5.
 * *Dynamic row references* insert a reference to another row instead of the actual output and therefore *will be
 updated* if the _referenced_ row is subsequently changed
-** `$`: Inserts a reference to the previous output.
-** `$5`: Inserts a reference to the output of row 5
+** `++$++`: Inserts a reference to the previous output.
+** `++$5++`: Inserts a reference to the output of row 5
 
 == [#CAS_Commands]#CAS Commands#
 

@@ -20,8 +20,8 @@ command or drag and drop the matrix definition from _Algebra View_ to _Graphics 
 
 ====
 
-In the xref:/Input_Bar.adoc[Input Bar] type `FormulaText[{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}]` to display the matrix using
-LaTeX formatting.
+In the xref:/Input_Bar.adoc[Input Bar] type `++FormulaText[{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}]++` to display the matrix
+using LaTeX formatting.
 
 ====
 
@@ -34,12 +34,12 @@ simplified syntax shown in the example below:
 
 ====
 
-Let `matrix={{1, 2}, {3, 4}}`, then:
+Let `++matrix={{1, 2}, {3, 4}}++`, then:
 
-* `matrix(1, 1) ` returns the first element in the first line: _1_
-* `matrix(2, 2)`, `matrix(-1,2)`, `matrix(2,-1) ` and `matrix(-1,-1) ` all return the second element of the second line:
-_4_.
-* In general, `matrix(i, j) `, where _i_ and _j_ are integers, returns the element of the matrix that occupies the
+* `++matrix(1, 1) ++` returns the first element in the first line: _1_
+* `++matrix(2, 2)++`, `++matrix(-1,2)++`, `++matrix(2,-1) ++` and `++matrix(-1,-1) ++` all return the second element of
+the second line: _4_.
+* In general, `++matrix(i, j) ++`, where _i_ and _j_ are integers, returns the element of the matrix that occupies the
 _i-th_ row and the _j-th_ column.
 
 ====
@@ -58,13 +58,13 @@ Some syntaxes can represent operations which are not defined in the same way in 
 
 === [#Addition_and_subtraction]#Addition and subtraction#
 
-* `Matrix1 + Matrix2`: adds the corresponding elements of two compatible matrices.
-* `Matrix1 – Matrix2`: subtracts the corresponding elements of two compatible matrices.
+* `++Matrix1 + Matrix2++`: adds the corresponding elements of two compatible matrices.
+* `++Matrix1 – Matrix2++`: subtracts the corresponding elements of two compatible matrices.
 
 === [#Multiplication_and_division]#Multiplication and division#
 
-* `Matrix * Number`: multiplies each element of _Matrix_ by the given _Number_.
-* `Matrix1 * Matrix2`: uses matrix multiplication to calculate the resulting matrix.
+* `++Matrix * Number++`: multiplies each element of _Matrix_ by the given _Number_.
+* `++Matrix1 * Matrix2++`: uses matrix multiplication to calculate the resulting matrix.
 
 [EXAMPLE]
 
@@ -83,7 +83,7 @@ The rows of the first and columns of the second matrix need to have the same num
 
 ====
 
-* `2x2 Matrix * Point (or Vector)`: multiplies the _Matrix_ by the given _Point / Vector_ and yields a point.
+* `++2x2 Matrix * Point (or Vector)++`: multiplies the _Matrix_ by the given _Point / Vector_ and yields a point.
 
 [EXAMPLE]
 
@@ -93,7 +93,7 @@ The rows of the first and columns of the second matrix need to have the same num
 
 ====
 
-* `3x3 Matrix * Point (or Vector)`: multiplies the _Matrix_ by the given _Point / Vector_ and yields a point.
+* `++3x3 Matrix * Point (or Vector)++`: multiplies the _Matrix_ by the given _Point / Vector_ and yields a point.
 
 [EXAMPLE]
 
@@ -108,17 +108,17 @@ The rows of the first and columns of the second matrix need to have the same num
 ====
 
 This is a special case for affine transformations where homogeneous coordinates are used: (x, y, 1) for a point and (x,
-y, 0) for a vector. This example is therefore equivalent to: `{{1, 2, 3}, {4, 5, 6}, {0, 0, 1}} * {1, 2, 1}`.
+y, 0) for a vector. This example is therefore equivalent to: `++{{1, 2, 3}, {4, 5, 6}, {0, 0, 1}} * {1, 2, 1}++`.
 
 ====
 
-* `Matrix1 / Matrix2`: Divides each element of _Matrix1_ by the corresponding element in _Matrix2_.
+* `++Matrix1 / Matrix2++`: Divides each element of _Matrix1_ by the corresponding element in _Matrix2_.
 
 [NOTE]
 
 ====
 
-However, GeoGebra supports the syntax `Matrix1 * Matrix2 ^(-1)` .
+However, GeoGebra supports the syntax `++Matrix1 * Matrix2 ^(-1)++` .
 
 ====
 
