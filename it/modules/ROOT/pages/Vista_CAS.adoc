@@ -35,13 +35,13 @@ dispone di un _campo di inserimento_, in alto, e un campo dei risultati, in bass
 inserimento è simile a quello della xref:/Barra_di_inserimento.adoc[barra di inserimento], con le seguenti differenze:
 
 * È possibile utilizzare variabili a cui non è stato precedentemente assegnato un valore.
-* Il simbolo `= `va utilizzato per inserire equazioni, mentre `:=` definisce le assegnazioni: ciò significa che
-digitando `a=2` *non* verrà assegnato il valore 2 alla variabile _a_. Fare riferimento alla sezione relativa alle
+* Il simbolo `++= ++`va utilizzato per inserire equazioni, mentre `++:=++` definisce le assegnazioni: ciò significa che
+digitando `++a=2++` *non* verrà assegnato il valore 2 alla variabile _a_. Fare riferimento alla sezione relativa alle
 xref:/.adoc[assegnazioni] per ulteriori dettagli.
 * I prodotti vanno indicati esplicitamente: mentre nella xref:/Barra_di_inserimento.adoc[barra di inserimento] è
-possibile utilizzare sia la notazione `a(b+c)` che `a*(b+c)` per indicare il prodotto, nella
+possibile utilizzare sia la notazione `++a(b+c)++` che `++a*(b+c)++` per indicare il prodotto, nella
 image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] vista CAS è necessario utilizzare la notazione
-`a*(b+c)`.
+`++a*(b+c)++`.
 
 === [#Combinazioni_di_tasti_per_l.27inserimento_diretto]#Combinazioni di tasti per l'inserimento diretto#
 
@@ -62,16 +62,16 @@ della vista CAS_].
 [NOTE]
 ====
 
-* Le assegnazioni, come ad es. `a := 5`, vengono sempre calcolate.
-* Per non visualizzare il risultato di un'operazione, digitare un punto e virgola `;` al termine dell'inserimento, ad
-es. `a := 5;`
+* Le assegnazioni, come ad es. `++a := 5++`, vengono sempre calcolate.
+* Per non visualizzare il risultato di un'operazione, digitare un punto e virgola `++;++` al termine dell'inserimento,
+ad es. `++a := 5;++`
 
 ====
 
 === [#Assegnazione_di_variabili_e_collegamento_con_le_altre_Viste]#Assegnazione di variabili e collegamento con le altre Viste#
 
-* Per _assegnare una variabile_: utilizzare la notazione `:=`, ad es. `b := 5`, oppure `a(n) := 2n + 3`
-* Per _liberare un nome di variabile_: utilizzare il comando `Elimina[b]`, ad es. per liberare la variabile _b_.
+* Per _assegnare una variabile_: utilizzare la notazione `++:=++`, ad es. `++b := 5++`, oppure `++a(n) := 2n + 3++`
+* Per _liberare un nome di variabile_: utilizzare il comando `++Elimina[b]++`, ad es. per liberare la variabile _b_.
 * Per _ridefinire una variabile o una funzione_: digitare la nuova espressione *nella stessa cella in cui sono state
 definite*, altrimenti l'inserimento verrà interpretato come definizione di nuove variabili o funzioni, che saranno
 rinominate di conseguenza.
@@ -79,27 +79,27 @@ rinominate di conseguenza.
 Le variabili e le funzioni vengono condivise tra la image:16px-Menu_view_cas.svg.png[Menu view
 cas.svg,width=16,height=16] _vista CAS_ e le altre Viste di GeoGebra, se possibile. Ad esempio:
 
-* Definendo `b:=5` nella image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _vista CAS_ è possibile
-utilizzare _b_ in tutte le altre Viste di GeoGebra.
-* La funzione `f(x)=x^2` definita in un'altra Vista di GeoGebra può essere utilizzata nella
+* Definendo `++b:=5++` nella image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _vista CAS_ è
+possibile utilizzare _b_ in tutte le altre Viste di GeoGebra.
+* La funzione `++f(x)=x^2++` definita in un'altra Vista di GeoGebra può essere utilizzata nella
 image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _vista CAS_.
 
 [NOTE]
 ====
 
-Il _risultato_ va inteso sempre come l'espressione visualizzata *dopo* il simbolo `:=`, ad esempio digitando `b:=5` il
-risultato è _5_, anche se la riga della vista CAS visualizza _b := 5_.
+Il _risultato_ va inteso sempre come l'espressione visualizzata *dopo* il simbolo `++:=++`, ad esempio digitando
+`++b:=5++` il risultato è _5_, anche se la riga della vista CAS visualizza _b := 5_.
 
 ====
 
 === [#Equazioni]#Equazioni#
 
-* Per _inserire un'equazione_ utilizzare il simbolo di "uguale" [.kcode]#=# ad es. `3x + 5 = 7`
-* Per _applicare operazioni aritmetiche_ alle equazioni, basta semplicemente digitarle: ad es. `(3x + 5 = 7) - 5`
+* Per _inserire un'equazione_ utilizzare il simbolo di "uguale" [.kcode]#=# ad es. `++3x + 5 = 7++`
+* Per _applicare operazioni aritmetiche_ alle equazioni, basta semplicemente digitarle: ad es. `++(3x + 5 = 7) - 5++`
 sottrae 5 da entrambi i membri dell'equazione. Questa opzione è particolarmente utile per mostrare i passi della
 risoluzione manuale di equazioni.
-* Per _estrarre un membro_ di un'equazione, utilizzare i comandi specifici: ad esempio `PrimoMembro[3x + 5 = 7]`
-restituisce _3x + 5_ e `SecondoMembro[3x + 5 = 7]` restituisce _7_
+* Per _estrarre un membro_ di un'equazione, utilizzare i comandi specifici: ad esempio `++PrimoMembro[3x + 5 = 7]++`
+restituisce _3x + 5_ e `++SecondoMembro[3x + 5 = 7]++` restituisce _7_
 
 ==== [#Riferimenti_di_riga]#Riferimenti di riga#
 
@@ -108,12 +108,12 @@ CAS_ in due modi:
 
 * I _riferimenti di riga statici_ copiano il contenuto della riga, ma quanto copiato *non verrà aggiornato* con le
 eventuali modifiche apportate alla riga _origine_.
-** `#` copia il risultato precedente
-** `#5` copia il risultato della riga 5
+** `++#++` copia il risultato precedente
+** `++#5++` copia il risultato della riga 5
 * I _riferimenti di riga dinamici_ inseriscono il riferimento al contenuto di un'altra riga: tale inserimento *si
 aggiornerà* con le eventuali modifiche apportate alla riga _origine_.
-** `$` inserisce un riferimento al risultato precedente
-** `$5` inserisce un riferimento al risultato della riga 5
+** `++$++` inserisce un riferimento al risultato precedente
+** `++$5++` inserisce un riferimento al risultato della riga 5
 
 === [#Comandi_CAS]#Comandi CAS#
 

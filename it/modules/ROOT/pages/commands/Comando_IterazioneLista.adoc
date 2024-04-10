@@ -12,7 +12,7 @@ IterazioneLista(Funzione, Valore iniziale, Numero di iterazioni)::
 [EXAMPLE]
 ====
 
-Sia `f(k,a)=(k+1)*a`, che è la definizione ricorsiva del fattoriale. Il comando `IterazioneLista(f, {3, 6}, 4)`
+Sia `++f(k,a)=(k+1)*a++`, che è la definizione ricorsiva del fattoriale. Il comando `++IterazioneLista(f, {3, 6}, 4)++`
 restituisce la lista _\{6, 24, 120, 720, 5040}_.
 
 ====
@@ -20,7 +20,7 @@ restituisce la lista _\{6, 24, 120, 720, 5040}_.
 [EXAMPLE]
 ====
 
-Sia `f(x) = x^2`: il comando `IterazioneLista(f, 3, 2)` genera la lista _L = \{3, 9, 81}_.
+Sia `++f(x) = x^2++`: il comando `++IterazioneLista(f, 3, 2)++` genera la lista _L = \{3, 9, 81}_.
 
 ====
 
@@ -33,7 +33,7 @@ IterazioneLista(Espressione, Nome variabile, ..., Valori iniziali, Numero di ite
 [EXAMPLE]
 ====
 
-Siano _A_, _B_ due punti. Il comando `IterazioneLista(PuntoMedio(A, C), C, {B}, 3)` calcola internamente i valori
+Siano _A_, _B_ due punti. Il comando `++IterazioneLista(PuntoMedio(A, C), C, {B}, 3)++` calcola internamente i valori
 __C__~0~ = _B_,   __C__~1~ = _PuntoMedio_(_A_, __C__~0~),   __C__~2~ = _PuntoMedio_(_A_, __C__~1~),   __C__~3~ =
 _PuntoMedio_(_A_, __C__~2~) e restituisce \{__C__~0~, __C__~1~, __C__~2~, __C__~3~}. Se quindi _A_ = (0,0) e _B_ = (8,0)
 il risultato sarà \{(8,0), (4,0), (2,0), (1,0)}.
@@ -43,10 +43,10 @@ il risultato sarà \{(8,0), (4,0), (2,0), (1,0)}.
 [EXAMPLE]
 ====
 
-Siano _f__0, _f__1 due numeri. Il comando `IterazioneLista(a + b, a, b, {f_0,f_1}, 5)` calcola i primi 2 valori della
-lista risultante a partire dai valori iniziali indicati. I valori successivi vengono calcolati come segue: __f__~2~ =
-__f__~0~ + __f__~1~   __f__~3~ = __f__~1~ + __f__~2~,   __f__~4~ = __f__~2~ + __f__~3~,   __f__~5~ = __f__~3~ +
-__f__~4~. Se quindi _f__0 = _f__1 = 1 il risultato sarà \{1, 1, 2, 3, 5, 8}.
+Siano _f__0, _f__1 due numeri. Il comando `++IterazioneLista(a + b, a, b, {f_0,f_1}, 5)++` calcola i primi 2 valori
+della lista risultante a partire dai valori iniziali indicati. I valori successivi vengono calcolati come segue:
+__f__~2~ = __f__~0~ + __f__~1~   __f__~3~ = __f__~1~ + __f__~2~,   __f__~4~ = __f__~2~ + __f__~3~,   __f__~5~ = __f__~3~
++ __f__~4~. Se quindi _f__0 = _f__1 = 1 il risultato sarà \{1, 1, 2, 3, 5, 8}.
 
 ====
 

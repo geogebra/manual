@@ -7,13 +7,13 @@ Spline(Lista di punti, Ordine ≥ 3)::
 Spline(Lista di punti, Ordine ≥ 3, Funzione peso)::
   Genera una spline dell'ordine indicato, passante per i punti della lista. La _funzione peso_ indica la differenza tra
   i valori di _t_ per i punti __P__~i~ e __P__~i+1~, data la differenza __P__~i+1~ - __P__~i~ = (_x_, _y_). Per ottenere
-  la spline attesa dall'algoritmo "funzione" è necessario utilizzare come funzione peso `abs(x)+0*y`, mentre per
-  ottenere la spline predefinita di GeoGebra, utilizzare `sqrt(x^2+y^2)`.
+  la spline attesa dall'algoritmo "funzione" è necessario utilizzare come funzione peso `++abs(x)+0*y++`, mentre per
+  ottenere la spline predefinita di GeoGebra, utilizzare `++sqrt(x^2+y^2)++`.
 
 [NOTE]
 ====
 
 L'impostazione predefinita consente un comportamento stabile della spline quando questa viene trasformata, e i comandi
-`Ruota(Spline(lista), a)` e `Spline(Ruota(lista, a))` restituiscono lo stesso risultato.
+`++Ruota(Spline(lista), a)++` e `++Spline(Ruota(lista, a))++` restituiscono lo stesso risultato.
 
 ====

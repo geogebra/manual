@@ -6,21 +6,21 @@ SetViewDirection( <Direction> )::
 [EXAMPLE]
 ====
 
-`SetViewDirection(Vector((0, 0, 1)))`
+`++SetViewDirection(Vector((0, 0, 1)))++`
 
 ====
 
 [EXAMPLE]
 ====
 
-`SetViewDirection((0, 0, 1))`
+`++SetViewDirection((0, 0, 1))++`
 
 ====
 
 [EXAMPLE]
 ====
 
-`SetViewDirection(x + y + z = 1)`
+`++SetViewDirection(x + y + z = 1)++`
 
 ====
 
@@ -30,7 +30,7 @@ SetViewDirection( )::
 [EXAMPLE]
 ====
 
-`SetViewDirection()`
+`++SetViewDirection()++`
 
 ====
 
@@ -41,7 +41,7 @@ SetViewDirection( <Direction>, <Boolean animated> )::
 ====
 
 In order to obtain the rotation of the 3D view, depending on the values of a previously created slider _α_, use the
-command `SetViewDirection(Vector((1; α; -30°)), false)` in the _OnUpdate_ scripting tab of slider _α_.
+command `++SetViewDirection(Vector((1; α; -30°)), false)++` in the _OnUpdate_ scripting tab of slider _α_.
 
 ====
 
@@ -51,8 +51,8 @@ command `SetViewDirection(Vector((1; α; -30°)), false)` in the _OnUpdate_ scri
 *Notes:*
 
 * The view direction can be set towards a line, segment, plane, etc.
-* If you do eg `SetViewDirection(x + y + z = 1)` twice then there are two possible outcomes and the _second_ one will
-rotate the view 180°. To avoid ambiguity use eg `SetViewDirection(Vector((0, 0, 1)))`
+* If you do eg `++SetViewDirection(x + y + z = 1)++` twice then there are two possible outcomes and the _second_ one
+will rotate the view 180°. To avoid ambiguity use eg `++SetViewDirection(Vector((0, 0, 1)))++`
 * See also image:24px-Mode_viewinfrontof.png[Mode viewinfrontof.png,width=24,height=24]
 xref:/tools/View_in_front_of_Tool.adoc[View in front of] tool.
 

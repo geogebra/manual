@@ -7,9 +7,9 @@ BarChart( <List of Data>, <List of Frequencies> )::
 [EXAMPLE]
 ====
 
-* `BarChart({10, 11, 12, 13, 14}, {5, 8, 12, 0, 1})`
-* `BarChart({5, 6, 7, 8, 9}, {1, 0, 12, 43, 3})`
-* `BarChart({0.3, 0.4, 0.5, 0.6}, {12, 33, 13, 4})`
+* `++BarChart({10, 11, 12, 13, 14}, {5, 8, 12, 0, 1})++`
+* `++BarChart({5, 6, 7, 8, 9}, {1, 0, 12, 43, 3})++`
+* `++BarChart({0.3, 0.4, 0.5, 0.6}, {12, 33, 13, 4})++`
 
 ====
 
@@ -27,8 +27,8 @@ BarChart( <List of Raw Data>, <Width of Bars>, <Vertical Scale Factor (optional)
 [EXAMPLE]
 ====
 
-* `BarChart({1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5}, 1)`
-* `BarChart({1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5}, 1, 2)`
+* `++BarChart({1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5}, 1)++`
+* `++BarChart({1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5}, 1, 2)++`
 
 ====
 
@@ -38,8 +38,8 @@ BarChart( <List of Data> , <List of Frequencies>, <Width of Bars> )::
 [EXAMPLE]
 ====
 
-* `BarChart({10, 11, 12, 13, 14}, {5, 8, 12, 0, 1}, 0.5)` leaves gaps between bars.
-* `BarChart({10, 11, 12, 13, 14}, {5, 8, 12, 0, 1}, 0)` produces a line graph.
+* `++BarChart({10, 11, 12, 13, 14}, {5, 8, 12, 0, 1}, 0.5)++` leaves gaps between bars.
+* `++BarChart({10, 11, 12, 13, 14}, {5, 8, 12, 0, 1}, 0)++` produces a line graph.
 
 ====
 
@@ -50,7 +50,8 @@ BarChart( <Start Value>, <End Value>, <List of Heights> )::
 [EXAMPLE]
 ====
 
-`BarChart(10, 20, {1, 2, 3, 4, 5})` gives you a bar chart with five bars of specified height in the interval [10, 20].
+`++BarChart(10, 20, {1, 2, 3, 4, 5})++` gives you a bar chart with five bars of specified height in the interval [10,
+20].
 
 ====
 
@@ -62,7 +63,7 @@ BarChart( <Start Value>, <End Value> , <Expression>, <Variable>, <From Number>, 
 ====
 
 If _p = 0.1_, _q = 0.9_, and _n = 10_ are numbers, then
-`BarChart(-0.5, n + 0.5, BinomialCoefficient(n,k) * p^k * q^(n-k), k, 0, n)` gives you a bar chart in the interval
+`++BarChart(-0.5, n + 0.5, BinomialCoefficient(n,k) * p^k * q^(n-k), k, 0, n)++` gives you a bar chart in the interval
 [_-0.5, n+0.5_]. The heights of the bars depend on the probabilities calculated using the given expression.
 
 ====

@@ -6,7 +6,7 @@ SetValue( <Boolean>, <0|1> )::
 [EXAMPLE]
 ====
 
-If _b_ is a boolean, ` SetValue(b,1)` sets the boolean _b_ as _true_.
+If _b_ is a boolean, `++ SetValue(b,1)++` sets the boolean _b_ as _true_.
 
 ====
 
@@ -18,7 +18,7 @@ SetValue( <Object>, <Object> )::
 [EXAMPLE]
 ====
 
-If _f_ is a function, `SetValue(f, RandomElement({cos(x), 3x+2, ln(x)}))` defines, at random, f as being one of the
+If _f_ is a function, `++SetValue(f, RandomElement({cos(x), 3x+2, ln(x)}))++` defines, at random, f as being one of the
 functions proposed in the list.
 
 ====
@@ -28,7 +28,8 @@ SetValue( <List>, <Number>, <Object> )::
   object. Number _n_ can be at most 1 + length of L.
 
 SetValue( <Dependent Object>, ? )::
-  This is a special syntax that will set a dependent object to undefined without needing to fully redefine it using `=`.
+  This is a special syntax that will set a dependent object to undefined without needing to fully redefine it using
+  `++=++`.
 
 SetValue( <xref:/Action_Objects.adoc[drop-down list]>, <Number n > )::
   Set _n_ as xref:/commands/SelectedIndex_Command.adoc[the index of the selected element] in the drop-down list.

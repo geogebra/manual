@@ -7,7 +7,7 @@ SolveODE( <f'(x, y)> )::
 [EXAMPLE]
 ====
 
-`SolveODE(2x / y)` yields _stem:[\sqrt\{2} \sqrt\{-c_\{1}+x^\{2}}]_, where stem:[c_\{1}] is a constant.
+`++SolveODE(2x / y)++` yields _stem:[\sqrt\{2} \sqrt\{-c_\{1}+x^\{2}}]_, where stem:[c_\{1}] is a constant.
 
 ====
 
@@ -19,7 +19,7 @@ which goes through the given point.
 [EXAMPLE]
 ====
 
-`SolveODE(y / x, (1, 2))` yields _y = 2x_.
+`++SolveODE(y / x, (1, 2))++` yields _y = 2x_.
 
 ====
 
@@ -36,7 +36,8 @@ SolveODE( <f'(x, y)>, <Start x>, <Start y>, <End x>, <Step> )::
 [EXAMPLE]
 ====
 
-`SolveODE(-x*y, x(A), y(A), 5, 0.1)` solves stem:[\frac\{dy}\{dx}=-xy] using previously defined _A_ as a starting point.
+`++SolveODE(-x*y, x(A), y(A), 5, 0.1)++` solves stem:[\frac\{dy}\{dx}=-xy] using previously defined _A_ as a starting
+point.
 
 ====
 
@@ -47,7 +48,7 @@ SolveODE( <f'(x, y)>, <Start x>, <Start y>, <End x>, <Step> )::
 locus.
 * xref:/commands/First_Command.adoc[First]( <Locus>, <Number> ) allows you to extract the points as a list.
 * To find the "reverse" solution, just enter a negative value for _End x_, for example
-`SolveODE(-x*y, x(A), y(A), -5, 0.1)`
+`++SolveODE(-x*y, x(A), y(A), -5, 0.1)++`
 
 ====
 
@@ -59,8 +60,8 @@ SolveODE( <y'>, <x'>, <Start x>, <Start y>, <End t>, <Step> )::
 [EXAMPLE]
 ====
 
-`SolveODE(-x, y, x(A), y(A), 5, 0.1)` solves stem:[\frac\{dy}\{dx}=- \frac\{x}\{y} ] using previously defined _A_ as a
-starting point.
+`++SolveODE(-x, y, x(A), y(A), 5, 0.1)++` solves stem:[\frac\{dy}\{dx}=- \frac\{x}\{y} ] using previously defined _A_ as
+a starting point.
 
 ====
 
@@ -71,7 +72,7 @@ Solves second order ODE stem:[y'' + b(x) y' + c(x) y = f(x)].
 [EXAMPLE]
 ====
 
-`SolveODE(x^2, 2x, 2x^2 + x, x(A), y(A), 0, 5, 0.1)` solves the second order ODE using previously defined _A_ as a
+`++SolveODE(x^2, 2x, 2x^2 + x, x(A), y(A), 0, 5, 0.1)++` solves the second order ODE using previously defined _A_ as a
 starting point.
 
 ====
@@ -80,7 +81,7 @@ starting point.
 ====
 
 To find the "reverse" solution, just enter a negative value for _End t_, for example
-`SolveODE(-x, y, x(A), y(A), -5, 0.1)`.
+`++SolveODE(-x, y, x(A), y(A), -5, 0.1)++`.
 
 ====
 
@@ -108,7 +109,7 @@ SolveODE( <Equation> )::
 [EXAMPLE]
 ====
 
-`SolveODE(y' = y / x)` yields _y = c~1~ x_.
+`++SolveODE(y' = y / x)++` yields _y = c~1~ x_.
 
 ====
 
@@ -118,7 +119,7 @@ SolveODE( <Equation>, <Point(s) on f> )::
 [EXAMPLE]
 ====
 
-`SolveODE(y' = y / x, (1, 2))` yields _y = 2x_.
+`++SolveODE(y' = y / x, (1, 2))++` yields _y = 2x_.
 
 ====
 
@@ -129,8 +130,8 @@ SolveODE( <Equation>, <Point(s) on f>, <Point(s) on f'> )::
 [EXAMPLE]
 ====
 
-`SolveODE(y'' - 3y' + 2 = x, (2, 3), (1, 2))` yields stem:[ y = \frac\{-9 x^2 e^3 + 30 x e^3 - 32 \{(e^3)}^2 + 138 e^3 +
-32 e^\{3 x} }\{54 e^3} ].
+`++SolveODE(y'' - 3y' + 2 = x, (2, 3), (1, 2))++` yields stem:[ y = \frac\{-9 x^2 e^3 + 30 x e^3 - 32 \{(e^3)}^2 + 138
+e^3 + 32 e^\{3 x} }\{54 e^3} ].
 
 ====
 
@@ -140,7 +141,7 @@ SolveODE( <Equation>, <Dependent Variable>, <Independent Variable>, <Point(s) on
 [EXAMPLE]
 ====
 
-`SolveODE(v' = v / w, v,  w, (1, 2))` yields _v = 2w_.
+`++SolveODE(v' = v / w, v,  w, (1, 2))++` yields _v = 2w_.
 
 ====
 
@@ -151,7 +152,7 @@ SolveODE( <Equation>, <Dependent Variable>, <Independent Variable>, <Point(s) on
 [EXAMPLE]
 ====
 
-`SolveODE(v' = v / w, v,  w, (1, 2), (0, 2))` yields _v = 2w_.
+`++SolveODE(v' = v / w, v,  w, (1, 2), (0, 2))++` yields _v = 2w_.
 
 ====
 

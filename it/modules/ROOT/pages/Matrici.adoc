@@ -18,7 +18,7 @@ mouse l'espressione della matrice dalla _Vista Algebra_ alla _Vista Grafici_.
 [EXAMPLE]
 ====
 
-Digitare `LaTeX[{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}]` nella barra di inserimento per visualizzare la corrispondente
+Digitare `++LaTeX[{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}]++` nella barra di inserimento per visualizzare la corrispondente
 matrice in formato LaTeX.
 
 ====
@@ -31,13 +31,13 @@ xref:/commands/Comando_Elemento.adoc[comando Elemento] o la sintassi semplificat
 [EXAMPLE]
 ====
 
-Sia `matrice={{1, 2}, {3, 4}}`, allora:
+Sia `++matrice={{1, 2}, {3, 4}}++`, allora:
 
-* `matrice(1, 1) ` restituisce il primo elemento della prima riga: _1_
-* `matrice(2, 2)`, `matrice(-1,2)`, `matrice(2,-1) ` e `matrice(-1,-1) ` restituiscono tutti il secondo elemento della
-seconda riga: _4_.
-* In generale, `matrice(i, j) `, dove _i_ e _j_ sono interi, restituisce l'elemento di che occupa l'_i-esima_ riga e la
-_j-esima_ colonna.
+* `++matrice(1, 1) ++` restituisce il primo elemento della prima riga: _1_
+* `++matrice(2, 2)++`, `++matrice(-1,2)++`, `++matrice(2,-1) ++` e `++matrice(-1,-1) ++` restituiscono tutti il secondo
+elemento della seconda riga: _4_.
+* In generale, `++matrice(i, j) ++`, dove _i_ e _j_ sono interi, restituisce l'elemento di che occupa l'_i-esima_ riga e
+la _j-esima_ colonna.
 
 ====
 
@@ -55,13 +55,13 @@ Alcune sintassi rappresentano operazioni non definite allo stesso modo nell'insi
 
 === [#Somma_e_sottrazione]#Somma e sottrazione#
 
-* `Matrice1 + Matrice2`: somma gli elementi corrispondenti di due matrici compatibili.
-* `Matrice1 – Matrice2`: sottrae gli elementi corrispondenti di due matrici compatibili.
+* `++Matrice1 + Matrice2++`: somma gli elementi corrispondenti di due matrici compatibili.
+* `++Matrice1 – Matrice2++`: sottrae gli elementi corrispondenti di due matrici compatibili.
 
 === [#Prodotto]#Prodotto#
 
-* `Matrice * Numero`: moltiplica ogni elemento della _Matrice_ per il _Numero_ indicato.
-* `Matrice1 * Matrice2`: Calcola il prodotto matriciale delle due matrici.
+* `++Matrice * Numero++`: moltiplica ogni elemento della _Matrice_ per il _Numero_ indicato.
+* `++Matrice1 * Matrice2++`: Calcola il prodotto matriciale delle due matrici.
 
 [EXAMPLE]
 ====
@@ -78,7 +78,8 @@ Il numero di righe della prima matrice deve essere uguale al numero di colonne d
 
 ====
 
-* `Matrice 2x2  * Punto (o Vettore)`: moltiplica la _Matrice_ per il _Punto / Vettore_ indicato e restituisce un punto.
+* `++Matrice 2x2  * Punto (o Vettore)++`: moltiplica la _Matrice_ per il _Punto / Vettore_ indicato e restituisce un
+punto.
 
 [EXAMPLE]
 ====
@@ -87,7 +88,8 @@ Il numero di righe della prima matrice deve essere uguale al numero di colonne d
 
 ====
 
-* `Matrice 3x3 * Punto (o Vettore)`: moltiplica la _Matrice_ per il _Punto / Vettore_ indicato e restituisce un punto.
+* `++Matrice 3x3 * Punto (o Vettore)++`: moltiplica la _Matrice_ per il _Punto / Vettore_ indicato e restituisce un
+punto.
 
 [EXAMPLE]
 ====
@@ -100,16 +102,16 @@ Il numero di righe della prima matrice deve essere uguale al numero di colonne d
 ====
 
 Per le trasformazioni affini in cui si utilizzano coordinate omogenee: (x, y, 1) denota un punto e (x, y, 0) un vettore.
-L'esempio precedente è quindi equivalente a: `{{1, 2, 3}, {4, 5, 6}, {0, 0, 1}} * {1, 2, 1}`.
+L'esempio precedente è quindi equivalente a: `++{{1, 2, 3}, {4, 5, 6}, {0, 0, 1}} * {1, 2, 1}++`.
 
 ====
 
-* `Matrice1 / Matrice2`: divide ciascun elemento della _Matrice1_ per il corrispondente elemento della _Matrice2_.
+* `++Matrice1 / Matrice2++`: divide ciascun elemento della _Matrice1_ per il corrispondente elemento della _Matrice2_.
 
 [NOTE]
 ====
 
-Naturalmente GeoGebra supporta la sintassi `Matrice1 * Matrice2 ^(-1)` .
+Naturalmente GeoGebra supporta la sintassi `++Matrice1 * Matrice2 ^(-1)++` .
 
 ====
 

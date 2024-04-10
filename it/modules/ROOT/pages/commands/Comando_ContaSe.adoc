@@ -8,8 +8,8 @@ ContaSe(Condizione, Lista)::
 
 *Esempi:*
 
-* `ContaSe(x < 3, {1, 2, 3, 4, 5})` restituisce il numero 2.
-* `ContaSe(x < 3, A1:A10)`, dove _A1:A10_ è un intervallo di celle nel foglio di calcolo: conta tutte le celle
+* `++ContaSe(x < 3, {1, 2, 3, 4, 5})++` restituisce il numero 2.
+* `++ContaSe(x < 3, A1:A10)++`, dove _A1:A10_ è un intervallo di celle nel foglio di calcolo: conta tutte le celle
 contenenti valori minori di 3.
 
 ====
@@ -18,7 +18,7 @@ contenenti valori minori di 3.
 ====
 
 Alle liste di numeri è possibile applicare condizioni arbitrarie, mentre alle liste di altri oggetti è possibile
-applicare esclusivamente condizioni del tipo `x==costante` o `x!=costante`.
+applicare esclusivamente condizioni del tipo `++x==costante++` o `++x!=costante++`.
 
 ====
 
@@ -28,8 +28,8 @@ ContaSe(Condizione, Variabile, Lista)::
 [EXAMPLE]
 ====
 
-Dati i punti _P_, _Q_, _R_ `ContaSe(x(A) < 3, A, {P, Q, R})` conta solo i punti aventi ascissa minore di 3. La variabile
-di riferimento _A_ viene quindi sostituita in successione prima con _P_, poi _Q_, poi _R_. Quindi
-`ContaSe(x(A) < 3, A, {(0, 1), (4, 2), (2, 2)})` restituisce il numero _2_.
+Dati i punti _P_, _Q_, _R_ `++ContaSe(x(A) < 3, A, {P, Q, R})++` conta solo i punti aventi ascissa minore di 3. La
+variabile di riferimento _A_ viene quindi sostituita in successione prima con _P_, poi _Q_, poi _R_. Quindi
+`++ContaSe(x(A) < 3, A, {(0, 1), (4, 2), (2, 2)})++` restituisce il numero _2_.
 
 ====

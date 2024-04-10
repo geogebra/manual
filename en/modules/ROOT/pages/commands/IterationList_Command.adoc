@@ -7,7 +7,7 @@ IterationList( <Function>, <Start Value>, <Number of Iterations> )::
 [EXAMPLE]
 ====
 
-After defining `f(x) = x^2` the command `IterationList(f, 3, 2)` gives you the list _\{3, 9, 81}_.
+After defining `++f(x) = x^2++` the command `++IterationList(f, 3, 2)++` gives you the list _\{3, 9, 81}_.
 
 ====
 
@@ -18,8 +18,8 @@ numbers _a~s~_,_a~s+1~_,....,_a~s+n~_ where for _k>s_ we have _a~k+1~=f(k, a~k~)
 [EXAMPLE]
 ====
 
-Define `f(k,a)=(k+1)*a`, which corresponds to the recursive definition of factorial. The command
-`IterationList(f, {3, 6}, 4)` gives you the list _\{6, 24, 120, 720, 5040}_.
+Define `++f(k,a)=(k+1)*a++`, which corresponds to the recursive definition of factorial. The command
+`++IterationList(f, {3, 6}, 4)++` gives you the list _\{6, 24, 120, 720, 5040}_.
 
 ====
 
@@ -31,7 +31,7 @@ IterationList( <Expression>, <Variable Name>, ..., <Start Values>, <Number of It
 [EXAMPLE]
 ====
 
-Let _A_, _B_ be points. The command `IterationList(Midpoint(A, C), C, {B}, 3)` internally computes values __C__~0~ =
+Let _A_, _B_ be points. The command `++IterationList(Midpoint(A, C), C, {B}, 3)++` internally computes values __C__~0~ =
 _B_,   __C__~1~ = _Midpoint_(_A_, __C__~0~),   __C__~2~ = _Midpoint_(_A_, __C__~1~),   __C__~3~ = _Midpoint_(_A_,
 __C__~2~) and yields \{__C__~0~, __C__~1~, __C__~2~, __C__~3~}. Hence for _A_ = (0,0) and _B_ = (8,0) the result will be
 \{(8,0), (4,0), (2,0), (1,0)}.
@@ -41,9 +41,9 @@ __C__~2~) and yields \{__C__~0~, __C__~1~, __C__~2~, __C__~3~}. Hence for _A_ = 
 [EXAMPLE]
 ====
 
-Let _f__0, _f__1 be numbers. `IterationList(a + b, a, b, {f_0, f_1}, 5)` fills the first 2 values of the resulting list
-from the start values. Afterwards the values are computed as __f__~2~ = __f__~0~ + __f__~1~,   __f__~3~ = __f__~1~ +
-__f__~2~,   __f__~4~ = __f__~2~ + __f__~3~,   __f__~5~ = __f__~3~ + __f__~4~. Hence for _f__0 = _f__1 = 1 the result
+Let _f__0, _f__1 be numbers. `++IterationList(a + b, a, b, {f_0, f_1}, 5)++` fills the first 2 values of the resulting
+list from the start values. Afterwards the values are computed as __f__~2~ = __f__~0~ + __f__~1~,   __f__~3~ = __f__~1~
++ __f__~2~,   __f__~4~ = __f__~2~ + __f__~3~,   __f__~5~ = __f__~3~ + __f__~4~. Hence for _f__0 = _f__1 = 1 the result
 will be \{1, 1, 2, 3, 5, 8}.
 
 ====

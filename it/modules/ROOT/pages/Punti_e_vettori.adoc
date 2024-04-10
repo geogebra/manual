@@ -22,15 +22,17 @@ convenzione non è obbligatoria.
 
 *Esempi:*
 
-* Per definire un punto _P_ o un vettore _v_ del piano in coordinate cartesiane digitare `P = (1, 0)` o `v = (0, 5)`.
-* Per definire un punto _P_ o un vettore _v_ dello spazio in coordinate cartesiane digitare `P = (1, 2, 3)` o
-`v = (2, 5, -1)`.
-* Per definire un punto _P_ o un vettore _v_ del piano in coordinate polari digitare `P = (1; 0°)` o `v = (5; 90°)`.
+* Per definire un punto _P_ o un vettore _v_ del piano in coordinate cartesiane digitare `++P = (1, 0)++` o
+`++v = (0, 5)++`.
+* Per definire un punto _P_ o un vettore _v_ dello spazio in coordinate cartesiane digitare `++P = (1, 2, 3)++` o
+`++v = (2, 5, -1)++`.
+* Per definire un punto _P_ o un vettore _v_ del piano in coordinate polari digitare `++P = (1; 0°)++` o
+`++v = (5; 90°)++`.
 * Per definire un punto _P_ dello spazio in coordinate sferiche, digitare una terna del tipo (ρ, θ, φ), ad esempio
-`P = (1; 60°; 30°)`.
+`++P = (1; 60°; 30°)++`.
 * Per definire un punto visualizzato anche nella image:16px-Menu_view_spreadsheet.svg.png[Menu view
 spreadsheet.svg,width=16,height=16] xref:/Vista_Foglio_di_calcolo.adoc[Vista Foglio di calcolo], assegnare al punto un
-nume uguale all'indirizzo di cella: `A2 = (1, 0)`.
+nume uguale all'indirizzo di cella: `++A2 = (1, 0)++`.
 
 ====
 
@@ -39,9 +41,9 @@ nume uguale all'indirizzo di cella: `A2 = (1, 0)`.
 
 *Esempi:*
 
-* Se `P=(1,2)` è un punto e `v=(3,4)` è un vettore, `x(P)` restituisce 1, `y(v)` restituisce 4
-* `abs(P)` restituisce 2.24 e `arg(P)` restituisce 26.57° (se il foglio di lavoro è impostato per la visualizzazione
-degli angoli in gradi).
+* Se `++P=(1,2)++` è un punto e `++v=(3,4)++` è un vettore, `++x(P)++` restituisce 1, `++y(v)++` restituisce 4
+* `++abs(P)++` restituisce 2.24 e `++arg(P)++` restituisce 26.57° (se il foglio di lavoro è impostato per la
+visualizzazione degli angoli in gradi).
 
 ====
 
@@ -50,10 +52,10 @@ degli angoli in gradi).
 
 * Se non viene digitato il simbolo dei gradi (°), GeoGebra considererà l'ampiezza dell'angolo inserito in radianti.
 * Per ottenere le singole coordinate o le componenti di un vettore, utilizzare le
-xref:/Funzioni_e_operatori_predefiniti.adoc[funzioni predefinite] `x()`, `y()` e `z()`.
-* Per ottenere le coordinate polari di un punto _P_ nel piano utilizzare i comandi `abs(P)` e `arg(P)`, oppure i comandi
-xref:/commands/Comando_Lunghezza.adoc[Lunghezza] e xref:/commands/Comando_Angolo.adoc[Angolo], mentre nello spazio è
-necessario utilizzare `abs(P)`, `arg(P)` e `alt(P)`.
+xref:/Funzioni_e_operatori_predefiniti.adoc[funzioni predefinite] `++x()++`, `++y()++` e `++z()++`.
+* Per ottenere le coordinate polari di un punto _P_ nel piano utilizzare i comandi `++abs(P)++` e `++arg(P)++`, oppure i
+comandi xref:/commands/Comando_Lunghezza.adoc[Lunghezza] e xref:/commands/Comando_Angolo.adoc[Angolo], mentre nello
+spazio è necessario utilizzare `++abs(P)++`, `++arg(P)++` e `++alt(P)++`.
 
 ====
 
@@ -64,24 +66,25 @@ In GeoGebra è inoltre possibile effettuare operazioni con punti e vettori.
 [EXAMPLE]
 ====
 
-* Per creare il punto medio _M_ tra due punti _A_ e _B_ digitare nella barra di inserimento `M = (A + B) / 2`.
-* Per calcolare la lunghezza (norma) di un vettore _v_ digitare `sqrt(v * v)` oppure `Lunghezza(v)`
+* Per creare il punto medio _M_ tra due punti _A_ e _B_ digitare nella barra di inserimento `++M = (A + B) / 2++`.
+* Per calcolare la lunghezza (norma) di un vettore _v_ digitare `++sqrt(v * v)++` oppure `++Lunghezza(v)++`
 * Per ottenere le coordinate del _punto di applicazione_ e del _punto finale_ di un vettore _v_, utilizzare
-rispettivamente i comandi `Punto(v, 0) ` e `Punto(v, 1) `.
-* Se _A = (a, b)_, allora `A + 1` restituisce _(a + 1, b + 1)_. Se _A_ è un xref:/Numeri_complessi.adoc[numero
-complesso] _a + bί_, allora `A + 1` restituisce _a + 1 + bί_.
+rispettivamente i comandi `++Punto(v, 0) ++` e `++Punto(v, 1) ++`.
+* Se _A = (a, b)_, allora `++A + 1++` restituisce _(a + 1, b + 1)_. Se _A_ è un xref:/Numeri_complessi.adoc[numero
+complesso] _a + bί_, allora `++A + 1++` restituisce _a + 1 + bί_.
 
 ====
 
 == [#Prodotto_vettoriale]#Prodotto vettoriale#
 
-Dati due punti o vettori, `(a,b) ⊗ (c,d)` restituisce un numero, che è la coordinata _z_ del prodotto vettoriale _(a, b,
-0) ⊗ (c, d, 0)_. Una simile sintassi è inoltre applicabile anche alle liste: in questo caso il risultato sarà una lista.
+Dati due punti o vettori, `++(a,b) ⊗ (c,d)++` restituisce un numero, che è la coordinata _z_ del prodotto vettoriale
+_(a, b, 0) ⊗ (c, d, 0)_. Una simile sintassi è inoltre applicabile anche alle liste: in questo caso il risultato sarà
+una lista.
 
 [EXAMPLE]
 ====
 
-* `{1,2} ⊗ {4,5}` restituisce _\{0, 0, -3}_
-* `{1,2,3} ⊗ {4,5,6}` restituisce _\{3, 6, -3}_.
+* `++{1,2} ⊗ {4,5}++` restituisce _\{0, 0, -3}_
+* `++{1,2,3} ⊗ {4,5,6}++` restituisce _\{3, 6, -3}_.
 
 ====

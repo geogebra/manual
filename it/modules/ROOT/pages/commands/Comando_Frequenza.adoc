@@ -3,13 +3,13 @@
 Frequenza(Lista dei dati grezzi)::
   Restituisce una lista contenente il conteggio delle occorrenze di ciascun dato grezzo (unico). La lista inserita può
   contenere numeri o testo. La lista restituita è ordinata rispetto all'ordine crescente della frequenza dei dati
-  grezzi. Per ottenere la lista dei dati grezzi unici utilizzare il comando `Unico(Lista dati grezzi)`.
+  grezzi. Per ottenere la lista dei dati grezzi unici utilizzare il comando `++Unico(Lista dati grezzi)++`.
 
 [EXAMPLE]
 ====
 
-Sia `lista1={"a", "a", "x", "x", "x", "b"}`, allora `Frequenza(lista1)` restituisce la lista \{ 2, 1, 3 }, mentre
-`Unico(lista1)` restituisce la lista \{"a", "b", "x"}.
+Sia `++lista1={"a", "a", "x", "x", "x", "b"}++`, allora `++Frequenza(lista1)++` restituisce la lista \{ 2, 1, 3 },
+mentre `++Unico(lista1)++` restituisce la lista \{"a", "b", "x"}.
 
 ====
 
@@ -21,8 +21,8 @@ Frequenza(Booleano Cumulata, Lista dati grezzi)::
 [EXAMPLE]
 ====
 
-Sia `lista1={0, 0, 0, 1, 1, 2}`, allora `Frequenza(true, lista1)` restituisce la lista \{3, 5, 6}, mentre
-`Frequenza(false, lista1)` restituisce la lista \{3, 2, 1}. `Unico(lista1)` restituisce la lista \{0, 1, 2}.
+Sia `++lista1={0, 0, 0, 1, 1, 2}++`, allora `++Frequenza(true, lista1)++` restituisce la lista \{3, 5, 6}, mentre
+`++Frequenza(false, lista1)++` restituisce la lista \{3, 2, 1}. `++Unico(lista1)++` restituisce la lista \{0, 1, 2}.
 
 ====
 
@@ -34,7 +34,7 @@ Frequenza(Lista degli estremi delle classi, Lista dati grezzi)::
 [EXAMPLE]
 ====
 
-*Esempi:* `Frequenza({1, 2, 3}, {1, 1, 2, 3})` restituisce la lista \{2, 2}.
+*Esempi:* `++Frequenza({1, 2, 3}, {1, 1, 2, 3})++` restituisce la lista \{2, 2}.
 
 ====
 
@@ -42,14 +42,14 @@ Frequenza(Lista di testi, Lista di testi)::
   Restituisce una matrice di contingenza contenente il conteggio delle coppie di valori provenienti dalle due liste
   indicate. Le righe della matrice corrispondono ai valori unici della prima lista, mentre le colonne corrispondono ai
   valori unici della seconda lista indicata. Per ottenere la lista dei valori unici di ciascuna lista, utilizzare il
-  comando `Unico(Lista di testi)`.
+  comando `++Unico(Lista di testi)++`.
 
 [EXAMPLE]
 ====
 
-Siano `lista1= {"a", "b", "b", "c", "c", "c", "c"}` e `lista2=  {"a", "b", "a", "a", "c", "c", "d"}`. Allora
-`Frequenza(lista1, lista2)` restituisce la matrice stem:[\begin\{pmatrix} 2 & 0 & 1 & 1\\ 0 &1 & 0 &1 \\ 0 & 0 & 0 & 1
-\\ \end\{pmatrix}]
+Siano `++lista1= {"a", "b", "b", "c", "c", "c", "c"}++` e `++lista2=  {"a", "b", "a", "a", "c", "c", "d"}++`. Allora
+`++Frequenza(lista1, lista2)++` restituisce la matrice stem:[\begin\{pmatrix} 2 & 0 & 1 & 1\\ 0 &1 & 0 &1 \\ 0 & 0 & 0 &
+1 \\ \end\{pmatrix}]
 
 ====
 
@@ -70,9 +70,9 @@ Frequenza(Lista degli estremi delle classi, Lista dati grezzi, Usa densità, Fat
 [EXAMPLE]
 ====
 
-Siano `dati={1, 2, 2, 2, 3, 3, 4, 4, 4, 4}` la lista dei dati grezzi e `classi={0, 2, 5}` la lista degli estremi delle
-classi. Allora `Frequenza(classi, dati, false)` e `Frequenza(classi, dati)` restituiscono la lista \{1, 9}, mentre
-`Frequenza(classi, dati, true)` restituisce la lista \{0.5, 3}.
+Siano `++dati={1, 2, 2, 2, 3, 3, 4, 4, 4, 4}++` la lista dei dati grezzi e `++classi={0, 2, 5}++` la lista degli estremi
+delle classi. Allora `++Frequenza(classi, dati, false)++` e `++Frequenza(classi, dati)++` restituiscono la lista \{1,
+9}, mentre `++Frequenza(classi, dati, true)++` restituisce la lista \{0.5, 3}.
 
 ====
 

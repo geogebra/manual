@@ -8,8 +8,8 @@ Frequency( <List of Raw Data> )::
 [EXAMPLE]
 ====
 
-Enter `list1 = { "a", "a", "x", "x", "x", "b" }`. `Frequency(list1)` returns the list _\{ 2, 1, 3 }_. `Unique(list1)`
-returns the list _\{ "a", "b", "x" }_.
+Enter `++list1 = { "a", "a", "x", "x", "x", "b" }++`. `++Frequency(list1)++` returns the list _\{ 2, 1, 3 }_.
+`++Unique(list1)++` returns the list _\{ "a", "b", "x" }_.
 
 ====
 
@@ -21,8 +21,8 @@ Frequency( <Boolean Cumulative>, <List of Raw Data> )::
 [EXAMPLE]
 ====
 
-Enter `list1 = { 0, 0, 0, 1, 1, 2 }`. `Frequency(true, list1)` returns the list _\{ 3, 5, 6 }_.
-`Frequency(false, list1)` returns the list _\{ 3, 2, 1}_. `Unique(list1)` returns the list _\{ 0, 1, 2 }_.
+Enter `++list1 = { 0, 0, 0, 1, 1, 2 }++`. `++Frequency(true, list1)++` returns the list _\{ 3, 5, 6 }_.
+`++Frequency(false, list1)++` returns the list _\{ 3, 2, 1}_. `++Unique(list1)++` returns the list _\{ 0, 1, 2 }_.
 
 ====
 
@@ -34,7 +34,7 @@ Frequency( <List of Class Boundaries>, <List of Raw Data> )::
 [EXAMPLE]
 ====
 
-`Frequency({1, 2, 3},  {1, 1, 2, 3})` returns the list _\{ 2, 2 }_.
+`++Frequency({1, 2, 3},  {1, 1, 2, 3})++` returns the list _\{ 2, 2 }_.
 
 ====
 
@@ -46,8 +46,8 @@ Frequency( <List of Text>, <List of Text> )::
 [EXAMPLE]
 ====
 
-Let `list1 = {"a", "b", "b", "c", "c", "c", "c"}` and `list2 =  {"a", "b", "a", "a", "c", "c", "d"}`. Then
-`Frequency(list1, list2)` returns the matrix stem:[\begin\{pmatrix} 1 & 0 & 0 & 0\\ 1 &1 & 0 &0 \\ 1 & 0 & 2 & 1 \\
+Let `++list1 = {"a", "b", "b", "c", "c", "c", "c"}++` and `++list2 =  {"a", "b", "a", "a", "c", "c", "d"}++`. Then
+`++Frequency(list1, list2)++` returns the matrix stem:[\begin\{pmatrix} 1 & 0 & 0 & 0\\ 1 &1 & 0 &0 \\ 1 & 0 & 2 & 1 \\
 \end\{pmatrix}]
 
 ====
@@ -75,9 +75,9 @@ Frequency( <List of Class Boundaries>, <List of Raw Data>, <Use Density> , <Dens
 [EXAMPLE]
 ====
 
-Let `data = {1, 2, 2, 2, 3, 3, 4, 4, 4, 4}` be the list of raw data and `classes={0, 2, 5}` the list of class
-boundaries. Then `Frequency(classes, data, false)` and `Frequency(classes, data)` both return the list _\{1, 9}_, while
-`Frequency(classes, data, true)` returns the list _\{0.5, 3}_.
+Let `++data = {1, 2, 2, 2, 3, 3, 4, 4, 4, 4}++` be the list of raw data and `++classes={0, 2, 5}++` the list of class
+boundaries. Then `++Frequency(classes, data, false)++` and `++Frequency(classes, data)++` both return the list _\{1,
+9}_, while `++Frequency(classes, data, true)++` returns the list _\{0.5, 3}_.
 
 ====
 

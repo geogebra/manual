@@ -9,7 +9,7 @@ Zip( <Expression>, <Var1>, <List1>, <Var2>, <List2>, ...)::
 [EXAMPLE]
 ====
 
-Let P, Q, R, S be some points. `Zip(Midpoint(A, B), A, {P, Q}, B, {R, S})` returns a list containing
+Let P, Q, R, S be some points. `++Zip(Midpoint(A, B), A, {P, Q}, B, {R, S})++` returns a list containing
 xref:/commands/Midpoint_Command.adoc[midpoints] of segments _PR_ and _QS_.
 
 ====
@@ -17,14 +17,15 @@ xref:/commands/Midpoint_Command.adoc[midpoints] of segments _PR_ and _QS_.
 [EXAMPLE]
 ====
 
-Let _list1=\{x^2, x^3, x^6}_ be a list of polynomials. `Zip(Degree(a), a, list1)` returns the list _\{2, 3, 6}_.
+Let _list1=\{x^2, x^3, x^6}_ be a list of polynomials. `++Zip(Degree(a), a, list1)++` returns the list _\{2, 3, 6}_.
 
 ====
 
 [EXAMPLE]
 ====
 
-Let _list1=\{1, 2, 5}_ be a list of numbers. `Zip(Simplify(a*x^(b-1)), a, list1,b)` returns the list _\{1, 2x, 5x²}_.
+Let _list1=\{1, 2, 5}_ be a list of numbers. `++Zip(Simplify(a*x^(b-1)), a, list1,b)++` returns the list _\{1, 2x,
+5x²}_.
 
 ====
 
@@ -40,6 +41,6 @@ In each list the elements must be of the same type.
 [EXAMPLE]
 ====
 
-`Zip(f(2), f, {x+1,x+3})` returns the list _\{3, 5}_.
+`++Zip(f(2), f, {x+1,x+3})++` returns the list _\{3, 5}_.
 
 ====

@@ -7,13 +7,13 @@ Spline( <List of Points>, <Order ≥ 3> )::
 Spline( <List of Points>, <Order ≥ 3>, <Weight Function> )::
   Creates a spline with given order through all points. The weight function says what should be the difference of _t_
   values for point __P__~i~ and __P__~i+1~ given their difference __P__~i+1~ - __P__~i~ = (_x_, _y_). To get the spline
-  you expect from "function" algorithm you should use `abs(x)+0*y`, to get the GeoGebra's default spline you can use
-  `sqrt(x^2+y^2)`.
+  you expect from "function" algorithm you should use `++abs(x)+0*y++`, to get the GeoGebra's default spline you can use
+  `++sqrt(x^2+y^2)++`.
 
 [NOTE]
 ====
 
-The choice of default makes the result behave nicely when transformed, making sure that `Rotate(Spline(list), a)` gives
-the same as `Spline(Rotate(list, a))`.
+The choice of default makes the result behave nicely when transformed, making sure that `++Rotate(Spline(list), a)++`
+gives the same as `++Spline(Rotate(list, a))++`.
 
 ====

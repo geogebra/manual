@@ -23,27 +23,27 @@ varie ragioni, non possono essere rese in forma "leggibile".
 [EXAMPLE]
 ====
 
-Dopo avere creato il triangolo di vertici _A_, _B_ e _C_, definire `D=PuntoMedio(B,C)`, `E=PuntoMedio(A,C)`,
-`p=Retta(A,B)`, `q=Retta(D,E)`. Se `DettagliVerifica(p∥q) ` restituisce \{true}, ciò significa che è possibile costruire
-il grafico e che la retta _DE_ dei punti medi di due lati è parallela al lato _AB_.
+Dopo avere creato il triangolo di vertici _A_, _B_ e _C_, definire `++D=PuntoMedio(B,C)++`, `++E=PuntoMedio(A,C)++`,
+`++p=Retta(A,B)++`, `++q=Retta(D,E)++`. Se `++DettagliVerifica(p∥q) ++` restituisce \{true}, ciò significa che è
+possibile costruire il grafico e che la retta _DE_ dei punti medi di due lati è parallela al lato _AB_.
 
 ====
 
 [EXAMPLE]
 ====
 
-Sia _AB_ il segmento _a_. Definire `C=PuntoMedio(A,B)`, `b=AsseSegmento(A,B)`, `D=Intersezione(a,b)`. Il comando
-`DettagliVerifica(C==D)` restituisce \{true,\{"TestUguaglianza(A,B)"}}: ciò significa che se i punti _A_ e _B_ sono
-distinti, allora i punti _C_ e _D_ saranno coincidenti.
+Sia _AB_ il segmento _a_. Definire `++C=PuntoMedio(A,B)++`, `++b=AsseSegmento(A,B)++`, `++D=Intersezione(a,b)++`. Il
+comando `++DettagliVerifica(C==D)++` restituisce \{true,\{"TestUguaglianza(A,B)"}}: ciò significa che se i punti _A_ e
+_B_ sono distinti, allora i punti _C_ e _D_ saranno coincidenti.
 
 ====
 
 [EXAMPLE]
 ====
 
-Sia _AB_ il segmento _a_. Definire `l=Retta(A,B)`. Sia _C_ un punto arbitrario della retta _l_ e siano `b=Segmento(B,C)`
-e `c=Segmento(A,C)`. Il comando `DettagliVerifica(a==b+c)` restituisce \{true,\{"a+b==c", "b==a+c"}}: ciò significa che
-se non si verifica che stem:[a+b=c] e stem:[b=a+c], allora stem:[a=b+c].
+Sia _AB_ il segmento _a_. Definire `++l=Retta(A,B)++`. Sia _C_ un punto arbitrario della retta _l_ e siano
+`++b=Segmento(B,C)++` e `++c=Segmento(A,C)++`. Il comando `++DettagliVerifica(a==b+c)++` restituisce \{true,\{"a+b==c",
+"b==a+c"}}: ciò significa che se non si verifica che stem:[a+b=c] e stem:[b=a+c], allora stem:[a=b+c].
 
 ====
 

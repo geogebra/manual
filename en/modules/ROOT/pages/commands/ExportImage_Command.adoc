@@ -21,73 +21,73 @@ View__
 
 *Examples:*
 
-* `ExportImage("scale", 5)`
+* `++ExportImage("scale", 5)++`
 
 Shows a popup of the current view so that the user can right-click -> Save Image As...
 
-* `ExportImage("filename", "image.png")`
+* `++ExportImage("filename", "image.png")++`
 
 Saves a file called "image.png" of the current view
 
-* `ExportImage("filename", "image.png", "view", 2)`
+* `++ExportImage("filename", "image.png", "view", 2)++`
 
 Saves a file called "image.png" of Graphics View 2
 
-* `ExportImage("filename", "image.png", "view", -1)`
+* `++ExportImage("filename", "image.png", "view", -1)++`
 
 Saves a file called "image.png" of View 3D Graphics
 
-* `ExportImage("filename", "image.png", "dpi", 300)`
+* `++ExportImage("filename", "image.png", "dpi", 300)++`
 
 Saves a file called "image.png" of the current view at 300 dpi (dots-per-inch)
 
-* `ExportImage("filename", "image.png", "scale", 2)`
+* `++ExportImage("filename", "image.png", "scale", 2)++`
 
 Saves a file called "image.png" of the current view at scale 2 (ie twice nominal screen resolution)
 
-* `ExportImage("filename", "image.png", "scalecm", 2, "dpi", 600)`
+* `++ExportImage("filename", "image.png", "scalecm", 2, "dpi", 600)++`
 
 Saves a file called "image.png" of the current view at 600 dpi at a scale 1 unit = 2 cm
 
-* `ExportImage("filename", "image.png", "width", 1000)`
+* `++ExportImage("filename", "image.png", "width", 1000)++`
 
 Saves a file called "image.png" of the current view with width = 1000 pixels
 
-* `ExportImage("filename", "image.png", "height", 1000)`
+* `++ExportImage("filename", "image.png", "height", 1000)++`
 
 Saves a file called "image.png" of the current view with height = 1000 pixels
 
-* `ExportImage("filename", "image.png", "transparent", true)`
+* `++ExportImage("filename", "image.png", "transparent", true)++`
 
 Saves a transparent PNG file called "image.png"
 
 Setting the “transparent” property as _false_ saves also background images.
 
-* `ExportImage("filename", "image.svg", "type", "svg")`
+* `++ExportImage("filename", "image.svg", "type", "svg")++`
 
 Saves a file called "image.svg" of the current view in SVG format
 
-* `ExportImage("filename", "image.gif", "type", "gif", "slider", a, "loop", true, "time", 200, "width", 400)`
+* `++ExportImage("filename", "image.gif", "type", "gif", "slider", a, "loop", true, "time", 200, "width", 400)++`
 
 Saves a looping animated GIF of the current view controlled by slider "a" with 200ms between frames. *Keep the width and
 number of slider steps small*
 
-* `ExportImage("filename", "image.gif", "type", "gif", "view", -1, "rotate", 360°, "slider", a, "loop", true, "time", 200)`
+* `++ExportImage("filename", "image.gif", "type", "gif", "view", -1, "rotate", 360°, "slider", a, "loop", true, "time", 200)++`
 
 Saves a looping animated GIF of the current view controlled by slider "a" with 200ms between frames and rotates the view
 360° during the animation. *Keep the size of the view and the number of steps small*
 
-* `ExportImage("type", "pdf", "filename", "test.pdf")`
+* `++ExportImage("type", "pdf", "filename", "test.pdf")++`
 
 Creates a PDF of the current view (or a 2-page PDF if Graphics View 2 is open)
 
-* `ExportImage("type", "pdf", "filename", "test.pdf", "slider", n)`
+* `++ExportImage("type", "pdf", "filename", "test.pdf", "slider", n)++`
 
 Creates a *multi-page* PDF of the current view where each page corresponds to one step of the slider "n"
 
-* `pic1 = ExportImage("view", 2, "corner", A, "corner2", B)`
+* `++pic1 = ExportImage("view", 2, "corner", A, "corner2", B)++`
 
-Creates a GeoGebra image of View 2 and puts it in the view with position defined by `A` and `B`
+Creates a GeoGebra image of View 2 and puts it in the view with position defined by `++A++` and `++B++`
 
 ====
 
@@ -96,16 +96,17 @@ Creates a GeoGebra image of View 2 and puts it in the view with position defined
 
 *Notes:*
 
-* In GeoGebra Classic 5 if there is no `filename` parameter the image will be copied to the Clipboard. In the Chrome
-browser you can specify `"clipboard", true`
-* To crop an export, make the Points `Export_1` and `Export_2` to define the rectangle to crop (*These also crop the
-exports from the menus eg File -> Export Image*)
+* In GeoGebra Classic 5 if there is no `++filename++` parameter the image will be copied to the Clipboard. In the Chrome
+browser you can specify `++"clipboard", true++`
+* To crop an export, make the Points `++Export_1++` and `++Export_2++` to define the rectangle to crop (*These also crop
+the exports from the menus eg File -> Export Image*)
 * Some syntaxes aren't supported in GeoGebra 5 Classic
-* In Chrome, you can try the experimental syntax `"type", "webm"` to get a faster & smaller export than with animated
-GIFs
-* For the 2D Graphics Views you can try this syntax to get a monochrome export `"grayscale", true` (PNG format only)
+* In Chrome, you can try the experimental syntax `++"type", "webm"++` to get a faster & smaller export than with
+animated GIFs
+* For the 2D Graphics Views you can try this syntax to get a monochrome export `++"grayscale", true++` (PNG format only)
 * For the 3D Graphics View, only bitmaps (eg png, gif) are supported. In GeoGebra Classic 5 you can try this to get a
-high-resolution output `ExportImage("filename", "c:\Users\<username>\AppData\image.png", "view", -1, "width", 2000)`.
-Change *<username>* to your Windows username
+high-resolution output
+`++ExportImage("filename", "c:\Users\<username>\AppData\image.png", "view", -1, "width", 2000)++`. Change *<username>*
+to your Windows username
 
 ====

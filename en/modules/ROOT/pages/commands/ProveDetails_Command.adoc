@@ -23,27 +23,27 @@ translated to human readable form for some reasons.
 [EXAMPLE]
 ====
 
-Let us define a triangle with vertices _A_, _B_ and _C_, and define `D=MidPoint(B,C)`, `E=MidPoint(A,C)`, `p=Line(A,B)`,
-`q=Line(D,E)`. Now `ProveDetails(p∥q)` returns \{true}, which means that if the diagram can be constructed, then the
-midline _DE_ of the triangle is parallel to the side _AB_.
+Let us define a triangle with vertices _A_, _B_ and _C_, and define `++D=MidPoint(B,C)++`, `++E=MidPoint(A,C)++`,
+`++p=Line(A,B)++`, `++q=Line(D,E)++`. Now `++ProveDetails(p∥q)++` returns \{true}, which means that if the diagram can
+be constructed, then the midline _DE_ of the triangle is parallel to the side _AB_.
 
 ====
 
 [EXAMPLE]
 ====
 
-Let _AB_ be the segment _a_, and define `C=MidPoint(A,B)`, `b=PerpendicularBisector(A,B)`, `D=Intersect(a,b)`. Now
-`ProveDetails(C==D)` returns \{true,\{"AreEqual(A,B)"}}: it means that if the points _A_ and _B_ differ, then the points
-_C_ and _D_ will coincide.
+Let _AB_ be the segment _a_, and define `++C=MidPoint(A,B)++`, `++b=PerpendicularBisector(A,B)++`,
+`++D=Intersect(a,b)++`. Now `++ProveDetails(C==D)++` returns \{true,\{"AreEqual(A,B)"}}: it means that if the points _A_
+and _B_ differ, then the points _C_ and _D_ will coincide.
 
 ====
 
 [EXAMPLE]
 ====
 
-Let _AB_ be the segment _a_, and define `l=Line(A,B)`. Let _C_ be an arbitrary point on line _l_, moreover let
-`b=Segment(B,C)`, `c=Segment(A,C)`. Now `ProveDetails(a==b+c)` returns \{true,\{"a+b==c", "b==a+c"}}: it means that if
-neither stem:[a+b=c], nor stem:[b=a+c], then stem:[a=b+c].
+Let _AB_ be the segment _a_, and define `++l=Line(A,B)++`. Let _C_ be an arbitrary point on line _l_, moreover let
+`++b=Segment(B,C)++`, `++c=Segment(A,C)++`. Now `++ProveDetails(a==b+c)++` returns \{true,\{"a+b==c", "b==a+c"}}: it
+means that if neither stem:[a+b=c], nor stem:[b=a+c], then stem:[a=b+c].
 
 ====
 

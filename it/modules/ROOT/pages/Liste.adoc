@@ -9,10 +9,10 @@ Per inserire le parentesi graffe da tastiera italiana sono disponibili i seguent
 [EXAMPLE]
 ====
 
-* `L = {A, B, C}` crea la lista contenente i punti _A_, _B_ e _C_ precedentemente definiti.
-* `L = {(0, 0), (1, 1), (2, 2)}` crea i tre punti senza nome immessi, e la lista contenente tali punti
-* Per ottenere rapidamente una lista di interi successivi, è possibile utilizzare la sintassi rapida `..`: ad esempio
-`-5..5` crea la lista \{_-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5_}.
+* `++L = {A, B, C}++` crea la lista contenente i punti _A_, _B_ e _C_ precedentemente definiti.
+* `++L = {(0, 0), (1, 1), (2, 2)}++` crea i tre punti senza nome immessi, e la lista contenente tali punti
+* Per ottenere rapidamente una lista di interi successivi, è possibile utilizzare la sintassi rapida `++..++`: ad
+esempio `++-5..5++` crea la lista \{_-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5_}.
 
 ====
 
@@ -34,14 +34,14 @@ xref:/commands/Comando_Elemento.adoc[comando Elemento] o la sintassi semplificat
 [EXAMPLE]
 ====
 
-Sia `lista = {1, 2, 3, 4, 5}`, allora:
+Sia `++lista = {1, 2, 3, 4, 5}++`, allora:
 
-* `lista(1)` restituisce il primo elemento della lista: _1_
-* `lista(2)` restituisce il secondo elemento della lista: _2_
+* `++lista(1)++` restituisce il primo elemento della lista: _1_
+* `++lista(2)++` restituisce il secondo elemento della lista: _2_
 ** .../...
-* `lista(-1)` restituisce l'ultimo elemento della lista: _5_
-* `lista(-5)` restituisce il primo elemento della lista: _1_
-* `lista(0)` restituisce _non definito_, come pure la sintassi `lista(k)` per k > 5 o k < -5
+* `++lista(-1)++` restituisce l'ultimo elemento della lista: _5_
+* `++lista(-5)++` restituisce il primo elemento della lista: _1_
+* `++lista(0)++` restituisce _non definito_, come pure la sintassi `++lista(k)++` per k > 5 o k < -5
 
 ====
 
@@ -49,23 +49,23 @@ Sia `lista = {1, 2, 3, 4, 5}`, allora:
 
 Per confrontare due liste di oggetti utilizzare la seguente sintassi:
 
-* _lista1_ `==` _lista2_: verifica se le due liste sono https://it.wikipedia.org/wiki/Ennupla[n-uple] ordinate uguali, e
-restituisce il risultato _true_ oppure _false_.
-* _lista1_ `!=` _lista2_: verifica se le due liste sono n-uple ordinate diverse, e restituisce il risultato _true_
+* _lista1_ `++==++` _lista2_: verifica se le due liste sono https://it.wikipedia.org/wiki/Ennupla[n-uple] ordinate
+uguali, e restituisce il risultato _true_ oppure _false_.
+* _lista1_ `++!=++` _lista2_: verifica se le due liste sono n-uple ordinate diverse, e restituisce il risultato _true_
 oppure _false_.
-* `Unico[lista1] == Unico[lista2]` oppure `lista1 \ lista2 == {}` : verifica se le due liste rappresentano insiemi
-uguali (cioè vengono ignorati sia l'ordine degli elementi, che gli elementi ripetuti)
-* `Ordina[lista1] == Ordina[lista2]`: Verifica se le due liste rappresentano
+* `++Unico[lista1] == Unico[lista2]++` oppure `++lista1 \ lista2 == {}++` : verifica se le due liste rappresentano
+insiemi uguali (cioè vengono ignorati sia l'ordine degli elementi, che gli elementi ripetuti)
+* `++Ordina[lista1] == Ordina[lista2]++`: Verifica se le due liste rappresentano
 https://it.wikipedia.org/wiki/Multiinsieme[multiinsiemi] uguali (cioè viene ignorato l'ordine degli elementi)
 
 Vedere anche i comandi xref:/commands/Comando_Unico.adoc[Unico] e xref:/commands/Comando_Ordina.adoc[Ordina].
 
 == [#Operatori_tra_liste]#Operatori tra liste#
 
-* _oggetto_ `∈` _lista_ : restituisce _true_ se è verificata la relazione di appartenenza dell'oggetto alla lista
-* _lista_ `⊆` _lista_ : restituisce _true_ se la prima lista è un sottoinsieme della seconda
-* _lista_ `⊂` _lista_ : restituisce _true_ se la prima lista è un sottoinsieme proprio della seconda
-* _lista_ `\` _lista_ : crea la lista che rappresenta la differenza insiemistica delle due liste indicate
+* _oggetto_ `++∈++` _lista_ : restituisce _true_ se è verificata la relazione di appartenenza dell'oggetto alla lista
+* _lista_ `++⊆++` _lista_ : restituisce _true_ se la prima lista è un sottoinsieme della seconda
+* _lista_ `++⊂++` _lista_ : restituisce _true_ se la prima lista è un sottoinsieme proprio della seconda
+* _lista_ `++\++` _lista_ : crea la lista che rappresenta la differenza insiemistica delle due liste indicate
 
 == [#Applicare_operazioni_e_funzioni_predefinite_alle_liste]#Applicare operazioni e funzioni predefinite alle liste#
 
@@ -74,7 +74,7 @@ ottiene sempre una lista.
 
 === [#Addizione_e_sottrazione]#Addizione e sottrazione#
 
-* _lista1_ `+` _lista2_: somma gli elementi corrispondenti delle due liste.
+* _lista1_ `+++++` _lista2_: somma gli elementi corrispondenti delle due liste.
 +
 [NOTE]
 ====
@@ -82,8 +82,8 @@ ottiene sempre una lista.
 Le due liste devono avere la stessa lunghezza.
 
 ====
-* _lista_ `+` _numero_: aggiunge il numero indicato a ogni elemento della lista.
-* _lista1_ `–` _lista2_: sottrae gli elementi della seconda lista dai corrispondenti della prima lista.
+* _lista_ `+++++` _numero_: aggiunge il numero indicato a ogni elemento della lista.
+* _lista1_ `++–++` _lista2_: sottrae gli elementi della seconda lista dai corrispondenti della prima lista.
 +
 [NOTE]
 ====
@@ -91,11 +91,11 @@ Le due liste devono avere la stessa lunghezza.
 Le due liste devono avere la stessa lunghezza.
 
 ====
-* _lista_ `–` numero: sottrae il numero indicato da ogni elemento della lista.
+* _lista_ `++–++` numero: sottrae il numero indicato da ogni elemento della lista.
 
 === [#Prodotto_e_divisione]#Prodotto e divisione#
 
-* __lista__1 `*` _lista2_: moltiplica gli elementi corrispondenti delle due liste.
+* __lista__1 `++*++` _lista2_: moltiplica gli elementi corrispondenti delle due liste.
 +
 [NOTE]
 ====
@@ -104,8 +104,8 @@ Le due liste devono avere la stessa lunghezza. Se le due liste sono matrici comp
 matriciale.
 
 ====
-* _lista_ `*` _numero_: moltiplica ogni elemento della lista per il numero indicato.
-* _lista1_ `/` _lista2_: divide gli elementi della prima lista per i corrispondenti elementi della seconda lista.
+* _lista_ `++*++` _numero_: moltiplica ogni elemento della lista per il numero indicato.
+* _lista1_ `++/++` _lista2_: divide gli elementi della prima lista per i corrispondenti elementi della seconda lista.
 +
 [NOTE]
 ====
@@ -113,8 +113,8 @@ matriciale.
 Le due liste devono avere la stessa lunghezza.
 
 ====
-* _lista_ `/` _numero_: divide ogni elemento della lista per il numero indicato.
-* _numero_ `/` _lista_: divide il numero indicato per ogni elemento della lista.
+* _lista_ `++/++` _numero_: divide ogni elemento della lista per il numero indicato.
+* _numero_ `++/++` _lista_: divide il numero indicato per ogni elemento della lista.
 
 [NOTE]
 ====
@@ -125,10 +125,10 @@ Vedere anche xref:/Punti_e_vettori.adoc[prodotto vettoriale].
 
 === [#Altri_esempi]#Altri esempi#
 
-* _lista_ `^2`: eleva al quadrato ogni elemento della _lista_.
-* `2^` _lista_: crea una lista di potenze di base 2, aventi come esponente gli elementi della _lista_.
-* _lista1_ `^` _lista2_: crea una lista contenente _a^b_, dove _a_ e _b_ sono elementi corrispondenti di _lista1_ e
+* _lista_ `++^2++`: eleva al quadrato ogni elemento della _lista_.
+* `++2^++` _lista_: crea una lista di potenze di base 2, aventi come esponente gli elementi della _lista_.
+* _lista1_ `++^++` _lista2_: crea una lista contenente _a^b_, dove _a_ e _b_ sono elementi corrispondenti di _lista1_ e
 _lista2_.
-* `sin(lista)`: applica la funzione seno a ciascun elemento della _lista_.
+* `++sin(lista)++`: applica la funzione seno a ciascun elemento della _lista_.
 
 È possibile applicare alle liste anche le xref:/Funzioni.adoc[funzioni] definite dall'utente.

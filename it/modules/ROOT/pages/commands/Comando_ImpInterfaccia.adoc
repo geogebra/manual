@@ -2,15 +2,15 @@
 
 ImpInterfaccia(Testo)
 
-Modifica il layout e la visibilità delle _Viste_. Il testo, inserito tra virgolette `"`, descrive il layout globale da
-applicare, la descrizione relativa a una singola Vista da modificare, o l'identificativo di una delle interfacce
+Modifica il layout e la visibilità delle _Viste_. Il testo, inserito tra virgolette `++"++`, descrive il layout globale
+da applicare, la descrizione relativa a una singola Vista da modificare, o l'identificativo di una delle interfacce
 standard.
 
 == [#Layout_completo]#Layout completo#
 
 Per modificare l'intero layout basta descrivere le posizioni delle Viste utilizzando un'espressione. I nomi delle
 _Viste_ sono rappresentati da lettere, la disposizione orizzontale delle _Viste_ è rappresentata dalla giustapposizione
-dei relativi nomi, mentre quella verticale dal simbolo di _divisione_ `/`, come descritto nella seguente tabella.
+dei relativi nomi, mentre quella verticale dal simbolo di _divisione_ `++/++`, come descritto nella seguente tabella.
 
 [cols=",",options="header",]
 |===
@@ -43,16 +43,16 @@ Protocollo di costruzione
 
 *Esempi:*  
 
-* `ImpInterfaccia("G")` rende visibile solo la image:16px-Menu_view_graphics.svg.png[Menu view
+* `++ImpInterfaccia("G")++` rende visibile solo la image:16px-Menu_view_graphics.svg.png[Menu view
 graphics.svg,width=16,height=16] vista _Grafici_
-* `ImpInterfaccia("AGS")` rende visibili la image:16px-Menu_view_algebra.svg.png[Menu view
+* `++ImpInterfaccia("AGS")++` rende visibili la image:16px-Menu_view_algebra.svg.png[Menu view
 algebra.svg,width=16,height=16] vista _Algebra_, la image:16px-Menu_view_graphics.svg.png[Menu view
 graphics.svg,width=16,height=16] vista _Grafici_ e la image:16px-Menu_view_spreadsheet.svg.png[Menu view
 spreadsheet.svg,width=16,height=16] vista _Foglio di calcolo_, allineate orizzontalmente
-* `ImpInterfaccia("S/G")` rende visibili la image:16px-Menu_view_spreadsheet.svg.png[Menu view
+* `++ImpInterfaccia("S/G")++` rende visibili la image:16px-Menu_view_spreadsheet.svg.png[Menu view
 spreadsheet.svg,width=16,height=16] vista _Foglio di calcolo_ (in alto) e la image:16px-Menu_view_graphics.svg.png[Menu
 view graphics.svg,width=16,height=16] vista _Grafici_ (in basso)
-* `ImpInterfaccia("S/(GA)")` rende visibili la image:16px-Menu_view_spreadsheet.svg.png[Menu view
+* `++ImpInterfaccia("S/(GA)")++` rende visibili la image:16px-Menu_view_spreadsheet.svg.png[Menu view
 spreadsheet.svg,width=16,height=16] vista _Foglio di calcolo_ (in alto) e la image:16px-Menu_view_graphics.svg.png[Menu
 view graphics.svg,width=16,height=16] vista _Grafici_, affiancata a destra dalla
 image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] vista _Algebra_ (in basso)
@@ -61,20 +61,21 @@ image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] v
 
 == [#Singola_Vista]#Singola Vista#
 
-Per aprire o chiudere una singola _Vista_, precedere la lettera che la identifica rispettivamente con i simboli `+` o
-`-`. Nelle altre app, diverse dalla versione Classica (ad es. nella Calcolatrice grafica) è inoltre possibile utilizzare
-`Strumenti` e `Tabella` per gli strumenti e la tabella di valori.
+Per aprire o chiudere una singola _Vista_, precedere la lettera che la identifica rispettivamente con i simboli `+++++`
+o `++-++`. Nelle altre app, diverse dalla versione Classica (ad es. nella Calcolatrice grafica) è inoltre possibile
+utilizzare `++Strumenti++` e `++Tabella++` per gli strumenti e la tabella di valori.
 
 [EXAMPLE]
 ====
 
 *Esempi:*  
 
-* `ImpInterfaccia("+D")` aggiunge alle viste correnti la vista __Grafici__2 (a destra)
-* `ImpInterfaccia("-D")` rimuove dalle viste correnti la vista __Grafici__2
-* `ImpInterfaccia("+Strumenti")` apre la barra laterale nella Calcolatrice Grafica e passa alla scheda _Strumenti_
-* `ImpInterfaccia("+Tabella")` apre la barra laterale nella Calcolatrice Grafica e passa alla scheda _Tabella di valori_
-* `ImpInterfaccia("-Strumenti")` chiude la barra laterale della Calcolatrice Grafica, indipendentemente dalla scheda
+* `++ImpInterfaccia("+D")++` aggiunge alle viste correnti la vista __Grafici__2 (a destra)
+* `++ImpInterfaccia("-D")++` rimuove dalle viste correnti la vista __Grafici__2
+* `++ImpInterfaccia("+Strumenti")++` apre la barra laterale nella Calcolatrice Grafica e passa alla scheda _Strumenti_
+* `++ImpInterfaccia("+Tabella")++` apre la barra laterale nella Calcolatrice Grafica e passa alla scheda _Tabella di
+valori_
+* `++ImpInterfaccia("-Strumenti")++` chiude la barra laterale della Calcolatrice Grafica, indipendentemente dalla scheda
 selezionata
 
 ====

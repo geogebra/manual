@@ -9,7 +9,7 @@ Angolo(Oggetto)::
 [EXAMPLE]
 ====
 
-`Angolo(x^2 / 4 + y^2 / 9 = 2)` restituisce _90°_ o 1.57 rad se l'unità di misura selezionata per gli angoli è
+`++Angolo(x^2 / 4 + y^2 / 9 = 2)++` restituisce _90°_ o 1.57 rad se l'unità di misura selezionata per gli angoli è
 _radianti_.
 
 ====
@@ -19,7 +19,7 @@ _radianti_.
 [EXAMPLE]
 ====
 
-`Angolo(Vettore((1, 1)))` restituisce _45°_ o il corrispondente valore in _radianti_.
+`++Angolo(Vettore((1, 1)))++` restituisce _45°_ o il corrispondente valore in _radianti_.
 
 ====
 
@@ -28,7 +28,7 @@ _radianti_.
 [EXAMPLE]
 ====
 
-`Angolo((1, 1))` restituisce _45°_ o il corrispondente valore in _radianti_.
+`++Angolo((1, 1))++` restituisce _45°_ o il corrispondente valore in _radianti_.
 
 ====
 
@@ -38,7 +38,7 @@ misura predefinita per gli angoli (risultato in [0,360°] o [0,2π] secondo l'un
 [EXAMPLE]
 ====
 
-`Angolo(20)` restituisce _65.92°_ se l'unità predefinita per gli angoli è _gradi_.
+`++Angolo(20)++` restituisce _65.92°_ se l'unità predefinita per gli angoli è _gradi_.
 
 ====
 
@@ -48,7 +48,7 @@ antiorario).
 [EXAMPLE]
 ====
 
-`Angolo(Poligono((4, 1), (2, 4), (1, 1)))` restituisce _56.31°_, _52.13°_ e _71.57°_ o i corrispondenti valori in
+`++Angolo(Poligono((4, 1), (2, 4), (1, 1)))++` restituisce _56.31°_, _52.13°_ e _71.57°_ o i corrispondenti valori in
 _radianti_.
 
 ====
@@ -69,7 +69,7 @@ Angolo(Vettore, Vettore)::
 [EXAMPLE]
 ====
 
-`Angolo(Vettore((1, 1)), Vettore((2, 5)))` restituisce _23.2°_ o il corrispondente valore in _radianti_.
+`++Angolo(Vettore((1, 1)), Vettore((2, 5)))++` restituisce _23.2°_ o il corrispondente valore in _radianti_.
 
 ====
 
@@ -80,15 +80,15 @@ Angolo(Retta, Retta)::
 [EXAMPLE]
 ====
 
-* `Angolo(y = x + 2, y = 2x + 3)` restituisce _18.43°_ o il corrispondente valore in _radianti_
-* `Angolo(Retta[(-2, 0, 0), (0, 0, 2)), Retta((2, 0, 0), (0, 0, 2)))` restituisce _90°_ o il corrispondente valore in
-_radianti_.
+* `++Angolo(y = x + 2, y = 2x + 3)++` restituisce _18.43°_ o il corrispondente valore in _radianti_
+* `++Angolo(Retta[(-2, 0, 0), (0, 0, 2)), Retta((2, 0, 0), (0, 0, 2)))++` restituisce _90°_ o il corrispondente valore
+in _radianti_.
 
 e nella _vista CAS_:
 
-* `Angolo(x + 2,  2x + 3)` restituisce stem:[acos(3 \cdot \frac\{\sqrt\{10}}\{10})].
-* Dopo avere definito `f(x) := x + 2` e `g(x) := 2x + 3`, il comando `Angolo(f(x) , g(x))` restituisce stem:[acos(3
-\cdot \frac\{\sqrt\{10}}\{10})].
+* `++Angolo(x + 2,  2x + 3)++` restituisce stem:[acos(3 \cdot \frac\{\sqrt\{10}}\{10})].
+* Dopo avere definito `++f(x) := x + 2++` e `++g(x) := 2x + 3++`, il comando `++Angolo(f(x) , g(x))++` restituisce
+stem:[acos(3 \cdot \frac\{\sqrt\{10}}\{10})].
 
 ====
 
@@ -98,8 +98,9 @@ Angolo(Retta, Piano)::
 [EXAMPLE]
 ====
 
-* `Angolo(Retta((1, 2, 3),(-2, -2, 0)), z = 0)` restituisce _30.96°_ o il corrispondente valore in _radianti_
-* `Angolo(Retta((1, 2, 3),(-2, -2, 0)), Piano(z = 0))` restituisce _30.96°_ o il corrispondente valore in _radianti_.
+* `++Angolo(Retta((1, 2, 3),(-2, -2, 0)), z = 0)++` restituisce _30.96°_ o il corrispondente valore in _radianti_
+* `++Angolo(Retta((1, 2, 3),(-2, -2, 0)), Piano(z = 0))++` restituisce _30.96°_ o il corrispondente valore in
+_radianti_.
 
 ====
 
@@ -109,8 +110,8 @@ Angolo(Piano, Piano)::
 [EXAMPLE]
 ====
 
-* `Angolo(2x - y + z = 0, z = 0)` restituisce _114.09°_ o il corrispondente valore in _radianti_
-* `Angolo(Piano(2x - y + z = 0), Piano(z = 0))` restituisce _114.09°_ o il corrispondente valore in _radianti_.
+* `++Angolo(2x - y + z = 0, z = 0)++` restituisce _114.09°_ o il corrispondente valore in _radianti_
+* `++Angolo(Piano(2x - y + z = 0), Piano(z = 0))++` restituisce _114.09°_ o il corrispondente valore in _radianti_.
 
 ====
 
@@ -121,7 +122,7 @@ Angolo(Punto, Vertice, Punto)::
 [EXAMPLE]
 ====
 
-`Angolo((1, 1), (1, 4), (4, 2))` restituisce _56.31°_ o il corrispondente valore in _radianti_.
+`++Angolo((1, 1), (1, 4), (4, 2))++` restituisce _56.31°_ o il corrispondente valore in _radianti_.
 
 ====
 
@@ -132,15 +133,15 @@ Angolo(Punto, Vertice, Angolo)::
 [EXAMPLE]
 ====
 
-* `Angolo((0, 0), (3, 3), 30°)` genera il punto _(1.9, -1.1)_ e il relativo angolo di 30°
-* `Angolo(Punto({0, 0}), Punto({3, 3}), 30°)` genera il punto _(1.9, -1.1)_ e il relativo angolo di 30°.
+* `++Angolo((0, 0), (3, 3), 30°)++` genera il punto _(1.9, -1.1)_ e il relativo angolo di 30°
+* `++Angolo(Punto({0, 0}), Punto({3, 3}), 30°)++` genera il punto _(1.9, -1.1)_ e il relativo angolo di 30°.
 
 ====
 
 [NOTE]
 ====
 
-Il punto generato è il risultato del comando `Ruota(A, α, B)`.
+Il punto generato è il risultato del comando `++Ruota(A, α, B)++`.
 
 ====
 
@@ -152,8 +153,8 @@ Angolo(Punto, Punto, Punto, Direzione)::
 [EXAMPLE]
 ====
 
-`Angolo((1, -1, 0),(0, 0, 0),(-1, -1, 0), asseZ)` restituisce _270°_ e`Angolo((-1, -1, 0),(0, 0, 0),(1, -1, 0), asseZ)`
-restituisce _90°_ o i corrispondenti valori in _radianti_.
+`++Angolo((1, -1, 0),(0, 0, 0),(-1, -1, 0), asseZ)++` restituisce _270°_
+e`++Angolo((-1, -1, 0),(0, 0, 0),(1, -1, 0), asseZ)++` restituisce _90°_ o i corrispondenti valori in _radianti_.
 
 ====
 
@@ -162,8 +163,8 @@ restituisce _90°_ o i corrispondenti valori in _radianti_.
 
 L'utilizzo di una _Direzione_ consente di bypassare la visualizzazione predefinita per gli angoli in 3__D__ che può
 essere impostata solo in [0,180°] oppure [180°,360°], in modo tale che dati tre punti _A_, _B_, _C_ in 3__D__ i comandi
-`Angolo(A, B, C)` e `Angolo(C, B, A)` restituiscano le misure reali degli angoli invece della relativa restrizione agli
-intervalli predefiniti.
+`++Angolo(A, B, C)++` e `++Angolo(C, B, A)++` restituiscano le misure reali degli angoli invece della relativa
+restrizione agli intervalli predefiniti.
 
 ====
 
