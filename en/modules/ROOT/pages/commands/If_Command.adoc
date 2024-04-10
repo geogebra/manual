@@ -3,10 +3,8 @@
 If( <Condition>, <Then> )::
   Yields a copy of the object _Then_ if the condition evaluates to _true_, and an undefined object if it evaluates to
   _false_.
-  +
 
 [EXAMPLE]
-
 ====
 
 *Examples:*
@@ -19,10 +17,8 @@ If( <Condition>, <Then> )::
 If( <Condition>, <Then>, <Else> )::
   Yields a copy of object _Then_ if the condition evaluates to _true_, and a copy of object _Else_ if it evaluates to
   _false_. *Both objects _must_ be of the same type.*
-  +
 
 [EXAMPLE]
-
 ====
 
 Let _n_ be a number. `++If(n==3, x + y = 4, x - y = 4)++` yields line _x_ + _y_ = 4 when _n_ = 3, and line _x_ - _y_ = 4
@@ -33,10 +29,8 @@ for all _n_ not equal to 3.
 If( <Condition 1>, <Then 1>, <Condition 2>, <Then 2>, ... , <Else (optional)> )::
   Yields a copy of "Then 1" when first condition is satisfied, "Then 2" if second condition is satisfied etc. If none of
   the conditions are satisfied and Else is given, this command yields a copy of Else. Otherwise undefined is returned.
-  +
 
 [EXAMPLE]
-
 ====
 
 `++If(a ≟ 1, "Matthew", a ≟ 2,"Larry", a ≟ 3, "Vivian", "Alex")++` When __a__=1 this returns the text "Matthew", for
@@ -51,7 +45,6 @@ command that takes a function argument, such as xref:/commands/Derivative_Comman
 xref:/commands/Integral_Command.adoc[Integral], and xref:/commands/Intersect_Command.adoc[Intersect].
 
 [EXAMPLE]
-
 ====
 
 *Examples:*
@@ -62,7 +55,6 @@ xref:/commands/Integral_Command.adoc[Integral], and xref:/commands/Intersect_Com
 otherwise).
 
 [NOTE]
-
 ====
 
 A shorter syntax for this is `++f(x) = sin(x), 0 <= x <= 3++`
@@ -80,7 +72,6 @@ The *If* command can also be used to create multivariate conditional functions. 
 pieces of the given function must contain all the variables of the given function.
 
 [EXAMPLE]
-
 ====
 
 Let `++sliderVal = 1++` be a slider in the interval [1,3]. The command
@@ -91,7 +82,6 @@ y + b_ when the slider value is 3.
 ====
 
 [NOTE]
-
 ====
 
 *Notes:*
@@ -107,7 +97,6 @@ at the critical points.
 *If* command can be used in scripts to perform different actions under certain conditions.
 
 [EXAMPLE]
-
 ====
 
 Let _n_ be a number, and _A_ a point. The command `++If(Mod(n, 7) == 0, SetCoords(A, n, 0), SetCoords(A, n, 1))++`
@@ -117,7 +106,6 @@ modifies the coordinates of point _A_ according to the given condition. In this 
 ====
 
 [NOTE]
-
 ====
 
 Arguments of *If* must be Objects or xref:/commands/Scripting_Commands.adoc[Scripting Commands], not assignments. Syntax

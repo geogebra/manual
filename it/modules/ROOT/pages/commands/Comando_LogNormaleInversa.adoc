@@ -1,0 +1,19 @@
+= Comando LogNormaleInversa
+
+LogNormaleInversa(Media, Deviazione standard, Probabilità)::
+  Determina l'inversa della funzione di distribuzione cumulativa di una
+  http://en.wikipedia.org/wiki/it:Distribuzione_lognormale[distribuzione log-normale] di probabilità _p_.
+  +
+  Tale distribuzione log-normale è determinata dai valori della media _μ_ e dalla deviazione standard _σ_. In altre
+  parole, questo comando determina il valore di _t_ tale che _P(X ≤ t) = p_, dove X è una variabile casuale log-normale.
+  Il valore del parametro probabilità _p_ deve appartenere all'intervallo [0, 1].
+
+[EXAMPLE]
+====
+
+*Esempi:*
+
+* `LogNormaleInversa(10, 20, 1/3)` restituisce _3.997_.
+* `LogNormaleInversa(1000, 2, 1)` restituisce stem:[ \infty ].
+
+====

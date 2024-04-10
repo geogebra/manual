@@ -1,0 +1,45 @@
+= StickGraph Command
+
+StickGraph( <List of Points> )::
+  Draws a stick graph of the given points. For each point a vertical line segment is drawn from the x-axis to the point.
+
+[EXAMPLE]
+====
+
+`StickGraph({(1, 1), (3, 2), (4, 5), (5, 7)})`
+
+====
+
+StickGraph( <List of Points>, <Boolean Horizontal> )::
+  Draws a stick graph of the given points. If _Horizontal = true_, then horizontal line segments are drawn from the
+  y-axis to each point. If _Horizontal = false_, then vertical line segments are drawn from the x-axis to each point.
+
+[EXAMPLE]
+====
+
+`StickGraph({(1, 1), (3, 2), (4, 5), (5, 7)}, false)`
+
+====
+
+StickGraph( <List of x-coordinates>, <List of y-coordinates> )::
+  Draws a stick graph of points created from the two lists of coordinates. For each point a vertical line segment is
+  drawn from the x-axis to the point.
+
+[EXAMPLE]
+====
+
+`StickGraph({1, 3, 4, 5}, {1, 2, 5, 7})`
+
+====
+
+StickGraph( <List of x-coordinates>, <List of y-coordinates>, <Boolean Horizontal> )::
+  Draws a stick graph of points created from the two lists of coordinates. If _Horizontal_ = _true_, then horizontal
+  line segments are drawn from the y-axis to each point. If _Horizontal_ = _false_, then vertical line segments are
+  drawn from the x-axis to each point.
+
+[EXAMPLE]
+====
+
+`StickGraph({1, 3, 4, 5}, {1, 2, 5, 7}, true)`
+
+====

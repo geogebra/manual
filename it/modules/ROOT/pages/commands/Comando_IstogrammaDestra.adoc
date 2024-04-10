@@ -1,0 +1,23 @@
+= Comando IstogrammaDestra
+
+IstogrammaDestra(Lista degli estremi delle classi, Lista altezze)::
+  È equivalente a `Istogramma(Lista degli estremi delle classi, Lista altezze)`
+
+IstogrammaDestra(Lista degli estremi delle classi, Lista dati grezzi, Booleano _Usa densità_ , Fattore di scala densità
+(facoltativo))::
+  È equivalente a `Istogramma(Lista degli estremi delle classi, Lista altezze, Usa densità, Fattore di scala densità)`,
+  ma se un dato è uguale all'estremo destro di una classe, questo viene contato in tale classe e non nella successiva.
+
+IstogrammaDestra(Booleano Cumulativa, Lista degli estremi delle classi, Lista dati grezzi, Booleano _Usa densità_ ,
+Fattore di scala densità (facoltativo))::
+  È equivalente a
+  `Istogramma(Booleano Cumulativa, Lista degli estremi delle classi, Lista dati grezzi,  Booleano Usa densità , Fattore di scala densità)`,
+  ma se un dato è uguale all'estremo destro di una classe, questo viene contato in tale classe e non nella successiva.
+
+[NOTE]
+====
+
+Per convenzione questo comando utilizza la regola _a_ < _x_ ≤ _b_ per ogni classe, tranne che per la prima, per la quale
+_a_ ≤ _x_ ≤ _b_ .
+
+====

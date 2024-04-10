@@ -1,0 +1,22 @@
+= Cell Command
+
+Cell( <Column>, <Row> )::
+  Returns copy of xref:/Spreadsheet_View.adoc[spreadsheet] cell in given column and row.
+
+[EXAMPLE]
+====
+
+`Cell(2, 1)` returns copy of B1.
+
+====
+
+[NOTE]
+====
+
+* By default the cells in spreadsheet cells are xref:/Free_Dependent_and_Auxiliary_Objects.adoc[auxiliary] and in such
+case this command returns auxiliary object as well.
+* You must make sure that the cells you refer to are *earlier* in the
+image:16px-Menu_view_construction_protocol.svg.png[Menu view construction protocol.svg,width=16,height=16]
+xref:/Construction_Protocol.adoc[Construction Protocol] than this command.
+
+====

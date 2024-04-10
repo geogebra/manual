@@ -1,0 +1,30 @@
+= Comando Funzione
+
+Funzione(Lista di numeri)::
+  Genera una funzione tale che i primi due numeri della lista sono le ascisse del punto iniziale e finale della
+  funzione, mentre gli altri numeri sono le ordinate dei punti corrispondenti a una suddivisione in parti uguali
+  dell'intervallo rappresentato .
+
+[EXAMPLE]
+====
+
+*Esempi:*
+
+* `Funzione({2, 4, 0, 1, 0, 1, 0})` traccia una funzione onda triangolare tra _x_ = 2 e _x_ = 4.
+* `Funzione({-3, 3, 0, 1, 2, 3, 4, 5})` traccia una retta con coefficiente angolare 1, tra _x_ = -3 e _x_ = 3.
+
+====
+
+Funzione(Espressione, Variabile parametro 1, Valore iniziale, Valore finale, Variabile parametro 2, Valore iniziale,
+Valore finale)::
+  Restringe la visualizzazione della superficie rappresentativa di una funzione in due variabili nello spazio 3D.
+
+[EXAMPLE]
+====
+
+L'espressione `a(x, y) = x + 0y` genera una funzione di due variabili, il cui grafico nello spazio 3D è il _piano_ _z_ =
+_a_(_x_, _y_) = _x_. Il comando `Funzione(u, u, 0, 3, v, 0, 2) ` crea la funzione di due variabili _b_(_u_, _v_) = _u_,
+il cui grafico nello spazio 3D è il _rettangolo_ Poligono((0, 0, 0), (3, 0, 3), (3, 2, 3), (0, 2, 0)) contenuto nel
+piano _z_ = _a_(_x_,_y_) = _x_.
+
+====

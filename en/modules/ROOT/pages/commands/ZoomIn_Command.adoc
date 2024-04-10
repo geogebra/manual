@@ -8,10 +8,8 @@ ZoomIn( <Scale Factor> )::
   Zooms the image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
   xref:/Graphics_View.adoc[Graphics View] in by given factor with respect to current zoom, center of the screen is used
   as center point for the zoom.
-  +
 
 [EXAMPLE]
-
 ====
 
 `++ZoomIn(1)++` doesn't change the view, but does remove traces
@@ -26,10 +24,8 @@ ZoomIn( <Scale Factor>, <Center Point> )::
   Zooms the image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
   xref:/Graphics_View.adoc[Graphics View] in by given factor with respect to current zoom, second parameter specifies
   center point for the zoom.
-  +
 
 [EXAMPLE]
-
 ====
 
 `++ZoomIn(2, (0, 0))++`
@@ -38,10 +34,8 @@ ZoomIn( <Scale Factor>, <Center Point> )::
 
 ZoomIn( <Min x>, <Min y>, <Max x>, <Max y> )::
   Zooms the graphics view to the rectangle given by vertices (Min x, Min y), (Max x, Max y).
-  +
 
 [EXAMPLE]
-
 ====
 
 `++ZoomIn(0, 1, 5, 6)++`
@@ -49,7 +43,6 @@ ZoomIn( <Min x>, <Min y>, <Max x>, <Max y> )::
 ====
 
 [EXAMPLE]
-
 ====
 
 If _a_ is a slider, `++ZoomIn(-a, -a, a, a)++` makes the zoom of the view dependent on slider _a_.
@@ -57,7 +50,6 @@ If _a_ is a slider, `++ZoomIn(-a, -a, a, a)++` makes the zoom of the view depend
 ====
 
 [NOTE]
-
 ====
 
 If any of these parameters are dependent or has label set, the bounds of the view become dynamic. To avoid this
@@ -67,10 +59,8 @@ behavior, use xref:/commands/CopyFreeObject_Command.adoc[CopyFreeObject Command]
 
 ZoomIn( <Min x>, <Min y>, <Min z>, <Max x>, <Max y>, <Max z> )::
   Zooms the 3D graphics view to the cuboid given by vertices (Min x, Min y, Min z), (Max x, Max y, Max z).
-  +
 
 [EXAMPLE]
-
 ====
 
 `++ZoomIn(-5, -5, -5, 5, 5, 5)++`
@@ -78,7 +68,6 @@ ZoomIn( <Min x>, <Min y>, <Min z>, <Max x>, <Max y>, <Max z> )::
 ====
 
 [NOTE]
-
 ====
 
 The dynamic behavior of the 2D version isn't supported
@@ -86,7 +75,6 @@ The dynamic behavior of the 2D version isn't supported
 ====
 
 [NOTE]
-
 ====
 
 *Notes:*

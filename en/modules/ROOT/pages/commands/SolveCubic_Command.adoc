@@ -1,0 +1,22 @@
+= SolveCubic Command
+
+== [#CAS_Syntax]#CAS Syntax#
+
+SolveCubic( <Cubic Polynomial> )::
+  Solves a given http://en.wikipedia.org/wiki/Cubic_function[cubic polynomial] and returns a list of all solutions.
+
+[EXAMPLE]
+====
+
+`SolveCubic(x³ - 1)` yields \{ 1, stem:[ \frac\{1}\{2} (\sqrt\{3} i -1) ] , stem:[ \frac\{1}\{2} (\sqrt\{3} (-i) -1) ] }
+.
+
+====
+
+[NOTE]
+====
+
+Often the answers are very cumbersome, e.g. `SolveCubic(x³ + x² + x + 2)` in which case `Solve(x³ + x² + x + 2)` or
+`CSolve(x³ + x² + x + 2)` may work better for you.
+
+====

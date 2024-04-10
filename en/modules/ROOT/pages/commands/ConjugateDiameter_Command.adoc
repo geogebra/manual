@@ -1,0 +1,23 @@
+= ConjugateDiameter Command
+
+ConjugateDiameter( <Line>, <Conic> )::
+  Returns the ([w:Conjugate diameters|conjugate diameter)] of the diameter that is parallel to the given line (relative
+  to the conic section).
+
+[EXAMPLE]
+====
+
+`ConjugateDiameter(-4x + 5y = -2, x^2 + 4 y^2 + 2x - 8y + 1 = 0)` yields line 5__x__ + 16__y__ = 11
+
+====
+
+ConjugateDiameter( <Vector>, <Conic> )::
+  Returns the ([w:Conjugate diameters|conjugate diameter)] of the diameter that is parallel to the given vector
+  (relative to the conic section).
+
+[EXAMPLE]
+====
+
+Let _u_ = (4,1) be a vector. Then `ConjugateDiameter(u, x^2 + 4 y^2 + 2x - 8y + 1 = 0)` yields line _x_ + _y_ = 0
+
+====

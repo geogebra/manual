@@ -1,0 +1,47 @@
+= Comando DiagrammaAste
+
+DiagrammaAste(Lista di punti)::
+  Restituisce un diagramma ad aste dei punti indicati. Ciascun punto è unito all'asse delle ascisse con un segmento
+  verticale.
+
+[EXAMPLE]
+====
+
+`DiagrammaAste({(1, 1), (3, 2), (4, 5), (5, 7)})`
+
+====
+
+DiagrammaAste(Lista di punti, Booleano Orizzontale)::
+  Restituisce un diagramma ad aste dei punti indicati. Se _Orizzontale_ = _true_, ciascun punto sarà collegato all'asse
+  delle ordinate con un segmento orizzontale. Se _Orizzontale_ = _false_, ciascun punto sarà unito solo all'asse delle
+  ascisse con un segmento verticale.
+
+[EXAMPLE]
+====
+
+`DiagrammaAste({(1, 1), (3, 2), (4, 5), (5, 7)}, false)`
+
+====
+
+DiagrammaAste(Lista ascisse, Lista ordinate)::
+  Restituisce un diagramma ad aste dei punti creati a partire dalle due liste di coordinate indicate. Ciascun punto è
+  unito all'asse delle ascisse con un segmento verticale.
+
+[EXAMPLE]
+====
+
+`DiagrammaAste({1, 3, 4, 5}, {1, 2, 5, 7})`
+
+====
+
+DiagrammaAste(Lista ascisse, Lista ordinate, Booleano Orizzontale)::
+  Restituisce un diagramma ad aste dei punti creati a partire dalle due liste di coordinate indicate. Se _Orizzontale_ =
+  _true_, ciascun punto sarà collegato all'asse delle ordinate con un segmento orizzontale. Se _Orizzontale_ = _false_,
+  ciascun punto sarà unito solo all'asse delle ascisse con un segmento verticale.
+
+[EXAMPLE]
+====
+
+`DiagrammaAste({1, 3, 4, 5}, {1, 2, 5, 7}, true)`
+
+====

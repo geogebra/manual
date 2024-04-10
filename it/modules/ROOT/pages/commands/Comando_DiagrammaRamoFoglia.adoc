@@ -1,0 +1,17 @@
+= Comando DiagrammaRamoFoglia
+
+DiagrammaRamoFoglia(Lista)::
+  Restituisce un diagramma ramo-foglia della lista di numeri indicata. Le _anomalie statistiche (outliers)_ vengono
+  rimosse dal diagramma ed elencate separatamente.
+  +
+  Per _anomalia statistica_ si intende un valore esterno all'intervallo [ __Q__1 - 1.5 (__Q__3 - __Q__1), __Q__3 + 1.5
+  (__Q__3 - __Q__1) ] (in cui i _Qi_ sono i quartili)
+
+DiagrammaRamoFoglia(Lista, Regolazione -1|0|1)::
+  Restituisce un diagramma ramo-foglia della lista di numeri indicata.
+  +
+  Se _Regolazione_ = -1 l'unità predefinita per i rami è divisa per 10
+  +
+  Se _Regolazione_ = 0 nessuna modifica
+  +
+  Se _Regolazione_ = 1 l'unità predefinita per i rami è moltiplicata per 10

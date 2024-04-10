@@ -1,0 +1,22 @@
+= Comando TestTAppaiate
+
+TestTAppaiate(Lista dati campione 1, Lista dati campione 2, Coda)::
+  Applica un test _t_ su campioni appaiati, utilizzando le liste di dati appaiati indicate. _Coda_ ammette i valori "<",
+  ">" , "≠" che determinano le seguenti ipotesi alternative:
+  +
+  "<" = μ < 0
+  +
+  ">" = μ > 0
+  +
+  "≠" = μ ≠ 0
+  +
+  ( μ è la differenza media appaiata della popolazione)
+
+I risultati sono restituiti in una lista del tipo \{probabilità, test t}.
+
+[EXAMPLE]
+====
+
+`TestTAppaiate({1, 2, 3, 4, 5}, {1, 1, 3, 5, 5}, "<")` restituisce \{0.5, 0}.
+
+====

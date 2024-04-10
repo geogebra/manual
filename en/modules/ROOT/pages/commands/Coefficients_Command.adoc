@@ -3,10 +3,8 @@
 Coefficients( <Polynomial> )::
   Yields the list of all coefficients stem:[a_k,a_\{k-1},\ldots,a_1, a_0] of the polynomial
   stem:[a_kx^k+a_\{k-1}x^\{k-1}+\cdots+a_1x+a_0].
-  +
 
 [EXAMPLE]
-
 ====
 
 `Coefficients(x^3 - 3 x^2 + 3 x)` yields _\{1, -3, 3, 0}_, the list of all coefficients of stem:[x^3 - 3 x^2 + 3 x].
@@ -19,14 +17,12 @@ Returns the list of the coefficients _a_, _b_, _c_, _d_, _e_, _f_ of a conic in 
 y^2 + c + d\cdot x\cdot y + e\cdot x + f\cdot y = 0]
 
 [NOTE]
-
 ====
 
 For a line in implicit form _l: ax + by + c = 0_ it is possible to obtain the coefficients using the syntax _x_(_l_),
 _y_(_l_), _z_(_l_).
 
 [EXAMPLE]
-
 ====
 
 Given `line: 3x + 2y - 2 = 0`:
@@ -40,7 +36,6 @@ Given `line: 3x + 2y - 2 = 0`:
 ====
 
 [NOTE]
-
 ====
 
 There's a special mode (for non-polynomials) for the output of the fitting commands eg if `f(x) = FitExp(l1)` then
@@ -52,10 +47,8 @@ There's a special mode (for non-polynomials) for the output of the fitting comma
 
 Coefficients( <Polynomial> )::
   Yields the list of all coefficients of the polynomial in the main variable.
-  +
 
 [EXAMPLE]
-
 ====
 
 `Coefficients(x^3 - 3 x^2 + 3 x)` yields _\{1, -3, 3, 0}_, the list of all coefficients of stem:[x^3 - 3 x^2 + 3 x].
@@ -64,10 +57,8 @@ Coefficients( <Polynomial> )::
 
 Coefficients( <Polynomial>, <Variable> )::
   Yields the list of all coefficients of the polynomial in the given variable.
-  +
 
 [EXAMPLE]
-
 ====
 
 * `Coefficients(a^3 - 3 a^2 + 3 a, a)` yields _\{1, -3, 3, 0}_, the list of all coefficients of stem:[a^3 - 3 a^2 + 3 a]

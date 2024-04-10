@@ -1,0 +1,80 @@
+= Comando DiagrammaGradini
+
+DiagrammaGradini(Lista di punti)::
+  Restituisce un diagramma a gradini della lista di punti indicata. Ciascun punto è collegato al successivo nella lista
+  tramite un segmento orizzontale.
+
+[EXAMPLE]
+====
+
+`DiagrammaGradini({(1, 1), (3, 2), (4, 5), (5, 7)})`
+
+====
+
+DiagrammaGradini(Lista di punti, Booleano Unisci)::
+  Restituisce un diagramma a gradini della lista di punti indicata. Se _Unisci_ = _false_, verrà tracciato un segmento
+  orizzontale di unione con l'ascissa del punto successivo, ma non un segmento verticale. Se _Unisci_ = _true_, allora
+  ciascun punto sarà collegato al successivo nella lista tramite un segmento orizzontale e uno verticale.
+
+[EXAMPLE]
+====
+
+`DiagrammaGradini({(1, 1), (3, 2), (4, 5), (5, 7)}, true)`
+
+====
+
+DiagrammaGradini(Lista ascisse, Lista ordinate)::
+  Restituisce un diagramma a gradini di una lista di punti, creata sulla base delle liste di coordinate indicate.
+  Ciascun punto è collegato al successivo nella lista tramite un segmento orizzontale.
+
+[EXAMPLE]
+====
+
+`DiagrammaGradini({1, 3, 4, 5}, {1, 2, 5, 7})`
+
+====
+
+DiagrammaGradini(Lista ascisse, Lista ordinate, Booleano Unisci)::
+  Restituisce un diagramma a gradini di una lista di punti, creata sulla base delle liste di coordinate indicate. Se
+  _Unisci_ = _false_, verrà tracciato un segmento orizzontale di unione con l'ascissa del punto successivo, ma non un
+  segmento verticale. Se _Unisci_ = _true_, allora ciascun punto sarà collegato al successivo nella lista tramite un
+  segmento orizzontale e uno verticale.
+
+[EXAMPLE]
+====
+
+`DiagrammaGradini({1, 3, 4, 5}, {1, 2, 5, 7}, true)`
+
+====
+
+DiagrammaGradini(Lista di ascisse, Lista di ordinate, Booleano Unisci, Stile punto)::
+  Restituisce un diagramma a gradini come descritto sopra.
+  +
+  I valori disponibili per definire lo stile dei punti, estremi dei segmenti del diagramma sono -2, -1, 0, 1, -1 :
+  +
+  0 = nessun punto sugli estremi dei segmenti
+  +
+  1 = punto pieno a destra
+  +
+  2 = punto pieno a destra, vuoto a sinistra
+  +
+  -1 = punto pieno a sinistra
+  +
+  -2 = punto pieno a sinistra, vuoto a destra
+
+[EXAMPLE]
+====
+
+`DiagrammaGradini({1, 3, 4, 5}, {1, 2, 5, 7}, false, 1)`
+
+====
+
+DiagrammaGradini(Lista di punti, Booleano Unisci, Stile punto)::
+  Restituisce un diagramma a gradini come descritto sopra.
+
+[EXAMPLE]
+====
+
+`DiagrammaGradini({(1, 1), (3, 2), (4, 5), (5, 7)}, false, 1)`
+
+====

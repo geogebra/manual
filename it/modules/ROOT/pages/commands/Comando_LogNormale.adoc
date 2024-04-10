@@ -1,0 +1,23 @@
+= Comando LogNormale
+
+LogNormale(Media, Deviazione standard, x)::
+  Genera la funzione di distribuzione cumulativa di una
+  http://en.wikipedia.org/wiki/it:Distribuzione_lognormale[distribuzione log-normale] avente media e deviazione standard
+  indicate.
+
+LogNormale(Media, Deviazione standard, x, Booleano Cumulativa)::
+  Se _Cumulativa_ è _true_, genera la funzione di distribuzione cumulativa della distribuzione log-normale, altrimenti
+  genera la funzione di densità di probabilità della distribuzione log-normale.
+
+LogNormale(Media, Deviazione standard, Valore variabile)::
+  Calcola il valore della funzione di distribuzione cumulativa di una log-normale in corrispondenza del valore indicato
+  _v_ della variabile, cioè la probabilità _P(X ≤ v)_ dove _X_ è una variabile casuale con distribuzione log-normale
+  avente media e deviazione standard indicate.
+
+[NOTE]
+====
+
+Restituisce la probabilità relativa a un determinato valore di _x_ (ovvero l'area sottesa dalla curva della
+distribuzione log-normale alla sinistra del valore dell'ascissa indicato).
+
+====

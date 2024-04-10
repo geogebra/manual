@@ -2,10 +2,8 @@
 
 Min(Numero, Numero)::
   Restituisce il minimo tra i due numeri indicati.
-  +
 
 [EXAMPLE]
-
 ====
 
 `Min(12, 15)` restituisce _12_.
@@ -15,10 +13,8 @@ Min(Numero, Numero)::
 Min(Lista di numeri)::
   Restituisce il minimo tra i numeri della lista.
   +
-  +
 
 [EXAMPLE]
-
 ====
 
 `Min({-2, 12, -23, 17, 15})` restituisce _-23_.
@@ -26,7 +22,6 @@ Min(Lista di numeri)::
 ====
 
 [NOTE]
-
 ====
 
 Se gli argomenti sono oggetti non numerici, allora _Min_ considera i numeri associati a tali oggetti. Per esempio, se
@@ -37,10 +32,8 @@ _Lista1_ è una lista di segmenti, _Min_(_Lista1_) restituisce il segmento di mi
 Min(Funzione, x iniziale, x finale)::
   Calcola (numericamente) il punto di minimo *locale* della funzione nell'intervallo dato. La funzione deve essere
   continua e avere un solo punto di minimo locale nell'intervallo (e nessun massimo locale).
-  +
 
 [EXAMPLE]
-
 ====
 
 `Min(x^3+2x^2-1, -2, 0)` genera il punto (0, -1).
@@ -50,10 +43,8 @@ Min(Funzione, x iniziale, x finale)::
 Min(Intervallo)::
   Restituisce l'estremo inferiore dell'intervallo.
   +
-  +
 
 [EXAMPLE]
-
 ====
 
 `Min(2<x<3)` restituisce 2.
@@ -61,7 +52,6 @@ Min(Intervallo)::
 ====
 
 [NOTE]
-
 ====
 
 Gli intervalli aperti vengono comunque considerati chiusi.
@@ -70,10 +60,8 @@ Gli intervalli aperti vengono comunque considerati chiusi.
 
 Min(Lista dati, Lista frequenze)::
   Restituisce il minimo della lista di dati rispetto alle corrispondenti frequenze.
-  +
 
 [EXAMPLE]
-
 ====
 
 `Min({1, 2, 3, 4, 5}, {0, 3, 4, 2, 3})` restituisce 2, il minimo tra gli elementi della lista avente frequenza maggiore
@@ -86,10 +74,8 @@ di 0.
 Min(Funzione, x iniziale, x finale)::
   A differenza della _Vista Algebra_, questa sintassi restituisce il minimo della funzione nell'intervallo indicato,
   inclusi gli estremi.
-  +
 
 [EXAMPLE]
-
 ====
 
 * `Min(x^2,-1,2)` restituisce il punto _(0,0)_
@@ -98,7 +84,6 @@ Min(Funzione, x iniziale, x finale)::
 ====
 
 [NOTE]
-
 ====
 
 * Per determinare il minimo di due funzioni `f(x)` e `g(x)` utilizzare `(f(x) + g(x) - abs(f(x) - g(x)))/2`

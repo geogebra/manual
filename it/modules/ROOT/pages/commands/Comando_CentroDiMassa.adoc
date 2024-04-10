@@ -1,0 +1,18 @@
+= Comando CentroDiMassa
+
+CentroDiMassa(Lista di punti, Lista di pesi)::
+  Determina il centro di massa di un sistema di punti organizzati in una lista, definito come la media pesata delle
+  rispettive posizioni, rispetto alla lista di pesi indicata, applicando la
+  http://en.wikipedia.org/wiki/it:Centro_di_massa[definizione].
+
+[EXAMPLE]
+====
+
+*Esempi:*
+
+* `CentroDiMassa({(2, 0), (0, 2), (-2, 0), (0, -2)}, {1, 1, 1, 1})` restituisce il punto _A(0, 0)_.
+* `CentroDiMassa({(2, 0), (0, 2), (-2, 0), (0, -2)}, {2, 1, 1, 1})` restituisce il punto _B(0.4, 0)_. L'ascissa di
+questo punto è il risultato dell'operazione _stem:[ \frac\{1}\{ 2+1+1+1 }*(2*2+1*0+1*(-2)+1*0)] = stem:[\frac\{1}\{ 5
+}*2] = 0.4_
+
+====

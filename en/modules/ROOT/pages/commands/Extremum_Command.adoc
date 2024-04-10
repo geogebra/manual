@@ -15,10 +15,8 @@ This command differs among variants of English:
 
 Extremum( <Polynomial> )::
   Yields all local extrema of the polynomial function as points on the function graph.
-  +
 
 [EXAMPLE]
-
 ====
 
 `++Extremum(x³ + 3x² - 2x + 1)++` creates local extrema _(0.29, 0.70)_ and _(-2.29, 9.30)_ and shows them in the
@@ -29,10 +27,8 @@ View].
 
 Extremum( <Function>, <Start x-Value>, <End x-Value> )::
   Calculates (numerically) the extremum of the function in the open interval ( <Start x-Value>, <End x-Value> ).
-  +
 
 [EXAMPLE]
-
 ====
 
 `++Extremum((x⁴ - 3x³ - 4x² + 4) / 2, 0, 5)++` creates local extremum _(2.93, -16.05)_ in the given interval and shows
@@ -42,7 +38,6 @@ xref:/Graphics_View.adoc[Graphics View].
 ====
 
 [NOTE]
-
 ====
 
 The function should be continuous in [ <Start x-Value>, <End x-Value> ], otherwise false extrema near discontinuity
@@ -56,7 +51,6 @@ Extremum( <Function> )::
   Will attempt to return all local extrema of the function (which should be continuous and differentiable)
 
 [EXAMPLE]
-
 ====
 
 `++Extremum(x³ + 3x² - 2x + 1)++` creates a list of the points and plots them _stem:[ \left\\{ \left(\frac\{-\sqrt\{15}
@@ -66,7 +60,6 @@ Extremum( <Function> )::
 ====
 
 [EXAMPLE]
-
 ====
 
 `++Assume(0 < x < 20, Extremum(15/2 * sin( 2/15*pi * x) + 56/5))++` yields the local turning points in the range given

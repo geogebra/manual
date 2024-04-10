@@ -2,10 +2,8 @@
 
 Tangent( <Point>, <Conic> )::
   Creates (all) tangents through the point to the conic section.
-  +
 
 [EXAMPLE]
-
 ====
 
 `++Tangent((5, 4), 4x^2 - 5y^2 = 20)++` yields _x - y = 1_.
@@ -15,10 +13,8 @@ Tangent( <Point>, <Conic> )::
 Tangent( <Point>, <Function> )::
   Creates the tangent to the function at _x = x(A)_.
   +
-  +
 
 [EXAMPLE]
-
 ====
 
 `++Tangent((1, 0), x^2)++` yields _y = 2x - 1_.
@@ -26,7 +22,6 @@ Tangent( <Point>, <Function> )::
 ====
 
 [NOTE]
-
 ====
 
 _x(A)_ is the _x_-coordinate of the given point _A_.
@@ -35,10 +30,8 @@ _x(A)_ is the _x_-coordinate of the given point _A_.
 
 Tangent( <Point on Curve>, <Curve> )::
   Creates the tangent to the curve in the given point.
-  +
 
 [EXAMPLE]
-
 ====
 
 `++Tangent((0, 1), Curve(cos(t), sin(t), t, 0, π))++` yields _y = 1_.
@@ -47,10 +40,8 @@ Tangent( <Point on Curve>, <Curve> )::
 
 Tangent( <x-Value>, <Function> )::
   Creates the tangent to the function at _x-Value_.
-  +
 
 [EXAMPLE]
-
 ====
 
 `++Tangent(1, x^2)++` yields _y = 2x - 1_.
@@ -59,10 +50,8 @@ Tangent( <x-Value>, <Function> )::
 
 Tangent( <Line>, <Conic> )::
   Creates (all) tangents to the conic section that are parallel to the given line.
-  +
 
 [EXAMPLE]
-
 ====
 
 `++Tangent(y = 4, x^2 + y^2 = 4)++` yields _y = 2_ and _y = -2_.
@@ -71,10 +60,8 @@ Tangent( <Line>, <Conic> )::
 
 Tangent( <Circle>, <Circle> )::
   Creates the common tangents to the two Circles (up to 4).
-  +
 
 [EXAMPLE]
-
 ====
 
 `++Tangent(x^2 + y^2 = 4, (x - 6)^2 + y^2 = 4)++` yields _y = 2_, _y = -2_, _1.49x + 1.67y = 4.47_ and _-1.49x + 1.67y =
@@ -84,10 +71,8 @@ Tangent( <Circle>, <Circle> )::
 
 Tangent( <Point>, <Spline> )::
   Creates the tangent to the spline in the given point.
-  +
 
 [EXAMPLE]
-
 ====
 
 Let _A = (0, 1)_, _B = (4, 4)_ and _C = (0, 4)_. `++Tangent(A, Spline({A, B, C}))++` yields line _a_: _y_ = _0.59x + 1_.
@@ -96,10 +81,8 @@ Let _A = (0, 1)_, _B = (4, 4)_ and _C = (0, 4)_. `++Tangent(A, Spline({A, B, C})
 
 Tangent( <Point>, <Implicit Curve> )::
   Creates the tangent to the implicit curve in the given point.
-  +
 
 [EXAMPLE]
-
 ====
 
 `++Tangent((1,1), x^2+y^2=1))++` yields lines _x=1_ and _y=1_.
@@ -107,7 +90,6 @@ Tangent( <Point>, <Implicit Curve> )::
 ====
 
 [NOTE]
-
 ====
 
 See also image:24px-Mode_tangent.svg.png[Mode tangent.svg,width=24,height=24] xref:/tools/Tangents_Tool.adoc[Tangents]

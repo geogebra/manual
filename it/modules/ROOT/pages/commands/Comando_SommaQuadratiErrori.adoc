@@ -1,0 +1,15 @@
+= Comando SommaQuadratiErrori
+
+SommaQuadratiErrori(Lista di punti, Funzione)::
+  Calcola la somma dei quadrati delle differenze (SSE) tra le ordinate dei punti della lista e i valori che assume la
+  funzione in corrispondenza delle loro ascisse.
+
+[EXAMPLE]
+====
+
+Data la lista: `L={(1, 2), (3, 5),(2, 2), (5, 2), (5, 5)}` e definite: `f(x)=RegPol(L,1)` e `g(x)=RegPol(L,2)`, allora è
+possibile determinare quale tra le due funzioni offre la migliore regressione, cioè quella avente la minima somma dei
+quadrati degli errori (Gauss), confrontando: `sse_f=SommaQuadratiErrori(L,f)` che restituisce _9_ e
+`sse_g=SommaQuadratiErrori(L,g)` che restituisce _6.99_.
+
+====

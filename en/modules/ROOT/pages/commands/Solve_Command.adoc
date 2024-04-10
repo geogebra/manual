@@ -1,7 +1,6 @@
 = Solve Command
 
 [NOTE]
-
 ====
 
 Commands *Solve* and xref:/commands/Solutions_Command.adoc[Solutions] solve an equation or a system of equations over
@@ -15,10 +14,8 @@ xref:/CAS_View.adoc[CAS View].
 
 Solve( <Equation in x> )::
   Solves a given equation for the main variable and returns a list of all solutions.
-  +
 
 [EXAMPLE]
-
 ====
 
 `Solve(x^2 = 4x)` yields _\{x = 4, x = 0}_, the solutions of _x^2^ = 4x_.
@@ -27,10 +24,8 @@ Solve( <Equation in x> )::
 
 Solve( <Equation>, <Variable> )::
   Solves an equation for a given unknown variable and returns a list of all solutions.
-  +
 
 [EXAMPLE]
-
 ====
 
 `Solve(x * a^2 = 4a, a)` yields \{stem:[a = \frac\{4}\{x}, a = 0]}, the solutions of _xa^2^ = 4a_.
@@ -39,10 +34,8 @@ Solve( <Equation>, <Variable> )::
 
 Solve( <Equation in x>, <Assumption> )::
   Solves an equation x, conditional on the assumption
-  +
 
 [EXAMPLE]
-
 ====
 
 `Solve(x^2=1, x>0)` yields stem:[\{x = 1}]
@@ -51,10 +44,8 @@ Solve( <Equation in x>, <Assumption> )::
 
 Solve( <List of Equations>, <List of Variables> )::
   Solves a set of equations for a given set of unknown variables and returns a list of all solutions.
-  +
 
 [EXAMPLE]
-
 ====
 
 *Examples:*
@@ -67,10 +58,8 @@ Solve( <List of Equations>, <List of Variables> )::
 
 Solve( <Equation>, <Variable> , <List of assumptions>)::
   Solves an equation for a given unknown variable with the list of assumptions and returns a list of all solutions.
-  +
 
 [EXAMPLE]
-
 ====
 
 *Examples:*
@@ -82,10 +71,8 @@ Solve( <Equation>, <Variable> , <List of assumptions>)::
 
 Solve( <List of Parametric Equations>, <List of Variables> )::
   Solves a set of parametric equations for a given set of unknown variables and returns a list of all solutions.
-  +
 
 [EXAMPLE]
-
 ====
 
 * `Solve({(x, y) = (3, 2) + t*(5, 1), (x, y) = (4, 1) + s*(1, -1)}, {x, y, t, s})` yields _\{\{x = 3, y = 2, t = 0, s =
@@ -94,7 +81,6 @@ Solve( <List of Parametric Equations>, <List of Variables> )::
 ====
 
 [NOTE]
-
 ====
 
 * The right hand side of equations (in any of the above syntaxes) can be omitted. If the right hand side is missing, it
@@ -102,5 +88,4 @@ is treated as 0.
 * Sometimes you need to do some manipulation to allow the automatic solver to work, for example
 ` Solve(TrigExpand(sin(5/4 π + x) - cos(x - 3/4 π) = sqrt(6) * cos(x) - sqrt(2)))`.
 * For piecewise-defined functions, you will need to use xref:/commands/NSolve_Command.adoc[NSolve]
-
 ====

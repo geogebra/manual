@@ -1,0 +1,25 @@
+= IntegralSymbolic Command
+
+== [#CAS_Syntax]#CAS Syntax#
+
+IntegralSymbolic(<Function>)::
+  Gives the indefinite symbolic integral with respect to the main variable. The constant of integration _c_ is not shown
+  automatically as a slider.
+
+[EXAMPLE]
+====
+
+`IntegralSymbolic(3x^2)` yields stem:[x^3+c_\{1}].
+
+====
+
+IntegralSymbolic(<Function>, <Variable>)::
+  Gives the partial symbolic integral with respect to the given variable. The constant of integration _c_ is not shown
+  automatically as a slider.
+
+[EXAMPLE]
+====
+
+`IntegralSymbolic(x³+3x y, x)` gives _stem:[ \frac\{1}\{4}x^4] + stem:[\frac\{3}\{2} x² y+c_\{1} ]_ .
+
+====

@@ -2,10 +2,8 @@
 
 Intersect( <Object>, <Object> )::
   Yields the intersection points of two objects.
-  +
 
 [EXAMPLE]
-
 ====
 
 *Examples:*
@@ -20,10 +18,8 @@ intersection points _E_ = (-1.02, -1,87) and _F_ = (2.81, -0.22) of the line and
 Intersect( <Object>, <Object>, <Index of Intersection Point> )::
   Yields the n^th^ intersection point of two objects. Each object must be a line, conic, polynomial function or implicit
   curve.
-  +
 
 [EXAMPLE]
-
 ====
 
 Let `++a(x) = x^3 + x^2 - x++` be a function and `++b: -3x + 5y = 4++` be a line. `++Intersect(a, b, 2)++` yields the
@@ -33,10 +29,8 @@ intersection point _C_ = (-0.43, 0.54) of the function and the line.
 
 Intersect( <Object>, <Object>, <Initial Point> )::
   Yields an intersection point of two objects by using a numerical, iterative method with initial point.
-  +
 
 [EXAMPLE]
-
 ====
 
 Let `++a(x) = x^3 + x^2 - x++` be a function, `++b: -3x + 5y = 4++` be a line, and _C_ = (0, 0.8) be the initial point.
@@ -47,10 +41,8 @@ numerical, iterative method.
 
 Intersect( <Function>, <Function>, <Start x-Value>, <End x-Value> )::
   Yields the intersection points numerically for the two functions in the given interval.
-  +
 
 [EXAMPLE]
-
 ====
 
 Let `++f(x) = x^3 + x^2 - x++` and `++g(x) = 4 / 5 + 3 / 5 x++` be two functions. `++Intersect(f, g, -1, 2)++` yields
@@ -60,10 +52,8 @@ the intersection points _A_ = (-0.43, 0.54) and _B_ = (1.1, 1.46) of the two fun
 
 Intersect( <Curve 1>, <Curve 2>, <Parameter 1>, <Parameter 2> )::
   Finds one intersection point using a numerical, iterative method starting at the given parameters.
-  +
 
 [EXAMPLE]
-
 ====
 
 Let `++a = Curve(cos(t), sin(t), t, 0, π)++` and `++b = Curve(cos(t) + 1, sin(t), t, 0, π)++`.
@@ -75,10 +65,8 @@ Let `++a = Curve(cos(t), sin(t), t, 0, π)++` and `++b = Curve(cos(t) + 1, sin(t
 
 Intersect( <Function>, <Function> )::
   Yields a list containing the intersection points of two objects.
-  +
 
 [EXAMPLE]
-
 ====
 
 Let `++f(x):= x^3 + x^2 - x++` and `++g(x):= x++` be two functions. `++Intersect(f(x), g(x))++` yields the intersection
@@ -89,7 +77,6 @@ points list: _\{(1, 1), (0, 0), (-2, -2)}_ of the two functions.
 Intersect( <Object>, <Object> )::
 
 [EXAMPLE]
-
 ====
 
 *Examples:*
@@ -107,7 +94,6 @@ cylinder, ...)
 ====
 
 [NOTE]
-
 ====
 
 *Notes:*

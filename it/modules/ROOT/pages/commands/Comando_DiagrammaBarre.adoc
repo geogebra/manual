@@ -1,0 +1,92 @@
+= Comando DiagrammaBarre
+
+DiagrammaBarre(Lista di dati, Lista di frequenze)::
+  Genera un diagramma a barre dei dati indicati, con le rispettive frequenze.
+  +
+
+[EXAMPLE]
+====
+
+*Esempi:*
+
+* `DiagrammaBarre({10, 11, 12, 13, 14}, {5, 8, 12, 0, 1})`
+* `DiagrammaBarre({5, 6, 7, 8, 9}, {1, 0, 12, 43, 3})`
+* `DiagrammaBarre({0.3, 0.4, 0.5, 0.6}, {12, 33, 13, 4})`
+
+====
+
+[NOTE]
+====
+
+I dati grezzi presenti nella lista devono essere ordinati in modo crescente.
+
+====
+
+DiagrammaBarre(Lista di dati grezzi, Larghezza delle barre, Fattore di scala verticale (facoltativo))::
+  Genera un diagramma a barre dei dati grezzi, avente le barre di larghezza indicata ed eventualmente altezza delle
+  barre dipendente dal fattore di scala indicato.
+
+[EXAMPLE]
+====
+
+*Esempi:*
+
+* `DiagrammaBarre({1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5}, 1)`
+* `DiagrammaBarre({1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5}, 1, 2)`
+
+====
+
+DiagrammaBarre(Lista di dati, Lista di frequenze, Larghezza delle barre)::
+  Genera un diagramma a barre dei dati indicati, con le rispettive frequenze, avente le barre della larghezza
+  specificata.
+
+[EXAMPLE]
+====
+
+*Esempi:*
+
+* `DiagrammaBarre({10, 11, 12, 13, 14}, {5, 8, 12, 0, 1}, 0.5)` lascia spazi tra le barre.
+* `DiagrammaBarre({10, 11, 12, 13, 14}, {5, 8, 12, 0, 1}, 0)` genera un grafico con barre di larghezza 0, cioè un
+grafico a segmenti.
+
+====
+
+DiagrammaBarre(Valore iniziale, Valore finale, Lista di altezze)::
+  Genera un diagramma a barre nell'intervallo indicato: il numero delle barre è determinato dalla lunghezza della lista,
+  i cui elementi sono le altezze delle barre.
+
+[EXAMPLE]
+====
+
+`DiagrammaBarre(10, 20, {1, 2, 3, 4, 5})` genera un diagramma a barre nell'intervallo [10, 20] avente cinque barre, di
+altezze rispettivamente uguali a 1, 2, 3, 4, 5.
+
+====
+
+DiagrammaBarre(Valore iniziale _a_, Valore finale _b_, Espressione, Variabile _k_, Dal numero _c_, Al numero _d_)::
+  Genera un diagramma a barre nell'intervallo (_a, b_): l'altezza delle barre viene calcolata utilizzando l'espressione
+  indicata, al variare di _k_ da _c_ a _d_.
+
+[EXAMPLE]
+====
+
+Dati _p = 0.1_, _q = 0.9_, e _n = 10_, allora
+`DiagrammaBarre(-0.5, n + 0.5, CoefficienteBinomiale(n, k) * p^k * q^(n-k), k, 0, n)` genera un diagramma a barre
+nell'intervallo [_-0.5, n + 0.5_]. Le altezze delle barre dipendono dalle probabilità calcolate utilizzando
+l'espressione indicata.
+
+====
+
+DiagrammaBarre(Valore iniziale _a_, Valore finale _b_, Espressione, Variabile _k_, Dal numero _c_, Al numero _d_, Passo
+_s_)::
+  Genera un diagramma a barre nell'intervallo (_a, b_): l'altezza delle barre viene calcolata utilizzando l'espressione
+  indicata, al variare di _k_ da _c_ a _d_, con passo _s_.
+
+[NOTE]
+====
+
+È possibile specificare un colore o un riempimento diverso per ciascuna barra del diagramma tramite la
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Finestra_di_dialogo_Propriet%C3%A0.adoc[finestra di dialogo Proprietà] dell'oggetto.
+
+====

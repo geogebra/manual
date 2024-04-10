@@ -1,0 +1,25 @@
+= Comando IntegraleSimbolico
+
+== [#Sintassi_CAS]#Sintassi CAS#
+
+IntegraleSimbolico(Funzione)::
+  Determina l'integrale indefinito simbolico, rispetto alla variabile principale. La costante di integrazione _c_ non
+  viene visualizzata come slider.
+
+[EXAMPLE]
+====
+
+`IntegraleSimbolico(3x^2)` restituisce stem:[x^3+c_\{1}].
+
+====
+
+IntegraleSimbolico(Funzione, Variabile)::
+  Determina l'integrale indefinito simbolico, rispetto alla variabile indicata. La costante di integrazione _c_ non
+  viene visualizzata come slider.
+
+[EXAMPLE]
+====
+
+`IntegraleSimbolico(x³+3x y, x)` restituisce _stem:[ \frac\{1}\{4}x^4] + stem:[\frac\{3}\{2} x² y+c_\{1} ]_ .
+
+====

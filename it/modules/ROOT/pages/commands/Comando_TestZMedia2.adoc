@@ -1,0 +1,20 @@
+= Comando TestZMedia2
+
+TestZMedia2(Lista dati campione 1, σ1, Lista dati campione 2, σ2, Coda)::
+  Applica un http://en.wikipedia.org/wiki/it:test_Z[test Z] della differenza tra le medie di due popolazioni,
+  utilizzando le liste di dati e le deviazioni standard delle popolazioni indicate. _Coda_ ammette i valori "<", ">" ,
+  "≠" che specificano le ipotesi alternative come segue:
+  +
+  "<" = differenza delle medie popolazione < 0
+  +
+  ">" = differenza delle medie popolazione > 0
+  +
+  "≠" = differenza delle medie popolazione ≠ 0
+
+I risultati sono restituiti in una lista del tipo \{ probabilità P, statistica test T }.
+
+TestZMedia2(Media campione 1, σ1, Dimensione campione 1, Media campione 2, σ2, Dimensione campione 2, Coda)::
+  Applica un test Z della differenza tra le medie di due popolazioni, utilizzando le lista di dati e le deviazioni
+  standard delle popolazioni indicate. _Coda_ è definita come sopra.
+  +
+  I risultati sono restituiti in una lista del tipo \{ probabilità P, statistica test T }.

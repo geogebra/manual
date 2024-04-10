@@ -1,0 +1,35 @@
+= Comando TestUguaglianza
+
+TestUguaglianza(Oggetto, Oggetto)::
+  Decide se gli oggetti indicati sono uguali.
+  +
+  Questo comando calcola il risultato mediante tecniche numeriche, ma tale procedura può essere modificata utilizzando
+  il comando xref:/commands/Comando_Verifica.adoc[Verifica].
+
+[EXAMPLE]
+====
+
+`TestUguaglianza(Circonferenza((0, 0),1), x^2+y^2=1)` restituisce _true_, in quanto le due circonferenze hanno lo stesso
+centro e raggio.
+
+====
+
+[NOTE]
+====
+
+`TestUguaglianza(Segmento((1, 2), (3, 4)), Segmento((3, 4), (1, 6)))` è un comando diverso da
+`Segmento((1, 2), (3, 4)) == Segmento((3, 4), (1, 6))`: la seconda sintassi confronta solo le lunghezze dei due
+segmenti.
+
+====
+
+[NOTE]
+====
+
+Vedere anche i comandi xref:/commands/Comando_TestIncidenza.adoc[TestIncidenza],
+xref:/commands/Comando_TestAllineamento.adoc[TestAllineamento],
+xref:/commands/Comando_TestConciclici.adoc[TestConciclici],
+xref:/commands/Comando_TestPerpendicolarit%C3%A0.adoc[TestPerpendicolarità],
+xref:/commands/Comando_TestParallelismo.adoc[TestParallelismo], xref:/commands/Comando_TestTangenza.adoc[TestTangenza].
+
+====

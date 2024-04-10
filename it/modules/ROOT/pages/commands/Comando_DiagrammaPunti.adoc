@@ -1,0 +1,38 @@
+= Comando DiagrammaPunti
+
+DiagrammaPunti(Lista dei dati grezzi)::
+  Restituisce il diagramma a punti relativo ai dati grezzi, oltre alla relativa lista di punti. Se un numero _a_ compare
+  nella lista dei dati grezzi _k_ volte, la lista risultante contiene i punti _(a, 1), (a, 2),..., (a, k)_.
+
+[EXAMPLE]
+====
+
+`DiagrammaPunti({2, 5, 3, 4, 3, 5, 3})` genera la lista _\{(2, 1), (3, 1), (3, 2), (3, 3), (4, 1), (5, 1), (5, 2)}_ e il
+relativo diagramma.
+
+====
+
+DiagrammaPunti(Lista dati grezzi, Booleano Impila punti adiacenti (facoltativo), Fattore di scala (facoltativo))::
+  Restituisce il diagramma a punti relativo ai dati grezzi, oltre alla relativa lista di punti. Se un numero _a_ compare
+  nella lista dei dati grezzi _k_ volte, la lista risultante contiene i punti _(a, 1), (a, 2),..., (a, k)_.
+
+Selezionando un _Fattore di scala s_, la lista ottenuta contiene i punti del tipo _(a, 1s), (a, 2s),..., (a, ks)_.
+_Impila punti adiacenti_ è un valore booleano: se impostato _true_, i punti vicini tra loro verranno impilati nel
+diagramma.
+
+[EXAMPLE]
+====
+
+`DiagrammaPunti({"Rosso", "Rosso", "Rosso", "Blu", "Blu"})` restituisce _\{(1, 1), (1, 2), (2, 1), (2, 2), (2, 3)}_.
+
+====
+
+[NOTE]
+====
+
+* Il comando _DiagrammaPunti_ è applicabile anche alle liste di testi.
+* Il comando _DiagrammaPunti_ applicato a una lista di testi ordina alfabeticamente il risultato. Nell'esempio, _Blu_
+compare due volte, _Rosso_ tre volte: poichè B si trova prima di R nell'alfabeto, si ottiene (1,1),(1,2) per _Blu_ e
+(2,1),(2,2),(2,3) per _Rosso_.
+
+====

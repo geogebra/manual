@@ -1,0 +1,42 @@
+= Comando Tipo
+
+Tipo(Oggetto)
+
+Per coniche e quadriche questo comando restituisce un numero, che rappresenta il tipo di conica o quadrica come
+descritto nella tabella che segue. Per conica o quadrica _vuota_ si intende una conica o quadrica i cui coefficienti
+sono definiti, ma la conica o quadrica non contiene punti (insieme vuoto) come ad es. x^2^+y^2^=-1. GeoGebra specifica
+anche le coniche degeneri, quindi le rette doppie (caso particolare di una coppia di rette parallele coincidenti) e la
+retta singola (caso particolare per i cerchi a diametro infinito, ad esempio come risultato di un'inversione circolare).
+La distinzione tra quadriche degeneri non è disponibile.
+
+[EXAMPLE]
+====
+
+`Tipo(x²+y²=1)` restituisce 4, che indica una circonferenza.
+
+====
+
+[cols=",,",options="header",]
+|===
+|Valore |Tipo di conica |Tipo di quadrica
+|1 |Punto singolo |Punto singolo
+|2 |Rette incidenti |
+|3 |Ellisse |Ellissoide
+|4 |Circonferenza |Sfera
+|5 |Iperbole |Iperboloide
+|6 |Insieme vuoto |Insieme vuoto
+|7 |Retta doppia |
+|8 |Rette parallele |
+|9 |Parabola |Paraboloide
+|10 |Retta |Retta
+|30 | |Cono
+|31 | |Cilindro
+|33 | |Piano
+|34 | |Piani paralleli
+|35 | |Piani incidenti
+|36 | |Iperboloide a una falda
+|37 | |Iperboloide a due falde
+|38 | |Cilindro parabolico
+|39 | |Cilindro iperbolico
+|40 | |Paraboloide iperbolico
+|===

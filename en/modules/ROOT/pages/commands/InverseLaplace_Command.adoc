@@ -1,0 +1,34 @@
+= InverseLaplace Command
+
+== [#CAS_Syntax]#CAS Syntax#
+
+InverseLaplace( <Function> )::
+  Returns the http://en.wikipedia.org/wiki/Inverse_Laplace_transform[inverse Laplace transform] of the given function.
+
+[EXAMPLE]
+====
+
+` InverseLaplace[1/(1+t^2)]` returns stem:[\mathbf\{ sin(t)} ].
+
+====
+
+InverseLaplace( <Function>, <Variable> )::
+  Returns the inverse Laplace transform of the function, with respect to the given variable.
+
+[EXAMPLE]
+====
+
+*Examples:*
+
+`InverseLaplace[ exp(- a*b),a]` returns stem:[\mathbf\{Dirac(a-b)}]
+
+`InverseLaplace[ exp(- a*b),b]` returns stem:[\mathbf\{Dirac(b-a)}]
+
+====
+
+[NOTE]
+====
+
+See also xref:/commands/Laplace_Command.adoc[Laplace] command.
+
+====

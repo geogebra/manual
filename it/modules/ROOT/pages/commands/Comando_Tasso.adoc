@@ -1,0 +1,40 @@
+= Comando Tasso
+
+Tasso(Numero periodi, Pagamento, Valore attuale, Valore futuro (facoltativo), Tipo (facoltativo), Ipotesi
+(facoltativo))::
+  Restituisce il tasso di interesse annuale.
+
+* *Numero periodi*: numero totale di periodi di pagamento annuali.
+* *Pagamento*: ammontare pagato in ciascun periodo.
+* *Valore attuale*: valore attuale di una serie di pagamenti futuri.
+* *Valore futuro (facoltativo)*: saldo che si desidera ottenere dopo l'ultimo pagamento. Se non viene inserito alcun
+valore, tale variabile sarà posta uguale a 0.
+* *Tipo (facoltativo)*: indica le scadenze dei pagamenti. Se non viene inserito un valore o si inserisce 0, il pagamento
+si intende effettuato al termine del periodo; se si inserisce 1 il pagamento si intende effettuato all'inizio del
+periodo.
+* *Ipotesi (facoltativo)*: un valore ipotetico del tasso.
+
+[EXAMPLE]
+====
+
+`Tasso(5*12, -300, 10000)` restituisce un importo mensile pari a 0.02 (2%).
+
+====
+
+[NOTE]
+====
+
+Ricordare che _Numero periodi_ è inteso su base annua. Se si pianificano pagamenti mensili per 5 anni, è necessario
+indicare quale _Numero periodi_ il valore 5*12.
+
+====
+
+[NOTE]
+====
+
+* In generale gli esborsi sono sempre indicati da numeri negativi, mentre gli introiti sono indicati da numeri positivi.
+* Vedere anche i comandi xref:/commands/Comando_Rata.adoc[Rata],
+xref:/commands/Comando_ValoreAttuale.adoc[ValoreAttuale], xref:/commands/Comando_ValoreFuturo.adoc[ValoreFuturo] e
+xref:/commands/Comando_NumeroRate.adoc[NumeroRate].
+
+====

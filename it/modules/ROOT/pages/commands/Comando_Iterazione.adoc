@@ -1,0 +1,35 @@
+= Comando Iterazione
+
+Iterazione(Funzione, Valore iniziale, Numero di iterazioni)::
+  Itera la funzione _n_ volte (_n_ = numero di iterazioni), a partire dal valore iniziale indicato.
+
+[EXAMPLE]
+====
+
+*Esempi:*
+
+* Dopo aver definito `f(x) = x^2` il comando `Iterazione(f, 3, 2)` restituisce il risultato (3^2^)^2^=81.
+* _Addizioni successive_: per ottenere l'addizione ripetuta quattro volte di 7 al numero 3: definire `g(x) = x + 7`,
+quindi `Iterazione(g, 3, 4)` restituisce (((3+7) +7) +7) +7 = 31.
+
+====
+
+Iterazione(Espressione, Nome variabile, ..., Valori iniziali, Numero di iterazioni)::
+  Itera l'espressione _n_ volte (_n_ = numero di iterazioni), a partire dai valori iniziali indicati. Il risultato è
+  l'ultimo elemento ottenuto applicando il comando xref:/commands/Comando_IterazioneLista.adoc[IterazioneLista] che
+  utilizza gli stessi parametri.
+
+[EXAMPLE]
+====
+
+ :`Iterazione(a^2+1,a,{(1+ί)/(sqrt(2))},5)` applica un'iterazione ripetuta su un numero complesso.
+
+====
+
+[NOTE]
+====
+
+Fare riferimento alla guida relativa al comando xref:/commands/Comando_IterazioneLista.adoc[IterazioneLista] per
+ulteriori dettagli.
+
+====

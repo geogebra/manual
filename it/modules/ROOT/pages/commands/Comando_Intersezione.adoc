@@ -2,10 +2,8 @@
 
 Intersezione(Oggetto, Oggetto)::
   Restituisce i punti di intersezione di due oggetti.
-  +
 
 [EXAMPLE]
-
 ====
 
 *Esempi:*
@@ -18,7 +16,6 @@ i loro punti di intersezione (-1.02, -1,87), (2.81, -0.22).
 ====
 
 [NOTE]
-
 ====
 
 Se gli oggetti sono due funzioni non polinomiali, il comando restituisce solo una delle intersezioni. In questo caso è
@@ -29,10 +26,8 @@ necessario utilizzare la sintassi `{Intersezione(Funzione, Funzione, x iniziale,
 Intersezione(Oggetto, Oggetto, Numero n)::
   Restituisce l'n^esimo^ punto di intersezione dei due oggetti. Gli oggetti supportati sono rette, coniche, funzioni
   polinomiali o curve implicite.
-  +
 
 [EXAMPLE]
-
 ====
 
 Siano _a_(_x_) = __x__^3 + __x__^2 - _x_ una funzione e _b_: -3__x__ + 5__y__ = 4 una retta. `Intersezione(a, b, 2)`
@@ -43,10 +38,8 @@ restituisce il secondo punto di intersezione della funzione con la retta, di coo
 Intersezione(Oggetto, Oggetto, Punto iniziale)::
   Restituisce un punto di intersezione dei due oggetti, utilizzando un metodo numerico iterativo con punto iniziale
   assegnato.
-  +
 
 [EXAMPLE]
-
 ====
 
 Siano _a_(_x_) = __x__^3 + __x__^2 - _x_ una funzione e _b_: -3__x__ + 5__y__ = 4 una retta. Sia _C_ = (0, 0.8) il punto
@@ -57,10 +50,8 @@ iniziale. `Intersezione(a, b, C)` restituisce il punto di intersezione della fun
 
 Intersezione(Funzione, Funzione, x iniziale, x finale)::
   Restituisce i punti di intersezione delle due funzioni appartenenti all'intervallo indicato.
-  +
 
 [EXAMPLE]
-
 ====
 
 Siano _a_(_x_) = __x__^3 + __x__^2 - _x_ e _g_(_x_) = 4 / 5 + 3 / 5 _x_ due funzioni. `Intersezione(f, g, -1, 2)`
@@ -72,10 +63,8 @@ all'intervallo [ -1, 2 ].
 Intersezione(Curva1, Curva2, Parametro1, Parametro2)::
   Determina un punto di intersezione tra le due curve utilizzando un metodo numerico iterativo nell'intervallo
   specificato dai due parametri indicati.
-  +
 
 [EXAMPLE]
-
 ====
 
 Siano _a_ = _Curva_(cos(t), sin(t), t, 0, π) e _b_ = _Curva_(cos(t) + 1, sin(t), t, 0, π). `Intersezione(a, b, 0, 2)`
@@ -87,10 +76,8 @@ restituisce il loro punto di intersezione _A_ = (0.5, 0.87).
 
 Intersezione(Funzione, Funzione)::
   Restituisce una lista contenente i punti di intersezione delle due funzioni.
-  +
 
 [EXAMPLE]
-
 ====
 
 Siano _f_(_x_):= __x__^3 + __x__^2 - _x_ e _g_(_x_):= _x_ due funzioni. `Intersezione(f(x), g(x))` restituisce la lista
@@ -100,10 +87,8 @@ Siano _f_(_x_):= __x__^3 + __x__^2 - _x_ e _g_(_x_):= _x_ due funzioni. `Interse
 
 Intersezione(Oggetto, Oggetto)::
   Restituisce i punti di intersezione di due oggetti, anche 3D.
-  +
 
 [EXAMPLE]
-
 ====
 
 *Esempi:*
@@ -118,7 +103,6 @@ Intersezione(Oggetto, Oggetto)::
 ====
 
 [NOTE]
-
 ====
 
 * Per ottenere tutti i punti di intersezione in una lista utilizzare un comando del tipo `{Intersezione(a,b)}`

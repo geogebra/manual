@@ -1,0 +1,64 @@
+= FrequencyTable Command
+
+FrequencyTable( <List of Raw Data> )::
+  Returns a table (as text) whose first column contains sorted list of unique elements of list _L_ and second column
+  contains the count of the occurrences of value in the first column. List _L_ can be numbers or text.
+FrequencyTable( <Boolean Cumulative>, <List of Raw Data> )::
+  If _Cumulative = false_, returns the same table as Frequency( <List of Raw Data> )
+  +
+  If _Cumulative = true_, returns a table whose first column is the same as in FrequencyTable( <List of Raw Data> ) and
+  the second contains cumulative frequencies of values in the first column.
+FrequencyTable( <List of Class Boundaries>, <List of Raw Data> )::
+  Returns a table (as text) whose first column contains intervals (classes) and second column contains the count of
+  numbers in _List of Raw Data_, which belong to the interval in the first column. All intervals except the highest
+  interval are of the form [a, b). The highest interval has the form [a, b].
+FrequencyTable( <Boolean Cumulative>, <List of Class Boundaries>, <List of Raw Data> )::
+  If _Cumulative = false_, returns the same table as FrequencyTable( <List of Class Boundaries>, <List of Raw Data> )
+  +
+  If _Cumulative = true_, returns a table whose first column is the same as in FrequencyTable( <List of Raw Data> ) and
+  the second contains cumulative frequencies of values in the first column.
+FrequencyTable( <List of Class Boundaries>, <List of Raw Data>, <Use Density> , <Density Scale Factor (optional)> )::
+  Returns a table (as text) whose first column contains intervals (classes) and second contains frequencies for the
+  corresponding xref:/commands/Histogram_Command.adoc[Histogram Command].
+FrequencyTable( <Boolean Cumulative>, <List of Class Boundaries>, <List of Raw Data>, <Use Density> , <Density Scale
+Factor (optional)> )::
+  Returns a table (as text) whose first column contains intervals (classes) and second contains frequencies for the
+  corresponding xref:/commands/Histogram_Command.adoc[Histogram Command].
+
+FrequencyTable( <List of Raw Data>,<Scale Factor (optional)> )::
+  Returns a table (as text) whose first column *Value* contains a sorted list of unique elements of the _<List of Raw
+  Data>_ and second column *Frequency* contains the count of the occurrences of value in the first column multiplied by
+  the _<Scale Factor>_. The list can be numbers or text.
+  +
+
+[EXAMPLE]
+====
+
+`FrequencyTable({"red", "red", "green", "green", "blue"}, 5)` returns a table with first column _Value_ with entries
+blue, green, red (alphabetical order) and second column _Frequency_ with entries 5, 10, 10.
+
+====
+
+[EXAMPLE]
+====
+
+`FrequencyTable({1, 1, 1, 2, 2, 3, 3, 4, 5}, 2)` returns a table with first column _Value_ with entries 1, 2, 3, 4, 5
+and second column _Frequency_ with entries 6, 4, 4, 2, 2.
+
+[NOTE]
+====
+
+In the list there appears 1 three-times, so the count of the occurences of 1 (=3) has to be multiplied by the scale
+factor 2 to get entry 6 in the second column.
+
+====
+
+====
+
+[NOTE]
+====
+
+This command is similar to xref:/commands/Frequency_Command.adoc[Frequency Command] and
+xref:/commands/Histogram_Command.adoc[Histogram Command]. Articles about these commands contain some related examples.
+
+====

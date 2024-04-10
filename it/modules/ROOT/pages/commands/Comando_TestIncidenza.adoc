@@ -1,0 +1,27 @@
+= Comando TestIncidenza
+
+TestIncidenza(Retta, Retta, Retta)::
+  Decide se le tre rette sono incidenti. Se le rette sono parallele tra loro, si assume che abbiano un punto di
+  intersezione all'infinito, quindi anche in questo caso il comando restituisce _true_.
+
+Questo comando calcola il risultato mediante tecniche numeriche, ma tale procedura può essere modificata utilizzando il
+comando xref:/commands/Comando_Verifica.adoc[Verifica].
+
+[EXAMPLE]
+====
+
+`TestIncidenza(Retta((1, 2), (3, 4)), Retta((1, 2), (3, 5)), Retta((1, 2), (3, 6)))` restituisce _true_, in quanto le
+tre rette indicate contengono il punto (1,2).
+
+====
+
+[NOTE]
+====
+
+Vedere anche i comandi xref:/commands/Comando_TestAllineamento.adoc[TestAllineamento],
+xref:/commands/Comando_TestConciclici.adoc[TestConciclici],
+xref:/commands/Comando_TestUguaglianza.adoc[TestUguaglianza],
+xref:/commands/Comando_TestPerpendicolarit%C3%A0.adoc[TestPerpendicolarità],
+xref:/commands/Comando_TestParallelismo.adoc[TestParallelismo], xref:/commands/Comando_TestTangenza.adoc[TestTangenza].
+
+====

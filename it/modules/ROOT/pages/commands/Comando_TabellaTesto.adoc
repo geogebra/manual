@@ -3,10 +3,8 @@
 TabellaTesto(Lista, Lista, Lista, ...)::
   Crea un testo contenente una tabella degli oggetti delle liste.
   +
-  +
 
 [EXAMPLE]
-
 ====
 
 * `TabellaTesto({x^2, 4}, {x^3, 8}, {x^4, 16})` crea una tabella come oggetto testo, avente tre righe e due colonne.
@@ -17,7 +15,6 @@ della tabella sono allineati a sinistra.
 ====
 
 [NOTE]
-
 ====
 
 Ciascuna lista viene visualizzata in una riga diversa della tabella, per impostazione predefinita.
@@ -28,10 +25,8 @@ TabellaTesto(Lista, Lista,..., Allineamento del testo)::
   Crea un testo contenente una tabella degli oggetti delle liste. Il testo opzionale “Allineamento del testo” controlla
   l'orientamento e l'allineamento del testo nella tabella, e l'allineamento dei numeri rispetto al separatore decimale.
   +
-  +
 
 [EXAMPLE]
-
 ====
 
 * `TabellaTesto({1, 2, 3, 4},{1, 4, 9, 16},"v")` crea un testo avente due colonne e quattro righe i cui elementi sono
@@ -53,7 +48,6 @@ percentuale, e allineati rispetto al separatore decimale:
 ====
 
 [NOTE]
-
 ====
 
 I valori inseribili sono "vl", "vc", "vr", "v", "h", "hl", "hc", "hr" e "." o "%". Il valore predefinito è "hl".
@@ -75,10 +69,8 @@ tabella abbiano lo stesso numero di cifre decimali
 TabellaTesto(Lista, Lista, ..., Allineamento del testo, Larghezza minima celle)::
   Crea un testo contenente una tabella degli oggetti delle liste, aventi l'allineamento e la larghezza delle celle (in
   pixel) indicati.
-  +
 
 [EXAMPLE]
-
 ====
 
 * `TabellaTesto({x², 4}, {x³, 8}, {x⁴, 16}, "c", 50)` crea una tabella con tre righe e due colonne. Tutti gli elementi
@@ -89,10 +81,8 @@ nella tabella sono centrati, e la larghezza delle celle è 50.
 TabellaTesto(Lista, Lista, ..., Allineamento del testo, Larghezza minima celle, Altezza minima celle)::
   Crea un testo contenente una tabella degli oggetti delle liste, aventi l'allineamento, la larghezza e l'altezza minima
   delle celle (in pixel) indicati.
-  +
 
 [EXAMPLE]
-
 ====
 
 * `TabellaTesto({{"sinistra", "centro", "destra"}, {"l", "c", "r"}}, "|_lcr", 45, 80)` crea una tabella avente due righe
@@ -109,7 +99,6 @@ alta 80 px.
 * colori diversi nelle righe
 
 [EXAMPLE]
-
 ====
 
 * `TabellaTesto({1,2},{3,4},"c()")` crea il testo stem:[\begin\{pmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{pmatrix} ]
@@ -123,17 +112,15 @@ alta 80 px.
 bordo senza linee di divisione tra le righe: /File:Tabslsc_png.adoc[image:Tabslsc.png[Tabslsc.png,width=130,height=85]]
 * `TabellaTesto({{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "|11001 _110001 h")` crea una
 tabella con bordo e una linea di divisione in corrispondenza della prima riga e della prima colonna: il valore 1 indica
-la presenza di una linea, il valore 0 indica che non c'è una linea di divisione o bordo:
-/File:Tabla2_PNG.adoc[image:Tabla2_.PNG[Tabla2 .PNG,width=108,height=104]]
+la presenza di una linea, il valore 0 indica che non c'è una linea di divisione o bordo: image:Tabla2_.PNG[Tabla2
+.PNG,width=108,height=104]
 * `TabellaTesto({{"\black{1,2,3,4}", "\blue{2,4,6,8}", "\green{3,6,9,12}", "\red{4,8,12,16}"}}, "vr")` crea una tabella
 avente gli oggetti della prima riga colorati in nero, quelli della seconda in blu, della terza in verde e della quarta
-in rosso:
-/File:TableauLignesCouleurs_PNG.adoc[image:TableauLignesCouleurs.PNG[TableauLignesCouleurs.PNG,width=125,height=115]]
+in rosso: image:TableauLignesCouleurs.PNG[TableauLignesCouleurs.PNG,width=125,height=115]
 
 ====
 
 [NOTE]
-
 ====
 
 La _barra di stile_ di un oggetto _TabellaTesto_ consente l'impostazione e la modifica di stile, colore di sfondo e in

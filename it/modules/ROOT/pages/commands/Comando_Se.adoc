@@ -3,10 +3,8 @@
 Se(Condizione, Oggetto)::
   Restituisce una copia dell'oggetto se la condizione è soddisfatta (_true_), e un oggetto _non definito_ se la
   condizione non è soddisfatta (_false_).
-  +
 
 [EXAMPLE]
-
 ====
 
 *Esempi:*
@@ -20,10 +18,8 @@ soddisfatta.
 Se(Condizione, Oggetto a, Oggetto b)::
   Restituisce una copia dell'oggetto _a_ se la condizione è soddisfatta (_true_), e una copia dell'oggetto _b_ se la
   condizione non è soddisfatta (_false_). *Entrambi gli oggetti devono essere dello stesso tipo*.
-  +
 
 [EXAMPLE]
-
 ====
 
 Sia _n_ un numero qualsiasi. Allora `Se(n==3, x + y = 4, x - y = 4)` genera e traccia la retta x + y = 4 quando _n_ = 3,
@@ -36,10 +32,8 @@ Se(Condizione1, Allora 1, Condizione 2, Allora 2, ... , Altrimenti (facoltativo)
   seconda condizione è soddisfatta, e così via. Se non è soddisfatta alcuna condizione ed è stato indicato un
   _Altrimenti_, allora il comando restituisce una copia di _Altrimenti_. In tutti gli altri casi viene restituito un
   _non definito_.
-  +
 
 [EXAMPLE]
-
 ====
 
 Il comando `Se(a ≟ 1, "Teo", a ≟ 2, "Mattia", a ≟ 3, "Chiara", "Roberto")` restituisce il testo _Teo_ quando _a_ = 1, il
@@ -54,7 +48,6 @@ qualsiasi comando che accetti come argomento una funzione, come xref:/commands/C
 xref:/commands/Comando_Integrale.adoc[Integrale], e xref:/commands/Comando_Intersezione.adoc[Intersezione].
 
 [EXAMPLE]
-
 ====
 
 *Esempi:*
@@ -75,7 +68,6 @@ questo caso, le definizioni delle componenti della funzione da creare devono con
 funzione.
 
 [EXAMPLE]
-
 ====
 
 Sia `sliderVal = 1` uno slider a valori nell'intervallo [1,3]. Il comando
@@ -86,7 +78,6 @@ quando il valore dello slider è 2, e _x + y + b_ quando il valore dello slider 
 ====
 
 [NOTE]
-
 ====
 
 * Vedere la sezione xref:/Valori_booleani.adoc[Valori booleani] per i simboli utilizzati nelle espressioni condizionali.
@@ -103,7 +94,6 @@ Scripting]. Un'istruzione del tipo `b = Se(a > 1, 2, 3)` è sintatticamente corr
 come parametri di _Se_.
 
 [EXAMPLE]
-
 ====
 
 Siano _n_ un numero e A un punto: il comando `Se(Resto(n, 7)==0, ImpCoordinate(A, n, 0), ImpCoordinate(A, n, 1))`

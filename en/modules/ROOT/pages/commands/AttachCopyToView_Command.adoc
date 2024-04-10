@@ -4,10 +4,8 @@ AttachCopyToView( <Object>, <View 0|1|2> )::
   If _View = 0_, a copy of given object is created. For _View = 1_ or _View = 2_ this command creates a dependent copy
   of given object whose size in given image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
   xref:/Graphics_View.adoc[Graphics View] is constant.
-  +
 
 [EXAMPLE]
-
 ====
 
 Let `poly = Polygon((0, 0), (1, 0), (1, 1), (0, 1))`. If Graphics View 1 is active, `AttachCopyToView(poly, 1)` creates
@@ -24,7 +22,6 @@ screen coordinates (in pixels) are equal to _Screen Point 1_, and _Point 2_ to a
 _Screen Point 2_.
 
 [EXAMPLE]
-
 ====
 
 Let `poly = Polygon((0, 0), (1, 0), (1, 1), (0, 1))`. If Graphics View 1 is active,
@@ -34,7 +31,6 @@ of the Graphics View.
 ====
 
 [NOTE]
-
 ====
 
 Once the copy is created, three other arguments are added to the command definition.
@@ -42,7 +38,6 @@ Once the copy is created, three other arguments are added to the command definit
 ====
 
 [NOTE]
-
 ====
 
 All points of the object are copied, even if they lie outside the view.

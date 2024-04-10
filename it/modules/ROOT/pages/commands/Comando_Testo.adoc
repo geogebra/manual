@@ -3,10 +3,8 @@
 Testo(Oggetto)::
   Restituisce un xref:/Testi.adoc[oggetto testo] contenente la formula dell'oggetto.
   +
-  +
 
 [EXAMPLE]
-
 ====
 
 Se _a = 2_ e _c = a^2^_, allora `Testo(c)` restituisce il testo "4".
@@ -14,7 +12,6 @@ Se _a = 2_ e _c = a^2^_, allora `Testo(c)` restituisce il testo "4".
 ====
 
 [NOTE]
-
 ====
 
 Per impostazione predefinita, le variabili vengono sostituite dai relativi valori.
@@ -24,10 +21,8 @@ Per impostazione predefinita, le variabili vengono sostituite dai relativi valor
 Testo(Oggetto, Booleano)::
   Restituisce un oggetto testo contenente la formula dell'oggetto indicato. Se la variabile booleana è _true_ le
   variabili saranno sostituite dai relativi valori, se è _false_ il testo generato manterrà i nomi delle variabili.
-  +
 
 [EXAMPLE]
-
 ====
 
 Se _a = 2_ e _c = a^2^_, allora
@@ -39,10 +34,8 @@ Se _a = 2_ e _c = a^2^_, allora
 
 Testo(Oggetto, Punto)::
   Restituisce la formula dell'oggetto indicato, in formato testo, nella posizione indicata.
-  +
 
 [EXAMPLE]
-
 ====
 
 `Testo("ciao", (2, 3))` mostra il testo _ciao_ nella posizione (2, 3).
@@ -53,10 +46,8 @@ Testo(Oggetto, Punto, Booleano)::
   Restituisce un oggetto testo contenente la formula dell'oggetto, nella posizione indicata. Se la variabile booleana è
   _true_ le variabili saranno sostituite dai relativi valori, se è _false_ il testo generato manterrà i nomi delle
   variabili.
-  +
 
 [EXAMPLE]
-
 ====
 
 Se _a = 2_ e _c = a^2^_, allora `Testo(c, (2,1), true)` restituisce il testo "4" nella posizione (2, 1).
@@ -67,10 +58,8 @@ Testo(Oggetto, Punto, Booleano, Booleano LaTex)::
   Restituisce un oggetto testo contenente la formula dell'oggetto, nella posizione indicata. La prima variabile booleana
   determina la sostituzione o meno (_true_ / _false_) delle variabili con i relativi valori. Se la seconda variabile
   booleana è _true_, il risultato viene visualizzato in formato xref:/LaTeX.adoc[LaTeX].
-  +
 
 [EXAMPLE]
-
 ====
 
 Se _a = 2_ e _c = a^2^_, allora `Testo(c, (2,1), true, true)` restituisce il testo "4", in formato LaTeX, nella
@@ -87,10 +76,8 @@ Testo(Oggetto, Punto, Booleano, Booleano LaTex, Posizione orizzontale -1|0|1, Po
   * -1: spostamento orizzontale a sinistra / verticale in basso
   * 0: centra il testo orizzontalmente / verticalmente sul punto indicato
   * 1: spostamento orizzontale a destra / verticale in alto
-  +
 
 [EXAMPLE]
-
 ====
 
 Se _a = 2_ e _c = a^2^_, allore `Testo(c, (2, 1), true, true, -1, 0)` restituisce il testo LaTeX _"4"_ posizionato alla
@@ -99,7 +86,6 @@ sinistra di _(2, 1)_, e allineato verticalmente con il punto.
 ====
 
 [NOTE]
-
 ====
 
 Vedere anche lo strumento image:22px-Mode_text.svg.png[Mode text.svg,width=22,height=22]

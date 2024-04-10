@@ -1,0 +1,21 @@
+= Comando TestZMedia
+
+TestZMedia(Lista dati campione, Deviazione standard σ, Media ipotizzata, Coda)::
+  Applica un http://en.wikipedia.org/wiki/it_Test_Z[test Z] a un campione della media di una popolazione, utilizzando la
+  lista di dati e la deviazione standard della popolazione indicati. _Media ipotizzata_ è la media della popolazione
+  assunta in caso di ipotesi nulla. _Coda_ ammette i valori "<", ">" , "≠" che specificano le ipotesi alternative come
+  segue:
+  +
+  "<" = media popolazione < _Media ipotizzata_
+  +
+  ">" = media popolazione > _Media ipotizzata_
+  +
+  "≠" = media popolazione ≠ _Media ipotizzata_
+
+I risultati sono restituiti in una lista del tipo \{probabilità P, statistica test Z }.
+
+TestZMedia(Media campione, Deviazione standard σ, Dimensione campione, Media ipotizzata, Coda)::
+  Applica un _test Z a un campione_ della media di una popolazione, utilizzando la lista di dati e la deviazione
+  standard della popolazione indicati. _Media ipotizzata_ e _Coda_ sono definiti come sopra.
+  +
+  I risultati sono restituiti in una lista del tipo \{probabilità P, statistica test Z }.

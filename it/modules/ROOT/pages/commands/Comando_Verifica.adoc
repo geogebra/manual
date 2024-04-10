@@ -1,0 +1,43 @@
+= Comando Verifica
+
+Verifica(Espressione booleana)::
+  Restituisce se l'espressione booleana inserita è in generale vera o falsa.
+
+GeoGebra utilizza vari metodi per decidere se un'espressione booleana è vera o falsa. Ciò significa che, ad esempio, se
+modifichiamo la posizione di alcuni punti liberi, una certa espressione booleana può risultare in generale vera anche in
+corrispondenza della nuova posizione dei punti (ad es. quando i punti liberi sono a 3 a 3 non allineati). Quando
+l'espressione booleana è valutata solo una volta viene utilizzato un calcolo numerico, ma una risposta di carattere
+generale (la cosiddetta _decisione_) richiede ulteriori verifiche.
+
+Il metodo decisionale in GeoGebra per stabilire se una xref:/Valori_booleani.adoc[espressione booleana] è vera o falsa è
+basato sul calcolo numerico. Il comando Verifica utilizza invece
+http://en.wikipedia.org/wiki/Symbolic_computation[metodi simbolici]. Se GeoGebra non è in grado di determinare la
+risposta, verrà restituito _non definito_.
+
+[EXAMPLE]
+====
+
+Si definiscono tre punti, `A=(1,2)`, `B=(3,4)`, `C=(5,6)`. Il comando `TestAllineamento(A,B,C)` restituisce _true_, in
+quanto in questo caso la verifica è di tipo numerico sulle coordinate dei tre punti, ma
+`Verifica(TestAllineamento(A,B,C))` restituisce _false_, in quanto i tre punti in generale non sono collineari, come ad
+esempio quando i tre punti liberi vengono spostati nel piano.
+
+====
+
+[EXAMPLE]
+====
+
+Si definisce un triangolo di vertici _A_, _B_ e _C_, e si calcolano `D=PuntoMedio(B,C)`, `E=PuntoMedio(A,C)`,
+`p=Retta(A,B)`, `q=Retta(D,E)]`. In questo caso sia `p∥q` che `Verifica(p∥q)` restituiscono _true_, in quanto la retta
+che unisce i punti medi di due lati di un triangolo è sempre parallela al terzo lato.
+
+====
+
+[[ggbContainerb04a11e6e3f77d97ba3292d0e262ebe7]][NOTE]
+====
+
+Vedere anche il comando xref:/commands/Comando_DettagliVerifica.adoc[DettagliVerifica], la sezione relativa ai
+xref:/Valori_booleani.adoc[Valori booleani] e i http://dev.geogebra.org/trac/wiki/TheoremProving[dettagli tecnici sugli
+algoritmi].
+
+====

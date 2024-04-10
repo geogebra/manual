@@ -1,0 +1,18 @@
+= ZMean2Test Command
+
+ZMean2Test( <List of Sample Data 1>, <σ1>, <List of Sample Data 2>, <σ2>, <Tail> )::
+  Performs a http://en.wikipedia.org/wiki/Z-test[Z test] of the difference between two population means using the given
+  lists of sample data and the population standard deviations. Tail has possible values "<", ">" , "≠" that determine
+  the following alternative hypotheses:
+  +
+  "<" = difference in population means < 0
+  +
+  ">" = difference in population means > 0
+  +
+  "≠" = difference in population means ≠ 0
+
+Results are returned in list form as \{Probability value, Z test statistic}.
+
+ZMean2Test( <Sample Mean 1 >, <σ1>, <Sample Size 1>, <Sample Mean 2 >, <σ2>, <Sample Size 2>, <Tail> )::
+  Performs a Z test of the difference between two population means using the given sample statistics and population
+  standard deviations. _Tail_ is defined as above.

@@ -1,0 +1,31 @@
+= Comando BoxPlot
+
+BoxPlot(SpostamentoY, ScalaY, Lista dati grezzi)::
+  Genera un box plot utilizzando i dati grezzi della lista, la cui posizione verticale nel sistema di coordinate è
+  controllata dalla variabile _SpostamentoY_ e la cui altezza è controllata dal fattore _ScalaY_.
+
+[EXAMPLE]
+====
+
+`BoxPlot(0, 1, {2, 2, 3, 4, 5, 5, 6, 7, 7, 8, 8, 8, 9})`
+
+====
+
+BoxPlot(SpostamentoY, ScalaY, Valore iniziale , Q1, Mediana, Q3, Valore finale)::
+  Genera un box plot dei dati statistici indicati, nell’intervallo (_Valore iniziale_, _Valore finale_).
+
+BoxPlot(SpostamentoY, ScalaY, Lista dati grezzi, Booleano _Anomalie_)::
+  Visualizza le anomalie statistiche (outlier), indicandole con delle "X", all'esterno del box plot. Per
+  http://en.wikipedia.org/wiki/it:Outlier[anomalie statistiche (outlier)] in questo comando si intendono i dati al di
+  sotto di Q1 - 1.5 * (Q3 - Q1) o al di sopra di Q3 + 1.5 * (Q3 - Q1).
+
+[NOTE]
+====
+
+Fare riferimento a http://en.wikipedia.org/wiki/it:Scarto_interquartile[Scarto interquartile] per ulteriori
+informazioni.
+
+====
+
+BoxPlot(SpostamentoY, ScalaY, Lista dati, Lista frequenze, Booleano _Anomalie_)::
+  Visualizza i dati di una tabella di frequenza in un box plot .

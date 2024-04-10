@@ -3,10 +3,8 @@
 TableText( <List>, <List>, ... )::
   Creates a text that contains a table of the list objects.
   +
-  +
 
 [EXAMPLE]
-
 ====
 
 *Examples:*
@@ -19,7 +17,6 @@ aligned.
 ====
 
 [NOTE]
-
 ====
 
 By default, each list is displayed in its own row of the table.
@@ -29,10 +26,8 @@ By default, each list is displayed in its own row of the table.
 TableText( <List>, <List>, ..., <Alignment of Text> )::
   Creates a text that contains a table of the list objects. The optional text “Alignment of text” controls the
   orientation and alignment of the table text, as well as the alignment of the separator in decimal values.
-  +
 
 [NOTE]
-
 ====
 
 Possible values are "vl", "vc", "vr", "v", "h", "hl", "hc", "hr" and "." or "%" - the default value is "hl".
@@ -50,7 +45,6 @@ Possible values are "vl", "vc", "vr", "v", "h", "hl", "hc", "hr" and "." or "%" 
 ====
 
 [EXAMPLE]
-
 ====
 
 *Examples:*
@@ -72,10 +66,8 @@ percentage, and aligned on decimal points
 
 TableText( <List>, <List>, ..., <Alignment of Text>, <Minimum Cell Width>)::
   Creates a text that contains a table of the list objects, with given alignment and cell width (in pixels).
-  +
 
 [EXAMPLE]
-
 ====
 
 * `TableText({x², 4}, {x³, 8}, {x⁴, 16}, "c", 50)` creates a table with three rows and two columns. All items in the
@@ -85,10 +77,8 @@ table are centered and the cell width is 50 px.
 
 TableText( <List>, <List>, ..., <Alignment of Text>, <Minimum Cell Width>, <Minimum Cell Height>)::
   Creates a text that contains a table of the list objects, with given alignment, cell width and height (in pixels).
-  +
 
 [EXAMPLE]
-
 ====
 
 * `TableText({{"left", "center", "right"}, {"l", "c", "r"}}, "|_lcr", 45, 80)` creates a table with two rows and three
@@ -97,7 +87,6 @@ columns. All items in the table have a different alignment. Each cell of the tab
 ====
 
 [NOTE]
-
 ====
 
 The _width_ and the _height_ of a _TableText_ depend on the font size setting.
@@ -112,7 +101,6 @@ It's also possible to insert:
 * different colourings
 
 [EXAMPLE]
-
 ====
 
 *Examples:*
@@ -136,7 +124,6 @@ row coloured in blue, the ones in the second row coloured in red.
 ====
 
 [NOTE]
-
 ====
 
 The xref:/Style_Bar.adoc[Style Bar] of a _TableText_ object allows the user to customize the object's appearance,

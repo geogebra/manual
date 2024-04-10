@@ -4,7 +4,6 @@ GeoGebra supports real matrices, which are represented as a list of xref:/Lists.
 matrix.
 
 [EXAMPLE]
-
 ====
 
 In GeoGebra, \{\{1, 2, 3}, \{4, 5, 6}, \{7, 8, 9}} represents the 3x3 matrix stem:[\begin\{pmatrix}1&2&3\\ 4&5&6\\ 7&8&9
@@ -17,7 +16,6 @@ graphics.svg,width=16,height=16] xref:/Graphics_View.adoc[Graphics View], use th
 command or drag and drop the matrix definition from _Algebra View_ to _Graphics View_.
 
 [EXAMPLE]
-
 ====
 
 In the xref:/Input_Bar.adoc[Input Bar] type `++FormulaText[{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}]++` to display the matrix
@@ -31,7 +29,6 @@ To access particular elements of a matrix you can use the xref:/commands/Element
 simplified syntax shown in the example below:
 
 [EXAMPLE]
-
 ====
 
 Let `++matrix={{1, 2}, {3, 4}}++`, then:
@@ -49,7 +46,6 @@ _i-th_ row and the _j-th_ column.
 Matrix operations are _operations with lists_, so the following syntaxes produce the described results.
 
 [NOTE]
-
 ====
 
 Some syntaxes can represent operations which are not defined in the same way in the matrices set.
@@ -67,7 +63,6 @@ Some syntaxes can represent operations which are not defined in the same way in 
 * `++Matrix1 * Matrix2++`: uses matrix multiplication to calculate the resulting matrix.
 
 [EXAMPLE]
-
 ====
 
 \{\{1, 2}, \{3, 4}, \{5, 6}} * \{\{1, 2, 3}, \{4, 5, 6}} yields the matrix \{\{9, 12, 15}, \{19, 26, 33}, \{29, 40,
@@ -76,7 +71,6 @@ Some syntaxes can represent operations which are not defined in the same way in 
 ====
 
 [NOTE]
-
 ====
 
 The rows of the first and columns of the second matrix need to have the same number of elements.
@@ -86,7 +80,6 @@ The rows of the first and columns of the second matrix need to have the same num
 * `++2x2 Matrix * Point (or Vector)++`: multiplies the _Matrix_ by the given _Point / Vector_ and yields a point.
 
 [EXAMPLE]
-
 ====
 
 \{\{1, 2}, \{3, 4}} * (3, 4) yields the point _A_ = (11, 25).
@@ -96,7 +89,6 @@ The rows of the first and columns of the second matrix need to have the same num
 * `++3x3 Matrix * Point (or Vector)++`: multiplies the _Matrix_ by the given _Point / Vector_ and yields a point.
 
 [EXAMPLE]
-
 ====
 
 \{\{1, 2, 3}, \{4, 5, 6}, \{0, 0, 1}} * (1, 2) gives you the point A = (8, 20).
@@ -104,7 +96,6 @@ The rows of the first and columns of the second matrix need to have the same num
 ====
 
 [NOTE]
-
 ====
 
 This is a special case for affine transformations where homogeneous coordinates are used: (x, y, 1) for a point and (x,
@@ -115,7 +106,6 @@ y, 0) for a vector. This example is therefore equivalent to: `++{{1, 2, 3}, {4, 
 * `++Matrix1 / Matrix2++`: Divides each element of _Matrix1_ by the corresponding element in _Matrix2_.
 
 [NOTE]
-
 ====
 
 However, GeoGebra supports the syntax `++Matrix1 * Matrix2 ^(-1)++` .

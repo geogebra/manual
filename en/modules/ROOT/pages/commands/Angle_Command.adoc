@@ -6,7 +6,6 @@ Angle( <Object> )
 xref:/commands/Axes_Command.adoc[Axes]).
 
 [EXAMPLE]
-
 ====
 
 `++Angle(x²/4+y²/9=1)++` yields _90°_ or _1.57_ if the default angle unit is _radians_.
@@ -14,7 +13,6 @@ xref:/commands/Axes_Command.adoc[Axes]).
 ====
 
 [NOTE]
-
 ====
 
 It is not possible to change the Angle Unit to Radian in GeoGebra 5.0 Web and Tablet App Version.
@@ -24,7 +22,6 @@ It is not possible to change the Angle Unit to Radian in GeoGebra 5.0 Web and Ta
 * *Vector:* Returns the angle between the _x_‐axis and given vector.
 
 [EXAMPLE]
-
 ====
 
 `++Angle(Vector((1, 1)))++` yields _45°_ or the corresponding value in _radians_.
@@ -34,7 +31,6 @@ It is not possible to change the Angle Unit to Radian in GeoGebra 5.0 Web and Ta
 * *Point:* Returns the angle between the _x_‐axis and the position vector of the given point.
 
 [EXAMPLE]
-
 ====
 
 `++Angle((1, 1))++` yields _45°_ or the corresponding value in _radians_.
@@ -44,7 +40,6 @@ It is not possible to change the Angle Unit to Radian in GeoGebra 5.0 Web and Ta
 * *Number:* Converts the number into an angle (result in [0,360°] or [0,2π] depending on the default angle unit).
 
 [EXAMPLE]
-
 ====
 
 `++Angle(20)++` yields _65.92°_ when the default unit for angles is _degrees_.
@@ -54,7 +49,6 @@ It is not possible to change the Angle Unit to Radian in GeoGebra 5.0 Web and Ta
 * *Polygon:* Creates all angles of a polygon in mathematically positive orientation (counter clockwise).
 
 [EXAMPLE]
-
 ====
 
 `++Angle(Polygon((4, 1), (2, 4), (1, 1)))++` yields _56.31°_, _52.13°_ and _71.57°_ or the corresponding values in
@@ -63,7 +57,6 @@ _radians_.
 ====
 
 [NOTE]
-
 ====
 
 If the polygon was created in counter clockwise orientation, you get the interior angles. If the polygon was created in
@@ -73,10 +66,8 @@ clockwise orientation, you get the exterior angles.
 
 Angle( <Vector>, <Vector> )::
   Returns the angle between two vectors (result in [0,360°] or [0,2π] depending on the default angle unit).
-  +
 
 [EXAMPLE]
-
 ====
 
 `++Angle(Vector((1, 1)), Vector((2, 5)))++` yields _23.2°_ or the corresponding value in _radians_.
@@ -86,10 +77,8 @@ Angle( <Vector>, <Vector> )::
 Angle( <Line>, <Line> )::
   Returns the angle between the direction vectors of two lines (result in [0,360°] or [0,2π] depending on the default
   angle unit).
-  +
 
 [EXAMPLE]
-
 ====
 
 * `++Angle(y = x + 2, y = 2x + 3)++` yields _18.43°_ or the corresponding value in _radians_..
@@ -106,10 +95,8 @@ and in _CAS View_ :
 
 Angle( <Line>, <Plane> )::
   Returns the angle between the line and the plane.
-  +
 
 [EXAMPLE]
-
 ====
 
 * `++Angle(Line((1, 2, 3),(-2, -2, 0)), z = 0)++` yields _30.96°_ or the corresponding value in _radians_.
@@ -118,10 +105,8 @@ Angle( <Line>, <Plane> )::
 
 Angle( <Plane>, <Plane> )::
   Returns the angle between the two given planes.
-  +
 
 [EXAMPLE]
-
 ====
 
 * `++Angle(2x - y + z = 0, z = 0)++` yields _114.09°_ or the corresponding value in _radians_.
@@ -130,10 +115,8 @@ Angle( <Plane>, <Plane> )::
 
 Angle( <Point>, <Apex>, <Point> )::
   Returns the angle defined by the given points (result in [0,360°] or [0,2π] depending on the default angle unit).
-  +
 
 [EXAMPLE]
-
 ====
 
 `++Angle((1, 1), (1, 4), (4, 2))++` yields _56.31°_ or the corresponding value in _radians_.
@@ -142,10 +125,8 @@ Angle( <Point>, <Apex>, <Point> )::
 
 Angle( <Point>, <Apex>, <Angle> )::
   Returns the angle of size _α_ drawn from _point_ with _apex_.
-  +
 
 [EXAMPLE]
-
 ====
 
 :*`++Angle((0, 0), (3, 3), 30°)++` yields _30°_ and the point _(1.9, -1.1)_.
@@ -153,7 +134,6 @@ Angle( <Point>, <Apex>, <Angle> )::
 ====
 
 [NOTE]
-
 ====
 
 The point _Rotate( <Point>, <Angle>, <Apex> )_ is created as well.
@@ -164,10 +144,8 @@ Angle( <Point>, <Point>, <Point>, <Direction> )::
   Returns the angle defined by the points and the given _Direction_, that may be a line or a plane (result in [0,360°]
   or [0,2π] depending on the default angle unit).
   +
-  +
 
 [EXAMPLE]
-
 ====
 
 `++Angle((1, -1, 0),(0, 0, 0),(-1, -1, 0), zAxis)++` yields _270°_ and
@@ -176,7 +154,6 @@ Angle( <Point>, <Point>, <Point>, <Direction> )::
 ====
 
 [NOTE]
-
 ====
 
 Using a _Direction_ allows to bypass the standard display of angles in 3__D__ which can be set as just [0,180°] or
@@ -186,7 +163,6 @@ Using a _Direction_ allows to bypass the standard display of angles in 3__D__ wh
 ====
 
 [NOTE]
-
 ====
 
 See also image:20px-Mode_angle.svg.png[Mode angle.svg,width=20,height=20] xref:/tools/Angle_Tool.adoc[Angle] and

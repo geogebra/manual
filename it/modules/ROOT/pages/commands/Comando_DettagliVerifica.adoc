@@ -1,0 +1,59 @@
+= Comando DettagliVerifica
+
+DettagliVerifica(Espressione booleana)::
+  Restituisce alcuni dettagli relativi al risultato della verifica automatica dell'espressione booleana inserita.
+
+Normalmente, GeoGebra decide se un'xref:/Valori_booleani.adoc[espressione booleana] sia vera o falsa utilizzando il
+calcolo numerico. Il comando DettagliVerifica utilizza invece http://en.wikipedia.org/wiki/Symbolic_computation[metodi
+simbolici] per determinare il valore di verità di una proposizione. Questo comando funziona allo stesso modo del comando
+xref:/commands/Comando_Verifica.adoc[Verifica], ma inoltre restituisce alcuni dettagli relativi alla verifica
+automatica, sotto forma di xref:/Liste.adoc[lista], e in particolare:
+
+* Una lista vuota (\{}) se GeoGebra non è in grado di determinare un risultato.
+* Una lista contenente il solo elemento \{_false_}, quando in generale la proposizione non è vera.
+* Una lista contenente il solo elemento \{_true_}, quando la proposizione è sempre vera (in tutti i casi in cui è
+possibile costruire un grafico).
+* Una lista contenente più elementi, tra cui il valore booleano _true_ e un'altra lista per le cosiddette _condizioni
+non degenerative_, se la proposizione è vera sotto determinate condizioni, ad es. \{true, \{"TestAllineamento(A,B,C)",
+"TestUguaglianza(C,D)"}}. Ciò significa che se nessuna tra le condizioni è vera (in tutti i casi in cui è possibile
+costruire un grafico), allora la proposizione è vera.
+* Una lista del tipo \{_true_,\{"..."}}, se la proposizione è vera sotto determinate condizioni, ma tali condizioni, per
+varie ragioni, non possono essere rese in forma "leggibile".
+
+[EXAMPLE]
+====
+
+Dopo avere creato il triangolo di vertici _A_, _B_ e _C_, definire `D=PuntoMedio(B,C)`, `E=PuntoMedio(A,C)`,
+`p=Retta(A,B)`, `q=Retta(D,E)`. Se `DettagliVerifica(p∥q) ` restituisce \{true}, ciò significa che è possibile costruire
+il grafico e che la retta _DE_ dei punti medi di due lati è parallela al lato _AB_.
+
+====
+
+[EXAMPLE]
+====
+
+Sia _AB_ il segmento _a_. Definire `C=PuntoMedio(A,B)`, `b=AsseSegmento(A,B)`, `D=Intersezione(a,b)`. Il comando
+`DettagliVerifica(C==D)` restituisce \{true,\{"TestUguaglianza(A,B)"}}: ciò significa che se i punti _A_ e _B_ sono
+distinti, allora i punti _C_ e _D_ saranno coincidenti.
+
+====
+
+[EXAMPLE]
+====
+
+Sia _AB_ il segmento _a_. Definire `l=Retta(A,B)`. Sia _C_ un punto arbitrario della retta _l_ e siano `b=Segmento(B,C)`
+e `c=Segmento(A,C)`. Il comando `DettagliVerifica(a==b+c)` restituisce \{true,\{"a+b==c", "b==a+c"}}: ciò significa che
+se non si verifica che stem:[a+b=c] e stem:[b=a+c], allora stem:[a=b+c].
+
+====
+
+La lista delle condizioni non degeneri può risultare un insieme in forma non semplificata. Relativamente all'esempio
+precedente, l'insieme semplificato corretto dovrebbe essere l'insieme vuoto.
+
+[NOTE]
+====
+
+Vedere anche il comando xref:/commands/Comando_Verifica.adoc[Verifica], xref:/Valori_booleani.adoc[valori booleani] e i
+http://dev.geogebra.org/trac/wiki/TheoremProving[dettagli tecnici degli algoritmi (in inglese)].
+
+====

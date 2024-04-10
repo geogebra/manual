@@ -1,7 +1,6 @@
 = Comando Risolvi
 
 [NOTE]
-
 ====
 
 I comandi _Risolvi_ e xref:/commands/Comando_Soluzioni.adoc[Soluzioni] risolvono un'equazione o un sistema
@@ -16,10 +15,8 @@ cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[vista CAS]:
 
 Risolvi(Equazione in x)::
   Risolve l'equazione indicata rispetto alla variabile principale e restituisce la lista delle soluzioni.
-  +
 
 [EXAMPLE]
-
 ====
 
 `Risolvi(x^2=4x)` restituisce _\{x = 4, x = 0}_.
@@ -28,10 +25,8 @@ Risolvi(Equazione in x)::
 
 Risolvi(Equazione, Variabile)::
   Risolve l'equazione rispetto alla variabile indicata e restituisce la lista delle soluzioni.
-  +
 
 [EXAMPLE]
-
 ====
 
 `Risolvi(x*a^2=4a, a)` restituisce \{stem:[a = \frac\{4}\{x}, a = 0]}.
@@ -40,10 +35,8 @@ Risolvi(Equazione, Variabile)::
 
 Risolvi(Equazione in x, Condizione)::
   Risolve un'equazione in x che soddisfa la condizione data.
-  +
 
 [EXAMPLE]
-
 ====
 
 `Risolvi(x^2=1, x>0)` restituisce stem:[\{x = 1}]
@@ -52,10 +45,8 @@ Risolvi(Equazione in x, Condizione)::
 
 Risolvi(Lista di equazioni, Lista di variabili)::
   Risolve un sistema di equazioni rispetto alle variabili indicate e restituisce la lista delle soluzioni.
-  +
 
 [EXAMPLE]
-
 ====
 
 *Esempi:*
@@ -67,10 +58,8 @@ Risolvi(Lista di equazioni, Lista di variabili)::
 
 Risolvi(Equazione, Variabile, Lista di condizioni)::
   Risolve un'equazione in una data variabile secondo le condizioni indicate e restituisce la lista delle soluzioni.
-  +
 
 [EXAMPLE]
-
 ====
 
 *Esempi:*
@@ -82,10 +71,8 @@ Risolvi(Equazione, Variabile, Lista di condizioni)::
 
 Risolvi(Lista di equazioni parametriche, Lista di variabili)::
   Risolve un sistema di equazioni parametriche rispetto alle variabili indicate, e restituisce la lista delle soluzioni.
-  +
 
 [EXAMPLE]
-
 ====
 
 * `Risolvi({(x, y) = (3, 2) + t*(5, 1), (x, y) = (4, 1) + s*(1, -1)}, {x, y, t, s})` restituisce _\{\{x = 3, y = 2, t =
@@ -94,7 +81,6 @@ Risolvi(Lista di equazioni parametriche, Lista di variabili)::
 ====
 
 [NOTE]
-
 ====
 
 * È possibile omettere il secondo membro dell'equazione inserita: in questo caso il secondo membro viene interpretato
@@ -102,5 +88,4 @@ come 0.
 * A volte è necessario applicare alcune manipolazioni per consentire al CAS di risolvere l'equazione, come ad esempio in
 ` Risolvi(TrigSviluppa(sin(5/4π+x)-cos(x-3/4π)=sqrt(6)*cos(x)-sqrt(2)))`
 * Per funzioni definite a tratti è necessario utilizzare il comando xref:/commands/Comando_RisolviN.adoc[RisolviN]
-
 ====

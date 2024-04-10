@@ -1,0 +1,41 @@
+= Type Command
+
+Type( <Object> )
+
+For conics and quadrics this command returns a number representing the conic/quadric type according to the table below.
+In this context empty conic (or quadric) is one where all coefficients are defined, but the conic (quadric) contains no
+points, e.g. x^2^+y^2^=-1. For conics GeoGebra distinguishes double line (special case of parallel lines with distance
+0) and single line (special case of circle with infinite diameter, may result from circle inversion). For quadrics there
+is no such distinction.
+
+[EXAMPLE]
+====
+
+`Type(x²+y²=1)` yields 4 which stands for circle.
+
+====
+
+[cols=",,",options="header",]
+|===
+|Value |Type of conic |Type of quadric
+|1 |Single point |Single point
+|2 |Intersecting lines |
+|3 |Ellipse |Ellipsoid
+|4 |Circle |Sphere
+|5 |Hyperbola |
+|6 |Empty |Empty
+|7 |Double line |
+|8 |Parallel lines |
+|9 |Parabola |Paraboloid
+|10 |Line |Line
+|30 | |Cone
+|31 | |Cylinder
+|33 | |Plane
+|34 | |Parallel planes
+|35 | |Intersecting planes
+|36 | |Hyperboloid of one sheet
+|37 | |Hyperboloid of two sheets
+|38 | |Parabolic cylinder
+|39 | |Hyperbolic cylinder
+|40 | |Hyperbolic paraboloid
+|===

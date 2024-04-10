@@ -1,0 +1,24 @@
+= Comando TestT2
+
+TestT2(Lista dati campione 1, Lista dati campione 2, Coda, Booleano Combinata)::
+  Applica un test T alla differenza tra due medie di popolazione, utilizzando le liste di dati indicati. _Coda_ ammette
+  i valori "<", ">" , "≠" che specificano le ipotesi alternative come segue:
+  +
+  "<" = differenza tra le medie della popolazione < 0
+  +
+  ">" = differenza tra le medie della popolazione > 0
+  +
+  "≠" = differenza tra le medie della popolazione ≠ 0
+
+Se _Combinata_ = true, allora le varianze della popolazione sono supposte uguali, e nel calcolo le deviazioni standard
+dei campioni vengono combinate.
+
+Se _Combinata_ = false, allora le varianze della popolazione non sono supposte uguali, e nel calcolo le deviazioni
+standard dei campioni non vengono combinate.
+
+I risultati sono restituiti in una lista del tipo \{P valore, T test statistico}.
+
+TestT2(Media campione 1, Deviazione standard campione 1, Dimensione campione 1, Media campione 2, Deviazione standard
+campione 2, Dimensione campione 2, Coda, Booleano Combinata)::
+  Applica un test T alla differenza tra due medie di popolazione, utilizzando le statistiche indicate. _Coda_ e
+  _Combinata_ sono definite come sopra.

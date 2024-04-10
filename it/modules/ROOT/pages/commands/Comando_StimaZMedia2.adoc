@@ -1,0 +1,22 @@
+= Comando StimaZMedia2
+
+StimaZMedia2(Lista dati campione 1, Lista dati campione 2, σ1, σ2, Livello)::
+  Calcola una stima Z dell'intervallo di confidenza della differenza tra due medie di popolazione, utilizzando i dati,
+  le deviazioni standard e il _livello_ di confidenza indicati.
+  +
+  I risultati sono restituiti in una lista del tipo \{limite inferiore di confidenza, limite superiore di confidenza}.
+
+[EXAMPLE]
+====
+
+Dati due campioni di dati `lista1 = {1, 4, 5, 4, 1, 3, 4, 2}`, `lista2 = {2, 1, 3, 1, 2, 5, 2, 4}`, con deviazione
+standard della lista1 `σ_1 = sqrt(2)`, e deviazione standard della lista2 `σ_2  =sqrt(1.75)` e livello di confidenza è
+0.75, allora `StimaZMedia2(lista1, lista2, σ_1,  σ_2, 0.75)` restituisce _lista3=\{-0.29, 1.29}_.
+
+====
+
+StimaZMedia2(Media campione 1, σ1, Dimensione campione 1, Media campione 2, σ2, Dimensione campione 2, Livello)::
+  Calcola una stima Z dell'intervallo di confidenza della differenza tra due medie di popolazione, utilizzando i dati,
+  le deviazioni standard e il _livello_ di confidenza indicati.
+  +
+  I risultati sono restituiti in una lista del tipo \{limite inferiore di confidenza, limite superiore di confidenza}.

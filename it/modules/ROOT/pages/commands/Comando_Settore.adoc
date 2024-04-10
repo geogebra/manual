@@ -1,0 +1,46 @@
+= Comando Settore
+
+Settore(Conica, Punto A, Punto B)::
+  Genera e restituisce l'area del settore della conica compreso tra i punti _A_ e _B_.
+  +
+
+[EXAMPLE]
+====
+
+*Esempi:*
+
+* Siano `c: x^2 + 2y^2 = 8` un'ellisse, `D = (-2.83, 0)` ed `E = (0, -2)` due suoi punti. `Settore(c, D, E)` restituisce
+_d = 4.44_.
+* Siano `c: x^2 + y^2 = 9` una circonferenza, `A = (3, 0)` e `B = (0, 3)` due suoi punti. `Settore(c, A, B)` restituisce
+_d = 7.07_
+
+====
+
+[NOTE]
+====
+
+Questo comando è applicabile solo a circonferenza ed ellisse.
+
+====
+
+Settore(Conica, Valore parametro, Valore parametro)::
+  Genera e calcola l'area del settore della conica compreso tra i due valori indicati del parametro.
+  +
+
+[EXAMPLE]
+====
+
+Sia `c: x^2 + y^2 = 9` una circonferenza. `Settore(c, 0, 3/4π)` restituisce _d = 10.6_
+
+====
+
+[NOTE]
+====
+
+GeoGebra utilizza per il calcolo le seguenti forme parametriche:
+
+* Circonferenza: _(r cos(t), r sin(t))_ dove _r_ è il raggio della circonferenza
+* Ellisse: _(a cos(t), b sin(t))_ dove _a_ e _b_ sono le lunghezze rispettivamente del semiasse maggiore e del semiasse
+minore.
+
+====

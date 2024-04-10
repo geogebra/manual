@@ -1,0 +1,44 @@
+= Payment Command
+
+Payment( <Rate>, <Number of Periods>, <Present Value>, <Future Value (optional)>, <Type (optional)> )::
+  Calculates the payment for a loan based on constant payments and a constant interest rate.
+
+* *<Rate>* Interest rate per period.
+* *<Number of Periods>* Total number of payments for the loan.
+* *<Present Value>* Total amount that a series of future payments is worth now.
+* *<Future Value (optional)>* A cash balance you want to attain after the last payment. If you do not enter a future
+value, it is assumed to be 0.
+* *<Type (optional)>* Indicates when payments are due. If you do not enter a value or you enter 0 the payment is due at
+the end of the period. If you enter 1 it is due at the beginning of the period.
+
+[EXAMPLE]
+====
+
+`Payment(6%/12, 10, 10000, 0,1)` yields a monthly payment for a loan of -1022.59.
+
+[NOTE]
+====
+
+Make sure that you are consistent about the units you use for `<Rate>` and `<Number of Periods>`. If you make monthly
+payments on a four-year loan at an annual interest rate of 6 percent, use 6%/12 for rate and 4*12 for number of
+payments.
+
+====
+
+====
+
+[NOTE]
+====
+
+For all arguments, cash paid out is represented by negative numbers and cash received by positive numbers.
+
+====
+
+[NOTE]
+====
+
+See also xref:/commands/Rate_Command.adoc[Rate], xref:/commands/Periods_Command.adoc[Periods],
+xref:/commands/PresentValue_Command.adoc[Present Value] and xref:/commands/FutureValue_Command.adoc[Future Value]
+commands.
+
+====

@@ -1,0 +1,14 @@
+= Comando CoeffDeterminazione
+
+CoeffDeterminazione(Lista di punti, Funzione)::
+  Calcola il http://en.wikipedia.org/wiki/it:Coefficiente_di_determinazione[coefficiente di determinazione], R² = 1 -
+  xref:/commands/Comando_SommaQuadratiErrori.adoc[SSE] / xref:/commands/Comando_SYY.adoc[Syy], tra i valori _y_ dei
+  punti appartenenti alla lista e i valori assunti dalla funzione in corrispondenza dei valori _x_ della lista indicata.
+
+[EXAMPLE]
+====
+
+`CoeffDeterminazione({(-3, 2), (-2, 1), (-1, 3), (0, 4), (1, 2), (2, 4), (3, 3), (4, 5), (6, 4)}, 0.5x + 2.5)`
+restituisce _0.28_.
+
+====

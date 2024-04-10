@@ -1,0 +1,80 @@
+= StepGraph Command
+
+StepGraph( <List of Points> )::
+  Draws a step graph of the given list of points. Each point is connected to the next point in the list by a horizontal
+  line segment.
+
+[EXAMPLE]
+====
+
+`StepGraph({(1, 1), (3, 2), (4, 5), (5, 7)})`
+
+====
+
+StepGraph( <List of Points>, <Boolean Join> )::
+  Draws a step graph of the given list of points. If _Join = false_, then a horizontal line segment is drawn towards the
+  x-coordinate of the next point, but a vertical line segment is not drawn. If _Join = true_, then each point is
+  connected to the next point in the list by a horizontal and a vertical line segment.
+
+[EXAMPLE]
+====
+
+`StepGraph({(1, 1), (3, 2), (4, 5), (5, 7)}, true)`
+
+====
+
+StepGraph( <List of x-coordinates>, <List of y-coordinates> )::
+  Draws a step graph of a list of points created from the given lists of coordinates. Each point is connected to the
+  next point in the list by a horizontal line segment.
+
+[EXAMPLE]
+====
+
+`StepGraph({1, 3, 4, 5}, {1, 2, 5, 7})`
+
+====
+
+StepGraph( <List of x-coordinates>, <List of y-coordinates>, <Boolean Join> )::
+  Draws a step graph of a list of points created from the given lists of coordinates. If _Join = false_, then a
+  horizontal line segment is drawn towards the x-coordinate of the next point, but a vertical line segment is not drawn.
+  If _Join = true_, then each point is connected to the next point in the list by a horizontal and a vertical line
+  segment.
+
+[EXAMPLE]
+====
+
+`StepGraph({1, 3, 4, 5}, {1, 2, 5, 7}, true)`
+
+====
+
+StepGraph( <List of x-coordinates>, <List of y-coordinates>, <Boolean Join>, <Point Style> )::
+  Draws a step graph as described above.
+  +
+  Point style values of _-2, -1, 0, 1, -1_ determine how points are drawn as follows:
+  +
+  _0_ = no points are drawn
+  +
+  _1_ = solid points on the right
+  +
+  _2_ = solid points on the right, open points on the left
+  +
+  _-1_ = solid points on the left
+  +
+  _-2_ = solid points on the left, open points on the right
+
+[EXAMPLE]
+====
+
+`StepGraph({1, 3, 4, 5}, {1, 2, 5, 7}, false, 1)`
+
+====
+
+StepGraph( <List of Points>, <Boolean Join>, <Point Style> )::
+  Draws a step graph as described above.
+
+[EXAMPLE]
+====
+
+`StepGraph({(1, 1), (3, 2), (4, 5), (5, 7)}, false, 1)`
+
+====

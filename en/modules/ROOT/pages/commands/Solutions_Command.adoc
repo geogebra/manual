@@ -1,7 +1,6 @@
 = Solutions Command
 
 [NOTE]
-
 ====
 
 Starting from version 823 this command behaves as xref:/commands/Solve_Command.adoc[Solve] command, except for the
@@ -14,10 +13,8 @@ the form _variable name = value_.
 
 Solutions( <Equation> )::
   Solves a given equation for the main variable and returns a list of all solutions.
-  +
 
 [EXAMPLE]
-
 ====
 
 `Solutions(x^2 = 4x)` yields _\{0, 4}_, the solutions of _x^2^ = 4x_.
@@ -26,10 +23,8 @@ Solutions( <Equation> )::
 
 Solutions( <Equation>, <Variable> )::
   Solves an equation for a given unknown variable and returns a list of all solutions.
-  +
 
 [EXAMPLE]
-
 ====
 
 `Solutions(x * a^2 = 4a, a)` yields \{stem:[\frac\{4}\{x},0]}, the solutions of _xa^2^ = 4a_.
@@ -38,10 +33,8 @@ Solutions( <Equation>, <Variable> )::
 
 Solutions( <List of Equations>, <List of Variables> )::
   Solves a set of equations for a given set of unknown variables and returns a list of all solutions.
-  +
 
 [EXAMPLE]
-
 ====
 
 *Examples:*
@@ -54,7 +47,6 @@ stem:[\begin\{pmatrix}-3&6\\0&3\end\{pmatrix}].
 ====
 
 [NOTE]
-
 ====
 
 * Sometimes you need to do some manipulation to allow the automatic solver to work, for example

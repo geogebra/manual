@@ -2,10 +2,8 @@
 
 Integral( <Function> )::
   Gives the indefinite integral with respect to the main variable.
-  +
 
 [EXAMPLE]
-
 ====
 
 `++Integral(x^3)++` yields stem:[x^4 \cdot 0.25].
@@ -14,10 +12,8 @@ Integral( <Function> )::
 
 Integral( <Function>, <Variable> )::
   Gives the partial integral with respect to the given variable.
-  +
 
 [EXAMPLE]
-
 ====
 
 `++Integral(x³+3x y, x)++` gives _stem:[\frac\{1}\{4}x^4] + stem:[\frac\{3}\{2}] x² y_ .
@@ -33,7 +29,6 @@ Integral( <Function>, <Start x-Value>, <End x-Value>, <Boolean Evaluate> )::
   but the integral value is not calculated.
 
 [NOTE]
-
 ====
 
 This command also shades the area between the function graph of _f_ and the _x_-axis.
@@ -46,7 +41,6 @@ In the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xr
 variables are allowed as input as well.
 
 [EXAMPLE]
-
 ====
 
 `++Integral(cos(a t), t)++` yields stem:[\frac\{sin(a t)}\{a} + c_1].
@@ -58,10 +52,8 @@ cas.svg,width=16,height=16] _CAS View_:
 
 Integral( <Function>, <Variable>, <Start x-Value>, <End x-Value> )::
   Gives the definite integral over the interval _[Start x-Value , End x-Value]_ with respect to the given variable.
-  +
 
 [EXAMPLE]
-
 ====
 
 `++Integral(cos(t), t, a, b)++` yields stem:[- sin(a) + sin(b)].
@@ -69,7 +61,6 @@ Integral( <Function>, <Variable>, <Start x-Value>, <End x-Value> )::
 ====
 
 [NOTE]
-
 ====
 
 * The answer isn't guaranteed to be continuous, eg `++Integral(floor(x))++`, that is the integral of the function ⌊x⌋ -

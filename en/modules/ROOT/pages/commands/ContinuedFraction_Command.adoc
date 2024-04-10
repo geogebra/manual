@@ -3,10 +3,8 @@
 ContinuedFraction( <Number> )::
   Creates http://en.wikipedia.org/wiki/Continued_fraction[continued fraction] of given number. The result is a LaTeX
   xref:/Texts.adoc[text object]. The fraction is computed numerically within precision 10^-8^.
-  +
 
 [EXAMPLE]
-
 ====
 
 `ContinuedFraction(5.45)` gives _stem:[5 + \frac\{1}\{ 2+ \frac\{1}\{4+ \frac\{1}\{ 1+ \frac\{1}\{ 1 } } } }]_
@@ -16,10 +14,8 @@ ContinuedFraction( <Number> )::
 ContinuedFraction( <Number>, <Level> )::
   Creates continued fraction of given number. Number of quotients is less than or equal to _Level_, but never exceeds
   the number of quotients needed to achieve the precision mentioned above.
-  +
 
 [EXAMPLE]
-
 ====
 
 `ContinuedFraction(5.45, 3)` gives _stem:[5 + \frac\{1}\{ 2+ \frac\{1}\{4+ ... } }]_
@@ -29,10 +25,8 @@ ContinuedFraction( <Number>, <Level> )::
 ContinuedFraction( <Number>, <Level>, <Shorthand true|false> )::
   Meaning of first two arguments is same as above, the argument _Level_ is optional. When _Shorthand_ is true, shorter
   syntax for the result is used: the LaTeX text contains a list of the integer parts of the continued fraction.
-  +
 
 [EXAMPLE]
-
 ====
 
 *Examples:*

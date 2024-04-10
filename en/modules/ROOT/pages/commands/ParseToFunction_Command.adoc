@@ -2,10 +2,8 @@
 
 ParseToFunction( <Text> )::
   Parses the text containing the function definition and creates the corresponding xref:/Functions.adoc[function].
-  +
 
 [EXAMPLE]
-
 ====
 
 *Examples:*
@@ -18,10 +16,8 @@ ParseToFunction( <Text> )::
 ParseToFunction( <Function>, <Text> )::
   Parses the string and stores the result to a xref:/Functions.adoc[function] _f_, which must be defined and
   xref:/Free_Dependent_and_Auxiliary_Objects.adoc[free] before the command is used.
-  +
 
 [EXAMPLE]
-
 ====
 
 Define ` f(x) = 3x² + 2` and ` text1 = "f(x) = 3x + 1"`. ` ParseToFunction(f, text1)` returns _f(x) = 3x + 1_.
@@ -31,10 +27,8 @@ Define ` f(x) = 3x² + 2` and ` text1 = "f(x) = 3x + 1"`. ` ParseToFunction(f, t
 ParseToFunction( <Text>, <List of variables> )::
   Parses the text containing the function definition and creates the corresponding xref:/Functions.adoc[function] of the
   variables defined in the list.
-  +
 
 [EXAMPLE]
-
 ====
 
 ` ParseToFunction("2u+3v",{"u", "v"})` creates the function _a(u,v) = 2u + 3v_.
@@ -42,7 +36,6 @@ ParseToFunction( <Text>, <List of variables> )::
 ====
 
 [NOTE]
-
 ====
 
 See also xref:/commands/ParseToNumber_Command.adoc[ParseToNumber] command.

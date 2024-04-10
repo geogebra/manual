@@ -8,10 +8,8 @@ xref:/CAS_View.adoc[CAS View].
 NSolve( <Equation> )::
   Attempts (numerically) to find a solution for the equation for the main variable. For non-polynomials you should
   always specify a starting value (see below).
-  +
 
 [EXAMPLE]
-
 ====
 
 `NSolve(x^6 - 2x + 1 = 0)` yields _\{x = 0.51, x = 1}_.
@@ -21,10 +19,8 @@ NSolve( <Equation> )::
 NSolve( <Equation>, <Variable> )::
   Attempts (numerically) to find a solution of the equation for the given unknown variable. For non-polynomials you
   should always specify a starting value (see below).
-  +
 
 [EXAMPLE]
-
 ====
 
 `NSolve(a^4 + 34a^3 = 34, a)` yields _\{a = -34, a = 0.99}_.
@@ -33,10 +29,8 @@ NSolve( <Equation>, <Variable> )::
 
 NSolve( <Equation>, <Variable = starting value> )::
   Finds numerically the list of solutions to the given equation for the given unknown variable with its starting value.
-  +
 
 [EXAMPLE]
-
 ====
 
 *Examples:*
@@ -48,10 +42,8 @@ NSolve( <Equation>, <Variable = starting value> )::
 
 NSolve( <List of Equations>, <List of Variables> )::
   Attempts (numerically) to find a solution of the set of equations for the given set of unknown variables.
-  +
 
 [EXAMPLE]
-
 ====
 
 `NSolve({pi / x = cos(x - 2y), 2 y - pi = sin(x)}, {x = 3, y = 1.5})` yields _\{x = 3.14, y = 1.57}_.
@@ -59,7 +51,6 @@ NSolve( <List of Equations>, <List of Variables> )::
 ====
 
 [NOTE]
-
 ====
 
 * If you don't give a starting point like _a=3_ or _\{x = 3, y = 1.5}_ the numerical algorithm may find it hard to find

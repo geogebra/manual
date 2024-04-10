@@ -2,10 +2,8 @@
 
 Derivative( <Function> )::
   Returns the derivative of the function with respect to the main variable.
-  +
 
 [EXAMPLE]
-
 ====
 
 `++Derivative(x^3 + x^2 + x)++` yields _3x² + 2x + 1_.
@@ -14,10 +12,8 @@ Derivative( <Function> )::
 
 Derivative( <Function>, <Number> )::
   Returns the __n__^th^ derivative of the function with respect to the main variable, whereupon _n_ equals <Number>.
-  +
 
 [EXAMPLE]
-
 ====
 
 `++Derivative(x^3 + x^2 + x, 2)++` yields _6x + 2_.
@@ -26,10 +22,8 @@ Derivative( <Function>, <Number> )::
 
 Derivative( <Function>, <Variable> )::
   Returns the partial derivative of the function with respect to the given variable.
-  +
 
 [EXAMPLE]
-
 ====
 
 `++Derivative(x^3 y^2 + y^2 + xy, y)++` yields _2x³y + x + 2y_.
@@ -39,10 +33,8 @@ Derivative( <Function>, <Variable> )::
 Derivative( <Function>, <Variable>, <Number> )::
   Returns the __n__^th^ partial derivative of the function with respect to the given variable, whereupon _n_ equals
   <Number>.
-  +
 
 [EXAMPLE]
-
 ====
 
 `++Derivative(x^3 + 3x y, x, 2)++` yields _6x_.
@@ -51,10 +43,8 @@ Derivative( <Function>, <Variable>, <Number> )::
 
 Derivative( <Curve> )::
   Returns the derivative of the curve.
-  +
 
 [EXAMPLE]
-
 ====
 
 `++Derivative(Curve(cos(t), t sin(t), t, 0, π))++` yields curve _x = -sin(t), y = sin(t) + t cos(t)_.
@@ -66,7 +56,6 @@ Derivative( <Curve>, <Number> )
 Returns the __n__^th^ derivative of the curve, whereupon _n_ equals <Number>.
 
 [EXAMPLE]
-
 ====
 
 `++Derivative(Curve(cos(t), t sin(t), t, 0, π), 2)++` yields curve _x = -cos(t), y = 2cos(t) - t sin(t)_.
@@ -74,7 +63,6 @@ Returns the __n__^th^ derivative of the curve, whereupon _n_ equals <Number>.
 ====
 
 [NOTE]
-
 ====
 
 This only works for parametric curves.
@@ -82,7 +70,6 @@ This only works for parametric curves.
 ====
 
 [NOTE]
-
 ====
 
 This only works for parametric curves.
@@ -90,7 +77,6 @@ This only works for parametric curves.
 ====
 
 [NOTE]
-
 ====
 
 You can use `++f'(x)++` instead of `++Derivative(f)++`, or `++f''(x)++` instead of `++Derivative(f, 2)++`, and so on.
@@ -101,10 +87,8 @@ You can use `++f'(x)++` instead of `++Derivative(f)++`, or `++f''(x)++` instead 
 
 Derivative( <Expression> )::
   Returns derivative of an expression with respect to the main variable.
-  +
 
 [EXAMPLE]
-
 ====
 
 `++Derivative(x^2)++` yields _2x_.
@@ -113,10 +97,8 @@ Derivative( <Expression> )::
 
 Derivative( <Expression>, <Variable> )::
   Returns derivative of an expression with respect to the given variable.
-  +
 
 [EXAMPLE]
-
 ====
 
 `++Derivative(a x^3, a)++` yields _x³_.
@@ -125,10 +107,8 @@ Derivative( <Expression>, <Variable> )::
 
 Derivative( <Expression>, <Variable>, <Number> )::
   Returns the __n__^th^ derivative of an expression with respect to the given variable, whereupon _n_ equals <Number>.
-  +
 
 [EXAMPLE]
-
 ====
 
 *Examples:*

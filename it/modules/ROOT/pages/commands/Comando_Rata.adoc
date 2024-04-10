@@ -1,0 +1,40 @@
+= Comando Rata
+
+Rata(Tasso, Numero periodi, Valore attuale (facoltativo), Valore futuro (facoltativo), Tipo (facoltativo))::
+  Calcola l'ammontare di una rata di un prestito, con pagamenti e di un tasso di interesse costanti.
+
+* *Tasso*: tasso di interesse per periodo.
+* *Numero periodi*: numero totale di periodi di pagamento annuali.
+* *Valore attuale (facoltativo)*: valore attuale di una serie di pagamenti futuri. Se non viene inserito alcun valore,
+tale variabile sarà posta uguale a 0.
+* *Valore futuro (facoltativo)*: saldo che si desidera ottenere dopo l'ultimo pagamento. Se non viene inserito alcun
+valore, tale variabile sarà posta uguale a 0.
+* *Tipo (facoltativo)*: indica le scadenze dei pagamenti. Se non viene inserito un valore o si inserisce 0, il pagamento
+si intende effettuato al termine del periodo; se si inserisce 1 il pagamento si intende effettuato all'inizio del
+periodo.
+
+[EXAMPLE]
+====
+
+`Rata(6%/12, 10, 10000, 0,1)` restituisce un pagamento mensile pari a -1022.59.
+
+====
+
+[NOTE]
+====
+
+Assicurarsi di utilizzare lo stesso tipo di unità per i parametri _Tasso_ e _Numero periodi_. Se si pianificano
+pagamenti mensili per un prestito della durata di quattro anni a un interesse annuo del 6%, è necessario indicare quale
+_Tasso_ il valore 6%/12 e quale _Numero periodi_ il valore 4*12.
+
+====
+
+[NOTE]
+====
+
+* In generale gli esborsi sono sempre indicati da numeri negativi, mentre gli introiti sono indicati da numeri positivi.
+* Vedere anche i comandi xref:/commands/Comando_Tasso.adoc[Tasso],
+xref:/commands/Comando_ValoreAttuale.adoc[ValoreAttuale], xref:/commands/Comando_ValoreFuturo.adoc[ValoreFuturo] e
+xref:/commands/Comando_NumeroRate.adoc[NumeroRate].
+
+====

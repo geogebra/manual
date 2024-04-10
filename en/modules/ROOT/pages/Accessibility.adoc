@@ -1,0 +1,64 @@
+= Accessibility
+
+[NOTE]
+====
+
+For examples of accessible applets and more information see https://www.geogebra.org/m/r2EF8uRx[GeoGebra Accessibility].
+
+====
+
+When designing applets it is important to allow (as much as possible) for all students to access them.
+
+:toc:
+
+== [#Fontsize.2C_Color_.26_Contrast]#Fontsize, Color & Contrast#
+
+Using large fonts with a good contrast is important. Select a large font-size in Options -> Fontsize before you start
+designing your applet. You can also use the keyboard shortcut [.kcode]#Ctrl# + [.kcode]#2# to make all fonts bigger and
+all lines thicker. [.kcode]#Ctrl# + [.kcode]#3# will change the default for all new objects to be Black and unfilled.
+
+Ideally use dark colors on a white background and thick lines. Pure
+http://snook.ca/technical/colour_contrast/colour.html#fg=FF0000,bg=FFFFFF[Red] and
+http://snook.ca/technical/colour_contrast/colour.html#fg=00FF00,bg=FFFFFF[Green] don't have a very good contrast so you
+should use some darker versions, eg http://snook.ca/technical/colour_contrast/colour.html#fg=0000FF,bg=FFFFFF[Blue],
+http://snook.ca/technical/colour_contrast/colour.html#fg=226600,bg=FFFFFF[Dark Green],
+http://snook.ca/technical/colour_contrast/colour.html#fg=990033,bg=FFFFFF[Dark Red]
+
+If you use colors to distinguish otherwise-similar objects, then consider also using dashed lines for one of them. You
+can also find websites where you can check whether your color scheme is good, for example http://www.vischeck.com/
+
+== [#Sliders]#Sliders#
+
+Make sliders as long as possible so that they are usable by students whose fine motor-skills are less good. Consider
+adding "decrement" and "increment" Buttons at each end of the slider as well.
+
+== [#Keyboard_Shortcuts]#Keyboard Shortcuts#
+
+Students can use [.kcode]#Tab# to cycle round the objects in a worksheet you have designed. It is important that you
+*uncheck "Selection Allowed"* in Object Properties -> Advanced for the objects you don't want to be selected. There is a
+keyboard shortcut [.kcode]#Ctrl# + [.kcode]#Shift# + [.kcode]#D# in the desktop version that will toggle this property
+for objects *other than* Buttons / Sliders / Checkboxes / Points / Input Boxes.
+
+The arrow keys [.kcode]#Left#, [.kcode]#Right#, [.kcode]#Up#, [.kcode]#Down# can be used to move Sliders and Points once
+they are selected.
+
+[.kcode]#Space# can be used to activate a Button, toggle a Checkbox or start/stop a slider animating
+
+[.kcode]#Escape# can be used to leave a worksheet and [.kcode]#Enter# to go back in (useful if you have several GeoGebra
+worksheets on one page)
+
+[.kcode]#+# and [.kcode]#−# can be used to move a point on a path (eg on a circle)
+
+GeoGebra Applets are also fully touch-enabled so students can use applets on a special large tablet if necessary.
+
+== [#Tooltips]#Tooltips#
+
+You can provide custom tooltips for certain objects by using the _Caption_ property, and changing how the tooltip is
+shown: https://wiki.geogebra.org/en/Tooltips
+
+== [#Screen_Readers]#Screen Readers#
+
+You can have some text attached to the Graphics Views so that it is read by a screen reader.
+
+If you make a text object in GeoGebra called `altText`, `altText2`, `altText3D` then it will be attached to Graphics
+View 1, Graphics View 2, Graphics View 3D respectively.

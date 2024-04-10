@@ -1,0 +1,29 @@
+= Comando Percentile
+
+Percentile(Lista di numeri, Percentuale)::
+  Sia _P_ il valore di _Percentuale_.
+  +
+  Restituisce il valore del percentile di ordine _P_ della lista di numeri indicata, ordinata in modo crescente.
+  _Percentuale_ deve essere un numero appartenente all'intervallo 0 < P ≤ 1.
+
+[EXAMPLE]
+====
+
+`Percentile({1, 2, 3, 4}, 0.25)` restituisce _1.25_.
+
+====
+
+[NOTE]
+====
+
+I comandi xref:/commands/Comando_Q1.adoc[Q1 (quartile)] e _Percentile_ utilizzano regole distinte e spesso non
+restituiscono risultati coerenti.
+
+====
+
+[EXAMPLE]
+====
+
+`Q1({1, 2, 3, 4})` restituisce _1.5_, mentre `Percentile({1, 2, 3, 4}, 0.25)` restituisce _1.25_.
+
+====
