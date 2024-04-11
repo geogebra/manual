@@ -1,0 +1,69 @@
+= Extremum Command
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:64px-Globe.png[Globe.png,width=64,height=64]
+
+a|
+This command differs among variants of English:
+
+* Extremum (US)  
+* TurningPoint (UK + Aus)  
+
+|===
+
+Extremum( <Polynomial> )::
+  Yields all local extrema of the polynomial function as points on the function graph.
+
+[EXAMPLE]
+====
+
+`++Extremum(x³ + 3x² - 2x + 1)++` creates local extrema _(0.29, 0.70)_ and _(-2.29, 9.30)_ and shows them in the
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Graphics_View.adoc[Graphics
+View].
+
+====
+
+Extremum( <Function>, <Start x-Value>, <End x-Value> )::
+  Calculates (numerically) the extremum of the function in the open interval ( <Start x-Value>, <End x-Value> ).
+
+[EXAMPLE]
+====
+
+`++Extremum((x⁴ - 3x³ - 4x² + 4) / 2, 0, 5)++` creates local extremum _(2.93, -16.05)_ in the given interval and shows
+it in the image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Graphics_View.adoc[Graphics View].
+
+====
+
+[NOTE]
+====
+
+The function should be continuous in [ <Start x-Value>, <End x-Value> ], otherwise false extrema near discontinuity
+might be calculated.
+
+====
+
+== CAS Syntax
+
+Extremum( <Function> )::
+  Will attempt to return all local extrema of the function (which should be continuous and differentiable)
+
+[EXAMPLE]
+====
+
+`++Extremum(x³ + 3x² - 2x + 1)++` creates a list of the points and plots them _stem:[ \left\\{ \left(\frac\{-\sqrt\{15}
+- 3}\{3}, \frac\{10 \; \sqrt\{15} + 45}\{9} \right), \left(\frac\{\sqrt\{15} - 3}\{3}, \frac\{-10 \; \sqrt\{15} +
+45}\{9} \right) \right\}]_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Assume(0 < x < 20, Extremum(15/2 * sin( 2/15*pi * x) + 56/5))++` yields the local turning points in the range given
+_stem:[ \left\\{ \left(\frac\{15}\{4}, \frac\{187}\{10} \right), \left(\frac\{45}\{4}, \frac\{37}\{10} \right),
+\left(\frac\{75}\{4}, \frac\{187}\{10} \right) \right\} ]_.
+
+====

@@ -1,0 +1,182 @@
+= Comando Angolo
+
+Angolo(Oggetto)::
+  Questo comando ha un comportamento diverso, secondo l'oggetto utilizzato nella sintassi, come descritto in seguito:
+  +
+  * *Angolo(Conica)*: Calcola l'angolo di inclinazione dell'asse maggiore di una conica (vedere comando
+  xref:/commands/Assi.adoc[Assi]) rispetto all'asse delle ascisse.
+
+[EXAMPLE]
+====
+
+`++Angolo(x^2 / 4 + y^2 / 9 = 2)++` restituisce _90°_ o 1.57 rad se l'unità di misura selezionata per gli angoli è
+_radianti_.
+
+====
+
+* *Angolo(Vettore)*: Calcola l'angolo tra l'asse _x_ e il vettore.
+
+[EXAMPLE]
+====
+
+`++Angolo(Vettore((1, 1)))++` restituisce _45°_ o il corrispondente valore in _radianti_.
+
+====
+
+* *Angolo(Punto)*: Calcola l'angolo tra l'asse _x_ e il vettore posizione del punto.
+
+[EXAMPLE]
+====
+
+`++Angolo((1, 1))++` restituisce _45°_ o il corrispondente valore in _radianti_.
+
+====
+
+* *Angolo(Numero)*: Converte la misura di un angolo (il _Numero_ indicato) nel valore corrispondente secondo l'unità di
+misura predefinita per gli angoli (risultato in [0,360°] o [0,2π] secondo l'unità predefinita).
+
+[EXAMPLE]
+====
+
+`++Angolo(20)++` restituisce _65.92°_ se l'unità predefinita per gli angoli è _gradi_.
+
+====
+
+* *Angolo(Poligono)*: Genera tutti gli angoli di un poligono con orientazione matematicamente positiva (verso
+antiorario).
+
+[EXAMPLE]
+====
+
+`++Angolo(Poligono((4, 1), (2, 4), (1, 1)))++` restituisce _56.31°_, _52.13°_ e _71.57°_ o i corrispondenti valori in
+_radianti_.
+
+====
+
+[NOTE]
+====
+
+* Se il poligono è stato creato in senso antiorario, si ottengono gli angoli interni. Se il poligono è stato creato in
+senso orario, si ottengono gli angoli esterni.
+* Non è possibile modificare l'unità di misura degli angoli in radianti nelle versioni di GeoGebra Web e nelle app per
+tablet.
+
+====
+
+Angolo(Vettore, Vettore)::
+  Calcola l'angolo tra i vettori indicati (in (0, 360°) o [0,2π] secondo l'unità di misura predefinita per gli angoli).
+
+[EXAMPLE]
+====
+
+`++Angolo(Vettore((1, 1)), Vettore((2, 5)))++` restituisce _23.2°_ o il corrispondente valore in _radianti_.
+
+====
+
+Angolo(Retta, Retta)::
+  Calcola l'angolo tra i vettori direzione delle due rette indicate (in (0, 360°) o [0,2π] secondo l'unità di misura
+  predefinita per gli angoli).
+
+[EXAMPLE]
+====
+
+* `++Angolo(y = x + 2, y = 2x + 3)++` restituisce _18.43°_ o il corrispondente valore in _radianti_
+* `++Angolo(Retta[(-2, 0, 0), (0, 0, 2)), Retta((2, 0, 0), (0, 0, 2)))++` restituisce _90°_ o il corrispondente valore
+in _radianti_.
+
+e nella _vista CAS_:
+
+* `++Angolo(x + 2,  2x + 3)++` restituisce stem:[acos(3 \cdot \frac\{\sqrt\{10}}\{10})].
+* Dopo avere definito `++f(x) := x + 2++` e `++g(x) := 2x + 3++`, il comando `++Angolo(f(x) , g(x))++` restituisce
+stem:[acos(3 \cdot \frac\{\sqrt\{10}}\{10})].
+
+====
+
+Angolo(Retta, Piano)::
+  Calcola l'angolo compreso tra la retta e il piano.
+
+[EXAMPLE]
+====
+
+* `++Angolo(Retta((1, 2, 3),(-2, -2, 0)), z = 0)++` restituisce _30.96°_ o il corrispondente valore in _radianti_
+* `++Angolo(Retta((1, 2, 3),(-2, -2, 0)), Piano(z = 0))++` restituisce _30.96°_ o il corrispondente valore in
+_radianti_.
+
+====
+
+Angolo(Piano, Piano)::
+  Calcola l'angolo compreso tra i due piani indicati.
+
+[EXAMPLE]
+====
+
+* `++Angolo(2x - y + z = 0, z = 0)++` restituisce _114.09°_ o il corrispondente valore in _radianti_
+* `++Angolo(Piano(2x - y + z = 0), Piano(z = 0))++` restituisce _114.09°_ o il corrispondente valore in _radianti_.
+
+====
+
+Angolo(Punto, Vertice, Punto)::
+  Calcola l'angolo compreso tra i segmenti che uniscono ciascuno dei punti indicati con il vertice (in (0, 360°) o
+  [0,2π] secondo l'unità di misura predefinita per gli angoli).
+
+[EXAMPLE]
+====
+
+`++Angolo((1, 1), (1, 4), (4, 2))++` restituisce _56.31°_ o il corrispondente valore in _radianti_.
+
+====
+
+Angolo(Punto, Vertice, Angolo)::
+  Traccia l'angolo di ampiezza indicata come terzo parametro, avente punto iniziale e vertice indicati.
+  +
+
+[EXAMPLE]
+====
+
+* `++Angolo((0, 0), (3, 3), 30°)++` genera il punto _(1.9, -1.1)_ e il relativo angolo di 30°
+* `++Angolo(Punto({0, 0}), Punto({3, 3}), 30°)++` genera il punto _(1.9, -1.1)_ e il relativo angolo di 30°.
+
+====
+
+[NOTE]
+====
+
+Il punto generato è il risultato del comando `++Ruota(A, α, B)++`.
+
+====
+
+Angolo(Punto, Punto, Punto, Direzione)::
+  Calcola l'angolo definito dai punti e dalla _Direzione_ indicata, che deve essere una retta o un piano (in (0, 360°) o
+  [0,2π] secondo l'unità di misura predefinita per gli angoli).
+  +
+
+[EXAMPLE]
+====
+
+`++Angolo((1, -1, 0),(0, 0, 0),(-1, -1, 0), asseZ)++` restituisce _270°_
+e`++Angolo((-1, -1, 0),(0, 0, 0),(1, -1, 0), asseZ)++` restituisce _90°_ o i corrispondenti valori in _radianti_.
+
+====
+
+[NOTE]
+====
+
+L'utilizzo di una _Direzione_ consente di bypassare la visualizzazione predefinita per gli angoli in 3__D__ che può
+essere impostata solo in [0,180°] oppure [180°,360°], in modo tale che dati tre punti _A_, _B_, _C_ in 3__D__ i comandi
+`++Angolo(A, B, C)++` e `++Angolo(C, B, A)++` restituiscano le misure reali degli angoli invece della relativa
+restrizione agli intervalli predefiniti.
+
+====
+
+[NOTE]
+====
+
+Vedere anche gli strumenti image:20px-Mode_angle.svg.png[Mode angle.svg,width=20,height=20]
+xref:/tools/Angolo.adoc[Angolo] e image:20px-Mode_anglefixed.svg.png[Mode anglefixed.svg,width=20,height=20]
+xref:/tools/Angolo_di_data_misura.adoc[Angolo di data misura] .
+
+====
+
+Un https://youtu.be/Q3M9DnafOTQ[video tutorial] relativo all'utilizzo dello strumento e del comando _Angolo_.
+--/Utente:Mathmum.adoc[Mathmum] (/s_index_php?title=Discussioni_utente:Mathmum&action=edit&redlink=1.adoc[discussioni])
+13:41, 13 mar 2015 (CET)

@@ -1,0 +1,25 @@
+= Comando PuntoCasualeIn
+
+PuntoCasualeIn(Regione)
+
+Crea un punto casuale all'interno di un poligono o una conica chiusa.
+
+PuntoCasualeIn(Lista di punti)
+
+Crea un punto casuale all'interno del poligono avente i vertici indicati.
+
+[EXAMPLE]
+====
+
+`++PuntoCasualeIn(Poligono(A,B,C))++` e `++PuntoCasualeIn(A, B, C)++` creano entrambi un punto all'interno del triangolo
+ABC.
+
+====
+
+Per ottenere un punto casuale appartenente alla lista, utilizzare il comando
+xref:/commands/ElementoCasuale.adoc[ElementoCasuale].
+
+PuntoCasualeIn(xMin, xMax, yMin, yMax)
+
+Crea un punto casuale avente l'ascissa appartenente all'intervallo [xMin,xMax] e l'ordinata appartenente all'intervallo
+[yMin, yMax].

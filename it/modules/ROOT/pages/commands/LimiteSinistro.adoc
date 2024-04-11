@@ -1,0 +1,54 @@
+= Comando LimiteSinistro
+
+LimiteSinistro(Funzione f, Valore t)::
+  Calcola il
+  http://en.wikipedia.org/wiki/it:_Limite_di_una_funzione#Limite_destro.2C_sinistro.2C_per_eccesso.2C_per_difetto[limite
+  sinistro] della funzione _f_ quando la variabile tende al valore _t_ indicato.
+
+[EXAMPLE]
+====
+
+`++LimiteSinistro(1/x, 0)++` restituisce stem:[-\infty] .
+
+====
+
+[NOTE]
+====
+
+Non tutti i limiti possono essere calcolati da GeoGebra: in tali casi sarà visualizzato _"non definito"_ (come pure nei
+casi in cui il calcolo è corretto e la funzione non ammette limite).
+
+====
+
+== Sintassi CAS
+
+LimiteSinistro(Espressione f, Valore t)::
+  Calcola il limite sinistro della funzione _f_, al tendere della variabile indipendente della funzione al valore _t_
+  indicato.
+  +
+LimiteSinistro(Espressione f, Variabile v, Valore t)::
+  Calcola il limite sinistro della funzione _f_ in più variabili, al tendere della variabile _v_ al valore _t_ indicato.
+
+[EXAMPLE]
+====
+
+`++LimiteSinistro(1/a, a, 0)++` restituisce stem:[-\infty].
+
+====
+
+[EXAMPLE]
+====
+
+`++LimiteSinistro(1/x, 0)++` restituisce stem:[-\infty] .
+
+====
+
+[NOTE]
+====
+
+* Non tutti i limiti possono essere calcolati da GeoGebra: in tali casi sarà visualizzato _?_ (come pure nei casi in cui
+il calcolo è corretto e la funzione non ammette limite).
+* Vedere anche il xref:/commands/Limite.adoc[comando Limite] e il xref:/commands/LimiteDestro.adoc[comando
+LimiteDestro].
+
+====

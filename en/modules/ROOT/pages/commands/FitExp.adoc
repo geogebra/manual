@@ -1,0 +1,24 @@
+= FitExp Command
+
+FitExp( <List of Points> )::
+  Calculates the exponential regression curve in the form _aℯ^bx^_.
+
+[EXAMPLE]
+====
+
+`++FitExp({(0, 1), (2, 3), (4, 3), (6, 4)})++` yields _1.31ℯ^0.21x^_.
+
+====
+
+[NOTE]
+====
+
+* If you want the answer in the form stem:[ a b ^ x ] then use the xref:/commands/FitGrowth.adoc[FitGrowth Command].
+* You can do a direct least-squares fitting with `++Fit(list, a*exp(b*x))++`
+* Euler's number ℯ can be obtained by pressing [.kcode]#ALT # + [.kcode]# e#.
+* See also xref:/commands/Fit.adoc[Fit], xref:/commands/FitGrowth.adoc[FitGrowth], xref:/commands/FitLine.adoc[FitLine],
+xref:/commands/FitLineX.adoc[FitLineX], xref:/commands/FitLog.adoc[FitLog],
+xref:/commands/FitLogistic.adoc[FitLogistic], xref:/commands/FitPoly.adoc[FitPoly], xref:/commands/FitPow.adoc[FitPow]
+and xref:/commands/FitSin.adoc[FitSin].
+
+====

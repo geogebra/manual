@@ -1,0 +1,40 @@
+= Comando AnalizzaNumero
+
+AnalizzaNumero(Numero, Testo)::
+  Analizza il testo e memorizza il corrispondente valore in un xref:/Numeri_e_angoli.adoc[numero] _a_. Il numero _a_
+  deve essere già definito e impostato come oggetto xref:/Oggetti_liberi_dipendenti_e_ausiliari.adoc[libero] prima di
+  utilizzare il comando.
+  +
+
+[EXAMPLE]
+====
+
+Definire `++ a = 3++` e `++ testo1 = "6"++`. Allora `++ AnalizzaNumero(a, testo1)++` restituisce _a = 6_.
+
+====
+
+[NOTE]
+====
+
+Questo è un xref:/commands/Comandi_Scripting.adoc[comando di tipo scripting] che imposta il valore del numero una volta
+sola. Per convertire un testo _testo1_ in un numero che possa essere aggiornato dinamicamente, utilizzare il comando
+xref:/commands/DaBase.adoc[DaBase](testo1,10).
+
+====
+
+AnalizzaNumero(Testo)::
+  Analizza il testo e memorizza il risultato in un xref:/Numeri_e_angoli.adoc[numero].
+
+[EXAMPLE]
+====
+
+`++AnalizzaNumero("1+2+5-pi")++` crea il numero _a = 4.86_.
+
+====
+
+[NOTE]
+====
+
+Vedere anche il comando xref:/commands/AnalizzaFunzione.adoc[AnalizzaFunzione].
+
+====

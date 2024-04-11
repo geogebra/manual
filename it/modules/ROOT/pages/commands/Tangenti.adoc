@@ -1,0 +1,91 @@
+= Comando Tangenti
+
+Tangenti(Punto, Conica)::
+  Genera tutte le tangenti alla conica passanti per il punto indicato.
+
+[EXAMPLE]
+====
+
+`++Tangenti((5, 4), 4x^2 - 5y^2 = 20)++` genera la retta _x_ - _y_ = 1
+
+====
+
+Tangenti(Punto, Funzione)::
+  Genera la tangente alla funzione nel suo punto di ascissa uguale a quella del punto indicato.
+
+[EXAMPLE]
+====
+
+`++Tangenti((1, 0), x^2)++` genera la retta _y_ = 2__x__ - 1
+
+====
+
+Tangenti(Punto sulla curva, Curva)::
+  Genera la tangente alla curva nel punto indicato.
+
+[EXAMPLE]
+====
+
+`++Tangenti((0, 1), Curva(cos(t), sin(t), t, 0, π))++` genera la retta _y_ = 1
+
+====
+
+Tangenti(Ascissa, Funzione)::
+  Genera la tangente alla funzione nel punto di ascissa indicata.
+
+[EXAMPLE]
+====
+
+`++Tangenti(1, x^2)++` genera la retta _y_ = 2__x__ - 1
+
+====
+
+Tangenti(Retta, Conica)::
+  Genera tutte le tangenti alla conica parallele alla retta indicata.
+
+[EXAMPLE]
+====
+
+`++Tangenti(y = 4, x^2 + y^2 = 4)++` genera le rette _y_ = 2 e _y_ = -2
+
+====
+
+Tangenti(Circonferenza, Circonferenza)::
+  Genera le tangenti comuni alle due circonferenze (fino a 4).
+
+[EXAMPLE]
+====
+
+`++Tangenti(x^2 + y^2 = 4, (x - 6)^2 + y^2 = 4)++` genera le rette _y_ = 2, _y_ = -2, 1.49__x__ + 1.67__y__ = 4.47 e
+-1.49__x__ + 1.67__y__ = -4.47
+
+====
+
+Tangenti(Punto, Spline)::
+  Genera la tangente alla spline nel punto indicato.
+
+[EXAMPLE]
+====
+
+Dati i punti _A = (0, 1)_, _B = (4, 4)_,_C = (0, 4)_, allora `++Tangenti(A, Spline({A, B, C}))++` genera la retta _a_:
+_y_ = _0.59 x + 1_.
+
+====
+
+Tangenti(Punto, Curva implicita)::
+  Genera la tangente alla curva implicita nel punto indicato.
+
+[EXAMPLE]
+====
+
+`++Tangenti((1,1), x^2+y^2=1))++` genera le rette _x=1_ e _y=1_.
+
+====
+
+[NOTE]
+====
+
+Vedere anche lo image:24px-Mode_tangent.svg.png[Mode tangent.svg,width=24,height=24] strumento
+xref:/tools/Tangenti.adoc[Tangenti] .
+
+====

@@ -1,0 +1,59 @@
+= ProveDetails Command
+
+ProveDetails( <Boolean Expression> )::
+  Returns some details of the result of the automated proof.
+
+Normally, GeoGebra decides whether a xref:/Boolean_values.adoc[boolean expression] is true or not by using numerical
+computations. However, the ProveDetails command uses http://en.wikipedia.org/wiki/Symbolic_computation[symbolic methods]
+to determine whether a statement is true or false in general. This command works like the
+xref:/commands/Prove.adoc[Prove] command, but also returns some details of the result as a xref:/Lists.adoc[list]:
+
+* An empty list *\{}* if GeoGebra cannot determine the answer.
+* A list with one element: *\{false}*, if the statement is not true in general.
+* A list with one element: *\{true}*, if the statement is always true (in all cases when the diagram can be
+constructed).
+* A list with more elements, containing the boolean value _true_ and another list for some so-called _non-degeneracy
+conditions_, if the statement is true under certain conditions, e.g. \{true, \{"AreCollinear(A,B,C),AreEqual(C,D)"}}.
+This means that if none of the conditions are true (and the diagram can be constructed), then the statement will be
+true.
+* A list *\{true,\{"..."}}*, if the statement is true under certain conditions, but these conditions cannot be
+translated to human readable form for some reasons.
+
+[EXAMPLE]
+====
+
+Let us define a triangle with vertices _A_, _B_ and _C_, and define `++D=MidPoint(B,C)++`, `++E=MidPoint(A,C)++`,
+`++p=Line(A,B)++`, `++q=Line(D,E)++`. Now `++ProveDetails(p∥q)++` returns \{true}, which means that if the diagram can
+be constructed, then the midline _DE_ of the triangle is parallel to the side _AB_.
+
+====
+
+[EXAMPLE]
+====
+
+Let _AB_ be the segment _a_, and define `++C=MidPoint(A,B)++`, `++b=PerpendicularBisector(A,B)++`,
+`++D=Intersect(a,b)++`. Now `++ProveDetails(C==D)++` returns \{true,\{"AreEqual(A,B)"}}: it means that if the points _A_
+and _B_ differ, then the points _C_ and _D_ will coincide.
+
+====
+
+[EXAMPLE]
+====
+
+Let _AB_ be the segment _a_, and define `++l=Line(A,B)++`. Let _C_ be an arbitrary point on line _l_, moreover let
+`++b=Segment(B,C)++`, `++c=Segment(A,C)++`. Now `++ProveDetails(a==b+c)++` returns \{true,\{"a+b==c", "b==a+c"}}: it
+means that if neither stem:[a+b=c], nor stem:[b=a+c], then stem:[a=b+c].
+
+====
+
+It is possible that the list of the non-degeneracy conditions is not the simplest possible set. For the above example,
+the simplest set would be the empty set.
+
+[NOTE]
+====
+
+See also xref:/commands/Prove.adoc[Prove] command, xref:/Boolean_values.adoc[Boolean values],
+https://github.com/kovzol/gg-art-doc/tree/master/pdf/english.pdf[GeoGebra Automated Reasoning Tools: A Tutorial] and
+http://dev.geogebra.org/trac/wiki/TheoremProving[technical details of the algorithms].
+
+====

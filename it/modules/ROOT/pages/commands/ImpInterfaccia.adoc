@@ -1,0 +1,108 @@
+= Comando ImpInterfaccia
+
+ImpInterfaccia(Testo)
+
+Modifica il layout e la visibilità delle _Viste_. Il testo, inserito tra virgolette `++"++`, descrive il layout globale
+da applicare, la descrizione relativa a una singola Vista da modificare, o l'identificativo di una delle interfacce
+standard.
+
+== Layout completo
+
+Per modificare l'intero layout basta descrivere le posizioni delle Viste utilizzando un'espressione. I nomi delle
+_Viste_ sono rappresentati da lettere, la disposizione orizzontale delle _Viste_ è rappresentata dalla giustapposizione
+dei relativi nomi, mentre quella verticale dal simbolo di _divisione_ `++/++`, come descritto nella seguente tabella.
+
+[cols=",",options="header",]
+|===
+|Lettera |Vista
+|A |image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] Algebra
+
+|B |image:18px-Menu_view_probability.svg.png[Menu view probability.svg,width=18,height=18] Calcolatore di probabilità
+
+|C |image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] CAS
+
+|D |image:16px-Menu_view_graphics2.svg.png[Menu view graphics2.svg,width=16,height=16] Grafici 2
+
+|G |image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] Grafici
+
+|L |image:16px-Menu_view_construction_protocol.svg.png[Menu view construction protocol.svg,width=16,height=16]
+Protocollo di costruzione
+
+|P |image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] Proprietà
+
+|R |Analisi dei dati
+
+|S |image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] Foglio di calcolo
+
+|T |image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=16,height=16] Grafici
+3D
+|===
+
+[EXAMPLE]
+====
+
+*Esempi:*  
+
+* `++ImpInterfaccia("G")++` rende visibile solo la image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] vista _Grafici_
+* `++ImpInterfaccia("AGS")++` rende visibili la image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] vista _Algebra_, la image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] vista _Grafici_ e la image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] vista _Foglio di calcolo_, allineate orizzontalmente
+* `++ImpInterfaccia("S/G")++` rende visibili la image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] vista _Foglio di calcolo_ (in alto) e la image:16px-Menu_view_graphics.svg.png[Menu
+view graphics.svg,width=16,height=16] vista _Grafici_ (in basso)
+* `++ImpInterfaccia("S/(GA)")++` rende visibili la image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] vista _Foglio di calcolo_ (in alto) e la image:16px-Menu_view_graphics.svg.png[Menu
+view graphics.svg,width=16,height=16] vista _Grafici_, affiancata a destra dalla
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] vista _Algebra_ (in basso)
+
+====
+
+== Singola Vista
+
+Per aprire o chiudere una singola _Vista_, precedere la lettera che la identifica rispettivamente con i simboli `+++++`
+o `++-++`. Nelle altre app, diverse dalla versione Classica (ad es. nella Calcolatrice grafica) è inoltre possibile
+utilizzare `++Strumenti++` e `++Tabella++` per gli strumenti e la tabella di valori.
+
+[EXAMPLE]
+====
+
+*Esempi:*  
+
+* `++ImpInterfaccia("+D")++` aggiunge alle viste correnti la vista __Grafici__2 (a destra)
+* `++ImpInterfaccia("-D")++` rimuove dalle viste correnti la vista __Grafici__2
+* `++ImpInterfaccia("+Strumenti")++` apre la barra laterale nella Calcolatrice Grafica e passa alla scheda _Strumenti_
+* `++ImpInterfaccia("+Tabella")++` apre la barra laterale nella Calcolatrice Grafica e passa alla scheda _Tabella di
+valori_
+* `++ImpInterfaccia("-Strumenti")++` chiude la barra laterale della Calcolatrice Grafica, indipendentemente dalla scheda
+selezionata
+
+====
+
+== Raccolta Viste standard
+
+In alternativa è possibile applicare una xref:/Raccolta_Viste.adoc[Raccolta Viste] predefinita, specificandola con una
+delle seguenti cifre:
+
+[cols=",",options="header",]
+|===
+|Testo |Raccolta Viste
+|"1" |Algebra e grafici
+|"2" |Geometria
+|"3" |Foglio di calcolo
+|"4" |CAS
+|"5" |Grafici 3D
+|"6" |Probabilità
+|===
+
+Tali impostazioni corrispondono in linea di massima rispettivamente a "AG", "G", "SG", "CG", _AT_ e"B", ma possono anche
+modificare la visualizzazione della xref:/Barra_di_inserimento.adoc[Barra di inserimento] e i contenuti della
+xref:/Barra_degli_strumenti.adoc[Barra degli strumenti].
+
+[NOTE]
+====
+
+Vedere anche il comando xref:/commands/ImpVistaAttiva.adoc[ImpVistaAttiva].
+
+====

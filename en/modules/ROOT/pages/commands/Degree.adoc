@@ -1,0 +1,36 @@
+= Degree Command
+
+Degree( <Polynomial> )::
+  Gives the http://en.wikipedia.org/wiki/en:degree_of_a_polynomial[degree of a polynomial] (in the main variable).
+
+[EXAMPLE]
+====
+
+`++Degree(x^4 + 2 x^2)++` yields _4_
+
+====
+
+== CAS Syntax
+
+Degree( <Polynomial> )::
+  Gives the http://en.wikipedia.org/wiki/en:degree_of_a_polynomial[degree of a polynomial] (in the main variable or
+  http://en.wikipedia.org/wiki/Monomial[monomial]).
+
+[EXAMPLE]
+====
+
+* `++Degree(x^4 + 2 x^2)++` yields _4_
+* `++Degree(x^6 y^3 + 2 x^2 y^3)++` yields _9_
+
+====
+
+Degree( <Polynomial>, <Variable> )::
+  Gives the degree of a polynomial in the given variable.
+
+[EXAMPLE]
+====
+
+* `++Degree(x^4 y^3 + 2 x^2 y^3, x)++` yields _4_
+* `++Degree(x^4 y^3 + 2 x^2 y^3, y)++` yields _3_
+
+====

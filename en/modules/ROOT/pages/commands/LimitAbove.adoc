@@ -1,0 +1,57 @@
+= LimitAbove Command
+
+LimitAbove( <Function>, <Value> )::
+  Computes the right http://en.wikipedia.org/wiki/Limit_of_a_function#One-sided_limits[one-sided limit] of the function
+  for the given value of the main function variable.
+
+[EXAMPLE]
+====
+
+`++LimitAbove(1 / x, 0)++` yields _stem:[\infty]_ .
+
+====
+
+[NOTE]
+====
+
+Not all limits can be calculated by GeoGebra, so _undefined_ will be returned in those cases (as well as when the
+correct result is undefined).
+
+====
+
+== CAS Syntax
+
+LimitAbove( <Expression>, <Value> )::
+  Computes the right one-sided limit of the function for the given value of the main function variable.
+
+[EXAMPLE]
+====
+
+`++LimitAbove(1 / x, 0)++` yields stem:[\infty] .
+
+====
+
+LimitAbove( <Expression>, <Variable>, <Value> )::
+  Computes the right one-sided limit of the multivariate function for the given value of the given function variable.
+
+[EXAMPLE]
+====
+
+`++LimitAbove(1 / a, a, 0)++` yields stem:[\infty] .
+
+====
+
+[NOTE]
+====
+
+Not all limits can be calculated by GeoGebra, so _?_ will be returned in those cases (as well as when the correct result
+is undefined).
+
+====
+
+[NOTE]
+====
+
+See also xref:/commands/Limit.adoc[Limit Command] and xref:/commands/LimitBelow.adoc[LimitBelow Command].
+
+====

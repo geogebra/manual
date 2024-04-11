@@ -1,0 +1,44 @@
+= Comando Polinomio
+
+Polinomio(Funzione)::
+  Restituisce lo sviluppo della funzione polinomiale indicata.
+  +
+Polinomio(Lista di n punti)::
+  Genera la funzione polinomiale interpolante di grado _n-1_ degli _n_ punti indicati.
+
+[EXAMPLE]
+====
+
+`++Polinomio({(1, 1), (2, 3), (3, 6)})++` restituisce _0.5 x^2^ + 0.5 x_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Polinomio((x-3)^2)++` restituisce _x^2^ - 6x + 9_.
+
+====
+
+== Sintassi CAS
+
+Polinomio(Funzione)::
+  Restituisce lo sviluppo della funzione polinomiale indicata, raccogliendo gli eventuali coefficienti letterali.
+  +
+Polinomio(Funzione, Variabile)::
+  Restituisce lo sviluppo della funzione rispetto alla variabile indicata, raccogliendo gli eventuali coefficienti
+  letterali.
+
+[EXAMPLE]
+====
+
+`++Polinomio((x-3)^2+(a+x)^2, a)++` restituisce _a^2^ + 2 x a + 2 x^2^ - 6 x + 9_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Polinomio((x-3)^2+(a+x)^2)++` restituisce _2 x^2^ + (2a - 6) x + a^2^ + 9_.
+
+====

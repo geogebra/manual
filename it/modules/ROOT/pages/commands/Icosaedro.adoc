@@ -1,0 +1,41 @@
+= Comando Icosaedro
+
+Icosaedro(Punto, Punto, Oggetto)::
+  Genera un icosaedro avente per spigolo il segmento individuato dai due punti indicati.
+  +
+  Gli altri vertici sono determinati univocamente da un _Oggetto_, che indica la _direzione_ di creazione, che può
+  essere:
+  +
+  * un vettore, un segmento, una retta o una semiretta, perpendicolari al segmento, oppure
+  * un poligono o un piano, paralleli al segmento.
+  +
+  L'icosaedro così creato avrà:
+  +
+  * una faccia avente per spigolo il segmento, in un piano perpendicolare al vettore/segmento/retta/semiretta indicati,
+  oppure
+  * una faccia avente per spigolo il segmento, in un piano parallelo a quello del poligono/piano indicato.
+
+Icosaedro(Punto, Punto, Punto)::
+  Genera l'icosaedro avente i tre punti indicati come vertici della prima faccia. I punti devono formare un triangolo
+  equilatero, per fare in modo che l'icosaedro risulti definito.
+
+Icosaedro(Punto, Punto)::
+  Genera l'icosaedro avente per spigolo della prima faccia il segmento il segmento individuato dai punti indicati,
+  mentre il terzo vertice della faccia è individuato su una circonferenza, in modo che l'icosaedro possa ruotare attorno
+  allo spigolo.
+
+[NOTE]
+====
+
+`++Icosaedro(A, B)++` è una sintassi abbreviata di `++Icosaedro(A, B, C)++`, con
+`++C = Punto(Circonferenza(PuntoMedio(A, B), Distanza(A, B) sqrt(3) / 2, Segmento(A, B)))++`.
+
+====
+
+[NOTE]
+====
+
+Vedere anche i comandi xref:/commands/Cubo.adoc[Cubo], xref:/commands/Tetraedro.adoc[Tetraedro],
+xref:/commands/Ottaedro.adoc[Ottaedro], xref:/commands/Dodecaedro.adoc[Dodecaedro].
+
+====

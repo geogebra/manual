@@ -1,0 +1,40 @@
+= ImplicitDerivative Command
+
+ImplicitDerivative( <f(x, y)> )::
+  Gives the http://en.wikipedia.org/wiki/Implicit_derivative[implicit derivative] of the given expression.
+
+[EXAMPLE]
+====
+
+`++ImplicitDerivative(x + 2 y)++` yields _-0.5_.
+
+====
+
+== CAS Syntax
+
+ImplicitDerivative( <f(x, y)> )::
+  Gives the http://en.wikipedia.org/wiki/Implicit_derivative[implicit derivative] of the given expression.
+
+[EXAMPLE]
+====
+
+`++ImplicitDerivative(x + 2 y)++` yields _-stem:[\frac\{1}\{2}]_.
+
+====
+
+ImplicitDerivative( <Expression>, <Dependent Variable>, <Independent Variable> )::
+  Gives the http://en.wikipedia.org/wiki/Implicit_derivative[implicit derivative] of the given expression.
+
+[EXAMPLE]
+====
+
+`++ImplicitDerivative(x^2 + y^2, y, x)++` yields _-stem:[\frac\{x}\{y}]_.
+
+====
+
+[NOTE]
+====
+
+See also xref:/commands/Derivative.adoc[Derivative Command].
+
+====

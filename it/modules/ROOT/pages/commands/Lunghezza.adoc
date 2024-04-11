@@ -1,0 +1,77 @@
+= Comando Lunghezza
+
+Lunghezza(Oggetto)::
+  Calcola la lunghezza dell'oggetto indicato.
+
+[EXAMPLE]
+====
+
+*Esempi:*
+
+* `++Lunghezza(Vettore)++`: Calcola la lunghezza del vettore indicato
+* `++Lunghezza(Punto)++`: Calcola la lunghezza del vettore posizione del punto indicato.
+* `++Lunghezza(Lista)++`: Calcola la lunghezza della lista indicata, cioè il numero di elementi contenuti.
+* `++Lunghezza(Testo)++`: Restituisce il numero di caratteri del testo indicato.
+* `++Lunghezza(Luogo)++`: Restituisce il numero di punti di cui è costituito il luogo. Utilizzare il comando
+xref:/commands/Perimetro.adoc[Perimetro][Luogo] per ottenere la lunghezza del luogo. Per ulteriori dettagli vedere il
+xref:/commands/Primo.adoc[comando Primo].
+* `++Lunghezza(Arco)++`: Restituisce la lunghezza di un arco o un settore.
+
+====
+
+Lunghezza(Funzione, Ascissa iniziale, Ascissa finale)::
+  Calcola la lunghezza del grafico della funzione nell'intervallo chiuso indicato.
+
+[EXAMPLE]
+====
+
+`++Lunghezza(2x, 0, 1)++` restituisce 2.236067977, circa stem:[\sqrt\{5}].
+
+====
+
+Lunghezza(Funzione, Punto iniziale, Punto finale)::
+  Calcola la lunghezza del grafico della funzione compreso tra i due punti indicati.
+
+[NOTE]
+====
+
+Se i punti dati non appartengono al grafico della funzione, per determinare l’intervallo vengono utilizzate le relative
+ascisse.
+
+====
+
+Lunghezza(Curva, Numero t1, Numero t2)::
+  Calcola la lunghezza del tratto di curva compreso tra i valori del parametro _t1_ e _t2_.
+
+Lunghezza(Curva c, Punto A, Punto B)::
+  Calcola la lunghezza del tratto di curva _c_ compreso tra due suoi punti _A_ e _B_.
+
+[NOTE]
+====
+
+Vedere anche lo strumento image:22px-Mode_distance.svg.png[Mode distance.svg,width=22,height=22]
+xref:/tools/Distanza_o_lunghezza.adoc[Distanza o lunghezza].
+
+====
+
+== Sintassi CAS
+
+Lunghezza(Funzione, Ascissa iniziale, Ascissa finale)::
+  Calcola la lunghezza del grafico della funzione compreso tra i due punti indicati.
+
+[EXAMPLE]
+====
+
+`++Lunghezza(2x, 0, 1)++` restituisce stem:[\sqrt\{5}].
+
+====
+
+Lunghezza(Funzione, Variabile, Punto iniziale, Punto finale)::
+  Calcola la lunghezza del grafico della funzione compreso tra il valore iniziale e finale della variabile indicata.
+
+[EXAMPLE]
+====
+
+`++Lunghezza(2a, a,  0, 1)++` restituisce stem:[\sqrt\{5}].
+
+====

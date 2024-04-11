@@ -1,0 +1,64 @@
+= HyperGeometric Command
+
+HyperGeometric( <Population Size>, <Number of Successes>, <Sample Size>)::
+  +
+  Returns a bar graph of a http://en.wikipedia.org/wiki/Hypergeometric_distribution[Hypergeometric distribution].
+  +
+  _Parameters:_
+  +
+  _Population size_: number of balls in the urn
+  +
+  _Number of Successes_: number of white balls in the urn
+  +
+  _Sample Size_: number of balls drawn from the urn
+
+The bar graph shows the probability function of the number of white balls in the sample.
+
+HyperGeometric( <Population Size>, <Number of Successes>, <Sample Size>, <Boolean Cumulative> )::
+  Returns a bar graph of a Hypergeometric distribution when _Cumulative_ = false.
+  +
+  Returns the graph of a cumulative Hypergeometric distribution when _Cumulative_ = true.
+  +
+  First three parameters are same as above.
+
+HyperGeometric( <Population Size>, <Number of Successes>, <Sample Size>, <Variable Value>, <Boolean Cumulative> )::
+  Let X be a Hypergeometric random variable and v the variable value.
+  +
+  Returns P( X = _v_) when _Cumulative_ = false.
+  +
+  Returns P( X ≤ _v_) when _Cumulative_ = true.
+  +
+  First three parameters are same as above.
+
+== CAS Syntax
+
+In the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_View.adoc[CAS View] you can use
+only the following syntax:
+
+HyperGeometric( <Population Size>, <Number of Successes>, <Sample Size>, <Variable Value>, <Boolean Cumulative> )::
+  +
+  Let X be a Hypergeometric random variable and v the variable value.
+  +
+  Returns P( X = _v_) when _Cumulative_ = false.
+  +
+  Returns P( X ≤ _v_) when _Cumulative_ = true.
+  +
+  The first three parameters are the same as above.
+
+[EXAMPLE]
+====
+
+Assume you select two balls out of ten balls, two of which are white, without putting any back.
+
+* `++HyperGeometric(10, 2, 2, 0, false)++` yields stem:[\frac\{28}\{45}], the probability of selecting zero white balls,
+* `++HyperGeometric(10, 2, 2, 1, false)++` yields stem:[\frac\{16}\{45}], the probability of selecting one white ball,
+* `++HyperGeometric(10, 2, 2, 2, false)++` yields stem:[\frac\{1}\{45}], the probability of selecting both white balls,
+* `++HyperGeometric(10, 2, 2, 3, false)++` yields _0_, the probability of selecting three white balls.
+* `++HyperGeometric(10, 2, 2, 0, true)++` yields stem:[\frac\{28}\{45}], the probability of selecting zero (or less)
+white balls,
+* `++HyperGeometric(10, 2, 2, 1, true)++` yields stem:[\frac\{44}\{45}], the probability of selecting one or less white
+balls,
+* `++HyperGeometric(10, 2, 2, 2, true)++` yields _1_, the probability of selecting two or less white balls and
+* `++HyperGeometric(10, 2, 2, 3, true)++` yields _1_, the probability of selecting three or less white balls.
+
+====

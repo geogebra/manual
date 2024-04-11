@@ -1,0 +1,47 @@
+= Comando EquazioneLuogo
+
+EquazioneLuogo(Luogo)::
+  Calcola l'equazione di un luogo come curva implicita e ne traccia il grafico.
+
+EquazioneLuogo(Punto Q che genera la curva luogo, Punto P)::
+  Calcola l'equazione di un luogo come curva implicita, utilizzando il punto generatore _Q_ e il punto _P_ in movimento,
+  e ne traccia il grafico.
+
+[EXAMPLE]
+====
+
+Costruzione della parabola come luogo geometrico: Creare i punti liberi _A_ e _B_, quindi la retta _d_ passante per tali
+punti, che sarà la direttrice della parabola. Creare il punto libero _F_, che sarà il fuoco. Creare quindi il punto _P_
+vincolato a _d_ (il punto in movimento), e la retta _p_ perpendicolare a _d_ e passante per _P_. Creare la retta _b_,
+asse del segmento _FP_. Il punto _Q_ che crea il luogo è il punto di intersezione delle rette _p_ e _b_. Digitando
+`++EquazioneLuogo(Q,P)++` si ottiene l'equazione del luogo e il corrispondente grafico.
+
+====
+
+EquazioneLuogo(Espressione booleana, Punto libero)::
+  Calcola il luogo del punto libero che soddisfa la condizione booleana indicata.
+
+[EXAMPLE]
+====
+
+`++EquazioneLuogo(TestAllineamento(A, B, C), A)++` relativo ai punti liberi _A_, _B_, e _C_ calcola la posizione di _A_
+che rende i punti _A_, _B_ e _C_ collineari, cioè la retta per _B_ e _C_.
+
+====
+
+[NOTE]
+====
+
+* Il luogo deve essere generato da un punto (non da uno slider)
+* Applicabile esclusivamente a un insieme ristretto di luoghi geometrici, dipendenti da punti, rette, circonferenze,
+coniche. Semirette e segmenti saranno trattati come rette (infinite).
+* Se il luogo è troppo complicato il comando restituisce 'non definito'.
+* Se non esiste alcun luogo, allora la curva implicita restituita sarà l'insieme vuoto, rappresentato da 0 = 1.
+* Se il luogo è l'intero piano, allora la curva implicita restituita sarà rappresentata da 0=0.
+* Ulteriori informazioni ed esempi sono disponibili su https://www.geogebra.org/m/KZVzqVEM[geogebra.org], dove è
+disponibile anche una https://www.geogebra.org/m/mbXQuvUV[collezione di esempi su luoghi in forma implicita].
+* Il calcolo del luogo utilizza le http://en.wikipedia.org/wiki/it:Basi_di_Gr%C3%B6bner[basi di Gröbner]. Questa tecnica
+può generare rami di curva non appartenenti al luogo.
+* Vedere anche il comando xref:/commands/Luogo.adoc[Luogo].
+
+====

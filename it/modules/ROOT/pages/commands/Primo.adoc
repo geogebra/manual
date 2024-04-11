@@ -1,0 +1,65 @@
+= Comando Primo
+
+Primo(Lista)::
+  Restituisce una nuova lista, contenente il primo elemento della lista indicata.
+
+[EXAMPLE]
+====
+
+`++Primo({1, 4, 3})++` restituisce _\{1}_.
+
+====
+
+[NOTE]
+====
+
+Per ottenere solo il primo elemento utilizzare `++Elemento({1, 4, 3}, 1)++`.
+
+====
+
+Primo(Lista, Numero di elementi)::
+  Restituisce una nuova lista, contenente i primi _n_ elementi della lista indicata.
+
+[EXAMPLE]
+====
+
+`++Primo({1, 4, 3}, 2)++` restituisce _\{1, 4}_.
+
+====
+
+Primo(Testo)::
+  Restituisce il primo carattere del testo.
+
+[EXAMPLE]
+====
+
+`++Primo("Ciao")++` restituisce _"C"_.
+
+====
+
+Primo(Testo, Numero di elementi)::
+  Restituisce i primi _n_ caratteri del testo indicato.
+
+[EXAMPLE]
+====
+
+`++Primo("Ciao",2)++` restituisce _"Ci"_.
+
+====
+
+Primo(Luogo, Numero di elementi)::
+  Questo comando è utile per:
+  +
+  * i luoghi generati dal xref:/commands/RisolviNEDO.adoc[comando RisolviNEDO]: restituisce la lista dei punti creati
+  nei primi _n_ passi dell'algoritmo di soluzione EDO.
+  * i luoghi generati dal xref:/commands/DistanzaMinima.adoc[comando DistanzaMinima],
+  xref:/commands/CommessoViaggiatore.adoc[comando CommessoViaggiatore], xref:/commands/Voronoi.adoc[comando Voronoi],
+  xref:/commands/MinimoAlberoRicoprente.adoc[comando MinimoAlberoRicoprente] e
+  xref:/commands/InviluppoConvesso.adoc[comando InviluppoConvesso]: restituisce i vertici del grafo.
+
+[NOTE]
+====
+
+Vedere anche il xref:/commands/Ultimo.adoc[comando Ultimo].
+
+====

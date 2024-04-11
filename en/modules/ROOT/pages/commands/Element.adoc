@@ -1,0 +1,78 @@
+= Element Command
+
+Element( <List>, <Position of Element n> )::
+  Yields the __n__^th^ element of the list.
+
+[EXAMPLE]
+====
+
+`++Element({1, 3, 2}, 2)++` yields _3_, the second element of _\{1, 3, 2}_.
+
+====
+
+[NOTE]
+====
+
+In the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_View.adoc[CAS View] undefined
+variables can be used as well.
+
+[EXAMPLE]
+====
+
+`++Element({a, b, c}, 2)++` yields _b_, the second element of _\{a, b, c}_.
+
+====
+
+====
+
+Element( <Matrix>, <Row>, <Column> )::
+  Yields the element of the matrix in the given row and column.
+
+[EXAMPLE]
+====
+
+`++Element({{1, 3, 2}, {0, 3, -2}}, 2, 3)++` yields _-2_, the third element of the second row of
+stem:[\begin\{pmatrix}1&3&2\\0&3&-2\end\{pmatrix}].
+
+====
+
+[NOTE]
+====
+
+In the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_View.adoc[CAS View] undefined
+variables can be used as well.
+
+[EXAMPLE]
+====
+
+`++Element({{a, b, c}, {d, e, f}}, 2, 3)++` yields _f_, the third element of the second row of
+stem:[\begin\{pmatrix}a&b&c\\d&e&f\end\{pmatrix}].
+
+====
+
+====
+
+Element( <List>, <Index1>, <Index2>, ...)::
+  Provided list is _n_-dimensional list, one can specify up to _n_ indices to obtain an element (or list of elements) at
+  given coordinates.
+
+[EXAMPLE]
+====
+
+Let _L = \{\{\{1, 2}, \{3, 4}}, \{\{5, 6}, \{7, 8}}}_.
+
+Then `++Element(L, 1, 2, 1)++` yields _3_, `++Element(L, 2, 2)++` yields _\{7, 8}_.
+
+====
+
+[NOTE]
+====
+
+* This command only works, if the list or matrix contains elements of one object type (e. g. only numbers or only
+points).
+* {blank}
++
+See also xref:/commands/First.adoc[First Command], xref:/commands/Last.adoc[Last Command] and
+xref:/commands/RandomElement.adoc[RandomElement Command].
+
+====

@@ -1,0 +1,107 @@
+= SetPerspective Command
+
+SetPerspective( <Text> )
+
+Changes the layout and visibility of _Views_. The text parameter is either the full description of the layout,
+description of a single view you want to change or ID of one of the standard perspectives.
+
+== Full layout description
+
+To change the whole layout you can describe the view positions using an expression. _Views_ are represented by variables
+(letters): the horizontal arrangement of _Views_ is represented by the related letters juxtaposition, and their vertical
+arrangement by a division symbol `++ /++`.
+
+[cols=",",options="header",]
+|===
+|Letter |View
+|A |image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] xref:/Algebra_View.adoc[Algebra]
+
+|B |image:18px-Menu_view_probability.svg.png[Menu view probability.svg,width=18,height=18]
+xref:/Probability_Calculator.adoc[Probability Calculator]
+
+|C |image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_View.adoc[CAS]
+
+|D |image:16px-Menu_view_graphics2.svg.png[Menu view graphics2.svg,width=16,height=16] xref:/Graphics_View.adoc[Graphics
+2]
+
+|G |image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Graphics_View.adoc[Graphics]
+
+|L |image:16px-Menu_view_construction_protocol.svg.png[Menu view construction protocol.svg,width=16,height=16]
+xref:/Construction_Protocol.adoc[Construction Protocol]
+
+|P |image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Properties_Dialog.adoc[Properties]
+
+|R |Data analysis (Desktop only)
+
+|S |image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+xref:/Spreadsheet_View.adoc[Spreadsheet]
+
+|T |image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=16,height=16]
+xref:/3D_Graphics_View.adoc[3D Graphics]
+|===
+
+[EXAMPLE]
+====
+
+*Examples:*  
+
+* `++SetPerspective("G")++` makes only the image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Graphics View_ visible
+* `++SetPerspective("AGS")++` makes image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+_Algebra_, image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Graphics_ and
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Spreadsheet View_ visible,
+aligned horizontally
+* `++SetPerspective("S/G")++` makes image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Spreadsheet_ and image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Graphics View_ visible with _Spreadsheet_ on top and _Graphics View_ below
+* `++SetPerspective("S/(GA)")++` is similar as above, the bottom part of the screen consists of
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Graphics View_ on the left and
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _Algebra View_ on the right
+
+====
+
+== Single view change
+
+To open or close individual _Views_, add the symbols `+++++` or `++-++` before the _View_ name (letter), respectively.
+In apps other than GeoGebra Classic (e.g. the Graphing Calculator) you can also use `++Tools++` and `++Table++`for the
+tools and table of values.
+
+[EXAMPLE]
+====
+
+*Examples:*  
+
+* `++SetPerspective("+D")++` adds _Graphics View_ 2 to the currently displayed ones, on the right
+* `++SetPerspective("-D")++` removes _Graphics View_ 2 from the currently displayed ones
+* `++SetPerspective("+Tools")++` opens the sidebar in Graphing Calculator and switches it to tools tab
+* `++SetPerspective("+Table")++` opens the sidebar in Graphing Calculator and switches it to table of values
+* `++SetPerspective("-Tools")++` closes the sidebar in Graphing Calculater, no matter which tab is selected
+
+====
+
+== Standard perspectives
+
+You may also use a text containing a single digit to use a predefined perspective:
+
+[cols=",",options="header",]
+|===
+|Text |Perspective
+|"1" |Algebra And Graphics
+|"2" |Geometry
+|"3" |Spreadsheet
+|"4" |CAS
+|"5" |3D Graphics
+|"6" |Probability
+|===
+
+These roughly correspond to "AG", "G", "SG", "CG", "AT" and "B" respectively, but may also affect the display of
+xref:/Input_Bar.adoc[Input Bar] and content of xref:/Toolbar.adoc[Toolbar].
+
+[NOTE]
+====
+
+*Notes:*
+
+* See also xref:/commands/SetActiveView.adoc[SetActiveView] command.
+
+====

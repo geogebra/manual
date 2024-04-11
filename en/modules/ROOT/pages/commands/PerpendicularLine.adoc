@@ -1,0 +1,66 @@
+= PerpendicularLine Command
+
+PerpendicularLine( <Point>, <Line> )::
+  Creates a line through the point perpendicular to the given line.
+
+[EXAMPLE]
+====
+
+Let `++c: -3x + 4y = -6++` be a line and `++A = (-2, -3)++` a point. `++PerpendicularLine(A, c)++` yields the line _d_:
+-4__x__ - 3__y__ = 17.
+
+====
+
+PerpendicularLine( <Point>, <Segment> )
+
+Creates a line through the point perpendicular to the given segment.
+
+[EXAMPLE]
+====
+
+Let _c_ be the segment between the two points _A_ = (-3, 3) and _B_ = (0, 1). `++PerpendicularLine(A, c)++` yields the
+line _d: -3x + 2y = 15_.
+
+====
+
+[NOTE]
+====
+
+For 3D objects a third argument is added to this command to specify the behavior: if 2D view is active, plane _z=0_ is
+used as third argument, if 3D view is active, _space_ is used instead. See PerpendicularLine( <Point>, <Line>, <Context>
+) further below for details.
+
+====
+
+PerpendicularLine( <Point>, <Vector> )::
+  Creates a line through the point perpendicular to the given vector.
+
+[EXAMPLE]
+====
+
+Let `++u = Vector((5, 3), (1, 1))++` and `++A = (-2, 0)++` a point. `++PerpendicularLine(A, u)++` yields the line _c: 2x
++ y = -4_.
+
+====
+
+PerpendicularLine( <Point>, <Plane> )::
+  Creates a perpendicular line to the plane through the given point.
+PerpendicularLine( <Line> , <Line> )::
+  Creates a perpendicular line to the given lines through the intersection point of the two lines.
+PerpendicularLine( <Point>, <Direction>, <Direction> )::
+  Creates a perpendicular line to the given directions (that can be lines or vectors) through the given point.
+PerpendicularLine( <Point>, <Line>, <Context> )::
+  Creates a perpendicular line to the line through the point and depending on the context.
+  +
+  * PerpendicularLine( <Point>, <Line>, <Plane> ) creates a perpendicular line to the given line through the point and
+  parallel to the plane.
+  * PerpendicularLine( <Point>, <Line>, space ) creates a perpendicular line to the given line through the point. The
+  two lines have an intersection point. This command yields undefined if the point is on the line in 3D.
+
+[NOTE]
+====
+
+See also image:22px-Mode_linebisector.svg.png[Mode linebisector.svg,width=22,height=22]
+xref:/tools/Perpendicular_Line.adoc[Perpendicular Line] tool.
+
+====

@@ -1,0 +1,101 @@
+= Min Command
+
+Min( <List> )::
+  Returns the minimum of the numbers within the list.
+
+[EXAMPLE]
+====
+
+`++Min({-2, 12, -23, 17, 15})++` yields _-23_.
+
+====
+
+Min( <Interval> )
+
+Returns the lower bound of the interval.
+
+[EXAMPLE]
+====
+
+`++Min(2 < x < 3)++` yields _2_ .
+
+====
+
+[NOTE]
+====
+
+If the input consists of non-numeric objects, then this command considers the numbers associated with those objects. If
+you have a list of segments for example, the command Min( <List> ) will yield the minimum segment length.
+
+====
+
+Min( <Number>, <Number> )
+
+Returns the minimum of the two given numbers.
+
+[EXAMPLE]
+====
+
+`++Min(12, 15)++` yields _12_.
+
+====
+
+[NOTE]
+====
+
+Open and closed intervals are not distinguished.
+
+====
+
+Min( <Function>, <Start x-Value>, <End x-Value> )::
+  Calculates (numerically) the *local* minimum point for function in the given interval. Function should be continuous
+  and have only one _local_ minimum point in the interval (and no local maximum).
+  +
+
+[EXAMPLE]
+====
+
+`++Min(exp(x) x^3,-4,-2)++` creates the point (-3, -1.34425) .
+
+====
+
+[NOTE]
+====
+
+For polynomials you should use the xref:/commands/Extremum.adoc[Extremum Command].
+
+====
+
+Min( <List of Data>, <List of Frequencies> )::
+  Returns the minimum of the list of data with corresponding frequencies.
+
+[EXAMPLE]
+====
+
+`++Min({1, 2, 3, 4, 5}, {0, 3, 4, 2, 3})++` yields 2, the lowest number of the first list whose frequency is greater
+than 0.
+
+====
+
+[NOTE]
+====
+
+* If you want the minimum of two functions `++f(x)++` and `++g(x)++` then you can define
+`++(f(x) + g(x) - abs(f(x) - g(x)))/2++`
+* See also xref:/commands/Max.adoc[Max Command], xref:/commands/Extremum.adoc[Extremum Command] and
+xref:/tools/Function_Inspector.adoc[Function Inspector Tool].
+
+====
+
+== CAS Syntax
+
+Min( <Function>, <Start x-Value>, <End x-Value> )::
+  Unlike in the Algebra View, this syntax will give the minimum over the interval, including endpoints
+
+[EXAMPLE]
+====
+
+* `++Min(x^2,-1,2)++` yields the point _(0,0)_
+* `++Min(-x^2,-1,2)++` yields the point _(2,-4)_
+
+====

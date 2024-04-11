@@ -1,0 +1,42 @@
+= Comando MCDEsteso
+
+== Sintassi CAS
+
+MCDEsteso(Intero, Intero)::
+  Restituisce una lista contenente i coefficienti interi stem:[s, t] dell'identità di Bézout stem:[as+bt= MCD(a,b)] e il
+  massimo comun divisore dei numeri interi stem:[a] e stem:[b] indicati.
+  +
+  Il risultato viene calcolato applicando l'http://en.wikipedia.org/wiki/it:Algoritmo_esteso_di_Euclide[algoritmo esteso
+  di Euclide].
+
+[EXAMPLE]
+====
+
+`++MCDEsteso(240,46)++` restituisce \{stem:[-9,47,2]}. (Sostituendo il risultato nell'identità di Bézout si ha: stem:[-9
+\cdot 240+47 \cdot 46=2]).
+
+====
+
+MCDEsteso(Polinomio, Polinomio)::
+  Restituisce una lista contenente i coefficienti polinomiali stem:[S(x), T(x)] dell'identità di Bézout per i polinomi
+  stem:[A(x)S(x) + B(x)T(x) = MCD(A(x), B(x))] e il massimo comun divisore dei polinomi stem:[A(x)] e stem:[B(x)]
+  indicati.
+  +
+  Il risultato viene calcolato applicando l'http://en.wikipedia.org/wiki/it:Algoritmo_esteso_di_Euclide[algoritmo esteso
+  di Euclide].
+
+[EXAMPLE]
+====
+
+`++MCDEsteso(x^2-1,x+4)++` restituisce \{stem:[1,-x+4,15]}. (Sostituendo il risultato nell'identità di Bézout per i
+polinomi si ha: stem:[1 \cdot (x^2-1) + (-x+4) \cdot (x+4) = 15]).
+
+====
+
+[NOTE]
+====
+
+* Il MCD di due polinomi non è unico (è definito a meno di una costante scalare moltiplicativa).
+* Vedere anche il comando xref:/commands/MCD.adoc[MCD].
+
+====

@@ -1,0 +1,25 @@
+= AreCongruent Command
+
+AreCongruent( <Object>, <Object> )::
+  Decides if the objects are congruent.
+
+Normally this command computes the result numerically. This behavior can be changed by using the
+xref:/commands/Prove.adoc[Prove] command.
+
+[EXAMPLE]
+====
+
+`++AreCongruent(Circle((0, 0),1),x^2+y^2=1)++` and `++AreCongruent(Circle((1, 1),1),x^2+y^2=1)++` yield _true_ since the
+two circles have the same radius.
+
+====
+
+[NOTE]
+====
+
+See also xref:/commands/AreEqual.adoc[AreEqual], xref:/commands/AreCollinear.adoc[AreCollinear],
+xref:/commands/AreConcyclic.adoc[AreConcyclic], xref:/commands/AreConcurrent.adoc[AreConcurrent],
+xref:/commands/ArePerpendicular.adoc[ArePerpendicular], xref:/commands/AreParallel.adoc[AreParallel],
+xref:/commands/IsTangent.adoc[IsTangent] commands.
+
+====

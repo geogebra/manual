@@ -1,0 +1,35 @@
+= GroebnerLexDeg Command
+
+== CAS Syntax
+
+GroebnerLexDeg( <List of Polynomials> )::
+  Computes the Gröbner basis of the list of the polynomials with respect to graded lexicographical ordering of the
+  variables (also known as _grlex_, _tdeg_, _lexdeg_, _total degree lexicographic ordering_ or _elimination ordering_).
+
+[EXAMPLE]
+====
+
+`++GroebnerLexDeg({x^3 - y - 2, x^2 + y + 1})++` yields \{stem:[ -y^\{2} + x - 3 y - 3, -x y - x - y - 2, x^\{2} + y +
+1]}.
+
+====
+
+GroebnerLexDeg( <List of Polynomials>, <List of Variables> )::
+  Computes the Gröbner basis of the list of the polynomials with respect to graded lexicographical ordering of the given
+  variables (also known as _grlex_, _tdeg_, _lexdeg_, _total degree lexicographic ordering_ or _elimination ordering_).
+
+[EXAMPLE]
+====
+
+`++GroebnerLexDeg({x^3 - y -2, x^2 + y + 1},{y, x})++` yields \{stem:[ x^\{2} + y + 1, -y x - y - x - 2, y^\{2} + 3 y -
+x + 3 ]}.
+
+====
+
+[NOTE]
+====
+
+See also xref:/commands/GroebnerDegRevLex.adoc[GroebnerDegRevLex] and xref:/commands/GroebnerLex.adoc[GroebnerLex]
+commands.
+
+====

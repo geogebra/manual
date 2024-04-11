@@ -1,0 +1,62 @@
+= SurdText Command
+
+SurdText( <Number> )::
+  Creates text representation of the number in the form stem:[\frac\{a+b\sqrt\{c}}\{d}].
+
+[EXAMPLE]
+====
+
+*Examples:*
+
+* `++SurdText(2.414213562373095)++` creates _stem:[1 + \sqrt\{2}]_
+* `++SurdText(2.439230484541326)++` creates _stem:[\frac\{7+3 \sqrt\{3} }\{5}]_
+
+====
+
+SurdText( <Number>, <List> )::
+  Creates text representation of the number as multiples of the constants in the list. If the list is empty it uses a
+  list of common constants.
+
+[EXAMPLE]
+====
+
+*Examples:*
+
+* `++SurdText(3.718281828459045, {exp(1)})++` creates _stem:[e + 1]_
+* `++SurdText(5.382332347441762, {sqrt(2), sqrt(3), sqrt(5)})++` creates _stem:[ \sqrt\{5} + \sqrt\{3} + \sqrt\{2}]_
+* `++SurdText(1.693147180559945, {ln(2)})++` creates _stem:[ \ln(2) + 1]_
+
+====
+
+SurdText( <Point> )::
+  Creates text representation of the point, where coordinates are in the form stem:[\frac\{a+b\sqrt\{c}}\{d}].
+
+[EXAMPLE]
+====
+
+`++SurdText((2.414213562373095, 1.414213562373095))++` creates _(stem:[1 + \sqrt\{2}, \sqrt\{2})]_
+
+====
+
+[NOTE]
+====
+
+*Notes:*
+
+* In order to use this command in a Text object, the option *_LaTeX Formula_* needs to be enabled in the _Text_ tab of
+the image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Properties_Dialog.adoc[Properties Dialog]
+of the text.
+* Since this command works with a rounded decimal number as input, sometimes the result will be unexpected.
+* If a suitable answer can't be found, the number will be returned.
+
+[EXAMPLE]
+====
+
+`++SurdText(1.23456789012345)++` returns _1.23456789012345_.
+
+====
+
+* See also the xref:/commands/FractionText.adoc[FractionText] and xref:/commands/ScientificText.adoc[ScientificText]
+commands.
+
+====

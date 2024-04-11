@@ -1,0 +1,36 @@
+= Arc Command
+
+Arc( <Circle>, <Point M >, <Point N> )::
+  Returns the directed arc (counterclockwise) of the given circle, with endpoints M and N.
+
+Arc( <Ellipse>, <Point M>, <Point N> )::
+  Returns the directed arc (counterclockwise) of the given ellipse, with endpoints M and N.
+
+Arc( <Circle>, <Parameter Value>, <Parameter Value> )::
+  Returns the circle arc of the given circle, whose endpoints are identified by the specified values of the parameter.
+
+[NOTE]
+====
+
+Internally the following parametric forms are used:Circle: (_r_ cos(_t_), _r_ sin(_t_)) where _r_ is the circle's
+radius.
+
+====
+
+Arc( <Ellipse>, <Parameter Value>, <Parameter Value> )::
+  Returns the circle arc of the given ellipse, whose endpoints are identified by the specified values of the parameter.
+
+[NOTE]
+====
+
+Internally the following parametric forms are used:Ellipse: (_a_ cos(_t_), _b_ sin(_t_)) where _a_ and _b_ are the
+lengths of the semimajor and semiminor axes.
+
+====
+
+[NOTE]
+====
+
+See also xref:/commands/CircumcircularArc.adoc[CircumcircularArc] command.
+
+====

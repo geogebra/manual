@@ -1,0 +1,59 @@
+= Comando PuntoMedio
+
+PuntoMedio(Segmento)::
+  Genera il punto medio del segmento indicato.
+
+[EXAMPLE]
+====
+
+Sia `++s = Segmento((1, 1), (1, 5))++`. Il comando `++PuntoMedio(s)++` genera il punto di coordinate _(1, 3)_.
+
+====
+
+PuntoMedio(Conica)::
+  Genera il centro della conica indicata.
+
+[EXAMPLE]
+====
+
+`++PuntoMedio(x^2+y^2=4)++` genera il punto di coordinate _(0, 0)_.
+
+====
+
+PuntoMedio(Quadrica)::
+  Genera il centro della quadrica indicata (ad es. sfera, cono, ecc...)
+
+[EXAMPLE]
+====
+
+`++PuntoMedio(x^2+y^2+z^2=1)++` restituisce _(0, 0, 0)_.
+
+====
+
+PuntoMedio(Intervallo)::
+  Determina il valore corrispondente al punto medio dell'intervallo indicato.
+
+[EXAMPLE]
+====
+
+`++PuntoMedio(2<x<4)++` restituisce _3_.
+
+====
+
+PuntoMedio(Punto, Punto)::
+  Genera il punto medio tra i due punti indicati.
+
+[EXAMPLE]
+====
+
+`++PuntoMedio((1, 1), (5, 1))++` genera il punto di coordinate _(3, 1)_.
+
+====
+
+[NOTE]
+====
+
+Vedere anche lo strumento image:24px-Mode_midpoint.svg.png[Mode midpoint.svg,width=24,height=24]
+xref:/tools/Punto_medio_o_centro.adoc[Punto Medio o Centro].
+
+====

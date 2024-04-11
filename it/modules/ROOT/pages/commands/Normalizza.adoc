@@ -1,0 +1,34 @@
+= Comando Normalizza
+
+Normalizza(Lista di numeri)::
+  Restituisce una lista contenente i valori _normalizzati_ dei numeri indicati.
+
+[EXAMPLE]
+====
+
+`++Normalizza({1, 2, 3, 4, 5})++` restituisce _\{0, 0.25, 0.5, 0.75, 1}_.
+
+====
+
+Normalizza(Lista di punti)::
+  Restituisce una lista contenente la forma _normalizzata_ dei punti indicati.
+
+[EXAMPLE]
+====
+
+`++Normalizza({(1,5), (2,4), (3,3), (4,2), (5,1)})++` restituisce _\{(0,1), (0.25,0.75), (0.5,0.5), (0.75,0.25),
+(1,0)}_.
+
+====
+
+[NOTE]
+====
+
+* La normalizzazione è richiesta in particolare quando si deve lavorare con numeri piccoli o grandi (ad esempio nei
+comandi del tipo xref:/commands/RegCrescita.adoc[RegCrescita]), in modo da evitare errori di arrotondamento o di
+overflow.
+* Questo comando non è applicabile ai punti 3D.
+* L'operazione di _normalizzazione_ trasforma ogni elemento della lista indicata in un elemento a valori nell'intervallo
+[0, 1], utilizzando la funzione lineare stem:[x \mapsto \frac\{x-Min[list]}\{Max[list]-Min[list]}].
+
+====

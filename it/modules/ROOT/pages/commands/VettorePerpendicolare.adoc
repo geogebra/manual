@@ -1,0 +1,57 @@
+= Comando VettorePerpendicolare
+
+VettorePerpendicolare(Retta)::
+  Genera il vettore perpendicolare alla retta indicata.
+
+[NOTE]
+====
+
+Una retta di equazione _ax + by = c_ ha il vettore perpendicolare di componenti _(a, b)_.
+
+====
+
+VettorePerpendicolare(Segmento)::
+  Genera il vettore perpendicolare al segmento indicato, avente la stessa lunghezza.
+
+VettorePerpendicolare(Vettore)::
+  Genera il vettore perpendicolare al vettore indicato.
+  +
+
+[EXAMPLE]
+====
+
+`++VettorePerpendicolare((3,2))++` genera il vettore (-2,3)
+
+====
+
+[NOTE]
+====
+
+Nella image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[vista CAS] è possibile
+utilizzare anche variabili algebriche non associate a valori.
+
+[EXAMPLE]
+====
+
+`++VettorePerpendicolare((a, b))++` restituisce il vettore _\{-b, a}_.
+
+====
+
+====
+
+VettorePerpendicolare(Piano)::
+  Genera un vettore perpendicolare al piano indicato.
+
+[EXAMPLE]
+====
+
+`++VettorePerpendicolare(PianoxOy)++` genera il vettore _u=(0, 0, 1)_ perpendicolare al piano xOy.
+
+====
+
+[NOTE]
+====
+
+Vedere anche il comando xref:/commands/VersorePerpendicolare.adoc[VersorePerpendicolare].
+
+====

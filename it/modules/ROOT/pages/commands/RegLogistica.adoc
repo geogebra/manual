@@ -1,0 +1,26 @@
+= Comando RegLogistica
+
+RegLogistica(Lista di punti)::
+  Genera la curva di regressione nella forma a / (1+b e^(-kx)).
+
+[EXAMPLE]
+====
+
+`++RegLogistica({(-6, 2), (0, 2), (3, 4), (3.4, 8)})++` restituisce la funzione di equazione stem:[ \frac\{1.98}\{1 -
+0.03 e^\{1x}}].
+
+====
+
+[NOTE]
+====
+
+* Il primo e l’ultimo dei punti indicati devono essere vicini alla curva. La lista deve contenere almeno 3 punti,
+preferibilmente di più.
+* Vedere anche i comandi xref:/commands/Regressione.adoc[Regressione], xref:/commands/RegExp.adoc[RegExp],
+xref:/commands/RegCrescita.adoc[RegCrescita], xref:/commands/RegLin.adoc[RegLin], xref:/commands/RegLinX.adoc[RegLinX],
+xref:/commands/RegLog.adoc[RegLog], xref:/commands/RegPol.adoc[RegPol], xref:/commands/RegPot.adoc[RegPot] e
+xref:/commands/RegSin.adoc[RegSin].
+* Se si lavora con numeri piccoli o grandi, conviene normalizzare i valori in modo da ottenere risultati più accurati.
+Vedere il xref:/commands/Normalizza.adoc[comando Normalizza].
+
+====

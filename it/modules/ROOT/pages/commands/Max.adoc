@@ -1,0 +1,101 @@
+= Comando Max
+
+Max(Numero, Numero)::
+  Restituisce il massimo tra i due numeri indicati.
+
+[EXAMPLE]
+====
+
+`++Max(12, 15)++` restituisce _15_.
+
+====
+
+Max(Lista di numeri)::
+  Restituisce il massimo tra i numeri della lista.
+  +
+
+[EXAMPLE]
+====
+
+`++Max({-2, 12, -23, 17, 15})++` restituisce _17_.
+
+====
+
+[NOTE]
+====
+
+Se gli oggetti della lista non sono di tipo numerico, il comando _Max_ considera i numeri associati a tali oggetti: ad
+es. _Max_(_Lista di segmenti_) restituisce il segmento avente lunghezza massima.
+
+====
+
+Max(Funzione, x iniziale, x finale)::
+  Calcola (numericamente) le coordinate del massimo *locale* della funzione nell'intervallo di estremi sinistro e destro
+  specificati. La funzione deve essere continua e avere uno e un solo massimo locale nell'intervallo (e nessun minimo
+  locale).
+  +
+
+[EXAMPLE]
+====
+
+`++Max(x^3 + 2x^2 - 1, -2, 0)++` crea il punto (-1.33, 0.19).
+
+====
+
+[NOTE]
+====
+
+Per le funzioni polinomiali, utilizzare il xref:/commands/Estremo.adoc[comando Estremo].
+
+====
+
+Max(Intervallo)::
+  Restituisce l'estremo superiore dell'intervallo:
+  +
+
+[EXAMPLE]
+====
+
+`++Max(2<x<3)++` restituisce _3_.
+
+====
+
+[NOTE]
+====
+
+Gli intervalli aperti vengono considerati comunque chiusi.
+
+====
+
+Max(Lista dati, Lista frequenze)::
+  Restituisce il massimo dei valori della lista, relativamente alla frequenza.
+
+[EXAMPLE]
+====
+
+`++Max({1, 2, 3, 4, 5}, {5, 3, 4, 2, 0})++` restituisce 4, il massimo numero della lista avente frequenza maggiore di 0.
+
+====
+
+== Sintassi CAS
+
+Max(Funzione, x iniziale, x finale)::
+  A differenza della _Vista Algebra_, questa sintassi restituisce il massimo della funzione nell'intervallo indicato,
+  inclusi gli estremi.
+
+[EXAMPLE]
+====
+
+* `++Max(x^2,-1,2)++` restituisce il punto _(2,4)_
+* `++Max(-x^2,-1,2)++` restituisce il punto _(0,0)_
+
+====
+
+[NOTE]
+====
+
+* Per determinare il massimo di due funzioni `++f(x)++` e `++g(x)++` utilizzare `++(f(x) + g(x) + abs(f(x) - g(x)))/2++`
+* Vedere anche i comandi xref:/commands/Estremo.adoc[Estremo], xref:/commands/Min.adoc[Min] e lo
+xref:/tools/Assistente_Funzioni.adoc[strumento Assistente Funzioni].
+
+====

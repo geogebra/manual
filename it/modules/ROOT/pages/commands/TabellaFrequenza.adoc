@@ -1,0 +1,73 @@
+= Comando TabellaFrequenza
+
+TabellaFrequenza(Lista dati grezzi)::
+  Restituisce una tabella (come testo) la cui prima colonna contiene la lista ordinata degli elementi della lista e la
+  seconda colonna contiene il numero delle occorrenze dei valori della prima colonna (frequenza). La lista può contenere
+  numeri o testo.
+
+TabellaFrequenza(Booleano Cumulata, Lista dati grezzi)::
+  Se _Cumulata= false_, restituisce la stessa tabella di Frequenza(Lista dati grezzi)
+  +
+  Se _Cumulata= true_, restituisce una tabella la cui prima colonna è la stessa di TabellaFrequenza(Lista dati grezzi)
+  mentre la seconda colonna contiene le frequenze cumulate dei valori della prima.
+
+TabellaFrequenza(Lista degli estremi delle classi, Lista dati grezzi)::
+  Restituisce una tabella (come testo) la cui prima colonna contiene intervalli (classi) e la seconda colonna contiene
+  il numero di elementi della lista appartenenti all'intervallo corrispondente. Tutti gli intervalli sono del tipo [a,
+  b), tranne l'ultimo, che è del tipo [a, b].
+
+TabellaFrequenza(Booleano Cumulata, Lista degli estremi delle classi, Lista dati grezzi L)::
+  Se _Cumulata= false_, restituisce la stessa tabella di TabellaFrequenza(Lista degli estremi delle classi, Lista dati
+  grezzi)
+  +
+  Se _Cumulata= true_, restituisce una tabella la cui prima colonna è la stessa di TabellaFrequenza(Lista dati grezzi)
+  mentre la seconda contiene le frequenze cumulate dei valori della prima colonna.
+
+TabellaFrequenza(Lista degli estremi delle classi, Lista dati grezzi, Booleano Usa densità, Fattore di scala densità
+(opzionale))::
+  Restituisce una tabella (come testo) la cui prima colonna contiene intervalli (classi) e la seconda colonna contiene
+  le frequenze per il corrispondente xref:/commands/Istogramma.adoc[comando Istogramma].
+
+TabellaFrequenza(Booleano Cumulata, Lista degli estremi delle classi, Lista dati grezzi, Booleano Usa densità , Fattore
+di scala densità (opzionale))::
+  Restituisce una tabella (come testo) la cui prima colonna contiene intervalli (classi) e la seconda colonna contiene
+  le frequenze per il corrispondente xref:/commands/Istogramma.adoc[comando Istogramma].
+
+[NOTE]
+====
+
+Questo comando è simile al xref:/commands/Frequenza.adoc[comando Frequenza] e al xref:/commands/Istogramma.adoc[comando
+Istogramma]. Consultare le pagine relative a questi comandi, che contengono esempi correlati.
+
+====
+
+TabellaFrequenza(Lista dati grezzi, Fattore di scala (facoltativo))::
+  Restituisce una tabella (come testo) la cui prima colonna *Valore* contiene l'elenco ordinato degli elementi unici
+  della _Lista dati grezzi_ e la seconda colonna *Frequenza* contiene il conteggio delle occorrenze dei valori
+  corrispondenti, moltiplicato per il _Fattore di scala_. La lista può contenere sia numeri che testi.
+  +
+  +
+
+[EXAMPLE]
+====
+
+`++TabellaFrequenza({"rosso", "rosso", "verde", "verde", "blu"}, 5)++` restituisce una tabella contenente nella colonna
+_Valore_ i testi _blu_, _rosso_, _verde_ (in ordine alfabetico) e nella colonna _Frequenza_ i valori 5, 10, 10.
+
+====
+
+[EXAMPLE]
+====
+
+`++TabellaFrequenza({1, 1, 1, 2, 2, 3, 3, 4, 5}, 2)++` restituisce una tabella: nella prima colonna _Valore_ sono
+elencati i numeri 1, 2, 3, 4, 5 e nella seconda, _Frequenza_ i valori 6, 4, 4, 2, 2.
+
+====
+
+[NOTE]
+====
+
+Il valore 1 è presente tre volte nella lista, quindi nella seconda colonna il conteggio visualizzato è 6, dato dal
+prodotto di 3 (occorrenze del valore 1) per 2, che è il _Fattore di scala_ indicato.
+
+====

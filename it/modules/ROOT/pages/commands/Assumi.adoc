@@ -1,0 +1,29 @@
+= Comando Assumi
+
+== Sintassi CAS
+
+Assumi( Condizione, Espressione )::
+  Valuta l'espressione, applicando la condizione indicata.
+
+[EXAMPLE]
+====
+
+*Esempi:*
+
+* `++Assumi(a > 0, Integrale(exp(-a x), 0, infinity))++` restituisce _1 / a_.
+* `++Assumi(x>0 && n>0, Risolvi(log(n^2*(x/n)^lg(x))=log(x^2),x))++` restituisce `++{x = 100, x = n}++`
+* `++Assumi(x<2,Semplifica(sqrt(x-2sqrt(x-1))))++` restituisce `++-sqrt(x - 1) + 1++`
+* `++Assumi(x>2,Semplifica(sqrt(x-2sqrt(x-1))))++` restituisce `++sqrt(x - 1) - 1++`
+* `++Assumi(k>0, Estremo(k*3*x^2/4-2*x/2))++` restituisce stem:[ \left\\{ \left(\frac\{2}\{3 k}, -\frac\{1}\{3 k}
+\right) \right\} ]
+* `++Assumi(k>0, Flesso(0.25 k x^3 - 0.5x^2 + k))++` restituisce stem:[ \left\\{ \left(\frac\{2}\{3 k}, \frac\{27 k^\{3}
+- 4}\{27 k^\{2}} \right) \right\} ]
+
+====
+
+[NOTE]
+====
+
+Vedere anche il comando xref:/commands/Risolvi.adoc[Risolvi].
+
+====

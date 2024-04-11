@@ -1,0 +1,44 @@
+= Comando PoligonoFrequenza
+
+[NOTE]
+====
+
+Il poligono di frequenza è un grafico costituito dai segmenti che uniscono i punti medi dei lati superiori delle barre
+di un istogramma, quindi l'utilizzo di questo comando è simile a quello del xref:/commands/Istogramma.adoc[comando
+Istogramma].
+
+====
+
+PoligonoFrequenza(Lista degli estremi delle classi, Lista altezze)::
+  Genera un poligono di frequenza avente i vertici nei punti di altezza specificata. Gli _estremi delle classi_
+  determinano l'ascissa di ciascun vertice.
+
+[EXAMPLE]
+====
+
+`++PoligonoFrequenza({0, 1, 2, 3, 4, 5}, {2, 6, 8, 3, 1})++` crea il corrispondente grafico a segmenti.
+
+====
+
+PoligonoFrequenza(Lista degli estremi delle classi, Lista dati grezzi, Booleano Usa densità, Fattore di scala densità
+(facoltativo))::
+  Genera un poligono di frequenza utilizzando i dati grezzi indicati. Gli _estremi delle classi_ determinano l'ascissa
+  di ciascun vertice e vengono utilizzati per determinare la quantità di dati appartenenti a ciascuna classe. Le
+  ordinate di ciascun vertice sono determinate come segue:
+  +
+  * Se _Usa densità = true_, altezza = (fattore di scala densità) * (frequenza della classe) / (ampiezza della classe)
+  * Se _Usa densità = false_, altezza = frequenza della classe
+  +
+  Le impostazioni predefinite sono: _Usa densità_ = _true_ e _Fattore di scala densità_ = 1.
+
+PoligonoFrequenza(Booleano Cumulata, Lista degli estremi delle classi, Lista dati grezzi, Booleano Usa densità, Fattore
+di scala densità (facoltativo))::
+  Se _Cumulata_ = _true_ viene generato un poligono di frequenza in cui ciascun vertice ha l'ordinata uguale alla somma
+  della frequenza della classe con la somma di tutte le frequenze precedenti.
+
+[NOTE]
+====
+
+Vedere il comando xref:/commands/Istogramma.adoc[Istogramma] per ulteriori esempi.
+
+====

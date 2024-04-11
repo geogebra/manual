@@ -1,0 +1,27 @@
+= Comando SostituisciTutto
+
+SostituisciTutto(Testo, Testo da sostituire, Nuovo testo)::
+  Crea un nuovo testo contenente il _testo_ indicato nel comando, in cui la porzione di testo indicata come _da
+  sostituire_ è sostituita con il _nuovo testo_ indicato.
+
+[EXAMPLE]
+====
+
+`++SostituisciTutto("3cos(t)+cos(2y)", "cos", "sin")++` genera il testo `++"3sin(t)+sin(2y)"++`.
+
+====
+
+[NOTE]
+====
+
+Utilizzare il comando xref:/commands/LaTeX.adoc[LaTeX] per ottenere un testo in formato LaTeX.
+
+====
+
+[EXAMPLE]
+====
+
+`++LaTeX(SostituisciTutto("3cos(t)+cos(2y)", "cos", "sin"))++` genera il nuovo testo in formato LaTeX
+`++"3sin(t)+sin(2y)"++`.
+
+====

@@ -1,0 +1,36 @@
+= Comando Denominatore
+
+Denominatore(Funzione)::
+  Restituisce il denominatore di una funzione.
+  +
+Denominatore(Numero)::
+  Restituisce il denominatore di un numero razionale. Questo comando utilizza un metodo numerico, che ne limita
+  l'applicabilità a numeri aventi un denominatore piccolo. Se viene inserito un numero irrazionale il comando
+  restituisce il numeratore della relativa xref:/commands/FrazioneContinua.adoc[frazione continua].
+
+[EXAMPLE]
+====
+
+`++Denominatore(5 / (x²+2))++` restituisce _f(x) = (x² + 2)_.
+
+====
+
+[NOTE]
+====
+
+Vedere anche i comandi xref:/commands/Numeratore.adoc[Numeratore] e
+xref:/commands/FrazioneInTesto.adoc[FrazioneInTesto].
+
+====
+
+== Sintassi CAS
+
+Denominatore(Espressione)::
+  Restituisce il denominatore di un numero razionale o un'espressione.
+
+[EXAMPLE]
+====
+
+`++Denominatore(2/3+1/15)++` restituisce _15_.
+
+====

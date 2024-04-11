@@ -1,0 +1,40 @@
+= Prism Command
+
+Prism( <Point>, <Point>, ... )::
+  Returns a prism defined by the given points.
+
+[EXAMPLE]
+====
+
+`++Prism(A, B, C, D)++` creates the prism with base ABC and top DEF. The vectors AD, BE, CF are equal.
+
+====
+
+Prism( <Polygon>, <Point> )::
+  Creates a prism with the given polygon as base and the point as first top point.
+
+[EXAMPLE]
+====
+
+`++Prism(poly1, A)++` creates a prism with base _poly1_ and top point _A_.
+
+====
+
+Prism( <Polygon>, <Height value> )::
+  Creates a right prism with the polygon as base and given height.
+
+[EXAMPLE]
+====
+
+`++Prism(poly1, 3)++` creates a prism with base _poly1_ and height 3.
+
+====
+
+[NOTE]
+====
+
+See also image:24px-Mode_prism.svg.png[Mode prism.svg,width=24,height=24] xref:/tools/Prism.adoc[Prism] and
+image:24px-Mode_extrusion.svg.png[Mode extrusion.svg,width=24,height=24]
+xref:/tools/Extrude_to_Prism_or_Cylinder.adoc[Extrude to Prism] tools.
+
+====

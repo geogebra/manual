@@ -38,7 +38,7 @@ of the input box changes, and the focus is still on the input box itself.
 
 ====
 
-== [#GGBScript]#GGBScript#
+== GGBScript
 
 You can create scripts consisting of GeoGebra commands, as you would use them in the xref:/Input_Bar.adoc[Input Bar].
 After triggering the script, every command is executed, in the same order they are written, sequentially.
@@ -46,7 +46,7 @@ After triggering the script, every command is executed, in the same order they a
 [EXAMPLE]
 ====
 
-* _a_ is an integer-valued xref:/tools/Slider_Tool.adoc[slider] ranging from 1 to 3 (therefore Increment equals 1)
+* _a_ is an integer-valued xref:/tools/Slider.adoc[slider] ranging from 1 to 3 (therefore Increment equals 1)
 * type in: `++list1 = {"red", "green", "blue"}++`
 * in properties of _a_, set "On Update" script to `++SetColor(a, Element(list1, a))++`
 * by moving the slider you change its color
@@ -71,7 +71,7 @@ list of these command is available in the xref:/commands/Scripting_Commands.adoc
 
 ====
 
-== [#JavaScript]#JavaScript#
+== JavaScript
 
 JavaScript is a programming language used by many Internet technologies. Unlike GeoGebra Script, in Javascript commands
 don't have to be executed as a simple sequence, but a control flow (`++if++`, `++while++`, `++for++`) can be used. For
@@ -100,7 +100,7 @@ Scripting with JavaScript is very versatile, but many tasks can also be achieved
 
 ====
 
-=== [#Global_JavaScript]#Global JavaScript#
+=== Global JavaScript
 
 In the _Global JavaScript_ part of the _Scripting_ tab in the
 image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Properties Dialog_ you may define *functions* (not

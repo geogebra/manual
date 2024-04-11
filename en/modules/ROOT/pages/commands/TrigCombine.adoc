@@ -1,0 +1,49 @@
+= TrigCombine Command
+
+TrigCombine( <Expression> )::
+  Transforms a trigonometric expression including products of trigonometric functions into an expression without
+  products involving sums of variables.
+
+[EXAMPLE]
+====
+
+*Examples:*
+
+* `++TrigCombine(sin(x) cos(3x))++` gives stem:[\{\frac\{1}\{2} sin \left( 4 x \right) - \frac\{1}\{2} sin \left( 2 x
+\right)}]
+* `++TrigCombine(sin(x) + cos(x))++` gives stem:[ \{\sqrt\{2} cos \left( x - \frac\{1}\{4} \pi \right)} ].
+
+====
+
+TrigCombine( <Expression>, <Target Function> )::
+  Transforms a trigonometric expression including products of trigonometric functions into an expression without
+  products involving sums of variables, preferring the given target function.
+
+[EXAMPLE]
+====
+
+`++TrigCombine(sin(x) + cos(x), sin(x))++` gives stem:[ \{\sqrt\{2} sin \left( x + \frac\{1}\{4} \pi \right)} ].
+
+====
+
+[NOTE]
+====
+
+*Notes:*
+
+* In the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_View.adoc[CAS View] undefined
+variables can be used as well.
+* {blank}
++
+[EXAMPLE]
+====
+
+`++TrigCombine(sin(p) cos(3p))++` gives stem:[\{\frac\{1}\{2} sin \left( 4 p \right) - \frac\{1}\{2} sin \left( 2 p
+\right)}].
+
+====
+
+* See also xref:/commands/TrigExpand.adoc[TrigExpand Command] and xref:/commands/TrigSimplify.adoc[TrigSimplify
+Command].
+
+====

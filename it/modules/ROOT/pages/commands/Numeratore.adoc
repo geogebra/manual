@@ -1,0 +1,40 @@
+= Comando Numeratore
+
+Numeratore(Funzione)::
+  Resituisce il numeratore della funzione indicata.
+  +
+Numeratore( Numero )::
+  Restituisce il numeratore di un numero razionale. Questo comando utilizza un metodo numerico, che ne limita
+  l'applicabilità a numeri aventi un denominatore piccolo. Se viene inserito un numero irrazionale il comando
+  restituisce il numeratore della relativa xref:/commands/FrazioneContinua.adoc[frazione continua].
+
+[EXAMPLE]
+====
+
+`++Numeratore((3x²+1)/(2x-1))++` restituisce _f(x)=3x²+1_.
+
+====
+
+[NOTE]
+====
+
+Vedere anche i comandi xref:/commands/Denominatore.adoc[Denominatore] e
+xref:/commands/FrazioneInTesto.adoc[FrazioneInTesto].
+
+====
+
+== Sintassi CAS
+
+Numeratore(Espressione)::
+  Restituisce il numeratore di un numero razionale o di un'espressione.
+
+[EXAMPLE]
+====
+
+*Esempi:*
+
+* `++Numeratore(2/3+1/15)++` restituisce _11_.
+* Se le variabili _a, b_ e _c_ non sono state precedentemente definite in GeoGebra, allora `++Numeratore(a/b)++`
+restituisce _a_, mentre `++Numeratore(Semplifica(a + b/c))++` restituisce _a c + b_
+
+====

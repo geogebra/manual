@@ -1,0 +1,68 @@
+= Comando Coefficienti
+
+Coefficienti(Polinomio)::
+  Restituisce la lista di tutti i coefficienti stem:[a_k,a_\{k-1},\ldots,a_1, a_0] di un polinomio nella forma
+  stem:[a_kx^k+a_\{k-1}x^\{k-1}+\cdots+a_1x+a_0].
+  +
+
+[EXAMPLE]
+====
+
+`++Coefficienti(x^3 - 3 x^2 + 3 x)++` restituisce _\{1, -3, 3, 0}_.
+
+====
+
+[NOTE]
+====
+
+Per le funzioni non polinomiali è possibile utilizzare questo comando per determinare i coefficienti della curva
+generata da uno dei comandi di regressione: ad esempio se `++f(x) = RegExp(l1)++` allora `++Coefficienti(f)++`
+restituisce i coefficienti della curva generata dal comando.
+
+====
+
+Coefficienti(Conica)::
+  Data la conica in forma canonica stem:[a x^2 + b y^2 + c + d x y + e x + f y = 0] restituisce la lista \{_a_, _b_,
+  _c_, _d_, _e_, _f_ }.
+
+[NOTE]
+====
+
+Per le rette in forma implicita _r_: _ax_ + _by_ + _c_ = 0 è possibile ottenere i coefficienti utilizzando la sintassi
+_x_(_r_), _y_(_r_), _z_(_r_).
+
+[EXAMPLE]
+====
+
+Data `++r: 3x + 2y - 2 = 0++` :
+
+* `++x(r )++` restituisce 3
+* `++y(r )++` restituisce 2
+* `++z(r )++` restituisce -2.
+
+====
+
+====
+
+== Sintassi CAS
+
+Coefficienti(Polinomio)::
+  Restituisce la lista di tutti i coefficienti del polinomio rispetto alla variabile principale.
+
+[EXAMPLE]
+====
+
+`++Coefficienti(x^3 - 3 x^2 + 3 x)++` restituisce _\{1, -3, 3, 0}_.
+
+====
+
+Coefficienti(Polinomio, Variabile)::
+  Restituisce la lista di tutti i coefficienti del polinomio rispetto alla variabile indicata.
+
+[EXAMPLE]
+====
+
+* `++Coefficienti(a^3 - 3 a^2 + 3 a, a)++` restituisce _\{1, -3, 3, 0}_
+* `++Coefficienti(a^3 - 3 a^2 + 3 a, x)++` restituisce __a__³ - 3 __a__² + 3 _a_.
+
+====

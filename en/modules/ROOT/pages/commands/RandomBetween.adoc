@@ -1,0 +1,49 @@
+= RandomBetween Command
+
+RandomBetween( <Minimum Integer> , <Maximum Integer> )::
+  Generates a random integer between _minimum_ and _maximum_ (inclusive).
+
+[EXAMPLE]
+====
+
+`++RandomBetween(0, 10)++` yields a number between _0_ and _10_ (inclusive)
+
+====
+
+RandomBetween( <Minimum Integer> , <Maximum Integer> , <Boolean Fixed> )::
+  If _Boolean Fixed_ = "true", it generates a random integer between _minimum_ and _maximum_ (inclusive), which is
+  updated just once (when file is loaded and also on undo/redo).
+
+[EXAMPLE]
+====
+
+`++RandomBetween(0, 10, true)++` yields a number between _0_ and _10_ (inclusive)
+
+====
+
+[NOTE]
+====
+
+Press [.kcode]#F9# to see the difference between those two syntaxes.
+
+====
+
+RandomBetween( <Minimum Integer> , <Maximum Integer>, <Number of Samples> )::
+  Generates a list of random integers between _minimum_ and _maximum_ (inclusive). The number of random integers in the
+  list is the _number of samples_.
+
+[EXAMPLE]
+====
+
+`++RandomBetween(0, 10, 5)++` yields \{1,3,4,8,2}, or \{7,5,6,1,7}, etc.
+
+====
+
+[NOTE]
+====
+
+See also xref:/commands/SetSeed.adoc[SetSeed command], xref:/commands/RandomElement.adoc[RandomElement command],
+xref:/commands/RandomBinomial.adoc[RandomBinomial command], xref:/commands/RandomNormal.adoc[RandomNormal command],
+xref:/commands/RandomPoisson.adoc[RandomPoisson command], xref:/commands/RandomUniform.adoc[RandomUniform command].
+
+====

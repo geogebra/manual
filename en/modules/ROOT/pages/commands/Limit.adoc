@@ -1,0 +1,55 @@
+= Limit Command
+
+Limit( <Function>, <Value> )::
+  Computes the http://en.wikipedia.org/wiki/Limit_of_a_function[limit] of the function for the given value of the main
+  function variable. (This may also yield infinity.)
+
+[EXAMPLE]
+====
+
+`++Limit((x^2 + x) /  x^2, +∞)++` yields _1_.
+
+====
+
+[NOTE]
+====
+
+Not all limits can be calculated by GeoGebra, so _undefined_ will be returned in those cases (as well as when the
+correct result is undefined).
+
+====
+
+== CAS Syntax
+
+Limit( <Expression>, <Value> )::
+  Computes the limit of the expression for the given value of the main function variable.
+
+[EXAMPLE]
+====
+
+`++Limit(a sin(x) / x, 0)++` yields _a_.
+
+====
+
+Limit( <Expression>, <Variable>, <Value> )::
+  Computes the limit of the expression for the given value of the given function variable.
+
+[EXAMPLE]
+====
+
+`++Limit(a sin(v) / v, v, 0)++` yields _a_.
+
+====
+
+[NOTE]
+====
+
+* Not all limits can be calculated by GeoGebra, so _?_ will be returned in those cases (as well as when the correct
+result is undefined).
+* If you want the limit of a xref:/commands/If.adoc[piecewise-defined function] you need to use
+xref:/commands/LimitAbove.adoc[LimitAbove] or xref:/commands/LimitBelow.adoc[LimitBelow], for example
+`++LimitAbove(If(x>1, x^2, -2x), 1)++`
+* See also xref:/commands/Asymptote.adoc[Asymptote Command], xref:/commands/LimitAbove.adoc[LimitAbove Command] and
+xref:/commands/LimitBelow.adoc[LimitBelow Command].
+
+====

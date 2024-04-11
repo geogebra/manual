@@ -1,0 +1,84 @@
+= NSolveODE Command
+
+NSolveODE( <List of Derivatives>, <Initial x-coordinate>, <List of Initial y-coordinates>, <Final x-coordinate> )::
+  Solves (numerically) the system of differential equations
+
+[EXAMPLE]
+====
+
+`++f'(t, f, g, h) = g ++`
+
+`++g'(t, f, g, h) = h++`
+
+`++h'(t, f, g, h) = -t h + 3t g + 2f + t++`
+
+`++NSolveODE({f', g', h'}, 0, {1,2,-2}, 10)++`
+
+`++NSolveODE({f', g', h'}, 0, {1,2,-2}, -5)++` (solves the system backwards in time).
+
+====
+
+[EXAMPLE]
+====
+
+`++x1'(t, x1, x2, x3, x4) = x2++`
+
+`++x2'(t, x1, x2, x3, x4) = x3++`
+
+`++x3'(t, x1, x2, x3, x4) = x4++`
+
+`++x4'(t, x1, x2, x3, x4) = -8x1 + sin(t) x2 - 3x3 + t^2++`
+
+`++x10 = -0.4++`
+
+`++x20 = -0.3++`
+
+`++x30 = 1.8++`
+
+`++x40 = -1.5++`
+
+`++NSolveODE({x1', x2', x3', x4'}, 0, {x10, x20, x30, x40}, 20)++`
+
+====
+
+[EXAMPLE]
+====
+
+Pendulum:
+
+`++g = 9.8++`
+
+`++l = 2++`
+
+`++a = 5++` (starting location)
+
+`++b = 3++` (starting force)
+
+`++y1'(t, y1, y2) = y2++`
+
+`++y2'(t, y1, y2) = (-g) / l sin(y1) ++`
+
+`++NSolveODE({y1', y2'}, 0, {a, b}, 20) ++`
+
+`++len = Length(numericalIntegral1) ++`
+
+`++c = Slider(0, 1, 1 / len, 1, 100, false, true, true, false) ++`
+
+`++x1 = l sin(y(Point(numericalIntegral1, c))) ++`
+
+`++y1 = -l cos(y(Point(numericalIntegral1, c))) ++`
+
+`++A = (x1, y1) ++`
+
+`++Segment((0, 0), A)++`
+
+`++StartAnimation()++`
+
+====
+
+[NOTE]
+====
+
+See also xref:/commands/SlopeField.adoc[SlopeField command], xref:/commands/SolveODE.adoc[SolveODE command].
+
+====

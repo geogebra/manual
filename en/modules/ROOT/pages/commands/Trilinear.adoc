@@ -1,0 +1,32 @@
+= Trilinear Command
+
+Trilinear( <Point>, <Point>, <Point>, <Number>, <Number>, <Number> )::
+  creates a point whose http://en.wikipedia.org/wiki/Trilinear_coordinates[trilinear coordinates] are the given numbers
+  with respect to triangle with given points.
+
+== Some examples
+
+[cols=",,,",options="header",]
+|===
+|Point |<Number> |<Number> |<Number>
+|A |1 |0 |0
+
+|B |0 |1 |0
+
+|C |0 |0 |1
+
+|Circumcenter |cos(stem:[\hat\{A}]) |cos(stem:[\hat\{B}]) |cos(stem:[\hat\{C}])
+
+|Center of Incircle |1 |1 |1
+
+|Center of excircle tangent to [BC] |-1 |1 |1
+
+|Center of excircle tangent to [AC] |1 |-1 |1
+
+|Center of excircle tangent to [AB] |1 |1 |-1
+
+|Centroid |stem:[\frac\{1}\{a}] |stem:[\frac\{1}\{b}] |stem:[\frac\{1}\{c}]
+
+|Orthocenter |cos(stem:[\hat\{B}]) cos(stem:[\hat\{C}]) |cos(stem:[\hat\{A}]) cos(stem:[\hat\{C}])
+|cos(stem:[\hat\{A}])cos(stem:[\hat\{B}])
+|===

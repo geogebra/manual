@@ -1,0 +1,31 @@
+= Comando DerivataImplicita
+
+DerivataImplicita (f(x, y))::
+  Determina la http://en.wikipedia.org/wiki/en:Implicit_derivative[derivata implicita] dell'espressione indicata.
+  +
+
+[EXAMPLE]
+====
+
+`++DerivataImplicita(x + 2y)++` restituisce _-0.5_.
+
+====
+
+[NOTE]
+====
+
+Vedere anche il comando xref:/commands/Derivata.adoc[Derivata].
+
+====
+
+== Sintassi CAS
+
+DerivataImplicita(Espressione, Variabile dipendente, Variabile indipendente)::
+  Determina la http://en.wikipedia.org/wiki/en:Implicit_derivative[derivata implicita] dell'espressione indicata.
+
+[EXAMPLE]
+====
+
+`++DerivataImplicita(x^2 + y^2, y, x)++` restituisce _-stem:[\frac\{x}\{y}]_.
+
+====

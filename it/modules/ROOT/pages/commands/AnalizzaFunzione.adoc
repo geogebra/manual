@@ -1,0 +1,44 @@
+= Comando AnalizzaFunzione
+
+AnalizzaFunzione(Testo)::
+  Analizza il testo contenente la definizione della funzione e crea la corrispondente xref:/Funzioni.adoc[funzione].
+
+[EXAMPLE]
+====
+
+*Esempi:*
+
+* `++ AnalizzaFunzione("x^2")++` crea la funzione _f_(_x_) = __x__^2^_._
+* `++ AnalizzaFunzione("t+2/t"})++` crea la funzione _f_(_t_) = _t_ + 2/_t_.
+
+====
+
+AnalizzaFunzione(Funzione, Testo)::
+  Analizza la stringa di testo e memorizza il risultato in una xref:/Funzioni.adoc[funzione] _f_, che deve essere un
+  oggetto xref:/Oggetti_liberi_dipendenti_e_ausiliari.adoc[libero] già definito prima di utilizzare il comando.
+
+[EXAMPLE]
+====
+
+Definire `++ f(x) = 3x² + 2++` e `++ testo1 = "f(x) = 3x + 1"++`. Allora `++ AnalizzaFunzione(f, testo1)++` restituisce
+_f(x) = 3x + 1_.
+
+====
+
+AnalizzaFunzione(Testo, Lista di variabili)::
+  Analizza il testo contenente la definizione della funzione e crea la corrispondente xref:/Funzioni.adoc[funzione]
+  nelle variabili definite nella lista.
+
+[EXAMPLE]
+====
+
+`++ AnalizzaFunzione("2u+3v",{"u", "v"})++` crea la funzione _a(u,v) = 2u + 3v_.
+
+====
+
+[NOTE]
+====
+
+Vedere anche il comando xref:/commands/AnalizzaNumero.adoc[AnalizzaNumero].
+
+====

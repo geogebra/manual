@@ -1,0 +1,35 @@
+= Comando Area
+
+Area(Punto, Punto, Punto, ...)::
+  Calcola l'area del poligono avente per vertici i punti indicati.
+
+[EXAMPLE]
+====
+
+`++Area((0, 0), (3, 0), (3, 2), (0, 2))++` restituisce _6_.
+
+====
+
+Area(Conica)::
+  Calcola l’area della porzione di piano racchiusa dalla conica (cerchio o ellisse).
+
+[EXAMPLE]
+====
+
+`++Area(x^2 + y^2 = 2)++` restituisce _6.28_.
+
+====
+
+Area(Poligono)::
+  Restituisce l'area del poligono.
+
+[NOTE]
+====
+
+* Per i poligoni viene calcolato il valore assoluto algebrico dell'area (ciò può generare risultati non attendibili per
+i poligoni intrecciati)
+* Per calcolare l’area compresa tra i grafici di due funzioni, utilizzare il comando
+xref:/commands/IntegraleTra.adoc[IntegraleTra].
+* Vedere anche lo strumento image:24px-Mode_area.svg.png[Mode area.svg,width=24,height=24] xref:/tools/Area.adoc[Area].
+
+====

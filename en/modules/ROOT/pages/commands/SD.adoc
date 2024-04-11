@@ -1,0 +1,49 @@
+= SD Command
+
+SD( <List of Numbers> )::
+  Calculates the http://en.wikipedia.org/wiki/Standard_deviation[standard deviation] of the numbers in the list.
+
+[EXAMPLE]
+====
+
+`++SD({1, 2, 3, 4, 5})++` yields _1.41_
+
+====
+
+[EXAMPLE]
+====
+
+`++stdevp({1, 2, 3, 4, 5})++` yields _1.41_
+
+====
+
+SD( <List of Numbers>, <List of Frequencies> )::
+  Calculates the weighted _standard deviation_ of the given numbers.
+
+[EXAMPLE]
+====
+
+`++SD({20, 40, 41, 42, 40, 54}, {20, 6, 4, 5, 2, 1})++` yields _10.98_
+
+====
+
+== CAS Syntax
+
+SD( <List of Numbers> )::
+  Calculates the _standard deviation_ of the numbers in the list.
+
+[EXAMPLE]
+====
+
+* `++SD({1, 2, 3, 4, 5})++` yields stem:[\sqrt\{2}].
+* `++SD({-3 + 2 x, -1- 4 x, -2 + 5 x^2})++` is xref:/tools/Evaluate.adoc[evaluated] as stem:[ \sqrt\{2}
+\frac\{\sqrt\{25x⁴ + 10x³ + 28x² - 18x + 3} } \{ 3 } ].
+
+====
+
+[NOTE]
+====
+
+See also xref:/commands/Mean.adoc[Mean Command].
+
+====

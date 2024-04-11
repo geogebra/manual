@@ -1,0 +1,45 @@
+= Comando DistribuzioneT
+
+DistribuzioneT(Gradi di libertà, x)::
+  Genera la funzione di distribuzione cumulativa di una
+  http://en.wikipedia.org/wiki/it:Distribuzione_t_di_Student[distribuzione t di Student] avente i gradi di libertà
+  indicati.
+
+DistribuzioneT(Gradi di libertà numeratore, Gradi di libertà denominatore, x, Booleano Cumulativa)::
+  Se _Cumulativa_ è _true_, genera la funzione di distribuzione cumulativa di una distribuzione t di Student, altrimenti
+  genera la funzione di densità di probabilità di una distribuzione t di Student.
+
+DistribuzioneT(Gradi di libertà , Valore variabile)::
+  Calcola il valore della funzione di distribuzione cumulativa della distribuzione t di Student in corrispondenza del
+  valore della variabile _v_ indicato, cioè la probabilità _P(X ≤ v)_ dove _X_ è una variabile casuale di una
+  distribuzione t di Student avente i gradi di libertà indicati.
+  +
+
+[EXAMPLE]
+====
+
+`++DistribuzioneT(10, 0)++` restituisce _0.5_.
+
+====
+
+[NOTE]
+====
+
+Restituisce la probabilità relativa a un dato valore di _x_ (ovvero l'area sottesa dalla curva della distribuzione t di
+Student alla sinistra dell'ascissa _x_ indicata).
+
+====
+
+== Sintassi CAS
+
+DistribuzioneT(Gradi di libertà, Valore variabile)::
+  Calcola il valore della funzione di distribuzione cumulativa della distribuzione t di Student in corrispondenza del
+  valore della variabile _v_ indicato, cioè la probabilità _P(X ≤ v)_ dove _X_ è una variabile casuale di una
+  distribuzione t di Student avente i gradi di libertà indicati.
+
+[EXAMPLE]
+====
+
+`++DistribuzioneT(10, 0)++` restituisce _0.5_.
+
+====

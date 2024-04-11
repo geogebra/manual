@@ -1,0 +1,100 @@
+= Max Command
+
+Max( <List> )::
+  Returns the maximum of the numbers within the list.
+
+[EXAMPLE]
+====
+
+`++Max({-2, 12, -23, 17, 15})++` yields _17_.
+
+====
+
+Max( <Interval> )
+
+Returns the upper bound of the interval.
+
+[EXAMPLE]
+====
+
+`++Max(2 < x < 3)++` yields _3_.
+
+====
+
+[NOTE]
+====
+
+If the input consists of non-numeric objects, then this command considers the numbers associated with those objects. If
+you have a list of segments for example, the command _Max( <List> )_ will yield the maximum segment length.
+
+====
+
+Max( <Number>, <Number> )
+
+Returns the maximum of the two given numbers.
+
+[EXAMPLE]
+====
+
+`++Max(12, 15)++` yields _15_.
+
+====
+
+[NOTE]
+====
+
+Open and closed intervals are treated the same.
+
+====
+
+Max( <Function>, <Start x-Value>, <End x-Value> )::
+  Calculates (numerically) the *local* maximum point of the function in the given interval. The function should be
+  continuous and have only one _local_ maximum point in the interval (and no local minimum).
+  +
+
+[EXAMPLE]
+====
+
+`++Max(exp(x)x^2,-3,-1)++` creates the point (-2, 0.54134).
+
+====
+
+[NOTE]
+====
+
+For polynomials you should use the xref:/commands/Extremum.adoc[Extremum Command].
+
+====
+
+Max(<List of Data>, <List of Frequencies> )::
+  Returns the maximum of the list of data with corresponding frequencies.
+
+[EXAMPLE]
+====
+
+`++Max({1, 2, 3, 4, 5}, {5, 3, 4, 2, 0})++` yields 4, the highest number of the list whose frequency is greater than 0.
+
+====
+
+[NOTE]
+====
+
+* If you want the maximum of two functions `++f(x)++` and `++g(x)++` then you can define
+`++(f(x) + g(x) + abs(f(x) - g(x)))/2++`
+* See also xref:/commands/Extremum.adoc[Extremum Command], xref:/commands/Min.adoc[Min Command] and
+xref:/tools/Function_Inspector.adoc[Function Inspector Tool].
+
+====
+
+== CAS Syntax
+
+Max( <Function>, <Start x-Value>, <End x-Value> )::
+  Unlike in the Algebra View, this syntax will give the maximum over the interval, including endpoints
+
+[EXAMPLE]
+====
+
+* `++Max(x^2,-1,2)++` yields the point _(2,4)_
+* `++Max(-x^2,-1,2)++` yields the point _(0,0)_
+
+====

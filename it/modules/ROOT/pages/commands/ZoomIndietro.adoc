@@ -1,0 +1,29 @@
+= Comando ZoomIndietro
+
+ZoomIndietro(Fattore di scala)::
+  Effettua uno zoom indietro della image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/Vista_Grafici.adoc[vista Grafici], applicando il fattore di scala indicato alla vista corrente; il centro della
+  schermata è il centro dello zoom.
+
+ZoomIndietro(Fattore di scala, Punto)::
+  Effettua uno zoom indietro della image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/Vista_Grafici.adoc[vista Grafici], applicando il fattore di scala indicato alla vista corrente; il centro dello
+  zoom è il punto indicato.
+
+[EXAMPLE]
+====
+
+`++ZoomIndietro(2, (0, 0))++`
+
+====
+
+[NOTE]
+====
+
+* `++ZoomIndietro(t)++` e`++ZoomIndietro(t,A)++` sono rispettivamente equivalenti a `++ZoomAvanti(1/t)++`
+e`++ZoomAvanti(1/t,A)++`
+* Se sono presenti più xref:/Vista_Grafici.adoc[viste Grafici], lo zoom verrà applicato solo alla vista attiva.
+* Vedere anche i comandi xref:/commands/ZoomAvanti.adoc[ZoomAvanti], xref:/commands/ImpVistaAttiva.adoc[ImpVistaAttiva]
+e xref:/commands/SpostaVista.adoc[SpostaVista].
+
+====

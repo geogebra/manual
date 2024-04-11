@@ -1,0 +1,32 @@
+= Comando RiempiCelle
+
+RiempiCelle(IntervalloCelle, Oggetto)::
+  Copia il valore (equazione, ecc...) dell'oggetto nell'intervallo di celle specificato. Le celle risultanti sono
+  xref:/Oggetti_liberi_dipendenti_e_ausiliari.adoc[oggetti liberi], cioè non saranno modificate se l'oggetto origine
+  subirà modifiche.
+
+[NOTE]
+====
+
+* _IntervalloCelle_ deve essere inserito nel formato ad es.: _B2:D5_
+* _Oggetto_ può essere di qualsiasi tipo, ad es.: _3_, _CasualeTra(0,10)_, _Circonferenza(A,B)_
+* Le celle sono etichettate secondo colonna e riga, ad es: _B2_.
+
+====
+
+RiempiCelle(Cella, Lista)::
+  Copia i valori presenti nella lista a partire dalla prima cella alla destra di quella specificata. Le celle risultanti
+  sono xref:/Oggetti_liberi_dipendenti_e_ausiliari.adoc[oggetti liberi], cioè non saranno modificate se la lista origine
+  subirà modifiche.
+
+RiempiCelle(Cella, Matrice)::
+  Copia nel foglio di calcolo i valori presenti nella matrice: l'elemento in alto a sinistra della matrice sarà
+  posizionato con la cella indicata. Le celle risultanti sono xref:/Oggetti_liberi_dipendenti_e_ausiliari.adoc[oggetti
+  liberi], cioè non saranno modificate se la matrice origine subirà modifiche.
+
+[NOTE]
+====
+
+Vedere anche i comandi xref:/commands/RiempiRiga.adoc[RiempiRiga] e xref:/commands/RiempiColonna.adoc[RiempiColonna].
+
+====

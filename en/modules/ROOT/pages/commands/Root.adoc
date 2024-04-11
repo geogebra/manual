@@ -1,0 +1,52 @@
+= Root Command
+
+Root( <Polynomial> )::
+  Yields all roots of the polynomial as intersection points of the function graph and the _x_‐axis.
+
+[EXAMPLE]
+====
+
+`++Root(0.1*x^2 - 1.5*x + 5)++` yields _A = (5, 0)_ and _B = (10, 0)_.
+
+====
+
+Root( <Function>, <Initial x-Value> )::
+  Yields one root of the function using the initial value _a_ for a numerical iterative method.
+
+[EXAMPLE]
+====
+
+`++Root(0.1*x^2 - 1.5*x + 5, 6)++` yields _A = (5, 0)_.
+
+====
+
+Root( <Function>, <Start x-Value>, <End x-Value> )::
+  Let _a_ be the _Start x-Value_ and _b_ the _End x-Value_ . This command yields one root of the function in the
+  interval [_a, b_] using a numerical iterative method.
+
+[EXAMPLE]
+====
+
+`++Root(0.1x² - 1.5x + 5, 8, 13)++` yields _A = (10, 0)_.
+
+====
+
+== CAS Syntax
+
+Root( <Polynomial> )::
+  Yields all roots of the polynomial as intersection points of the function graph and the _x_‐axis.
+
+[EXAMPLE]
+====
+
+`++Root(x^3 - 3 * x^2 - 4 * x + 12)++` yields _\{x = -2, x = 2, x = 3}_.
+
+====
+
+[NOTE]
+====
+
+In the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_View.adoc[CAS View], this
+command is only a special variant of xref:/commands/Solve.adoc[Solve Command].
+
+====

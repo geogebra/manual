@@ -1,0 +1,57 @@
+= Comando Soluzioni
+
+[NOTE]
+====
+
+A partire dalla versione 823 questo comando funziona esattamente come il comando xref:/commands/Risolvi.adoc[Risolvi],
+con l'unica differenza che la lista dei risultati del comando _Soluzioni_ contiene solo valori numerici, mentre il
+risultato del comando _Risolvi_ è una lista di equazioni del tipo _nome variabile = valore numerico_.
+
+====
+
+== Sintassi CAS
+
+Soluzioni(Equazione)::
+  Risolve l'equazione indicata rispetto alla variabile principale, e restituisce la lista di tutte le soluzioni.
+  +
+Soluzioni(Equazione, Variabile)::
+  Risolve l'equazione rispetto alla variabile indicata e restituisce la lista di tutte le soluzioni.
+  +
+Soluzioni(Lista di equazioni, Lista di variabili)::
+  Risolve un sistema di equazioni rispetto all'insieme di variabili indicate e restituisce la lista di tutte le
+  soluzioni.
+
+[EXAMPLE]
+====
+
+*Esempi:*
+
+* `++Soluzioni({x = 4 x + y , y + x = 2}, {x, y})++` restituisce stem:[\begin\{pmatrix} -1&3 \end\{pmatrix}], cioè la
+coppia di soluzioni _\{\{-1, 3}}_.
+* `++Soluzioni({2a^2 + 5a + 3 = b, a + b = 3}, {a, b})++` restituisce stem:[\begin\{pmatrix}-3&6\\0&3\end\{pmatrix}],
+cioè la coppia di soluzioni: _\{\{-3, 6}, \{0, 3}}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Soluzioni(x*a^2=4a, a)++` restituisce \{stem:[\frac\{4}\{x},0]}.
+
+====
+
+[EXAMPLE]
+====
+
+`++Soluzioni(x^2=4x)++` restituisce _\{0, 4}_.
+
+====
+
+[NOTE]
+====
+
+* A volte è necessario applicare alcune manipolazioni per consentire al CAS di risolvere l'equazione, come ad esempio in
+`++ Soluzioni(TrigSviluppa(sin(5/4π+x)-cos(x-3/4π)=sqrt(6)*cos(x)-sqrt(2))) ++`
+* Vedere anche il xref:/commands/Risolvi.adoc[comando Risolvi].
+
+====
