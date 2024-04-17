@@ -1,14 +1,12 @@
 = TTest2 Command
+:page-en: commands/TTest2
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 TTest2( <List of Sample Data 1>, <List of Sample Data 2>, <Tail>, <Boolean Pooled> )::
-  +
   Performs a t-test of the difference between two population means using the given lists of sample data. Tail has
   possible values "<", ">" , "≠" that determine the following alternative hypotheses:
-  +
   "<" = difference in population means < 0
-  +
   ">" = difference in population means > 0
-  +
   "≠" = difference in population means ≠ 0
 
 If _Pooled_ = true, then population variances are assumed equal and sample standard deviations are combined in
@@ -20,6 +18,5 @@ Results are returned in list form as _\{Probabilty value, t-test statistic}_.
 
 TTest2( <Sample Mean 1>, <Sample Standard Deviation 1>, <Sample Size 1>, <Sample Mean 2>, <Sample Standard Deviation 2>,
 <Sample Size 2>, <Tail>, <Boolean Pooled> )::
-  +
   Performs a t-test of the difference between two population means using the given sample statistics. _Tail_ and
   _Pooled_ are defined as above. Results are returned in list form as _\{Probabilty value, t-test statistic}_.

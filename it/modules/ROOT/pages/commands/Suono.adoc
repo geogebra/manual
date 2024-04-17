@@ -1,4 +1,6 @@
 = Comando Suono
+:page-en: commands/PlaySound
+ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
 Suono(URL)::
   Riproduce un file MP3 (*.mp3)
@@ -30,7 +32,6 @@ https://test.geogebra.org/~mike/utils/base64Encode.html
 
 Suono(Booleano riproduzione)::
   Mette in pausa o riprende la riproduzione (non applicabile a file .mp3)
-  +
   Suono(true) = avvia la riproduzione, Suono(false) = mette in pausa la riproduzione.
 
 Suono(Funzione, Valore min, Valore max)::
@@ -50,25 +51,19 @@ Suono(Funzione, Valore min, Valore max, Frequenza campionamento, Profondità)::
   Riproduce un suono generato dalla funzione indicata, dipendente dal tempo a valori in [-1,1]. L'unità di misura del
   tempo è il secondo, e il suono è riprodotto a partire dall'istante Valore min fino all'istante Valore max. Il metodo
   di campionamento è specificato dai parametri "Profondità" e "Frequenza campionamento".
-  +
   "Frequenza campionamento" è il numero di valori della funzione campionati per ogni secondo. I valori consentiti sono
   8000, 11025, 16000, 22050, o 44100
-  +
   "Profondità" è la dimensione di un campione in bit. I valori consentiti sono 8 e 16.
 
 Suono(Nota, Durata, Strumento) (solo versione GeoGebra Classico)::
   Emette una nota MIDI.
-  +
   _Nota_ è un intero compreso tra 0 a 127, che rappresenta una nota musicale, come elencato nella seguente tabella. Ad
   esempio, quando Nota = 60 viene emesso un Do centrale.
-  +
   _Durata_ è il tempo di emissione della nota, in secondi.
-  +
   _Strumento_ è un numero intero che rappresenta lo strumento sintetizzato che emette la nota. Fare riferimento alle
   seguenti
   https://web.archive.org/web/20130919034922/http://www.classicalmidiconnection.com/General_Midi.html[specifiche
   tecniche] (in inglese) per un elenco degli strumenti disponibili.
-  +
   Pur essendo supportati gran parte degli strumenti, sono possibili piccole differenze tra le varie piattaforme di
   computer.
 

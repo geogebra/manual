@@ -1,9 +1,10 @@
 = ZMean2Estimate Command
+:page-en: commands/ZMean2Estimate
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 ZMean2Estimate( <List of Sample Data 1>, <List of Sample Data 2>, <σ1>, <σ2>, <Level> )::
   Calculates a Z confidence interval estimate of the difference between two population means using the given sample data
   sets, population standard deviations and confidence _Level_.
-  +
   Results are returned in list form as \{lower confidence limit, upper confidence limit}.
 
 [EXAMPLE]
@@ -18,5 +19,4 @@ level is 0.75. `++ZMean2Estimate(list1, list2, σ_1,  σ_2, 0.75)++` yields _lis
 ZMean2Estimate( <Sample Mean 1>, <σ1>, <Sample Size 1>, <Sample Mean 2 >, <σ2>, <Sample Size 2>, <Level>)::
   Calculates a Z confidence interval estimate of the difference between two population means using the given sample
   means, population standard deviations and confidence _Level_.
-  +
   Results are returned in list form as \{lower confidence limit, upper confidence limit}.

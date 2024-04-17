@@ -1,15 +1,13 @@
 = TTestPaired Command
+:page-en: commands/TTestPaired
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 TTestPaired( <List of Sample Data 1>, <List of Sample Data 2>, <Tail> )::
   Performs a paired t-test using the given lists of paired sample data. _Tail_ has possible values "<", ">" , "≠" that
   determine the following alternative hypotheses:
-  +
   "<" = μ < 0
-  +
   ">" = μ > 0
-  +
   "≠" = μ ≠ 0
-  +
   ( μ is the mean paired difference of the population)
 
 Results are returned in list form as _\{Probabilty value, t-test statistic}_.

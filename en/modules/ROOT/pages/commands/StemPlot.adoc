@@ -1,4 +1,6 @@
 = StemPlot Command
+:page-en: commands/StemPlot
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 [width="100%",cols="50%,50%",]
 |===
@@ -15,14 +17,10 @@ This command differs among variants of English:
 
 StemPlot( <List> )::
   Returns a stem plot of the given list of numbers. Outliers are removed from the plot and listed separately.
-  +
   An outlier is defined as a value outside the interval [ Q1 - 1.5 (Q3 - Q1) , Q3 + 1.5 (Q3 - Q1) ].
 
 StemPlot( <List>, <Adjustment -1|0|1> )::
   Returns a stem plot of the given list of numbers.
-  +
   If _Adjustment_ = -1 the default stem unit is divided by 10
-  +
   If _Adjustment_ = 0 nothing is changed
-  +
   If _Adjustment_ = 1 the default stem unit is multiplied by 10

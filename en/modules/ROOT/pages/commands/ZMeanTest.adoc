@@ -1,14 +1,13 @@
 = ZMeanTest Command
+:page-en: commands/ZMeanTest
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 ZMeanTest( <List of Sample Data>, <σ>, <Hypothesized Mean>, <Tail> )::
   Performs a one sample http://en.wikipedia.org/wiki/Z-test[Z test] of a population mean using the given list of sample
   data and the population standard deviation. _Hypothesized Mean_ is the population mean assumed in the null hypothesis.
   _Tail_ has possible values "<", ">" , "≠". These specify the alternative hypothesis as follows.
-  +
   "<" = population mean < _Hypothesized Mean_
-  +
   ">" = population mean > _Hypothesized Mean_
-  +
   "≠" = population mean ≠ _Hypothesized Mean_
 
 Results are returned in list form as \{Probability value, Z test statistic}.
@@ -16,5 +15,4 @@ Results are returned in list form as \{Probability value, Z test statistic}.
 ZMeanTest( <Sample Mean>, <σ>, <Sample Size>, <Hypothesized Mean>, <Tail> )::
   Performs a _one sample Z test_ of a population mean using the given sample statistics and the population standard
   deviation. _Hypothesized Mean_ and _Tail_ are defined as above.
-  +
   Results are returned in list form as \{Probability value, Z test statistic}.

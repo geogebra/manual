@@ -1,4 +1,6 @@
 = Comando Frequenza
+:page-en: commands/Frequency
+ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
 Frequenza(Lista dei dati grezzi)::
   Restituisce una lista contenente il conteggio delle occorrenze di ciascun dato grezzo (unico). La lista inserita può
@@ -15,7 +17,6 @@ mentre `++Unico(lista1)++` restituisce la lista \{"a", "b", "x"}.
 
 Frequenza(Booleano Cumulata, Lista dati grezzi)::
   Se _Cumulata_ = _false_, restituisce la stessa lista di Frequenza(Lista dati grezzi)
-  +
   Se _Cumulata_ = _true_, restituisce la lista delle frequenze cumulate di Frequenza(Lista dati grezzi)
 
 [EXAMPLE]
@@ -55,16 +56,13 @@ Siano `++lista1= {"a", "b", "b", "c", "c", "c", "c"}++` e `++lista2=  {"a", "b",
 
 Frequenza(Booleano Cumulata, Lista degli estremi delle classi, Lista dati grezzi)::
   Se _Cumulata_ = _false_, restituisce la stessa lista di Frequenza(Lista degli estremi delle classi, Lista dati grezzi)
-  +
   Se _Cumulata_ = _true_, restituisce la lista delle frequenze cumulate di Frequenza(Lista degli estremi delle classi,
   Lista dati grezzi)
 
 Frequenza(Lista degli estremi delle classi, Lista dati grezzi, Usa densità, Fattore di scala densità (facoltativo))::
   Restituisce la lista delle frequenze per il corrispondente comando xref:/commands/Istogramma.adoc[Istogramma].
-  +
   Se _Usa densità_ = _false_, restituisce la stessa lista di Frequenza(Lista degli estremi delle classi, Lista dati
   grezzi)
-  +
   Se _Usa densità_ = _true_, restituisce la lista delle frequenze di ciascuna classe.
 
 [EXAMPLE]

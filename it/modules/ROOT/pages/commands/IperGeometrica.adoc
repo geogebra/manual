@@ -1,32 +1,27 @@
 = Comando IperGeometrica
+:page-en: commands/HyperGeometric
+ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
 IperGeometrica(Dimensione popolazione, Numero successi, Dimensione campione)::
   Restituisce un diagramma a barre di una http://en.wikipedia.org/wiki/it:Distribuzione_ipergeometrica[distribuzione
   ipergeometrica] (http://en.wikipedia.org/wiki/Hypergeometric_distribution[versione in inglese con l'esempio di
   riferimento]).
-  +
   _Parametri:_
-  +
   * _Dimensione popolazione_: numero di palline nell'urna
   * _Numero successi_: numero di palline bianche nell'urna
   * _Dimensione campione_: numero di palline estratte dall'urna
-  +
   Il diagramma a barre mostra la funzione di probabilità del numero di palline bianche nel campione.
 
 IperGeometrica(Dimensione popolazione, Numero successi, Dimensione campione, Booleano Cumulativa)::
   Sia _X_ una variabile casuale ipergeometrica.
-  +
   * Restituisce un diagramma a barre di una distribuzione ipergeometrica, quando _Cumulativa_ = false.
   * Restituisce il grafico di una distribuzione ipergeometrica cumulata quando _Cumulativa_ = true.
-  +
   I primi tre parametri sono spiegati nella sintassi precedente.
 
 IperGeometrica(Dimensione popolazione, Numero successi, Dimensione campione, Valore variabile v, Booleano Cumulativa)::
   Sia _X_ una variabile casuale ipergeometrica.
-  +
   * Restituisce P( X = _v_) quando _Cumulativa_ = false.
   * Restituisce P( X ≤ _v_) quando _Cumulativa_ = true.
-  +
   I primi tre parametri sono spiegati nella prima sintassi della pagina.
 
 == Sintassi CAS
@@ -36,10 +31,8 @@ disponibile esclusivamente la seguente sintassi:
 
 IperGeometrica(Dimensione popolazione, Numero successi, Dimensione campione, Valore variabile v, Booleano Cumulativa)::
   Sia _X_ una variabile casuale ipergeometrica.
-  +
   * Restituisce P( X = _v_) quando _Cumulativa_ = false.
   * Restituisce P( X ≤ _v_) quando _Cumulativa_ = true.
-  +
   I primi tre parametri sono spiegati nella prima sintassi della pagina.
 
 [EXAMPLE]

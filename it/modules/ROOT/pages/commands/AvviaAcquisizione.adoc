@@ -1,17 +1,16 @@
 = Comando AvviaAcquisizione
+:page-en: commands/StartLogging
+ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
 == pagina in costruzione
 
 AvviaAcquisizione("Sensore", Variabile, Limite (facoltativo), "Sensore", Variabile, Limite (facoltativo),...)::
   Avvia l'acquisizione di dati da un dispositivo esterno, ad esempio uno smartphone.
-  +
   Definire per ogni sensore la variabile relativa alla quale si desiderano acquisire i dati. La variabile indicata può
   essere un numero, una lista o una xref:/commands/FunzioneDati.adoc[funzione di dati]. Gli argomenti _Limite_
   definiscono l'impostazione del numero di variabili disponibili (per l'acquisizione di dati in liste e funzioni di
   dati).
-  +
   Al momento i valori disponibili per le variabili dei sensori sono:
-  +
   * "Ax","Ay","Az" per l'accelerometro
   * "Ox", "Oy", "Oz" per l'orientazione
   * "Mx", "My", "Mz" per il campo magnetico

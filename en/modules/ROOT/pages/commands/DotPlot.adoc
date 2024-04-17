@@ -1,4 +1,6 @@
 = DotPlot Command
+:page-en: commands/DotPlot
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 DotPlot( <List of Raw Data> )::
   Returns a dot plot for the given list of numbers, as well as the list of the dot plot points. If a number _n_ appears
@@ -14,9 +16,7 @@ DotPlot( <List of Raw Data> )::
 DotPlot( <List of Raw Data>, <Stack Adjacent Dots (optional)>, <Scale Factor (optional)> )::
   Returns a dot plot for the given list of data, as well as the list of the dot plot points. If a data _n_ appears in
   the list of raw data _k_ times, the returned list contains points _(n, 1), (n, 2),..., (n, k)_.
-  +
   If you choose a _Scale Factor s_, the returned list contains points _(n, 1s), (n, 2s), ..., (n, ks)_.
-  +
   _Stack Adjacent Dots_ means a Boolean Value (true or false): If you choose _true_, points (which are close to each
   other) are stacked. If you choose _false_, the result will be the same as without _<Stack Adjacent Dots (optional)>_.
 

@@ -1,4 +1,6 @@
 = Comando TabellaFrequenza
+:page-en: commands/FrequencyTable
+ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
 TabellaFrequenza(Lista dati grezzi)::
   Restituisce una tabella (come testo) la cui prima colonna contiene la lista ordinata degli elementi della lista e la
@@ -7,7 +9,6 @@ TabellaFrequenza(Lista dati grezzi)::
 
 TabellaFrequenza(Booleano Cumulata, Lista dati grezzi)::
   Se _Cumulata= false_, restituisce la stessa tabella di Frequenza(Lista dati grezzi)
-  +
   Se _Cumulata= true_, restituisce una tabella la cui prima colonna è la stessa di TabellaFrequenza(Lista dati grezzi)
   mentre la seconda colonna contiene le frequenze cumulate dei valori della prima.
 
@@ -19,7 +20,6 @@ TabellaFrequenza(Lista degli estremi delle classi, Lista dati grezzi)::
 TabellaFrequenza(Booleano Cumulata, Lista degli estremi delle classi, Lista dati grezzi L)::
   Se _Cumulata= false_, restituisce la stessa tabella di TabellaFrequenza(Lista degli estremi delle classi, Lista dati
   grezzi)
-  +
   Se _Cumulata= true_, restituisce una tabella la cui prima colonna è la stessa di TabellaFrequenza(Lista dati grezzi)
   mentre la seconda contiene le frequenze cumulate dei valori della prima colonna.
 
@@ -45,8 +45,6 @@ TabellaFrequenza(Lista dati grezzi, Fattore di scala (facoltativo))::
   Restituisce una tabella (come testo) la cui prima colonna *Valore* contiene l'elenco ordinato degli elementi unici
   della _Lista dati grezzi_ e la seconda colonna *Frequenza* contiene il conteggio delle occorrenze dei valori
   corrispondenti, moltiplicato per il _Fattore di scala_. La lista può contenere sia numeri che testi.
-  +
-  +
 
 [EXAMPLE]
 ====

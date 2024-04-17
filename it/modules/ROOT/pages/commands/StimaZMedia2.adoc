@@ -1,9 +1,10 @@
 = Comando StimaZMedia2
+:page-en: commands/ZMean2Estimate
+ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
 StimaZMedia2(Lista dati campione 1, Lista dati campione 2, σ1, σ2, Livello)::
   Calcola una stima Z dell'intervallo di confidenza della differenza tra due medie di popolazione, utilizzando i dati,
   le deviazioni standard e il _livello_ di confidenza indicati.
-  +
   I risultati sono restituiti in una lista del tipo \{limite inferiore di confidenza, limite superiore di confidenza}.
 
 [EXAMPLE]
@@ -19,5 +20,4 @@ livello di confidenza è 0.75, allora `++StimaZMedia2(lista1, lista2, σ_1,  σ_
 StimaZMedia2(Media campione 1, σ1, Dimensione campione 1, Media campione 2, σ2, Dimensione campione 2, Livello)::
   Calcola una stima Z dell'intervallo di confidenza della differenza tra due medie di popolazione, utilizzando i dati,
   le deviazioni standard e il _livello_ di confidenza indicati.
-  +
   I risultati sono restituiti in una lista del tipo \{limite inferiore di confidenza, limite superiore di confidenza}.

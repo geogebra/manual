@@ -1,4 +1,6 @@
 = FrequencyPolygon Command
+:page-en: commands/FrequencyPolygon
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 [NOTE]
 ====
@@ -23,10 +25,8 @@ FrequencyPolygon( <List of Class Boundaries>, <List of Raw Data>, <Boolean Use D
 (optional)> )::
   Creates a frequency polygon using the raw data. The class boundaries determine the x-coordinates of vertices and are
   used to determine how many data elements lie in each class. The y-coordinate of a vertex is determined as follows
-  +
   * If _Use Density = true_, height = (Density Scale Factor) * (class frequency) / (class width)
   * If _Use Density = false_, height = class frequency
-  +
   By default, Use Density = true and Density Scale Factor = 1.
 
 FrequencyPolygon( <Boolean Cumulative>, <List of Class Boundaries>, <List of Raw Data>, <Boolean Use Density> , <Density

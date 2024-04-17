@@ -1,11 +1,12 @@
 = Comando RisolviEDO
+:page-en: commands/SolveODE
+ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
 *→ Soluzione formale :*
 
 RisolviEDO(f'(x, y))::
   Determina, se possibile, la soluzione formale dell'equazione differenziale (EDO) del primo ordine
   stem:[\frac\{dy}\{dx}(x)=f'(x, y(x))].
-  +
 
 [EXAMPLE]
 ====
@@ -61,7 +62,6 @@ RisolviEDO(f(x,y), g(x,y), x iniziale, y iniziale, t finale, Passo)::
   Risolve una EDO di primo ordine del tipo: stem:[\frac\{dy}\{dx}=\frac\{f(x,y)}\{g(x,y)}], dati il punto iniziale, il
   valore massimo di un parametro interno _t_ e il passo per _t_. Questa versione del comando è applicabile quando la
   precedente versione fallisce, ad esempio quando la curva soluzione ha punti a tangente verticale.
-  +
 
 [EXAMPLE]
 ====
@@ -81,7 +81,6 @@ Per ottenere la soluzione "complementare", indicare un valore negativo in _t fin
 
 RisolviEDO(b(x), c(x), f(x), x iniziale, y iniziale, y' iniziale, x finale, Passo)::
   Risolve EDO del secondo ordine del tipo: stem:[y'' + b(x) y' + c(x) y = f(x)].
-  +
 
 [EXAMPLE]
 ====

@@ -1,28 +1,23 @@
 = Comando Pascal
+:page-en: commands/Pascal
+ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
 Pascal(n, p)::
   Restituisce un diagramma a barre di una http://en.wikipedia.org/wiki/it:Distribuzione_di_Pascal[distribuzione di
   Pascal].
-  +
   La distribuzione di Pascal modella il numero di insuccessi prima dell'_n-esimo_ successo in una serie di prove
   Bernulliane indipendenti, ciascuna con probabilità di successo _p_.
 
 Pascal(n, p, Booleano Cumulativa)::
   Restituisce un diagramma a barre di una distribuzione di Pascal quando _Cumulativa_ = _false_.
-  +
   Restituisce il grafico di una distribuzione di Pascal cumulata quando _Cumulativa_ = _true_.
-  +
   I primi due parametri sono descritti nella sintassi precedente.
 
 Pascal(n, p, Valore variabile v, Booleano Cumulativa)::
   Sia X una variabile casuale di Pascal.
-  +
   Restituisce P( X = _v_) quando _Cumulativa_ = _false_.
-  +
   Restituisce P( X ≤ _v_) quando _Cumulativa_ = _true_.
-  +
   I primi due parametri sono descritti nella prima sintassi della pagina.
-  +
 
 [EXAMPLE]
 ====

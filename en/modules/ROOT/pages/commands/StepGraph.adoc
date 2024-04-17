@@ -1,4 +1,6 @@
 = StepGraph Command
+:page-en: commands/StepGraph
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 StepGraph( <List of Points> )::
   Draws a step graph of the given list of points. Each point is connected to the next point in the list by a horizontal
@@ -49,17 +51,11 @@ StepGraph( <List of x-coordinates>, <List of y-coordinates>, <Boolean Join> )::
 
 StepGraph( <List of x-coordinates>, <List of y-coordinates>, <Boolean Join>, <Point Style> )::
   Draws a step graph as described above.
-  +
   Point style values of _-2, -1, 0, 1, -1_ determine how points are drawn as follows:
-  +
   _0_ = no points are drawn
-  +
   _1_ = solid points on the right
-  +
   _2_ = solid points on the right, open points on the left
-  +
   _-1_ = solid points on the left
-  +
   _-2_ = solid points on the left, open points on the right
 
 [EXAMPLE]

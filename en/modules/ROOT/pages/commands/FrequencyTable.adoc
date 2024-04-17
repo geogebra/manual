@@ -1,11 +1,12 @@
 = FrequencyTable Command
+:page-en: commands/FrequencyTable
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 FrequencyTable( <List of Raw Data> )::
   Returns a table (as text) whose first column contains sorted list of unique elements of list _L_ and second column
   contains the count of the occurrences of value in the first column. List _L_ can be numbers or text.
 FrequencyTable( <Boolean Cumulative>, <List of Raw Data> )::
   If _Cumulative = false_, returns the same table as Frequency( <List of Raw Data> )
-  +
   If _Cumulative = true_, returns a table whose first column is the same as in FrequencyTable( <List of Raw Data> ) and
   the second contains cumulative frequencies of values in the first column.
 FrequencyTable( <List of Class Boundaries>, <List of Raw Data> )::
@@ -14,7 +15,6 @@ FrequencyTable( <List of Class Boundaries>, <List of Raw Data> )::
   interval are of the form [a, b). The highest interval has the form [a, b].
 FrequencyTable( <Boolean Cumulative>, <List of Class Boundaries>, <List of Raw Data> )::
   If _Cumulative = false_, returns the same table as FrequencyTable( <List of Class Boundaries>, <List of Raw Data> )
-  +
   If _Cumulative = true_, returns a table whose first column is the same as in FrequencyTable( <List of Raw Data> ) and
   the second contains cumulative frequencies of values in the first column.
 FrequencyTable( <List of Class Boundaries>, <List of Raw Data>, <Use Density> , <Density Scale Factor (optional)> )::
@@ -29,7 +29,6 @@ FrequencyTable( <List of Raw Data>,<Scale Factor (optional)> )::
   Returns a table (as text) whose first column *Value* contains a sorted list of unique elements of the _<List of Raw
   Data>_ and second column *Frequency* contains the count of the occurrences of value in the first column multiplied by
   the _<Scale Factor>_. The list can be numbers or text.
-  +
 
 [EXAMPLE]
 ====
