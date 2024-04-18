@@ -3,11 +3,11 @@
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 Gamma( <Number α>, <Number β>, x )::
-  Creates cumulative density function (cdf) of http://en.wikipedia.org/wiki/Gamma_distribution[gamma distribution] with
-  parameters _α, β_.
+  Creates the cumulative distribution function (cdf) of a  http://en.wikipedia.org/wiki/Gamma_distribution[Gamma distribution] with parameters _α, β_ at _v_, that is the probability _P(X≤v)_ where _X_ is a random variable with a Gamma distribution with parameters _α_ and _β_.
+
 Gamma( <Number α>, <Number β>, x, <Boolean Cumulative> )::
-  If _Cumulative_ is true, creates cumulative distribution function of gamma distribution, otherwise creates pdf of
-  gamma distribution.
+  If Cumulative is true, creates the cumulative distribution function of a Gamma distribution with parameters _α_ and _β_ at the variable value _v_. If Cumulative is false, it creates the probability density function (pdf) of the corresponding Gamma distribution at v.
+
 Gamma( <Number α>, <Number β>, <Variable Value v> )::
   Calculates the value of cumulative distribution function of gamma distribution at _v_, i.e. the probability _P(X≤v)_
   where _X_ is a random variable with gamma distribution given by parameters _α, β_.
