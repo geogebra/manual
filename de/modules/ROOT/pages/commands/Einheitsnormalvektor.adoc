@@ -1,0 +1,62 @@
+= Einheitsnormalvektor (Befehl)
+:page-en: commands/UnitPerpendicularVector_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Einheitsnormalvektor( <Gerade> )::
+  Erzeugt den Normalvektor der Gerade mit Länge 1.
+Einheitsnormalvektor( <Strecke> )::
+  Erzeugt den Normalvektor der Strecke mit Länge 1.
+Einheitsnormalvektor( <Vektor> )::
+  Erzeugt den Normalvektor des angegebenen Vektors mit Länge 1. Der Vektor muss zuvor definiert werden.
+
+[EXAMPLE]
+====
+
+Sei _v=stem:[\begin\{pmatrix}3\\4\end\{pmatrix}]_. `++Einheitsnormalvektor[v]++` erzeugt
+_stem:[\begin\{pmatrix}-0.8\\0.6\end\{pmatrix}]._
+
+====
+
+[EXAMPLE]
+====
+
+Sei `++s = Strecke[(1,1),(4,5)]++`.
+
+`++Einheitsnormalvektor[s]++` erzeugt _stem:[\begin\{pmatrix}-0.8\\0.6\end\{pmatrix}]_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Einheitsnormalvektor[3x + 4y = 5]++` erzeugt _stem:[\begin\{pmatrix}0.6\\0.8\end\{pmatrix}]_.
+
+====
+
+[NOTE]
+====
+
+In der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_Ansicht.adoc[CAS-Ansicht] können
+auch Vektoren mit undefinierten Variablen eingegeben werden.
+
+[EXAMPLE]
+====
+
+`++Einheitsnormalvektor[(a, b)]++` erzeugt _(stem:[\frac\{-b}\{\sqrt\{a^\{2} + b^\{2}}}],stem:[\frac\{a}\{\sqrt\{a^\{2}
++ b^\{2}}}])_.
+
+====
+
+====
+
+== CAS-Ansicht
+
+Einheitsnormalvektor( <Ebene> )::
+  Berechnet den Einheitsnormalvektor der gegebenen Ebene.
+
+[NOTE]
+====
+
+Siehe auch Befehl xref:/commands/Normalvektor.adoc[Normalvektor].
+
+====

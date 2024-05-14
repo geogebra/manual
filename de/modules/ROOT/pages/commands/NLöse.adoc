@@ -1,0 +1,65 @@
+= NLöse (Befehl)
+:page-en: commands/NSolve_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+== CAS Syntax
+
+Dieser Befehl ist nur in der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/CAS_Ansicht.adoc[CAS-Ansicht] verwendbar.
+
+NLöse( <Gleichung> )::
+  Versucht eine numerische Lösung der angegebenen Gleichung für die Variable x zu finden. Für Funktionen, die keine
+  Polynome sind, sollte immer ein Startwert angegeben werden (siehe weiter unten).
+
+[EXAMPLE]
+====
+
+`++NLöse[x^6 - 2x + 1 = 0]++` berechnet _\{x = 0.51, x = 1}_.
+
+====
+
+NLöse( <Gleichung>, <Variable> )::
+  Versucht eine numerische Lösungen der angegebenen Gleichung für die angegebene, unbekannte Variable. Für Funktionen,
+  die keine Polynome sind, sollte immer ein Startwert angegeben werden (siehe weiter unten).
+
+[EXAMPLE]
+====
+
+`++NLöse[ a^4 + 34a^3 = 34, a ]++` berechnet _\{a = -34, a = 0.99}_.
+
+====
+
+NLöse( <Gleichung>, <Variable = Startwert> )::
+  Berechnet numerisch die Lösungen der angegebenen Gleichung für die unbekannte Variable mit angegebenen Startwert.
+
+[EXAMPLE]
+====
+
+* `++NLöse[cos(x) = x, x = 0]++` berechnet _\{0.74}_
+* `++NLöse[a^4 + 34a^3 = 34, a = 3]++` berechnet _\{a = 0.99}_.
+
+====
+
+NLöse( <Liste von Gleichungen>, <Liste von Variablen> )::
+  Versucht eine numerische Lösung des angegebenen Gleichungssystemes für die angegebenen, unbekannten Variablen zu
+  finden.
+
+[EXAMPLE]
+====
+
+`++NLöse[{π / x = cos(x - 2y), 2 y - π = sin(x)}, {x = 3, y = 1.5}]++` berechnet _\{x = 3.14, y = 1.57}_.
+
+====
+
+[NOTE]
+====
+
+* Wird kein Startwert wie beispielsweise _a = 3_ oder _\{x = 3, y = 1.5}_, kann es möglich sein, dass der numerische
+Algorithmus nur schwer eine Lösung findet (auch mit Startwert gibt es keine Garantie, dass eine Lösung gefunden wird).
+* Die Anzahl der Dezimalstellen kann in xref:/Einstellungen_Menü.adoc[Runden] eingestellt werden.
+* Sie erhalten π mit der Tastenkombination [.kcode]#Alt # + [.kcode]# p#.
+* NLöse funktioniert nicht bei Funktionen, die asymptotisch zur x-Achse sind.
+* NLöse funktioniert nur, wenn die eingegebene Funktion stetig ist!
+* Siehe auch Befehle xref:/commands/Löse.adoc[Löse] und xref:/commands/NLösungen.adoc[NLösungen].
+
+====

@@ -1,0 +1,20 @@
+= Kontrollkästchen (Befehl)
+:page-en: commands/Checkbox_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Kontrollkästchen[ ]::
+  Erzeugt ein xref:/Aktionsobjekte.adoc[Kontrollkästchen].
+Kontrollkästchen[ <Beschriftung> ]::
+  Erzeugt ein Kontrollkästchen mit angegebener xref:/Namen_und_Beschriftungen.adoc[Beschriftung].
+Kontrollkästchen[ <Liste> ]::
+  Erzeugt ein Kontrollkästchen, welches die Objekte der Liste ausblendet, wenn es nicht angehakt ist.
+Kontrollkästchen[ <Beschriftung>, <Liste> ]::
+  Erzeugt ein Kontrollkästchen mit angegebener Beschriftung, welches die Objekte nur anzeigt, wenn es angehakt ist.
+
+[EXAMPLE]
+====
+
+Für die Punkte _A_ und _B_ und das Kontrollkästchen _c_: `++c = Kontrollkästchen[{A,B}]++` sind _A_ und _B_ sichtbar,
+wenn _c_ angehakt ist, ansonsten sind die Punkte verborgen.
+
+====

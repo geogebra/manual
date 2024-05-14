@@ -1,0 +1,77 @@
+= Umdefinieren-Dialog
+:page-en: Redefine_Dialog
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Durch das Umdefinieren von Objekten können Konstruktionen auf verschiedene Arten verändert werden. Bitte denken Sie
+jedoch stets daran, dass das Umdefinieren von Objekten auch die Reihenfolge der Konstruktionsschritte im
+image:16px-Menu_view_construction_protocol.svg.png[Menu view construction protocol.svg,width=16,height=16]
+xref:/Konstruktionsprotokoll.adoc[Konstruktionsprotokoll] verändern kann.
+
+[NOTE]
+====
+
+Umdefinierte Elemente können nur von zuvor definierten Elementen abhängen, d.h. möglicherweise müssen Sie die
+Reihenfolge der Elemente im image:16px-Menu_view_construction_protocol.svg.png[Menu view construction
+protocol.svg,width=16,height=16] xref:/Konstruktionsprotokoll.adoc[Konstruktionsprotokoll] verändern.
+
+====
+
+In GeoGebra können Objekte auf verschiedene Arten umdefiniert werden:
+
+* Aktivieren Sie das Werkzeug image:22px-Mode_move.svg.png[Mode
+move.svg,width=22,height=22]xref:/tools/Bewege.adoc[Bewege] und klicken Sie zweimal auf ein Objekt in der
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+xref:/Algebra_Ansicht.adoc[Algebra-Ansicht].
+** Für freie Objekte wird dadurch ein Bearbeitungsfeld geöffnet, in dem Sie die algebraische Darstellung des Objekts
+direkt verändern können. Drücken Sie die Eingabetaste, um die Veränderungen zu übernehmen.
+** Für abhängige Objekte wird dadurch das Umdefinieren-Dialogfenster geöffnet, in dem Sie die Definition des Objekts
+verändern können.
+* Aktivieren Sie das Werkzeug image:22px-Mode_move.svg.png[Mode
+move.svg,width=22,height=22]xref:/tools/Bewege.adoc[Bewege] und klicken Sie zweimal auf ein Objekt in der
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Grafik_Ansicht.adoc[Grafik-Ansicht]. Dies öffnet das Umdefinieren-Dialogfenster, in dem Sie die Definition des
+Objekts verändern können.
+* Verändern Sie ein Objekt, indem Sie dessen Namen und die neue Definition in die xref:/Eingabezeile.adoc[Eingabezeile]
+eingeben und die Eingabetaste drücken.
+* Öffnen Sie den image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Eigenschaften_Dialog.adoc[Eigenschaften-Dialog] eines Objekts und verändern Sie dessen Definition im Tab
+_Grundeinstellungen_.
+
+[NOTE]
+====
+
+Fixierte Objekte können nicht umdefiniert werden. Um ein fixiertes Objekt umdefinieren zu können, müssen Sie es vorher
+über den Tab _Grundeinstellungen_ des image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+_Eigenschaften-Dialogs_ frei machen.
+
+====
+
+[NOTE]
+====
+
+Existierende Objekte können auch in der _Eingabezeile_ umdefiniert werden. Geben Sie zum Beispiel `++a:Strecke[A, B]++`
+ein, um `++a++` in eine Strecke umzudefinieren.
+
+====
+
+== Beispiele
+
+[EXAMPLE]
+====
+
+Um einen existierenden freien Punkt A auf einer existierende Geraden h zu platzieren, klicken Sie zweimal auf den Punkt
+in der image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Grafik-Ansicht_, um den
+Umdefinieren-Dialog zu öffnen. Geben Sie anschließend den Befehl `++Punkt[h]++` in das Textfeld des Umdefinieren-Dialogs
+ein und drücken Sie die Eingabetaste. Um den Punkt A wieder von der Geraden frei zu machen, definieren Sie ihn durch
+Eingabe von freien Koordinaten (z. B. (1, 2)) im Umdefinieren-Dialog um.
+
+====
+
+[EXAMPLE]
+====
+
+Sie können auch eine Gerade h durch zwei Punkte A und B zu einer Strecke zwischen den beiden Punkten umdefinieren.
+Öffnen Sie dazu den Umdefinieren-Dialog für die Gerade h und ändern Sie den Befehl `++Gerade[A, B]++` zu
+`++Strecke[A, B]++`.
+
+====

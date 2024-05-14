@@ -1,0 +1,19 @@
+= InversLogNormal (Befehl)
+:page-en: commands/InverseLogNormal_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+InversLogNormal( <Mittelwert>, <Standardabweichung>, <Wahrscheinlichkeit> )::
+  Berechnet die Inverse der kumulativen Verteilungsfunktion der
+  http://en.wikipedia.org/wiki/de:Logarithmische_Normalverteilung[logarithmischen Normalverteilung] beim Wert _p_. Die
+  logarithmische Normalverteilung ist dabei durch Mittelwert _μ_ und Standardabweichung _σ_ gegeben.
+  Mit anderen Worten: Beschreibt die Funktion die Verteilung der Zufallsvariable _X_, so sucht dieser Befehl jenes _t_,
+  für das _P(X ≤ t) = p_ gilt.
+  Die Wahrscheinlichkeit _p_ muss aus dem Intervall [_0, 1_] sein.
+
+[EXAMPLE]
+====
+
+* `++InversLogNormal[10, 20, 1/3]++` berechnet _3.997_.
+* `++InversLogNormal[1000, 2, 1]++` berechnet stem:[ \infty ].
+
+====

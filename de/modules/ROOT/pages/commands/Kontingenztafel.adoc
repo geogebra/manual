@@ -1,0 +1,48 @@
+= Kontingenztafel (Befehl)
+:page-en: commands/ContingencyTable_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Kontingenztafel( <Liste von Texten>, <Liste von Texten> )::
+  Erstellt eine http://en.wikipedia.org/wiki/de:Kontingenztafel[Kontingenztafel] von den beiden gegebenen Listen. Die
+  Werte der ersten Liste werden als Zeilenwerte und die Werte der zweiten Liste als Spaltenwerte verwendet.
+Kontingenztafel( <Liste von Texten>, <Liste von Texten>, <Optionen> )::
+  Erstellt eine http://en.wikipedia.org/wiki/de:Kontingenztafel[Kontingenztafel] von den beiden gegebenen Listen, wie
+  oben beschrieben. Der Text _Optionen_ steuert die Berechnungen in der Tabelle.
+
+[NOTE]
+====
+
+Mögliche Werte für _Optionen_ sind "|", "_", "+", "e", "k", "=".
+
+* "|" = zeigt die Spaltenanteile
+* "_" = zeigt die Reihenanteile
+* "+" = zeigt die totalen Anteile
+* "e" = zeigt die erwartete Anzahl
+* "k" = zeigt den Chi-Quadrat-Beitrag
+* "=" = zeigt die Ergebnisse des Chi-Quadrat-Test
+
+====
+
+Kontingenztafel( <Liste von Zeilenwerte>, <Liste von Spaltenwerte>, <Häufigkeitstabelle> )::
+  Erstellt eine http://en.wikipedia.org/wiki/de:Kontingenztafel[Kontingenztafel] unter Verwendung der beiden gegebenen
+  Listen und der Häufigkeitstabelle.
+
+[EXAMPLE]
+====
+
+`++Kontingenztafel[ {"Männer","Frauen"},{"Rechtshänder", "Linkshänder"},{{43,9},{44,4}}]++` liefert eine entsprechende
+Kontingenztafel.
+
+====
+
+Kontingenztafel( <Liste von Zeilenwerte>, <Liste von Spaltenwerte>, <Häufigkeitstabelle>, <Optionen> )::
+  Erstellt eine http://en.wikipedia.org/wiki/de:Kontingenztafel[Kontingenztafel] unter Verwendung der beiden gegebenen
+  Listen und der Häufigkeitstabelle. Der Text _Optionen_ steuert die Berechnungen in der Tabelle, wie oben beschrieben.
+
+[EXAMPLE]
+====
+
+`++Kontingenztafel[ {"Männer","Frauen"},{"Rechtshänder", "Linkshänder"},{{43,9},{44,4}},"_"]++` liefert eine
+entsprechende Kontingenztafel, die die Reihenanteile zeigt.
+
+====

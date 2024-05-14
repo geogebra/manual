@@ -1,0 +1,21 @@
+= Erlang (Befehl)
+:page-en: commands/Erlang_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Erlang( <Parameter n>, <Parameter λ>, x )::
+  Erzeugt eine Dichtefunktion der http://en.wikipedia.org/wiki/de:Erlang-Verteilung[Erlangverteilung] mit den Parametern
+  _n, λ_.
+Erlang( <Parameter n>, <Parameter λ>, x ,<Wahrheitswert Verteilungsfunktion> )::
+  Wenn der _Wahrheitswert = true_, dann wird eine Verteilungsfunktion einer Erlangverteilung erzeugt. Ansonst wird eine
+  Dichtefunktion einer Erlangverteilung erzeugt.
+Erlang( <Parameter n>, <Parameter λ>, <Wert der Variable> )::
+  Berechnet den Wert der Verteilungsfunktion einer Erlangverteilung bei der angegebenen Variable _v_, d.h. die
+  Wahrscheinlichkeit _P(X ≤ v)_ wobei _X_ eine Zufallsvariable mit Erlangverteilung mit den Parametern _n, λ_ ist.
+
+[NOTE]
+====
+
+Liefert die Wahrscheinlichkeit für eine gegebene _x_-Koordinate (oder den Bereich links unter der Erlangverteilungskurve
+der gegebenen _x_-Koordinate).
+
+====

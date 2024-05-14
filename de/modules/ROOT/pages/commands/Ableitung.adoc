@@ -1,0 +1,112 @@
+= Ableitung (Befehl)
+:page-en: commands/Derivative_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Ableitung( <Funktion> )::
+  Liefert die Ableitung der Funktion.
+Ableitung( <Funktion>, <Grad der Ableitung> )::
+  Liefert die _n_-te Ableitung der Funktion, wobei _n_ gleich <Grad der Ableitung> ist.
+Ableitung( <Funktion>, <Variable> )::
+  Liefert die partielle Ableitung der Funktion nach der gegebenen Variable.
+Ableitung( <Funktion>, <Variable>, <Grad der Ableitung> )::
+  Liefert die _n_-te partielle Ableitung der Funktion nach der gegebenen Variable, wobei _n_ gleich <Grad der Ableitung>
+  ist.
+Ableitung( <Kurve> )::
+  Liefert die Ableitung der Kurve.
+Ableitung( <Kurve>, <Grad der Ableitung> )::
+  Liefert die _n_-te Ableitung der Kurve, wobei _n_ gleich <Grad der Ableitung> ist.
+
+[EXAMPLE]
+====
+
+`++Ableitung[Kurve[cos(t), t sin(t), t, 0, π], 2]++` liefert die Kurve _x = -cos(t), y = 2cos(t) - t sin(t)_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Ableitung[Kurve[cos(t), t sin(t), t, 0, π]]++` liefert die Kurve _x = -sin(t), y = sin(t) + t cos(t)_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Ableitung[x^3 + 3x y, x, 2]++` liefert _6x_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Ableitung[x^3 y^2 + y^2 + x y, y]++` liefert _2x³y + x + 2y_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Ableitung[x^3 + x^2 + x, 2]++` liefert _6x + 2_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Ableitung[x^3 + x^2 + x]++` liefert _3x² + 2x + 1_.
+
+====
+
+[NOTE]
+====
+
+Die Kurve muss in parametrischer Form gegeben sein.
+
+====
+
+[NOTE]
+====
+
+Die Kurve muss in parametrischer Form gegeben sein.
+
+====
+
+[NOTE]
+====
+
+Sie können `++f'(x)++` statt `++Ableitung[f]++` schreiben, oder `++f''(x)++` statt `++Ableitung[f, 2]++` und so weiter.
+
+====
+
+== CAS-Ansicht
+
+Ableitung( <Ausdruck> )::
+  Liefert die Ableitung der Funktion/des Ausdrucks nach der Hauptvariable.
+Ableitung( <Ausdruck>, <Variable> )::
+  Liefert die Ableitung der Funktion/des Ausdrucks nach der gegebenen Variable.
+Ableitung( <Ausdruck>, <Variable>, <Grad der Ableitung> )::
+  Liefert die _n_-te Ableitung der Funktion/des Ausdrucks nach einer Variable, wobei _n_ gleich <Grad der Ableitung>
+  ist.
+
+[EXAMPLE]
+====
+
+* `++Ableitung[y x^3, x, 2]++` liefert _6xy_.
+* `++Ableitung[x³ + 3x y, x, 2]++` liefert _6x_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Ableitung[a x^3, a]++` liefert _x³_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Ableitung[x^2]++` liefert _2x_.
+
+====

@@ -1,0 +1,42 @@
+= NegativBinomial (Befehl)
+:page-en: commands/Pascal_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+NegativBinomial( <Anzahl der Erfolge>, <Wahrscheinlichkeit eines Erfolges> )::
+  Erzeugt ein Balkendiagramm einer http://en.wikipedia.org/wiki/de:Negative_Binomialverteilung[negativen
+  Binomialverteilung].
+  _Parameter:_
+  _Anzahl der Erfolge_: Anzahl der erfolgreichen, unabhängigen Bernoulli-Versuche
+  _Wahrscheinlichkeit eines Erfolges_: Wahrscheinlichkeit für Erfolg pro Versuch
+
+NegativBinomial( <Anzahl der Erfolge>, <Wahrscheinlichkeit eines Erfolges>, <Wahrheitswert Verteilungsfunktion> )::
+  Erzeugt ein Balkendiagramm einer negativen Binomialverteilung, wenn der Wahrheitswert _false_ ist und ein
+  Balkendiagramm einer kumulativen negativen Binomialverteilung, wenn der Wahrheitswert _true_ ist.
+  Die ersten zwei Parameter sind gleich wie oben.
+
+NegativBinomial( <Anzahl der Erfolge>, <Wahrscheinlichkeit eines Erfolges>, <Wert der Variablen>, <Wahrheitswert
+Verteilungsfunktion> )::
+  Sei X eine Zufallsvariable und _v_ der Wert der Variable.
+  Ist der Wahrheitswert _false_, so wird P( X = _v_) berechnet. Ist der Wahrheitswert _true_, so wird P( X ≤ _v_)
+  berechnet.
+  Die ersten zwei Parameter sind gleich wie oben.
+
+[EXAMPLE]
+====
+
+Die Zahl der unabhängigen Bernoulli-Versuche mit "Erfolg" muss n = 1 sein, die Wahrscheinlichkeit für "Erfolg" bei einem
+Versuch ist p = 1/6, der Wert der Variable ist v = 2 und der "Wahrheitswert" = false.
+
+`++ NegativBinomial[ n, p, v, false]++` ergibt _0.12_ in der image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/Algebra_Ansicht.adoc[Algebra-Ansicht] und _25/216_ in der
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_Ansicht.adoc[CAS-Ansicht]
+
+====
+
+[NOTE]
+====
+
+Dieser Befehl funktioniert auch in der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/CAS_Ansicht.adoc[CAS-Ansicht].
+
+====

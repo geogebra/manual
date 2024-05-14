@@ -1,0 +1,50 @@
+= LinkeSeite (Befehl)
+:page-en: commands/LeftSide_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+LinkeSeite( <Gleichung> )::
+  Gibt die linke Seite der vereinfachten Gleichung an.
+
+[EXAMPLE]
+====
+
+`++LinkeSeite[ x + 2 = 3x + 1 ]++` ergibt _x_.
+
+====
+
+== CAS-Ansicht
+
+LinkeSeite( <Gleichung> )::
+  Gibt die linke Seite der Gleichung an.
+LinkeSeite( <Liste von Gleichungen> )::
+  Gibt eine Liste der linken Seiten der Gleichungen an.
+LinkeSeite( <Liste von Gleichungen>, <Index> )::
+  Gibt die linke Seite der Gleichung an, die durch den Index festgelegt ist.
+
+[EXAMPLE]
+====
+
+`++LinkeSeite[{a^2 + b^2 = c^2, x + 2 = 3 x + 1}, 1]++` ergibt _stem:[a^2 + b^2]_.
+
+====
+
+[EXAMPLE]
+====
+
+`++LinkeSeite[{a^2 + b^2 = c^2, x + 2 = 3 x + 1}]++` ergibt _stem:[ \left\\{a^2 + b^2, x + 2 \right\} ]_ .
+
+====
+
+[EXAMPLE]
+====
+
+`++LinkeSeite[x + 2 = 3 x + 1]++` ergibt _x + 2_.
+
+====
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/RechteSeite.adoc[RechteSeite].
+
+====

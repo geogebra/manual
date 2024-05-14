@@ -1,0 +1,50 @@
+= Folge (Befehl)
+:page-en: commands/Sequence_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Folge( <Ausdruck>, <Variable>, <Startwert a>, <Endwert b> )::
+  Erzeugt eine Folge von Objekten basierend auf dem gegebenen Ausdruck, wobei die Variable von Startwert _a_ bis Endwert
+  _b_ läuft. Die Folge wird als Liste dargestellt.
+Folge( <Ausdruck>, <Variable>, <Startwert a>, <Endwert b>, <Schrittweite> )::
+  Erzeugt eine Folge von Objekten basierend auf dem gegebenen Ausdruck, wobei die Variable von Startwert _a_ bis Endwert
+  _b_ mit gegebener Schrittweite läuft.
+Folge( <Endwert b> )::
+  Erzeugt eine Liste von Zahlen von 1 bis Endwert _b_.
+
+[EXAMPLE]
+====
+
+* `++Folge[4]++` erzeugt die Liste _\{1, 2, 3, 4}_.
+* `++2^Folge[4]++` erzeugt die Liste _\{2, 4, 8, 16}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Folge[(2, i), i, 1, 3, 0.5]++` erzeugt eine Folge von Punkten mit _y_-Koordinaten von 1 bis 3 und einer Schrittweite
+von 0.5: _\{(2, 1), (2, 1.5), (2, 2), (2, 2.5), (2, 3)}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Folge[(2, i), i, 1, 5]++` erzeugt eine Folge von Punkten mit ganzzahligen _y_-Koordinaten von 1 bis 5: _\{(2, 1), (2,
+2), (2, 3), (2, 4), (2, 5)}_.
+
+====
+
+[NOTE]
+====
+
+Siehe xref:/Listen.adoc[Listen] für mehr Informationen zu Listenoperationen.
+
+====
+
+[NOTE]
+====
+
+Die Parameterwerte _a_ und _b_ sind dynamisch und können daher auch xref:/tools/Schieberegler.adoc[Schieberegler] sein.
+
+====

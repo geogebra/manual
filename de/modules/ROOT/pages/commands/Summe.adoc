@@ -1,0 +1,65 @@
+= Summe (Befehl)
+:page-en: commands/Sum_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Summe( <Liste> )::
+  Berechnet die Summe aller Listenelemente.
+
+[EXAMPLE]
+====
+
+ 
+
+* `++Summe[{1, 2, 3}]++` liefert die Zahl _a = 6_.
+* `++Summe[{x^2, x^3}]++` liefert _f(x) = x^2^ + x^3^_.
+* `++Summe[Folge[i, i, 1, 100]]++` liefert die Zahl _a = 5050_.
+* `++Summe[{(1, 2), (2, 3)}]++` liefert den Punkt _A = (3, 5)_.
+* `++Summe[{(1, 2), 3}]++` liefert den Punkt _B = (4, 5)_.
+* `++Summe[{"a","b","c"}]++` liefert den Text _"abc"_.
+
+====
+
+Summe( <Liste>, <Zahlen der Elemente> )::
+  Berechnet die Summe der ersten _n_ Listenelemente.
+Summe( <Liste>, <Liste von Häufigkeiten> )::
+  Berechnet die Summe aller Listenelemente mit Berücksichtigung der Häufigkeiten.
+
+[EXAMPLE]
+====
+
+`++Summe[{1, 2, 3, 4, 5}, {3, 2, 4, 4, 1}]++` liefert die Zahl _a = 40_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Summe[{1, 2, 3, 4, 5, 6}, 4]++` liefert die Zahl _a = 10_.
+
+====
+
+[NOTE]
+====
+
+Dieser Befehl funktioniert für Zahlen, Punkte, Vektoren, Texte und Funktionen.
+
+====
+
+== CAS-Ansicht
+
+Folgender Befehl ist nur in der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/CAS_Ansicht.adoc[CAS-Ansicht] verwendbar.
+
+Summe( <Ausdruck>, <Variable>, <Startwert>, <Endwert> )::
+  Berechnet die Summe stem:[\sum_\{t=Startwert}^\{Endwert}f(t)]. Der Endwert kann auch unendlich sein.
+
+[EXAMPLE]
+====
+
+ 
+
+* `++Summe[i^2, i, 1, 3]++` liefert _14_.
+* `++Summe[r^i, i, 0, n]++` liefert _stem:[\frac\{r^\{n+1} }\{r - 1} - \frac\{1}\{r - 1}]_.
+* `++Summe[(1/3)^i, i, 0, Infinity]++` liefert _stem:[\frac\{3}\{2}]_.
+
+====

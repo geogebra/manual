@@ -1,0 +1,18 @@
+= InversLogistischeVerteilung (Befehl)
+:page-en: commands/InverseLogistic_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+InversLogistischeVerteilung( <Erwartungswert α>, <Parameter β>, <Wahrscheinlichkeit> )::
+  Berechnet die Inverse der kumulativen Verteilungsfunktion der
+  http://en.wikipedia.org/wiki/de:Logistische_Verteilung[logistischen Verteilung] unter Berücksichtigung der angegebenen
+  Wahrscheinlichkeit _p_, wobei die logistischen Verteilung durch die Parameter _α_ und _β_ gegeben ist.
+  Mit anderen Worten: Beschreibt die Funktion die Verteilung der Zufallsvariable _X_, so sucht dieser Befehl jenes _t_,
+  für das _P(X ≤ t) = p_ gilt.
+  Die Wahrscheinlichkeit _p_ muss aus dem Intervall [0,1] sein.
+
+[EXAMPLE]
+====
+
+`++InversLogistischeVerteilung[100,2,1]++` berechnet stem:[ \infty ].
+
+====

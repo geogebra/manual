@@ -1,0 +1,39 @@
+= ZeigeGitter (Befehl)
+:page-en: commands/ShowGrid_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+ZeigeGitter( )::
+  Zeigt das Gitter in der aktiven Ansicht an.
+ZeigeGitter( <Wahrheitswert> )::
+  Je nach Wahrheitswert true|false wird das Gitter in der aktiven Ansicht angezeigt|ausgeblendet.
+
+[EXAMPLE]
+====
+
+* `++ZeigeGitter[true]++` zeigt das Gitter in der aktiven Ansicht an.
+* `++ZeigeGitter[false]++` blendet das Gitter in der aktiven Ansicht aus.
+
+====
+
+ZeigeGitter( <Ansicht>, <Wahrheitswert> )::
+  Je nach Wahrheitswert true|false wird das Gitter in der angegebenen image:16px-Menu_view_graphics.svg.png[Menu view
+  graphics.svg,width=16,height=16] _Grafik-Ansicht_ 1 oder 2 (oder 3 für die
+  image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=16,height=16] _3D
+  Ansicht_) angezeigt|ausgeblendet.
+
+[EXAMPLE]
+====
+
+* `++ZeigeGitter[1, true]++` zeigt das Gitter in der ersten image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Grafik-Ansicht_ an.
+* `++ZeigeGitter[2, false]++` blendet das Gitter in der zweiten image:16px-Menu_view_graphics2.svg.png[Menu view
+graphics2.svg,width=16,height=16] _Grafik-Ansicht_ aus.
+
+====
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/ZeigeAchsen.adoc[ZeigeAchsen].
+
+====

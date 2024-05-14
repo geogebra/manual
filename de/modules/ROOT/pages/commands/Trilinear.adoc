@@ -1,0 +1,34 @@
+= Trilinear (Befehl)
+:page-en: commands/Trilinear_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Trilinear( <Punkt>, <Punkt>, <Punkt>, <Zahl>, <Zahl>, <Zahl> )::
+  Erzeugt einen Punkt, dessen http://en.wikipedia.org/wiki/de:Trilineare_Koordinaten[trilineare Koordinaten] bezüglich
+  eines Dreiecks mit den drei angegebenen Punkten die Werte der drei angegebenen Zahlen sind.
+
+== Beispiele:
+
+[cols=",,,",options="header",]
+|===
+|Punkt |<Zahl> |<Zahl> |<Zahl>
+|A |1 |0 |0
+
+|B |0 |1 |0
+
+|C |0 |0 |1
+
+|Umkreismittelpunkt |cos(stem:[\hat\{A}]) |cos(stem:[\hat\{B}]) |cos(stem:[\hat\{C}])
+
+|Inkreismittelpunkt |1 |1 |1
+
+|Mittelpunkt des Kreises an die Tangente [BC] |-1 |1 |1
+
+|Mittelpunkt des Kreises an die Tangente [AC] |1 |-1 |1
+
+|Mittelpunkt des Kreises an die Tangente [AB] |1 |1 |-1
+
+|Schwerpunkt |stem:[\frac\{1}\{a}] |stem:[\frac\{1}\{b}] |stem:[\frac\{1}\{c}]
+
+|Höhenschnittpunkt |cos(stem:[\hat\{B}]) cos(stem:[\hat\{C}]) |cos(stem:[\hat\{A}]) cos(stem:[\hat\{C}])
+|cos(stem:[\hat\{A}])cos(stem:[\hat\{B}])
+|===

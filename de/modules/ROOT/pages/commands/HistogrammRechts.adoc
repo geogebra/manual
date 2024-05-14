@@ -1,0 +1,27 @@
+= HistogrammRechts (Befehl)
+:page-en: commands/HistogramRight_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+HistogrammRechts( <Liste von Klassenbereichen>, <Liste von Balkenhöhen> )::
+  Gleich wie `++Histogramm[<Liste von Klassenbereichen>, <Liste von Balkenhöhen>]++`
+
+HistogrammRechts( <Liste von Klassenbereichen>, <Liste von Rohdaten>, <Wahrheitswert Dichte> , <Skalierungsfaktor>
+(optional) )::
+  Gleich wie
+  `++Histogramm[<Liste von Klassenbereichen>, <Liste von Rohdaten>, <Wahrheitswert Dichte>, <Skalierungsfaktor>]++`.
+  Falls ein Datenwert aber gleich der rechten Grenze einer Klasse ist, wird er zu dieser Klasse gezählt und nicht zur
+  nächsten.
+
+HistogrammRechts( <Wahrheitswert kumulativ>, <Liste von Klassenbereichen>, <Liste von Rohdaten>, <Wahrheitswert Dichte>
+, <Skalierungsfaktor> (optional) )::
+  Gleich wie
+  `++Histogramm[<Wahrheitswert kumulativ>, <Liste von Klassenbereichen>, <Liste von Rohdaten>, <Wahrheitswert Dichte>, <Skalierungsfaktor>]++`.
+  Falls ein Datenwert aber gleich der rechten Grenze einer Klasse ist, wird er zu dieser Klasse gezählt und nicht zur
+  nächsten.
+
+[NOTE]
+====
+
+Dieser Befehl verwendet die Regel _a < x ≤ b_ für jede Klasse außer für die erste Klasse, für die _a ≤ x ≤ b_ gilt.
+
+====

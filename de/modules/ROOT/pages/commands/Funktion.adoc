@@ -1,0 +1,28 @@
+= Funktion (Befehl)
+:page-en: commands/Function_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Funktion( <Liste von Zahlen> )::
+  Erzeugt folgende Funktion: Die ersten beiden Zahlen bestimmen den Start- und den Endwert von _x_. Die restlichen
+  Zahlen sind die _y_-Funktionswerte dazwischen in regelmäßigen Abständen.
+
+[EXAMPLE]
+====
+
+* `++Funktion[{2, 4, 0, 1, 0, 1, 0}]++` erzeugt eine dreieckige Wellen-Funktion zwischen _x = 2_ und _x = 4_.
+* `++Funktion[{-3, 3, 0, 1, 2, 3, 4, 5}]++` erzeugt eine lineare Funktion mit Steigung _= 1_ im Intervall [_-3_, _3_].
+
+====
+
+Funktion[ <Ausdruck>, <Parameter Variable 1>, <Startwert>, <Endwert>, <Parameter Variable 2>, <Startwert>, <Endwert> ]::
+  Beschränkt die Veranschaulichung der Oberfläche einer Funktion in zwei Variablen im dreidimensionalen Raum.
+
+[EXAMPLE]
+====
+
+Der Ausdruck `++a(x, y) = x + 0y++` gibt eine Funktion in zwei Variablen aus, welche im Dreidimensionalen der
+*[.underline]#Ebene#* _z_ = _a_(_x_, _y_) = _x_ entspricht.`++Funktion[u, u, 0, 3, v, 0, 2] ++` erstellt die Funktion
+(in zwei Variablen) _b_(_u_, _v_) = _u_, welche im Dreidimensionalen dem, in der Ebene _z_ = _a_(_x_,_y_) = _x_
+enthaltenem, *[.underline]#Rechteck#* Vieleck[(0, 0, 0), (3, 0, 3), (3, 2, 3), (0, 2, 0)] entspricht.
+
+====

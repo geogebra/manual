@@ -1,0 +1,36 @@
+= Grad (Befehl)
+:page-en: commands/Degree_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Grad( <Polynom> )::
+  Gibt den http://en.wikipedia.org/wiki/de:Grad_(Polynom)[Grad des Polynoms] (bzgl. der Hauptvariablen) an.
+
+[EXAMPLE]
+====
+
+`++Grad[x^4 + 2x^2]++` liefert das Ergebnis _4_.
+
+====
+
+== CAS-Ansicht
+
+Grad( <Polynom> )::
+  Gibt den http://en.wikipedia.org/wiki/de:Grad_(Polynom)[Grad des Polynoms] (bzgl. der Hauptvariablen oder
+  http://en.wikipedia.org/wiki/de:Monom[Monome]) an.
+Grad( <Polynom>, <Variable> )::
+  Gibt den Grad des Polynoms in der gegebenen Variable an.
+
+[EXAMPLE]
+====
+
+* `++Grad[x^4 y^3 + 2 x^2 y^3, x]++` ergibt _4_
+* `++Grad[x^4 y^3 + 2 x^2 y^3, y]++` ergibt _3_
+
+====
+
+[EXAMPLE]
+====
+
+`++Grad[x^4 + 2x^2]++` ergibt _4_.
+
+====

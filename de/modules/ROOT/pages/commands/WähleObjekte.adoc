@@ -1,0 +1,18 @@
+= WähleObjekte (Befehl)
+:page-en: commands/SelectObjects_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+WähleObjekte( )::
+  Hebt die Markierungen aller markierten Objekte auf.
+WähleObjekte( <Objekt>, <Objekt> , ... )::
+  Hebt die Markierungen aller Objekte auf und wählt Objekte mittels Parameter aus. Alle Parameter müssen
+  xref:/Namen_und_Beschriftungen.adoc[benannte] Objekte sein.
+
+[EXAMPLE]
+====
+
+* Seien _A_, _B_ und _C_ Punkte. `++WähleObjekte[A, B, C]++` wählt die Punkte _A_, _B_ und _C_ aus.
+* Der Befehl `++WähleObjekte[Mittelpunkt[A, B]]++` hat keinen Effekt, außer dass die Markierungen aller markierten
+Objekte aufgehoben wird.
+
+====

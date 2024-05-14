@@ -1,0 +1,18 @@
+= Hülle (Befehl)
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Hülle( <Liste von Punkten>, <Prozentsatz> )::
+  Erzeugt eine charakteristische Hülle der Punkte, wie in http://www.geosensor.net/papers/duckham08.PR.pdf[Efficient
+  generation of simple polygons for characterizing the shape of a set of points in the plane] auf Englisch beschrieben.
+  Ist der Prozentsatz _p=1_, so ist das Ergebnis gleich mit dem Ergebnis vom Befehl
+  xref:/commands/KonvexeHülle.adoc[KonvexeHülle]. Je geringer der Prozentsatz, desto kleiner die Fläche der Hülle. Für
+  _p=0_ ist die Fläche der Hülle nicht notwendigerweise minimal.
+  Das erzeugte Objekt ist eine xref:/commands/Ortslinie.adoc[Ortslinie], also ein
+  xref:/Freie_und_abhängige_Objekte_Hilfsobjekte.adoc[Hilfsobjekt].
+
+[NOTE]
+====
+
+Werte für _p_, die größer als 1 bzw. kleiner als 0 sind, werden als 1 bzw. 0 behandelt.
+
+====

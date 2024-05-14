@@ -1,0 +1,34 @@
+= Laplace (Befehl)
+:page-en: commands/Laplace_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+== CAS Syntax
+
+Laplace( <Funktion> )::
+  Berechnet die http://en.wikipedia.org/wiki/de:Laplace-Transformation[Laplace-Transformation] der Funktion.
+
+[EXAMPLE]
+====
+
+`++ Laplace[sin(t)]++` berechnet stem:[\mathbf\{\frac\{1}\{s^\{2} + 1}} ]
+
+====
+
+Laplace( <Funktion>, <Variable> )::
+  Berechnet die Laplace-Transformation der Funktion, in Bezug auf die angegebene Variable.
+
+[EXAMPLE]
+====
+
+`++Laplace[sin(a*t),t]++` berechnet stem:[\mathbf\{\frac\{a}\{a^\{2} + t^\{2}}}]
+
+`++Laplace[sin(a*t),a]++` berechnet stem:[\mathbf\{\frac\{t}\{a^\{2} + t^\{2}}}]
+
+====
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/InversLaplace.adoc[InverseLaplace].
+
+====

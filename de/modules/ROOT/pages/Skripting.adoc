@@ -1,0 +1,119 @@
+= Skripting
+:page-en: Scripting
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Skripte sind eine Abfolge von Befehlen, die nacheinander ausgeführt werden. GeoGebra bietet zwei Skriptsprachen um
+Befehle anzugegeben - GGBScript und JavaScript . Die Ausführung eines Skriptes kann ausgelöst werden durch:
+
+* Klicken auf ein bestimmtes Objekt
+* Aktualisierung (_Wert-Veränderung, Neudefinition_) eines bestimmten Objektes
+* Laden der Datei (im Fall von JavaScript)
+* Javascript Listeners (siehe auch http://wiki.geogebra.org/en/Reference:JavaScript[JavaScript])
+
+Die Skripte werden im Tab "Skripting" im image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Eigenschaften_Dialog.adoc[Eigenschaften-Dialog] eines Objektes eingegeben.
+
+== GGBScript
+
+Sie können Skripte erzeugen, die einfach nur eine Auflistung von GeoGebra-Befehlen enthalten, wie man sie auch in der
+xref:/Eingabezeile.adoc[Eingabezeile] eingeben kann. Beim Aufruf des Skriptes, werden die Befehle hintereinander
+ausgeführt.
+
+[EXAMPLE]
+====
+
+* _a_ ist ein xref:/tools/Schieberegler.adoc[Schieberegler] von 1 bis 3, der nur ganzzahlige Werte zulässt (d.h. die
+Schrittweite beträgt 1)
+* Geben Sie `++Liste1 = {"rot", "grün", "blau"}++` ein.
+* Gn den Eigenschaften von _a_ tragen Sie als Skript im Tab "Bei Update" ein: `++SetzeFarbe[a, Element[Liste1, a]]++`
+* Wenn Sie nun den Schieberegler bewegen ändert er seine Farbe
+
+====
+
+*Erklärung:* Jedes Mal wenn der Schieberegler bewegt wird findet ein "Update" statt. Dann wird auch jedes Mal das Skript
+aufgerufen, was dann den Wert vom Schieberegler _a_ nutzt, um die Farbe aus der Liste auszulesen und die Farbe von _a_
+zu ändern.
+
+[NOTE]
+====
+
+Es gibt einige Befehle, die speziell für das Skripting gedacht sind. Sie finden diese auf der Seite
+xref:/commands/Skripting_(Befehle).adoc[Skripting_(Befehle)]
+
+====
+
+== JavaScript
+
+JavaScript ist eine Programmiersprache, die vor allem im Internet eingesetzt wird. Im Gegensatz zu GeoGebraScript können
+Sie damit Befehle nicht nur einfach hintereinander ausführen lassen, sondern es können auch Kontrollstrukturen wie
+`++if++`, `++while++` und `++for++` verwendet werden. Sie finden eine gute Anleitung zur Verwendung von JavaScript auf
+https://developer.mozilla.org/de/JavaScript[developer.mozilla.org].
+
+Im Falle von GeoGebra müssen Sie spezielle JavaScript-Methoden benutzen, um die Konstruktion zu verändern. Diese
+Methoden gehören zu dem ggbApplet-Objekt, was bedeutet, dass sie Befehle der Art
+`++ggbApplet.method_name(parameter,..,parameter)++` aufrufen müssen. Die vollständige Liste der Methoden finden Sie
+unter http://wiki.geogebra.org/en/Reference:JavaScript[JavaScript].
+
+[EXAMPLE]
+====
+
+....
+for(var i =0;i<10;i++) 
+   ggbApplet.evalCommand("A_"+i+"=(random()*10,random()*10)");
+....
+
+Dieses Skript erzeugt 10 Punkte von _A~0~_ bis _A~9~_ mit zufälligen Koordinaten.
+
+====
+
+[NOTE]
+====
+
+Das Skripting mit JavaScript ist aufgrund der Kontrollstrukturen sehr vielseitig einsetzbar. Allerdings lassen sich
+viele Aufgaben mit dem einfacheren GeoGebraScript bewältigen.
+
+====
+
+GeoGebra beinhaltet seine eigene JavaScript-Engine. Wenn Sie xref:/Export_Dialog_für_Arbeitsblätter.adoc[dynamische
+Arbeitsblätter] exportieren, können Sie zwischen dieser Engine oder derjenigen, die im Browser verwendet wird,
+auswählen. Wenn Sie JavaScript auf einer HTML Seite bearbeiten, so wird die ggbApplet-Variable nicht initialisiert. Sie
+müssen zuerst `++ggbApplet=document.applets[0];++` eingeben, um das ggbApplet korrekt verwenden zu können.
+
+== Global JavaScript
+
+Im _Global JavaScript_ Teil des Tabs _Skripting_ im image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+_Eigenschaften-Dialog_ können auch *Funktionen* oder *Anweisungen* definiert werden, die vor dem Laden der Konstruktion
+ausgeführt werden und auch für andere Skripts verfügbar sind. Sie können auch Funktionen wie _ggbOnInit()_ eingeben,
+welche automatisch ausgerufen werden, sobald Ihre Konstruktion geladen wird. Die Funktion _ggbOnInit()_ kann auch für
+_Listeners_ benutzt werden, wie das folgende Beispiel zeigt:
+
+[EXAMPLE]
+====
+
+....
+function onAdd(name){
+    alert("Objekt "+name+" wurde hinzugefügt.");
+}
+
+function ggbOnInit(){
+    ggbApplet.registerAddListener("onAdd");
+}
+....
+
+*Erklärung:* Zuerst haben wir die Funktion _onAdd_ definiert, die eine Nachricht zeigt, die vom gegebenen String
+abhängt. Danach legen wir fest, dass GeoGebra die Funktion _ggbOnInit_ aufruft, sobald ein neues Objekt hinzugefügt
+wird. Wird unsere Konstruktion neu geladen, so wird die Funktion _ggbOnInit_ aufgerufen. Ab diesem Zeitpunkt wird, wenn
+der Benutzer einen Punkt _A_ hinzufügt, die Nachricht "Objekt A wurde hinzugefügt" angezeigt.
+
+====
+
+Sie können _Listeners_ aber auch benutzen um Objekte umzubenennen, zu löschen oder Konstruktionen zu löschen. Eine
+komplette Auflistung finden Sie unter http://wiki.geogebra.org/en/Reference:JavaScript[JavaScript].
+
+[NOTE]
+====
+
+Die Verwendung einer ggbApplet-Methode in _Global JavaScript_ außerhalb von _ggbOnInit_ wird eventuell nicht wie geplant
+funktionieren, da die Methode vor der Konstruktion geladen wird.
+
+====

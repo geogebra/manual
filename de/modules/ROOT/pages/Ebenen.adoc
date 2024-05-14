@@ -1,0 +1,36 @@
+= Ebenen
+:page-en: Layers
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+In GeoGebra werden Ebenen dazu verwendet, um zu bestimmen, welches Objekt beim Klick auf übereinander liegenden Objekten
+ausgewählt und gegebenenfalls bewegt werden soll.
+
+====
+
+Standardmäßig werden alle Objekte auf der Ebene 0 gezeichnet, welche im Prinzip der Hintergrund-Ebene der
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Grafik_Ansicht.adoc[Grafik-Ansicht] entspricht. Im Ganzen sind 10 Ebenen verfügbar (durchnummeriert von 0 bis 9),
+wobei Ebenen mit einer höheren Nummer stets über denen mit niedrigeren Nummern liegen.
+
+Im xref:/Eigenschaften_Dialog.adoc[Eigenschaften-Dialog] können Sie auf der Karte _Erweitert_ ausgewählte Objekte auf
+eine andere Ebene verschieben. Nachdem Sie die Nummer der Ebene für zumindest ein Objekt verändert haben (z. B. von
+Ebene 0 auf Ebene 3), werden alle neuen Objekte ebenfalls auf der Ebene mit der höchsten verwendeten Nummer gezeichnet.
+
+[NOTE]
+====
+
+Wenn Sie in der GeoGebra Desktop Version ein Objekt markiert haben, können Sie alle Objekte, die auf derselben Ebene
+liegen, durch Auswahl der Option _Aktuelle Ebene_ auswählen (Tastenkombination: [.kcode]#Ctrl# + [.kcode]#L# bzw.
+[.kcode]#Strg# + [.kcode]#L# ) im Menü Bearbeiten ebenfalls auswählen. Diese Menü-Option ist nur dann aktiv, wenn alle
+markierten Objekte auf derselben Ebene liegen.
+
+====
+
+== Weitere Verwendung der Ebenen in GeoGebra:
+
+* Für SVG-Export werden Objekte nach Ebenen gruppiert.
+* Ebenen können mithilfe der JavaScript Schnittstelle für xref:/Dynamisches_Arbeitsblatt.adoc[GeoGebra-Applets]
+kontrolliert werden.

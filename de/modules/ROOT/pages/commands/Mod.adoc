@@ -1,0 +1,30 @@
+= Mod (Befehl)
+:page-en: commands/Mod_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Mod( <Dividend>, <Divisior> )::
+  Berechnet den Rest bei einer Division von Dividend durch Divisor.
+Mod( <Dividend Polynom>, <Divisor Polynom> )::
+  Berechnet den Rest bei einer Division der beiden Polynome.
+
+[EXAMPLE]
+====
+
+`++Mod[x^3 + x^2 + x + 6, x^2 - 3]++` berechnet _4 x + 9_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Mod[9, 4]++` berechnet _1_.
+
+====
+
+[NOTE]
+====
+
+Um eine Funktion zu definieren, die dasselbe wie dieser Befehl macht, können Sie z.B. die Eingabe
+`++mod(x, y) = y (x / y - floor(x / y))++` verwenden.
+
+====

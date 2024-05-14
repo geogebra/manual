@@ -1,0 +1,43 @@
+= Kreuzprodukt (Befehl)
+:page-en: commands/Cross_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Kreuzprodukt( <Vektor u>, <Vektor v> )::
+  Berechnet das http://en.wikipedia.org/wiki/de:Kreuzprodukt[Kreuzprodukt] der Vektoren _u_ und _v_.
+
+[EXAMPLE]
+====
+
+`++Kreuzprodukt[{1, 3, 2}, {0, 3, -2}]++` liefert _\{-12, 2, 3}_.
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Hinweis:* Wenn in der
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_Ansicht.adoc[CAS-Ansicht] in den
+Vektoren unbelegte Variablen vorkommen, dann liefert der Befehl eine Formel für das Kreuzprodukt.
+
+[EXAMPLE]
+====
+
+`++Kreuzprodukt[{a, b, c}, {d, e, f}]++` liefert _\{b f - c e, -a f + c d, a e - b d}_.
+
+====
+
+====
+
+[NOTE]
+====
+
+In der xref:/Eingabezeile.adoc[Eingabezeile] können Sie stattdessen auch `++u⊗v++` verwenden.
+
+====
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/Skalarprodukt.adoc[Skalarprodukt].
+
+====

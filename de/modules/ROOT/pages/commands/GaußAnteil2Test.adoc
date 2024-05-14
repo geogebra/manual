@@ -1,0 +1,17 @@
+= GaußAnteil2Test (Befehl)
+:page-en: commands/ZProportion2Test_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+GaußAnteil2Test[ <Stichprobenanteil 1>, <Stichprobengröße 1>, <Stichprobenanteil 2>, <Stichprobengröße 2>, <Seite> ]::
+  Führt einen
+  http://en.wikipedia.org/wiki/de:Gau%C3%9F-Test#Zweistichproben-Gau.C3.9F-Test_f.C3.BCr_unabh.C3.A4ngige_Stichproben[Zweistichproben-Gauß-Test]
+  der Differenz zweier Anteile der Grundgesamtheiten mit den gegebenen Stichprobenstatistiken durch. _Seite_ hat als
+  mögliche Werte "<", ">" , "≠", welche folgende alternative Hypothese bestimmt:
+
+"<" = Differenz der Grundgesamtheitsanteile < 0
+
+">" = Differenz der Grundgesamtheitsanteile > 0
+
+"≠" = Differenz der Grundgesamtheitsanteile ≠ 0
+
+Das Ergebnis wird als Liste der Form \{Wert der Wahrscheinlichkeit, Testprüfgröße z} zurückgegeben.

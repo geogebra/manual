@@ -1,0 +1,45 @@
+= IFaktorisiere (Befehl)
+:page-en: commands/IFactor_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+IFaktorisiere( <Polynom> )::
+  Faktorisiert das Polynom über den irrationalen Zahlen.
+
+[EXAMPLE]
+====
+
+`++IFaktorisiere[x^2 + x - 1]++` liefert stem:[ \left( x + \frac\{-\sqrt\{5} + 1}\{2} \right) \left( x +
+\frac\{\sqrt\{5} + 1}\{2} \right)]
+
+====
+
+== CAS-Ansicht
+
+IFaktorisiere( <Ausdruck> )::
+  Faktorisiert den Ausdruck über den irrationalen Zahlen.
+IFaktorisiere( <Ausdruck>, <Variable> )::
+  Faktorisiert den Ausdruck über den irrationalen Zahlen in Bezug auf die angegebene Variable.
+
+[EXAMPLE]
+====
+
+`++IFaktorisiere[a^2 + a - 1, a]++` liefert stem:[ \left( a + \frac\{-\sqrt\{5} + 1}\{2} \right) \left( a +
+\frac\{\sqrt\{5} + 1}\{2} \right)]
+
+====
+
+[EXAMPLE]
+====
+
+`++IFaktorisiere[x^2 + x - 1]++` liefert stem:[ \left( x + \frac\{-\sqrt\{5} + 1}\{2} \right) \left( x +
+\frac\{\sqrt\{5} + 1}\{2} \right)]
+
+====
+
+[NOTE]
+====
+
+Siehe auch die Befehle xref:/commands/Faktorisiere.adoc[Faktorisiere] und
+xref:/commands/KIFaktorisiere.adoc[KIFaktorisiere].
+
+====

@@ -1,0 +1,27 @@
+= SigmaXY (Befehl)
+:page-en: commands/SigmaXY_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+SigmaXY( <Liste von Punkten> )::
+  Berechnet die Summe der Produkte der _x_- und _y_-Koordinaten der gegebenen Punkte.
+
+[EXAMPLE]
+====
+
+Sie können die Kovarianz einer Liste von Punkten folgendermaßen berechnen:
+`++SigmaXY[Liste]/Länge[Liste] - MittelwertX[Liste] * MittelwertY[Liste]++`.
+
+====
+
+SigmaXY( <Liste von x-Koordinaten>, <Liste von y-Koordinaten> )::
+  Berechnet die Summe der Produkte der _x_- und _y_-Koordinaten.
+
+[EXAMPLE]
+====
+
+Seien `++A = (-3, 4)++`, `++B = (-1, 4)++`, `++C = (-2, 3)++` und `++D = (1, 3)++` Punkte. Mit
+`++{x(A), x(B), x(C), x(D)}++` erhalten Sie eine Liste _Liste1 = \{-3, -1, -2, 1}_ der x-Koordinaten der Punkte und mit
+`++{y(A), y(B), y(C), y(D)}++` erhalten Sie eine Liste _Liste2 = \{4, 4, 3, 3}_ die y-Koordinaten der Punkte.
+`++SigmaXY[ Liste1, Liste2 ]++` ergibt dann _a = -19_.
+
+====

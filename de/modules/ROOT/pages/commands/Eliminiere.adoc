@@ -1,0 +1,23 @@
+= Eliminiere (Befehl)
+:page-en: commands/Eliminate_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+== CAS Syntax
+
+Eliminiere( <Liste von Polynomen>, <Liste von Variablen> )::
+  Betrachtet ein durch Polynome definiertes Gleichungssystem und liefert nach der Elimination der in der Liste
+  angegebenen Variablen ein äquivalentes Gleichungssystem.
+
+[EXAMPLE]
+====
+
+`++Eliminiere[{x^2 + x, y^2 - x}, {x}]++` liefert \{stem:[ y^\{4} + y^\{2} ]}.
+
+====
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/GröbnerGradRevLex.adoc[GröbnerGradRevLex].
+
+====

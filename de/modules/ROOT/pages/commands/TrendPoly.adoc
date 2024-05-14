@@ -1,0 +1,34 @@
+= TrendPoly (Befehl)
+:page-en: commands/FitPoly_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+TrendPoly( <Liste von Punkten>, <Grad des Polynoms> )::
+  Berechnet das Regressionspolynom _n_-ten Grades.
+
+[EXAMPLE]
+====
+
+`++TrendPoly[{(-1, -1), (0, 1), (1, 1), (2, 5)}, 3]++` gibt _f(x) = x^3^ - x^2^ + 1_.
+
+====
+
+== CAS-Ansicht
+
+TrendPoly( <Liste von Punkten>, <Grad des Polynoms> )::
+  Berechnet das Regressionspolynom _n_-ten Grades.
+
+[EXAMPLE]
+====
+
+`++TrendPoly[{(-1, -1), (0, 1), (1, 1), (2, 5)}, 3]++` gibt _x^3^ - x^2^ + 1_.
+
+====
+
+[NOTE]
+====
+
+* Für ein Polynom _n_-ten Grades muss die Liste mindestens _n + 1_ Punkte haben.
+* Siehe auch die Befehle xref:/commands/TrendExp.adoc[TrendLog], xref:/commands/TrendLog.adoc[TrendLog],
+xref:/commands/TrendPot.adoc[TrendPot] und xref:/commands/TrendSin.adoc[TrendSin].
+
+====

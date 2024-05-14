@@ -1,0 +1,54 @@
+= Letztes (Befehl)
+:page-en: commands/Last_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Letztes( <Liste> )::
+  Erzeugt eine Liste, die das letzte Element der ursprünglichen Liste enthält.
+Letztes( <Liste>, <Anzahl der Elemente> )::
+  Erzeugt eine Liste, die die letzten _n_ Elemente der ursprünglichen Liste enthält.
+Letztes( <Text> )::
+  Liefert den letzen Buchstaben des Textes.
+Letztes( <Text>, <Anzahl der Elemente> )::
+  Liefert die letzten _n_ Buchstaben des Textes.
+
+[EXAMPLE]
+====
+
+`++Letztes["Hallo", 2]++` liefert "lo".
+
+====
+
+[EXAMPLE]
+====
+
+`++Letztes["Hallo"]++` liefert "o".
+
+====
+
+[EXAMPLE]
+====
+
+`++Letztes[{1, 4, 3}, 2]++` erzeugt die Liste _\{4, 3}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Letztes[{1, 4, 3}]++` erzeugt \{3}.
+
+====
+
+[NOTE]
+====
+
+Um das letzte Element selber zu bekommen, verwenden Sie z.B. den Befehl `++Element[{1, 4, 3}, 3]++`.
+
+====
+
+[NOTE]
+====
+
+Siehe auch Befehl xref:/commands/Erstes.adoc[Erstes].
+
+====

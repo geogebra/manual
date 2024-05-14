@@ -1,0 +1,80 @@
+= Element (Befehl)
+:page-en: commands/Element_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Element( <Liste>, <Position des Elements n> )::
+  Gibt das _n_-te Element der Liste an.
+
+[EXAMPLE]
+====
+
+`++Element[{1, 3, 2}, 2]++` liefert _3_, das zweite Element der Liste _\{1, 3, 2}_.
+
+====
+
+[NOTE]
+====
+
+In der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_Ansicht.adoc[CAS-Ansicht] können
+auch undefinierte Variablen als Eingabe verwendet werden.
+
+[EXAMPLE]
+====
+
+`++Element[{a, b, c}, 2]++` liefert _b_, das zweite Element der Liste _\{1, 3, 2}_.
+
+====
+
+====
+
+Element( <Matrix>, <Zeile>, <Spalte> )::
+  Gibt jenes Element der Matrix an, das sich in angegebener Zeile und Spalte befindet.
+
+[EXAMPLE]
+====
+
+`++Element[{{1, 3, 2}, {0, 3, -2}}, 2, 3]++` liefert _-2_, das dritte Element in der zweiten Zeile der Matrix
+stem:[\begin\{pmatrix}1&3&2\\0&3&-2\end\{pmatrix}].
+
+====
+
+[NOTE]
+====
+
+In der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_Ansicht.adoc[CAS-Ansicht] können
+auch undefinierte Variablen als Eingabe verwendet werden.
+
+[EXAMPLE]
+====
+
+`++Element[{{a, b, c}, {d, e, f}}, 2, 3]++` liefert _f_, das dritte Element in der zweiten Zeile der Matrix
+stem:[\begin\{pmatrix}a&b&c\\d&e&f\end\{pmatrix}].
+
+====
+
+====
+
+Element( <Liste L>, <Index 1>, <Index 2>, ... )::
+  Ist _L_ eine _n_-dimensionale Liste, so können bis zu _n_ Indizes angegeben werden, um ein Element (oder eine Liste
+  von Elementen) zu erhalten.
+
+[EXAMPLE]
+====
+
+Sei _L = \{\{\{1, 2}, \{3, 4}}, \{\{5, 6}, \{7, 8}}}_.
+
+`++Element[L, 1, 2, 1]++` liefert die Zahl _3_, `++Element[L, 2, 2]++` liefert die Liste _\{7, 8}_.
+
+====
+
+[NOTE]
+====
+
+* Dieser Befehl funktioniert nur, wenn die Liste nicht aus verschiedenen Objekttypen besteht (z.B.: nur Zahlen oder nur
+Punkte).
+* {blank}
++
+Siehe auch die Befehle xref:/commands/Erstes.adoc[Erstes], xref:/commands/Letztes.adoc[Letztes] und
+xref:/commands/ZufälligesElement.adoc[ZufälligesElement].
+
+====

@@ -1,0 +1,75 @@
+= Normalvektor (Befehl)
+:page-en: commands/PerpendicularVector_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Normalvektor( <Gerade> )::
+  Liefert den Normalvektor der Geraden.
+
+[EXAMPLE]
+====
+
+Sei `++Gerade[ (1, 4), (5, -3) ]++` die Gerade _j_. Mit `++Normalvektor[ j ]++` erhält man den Normalvektor _u=(7, 4)_
+der Gerade _j_.
+
+====
+
+[NOTE]
+====
+
+Die Gerade _ax + by = c_ besitzt den Normalvektor _(a, b)_.
+
+====
+
+Normalvektor( <Strecke> )::
+  Liefert den Normalvektor der Strecke. Dieser besitzt die selbe Länge wie das Segment.
+
+[EXAMPLE]
+====
+
+Sei `++Strecke[ (3, 2), (14, 5) ]++` die Strecke _k_. Mit `++Normalvektor[ k ]++` erhält man den Normalvektor _u=(-3,
+11)_ der Strecke _k_.
+
+====
+
+Normalvektor( <Vektor> )::
+  Liefert den Normalvektor des gegebenen Vektors.
+
+[EXAMPLE]
+====
+
+Sei `++Vektor[ (-12, 8) ]++` der Vektor _u_. Mit `++Normalvektor[ u ]++` erhält man den Normalvektor _v=(-8, -12)_ des
+Vektors _u_.
+
+====
+
+[NOTE]
+====
+
+In der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_Ansicht.adoc[CAS-Ansicht] können
+auch undefinierte Variablen eingegeben werden.
+
+[EXAMPLE]
+====
+
+`++Normalvektor[(a,b)]++` berechnet den Vektor _\{-b,a}_.
+
+====
+
+====
+
+Normalvektor( <Ebene> )::
+  Liefert den Normalvektor der gegebenen Ebene.
+
+[EXAMPLE]
+====
+
+`++Normalvektor[ xyEbene ]++` erzeugt den Normalvektor _u = (0, 0, 1)_ der xy-Ebene.
+
+====
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/Einheitsnormalvektor.adoc[Einheitsnormalvektor].
+
+====

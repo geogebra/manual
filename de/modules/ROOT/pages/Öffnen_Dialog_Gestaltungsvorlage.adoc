@@ -1,0 +1,61 @@
+= Öffnen-Dialog - Gestaltungsvorlage
+:page-en: Open_Dialog_Style_Templates
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+== Vorlage anwenden
+
+Sie können eine spezifische Gestaltungsvorlage erstellen. Diese enthält Einstellungen von einem oder mehreren Objekten
+vom selben oder verschiedenen Typen. Die Einstellungen können dann auf Objekte in anderen GeoGebra Dateien angewendet
+werden.
+
+=== Wie wird eine Gestaltungsvorlage erstellt?
+
+Erstellen Sie eine GeoGebra Datei (welche später unter einem geeigneten Namen z.B. “Gestaltung.ggb” gespeichert wird)
+mit den Objekten, die individuell gestaltet werden sollen (z.B. Punkte, Geraden, Vielecke,...). Verwenden Sie nun den
+xref:/Eigenschaften_Dialog.adoc[Eigenschaften-Dialog] oder die xref:/Gestaltungsleiste.adoc[Gestaltungsleiste] und
+passen Sie die Gestaltung der Objekte (Farbe, Größe, Füllung,...) an Ihre Wünsche an.
+
+Nun müssen Sie den Objekten einen eindeutigen Namen zuweisen. Dazu öffnen Sie den _Grundeinstellungen_ Tab vom
+xref:/Eigenschaften_Dialog.adoc[Eigenschaften-Dialog] und schreiben in das Feld _Beschriftungen_ für jedes Objekt
+`++%style=StyleName++`, wobei _StyleName_ ein Name Ihrer Wahl ist.
+
+Das folgende Bild zeigt die Zuweisung des Style-Namen `++%style=orangesKreuz++` zum Punkt C. Sie können weitere Punkte
+oder Objekte erstellen, denen eine andere Gestaltung und ein ander Style-Name zugeordnet werden.
+
+[EXAMPLE]
+====
+
+/Datei:Vorlage_png.adoc[image:Vorlage.png[Vorlage.png,width=500,height=276]]
+
+====
+
+Wenn Sie eine Gestaltung auf alle Objekte der selben Art anwenden möchten, dann schreiben Sie in das Feld _Beschriftung_
+vom definierten Objekt den belegten Namen: `++%style=defaultStyle++`
+
+Speichern Sie nun Ihre Datei mit den individuellen Gestaltungsvorlagen, z.B. unter dem Namen _style.ggb_ oder
+_Gestaltung.ggb_.
+
+=== Wie wird eine Gestaltungsvorlage auf eine .ggb Datei angewendet?
+
+Öffnen Sie oder erstellen Sie eine Datei, in der Sie die Gestaltungsvorlagen anwenden möchten. Schreiben Sie nun
+`++%style=StyleName++` in das Feld _Beschriftung_ jener Objekte, welche den speziellen Style erhalten sollen.
+
+Im Bezug auf das vorherige Beispiel müssen Sie `++%style=orangesKreuz++` in das Feld _Beschriftung_ von jedem Punkt
+schreiben, der genau so angezeigt werden soll, wie in der Gestaltungsvorlage. Dieser Schritt ist nicht notwendig wenn
+Sie den `++%style=defaultStyle++` übernehmen.
+
+Stellen Sie sicher, dass kein Objekt ausgewählt ist und speichern Sie Ihre Datei. Klicken Sie dann auf _Datei - Öffnen
+..._.
+
+Wählen Sie das Element _Vorlage anwenden (.ggb)_ vom Aufklappmenü _Dateityp_. Wählen Sie die Datei mit der
+Gestaltungsvorlage (z.B._style.ggb_ Datei) um Ihre individuelle Gestaltung auf die ausgewählten Objekte anzuwenden.
+
+/Datei:Vorlage_anwenden_aufklappmenue_png.adoc[image:400px-Vorlage_anwenden_aufklappmenue.png[Vorlage anwenden
+aufklappmenue.png,width=400,height=99]]
+
+[NOTE]
+====
+
+Wenn Sie zuerst ein paar Objekte auswählen, dann wird die Gestaltung nur auf diese angewendet.
+
+====

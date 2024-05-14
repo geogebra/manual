@@ -1,0 +1,34 @@
+= Median (Befehl)
+:page-en: commands/Median_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Median( <Liste von Rohdaten> )::
+  Berechnet den Median der angegebenen Zahlen in der Liste.
+
+[EXAMPLE]
+====
+
+* `++Median[{1, 2, 3}]++` ergibt _2_.
+* `++Median[{1, 1, 8, 8}]++` ergibt _4.5_.
+
+====
+
+Median( <Liste von Zahlen>, <Liste von Häufigkeiten> )::
+  Berechnet den Median der angegebenen Zahlen in der Liste in Abhängigkeit zu der Häufigkeiten der Zahlen.
+
+[EXAMPLE]
+====
+
+* `++Median[{1, 2, 3}, {4, 1, 3}]++` ergibt _1.5_.
+* `++Median[{1, 2, 3, 4}, {6, 1, 3, 6}]++` ergibt _3_.
+
+====
+
+[NOTE]
+====
+
+* Ist die Länge der Liste eine gerade Zahl, so wird der arithmetische Mittelwert der beiden mittleren Elemente
+ausgegeben.
+* Siehe auch Befehl xref:/commands/Mittelwert.adoc[Mittelwert].
+
+====

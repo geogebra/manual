@@ -1,0 +1,44 @@
+= ImpliziteAbleitung (Befehl)
+:page-en: commands/ImplicitDerivative_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+ImpliziteAbleitung( <f(x, y)> )::
+  Berechnet die http://en.wikipedia.org/wiki/de:Implizite_Differentiation[implizite Ableitung] des angegebenen
+  Ausdrucks.
+
+[EXAMPLE]
+====
+
+`++ImpliziteAbleitung[x + 2 y]++` berechnet _-0.5_.
+
+====
+
+== CAS-Ansicht
+
+ImpliziteAbleitung( <f(x, y)> )::
+  Berechnet die http://en.wikipedia.org/wiki/de:Implizite_Differentiation[implizite Ableitung] des angegebenen
+  Ausdrucks.
+ImpliziteAbleitung( <Ausdruck>, <Abhängige Variable>, <Unabhängige Variable> )::
+  Berechnet die http://en.wikipedia.org/wiki/de:Implizite_Differentiation[implizite Ableitung] des angegebenen
+  Ausdrucks.
+
+[EXAMPLE]
+====
+
+`++ImpliziteAbleitung[x^2 + y^2, y, x]++` berechnet _-stem:[\frac\{x}\{y}]_.
+
+====
+
+[EXAMPLE]
+====
+
+`++ImpliziteAbleitung[x + 2 y]++` berechnet _-stem:[\frac\{1}\{2}]_.
+
+====
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/Ableitung.adoc[Ableitung].
+
+====

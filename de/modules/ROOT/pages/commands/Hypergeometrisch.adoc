@@ -1,0 +1,60 @@
+= Hypergeometrisch (Befehl)
+:page-en: commands/HyperGeometric_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Hypergeometrisch(<Größe der Grundgesamtheit>, <Anzahl möglicher Erfolge>, <Stichprobenumfang>)::
+  Erzeugt ein Balkendiagramm einer http://en.wikipedia.org/wiki/de:Hypergeometrische_Verteilung[hypergeometrischen
+  Verteilung].
+  _Parameter:_
+  _Größe der Grundgesamtheit_: Anzahl der Kugeln in der Urne
+  _Anzahl möglicher Erfolge_: Anzahl der weißen Kugeln in der Urne
+  _Stichprobenumfang_: Anzahl der Kugeln, die aus der Urne genommen werden
+
+Das Balkendiagramm zeigt die Wahrscheinlichkeitsfunktion der Anzahl weißer Kugeln in den Stichproben.
+
+Hypergeometrisch(<Größe der Grundgesamtheit>, <Anzahl möglicher Erfolge>, <Stichprobenumfang>, <Wahrheitswert
+Verteilungsfunktion> )::
+  Erzeugt ein Balkendiagramm einer hypergeometrischen Verteilung, wenn der Wahrheitswert _false_ ist.
+  Erzeugt ein Balkendiagramm einer kumulativen hypergeometrischen Verteilung, wenn der Wahrheitswert _true_ ist.
+  Die ersten drei Parameter sind gleich wie oben.
+Hypergeometrisch(<Größe der Grundgesamtheit>, <Anzahl möglicher Erfolge>, <Stichprobenumfang>, <Wert der Variablen>,
+<Wahrheitswert Verteilungsfunktion>)::
+  Sei X eine hypergeometrische Zufallsvariable. Es sei v der Wert von Variablen.
+  Ist der Wahrheitswert _false_, so liefert es P( X = _v_).
+  Ist der Wahrheitswert _true_, so liefert es P( X ≤ _v_).
+  Die ersten drei Parameter sind gleich wie oben.
+
+== CAS-Ansicht
+
+In der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_Ansicht.adoc[CAS-Ansicht]
+funktioniert nur folgende Schreibweise:
+
+Hypergeometrisch(<Größe der Grundgesamtheit>, <Anzahl möglicher Erfolge>, <Stichprobenumfang>, <Wert der Variablen>,
+<Wahrheitswert Verteilungsfunktion>)::
+  Sei X eine hypergeometrische Zufallsvariable. Es sei v der Wert von Variablen.
+  Ist der Wahrheitswert _false_, so liefert es P( X = _v_).
+  Ist der Wahrheitswert _true_, so liefert es P( X ≤ _v_).
+  Die ersten drei Parameter sind gleich wie oben.
+
+[EXAMPLE]
+====
+
+Angenommen, Sie nehmen zwei von zehn Bällen, von welchen zwei weiß sind, ohne sie zurückzulegen.
+
+* `++Hypergeometrisch[10, 2, 2, 0, false]++` berechnet stem:[\frac\{28}\{45}], die Wahrscheinlichkeit, dass kein Ball
+weiß ist.
+* `++Hypergeometrisch[10, 2, 2, 1, false]++` berechnet stem:[\frac\{16}\{45}], die Wahrscheinlichkeit, dass ein Ball
+weiß ist.
+* `++Hypergeometrisch[10, 2, 2, 2, false]++` berechnet stem:[\frac\{1}\{45}], die Wahrscheinlichkeit, dass beide Bälle
+weiß sind.
+* `++Hypergeometrisch[10, 2, 2, 3, false]++` berechnet _0_, die Wahrscheinlichkeit, dass drei Bälle weiß sind.
+* `++Hypergeometrisch[10, 2, 2, 0, true]++` berechnet stem:[\frac\{28}\{45}], die Wahrscheinlichkeit, dass null oder
+weniger Bälle weiß sind.
+* `++Hypergeometrisch[10, 2, 2, 1, true]++` berechnet stem:[\frac\{44}\{45}], die Wahrscheinlichkeit, dass ein oder
+weniger Bälle weiß sind.
+* `++Hypergeometrisch[10, 2, 2, 2, true]++` berechnet _1_, die Wahrscheinlichkeit, dass zwei oder weniger Bälle weiß
+sind.
+* `++Hypergeometrisch[10, 2, 2, 3, true]++` berechnet _1_, die Wahrscheinlichkeit, dass drei oder weniger Bälle weiß
+sind.
+
+====

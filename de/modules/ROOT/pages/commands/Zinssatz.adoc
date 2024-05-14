@@ -1,0 +1,46 @@
+= Zinssatz (Befehl)
+:page-en: commands/Rate_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Zinssatz[ <Anzahl der Perioden>, <Zahlung>, <Barwert>, <Endwert (optional)>, <Fälligkeit (optional)>, <Schätzung
+(optional)> ]::
+  Liefert den Zinssatz für eine Annuität pro Zahlungsperiode.
+
+* *<Anzahl der Perioden>* Gesamtanzahl der Zahlungsperioden.
+* *<Zahlung>* Wert der regelmäßigen Zahlung (pro Periode).
+* *<Barwert>* Gesamtbetrag, den eine Reihe von zukünftigen Zahlungen zum gegenwärtigen Zeitraum wert ist.
+* *<Endwert (optional)>* Zukünftiger Betrag, den Sie nach der letzten Zahlung erreicht haben möchten. Wird kein Endwert
+eingegeben, wird dieser mit 0 festgelegt.
+* *<Fälligkeit (optional)>* Legt fest, wann die Zahlungen zu tätigen sind. Wird kein Wert oder der Wert 0 eingegeben,
+ist die Zahlung am Ende der jeweiligen Periode zu tätigen (nachschüssig). Wird 1 eingegeben, sind die Zahlungen am
+Beginn einer Periode zu tätigen (vorschüssig).
+* *<Schätzung (optional)>* Ihre Schätzung der Höhe des Zinssatzes.
+
+[EXAMPLE]
+====
+
+`++Zinssatz[5*12, -300, 10000]++` liefert einen monatlichen Zinssatz von 0.02 (2%).
+
+[NOTE]
+====
+
+Geben sie für die `++<Anzahl der Perioden>++` 5*12 ein, falls sie monatliche Zahlungen über 5 Jahre tätigen.
+
+====
+
+====
+
+[NOTE]
+====
+
+Für alle Argumente gilt: Ausgaben werden mit negativen und Einnahmen mit positiven Zahlen angegeben.
+
+====
+
+[NOTE]
+====
+
+Siehe auch die Befehle xref:/commands/Zahlung.adoc[Zahlung], xref:/commands/Perioden.adoc[Perioden],
+xref:/commands/Barwert.adoc[Barwert] und xref:/commands/Endwert.adoc[Endwert].
+
+====

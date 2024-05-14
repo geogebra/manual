@@ -1,0 +1,24 @@
+= TextZuUnicode (Befehl)
+:page-en: commands/TextToUnicode_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+TextZuUnicode[ "<Text>" ]::
+  Verwandelt den Text in eine Liste von Unicode-Zahlen. Dabei wird jeder Buchstabe in eine Zahl umgewandelt.
+
+[EXAMPLE]
+====
+
+* `++TextZuUnicode["GeoGebra Text"]++` erzeugt die folgende Liste von Unicode-Zahlen: _\{71, 101, 111, 71, 101, 98, 114,
+97, 32, 84, 101, 120, 116}_.
+* Sei _Text1_ _"GeoGebra"_, dann erzeugt die Eingabe `++TextZuUnicode[Text1]++` die folgende Liste von Unicode-Zahlen:
+_\{71, 101, 111, 71, 101, 98, 114, 97}_.
+
+====
+
+[NOTE]
+====
+
+Siehe auch die Befehle xref:/commands/UnicodeZuText.adoc[UnicodeZuText] und
+xref:/commands/BuchstabeZuUnicode.adoc[BuchstabeZuUnicode].
+
+====

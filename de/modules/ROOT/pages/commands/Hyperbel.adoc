@@ -1,0 +1,50 @@
+= Hyperbel (Befehl)
+:page-en: commands/Hyperbola_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Hyperbel( <Brennpunkt>, <Brennpunkt>, <Halbachsenlänge> )::
+  Erstellt eine Hyperbel zu den zwei gegebenen Brennpunkten und der angegebenen Halbachsenlänge.
+
+[EXAMPLE]
+====
+
+`++Hyperbel[(0, -4), (2, 4), 1]++` liefert _-8xy - 15y² + 8y = -16_.
+
+====
+
+[NOTE]
+====
+
+Falls die Bedingung: _0 < 2*Halbachsenlänge < Abstand der Brennpunkte_ nicht erfüllt ist, dann liefert dieser Befehl
+eine Ellipse.
+
+====
+
+Hyperbel( <Brennpunkt>, <Brennpunkt>, <Strecke> )::
+  Erstellt eine Hyperbel zu den zwei gegebenen Brennpunkten und verwendet als Halbachsenlänge die Länge der angegebenen
+  Strecke.
+
+[EXAMPLE]
+====
+
+Sei `++a = Strecke[(0,1), (2,1)]++`. `++Hyperbel[(4, 1), (-2, 1), a]++` liefert _-5x² + 4y² + 10x - 8y = -19_ .
+
+====
+
+Hyperbel( <Brennpunkt>, <Brennpunkt>, <Punkt> )::
+  Erstellt eine Hyperbel zu den zwei gegebenen Brennpunkten, die durch den angegebenen Punkt verläuft.
+
+[EXAMPLE]
+====
+
+`++Hyperbel[(1, 1), (2, 1), (-2,-4)]++` liefert _-2.69x² + 1.30y² + 8.07x - 2.62y = 4.52_ .
+
+====
+
+[NOTE]
+====
+
+Siehe auch das Werkzeug image:24px-Mode_hyperbola3.svg.png[Mode hyperbola3.svg,width=24,height=24]
+xref:/tools/Hyperbel.adoc[Hyperbel].
+
+====

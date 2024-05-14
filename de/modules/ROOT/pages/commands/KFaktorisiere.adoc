@@ -1,0 +1,34 @@
+= KFaktorisiere (Befehl)
+:page-en: commands/CFactor_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+== CAS-Ansicht
+
+KFaktorisiere( <Ausdruck> )::
+  Faktorisiert den angegebenen Ausdruck. Auch komplexe Ausdrücke sind möglich.
+
+[EXAMPLE]
+====
+
+`++KFaktorisiere[x^2 + 4]++` ergibt _(x + 2 ί) (x - 2 ί)_.
+
+====
+
+KFaktorisiere( <Ausdruck>, <Variable> )::
+  Faktorisiert den angegebenen Ausdruck, bezüglich einer bestimmten Variable. Auch komplexe Ausdrücke sind möglich.
+
+[EXAMPLE]
+====
+
+`++KFaktorisiere[a^2 + x^2, a]++` ergibt _(ί x + a) (- ί x + a)_, die Faktorisierung von _a^2^ + x^2^_ bezüglich _a_.
+`++KFaktorisiere[a^2 + x^2, x]++` ergibt _(x + ί a) (x - ί a)_, die Faktorisierung von _a^2^ + x^2^_ bezüglich _x_.
+
+====
+
+[NOTE]
+====
+
+Dieser Befehl faktorisiert Ausdrücke über den komplexen Zahlen. Um über den rationalen Zahlen zu faktorisieren siehe den
+Befehl xref:/commands/Faktorisiere.adoc[Faktorisiere].
+
+====

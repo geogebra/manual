@@ -1,0 +1,119 @@
+= Grafik-Ansicht anpassen
+:page-en: Customizing_the_Graphics_View
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Die Lage des sichtbaren Teils der image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Grafik_Ansicht.adoc[Grafik-Ansicht] kann mithilfe verschiedener Werkzeuge verändert werden: Nach Auswahl des
+Werkzeugs image:24px-Mode_translateview.svg.png[Mode translateview.svg,width=24,height=24]
+xref:/tools/Verschiebe_Grafik_Ansicht.adoc[Verschiebe Grafik-Ansicht] kann die
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Grafik-Ansicht_ mitsamt der
+abgebildeten Objekte durch Ziehen verschoben werden. Zusätzlich kann der sichtbare Ausschnitt der
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Grafik-Ansicht_ auf verschiedene Arten
+vergrößert oder verkleinert werden:
+
+* Verwendet man die Werkzeuge image:24px-Mode_zoomin.svg.png[Mode zoomin.svg,width=24,height=24]
+xref:/tools/Vergrößere.adoc[Vergrößere] und image:24px-Mode_zoomout.svg.png[Mode
+zoomout.svg,width=24,height=24]xref:/tools/Verkleinere.adoc[Verkleinere], so vergrößert bzw. verkleinert man die
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Grafik-Ansicht_.
++
+[NOTE]
+====
+
+Die Position des Klicks bestimmt das Zentrum der Vergrößerung bzw. Verkleinerung.
+
+====
+* Auch das Mausrad kann zur Vergrößerung oder Verkleinerung des sichtbaren Teils der
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Grafik-Ansicht_ verwendet werden.
+* Zusätzlich können die folgenden Tastenkombinationen verwendet werden: [.kcode]#Ctrl# + [.kcode]#+# für Vergrößerung,
+[.kcode]#Ctrl # + [.kcode]# -# für Verkleinerung
+* Ein Rechts-Klick (Mac OS: Ctrl - Klick) auf eine leere Stelle in der image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Grafik-Ansicht öffnet ein xref:/Kontext_Menü.adoc[Kontext-Menü], dessen Zoom-Option
+verschiedene Prozentwerte für Vergrößerung und Verkleinerung enthält._
+* Sie können auch den Wertebereich der _x_- und _y_-Achse im
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Eigenschaften_Dialog.adoc[Eigenschaften-Dialog] der image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Grafik-Ansicht_ festlegen (dazu mehr weiter unten).
+
+== Objekte anzeigen und ausblenden
+
+In der image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+xref:/Algebra_Ansicht.adoc[Algebra-Ansicht] wird der aktuelle Sichtbarkeits-Status eines Objektes links neben dem
+jeweiligen Objekt angezeigt (eingeblendet oder ausgeblendet). Man kann direkt auf das kleine Kreis-Symbol klicken, um
+den Sichtbarkeitsstatus zu ändern. Für weitere Informationen siehe xref:/Objekteigenschaften.adoc[Sichtbarkeit].
+
+== Eigenschaften der Grafik-Ansicht (Eigenschaften-Dialog)
+
+Die Koordinatenachsen, das Koordinatengitter und noch einiges mehr können mithilfe des
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Eigenschaften_Dialog.adoc[Eigenschaften-Dialogs] der image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Grafik-Ansicht_ angepasst werden. Nach einem Rechts-Klick (Mac OS: Ctrl-Klick) auf
+eine leere Stelle in der image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+_Grafik-Ansicht_ kann dieser Dialog durch Auswahl der Option _Grafik_ im erscheinenden
+xref:/Kontext_Menü.adoc[Kontext-Menü] geöffnet werden.
+
+== Anpassen der Koordinatenachsen und des Koordinatengitters
+
+Die Koordinatenachsen und das Koordinatengitter in der image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Grafik-Ansicht_ können ein- oder ausgeblendet werden. Ein Rechts-Klick (Mac OS:
+Ctrl-Klick) auf die image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Grafik-Ansicht_
+öffnet ein _Kontext-Menü_, in dem die entsprechenden Optionen [File:Stylingbar graphicsview show or hide the
+axes.svg|link=|20px]] Achsen oder image:20px-Stylingbar_graphicsview_show_or_hide_the_grid.svg.png[Stylingbar
+graphicsview show or hide the grid.svg,width=20,height=20] Koordinatengitter ausgewählt werden können. Weitere
+Einstellungsmöglichkeiten finden Sie im image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+_Eigenschaften-Dialog_.
+
+* Im Tab _Grundeinstellungen_ können Sie z. B. die Linienart und Farbe der Koordinatenachsen ändern, oder das Verhältnis
+der beiden Achsen zueinander bestimmen. Um sicher zu gehen, dass das Verhältnis der Achsen nicht geändert wird, können
+Sie es sperren, indem Sie das Schloss-Symbol aktivieren.
+
+* In den Tabs _xAchse_ oder _yAchse_ können Sie die Achsen individuell anpassen, z. B. die Achsenmarkierungen,
+Beschriftungen, Sichtbarkeit und mehr festlegen. Wenn Sie möchten, dass sich die Achsen im Punkt _(a, b)_ schneiden,
+sollten Sie den _Schneidet bei_-Parameter in _xAchse_ auf _b_ und in _yAchse_ auf _a_ setzen. Die Option _Fixiert am
+Rand_ bedeutet, dass die Achsen nahe am unteren und linken Rand des GeoGebra-Fensters bleiben. Um nur den Teil der
+Achsen zu zeichnen, der sich über bzw. rechts des Schnittpunktes befindet, können Sie die Option _Nur positive Achse_
+verwenden.
+
+* Im Tab _Koordinatengitter_ können Sie die Farbe und Linienart des Koordinatengitters sowie den Abstand und das
+Verhältnis der Gitterlinien zu einem bestimmten Wert einstellen und festlegen, ob das Koordinatengitter angezeigt wird.
+Außerdem können sie auswählen welchen Typ von Koordinatengitter sie möchten: Kartesisch, isometrisch oder polare.
+
+[NOTE]
+====
+
+* Die Skalierung der Achsen kann unabhängig vom aktuell ausgewählten Werkzeug verändert werden, indem man die
+Umschalt-Taste (MS Windows: auch [.kcode]#Strg#-Taste) gedrückt hält während man an einer Achse zieht.
+* Der Wertebereich der Achsen kann auch dynamisch angegeben werden, z.B. kann man im Tab _Grundeinstellungen_ _x Min_
+auf `++x(A)++` und _y Min_ auf `++y(A)++` setzen um festzulegen, dass die untere linke Ecke der Ansicht im Punkt _A_
+bleibt. Bei diesen Einstellungen kann die Ansicht jedoch nicht mehr vergrößert oder verkleinert werden.
+
+====
+
+== Navigationsleiste anzeigen
+
+Sie können die xref:/Navigationsleiste.adoc[Navigationsleiste für Konstruktionsschritte] zur
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Grafik-Ansicht_ hinzufügen, indem Sie
+sie im Tab _Grundeinstellungen_ des image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+_Eigenschaften-Dialogs_ aktivieren. Des Weiteren können Sie auch eine _Abspielen_-Schaltfläche zum Animieren der
+Konstruktionsschritte hinzufügen, sowie eine Schaltfläche um das image:16px-Menu_view_construction_protocol.svg.png[Menu
+view construction protocol.svg,width=16,height=16] xref:/Konstruktionsprotokoll.adoc[Konstruktionsprotokoll] sichtbar zu
+machen.
+
+== Diverses
+
+Folgende Einstellungsmöglichkeiten befinden sich im letzten Teil des Tabs _Grundeinstellungen_ im
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Eigenschaften-Dialog_:
+
+Hintergrundfarbe
+
+Ermöglicht es Ihnen die Hintergrundfarbe der image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Grafik-Ansicht_ zu ändern.
+
+Tooltips
+
+Hier können Sie das Verhalten von Tooltips in der image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Grafik-Ansicht_ einstellen. Für weitere Details beachten Sie bitte den Artikel über
+xref:/Tooltips.adoc[Tooltips].
+
+Mauskoordinaten anzeigen
+
+Ist diese Option aktiviert, dann werden die Koordinaten des Mauszeigers neben dem Mauszeiger angezeigt.

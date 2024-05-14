@@ -1,0 +1,36 @@
+= GröbnerLexGrad (Befehl)
+:page-en: commands/GroebnerLexDeg_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+== CAS Syntax
+
+GröbnerLexGrad[ <Liste von Polynomen> ]::
+  Berechnet die Gröbner-Basis der Liste von Polynomen in Bezug auf die gradierte, absteigende lexikographische Ordnung
+  der Variablen.
+GröbnerLexGrad[ <Liste von Polynomen>, <Liste von Variablen> ]::
+  Berechnet die Gröbner-Basis der Liste von Polynomen in Bezug auf die gradierte, absteigende lexikographische Ordnung
+  der gegebenen Variablen.
+
+[EXAMPLE]
+====
+
+`++GroebnerLexDeg[{x^3 - y -2, x^2 + y + 1}, {y, x}]++` liefert \{stem:[ x^\{2} + y + 1, -y x - y - x - 2, y^\{2} + 3 y
+- x + 3 ]}.
+
+====
+
+[EXAMPLE]
+====
+
+`++GröbnerLexGrad[{x^3 - y - 2, x^2 + y + 1}]++` liefert \{stem:[ -y^\{2} + x - 3 y - 3, -x y - x - y - 2, x^\{2} + y +
+1]}.
+
+====
+
+[NOTE]
+====
+
+Siehe auch die Befehle xref:/commands/GröbnerGradRevLex.adoc[GröbnerGradRevLex] und
+xref:/commands/GröbnerLex.adoc[GroebnerLex].
+
+====

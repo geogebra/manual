@@ -1,0 +1,26 @@
+= VerwandleInZahl (Befehl)
+:page-en: commands/ParseToNumber_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+VerwandleInZahl( <Name der Zahl>, <Text> )::
+  Verwandelt einen Text und speichert das Ergebnis als xref:/Zahlen_und_Winkel.adoc[Zahl] _a_. Zahl _a_ muss davor
+  definiert werden und xref:/Freie_und_abhängige_Objekte_Hilfsobjekte.adoc[frei] sein.
+  Dies ist ein xref:/commands/Skripting_(Befehle).adoc[Skripting-Befehl], welcher den Wert einer Zahl nur einmal
+  festlegt. Um einen Text _Text1_ in eine Zahl zu verwandeln, welche dynamisch aktualisiert wird, benutzen Sie den
+  Befehl xref:/commands/VonBasis.adoc[VonBasis][Text1, 10].
+
+[EXAMPLE]
+====
+
+Definieren Sie `++ a = 3++` und `++Text1 = "6"++`.
+
+`++ VerwandleInZahl[a, Text1]++` ergibt _a = 6_.
+
+====
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/VerwandleInFunktion.adoc[VerwandleInFunktion].
+
+====

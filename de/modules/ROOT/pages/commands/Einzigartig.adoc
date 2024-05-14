@@ -1,0 +1,34 @@
+= Einzigartig (Befehl)
+:page-en: commands/Unique_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Einzigartig( <Liste> )::
+  Erzeugt eine Liste mit den Elementen (Zahlen oder Texte) der gegebenen Liste in aufsteigender Reihenfolge. Mehrfach
+  vorkommende Elemente werden nur einmal angeführt.
+
+[EXAMPLE]
+====
+
+* `++Einzigartig[{1, 2, 4, 1, 4}]++` liefert _\{1, 2, 4}_.
+* `++Einzigartig[{"a", "b", "Hallo", "Hallo"}]++` liefert _\{"Hallo", "a", "b"}_.
+
+====
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/Häufigkeit.adoc[Häufigkeit].
+
+====
+
+== CAS-Ansicht
+
+Einzigartig( <Liste> )::
+  Erzeugt eine Liste, in welcher jedes Element der gegebenen Liste nur einmal vorkommt.
+
+[EXAMPLE]
+====
+
+`++Einzigartig[{1, x, x, 1, a}]++` liefert _\{1, x, a}_.
+
+====

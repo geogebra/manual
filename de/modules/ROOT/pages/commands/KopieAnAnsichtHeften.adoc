@@ -1,0 +1,46 @@
+= KopieAnAnsichtHeften (Befehl)
+:page-en: commands/AttachCopyToView_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+KopieAnAnsichtHeften( <Objekt>, <Ansicht 0|1|2> )::
+  Bei _Ansicht=0_ wird eine Kopie des gegebenen Objekts erzeugt. Bei _Ansicht = 1_ oder _Ansicht = 2_ wird eine
+  abhängige Kopie des Objekts in der angegebenen image:16px-Menu_view_graphics.svg.png[Menu view
+  graphics.svg,width=16,height=16] xref:/Grafik_Ansicht.adoc[Grafik-Ansicht] erzeugt, deren Größe (beim Ziehen des
+  Objekts) konstant bleibt.
+KopieAnAnsichtHeften( <Objekt>, <Ansicht 0|1|2>, <Punkt 1>, <Punkt 2>, <Bildschirmpunkt 1>, <Bildschirmpunkt 2> )::
+  Bei _Ansicht=0_ wird eine Kopie des Objekts erzeugt. Bei _Ansicht = 1_ oder _Ansicht = 2_ wird eine abhängige Kopie
+  des Objekts in der angegebenen image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/Grafik_Ansicht.adoc[Grafik-Ansicht] erzeugt, deren Größe durch folgende affine Transformation definiert wird:
+  _Punkt 1_ wird auf einen Punkt abgebildet, dessen Bildschirmkoordinaten (in Pixel) dem _Bildschirmpunkt 1_ entsprechen
+  und _Punkt 2_ analog auf _Bildschirmpunkt 2_.
+
+[EXAMPLE]
+====
+
+Sei `++Quadrat = Vieleck[(0, 0), (1, 0), (1, 1), (0, 1)]++`. Falls die Grafik-Ansicht 1 geöffnet ist, erzeugt
+`++KopieAnAnsichtHeften[Quadrat, 1, (0, 0), (1, 1), (0, 0), (100, 100)]++` ein _100px x 100px_ Quadrat in der linken
+oberen Ecke der Grafik-Ansicht.
+
+====
+
+[EXAMPLE]
+====
+
+Sei `++Quadrat = Vieleck[(0, 0), (1, 0), (1, 1), (0, 1)]++`.Falls die Grafik-Ansicht 1 geöffnet ist, erzeugt
+`++KopieAnAnsichtHeften[Quadrat, 1]++` ein Quadrat gleicher Größe an derselben Position.
+
+====
+
+[NOTE]
+====
+
+Es werden alle Punkte des Objekts abgebildet, auch wenn diese außerhalb der Ansicht liegen.
+
+====
+
+[NOTE]
+====
+
+Wurde bereits eine Kopie erstellt, so enthält der Befehl automatisch drei weitere Argumente.
+
+====

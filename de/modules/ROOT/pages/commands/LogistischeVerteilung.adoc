@@ -1,0 +1,23 @@
+= LogistischeVerteilung (Befehl)
+:page-en: commands/Logistic_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+LogistischeVerteilung( <Mittelwert>, <Parameter>, x )::
+  Erzeugt die Wahrscheinlichkeitsdichtefunktion einer
+  http://en.wikipedia.org/wiki/de:Logistische_Verteilung[logistischen Verteilung] mit den Parametern Mittelwert _μ_ und
+  Parameter _s_.
+LogistischeVerteilung( <Mittelwert>, <Parameter>, x, <Wahrheitswert Verteilungsfunktion> )::
+  Erzeugt eine kumulative Verteilungsfunktion einer logistischen Verteilung, wenn der Wahrheitswert _true_ ist,
+  ansonsten die Wahrscheinlichkeitsdichtefunktion einer logistischen Verteilung.
+LogistischeVerteilung( <Mittelwert>, <Parameter>, <Wert der Variable> )::
+  Berechnet den Wert der kumulativen Verteilungsfunktion der logistischen Verteilung beim Wert _v_. D.h. es wird die
+  Wahrscheinlichkeit _P(X ≤ v)_ berechnet, wobei _X_ eine logistische Zufallsvariable mit den Parametern Mittelwert _μ_
+  und Parameter _s_ ist.
+
+[NOTE]
+====
+
+Es berechnet also die Wahrscheinlichkeit für den angegebenen _x_-Koordinatenwert (oder die Fläche unter der logistischen
+Verteilungskurve links vom angegebenen _x_-Wert).
+
+====

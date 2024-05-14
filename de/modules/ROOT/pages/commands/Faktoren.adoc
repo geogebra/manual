@@ -1,0 +1,59 @@
+= Faktoren (Befehl)
+:page-en: commands/Factors_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Faktoren( <Polynom> )::
+  Liefert eine Liste von Listen _\{Faktor, Exponent}_, die die einzelnen Faktoren des Polynoms enthält. Das Produkt
+  dieser Faktoren potenziert mit dem entsprechenden _Exponent_ entspricht dem gegebenen Polynom. Die Faktoren werden
+  aufsteigend nach dem Grad sortiert.
+
+[EXAMPLE]
+====
+
+`++Faktoren[x^8 - 1]++` liefert _\{\{x^4 + 1, 1}, \{x^2 + 1, 1}, \{x + 1, 1}, \{x - 1, 1}}_.
+
+====
+
+[NOTE]
+====
+
+Nicht alle diese Faktoren sind über den reellen Zahlen irreduzibel.
+
+====
+
+Faktoren( <Zahl> )::
+  Führt eine http://en.wikipedia.org/wiki/de:Primfaktorzerlegung[Primfaktorzerlegung] durch, d.h. liefert eine Liste von
+  Listen _\{Primzahl, Exponent}_, die die einzelnen Primfaktoren der Zahl enthält. Die Primzahlen werden in
+  aufsteigender Reihenfolge sortiert.
+
+[EXAMPLE]
+====
+
+* `++Faktoren[1024]++` liefert _\{\{2, 10}}_.
+
+====
+
+[NOTE]
+====
+
+Siehe auch die Befehle xref:/commands/Primfaktoren.adoc[Primfaktoren] und
+xref:/commands/Faktorisiere.adoc[Faktorisiere].
+
+====
+
+[NOTE]
+====
+
+In der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_Ansicht.adoc[CAS-Ansicht] können
+auch undefinierte Variablen in der Eingabe verwendet werden und die Ergebnisse werden als richtige Matrizen
+zurückgegeben.
+
+[EXAMPLE]
+====
+
+`++Faktoren[a^8 - 1]++` liefert stem:[\left( \begin\{array}\{} a - 1 & 1 \\ a +1 & 1 \\a^2 + 1& 1 \\a^4 + 1& 1 \\
+\end\{array} \right)].
+
+====
+
+====

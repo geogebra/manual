@@ -1,0 +1,85 @@
+= Tangente (Befehl)
+:page-en: commands/Tangent_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Tangente[ <Punkt>, <Kegelschnitt> ]::
+  Erzeugt (alle) Tangenten durch den Punkt an den Kegelschnitt.
+Tangente[ <Punkt>, <Funktion> ]::
+  Erzeugt die Tangente an die Funktion in _x = x(A)_.
+Tangente[ <Punkt auf Kurve>, <Kurve> ]::
+  Erzeugt die Tangente durch den Punkt an die Kurve.
+Tangente[ <x-Wert>, <Funktion> ]::
+  Erzeugt die Tangente an die Funktion an der Stelle _x = x-Wert_.
+Tangente[ <Parallele Gerade>, <Kegelschnitt> ]::
+  Erzeugt (alle) Tangenten an den Kegelschnitt, welche parallel zur gegebenen Geraden sind.
+Tangente[ <Kreis>, <Kreis> ]::
+  Erzeugt die gemeinsamen Tangenten der beiden Kreise (bis zu 4 mögliche).
+Tangente( <Punkt>, <Spline> )::
+  Erzeugt die Tangente durch den Punkt an den Spline.
+
+[EXAMPLE]
+====
+
+Sei _A = (0, 1)_, _B = (4, 4)_ und _C = (0, 4)_.
+
+`++Tangente[A, Spline[{A, B, C}]]++` liefert die Gerade _a_: _y_ = _0.1x + 1_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Tangente[x^2 + y^2 = 4, (x - 6)^2 + y^2 = 4]++` erzeugt _y = 2_, _y = -2_, _1.49x + 1.67y = 4.47_ und _-1.49x + 1.67y
+= -4.47_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Tangente[y = 4, x^2 + y^2 = 4]++` erzeugt _y = 2_ und _y = -2_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Tangente[1, x^2]++` erzeugt _y = 2x - 1_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Tangente[(0, 1), Kurve[cos(t), sin(t), t, 0, π]]++` erzeugt _y = 1_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Tangente[(1, 0), x^2]++` erzeugt _y = 2x - 1_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Tangente[(5, 4), 4x^2 - 5y^2 = 20]++` erzeugt _x - y = 1_.
+
+====
+
+[NOTE]
+====
+
+_x(A)_ ist die _x_-Koordinate von dem gegebenen Punkt _A_.
+
+====
+
+[NOTE]
+====
+
+Siehe auch das Werkzeug image:22px-Mode_tangent.svg.png[Mode tangent.svg,width=22,height=22]
+xref:/tools/Tangenten.adoc[Tangenten].
+
+====

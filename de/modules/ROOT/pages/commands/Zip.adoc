@@ -1,0 +1,38 @@
+= Zip (Befehl)
+:page-en: commands/Zip_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Zip( <Ausdruck>, <Var1>, <Liste1>, <Var2>, <Liste2>, ...)::
+  Erzeugt eine xref:/Listen.adoc[Liste] von Objekten, die durch die Substitution der Variablen im Ausdruck durch
+  Elemente der entsprechenden Listen erhalten wurden. Die Länge der resultierenden Liste ist das Minimum der Längen der
+  Eingabe-Listen.
+
+[EXAMPLE]
+====
+
+Sei _Liste1=\{x^2, x^3, x^6}_ eine Liste von Polynomen. `++Zip[Grad[a], a, Liste1]++` erstellt die Liste _\{2,3,6}_.
+
+====
+
+[EXAMPLE]
+====
+
+Seien P, Q, R, S Punkte. `++Zip[Mittelpunkt[A,B],A,{P,Q},B,{R,S}]++` erzeugt eine Liste, die die
+xref:/commands/Mittelpunkt.adoc[Mittelpunkte] der Strecken _PR_ und _QS_ enthält.
+
+====
+
+[NOTE]
+====
+
+Die Elemente jeder Liste müssen vom selben Typ sein.
+
+====
+
+[NOTE]
+====
+
+Es reicht auch, nur eine Liste anzugeben. Auf diese Weise können ähnliche Konstrukte wie "for each" (oder "map") von
+anderen Programmiersprachen nachgeahmt werden.
+
+====

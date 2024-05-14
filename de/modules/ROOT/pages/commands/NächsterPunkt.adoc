@@ -1,0 +1,19 @@
+= NächsterPunkt (Befehl)
+:page-en: commands/ClosestPoint_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+NächsterPunkt[ <Pfad> , <Punkt> ]::
+  Liefert jenen neuen Punkt am xref:/Geometrische_Objekte.adoc[Pfad], der vom gewünschten Punkt den kürzesten Abstand
+  (Normalabstand) hat.
+
+[NOTE]
+====
+
+Für xref:/Funktionen.adoc[Funktionen] kennzeichnet dieser Befehl jenen Punkt am Pfad, der dem gegebenen Punkt am
+nächsten liegt. Dieser Befehl funktioniert am besten für Polynome; für andere Funktionen ist der numerische Algorithmus
+weniger stabil.
+
+====
+
+NächsterPunkt[ <Gerade>, <Gerade> ]::
+  Liefert jenen neuen Punkt auf der ersten Gerade, der von der zweiten Gerade den kürzesten Abstand (Normalabstand) hat.

@@ -1,0 +1,26 @@
+= Zelle (Befehl)
+:page-en: commands/Cell_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Zelle( <Spalte>, <Reihe> )::
+  Liefert eine Kopie der Zelle der image:16px-Menu_view_spreadsheet.svg.png[Menu view
+  spreadsheet.svg,width=16,height=16] xref:/Tabellen_Ansicht.adoc[Tabellen-Ansicht] in der ausgewählten Spalte und
+  Reihe.
+
+[EXAMPLE]
+====
+
+`++Zelle[2, 1]++` liefert eine Kopie von B1.
+
+====
+
+[NOTE]
+====
+
+* Die Zellen in einer Tabelle sind automatisch xref:/Freie_und_abhängige_Objekte_Hilfsobjekte.adoc[Hilfsobjekte],
+wodurch der Befehl in diesem Fall auch Hilfsobjekte liefert.
+* Sie müssen sicher stellen, dass sich die Zelle, auf welche Sie sich beziehen, im
+image:16px-Menu_view_construction_protocol.svg.png[Menu view construction protocol.svg,width=16,height=16]
+xref:/Konstruktionsprotokoll.adoc[Konstruktionsprotokoll] vor diesem Befehl befindet.
+
+====

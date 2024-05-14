@@ -1,0 +1,34 @@
+= BruchText (Befehl)
+:page-en: commands/FractionText_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+BruchText( <Zahl> )::
+  Konvertiert die Zahl in einen Bruch, der als (LaTeX) Text-Objekt in der image:16px-Menu_view_graphics.svg.png[Menu
+  view graphics.svg,width=16,height=16] xref:/Grafik_Ansicht.adoc[Grafik-Ansicht] dargestellt wird.
+
+[EXAMPLE]
+====
+
+Geben Sie zuerst die Gerade _a: y = 1.5 x + 2_ ein. Danach erzeugt die Eingabe `++BruchText[Steigung[a]]++` den Bruch
+_3/2_ als Text.
+
+====
+
+BruchText( <Punkt> )::
+  Gibt die Koordinaten eines Punktes als (LaTeX) Text-Objekt in der image:16px-Menu_view_graphics.svg.png[Menu view
+  graphics.svg,width=16,height=16] xref:/Grafik_Ansicht.adoc[Grafik-Ansicht] an.
+
+[EXAMPLE]
+====
+
+Geben Sie zuerst den Punkt _A = (1.33,0.8)_ ein. Danach erzeugt die Eingabe `++BruchText[A]++` die Koordinaten _stem:[
+\left( \frac\{133}\{100} ,\frac\{4}\{5} \right) ]_ als Text.
+
+====
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/IrrationalerText.adoc[IrrationalerText].
+
+====

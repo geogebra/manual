@@ -1,0 +1,25 @@
+= Umfang (Befehl)
+:page-en: commands/Perimeter_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Umfang( <Vieleck> )::
+  Berechnet den Umfang des Vielecks.
+Umfang( <Kegelschnitt> )::
+  Berechnet den Umfang eines Kreises oder einer Ellipse.
+Umfang[ <Ortslinie> ]::
+  Ist die gegebene Ortslinie endlich, so liefert dieser Befehl näherungsweise deren Umfang. Ansonsten ist das Ergebnis
+  nicht definiert.
+
+[EXAMPLE]
+====
+
+`++Umfang[x^2 + 2y^2 = 1]++` ergibt _5.4_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Umfang[Vieleck[(1, 2), (3, 2), (4, 3)]]++` ergibt _6.58_.
+
+====

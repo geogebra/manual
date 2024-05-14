@@ -1,0 +1,23 @@
+= VerwandleInFunktion (Befehl)
+:page-en: commands/ParseToFunction_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+VerwandleInFunktion( <Name der Funktion>, <Text> )::
+  Verwandelt den Text und speichert das Ergebnis als xref:/Funktionen.adoc[Funktion] _f_. Die Funktion muss zuvor
+  definiert werden und xref:/Freie_und_abhängige_Objekte_Hilfsobjekte.adoc[frei] sein.
+
+[EXAMPLE]
+====
+
+Definieren Sie `++ f(x) = 3x² + 2++` und `++ Text1 = "f(x) = 3x + 1"++`.
+
+`++ VerwandleInFunktion[f(x), Text1]++` ergibt _f(x) = 3x + 1_.
+
+====
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/VerwandleInZahl.adoc[VerwandleInZahl].
+
+====

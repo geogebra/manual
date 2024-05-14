@@ -1,0 +1,14 @@
+= GaußAnteilTest (Befehl)
+:page-en: commands/ZProportionTest_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+GaußAnteilTest[ <Stichprobenanteil>, <Stichprobengröße>, <Vermuteter Anteil>, <Seite> ]::
+  Führt einen http://en.wikipedia.org/wiki/de:Gau%C3%9F-Test#Einstichproben-Gau.C3.9F-Test[Einstichproben-Gauß-Test]
+  eines Anteils mit der gegebenen Stichprobenstatistik durch. _Vermuteter Anteil_ ist der unter der Null-Hypothese
+  angenommene Anteil der Grundgesamtheit. _Seite_ hat als mögliche Werte "<", ">" , "≠". Diese bestimmen die alternative
+  Hypothese wie folgt:
+  "<" = Grundgesamtheitsanteil < _Vermuteter Anteil_
+  ">" = Grundgesamtheitsanteil > _Vermuteter Anteil_
+  "≠" = Grundgesamtheitsanteil ≠ _Vermuteter Anteil_
+
+Das Ergebnis wird als Liste in Form von \{Wert der Wahrscheinlichkeit, Testprüfgröße z} zurückgegeben.

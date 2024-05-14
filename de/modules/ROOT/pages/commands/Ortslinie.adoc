@@ -1,0 +1,43 @@
+= Ortslinie (Befehl)
+:page-en: commands/Locus_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Ortslinie( <Punkt Q, der die Ortslinie erzeugt>, <Punkt P> )::
+  Erzeugt die Ortslinie des Punktes _Q_, welche vom Punkt _P_ abhängt.
+Ortslinie[ <Punkt Q, der die Ortslinie erzeugt>, <Schieberegler t> ]::
+  Erzeugt die Ortslinie des Punktes _Q_, welche von den Werten, die _t_ annimmt, abhängt.
+Ortslinie( <Richtungsfeld>, <Punkt> )::
+  Erzeugt eine Ortslinie, welche dem Richtungsfeld im angegebenen Punkt entspricht.
+Ortslinie( <f(x, y)>, <Punkt> )::
+  Erzeugt eine Ortslinie, welche der Lösung der Differentialgleichung stem:[\frac\{dy}\{dx}=f(x,y)] im angegebenen Punkt
+  entspricht. Die Lösung wird numerisch berechnet.
+
+[NOTE]
+====
+
+Punkt _P_ muss dabei ein Punkt auf einem Objekt sein (z.B. Gerade, Strecke, Kreis).
+
+====
+
+Ortslinien sind bestimmte Objekttypen, die als xref:/Freie_und_abhängige_Objekte_Hilfsobjekte.adoc[Hilfsobjekte]
+angezeigt werden. Neben dem Befehl _Ortslinie_ können sie auch Ergebnis von
+xref:/commands/Diskrete_Mathematik_(Befehle).adoc[Diskrete Mathematik-Befehlen] und
+xref:/commands/LöseDgl.adoc[LöseDgl-Befehlen] sein. Ortslinien sind xref:/Geometrische_Objekte.adoc[Pfade] und können
+bei Pfad-abhängigen Befehlen (z.B. xref:/commands/Punkt.adoc[Punkt]) verwendet werden. Ihre Eigenschaften hängen davon
+ab, wie sie erzeugt wurden, siehe beispielsweise die Befehle xref:/commands/Umfang.adoc[Umfang] und
+xref:/commands/Erstes.adoc[Erstes].
+
+[NOTE]
+====
+
+Siehe auch das Werkzeug image:22px-Mode_locus.svg.png[Mode locus.svg,width=22,height=22]
+xref:/tools/Ortslinie.adoc[Ortslinie].
+
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Warnung,title="Warnung",width=18,height=18] *Warnung*: |Eine Ortslinie ist undefiniert, wenn
+der abhängige Punkt Ergebnis des Befehls xref:/commands/Punkt.adoc[Punkt] mit zwei Parametern oder des Befehls
+xref:/commands/PfadParameter.adoc[PfadParameter] ist.
+|===

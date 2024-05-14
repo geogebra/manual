@@ -1,0 +1,42 @@
+= Stichprobe (Befehl)
+:page-en: commands/Sample_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Stichprobe( <Liste>, <Größe> )::
+  Erzeugt eine Liste mit _n_ beliebig gewählten Elementen aus einer Liste. Die Elemente können mehrfach vorkommen.
+
+[EXAMPLE]
+====
+
+`++Stichprobe[{1, 2, 3, 4, 5}, 5]++` erzeugt zum Beispiel eine Liste _Liste1 = \{1, 2, 1, 5, 4}_.
+
+====
+
+Stichprobe( <Liste>, <Größe>, <Wahrheitswert Wiederholung möglich> )::
+  Erzeugt eine Liste mit _n_ beliebig gewählten Elementen aus einer Liste. Die Elemente können nur dann mehrfach
+  vorkommen, wenn der Wahrheitswert _true_ ist.
+
+[EXAMPLE]
+====
+
+`++Stichprobe[{1, 2, 3, 4, 5}, 5, true]++` erzeugt zum Beispiel eine Liste _Liste1 = \{2, 3, 3, 4, 5}_.
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Hinweis:* In der image:16px-Menu_view_cas.svg.png[Menu
+view cas.svg,width=16,height=16] xref:/CAS_Ansicht.adoc[CAS-Ansicht] kann die eingegebene Liste auch unterschiedliche
+Typen von Objekten enthalten:
+
+[EXAMPLE]
+====
+
+* `++Stichprobe[{-5, 2, a, 7, c}, 3]++` erzeugt zum Beispiel eine Liste _\{a, 7, -5}_.
+* Die Liste kann auch Listen enthalten: Sei _Liste1_ z.B. _\{1, 2, 3}_.
+`++Stichprobe[{Liste1, 4, 5, 6, 7, 8}, 3, false]++` erzeugt zum Beispiel eine Liste \{6, \{1, 2, 3}, 4}.
+
+====
+
+====

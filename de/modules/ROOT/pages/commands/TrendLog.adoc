@@ -1,0 +1,34 @@
+= TrendLog (Befehl)
+:page-en: commands/FitLog_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+TrendLog( <Liste von Punkten> )::
+  Berechnet die Regressionskurve in Form einer Logarithmusfunktion.
+
+[EXAMPLE]
+====
+
+`++TrendLog[{(ℯ, 1), (ℯ^2, 4)}]++` liefert _-2 + 3 ln(x)_.
+
+====
+
+== CAS-Ansicht
+
+TrendLog( <Liste von Punkten> )::
+  Berechnet die Regressionskurve in Form einer Logarithmusfunktion.
+
+[EXAMPLE]
+====
+
+`++TrendLog[{(ℯ, 1), (ℯ^2, 4)}]++` liefert _3 ln(x) - 2_.
+
+====
+
+[NOTE]
+====
+
+* die Euler'sche Zahl ℯ kann durch die Tastenkombination [.kcode]#ALT # + [.kcode]# e# eingegeben werden.
+* Siehe auch die Befehle xref:/commands/TrendExp.adoc[TrendExp], xref:/commands/TrendPoly.adoc[TrendPoly],
+xref:/commands/TrendPot.adoc[TrendPot] und xref:/commands/TrendSin.adoc[TrendSin].
+
+====

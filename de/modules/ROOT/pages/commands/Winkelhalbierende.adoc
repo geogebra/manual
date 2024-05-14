@@ -1,0 +1,50 @@
+= Winkelhalbierende (Befehl)
+:page-en: commands/AngleBisector_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:64px-Globe.png[Globe.png,width=64,height=64]
+
+a|
+Diese Seite unterscheidet sich in verschiedenen Sprachen:
+
+* [[::Winkelhalbierende (Befehl)|Winkelhalbierende (Befehl) (DE)]]
+* [[::Winkelsymmetrale (Befehl)|Winkelsymmetrale (Befehl) (AT)]]  
+
+|===
+
+Winkelhalbierende[ <Gerade>, <Gerade> ]::
+  Erzeugt beide Winkelhalbierenden der schneidenden Geraden.
+Winkelhalbierende[ <Punkt>, <Punkt>, <Punkt> ]::
+  Erzeugt die Winkelhalbierende des Winkels, der von den drei Punkten eingeschlossen wird.
+
+[EXAMPLE]
+====
+
+`++Winkelhalbierende[(1, 1), (4, 4), (7, 1)]++` liefert _a: x = 4_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Winkelhalbierende[x + y = 1, x - y = 2]++` liefert _a: x = 1.5_ und _b: y = -0.5_.
+
+====
+
+[NOTE]
+====
+
+Der zweite Punkt ist der Scheitel des Winkels.
+
+====
+
+[NOTE]
+====
+
+Siehe auch das Werkzeug /Datei:Mode_angularbisector_svg.adoc[image:22px-Mode_angularbisector.svg.png[Mode
+angularbisector.svg,width=22,height=22]] xref:/tools/Winkelhalbierende.adoc[Winkelhalbierende] .
+
+====

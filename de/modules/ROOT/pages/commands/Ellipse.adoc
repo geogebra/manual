@@ -1,0 +1,50 @@
+= Ellipse (Befehl)
+:page-en: commands/Ellipse_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Ellipse( <Brennpunkt>, <Brennpunkt>, <Halbachsenlänge> )::
+  Erstellt eine Ellipse mit den zwei gegebenen Brennpunkten und der angegebenen Halbachsenlänge.
+Ellipse( <Brennpunkt>, <Brennpunkt>, <Strecke> )::
+  Erstellt eine Ellipse mit den zwei gegebenen Brennpunkten und verwendet als Halbachsenlänge die Länge der angegebenen
+  Strecke.
+Ellipse( <Brennpunkt>, <Brennpunkt>, <Punkt> )::
+  Erstellt eine Ellipse mit den zwei gegebenen Brennpunkten, die außerdem durch den gegebenen Punkt verläuft.
+
+[EXAMPLE]
+====
+
+`++Ellipse[(0, 1), (2, 1), (1,2)]++` ergibt _1x² + 2y² - 2x - 4y = -1_.
+
+====
+
+[EXAMPLE]
+====
+
+Sei _s = Strecke[(0,1), (2,1)]_.
+
+`++Ellipse[(0, 1), (2, 1), s]++` ergibt _3x² + 4y² - 6x - 8y = 5_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Ellipse[(0, 1), (1, 1), 1]++` ergibt _12x² + 16y² - 12x - 32y = -7_.
+
+====
+
+[NOTE]
+====
+
+Falls die Bedingung _2*Halbachsenlänge_ > _Entfernung der Brennpunkte_ nicht erfüllt ist, liefert dieser Befehl eine
+Hyperbel.
+
+====
+
+[NOTE]
+====
+
+Siehe auch das Werkzeug image:24px-Mode_ellipse3.svg.png[Mode ellipse3.svg,width=24,height=24]
+xref:/tools/Ellipse.adoc[Ellipse].
+
+====

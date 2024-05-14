@@ -1,0 +1,95 @@
+= TabellenText (Befehl)
+:page-en: commands/TableText_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+TabellenText( <Liste>, <Liste>, ... )::
+  Erzeugt eine Tabelle mit den Elementen der Listen in Form eines Textobjektes.
+
+[EXAMPLE]
+====
+
+* `++Tabellentext[{x^2, 4}, {x^3, 8}, {x^4, 16}]++` erzeugt eine Tabelle mit drei Reihen und zwei Spalten (in Form eines
+Textobjektes). Die Elemente in der Tabelle sind linksbündig.
+* `++TabellenText[Folge[i^2, i, 1, 10]]++` erzeugt eine Tabelle mit einer Reihe (in Form eines Textobjektes). Die
+Elemente in der Tabelle sind linksbündig.
+
+====
+
+[NOTE]
+====
+
+Dabei wird jede Liste in einer eigenen Reihe angezeigt.
+
+====
+
+TabellenText( <Liste>, <Liste>, ..., <Textausrichtung> )::
+  Erzeugt eine Tabelle mit den Elementen der Listen in Form eines Textobjektes. Der Parameter _Textausrichtung_ legt die
+  Orientierung und Ausrichtung des Tabellentextes fest.
+
+[EXAMPLE]
+====
+
+* `++TabellenText[{1, 2, 3, 4}, {1, 4, 9, 16}, "v"]++` erzeugt eine Tabelle mit zwei Spalten und vier Reihen mit
+linksbündigen Elementen.
+* `++TabellenText[{1, 2, 3, 4}, {1, 4, 9, 16}, "h"]++` erzeugt eine Tabelle mit zwei Reihen und vier Spalten mit
+linksbündigen Elementen.
+* `++TabellenText[{11.2, 123.1, 32423.9, "234.0"}, "vr"]++` erzeugt eine Tabelle mit einer Spalte und rechtsbündigen
+Elementen.
+
+====
+
+[NOTE]
+====
+
+Mögliche Eingaben sind "vl", "vc", "vr", "v", "h", "hl", "hc", "hr" .../... . Standardmäßig ist die Ausrichtung "hl".
+
+* "v" = vertikal, d.h. die Listen sind in Spalten
+* "h" = horizontal, d.h. die Listen sind in Reihen
+* "l" = linksbündig
+* "r" = rechtsbündig
+* "c" = zentriert
+* "." = Ausrichtung auf Dezimalpunkt
+* "a" = wie "." jedoch rechtsbündig mit Nullen ergänzt
+* "%" = konvertiert den Wert in Prozent und richtet auf den Dezimalpunkt aus
+* "p" = wie *%* jedoch rechtsbündig mit Nullen ergänzt
+
+====
+
+Folgende Zeichen können ebenfalls eingefügt werden:
+
+* verschiedene Arten von Klammern ||||, ||, \{}, [] oder ()
+* Zeilentrennungszeichen _
+* Spaltentrennungszeichen |
+* verschiedener Färbung
+
+[EXAMPLE]
+====
+
+* `++TabellenText[{1, 2}, {3, 4}, "c()"]++` erzeugt den Text stem:[\begin\{pmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{pmatrix}
+]
+* `++TabellenText[{1, 2}, {3, 4}, "c|_"]++` erzeugt den Text
+/Datei:TabellaTesto_png.adoc[image:50px-TabellaTesto.png[TabellaTesto.png,width=50,height=56]]
+* `++TabellenText[{1, 2}, {3, 4}, "||"]++` erzeugt den Text stem:[ \begin\{vmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{vmatrix}
+]
+* `++TabellenText[{1, 2}, {3, 4}, "||||"]++` erzeugt den Text stem:[\begin\{Vmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{Vmatrix}
+]
+* `++TabellenText[{{"2x+3y=5","5x+8y=12"}},"{v"]++` erzeugt den Text stem:[ \left\\{\begin\{matrix} 2x+3y=5\\ 5x+8y=12
+\end\{matrix}\right.]
+* `++TabellenText[{{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "-/|_v"]++` erzeugt eine
+Tabelle mit Rahmen und ohne Trennlinien.
+* `++TabellenText[{{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "|11001 _110001 h"]++` erzeugt
+eine Tabelle mit Rahmen und einer Trennlinie rechts von der ersten Spalte und unter der ersten Reihe. Der Wert 1 in der
+Syntax bedeutet, dass eine Trennlinie zwischen den Zahlen ist und der Wert 0 bedeutet, dass keine Trennlinie oder kein
+Rahmen gemacht werden soll.
+* `++TabellenText[{{"\blue{0, 1, 2, 3, 4}", "\red{4, 3, 2, 1, 0}"}}, "v"]++` erstellt eine Tabelle, bei der die Objekte
+in der ersten Reihe blau und die Objekte in der zweiten Reihe rot eingefärbt sind.
+
+====
+
+[NOTE]
+====
+
+Die xref:/Gestaltungsleiste.adoc[Gestaltungsleiste] eines _TabellenText_-Objekts ermöglicht es das Aussehen, die
+Hintergrund- und Textfarbe und die Schriftart zu verändern.
+
+====

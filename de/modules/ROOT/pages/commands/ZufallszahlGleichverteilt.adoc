@@ -1,0 +1,43 @@
+= ZufallszahlGleichverteilt (Befehl)
+:page-en: commands/RandomUniform_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+ZufallszahlGleichverteilt( <Min>, <Max> )::
+  Liefert eine reelle Zufallszahl einer http://en.wikipedia.org/wiki/de:Stetige_Gleichverteilung[Gleichverteilung] im
+  gegebenen Intervall [_min_, _max_].
+ZufallszahlGleichverteilt( <Min>, <Max>, <Stichprobenanzahl n> )::
+  Liefert eine Liste von _n_ reellen Zufallszahlen einer
+  http://en.wikipedia.org/wiki/de:Stetige_Gleichverteilung[Gleichverteilung] im gegebenen Intervall [_min_, _max_].
+
+[EXAMPLE]
+====
+
+`++ZufallszahlGleichverteilt[0, 1, 3]++` liefert eine Liste mit drei reellen Zahlen zwischen _0_ und _1_
+
+====
+
+[EXAMPLE]
+====
+
+`++ZufallszahlGleichverteilt[0, 1]++` liefert eine reelle Zahl zwischen _0_ und _1_
+
+====
+
+[NOTE]
+====
+
+`++ZufallszahlGleichverteilt[0,1]++` ist äquivalent zu `++random()++` (siehe
+xref:/Vordefinierte_Funktionen_und_Operatoren.adoc[Vordefinierte Funktionen und Operatoren]).
+
+====
+
+[NOTE]
+====
+
+Siehe auch die Befehle xref:/commands/SetzeSeed.adoc[SetzeSeed], xref:/commands/Zufallszahl.adoc[Zufallszahl],
+xref:/commands/ZufälligesElement.adoc[ZufälligesElement],
+xref:/commands/ZufallszahlBinomialverteilt.adoc[ZufallszahlBinomialverteilt],
+xref:/commands/ZufallszahlNormalverteilt.adoc[ZufallszahlNormalverteilt],
+xref:/commands/ZufallszahlPoissonverteilt.adoc[ZufallszahlPoissonverteilt].
+
+====

@@ -1,0 +1,59 @@
+= SchneideBahnkurven (Befehl)
+:page-en: commands/IntersectPath_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+SchneideBahnkurven( <Gerade>, <Vieleck> )::
+  Erstellt die Schnittstrecke zwischen einer gegebenen Geraden und einem gegebenen Vieleck.
+SchneideBahnkurven( <Vieleck>, <Vieleck> )::
+  Erstellt den Schnitt zweier gegebener Vielecke.
+SchneideBahnkurven( <Ebene>, <Vieleck> )::
+  Erstellt die Schnittstrecke zwischen einer gegebenen Ebene und einem gegebenen Vieleck.
+SchneideBahnkurven( <Ebene>, <Quadrik> )::
+  Erstellt die Schnittkurve zwischen einer gegebenen Ebene und einer gegebenen Quadrik.
+
+[EXAMPLE]
+====
+
+`++SchneideBahnkurven[ a, Kugel ]++` gibt den Schnittkreis zwischen der Ebene _a_ mit der Quadrik _Kugel_ in der Ebene
+_a_ aus.
+
+====
+
+[EXAMPLE]
+====
+
+`++SchneideBahnkurven[ a, Dreieck ]++` gibt die Strecke zwischen dem ersten und zweiten Schnittpunkt der Ebene _a_ mit
+dem Vieleck _Dreieck_ in der Ebene des Vielecks aus.
+
+====
+
+[EXAMPLE]
+====
+
+`++SchneideBahnkurven[ Viereck, Dreieck ]++` gibt ein neues Vieleck als Schnitt des Vielecks _Viereck_ und des Vielecks
+_Dreieck_ aus.
+
+[NOTE]
+====
+
+Das neue Vieleck kann, je nachdem wie die Eckpunkte der beiden gegebenen Vielecke gewählt worden sind, entweder ein
+Viereck, Fünfeck oder Sechseck sein.
+
+====
+
+====
+
+[EXAMPLE]
+====
+
+`++SchneideBahnkurven[ a, Dreieck ]++` gibt die Strecke zwischen dem ersten und zweiten Schnittpunkt der Gerade _a_ mit
+dem Vieleck _Dreieck_ aus.
+
+====
+
+[NOTE]
+====
+
+Siehe auch die Befehle [Schneide (Befehl)
+
+====

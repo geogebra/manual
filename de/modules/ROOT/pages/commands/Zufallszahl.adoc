@@ -1,0 +1,43 @@
+= Zufallszahl (Befehl)
+:page-en: commands/RandomBetween_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Zufallszahl( <Minimalwert> , <Maximalwert> )::
+  Erzeugt eine Zufallszahl im Intervall [_Minimalwert_, _Maximalwert_].
+Zufallszahl( <Minimalwert> , <Maximalwert> , <Wahrheitswert> )::
+  Ist der _Wahrheitswert_ auf "true" gesetzt, so wird eine Zufallszahl im Intervall [_Minimalwert_, _Maximalwert_]
+  erzeugt, welche nur beim Laden der Datei und beim Anwenden der _Rückgängig/Wiederherstellen_ Schaltflächen
+  aktualisiert wird.
+
+[EXAMPLE]
+====
+
+`++Zufallszahl[0, 10, true]++` erzeugt eine Zahl zwischen _0_ und _10_ (inklusive)
+
+====
+
+[EXAMPLE]
+====
+
+`++Zufallszahl[0, 10]++` erzeugt eine Zahl zwischen _0_ und _10_ (inklusive)
+
+====
+
+[NOTE]
+====
+
+Drücken Sie [.kcode]#F9#, um den Unterschied der beiden Schreibweisen sichtbar zu machen.
+
+====
+
+[NOTE]
+====
+
+Siehe auch die Befehle xref:/commands/SetzeSeed.adoc[SetzeSeed],
+xref:/commands/ZufälligesElement.adoc[ZufälligesElement],
+xref:/commands/ZufallszahlBinomialverteilt.adoc[ZufallszahlBinomialverteilt],
+xref:/commands/ZufallszahlNormalverteilt.adoc[ZufallszahlNormalverteilt],
+xref:/commands/ZufallszahlPoissonverteilt.adoc[ZufallszahlPoissonverteilt],
+xref:/commands/ZufallszahlGleichverteilt.adoc[ZufallszahlGleichverteilt].
+
+====

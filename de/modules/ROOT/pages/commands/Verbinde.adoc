@@ -1,0 +1,40 @@
+= Verbinde (Befehl)
+:page-en: commands/Join_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Verbinde( <Liste>, <Liste>, ... )::
+  Verbindet die zwei (oder mehr) angegebenen Listen zu einer Liste.
+
+[EXAMPLE]
+====
+
+`++Verbinde[{5, 4, 3}, {1, 2, 3}]++` erzeugt die neue Liste _\{5, 4, 3, 1, 2, 3}_.
+
+====
+
+[NOTE]
+====
+
+Die neue Liste enthält alle Elemente der gegebenen Listen ohne diese umzuordnen. Auch mehrfach enthaltene Elemente
+bleiben erhalten.
+
+====
+
+Verbinde( <Liste von Listen> )::
+  Verbindet die einzelnen Listen zu einer neuen Liste.
+
+[EXAMPLE]
+====
+
+* `++Verbinde[{{1, 2}}]++` erzeugt die neue Liste _\{1, 2}_.
+* `++Verbinde[{{1, 2, 3}, {3, 4}, {8, 7}}]++` erzeugt die neue Liste _\{1, 2, 3, 3, 4, 8, 7}_.
+
+====
+
+[NOTE]
+====
+
+Die neue Liste enthält alle Elemente der gegebenen Listen ohne diese umzuordnen. Auch mehrfach enthaltene Elemente
+bleiben erhalten.
+
+====

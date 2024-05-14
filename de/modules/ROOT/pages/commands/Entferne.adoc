@@ -1,0 +1,25 @@
+= Entferne (Befehl)
+:page-en: commands/Remove_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Entferne[ <Liste>, <Liste> ]::
+  Entfernt Elemente der ersten Liste so oft wie sie in der zweiten vorkommen.
+
+[EXAMPLE]
+====
+
+`++Entferne[{1,3,4,4,9},{1,4,5}]++` ergibt die Liste `++{3,4,9}++`.
+
+====
+
+[NOTE]
+====
+
+* {blank}
++
+Siehe auch xref:/commands/EntferneUndefiniert.adoc[EntferneUndefiniert].
+* {blank}
++
+Die Differenz von Mengen liefert nicht dasselbe Ergebnis. `++{1,3,4,4,9} \ {1,4,5}++` ergibt die Liste `++{3,4}++`.
+
+====

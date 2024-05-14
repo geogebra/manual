@@ -1,0 +1,164 @@
+= Vordefinierte Funktionen und Operatoren
+:page-en: Predefined_Functions_and_Operators
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Um Zahlen, Koordinaten oder Gleichungen mithilfe der xref:/Eingabezeile.adoc[Eingabezeile] zu erstellen, können Sie die
+folgenden vordefinierten Funktionen und Operatoren verwenden. Logik-Operatoren und -Funktionen sind im Artikel über
+xref:/Wahrheitswerte.adoc[Wahrheitswerte] aufgelistet.
+
+[NOTE]
+====
+
+Die vordefinierten Funktionen müssen zusammen mit runden Klammern eingegeben werden. Dabei darf sich kein Leerzeichen
+zwischen dem Namen der Funktion und der öffnenden runden Klammer befinden.
+
+====
+
+[cols=",",options="header",]
+|===
+|Operation / Funktion |Eingabe
+|ℯ (http://en.wikipedia.org/wiki/de:Eulersche_Zahl[Eulersche Zahl]) |[.kcode]#Alt# + [.kcode]#e#
+
+|ί (http://en.wikipedia.org/wiki/de:Imagin%C3%A4re_Einheit[Komplexe Zahl]) |[.kcode]#Alt# + [.kcode]#i#
+
+|π |[.kcode]#Alt# + [.kcode]#p# oder pi
+
+|° (http://en.wikipedia.org/wiki/de:Gradzeichen[Gradzeichen]) |[.kcode]#Alt# + [.kcode]#o#
+
+|Addition |+
+
+|Subtraktion |-
+
+|Multiplikation |* oder Leerzeichen
+
+|Skalarprodukt |* oder Leerzeichen
+
+|Kreuzprodukt (siehe xref:/Punkte_und_Vektoren.adoc[Punkte und Vektoren]) |⊗
+
+|Division |/
+
+|Potenzieren |^ oder Hochstellung (`++x^2++` oder `++x2++`)
+
+|Faktorielle |!
+
+|Klammersetzung |( )
+
+|x-Koordinate |x( )
+
+|y-Koordinate |y( )
+
+|z-Koordinate |z( )
+
+|Argument (funktioniert auch bei 3D Punkten und Vektoren) |arg()
+
+|Konjugiert-komplexe Zahl |conjugate()
+
+|Absolutbetrag |abs( )
+
+|Höhenwinkel |alt()
+
+|Signum |sgn( ) oder sign( )
+
+|Quadratwurzel |sqrt( )
+
+|Kubikwurzel |cbrt( )
+
+|Zufallszahl zwischen 0 und 1 |random( )
+
+|Exponentialfunktion |exp( ) oder ℯ^x^
+
+|Logarithmus (natürlich) zur Basis e |ln( ) oder log( )
+
+|Logarithmus zur Basis 2 |ld( )
+
+|Logarithmus zur Basis 10 |lg( )
+
+|Logarithmus von _x_ zur Basis _b_ |log(b, x)
+
+|Kosinus |cos( )
+
+|Sinus |sin( )
+
+|Tangens |tan( )
+
+|Sekante |sec()
+
+|Kosekante |cosec()
+
+|Kotangens |cot()
+
+|Arcus Kosinus (Antwort in Radiant) |acos( ) oder arccos( )
+
+|Arcus Kosinus (Antwort in Grad) |acosg( )
+
+|Arcus Sinus (Antwort in Radiant) |asin( ) oder arcsin( )
+
+|Arcus Sinus (Antwort in Grad) |asing( )
+
+|Arcus Tangens (gibt eine Antwort zwischen -π/2 und π/2 zurück) |atan( ) oder arctan( )
+
+|Arcus Tangens (gibt eine Antwort zwischen -90° und 90° zurück) |atang( )
+
+|Arcus Tangens http://de.wikipedia.org/wiki/Arkustangens_und_Arkuskotangens#atan2[(gibt eine Antwort zwischen -π und π
+zurück)] |atan2(y, x)
+
+|Arcus Tangens http://de.wikipedia.org/wiki/Arkustangens_und_Arkuskotangens#atan2[(gibt eine Antwort zwischen -180 und
+180 zurück)] |atan2g(y, x)
+
+|Kosinus Hyperbolicus |cosh( )
+
+|Sinus Hyperbolicus |sinh( )
+
+|Tangens Hyperbolicus |tanh( )
+
+|Sekans Hyperbolicus |sech()
+
+|Kosekans Hyperbolicus |cosech()
+
+|Kotangens Hyperbolicus |coth()
+
+|Area Kosinus Hyperbolicus |acosh( ) oder arccosh( )
+
+|Area Sinus Hyperbolicus |asinh( ) oder arcsinh( )
+
+|Area Tangens Hyperbolicus |atanh( ) oder arctanh( )
+
+|Nächst kleinere oder gleiche ganze Zahl |floor( )
+
+|Nächst größere oder gleiche ganze Zahl |ceil( )
+
+|Runden |round( )
+
+|http://mathworld.wolfram.com/BetaFunction.html[Betafunktion] Β(a, b) |beta(a, b)
+
+|http://mathworld.wolfram.com/IncompleteBetaFunction.html[Unvollständige Betafunktion] Β(x;a, b) |beta(a, b, x)
+
+|http://mathworld.wolfram.com/RegularizedBetaFunction.html[Unvollständig regularisierte Betafunktion] I(x; a, b)
+|betaRegularized(a, b, x)
+
+|http://en.wikipedia.org/wiki/de:Gammafunktion[Gammafunktion] |gamma( x)
+
+|http://mathworld.wolfram.com/IncompleteGammaFunction.html[Unvollständige Gammafunktion] γ(a, x) |gamma(a, x)
+
+|http://mathworld.wolfram.com/RegularizedGammaFunction.html[Unvollständig regularisierte Gammafunktion]
+|gammaRegularized(a, x)
+
+|http://en.wikipedia.org/wiki/de:Fehlerfunktion[Gaußsche Fehlerfunktion] |erf(x)
+
+|xref:/commands/Realteil.adoc[Realteil] |real( )
+
+|xref:/commands/Imaginärteil.adoc[Imaginärteil] |imaginary( )
+
+|http://en.wikipedia.org/wiki/de:Digamma-Funktion[Digamma-Funktion] |psi(x)
+
+|Die http://de.wikipedia.org/wiki/Polygammafunktion[Polygammafunktion] ist die (m+1)-te Ableitung vom natürlichen
+Logarithmus der http://de.wikipedia.org/wiki/Gammafunktion[Gammafunktion, gamma(x)] (m=0,1) |polygamma(m, x)
+
+|http://de.wikipedia.org/wiki/Integralsinus[Integralsinusfunktion] |sinIntegral(x)
+
+|http://de.wikipedia.org/wiki/Integralcosinus[Integralkosinusfunktion] |cosIntegral(x)
+
+|http://de.wikipedia.org/wiki/Integralexponentialfunktion[Integralexponentialfunktion] |expIntegral(x)
+
+|http://de.wikipedia.org/wiki/Riemannsche_ζ-Funktion[Riemannsche Zeta-Funktion] ζ(x) |zeta(x)
+|===

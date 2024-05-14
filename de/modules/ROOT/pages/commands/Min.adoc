@@ -1,0 +1,79 @@
+= Min (Befehl)
+:page-en: commands/Min_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Min( <Liste> )::
+  Gibt das Minimum der Zahlen in der Liste an.
+
+[EXAMPLE]
+====
+
+`++Min[{-2, 12, -23, 17, 15}]++` berechnet _-23_.
+
+====
+
+[NOTE]
+====
+
+Handelt es sich bei den Elementen in der Liste nicht um Zahlen, so werden die mit den Objekten verbundenen Zahlen
+betrachtet. Zum Beispiel berechnet bei einer Liste von Strecken der Befehl _Min[ <Liste> ]_ jene Strecke mit minimaler
+Länge.
+
+====
+
+Min( <Intervall> )::
+  Gibt die untere Grenze des Intervalls an.
+
+[EXAMPLE]
+====
+
+`++Min[2<x<3]++` ergibt _2_.
+
+====
+
+[NOTE]
+====
+
+Es macht keinen Unterschied, ob das Intervall offen oder geschlossen ist.
+
+====
+
+Min( <Zahl>, <Zahl> )::
+  Gibt das Minimum zweier Zahlen an.
+
+[EXAMPLE]
+====
+
+`++Min[12, 15]++` berechnet _12_.
+
+====
+
+Min( <Funktion>, <Startwert>, <Endwert> )::
+  Sei _a_ der Startwert und _b_ der Endwert. Dann berechnet dieser Befehl den tiefsten Punkt der Funktion im Intervall
+  [_a, b_]. Dabei soll die Funktion stetig sein und nur einen Tiefpunkt in diesem Intervall haben.
+
+[EXAMPLE]
+====
+
+`++Min[ x^3 + 2x^2 - 1, -2, 0 ]++` liefert den Punkt _A = (0, -1)_.
+
+====
+
+Min( <Liste von Daten>, <Liste von Häufigkeiten> )::
+  Gibt das Minimum der Zahlen in der Liste mit zugehörigen Häufigkeiten an.
+
+[EXAMPLE]
+====
+
+`++Min[{1, 2, 3, 4, 5}, {0, 3, 4, 2, 3}]++` ergibt 2, welche die kleinste Zahl der ersten Liste ist, deren Häufigkeit
+größer als 0 ist.
+
+====
+
+[NOTE]
+====
+
+Siehe auch die Befehle xref:/commands/Extremum.adoc[Extremum] und xref:/commands/Max.adoc[Max] und das Werkzeug
+xref:/tools/Funktionsinspektor.adoc[Funktionsinspektor].
+
+====

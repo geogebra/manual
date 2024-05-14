@@ -1,0 +1,27 @@
+= Spearman (Befehl)
+:page-en: commands/Spearman_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Spearman( <Liste von Punkten> )::
+  Liefert den
+  http://en.wikipedia.org/wiki/de:Rangkorrelationskoeffizient#Spearmans_Rangkorrelationskoeffizient[Spearmans
+  Rangkorrelationskoeffizient] der _x_- und _y_-Koordinaten der Punkte in der Liste.
+
+[EXAMPLE]
+====
+
+Sei `++Liste = {(-3, 4), (-1, 4), (-2, 3), (1, 3), (2, 2), (1, 5)}++` eine Liste von Punkten. `++Spearman[ Liste ]++`
+liefert _a = -0.37_.
+
+====
+
+Spearman( <Liste von Zahlen>, <Liste von Zahlen> )::
+  Liefert den Spearmans Rangkorrelationskoeffizient der Listen _A_ und _B_.
+
+[EXAMPLE]
+====
+
+Seien `++Liste1 = {3, 2, 4, 5, 1, 6, 8, 9}++` und `++Liste2 = {5, 6, 8, 2, 1, 3, 4, 7}++` zwei Listen.
+`++Spearman[ Liste1, Liste2 ]++` liefert _a = 0.24_.
+
+====

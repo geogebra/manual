@@ -1,0 +1,40 @@
+= Eckpunkt (Befehl)
+:page-en: commands/Corner_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Eckpunkt( <Nummer des Eckpunkts> )::
+  Für Nummer _n = 1, 2, 3, 4_ wird ein Punkt in einer der Ecken der image:16px-Menu_view_graphics.svg.png[Menu view
+  graphics.svg,width=16,height=16] xref:/Grafik_Ansicht.adoc[Grafik-Ansicht] erstellt. Für _n = 5_ wird der Punkt _(b,
+  h)_ angezeigt, wobei _b_ und _h_ die Breite und Höhe der Grafik-Ansicht in Pixel sind. Dieser Befehl erzeugt einen
+  Eckpunkt der image:16px-Menu_view_graphics1.svg.png[Menu view graphics1.svg,width=16,height=16]
+  xref:/Grafik_Ansicht.adoc[ersten Grafik-Ansicht], auch wenn die zweite aktiv ist.
+Eckpunkt( <Nummer der Zeichenfläche>, <Nummer des Eckpunkts> )::
+  Erstellt einen Eckpunkt der image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  _Grafik-Ansicht (1, 2)_, welcher aber in dieser Ansicht nie sichtbar ist. Die zulässigen Werte für die Zahl _n_ sind
+  _1, 2, 3, 4_ und _5_ und funktionieren wie oben beschrieben.
+Eckpunkt(-1, <Nummer des Eckpunkts> )::
+  Erstellt einen Punkt in einer der Ecken der image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra
+  3Dgraphics.svg,width=16,height=16] xref:/3D_Grafik_Ansicht.adoc[3D Grafik-Ansicht]. (Mögliche Werte für _Nummer des
+  Eckpunkts_: 1 bis 8); für _n = 9_ erhält man einen Punkt _(b, h, 0)_, wobei _b_ und _h_ die Breite und Höhe der
+  Grafik-Ansicht in Pixel sind; für _n = 10_ erhält man einen Punkt _(b, h, 0)_, wobei _b_ und _h_ die Breite und Höhe
+  des Hauptfensters in Pixel sind; für _n = 11_ erhält man die Blickrichtung (für Parallelprojektionen) oder den
+  Augpunkt (z.B. für Zentralprojektionen).
+Eckpunkt( <Bild>, <Nummer des Eckpunkts> )::
+  Erstellt einen Punkt am angegebenen Eckpunkt des Bildes (Nummer _n = 1, 2, 3, 4_).
+Eckpunkt( <Text>, <Nummer des Eckpunkts> )::
+  Erstellt einen Punkt am angegebenen Eckpunkt des Textes (Nummer _n = 1, 2, 3, 4_).
+
+[NOTE]
+====
+
+Eckpunkt[ <Text>, <Nummer des Eckpunkts> ] funktioniert nicht in den Befehlen xref:/commands/Folge.adoc[Folge] und
+xref:/commands/Zip.adoc[Zip].
+
+====
+
+[NOTE]
+====
+
+Die Nummerierung der Eckpunkte ist entgegen dem Uhrzeigersinn und startet an dem linken unteren Eckpunkt.
+
+====

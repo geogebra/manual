@@ -1,0 +1,31 @@
+= Weibull (Befehl)
+:page-en: commands/Weibull_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Weibull( <Formparameter>, <Skalierungsparameter>, x )::
+  Erzeugt die Wahrscheinlichkeitsdichtefunktion der
+  http://en.wikipedia.org/wiki/de:Weibull-Verteilung[Weibull-Verteilung] mit den Parametern Formparameter _k_ und
+  Skalierungsparameter _λ_.
+Weibull( <Formparameter>, <Skalierungsparameter>, x, <Wahrheitswert Verteilungsfunktion> )::
+  Erzeugt die kumulative Verteilungsfunktion der Weibull-Verteilung, wenn der Wahrheitswert _true_ ist, ansonsten die
+  Wahrscheinlichkeitsdichtefunktion der Weibull-Verteilung.
+Weibull( <Formparameter>, <Skalierungsparameter>, <Wert der Variablen> )::
+  Berechnet den Wert der kumulativen Verteilungsfunktion der Weibull-Verteilung bei der Variable _v_, d.h. die
+  Wahrscheinlichkeit _P(X ≤ v)_, wobei _X_ eine Weibull-Zufallsvariable mit den Parametern Formparameter _k_ und
+  Skalierungsparameter _λ_ ist.
+
+[EXAMPLE]
+====
+
+* `++Weibull[ 0.5, 1, 0]++` ergibt _0_.
+* `++Weibull[ 0.5, 1, 1]++` ergibt _stem:[1 - \frac\{1} \{ e } ]._
+
+====
+
+[NOTE]
+====
+
+Berechnet die Wahrscheinlichkeit für den angegebenen _x_-Koordinatenwert (also die Fläche unter der
+Weibull-Verteilungskurve links des _x_-Wertes).
+
+====

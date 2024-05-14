@@ -1,0 +1,139 @@
+= Winkel (Befehl)
+:page-en: commands/Angle_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Winkel( <Objekt> )
+
+* *Kegelschnitt:* Berechnet den Winkel zwischen der Hauptachse des Kegelschnitts und der _x-Achse_ (siehe auch Befehl
+xref:/commands/Achsen.adoc[Achsen]).
+
+[EXAMPLE]
+====
+
+`++Winkel[x²/4+y²/9=1]++` ergibt _90°_ oder _1.57_, falls die Standardeinheit für Winkel _Radian_ ist.
+
+====
+
+[NOTE]
+====
+
+In der GeoGebra 5.0 Web und Tablet App Version ist es nicht möglich die Winkeleinheit auf _Radian_ umzustellen.
+
+====
+
+* *Vektor:* Berechnet den Winkel zwischen dem Vektor und der _x-Achse_.
+
+[EXAMPLE]
+====
+
+`++Winkel[Vektor[(1, 1)]]++` ergibt _45°_ oder den entsprechenden Wert in _Radian_.
+
+====
+
+* *Punkt:* Berechnet den Winkel zwischen dem Ortsvektor des Punkts und der _x-Achse_.
+
+[EXAMPLE]
+====
+
+`++Winkel[(1, 1)]++` ergibt _45°_ oder den entsprechenden Wert in _Radian_.
+
+====
+
+* *Zahl:* Konvertiert die Zahl zu einem Winkel, wobei das Ergebnis zwischen 0° und 360° bzw. 0 und 2π liegt.
+
+[EXAMPLE]
+====
+
+`++Winkel[20]++` ergibt _65.92°_, wenn die Standardeinheit für Winkel _Grad_ ist.
+
+====
+
+* *Vieleck:* Erzeugt alle Winkel eines Vielecks in mathematisch positiver Richtung (d. h. gegen den Uhrzeigersinn).
+
+[EXAMPLE]
+====
+
+`++Winkel[Vieleck[(4, 1), (2, 4), (1, 1)] ]++` ergibt _56.31°_, _52.13°_ und _71.57°_ oder die entsprechenden Werte in
+_Radian_.
+
+====
+
+[NOTE]
+====
+
+Wurde das Vieleck ursprünglich mit mathematisch positiver Orientierung erzeugt, so werden die Innenwinkel des Vielecks
+angezeigt. Wurde das Vieleck jedoch im Uhrzeigersinn erzeugt, so werden die Außenwinkel eingezeichnet.
+
+====
+
+Winkel( <Vektor>, <Vektor> )::
+  Erzeugt den Winkel zwischen den beiden Vektoren, wobei das Ergebnis zwischen 0° und 360° bzw. 0 und 2π liegt.
+Winkel( <Gerade>, <Gerade> )::
+  Erzeugt den Winkel zwischen den Richtungsvektoren der beiden Geraden, wobei das Ergebnis zwischen 0° und 360° bzw. 0
+  und 2π liegt.
+Winkel( <Gerade>, <Ebene>)::
+  Erzeugt den Winkel zwischen der Geraden und der Ebene.
+Winkel( <Ebene>, <Ebene>)::
+  Erzeugt den Winkel zwischen den zwei gegebenen Ebenen.
+Winkel( <Punkt>, <Scheitelpunkt>, <Punkt> )::
+  Berechnet den Winkel, der durch die drei Punkte bestimmt wird, wobei das Ergebnis zwischen 0° und 360° bzw. 0 und 2π
+  liegt.
+Winkel( <Punkt>, <Scheitelpunkt>, <Winkel> )::
+  Erzeugt einen Winkel der Größe _α_ ausgehend vom _Punkt_ mit dem _Scheitelpunkt_.
+
+[EXAMPLE]
+====
+
+`++Winkel[(0, 0), (3, 3), 30°]++` liefert _30°_ und den Punkt _(1.9, -1.1)°_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Winkel[(1, 1), (1, 4), (4, 2)]++` ergibt _56.31°_ oder den entsprechenden Wert in _Radian_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Winkel[2x - y + z = 0, z = 0]++` liefert _114.09°_ oder den entsprechenden Wert in _Radian_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Winkel[Gerade[(1, 2, 3),(-2, -2, 0)], z = 0]++` liefert _30.96°_ oder den entsprechenden Wert in _Radian_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Winkel[y = x + 2, y = 2x + 3]++` ergibt _18.43°_ oder den entsprechenden Wert in _Radian_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Winkel[Vektor[(1, 1)], Vektor[(2, 5)]]++` ergibt _23.2°_ oder den entsprechenden Wert in _Radian_.
+
+====
+
+[NOTE]
+====
+
+Zusätzlich wird der Punkt _Drehe[ <Punkt>, <Winkel>, <Scheitelpunkt> ]_ gezeichnet.
+
+====
+
+[NOTE]
+====
+
+Siehe auch Werkzeuge image:20px-Mode_angle.svg.png[Mode angle.svg,width=20,height=20] xref:/tools/Winkel.adoc[Winkel]
+und [[[File:Mode anglefixed.svg|link=|20px]] xref:/tools/Winkel_mit_fester_Größe.adoc[Winkel mit fester Größe] .
+
+====

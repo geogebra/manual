@@ -1,0 +1,41 @@
+= ZufälligesPolynom (Befehl)
+:page-en: commands/RandomPolynomial_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+ZufälligesPolynom[ <Grad>, <Minimalwert für Koeffezienten>, <Maximalwert für Koeffezienten> ]::
+  Liefert ein zufällig erzeugtes Polynom in _x_ mit Grad _g_, wobei die (ganzzahligen) Koeffizienten zwischen
+  Minimalwert _min_ und Maximalwert _max_ liegen.
+
+[EXAMPLE]
+====
+
+* `++ZufälligesPolynom[0, 1, 2]++` liefert entweder _1_ oder _2_.
+* `++ZufälligesPolynom[2, 1, 2]++` liefert ein beliebiges Polynom vom Grad 2 mit den Koeffizienten _1_ und _2_, z.B.:
+_2x^2^ + x + 1_.
+
+====
+
+== CAS-Ansicht
+
+Der folgende Befehl ist nur in der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/CAS_Ansicht.adoc[CAS-Ansicht] verwendbar.
+
+ZufälligesPolynom[ <Variable>, <Grad> , <Minimum für die Koeffizienten>, <Maximum für die Koeffizienten> ]::
+  Liefert ein zufällig erzeugtes Polynom in der definierten _Variablen_ mit Grad _g_, wobei die Koeffizienten zwischen
+  Minimum _min_ und Maximum _max_ liegen.
+
+[EXAMPLE]
+====
+
+* `++ZufälligesPolynom[a, 0, 1, 2]++` liefert entweder _1_ oder _2_.
+* `++ZufälligesPolynom[a, 2, 1, 2]++` liefert ein beliebiges Polynom vom Grad 2 mit den Koeffizienten _1_ und _2_, z.B.:
+_2a^2^ + a + 1_.
+
+====
+
+[NOTE]
+====
+
+Falls _min_ oder _max_ keine ganzen Zahlen sind, werden die beiden Werte gerundet.
+
+====

@@ -1,0 +1,62 @@
+= Produkt (Befehl)
+:page-en: commands/Product_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Produkt( <Liste von Rohdaten> )::
+  Berechnet das Produkt aller Zahlen in der Liste.
+Produkt( <Liste von Zahlen>, <Anzahl von Elementen> )::
+  Berechnet das Produkt der ersten _n_ Zahlen in der Liste.
+Produkt( <Liste von Zahlen>, <Liste von Häufigkeiten> )::
+  Berechnet das Produkt aller Zahlen in der _Liste von Zahlen_, welche zuvor mit den Werten der gegebenen _Liste von
+  Häufigkeiten_ potenziert wurden.
+
+[EXAMPLE]
+====
+
+`++Produkt[ {20, 40, 50, 60}, {4, 3, 2, 1} ]++` liefert
+__1536000000000000__`++Produkt[ {sqrt(2), cbrt(3), sqrt(5), cbrt(-7)}, {4, 3, 2, 3} ]++` liefert _-420_
+
+====
+
+[EXAMPLE]
+====
+
+`++Produkt[{1, 2, 3, 4}, 3]++` liefert die Zahl _6_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Produkt[{2, 5, 8}]++` liefert _80_.
+
+====
+
+[NOTE]
+====
+
+Beide Listen müssen gleich lang sein.
+
+====
+
+== CAS-Ansicht
+
+Produkt( <Liste von Ausdrücken> )::
+  Berechnet das Produkt aller Listenelemente.
+Produkt( <Ausdruck>, <Variable>, <Startwert>, <Endwert> )::
+  Berechnet das Produkt der Ausdrücke, die durch Substitution der gegebenen Variable mit jeder ganzen Zahl zwischen
+  _Startwert_ und _Endwert_, erhalten werden.
+
+[EXAMPLE]
+====
+
+`++Produkt[x + 1,  x,  2, 3]++` liefert _12_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Produkt[{1, 2, x}]++` liefert _2x_.
+
+====

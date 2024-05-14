@@ -1,0 +1,29 @@
+= FVerteilung (Befehl)
+:page-en: commands/FDistribution_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+FVerteilung( <Zähler Freiheitsgrade>, <Nenner Freiheitsgrade> , x )::
+  Erzeugt eine Dichtefunktion einer http://en.wikipedia.org/wiki/de:F-Verteilung[F-Verteilung] mit den Parametern
+  _Zähler Freiheitsgrade, Nenner Freiheitsgrade_.
+FVerteilung( <Zähler Freiheitsgrade>, <Nenner Freiheitsgrade> , x , <Wahrheitswert Verteilungsfunktion> )::
+  Wenn der _Wahrheitswert = true_, dann wird eine Verteilungsfunktion einer F-Verteilung erzeugt. Ansonst wird eine
+  Dichtefunktion einer F-Verteilung erzeugt.
+FVerteilung( <Zähler Freiheitsgrade>, <Nenner Freiheitsgrade> , <Wert der Variable> )::
+  Berechnet den Wert der Verteilungsfunktion der F-Verteilung bei _Wert_, z. B. die Wahrscheinlichkeit _P(X≤Wert)_ wobei
+  _X_ eine Zufallsvariable der F-Verteilung ist mit den Parametern _Zähler Freiheitsgrade, Nenner Freiheitsgrade_.
+
+[NOTE]
+====
+
+Dieser Befehl ist auch in der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/CAS_Ansicht.adoc[CAS-Ansicht] verfügbar.
+
+====
+
+[NOTE]
+====
+
+Liefert die Wahrscheinlichkeit für eine gegebene _x_-Koordinate (oder den Bereich links unter der F-Verteilungskurve der
+gegebenen _x_-Koordinate).
+
+====

@@ -1,0 +1,26 @@
+= Determinante (Befehl)
+:page-en: commands/Determinant_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Determinante( <Matrix> )::
+  Berechnet die Determinante der Matrix.
+
+[EXAMPLE]
+====
+
+Die Eingabe `++Determinante[{{1, 2}, {3, 4}}]++` berechnet die Zahl _a = -2_.
+
+====
+
+== CAS-Ansicht
+
+Determinante( <Matrix> )::
+  Berechnet die Determinante der Matrix. Enthält die Matrix undefinierte Variablen, so liefert der Befehl eine Formel
+  für die Determinante.
+
+[EXAMPLE]
+====
+
+`++Determinante[{{1, a}, {b, 4}}]++` gibt _-a b + 4_.
+
+====

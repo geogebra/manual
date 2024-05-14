@@ -1,0 +1,31 @@
+= Kegelschnitt (Befehl)
+:page-en: commands/Conic_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Kegelschnitt( <Punkt>, <Punkt>, <Punkt>, <Punkt>, <Punkt> )::
+  Liefert einen Kegelschnitt durch die fünf angegebenen Punkte.
+Kegelschnitt( <Zahl a>, <Zahl b>, <Zahl c>, <Zahl d>, <Zahl e>, <Zahl f> )::
+  Liefert einen Kegelschnitt der Form stem:[a\cdot x^2+b\cdot y^2+c+d\cdot x\cdot y+e\cdot x+f\cdot y=0].
+
+[EXAMPLE]
+====
+
+`++Kegelschnitt[2, 3, -1, 4, 2, -3]++` ergibt _2x² + 4x y + 3y² + 2x - 3y = 1_ .
+
+====
+
+[NOTE]
+====
+
+Wenn vier Punkte auf einer Linie liegen, ist der Kegelschnitt nicht definiert.
+
+====
+
+[NOTE]
+====
+
+Siehe auch das Werkzeug image:24px-Mode_conic5.svg.png[Mode conic5.svg,width=24,height=24]
+xref:/tools/Kegelschnitt_durch_fünf_Punkte.adoc[Kegelschnitt durch fünf Punkte] und den
+Befehlxref:/commands/Koeffizienten.adoc[Koeffizienten].
+
+====

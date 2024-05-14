@@ -1,0 +1,43 @@
+= Sektor (Befehl)
+:page-en: commands/Sector_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Sektor( <Kegelschnitt>, <Punkt>, <Punkt> )::
+  Erzeugt auf dem Kegelschnitt einen Sektor zwischen zwei Punkten.
+
+[EXAMPLE]
+====
+
+* Sei `++c: x^2 + 2y^2 = 8++` eine Ellipse, `++D = (-2.83, 0)++` und `++E = (0, -2)++` zwei Punkte auf der Ellipse.
+`++Sektor[ c, D, E ]++` ergibt _d = 4.44_.
+* Sei `++c: x^2 + y^2 = 9++` ein Kreis, `++A = (3, 0)++` und `++B = (0, 3)++` zwei Punkte auf dem Kreis.
+`++Sektor[ c, A, B ]++` ergibt _d = 7.07_
+
+====
+
+[NOTE]
+====
+
+Der Kegelschnitt muss ein Kreis oder eine Ellipse sein.
+
+====
+
+Sektor( <Kegelschnitt>, <Parameter Startwert>, <Parameter Endwert> )::
+  Erzeugt auf dem Kegelschnitt einen Sektor zwischen zwei Parameterwerten zwischen _0_ und _2π_.
+
+[EXAMPLE]
+====
+
+Sei `++c: x^2 + y^2 = 9++` ein Kreis. `++Sektor[ c, 0, 3/4 π ]++` ergibt _d = 10.6_
+
+====
+
+[NOTE]
+====
+
+Es werden folgende Parameterdarstellungen verwendet:
+
+* Kreis: _(r cos(t), r sin(t))_, wobei _r_ der Radius des Kreises ist.
+* Ellipse: _(a cos(t), b sin(t))_, wobei _a_ und _b_ die große und kleine Halbachse der Ellipse sind.
+
+====

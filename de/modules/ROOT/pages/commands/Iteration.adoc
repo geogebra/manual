@@ -1,0 +1,28 @@
+= Iteration (Befehl)
+:page-en: commands/Iteration_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Iteration[ <Funktion>, <Startwert>, <Anzahl der Iterationen> ]::
+  Iteriert die Funktion _n_ mal mit dem gegebenen Startwert.
+
+[EXAMPLE]
+====
+
+* Definieren Sie zuerst die Funktion `++f(x) = x^2++`. Anschließend liefert der Befehl `++Iteration[f, 3, 2]++` das
+Ergebnis _(3^2^)^2^ = 81_.
+* _Wiederholte Addition_: Dieser Befehl kann auch bei wiederholten Additionen sehr hilfreich sein. Beispielsweise, wenn
+man immer wieder 7 dazuaddieren will: Sei `++g(x) = x + 7++`. Dann liefert der Befehl `++Iteration[g, 3, 4]++` das
+Ergebnis _(((3+7) +7) +7) +7 = 31_.
+
+====
+
+Iteration[ <Ausdruck>, <Variablenname>,...,<Startwert>, <Anzahl der Iterationen> ]::
+  Iteriert die Funktion _n_ mal mit dem gegebenen Startwert. Das Ergebnis ist das letzte Element der Ausgabe des Befehls
+  xref:/commands/Iterationsliste.adoc[Iterationsliste], mit den gleichen Parametern.
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/Iterationsliste.adoc[Iterationsliste] für weitere Details.
+
+====

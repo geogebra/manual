@@ -1,0 +1,92 @@
+= Komplexe Zahlen
+:page-en: Complex_Numbers
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Obwohl GeoGebra komplexe Zahlen nicht direkt unterstützt, können Sie dennoch xref:/Punkte_und_Vektoren.adoc[Punkte] zur
+Simulation von Operationen mit komplexen Zahlen verwenden.
+
+[EXAMPLE]
+====
+
+Wenn Sie die komplexe Zahl 3 + 4ί in die Eingabezeile eingeben, so erhalten Sie den Punkt (3, 4) in der
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Grafik_Ansicht.adoc[Grafik-Ansicht]. Die Koordinaten dieses Punktes werden als komplexe Zahl 3 + 4ί in der
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+xref:/Algebra_Ansicht.adoc[Algebra-Ansicht] angezeigt.
+
+====
+
+[NOTE]
+====
+
+Sie können jeden Punkt als komplexe Zahl in der image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] _Algebra-Ansicht_ anzeigen lassen. Öffnen Sie dazu den
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Eigenschaften_Dialog.adoc[Eigenschaften-Dialog] für den entsprechenden Punkt und wählen Sie _Komplexe Zahl_ aus
+der Liste der verfügbaren Koordinatenformate im Tab _Algebra_ aus.
+
+====
+
+Die imaginäre Einheit ί kann aus der Drop-Down-Liste mit Symbolen rechts in der xref:/Eingabezeile.adoc[Eingabezeile]
+ausgewählt oder mit der Tastenkombination [.kcode]#Alt# + [.kcode]#i# geschrieben werden. Solange Sie nicht gerade in
+der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_Ansicht.adoc[CAS-Ansicht] arbeiten
+oder die Variable i schon vorher definiert haben, wird die Variable i als die imaginäre Einheit _0 + 1i_ bzw. als
+geordnetes Paar _i = (0, 1)_ interpretiert. Das bedeutet, dass Sie die Variable i dazu verwenden können komplexe Zahlen
+über die _Eingabezeile_ einzugeben (z.B. q = 3 + 4i). Dies funktioniert jedoch, wie gesagt, nicht in der
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS-Ansicht_.
+
+[EXAMPLE]
+====
+
+Addition und Subtraktion:
+
+* `++(2 + 1ί) + (1 – 2ί)++` liefert die komplexe Zahl 3 – 1ί als Ergebnis.
+* `++(2 + 1ί) - (1 – 2ί)++` liefert die komplexe Zahl 1 + 3ί als Ergebnis.
+
+====
+
+[EXAMPLE]
+====
+
+Multiplikation und Division:
+
+* `++(2 + 1ί) * (1 – 2ί)++` liefert die komplexe Zahl 4 – 3ί als Ergebnis.
+* `++(2 + 1ί) / (1 – 2ί)++` liefert die komplexe Zahl 0 + 1ί als Ergebnis.
+
+====
+
+[NOTE]
+====
+
+Die übliche Multiplikation (2, 1) * (1, -2) berechnet das Skalarprodukt der beiden Vektoren.
+
+====
+
+Folgende Befehle und xref:/Vordefinierte_Funktionen_und_Operatoren.adoc[vordefinierte Operatoren] können ebenfalls
+verwendet werden:
+
+* `++x(w)++` oder `++real(w)++` liefern den Realteil einer komplexen Zahl _w_
+* `++y(w)++` oder `++imaginary(w)++` liefern den Imaginärteil einer komplexen Zahl _w_
+* `++abs(w)++` oder `++Länge[w]++` liefert den Betrag einer komplexen Zahl _w_
+* `++arg(w)++` oder `++Winkel[w]++` liefert das Argument einer komplexen Zahl _w_
+
+[NOTE]
+====
+
+arg(w) ist eine Zahl zwischen -180° and 180°, während Winkel[w] Werte zwischen 0° und 360° zurückgibt.
+
+====
+
+* `++conjugate(w)++` oder `++Spiegle[w,xAchse]++` liefert die konjugiert komplexe Zahl für _w_
+
+GeoGebra erkennt auch Ausdrücke mit xref:/Zahlen_und_Winkel.adoc[reellen] und komplexen Zahlen.
+
+[EXAMPLE]
+====
+
+* `++3 + (4 + 5ί)++` liefert die komplexe Zahl 7 + 5ί als Ergebnis.
+* `++3 - (4 + 5ί)++` liefert die komplexe Zahl -1 - 5ί als Ergebnis.
+* `++3 / (0 + 1ί)++` liefert die komplexe Zahl 0 - 3ί als Ergebnis.
+* `++3 * (1 + 2ί)++` liefert die komplexe Zahl 3 + 6ί als Ergebnis.
+
+====

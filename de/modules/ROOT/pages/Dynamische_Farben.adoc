@@ -1,0 +1,61 @@
+= Dynamische Farben
+:page-en: Dynamic_Colors
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Sie können die Farbe von Objekten im image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Eigenschaften_Dialog.adoc[Eigenschaften-Dialog] im Tab _Farbe_ verändern. Zusätzlich ist es möglich, die Farbe von
+Objekten dynamisch zu verändern. Öffnen Sie dazu den
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Eigenschaften-Dialog_ für jenes Objekt, dessen
+Farbe Sie verändern möchten und wählen Sie den Tab _Erweitert_ aus. Dort können sie im Abschnitt _Dynamische Farben_
+Werte für die Farbkomponenten Rot, Grün und Blau eintragen.
+
+[NOTE]
+====
+
+* Die RGB-Werte der Farben werden rechts von der _Vorschaubox_ im Tab _Farbe_ des
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Eigenschaften-Dialogs_ angezeigt.
+* In jedem dieser Textfelder können Sie eine Funktion mit dem Wertebereich [0, 1] eintragen.
+
+====
+
+[EXAMPLE]
+====
+
+* Erzeugen Sie drei xref:/tools/Schieberegler.adoc[Schieberegler] _a_, _b_, und _c_ mit einem Intervall von 0 bis 1.
+* Erzeugen Sie ein xref:/Geometrische_Objekte.adoc[Vieleck], dessen Farbe Sie mithilfe der Schieberegler kontrollieren
+können.
+* Öffnen Sie den image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Eigenschaften-Dialog_ des
+Vielecks und geben Sie die Namen der drei Schieberegler für die Werte der Farb-Komponenten von _Rot_, _Grün_ und _Blau_
+ein.
+* Schließen Sie den image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Eigenschaften-Dialog_ und
+verändern Sie die Werte der Schieberegler um die Farbe des Vielecks dynamisch zu verändern.
+
+[NOTE]
+====
+
+Sie können die drei Schieberegler auch xref:/Animation.adoc[animieren] (eventuell mit verschiedenen Geschwindigkeiten)
+um die Farbe des Vielecks automatisch zu verändern.
+
+====
+
+====
+
+Der Abschnitt über _Dynamische Farben_ enthält auch ein Eingabefeld, das Ihnen ermögicht die _Deckkraft_ eines
+ausgewählten Objektes zu ändern. Sie können dort eine Zahl zwischen 0 und 1 eingeben, wobei _0_ transparent und _1_ 100%
+deckend bedeuten. Sie können dort auch einen Schieberegler eintragen, um dynamische Deckkraft zu erhalten. Zahlen
+außerhalb des Intervalls [0,1] werden jedoch ignoriert.
+
+== RGB / HSV / HSL
+
+Für manche dynamische Farbveränderungen ist es einfacher ein anderes Farbmodell zu verwenden. In diesem Fall wählen Sie
+statt der Standardeinstellung http://en.wikipedia.org/wiki/de:RGB-Farbraum[RGB] entweder
+http://en.wikipedia.org/wiki/de:_HSV-Farbraum[HSV] oder http://en.wikipedia.org/wiki/de:HSV-Farbraum[HSL] von der
+Drop-Down-Liste am unteren Ende des Abschnitts _Dynamische Farben_ aus dem Tab _Erweitert_ aus.
+
+[EXAMPLE]
+====
+
+Um einen Punkt _A_ zu erzeugen, der beim Bewegen nach links und rechts alle Regenbogenfarben annimmt, wechseln Sie zum
+_HSV_-Modus und setzen Sie _Farbton_ auf `++x(A)++`, _Sättigung_ auf _1_ und _Wert_ auf _1_.
+
+====

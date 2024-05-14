@@ -1,0 +1,86 @@
+= Punkte und Vektoren
+:page-en: Points_and_Vectors
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Punkte und Vektoren können in der xref:/Eingabezeile.adoc[Eingabezeile] mit kartesischen Koordinaten oder
+Polarkoordinaten eingegeben werden (siehe xref:/Zahlen_und_Winkel.adoc[Zahlen und Winkel]). Weiters können Punkte mit
+denimage:24px-Mode_point.svg.png[Mode point.svg,width=24,height=24] xref:/tools/Werkzeuge_für_Punkte.adoc[Werkzeugen für
+Punkte] und Vektoren mit den Werkzeugen image:24px-Mode_vectorfrompoint.svg.png[Mode
+vectorfrompoint.svg,width=24,height=24] xref:/tools/Vektor_von_Punkt_aus_abtragen.adoc[Vektor von Punkt aus abtragen]
+und image:24px-Mode_vector.svg.png[Mode vector.svg,width=24,height=24] xref:/tools/Vektor.adoc[Vektor] erzeugt werden.
+Daneben gibt es auch noch eine Reihe von xref:/Befehle.adoc[Befehlen].
+
+[NOTE]
+====
+
+Großbuchstaben bezeichnen Punkte, Kleinbuchstaben hingegen Vektoren. Die Konvektion ist nicht zwingend.
+
+====
+
+[EXAMPLE]
+====
+
+* Um einen Punkt _P_ oder einen Vektor _v_ mit kartesischen Koordinaten zu erzeugen, schreiben Sie
+`++P = (1, 0) oder v = (0, 5)++`.
+* Um einen Punkt in die image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+xref:/Tabellen_Ansicht.adoc[Tabellen-Ansicht] einzugeben, benennen Sie ihn nach seiner Zellenadresse, z.B.:
+`++A2 = (1, 0)++`
+* Wollen Sie Polarkoordinaten verwenden, so schreiben Sie `++P = (1; 0°) oder v = (5; 90°)++`.
+
+====
+
+[NOTE]
+====
+
+Bei Polarkoordinaten müssen Sie Strichpunkte verwenden. Schreiben Sie das Grad-Symbol ° nicht dazu, so hat der Winkel
+automatisch die Einheit Radiant.
+
+====
+
+Koordinaten von Punkten und Vektoren können mit den xref:/Vordefinierte_Funktionen_und_Operatoren.adoc[vordefinierten
+Funktionen] _x()_ und _y()_ ermittelt werden.
+
+[EXAMPLE]
+====
+
+Sei `++P=(1,2)++` ein Punkt und `++v=(3,4)++` ein Vektor, dann ergibt`++x(P)++` _1_ und `++y(v)++` _4_.
+
+====
+
+[NOTE]
+====
+
+Die Polarkoordinaten eines Punktes _Q_ können mithilfe der Befehle `++abs(Q)++` und `++arg(Q)++` ermittelt werden.
+
+====
+
+== Berechnungen
+
+In GeoGebra können Sie auch Berechnungen mit Punkten und Vektoren anstellen.
+
+[EXAMPLE]
+====
+
+* Sie können den Mittelpunkt _M_ von zwei Punkten _A_ und _B_ erzeugen, in dem Sie `++M = (A + B) / 2++` in die
+xref:/Eingabezeile.adoc[Eingabezeile] eingeben.
+* Sie können die Länge des Vektors _v_ berechnen, in dem Sie `++Länge = sqrt(v * v)++` oder
+`++Länge = Länge[v]++`eingeben.
+* Falls _A=(a, b)_, dann liefert `++A + 1++` _(a + 1, b + 1)_. Ist _A_ eine xref:/Komplexe_Zahlen.adoc[komplexe Zahl]
+_a+bί_, dann liefert `++A+1++` _a + 1 + bί_.
+
+====
+
+== Vektorprodukt
+
+Seien _(a, b)_ und _(c, d)_ zwei Punkte oder Vektoren. Dann liefert `++(a, b) ⊗ (c, d)++` die z-Koordinate des
+Vektorprodukts _(a, b, 0) ⊗ (c, d, 0)_ als Zahl.
+
+Eine ähnliche Syntax ist auch zulässig für Listen, allerdings ist das Ergebnis in so einem Fall wieder eine Liste.
+
+[EXAMPLE]
+====
+
+* `++{1, 2} ⊗ {4, 5}++` liefert _\{0, 0, -3}_
+* `++{1, 2, 3} ⊗ {4, 5, 6}++` liefert _\{-3, 6, -3}_.
+
+====

@@ -1,0 +1,31 @@
+= Dreiecksverteilung (Befehl)
+:page-en: commands/Triangular_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Dreiecksverteilung( <Untere Grenze>, <Obere Grenze>, <Modalwert>, x )::
+  Erzeugt eine Dichtefunktion einer http://en.wikipedia.org/wiki/de:Dreiecksverteilung[Dreiecksverteilung] mit den
+  Parametern _untere Grenze, obere Grenze, Modelwert_.
+
+Dreiecksverteilung( <Untere Grenze>, <Obere Grenze>, <Modalwert>, x, <Wahrheitswert Verteilungsfunktion> )::
+  Wenn der _Wahrheitswert = true_, dann wird eine Verteilungsfunktion einer Dreiecksverteilung erzeugt. Ansonst wird
+  eine Dichtefunktion einer Dreiecksverteilung erzeugt.
+
+Dreiecksverteilung( <Untere Grenze>, <Obere Grenze>, <Modalwert>, <Wert der Variable> )::
+  Berechnet den Wert der Verteilungsfunktion der Dreiecksverteilung bei _w_ (_Wert der Variable_), z. B. die
+  Wahrscheinlichkeit _P(X≤w)_ wobei _X_ eine Zufallsvariable der Dreiecksverteilung ist mit den Parametern _untere
+  Grenze, obere Grenze, Modalwert_.
+
+[NOTE]
+====
+
+Liefert die Wahrscheinlichkeit für eine gegebene _x_-Koordinate (oder den Bereich links unter der
+Dreiecksverteilungskurve der gegebenen _x_-Koordinate).
+
+====
+
+[EXAMPLE]
+====
+
+Mit `++Dreiecksverteilung[ 0, 5, 2, 2 ]++` erhält man _0.4_.
+
+====

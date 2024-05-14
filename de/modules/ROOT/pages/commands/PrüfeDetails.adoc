@@ -1,0 +1,38 @@
+= PrüfeDetails (Befehl)
+:page-en: commands/ProveDetails_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+PrüfeDetails( <Wahrheitswert> )::
+  Liefert einige Details zum Ergebnis der automatisierten Prüfung.
+
+GeoGebra verwendet normalerweise numerische Berechnungen, um zu überprüfen ob ein xref:/Wahrheitswerte.adoc[Boolescher
+Ausdruck] wahr (true) oder falsch (false) ist. Der Befehl *PrüfeDetails* verwendet jedoch
+http://en.wikipedia.org/wiki/de:Symbolische_Mathematik[symbolische Methoden], um zu überprüfen ob eine Aussage im
+Allgemeinen true oder false ist. Dieser Befehl funktioniert wie der Befehl xref:/commands/Prüfe.adoc[Prüfe], aber er
+gibt zusätzlich noch Details zum Ergebnis als xref:/Listen.adoc[Liste] bekannt:
+
+* Eine leere Liste *\{}*, wenn GeoGebra keine Lösung findet.
+* Eine Liste mit einem Element: *\{false}*, wenn die Aussage im Allgmeinen nicht wahr ist.
+* Eine Liste mit einem Element: *\{true}*, wenn die Aussage immer wahr ist.
+* Eine Liste mit mehreren Elementen, die den Wahrheitswert _true_ beinhaltet und eine andere Liste unter welchen
+Bedingungen die Aussage wahr ist, z. B. \{true, \{"LiegenAufGerade[A,B,C], SindGleich[C,D]"}}. Das bedeutet, wenn keine
+der Bedingungen wahr ist, dann ist die Aussage _true_.
+* Eine Liste *\{true,\{"..."}}*, das bedeutet, dass die Aussage unter bestimmten Bedingungen wahr ist, aber diese aus
+einigen Gründen nicht in lesbarer Form dargestellt werden können.
+
+[EXAMPLE]
+====
+
+Seien _A_, _B_ and _C_ die Eckpunkte eines Dreiecks, und seien `++D=Mittelpunkt[B,C]++`, `++E=Mittelpunkt[A,C]++`,
+`++p=Gerade[A,B]++`, `++q=Gerade[D,E]++`. Dann liefert `++PrüfeDetails[p∥q]++` \{true,\{"AreEqual[A,B]"}}, was bedeutet,
+dass wenn sich die zwei Punkte _A_ und _B_ unterscheiden, die Mittellinie _DE_ des Dreiecks parallel zur Seite _AB_ ist.
+
+====
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/Prüfe.adoc[Prüfe], xref:/Wahrheitswerte.adoc[Wahrheitswerte] und
+http://dev.geogebra.org/trac/wiki/TheoremProving[technical details of the algorithms].
+
+====

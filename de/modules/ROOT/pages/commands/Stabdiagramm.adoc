@@ -1,0 +1,46 @@
+= Stabdiagramm (Befehl)
+:page-en: commands/StickGraph_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Stabdiagramm( <Liste von Punkten> )::
+  Erstellt ein Stabdiagramm von den gegebenen Punkten. Bei jedem Punkt wird eine senkrechte Strecke zur x-Achse
+  gezeichnet.
+Stabdiagramm( <Liste von Punkten>, <Wahrheitswert> )::
+  Erstellt ein Stabdiagramm von den gegebenen Punkten. Bei _Wahrheitswert = true_ wird von jedem Punkt eine waagrechte
+  Strecke zur y-Achse gezeichnet, bei _Wahrheitswert = false_ wird eine senkrechte Strecke zwischen den Punkten und der
+  x-Achse gezeichnet.
+Stabdiagramm( <Liste von x-Koordinaten>, <Liste von y-Koordinaten> )::
+  Erstellt ein Stabdiagramm von den Punkten, die durch die beiden Listen gegeben sind. Bei jedem Punkt wird eine
+  senkrechte Strecke zur x-Achse gezeichnet.
+Stabdiagramm( <Liste von x-Koordinaten>, <Liste von y-Koordinaten>, <Wahrheitswert> )::
+  Erstellt ein Stabdiagramm von den Punkten, die durch die beiden Listen gegeben sind. Bei _Wahrheitswert = true_ wird
+  von jedem Punkt eine waagrechte Strecke zur y-Achse gezeichnet, bei _Wahrheitswert = false_ wird eine senkrechte
+  Strecke zwischen den Punkten und der x-Achse gezeichnet.
+
+[EXAMPLE]
+====
+
+`++Stabdiagramm[{1, 3, 4, 5}, {1, 2, 5, 7}, true]++`
+
+====
+
+[EXAMPLE]
+====
+
+`++Stabdiagramm[{1, 3, 4, 5}, {1, 2, 5, 7}]++`
+
+====
+
+[EXAMPLE]
+====
+
+`++Stabdiagramm[{(1, 1), (3, 2), (4, 5), (5, 7)}, false]++`
+
+====
+
+[EXAMPLE]
+====
+
+`++Stabdiagramm[{(1, 1), (3, 2), (4, 5), (5, 7)}]++`
+
+====

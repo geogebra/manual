@@ -1,0 +1,82 @@
+= LaTeX
+:page-en: LaTeX
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+LaTeX Formeln sind eine spezielle Art des gemischten Textes. Um eine Formel in einem Text zu verwenden, müssen Sie im
+Dialog-Fenster des Werkzeugs image:24px-Mode_text.svg.png[Mode text.svg,width=24,height=24] xref:/tools/Text.adoc[Text]
+die Option _LaTeX Formel_ aktivieren. Danach können Sie den gewünschten LaTeX-Code für die Formel in das Eingabefeld
+eintragen.
+
+[NOTE]
+====
+
+Sie können auch gemischten Text erzeugen, der statischen Text zusammen mit LaTeX Formeln enthält. Geben Sie dazu den
+statischen Text innerhalb von \text\{} ein, während _LaTex Formel_ aktiviert ist.
+
+====
+
+[EXAMPLE]
+====
+
+`++\text{Die Länge der Diagonale ist} \sqrt{2}++`.
+
+====
+
+[NOTE]
+====
+
+Sie können auch den Befehl xref:/commands/FormelText.adoc[FormelText] verwenden und den Text innerhalb von
+Anführungszeichen eingeben.
+
+====
+
+[EXAMPLE]
+====
+
+`++FormelText["\text{Die Länge der Diagonale ist } \sqrt{ 2 }"]++`
+
+====
+
+[NOTE]
+====
+
+Sie können auch einen LaTex-Text erstellen, der den Wert eines Objektes, indem Sie dieses Objekt aus der
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+xref:/Algebra_Ansicht.adoc[Algebra-Ansicht] an eine Stelle in der image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Grafik_Ansicht.adoc[Grafik-Ansicht] ziehen.
+
+====
+
+Sie finden eine Auswahl von Formel-Symbolen auch in der Drop-Down-Liste neben der Option LaTeX Formel (GeoGebra Desktop
+Version) bzw. im _Erweitert_-Menü unterhalb des Eingabefeldes (GeoGebra Web und Tablet Apps Version). Wenn Sie eines
+dieser Symbole auswählen wird der entsprechende LaTeX-Code in das Eingabefeld eingetragen und der Cursor zwischen zwei
+geschwungenen Klammern platziert. Die Drop-Down-Liste für Symbole enthält häufig verwendete mathematische Symbole,
+griechische Buchstaben und Operatoren. Wenn Sie innerhalb der Formel dynamischen Text verwenden möchten, können Sie ein
+Objekt aus der image:16px-GeoGebra_48.png[GeoGebra 48.png,width=16,height=16] Drop-Down-Liste für Objekte auswählen,
+wodurch GeoGebra dessen Namen und die entsprechende Syntax für gemischten Text automatisch einfügt.
+
+In der folgenden Tabelle finden Sie einige vielverwendete LaTeX Befehle für mathematische Formeln. Weitere Informationen
+zu LaTeX Formeln finden Sie in LaTeX Dokumentation im Internet.
+
+[cols=",",options="header",]
+|===
+|LaTeX Eingabe |Ergebnis
+|a \cdot b |stem:[a \cdot b]
+|\frac\{a}\{b} |stem:[\frac\{a}\{b}]
+|\sqrt\{x} |stem:[\sqrt\{x}]
+|\sqrt[n]\{x} |stem:[\sqrt[n]\{x}]
+|\vec\{v} |stem:[\vec\{v}]
+|\overline\{AB} |stem:[\overline\{AB}]
+|x^\{2} |stem:[x^\{2}]
+|a_\{1} |stem:[a_\{1}]
+|\sin\alpha + \cos\beta |stem:[\sin\alpha + \cos\beta]
+|\int_\{a}^\{b} x dx |stem:[\int_\{a}^\{b} x dx]
+|\sum_\{i=1}^\{n} i^2 |stem:[\sum_\{i=1}^\{n} i^2]
+|===
+
+== Siehe auch
+
+* http://folk.uio.no/knutm/mmcs2008/lshort2e.pdf[The Not So Short Introduction To LaTeX]
+* http://www.tug.org[TeX user group]
+* http://wiki.geogebra.org/en/LaTeX-code_for_the_most_common_formulas
+* http://wiki.geogebra.org/en/LaTeX-tips_font_size_color_box_and_math

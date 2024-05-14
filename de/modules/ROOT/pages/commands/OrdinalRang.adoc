@@ -1,0 +1,24 @@
+= OrdinalRang (Befehl)
+:page-en: commands/OrdinalRank_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+OrdinalRang( <Liste> )::
+  Erzeugt eine Liste, in welcher das _i_-te Element dem Rang des _i_-ten Elements der Liste _L_ entspricht (der Rang des
+  Elementes ist die Position in der Liste xref:/commands/Sortiere.adoc[Sortiere][L].)
+  Befinden sich mehrere gleiche Elemente in _L_, welche in Sortiere[L] die Positionen _k_ bis _l_ besetzen, so werden
+  die Ränge _k_ bis _l_ mit diesen Elementen assoziiert.
+
+[EXAMPLE]
+====
+
+* `++OrdinalRang[{4, 1, 2, 3, 4, 2}]++` liefert \{5, 1, 2, 4, 6, 3}
+* `++OrdinalRang[{3, 2, 2,1}]++` liefert \{4, 2, 3, 1}
+
+====
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/GebundenerRang.adoc[GebundenerRang].
+
+====

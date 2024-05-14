@@ -1,0 +1,46 @@
+= Iterationsliste (Befehl)
+:page-en: commands/IterationList_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Iterationsliste( <Funktion>, <Startwert>, <Anzahl der Iterationen n> )::
+  Erzeugt eine Liste der Länge _n+1_, deren Elemente Iterationen der Funktion sind, beginnend mit dem Startwert.
+
+[EXAMPLE]
+====
+
+Nach der Definition der Funktion `++f(x) = x^2++` liefert der Befehl `++Iterationsliste[f, 3, 2]++` die Liste _\{3, 9,
+81}_.
+
+====
+
+Iterationsliste( <Ausdruck>, <Variablen>, <Startwert>, <Anzahl n>)::
+  Erzeugt eine Liste der Länge _n+1_, deren Elemente Iterationen des Ausdrucks sind, beginnend mit dem Startwert. Bei
+  jeder Iteration werden die Variablen im Ausdruck durch die letzten Elemente der Liste ersetzt. Deshalb sollten
+  mindestens soviele Startwerte wie Variablen angegeben werden, ansonsten ist das Ergebnis _undefiniert_.
+
+[EXAMPLE]
+====
+
+Seien _f__0, _f__1 Zahlen. `++Iterationsliste[a + b, a, b, {f_0, f_1},5]++` weist den ersten zwei Werten der
+resultierenden Liste die Startwerte zu. Danach werden die Werte als __f__~2~ = __f__~0~ + __f__~1~,   __f__~3~ =
+__f__~1~ + __f__~2~,   __f__~4~ = __f__~2~ + __f__~3~,   __f__~5~ = __f__~3~ + __f__~4~ berechnet. D.h. für _f__0 =
+_f__1 = 1 wird das Ergebnis \{1, 1, 2, 3, 5, 8} sein.
+
+====
+
+[EXAMPLE]
+====
+
+Seien _A_ und _B_ Punkte. Der Befehl `++Iterationsliste[Mittelpunkt[A, C], C, {B}, 3]++` berechnet intern die Werte
+__C__~0~ = _B_,   __C__~1~ = _Mittelpunkt_[_A_, __C__~0~],   __C__~2~ = _Mittelpunkt_[_A_, __C__~1~],   __C__~3~ =
+_Mittelpunkt_[_A_, __C__~2~] und liefert \{__C__~0~, __C__~1~, __C__~2~, __C__~3~}. D.h. für _A_ = (0,0) und _B_ = (8,0)
+wird das Ergebnis \{(8,0), (4,0), (2,0), (1,0)} sein.
+
+====
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/Iteration.adoc[Iteration].
+
+====

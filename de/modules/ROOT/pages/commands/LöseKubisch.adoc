@@ -1,0 +1,24 @@
+= LöseKubisch (Befehl)
+:page-en: commands/SolveCubic_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+== CAS Syntax
+
+LöseKubisch( <Kubische Gleichung> )::
+  Löst eine gegebene http://en.wikipedia.org/wiki/Kubische_Gleichung[Kubische Gleichung] und liefert eine Liste aller
+  Lösungen.
+
+[EXAMPLE]
+====
+
+`++LöseKubisch[x³ - 1]++` ergibt \{ 1, stem:[ \frac\{1}\{2} (\sqrt\{3} i -1) ] , stem:[ \frac\{1}\{2} (\sqrt\{3} (-i)
+-1) ] } .
+
+====
+
+[NOTE]
+====
+
+Manchmal müssen Sie Ihr Ergebnis manuell vereinfachen, z.B. `++LöseKubisch[x³ + x² + x + 1]++`.
+
+====

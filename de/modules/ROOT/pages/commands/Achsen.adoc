@@ -1,0 +1,37 @@
+= Achsen (Befehl)
+:page-en: commands/Axes_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Achsen( <Kegelschnitt> )::
+  Liefert die Gleichungen der Haupt- und die Nebenachse des Kegelschnittes.
+
+[NOTE]
+====
+
+Siehe auch die Befehle xref:/commands/Hauptachse.adoc[Hauptachse] und xref:/commands/Nebenachse.adoc[Nebenachse].
+
+====
+
+Achsen( <Quadrik> )::
+  Erzeugt die 3 Achsen einer Quadrik.
+
+[EXAMPLE]
+====
+
+`++Achsen[x^2 + y^2 = 3]++` erzeugt die drei Geraden
+
+_a_: _X_ = (0, 0, 0) + _λ_ (1, 0, 0), _b_: _X_ = (0, 0, 0) + _λ_ (0, 1, 0) und
+
+_c_: _X_ = (0, 0, 0) + _λ_ (0, 0, 1)
+
+====
+
+[NOTE]
+====
+
+* Falls die gegebene Quadrik ein _Zylinder_ ist, dann liefert der Befehl die zwei Achsen des Grundkreises und die
+Rotationsachse.
+* Falls die gegebene Quadrik eine _Kugel_ ist, dann liefert der Befehl drei Achsen parallel zu den Achsen des
+Koordinatensystems.
+
+====

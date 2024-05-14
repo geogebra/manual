@@ -1,0 +1,34 @@
+= Fläche (Befehl)
+:page-en: commands/Area_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Fläche( <Punkt>, ..., <Punkt> )::
+  Berechnet die Fläche des Vielecks, das durch die gegebenen Punkte aufgespannt wird.
+Fläche( <Kegelschnitt> )::
+  Berechnet die Fläche des Kegelschnitts (Kreis oder Ellipse).
+Fläche( <Vieleck> )::
+  Berechnet die Fläche des Vielecks.
+
+[EXAMPLE]
+====
+
+`++Fläche[x^2 + y^2 = 2]++` liefert _6.28_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Fläche[(0, 0), (3, 0), (3, 2), (0, 2)]++` liefert _6_.
+
+====
+
+[NOTE]
+====
+
+* Verwenden Sie den Befehl xref:/commands/Integral.adoc[Integral], um die Fläche zwischen zwei Funktionsgraphen zu
+berechnen.
+* Siehe auch das Werkzeug image:22px-Mode_area.svg.png[Mode area.svg,width=22,height=22]
+xref:/tools/Fläche.adoc[Fläche].
+
+====

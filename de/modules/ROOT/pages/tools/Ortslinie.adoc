@@ -1,0 +1,41 @@
+= Ortslinie (Werkzeug)
+:page-en: tools/Locus_Tool
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Markieren Sie zuerst jenen Punkt _B_, der die Ortslinie erzeugen soll und von einem anderen Punkt _A_ abhängt. Wählen
+Sie danach diesen Punkt _A_ aus, um die Ortslinie des abhängigen Punktes _B_ unter Bewegung von Punkt _A_ zu erzeugen.
+
+[EXAMPLE]
+====
+
+* Geben Sie `++f(x) = x^2 – 2 x – 1++` in die _Eingabezeile_ ein und drücken Sie die _Eingabetaste_.
+* Erzeugen Sie einen neuen Punkt _A_ auf der _x_-Achse (siehe Werkzeug image:22px-Mode_point.svg.png[Mode
+point.svg,width=22,height=22] xref:/tools/Neuer_Punkt.adoc[Neuer Punkt] oder Befehl xref:/commands/Punkt.adoc[Punkt]).
+* Erzeugen Sie den Punkt `++B = (x(A), f'(x(A)))++`, welcher vom Punkt _A_ abhängt.
+* Aktivieren Sie das Werkzeug image:22px-Mode_locus.svg.png[Mode locus.svg,width=22,height=22] _Ortslinie_ und wählen
+Sie nacheinander den Punkt _B_ und den Punkt _A_ aus. Dadurch wird die Ortslinie von Punkt _B_ in Abhängigkeit von Punkt
+_A_ eingezeichnet.
+* Ziehen Sie Punkt _A_ entlang der _x_-Achse um Punkt _B_ entlang seiner Ortslinie zu bewegen.
+
+====
+
+[NOTE]
+====
+
+Punkt _A_ muss auf einem Objekt liegen (z. B. auf einer Geraden, einer Strecke oder einem Kreis).
+
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Warnung,title="Warnung",width=18,height=18] *Warnung*: |Die Ortslinie ist undefiniert, wenn
+der abhängige Punkt vom Befehl xref:/commands/Punkt.adoc[Punkt] mit zwei Parametern oder vom Befehl
+xref:/commands/PfadParameter.adoc[PfadParameter] abhängt.
+|===
+
+[NOTE]
+====
+
+Siehe auch Befehl xref:/commands/Ortslinie.adoc[Ortslinie].
+
+====

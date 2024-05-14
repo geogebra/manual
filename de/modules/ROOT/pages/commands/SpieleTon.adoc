@@ -1,0 +1,363 @@
+= SpieleTon (Befehl)
+:page-en: commands/PlaySound_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+SpieleTon( <URL> )::
+  Spielt eine MP3-Datei (.mp3) ab.
+
+[EXAMPLE]
+====
+
+* `++SpieleTon["http://archive.geogebra.org/static/welcome_to_geogebra.mp3"]++`
+* `++SpieleTon["#1264825"]++` spielt eine http://www.geogebra.org/material/simple/id/1264825[.mp3 ab, die auf GeoGebra
+hochgeladen wurde.]
+* `++SpieleTon["https://drive.google.com/uc?id=0B7xCmZaU3oU2eXFNUzd6ZlZJS0U&authuser=0&export=download"]++` spielt eine
+.mp3 Google Drive ab.
+* `++SpieleTon["https://www.dropbox.com/s/27skpv82odjp7ej/material-1264825.mp3?dl=1"]++` spielt eine .mp3 ab, die in der
+DropBox abgespeichert wurde.
+
+====
+
+SpieleTon( <Wahrheitswert Play> )::
+  Spielt entweder den Ton ab oder pausiert das Abspielen.
+  SpieleTon[true] = Abspielen, Spieleton[false] = Pause.
+
+SpieleTon( <Notensequenz>, <Instrument> )::
+  Dieser Befehl ist veraltet und wird bald aus GeoGebra entfernt.
+
+SpieleTon( <Note>, <Dauer>, <Instrument> ) (nur für GeoGebra Desktop Version)::
+  Spielt einen http://en.wikipedia.org/wiki/de:Musical_Instrument_Digital_Interface[MIDI]-Ton.
+  Der Parameter _Note_ ist eine ganze Zahl zwischen 0 und 127, welche den Ton laut untenstehender Tabelle repräsentiert.
+  (z.B.: Note = 60 spielt das mittlere C)
+  Der Parameter _Dauer_ gibt an, wie viele Sekunden der Ton gespielt wird.
+  Der Parameter _Instrument_ ist eine ganze Zahl, die bestimmt, welches synthetisierte Instrument den Ton spielt. Siehe
+  dazu http://www.midi.org/techspecs/gm1sound.php[technical specifications at midi.org].
+  Die meisten Instrumente werden unterstützt, aber es gibt Unterschiede zwischen den Computerplattformen.
+
+*MIDI Töne*
+
+Oktav
+
+C
+
+C#
+
+D
+
+D#
+
+E
+
+F
+
+F#
+
+G
+
+G#
+
+A
+
+A#
+
+B
+
+*0*
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+*1*
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+
+21
+
+22
+
+23
+
+*2*
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+31
+
+32
+
+33
+
+34
+
+35
+
+*3*
+
+36
+
+37
+
+38
+
+39
+
+40
+
+41
+
+42
+
+43
+
+44
+
+45
+
+46
+
+47
+
+*4*
+
+48
+
+49
+
+50
+
+51
+
+51
+
+53
+
+54
+
+55
+
+56
+
+57
+
+58
+
+59
+
+*5*
+
+60
+
+61
+
+62
+
+63
+
+64
+
+65
+
+66
+
+67
+
+68
+
+69
+
+70
+
+71
+
+*6*
+
+72
+
+73
+
+74
+
+75
+
+76
+
+77
+
+78
+
+79
+
+80
+
+81
+
+82
+
+83
+
+*7*
+
+84
+
+85
+
+86
+
+87
+
+88
+
+89
+
+90
+
+91
+
+92
+
+93
+
+94
+
+95
+
+*8*
+
+96
+
+97
+
+98
+
+99
+
+100
+
+101
+
+102
+
+103
+
+104
+
+105
+
+106
+
+107
+
+*9*
+
+108
+
+109
+
+110
+
+111
+
+112
+
+113
+
+114
+
+115
+
+116
+
+117
+
+118
+
+119
+
+*10*
+
+120
+
+121
+
+122
+
+123
+
+124
+
+125
+
+126
+
+127
+
+SpieleTon( <Funktion>, <minimaler Wert>, <maximaler Wert> )::
+  Spielt einen von der Funktion - eine Zeit-Wert-Funktion mit Intervall [-1,1] - erzeugten Ton. Die Zeiteinheiten sind
+  Sekunden und der Ton wird in der Zeit zwischen minimalem und maximalem Wert gespielt. Der Ton wird durch
+  8-bit-Samples, aufgenommen mit einer Rate von 8000 Samples pro Sekunde, generiert.
+
+[EXAMPLE]
+====
+
+`++SpieleTon[sin(440 2Pi x), 0, 1]++`
+
+Spielt eine reine Sinuswelle mit 440 Hz (Ton A) für eine Sekunde.
+
+====
+
+SpieleTon( <Funktion>, <minimaler Wert>, <maximaler Wert>, <Sample Rate>, <Sample Tiefe> )::
+  Spielt einen von der Funktion - eine Zeit-Wert-Funktion mit Intervall [-1,1] - erzeugten Ton. Die Zeiteinheiten sind
+  Sekunden und der Ton wird in der Zeit zwischen minimalem und maximalem Wert gespielt. Die Probenahme wird von "Sample
+  Depth" und "Sample Rate" angegeben.
+  "Sample Rate" ist die Anzahl der Werte der Sample-Funktion, die pro Sekunde genommen werden. Zulässige Werte sind
+  8000, 11025, 16000, 22050, oder 44100
+  "Sample Depth" ist die Datengröße eines Samples in Bits. Zulässige Werte sind 8 und 16.

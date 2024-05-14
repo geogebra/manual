@@ -1,0 +1,28 @@
+= Zeitabfrage (Befehl)
+:page-en: commands/GetTime_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Zeitabfrage()::
+  Liefert eine Liste mit aktuellem Datum und Zeit in folgender Reihenfolge:
+  Millisekunden, Sekunden, Minuten, Stunden (0-23), Datum, Monat (1-12), Jahr, Monat (als Text), Tag (als Text), Tag (1
+  = Sonntag, 2 = Montag, etc.)
+
+[EXAMPLE]
+====
+
+`++Zeitabfrage[]++` erzeugt eine Liste wie _\{647, 59, 39, 23, 28, 2, 2011, "Februar", "Montag", 2}_.
+
+====
+
+Zeitabfrage( "<Format>" )::
+  Erzeugt einen Text, wobei folgende Buchstaben mit einem umgekehrten Schrägstrich (\) als Vorzeichen durch den
+  aktuellen Wert der Zeit ersetzt werden:
+  d, D, j, l, N, S, w, z, W, F, m, M, n, t, L, Y, y, a, A, g, G, h, H, i, s, U - die Erklärungen zu den Abkürzungen
+  finden Sie hier: http://php.net/manual/de/function.date.php
+
+[EXAMPLE]
+====
+
+`++Zeitabfrage["Heute ist \l, der \j. \F \Y"]++` erzeugt einen Text wie _Heute ist Montag, der 9. Juli 2012_.
+
+====

@@ -1,0 +1,58 @@
+= Grenzwert (Befehl)
+:page-en: commands/Limit_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Grenzwert( <Funktion>, <Zahl> )::
+  Berechnet den http://en.wikipedia.org/wiki/de:Grenzwert_(Funktion)[Grenzwert] der Funktion beim gegebenen Wert.
+  (Dieser kann auch unendlich sein.)
+
+[EXAMPLE]
+====
+
+`++Grenzwert[(x^2 + x) /  x^2, +∞]++` berechnet _1_.
+
+====
+
+[NOTE]
+====
+
+Nicht alle Grenzwerte können von GeoGebra berechnet werden. In diesen Fällen wird "undefiniert" zurückgegeben (und auch
+falls das korrekte Resultat "undefiniert" lautet).
+
+====
+
+== CAS-Ansicht
+
+Grenzwert( <Funktion>, <Wert> )::
+  Berechnet den Grenzwert der Funktion beim gegebenen Wert der Hauptvariable.
+Grenzwert( <Funktion>, <Variable>, <Wert> )::
+  Berechnet den Grenzwert der Funktion in mehreren Variablen beim gegebenen Wert für die angegebene Variable.
+
+[EXAMPLE]
+====
+
+`++Grenzwert[a  sin(v)/v, v, 0]++` berechnet _a_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Grenzwert[a sin(x)/x, 0]++` berechnet _a_.
+
+====
+
+[NOTE]
+====
+
+* Nicht alle Grenzwerte können von GeoGebra berechnet werden. In diesen Fällen wird "?" zurückgegeben (und auch falls
+das korrekte Resultat "undefiniert" lautet).
+* Wenn Sie einen Grenzwert einer stückweise definierten Funktion berechnen wollen, dann sollten Sie die Befehle
+xref:/commands/LinksseitigerGrenzwert.adoc[LinksseitigerGrenzwert] und
+xref:/commands/RechtsseitigerGrenzwert.adoc[RechtsseitigerGrenzwert] verwenden, z.B.
+`++RechtsseitigerGrenzwert[If[x>1, x^2, -2x], 1]++`
+* Siehe auch Befehle xref:/commands/Asymptote.adoc[Asymptote],
+xref:/commands/LinksseitigerGrenzwert.adoc[LinksseitigerGrenzwert] und
+xref:/commands/RechtsseitigerGrenzwert.adoc[RechtsseitigerGrenzwert].
+
+====

@@ -1,0 +1,45 @@
+= Würfel (Befehl)
+:page-en: commands/Cube_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Würfel( <Punkt>, <Punkt>, <Richtung> )::
+  Gibt einen Würfel aus, welcher die (automatisch erstellte) Strecke zwischen den zwei gegebenen Punkten als eine Kante
+  hat.
+  Die Eckpunkte werden von der gegebenen Richtung eindeutig bestimmt. Die Richtung kann definiert sein durch:
+  * einen Vektor, eine Strecke, eine Gerade, einen Strahl *orthogonal* zur Strecke, oder
+  * ein Vieleck, eine Ebene *parallel* zu der Strecke.
+  Der erstellte Würfel wird Folgendes aufweisen:
+  * eine Fläche, die in der zum/zur gegebenen Vektor/Strecke/Gerade/Strahl normalenstehenden Ebene enthalten ist, mit
+  der Strecke als Kante, oder
+  * eine Fläche, die in der zum/zur Vieleck/Ebene parallelen Ebene enthalten ist, mit der Strecke als Kante.
+
+Würfel( <Punkt>, <Punkt>, <Punkt>)
+
+Gibt einen Würfel aus, bei dem die drei (benachbarten) Punkte Eckpunkte der ersten Fläche bilden.
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Hinweis:* Die Punkte müssen die Eckpunkte eines
+Quadrates sein, damit der Würfel erzeugt werden kann.
+
+====
+
+Würfel( <Punkt>, <Punkt>)::
+  Gibt einen Würfel aus, welcher die (automatisch erstellte) Strecke zwischen den zwei gegebenen Punkten als eine Kante
+  hat. Ein dritter Punkt wird automatisch auf einem Kreis erstellt, und daher kann der Würfel um diese Kante rotieren.
+
+[NOTE]
+====
+
+Würfel[A, B] ist eine Abkürzung von Würfel[A, B, C] mit C = Punkt[Kreis[B, Abstand[A, B], Strecke[A, B]]].
+
+====
+
+[NOTE]
+====
+
+Siehe auch die Befehle xref:/commands/Ikosaeder.adoc[Ikosaeder], xref:/commands/Tetraeder.adoc[Tetraeder],
+xref:/commands/Oktaeder.adoc[Oktaeder], xref:/commands/Dodekaeder.adoc[Dodekaeder].
+
+====

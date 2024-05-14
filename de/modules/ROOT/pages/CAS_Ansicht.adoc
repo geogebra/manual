@@ -1,0 +1,236 @@
+= CAS-Ansicht
+:page-en: CAS_View
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+== [#Benutzeroberfläche_der_CAS-Ansicht]####[#Benutzeroberfl.C3.A4che_der_CAS-Ansicht]##image:24px-Menu_view_cas.svg.png[Menu view cas.svg,width=24,height=24] Benutzeroberfläche der CAS-Ansicht##
+
+Die image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS-Ansicht_ wird standardmäßig neben der
+image:16px-Menu_view_graphics.svg.png[Grafik-Ansicht,title="Grafik-Ansicht",width=16,height=16]
+_xref:/Grafik_Ansicht.adoc[Grafik-Ansicht]_ eingeblendet. Je nachdem welche der beiden _Ansichten_ aktiv ist, wird oben
+im GeoGebra-Fenster entweder die xref:/CAS_Werkzeuge.adoc[_Werkzeugleiste der CAS-Ansicht_] oder die
+xref:/Grafik_Werkzeuge.adoc[_Werkzeugleiste der Grafik-Ansicht_] angezeigt. In der rechten oberen Ecke befinden sich die
+Schaltflächen image:16px-Menu-edit-undo.svg.png[Menu-edit-undo.svg,width=16,height=16] _Rückgängig_ und
+image:16px-Menu-edit-redo.svg.png[Menu-edit-redo.svg,width=16,height=16] _Wiederherstellen_.
+
+[width="100%",cols="100%",]
+|===
+a|
+image:314px-CAS-View.png[CAS-View.png,width=314,height=220]
+
+CAS-Ansicht
+
+|===
+
+Die image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS-Ansicht_ ist Teil der
+xref:/Perspektiven.adoc[_CAS-Perspektive_]. Sie können das xref:/GeoGebra_Desktop_vs_Web_und_Tablet_Apps.adoc[Layout]
+der GeoGebra Benutzeroberfläche aber auch jederzeit Ihren individuellen Wünschen anpassen.
+
+== [#Mathematische_Objekte_erstellen]#Mathematische Objekte erstellen#
+
+=== Direkte Eingabe
+
+In der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS-Ansicht_ können Sie das CAS (Computer
+Algebra System) von GeoGebra für symbolische Berechnungen verwenden. Jede Zelle besteht aus einem _Eingabefeld_ (oben)
+und einem _Ausgabefenster_ (unten). Sie können diese _Eingabefelder_ genauso wie die normale
+_xref:/Eingabezeile.adoc[Algebra-Eingabe]_ nutzen. Beachten Sie aber die folgenden Unterschiede:
+
+* Es können auch Variablen verwendet werden, denen kein bestimmter Wert zugeordnet wurde.
+* `++=++` wird für Gleichungen verwendet und `++:=++` für Zuweisungen. Das bedeutet, dass die Eingabe `++a=2++` der
+Variable _a_ nicht den Wert 2 zuweist. Im xref:/.adoc[Unterkapitel zu den Zuordnungen] finden Sie nähere Details zu
+dieser Thematik.
+* Multiplikationen müssen explizit angegeben werden. Während Sie in der _xref:/Eingabezeile.adoc[Algebra-Eingabe]_
+Multiplikationen als `++a(b+c)++` und als `++a*(b+c)++` schreiben können, ist in der
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS-Ansicht_ ausschließlich die Schreibweise
+`++a*(b+c)++` erlaubt.
+
+=== Tastenkombinationen für die direkte Eingabe
+
+In der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS-Ansicht_ von GeoGebras Desktop
+Version helfen Ihnen die folgenden Tastenkombinationen beim Auswerten oder Überprüfen Ihrer Eingabe:
+
+[NOTE]
+====
+
+Anstelle der Tastenkombinationen können Sie natürlich auch das entsprechende xref:/CAS_Werkzeuge.adoc[_Werkzeug_] der
+xref:/.adoc[_Werkzeugleiste der CAS-Ansicht_] verwenden.
+
+====
+
+* [.kcode]#Eingabe#: Wertet die Eingabe aus.
+
+[NOTE]
+====
+
+* Zuweisungen werden immer ausgewertet, z.B. `++a := 5++`
+* Die Ausgabe kann unterdrückt werden, indem am Ende der Eingabe ein Strichpunkt eingetippt wird, z.B. `++a := 5;++`.
+
+====
+
+=== Zuweisung einer Variable und Vernetzung mit anderen Ansichten
+
+Verwenden Sie die `++:=++` Notation für Zuweisungen, z.B. `++b := 5++` oder `++a(n) := 2n + 3++`.
+
+* _Zuweisung einer Variable aufheben_: Verwenden Sie `++Lösche[b]++`, um einen Namen einer Variable wieder freizugeben.
+* _Variablen oder Funktionen neu definieren_: Sie können eine Variable oder eine Funktion neu definieren, aber dies muss
+*in derselben Zelle* geschehen, sonst wird sie als neue Variable (oder Funktion) behandelt und automatisch umbenannt.
+
+Variablen und Funktionen werden, sofern dies möglich ist, stets von der image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] _CAS-Ansicht_ sowie von den anderen _Ansichten_ geteilt. Beispiele:
+
+* Wenn Sie `++b:=5++` in der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS-Ansicht_
+definieren, kann _b_ auch in allen anderen _Ansichten_ von GeoGebra verwendet werden.
+* Definieren Sie in einer anderen _Ansicht_ die Funktion `++f(x)=x^2++`, so können Sie diese Funktion auch in der
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS-Ansicht_ verwenden.
+
+[NOTE]
+====
+
+Die Ausgabe ist immer nur der Ausdruck *nach* dem `++:=++`. Geben Sie etwa `++b:=5++` ein, so ist die Ausgabe _5_.
+Beachten Sie weiters, dass nur zur Verdeutlichung _b := 5_ angezeigt wird.
+
+====
+
+=== Gleichungen
+
+* Sie können Gleichungen schreiben, indem Sie das einfache _Gleichheitszeichen_ verwenden, z.B. `++3x + 5 = 7++`.
+* _Arithmetische Operationen_: Es ist möglich auf Gleichungen arithmetisch Operationen anzuwenden. Dies kann beim
+händischen Lösen von Gleichungen sehr hilfreich sein.
++
+[EXAMPLE]
+====
+
+`++(3x + 5 = 7) - 5++` subtrahiert von beiden Seiten der Gleichung den Wert 5.
+
+====
+* _Seite extrahieren_: Sie können mit den folgenden Befehlen entweder die linke oder die rechte Seite einer Gleichung
+extrahieren: `++LinkeSeite[]++` und `++RechteSeite[]++`.
++
+[EXAMPLE]
+====
+
+`++LinkeSeite[3x + 5 = 7]++` liefert die Ausgabe _3x + 5_ und `++RechteSeite[3x + 5 = 7]++` liefert die Ausgabe _7_
+
+====
+
+=== Zeilenbezüge
+
+Sie haben zwei Möglichkeiten, um Bezüge zu anderen Zeilen der image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] _CAS-Ansicht_ herzustellen:
+
+* *Statische Zeilenbezüge* kopieren die Ausgabe einer anderen Zeile, sodass nachfolgende Änderungen der _Bezugszeile_
+*keine Auswirkung* auf die Kopie haben.
+** `++#++`: Kopiert die vorherige Ausgabe.
+** `++#5++`: kopiert die Ausgabe von Zeile 5.
+* *Dynamische Zeilenbezüge* fügen eine Referenz auf die Ausgabe einer anderen Zeile ein. Nachfolgende Änderungen der
+_Bezugszeile_ *haben eine Auswirkung* und werden auf die Kopie übertragen.
+** `++$++`: Fügt einen Bezug zur vorherige Ausgabe ein.
+** `++$5++`: Fügt einen Bezug zur Ausgabe aus Zeile 5 ein.
+
+== [#CAS_Befehle]#CAS Befehle#
+
+GeoGebra bietet eine Vielzahl von _xref:/CAS_spezifische_Befehle.adoc[CAS spezifischen Befehlen]_, die dazu genutzt
+werden können, Objekte in der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS-Ansicht_ zu
+erstellen. Wenn Sie beginnen den Namen eines _Befehls_ in das _Eingabefeld_ zu tippen, schlägt GeoGebra Ihnen
+automatisch eine Liste mit _Befehlen_ vor, die zu Ihrer Eingabe passen.
+
+[NOTE]
+====
+
+Auf der Seite über xref:/CAS_spezifische_Befehle.adoc[CAS spezifische Befehle] finden Sie eine vollständige Liste aller
+_CAS Befehle_.
+
+====
+
+[NOTE]
+====
+
+Ab GeoGebra 5.0 unterstützt die [[File:Menu_view_cas.svg
+
+====
+
+.
+
+== [#Werkzeugleiste_der_CAS-Ansicht]#Werkzeugleiste der CAS-Ansicht#
+
+Die xref:/CAS_Werkzeuge.adoc[_Werkzeugleiste der CAS-Ansicht_] bietet Ihnen eine Vielzahl an
+_xref:/CAS_Werkzeuge.adoc[CAS Werkzeugen]_. Sie ermöglichen Ihnen die Auswertung Ihrer Eingaben sowie die Durchführung
+konkreter Berechnungen. Geben Sie einfach Ihre Eingabe ein und wählen Sie danach das entsprechende _CAS Werkzeug_ aus,
+um es auf Ihre Eingabe anzuwenden.
+
+image:315px-Toolbar-CAS.png[3D Graphics Tools,title="3D Graphics Tools",width=315,height=32]
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Hinweis:* Es ist möglich nur einen Teil der Eingabe
+auszuwählen, um die jeweilige Operation ausschließlich auf die Auswahl anzuwenden.
+
+====
+
+[NOTE]
+====
+
+Auf der Seite _xref:/CAS_Werkzeuge.adoc[CAS Werkzeuge]_ finden Sie eine vollständige Liste aller _CAS Werkzeuge_ .
+
+====
+
+== [#Kontext-Menüs]####[#Kontext-Men.C3.BCs]##Kontext-Menüs##
+
+=== Zeilenkopf-Kontext-Menü
+
+Klicken Sie in der GeoGebra Desktop Version mit der rechten Maustaste (MacOS: [.kcode]#Strg#-Klick) auf einen
+Zeilenkopf, um ein _Kontext-Menü_ mit den folgenden Optionen einzublenden:
+
+* *Oberhalb einfügen*: Fügt über der ausgewählten Zeile eine leere Zeile ein.
+* *Unterhalb einfügen*: Fügt unter der ausgewählten Zeile eine leere Zeile ein.
+* *Lösche Zeile*: Löscht die Inhalte der ausgewählten Zeile.
+* *Text*: Ermöglicht das Umschalten zwischen dem aktuellen Ergebnis der Zeile und einem Text, der das aktuelle Ergebnis
+der Zeile beinhaltet. Dadurch können Kommentare eingefügt werden.
+* *Als LaTeX kopieren* (GeoGebra Desktop): Kopiert den Inhalt der ausgewählten Zeile in die Zwischenablage des
+Computers. So kann der ausgewählte Inhalt beispielsweise in ein http://wiki.geogebra.org/en/Text[Text]-Objekt eingefügt
+werden.
+
+[NOTE]
+====
+
+Um die Inhalte von mehreren CAS Zeilen als LaTeX zu kopieren, wählen sie die betreffenden Zeilen mit gedrückter
+[.kcode]#Strg#-Taste aus (MacOS: [.kcode]#Cmd#-Klick). Klicken Sie anschließend mit der rechten Maustaste (MacOS:
+[.kcode]#Strg#-Klick) auf den Zeilenkopf und wählen Sie die Option _Als LaTeX kopieren_.
+
+====
+
+=== Zellen-Kontext-Menü
+
+Klicken Sie in der GeoGebra Desktop Version mit der rechten Maustaste (MacOS: [.kcode]#Strl#-Klick) auf eine
+CAS-Ausgabezelle, um eine _Kontext-Menü_ mit den folgenden Optionen einzublenden:
+
+* *Kopieren*: Kopiert die Zelleninhalte in die Zwischenablage des Computers. Klicken Sie auf eine neue Zelle, damit die
+Option *Einfügen* angezeigt wird.
+* *Als LaTeX kopieren*: Kopiert die Zelleninhalte im LaTeX-Format in die Zwischenablage des Computers. So können die
+Inhalte beispielsweise in ein http://wiki.geogebra.org/en/Text[Text]-Objekt oder in einen LaTeX-Editor eingefügt werden.
+* *Als LibreOffice Formel kopieren*: Kopiert die Zelleninhalte als LibreOffice Formel in die Zwischenablage des
+Computers. So können die Inhalte in ein Textverarbeitungsdokument eingefügt und weiterverwendet werden.
+* *Als Bild kopieren*: Kopiert die Zelleninhalte als Bild im PNG-Format in die Zwischenablage des Computers. Sie können
+den Inhalt in ein xref:/tools/Bild.adoc[Bildobjekt] oder in ein Textverarbeitungsdokument einfügen und weiterverwenden.
+
+== [#Mathematische_Objekte_anzeigen]#Mathematische Objekte anzeigen#
+
+=== xref:/Gestaltungsleiste.adoc[Gestaltungsleiste der CAS-Ansicht]
+
+Die xref:/Gestaltungsleiste.adoc[Gestaltungsleiste der CAS-Ansicht] beinhaltet folgende Schaltflächen:
+
+* image:16px-Stylingbar_text.svg.png[Stylingbar text.svg,width=16,height=16] ändern Sie den _Schriftstil_ (*F* *fett*
+und _K_ _kursiv_) und die image:16px-Stylingbar_color_white.svg.png[Stylingbar color white.svg,width=16,height=16]
+_Farbe_ des Textes
+* image:16px-Cas-keyboard.png[Cas-keyboard.png,width=16,height=16] Virtuelle Tastatur einblenden (GeoGebra Desktop)
+* Zusätzliche image:16px-Stylingbar_dots.svg.png[Stylingbar dots.svg,width=16,height=16]
+xref:/Ansichten.adoc[_Ansichten_] im GeoGebra-Fenster einblenden (GeoGebra Web and Tablet Apps)
+
+=== CAS Objekte in der xref:/Graphik_Ansicht.adoc[image:20px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=20,height=20]] _Grafik Ansicht_ anzeigen
+
+In der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS-Ansicht_ zeigt das Symbol links von
+jeder Zeile den aktuellen Sichtbarkeitsstatus (sichtbar oder verborgen) des in der Zeile definierten Objekts an (wenn
+möglich). Sie können direkt auf das kleine Symbol image:16px-Mode_showhideobject.svg.png[Mode
+showhideobject.svg,width=16,height=16] _Objekt anzeigen / verbergen_ klicken, um den Sichtbarkeitsstatus des Objekts in
+der xref:/Grafik_Ansicht.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+_xref:/Grafik_Ansicht.adoc[Grafik-Ansicht]_ zu ändern.

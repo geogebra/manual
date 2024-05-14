@@ -1,0 +1,62 @@
+= Bedingte Sichtbarkeit
+:page-en: Conditional_Visibility
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Neben der Möglichkeit, Objekte entweder anzuzeigen oder auszublenden, kann der Sichtbarkeits-Status eines Objekts auch
+von einer Bedingung abhängen. Zum Beispiel möchten Sie dass ein Objekt (z. B. ein Text) nur dann am Bildschirm erscheint
+wenn ein bestimmtes Kontrollkästchen aktiviert wurde oder wenn ein xref:/tools/Schieberegler.adoc[Schieberegler] auf
+einen bestimmten Wert gesetzt wird.
+
+== Bedingtes Anzeigen oder Ausblenden existierender Objekte
+
+Sie können das Werkzeug image:24px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=24,height=24]
+xref:/tools/Kontrollkästchen.adoc[Kontrollkästchen] dazu verwenden, um ein Kontrollkästchen zu erzeugen, das die
+Sichtbarkeit eines oder mehrere Objekte kontrolliert.
+
+Alternativ dazu können sie auch eine xref:/Wahrheitswerte.adoc[Boolesche Variable] (z. B. `++b = true++`) mithilfe der
+xref:/Eingabezeile.adoc[Eingabezeile] erzeugen und diese anschließend als Kontrollkästchen in der
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Grafik_Ansicht.adoc[Grafik-Ansicht] anzeigen lassen (z. B. mit dem Werkzeug
+image:24px-Mode_showhideobject.svg.png[Mode showhideobject.svg,width=24,height=24]
+xref:/tools/Objekt_anzeigen_ausblenden.adoc[Objekt anzeigen / ausblenden] oder im
+xref:/Kontext_Menü.adoc[Kontext-Menü]). Ein Kontrollkästchen ist also eine sichtbare Boolesche Variable.
+
+Informationen zum Verwenden einer xref:/Wahrheitswerte.adoc[Booleschen Variable] als Bedingung für die Sichtbarkeit
+eines Objekts finden Sie im folgenden Abschnitt.
+
+== Verändern der Sichtbarkeit von neu erzeugten Objekten
+
+Im image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Eigenschaften_Dialog.adoc[Eigenschaften-Dialog] können Sie in dem Tab _Erweitert_ eine Bedingung für die
+Sichtbarkeit des ausgewählten Objekts eingeben.
+
+[NOTE]
+====
+
+Sie können logische Operatoren (z. B. ≠, ≥, ˄) aus der Liste rechts neben dem entsprechenden Textfeld auswählen.
+
+====
+
+[EXAMPLE]
+====
+
+* Sei _a_ ein xref:/tools/Schieberegler.adoc[Schieberegler]. Dann bedeuted die Bedingung a < 2, dass das entsprechende
+Objekt nur dann in der image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Grafik-Ansicht_
+sichtbar ist, wenn der Wert des Schiebereglers kleiner als 2 ist.
+* Eine xref:/Wahrheitswerte.adoc[Boolesche Variable] _b_ kann als Bedingung für die Sichtbarkeit eines beliebigen
+Objektes verwendet werden. Öffnen Sie den image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+_Eigenschaften-Dialog_ für ein beliebiges Objekt und geben Sie die Bedingung _b_ auf der Karte _Erweitert_ ein. Das
+entsprechende Objekt wird am Bildschirm angezeigt wenn _b_ den Wert _true_ annimmt und wird ausgeblendet wenn _b_ den
+Wert _false_ annimmt.
+* Seien _g_ und _h_ zwei Geraden und _text1_ ein Text, der eingeblendet werden soll, falls die beiden Geraden parallel
+sind. Öffnen Sie den image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Eigenschaften-Dialog_ für
+_text1_ und geben Sie die Bedingung g ‖ h im Tab _Erweitert_ ein.
+
+====
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/SetzeSichtbarInGrafikansicht.adoc[SetzeSichtbarInGrafikansicht].
+
+====

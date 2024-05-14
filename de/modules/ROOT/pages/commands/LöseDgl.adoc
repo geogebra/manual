@@ -1,0 +1,167 @@
+= LöseDgl (Befehl)
+:page-en: commands/SolveODE_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+LöseDgl( <f'(x, y)> )::
+  Versucht eine exakte Lösung der gewöhnlichen Differentialgleichung erster Ordnung stem:[\frac\{dy}\{dx}(x)=f'(x,
+  y(x))] zu finden.
+LöseDgl( <f'(x, y)>, <Punkt von f> )::
+  Versucht eine exakte Lösung der gewöhnlichen Differentialgleichung erster Ordnung stem:[\frac\{dy}\{dx}(x)=f'(x,
+  y(x))] zu finden, wobei die Lösung durch den gegebenen Punkt verläuft.
+LöseDgl( <f'(x, y)>, <Start x>, <Start y>, <Ende x>, <Schrittweite> )::
+  Versucht eine exakte Lösung der gewöhnlichen Differentialgleichung erster Ordnung stem:[\frac\{dy}\{dx}=f'(x,y) ]
+  numerisch, mit gegebenem Startpunkt, Ende und Schrittweite für _x_ zu finden.
+
+[EXAMPLE]
+====
+
+`++LöseDgl[-x*y, x(A), y(A), 5, 0.1]++` löst die Gleichung stem:[\frac\{dy}\{dx}=-xy] beginnend mit dem zuvor
+definierten Startpunkt _A_.
+
+====
+
+[EXAMPLE]
+====
+
+`++LöseDgl[y / x, (1, 2)]++` liefert _y = 2x_.
+
+====
+
+[EXAMPLE]
+====
+
+`++LöseDgl[2x / y]++` liefert stem:[\sqrt\{2} \sqrt\{-c_\{1}+x^\{2}}], wobei stem:[c_\{1}] eine Konstante ist.
+
+====
+
+[NOTE]
+====
+
+* xref:/commands/Länge.adoc[Länge][ <Ortslinie> ] ermöglicht es herauszufinden, wie viele Punkte sich auf der
+berechneten Ortslinie befinden.
+* xref:/commands/Erstes.adoc[Erstes][ <Ortslinie>, <Anzahl der Elemente> ] ermöglicht es die Punkte als Liste
+auszugeben.
+* Um die "entgegengesetzte" Lösung zu erhalten, müssen negative Werte für _Ende x_ verwendet werden. z.B.
+`++LöseDgl[-x*y, x(A), y(A), -5, 0.1]++`
+
+====
+
+[NOTE]
+====
+
+stem:[c_\{1}] wird als Hilfsobjekt mit einem entsprechenden Schieberegler erstellt.
+
+====
+
+LöseDgl( <y'>, <x'>, <Start x>, <Start y>, <Ende t>, <Schrittweite> )::
+  Versucht eine exakte Lösung der gewöhnliche Differentialgleichung erster Ordnung
+  stem:[\frac\{dy}\{dx}=\frac\{f(x,y)}\{g(x,y)} ] mit gegebenem Startpunkt, Maximalwert eines internen Parameters _t_
+  und der Schrittweite für _t_ zu finden. Diese Version des Befehls könnte auch dann funktionieren, falls der erste
+  Befehl nicht funktioniert, wenn z. B. die Lösungskurve vertikale Punkte besitzt.
+LöseDgl( <b(x)>, <c(x)>, <f(x)>, <Start x>, <Start y>, <Start y'>, <Ende x>, <Schrittweite> )::
+  Versucht eine exakte Lösung der gewöhnlichen Differentialgleichung zweiter Ordnung stem:[y'' + b(x) y' + c(x) y =
+  f(x)] zu finden.
+
+[EXAMPLE]
+====
+
+`++LöseDgl[x^2, 2x, 2x^2 + x, x(A), y(A), 0, 5, 0.1]++` löst die Differentialgleichung beginnend mit dem zuvor
+definierten Startpunkt _A_.
+
+====
+
+[EXAMPLE]
+====
+
+`++LöseDgl[-x, y, x(A), y(A), 5, 0.1]++` löst stem:[\frac\{dy}\{dx}=- \frac\{x}\{y} ] beginnend mit dem zuvor
+definierten Startpunkt _A_.
+
+====
+
+[NOTE]
+====
+
+Hier wird immer eine Ortslinie als Ergebnis geliefert. Der Algorithmus basiert auf dem
+http://en.wikipedia.org/wiki/de:Runge-Kutta-Verfahren[Runge-Kutta-Verfahren].
+
+====
+
+[NOTE]
+====
+
+Um die "entgegengesetzte" Lösung zu erhalten, müssen negative Werte für _Ende t_ verwendet werden. z.B.
+`++LöseDgl[-x, y, x(A), y(A), -5, 0.1]++`.
+
+====
+
+[NOTE]
+====
+
+Siehe auch xref:/commands/Richtungsfeld.adoc[Richtungsfeld].
+
+====
+
+== CAS-Ansicht
+
+LöseDgl( <Gleichung> )::
+  Versucht eine exakte Lösung der gewöhnlichen Differentialgleichung erster oder zweiter Ordnung zu finden. Für die
+  erste und zweite Ableitung von _y_ kann man _y'_ und _y''_ schreiben.
+LöseDgl( <Gleichung>, <Punkt(e) von f> )::
+  Versucht eine exakte Lösung der gewöhnlichen Differentialgleichung erster oder zweiter Ordnung zu finden, wobei die
+  Lösung durch den/die gegebenen _Punkt(e) von f_ verläuft.
+LöseDgl( <Gleichung>, <Punkt(e) von f>, <Punkt(e) von f'> )::
+  Versucht eine exakte Lösung der gewöhnlichen Differentialgleichung erster oder zweiter Ordnung zu finden, wobei die
+  Lösung durch den/die gegebenen _Punkt(e) von f_ und die Funktion _f'_ durch den/die gegebenen _Punkt(e) von f'_
+  verläuft.
+LöseDgl( <Gleichung>, <Abhängige Variable>, <Unabhängige Variable>, <Punkt(e) von f> )::
+  Versucht eine exakte Lösung der gewöhnlichen Differentialgleichung erster oder zweiter Ordnung zu finden, wobei die
+  Lösung durch den/die gegebenen _Punkt(e) von f_ verläuft.
+LöseDgl( <Gleichung>, <Abhängige Variable>, <Unabhängige Variable>, <Punkt(e) von f>, <Punkt(e) von f'> )::
+  Versucht eine exakte Lösung der gewöhnlichen Differentialgleichung erster oder zweiter Ordnung zu finden, wobei die
+  Lösung durch den/die gegebenen _Punkt(e) von f_ und die Funktion _f'_ durch den/die gegebenen _Punkt(e) von f'_
+  verläuft.
+
+[EXAMPLE]
+====
+
+`++LöseDgl[v' = v / w, v,  w, (1, 2), (0, 2)]++` berechnet _v = 2w_.
+
+====
+
+[EXAMPLE]
+====
+
+`++LöseDgl[v' = v / w, v,  w, (1, 2)]++` berechnet _v = 2w_.
+
+====
+
+[EXAMPLE]
+====
+
+`++LöseDgl[y'' - 3y' + 2 = x, (2, 3), (1, 2)]++` berechnet stem:[ y = \frac\{-9 x^2 e^3 + 30 x e^3 - 32 \{(e^3)}^2 + 138
+e^3 + 32 e^\{3 x} }\{54 e^3} ].
+
+====
+
+[EXAMPLE]
+====
+
+`++LöseDgl[y' = y / x, (1, 2)]++` berechnet _y = 2x_.
+
+====
+
+[EXAMPLE]
+====
+
+`++LöseDgl[y' = y / x]++` berechnet _y = c~1~ x_.
+
+====
+
+[NOTE]
+====
+
+Um für Kompatibilität mit der Eingabzeile zu sorgen, wird, falls der erste Parameter ein Ausdruck ohne _y'_ oder _y''_
+ist, dieser Ausdruck als rechte Seite einer gewöhnlichen Differentialgleichung gesehen, bei der die linke Seite _y'_
+ist.
+
+====

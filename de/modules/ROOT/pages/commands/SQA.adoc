@@ -1,0 +1,16 @@
+= SQA (Befehl)
+:page-en: commands/SumSquaredErrors_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+SQA( <Liste von Punkten>, <Funktion> )::
+  Berechnet die Summe der quadratischen Abweichungen, SQA, zwischen den _y_-Werten der Punkte in der Liste und den
+  Funktionswerten der _x_-Werte in der Liste.
+
+[EXAMPLE]
+====
+
+Angenommen wir haben eine Liste von Punkten `++L={(1, 3), (3, 4),(2, 2), (5, 2), (5, 5)}++` und die beiden Funktionen
+`++f(x)=TrendPoly[L,1]++` und `++g(x)=FitPoly[L,2]++`. Dann ergibt `++SQA[L,f]++` _9_ und `++SQA[L,g]++` _6.99_ und wir
+sehen, dass _g(x)_ die bessere Annäherung ist im Sinne der kleinsten Summe der quadratischen Fehler.
+
+====

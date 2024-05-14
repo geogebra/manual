@@ -1,0 +1,28 @@
+= Oberfläche (Befehl)
+:page-en: commands/Surface_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Oberfläche( <Ausdruck>, <Ausdruck>, <Ausdruck>, <Parameter Variable 1>, <Startwert>, <Endwert>, <Parameter Variable 2>,
+<Startwert, <Endwert> )
+
+Stellt die Oberfläche für den gegebenen _x_-Ausdruck (erster _<Ausdruck>_), _y_-Ausdruck (zweiter _<Ausdruck>_) und
+_z_-Ausdruck (dritter _<Ausdruck>_) im Dreidimensionalen dar, indem zwei _<Parameter Variablen>_ in jeweils gegebenen
+Intervallen [_<Startwert>_, _<Endwert>_] verwendet werden.
+
+[EXAMPLE]
+====
+
+Seien _r_ und _R_ zwei positive ganze Zahlen:
+`++Oberfläche[(R + r cos( u)) cos(v) , (R + r cos( u)) sin(v) , r sin(u ), u, 0, 2 π , v, 0, 2 π]++` erstellt einen
+Torus, bei dem ein senkrecht stehender Kreis mit Radius _r_ um die z-Achse (befindet sich außerhalb des Kreises) mit
+Abstand _R_ rotiert.
+
+====
+
+[NOTE]
+====
+
+* Der _Endwert_ muss größer oder gleich dem _Startwert_ sein und beide müssen endlich sein.
+* _x, y_ und _z_ dürfen nicht als Parameter Variablen verwendet werden.
+
+====

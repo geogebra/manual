@@ -1,0 +1,34 @@
+= SindGleich (Befehl)
+:page-en: commands/AreEqual_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+SindGleich( <Objekt>, <Objekt> )::
+  Gibt an, ob die zwei Objekte gleich sind.
+
+Dieser Befehl berechnet das Ergebnis normalerweise numerisch. Mit dem Befehl xref:/commands/Prüfe.adoc[Prüfe] kann
+überprüft werden, ob die Objekte im Allgemeinen gleich sind.
+
+[EXAMPLE]
+====
+
+`++SindGleich[Kreis[(0, 0),1],x^2+y^2=1]++` liefert _true_, da die beiden Kreise den gleichen Mittelpunkt und die
+gleiche Länge haben.
+
+====
+
+[NOTE]
+====
+
+`++SindGleich[Strecke[(1, 2), (3, 4)], Strecke[(3, 4), (1, 6)]]++` unterscheidet sich von der Eingabe
+`++Strecke[(1, 2), (3, 4)] == Strecke[(3, 4), (1, 6)]++`, da letztere nur die Längen der beiden Strecken vergleicht.
+
+====
+
+[NOTE]
+====
+
+Siehe auch die Befehle xref:/commands/LiegenAufGerade.adoc[LiegenAufGerade],
+xref:/commands/SindKopunktal.adoc[SindKopunktal], xref:/commands/LiegenAufKreis.adoc[LiegenAufKreis],
+xref:/commands/SindParallel.adoc[SindParallel] und xref:/commands/SindNormal.adoc[SindNormal].
+
+====

@@ -1,0 +1,97 @@
+= Objekte benennen
+:page-en: Naming_Objects
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Sie können einem Objekt einen bestimmten Namen zuweisen, wenn sie dieses mit der xref:/Eingabezeile.adoc[Eingabezeile]
+erzeugen:
+
+* xref:/Punkte_und_Vektoren.adoc[Punkte]: In GeoGebra werden Punkte immer mit Großbuchstaben benannt. Tippen Sie einfach
+den Namen (z.B.: A, P) und ein = Zeichen vor die Koordinaten oder Befehle.
+
+[EXAMPLE]
+====
+
+`++C = (2, 4)++`, `++ P = (1; 180°)++`
+
+====
+
+* xref:/Punkte_und_Vektoren.adoc[Vektoren]: Um zwischen Punkten und Vektoren zu unterscheiden, werden für Vektoren in
+GeoGebra Kleinbuchstaben verwendet. Wiederum können Sie einfach den Namen (z.B.: v, u) und ein = Zeichen vor die
+Koordinaten oder Befehle eintippen.
+
+[EXAMPLE]
+====
+
+`++v = (1, 3)++`, `++ u = (3; 90°)++`
+
+====
+
+* xref:/Linien_und_Achsen.adoc[Geraden], Kreise und xref:/Kegelschnitte.adoc[Kegelschnitte]: Diese Objekte können
+benannt werden, in dem Sie den Namen und einen Doppelpunkt vor die Gleichung oder den Befehl setzen.
+
+[EXAMPLE]
+====
+
+`++g: y = x + 3++`, `++c: (x-1)^2 + (y – 2)^2 = 4++`, `++hyp: x^2 – y^2 = 2++`
+
+====
+
+* xref:/Funktionen.adoc[Funktionen]: Sie können Funktionen benennen, in dem Sie `++f(x) =++` oder `++g(x)=++` vor die
+Funktionsgleichung oder den Befehl eintippen.
+
+[EXAMPLE]
+====
+
+`++h(x) = 2 x + 4++`, `++q(x) = x^2, trig(x) = sin(x)++`
+
+====
+
+[NOTE]
+====
+
+* Weisen Sie neuen Objekten keinen Namen zu, so weist GeoGebra diesen automatisch Namen in alphabetischer Reihenfolge
+zu.
+* Verwenden Sie den Unterstrich, um Indizes im Namen von Objekten zu verwenden. Zum Beispiel liefert A~1~ `++A_1++` und
+s~AB~ `++s_{AB}++`.
+
+====
+
+== Reservierte Namen
+
+Folgende Namen können nicht als Objektname verwendet werden: x, y, z, xAchse, yAchse, zAchse, abs, sgn, sqrt, exp, log,
+ln, ld, lg, cos, sin, tan, acos, arcos, arccos, asin, arcsin, atan, arctan, cosh, sinh, tanh, acosh, arcosh, arccosh,
+asinh, arcsinh, atanh, arctanh, atan2, erf, floor, ceil, round, random, conjugate, arg, gamma, gammaRegularized, beta,
+betaRegularized, sec, csc, cosec, cot, sech, csch, coth
+
+In der Symbolliste der _Eingabezeile_ finden Sie spezielle Zeichen für folgende Konstanten:
+
+* π - die Kreiszahl pi (kann auch mit [.kcode]#Alt# + [.kcode]#p# eingegeben werden)
+* ℯ - die Euler'sche Zahl, z.B.: für die Exponentialfunktion ℯ^x (kann auch mit [.kcode]#Alt# + [.kcode]#e# eingegeben
+werden)
+* ί - die imaginäre Einheit, z.B.: für komplexe Zahlen wie z = 3 + ί (kann auch mit [.kcode]#Alt# + [.kcode]#i#
+eingegeben werden)
+
+Werden die Variablen e bzw. i noch nicht als Objektnamen verwendet, dann werden sie automatisch als ℯ bzw. ί erkannt.
+
+== Objekte umbenennen
+
+Der einfachste Weg um den Namen eines bestehenden Objektes zu ändern besteht darin, das Objekt auszuwählen und einen
+neuen Namen einzutippen. Sie können ein Objekt auch umbennen, indem Sie die Option
+image:18px-Menu-edit-rename.svg.png[Menu-edit-rename.svg,width=18,height=18] _Umbenennen_ im
+xref:/Kontext_Menü.adoc[Kontext-Menü] des Objekts auswählen oder den
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Eigenschaften_Dialog.adoc[Eigenschaften-Dialog] des Objekts öffnen und den neuen Namen in das Feld _Name_ im Tab
+_Grundeinstellungen_ eingeben.
+
+[NOTE]
+====
+
+* Abhängigkeiten werden automatisch aufgelöst: das bedeutet, dass der Name des Objekts auch in seiner Definition
+geändert wird. Skripting, das Objekte enthält, denen ein neuer Name gegeben wurde, muss manuell geändert werden.
+* Wenn Sie einem Objekt einen Namen zuweisen, der schon von einem anderen Objekt genutzt wird, dann wird der Name des
+letzteren Objekts geändert, z.B. wenn Sie den Namen des Punktes _B_ zu _A_ ändern und ein Punkt _A_ schon existiert,
+dann erhält der ehemalige Punkt _A_ den neuen Namen _A~1~_.
+
+====
+
+Siehe auch xref:/Namen_und_Beschriftungen.adoc[Namen und Beschriftungen].

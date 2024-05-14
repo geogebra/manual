@@ -1,0 +1,38 @@
+= Bogen (Befehl)
+:page-en: commands/Arc_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Bogen [ <Kreis>, <Punkt>, <Punkt>]::
+  Erzeugt den gegen den Uhrzeigersinn gerichteten Bogen zwischen den zwei Punkten auf dem Kreis.
+
+Bogen [ <Ellipse>, <Punkt>, <Punkt> ]::
+  Erzeugt den gegen den Uhrzeigersinn gerichteten Bogen zwischen den zwei Punkten auf der Ellipse.
+
+Bogen( <Kreis>, <Parameter Startwert>, <Parameter Endwert>)::
+  Erzeugt einen Bogen zwischen den zwei Parameterwerten auf dem Kreis.
+
+[NOTE]
+====
+
+Intern werden dabei die folgenden Parameterdarstellungen verwendetKreis: (_r_ cos(_t_), _r_ sin(_t_)) wobei _r_ der
+Radius des Kreises ist.
+
+====
+
+Bogen [ <Ellipse>, <Parameter Startwert>, <Parameter Endwert>]::
+  Erzeugt einen Bogen zwischen den zwei Parameterwerten auf der Ellipse.
+
+[NOTE]
+====
+
+Intern werden dabei die folgenden Parameterdarstellungen verwendetEllipse: (_a_ cos(_t_), _b_ sin(_t_)) wobei _a_ und
+_b_ die halbe Haupt- bzw. Nebenachsenlänge sind.
+
+====
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/Umkreisbogen.adoc[Umkreisbogen].
+
+====

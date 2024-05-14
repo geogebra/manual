@@ -1,0 +1,35 @@
+= Trendlinie (Befehl)
+:page-en: commands/FitLine_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Trendlinie( <Liste von Punkten> )::
+  Berechnet die Trendlinie von y auf x (1. Regressionsgerade) der gegebenen Punkte. Dabei wird die Summe der
+  Quadratabstände in y-Richtung minimiert.
+
+[EXAMPLE]
+====
+
+`++Trendlinie[{(-2, 1), (1, 2), (2, 4), (4, 3), (5, 4)}]++` liefert _0.4x + 2_.
+
+====
+
+== CAS-Ansicht
+
+Trendlinie( <Liste von Punkten> )::
+  Berechnet die Trendlinie von y auf x (1. Regressionsgerade) der gegebenen Punkte. Dabei wird die Summe der
+  Quadratabstände in y-Richtung minimiert.
+
+[EXAMPLE]
+====
+
+`++Trendlinie[{(-2, 1), (1, 2), (2, 4), (4, 3), (5, 4)}]++` liefert _0.4x + 2_.
+
+====
+
+[NOTE]
+====
+
+Siehe auch Werkzeug image:24px-Mode_fitline.svg.png[Mode fitline.svg,width=24,height=24]
+xref:/tools/Regressionsgerade.adoc[Regressionsgerade] und Befehl xref:/commands/TrendlinieX.adoc[TrendlinieX].
+
+====

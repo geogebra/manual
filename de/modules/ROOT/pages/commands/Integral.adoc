@@ -1,0 +1,59 @@
+= Integral (Befehl)
+:page-en: commands/Integral_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Integral(<Funktion>)::
+  Berechnet das unbestimmte Integral der Funktion nach der Hauptvariable.
+Integral(<Funktion>, <Variable>)::
+  Berechnet die partielle Integration der Funktion nach der angegebenen Variable.
+Integral(<Funktion>, <Startwert>, <Endwert>)::
+  Berechnet das bestimmte Integral der Funktion nach der Hauptvariable im Intervall [_Startwert , Endwert_].
+Integral(<Funktion>, Startwert, Endwert, Wahrheitswert Berechne)::
+  Berechnet das bestimmte Integral der Funktion im Intervall [_Startwert , Endwert_] und schattiert die Fläche, wenn
+  _Berechne=true_. Falls _Berechne=false_, so wird die Fläche schattiert, der Wert des Integrals aber nicht berechnet.
+
+[EXAMPLE]
+====
+
+`++Integral[x³+3x y, x]++` berechnet _stem:[\frac\{1}\{4}x^4] + stem:[\frac\{3}\{2}] x² y_ .
+
+====
+
+[EXAMPLE]
+====
+
+`++Integral[x^3]++` berechnet stem:[x^4 \cdot 0.25].
+
+====
+
+[NOTE]
+====
+
+Dieser Befehl schattiert auch die Fläche zwischen dem Funktionsgraphen und der _x_-Achse.
+
+====
+
+== CAS-Ansicht
+
+In der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_Ansicht.adoc[CAS-Ansicht] können
+auch undefinierte Variablen als Eingabe verwendet werden.
+
+[EXAMPLE]
+====
+
+`++Integral[cos(a t),t]++` berechnet stem:[sin(a t)/a+c_1].
+
+====
+
+Der folgende Befehl ist nur in der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS-Ansicht_
+verfügbar:
+
+Integral[<Funktion>, <Variable>, <Startwert>, <Endwert>]::
+  Berechnet das bestimmte Integral im Intervall [_Startwert , Endwert_] nach der gegebenen Variable.
+
+[EXAMPLE]
+====
+
+`++Integral[cos(t),t,a,b]++` berechnet stem:[sin(b) - sin(a)].
+
+====

@@ -1,0 +1,47 @@
+= Häufigkeitspolygon (Befehl)
+:page-en: commands/FrequencyPolygon_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+Das Häufigkeitspolygon ist ein Liniendiagramm, bei dem die Halbierunspunkte der oberen Balkenkanten eines Histogramms
+verbunden werden. Die Verwendung dieses Befehls ist also gleich wie beim Befehl
+xref:/commands/Histogramm.adoc[Histogramm].
+
+====
+
+Häufigkeitspolygon[ <Liste von Klassenbereichen>, <Liste von Balkenhöhen> ]::
+  Erzeugt ein Häufigkeitspolygon mit Knoten der gegebenen Balkenhöhe. Die Klassenbereiche legen die x-Koordinate der
+  Knoten fest.
+
+[EXAMPLE]
+====
+
+`++Häufigkeitspolygon[{0, 1, 2, 3, 4, 5}, {2, 6, 8, 3, 1}]++` erstellt das dazugehörige Liniendiagramm.
+
+====
+
+Häufigkeitspolygon[ <Liste von Klassenbereichen>, <Liste von Rohdaten>, <Wahrheitswert Dichte> , <Skalierungsfaktor
+(optional)> ]::
+  Erzeugt ein Häufigkeitspolygon mit den eingegebenen Rohdaten. Die Klassenbereiche legen die x-Koordinate der Knoten
+  fest und bestimmen wie viele Datenelemente sich in jeder Klasse befinden. Die y-Koordinate eines Knotens wird wie
+  folgt bestimmt:
+
+* Falls _Wahrheitswert Dichte = true_, Balkenhöhe = (Skalierungsfaktor) * (Klassenhäufigkeit) / (Klassenbreite)
+* Falls _Wahrheitswert Dichte = false_, Balkenhöhe = Klassenhäufigkeit
+
+Standardmäßig ist _Wahrheitswert Dichte = true_ und der _Skalierungsfaktor = 1_.
+
+Häufigkeitspolygon[ <Wahrheitswert kumulativ>, <Liste von Klassenbereichen>, <Liste von Rohdaten>, <Wahrheitswert
+Dichte> , <Skalierungsfaktor (optional)> ]
+
+Falls _Wahrheitswert kumulativ = true_, dann wird ein Häufigkeitspolygon erzeugt, bei dem die y-Koordinate jedes Knotens
+gleich der Häufigkeit der Klassen plus die Summe aller vorherigen Häufigkeiten ist.
+
+[NOTE]
+====
+
+Für weitere Beispiele siehe den Befehl xref:/commands/Histogramm.adoc[Histogramm].
+
+====

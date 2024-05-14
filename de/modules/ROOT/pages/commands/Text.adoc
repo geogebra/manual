@@ -1,0 +1,73 @@
+= Text (Befehl)
+:page-en: commands/Text_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Text( <Objekt> )::
+  Gibt die Formel (den Wert) für das Objekt als xref:/Texte.adoc[Textobjekt] aus.
+Text( <Objekt>, <Wahrheitswert für Substitution von Variablen> )::
+  Gibt die Formel für das Objekt als Textobjekt aus. Wird der _Wahrheitswert für Substitution von Variablen_ auf _true_
+  gesetzt, so werden Variablen durch ihre Werte ersetzt, bei _false_ nicht.
+
+[EXAMPLE]
+====
+
+Ist _a = 2_ und _c = a^2^_, dann liefert die Eingabe
+
+* `++Text[c, true]++` den Text _"4"_
+* `++Text[c, false]++` den Text _"a^2^"_
+
+====
+
+[EXAMPLE]
+====
+
+Ist _a = 2_ und _c = a^2^_, dann liefert `++Text[c]++` den Text _"4"_.
+
+====
+
+[NOTE]
+====
+
+Standardmäßig werden dabei Variablen durch ihre Werte ersetzt.
+
+====
+
+Text( <Objekt>, <Punkt> )::
+  Gibt die Formel für das Objekt als Textobjekt an der Stelle des angegebenen Punktes aus.
+Text( <Objekt>, <Punkt>, <Wahrheitswert für Substitution von Variablen> )::
+  Gibt die Formel für das Objekt als Textobjekt an der Stelle des angegebenen Punktes aus. Wird der _Wahrheitswert für
+  Substitution von Variablen_ auf _true_ gesetzt, so werden Variablen durch ihre Werte ersetzt, bei _false_ nicht.
+Text( <Objekt>, <Punkt>, <Wahrheitswert für Substitution von Variablen>, <Wahrheitswert für LaTeX Formel> )::
+  Gibt die Formel für das Objekt als Textobjekt an der Stelle des angegebenen Punktes aus. Wird der _Wahrheitswert für
+  Substitution von Variablen_ auf _true_ gesetzt, so werden Variablen durch ihre Werte ersetzt, bei _false_ nicht. Wird
+  der _Wahrheitswert für LaTeX Formel_ als _true_ festgelegt, so wird der Text mit Hilfe von xref:/LaTeX.adoc[LaTeX]
+  ausgegeben.
+
+[EXAMPLE]
+====
+
+Ist _a = 2_ und _c = a^2^_, dann gibt die Eingabe `++Text[c, (2, 1), true, true]++` den Text _"4"_ an der Stelle _(2,
+1)_ mit Hilfe von LaTeX aus.
+
+====
+
+[EXAMPLE]
+====
+
+Ist _a = 2_ und _c = a^2^_, dann liefert die Eingabe `++Text[c, (2, 1), true]++` den Text _"4"_ an der Stelle _(2, 1)_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Text["GeoGebra", (2, 3)]++` liefert den Text _"GeoGebra"_ an der Stelle _(2, 3)_.
+
+====
+
+[NOTE]
+====
+
+Siehe auch das Werkzeug image:22px-Mode_text.svg.png[Mode text.svg,width=22,height=22] xref:/tools/Text.adoc[Text].
+
+====

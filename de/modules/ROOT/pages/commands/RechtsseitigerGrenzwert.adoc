@@ -1,0 +1,60 @@
+= RechtsseitigerGrenzwert (Befehl)
+:page-en: commands/LimitAbove_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+RechtsseitigerGrenzwert( <Funktion>, <Wert> )::
+  Berechnet den http://en.wikipedia.org/wiki/de:Grenzwert_(Funktion)#Einseitige_Grenzwerte[rechtsseitigen Grenzwert] der
+  Funktion beim gegebenen Wert.
+
+[EXAMPLE]
+====
+
+`++RechtsseitigerGrenzwert[1 / x, 0]++` berechnet _stem:[\infty]_ .
+
+====
+
+[NOTE]
+====
+
+Nicht alle Grenzwerte können mit GeoGebra berechnet werden und in diesen Fällen wird _undefiniert_ ausgegeben (ebenso,
+wenn das richtige Ergebnis undefiniert ist).
+
+====
+
+== CAS-Ansicht
+
+RechtsseitigerGrenzwert( <Ausdruck>, <Wert> )::
+  Berechnet den rechtsseitigen Grenzwert der Funktion beim gegebenen Wert.
+RechtsseitigerGrenzwert( <Ausdruck>, <Variable>, <Wert> )::
+  Berechnet den rechtsseitigen Grenzwert der Funktion in mehreren Variablen für die angegebene Variable beim gegebenen
+  Wert.
+
+[EXAMPLE]
+====
+
+`++RechtsseitigerGrenzwert[ 1/a, a, 0 ]++` berechnet _stem:[\infty]_.
+
+====
+
+[EXAMPLE]
+====
+
+`++RechtsseitigerGrenzwert[1 / x, 0]++` berechnet _stem:[\infty]_ .
+
+====
+
+[NOTE]
+====
+
+Nicht alle Grenzwerte können mit GeoGebra berechnet werden und in diesen Fällen wird _?_ ausgegeben (ebenso, wenn das
+richtige Ergebnis undefiniert ist).
+
+====
+
+[NOTE]
+====
+
+Siehe auch die Befehle xref:/commands/Grenzwert.adoc[Grenzwert] und
+xref:/commands/LinksseitigerGrenzwert.adoc[LinksseitigerGrenzwert].
+
+====

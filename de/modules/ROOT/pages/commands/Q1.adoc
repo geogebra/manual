@@ -1,0 +1,31 @@
+= Q1 (Befehl)
+:page-en: commands/Quartile1_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Q1( <Liste von Rohdaten> )::
+  Berechnet das untere Quartil der gegebenen Zahlen.
+Q1( <Liste von Zahlen>, <Liste von Häufigkeiten> )::
+  Berechnet das untere Quartil der gegebenen Liste von Zahlen unter Berücksichtigung der Häufigkeiten.
+
+[EXAMPLE]
+====
+
+`++Q1[{1, 2, 3, 4}, {3, 2, 4, 2}]++` liefert _1_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Q1[{1, 2, 3, 4}]++` liefert _1.5_.
+
+====
+
+[NOTE]
+====
+
+GeoGebra verwendet zur Berechnung der Quartile die *Moore & McCabe (2002)* Methode.
+
+(Siehe: http://mathworld.wolfram.com/Quartile.html)
+
+====

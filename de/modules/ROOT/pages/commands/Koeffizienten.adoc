@@ -1,0 +1,61 @@
+= Koeffizienten (Befehl)
+:page-en: commands/Coefficients_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Koeffizienten( <Polynom> )::
+  Erzeugt für ein Polynom stem:[a_kx^k+a_\{k-1}x^\{k-1}+\cdots+a_1x+a_0] die Liste aller Koeffizienten
+  stem:[a_k,a_\{k-1},\ldots,a_1, a_0].
+Koeffizienten( <Kegelschnitt> )::
+  Erzeugt für einen Kegelschnitt stem:[a\cdot x^2+b\cdot y^2+c+d\cdot x\cdot y+e\cdot x+f\cdot y=0] die Liste der
+  Koeffizienten stem:[a, b, c, d, e, f].
+
+[EXAMPLE]
+====
+
+`++Koeffizienten[x^3 - 3 x^2 + 3 x]++` ergibt _\{1, -3, 3, 0}_, die Liste aller Koeffizienten vom Polynom stem:[x^3 - 3
+x^2 + 3 x].
+
+====
+
+[NOTE]
+====
+
+Die Koeffizienten einer Gerade _l: ax + by + c = 0_ erhält man durch die Befehle: stem:[x(l), y(l), z(l)].
+
+[EXAMPLE]
+====
+
+Gegeben ist die Gerade `++l: 3x + 2y - 2 = 0++`:
+
+`++x(l)++` ergibt 3
+
+`++y(l)++` ergibt 2
+
+`++z(l)++` ergibt -2
+
+====
+
+====
+
+== CAS-Ansicht
+
+Koeffizienten( <Polynom> )::
+  Liefert eine Liste aller Koeffizienten des Polynoms bzgl. der Hauptvariable.
+Koeffizienten( <Polynom>, <Variable> )::
+  Liefert eine Liste aller Koeffizienten des Polynoms bzgl. der angegebenen Variable.
+
+[EXAMPLE]
+====
+
+* `++Koeffizienten[a^3 - 3 a^2 + 3 a, a]++` liefert die Liste _\{1, -3, 3, 0}_ zum Polynom stem:[a^3 - 3 a^2 + 3 a]
+* `++Koeffizienten[a^3 - 3 a^2 + 3 a, x]++` liefert stem:[a^3 - 3 a^2 + 3 a]
+
+====
+
+[EXAMPLE]
+====
+
+`++Koeffizienten[x^3 - 3 x^2 + 3 x]++` liefert die Liste _\{1, -3, 3, 0}_ mit allen Koeffizienten von stem:[x^3 - 3 x^2
++ 3 x].
+
+====

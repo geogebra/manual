@@ -1,0 +1,21 @@
+= TMittelwert2Schätzer (Befehl)
+:page-en: commands/TMean2Estimate_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+TMittelwert2Schätzer( <Liste von Stichprobe 1>, <Liste von Stichprobe 2>, <Konfidenzniveau α>, <Boolean GleicheVarianz>
+)::
+  Schätzt das t Konfidenzintervall der Differenz zweier Grundgesamtheitsmittelwerte anhand von Stichproben der beiden
+  Gesamtheiten unter einem gegebenen Konfidenzniveau.
+  Wenn _GleicheVarianz_ = true, wird angenommen dass die Varianzen der beiden Grundgesamtheiten gleich sind und die
+  Stichprobenvarianzen werden in der Berechnung kombiniert ("gepooled").
+  Wenn _GleicheVarianz_ = false, werden die Stichprobenvarianzen nicht gepooled.
+
+Die Ergebnisse werden in Form einer Liste als _\{Untere Konfidenzintervallgrenze, Obere Konfidenzintervallgrenze}_
+zurückgegeben.
+
+TMittelwert2Schätzer( <Stichprobenmittelwert 1>, <Stichprobenstandardabweichung 1>, <Stichprobengröße 1>,
+<Stichprobenmittelwert 2>, <Stichprobenstandardabweichung 2>, <Stichprobengröße 2>, <Konfidenzniveau α>, <Boolean
+GleicheVarianz> )::
+  Schätzt das t Konfidenzintervall der Differenz zweier Grundgesamtheitsmittelwerte unter Verwendung der gegebenen
+  Stichprobenstatistiken und eines Konfidenzniveaus. _GleicheVarianz_ ist definiert wie oben. Die Ergebnisse werden in
+  Form einer Liste als _\{Untere Konfidenzintervallgrenze, Obere Konfidenzintervallgrenze}_ zurückgegeben.

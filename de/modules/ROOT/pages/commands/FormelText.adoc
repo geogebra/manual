@@ -1,0 +1,49 @@
+= FormelText (Befehl)
+:page-en: commands/FormulaText_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+FormelText( <Objekt> )::
+  Erzeugt die Formel eines Objekts als LaTeX Text-Objekt.
+FormelText( <Objekt>, <Wahrheitswert für Substitution von Variablen> )::
+  Erzeugt die Formel eines Objekts als LaTeX Text-Objekt. Der Wahrheitswert bestimmt ob Werte für Variablen eingesetzt
+  werden sollen (true) oder ob Variablennamen im Text verwendet werden sollen (false).
+FormelText( <Objekt>, <Wahrheitswert für Substitution von Variablen>, <Wahrheitswert für Anzeige des Namens> )::
+  Erzeugt die Formel eines Objekts als LaTeX Text-Objekt. Der erste Wahrheitswert bestimmt ob Werte für Variablen
+  eingesetzt werden sollen (true) oder ob Variablennamen im Text verwendet werden sollen (false), der zweite
+  Wahrheitswert bestimmt ob der Objektname im Text angezeigt werden soll (true) oder nicht (false).
+
+[EXAMPLE]
+====
+
+Sei _a = 2_ und _f(x) = a x^2^_.
+
+`++FormelText[f, true, true]++` erzeugt _f(x) = 2 x^2^_ (als LaTeX Text).
+
+`++FormelText[f, false, false]++` erzeugt _a x^2^_ (als LaTeX Text).
+
+====
+
+[EXAMPLE]
+====
+
+Sei _a = 2_ und _f(x) = a x^2^_.
+
+`++FormelText[f, true]++` erzeugt _2 x^2^_ (als LaTeX Text).
+
+`++FormelText[f, false]++` erzeugt _a x^2^_ (als LaTeX Text).
+
+====
+
+[EXAMPLE]
+====
+
+Sei _a = 2_ und _f(x) = a x^2^_. `++FormelText[f]++` erzeugt _2 x^2^_ (als LaTeX Text).
+
+====
+
+[NOTE]
+====
+
+Standardmäßig werden für die Variablen die entsprechenden Zahlenwerte eingesetzt.
+
+====

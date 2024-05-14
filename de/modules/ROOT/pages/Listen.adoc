@@ -1,0 +1,132 @@
+= Listen
+:page-en: Lists
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Mithilfe von geschwungenen Klammern \{ } können Listen von Objekten erzeugt werden (z. B. Listen von Punkten, Strecken,
+Kreisen).
+
+[EXAMPLE]
+====
+
+* `++L = {A, B, C}++` erzeugt eine Liste aus den drei existierenden Punkten _A_, _B_, und _C_.
+* `++L = {(0, 0), (1, 1), (2, 2)}++` erzeugt die drei angegebenen Punkte und die zugehörige Liste.
+
+====
+
+Die Kurzschreibweise `++..++` erstellt eine Liste von aufeinanderfolgenden Zahlen, z.B. liefert `++-5..5++` die Liste
+\{_-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5_}. }}
+
+[NOTE]
+====
+
+* Standardmäßig werden die Elemente der Liste in der image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Grafik_Ansicht.adoc[Grafik-Ansicht] nicht angezeigt.
+* Listen können auch als Argumente in Listen-Operationen (siehe weiter unten) oder in
+xref:/commands/Liste_(Befehle).adoc[Listen-Befehlen] verwendet werden.
+
+====
+
+==Auf Elemente von Listen zugreifen Um einzelne Elemente der Liste aufzurufen, können Sie den Befehl
+xref:/commands/Element.adoc[Element] oder Klammern verwenden.
+
+[EXAMPLE]
+====
+
+Sei `++Liste = {1, 2, 3, 4, 5}++`, dann liefert:
+
+* `++Liste(1)++` das erste Element der Liste: _1_
+* `++Liste(2)++` das zweite Element der Liste: _2_
+* .../...
+* `++Liste(-1)++` das letzte Element der Liste: _5_
+* `++Liste(-5)++` das erste Element der Liste: _1_
+* `++Liste(0)++` _undefiniert_, genau so wie `++Liste(k)++` für k > 5 or k < -5
+
+====
+
+== Listen von Objekten vergleichen
+
+Sie können zwei Listen von Objekten folgendermaßen miteinander vergleichen:
+
+* `++Liste1 == Liste2++`: überprüft, ob die beiden Listen gleich sind im Sinne von geordneten
+http://en.wikipedia.org/wiki/Tupel[Tupel] und liefert einen Wahrheitswert als Ergebnis (d.h. _true_ oder _false_).
+* `++Liste1 != Liste2++`: überprüft, ob die beiden Listen verschieden voneinander sind im Sinne geordneter Tupel und
+liefert einen Wahrheitswert als Ergebnis (d.h. _true_ oder _false_).
+* `++Einzigartig[Liste1]==Einzigartig[Liste2]++` oder `++Liste1 \ Liste2 == {}++`: überprüft, ob die zwei Listen die
+gleichen Mengen enthalten und liefert einen Wahrheitswert als Ergebnis (d.h. _true_ oder _false_).
+* `++Sortiere[Liste1] == Sortiere[Liste2]++`: überprüft, ob die zwei Listen die gleichen
+http://en.wikipedia.org/wiki/de:Multimengen[Multimengen] enthalten.
+
+Siehe auch die Befehle xref:/commands/Einzigartig.adoc[Einzigartig] und xref:/commands/Sortiere.adoc[Sortiere].
+
+== Listen-Operatoren
+
+`++<Objekt> ∈ <Liste>++`: liefert _true_, wenn das _Objekt_ ein Element der _Liste_ ist
+
+`++<Liste1> ⊆ <Liste2>++`: liefert _true_, wenn _Liste1_ eine Teilmenge von _Liste2_ ist
+
+`++<Liste1> ⊂ <Liste2>++`: liefert _true_, wenn _Liste1_ eine strenge Teilmenge von _Liste2_ ist
+
+`++<Liste1> \ <Liste2>++`: erzeugt die Differenzmenge von _Liste1_ und _Liste2_
+
+== Vordefinierte Funktionen und Operatoren für Listen anwenden
+
+Wenn Sie xref:/Vordefinierte_Funktionen_und_Operatoren.adoc[Vordefinierte Funktionen und Operatoren] für Listen
+anwenden, erhalten Sie als Ergebnis immer eine neue Liste.
+
+=== Addition und Subtraktion
+
+* `++Liste1 + Liste2++`: Addiert entsprechende Elemente der beiden Listen.
+
+[NOTE]
+====
+
+Beide Listen müssen gleich lang sein.
+
+====
+
+* `++Liste + Zahl++`: Addiert _Zahl_ zu jedem Element der _Liste_.
+* `++Liste1 – Liste2++`: Subtrahiert die Elemente von _Liste2_ von entsprechenden Elementen der _Liste1_.
+
+[NOTE]
+====
+
+Beide Listen müssen gleich lang sein.
+
+====
+
+* `++Liste – Zahl++`: Subtrahiert _Zahl_ von jedem Element der _Liste_.
+
+=== Multiplikation und Division
+
+* `++Liste1 * Liste2++`: Multipliziert entsprechende Elemente der beiden Listen.
+
+[NOTE]
+====
+
+Beide Listen müssen gleich lang sein. Falls die beiden Listen geeignete Matrizen sind, wird hier Matrix-Multiplikation
+angewendet.
+
+====
+
+* `++Liste * Zahl++`: Multipliziert jedes Element der _Liste_ mit _Zahl_.
+* `++Liste1 / Liste2++`: Dividiert jedes Element der _Liste1_ durch das entsprechende Element der _Liste2_.
+
+[NOTE]
+====
+
+Beide Listen müssen gleich lang sein.
+
+====
+
+* `++Liste / Zahl++`: Dividiert jedes Element der _Liste_ durch _Zahl_.
+* Zahl / Liste: Dividiert _Zahl_ durch jedes Element der _Liste_.
+
+=== Weitere Beispiele
+
+* `++Liste^2++`: Quadriert jedes Element der _Liste_.
+* `++2^Liste++`: Erzeugt eine Liste von Zweierpotenzen mit den Exponenten aus der angegebenen _Liste_.
+* `++Liste1^Liste2++`: Erzeugt eine Liste mit Elementen _a^b_, wobei _a_ und _b_ die entsprechenden Elemente von
+_Liste1_ und _Liste2_ sind.
+* `++sin(Liste)++`: Wendet die Sinusfunktion auf jedes Element der _Liste_ an.
+
+Benutzerdefinierte xref:/Funktionen.adoc[Funktionen] können auf dieselbe Weise angewendet werden.

@@ -1,0 +1,44 @@
+= Polynom (Befehl)
+:page-en: commands/Polynomial_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Polynom[ <Funktion> ]::
+  Berechnet die erweiterte Form der Polynomfunktion.
+Polynom[ <Liste von Punkten> ]::
+  Erzeugt ein Interpolationspolynom vom Grad _n - 1_ für die gegebenen _n_ Punkte.
+
+[EXAMPLE]
+====
+
+`++Polynom[{(1, 1), (2, 3), (3, 6)}]++` liefert _0.5 x^2^ + 0.5 x_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Polynom[(x - 3)^2]++` liefert _x^2^ - 6x + 9_.
+
+====
+
+== CAS-Ansicht
+
+Polynom( <Funktion> )::
+  Berechnet die erweiterte Form der Polynomfunktion, wobei die Koeffizienten zusammengefasst werden.
+Polynom( <Funktion>, <Variable> )::
+  Berechnet die erweiterte Form der Polynomfunktion für die angegebene Variable, wobei die Koeffizienten zusammengefasst
+  werden.
+
+[EXAMPLE]
+====
+
+`++Polynom[(x - 3)^2 + (a + x)^2, a]++` liefert _a^2^ + 2 x a + 2 x^2^ - 6 x + 9_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Polynom[(x - 3)^2 + (a + x)^2]++` liefert _2 x^2^ + (2 a - 6) x + a^2^ + 9_.
+
+====

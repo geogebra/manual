@@ -1,0 +1,28 @@
+= Kegel (Befehl)
+:page-en: commands/Cone_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Kegel( <Kreis>, <Höhe> )::
+  Erzeugt einen Kegel mit gegebener Grundfläche und Höhe.
+Kegel( <Punkt>, <Punkt>, <Radius> )::
+  Erzeugt einen Kegel mit gegebener Spitze (zweiter Punkt), Mittelpunkt der Grundfläche (erster Punkt) und Radius.
+Kegel( <Punkt>, <Vektor>, <Winkel α> )::
+  Erzeugt einen Rotationskegel mit gegebener Spitze, mit einer Achse, die parallel zu dem gegebenen Vektor ist und mit
+  Öffnungswinkel 2α.
+
+[NOTE]
+====
+
+Dieser Befehl ergibt _undefiniert_, wenn der Winkel ≥ stem:[\frac\{\pi}\{2}] ist.
+
+====
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/Rotationskegel.adoc[Rotationskegel] und die Werkzeuge
+image:24px-Mode_cone.svg.png[Mode cone.svg,width=24,height=24] xref:/tools/Kegel.adoc[Kegel] und
+image:24px-Mode_conify.svg.png[Mode conify.svg,width=24,height=24]
+xref:/tools/Zu_Pyramide_oder_Kegel_extrudieren.adoc[Zu Pyramide oder Kegel extrudieren].
+
+====

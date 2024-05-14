@@ -1,0 +1,35 @@
+= Objekt (Befehl)
+:page-en: commands/Object_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Objekt( <Name des Objekts als Text> )::
+  Erzeugt das Objekt für den angegebenen Namen. Das Resultat ist immer ein abhängiges Objekt.
+  [cols=",",]
+  |===
+  |image:18px-Attention.png[Warnung,title="Warnung",width=18,height=18] *Warnung*: |Der Befehl _Objekt_ kann bei
+  xref:/Benutzerdefinierte_Werkzeuge.adoc[Benutzerdefinierte Werkzeuge] nicht verwendet werden.
+  |===
+
+[EXAMPLE]
+====
+
+Falls die Punkte _A1_, _A2_, ... , _A20_ und ein Schieberegler _n = 2_ bereits existieren, dann erzeugt der Befehl
+`++Objekt["A" + n]++` eine Kopie des Punktes _A2_.
+
+====
+
+[NOTE]
+====
+
+Sie müssen sicherstellen, dass sich das _Objekt_, auf welches Sie sich beziehen, im
+image:16px-Menu_view_construction_protocol.svg.png[Menu view construction protocol.svg,width=16,height=16]
+xref:/Konstruktionsprotokoll.adoc[Konstruktionsprotokoll] vor diesem Befehl befindet.
+
+====
+
+[NOTE]
+====
+
+Der Befehl _Objekt_ ist das Gegenteil des Befehls xref:/commands/Name.adoc[Name].
+
+====

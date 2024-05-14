@@ -1,0 +1,39 @@
+= NPr (Befehl)
+:page-en: commands/NPr_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+nPr [ <Zahl n>, <Zahl r> ]::
+  Gibt die Anzahl der möglichen Permutationen ohne Wiederholung von _r_ Elementen aus einer Liste von _n_ Elementen an.
+
+[EXAMPLE]
+====
+
+`++nPr[10, 2]++` berechnet _90_.
+
+====
+
+== CAS Syntax
+
+nPr [ <Zahl n>, <Zahl r> ]::
+  Gibt die Anzahl der möglichen Permutationen ohne Wiederholung von _r_ Elementen aus einer Liste von _n_ Elementen an.
+
+[EXAMPLE]
+====
+
+`++nPr[n, 3]++` liefert _stem:[\frac\{n!}\{(n-3)!}]_, was äquivalent zu _n³ - 3n² + 2n_ ist.
+
+====
+
+[EXAMPLE]
+====
+
+`++nPr[10, 2]++` berechnet _90_.
+
+====
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/BinomialKoeffizient.adoc[BinomialKoeffizient].
+
+====

@@ -1,0 +1,75 @@
+= Stufendiagramm (Befehl)
+:page-en: commands/StepGraph_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Stufendiagramm( <Liste von Punkten> )::
+  Erstellt ein Stufendiagramm von den gegebenen Punkten. Von jedem Punkt wird eine waagrechte Strecke bis zur
+  x-Koordinate des nächsten Punktes gezeichnet.
+Stufendiagramm( <Liste von Punkten>, <Wahrheitswert> )::
+  Erstellt ein Stufendiagramm von den gegebenen Punkten. Bei _Wahrheitswert = false_ wird von jedem Punkt eine
+  waagrechte Strecke bis zur x-Koordinate des nächsten Punktes gezeichnet. Bei _Wahrheitswert = true_ wird jeder Punkt
+  mit dem nächsten Punkt in der Liste durch eine waagrechte und eine senkrechte Strecke verbunden.
+Stufendiagramm( <Liste von x-Werten>, <Liste von y-Werten> )::
+  Erstellt ein Stufendiagramm von den Punkten, die durch die beiden Listen gegeben sind. Von jedem Punkt wird eine
+  waagrechte Strecke bis zur x-Koordinate des nächsten Punktes gezeichnet.
+Stufendiagramm( <Liste von x-Werten>, <Liste von y-Werten>, <Wahrheitswert> )::
+  Erstellt ein Stufendiagramm von den Punkten, die durch die beiden Listen gegeben sind. Bei _Wahrheitswert = false_
+  wird von jedem Punkt eine waagrechte Strecke bis zur x-Koordinate des nächsten Punktes gezeichnet. Bei _Wahrheitswert
+  = true_ wird jeder Punkt mit dem nächsten Punkt in der Liste durch eine waagrechte und eine senkrechte Strecke
+  verbunden.
+Stufendiagramm( <Liste von x-Werten>, <Liste von y-Werten>, <Wahrheitswert>, <Punktestil> )::
+  Erstellt ein Stufendiagramm von den Punkten, die durch die beiden Listen gegeben sind. Der Parameter _Wahrheitswert_
+  ist gleich wie oben.
+  Der Parameter _Punktestil_ kann folgende Werte annehmen:
+  _0_ = es werden keine Punkte gezeichnet
+  _1_ = gefüllte Punkte auf der rechten Seite
+  _2_ = gefüllte Punkte auf der rechten Seite, ungefüllte Punkte auf der linken Seite
+  _-1_ = gefüllte Punkte auf der linken Seite
+  _-2_ = gefüllte Punkte auf der linken Seite, ungefüllte Punkte auf der rechten Seite
+
+Stufendiagramm( <Liste von Punkten>, <Wahrheitswert>, <Punktestil> )
+
+Erstellt ein Stufendiagramm von den gegebenen Punkten. Die Parameter _Wahrheitswert_ und _Punktestil_ sind gleich wie
+oben.
+
+[EXAMPLE]
+====
+
+`++Stufendiagramm[{(1, 1), (3, 2), (4, 5), (5, 7)}, false, 2]++`
+
+====
+
+[EXAMPLE]
+====
+
+`++Stufendiagramm[{1, 3, 4, 5}, {1, 2, 5, 7}, false, 1]++`
+
+====
+
+[EXAMPLE]
+====
+
+`++Stufendiagramm[{1, 3, 4, 5}, {1, 2, 5, 7}, true]++`
+
+====
+
+[EXAMPLE]
+====
+
+`++Stufendiagramm[{1, 3, 4, 5}, {1, 2, 5, 7}]++`
+
+====
+
+[EXAMPLE]
+====
+
+`++Stufendiagramm[{(1, 1), (3, 2), (4, 5), (5, 7)}, true]++`
+
+====
+
+[EXAMPLE]
+====
+
+`++Stufendiagramm[{(1, 1), (3, 2), (4, 5), (5, 7)}]++`
+
+====

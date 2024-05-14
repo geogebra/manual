@@ -1,0 +1,44 @@
+= Polygonzug (Befehl)
+:page-en: commands/Polyline_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Polygonzug( <Liste von Punkten> )::
+  Erzeugt einen nicht geschlossenen Polygonzug (eine Reihe verbundener Segmente), wobei der erste Punkt der Liste der
+  erste Eckpunkt und der letzte Punkt der Liste der letzte Eckpunkt des Polygonzugs ist.
+
+[NOTE]
+====
+
+Die Länge des Streckenzugs wird in der image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+xref:/Algebra_Ansicht.adoc[Algebra-Ansicht] angezeigt.
+
+====
+
+Polygonzug( <Punkt>, ..., <Punkt> )::
+  Erzeugt einen nicht geschlossenen Polygonzug (eine Reihe verbundener Segmente), wobei der erste Punkt der erste
+  Eckpunkt und der letzte Punkt der letzte Eckpunkt des Polygonzugs ist.
+
+[NOTE]
+====
+
+* Die Länge des Streckenzugs wird in der image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+xref:/Algebra_Ansicht.adoc[Algebra-Ansicht] angezeigt.
+* Es ist auch möglich einen unterbrochenen Polygonzug zu erstellen:
+
+[EXAMPLE]
+====
+
+`++Polygonzug[ (1, 3), (4, 3), (?,?), (6, 2), (4, -2), (2, -2)]++` liefert den Wert _9.47_ in der
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _Algebra-Ansicht_ und den entsprechenden
+Polygonzug in der image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Grafik-Ansicht_.
+
+====
+
+====
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/Vieleck.adoc[Vieleck].
+
+====

@@ -1,0 +1,40 @@
+= MatrixAnwenden (Befehl)
+:page-en: commands/ApplyMatrix_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+MatrixAnwenden( <[[Matrizen|Matrix)]>, <xref:/Geometrische_Objekte.adoc[Objekt]> ]::
+  Formt das Objekt _O_ so um, dass der Punkt _P_ auf _O_ folgendem Punkt zugeordnet wird:
+
+* dem Punkt _M*P_ (mit Matrix _M_), falls M eine 2x2-Matrix ist
+
+[EXAMPLE]
+====
+
+Sei `++M={{cos(π/2),-sin(π/2)}, {sin(π/2), cos(π/2)}}++` die Transformationsmatrix und _u=(2,1)_ ein Vektor (Objekt).
+Mit der Eingabe `++MatrixAnwenden[M,u]++` erhalten sie den um 90 Grad gedrehten (mathematisch positiver Sinn) Vektor
+_u´=(-1,2)_.
+
+====
+
+* dem Punkt _Projektion(M*(x(P), y(P), 1))_, wobei _Projektion_ der von _(x,y,z)_ nach _(x/z, y/z)_ projezierte Punkt
+ist , falls M eine 3x3-Matrix ist
+
+[EXAMPLE]
+====
+
+Sei `++M={{1,1,0},{0,1,1},{1,0,1}}++` eine Matrix und `++u=(2,1)++` ein gegebener Vektor. `++MatrixAnwenden[M,u]++`
+ergibt den Vektor _u'=(1,0.67)_.
+
+====
+
+* Punkt _M*P_, falls _P_ ein _3D_ Punkt und _M_ eine 3 x 3 Matrix ist
+* Punkt _N*P_, falls _P_ ein _3D_ Punkt und _M_ eine 2 x 2 Matrix ist: die Matrix _N_ ist die _Vervollständigung_ von
+_M_: sei _M_ = stem:[\begin\{pmatrix}a&b\\ c&d \end\{pmatrix}] dann ist _N_ = stem:[\begin\{pmatrix}a&b&0\\ c&d&0\\0&0&1
+\end\{pmatrix}]
+
+[NOTE]
+====
+
+Mit diesem Befehl ist es auch möglich xref:/Bilder.adoc[Bilder] zu transformieren.
+
+====

@@ -1,0 +1,70 @@
+= Senkrechte (Befehl)
+:page-en: commands/PerpendicularLine_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Senkrechte( <Punkt>, <Senkrechte Gerade> )::
+  Erzeugt eine Gerade durch den Punkt und senkrecht zur gegebenen Geraden.
+
+[EXAMPLE]
+====
+
+Sei `++c: -3x + 4y = -6++` eine Gerade und `++A = (-2, -3)++` ein Punkt auf der Gerade. Dann erhält man mit
+`++Senkrechte[ A, c ]++` die Gerade _d: -4x - 3y = 17_.
+
+====
+
+[NOTE]
+====
+
+Für 3D-Objekte wird noch ein drittes Argument zu diesem Befehl hinzugefügt um sein Verhalten festzulegen: falls eine
+2D-Ansicht aktiv ist, wird die Ebene _z=0_ als drittes Argument verwendet. Falls die 3D-Ansicht aktiv ist, wird
+stattdessen _Raum_ verwendet. Siehe Senkrechte[ <Punkt>, <Gerade>, <Kontext> ] weiter unten für mehr Details.
+
+====
+
+Senkrechte( <Punkt>, <Senkrechte Strecke> )::
+  Erzeugt eine Gerade durch den Punkt und senkrecht zur gegebenen Strecke.
+
+[EXAMPLE]
+====
+
+Sei _c_ die Strecke zwischen den beiden Punkten `++A = (-3, 3)++` und `++B = (0, 1)++`. Dann erhält man mit
+`++Senkrechte[ A, c ]++` die Gerade _d: -3x + 2y = 15_.
+
+====
+
+Senkrechte( <Punkt>, <Vektor> )::
+  Erzeugt eine Gerade durch den Punkt und senkrecht zum gegebenen Vektor.
+
+[EXAMPLE]
+====
+
+Sei `++u = Vektor[ (5, 3), (1, 1) ]++` und `++A = (-2, 0)++` ein Punkt. Dann erhält man mit `++Senkrechte[ A, u ]++` die
+Gerade _c: 2x + y = -4_.
+
+====
+
+Senkrechte( <Punkt>, <Ebene> )::
+  Erzeugt eine Gerade durch den Punkt, die normal auf die Ebene steht.
+Senkrechte( <Gerade>, <Gerade> )::
+  Erzeugt eine senkrechte Gerade auf die beiden gegebenen Geraden, die durch den Schnittpunkt der beiden Geraden
+  verläuft.
+Senkrechte( <Punkt>, <Richtung>, <Richtung> )::
+  Erzeugt eine Gerade durch den Punkt, die normal auf die beiden Richtungen (das können Geraden oder Vektoren sein)
+  steht.
+Senkrechte( <Punkt>, <Gerade>, <Kontext> )::
+  Erzeugt eine senkrechte Gerade auf die gegebene Gerade, die durch den gegebenen Punkt geht und abhängig vom Kontext
+  ist.
+  * `++Senkrechte[ <Punkt>, <Gerade>, <Ebene> ]++` erzeugt eine senkrechte Gerade auf die gegebene Gerade, die durch den
+  Punkt geht und parallel zu der Ebene ist.
+  * `++Senkrechte[ <Punkt>, <Gerade>, Raum ]++` erzeugt einer senkrechte Gerade auf die gegebene Gerade, die durch den
+  Punkt geht und die gegebene Gerade schneidet.Dieser Befehl ergibt in 3D _undefiniert_, wenn der Punkt auf der Gerade
+  liegt.
+
+[NOTE]
+====
+
+Siehe auch das Werkzeug image:22px-Mode_linebisector.svg.png[Mode linebisector.svg,width=22,height=22]
+xref:/tools/Senkrechte_Gerade.adoc[Senkrechte Gerade].
+
+====

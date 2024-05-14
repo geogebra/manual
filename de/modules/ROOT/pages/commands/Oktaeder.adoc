@@ -1,0 +1,38 @@
+= Oktaeder (Befehl)
+:page-en: commands/Octahedron_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Oktaeder( <Punkt>, <Punkt>, <Richtung> )::
+  Gibt ein Oktaeder aus, welches die (automatisch erstellte) Strecke zwischen den zwei gegebenen Punkten als eine Kante
+  hat.
+  Die Eckpunkte werden von der gegebenen Richtung eindeutig bestimmt. Die Richtung kann definiert sein durch:
+  * einen Vektor, eine Strecke, eine Gerade, einen Strahl *normal* auf die Strecke, oder
+  * ein Vieleck, eine Ebene *parallel* zu der Strecke.
+  Das erstellte Oktaeder wird Folgendes aufweisen:
+  * eine Fläche, die in der zum/zur gegebenen Vektor/Strecke/Gerade/Strahl normalenstehenden Ebene enthalten ist, mit
+  der Strecke als Kante, oder
+  * eine Fläche, die in der zum/zur Vieleck/Ebene parallelen Ebene enthalten ist, mit der Strecke als Kante.
+
+Oktaeder(<Punkt>, <Punkt>, <Punkt>)::
+  Erstellt ein Oktaeder, bei dem die drei eingegebenen Punkte eine Seitenfläche bilden. Die Punkte müssen dabei ein
+  gleichseitiges Dreieck definieren.
+
+Oktaeder( <Punkt>, <Punkt>)::
+  Erstellt ein Oktaeder mit zwei Punkten einer Seitenfläche, wobei ein dritter Punkt automatisch auf einem Kreis
+  erstellt wird, sodass das Oktaeder um die Strecke zwischen den zwei eingegebenen Punkten rotiert werden kann.
+
+[NOTE]
+====
+
+Oktaeder[A, B] ist eine Kurzschreibweise für Oktaeder[A, B, C] mit C = Punkt[Kreis[Mittelpunkt[A, B], Abstand[A, B]
+sqrt(3) / 2, Strecke[A, B]]].
+
+====
+
+[NOTE]
+====
+
+Siehe auch die Befehle xref:/commands/Ikosaeder.adoc[Ikosaeder], xref:/commands/Würfel.adoc[Würfel],
+xref:/commands/Dodekaeder.adoc[Dodekaeder], xref:/commands/Tetraeder.adoc[Tetraeder].
+
+====

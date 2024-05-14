@@ -1,0 +1,42 @@
+= Kurve (Befehl)
+:page-en: commands/Curve_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Kurve( <Ausdruck>, <Ausdruck>, <Parameter>, <Startwert>, <Endwert> )::
+  Erzeugt die xref:/Kurven.adoc[kartesische Parameterkurve] für den gegebenen _x_-Ausdruck (erster <Ausdruck>) und den
+  _y_-Ausdruck (zweiter <Ausdruck>) mit dem gegebenen Parameter im Intervall [_Startwert_, _Endwert_].
+
+[EXAMPLE]
+====
+
+`++Kurve[2 cos(t), 2 sin(t), t, 0, 2π]++` erzeugt einen Kreis mit Radius _2_ um den Koordinatenursprung.
+
+====
+
+[NOTE]
+====
+
+* _Endwert_ muss größer oder gleich dem _Startwert_ sein und beide Werte müssen endlich sein.
+* _x_ darf nicht als Parameter verwendet werden.
+
+====
+
+[NOTE]
+====
+
+Für mehr Details siehe xref:/Kurven.adoc[Kurven]. Siehe auch die Befehle xref:/commands/Ableitung.adoc[Ableitung] und
+xref:/commands/ParametrischeAbleitung.adoc[Parametrische Ableitung].
+
+====
+
+Kurve( <Ausdruck>, <Ausdruck>, <Ausdruck>, <Parameter>, <Startwert>, <Endwert> )::
+  Erzeugt die dreidimensionale kartesische Parameterkurve für den gegebenen _x_-Ausdruck (erster <Ausdruck>),
+  _y_-Ausdruck (zweiter <Ausdruck>) und _z_-Ausdruck (dritter <Ausdruck>) mit dem gegebenen Parameter im Intervall
+  [_Startwert_, _Endwert_].
+
+[EXAMPLE]
+====
+
+`++Kurve[cos(t), sin(t), t, t, 0, 10π]++` erzeugt eine 3D Spirale.
+
+====

@@ -1,0 +1,33 @@
+= Krümmungskreis (Befehl)
+:page-en: commands/OsculatingCircle_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Krümmungskreis[ <Punkt>, <Funktion> ]::
+  Erzeugt den Krümmungskreis der Funktion im gegebenen Punkt.
+Krümmungskreis[ <Punkt>, <Kurve> ]::
+  Erzeugt den Krümmungskreis der Parameterkurve im gegebenen Punkt.
+Krümmungskreis[ <Punkt>, <Objekt> ]::
+  Erzeugt den Krümmungskreis des Objekts (Funktion, Kurve, Kegelschnitt) im gegebenen Punkt.
+
+[EXAMPLE]
+====
+
+* `++Krümmungskreis[(0, 0), x^2]++` liefert _x² + y² - y = 0_
+* `++Krümmungskreis[(1, 0), Kurve[cos(t), sin(2t), t, 0, 2π]]++` liefert _x² + y² + 6x = 7_
+* `++Krümmungskreis[(-1, 0), Kegelschnitt[{1, 1, 1, 2, 2, 3}]]++` liefert _x² + y² + 2x + 1y = -1_
+
+====
+
+[EXAMPLE]
+====
+
+`++Krümmungskreis[(1, 0), Kurve[cos(t), sin(2t), t, 0, 2π]]++` liefert _x² + y² + 6x = 7_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Krümmungskreis[(0, 0), x^2]++` liefert _x² + y² - y = 0_.
+
+====

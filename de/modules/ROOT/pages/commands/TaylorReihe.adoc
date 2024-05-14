@@ -1,0 +1,44 @@
+= TaylorReihe (Befehl)
+:page-en: commands/TaylorPolynomial_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+TaylorReihe( <Funktion>, <x-Wert>, <Grad> )::
+  Erzeugt die Taylor Reihe der gegebenen Funktion an der Stelle _x = x-Wert_ vom gegebene Grad.
+
+[EXAMPLE]
+====
+
+`++TaylorReihe[x^2, 3, 1]++` gibt _9 + 6 (x - 3)_.
+
+====
+
+== CAS-Ansicht
+
+TaylorReihe( <Funktion>, <x-Wert>, <Grad> )::
+  Erzeugt die Taylor Reihe der gegebenen Funktion an der Stelle _x = x-Wert_ vom gegebenen Grad.
+TaylorReihe( <Funktion>, <Variable>, <Variablenwert>, <Grad> )::
+  Erzeugt die Taylor Reihe der gegebenen Funktion in mehreren Variablen für die gegebene Variable an der Stelle _x =
+  Variablenwert_ vom gegebenen Grad.
+
+[EXAMPLE]
+====
+
+* `++TaylorReihe[x^3 sin(y), x, 3, 2]++` gibt _27 sin(y) + 27 sin(y) (x - 3) + 9 sin(y) (x - 3)^2^_.
+* `++TaylorReihe[x^3 sin(y), y, 3, 2]++` gibt _sin(3) x^3^ + cos(3) x^3^ (y - 3) - stem:[\frac\{sin(3) x^3}\{2}] (y -
+3)^2^_.
+
+====
+
+[EXAMPLE]
+====
+
+`++TaylorReihe[x^2, a, 1]++` gibt _a^2^ + 2a (x - a)_.
+
+====
+
+[NOTE]
+====
+
+Der Grad muss eine ganze Zahl größergleich Null sein.
+
+====

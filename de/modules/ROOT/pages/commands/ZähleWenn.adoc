@@ -1,0 +1,36 @@
+= ZähleWenn (Befehl)
+:page-en: commands/CountIf_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+ZähleWenn[ <Bedingung>, <Liste> ]::
+  Zählt jene Elemente der Liste, welche die Bedingung erfüllen.
+
+[EXAMPLE]
+====
+
+* `++ZähleWenn[x < 3, {1, 2, 3, 4, 5}]++` erzeugt die Zahl _2_.
+* Sei _A1:A10_ ein Zellbereich in der image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] xref:/Tabellen_Ansicht.adoc[Tabellen-Ansicht]. Die Eingabe
+`++ZähleWenn[x < 3, A1:A10]++` zählt jene Zellen, deren Wert kleiner als _3_ ist.
+
+====
+
+[NOTE]
+====
+
+Bei einer Liste von Zahlen können beliebige Bedingungen verwendet werden. Bei Listen von anderen Objekten sind nur
+Bedingungen der Form `++x==Konstante++` oder `++x!=Konstante++` möglich.
+
+====
+
+ZähleWenn[ <Bedingung>, <Variable>, <Liste> ]::
+  Diese Syntax ermöglicht flexiblere Bedingungen.
+
+[EXAMPLE]
+====
+
+Für die Punkte _P_, _Q_ und _R_ zählt die Eingabe `++ZähleWenn[x(A) < 3, A, {P, Q, R}]++` jene Punkte, deren
+_x_-Koordinate kleiner als _3_ ist. Die Variable _A_ wird der Reihe nach durch _P_, _Q_ und _R_ ersetzt, um die
+Bedingung zu überprüfen. D.h. `++ZähleWenn[x(A) < 3, A, {(0, 1), (4, 2), (2, 2)}]++` liefert die Zahl _2_.
+
+====

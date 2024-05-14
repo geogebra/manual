@@ -1,0 +1,64 @@
+= Invertiere (Befehl)
+:page-en: commands/Invert_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Invertiere( <Matrix> )::
+  Invertiert die gegebene Matrix.
+
+[EXAMPLE]
+====
+
+`++Invertiere[{{a, b}, {c, d}}]++` erzeugt die inverse Matrix stem:[\begin\{pmatrix}\frac\{d}\{ad- bc} & \frac\{-b}\{ad-
+bc}\\\frac\{-c}\{ad- bc}& \frac\{a}\{ ad- bc}\end\{pmatrix}].
+
+====
+
+[EXAMPLE]
+====
+
+`++Invertiere[{{1, 2}, {3, 4}}]++` erzeugt stem:[\begin\{pmatrix}-2 & 1\\1.5 & -0.5\end\{pmatrix}], die inverse Matrix
+von stem:[\begin\{pmatrix}1 & 2\\3 & 4\end\{pmatrix}].
+
+====
+
+[NOTE]
+====
+
+In der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_Ansicht.adoc[CAS-Ansicht] sind
+auch undefinierte Variablen als Eingabe erlaubt.
+
+====
+
+Invertiere[ <Funktion> ]::
+  Erzeugt die inverse Funktion.
+
+[EXAMPLE]
+====
+
+`++Invertiere[sin(x)]++` liefert _arcsin(x)_.
+
+====
+
+[NOTE]
+====
+
+Im Funktionsterm darf _x_ nur einmal vorkommen. Definitions- und Wertebereich werden gegebenenfalls angepasst, zum
+Beispiel bei f(x) = x^2 oder f(x) = sin(x). Kommt _x_ mehrmals vor, so könnten andere Befehle hilfreich sein:
+
+[EXAMPLE]
+====
+
+`++Invertiere[Partialbruch[(x+1)/(x+2)]]++` oder `++Invertiere[VollständigesQuadrat[x^2+2x+1]]++` erzeugen die jeweilige
+inverse Funktion.
+
+====
+
+====
+
+[NOTE]
+====
+
+In der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_Ansicht.adoc[CAS-Ansicht]
+funktioniert dieser Befehl auch für Funktionen, in denen _x_ mehrmals vorkommt.
+
+====

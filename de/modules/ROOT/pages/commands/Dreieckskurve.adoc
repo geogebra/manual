@@ -1,0 +1,43 @@
+= Dreieckskurve (Befehl)
+:page-en: commands/TriangleCurve_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Dreieckskurve( <Punkt P>, <Punkt Q>, <Punkt R>, <Gleichung in A, B, C> )::
+  Erzeugt eine implizite Kurve, deren Gleichung in
+  http://en.wikipedia.org/wiki/de:Baryzentrische_Koordinaten[baryzentrischen Koordinaten] bezüglich der Punkte _P_, _Q_,
+  _R_ durch den vierten Parameter in der Eingabe gegeben ist; die baryzentrischen Koordinaten werden _A_, _B_, _C_
+  genannt.
+
+[EXAMPLE]
+====
+
+`++Dreieckskurve[A, B, C, A² + B² + C² - 2B C - 2C A - 2A B = 0]++` erzeugt die
+http://en.wikipedia.org/wiki/Steiner_inellipse[Steiner-In-Ellipse] des Dreiecks _ABC_ und
+`++Dreieckskurve[A, B, C, B C + C A + A B = 0]++` erzeugt die
+http://en.wikipedia.org/wiki/Steiner_ellipse[Steiner-Um-Ellipse] des Dreiecks _ABC_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Dreieckskurve[A, B, C, A*C = 1/8]++` erzeugt eine Hyperbel, deren Tangente durch _A_ oder _C_ das Dreieck in zwei
+flächengleiche Teile teilt.
+
+====
+
+[EXAMPLE]
+====
+
+Wenn _P_, _Q_, _R_ definierte Punkte sind, erzeugt `++Dreieckskurve[P, Q, R, (A - B)*(B - C)*(C - A) = 0]++` eine Kurve
+mit den drei Schwerlinien des Dreiecks _PQR_.
+
+====
+
+[NOTE]
+====
+
+Die Punkte in der Eingabe können auch _A_, _B_ oder _C_ genannt werden, aber dann kann z.B. _x(A)_ in der Gleichung
+nicht verwendet werden, da _A_ als baryzentrische Koordinate interpretiert wird.
+
+====

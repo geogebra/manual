@@ -1,0 +1,57 @@
+= Mittelpunkt (Befehl)
+:page-en: commands/Midpoint_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Mittelpunkt( <Strecke> )::
+  Bestimmt den Mittelpunkt zur gegebenen Strecke.
+Mittelpunkt( <Kegelschnitt> )::
+  Bestimmt den Mittelpunkt des angegebenen Kegelschnittes.
+Mittelpunkt( <Intervall> )::
+  Bestimmt den Mittelpunkt des angegebenen Intervalls (als Zahl).
+Mittelpunkt( <Punkt>, <Punkt> )::
+  Bestimmt den Mittelpunkt zwischen zwei Punkten.
+Mittelpunkt( <Quadrik> )::
+  Bestimmt den Mittelpunkt der angegebenen Quadrik (z.B. Kugel, Kegel, etc.).
+
+[EXAMPLE]
+====
+
+`++Mittelpunkt[x^2 + y^2 + z^2 = 1]++` liefert _(0, 0, 0)_
+
+====
+
+[EXAMPLE]
+====
+
+`++Mittelpunkt[(1, 1), (5, 1)]++` liefert _(3, 1)_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Mittelpunkt[2 < x < 4]++` liefert _3_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Mittelpunkt[x^2 + y^2 = 4]++` liefert _(0, 0)_.
+
+====
+
+[EXAMPLE]
+====
+
+Sei `++s = Strecke[(1, 1), (1, 5)]++`. `++Mittelpunkt[s]++` liefert _(1, 3)_.
+
+====
+
+[NOTE]
+====
+
+Siehe auch Werkzeug image:24px-Mode_midpoint.svg.png[Mode midpoint.svg,width=24,height=24]
+xref:/tools/Mittelpunkt.adoc[Mittelpunkt].
+
+====

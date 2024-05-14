@@ -1,0 +1,59 @@
+= Aktionsobjekte
+:page-en: Action_Objects
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Gerade für interaktive Arbeitsblätter mit xref:/Programmieren.adoc[Scripting] können Aktionsobjekte sehr praktisch sein.
+Es gibt 4 Typen von ihnen:
+
+== Kontrollkästchen
+
+Ein Kontrollkästchen ist eine grafische Repräsentation eines xref:/Wahrheitswerte.adoc[Wahrheitswertes]. Siehe auch das
+Werkzeug image:22px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=22,height=22]
+xref:/tools/Kontrollkästchen.adoc[Kontrollkästchen] für weitere Details. Kontrollkästchen können mit dem genannten
+Werkzeug oder mit dem Befehl xref:/commands/Kontrollkästchen.adoc[Kontrollkästchen] erstellt werden.
+
+== Eingabefelder
+
+Eingabefelder dienen als Texteingabe für xref:/Programmieren.adoc[Skripte]. Das Skript wird ausgelöst, wenn der Text im
+Eingabefeld geändert wird und entweder die Eingabetaste gedrückt wird oder das Eingabefeld verlassen wird. Der
+eingegebene Wert kann durch die %0 Variable aufgerufen werden.
+
+[EXAMPLE]
+====
+
+Ein Eingabefeld das `++a=a+%0++` im Skript aufweist, erhöht _a_ um den angegebenen Wert. Das funktioniert nur wenn _a_
+xref:/Freie_und_abhängige_Objekte_Hilfsobjekte.adoc[frei] ist.
+
+====
+
+Falls Sie möchten, dass das Eingabefeld den Wert eines freien Objektes ändert (oder ein abhängiges Objekt neu
+definiert), dann sollten Sie dieses Objekt eventuell als verbunden definieren. Auf diesem Weg brauchen Sie kein Skript
+einzufügen. Eingabefelder können mit dem Werkzeug image:22px-Mode_textfieldaction.svg.png[Mode
+textfieldaction.svg,width=22,height=22] xref:/tools/Eingabefeld.adoc[Eingabefeld] oder dem Befehl
+xref:/commands/Eingabefeld.adoc[Eingabefeld] erstellt werden.
+
+== Schaltflächen
+
+Schaltflächen lösen Skripte aus wenn sie angeklickt werden. Trotzdem können Skripte nach wie vor durch Klicken auf
+andere Objekte aufgerufen werden (z.B. durch ein xref:/tools/Bild_einfügen.adoc[Bild]). Verwendet man dafür
+Schaltflächen wird dadurch das Arbeitsblatt leichter verständlich. Schaltflächen können mit dem Werkzeug
+image:22px-Mode_buttonaction.svg.png[Mode buttonaction.svg,width=22,height=22]
+xref:/tools/Schaltfläche.adoc[Schaltfläche] oder dem Befehl xref:/commands/Schaltfläche.adoc[Schaltfläche] erstellt
+werden.
+
+== Drop-Down-Listen
+
+Sie können den Inhalt einer Liste als Drop-Down-Liste anzeigen lassen
+
+* in der image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Grafik_Ansicht.adoc[Grafik-Ansicht]: aktivieren Sie dazu die Option _Als Drop-Down-Liste anzeigen_ im Tab
+_Grundeinstellungen_ des image:18px-Menu-options.svg.png[Menu-options.svg,width=18,height=18]
+xref:/Eigenschaften_Dialog.adoc[Eigenschaften-Dialogs] der Liste.
+* in der image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+xref:/Tabellen_Ansicht.adoc[Tabellen-Ansicht]: geben Sie eine Liste in die Tabelle ein und aktivieren Sie die Option
+_Verwende Schaltflächen und Kontrollkästchen_ in den image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Tabellenoptionen_.
+
+Das ausgewählte Element einer Drop-Down-Liste kann auch erhalten werden, indem man die Befehle
+xref:/commands/AusgewählterIndex.adoc[AusgewählerIndex] und xref:/commands/AusgewähltesElement.adoc[AusgewähltesElement]
+verwendet.

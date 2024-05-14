@@ -1,0 +1,41 @@
+= TVerteilung (Befehl)
+:page-en: commands/TDistribution_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+TVerteilung( <Freiheitsgrade f>, x )::
+  Erzeugt die Wahrscheinlichkeitsdichtefunktion einer http://en.wikipedia.org/wiki/de:T-Verteilung[t-Verteilung] mit _f_
+  Freiheitsgraden.
+TVerteilung( <Freiheitsgrade f>, x, <Wahrheitswert Verteilungsfunktion> )::
+  Erzeugt eine kumulative Verteilungsfunktion einer t-Verteilung, wenn der Wahrheitswert _true_ ist, ansonsten eine
+  Wahrscheinlichkeitsdichtefunktion einer t-Verteilung.
+TVerteilung( <Freiheitsgrade f>, <Wert der Variablen v> )::
+  Berechnet den Wert der kumulativen Verteilungsfunktion der t-Verteilung bei _v_, d.h. die Wahrscheinlichkeit _P(X ≤
+  v)_, wobei _X_ eine t-Verteilungs-Zufallsvariable mit _f_ Freiheitsgraden ist.
+
+[EXAMPLE]
+====
+
+`++TVerteilung[10, 0]++` ergibt _0.5_.
+
+====
+
+[NOTE]
+====
+
+Es berechnet also die Wahrscheinlichkeit für den angegebenen _x_-Koordinatenwert (oder die Fläche unter der
+t-Verteilungskurve links vom angegebenen _x_-Wert.
+
+====
+
+== CAS-Ansicht
+
+TVerteilung( <Freiheitsgrade>, <Wert der Variablen> )::
+  Berechnet den Wert der kumulativen Verteilungsfunktion der t-Verteilung bei dem Wert der Variablen _v_, d.h. die
+  Wahrscheinlichkeit _P(X ≤ v)_, wobei _X_ eine t-Verteilungs-Zufallsvariable mit gegebenen Freiheitsgraden ist.
+
+[EXAMPLE]
+====
+
+`++TVerteilung[10, 0]++` ergibt _0.5_.
+
+====

@@ -1,0 +1,89 @@
+= Wenn (Befehl)
+:page-en: commands/If_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Wenn[ <Bedingung>, <Dann Objekt> ]::
+  Erzeugt eine Kopie des Objekts, falls die Bedingung den Wahrheitswert _true_ besitzt und erzeugt ein undefiniertes
+  Objekt, falls der Wahrheitswert _false_ ist.
+
+[EXAMPLE]
+====
+
+* Sei _n_ = 3. `++Wenn[n==3, x + y = 4]++` erzeugt die Gerade _x + y = 4_, da die Bedinung für _n_ erfüllt ist.
+* Sei _n_ = 4. `++Wenn[n==3, x + y = 4]++` erzeugt ein 'undefiniertes Objekt, da die Bedingung für _n_ nicht erffüllt
+ist.
+
+====
+
+Wenn[ <Bedingung>, <Dann Objekt>, <Sonst Objekt> ]::
+  Erzeugt eine Kopie des ersten Objekts, falls die Bedingung den Wahrheitswert _true_ besitzt und eine Kopie des zweiten
+  Objekts falls der Wahrheitswert _false_ ist. Beide Objekte müssen vom selben Typ sein!
+
+[EXAMPLE]
+====
+
+* `++Wenn[true, x + y = 4, x - y = 4]++` erzeugt die Gerade _x + y = 4_
+* `++Wenn[false, x + y = 4, x - y = 4]++` erzeugt die Gerade _x - y = 4_
+
+====
+
+== Bedingte Funktionen
+
+Sie können den Bool‘schen Befehl *Wenn* verwenden, um eine bedingte Funktion zu definieren. Bedingte Funktionen können
+auch als Argumente in Befehlen wie xref:/commands/Ableitung.adoc[Ableitung], xref:/commands/Integral.adoc[Integral] und
+xref:/commands/Schnittpunkt.adoc[Schnittpunkt] verwendet werden.
+
+[EXAMPLE]
+====
+
+* Die Eingabe `++f(x) = Wenn[x < 3, sin(x), x^2]++` erzeugt eine Funktion welche für _x < 3_ die Werte von stem:[sin(x)]
+und für _x ≥ 3_ die Werte von stem:[x^2] annimmt.
+* Die Eingabe `++f(x) = Wenn[0 <= x <= 3, sin(x)]++` erzeugt eine Funktion, welche für _x_ zwischen _0_ und _3_ die
+Werte von stem:[x^3] annimmt und für _x ≥ 3_ oder _x ≤ 0_ undefiniert ist.
+
+====
+
+[NOTE]
+====
+
+Die Ableitung _Wenn[Bedingung, f(x), g(x)]_ ergibt _Wenn[Bedingung, f'(x), g'(x)]_. An den kritischen Punkten werden
+Grenzwerte nicht berechnet.
+
+====
+
+[NOTE]
+====
+
+Eine kürzere Schreibweise für das letzte Beispiel ist `++f(x) = sin(x), 0 <= x <= 3++`.
+
+====
+
+[NOTE]
+====
+
+Symbole für logische Bedingungen (z. B. ≟, ˄, ≥) finden Sie im Abschnitt xref:/Wahrheitswerte.adoc[Wahrheitswerte].
+
+====
+
+== Wenn-Befehl in Skripting
+
+*Wenn*-Befehle können in Skripten verwendet werden um verschiedene Aktionen unter bestimmten Bedingungen durchzuführen.
+
+[EXAMPLE]
+====
+
+Sei _n_ eine Zahl und _A_ ein Punkt. Der Befehl
+`++Wenn[Mod[n, 7] == 0, SetzeKoordinaten[A, n, 0], SetzeKoordinaten[A, n, 1]]++` verändert die Koordinaten des Punktes
+_A_ bezüglich der gegebenen Bedingung. Als Alternative ist diese kürzere Schreibweise möglich
+`++ SetzeKoordinaten[A, n, Wenn[Mod[n, 7] == 0,0,1]]++`.
+
+====
+
+[NOTE]
+====
+
+Die Argumente von *Wenn* müssen Objekte oder xref:/commands/Skripting_(Befehle).adoc[Skripting-Befehle] sein, dürfen
+aber keine Zuweisungen sein. Die Eingabe `++b = Wenn[a > 1, 2, 3]++` ist richtig, aber _b = 2_ oder _b = 3_ werden als
+Parameter von *Wenn* nicht akzeptiert.
+
+====

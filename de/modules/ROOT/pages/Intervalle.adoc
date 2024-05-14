@@ -1,0 +1,28 @@
+= Intervalle
+:page-en: Intervals
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Ein Intervall ist eine Menge von Zahlen, die zwischen der oberen und unteren Grenze liegt. Um ein Intervall zu erzeugen,
+tippen Sie z. B. `++2 < x < 3++` in die xref:/Eingabezeile.adoc[Eingabezeile]. Das Intervall in diesem Beispiel ist
+offen. Sie können auch ein geschlossenes Intervall (`++2 ≤ x ≤ 3++`) und ein halboffenes Intervall (`++2 ≤ x < 3++`)
+erzeugen.
+
+[NOTE]
+====
+
+Siehe auch xref:/Wahrheitswerte.adoc[Wahrheitswerte].
+
+====
+
+Um festzulegen, ob die Zahl _c_ zum Intervall _r_ gehört, tippen Sie `++r(c)++` in die Eingabezeile. Das Ergebnis ist
+dann auch ein Wahrheitswert. xref:/Ungleichungen.adoc[Ungleichungen] sind Verallgemeinerungen von Intervallen.
+
+== Befehle für Intervalle
+
+* xref:/commands/Min.adoc[Min], xref:/commands/Max.adoc[Max], xref:/commands/Mittelpunkt.adoc[Mittelpunkt] für ein
+Intervall mit unterer Grenze _a_ und oberer Grenze _b_ liefert Zahlen _a_, _b_ und stem:[\frac\{a+b}2]. Das Ergebnis
+hängt nicht davon ab, ob das Intervall offen, geschlossen oder halboffen ist.
+* Der Befehl xref:/commands/Punkt.adoc[Punkt] erzeugt einen verschiebbaren xref:/Punkte_und_Vektoren.adoc[Punkt], dessen
+x-Koordinate im Intervall liegt und dessen y-Koordinate 0 ist.
+* Der Befehl xref:/commands/PunktIn.adoc[PunktIn] erzeugt einen verschiebbaren Punkt, dessen x-Koordinate im Intervall
+liegt und dessen y-Koordinate beliebig geändert werden kann.

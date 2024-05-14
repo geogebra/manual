@@ -1,0 +1,255 @@
+= Tabellen-Ansicht
+:page-en: Spreadsheet_View
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+== [#Benutzeroberfläche_der_Tabellen-Ansicht]####[#Benutzeroberfl.C3.A4che_der_Tabellen-Ansicht]##Benutzeroberfläche der Tabellen-Ansicht##
+
+Standardmäßig erscheint die image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+_Tabellen-Ansicht_ neben der image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+_xref:/Grafik_Ansicht.adoc[Grafik-Ansicht]_. Die xref:/Tabellenkalkulationswerkzeuge.adoc[_Werkzeugleiste der
+Tabellen-Ansicht_] wird gemeinsam mit der
+image:16px-Menu-edit-undo.svg.png[Menu-edit-undo.svg,width=16,height=16]image:16px-Menu-edit-redo.svg.png[Menu-edit-redo.svg,width=16,height=16]
+_Rückgängig/Wiederherstellen_-Schaltfläche oben im GeoGebra-Fenster angezeigt.
+
+[width="100%",cols="100%",]
+|===
+a|
+image:314px-Spreadsheet-View.png[Spreadsheet-View.png,width=314,height=220]
+
+Tabellen-Ansicht
+
+|===
+
+Die image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Tabellen-Ansicht_ ist Teil
+der xref:/Perspektiven.adoc[_Tabellen-Perspektive_]. Sie können jedoch das
+xref:/GeoGebra_Desktop_vs_Web_und_Tablet_Apps.adoc[Layout] der GeoGebra-Benutzeroberfläche auch Ihren Bedürfnissen
+entsprechend anpassen.
+
+=== Anpassen der image:24px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=24,height=24] Tabellen-Ansicht
+
+Die image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Tabellen-Ansicht_ kann Ihren
+Wünschen entsprechend angepasst werden, indem Sie
+
+* den image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+_xref:/Eigenschaften_Dialog.adoc[Eigenschaften-Dialog]_ öffnen und die Option
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Tabelle_ auswählen (GeoGebra
+Desktop)
+* die image:16px-Stylingbar_icon_spreadsheet.svg.png[Stylingbar icon spreadsheet.svg,width=16,height=12]
+xref:/Gestaltungsleiste.adoc[_Gestaltungsleiste der Tabellen-Ansicht_] öffnen und
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Eigenschaften_ auswählen (GeoGebra Web und Tablet
+Apps)
+
+Im erscheinenden Dialog-Fenster können Sie einige Einstellungen vornehmen:
+
+* _xref:/Eingabezeile.adoc[Eingabezeile]_ anzeigen
+* _Koordinatengitter anzeigen_
+* _Spalten-_ oder _Zeilenkopf_ anzeigen
+* _Vertikale_ oder _Horizontale Bildlaufleiste anzeigen_
+
+Zusätzlich können Sie die Eigenschaften der image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Tabellen-Ansicht_ ändern, indem Sie
+
+* _Die Verwendung von Schaltflächen und Kontrollkästchen_ oder _Tooltips_ erlauben
+* _"=" vor Befehlen_ verlangen
+* die _Auto-Vervollständigung_ verwenden
+
+== [#Mathematische_Objekte_erstellen]#Mathematische Objekte erstellen#
+
+In der image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Tabellen-Ansicht_ wird
+jede Zelle durch einen eindeutigen Zellnamen identifiziert. So ist es möglich einen direkten Bezug zu jeder Zelle
+herzustellen.
+
+[EXAMPLE]
+====
+
+Die Zelle in Spalte _A_ und Zeile _1_ wird mit _A1_ bezeichnet.
+
+====
+
+[NOTE]
+====
+
+Diese Zellennamen können in algebraischen Ausdrücken und _xref:/Befehle.adoc[Befehlen]_ verwendet werden, um einen
+direkten Bezug zum Inhalt der entsprechenden Zelle herzustellen.
+
+====
+
+=== Direkte Eingabe und Befehle
+
+In den _Zellen der Tabellen-Ansicht_ können nicht nur Zahlen, sondern auch alle anderen Arten von
+xref:/Allgemeine_Objekte.adoc[Allgemeinen Objekten] und xref:/Geometrische_Objekte.adoc[Geometrischen Objekten]
+eingegeben werden, die von GeoGebra unterstützt werden (z. B. _Koordinaten von Punkten_,
+_xref:/Funktionen.adoc[Funktionen]_, _xref:/Befehle.adoc[Befehle]_).
+
+=== Relative Zell-Namen
+
+Wenn Sie Inhalte von einer Zelle in eine andere kopieren, werden standardmäßig alle Verweise der Zielposition
+entsprechend verändert.
+
+[EXAMPLE]
+====
+
+Sei `++A1=1++`, `++A2=2++`. Sei weiters _B1_ gleich `++(A1, A1)++`. Durch das Kopieren von _B1_ auf _B2_ (entweder mit
+[.kcode]#Strg# + [.kcode]#C#, [.kcode]#Strg# + [.kcode]#V# oder durch Ziehen an der Ecke der Zelle) erhalten Sie den
+Wert _(A2, A2)_ in _B2_.
+
+====
+
+Um dies zu verhindern, können Sie ein `++$++` vor der Spalte und / oder Zeile der Zelle einfügen, auf die verwiesen
+wird.
+
+[NOTE]
+====
+
+Mac OS: Die xref:/Tastenkombinationen.adoc[Tastenkombinationen] für Kopieren und Einfügen sind [.kcode]#Cmd# +
+[.kcode]#C# und [.kcode]#Cmd# + [.kcode]#V#
+
+====
+
+== [#Daten_in_die_Tabellen-Ansicht_eingeben]#Daten in die image:24px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=24,height=24] Tabellen-Ansicht eingeben#
+
+=== Händische Einträge, Befehle, Spurmodus
+
+Sie können Daten entweder händisch in die Zellen der image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Tabellen-Ansicht_ eingeben, oder die Befehle
+xref:/commands/FülleSpalte.adoc[_FülleSpalte_], xref:/commands/FülleZeile.adoc[_FülleZeile_] bzw.
+xref:/commands/FülleZellen.adoc[_FülleZellen_] verwenden. Nutzen Sie außerdem die Möglichkeit
+xref:/Spurmodus.adoc[_Spurwerte in die Tabelle einzufügen_].
+
+=== Daten aus der image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] Algebra-Ansicht kopieren
+
+Mithilfe einer einfachen Drag-and-Drop-Operation ist es möglich Objekte aus der
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+_xref:/Algebra_Ansicht.adoc[Algebra-Ansicht]_ in die image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Tabellen-Ansicht_ zu kopieren. Wenn Sie eine Liste von der
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+_xref:/Algebra_Ansicht.adoc[Algebra-Ansicht]_ in die image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Tabellen-Ansicht_ ziehen, so werden die Elemente, beginnend bei der Zelle, in der
+Sie die linke Maustaste oder den Touchscreen loslassen, horizontal eingefügt. Wird während des Ziehens die
+[.kcode]#Umschalt#-Taste gedrückt, öffnet sich ein Dialog-Fenster, sobald die Maustaste losgelassen wird. Sie können in
+diesem Fenster wählen, ob das Objekt xref:/Freie_und_abhängige_Objekte_Hilfsobjekte.adoc[frei oder abhängig] sein soll
+und die vertikale Ausrichtung des kopierten Objekts einstellen (Option _Transponiere_).
+
+=== Daten aus einer anderen Tabellen-Software kopieren
+
+GeoGebra ermöglicht es Ihnen auch Daten aus einer anderen Tabellenkalkulationssoftware in die
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Tabellen-Ansicht_ zu
+importieren.
+
+* Wählen Sie die Daten aus und kopieren Sie diese. Verwenden Sie zum Beispiel die Tastenkombination [.kcode]#Strg# +
+[.kcode]#C# (Mac OS: [.kcode]#Cmd# + [.kcode]#C#), um die ausgewählten Daten in die Zwischenablage Ihres Computers zu
+kopieren.
+* Öffnen Sie ein GeoGebra-Fenster mit der image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Tabellen-Ansicht_.
+* Wählen Sie jene Zelle in der image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+_Tabellen-Ansicht_ aus, welche den ersten Datenwert enthalten soll (z.B. Zelle _A1_)
+* Fügen Sie die Daten aus der Zwischenablage des Computers in die image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Tabellen-Ansicht_ von GeoGebra ein. Verwenden Sie dazu die Tastenkombination
+[.kcode]#Strg# + [.kcode]#V# (Mac OS: [.kcode]#Cmd# + [.kcode]#V#), um die Daten in die markierte Zelle einzufügen.
+
+=== Daten aus anderen Anwendungen importieren
+
+Daten können auch aus anderen Anwendungen importiert werden, wenn diese im ._txt_, ._csv_ oder ._dat_ Format
+abgespeichert wurden. Klicken Sie einfach mit der rechten Maustaste auf eine leere Zelle der
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Tabellen-Ansicht_ und wählen Sie
+die Option _Importiere Datendatei_.
+
+[NOTE]
+====
+
+GeoGebra verwendet den Punkt [.kcode]#.# als Dezimalseperator und das Komma [.kcode]#,# als Feldseperator. Versichern
+Sie sich vor dem Importieren, dass Ihre Datendatei diesen Einstellungen entspricht.
+
+====
+
+=== Werkzeugleiste der Tabellen-Ansicht
+
+Die xref:/Tabellenkalkulationswerkzeuge.adoc[_Werkzeugleiste der Tabellen-Ansicht_] bietet Ihnen eine Vielzahl an
+xref:/Werkzeuge.adoc[_Werkzeugen_], die es Ihnen ermöglichen Objekte in der
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Tabellen-Ansicht_ zu erzeugen.
+Jedes Symbol in der _xref:/Werkzeugleiste.adoc[Werkzeugleiste]_ repräsentiert einen
+xref:/Werkzeuge.adoc[_Werkzeugkasten_], der eine Auswahl an verwandten _xref:/Werkzeuge.adoc[Werkzeugen]_ enthält. Um
+einen _Werkzeugkasten_ zu öffnen, wählen Sie einfach das entsprechende _Werkzeugkasten-Symbol_ aus, das gerade in der
+_Werkzeugleiste der Tabellen-Ansicht_ (GeoGebra Web und Tablet Apps) angezeigt wird oder auf den kleinen Pfeil in der
+rechten unteren Ecke des entsprechenden _Werkzeugkasten-Symbols_ (GeoGebra Desktop).
+
+image:146px-Toolbar-Spreadsheet.png[Tabellenkalkulationswerkzeuge,title="Tabellenkalkulationswerkzeuge",width=146,height=32]
+
+[NOTE]
+====
+
+Die _Werkzeuge_ der _Werkzeugleiste der Tabellen-Ansicht_ sind nach den Eigenschaften und Funktionen der Objekte
+organsiert, die sich aus der Anwendung der entsprechenden _Werkzeuge_ ergeben. Es befinden sich zum Beispiel _Werkzeuge_
+zur Analyse von Daten im image:16px-Mode_onevarstats.svg.png[One Variable Analysis
+Tool,title="One Variable Analysis Tool",width=16,height=16] xref:/Tabellenkalkulationswerkzeuge.adoc[_Werkzeugkasten zur
+Datenanalyse_].
+
+====
+
+== [#Mathematische_Objekte_anzeigen]#Mathematische Objekte anzeigen#
+
+=== Tabellen-Objekte in anderen Ansichten anzeigen
+
+Wenn es möglich ist, zeigt GeoGebra automatisch die grafische Repräsentation eines Objekts, welches in eine _Zelle der
+Tabellen-Ansicht_ eingegeben wurde, in der image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _xref:/Grafik_Ansicht.adoc[Grafik-Ansicht]_ an. Dabei entspricht der Name des Objekts
+der Bezeichnung der _Zelle in der Tabellen-Ansicht_, in der es ursprünglich erstellt wurde (z. B. _A5_, _C1_).
+
+[NOTE]
+====
+
+Standardmäßig sind _Tabellen-Objekte_ in der image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] _xref:/Algebra_Ansicht.adoc[Algebra-Ansicht]_ als
+xref:/Freie_und_abhängige_Objekte_Hilfsobjekte.adoc[_Hilfsobjekte_] klassifiziert. Diese _Hilfsobjekte_ können ein- und
+ausgeblendet werden, indem Sie _Hilfsobjekte_ im _xref:/Kontext_Menü.adoc[Kontext-Menü]_ auswählen oder das
+image:16px-Stylingbar_algebraview_auxiliary_objects.svg.png[Stylingbar algebraview auxiliary
+objects.svg,width=16,height=16] Symbol in der xref:/Algebra_Ansicht.adoc[_Gestaltungsleiste der Algebra-Ansicht_]
+auswählen.
+
+====
+
+=== Tabellen-Daten in anderen _Ansichten_ verwenden
+
+Sie können _Tabellen-Daten_ in andere Ansichten übertragen, indem Sie mehrere Zellen auswählen und auf die rechte
+Maustaste drücken (Mac OS: [.kcode]#Cmd#-Klick). Wählen Sie anschließend im erscheinenden
+_xref:/Kontext_Menü.adoc[Kontext-Menü]_ _Erzeuge_ aus und wählen Sie die passende Option (_Liste_, _Liste von Punkten_,
+_Matrix_, _Tabelle_, _Streckenzug_ oder _Funktionstabelle_).
+
+=== Funktionstabelle
+
+Sie können für eine Funktion mit zwei Parametern eine _Funktionstabelle_ erstellen. Schreiben Sie dazu die Werte des
+ersten Parameters in die oberste Zeile und die Werte des zweiten Parameters in die linke Spalte. Die Funktion selbst
+muss in der linken oberen Zelle eingegeben werden.
+
+Wählen Sie nach erfolgreicher Eingabe der Funktion und der Werte der Parameter den rechteckigen Bereich der gewünschten
+_Funktionstabelle_ aus. Klicken Sie anschließend mit der rechten Maustaste (Mac OS: [.kcode]#Cmd#-Klick) auf die Auswahl
+und wählen Sie die Option _Erzeuge > Funktionstabelle_ im erscheinenden _xref:/Kontext_Menü.adoc[Kontext-Menü]_.
+
+[EXAMPLE]
+====
+
+Sei `++A1 = x*y ++`, `++A2 = 1++`, `++A3 = 2++`, `++A4 = 3++`, `++B1 = 1++`, `++C1 = 2++` und `++D1 = 3++`. Wählen Sie
+die Zellen _A1:D4_ aus und klicken Sie mit der rechten Maustaste (Mac OS: [.kcode]#Cmd#-Klick) auf die Auswahl. Wählen
+Sie im erscheinenden _xref:/Kontext_Menü.adoc[Kontext-Menü]_ die Option _Erzeuge > Funktionstabelle_ um eine Tabelle mit
+den berechneten Funktionswerten zu den eingegebenen Parameterwerten zu erzeugen.
+
+====
+
+=== Gestaltungsleiste der Tabellen-Ansicht
+
+Die xref:/Gestaltungsleiste.adoc[_Gestaltungsleiste der Tabellen-Ansicht_] beinhaltet folgende Schaltflächen:
+
+* _xref:/Eingabezeile.adoc[Eingabezeile]_ anzeigen / verbergen (GeoGebra Desktop)
+* Schriftart *F* *fett* oder _K_ _kursiv_
+* Textausrichtung image:16px-Stylingbar_spreadsheet_align_left.svg.png[Stylingbar spreadsheet align
+left.svg,width=16,height=16] _linksbündig_, image:16px-Stylingbar_spreadsheet_align_center.svg.png[Stylingbar
+spreadsheet align center.svg,width=16,height=16] _zentriert_ oder
+image:16px-Stylingbar_spreadsheet_align_right.svg.png[Stylingbar spreadsheet align right.svg,width=16,height=16]
+_rechtsbündig_
+* image:16px-Stylingbar_color_white.svg.png[Stylingbar color white.svg,width=16,height=16] Hintergrundfarbe einer Zelle
+ändern
+* Zellrahmen ändern (GeoGebra Desktop)
+* image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+_xref:/Eigenschaften_Dialog.adoc[Eigenschaften-Dialog]_ öffnen (GeoGebra Web und Tablet Apps)
+* Weitere image:16px-Stylingbar_dots.svg.png[Stylingbar dots.svg,width=16,height=16] xref:/Ansichten.adoc[_Ansicht_] im
+GeoGebra-Fenster einblenden (GeoGebra Web und Tablet Apps)

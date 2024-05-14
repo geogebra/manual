@@ -1,0 +1,23 @@
+= LogNormal (Befehl)
+:page-en: commands/LogNormal_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+LogNormal( <Mittelwert>, <Standardabweichung>, x )::
+  Erzeugt die Wahrscheinlichkeitsdichtefunktion der
+  http://en.wikipedia.org/wiki/de:Logarithmische_Normalverteilung[logarithmischen Normalverteilung] mit den Parametern
+  Mittelwert _μ_ und Standardabweichung _σ_.
+LogNormal( <Mittelwert>, <Standardabweichung>, x, <Wahrheitswert Verteilungsfunktion> )::
+  Erzeugt die kumulative Dichtefunktion der logarithmischen Normalverteilung, wenn der Wahrheitswert _true_ ist,
+  ansonsten die Wahrscheinlichkeitsdichtefunktion der logarithmischen Normalverteilung.
+LogNormal( <Mittelwert>, <Standardabweichung>, <Wert der Variablen> )::
+  Berechnet den Wert der kumulativen Dichtefunktion der logarithmischen Normalverteilung beim Wert der Variablen _v_,
+  d.h. die Wahrscheinlichkeit _P(X≤v)_, wobei _X_ eine Zufallsvariable mit logarithmischer Normalverteilung, bestimmt
+  durch die Parameter Mittelwert _μ_ und Standardabweichung _σ_, ist.
+
+[NOTE]
+====
+
+Die Wahrscheinlichkeit für den angegebenen _x_-Koordinatenwert wird berechnet (also die Fläche unter der logarithmischen
+Normalverteilungskurve links von der _x_-Koordinate).
+
+====

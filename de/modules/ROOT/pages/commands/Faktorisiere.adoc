@@ -1,0 +1,44 @@
+= Faktorisiere (Befehl)
+:page-en: commands/Factor_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Faktorisiere( <Funktion> )::
+  Faktorisiert die Funktion.
+
+[EXAMPLE]
+====
+
+`++Faktorisiere[x^2 + x - 6]++` liefert _(x + 3) (x - 2)_.
+
+====
+
+[NOTE]
+====
+
+Dieser Befehl muss zuerst das Computer-Algebra-System laden und kann daher auf manchen Computern etwas langsam sein.
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Hinweis:* In der image:16px-Menu_view_cas.svg.png[Menu
+view cas.svg,width=16,height=16] xref:/CAS_Ansicht.adoc[CAS-Ansicht] kann auch noch folgende Syntax verwendet werden:
+
+Faktorisiere( <Ausdruck>, <Variable> )::
+  Faktorisiert den Ausdruck in Bezug auf die angegebene Variable.
+
+[EXAMPLE]
+====
+
+* `++Faktorisiere[x^2-y^2, x]++` liefert _(x + y) (x - y)_, die Faktorisierung von _x² - y²_ in Bezug auf _x_.
+* `++Faktorisiere[x^2-y^2, y]++` liefert _-(y - x) (y + x)_, die Faktorisierung von _x² - y²_ in Bezug auf _y_.
+
+====
+
+Dieser Befehl faktorisiert Ausdrücke über den http://en.wikipedia.org/wiki/de:Rationale_Zahl[rationalen Zahlen]. Um über
+irrationale Zahlen zu faktorisieren siehe den Befehl xref:/commands/IFaktorisiere.adoc[IFaktorisiere]. Um über den
+komplexen Zahlen zu faktorisieren siehe die Befehle xref:/commands/KFaktorisiere.adoc[KFaktorisiere] und
+xref:/commands/KIFaktorisiere.adoc[KIFaktorisiere].
+
+====

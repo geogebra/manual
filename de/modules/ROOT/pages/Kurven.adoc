@@ -1,0 +1,40 @@
+= Kurven
+:page-en: Curves
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+In GeoGebra gibt es zwei Arten von Kurven:
+
+== Parameterkurven
+
+Parameterkurven haben die Form a(t)=(f(t),g(t)), wobei _t_ ein realer Parameter in einem bestimmten Bereich ist und
+können mit dem Befehl xref:/commands/Kurve.adoc[Kurve] erzeugt werden. Sie können in den Befehlen
+xref:/commands/Tangente.adoc[Tangente], xref:/commands/Punkt.adoc[Punkt] und
+xref:/commands/Schnittpunkt.adoc[Schnittpunkt] verwendet werden.
+
+[NOTE]
+====
+
+* Parameterkurven können in Ausdrücken mit vordefinierten Funktionen und arithmetischen Operationen verwendet werden.
+Beispiel: Die Eingabe `++c(3)++` erzeugt den Punkt mit Parameterwert 3 auf der Kurve _c_.
+* Sie können auch mit dem Werkzeugimage:24px-Mode_point.svg.png[Mode point.svg,width=24,height=24]
+xref:/tools/Punkt.adoc[Punkt] oder dem Befehl xref:/commands/Punkt.adoc[Punkt] einen Punkt auf einer Parameterkurve
+erzeugen. Da sowohl der Startwert _a_ als auch der Endwert _b_ des Parameters dynamisch veränderbar sind, können Sie für
+diese Werte auch Schieberegler verwenden (siehe auch Werkzeug image:24px-Mode_slider.svg.png[Mode
+slider.svg,width=24,height=24] xref:/tools/Schieberegler.adoc[Schieberegler].
+
+====
+
+Eine Parameterkurve durch vorhandene Punkte zu erzeugen, ist nicht möglich. Sie können aber z.B. mit dem Befehl
+xref:/commands/TrendPoly.adoc[TrendPoly] versuchen, eine Funktion durch die Punkte zu legen.
+
+== Implizite Kurven
+
+Implizite Kurven sind Polynome in den Variablen _x_ und _y_. Sie können in der xref:/Eingabezeile.adoc[Eingabezeile]
+eingegeben werden.
+
+[EXAMPLE]
+====
+
+x^4+y^3=2x*y
+
+====

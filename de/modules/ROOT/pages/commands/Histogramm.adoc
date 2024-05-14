@@ -1,0 +1,107 @@
+= Histogramm (Befehl)
+:page-en: commands/Histogram_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Histogramm( <Liste von Klassenbereichen>, <Liste von Balkenhöhen> )::
+  Erzeugt ein Histogramm mit Balken der gegebenen Höhe. Die Klassenbereiche bestimmen die Breite und Position jedes
+  Balkens.
+
+[EXAMPLE]
+====
+
+`++Histogramm[{0, 1, 2, 3, 4, 5}, {2, 6, 8, 3, 1}]++` erzeugt ein Histogramm mit 5 Balken der angegebenen Höhe. Der
+erste Balken ist im Intervall [_0, 1_] positioniert, der zweite Balken im Intervall [_1, 2_], usw.
+
+====
+
+Histogramm( <Liste von Klassenbereichen>, <Liste von Rohdaten>, <Wahrheitswert Dichte> , <Skalierungsfaktor> (optional)
+)::
+  Erzeugt ein Histogramm mit den eingegebenen Rohdaten. Die Klassenbereiche legen die Breite und Position jedes Balkens
+  fest und bestimmen wie viele Datenelemente sich in jeder Klasse befinden. Die Balkenhöhe wird wie folgt bestimmt:
+
+* Falls _Wahrheitswert Dichte = true_, Balkenhöhe = (Skalierungsfaktor) * (Klassenhäufigkeit) / (Klassenbreite)
+* Falls _Wahrheitswert Dichte = false_, Balkenhöhe = Klassenhäufigkeit
+
+Standardmäßig ist _Wahrheitswert Dichte = true_ und der _Skalierungsfaktor = 1_. Dies erzeugt eine Histogramm mit einer
+Gesamtfläche, die gleich der Anzahl der Datenwerte ist.
+
+[NOTE]
+====
+
+Alle Elemente der Rohdaten müssen innerhalb der Intervalle der Klassenbereiche liegen oder “undefiniert” wird
+ausgegeben.
+
+====
+
+[NOTE]
+====
+
+Dieser Befehl verwendet die Regel a ≤ x < b für jede Klasse außer der letzten Klasse, für die a ≤ x ≤ b gilt.
+
+====
+
+[EXAMPLE]
+====
+
+(_Standard - Histogramm_)
+
+`++Histogramm[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true]++` erzeugt ein Histogramm mit 3 Balken mit den
+Höhen 0.5 (erster Balken), 0.2 (zweiter Balken) und 0.1 (dritter Balken).
+
+Das Histogramm hat die Fläche = 0.5*10 + 0.2*10 + 0.1*10 = 8.
+
+====
+
+[EXAMPLE]
+====
+
+(_Anzahl - Histogramm_)
+
+`++Histogramm[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, false]++` erzeugt ein Histogramm mit 3 Balken mit den
+Höhen 5 (erster Balken), 2 (zweiter Balken) und 1 (dritter Balken). Dieses Histogramm verwendet keinen Skalierungsfaktor
+und erzeugt Balkenhöhen die der Anzahl der Werte in jeder Klasse entsprechen.
+
+====
+
+[EXAMPLE]
+====
+
+(_relatives Häufigkeitshistogramm_)
+
+`++Histogramm[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 10/ 8]++` erzeugt ein Histogramm mit 3 Balken
+mit den Höhen 0.625 (erster Balken), 0.25 (zweiter Balken) und 0.125 (dritter Balken). Dieses Histogramm verwendet den
+Skalierungsfaktor für die Dichte, um Balkenhöhen zu erzeugen, die den Verhältnissen der Werte in jeder Klasse
+entsprechen.
+
+Sei n die Anzahl der Datenwerte und haben die Klassen konstante Breite b, dann erzeugt der Skalierungsfaktor = b/n ein
+relatives Häufigkeitshistogramm.
+
+====
+
+[EXAMPLE]
+====
+
+(_normalisiertes Histogramm_)
+
+`++Histogramm[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 1/8]++` erzeugt ein Histogramm mit 3 Balken mit
+den Höhen 0.0625 (erster Balken), 0.025 (zweiter Balken) und 0.0125 (dritter Balken).
+
+Das Histogramm hat die Fläche = 0.0625*10 + 0.025*10 + 0.0125*10 = 1.
+
+Sei n die Anzahl der Datenwerte, dann ist der Skalierungsfaktor der Dichte = 1/n und es wird ein normalisiertes
+Histogramm mit der Gesamtfläche 1 erzeugt. Das ist nützlich, um ein Histogramm an eine Dichtekurve anzupassen.
+
+====
+
+Histogramm( <Wahrheitswert kumulativ>, <Liste von Klassenbereichen>, <Liste von Rohdaten>, <Wahrheitswert Dichte> ,
+<Skalierungsfaktor> (optional) )::
+  Falls _Wahrheitswert kumulativ = true_, dann wird ein Histogramm erzeugt, bei dem jede Balkenhöhe gleich der
+  Häufigkeit der Klassen plus die Summe aller vorherigen Häufigkeiten ist.
+
+[EXAMPLE]
+====
+
+`++Histogramm[true, {10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true]++` erzeugt ein Histogramm mit 3 Balken mit
+den Höhen 0.5 (erster Balken), 0.7 (zweiter Balken) und 0.8 (dritter Balken).
+
+====

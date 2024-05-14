@@ -1,0 +1,54 @@
+= Einfügen (Befehl)
+:page-en: commands/Insert_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Einfügen[ <Objekt>, <Liste>, <Position> ]::
+  Fügt das Objekt an der gegebenen Position in die Liste ein.
+Einfügen[ <Liste>, <Liste>, <Position> ]::
+  Fügt alle Elemente der ersten Liste an der gegebenen Position in die zweite Liste ein.
+
+[EXAMPLE]
+====
+
+`++Einfügen[{11, 12}, {1, 2, 3, 4, 5}, -2]++` fügt die Elemente der ersten Liste an vorletzter Position der zweiten
+Liste ein und erzeugt die neue Liste _\{1, 2, 3, 4, 11, 12, 5}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Einfügen[{11, 12}, {1, 2, 3, 4, 5}, 3]++` fügt die Elemente der ersten Liste an der dritten und vierten Position der
+zweiten Liste ein und erzeugt die neue Liste _\{1, 2, 11, 12, 3, 4, 5}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Einfügen[x^3, {1, 2, 3, 4, 5}, -2]++` fügt _x^3^_ an der vorletzten Position der Liste ein und erzeugt die neue Liste
+_\{1, 2, 3, 4, x^3^, 5}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Einfügen[x^2, {1, 2, 3, 4, 5}, 3]++` fügt _x^2^_ an der dritten Position der Liste ein und erzeugt die neue Liste
+_\{1, 2, x^2^, 3, 4, 5}_.
+
+====
+
+[NOTE]
+====
+
+Wenn Sie als Position eine negative Zahl eingeben, so wird die Position vom Ende der Liste aus gezählt.
+
+====
+
+[NOTE]
+====
+
+Wenn Sie als Position eine negative Zahl eingeben, so wird die Position vom Ende der Liste aus gezählt.
+
+====

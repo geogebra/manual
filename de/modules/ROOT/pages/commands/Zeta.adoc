@@ -1,0 +1,30 @@
+= Zeta (Befehl)
+:page-en: commands/Zipf_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Zeta( <Anzahl der Elemente>, <Exponent> )::
+  Erzeugt ein Balkendiagramm einer http://en.wikipedia.org/wiki/de:Zeta-Verteilung[Zeta-Verteilung]. (Englisch:
+  http://en.wikipedia.org/wiki/Zipf%27s_law[Zipf's law])
+  _Parameter:_
+  _Anzahl der Elemente_: Anzahl der Elemente, deren Rang wir studieren
+  _Exponent_: Exponent, der die Verteilung charakterisiert
+
+Zeta( <Anzahl der Elemente>, <Exponent>, <Wahrheitswert Verteilungsfunktion> )::
+  Erzeugt ein Balkendiagramm einer _Zeta-Verteilung_, wenn der Wahrheitswert _false_ ist.
+  Erzeugt ein Balkendiagramm einer kumulativen http://en.wikipedia.org/wiki/de:Zeta-Verteilung[Zeta-Verteilung], wenn
+  der Wahrheitswert _true_ ist.
+  Die ersten beiden Parameter sind dieselben wie oben.
+Zeta( <Anzahl der Elemente>, <Exponent>, <Wert der Variablen v>, <Wahrheitswert Verteilungsfunktion> )::
+  Sei X eine Zeta-Zufallsvariable. Der Befehl berechnet die Wahrscheinlichkeit
+  P( X = _v_), wenn der Wahrheitswert _false_ ist.
+  P( X ≤ _v_), wenn der Wahrheitswert _true_ ist.
+  Die ersten beiden Parameter sind die selben wie oben.
+
+[EXAMPLE]
+====
+
+`++Zeta[10, 1 , 5, false]++` liefert _0.07_ in der image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] _Algebra-Ansicht_ und _stem:[\frac\{504}\{7381}]_ in der
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS-Ansicht_.
+
+====

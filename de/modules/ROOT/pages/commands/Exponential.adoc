@@ -1,0 +1,34 @@
+= Exponential (Befehl)
+:page-en: commands/Exponential_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Exponential( <Parameter>, x )::
+  Erzeugt die Wahrscheinlichkeitsdichtefunktion einer
+  http://en.wikipedia.org/wiki/de:Exponentialverteilung[Exponentialverteilung] mit dem Parameter _λ_.
+Exponential( <Parameter>, x, <Wahrheitswert Verteilungsfunktion> )::
+  Ist der Wahrheitswert _true_, so wird eine kumulative Verteilungsfunktion einer Exponentialverteilung erzeugt,
+  ansonsten eine Wahrscheinlichkeitsdichtefunktion einer Exponentialverteilung.
+Exponential( <Parameter>, <Wert der Variablen> )::
+  Berechnet den Wert der kumulativen Verteilungsfunktion der Exponentialverteilung beim Wert _v_, d.h. die
+  Wahrscheinlichkeit _P(X ≤ v)_, wobei _X_ eine Zufallsvariable der Exponentialverteilung mit Parameter _λ_ ist.
+
+[NOTE]
+====
+
+Es berechnet die Wahrscheinlichkeit für den angegebenen _x_-Koordinatenwert (oder die Fläche unter der
+Exponentialverteilungskurve links des angegebenen _x_-Wertes).
+
+====
+
+== CAS-Ansicht
+
+Exponential( <Parameter>, <Wert der Variablen> )::
+  Berechnet den Wert der kumulativen Verteilungsfunktion der Exponentialverteilung beim Wert _v_, d.h. die
+  Wahrscheinlichkeit _P(X ≤ v)_, wobei _X_ eine Zufallsvariable der Exponentialverteilung mit Parameter _λ_ ist.
+
+[EXAMPLE]
+====
+
+`++Exponential[2, 1]++` berechnet _stem:[1 - \frac\{1}\{e^\{2} } ]_, gerundet _0.86_.
+
+====

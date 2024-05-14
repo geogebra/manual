@@ -1,0 +1,81 @@
+= Export-Dialog für Grafiken
+:page-en: Export_Graphics_Dialog
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+Das Folgende betrifft nur die GeoGebra Desktop Version.
+
+====
+
+Dieses Dialogfenster können Sie im xref:/Datei_Menü.adoc[Datei-Menü] im Submenü _Export_ finden
+(image:Image-x-generic.png[Image-x-generic.png,width=16,height=16] Grafik-Ansicht als Bild (png, eps)…)
+
+Keyboard shortcut: [.kcode]#Strg# + [.kcode]#Umschalt# + [.kcode]#U# (Mac OS: [.kcode]#Cmd# + [.kcode]#Shift# +
+[.kcode]#U#)
+
+Mithilfe dieser Menü-Option können Sie die image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Grafik_Ansicht.adoc[Grafik-Ansicht] als Bild-Datei auf Ihrem Computer speichern.
+Im erscheinenden Dialogfenster können Sie das _Format_ des Bildes auswählen und sowohl die _Skalierung_ (in cm) als auch
+die _Auflösung_ des Bildes (in dpi) festlegen. Dort können Sie auch das Bild als _Transparent_ festlegen.
+
+[NOTE]
+====
+
+Wenn Sie Punkte namens _Export_1_ und _Export_2_ erstellen, dann definieren diese das Rechteck des Bildausschnitts, der
+exportiert wird. Ansonsten wird einfach der sichtbare Teil der image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Grafik-Ansicht_ exportiert.
+
+====
+
+Wenn Sie die image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Grafik-Ansicht_ als Bild
+exportieren wollen, stehen Ihnen die folgenden Dateiformate zur Verfügung:
+
+PNG – http://en.wikipedia.org/wiki/de:Portable_Network_Graphics[Portable Network Graphics]::
+  Hierbei handelt es sich um ein Rastergrafik-Format. Je höher die Auflösung (dpi) des Bildes ist, desto höher ist auch
+  die Qualität (300 dpi reichen für die meisten Zwecke aus). PNG-Grafiken sollten nachträglich weder vergrößert noch
+  verkleinert werden, da sich dadurch in der Regel die Qualität verschlechtert.
+  Die Verwendung von PNG-Grafiken empfiehlt sich für den Einsatz auf Webseiten (html) und mit
+  Textverarbeitungs-Programmen.
+
+[NOTE]
+====
+
+Wenn Sie eine PNG-Grafik in ein Textverarbeitungs-Programm einfügen (z. B. OpenOffice Writer), achten Sie bitte darauf,
+dass die Größe des Bildes auf 100% eingestellt ist, da ansonsten der angegebene Maßstab verändert wird.
+
+====
+
+EPS – http://en.wikipedia.org/wiki/de:Encapsulated_Postscript[Encapsulated Postscript]::
+  Hierbei handelt es sich um ein Vektorgrafik-Format. EPS-Grafiken können ohne Qualitätsverlust beliebig vergrößert und
+  verkleinert werden. Die Verwendung von EPS-Grafiken empfiehlt sich für den Einsatz mit Vektorgrafik-Programmen (z. B.
+  Corel Draw) und professionellen Textverarbeitungs-Systemen (z. B. xref:/LaTeX.adoc[LaTeX]).
+  Die Auflösung einer EPS Grafik beträgt immer 72dpi, wobei dieser Wert nur für die Berechnung der wahren Größe des
+  Bildes in Zentimeter verwendet wird und keinen Einfluss auf die Qualität hat.
+
+[NOTE]
+====
+
+Der Transparenz-Effekt beim Füllen von Vielecken oder Kegelschnitten ist beim EPS-Export nicht möglich. Objekte können
+hier entweder zu 100% oder gar nicht gefüllt werden.
+
+====
+
+PDF – http://en.wikipedia.org/wiki/de:Portable_Document_Format[Portable Document Format]::
+  (siehe EPS-Format oben)
+
+[NOTE]
+====
+
+Beim SVG- und PDF-Export können Sie Text als editierbaren Text oder als Figuren exportieren. Dadurch werden Text-Objekte
+entweder als editierbarer Text (kann z. B. mit InkScape editiert werden) oder als Bézier-Kurve (wodurch der Text
+garantiert gleich angezeigt wird, sogar wenn die entsprechende Schriftart nicht installiert ist) gespeichert.
+
+====
+
+SVG – http://en.wikipedia.org/wiki/de:Scalable_Vector_Graphics[Scalable Vector Graphics]::
+  (siehe EPS-Format oben)
+
+EMF – http://en.wikipedia.org/wiki/de:Windows_Metafile[Enhanced Metafile]::
+  (siehe EPS-Format oben)

@@ -1,0 +1,106 @@
+= Schnittpunkt (Befehl)
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Schnittpunkt( <Objekt>, <Objekt> )::
+  Berechnet den Schnittpunkt zweier Objekte.
+
+[EXAMPLE]
+====
+
+* Sei `++a: -3x + 7y = -10++` eine Gerade und `++c: x^2 + 2y^2 = 8++` eine Ellipse. `++Schnittpunkt[a, c]++` berechnet
+die Schnittpunkte _E = (-1.02, -1,87)_ und _F = (2.81, -0.22)_ zwischen der Gerade und der Ellipse.
+* `++Schnittpunkt[y = x + 3, Kurve[t, 2t, t, 0, 10]]++` berechnet den Schnittpunkt _A = (3, 6)_.
+* `++Schnittpunkt[Kurve[2s, 5s, s,-10, 10], Kurve[t, 2t, t, -10, 10]]++` berechnet den Punkt _A = (0, 0)_.
+
+====
+
+Schnittpunkt( <Objekt>, <Objekt>, <Nummer des Schnittpunkts> )::
+  Berechnet den _n_-ten Schnittpunkt zweier Objekte.
+Schnittpunkt( <Objekt>, <Objekt>, <Anfangspunkt> )::
+  Berechnet den Schnittpunkt zweier Objekte mit dem Newton'schen Näherungsverfahren und einem Anfangspunkt.
+Schnittpunkt( <Funktion>, <Funktion>, <Anfangswert>, <Endwert> )::
+  Berechnet die Schnittpunkte der beiden Funktionen im angegebenen Intervall.
+Schnittpunkt( <Kurve 1>, <Kurve 2>, <Parameter 1>, <Parameter 2> )::
+  Berechnet den Schnittpunkt der beiden Kurven mit dem Newton'schen Näherungsverfahren, welches bei den angegebenen
+  Parametern startet.
+
+[EXAMPLE]
+====
+
+Sei `++a = Kurve[cos(t), sin(t), t, 0, π]++` und `++b = Kurve[cos(t) + 1, sin(t), t, 0, π]++`.
+`++Schnittpunkt[a, b, 0, 2]++` berechnet den Schnittpunkt _A = (0.5, 0.87)_.
+
+====
+
+[EXAMPLE]
+====
+
+Seien `++f(x) = x^3 + x^2 - x++` und `++g(x) = 4 / 5 + 3 / 5 x++` zwei Funktionen. Im Intervall [ -1, 2 ] berechnet
+`++Schnittpunkt[ f, g, -1, 2 ]++` die Schnittpunkte _A = (-0.43, 0.54)_ und _B = (1.1, 1.46)_ zwischen den beiden
+Funktionen.
+
+====
+
+[EXAMPLE]
+====
+
+Sei `++a(x) = x^3 + x^2 - x++` eine Funktion, `++b: -3x + 5y = 4++` eine Gerade und _C = (0, 0.8)_ der Anfangspunkt.
+`++Schnittpunkt[a, b, C]++` berechnet den Schnittpunkt _D = (-0.43, 0.54)_ mit dem Newton'schen Näherungsverfahren
+zwischen der Funktion und der Gerade.
+
+====
+
+[EXAMPLE]
+====
+
+Sei `++a(x) = x^3 + x^2 - x++` eine Funktion und `++b: -3x + 5y = 4++` eine Gerade. `++Schnittpunkt[a, b, 2]++`
+berechnet den zweiten Schnittpunkt _C = (-0.43, 0.54)_ zwischen der Funktion und der Gerade.
+
+====
+
+== CAS-Ansicht
+
+Schnittpunkt( <Funktion>, <Funktion> )::
+  Liefert eine Liste, die die Schnittpunkte von zwei Objekten enthält.
+
+[EXAMPLE]
+====
+
+Seien `++f(x):= x^3 + x^2 - x++` und `++g(x):= x++` zwei Funktionen. `++Schnittpunkt[ f(x), g(x) ]++` berechnet die
+Schnittpunkte _\{(1, 1), (0, 0), (-2, -2)}_ der beiden Funktionen.
+
+====
+
+Schnittpunkt( <Objekt>, <Objekt> )::
+
+[EXAMPLE]
+====
+
+* `++Schnittpunkt[ <Gerade> , <Objekt> ]++` berechnet den Schnittpunkt einer Geraden und eines Objekts (Ebene, Strecke,
+Vieleck, etc.)
+* `++Schnittpunkt[ <Ebene> , <Objekt> ]++` berechnet den Schnittpunkt einer Ebene und eines Objekts (Strecke, Vieleck,
+Kegelschnitt, etc.)
+* `++Schnittpunkt[ <Kegelschnitt>, <Kegelschnitt> ]++` berechnet den Schnittpunkt zweier Kegelschnitte
+* `++Schnittpunkt[ <Ebene>, <Ebene> ]++` berechnet die Schnittgerade zweier Ebenen
+* `++Schnittpunkt[ <Ebene>, <Polyeder> ]++` berechnet das Schnittpolygon einer Ebene und eines Polyeders
+* `++Schnittpunkt[ <Kugel>, <Kugel> ]++` berechnet den Schnittkreis zweier Kugeln
+* `++Schnittpunkt[ <Ebene>, <Quadrik> ]++` berechnet den Schnittkegelschnitt einer Ebene und einer Quadrik (Kugel,
+Kegel, Zylinder, ...)
+
+====
+
+[NOTE]
+====
+
+Siehe auch die xref:/commands/SchneideKegelschnitt.adoc[SchneideKegelschnitt] und
+xref:/commands/SchneideBahnkurven.adoc[SchneideBahnkurven] Befehle.
+
+====
+
+[NOTE]
+====
+
+Siehe auch das Werkzeug image:22px-Mode_intersect.svg.png[Mode intersect.svg,width=22,height=22]
+xref:/tools/Schnittpunkt.adoc[Schnittpunkt].
+
+====

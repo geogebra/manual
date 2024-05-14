@@ -1,0 +1,39 @@
+= Prüfe (Befehl)
+:page-en: commands/Prove_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Prüfe( <Wahrheitswert> )::
+  Prüft, ob der gegebene Wahrheitswert im Allgemeinen _true_ oder _false_ ist.
+
+GeoGebra verwendet normalerweise numerische Berechnungen, um zu überprüfen ob ein xref:/Wahrheitswerte.adoc[Boolescher
+Ausdruck] wahr (_true_) oder falsch (_false_) ist. Der Befehl _Prüfe_ verwendet jedoch
+http://en.wikipedia.org/wiki/de:Symbolische_Mathematik[symbolische Methoden], um zu überprüfen ob eine Aussage im
+Allgemeinen _true_ oder _false_ ist. Wenn GeoGebra keine Lösung findet, ist das Ergebnis _undefiniert_.
+
+[EXAMPLE]
+====
+
+Wir definieren drei Punkte `++A=(1,2)++`, `++B=(3,4)++` und `++C=(5,6)++`. Der Befehl `++LiegenAufGerade[A,B,C]++`
+liefert _true_, solange ein numerisches Verfahren zur Berechnung auf die aktuellen Punkte angewendet wird. Der Befehl
+`++Prüfe[LiegenAufGerade[A,B,C]]++` liefert jedoch _false_, da die drei Punkt im Allgemeinen nicht auf einer Gerade
+liegen, z. B. könnten wir die Koordinaten der Punkte verändern.
+
+====
+
+[EXAMPLE]
+====
+
+Wir definieren ein Dreieck mit den Eckpunkten _A_, _B_, _C_, `++D=Mittelpunkt[B,C]++`, `++E=Mittelpunkt[A,C]++`,
+`++p=Gerade[A,B]++` und `++q=Gerade[D,E]++`. Der Bool'sche Operator `++p∥q++` und der Befehl `++Prüfe[p∥q]++` liefern
+beide _true_, da die Mittellinie eines Dreiecks immer parallel zur entsprechenden Seite ist.
+
+[[ggbContainer679936e6a22ba147463a473b343177bb]]====
+
+[NOTE]
+====
+
+* Siehe auch den Befehl xref:/commands/PrüfeDetails.adoc[PrüfeDetails].
+* Für weitere Informationen siehe xref:/Wahrheitswerte.adoc[Wahrheitswerte] und
+http://dev.geogebra.org/trac/wiki/TheoremProving[technical details of the algorithms].
+
+====

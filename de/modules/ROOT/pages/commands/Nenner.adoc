@@ -1,0 +1,36 @@
+= Nenner (Befehl)
+:page-en: commands/Denominator_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Nenner [ <Funktion> ]::
+  Liefert den Nenner der Funktion.
+
+[EXAMPLE]
+====
+
+`++Nenner[5 / (x^2 + 2)]++` liefert _f(x) = (x^2^ + 2)_.
+
+====
+
+== CAS-Ansicht
+
+Folgende Schreibweise funktioniert nur in der xref:/CAS_Ansicht.adoc[CAS-Ansicht]:
+
+Nenner( <Ausdruck> )::
+  Liefert den Nenner einer rationalen Zahl / eines rationalen Ausdrucks.
+
+[EXAMPLE]
+====
+
+`++Nenner[2 / 3 + 1 / 15]++` liefert _15_.
+
+====
+
+[NOTE]
+====
+
+* Für eine schnelle numerische Methode (falls die Zahlen nicht zu groß sind) kann Folgendes in die _Eingabezeile_
+eingegeben werden:`++GemeinsamerNenner[a,a]++` für den Nenner und `++runde(a*GemeinsamerNenner[a,a])++` für den Zähler.
+* Siehe auch den Befehl xref:/commands/Zähler.adoc[Zähler_(Befehl)].
+
+====

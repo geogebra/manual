@@ -1,0 +1,66 @@
+= TrigErweitere (Befehl)
+:page-en: commands/TrigExpand_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+TrigErweitere( <Ausdruck> )::
+  Verwandelt einen trigonometrischen Ausdruck in einen Ausdruck, der nur einfache Variablen als Argumente verwendet.
+TrigErweitere( <Ausdruck>, <Zielfunktion> )::
+  Verwandelt einen trigonometrischen Ausdruck in einen Ausdruck, der nur einfache Variablen als Argumente verwendet und
+  bevorzugt dabei die gegebene Zielfunktion.
+
+[EXAMPLE]
+====
+
+`++TrigErweitere[tan(x + y), tan(x)]++` liefert stem:[\frac\{-tan(x) - tan(y)}\{tan(x) tan(y) - 1}].
+
+====
+
+[EXAMPLE]
+====
+
+`++TrigErweitere[tan(x + y)]++` liefert stem:[\frac\{cos(x) sin(y) + cos(y) sin(x)}\{cos(x) cos(y) - sin(x) sin(y)}].
+
+====
+
+== CAS-Ansicht
+
+Die folgenden Befehle sind nur in der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/CAS_Ansicht.adoc[CAS-Ansicht] verfügbar:
+
+TrigErweitere( <Ausdruck>, <Zielfunktion>, <Argument> )::
+  Verwandelt einen trigonometrischen Ausdruck in einen Ausdruck, der nur einfache Variablen als Argumente verwendet und
+  bevorzugt dabei die gegebene Zielfunktion und das gegebene Argument.
+
+[EXAMPLE]
+====
+
+`++TrigErweitere[sin(x)/(1+cos(x)), tan(x), x/2]++` liefert stem:[tan \left( \frac\{x}\{2} \right)].
+
+====
+
+[EXAMPLE]
+====
+
+`++TrigErweitere[sin(x), sin(x), x/2]++` liefert stem:[2cos(\frac\{x}\{2})sin(\frac\{x}\{2})].
+
+====
+
+TrigErweitere( <Ausdruck>, <Zielfunktion>, <Argument>, <Argument> )::
+  Verwandelt einen trigonometrischen Ausdruck in einen Ausdruck, der nur einfache Variablen als Argumente verwendet und
+  bevorzugt dabei die gegebene Zielfunktion und die gegebenen Argumente.
+
+[EXAMPLE]
+====
+
+`++TrigErweitere[csc(x) - cot(x) + csc(y) - cot(y), tan(x), x/2, y/2]++` liefert
+stem:[tan(\frac\{x}\{2})+tan(\frac\{y}\{2})].
+
+====
+
+[NOTE]
+====
+
+Siehe auch Befehl xref:/commands/TrigKombiniere.adoc[TrigKombiniere] und
+xref:/commands/TrigVereinfache.adoc[TrigVereinfache].
+
+====

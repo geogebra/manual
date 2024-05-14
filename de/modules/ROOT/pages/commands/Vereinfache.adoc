@@ -1,0 +1,57 @@
+= Vereinfache (Befehl)
+:page-en: commands/Simplify_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Vereinfache( <Funktion> )::
+  Vereinfacht, falls möglich, die Terme der angegebenen Funktion.
+Vereinfache( <Text> )::
+  Versucht, Textausdrücke zu ordnen, beispielsweise durch Entfernen von mehrmals vorkommenden negativen Variablen.
+
+[EXAMPLE]
+====
+
+Sei _a = b = c = -1_. `++Vereinfache["f(x) = " + a + "x² + " + b + "x + " + c]++` liefert _f(x) = -x^2 - x - 1_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Vereinfache[x + x + x]++` liefert die Funktion _f(x) = 3x_.
+
+====
+
+[NOTE]
+====
+
+Der Befehl xref:/commands/FormelText.adoc[FormelText] liefert normalerweise bessere Ergebnisse und ist einfacher.
+
+====
+
+[NOTE]
+====
+
+Da dieser Befehl das Computer-Algebra-System laden muss, ist er auf manchen Computern langsam. Versuchen Sie stattdessen
+den Befehl xref:/commands/Polynom.adoc[Polynom] zu verwenden.
+
+====
+
+== CAS-Ansicht
+
+Vereinfache [ <Funktion> ]::
+  Vereinfacht, falls möglich, die Terme der angegebenen Funktion. Es dürfen undefinierte Variablen in den Termen
+  enthalten sein.
+
+[EXAMPLE]
+====
+
+`++Vereinfache[3 * x + 4 * x + a * x]++` liefert _xa + 7x_.
+
+====
+
+[NOTE]
+====
+
+Siehe auch Befehl xref:/commands/Faktorisiere.adoc[Faktorisiere].
+
+====

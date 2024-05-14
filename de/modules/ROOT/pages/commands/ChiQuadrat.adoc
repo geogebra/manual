@@ -1,0 +1,29 @@
+= ChiQuadrat (Befehl)
+:page-en: commands/ChiSquared_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+ChiQuadrat( <Freiheitsgrade>, x )::
+  Erzeugt die Wahrscheinlichkeitsdichtefunktion einer
+  http://en.wikipedia.org/wiki/de:Chi-Quadrat-Verteilung[Chi-Quadrat-Verteilung] mit den entsprechenden Freiheitsgraden.
+ChiQuadrat( <Freiheitsgrade>, x, <Wahrheitswert Verteilungsfunktion>)::
+  Ist der Wahrheitswert _true_, so wird die kumulative Verteilungsfunktion einer Chi-Quadrat-Verteilung erzeugt,
+  ansonsten die Wahrscheinlichkeitsdichtefunktion der Chi-Quadrat-Verteilung.
+ChiQuadrat( <Freiheitsgrade>, <Wert der Variable> )::
+  Berechnet den Wert der kumulativen Verteilungsfunktion der Chi-Quadrat-Verteilung bei _Wert der Variable_ _v_, d.h.
+  die Wahrscheinlichkeit _P(X ≤ v)_, wobei _X_ eine Chi-Quadrat-Zufallsvariable mit den entsprechenden Freiheitsgraden
+  ist.
+
+[NOTE]
+====
+
+Es berechnet also die Wahrscheinlichkeit für den angegebenen _x_-Koordinatenwert (oder die Fläche unter der
+Chi-Quadrat-Verteilungskurve links vom angegebenen _x_-Wert).
+
+====
+
+[EXAMPLE]
+====
+
+`++ChiQuadrat[4, 3]++` ergibt stem:[\gamma(2, \frac\{3}\{2})], was ungefähr _0.44_ entspricht.
+
+====

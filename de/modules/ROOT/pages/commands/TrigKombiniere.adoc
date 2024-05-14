@@ -1,0 +1,56 @@
+= TrigKombiniere (Befehl)
+:page-en: commands/TrigCombine_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+TrigKombiniere( <Ausdruck> )::
+  Verwandelt einen trigonometrischen Ausdruck, der Produkte von Winkelfunktionen enthält, in einen Ausdruck ohne
+  Produkte.
+TrigKombiniere( <Ausdruck>, <Zielfunktion> )::
+  Verwandelt einen trigonometrischen Ausdruck, der Produkte von Winkelfunktionen enthält, in einen Ausdruck ohne
+  Produkte und bevorzugt dabei die gegebene Zielfunktion.
+
+[EXAMPLE]
+====
+
+`++TrigKombiniere[sin(x) + cos(x), sin(x)]++` liefert stem:[ \{\sqrt\{2} sin \left( x + \frac\{1}\{4} \pi \right)} ].
+
+====
+
+[EXAMPLE]
+====
+
+`++TrigKombiniere[sin(x) + cos(x)]++` liefert stem:[ \{\sqrt\{2} cos \left( x - \frac\{1}\{4} \pi \right)} ].
+
+====
+
+[EXAMPLE]
+====
+
+`++TrigKombiniere[sin(x) cos(3x)]++` liefert stem:[\{\frac\{1}\{2} sin \left( 4 x \right) - \frac\{1}\{2} sin \left( 2 x
+\right)}].
+
+====
+
+[NOTE]
+====
+
+In der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_Ansicht.adoc[CAS-Ansicht] können
+auch undefinierte Variablen verwendet werden.
+
+[EXAMPLE]
+====
+
+`++TrigKombiniere[sin(p) cos(3p)]++` liefert stem:[\{\frac\{1}\{2} sin \left( 4 p \right) - \frac\{1}\{2} sin \left( 2 p
+\right)}].
+
+====
+
+====
+
+[NOTE]
+====
+
+Siehe auch die Befehle xref:/commands/TrigErweitere.adoc[TrigErweitere] und
+xref:/commands/TrigVereinfache.adoc[TrigVereinfache].
+
+====

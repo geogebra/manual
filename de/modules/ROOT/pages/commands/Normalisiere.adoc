@@ -1,0 +1,32 @@
+= Normalisiere (Befehl)
+:page-en: commands/Normalize_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Normalisiere( <Liste von Zahlen> )::
+  Liefert eine Liste, die die _normalisierte_ Form der eingegebenen Zahlen enthält.
+
+[EXAMPLE]
+====
+
+`++Normalisiere[{1, 2, 3, 4, 5}]++` liefert _\{0, 0.25, 0.5, 0.75, 1}_.
+
+====
+
+Normalisiere( <Liste von Punkten> )::
+  Liefert eine Liste, die die _normalisierte_ Form der eingegebenen Punkte enthält.
+
+[EXAMPLE]
+====
+
+`++Normalisiere[{(1,5), (2,4), (3,3), (4,2), (5,1)}]++` liefert _\{(0,1), (0.25,0.75), (0.5,0.5), (0.75,0.25), (1,0)}_.
+
+====
+
+[NOTE]
+====
+
+* Dieser Befehl funktioniert nicht bei 3D Punkten.
+* Die Operation _Normalisierung_ weist einen Wert x dem Intervall [0,1] zu unter Verwendung der linearen Funktion
+stem:[x \mapsto \frac\{x-Min[list]}\{Max[list]-Min[list]}].
+
+====

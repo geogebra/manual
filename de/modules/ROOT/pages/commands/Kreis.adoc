@@ -1,0 +1,43 @@
+= Kreis (Befehl)
+:page-en: commands/Circle_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Kreis( <Mittelpunkt>, <Radius> )::
+  Liefert einen Kreis zum gegebenen Mittelpunkt und dem angegebenen Radius.
+Kreis( <Mittelpunkt>, <Strecke> )::
+  Liefert einen Kreis zum gegebenen Mittelpunkt mit einem Radius, der der Länge der Strecke entspricht.
+Kreis( <Mittelpunkt>, <Punkt> )::
+  Liefert einen Kreis zum gegebenen Mittelpunkt, der durch den Punkt verläuft.
+Kreis( <Punkt>, <Punkt>, <Punkt> )::
+  Liefert einen Kreis, der durch alle drei Punkte verläuft (wenn sie nicht auf einer Linie liegen).
+
+[NOTE]
+====
+
+Siehe auch die Werkzeuge image:20px-Mode_compasses.svg.png[Mode compasses.svg,width=20,height=20]
+xref:/tools/Zirkel.adoc[Zirkel], image:20px-Mode_circlepointradius.svg.png[Mode
+circlepointradius.svg,width=20,height=20] xref:/tools/Kreis_mit_Mittelpunkt_und_Radius.adoc[Kreis mit Mittelpunkt und
+Radius], image:20px-Mode_circle2.svg.png[Mode circle2.svg,width=20,height=20]
+xref:/tools/Kreis_mit_Mittelpunkt_durch_Punkt.adoc[Kreis mit Mittelpunkt durch Punkt] und
+image:20px-Mode_circle3.svg.png[Mode circle3.svg,width=20,height=20] xref:/tools/Kreis_durch_drei_Punkte.adoc[Kreis
+durch drei Punkte].
+
+====
+
+Kreis( <Gerade>, <Punkt> )::
+  Liefert einen Kreis, der durch den gegebenen Punkt verläuft. Die Achse des Kreises wird durch die gegebene Gerade
+  definiert.
+Kreis( <Mittelpunkt>, <Radius>, <Richtung> )::
+  Liefert einen Kreis mit gegebenen Mittelpunkt und Radius. Die Achse des Kreises verläuft parallel zur gegebenen
+  Richtung (Gerade, Vektor oder Ebene).
+Kreis( <Mittelpunkt>, <Punkt>, <Richtung> )::
+  Liefert einen Kreis mit gegebenen Mittelpunkt, der durch den gegebenen Punkt verläuft. Die Achse des Kreises verläuft
+  parallel zur gegebenen Richtung (Gerade, Vektor oder Ebene).
+
+[EXAMPLE]
+====
+
+`++Kreis[ <Punkt>, <Radius>, <Ebene> ]++` liefert einen Kreis, der parallel zu der gegebenen Ebene ist, wobei die Achse
+des Kreises der Normalvektor der Ebene ist.
+
+====

@@ -1,0 +1,66 @@
+= ZoomIn (Befehl)
+:page-en: commands/ZoomIn_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+ZoomIn( <Skalierungsfaktor> )::
+  Vergrößert die image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/Grafik_Ansicht.adoc[Grafik-Ansicht] um den angegebenen Skalierungsfaktor in Bezug auf den aktuellen Zoom. Die
+  Mitte des Bildschirms wird auch als Mittelpunkt für die Vergrößerung verwendet.
+ZoomIn( <Skalierungsfaktor>, <Mittelpunkt> )::
+  Vergrößert die image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/Grafik_Ansicht.adoc[Grafik-Ansicht] um den angegebenen Skalierungsfaktor in Bezug auf den aktuellen Zoom. Der
+  zweite Parameter definiert das Zentrum der Vergrößerung.
+ZoomIn( <Min x>, <Min y>, <Max x>, <Max y> )::
+  Vergrößert die image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/Grafik_Ansicht.adoc[Grafik-Ansicht] auf das Rechteck mit den Eckpunkten (Min x, Min y), (Max x, Max y).
+
+[EXAMPLE]
+====
+
+Sei _a_ ein Schieberegler, mit `++ZoomIn[-a, -a, a, a]++` wird der Zoom der Grafik-Ansicht abhängig vom Schieberegler
+_a_.
+
+====
+
+[EXAMPLE]
+====
+
+`++ZoomIn[0, 1, 5, 6]++`
+
+====
+
+[EXAMPLE]
+====
+
+`++ZoomIn[2, (0, 0)]++`
+
+====
+
+[EXAMPLE]
+====
+
+`++ZoomIn[1]++` macht nichts
+
+`++ZoomIn[2]++` vergrößert die Ansicht
+
+`++ZoomIn[0.5]++` ist äquivalent zu `++ZoomOut[2]++`, d.h. die Ansicht wird verkleinert.
+
+====
+
+[NOTE]
+====
+
+Werden abhängige Parameter verwendet, so sind die Grenzen der Grafik-Ansicht dynamisch. Verwende
+xref:/commands/KopiereFreiesObjekt.adoc[KopiereFreiesObjekt] um dies zu vermeiden.
+
+====
+
+[NOTE]
+====
+
+* Sind mehrere image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Grafik_Ansicht.adoc[Grafik-Ansichten] geöffnet, so wird die, die gerade aktive verändert.
+* Siehe auch die Befehle xref:/commands/ZoomOut.adoc[ZoomOut],
+xref:/commands/SetzeAktiveGrafikansicht.adoc[SetzeAktiveGrafikansicht] und xref:/commands/Bewege.adoc[Bewege].
+
+====

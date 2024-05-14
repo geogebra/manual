@@ -1,0 +1,39 @@
+= ZeigeAchsen (Befehl)
+:page-en: commands/ShowAxes_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+ZeigeAchsen( )::
+  Zeigt die Achsen in der aktiven Ansicht an.
+ZeigeAchsen( <Wahrheitswert> )::
+  Je nach Wahrheitswert true|false werden die Achsen in der aktiven Ansicht angezeigt|ausgeblendet.
+
+[EXAMPLE]
+====
+
+* `++ZeigeAchsen[true]++` zeigt die Achsen in der aktiven Ansicht an.
+* `++ZeigeAchsen[false]++` blendet die Achsen in der aktiven Ansicht aus.
+
+====
+
+ZeigeAchsen( <Ansicht 1|2|3>, <Wahrheitswert> )::
+  Je nach Wahrheitswert true|false werden die Achsen in der angegebenen image:16px-Menu_view_graphics.svg.png[Menu view
+  graphics.svg,width=16,height=16] _Grafik-Ansicht_ 1 oder 2 (oder 3 für
+  image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=16,height=16] _3D
+  Ansicht_) angezeigt|ausgeblendet.
+
+[EXAMPLE]
+====
+
+* `++ZeigeAchsen[1, true]++` zeigt die Achsen in der ersten image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Grafik-Ansicht_ an.
+* `++ZeigeAchsen[2, false]++` blendet die Achsen in der zweiten image:16px-Menu_view_graphics2.svg.png[Menu view
+graphics2.svg,width=16,height=16] _Grafik-Ansicht_ aus.
+
+====
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/ZeigeGitter.adoc[ZeigeGitter].
+
+====

@@ -1,0 +1,85 @@
+= Säulendiagramm (Befehl)
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Säulendiagramm( <Liste von Daten>, <Liste von Häufigkeiten> )::
+  Erstellt ein Säulendiagramm mit der Liste der Daten mit den entsprechenden Häufigkeiten.
+
+[EXAMPLE]
+====
+
+* `++Säulendiagramm[{10,11,12,13,14}, {5,8,12,0,1}]++`
+* `++Säulendiagramm[{5, 6, 7, 8, 9}, {1, 0, 12, 43, 3}]++`
+* `++Säulendiagramm[{0.3, 0.4, 0.5, 0.6}, {12, 33, 13, 4}]++`
+
+====
+
+[NOTE]
+====
+
+Die Liste der Daten muss Zahlen enthalten, die immer zunehmen.
+
+====
+
+Säulendiagramm( <Liste von Rohdaten>, <Säulenbreite>, <Vertikaler Skalierungsfaktor (optional)> )::
+  Erzeugt ein Säulendiagramm mit den vorhandenen Rohdaten; die Säulen haben die angegebene Breite und die Höhe hängt vom
+  vertikalen Skalierungsfaktor ab.
+
+[EXAMPLE]
+====
+
+* `++ Säulendiagramm[ {1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5}, 1]++`
+* `++ Säulendiagramm[ {1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5}, 1, 2]++`
+
+====
+
+Säulendiagramm( <Liste von Daten>, <Liste von Häufigkeiten>, <Säulenbreite> )::
+  Erstellt ein Säulendiagramm mit der Liste der Daten mit den entsprechenden Häufigkeiten und der vorgegebenen
+  Säulenbreite.
+
+[EXAMPLE]
+====
+
+* `++Säulendiagramm[{10,11,12,13,14}, {5,8,12,0,1}, 0.5]++` lässt Platz zwischen den Säulen.
+* `++Säulendiagramm[{10,11,12,13,14}, {5,8,12,0,1}, 0]++` erzeugt "Säulen", die nur Striche sind.
+
+====
+
+Säulendiagramm( <Anfangswert>, <Endwert>, <Liste von Säulenhöhen> )::
+  Erstellt ein Säulendiagramm, abhängig vom vorgegebenen Intervall: die Anzahl der Säulen wird durch die Länge der
+  Liste, deren Elemente die Höhe der Säulen festlegen, bestimmt.
+
+[EXAMPLE]
+====
+
+`++Säulendiagramm[10, 20, {1,2,3,4,5} ]++` erstellt ein Säulendiagramm mit 5 Säulen in der angegebenen Höhen im
+Intervall [_10, 20_].
+
+====
+
+Säulendiagramm( <Anfangswert>, <Endwert>, <Ausdruck>, <Variable>, <Startwert>, <Endwert> )::
+  Erstellt ein Säulendiagramm über das gegebenen Intervall [Anfangswert, Endwert], wobei die Höhen der Säulen mit dem
+  Ausdruck berechnet werden, der von der Variable abhängt. Die Lauf-Variable geht vom Startwert bis zum Endwert.
+
+[EXAMPLE]
+====
+
+Wenn _p = 0.1_, _q = 0.9_, und _n = 10_ Zahlen sind, dann erstellt der Befehl
+`++Säulendiagramm[ -0.5, n + 0.5, BinomialKoeffizient[n,k]*p^k*q^(n-k), k, 0, n ]++` ein Säulendiagramm im Interval
+[_-0.5, n+0.5_]. Die Höhen der Säulen berechnen sich aus den Wahrscheinlicheiten, die durch den gegebenen Ausdruck
+berechnet werden.
+
+====
+
+Säulendiagramm( <Anfangswert>, <Endwert>, <Ausdruck>, <Variable>, <Startwert>, <Endwert>, <Schrittweite> )::
+  Erstellt ein Säulendiagramm über das gegebene Intervall [Anfangswert, Endwert], wobei die Höhen der Säulen mit dem
+  Ausdruck berechnet werden, der von der Variable abhängt. Die Lauf-Variable geht vom Startwert bis zum Endwert in Größe
+  der Schrittweite.
+
+[NOTE]
+====
+
+Es ist möglich, die Farbe und die Füllung von jedem einzelnen Säulen im
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Eigenschaften_Dialog.adoc[Eigenschaften-Dialog] anzupassen.
+
+====

@@ -1,0 +1,34 @@
+= TrendPot (Befehl)
+:page-en: commands/FitPow_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+TrendPot( <Liste von Punkten> )::
+  Berechnet die Regressionskurve in Form einer Potenzfunktion _a x^b^_.
+
+[EXAMPLE]
+====
+
+`++TrendPot[{(1, 1), (3, 2), (7, 4)}]++` erzeugt die Regressionskurve _f(x) = 0.97 x^0.71^_.
+
+====
+
+== CAS-Ansicht
+
+TrendPot( <Liste von Punkten> )::
+  Berechnet die Regressionskurve in Form einer Potenzfunktion _a x^b^_.
+
+[EXAMPLE]
+====
+
+`++TrendPot[{(1, 1), (3, 2), (7, 4)}]++` erzeugt die Regressionskurve _0.97 x^0.71^_.
+
+====
+
+[NOTE]
+====
+
+* Alle Punkte müssen im ersten Quadranten des Koordinatensystems liegen.
+* Siehe auch die Befehle xref:/commands/TrendExp.adoc[TrendExp], xref:/commands/TrendLog.adoc[TrendLog],
+xref:/commands/TrendPoly.adoc[TrendPoly] und xref:/commands/TrendSin.adoc[TrendSin].
+
+====

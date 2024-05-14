@@ -1,0 +1,26 @@
+= Gauß2Schätzer (Befehl)
+:page-en: commands/ZMean2Estimate_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Gauß2Schätzer( <Stichprobenliste 1>, <Stichprobenliste 2>, <σ1>, <σ2>, <Signifikanzniveau> )::
+  Berechnet ein Gauß-Konfidenzintervall der Differenz zweier Mittelwerte der Grundgesamtheiten mit den gegebenen
+  Stichproben der beiden Gesamtheiten, den Standardabweichungen der Grundgesamtheiten und dem Signifikanzniveau.
+  Die Ergebnisse werden in Form einer Liste als \{Untere Konfidenzintervallgrenze, Obere Konfidenzintervallgrenze}
+  zurückgegeben.
+
+[EXAMPLE]
+====
+
+Die zwei Stichprobenlisten `++Liste1 = {1, 4, 5, 4, 1, 3, 4, 2}++` und `++Liste2 = {2, 1, 3, 1, 2, 5, 2, 4}++` sind
+gegeben. Die Standardabweichung von Liste1 ist `++σ_1 = sqrt(2)++`, die Standardabweichung von Liste2 ist
+`++σ_2  = sqrt(1.75)++` und das Signifikanzniveau beträgt 0.75. `++Gauß2Schätzer[Liste1, Liste2, σ_1,  σ_2, 0.75]++`
+liefert _Liste3 = \{-0.29, 1.29}_.
+
+====
+
+Gauß2Schätzer( <Stichprobenmittelwert 1>, <σ1>, <Stichprobengröße 1>, <Stichprobenmittelwert 2>, <σ2>, <Stichprobengröße
+2>, <Signifikanzniveau> )::
+  Berechnet ein Gauß-Konfidenzintervall der Differenz zweier Mittelwerte der Grundgesamtheiten unter Verwendung der
+  gegebenen Stichprobenmittelwerte, den Standardabweichungen der Grundgesamtheiten und des Signifikanzniveaus.
+  Die Ergebnisse werden in Form einer Liste als \{Untere Konfidenzintervallgrenze, Obere Konfidenzintervallgrenze}
+  zurückgegeben.

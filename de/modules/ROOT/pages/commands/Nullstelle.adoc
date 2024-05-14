@@ -1,0 +1,54 @@
+= Nullstelle (Befehl)
+:page-en: commands/Root_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Nullstelle( <Polynom> )::
+  Erzeugt alle Nullstellen eines Polynoms als Schnittpunkte des Funktionsgraphen und der _x_-Achse.
+
+[EXAMPLE]
+====
+
+`++Nullstelle[0.1*x^2 - 1.5*x + 5 ]++` berechnet _A = (5, 0)_ und _B = (10, 0)_.
+
+====
+
+Nullstelle( <Funktion>, <Startwert> )::
+  Berechnet eine Nullstelle der Funktion nach der Newton Methode mit dem Startwert _a_.
+
+[EXAMPLE]
+====
+
+`++Nullstelle[0.1*x^2 - 1.5*x + 5, 6 ]++` berechnet _A = (5, 0)_.
+
+====
+
+Nullstelle( <Funktion>, <Startwert>, <Endwert> )::
+  Sei _a_ der _Startwert_ und _b_ der _Endwert_. Dann berechnet dieser Befehl die Nullstelle einer Funktion im Intervall
+  [_a, b_] (regula falsi).
+
+[EXAMPLE]
+====
+
+`++Nullstelle[0.1x² - 1.5x + 5, 8, 13]++` berechnet _A = (10, 0)_.
+
+====
+
+== CAS-Ansicht
+
+Nullstelle( <Polynom> )::
+  Erzeugt alle Nullstellen eines Polynoms als Schnittpunkte des Funktionsgraphen und der _x_-Achse.
+
+[EXAMPLE]
+====
+
+`++Nullstelle[x^3 - 3 * x^2 - 4 * x + 12]++` berechnet _\{x = -2, x = 2, x = 3}_.
+
+====
+
+[NOTE]
+====
+
+In der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_Ansicht.adoc[CAS-Ansicht] ist
+dieser Befehl ist nur eine Sondervariante des Befehls xref:/commands/Löse.adoc[Löse].
+
+====

@@ -1,0 +1,26 @@
+= KonjugierterDurchmesser (Befehl)
+:page-en: commands/ConjugateDiameter_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+KonjugierterDurchmesser( <Gerade>, <Kegelschnitt> )::
+  Zeichnet eine Linie auf der der Durchmesser liegt, der konjugiert zu dem Durchmesser ist, der parallel zur angegebenen
+  Linie ist (bezüglich des angegebenen Kegelschnittes).
+
+[EXAMPLE]
+====
+
+`++KonjugierterDurchmesser[-4x + 5y = -2, x^2 + 4 y^2 + 2x - 8y + 1 = 0]++` ergibt die Gerade 5__x__ + 16__y__ = 11
+
+====
+
+KonjugierterDurchmesser( <Vektor>, <Kegelschnitt> )::
+  Zeichnet eine Linie auf der der Durchmesser liegt, der konjugiert zu dem Durchmesser ist, der parallel zum angegebenen
+  Vektor ist (bezüglich des angegebenen Kegelschnittes).
+
+[EXAMPLE]
+====
+
+Sei _u_ = (4,1) ein Vektor. Der Befehl `++KonjugierterDurchmesser[u, x^2 + 4 y^2 + 2x - 8y + 1 = 0]++` ergibt die Gerade
+_x_ + _y_ = 0
+
+====

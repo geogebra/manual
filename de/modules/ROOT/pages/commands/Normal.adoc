@@ -1,0 +1,34 @@
+= Normal (Befehl)
+:page-en: commands/Normal_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Normal( <Erwartungswert>, <Standardabweichung>, x )::
+  Erzeugt die Wahrscheinlichkeitsdichtefunktion der http://en.wikipedia.org/wiki/de:Normalverteilung[Normalverteilung].
+
+Normal( <Erwartungswert>, <Standardabweichung>, x, <Wahrheitswert Verteilungsfunktion> )::
+  Ist der Wahrheitswert _true_, dann wird die kumulative Verteilungsfunktion mit Erwartungswert μ und Standardabweichung
+  σ erzeugt, ansonsten die Wahrscheinlichkeitsdichtefunktion der Normalverteilung.
+
+Normal( <Erwartungswert>, <Standardabweichung>, <Wert der Variablen v> )::
+  Berechnet die Funktion stem:[\Phi \left(\frac\{x- \mu}\{\sigma} \right) ] an der Stelle _v_ mithilfe des
+  Erwartungswerts μ und der Standardabweichung σ. Die Funktion Φ ist die Verteilungsfunktion der
+  Standardnormalverteilung (μ = 0; σ = 1).
+
+[NOTE]
+====
+
+Dieser Befehl berechnet die Wahrscheinlichkeit dafür, dass die Zufallsvariable X kleiner oder gleich dem gegebenen
+Variablenwert ist (d.h. Fläche unter der Gauß‘schen Glockenkurve).
+
+====
+
+[EXAMPLE]
+====
+
+`++Normal[2, 0.5, 1]++` liefert _0.02_ in der
+/Datei:Menu_view_algebra_svg.adoc[image:16px-Menu_view_algebra.svg.png[links=,width=16,height=16]]
+xref:/Algebra_Ansicht.adoc[Algebra-Ansicht] und stem:[\frac\{erf(-\sqrt\{2})+1}\{2}] in der
+/Datei:Menu_view_cas_svg.adoc[image:16px-Menu_view_cas.svg.png[links=,width=16,height=16]]
+xref:/CAS_Ansicht.adoc[CAS-Ansicht].
+
+====

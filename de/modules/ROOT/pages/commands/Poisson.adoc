@@ -1,0 +1,28 @@
+= Poisson (Befehl)
+:page-en: commands/Poisson_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Poisson( <Erwartungswert> )::
+  Liefert ein Balkendiagramm einer http://en.wikipedia.org/wiki/de:Poisson-Verteilung[Poisson-Verteilung] mit
+  angegebenem Erwartungswert _λ_.
+Poisson( <Erwartungswert>, <Wahrheitswert Verteilungsfunktion> )::
+  Liefert ein Balkendiagramm einer Poisson-Verteilung, wenn der Wahrheitswert _false_ ist.
+  Liefert ein Balkendiagramm einer kumulativen Poisson-Verteilung, wenn der Wahrheitswert _true_ ist.
+  Der erste Parameter ist derselbe wie oben.
+Poisson( <Erwartungswert>, <Wert der Variablen v> , <Wahrheitswert Verteilungsfunktion> )::
+  Sei _X_ eine Poisson-Zufallsvariable.
+  Ist der Wahrheitswert _false_, dann wird P( X = _v_) berechnet.
+  Ist der Wahrheitswert _true_, dann wird P( X ≤ _v_) berechnet.
+  Der erste Parameter ist derselbe wie oben.
+
+[EXAMPLE]
+====
+
+* `++Poisson[3, 1, true]++` liefert _0.2_ in der image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] _Algebra-Ansicht_ und stem:[\frac\{4}\{e³}] _in der
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]_ CAS-Ansicht__.__
+* `++Poisson[3, 1, false]++` liefert _0.15_ in der image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] _Algebra-Ansicht_ und _stem:[\frac\{3}\{e³}]_ in der
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS-Ansicht_.
+
+====

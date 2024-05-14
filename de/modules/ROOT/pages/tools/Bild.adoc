@@ -1,0 +1,124 @@
+= Bild (Werkzeug)
+:page-en: tools/Image_Tool
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Mit diesem Werkzeug können Sie Bilder in die image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Grafik_Ansicht.adoc[Grafik-Ansicht] von GeoGebra einfügen und in Ihre
+Konstruktionen einbinden.
+
+Als erstes legen Sie die Position des Bildes auf eine der folgenden Arten fest:
+
+* Klicken Sie in die image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Grafik-Ansicht_
+um die Position der linken unteren Ecke des Bildes festzulegen.
+* Klicken Sie auf einen existierenden Punkt um diesen Punkt als linken unteren Eckpunkt des Bildes festzulegen.
+
+Danach erscheint ein Dialog-Fenster, in dem Sie die Dateien Ihres Computers durchsuchen und eine Bild-Datei auswählen
+können.
+
+[NOTE]
+====
+
+* In der GeoGebra Desktop Version können Sie nach Aktivieren des Werkzeugs image:20px-Mode_image.svg.png[Mode
+image.svg,width=20,height=20] *Bild* können Sie ein Bild von der Zwischenablage Ihres Computers in der
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Grafik-Ansicht_ einzufügen, indem Sie
+die [.kcode]#Alt#-Taste gedrückt halten, während Sie an die gewünschte Position für die linke untere Ecke des Bildes
+klicken.
+* Transparente http://en.wikipedia.org/wiki/de:Graphics_Interchange_Format[GIF]- und
+http://en.wikipedia.org/wiki/de:Portable_Network_Graphics[PNG]-Dateien werden unterstützt, allerdings müssen Sie
+PNG-Dateien zuerst bearbeiten und ihnen einen "alpha channel" geben (z.B. indem Sie http://www.irfanview.com/[IrfanView]
+benutzen, das PNGOUT-Plugin benutzen und *RGB+Alpha* auswählen.
+* Eingefügte Bilder sind standardmäßig Hilfsobjekte.
+
+====
+
+== Eigenschaften von Bildern
+
+Im image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Eigenschaften_Dialog.adoc[Eigenschaften-Dialog] können Sie im Tab _Grundeinstellungen_ die Position eines
+eingefügten Bildes als _absolut zum Bildschirm_ oder _relativ zum Koordinatensystem_ festlegen.
+
+Ebenfalls im image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Eigenschaften-Dialog_ können Sie im
+Tab _Position_ bis zu drei Eckpunkte eines Bildes festlegen, wodurch Sie das Bild vergrößern / verkleinern, drehen und
+verzerren können (siehe auch Befehl xref:/commands/Eckpunkt.adoc[Eckpunkt]).
+
+* Eckpunkt 1: Position der linken unteren Ecke des Bildes
+* Eckpunkt 2: Position der rechten unteren Ecke des Bildes
+
+[NOTE]
+====
+
+Der zweite Eckpunkt kann erst nach dem ersten Eckpunkt festgelegt werden und bestimmt durch seinen Abstand zum ersten
+Eckpunkt die Breite des Bildes.
+
+====
+
+* Eckpunkt 4: Position der oberen linken Ecke des Bildes
+
+[NOTE]
+====
+
+Der vierte Eckpunkt kann erst nach dem ersten Eckpunkt festgelegt werden und bestimmt durch seinen Abstand zum ersten
+Eckpunkt die Höhe des Bildes.
+
+====
+
+[EXAMPLE]
+====
+
+Erzeugen Sie zuerst drei Punkte _A_, _B_, und _C_ und fügen Sie ein Bild in die
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Grafik-Ansicht_ ein.
+
+* Setzen Sie Punkt _A_ als den ersten Eckpunkt und Punkt _B_ als den zweiten Eckpunkt des eingefügten Bildes. Aktivieren
+Sie nun das Werkzeug image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22]xref:/tools/Bewege.adoc[Bewege] und
+bewegen Sie die Punkte _A_ und _B_ um die Breite des Bildes zu verändern.
+* Entfernen Sie nun den zweiten Eckpunkt wieder. Setzen Sie den Punkt C als den vierten Eckpunkt des Bildes. Aktivieren
+Sie anschließend das Werkzeug image:22px-Mode_move.svg.png[Mode
+move.svg,width=22,height=22]xref:/tools/Bewege.adoc[Bewegeund] bewegen Sie die Punkte A und C um die Höhe des Bildes zu
+verändern.
+* Setzen Sie nun alle drei Punkte als Eckpunkte des Bildes und bewegen Sie die einzelnen Punkte um das Bild zu
+verzerren.
+
+====
+
+[EXAMPLE]
+====
+
+Wenn ein Bild eine bestimmte Größe haben soll (z. B. 3 Einheiten breit und 4 Einheiten hoch), könnten Sie die Eckpunkte
+folgendermaßen setzen:
+
+Erzeugen Sie einen Punkt A und fügen Sie ein Bild in die Grafik-Ansicht ein.
+
+* Setzen Sie Punkt _A_ als _Eckpunkt 1_
+* Geben Sie _A + (3, 0)_ als _Eckpunkt 2_ ein (Sie können die Formel direkt in das Textfeld Eckpunkt 2 eingeben)
+* Geben Sie anschließend _A + (0, 4)_ als _Eckpunkt 4_ ein (Sie können die Formel direkt in das Textfeld Eckpunkt 4
+eingeben)
+
+====
+
+[NOTE]
+====
+
+Wenn Sie nun den Punkt _A_ bewegen (Werkzeug image:22px-Mode_move.svg.png[Mode
+move.svg,width=22,height=22]xref:/tools/Bewege.adoc[Bewege]), so verändert sich zwar die Position, jedoch nicht die
+Größe des Bildes.
+
+====
+
+Im image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Eigenschaften-Dialog_ können Sie im Tab
+_Grundeinstellungen_ ein Bild als _Hintergrundbild_ setzen und es somit hinter die Koordinatenachsen schieben. Ein
+Hintergrundbild kann nicht mehr mit der Maus ausgewählt werden.
+
+[NOTE]
+====
+
+Um die Eigenschaften eines Hintergrundbildes zu verändern oder das Bild wieder in den Vordergrund zu schieben, können
+Sie den image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Eigenschaften-Dialog_ auch mithilfe der
+Option image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Eigenschaften_ im
+image:16px-Menu-edit.svg.png[Menu-edit.svg,width=16,height=16] xref:/Bearbeiten_Menü.adoc[Bearbeiten-Menü] öffnen.
+
+====
+
+Sie können die _Transparenz_ eines Bildes erhöhen, sodass dahinter liegende Objekte und die Koordinatenachsen besser
+sichtbar werden. Öffnen Sie den image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+_Eigenschaften-Dialog_ und wählen Sie den Tab _Darstellung_ aus um den Prozentwert für die _Füllung_ des Bildes
+verändern zu können (von 0 % bis 100 %).

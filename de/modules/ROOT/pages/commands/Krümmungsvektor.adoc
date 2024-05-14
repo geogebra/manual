@@ -1,0 +1,34 @@
+= Krümmungsvektor (Befehl)
+:page-en: commands/CurvatureVector_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Krümmungsvektor[ <Punkt>, <Funktion> ]::
+  Erzeugt den Krümmungsvektor der Funktion im gegebenen Punkt.
+Krümmungsvektor[ <Punkt>, <Kurve> ]::
+  Erzeugt den Krümmungsvektor der Parameterkurve im gegebenen Punkt.
+
+[EXAMPLE]
+====
+
+`++Krümmungsvektor[(0, 0), Kurve[cos(t), sin(2t), t, 0, π]]++` liefert den Vektor _(0, 0)_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Krümmungsvektor[(0, 0), x^2]++` liefert den Vektor _(0, 2)_.
+
+====
+
+Krümmungsvektor[ <Punkt>, <Objekt> ]::
+  Erzeugt den Krümmungsvektor des Objekts (Funktion, Kurve, Kegelschnitt) im gegebenen Punkt.
+
+[EXAMPLE]
+====
+
+* `++Krümmungsvektor[(0, 0), x^2]++` liefert den Vektor _(0, 2)_
+* `++Krümmungsvektor[(0, 0), Kurve[cos(t), sin(2t), t, 0, π]]++` liefert den Vektor _(0, 0)_
+* `++Krümmungsvektor[(-1, 0), Kegelschnitt[{1, 1, 1, 2, 2, 3}]]++` liefert den Vektor _(0, -2)_
+
+====

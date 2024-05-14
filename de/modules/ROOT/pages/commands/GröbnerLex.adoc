@@ -1,0 +1,34 @@
+= GröbnerLex (Befehl)
+:page-en: commands/GroebnerLex_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+== CAS Syntax
+
+GröbnerLex[ <Liste von Polynomen> ]::
+  Berechnet die Gröbner-Basis der Liste von Polynomen in Bezug auf lexikographische Ordnung der Variablen (auch als
+  _lex_ oder _plex_ bekannt).
+GröbnerLex[ <Liste von Polynomen>, <Liste von Variablen> ]::
+  Berechnet die Gröbner-Basis der Liste von Polynomen in Bezug auf lexikographische Ordnung der gegebenen Variablen
+  (auch als _lex_ oder _plex_ bekannt).
+
+[EXAMPLE]
+====
+
+`++GröbnerLex[{x^3-y-2, x^2+y+1}, {y, x}]++` liefert \{stem:[ -x^\{3} - x^\{2} + 1, -y - x^\{2} - 1 ]}.
+
+====
+
+[EXAMPLE]
+====
+
+`++GröbnerLex[{x^3-y-2, x^2+y+1}]++` liefert \{stem:[ y^\{3} + 4 y^\{2} + 7 y + 5, x - y^\{2} - 3 y - 3 ]}.
+
+====
+
+[NOTE]
+====
+
+Siehe auch xref:/commands/GröbnerGradRevLex.adoc[GröbnerGradRevLex] und
+xref:/commands/GröbnerLexGrad.adoc[GroebnerLexGrad] Befehle.
+
+====

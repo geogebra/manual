@@ -1,0 +1,40 @@
+= DotPlot (Befehl)
+:page-en: commands/DotPlot_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+DotPlot( <Liste von Rohdaten> )::
+  Erstellt einen Dot-Plot zu der Liste der gegebenen Zahlen. Man erhält außerdem eine Liste von Punkten, wobei zum
+  Beispiel für jede Zahl _n_, die _k_-mal vorkommt, die Punkte _(n, 1), (n, 2), ..., (n, k)_ erzeugt werden.
+
+[EXAMPLE]
+====
+
+`++DotPlot[{2, 5, 3, 4, 3, 5, 3}]++` liefert _\{(2, 1), (3, 1), (3, 2), (3, 3), (4, 1), (5, 1), (5, 2)}_.
+
+====
+
+DotPlot( <Liste von Daten>, <Staple überlappende Punkte (optional)>, <Skalierungsfaktor (optional)> )::
+  Erstellt einen Dot-Plot zu der Liste der gegebenen Zahlen. Man erhält außerdem eine Liste von Punkten, wobei zum
+  Beispiel für jede Zahl _n_, die _k_-mal vorkommt, die Punkte _(n, 1), (n, 2), ..., (n, k)_ erzeugt werden.
+  Wird der _Skalierungsfaktor s_ gewählt, so enthält die erhaltene Liste die Punkte _(n, 1s), (n, 2s), ..., (n, ks)_.
+  Für _Staple überlappende Punkte_ wird ein Wahrheitswert (true oder false) eingegeben: Wird _true_ ausgewählt, so
+  werden die Punkte, die nahe beisammen liegen, übereinander angeordnet. Wird der Wahrheitswert _false_ ausgewählt, dann
+  erhält man dasselbe Ergebnis wie wenn dieses Feld freigelassen wird.
+
+Dieser Befehl funktioniert auch mit einer Liste von Texten.
+
+[EXAMPLE]
+====
+
+`++DotPlot[{"Rot", "Rot", "Rot", "Blau", "Blau"}]++` liefert _\{(1, 1), (1, 2), (2, 1), (2, 2), (2, 3)}_.
+
+[NOTE]
+====
+
+Wenn eine Liste von Texten verwendet wird, dann werden die Einträge der Liste alphabetisch geordnet. (z.B. _Blau_ wird
+zweimal in die Liste eingegeben und _Rot_ dreimal. Da das B im Alphabet vor dem R steht, erhält man _(1, 1), (1, 2)_ für
+_Blau_ und _(2, 1), (2, 2), (2, 3)_ für _Rot_.)
+
+====
+
+====

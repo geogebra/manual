@@ -1,0 +1,40 @@
+= Trend (Befehl)
+:page-en: commands/Fit_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Trend( <Liste von Punkten>, <Liste von Funktionen> )::
+  Berechnet die Regressionskurve der angegebenen Punkte als eine Linearkombination der Funktionen aus der Liste.
+
+[EXAMPLE]
+====
+
+* `++Trend[{(-2, 3), (0, 1), (2, 1), (2, 3)}, {x^2, x}]++` liefert _0.63 x^2 - 0.25x_.
+* Seien _L = \{A, B, C, ...}_, _f(x) = 1_, _g(x) = x_, _h(x) = e^x_ und _F = \{f, g, h}_. `++Trend[L, F]++` liefert eine
+Funktion der Form _a + b x + c e^x_, die am besten zu den Punkten passt.
+
+====
+
+Trend( <Liste von Punkten>, <Funktion> )::
+  Berechnet die Minimale-Fehlerquadrat-Funktion der Punkte in der Liste. Die Funktion muss von mindestens einem
+  Schieberegler abhängen, welche als Startwerte der Parameter, die optimiert werden, verwendet werden. Die nicht-lineare
+  Iteration kann dabei eventuell nicht konvergieren. Stellen Sie in diesem Fall bei den Schiebereglern einen besseren
+  Startwert ein.
+
+[EXAMPLE]
+====
+
+Sei _a_ ein Schieberegler von _-5_ bis _5_ mit Schrittweite 1. `++Trend[{(-2, 3), (0, 1), (2, 1), (2, 3)}, a + x^2]++`
+liefert _-1 + x^2_.
+
+====
+
+[NOTE]
+====
+
+Siehe auch die Befehle xref:/commands/TrendExp.adoc[TrendExp], xref:/commands/TrendExp2.adoc[TrendExp2],
+xref:/commands/Trendlinie.adoc[Trendlinie], xref:/commands/TrendlinieX.adoc[TrendlinieX],
+xref:/commands/TrendLog.adoc[TrendLog], xref:/commands/TrendLogistisch.adoc[TrendLogistisch],
+xref:/commands/TrendPoly.adoc[TrendPoly], xref:/commands/TrendPot.adoc[TrendPot] und
+xref:/commands/TrendSin.adoc[TrendSin].
+
+====

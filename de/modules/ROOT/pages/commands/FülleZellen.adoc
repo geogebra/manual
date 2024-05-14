@@ -1,0 +1,31 @@
+= FülleZellen (Befehl)
+:page-en: commands/FillCells_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+FülleZellen[ <Zellbereich>, <Objekt> ]::
+  Kopiert den Wert/die Gleichung etc. des angegebenen Objektes in den angegebenen Zellbereich. Die erzeugten Zellen sind
+  xref:/Freie_und_abhängige_Objekte_Hilfsobjekte.adoc[freie Objekte], also unabhängig vom Objekt.
+
+[NOTE]
+====
+
+* Der Parameter _Zellbereich_ muss mit Doppelpunkt eingegeben werden, z.B.: _B2:D5_.
+* Der Parameter _Objekt_ kann alles sein, z.B.: _3_, _Zufallszahl[0, 10]_, _Kreis[A, B]_.
+* Zellen werden nach den jeweiligen Spalten und Zeilen benannt, z.B.: _B2_.
+
+====
+
+FülleZellen[ <Zelle>, <Liste> ]::
+  Kopiert die Werte der Liste in die ersten Zellen rechts von der angegebenen Zelle. Die erzeugten Zellen sind
+  xref:/Freie_und_abhängige_Objekte_Hilfsobjekte.adoc[freie Objekte], also unabhängig von der Liste.
+FülleZellen[ <Zelle>, <Matrix> ]::
+  Kopiert die Werte der Matrix in die Tabelle. Die linke obere Ecke der Matrix entspricht dabei der angegebenen Zelle.
+  Die erzeugten Zellen sind xref:/Freie_und_abhängige_Objekte_Hilfsobjekte.adoc[freie Objekte], also unabhängig von der
+  Matrix.
+
+[NOTE]
+====
+
+Siehe auch die Befehle xref:/commands/FülleZeile.adoc[FülleZeile] und xref:/commands/FülleSpalte.adoc[FülleSpalte].
+
+====

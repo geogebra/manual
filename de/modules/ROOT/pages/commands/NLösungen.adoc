@@ -1,0 +1,70 @@
+= NLösungen (Befehl)
+:page-en: commands/NSolutions_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Die folgenden Befehle sind nur in der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/CAS_Ansicht.adoc[CAS-Ansicht] verfügbar.
+
+NLösungen[ <Gleichung> ]::
+  Berechnet numerisch die Lösungen der angegebenen Gleichung für die Variable x. Sollte es sich dabei nicht um ein
+  Polynom handeln, dann sollte ein Startwert angegeben werden (siehe weiter unten)
+
+[EXAMPLE]
+====
+
+`++NLösungen[x^6 - 2x + 1 = 0]++` liefert _\{0.51, 1}_.
+
+====
+
+NLösungen[ <Gleichung>, <Variable> ]::
+  Berechnet numerisch die Lösungen der angegebenen Gleichung für die unbekannte Variable. Sollte es sich dabei nicht um
+  ein Polynom handeln, dann sollte ein Startwert angegeben werden (siehe weiter unten)
+
+[EXAMPLE]
+====
+
+`++NLösungen[a^4 + 34a^3 = 34, a]++` berechnet _\{a = -34.0008649858, a = 0.9904738885}_.
+
+====
+
+NLösungen[ <Gleichung>, <Variable = Startwert> ]::
+  Berechnet numerisch die Lösungen der angegebenen Gleichung für die unbekannte Variable mit angegebenen Startwert.
+
+[EXAMPLE]
+====
+
+* `++NLösungen[cos(x) = x, x = 0]++` berechnet _\{0.7390851332}_
+* `++NLösungen[a^4 + 34a^3 = 34, a = 3]++` berechnet _\{a = -34.0008649858, a = 0.9904738885}_.
+
+====
+
+NLösungen[ <Liste von Gleichungen>, <Liste von Variablen> ]::
+  Berechnet numerisch die Lösungen des angegebenen Gleichungssystems für die unbekannten Variablen.
+
+[EXAMPLE]
+====
+
+`++NLösungen[{π / x = cos(x - 2y), 2 y - π = sin(x)}, {x = 3, y = 1.5}]++` berechnet _\{3.1415926516, 1.5707963277}_.
+
+====
+
+[NOTE]
+====
+
+Man kann einen Startwert wählen, beispielsweise _\{x = 3, y = 1.5}_.
+
+====
+
+[NOTE]
+====
+
+* Wird kein Startwert wie beispielsweise _a = 3_ oder _\{x = 3, y = 1.5}_, kann es möglich sein, dass der numerische
+Algorithmus nur schwer eine Lösung findet (auch mit Startwert gibt es keine Garantie, dass eine Lösung gefunden wird).
+* Die Anzahl der Dezimalstellen kann in xref:/Einstellungen_Menü.adoc[Runden] eingestellt werden.
+* Sie erhalten π mit der Tastenkombination [.kcode]#Alt # + [.kcode]# p#.
+* NLösungen funktioniert nicht bei Funktionen, die sich asymptotisch der x-Achse annähern. Solche Funktionen können
+jedoch oft umformuliert werden.
+* NLösungen funktioniert nur, wenn die Funktion stetig ist.
+* Siehe auch die Befehle xref:/commands/Löse.adoc[Löse] und xref:/commands/NLöse.adoc[NLöse].
+
+====

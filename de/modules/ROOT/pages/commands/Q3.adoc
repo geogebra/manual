@@ -1,0 +1,31 @@
+= Q3 (Befehl)
+:page-en: commands/Quartile3_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Q3( <Liste von Rohdaten> )::
+  Berechnet das obere Quartil der gegebenen Zahlen.
+Q3( <Liste von Zahlen>, <Liste von Häufigkeiten> )::
+  Berechnet das obere Quartil der gegebenen Liste von Zahlen unter Berücksichtigung der Häufigkeiten.
+
+[EXAMPLE]
+====
+
+`++Q3[{1, 2, 3, 4}, {3, 2, 4, 2}]++` liefert _3_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Q3[{1, 2, 3, 4}]++` liefert _3.5_.
+
+====
+
+[NOTE]
+====
+
+GeoGebra verwendet zur Berechnung der Quartile die *Moore & McCabe (2002)* Methode.
+
+(Siehe: http://mathworld.wolfram.com/Quartile.html
+
+====

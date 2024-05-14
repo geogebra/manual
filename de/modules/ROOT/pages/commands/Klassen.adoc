@@ -1,0 +1,31 @@
+= Klassen (Befehl)
+:page-en: commands/Classes_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Klassen( <Liste von Daten>, <Anfangswert>, <Klassenbreite> )::
+  Erzeugt eine Liste der Klassengrenzen. Die erste Grenze ist gleich dem Anfangswert, die letzte Grenze gleich dem
+  Maximum der Liste und die Abstände dazwischen sind gleich der Klassenbreite.
+Klassen( <Liste von Daten>, <Anzahl der Klassen> )::
+  Erzeugt eine Liste der Klassengrenzen. Die erste Grenze ist gleich dem Minimum der Liste, die letzte Grenze gleich dem
+  Maximum der Liste und die Abstände dazwischen sind gleich.
+
+[EXAMPLE]
+====
+
+`++Klassen[{1, 3, 5, 7, 8, 9, 10}, 3]++` liefert \{1, 4, 7, 10}
+
+====
+
+[EXAMPLE]
+====
+
+`++Klassen[{0.1, 0.2, 0.4, 1.1}, 0, 1]++` liefert \{0, 1, 2}
+
+====
+
+[NOTE]
+====
+
+Dieser Befehl benutzt die Regel a ≤ x < b für jede Klasse außer der letzten, für die a ≤ x ≤ b gilt.
+
+====

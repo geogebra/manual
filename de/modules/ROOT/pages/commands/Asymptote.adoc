@@ -1,0 +1,32 @@
+= Asymptote (Befehl)
+:page-en: commands/Asymptote_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Asymptote( <Kegelschnitt> )::
+  Liefert beide Asymptoten des Kegelschnittes.
+Asymptote( <Funktion> )::
+  GeoGebra wird versuchen alle Asymptoten der Funktion zu finden und als Liste auszugeben. Möglicherweise werden aber
+  nicht alle gefunden, zum Beispiel die vertikalen Asymptoten von nicht-rationalen Funktionen wie ln(x).
+Asymptote( <Implizite Kurve> )::
+  Liefert eine Liste aller Asymptoten der Impliziten Kurve.
+
+[EXAMPLE]
+====
+
+`++Asymptote[x^3 + y^3 + y^2 - 3 x = 0]++` erzeugt die Liste _\{x + y = -0.33}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Asymptote[(x^3 - 2x^2 - x + 4) / (2x^2 - 2)]++` erzeugt die Liste _\{y = 0.5x - 1, x = 1, x = -1}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Asymptote[x^2 - y^2 /4 = 1]++` erzeugt die Geraden _-2x + y = 0_ und _-2x - y = 0_.
+
+====

@@ -1,0 +1,36 @@
+= Varianz (Befehl)
+:page-en: commands/Variance_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Varianz( <Liste von Rohdaten> )::
+  Berechnet die Varianz der gegebenen Zahlen.
+Varianz( <Liste von Zahlen>, <Liste von Häufigkeiten> )::
+  Berechnet die Varianz der gegebenen Zahlen unter Berücksichtigung der Häufigkeiten.
+
+[EXAMPLE]
+====
+
+`++Varianz[{1, 2, 3} , {1, 2, 1}]++` berechnet _0.5_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Varianz[{1, 2, 3}]++` berechnet _0.67_.
+
+====
+
+== CAS-Ansicht
+
+Varianz( <Liste von Zahlen> )::
+  Berechnet die Varianz der gegebenen Zahlen. Enthält die Liste undefinierte Variablen, so wird eine allgemeine Formel
+  der Varianz ausgegeben.
+
+[EXAMPLE]
+====
+
+* `++Varianz[{1, 2, a}]++` berechnet _stem:[\frac\{2 a^\{2} - 6 a + 6}\{9}]_.
+* `++Varianz[{1, 2, a} {20, 3, 1}]++` berechnet _stem:[\frac\{2 \; a² - 52 \; a + 632}\{9}]_.
+
+====

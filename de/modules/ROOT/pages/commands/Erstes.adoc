@@ -1,0 +1,62 @@
+= Erstes (Befehl)
+:page-en: commands/First_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Erstes( <Liste> )::
+  Erzeugt eine Liste, die das erste Element der ursprünglichen Liste enthält.
+Erstes( <Liste>, <Anzahl n der Elemente> )::
+  Erzeugt eine Liste, die die ersten _n_ Elemente der ursprünglichen Liste enthält.
+Erstes( <Text> )::
+  Liefert den ersten Buchstaben des Textes.
+Erstes( <Text>, <Anzahl n der Elemente> )::
+  Liefert die ersten _n_ Buchstaben des Textes.
+Erstes( <Ortslinie>, <Anzahl n der Elemente> )::
+  Dieser Befehl ist nützlich für Ortslinien, die durch folgende Befehle erzeugt wurden:
+  * xref:/commands/LöseDgl.adoc[LöseDgl] - Liefert eine Liste mit Punkten, welche in den ersten _n_ Schritten des
+  numerischen Dgl-Lösealgorithmus erzeugt wurden.
+  * xref:/commands/KürzesterPfad.adoc[KürzesterPfad],
+  xref:/commands/Handelsreisendenproblem.adoc[Handelsreisendenproblem], xref:/commands/Voronoi.adoc[Voronoi],
+  xref:/commands/MinimalerSpannbaum.adoc[MinimalerSpannbaum], xref:/commands/KonvexeHülle.adoc[KonvexeHülle] und
+  xref:/commands/Hülle.adoc[Hülle] - Liefert die Scheitelpunkte des Graphen.
+
+[EXAMPLE]
+====
+
+`++Erstes["Hallo",2]++` liefert "Ha".
+
+====
+
+[EXAMPLE]
+====
+
+`++Erstes["Hallo"]++` liefert "_H_".
+
+====
+
+[EXAMPLE]
+====
+
+`++Erstes[{1, 4, 3}, 2]++` liefert _\{1, 4}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Erstes[{1,2,3}]++` erzeugt _\{1}_.
+
+====
+
+[NOTE]
+====
+
+Um das erste Element selber zu erhalten, verwenden Sie den Befehl `++Element[{1, 4, 3}, 1]++`.
+
+====
+
+[NOTE]
+====
+
+Siehe auch Befehl xref:/commands/Letztes.adoc[Letztes].
+
+====

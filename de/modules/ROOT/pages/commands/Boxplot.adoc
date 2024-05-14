@@ -1,0 +1,25 @@
+= Boxplot (Befehl)
+:page-en: commands/BoxPlot_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Boxplot( <yAbstand>, <ySkalierung>, <Liste von Rohdaten> )::
+  Erstellt einen Box-Plot mit den vorhandenen Rohdaten. Seine vertikale Position im Koordinatensystem wird durch den
+  _yAbstand_ und durch den Faktor "ySkalierung", der die Höhe reguliert, beeinflusst.
+
+[EXAMPLE]
+====
+
+`++Boxplot[0, 1, {2,2,3,4,5,5,6,7,7,8,8,8,9}]++`
+
+====
+
+Boxplot( <yAbstand>, <ySkalierung>, <Startwert>, <Q1>, <Median>, <Q3>, <Endwert> )::
+  Erstellt einen Box-Plot mit den gegebenen statistischen Daten im Intervall zwischen Startwert und Endwert.
+
+BoxPlot( <yAbstand>, <ySkalierung>, <Liste von Rohdaten>, <Boolsche Ausreißer> )::
+  Dies ermöglicht, dass http://en.wikipedia.org/wiki/de:Ausrei%C3%9Fer[Ausreißer] als "X" dargestellt werden, anstatt im
+  Box-Plot inkludiert zu sein. "Ausreißer" sind dabei jene Daten, die unterhalb von _Q1 - 1.5 * [Q3 - Q1]_ bzw. oberhalb
+  _Q3 + 1.5 * [Q3 - Q1]_ liegen (siehe auch http://en.wikipedia.org/wiki/IQR[IQR]).
+
+BoxPlot( <yAbstand>, <ySkalierung>, <Liste von Daten>, <Liste von Häufigkeiten>, <Boolsche Ausreißer> )::
+  Dies ermöglicht, dass mit den Daten einer Häufigkeitstabelle ein Box-Plot dargestellt wird.

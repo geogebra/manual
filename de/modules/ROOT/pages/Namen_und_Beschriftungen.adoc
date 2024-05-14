@@ -1,0 +1,96 @@
+= Namen und Beschriftungen
+:page-en: Labels_and_Captions
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+In GeoGebra hat jedes Objekt einen individuelle *Beschriftung*. Man kann hierbei einen oder mehrere (und auch
+tiefgestellte) Buchstaben verwenden. Für Details siehe xref:/Objekte_benennen.adoc[Objekte benennen].
+
+== Namen anzeigen und ausblenden
+
+Sie können den Namen eines Objekts in der image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Grafik_Ansicht.adoc[Grafik-Ansicht] auf verschiedene Arten anzeigen oder
+ausblenden:
+
+* Aktivieren Sie das Werkzeug image:22px-Mode_showhidelabel.svg.png[Mode showhidelabel.svg,width=22,height=22]
+xref:/tools/Beschriftung_anzeigen_ausblenden.adoc[Beschriftung anzeigen / ausblenden] und wählen Sie jenes Objekt aus,
+dessen Namen Sie entweder anzeigen oder ausblenden möchten.
+* Öffnen Sie das xref:/Kontext_Menü.adoc[Kontext-Menü] für das gewünschte Objekt und wählen Sie die Option
+image:22px-Mode_showhidelabel.svg.png[Mode showhidelabel.svg,width=22,height=22] _Beschriftung anzeigen_.
+* Öffnen Sie den image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Eigenschaften_Dialog.adoc[Eigenschaften-Dialog] für das gewünschte Objekt. Im Tab _Grundeinstellungen_ können Sie
+bestimmen, ob die Beschriftung des Objekts angezeigt werden soll oder nicht.
+
+== Name und Wert
+
+In GeoGebra hat jedes Objekt einen individuellen Namen, welcher zum Beschriften des Objekts in der
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Grafik-Ansicht_ verwendet werden kann.
+Zusätzlich kann ein Objekt auch mit dessen _Wert_ oder dessen _Namen & Wert_ beschriftet werden. Diese Einstellung
+können Sie im image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Eigenschaften-Dialog_ im Tab
+_Grundeinstellungen_ ändern, indem Sie das Kontrollkästchen _Beschriftung anzeigen_ abhaken und die gewünschte Art der
+Beschriftung aus der Drop-Down-Liste daneben auswählen (_Name_, _Name & Wert_, _Wert_).
+
+[NOTE]
+====
+
+Der Wert eines Punktes sind seine Koordinaten, während der Wert einer Funktion deren Gleichung ist.
+
+====
+
+== Beschriftung
+
+Falls Sie mehrere Objekte gleich beschriften möchten (z.B. um alle Seiten eines Quadrats mit a zu bezeichnen), können
+Sie auch einen beliebigen Beschriftungstext für Objekte eingeben. Im
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Eigenschaften_Dialog.adoc[Eigenschaften-Dialog] im Tab _Grundeinstellungen_ können Sie dazu im Textfeld
+_Beschriftung_ den gewünschten Text eingeben. Wählen Sie anschließend _Beschriftung_ neben der Option _Beschriftung
+anzeigen_ um die gewünschte Beschriftung in der image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Grafik-Ansicht_ einzublenden.
+
+Folgende Platzhalter können für Beschriftungen verwendet werden:
+
+[cols=",",options="header",]
+|===
+|Platzhalter |Bedeutung
+|%c |Der Wert der benachbarten rechten Tabellenzelle, welche einen freien Text enthalten sollte.Nicht dynamisch, d.h.
+die Beschriftung wird nur aktualisiert, wenn Sie [.kcode]#F9# oder [.kcode]#Strg# + [.kcode]#R# drücken.
+
+|%v |Wert
+
+|%n |Name
+
+|%x |x-Koordinate (bzw. Koeffizient a der Gerade a x + b y = 0)
+
+|%y |y-Koordinate (bzw. Koeffizient b der Gerade a x + b y = 0)
+
+|%z |z-Koordinate in der 3D-Ansicht (bzw. Koeffizient c der Gerade a x + b y = 0)
+|===
+
+[EXAMPLE]
+====
+
+Sei A ein Punkt und (1,2) dessen Koordinaten. Setzt man nun die Beschriftung auf "_Punkt %n hat die Koordinaten %v_" so
+erhält man _Punkt A hat die Koordinaten (1,2)_
+
+====
+
+== LaTeX für Beschriftungen verwenden
+
+Sie können auch xref:/LaTeX.adoc[LaTeX] für Beschriftungen verwenden, indem Sie den gewünschten LaTeX-Befehl zwischen
+zwei _$_-Zeichen platzieren (z.B. `++$ x^{2} $++`). Weiters können Sie auch aus einer Liste von gebräuchlichen
+griechischen Buchstaben und Operatoren. Diese Liste öffnet sich durch Auswählen des Symbols am Ende des Feldes
+_Beschriftung_.
+
+[EXAMPLE]
+====
+
+Wenn Sie einen schön formatierten Text erzeugen möchten, dann verwenden Sie LaTeX für Ihre Beschriftungen. Um z.B. einen
+Bruch darzustellen tippen Sie "$__\frac\{a}\{b}$__" ein
+
+====
+
+[NOTE]
+====
+
+Beschriftungen mit LaTeX funktionieren jedoch nicht für Textfelder, Schaltflächen und Kontrollkästchen.
+
+====

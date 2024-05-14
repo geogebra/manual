@@ -1,0 +1,93 @@
+= Benutzerdefinierte Werkzeuge
+:page-en: tools/Custom_Tools
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+In GeoGebra können Sie benutzerdefinierte Werkzeuge erstellen, die auf existierenden Konstruktionen basieren. So
+erzeugte Werkzeuge können anschließend sowohl mit einem Zeigegerät als auch als Befehl in der
+xref:/Eingabezeile.adoc[Eingabezeile] verwendet werden. Alle neu erstellten benutzerdefinierten Werkzeuge werden
+automatisch in Ihrer GeoGebra-Datei gespeichert.
+
+[NOTE]
+====
+
+Objekte, die von solchen benutzerdefinierten Werkzeugen erstellt werden, können nicht bewegt werden (z.B. durch Ziehen
+mit der Maus), auch wenn sie als `++Punkt[<Pfad>]++` definiert wurden. Falls Sie jedoch beweglichen Objekte haben
+möchten, können Sie alternativ eine Liste von Befehlen definieren und diese mit dem Befehl
+xref:/commands/Ausführen.adoc[Ausführen] verwenden.
+
+====
+
+== Ein benutzerdefiniertes Werkzeug erstellen
+
+Nachdem Sie die entsprechende Konstruktion für Ihr Werkzeug erstellt haben, wählen Sie im Menü
+image:16px-Menu-tools.svg.png[Menu-tools.svg,width=16,height=16] xref:/Werkzeuge_Menü.adoc[Werkzeuge] die Option
+image:16px-Menu-tools-new.svg.png[Menu-tools-new.svg,width=16,height=16] xref:/Werkzeug_erstellen_Dialog.adoc[Neues
+Werkzeug erstellen].
+
+== Ein benutzerdefiniertes Werkzeug speichern
+
+Wenn Sie Ihre Konstruktion als GeoGebra-Datei speichern, bleiben die benutzerdefinierten Werkzeuge automatisch darin
+erhalten. Sie können benutzerdefinierte Werkzeuge auch als eigene Datei speichern, um sie in anderen
+GeoGebra-Konstruktionen verwenden zu können. Wählen Sie dazu im Menü
+image:16px-Menu-tools.svg.png[Menu-tools.svg,width=16,height=16] xref:/Werkzeuge_Menü.adoc[Werkzeuge] die Option
+image:16px-Menu-tools.svg.png[Menu-tools.svg,width=16,height=16] _Werkzeuge verwalten_ aus.
+
+[NOTE]
+====
+
+Benutzerdefinierte Werkzeuge werden als .ggt-Dateien gespeichert damit Sie diese von gewöhnlichen GeoGebra-Dateien
+(.ggb) unterscheiden können.
+
+====
+
+== Ein benutzerdefiniertes Werkzeug abrufen
+
+Wenn Sie eine neue GeoGebra-Oberfläche öffnen (Menü image:16px-Menu-file.svg.png[Menu-file.svg,width=16,height=16]
+xref:/Datei_Menü.adoc[Datei] – image:16px-Menu-file-new.svg.png[Menu-file-new.svg,width=16,height=16] _Neu_) nachdem Sie
+ein benutzerdefiniertes Werkzeug erstellt haben, so bleibt dieses Werkzeug in der Werkzeugleiste erhalten. Wenn Sie
+jedoch ein neues GeoGebra-Fenster öffnen (Menü image:16px-Menu-file.svg.png[Menu-file.svg,width=16,height=16] _Datei_ –
+/Datei:Menu_New_png.adoc[image:Menu_New.png[Menu New.png,width=16,height=16]] Neues Fenster), oder wenn Sie GeoGebra
+schließen und später wieder öffnen, so verschwindet Ihr benutzerdefiniertes Werkzeug aus der Werkzeugleiste.
+
+Es gibt verschiedene Wege um sicher zu gehen, dass Ihre benutzerdefinierten Werkzeuge in einem neuen GeoGebra-Fenster
+angezeigt werden:
+
+* Nach dem Erstellen eines benutzerdefinierten Werkzeugs können Sie im Menü
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Einstellungen_Menü.adoc[Einstellungen] die
+Option image:16px-Menu-file-save.svg.png[Menu-file-save.svg,width=16,height=16] _Einstellungen speichern_ auswählen, um
+das neue Werkzeug zu einem permanenten Teil der xref:/Werkzeugleiste.adoc[Werkzeugleiste] zu machen.
+
+[NOTE]
+====
+
+Sie können das benutzerdefinierte Werkzeug wieder aus der Werkzeugleiste entfernen, indem Sie im Menü
+image:16px-Menu-tools.svg.png[Menu-tools.svg,width=16,height=16] xref:/Werkzeuge_Menü.adoc[Werkzeuge] die Option
+image:16px-Menu-tools-customize.svg.png[Menu-tools-customize.svg,width=16,height=16] _Werkzeugleiste anpassen_ öffnen.
+Wählen Sie danach das entsprechende Werkzeug aus der linken Liste der Werkzeuge im erscheinenden Dialog-Fenster aus und
+klicken Sie auf die Schaltfläche _Entfernen_ (GeoGebra Desktop Version) bzw. ziehen Sie es auf die rechte Seite des
+Dialog-Fensters (GeoGebra Web und Tablet Apps Version). Vergessen Sie nicht, ihre Einstellungen nach dem Entfernen des
+benutzerdefinierten Werkzeugs nochmals zu speichern.
+
+====
+
+== Ein benutzerdefiniertes Werkzeug importieren
+
+* Nachdem Sie ihr benutzerdefiniertes Werkzeug auf Ihrem Computer (als .ggt-Datei) gespeichert haben, können Sie es
+jederzeit in ein neues GeoGebra-Fenster importieren. Wählen Sie dazu im Menü
+image:16px-Menu-file.svg.png[Menu-file.svg,width=16,height=16] _Datei_ die Option
+image:16px-Menu-file-open.svg.png[Menu-file-open.svg,width=16,height=16] Öffnen und öffnen sie die entsprechende Datei.
+
+[NOTE]
+====
+
+Das Öffnen einer GeoGebra-Werkzeug-Datei hat keinerlei Effekt auf die aktuelle Konstruktion und fügt das neue Werkzeug
+lediglich zur Werkzeugleiste hinzu.
+
+====
+
+[NOTE]
+====
+
+Sie können .ggt-Datein auch durch Ziehen aus dem Datei-Manager in das GeoGebra-Fenster einfügen.
+
+====

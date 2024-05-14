@@ -1,0 +1,30 @@
+= Mischen (Befehl)
+:page-en: commands/Shuffle_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Mischen( <Liste> )::
+  Liefert eine neue Liste mit den gleichen Elementen, aber in zufälliger Reihenfolge.
+
+[NOTE]
+====
+
+Sie können die Liste neu berechnen, indem Sie im image:16px-Menu-view.svg.png[Menu-view.svg,width=16,height=16]
+xref:/Ansicht_Menü.adoc[Ansicht-Menü] auf _Alle Objekte neu berechnen_ auswählen (oder [.kcode]#F9# drücken).
+
+====
+
+Siehe auch die Befehle xref:/commands/ZufälligesElement.adoc[ZufälligesElement] und
+xref:/commands/Zufallszahl.adoc[Zufallszahl].
+
+== CAS-Ansicht
+
+Mischen( <Liste> )::
+  Liefert eine neue Liste mit den gleichen Elementen, aber in zufälliger Reihenfolge.
+
+[EXAMPLE]
+====
+
+* `++Mischen[{3,5,1,7,3}]++` liefert eventuell _\{5, 1, 3, 3, 7}_.
+* `++Mischen[Folge[20]]++` liefert eine zufällige Anordnung der ersten 20 natürlichen Zahlen.
+
+====

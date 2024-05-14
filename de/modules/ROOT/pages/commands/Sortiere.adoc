@@ -1,0 +1,46 @@
+= Sortiere (Befehl)
+:page-en: commands/Sort_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Sortiere( <Liste> )::
+  Sortiert eine Liste von Zahlen, Text-Objekten oder Punkten.
+
+[EXAMPLE]
+====
+
+* Die Eingabe `++Sortiere[{3, 2, 1}]++` erzeugt Liste1 _\{1, 2, 3}_.
+* Die Eingabe `++Sortiere[{"Birnen", "Äpfel", "Orangen"}]++` erzeugt eine neue Liste mit Einträgen in alphabetischer
+Reihenfolge.
+* Die Eingabe `++Sortiere[{(3, 2), (2, 5), (4, 1)}]++` erzeugt die neue Liste2 _\{(2, 5), (3, 2), (4, 1)}_.
+
+====
+
+[NOTE]
+====
+
+Listen von Punkten werden nach den _x_-Koordinaten sortiert.
+
+====
+
+Sortiere( <Liste>, <abhängige Liste> )::
+  Sortiert die Elemente der ersten Liste bezüglich den davon abhängigen Elementen der zweiten Liste.
+
+[EXAMPLE]
+====
+
+* Wenn Sie beispielsweise Polynome `++Liste1 = {x^3, x^2, x^6}++` nach ihrem Grad sortieren wollen, erstellen Sie zuerst
+die Liste der Grade `++Liste2 = Zip[Grad[a], a, Liste1]++`. Danach erzeugt `++Sortiere[Liste1, Liste2]++` die gewünschte
+Reihenfolge _Liste3 = \{x^2, x^3, x^6}_.
+* Um jenes Vieleck zu erzeugen, dessen Eckpunkte (sortiert nach ihren Argumenten) den komplexen Wurzeln von x^10^ - 1
+entsprechen, erstellen Sie die Liste `++Liste1 = {KomplexeNullstelle[x^10-1]}++`. Mit dem Befehl
+`++Vieleck[Sortiere[Liste1, arg(Liste1)]]++` erhalten Sie _Vieleck1 = 2.94_.
+
+====
+
+[NOTE]
+====
+
+Es gibt eine Umgehungslösung, um Listen von beliebigen Objekten zu sortieren. Den Algorithmus dazu finden Sie in der
+/Anleitungen:Listen_von_beliebigen_Elementen_sortieren.adoc[Anleitung: Listen von beliebigen Elementen sortieren].
+
+====

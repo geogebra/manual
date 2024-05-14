@@ -1,0 +1,19 @@
+= GaußTest (Befehl)
+:page-en: commands/ZMeanTest_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+GaußTest( <Stichprobenliste>, <σ>, <Vermuteter Mittelwert>, <Seite> )::
+  Führt einen http://en.wikipedia.org/wiki/de:Gau%C3%9F-Test#Einstichproben-Gau.C3.9F-Test[Einstichproben-Gauß-Test] des
+  Mittelwertes der Grundgesamtheit mit der gegebenen Stichprobe und Standardabweichung der Grundgesamtheit durch.
+  _Vermuteter Mittelwert_ ist der unter der Null-Hypothese angenommene Mittelwert der Grundgesamtheit. _Seite_ hat als
+  mögliche Werte "<", ">" , "≠". Diese bestimmen die alternative Hypothese wie folgt:
+  "<" = Grundgesamtheitsmittelwert < _Vermuteter Mittelwert_
+  ">" = Grundgesamtheitsmittelwert > _Vermuteter Mittelwert_
+  "≠" = Grundgesamtheitsmittelwert ≠ _Vermuteter Mittelwert_
+
+Das Ergebnis wird als Liste in der Form \{Wert der Wahrscheinlichkeit, Testprüfgröße z} zurückgegeben.
+
+GaußTest( <Stichprobenmittelwert>, <σ>, <Stichprobengröße>, <Vermuteter Mittelwert>, <Seite> )::
+  Führt einen Einstichproben-Gauß-Test eines Grundgesamtheitsmittelwerts mit den gegebenen Stichprobenstatistiken und
+  der Standardabweichung σ der Grundgesamtheit durch. _Vermuteter Mittelwert_ und _Seite_ sind wie oben definiert.
+  Das Ergebnis wird als Liste in der Form \{Wert der Wahrscheinlichkeit, Testprüfgröße z} zurückgegeben.

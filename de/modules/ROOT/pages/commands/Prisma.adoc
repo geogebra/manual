@@ -1,0 +1,41 @@
+= Prisma (Befehl)
+:page-en: commands/Prism_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Prisma( <Punkt>, <Punkt>, ... )::
+  Erstellt ein Prisma mit den gegebenen Punkten.
+Prisma( <Vieleck>, <Punkt> )::
+  Erstellt ein Prisma mit gegebenem Vieleck als Grundfläche. Der Punkt gibt die Position der Deckfläche an.
+Prisma( <Vieleck>, <Höhe> )::
+  Erstellt ein gerades Prisma mit gegebenem Vieleck als Grundfläche und gegebener Höhe.
+
+[EXAMPLE]
+====
+
+`++Prisma[Vieleck1, 3]++` erstellt ein Prisma mit Grundfläche _Vieleck1_ und Höhe 3.
+
+====
+
+[EXAMPLE]
+====
+
+`++Prisma[Vieleck1, A]++` erstellt ein Prisma mit Grundfläche _Vieleck1_ und Punkt _A_ auf der Deckfläche.
+
+====
+
+[EXAMPLE]
+====
+
+`++Prisma[A, B, C, D]++` erstellt ein Prisma mit Grundfläche _ABC_ und Deckfläche _DEF_, wobei die Vektoren _AD_, _BE_
+und _CF_ gleich sind.
+
+====
+
+[NOTE]
+====
+
+Siehe auch die Werkzeuge image:24px-Mode_prism.svg.png[Mode prism.svg,width=24,height=24]
+xref:/tools/Prisma.adoc[Prisma] und image:24px-Mode_extrusion.svg.png[Mode extrusion.svg,width=24,height=24]
+xref:/tools/Zu_Prisma_oder_Zylinder_extrudieren.adoc[Zu Prisma oder Zylinder extrudieren].
+
+====

@@ -1,0 +1,26 @@
+= TrendLogistisch (Befehl)
+:page-en: commands/FitLogistic_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+TrendLogistisch( <Liste von Punkten> )::
+  Berechnet die Regressionskurve der Form a/(1 + b e^(-kx)).
+
+[EXAMPLE]
+====
+
+`++TrendLogistisch[{(-6, 2), (0, 2), (3, 4), (3.4, 8)}]++` liefert stem:[ \frac\{1.98}\{1 - 0.03 e^x}].
+
+====
+
+[NOTE]
+====
+
+* Der erste und letzte Datenpunkt sollen dabei so nahe wie möglich an der Kurve liegen. Die Liste soll zumindest aus
+drei Datenpunkten bestehen.
+* Siehe auch xref:/commands/Trend.adoc[Trend], xref:/commands/TrendExp.adoc[TrendExp],
+xref:/commands/TrendExp2.adoc[TrendExp2], xref:/commands/Trendlinie.adoc[Trendlinie],
+xref:/commands/TrendlinieX.adoc[TrendlinieX], xref:/commands/TrendLog.adoc[TrendLog],
+xref:/commands/TrendPoly.adoc[TrendPoly], xref:/commands/TrendPot.adoc[TrendPot] und
+xref:/commands/TrendSin.adoc[TrendSin].
+
+====

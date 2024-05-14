@@ -1,0 +1,67 @@
+= Häufigkeitstabelle (Befehl)
+:page-en: commands/FrequencyTable_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Häufigkeitstabelle( <Liste von Rohdaten> )::
+  Erzeugt eine Tabelle (als Text), in welcher die erste Spalte die einzelnen Elemente der Liste enthält und die zweite
+  Spalte die absolute Häufigkeit dieser Elemente in der Liste. Die Liste kann dabei aus Zahlen oder Texten bestehen.
+Häufigkeitstabelle( <Wahrheitswert kumulativ>, <Liste von Rohdaten> )::
+  Ist der Wahrheitswert _false_, so wird die selbe Tabelle wie bei _Häufigkeitstabelle[ <Liste von Rohdaten> ]_ erzeugt.
+  Ist der Wahrheitswert _true_, so wird eine Tabelle erzeugt, deren erste Spalte gleich wie oben ist und deren zweite
+  Spalte die kumulativen Häufigkeiten der Elemente der ersten Spalte enthält.
+Häufigkeitstabelle( <Liste von Klassenbereichen>, <Liste von Rohdaten> )::
+  Erzeugt eine Tabelle (als Text), in welcher die erste Spalte Intervalle (Klassen) enthält und die zweite Spalte die
+  Anzahl der Elemente in _Liste von Rohdaten_, welche zur jeweiligen Klasse der ersten Spalte gehören. Alle Intervalle
+  haben die Form [a, b), das höchste Intervall die Form [a, b].
+Häufigkeitstabelle( <Wahrheitswert kumulativ>, <Liste von Klassenbereichen>, <Liste von Rohdaten> )::
+  Ist der Wahrheitswert _false_, so wird die selbe Tabelle wie bei _Häufigkeitstabelle[ <Liste von Klassenbereichen>,
+  <Liste von Rohdaten> ]_ erzeugt.
+  Ist der Wahrheitswert _true_, so wird eine Tabelle erzeugt, deren erste Spalte gleich wie oben ist und deren zweite
+  Spalte die kumulativen Häufigkeiten der Elemente der ersten Spalte enthält.
+Häufigkeitstabelle( <Liste von Klassenbereichen>, <Liste von Rohdaten>, <Wahrheitswert Dichte> , <Skalierungsfaktor
+(optional)> )::
+  Erzeugt eine Tabelle (als Text), in welcher die erste Spalte Intervalle (Klassen) enthält und die zweite Spalte die
+  Häufigkeiten des dazugehörenden xref:/commands/Histogramm.adoc[Histogramm-Befehls].
+Häufigkeitstabelle( <Wahrheitswert kumulativ>, <Liste von Klassenbereichen>, <Liste von Rohdaten>, <Wahrheitswert
+Dichte> , <Skalierungsfaktor (optional)> )::
+  Erzeugt eine Tabelle (als Text), in welcher die erste Spalte Intervalle (Klassen) enthält und die zweite Spalte die
+  Häufigkeiten des dazugehörenden xref:/commands/Histogramm.adoc[Histogramm-Befehls].
+
+Häufigkeitstabelle[ <Liste von Rohdaten>, <Skalierungsfaktor (optional)> ]
+
+Erzeugt eine Tabelle (als Text), in welcher die erste Spalte *Wert* die geordnete Liste der einzelnen Elemente der
+_<Liste von Rohdaten>_ enthält. Die zweite Spalte *Häufigkeit* enthält die Anzahl der Elemente der ersten Spalte
+multipliziert mit dem _<Skalierungsfaktor>_. Die _<Liste von Rohdaten>_ kann aus Zahlen oder Texten bestehen.
+
+[EXAMPLE]
+====
+
+`++Häufigkeitstabelle[ {"Rot", "Rot", "Grün", "Grün", "Blau"}, 5 ]++` erzeugt eine Tabelle mit erster Spalte _Wert_ mit
+den Einträgen _Blau_, _Grün_, _Rot_ (in alphabetischer Reihenfolge) und zweiter Spalte _Häufigkeit_ mit den Einträgen
+_5, 10, 10_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Häufigkeitstabelle[ {1, 1, 1, 2, 2, 3, 3, 4, 5}, 2 ]++` erzeugt eine Tabelle mit erster Spalte _Wert_ mit den
+Einträgen _1, 2, 3, 4, 5_ und zweiter Spalte _Häufigkeit_ mit den Einträgen _6, 4, 4, 2, 2_.
+
+[NOTE]
+====
+
+In der Liste kommt die Zahl _1_ dreimal vor, diese Anzahl wird nun mit dem Skalierungsfaktor _2_ multipliziert und man
+erhält den Eintrag _6_ in der zweiten Spalte.
+
+====
+
+====
+
+[NOTE]
+====
+
+Dieser Befehl ist ähnlich den Befehlen xref:/commands/Häufigkeit.adoc[Häufigkeit] und
+xref:/commands/Histogramm.adoc[Histogramm]. Auf diesen Seiten finden Sie auch hilfreiche, ähnliche Beispiele.
+
+====

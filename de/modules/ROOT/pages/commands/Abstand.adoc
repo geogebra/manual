@@ -1,0 +1,73 @@
+= Abstand (Befehl)
+:page-en: commands/Distance_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Abstand( <Punkt>, <Objekt> )::
+  Berechnet den Abstand zwischen dem Punkt und dem Objekt.
+
+[EXAMPLE]
+====
+
+`++Abstand[(2, 1), x^2 + (y - 1)^2 = 1]++` liefert _1_.
+
+====
+
+[NOTE]
+====
+
+Der Befehl funktioniert für Punkte, Strecken, Geraden, Kegelschnitte, Funktionen und implizite Kurven. Bei Funktionen
+wird ein numerischer Algorithmus verwendet, welcher am besten bei Polynomen funktioniert.
+
+[EXAMPLE]
+====
+
+Sei _f_ eine Funktion und _A_ ein Punkt. `++Abstand[A, f]++` liefert den Abstand zwischen _A_ und _(x(A), f(x(A)))_.
+
+====
+
+====
+
+Abstand( <Gerade> , <Gerade> )::
+  Berechnet den Abstand zwischen zwei parallelen Geraden.
+
+[EXAMPLE]
+====
+
+* `++Abstand[y = x + 3, y = x + 1]++` liefert _1.41_
+* `++Abstand[y = 3x + 1, y = x + 1]++` liefert _0_
+
+====
+
+[NOTE]
+====
+
+Der Abstand zwischen zwei schneidenden Geraden ist _0_. Daher ist dieser Befehl nur für parallele Geraden sinnvoll.
+
+====
+
+[NOTE]
+====
+
+Siehe auch das Werkzeug image:20px-Mode_distance.svg.png[Mode distance.svg,width=20,height=20]
+xref:/tools/Abstand_oder_Länge.adoc[Abstand oder Länge].
+
+====
+
+Abstand( <Punkt>, <Punkt> )::
+  Berechnet den Abstand zwischen zwei Punkten.
+Abstand( <Gerade>, <Gerade> )::
+  Berechnet den Abstand zwischen zwei Geraden.
+
+[EXAMPLE]
+====
+
+Sei _a: X = (-4, 0, 0) + λ*(4, 3, 0)_ und _b: X = (0, 0, 0) + λ*(0.8, 0.6, 0)_.`++Abstand[a, b]++` liefert _2.4_
+
+====
+
+[EXAMPLE]
+====
+
+`++Abstand[(2, 1, 2), (1, 3, 0)]++` liefert _3_
+
+====

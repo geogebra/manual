@@ -1,0 +1,39 @@
+= TrigVereinfache (Befehl)
+:page-en: commands/TrigSimplify_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+TrigVereinfache( <Ausdruck> )::
+  Vereinfacht den gegebenen trigonometrischen Ausdruck.
+
+[EXAMPLE]
+====
+
+* `++TrigVereinfache[1 - sin(x)^2]++` liefert _cos²(x)_.
+* `++TrigVereinfache[sin(x)^2 - cos(x)^2 + 1]++` liefert _2 sin²(x)_.
+
+====
+
+== CAS-Ansicht
+
+TrigVereinfache( <Ausdruck> )::
+  Vereinfacht den gegebenen trigonometrischen Ausdruck.
+
+[EXAMPLE]
+====
+
+* `++TrigVereinfache[1-sin(x)^2]++` liefert _cos²(x)_.
+* `++TrigVereinfache[sin(x)^2 - cos(x)^2 + 1]++` liefert _2 sin²(x)_.
+
+====
+
+[NOTE]
+====
+
+* Dieser Befehl funktioniert in der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/CAS_Ansicht.adoc[CAS-Ansicht] für alle Variablen, aber nur für "x", "y" und "z" in der
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+xref:/Algebra_Ansicht.adoc[Algebra-Ansicht]!
+* Siehe auch die Befehle xref:/commands/TrigErweitere.adoc[TrigErweitere] und
+xref:/commands/TrigKombiniere.adoc[TrigKombiniere].
+
+====

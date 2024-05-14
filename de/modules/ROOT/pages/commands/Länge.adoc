@@ -1,0 +1,74 @@
+= Länge (Befehl)
+:page-en: commands/Length_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Länge[ <Objekt> ]::
+  Berechnet die Länge des Objekts.
+
+[EXAMPLE]
+====
+
+* `++Länge[ <Vektor> ]++` berechnet die Länge des Vektors.
+* `++Länge[ <Punkt> ]++` berechnet die Länge des Ortsvektors (Verbindungsvektor Punkt-Koordinatenursprung) des Punktes.
+* `++Länge[ <Liste> ]++` berechnet die Länge der Liste, also die Anzahl der Listenelemente.
+* `++Länge[ <Text> ]++` berechnet die Länge des Textes, also die Anzahl der Buchstaben.
+* `++Länge[ <Ortslinie> ]++` berechnet die Anzahl der Punkte, aus denen sich die Ortslinie zusammensetzt. Verwenden Sie
+den Befehl xref:/commands/Umfang.adoc[Umfang], um die Länge der Ortslinie zu erhalten. Für weitere Details siehe den
+Befehl xref:/commands/Erstes.adoc[Erstes].
+* `++Länge[ <Bogen> ]++` berechnet die "Bogenlänge" (d.h. nur die Länge des gekrümmten Teils) eines Bogens oder
+Kreissektors.
+
+====
+
+Länge[ <Funktion>, <Startwert>, <Endwert> ]::
+  Berechnet die Länge des Funktionsgraphen im angegebenen Intervall.
+Länge[ <Funktion>, <Anfangspunkt>, <Endpunkt> ]::
+  Berechnet die Länge des Funktionsgraphen zwischen den zwei angegebenen Punkten.
+Länge[ <Kurve>, <Startwert>, <Endwert> ]::
+  Berechnet die Länge der Kurve zwischen den angegebenen Parameterwerten.
+Länge[ <Kurve>, <Anfangspunkt>, <Endpunkt> ]::
+  Berechnet die Länge der Kurve zwischen den zwei angegebenen Punkten, welche auf der Kurve liegen.
+
+[EXAMPLE]
+====
+
+`++Länge[2x, 0, 1]++` berechnet _2.24_, was ungefähr stem:[\sqrt\{5}] entspricht.
+
+====
+
+[NOTE]
+====
+
+Liegen die angegebenen Punkte nicht auf dem Funktionsgraphen, so werden deren x-Koordinaten verwendet, um das Intervall
+festzulegen.
+
+====
+
+== CAS-Ansicht
+
+Länge[ <Kurve>, <Startwert>, <Endwert> ]::
+  Berechnet die Länge des Funktionsgraphen vom x-Startwert bis zum x-Endwert.
+Länge[ <Kurve>, <Variable>, <Anfangspunkt>, <Endpunkt> ]::
+  Berechnet die Länge des Funktionsgraphen vom _Anfangspunkt_ bis zum _Endpunkt_.
+
+[EXAMPLE]
+====
+
+`++Länge[2a, a,  0, 1]++` berechnet stem:[\sqrt\{5}].
+
+====
+
+[EXAMPLE]
+====
+
+`++Länge[2x, 0, 1]++` berechnet stem:[\sqrt\{5}].
+
+====
+
+[NOTE]
+====
+
+Siehe auch das Werkzeug image:22px-Mode_distance.svg.png[Mode distance.svg,width=22,height=22]
+xref:/tools/Abstand_oder_Länge.adoc[Abstand oder Länge].
+
+====

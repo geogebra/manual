@@ -1,0 +1,31 @@
+= SetzeWert (Befehl)
+:page-en: commands/SetValue_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+SetzeWert( <Wahrheitswert>, <0|1> )::
+  Setzt den Status eines Wahrheitswerts auf: 1 = true, 0 = false.
+
+[EXAMPLE]
+====
+
+Sei _b_ ein Wahrheitswert, `++SetzeWert[b,1]++` setzt den Wahrheitswert _b_ auf _true_.
+
+====
+
+SetzeWert( <Objekt>, <Objekt> )::
+  Sei _A_ das erste und _B_ das zweite Objekt. Ist _A_ ein auf einen xref:/Geometrische_Objekte.adoc[Pfad oder Bereich]
+  beschränktes xref:/Freie_und_abhängige_Objekte_Hilfsobjekte.adoc[freies Objekt] oder
+  xref:/Punkte_und_Vektoren.adoc[Punkt], so wird dessen Wert auf den aktuellen Wert von _B_ gesetzt (d.h. _A_ ändert
+  seinen Wert nicht, wenn _B_ danach geändert wird).
+
+[EXAMPLE]
+====
+
+Sei _f_ eine Funktion, `++SetzeWert[f, ZufälligesElement[{cos(x), 3x+2, ln(x)}]]++` definiert _f_ zufällig als eine der
+vorgeschlagenen Funktionen in der Liste.
+
+====
+
+SetzeWert( <Liste>, <Zahl>, <Objekt> )::
+  Legt für das _n_-te Element aus der freien Liste den aktuellen Wert des Objektes fest., wobei _n_ der eingegebenen
+  _<Zahl>_ entspricht und _n_ höchstens _1+Länge der Liste_ sein kann.

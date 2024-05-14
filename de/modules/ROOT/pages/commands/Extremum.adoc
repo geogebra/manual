@@ -1,0 +1,34 @@
+= Extremum (Befehl)
+:page-en: commands/Extremum_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Extremum( <Polynomfunktion> )::
+  Erzeugt alle lokalen Extrema des Polynoms als Punkte auf dem Funktionsgraphen.
+Extremum( <Funktion>, <Startwert>, <Endwert> )::
+  Erzeugt (numerisch) das Extremum der Funktion im offenen Intervall ( <Startwert>, <Endwert> ).
+
+[EXAMPLE]
+====
+
+`++Extremum[(x⁴ - 3x³ - 4x² + 4) / 2, 0, 5]++` liefert das lokale Extremum _(2.93, -16.05)_ im gegebenen Intervall und
+zeigt es in der image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Grafik_Ansicht.adoc[Grafik-Ansicht].
+
+====
+
+[EXAMPLE]
+====
+
+`++Extremum[x³ + 3x² - 2x + 1]++` liefert die lokalen Extrema _(0.29, 0.70)_ und _(-2.29, 9.30)_ und zeigt sie in der
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Grafik_Ansicht.adoc[Grafik-Ansicht].
+
+====
+
+[NOTE]
+====
+
+Damit keine falschen Extrema bei Unstetigkeitsstellen berechnet werden, soll die Funktion im Intervall [ <Startwert>,
+<Endwert> ] stetig sein.
+
+====

@@ -1,0 +1,26 @@
+= Ersetze (Befehl)
+:page-en: commands/Substitute_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+== CAS-Ansicht
+
+Ersetze( <Ausdruck>, <von>, <durch> )::
+  Ersetzt _von_ im _Ausdruck_ mit _durch_.
+
+[EXAMPLE]
+====
+
+* `++Ersetze[(x^2 / (4x + 6))^2 + 6(x^2 / (4x + 6)) + 8, x^2, a*(4x + 6)]++` liefert _a^2^ + 6 a +8_.
+* `++Ersetze[(3 m - 3)^2 - (m + 3)^2, m, a]++` liefert _8 a^2^ - 24 a_.
+
+====
+
+Ersetze( <Ausdruck>, <Substitutionsliste> )::
+  Ersetzt in _Ausdruck_ jede Variable der Substitutionsliste mit der dafür gewählten Variablen oder Zahl.
+
+[EXAMPLE]
+====
+
+`++Ersetze[2x+3y-z,{x=a,y=2,z=b}]++` liefert _2a - b + 6_.
+
+====

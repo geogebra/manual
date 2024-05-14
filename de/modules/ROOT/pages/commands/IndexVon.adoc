@@ -1,0 +1,52 @@
+= IndexVon (Befehl)
+:page-en: commands/IndexOf_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+IndexVon( <Objekt>, <Liste> )::
+  Gibt die Position an, an der das Objekt zum ersten Mal in der Liste auftaucht.
+
+[EXAMPLE]
+====
+
+`++IndexVon[5,{1,3,5,2,5,4}]++` ergibt _3_.
+
+====
+
+[NOTE]
+====
+
+Wenn das Objekt in der Liste nicht exisitiert, so ist das Ergebnis _undefiniert_.
+
+====
+
+IndexVon( <Objekt>, <Liste>, <StartIndex> )::
+  Wie oben, allerdings beginnt die Suche erst beim angegebenen Startindex.
+
+[EXAMPLE]
+====
+
+* `++IndexVon[5,{1,3,5,2,5,4},3]++` ergibt _3_.
+* `++IndexVon[5,{1,3,5,2,5,4},4]++` ergibt _5_.
+* `++IndexVon[5,{1,3,5,2,5,4},6]++` ergibt _undefiniert_.
+
+====
+
+IndexVon( <Text>, <Text>)::
+  Gibt die Position an, an der der Kurztext zum ersten Mal im Gesamttext auftaucht.
+
+[EXAMPLE]
+====
+
+`++IndexVon["Ge","GeoGebra"]++` ergibt _1_.
+
+====
+
+IndexVon( <Text>, <Text>, <Startindex> )::
+  Wie oben, allerdings beginnt die Suche erst beim angegebenen Startindex.
+
+[EXAMPLE]
+====
+
+`++IndexVon["Ge","GeoGebra",2]++` ergibt _4_.
+
+====

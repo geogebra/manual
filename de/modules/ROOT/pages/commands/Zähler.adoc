@@ -1,0 +1,36 @@
+= Zähler (Befehl)
+:page-en: commands/Numerator_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Zähler( <Funktion> )::
+  Gibt den Zähler der Funktion zurück.
+
+[EXAMPLE]
+====
+
+`++Zähler[(3x² + 1) / (2x - 1)]++` liefert _f(x) = 3x² + 1_.
+
+====
+
+== CAS-Ansicht
+
+Zähler( <Ausdruck> )::
+  Liefert den Zähler einer rationalen Zahl oder eines Audrucks.
+
+[EXAMPLE]
+====
+
+`++Zähler[2/3 + 1/15]++` liefert _11_.
+
+====
+
+[NOTE]
+====
+
+* Für eine schnelle numerische Methode (falls die Zahlen nicht zu groß sind) kann Folgendes in die _Eingabezeile_
+eingegeben werden: `++GemeinsamerNenner[a,a]++` für den Nenner und `++runde(a*GemeinsamerNenner[a,a])++` für den Zähler.
+* {blank}
++
+Siehe auch Befehl xref:/commands/Nenner.adoc[Nenner].
+
+====

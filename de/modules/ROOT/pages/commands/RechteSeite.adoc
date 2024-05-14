@@ -1,0 +1,50 @@
+= RechteSeite (Befehl)
+:page-en: commands/RightSide_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+RechteSeite( <Gleichung> )::
+  Gibt die rechte Seite der vereinfachten Gleichung an.
+
+[EXAMPLE]
+====
+
+`++RechteSeite[x + 2 = 3x + 1]++` ergibt _0.5_.
+
+====
+
+== CAS-Ansicht
+
+RechteSeite( <Gleichung> )::
+  Gibt die rechte Seite der Gleichung an.
+RechteSeite( <Liste von Gleichungen> )::
+  Gibt eine Liste der rechten Seiten der Gleichungen an.
+RechteSeite( <Liste von Gleichungen>, <Index> )::
+  Gibt die rechte Seite der Gleichung an, die durch den Index festgelegt ist.
+
+[EXAMPLE]
+====
+
+`++RechteSeite[{a^2 + b^2 = c^2, x + 2 = 3 x + 1}, 1]++` ergibt _stem:[c^2]_.
+
+====
+
+[EXAMPLE]
+====
+
+`++RechteSeite[{a^2 + b^2 = c^2, x + 2 = 3x + 1}]++` ergibt _\{c^2^, 3x + 1}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++RechteSeite[x + 3 = 3 x + 1]++` ergibt _3 x + 1_.
+
+====
+
+[NOTE]
+====
+
+Siehe auch Befehl xref:/commands/LinkeSeite.adoc[LinkeSeite].
+
+====

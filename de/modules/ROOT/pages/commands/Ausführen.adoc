@@ -1,0 +1,36 @@
+= Ausführen (Befehl)
+:page-en: commands/Execute_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Ausführen[ <Liste von Texten> ]
+
+Führt eine Liste von (englischen) Befehlen aus, die als Text eingegeben wurden.
+
+[NOTE]
+====
+
+Bitte beachten Sie, dass in der Liste von Texten ausschließlich englische Befehle erlaubt sind. Andernfalls kann
+GeoGebra, falls es in einer anderen Sprache verwendet wird, diese Befehle nicht ausführen.
+
+====
+
+[EXAMPLE]
+====
+
+* `++Ausführen[{"A=(1,1)","B=(3,3)","C=Midpoint[A,B]"}]++` erzeugt die Punkte A und B und deren Mittelpunkt C.
+
+====
+
+* `++Ausführen[Join[{"f_{1}=1","f_{2}=1"},Sequence["f_{"+(i+2)+"}=f_{"+(i+1)+"}+f_{"+i+"}",i,1,10]]]++` erzeugt die
+ersten 10 Elemente der http://en.wikipedia.org/wiki/de:Fibonacci-Folge[Fibonacci-Folge].
+
+Ausführen[ <Liste von Texten>, <Parameter>, ..., <Parameter> ]::
+  Ersetzt in jeder Liste %1 durch ersten Parameter, %2 durch zweiten Parameter und so weiter. Insgesamt können 9
+  Parameter festgelegt werden. Nach dem Ersetzen werden die jeweiligen Befehle neu ausgeführt.
+
+[EXAMPLE]
+====
+
+`++Ausführen[{"Segment[%1,%2]","Midpoint[%1,%2]"},A,B]++` erzeugt die Strecke "AB" und deren Mittelpunkt.
+
+====

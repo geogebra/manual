@@ -1,0 +1,23 @@
+= TrendSin (Befehl)
+:page-en: commands/FitSin_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+TrendSin( <Liste von Punkten> )::
+  Berechnet die Regressionskurve in Form einer Sinusfunktion _a + b sin (c x + d)_.
+
+[EXAMPLE]
+====
+
+`++TrendSin[{(1, 1), (2, 2), (3, 1), (4, 0), (5, 1), (6, 2)}]++` gibt _f(x) = 1 + 1 sin (1.5708 x - 1.5708)_.
+
+====
+
+[NOTE]
+====
+
+* Die Liste sollte aus mindestens 4 Punkten bestehen und zumindest zwei Extrempunkte umfassen. Die ersten beiden lokalen
+Extrempunkte sollten nicht allzu verschieden von den absoluten Extrempunkten der Kurve sein.
+* Siehe auch die Befehle xref:/commands/TrendExp.adoc[TrendLog], xref:/commands/TrendLog.adoc[TrendLog],
+xref:/commands/TrendPot.adoc[TrendPot] und xref:/commands/TrendPoly.adoc[TrendPoly].
+
+====

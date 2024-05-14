@@ -1,0 +1,45 @@
+= KLösungen (Befehl)
+:page-en: commands/CSolutions_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+== CAS-Ansicht
+
+KLösungen[ <Gleichung> ]::
+  Löst die angegebene Gleichung für die Variable _x_ und erzeugt eine Liste mit allen Lösungen. Auch komplexe Lösungen
+  sind zugelassen.
+KLösungen[ <Gleichung>, <Variable> ]::
+  Löst die angegebene Gleichung für die angegebene unbekannte Variable und erzeugt eine Liste mit allen Lösungen. Auch
+  komplexe Lösungen sind zugelassen.
+KLösungen[ <Liste von Gleichungen>, <Liste von Variablen> ]::
+  Löst das angegebene Gleichungssystem für die angegebenen unbekannten Variablen und erzeugt eine Liste mit allen
+  Lösungen. Auch komplexe Lösungen sind zugelassen.
+
+[EXAMPLE]
+====
+
+`++KLösungen[{y^2 = x - 1, x = 2 * y - 1}, {x, y}]++` erzeugt die Liste stem:[\begin\{pmatrix}1 + 2 ί&1 + ί\\1 - 2 ί&1 -
+ί\end\{pmatrix}], welche die komplexen Lösungen von _y^2^ = x - 1_ und _x = 2 * y - 1_ enthält..
+
+====
+
+[EXAMPLE]
+====
+
+`++KLösungen[a^2 = -1, a]++` erzeugt die Liste _\{ί, -ί}_, welche die komplexen Lösungen von _a^2^ = -1_ enthält.
+
+====
+
+[EXAMPLE]
+====
+
+`++KLösungen[x^2 = -1]++` erzeugt die Liste _\{ί, -ί}_, welche die komplexen Lösungen von _x^2^ = -1_ enthält.
+
+====
+
+[NOTE]
+====
+
+* Die imaginäre Einheit ί erhalten Sie mit der Tastenkombination [.kcode]#ALT # + [.kcode]# i#.
+* Siehe auch die Befehle xref:/commands/KLöse.adoc[KLöse] und xref:/commands/Lösungen.adoc[Lösungen].
+
+====

@@ -1,0 +1,53 @@
+= Numerisch (Befehl)
+:page-en: commands/Numeric_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+== CAS Syntax
+
+Numerisch( <Ausdruck> )::
+  Versucht, eine numerische Approximation des angegebenen Ausdrucks zu bestimmen. Auf welche Stelle generell gerundet
+  wird, können Sie im xref:/Einstellungen_Menü.adoc[Einstellungen-Menü] bei _Runden_ einstellen.
+
+[EXAMPLE]
+====
+
+Die Eingabe `++Numerisch[3 / 2]++` ergibt _1.5_.
+
+====
+
+Numerisch( <Ausdruck>, <signifikante Stellen> )::
+  Versucht, unter Verwendung der angegebenen Zahl der signifikanten Stellen, eine numerische Approximation des
+  angegebenen Ausdrucks zu bestimmen.
+
+[EXAMPLE]
+====
+
+Die Eingabe `++Numerisch[sin(1), 20]++` ergibt _0.84147098480789650665_.
+
+====
+
+[NOTE]
+====
+
+Wenn Sie nicht mit genügend Stellen rechnen, dann können Sie falsche Ergebnisse durch
+http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html[Gleitkomma-Auslöschung] bekommen.
+
+[EXAMPLE]
+====
+
+`++Numerisch[-500000000/785398163*sin(785398163/500000000)*1258025227.19^2+500000000/785398163*1258025227.19^2,10]++`
+ergibt _4096_, aber
+`++Numerisch[-500000000/785398163*sin(785398163/500000000)*1258025227.19^2+500000000/785398163*1258025227.19^2,30]++`
+ergibt _0.318309886345536696694580314215_.
+
+====
+
+====
+
+[NOTE]
+====
+
+Siehe auch das Werkzeug image:24px-Mode_nsolve.svg.png[Mode nsolve.svg,width=24,height=24]
+xref:/tools/Numerisch.adoc[Numerisch].
+
+====

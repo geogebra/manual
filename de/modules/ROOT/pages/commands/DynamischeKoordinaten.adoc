@@ -1,0 +1,60 @@
+= DynamischeKoordinaten (Befehl)
+:page-en: commands/DynamicCoordinates_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+DynamischeKoordinaten( <Punkt A>, <Zahl X>, <Zahl Y> )::
+  Erzeugt einen Punkt mit den Koordinaten (X, Y). Dieser Punkt ist
+  xref:/Freie_und_abhängige_Objekte_Hilfsobjekte.adoc[abhängig], kann aber bewegt werden. Wenn Sie den neuen Punkt auf
+  die Koordinaten (x, y) bewegen, so wird Punkt _A_ dorthin bewegt und die Koordinaten des neuen Punkts werden
+  berechnet. Am besten funktioniert diese Funktion, wenn _A_ nicht xref:/Objekteigenschaften.adoc[sichtbar] ist.
+  Zumindestens eine Koordinate _X_ oder _Y_ sollte von _A_ abhängen.
+
+[EXAMPLE]
+====
+
+* Konstruieren Sie einen Punkt _A_. Mit dem Befehl `++B = DynamischeKoordinaten[A, round(x(A)), round(y(A))]++` erhalten
+Sie einen Punkt _B_. Wenn Sie nun versuchen _B_ auf (1.3, 2.1) mit dem image:20px-Mode_move.svg.png[Mode
+move.svg,width=20,height=20]xref:/tools/Bewege.adoc[Bewege-Werkzeug] zu bewegen, wird der Punkt _A_ auf (1.3, 2.1)
+gesetzt und _B_ erscheint bei (1, 2).
+* `++DynamischeKoordinaten[A, x(A), min(y(A), sin(x(A)))]++` erzeugt einen Punkt _B_ unter sin(x).
+
+[NOTE]
+====
+
+`++PunktIn[y < sin(x)]++` ist hier aber die einfachere Variante!
+
+====
+
+Die folgenden Beispiele zeigen andere Wege, um die Positionen vom Punkt _C_ einzuschränken:
+
+* Sei `++A = Punkt[xAchse]++` und `++B = Punkt[xAchse]++`.
+
+Nun tippen Sie in die xref:/Eingabezeile.adoc[Eingabezeile]:
+
+`++DynamischeKoordinaten[B, Min[x(B), x(A)], 0]++` und drücken Sie die Eingabetaste
+
+`++ SetzeSichtbarInGrafikansicht[B, 1, false]++` und drücken Sie die Eingabetaste
+
+`++SetzeEbene[C, 1]++` und drücken Sie die Eingabetaste.
+
+Nun kann _C_ nicht mehr auf die rechte Seite von _A_ verschoben werden.
+
+* Sei `++A = (1, 2)++`.
+
+Nun tippen Sie in die xref:/Eingabezeile.adoc[Eingabezeile]:
+
+`++SetzeSichtbarInGrafikansicht[A, 1, false]++` und drücken Sie die Eingabetaste
+
+`++B = DynamischeKoordinaten[A, Wenn[x(A) > 3, 3, Wenn[x(A) < -3, -3, Wenn[x(A) < 0, round(x(A)), x(A)]]], Wenn[x(A) < 0, 0.5, Wenn[y(A) > 2, 2, Wenn[y(A) < 0, 0, y(A)]]]]++`
+und drücken Sie die Eingabetaste.
+
+* Dieses Beispiel macht _A_ zu einem anhaftenden Punkt, wenn der Punkt _C_ in die Nähe gezogen wird. Sei
+`++A = (1, 2)++` und `++B = (2, 3)++`.
+
+Nun tippen Sie in die xref:/Eingabezeile.adoc[Eingabezeile]:
+
+`++SetzeSichtbarInGrafikansicht[B, 1, false]++` und drücken Sie die Eingabetaste
+
+`++C = DynamischeKoordinaten[B, Wenn[Abstand[A, B] < 1, x(A), x(B)], Wenn[Abstand[A, B] < 1, y(A), y(B)]]++`.
+
+====

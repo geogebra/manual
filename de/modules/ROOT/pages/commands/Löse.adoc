@@ -1,0 +1,81 @@
+= Löse (Befehl)
+:page-en: commands/Solve_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+Die Befehle *Löse* und xref:/commands/Lösungen.adoc[Lösungen] lösen eine Gleichung oder ein System von Gleichungen
+symbolisch über den reellen Zahlen. Um Gleichungen numerisch zu lösen, verwenden Sie den Befehl
+xref:/commands/NLöse.adoc[NLöse]. Um Gleichungen über die komplexen Zahlen zu lösen, beachten Sie den Befehl
+xref:/commands/KLöse.adoc[KLöse].
+
+====
+
+Die folgenden Befehle sind nur in der image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/CAS_Ansicht.adoc[CAS-Ansicht] verfügbar.
+
+Löse( <Gleichung in x> )::
+  Löst die angegebene Gleichung für die Variable _x_ und erzeugt eine Liste mit allen Lösungen.
+Löse( <Gleichung>, <Variable> )::
+  Löst die angegebene Gleichung für die angegebene, unbekannte Variable und erzeugt eine Liste mit allen Lösungen.
+Löse( <Liste von Gleichungen>, <Liste von Variablen> )::
+  Löst das gegebene Gleichungssystem für die angegebenen Variablen und erzeugt eine Liste mit allen Lösungen.
+
+[EXAMPLE]
+====
+
+* `++Löse[{x = 4 x + y , y + x = 2}, {x, y}]++` liefert _( x = -1, y = 3 )_, die einzige Lösung von _x = 4x + y_ und _y
++ x = 2_.
+* `++Löse[{2a^2 + 5a + 3 = b, a + b = 3}, {a, b}]++` liefert _\{\{a = 0, b = 3}, \{a = -3, b = 6}}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Löse[x * a^2 = 4a, a]++` berechnet \{stem:[a = \frac\{4}\{x}, a = 0]}.
+
+====
+
+[EXAMPLE]
+====
+
+`++Löse[x^2 = 4x]++` berechnet _\{x = 4, x = 0}_.
+
+====
+
+Löse( <Gleichung>, <Variable>, <Liste von Annahmen> )::
+  Löst die angegebene Gleichung für die angegebene, unbekannte Variable mithilfe einer Liste von gegebenen Annahmen und
+  erzeugt eine Liste mit allen Lösungen.
+
+[EXAMPLE]
+====
+
+* `++Löse[u *x < a,x, u>0]++` liefert _\{x < a / u}_, die einzige Lösung für _u *x < a_ unter der Annahme _u>0_
+* `++Löse[u *x < a,x, {u<0, a<0}]++` liefert _\{x > a / u}_.
+
+====
+
+Löse( <Liste von parametrischen Gleichungen>, <Liste von Variablen> )::
+  Löst eine System von paramtrischen Gleichungen für eine gegebene Liste von unbekannten Variablen und erzeugt eine
+  Liste mit allen Lösungen.
+
+[EXAMPLE]
+====
+
+* `++Löse[{(x, y) = (3, 2) + t*(5, 1), (x, y) = (4, 1) + s*(1, -1)}, {x, y, t, s}]++` liefert _\{\{x = 3, y = 2, t = 0,
+s = -1}}_.
+
+====
+
+[NOTE]
+====
+
+* Die rechte Seite der Gleichungen (in allen oben angeführten Syntaxen) kann weggelassen werden und wenn diese fehlt,
+wird sie als _0_ angenommen.
+* Manchmal ist es notwendig die Ausdrücke ein wenig zu manipulieren, damit der automatische Löser funktioniert, z.B.
+`++ Löse[TrigErweitere[sin(5/4 π + x) - cos(x - 3/4 π) = sqrt(6) * cos(x) - sqrt(2)]]++`.
+* Für stückweise definierte Funktion benötigt man den Befehl xref:/commands/NLöse.adoc[NLöse].
+
+====

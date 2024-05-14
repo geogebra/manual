@@ -1,0 +1,59 @@
+= IrrationalerText (Befehl)
+:page-en: commands/SurdText_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+IrrationalerText( <Zahl> )::
+  Stellt die Zahl in der Form stem:[\frac\{a+b\sqrt\{c}}\{d}] als Text dar.
+
+[EXAMPLE]
+====
+
+* `++IrrationalerText[2.414213562373095]++` erzeugt den Text _stem:[1 + \sqrt\{2}]_
+* `++IrrationalerText[2.439230484541326]++` erzeugt den Text _stem:[\frac\{7+3 \sqrt\{3} }\{5}]_
+
+====
+
+IrrationalerText( <Zahl>, <Liste> )::
+  Stellt die Zahl als Vielfache der Konstanten in der Liste dar. Ist die Liste leer, so wird eine Liste gewöhnlicher
+  Konstanten verwendet.
+
+[EXAMPLE]
+====
+
+* `++IrrationalerText[3.718281828459045, {exp(1)}]++` erzeugt den Text _stem:[e + 1]_
+* `++IrrationalerText[5.382332347441762, {sqrt(2), sqrt(3), sqrt(5)}]++` erzeugt den Text _stem:[ \sqrt\{5} + \sqrt\{3}
++ \sqrt\{2}]_
+* `++IrrationalerText[1.693147180559945, {ln(2)}]++` erzeugt den Text _stem:[\ln(2) + 1]_
+
+====
+
+IrrationalerText( <Punkt> )::
+  Stellt die Koordinaten des Punktes in der Form stem:[\frac\{a+b\sqrt\{c}}\{d}] als Text dar.
+
+[EXAMPLE]
+====
+
+`++IrrationalerText[(2.414213562373095, 1.414213562373095)]++` erzeugt den Text _(stem:[1 + \sqrt\{2}, \sqrt\{2})]_
+
+====
+
+[NOTE]
+====
+
+* Um diesen Befehl innerhalb eines Textobjekts verwenden zu können, muss die Option *_LaTeX Formel_* im Tab _Text_ des
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Eigenschaften_Dialog.adoc[Eigenschaften-Dialogs] aktiviert sein.
+* Da dieser Befehl bei der Eingabe mit gerundeten Dezimalzahlen arbeitet, kann das Ergebnis sehr unerwartet aussehen.
+* Wenn keine passende Darstellung gefunden werden kann, gibt GeoGebra die Zahl zurück.
+
+[EXAMPLE]
+====
+
+`++IrrationalerText[1.23456789012345]++` erzeugt den Text _1.23456789012345_.
+
+====
+
+* Siehe auch die Befehle xref:/commands/BruchText.adoc[BruchText] und
+xref:/commands/WissenschaftlicheNotation.adoc[WissenschaftlicheNotation].
+
+====

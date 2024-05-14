@@ -1,0 +1,17 @@
+= SchneideBereich (Befehl)
+:page-en: commands/IntersectRegion_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+SchneideBereich( <Vieleck>, <Vieleck> )::
+  Kennzeichnet den Bereich, wo sich die beiden Vielecke überlappen. Dies funktioniert nur, wenn sich die Vielecke nicht
+  selber schneiden.
+
+[EXAMPLE]
+====
+
+Seien `++A = (1, 4)++`, `++B = (1, 1)++`, `++C = (5, 1)++`, `++D = (5, 4)++`, `++E = (3, 5)++`, `++G = (3, 2)++`,
+`++H = (7, 2)++` und `++I = (5, 5)++` die Eckpunkte zweier Vielecke. `++Vieleck[A, B, C, D]++` ergibt _Vieleck1 = 12_
+und `++Vieleck[E, G, H, I]++` ergibt _Vieleck2 = 9_. Dann berechnet `++SchneideBereich[ Vieleck1, Vieleck2 ]++` das
+Vieleck _Vieleck3 = 4_, wo sich _Vieleck1_ und _Vieleck2_ überlappen.
+
+====

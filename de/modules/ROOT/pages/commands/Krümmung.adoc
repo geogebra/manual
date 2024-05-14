@@ -1,0 +1,33 @@
+= Krümmung (Befehl)
+:page-en: commands/Curvature_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Krümmung[ <Punkt>, <Funktion> ]::
+  Berechnet die Krümmung der Funktion im gegebenen Punkt.
+Krümmung[ <Punkt>, <Kurve> ]::
+  Berechnet die Krümmung der Parameterkurve im gegebenen Punkt.
+Krümmung[ <Punkt>, <Objekt> ]::
+  Berechnet die Krümmung des Objekts (Funktion, Kurve, Kegelschnitt) im gegebenen Punkt.
+
+[EXAMPLE]
+====
+
+* `++Krümmung[(0 ,0), x^2]++` liefert _2_
+* `++Krümmung[(0, 0), Kurve[cos(t), sin(2t), t, 0, π]]++` liefert _0_
+* `++Krümmung[(-1, 0), Kegelschnitt[{1, 1, 1, 2, 2, 3}]]++` liefert _2_
+
+====
+
+[EXAMPLE]
+====
+
+`++Krümmung[(0, 0), Kurve[cos(t), sin(2t), t, 0, π]]++` liefert _0_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Krümmung[(0,0), x^2]++` liefert _2_.
+
+====

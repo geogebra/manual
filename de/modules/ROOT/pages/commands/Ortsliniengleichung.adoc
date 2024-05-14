@@ -1,0 +1,67 @@
+= Ortsliniengleichung (Befehl)
+:page-en: commands/LocusEquation_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Ortsliniengleichung( <Ortslinie> )::
+  Berechnet die Gleichung einer Ortslinie und zeichnet sie als implizite Kurve.
+Ortsliniengleichung( <Punkt auf Ortslinie>, <Bewegter Punkt> )::
+  Berechnet die Gleichung einer Ortslinie unter Verwendung der Eingabe eines Spurpunkts (Punkt auf Ortslinie) und eines
+  bewegten Punkts und zeichnet diese als implizite Kurve.
+
+[EXAMPLE]
+====
+
+Wir wollen eine Parabel als Ortslinie konstruieren: Erzeuge unabhängige Punkte "A" und "B" und eine Gerade "d" durch
+diese Punkte (Leitgerade der Parabel). Erzeuge einen unabhängigen Punkt "F" als Brennpunkt. Erzeuge nun einen Punkt "P"
+auf der Leitgeraden (bewegter Punkt) und anschließend eine zu d senkrechte Gerade "p". Erzeuge zusätzlich die
+Streckensymmetrale "b". Der Punkt Q (der Punkt, der die Ortslinie erzeugt) ist schlussendlich der Schnittpunkt der
+Geraden "p" und "b". Nun findet und zeichnet der Befehl `++Ortsliniengleichung[Q,P]++` die exakte Gleichung der
+Orstlinie.
+
+====
+
+[NOTE]
+====
+
+* Funktioniert nur für eingeschränkte geometrische Objekte, z.B. Punkte, Geraden, Kreise, Kegelschnitte. [Strahlen und
+Strecken werden als (unendliche) Geraden behandelt]
+* Ist die Ortslinie zu komplex, wird 'undefiniert' ausgegeben.
+* Die Berechnung basiert auf einer http://en.wikipedia.org/wiki/Gr%C3%B6bnerbasis[Gröbner Basis]. Aus diesem Grund
+erscheinen manchmal zusätzliche Äste der Kurve, die nicht zur original Ortslinie gehören.
+
+====
+
+[NOTE]
+====
+
+Es muss ich um eine Ortslinie eines Punktes handeln (kein Schieberegler)
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Folgender Text behandelt ein Feature, dass nur in GeoGebra 5.2 unterstützt wird.
+
+'''''
+
+[NOTE]
+====
+
+In GeoGebra 5.2 und höheren Versionen kann ein externer Webserver für die Berechnungen verwendet werden (Dies kann mit
+folgender Kommandozeile `++--singularWS=enable:false++`) verhindert werden.
+
+====
+
+|===
+
+[NOTE]
+====
+
+* Weitere Informationen und Beispiele: http://www.geogebra.org/student/b121563#[GeoGebra]
+* Siehe auch Befehl xref:/commands/Ortslinie.adoc[Ortslinie] .
+
+====

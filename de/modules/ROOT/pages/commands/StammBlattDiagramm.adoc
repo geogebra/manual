@@ -1,0 +1,14 @@
+= StammBlattDiagramm (Befehl)
+:page-en: commands/StemPlot_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+StammBlattDiagramm( <Liste> )::
+  Erzeugt ein Stammblattdiagramm der angegebenen Liste von Zahlen. Außenliegende werden vom Diagramm entfernt und extra
+  aufgelistet.
+  Außenliegende sind jene Werte, die außerhalb vom Intervall [ Q1 - 1.5 (Q3 - Q1) , Q3 + 1.5 (Q3 - Q1) ] liegen.
+
+StammBlattDiagramm( <Liste>, <Anordnung -1|0|1> )::
+  Erzeugt ein Stammblattdiagramm der angegebenen Liste von Zahlen.
+  _Anordnung_ = -1: die Stammblatt-Einheit wird durch 10 dividiert.
+  _Anordnung_ = 0: keine Veränderung
+  _Anordnung_ = 1: die Stammblatt-Einheit wird mit 10 multipliziert.

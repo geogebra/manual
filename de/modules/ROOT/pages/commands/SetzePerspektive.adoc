@@ -1,0 +1,83 @@
+= SetzePerspektive (Befehl)
+:page-en: commands/SetPerspective_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+SetzePerspektive( <Text> )
+
+Ändert das Layout und die Sichtbarkeiten der verschiedenen Ansichten. Der Text Parameter beschreibt die gewünschte
+Ansicht und sollte ein gültiger Ausdruck sein. Die Perspektiven werden als Variablen (Buchstaben) dargestellt: Die
+horizontale Anordnung der Ansichten wird dadurch erreicht, wenn man die Buchstaben nebeneinander schreibt und die
+vertikale Anordnung mit diesem Symbol `++ /++`.
+
+[cols=",",options="header",]
+|===
+|Buchstabe |Ansicht
+|A |image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] xref:/Algebra_Ansicht.adoc[Algebra]
+
+|B |image:18px-Menu_view_probability.svg.png[Menu view probability.svg,width=18,height=18]
+xref:/Wahrscheinlichkeitsrechner.adoc[Wahrscheinlichkeitsrechner]
+
+|C |image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_Ansicht.adoc[CAS]
+
+|D |image:16px-Menu_view_graphics2.svg.png[Menu view graphics2.svg,width=16,height=16] xref:/Grafik_Ansicht.adoc[Grafik
+2]
+
+|G |image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Grafik_Ansicht.adoc[Grafik]
+
+|L |image:16px-Menu_view_construction_protocol.svg.png[Menu view construction protocol.svg,width=16,height=16]
+xref:/Konstruktionsprotokoll.adoc[Konstruktionsprotokoll]
+
+|P |image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Eigenschaften_Dialog.adoc[Eigenschaften]
+
+|R |Daten Analyse (nur für GeoGebra Desktop Version)
+
+|S |image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+xref:/Tabellen_Ansicht.adoc[Tabelle]
+
+|T |image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=16,height=16]
+xref:/3D_Grafik_Ansicht.adoc[3D Grafik]
+|===
+
+[EXAMPLE]
+====
+
+ 
+
+* `++ SetzePerspektive["G"]++` macht nur die image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Grafikansicht_ sichtbar.
+* `++ SetzePerspektive["AGS"]++` ordnet die Ansichten image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] _Algebra_, image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Tabelle_ und image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Grafik_ horizontal an.
+* `++ SetzePerspektive["S/G"]++` ordnet die Ansicht image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Tabelle_ über dem image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Grafikfenster_ an.
+* `++ SetzePerspektive["S/(GA)"]++` ordnet das image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Grafikfenster_ und das image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] _Algebrafenster_ nebeneinader an und die Ansicht
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Tabelle_ über den beiden.
+
+====
+
+Statt diesen Ausdrücken kann man auch eine Ziffer, die den Perspektiven zugeordnet ist, verwenden:
+
+[cols=",",options="header",]
+|===
+|Text |Perspektiven
+|"1" |Algebra
+|"2" |Geometrie
+|"3" |Tabelle
+|"4" |CAS
+|"5" |3D Grafik
+|"6" |Statistik
+|===
+
+Diese entsprechen in etwa "AG", "G", "SG", "CG", "AT" und "B", können aber auch die Anzeige der
+xref:/Eingabezeile.adoc[Eingabezeile] und den Inhalt der xref:/Werkzeugleiste.adoc[Werkzeugleiste] beeinflussen.
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/SetzeAktiveGrafikansicht.adoc[SetzeAktiveGrafikansicht].
+
+====

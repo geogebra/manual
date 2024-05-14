@@ -1,0 +1,46 @@
+= Endwert (Befehl)
+:page-en: commands/FutureValue_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Endwert( <Zinssatz>, <Anzahl der Perioden>, <Zahlung>, <Barwert(optional)>, <Fälligkeit (optional)> )::
+  Liefert den Endwert einer Investition. Konstante und regelmäßige Zahlungen und ein konstanter Zinssatz werden
+  vorausgesetzt.
+
+* *<Zinssatz>* Zinssatz pro Zahlungsperiode.
+* *<Anzahl der Perioden>* Gesamtanzahl der Zahlungsperioden.
+* *<Zahlung>* Wert der regelmäßigen Zahlung (pro Periode).
+* *<Barwert (optional)>* Gesamtbetrag, den eine Reihe von zukünftigen Zahlungen zum gegenwärtigen Zeitraum wert ist.
+* *<Fälligkeit (optional)>* Legt fest, wann die Zahlungen zu tätigen sind. Wird kein Wert oder der Wert 0 eingegeben,
+ist die Zahlung am Ende der jeweiligen Periode zu tätigen (nachschüssig). Wird 1 eingegeben, sind die Zahlungen am
+Beginn einer Periode zu tätigen (vorschüssig).
+
+[EXAMPLE]
+====
+
+`++Endwert[10%/12, 15, -200, 0, 1]++` liefert einen Endwert von 3207.99.
+
+====
+
+[NOTE]
+====
+
+Vergewissern Sie sich, dass für den `++<Zinssatz>++` und die `++<Anzahl der Perioden>++` die korrekten Einheiten
+verwendet werden. Bei monatlichen Zahlungen über vier Jahre bei einem Jahreszinssatz von 10% muss für den Zinssatz
+10%/12 und für die Anzahl der Perioden 4*12 verwendet werden.
+
+====
+
+[NOTE]
+====
+
+Für alle Argumente gilt: Ausgaben werden mit negativen und Einnahmen mit positiven Zahlen angegeben.
+
+====
+
+[NOTE]
+====
+
+Siehe auch die Befehle xref:/commands/Zahlung.adoc[Zahlung], xref:/commands/Zinssatz.adoc[Zinssatz],
+xref:/commands/Perioden.adoc[Perioden] und xref:/commands/Barwert.adoc[Barwert] .
+
+====

@@ -1,0 +1,21 @@
+= ResidualPlot (Befehl)
+:page-en: commands/ResidualPlot_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+ResidualPlot( <Liste von Punkten>, <Funktion> )::
+  Erzeugt eine neue Liste von Punkten, deren _x_-Koordinaten gleich den _x_-Koordinaten der Elemente der Liste von
+  Punkten sind und deren _y_-Koordinaten Residuen in Bezug auf die Funktion _f_ sind.
+  Mit anderen Worten, ist das i-te Element der Liste von Punkten der Punkt (_a, b_) und _f_ die Funktion, dann ist das
+  i-te Element der erzeugten Liste (_a, b-f(a)_).
+
+[EXAMPLE]
+====
+
+Sei
+`++Liste = {(-1, 1), (-0.51, 2), (0, 0.61), (0.51, -1.41), (0.54, 1.97), (1.11, 0.42), (1.21, 2.53), (-0.8, -0.12)}++`
+die Liste von Punkten und `++f(x) = x^5 + x^4 - x - 1++` die Funktion. Mit der Eingabe `++ResidualPlot[ Liste, f ]++`
+erhalten Sie die Liste _Liste1 = \{(-1, 1), (-0.51, 2.46), (0, 1.61), (0.51, 0), (0.54, 3.38), (1.11, -0.66), (1.21, 0),
+(-0.8, 0)}_ und die zugehörigen Punkte in der image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Grafik_Ansicht.adoc[Grafik-Ansicht].
+
+====

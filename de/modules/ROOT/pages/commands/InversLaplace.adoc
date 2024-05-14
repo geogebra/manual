@@ -1,0 +1,35 @@
+= InversLaplace (Befehl)
+:page-en: commands/InverseLaplace_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+== CAS Syntax
+
+InversLaplace( <Funktion> )::
+  Berechnet die
+  http://en.wikipedia.org/wiki/de:Laplace-Transformation#Laplace-R.C3.BCcktransformation[Laplace-Rücktransformation] der
+  Funktion.
+InversLaplace( <Funktion>, <Variable> )::
+  Berechnet die Laplace-Rücktransformation der Funktion, in Bezug auf die angegebene Variable.
+
+[EXAMPLE]
+====
+
+`++InversLaplace[ exp(- a*b), a]++` berechnet stem:[\mathbf\{Dirac(a-b)}]
+
+`++InversLaplace[ exp(- a*b), b]++` berechnet stem:[\mathbf\{Dirac(b-a)}]
+
+====
+
+[EXAMPLE]
+====
+
+`++InversLaplace[1/(1 + t^2)]++` berechnet stem:[\mathbf\{ sin(t)} ].
+
+====
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/Laplace.adoc[Laplace].
+
+====

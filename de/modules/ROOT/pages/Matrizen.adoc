@@ -1,0 +1,103 @@
+= Matrizen
+:page-en: Matrices
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Eine Matrix kann in GeoGebra als Liste von Listen, welche die Zeilen der Matrix enthalten, eingegeben werden.
+
+[EXAMPLE]
+====
+
+Die Eingabe \{\{1, 2, 3}, \{4, 5, 6}, \{7, 8, 9}} repräsentiert die 3x3-Matrix stem:[\begin\{pmatrix}1&2&3\\ 4&5&6\\
+7&8&9 \end\{pmatrix}]
+
+====
+
+UM in der image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Grafik_Ansicht.adoc[Grafik-Ansicht] eine schöne Matrix mit LaTeX-Formatierung angezeigt zu bekommen, verwenden Sie
+den Befehl xref:/commands/FormelText.adoc[FormelText].
+
+[EXAMPLE]
+====
+
+Schreiben Sie in die xref:/Eingabezeile.adoc[Eingabezeile] `++FormelText[{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}]++` , um eine
+Matrix mit LaTeX-Formatierung zu erstellen.
+
+====
+
+== Operationen für Matrizen
+
+Matrixoperationen sind vom Prinzip her Operationen mit Listen, und daher liefern die folgenden Eingaben die gewünschten
+Ergebnisse.
+
+[NOTE]
+====
+
+Einige Eingaben repräsentieren Operationen, welche nicht auf diese Art im Ring der Matrizen definiert sind.
+
+====
+
+=== Beispiele für Addition und Subtraktion:
+
+* Matrix1 + Matrix2: Addiert die entsprechenden Elemente zweier kompatibler Matrizen.
+* Matrix1 – Matrix2: Subtrahiert die entsprechenden Elemente zweier kompatibler Matrizen.
+
+=== Multiplikation und Division
+
+* Matrix * Zahl: Multipliziert jedes Element der Matrix mit der Zahl.
+* Matrix1 * Matrix2: Verwendet Matrix-Multiplikation, um das Ergebnis zu berechnen.
+
+[NOTE]
+====
+
+Die Zeilen der ersten und Spalten der zweiten Matrix müssen dieselbe Anzahl von Elementen haben.
+
+====
+
+[EXAMPLE]
+====
+
+\{\{1, 2}, \{3, 4}, \{5, 6}} * \{\{1, 2, 3}, \{4, 5, 6}} erzeugt die Matrix \{\{9, 12, 15}, \{19, 26, 33}, \{29, 40,
+51}}.
+
+====
+
+* 2x2 Matrix * Punkt (oder Vektor): Multipliziert die Matrix mit dem Punkt (Vektor) und liefert einen Punkt als
+Ergebnis.
+
+[EXAMPLE]
+====
+
+\{\{1, 2}, \{3, 4}} * (3, 4) liefert den Punkt A = (11, 25).
+
+====
+
+* 3x3 Matrix * Punkt (oder Vektor): Multipliziert die Matrix mit dem Punkt (Vektor) und liefert einen Punkt als
+Ergebnis.
+
+[EXAMPLE]
+====
+
+\{\{1, 2, 3}, \{4, 5, 6}, \{0, 0, 1}} * (1, 2) liefert den Punkt A = (8, 20).
+
+====
+
+[NOTE]
+====
+
+Dies ist ein Spezialfall einer affinen Transformation mit homogenen Koordinaten: (x, y, 1) für einen Punkt und (x, y, 0)
+für einen Vektor. Dieses Beispiel entspricht daher: `++{{1, 2, 3}, {4, 5, 6}, {0, 0, 1}} * {1, 2, 1}++`.
+
+====
+
+== Weitere Beispiele:
+
+Der Abschnitt xref:/commands/Vektor_Matrix_(Befehle).adoc[Befehle für Matrizen] enthält eine Liste von alle verfügbaren
+Befehlen bzgl. Matrizen, unter anderem auch:
+
+* xref:/commands/Determinante.adoc[Determinante][Matrix]: Berechnet die Determinante einer gegebenen Matrix.
+* xref:/commands/Invertiere.adoc[Invertiere][Matrix]: Invertiert eine gegebene Matrix.
+* xref:/commands/Transponiere.adoc[Transponiere][Matrix]: Transponiert eine gegebene Matrix.
+* xref:/commands/MatrixAnwenden.adoc[MatrixAnwenden][Matrix,Object]: Liefert eine affine Abbildung des Objektes
+(bestimmt von der Matrix).
+* xref:/commands/Treppennormalform.adoc[Treppennormalform (Befehl)][Matrix]: Liefert die Treppennormalform einer
+gegebenen Matrix aus.

@@ -1,0 +1,33 @@
+= TTest (Befehl)
+:page-en: commands/TTest_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+TTest( <Stichprobenliste>, <Vermuteter Mittelwert>, <Seite> )::
+  Führt einen Einstichproben-t-Test mit der gegebenen Stichprobe durch. _Vermuteter Mittelwert_ ist der unter der
+  Null-Hypothese angenommener Mittelwert der Grundgesamtheit. _Seite_ hat als mögliche Werte "<", ">" , "≠". Diese
+  bestimmen die alternative Hypothese wie folgt:
+  "<" = Grundgesamtheitsmittelwert < _Vermuteter Mittelwert_
+  ">" = Grundgesamtheitsmittelwert > _Vermuteter Mittelwert_
+  "≠" = Grundgesamtheitsmittelwert ≠ _Vermuteter Mittelwert_
+
+Das Ergebnis wird als Liste in der Form _\{Wert der Wahrscheinlichkeit, t-Teststatistik}_ zurückgegeben.
+
+TTest( <Stichprobenmittelwert>, <Standardabweichung Stichprobe>, <Größe Stichprobe>, <vermuteter Mittelwert>, <Seite> )
+
+Führt einen Einstichproben-t-Test eines Grundgesamtheitsmittelwerts mit den gegebenen Stichprobenstatistiken durch.
+_Vermuteter Mittelwert_ und _Seite_ sind wie oben definiert. Das Ergebnis wird als Liste in der Form _\{Wert der
+Wahrscheinlichkeit, t-Teststatistik}_ zurückgegeben.
+
+[EXAMPLE]
+====
+
+`++TTest[4, 1, 12, 4, "≠"]++` ergibt _\{1, 0}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++TTest[{1, 2, 3, 4, 5}, 3, "<"]++` ergibt _\{0.5, 0}_.
+
+====

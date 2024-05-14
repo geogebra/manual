@@ -1,0 +1,43 @@
+= IntegralZwischen (Befehl)
+:page-en: commands/IntegralBetween_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+IntegralZwischen( <Funktion>, <Funktion>, <Startwert>, <Endwert> )::
+  Gibt das bestimmte Integral der Differenz _f (x) - g (x)_ zweier Funktionen _f_ und _g_ im Intervall [_a, b_] an,
+  wobei _a_ der Startwert und _b_ der Endwert ist.
+
+[NOTE]
+====
+
+Dieser Befehl schattiert auch den Bereich zwischen dem Funktionsgraphen von _f_ und _g_.
+
+====
+
+IntegralZwischen( <Funktion>, <Funktion>, <Startwert>, <Endwert>, <Wahrheitswert Berechne> )::
+  Gibt das bestimmte Integral der Differenz _f (x) - g (x)_ zweier Funktionen _f_ und _g_ im Intervall [_a, b_], wobei
+  _a_ der Startwert und _b_ der Endwert ist, und schattiert den entsprechenden Bereich, falls der _Wahrheitswert
+  Berechne true_ ist. Im Fall, dass der _Wahrheitswert Berechne_ als _false_ gewählt wurde, wird der entsprechende
+  Bereich schattiert , aber der Integralwert wird nicht berechnet.
+
+== CAS-Ansicht
+
+IntegralZwischen( <Funktion>, <Funktion>, <Startwert>, <Endwert> )::
+  Gibt das bestimmte Integral der Differenz _f (x) - g (x)_ zweier Funktionen _f_ und _g_ im Intervall [_a, b_] an ,
+  wobei _a_ der Startwert und _b_ der Endwert ist.
+IntegralZwischen( <Funktion>, <Funktion>, <Variable>, <Startwert>, <Endwert> )::
+  Gibt das bestimmte Integral nach einer Variablen der Differenz _f (x) - g (x)_ zweier Funktionen _f_ und _g_ im
+  Intervall [_a, b_] an, wobei _a_ der Startwert und _b_ der Endwert ist.
+
+[EXAMPLE]
+====
+
+`++IntegralZwischen[a * sin(t), a * cos(t), t, π / 4, π * 5 / 4]++` liefert stem:[2 \sqrt\{2} a].
+
+====
+
+[EXAMPLE]
+====
+
+`++IntegralZwischen[sin(x), cos(x), π / 4, π * 5 / 4]++` liefert stem:[2 \sqrt\{2}].
+
+====

@@ -1,0 +1,44 @@
+= Standardabweichung (Befehl)
+:page-en: commands/SD_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Standardabweichung( <Liste von Rohdaten> )::
+  Berechnet die http://en.wikipedia.org/wiki/de:Standardabweichung[Standardabweichung] der angegebenen Zahlen.
+
+[EXAMPLE]
+====
+
+`++Standardabweichung[{1,2,3,4,5}]++` berechnet _a = 1,41_.
+
+====
+
+Standardabweichung( <Liste von Zahlen>, <Liste von Häufigkeiten> )::
+  Berechnet die _Standardabweichung|Standardabweichung_ der angegebenen Zahlen abhängig von ihrer Häufigkeit.
+
+[EXAMPLE]
+====
+
+`++Standardabweichung[{1,2,3,4,5},{3,4,2,5,1}]++` berechnet _a = 1,28_.
+
+====
+
+== CAS-Ansicht
+
+Standardabweichung( <Liste von Zahlen> )::
+  Berechnet die _Standardabweichung_ der angegebenen Zahlen.
+
+[EXAMPLE]
+====
+
+* `++Standardabweichung[{1,2,3,4,5}]++` berechnet _stem:[\sqrt\{2}]_.
+* `++Standardabweichung[{-3 + 2 x, -1- 4 x, -2 + 5 x^2}]++` liefert stem:[ \sqrt\{2} \frac\{\sqrt\{25x⁴ + 10x³ + 28x² -
+18x + 3} } \{ 3 } ].
+
+====
+
+[NOTE]
+====
+
+Siehe auch Befehl xref:/commands/Mittelwert.adoc[Mittelwert].
+
+====

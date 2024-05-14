@@ -1,0 +1,31 @@
+= Cauchy (Befehl)
+:page-en: commands/Cauchy_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Cauchy( <Zentrum>, <Breitenparameter>, x )::
+  Erzeugt eine Wahrscheinlichkeitsdichtefunktion einer
+  http://en.wikipedia.org/wiki/de:Cauchy-Verteilung[Cauchy-Verteilung].
+Cauchy( <Zentrum>, <Breitenparameter>, x, <Wahrheitswert Verteilungsfunktion> )::
+  Erzeugt eine kumulative Verteilungsfunktion einer Cauchy-Verteilung, wenn der Wahrheitswert _true_ ist, ansonsten eine
+  Wahrscheinlichkeitsdichtefunktion einer Cauchy-Verteilung.
+Cauchy( <Zentrum>, <Breitenparameter>, <Wert der Variablen> )::
+  Berechnet den Wert der kumulativen Wahrscheinlichkeitsfunktion einer Cauchy-Verteilung bei _Wert der Variablen_ _v_,
+  d.h. die Wahrscheinlichkeit _P(X ≤ v)_, wobei _X_ eine Cauchy-Zufallsvariable, gegeben durch die Parameter _Zentrum,
+  Breitenparameter_ ist.
+
+[NOTE]
+====
+
+Es liefert die Wahrscheinlichkeit für den angegebenen _x_-Koordinatenwert (oder die Fläche unter der
+Cauchy-Verteilungskurve links vom x-Wert).
+
+====
+
+[EXAMPLE]
+====
+
+`++Cauchy[1, 2, 3]++` liefert _0.75_ in der image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/Algebra_Ansicht.adoc[Algebra-Ansicht] und _stem:[\frac\{3}\{4}]_ in der
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_Ansicht.adoc[CAS-Ansicht]__.__
+
+====

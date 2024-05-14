@@ -1,0 +1,47 @@
+= Richtungsfeld (Befehl)
+:page-en: commands/SlopeField_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Richtungsfeld( <f(x,y)> )::
+  Zeichnet das http://en.wikipedia.org/wiki/de:Richtungsfeld[Richtungsfeld] der Differentialgleichung
+  stem:[\frac\{dy}\{dx}=f(x,y)]
+
+[EXAMPLE]
+====
+
+`++Richtungsfeld[x+y]++` zeichnet das entsprechende Richtungsfeld. __
+
+====
+
+Richtungsfeld( <f(x,y)>, <Zahl n> )::
+  Zeichnet das Richtungsfeld der Differentialgleichung stem:[\frac\{dy}\{dx}=f(x,y)] in ein n-mal-n-Gitter, falls die
+  image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/Grafik_Ansicht.adoc[Grafik-Ansicht] quadratisch ist, ansonsten in ein kleineres Gitter. Standard ist ein
+  40x40-Gitter.
+
+Richtungsfeld( <f(x,y)>, <Zahl n>, <Längenfaktor a> )::
+  Zeichnet das Richtungsfeld der Differentialgleichung stem:[\frac\{dy}\{dx}=f(x,y)]. Der Längenfaktor 0<a≤1 bestimmt
+  dabei die Länge der Strecken.
+
+Richtungsfeld( <f(x,y)>, <Zahl n>, <Längenfaktor a>, <Min x>, <Min y>, <Max x>, <Max y> )::
+  Zeichnet das Richtungsfeld der Differentialgleichung stem:[\frac\{dy}\{dx}=f(x,y)] innerhalb des angegebenen Rechtecks
+  (anstatt die image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/Grafik_Ansicht.adoc[Grafik-Ansicht] auszufüllen).
+
+[NOTE]
+====
+
+Verwenden Sie folgende Werkzeuge: image:22px-Mode_translateview.svg.png[Mode translateview.svg,width=22,height=22]
+xref:/tools/Verschiebe_Grafik_Ansicht.adoc[Verschiebe Grafik-Ansicht], image:22px-Mode_zoomin.svg.png[Mode
+zoomin.svg,width=22,height=22] xref:/tools/Vergrößere.adoc[Vergrößere], image:22px-Mode_zoomout.svg.png[Mode
+zoomout.svg,width=22,height=22] xref:/tools/Verkleinere.adoc[Verkleinere] und beobachten Sie deren Effekt.
+
+====
+
+[NOTE]
+====
+
+Siehe auch die Befehl xref:/commands/LöseDgl.adoc[LöseDgl], xref:/commands/Ortslinie.adoc[Ortslinie] und
+xref:/commands/Integral.adoc[Integral].
+
+====

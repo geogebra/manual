@@ -1,0 +1,35 @@
+= Kettenbruch (Befehl)
+:page-en: commands/ContinuedFraction_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Kettenbruch( <Zahl> )::
+  Erzeugt den http://en.wikipedia.org/wiki/de:Kettenbruch[Kettenbruch] der angegebenen Zahl in Form eines LaTeX
+  xref:/Texte.adoc[Textobjekts]. Der Bruch wird numerisch mit einer Genauigkeit von 10^-8^ berechnet.
+Kettenbruch( <Zahl>, <Ebene> )::
+  Erzeugt den Kettenbruch der angegebenen Zahl. Die Anzahl der Quotienten ist dabei beschränkt durch die _Ebene_, kann
+  aber auch geringer sein, falls die Genauigkeit von 10^-8^ bereits durch weniger Quotienten erreicht wird.
+Kettenbruch( <Zahl>, <Ebene (optional)>, <Kurzschrift true|false> )::
+  Die Bedeutung von _Zahl_ und _Ebene_ ist analog zu oben. Der Parameter _Ebene_ ist dabei optional. Ist _Kurzschrift_
+  auf _true_ gesetzt, so wird das Ergebnis in Form einer Liste der ganzen Zahlen des Kettenbruchs dargestellt.
+
+[EXAMPLE]
+====
+
+* `++Kettenbruch[5.45, true]++` erzeugt [5; 2, 4, 1, 1]
+* `++Kettenbruch[5.45, 3, true]++` erzeugt [5; 2, 4, ...]
+
+====
+
+[EXAMPLE]
+====
+
+`++Kettenbruch[5.45, 3]++` erzeugt _stem:[5 + \frac\{1}\{ 2+ \frac\{1}\{4+ ... } }]_
+
+====
+
+[EXAMPLE]
+====
+
+`++Kettenbruch[5.45]++` erzeugt _stem:[5 + \frac\{1}\{ 2+ \frac\{1}\{4+ \frac\{1}\{ 1+ \frac\{1}\{ 1 } } } }]_
+
+====

@@ -1,0 +1,27 @@
+= SindKopunktal (Befehl)
+:page-en: commands/AreConcurrent_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+SindKopunktal( <Gerade>, <Gerade>, <Gerade> )::
+  Prüft, ob die Geraden durch einen gemeinsamen Punkt gehen. Wenn die Geraden parallel sind, wird überprüft ob sie einen
+  Fernpunkt besitzen und der Befehl liefert als Ergebnis _true_.
+
+Dieser Befehl berechnet das Ergebnis normalerweise numerisch. Mit dem Befehl xref:/commands/Prüfe.adoc[Prüfe] kann
+überprüft werden, ob die Geraden im Allgemeinen kopunktal sind.
+
+[EXAMPLE]
+====
+
+`++ SindKopunktal[Gerade[(1, 2), (3, 4)], Gerade[(1, 2), (3, 5)], Gerade[(1, 2), (3, 6)]]++` liefert _true_, da die drei
+Geraden durch den Punkt (1,2) gehen.
+
+====
+
+[NOTE]
+====
+
+Siehe auch die Befehle xref:/commands/LiegenAufGerade.adoc[LiegenAufGerade],
+xref:/commands/SindParallel.adoc[SindParallel], xref:/commands/LiegenAufKreis.adoc[LiegenAufKreis],
+xref:/commands/SindGleich.adoc[SindGleich] und xref:/commands/SindNormal.adoc[SindNormal].
+
+====

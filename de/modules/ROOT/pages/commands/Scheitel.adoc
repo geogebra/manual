@@ -1,0 +1,36 @@
+= Scheitel (Befehl)
+:page-en: commands/Vertex_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Scheitel( <Kegelschnitt> )::
+  Liefert (alle) Scheitel des Kegelschnittes.
+
+Scheitel( <Ungleichungen> )::
+  Liefert die Schnittpunkte der Rändern von xref:/Ungleichungen.adoc[Ungleichungen].
+
+[EXAMPLE]
+====
+
+* `++Scheitel[(x + y < 3) && (x - y > 1)]++` liefert den Punkt _A = (2, 1)_.
+* `++{Scheitel[(x + y < 3) ∧ (x - y > 1) && (y > - 2)]}++` liefert _Liste1 = \{(2, 1), (5, -2), (-1, -2)}_.
+* `++Scheitel[(y > x²) ∧ (y < x)]++` liefert die Punkte _A = (0, 0)_ und _B = (1, 1)_.
+* `++{Scheitel[(y > x²) ∧ (y < x)]}++` liefert _Liste1 = \{(0, 0), (1, 1)}_.
+
+====
+
+Scheitel( <Vieleck> )::
+  Liefert (alle) Scheitel des Vielecks.
+
+Scheitel( <Vieleck>, <Zahl n> )::
+  Liefert den _n_-ten Scheitel des Vielecks.
+
+[NOTE]
+====
+
+Um eine xref:/Listen.adoc[Liste] der Scheitel des Vielecks/Kegelschnittes zu erhalten, schreiben Sie
+`++{Scheitel[Objekt]}++`.
+
+====
+
+Scheitel( <Strecke>, <Index>)::
+  Liefert für Index = 1 den Anfangspunkt und für Index = 2 den Endpunkt der gegebenen Strecke.

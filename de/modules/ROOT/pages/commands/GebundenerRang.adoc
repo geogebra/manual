@@ -1,0 +1,30 @@
+= GebundenerRang (Befehl)
+:page-en: commands/TiedRank_Command
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+GebundenerRang(<Liste>)::
+  Erzeugt eine Liste, in welcher das _i_-te Element dem Rang des _i_-ten Elements der Liste _L_ entspricht (der Rang des
+  Elementes ist die Position in der Liste Sortiere[L]). Befinden sich mehrere gleiche Elemente in _L_, welche in
+  Sortiere[L] die Positionen _k_ bis _l_ besetzen, so werden die Mittelwerte der Ränge von _k_ bis _l_ mit diesen
+  Elementen assoziiert.
+
+[EXAMPLE]
+====
+
+`++GebundenerRang[{3, 2, 2, 1}]++` liefert \{4, 2.5, 2.5, 1}.
+
+====
+
+[EXAMPLE]
+====
+
+`++GebundenerRang[{4, 1, 2, 3, 4, 2}]++` liefert \{5.5, 1, 2.5, 4, 5.5, 2.5} .
+
+====
+
+[NOTE]
+====
+
+Siehe auch den Befehl xref:/commands/OrdinalRang.adoc[OrdinalRang].
+
+====

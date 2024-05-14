@@ -1,0 +1,75 @@
+= Texte
+:page-en: Texts
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+Text-Objekte können mit dem Befehl xref:/commands/Text.adoc[Text] oder dem Werkzeug image:24px-Mode_text.svg.png[Mode
+text.svg,width=24,height=24] xref:/tools/Text.adoc[Text] oder durch Ziehen des Objekts aus der
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+xref:/Algebra_Ansicht.adoc[Algebra-Ansicht] in die image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Grafik_Ansicht.adoc[Grafik-Ansicht] erzeugt werden. Eine weitere Möglichkeit *für
+fortgeschrittene Benutzer* ist die direkte Eingabe des Textes unter Anführungszeichen " " in der
+xref:/Eingabezeile.adoc[Eingabezeile].
+
+== Begriffe
+
+Statischer Text::
+  ist unabhängig von den mathematischen Objekten und wird von Änderungen der Konstruktion im Allgemeinen nicht
+  beeinflusst.
+
+Dynamischer Text::
+  enthält Werte von Objekten, die bei Änderungen der Objekte automatisch aktualisiert werden.
+
+Gemischter Text::
+  ist eine Kombination von statischem und dynamischem Text.
+  Um einen gemischten Text zu erzeugen, können Sie zuerst den statischen Teil des Textes mithilfe der Tastatur eingeben
+  (z. B. Punkt A =). Danach können Sie in einer beliebigen Ansicht jenes Objekt auswählen, dessen Wert nun in den Text
+  eingefügt werden soll oder in der Auswahlliste der Objekte eines auswählen.
+
+== Eingabe mit der Eingabezeile
+
+Texte können aber auch in der Eingabezeile erzeugt werden. Dabei muss auf den Syntax geachtet werden, durch den
+dynamische und statische Anteile unterschieden werden.
+
+[NOTE]
+====
+
+GeoGebra fügt nun automatisch die nötige Syntax ("Punkt A = " + A ) für den gemischten Text ein: Anführungszeichen
+schließen den statischen Teil des Textes ein. Ein Plus-Symbol (+) verbindet den statischen und den dynamischen Teil des
+Textes miteinander.
+
+====
+
+[cols=",",options="header",]
+|===
+|Eingabe |Beschreibung
+|Dieser Text ist statisch. |Statischer Text
+|A |Dynamischer Text (falls Punkt A existiert)
+|"Punkt A = " + A |Zweiteiliger gemischter Text mit dem Wert des Punktes A
+|"a = " + a + "cm" |Dreiteiliger gemischter Text mit dem Wert der Zahl a
+|===
+
+[NOTE]
+====
+
+Falls Sie einen statischen Text erzeugen möchten, der aus dem Namen xx eines bereits existierenden Objektes besteht,
+müssen Sie diesen Text mit Anführungszeichen eingeben ("xx"). Wenn Sie hingegen nur xx eingeben, erzeugt GeoGebra
+automatisch einen dynamischen Text, der den Wert des Objekts anstatt des Namens xx anzeigt. Sie können jedoch jeden
+beliebigen Text, der nicht dem Namen eines einzelnen Objektes entspricht, ohne Anführungszeichen eingeben.
+
+====
+
+[NOTE]
+====
+
+In einem gemischten Text mit mehreren Teilen, müssen sämtliche statische Teile mit Anführungszeichen eingegeben werden.
+Unterschiedliche Text-Teile (statisch und dynamisch) können durch Plus-Symbole (+) verbunden werden. Mit der Version 4.0
+ist das + Symbol nicht mehr zwangsläufig notwendig.
+
+====
+
+[NOTE]
+====
+
+Handelt es sich um mathematische Schriftzüge, so können die Textobjekte auch xref:/LaTeX.adoc[LaTeX] verwenden.
+
+====
