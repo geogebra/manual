@@ -1,0 +1,64 @@
+= NOplossen Commando
+:page-en: commands/NSolve_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Dit commando is alleen maar beschikbaar in xref:/CAS_venster.adoc[CAS venster]..
+
+NOplossen( <Vergelijking> )::
+  Zoekt (numeriek) een oplossing van de vergelijking in de hoofdveranderlijke. Geef voor niet-veeltermen steeds een
+  startwaarde op (zie verder).
+NOplossen( <Vergelijking>, <Variabele> )::
+  Zoekt (numeriek) een oplossing van de vergelijking voor de gegeven variabele. Geef voor niet-veeltermen steeds een
+  startwaarde op (zie verder).
+NOplossen( <Vergelijking>, <Variabele = startwaarde> )::
+  Berekent numeriek de lijst van oplissingen van de gegeven vergelijking voor de gegeven variabele met zijn startwaarde.
+
+[EXAMPLE]
+====
+
+* `++NOplossen(cos(x) = x, x = 0)++` geeft _\{0.74}_
+* `++NOplossen(a^4 + 34a^3 = 34, a = 3)++` geeft de lijst _\{-34, 0.99}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++NOplossen(a^4 + 34a^3 = 34, a)++` geeft _\{a = -34.00086498588374, a = 0.9904738885574178}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++NOplossen(x^6 - 2x + 1 = 0)++` geeft _\{x = 0.51, x = 1}_.
+
+====
+
+NOplossen( <Stelsel vergelijkingen>, <Lijst met Variabelen)> )::
+  Zoekt (numeriek) een oplossing van een stelsel van vergelijkingen voor de lijst met variabelen.
+
+[EXAMPLE]
+====
+
+`++NOplossen({π / x = cos(x - 2y), 2 y - π = sin(x)}, {x = 3, y = 1.5})++` geeft _\{x = 3.141592651686591, y =
+1.570796327746508}_.
+
+====
+
+[NOTE]
+====
+
+* Wanneer je geen startwaarde ingeeft zoals _a=3_ of _\{x = 3, y = 1.5}_ kan het zijn dat geen oplossing gevonden, maar
+ook het geven van een startwaarde garandeert niet dat het numeriek algoritme een oplossing vindt.
+* Het aantal cijfers achter de komma kan je zelf instellen in het xref:/Opties_Menu.adoc[Opties Menu].
+* π typ je met de toetscombinatie /Sjabloon:KeyCode.adoc[Sjabloon:KeyCode].
+* Zie ook de commando's xref:/commands/Oplossen.adoc[Oplossen] en xref:/commands/COplossen.adoc[COplossen].
+
+====

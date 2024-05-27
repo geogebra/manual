@@ -1,0 +1,45 @@
+= BewijsDetail Commando
+:page-en: commands/ProveDetails_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+BewijsDetail( <Booleaanse Uitdrukking> )::
+  Geeft details over het resultaat van _Bewijs_.
+
+xref:/Booleaanse_waarden.adoc[Booleaanse waarden] worden in GeoGebra normaal gebruikt in bewerkingen. Het commando
+_Bewijs_ gebruikt http://en.wikipedia.org/wiki/nl:Symbolische_wiskunde[w:nl:Symbolische_wiskunde] om te bepalen of een
+uitdrukking in het algemeen _true_ of _false_ is. Wanneer GeoGebra het antwoord niet kan bepalen, is het resultaat
+_onbepaald_. Dit commando werkt zoals het commando xref:/commands/Bewijs.adoc[Bewijs], maar geeft in een
+xref:/Lijsten.adoc[lijst] ook details over het antwoord :
+
+* een lege lijst *\{}* wanneer GeoGebra het antwoord niet kan bepalen.
+* een lijst met een element: *\{false}*, wanneer de uitdrukking in het algemeen niet waar is.
+* een lijst met een element: *\{true}*, wanneer de uitdrukking altijd waar is.
+* een lijst met meerdere elementen die de booleaanwe waarde _true_ bevat, en een andere lijst met een aantal
+_uitsluitende voorwaarden_, wanneer de uitdrukking waar is onder bepaalde voorwaarden, b.v. \{true,
+\{"ZijnCollinear(A,B,C),ZijnGelijk(C,D)"}}. Dit betekent dat wanneer geen van deze voorwaarden waar is, de uitdrukking
+waar zal zijn.
+* Een lijst *\{true,\{"..."}}*, als de uitdrukking waar is onder bepaalde voorwaarden, maar deze voorwaarden niet in een
+leesbare tekst kunnen gevat beschreven worden.
+
+[EXAMPLE]
+====
+
+Definiëren we een driehoek met als hoekpunten _A_, _B_ en _C_, en definiëren we `++D=Middelpunt(B,C)++`,
+`++E=Middelpunt(A,C)++`, `++p=Rechte(A,B)++`, `++q=Rechte(D,E)++`. Wanneer `++BewijsDetail(p∥q)++` als resultaat geeft
+\{true,\{"ZijnGelijk(A,B)"}}, betekent dit dat wanneer de punten _A_ en _B_ niet samenvallen, de middenparallel _DE_ van
+de driehoek evenwijdig is met de zijnde _AB_.
+
+====
+
+[NOTE]
+====
+
+Zie ook het commando xref:/commands/Bewijs.adoc[Bewijs] en xref:/Booleaanse_waarden.adoc[Booleaanse waarden].
+
+====

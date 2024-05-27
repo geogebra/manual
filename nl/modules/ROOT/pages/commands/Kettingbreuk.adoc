@@ -1,0 +1,42 @@
+= Kettingbreuk Commando
+:page-en: commands/ContinuedFraction_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Kettingbreuk( <Getal> )::
+  Creëert een http://en.wikipedia.org/wiki/Continued_fraction[kettingbreuk] van het gegeven getal. Het resultaat is een
+  LaTeX-tekst. De bruek wordt numeriek berekend met een nauwkeurigheid van 10^-8^.
+Kettingbreuk( <Getal>, <Niveau> )::
+  Creëert een kettingbreuk van het gegeven getal. Het aantal quotiënten is kleiner of gelijk aan _Niveau_, maar is nooit
+  meer dan het aantal quotiënten nodig om de hierboven vermelde nauwkeurigheid te bereiken.
+Kettingbreuk( <Getal>, <Niveau>, <Verkorte weergave waar|vals> )::
+  De betekenis van de eerste twee argumenten is hetzelfde als hierboven. Het argument _Niveau_ is optioneel.
+  Wanneer__Shorthand__ = true, wordt een kortere syntax gebruikt voor het resultaat: the LaTeX tekst bevat een lijst met
+  de gehele delen van de kettingbreuk.
+
+[EXAMPLE]
+====
+
+* `++Kettingbreuk(5.45, true)++` geeft [_5; 2, 4, 1, 1_]
+* `++Kettingbreuk(5.45, 3, true)++` geeft [_5; 2, 4, ..._]
+
+====
+
+[EXAMPLE]
+====
+
+`++Kettingbreuk(5.45, 3)++` geeft _stem:[5 + \frac\{1}\{ 2+ \frac\{1}\{4+ ... } }]_
+
+====
+
+[EXAMPLE]
+====
+
+`++Kettingbreuk(5.45)++` geeft _stem:[5 + \frac\{1}\{ 2+ \frac\{1}\{4+ \frac\{1}\{ 1+ \frac\{1}\{ 1 } } } }]_
+
+====

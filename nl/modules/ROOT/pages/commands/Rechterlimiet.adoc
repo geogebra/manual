@@ -1,0 +1,60 @@
+= Rechterlimiet Commando
+:page-en: commands/LimitAbove_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Rechterlimiet( <Functie>, <Waarde> )::
+  Berekent de rechterlimiet van de functie voor de gegeven waarde.
+
+[EXAMPLE]
+====
+
+`++Rechterlimiet(1 / x, 0)++` geeft _stem:[\infty]_ .
+
+====
+
+[NOTE]
+====
+
+Niet alle limieten kunnen berekend worden door GeoGebra. Je krijgt dan als resultaat _onbepaald_ net zoals in die
+gevallen waar het correcte resultaat onbepaald is.
+
+====
+
+== CAS venster
+
+Rechterlimiet( <Functievoorschrift>, <Variabele> )::
+  Berekent de rechterlimiet van de functie voor de gegeven waarde.
+  \{\{example|1=
+  `++Rechterlimiet(1 / x, 0]++` geeft stem:[\infty] .
+  })
+Rechterlimiet( <Functievoorschrift>, <Variabele>, <Waarde> )::
+  Berekent de rechterlimiet van de functie in meerdere variabelen voor de gegeven waarde naar de gegeven variabele.
+
+[EXAMPLE]
+====
+
+`++Rechterlimiet(1 / a, a, 0)++` geeft stem:[\infty] .
+
+====
+
+[NOTE]
+====
+
+Niet alle limieten kunnen berekend worden door GeoGebra. Je krijgt dan als resultaat _?_ net zoals in die gevallen waar
+het correcte resultaat onbepaald is.
+
+====
+
+[NOTE]
+====
+
+Zie ook de commando's xref:/commands/Limiet.adoc[Limiet Commando] en xref:/commands/Linkerlimiet.adoc[Linkerlimiet
+Commando].
+
+====

@@ -1,0 +1,58 @@
+= Ontbinden Commando
+:page-en: commands/Factor_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Ontbinden( <Veelterm> )::
+  Ontbind de veelterm in factoren.
+
+[EXAMPLE]
+====
+
+`++Ontbinden(x^2 + x - 6)++` geeft _(x + 3) (x - 2)_.
+
+====
+
+[NOTE]
+====
+
+Dit commando moet het CAS-systeem inladen en kan daarom traag werken op sommige computers.
+
+====
+
+== CAS venster
+
+Ontbinden( <Veelterm> )::
+  Ontbind de veelterm in factoren.
+Ontbinden( <Uitdrukking>, <Veranderlijke> )::
+  Ontbind een veelterm in factoren naar een gegeven variable.
+
+[EXAMPLE]
+====
+
+* `++Ontbinden(x^2 - y^2, x)++` geeft _(x + y) (x - y)_, de ontbinding van _x^2^ - y^2^_ naar _x_,
+* `++Ontbinden(x^2 - y^2, y)++` geeft _(-x - y) (-x + y)_, de ontbinding van _x^2^ - y^2^_ naar _y_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Ontbinden(x^2 - y^2)++` geeft _(x + y) (x - y)_.
+
+====
+
+[NOTE]
+====
+
+Dit commando ontbindt naar rationale getallen. Om te ontbinden naar irrationale reële getallen, zie het commando
+xref:/commands/IFactor.adoc[IFactor Commando]. Om te ontbinden naar complexe getallen, zie de commando'
+xref:/commands/Ontbind_in_complexe_factoren.adoc[Ontbind in complexe factoren Commando] en
+xref:/commands/CIFactor.adoc[CIFactor Commando].
+
+====

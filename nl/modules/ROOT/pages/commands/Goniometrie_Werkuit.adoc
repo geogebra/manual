@@ -1,0 +1,89 @@
+= Goniometrie Werkuit Commando
+:page-en: commands/TrigExpand_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Goniometrie_Werkuit( <Uitdrukking> )::
+  Werkt een goniometrische uitdrukking uit naar een uitdrukking met enkel eenvoudige veriabelen als argumenten.
+Goniometrie_Werkuit( <Uitdrukking>, <Doelfunctie> )::
+  Werkt een goniometrische uitdrukking uit naar een uitdrukking met enkel eenvoudige veriabelen als argumenten, bij
+  voorkeur de gegeven doelfunctie.
+
+[EXAMPLE]
+====
+
+`++Goniometrie_Werkuit(tan(x + y), tan(x))++` geeft stem:[\frac\{-tan(x) - tan(y)}\{tan(x) tan(y) - 1}].
+
+====
+
+[EXAMPLE]
+====
+
+`++Goniometrie_Werkuit(tan(x + y))++` geeft stem:[\frac\{cos(x) sin(y) + cos(y) sin(x)}\{cos(x) cos(y) - sin(x)
+sin(y)}].
+
+====
+
+== CAS venster
+
+Goniometrie_Werkuit( <Uitdrukking> )
+
+Werkt een goniometrische uitdrukking uit naar een uitdrukking met enkel eenvoudige veriabelen als argumenten.
+
+Goniometrie_Werkuit( <Uitdrukking>, <Doelfunctie> )
+
+Werkt een goniometrische uitdrukking uit naar een uitdrukking met enkel eenvoudige veriabelen als argumenten, bij
+voorkeur de gegeven doelfunctie.
+
+Goniometrie_Werkuit( <Uitdrukking>, <Doelfunctie>, <Doel_veranderlijke> )
+
+[EXAMPLE]
+====
+
+`++Goniometrie_Werkuit(tan(x + y), tan(x))++` geeft stem:[\frac\{-tan(x) - tan(y)}\{tan(x) tan(y) - 1}].
+
+====
+
+[EXAMPLE]
+====
+
+`++Goniometrie_Werkuit(tan(x + y))++` geeft stem:[\frac\{cos(x) sin(y) + cos(y) sin(x)}\{cos(x) cos(y) - sin(x)
+sin(y)}].
+
+====
+
+Werkt een goniometrische uitdrukking uit naar een uitdrukking met enkel eenvoudige veriabelen als argumenten, bij
+voorkeur de gegeven doelfunctie en doelvariabele.
+
+[EXAMPLE]
+====
+
+`++Goniometrie_Werkuit(sin(x), sin(x), x/2)++` geeft stem:[2cos(\frac\{x}\{2})sin(\frac\{x}\{2})].
+
+====
+
+Goniometrie_Werkuit( <Uitdrukking>, <Doelfunctie>, <Doel_veranderlijke>, <Doel_veranderlijke> )
+
+Werkt een goniometrische uitdrukking uit naar een uitdrukking met enkel eenvoudige veriabelen als argumenten, bij
+voorkeur de gegeven doelfunctie en doelvariabelen.
+
+[EXAMPLE]
+====
+
+`++Goniometrie_Werkuit(csc(x) - cot(x) + csc(y) - cot(y), tan(x), x/2, y/2)++` geeft
+stem:[tan(\frac\{x}\{2})+tan(\frac\{y}\{2})].
+
+====
+
+[NOTE]
+====
+
+Zie ook xref:/commands/Gonio_Vereenvoudig.adoc[Gonio Vereenvoudig Commando] en
+xref:/commands/Goniometrie_Combineer.adoc[Goniometrie Combineer Commando].
+
+====

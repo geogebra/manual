@@ -1,0 +1,91 @@
+= Eerste Commando
+:page-en: commands/First_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Eerste( <Lijst> )::
+  Creëert een nieuwe lijst met enkel het eerste element van de gegeven lijst.
+Eerste( <Lijst>, <Aantal elementen> )::
+  Creëert een nieuwe lijst met enkel de eerste _n_ elementen van de gegeven lijst.
+Eerste( <Text> )::
+  Geeft het eerste karakter van de tekst.
+Eerste( <Text> , <Aantal elementen> )::
+  Geeft de eerste _n_ karakters van de tekst.
+
+[EXAMPLE]
+====
+
+`++Eerste("Hallo",2)++` geeft _"Ha"_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Eerste("Hallo")++` geeft _"H"_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Eerste({1, 4, 3}, 2)++` geeft _\{1, 4}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Eerste({1, 4, 3})++` geeft _\{1}_.
+
+====
+
+[NOTE]
+====
+
+Om het eerste element te verkrijgen gebruik je `++Element({1, 4, 3}, 1)++`.
+
+====
+
+== CAS venster
+
+Eerste( <Lijst> )
+
+Creëert een nieuwe lijst met enkel het eerste element van de gegeven lijst.
+
+Eerste( <Lijst>, <Aantal elementen> )
+
+[EXAMPLE]
+====
+
+`++Eerste({1, 4, 3})++` geeft _\{1}_.
+
+====
+
+[NOTE]
+====
+
+Om het eerste element te verkrijgen gebruik je `++Element({1, 4, 3}, 1)++`.
+
+====
+
+Creëert een nieuwe lijst met enkel de eerste _n_ elementen van de gegeven lijst.
+
+[EXAMPLE]
+====
+
+`++Eerste({1, 4, 3}, 2)++` geeft _\{1, 4}_.
+
+====
+
+[NOTE]
+====
+
+Zie ook het commando xref:/commands/Laatste.adoc[Laatste].
+
+====

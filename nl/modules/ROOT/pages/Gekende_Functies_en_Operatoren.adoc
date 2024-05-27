@@ -1,0 +1,158 @@
+= Gekende Functies en Operatoren
+:page-en: Predefined_Functions_and_Operators
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Om getallen, coördinaten of vergelijkingen te creëren via de xref:/Invoerveld.adoc[Invoerbalk] kan je volgende functies
+en operatoren gebruiken. Logische operatoren en functies vind je onder xref:/Booleaanse_waarden.adoc[Booleaanse
+waarden].
+
+[NOTE]
+====
+
+Plaats het argument van de functie tussen haakjes, zonder een spatie tussen de naam van de functie en de haakjes.
+
+====
+
+[cols=",",options="header",]
+|===
+|Operator / Functie |Input
+|ℯ (http://en.wikipedia.org/wiki/nl:E_(wiskunde)[het getal van Euler]) |/Sjabloon:KeyCode.adoc[Sjabloon:KeyCode]
+
+|ί (http://en.wikipedia.org/wiki/nl:Imaginaire_eenheid[Imaginaire eenheid]) |/Sjabloon:KeyCode.adoc[Sjabloon:KeyCode]
+
+|π |/Sjabloon:KeyCode.adoc[Sjabloon:KeyCode] of pi
+
+|° (http://en.wikipedia.org/wiki/nl:Booggraad[Graden symbool]) |/Sjabloon:KeyCode.adoc[Sjabloon:KeyCode]
+
+|Optelling |+
+
+|Aftrekking |-
+
+|Vermenigvuldiging |* of spatietoets
+
+|Scalair product |* of spatietoets
+
+|Vectorieel product (zie xref:/commands/Vectorieel_Product.adoc[Vectorieel product]) |⊗
+
+|Deling |/
+
+|Machtsverheffing |^ of superscript (`++x^2++` or `++x2++`)
+
+|Faculteit |!
+
+|Haakjes |( )
+
+|x-coördinaat |x( )
+
+|y-coördinaat |y( )
+
+|z-coördinaat |z( )
+
+|Absolute waarde (modulus in poolcoördinaten of vector - 1ste coördinaatgetal in sferische coördinaten) |abs( )
+
+|Argument (hoek in poolcoördinaten of vector - 2de coördinaatgetal in sferische coördinaten) |arg( )
+
+|Hoogte (3de coördinaatgetal in sferische coördinaten) |alt( )
+
+|Toegevoegde (zie: http://en.wikipedia.org/wiki/nl:Complex_geconjugeerde[complex geconjugeerde]) |toegevoegde( )
+
+|Teken |sgn( ) of sign()
+
+|Vierkantswortel |sqrt( )
+
+|Derde machtswortel |cbrt( )
+
+|ToevalsgetalTussen 0 en 1 |random( )
+
+|Exponentiële functie |exp( ) of ℯ^x^
+
+|Natuurlijke Logaritme (logaritme met basis e) |ln( )
+
+|Logaritme met basis 2 |ld( )
+
+|Logaritme met basis 10 |log_10( ) of log( ) of lg( )
+
+|Logaritme van _x_ met basis _b_ |log(b, x )
+
+|Cosinus |cos( )
+
+|Sinus |sin( )
+
+|Tangens |tan( )
+
+|Secans |sec()
+
+|Cosecans |cosec()
+
+|Cotangens |cot()
+
+|Boogcosinus |acos( ) or arccos( )
+
+|Boogsinus |asin( ) or arcsin( )
+
+|Boogtangens (geeft een resultaat tussen -π/2 en π/2) |atan( ) or arctan( )
+
+|(geeft een resultaat tussen -π en π)] |atan2(y, x)
+
+|Cosinus hyperbolicus |cosh( )
+
+|Sinus hyperbolicus |sinh( )
+
+|Tangens hyperbolicus |tanh( )
+
+|Secans hyperbolicus |sech( )
+
+|Cosecans hyperbolicus |cosech( )
+
+|Tangens hyperbolicus |coth( )
+
+|Boogcosinus hyperbolicus |acosh( ) or arccosh( )
+
+|Boogsinus hyperbolicus |asinh( ) or arcsinh( )
+
+|Boogtangens hyperbolicus |atanh( ) or arctanh( )
+
+|Grootste geheel getal kleiner of gelijk aan |floor( )
+
+|Kleinste geheel getal groter of gelijk aan |ceil( )
+
+|Afronden |round( )
+
+|http://en.wikipedia.org/wiki/nl:B%C3%A8tafunctie[Bètafunctie] Β(a, b) |beta(a, b)
+
+|http://mathworld.wolfram.com/IncompleteBetaFunction.html[Onvolledige Bètafunctie] Β(x;a, b) |beta(a, b, x)
+
+|http://mathworld.wolfram.com/RegularizedBetaFunction.html[Onvolledige geregulariseerde Bètafunctie] I(x; a, b)
+|betaRegularized(a, b, x)
+
+|http://en.wikipedia.org/wiki/nl:Gammafunctie[Gammafunctie Γ(x)] |gamma( x)
+
+|http://mathworld.wolfram.com/IncompleteGammaFunction.html[Onvolledige Gammafunctie] γ(a, x) |gamma(a, x)
+
+|P(a,x) = γ(a, x) / Γ(a) ] |gammaRegularized(a, x)
+
+|http://en.wikipedia.org/wiki/Error_function[Foutfunctie] |erf(x)
+
+|xref:/Reëel_functie.adoc[Reëel] |re( )
+
+|xref:/Imaginair_functie.adoc[Imaginair] |im( )
+
+|http://en.wikipedia.org/wiki/Digamma_function[Digamma functie] |psi(x)
+
+|De http://en.wikipedia.org/wiki/Polygamma_function[Polygamma function] is de (m+1)de afgeleide van de natuurlijke
+logaritme van de http://en.wikipedia.org/wiki/Gamma_function[Gamma function, gamma(x)] (m=0,1) |polygamma(m, x)
+
+|De http://mathworld.wolfram.com/SineIntegral.html[Sinus Integraal] functie |sinIntegral(x)
+
+|De http://mathworld.wolfram.com/CosineIntegral.html[Cosinus Integraal] functie |cosIntegral(x)
+
+|De http://mathworld.wolfram.com/ExponentialIntegral.html[Exponentiële Integraal] functie |expIntegral(x)
+
+|De http://en.wikipedia.org/wiki/Riemann_zeta_function[Riemann-Zeta] functie ζ(x) |zeta(x)
+|===

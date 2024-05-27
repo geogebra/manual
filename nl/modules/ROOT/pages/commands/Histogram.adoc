@@ -1,0 +1,116 @@
+= Histogram Commando
+:page-en: commands/Histogram_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Histogram( <Lijst met klassengrenzen>, <Lijst met hoogtes> )::
+  Creëert een histogram van staven met gegeven hoogtes. De klassengrenzen bepalen de breedte en de positie van elke
+  staaf van het histogram.
+
+[EXAMPLE]
+====
+
+`++Histogram({0, 1, 2, 3, 4, 5}, {2, 6, 8, 3, 1})++` creëert een histogram van 5 staven met de gegeven hoogtes. De
+eerste staaf staat boven het interval [_0, 1_], de tweede boven het interval [_1, 2_], enz.
+
+====
+
+Histogram( <Lijst met klassengrenzen>, <Lijst met waarnemingsgetallen>, <Booleaans Gebruiksdichtheid>,
+<Dichtheidsschaalfactor (optioneel)> )::
+  Creëert een histogram vanuit de lijst met waarnemingsgetallen. De klassengrenzen bepalen de breedte en de positie van
+  elke staaf van het histogram en worden gebruikt om te bepalen hoeveel waarnemingsgetallen tot elke klasse behoren. De
+  Booleaanse variabele kan je gebruiken om eventueel de hoogte van de staven aan te passen. Deze hoogte wordt als volgt
+  bepaald:
+
+* Als _Booleaans Gebruikdichtheid = true_, dan is hoogte = (Dichtheidsschaalfactor) * (klassenfrequentie) /
+(klassenbreedte)
+* Als _Booleaans Gebruikdichtheid = false_, dan is hoogte = klassenfrequentie
+
+Standaard, Booleaans Gebruiksdichtheid = true en Dichtheidsschaalfactor = 1. Dit creëert een histogram met een totale
+oppervlakte = n, het aantal waarnemingsgetallen.
+
+[NOTE]
+====
+
+Alle waarnemingsgetallen moeten binnen de uiterste klassengrenzen liggen. Anders geeft het commando als resultaat
+“ongedefinieerd”.
+
+====
+
+[NOTE]
+====
+
+De klassen zijn van het type [a, b [ behalve de laatste klasse. Die is van het type[a, b]
+
+====
+
+[EXAMPLE]
+====
+
+("Standaard Histogram")
+
+`++Histogram({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true)++` creëert een histogram met 3 staven, met als
+hoogtes 0.5 (eerste staaf met f1=5 gedeeld door klassenbreedte 10), 0.2 (tweede staaf), en 0.1 (derde staaf).
+
+Dit histogram heeft als totale oppervlakte = 0.5*10 + 0.2*10 + 0.1*10 = 8.
+
+====
+
+[EXAMPLE]
+====
+
+("Absoluut Histogram")
+
+`++Histogram({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, false)++` creëert een histogram met 3 staven, met als
+hoogtes 5 (eerste staaf), 2 (tweede staaf), en 1 (derde staaf). Dit histogram past geen herschaling toe en de hoogte van
+de staven is gelijk aan de frequenties van de waarden in elke klasse.
+
+====
+
+[EXAMPLE]
+====
+
+("Relatief histogram")
+
+`++Histogram({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 10/ 8)++` creëert een histogram met 3 staven, met
+als hoogtes 0.625 (eerste staaf), 0.25 (tweede staaf), en 0.125 (derde staaf). Dit histogram past een dichtheidsschaling
+toe om de staafhoogtes te laten overeenstemmen met de relatieve frequentie van elke klasse.
+
+Als n = het aantal waarnemingsgetallen en de klassen hebben een constante breedte w, dan creëert *dichtheidsschaalfactor
+= w/n een relatief histogram* .
+
+====
+
+[EXAMPLE]
+====
+
+("Genormalizeerd histogram")
+
+`++Histogram({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 1/8)++` creëert een histogram met 3 staven, met
+als hoogtes .0625 (eerste staaf), .025 (tweede staaf), en .0125 (derde staaf).
+
+DIt oppervlakte heeft als totale oppervlakte = .0625*10 + .025*10 + .0125*10 = 1.
+
+Als n = het aantal waarnemingsgetallen is, dan creëert de *dichtheidsschaalfactor = 1/n een genormalizeerd histogram*
+met als totale oppervlakte = 1. Dit is handig om een histogram te laten overeenstemmen met een kansdichtheidsfunctie.
+
+====
+
+Histogram( <Logisch Cumulatief>, <Lijst met klassengrenzen>, <Lijst met waarnemingsgetallen>, <Booleaans
+Gebruiksdichtheid>, <Dichtheidsschaalfactor (optioneel)> )
+
+Als Cumulatief = true creëert het een histogram waarvan de hoogte van elke staaf gelijk is aan de cumulatieve frequentie
+van de klasse.
+
+[EXAMPLE]
+====
+
+ :`++Histogram(true, {10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true)++` creëert een histogram met 3 staven,
+met als hoogtes 0.5 (eerste staaf), 0.7 (tweede staaf), and 0.8 (derde staaf).
+
+====

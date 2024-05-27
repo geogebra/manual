@@ -1,0 +1,76 @@
+= Complexe getallen
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+GeoGebra ondersteunt niet rechtstreeks complexe getallen, maar je kunt puntn gebruiken om bewerkingen met complexe
+getallen te simuleren.
+
+[EXAMPLE]
+====
+
+Wanneer je het complexe getal 3 + 4ί in het Invoerveld typt, verkrijg je het getal (3, 4) in het
+xref:/Tekenvenster.adoc[Tekenvenster]. De coördinaten van dit punt worden getoond als 3 + 4ί in het
+xref:/Algebra_venster.adoc[Algebra venster].
+
+====
+
+[NOTE]
+====
+
+Je kunt in het xref:/Algebra_venster.adoc[Algebra venster] elk punt tonen als een complex getal: - Open het
+xref:/Eigenschappen_dialoogvenster.adoc[Eigenschappenvenster] van het punt.- Klik op de tab _Algebra_ - Selecteer
+_Complex getal_ in het rolmenu _Coördinaten_.
+
+====
+
+De imaginaire eenheidt ί kan je ofwel selecteren in de lijst met symbolen achteraan in het invoerveld, ofwel
+rechtstreeks typen met de toetsencombinatie /Sjabloon:KeyCode.adoc[Sjabloon:KeyCode]. Tenzij je in het
+xref:/CAS_venster.adoc[CAS venster] werkt of i de naam is van een voordien gedefinieerde variabele, wordt i herkend als
+het coördinatenkoppel i = (0, 1) of het complexe getal 0 + 1ί. Dit betekent ook dat je deze variable kan gebruiken om
+complexe getallen te typen in het invoerveld (b. v. q = 3 + 4i), maar niet in het CAS venster.
+
+[EXAMPLE]
+====
+
+Optelling en aftrekking:
+
+* `++(2 + 1ί) + (1 – 2ί)++` geeft het complexe getal 3 – 1ί.
+* `++(2 + 1ί) - (1 – 2ί)++` geeft het complexe getal 1 + 3ί.
+
+====
+
+[EXAMPLE]
+====
+
+Vermenigvuldiging en deling:
+
+* `++(2 + 1ί) * (1 – 2i)++` geeft het complexe getal 4 – 3ί.
+* `++(2 + 1ί) / (1 – 2i)++` geeft het complexe getal 0 + 1ί.
+
+====
+
+[NOTE]
+====
+
+De gewone vermenigvuldiging `++(2, 1)*(1, -2)++` geeft het scalair product van de twee vectoren.
+
+====
+
+Ook volgende commando's en functies kunnen gebruikt worden:
+
+* `++x(w)++` of `++re(w)++` geeft het reële gedeelte van het complexe getal _w_
+* `++y(w)++` of `++im(w)++` geeft het imaginaire gedeelte van het complexe getal _w_
+* `++abs(w)++` of `++Lengte[w]++` geeft de modulus van het complexe getal _w_
+* `++arg(w)++` of `++Hoek[w]++` geeft het argument van het complexe getal _w_
+* `++conjugate(w)++` of `++Spiegeling[w,xAs]++` geeft het toegevoegde complexe getal van _w_
+
+GeoGebra voert ook bewerkingen uit tussen reële en complexe getallen.
+
+[EXAMPLE]
+====
+
+* `++3 + (4 + 5ί)++` geeft het complexe getal 7 + 5ί.
+* `++3 - (4 + 5ί)++` geeft het complexe getal -1 - 5ί.
+* `++3 / (0 + 1ί)++` geeft het complexe getal 0 - 3ί.
+* `++3 * (1 + 2ί)++` geeft het complexe getal 3 + 6ί.
+
+====

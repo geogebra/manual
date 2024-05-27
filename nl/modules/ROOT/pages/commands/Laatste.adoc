@@ -1,0 +1,88 @@
+= Laatste Commando
+:page-en: commands/Last_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Laatste( <Lijst> )::
+  Geeft een nieuwe lijst die het laatste element bevat van de originele lijst.
+Laatste( <Tekst> )::
+  Geeft het laatste karakter van de tekst.
+Laatste( <Lijst>, <Aantal elementen> )::
+  Geeft een nieuwe lijst met enkel de laatste _n_ elementen van de originele lijst.
+Laatste( <Tekst>, <Aantal elementen> )::
+  Geeft de laatste _n_ karakters van de tekst.
+
+[EXAMPLE]
+====
+
+`++Laatste("Hallo", 2)++` geeft _"lo"_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Laatste({1, 4, 3}, 2)++` geeft _\{4, 3}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Laatste("Hallo")++` geeft _"o"_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Laatste({1, 4, 3})++` geeft _\{3}_.
+
+====
+
+[NOTE]
+====
+
+Om het laatste element te verkrijgen gebruik je `++Element({1, 4, 3}, 3)++`.
+
+====
+
+== CAS venster
+
+Laatste( <Lijst> )::
+  Geeft een nieuwe lijst die het laatste element bevat van de originele lijst.
+Laatste( <Lijst>, <Aantal elementen> )::
+  Geeft een nieuwe lijst met enkel de laatste _n_ elementen van de originele lijst.
+
+[EXAMPLE]
+====
+
+`++Laatste({1, 4, 3}, 2)++` geeft _\{4, 3}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Laatste({1, 4, 3})++` geeft _\{3}_.
+
+====
+
+[NOTE]
+====
+
+Om het laatste element te verkrijgen gebruik je `++Element({1, 4, 3}, 3)++`.
+
+====
+
+[NOTE]
+====
+
+Zie ook xref:/commands/Eerste.adoc[Eerste Commando].
+
+====

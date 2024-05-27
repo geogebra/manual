@@ -1,0 +1,78 @@
+= Lengte Commando
+:page-en: commands/Length_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Lengte( <Object> )::
+  Geeft de lengte van het object.
+
+[EXAMPLE]
+====
+
+* `++Lengte( <Vector> )++` geeft de lengte van de vector.
+* `++Lengte( <Punt> )++` geeft de lengte van de puntvector van het gegeven punt.
+* `++Lengte( <Lijst> )++` geeft de lengte (dit is het aantal elementen) van de lijst.
+* `++Lengte( <Tekst> )++` geeft het aantal karakters in de tekst.
+* `++Lengte( <MeetkundigePlaats> )++` geeft het aantal punten waaruit de meetkundige plaats bestaat. Gebruik
+xref:/commands/Omtrek.adoc[Omtrek][MeetkundigePlaats] voor de lengte van de meetkundige plats zelf. Zie ook
+xref:/commands/Eerste.adoc[Eerste Commando] voor meer details.
+* `++Lengte( <Boog> )++` geeft de the _booglengte_ van een hoek of sector.
+
+====
+
+Lenge( <Functie>, <Startwaarde>, <Eindwaarde> )::
+  Geeft de lengte van de grafiek van de functie over het gegeven interval.
+Lengte( <Functie>, <Startpunt>, <Eindpunt> )::
+  Geeft de lengte van de grafiek van de functie tussen de twee punten.
+Lengte[(<Kromme>, <Start t-waarde>, <Eind t-waarde> )::
+  Geeft de lengte van de kromme tussen de twee waarden van de parameter.
+Lengte( <Kromme>, <Startpunt>, <Eindpunt> )::
+  Geeft de lengte van de krromme tussen twee punten op de kromme.
+
+[EXAMPLE]
+====
+
+`++Lengte(2x, 0, 1)++` geeft 2.23606797749979, of ongeveer stem:[\sqrt\{5}].
+
+====
+
+[NOTE]
+====
+
+Wanneer de twee punten niet op de grafiek liggen, bepalen hun x-coördinaten het interval.
+
+====
+
+== CAS venster
+
+Lengte( <Functie>, <x-start>, <x-einde> )::
+  Berekent de lengte van de grafiek van een functie bepaald door de twee x-waarden.
+Lengte( <Functie>, <Variabele>, <Startpunt>, <Eindpunt> )::
+  Berekent de lengte van de grafiek van een functie tussen _Startpunt_ en _Eindpunt_.
+
+[EXAMPLE]
+====
+
+`++Lengte(2 a, a,  0, 1)++` geeft stem:[\sqrt\{5}].
+
+====
+
+[EXAMPLE]
+====
+
+`++Lengte(2 x, 0, 1)++` geeft stem:[\sqrt\{5}].
+
+====
+
+[NOTE]
+====
+
+Zie ook de knop /Bestand:Tool_Distance_gif.adoc[image:Tool_Distance.gif[Tool Distance.gif,width=32,height=32]]
+xref:/tools/Afstand_of_lengte.adoc[Afstand of lengte].
+
+====

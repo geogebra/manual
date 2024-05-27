@@ -1,0 +1,41 @@
+= Uitzoomen Commando
+:page-en: commands/ZoomOut_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Uitzoomen( <Schaalfactor> )::
+  Zoomt het xref:/Tekenvenster.adoc[Tekenvenster] uit met de gegeven factor. Het middelpunt van het scherm is het
+  zoomcentrum.
+Uitzoomen( <Schaalfactor>, <Centrum> )::
+  Zoomt het xref:/Tekenvenster.adoc[Tekenvenster] uit met de gegeven factor. De tweede parameter bepaalt het
+  zoomcentrum.
+
+[EXAMPLE]
+====
+
+`++Uitzoomen(2, (0, 0))++` zoomt het tekenvenster uit met factor 2 en de oorsprong als zoomcentrum
+
+====
+
+[EXAMPLE]
+====
+
+`++Uitzoomen(2)++` zoomt het tekenvenster uit met factor 2.
+
+====
+
+[NOTE]
+====
+
+* `++Uitzoomen(t)++` en `++Uitzoomen(t, A)++` komen overeen met respectievelijk `++Inzoomen(1/t)++` en
+`++Inzoomen(1/t, A)++`.
+* Wanneer meerdere tekenvensters getoond worden, wordt het actieve venster gebruikt.
+* Zie ook de commando's xref:/commands/Inzoomen.adoc[Inzoomen], xref:/commands/SetActiveView.adoc[SetActiveViewo],
+xref:/commands/Pan.adoc[Pan].
+
+====

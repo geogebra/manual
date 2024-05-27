@@ -1,0 +1,110 @@
+= Afbeelding invoegen Macro
+:page-en: tools/Image_Tool
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Met deze knop kan je een afbeelding invoegen in het Tekenvenster.
+
+Bepaal eerst de positie van de afbeelding. Dit kan je op twee manieren::
+
+* Klik in het Tekenvenster op de gewenste plaats om de linker onderhoek te bepalen.
+* KLik op een bestaand punt om dit aan te duiden als linker onderhoek van de afbeelding.
+
+In een dialoogvenster kan je in de bestandsmappen van je computer de gewenste afbeelding selecteren.
+
+[NOTE]
+====
+
+Na het selecteren van de knop /Bestand:Tool_Insert_Image_gif.adoc[image:Tool_Insert_Image.gif[Tool Insert
+Image.gif,width=32,height=32]] _Afbeelding invoegen_, kan je met de toetsencombinatie
+/Sjabloon:KeyCode.adoc[Sjabloon:KeyCode]-klik een afbeelding rechtstreeks van je klembord in het Tekenvenster plakken.
+
+====
+
+[NOTE]
+====
+
+Transparante [w:nl:Graphics_Interchange_Format] en [w:nl:Portable_Network_Graphics] bestanden worden ondersteund, maar
+png-bestanden moet je eventueel eerst in een grafisch programma zo aanpassen dat ze een alfa-kanaal hebben.
+
+====
+
+== Eigenschappen van afbeeldingen
+
+De positie van een afbeelding kan absoluut zijn op het scherm, of relatief t.o.v. het coördinatensysteem. Deze keuze kan
+je maken in de tab _Basis_ van het xref:/Eigenschappen_dialoogvenster.adoc[Eigenschappenvenster] van de afbeelding.
+
+In de tab _Positie_ van het Eigenschappenvenster kan je tot drie hoekpunten van de afbeelding vastleggen. Dit geeft je
+de mogelijkheid om afbeeldingen te herschalen, roteren en zelfs te vervormen. (zie ook het commando
+xref:/commands/Hoekpunt.adoc[Hoekpunt] ).
+
+* Hoekpunt 1: positie van de linker onderhoek van de afbeelding
+* Hoekpunt 2: positie van de rechter onderhoek van de afbeelding
+
+[NOTE]
+====
+
+Dit hoekpunt kan je maar bepalen als het eerst hoekpunt 1 bepaalde. Het bepaalt de breedte van de afbeelding.
+
+====
+
+* Hoekpunt 4: positie van de linker bovenhoek van de afbeelding
+
+[NOTE]
+====
+
+Dit hoekpunt kan je maar bepalen als het eerst hoekpunt 1 bepaalde. Het bepaalt de hoogte van de afbeelding.
+
+====
+
+[EXAMPLE]
+====
+
+Creëer drie punten A, B, en C om het effect van hoekpunten na te gaan.
+
+* Definieer A als het eerste en B als het tweede hoekpunt van de afbeelding. Door A en B te verslepen kan je hun invloed
+nagaan.
+* Verwijder nu punt B als tweede hoekpunt. Definieer A als het eerste en C als het vierde hoekpunt en ga na hoe het
+verslepen van de punten de afbeelding beïnvloedt.
+* Definieer nu de drie punten als hoekpunten en ga na hoe ze de afbeelding beïnvloeden.
+
+====
+
+[EXAMPLE]
+====
+
+Om een afbeelding vast te hechten aan een punt A en ze en een breedte 3 en hoogte 4 te geven, doe je het volgende:
+
+* Definieer hoekpunt 1 als A
+* Definieer Hoekpunt 2 als A + (3, 0)
+* Definieer Hoekpunt 4 als A + (0, 4)
+
+====
+
+[NOTE]
+====
+
+Wanneer je nu het punt A versleept, merk je dat de afmeting van de afbeelding niet verandert.
+
+====
+
+In de tab _Basis_ van het xref:/Eigenschappen_dialoogvenster.adoc[Eigenschappenvenster] kan je een afbeelding definiëren
+als een _Achtergrond_ afbeelding. Een achtergrondafbeelding ligt achter de coördinaatassen en kan je niet meer
+selecteren met de muis.
+
+[NOTE]
+====
+
+Je kunt deze instelling terug wijzigen in het Eigenschappenvenster. Selecteer
+/Bestand:Menu_Properties_png.adoc[image:Menu_Properties.png[Menu Properties.png,width=16,height=16]] Eigenschappen… in
+het menu _Bewerken_ om het dialoogvenster te openen.
+
+====
+
+Je kunt ook de _Ondoorschijnendheid_ van een afbeelding wijzigen om objecten zichtbaar te maken die achter de
+afbeelding. In de tab _Stijl_ van het Eigenschappenvenster kun je een __Vul__waarde ingeven tussen 0 % en 100 %.

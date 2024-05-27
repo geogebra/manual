@@ -1,0 +1,51 @@
+= TDistributie Commando
+:page-en: commands/TDistribution_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+TDistributie( <Vrijheidsgraden>, x )
+
+Creëert de kansdichtheidsfunctie (pdf) van een http://en.wikipedia.org/wiki/Student%27s_t-distribution[t-verdeling] met
+gegeven vrijheidsgraden.
+
+TDistributie( <Vrijheidsgraden>, <Variabele waarde> )::
+  Berekent de waarde van de cumulatieve dichtheidsfunctie van de t-verdeling voor een _variabele waarde v_, dit is de
+  kans _P(X ≤ v)_ waarbij _X_ is een willekeurige variabele is met een t-verdeling met gegeven vrijheidsgraden.
+
+[EXAMPLE]
+====
+
+`++TDistributie(10, 0)++` geeft _0.5_.
+
+====
+
+TDistributie( <Vrijheidsgraden>, x, <Boolean Cumulative> )
+
+Als _Cumulatief_ = true, creëert het de cumulatieve dichtheidsfunctie van de t-verdeling, anders creëert het de pdf van
+de t-verdeling.
+
+[NOTE]
+====
+
+Geeft de kans voor een gegeven _x_-coördinaat (of oppervlakte onder de grafiek van de dichtheidsfunctielinks van de
+gegeven _x_-waarde).
+
+====
+
+== CAS venster
+
+TDistributie( <Aantal vrijheidsgraden>, <Toevals_veranderlijke> )::
+  Berekent de waarde van de cumulatieve dichtheidsfunctie van de t-verdeling voor een _variabele waarde v_, dit is de
+  kans _P(X ≤ v)_ waarbij _X_ is een willekeurige variabele is met een t-verdeling met gegeven vrijheidsgraden.
+
+[EXAMPLE]
+====
+
+`++TDistributie(10, 0)++` geeft _stem:[\frac\{1}\{2}]_.
+
+====

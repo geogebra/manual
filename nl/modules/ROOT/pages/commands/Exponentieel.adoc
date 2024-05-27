@@ -1,0 +1,42 @@
+= Exponentieel Commando
+:page-en: commands/Exponential_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Exponentiëel( <Lambda>, x )::
+  Creëert de kansdichtheidsfunctie (pdf) of http://en.wikipedia.org/wiki/Exponential_distribution[exponentiële
+  verdeling] met als parameter _lambda_.
+Exponentieel( <Lambda>, <Variabele waarde> )::
+  Berekent de waarde van de cumulatieve dichtheidsfunctie van de exponentiële verdeling voor de variable value _v_, dit
+  is de kans _P(X ≤ v)_ waarbij _X_ een willekeurige variabele is met een exponentiële verdeling met als parameter
+  _lambda_.
+Exponentieel( <Lambda>, x, <Boolean Cumulative> )::
+  Wanneer _Cumulatief_ gelijk is aan 'true', creëert het de cumulative dichtheidsfunctie (cdf) van de exponentiële
+  verdeling, anders de pdf van de exponentiële verdeling.
+
+[NOTE]
+====
+
+Geeft de kans voor een gegeven _x_-coördinaat (of oppervlakte onder de grafiek van de exponentiële verdeling links van
+de gegeven _x_-coördinaat).
+
+====
+
+== CAS venster
+
+Exponentieel( <Lambda>, <Variabele waarde> )::
+  Berekent de waarde van de cumulatieve dichtheidsfunctie van de exponentiële verdeling voor de variable value _v_, dit
+  is de kans _P(X ≤ v)_ waarbij _X_ een willekeurige variabele is met een exponentiële verdeling met als parameter
+  _lambda_.
+
+[EXAMPLE]
+====
+
+`++Exponentieel(2, 1)++` geeft _stem:[\frac\{e^\{2} - 1}\{e^\{2} } ]_, of ongeveer _0.86_.
+
+====

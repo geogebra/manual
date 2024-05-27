@@ -1,0 +1,51 @@
+= COplossingsverzameling Commando
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Dit commando is alleen maar beschikbaar in xref:/CAS_venster.adoc[CAS venster]..
+
+== CAS Venster
+
+COplossingsverzameling( <Vergelijking> )::
+  Lost een vergelijking op en creëert een lijst van alle oplossingen, inclusief complexe oplossingen.
+COplossingsverzameling( <Vergelijking>, <Variabele> )::
+  Lost een vergelijking op voor een gegeven variabele en creëert een lijst van alle oplossingen, inclusief complexe
+  oplossingen.
+COplossingsverzameling( <Stelsel van vergelijkingen>, <Lijst van veranderlijken> )::
+  Lost een stelsel van vergelijkingen op voor een lijst van variabelen en creëert een lijst van alle oplossingen,
+  inclusief complexe oplossingen.
+
+[EXAMPLE]
+====
+
+`++COplossingsverzameling({y^2 = x - 1, x = 2 * y - 1}, {x, y})++` geeft stem:[\begin\{pmatrix}1 + 2 ί&1 + ί\\1 - 2 ί&1
+- ί\end\{pmatrix}], de complexe oplossingen van stem:[y^\{2} = x - 1] and stem:[x = 2 * y - 1].
+
+====
+
+[EXAMPLE]
+====
+
+`++COplossingsverzameling(a^2 = -1, a)++` geeft _\{ί, -ί}_, de complexe oplossingen van _a^2^ = -1_.
+
+====
+
+[EXAMPLE]
+====
+
+`++COplossingsverzameling(x^2 = -1)++` geeft _\{ί, -ί}_, de complexe oplossingen van _x^2^ = -1_.
+
+====
+
+[NOTE]
+====
+
+* Het complexe ί typ je met de toetscombinatie /Sjabloon:KeyCode.adoc[Sjabloon:KeyCode].
+* Zie ook de commando's xref:/commands/ComplexeWortels.adoc[Complexe wortels] en xref:/commands/Oplossen.adoc[Oplossen].
+
+====

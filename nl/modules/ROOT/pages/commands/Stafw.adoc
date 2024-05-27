@@ -1,0 +1,50 @@
+= Stafw Commando
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+stafw( <Lijst met waarnemingsgetallen> )::
+  Geeft de steekproefhttp://en.wikipedia.org/wiki/nl:Standaardafwijking[Standaardafwijking] van een gegeven
+  xref:/Lijsten.adoc[lijst] van waarnemingsgetallen.
+
+[EXAMPLE]
+====
+
+`++stafw({1, 2, 3})++` geeft _1_.
+
+====
+
+stafw( <Lijst met waarnemingsgetallen>, <Lijst met frequenties> )::
+  Geeft de standaardafwijking van de steekproef met de gegeven frequenties.
+
+[EXAMPLE]
+====
+
+`++stafw({1, 2, 3, 4, 4},{1, 1, 1, 2})++` geeft _1.08_.
+
+====
+
+[NOTE]
+====
+
+De standaardafwijking van een *populatie* bereken je met het commando xref:/commands/Stafwp.adoc[stafwp Commando].
+
+====
+
+== CAS venster
+
+stafw( <Lijst met waarnemingsgetallen> )::
+  Geeft de steekproefhttp://en.wikipedia.org/wiki/nl:Standaardafwijking[Standaardafwijking] van een gegeven
+  xref:/Lijsten.adoc[lijst] met waarnemingsgetallen. Wanneer de lijst niet-gedefinieerde variabelen bevat, geeft het de
+  formule om de standaardafwijking van de steekproef te berekenen.
+
+[EXAMPLE]
+====
+
+`++stafw({1, 2, a})++` geeft stem:[\frac\{\sqrt\{a²-3a+3}}\{\sqrt\{3}}].
+
+====

@@ -1,0 +1,23 @@
+= SomKwadratischeAfwijkingen Commando
+:page-en: commands/SumSquaredErrors_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+SomKwadratischeAfwijkingen( <Lijst met punten>, <Functie> )::
+  Berekent de som van de kwadratische afwijkingen tussen de y-waarden van de punten in de lijst en de functiewaarden van
+  de w-waarden in de lijst.
+
+[EXAMPLE]
+====
+
+Vertrekken we van een lijst `++L={(1, 2), (3, 5),(2, 2), (5, 2), (5, 5)}++` dan kunnen we bijvoorbeeld berekenen:
+`++f(x)=VeeltermRegr(L,1)++` en `++g(x)=VeeltermRegr(L,2)++`. `++SomKwadratischeAfwijkingen(L,f)++`geeft _9_ en
+`++SomKwadratischeAfwijkingen(L,g)++` geeft _6.99_. Hieruit kunnen we besluiten dat _g(x)_ een betere benadering geeft
+wanneer we de kwadratische afwijkingen optellen (Gauss).
+
+====

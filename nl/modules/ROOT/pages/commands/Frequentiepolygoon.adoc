@@ -1,0 +1,45 @@
+= Frequentiepolygoon Commando
+:page-en: commands/FrequencyPolygon_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+[NOTE]
+====
+
+Een frequentiepolygoon is een lijngrafiek die de middens van de bovenste lijnstukken van de staven van een histogram
+verbindt. Het gebruik van dit commando is dus hetzelfde als het gebruik van xref:/commands/Histogram.adoc[Histogram
+Commando].
+
+====
+
+Frequentiepolygoon( <Lijst met klassengrenzen>, <Lijst met hoogtes> )::
+  Creëert een frequentiepolygoon door de punten volgens de gegeven hoogtes. De klassengrenzen bepalen de x-coördinaat
+  van elk punt.
+Frequentiepolygoon( <Lijst met klassengrenzen>, <Lijst met waarnemingstetallen>, <Boolean Gebruiksdichtheid>,
+<Dichtheidsschaalfactor> )::
+  Creëert een frequentiepolygoon vanuit de waarnemingstetallen. De klassengrenzen bepalen de x-coördinaten van de punten
+  en worden gebruikt om te bepalen hoeveel waarnemingsgetallen tot elke klasse behoren. De y-coördinaat van een punt
+  word al volgt bepaald:
+
+* Als _Gebruiksdichtheid = true_, hoogte = (Dichtheidsschaalfactor) * (klassenfrequentie) / (klassenbreedte)
+* Als _Gebruiksdichtheid = false_, hoogte = klassenfrequentie
+
+Standaard is de Gebruiksdichtheid = true en de Dichtheidsschaalfactor= 1.
+
+Frequentiepolygoon( <Boolean Cumulative>, <Lijst met klassengrenzen>, <Lijst met waarnemingstetallen>, <Boolean
+Gebruiksdichtheid>, <Dichtheidsschaalfactor> )
+
+Als _Cumulatief = true_ creëert het een frequentiepolygoon waarbij de y-coördinaat van elk punt gelijk is aan de
+klassenfrequentieof plus de som van alle vorige frequenties.
+
+[NOTE]
+====
+
+Voor voorbeelden zie xref:/commands/Histogram.adoc[Histogram Commando].
+
+====

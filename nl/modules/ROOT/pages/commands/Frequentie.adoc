@@ -1,0 +1,87 @@
+= Frequentie Commando
+:page-en: commands/Frequency_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Frequentie( <Lijst met waarnemingsgetallen> )::
+  Geeft een lijst met de frequenties van elke unieke waarde in de gegeven lijst van gegevens. Deze kunnen zowel getallen
+  als tekst zijn. The lijst is in stijgende volgorde geordend voor de unieke waarden. Een lijst van de overeenkomstige
+  unieke waarden krijg je met het commando xref:/commands/Uniek.adoc[Uniek].
+Frequentie( <Boolean Cumulatief>, <Lijst met waarnemingsgetallen> )::
+  Wanneer _Cumulatief_ = _false_, is het resultaat hetzelfde als Frequentie( <Lijst met waarnemingsgetallen> )
+  Wanneer _Cumulatief_ = _true_, wordt een lijst gecreëerd van cumulatieve frequenties.
+Frequentie( <Lijst met klassengrenzen>, <Lijst met waarnemingsgetallen> )::
+  Geeft een lijst met de frequenties van de waarden die binnen de intervallen liggen van de vorm [a, b[, waarbij _a_ en
+  _b_ de koppels van opeenvolgende geltallen zijn in de gegeven lijst met klassengrenzen in de gegeven lijst. Het
+  hoogste interval is van de vorm [a, b].
+  .
+Frequentie( <Lijst met tekst>, <Lijst met tekst> )::
+  Geeft een contingentiematrix met de frequenties van de paren van de twee lijsten. De rijen van de matrix komen overeen
+  met de unieke waarden van de eerste lijst, en de kolommen met de unieke waarden in de tweede lijst. De lijst met
+  unieke waarden voor elke lijst verkrijg je met het commando xref:/commands/Uniek.adoc[Uniek].
+Frequentie( <Boolean Cumulatief>, <Lijst met klassengrenzen>, <Lijst met waarnemingsgetallen> )::
+  Wanneer _Cumulatief_ = _false_, is het resultaat hetzelfde als Frequentie( <Lijst met klassengrenzen>, <Lijst met
+  waarnemingsgetallen> )
+  Wanneer _Cumulatief_ = _true_, wordt een lijst gecreëerd van cumulatieve frequenties
+Frequentie( <Lijst met klassengrenzen>, <Lijst met waarnemingsgetallen>, <Gebruiksdichtheid>, <Dichtheidsschaalfactor
+(optioneel)> )::
+  Geeft een lijst van frequenties voor het overeenkomende xref:/commands/Histogram.adoc[Histogram].
+  Wanneer _Gebruiksdichtheid_ = _false_, is het resultaat hetzelfde als Frequentie( <Lijst met klassengrenzen>, <Lijst
+  met waarnemingsgetallen> )
+  Wanneer _Gebruiksdichtheid_ = _true_, geeft het de lijst met frequenties voor elke klasse.
+Frequentie( <Boolean Cumulatief>, <Lijst met klassengrenzen>, <Lijst met waarnemingsgetallen>, <Gebruiksdichtheid>,
+<Dichtheidsschaalfactor (optioneel)> )::
+  Geeft een lijst met frequenties voor het overeenkomende xref:/commands/Histogram.adoc[Histogram].
+
+[EXAMPLE]
+====
+
+`++data = {1, 2, 2, 2, 3, 3, 4, 4, 4, 4}++` is de lijst met waarnemingsgetallen en `++klassen={0, 2, 5}++` de lijst met
+klassengrenzen. `++Frequentie(klassen, data, false)++` en `++Frequentie(klassen, data)++` geven beide de lijst _\{1,
+9}_, terwijl `++Frequentie(klassen, data, true)++` de lijst _\{0.5, 3}_ oplevert.
+
+====
+
+[EXAMPLE]
+====
+
+Neem `++lijst1 = {"a", "b", "b", "c", "c", "c", "c"}++` en `++lijst2 =  {"a", "b", "a", "a", "c", "c", "d"}++`.
+`++Frequentie( lijst1, lijst2 )++` geeft de matrix stem:[\begin\{pmatrix} 1 & 0 & 0 & 0\\ 1 &1 & 0 &0 \\ 1 & 0 & 2 & 1
+\\ \end\{pmatrix}]
+
+====
+
+[EXAMPLE]
+====
+
+`++Frequentie({1, 2, 3},  {1, 1, 2, 3}]++` geeft de lijst _\{ 2, 2 }_
+
+====
+
+[EXAMPLE]
+====
+
+`++lijst1 = { 0, 0, 0, 1, 1, 2 }++`. `++Frequentie(true, lijst1)++` geeft de list _\{ 3, 5, 6 }_.
+`++Frequentie(false, lijst1)++` geeft de lijst _\{ 3, 2, 1}_. `++Uniek(lijst1)++` geeft de lijst _\{ 0, 1, 2 }_.
+
+====
+
+[EXAMPLE]
+====
+
+`++lijst1 = { "a", "a", "x", "x", "x", "b" }++`. `++Frequentie(lijst1)++` geeft de lijst _\{ 2, 1, 3 }_.
+`++Uniek(lijst1)++` geeft de lijst _\{ "a", "b", "x" }_.
+
+====
+
+[NOTE]
+====
+
+Zie ook het commando xref:/commands/Contingentie_Tabel.adoc[ContingentieTabel].
+
+====

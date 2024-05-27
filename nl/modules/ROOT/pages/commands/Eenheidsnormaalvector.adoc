@@ -1,0 +1,63 @@
+= Eenheidsnormaalvector Commando
+:page-en: commands/UnitPerpendicularVector_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Eenheidsnormaalvector( <Rechte> )::
+  Geeft de normaalvector met lengte 1 van de gegeven rechte.
+Eenheidsnormaalvector( <Lijnstuk> )::
+  Geeft de normaalvector met lengte 1 van het gegeven lijnstuk.
+Eenheidsnormaalvector( <Vector> )::
+  Geeft de normaalvector met lengte 1 van een vooraf gedefinieerde vector.
+
+[EXAMPLE]
+====
+
+v=stem:[\begin\{pmatrix}3\\4\end\{pmatrix}]. `++Eenheidsnormaalvector[v]++` geeft
+_stem:[\begin\{pmatrix}-0.8\\0.6\end\{pmatrix}]_.
+
+====
+
+[EXAMPLE]
+====
+
+Voor `++s = Lijnstuk((1,1), (4,5))++`.
+
+`++ geeft Eeinheidsnormaalvector(s)++` geeft _stem:[\begin\{pmatrix}-0.8\\0.6\end\{pmatrix}]_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Eenheidsnormaalvector(3x + 4y = 5)++` geeft _stem:[\begin\{pmatrix}0.6\\0.8\end\{pmatrix}]_.
+
+====
+
+== CAS venster
+
+Eenheidsnormaalvector( <Vector> )::
+  Geeft de normaalvector met lengte 1 van de gegeven vector.
+
+[EXAMPLE]
+====
+
+`++Eeenheidsnormaalvector((a, b))++` geeft (stem:[\frac\{-b}\{\sqrt\{a^\{2} + b^\{2}}}], stem:[\frac\{a}\{\sqrt\{a^\{2}
++ b^\{2}}}]).
+
+====
+
+Eenheidsnormaalvector( <Vlak> )::
+  Creëert een eenheidsvector loodrecht op het gegeven vlak.
+
+[NOTE]
+====
+
+Zie ook xref:/commands/Eenheidsvector.adoc[Eenheidsvector Commando].
+
+====

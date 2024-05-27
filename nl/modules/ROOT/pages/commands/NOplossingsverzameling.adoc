@@ -1,0 +1,69 @@
+= NOplossingsverzameling Commando
+:page-en: commands/NSolutions_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Dit commando is alleen maar beschikbaar in xref:/CAS_venster.adoc[CAS venster]..
+
+== CAS Syntax
+
+NOplossingsverzameling( <Vergelijking> )::
+  Probeert (numeriek) een oplossing te vinden voor de vergelijking in de hoofdveranderlijke. Voor andere vergelijkingen
+  dan veeltermen moet je steeds een startwaarde opgeven (zie verder).
+NOplossingsverzameling( <Vergelijking>, <Variabele> )::
+  Probeert (numeriek) een oplossing te vinden voor de vergelijking in de gegeven veranderlijke. Voor andere
+  vergelijkingen dan veeltermen moet je steeds een startwaarde opgeven (zie verder).
+NOplossingsverzameling( <Vergelijking>, <Variabele = startwaarde> )::
+  Berekent numeriek de oplossingsverzameling voor de gegeven vergelijking voor de gegeven variabele met gegeven
+  startwaarde.
+
+[EXAMPLE]
+====
+
+* `++NOplossingsverzameling(cos(x) = x, x = 0)++` geeft _\{0.74}_
+* `++NOplossingsverzameling(a^4 + 34a^3 = 34, a = 3)++` creëert de lijst _\{-34, 0.99}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++NOplossingsverzameling(a^4 + 34a^3 = 34, a)++` geeft _\{a = -34.00086498588374, a = 0.9904738885574178}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++NOplossingsverzameling(x^6 - 2x + 1 = 0)++` geeft _\{0.51, 1}_ of _\{0.508660391642, 1}_ (het aantal decimalen hangt
+af van je instellingen in het menu Opties
+
+====
+
+NOplossingsverzameling( <Stelsel van vergelijkingen>, <Lijst met variabelen> )::
+  Probeert (numeriek) een oplossing te vinden voor het stelsel van vergelijkingen voor de gegeven lijst met variabelen.
+
+[EXAMPLE]
+====
+
+`++NOplossingsverzameling({pi / x = cos(x - 2y), 2 y - pi = sin(x)}, {x = 3, y = 1.5})++` creëert de lijst _\{3.14,
+1.57}_
+
+====
+
+[NOTE]
+====
+
+* Wanneer je geen startwaarde opgeeft, zoals b.v. _a=3_ of _\{x = 3, y = 1.5}_ is het mogelijk dat het numeriek
+algoritme geen oplossing vindt, en ook het geven van een startwaarde is geen garantie dat een oplossing gevonden wordt.
+* Het aantal decimalen hangt af van je instellingen in het menu Opties.
+* NOplossingsverzameling zal niet werken voor functies met de x-as als asymptoot.
+* Zie ook de commando's xref:/commands/Oplossingsverzameling.adoc[Oplossingsverzameling] en
+xref:/commands/NOplossen.adoc[NOplossen].
+
+====

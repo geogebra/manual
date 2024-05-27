@@ -1,0 +1,42 @@
+= Contingentie Tabel Commando
+:page-en: commands/ContingencyTable_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Contingentie_Tabel( <Lijst met Tekst>, <Lijst met Tekst> )::
+  Tekent een http://en.wikipedia.org/wiki/Contingency_table[Contingentietabel], gecreëerd vanuit de twee gegeven
+  lijsten. Unieke waarden van de eerste lijst worden gebruikt als rijwaarden in de tabel. Unieke waarden van de tweede
+  lijst worden gebruikt als kolomwaarden in de tabel.
+Contingentie_Tabel( <Lijst met Tekst>, <Lijst met Tekst>, <Opties> )::
+  Tekent een http://en.wikipedia.org/wiki/Contingency_table[Contingentietabel] gecreëerd vanuit de twee gegeven lijsten
+  zoals hierboven beschreven. De tekst _Opties_ controleert de weergave van eventuele berekeningen binnen de tabel.
+
+[NOTE]
+====
+
+Mogelijke waarden voor _Opties_ zijn "|", "_", "+", "e", "k", "=".
+
+* "|" = toon kolompercentages
+* "_" = toon rijpercentages
+* "+" = toon totaalpercentagen
+* "e" = toon verwachte aantallen
+* "k" = toon ChiKwadraat bijdragen
+* "=" = toon de resultaten van een ChiKwadraat test
+
+====
+
+Contingentie_Tabel( <Lijst met rijwaarden>, <Lijst met kolomwaarden>, <Frequentietabel> )
+
+Tekent een http://en.wikipedia.org/wiki/Contingency_table[Contingentietabel] vanuit de gegeven lijsten van rijwaarden,
+kolomwaarden en de overeenkomende frequentietabel.
+
+Contingentie_Tabel( <Lijst met rijwaarden>, <Lijst met kolomwaarden>, <Frequencietabel>, <Opties> )
+
+Tekent een http://en.wikipedia.org/wiki/Contingency_table[Contingentietabel] vanuit de gegeven lijsten van rijwaarden,
+kolomwaarden en de overeenkomende frequentietabel. De tekst _Opties_ controleert de weergave van eventuele berekeningen
+binnen de tabel zoals hierboven beschreven.

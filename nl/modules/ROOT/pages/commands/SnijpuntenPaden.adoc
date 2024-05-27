@@ -1,0 +1,37 @@
+= SnijpuntenPaden Commando
+:page-en: commands/IntersectPath_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+SnijpuntenPaden( <Vlak>, <Kwadriek> )::
+  Geeft de doorsnede van een vlak en een kwadriek.
+SnijpuntenPaden( <Kwadriek>, <Kwadriek> )::
+  Geeft een kegelsnede. Deze is enkel bepaald wanneer de doorsnede inderdaad een kegelsnede is.
+
+[EXAMPLE]
+====
+
+`++SnijpuntenPaden(bol1, bol2)++` geeft de kegelsnede die de doorsnede is van de twee bollen.
+
+====
+
+[NOTE]
+====
+
+Je kunt het commando ook gebruiken om het overlappende gebied te bepalen van b.v. veelhoeken en/of cirkels:
+`++SnijpuntenPaden(veelhoek1, veelhoek2)++`
+
+====
+
+[NOTE]
+====
+
+Zie ook de commando's xref:/commands/Snijpunten.adoc[Snijpunten] en
+xref:/commands/Kwadriekdoorsnede.adoc[Kwadriekdoorsnede].
+
+====

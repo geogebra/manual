@@ -1,0 +1,41 @@
+= Cauchy Commando
+:page-en: commands/Cauchy_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Cauchy( <Mediaan>, <Schaal>, x )::
+  Creëert de kansdichtheidsfunctie (pdf) van de http://en.wikipedia.org/wiki/Cauchy_distribution[Cauchy verdeling].
+Cauchy( <Mediaan>, <Schaal>, <Waarde Variabele> )::
+  Berekent de waarde van de cumulatieve dichtheidsfunctie van een Cauchy verdeling voor een _Variabele waarde_ _v_, dit
+  is de kans _P(X ≤ v)_ waarbij _X_ een willekeurige variabele is met een Cauchy verdeling, bepaald door de parameters
+  _Mediaan_ en _Schaal_.
+Cauchy( <Mediaan>, <Schaal>, x, <Logisch Cumulatief> )::
+  Als _Cumulatief_ = true, creëert het de cumulatieve dichtheidsfunctie van de Cauchy verdeling, anders creëert ze de
+  pdf van de Cauchy verdeling.
+
+[NOTE]
+====
+
+Geeft de kans vooe een gegeven _x_-coördinaat (of de oppervlakte onder de grafiek van de Cauchy verdeling links van de
+gegeven _x_-coördinaat).
+
+====
+
+== CAS venster
+
+Cauchy( <Mediaan>, <Schaal>, <Waarde Variabele> )::
+  Berekent de waarde van de cumulatieve dichtheidsfunctie van een Cauchy verdeling voor een _Variabele waarde_ _v_, dit
+  is de kans _P(X ≤ v)_ waarbij _X_ een willekeurige variabele is met een Cauchy verdeling, bepaald door de parameters
+  _Mediaan_ en _Schaal_.
+
+[EXAMPLE]
+====
+
+`++Cauchy(1, 2, 3)++` geeft _stem:[\frac\{3}\{4}]_.
+
+====

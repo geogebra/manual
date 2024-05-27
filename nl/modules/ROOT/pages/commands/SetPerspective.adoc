@@ -1,0 +1,69 @@
+= SetPerspective Commando
+:page-en: commands/SetPerspective_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+SetPerspective( <Tekst> )
+
+Bepaalt de layout en de zichtbaarheid van vensters. De tekstparameter beschrijft de gewenste layout. De tekst moet een
+geldige uitdrukking zijn - Vensters worden voorgesteld door letters als variabelen: ene horizontale schikking van
+vensters bepaal je door ze achter elkaar plaatsen, een verticale door het symbool voor delen. `++ /++`.
+
+[cols=",",options="header",]
+|===
+|Letter |venster
+|A |Algebra
+|B |Waarschijnlijkheidsrekenen
+|C |CAS
+|D |Tekenvenster 2
+|G |Tekenvenster
+|L |Overzicht constructiestappen
+|P |Eigenschappen
+|R |Gegevensanalyse
+|S |Rekenblad
+|T |3D tekenvenster
+|===
+
+[EXAMPLE]
+====
+
+ 
+
+* `++SetPerspective("G")++` maakt enkel het _Tekenvenster_ zichtbaar
+* `++SetPerspective("AGS")++` maakt het _Algebra venster_, _Tekenvenster_ en _Rekenblad_ zichtbaar, horizontaal
+gerangschikt
+* `++SetPerspective("S/G")++` maakt het _Rekenblad_ en _Tekenvenster_ zichtbaar, met het _Rekenblad_ bovenaan en het
+_Tekenvenster_ onderaan
+* `++SetPerspective("S/(GA)")++` is gelijkaardig aan hierboven, onderaan staat links het _Tekenvenster_ en rechts het
+_Algebra venster_
+
+====
+
+In de plaats van deze uitdrukkingen kan je ook een tekst gebruiken met een enkel cijfer dat verwijst naar een
+schermindeling:
+
+[cols=",",options="header",]
+|===
+|Tekst |Schermindeling
+|"1" |Algebra
+|"2" |Meetkunde
+|"3" |Rekenblad
+|"4" |CAS
+|"5" |3D tekenvenster
+|"6" |Waarschijnlijkheidsrekening
+|===
+
+Deze komen ruwweg overeen met respectievelijk "AG", "G", "SG", "CG", "AT" en "B" maar beïnvloeden ook de van het
+xref:/Invoerveld.adoc[Invoerveld] en de inhoud van de xref:/Gereedschappenbalk.adoc[Knoppenbalk].
+
+[NOTE]
+====
+
+* Zie ook het commando xref:/commands/SetActiveView.adoc[SetActiveView].
+
+====

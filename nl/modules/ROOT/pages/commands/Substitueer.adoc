@@ -1,0 +1,31 @@
+= Substitueer Commando
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Dit commando is alleen maar beschikbaar in xref:/CAS_venster.adoc[CAS venster]..
+
+Substitueer( <Uitdrukking>, <van>, <naar> )::
+  Vervangt _van_ in een gegeven _Uitdrukking_ door _naar_.
+
+[EXAMPLE]
+====
+
+* `++Substitueer((x^2 / (4x + 6))^2 + 6(x^2 / (4x + 6)) + 8, x^2, a*(4x + 6))++` geeft _a^2^ + 6 a + 8_.
+* `++Substitueer((3 m - 3)^2 - (m + 3)^2, m, a)++` geeft _8 a^2^ - 24 a_.
+
+====
+
+Substitueer( <Uitdrukking>, <Substitutielijst> )::
+  Vervangt in een _Uitdrukking_ elke variabele van de de lijst door de aangegeven variabele of het aangegeven getal.
+
+[EXAMPLE]
+====
+
+`++Substitueer(2x + 3y - z, {x = a, y = 2, z = b})++` geeft _2a - b + 6_.
+
+====

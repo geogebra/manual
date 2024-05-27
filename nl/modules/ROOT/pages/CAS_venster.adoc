@@ -1,0 +1,250 @@
+= CAS venster
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+== [#CAS_venster]#image:24px-Menu_view_cas.svg.png[Menu view cas.svg,width=24,height=24] CAS venster#
+
+Standaard wordt het image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS venster_ geopend naast
+het xref:/Graphics_View.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+_xref:/Tekenvenster.adoc[Tekenvenster]_. Naargelang welk van de twee _vensters_ actief is, staat de Knoppenbalk van het
+CAS venster of het Tekenvenster bovenaan in het GeoGebra-scherm met de knoppen _Ongedaan maken / Opnieuw_ rechtsboven.
+
+[width="100%",cols="100%",]
+|===
+a|
+image:314px-CAS-View.png[CAS-View.png,width=314,height=220]
+
+CAS venster
+
+|===
+
+Het image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS venster_ is een deel van de
+xref:/Schermindelingen.adoc[_Schermindeling_] CAS, maar je kunt het CAS venster ook openen in andere schermindelingen
+via het menu xref:/Views.adoc[Beeld].
+
+== [#Wiskundige_Objecten_creëren]####[#Wiskundige_Objecten_cre.C3.ABren]##Wiskundige Objecten creëren##
+
+=== Rechtstreekse invoer
+
+In het _CAS venster_ kan je met het CAS (Computer Algebra Systeem) van GeoGebra symbolisch rekenen. Het is opgebouwd uit
+cellen met een _Invoerveld_ bovenaan en een toonveld onderaan. Je kunt deze _Invoervelden_ op dezelfde manier gebruiken
+als het gewone _xref:/Invoerveld.adoc[Invoerveld]_, met volgende verschillen:
+
+* Je kunt variabelen gebruiken waaraan geen waarde werd toegekend.
++
+[EXAMPLE]
+====
+
+Typ `++(a+b)^2++` in een _Invoerveld_ en klik op de /Sjabloon:KeyCode.adoc[Sjabloon:KeyCode]-toets. Je krijgt als
+resultaat _a²+2ab+b²_.
+
+====
+* `++=++` wordt gebrukt in vergelijkingen en `++:=++` voor toewijzingen. Dit betekent dat de invoer `++a=2++` de waarde
+2 niet toekent aan de variabele _a_. Je doet dit wel met de invoer a`++:=++`2.
+* Vermenigvuldiging moet je expliciet vermelden. In het _xref:/Invoerveld.adoc[Invoerveld]_ kan je zowel `++a(b+c)++`
+als `++a*(b+c)++` typen voor een vermenigvuldiging, in het image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] _CAS venster_ is enkel `++a*(b+c)++` geldig.
+
+=== Sneltoetsen voor rechtstreekse invoer
+
+In het image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS venster_ kan je volgende sneltoetsen
+gebruiken om je invoer te controleren.
+
+[NOTE]
+====
+
+In plaats van deze sneltoetsen kan je ook de overeenkomstige xref:/CAS_gereedschappen.adoc[_Knoppen_] gebruiken van de
+knoppenbalk.
+
+====
+
+* /Sjabloon:KeyCode.adoc[Sjabloon:KeyCode]: Verrekent je invoer
+* /Sjabloon:KeyCode.adoc[Sjabloon:KeyCode]: Verrekent je invoer numeriek
++
+[EXAMPLE]
+====
+
+`++sqrt(2)++` geeft _1.41_
+
+====
+* /Sjabloon:KeyCode.adoc[Sjabloon:KeyCode]: Verwerkt je invoer maar rekent hem niet uit.
++
+[EXAMPLE]
+====
+
+`++b + b++` blijft _b + b_.
+
+====
++
+[NOTE]
+====
+
+Toewijzingen worden altijd verrekend, b.v. `++a := 5++`
+
+====
+
+In het image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS venster_ kan je met volgende
+sneltoetsen een vorige invoer of uitvoer herbruiken in een nieuwe rij wanneer je hem invoert in een leeg _Invoerveld_:
+
+* /Sjabloon:KeyCode.adoc[Sjabloon:KeyCode] balk: voert de vorige output in een nieuwe rij in.
+* `++)++`: voert de vorige uitvoer in een nieuwe rij in en plaatst hem tussen haakjes.
+* `++=++`: voert de vorige invoer in een nieuwe rij in.
+
+[NOTE]
+====
+
+Met een ; op het einde van een input verhinder je dat een output getoond wordt, b.v. `++a := 5;++`.
+
+====
+
+=== Variabele toewijzingen en andere vensters
+
+Gebruik `++:=++` voor toewijzingen, e.g. `++b := 5++`, `++a(n) := 2n + 3++`.
+
+* _Een naam bevrijden_: Gebruik `++Delete[b]++` om een naam terug vrij te maken.
+* _Herdefiniëren van een variabele of een functie_: Je kunt een variabele of een functie herdefiniëren, maar je moet dit
+doen _in dezelfde cel_, zo niet wordt het beschouwd als een nieuwe variabele en automatisch hernoemd.
+
+Variabelen en functies worden zo mogelijk altijd gedeeld door het _CAS View_ en de andere _vensters_. Bijvoorbeeld:
+
+* Wanneer je `++b:=5++` definieert in het _CAS venster_, kan je _b_ ook in alle andere _vensters_ van GeoGebra
+gebruiken.
+* Wanneer je een functie `++f(x)=x^2++` definieert in een ander _venster_, kan je deze functie ook gebruiken in het _CAS
+venster_.
+
+[NOTE]
+====
+
+De output is steeds de uitdrukking _na_ `++:=++`, b.v. wanneer je `++b:=5++` typt zal de output _5_ zijn.
+
+====
+
+=== Vergelijkingen
+
+* In vergelijkingen mag je gewone gelijkheidstekens gebruiken, b.v. `++3x + 5 = 7++`.
+* _Rekenkundige bewerkingen_: Je kunt rekenkundige bewerkingen uitvoeren op vergelijkingen, wat nuttig is bij het
+manueel oplossen van vergelijkingen.
++
+[EXAMPLE]
+====
+
+`++(3x + 5 = 7) - 5++` vermindert beide leden van de vergelijking met 5.
+
+====
+* _Eén lid uitwerken_: Je kunt ofwel het linkerlid ofwel het rechterlid van een vergelijking uitwerken met de commando's
+`++Linkerlid[]++` and `++Rechterlid[]++`.
++
+[EXAMPLE]
+====
+
+`++Linkerlid[3x + 5 = 7]++` geeft _3 x + 5_ en `++Rechterlid[3x + 5 = 7]++` geeft _7_
+
+====
+
+=== Rijverwijzingen
+
+Je kunt op twee manieren verwijzen naar andere rijen in het image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] _CAS venster_:
+
+* *Statische rijverwijzingen* kopiëren een uitvoer en *worden niet geupdated* wanneer de rij waar naar verwezen wordt
+nadien aangepast wordt.
+** `++#++`: Kopieert de vorige uitvoer.
+** `++#5++`: Kopieert de uitvoer van rij 5.
+* *Dynamische rijverwijzingen* voegen een verwijzing naar een andere rij in i.p.v. de huidige output. Daarom zullen ze
+""geupdated _worden wanneer de rij waar naar verwezen wordt nadien aangepast wordt._
+** `++$++`: Voegt een verwijzing in naar de uitvoer van vorige rij.
+** `++$5++`: Voegt een verwijzing in naar de uitvoer van rij 5.
+
+== [#CAS_Commando's]####[#CAS_Commando.27s]##CAS Commando's##
+
+GeoGebra biedt een waaier aan van _xref:/CAS_commando's.adoc[CAS commando's]_ die je kunt gebruiken om objecten te
+creëren in het image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS venster_. Wanneer je de naam
+van een _commando_ begint te typen in het _Invoerveld_ toont GeoGebra een lijst van _commando's_ die overeenkomen met je
+invoer.
+
+[NOTE]
+====
+
+Zie xref:/CAS_commando's.adoc[CAS commando's] voor een lijst met beschikbare commando's.
+
+====
+
+== [#CAS_venster_Knoppenbalk]#CAS venster Knoppenbalk#
+
+Met de _xref:/Macro's.adoc[Knoppen]_ op de _xref:/CAS_gereedschappen.adoc[_CAS Knoppenbalk_]_ op de kan je een invoer
+verwerken en berekeningen uitvoeren. Typ je invoer en klik op de gewenste _knop_ om de ze toe te passen op je invoer. Je
+kunt ook een deel van de invoer selecteren om de operatie enkel toe te passen op het geselecteerde deel
+
+xref:/tools/CAS_Knoppen.adoc[image:315px-Toolbar-CAS.png[Toolbar-CAS.png,width=315,height=32]]
+
+[NOTE]
+====
+
+Zie xref:/CAS_gereedschappen.adoc[CAS gereedschappen] voor een lijst met knoppen'.
+
+====
+
+== [#Context_Menu's]####[#Context_Menu.27s]##Context Menu's##
+
+=== Rijkop Context Menu
+
+Een _Context Menu_ met volgende opties verschijnt bij rechtsklikken (MacOS:
+/Sjabloon:KeyCode.adoc[Sjabloon:KeyCode]-klik) op de kop van een rij:
+
+* *Bovenaan invoegen*: Voegt boven de huidige rij een nieuwe, lege rij in.
+* *Onderaan invoegen*: Voegt onder de huidige rij een nieuwe, lege rij in.
+* *Wis rij*: Wist de inhoud van de huidige rij.
+* *Text*: Maakt een verbinding tussen het huidige resultaat een een tekst, die de huidige inhoud toont, wat het mogelijk
+maakt om commentaar in te voegen.
+* *Kopieer als LaTeX* (GeoGebra Desktop): KOpieert de inhoud van de huidige rij naar het klembord van je computer,
+waardoor je hem in een tekstobject kunt plakken.
+
+[NOTE]
+====
+
+Je kunt de inhoud van meer dan één CAS kopiëren als LaTeX, door ze te selectern met
+/Sjabloon:KeyCode.adoc[Sjabloon:KeyCode]-click (MacOS: /Sjabloon:KeyCode.adoc[Sjabloon:KeyCode]-klik), dan rechts te
+klikken (MacOS: /Sjabloon:KeyCode.adoc[Sjabloon:KeyCode]-klik) op de rijkop en _Kopieer als LaTeX_ te selecteren.
+
+====
+
+=== Cel Context Menu
+
+In GeoGebra Desktop, opent een _Context Menu_ met volgende opties door rechtsklikken (MacOS:
+/Sjabloon:KeyCode.adoc[Sjabloon:KeyCode]-klik) op een CAS uitvoer:
+
+* *Kopieer*: Kopieert de inhoud van de cel naar het klembord van je computer. Rechtsklik op een nieuwe cel voor de optie
+'*Plakken* .
+* *Kopieer als LaTeX*: Kopieert de inhoud van de cel in LaTeX formaat naar het klembord van je computer, zodat je hem in
+een tekst kan plakken.
+* *Kopieer als OpenOffice Formule*: Kopieert de inhoud van de cel in OpenOffice Formule formaat naar het klembord van je
+computer, zodat je hem in een testverwerker kunt plakken.
+* *Kopieer als Afbeelding*: Kopieert de inhoud van de cel in PNG formaat naar het klembord van je computer, zodat je hem
+in een testverwerker kunt plakken.
+
+== [#Weergave_van_Wiskundige_Objecten]#Weergave van Wiskundige Objecten#
+
+=== Opmaakwerkbalk
+
+Met de _Opmaakwerkbalk_ kan je
+
+* image:16px-Stylingbar_text.svg.png[Stylingbar text.svg,width=16,height=16] de tekststijl wijzigen in
+(image:16px-Stylingbar_text_bold.svg.png[Stylingbar text bold.svg,width=16,height=16] *vet* en
+image:16px-Stylingbar_text_italic.svg.png[Stylingbar text italic.svg,width=16,height=16] _cursief_) en
+image:16px-Stylingbar_color_white.svg.png[Stylingbar color white.svg,width=16,height=16] en de kleur wijzigen.
+* een image:16px-Cas-keyboard.png[Cas-keyboard.png,width=16,height=16] virtueel toetsenbord tonen. (GeoGebra Desktop)
+* bijkomendel image:16px-Stylingbar_dots.svg.png[Stylingbar dots.svg,width=16,height=16] xref:/Views.adoc[_vensters_]
+tonen in het GeoGebra scherm (GeoGebra Web en Tablet Apps)
+
+=== CAS Objecten tonen in het xref:/Graphics_View.adoc[image:20px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=20,height=20]] _Tekenvenster_
+
+In het image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS View_, toont het icoon links van elke
+rij of een object getoond wordt of niet. Je kunt rechtsreeks klikken op het kleine
+image:16px-Mode_showhideobject.svg.png[Mode showhideobject.svg,width=16,height=16] _Toon / Verberg Object_ icoon om het
+al dan niet tonen in het xref:/Graphics_View.adoc[image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16]] _xref:/Tekenvenster.adoc[Tekenvenster]_ te wijzigen.

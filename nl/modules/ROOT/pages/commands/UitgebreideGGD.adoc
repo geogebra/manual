@@ -1,0 +1,47 @@
+= UitgebreideGGD Commando
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+== CAS Syntax
+
+UitgebreideGGD( <Getal>,<Getal> )::
+  Creëert een lijst met de gehele coëfficiënten stem:[s, t] van de gelijkheid van Bézout stem:[as+bt= GGD(a,b)] en de
+  grootste gemene deler van de gegeven gehele getallen stem:[a] en stem:[b].
+  De resultaten worden berekend door toepassing van het
+  http://en.wikipedia.org/wiki/Extended_Euclidean_algorithm[Uitgebreide Euclidische algoritme].
+
+[EXAMPLE]
+====
+
+`++UitgebreideGGD(240,46)++` geeft \{stem:[-9,47,2]}. (Voer je dit resultaat in in de gelijkheid van Bézout, dan bekom
+je: stem:[-9 \cdot 240+47 \cdot 46=2]).
+
+====
+
+UitgebreideGGD( <Veelterm>, <Veelterm> )::
+  Creëert eeb lijst met de veeltermcoëfficiënten stem:[S(x), T(x)] van de gelijkheid van Bézout voor veeltermen
+  stem:[A(x)S(x) + B(x)T(x) = GCD(A(x), B(x))] en de grootste gemene deler van de gegeven veeltermen stem:[A(x)] en
+  stem:[B(x)].
+  De resultaten worden berekend door toepassing van het
+  http://en.wikipedia.org/wiki/Extended_Euclidean_algorithm[Uitgebreide Euclidische algoritme].
+
+[EXAMPLE]
+====
+
+`++UitgebreideGGD(x^2-1,x+4)++` geeft \{stem:[1,-x+4,15]}. (Voer je dit resultaat in in de gelijkheid van Bézout voor
+veeltermen, dan bekom je: stem:[1 \cdot (x^2-1) + (-x+4) \cdot (x+4) = 15]).
+
+====
+
+[NOTE]
+====
+
+* De GGD van twee veeltermen is niet uniek (het is uniek tot op een scalair veelvoud).
+* Zie ook het commando xref:/commands/GGD.adoc[GGD Commando].
+
+====

@@ -1,0 +1,81 @@
+= Punten en Vectoren
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Punten en vectoren kan je bepalen via het xref:/Invoerveld.adoc[Invoerveld] in Cartesiaanse coördinaten of
+poolcoördinaten (zie xref:/Getallen_en_hoeken.adoc[Getallen en hoeken]). Punten en vectoren kan je ook creëren met de
+knoppen /Bestand:Tool_New_Point_gif.adoc[image:Tool_New_Point.gif[Tool New Point.gif,width=32,height=32]]
+xref:/Puntenknop.adoc[Punt], /Bestand:Tool_Vector_from_Point_gif.adoc[image:Tool_Vector_from_Point.gif[Tool Vector from
+Point.gif,width=32,height=32]] xref:/tools/Vector_met_beginpunt.adoc[Vector met beginpunt],
+/Bestand:Tool_Vector_between_Two_Points_gif.adoc[image:Tool_Vector_between_Two_Points.gif[Tool Vector between Two
+Points.gif,width=32,height=32]] xref:/tools/Vector_tussen_twee_punten.adoc[Vector tussen twee punten] en een reeks
+xref:/Commando's.adoc[commando's].
+
+[NOTE]
+====
+
+Labels met een hoofdletter bepalen punten, labels met kleine letters bepalen vectoren.
+
+====
+
+[EXAMPLE]
+====
+
+* Een punt _P_ of een vector _v_ bepaal je in Cartesiaanse coördinaten als `++P = (1, 0)++` of `++v = (0, 5)++`.
+* Een punt in het xref:/Rekenblad.adoc[Rekenblad] geef je als naam het celadres: `++A2 = (1, 0)++`
+* Een punt of vector met poolcoördinaten bepaal je als `++P = (1; 0°)++` of `++v = (5; 90°)++`.
+
+====
+
+[NOTE]
+====
+
+Poolcoördinaten scheid je door een kommapunt. Typ je geen gradensymbool, dan wordt de hoek bepaald in radialen.
+
+====
+
+Coördinaten van punten en vectoren vind je in de lijst met xref:/Gekende_Functies_en_Operatoren.adoc[Gekende Functies en
+Operatoren] als _x()_ en _y()_.
+
+[EXAMPLE]
+====
+
+Voor het punt `++P=(1,2)++` en de vector `++v=(3,4)++`, geeft `++x(P)++` 1 en `++y(v)++` 4.
+
+====
+
+De poolcoördinaten van een punt _Q_ vind je met `++abs(Q)++` en `++arg(Q)++`.
+
+== Berekeningen
+
+IJe kunt in GeoGebra ook berekeningen doen met punten en vectoren.
+
+[EXAMPLE]
+====
+
+* Het middelpunt M van twee punten A en B vind je door `++M = (A + B) / 2++` te typen in het invoerveld.
+* De lengte van een vector __v__bereken je als `++lengte = sqrt(v * v)++`
+* Voor een gegeven punt _A = (a, b)_ geeft `++A + 1++` als resultaat _(a + 1, b + 1)_. Voor een complex getal _A_ =
+_a+bί_ geeft `++A+1++` als resultaat _a + 1 + bί_.
+
+====
+
+== Vectorieel Product
+
+Voor twee punten of vectoren geeft `++(a, b) ⊗ (c, d)++` als rsultaat de z-coördinaat van het vectorieel product _(a, b,
+0) ⊗ (c, d, 0)_ als een getal.
+
+Een gelijkaardige syntax kan je toepassen op lijsten, maar dan is het resultaat een lijst.
+
+[EXAMPLE]
+====
+
+* `++{1, 2} ⊗ {4, 5}++` geeft _\{0, 0, -3}_
+* `++{1, 2, 3} ⊗ {4, 5, 6}++` geeft _\{3, 6, -3}_.
+
+====

@@ -1,0 +1,48 @@
+= Driehoekskromme Commando
+:page-en: commands/TriangleCurve_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Driehoekskromme( <Punt P>, <Punt Q>, <Punt R>, <Vergelijking in A,B,C> )::
+  Creëert een impliciete veelterm, waarvan de vergelijking in
+  http://en.wikipedia.org/wiki/Barycentric_coordinate_system_(mathematics)[barycentrische coördinaten] t.o.v. de punten
+  _P_, _Q_ en _R_ wordt gegeven door de vierde parameter.
+
+[EXAMPLE]
+====
+
+`++Driehoekskromme(A, B, C, A² + B² + C² - 2B C - 2C A - 2A B = 0)++` creëert de
+http://en.wikipedia.org/wiki/Steiner_inellipse[Steiner inellips] van de driehoek _ABC_, en
+`++Driehoekskromme(A, B, C, B C + C A + A B = 0)++` creëert de http://en.wikipedia.org/wiki/Steiner_ellipse[Steiner
+circumellips] van de driehoek _ABC_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Driehoekskromme(A, B, C, A*C = 1/8)++` creëert een hyperbool zo dat de raaklijn door _A_ of _C_, aan deze hyperbool
+de driehoek _ABC_ verdeelt in twee stukken met gelijke oppervlakte.
+
+====
+
+[EXAMPLE]
+====
+
+_P_, _Q_, _R_ zijn punten. `++Driehoekskromme(P, Q, R, (A - B)*(B - C)*(C - A) = 0)++` geeft een kromme bestaande uit de
+middens van de driehoek _PQR_.
+
+====
+
+[NOTE]
+====
+
+Je kunt de punten _A_, _B_ of _C_ noemen, maar in dit geval kan je bijvoorbeeld _x(A)_ niet gebruiken in de vergelijking
+omdat __A__beschouwd wordt als de barycentrische coördinaat.
+
+====

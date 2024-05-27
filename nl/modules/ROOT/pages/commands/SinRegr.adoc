@@ -1,0 +1,40 @@
+= SinRegr Commando
+:page-en: commands/FitSin_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+SinRegr( <Lijst met punten> )::
+  Berekent de sinusoïdale regressiekromme in de vorm stem:[a + b \cdot sin (c x + d)].
+
+[EXAMPLE]
+====
+
+`++SinRegr({(1, 1), (2, 2), (3, 1), (4, 0), (5, 1), (6, 2)})++` geeft _1 + 1 sin (1.5708 x - 1.5708)_.
+
+====
+
+== CAS Syntax
+
+SinRegr( <Lijst met punten> )::
+  Berekent de sinusoïdale regressiekromme in de vorm stem:[a + b \cdot sin (c x + d)].
+
+[EXAMPLE]
+====
+
+`++SinRegr({(1, 1), (2, 2), (3, 1), (4, 0), (5, 1), (6, 2)})++` geeft _1 + 1 sin (1.5708 x - 1.5708)_.
+
+====
+
+[NOTE]
+====
+
+* De lijst bevat best 4 of meer punten, met daarbij 2 extrema.
+* Zie ook xref:/commands/ExpRegr.adoc[ExpRegr Commando], xref:/commands/LogRegr.adoc[LogRegr Commando],
+xref:/commands/VeeltermRegr.adoc[VeeltermRegr Commando] en xref:/commands/PassendeGroei.adoc[PassendeGroei Commando].
+
+====

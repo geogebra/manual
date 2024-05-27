@@ -1,0 +1,58 @@
+= Neem Commando
+:page-en: commands/Take_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Neem( <Lijst>, <Beginpositie> )::
+  Creëert een nieuwe lijst met de elementen vanaf de _Beginpositie_ tot het einde van de originele lijst.
+Neem( <Tekst>, <Beginpositie> )::
+  Geeft een tekst met de elementen vanaf de _Beginpositie_ tot het einde van de originele tekst.
+Neem( <Lijst>, <Beginpositie>, <Eindpositie> )::
+  Creëert een nieuwe lijst met de elementen vanaf de _Beginpositie_ tot de _Eindpositie_ in de originele lijst.
+Neem( <Tekst>, <Beginpositie>, <Eindpositie> )::
+  Geeft een tekst met de elementen vanaf de _Beginpositie_ tot de _Eindpositie_ in de originele tekst.
+
+[EXAMPLE]
+====
+
+`++Neem("GeoGebra", 3, 6)++` yields the text _oGeb_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Neem({2, 4, 3, 7, 4}, 3, 4)++` geeft _\{3, 7}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Neem("GeoGebra", 3)++` geeft de tekst _oGebra_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Neem({2, 4, 3, 7, 4}, 3)++` geeft _\{3, 7, 4}_.
+
+====
+
+== CAS Venster
+
+Neem( <Lijst>, <Beginpositie>, <Eindpositie> )::
+  Geeft een tekst met de elementen vanaf de _Beginpositie_ tot de _Eindpositie_ in de originele tekst.
+
+[EXAMPLE]
+====
+
+`++Neem({1, 2, a, 4, 5}, 2, 4)++` geeft _\{2, a, 4}_.
+
+====

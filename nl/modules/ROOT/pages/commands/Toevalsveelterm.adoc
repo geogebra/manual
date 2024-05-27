@@ -1,0 +1,48 @@
+= Toevalsveelterm Commando
+:page-en: commands/RandomPolynomial_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+\{\{Manual Page|version=5.0}
+
+Toevalsveelterm( <Graad> , <Minimum voor coëfficiënt>, <Maximum voor coëfficiënt> )::
+  Geeft een willekeurige veelterm in _x_ van een gegeven graad _g_, waarvan de (gehele) coëfficiënten tussen het gegeven
+  _minimum_ en _maximum_ liggen (beide inbegrepen).
+
+[EXAMPLE]
+====
+
+* `++Toevalsveelterm(0, 1, 2)++` geeft ofwel _1_ of _2_ en
+* `++Toevalsveelterm(2, 1, 2)++` geeft een veelterm van de tweede graad met enkel _1_ en _2_ als mogelijke
+coëfficiënten, b.v.: _2x^2^ + x + 1_.
+
+====
+
+== CAS venster
+
+Toevalsveelterm( <Graad> ,<Minimum voor coëfficiënt>, <Maximum voor coëfficiënt> )::
+  Geeft een willekeurige veelterm in _x_ van een gegeven graad _g_, waarvan de (gehele) coëfficiënten tussen het gegeven
+  _minimum_ en _maximum_ liggen.
+  \{\{Example|1=
+  * `++Toevalsveelterm(0, 1, 2)++` geeft ofwel _1_ of _2_ en
+  * `++Toevalsveelterm(2, 1, 2)++` geeft een veelterm van de tweede graad met enkel _1_ en _2_ als mogelijke
+  coëfficiënten, b.v.: _2x^2^ + x + 1_.
+
+Toevalsveelterm( <Variabele>, <Graad> , <Minimum voor coëfficiënt>, <Maximum voor coëfficiënt> )::
+  Geeft een willekeurige veelterm in een gegeven _Variabele_ van een gegeven graad _g_, waarvan de (gehele)
+  coëfficiënten tussen het gegeven _minimum_ en _maximum_ liggen (beide inbegrepen).
+
+[EXAMPLE]
+====
+
+* `++Toevalsveelterm(a, 0, 1, 2)++` geeft ofwel _1_ ofwel _2_ en
+* `++Toevalsveelterm(a, 2, 1, 2)++` geeft een veelterm van de tweede graad met enkel _1_ en _2_ als mogelijke
+coëfficiënten, b.v.: _2a^2^ + a + 1_.
+
+====
+
+[NOTE]
+====
+
+Wanneer _minimum_ of _maximum_ geen gehele getallen zijn, worden _round(minimum)_ en _round(maximum)_ gebruikt.
+
+====

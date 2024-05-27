@@ -1,0 +1,91 @@
+= Max Commando
+:page-en: commands/Max_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Max( <Lijst> )::
+  Geeft het grootste getal van de lijst.
+Max( <Interval> )::
+  Geeft de bovengrens van het interval.
+Max( <Getal>, <Getal> )::
+  Geeft het maximum van beide getallen.
+Max( <Functie>, <Start x-Waarde>, <Eind x-Waarde> )::
+  Berekent het maximum van een functie over het gegeven interval. De function moet continu zijn en slechts één maximum
+  hebben in het interval.
+
+[EXAMPLE]
+====
+
+`++Max( x^3 + 2x^2 - 1, -2, 0)++` creëert het punt (-1.33, 0.19).
+
+====
+
+[EXAMPLE]
+====
+
+`++Max(12, 15)++` geeft _15_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Max(2 < x < 3)++` geeft _3_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Max({-2, 12, -23, 17, 15})++` geeft _17_.
+
+====
+
+[NOTE]
+====
+
+Voor veeltermfuncties is het commando xref:/commands/Extrema.adoc[Extrema] aangewezen.
+
+====
+
+[NOTE]
+====
+
+Open en gesloten intervallen worden op dezelfde manier behandeld.
+
+====
+
+[NOTE]
+====
+
+Wanneer de lijst bestaat uit andere objecten dan vergelijkt het commando de getallen die bij deze objecten horen. Met
+bijvoorbeeld een lijst van lijnstukken zal het commando _Max( <Lijst> )_ het lijnstuk geven met de grootste lengte.
+
+====
+
+== CAS venster
+
+Max( <Lijst> )::
+  Geeft het grootste getal van de lijst.
+  \{\{note| 1=Zie ook de commando's xref:/commands/Extrema.adoc[Extrema] en xref:/commands/Min.adoc[Min]
+Max( <Getal>, <Getal> )::
+  Geeft het maximum van beide getallen.
+
+[EXAMPLE]
+====
+
+`++Max(12, 15)++` geeft _15_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Max({-2, 12, -23, 17, 15})++` geeft _17_.
+
+====

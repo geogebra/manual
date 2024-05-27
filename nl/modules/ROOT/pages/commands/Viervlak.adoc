@@ -1,0 +1,41 @@
+= Viervlak Commando
+:page-en: commands/Tetrahedron_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Viervlak( <Punt>, <Punt>, <Richting>)::
+  Creëert een viervlak met het lijnstuk tussen de twee gegeven punten als ribbe.
+  De andere hoekpunten worden bepaald door de parameter _Richting_. Hiervoor kan je gebruiken:
+  * een vector, lijnstuk, een rechte, een halfrechte loodrecht op het lijnstuk, ofwel
+  * een veelhoek of een vlak *evenwijdig* met het lijnstuk.
+  Het gecreëerde viervlak heeft
+  * een zijvlak met het lijnstuk als ribbe in een vlak loodrecht op de gegeven vector/lijnstuk/rechte/halfrechte, ofwel
+  * een zijvlak met het lijnstuk als een ribbe in een vlak evenwijdig aan de veelhoek of het vlak.
+
+Viervlak( <Punt>, <Punt>, <Punt>)::
+  Creëert een viervlak met de drie punten als een eerste zijvlak. De punten moeten een gelijkzijdige driehoek vormen.
+
+Viervlak( <Punt>, <Punt>)::
+  Creëert een viervlak met de twee punten van het eerste zijvlak. Het derde punt wordt automatisch gecreëerd op een
+  cirkel, zo dat het achtvlak kan roteren rond de eerste ribbe.
+
+[NOTE]
+====
+
+Viervlak(A, B) is een kortere notatie van Viervlak(A, B, C) met C = Punt(Cirkel(Middelpunt(A, B), Afstand(A, B) sqrt(3)
+/ 2, Lijnstuk(A, B))).
+
+====
+
+[NOTE]
+====
+
+Zie ook de commando's xref:/commands/Kubus.adoc[Kubus], xref:/commands/Achtvlak.adoc[Viervlak],
+xref:/commands/Twintigvlak.adoc[Twintigvlak], xref:/commands/Twaalfvlak.adoc[Twaalfvlak].
+
+====

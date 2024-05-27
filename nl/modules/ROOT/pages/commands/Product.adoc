@@ -1,0 +1,68 @@
+= Product Commando
+:page-en: commands/Product_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Product( <Lijst met waarnemingsgetallen> )::
+  Berekent het product van alle getallen in de lijst.
+Product( <Lijst met getallen>, <Aantal elementen> )::
+  Berekent het product van de eerste _n_ elementen in de lijst.
+Product( <Lijst met getallen>, <Lijst met Frequenties> )::
+  Berekent het product van alle elementen in de _lijst met getallen_ telkens tot de macht met als exponent het getal in
+  the _lijst met frequenties_.
+
+[EXAMPLE]
+====
+
+`++Product( {20, 40, 50, 60}, {4, 3, 2, 1} )++` geeft
+__1536000000000000__`++Product( {sqrt(2), cbrt(3), sqrt(5), cbrt(-7)}, {4, 3, 2, 3} )++` geeft _-420_
+
+====
+
+[EXAMPLE]
+====
+
+`++Product({1, 2, 3, 4}, 3)++` geeft _6_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Product({2, 5, 8})++` geeft _80_.
+
+====
+
+[NOTE]
+====
+
+De twee lijsten moeten even lang zijn.
+
+====
+
+== CAS venster
+
+Product( <Lijst met uitdrukkingen> )::
+  Berekent het product van alle elementen in de lijst.
+Product( <Uitdrukking>, <Variabele>, <Startwaarde>, <Eindwaarde> )::
+  Berekent het product van de uitdrukkingen die verkregen worden door de gegeven variabele te vervangen door elk getal
+  van _startwaarde_ tot _eindwaarde_.
+
+[EXAMPLE]
+====
+
+`++Product(x + 1,  x,  2, 3)++` geeft _12_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Product({1, 2, x})++` geeft _2x_.
+
+====

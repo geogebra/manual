@@ -1,0 +1,41 @@
+= Iteratie Commando
+:page-en: commands/Iteration_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Iteratie( <Functie>, <startwaarde>, <Getal n> )::
+  Itereert de functie _n_ keer, beginnend met de gegeven startwaarde.
+
+[EXAMPLE]
+====
+
+*herhaalde optelling:*
+
+We tellen een aantal keer 7 op bij het getal 3:
+
+Met als functie `++g(x) = x + 7++`, geeft `++Iteratie(g, 3, 4)++` als resultaat _(((3+7) +7) +7) +7 = 31_.
+
+====
+
+[EXAMPLE]
+====
+
+`++f(x) = x^2++`. Het commando`++Iteratie(f, 3, 2)++` geeft als resultaat _(3^2^)^2^ = 81._
+
+====
+
+Iteratie( <Uitdrukking>, <Variabele>, ..., <Startwaarden>, <Aantal iteraties> )::
+  Iterateert de uitdrukking _n_ keer, beginnend met de gegeven startwaarde. Het resaultaat is dan het laatste element in
+  het resultaat van het commando xref:/commands/IteratieLijst.adoc[IteratieLijst], met dezelfde parameters.
+
+[NOTE]
+====
+
+Zie het commando xref:/commands/IteratieLijst.adoc[IteratieLijst] voor meer details.
+
+====

@@ -1,0 +1,54 @@
+= COplossen Commando
+:page-en: commands/CSolve_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Dit commando is alleen maar beschikbaar in xref:/CAS_venster.adoc[CAS venster]..
+
+== CAS venster
+
+COplossen( <Vergelijking> )::
+  Lost een gegeven vergelijking op naar de hoofdvariabele en geeft een lijst van alle oplossingen, complexe oplossingen
+  inbegrepen.
+COplossen( <Vergelijking>, <Variabele> )::
+  Lost een gegeven vergelijking op naar een gegeven variabele en geeft een lijst van alle oplossingen, complexe
+  oplossingen inbegrepen.
+COplossen( <Stelsel van vergelijkingen>, <Lijst met Variabelen> )::
+  Lost een stelsel van vergelijkingen op neer de gegeven variabelen en geeft een lijst van alle oplossingen, complexe
+  oplossingen inbegrepen.
+
+[EXAMPLE]
+====
+
+`++COplossen({y^2 = x - 1, x = 2 * y - 1}, {x, y})++` geeft _\{\{x = 1 + 2 ί, y = 1 + ί}, \{x = 1 - 2 ί, y = 1 - ί}}_,
+de complexe oplossingen van _y^2^ = x_ and _x = 2 * y - 1_.
+
+====
+
+[EXAMPLE]
+====
+
+`++COplossen(a^2 = -1, a)++` geeft _\{a = ί, a = -ί}_, de complexe oplossingen van _a^2^ = -1_.
+
+====
+
+[EXAMPLE]
+====
+
+`++COplossen(x^2 = -1)++` geeft _\{x = ί, x = -ί}_, de complexe oplossingen van _x^2^ = -1_.
+
+====
+
+[NOTE]
+====
+
+* De imaginaire eenheid ί typ je als /Sjabloon:KeyCode.adoc[Sjabloon:KeyCode].
+* Zie ook de commando's xref:/commands/Oplossingenverzameling_in_C.adoc[Oplossingenverzameling in C],
+xref:/commands/Oplossen.adoc[Oplossen] en xref:/commands/NOplossen.adoc[NOplossen].
+
+====

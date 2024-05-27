@@ -1,0 +1,43 @@
+= Numeriek Commando
+:page-en: commands/Numeric_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Dit commando is alleen maar beschikbaar in xref:/CAS_venster.adoc[CAS venster]..
+
+Numeriek( <Uitdrukking> )::
+  Zoekt een numerieke benadering voor een gegeven uitdrukking. Het aantal decimalen kan je zelf instellen in het
+  xref:/Opties_Menu.adoc[Opties Menu].
+Numeriek( <Uitdrukking>, <Aantal beduidende cijfers> )::
+  Zoekt een numerieke benadering voor een gegeven uitdrukking met het gegeven aantal beduidende cijfers.
+
+[EXAMPLE]
+====
+
+`++Numeriek(sin(1), 20)++` geeft _0.84147098480789650665_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Numeriek(3 / 2)++` geeft _1.5_.
+
+====
+
+[NOTE]
+====
+
+Wanneer het aantal beduidende cijfers niet specifiek genoeg is, kan je een verkeerd antwoord krijgen (zie
+http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html[floating point cancelation]) bijvoorbeeld
+`++Numeriek(-500000000/785398163*sin(785398163/500000000)*1258025227.19^2+500000000/785398163*1258025227.19^2,10)++`
+geeft 0, terwijl
+`++Numeriek(-500000000/785398163*sin(785398163/500000000)*1258025227.19^2+500000000/785398163*1258025227.19^2,30)++` als
+antwoord 0.318309886345536696694580314215 geeft.
+
+====

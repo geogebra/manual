@@ -1,0 +1,59 @@
+= Oplossen Commando
+:page-en: commands/Solve_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+== CAS venster
+
+Oplossen( <Vergelijking in x> )::
+  Lost een gegeven vergelijking op en geeft een lijst van alle oplossingen.
+Oplossen( <Vergelijking>, <Variabele> )::
+  Lost een gegeven vergelijking op naar een gegeven variabele en geeft een lijst van alle oplossingen.
+Oplossen( <Stelsel van vergelijkingen>, <Lijst met variabelen> )::
+  Lost een stelsel van vergelijkingen op naar de gegeven variabelen en geeft een lijst van alle oplossingen.
+
+[EXAMPLE]
+====
+
+* `++Oplossen({x = 4 x + y , y + x = 2}, {x, y})++` geeft _( x = -1, y = 3 )_, de enige oplossing van _x = 4x + y_ and
+_y + x = 2_
+* `++Oplossen({2a^2 + 5a + 3 = b, a + b = 3}, {a, b})++` geeft _\{\{a = 0, b = 3}, \{a = -3, b = 6}}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Oplossen(x * a^2 = 4a, a)++` geeft stem:[\\{a = \frac\{4}\{x}, a = 0\}], de oplossingen van _xa^2^ = 4a_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Oplossen(x^2 = 4x)++`geeft _\{x = 4, x = 0}_, de oplossingen van _x^2^ = 4x_.
+
+====
+
+[NOTE]
+====
+
+* Het rechterlid van vergelijkingen kan je weglaten indien het gelijk is aan 0.
+
+====
+
+Oplossen( <Stelsel van parametervergelijkingen>, <Lijst met variabelen> )::
+  Lost een stelsel van vergelijkingen op naar de gegeven variabelen en geeft een lijst van alle oplossingen.
+
+[EXAMPLE]
+====
+
+* `++Oplossen({(x, y) = (3, 2) + t (5, 1), (x, y) = (4, 1) + s (1, -1)}, {x, y, t, s})++` geeft _\{\{x = 3, y = 2, t =
+0, s = -1}}_.
+
+====

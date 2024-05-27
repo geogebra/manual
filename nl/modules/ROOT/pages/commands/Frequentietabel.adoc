@@ -1,0 +1,50 @@
+= Frequentietabel Commando
+:page-en: commands/FrequencyTable_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Frequentietabel( <Lijst met waarnemingsgetallen> )::
+  Creëert een frequentietabel (als tekstobject) met de absolute frequenties.
+  De lijst in kolom 1 kan zowel bestaan uit getallen als uit tekst.
+Frequentietabel( <Booleaans Cumulatief>, <Lijst met waarnemingsgetallen> )::
+  Als _Cumulatief = false_, creëert het dezelfde tabel als Frequentietabel( <Lijst met waarnemingsgetallen> )
+  Als _Cumulatief = true_, creëert het een frequentietabel met de cumulatieve frequenties.
+Frequentietabel( <Lijst met waarnemingsgetallen>,<Schaalfactor (optioneel)> )::
+  Creëert een frequentietabel (als tekst) waarbij je de absolute frequenties vermenigvuldigd met de _<Schaalfactor>_.
+  De lijst kan getallen bevatten of tekst.
+  Met n waarnemingsgetallen creëer je met schaalfactor 1/n een frequentietabel met de relatieve frequenties.
+Frequentietabel( <Lijst met klassengrenzen>, <Lijst met waarnemingsgetallen> )::
+  Creëert een frequentietabel (als tekst) met in de eerste kolom de klassen bevat en in de tweede kolom de absolute
+  frequenties.
+  Alle intervallen, behalve het laatste zijn van de vorm [a, b[. Het laatste interval is van de vorm [a, b].
+Frequentietabel( <Booleaans Cumulatief>, <Lijst met klassengrenzen>, <Lijst met waarnemingsgetallen> )::
+  Als _Cumulatief = false_, creëert het dezelfde tabel als Frequentietabel( <Lijst met klassengrenzen>, <Lijst met
+  waarnemingsgetallen> )
+  Als _Cumulatief = true_, creëert het een frequentietabel met de cumulatieve frequenties van de waarden in de eerste
+  kolom.
+Frequentietabel( <Lijst met klassengrenzen>, Lijst met waarnemingsgetallen>, <Booleaans Gebruiksdichtheid> ,
+<Dichtheidsschaalfactor (optioneel)> )::
+  Creëert een frequentietabel (als tekst) met in de eerste kolom de klassen en de tweede de frequenties voor het
+  overeenkomende xref:/commands/Histogram.adoc[Histogram Commando].
+
+* Voor een tabel met absolute frequenties neem je _Booleaans Gebruikdichtheid = false_
+* Voor een tabel met relatieve frequenties neem je _Booleaans Gebruikdichtheid = true_ en als dichtheidsschaalfactor
+_klassenbreedte / (aantal klassen)_
+
+Frequentietabel( <Booleaans Cumulatief>, <Lijst met klassengrenzen>, <Lijst met waarnemingsgetallen>, <Booleaans
+Gebruiksdichtheid>, <Dichtheidsschaalfactor> )::
+  Gebruik dit commando als volgt om een frequentietabel te creëren met de cumulatieve relatieve frequenties:
+  Frequentietabel( true, <Lijst met klassengrenzen>, <Lijst met waarnemingsgetallen>, true, kl.br./(aantal waarden) )
+
+[NOTE]
+====
+
+Dit commando is gelijkaardig aan de commando's xref:/commands/Frequentie.adoc[Frequentie] en
+xref:/commands/Histogram.adoc[Histogram].
+
+====

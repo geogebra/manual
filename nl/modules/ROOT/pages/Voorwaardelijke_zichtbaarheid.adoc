@@ -1,0 +1,56 @@
+= Voorwaardelijke zichtbaarheid
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Naast gewoon tonen of verbergen van objecten, kun je hun zichbaarheid ook laten afhangen van voorwaarden. Zo kan je
+bijvoorbeeld een object enkel tonen wanneer een xref:/tools/Schuifknop.adoc[Schuifknop] een bepaalde waarde heeft.
+
+== Voorwaardelijk tonen of verbergen van bestaande objecten
+
+Je kunt de knop /Bestand:Tool_Check_Box_to_Show_Hide_Objects_gif.adoc[image:Tool_Check_Box_to_Show_Hide_Objects.gif[Tool
+Check Box to Show Hide Objects.gif,width=32,height=32]] xref:/tools/Object_tonen_verbergen.adoc[Aanvinkvakje] om het al
+dan niet tonen van een of meerdere objecten te controleren.
+
+Je kunt een xref:/Booleaanse_waarden.adoc[Booleaanse variabele] invoeren in het xref:/Invoerveld.adoc[Invoerveld] (b. v.
+`++b = true++`) en deze al dan niet tonen als een aanvinkvakje in het xref:/Tekenvenster.adoc[Tekenvenster] met de knop
+/Bestand:Tool_Show_Hide_Object_gif.adoc[image:Tool_Show_Hide_Object.gif[Tool Show Hide Object.gif,width=32,height=32]]
+xref:/tools/Object_tonen_verbergen.adoc[Object tonen /verbergen] of het xref:/Context_Menu.adoc[Context Menu]). Hoe je
+deze Booleaanse variabele kunt gebruiken om het al dan niet tonen van objecten te controleren, lees je verder.
+
+== Nieuwe objecten al dan niet tonen
+
+In de tab _Geavanceerd_ van het xref:/Eigenschappen_dialoogvenster.adoc[Eigenschappenvenster] van een object kan je een
+voorwaarde invoeren om het object te tonen.
+
+[NOTE]
+====
+
+Je kunt de logische operatoren (e. g., ≠, ≥, ˄, ‖) selecteren in de symbolenlijst van jet invulvak om je voorwaarden in
+te vullen.
+
+====
+
+[EXAMPLE]
+====
+
+* Als a een schuifknop is, betekent de voorwaarde a < 2 dat het overeenkomende object enkel in het Tekenvenster getoond
+wordt wanneer de waarde van de schuifknop lager is dan 2.
+* Als b een Booleaanse variabele is, kan je b gebruiken als een voorwaarde. Het overeenkomende object wordt getoond
+wanneer b als waarde 'true' heeft, en verborgen wanneer b als waarde 'false' heeft.
+* Wanneer g en h twee rechten zijn an je wil een tekst a enkel laten verschijnen wanneer de rechten evenwijdig lopen,
+kan je als voorwaarden voor de tekst als voorwaarde typen: g ‖ h. De tekst is nu enkel zichtbaar wanneer h en g
+evenwijdig lopen.
+
+====
+
+[NOTE]
+====
+
+Zie ook het commando xref:/commands/SetVisibleInView.adoc[SetVisibleInView].
+
+====

@@ -1,0 +1,30 @@
+= OplossenDerdegraad Commando
+:page-en: commands/SolveCubic_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+== CAS Syntax
+
+OplossenDerdegraad( <Derdegraadsveelterm )::
+  Lost een derdegraadsvergelijking op en toont een lijst met de opossingen.
+
+[EXAMPLE]
+====
+
+`++OplossenDerdegraad(x³ - 1)++` geeft \{ 1, stem:[ \frac\{1}\{2} (\sqrt\{3} i -1) ] , stem:[ \frac\{1}\{2} (\sqrt\{3}
+(-i) -1) ] } .
+
+====
+
+[NOTE]
+====
+
+Het commando werkt niet optimaal voor alle vergelijkingen. Voor b.v. `++OplossenDerdegraad(x³ + x² + x + 2)++` werkt
+`++Oplossen(x³ + x² + x + 2)++` of `++COplossen(x³ + x² + x + 2)++` beter.
+
+====

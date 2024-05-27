@@ -1,0 +1,48 @@
+= Uitvoeren Commando
+:page-en: commands/Execute_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Uitvoeren( <Lijst met Teksten> )::
+  Voert een lijst van commando's uit, ingegeven als teksten.
+
+[NOTE]
+====
+
+Let op dat je hier enkel Engelse commando's ingeeft, ook al heb je _Nederlands_ geselecteerd als taal.
+
+====
+
+[EXAMPLE]
+====
+
+`++Uitvoeren({"A=(1,1)","B=(3,3)","C = Midpoint(A, B)"})++` creëert de punten _A, B_ en hun middelpunt _C_.
+
+`++Uitvoeren(Join[{"f_{1} = 1", "f_{2} = 1"}, Sequence("f_{"+(i + 2) + "} = f_{" + (i+1) + "} + f_{"+ i +"}", i, 1, 10)))++`
+creëert de eerste 10 elementen van de rij van Fibonacci
+
+====
+
+Uitvoeren( <Lijst met Teksten>, <Parameter>, <Parameter>, ... )
+
+Vervangt %1 voor de eerste parameter, %2 voor de tweede parameter enz. voor elke tekst in de lijst. Je kunt tot 9
+parameters vastleggen. Na de vervanging worden de scrips uitgevoerd.
+
+[EXAMPLE]
+====
+
+`++Uitvoeren({"Midpoint(%1,%2)"},A,B)++` creëert het middelpunt van het lijnstuk _AB_.
+
+====
+
+[NOTE]
+====
+
+Let op dat je hier enkel Engelse commando's ingeeft, ook al heb je _Nederlands_ geselecteerd als taal.
+
+====

@@ -1,0 +1,37 @@
+= Percentiel Commando
+:page-en: commands/Percentile_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Percentiel( <Lijst met waarnemingsgetallen>, <Procent> )::
+  _P_ is het gegeven _Procent_ (0 < P ≤ 1).
+  Berekent het 100P-de http://en.wikipedia.org/wiki/nl:Percentiel[percentiel] van een lijst met waarnemingsgetallen.
+
+[EXAMPLE]
+====
+
+`++Percentiel({1, 2, 3, 4}, 0.25)++` geeft _1.25_.
+
+====
+
+[NOTE]
+====
+
+De commando's xref:/commands/Q1.adoc[Kwartiel] en Percentiel gebruiken verschillende berekeningsmethoden en geven niet
+steeds hetzelfde resultaat.
+
+[EXAMPLE]
+====
+
+`++Q1({1, 2, 3, 4})++` geeft _1.5_.
+
+`++Percentiel({1, 2, 3, 4}, 0.25)++` geeft _1.25_.
+
+====
+
+====

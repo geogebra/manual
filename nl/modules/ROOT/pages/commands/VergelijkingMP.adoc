@@ -1,0 +1,45 @@
+= VergelijkingMP Commando
+:page-en: commands/LocusEquation_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+VergelijkingMP( <Meetkundige Plaats> )::
+  Berekent de vergelijking van een meetkundige plaats en plot ze als een impliciete kromme.
+VergelijkingMP( <Punt Q dat de MP creëert>, <Bewegend punt P> )::
+  Berekent de vergelijking van een meetkundige plaats vanuit een punt _Q_ dat de meetkundige plaats creëert en een
+  bewegend punt _P_, plot de MP als een impliciete kromme.
+
+[EXAMPLE]
+====
+
+We creëren een parabool als meetkundige plaats: Creëer vrije punten _A_ en _B_, en een rechte _d_ door de twee punten
+(als richtlijn van de parabool). Creëer een vrij punt _F_ voor het brandpunt. Creëer nu _P_ op de rechte _d_ het
+bewegend punt), en creëer nu _p_ als een loodlijn op _d_ door _P_. Creëer ook de rechte _b_ als middelloodlijn van het
+lijnstuk _FP_. Creëer tenslotte punt _Q_ (het punt dat de meetkundige plaats creëert) als het snijpunt van de rechten
+_p_ en _b_. `++VergelijkingMP(Q,P)++` geeft nu de juiste vergelijking van de meetkundige plaats en tekent ze ook.
+
+====
+
+[NOTE]
+====
+
+* Het commando werkt enkel voor een aantal meetkundige plaatsen die punten, rechten, cirkels en kegelsnede gebruiken.
+Stralen en lijnstukken worden beschouwd als rechten.
+* Wanneer de meetkundige plaats te ingewikkeld is krijg je als resultaat 'onbepaald'.
+* De meetkundige plaats wordt berekend met http://en.wikipedia.org/wiki/Gr%C3%B6bner_basis[Gröbner bases] en soms
+verschijnen hierbij extra takken van de kromme die niet tot de originele meetkundige plaats behoren.
+* Zie ook het commando xref:/commands/MeetkundigePlaats.adoc[MeetkundigePlaats].
+
+====
+
+[NOTE]
+====
+
+De meetkundige plaats moet gecreëerd worden vanuit een punt en niet vanuit een schuifknop.
+
+====

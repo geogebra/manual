@@ -1,0 +1,82 @@
+= Normaalvector Commando
+:page-en: commands/PerpendicularVector_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Normaalvector( <Rechte> )::
+  Geeft de normaalvector van de rechte.
+Normaalvector( <Lijnstuk> )::
+  Geeft de normaalvector van het lijnstuk met dezelfde lengte.
+Normaalvector( <Vector> )::
+Normaalvector( <Vlak> )::
+  Geeft een normaalvactor van het vlak.
+
+[EXAMPLE]
+====
+
+`++Normaalvector( xOyvlak )++` geeft de normaalvector _u=(0, 0, 1)_ van het xOy vlak.
+
+====
+
+[EXAMPLE]
+====
+
+`++Vector( (-12, 8) )++` is een vector _u_. `++Normaalvector( u )++` geeft de normaalvector _v=(-8, -12)_ van de vector
+_u_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Lijnstuk( (3, 2), (14, 5) )++` is een lijnstuk _k_. `++Normaalvector( k )++` geeft de normaalvector _u=(-3, 11)_ van
+het lijnstuk _k_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Rechte( (1, 4), (5, -3) )++` is een rechte _j_. `++Normaalvector( j )++` geeft de normaalvector _u=(7, 4)_ van de
+rechte _j_.
+
+====
+
+[NOTE]
+====
+
+Een vector met coördinaten _(a, b)_ heeft als normaalvector _(-b, a)_.
+
+====
+
+[NOTE]
+====
+
+Een rechte met als vergelijking _ax + by = c_ heeft als normaalvector _(a, b)_.
+
+====
+
+== CAS venster
+
+Normaalvector( <Vector> )::
+  Geeft de normaalvector van de gegeven vector.
+
+[EXAMPLE]
+====
+
+* `++Normaalvector((3, 2))++` geeft de vector _\{-2, 3}_.
+* `++Normaalvector((a, b))++` geeft de vector _\{-b, a}_.
+
+====
+
+[NOTE]
+====
+
+Zie ook het commando xref:/commands/Eenheidsnormaalvector.adoc[Eenheidsnormaalvector Commando].
+
+====

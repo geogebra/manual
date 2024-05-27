@@ -1,0 +1,61 @@
+= Linkerlid Commando
+:page-en: commands/LeftSide_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Linkerlid( <Vergelijking> )::
+  Geeft het linkerlid van de vergelijking.
+
+[EXAMPLE]
+====
+
+`++Linkerlid(x + 2 = 3 x + 1)++` geeft _x_.
+
+====
+
+== CAS venster
+
+Linkerlid( <Vergelijking> )
+
+Geeft het linkerlid van de vergelijking.
+
+Linkerlid( <Lijst van vergelijkingen> )
+
+Geeft de lijst van linkerleden van de vergelijkingen.
+
+Linkerlid( <Lijst van vergelijkingen>, <Index> )
+
+Geeft de lijst van linkerleden van de vergelijkingen bepaald door de index.
+
+[EXAMPLE]
+====
+
+`++Linkerlid({a^2 + b^2 = c^2, x + 2 = 3 x + 1}, 1)++` geeft stem:[a^2 + b^2].
+
+====
+
+[EXAMPLE]
+====
+
+`++Linkerlid({a^2 + b^2 = c^2, x + 2 = 3 x + 1})++` geeft stem:[ \left\\{a^2 + b^2, x + 2 \right\} ] .
+
+====
+
+[EXAMPLE]
+====
+
+`++Linkerlid(x + 3 = 3 x + 1)++` geeft _x + 3_.
+
+====
+
+[NOTE]
+====
+
+Zie ook xref:/commands/Rechterlid.adoc[Rechterlid Commando].
+
+====

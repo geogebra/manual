@@ -1,0 +1,41 @@
+= Assen Commando
+:page-en: commands/Axes_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Assen( <Kegelsnede> )::
+  Geeft de vergelijkingen van de hoofdas en de nevenas van een kegelsnede.
+
+[NOTE]
+====
+
+Zie ook xref:/commands/Hoofdas.adoc[Hoofdas] and xref:/commands/Nevenas.adoc[Nevenas] commando's.
+
+====
+
+Assen( <Kwadriek> )::
+  Creëert de 3 assen van de gegeven kwadriek.
+
+[EXAMPLE]
+====
+
+`++Assen(x^2 + y^2 = 3)++` geeft de drie rechten
+
+_a_: _X_ = (0, 0, 0) + _λ_ (1, 0, 0), _b_: _X_ = (0, 0, 0) + _λ_ (0, 1, 0) en _c_: _X_ = (0, 0, 0) + _λ_ (0, 0, 1)
+
+====
+
+[NOTE]
+====
+
+Specifiek:
+
+* Als de kwadriek een _cylinder_ is, geeft het commando de twee assen van het cirkelvormig grondvlak en de rotatieas.
+* Als de kwadriek een _bol_ is, geeft het commando de drie assen evenwijdig aan de assen van het coördinatensysteem.
+
+====

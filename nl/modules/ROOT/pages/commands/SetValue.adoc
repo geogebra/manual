@@ -1,0 +1,36 @@
+= SetValue Commando
+:page-en: commands/SetValue_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+SetValue( <Booleaanse variabele>, <0|1> )::
+  Bepaalt de waarde van een booleaanse variabele of aanvinkvakje als: 1 = true, 0 = false
+
+[EXAMPLE]
+====
+
+Voor de Booleaanse variabele _b_ bepaalt `++ SetValue(b,1)++` de waarde van _b_ als _true_.
+
+====
+
+SetValue( <Object>, <Object> )::
+  _A_ is het eerste object en _B_ het tweede object. Wanneer _A_ een xref:/Vrije_afhankelijke_en_hulpobjecten.adoc[vrij
+  object] is of een punt, beperkt tot een pad of regio (zie [Meetkundige Objecten]], wordt zjn waarde gelijkgesteld aan
+  de huidige waarde van _B_ (d.w.z. dat de waarde van _A_ niet verandert wanneer achteraf _B_ wijzigt).
+
+[EXAMPLE]
+====
+
+Voor een functie _f_ definieert `++SetValue(f, RandomElement({cos(x), 3x+2, ln(x)}))++` f als een van de functies uit de
+lijst.
+
+====
+
+SetValue( <Lijst>, <Getal>, <Object> )::
+  Met _n_ het gegeven _<Getal>_, definieert het commando het n-de element van een gegeven lijst als de huidige waarde
+  van het object.

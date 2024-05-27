@@ -1,0 +1,37 @@
+= Rang Commando
+:page-en: commands/MatrixRank_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Rang( <Matrix> )::
+  Geeft de http://en.wikipedia.org/wiki/Rank_(linear_algebra)[rang] van een gegeven matrix.
+
+[EXAMPLE]
+====
+
+* `++Rang({{2, 2}, {1, 1}})++` geeft _1_,
+* `++Rang({{1, 2}, {3, 4}})++` geeft _2_,
+* `++A = {{1, 2, 3}, {1, 1, 1}, {2, 2, 2}}++` een 3x3-matrix. `++Rang(A)++` geeft _2_ want rij twee en rij 3 zijn
+lineair afhankelijk. Verwar rang dus niet met orde!
+
+====
+
+== CAS Venster
+
+Rang( <Matrix> )
+
+Geeft de rang van een gegeven matrix.
+
+[EXAMPLE]
+====
+
+* `++Rang({{2, 2}, {1, 1}})++` geeft _1_,
+* `++Rang({{1, 2}, {3, 4}})++` geeft _2_,
+* `++Rang({{1, 2}, {k*1,  k*2}})++` geeft _1_.
+
+====

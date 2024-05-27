@@ -1,0 +1,97 @@
+= Element Commando
+:page-en: commands/Element_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Element( <Lijst>, <Getal> )::
+  Geeft het _n_-de element van de lijst.
+
+[EXAMPLE]
+====
+
+`++Element({1, 3, 2}, 2)++` geeft _3_, het tweede element van _\{1, 3, 2}_.
+
+====
+
+[NOTE]
+====
+
+Met lijst=\{10,11,12,13,14,15} kan je ook lijst(n) typen. lijst(1) geeft 10, lijst(5} geeft 14, lijst(-1) geeft 15 en
+lijst(-4) geeft 12.
+
+====
+
+Element( <Matrix>, <Rij>, <Kolom> )::
+  Geeft het element van de matrix in de gegeven rij en kolom.
+
+[EXAMPLE]
+====
+
+`++Element({{1, 3, 2}, {0, 3, -2}}, 2, 3)++` geeft _-2_, het derde element van de tweede rij van
+stem:[\begin\{pmatrix}1&3&2\\0&3&-2\end\{pmatrix}].
+
+====
+
+[NOTE]
+====
+
+Met matrix=stem:[\begin\{pmatrix}1&2\\3&4\end\{pmatrix}] kan je ook matrix(m,n) typen. matrix(1,1) geeft 1, matrix(2,2}
+geeft 4.
+
+====
+
+Element( <Lijst>, <Index1>, <Index2>, ... )::
+  In een _n_-dimensionale lijst kan je tot _n_ indeen specifiëren om een element (of een lijst van elementen) te bekomen
+  op gegeven coördinaten.
+
+[EXAMPLE]
+====
+
+_L = \{\{\{1, 2}, \{3, 4}}, \{\{5, 6}, \{7, 8}}}_.
+
+`++Element(L, 1, 2, 1)++` geeft _3_, `++Element(L, 2, 2)++` geeft _\{7, 8}_.
+
+====
+
+[NOTE]
+====
+
+Dit commando werkt enkel wanneer de lijst of matrix elementen van hetzelfde type bevat (bijvoorbeeld enkel getallen of
+enkel punten).
+
+====
+
+== CAS venster
+
+Element( <Lijst>, <Positie> )::
+  Geeft het _n_-de element van de lijst.
+Element[(<Matrix>, <Rij>, <Kolom> )::
+  Geeft het element van de matrix in de gegeven rij en kolom.
+
+[EXAMPLE]
+====
+
+`++Element({{a, b, c}, {d, e, f}}, 2, 3)++` geeft _f_, het derde element van de tweede rij van
+stem:[\begin\{pmatrix}a&b&c\\d&e&f\end\{pmatrix}].
+
+====
+
+[EXAMPLE]
+====
+
+`++Element({a, b, c}, 2)++` geeft _b_, het tweede element van _\{a, b, c}_.
+
+====
+
+[NOTE]
+====
+
+Zie ook de commando's xref:/commands/Eerste.adoc[Eerste], xref:/commands/Laatste.adoc[Laatste] en
+xref:/commands/WillekeurigElement.adoc[WillekeurigElement].
+
+====

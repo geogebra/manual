@@ -1,0 +1,49 @@
+= ToevalsgetalTussen Commando
+:page-en: commands/RandomBetween_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+ToevalsgetalTussen( <Min>, <Max> )::
+  Genereert een willekeurig geheel getal tussen een gegeven _minimum_ en _maximum_ (min en max inbegrepen).
+ToevalsgetalTussen( <Min> , <Max> , <Boolean Fixed> )::
+  Wanneer _Boolean Fixed_ = "true", genereert het een willekeurig geheel getal tussen een gegeven _minimum_ en
+  _maximum_, dat slechte één keer berekend wordt (wanneer het bestand wordt ingeladen en ook bij undo/redo).
+
+[EXAMPLE]
+====
+
+`++ToevalsgetalTussen(0, 10, true)++` geeft een getal tussen _0_ en _10_.
+
+====
+
+[EXAMPLE]
+====
+
+`++ToevalsgetalTussen(0, 10)++` geeft een getal tussen _0_ en _10_ .
+
+====
+
+[NOTE]
+====
+
+Klik /Sjabloon:KeyCode.adoc[Sjabloon:KeyCode] om het verschil te zien tusse beide syntaxen.
+
+====
+
+== CAS venster
+
+ToevalsgetalTussen( <Minimum>, <Maximum> ) +
+ToevalsgetalTussen( <Min>, <Max> )::
+  Genereert een willekeurig geheel getal tussen een gegeven _minimum_ en _maximum_ (min en max inbegrepen).
+
+[EXAMPLE]
+====
+
+`++ToevalsgetalTussen(0, 10)++` geeft een getal tussen _0_ en _10_ .
+
+====

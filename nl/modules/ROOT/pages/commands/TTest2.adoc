@@ -1,0 +1,32 @@
+= TTest2 Commando
+:page-en: commands/TTest2_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+TToetsTweeGemiddelden( <Lijst van steekproefgegevens 1>, <Lijst van steekproefgegevens 2>, <Staart>, <Booleaans gepoold>
+)::
+  Voert vanuit twee lijsten met steekproefgegevens een t-test uit naar het verschil tussen de twee populatiegemiddelden.
+  _Staart_ heeft als mogelijke waarden "<", ">" , "≠" die de volgende hypothesen bepalen:
+  "<" = het verschil tussen de twee populatiegemiddelden < 0
+  ">" = het verschil tussen de twee populatiegemiddelden > 0
+  "≠" = het verschil tussen de twee populatiegemiddelden ≠ 0
+
+Als _gepoold_ = true, wordt verondersteld dat de populatievarianties gelijk zijn en steekproefstandaardvariabelen
+gecombineerd worden in de berekening.
+
+Als _gepoold_ = false, wordt verondersteld dat de populatievarianties niet gelijk zijn en steekproefstandaardvariabelen
+niet gecombineerd worden in de berekening.
+
+Resultaten worden gegeven in een lijst in de vorm _\{Waarschijnlijkheidswaarde, t-test statistisch}_.
+
+TToetsTweeGemiddelden( <Steekproefgemiddelde 1>, <Steekproef Standaardafwijking 1>, <Steekproefgrootte 1>,
+<Steekproefgemiddelde 2>, <Steekproef Standaardafwijking 2>, <Steekproefgrootte 2>, <Staart>, <Booleaans gepoold> )
+
+Voert vanuit twee lijsten met steekproefgegevens een t-test uit naar het verschil tussen de twee populatiegemiddelden.
+_Start_ en _gepoold_ worden gedefinieerd als hierboven. Resultaten worden gegeven in een lijst in de vorm
+_\{Waarschijnlijkheidswaarde, t-test statistisch}_.

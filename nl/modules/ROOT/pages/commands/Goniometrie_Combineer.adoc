@@ -1,0 +1,73 @@
+= Goniometrie Combineer Commando
+:page-en: commands/TrigCombine_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+GoniometrieCombineer( <Uitdrukking> )::
+  Vormt een goniometrische uitdrukking met producten van goniometrische functies om tot een uitdrukking zonder producten
+  maar met sommen van variabelen.
+GoniometrieCombineer( <Uitdrukking>, <Doelfunctie> )::
+  Vormt een goniometrische uitdrukking met producten van goniometrische functies om tot een uitdrukking zonder producten
+  maar met sommen van variabelen, waarbij de voorkeur wordt gegeven aan de gegeven doelfunctie.
+
+[EXAMPLE]
+====
+
+`++GoniometrieCombineer(sin(x) + cos(x), sin(x))++` geeft stem:[ \{\sqrt\{2} sin \left( x + \frac\{1}\{4} \pi \right)}
+].
+
+====
+
+[EXAMPLE]
+====
+
+`++GoniometrieCombineer(sin(x) + cos(x))++` geeft stem:[ \{\sqrt\{2} cos \left( x - \frac\{1}\{4} \pi \right)} ].
+
+====
+
+[EXAMPLE]
+====
+
+`++GoniometrieCombineer(sin(x) cos(3x))++` geeft stem:[\{\frac\{1}\{2} sin \left( 4 x \right) - \frac\{1}\{2} sin \left(
+2 x \right)}].
+
+====
+
+== CAS Venster
+
+GoniometrieCombineer( <Uitdrukking> )::
+  Vormt een goniometrische uitdrukking met producten van goniometrische functies om tot een uitdrukking zonder producten
+  maar met sommen van variabelen.
+
+[EXAMPLE]
+====
+
+`++Goniometrie_Combineer(sin(p) cos(3p))++` geeft stem:[\{\frac\{1}\{2} sin \left( 4 p \right) - \frac\{1}\{2} sin
+\left( 2 p \right)}].
+
+====
+
+GoniometrieCombineer( <Uitdrukking>, <Doelfunctie> )::
+  Vormt een goniometrische uitdrukking met producten van goniometrische functies om tot een uitdrukking zonder producten
+  maar met sommen van variabelen, waarbij de voorkeur wordt gegeven aan de gegeven doelfunctie.
+
+[EXAMPLE]
+====
+
+`++GoniometrieCombineer(sin(p) + cos(p), sin(x))++` geeft stem:[ \{\sqrt\{2} sin \left( p + \frac\{1}\{4} \pi \right)}
+].
+
+====
+
+[NOTE]
+====
+
+Zie ook xref:/commands/Goniometrie_Werkuit.adoc[Goniometrie_Werkuit Commando] en
+xref:/commands/Gonio_Vereenvoudig.adoc[Gonio_Vereenvoudig Commando].
+
+====

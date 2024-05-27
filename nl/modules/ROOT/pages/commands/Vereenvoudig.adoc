@@ -1,0 +1,49 @@
+= Vereenvoudig Commando
+:page-en: commands/Simplify_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Vereenvoudig( <Functie> )::
+  Vereenvoudigt zo mogelijk de termen van het gegeven functievoorschrift.
+Vereenvoudig( <Tekst> )::
+  Probeert tekstuitdrukkingen te vereenvoudigen door bijvoorbeeld herhaalde negaties te verwijderen.
+
+[EXAMPLE]
+====
+
+_a_ = _b_ = _c_ = -1 `++Vereenvoudig("f(x) = " + a + "x² + " + b + "x + " + c)++` geeft de tekst _f(x) = -x^2 - x - 1_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Vereenvoudig(x + x + x)++` geeft de functie _f(x) = 3x_.
+
+====
+
+[NOTE]
+====
+
+* Het commando laadt het CAS-systeem en kan traag zijn op sommige computers. Kies eerder voor het commando
+xref:/commands/Veeltermfunctie.adoc[Veeltermfunctie Commando] .
+
+====
+
+== CAS venster
+
+Vereenvoudig( <Functievoorschrift> )::
+  Vereenvoudigt zo mogelijk de termen van het gegeven functievoorschrift. In de termen mogen ongedefinieerde variabelen
+  staan.
+
+[EXAMPLE]
+====
+
+`++Vereenvoudig(3 * x + 4 * x + a * x)++` geeft _xa_ + _7x_.
+
+====

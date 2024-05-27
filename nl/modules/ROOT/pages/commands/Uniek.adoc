@@ -1,0 +1,40 @@
+= Uniek Commando
+:page-en: commands/Unique_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Uniek( <Lijst> )::
+  Geeft de elementen van de gegeven lijst in stijgende volgorde. Elementen die meerdere keren voorkomen, worden slechts
+  één keer opgenomen. Het commando werkt zowel voor een lijst met getallen als voor een lijst met teksten.
+
+[EXAMPLE]
+====
+
+* `++Uniek({1, 2, 4, 1, 4})++` geeft _\{1, 2, 4}_.
+* `++Uniek({"a", "b", "Hallo", "Hallo"})++` geeft _\{"'Hallo", "a", "b"}_.
+
+====
+
+[NOTE]
+====
+
+Zie ook het commando xref:/commands/Frequentie.adoc[Frequentie] .
+
+====
+
+== CAS venster
+
+Uniek( <Lijst> )::
+  Geeft een lijst waarin elk element van de gegeven lijst slechts één keer voorkomt.
+
+[EXAMPLE]
+====
+
+`++Uniek({1, x, x, 1, a})++` geeft _\{1, x, a}_.
+
+====

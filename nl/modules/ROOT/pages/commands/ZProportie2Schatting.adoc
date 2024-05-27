@@ -1,0 +1,29 @@
+= ZProportie2Schatting Commando
+:page-en: commands/ZProportion2Estimate_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+ZSchattingProportie2( <Steekproefproportie 1>, <Steekproefgrootte 1>, <Steekproefproportie 2>, <Steekproefgrootte 2>,
+<Betrouwbaarheidsniveau stem:[ (1-\alpha) ]> )::
+  Berekent een stem:[(1- \alpha) ]-betrouwbaaheidsinterval van het verschil tussen de twee steekproefproporties van
+  steekproeven met gegeven grootte en betrouwbaarheidsniveau stem:[ 1-\alpha ].
+  Het betrouwbaarheidsinterval wordt gegeven als een lijst van de vorm \{ondergrens, bovengrens}.
+
+[EXAMPLE]
+====
+
+`++ZSchattingProportie2g(0.31, 1200, 0.3, 1200, 0.95)++` geeft _\{-0.03, 0.05}_.
+
+====
+
+[NOTE]
+====
+
+Het betrouwbaarheidsniveau stem:[(1- \alpha) ] is het complement van het significantieniveau stem:[\alpha ]
+
+====

@@ -1,0 +1,172 @@
+= Hoek Commando
+:page-en: commands/Angle_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Hoek( <Object> )
+
+* *Kegelsnede:* Geeft de draaihoek van de hoofdas van de kegelsnede (zie commando xref:/commands/Assen.adoc[Assen]).
+
+[EXAMPLE]
+====
+
+`++Hoek(x²/4+y²/9=1)++` geeft _90°_ or 1.57 als de standaardeenheid voor hoek _radialen_ is.
+
+====
+
+* *Vector:* Geeft de hoek tussen de _x_‐as en de gegeven vector.
+
+[EXAMPLE]
+====
+
+`++Hoek(Vector((1, 1)))++` geeft _45°_ of de overeenkomende hoek in _radialen_.
+
+====
+
+* *Punt:* Geeft de hoek tussen de _x_‐as en de puntvector bepaald door het gegeven punt.
+
+[EXAMPLE]
+====
+
+`++Hoek((1, 1))++` geeft _45°_ of de overeenkomende hoek in _radialen_.
+
+====
+
+* *Getal:* zet het getal om in een hoek (resultaat in [0,360°] of [0,2π] naargelang de standaardeenheid voor hoek).
+
+[EXAMPLE]
+====
+
+`++Hoek(20)++` geeft _65.92°_ met _graden_ als eenheid voor hoek.
+
+====
+
+* *Veelhoek:* Geeft alle hoeken van een veelhoek in tegenwijzerzin.
+
+[EXAMPLE]
+====
+
+`++Hoek(Veelhoek((4, 1), (2, 4), (1, 1)) )++` geeft _56.31°_, _52.13°_ en _71.57°_ of de overeenkomende hoeken in
+_radialen_.
+
+====
+
+[NOTE]
+====
+
+Wanneer de veelhoek gecreëerd werd in tegenwijzerzin, dan krijg je de binnenhoeken. Werd hij gecreëerd in wijzerzin, dan
+krijg je de buitenhoeken.
+
+====
+
+Hoek( <Vector>, <Vector> )::
+  Geeft de hoek tussen de twee vectoren (resultaat in [0,360°] of [0,2π] naargelang de standaardeenheid voor hoek).
+
+[EXAMPLE]
+====
+
+`++Hoek(Vector((1, 1)), Vector((2, 5)))++` geeft _23.2°_ of de overeenkomende hoeken in _radialen_.
+
+====
+
+Hoek( <Rechte>, <Rechte> )::
+  Geeft de hoek tussen de twee richtingvectoren van de rechten (resultaat in [0,360°] of [0,2π] naargelang de
+  standaardeenheid voor hoek).
+
+[EXAMPLE]
+====
+
+* `++Hoek(y = x + 2, y = 2x + 3)++` geeft _18.43°_ of de overeenkomende hoek in _radialen_.
+* `++Hoek(Rechte((-2, 0, 0), (0, 0, 2)), Rechte((2, 0, 0), (0, 0, 2)))++` geeft _90°_ of de overeenkomende hoek in
+_radialen_.
+
+en in het _CAS venster_ :
+
+* `++Hoek(x + 2,  2x + 3)++` geeft stem:[acos \left( 3 \cdot \frac\{\sqrt\{10}}\{10} \right)].
+* Definieer `++f(x) := x + 2++` en `++g(x) := 2x + 3++` . Het commando `++Hoek(f(x), g(x))++` geeft stem:[acos \left(3
+\cdot \frac\{\sqrt\{10}}\{10} \right)].
+
+====
+
+Hoek( <Rechte>, <Vlak> )::
+  Geeft de hoek tussen de rechte en het vlak.
+
+[EXAMPLE]
+====
+
+`++Hoek(Rechte((1, 2, 3),(-2, -2, 0)), z = 0)++` geeft _30.96°_ of de overeenkomende hoek in _radialen_.
+
+====
+
+Hoek( <Vlak>, <Vlak> )::
+  Geeft de hoek tussen de twee vlakken.
+
+[EXAMPLE]
+====
+
+`++Hoek(2x - y + z = 0, z = 0)++` geeft _114.09°_ of de overeenkomende hoek in _radialen_.
+
+====
+
+Hoek( <Punt>, <Hoekpunt>, <Punt> )::
+  Geeft de hoek, bepaald door de gegeven punten (resultaat in [0,360°] of [0,2π] naargelang de standaardeenheid voor
+  hoek).
+
+[EXAMPLE]
+====
+
+`++Hoek((1, 1), (1, 4), (4, 2))++` geeft _56.31°_ of de overeenkomende hoek in _radialen_.
+
+====
+
+Hoek( <Punt>, <Hoekpunt>, <Hoek> )::
+  Geeft de hoek met afmeting _α_ getekend vanuit een _punt_ en een _hoekpunt_.
+
+[EXAMPLE]
+====
+
+`++Hoek((0, 0), (3, 3), 30°)++` geeft _(1.9, -1.1)_.
+
+====
+
+[NOTE]
+====
+
+Het punt _Rotatie( <Punt>, <Hoek>, <Hoekpunt> )_ wordt ook gecreëerd.
+
+====
+
+Hoek( <Punt>, <Punt>, <Punt>, <Richting> )::
+  Geeft de hoek bepaald door de punten en de gegeven _Richting_, die een rechte of een vlak kan zijn (resultaat in
+  [0,360°] of [0,2π] naargelang de standaardeenheid voor hoek).
+
+[EXAMPLE]
+====
+
+`++Hoek((1, -1, 0),(0, 0, 0),(-1, -1, 0), zAs))++` geeft _270°_ en `++Hoek((-1, -1, 0),(0, 0, 0),(1, -1, 0), zAs))++`
+geeft _90°_ of de overeenkomende hoek in _radialen_.
+
+====
+
+[NOTE]
+====
+
+Gebruik maken van _Richting_ laat toe de standaardweergave van een punt in 3__D__ te omzeilen, die enkel kan bepaald
+worden als [0,180°] of [180°,360°], zodat voor gegeven drie punten _A_, _B_, _C_ in 3__D__ de commando's
+`++Hoek(A, B, C)++` en `++Hoek(C, B, A)++` de reële waarde geven, zonder intervalbeperking.
+
+====
+
+[NOTE]
+====
+
+Zie ook de knoppen /Bestand:Tool_Angle_gif.adoc[image:16px-Tool_Angle.gif[Tool Angle.gif,width=16,height=16]]
+xref:/tools/Hoek.adoc[Hoek] en /Bestand:Tool_Angle_Fixed_gif.adoc[image:16px-Tool_Angle_Fixed.gif[Tool Angle
+Fixed.gif,width=16,height=16]] xref:/tools/Hoek_met_gegeven_grootte.adoc[Hoek met gegeven grootte] .
+
+====

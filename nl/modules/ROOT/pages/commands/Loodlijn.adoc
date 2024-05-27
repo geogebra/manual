@@ -1,0 +1,75 @@
+= Loodlijn Commando
+:page-en: commands/PerpendicularLine_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Loodlijn( <Punt>, <Rechte> )::
+  Creëert een rechte door het punt loodrecht op de gegeven rechte.
+Loodlijn( <Punt>, <Lijnstuk> )::
+  Creëert een rechte door het punt loodrecht op het gegeven lijnstuk.
+Loodlijn( <Punt>, <Vector> )::
+  Creëert een rechte door het punt loodrecht op de gegeven vector.
+
+[EXAMPLE]
+====
+
+_u_ is een vector tussen twee punten: _u_ = _Vector_( (5, 3), (1, 1) ) en A = (-2, 0) is een punt.
+`++Loodlijn( A, u )++` geeft de rechte _c: 2x + y = -4_.
+
+====
+
+[EXAMPLE]
+====
+
+_c_ is het lijnstuk tussen de punten _A_ = (-3, 3) en _B_ = (0, 1). `++Loodlijn( A, c )++` creëert de rechte _d: -3x +
+2y = 15_.
+
+====
+
+[EXAMPLE]
+====
+
+_c_: -3__x__ + 4__y__ = -6 is een rechte en _A_ = (-2, -3) is een punt. `++Loodlijn( A, c )++` geeft de rechte _d_:
+-4__x__ - 3__y__ = 17.
+
+====
+
+[NOTE]
+====
+
+Zie ook de knop /Bestand:Tool_Perpendicular_Line_gif.adoc[image:Tool_Perpendicular_Line.gif[Tool Perpendicular
+Line.gif,width=32,height=32]] xref:/tools/Loodlijn.adoc[Loodlijn].
+
+====
+
+Loodlijn( <Punt>, <Vlak> )::
+  Creëert een loodlijn op het vlak door een gegeven punt.
+Loodlijn( <Rechte> , <Rechte> )::
+  Creëert een loodlijn op de gegeven rechten door het snijpunt van beide rechten.
+Loodlijn( <Punt>, <Richting>, <Richting> )::
+  Creëert een loodlijn op de gegeven richtingen (dat kunnen zowel rechten als vectoren zijn) door het gegeven punt.
+Loodlijn( <Punt>, <Rechte>, <Context> )::
+  Creëert een loodlijn op de gegeven rechte door het gegeven punt afhankelijk van de context.
+
+[EXAMPLE]
+====
+
+* `++Loodlijn( <Punt>, <Rechte>, <Vlak> )++` creëert een loodlijn op de gegeven rechte door het punt en evenwijdig aan
+het vlak.
+
+[NOTE]
+====
+
+Dit commando geeft als resultaat _onbepaald_ wanneer het punt op de rechte ligt in 3D.
+
+====
+
+* `++Loodlijn( <Punt>, <Rechte>, Vlak)++` creëert een loodlijn op de gegeven rechte door het punt. De twee rechten
+hebben een snijpunt.
+
+====

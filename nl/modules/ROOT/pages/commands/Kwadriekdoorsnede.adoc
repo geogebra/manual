@@ -1,0 +1,63 @@
+= Kwadriekdoorsnede Commando
+:page-en: commands/IntersectConic_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Kwadriekdoorsnede( <Rechte>, <Veelhoek> )::
+  Creëert het pad van de doorsnede van een rechte en een veelhoek.
+Kwadriekdoorsnede( <Veelvoek>, <Veelhoek> )::
+  Creëert het pad van de doorsnede van de twee gegeven veelhoeken.
+Kwadriekdoorsnede( <Vlak>, <Veelhoek> )::
+  Creëert het pad van de doorsnede van vlak en veelhoek.
+Kwadriekdoorsnede( <Vlak>, <Kwadriek> )::
+  Creëert het pad van de doorsnede van vlak en kwadriek.
+
+[EXAMPLE]
+====
+
+`++Kwadriekdoorsnede( a, bol )++` creëert een cirkel als doorsnede van het vlak _a_ en de kwadriek _bol_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Kwadriekdoorsnede( a, driehoek)++` creëert een lijnstuk tussen het eerste en tweede snijpunt van het vlak _a_ en de
+veelhoek __driehoek__in het vlak van de veelhoek.
+
+====
+
+[EXAMPLE]
+====
+
+`++Kwadriekdoorsnede( vierhoek, driehoek)++` creëert een nieuwe veelhoek als doorsnede van de twee gegeven veelhoeken.
+
+[NOTE]
+====
+
+De nieuwe veelhoek kan zowel een vierhoek, vijfhoek of zeshoek zijn, naargelang de plaatsing van de gegeven veelhoeken.
+
+====
+
+====
+
+[EXAMPLE]
+====
+
+`++Kwadriekdoorsnede( a, driehoek )++` creëert een lijnstuk tussen het eerste en tweede snijpunt van de rechte _a_ en de
+veelhoek _driehoek_.
+
+====
+
+[NOTE]
+====
+
+Zie ook de commando's xref:/commands/Snijpunten.adoc[Snijpunten] en
+xref:/commands/IntersectiePaden.adoc[IntersectiePaden] .
+
+====

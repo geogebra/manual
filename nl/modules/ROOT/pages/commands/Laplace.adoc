@@ -1,0 +1,40 @@
+= Laplace Commando
+:page-en: commands/Laplace_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+== CAS Syntax
+
+Laplace( <Functie> )::
+  Geeft de http://en.wikipedia.org/wiki/Laplace_transform[Laplace transformatie] van de gegeven functie
+
+[EXAMPLE]
+====
+
+`++ Laplace[sin(t)]++` geeft stem:[\mathbf\{\frac\{1}\{s^\{2} + 1}} ]
+
+====
+
+Laplace( <Functie>, <Variabele> )::
+  Geeft de Laplace transformatie van de functie, volgens de gegeven variabele.
+
+[EXAMPLE]
+====
+
+`++Laplace[sin(a*t),t]++` geeft stem:[\mathbf\{\frac\{a}\{a^\{2} + t^\{2}}}]
+
+`++Laplace[sin(a*t),a]++` geeft stem:[\mathbf\{\frac\{t}\{a^\{2} + t^\{2}}}]
+
+====
+
+[NOTE]
+====
+
+Zie ook het commando xref:/commands/InverseLaplace.adoc[InverseLaplace].
+
+====

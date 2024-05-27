@@ -1,0 +1,33 @@
+= ZijnConcurrent Commando
+:page-en: commands/AreConcurrent_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+ZijnConcurrent( <Rechte>, <Rechte>, <Rechte> )::
+  Onderzoekt of de rechten een gemeenschappelijk snijpunt hebben. Wanneer rechten evenwijdig lopen, worden ze
+  verondersteld een punt gemeenschappelijk te hebben op oneindig en zal in dat geval het antwoord _true_ zijn.
+
+Normaal berekent dit commando het resultaat numeriek. Dit kan je veranderen met het commando
+xref:/commands/Bewijs.adoc[Bewijs].
+
+[EXAMPLE]
+====
+
+`++ZijnConcurrent(Rechte((1, 2), (3, 4)]) Rechte((1, 2), (3, 5)), Rechte((1, 2), (3, 6)))++` geeft _true_ want de drie
+rechten gaan door het punt (1,2).
+
+====
+
+[NOTE]
+====
+
+Zie ook de commando's xref:/commands/ZijnCollineair.adoc[ZijnCollineair],
+xref:/commands/ZijnConcyclisch.adoc[ZijnConcyclisch], xref:/commands/ZijnGelijk.adoc[ZijnGelijk] ,
+xref:/commands/ZijnLoodrecht.adoc[ZijnLoodrecht], xref:/commands/ZijnEvenwijdig.adoc[ZijnEvenwijdig].
+
+====

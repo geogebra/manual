@@ -1,0 +1,58 @@
+= LaTeX Commando
+:page-en: commands/FormulaText_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+LaTeX( <Object> )::
+  Formuleert de formule voor het object als een LaTeX text.
+
+[EXAMPLE]
+====
+
+* _a = 2_ en _f(x) = a x^2^_. `++LaTeX(f)++` geeft _2 x^2^_ (als een LaTeX tekst).
+* `++LaTeX($1)++` geeft de inhoud van de eerste rij van het xref:/CAS_venster.adoc[CAS venster] als een LaTeX tekst.
+
+====
+
+[NOTE]
+====
+
+Standaard worden variabelen vervangen door waarden.
+
+====
+
+LaTeX( <Object>, <Boolean vervangen van Variabelen> )::
+  Formuleert de formule voor het object als een LaTeX text. De Booleaanse variabele bepaalt of variabelen vervangen
+  worden door waarden (_true_) of de namen van de variabelen blijven staan in de tekst (_false_).
+
+[EXAMPLE]
+====
+
+_a = 2_ en _f(x) = a x^2^_.
+
+`++LaTeX[f, true]++` geeft _2 x^2^_ (als een LaTeX text).
+
+`++LaTeX[f, false]++` geeft _a x^2^_ (als een LaTeX tekst).
+
+====
+
+LaTeX( <Object>, <Boolean vervangen van Variabelen>, <Boolean Toon Naam> )::
+  Formuleert de formule voor het object als een LaTeX tekst. De eerste Booleaanse variabele bepaalt of variabelen
+  vervangen worden door waarden (_true_) of de namen van de variabelen blijven staan in de tekst (_false_). De tweede
+  Booleaanse variabele bepaalt of de naam van het object getoond wordt in de tekst (_true_) of niet (_false_).
+
+[EXAMPLE]
+====
+
+_a = 2_ en _f(x) = a x^2^_.
+
+`++LaTeX[f, true, true]++` geeft _f(x) = 2 x^2^_ (als een LaTeX tekst).
+
+`++LaTeX[f, false, false]++` geeft _a x^2^_ (als een LaTeX tekst).
+
+====

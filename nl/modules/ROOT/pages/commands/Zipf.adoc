@@ -1,0 +1,39 @@
+= Zipf Commando
+:page-en: commands/Zipf_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Zipf( <Aantal elementen>, <Exponent> )::
+  Geeft een staafdiagram van een http://en.wikipedia.org/wiki/Zipf%27s_law[Zipf distributionverdeling].
+  Parameters:
+  * _Aantal elementen_: aantal elementen waarvan we de rang bestuderen
+  * _Exponent_: exponent die de verdeling bepaalt
+
+Zipf( <Aantal elementen>, <Exponent>, <Boolean Cumulatief> )::
+  Geeft de grafiek van de Zipf verdeling als _Cumulatief_ = false.
+  Geeft de grafiek van de cumulatieve Zipf verdeling als _Cumulatief_ = true.
+  De eerste twee parameters zijn hetzelfde als hierboven.
+Zipf( <Aantal elementen>, <Exponent>, <Variabele waarde>, <Boolean Cumulative> )::
+  X is een willekeurige variabele met Zipf verdeling.
+  Geeft P( X = _v_) als _Cumulatief_ = false.
+  Geeft P( X ≤ _v_) als _Cumulatief_ = true.
+  De eerste twee parameters zijn hetzelfde als hierboven.
+
+== CAS venster
+
+Zipf( <Aantal elementen>, <Exponent>, <Toevalsveranderlijke>, <Cumulatieve_aan> )::
+  X is een willekeurige variabele met Zipf verdeling.
+  Geeft P( X = _v_) als _Cumulatief_ = false.
+  Geeft P( X ≤ _v_) als _Cumulatief_ = true
+
+[EXAMPLE]
+====
+
+`++Zipf( 10, 1 , 5, false)++` geeft _stem:[\frac\{504}\{7381}]_.
+
+====

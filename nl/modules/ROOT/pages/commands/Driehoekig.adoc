@@ -1,0 +1,28 @@
+= Driehoekig Commando
+:page-en: commands/Triangular_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Driehoekig( <Ondergrens>, <Bovengrens>, <Mode>, x )::
+  Creëert de kansdichtheidsfunctie van de http://en.wikipedia.org/wiki/Triangular_distribution[driehoek verdeling] met
+  parameters _min, max, mod_.
+Driehoekig( <Ondergrens>, <Bovengrens>, <Mode>, <Variabele Waarde> )::
+  Berekent de waarde van de cumulatieve dichtheidsfunctie van de driehoek verdeling voor de _Variabele Waarde v_, dit is
+  de kans _P(X≤v)_ waarbij _X_ een willekeurige variabele is met een driehoek verdelind met als parameters _min, max,
+  mod_.
+Driehoekig( <Ondergrens>, <Bovengrens>, <Mode>, x, <Boolean Cumulative> )::
+  Wanneer _Cumulatief_ =__true__ creëert het de cumulatieve dichtheidsfunctie van de driehoek verdeling, anders creëert
+  het de kansdichtheidsfunctie van de driehoek verdeling.
+
+[NOTE]
+====
+
+Geeft de kans voor een gegeven _x_-coördinaat(of de oppervlakte onder de driehoek verdeling links van de gegeven
+_x_-coördinaat).
+
+====

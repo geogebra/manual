@@ -1,0 +1,51 @@
+= Stokdiagram Commando
+:page-en: commands/StickGraph_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Stokdiagram( <Lijst met punten> )::
+  Tekent een stokdiagramvan de gegeven punten. Voor elk punt wordt een verticaal lijnstuk getekend van de x-as tot aan
+  het punt.
+Stokdiagram( <Lijst met punten>, <Boolean Horizontaal> )::
+  Tekent een stokdiagramvan de gegeven punten. Wanneer _Horizontaal = true_, worden horizontale lijnen getekend van de
+  y-as tot aan het punt Wanneer _Horizontaal = false_, worden verticale lijnstukken getekend van de x-as tot elk punt.
+Stokdiagram( <Lijst met x-coordinaten>, <Lijst met y-coordinaten> )::
+  Tekent een stokdiagramvan de puten, bepaald door de twee lijsten. Voor elk punt wordt een verticaal lijnstuk getekend
+  van de x-as tot aan het punt.
+Stokdiagram( <Lijst met x-coordinaten>, <Lijst met y-coordinaten>, <Boolean Horizontal> )::
+  Tekent een stokdiagramvan de puten, bepaald door de twee lijsten. Wanneer _Horizontaal = true_, worden horizontale
+  lijnen getekend van de y-as tot aan het punt Wanneer _Horizontaal = false_, worden verticale lijnstukken getekend van
+  de x-as tot elk punt.
+
+[EXAMPLE]
+====
+
+`++Stokdiagram({1, 3, 4, 5}, {1, 2, 5, 7}, true)++`
+
+====
+
+[EXAMPLE]
+====
+
+`++Stokdiagram({1, 3, 4, 5}, {1, 2, 5, 7})++`
+
+====
+
+[EXAMPLE]
+====
+
+`++Stokdiagram({(1, 1), (3, 2), (4, 5), (5, 7)}, false)++`
+
+====
+
+[EXAMPLE]
+====
+
+`++Stokdiagram({(1, 1), (3, 2), (4, 5), (5, 7)})++`
+
+====

@@ -1,0 +1,50 @@
+= Zip Commando
+:page-en: commands/Zip_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Zip( <Uitdrukking>, <Var1>, <Lijst1>, <Var2>, <Lijst2>, ... )::
+  Creëert een lijst van objecten die verkregen worden door variabelen in de uitdrukking te vervangen door elementen van
+  de overeenkomende lijsten. De lengte van de lijst als resultaat van het commando in minstens de lengte van de gegeven
+  lijsten.
+
+[EXAMPLE]
+====
+
+Je kunt ook functies gebruiken als variabelen: `++Zip(f(2), f, {x+1,x+3})++` geeft de lijst _\{3, 5}_.
+
+====
+
+[EXAMPLE]
+====
+
+_lijst1=\{1, 2, 5}_ is een lijst met getallen. `++Zip(a*x^(b-1), a, list1,b)++` geeft de lijst _\{1*x^1, 2*x^2, 5*x^3}_.
+
+====
+
+[EXAMPLE]
+====
+
+_lijst1=\{x^2, x^3, x^6}_ is een lijst met veeltermen. `++Zip(Graad(a), a, lijst1)++` geeft de lijst _\{2, 3, 6}_.
+
+====
+
+[EXAMPLE]
+====
+
+P, Q, R, S zijn punten. `++Zip(Middelpunt(A, B), A, {P, Q}, B, {R, S})++` geeft een lijst middelpunten van lijnstukken
+_PR_ en _QS_.
+
+====
+
+[NOTE]
+====
+
+De elementen in een lijst moeten van hetzelfde type zijn.
+
+====

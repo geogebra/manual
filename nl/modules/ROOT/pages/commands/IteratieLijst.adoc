@@ -1,0 +1,53 @@
+= IteratieLijst Commando
+:page-en: commands/IterationList_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+IteratieLijst( <Functie>, <startwaarde>, <Getal n> )::
+  Geeft een lijst met als lengte _n+1_ waarvan de elementen de iteraties zijn van de functie, beginnend met de
+  startwaarde.
+
+[EXAMPLE]
+====
+
+Met `++f(x) = x^2++` geeft het commando `++IteratieLijst(f, 3, 2)++` de lijst _\{3, 9, 81}_.
+
+====
+
+IteratieLijst( <Uitdrukking>, <Variabelen>, ..., <Startwaarden>, <Aantal iteraties> )::
+  Creëert een lijst met lengte _n+1_ (_n_ = aantal iteraties) waarvan de elementen de iteraties zijn van de uitdrukking,
+  beginnend met de gegeven startwaarde. In elke iteratie worden de variabelen in de uitdrukking vervangen door de
+  laatste elementen van de lijst. Er moeten minstens evenveel startwaarden zijn als variabelen, anders is het resultaat
+  _ongedefinieerd_.
+
+[EXAMPLE]
+====
+
+_f__0 en _f__1 zijn getallen. `++IteratieLijst(a + b, a, b, {f_0, f_1},5)++` gebruikt de eerste 2 waarden uit de lijst
+met startwaarden. Daarna worden de waarden berekend als __f__~2~ = __f__~0~ + __f__~1~,   __f__~3~ = __f__~1~ +
+__f__~2~,   __f__~4~ = __f__~2~ + __f__~3~,   __f__~5~ = __f__~3~ + __f__~4~. Dus voor _f__0 = _f__1 = 1 wordt het
+resultaat \{1, 1, 2, 3, 5, 8}.
+
+====
+
+[EXAMPLE]
+====
+
+_A_ en _B_ zijn punten. Het commando `++IteratieLijst(Middelpunt(A, C), C, {B}, 3)++` berekent waarden voor __C__~0~ =
+_B_,   __C__~1~ = _Middelpunt_(_A_, __C__~0~),   __C__~2~ = _Middelpunt_(_A_, __C__~1~),   __C__~3~ = _Middelpunt_(_A_,
+__C__~2~) en geeft \{__C__~0~, __C__~1~, __C__~2~, __C__~3~}. Dus voor _A_ = (0,0) en _B_ = (8,0) wordt het resultaat
+\{(8,0), (4,0), (2,0), (1,0)}.
+
+====
+
+[NOTE]
+====
+
+Zie ook het commando xref:/commands/Iteratie.adoc[Iteratie].
+
+====

@@ -1,0 +1,40 @@
+= Pascal Commando
+:page-en: commands/Pascal_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Pascal( <Aantal keren succes>, <Kans op succes> )::
+  Geeft de grafiek van een http://mathworld.wolfram.com/NegativeBinomialDistribution.html[Pascal verdeling].
+  _Parameters:_
+  _Aantal keren succes_: aantal onafhankelijke Bernoulli pogingen met succes
+  _Kans op succes_: kans op succes per poging
+
+Pascal( <Aantal keren succes>, <Kans op succes>, <Logisch Cumulatief> )::
+  Geeft de grafiek van een Pascal verdeling wanneer _Cumulatief_ = false.
+  Geeft de grafiek van een cumulatieve Pascal verdeling wanneer _Cumulatief'_ = true.
+Pascal( <Aantal keren succes>, <Kans op succes>, <Variabele waarde>, <Logisch Cumulatief> )::
+  X is een willekeurige variabele met Pascal verdeling en _v_ de waarde van de variabele.
+  Geeft P( X = _v_) wanneer _Cumulatief'_ = false.
+  Geeft P( X ≤ _v_) wanneer _Cumulatief'_ = true.
+
+== CAS venster
+
+Pascal( <Aantal keren succes>, <Kans op succes>, <Variabele waarde>, <Boolean Cumulative> )::
+  X is een willekeurige variabele met Pascal verdeling.
+  Geeft P( X = _v_) wanneer _Cumulatief'_ = false.
+  Geeft P( X ≤ _v_) wanneer _Cumulatief'_ = true.
+
+[EXAMPLE]
+====
+
+Het aantal succesvolle pogingen is n = 1, de kans op succes per poging is p = stem:[\frac\{1}\{6}], de variabele waarde
+is v = 2 en "Cumulatief" = false.
+
+`++ Pascal( n, p, v, false)++` geeft _stem:[\frac\{25}\{216}]_
+
+====

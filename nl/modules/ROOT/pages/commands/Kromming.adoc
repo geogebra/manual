@@ -1,0 +1,39 @@
+= Kromming Commando
+:page-en: commands/Curvature_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Kromming( <Punt>, <Functie> )::
+  Berekent de kromming van de functie in het gegeven punt.
+Kromming( <Punt>, <Kromme> )::
+  Berekent de kromming van de kromme in het gegeven punt.
+Kromming( <Punt>, <Object> )::
+  Berekent de kromming van het object (functie, kromme, kegelsnede) in het gegeven punt.
+
+[EXAMPLE]
+====
+
+* `++Kromming((0 ,0), x^2)++` geeft _2_
+* `++Kromming((0, 0), Kromme(cos(t), sin(2t), t, 0, π))++` geeft _0_
+* `++Kromming((-1, 0), Kegelsnede({1, 1, 1, 2, 2, 3}))++` geeft _2_
+
+====
+
+[EXAMPLE]
+====
+
+`++Kromming((0, 0), Kromme(cos(t), sin(2t), t, 0, π))++` geeft _0_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Kromming((0 ,0), x^2)++` yields _2_.
+
+====

@@ -1,0 +1,46 @@
+= DynamischeCoördinaten Commando
+:page-en: commands/DynamicCoordinates_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+DynamischeCoördinaten( <Punt>, <Getal>, <Getal> )::
+  Creëert een punt (X, Y). Dit punt is afhankelijk, maar kan verplaatst worden. Wanneer je het versleept naar
+  coördinaten (x, y), punt _A_ wordt verplaatst naar deze plaats en de coördinaten van het nieuwe punt worden berekend.
+  Het commando werkt het best wanneer het punt _A_ niet zichtbaar is en het punt met demuis wordt versleept. _X_ of _Y_
+  moeten afhangen van _A_.
+
+[EXAMPLE]
+====
+
+* _A_ is een punt en `++B = DynamischeCoördinaten(A, round(x(A)), round(y(A)))++`. Wanneer je _B_ tracht te verslepen
+naar (1.3, 2.1) met de knop /Bestand:Tool_Move_gif.adoc[image:Tool_Move.gif[Tool Move.gif,width=32,height=32]]
+xref:/tools/Verplaatsen.adoc[Verplaatsen Macro], wordt het punt _A_ = (1.3, 2.1) en _B_ verschijnt op (1,2).
+* `++B = DynamischeCoördinaten(A, x(A), min(y(A), sin(x(A))))++` creëert een punt onder sin(x).
+
+[NOTE]
+====
+
+`++PuntBinnen(y < sin(x))++` is een eenvoudigere oplossing voor deze situatie.
+
+====
+
+Volgende voorbeelden tonen andere mogelijkheden om de plaats van een punt _C_ te bepalen:
+
+* Bijvoorbeeld: `++A = Punt(xAs)++` en `++B = Punt(xAs)++`.
+
+Typ nu in de [Invoerbalk:
+
+`++DynamischeCoördinaten(B, Min(x(B), x(A)), 0)++` en klik op /Sjabloon:KeyCode.adoc[Sjabloon:KeyCode]
+
+`++SetVisibleInView(B, 1, false))/code> en klik op Sjabloon:KeyCode++`
+
+`++ SetLayer(C,  1) en klik op Sjabloon:KeyCode Nu kan C niet versleept worden naar een positie rechts van het punt A.++`
+
+`++ Definieer A=(1, 2). Typ nu in de invoerbalk: SetVisibleInView(A, 1, false) en klik op Sjabloon:KeyCode B = DynamischeCoördinaten(A, Als[x(A) > 3, 3, Als(x(A) < -3, -3, Als(x(A) < 0, round(x(A)), x(A)))), Als(x(A) < 0, 0.5, Als(y(A) > 2, 2, Als(y(A) < 0, 0, y(A))))) en klik op Sjabloon:KeyCode Dit voorbeeld maakt van A een magnetisch punt wanneer C versleept wordt tot in de buurt. Bepaal A = (1, 2) en B = (2, 3). Typ nu in de invoerbalk: SetVisibleInView(B, 1, false) en klik op Sjabloon:KeyCode C = DynamischeCoördinaten(B, Als(Afstand(A, B) < 1, x(A), x(B)], Als(Afstand(A, B) < 1, y(A), y(B))).++`
+
+====

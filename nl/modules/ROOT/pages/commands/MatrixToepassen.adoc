@@ -1,0 +1,48 @@
+= MatrixToepassen Commando
+:page-en: commands/ApplyMatrix_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+MatrixToepassen( <Matrix>, <Object> )::
+  Vormt het objectt _O_ om zo dat een punt _P_ van _O_ afgebeeld wordt op:
+
+* punt _M*P_, waarbij _P_ een _2D-_ punt is en een _M_ een 2 x 2 matrix
+
+[EXAMPLE]
+====
+
+`++M={{cos(π/2),-sin(π/2)}, {sin(π/2), cos(π/2)}}++` is de transformatiematrix en `++u = (2,1)++` een gegeven vector
+(object). `++MatrixToepassen(M,u)++` geeft de vector _u'=(-1,2)_, dit is het resultaat van een rotatie over 90° van de
+vector _u_.
+
+====
+
+* punt _project(M*(x(P), y(P), 1))_, met _P_ een _2D_ punt en _M_ a 3 x 3 matrix: _project_ is een projectie die het
+punt _(x, y, z)_ afbeeldt op _(x/z, y/z)_.
+
+* punt _M*P_, wanneer _P_ een _3D_ punt is en _M_ een 3 x 3 matrix
+* punt _N*P_, wanneer _P_ een _3D_ punt is en _M_ een 2 x 2 matrix: de matrix _N_ is de _uitbreiding tot orde 3_ van
+_M_: _M_ = stem:[\begin\{pmatrix}a&b\\ c&d \end\{pmatrix}] dan is _N_ = stem:[\begin\{pmatrix}a&b&0\\ c&d&0\\0&0&1
+\end\{pmatrix}]
+
+[EXAMPLE]
+====
+
+`++M={{1,1,0},{0,1,1},{1,0,1}}++` is een matrix en `++u=(2,1)++` een gegeven vector. `++MatrixToepassen(M,u)++` geeft
+vector _u'=(1,0.67)_. Inderdaad stem:[\begin\{pmatrix}1&1&0\\ 0&1&1\\1&0&1 \end\{pmatrix}] stem:[\begin\{pmatrix}2\\
+1\\1 \end\{pmatrix}] = stem:[\begin\{pmatrix}3\\ 2\\3 \end\{pmatrix}], en (3/3 = 1, 2/3 ≈ 0.67) (afgerond op 2
+decimalen)
+
+====
+
+[NOTE]
+====
+
+Dit commando werkt ook met xref:/Afbeeldingen.adoc[Afbeeldingen].
+
+====

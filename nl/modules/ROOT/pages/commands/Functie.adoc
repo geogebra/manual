@@ -1,0 +1,36 @@
+= Functie Commando
+:page-en: commands/Function_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Functie( <Lijst met getallen> )::
+  Geeft de volgende functie: De eerste twee getallen bepalen de begin- _x_-waarde en eind- _x_-waarde. De andere
+  getallen zijn de _y_-waarden van de functie over dit interval, verdeeld in gelijke afstanden.
+
+[EXAMPLE]
+====
+
+* `++Functie({2, 4, 0, 1, 0, 1, 0})++` geeft een driehoekige golf tussen _x = 2_ en _x = 4_.
+* `++Functie({-3, 3, 0, 1, 2, 3, 4, 5})++` geeft een linieair verband met helling _= 1_ tussen _x = -3_ en _x = 3_.
+
+====
+
+Functie( <Functievoorschrift>, <Beginwaarde>, <Eindwaarde> )::
+  Creëert de functie met gegeven voorschrift over het interval met gegeven begin- en eindwaarde.
+Function( <Voorschrift>, <Parameter 1>, <Startwaarde>, <Eindwaarde>, <Parameter 2>, <Startwaarde>, <Eindwaarde> )::
+  Toont het overeenkomstige opperlak van een functie in een 3D Tekenvenster.
+
+[EXAMPLE]
+====
+
+Het voorschrift `++a(x, y) = x + 0y++` creëert een functie in twee variabelen waarvan de grafiek in het 3D Tekenenster
+het *[.underline]#vlak#* _z_ = _a_(_x_, _y_) = _x_ is. `++Functie(u, u, 0, 3, v, 0, 2) ++` creëert een functie in twee
+variabelen _b_(_u_, _v_) = _u_, waarvan de grafiek in het 3D Tekenvenster de *[.underline]#rechthoek#* Veelhoek((0, 0,
+0), (3, 0, 3), (3, 2, 3), (0, 2, 0)) is in het _z-vlak_ = _a_(_x_,_y_) = _x_.
+
+====

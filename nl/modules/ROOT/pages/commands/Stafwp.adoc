@@ -1,0 +1,74 @@
+= Stafwp Commando
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+stafwp( <Lijst met waarnemingsgetallen> )::
+  Berekent de standaardafwijking stem:[ \sigma ] (voor een populatie) van de getallen in de lijst.
+stafwp( <Lijst met waarnemingsgetallen>, <Lijst met frequenties> )::
+  Berekent de standaardafwijking stem:[ \sigma ] (voor een populatie) van de lijst met getallen, rekening houdend met
+  hun frequentie.
+stafwp( <Lijst met waarden van een stochast>, <Lijst met kansen> )::
+  Berekent de standaardafwijking stem:[ \sigma ] van een kansverdeling met gegeven waarden van een stochast en hun
+  respectievelijke kansen.
+
+[EXAMPLE]
+====
+
+`++stafwp({1, 2, 3}, {0.2, 0.5, 0.3} )++` geeft _0.7_
+
+====
+
+[EXAMPLE]
+====
+
+`++stafwp({20, 40, 41, 42, 40, 54}, {20, 6, 4, 5, 2} )++` geeft _5.96_
+
+====
+
+[EXAMPLE]
+====
+
+`++stafwp({1, 2, 3, 4, 5})++` geeft _1.41_
+
+====
+
+[NOTE]
+====
+
+De standaardafwijking van een *steekproef* bereken je met het commando xref:/commands/Stafw.adoc[Stafw Commando].
+
+====
+
+== CAS Venster
+
+stafwp( <Lijst met waarnemingsgetallen> )::
+  Berekent de standaardafwijking stem:[ \sigma ] (voor een populatie) van de getallen in de lijst.
+stafwp( <Lijst met waarden van een stochast>, <Lijst met kansen> )::
+  Berekent de standaardafwijking stem:[ \sigma ] van een kansverdeling met gegeven waarden van een stochast en hun
+  respectievelijke kansen.
+
+[EXAMPLE]
+====
+
+`++stafwp({1, 2, 3}, {0.2, 0.5, 0.3} )++` geeft stem:[ \frac\{7}\{10}]
+
+====
+
+[EXAMPLE]
+====
+
+`++stafwp({1, 2, 3, 4, 5})++` geeft stem:[\sqrt\{2}].
+
+====
+
+[NOTE]
+====
+
+Zie ook het commando xref:/commands/Gemiddelde.adoc[Gemiddelde Commando].
+
+====

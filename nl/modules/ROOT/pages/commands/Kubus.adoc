@@ -1,0 +1,40 @@
+= Kubus Commando
+:page-en: commands/Cube_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Kubus( <Punt>, <Punt>, <Richting> )::
+  Creëert een kubus met als ribbe het lijnstuk tussen de twee punten.
+  De andere hoekpunten worden bepaald door de gegeven richting. Hiervoor kun je gebruiken:
+  * een vector, een lijnstuk, rechte of halfrechte _loodrecht_ op het lijnstuk ofwel
+  * een veelhoek of vlak _evenwijdig_ aan het lijnstuk.
+  De gecreëerde kubus heeft:
+  * een zijvlak met de ribbe in een vlak loodrecht op de gegeven vector/lijnstuk/rechte/halfrechte, ofwel
+  * een zijvlak met de ribbe in een vlak evenwijdig met de gegeven veelhoek of het gegeven vlak.
+
+Kubus( <Punt>, <Punt>, <Punt>)::
+  Creëert een kubus met drie punten in een eerste zijvlak. Met de gegeven punten moet je een vierkant kunnen maken.
+
+Kubus( <Punt>, <Punt>)::
+  Creëert een kubus met de twee punten in een eerste zijvlak. Het derde punt wordt automatisch gecreëerd op een cirkel,
+  zo dat je de kubus kan roteren rond de eerste ribbe.
+
+[NOTE]
+====
+
+Kubus(A, B) is een verkorte weergave van Kubus(A, B, C) met C = Punt(Cirkel(B, Afstand(A, B), Lijnstukt(A, B))).
+
+====
+
+[NOTE]
+====
+
+Zie ook de commando's xref:/commands/Viervlak.adoc[Viervlak], xref:/commands/Achtvlak.adoc[Achtvlak],
+xref:/commands/Twaalfvlak.adoc[Twaalfvlak] en xref:/commands/Twintigvlak.adoc[Twintigvlak].
+
+====

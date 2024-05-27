@@ -1,0 +1,45 @@
+= Kegelsnede Commando
+:page-en: commands/Conic_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Kegelsnede( <Punt1>, <Punt2>, <Punt3>, <Punt4>, <Punt5> )::
+  Geeft een kegelsnede door de vijf gegeven punten.
+
+[EXAMPLE]
+====
+
+`++Kegelsnede((0, -4), (2, 4), (3,1), (-2,3), (-3,-1))++` geeft _151x² - 37x y + 72y² + 14x - 42y = 1320_ .
+
+====
+
+[NOTE]
+====
+
+Indien vier van de punten op een rechte liggen is de kegelsnede niet bepaald.
+
+====
+
+Kegelsnede( <Getal a>, <Getal b>, <Getal c>, <Getal d>, <Getal e>, <Getal f> )::
+  Geeft een kegelsnede stem:[a\cdot x^2+d\cdot xy+b\cdot y^2+e\cdot x+f\cdot y=-c].
+
+[EXAMPLE]
+====
+
+`++Kegelsnede(2, 3, -1, 4, 2, -3)++` geeft _2x² + 4x y + 3y² + 2x - 3y = 1_ .
+
+====
+
+[NOTE]
+====
+
+Zie ook de knop /Bestand:Tool_Conic_5Points_gif.adoc[image:Tool_Conic_5Points.gif[Tool Conic
+5Points.gif,width=32,height=32]] xref:/Kegelsnedenknop.adoc[Kegelsnede door 5 Punten] en het commando
+xref:/commands/Coëfficiënten.adoc[Coëfficiënten] .
+
+====

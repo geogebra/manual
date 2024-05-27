@@ -1,0 +1,42 @@
+= Weibull Commando
+:page-en: commands/Weibull_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Weibull( <Vorm>, <Schaal>, x )::
+  Creëert de kansdichtheidsfunctie (pdf) van een http://en.wikipedia.org/wiki/Weibull_distribution[Weibull verdeling]
+  met parameters vorm _k_ en schaal _λ_.
+Weibull( <Vorm>, <Schaal>, <Variabele Waarde> )::
+  Berekent de waarde van de cumulatieve dichtheidsfunctie van een Weibull verdeling voor een waarde _v_, dit is de kand
+  _P(X ≤ v)_ waarbij _X_ een willekeurige variabele is met een Weibull verdeling met parameters vorm _k_ en schaal _λ_.
+Weibull( <Vorm>, <Schaal>, x, <Boolean Cumulatief> )::
+  Als _Cumulatief_ = true, creëert het de cumulatieve dichtheidsfunctie van de Weibull verdeling, anders creëert het de
+  pdf van de Weibull verdeling.
+
+[NOTE]
+====
+
+Geeft de kans voor een gegeven _x_-coördinaat (of oppervlakte onder de grafiek van de Weibull dichtheidsgrafieklinks van
+de gegeven _x_-coördinaat).
+
+====
+
+== CAS venster
+
+Weibull( <Parameter k>, <Parameter lambda>, <Toevalsveranderlijke> )
+
+Berekent de waarde van de cumulatieve dichtheidsfunctie van een Weibull verdeling voor een waarde _v_, dit is de kand
+_P(X ≤ v)_ waarbij _X_ een willekeurige variabele is met een Weibull verdeling met parameters vorm _k_ en schaal _λ_.
+
+[EXAMPLE]
+====
+
+* `++Weibull( 0.5, 1, 0)++` geeft _0_.
+* `++Weibull( 0.5, 1, 1)++` geeft _stem:[\frac\{ e-1} \{ e } ]._
+
+====

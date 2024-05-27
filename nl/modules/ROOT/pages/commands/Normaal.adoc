@@ -1,0 +1,40 @@
+= Normaal Commando
+:page-en: commands/Normal_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Normaal( <Gemiddelde>, <Standaardafwijking>, x )::
+  Geeft de cumulatieve kansdichtheidsfunctie (cdf) van een normale verdeling.
+Normaal( <Gemiddelde>, <Standaardafwijking>, x, <Logisch Cumulatief> )::
+  Als _Cumulatief_ = true, creëert het de cumulatieve kansdichtheidsfunctie (cdfp) van een normale verdeling met
+  gemiddelde _μ_ en standaardafwijking _σ_, anders creëert het de kansdichtheidsfunctie (pdf) van de normale verdeling.
+Normaal( <Gemiddelde>, <Standaardafwijking>, <Variabele waarde> )::
+  Berekent de functie stem:[\Phi \left(\frac\{x- \mu}\{\sigma} \right) ] voor een waarde _v_ waarbij _Φ_ de cumulatieve
+  dichtheidsfunctie is voor _N(0,1)_ met gemiddelde _μ_ en standaardafwijking _σ_.
+
+[NOTE]
+====
+
+Je berekent m.a.w. de kans dat een variabele kleiner is dan een gegeven _x_-waarde (of de oppervlakte onder de grafiek
+van de kansdichtheidsfunctie links van de gegeven _x_-coördinaat).
+
+====
+
+== CAS venster
+
+Normaal( <Gemiddelde>, <Standaardafwijking>, <Toevalsveranderlijke> )
+
+Berekent de functie stem:[\Phi \left(\frac\{x- \mu}\{\sigma} \right) ]waarbij _Φ_ de cumulatieve dichtheidsfunctie is
+voor _N(0,1)_ met gemiddelde __μ__en standaardafwijking _σ_.
+
+[EXAMPLE]
+====
+
+`++Normaal[2, 0.5, 1]++` geeft stem:[\frac\{-erf(2/\sqrt\{2})+1}\{2}].
+
+====

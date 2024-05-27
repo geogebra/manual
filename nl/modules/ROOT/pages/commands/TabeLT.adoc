@@ -1,0 +1,144 @@
+= TabeLT Commando
+:page-en: commands/TableText_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+TabelTekst( <Lijst>, <Lijst>, ... )::
+  Creëert een tekst die een tabel bevat met de lijstobjecten.
+
+[EXAMPLE]
+====
+
+* `++TabelTekst({x^2, 4}, {x^3, 8}, {x^4, 16})++` creëert een tabel als tekstobject met drie rijen en twee kolommen.
+Alle elementen worden links uitgelijnd.
+* `++TabelTekst(Rij(i^2, i, 1, 10))++` creëert een tabel als tekstobject met een rij. Alle elementen worden links
+uitgelijnd.
+
+====
+
+[NOTE]
+====
+
+Standaard bepaalt elke lijst een nieuwe rij in de tabel.
+
+====
+
+TabelTekst( <Lijst>, <Lijst>, ..., <Uitlijning tekst> )::
+  Creëert een tekst die een tabel bevat met de lijstobjecten. De optionele tekst “Uitlijning tekstt” bepaalt de
+  oriëntatie en uitlijning van te tekst.
+
+[EXAMPLE]
+====
+
+* `++TabelTekst({1, 2, 3, 4}, {1, 4, 9, 16}, "v")++` creëert een tekst met twee kolommen en vier rijen die links
+uitgelijnd wordt.
+* `++TabelTekst({1, 2, 3, 4}, {1, 4, 9, 16}, "h")++` creëert een tekst met twee rijen en vier kolommen die links
+uitgelijnd wordt.
+* `++TabelTekst({11.2, 123.1, 32423.9, "234.0"}, "vr")++` creëert een tekst met een kolom die rechts uitgelijnd wordt.
+* `++TabelTekst({11.2, 123.1, 32423.9, "234.0"}, "v.")++` creëert een kolom met getallen, uitgelijnd op het decimale
+punt.
+
+====
+
+[NOTE]
+====
+
+mogelijke waarden zijn "vl", "vc", "vr", "v", "h", "hl", "hc", "hr". Standaardwaarde is "hl".
+
+* "v" = verticaal, d.w.z. de lijsten zijn kolommen
+* "h" = horizontaal,d.w.z. de lijsten zijn rijen
+* "l" = links uitgelijnd
+* "r" = rechts uitgelijnd
+* "c" = gecentreerd
+* "." = uitlijning volgens decimale punt
+
+====
+
+TabelTekst( <Lijst>, <Lijst>, ..., <Uitlijning tekst>, <Minimum celbreedte>)::
+  Creëert een tabel als tekstobject met gegeven tekstuitlijning en celbreedte (in pixels).
+
+[EXAMPLE]
+====
+
+* `++TabelTekst({x², 4}, {x³, 8}, {x⁴, 16}, "c", 50))++` creëert een tabel met drie rijen en twee kolommen. De elementen
+in de tabel worden gecentreerd en de celbreedte is 50 px.
+
+====
+
+TabelTekst( <List>, <List>, ..., <Tekstuitlijning>, <Minimum celbreedte>, <Minimum Celhoogte>)::
+  Creëert een tabel als tekstobject met gegeven tekstuitlijning, celbreedte en -hoogte (in pixels).
+
+[EXAMPLE]
+====
+
+* `++TabelTekst({{"links", "midden", "rechts"}, {"l", "c", "r"}}, "|_lcr", 45, 80)++` creëert een tabel met twee rijen
+en drie kolommen. Alle items in de tabel worden verschillend uitgelijnd. Elke tabelcel is 45 px breed en 80 px hoog.
+
+====
+
+Het is mogelijk om diverse symbolen in te voeren:
+
+* verschillende types van haakjes: ||||, ||, \{}, [] of ()
+* horizontale scheidingslijnen: _
+* verticale scheidingslijnen |
+* verschillende kleuren
+
+[EXAMPLE]
+====
+
+* `++TabelTekst({1,2},{3,4},"c|_")++` voor de tabel
+/Bestand:TabellaTesto_png.adoc[image:50px-TabellaTesto.png[TabellaTesto.png,width=50,height=56]] ;
+* `++TabelTekst({{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "-/|_v")++`
+
+voor /Bestand:Tabslsc_png.adoc[image:Tabslsc.png[Tabslsc.png,width=130,height=85]] (geen scheidingslijnen binnen de
+tabel)
+
+* `++TabelTekst({{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "|11001 _110001 h")++`
+
+voor /Bestand:Tabla2_PNG.adoc[image:Tabla2_.PNG[Tabla2 .PNG,width=108,height=104]] geven 1-en 0-en aan of je verticale
+of horizontale randen wil tonen.
+
+* `++TabelTekst({{1, 2, 3, 4},{5,6,7,8}}, "|11011_101")++`
+
+voor /Bestand:Tabcol_png.adoc[image:Tabcol.png[Tabcol.png,width=123,height=60]]
+
+====
+
+[EXAMPLE]
+====
+
+om kolommen samen te voegen
+
+* `++TabelTekst({{"\textbf{Cercle}"}, {TabeLT[{{"Rayon", "r "}, {"Aire",  "π r²"}, {"Circonférence", "2 π r"}}, "cc |010_0110"]}}, "_111 |11 c")++`
+
+voor /Bestand:TabFusCol_png.adoc[image:TabFusCol.png[TabFusCol.png,width=188,height=118]]
+
+====
+
+[EXAMPLE]
+====
+
+voor een stelsel van vergelijkingen
+
+* `++TabelTekst({{"2x+3y=5", "5x+8y=12"}}, "{v")++`
+
+voor /Bestand:Tabla3_PNG.adoc[image:Tabla3_.PNG[Tabla3 .PNG,width=129,height=48]]
+
+====
+
+[EXAMPLE]
+====
+
+Het is ook mogelijk om voor verschillende rijen verschillende kleuren te gebruiken:
+
+* `++TabelTekst({{"\black{1,2,3,4}", "\blue{2,4,6,8}", "\green{3,6,9,12}", "\red{4,8,12,16}"}}, "vr")++`
+
+voor
+/Bestand:TableauLignesCouleurs_PNG.adoc[image:TableauLignesCouleurs.PNG[TableauLignesCouleurs.PNG,width=125,height=115]]
+
+====

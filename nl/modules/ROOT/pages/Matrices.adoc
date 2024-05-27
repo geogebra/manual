@@ -1,0 +1,114 @@
+= Matrices
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+GeoGebra ondersteunt matrices, die voorgesteld worden als een lijst van lijsten (die overeenkomen met de rijen van de
+matrix) .
+
+[EXAMPLE]
+====
+
+In GeoGebra stelt \{\{1, 2, 3}, \{4, 5, 6}, \{7, 8, 9}} volgende 3x3 matrix voor: stem:[\begin\{pmatrix}1&2&3\\ 4&5&6\\
+7&8&9 \end\{pmatrix}]
+
+====
+
+Je kunt een matrix mooi voorstellen in het Tekenvenster met het commando xref:/commands/LaTeX.adoc[LaTeX] .
+
+[EXAMPLE]
+====
+
+Typ in het invoerveld: `++LaTeX[{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}]++` om de matrix mooi te tonen via een LaTeX-formule.
+
+====
+
+== Bewerkingen met matrices
+
+Bewerkingen met matrices zijn eigenlijk bewerkingen met lijsten. Je kunt dus dezelfde syntax gebruiken als voor lijsten.
+
+[NOTE]
+====
+
+Sommige syntaxen zijn niet gedefinieerd in matrices. Zo kan je niet zomaar alle matrices optellen of vermenigvuldigen.
+
+====
+
+=== Optelling en aftrekking
+
+* Matrix1 + Matrix2: Telt de overeenkomende elementen van compatibele matrices op (matrices met dezelfde dimensie).
+* Matrix1 – Matrix2: Trekt de overeenkomende elementen van compatibele matrices van elkaar af (matrices met dezelfde
+dimensie).
+
+=== Vermenigvuldigen en delen
+
+* Matrix * Getal: Vermenigvuldigt elk getal van de matrix met het getal.
+* Matrix1 * Matrix2: Gebruikt de matrixvermenigvuldiging om de productmatrix te berekenen.
+
+[EXAMPLE]
+====
+
+\{\{1, 2}, \{3, 4}, \{5, 6}} * \{\{1, 2, 3}, \{4, 5, 6}} geeft de matrix \{\{9, 12, 15}, \{19, 26, 33}, \{29, 40, 51}}.
+
+====
+
+[NOTE]
+====
+
+Het aantal kolommen van de eerste matrix moet gelijk zijn aan het aantal rijen van de tweede matrix.
+
+====
+
+* 2x2 Matrix * Punt (of Vector): Vermenigvuldigt de matrix met een gegeven punt of vector en geeft een punt als
+resultaat.
+
+[EXAMPLE]
+====
+
+\{\{1, 2}, \{3, 4}} * (3, 4) geeft het punt A = (11, 25).
+
+====
+
+* 3x3 Matrix * Punt (of Vector): Vermenigvuldigt de matrix met een gegeven punt of vector en geeft een punt als
+resultaat.
+
+[EXAMPLE]
+====
+
+\{\{1, 2, 3}, \{4, 5, 6}, \{0, 0, 1}} * (1, 2) geeft het punt A = (8, 20).
+
+====
+
+[NOTE]
+====
+
+Dit is een speciaal geval van affiene transformaties, waarbij homogene coördinaten worden gebruikt: (x, y, 1) voor een
+punt en (x, y, 0) voor een vector. DIt voorbeeld komt daarom overeen met:
+`++{{1, 2, 3}, {4, 5, 6}, {0, 0, 1}} * {1, 2, 1}++`.
+
+====
+
+* Matrix1 / Matrix2: Deelt elk element van Matrix1 door het overeenkomende element in Matrix2.
+
+[NOTE]
+====
+
+GeoGebra ondersteunt ook de syntax `++Matrix1 * Matrix2 ^(-1)++` .
+
+====
+
+== Andere bewerkingen
+
+Op de pagina xref:/commands/Vector_en_matrix_Commando's.adoc[Vector en matrix Commando's] vind je de lijst val alle
+beschikbare commando's, zoals:
+
+* xref:/commands/Determinant.adoc[Determinant][Matrix]: Berekent de determinant van een gegeven matrix.
+* xref:/commands/Inverteer.adoc[Inverteer][Matrix]: Berekent de inverse matrix
+* xref:/commands/Transponeer.adoc[Transponeer][Matrix]: Transponeert een gegeven matrix
+* xref:/commands/MatrixToepassen.adoc[MatrixToepassen][Matrix,Object]: Past de affiene transformatie toe op een gegeven
+object.
+* xref:/commands/RREF.adoc[RREF][Matrix]: Berekent de echelonvorm van een gegeven matrix

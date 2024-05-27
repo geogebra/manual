@@ -1,0 +1,22 @@
+= ParametrischeAfgeleide Commando
+:page-en: commands/ParametricDerivative_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+ParametrischeAfgeleide( <Kromme> )::
+  Creëert een nieuwe xref:/Krommen.adoc[parametrische kromme] gegeven door _stem:[ \left( x(t), \frac\{y'(t)}\{ x'(t)}
+  \right) ]_.
+
+[EXAMPLE]
+====
+
+`++ParametrischeAfgeleide(Kromme(2t, t², t, 0, 10))++` geeft de parametrische kromme _(x(t) = 2t, y(t) = t)_. De kromme
+gegeven door het argument in het commando komt overeen met de grafiek van de functie _f(x) = stem:[ \frac\{x²}\{4}]_, en
+het resultaat is de afgeleide van deze functie: _f'(x) = stem:[ \frac\{x}\{2}]._
+
+====

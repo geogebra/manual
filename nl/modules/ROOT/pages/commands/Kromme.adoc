@@ -1,0 +1,49 @@
+= Kromme Commando
+:page-en: commands/Curve_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Kromme( <Uitdrukking>, <Uitdrukking>, <Variabele>, <van>, <tot> )::
+  Creëert de xref:/Krommen.adoc[parametrische kromme] voor de gegeven _x_-uitdrukking (eerste <Uitdrukking>) en
+  _y_-uitdrukking (tweede <Uitdrukking>) (met gebruik van de parametervariabele) binnen het gegeven interval [_van_,
+  _tot_].
+
+[EXAMPLE]
+====
+
+`++Kromme(2 cos(t), 2 sin(t), t, 0, 2π)++` creëert een cirkel met straal _2_ rond de oorsprong.
+
+====
+
+[NOTE]
+====
+
+* _van_ moet groter zijn dan of gelijk zijn aan _tot_ en beide moeten eindig zijn.
+* _x_ is niet toegelaten als parametervariabele.
+
+====
+
+[NOTE]
+====
+
+Zie xref:/Krommen.adoc[Krommen] voor details, en zie ook de commando's xref:/commands/Afgeleide.adoc[Afgeleide] en
+xref:/commands/ParametrischeAfgeleide.adoc[Parametrische Afgeleide].
+
+====
+
+Kromme( <Uitdrukking> , <Uitdrukking> , <Uitdrukking> , <Variabele> , <van> , <tot> )::
+  Creëert de 3D Cartesiaanse parametrische kromme curve voor de gegeven _x_-uitdrukking (eerste <Uitdrukking>),
+  _y_-uitdrukking (tweede <Uitdrukking>) en _z_-uitdrukking (derde <Uitdrukking>) (met gebruik van de
+  parametervariabele) binnen het gegeven interval [_van_, _tot_].
+
+[EXAMPLE]
+====
+
+`++Kromme(cos(t), sin(t), t, t, 0, 10π)++` creëert een a 3D spiraal.
+
+====

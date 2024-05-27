@@ -1,0 +1,32 @@
+= Vervangen Commando
+:page-en: commands/Substitute_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+== CAS Syntax
+
+Vervangen( <Uitdrukking>, <van>, <naar> )::
+  Vervangt _van_ in _Uitdrukking_ door _naar_.
+
+[EXAMPLE]
+====
+
+* `++Vervangen((x^2 / (4x + 6))^2 + 6(x^2 / (4x + 6)) + 8, x^2, a*(4x + 6))++` geeft _a^2^ + 6 a + 8_.
+* `++Vervangen((3 m - 3)^2 - (m + 3)^2, m, a)++` geeft _8 a^2^ - 24 a_.
+
+====
+
+Vervangen( <Uitdrukking>, <Substitutielijst> )::
+  Vervangt in _Uitdrukking_ elke variabele van de lijst door de variabele of het getal dat je hiervoor koos.
+
+[EXAMPLE]
+====
+
+`++Vervangen(2x + 3y - z, {x = a, y = 2, z = b})++` geeft _2a - b + 6_.
+
+====

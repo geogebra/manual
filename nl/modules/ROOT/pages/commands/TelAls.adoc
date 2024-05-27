@@ -1,0 +1,39 @@
+= TelAls Commando
+:page-en: commands/CountIf_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+TelAls( <Voorwaarde>, <Lijst> )::
+TelAls( <Voorwaarde>, <Variabele>, <Lijst> )::
+  Het commando is gelijkaardig aan het eerste commando, maar laat meer ruimte in zijn formulering.
+
+[EXAMPLE]
+====
+
+_P_, _Q_, _R_ zijn punten. `++TelAls(x(A) < 3, A, {P, Q, R})++` zal enkel die punten tellen waarvan de x-coördinaat
+kleiner is dan _3_. De variabele _A_ wordt voor de controle vervangen door _P_, dan door _Q_ en tenslotte door _R_ .
+Daarom geeft `++TelAls(x(A) < 3, A, {(0, 1), (4, 2), (2, 2)})++` het getal _2_.
+
+====
+
+[EXAMPLE]
+====
+
+* `++TelAls(x < 3, {1, 2, 3, 4, 5})++` geeft het getal _2_.
+* `++TelAls(x < 3, A1:A10)++`, waarbij _A1:A10_ een reeks cellen is in het rekenblad, telt die cellen waarvan de waarde
+kleiner is dan _3_.
+
+====
+
+[NOTE]
+====
+
+Voor lijsten met getallen kan elke willekeurige voorwaarde gebruikt worden. Voor lijsten met andere objecten kunnen
+enkel voorwaarden van de vorm `++x==constant++` of `++x!=constant++`.
+
+====

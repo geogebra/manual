@@ -1,0 +1,84 @@
+= Scripting
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Een script is is een reeks van commando's die achtereenvolgens worden uitgevoerd. GeoGebra ondersteunt twee
+scripting-talen - GGBScript en Javascript. De uitvoering van een scrip kan je starten door :
+
+* te klikken op een object object
+* een object te updaten (wanneer waarden of eigenschappen van het object gewijzigd worden)
+* een bestand in te laden (bij JavaScript)
+* Voor meer informatie over Javascript zie http://wiki.geogebra.org/en/Reference:JavaScript[Javascript]
+
+Je kunt een script maken in de tab _Scripting_ van het xref:/Eigenschappen_dialoogvenster.adoc[Eigenschappenvenster].
+
+== GGBScript
+
+Je kunt een script maken met GeoGebra commando's. Bij het opstarten van het script worden alle commando's een na een
+uitgevoerd.
+
+[EXAMPLE]
+====
+
+* _a_ is xref:/tools/Schuifknop.adoc[Schuifknop] met gehele waarden van 1 tot 3
+* `++lijst1 = {"rood", "groen", "blauw"}++`
+* in de eigenschappen van _a_, kan je in een script de kleur bepalen "On Update" als
+`++SetColor[a, Element[list1, a]]++`
+* wanneer je waarde van de schuifknop wijzigt, wijzigt ook zijn kleur
+
+====
+
+*Uitleg:* Elke keer wanneer je de schuifknop beweegt wordt beschouwd als een _Update_. Daarom zal bij elke wijziging in
+de schuifknop het script aangesproken worden om de kleur te wijzigen. Er zijn commando's die enkel in scripting kunnen
+gebruikt worden. Je vind ze op de pagina xref:/commands/Scripting_Commando's.adoc[Scripting_Commando's].
+
+== JavaScript
+
+JavaScript is een programmeertaal die veel gebruikt wordt op het internet. Je vindt meerdereinstructiehandleidingen over
+Java op het internet. In GeoGebra, kan je JavaScript methodes gebruiken om je constructie aan te passen. Deze methodes
+horen tot een ggbApplet object, zodat je het kunt aanspreken met `++ggbApplet.method_name(parameter,..,parameter)++`.
+Voor een complete lijst van deze methodes, zie http://wiki.geogebra.org/en/Reference:JavaScript[Javascript].
+
+[EXAMPLE]
+====
+
+....
+for(var i =0;i<10;i++) 
+   ggbApplet.evalCommand("A_"+i+"=(random()*10,random()*10)");
+....
+
+Dit script creëert 10 punten, van _A~0~_ tot _A~9~_ met willekeurige coördinaten.
+
+====
+
+=== Globaal JavaScript
+
+In de tab Globaal JavaScript part van het xref:/Eigenschappen_dialoogvenster.adoc[Eigenschappenvenster] kan je
+*functies* definiëren (geen variabelen). Je kunt ook de functie _ggbOnInit()_ definiëren, die automatisch wordt
+aangesproken wanneer het bestand wordt ingeladen. De functie ggbOnInit function kan gebruikt worden om gebruikters te
+registreren, zoals in volgend voorbeeld.
+
+[EXAMPLE]
+====
+
+....
+function onAdd(name){
+    alert("Object "+name+" werd toegevoegd.");
+}
+
+function ggbOnInit(){
+    ggbApplet.registerAddListener("onAdd");
+}
+....
+
+Eerst definieerden we de functie _onAdd_ die een string oplevert met een mededeling, afhankelijk van deze string. nadien
+wordt met de functie _ggbOnInit_ deze functie opgeroepen, telkens een nieuw object wordt toegevoegd. Bij het herladen
+van de constructie zal de functie ggbOnInit worden aangesproken en vanaf dan zal telkens een boodschap verschijnen. B.v.
+wanneer de gebruiker een punt _A_ toevoegt, zal volgende boodschap verschijnen: "Object A werd toegevoegd".
+
+====

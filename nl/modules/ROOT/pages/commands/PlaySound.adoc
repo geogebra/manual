@@ -1,0 +1,366 @@
+= PlaySound Commando
+:page-en: commands/PlaySound_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+PlaySound( <URL> )::
+  Speelt een MP3 (.mp3) bestand
+
+[EXAMPLE]
+====
+
+* `++PlaySound("http://archive.geogebra.org/static/welcome_to_geogebra.mp3")++`
+* `++PlaySound("#1264825")++` speelt een http://www.geogebra.org/material/simple/id/1264825[.mp3 bestand, geupload op
+GeoGebra]
+* `++PlaySound("https://drive.google.com/uc?id=0B7xCmZaU3oU2eXFNUzd6ZlZJS0U&authuser=0&export=download")++` speelt een
+.mp3 bestand van Google Drive
+* `++PlaySound("https://www.dropbox.com/s/27skpv82odjp7ej/material-1264825.mp3?dl=1")++` speelt een .mp3 bestand van
+DropBox
+
+====
+
+PlaySound( <Noot>, <Duur>, <Instrument> ) (Enkel in desktopversie)::
+  Speelt MIDI toon.
+  _Noot_ is een geheel getal tussen 0 en 127 dat een muzieknoot voorstelt uit onderstaande tabel. Zo komt noot = 60
+  overeen met een C (do) uit het middenoktaaf.
+  _Duur_ bepaalt in seconden hoe lang de toon gespeeld wordt.
+  _Instrument_ is een geheel getal dat verwijst naar een instrument om de toon te spelen. Zie
+  https://en.wikipedia.org/wiki/General_MIDI/General_Midi.html[Wikipedia] voor de lijst van mogelijke instrumenten.
+  De meeste instrumenten worden ondersteund, maar er zijn verschillen tussen computerplatformen.
+
+*MIDI Notes*
+
+Oktaaf
+
+C
+
+C#
+
+D
+
+D#
+
+E
+
+F
+
+F#
+
+G
+
+G#
+
+A
+
+A#
+
+B
+
+*0*
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+*1*
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+
+21
+
+22
+
+23
+
+*2*
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+31
+
+32
+
+33
+
+34
+
+35
+
+*3*
+
+36
+
+37
+
+38
+
+39
+
+40
+
+41
+
+42
+
+43
+
+44
+
+45
+
+46
+
+47
+
+*4*
+
+48
+
+49
+
+50
+
+51
+
+51
+
+53
+
+54
+
+55
+
+56
+
+57
+
+58
+
+59
+
+*5*
+
+60
+
+61
+
+62
+
+63
+
+64
+
+65
+
+66
+
+67
+
+68
+
+69
+
+70
+
+71
+
+*6*
+
+72
+
+73
+
+74
+
+75
+
+76
+
+77
+
+78
+
+79
+
+80
+
+81
+
+82
+
+83
+
+*7*
+
+84
+
+85
+
+86
+
+87
+
+88
+
+89
+
+90
+
+91
+
+92
+
+93
+
+94
+
+95
+
+*8*
+
+96
+
+97
+
+98
+
+99
+
+100
+
+101
+
+102
+
+103
+
+104
+
+105
+
+106
+
+107
+
+*9*
+
+108
+
+109
+
+110
+
+111
+
+112
+
+113
+
+114
+
+115
+
+116
+
+117
+
+118
+
+119
+
+*10*
+
+120
+
+121
+
+122
+
+123
+
+124
+
+125
+
+126
+
+127
+
+PlaySound( <Functie>, <Minimumwaarde>, <Maximumwaarde> )::
+  Speelt een geluid, bepaald door _Functie_ binnen het tijdsinterval [-1,1]. De tijdseenheden zijn seconden en het
+  geluid wordt gespeeld van de Minimumwaarde tot de Maximumwaarde. Het geluid wordt gegenereerd door 8-bit samples a
+  rato van 8000 samples per seconde.
+
+[EXAMPLE]
+====
+
+`++PlaySound(sin(440 2Pi x), 0, 1)++`
+
+Speelt toon die overeenkomt met een zuivere sinusfunctie met een frequentie van 440 Hz (la) en dit een seconde lang.
+
+====
+
+PlaySound( <Functie>, <Minimumwaarde>, <Maximumwaarde>, <Sample Rate>, <Sample Diepte> )::
+  Speelt een toon gegenereerd door Functie, in een tijdsduur binnen het interval [-1,1]. De tijdseenheden zijn seconden
+  en het geluid wordt gespeeld van een tijd Minimumwaarde tot Maximumwaarde. De sampling methode wordt bepaald door
+  "Sample Rate" and "Sample Diepte".
+  "Sample Rate" is het aantal functiewaarden dat genomen wordt per seconde. De waarden die aangenomen worden zijn 8000,
+  11025, 16000, 22050, of 44100
+  "Sample Diepte" is de grootte van een sample in bits. De waarden die aangenomen worden zijn 8 en 16.
+
+PlaySound( <Boolean Play> )::
+  Pauzeert of hervat het spelen.
+  PlaySound(true) = speel, PlaySound(false) = pauze.

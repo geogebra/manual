@@ -1,0 +1,52 @@
+= Sorteer Commando
+:page-en: commands/Sort_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Sorteer( <Lijst> )::
+  Sorteert een lijst van getallen, tekstobjects, of punten.
+
+[EXAMPLE]
+====
+
+* `++Sorteer({3, 2, 1})++` creëert de lijst _\{1, 2, 3}_.
+* `++Sorteer({"peren", "appelen", "vijgen"})++` geeft de lijst van elementen in alfabetische volgorde: _\{appelen,
+peren,vijgen}_.
+* `++Sorteer({(3, 2), (2, 5), (4, 1)})++` creëert de lijst _\{(2, 5), (3, 2), (4, 1)}_.
+
+====
+
+[NOTE]
+====
+
+Lijsten van punten worden gesorteerd volgens hun _x_-coördinaten.
+
+====
+
+Sorteer( <Waarden>, <Sorteercriterium> )::
+  Sorteert de eerste lijst _Waarden_ volgens de overeenkomende tweede lijst _Sorteercriterium_.
+
+[EXAMPLE]
+====
+
+* Om een lijst van veeltermen `++lijst1 = {x^3, x^2, x^6}++` te sorteren volgens hun graad, creëer je de afhankelijke
+lijst met graden `++lijst2 = Zip(Graad(a), a, lijst1)++`. Daarna geeft`++ Sortee(lijst1, lijst2)++` de gewenste _lijst3
+= \{x^2, x^3, x^6}_.
+* Om een veelhoek te tekenen met als hoekpunten de complexe wortels van stem:[x^\{10}-1], gesorteerd volgens hun
+argumenten, creëer je `++lijst1 = {ComplexeWortels(x^10-1)}++`. Typ daarna het commando
+`++Veelhoek(Sorteer[lijst1, arg(lijst1)))++`. Dit commando creëert _veelhoek1 = 2.94_.
+
+====
+
+[NOTE]
+====
+
+Je vind een Engelstalige initiatiehandleiding over het sorteren van objecten op
+https://www.geogebra.org/manual/en/Tutorial:Advanced_List_Sorting[Tutorial: Sorting].
+
+====

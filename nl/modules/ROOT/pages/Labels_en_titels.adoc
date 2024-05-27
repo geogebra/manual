@@ -1,0 +1,94 @@
+= Labels en titels
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+In GeoGebra heeft elk object een uniek *label*. Je kunt hiervoor een of meerdere letters gebruiken, eventueel met een
+index. Voor details zie xref:/Objecten_benoemen.adoc[Objecten benoemen].
+
+== Labels tonen en verbergen
+
+In het Tekenvenster kan je labels op verschillende manieren tonen of verbergen:
+
+* Selecteer de knop /Bestand:Tool_Show_Hide_Label_gif.adoc[image:Tool_Show_Hide_Label.gif[Tool Show Hide
+Label.gif,width=32,height=32]] xref:/tools/Object_tonen_verbergen.adoc[Object tonen / verbergen] en klik op het object
+waarvan je het label wil tonen of verbergen.
+* Open het xref:/Context_Menu.adoc[Context Menu] van een object en selecteer
+/Bestand:Tool_Show_Hide_Label_gif.adoc[image:Tool_Show_Hide_Label.gif[Tool Show Hide Label.gif,width=32,height=32]]
+_Toon Label_.
+* Open het xref:/Eigenschappen_dialoogvenster.adoc[Eigenschappenvenster] van een object en en vink in de tab Basis
+_Label tonen_ aan of uit.
+
+== Naam en waarde
+
+Elk object in GeoGebra heeft een unieke naam, die je kunt gebruiken om in het Tekenvenster het object een label te
+geven. Als label van een object kan je ook enkel zijn waarde tonen of zijn naam en waarde. Deze instelling bepaal je in
+het Eigenschappenvenster onder de tab _Basis_. Naast het aanvinkvakje _Label tonen_ kan de de gewenste optie selecteren
+in een drop-down menu.
+
+[NOTE]
+====
+
+De waarde van een punt zijn zijn coördinaten. De waarde van een functie is zijn vergelijking.
+
+====
+
+== Titel
+
+Soms wil je meerdere objecten eenzelfde label geven, b.v. de vier hoeken van een vierkant `++a++`. In die gevallen kan
+je objecten een _titel_ geven, los van naam of waarde of naam van de objecten. In het drop-down menu achter het
+aanvinkvakje _Label tonen_ vind je als bijkomende optie _Titel_. Deze is vrij en dus niet gebonden aan al dan niet reeds
+gegeven titels.
+
+Titels kan je dynamisch maken met volgende verwijzingen:
+
+[cols=",",options="header",]
+|===
+|Verwijzing |Betekenis
+|%c |De waarde van de naburige cel (langs rechterkant) in het Rekenblad. Dit moet een een vrije, niet dynamische tekst
+zijn.De titel wordt niet aangepast tenzij je hem vernieuwd met de toetsencombinatie's
+/Sjabloon:KeyCode.adoc[Sjabloon:KeyCode] of /Sjabloon:KeyCode.adoc[Sjabloon:KeyCode]
+
+|%v |Waarde
+
+|%n |Naam
+
+|%x |x-coördinaat (of coëfficiënt van x in de vergelijking van een rechte a x + b y + c = 0)
+
+|%y |y-coördinaat (of de coëfficiënt van y in de vergelijking van een rechte a x + b y + c = 0)
+
+|%z |de constante term in de vergelijking van een rechte a x + b y + c = 0 (ook: z-coördinaat in het 3D tekenvenster)
+|===
+
+[EXAMPLE]
+====
+
+A is een punt met coördinaten (1,2). De titel bepalen als "Punt %n heeft als coördinaten %v" geeft volgende titel: "Punt
+A heeft als coördinaten (1,2)"
+
+====
+
+=== LaTeX in titels
+
+Je kunt ook xref:/LaTeX.adoc[LaTeX]-formules gebruiken in titels, door de formule tussen dollartekens te plaatsen (b.v.
+`++$ x^{2} $++`). Door te klikken op het kleine icoontje in het tekstveld kan je hierbij ook kiezen uit een reeks
+Griekse letters en operatoren.
+
+[EXAMPLE]
+====
+
+Je kunt LaTeX in titels gebruiken om in een titel b.v. breuken te tonen als stem:[ \frac\{a}\{b} ]. Typ Hiervoor
+*`++$\frac{a}{b}$++`*.
+
+====
+
+[NOTE]
+====
+
+LaTeX titels kan je ook gebruiken in knoppen en aanvinkvakjes.
+
+====

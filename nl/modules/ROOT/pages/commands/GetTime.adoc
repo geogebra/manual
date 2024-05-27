@@ -1,0 +1,32 @@
+= GetTime Commando
+:page-en: commands/GetTime_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+GetTime( )::
+  Geeft een lijst met de actuele tijd en datum in deze volgorde:
+  milliseconden, seconde, minuten, uren (0-23), datum, maand (1-12), jaar, maand (als tekst), dag (als tekst), dag (1 =
+  zondag, 2 = maandag, enz.)
+GetTime( "<Formaat>" )::
+  Omdat _Formaat_ een tekst is, worden volgende karakters voorafgegaan door een backslash (\):
+  d, D, j, l, N, S, w, z, W, F, m, M, n, t, L, Y, y, a, A, g, G, h, H, i, s, U - De verklaring van deze karakters vind
+  je op http://php.net/manual/en/function.date.php
+
+[EXAMPLE]
+====
+
+`++GetTime["Vandaag is het \l  \j\S  \F \Y"]++` geeft iets als _Vandaag is het Maandag 25 September 2017_
+
+====
+
+[EXAMPLE]
+====
+
+`++GetTime()++`geeft een lijst als _\{647, 59, 35, 10, 17, 4, 2015, "april", "vrijdag", 6}_
+
+====

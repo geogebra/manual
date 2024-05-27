@@ -1,0 +1,53 @@
+= Actie objecten
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Actie objecten zijn handig in anteractieve werkbladen met xref:/Scripting.adoc[scripting]. Er zijn vier verschillende
+types:
+
+== Aanvinkvakjes
+
+Aanvinkvakjes zijn grafische voorstellingen van xref:/Booleaanse_waarden.adoc[Booleaanse waarden]. Aanvinkvakjes kan je
+maken met de knop xref:/tools/Aanvinkvakje_om_objecten_te_tonen_of_verbergen.adoc[Aanvinkvakje] of het commando
+xref:/commands/Aanvinkvakje.adoc[Aanvinkvakje].
+
+== Invulvakken
+
+Invulvakken werken als invoermogelijkheid voor tekst waarbij een script de invoer verwerkt. De ingevoerde waarde wordt
+aan de variabele toegekend met de syntax %0.
+
+[EXAMPLE]
+====
+
+Een invoerveld met een script `++a=a+%0++` zal het getal _a_ verhogen met de ingevoerde waarde. Dit werkt enkel wanneer
+_a_ een xref:/Vrije_afhankelijke_en_hulpobjecten.adoc[vrij] getal is.
+
+====
+
+Wanneer je met het invulvak de waarde van een vrij object wil kunnen veranderen (of een afhankelijk object
+herdefiniëren) kan je het object linken aan het invulvak. Op deze manier heb je geen script nodig. Je kunt invulvakken
+creëren met de knop xref:/tools/Invulvak_invoegen.adoc[Invulvak invoegen] of het commando
+xref:/commands/Invulvak.adoc[Invulvak].
+
+== Actieknoppen
+
+Actieknoppen zetten een scrip in werking wanneer je er op klikt. Ook al kan je een script plaatsen op elk mogelijk
+object, een actieknop werkt vaak intuïtiever. Je kunt actieknoppencreëren met de knop
+xref:/tools/Actieknop_invoegen.adoc[Actieknop invoegen] of het commando xref:/commands/Actieknop.adoc[Actieknop] .
+
+== Drop-down lijsten
+
+Je kunt de inhoud van een lijst tonen:
+
+* in het xref:/Tekenvenster.adoc[Tekenvenster]: selecteer de optie _Teken als drop-down lijst_ in de tab _Basis_ in het
+_Eigenschappenvenster_ van de lijst.
+* in het xref:/Rekenblad.adoc[Rekenblad]: voer een lijst in het rekenblad in. Vink in het eigenschappenvenster van het
+Rekenblad _Gebruik knoppen en aanvinkvakjes_ aan.
+
+Je kunt verwijzen naar specifieke elementen van een drop-down lijst met de commando's xref:/commands/IndexVan.adoc[Index
+van] en xref:/commands/GekozenElement.adoc[GekozenElement] .

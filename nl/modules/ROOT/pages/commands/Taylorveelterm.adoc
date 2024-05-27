@@ -1,0 +1,53 @@
+= Taylorveelterm Commando
+:page-en: commands/TaylorPolynomial_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Taylorveelterm( <Functie>, <x-waarde>, <Rangnummer> )::
+  Creëert de reeksontwikkeling van de gegeven functie voor een gegeven _x-waarde_ tot de gegeven rang.
+
+[EXAMPLE]
+====
+
+`++Taylorveelterm(x^2, 3, 1)++` geeft _9 + 6 (x - 3)_, de reeksontwikkeling van _x^2^_ at _x = 3_ tot rang _1_.
+
+====
+
+== CAS venster
+
+Taylorveelterm( <Uitdrukking>, <x-waarde>, <Rangnummer> )::
+  Creëert de reeksontwikkeling van de gegeven functie voor een gegeven _x-waarde_ tot de gegeven rang.
+
+Taylorveelterm( <Uitdrukking>, <Variabele>, <Variabele-Waarde>, <Rangnummer> )
+
+Creëert de reeksontwikkeling van de gegeven uitdrukking naar de gegeven variabele voor de _Variabele Waarde_ tot de
+gegeven rang.
+
+[EXAMPLE]
+====
+
+* `++Taylorveelterm(x^3 sin(y), x, 3, 2)++` geeft _27 sin(y) + 27 sin(y) (x - 3) + 9 sin(y) (x - 3)^2^_, de
+reeksontwikkeling naar _x_ van _x^3^ sin(y)_ at _x = 3_ tot rang _2_.
+* `++Taylorveelterm(x^3 sin(y), y, 3, 2)++` geeft _sin(3) x^3^ + cos(3) x^3^ (y - 3) - stem:[\frac\{sin(3) x³}\{2}] (y -
+3)^2^_, de reeksontwikkeling naar _y_ van _x^3^ sin(y)_ at _y = 3_ tot rang _2_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Taylorveelterm(x^2, a, 1)++` geeft _a^2^ + 2a (x - a)_, de reeksontwikkeling van _x^2^_ at _x = a_ tot rang _1_.
+
+====
+
+[NOTE]
+====
+
+De rang moet een geheel getal zijn groter of gelijk aan nul.
+
+====

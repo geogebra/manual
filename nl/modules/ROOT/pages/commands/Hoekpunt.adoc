@@ -1,0 +1,57 @@
+= Hoekpunt Commando
+:page-en: commands/Vertex_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Hoekpunt( <Kegelsnede> )::
+  Geeft alle toppen van een kegelsnede.
+Hoekpunt( <Lijnstuk>, <Index> )::
+  Geeft het begin- of eindpunt van een lijnstuk.
+
+[EXAMPLE]
+====
+
+* met A=(2,0), B=(5,4) en a=Lijnstuk(A,B) creëert `++Hoekpunt(a,1)++` een punt _C = (2, 0)_.
+
+====
+
+Hoekpunt( <Ongelijkheid> )::
+  Geeft de snijpunten van de begrenzingen.
+
+[EXAMPLE]
+====
+
+* `++Hoekpunt((x + y < 3) && (x - y > 1))++` geeft het punt _A = (2, 1)_.
+* `++{Hoekpunt((x + y < 3) ∧ (x - y > 1) && (y > - 2))}++` geeft _lijst1 = \{(2, 1), (5, -2), (-1, -2)}_.
+* `++Hoekpunt((y > x²) ∧ (y < x))++` geeft twee punten _A = (0, 0)_ en _B = (1, 1)_.
+* `++{Hoekpunt((y > x²) ∧ (y < x))}++` geeft _lijst1 = \{(0, 0), (1, 1)}_.
+
+====
+
+Hoekpunt( <Veelhoek> )::
+  Geeft alle hoekpunten van de veelhoek.
+Hoekpunt( <Veelhoek>, <Index> )::
+  Geeft het _n_-de hoekpunt van de veelhoek.
+
+[NOTE]
+====
+
+Je verkrijgt alle hoekpunten van de objecten veelhoek / kegelsnede / ongelijkheden in een lijst met het commando
+`++{Hoekpunt(Object)}++`.
+
+====
+
+[NOTE]
+====
+
+Het commando _Hoekpunt_ is de vertaling van het Engelse _Vertex_. Vertex wordt in het Engels zowel gebruikt voor de
+_toppen_ van een kegelsnede, de _eindpunten_ van een lijnstuk, snijpunten van begrenzingen in een ongelijkheid en de
+_hoekpunten_ van een veelhoek, terwijl het Nederlands vier verschillende benamingen gebruikt. We kozen _Hoekpunt' omdat
+het commando in deze toepassing het meest gebruikt wordt._
+
+====

@@ -1,0 +1,40 @@
+= TTest Commando
+:page-en: commands/TTest_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+TToetsGemiddelde( <Lijst van steekproefgegevens>, <Hypothetisch gemiddelde>, <Staart> )::
+  Voert een steekproef t-test uit op een populatiegemiddelde van een lijst van steekproefgegevens. _Hypothetisch
+  gemiddelde_ is het populatiegemiddelde dat aangenomen wordt in de nulhypothese. _Staart_ heeft als mogelijke waarden
+  "<", ">" , "≠". Deze specifiëren de alternatieve hypothesen als volgt:
+  "<" = populatiegemiddelde < _Hypothetisch gemiddelde_
+  ">" = populatiegemiddelde > 'Hypothetisch gemiddelde____
+  "≠" = populatiegemiddelde ≠ _Hypothetisch gemiddelde_
+
+Het resultaat verschijnt in een lijst in de vorm _\{Waarschijnlijkheidswaarde, t-test statistisch}_.
+
+TToetsGemiddelde( <Steekproefgemiddelde>, <Steekproef standaardafwijking>, <Steekproefgrootte>, <Hypothetisch
+gemiddelde>, <Staart> )
+
+Voert een steekproef t-test uit op een populatiegemiddelde van een lijst van steekproefgegevens. _Hypothetisch
+gemiddelde_ en _Staart_ worden gedefinieerd als hierboven. Het resultaat verschijnt in een lijst in de vorm
+_\{Waarschijnlijkheidswaarde, t-test statistisch}_.
+
+[EXAMPLE]
+====
+
+`++TToetsGemiddelde(4, 1, 12, 4, "≠")++` geeft _\{1, 0}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++TToetsGemiddelde({1, 2, 3, 4, 5}, 3, "<")++` geeft _\{0.5, 0}_.
+
+====

@@ -1,0 +1,28 @@
+= LogNormaal Commando
+:page-en: commands/LogNormal_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+LogNormaal( <Gemiddelde>, <Standaarddeviatie>, x )::
+  Creëert de kansdichtheidsfunctie (pdf) van de http://en.wikipedia.org/wiki/Log-normal_distribution[log-normale
+  verdeling] met parameters gemiddelde _μ_ en standaardafwijking _σ_.
+LogNormaal( <Gemiddelde>, <Standaarddeviatie>, x, <Boolean Cumulative> )::
+  Als _Cumulatief_ = true, creëert het de grafiek van de cumulatieve dichtheidsfunctie van de log-normale verdeling,
+  anders de pdf van de log-normale verdeling.
+LogNormaal( <Gemiddelde>, <Standaarddeviatie>, <Variabele waarde> )::
+  Berekent de waarde van de cumulatieve dichtheidsfunctie van de log-normale verdeling voor een variable value _v_, dit
+  is de kans _P(X ≤ v)_ waarbij _X_ een willekeurige veranderlijke is met een log-normale verdeling met de parameters
+  gemiddelde _μ_ en standaardafwijking _σ_.
+
+[NOTE]
+====
+
+Geeft de kans voor een gegeven _x_-coördinaat (of oppervlakte onder de grafiek van de log-normale verdeling links van de
+gegeven _x_-cordinaät).
+
+====

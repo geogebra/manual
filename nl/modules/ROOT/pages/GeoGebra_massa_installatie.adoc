@@ -1,0 +1,34 @@
+= GeoGebra massa installatie
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+Deze pagina beschrijft hoe een systeemadministrator GeoGebra kan installeren op meerdere toestellen. Voor installeren op
+een toestel, zie xref:/Installatiehandleiding.adoc[Installatiehandleiding].
+
+== ChromeOS
+
+Zie: https://www.google.com/chrome/education/webstore/app-packs.html#high
+
+== GeoGebra Desktop Software
+
+=== Windows
+
+Om GeoGebra Desktop op meerdere Windows computers in een network te installeren:
+
+* download de .msi installer van de laatste stabiele versie op
+http://download.geogebra.org/installers/5.0/?C=M;O=D[http://download.geogebra.org/installers/], naar een toegankelijke
+netwerkmap, b.v. \\INSTALL\GeoGebra\.
+* installeer GeoGebra op elk workstation: *msiexec /i \\INSTALL\GeoGebra\GeoGebra-Windows-Installer-5-0-3-0.msi
+ALLUSERS=2 /qn*. Je kunt dit commando in een batchbestand plaatsen om tijd uit te sparen. Het kan ook nuttig zijn om
+'remote command execution' te gebruiken door http://technet.microsoft.com/en-us/sysinternals/bb897553.aspx[PsExec
+utility] te gebruiken om GeoGebra op alle toestellen te installeren.
+
+Noteer dat GeoGebra automatisch updates zal doen van kleinere zgn. mirrorversies' (b.v. 5.0.101 naar 5.0.102) door de
+nieuwe versie te downloaden in de map *Application Data* en deze te gebruiken bij een nieuwe opstart. Zo moet je enkel
+een nieuwe installatie doen om over te schakelen naar een belangrijke nieuwe versie (b.v. van 5.0 naar 5.2).
+
+== GeoGebra Tablet Apps
+
+Wanneer je een massa installatie wil doen van onze GeoGebra Tablet Apps voor Windows, Android of iOS toestellen, laat
+ons dan weten wat je juist wil doen en mail naar office@geogebra.org . We doen dan ons best om u te helpen.
+
+/s_index_php?title=Nl:GeoGebra_massa_installatie_action=edit_redlink=1.adoc[nl:GeoGebra massa installatie]

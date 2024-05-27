@@ -1,0 +1,82 @@
+= Inverteer Commando
+:page-en: commands/Invert_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Inverteer( <Matrix> )::
+  Geeft de inverse matrix.
+
+[EXAMPLE]
+====
+
+`++Inverteer({{1, 2}, {3, 4}})++` geeft
+
+====
+
+stem:[\begin\{pmatrix}-2 & 1\\1.5 & -0.5\end\{pmatrix}], de inverse matrix van stem:[\begin\{pmatrix}1 & 2\\3 &
+4\end\{pmatrix}].
+
+Inverteer( <Functie> )::
+  Gives de inverse functie.
+
+[EXAMPLE]
+====
+
+`++Invert(sin(x))++` geeft _asin(x)_.
+
+====
+
+[NOTE]
+====
+
+De functie mag slechts één _x_ bevatten. Er wordt ook geen rekening gehouden met domein of bereik, bijvoorbeeld voor
+f(x) = x^2 of f(x) = sin(x). Voor functies met meer dan een _x_ in het functievoorschrift kan je een ander commando
+gebruiken:
+
+[EXAMPLE]
+====
+
+`++Inverteer(Partiëelbreuken((x + 1) / (x + 2)))++` berekent de inverse functie.
+
+====
+
+====
+
+== CAS Venster
+
+Invert( <Matrix> )::
+  Geeft de inverse matrix.
+
+[EXAMPLE]
+====
+
+`++Inverteer({{a, b}, {c, d}})++` geeft
+
+====
+
+stem:[\begin\{pmatrix}\frac\{d}\{ad- bc} & \frac\{-b}\{ad- bc}\\\frac\{-c}\{ad- bc}& \frac\{a}\{ ad- bc}\end\{pmatrix}]
+
+, de inverse matrix van stem:[\begin\{pmatrix}a & b\\c & d\end\{pmatrix}].
+
+Inverteer( <Functie> )::
+  Geeft de inverse functie.
+
+[EXAMPLE]
+====
+
+* `++Inverteer((x + 1) / (x + 2))++` geeft _stem:[\frac\{-2x + 1}\{x - 1}]_.
+* `++Inverteer(x^2 + 2 x + 1)++` geeft _stem:[\sqrt x - 1]_.
+
+====
+
+[NOTE]
+====
+
+In het xref:/CAS_venster.adoc[CAS venster] werkt het commando ook wanneer het functievoorschrift meer dan een _x_ bevat.
+
+====

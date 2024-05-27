@@ -1,0 +1,41 @@
+= Oppervlak Commando
+:page-en: commands/Surface_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Oppervlak( <Functie>, <Hoek> )
+
+Creëert het 3D cartesiaans parameteroppervlak dat je bekomt door de grafiek van de gegeven functie te wentelen rond de
+x-as over een gegeven hoek.
+
+Oppervlak( <Uitdrukking>, <Uitdrukking>, <Uitdrukking>, <Parameter Variabele 1>, <Beginwaarde>, <Eindwaarde>, <Parameter
+Variabele 2>, <Beginwaarde>, <Eindwaarde> )
+
+Creëert het 3D cartesiaanse parameteroppervlak voor de gegeven _x_-uitdrukking(eerste _<Uitdrukking>_),
+_y_-uitdrukking(tweede _<Uitdrukking>_) en _z_-Uitdrukking(derde _<Uitdrukking>_), met twee _<Parameter Variabelen>_
+binnen gegeven intervallen [_<Beginwaarde>_, _<Eindwaarde>_].
+
+Praktisch.: Noteer eerst de parametervergelijkingen voor de variabelen x, y en z en daarna de twee parameters met hun
+begin- en eindwaarde.
+
+[EXAMPLE]
+====
+
+_r_ en _R_ zijn twee positieve reële getallen:
+`++Oppervlak((R + r cos( u)) cos(v) , (R + r cos( u)) sin(v) , r sin(u ), u, 0, 2 π , v, 0, 2 π)++` creëert de torus,
+gegenereerd door een cirkel met straal _r_ waarvan het middelpunt op een afstand _R_ rond de z-as draait.
+
+====
+
+[NOTE]
+====
+
+* De _Eindwaarde_ moet groter zijn dan de _Beginwaarde_ en beide moeten eindig zijn.
+* _x, y_ en _z_ zijn niet toegestaan als parametervariabelen.
+
+====

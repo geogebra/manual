@@ -1,0 +1,123 @@
+= Afgeleide Commando
+:page-en: commands/Derivative_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Afgeleide( <Functie> )::
+  Geeft de afgeleide van de functie naar de hoofdveranderlijke.
+Afgeleide( <Functie>, <Getal> )::
+  Geeft de n-de afgeleide naar de hoofdveranderlijke.
+Afgeleide( <Functie>, <Veranderlijke> )::
+  Geeft de partiële afgeleide van de functie naar de gegeven veranderlijke.
+Afgeleide( <Functie>, <Veranderlijke>, <Getal> )::
+  Geeft de n-de partiële afgeleide van de functie naar de gegeven veranderlijke.
+Afgeleide( <Kromme> )::
+  Geeft de afgeleide van de kromme.
+Afgeleide( <Kromme>, <Getal> )::
+  Geeft de n-de afgeleide van de kromme.
+
+[EXAMPLE]
+====
+
+`++Afgeleide(Kromme(cos(t), t sin(t), t, 0, π), 2)++` geeft de kromme curve _x = -cos(t), y = 2cos(t) - t sin(t)_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Afgeleide(Kromme(cos(t), t sin(t), t, 0, π))++` geeft de kromme _x = -sin(t), y = sin(t) + t cos(t)_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Afgeleide(x^3 + 3x y, x, 2)++` geeft _6x_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Afgeleide(x^3 y^2 + y^2 + xy, y)++` geeft _2x³y + x + 2y_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Afgeleide(x^3 + x^2 + x, 2)++` geeft _6x + 2_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Afgeleide(x^3 + x^2 + x)++` geeft _3x² + 2x + 1_.
+
+====
+
+[NOTE]
+====
+
+Dit werkt enkel voor parameterkrommen.
+
+====
+
+[NOTE]
+====
+
+Dit werkt enkel voor parameterkrommen.
+
+====
+
+[NOTE]
+====
+
+Je kunt ook `++f'(x)++` typen in de plaats van`++Afgeleide(f)++`, of `++f''(x)++` in de plaats van
+`++Afgeleide(f, 2)++`, enz.
+
+====
+
+== CAS Syntax
+
+Afgeleide( <Uitdrukking> )::
+  Geeft de afgeleide van een uitdrukking naar de hoofdveranderlijke.
+Afgeleide( <Uitdrukking>, <Veranderlijke> )::
+  Geeft de afgeleide van een uitdrukking naar de gegeven veranderlijke.
+Afgeleide( <Uitdrukking>, <Veranderlijke>, <Getal> )::
+  Geeft de n-de afgeleide van een uitdrukking naar de gegeven veranderlijke.
+
+[EXAMPLE]
+====
+
+`++Afgeleide(x³ + 3x y, x, 2)++` geeft _6x_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Afgeleide(y x^3, x, 2)++` geeft _6xy_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Afgeleide(a x^3, a)++` geeft _x³_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Afgeleide(x^2)++` geeft _2x_.
+
+====

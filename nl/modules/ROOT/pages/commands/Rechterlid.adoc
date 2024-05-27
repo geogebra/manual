@@ -1,0 +1,56 @@
+= Rechterlid Commando
+:page-en: commands/RightSide_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Rechterlid( <Vergelijking> )::
+  geeft het rechterlid van de vereenvoudigde vergelijking.
+
+[EXAMPLE]
+====
+
+`++Rechterlid(x + 2 = 3x + 1)++` geeft _0.5_
+
+====
+
+== CAS venster
+
+Rechterlid( <Vergelijking> )::
+  geeft het rechterlid van de vergelijking.
+Rechterlid( <Stelsel vergelijkingen> )::
+  Geeft de rechterleden van de vergelijkingen.
+Rechterlid( <Stelsel vergelijkingen>, <Index> )::
+  Geeft de rechterleden van de vergelijkingen bepaald door de index.
+
+[EXAMPLE]
+====
+
+`++Rechterlid({a^2 + b^2 = c^2, x + 2 = 3 x + 1}, 1)++` geeft stem:[c^2].
+
+====
+
+[EXAMPLE]
+====
+
+`++Rechterlid({a^2 + b^2 = c^2, x + 2 = 3x + 1})++` geeft _\{c^2^, 3x + 1}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Rechterlid(x + 3 = 3 x + 1)++` geeft _3 x + 1_.
+
+====
+
+[NOTE]
+====
+
+Zie ook het commando xref:/commands/Linkerlid.adoc[Linkerlid Commando].
+
+====

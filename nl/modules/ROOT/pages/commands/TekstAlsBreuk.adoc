@@ -1,0 +1,44 @@
+= TekstAlsBreuk Commando
+:page-en: commands/FractionText_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+TekstAlsBreuk( <Getal> )::
+  Zet een getal om in een breuk, getoond als een (LaTeX) tekstobject in het xref:/Tekenvenster.adoc[Tekenvenster].
+TekstAlsBreuk( <Punt> )::
+  Toont de coördinaten van een punt als een breuk in het xref:/Tekenvenster.adoc[Tekenvenster].
+TekstAlsBreuk( <Getal>, <Booleaans enkelvoudige breuk>)::
+  Creëert en toont in het image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/Tekenvenster.adoc[Tekenvenster] een LaTeX tekst met het gegeven getal in breukvorm.
+  De booleaanse variabele bepaalt de positie van het eventuele negatieve teken van de breuk.
+  _true_, plaatst het minteken in de teller, _false_ plaatst het minteken voor de breuk.
+
+[EXAMPLE]
+====
+
+Voor een gegeven het getal _n = -0.8_ creëert
+
+* `++TekstAlsBreuk(n, true)++` de LaTeX tekst stem:[\frac\{- 4}\{5}].
+* `++TekstAlsBreuk(n, false)++` de LaTeX tekst stem:[-\frac\{4}\{5}].
+
+====
+
+[EXAMPLE]
+====
+
+_A=(1.33,0.8)_ is een puint. `++TekstAlsBreuk(A)++` geeft de coördinaten _stem:[ \left( \frac\{133}\{100} ,\frac\{4}\{5}
+\right) ]_ als een tekst.
+
+====
+
+[EXAMPLE]
+====
+
+_a: y = 1.5 x + 2_ is een rechte. `++TekstAlsBreuk(Helling(a))++` geeft de breuk _3/2_ als een tekst.
+
+====

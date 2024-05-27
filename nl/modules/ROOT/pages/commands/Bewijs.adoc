@@ -1,0 +1,43 @@
+= Bewijs Commando
+:page-en: commands/Prove_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Bewijs( <Booleaanse UItdrukking> )::
+  Geeft aan of de gegeven uitdrukking waar if vals is.
+
+xref:/Booleaanse_waarden.adoc[Booleaanse waarden] worden in GeoGebra normaal gebruikt in bewerkingen. Het commando
+_Bewijs_ gebruikt http://en.wikipedia.org/wiki/nl:Symbolische_wiskunde[w:nl:Symbolische_wiskunde] om te bepalen of een
+uitdrukking in het algemeen _true_ of _false_ is. Wanneer GeoGebra het antwoord niet kan bepalen, is het resultaat
+_onbepaald_.
+
+[EXAMPLE]
+====
+
+We definiëren drie vrije punten: `++A=(1,2)++`, `++B=(3,4)++`, `++C=(5,6)++`. Het commando `++ZijnCollinear(A,B,C)++`
+geeft _true_, na controle van de coördinaten van de punten. Het commando `++Bewijs(ZijnCollinear(A,B,C))++` geeft als
+antwoord _false_, omdat de drie punten in het algemeen niet collineair zijn, d.w.z. wanneer je de punten versleept.
+
+====
+
+[EXAMPLE]
+====
+
+Definiëren we een driehoek met hoepunten _A_, _B_ en _C_, en vervolgens `++D=Middelpunt(B,C)++`,
+`++E=Middelpunt(A,C)++`, `++p=Rechte(A,B)++`, `++q=Rechte(D,E)++`. nu geven zowel `++p∥q++` als `++Bewijs(p∥q)++` als
+resultaat _true_, want een middenparallel in een driehoek is altijd evenwijdig met de overeenkomende zijde.
+
+[[ggbContainer0c51641eb97b1801f2fc1b3a687e8ceb]]====
+
+[NOTE]
+====
+
+Zie ook het commando xref:/commands/BewijsDetail.adoc[BewijsDetail] en xref:/Booleaanse_waarden.adoc[Booleaanse
+waarden].
+
+====

@@ -1,0 +1,52 @@
+= Eindwaarde Commando
+:page-en: commands/FutureValue_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Eindwaarde( <Rentevoet>, <Aantal perioden>, <Termijn>, <Aanvangswaarde>, <Type (optioneel)> )::
+  Berekent de eindwaarde van een http://en.wikipedia.org/wiki/nl:Annu%C3%AFteit[Annuïteit].
+
+* *<Rentevoet>* Rentevoet per periode.
+* *<Aantal perioden>* Totaal aantal betalingen in het verloop van de annuïteit.
+* *<Termijn>* Het bedrag dat elke periode betaald wordt.
+* *<Aanvangswaarde (optioneel)>* Het bedrag dat een reeks toekomstige betalingen nu waard is. Wanneer je geen waarde
+ingeeft, wordt het gelijkgesteld aan 0.
+* *<Type (optioneel)>* Geeft aan wanneer de betalingen gebeuren. Wanneer je niets invult (of 0) gebeuren de betalingen
+op het einde van elke periode (postnumerando. Vul je 1 in dan gebeuren de betalingen in het begin van elke periode
+(prenumerando)
+
+[EXAMPLE]
+====
+
+`++Eindwaarde(10%/12, 15, -200, 0, 1)++` geeft als eindwaarde 3207.99.
+
+[NOTE]
+====
+
+Zorg er voor dat de eenheden die je gebruikt voor `++<Rentevoet>++` en `++<Aantal perioden>++` overeenkomen. Bij
+maandelijkse betalingen met een gegeven jaarlijkse rentevoet over een looptijd van 4 jaar, moet je zowel rentevoet en
+aantal periodes omrekenen naar maanden.
+
+====
+
+====
+
+[NOTE]
+====
+
+Voor alle argumenten, worden betalingen voorgesteld door negatieve getallen en ontvangsten door positieve getallen.
+
+====
+
+[NOTE]
+====
+
+Zie ook de commando's xref:/commands/Termijn.adoc[Termijn], xref:/commands/Rentevoet.adoc[Rentevoet],
+xref:/commands/Aanvangswaarde.adoc[Aanvangswaarde] en xref:/commands/Perioden.adoc[Perioden].
+
+====

@@ -1,0 +1,95 @@
+= ExporteerAfbeelding Commando
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+ExporteerAfbeelding( <Eigenschap>, <Waarde>, <Eigenschap>, <Waarde>, ...)::
+  Exporteerd een afbeelding van het momenteel actieve scherm (of het scherm bepaald door de parameter "view" )
+
+[NOTE]
+====
+
+* De _Eigenschappen_ in de parameters van het commando moet je steeds in het Engels typen!
+* De _waarden_ die je kunt gebruiken voor de parameter "view" (venster) zijn:
+
+* 1 voor image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Tekenvenster_
+* 2 voor image:16px-Menu_view_graphics2.svg.png[Menu view graphics2.svg,width=16,height=16] _Tekenvenster_ 2
+* -1 voor image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=16,height=16]
+3__D Tekenvenster__
+
+====
+
+[EXAMPLE]
+====
+
+* `++ExporteerAfbeelding("scale", 5)++`
+
+Toont een popup van het huidige venster zodat de gebruiker kan rechtsklikken -> Save Image As...
+
+* `++ExporteerAfbeelding("filename", "afbeelding.png")++`
+
+Bewaart een afbeeldingsbestand met als naam "image.png" van het huidig actieve venster.
+
+* `++ExporteerAfbeelding("filename", "afbeelding.png", "view", 2)++`
+
+Bewaart een afbeeldingsbestand "afbeelding.png" van Tekenvenster 2.
+
+* `++ExporteerAfbeelding("filename", "afbeelding.png", "view", -1)++`
+
+Bewaart een afbeeldingsbestand "afbeelding.png" van het 3D Tekenvenster.
+
+* `++ExporteerAfbeelding("filename", "afbeelding.png", "dpi", 300)++`
+
+Bewaart een afbeeldingsbestand "afbeelding.png" van het huidige venster met resolutie 300 dpi (dots-per-inch).
+
+* `++ExporteerAfbeelding("filename", "afbeelding.png", "scale", 2)++`
+
+Bewaart een afbeeldingsbestand "afbeelding.png" van het huidige venster met schaal 2 (dit is tweemaal de nominale
+schermresolutie).
+
+* `++ExporteerAfbeelding("filename", "afbeelding.png", scalecm", 2, "dpi", 600)++`
+
+Bewaart een afbeeldingsbestand "afbeelding.png" van het huidige venster aan 600 dpi met schaal 1 enheid = 2 cm.
+
+* `++ExporteerAfbeelding("filename", "afbeelding.png", "width", 1000)++`
+
+Bewaart een afbeeldingsbestand "afbeelding.png" van het huidige venster met breedte = 1000 pixels.
+
+* `++ExporteerAfbeelding("filename", "afbeelding.png", "height", 1000)++`
+
+Bewaart een afbeeldingsbestand "afbeelding.png" van het huidige venster met hoogte = 1000 pixels.
+
+* `++ExporteerAfbeelding("filename", "afbeelding.png", "transparent", true)++`
+
+Bewaart een transparent PNG-bestand met als naam "afbeelding.png".
+
+* `++ExporteerAfbeelding("filename", "afbeelding.svg", "type", "svg")++`
+
+Bewaart een afbeeldingsbestand "afbeedling.svg" van het huidige scherm in SVG-formaat.
+
+* `++ExporteerAfbeelding("filename", "afbeelding.gif", "type", "gif", "slider", a, "loop", true, "time", 200, "width", 400)++`
+
+Bewaart een zich herhalend animated GIF-bestand van het huidige scherm gecontroleerd door een schuifknop "a" met 200ms
+tussen de verschillende deelafbeedlingen. *Hou de breedte en het aantal stappen van de schuifknop beperkt.*
+
+**
+
+* `++ExporteerAfbeelding("filename", "afbeelding.gif", "type", "gif", "view", -1, "rotate", 360°, "slider", a, "loop", true, "time", 200)++`
+
+Bewaart een zich herhalend animated GIF-bestand van het huidige scherm gecontroleerd door een schuifknop "a" met 200ms
+tussen de verschillende deelafbeedlingen en roteert het scherm over 360° doorheen de animatie. *Hou de breedte en het
+aantal stappen van de schuifknop beperkt.*
+
+====
+
+[NOTE]
+====
+
+* In GeoGebra Klassiek 5 is er geen `++bestandsnaam++` parameter waarmee je het bestand kopieert naar het klembord. Dit
+kan in de toekomst ook zo zijn (met browser ondersteuning) in andere versies.
+
+====

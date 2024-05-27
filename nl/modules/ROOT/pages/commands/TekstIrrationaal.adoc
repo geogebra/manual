@@ -1,0 +1,60 @@
+= TekstIrrationaal Commando
+:page-en: commands/SurdText_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+TekstIrrationaal( <Getal> )::
+  Creëert een tekst waarin een getal geschreven wordt in de vorm stem:[\frac\{a+b\sqrt\{c}}\{d}].
+
+[EXAMPLE]
+====
+
+* `++TekstIrrationaal(2.414213562373095)++` creëert de tekst _stem:[1 + \sqrt\{2}]_
+* `++TekstIrrationaal(2.439230484541326)++` creëert de tekst _stem:[\frac\{7+3 \sqrt\{3} }\{5}]_
+
+====
+
+TekstIrrationaal( <Getal>, <Lijst> )::
+  Creëert een tekst waarin een getal geschreven wordt als veelvouden van de constanten in de lijst. Wanneer de lijst
+  leeg is, wordt een lijst van gangbare constanten gebruikt.
+
+[EXAMPLE]
+====
+
+* `++TekstIrrationaal(3.718281828459045, {exp(1)})++` geeft _stem:[e + 1]_
+* `++TekstIrrationaal(5.382332347441762, {sqrt(2), sqrt(3), sqrt(5)})++` geeft _stem:[ \sqrt\{5} + \sqrt\{3} +
+\sqrt\{2}]_
+* `++TekstIrrationaal(1.693147180559945, {ln(2)})++` geeft _stem:[ \ln(2) + 1]_
+
+====
+
+TekstIrrationaal( <Punt> )::
+  Creëert een tekst waarin de coördinaten van het punt geschreven worden als stem:[\frac\{a+b\sqrt\{c}}\{d}].
+
+[EXAMPLE]
+====
+
+`++TekstIrrationaal((2.414213562373095, 1.414213562373095))++` geeft _(stem:[1 + \sqrt\{2}, \sqrt\{2})]_
+
+====
+
+[NOTE]
+====
+
+* De teksten worden in LaTeX-formaat geschreven.
+* Omdat het commando met een afgerond decimaal getal als input werkt, is het resultaat soms onverwacht
+* Wanneer geen geschikte uitdrukking gevonden wordt, is de output opnieuw het getal zelf.
+
+[EXAMPLE]
+====
+
+`++TekstIrrationaal(1.23456789012345)++` geeft _1.23456789012345_.
+
+====
+
+====

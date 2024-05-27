@@ -1,0 +1,40 @@
+= BehoudAls Commando
+:page-en: commands/KeepIf_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+BehoudAls( <Voorwaarde>, <Lijst> )
+
+Creëert een nieuwe lijst met enkel die elementen van de originele lijst die voldoen aan de voorwaarde.
+
+[EXAMPLE]
+====
+
+`++BehoudAls(x<3, {1, 2, 3, 4, 1, 5, 6})++` geeft de nieuwe lijst _\{1, 2, 1}_.
+
+====
+
+[NOTE]
+====
+
+Voor lijsten met getallen kan je elke willekeurige voorwaarde gebruiken. Voor lijsten met andere objecten kan je enkel
+voorwaarden gebruiken van de vorm `++x==constant++` or `++x!=constant++`.
+
+====
+
+BehoudAls( <Voorwaarde>, <Variabele>, <Lijst> )::
+  Deze syntax is soepeler in gebruik.
+
+[EXAMPLE]
+====
+
+Voor de punten _P, Q, R_ zal `++BehoudAls(x(A) < 3, A, {P, Q, R})++` die punten uit de lijst wegfilteren waarvan de
+_x_-coördinaat kleiner is dan _3_. De variabele _A_ wordt achtereenvolgens vervangen door _P_, _Q_ en tenslotte door _R_
+voor de controle.
+
+====

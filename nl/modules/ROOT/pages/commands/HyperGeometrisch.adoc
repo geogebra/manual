@@ -1,0 +1,55 @@
+= HyperGeometrisch Commando
+:page-en: commands/HyperGeometric_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+HyperGeometrisch( <Populatiegrootte>, <Aantal Successen>, <Steekproefgrootte> )::
+  Creëert een staafdiagram van een http://en.wikipedia.org/wiki/Hypergeometric_distribution[Hypergeometrische verdeling]
+  .
+  _Parameters:_
+  _Populatiegrootte_: aantal balletjes in de vaas
+  _Aantal Successen_: aantal witte balletjes in de vaas
+  _Steekproefgrootte_: aantal getrokken balletjes uit de vaas
+
+Het staafdiagram toont de kansdichtheidsfunctie van het aantal witte balletjes in de steekproef.
+
+HyperGeometrisch( <Populatiegrootte>, <Aantal Successen>, <Steekproefgrootte>, <Logisch Cumulatief> )::
+  Creëert een staafdiagram van een Hypergeometrische verdeling wanneer _Cumulatief_ = false.
+  Creëert een staafdiagram van een cumulatieve Hypergeometrische verdeling wanneer _Cumulatief_ = true.
+  De eerste drie parameters zijn dezelfde als hierboven.
+HyperGeometrisch( <Populatiegrootte>, <Aantal Successen>, <Steekproefgrootte>, <Waarde Variabele>, <Cumulatief> )::
+  X is een willekeurige Hypergeometrische variabele en v de waarde van de variabele.
+  Geeft P( X = _v_) wanneer _Cumulatief_ = false.
+  Geeft P( X ≤ _v_) wanneer _Cumulatief_ = true.
+  De eerste drie parameters zijn dezelfde als hierboven.
+
+== CAS venster
+
+HyperGeometrisch[ <Populatiegrootte>, <Aantal successen>, <Steekproefgrootte>, <Toevalsveranderlijke>, <Logisch
+Cumulatief> ]::
+  Geeft P( X = _v_) wanneer _Cumulatief_ = false.
+  Geeft P( X ≤ _v_) wanneer _Cumulatief_ = true.
+  De eerste drie parameters zijn dezelfde als hierboven.
+
+[EXAMPLE]
+====
+
+Je trekt, zonder teruglegging, twee balletjes uit een vaas met tien balletjes.
+
+* `++HyperGeometrisch(10, 2, 2, 0, false)++` geeft stem:[\frac\{28}\{45}], de kans om geen wit balletje te trekken,
+* `++HyperGeometrisch(10, 2, 2, 1, false)++` geeft stem:[\frac\{16}\{45}], de kans om een wit balletje te trekken,
+* `++HyperGeometrisch(10, 2, 2, 2, false)++` geeft stem:[\frac\{1}\{45}], de kans om twee witte balletjes te trekken,
+* `++HyperGeometrisch(10, 2, 2, 3, false)++` geeft _0_, de kans om twee witte balletjes te trekken.
+* `++HyperGeometrisch(10, 2, 2, 0, true)++` geeft stem:[\frac\{28}\{45}], de kans om hoogstens nul witte balletjes te
+trekken,
+* `++HyperGeometrisch(10, 2, 2, 1, true)++` geeft stem:[\frac\{44}\{45}], de kans om hoogstens een wit balletje te
+trekken,
+* `++HyperGeometrisch(10, 2, 2, 2, true)++` geeft _1_, de kans om hoogstens twee witte balletjes te trekken en
+* `++HyperGeometrisch(10, 2, 2, 3, true)++` geeft _1_, de kans om hoogstens drie witte balletjes te trekken.
+
+====

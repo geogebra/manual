@@ -1,0 +1,21 @@
+= Osculatiecirkel Commando
+:page-en: commands/OsculatingCircle_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Osculatiecirkel( <Punt>, <Object> )::
+  Geeft de osculatiecirkel van het gegeven object (functie, kromme, kegelsnede) in het gegeven punt.
+
+[EXAMPLE]
+====
+
+* `++Osculatiecirkel((0, 0), x^2)++` geeft _x² + y² - y = 0_
+* `++Osculatiecirkel((1, 0), Kromme(cos(t), sin(2t), t, 0, 2π))++` geeft _x² + y² + 6x = 7_
+* `++Osculatiecirkel((-1, 0), MeetkundigePlaats({1, 1, 1, 2, 2, 3}))++` geeft _x² + y² + 2x + 1y = -1_
+
+====

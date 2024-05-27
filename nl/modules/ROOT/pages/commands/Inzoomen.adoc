@@ -1,0 +1,67 @@
+= Inzoomen Commando
+:page-en: commands/ZoomIn_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Inzoomen( <Schaalfactor> )::
+  Zoomt in op het xref:/Tekenvenster.adoc[Tekenvenster] met een gegeven factor t.o.v. het huidige beeld. Het centrum van
+  het beeld wordt gebruikt als zoomcentrum bij het inzoomen.
+Inzoomen( <Schaalfactor>, <Centrum> )::
+  Zoomt in op het xref:/Tekenvenster.adoc[Tekenvenster] met een gegeven factor t.o.v. het huidige beeld. De tweede
+  parameter bepaalt het zoomcentrum.
+Inzoomen( <Min x>, <Min y>, <Max x>, <Max y> )::
+  Zoomt het tekenvenster tot de rechthoek, bepaald door de hoekpunten (Min x, Min y), (Max x, Max y).
+
+[EXAMPLE]
+====
+
+Wanneer _a_ een schuifknop is maakt, `++Inzoomen(-a, -a, a, a)++` het zoomen afhankelijk van de schuifknop _a_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Inzoomen(0, 1, 5, 6)++`
+
+====
+
+[EXAMPLE]
+====
+
+`++Inzoomen(2, (0, 0))++`
+
+====
+
+[EXAMPLE]
+====
+
+`++Inzoomen(1)++` doet niets
+
+`++Inzoomen(2)++` zoomt in
+
+`++Inzoomen(0.5)++` is equivalent met `++Uitzoomen(2)++`, m.a.w. het zoomt uit.
+
+====
+
+[NOTE]
+====
+
+Wanneer een van deze parameters afhankelijk zijn, wordt ook het venster dynamisch.
+
+====
+
+[NOTE]
+====
+
+* Wanneer meerdere xref:/Tekenvenster.adoc[tekenvensters] getoond worden, wordt het zoomen toegepast op het actieve
+venster.
+* Zie ook de commando's xref:/commands/Uitzoomen.adoc[Uitzoomen], xref:/commands/SetActiveView.adoc[SetActiveView],
+xref:/commands/Pan.adoc[Pan].
+
+====

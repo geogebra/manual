@@ -1,0 +1,37 @@
+= Constructiestap Commando
+:page-en: commands/ConstructionStep_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Constructiestap( )
+
+Creëert een variabele met als waarde de huidige constructiestap.
+
+[EXAMPLE]
+====
+
+* `++Constructiestap( )++` bij het begin van een constructie creëert een variabele _a = 1_.
+
+====
+
+Deze variabele kan je gebruiken om tijdens een constructie hulpobjecten niet meer te tonen vanaf een bepaalde stap.
+
+Voor een object c typ je b.v. als voorwaarde om object c te tonen in de tab _Geavanceerd_: a < 5, zodat c vanaf stap 5
+niet meer getoond wordt.
+
+Constructiestap( <Object> )::
+  Creëert een variabele met als waarde de constructiestap van het gegeven object.
+
+[NOTE]
+====
+
+Wanneer je Constructiestap(tekst1) < Constructiestap(object1) in het eigenschappenvenster typt bij de voorwaarde om
+tekst 1 te tonen, zal tekst 1 enkel zichtbaar zijn zolang object1 nog niet gedefinieerd wordt in het overzicht van de
+constructiestappen. Zo kan je b.v. in de opbouw van een constructie elke stap voorzien van een aangepaste commentaar.
+
+====

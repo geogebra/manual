@@ -1,0 +1,57 @@
+= SnijpuntenxAs Commando
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+SnijpuntenxAs( <Veelterm> )::
+  Berekent de snijpunten van de grafiek van een veeltermfunctie met de _x_‐as.
+SnijpuntenxAs( <Functie>, <Getal> )::
+  Berekent de snijpunten van de grafiek met de x-as vanuit het gegeven getal als startwaarde voor een numerieke
+  iteratieve methode.
+SnijpuntenxAs( <Functie>, <Startwaarde>, <Eindwaarde> )::
+  Met _a_ als _Start x-waarde_ en _b_ de _Eind x-waarde_ berekent dit commando een snijpunt van de grafiek met de x-as
+  in the interval [_a, b_] met een numerieke iteratieve methode.
+
+[EXAMPLE]
+====
+
+`++SnijpuntenxAs(0.1x² - 1.5x + 5, 8, 13)++` geeft _A = (10, 0)_.
+
+====
+
+[EXAMPLE]
+====
+
+`++SnijpuntenxAs(0.1*x^2 - 1.5*x + 5, 6 )++` geeft _A = (5, 0)_.
+
+====
+
+[EXAMPLE]
+====
+
+`++SnijpuntenxAs(0.1*x^2 - 1.5*x + 5 )++` geeft _A = (5, 0)_ en _B = (10, 0)_.
+
+====
+
+== CAS venster
+
+SnijpuntenxAs( <Veelterm> )::
+  Geeft alle wortels van de veelterm.
+
+[EXAMPLE]
+====
+
+`++SnijpuntenxAs(x^3 - 3 * x^2 - 4 * x + 12)++` geeft _\{x = 3, x = 2, x = -2}_.
+
+====
+
+[NOTE]
+====
+
+In het xref:/CAS_venster.adoc[CAS venster], is dit commando slechts een variant van het commando _oplossen_.
+
+====

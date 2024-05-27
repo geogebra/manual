@@ -1,0 +1,61 @@
+= Limiet Commando
+:page-en: commands/Limit_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Limiet( <Functie>, <Waarde> )::
+  Berekent de limiet van een functie voor de gegeven waarde van de hoofdvariabele.
+
+[EXAMPLE]
+====
+
+`++Limiet((x^2 + x) /  x^2, +∞)++` geeft _1_.
+
+====
+
+[NOTE]
+====
+
+Niet alle limieten kunnen berekend worden door GeoGebra. In die gevallen krijg je als resultaat _onbepaald_ net zoals in
+die gevallen waarin het correcte resulaat onbepaald is.
+
+====
+
+== CAS venster
+
+Limiet( <Functievoorschrift>, <Waarde> )::
+  Berekent de limiet van een functie voor de gegeven waarde van de hoofdvariabele.
+Limiet( <Functievoorschrift>, <Variabele>, <Waarde> )::
+  Berekent de limiet van een functie voor de gegeven waarde van de gegeven variabele.
+
+[EXAMPLE]
+====
+
+`++Limiet(a sin(v) / v, v, 0)++`geeft _a_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Limiet(a sin(x) / x, 0)++` geeft _a_.
+
+====
+
+[NOTE]
+====
+
+* Niet alle limieten kunnen berekend worden door GeoGebra. In die gevallen krijg je als resultaat _onbepaald_ net zoals
+in die gevallen waarin het correcte resulaat onbepaald is.
+* Voor het berekenen van limieten van functies met meervoudig voorschrift gebruik je
+xref:/commands/Linkerlimiet.adoc[Linkerlimiet] of xref:/commands/Rechterlimiet.adoc[Rechterlimiet] , bijvoorbeeld
+`++Rechterlimiet (Als(x>1, x^2, -2x), 1)++`
+* See also xref:/commands/Asymptoten.adoc[Asymptoten Commando], xref:/commands/Linkerlimiet.adoc[Linkerlimiet Commando]
+en xref:/commands/Rechterlimiet.adoc[Rechterlimiet Commando].
+
+====

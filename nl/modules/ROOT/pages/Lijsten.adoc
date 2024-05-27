@@ -1,0 +1,117 @@
+= Lijsten
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Lijsten van meerdere objecten (b.v. punten, lijnstukken, cirkels...) plaats je tussen accolades.
+
+[EXAMPLE]
+====
+
+* `++L = {A, B, C}++` geeft een lijst met drie vooraf bepaalde punten A, B en C.
+* `++L = {(0, 0), (1, 1), (2, 2)}++` geeft een lijst die bestaat uit de drie ingevoerde punten.
+
+====
+
+[NOTE]
+====
+
+Standaard worden de elementen van lijsten niet getoond in het xref:/Tekenvenster.adoc[Tekenvenster].
+
+====
+
+Je kunt verwijzen naar specifieke elementen uit lijsten met het commando xref:/commands/Element.adoc[Element]. Je kunt
+lijsten gebruiken als argumenten in lijstoperaties (zie verder) en bewerkingen (zie:
+xref:/commands/Lijst_Commando's.adoc[Lijst Commando's]).
+
+== Lijsten vergelijken
+
+Je kunt twee lijsten met objecten vergelijken met volgende syntaxen en commando's:
+
+* `++Lijst1 == Lijst2++`: Controleert of de twee lijsten gelijk zijn (als opsomming), en geeft als resultaat _true_ of
+_false_.
+* `++Lijst1 != Lijst2++`: Controleert of de twee lijsten ongelijk zijn, en geeft als resultaat _true_ of _false_.
+* `++Uniek[lijst1] == Uniek[lijst2]++` of `++{lijst1} \ {lijst2} == {}++` : Controleert of de twee lijsten gelijk zijn
+als verzameling. (d.w.z. herhaalde elementen worden niet dubbel geteld, en ook de volgorde maakt niet uit)
+* `++Sorteer[lijst1] == Sorteer[lijst2]++`: Controleert of de twee lijsten gelijk zijn naar samenstelling (d.w.z. de
+volgorde maakt niet uit)
+
+Zie ook de commando's xref:/commands/Uniek.adoc[Uniek] en xref:/commands/Sorteer.adoc[Sorteer].
+
+== Lijstoperaties
+
+<Object> ∈ <Lijst> is een element van
+
+<Lijst> ⊆ <Lijst> is een (willekeurige) deelverzameling van
+
+<List> ⊂ <List> is een (strikte) deelverzameling van
+
+<List> \ <List> Verschilverzameling
+
+== Gekende Functies en Operatoren voor lijsten
+
+Wanneer je xref:/Gekende_Functies_en_Operatoren.adoc[Gekende Functies en Operatoren] toepast op lijsten, is het
+resultaat altijd een nieuwe lijst.
+
+=== Optelling en aftrekking
+
+* Lijst1 + Lijst2: Telt de overeenkomende elementen van de twee lijsten op.
++
+[NOTE]
+====
+
+De twee lijsten moeten even lang zijn.
+
+====
+* Lijst + Getal: Telt het getal op bij elk element van de lijst.
+* Lijst1 – Lijst2: Trekt de getallen van de tweede lijst af van de overeenkomende elementen van de eerste lijst.
++
+[NOTE]
+====
+
+De twee lijsten moeten even lang zijn.
+
+====
+* Lijst – Getal: Trekt het getal af van elk element van de lijst.
+
+=== Vermenigvuldiging en deling
+
+* Lijst1 * Lijst2: Vermenigvuldigt de overeenkomende elementen van de twee lijsten.
++
+[NOTE]
+====
+
+De twee lijsten moeten even lang zijn. Wanneer de twee lijsten compatibele matrices zijn, wordt de
+matrixvermenigvuldiging toegepast.
+
+====
+* Lijst * Getal: Vermenigvuldigt elk element van de lijst met het getal.
+* Lijst1 / Lijst2: Deelt elk getal van de eerste lijst door het overeenkomende getal van de tweede ljist.
++
+[NOTE]
+====
+
+De twee lijsten moeten even lang zijn.
+
+====
+* Lijst / Getal: Deelt elk element van de lijst door het getal.
+* Getal/ Lijst: Deelt het getal door elk element van de lijst.
+
+[NOTE]
+====
+
+Zie ook _Vectorieel product_ onder xref:/Punten_en_Vectoren.adoc[Punten en Vectoren].
+
+====
+
+=== Andere voorbeelden
+
+* Lijst^2: Kwadrateert elk element van de lijst.
+* 2^Lijst: Creëert een lijst van machten van twee met als exponenten de elementen van de lijst.
+* Lijst1^Lijst2: Creëert een lijst _a^b_, waarbij _a_ en _b_ de overeenkomende elementen zijn van lijst1 en lijst2.
+* sin(Lijst): Past de functie _sinus_ toe op alle elementen van de lijst. Ook functies die je zelf bepaalde kan je op
+dezelfde manier toepassen op lijsten.

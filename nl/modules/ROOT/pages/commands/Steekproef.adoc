@@ -1,0 +1,29 @@
+= Steekproef Commando
+:page-en: commands/Sample_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Steekproef( <Lijst>, <Omvang> )::
+  Geeft een lijst van _n_ willekeurig gekozen elementen uit een lijst. Een element kan meerdere keren genomen worden.
+Steekproef( <Lijst>, <Omvang>, <Met vervanging> )::
+  Geeft een lijst van _n_ willekeurig gekozen elementen uit een lijst. Een element kan slechts meerdere keren genomen
+  worden indien de laatste parameter = true .
+
+[EXAMPLE]
+====
+
+`++Steekproef({1, 2, 3, 4, 5}, 5, true)++` geeft bijvoorbeeld _lijst1 = \{2, 3, 3, 4, 5}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Steekproef({1, 2, 3, 4, 5}, 5)++` geeft bijvoorbeeld _lijst1 = \{1, 2, 1, 5, 4}_.
+
+====

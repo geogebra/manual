@@ -1,0 +1,50 @@
+= Veeltermfunctie Commando
+:page-en: commands/Polynomial_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Veeltermfunctie( <Functie> )::
+  Geeft de uitgewerkte veeltermfucntie.
+Veeltermfunctie( <Lijst met punten> )::
+  Creëert door interpolatie de veeltermfunctie van de _(n-1)_-de graad door de gegeven _n_ punten.
+
+[EXAMPLE]
+====
+
+`++Veeltermfunctie({(1, 1), (2, 3), (3, 6)})++` geeft _0.5 x^2^ + 0.5 x_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Veeltermfunctie((x - 3)^2)++` geeft _x^2^ - 6x + 9_.
+
+====
+
+== CAS venster
+
+Veeltermfunctie( <Functie> )::
+  Werkt de functie uit en schrijft ze als een veeltermfunctie in x door de coëfficiënten te groeperen.
+Veeltermfunctie( <Functie>, <Variabele> )::
+  Werkt de functie uit en schrijft ze als een veeltermfunctie in de gegeven variabele door de coëfficiënten te
+  groeperen.
+
+[EXAMPLE]
+====
+
+`++Veeltermfunctie((x - 3)^2 + (a + x)^2, a)++` geeft _a^2^ + 2 x a + 2 x^2^ - 6 x + 9_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Veeltermfunctie((x - 3)^2 + (a + x)^2)++` geeft _2 x^2^ + (2a - 6) x + a^2^ + 9_.
+
+====

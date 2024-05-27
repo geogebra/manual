@@ -1,0 +1,45 @@
+= Samenvoegen Commando
+:page-en: commands/Join_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Samenvoegen( <Lijst>, <Lijst>, ... )::
+  Voegt de twee (of meer) lijsten samen.
+Samenvoegen( <Lijst van Lijsten> )::
+  Voegt alle lijsten samen tot een langere lijst.
+
+[EXAMPLE]
+====
+
+* `++Samenvoegen({{1, 2}})++` geeft de lijst _\{1, 2}_.
+* `++Samenvoegen({{1, 2, 3}, {3, 4}, {8, 7}})++` geeft de lijst _\{1, 2, 3, 3, 4, 8, 7}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Samenvoegen({5, 4, 3}, {1, 2, 3})++` geeft de lijst _\{5, 4, 3, 1, 2, 3}_.
+
+====
+
+[NOTE]
+====
+
+De nieuwe lijst bevat alle elementen van de oorspronkelijke lijsten, ook al zijn ze hetzelfde. De elementen van de
+nieuwe lijst worden niet opnieuw geordend.
+
+====
+
+[NOTE]
+====
+
+De nieuwe lijst bevat alle elementen van de oorspronkelijke lijsten, ook al zijn ze hetzelfde. De elementen van de
+nieuwe lijst worden niet opnieuw geordend.
+
+====

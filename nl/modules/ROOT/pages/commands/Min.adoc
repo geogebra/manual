@@ -1,0 +1,91 @@
+= Min Commando
+:page-en: commands/Min_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Min[ <Lijst> ]::
+  Geeft het minimum van de getallen in een lijst.
+Min[ <Interval> ]::
+  Geeft de ondergrens van het interval.
+Min[ <Getal>, <Getal> ]::
+  Geeft het kleinste van de twee getallen.
+Min[ <Functie>, <Start x-Waarde>, <Eind x-Waarde> ]::
+  Berekent (numeriek) het minimum van de functie over het gegeven interval. De functie moet continu zijn en slechts één
+  minimumwaarde hebben binnen het interval.
+
+[EXAMPLE]
+====
+
+`++Min[ x^3 + 2x^2 - 1, -2, 0]++` geeft het punt (0, -1).
+
+====
+
+[EXAMPLE]
+====
+
+`++Min[12, 15]++` geeft _12_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Min[2 < x < 3]++` geeft _2_ .
+
+====
+
+[EXAMPLE]
+====
+
+`++Min[{-2, 12, -23, 17, 15}]++` geeft _-23_.
+
+====
+
+[NOTE]
+====
+
+Open en gesloten intervallen worden op dezelfde manier behandeld.
+
+====
+
+[NOTE]
+====
+
+Wanneer de lijst andere objecten bevat dan getallen, dan vergelijkt het commando de getallen die bij de objecten horen.
+Voor een lijst met lijnstukken geeft het commando Min[ <Lijst> ] het tlijnstuk met de kleinste lengte.
+
+====
+
+== CAS venster
+
+Min[ <Lijst> ]::
+  Geeft het minimum van de getallen in een lijst.
+Min[ <Getal>, <Getal> ]::
+  Geeft het kleinste van de twee getallen.
+
+[EXAMPLE]
+====
+
+`++Min[12, 15]++` geeft _12_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Min[{-2, 12, -23, 17, 15}]++` geeft _-23_.
+
+====
+
+[NOTE]
+====
+
+Zie ook de commando's xref:/commands/Max.adoc[Max] en xref:/commands/Extrema.adoc[Extrema] en de knop
+xref:/tools/Functie_onderzoeker.adoc[Functie onderzoeker].
+
+====

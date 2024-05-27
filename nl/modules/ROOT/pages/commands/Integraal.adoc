@@ -1,0 +1,80 @@
+= Integraal Commando
+:page-en: commands/Integral_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Integraal( <Functie> )::
+  Geeft de onbepaalde integraal naar de hoofdveranderlijke.
+Integraal( <Functie>, <variabele> )::
+  Geeft de partiële afgeleide naar de gegeven veranderlijke.
+Integraal( <Functie>, <van>, <tot> )::
+  Geeft de bepaalde integraal van de functie over het interval _[van, tot]_ naar de hoofdveranderlijke.
+Integraal( <Functie>, <van>, <tot>, <Boolean> )::
+  Geeft de bepaalde integraal van de functie over het interval _[van , tot]_ naar de hoofdveranderlijke en kleurt ook de
+  overeenkomende oppervlakte in wanneer _Boolean_ = _true_. Wanneer _Boolean_ _false_ is, wordt de oppervlakte
+  ingekleurd maar wordt de waarde van de integral niet berekend.
+
+[EXAMPLE]
+====
+
+`++Integraal(x³+3x y, x)++` geeft _stem:[\frac\{1}\{4}x^4] + stem:[\frac\{3}\{2}] x² y_ .
+
+====
+
+[EXAMPLE]
+====
+
+`++Integraal(x^3)++` geeft stem:[x^4 \cdot 0.25].
+
+====
+
+[NOTE]
+====
+
+Het commando kleurt ook de oppervlakte in tussen de grafiek van _f_ en de _x_-as.
+
+====
+
+== CAS venster
+
+Integraal( <Functievoorschrift> )::
+  Geeft de onbepaalde integraal naar de hoofdveranderlijke.
+Integraal( <Functievoorschrift>, <veranderlijke> )::
+  Geeft de onbepaalde integraal naar de gegeven veranderlijke.
+Integraal( <Functievoorschrift>, <van>, <tot> )::
+  Geeft de bepaalde integraal van de functie over het interval _[van, tot]_ naar de hoofdveranderlijke.
+Integraal( <Functievoorschrift>, <veranderlijke>, <van>, <tot> )::
+  Geeft de bepaalde integraal van de functie over het interval _[van , tot]_ naar de gegeven veranderlijke.
+
+[EXAMPLE]
+====
+
+`++Integraal(cos(t), t, a, b)++` geeft stem:[sin(b) - sin(a)].
+
+====
+
+[EXAMPLE]
+====
+
+`++Integraal(cos(x), a, b)++` geeft stem:[sin(b) - sin(a)].
+
+====
+
+[EXAMPLE]
+====
+
+`++Integraal(cos(a t), t)++` geeft stem:[\frac\{sin(a t)}\{a} + c_1].
+
+====
+
+[EXAMPLE]
+====
+
+`++Integraal(cos(x))++` geeft stem:[sin(x) + c_1].
+
+====

@@ -1,0 +1,91 @@
+= Staafdiagram Commando
+:page-en: commands/BarChart_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Staafdiagram( <Lijst met waarnemingsgetallen>, <Lijst met frequenties> )::
+  Creëert een staafdiagram van de waarnemingsgetallen, volgens hun frequentie.
+
+[EXAMPLE]
+====
+
+* `++Staafdiagram({10, 11, 12, 13, 14}, {5, 8, 12, 0, 1})++`
+* `++Staafdiagram({5, 6, 7, 8, 9}, {1, 0, 12, 43, 3})++`
+* `++Staafdiagram({0.3, 0.4, 0.5, 0.6}, {12, 33, 13, 4})++`
+
+====
+
+[NOTE]
+====
+
+De getallen in de lijst met waarnemingsgetallen moeten gerangschikt zijn in stijgende volgorde.
+
+====
+
+Staafdiagram( <Lijst met waarnemingsgetallen>, <Lijst met frequenties>, <Breedte van de staven> )::
+  Creëert een staafdiagram van de waarnemingsgetallen, volgens hun frequentie. De staven hebben de gegeven breedte.
+Staafdiagram( <Lijst met waarnemingsgetallen>, <Breedte van de staven> )::
+  Creëert een staafdiagram van de lijst met alle waarnemingsgetallen. De staven hebben de gegeven breedte.
+Staafdiagram( <Startwaarde>, <Eindwaarde>, <Lijst met hoogtes> )::
+  Creëert een staafdiagram over het gegeven interval. Het aantal staven wordt bepaald door de lengte van de lijst met
+  hoogten van de staven.
+Staafdiagram( <Startwaarde>, <Eindwaarde>, <Uitdrukking>, <Variabele>, <Van c>, <Tot d> )::
+  Creëert een staafdiagram over het gegeven interval. [Startwaarde, Eindwaarde], dat de hoogte van de staven berekent
+  met de uitdrukking waarin een variabele _k_ varieert van _c_ tot _d_.
+Staafdiagram( <Startwaarde>, <Eindwaarde>, <Uitdrukking>, <Variable>, <Van...>, <Tot...r>, <Stap> )::
+  Creëert een staafdiagram over het gegeven interval. [Startwaarde, Eindwaarde], dat de hoogte van de staven berekent
+  met de uitdrukking waarin een variabele _k_ varieert van _c_ tot _d_ met een stapgrootte _s_.
+Staafdiagram( <Lijst met waarnemingsgetallen>, <Breedte van staven>, <Verticale Schaalfactor (optioneel)>)::
+  Creëert een staafdiagram van de lijst met alle waarnemingsgetallen. De staven hebben de gegeven breedte en de hoogten
+  hangen af van de gegeven schaalfactor.
+
+[EXAMPLE]
+====
+
+`++Staafdiagram( {1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5}, 1, 2)++`
+
+====
+
+[EXAMPLE]
+====
+
+_p = 0.1_, _q = 0.9_, en _n = 10_ zijn getallen. Het commando
+`++Staafdiagram( -0.5, n + 0.5, BinomiaalCoëfficiënt(n,k) * p^k * q^(n-k), k, 0, n )++` geeft een staafdiagram in het
+interval [_-0.5, n+0.5_]. De hoogten van de staven komen overeen met de waarschijnlijkheden volgens de gegeven
+uitdrukking.
+
+====
+
+[EXAMPLE]
+====
+
+`++Staafdiagram(10, 20, {1, 2, 3, 4, 5} )++` creëert een staafdiagram met vijf staven in het interval [10, 20].
+
+====
+
+[EXAMPLE]
+====
+
+`++Staafdiagram( {1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5}, 1)++`
+
+====
+
+[EXAMPLE]
+====
+
+* `++Staafdiagram({10, 11, 12, 13, 14}, {5, 8, 12, 0, 1}, 0.5)++` laat ruimte tussen de staven.
+* `++Staafdiagram({10, 11, 12, 13, 14}, {5, 8, 12, 0, 1}, 0)++` produceert een lijngrafiek.
+
+====
+
+[NOTE]
+====
+
+In het eigenschappenvenster kan je elke staaf een eigen kleur geven.
+
+====

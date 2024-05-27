@@ -1,0 +1,80 @@
+= Als Commando
+:page-en: commands/If_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Als( <Voorwaarde>, <dan> )::
+  Geeft een kopie van het object _dan_ wanneer de voorwaarde als resulaat _true_ geeft, en een onbepaald object wanneer
+  het resultaat "false" is.
+
+[EXAMPLE]
+====
+
+* _n_ = 3. `++Als(n==3, x + y = 4)++` geeft de rechte _x_ + _y_ = 4, want de voorwaarde voor _n_ is voldaan.
+* _n_ = 4. `++Als(n==3, x + y = 4)++` creëert een _onbepaald_ object, want de voorwaarde voor _n_ is niet voldaan.
+
+====
+
+Als( <Voorwaarde>, <dan>, <anders> )::
+  Geeft een kopie van het object _dan_ wanneer de voorwaarde als resulaat _true_ geeft, en een copie van het object
+  _dan_ wanneer het resultaat "false" is. Beide objecten _moeten_ van hetzelfde type zijn.
+
+[EXAMPLE]
+====
+
+_n_ is een getal. `++Als(n==3, x + y = 4, x - y = 4)++` geeft de rechte _x_ + _y_ = 4 wanneer _n_ = 3, en de rechte _x_
+- _y_ = 4 voor elke _n_ niet gelijk aan 3.
+
+====
+
+== Voorwaardelijke functies
+
+Het _als_ commando kan gebruikt worden om voorwaardelijke functies te creëren. Deze voorwaardelijke functies kunnen
+gebruikt worden als argumenten in commando's als xref:/commands/Afgeleide.adoc[Afgeleide],
+xref:/commands/Integraal.adoc[Integraal], en xref:/commands/Snijpunten.adoc[Snijpunten].
+
+[EXAMPLE]
+====
+
+* `++f(x) = Als(x < 3, sin(x), x^2)++` geeft een meervoudig voorschrift met _sin(x)_ voor _x < 3_ en _x^2^_ voor _x ≥
+3_.
+* `++f(x) = Als(0 <= x <= 3, sin(x))++` geeft een functie gelijk aan _sin(x)_ voor x tussen 0 en 3 (en anders niet
+gedefinieerd).
+
+====
+
+[NOTE]
+====
+
+* Afgeleide van _Als(voorwaarde, f(x), g(x))_ geeft _Als(voorwaarde, f'(x), g'(x))_. Het berekent geen limieten op
+kritische punten.
+* Zie sectiie: xref:/Booleaanse_waarden.adoc[Booleaanse waarden] voor de symbolen die in voorwaardelijke uitdrukkingen
+gebruikt worden.
+
+====
+
+== Als Commando in Scripting
+
+Het _Als_ commando kan gebruikt worden in scripts om verschillende dingen te laten gebeuren onder bepaalde voorwaarden.
+
+[EXAMPLE]
+====
+
+_n_ is een getal, en _A_ een punt. Het commando `++Als(Mod(n, 7) == 0, SetCoords(A, n, 0), SetCoords(A, n, 1))++`
+verandert de coördinaten van een punt A overeenkomstig de gegeven voorwaarden. In dit geval is volgend commando
+gemakkelijker: `++ SetCoords(A, n, Als(Mod(n, 7) == 0,0,1))++`.
+
+====
+
+[NOTE]
+====
+
+Argumenten van _Als_ moeten objecten zijn of xref:/commands/Scripting_Commando's.adoc[Scripting Commando's], geen
+toewijzingen. `++b = Als(a > 1, 2, 3)++` is correct, maar `++b = Als(a = 1, 2, 3)++` wordt niet aanvaard.
+
+====

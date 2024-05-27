@@ -1,0 +1,35 @@
+= PassendeKromme Commando
+:page-en: commands/Fit_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+PassendeKromme( <Lijst Punten>, <Lijst met Functies> )::
+  Berekent een lineaire combinatie van de _functies_ die het best overeenkomt met de _punten_ in de lijst.
+
+[EXAMPLE]
+====
+
+* `++PassendeKromme({(-2, 3), (0, 1), (2, 1), (2, 3)}, {x^2, x})++` geeft _0.625 x^2 - 0.25x_.
+* _L = \{A, B, C, ...}_, _f(x) = 1_, _g(x) = x_, _h(x) = e^x_, _F = \{f, g, h}_. `++PassendeKromme(L, F)++` berekent een
+functie van de vorm _a + b x + c e^x_ die overeenkomt met de _punten_ in de lijst.
+
+====
+
+PassendeKromme( <Lijst Punten>, <Functie> )::
+  Berekent de best passende functie voor de punten in de lijst. De _functie_ moet afhangen van een of meer schuifknoppen
+  die gebruikt worden als startwaarden voor parameters die moeten geoptimaliseerd worden. Mogelijk convergeert de
+  niet-lineaire iteratie niet en helpt het aanpassen van de waarden van de schuifknoppen zodat vertrokken wordt van een
+  beter startpunt.
+
+[EXAMPLE]
+====
+
+_a_ is een schuifknop met interval van _-5_ tot _5_ en toename 1.
+`++PassendeKromme({(-2, 3), (0, 1), (2, 1), (2, 3)}, a + x^2)++` geeft _-1 + x^2_.
+
+====

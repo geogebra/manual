@@ -1,0 +1,144 @@
+= DV Commando
+:page-en: commands/SolveODE_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+DV( <f'(x)> )::
+  Tracht de exacte oplossing te vinden van de differentiaalvergelijking (DV) van de eerste graad
+  stem:[\frac\{dy}\{dx}(x)=f(x, y(x))].
+DV( <f'(x)>, <Punten op f> )::
+  Tracht de exacte oplossing te vinden voor de differentiaalvergelijking (DV) van de eerste graad
+  stem:[\frac\{dy}\{dx}(x)=f(x, y(x))] en gebruikt de oplossing die door het gegeven punt gaat.
+DV( <f'(x)>, <Begin x>, <Begin y>, <Eind x>, <Stap> )::
+  Lost de DV stem:[\frac\{dy}\{dx}=f(x, y)] numeriek op, met een gegeven beginpunt, eindpunt en stapwaarde voor _x_.
+
+[EXAMPLE]
+====
+
+`++DV(-x*y, x(A), y(A), 5, 0.1)++` lost stem:[\frac\{dy}\{dx}=-xy] op, met _A_ als beginpunt.
+
+====
+
+[EXAMPLE]
+====
+
+`++DV(y / x, (1, 2))++` geeft _y = 2x_.
+
+====
+
+[EXAMPLE]
+====
+
+`++DV(2x / y)++` geeft _-2x^2^ + y^2^ = 0_.
+
+====
+
+[NOTE]
+====
+
+* xref:/commands/Lengte.adoc[Lengte]( <Meetkundigeplaats> ) geeft aan hoeveel punten tot de berekende meetkundige plaats
+behoren.
+
+====
+
+DV( <y'>, <x'>, <Begin x>, <Begin y>, <Eind t>, <Stap> )::
+  Lost de DV stem:[\frac\{dy}\{dx}=\frac\{f(x, y)}\{g(x, y)}] op, met een gegeven with given beginpunt, maximale waarde
+  van een interne parameter _t_ en stap voor _t_. Deeze versie van het commando kan werken wanneer de eerste versie niet
+  werkt, bijvoorbeeld bij een oplossingsgrafiek met verticale punten.
+DV( <b(x)>, <c(x)>, <f(x)>, <Begin x>, <Begin y>, <Begin y'>, <Eind x>, <Stap> )::
+  Lost de differentiaalvergelijking van de tweede graad stem:[y'' + b(x) y' + c(x) y = f(x)] op.
+
+[EXAMPLE]
+====
+
+`++DV(x^2, 2x, 2x^2 + x, x(A), y(A), 0, 5, 0.1)++` lost de DV op, met _A_ als beginpunt.
+
+====
+
+[EXAMPLE]
+====
+
+`++DV(-x, y, x(A), y(A), 5, 0.1)++` lost stem:[\frac\{dy}\{dx}=- \frac\{x}\{y} ] op met al beginpunt _A_.
+
+====
+
+[NOTE]
+====
+
+Het resulaat is altijd een meetkundige plaats. Het algoritme is gebaseerd op Runge-Kutta numerische methoden.
+
+====
+
+[NOTE]
+====
+
+Om de _omgekeerde_ oplossing te vinden, voer je een negatieve waarde in voor _Eind t_, bijvoorbeeld
+`++DV(-x, y, x(A), y(A), -5, 0.1)++`.
+
+====
+
+[NOTE]
+====
+
+Zie ook xref:/commands/Raakveld.adoc[Raakveld commando].
+
+====
+
+== CAS venster
+
+DV( <Vergelijking> )::
+  Probeert de exacte oplossing te vinden van de differentiaalvergelijking van de eerste graad (DV). Voor de eerste en
+  tweede afgeleide van _y_ typ je respectievelijk _y'_ en _y''_.
+DV( <Vergelijking>, <Punt(en) op f> )::
+  Probeert de exacte oplossing te vinden van de DV van de eerste of tweede graad graad die door het/de gegeven punt(en)
+  gaat.
+DV( <Vergelijking>, <Punt(en) op f>, <Punt(en) op f'> )::
+  Probeert de exacte oplossing te vinden van de DV van de eerste of tweede graad graad door het/de gegeven _punt(en) op
+  f_ en _f'_ door het/de gegeven _punt(en) op f'_ .
+DV( <Vergelijking>, <Afhankelijke variabele>, <Onafhankelijke variabele>, <Punt(en) op f> )::
+  Probeert de exacte oplossing te vinden van de DV van de eerste of tweede graad graad die door het/de gegeven punt(en)
+  gaat.
+DV( <Vergelijking>, <Afhankelijke variabele>, <Onafhankelijke variabele>, <Punt(en) op f>, <Punt(en) op f'> )::
+  Probeert de exacte oplossing te vinden van de DV van de eerste of tweede graad graad door het/de gegeven _punt(en) op
+  f_ en _f'_ .
+
+[EXAMPLE]
+====
+
+`++DV(v' = v / w, v,  w, (1, 2), (0, 2))++` geeft _v = 2w_.
+
+====
+
+[EXAMPLE]
+====
+
+`++DV(v' = v / w, v,  w, (1, 2))++` geeft _v = 2w_.
+
+====
+
+[EXAMPLE]
+====
+
+`++DV(y'' - 3y' + 2 = x, (2, 3), (1, 2))++` geeft stem:[ y = \frac\{-9 x^2 e^3 + 30 x e^3 - 32 \{(e^3)}^2 + 138 e^3 + 32
+e^\{3 x} }\{54 e^3} ].
+
+====
+
+[EXAMPLE]
+====
+
+`++DV(y' = y / x, (1, 2))++` geeft _y = 2x_.
+
+====
+
+[EXAMPLE]
+====
+
+`++DV(y' = y / x)++` geeft _y = c~1~ x_.
+
+====

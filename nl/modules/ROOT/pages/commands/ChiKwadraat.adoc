@@ -1,0 +1,42 @@
+= ChiKwadraat Commando
+:page-en: commands/ChiSquared_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+ChiKwadraat( <Aantal Vrijheidsgraden>, x )::
+  Creëert de kansdichtheidsfunctie (pdf) van de
+  http://en.wikipedia.org/wiki/Chi-square_distribution[ChiKwadraatverdeling] met de gepaste vrijheidsgraden.
+ChiKwadraat( <Aantal Vrijheidsgraden>, <Waarde Variabele> )::
+  Berekent de waarde van de cumulatieve dichtheidsfunctie van de ChiKwadraat verdeling voor de _Waarde Variabele_ _v_,
+  dit is de kans _P(X ≤ v)_ waarbij _X_ een willekeurige variabele is met een ChiKwadraat verdeling met een gepast
+  aantal vrijheidsgraden.
+ChiKwadraat( <Aantal Vrijheidsgraden>, x, <Logisch Cumulatief> )::
+  Met als logische waarde _true_, creëert het de cumulatieve verdeling van de ChiKwadraat verdeling, anders creëert het
+  de pdf van de ChiKwadraat verdeling.
+
+[NOTE]
+====
+
+Geeft de waarscheinlijkheid voor een gegeven _x_-coördinaatwaarde (of oppervlakte onder de ChiKwadraat verdelingsgrafiek
+links van de gegeven _x_-coördinaat).
+
+====
+
+== CAS venster
+
+ChiKwadraat( <Aantal vrijheidsgraden>, <Variabele> )::
+  Berekent de waarde van de cumulatieve dichtheidsfunctie van de ChiKwadraat verdeling voor de _Waarde Variabele_ _v_,
+  dit is de kans _P(X ≤ v)_ waarbij _X_ een willekeurige variabele is met een ChiKwadraat verdeling met een gepast
+  aantal vrijheidsgraden.
+
+[EXAMPLE]
+====
+
+`++ChiKwadraat(4, 3)++` geeft stem:[\gamma(2, \frac\{3}\{2})], of ongeveer _0.44_.
+
+====

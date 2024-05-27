@@ -1,0 +1,25 @@
+= RestPlot Commando
+:page-en: commands/ResidualPlot_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+RestPlot( <Lijst van punten>, <Functie> )::
+  Geeft een lijst van punten waarvan de x-coördinaten gelijk zijn aan de x-coördinaten van de elementen van de lijst, en
+  de y-coördinaten het verschil met de overeenkomede functiewaarde.
+  Als het _i_-de element van de lijst een getals _(a,b)_ is, dan wordt het _i_-de element van het resultaat
+  _(a,b-f(a))_.
+
+[EXAMPLE]
+====
+
+`++lijst = {(-1, 1), (-0.51, 2), (0, 0.61), (0.51, -1.41), (0.54, 1.97), (1.11, 0.42), (1.21, 2.53), (-0.8, -0.12)}++`
+is een lijst van punten en `++f(x) = x^5 + x^4 - x - 1++` is een functie. Het commando `++RestPlot( lijst, f )++` geeft:
+_lijst1 = \{(-1, 1), (-0.51, 2.46), (0, 1.61), (0.51, 0), (0.54, 3.38), (1.11, -0.66), (1.21, 0), (-0.8, 0)}_ en toont
+deze punten in het _Tekenvenster_.
+
+====

@@ -1,0 +1,40 @@
+= Normaliseren Commando
+:page-en: commands/Normalize_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Normaliseren( <Lijst met getallen> )::
+  Creëert een lijst met de _genormaliseerde_ vorm van de getallen.
+  Hierbij wordt het kleinste getal gelijkgesteld aan 0, het grootste aan 1.
+  De tussenliggende getallen worden door interpolatie berekend.
+
+[EXAMPLE]
+====
+
+`++Normaliseren({1, 2, 3, 4, 5})++` geeft _\{0, 0.25, 0.5, 0.75, 1}_.
+
+====
+
+Normaliseren( <Lijst met punten> )::
+  Creëert een lijst met de _genormaliseerde_ vorm van de gegeven punten.
+
+[EXAMPLE]
+====
+
+`++Normaliseren({(1,5), (2,4), (3,3), (4,2), (5,1)})++` geeft _\{(0,1), (0.25,0.75), (0.5,0.5), (0.75,0.25), (1,0)}_.
+
+====
+
+[NOTE]
+====
+
+* Dit commando kan je niet toepassen op 3D punten.
+* De operatie _normaliseren_ beeldt een waarde _x_ af op een waarde binnen het interval [0, 1] door de lineaire functie
+stem:[x \mapsto \frac\{x-Min[lijst]}\{Max[lijst]-Min[lijst]}].
+
+====

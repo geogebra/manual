@@ -1,0 +1,87 @@
+= NOplossenODE Commando
+:page-en: commands/NSolveODE_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+*Vetgedrukte tekst*
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+NOplossenODE( <Ljist met afgeleiden>, <start x-coördinaat>, <Lijst met start y-coördinaten>, <Eind x-coördinaat> )::
+  Lost (numeriiek) het stelsel van differentiaalvergelijkingen op
+
+[EXAMPLE]
+====
+
+`++f'(t, f, g, h) = g ++`
+
+`++g'(t, f, g, h) = h++`
+
+`++h'(t, f, g, h) = -t h + 3t g + 2f + t++`
+
+`++NOplossenODE({f', g', h'}, 0, {1,2,-2}, 10)++`
+
+`++NOplossenODE({f', g', h'}, 0, {1,2,-2}, -5)++` (lost het stelsel op).
+
+====
+
+[EXAMPLE]
+====
+
+`++x1'(t, x1, x2, x3, x4) = x2++`
+
+`++x2'(t, x1, x2, x3, x4) = x3++`
+
+`++x3'(t, x1, x2, x3, x4) = x4++`
+
+`++x4'(t, x1, x2, x3, x4) = -8x1 + sin(t) x2 - 3x3 + t^2++`
+
+`++x10 = -0.4++`
+
+`++x20 = -0.3++`
+
+`++x30 = 1.8++`
+
+`++x40 = -1.5++`
+
+`++NOplossenODE({x1', x2', x3', x4'}, 0, {x10, x20, x30, x40}, 20)++`
+
+====
+
+[EXAMPLE]
+====
+
+Pendel:
+
+`++g = 9.8++`
+
+`++l = 2++`
+
+`++a = 5++` (startpositie)
+
+`++b = 3++` (startkracht)
+
+`++y1'(t, y1, y2) = y2++`
+
+`++y2'(t, y1, y2) = (-g) / l sin(y1) ++`
+
+`++NOplossenODE({y1', y2'}, 0, {a, b}, 20) ++`
+
+`++len = Lengte(NumeriiekeIntegraal1) ++`
+
+`++c = Schuifknop(0, 1, 1 / len, 1, 100, false, true, true, false) ++`
+
+`++x1 = l sin(y(Punt(NumeriekeIntegraal1, c))) ++`
+
+`++y1 = -l cos(y(Punt(numeriekeIntegraal1, c))) ++`
+
+`++A = (x1, y1) ++`
+
+`++Lijnstuk((0, 0), A)++`
+
+`++StartAnimatie()++`
+
+====

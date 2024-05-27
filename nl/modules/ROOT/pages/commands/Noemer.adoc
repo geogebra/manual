@@ -1,0 +1,50 @@
+= Noemer Commando
+:page-en: commands/Denominator_Command
+ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
+
+/Bestand:Accessories_dictionary_png.adoc[image:48px-Accessories_dictionary.png[Accessories
+dictionary.png,width=48,height=48]]
+
+Deze pagina is een deel van de officiële handleiding en kan niet aangepast worden. Graag fouten melden per
+e-mail[.mw-selflink .selflink]##Kies een versie die kan aangepast worden door gebruikers##
+
+Noemer( <Functie> )::
+  Geeft de noemer van een functie.
+Noemer( <Getal> )::
+  Geeft de noemer van een getal in zijn meest eenvoudige breuknotatie.
+
+[EXAMPLE]
+====
+
+`++Noemer(1.5)++` geeft _2_, de noemer van de breuk 3/2.
+
+====
+
+[EXAMPLE]
+====
+
+`++Noemer(5 / (x^2 + 2))++` geeft _f(x)=(x^2^ + 2)_.
+
+====
+
+[NOTE]
+====
+
+* Voor een snelle numerieke methode (wanneer de getallen niet te groot zijn) kan je ook het volgende typen in het
+_Invoerveld_: `++GemeenschappelijkeNoemer(a,a)++` voor de noemer en `++round(a*GemeenschappelijkeNoemer(a,a))++` voor de
+teller.
+* Zie ook het commando xref:/commands/Teller.adoc[Teller].
+
+====
+
+== CAS venster
+
+Noemer( <Uitdrukking> )::
+  Geeft de noemer van een rationaal getal of uitdrukking.
+
+[EXAMPLE]
+====
+
+`++Noemer(2 / 3 + 1 / 15)++` geeft _15_.
+
+====
