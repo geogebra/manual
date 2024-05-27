@@ -1,0 +1,86 @@
+= Comando TestChiCuadrado
+:page-en: commands/ChiSquaredTest_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+TestChiCuadrado[.small]##[ <##Matriz de Valores Observados[.small]##> ]##::
+  Establece el _test_ o http://en.wikipedia.org/wiki/es:Prueba_%CF%87%C2%B2[prueba referida] que contrasta la matriz de
+  valores observados con la de los esperados según la hipótesis independiente considerada.
+  La matriz de valores esperados se calcula internamente, determinando cada uno a partir de los totales de fila y
+  columna de la matriz dada según la siguiente regla:[.small]##
+
+  '''''
+  [.small]#stem:[ \text\{valor esperado} = \frac\{\text\{total de fila} × \text\{total de columna}}\{\text\{total
+  observaciones}} ]#
+
+  '''''
+  Los resultados se listan como__\{http://en.wikipedia.org/wiki/es:Valor_P[Probabildad], Prueba Estadística Chi
+  Cuadrada}__
+
+[EXAMPLE]
+====
+
+`++TestChiCuadrado[{{1, 2, 1}, {3, 2, 3}}]++` da por resultado _\{0.69, 0.75}_.
+
+====
+
+TestChiCuadrado( <Lista de Valores Observados>, <Lista de los Esperados> )::
+  Establece la http://en.wikipedia.org/wiki/es:Prueba_%CF%87%C2%B2[prueba de Bondad de Ajuste] comparando las listas
+  indicadas:
+  * la de los valores observados
+  * la de los esperados
+  Los resultados se listan como__\{http://en.wikipedia.org/wiki/es:Valor_P[Probabildad], Prueba Estadística Chi
+  Cuadrada}__
+
+[EXAMPLE]
+====
+
+`++TestChiCuadrado[{1, 2, 3, 4}, {3, 2, 4, 2}]++` da por resultado _\{0.31, 3.58}_.
+
+====
+
+TestChiCuadrado( <Matriz de Contabilización de Valores Observados>, <Matriz de los Esperados> )::
+  Establece la http://en.wikipedia.org/wiki/es:Prueba_%CF%87%C2%B2[prueba referida] contrastando las matrices indicadas:
+  * la de los valores observados
+  * la de los esperados
+  Los resultados se listan como__\{http://en.wikipedia.org/wiki/es:Valor_P[Probabildad], Prueba Estadística Chi
+  Cuadrada}__
+
+[EXAMPLE]
+====
+
+`++TestChiCuadrado[{{1, 2, 1}, {3, 2, 3}}, {{2, 3, 2}, {4, 2, 3}}]++` da por resultado _\{0.45, 1.58}_.
+
+====
+
+== [#Ilustrando_con_un_Ejemplotomado_de_Wikipedia]#Ilustrando con un Ejemplo^http://en.wikipedia.org/wiki/fr:Test_du_%CF%87%C2%B2#Test_du_.CF.87.C2.B2_d.27ind.C3.A9pendance[[.small]#tomado de Wikipedia#]^#
+
+El ejemplo concreto apunta a la relación entre el ingreso y el género, cuestionando la dispar distribución entre hombres
+y mujeres.La http://en.wikipedia.org/wiki/es:Tabla_de_contingencia[tabla de contingencia] de las ocurrencias de las
+variables ilustra el tema.
+
+[cols=",,,,,",options="header",]
+|===
+|Salario |1000-2000 |2000-3000 |3000-4000 |4000-5000 |Total
+|Hombres |50 |70 |110 |60 |290
+|Mujeres |60 |75 |100 |50 |285
+|Total |110 |145 |210 |110 |575
+|===
+
+*`++TestChiCuadrado[{{50,70,110,60},{60,75,100,50}}]++`* da por resultado _\{0.45528, 2.61264}_ . [.small]#(En WikiPedia
+se anota _2.43_).#
+
+[.small]##
+
+'''''
+
+[.small]#El
+artìculo^http://en.wikipedia.org/wiki/fr:Test_du_%CF%87%C2%B2#Test_du_.CF.87.C2.B2_d.27ind.C3.A9pendance[[.small]#de
+Wikipedia#]^ se recomienda para dar contexto concreto a ejemplos y ensayos.#

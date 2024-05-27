@@ -1,0 +1,47 @@
+= Commande Variance
+:page-en: commands/Variance_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Variance(<Liste Nombres>)::
+  Calcule la variance des nombres de la liste.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Variance({1, 2, 3})++` retourne _0.67_ (arrondi à 2 décimales).
+
+====
+
+Variance( <Liste Nombres>, <Liste Effectifs> )::
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Variance({1, 2, 3} , {1, 2, 1})++` retourne _0.5_.
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Avec parfois un meilleur rendu des résultats, et la possibilité de travailler en littéral (avec la 1ère syntaxe,
+[.underline]#la 2ème présentant un comportement bizarre)#.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++Variance({1, 2, 3})++` retourne _stem:[\frac\{2}\{3}]_
+
+`++Variance({1, 2, a})++` retourne _stem:[\frac\{2}\{9} a^\{2} - \frac\{2}\{3} a + \frac\{2}\{3} ]_
+
+====

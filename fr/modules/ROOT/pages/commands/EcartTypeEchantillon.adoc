@@ -1,0 +1,45 @@
+= Commande EcartTypeEchantillon
+:page-en: commands/SampleSD_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+eType( <Liste de données brutes> )::
+  Calcule l'http://en.wikipedia.org/wiki/fr:%C3%89cart_type#.C3.89cart_type_empirique[écart-type empirique] de la
+  xref:/Listes.adoc[liste] de nombres donnée.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++eType(1, 2, 3)++` ou `++eType({1, 2, 3})++` donne _1_.
+
+====
+
+eType( <Liste des valeurs>, <Liste des effectifs> )::
+
+[EXAMPLE]
+====
+
+*Exemple :* `++eType({1, 2, 3, 4, 9},{3,2,2,2,1})++` donne _2.4_.
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Avec parfois, l'écriture de la valeur exacte, et la possibilité de travailler en littéral.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++eType({1, 2, 2})++` donne stem:[\frac\{\sqrt\{3}}\{3} ] et non _0.58_ comme le résultat d'une saisie dans Algèbre.
+
+Si la variable _a_ n'est pas définie dans GeoGebra
+
+`++eType({1, 2, a})++` donne stem:[\frac\{\sqrt\{a²-3a+3}}\{\sqrt\{3}}].
+
+====

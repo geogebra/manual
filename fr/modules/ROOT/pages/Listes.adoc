@@ -1,0 +1,137 @@
+= Listes
+:page-en: Lists
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Voir aussi la page xref:/Matrices.adoc[Matrices].
+
+En utilisant les accolades, vous pouvez créer une _liste_ de plusieurs objets (par ex. points, segments, cercles).
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* `++L = {A, B, C}++` définit une liste contenant trois points _A_, _B_ et _C_ créés auparavant.
+* `++L = {(0, 0), (1, 1), (2, 2)}++` définit une liste contenant les points définis, bien qu’ils n’aient pas été nommés.
+
+====
+
+[NOTE]
+====
+
+*Note :* Par défaut, les éléments de cette liste ne sont pas affichés dans la vue Graphique.
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :* Pour des listes d'entiers naturels ou relatifs
+successifs, vous pouvez utiliser le raccourci `++..++`
+
+`++-5..5++` crée la liste \{_-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5_} .
+
+Pour cibler des points du graphique d'une fonction _f_ préalablement définie : `++(1..10,f(1..10))++`
+
+====
+
+Vous pouvez aussi créer une liste d'objets présents dans
+/Fichier:Menu_view_graphics_svg.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+xref:/Graphique.adoc[Graphique], en les intégrant, en mode Déplacer, dans un rectangle de sélection, la touche
+[.kcode]#Alt# étant maintenue enfoncée pendant la création du rectangle à l'aide du bouton droit pressé.
+
+Pour accéder à des éléments particuliers d'une liste, vous pouvez utiliser la xref:/commands/Elément.adoc[commande
+Elément]. Les listes peuvent être utilisées comme arguments dans les opérations avec des listes (voir plus loin dans
+cette page) ou dans des xref:/commands/Commandes_Listes.adoc[commandes Listes].
+
+== Comparer des listes d'objets
+
+Vous pouvez comparer deux listes d’objets :
+
+* `++liste1 == liste2  ++` : Vérifie si les deux listes d'éléments dans l'ordre donné sont égales et vous répond _true_
+ou _false_, selon le cas ;
+* `++liste1 != liste2 ++` : Vérifie si les deux listes d'éléments dans l'ordre donné sont différentes et vous répond
+_true_ ou _false_, selon le cas ;
+* `++Trier[liste1] == Trier[liste2] ++` : Vérifie si les deux listes de nombres (ou points) sont constituées des mêmes
+nombres (ou points), l'ordre n'est pas pris en compte, et vous répond _true_ ou _false_, selon le cas ;
+* `++Unique[liste1] == Unique[liste2] ++` : Vérifie si les deux listes de nombres sont constituées des mêmes nombres,
+ordre et répétitions ne sont pas pris en compte, et vous répond _true_ ou _false_, selon le cas.
+
+== Opérateurs sur les listes
+
+* `++<Objet> ∈ <Liste> ++` retourne _true_ si _Objet_ appartient à _Liste_ ;
+
+* `++<liste1> ⊆ <liste2> ++` retourne _true_ si _Liste1_ est contenue dans _Liste2_ ;
+
+* `++<liste1> ⊂ <liste2> ++` retourne _true_ si _Liste1_ est contenue strictement dans _Liste2_ ;
+
+* `++<liste1> \ <liste2> ++` crée la liste des éléments _Liste1_ n'appartenant pas à _Liste2_ .
+
+== Appliquer des opérations et des fonctions aux listes
+
+Si vous appliquez des opérations et des fonctions prédéfinies aux listes, vous obtiendrez toujours une nouvelle liste
+comme résultat.
+
+=== Addition et soustraction
+
+* `++liste1 + liste2++` : Additionne les éléments correspondants des deux listes ;
++
+[NOTE]
+====
+
+*Note :* Les deux listes doivent avoir la même longueur.
+
+====
+* `++Liste + Nombre++` : Additionne _Nombre_ à chacun des éléments de _Liste_ ;
+* `++liste1 – liste2++` : Soustrait les éléments _liste2_ aux éléments correspondants _liste1_ ;
++
+[NOTE]
+====
+
+*Note :* Les deux listes doivent avoir la même longueur.
+
+====
+* `++Liste – Nombre++` : Soustrait _Nombre_ à chacun des éléments de _Liste_.
+
+=== Multiplication et division
+
+* `++liste1 * liste2++` : Multiplie les éléments correspondants des deux listes ;
++
+[NOTE]
+====
+
+*Note :* Les deux listes doivent avoir la même longueur.
+
+====
++
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :*
+
+Si les deux listes sont des matrices compatibles, la multiplication des matrices est utilisée.
+`++ {1, 2,3}* {{1,0,0},{0,1,0},{0,0,1}} ++` retourne stem:[\left(\begin\{array}\{}1&0&0\\0&2&0\\0&0&3\\
+\end\{array}\right)] (produit de listes) alors que `++ {{1, 2,3}}* {{1,0,0},{0,1,0},{0,0,1}} ++` retourne
+stem:[\left(\begin\{array}\{}1&2&3\\ \end\{array}\right)] (produit de matrices)
+
+====
+
+* `++Liste *  Nombre++` : Multiplie chacun des éléments de _Liste_ par _Nombre_ ;
+* `++liste1/liste2++` : Divise les éléments de _liste1_ par les éléments correspondants de _liste2_ ;
++
+[NOTE]
+====
+
+*Note :* Les deux listes doivent avoir la même longueur.
+
+====
+* `++Liste/ Nombre++` : Divise chacun des éléments de _Liste_ par _Nombre_ ;
+* `++Nombre/Liste++` : Divise _Nombre_ par chacun des éléments de _Liste_.
+
+=== Autres exemples
+
+* `++Liste^2++` : Élève au carré chacun des éléments de _Liste_ ;
+* `++2^Liste++` : Crée une liste des puissances de 2, avec pour exposant, les éléments de _Liste_ ;
+* `++liste1^liste2++`: Crée une liste de _a^b_, où _a_ et _b_ sont les éléments correspondants de _liste1_ et _liste2_ ;
+* `++sin(Liste)++` : Applique la fonction sinus à chacun des éléments de _Liste_. Des xref:/Fonctions.adoc[fonctions]
+définies par l'utilisateur peuvent aussi être appliquées de la même façon.

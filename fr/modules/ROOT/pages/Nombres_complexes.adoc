@@ -1,0 +1,122 @@
+= Nombres complexes
+:page-en: Complex_Numbers
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Pour travailler avec les nombres complexes dans GeoGebra, vous trouverez le nombre complexe ί
+
+* dans la table de symboles accessible dans le champ de saisie
+* ou en frappant [.kcode]#Alt# + [.kcode]#i#.
+
+*Déclarer des Nombres _Complexes_*
+
+Pour saisir ...
+
+Vous _frappez_...
+
+*`++ 3 + 4 ί++`*
+
+[.kcode]##3##[.kcode]##+##[.kcode]#4# [.kcode]#Alt# + [.kcode]#i#
+
+*`++2ℯ^(ίπ/4)++`*
+
+[.kcode]#2# [.kcode]#Alt# + [.kcode]##e##[.kcode]##^##[.kcode]#(# [.kcode]#Alt# + [.kcode]#i# [.kcode]#Alt# +
+[.kcode]#p# [.kcode]##/##[.kcode]##4## [.kcode]#)#
+
+*`++2exp(ίπ/4)++`*
+
+[.kcode]##2##[.kcode]##e##[.kcode]##x##[.kcode]##p##[.kcode]#(# [.kcode]#Alt# + [.kcode]#i# [.kcode]#Alt# + [.kcode]#p#
+[.kcode]##/##[.kcode]##4## [.kcode]#)#
+
+'''''
+
+Vous pouvez aussi insérer _exp(x)_ par un double _clic_ sur son occurrence dans le tableau
+xref:/Opérateurs_et_fonctions_pré_définies.adoc[Fonctions mathématiques] de la fenêtre *Aide Saisie*. Et remplacer _x_
+par l'expression désirée.
+
+[NOTE]
+====
+
+*Note :* Vous pouvez afficher tout point en tant que nombre complexe dans Algèbre. Ouvrez le
+xref:/Dialogue_Propriétés.adoc[Dialogue Propriétés] du point et choisissez Nombre Complexe dans la liste des formats de
+coordonnées de l'onglet Algèbre.
+
+====
+
+Si la variable i n'a pas encore été définie, elle est reconnue à la saisie de i = (0, 1) ou du nombre complexe 0 + 1i.
+Cela signifie aussi, que vous pourrez ensuite utiliser cette variable i dans les saisies de nombres complexes (par ex. q
+= 3 + 4i), mais pas dans xref:/Calcul_formel.adoc[Calcul formel].
+
+[EXAMPLE]
+====
+
+*Exemples :* Addition et soustraction:
+
+* (2 + 1i) + (1 – 2i) vous retourne le nombre complexe le 3 – 1i.
+* (2 + 1i) - (1 – 2i) vous retourne le nombre complexe 1 + 3i.
+
+====
+
+[EXAMPLE]
+====
+
+*Exemples :* Multiplication et division:
+
+* (2 + 1i) * (1 – 2i) vous retourne le nombre complexe 4 – 3i.
+* (2 + 1i) / (1 – 2i) vous retourne le nombre complexe 0 + 1i.
+
+====
+
+[NOTE]
+====
+
+*Note :* La multiplication classique (2, 1)*(1, -2) vous retourne le produit scalaire de deux vecteurs.
+
+====
+
+GeoGebra reconnaît aussi les expressions mélangeant xref:/Nombres_et_Angles.adoc[réels] et nombres complexes.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* 3 + (4 + 5i) vous retourne le nombre complexe 7 + 5i.
+* 3 - (4 + 5i) vous retourne le nombre complexe -1 - 5i.
+* 3 / (0 + 1i) vous retourne le nombre complexe 0 - 3i.
+* 3 * (1 + 2i) vous retourne le nombre complexe 3 + 6i.
+
+====
+
+Soit stem:[z_\{1}] un nombre complexe, vous pouvez en extraire les composantes par :
+
+[cols=",,",options="header",]
+|===
+| |Commande |Fonction pré-définie
+|Partie réelle |x(stem:[z_\{1}]) |Re(stem:[z_\{1}])
+|Partie imaginaire |y(stem:[z_\{1}]) |Im(stem:[z_\{1}])
+|Module |Longueur(stem:[z_\{1}]) |abs(stem:[z_\{1}])
+|Argument |Angle(stem:[z_\{1}]) |arg(stem:[z_\{1}])
+|conjugué |Symétrie(stem:[z_\{1}],axeX) |conjugué(stem:[z_\{1}])
+|===
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :* *EstComplexe()*
+
+Parfois vous désirez savoir si un nombre est traité en tant que complexe par GeoGebra, des fonctions telles que
+`++x()++` et `++y()++` ne travaillant pas avec des nombres réels.
+
+Et il n'existe pas de commande `++EstComplexe++`, vous pouvez utiliser une petite astuce pour savoir si le nombre
+`++a++` est complexe : `++complexe = EstDéfini(sqrt(a) + sqrt(-a)) ∧ (a ≠ 0)++`.
+
+====
+
+[NOTE]
+====
+
+*Note :* Des nombres complexes à partie imaginaire nulle, comme `++a = 2 + 0i++`, vérifient aussi ce test. Si vous
+désirez simplement savoir si la partie imaginaire d'un nombre complexe `++a++` n'est pas nulle, vous pouvez utilisez
+`++y(a) != 0++`.
+
+====

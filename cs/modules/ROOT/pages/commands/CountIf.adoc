@@ -1,0 +1,42 @@
+= Příkaz CountIf
+:page-en: commands/CountIf_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+CountIf [ <Podmínka>, <Seznam> ]
+
+Vypočítá počet prvků ze seznamu, které splňují danou podmínku.
+
+[EXAMPLE]
+====
+
+* `++CountIf[x < 3, {1, 2, 3, 4, 5}]++` dostaneme počet 2.
+* `++CountIf[x < 3, A1:A10]++`, kde _A1:A10_ je rozsah buněk v tabulce, vypočítá počet buněk, jejichž hodnota je menší
+než 3.
+
+====
+
+[NOTE]
+====
+
+Pro seznam čísel můžeme zvolit libovolnou podmínku. Pro seznam objektů je možné využít pouze podmínku ve
+`++x==constant++` nebo `++x!=constant++`.
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Následující text pojednává o vlastnosti, která je podporována pouze v
+/s_index_php?title=En:Release_Notes_GeoGebra_4_2_action=edit_redlink=1.adoc[GeoGebra 4.2 Beta].
+
+'''''
+
+CountIf[ <Condition>, <Variable>, <List> ]::
+  Toto umožňuje flexibilnější zápis, např. pro Body P, Q, R `++CountIf[x(A) < 3, A, {P, Q, R}]++` započítá pouze ty
+  body, jejichž x-ová souřadnice má hodnotu menší než 3. Proměnná A je pro zkoušku postupně nahrazována P, Q a nakonec
+  R.
+
+|===

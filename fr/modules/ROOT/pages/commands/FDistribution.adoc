@@ -1,0 +1,34 @@
+= Commande FDistribution
+:page-en: commands/FDistribution_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+FDistribution( <Degré liberté Numérateur n>, <Degré liberté Dénominateur d>, <Valeur Variable v> )::
+  Calcule la valeur de la fonction cumulée de la loi de Fisher en _v_, i.e. la probabilité _P(X≤v)_ où _X_ est une
+  variable aléatoire suivant une loi de Fisher de paramètres _n, d_.
+  ;FDistribution( <Degré liberté Numérateur n>, <Degré liberté Dénominateur d>, x ) : Crée la fonction densité de
+  probabilité de la http://en.wikipedia.org/wiki/fr:Loi_de_Fisher[loi de Fisher] de paramètres _n, d_.
+
+[NOTE]
+====
+
+*Note :* Retourne la probabilité pour une valeur donnée d'abscisse (ou l'aire sous la courbe de la loi de Fisher, à
+gauche de l'abscisse donnée).
+
+====
+
+FDistribution( <Degré liberté Numérateur n>, <Degré liberté Dénominateur d>, <Valeur Variable v> , <Booléen Cumul> )::
+  Si _Cumul_ est _true_, calcule la valeur de la fonction densité cumulée de probabilité de la loi de Fisher, sinon
+  calcule la valeur de la fonction densité de probabilité de la loi de Fisher.
+
+FDistribution( <Degré liberté Numérateur n>, <Degré liberté Dénominateur d>, x, <Booléen Cumul> )::
+  Si _Cumul_ est _true_, crée la fonction densité cumulée de probabilité de la loi de Fisher, sinon en crée la fonction
+  densité de probabilité.
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/InverseFDistribution.adoc[InverseFDistribution].
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* : Seule la syntaxe suivante serait utilisable :
+
+FDistribution( <Degré liberté Numérateur n>, <Degré liberté Dénominateur d>, x )

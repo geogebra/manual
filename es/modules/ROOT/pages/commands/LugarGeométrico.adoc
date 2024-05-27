@@ -1,0 +1,54 @@
+= Comando LugarGeométrico
+:page-en: commands/Locus_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+LugarGeométrico( <Punto que trazará el Lugar>, <Punto> )::
+  Da por resultado el _lugar geométrico_ del Punto que trazará el lugar, dependiente del _Punto_ indicado.
+
+[NOTE]
+====
+
+En *`++LugarGeométrico(Q, P)++`*, _P_ debe ser un punto sobre un objeto (recta, segmento, circunferencia).
+
+====
+
+LugarGeométrico( <Punto que trazará el Lugar>, <Deslizador> )::
+  Da por resultado el _lugar geométrico_ del Punto , dependiente del _deslizador_ indicado.
+
+LugarGeométrico( <Campo de direcciones>, <Punto> )::
+  Establece el _lugar geométrico_ de la curva acorde al _Campo de direcciones_ en el _punto_ dado.
+
+LugarGeométrico( <f(x, y)>, <Punto> )::
+  Establece el _lugar geométrico_ acorde a la solución - calculada numéricamente - de la ecuación diferencial
+  stem:[\frac\{dy}\{dx}=f(x,y)].
+
+Todo _lugar geométrico_ aparece como xref:/Objetos_libres_dependientes_y_auxiliares.adoc[objeto auxiliar]. Además del
+crearse con el comando Lugar geométrico, pueden obtenerse como resultado de otros
+xref:/commands/Comandos_de_Matemática_Discreta.adoc[comandos de Matemática Discreta] y el
+xref:/commands/ResuelveEDO.adoc[Comando ResuelveEDO] Siendo un xref:/Objetos_Geométricos.adoc[_recorrido_] pueden
+utilizarse junto con otros comandos asociados a los recorridos como por ejemplo el xref:/commands/Punto.adoc[Comando
+Punto]. Sus propiedades dependen de cómo hayan sido obtenidos, ver por ejemplo, los comandos
+xref:/commands/Perímetro.adoc[Perímetro] y xref:/commands/Primero.adoc[Primero].
+
+[NOTE]
+====
+
+Ver también las herramientas: xref:/tools/Lugar_Geométrico.adoc[image:23px-Mode_locus.svg.png[Mode
+locus.svg,width=23,height=23]] xref:/tools/Lugar_Geométrico.adoc[Lugar Geométrico].
+
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Alerta,title="Alerta",width=18,height=18] *Alerta*: |El _lugar geométrico_ queda indefinido
+cuando el punto dependiente deriva del comando xref:/commands/Punto.adoc[Punto] con dos parámetros o del comando
+xref:/commands/ParámetroRecorrido.adoc[ParámetroRecorrido].
+|===

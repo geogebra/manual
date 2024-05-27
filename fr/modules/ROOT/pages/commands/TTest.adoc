@@ -1,0 +1,17 @@
+= Commande TTest
+:page-en: commands/TTest_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+TTest( <Liste Données Échantillon>, <Moyenne attendue>, <Valeur critique> )::
+  Réalise un t-test de la moyenne d'une population à partir de la donnée d'un échantillon. _Moyenne attendue_ est la
+  moyenne attendue pour la population dans le cas de l'hypothèse nulle. _Valeur critique_ prend une des trois options :
+  "<", ">" , "≠". Ceci spécifie l'hypothèse alternative comme suit :
+  "<" = moyenne population < _Moyenne attendue_
+  ">" = moyenne population > _Moyenne attendue_
+  "≠" = moyenne population ≠ _Moyenne attendue_
+
+Le résultat est retourné sous la forme d'une liste : \{valeur P, test T}.
+
+variante :
+
+TTest(<Moyenne Échantillon >, <Écart-Type Échantillon>, <Taille Échantillon>, <Moyenne attendue>, <Valeur critique>)

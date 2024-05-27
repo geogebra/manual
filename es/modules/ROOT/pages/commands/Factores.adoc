@@ -1,0 +1,67 @@
+= Comando Factores
+:page-en: commands/Factors_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+Factores( <Polinomio> )::
+  Da por resultado la lista de listas \{ _factor_, _exponente_} tal que el producto de todos estos factores elevados a
+  los correspondientes exponentes es igual al polinomio dado. Los factores se ordenan por su grado, en forma creciente.
+
+Factores( <Número> )
+
+Da por resultado una matriz del tipo stem:[\left( \begin\{array}\{} primo_1 & exponente_1 \\ primo_2 & exponente_2
+\\primo_3 & exponente_3 \\ \end\{array} \right)] tal que el producto de todos estos números primos elevados a los
+correspondientes exponentes da por resultado el número indicado. Los números primos se disponen en orden ascendente.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Factores[1024]++`* da por resultado _(2, 10)_ porque __1024=2^10^__**`++Factores[42]++`** da _\{\{2, 1},
+\{3, 1}, \{7, 1}}_ que equivale a stem:[\left( \begin\{array}\{} 2 & 1 \\ 3 & 1 \\7 & 1 \\ \end\{array} \right)]Esto se
+corresponde con que *_42 = 2^1^ * 3^1^ * 7^1^_*
+
+====
+
+[EXAMPLE]
+====
+
+*`++Factores[x^8 - 1]++`* da por resultado _\{\{x^4 + 1, 1}, \{x^2 + 1, 1}, \{x + 1, 1}, \{x - 1, 1}}_
+
+====
+
+[NOTE]
+====
+
+No todos los factores serán irreducibles en los reales.
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/FactoresPrimos.adoc[FactoresPrimos] y xref:/commands/Factoriza.adoc[Factoriza].
+
+====
+
+[NOTE]
+====
+
+En la image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[Vista CAS] las
+variables indeterminadas pueden utilizarse como entradas y los resultados serán matrices.
+
+[EXAMPLE]
+====
+
+`++Factores[a^8 - 1]++` da por resultado stem:[\left( \begin\{array}\{} a - 1 & 1 \\ a +1 & 1 \\a^2 + 1& 1 \\a^4 + 1& 1
+\\ \end\{array} \right)].
+
+====
+
+====

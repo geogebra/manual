@@ -1,0 +1,62 @@
+= Textes
+:page-en: Texts
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Les objets *textes* peuvent être créés en utilisant la commande xref:/commands/Texte.adoc[Texte] ou l'outil
+/Fichier:Mode_text_svg.adoc[image:32px-Mode_text.svg.png[Mode text.svg,width=32,height=32]]
+xref:/tools/Texte.adoc[Texte].
+
+Ou en tirant un objet de la fenêtre Algèbre dans la fenêtre Graphique.
+
+Ou encore en validant un texte _statique_ entre guillemets directement dans xref:/Saisie.adoc[Saisie].
+
+Un texte statique::
+  ne doit dépendre d’un quelconque objet mathématique et n’est en général pas affecté par des modifications de la
+  construction
+
+Un texte dynamique::
+  contient des valeurs d’objets qui vont être actualisées à la suite de toute modification de ces objets.
+
+Un texte mixte::
+  est un mélange de texte statique et de texte dynamique.
+
+Afin de créer un texte dynamique vous pouvez entrer la partie statique du texte au clavier (par ex., Point A =). Ensuite
+cliquez sur l’objet dont vous voulez l’affichage de la valeur dans le texte.
+
+[NOTE]
+====
+
+*Note :* GeoGebra ajoute automatiquement la syntaxe ("Point A = " + A ) pour créer votre texte mixte : guillemets autour
+de la partie statique et un symbole « + » pour relier les différentes parties du texte.
+
+====
+
+[cols=",",options="header",]
+|===
+|Saisie |Description
+|Ceci est un texte statique |Texte statique.
+|A |Texte dynamique (si le point A existe).
+|"Point A = " + A |texte mixte en 2 parties utilisant la donnée du point A.
+|"a = " + a + "cm" |texte mixte en 3 parties utilisant la valeur du nombre (longueur du segment) a
+|===
+
+[NOTE]
+====
+
+*Note :* Si un objet nommé xx existe déjà et que vous essayez de créer un texte statique utilisant ce nom d’objet, vous
+devez l’entrer entre guillemets ("xx"). Sinon, GeoGebra va créer automatiquement un texte dynamique vous donnant la
+valeur de l’objet xx à la place de son nom. Cependant, vous pouvez taper tout texte n’utilisant pas de nom d’objets
+existants sans guillemets.
+
+====
+
+[NOTE]
+====
+
+*Note :* À l’intérieur d’un texte mixte, la partie statique doit être entre guillemets. Les différentes parties du texte
+(par ex., parties statique et dynamique) doivent être reliées par le symbole plus (+). Depuis la 4.0, le symbole (+)
+n'est plus obligatoire.
+
+====
+
+Les objets *textes* peuvent aussi utiliser xref:/LaTeX.adoc[LaTeX] pour l'écriture des formules scientifiques.

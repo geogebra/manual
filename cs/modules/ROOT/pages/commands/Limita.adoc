@@ -1,0 +1,58 @@
+= Příkaz Limita
+:page-en: commands/Limit_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Limita( <Funkce f>, <Hodnota t> )::
+  Vypočítá http://en.wikipedia.org/wiki/cs:Limita_funkce[limitu funkce] _f_ pro hodnotu hlavní proměnné blížící se k
+  _t_.
+
+[EXAMPLE]
+====
+
+`++Limita[(x^2+x)/ x^2, +∞]++` dává výsledek _1_ .
+
+====
+
+[NOTE]
+====
+
+V GeoGebře nelze spočítat všechny limity. V případě, že se limitu nepodaří spočítat, bude výsledkem _nedefinovaný_
+objekt, stejně jako v případě, že _nedefinovaný_ je správný výsledek výpočtu limity.
+
+====
+
+== CAS pohled
+
+Limita( <Výraz f>, <Hodnota t>)::
+  Vypočítá limitu funkce _f_ pro pro hodnotu hlavní proměnné blížící se k _t_.
+Limita( <Výraz f>, <Proměnná v>, <Hodnota t> )::
+  Vypočítá limitu funkce _f_ pro hodotu proměnné _v_ blížící se k _t_
+
+[EXAMPLE]
+====
+
+`++Limita[a sin(v)/v, v, 0]++` dává výsledek _a_ .
+
+====
+
+[EXAMPLE]
+====
+
+`++Limita[a sin(x)/x, 0]++` dává výsledek _a_ .
+
+====
+
+[NOTE]
+====
+
+Viz také příkazy xref:/commands/Asymptota.adoc[Asymptota], xref:/commands/LimitaZprava.adoc[LimitaZprava] a
+xref:/commands/LimitaZleva.adoc[LimitaZleva].
+
+====
+
+[NOTE]
+====
+
+/s_index_php?title=En:Manual:Limit_Command_action=edit_redlink=1.adoc[Limit Command]
+
+====

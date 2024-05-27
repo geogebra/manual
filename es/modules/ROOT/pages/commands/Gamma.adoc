@@ -1,0 +1,21 @@
+= Comando Gamma
+:page-en: commands/Gamma_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Gamma( <Número α>, <Número β>, x )::
+  Crea la función de distribución acumulada de la http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_Gamma[distribución
+  Gamma] con parámetros _α, β_.
+Gamma( <Número α>, <Número β>, x, <Acumulada (true/false)> )::
+  Si _Acumulada_ es verdadero, crea la función de distribución acumulada de la distribución Gamma, de lo contrario crea
+  su función de densidad de probabilidad.
+Gamma( <Número α>, <Número β>, <Valor variable __v__> )::
+  Evalúa la función de distribución acumulada de la distribución Gamma en el valor variable _v_, por ejemplo, la
+  probabilidad _P(X ≤ v)_ donde _X_ es una variable aleatoria con distribución Gamma definida por los parámetros _α, β_.
+
+[NOTE]
+====
+
+Devuelve la probabilidad para un valor dado de _x_ (o el área bajo la curva de la distribución Gamma a la izquierda del
+_x_ dado).
+
+====

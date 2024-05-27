@@ -1,0 +1,107 @@
+= Comando Si
+:page-en: commands/If_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Si( <Condición>, <Entonces> )::
+  Da por resultado una copia del objeto _Entonces_ si la "Condición" se verifica, y un objeto indefinido, si la
+  condición no se verifica.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* Sea _n_ = 3. `++Si(n==3, x + y = 4)++` da por resultado la recta _x_ + _y_ = 4, ya que la condición sobre el número
+_n_ se verifica.
+* Sea _n_ = 4. `++Si(n==3, x + y = 4)++` crea un objeto _indefinido_, porque la condición sobre el número _n_ no se
+verifica .
+
+====
+
+Si( <Condición>, <Entonces>, <Si no> )::
+  Da por resultado una copia del objeto _Entonces_ si la "Condición" se verifica, y una copia del objeto _Si no_ si la
+  condición no se verifica. *Ambos objetos _deben_ ser del mismo tipo.*
+Si( <Condición 1>, <Entonces 1>, <Condición 2>, <Entonces 2>, ... , <Si no (opcional)> )::
+  Da por resultado una copia del objeto _Entonces 1_ si la "Condición 1" se verifica, "Entonces 2" si la segunda
+  condición se verifica, etc. Si ninguna de las condiciones se verifica, entonces da por resultado el objeto indicado en
+  "Si no". Si este último parámetro no se completa, el comando devuelve un objeto indefinido.
+
+[EXAMPLE]
+====
+
+`++Si(a ≟ 1, "Matías", a ≟ 2,"Juan", a ≟ 3, "Viviana", "Alejandro")++` Cuando __a__=1 da por resultado el texto
+"Matías", para __a__=2' da por resultado "Juan", para __a__=3, "Viviana" y para todos los demás valores de _a_ da por
+resultado "Alejandro".
+
+====
+
+[EXAMPLE]
+====
+
+Sea _n_ un número. `++Si(n==3, x + y = 4, x - y = 4)++` da por resultado la recta _x_ + _y_ = 4 cuando _n_ = 3, y la
+recta _x_ - _y_ = 4 para todo _n_ distinto de 3.
+
+====
+
+== Funciones definidas por tramos
+
+El comando *Si* puede ser utilizado para crear funciones definidas por tramos. Tales funciones pueden ser utilizadas
+como argumentos en cualquier otro comando que acepte funciones, tales como xref:/commands/Derivada.adoc[Derivada],
+xref:/commands/Integral.adoc[Integral], y xref:/commands/Interseca.adoc[Interseca].
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++f(x) = Si(x < 3, sen(x), x^2)++` da por resultado una función definida por tramos que asigna _sen(x)_ para _x < 3_
+y _x^2^_ para _x ≥ 3_.
+* `++f(x) = Si(0 <= x <= 3, sen(x))++` da por resultado una función que asigna _sen(x)_ para x entre 0 y 3 (y no está
+definida para otros valores).
+
+[NOTE]
+====
+
+Una sintáxis más corta para este último caso es `++f(x) = sen(x), 0 <= x <= 3++`
+
+====
+
+* `++f(x) =Si(x<-1,x²,-1<=x<=1,1,-x²+2)++` da por resultado la función definida por tramos stem:[f(x) =
+\left\\{\begin\{matrix}\{} x^\{2}& : &x < -1\\ 1& :& -1 ≤ x ≤ 1\\ -x^\{2} + 2& : &\text\{en caso contrario}
+\end\{matrix}\right ].
+
+====
+
+[NOTE]
+====
+
+*Notas:*
+
+* La derivada de _Si(condición, f(x), g(x))_ da por resultado _Si(condición, f'(x), g'(x))_. No realiza ningún tipo de
+evaluación en los puntos de cambio de definición.
+* Ver la sección: xref:/Valores_Lógicos.adoc[Valores Lógicos] para ver los símbolos que se utilizan en proposiciones
+condicionales.
+
+====
+
+== El comando Si en guiones
+
+El comando *Si* puede ser utilizado en guiones (scripts) para desencadenar acciones bajo ciertas condiciones.
+
+[EXAMPLE]
+====
+
+Sea _n_ un número, y _A_ un punto. El comando `++Si(Resto(n, 7) == 0, Coordenadas(A, n, 0), Coordenadas(A, n, 1))++`
+modifica las coordenadas del punto _A_ de acuerdo a la condición dada. En este caso sería más sencillo utilizar
+`++ Coordenadas(A, n, Si(Resto(n, 7) == 0,0,1))++`.
+
+====
+
+[NOTE]
+====
+
+Los argumentos de *Si* deben ser Objetos o xref:/commands/Comandos_de_Guiones_Scripting.adoc[Comandos de Guiones -
+Scripting], no asignaciones. La sintaxis `++b = Si(a > 1, 2, 3)++` es correcta, pero _b = 2_ o _b = 3_ no serían
+aceptado como parámetros del comando *Si*.
+
+====

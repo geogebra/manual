@@ -1,0 +1,125 @@
+= Příkaz Prusecik
+:page-en: commands/Intersect_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Prusecik( <Objekt>, <Objekt> )::
+  Vypočítá a vvytvoří všechny průsečíky dvou zadaných geometrických objektů.
+
+[EXAMPLE]
+====
+
+* Nechť je `++a: -3x + 7y = -10++` přímka a `++c: x^2 + 2y^2 = 8++` je elipsa. `++Prusecik[a, c]++` určí a vytvoří
+průsečíky _E_ = (-1.02, -1,87) a _F_ = (2.81, -0.22) přímky a elipsy.
+* `++Prusecik[y = x + 3, Krivka[t, 2t, t, 0, 10]]++` dává __A__=(3,6).
+* `++Prusecik[Krivka[2s, 5s, s,-10, 10 ], Krivka[t, 2t, t, -10, 10]]++` dává __A__=(0,0).
+
+====
+
+Prusecik( <Objekt>, <Objekt>, <Pořadí průsečíku> )::
+  Vypočítá a vytvoří n-tý průsečík dvou zadaných geometrických objektů.
+
+[EXAMPLE]
+====
+
+Nechť je `++a(x) = x^3 + x^2 - x++` funkce a `++b: -3x + 5y = 4++` je přímka. `++Prusecik[a, b, 2]++` vytvoří průsečík
+_C_ = (-0.43, 0.54) grafu funkce a přímky.
+
+====
+
+Prusecik( <Objekt>, <Objekt>, <Počáteční bod> )::
+  Určí a vytvoří průsečík dvou zadaných geometrických objektů vypočítaný Newtonovou metodou se zadaným počátečním bodem.
+
+[EXAMPLE]
+====
+
+Nechť je `++a(x) = x^3 + x^2 - x++` funkce, `++b: -3x + 5y = 4++` je přímka, a _C_ = (0, 0.8) je počáteční bod.
+`++Prusecik[a, b, C]++` určí a vytvoří průsečík _D_ = (-0.43, 0.54) grafu funkce a přímky s využitím Newtonovy
+iterativní metody.
+
+====
+
+Prusecik( <Funkce>, <Funkce>, <Počáteční hodnota x>, <Koncová hodnota x> )::
+  Vypočítá a vytvoří všechny průsečíky dvou zadaných funkcí na intervalu určeném počáteční a koncovou hodnotou x.
+
+[EXAMPLE]
+====
+
+Nechť jsou `++f(x) = x^3 + x^2 - x++` a `++g(x) = 4 / 5 + 3 / 5 x++` dvě funkce. `++Prusecik[ f, g, -1, 2 ]++` určí
+průsečíky _A_ = (-0.43, 0.54) a _B_ = (1.1, 1.46) grafů funkcí _f_ a _g_ na intervalu stem:[\langle]-1, 2stem:[\rangle].
+
+====
+
+Prusecik( <Křivka 1>, <Křivka 2>, <Parametr 1>, <Parametr 2> )::
+  Najde a vytvoří jeden průsečík daných křivek. Příkaz využívá iterativní metodu s počátkem v zadaných parametrech.
+
+[EXAMPLE]
+====
+
+Nechť jsou dány křivky `++a = Krivka[cos(t), sin(t), t, 0, π]++` a `++b = Krivka[cos(t) + 1, sin(t), t, 0, π]++`.
+`++Prusecik[a, b, 0, 2]++` určí průsečík křivek _A = (0.5, 0.87)_.
+
+====
+
+== CAS syntaxe
+
+Prusecik( <Funkce>, <Funkce> )::
+  Vytvoří seznam obsahující průsečíky grafů dvou funkcí.
+
+[EXAMPLE]
+====
+
+Nechť jsou `++f(x):= x^3 + x^2 - x++` a `++g(x):= x++` dvě funkce. `++Prusecik[ f(x), g(x) ]++` dává seznam průsečíků:
+_\{(1, 1), (0, 0), (-2, -2)}_ grafů funkcí _f_ a _g_.
+
+====
+
+[NOTE]
+====
+
+Viz též /Soubor:Tool_Intersect_Two_Objects_gif.adoc[image:Tool_Intersect_Two_Objects.gif[Tool Intersect Two
+Objects.gif,width=32,height=32]] xref:/tools/Průsečíky_dvou_objektů.adoc[Průsečíky Dvou Objektů].
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Následující text pojednává o vlastnosti, která je podporována pouze v
+/s_index_php?title=En:Release_Notes_GeoGebra_5_0_action=edit_redlink=1.adoc[GeoGebra 5.0 Beta].
+
+'''''
+
+[NOTE]
+====
+
+Počínaje verzí 5.0 pracuje tento příkaz také s 3D objekty.
+
+====
+
+Prusecik( <Objekt>, <Objekt> )::
+
+[EXAMPLE]
+====
+
+* `++Prusecik[ <Přímka> , <Objekt> ]++` vytvoří průsečík(y) přímky a roviny, úsečky, mnohoúhelníku, kuželosečky, atd.
+* `++Prusecik[ <Rovina> , <Objekt> ]++` vytvoří průsečík(y) roviny a úsečky, mnohoúhelníku, kuželosečky, atd.
+* `++Prusecik[ <Kuželosečka>, <Kuželosečka> ]++` vytvoří průsečík(y) dvou kuželoseček.
+* `++Prusecik[ <Rovina>, <Rovina> ]++` vytvoří průsečnici dvou rovin.
+* `++Prusecik[ <Rovina>, <Mnohostěn> ]++` vytvoří průnikový mnohoúhelník roviny a mnohostěnu.
+* `++Prusecik[ <Koule>, <Koule> ]++` vytvoří průnikovou kružnici dvou kulových ploch.
+* `++Prusecik[ <Rovina>, <Kvadrika> ]++` vytvoří průnikovou kuželosečku roviny a kvadriky (koule, kužel, válec, ...)
+
+====
+
+[NOTE]
+====
+
+Viz také příkazy /s_index_php?title=En:IntersectConic_Command_action=edit_redlink=1.adoc[IntersectConic] a
+/s_index_php?title=En:IntersectPath_Command_action=edit_redlink=1.adoc[IntersectPath] .
+
+====
+
+|===

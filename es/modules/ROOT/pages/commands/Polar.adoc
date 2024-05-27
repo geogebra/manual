@@ -1,0 +1,32 @@
+= Comando Polar
+:page-en: commands/Polar_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Polar( <Punto>, <Cónica> )::
+  Crea la recta polar en el punto señalado, respecto a la cónica.
+
+[EXAMPLE]
+====
+
+`++Polar((0,2), y = x^2 - 3x + 5)++` crea la recta 1.5__x__ + 0.5__y__ = 4
+
+====
+
+[NOTE]
+====
+
+Ver también la herramienta xref:/tools/Polar_o_Conjugado.adoc[image:24px-Mode_polardiameter.svg.png[Mode
+polardiameter.svg,width=24,height=24]] xref:/tools/Polar_o_Conjugado.adoc[Polar o Conjugado].
+
+====
+
+y a la inversa, crea el polo de la recta dada con respecto a la cónica:
+
+Polar(<Recta>, <Cónica>)::
+
+[EXAMPLE]
+====
+
+`++Polar(1.5x+0.5y=4, y = x^2 - 3x + 59)++` crea el punto _(0, 2)_
+
+====

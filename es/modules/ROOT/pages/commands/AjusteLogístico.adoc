@@ -1,0 +1,28 @@
+= Comando AjusteLogístico
+:page-en: commands/FitLogistic_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+AjusteLogístico( <Lista de Puntos> )::
+  Calcula la curva de regresión de la forma a/(1 + b e^(-kx)).
+
+[EXAMPLE]
+====
+
+`++AjusteLogístico({(-6, 2), (0, 2), (3, 4), (3.4, 8)})++` da por resultado stem:[ \frac\{1.98}\{1 - 0.03 e^\{1x}}].
+
+====
+
+[NOTE]
+====
+
+* El primer y el último de los puntos deberían estar bastante cerca de la curva. La lista debería contener al menos tres
+puntos, preferentemente más.
+* Ver también xref:/commands/Ajusta.adoc[Ajusta], xref:/commands/AjusteExp.adoc[AjusteExp],
+xref:/commands/AjusteBaseExp.adoc[AjusteBaseExp], xref:/commands/AjusteLineal.adoc[AjusteLineal],
+xref:/commands/AjusteRectaX.adoc[AjusteRectaX], xref:/commands/AjusteLog.adoc[AjusteLog],
+xref:/commands/AjustePolinómico.adoc[AjustePolinómico], xref:/commands/AjustePotencia.adoc[AjustePotencia] y
+xref:/commands/AjusteSeno.adoc[AjusteSeno].
+* Si trabajas con números grandes o pequeños, deberías considerar normalizarlos para obtener un resultado más preciso.
+Ver xref:/commands/Normaliza.adoc[Comando Normaliza].
+
+====

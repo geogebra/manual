@@ -1,0 +1,69 @@
+= Comando IntervaloMediaZ
+:page-en: commands/ZMeanEstimate_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+IntervaloMediaZ( <Lista Datos de Muestra>, <σ>, <Nivel> )::
+  Calcula el http://es.wikipedia.org/wiki/Intervalo_de_confianza[intervalo de confianza] Z estimado a partir de los
+  datos de la nuestra: la media de población, su
+  http://en.wikipedia.org/wiki/es:Desviaci%C3%B3n_est%C3%A1ndar[desviación estándar σ] y el _Nivel_ de confianza.
+  σ es el valor de la desviación estándar:
+  σ~Desviación Estándar de Población~[.small]##
+
+[.small]##
+
+[.small]##
+
+[NOTE]
+====
+
+El resultado se expresa como lista de formato *`++{límiteinferior, límitesuperiorde confianza}++`*
+
+====
+
+[EXAMPLE]
+====
+
+Dada una muestra de datos *`++l1 = {1, 4, 5, 4, 1, 3, 4, 2}++`*, con decimales según
+xref:/Menú_de_Opciones.adoc[_redondeo_] ...
+
+* la http://en.wikipedia.org/wiki/es:Desviaci%C3%B3n_est%C3%A1ndar[desviación estándar] es
+`++σ1 = 1.41++`^[.small]#xref:/Menú_de_Opciones.adoc[_redondeo_] a 2 decimales#^ o stem:[\sqrt\{2}] en la
+xref:/Vista_CAS.adoc[Vista CAS])
+* el nivel de confianza es 0.75
+* `++IntervaloMediaZ[l_1, σ_1, 0.75]++` da la xref:/Listas.adoc[lista] _\{2.425, 3.575}_.
+
+====
+
+IntervaloMediaZ( <Muestra Media>, <σ>, <Tamaño Muestra>, <Nivel> )::
+  Calcula el intervalo Z de confianza estimado de la media de la población empleando la muestrra estadística, la
+  http://en.wikipedia.org/wiki/es:Desviaci%C3%B3n_est%C3%A1ndar[desviación estándar] *_σ_* y el _Nivel_ de confianza.
+
+  '''''
+
+[EXAMPLE]
+====
+
+*`++IntervaloMediaZ[5,sqrt(2),130,1/3]++`*, con decimales según xref:/Menú_de_Opciones.adoc[_redondeo_], da _\{4.95,
+5.05}_
+
+====
+
+[NOTE]
+====
+
+En sendas variantes, el resultado se lista presentando el límite inferior de confianza y el superior
+sucesivo:\{_límite~inferior~de confianza~~_, _límite~superior~de confianza~~_}
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+En esta xref:/Vista_CAS.adoc[vista] se admite la misma sintaxis y operatoria.

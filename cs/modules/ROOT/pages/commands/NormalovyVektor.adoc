@@ -1,0 +1,44 @@
+= Příkaz NormalovyVektor
+:page-en: commands/PerpendicularVector_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+NormalovyVektor( <Primka> )::
+  Souřadnicemi určí a v grafu zobrazí normálový vektor zadané přímky.
+NormalovyVektor( <Číslo> )::
+  Souřadnicemi určí a v grafu zobrazí vektor kolmý na zadanou úsečku a mající stejnou délku (Číslo), jako tato úsečka.
+NormalovyVektor( <Vektor> )::
+  Souřadnicemi určí a v grafu zobrazí vektor kolmý na vektor zadaný.
+
+[NOTE]
+====
+
+Souřadnice vektoru kolmého na vektor _(a, b)_ jsou _(-b, a)_.
+
+====
+
+[NOTE]
+====
+
+Normálový vektor přímky _ax + by = c_ je vektor _(a, b)_.
+
+====
+
+== CAS pohled
+
+NormalovyVektor( <Vektor> )::
+  Určí vektor kolmý na vektor zadaný.
+
+[EXAMPLE]
+====
+
+* `++NormalovyVektor[(3, 2)]++` vytvoří vektor _\{-2, 3}_.
+* `++NormalovyVektor[(a, b)]++` vytvoří vektor _\{-b, a}_.
+
+====
+
+[NOTE]
+====
+
+Viz též xref:/commands/JednotkovyNormVektor.adoc[Příkaz_JednotkovyNormVektor].
+
+====

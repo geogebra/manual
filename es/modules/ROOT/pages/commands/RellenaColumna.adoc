@@ -1,0 +1,90 @@
+= Comando RellenaColumna
+:page-en: commands/FillColumn_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+*RellenaColumna*[ <Número de Columna>, <Lista> ]::
+  Copia los valores que componen la lista a partir de la primera celda de la _Columna_.La _Columna_ queda indicada por
+  su número (1 para A, 2 para B, etc.).Las celdas resultantes son objetos libres.
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Se reescribe el eventual contenido previo de las
+celdas sin advertencia alguna.
+
+====
+
+[NOTE]
+====
+
+Las celdas son independientes incluso de la _Lista_.
+
+====
+
+[EXAMPLE]
+====
+
+*`++RellenaColumna[1, Secuencia[0 + 0.1 k, k, 0, 21]]++`* completa las columnas adecuadamente y permite asegurar que el
+contenido de, por ejemplo, *`++A21++`* sea efectiva y _redondamente_ *2* en lugar de _2.000000000000001_ como se aprecia
+con precisión de 15 decimales cuando se emplea la técnica usual de _rellenado_ en la xref:/Hoja_de_Cálculo.adoc[Hoja de
+Cálculo].
+
+'''''
+
+Este _rellenado_ implica recuadrar y _arrastrar_ en maniobra vertical y descendente el contenido de *`++A1++`* y
+*`++A2++`*, en que previamente se anotara _0_ u _0.1_ respectivamente.
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Como puede apreciarse, el _rellenado_ involucra un
+problema propio de cualquier xref:/Hoja_de_Cálculo.adoc[Hoja de Cálculo] que, aunque no suele ponerse en evidencia,
+requiere una técnica de superación que conviene tener a mano.
+
+====
+
+'''''
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Se puede arrastrar/depositar directamente una lista
+desde la xref:/Vista_Algebraica.adoc[Vista Algebraica] a la xref:/Hoja_de_Cálculo.adoc[Hoja de Cálculo].En simultáneo,
+manteniendo pulsada la tecla [.kcode]#Shift# ([.kcode]#May# en algunos teclados) se puede decidir sobre las opciones que
+ofrece el correspondiente cuadro de diálogo (Objetos libres/dependientes -- Transpuestas).
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/RellenaCeldas.adoc[RellenaCeldas] y
+xref:/commands/RellenaFila.adoc[RellenaFila].
+
+====
+
+== [#Registros_Múltiples_para_Analizar_Funciones]####[#Registros_M.C3.BAltiples_para_Analizar_Funciones]##Registros Múltiples para Analizar Funciones##
+
+'''''
+
+[EXAMPLE]
+====
+
+La figura muestra consecuencias de un _relleno_ adecuado de columnas.
+
+====
+
+/Archivo:Asíntotas_IIII%_gif.adoc[image:As%C3%ADntotas_IIII%25.gif[Asíntotas IIII%.gif,width=522,height=535]]
+
+'''''
+
+[.small]##
+
+[.small]#Como se aprecia _animadamente_ en la figura, cuando se trata de poner en evidencia una discontinuidad, el
+_relleno_ de la tabla asociada a la xref:/Hoja_de_Cálculo.adoc[Hoja de Cálculo] con los valores correspondientes a la
+función $\mathbf\{\frac\{1}\{x - \Delta_s}\; }$ en que el deslizador hace los cambios del disminuendo en el denominador,
+puede hacer más palpable cuando ese registro complemente al gráfico.Los cambios aparecen en la gráfica de la función, en
+la presentación de sus xref:/commands/Asíntota.adoc[asíntotas] así como en el texto de la formulación.Aún así, el *∞* en
+la fila de la tabla suma un registro de una contundencia clara al respecto.#

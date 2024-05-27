@@ -1,0 +1,42 @@
+= Commande Combinaison
+:page-en: commands/BinomialCoefficient_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Cbin(<Nombre n>,<Nombre p>)::
+  Calcule le nombre de combinaisons sans répétition de p objets choisis parmi n, stem:[C_n^p ] = stem:[
+  \begin\{pmatrix}n \\ p \end\{pmatrix} ].
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Cbin(5, 3)++` retourne _10_.
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Penser à définir une affectation pour créer le nombre.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++nb:=Cbin(10, 2)++` crée le nombre _nb_ de valeur _10_.
+
+====
+
+Avec la possibilité de travailler en littéral
+
+[EXAMPLE]
+====
+
+*Exemples :* Si les variables _n_ et _p_ ne sont pas définies dans GeoGebra`++Cbin(n, p)++` vous retourne la formule
+stem:[\frac\{n!}\{(n-p)! \space p!}]`++Cbin(n, 3)++` retourne stem:[\frac\{n^\{3} - 3 n^\{2} + 2 n}\{6}].
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/Arrangement.adoc[Arrangement].

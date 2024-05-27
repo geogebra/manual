@@ -1,0 +1,45 @@
+= Příkaz Stupen
+:page-en: commands/Degree_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Stupen( <Polynom> )::
+  Udává http://en.wikipedia.org/wiki/cs:Stupe%C5%88_polynomu[stupeň_polynomu] (v hlavní proměnné).
+
+[EXAMPLE]
+====
+
+Výsledkem příkazu `++Stupen[x^4 + 2 x^2]++` je _4_.
+
+====
+
+== CAS pohled
+
+Stupen( <Polynom> )::
+  Udává http://en.wikipedia.org/wiki/cs:Stupe%C5%88_polynomu[stupeň_polynomu] (v hlavní proměnné).
+
+[EXAMPLE]
+====
+
+* Výsledkem příkazu `++Stupen[x^4 + 2 x^2]++` je _4_,
+* Výsledkem příkazu `++Stupen[x^6 + x y^3 + 2 x^2 - y^3]++` je _6_.
+* Výsledkem příkazu `++Stupen[x^6 y^3 + 2 x^2 y^3]++` je _9_.
+
+====
+
+Stupen( <Polynom>, <Promenna> )::
+  Udává stupeň polynomu v zadané proměnné.
+
+[EXAMPLE]
+====
+
+* Výsledkem příkazu `++Stupen[x^4 y^3 + 2 x^2 y^3, x]++` je _4_,
+* Výsledkem příkazu `++Stupen[x^4 y^3 + 2 x^2 y^3, y]++` je _3_.
+
+====
+
+[NOTE]
+====
+
+Anglická verze: /s_index_php?title=En:Manual:Degree_Command_action=edit_redlink=1.adoc[Degree Command]
+
+====

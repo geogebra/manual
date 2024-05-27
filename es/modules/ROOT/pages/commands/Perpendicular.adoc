@@ -1,0 +1,68 @@
+= Comando Perpendicular
+:page-en: commands/PerpendicularLine_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Perpendicular( <Punto>, <Recta> )::
+  Crea la recta perpendicular por el punto a la recta dada.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* Siendo `++c: -3x + 4y = -6++` una recta y `++A = (-2, -3)++` un punto. `++Perpendicular(A, c )++` crea la
+recta _d: -4x - 3y = 17_.
+
+====
+
+Perpendicular( <Punto>, <Segmento> )
+
+Crea la recta perpendicular por el punto al segmento dado.
+
+Perpendicular( <Punto>, <Vector> )
+
+Crea la recta por el punto perpendicular al vector dado.
+
+[EXAMPLE]
+====
+
+Siendo `++u = Vector((5, 3), (1, 1))++` y`++A = (-2, 0)++` un punto. `++Perpendicular(A, u)++` crea la recta _c: 2x + y
+= -4_.
+
+====
+
+[EXAMPLE]
+====
+
+Sea _c_ el segmento determinado por los puntos _A_ = (-3, 3) y _B_ = (0, 1). `++Perpendicular(A, c)++` crea la recta _d:
+-3x + 2y = 15_.
+
+====
+
+[NOTE]
+====
+
+Para los objetos 3D un tercer argumento se agrega a este comando para especificar su comportamiento: si la vista 2D está
+activa, utiliza el plano _z=0_ como tercer argumento, si la vista 3D está activa, en su lugar se utiliza _espacio_. Ver
+más abajo Perpendicular( <Punto>, <Recta>, <Contexto> ) para más detalles.
+
+====
+
+Perpendicular( <Punto>, <Plano> )::
+  Crea una recta perpendicular al plano por el punto dado.
+Perpendicular( <Recta> , <Recta> )::
+  Crea una recta perpendicular a ambas rectas por el punto de intersección de las mismas.
+Perpendicular( <Punto>, <Dirección>, <Dirección> )::
+  Crea una recta perpendicular a las direcciones dadas (pueden ser rectas o vectores) por el punto dado.
+Perpendicular( <Punto>, <Recta>, <Contexto> )::
+  Crea una recta perpendicular a la recta por el punto dependiendo del contexto.
+  * Perpendicular( <Punto>, <Recta>, <Plano> ) crea una recta perpendicular a la recta dada por el punto y paralela al
+  plano.
+  * Perpendicular( <Punto>, <Recta>, Espacio ) crea una recta perpendicular a la recta dada por el punto. Las dos rectas
+  tienen un punto de intersección. Este comando devulve indefinido si el punto pertenece a la recta en 3D.
+
+[NOTE]
+====
+
+Ver también la herramienta image:22px-Mode_linebisector.svg.png[Mode linebisector.svg,width=22,height=22]
+xref:/tools/Perpendicular.adoc[Perpendicular].
+
+====

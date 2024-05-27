@@ -1,0 +1,55 @@
+= Commande ParamètreChemin
+:page-en: commands/PathParameter_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+ParamètreChemin( <Point sur Chemin> )::
+  Retourne le paramètre (i.e. un nombre entre 0 et 1) du point appartenant à un xref:/Objets_géométriques.adoc[chemin].
+
+Dans le tableau suivant stem:[f(x)=\frac\{x}\{1+|x|}] est une fonction utilisée pour lier tout nombre réel à
+l'intervalle [-1,1] et stem:[\phi(X,A,B)=\frac\{\overrightarrow\{AX}\cdot\overrightarrow\{AB}}\{|AB|^2}] est une
+application de la droite (AB) dans les réels qui envoie A sur 0 et B sur 1.
+
+[cols=",",]
+|===
+|Droite (AB) |stem:[\frac\{f(\phi(X,A,B))+1}2]
+
+|Demi-droite [AB) |stem:[f(\phi(X,A,B))]
+
+|Segment [AB] |stem:[\phi(X,A,B)]
+
+|Cercle de centre _C_ et rayon _r_ |Point stem:[X=C+(r\cdot cos(\alpha),r\cdot sin(\alpha))], où stem:[\alpha\in
+]-\pi,\pi]] a pour paramètre sur le chemin stem:[\frac\{\alpha+\pi}\{2\pi}]
+
+|Ellipse de centre _C_ et de demi-axes stem:[\vec\{a}], stem:[\vec\{b}] |Point stem:[X=C+\vec\{a}\cdot
+cos(\alpha)+\vec\{b}\cdot sin(\alpha)], où stem:[\alpha\in ]-\pi,\pi]] a pour paramètre sur le chemin
+stem:[\frac\{\alpha+\pi}\{2\pi}]
+
+|Hyperbole |
+
+|Parabole de sommet V et d'axe de direction stem:[\vec\{v}]. |Le point stem:[V+p\cdot t^2\cdot \vec\{v}+p\cdot t \cdot
+\vec\{v}^\{\perp}] a pour paramètre sur le chemin stem:[\frac\{f(t)+1}2].
+
+|LigneBrisée A~1~...A~n~ |Si X appartient à A~k~A~k+1~, il a pour paramètre sur le chemin
+stem:[\frac\{k-1+\phi(X,A,B)}\{n}]
+
+|Polygone A~1~ ... A~n~ |Si X appartient à A~k~A~k+1~ (avec A~n+1~=A~1~), il a pour paramètre sur le chemin
+stem:[\frac\{k-1+\phi(X,A,B)}\{n+1}]
+
+|Liste de chemins L=\{p~1~,...,p~n~} |Si X appartient à p~k~ et a _t_ pour paramètre sur le chemin par rapport à p~k~ ,
+son paramètre sur le chemin par rapport à _L_ est stem:[\frac\{k-1+t}\{n}]
+
+|Liste de points L=\{A~1~,...,A~n~} |Le paramètre sur le chemin A~k~ est stem:[\frac\{k-1}\{n}]. `++Point(L,t)++`
+retourne stem:[A_\{\lfloor tn\rfloor+1}].
+
+|Lieu |
+
+|Polynôme Implicite |Pas de formule utilisable.
+|===
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :* Il n'est pas interdit d'aller jeter un œil sur
+/Tutoriel:ParamètreChemin_et_Médiatrice.adoc[Tutoriel:ParamètreChemin_et_Médiatrice].
+
+====

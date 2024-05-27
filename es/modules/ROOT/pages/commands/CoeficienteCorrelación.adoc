@@ -1,0 +1,52 @@
+= Comando CoeficienteCorrelación
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+*CoeficienteCorrelación*[ [.small]##<##Lista de Abscisas~x~[.small]##>, <##Lista de Ordenadas~y~[.small]#># ]::
+  Calcula el http://en.wikipedia.org/wiki/es:Coeficiente_de_correlaci%C3%B3n_de_CoeficienteCorrelaci%C3%B3n[coeficiente
+  de correlación] de los puntos dados por las listas de sus coordenadas, la de las abscisas _x_ y la de las ordenadas
+  _y_.
+*CoeficienteCorrelación*[ <Lista de Puntos> ]::
+  Calcula el producto momento del
+  http://en.wikipedia.org/wiki/es:Coeficiente_de_correlaci%C3%B3n_de_CoeficienteCorrelaci%C3%B3n[coeficiente de
+  correlación] usando las coordenadas de los puntos dados en la lista.
+
+  '''''
+
+[EXAMPLE]
+====
+
+`++CoeficienteCorrelación[{ (1, 1), (3, 6), (2, 4), (1, 3), (5, 3), (2, 2)}]++` da por resultado
+__0.36__^[.small]#xref:/Menú_de_Opciones.adoc[_redondeo_] a 2 decimales#^
+
+====
+
+[EXAMPLE]
+====
+
+*`++CoeficienteCorrelación[{1, 3, 2, 1, 5, 2}, {1, 6, 4, 3, 3, 2}]++`* da por resultado
+__0.36__^[.small]#xref:/Menú_de_Opciones.adoc[_redondeo_] a 2 decimales#^
+
+====
+
+== image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] /Categoría:Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[Vista **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+Sin admitir literales, en esta /Categoría:Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[vista] todas las variantes
+descriptas obran del modo ya indicado.
+
+'''''
+
+[EXAMPLE]
+====
+
+*`++CoeficienteCorrelación[Aplana[ { Coeficientes[ PolinomioAleatorio[7, -5, 23]]}], Aplana[{ Coeficientes[ PolinomioAleatorio[ 7, -3, 15]]}]]++`*
+da por resultado un valor como _0.14_ ó _0.05_ u otro acorde a la aleatoriedad de sendos listados de entrada.
+
+====

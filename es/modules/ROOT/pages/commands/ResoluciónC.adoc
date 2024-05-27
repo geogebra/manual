@@ -1,0 +1,72 @@
+= Comando ResoluciónC
+:page-en: commands/CSolve_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[De] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+[.small]#Este xref:/Comandos.adoc[comando], que lista soluciones
+http://en.wikipedia.org/wiki/es:N%C3%BAmeros_reales#Tipos_de_n.C3.BAmeros_reales[[.small]####**ℝ**eales] y/o
+xref:/Números_complejos.adoc[[.small]####**ℂ**omplejas] de sistema/ecuaciones respecto a la variable principal o la(s)
+indicada(s), opera incluso con literales.#
+
+*ResoluciónC*[ <Ecuación> ]::
+  Lista las soluciones
+  http://en.wikipedia.org/wiki/es:N%C3%BAmeros_reales#Tipos_de_n.C3.BAmeros_reales[[.small]####**ℝ**eales] y/o
+  xref:/Números_complejos.adoc[[.small]####**ℂ**omplejas] de la ecuación o sistema respecto a la variable principal
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++ResoluciónC[x^2 =  -sqrt(-1)]++`* da: *\{* x = stem:[\frac\{(1- ί) \sqrt\{2} }\{2}], x =
+-stem:[\frac\{(1- ί) \sqrt\{2} }\{2}]**}`++ResoluciónC[x^2 = -1]++`** da *_\{x =_ ί__, x = -__ί _}_*, soluciones de
+__x^2^ = -1__**`++l_c := ResoluciónC[t^2 - a, t]++`** da, siendo *`++t++`* la variable principal y *`++a++`* un valor de
+*5* de un deslizador *_a_* animadamente cambiante:l_c := *\{* _t_ = ί stem:[\sqrt\{5 }, t = -ί \sqrt\{5 }] *}*
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: De omitirse el segundo miembro de la ecuaciòn, se
+supone igual a *_0_*
+
+====
+
+*ResoluciónC*[ <Ecuación>, <Variable> ]::
+  Lista las soluciones http://en.wikipedia.org/wiki/es:N%C3%BAmeros_reales#Tipos_de_n.C3.BAmeros_reales[**ℝ**eales] y/o
+  xref:/Números_complejos.adoc[[.small]##[.small]####**ℂ**omplejas] de la ecuación respecto de la _variable_ indicada.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++ResoluciónC[a^2 = -1, a]++`* da *_\{a =_ i__, a = -__ i _}_*, soluciones
+xref:/Números_complejos.adoc[[.small]####**ℂ**omplejas] de _a^2^ = -1_.*`++ResoluciónC[v²+4,v]++`* da __\{v = 2 i , v =
+- 2 i}__**`++ResoluciónC[2 x² + x + 7]++`** da por resultado;_\{ x = stem:[\frac\{-(\sqrt\{-55} + 1)}\{4}], x =
+stem:[\frac\{(\sqrt\{-55} - 1)}\{4}]}_ o__\{x = stem:[\frac\{-1 + \sqrt\{55} i }\{4}], x = stem:[\frac\{-1 - \sqrt\{55}
+i }\{4}]}__ expresado en xref:/Números_complejos.adoc[[.small]####**ℂ**omplejos]
+
+====
+
+*ResoluciónC*[ <Lista de Ecuaciones>, <Lista de Variables> ]::
+  Lista las soluciones http://en.wikipedia.org/wiki/es:N%C3%BAmeros_reales#Tipos_de_n.C3.BAmeros_reales[**ℝ**eales] y/o
+  xref:/Números_complejos.adoc[**ℂ**omplejas] del sistema de ecuaciones respecto a variable(s) listada(s).
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++ResoluciónC[{y^2 = x - 1, x = 2 * y - 1}, {x, y}]++`* da__\{\{x = 1 + 2__ i__, y = 1 +__ i__}, \{x = 1 -
+2__ ί__, y = 1 -__ i__}}__, las soluciones xref:/Números_complejos.adoc[[.small]##[.small]####**ℂ**omplejas] de *_y^2^ =
+x_* y de *_x = 2 * y - 1_*
+
+====
+
+[NOTE]
+====
+
+* El símbolo de los xref:/Números_complejos.adoc[[.small]####**ℂ**omplejos], *ί*, se obtiene pulsando [.kcode]#Alt#
++[.kcode]##i##.
+* Revisar también los comandos *xref:/commands/Resuelve.adoc[Resuelve]* y
+*xref:/commands/SolucionesC.adoc[SolucionesC].*
+* Ver además la _pista_ */Pista:Contando_Aleatorias_Resoluciones.adoc[Contando Aleatorias Resoluciones]*
+
+====

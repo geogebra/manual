@@ -1,0 +1,94 @@
+= Commande NRésolEquaDiff
+:page-en: commands/NSolveODE_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+NRésolEquaDiff( <Liste des Dérivées>, <Abscisse initiale>, <Liste des ordonnées initiales>, <Abscisse finale> )::
+  Résout (numériquement) le système d'équations différentielles
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++f'(t, f, g, h) = g ++`
+
+`++g'(t, f, g, h) = h++`
+
+`++h'(t, f, g, h) = -t h + 3t g + 2f + t++`
+
+`++NRésolEquaDiff({f', g', h'}, 0, {1,2,-2}, 10)++`
+
+`++NRésolEquaDiff({f', g', h'}, 0, {1,2,-2}, -5)++` (Résout le système en reculant).
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++x1'(t, x1, x2, x3, x4) = x2++`
+
+`++x2'(t, x1, x2, x3, x4) = x3++`
+
+`++x3'(t, x1, x2, x3, x4) = x4++`
+
+`++x4'(t, x1, x2, x3, x4) = -8x1 + sin(t) x2 - 3x3 + t^2++`
+
+`++x10 = -0.4++`
+
+`++x20 = -0.3++`
+
+`++x30 = 1.8++`
+
+`++x40 = -1.5++`
+
+`++NRésolEquaDiff({x1', x2', x3', x4'}, 0, {x10, x20, x30, x40}, 20)++`
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+*Pendule* :
+
+`++g = 9.8++`
+
+`++l = 2++`
+
+`++a = 5++` (position de départ)
+
+`++b = 3++` (force initiale)
+
+`++y1'(t, y1, y2) = y2++`
+
+`++y2'(t, y1, y2) = (-g) / l sin(y1) ++`
+
+`++NRésolEquaDiff({y1', y2'}, 0, {a, b}, 20) ++`
+
+`++long = Longueur(IntégraleNumérique1) ++`
+
+`++c = Curseur(0, 1, 1 / long, 1, 100, false, true, true, false) ++`
+
+`++x1 = l sin(y(Point(IntégraleNumérique1, c))) ++`
+
+`++y1 = -l cos(y(Point(IntégraleNumérique1, c))) ++`
+
+`++A = (x1, y1) ++`
+
+`++Segment((0, 0), A)++`
+
+`++DémarrerAnimation()++`
+
+====
+
+**
+
+== Pendule
+
+**
+
+[[ggbContainerbb3240baf12d2c6a38f21c82c0887a5b]][.kcode]#Saisie :# Voir aussi les *commandes* :
+xref:/commands/ChampVecteurs.adoc[ChampVecteurs] et xref:/commands/RésolEquaDiff.adoc[RésolEquaDiff] .

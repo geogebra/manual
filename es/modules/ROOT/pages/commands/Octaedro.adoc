@@ -1,0 +1,38 @@
+= Comando Octaedro
+:page-en: commands/Octahedron_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[.small]##
+
+Octaedro( <Punto>, <Punto>, <Dirección> )::
+  Crea un octaedro que tiene por arista al segmento determinado por los dos puntos.
+  Los otros vértices quedan unívocamente determinados por la dirección indicada, la cual debe ser:
+  * un vector, un segmento, una recta o una semirrecta *perpendicular* al segmento determinado por los dos puntos
+  * un polígono o un plano *paralelo* a dicho segmento.
+  El octaedr creado tendrá:
+  * una cara con el segmento como arista en un plano ortogonal al vector/segmento/recta/semirrecta, o
+  * una cara con el segmento como arista en un plano paralelo al polígono/plano.
+
+Octaedro( <Punto>, <Punto>, <Punto>)::
+  Crea un octaedro con los tres puntos de la primera cara. Los puntos deben determinar un triángulo equilátero para que
+  el octaedro quede definido.
+
+Octaedro( <Punto>, <Punto>)::
+  Crea un octaedro con los dos puntos de la primera cara. El tercer punto se crea en forma automática sobre una
+  circunferencia, por lo que el icosaedro puede rotarse alrededor de la primera arista..
+
+[NOTE]
+====
+
+Octaedro(A, B) es una forma abreviada de Octaedro(A, B, C) siendo C = Punto(Circunferencia(PuntoMedio(A, B),
+Distancia(A, B) sqrt(3) / 2, Segmento(A, B))).
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/Cubo.adoc[Cubo], xref:/commands/Tetraedro.adoc[Tetraedro],
+xref:/commands/Icosaedro.adoc[Icosaedro], xref:/commands/Dodecaedro.adoc[Dodecaedro].
+
+====

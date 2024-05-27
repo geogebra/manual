@@ -1,0 +1,77 @@
+= Commande Moyenne
+:page-en: commands/Mean_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+moy(<Liste Nombres>)::
+  Calcule la moyenne arithmétique des nombres de la liste.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++moy(1, 2, 3, 5)++` ou `++moy({1, 2, 3, 5})++` donne _2.75_.
+
+====
+
+moy( <Liste Nombres>, <Liste Effectifs> )::
+  Calcule la moyenne arithmétique pondérée par les effectifs associés des nombres de la liste.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++moy({1,2,3},{3,10,7})++` donne _2.2_.
+
+====
+
+[NOTE]
+====
+
+*Note :* Liste Nombres et Liste Effectifs ont le même nombre d'éléments.
+
+====
+
+moy( <Liste Bornes Classes>, <Liste Effectifs> )::
+  Calcule la moyenne arithmétique des centres des classes pondérée par les effectifs associés.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++moy({10, 20, 30, 40}, {2, 2, 4})++` donne _27.5_.
+
+====
+
+[NOTE]
+====
+
+*Note :* Liste Bornes Classes a 1 élément de plus que Liste Effectifs .
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Avec un meilleur rendu des écritures et la possibilité de travailler en littéral. N'hésitez pas à utiliser les deuxième
+et troisième syntaxes, même si elles n’apparaissent pas dans l'Aide Saisie.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++moy({1, 2, 3, 5})++`donne _stem:[\frac\{11}\{4}]_ ;
+
+`++moy({a, b, c})++` donne _stem:[\frac\{a}\{3}+\frac\{b}\{3}+\frac\{c}\{3}]_.
+
+====
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/MoyenneX.adoc[MoyenneX],
+xref:/commands/MoyenneY.adoc[MoyenneY], et xref:/commands/EcartType.adoc[EcartType] .

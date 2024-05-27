@@ -1,0 +1,47 @@
+= Commande Racines
+:page-en: commands/Roots_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Racines( <Fonction>, <x min>, <x max> )::
+  Calcule les racines de la fonction sur l'intervalle donné. La fonction doit être continue sur cet intervalle. Comme
+  est utilisé un algorithme numérique, il se peut, dans certains cas, que toutes les racines ne soient pas trouvées.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+Soit la fonction _f_ définie par `++f(x) = 3x³ + 3x² - x++`
+
+`++Racines(f, -2, 1)++` crée les trois points _A = (-1.26, 0), B = (0, 0), et C = (0.26, 0)_ (_option 2 décimales_).
+
+====
+
+/Fichier:Tool_tool_png.adoc[image:Tool_tool.png[Tool tool.png,width=32,height=32]] Voir l' *outil* associé :
+/Fichier:Mode_roots_svg.adoc[image:32px-Mode_roots.svg.png[Mode roots.svg,width=32,height=32]]
+xref:/tools/Racines.adoc[Racines].
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/Racine.adoc[Racine].
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Mais la commande seule, ne donnera qu'une racine, pour avoir la liste, placer la commande entre accolades [.kcode]#\{#
+[.kcode]#}#
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+Soit la fonction _f_ définie par `++f(x) = 3x³ + 3x² - x++`
+
+`++Racines(f, -2, 1)++` crée le point _A = (-1.26, 0)_ (_option 2 décimales_)
+
+`++{Racines(f, -2, 1)}++` crée la liste de trois points _\{ (-1.26, 0), (0, 0), (0.26, 0)}_ (_option 2 décimales_).
+
+====

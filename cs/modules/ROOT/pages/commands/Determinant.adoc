@@ -1,0 +1,25 @@
+= Příkaz Determinant
+:page-en: commands/Determinant_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Determinant( <Matice> )::
+  Vypočítá determinant dané matice.
+
+[EXAMPLE]
+====
+
+`++Determinant[{{1, 2}, {3, 4}}]++` dostaneme _a = -2_.
+
+====
+
+== CAS pohled
+
+Determinant( <Matice> )::
+  Vypočítá determinant dané matice. Pokud se v matici vyskytují nedefinované proměnné, dostaneme vzorec pro determinant.
+
+[EXAMPLE]
+====
+
+`++Determinant[{{1, a}, {b, 4}}]++` dostaneme _-a b + 4_.
+
+====

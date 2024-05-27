@@ -1,0 +1,110 @@
+= Comando Desarrolla
+:page-en: commands/Expand_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+Desarrolla( <Función> )::
+  Desarrolla y xref:/Vista_Gráfica.adoc[grafica] la expresión de la función.
+
+[EXAMPLE]
+====
+
+Dada la xref:/Funciones.adoc[función]`++ g(x)=[(2x-1)²+2x+3]++`*`++f(x) := Polinomio[g]++`* da por resultado la función
+_f(x) = 4x² - 2x + 4_
+
+====
+
+[EXAMPLE]
+====
+
+*`++Desarrolla[(2x - 1)² + 2x + 3]++`* da por resultado la expresión _4x² - 2x + 4_.
+
+====
+
+[NOTE]
+====
+
+Operando en línea, este comando requiere de la carga del Sistema CAS de Álgebra.Como esta maniobra puede resultar lenta
+en ocasiones y/o equipos, es conveniente intentar, cada vez que sea posible, la alternativa que ofrece el comando
+xref:/commands/Polinomio.adoc[Polinomio].
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+Se admite la sintaxis descripta y se puede operar con complejos y literales.
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Considerando similitudes y diferencias, vale notar
+que el resultado de:*Desarrolla*[ñ (x - x_o) (x + x_o)] es**ñ x² - ñ x_o²** en la xref:/Vista_CAS.adoc[Vista CAS]
+
+'''''
+
+[.small]#Cuando se ingresa una expresión con variables a las que no se les hubiera asignado valor, el desarrollo es el
+de la correspondiente fórmula.#
+
+'''''
+
+*Desarrolla*[ñ (x - x_o) (x + x_o)] provoca un mensaje de error de ingresarse desde la xref:/Barra_de_Entrada.adoc[Barra
+de Entrada], por carecer de valor asignado _ñ_ y/o __x_o__**Desarrolla**[(sqrt(-4) + sqrt(3)) (sqrt(-4) - sqrt(3) )] no
+será aceptado si se ingresa en la xref:/Barra_de_Entrada.adoc[Barra de Entrada] y dará *_-7_* en la
+xref:/Vista_CAS.adoc[Vista CAS].
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++f(x):=Desarrolla[((2x + sqrt(2))² + 2x^2 - sqrt(3)) / x sqrt(2)]++`* resulta:stem:[\{f(x) \, := \,
+\frac\{-\sqrt\{6} + 6 \sqrt\{2} x^\{2} + 2 \sqrt\{2} + 8 x}\{x}\,
+}]**`++Desarrolla[((2x + sqrt(-2))² + 2x^2 - sqrt(3)) / x sqrt(2)]++`** resulta:stem:[\{-\frac\{\sqrt\{6} }\{x} + 6
+\sqrt\{2} x - \frac\{2 \sqrt\{2} }\{x} + 8 ί}] que por ser complejo, no admite registro
+xref:/Vista_Gráfica.adoc[gráfico]
+
+====
+
+[.small]##
+
+[.small]##
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Si se _tilda_ el redondelito que encabeza la fila en
+que se ingresara el comando, de ser posible, la función expone su correlato xref:/Vista_Gráfica.adoc[gráfico],En los
+ejemplos previos, solo es posible en el primer caso.
+
+====
+
+[.small]##
+
+[.small]##
+
+[EXAMPLE]
+====
+
+Sin tener _ñ_ ni _x~o~_ valor asignado...*`++Desarrolla[ñ (x - x_o) (x + x_o) / ñ]++`* da _x² - x_o²_ que pasaría a ser
+_graficable_ si se le asignara valor a los literales como _x~o~_ acaso a través de una adecuada
+/Archivo:Mode_substitute_32_gif.adoc[image:Mode_substitute_32.gif[Mode substitute 32.gif,width=32,height=32]]
+xref:/tools/Sustituye.adoc[sustitución].
+
+====
+
+'''''
+
+[NOTE]
+====
+
+Ver también la xref:/tools/Desarrolla.adoc[image:30px-Mode_expand.svg.png[Mode expand.svg,width=30,height=30]]
+xref:/tools/Desarrolla.adoc[Herramienta de Desarrolla] propia de la xref:/Vista_CAS.adoc[Vista CAS].
+
+====

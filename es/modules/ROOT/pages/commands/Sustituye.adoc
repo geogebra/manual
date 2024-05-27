@@ -1,0 +1,71 @@
+= Comando Sustituye
+:page-en: commands/Substitute_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/Vista_CAS.adoc[De] la xref:/Vista_CAS.adoc[Vista C~[.small]#omputación#~A~[.small]#lgebraica#~S~[.small]#imbólica#~]
+
+Sustituye( [.small]##<##Expresión[.small]##>, <##a reemplazar[.small]##>, <##reemplazo[.small]##>## )::
+  Efectúa la sustitución, en una _expresión_, del _contenido a reemplazar_ por el _reemplazo_ indicado.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++Sustituye[(3 m - 3)^2 - (m + 3)^2, m, a]++`
+
+se xref:/tools/Evalúa.adoc[evalúa] como xref:/tools/Evalúa.adoc[image:32px-Mode_evaluate.svg.png[Mode
+evaluate.svg,width=32,height=32]] stem:[(3 a - 3)^2 - (a + 3)^2] da como xref:/tools/Valor_Numérico.adoc[valor numérico]
+xref:/tools/Valor_Numérico.adoc[image:32px-Mode_numeric.svg.png[Mode numeric.svg,width=32,height=32]] _8 a^2^ - 24 a_
+
+* `++Sustituye[(x^2 / (4x + 6))^2 + 6(x^2/(4x+6)) + 8, x^2, a*(4x + 6)]++`
+
+se xref:/tools/Evalúa.adoc[evalúa] como xref:/tools/Evalúa.adoc[image:32px-Mode_evaluate.svg.png[Mode
+evaluate.svg,width=32,height=32]] stem:[(a \frac\{4x+6}\{4x+6})^2 +6a \frac\{4x+6}\{4x+6} +8]
+
+da como xref:/tools/Valor_Numérico.adoc[valor numérico]
+xref:/tools/Valor_Numérico.adoc[image:32px-Mode_numeric.svg.png[Mode numeric.svg,width=32,height=32]] _a^2^ + 6 a + 8_.
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Hay diferencias en los resultados cuando se
+xref:/commands/Simplifica.adoc[Simplifica] y/o xref:/commands/Factoriza.adoc[Factoriza] la expresión en juego.
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Sustituye[(x^2 / (4x + 6))^2 + 6(x^2/(4x+6)) + 8, x^2, a*(4x + 6)]++`* establece __a^2^ + 6 a +
+8__**`++Sustituye[(3 m-3)^2 - (m+3)^2, m, a]++`** da _-(a + 3)² + (3a - 3)²_ al reemplazar así *_m_* por
+**_a_****`++Desarrolla[Sustituye[(3 m - 3)^2 - (m + 3)^2, m, a]]++`** da __8a² - 24a__[.small]##Cuando se
+xref:/tools/Factoriza.adoc[Factoriza] con la herramienta /Archivo:Mode_factor_png.adoc[image:Mode_factor.png[Mode
+factor.png,width=32,height=32]], el resultado es _8 a (a - 3)_##El reemplazo literal
+en...*`++Sustituye[(3 m - 3)^2 - (m + 3)^2, 3 m - 3, ñ]++`* da:stem:[ñ² - (m + 3)²] al reemplazar *_m_* por *_ñ_*
+
+====
+
+Sustituye( <Expresión>, <Lista de Sustitución> )::
+  Sustituye en la _expresión_ cada variable de la lista con la que se hubiera indicado o con el número señalado.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Sustituye[2x + 3y - z, {x = a, y = 2, z = b}]++`* da por resultado __2 a - b + 6__A su vez, si en algún
+momento se le adjudican valores a *_a_* y/o a *_b_*, el resultado deviene numérico como cuando, para el caso anterior,
+se obtiene...*_stem:[\{- 5 \sqrt\{2} + 16}]_* si *_a_* se iguala a *_5_* y *_b_* a *_5 stem:[\sqrt\{2}]_*
+
+====
+
+'''''
+
+[NOTE]
+====
+
+Ver también las herramientas: /Archivo:Mode_substitute_png.adoc[image:Mode_substitute.png[Mode
+substitute.png,width=32,height=32]] xref:/tools/Sustituye.adoc[Sustituye] en este caso.
+
+====

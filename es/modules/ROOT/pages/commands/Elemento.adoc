@@ -1,0 +1,77 @@
+= Comando Elemento
+:page-en: commands/Element_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Elemento( <Lista>, <Posición del elemento __n__> )::
+  Da por resultado el elemento _n_-ésimo de la lista.
+
+[EXAMPLE]
+====
+
+`++Elemento({1, 3, 2}, 2)++` da _3_, el segundo elemento de _\{1, 3, 2}_.
+
+====
+
+[NOTE]
+====
+
+En la xref:/Vista_CAS.adoc[image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]]
+xref:/Vista_CAS.adoc[Vista CAS] pueden utilizarse variables indefinidas.
+
+[EXAMPLE]
+====
+
+`++Elemento({a, b, c}, 2)++` da _b_, el segundo elemento de _\{a, b, c}_.
+
+====
+
+====
+
+Elemento( <Matriz>, <Fila>, <Columna> )::
+  Da por resultado el elemento de la matriz ubicado en la fila y columna indicadas.
+
+[EXAMPLE]
+====
+
+`++Elemento({{1, 3, 2}, {0, 3, -2}}, 2, 3)++` da _-2_, el tercer elemento de la segunda fila de
+stem:[\begin\{pmatrix}1&3&2\\0&3&-2\end\{pmatrix}].
+
+====
+
+[NOTE]
+====
+
+En la xref:/Vista_CAS.adoc[image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]]
+xref:/Vista_CAS.adoc[Vista CAS] pueden utilizarse variables indefinidas.
+
+[EXAMPLE]
+====
+
+`++Elemento({{a, b, c}, {d, e, f}}, 2, 3)++` da _f_, el tercer elemento de la segunda fila de
+stem:[\begin\{pmatrix}a&b&c\\d&e&f\end\{pmatrix}].
+
+====
+
+====
+
+Elemento( <Lista>, <Índice1>, <Índice2>, ... )::
+  A partir de una lista de dimensión _n_, se pueden especificar hasta _n_ índices para obtener el elemento (o lista de
+  elementos) en las coordenadas indicadas.
+  Entonces `++Elemento(L, 1, 2, 1)++` da por resultado _3_, `++Elemento(L, 2, 2)++` da por resultado _\{7, 8}_.
+
+[EXAMPLE]
+====
+
+Consideremos _L = \{\{\{1, 2}, \{3, 4}}, \{\{5, 6}, \{7,8}}}_.
+
+====
+
+[NOTE]
+====
+
+* El comando funciona solamente si la lista o matriz contiene objetos del mismo tipo (por ejemplo, únicamente números o
+puntos).
+* Ver también los comandos xref:/commands/Primero.adoc[Primero], xref:/commands/Último.adoc[Último] y
+xref:/commands/ElementoAleatorio.adoc[ElementoAleatorio].
+
+====

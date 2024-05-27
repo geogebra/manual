@@ -1,0 +1,76 @@
+= Tutoriel:Dispositions
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+SoitDispositions( <Texte> )
+
+Détermine l' _Aspect_ de la fenêtre GeoGebra ainsi que les fenêtres affichées. Le paramètre _Texte_ décrit l' _Aspect_
+désiré. Il doit être une expression valide.Les fenêtres sont repérées par des lettres, le partage vertical est codifié
+par la concaténation des lettres, le partage horizontal est signifié par le caractère [.kcode]#/#.
+
+[cols=",",options="header",]
+|===
+|Lettre |Fenêtre
+|"A" |Algèbre
+|"B" |Calculs Probabilités
+|"C" |Calcul formel
+|"D" |Graphique 2
+|"G" |Graphique
+|"L" |Protocole de construction
+|"P" |Propriétés
+|"R" |Analyse des données
+|"S" |Tableur
+|"T" |Graphique 3D
+|===
+
+[EXAMPLE]
+====
+
+*Exemples :*  
+
+* `++SoitDispositions("G")++` seule la fenêtre _Graphique_ va être ouverte ;
+* `++SoitDispositions("AGS")++` les 3 fenêtres _Algèbre_, _Graphique_ et _Tableur_ sont visibles, côte à côte dans cet
+ordre;
+* `++SoitDispositions("S/G")++` les 2 fenêtres _Tableur_ et _Graphique_ sont visibles, empilées, _Tableur_ au-dessus de
+_Graphique_ ;
+* `++SoitDispositions("S/(GA)")++` les 3 fenêtres _Algèbre_, _Graphique_ et _Tableur_ sont visibles, _Tableur_ au-dessus
+de _Graphique_ et _Algèbre_, celles-ci étant côte à côte.
+
+====
+
+À la place de ces expressions , vous pouvez aussi utiliser un texte ne contenant qu'un seul chiffre pour obtenir l'une
+des dispositions prédéfinies du xref:/Menu_Associations.adoc[Menu_Associations] :
+
+[cols=",",options="header",]
+|===
+|Texte |Association
+|"1" |Algèbre (& Graphique)
+|"2" |Géométrie
+|"3" |Tableur (& Graphique)
+|"4" |Calcul formel (& Graphique)
+|"5" |(Algèbre &) Graphique 3D
+|"6" |Probabilités
+|===
+
+Ceux-ci correspondent à peu près à "AG", "G", "G", "SG" , "CG" et "AT" respectivement, mais peuvent aussi impacter
+l'affichage du champ de xref:/Saisie.adoc[Saisie] et le contenu de la xref:/Barre_d'outils.adoc[Barre d'outils].
+
+== Changement de vue unique
+
+Pour ouvrir ou fermer une seule "Vue"', ajouter l'un des symboles `+++++` ou `++-++` devant la lettre associée à la e
+_Vue_. Dans les application autre que GeoGebra Classique (par ex. la Calculatrice Graphique vous pouvez aussi utiliser
+`++Tools++` et `++Table++`pour les outils et table de valeurs.
+
+J'ai voulu tester les exemples suivants et ça n'a pas fonctionné pour Calculatrice Graphique en ligne
+
+[EXAMPLE]
+====
+
+*Exemples :*  
+
+* `++SoitDispositions("+D")++` adds _Graphics View_ 2 to the currently displayed ones, on the right
+* `++SoitDispositions("-D")++` removes _Graphics View_ 2 from the currently displayed ones
+* `++SoitDispositions("+Tools")++` opens the sidebar in Graphing Calculator and switches it to tools tab
+* `++SoitDispositions("+Table")++` opens the sidebar in Graphing Calculator and switches it to table of values
+* `++SoitDispositions("-Tools")++` closes the sidebar in Graphing Calculater, no matter which tab is selected
+
+====

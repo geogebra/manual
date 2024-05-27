@@ -1,0 +1,81 @@
+= Comando ParámetroRecorrido
+:page-en: commands/PathParameter_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+ParámetroRecorrido[ [.small]##<##Punto Sobre xref:/Objetos_Geométricos.adoc[Recorrido][.small]##>## ]
+
+Da por resultado el parámetro (por ejemplo, un número entre 0 y 1) correspondiente a la posición relativa del punto que
+pertenece a ese xref:/Objetos_Geométricos.adoc[recorrido].
+
+[EXAMPLE]
+====
+
+Siendo `++f(x) = x² + x - 1++` y `++A = (1, 1)++` un punto sobre la función...*`++ParámetroRecorrido[A]++`* da por
+resultado _0.47_
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/RazónSimple.adoc[RazónSimple] y xref:/commands/RazónDoble.adoc[RazónDoble].
+
+====
+
+== Tabla de Parámetros en Recorridos
+
+En la siguiente tabla stem:[f(x)=\frac\{x}\{1+|x|}] es una función empleada para disponer todos los números reales en el
+intervalo (-1,1) ystem:[\phi(X,A,B)=\frac\{\overrightarrow\{AX}\cdot\overrightarrow\{AB}}\{|AB|^2}] es un aplicación
+lineal desde la recta AB a los reales de modo que un 0 corresponde _A_ y un 1 a _B_.
+
+[cols=",",]
+|===
+|Recta AB |stem:[\frac\{f(\phi(X,A,B))+1}2]
+
+|Semirrecta AB |stem:[f(\phi(X,A,B))]
+
+|Segmento AB |stem:[\phi(X,A,B)]
+
+|Circunferencia con centro en _C_ y radio _r_ |Punto stem:[X=C+(r\cdot cos(\alpha),r\cdot sin(\alpha))], donde
+stem:[\alpha\in(-\pi,\pi)] tiene como parámetro de recorrido stem:[\frac\{\alpha+\pi}\{2\pi}]
+
+|Elipse con centro _C_ y semi-ejes stem:[\vec\{a}], stem:[\vec\{b}] |Punto stem:[X=C+\vec\{a}\cdot
+cos(\alpha)+\vec\{b}\cdot sin(\alpha)], donde stem:[\alpha\in(-\pi,\pi)] tiene parámetro de recorrido
+stem:[\frac\{\alpha+\pi}\{2\pi}]
+
+|Hipérbola |
+
+|Parábola con vértice V y dirección de eje stem:[\vec\{v}]. |Punto stem:[V+p\cdot t^2\cdot \vec\{v}+p\cdot t \cdot
+\vec\{v}^\{\perp}] tiene parámetro de recorrido stem:[\frac\{f(t)+1}2].
+
+|Poligonal A~1...A~n~~ |Si X está sobre A~k~A~k+1~, parámetro de recorrido de _X_ es stem:[\frac\{k-1+\phi(X,A,B)}\{n}]
+
+|Polígono A~1...A~n~~ |Si X está en A~k~A~k+1~ (usando A~n+1~=A~1~), parámetro de recorrido de _X_ es
+stem:[\frac\{k-1+\phi(X,A,B)}\{n+1}]
+
+|Lista de pasos L=\{p~1~,...,p~n~} |Si X está en p~k~ y el parámetro de recorrido de X con respecto a p~k~ es _t_, el
+parámetro de recorrido de _X_ con respecto a _L_ es stem:[\frac\{k-1+t}\{n}]
+
+|Lista de puntos L=\{A~1~,...,A~n~} |Si parámetro de recorrido de A~k~ es stem:[\frac\{k-1}\{n}]. Punto[L,t] da
+stem:[A_\{\lfloor tn\rfloor+1}].
+
+|Lugar Geométrico |
+
+|Polinomio Implícito |No hay fórmula disponible.
+|===
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idea:* Es interesante, al respecto, consultar el
+xref:/Tutoriales.adoc[tutorial] /Tutorial:Recorriendo_Parámetros_y_Trayectos.adoc[Recorriendo Parámetros y Trayectos].
+
+====

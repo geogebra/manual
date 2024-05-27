@@ -1,0 +1,38 @@
+= Příkaz PravaStrana
+:page-en: commands/RightSide_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Tento příkaz je dostupný pouze v xref:/CAS_pohled.adoc[CAS pohledu]..
+
+PravaStrana( <Rovnice> )::
+  Výstupem příkazu je pravá strana dané rovnice.
+PravaStrana( \{ <Rovnice> } )::
+  Výstupem příkazu je seznam pravých stran daných rovnic.
+
+[EXAMPLE]
+====
+
+`++PravaStrana[{a^2 + b^2 = c^2, x + 2 = 3x + 1}]++` dává _\{c^2^, 3x + 1}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++PravaStrana[x + 2 = 3x + 1]++` dává _3x + 1_.
+
+====
+
+[NOTE]
+====
+
+Viz také xref:/commands/LevaStrana.adoc[příkaz LevaStrana].
+
+====
+
+[NOTE]
+====
+
+/s_index_php?title=En:Manual:RightSide_Command_action=edit_redlink=1.adoc[RightSide Command]
+
+====

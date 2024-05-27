@@ -1,0 +1,43 @@
+= Příkaz HistogramVpravo
+:page-en: commands/HistogramRight_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+HistogramVpravo( <Seznam hranic tříd>, <Seznam výšek> )::
+  Vytvoří histogram se sloupci daných výšek. Hranice tříd určují šířku i pozici sloupců na x-ové ose. Seznam hranic tříd
+  musí mít o jeden prvek víc, než seznam výšek.
+
+[NOTE]
+====
+
+Identický příkaz s příkazem xref:/commands/Histogram.adoc[Histogram]
+====
+
+HistogramVpravo( <Seznam hranic tříd>, <Seznam nezpracovaných dat>, < Užití hustoty> (volitelné), <Měřítko hustoty
+(volitelné)> )::
+  Zobrazí histogram absolutních četností seznamu nezpracovaných dat. Třídami jsou polouzavřené intervaly (_a,b_],
+  hranice tříd musí tvořit vzestupná posloupnost. Dolní hranice prvního intervalu nesmí být větší než nejmenší z dat a
+  obdobně horní hranice posledního intervalu nesmí být menší než největší hodnota zpracovávaných dat. Výška sloupce je
+  určena četností třídy (_a,b_]. Pokud je nastavena logická hodnota pro užití hustoty _false_, jsou četnosti násobeny
+  jen měřítkem hustoty, v opačném případě jsou navíc normovány délkou intervalu _výška=(měřítko hustoty*četnost
+  třídy/šířka třídy)_.
+  Přednastavené hodnoty: Užití hustoty = _true_, Měřítko hustoty = 1.
+
+[NOTE]
+====
+
+Stejný příkaz jako příkaz xref:/commands/Histogram.adoc[Histogram] s tím rozdílem, že pokud je hodnota rovna horní
+hranici třídy, je do této třídy započítaná.
+
+====
+
+HistogramVpravo( <Kumulativní (logická hodnota)> (volitelné), <Seznam hranic tříd>, <Seznam nezpracovaných dat>, < Užití
+hustoty> (volitelné), <Měřítko hustoty (volitelné)> )::
+  Pokud je kumulativní logická hodnota _true_ jsou k četnosti každé třídy připočítány i četnosti všech předcházejících
+  tříd. Výsledný histogram můžeme použít pro odhad distribuční funkce. Pokud parametr pro kumulativní četnosti
+  vynecháme, je použita hodnota _false_ - viz výše.
+
+[NOTE]
+====
+
+Anglická verze: /s_index_php?title=En:HistogramRight_Command_action=edit_redlink=1.adoc[HistogramRight]
+====

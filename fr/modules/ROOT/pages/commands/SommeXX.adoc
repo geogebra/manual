@@ -1,0 +1,55 @@
+= Commande SommeXX
+:page-en: commands/SigmaXX_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+SommeXX( <Liste Nombres> )::
+  Calcule la somme des carrés des nombres de la liste donnée.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++SommeXX({1,2,3})++` donne _14_ (1²+2²+3²=1+4+9).
+
+====
+
+[NOTE]
+====
+
+*Note :*
+
+Ainsi la variance de la liste est `++SommeXX(liste)/Longueur(liste) - Moyenne(liste)^2++`.
+
+====
+
+SommeXX( <Liste Points> )::
+  Calcule la somme des carrés des abscisses des points de la liste donnée.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++SommeXX({(1,2),(2,-5),(3,36)})++` donne _14_ (1²+2²+3²=1+4+9).
+
+====
+
+SommeXX( <Liste Nombres>, <Liste Effectifs> )::
+  Calcule la somme des carrés des nombres pondérés par leur effectif.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++SommeXX({1,2},{3,2})++` donne _11_ (1²x3+2²x2=3+8).
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel

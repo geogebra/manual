@@ -1,0 +1,36 @@
+= Příkaz LogNormalni
+:page-en: commands/LogNormal_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+LogNormalni( <Průměr μ>, <Standardní odchylka σ>, x )::
+  Vytvoří funkci hustoty pravděpodobnosti
+  http://en.wikipedia.org/wiki/cs:Logaritmicko-norm%C3%A1ln%C3%AD_rozd%C4%9Blen%C3%AD[logaritmicko-normálního rozdělení]
+  s parametry μ a σ.
+LogNormalni( <Průměr μ>, <Standardní odchylka σ>, x, <Kumulativní (logická hodnota)> )::
+  Pokud má pravdivostní hodnota _Kumulativní_ hodnotu _true_, vytvoří příkaz distribiční funkci log-normálního
+  rozdělení, jinak vytvoří funkci hustoty pravděpodobnosti.
+LogNormalni( <Průměr μ>, <Standardní odchylka σ>, <Hodnota proměnné v> )::
+  Vypočte hodnotu distribuční funkce log-normálního rozdělení ve _v_, tj. pravděpodobnost _P(X≤v)_, kde _X_ je náhodná
+  veličina s log-normálním rozdělením s parametry μ a σ.
+
+[NOTE]
+====
+
+Výsledkem je pravděpodobnost pro danou hodnotu __x__ové souřadnice (nebo plocha pod křivkou distribuční funkce
+log-normálního rozdělení nalevo od dané __x__ové souřadnice).
+
+====
+
+== CAS pohled
+
+V xref:/CAS_pohled.adoc[CAS pohledu] je podporována pouze následující syntaxe:
+
+LogNormalni( <Průměr μ>, <Standardní odchylka σ>, <Hodnota proměnné v> )::
+  Vypočte hodnotu distribuční funkce log-normálního rozdělení ve _v_, tj. pravděpodobnost _P(X≤v)_, kde _X_ je náhodná
+  veličina s log-normálním rozdělením s parametry μ a σ.
+
+[NOTE]
+====
+
+Anglická verze: /s_index_php?title=En:Manual:LogNormal_Command_action=edit_redlink=1.adoc[LogNormal]
+====

@@ -1,0 +1,35 @@
+= Comando Área
+:page-en: commands/Area_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Área( <Punto inicial (vértice)>,..., <Punto final (vértice)> )::
+  Calcula el área del polígono definido por los puntos dados.
+Área( <Cónica> )::
+  Calcula el área de la sección cónica (círculo o elipse).
+Área( <Polígono> )::
+  Calcula el área del polígono.
+
+[EXAMPLE]
+====
+
+`++Área(x^2 + y^2 = 2)++` da por resultado _6.28_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Área((0, 0), (3, 0), (3, 2), (0, 2))++` da por resultado _6_.
+
+====
+
+[NOTE]
+====
+
+* En el caso de los polígonos, se calcula el área algebraica (que puede dar resultados inesperados en el caso de
+polígonos no convexos con aristas secantes)
+* Para calcular el área entre las gráficas de dos funciones, se necesita utilizar el comando
+xref:/commands/IntegralEntre.adoc[IntegralEntre].
+* Ver también image:24px-Mode_area.svg.png[Mode area.svg,width=24,height=24] xref:/tools/Área.adoc[Herramienta de Área].
+
+====

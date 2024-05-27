@@ -1,0 +1,121 @@
+= Comando Raíz
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Raíz[ <Polinomio> ]::
+  xref:/Vista_Gráfica.adoc[Grafica] sobre el xref:/Líneas_y_Ejes.adoc[eje _x_] los puntos acorde a *todas* las raíces
+  http://en.wikipedia.org/wiki/es:N%C3%BAmeros_reales#Tipos_de_n.C3.BAmeros_reales[[.small]##*ℝ*##eales] del polinomio,
+  incluso las singulares.
+
+  '''''
+  Para que el xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[comando] xref:/Listas.adoc[liste] el
+  conjunto de puntos es preciso encerrarlo entre llaves *\{* *}*.[.small]#La diferencia de comportamiento entre ingresar
+  el comando entre llaves, radica en que los puntos son componentes de una xref:/Listas.adoc[lista] y, por ejemplo, no
+  se podría asignarle un estilo diferente a cada uno.#
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Se expone, para las coordenadas, un número de
+decimales acorde al xref:/Menú_de_Opciones.adoc[Redondeo] establecido.
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Raíz[x^3 - 3 * x^2 - 4 * x + 12]++`* crea los puntos de coordenadas _(3, 0)_, _(2, 0)_, _(-2, 0)_ y los
+xref:/Vista_Gráfica.adoc[_grafica_]**`++{Raíz[2x³ - 5x² - 2x + 8]}++`** xref:/Listas.adoc[lista] y
+xref:/Vista_Gráfica.adoc[_grafica_] el correspondiente conjunto de puntos _\{(-1.186, 0), (1.686, 0), (2, 0)}_
+
+====
+
+Raíz[ <Función>, <Valor x~Inicial~> ]::
+  xref:/Vista_Gráfica.adoc[Grafica] sobre el xref:/Líneas_y_Ejes.adoc[eje _x_] el punto acorde a *_una_* de las raíces
+  http://en.wikipedia.org/wiki/es:N%C3%BAmeros_reales#Tipos_de_n.C3.BAmeros_reales[[.small]##*ℝ*##eales], usando un
+  método iterativo
+  numérico^[.small]#/s_index_php?title=Es:w:Método_de_Newton_action=edit_redlink=1.adoc[Newton-Raphson]#^, tomando el
+  _valor_ indicado como el inicial de la abscisa.
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Es posible operar con una función polinómica o con
+las que, no siéndolo, contengan una cantidad _discreta_ de raíces.
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:* Siendo f(x)=stem:[\frac\{sin(x)}\{x}]*`++Raíz[f, -π]++`* crea un punto de coordenadas _(-3.14159, 0)_ (el
+primero que encuentra a partir del inicial dado) y lo xref:/Vista_Gráfica.adoc[_grafica_]Con *`++Raíz[f, 2 π]++`* se
+crea el punto _(6.28, 0)_, el primero que se encuentra a partir de _2 π_
+
+====
+
+Raíz[ <Función>, <Valor x~Inicial~>, <Valor x~Final~>]::
+  xref:/Vista_Gráfica.adoc[Grafica] sobre el xref:/Líneas_y_Ejes.adoc[eje _x_] el punto acorde a *_una_* de las raíces
+  http://en.wikipedia.org/wiki/es:N%C3%BAmeros_reales#Tipos_de_n.C3.BAmeros_reales[[.small]##*ℝ*##eales] de la función
+  en el intervalo entre el valor inicial y el final de la abscisa con un método numérico
+  adecuado.^[.small]#http://www.wikimatematica.org/index.php?title=Regula-falsi[_regula falsi_]#^
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Raíz[sen(x) / x, -π/2, 3 π]++`* crea un punto de coordenadas _(9.42478, 0)_ (el último que encuentra en
+el intervalo y lo xref:/Vista_Gráfica.adoc[_grafica_]**`++Raíz[sen(x) / x, 2 π/3, 7 π/3]++`** deja _indefinido_ el
+resultado porque no encuentra raíces en el intervalo fijado.
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+Se admite la misma sintaxis; literales en operaciones simbólicas e incluso el tratamiento de funciones periódicas con
+infinitas raíces que pasan a sintetizarse en expresiones xref:/Listas.adoc[listadas] _por definición_.
+
+La alternativa que aborda polinomios obra como una variante especial de xref:/commands/Resuelve.adoc[Resuelve]. Las
+restantes, de modo similar al descripto.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Raíz[sen(x) / x]++`* crea una lista _\{ stem:[\{x = k_1 \pi }] }_ que comprende al infinito conjunto de
+raíces.Siendo _g(x) = x^3 - 3 x^2 - 4 x + 12_ da la lista _\{x = -2, x = 2, x = 3}_ de las raíces *`++Raíz[g]++`*
+mientras *`++Raíz[g, 1]++`* da la raíz __(2, 0)__[.small]##_Tildando_ el redondelito que encabeza la fila
+correspondiente, cobra entidad xref:/Vista_Algebraica.adoc[algebraica] la renovada lista _lis~ta1~:=\{(-2, 0), (2, 0),
+(3, 0)}_ y se xref:/Vista_Gráfica.adoc[grafican] sobre el xref:/Líneas_y_Ejes.adoc[*EjeX*], los puntos representativos
+de las raíces.Otro tanto al _tildar_ el redondelito encabezando la fila en que el resultante _(2, 0)_ provoca el punto
+de tales coordenadas en la xref:/Vista_Algebraica.adoc[algebraica] que a su vez es xref:/Vista_Gráfica.adoc[graficado]
+sobre el xref:/Líneas_y_Ejes.adoc[*EjeX*]##
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Al operar en esta xref:/Vista_CAS.adoc[vista]...
+
+* se indican con notación pertinente, las raíces racionales
+* pueden incluirse literales en operaciones simbólicas
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:* Siendo _f(x) = 7 sen(x - 1) / (x - 2)_ en la xref:/Vista_CAS.adoc[Vista CAS] *`++Raíz[f]++`* da por
+resultado la lista:\{x = k~1~ π + 1 }... y cuando se _tilda_ el redondelito que encabeza la correspondiente fila:\{
+(k~1~ π + 1, 0) }
+
+====
+
+'''''
+
+[NOTE]
+====
+
+*Notas:* En la xref:/Vista_CAS.adoc[Vista CAS], este comando es solo una variante especial de
+xref:/commands/Resuelve.adoc[Resuelve]Ver también el comando xref:/commands/Raíces.adoc[Raíces] y la función
+xref:/Función_raízn.adoc[raízN()]
+
+====

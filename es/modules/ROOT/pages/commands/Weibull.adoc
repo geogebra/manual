@@ -1,0 +1,33 @@
+= Comando Weibull
+:page-en: commands/Weibull_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Weibull( <Forma __k__>, <Escala __λ__>, x )::
+  Crea la función de distribución acumulada de la
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_de_Weibull[distribución de Weibull] con parámetros de forma _k_ y
+  escala _λ_
+Weibull( <Forma __k__>, <Escala __λ__>, x, <Acumulada (true/false)> )::
+  Si _Acumulada_ es verdadero, crea la función de distribución acumulada de la distribución de Weibull, de lo contrario
+  crea su función de densidad de probabilidad.
+Weibull( <Forma __k__>, <Escala __λ__>, <Valor variable __v__> )::
+  Evalúa la función de distribución acumulada de la distribución de Weibull en el valor variable _v_, por ejemplo, la
+  probabilidad _P(X ≤ v)_ donde _X_ es una variable aleatoria con distribución de Weibull definida por los parámetros de
+  forma _k_ y escala _λ_.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++Weibull(0.5, 1, 0)++` devuelve _0_.
+* `++Weibull(0.5, 1, 1)++` devuelve _stem:[1 - \frac\{1} \{ e } ]._
+
+====
+
+[NOTE]
+====
+
+Devuelve la probabilidad para un valor dado de _x_ (o el área bajo la curva de la distribución de Weibull a la izquierda
+del _x_ dado).
+
+====

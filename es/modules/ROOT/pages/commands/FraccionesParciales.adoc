@@ -1,0 +1,117 @@
+= Comando FraccionesParciales
+:page-en: commands/PartialFractions_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+FraccionesParciales( <Función> )::
+  Establece y xref:/Vista_Gráfica.adoc[grafica], de ser posible, el resultado de aplicarle a la función el caso de
+  factoreo denominado de http://en.wikipedia.org/wiki/es:Fracci%C3%B3n_parcial[_fracciones parciales_] (en inglés,
+  http://en.wikipedia.org/wiki/Partial_fraction[_partial fraction_]), respecto de la variable principal.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++FraccionesParciales[x^2 / (x^2 - 2x + 1)]++`* da por resultado __1 + stem:[\frac\{2}\{x - 1}] +
+stem:[\frac\{1}\{(x -1)^2}]__**`++FraccionesParciales[(3x - 2) (3x + 2) / (1 + x)]++`** da _stem:[9 x - 9 + \frac\{5}\{x
++ 1}]_
+
+====
+
+[NOTE]
+====
+
+En la xref:/Vista_Gráfica.adoc[Vista Gráfica] activa se ilustra su representación.
+
+====
+
+[.small]##
+
+[.small]##
+
+[.small]##
+
+[.small]##
+
+[NOTE]
+====
+
+Desde la version 4.2, factoriza también denominadores y admite como variable, además de *`++x++`*, también *`++y++`* y
+hasta *`++z++`*.
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+Este xref:/Comandos.adoc[comando] admite literales en esta xref:/Vista_CAS.adoc[vista] y suma a la previa, la siguiente
+sintaxis con exclusividad.
+
+FraccionesParciales( <Función>, <Variable> )::
+  Establece, de ser posible, la fracción parcial de la función en la variable especificada.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++FraccionesParciales[ñ^2 / (ñ^2 - 2ñ + 1), ñ]++`* da __1 + stem:[\frac\{2}\{ñ - 1}] +
+stem:[\frac\{1}\{(ñ-1)²}]__**`++FraccionesParciales[k x^2 / (x^2 - 2 k x + ñ), x]++`** da por resultado la siguente
+expresión _k + stem:[\frac\{2 k² x - k ñ }\{x² + ñ - 2 k x }]_
+
+====
+
+FraccionesParciales( <Función> )
+
+Establece y xref:/Vista_Gráfica.adoc[grafica], de ser posible, el resultado de aplicarle a la función el caso de
+factoreo denominado de http://en.wikipedia.org/wiki/es:Fracci%C3%B3n_parcial[_fracciones parciales_] (en inglés,
+http://en.wikipedia.org/wiki/Partial_fraction[_partial fraction_]), respecto de la variable principal.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++FraccionesParciales[3 t^2 / (t^2 -  2 t + 1)]++`* da, siendo en este caso *`++t++`* la variable
+principal, __stem:[3 + \frac\{6}\{(t - 1)} + \frac\{3}\{(t -
+1)²}]__`++FraccionesParciales[k x^2 / (x^2 -  2 k x + ñ)]++` *da:*
+
+-_stem:[\frac\{x}\{2}] + stem:[\frac\{x^3 + x ñ}\{2 (x^2 + ñ)- 4 k x}]_
+
+====
+
+[NOTE]
+====
+
+Cuando la función incluye literales se establece la correspondiente _fórmula_.
+
+====
+
+/Archivo:FraccionesParciales_VII_gif.adoc[image:FraccionesParciales_VII.gif[FraccionesParciales
+VII.gif,width=711,height=535]]
+
+'''''
+
+[EXAMPLE]
+====
+
+*`++q(x):=FraccionesParciales[3x² / (x² - 2sqrt(7) x + 1)]++`* establece y xref:/Vista_Gráfica.adoc[grafica] la
+siguiente xref:/Funciones.adoc[función] _stem:[q(x) = \frac\{3 x²}\{x² + 1 - 2 \sqrt\{7} x } ]_
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/MCM.adoc[MCM]
+====
+
+[NOTE]
+====
+
+Cuando es viable, al _tildar_ el redondelito que encabeza la fila correspondiente, la xref:/Funciones.adoc[función]
+resultante cobra entidad xref:/Vista_Algebraica.adoc[algebraica] y xref:/Vista_Gráfica.adoc[gráfica] como es la del
+siguiente caso.
+
+====

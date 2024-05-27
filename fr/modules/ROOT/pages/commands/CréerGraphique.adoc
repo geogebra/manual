@@ -1,0 +1,13 @@
+= Commande CréerGraphique
+:page-en: commands/SlowPlot_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+CréerGraphique( <Fonction f> )::
+  Crée par animation la représentation graphique de la fonction _f_, les points étant créés de la gauche vers la droite.
+  L'animation est pilotée par un xref:/tools/Curseur.adoc[curseur], qui est créé conjointement par cette commande, ce
+  qui correspond à option "Répéter" "Croissant".
+
+CréerGraphique(<Fonction>, <Booléen Répéter>)::
+  *Si 'Répéter' est _true_ ou omis, l'animation sera exécutée en continu comme ci-dessus ;
+  *Si 'Répéter' est _false_ , l'animation ne sera exécutée qu'une fois seulement, ce qui correspond à option "Répéter"
+  "Une fois (croissant)"

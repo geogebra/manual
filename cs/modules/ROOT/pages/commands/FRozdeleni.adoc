@@ -1,0 +1,31 @@
+= Příkaz FRozdeleni
+:page-en: commands/FDistribution_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+FRozdeleni( <Stupeň volnosti čitatele n>, <Stupeň volnosti jmenovatele d>, x )::
+  Vytvoří hustotu pravděpodobnosti F-rozdělení s parametry _n_, _d_.
+  (http://en.wikipedia.org/wiki/F-distribution[F-distribution])
+
+FRozdeleni(<Stupeň volnosti čitatele n>, <Stupeň volnosti jmenovatele d>, x, <Kumulativní (logická hodnota)> )::
+  Pokud je Kumulativní hodnota _true_, vytvoří distribuční funkci F-rozdělení, v opačném případě (_false_) je výsledkem
+  hustota pravděpodobnosti.
+
+FRozdeleni( <Stupeň volnosti čitatele n>, <Stupeň volnosti jmenovatele d>, <Hodnota proměnné x> )::
+  Vrátí hodnotu distribuční funkce F-rozdělení s parametry _n_, _d_
+  (http://en.wikipedia.org/wiki/F-distribution[F-distribution]) pro hodnotu _x_.
+
+[NOTE]
+====
+
+Hodnota distribuční funkce je pravděpodobnost, že je náhodná veličina _X_ menší než daná hodnota _x_, tj. _P(X≤x)_, kde
+_X_ je náhodná veličina s F-rozdělením s parametry _n,d_.
+
+====
+
+== CAS syntaxe
+
+V okně xref:/CAS_pohled.adoc[CAS pohled] je možné použít jen příkaz
+
+FRozdeleni( <Stupeň volnosti čitatele n>, <Stupeň volnosti jmenovatele d>, <Hodnota proměnné x> )::
+  Vrátí hodnotu distribuční funkce F-rozdělení s parametry _n_, _d_
+  (http://en.wikipedia.org/wiki/F-distribution[F-distribution]) pro hodnotu _x_.

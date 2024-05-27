@@ -1,0 +1,60 @@
+= Funciones
+:page-en: Functions
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Para ingresar una función puedes usar variables definidas previamente (números, puntos, vectores, etc.) así como otrs
+funciones.
+
+[EXAMPLE]
+====
+
+* Función f: `++f(x) = 3 x^3 – x^2++`
+* Función g: `++g(x) = tan(f(x))++`
+* Función sin nombre: `++sen(3 x) + tan(x)++`
+
+====
+
+[NOTE]
+====
+
+Todas las funciones predefinidas disponibles (como sen, cos, tan) están descritas la sección
+xref:/Operadores_y_Funciones_Predefinidas.adoc[Operadores y Funciones Predefinidas].
+
+====
+
+En GeoGebra también puedes usar comandos para obtener, por ejemplo, la xref:/commands/Integral.adoc[integral] y la
+xref:/commands/Derivada.adoc[derivada] de una función. Puedes usar el xref:/commands/Si.adoc[Comando Si] para obtener
+funciones condicionales.
+
+[NOTE]
+====
+
+También puedes usar los comandos f'(x) or f''(x), … para obtener las derivadas de una función f previamente definida.
+
+====
+
+[EXAMPLE]
+====
+
+Define la función _f_ como `++f(x) = 3 x^3 – x^2++`. Luego, puedes ingresar `++g(x) = cos(f' (x + 2))++` para obtener la
+función _g_.
+
+====
+
+Más aún, las funciones pueden ser trasladadas por un vector (ver xref:/commands/Traslada.adoc[Comando Traslada]) y una
+función libre puede ser arrastrada con la herramiente xref:/tools/Elige_y_Mueve.adoc[image:24px-Mode_move.svg.png[Mode
+move.svg,width=24,height=24]] xref:/tools/Elige_y_Mueve.adoc[Mueve]. Otros
+xref:/commands/Comandos_de_Transformación.adoc[Comandos de Transformación] también pueden aplicarse a las funcines, pero
+en la mayoría de los casos el resultado es una curva, no una función.
+
+== Función restringida a un intervalo
+
+Para restringir una función a un intervalo [a, b], debes usar el xref:/commands/Función.adoc[Comando Función] o el
+xref:/commands/Si.adoc[Comando Si].
+
+[EXAMPLE]
+====
+
+`++If(3<=x<=5,x^2)++` y `++Función(x^2,3,5)++` definen la misma función _x^2^_ restringida al intervalo [3,5]
+
+====

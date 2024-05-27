@@ -1,0 +1,58 @@
+= Visibilidad condicional
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Además de decidir, sencillamente si se exponen u ocultan ciertos objetos, se puede también establecer el régimen de
+visibilidad en función de ciertas condiciones.Por ejemplo, hacer depender la aparición de un objeto en pantalla según
+esté o no tildada cierta casilla o según su posición en la xref:/Vista_Gráfica.adoc[Vista Gráfica] o si un
+xref:/tools/Deslizador.adoc[deslizador] cambia a cierto valor _equis_.
+
+== Condicionalidad para Exponer u Ocultar Objetos Existentes
+
+Puede emplearse la /Archivo:Mode_showcheckbox_png.adoc[image:Mode_showcheckbox.png[Mode
+showcheckbox.png,width=32,height=32]] xref:/tools/Casilla_de_Control.adoc[Casilla de Control] para crear una casilla que
+controle la visibilidad de uno o más objetos existentes en pantalla. Alternativamente, también puede crearse una
+xref:/Valores_Lógicos.adoc[variable _Booleana_] (como `++b = true++`) usando la xref:/Barra_de_Entrada.adoc[Barra de
+Entrada] y haciéndola visible como casillero en la xref:/Vista_Gráfica.adoc[Vista Gráfica] al cambiar su estado de
+visibilidad (por ejemplo, usando la herramienta /Archivo:Mode_showhideobject_png.adoc[image:Mode_showhideobject.png[Mode
+showhideobject.png,width=32,height=32]] xref:/tools/Objeto_(in)visible.adoc[Objeto (in)visible] o el
+xref:/Menú_contextual.adoc[Menú Contextual]).Para usar la variable Booleana como una condición para la visibilidad de
+ciertos objetos, puede ser necesario seguir las etapas descriptas a continuación.
+
+== Cambiando la Visibilidad de Objetos Recién Creados
+
+En el xref:/Cuadro_de_Propiedades.adoc[Cuadro de Propiedades], puede anotarse una condición que establezca la
+visibilidad de un objeto en la pestaña _Avanzado_.
+
+[NOTE]
+====
+
+Se pueden seleccionar los operadores lógicos (como., ≠, ≥, ˄, ‖) de la lista desplegable para crear la formulación de
+las condiciones.
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* Si a es un deslizador, entonces el planteo condicional a < 2 significa que el correspondiente objeto solo va a
+exponerse en la xref:/Vista_Gráfica.adoc[Vista Gráfica] si el valor del deslizador es menor que 2.
+* Si b es una xref:/Valores_Lógicos.adoc[variable _Booleana_], puede usarse _b_ como la sentencia de una condición.El
+correspondiente objeto va a exponerse cuando el valor de _b_ sea verdadero - _true_ - y ocultarse, cuando sea falso -
+_false_ -.
+* Si g y h son dos rectas y se quisiera que se expusiera un texto cuando fuesen paralelas, podría usarse g ‖ h como
+cláusula condicional para el texto.
+
+====
+
+[NOTE]
+====
+
+Ver también...
+
+* el comando xref:/commands/Visibilidad.adoc[Visibilidad]
+* el ejemplo de la sección de un xref:/Tutoriales.adoc[Tutorial] en que se aplica la
+/s_index_php?title=Tutorial:Visibilidad_Condicional_y_Secuencias_action=edit_redlink=1.adoc[Visibilidad Condicional].
+
+====

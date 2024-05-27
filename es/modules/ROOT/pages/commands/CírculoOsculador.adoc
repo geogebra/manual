@@ -1,0 +1,36 @@
+= Comando CírculoOsculador
+:page-en: commands/OsculatingCircle_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+CírculoOsculador( <Punto>, <Función> )::
+  Da por resultado el círculo osculador de la función en el punto dado.
+CírculoOsculador( <Punto>, <Curva> )::
+  Da por resultado el círculo osculador de la curva en el punto dado.
+
+[EXAMPLE]
+====
+
+`++CírculoOsculador((1, 0), Curva(cos(t), sen(2t), t, 0, 2π))++` devuelve _x² + y² + 6x = 7_.
+
+====
+
+[EXAMPLE]
+====
+
+`++CírculoOsculador((0, 0), x^2)++` devuelve _x² + y² - y = 0_.
+
+====
+
+CírculoOsculador( <Punto>, <Objeto> )::
+  Da por resultado el círculo osculador del objeto (función, curva o cónica) en el punto dado.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++CírculoOsculador((0, 0), x^2)++` devuelve _x² + y² - y = 0_
+* `++CírculoOsculador((1, 0), Curva(cos(t), sen(2t), t, 0, 2π))++` devuelve _x² + y² + 6x = 7_
+* `++CírculoOsculador((-1, 0), Cónica({1, 1, 1, 2, 2, 3}))++` devuelve _x² + y² + 2x + 1y = -1_
+
+====

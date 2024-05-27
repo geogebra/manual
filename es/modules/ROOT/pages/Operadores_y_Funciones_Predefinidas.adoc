@@ -1,0 +1,177 @@
+= Operadores y Funciones Predefinidas
+:page-en: Predefined_Functions_and_Operators
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Para ingresar números, coordenadas o ecuaciones usando la xref:/Barra_de_Entrada.adoc[barra de entrada] se pueden
+emplear las siguientes funciones predefinidas y operaciones. Los operadores lógicos y las funciones se listan en el
+artículo destinado a xref:/Valores_Lógicos.adoc[Valores Lógicos o _Booleanos_].
+
+[NOTE]
+====
+
+Las funciones predefinidas deben ingresarse usando paréntesis y sin dejar espacio entre el nombre de la función y el
+paréntesis.
+
+====
+
+[cols=",",options="header",]
+|===
+|Operación / Función |Entrada
+|ℯ (http://en.wikipedia.org/wiki/es:N%C3%BAmero_e[Número e]) |[.kcode]#Alt# + [.kcode]#e#
+
+|ί (http://en.wikipedia.org/wiki/es:Unidad_imaginaria[Unidad imaginaria]) |[.kcode]#Alt# + [.kcode]#i#
+
+|π |[.kcode]#Alt# + [.kcode]#p# o _pi_
+
+|° (http://en.wikipedia.org/wiki/es:Grado_sexagesimal[Símbolo de grados sexagesimales]) |[.kcode]#Alt# + [.kcode]#o# o
+_deg_
+
+|Adición |+
+
+|Sustracción |-
+
+|Multiplicación |* o barra espaciadora
+
+|Producto escalar |* o barra espaciadora
+
+|Producto vectorial (ver xref:/Puntos_y_Vectores.adoc[Puntos y Vectores]) |⊗
+
+|División |/
+
+|Exponenciación |^ o supraíndice (`++x^2++` o `++x2++`)
+
+|Factorial |!
+
+|Paréntesis |( )
+
+|abscisa x |x( )
+
+|ordenada y |y( )
+
+|coordenada z |z( )
+
+|Argumento (funciona también en puntos y vectores 3D) |arg( )
+
+|Conjugado |conjugate( )
+
+|xref:/Función_Real.adoc[Parte real] |real( )
+
+|xref:/Función_Imaginaria.adoc[Parte imaginaria] |imaginary( )
+
+|Valor absoluto |abs( )
+
+|Ángulo de altitud (para puntos/vectores 3D) |alt( )
+
+|Signo |sgn( ) o sign()
+
+|Máximo entero menor o igual que |floor( )
+
+|Mínimo entero mayor o igual que |ceil( )
+
+|Redondeo |round(x) o round(x, y)
+
+|Raíz cuadrada |sqrt( )
+
+|Raíz cúbica |cbrt( )
+
+|Raíz n-ésima de x |nroot(x, n)
+
+|Número aleatorio entre 0 y 1 |random( )
+
+|Función exponencial |exp( ) o ℯ^x^
+
+|Logaritmo (natural, en base e) |ln( ) o log( )
+
+|Logaritmo en base 2 |ld( )
+
+|Logaritmo en base 10 |lg( )
+
+|Logaritmo de _x_ en base _b_ |log(b, x )
+
+|Coseno |cos( )
+
+|Seno |sin( )
+
+|Tangente |tan( )
+
+|Secante |sec()
+
+|Cosecante |cosec()
+
+|Cotangente |cot() o cotan()
+
+|Arcocoseno (respuesta en radianes) |acos( ) o arccos( )
+
+|Arcocoseno (respuesta en grados) |acosd( )
+
+|Arcoseno (respuesta en radianes) |asin( ) o arcsin( )
+
+|Arcoseno (respuesta en grados) |asind( )
+
+|Arcotangente (respuesta en radianes, entre -π/2 y π/2) |atan( ) o arctan( )
+
+|Arcotangente (respuesta en grados, entre -90° y 90°) |atand( )
+
+|https://es.wikipedia.org/wiki/Arcotangente_de_dos_par%C3%A1metros[Arcotangente (respuesta en radianes, entre -π y π)]
+|atan2(y, x) o arcTan2(y, x)
+
+|https://es.wikipedia.org/wiki/Arcotangente_de_dos_par%C3%A1metros[Arcotangente (respuesta en grados, entre -180° y
+180°)] |atan2d(y, x)
+
+|Coseno hiperbólico |cosh( )
+
+|Seno hiperbólico |sinh( )
+
+|Tangente hiperbólico |tanh( )
+
+|Secante hiperbólica |sech( )
+
+|Cosecante hiperbólica |cosech( )
+
+|Cotangente hiperbólica |coth( ) o cotanh()
+
+|Arcocoseno hiperbólico |acosh( ) o arccosh( )
+
+|Arcoseno hiperbólico |asinh( ) o arcsinh( )
+
+|Arcotangente hiperbólica |atanh( ) o arctanh( )
+
+|http://mathworld.wolfram.com/BetaFunction.html[Función beta] Β(a, b) |beta(a, b)
+
+|http://mathworld.wolfram.com/IncompleteBetaFunction.html[Función beta incompleta] Β(x;a, b) |beta(a, b, x)
+
+|http://mathworld.wolfram.com/RegularizedBetaFunction.html[Función beta incompleta regularizada] I(x; a, b)
+|betaRegularized(a, b, x)
+
+|http://en.wikipedia.org/wiki/es:Funci%C3%B3n_gamma[Función Gamma Γ(x)] |gamma( x)
+
+|(Lower) http://mathworld.wolfram.com/IncompleteGammaFunction.html[Función gamma incompleta] γ(a, x) |gamma(a, x)
+
+|(Lower) http://mathworld.wolfram.com/RegularizedGammaFunction.html[Función gamma incompleta regularizada P(a,x) = γ(a,
+x) / Γ(a)] |gammaRegularized(a, x)
+
+|http://en.wikipedia.org/wiki/es:Funci%C3%B3n_error[Función error de Gauss] |erf(x)
+
+|http://en.wikipedia.org/wiki/es:Funci%C3%B3n_digamma[Función digamma] |psi(x)
+
+|La http://es.wikipedia.org/wiki/Función_poligamma[función poligamma] es la derivada (m+1)-ésima del logaritmo natural
+de la http://es.wikipedia.org/wiki/Función_gamma[función gamma, gamma(x)] (m=0,1) |polygamma(m, x)
+
+|Función http://mathworld.wolfram.com/SineIntegral.html[Integral senoidal] |sinIntegral(x)
+
+|Función http://mathworld.wolfram.com/CosineIntegral.html[integral cosenoidal] |cosIntegral(x)
+
+|Función http://mathworld.wolfram.com/ExponentialIntegral.html[integral exponencial] |expIntegral(x)
+
+|Función http://en.wikipedia.org/wiki/Riemann_zeta_function[Riemann-Zeta] ζ(x) |zeta(x)
+
+|https://en.wikipedia.org/wiki/Función_W_de_Lambert[Función W de Lambert] LambertW(x, branch) |LambertW(x, 0),
+LambertW(x, -1)
+|===
+
+[NOTE]
+====
+
+Los operadores x, y, z pueden usarse para obtener las coordenadas correspondientes.
+
+====

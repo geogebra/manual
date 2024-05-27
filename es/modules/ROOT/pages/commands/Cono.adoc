@@ -1,0 +1,29 @@
+= Comando Cono
+:page-en: commands/Cone_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Cono( <Círculo>, <Altura> )::
+  Crea un cono con la base y altura indicadas.
+Cono( <Punto>, <Punto>, <Radio> )::
+  Crea un cono cuyo vértice será el segundo punto, y su base será un círculo cuyo centro está dado por el primer punto y
+  tendrá el radio indicado.
+Cono( <Punto>, <Vector>, <Ángulo> )::
+  Crea un cono infinito con el punto dado como vértice, eje de simetría paralelo al vector y ángulo de amplitud 2α
+  (siendo α el ángulo indicado).
+
+[NOTE]
+====
+
+Este comando devuelve _indefinido_ si el ángulo es ≥ stem:[\frac\{\pi}\{2}].
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/ConoInfinito.adoc[ConoInfinito] , la image:24px-Mode_cone.svg.png[Mode
+cone.svg,width=24,height=24] xref:/tools/Cono.adoc[Herramienta Cono] y la image:24px-Mode_conify.svg.png[Mode
+conify.svg,width=24,height=24]xref:/tools/Pirámide_o_Cono_desde_su_base.adoc[Herramienta Pirámide o Cono desde la base],
+que funciona arrastrando un círculo o seleccionándolo e ingresando la altura para crear un cono circular recto.
+
+====

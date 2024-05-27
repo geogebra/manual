@@ -1,0 +1,97 @@
+= Comando IntegralN
+:page-en: commands/NIntegral_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+IntegralN( <Función>, <Valor x Inicial~a~>, <Valor x Final~b~> )::
+  Establece numéricamente y xref:/Vista_Gráfica.adoc[grafica], la integral de la xref:/Funciones.adoc[función] _f_
+  definida entre el valor inicial y el final:stem:[\int_a^bf(x)\mathrm\{d}x]
+  /Archivo:IntegralN_PNG.adoc[image:280px-IntegralN.PNG[IntegralN.PNG,width=280,height=145]]
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* *`++IntegralN[ℯ^(-x^2), 0, 1]++`* da _0.75_ e ilustra la representación gráfica correspondiente a ese tramo de
+integral definida de la función.
+* *`++IntegralN[1/x,1,2]++`* da _0.693147180559945_ (Opción : 15 decimales)
+* *`++IntegralNl[ℯ^(-x), 0, 1]++`* da _0.632_
+* *`++IntegralNl[ℯ^(-x), 0, 1]++`* da _0.632120558828558_ (Opción : 15 decimales)
+* *`++IntegralN[ℯ^(-x^2), 0, 2]++`* da _0.88_ e ilustra ese tramo de función coloreando, además, el área inferior en la
+xref:/Vista_Gráfica.adoc[Vista Gráfica]
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: [.small]#Si bien desde la
+xref:/Barra_de_Entrada.adoc[Barra de Entrada] puede llegar a ser posible ingresar el comando con los siguientes
+argumentos: *IntegralN[ <Función>, <x ó y ó z>, <Valor-x-Inicial~a~>, <x-Final~b~> ]* es importante notar que lo que se
+establece numéricamente, *no será* la integral de la xref:/Funciones.adoc[función] _f_ definida entre el valor inicial y
+el final, respecto de la variable *_x_*, *_y_* o *_z_*.Será, en cambio, la
+xref:/commands/IntegralEntre.adoc[IntegralEntre] la primera xref:/Funciones.adoc[función] indicada y la siguiente
+entrada como .xref:/Funciones.adoc[función]. no como variable.#
+
+====
+
+[NOTE]
+====
+
+El resultado de lo ingresado en la xref:/Barra_de_Entrada.adoc[Barra de Entrada] también se
+xref:/Vista_Gráfica.adoc[_grafica_].
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] la xref:/Vista_CAS.adoc[Vista C~[.small]#omputación#~A~[.small]#lgebraica#~S~[.small]#imbólica#~]
+
+Se admiten literales en operaciones simbólicas y, además de la previa, la alternatica de indicar la variable de
+integración. Lo que, a su vez, inhabilita la graficación:
+
+[.small]##
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Exclusiva de xref:/Vista_CAS.adoc[Vista CAS]
+|===
+
+IntegralN( <Función>, <Variable~t~>, <Valor Inicial~t~a~~>, <Valor Final~t~b~~> )::
+  Establece numéricamente, el valor de la integral de la xref:/Funciones.adoc[función] _f_ definida entre el valor
+  inicial y el final, respecto de la variable _t_ indicada: stem:[\int_a^bf(t)\mathrm\{d}t].
+
+[EXAMPLE]
+====
+
+Con decimales según xref:/Menú_de_Opciones.adoc[_Redondeo_]...*`++IntegralN[ℯ^(-a^2), a, 0, 1]++`* da
+_0.7468_.*`++IntegralN[ℯ^(-j^2), j, 0, 1]++`* da __0.75__**`++IntegralN[1/x,1,2]++`** da _0.69_ dando
+*`++Integral[1/x,1,2]++`* igual
+xref:/tools/Valor_Numérico.adoc[valor][.small]##/Archivo:Mode_numeric_png.adoc[image:26px-Mode_numeric.png[Mode
+numeric.png,width=26,height=26]]## _0.69_ mientras *`++Integral[1/x,1,2]++`*, en cambio, se
+xref:/tools/Evalúa.adoc[evalúa] como /Archivo:Mode_evaluate_png.adoc[image:Mode_evaluate.png[Mode
+evaluate.png,width=32,height=32]] __ln(2)__**`++IntegralN[ℯ^(-x), 0, 1]++`** da _0.632_ a comparar con
+*`++Integral[ℯ^(-x), 0, 1]++`* que da stem:[ \frac\{e-1}\{e}].
+
+====
+
+[NOTE]
+====
+
+Ver también los siguientes comandos:
+
+* xref:/commands/Integral.adoc[Integral]
+* xref:/commands/IntegralEntre.adoc[IntegralEntre]
+* xref:/commands/SumaInferior.adoc[SumaInferior]
+* xref:/commands/SumaSuperior.adoc[SumaSuperior]
+* xref:/commands/SumaTrapezoidal.adoc[SumaTrapezoidal]
+====

@@ -1,0 +1,32 @@
+= Commande FractionPropre
+:page-en: commands/MixedNumber_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+*/Fichier:Menu_view_cas_svg.adoc[image:24px-Menu_view_cas.svg.png[Menu view cas.svg,width=24,height=24]] uniquement en
+fenêtre xref:/Calcul_formel.adoc[Calcul formel]*
+
+FractionPropre( <Expression> )::
+  Retourne l'écriture de l'expression en utilisant une _fraction propre_ (fraction dont le numérateur est plus petit que
+  le dénominateur).
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++FractionPropre(12/3)++` retourne stem:[4] ;
+
+`++FractionPropre(3.5)++` retourne stem:[3 + \frac\{1}\{2}] ;
+
+`++FractionPropre(12/14)++` retourne stem:[\frac\{6}\{7}] ;
+
+`++FractionPropre(3/4 + 2/7)++` retourne stem:[1 + \frac\{1}\{28}].
+
+====
+
+*Note :* Voir aussi la commande xref:/commands/EcritureRationnelle.adoc[EcritureRationnelle].
+
+====

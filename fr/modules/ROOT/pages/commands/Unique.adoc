@@ -1,0 +1,33 @@
+= Commande Unique
+:page-en: commands/Unique_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Unique(<Liste L>)::
+  Retourne la liste ordonnée, sans répétition, des éléments de la liste _L_. Fonctionne avec des listes de nombres ou de
+  textes. Voir aussi la commande xref:/commands/Effectifs.adoc[Effectifs].
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* `++Unique({1, 2, 4, 1, 4})++` retourne _\{1, 2, 4}_.
+* `++Unique({"a", "b", "Hello", "Hello"})++` retourne _\{"Hello", "a", "b"}_.
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Avec la possibilité de travailler en littéral.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Unique({1, x, x, 1, a})++` retourne _\{1, a, x}_.
+
+====

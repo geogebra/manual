@@ -1,0 +1,22 @@
+= Comando Suprime
+:page-en: commands/Remove_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Suprime( <Lista>, <Lista> )::
+  Suprime objetos de la primera lista cada vez que aparecen en la segunda lista.
+
+[EXAMPLE]
+====
+
+`++ Suprime({1,3,4,4,9},{1,4,5})++` devuelve la lista `++{3,4,9}++`.
+
+====
+
+[NOTE]
+====
+
+* Ver también el comando xref:/commands/EliminaIndefinidos.adoc[EliminaIndefinidos].
+
+* Se puede utilizar `++{1,3,4,4,9} \ {1,4,5}++` para aplicar la diferencia entre conjuntos.
+
+====

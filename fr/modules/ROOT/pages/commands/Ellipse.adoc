@@ -1,0 +1,58 @@
+= Commande Ellipse
+:page-en: commands/Ellipse_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Ellipse( <Foyer F>, <Foyer G>, <Demi Longueur Axe Principal a> )::
+  Ellipse de foyers _F_ et _G_ et dont la longueur de l’axe principal vaut 2__a__.
+
+[NOTE]
+====
+
+*Note :* Condition: _2a > Distance[F, G]_
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Ellipse((0, 1), (1, 1), 1)++` crée l'ellipse dont une équation est : _12x² + 16y² - 12x - 32y = -7_.
+
+====
+
+Ellipse( <Foyer F>, <Foyer G>, <Segment s> )::
+  Ellipse de foyers _F_ et _G_ et dont la longueur de l’axe principal vaut le double de celle du segment _s_.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+Soit `++s = Segment((0,1), (2,1))++`. `++Ellipse((0, 1), (2, 1), s)++` crée l'ellipse dont une équation est : _3x² + 4y²
+- 6x - 8y = 5_.
+
+====
+
+Ellipse( <Foyer F>, <Foyer G>, <Point M> )::
+  Ellipse de foyers _F_ et _G_ passant par _M_.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Ellipse((0, 1), (2, 1), (1,2))++`crée l'ellipse dont une équation est : _1x² + 2y² - 2x - 4y = -1_.
+
+====
+
+/Fichier:Tool_tool_png.adoc[image:Tool_tool.png[Tool tool.png,width=32,height=32]] Voir l' *outil* associé :
+/Fichier:Mode_ellipse3_svg.adoc[image:32px-Mode_ellipse3.svg.png[Mode ellipse3.svg,width=32,height=32]]
+xref:/tools/Ellipse.adoc[Ellipse].
+
+_____________________________________________________________
+
+/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] *Graphique 3D* :
+
+Pour les 2 premières syntaxes, il faut préciser le plan de travail.

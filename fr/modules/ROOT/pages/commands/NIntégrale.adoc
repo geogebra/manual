@@ -1,0 +1,55 @@
+= Commande NIntégrale
+:page-en: commands/NIntegral_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+NIntégrale( <Fonction>, <x min>, <x max> )::
+  Recherche une valeur (approchée) numérique de l'intégrale stem:[\int_a^bf(x)\mathrm\{d}x] et dessine l'aire concernée
+
+[EXAMPLE]
+====
+
+*Exemples :*  
+
+* `++NIntégrale(x²,0,1)++` retourne _0.33_ ;
+* `++NIntégrale(1/x,1,2)++` retourne _0.693147180559945_ (Option : 15 décimales) ;
+* `++NIntégral(ℯ^(-x), 0, 1)++` retourne _0.632120558828558_.
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Mais la réponse, en cas d'affectation, ne sera notifiée que par un nombre dans Algèbre, pas d'aire dans Graphique.
+Existe aussi une syntaxe pour une variable autre que x.
+
+[EXAMPLE]
+====
+
+*Exemples :*  
+
+* `++NIntégrale(x²,0,1)++` retourne _0.33_
+* `++NIntégrale(1/x,1,2)++` retourne _0.693147180559945_ (Option : 15 décimales) ;
+
+à comparer avec `++Intégrale(1/x,1,2)++` qui retourne _ln(2)_;
+
+* `++NIntégrale(ℯ^(-x), 0, 1)++` retourne _0.632120558828558_ ;
+
+à comparer avec `++Intégrale(ℯ^(-x), 0, 1)++` qui retourne stem:[ \frac\{-1}\{e} + 1].
+
+====
+
+NIntégrale( <Fonction f>, <Variable t>, < de a>, < à b> )::
+  Recherche une valeur (approchée) numérique de l'intégrale stem:[\int_a^bf(t)\mathrm\{d}t]
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++NIntégrale(ℯ^(-a^2), a, 0, 1)++` retourne _0.746824132812427_.
+
+====

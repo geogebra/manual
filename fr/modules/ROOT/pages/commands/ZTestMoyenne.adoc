@@ -1,0 +1,20 @@
+= Commande ZTestMoyenne
+:page-en: commands/ZMeanTest_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+ZTestMoyenne( <Liste Données Échantillon>, <Écart-type Population σ>, <Hypothèse Moyenne>, <Queue> )::
+  Réalise un Z-test de la moyenne de la population dont on ne connaît que l'écart-type σ, et la liste des valeurs d'une
+  partie de cette population (échantillon).
+  _Hypothèse Moyenne_ est la moyenne supposée de la population dans une hypothèse nulle.
+  _Queue_ peut être "<", ">" ou "≠" ce qui définit les hypothèses alternatives suivantes :
+  "<" = Moyenne de la population < _Hypothèse Moyenne_
+  ">" = Moyenne de la population > _Hypothèse Moyenne_
+  "≠" = Moyenne de la population ≠ _Hypothèse Moyenne_
+
+Les résultats sont fournis sous forme de liste \{Probabilité, statistique Z-test }.
+
+ZTestMoyenne( <Moyenne Échantillon>, <Écart-type Population σ>, <Taille Échantillon>, <Hypothèse Moyenne>, <Queue> )::
+  Réalise un Z-test de la moyenne de la population dont on ne connaît que l'écart-type σ, et la moyenne des valeurs
+  d'une partie de cette population (échantillon).
+  _Hypothèse Moyenne_ et _Queue_ sont définis comme ci-dessus.
+  Les résultats sont fournis sous forme de liste \{Probabilité, statistique Z-test }.

@@ -1,0 +1,117 @@
+= Comando ExportaImagen
+:page-en: commands/ExportImage_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+ExportaImagen( <Propiedad>, <Valor>, <Propiedad>, <Valor>, ... )::
+  Exporta una imagen de la vista activa (o de la especificada a través del parámetro "view")
+
+[NOTE]
+====
+
+* Las "Propiedades" requeridas en las sintaxis de este comando, listadas en los siguientes ejemplos deben ser ingresadas
+en inglés.
+* Los _valores_ que refieren a la vista (propiedad "view") que se desea grabar como imagen son:
+
+* 1 para image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Vista gráfica_
+* 2 para image:16px-Menu_view_graphics2.svg.png[Menu view graphics2.svg,width=16,height=16] _Vista gráfica_ 2
+* -1 para image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=16,height=16]
+_Vista 3D_
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++ExportaImagen("scale", 5)++`
+
+Muestra una ventana emergente de la vista actual para que el usuario pueda hacer clic derecho -> Guardar imagen como...
+
+* `++ ExportaImagen("filename", "imagen.png")++`
+
+Guarda el archivo "imagen.png" de la vista actual
+
+* `++ ExportaImagen("filename", "imagen.png", "view", 2)++`
+
+Guarda el archivo "imagen.png" de la Vista gráfica 2
+
+* `++ ExportaImagen("filename", "imagen.png", "view", -1)++`
+
+Guarda el archivo "imagen.png" de la Vista 3D
+
+* `++ ExportaImagen("filename", "imagen.png", "dpi", 300)++`
+
+Guarda el archivo "imagen.png" de la vista actual con una resolución de 300 dpi (puntos por pulgada)
+
+* `++ ExportaImagen("filename", "imagen.png", "scale", 2)++`
+
+Guarda el archivo "imagen.png" de la vista actual con un factor de escala 2 (el doble de la resolución nominal de la
+pantalla)
+
+* `++ ExportaImagen("filename", "imagen.png", "scalecm", 2, "dpi", 600)++`
+
+Guarda el archivo "imagen.png" de la vista actual en una resolución de 600 dpi en una escala de 1 unidad = 2 cm
+
+* `++ ExportaImagen("filename", "imagen.png", "width", 1000)++`
+
+Guarda el archivo "imagen.png" de la vista actual con un ancho de 1000 píxeles
+
+* `++ ExportaImagen("filename", "imagen.png", "height", 1000)++`
+
+Guarda el archivo "imagen.png" de la vista actual con una altura de 1000 píxeles
+
+* `++ ExportaImagen("filename", "imagen.png", "transparent", true)++`
+
+Guarda un archivo PNG de fondo transparente llamado "imagen.png"
+
+Al establecer como _false_ la propiedad "transparent", se guardan también las imágenes de fondo.
+
+* `++ ExportaImagen("filename", "imagen.svg", "type", "svg")++`
+
+Guarda el archivo "imagen.svg" de la vista actual en formato SVG
+
+* `++ExportaImagen("filename", "image.gif", "type", "gif", "slider", a, "loop", true, "time", 200, "width", 400)++`
+
+Guarda un GIF animado en bucle de la vista actual controlado por el deslizador _a_ de 200ms entre extremos. *Mantenga
+pequeños el tamaño del GIF y el número de pasos del deslizador*
+
+* `++ExportaImagen("filename", "image.gif", "type", "gif", "view", -1, "rotate", 360°, "slider", a, "loop", true, "time", 200)++`
+
+Guarda un GIF animado en bucle de la vista 3D controlado por el deslizador _a_ de 200ms entre extremos y rota la vista
+360° durante la animación. *Mantenga pequeños el tamaño de la vista y el número de pasos del deslizador*
+
+* `++ExportaImagen("type", "pdf", "filename", "test.pdf")++`
+
+Crea un PDF de la vista actual ( o un PDF de dos páginas si la Vista Gáfica 2 está abierta)
+
+* `++ExportaImagen("type", "pdf", "filename", "test.pdf", "slider", n)++`
+
+Crea un PDF de varias páginas de la vista actual, en el que cada página corresponde a un paso del deslizador _n_
+
+* `++pic1 = ExportaImagen("view", 2, "corner", A, "corner2", B)++`
+
+Crea una imagen de la Vista gráfica 2 con esquinas `++A++` y `++B++`
+
+====
+
+[NOTE]
+====
+
+*Notas:*
+
+* En GeoGebra Clásico 5, si no se ingresa el parámetro `++filename++` la imagen se copia en el portapapeles. Esto será
+posible también próximamente (dependiendo de los navegadores) en futuras versiones.
+* Para recortar la imagen, crea los puntos `++Export_1++` y `++Export_2++` para definir el rectángulo de corte. (*Esto
+también recorta la exportación que se obtiene a través del menú Archivo -> Exportar imagen*)
+* Algunas sintaxis no están disponibles en GeoGebra Clásico 5
+* En Chrome, puedes probar la sintaxis experimental `++"type", "webm"++` para obtener una exportación más rápida y
+pequeña que los GIF animados
+* Para las Vistas gráficas 2D puedes usar esta sintaxis para obtener una exportación monocromática
+`++"grayscale", true++` (Solo para formato PNG)
+* Para la Vista gráfica 3D solamente PNG es soportado. En GeoGebra Clásico 5 puedes utilizar esto para obtener una
+salida de alta resolución
+`++ExportaImagen("filename", "c:\Users\<username>\AppData\image.png", "view", -1, "width", 2000)++`. Reemplaza
+*<username>* por tu nombre de usuario de Windows
+
+====

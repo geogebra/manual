@@ -1,0 +1,69 @@
+= Commande SoitValeur
+:page-en: commands/SetValue_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+SoitValeur( <Booléen b>, <0|1> )::
+  Affecte au booléen _b_ la valeur 0 ou 1. Vous pouvez aussi utiliser *SoitValeur( <Booléen b>, <false|true> )*
+
+SoitValeur( <Objet A>, <Objet B> )::
+  Si _A_ est un xref:/Objets_libres_dépendants_ou_auxiliaires.adoc[objet libre] ou un
+  xref:/Points_et_Vecteurs.adoc[point] appartenant à xref:/Objets_géométriques.adoc[un chemin ou une région], sa valeur
+  prend la valeur actuelle de _B_ (i.e. _A_ ne changera pas de valeur si _B_ est ensuite modifié).
+
+SoitValeur( <Liste L>, <Nombre n >, <Objet O> )::
+  Affecte au _n ^ème^_ élément de la liste _L_ la valeur actuelle de l'objet _O_ . Le nombre _n_ est au plus égal à
+  Longueur(L)+1.
+
+SoitValeur( <xref:/Objets_InterAction.adoc[Liste déroulante]>, <Nombre n > )::
+  Définit _n_ comme xref:/commands/PositionSélectionnée.adoc[position sélectionnée] dans la liste déroulante.
+
+== Commandes *Si* et *SoitValeur* dans les Scripts
+
+Dans de nombreux langages de programmation, *Si* signifie _si la condition est vraie fait ceci ; sinon fait cela_.
+
+Dans GeoGebra les arguments de *Si* ne sont pas des commandes, mais des valeurs, dont une devient la valeur du résultat.
+
+Par conséquent, si vous désirez par exemple que _b_ prenne la valeur 2 si la condition _a > 2_ est réalisée, la méthode
+correcte pour ce faire est `++SoitValeur(b,Si(a>2,2,b))++`. Toute autre manière d'imbriquer SoitValeur et Si est
+incorrecte.
+
+== SoitValeur et objets libres
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :*
+
+Vous avez une liste de points, liste1=\{A,B,C}, donc un objet dépendant, vous voulez, par script, lui ajouter un point
+D.
+
+La commande SoitValeur sera sans effet sur liste1, il vous faut copier cette dernière en objet libre par la
+xref:/commands/CopierObjetLibre.adoc[Commande CopierObjetLibre]
+
+Ainsi, exemple de script :
+
+`++liste2=CopierObjetLibre(liste1)++`
+
+`++SoitValeur(liste2,4,D)++`.
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :*
+
+Dans un script, *privilégiez toujours la commande SoitValeur à l'affectation par le signe `++=++`.*
+
+pour _i_ libre, _j_ libre ou non, les commandes `++i = 4++`, `++i = i + 1++`, `++i = i + j++`
+
+sont équivalentes à `++SoitValeur(i, 4)++`, `++SoitValeur(i, i + 1)++` et `++SoitValeur(i, i + j)++`
+
+(_i_ reste libre, seule sa valeur est modifiée),`++ i = j++` provoque une redéfinition.
+
+Mais `++i = CopierObjetLibre(j)++` devrait fonctionner comme SoitValeur.
+
+Une redéfinition est lente, surtout si il y a beaucoup d'objets qui dépendent de _i_. Cela entraînera de graves
+problèmes dans les scripts d'actualisation.
+
+====

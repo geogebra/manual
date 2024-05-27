@@ -1,0 +1,42 @@
+= Commande TriangleCourbe
+:page-en: commands/TriangleCurve_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+TriangleCourbe( <Point P>,<Point Q>,<Point R>,<Équation en A,B,C>)::
+  crée un polynôme implicite, dont l'équation en
+  http://en.wikipedia.org/wiki/fr:Coordonn%C3%A9es_barycentriques[coordonnées barycentriques] relativement aux points P,
+  Q,R est donnée par les quatre paramètres; les coordonnées barycentriques sont relatives à A,B,C.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+Si _P,Q,R_ sont les points, `++TriangleCourbe(P,Q,R,(A-B)*(B-C)*(C-A)=0)++` vous retourne une cubique constituée des
+médianes du triangle _PQR_. `++TriangleCourbe(A,B,C,A*C=1/8)++` crée une hyperbole telle que la tangente passant par A
+ou C à cette hyperbole partage le triangle ABC en deux parties de même aire.
+
+`++TriangleCourbe(A, B, C, A² + B² + C² - 2B C - 2C A - 2A B = 0)++` crée l'ellipse inscrite de
+http://en.wikipedia.org/wiki/fr:Ellipse_de_Steiner[Steiner], ellipse tangente à chacun des côtés du triangle en leur
+milieu ;
+
+et `++TriangleCourbe(A, B, C, B C + C A + A B = 0)++` en crée l'ellipse de Steiner circonscrite.
+
+====
+
+[NOTE]
+====
+
+*Note :* Les points donnés peuvent être nommés _A_, _B_ ou _C_, mais dans ce cas vous ne pouvez utiliser par exemple
+_x(A)_ dans l'équation, car _A_ est interprété comme coordonnée barycentrique.
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Mais, mieux vaut faire une affectation, par ex. `++med3:=TriangleCourbe(P,Q,R,(A-B)*(B-C)*(C-A)=0)++`.

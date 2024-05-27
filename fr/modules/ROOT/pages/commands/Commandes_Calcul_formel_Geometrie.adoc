@@ -1,0 +1,98 @@
+= Commandes Calcul formel Geometrie
+:page-en: commands/CAS_View_Supported_Geometry_Commands
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+La fenêtre Calcul formel traite des calculs littéraux ou exacts pour un certain nombre de commandes dédiées géométrie ,
+et aussi quelques apports pour les courbes paramétriques.Voici quelques exemples que vous pouvez tester :)
+
+== Calculs exacts
+
+[cols=",,",options="header",]
+|===
+|Entrée |/Fichier:Mode_evaluate_svg.adoc[image:32px-Mode_evaluate.svg.png[Mode evaluate.svg,width=32,height=32]]
+xref:/tools/Évaluer.adoc[Évaluer] |/Fichier:Mode_numeric_svg.adoc[image:32px-Mode_numeric.svg.png[Mode
+numeric.svg,width=32,height=32]] xref:/tools/Numérique.adoc[Numérique] ou Saisie directe, [.small]#_Arrondi 2
+décimales_#
+|*Angle((1,0),(0,0),(1,2))* |stem:[arctan \left( 2 \right)] |*Numérique* : 1.11 *Saisie* : 63.43° [.small]#_ou_# 1.11
+rad [.small]#_selon l'unité d'angles choisie_#
+
+|*Bissectrice((0,1),(0,0),(1,0))* |stem:[y = x] |*Numérique* : stem:[y = x] *Saisie* : stem:[- 0.71 x +0.71 y = 0]
+
+|*Circonférence(x^2+y^2=1/sqrt(π))* |stem:[2 \sqrt\{ \sqrt\{\pi} \pi}] |4.72
+
+|*Distance((0,0), x + y = 1)* |stem:[\frac\{\sqrt\{2}}\{2}] |0.71
+
+|*Distance((0,0),x+2y=4)* |stem:[4 \cdot \frac\{\sqrt\{5}}\{5}] |1.79
+
+|*Distance((0,4),y=x^2)* |stem:[\frac\{\sqrt\{15}}\{2}] |1.94
+
+|*Distance((0.5,0.5),x^2+y^2=1)* |stem:[\frac\{-\sqrt\{2} + 2}\{2}] |0.29
+
+|*Ellipse((2,1),(5,2),(5,1))* |[.small]#stem:[28 x^\{2} - 24 x y - 160 x + 60 y^\{2} - 96 y + 256 = 0]# |*Numérique* :
+[.small]#stem:[28 x^\{2} - 24 x y - 160 x ...]stem:[... + 60 y^\{2} - 96 y + 256 = 0]# *Saisie* : [.small]#stem:[7
+x^\{2} - 6 x y + 15 y^\{2} - 40 x + - 24 y = - 64]#
+
+|*Ellipse((2,1),(5,2),(6,1))* |[.small]#stem:[32 x^\{2} \sqrt\{2} + 36 x^\{2} - 224 x \sqrt\{2} - 24 x y - 216 x ... ]
+stem:[ ... + 32 \sqrt\{2} y^\{2} - 96 \sqrt\{2} y + 256 \sqrt\{2} + 68 y^\{2} - 120 y + 196 = 0]# |*Numérique* :
+[.small]#stem:[81.25 x^\{2} - 24 x y - 532.78 x ... ]stem:[...+ 113.25 y^\{2} - 255.76 y + 558.04=0]# *Saisie* :
+[.small]#stem:[81.25 x^\{2} - 24 x y - 532.78 x + ... ]stem:[...+113.25 y^\{2} - 255.76 y = - 558.04 ]#
+
+|*Rayon(x^2+y^2=1/sqrt(π))* |stem:[\frac\{\sqrt\{ \sqrt\{\pi} \pi}}\{\pi}] |0.75
+|===
+
+== Calculs littéraux
+
+[cols=",,",options="header",]
+|===
+|Entrée |/Fichier:Mode_evaluate_svg.adoc[image:32px-Mode_evaluate.svg.png[Mode evaluate.svg,width=32,height=32]]
+xref:/tools/Évaluer.adoc[Évaluer] |/Fichier:Mode_numeric_svg.adoc[image:32px-Mode_numeric.svg.png[Mode
+numeric.svg,width=32,height=32]] xref:/tools/Numérique.adoc[Numérique]
+|*Cercle((a,b),r)* |(- a + x )² + (- b + y )² = r² |stem:[a^\{2}+ b^\{2}+ x^\{2} + y^\{2} - 2 a x - 2 b y = r^\{2}]
+
+|*Distance((a,b),(c,d))* |stem:[\sqrt\{\left( a - c \right)^\{2} + \left( b - d \right)^\{2}}] |stem:[\left( a^\{2} +
+b^\{2} + c^\{2} + d^\{2} - 2 a c - 2 b d \right)^\{0.5}]
+
+|*Cercle((a,b),(c,d))* |[.small]#stem:[ \left(-a + x \right)^\{2} + \left(-b + y \right)^\{2} = a^\{2} + b^\{2} + c^\{2}
++ d^\{2} - 2 a c - 2 b d]# |[.small]#stem:[a^\{2} + b^\{2} + x^\{2} + y^\{2} - 2 a x - 2 b y= a^\{2} + b^\{2} + c^\{2} +
+d^\{2} - 2 a c - 2 b d]#
+
+|*Distance((a,b),p x + q y = r)* |(_[.small]#un truc infect, voir ci-dessous#_) |stem:[\frac\{\left|a p + b q -
+r\right|}\{ \left(p^\{2} + q^\{2} \right)^\{0.5}}]
+
+|*Droite((a,b),(c,d))* |stem:[y = \frac\{a d - b c}\{a - c} + x \frac\{b - d}\{a - c}] |stem:[y = \frac\{a d - b c + b x
+- d x}\{a - c}]
+
+|*Droite((a,b),y=p x+q)* |stem:[y =- a p + p x + b] |stem:[y = -a p + p x + b ]
+
+|*Médiatrice((a,b),(c,d))* |stem:[y = \frac\{-a + c}\{b - d} x + \frac\{a^\{2} + b^\{2} - c^\{2} - d^\{2}}\{2 b - 2 d}]
+|stem:[y = \frac\{a^\{2}+ b^\{2} - c^\{2}- d^\{2} - 2 a x + 2 c x }\{2 b - 2 d}]
+
+|*MilieuCentre((a,b),(c,d))* |stem:[ \left( \frac\{a + c}\{2}, \frac\{b + d}\{2} \right) ] |stem:[ \left( 0.5 a + 0.5 c,
+0.5 b + 0.5 d \right) ]
+
+|*Intersection(a x + b y = c,a' x + b' y = c')* |stem:[ \left\\{ \left(\frac\{-b c' + b' c}\{a b' - a' b}, \frac\{a c' -
+a' c}\{a b' - a' b} \right) \right\} ] |stem:[ \left\\{ \left(\frac\{-b c' + b' c}\{a b' - a' b}, \frac\{a c' - a' c}\{a
+b' - a' b} \right) \right\} ]
+|===
+
+*Distance((a,b),p x + q y = r)* retourne stem:[\sqrt\{ \left(q \frac\{a q + p \left(-b + \frac\{r}\{q} \right)}\{p^\{2}
++ q^\{2}} - a \right)^\{2} + \left( \left(-p + \frac\{r}\{q} \right) \cdot \frac\{a q + p \left(-b + \frac\{r}\{q}
+\right)}\{p^\{2} + q^\{2}} - b + r \frac\{\frac\{-a q - p \left(-b + \frac\{r}\{q} \right)}\{p^\{2} + q^\{2}} + 1}\{q}
+\right)^\{2}}] par /Fichier:Mode_evaluate_svg.adoc[image:32px-Mode_evaluate.svg.png[Mode
+evaluate.svg,width=32,height=32]] xref:/tools/Évaluer.adoc[Évaluer]
+
+Distance(x+2y=4,x^2+y^2=1) retourne *?*
+
+=== [#================]####[#.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D.3D]##================##
+
+non repris ce jour :
+
+Intersect[a1 y + b1 x = c1,a2 y + b2 x = c2] Intersect[Curve[t,t,t,0,2],y=x^2 ] Intersect[x^2+y^2=1,y=x]
+Intersect[x^2+2y^2=1,y=x] Intersect[x+y=1,x+y=2] Intersect[x+y=1,x-y=2] Intersect[Curve[t,t^2,t,0,2],Curve[t,1-t,t,0,2]
+] Intersect[x^2+2y^2=1,2x^2+y^2=1] Intersect[y=sin(x),y=x] Intersect[x² + 2y² = 1,y=x^2]
+
+Ellipse[(2,1),(5,2),(5,1)]
+
+Conic[(5,0),(-5,0),(0,5),(0,-5),(3,4)] Factor[LeftSide[Conic[(5,0),(-5,0),(0,5),(0,-5),(4,1)]] Conic[(1,1), (0,-3),
+(5,2), (6,-2), (3,-2)] Hyperbola[(1,1),(4,3),(5,1)] Ellipse[(a,b),(c,d),r] Ellipse[(a,b),(c,d),(e,f)]
+Hyperbola[(a,b),(c,d),(e,f)]

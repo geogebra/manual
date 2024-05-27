@@ -1,0 +1,28 @@
+= Příkaz Funkce
+:page-en: commands/Function_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Funkce( <Funkce>, <Počáteční hodnota>, <Koncová hodnota> )::
+  Vytvoří graf funkce, která má hodnoty funkce _f_ na intervalu [_a_, _b_], ale není definovaná vně intervalu [_a_,
+  _b_].
+
+[EXAMPLE]
+====
+
+`++f(x) = Funkce[x^2, -1, 1]++` definuje funkci, která má funkční hodnoty _x^2^_, ale jejíž graf se zobrazí pouze na
+intervalu [_-1_, _1_]. Takto zavedenou funkci lze užívat v dalších definicích, ale zatímco `++g(x)=2 f(x)++` definuje
+dle očekávání funkci _g(x)=2x^2^_, tato funkce už není omezena na interval [_-1_, _1_].
+
+====
+
+[NOTE]
+====
+
+* Tento příkaz by měl být používán pouze k omezení intervalu, na kterém je funkce *zobrazena*. Pro omezení definičního
+oboru, nebo pro použití s xref:/commands/Posloupnost.adoc[příkazem Posloupnost] použijte podmíněnou funkci vytvořenou
+xref:/commands/Kdyz.adoc[příkazem Kdyz], např. `++f(x) = If[-1 < x < 1, x²]++`.
+* Tento příkaz nepracuje s Nástroje / Makra. Použijte xref:/commands/Kdyz.adoc[příkaz Kdyz], viz výše.
+
+====
+
+/s_index_php?title=En:Function_Command_action=edit_redlink=1.adoc[Function command]

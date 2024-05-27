@@ -1,0 +1,30 @@
+= Comando Cuartil3
+:page-en: commands/Quartile3_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Cuartil3( <Lista de datos brutos> )::
+  Determina el cuartil superior de los elementos de la lista.
+Cuartil3( <Lista de números>, <Lista de frecuencias> )::
+  Determina el cuartil superior de los elementos de la lista considerando sus respectivas frecuencias.
+
+[EXAMPLE]
+====
+
+`++ Cuartil3({1, 2, 3, 4}, {3, 2, 4, 2})++` devuelve _3_.
+
+====
+
+[EXAMPLE]
+====
+
+`++ Cuartil3({1, 2, 3, 4})++` devuelve _3.5_.
+
+====
+
+[NOTE]
+====
+
+GeoGebra utiliza el método de *Moore & McCabe (2002)* para calcular cuartiles, ver
+http://mathworld.wolfram.com/Quartile.html
+
+====

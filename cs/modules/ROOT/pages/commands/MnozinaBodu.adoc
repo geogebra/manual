@@ -1,0 +1,45 @@
+= Příkaz MnozinaBodu
+:page-en: commands/Locus_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+MnozinaBodu(<Bod Q tvořící množinu>, <Bod P na objektu>)::
+  Vytvoří křivku – množinu možných poloh bodu _Q_, jehož poloha závisí na bodu _P_.
+
+[NOTE]
+====
+
+Bod _P_ musí být bodem nějakého objektu, např. bodem přímky, kružnice, úsečky, ...
+
+====
+
+MnozinaBodu( <Bod Q tvořící množinu>, <Posuvník t> )::
+  Vytvoří křivku – množinu možných poloh bodu _Q_, jehož poloha závisí hodnotě posuvníku t.
+
+Množiny bodů jsou specifickými typy objektů, zobrazí se jako xref:/Volné_závislé_a_pomocné_objekty.adoc[pomocné
+objekty]. Kromě příkazu MnozinaBodu je výsledkem některých xref:/commands/Diskrétní_matematika_(Příkazy).adoc[příkazů
+diskrétní matematiky] a příkazu xref:/commands/VyresitODE.adoc[VyresitODE]. Množiny bodů jsou
+xref:/Geometrické_objekty.adoc[cesty] a mohou být použity jako argumenty příkazů pracujících s cestami, jako např.
+příkaz xref:/commands/Bod.adoc[Bod]. Jejich vlastnosti závisí na tom, jakým způsobem byly získány, viz např. příkazy
+xref:/commands/Obvod.adoc[Obvod] a xref:/commands/Prvni.adoc[Prvni].
+
+[NOTE]
+====
+
+Viz také nástroj /Soubor:Tool_Locus_gif.adoc[image:Tool_Locus.gif[Tool Locus.gif,width=32,height=32]]
+xref:/tools/Množina_bodů.adoc[Množina bodů].
+
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Varování,title="Varování",width=18,height=18] *Varování*: |Množina bodů je nedefinovaná, pokud
+je závislý bod výsledkem příkazu xref:/commands/Bod.adoc[Bod] s dvěma parametry, nebo příkazu
+xref:/commands/ParametrCesty.adoc[ParametrCesty].
+|===
+
+[NOTE]
+====
+
+Originální anglická verze manuálu: /s_index_php?title=En:Manual:Locus_Command_action=edit_redlink=1.adoc[Locus Command]
+
+====

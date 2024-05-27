@@ -1,0 +1,88 @@
+= Comando SigmaXX
+:page-en: commands/SigmaXX_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+SigmaXX( <Lista de Números> )::
+  Calcula la suma de los cuadrados de los números dados.
+
+[EXAMPLE]
+====
+
+*`++SigmaXX[{1, 2, 3}]++`* da _14_ (resultado de 1² + 2² + 3² = 1 + 4 + 9)
+
+====
+
+[NOTE]
+====
+
+Para trabajar en relación a la varianza de una lista _li_, puede
+pedirse:*`++SigmaXX[li] / Longitud[li] - Media[li]^2++`*
+
+====
+
+SigmaXX( <Lista de Puntos> )::
+  Calcula la suma de los cuadrados de los valores de las abscisas (coordenadas _x_) de los
+  xref:/Puntos_y_Vectores.adoc[puntos] xref:/Listas.adoc[listados].
+
+[EXAMPLE]
+====
+
+*Ejemplos:* Dada la xref:/Listas.adoc[lista] de xref:/Puntos_y_Vectores.adoc[puntos]
+`++li = { (-3, 4), (-1, 4), (-2, 3), (1, 3), (2, 2), (1, 5) }++` será _20_ el resultado de
+`++SigmaXX[ li ]++`**`++SigmaXX[{ (3, 3) ,  (5, 4) ,  (6, 5) }]++`** da _70_ (resultado de 3² + 5² + 6² = 9 + 25 +
+36)*`++SigmaXX[{A, B, C}]++`* da por dinámico resultado, la suma de los cuadrados de las abscisas de _A_, _B_ y _C_.
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Alerta,title="Alerta",width=18,height=18] *Alerta*: |[.small]#Este valor podría ser _70_ si
+fueran__A = (3, 3)__ , _B=(5, 4)_ y _C = (6, 5)_ y se actualizaría con cada desplazamiento de cualquiera de los puntos#.
+|===
+
+====
+
+SigmaXX( <Lista de Números>, <Lista Frecuencias> )::
+  Suma _ponderada_ de los cuadrados de los números según la lista de frecuencias.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++SigmaXX[{1, 2, 3}, {2, 4, 8}]++`* da _90_ (resultado de 2 * 1² + 4 * 2² + 8 * 3² = 2 + 16 + 72)Siendo
+`++lú := Único[li]++` _\{1, 2, 3, 4, 5}_ y `++lf := Frecuencia[li]++`, _\{4, 5, 7, 2, 1}_, *`++SigmaXX[lú, lf]++`* da
+__144__[.small]##Sería _li := \{3, 2, 4, 3, 3, 2, 1, 1, 2, 3, 3, 4, 5, 3, 2, 1, 1, 2, 3}_ lo que eventualmente podría
+ser un dato a averiguar.##
+
+====
+
+[NOTE]
+====
+
+El comando opera de modo análogo en la xref:/Vista_CAS.adoc[image:24px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=24,height=24]]__xref:/Vista_CAS.adoc[Vista CAS]__.
+
+====
+
+[EXAMPLE]
+====
+
+*`++SigmaXX[{1, round(10 random()), 3}] ñ + SigmaXX[{A, B, C}] q + SigmaXX[{1, 3, 4}, {7, 5, 9}] w++`* tiene una
+aleatoria salida que, además, varía dinámicamente al desplazarse los puntos *A* y/o *B*, como una de las siguientes:_17q
++ 196w + 46ñ_ ó _17q + 196w + 19ñ_
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos...
+
+* xref:/commands/SigmaXY.adoc[SigmaXY]
+* xref:/commands/SigmaYY.adoc[SigmaYY]
+====

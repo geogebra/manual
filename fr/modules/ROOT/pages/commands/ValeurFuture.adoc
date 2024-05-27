@@ -1,0 +1,59 @@
+= Commande ValeurFuture
+:page-en: commands/FutureValue_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+ValeurFuture( <Taux>, <Nombre de Périodes>, <Paiement>, <Valeur Actuelle (optionnelle)>, <Type (optionnel)> )::
+  Calcule la valeur acquise par la valeur actuelle placée au taux périodique constant donné pendant le nombre de
+  périodes indiqué.
+
+* *<Taux>* Taux d'intérêt par période (en notation décimale ou en %).
+* *<Nombre de Périodes>* Nombre total de paiements pour le prêt.
+* *<Paiement>* Montant du versement par période.
+* *<Valeur Actuelle>* Montant actuel du dépôt/prêt.
+* *<Type (optionnel)>* Indique quand le paiement est effectué. Si vous n'entrez pas de _Type_ (ou entrez _0_), il vaudra
+_0_ par défaut (paiement en fin de période), sinon entrez _1_ pour un paiement en début de période.
+
+[NOTE]
+====
+
+*Note :* Pour tous les arguments et résultats, les sommes payées sont représentées par des valeurs négatives et les
+sommes perçues par des valeurs positives.
+
+====
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+1) Si on dépose aujourd'hui une somme de 48335 € sur un livret à 2,5% garanti, quel sera le capital obtenu au bout de 15
+ans ?
+
+`++ValeurFuture(2.5%, 15, 0, -48335)++` retourne _70003.49_ €
+
+2) Je dépose chaque mois la somme de 100€ sur un livret au taux annuel de 1,2% garanti. Quel sera le capital obtenu au
+bout de 5 ans ?
+
+`++ValeurFuture(0.015/12, 5*12, -100)++` retourne _6226.69_ €
+
+[NOTE]
+====
+
+*Note :* Voir l'exemple réciproque avec xref:/commands/ValeurActuelle.adoc[ValeurActuelle].
+
+====
+
+====
+
+[NOTE]
+====
+
+*Note :* Assurez vous d'être cohérent pour les arguments `++<Taux>++` et `++<Nombre de Périodes>++`. Si vous calculez un
+remboursement mensuel pour un prêt sur 4 ans avec un taux d'intérêt annuel de 12%, entrez 12%/12 comme taux et 4*12
+comme nombre de périodes.
+
+====
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/Commandes_Financières.adoc[Toutes les commandes
+financières], les autres : xref:/commands/Paiement.adoc[Paiement], xref:/commands/Périodes.adoc[Périodes],
+xref:/commands/Taux.adoc[Taux], xref:/commands/ValeurActuelle.adoc[ValeurActuelle].

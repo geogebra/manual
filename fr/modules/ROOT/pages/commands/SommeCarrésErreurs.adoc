@@ -1,0 +1,19 @@
+= Commande SommeCarrésErreurs
+:page-en: commands/SumSquaredErrors_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+SommeCarrésErreurs(<Liste Points>,<Fonction f>)::
+  Calcule la somme des carrés des différences entre les valeurs des ordonnées des points et les images de leurs
+  abscisses par la fonction _f_.
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :* Soit une liste de points:
+`++L= {(1, 2), (3, 5), (2, 2), (5, 2), (5, 5)} ++` et nous avons fait calculer par exemple : `++f(x)=AjustPoly(L,1)++`(
+_f(x)=0.375x + 2_ ) et `++g(x)=AjustPoly(L,2)++` ( _g(x) = -0.38356x² + 2.80822x - 0.87671_ ), il nous est alors
+possible de déterminer que la deuxième fonction réalise le meilleur ajustement, au sens gaussien, c'est à dire avec une
+somme minimale des carrés des erreurs, en comparant les deux nombres : `++SommeCarrésErreurs(L,f)++` ( _9_ ) et
+`++SommeCarrésErreurs(L,g)++` ( _6.9863_ ).
+
+====

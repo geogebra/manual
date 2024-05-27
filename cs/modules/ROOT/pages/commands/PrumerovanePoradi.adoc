@@ -1,0 +1,23 @@
+= Příkaz PrumerovanePoradi
+:page-en: commands/TiedRank_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+PrumerovanePoradi( <Seznam> )::
+  Vytvoří seznam, jehož _i_-tý prvek je hodnost _i_-tého prvku seznamu zadaného (hodnost prvku je jeho pozice v seznamu
+  vzniklém užitím xref:/commands/Tridit.adoc[Příkaz_Tridit], tj. v zadaném setříděném seznamu). Pokud je v zadaném
+  seznamu více stejných prvků, které jsou v setříděném seznamu na pozicích _k_ až _l_, jsou těmto prvkům ve výsledném
+  seznamu přiřazeny aritmetické průměry hodností _k_ až _l_.
+
+[EXAMPLE]
+====
+
+`++PrumerovanePoradi[{3, 2, 2, 1}]++` vytvoří \{4, 2.5, 2.5, 1}.
+
+====
+
+[EXAMPLE]
+====
+
+`++PrumerovanePoradi[{4, 1, 2, 3, 4, 2}]++` vytvoří \{5.5, 1, 2.5, 4, 5.5, 2.5} .
+
+====

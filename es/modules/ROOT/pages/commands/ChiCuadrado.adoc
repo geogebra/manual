@@ -1,0 +1,30 @@
+= Comando ChiCuadrado
+:page-en: commands/ChiSquared_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+ChiCuadrado( <Grados de libertad>, x )::
+  Crea la función de distribución acumulada de una
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_de_probabilidad[distribución Chi cuadrado] con los correspondientes
+  grados de libertad.
+ChiCuadrado( <Grados de libertad>, x, <Acumulada o no (true/false)> )::
+  Si el valor lógico es _true_, crea la función de distribución acumulada de una distribución Chi cuadrado, en caso
+  contrario, crea la función de densidad de probabilidad.
+ChiCuadrado( <Grados de libertad>, <Valor> )::
+  Calcula el valor de la función de distribución acumulada de la distribución Chi cuadrado en el _Valor_ _v_, es decir
+  la probabilidad _P(X ≤ v)_ donde _X_ es una variable aleatoria con distribución Chi cuadrado con los grados de
+  libertad indicados.
+
+[EXAMPLE]
+====
+
+`++ChiCuadrado(4, 3)++` da por resultado stem:[\gamma(2, \frac\{3}\{2})], que es aproximadamente _0.44_.
+
+====
+
+[NOTE]
+====
+
+Da por resultado la probabilidad para un valor dado de la coordenada _x_ (o el área bajo la curva de la distribución Chi
+cuadradoa la izquierda del valor de _x_ dado).
+
+====

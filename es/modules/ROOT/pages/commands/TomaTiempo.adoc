@@ -1,0 +1,29 @@
+= Comando TomaTiempo
+:page-en: commands/GetTime_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+TomaTiempo()::
+  Devuelve una lista con la fecha y hora actuales en el siguiente orden:
+  milisegundos, segundos, minutos, horas (0-23), fecha, mes (1-12), año, mes (texto), día (texto), día (1 = Domingo, 2 =
+  Lunes, etc)
+
+[EXAMPLE]
+====
+
+`++ TomaTiempo()++` devuelve una lista como _\{647, 59, 39, 23, 28, 2, 2011, "Febrero", "Lunes", 2}_.
+
+====
+
+TomaTiempo( "<Formato>" )::
+  Crea un texto utilizando _Formato_ como plantilla y reemplazando los siguientes caracteres cuando están precedidos por
+  una barra inversa (\):
+  d, D, j, l, N, S, w, z, W, F, m, M, n, t, L, Y, y, a, A, g, G, h, H, i, s, U. La explicación de estos caracteres se
+  encuentra aquí http://php.net/manual/es/function.date.php
+
+[EXAMPLE]
+====
+
+`++ TomaTiempo("Hoy es \l \j de \F de \Y")++` devuelve la fecha y hora actual con el formato _Hoy es Viernes 6 de
+Noviembre de 2026_.
+
+====

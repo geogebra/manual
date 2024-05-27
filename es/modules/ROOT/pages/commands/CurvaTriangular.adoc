@@ -1,0 +1,43 @@
+= Comando CurvaTriangular
+:page-en: commands/TriangleCurve_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+CurvaTriangular( <Punto>, <Punto>, <Punto>, <Ecuación> )::
+  Crea un polinomio implícito cuya ecuación en
+  http://en.wikipedia.org/wiki/es:Coordenadas_baric%C3%A9ntricas_(n-simplex)[coordenadas baricéntricas] respecto a los
+  puntos indicados _P_, _Q_, _R_ está dada por el cuarto parámetro; las coordenadas baricéntricas son referidas como
+  _A_, _B_, _C_.
+
+[EXAMPLE]
+====
+
+`++CurvaTriangular(A, B, C, A² + B² + C² - 2B C - 2C A - 2A B = 0)++` crea la
+http://en.wikipedia.org/wiki/Steiner_inellipse[inelipse de Steiner] del triángulo _ABC_, u
+`++CurvaTriangular(A, B, C, B C + C A + A B = 0)++` crea la http://en.wikipedia.org/wiki/Steiner_ellipse[circun-elipse
+de Steiner] del triángulo _ABC_.
+
+====
+
+[EXAMPLE]
+====
+
+`++CurvaTriangular(A, B, C, A*C = 1/8)++` crea una hipérbola tal que la tangente por los puntos _A_ o _C_, divide al
+triángulo _ABC_ en dos partes de igual área.
+
+====
+
+[EXAMPLE]
+====
+
+Si _P_, _Q_, _R_ son puntos, `++CurvaTriangular(P, Q, R, (A - B)*(B - C)*(C - A) = 0)++` da una curva cúbica constituida
+por las medianas del triángulo _PQR_.
+
+====
+
+[NOTE]
+====
+
+Los puntos ingresados pueden llamarse _A_, _B_ o _C_, pero en este caso no puedes utilizar, por ejemplo, _x(A)_ en la
+ecuación, porque _A_ es interpretado como la coordenada baricéntrica.
+
+====

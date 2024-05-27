@@ -1,0 +1,142 @@
+= Images
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+GeoGebra vous permet d'intégrer, gérer, manipuler des *images* (formats acceptés : jpg, jpeg, png, gif, ou bmp ).
+
+*>* en utilisant l'outil /Fichier:Mode_image_svg.adoc[image:32px-Mode_image.svg.png[Mode image.svg,width=32,height=32]]
+xref:/tools/Image.adoc[Image] vous permet d'ajouter une image stockée sur votre ordinateur dans la vue Graphique.
+
+Dans ce mode, le raccourci clavier _Alt-clic_ permet de coller directement l’image contenue dans votre presse-papiers.
+
+*>* ou le sous-menu Éditer > Insérer Image depuis > Fichier ou > Presse-papiers, (voire même > Webcam pour l'application
+Chrome)
+
+*>* ou tout simplement par "Glisser-Déposer".
+
+*>* Vous pouvez aussi intégrer les icônes des outils GeoGebra par la commande xref:/commands/IcôneOutil.adoc[IcôneOutil]
+(pour les codes, voir par exemple xref:/NuméroOutils.adoc[ici])
+
+[EXAMPLE]
+====
+
+*Exemple :* `++IcôneOutil[26]++` déposera l'image /Fichier:Mode_image_svg.adoc[image:32px-Mode_image.svg.png[Mode
+image.svg,width=32,height=32]] dans la vue Graphique.
+
+====
+
+La propriété xref:/Propriétés_d'un_objet.adoc[Style > Remplir] de certains objets (polygone, ellipse, lieu, bouton)
+permet de les remplir par une image
+
+*>* proposée par GeoGebra à choisir dans
+/Fichier:PicturesFilling_png.adoc[image:PicturesFilling.png[PicturesFilling.png,width=158,height=120]]
+
+*>* stockée sur votre ordinateur.
+
+Les xref:/Transformations.adoc[transformations] du plan agissent sur les images.
+
+ainsi
+`++Exécute[{"Reflect[image1, Corner[image1,1] ]","Reflect[image1, Line[Corner[image1,1],Corner[image1,2] ]]","Reflect[image1, Line[Corner[image1,1],Corner[image1,4] ]]"}]++`
+vous crée un bloc de 4 images, votre 'image1' et ses transformées par symétrie pour son coin inférieur gauche, pour son
+côté inférieur et pour son côté gauche. /Fichier:4x26_PNG.adoc[image:4x26.PNG[4x26.PNG,width=253,height=86]]
+
+En retour, le menu xref:/Exporter_Graphique.adoc[Exporter], vous permet de créer une image de votre construction :
+
+* Graphique en tant qu'image (png, eps) ... au format png, EPS, PDF, SVG, EMF ;
+* Graphique en GIF animé ... (Lorsque la construction dynamique dépend d'un curseur.) ;
+* Graphique vers Presse-papiers ;
+* Graphique vers PSTricks ... ;
+* Graphique vers PGF/TikZ ... ;
+* Graphique vers Asymptote ...
+
+== Propriétés des Images
+
+=== Position
+
+La position d’une image peut être absolue sur l’écran ou relative au repère de coordonnées. Vous pouvez spécifier cela
+dans l’onglet ‘Basique’ du xref:/Dialogue_Propriétés.adoc[Dialogue Propriétés] de l’image. Vous pouvez préciser jusqu’à
+trois coins dans l’onglet ‘Position’ de la boîte de dialogue des Propriétés. Cela peut permettre de modifier l’échelle,
+l’orientation et même d’obtenir une distorsion des images. (Voir aussi la commande xref:/commands/Coin.adoc[Coin]).
+
+* ‘Coin 1’ (position du coin inférieur gauche de l’image) ;
+* ‘Coin 2’ (position du coin inférieur droit de l’image)
+
+[NOTE]
+====
+
+*Note :* Ce coin ne peut être défini que si le ‘Coin 1’ l’a été auparavant. Il contrôle la largeur de l’image.
+
+====
+
+* ‘Coin 4’ (position du coin supérieur gauche de l’image)
+
+[NOTE]
+====
+
+*Note :* Ce coin ne peut être défini que si le ‘Coin 1’ l’a été auparavant. Il contrôle la hauteur de l’image.
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :* Afin de mieux comprendre l’influence des coins sur la déformation de l’image, créez trois points A, B et C.
+
+* Le point A étant le premier coin et le point B le second coin de votre image. En déplaçant les points A et B dans le
+mode /Fichier:Tool_Move_gif.adoc[image:Tool_Move.gif[Tool Move.gif,width=32,height=32]] Déplacer vous pouvez explorer
+facilement leur influence.
+* Le point A étant le premier coin et le point C le quatrième coin, observez comment le déplacement de ces points
+influence l’image.
+* Enfin, vous pouvez définir les trois coins par ces points et voir comment le déplacement de ces points déforme
+l’image.
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :* Vous savez maintenant comment modifier la position et la taille de votre image. Si vous voulez lier votre
+image à un point A et lui donner une largeur de 3 et une hauteur de 4 unités, vous pouvez le faire comme suit :
+
+* Définir ‘Coin 1’ par A ;
+* Définir ‘Coin 2’ par A + (3, 0) ;
+* Définir ‘Coin 4’ par A + (0, 4).
+
+====
+
+[NOTE]
+====
+
+*Note :* Si vous déplacez maintenant le point A dans le mode /Fichier:Tool_Move_gif.adoc[image:Tool_Move.gif[Tool
+Move.gif,width=32,height=32]] Déplacer , votre image conserve la taille désirée.
+
+====
+
+=== Image d’arrière-plan
+
+Vous pouvez définir une image comme ‘Arrière-plan’ dans l’onglet ‘Basique’ de la boîte de dialogue des Propriétés. Une
+image d’arrière-plan se trouve en arrière des axes de coordonnées et ne peut plus être sélectionnée à la souris.
+
+[NOTE]
+====
+
+*Note :* Pour changer l’état d’arrière-plan d’une image, choisissez
+/Fichier:Menu_Properties_png.adoc[image:Menu_Properties.png[Menu Properties.png,width=16,height=16]] Propriétés dans le
+xref:/Menu_Éditer.adoc[Menu Éditer].
+
+====
+
+=== Opacité
+
+Une image peut être rendue transparente dans le but de voir les images ou les axes situés en dessous. Vous pouvez
+définir l'opacité d’une image en spécifiant une valeur de ‘Opacité’ entre 0% et 100% dans l’onglet ‘Couleur’ de la boîte
+de dialogue des Propriétés.
+
+[NOTE]
+====
+
+*Note :* Des fichiers http://en.wikipedia.org/wiki/fr:Graphics_Interchange_Format[GIF]
+ethttp://en.wikipedia.org/wiki/fr:Portable_Network_Graphics[PNG] transparents sont utilisables, mais pour les PNG vous
+devez les éditer au préalable afin de les doter d'un canal alpha (en utilisant par exemple
+[http://www.irfanview.com/[IrfanView]], sauvegardez en utilisant le plugin PNGOUT et choisissez *RGB+Alpha*)
+
+====

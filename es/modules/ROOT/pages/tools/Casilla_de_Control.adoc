@@ -1,0 +1,98 @@
+= Herramienta de Casilla de Control
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+xref:/InterAcciones.adoc[image:32px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=32,height=32]]
+[.small]#(código 52)# aparece en la caja que, por omisión, encabeza la xref:/InterAcciones.adoc[herramienta]
+correspondiente a xref:/tools/Deslizador.adoc[image:32px-Mode_slider.svg.png[Mode slider.svg,width=32,height=32]] Al dar
+_clic_ sobre la xref:/Vista_Gráfica.adoc[Vista Gráfica] se crea una casilla a tildar para exponer y ocultar uno o más
+xref:/Objetos.adoc[objetos].
+
+En la ventana emergente, se puede especificar qué xref:/Objetos.adoc[objetos] quedarían afectados por el estado de tal
+casilla.
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: El _estado_ de la casilla se corresponde a su valor
+de _verdad_ en términos xref:/Valores_Lógicos.adoc[_boolenanos_].
+
+====
+
+[NOTE]
+====
+
+Estos objetos pueden seleccionarse desde la lista que ofrece la ventana de dialogo o directamente, con el _mouse_ o
+ratón en cualquier xref:/Vistas.adoc[vista].
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: La casilla de control es una simple representación
+visual de una variable _booleana_ y la caja de diálogo es meramente un modo conveniente de añadirle al campo
+correspondiente la xref:/Visibilidad_condicional.adoc[condición de visibilidad] a varios objetos simultáneamente.
+
+====
+
+[NOTE]
+====
+
+Ver la sección destinada a xref:/Valores_Lógicos.adoc[Valores Lógicos o _Booleanos_].
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Se podría conseguir el mismo resultado seleccionando
+todos los xref:/Objetos.adoc[objetos] y anotando el nombre de tal variable de valor _booleano_, manualmente, en el campo
+de xref:/Visibilidad_condicional.adoc[visibilidad condicional] de cada uno de ellos.
+
+====
+
+[NOTE]
+====
+
+Ver también el xref:/Comandos.adoc[comando] xref:/commands/CondiciónParaMostrar.adoc[CondiciónParaMostrar]
+
+====
+
+'''''
+
+El siguiente es el guión o Script de Raymond (rami) para pasar al tamaño 13
+
+....
+(CheckBoxSetSize_1 = Botón["Cambia a pequeño el tamaño general de la Casilla"])
+CheckBoxSetSize_1.onClick = {  
+   Meld="El nombre del archivo se perderá. \n"
+   Meld=Meld+"¨Se acepta el cambio? (Alto o OK)"
+   alert(Meld)
+   XML=""+ggbApplet.getXML()
+   XML=XML.replace(/checkboxSize="\d{1,2}/g, 'checkboxSize="13')
+   ggbApplet.setXML(XML)
+   Meld="Será pequeño el tamaño de la Casilla.\n"
+   Meld=Meld+'Después de cerrar este mensaje:\n'
+   Meld=Meld+' - Es preciso guardar el Applet en tel directorio correcto bajo un Nombre nuevo.\n'
+   Meld=Meld+' - Borrar el botón.\n'
+   Meld=Meld+' - alternativamente se puede ejecutar: Menú / Opciones / Guardar Ajustes.'
+   alert(Meld)}
+}
+....
+
+'''''
+
+[.small]##
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Ver también el http://youtu.be/ZIRv_cq0Gac[video tutorial] que, en italiano, ilustra la operación de visibilidad
+condicional.
+|===
+
+[.small]##
+
+[.small]##

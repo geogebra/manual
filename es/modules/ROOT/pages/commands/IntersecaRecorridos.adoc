@@ -1,0 +1,59 @@
+= Comando IntersecaRecorridos
+:page-en: commands/IntersectPath_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+IntersecaRecorridos( <Recta (semirrecta o segmento)>, <Polígono> )::
+  Crea el recorrido de intersección entre la recta y el polígono.
+IntersecaRecorridos( <Polígono>, <Polígono> )::
+  Crea el polígono de intersección entre los dos polígonos dados.
+
+[EXAMPLE]
+====
+
+`++IntersecaRecorridos(cuadrilátero, triángulo)++` crea un nuevo polígono como intersección entre los dos indicados.
+
+====
+
+[EXAMPLE]
+====
+
+`++IntersecaRecorridos(a, poli1)++` crea un segmento entre los puntos de intersección entre la recta _a_ y el polígono
+_poli1_.
+
+====
+
+[NOTE]
+====
+
+El nuevo polígono podrá ser un cuadrilátero, un pentágono, o un hexágono dependiendo de las posiciones de los vértices
+de los polígonos dados.
+
+====
+
+IntersecaRecorridos( <Plano>, <Polígono> )::
+  Crea el recorrido de intersección entre un plano y un polígono.
+IntersecaRecorridos( <Plano>, <Cuádrica> )::
+  Crea el recorrido de intersección entre el plano y la cuádrica indicados.
+
+[EXAMPLE]
+====
+
+`++IntersecaRecorridos(a, esfera)++` crea el círculo de intersección entre el plano _a_ y la cuádrica _esfera_.
+
+====
+
+[EXAMPLE]
+====
+
+`++IntersecaRecorridos(a, poli1)++` crea un segmento entre los puntos de intersección entre el plano _a_ y el polígono
+_poli1_ en el plano del polígono.
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/Interseca.adoc[Interseca] y
+xref:/commands/IntersecaCónica.adoc[IntersecaCónica].
+
+====

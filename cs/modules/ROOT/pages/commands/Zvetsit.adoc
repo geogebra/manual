@@ -1,0 +1,41 @@
+= Příkaz Zvetsit
+:page-en: commands/ZoomIn_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Zvetsit( <Měřítko> )::
+  Zvětší (přiblíží) xref:/Grafický_pohled.adoc[Grafický pohled] v daném měřítku vzhledem k aktuálnímu zobrazení. Jako
+  střed změny měřítka bude použit střed Grafického pohledu.
+
+[EXAMPLE]
+====
+
+`++Zvetsit[1]++` nezmění měřítko Grafického pohledu vůbec; `++Zvetsit[2]++` zvětší (přiblíží) grafický pohled;
+`++Zvetsit[0.5]++`, což je ekvivalentní příkazu `++Zmensit[2]++`, zmenší (oddálí) Grafický pohled.
+
+====
+
+Zvetsit( <Měřítko>, <Střed> )::
+  Zvětší (přiblíží) xref:/Grafický_pohled.adoc[Grafický pohled] v daném měřítku vzhledem k aktuálnímu zobrazení. Jako
+  střed změny měřítka bude použit daný bod.
+
+Zvetsit( <Min x>, <Min y>, <Max x>, <Max y> )::
+  Nastaví zvětšení tak, aby se v Grafickém pohledu zobrazil přesně obdélník s vrcholy (Min _x_, Min _y_) a (Max _x_, Max
+  _y_), tomuto zobrazení se přizpůsobí měřítka na jednotlivých osách. Pokud je alespoň jeden z parametrů příkazu
+  závislým objektem, stanou se hranice pohledu a dynamickými (např. je-li _a_ posuvník, způsobí příkaz
+  `++Zvetsit[-a,-a,a,a]++` závislost Grafického pohledu na posuvníku _a_). Tomu lze předejít využitím příkazu
+  xref:/commands/KopirovatVolnyObjekt.adoc[KopirovatVolnyObjekt].
+
+[NOTE]
+====
+
+Pokud je zobrazeno více Grafických pohledů, je příkazem ovlivněn ten aktuálně aktivní.
+
+====
+
+[NOTE]
+====
+
+Originální anglická verze manuálu: /s_index_php?title=En:Manual:ZoomIn_Command_action=edit_redlink=1.adoc[ZoomIn
+Command].
+
+====

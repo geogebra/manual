@@ -1,0 +1,55 @@
+= Dialogue Redéfinir
+:page-en: Redefine_Dialog
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Redéfinir des objets est une manière souple de modifier une construction. Notez que cela peut aussi modifier l’ordre des
+étapes dans le xref:/Protocole_de_construction.adoc[Protocole de construction].
+
+[NOTE]
+====
+
+*Note :* Un élément redéfini ne peut dépendre que d'éléments définis auparavant -- vous pouvez être amené à changer
+l'ordre des éléments dans le protocole de construction.
+
+====
+
+Dans GeoGebra, un objet peut être redéfini de différentes manières :
+
+* Sélectionnez /Fichier:Mode_move_svg.adoc[image:32px-Mode_move.svg.png[Mode move.svg,width=32,height=32]]
+l'xref:/tools/Déplacer.adoc[Outil Déplacer] et double cliquez sur l’objet dans la fenêtre xref:/Algèbre.adoc[Algèbre],
+ou sélectionnez l'objet et frappez la touche [.kcode]#F2#.
+** Pour les objets libres, un champ est ouvert dans lequel vous pouvez directement modifier la représentation algébrique
+de l’objet. Pressez la touche [.kcode]#Entrée# pour appliquer vos modifications.
+** Pour les objets dépendants le *Dialogue Redéfinir* est ouvert, vous permettant de redéfinir l’objet.
+* Sélectionnez /Fichier:Mode_move_svg.adoc[image:32px-Mode_move.svg.png[Mode move.svg,width=32,height=32]] l'outil
+Déplacer et double cliquez sur l’objet dans la fenêtre xref:/Graphique.adoc[Graphique], ou sélectionnez l'objet et
+frappez la touche [.kcode]#F2#. Le *Dialogue Redéfinir* est ouvert, vous permettant de redéfinir l’objet.
+** Changez un objet en entrant nom et nouvelle définition dans le Champ de Saisie.
+** Ouvrez le Dialogue Propriétés et changer la définition de l’objet dans l’onglet ‘Basique’.
+
+[NOTE]
+====
+
+*Note :* Les objets fixes ne peuvent être redéfinis. Pour redéfinir un objet fixe, vous devez d’abord lui rendre sa
+liberté dans le xref:/Dialogue_Propriétés.adoc[Dialogue Propriétés].
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :* Pour placer un point libre A sur une ligne h existante, double cliquez sur A pour ouvrir la fenêtre de
+dialogue Redéfinir, entrez la commande `++Point[h]++` dans le champ texte apparu puis pressez la touche
+[.kcode]#Entrée#. Pour retirer le point de cette ligne et le rendre à nouveau libre, vous devez le redéfinir comme un
+objet libre quelconque par des coordonnées telles que (1, 2).
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :* Un autre exemple est la conversion d’une droite h passant par deux points A et B en segment. Ouvrez le
+dialogue Redéfinir pour la droite h et entrez la commande `++Segment[A, B]++` dans le champ texte apparu. Ceci
+fonctionne aussi dans l’autre sens.
+
+====

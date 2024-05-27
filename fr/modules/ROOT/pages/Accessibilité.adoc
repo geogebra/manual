@@ -1,0 +1,91 @@
+= Accessibilité
+:page-en: Accessibility
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Lorsque vous créez une appliquette, il est important de permettre (autant que faire se peut) à tous les étudiants d'en
+profiter aisément.
+
+:toc:
+
+== Taille des caractères, Couleurs & Contrastes
+
+Utiliser de grands caractères avec un contraste satisfaisant est important. Sélectionner une grande taille de police via
+Options -> Taille des caractères avant de créer votre appliquette. Une autre possibilité, utiliser les raccourcis
+clavier [.kcode]#Ctrl# + [.kcode]#2# pour agrandir tous les caractères et rendre plus épaisses les lignes.
+[.kcode]#Ctrl# + [.kcode]#3# affecte par défaut à tous les nouveaux objets la couleur Noir et et "non rempli".
+
+L'idéal est d'utiliser des couleurs sombres sur un fond blanc et des tracés épais. Un
+http://snook.ca/technical/colour_contrast/colour.html#fg=FF0000,bg=FFFFFF[Rouge] pur et un
+http://snook.ca/technical/colour_contrast/colour.html#fg=00FF00,bg=FFFFFF[Vert] n'ont vraiment pas un contraste trop
+satisfaisant, il est préférable d'utiliser des couleurs sombres , par exemple
+http://snook.ca/technical/colour_contrast/colour.html#fg=0000FF,bg=FFFFFF[Bleu],
+http://snook.ca/technical/colour_contrast/colour.html#fg=226600,bg=FFFFFF[Gris foncé],
+http://snook.ca/technical/colour_contrast/colour.html#fg=990033,bg=FFFFFF[Rouge foncé]
+
+Si vous utilisez des couleurs pour distinguer les objets similaires, envisagez également d'utiliser des lignes en
+pointillés pour l'un d'eux. Vous pouvez également trouver des sites où vous pouvez vérifier si votre schéma de couleur
+est bon, par exemple http://www.vischeck.com/
+
+== Curseurs
+
+Faire des curseurs aussi longs que possible afin qu'ils soient utilisables par les élèves dont les habiletés motrices
+fines sont moins bonnes. Penser aussi à ajouter des boutons "décrémentation" et "incrémentation" à chaque extrémité du
+curseur.
+
+La touche [.kcode]#espace# suspend/reprend l'animation d'un curseur
+
+== Raccourcis Clavier
+
+Les étudiants peuvent utiliser la touche [.kcode]#Tab# pour parcourir en boucle les objets dans votre appliquette. Il
+est important que vous déactiviez l'option "Sélectionnable" via Propriétés -> Avancé pour tout objet ne devant pas être
+sélectionné. Il y a, dans la version "bureau" un raccourci clavier [.kcode]#Ctrl# + [.kcode]#Maj# + [.kcode]#D# bascule
+pour cette action pour tous les objets qui ne sont de type Bouton / Curseur / CaseACocher / Point / ChampTexte.
+
+Les touches fléchées [.kcode]#Left#, [.kcode]#Right#, [.kcode]#Up#, [.kcode]#Down# peuvent être utilisées pour faire
+varier des Curseurs ou des Points après les avoir sélectionnés.
+
+[.kcode]#Espace# peut être utilisée pour activer un Bouton ou en bascule pour une CaseACocher.
+
+Les appliquettes GeoGebra sont également entièrement tactiles afin que les élèves puissent les utiliser sur une grande
+tablette spéciale si nécessaire.
+
+== Infobulles
+
+Vous pouvez affecter des infobulles personnalisées à certains objets via leur _Légende_ et en paramétrant à _Légende_
+l'item _Infobulle_ dans l'onglet _Avancé_ de leurs propriétés.
+
+== Lecteur d'écrans
+
+Vous pouvez avoir un texte attaché aux Vues graphiques qui pourra être lu par un lecteur d'écran.
+
+Si vous créer dans GeoGebra un texte nommé `++altText++`, (resp .`++altText2++`, `++altText3D++`) alors il sera attaché
+à la Vue Graphique (resp. Graphique 2, Graphique 3D).
+
+--le 20/09/2016
+
+== Utilisation à la souris
+
+Pour travailler avec GeoGebra en utilisant uniquement la souris, il est possible d'afficher un
+xref:/Clavier_virtuel.adoc[Clavier virtuel] intégré. Sélectionner _Affichage_ puis _Clavier virtuel_ pour l'ouvrir.
+Utiliser ce clavier en cliquant sur les caractères avec votre souris.
+
+[NOTE]
+====
+
+*Note :* Il y a plus de symboles utilisables que sur un clavier normal (par ex. stem:[ \pi], stem:[ \int], stem:[
+\alpha], etc.). Cliquer sur le bouton [.kcode]#AltGr#, afin utiliser davantage de caractères.
+
+====
+
+== Utilisation au clavier
+
+Pour ouvrir les menus en utilisant uniquement le clavier:
+
+* Sous Windows, presser la touche [.kcode]#Alt# et utiliser les touches fléchées ;
+* SousMac, activer d'abord l'_accès total au clavier_ en pressant [.kcode]#Ctrl# + [.kcode]#F1#. Maintenant,
+sélectionner les menus en utilisant [.kcode]#Ctrl# + [.kcode]#F2# ou, pour certains claviers [.kcode]#Fn# +
+[.kcode]#Ctrl# + [.kcode]#F2#.
+
+Pour plus d'options avec le clavier, voir la section xref:/Raccourcis_clavier.adoc[Raccourcis clavier]. De plus, toutes
+les fonctionnalités du xref:/Dialogue_Propriétés.adoc[Dialogue Propriétés] sont accessibles par l'intermédiaire des
+xref:/Script.adoc[scripts].

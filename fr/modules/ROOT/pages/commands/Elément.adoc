@@ -1,0 +1,95 @@
+= Commande Elément
+:page-en: commands/Element_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Elément( <Liste>, <Position n> )::
+  Retourne le __n__^ème^ élément de la liste.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Elément({1, 3, 2}, 2)++` retourne _3_, le second élément de _\{1, 3, 2}_.
+
+====
+
+Elément( <Matrice M>, <Ligne l> , <Colonne c> )::
+  Retourne l'élément stem:[a_\{l,c}] de la __l__^ème^ligne et __c__^ème^ colonne de la matrice _M_.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Elément({{1, 3, 2}, {0, 3, -2}}, 2, 3)++` retourne _-2_, le troisième élément de la deuxième ligne de
+stem:[\begin\{pmatrix}1&3&2\\0&3&-2\end\{pmatrix}].
+
+====
+
+Elément( <Liste>, <Index1>, <Index2>, ... )::
+  Dans le cas où L est une liste de dimension _n_, on peut demander jusqu'à _n_ indices pour obtenir un élément (ou une
+  liste d'éléments) au niveau référencé.
+
+[EXAMPLE]
+====
+
+*Exemple :* Soit L=\{\{\{1,2},\{3,4}},\{\{5,6},\{7,8}}}. Alors `++Elément(L,1,2,1)++` retourne 3, `++Elément(L,2,2)++`
+retourne \{7,8}.
+
+====
+
+[NOTE]
+====
+
+*Note :* La liste ne doit contenir que des éléments de même type (par ex., seulement des nombres ou seulement des
+points).
+
+====
+
+== Accès direct à un élément
+
+Liste(k)
+
+Matrice(i,j)
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* Soit `++liste = {1,2,3,4,5}++`, alors :
+** `++liste(1)++` retourne le premier élément de liste, soit _1_
+** `++liste(2)++` retourne le deuxième élément de liste, soit _2_
+** .../...
+** `++liste(-1)++` retourne le dernier élément de liste, soit _5_
+** `++liste(-5)++` retourne le premier élément de liste, soit _1_
+** `++liste(0)++` est _non défini_, de même que liste(k) pour k>5 ou k <-5
+
+* Soit `++matrice={{1,2},{3,4}}++`, alors :
+** `++matrice(1,1) ++` retourne le premier élément de la première ligne, soit _1_
+** `++matrice(2,2)++`, `++matrice(-1,2)++`, `++matrice(2,-1) ++`et `++matrice(-1,-1) ++`retournent toutes le deuxième
+élément de la deuxième ligne, soit _4_.
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+avec la possibilité de travailler en littéral
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+Si les variables _a_, _b_ et _c_ ne sont pas définies `++Elément({a, b, c}, 2)++` retourne _b_, le second élément de
+_\{a, b, c}_.Si les variables _a_, _b_, _c_, _d_, _e_ et _f_ ne sont pas définies
+`++Elément({{a, b, c}, {d, e, f}}, 2, 3)++` retourne _f_, le troisième élément de la deuxième ligne de
+stem:[\begin\{pmatrix}a&b&c\\d&e&f\end\{pmatrix}].
+
+====

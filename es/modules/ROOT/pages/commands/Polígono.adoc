@@ -1,0 +1,47 @@
+= Comando Polígono
+:page-en: commands/Polygon_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Polígono( <Punto>, ..., <Punto> )::
+  Crea un polígono definido por los puntos dados.
+
+[EXAMPLE]
+====
+
+`++Polígono((1, 1), (3, 0), (3, 2), (0, 4))++` crea un cuadrilátero.
+
+====
+
+Polígono( <Punto>, <Punto>, <Número de vértices> )::
+  Crea un polígono regular con _n_ vértices
+
+[EXAMPLE]
+====
+
+`++Polígono((1, 1), (4, 1), 6)++` crea un hexágono.
+
+====
+
+Polígono( <Lista de Puntos> )::
+  Devuelve un polígono definido por los puntos de la lista.
+
+[EXAMPLE]
+====
+
+`++Polígono({(0, 0), (2, 1), (1, 3)})++` devuelve un triángulo
+
+====
+
+Polígono( <Punto>, <Punto>, <Número de vértices>, <Dirección> )::
+  Crea un polígono regular con _n_ vértices y en la dirección dada (p. ej. un plano al cual el polígono será paralelo,
+  si es posible)
+
+[NOTE]
+====
+
+Ver también las herrramientas xref:/tools/Polígono.adoc[image:24px-Mode_polygon.svg.png[Mode
+polygon.svg,width=24,height=24]] xref:/tools/Polígono.adoc[Polígono] y
+xref:/tools/Polígono_regular.adoc[image:24px-Mode_regularpolygon.svg.png[Mode regularpolygon.svg,width=24,height=24]]
+xref:/tools/Polígono_regular.adoc[Polígono regular].
+
+====

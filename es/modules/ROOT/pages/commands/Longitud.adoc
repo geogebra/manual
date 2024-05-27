@@ -1,0 +1,76 @@
+= Comando Longitud
+:page-en: commands/Length_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+ +
+Lengitud( <Objecto> )::
+  Da por resultado la longitud del objeto.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++Longitud( <Vector> )++` da por resultado la longitud del vector.
+* `++Longitud( <Punto> )++` da por resultado la longitud del vector de posición del punto dado.
+* `++Longitud( <Lista> )++` da por resultado la longitud de la lista, es decir, la cantidad de elementos que la
+componen.
+* `++Longitud( <Texto> )++` da por resultado la cantidad de caracteres del texto.
+* `++Longitud( <Lugar geométrico> )++` devuelve la cantidad de puntos que definen al lugar geométrico. Utiliza
+xref:/commands/Perímetro.adoc[Perímetro](Lugar geométrico) para obtener la longitud del lugar geométrico. Para más
+información, consulta el artículo sobre xref:/commands/Primero.adoc[Comando Primero].
+* `++Longitud( <Arco> )++` devuelve la _longitud del arco_ (p.ej. solo la longitud de la curva) de un arco o sector.
+
+====
+
+Longitud (<Función>, <Extremo inferior del intervalo>, <Extremo superior del intervalo>)::
+  Da por resultado la longitud de la gráfica de la función en el intervalo dado.
+Longitud( <Función>, <Punto inicial>, <Punto final> )::
+  Da por resultado la longitud de la gráfica de la función entre dos puntos.
+Longitud( <Curva>, <Valor inicial de t>, <Valor final de t> )::
+  Da por resultado la longitud de la curva entre dos valores *del parámetro*.
+Longitud( <Curva>, <Punto inicial>, <Punto final> )::
+  Da por resultado la longitud de la curva entre dos puntos de la curva.
+
+[EXAMPLE]
+====
+
+`++Longitud(2x, 0, 1)++` da por resultado _2.236067977_, que es aproximadamente igual a stem:[\sqrt\{5}].
+
+====
+
+[NOTE]
+====
+
+Si los puntos dados no pertenecen a la gráfica de la función, se tomarán sus abscisas para determinar el intervalo.
+
+====
+
+== Sintaxis CAS
+
+Longitud( <Función>, <x inicial>, <x final> )::
+  Calcula la longitud de la gráfica de la función entre dos puntos.
+Longitud( <Función>, <Variable>, <x inicial>, <x final> )::
+  Calcula la longitud de la gráfica de la función desde _Punto inicial_ al _Punto final_
+
+[EXAMPLE]
+====
+
+`++Longitud(2 a, a,  0, 1)++` da por resultado stem:[\sqrt\{5}].
+
+====
+
+[EXAMPLE]
+====
+
+`++Longitud(2 x, 0, 1)++` da por resultado stem:[\sqrt\{5}].
+
+====
+
+[NOTE]
+====
+
+Ver también la herramienta image:22px-Mode_distance.svg.png[Mode distance.svg,width=22,height=22]
+xref:/tools/Distancia_o_Longitud.adoc[Distancia o longitud].
+
+====

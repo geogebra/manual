@@ -1,0 +1,74 @@
+= Body a vektory
+:page-en: Points_and_Vectors
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Body a vektory mohou být zadávány do xref:/Vstupní_pole.adoc[vstupního pole] pomocí kartézských nebo polárních souřadnic
+(viz xref:/Čísla_a_úhly.adoc[Čísla a úhly]). Body a vektory mohou být také vytvořeny pomocí nástrojů
+/Soubor:Tool_New_Point_gif.adoc[image:Tool_New_Point.gif[Tool New Point.gif,width=32,height=32]] xref:/Bod.adoc[Bod],
+/Soubor:Tool_Vector_from_Point_gif.adoc[image:Tool_Vector_from_Point.gif[Tool Vector from Point.gif,width=32,height=32]]
+xref:/tools/Vektor_z_bodu.adoc[Vektor z bodu],
+/Soubor:Tool_Vector_between_Two_Points_gif.adoc[image:Tool_Vector_between_Two_Points.gif[Tool Vector between Two
+Points.gif,width=32,height=32]] xref:/tools/Vektor_daný_dvěma_body.adoc[Vektor daný dvěma body] a různými
+xref:/Příkazy.adoc[příkazy].
+
+[NOTE]
+====
+
+Popisky velkými písmeny značí body, zatímco malá písmena značí vektory. Tato dohoda není povinná.
+
+====
+
+[EXAMPLE]
+====
+
+* Pro zadání bodu P nebo vektoru v pomocí kartézských souřadnic můžeme použít `++P = (1, 0) nebo v = (0, 5)++`.
+* Chceme-li použít polární souřadnice, napíšeme `++P = (1; 0°)++` nebo `++v = (5; 90°)++`.
+
+====
+
+[NOTE]
+====
+
+Polární souřadnice musíme oddělovat středníkem. Pokud nenapíšeme symbol pro stupeň, GeoGebra bude s úhlem zacházet tak,
+jako by byl zadán v radiánech.
+
+====
+
+Souřadnice bodů a vektorů zjistíme pomocí xref:/Předdefinované_funkce_a_operátory.adoc[předdefinovaných funkcí] _x_ a
+_y_.
+
+[EXAMPLE]
+====
+
+Pokud `++P=(1,2)++` je bod a `++v=(3,4)++` je vektor, z `++x(P)++` dostaneme 1 a z `++y(v)++` dostaneme 4.
+
+====
+
+Polární souřadnice bodu _Q_ zjistíme pomocí `++abs(Q)++` a `++arg(Q)++`.
+
+== Výpočty
+
+V GeoGebře můžeme provádět s body a vektory výpočty.
+
+[EXAMPLE]
+====
+
+* Zadáním `++M = (A + B) / 2++` do textového pole můžeme vytvořit střed M vzdálenosti bodů A a B.
+* Délku vektoru _v_ vypočítáme pomocí `++Delka = sqrt(v * v)++`
+* Pokud _A = (a, b)_, potom z `++A + 1++` dostaneme _(a + 1, b + 1)_. Pokud _A_ je xref:/Komplexní_čísla.adoc[komplexní
+číslo] _a+bί_, potom z `++A+1++` dostaneme _a + 1 + bί_.
+
+====
+
+== Vektorový součin
+
+Pro dva body nebo vektory z `++(a, b) ⊗ (c, d)++` dostaneme z-ovou souřadnici vektorového součinu _(a, b, 0) ⊗ (c, d,
+0)_ jako jediné číslo. Podobná syntaxe platí pro seznamy, ale výsledkem je v takovém případě seznam.
+
+[EXAMPLE]
+====
+
+* `++{1, 2} ⊗ {4, 5}++` dostaneme _\{0, 0, -3}_
+* `++{1, 2, 3} ⊗ {4, 5, 6}++` dostaneme _\{3, 6, -3}_.
+
+====

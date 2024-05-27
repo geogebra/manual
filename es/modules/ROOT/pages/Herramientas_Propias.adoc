@@ -1,0 +1,129 @@
+= Herramientas Propias
+:page-en: tools/Custom_Tools
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+GeoGebra permite la creación de herramientas propias que pueden, posteriormente, emplearse como cualquiera de las del
+repertorio original e incluso ingresarse como un comando más en la xref:/Barra_de_Entrada.adoc[Barra de Entrada].Una vez
+creadas, se guardan automáticamente dentro del /Referencia:Formato_Archivo.adoc[archivo “ggb” de la construcción].
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Un objeto creado como _salida_ de una herramienta
+propia, aunque se hubiera definido como _deslizable_ dentro de un recorrido o región, no podrá ser desplazado.Así, no se
+podría desplazar el punto originado por una herramienta propia pese a que surgiera como una de sus _salidas_
+como...*`++Punto[ <Recorrido> ]++`*
+
+====
+
+[NOTE]
+====
+
+En caso de precisarse elementos _desplazables_, se puede recurrir a definir una lista, en inglés, de comandos adecuados
+empleados con xref:/commands/Ejecuta.adoc[Ejecuta].
+
+====
+
+== Hacia... una _Nueva Herramienta_
+
+Para crear una herramienta se acude a la opción/Archivo:Menu_Create_Tool_png.adoc[image:Menu_Create_Tool.png[Menu Create
+Tool.png,width=16,height=16]] xref:/Nueva_herramienta.adoc[Nueva herramienta] del correspondiente
+xref:/Menú_de_Herramientas.adoc[menú].
+
+Desde una construcción existente, se pueden crear herramientas propias. Tras preparar la construcción de una
+herramienta, se selecciona xref:/Nueva_herramienta.adoc[*Nueva Herramienta*] en el menú de
+xref:/Menú_de_Herramientas.adoc[Herramientas].Se despliega una ventana de diálogo donde se pueden especificar...-los
+[.kcode]#Objetos de salida# y-[.kcode]#Objetos de Entrada# de la herramienta en marcha para luego
+elegirle...-[.kcode]#Nombre e Ícono# con que aparecerá en la xref:/Barra_de_Herramientas.adoc[_barra_].
+
+== Guardando la Nueva Herramienta
+
+Cuando el boceto en que se produjo la nueva herramienta se guarda, queda también archivada automáticamente, como parte
+de la información que lo compone.
+
+[NOTE]
+====
+
+Se pueden guardar las herramientas creadas para poder reutilizarlas en otras construcciones de GeoGebra.
+
+====
+
+En el xref:/Menú_de_Herramientas.adoc[Menú de Herramientas], al seleccionar _xref:/Gestión_de_herramientas.adoc[Gestión
+de herramientas]_, se pueden elegir las que se quiere que aparezcan, de una lista.Basta un _clic_ sobre el botón *Guarda
+como…* para guardar la herramienta en el equipo.
+
+[NOTE]
+====
+
+Las herramientas definidas se guardan como /Referencia:Formato_Archivo.adoc[archivos con extensión ‘.ggt’] para
+distinguirlos de los /Referencia:Formato_Archivo.adoc[usuales de GeoGebra (‘.ggb’)].
+
+====
+
+== Acceso a Herramientas Creadas
+
+Al abrir una nueva interfaz de GeoGebra usando el ítem Nuevo del menú xref:/Menú_Archivo.adoc[Archivos], después de
+haber creado una herramienta, será parte aún de la xref:/Barra_de_Herramientas.adoc[Barra de Herramientas].Sin embargo,
+si se abre una nueva ventana de GeoGebra (ítem /Archivo:Menu_New_png.adoc[image:Menu_New.png[Menu
+New.png,width=16,height=16]] *Nueva Ventana* del xref:/Menú_Archivo.adoc[Menú Archivo]), o GeoGebra otro día, la creada
+ya no será parte de la xref:/Barra_de_Herramientas.adoc[_barra_].
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Para asegurarse de disponer, en una nueva ventana,
+de las herramientas creadas, se puede apelar al ítem /Archivo:Menu_Save_png.adoc[image:Menu_Save.png[Menu
+Save.png,width=16,height=16]] *Guarda Configuración* del xref:/Menú_de_Opciones.adoc[Menú de Opciones].Desde ese
+momento, la confeccionada será una más del repertorio usual en la _barra_ de las de GeoGebra.
+
+====
+
+[NOTE]
+====
+
+Se pueden eliminar las herramientas nuevas de la xref:/Barra_de_Herramientas.adoc[Barra de Herramientas] después de
+abrirlas con la opción "Gestión de herramientas… " desde el correspondiente xref:/Menú_de_Herramientas.adoc[menú].Basta
+con seleccionarlas de la _Lista de Herramientas_ de la ventana de diálogo emergente e ir pulsando el botón
+[.kcode]#Borra#.Es importante [.underline]#guardar# cualquier herramienta que se desee conservar, antes de borrarla.
+
+====
+
+== Importación de Herramientas Desarrolladas
+
+Después de guardar la herramienta creada (como /Referencia:Formato_Archivo.adoc[archivo .ggt]), es posible importarla a
+una nueva ventana de GeoGebra en cualquier momento:
+
+* Simplemente seleccionando /Archivo:Menu_Open_png.adoc[image:Menu_Open.png[Menu Open.png,width=16,height=16]] Abre del
+xref:/Menú_Archivo.adoc[Menú Archivo] y eligiendo el que corresponda a la herramienta.
+* Se puede recuperar un /Referencia:Formato_Archivo.adoc[archivo GGT] arrastrándolo desde su posición en el directorio
+de archivos y depositándolo en la ventana de GeoGebra.
+
+[NOTE]
+====
+
+Abrir un archivo de herramientas /Referencia:Formato_Archivo.adoc[(GGT)] no afecta la construcción en marcha. Solo hace
+que tal herramienta pase a formar parte de la xref:/Barra_de_Herramientas.adoc[_barra_].
+
+====
+
+[.small]##
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Un http://youtu.be/A0xZjlOoBYk[breve video], en italiano, ilustra la creación de una herramienta propia, personalizada.
+|===
+
+[.small]##
+
+[.small]##

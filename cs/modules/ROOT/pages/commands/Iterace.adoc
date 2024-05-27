@@ -1,0 +1,24 @@
+= Příkaz Iterace
+:page-en: commands/Iteration_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Iterace( <Funkce f(x)>, <Počáteční hodnota x~0~>, <Číslo n> )::
+  Iterace je zadána předpisem _x~n+1~_ = f(_x~n~_) a počáteční hodnotou __x__~0~. Výsledkem po _n_ krocích iterace je
+  hodnota _x~n~_.
+
+[EXAMPLE]
+====
+
+Dalším příkladem užití tohoto příkazu je opakované přičítání. Chceme-li např. 4 krát přičíst číslo 7 k číslu 3, zadáme
+`++f(x) = x+7++`. Příkaz `++Iterace[f, 3, 4]++` dává výsledek (((3+7) +7) +7) +7 = 31.
+
+====
+
+[EXAMPLE]
+====
+
+Po zadání funkce `++f(x) = x^2++` , je výsledkem příkazu `++Iteration[f, 3, 2]++` hodnota _(3^2^)^2^=81_.
+
+====
+
+/s_index_php?title=En:Iteration_Command_action=edit_redlink=1.adoc[en:Iteration Command]

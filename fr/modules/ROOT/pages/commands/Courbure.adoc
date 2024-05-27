@@ -1,0 +1,26 @@
+= Commande Courbure
+:page-en: commands/Curvature_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Courbure( <Point A>, <Objet> )::
+  Calcule la courbure de l'objet (fonction, courbe ou conique) au point _A_.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* `++Courbure((0,0), x^2)++` donne _2_ ;
+* `++Courbure((0, 0), Courbe(cos(t), sin(2t), t, 0, π))++` donne _0_ ;
+* `++Courbure((0, 0), Conique({1, 1, 1, 2, 2, 3}))++` donne _0.15_ ;
+* `++Courbure((0,3), x²/4 + y²/9 = 1)++` donne _0.75_.
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel , mais sans la possibilité d'effectuer du calcul
+littéral.

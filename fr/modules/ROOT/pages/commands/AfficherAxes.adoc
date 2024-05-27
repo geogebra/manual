@@ -1,0 +1,43 @@
+= Commande AfficherAxes
+:page-en: commands/ShowAxes_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+AfficherAxes( )::
+  Affiche les axes dans la vue active.
+
+AfficherAxes( <Booléen> )::
+  Affiche/Cache les axes dans la vue active.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* `++AfficherAxes(true)++` Les axes sont affichés dans la vue active.
+* `++AfficherAxes(false)++` Les axes *ne* sont *pas* affichés dans la vue active.
+
+====
+
+AfficherAxes( <Vue 1|2|3>, <Booléen> )::
+  Affiche/Cache les axes dans la vue désignée :
+  (Vue = 1 pour _Graphique_ ; = 2 pour _Graphique 2_ ; = 3 pour _Graphique 3D_)
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* `++AfficherAxes(1, true)++` Les axes sont affichés dans _Graphique_.
+* `++AfficherAxes(2, false)++` Les axes *ne* sont *pas* affichés dans _Graphique 2_.
+
+====
+
+[NOTE]
+====
+
+*Note :* Pour travailler sur un seul axe, utiliser la commande
+xref:/commands/SoitVisibleDansVue.adoc[SoitVisibleDansVue].
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/AfficherGrille.adoc[AfficherGrille].

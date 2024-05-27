@@ -1,0 +1,100 @@
+= Commande Barres
+:page-en: commands/BarChart_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Barres( <Liste Données>, <Liste Effectifs> )::
+  vous donne un diagramme en barres représentant les données avec les effectifs correspondants
+
+[NOTE]
+====
+
+*Note :* Les données doivent être ordonnées dans l'ordre croissant.
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+* `++Barres({10,11,12,13,14}, {5,8,12,0,1})++`
+* `++Barres({5, 6, 7, 8, 9}, {1, 0, 12, 43, 3})++`
+* `++Barres({0.3, 0.4, 0.5, 0.6}, {12, 33, 13, 4})++`
+
+====
+
+Barres( <Liste Données>, <Liste Effectifs>, <Largeur Barres w> )::
+  vous donne un diagramme en barres représentant les données avec les effectifs correspondants, les barres ayant la
+  largeur _w_.
+
+[EXAMPLE]
+====
+
+*Exemple :* =
+
+* `++Barres({5,6,7,8},{5,8,12,1},0.5) ++` laisse un espace entre les barres ;
+* `++Barres({10,11,12,13,14},{5,8,12,0,1},0) ++` est un diagramme en bâtons.
+
+====
+
+Barres( <Série brute > , <Largeur Barres> )::
+  vous donne, à partir de la série brute de données un diagramme en barres de la largeur donnée
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Barres( {1,1,1,2,2,2,2,2,3,3,3,5,5,5,5}, 1)++`
+
+====
+
+Barres( <Valeur Début>, <Valeur Fin>, <Liste Hauteurs> )::
+  Crée un diagramme en barres sur l’intervalle donné avec un nombre de barres déterminé par le nombre de hauteurs
+  proposées dans la liste
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Barres(10, 20, {1,2,3,4,5} )++` vous donne un diagramme à cinq barres de hauteurs données sur
+l’intervalle [_10, 20_].
+
+====
+
+Barres( <Valeur Début a>, <Valeur Fin b>, <Expression>, <Variable k>, <de c>, <à d> )::
+  vous donne un diagramme en barres sur l’intervalle [_a, b_], dont les hauteurs sont déterminées par l’expression où
+  _k_ varie de _c_ à _d_.
+
+[EXAMPLE]
+====
+
+*Exemple :* Si p = 0.1, q = 0.9, et n = 10 sont des nombres, alors
+`++Barres(-0.5,n+0.5,Combinaison(n,k)*p^k*q^(n-k),k,0,n) ++` vous donne un diagramme en barres sur l’intervalle [_-0.5,
+n+0.5_]. Les hauteurs des barres étant les probabilités calculées par l’expression donnée.
+
+====
+
+Barres( <Valeur Début a>, <Valeur Fin b>, <Expression>, <Variable k>, <de c>, <à d>, <pas p> )::
+  vous donne un diagramme en barres sur l’intervalle [_a, b_], dont les hauteurs sont déterminées par l’expression où
+  _k_ varie de _c_ à _d_ avec un pas de _p_.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Barres(0, π, abs(cos(k)),k,0,π,π/9)++` vous donne un diagramme en 10 barres.
+
+====
+
+Il est maintenant possible de préciser un remplissage ou une couleur différents pour chacune des barres du diagramme.
+
+Barres( <Série brute>, <Largeur Barres>, <Echelle (optionnelle)> )::
+  vous donne, à partir de la série brute de données un diagramme en barres de la largeur donnée et leur hauteur dépend
+  du facteur d' _Echelle_.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Barres( {1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5}, 1, 2)++`
+
+====
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul formel*
+à éviter maintenant ?

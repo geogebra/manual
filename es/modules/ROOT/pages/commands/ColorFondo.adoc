@@ -1,0 +1,86 @@
+= Comando ColorFondo
+:page-en: commands/SetBackgroundColor_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+ColorFondo( <Objeto>, <Rojo>, <Verde>, <Azul> )::
+  Cambia el color de fondo del objeto. Se aplica a Textos y objetos de la Hoja de Cálculo. El rojo, verde y azul
+  representan la cantidad del componente del color correspondiente, siendo 0 el mínimo y 1 el máximo. El número _t_ en
+  exceso de tal intervalo es re-encuadrado según la función stem:[2\left|\frac\{t}2-\mathrm
+  round\left(\frac\{t}2\right)\right|]
+ColorFondo( <Objeto>, <"Color"> )::
+  Cambia el color de fondo del objeto. Se aplica a Textos y objetos de la Hoja de Cálculo. El color se anota como
+  xref:/Textos.adoc[texto], que puede ser:
+
+* El nombre de un color en inglés (ver /Referencia:Colores.adoc[Referencia de Colores]). Algunos también pueden
+escribirse en otros idiomas. Los aceptados en español se listan a continuación.
+
+[NOTE]
+====
+
+Al utilizar este comando dentro de un guión (script) el nombre del color debe consignarse en inglés.
+
+====
+
+* Negro
+* Gris oscuro
+* Gris
+* Azul oscuro
+* Azul
+* Verde oscuro
+* Verde
+* Carmesí
+* Rojo
+* Magenta
+* Añil
+* Púrpura
+* Marrón
+* Naranja
+* Dorado
+
+* Lima
+* Cian
+* Turquesa
+* Agua
+* Plateado
+* Gris claro
+* Rosa
+* Violeta
+* Amarillo
+* Amarillo claro
+* Naranja
+* Lila
+* Púrpura claro
+* Verde claro
+* Blanco
+
+ 
+
+* Una cadena hexadecimal del tipo #AARRGGBB o #RRGGBB donde AA define la transparencia (00 completamente transparente
+hasta FF completamente opaco); RR define la componente roja; GG, la verde y BB, la azul.
+
+[EXAMPLE]
+====
+
+`++ColorFondo(texto1, "#80FF0000")++` establece como color de fondo del objeto existente _texto1_ como Rojo, con un 50%
+de transparencia.
+
+====
+
+ColorFondo( <Rojo>, <Verde>, <Azul> )::
+  Cambia el color de fondo de la Vista gráfica activa.
+ColorFondo( <"Color"> )::
+  Chambia el color de fondo de la Vista gráfica activa.
+
+[NOTE]
+====
+
+Si utilizas este comando en un guión (script) debes ingresar el nombre del color en inglés
+
+====
+
+[NOTE]
+====
+
+Ver también la sección de xref:/Colores_Dinámicos.adoc[Colores Dinámicos] y el comando xref:/commands/Color.adoc[Color].
+
+====

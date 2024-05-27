@@ -1,0 +1,51 @@
+= Comando DirecciónVista
+:page-en: commands/SetViewDirection_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+DirecciónVista( <Dirección> )::
+  Fija la orientación de la Vista 3D dependiendo del objeto dado.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++DirecciónVista(Vector((0, 0, 1)))++`
+* `++DirecciónVista((0, 0, 1))++`
+* `++DirecciónVista(x + y + z = 1)++`
+
+====
+
+DirecciónVista( )::
+  Fija la orientación de la Vista 3D a la posición por defecto.
+
+[EXAMPLE]
+====
+
+`++DirecciónVista()++`
+
+====
+
+DirecciónVista( <Dirección>, <Animación (true/false)> )::
+  Fija la orientación de la Vista 3D dependiendo del objeto dado, con animación opcional.
+
+[EXAMPLE]
+====
+
+Para obtener la rotación de la Vista 3D, dependiendo de los valores de un deslizador _α_, utiliza el comando
+`++DirecciónVista(Vector((1; α; -30°)), false)++` en el guión (script) de la pestaña _Al actualizar_ del deslizador _α_.
+
+====
+
+[NOTE]
+====
+
+*Notas:*
+
+* La dirección de la vista puede establecerse a partir de una recta, segmento, plano, etc.
+* Si se ejecuta `++DirecciónVista(x + y + z = 1)++` dos veces, puede haber dos resultados. El segundo rotará la vista
+180°. Para evitar ambigüedades conviene usar, por ejemplo, `++DirecciónVista(Vector((0, 0, 1)))++`
+* Ver también la herramienta xref:/tools/Vista_frontal.adoc[image:24px-Mode_viewinfrontof.svg.png[Mode
+viewinfrontof.svg,width=24,height=24]] xref:/tools/Vista_frontal.adoc[Vista frontal].
+
+====

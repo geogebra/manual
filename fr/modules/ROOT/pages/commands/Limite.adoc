@@ -1,0 +1,67 @@
+= Commande Limite
+:page-en: commands/Limit_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Limite( <Fonction f>, <Nombre t> )::
+  Recherche la http://en.wikipedia.org/wiki/fr:Limite_(math%C3%A9matiques)[limite] de la fonction _f_ en _t_
+  (éventuellement infini).
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Limite((x^2+x)/ x^2, +∞)++` retourne _1_ .
+
+====
+
+[NOTE]
+====
+
+*Note :* Toutes les limites ne peuvent être calculées par GeoGebra, et *non défini* sera retourné dans ces cas (comme
+lorsque la limite est effectivement non définie).
+
+====
+
+/Fichier:Menu_view_cas_svg.adoc[image:20px-Menu_view_cas.svg.png[Menu view cas.svg,width=20,height=20]] *Calcul formel*
+
+Les syntaxes suivantes sont uniquement utilisables dans le Calcul formel :
+
+Limite( <Fonction f>, <Nombre t> )::
+  Recherche la limite de la fonction _f_ en _t_ (éventuellement infini).
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Limite(a sin(x)/x, 0)++` retourne _a_ .
+
+====
+
+Limite( <Fonction f>, <Variable v>, <Nombre t> )::
+  Recherche la limite en _t_ de la fonction de variable _v_.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Limite(a sin(v)/v, v, 0)++` retourne _a_ .
+
+====
+
+[NOTE]
+====
+
+*Note :*
+
+* Toutes les limites ne peuvent être calculées par GeoGebra, et *?* sera retourné dans ces cas (même si la limite est
+effectivement non définie).
+* Si vous désirez une limite de fonction définie par morceaux, utilisez de préférence
+xref:/commands/LimDroite.adoc[LimDroite] ou xref:/commands/LimGauche.adoc[LimGauche] par exemple
+`++LimDroite(Si(x>1, x^2, -2x), 1)++`.
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/Asymptote.adoc[Asymptote].

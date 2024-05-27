@@ -1,0 +1,47 @@
+= Comando Hipérbola
+:page-en: commands/Hyperbola_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Hipérbola( <Foco>, <Foco>, <Longitud del semieje mayor> )::
+  Construye la hipérbola con los focos dados y la longitud del semieje mayor dada.
+Hipérbola( <Foco>, <Foco>, <Segmento> )::
+  Construye la hipérbola con focos en los puntos dados y tal que la longitud del semieje mayor sea igual a la del
+  segmento dado.
+Hipérbola( < Foco >, < Foco >, <Punto> )::
+  Construye la hipérbola con los focos dados y que pasa por el punto dado.
+
+[EXAMPLE]
+====
+
+`++ Hipérbola((1, 1), (2, 1), (-2,-4))++` devuelve _-2.69x² + 1.30y² + 8.07x - 2.62y = 4.52_ .
+
+====
+
+[EXAMPLE]
+====
+
+Sea `++a = Segmento((0,1), (2,1))++`. `++ Hipérbola((4, 1), (-2, 1), a)++` devuelve _-5x² + 4y² + 10x - 8y = -19_ .
+
+====
+
+[EXAMPLE]
+====
+
+`++ Hipérbola((0, -4), (2, 4), 1)++` devuelve _-8xy - 15y² + 8y = -16_.
+
+====
+
+[NOTE]
+====
+
+Si la condición: _0 < 2 * (longitud del semieje mayor) < Distancia focal_ no se verifica, se obtiene una elipse.
+
+====
+
+[NOTE]
+====
+
+Ver también la herramienta xref:/tools/Hipérbola.adoc[image:24px-Mode_hyperbola3.svg.png[Mode
+hyperbola3.svg,width=24,height=24]] xref:/tools/Hipérbola.adoc[Hipérbola].
+
+====

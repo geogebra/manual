@@ -1,0 +1,101 @@
+= Commande IntersectionChemins
+:page-en: commands/IntersectPath_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+*Note :* ont disparu :
+
+*IntersectionRégions*(Polygone poly1, Polygone poly2)
+
+Retourne le polygone intersection des 2 polygones non croisés, à condition que cette intersection soit un unique
+polygone.
+
+a disparu, mais le résultat peut-être donné par IntersectionChemins(Polygone poly1, Polygone poly2) pour deux polygones
+d'un même plan.
+
+*IntersectionChemins(<Ligne l>, <Conique c>)*
+
+Retourne les morceaux de la ligne _l_ qui appartiennent à la conique _c_ en créant aussi les points les définissant.
+
+* Pour un cercle ou une ellipse, vous obtenez le segment se trouvant _à l'intérieur_ ;
+* Pour une parabole, vous obtenez le segment, éventuellement la demi-droite, se trouvant dans la partie du plan
+contenant le foyer de la parabole ;
+* Pour une hyperbole, trop de différents cas ...
+
+====
+
+IntersectionChemins(<Ligne l>, <Polygone poly>)::
+  Retourne les segments de la ligne _l_ qui appartiennent au polygone _poly_.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++IntersectionChemins( a, triangle )++` crée le segment de la ligne _a_ contenu dans le polygone _triangle_.
+
+====
+
+IntersectionChemins(<Polygone poly1>, <Polygone poly2>)::
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++IntersectionChemins( quadrilatère, triangle )++` crée un nouveau polygone, intersection des deux polygones donnés.
+
+[NOTE]
+====
+
+*Note :* le nouveau polygone peut être un triangle, un quadrilatère, un pentagone ou un hexagone. Cela dépend de la
+position des sommets des polygones donnés.
+
+====
+
+====
+
+[NOTE]
+====
+
+*/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] Graphique 3D*
+
+IntersectionChemins( <Plan>, <Polygone> )::
+  Crée l'intersection entre le plan et le polygone.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++IntersectionChemins( a, triangle )++` crée le segment entre le premier et le second point d'intersection du plan _a_
+avec le polygone _triangle_ dans le plan du polygone.
+
+====
+
+IntersectionChemins( <Plan>, <Quadrique> ).::
+  Crée l'intersection entre le plan et la quadrique.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++IntersectionChemins( a, sphère )++` crée le cercle d'intersection entre le plan _a_ et la quadrique _sphère_.
+
+====
+
+*Note :* Dans les deux syntaxes, l'ordre des arguments est quelconque.
+
+====
+
+/Fichier:Tool_tool_png.adoc[image:Tool_tool.png[Tool tool.png,width=32,height=32]] Voir l' *outil* associé :
+/Fichier:Mode_intersectioncurve_png.adoc[image:Mode_intersectioncurve.png[Mode
+intersectioncurve.png,width=32,height=32]] xref:/tools/Intersection_de_deux_surfaces.adoc[Intersection de deux
+surfaces].
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/Intersection.adoc[Intersection] et
+xref:/commands/InterConique.adoc[InterConique].

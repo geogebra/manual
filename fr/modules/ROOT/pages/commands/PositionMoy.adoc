@@ -1,0 +1,26 @@
+= Commande PositionMoy
+:page-en: commands/TiedRank_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+PositionMoy( <Liste L > )::
+  Retourne la liste, dans laquelle le __i__^ème^ élément est la position du __i__^ème^ élément de L lorsqu'elle est
+  xref:/commands/Trier.adoc[ordonnée]. Si des éléments sont répétés dans _L_ occupant des positions de _k_ à _l_ dans
+  `++Trier[L]++`, la moyenne des positions de _k_ à _l_ leur est associée.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++PositionMoy({4, 1, 2, 3, 4, 2})++` retourne \{5.5, 1, 2.5, 4, 5.5, 2.5} . En effet
+`++Trier({4, 1, 2, 3, 4, 2})++` retourne `++ {1, 2, 2, 3, 4, 4}++` et par exemple le _4_ est en position _5_ et _6_,
+d'où position moyenne _5.5_
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/Positions.adoc[Positions].
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel

@@ -1,0 +1,17 @@
+= Commande Nettoyer
+:page-en: commands/RemoveUndefined_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Nettoyer( <Liste> )::
+  Supprime les objets non définis de la _Liste_.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Séquence((-1)^i, i, -3, -1, 0.5)++` vous retourne la liste \{-1, *?*, 1, *?*, -1} car les expressions
+stem:[(-1)^\{1.5}] et stem:[(-1)^\{2.5}] ne sont pas définies.`++Nettoyer(Séquence((-1)^i, i, -3, -1, 0.5))++` vous
+retourne la liste \{-1, 1, -1}. Les deuxième et quatrième éléments de la suite précédente ont été supprimés.
+
+====
+
+{empty}[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/Supprimer.adoc[Supprimer]

@@ -1,0 +1,58 @@
+= Commande IntégraleDomaine
+:page-en: commands/IntegralBetween_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+IntégraleDomaine( <Fonction f>, <Fonction g>, <x min>, <x max> )::
+  Retourne l’intégrale définie de la différence _f(x) - g(x)_ sur l’intervalle [_min ; max_].
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++IntégraleDomaine(sin(x), cos(x), π / 4, π * 5 / 4)++` retourne _2.83_ (_option 2 décimales_).
+
+====
+
+[NOTE]
+====
+
+*Note :* Cette commande dessine aussi la surface entre les courbes représentatives de _f_ et de _g_.
+
+====
+
+IntégraleDomaine( <Fonction f>, <Fonction g>, <x min>, <x max>, < true|false Calcul> )::
+  C'est la précédente si _Calcul = true_, si _Calcul = false_ la surface est dessinée mais son aire n'est pas calculée
+  (mais *! valeur affichée = 0* dans Algèbre).
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Sans l'option " true/false Calcul ", mais avec un affichage de valeur exacte, et la possibilité de travailler en
+littéral, ou avec une autre variable déclarée en 3ème paramètre :
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++IntégraleDomaine(sin(x), cos(x), π / 4, π * 5 / 4)++` retourne stem:[2 \sqrt\{2}].
+
+====
+
+IntégraleDomaine( <Fonction f>, <Fonction g>, <Variable t>, <Nombre a>, <Nombre b> )::
+  Retourne l’intégrale définie de la différence _f(t) ‐ g(t)_ sur l’intervalle _[a, b]_ en fonction de la variable
+  précisée.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++IntégraleDomaine(a * sin(t), a * cos(t), t, π / 4, π * 5 / 4)++` retourne stem:[2 \sqrt\{2} a].
+
+====

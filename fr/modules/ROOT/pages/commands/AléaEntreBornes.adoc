@@ -1,0 +1,47 @@
+= Commande AléaEntreBornes
+:page-en: commands/RandomBetween_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+AléaEntreBornes( <Entier minimum a>, <Entier maximum b> )::
+  Retourne un nombre entier aléatoire de l'intervalle [_a ; b_].
+
+[NOTE]
+====
+
+*Note :* Si vous voulez exécuter cette commande plusieurs fois (par exemple pour enregistrer plusieurs valeurs d'un dé
+dans le tableur) vous pouvez utiliser `++Séquence( ActualiserConstruction(), k, 1, 10 )++`
+
+====
+
+[NOTE]
+====
+
+*Note :* Sans paramètres, la commande `++AléaEntreBornes()++` crée un nombre de définition
+xref:/Opérateurs_et_fonctions_pré_définies.adoc[random()] soit un réel de [0 ;1]
+
+====
+
+AléaEntreBornes( <Entier minimum a>, <Entier maximum b>, <Booléen> )::
+  Si _Booléen_ = "true", est créé un nombre entier aléatoire de l'intervalle [_a ; b_], qui n'est actualisé qu'une fois
+  (au chargement du fichier ou aussi par action sur Annuler/Refaire).
+
+[NOTE]
+====
+
+*Note :* Pressez [.kcode]#F9# pour constater la différence entre les deux syntaxes.
+
+====
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/SoitGraine.adoc[SoitGraine],
+xref:/commands/ElémentAuHasard.adoc[ElémentAuHasard], xref:/commands/AléaBinomiale.adoc[AléaBinomiale],
+xref:/commands/AléaNormale.adoc[AléaNormale], xref:/commands/AléaPoisson.adoc[AléaPoisson],
+xref:/commands/AléaUniforme.adoc[AléaUniforme].
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Mais le "blocage" par booléen n'y fonctionne pas.

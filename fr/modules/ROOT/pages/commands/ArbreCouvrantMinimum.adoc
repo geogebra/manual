@@ -1,0 +1,18 @@
+= Commande ArbreCouvrantMinimum
+:page-en: commands/MinimumSpanningTree_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+ArbreCouvrantMinimum( <Liste Points> )::
+  Retourne l'http://en.wikipedia.org/wiki/fr:_Arbre_couvrant_de_poids_minimal[arbre couvrant minimum] du graphe complet
+  construit sur les points donnés, les arêtes étant pondérées par la distance euclidienne de leurs extrémités. Le
+  résultat est un lieu.
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :* Il est tout à fait possible qu'il n'y ait pas
+unicité de cet "arbre" : Soit par exemple les points A(2,3), B(4,5), C(6,4), D(5,1), E(4,3) et F(3,1), vous pouvez
+obtenir la ligne brisée CBEAFD de longueur 6 + 2 stem:[\sqrt\{5}] mais aussi la réunion de la ligne brisée CBEFD et du
+segment [AE].*En version "desktop"* : L'appui sur [.kcode]#F9# permet de visualiser au hasard d'éventuelles variantes.
+
+====

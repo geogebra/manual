@@ -1,0 +1,76 @@
+= Commande TexteMath
+:page-en: commands/SurdText_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+TexteMath( <Nombre> )::
+  Crée un texte représentant le nombre sous la forme stem:[\frac\{a+b\sqrt\{c}}\{d}].
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++TexteMath(2.414213562373095)++` crée _stem:[1 + \sqrt\{2}]_ ;
+
+`++TexteMath( 2.439230484541326 )++` crée _stem:[\frac\{7+3 \sqrt\{3} }\{5}]_ .
+
+====
+
+Si `++z_1=sqrt(2)+ ί sqrt(3)++` alors `++TexteMath(z_1)++` crée _stem:[ \sqrt\{2}+ \sqrt\{3}ί ]_ Si
+`++z_2 = 2.414213562373095 + ί 2.439230484541326)++` alors `++TexteMath(z_2)++` crée _stem:[ 1 + \sqrt\{2}+\frac\{7+3
+\sqrt\{3} }\{5}ί]_
+
+TexteMath( <Nombre>, <Liste> )::
+  Crée un texte représentant le nombre comme multiple des constantes de la liste. Si la liste est vide, une liste des
+  constantes usuelles est utilisée.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++TexteMath(4.71238898038469,{pi})++` crée _stem:[3 . \frac\{ \pi}\{2}]_ ;
+
+`++TexteMath(3.718281828459045, {exp(1)})++` crée _stem:[e + 1]_ ;
+
+`++TexteMath(5.382332347441762, {sqrt(2), sqrt(3), sqrt(5)})++` crée _stem:[ \sqrt\{5} + \sqrt\{3} + \sqrt\{2}]_ ;
+
+`++TexteMath(1.693147180559945, {ln(2)})++` crée _stem:[ \ln\{(2)} + 1 ]_.
+
+====
+
+TexteMath( <Point> )::
+  Crée un texte représentant le point, dont les coordonnées sont sous la forme stem:[\frac\{a+b\sqrt\{c}}\{d}].
+
+[EXAMPLE]
+====
+
+*Exemples :* Soit A = (2.414213562373095, 0.882842712474619)
+
+`++TexteMath(A) ++` crée stem:[ ( 1 + \sqrt\{2} , \frac\{3 + \sqrt\{2} }\{5} ) ].
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+[NOTE]
+====
+
+*Notes:*
+
+* Si vous utilisez cette commande dans un objet 'texte', la case _Formule LaTeX_ doit être cochée dans les 'Propriétés'
+de cet objet ;
+* Comme cette commande travaille à partir d'un nombre décimal arrondi, le résultat peut ne pas être parfois tel
+qu'attendu. Par exemple`++TexteMath(163/ln(163))++` ;
+* Si une réponse acceptable ne peut être trouvée, le nombre est retourné en tant que texte. Par exemple
+`++TexteMath(1.23456789012345)++`.
+
+====
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/FractionTexte.adoc[FractionTexte] et
+xref:/commands/NotationScientifique.adoc[NotationScientifique] .

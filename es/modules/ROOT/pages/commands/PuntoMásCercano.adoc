@@ -1,0 +1,18 @@
+= Comando PuntoMásCercano
+:page-en: commands/ClosestPoint_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+PuntoMásCercano( <Recorrido>, <Punto> )::
+  Establece, sobre el xref:/Objetos_Geométricos.adoc[recorrido], un nuevo punto: el que estuviera más próximo al
+  indicado.
+
+[NOTE]
+====
+
+Para xref:/Funciones.adoc[funciones] el comando encuentra el punto efectivamente más próximo (no en vertical). Funciona
+mejor con funciones polinómicas; para otro tipo de funciones, el algoritmo es menos estable.
+
+====
+
+PuntoMásCercano( <Recta>, <Recta> )::
+  Da por resultado el punto de la primera recta que se encuentra más próximo a la segunda.

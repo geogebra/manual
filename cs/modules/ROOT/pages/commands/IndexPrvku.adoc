@@ -1,0 +1,39 @@
+= Příkaz IndexPrvku
+:page-en: commands/IndexOf_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+IndexPrvku( <Objekt>, <Seznam> )::
+  Určí pořadí prvního výskytu _Objektu_ v _Seznamu_, např. `++IndexPrvku[5,{1,3,5,2,5,4}]++` je 3. Pokud není objekt v
+  seznamu nalezen, je výsledkem _nedefinovaný_.
+
+IndexPrvku( <Objekt>, <Seznam>, <Počáteční index> )::
+  Stejné jako v předchozím případě, ale prohledávání začne až od prvku s _Počátečním indexem_.
+
+[EXAMPLE]
+====
+
+* `++IndexPrvku[5,{1,3,5,2,5,4},3]++` dává 3.
+* `++IndexPrvku[5,{1,3,5,2,5,4},4]++` dává 5.
+* `++IndexPrvku[5,{1,3,5,2,5,4},6]++` dává _nedefinovaný_.
+
+====
+
+IndexPrvku( <Text 1>, <Text 2> )::
+  Určí pozici prvního výskytu textového řetězce__Text 1__ v textu _Text 2_, např. `++IndexPrvku["Ge","GeoGebra"]++` je
+  1.
+
+IndexPrvku( <Text>, <Text>, <Počáteční index> )::
+  Stejné jako v předchozím případě, ale prohledávání začne až od prvku s _Počátečním indexem_.
+
+[EXAMPLE]
+====
+
+`++IndexPrvku["Ge","GeoGebra",2]++` dá 4.
+
+====
+
+[NOTE]
+====
+
+Anglická verze: /s_index_php?title=En:Manual:IndexOf_Command_action=edit_redlink=1.adoc[IndexOf]
+====

@@ -1,0 +1,97 @@
+= Comando VectorNormalUnitario
+:page-en: commands/UnitPerpendicularVector_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[.small]#[.small]#Alternativa previa: xref:/commands/VectorUnitarioPerpendicular.adoc[VectorUnitarioPerpendicular]##
+
+VectorNormalUnitario( <Dirección (recta, semirrecta o segmento)> )::
+  Establece el vector unitario (es decir, de longitud 1) con dirección perpendicular a la de la recta, semirrecta,
+  segmento o incluso el vector dado.
+
+[EXAMPLE]
+====
+
+*`++VectorNormalUnitario[3x + 4y = 5]++`* da _stem:[\begin\{pmatrix}0.6\\0.8\end\{pmatrix}]_.
+
+====
+
+VectorNormalUnitario( <Vector> )::
+  Establece el vector unitario perpendicular al dado que debe estar definido previamente.
+
+[EXAMPLE]
+====
+
+Siendo _v=stem:[\begin\{pmatrix}3\\4\end\{pmatrix}]_, `++VectorNormalUnitario[v]++` da
+_stem:[\begin\{pmatrix}-0.8\\0.6\end\{pmatrix}]_.
+
+====
+
+[NOTE]
+====
+
+[.small]#http://wiki.geogebra.org/uploads/2/20/GG_5_web_y_tablet_LMS_lianasaidon.pdf[image:20px-GGb5.png[GGb5.png,width=20,height=18]]
+/Manual:Página_Principal.adoc[En] la /Referencia:Herramientas_3D_a_libro.adoc[image:20px-Menu_view_graphics3D.png[Menu
+view graphics3D.png,width=20,height=20]] /Manual:Menú_Vistas.adoc[Vista]
+/GeoGebra_Manual:AlRespecto.adoc[3]/s_index_php?title=Manual:Vista_3D_action=edit_redlink=1.adoc[[.kcode]#D#] de
+/GeoGebra_Manual:AlRespecto.adoc[la]
+/s_index_php?title=Manual:Notas_Lanzamiento_de_GeoGebra_5_0_action=edit_redlink=1.adoc[versión]
+http://wiki.geogebra.org/uploads/a/a4/Gu%C3%ADa_Tablets%25Win_8_.pdf[image:20px-View-graphics3D24.png[View-graphics3D24.png,width=20,height=20]]http://wiki.geogebra.org/uploads/2/20/GG_5_web_y_tablet_LMS_lianasaidon.pdf[5]#
+
+VectorNormalUnitario( <Plano> )::
+  Crea un vector unitario ortogonal unitario al plano indicado.
+
+====
+
+[EXAMPLE]
+====
+
+Expresando a un plano por una ecuación cartesiano como *_a x+ b y +c z = k_*, designado por stem:[ n=\sqrt\{a²+b²+c²},]
+el comando da por resultado el vector stem:[\begin\{pmatrix}\frac\{a}\{n} \\ \frac\{ b}\{n} \\ \frac\{
+c}\{n}\end\{pmatrix}]
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+En esta xref:/Vista_CAS.adoc[vista] se admite la misma sintaxis pudiendo incluirse literales en operaciones simbólicas.
+
+VectorNormalUnitario( <Vector> )::
+  Establece un vector unitario perpendicular al dado.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+Dado el vector _v_ de coordenadas stem:[\begin\{pmatrix}3\\4\end\{pmatrix}].
+
+`++VectorNormalUnitario[v]++` crea el vector de coordenadas _stem:[\left( \frac\{-4}\{5} , \frac\{3}\{5} \right)]_
+Incluso se puede ingresar directamente `++VecteurUnitaireOrthogonal[(3,4)]++`
+
+`++VectorNormalUnitario[(a, b)]++` da por resultado stem:[\frac\{-b}\{\sqrt\{a^\{2} + b^\{2}}}],
+stem:[\frac\{a}\{\sqrt\{a^\{2} + b^\{2}}}].
+
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Alerta,title="Alerta",width=18,height=18] *Alerta*: |En esta xref:/Vista_CAS.adoc[vista] no se
+produce el correspondiente registro gráfico simultáneo. Cuando sea viable, se concretará al _tildar_ el redondelito que
+encabeza la fila en que se ingresara el comando.
+|===
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Cuando el vector original es establecido a través de
+variables cuyo valor no es asignado, se obtiene la _fórmula_ del unitario perpendicular cuyo valor puede determinarse a
+posteriori por una adecuada /Archivo:Tool_Substitute_gif.adoc[image:Tool_Substitute.gif[Tool
+Substitute.gif,width=32,height=32]] xref:/tools/Sustituye.adoc[sustitución]
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/VectorUnitario.adoc[VectorUnitario]
+====

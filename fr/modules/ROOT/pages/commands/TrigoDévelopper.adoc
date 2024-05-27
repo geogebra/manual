@@ -1,0 +1,76 @@
+= Commande TrigoDévelopper
+:page-en: commands/TrigExpand_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+TrigoDévelopper( <Expression> )::
+  Transforme une expression trigonométrique en une expression utilisant seulement des variables simples comme arguments.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++TrigoDévelopper(tan(x+y))++` retourne stem:[\frac\{\frac\{sin(x)}\{cos(x)}+\frac\{sin(y)}\{cos(y)}}
+\{1-\frac\{sin(x)}\{cos(x)} \cdot \frac\{sin(y)}\{cos(y)}} ].
+
+====
+
+TrigoDévelopper( <Expression>, <Fonction cible> )::
+  Transforme une expression trigonométrique en une expression utilisant seulement des variables simples comme arguments,
+  en donnant la préférence à la fonction "cible" indiquée.
+
+[EXAMPLE]
+====
+
+*Exemples :* `++TrigoDévelopper(tan(x+y),tan(x))++` retourne stem:[\frac\{-tan(x) - tan(y)}\{tan(x) tan(y) - 1}].
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Mais la forme du résultat peut différer selon le mode utilisé :
+
+[EXAMPLE]
+====
+
+*Exemple :* `++TrigoDévelopper(tan(x + y))++` en mode
+/Fichier:Mode_evaluate_svg.adoc[image:32px-Mode_evaluate.svg.png[Mode evaluate.svg,width=32,height=32]] Évaluer retourne
+stem:[\frac\{\frac\{sin(x)}\{cos(x)}+\frac\{sin(y)}\{cos(y)}} \{1-\frac\{sin(x)}\{cos(x)} \cdot \frac\{sin(y)}\{cos(y)}}
+] en mode /Fichier:Mode_numeric_svg.adoc[image:32px-Mode_numeric.svg.png[Mode numeric.svg,width=32,height=32]] Numérique
+retourne stem:[\frac\{sin(x) cos(y) + sin(y) cos(x)}\{- sin(x) sin(y) +cos(x) cos(y) }] .
+
+====
+
+*Deux syntaxes supplémentaires peuvent être utilisées :*
+
+TrigoDévelopper( <Expression>, <Fonction cible>, <Variable cible> )::
+  Transforme une expression trigonométrique en une expression utilisant seulement des variables simples comme arguments,
+  en donnant la préférence aux fonction et variable "cibles" indiquées.
+
+[EXAMPLE]
+====
+
+*Exemples :* `++TrigoDévelopper(sin(x), sin(x), x/2)++` retourne stem:[2cos \left( \frac\{x}\{2} \right) sin \left(
+\frac\{x}\{2} \right) ];
+
+`++TrigoDévelopper(sin(x)/(1+cos(x)), tan(x), x/2)++` retourne stem:[tan \left( \frac\{x}\{2} \right)]..
+
+====
+
+TrigoDévelopper( <Expression>, <Fonction cible>, <Variable cible>, <Variable cible> )::
+  Transforme une expression trigonométrique en une expression utilisant seulement des variables simples comme arguments,
+  en donnant la préférence aux fonction et variables "cibles" indiquées.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++TrigoDévelopper(csc(x)-cot(x)+csc(y)-cot(y), tan(x), x/2, y/2)++` retourne stem:[tan \left( \frac\{x}\{2}
+\right) +tan \left( \frac\{y}\{2} \right) ].
+
+====
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/TrigoSimplifier.adoc[TrigoSimplifier] et
+xref:/commands/TrigoCombiner.adoc[TrigoCombiner].

@@ -1,0 +1,171 @@
+= Matrices
+:page-en: Matrices
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+*_GeoGebra_* también opera con matrices reales, representadas como una lista de listas, que contiene las filas de la
+matriz.
+
+[EXAMPLE]
+====
+
+*a = \{\{1, 2, 3}, \{4, 5, 6}, \{7, 8, 9}}* representa la matriz *_a_* de 3x3:
+
+stem:[\begin\{pmatrix}1&2&3\\ 4&5&6\\ 7&8&9 \end\{pmatrix}]
+
+====
+
+[NOTE]
+====
+
+Para desplegar con elegancia y facilidad una matriz en la xref:/Vista_Gráfica.adoc[Vista Gráfica], puede emplearse el
+formato xref:/LaTeX.adoc[LaTeX], usando el comando xref:/commands/FórmulaTexto.adoc[FórmulaTexto].
+
+====
+
+[EXAMPLE]
+====
+
+En la xref:/Barra_de_Entrada.adoc[Barra de Entrada] puede
+anotarse:*`++FórmulaTexto[{{1, 2, 3}, {4, 5, 6}, {7, 8, 9} }]++`* para exponer la matriz usando formato
+xref:/LaTeX.adoc[LaTeX].
+
+====
+
+== Operaciones con Matrices
+
+=== Sumas y Restas - Ejemplos
+
+* Matriz1 + Matriz2: Suma uno a uno, cada par de elementos correspondientes de una y otra matriz.
+* Matriz1 – Matriz2: Resta uno a uno, cada par de elementos correspondientes de una y otra matriz, entre dos compatibles
+entre sí.
+
+=== Multiplicación - Ejemplos
+
+* Matriz * Número: Multiplica por el número, cada uno de los elementos de la matriz.
+* Matriz1 * Matriz2: Usa la multiplicación de matrices para calcular la resultante.
+
+[EXAMPLE]
+====
+
+\{\{1,2},\{3,4},\{5,6}}*\{\{1,2,3},\{4,5,6}} da por resultado la matriz \{\{9, 12, 15}, \{19, 26, 33}, \{29, 40, 51}}.
+
+====
+
+[NOTE]
+====
+
+Las filas de la primera y las columnas de la segunda matriz deben tener el mismo número de elementos.
+
+====
+
+* 2x2 Matriz * Punto (o Vector): Multiplica la matriz por el punto o vector y da por resultado un punto
+* 3x3 Matriz * Punto (o Vector): Multiplica la matriz por el punto o vector y da por resultado un punto.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* *\{*\{1, 2}, \{3, 4}, \{5, 6}*}* * *\{*\{1, 2, 3}, \{4, 5, 6}*}* da por resultado la matriz *\{*\{9, 12, 15}, \{19,
+26, 33}, \{29, 40, 51}*}*
+* *\{*\{1, 2}, \{3, 4}*}* * (3, 4) da por resultado el punto A = (11, 25).
+* *\{*\{1, 2, 3}, \{4, 5, 6}, \{0, 0, 1}*}* * (1, 2) da por resultado el punto *A* = (8, 20).
+
+====
+
+[NOTE]
+====
+
+Este es un caso especial de transformaciones afines donde las coordenadas homogéneas se usan: (x, y, 1) para un punto y
+(x, y, 0) por un vector. Este último ejemplo es, por lo tanto, equivalente a:
+
+*`++{{1, 2, 3}, {4, 5, 6}, {0, 0, 1}} * {1, 2, 1}++`*.
+
+====
+
+=== Profundizando
+
+Ver también en la sección xref:/commands/Comandos_de_Vectores_y_Matrices.adoc[Comandos de Vectores y Matrices]...
+
+* xref:/commands/Determinante.adoc[Determinante][Matriz]: Calcula el determinante de la matriz dada.
+* xref:/commands/Inversa.adoc[Inversa][Matriz]: Invierte la matriz dada.
+* xref:/commands/Traspone.adoc[Traspone][Matriz]: Traspone la matriz dada.
+* xref:/commands/AplicaMatriz.adoc[AplicaMatriz][Matriz, Objeto]: Aplica la transformación afín propio de la matriz al
+objeto.
+* xref:/commands/EscalonadaReducida.adoc[EscalonadaReducida][Matriz]: Convierte la matriz a la forma reducida escalonada
+por fila.
+
+[NOTE]
+====
+
+Visitar nuestro http://www.geogebra.org/forum/viewtopic.php?f=8&t=7166[foro] por mayores detalles y observaciones sobre
+multiplicación de matrices.
+
+====
+
+== Interacción Algebra <=> xref:/Hoja_de_Cálculo.adoc[Hoja de Cálculos]
+
+=== Tablas y Matrices
+
+([File::
+  Algebraica a Hoja II.PNG|420px|left)]
+
+*A => H~C~ :* Una matriz xref:/Vista_Algebraica.adoc[algebraica], puede incorporarse en la
+xref:/Hoja_de_Cálculo.adoc[Hoja de Cálculo] arrastrándola hacia allí mientras se pulsa la tecla [.kcode]#Ctrl#.Si se
+establece xref:/Objetos_libres_dependientes_y_auxiliares.adoc[_dependiente_] , todo cambio en la matriz de partida
+repercutirá en la incrustada en la xref:/Hoja_de_Cálculo.adoc[Hoja de Cálculo], dinámicamente. Para que esto no ocurra,
+se la debe establecer como xref:/Objetos_libres_dependientes_y_auxiliares.adoc[_Objeto Libre_]
+
+[NOTE]
+====
+
+Se puede copiar la _Transposición_ de la matriz original.
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Si se arrastra y deposita en la
+xref:/Hoja_de_Cálculo.adoc[Hoja de Cálculos] sin tener pulsada la tecla [.kcode]#Ctrl#, se obtiene una copia simple.
+
+====
+
+([File::
+  De Hoja a Matriz Algebraica.PNG|430px|left)]
+
+*H~C~ => A:* Todo _rango_ rectangular de celdas seleccionado en la xref:/Hoja_de_Cálculo.adoc[Hoja de Cálculo], tras
+optar por la alternativa *_Crea_* > *_Matriz_* del xref:/Menú_contextual.adoc[Menú Contextual] desplegado por un _clic_
+derecho, la registra como objeto xref:/Objetos_libres_dependientes_y_auxiliares.adoc[_dinámicamente dependiente_]. De
+este modo, cualquier cambio en el original rango de celdas de la xref:/Hoja_de_Cálculo.adoc[hoja de cálculo], se refleja
+en la matriz.
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: A posteriori se podrán modificar algunas de las
+xref:/Cuadro_de_Propiedades.adoc[Propiedades] de la matriz, tabla o lista creadas desde el
+xref:/Cuadro_de_Ajustes.adoc[Cuadro de Ajustes] .
+
+====
+
+[EXAMPLE]
+====
+
+Siendo *l_a := `++Secuencia[BinomialAleatorio[3, 0.1], ñ, 1, 1000, Mínimo[Máximo[AleatorioEntre[1, exF], 1], 1]]++`* la
+xref:/Listas.adoc[lista] de registro xref:/Vista_Algebraica.adoc[algebraico], copiando a la
+xref:/Hoja_de_Cálculo.adoc[Hoja de Cálculo], sendas xref:/Listas.adoc[listas] _l~o~_ y _l~f~_ definidas como:*l~o~ :=
+`++Ordena[Único[la]]++`* y *l~f~ := `++Zip[CuentaSi[x ≟ ñ, l_a], ñ, {0,1,2,3}]++`*, cundo se selecciona el rango de
+celdas en que se volcaron ambas listas y se crea la correspondiente matriz, se obtiene una dinámica y aleatoriamente
+cambiante con cada pulsación de [.kcode]#F9#
+
+====
+
+'''''
+
+[NOTE]
+====
+
+Ver también el artículo sobre xref:/Listas.adoc[Listas].
+
+====

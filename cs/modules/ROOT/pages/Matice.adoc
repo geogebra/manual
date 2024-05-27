@@ -1,0 +1,100 @@
+= Matice
+:page-en: Matrices
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+GeoGebra podporuje matice, které jsou reprezentovány jako seznam seznamů, které obsahují řádky matice.
+
+[EXAMPLE]
+====
+
+V GeoGebře, \{\{1, 2, 3}, \{4, 5, 6}, \{7, 8, 9}} reprezentuje matici 3x3 stem:[\begin\{pmatrix}1&2&3\\ 4&5&6\\
+7&8&9\end\{pmatrix}].
+
+====
+
+Chceme-li na nákresně zobrazit matici ve formátu LaTeX, použijeme příkaz xref:/LaTeX.adoc[LaTeX].
+
+[EXAMPLE]
+====
+
+Do vstupního řádku napíšeme `++LaTeX[{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}]++` pro zobrazení matice ve formátu LaTeX.
+
+====
+
+== Operace s maticemi
+
+=== Příklady sčítání a odčítání
+
+* Matice1 + Matice2: Sečte odpovídající si elementy dvou matic stejného typu.
+* Matice1 – Matice2: Odečte odpovídající si elementy dvou matic stejného typu.
+
+=== Příklady odčítání
+
+* Matice * Číslo: Vynásobí každý prvek matice daným číslem.
+* Matice1 * Matice2: Použije násobení matic k vypočítání výsledné matice.
+
+[EXAMPLE]
+====
+
+Z \{\{1, 2}, \{3, 4}, \{5, 6}} * \{\{1, 2, 3}, \{4, 5, 6}} dostaneme matici \{\{9, 12, 15}, \{19, 26, 33}, \{29, 40,
+51}}.
+
+====
+
+[NOTE]
+====
+
+Řádky první a sloupce druhé matice musí mít stejný počet prvků.
+
+====
+
+* Matice 2x2 * Bod (nebo Vektor): Vynásobí matici daným bodem/vektorem a jako výsledek dostaneme bod.
+
+[EXAMPLE]
+====
+
+Z \{\{1, 2}, \{3, 4}} * (3, 4) dostaneme bod A = (11, 25).
+
+====
+
+* Matice 3x3 * Bod (nebo Vektor): Vynásobí matici daným bodem/vektorem a jako výsledek dostaneme bod.
+
+[EXAMPLE]
+====
+
+Z \{\{1, 2, 3}, \{4, 5, 6}, \{0, 0, 1}} * (1, 2) dostaneme A = (8, 20).
+
+====
+
+[NOTE]
+====
+
+Toto je zvláštní případ afinní transformace, kde se používají homogenní souřadnice: (x, y, 1) pro bod a (x, y, 0) pro
+vektor. Tento příklad je tedy ekvivalentní s `++{{1, 2, 3}, {4, 5, 6}, {0, 0, 1}} * {1, 2, 1}++`.
+
+====
+
+* Matice1 / Matice2: Vydělí prvek Matice1 odpovídajícím prvkem Matice2.
+
+[EXAMPLE]
+====
+
+GeoGebra ale podporuje i zápis `++Matice1 * Matice2^(-1)++`
+
+====
+
+== Další operace
+
+viz xref:/commands/Vektor_Matice_(Příkazy).adoc[Vektor & Matice (Příkazy)]
+
+* xref:/commands/Determinant.adoc[Determinant]
+* xref:/commands/Invertovat.adoc[Invertovat]
+* xref:/commands/Jednotkova.adoc[Jednotkova]
+* xref:/commands/JednotkovyNormVektor.adoc[JednotkovyNormVektor]
+* xref:/commands/JednotkovyVektor.adoc[JednotkovyVektor]
+* xref:/commands/NormalovyVektor.adoc[NormalovyVektor]
+* xref:/commands/PouzitiMatice.adoc[PouzitiMatice]
+* xref:/commands/SchodovityTvar.adoc[SchodovityTvar]
+* xref:/commands/Transponovat.adoc[Transponovat]
+* xref:/commands/VektorKrivosti.adoc[VektorKrivosti]
+* xref:/commands/Vektor.adoc[Vektor]

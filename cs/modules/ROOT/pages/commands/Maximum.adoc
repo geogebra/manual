@@ -1,0 +1,82 @@
+= Příkaz Maximum
+:page-en: commands/Max_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Maximum( <Číslo a>, <Číslo b> )::
+  Výsledkem je větší ze dvou daných čísel _a_ a _b_.
+
+[EXAMPLE]
+====
+
+`++Maximum[12, 15]++` dává výsledek _15_.
+
+====
+
+Maximum( <Seznam> )::
+  Výsledkem je největší z čísel v daném seznamu.
+
+[EXAMPLE]
+====
+
+`++Maximum[{-2, 12, -23, 17, 15}]++` dává výsledek _17_.
+
+====
+
+[NOTE]
+====
+
+Pokud jsou vstupem příkazu nečíselné objekty, pracuje příkaz Maximum s čísly, která jsou přiřazena k těmto objektům.
+Např. výsledkem příkazu 'Maximum[\{seznam úseček}]' je délka nejdelší úsečky.
+
+====
+
+Maximum( <Interval> )::
+  Výsledkem je horní mez intervalu.
+
+[EXAMPLE]
+====
+
+Výsledkem `++Maximum[2<x<3]++` je 3. Výsledek je stejný pro otevřený i uzavřený interval.
+
+====
+
+Maximum( <Funkce>, <Počáteční hodnota x>, <Koncová hodnota x> )::
+  Výstupem je bod – maximum funkce na daném intervalu. Funkce by měla mít pouze jedno maximum na daném intervalu.
+
+[NOTE]
+====
+
+Viz také příkaz xref:/commands/Extrem.adoc[Extrem] a nástroj
+/Soubor:Tool_Function_Inspector_gif.adoc[image:Tool_Function_Inspector.gif[Tool Function
+Inspector.gif,width=32,height=32]] xref:/tools/Kontrola_funkce.adoc[Kontrola funkce].
+
+====
+
+== CAS pohled
+
+Maximum( <Číslo a>, <Číslo b> )
+
+Výsledkem je větší ze dvou daných čísel _a_ a _b_.
+
+[EXAMPLE]
+====
+
+`++Maximum[12, 15]++` dává výsledek _15_.
+
+====
+
+Max( <Seznam> )::
+  Výsledkem je největší z čísel v daném seznamu.
+
+[EXAMPLE]
+====
+
+`++Maximum[{-2, 12, -23, 17, 15}]++` dává výsledek _17_.
+
+====
+
+[NOTE]
+====
+
+Anglická verze: /s_index_php?title=En:Manual:Max_Command_action=edit_redlink=1.adoc[Max]
+====

@@ -1,0 +1,42 @@
+= Commande Cube
+:page-en: commands/Cube_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+*/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] Graphique 3D*
+
+Cube( <Point A>, <Point B>, <Direction> )::
+  Crée un cube ayant le segment *[AB]* comme arête.
+
+Les autres sommets sont déterminés par la donnée "Direction", à choisir parmi :
+
+. un vecteur, un segment, une demi-droite, une droite *orthogonal(e)* à [AB] ;
+. un polygone dans un plan *parallèle* à [AB] ;
+. un plan *parallèle* à [AB].
+
+Le cube créé a :
+
+. une face d'arête [AB] dans un plan orthogonal au vecteur/segment donné, à la demi-droite/droite donnée ;
+. une face d'arête [AB] dans un plan parallèle à celui du polygone ;
+. une face d'arête [AB] dans un plan parallèle au plan donné.
+
+Cube( <Point A>, <Point B>, <Point C>)::
+  Crée un cube à partir des trois points d'une face, ces 3 points devant être les sommets consécutifs d'un carré.
+
+Cube( <Point A>, <Point B> )::
+  Crée un cube ayant le segment *[AB]* comme arête, vous pouvez ensuite le faire pivoter autour de cette arête, en
+  déplaçant à la souris le 1er point _C_ supplémentaire créé.
+  *Note :* Cette syntaxe est un raccourci de la commande précédente, avec
+  [.underline]#C=Point(Cercle(B,Distance(A,B),Segment(A,B)))#
+
+/Fichier:Tool_tool_png.adoc[image:Tool_tool.png[Tool tool.png,width=32,height=32]] Voir l' *outil* associé :
+/Fichier:Mode_cube_png.adoc[image:Mode_cube.png[Mode cube.png,width=32,height=32]] xref:/tools/Cube.adoc[Cube].
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/Tétraèdre.adoc[Tétraèdre],
+xref:/commands/Octaèdre.adoc[Octaèdre], xref:/commands/Icosaèdre.adoc[Icosaèdre],
+xref:/commands/Dodécaèdre.adoc[Dodécaèdre] .
+
+====

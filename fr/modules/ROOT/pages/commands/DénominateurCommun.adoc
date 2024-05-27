@@ -1,0 +1,37 @@
+= Commande DénominateurCommun
+:page-en: commands/CommonDenominator_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+DénominateurCommun( <Expression>, <Expression> )::
+  Retourne le (plus petit) dénominateur commun aux deux expressions.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++DénominateurCommun(2/3,3/4)++` retourne 12 ;
+
+`++DénominateurCommun(5/12,7/18)++` retourne 36 ;
+
+`++DénominateurCommun((3/(2x + 1)),(3/(4x²+4x+1)))++` crée et représente la fonction définie par _f(x) = 4x²+4x+1_.
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Mais pour créer la fonction et en obtenir la représentation, il vous faut cliquer sur la pastille de visibilitéIl y a
+possibilité de travailler en littéral :
+
+[EXAMPLE]
+====
+
+*Exemple :* Si les variables _u,v_ et _w_ ne sont pas définies dans GeoGebra`++DénominateurCommun(u/(v-1), w/(v+1))++`
+retourne _(v - 1) (v + 1)_.
+
+====

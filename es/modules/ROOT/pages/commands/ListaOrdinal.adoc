@@ -1,0 +1,22 @@
+= Comando ListaOrdinal
+:page-en: commands/OrdinalRank_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+ListaOrdinal( <Lisat> )::
+  Da por resultado una lista, cuyo i-ésimo elemento es el rango del i-ésimo elemento de la lista dada _L_ (el rango de
+  un elemento es su posición en la lista xref:/commands/Ordena.adoc[Ordena][L]). Si hay elementos repetidos en _L_ que
+  ocupan las posiciones de la _k_ a la _l_ en Ordena[L], se asocia a esos elementos los valores _k_ a _l_.
+
+[EXAMPLE]
+====
+
+* `++ListaOrdinal[{4, 1, 2, 3, 4, 2}]++` da por resultado _\{5, 1, 2, 4, 6, 3}_
+* `++ListaOrdinal[{3, 2, 2, 1}]++` da por resultado _\{4, 2, 3, 1}_
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/OrdinalAjustado.adoc[OrdinalAjustado]
+====

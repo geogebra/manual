@@ -1,0 +1,48 @@
+= Comando Poligonal
+:page-en: commands/Polyline_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Poligonal( <Lista de Puntos> )::
+  Crea una poligonal abierta que, por el orden en que están listados, conecta con segmentos cada uno de los puntos,
+  siendo el vértice inicial el primero de la lista y el último, el final.
+
+[NOTE]
+====
+
+La longitud de la poligonal se muestra en la image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/Vista_Algebraica.adoc[Vista Algebraica].
+
+====
+
+Poligonal( <Punto>, ..., <Punto> )::
+  Crea una poligonal abierta que conecta con segmentos cada uno de los puntos indicados en el orden de señalamiento,
+  siendo el primero el vértice inicial y el último, el final.
+
+[NOTE]
+====
+
+*Notas:*
+
+* La longitud de la poligonal se muestra en la image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/Vista_Algebraica.adoc[Vista Algebraica].
+* También es posible crear una poligonal discontinua:
+
+[EXAMPLE]
+====
+
+`++Poligonal((1, 3), (4, 3), (?,?), (6, 2), (4, -2), (2, -2))++` da por resultado _9.47_ en la
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _Vista algebraica_, y la línea poligonal
+en la image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Vista gráfica_.
+
+====
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/Polígono.adoc[Polígono] y la herramienta
+/Archivo:Tool_Polyline_gif.adoc[image:Tool_Polyline.gif[Tool Polyline.gif,width=32,height=32]]
+xref:/tools/Poligonal.adoc[Poligonal].
+
+====

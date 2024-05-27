@@ -1,0 +1,36 @@
+= Příkaz FrekvencniPolygon
+:page-en: commands/FrequencyPolygon_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+Frekvenční polygon je lomená čára, spojující středy vrcholů sloupců histogramu. Používá se pro odhad hustoty
+pravděpodobnosti. Užití příkazu je stejné jako pro xref:/commands/Histogram.adoc[Příkaz Histogram].
+
+====
+
+FrekvencniPolygon( <Seznam hranic tříd>, <Seznam výšek> )::
+  Vytvoří lomenou čátu s vrcholy v daných výškách. Hranice tříd určují _x_-ové souřadnice vrcholů.
+
+[NOTE]
+====
+
+Příklady užití viz. xref:/commands/Histogram.adoc[Příkaz Histogram].
+
+====
+
+FrekvencniPolygon( <Seznam hranic tříd>, <Seznam dat>, < Užití hustoty> (volitelné), <Měřítko hustoty (volitelné)> )::
+  Zobrazí frekvenční polygon absolutních četností seznamu nezpracovaných dat. Hranice tříd musí tvořit vzestupná
+  posloupnost tak, aby hodnoty ze seznamu dat nepadly mimo vytvořené intervaly. Středy intervalů určují _x_-ovou
+  souřadnici vrcholů polygonu, _y_-ová souřadnice je dána četností třídy. Pokud je nastavena logická hodnota pro užití
+  hustoty _false_, jsou četnosti násobeny měřítkem hustoty, v opačném případě jsou navíc normovány délkou intervalu
+  _y=(měřítko hustoty*četnost třídy/šířka třídy)_.
+
+Přednastavené hodnoty: Užití hustoty = _true_, Měřítko hustoty = 1.
+
+FrekvencniPolygon( <Kumulativní (logická hodnota)>(Volitelné), <Seznam hranic tříd>, <Seznam dat>, < Užití hustoty>,
+<Měřítko hustoty (volitelné)> )::
+  Pokud je kumulativní logická hodnota _true_ jsou pro k četnosti každé třídy připočítány i četnosti všech
+  předcházejících tříd. Výslednou lomenou čáru můžeme použít pro odhad distribuční funkce. Pokud parametr pro
+  kumulativní četnosti vynecháme, je použita hodnota _false_ - předcházející odstavec.

@@ -1,0 +1,36 @@
+= Comando VectorCurvatura
+:page-en: commands/CurvatureVector_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+VectorCurvatura( <Punto>, <Función> )::
+  Devuelve el vector curvatura de la función en el punto dado.
+VectorCurvatura( <Punto>, <Curva> )::
+  Devuelve el vector curvatura de la curva en el punto dado.
+
+[EXAMPLE]
+====
+
+`++ VectorCurvatura((0, 0), Curva(cos(t), sen(2t), t, 0, π))++` devuelve el vector _(0, 0)_.
+
+====
+
+[EXAMPLE]
+====
+
+`++ VectorCurvatura((0, 0), x^2)++` devuelve el vector _(0, 2)_.
+
+====
+
+VectorCurvatura( <Punto>, <Objeto> )::
+  Devuelve el vector curvatura del objeto (función, curva, cónica) en el punto dado.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++ VectorCurvatura((0, 0), x^2)++` devuelve el vector _(0, 2)_
+* `++ VectorCurvatura((0, 0), Curva(cos(t), sen(2t), t, 0, π))++` devuelve el vector _(0, 0)_
+* `++ VectorCurvatura((-1, 0), Cónica({1, 1, 1, 2, 2, 3}))++` devuelve el vector _(0, -2)_
+
+====

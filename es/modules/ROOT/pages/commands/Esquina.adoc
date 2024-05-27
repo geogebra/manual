@@ -1,0 +1,68 @@
+= Comando Esquina
+:page-en: commands/Corner_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+Esquina( <Número de Esquina> )::
+  Crea un punto en la esquina indicada de la image:16px-Menu_view_graphics.svg.png[Menu view
+  graphics.svg,width=16,height=16] xref:/Vista_Gráfica.adoc[Vista Gráfica] cuando el _número_ es 1, 2, 3, ó 4.Si el
+  _número_ es 5 crea el punto de coordenadas _(a, h)_, donde _a_ y _h_ son respectivamente el ancho y el alto de la
+  xref:/Vista_Gráfica.adoc[Vista Gráfica] expresados en píxeles.
+
+Siempre se aplica a la primera image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Vista_Gráfica.adoc[Vista Gráfica] aunque estuviera activa la segunda.
+
+Esquina( <Vista Gráfica 1|2>, <Número de Esquina> )
+
+Crea en la xref:/Vista_Gráfica.adoc[Vista Gráfica] (1 o 2, según se indique), un punto no visible en la esquina
+establecida por el _número_.
+
+Esquina( <Imagen>, <Número de Esquina> )
+
+Crea un punto en la esquina n-ésima de la imagen (n= 1, 2, 3, 4).
+
+Esquina( <Texto>, <Número de Esquina> )
+
+Crea un punto en la esquina n-ésima del texto (n= 1, 2, 3, 4).
+
+[NOTE]
+====
+
+*Notas:* `++Esquina[ <Texto>, <Número> ]++` no opera dentro de los comandos xref:/commands/Secuencia.adoc[Secuencia] o
+xref:/commands/Zip.adoc[Zip]. Además, La opción _Posición absoluta en pantalla_ debe estar desactivada.
+
+====
+
+[NOTE]
+====
+
+Utiliza `++-1++` para image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra
+3Dgraphics.svg,width=16,height=16] xref:/Vista_3D.adoc[Vista 3D] (en este caso, los números admitidos para el segundo
+parámetro son del 1 al 8); Para _n = 9_, crea un punto _(w, h, 0)_, siendo _w_ y _h_ el ancho y la altura de la Vista
+gráfica 3D en píxeles; para _n = 10_ crea el punto _(w, h, 0)_, siendo _w_ y _h_ el ancho y la altura de la ventana
+principal en píxeles; para _n = 11_ devuelve la dirección de la vista (para proyecciones paralelas) o la posición del
+ojo (para, por ejemplo, la proyección en perspectiva).
+
+====
+
+[NOTE]
+====
+
+Esquina[ <Número de esquina> ] no funciona dentro de otros comandos. Crea un punto, por ejemplo `++C_1 = Esquina[1]++` y
+utilízalo.
+
+====
+
+[NOTE]
+====
+
+La numeración de las esquinas es contra-reloj y comienza en la esquina inferior izquierda.
+
+====

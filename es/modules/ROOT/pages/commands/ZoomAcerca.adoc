@@ -1,0 +1,91 @@
+= Comando ZoomAcerca
+:page-en: commands/ZoomIn_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+ZoomAcerca( )::
+  Restituye la xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view
+  graphics.svg,width=16,height=16]] xref:/Vista_Gráfica.adoc[Vista Gráfica] a su posición inicial por defecto.
+ZoomAcerca( <Factor> )::
+  Amplía la xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+  xref:/Vista_Gráfica.adoc[Vista Gráfica] aplicando el factor dado a la escala actual, usando el centro de la pantalla
+  como referencia.
+
+[EXAMPLE]
+====
+
+`++ ZoomAcerca(1)++` no cambia la vista, pero elimina los rastros
+
+====
+
+`++ ZoomAcerca(2)++` amplía la vista
+
+`++ ZoomAcerca(0.5)++` es equivalente a `++ ZoomAleja(2)++`, es decir que aleja el punto de vista.
+
+ZoomAcerca( <Factor>, <Punto (centro)> )::
+  Amplía la xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+  xref:/Vista_Gráfica.adoc[Vista Gráfica] aplicando el factor dado a la escala actual, usando el punto dado como centro
+  de referencia.
+
+[EXAMPLE]
+====
+
+`++ ZoomAcerca(2, (0, 0))++`
+
+====
+
+ZoomAcerca( <Mín x>, < Mín y>, < Máx x>, < Máx y> )::
+  Acerca la xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+  xref:/Vista_Gráfica.adoc[Vista Gráfica] al rectángulo construido a partir de los vértices (Mín x, Mín y) y (Máx x, Máx
+  y).
+
+[EXAMPLE]
+====
+
+SI _a_ es un deslizador, `++ZoomAcerca(-a, -a, a, a)++` hace que el acercamiento/alejamiento de la vista dependa del
+deslizador _a_.
+
+====
+
+[EXAMPLE]
+====
+
+`++ ZoomAcerca(0, 1, 5, 6)++`
+
+====
+
+[NOTE]
+====
+
+Si alguno de estos parámetros es dependiente, los límites de la vista se vuelven dinámicos. Si se desea evitar este
+comportamiento se puede usar el xref:/commands/CopiaObjetoLibre.adoc[Comando CopiaObjetoLibre].
+
+====
+
+ZoomAcerca( < Mín x>, < Mín y>, < Mín z>, < Máx x>, < Máx y>, < Máx z> )::
+  Acerca la al ortoedro construido a partir de los vértices (Mín x, Mín y, Mín z) y (Máx x, Máx y, Máx z).
+
+[EXAMPLE]
+====
+
+`++ ZoomAcerca(-5, -5, -5, 5, 5, 5)++`
+
+====
+
+[NOTE]
+====
+
+El comportamiento dinámico de la versión 2D no funciona en 3D.
+
+====
+
+[NOTE]
+====
+
+*Notas:*
+
+* Si se están utilizando múltiples image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Vista_Gráfica.adoc[vistas gráficas], se aplica solamente a la activa.
+* Ver también los comandos xref:/commands/ZoomAleja.adoc[ZoomAleja], xref:/commands/VistaActiva.adoc[VistaActiva] y
+xref:/commands/DesplazaPíxeles.adoc[DesplazaPíxeles].
+
+====

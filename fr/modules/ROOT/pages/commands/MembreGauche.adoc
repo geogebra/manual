@@ -1,0 +1,51 @@
+= Commande MembreGauche
+:page-en: commands/LeftSide_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+En mode "direct", une équation est "simplifiée",
+
+* x + 2 = 3x + 1 devient x = 0.5 et`++MembreGauche( x + 2 = 3x + 1 ) ++` retourne la fonction _a(y,x) = x_ ;
+* 4x = 1 - 3y devient 4x + 3y = 1 et`++MembreGauche(4x = 1 - 3y) ++` retourne la fonction _b(x,y) = 4x + 3y_.
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+MembreGauche( <(In)Équation> )::
+  Retourne le membre de gauche de l'équation.
+
+[EXAMPLE]
+====
+
+*Exemples :* `++MembreGauche( x + 2 = 3x + 1 )++` donne _x + 2_ ;
+
+`++MembreGauche( 4x = 1 - 3y )++` donne _4x_.
+
+====
+
+MembreGauche( \{ <(In)Équation> } )::
+  Retourne la liste des membres de gauche de chacune des équations de la liste.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++MembreGauche({a² + b² = c², x + 2 = 3x + 1})++` donne _\{a^2^ + b^2^, x + 2}_.
+
+====
+
+MembreGauche( \{ <Équation> }, <Indice n> )::
+  Retourne le membre de gauche de la _n_-ème équation de la liste.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++MembreGauche({a² + b² = c², x + 2 = 3x + 1},1)++` donne _a^2^ + b^2^_.
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/MembreDroite.adoc[MembreDroite].

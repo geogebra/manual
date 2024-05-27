@@ -1,0 +1,31 @@
+= Comando SonIguales
+:page-en: commands/AreEqual_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+SonIguales( <Objeto>, <Objeto> )::
+  Decide si los objetos son iguales.
+
+Normalmente, este comando opera en forma numérica. Este comportamiento puede modificarse utilizando el comando
+xref:/commands/Comprueba.adoc[Comprueba].
+
+[EXAMPLE]
+====
+
+`++SonIguales(Circunferencia((0, 0),1),x^2+y^2=1)++` da _true_ dado que las dos circunferencias tienen el mismo centro y
+radio.
+
+====
+
+[NOTE]
+====
+
+*Notas:*
+
+* `++SonIguales(Segmento((1, 2), (3, 4)), Segmento((3, 4), (1, 6)))++` es diferente de
+`++Segmento((1, 2), (3, 4)) == Segmento((3, 4), (1, 6))++` ya que lo último solamente compara las longitudes.
+* Ver también los comandos xref:/commands/EstánAlineados.adoc[EstánAlineados],
+xref:/commands/SonCocíclicos.adoc[SonCocíclicos] , xref:/commands/SonConcurrentes.adoc[SonConcurrentes],
+xref:/commands/SonCongruentes.adoc[SonCongruentes], xref:/commands/SonPerpendiculares.adoc[SonPerpendiculares] y
+xref:/commands/SonParalelas.adoc[SonParalelas].
+
+====

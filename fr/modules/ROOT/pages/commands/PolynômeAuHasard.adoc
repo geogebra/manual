@@ -1,0 +1,52 @@
+= Commande PolynômeAuHasard
+:page-en: commands/RandomPolynomial_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+PolynômeAuHasard( <Degré d> , <Minimum pour les Coefficients min>, <Maximum pour les Coefficients max> )::
+  Retourne un polynôme en _x_ de degré égal à _d_ dont les coefficients entiers appartiennent à l'intervalle [_min_ ;
+  _max_].
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* `++PolynômeAuHasard(0, 1, 2)++` retourne soit _1_ soit _2_
+* `++PolynômeAuHasard(2, 1, 2)++` retourne un polynôme de degré _2_ et avec seulement _1_ ou _2_ comme coefficients, par
+ex. _2x^2^ + x + 1_.
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+avec une syntaxe supplémentaire, permettant d'utiliser une autre variable que x.
+
+PolynômeAuHasard( <Variable var >, <Degré d> , <Minimum pour les Coefficients min>, <Maximum pour les Coefficients max>
+)
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+Si la variable _a_ n'est pas définie ;
+
+* `++PolynômeAuHasard(a,2, 1, 2)++` retourne un polynôme de degré _2_ et avec seulement _1_ ou _2_ comme coefficients,
+par ex. _2a^2^ + x + 1_ ;
+
+Si la variable _a_ est définie , vous allez obtenir l'image de sa valeur, par un polynôme au hasard.
+
+====
+
+[NOTE]
+====
+
+*Note :* Dans tous les cas, si _min_ ou _max_ ne sont pas entiers, _round(min)_ et _round(max)_ sont utilisés à leur
+place.
+
+====

@@ -1,0 +1,39 @@
+= Příkaz NahodnyPolynom
+:page-en: commands/RandomPolynomial_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Tento příkaz je dostupný pouze v xref:/CAS_pohled.adoc[CAS pohledu]..
+
+NahodnyPolynom( <Stupeň>, <Minimum pro koeficient>, <Maximum pro koeficient> )::
+  Vygeneruje náhodný polynom daného stupně s proměnnou _x_, jehož celočíselné koeficienty leží v uzavřeném intervalu
+  zadaném dolní a horní celočíselnou mezí.
+
+[EXAMPLE]
+====
+
+* `++NahodnyPolynom[0, 1, 2]++` poskytne buď _1_ nebo _2_ a
+* `++NahodnyPolynom[2, 1, 2]++` vytvoří náhodný polynom druhého stupně s koeficienty buď _1_ nebo _2_, například _2x^2^
++ x + 1_.
+
+====
+
+NahodnyPolynom( <Proměnná>, <Stupeň>, <Minimum pro koeficient>, <Maximum pro koeficient> )::
+  Vygeneruje náhodný polynom daného stupně se zadanou proměnnou, jehož celočíselné koeficienty leží v uzavřeném
+  intervalu daném dolní a horní celočíselnou mezí.
+
+[EXAMPLE]
+====
+
+* `++NahodnyPolynom[a, 0, 1, 2]++` poskytne buď _1_ nebo _2_ a
+* `++NahodnyPolynom[a, 2, 1, 2]++` vytvoří náhodný polynom druhého stupně s koeficienty buď _1_ nebo _2_, například
+_2a^2^ + a + 1_.
+
+====
+
+[NOTE]
+====
+
+Pokud nejsou zadané meze intervalu celočíselné, oba případy příkazu je nahradí čísly získanými užitím _round(Minimum pro
+koeficient)_ a _round(Maximum pro koeficient)_.
+
+====

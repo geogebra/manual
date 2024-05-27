@@ -1,0 +1,66 @@
+= Commande Distance
+:page-en: commands/Distance_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Distance( <Point A>, <Objet O> )::
+  Retourne la (plus courte) distance entre le point _A_ et l'objet. Fonctionne avec des points, des segments, des
+  droites, des coniques et des courbes implicites.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+Distance( <Point A>, <Point B>)::
+  Distance _AB_.
+Distance( <Point A>, <Ligne g>)::
+  Distance d’un point _A_ à une ligne _g_.
+
+====
+
+[NOTE]
+====
+
+*Note :* Dans GeoGebra 4.0 *Distance[Point A, Fonction]* donnait la distance entre _A_ et _(x(A),f(x(A)))_. En GeoGebra
+4.4 la commande retournera la plus courte distance du point à la courbe de la fonction (surtout polynomiale).
+
+====
+
+[NOTE]
+====
+
+*Note :* Dans GeoGebra 3.2 *Distance[Point A, Segment]* donnait la distance à la droite contenant le segment. Depuis
+GeoGebra 4.0 la commande retourne la distance au segment lui-même.
+
+====
+
+Distance( <Ligne g>, <Ligne h>)::
+  Distance des lignes parallèles _g_ et _h_.
+
+[NOTE]
+====
+
+*Note :* La distance entre deux droites sécantes vaudra 0. Cette commande prend son sens pour les droites parallèles.
+
+====
+
+/Fichier:Tool_tool_png.adoc[image:Tool_tool.png[Tool tool.png,width=32,height=32]] Voir l' *outil* associé :
+/Fichier:Mode_distance_svg.adoc[image:32px-Mode_distance.svg.png[Mode distance.svg,width=32,height=32]]
+xref:/tools/Distance_ou_Longueur.adoc[Distance_ou_Longueur].
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* : des écritures de résultats des fois surprenantes avec la possibilité de travailler en littéral :
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Distance((a,b),(c,d))++` retourne stem:[\sqrt\{ \left(a - c \right)^\{2} + \left(b - d \right)^\{2}}].
+
+====
+
+_____________________________________________________________
+
+/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] *Graphique 3D* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D

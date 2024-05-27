@@ -1,0 +1,38 @@
+= Příkaz Kovariance
+:page-en: commands/Covariance_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Kovariance( <Seznam čísel>, <Seznam čísel> )::
+  Vypočítá http://en.wikipedia.org/wiki/cs:Charakteristika_n%C3%A1hodn%C3%A9_veli%C4%8Diny#Kovariance[kovarianci] mezi
+  prvky daných seznamů.
+Kovariance( <Seznam bodů> )::
+  Vypočítá kovarianci _x_-ových a _y_-ových souřadnic daných bodů.
+
+== CAS pohled
+
+Kovariance( <Seznam čísel>, <Seznam čísel> )::
+  Vypočítá kovarianci mezi prvky daných seznamů.
+Kovariance( <Seznam bodů> )::
+  Vypočítá kovarianci _x_-ových a _y_-ových souřadnic daných bodů.
+
+[EXAMPLE]
+====
+
+`++Kovariance[{(1, 1), (2, 3), (3, 7)}]++` yields _2_, což je kovariance mezi _x_-ovými souřadnicemi _\{1, 2, 3}_ a
+_y_-ovymi souřadnicemi _\{1, 3, 7}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Kovariance[{1, 2, 3}, {1, 3, 7}]++` dává _2_, což je kovariance mezi _\{1, 2, 3}_ a _\{1, 3, 7}_.
+
+====
+
+[NOTE]
+====
+
+/s_index_php?title=En:Covariance_Command_action=edit_redlink=1.adoc[Covariance Command]
+
+====

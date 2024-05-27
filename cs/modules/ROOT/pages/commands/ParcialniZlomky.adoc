@@ -1,0 +1,39 @@
+= Příkaz ParcialniZlomky
+:page-en: commands/PartialFractions_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+ParcialniZlomky( <Funkce> )::
+  Vytvoří, pokud existuje, rozklad zadané funkce jedné proměnné _x_ na
+  http://en.wikipedia.org/wiki/Partial_fraction[parciální zlomky]. Graf funkce je zobrazen v
+  xref:/Grafický_pohled.adoc[Grafický_pohled].
+
+[EXAMPLE]
+====
+
+`++ParcialniZlomky[x^2 / (x^2 - 2x + 1)]++` vytvoří _1 + stem:[\frac\{2}\{x - 1}] + stem:[\frac\{1}\{x^2 - 2x + 1}]._
+
+====
+
+== CAS pohled
+
+ParcialniZlomky( <Funkce> )
+
+Vytvoří, pokud existuje, rozklad zadané funkce jedné proměnné _x_ na parciální zlomky.
+
+[EXAMPLE]
+====
+
+`++ParcialniZlomky[x^2 / (x^2 - 2x + 1)]++` vytvoří _1 + stem:[\frac\{2}\{x - 1}] + stem:[\frac\{1}\{x^2 - 2x + 1}]._
+
+====
+
+ParcialniZlomky( <Funkce>, <Proměnná> )
+
+Vytvoří, pokud existuje, rozklad zadané funkce jedné libovolné proměnné na parciální zlomky.
+
+[EXAMPLE]
+====
+
+`++ParcialniZlomky[a^2 / (a^2 - 2a + 1), a]++` vytvoří _1 + stem:[\frac\{2}\{a - 1}] + stem:[\frac\{1}\{a^2 - 2a + 1}]._
+
+====

@@ -1,0 +1,26 @@
+= Commande DAM
+:page-en: commands/MAD_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+dam( <Liste de données brutes> )::
+  Retourne la http://en.wikipedia.org/wiki/fr:Valeur_absolue_des_%C3%A9carts[déviation absolue moyenne] des nombres de
+  la liste.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++dam(1, 2, 3, 4, 5)++` ou `++dam({1, 2, 3, 4, 5})++` retourne _1.2_
+
+====
+
+dam( <Liste des valeurs>, <Liste des effectifs> )::
+  retourne la déviation absolue moyenne des nombres de la liste, pondérés par les effectifs.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++dam({20, 40, 41, 42, 40, 54}, {20, 6, 4, 5, 2})++` retourne _5.79_
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/EcartType.adoc[EcartType].

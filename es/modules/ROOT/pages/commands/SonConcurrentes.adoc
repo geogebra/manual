@@ -1,0 +1,28 @@
+= Comando SonConcurrentes
+:page-en: commands/AreConcurrent_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+SonConcurrentes( <Recta>, <Recta>, <Recta> )::
+  Determina si las rectas son concurrentes. Si las rectas son paralelas, se considera que tienen un punto común en el
+  infinito, por lo que el comando da _true_ en este caso.
+
+Normalmente este comando opera numéricamente. Este comportamiento puede modificarse utilizando el comando
+xref:/commands/Comprueba.adoc[Comprueba].
+
+[EXAMPLE]
+====
+
+`++SonConcurrentes(Recta((1, 2), (3, 4)), Recta((1, 2), (3, 5)), Recta((1, 2), (3, 6)))++` da por resultado _true_ dado
+que las tres rectas pasan por el punto (1,2).
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/EstánAlineados.adoc[EstánAlineados],
+xref:/commands/SonCocíclicos.adoc[SonCocíclicos], xref:/commands/SonIguales.adoc[SonIguales],
+xref:/commands/SonPerpendiculares.adoc[SonPerpendiculares], xref:/commands/SonParalelas.adoc[SonParalelas] y
+xref:/commands/EsTangente.adoc[EsTangente].
+
+====

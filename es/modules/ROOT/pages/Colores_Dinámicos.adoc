@@ -1,0 +1,61 @@
+= Colores Dinámicos
+:page-en: Dynamic_Colors
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+En Geogebra es posible cambiar el color de los objetos a través de la pestaña _Color_ en el
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Cuadro_de_Propiedades.adoc[Cuadro de
+Propiedades]. También es posible cambiar dinámicamente el coor de un objeto: abre el
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Cuadro de Propiedades_ del objeto cuyo color
+deseas definir y selecciona la pestaña _Avanzado_. La sección __Colores dinámicos" tiene tres cajas de entrada que te
+permiten ingresar las tres componentes de color:__Rojo (R)_,_ Verde (G)_, y_ Azul (B)_._
+
+[NOTE]
+====
+
+* Los valores RGB de los colores principales se muestran a la derecha de la _Vista previa_ en la pestaña _Color_ del
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Cuadro de Propiedades_.
+* Los colores dinámicos también pueden ser definidos con una función de rango [0,1].
+
+====
+
+[EXAMPLE]
+====
+
+* Crea tres xref:/Herramienta_Deslizador.adoc[deslizadores] a, b, y c con un intervalo de 0 a 1.
+* Crea un polígono, cuyo color será asociado dinámicamente a esos deslizadores.
+
+Create a polygon, whose colour will be dynamically related to the sliders values.
+
+* Abre el image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Cuadro de Propiedades_ del polígono e
+ingresa los nombres de los tres deslizadores en las cajas de entrada _Rojo_, _Verde_ y _Azul_.
+* Cierra el image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Cuadro de Propiedades_ y cambia los
+valores de los deslizadores para descubrir cómo afecta cada componente de color en el color resultante del polígono.
+
+[NOTE]
+====
+
+También puedes xref:/Animación.adoc[animar] los deslizadores para ver cómo el color cambia automáticamente.
+
+====
+
+====
+
+La sección _Colores Dinámicos_ ofrece también una caja de entrada que permite cambiar la _Opacidad_ del objeto
+seleccionado. Se puede ingresar un numero del intervalo [0,1] (donde 0 significa transparencia, y 1 significa 100%
+opaco), o un deslizador, para obtener opacidad dinámica. Otros números serán ignorados.
+
+== RGB / HSV / HSL
+
+Algunos patrones de color dinámico se pueden obtener usando un modelo de color diferente. Además del modelo
+http://en.wikipedia.org/wiki/es:Modelo_de_color_RGB[RGB] por defecto, GeoGebra ofrece dos modelos más, el
+http://en.wikipedia.org/wiki/es:HSV[HSV] y el http://en.wikipedia.org/wiki/es:Modelo_de_color_HSL[HSL], que pueden ser
+seleccionados a través de la lista desplegable al pie de la sección _Colores dinámicos_ de la pestaña _Avanzado_ del
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Cuadro de Propiedades_.
+
+[EXAMPLE]
+====
+
+Para lograr que un punto _A_ recorra todos los colores del arcoíris cuando se lo mueve de izquierda a derecha, cambiar
+al modo__HSV__, asignar 1 en _Saturación_ y en _Valor_, e ingresar `++x(A)++` en _Matiz_.
+
+====

@@ -1,0 +1,51 @@
+= Commande RemplirColonne
+:page-en: commands/FillColumn_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+RemplirColonne( <Colonne>, <Liste L> )::
+  Copie les valeurs de la liste L dans les premières cellules de la colonne repérée par un nombre (1 pour A, 2 pour B,
+  etc.).
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Il y a écrasement des éventuelles valeurs antérieures, sans aucun message d'avertissement.
+|===
+
+[NOTE]
+====
+
+*Note :* Les cellules créées sont des objets libres(i.e. indépendantes de la liste L).
+
+====
+
+[NOTE]
+====
+
+*Note :* Vous pouvez glisser/déposer directement une liste depuis la fenêtre Algèbre dans le tableur. L'appui simultané
+sur la touche [.kcode]#Maj# vous ouvrira en plus le dialogue d'options (Objets libres/dépendants -- Transposer).
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :*
+
+*Cette commande peut s'avérer utile pour pallier un problème du tableur* :
+
+Vous voulez mettre en évidence la discontinuité de x stem:[\mapsto f(x)=\frac\{1}\{x - 2}] en 2. Si dans le tableur,
+vous saisissez 0 en A1, 0.1 en A2, sélectionnez A1 et A2 et tirez vers le bas le carré bleu pour remplir votre colonne
+de "x" vous obtenez f(A21) = 1125899906842624 et non stem:[\infty]. _(vous pouvez vous rendre compte, en affichage 15
+décimales, que A21 n'est pas 2 mais 2.000000000000001)._
+
+Ce problème ne se pose pas avec la commande Séquence, ainsi vous pouvez valider :
+
+`++RemplirColonne(1, Séquence(0+0.1 k,k,0,21 ))++`
+
+====
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/RemplirCellules.adoc[RemplirCellules] et
+xref:/commands/RemplirLigne.adoc[RemplirLigne].

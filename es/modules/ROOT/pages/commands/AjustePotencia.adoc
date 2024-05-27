@@ -1,0 +1,44 @@
+= Comando AjustePotencia
+:page-en: commands/FitPow_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+AjustePotencia( <Lista de puntos> )::
+  Calcula la curva de regresión de la forma _a x^b^_.
+
+[EXAMPLE]
+====
+
+`++AjustePotencia[{(1, 1), (3, 2), (7, 4)}]++` crea la curva de regresión _0.97 x^0.71^_.
+
+====
+
+== Sintaxis CAS
+
+AjustePotencia( <Lista de puntos> )::
+  Calcula la curva de regresión de la forma _a x^b^_.
+
+[EXAMPLE]
+====
+
+`++AjustePotencia[{(1, 1), (3, 2), (7, 4)}]++` devuelve _0.97 x^0.71^_.
+
+====
+
+[NOTE]
+====
+
+* Todos los puntos considerados deben pertenecer al primer cuadrante del sistema de coordenadas.
+* Ver también los comandos xref:/commands/AjusteExp.adoc[AjusteExp], xref:/commands/AjusteLog.adoc[AjusteLog],
+xref:/commands/AjustePolinómico.adoc[AjustePolinómico] y xref:/commands/AjusteSeno.adoc[AjusteSeno].
+* Si trabajas con números grandes o pequeños, deberías considerar normalizarlos para obtener un resultado más preciso.
+Ver xref:/commands/Normaliza.adoc[Comando Normaliza]
+
+====

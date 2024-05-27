@@ -1,0 +1,26 @@
+= Comando PuntoAleatorioEn
+:page-en: commands/RandomPointIn_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+PuntoAleatorioEn( <Región> )
+
+Genera un punto aleatorio dentro del polígono o cónica dado.
+
+PuntoAleatorioEn( <Lista de puntos> )
+
+Genera un punto aleatorio dentro del polígono cuyos vértices son los puntos dados.
+
+[EXAMPLE]
+====
+
+`++ PuntoAleatorioEn(Polígono(A,B,C))++` y `++ PuntoAleatorioEn(A,B,C)++` generan la misma salida: un punto aleatorio
+del triángulo ABC.
+
+====
+
+Para obtener un punto aleatoria que pertenezca a la lista se debe utilizar el comando
+xref:/commands/ElementoAleatorio.adoc[ElementoAleatorio].
+
+PuntoAleatorioEn( <x~mín~>, <x~máx~>, <y~mín~>, <y~máx~> )
+
+Genera un punto aleatorio con abscisa en el intervalo [x~mín~, x~máx~] y ordenada en el intervalo [y~mín~, y~máx~].

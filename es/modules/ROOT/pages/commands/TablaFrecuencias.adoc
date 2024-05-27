@@ -1,0 +1,147 @@
+= Comando TablaFrecuencias
+:page-en: commands/FrequencyTable_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+TablaFrecuencias( <Lista de Datos Brutos> )::
+  Crea una tabla de texto en cuya primera columna se ordenan los elementos exclusivos de la lista dada y en la segunda,
+  la cantidad de ocurrencias de cada valor de la primera.
+TablaFrecuencias( <Acumulada o no (true/false)>, <Lista de Datos Brutos>)::
+  Si la _booleana_ es _falsa_, crea la misma tabla que produce la variante previa.
+  Si es _cierta_, una cuya columna inicial concuerda con la de la alternativa previa y en la segunda, las frecuencias
+  acumuladas de los valores de la primera.
+
+[NOTE]
+====
+
+La lista de datos puede contener o números o texto.
+
+====
+
+TablaFrecuencias( <Lista de Límites de Clase>, <Lista de Datos Brutos> )::
+  Crea una tabla de texto cuya primera columna contiene intervalos (clases) y la segunda, la cantidad de números en la
+  lista de datos que pertenece a cada intervalo.
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Todos los intervalos excepto el de mayor altura (de
+forma **[**a, b**]**) tienen la forma **[**a, b**)**.
+
+====
+
+TablaFrecuencias( <Acumulada o no (true/false)>, <Lista de Límites de Clase>, <Lista de Datos Brutos>)::
+  Si la _booleana_ es _falsa_, da por resultado la misma tabla que produce la variante previa.
+  Si es _cierta_, una cuya columna inicial concuerda con la de la alternativa previa y en la segunda, las frecuencias
+  acumuladas de los valores de la primera.
+TablaFrecuencias( <Lista de Límites de Clase>, <Lista de Datos Brutos>, <Acumulada o no (true/false)> , <Factor de
+Escala de Densidad (opcional)> )::
+  Crea una tabla de texto cuya primera columna contiene intervalos (clases) y en la segunda, las frecuencias para el
+  correspondiente xref:/commands/Histograma.adoc[Histograma].
+TablaFrecuencias( <Acumulada o no (true/false)>, <Lista de Límites de Clase>, <Lista de Datos Brutos>, <Acumulada o no
+(true/false)> , <Factor de Escala de Densidad (opcional)> )::
+  Crea una tabla de texto cuya primera columna contiene intervalos (clases) y la segunda, frecuencias para el
+  correspondiente xref:/commands/Histograma.adoc[Histograma].
+
+[.small]##
+
+TablaFrecuencias( <Lista de Datos Brutos>,<Factor de Escala (opcional)> )::
+  Genera una tabla de texto cuya primera columna *Valor* contiene una lista ordenada de elementos únicos de la _<Lista
+  de Datos Brutos>_ y una segunda, *Frecuencia* con la cantidad de ocurrencias del valor de la primera multiplicado por
+  el _Factor de Escala_.La lista puede ser de números o de textos.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+`++TablaFrecuencias[ {1, 1, 1, 2, 2, 3, 3, 4, 5}, 2 ]++` da por resultado una tabla en cuya primera columna *_Valor_*
+presenta las entradas correspondientes a:
+
+_1,2,3,4,5_
+
+y la segunda, *_Frecuencia_* las siguientes:
+
+*_6,4,4,2,2._*
+
+Resultando esta tabla:
+
+/Archivo:Frec_1_PNG.adoc[image:Frec_1.PNG[Frec 1.PNG,width=155,height=116]]
+
+`++TablaFrecuencias[ {1, 1, 1, 2, 2, 3, 3, 4, 5} ,1/9]++` da por resultado una tabla en que la primera columna,
+*_Valor_*, presenta las entradas:
+
+*_1, 2, 3 ,4, 5_*
+
+y la segunda, *_Frecuencia_* las siguientes: *_3/9, 2/9 ,2/9, 1/9, 1/9._* en valores numéricos
+aproximados^[.small]#decimales según el xref:/Menú_de_Opciones.adoc[_redondeo_]#^ resultando esta tabla:
+
+/Archivo:Frec_Relativa_PNG.adoc[image:Frec_Relativa.PNG[Frec Relativa.PNG,width=219,height=116]]
+
+====
+
+'''''
+
+[NOTE]
+====
+
+En la lista aparece tres veces el *_1_*; por lo que la cantidad de ocurrencias de *_1_* *_(=3)_* al ser multiplicada por
+el factor de escala *_2_* da por resultado ese *_6_* que aparece en la segunda columna.
+
+====
+
+[EXAMPLE]
+====
+
+`++TablaFrecuencias[ {"rojo", "verde", "rojo", "verde", "azul", "rojo"}, 5 ]++` da por resultado una tabla cuya primera
+columna, _Valor_, presenta las entradas ordenadas alfabéticamente, así:
+
+*_azul, rojo, verde_*
+
+y la segunda, _Frecuencia_, las siguientes:
+
+*_5,15,10_*
+
+dando por resultado la siguiente tabla:
+
+/Archivo:Frece_Colores_PNG.adoc[image:Frece_Colores.PNG[Frece Colores.PNG,width=156,height=84]]
+
+====
+
+'''''
+
+[NOTE]
+====
+
+*Notas:* Ver también el comando xref:/commands/Clases.adoc[Clases].Este comando es similar al de
+xref:/commands/Frecuencia.adoc[Frecuencia] y al de xref:/commands/Histograma.adoc[Histograma].Los artículos que los
+describen contienen algunos ejemplos ilustrativos.
+
+====
+
+'''''
+
+/Archivo:Histograma_PolinomioFrec_Binomial_Tabla_V_a_gif.adoc[image:Histograma_PolinomioFrec_Binomial_Tabla_V_a.gif[Histograma
+PolinomioFrec Binomial Tabla V a.gif,width=414,height=535]]
+
+[.small]##
+
+'''''
+
+[.small]#En la figura se ilustra _animadamente_ la producción de una lista de datos en bruto que permite elaborar una
+[.mw-selflink .selflink]#Tabla de Frecuencias# y un adecuado _Polígono de Frecuencias_, además del
+xref:/commands/Histograma.adoc[Histograma] previo. Se suma un xref:/commands/AjustePolinómico.adoc[AjustePolinómico] con
+grado acorde al valor del deslizador (3 como mínimo) respecto de puntos aleatoriamente distribuidos sobre el _Polígono
+de Frecuencias_ creado para completar el estudio del tema.De hecho, se exponen dos
+xref:/commands/Histograma.adoc[histogramas] que contienen la misma información y solo se diferencian por el _factor de
+escala_ dado que solo en el que tiene un valor de _0.5_ permite apreciar claramente la última clase cuando se produce,
+eventualmente.La producción de valores que incluyan esa última _clase_ tiene escasa probabilidad en tanto los _datos_
+derivan de una secuencia de cada número aleatorio de una xref:/commands/DistribuciónBinomial.adoc[distribución binomial]
+(xref:/commands/BinomialAleatorio.adoc[BinomialAleatorio[3, 0.1**]**]).#

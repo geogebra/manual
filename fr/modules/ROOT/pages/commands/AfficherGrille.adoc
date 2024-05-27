@@ -1,0 +1,37 @@
+= Commande AfficherGrille
+:page-en: commands/ShowGrid_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+AfficherGrille( )::
+  Affiche la grille dans la vue active.
+
+AfficherGrille( <Booléen> )::
+  Affiche/Cache la grille dans la vue active.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* `++AfficherGrille(true)++` La grille est affichée dans la vue active.
+* `++AfficherGrille(false)++` La grille **n'**est *pas* affichée dans la vue active.
+
+====
+
+AfficherGrille( <Vue 1|2|3>, <Booléen> )::
+  Affiche/Cache la grille dans la vue désignée :
+  Vue = 1 pour *Graphique* ;
+  Vue = 2 pour *Graphique 2* ;
+  Vue = 3 pour *Graphique 3D*.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* `++AfficherGrille(1, true)++` La grille est affichée dans _Graphique_.
+* `++AfficherGrille(2, false)++` La grille **n'**est *pas* affichée dans _Graphique 2_.
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/AfficherAxes.adoc[AfficherAxes].

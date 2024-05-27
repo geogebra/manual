@@ -1,0 +1,28 @@
+= Commande PlusCourteDistance
+:page-en: commands/ShortestDistance_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+PlusCourteDistance( <Liste Segments>, <Départ>, <Arrivée>, <Booléen pondéré> )::
+  Cherche le plus court chemin du point de _Départ_ au point d'_Arrivée_ sur le
+  http://en.wikipedia.org/wiki/fr:Graphe_simple[graphe] défini par la liste des segments.
+
+Si http://en.wikipedia.org/wiki/fr:Lexique_de_la_th%C3%A9orie_des_graphes#P[_pondéré_] = *false*, chaque segment compte
+pour 1 (i.e. nous cherchons le chemin défini par le [.underline]#plus petit nombre de segments#), sinon, soit
+__pondéré__=*true*, chaque segment compte pour sa longueur (i.e. nous cherchons le chemin ayant la [.underline]#plus
+petite longueur#).
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+Soit les points `++A(-2,3)++`, `++B(-1,4)++`, `++C(2,4)++` , `++D(4,2)++` et `++E(1,0)++`
+
+et les segments associés s_\{AB}, s_\{BC}, s_\{CD}, s_\{AE} et s_\{ED}
+`++PlusCourteDistance({s_{AB}, s_{BC}, s_{CD}, s_{AE}, s_{ED}}, A, D, true)++` retourne le lieu _graphe1_ qui n'est
+autre que `++LigneBrisée(A, B, C, D)++` composée de 3 segments et de longueur totale stem:[\approx 7.24 \space\space
+(3+3 \sqrt\{2}]) *7.24 < 7.85* `++PlusCourteDistance({s_{AB}, s_{BC}, s_{CD}, s_{AE}, s_{ED}}, A, D, false)++` retourne
+le lieu _graphe2_ qui n'est autre que `++LigneBrisée(A, E, D)++` composée de 2 segments et de longueur totale
+stem:[\approx 7.85 \space \space (\sqrt\{13} +3 \sqrt\{2}]) *2 <3*
+
+====

@@ -1,0 +1,47 @@
+= Comando ValorFuturo
+:page-en: commands/FutureValue_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+ValorFuturo( <Tasa>, <Número de períodos>, <Pago>, <Valor actual (opcional)>, <Tipo (opcional)> )::
+  Da por resultado el valor futuro de una inversión cuyo pago se efectuará en cuotas y períodos fijos, a una tasa de
+  interés constante.
+
+* *<Tasa>* Tasa de interés por período.
+* *<Número de períodos>* Número total de cuotas por el préstamo en una anualidad.
+* *<Pago>* Cuota fija periódica.
+* *<Valor actual (opcional)>* Monto del préstamo correspondiente al valor actual de una serie de pagos. Si no se ingresa
+un valor, se asume 0 por defecto.
+* *<Tipo (opcional)>* Indica cuándo se deben efectuar los pagos. Si no se ingresa un valor o se anota un 0, se realiza
+al final de cada período. Si se ingresa un 1 será al inicio del período.
+
+[EXAMPLE]
+====
+
+`++ValorFuturo(10%/12, 15, -200, 0, 1)++` devuelve un valor futuro de 3207.99.
+
+[NOTE]
+====
+
+Asegúrate de ser consistente con las unidades utilizadas para `++<Tasa>++` y `++<Número de períodos>++`. Si realizas
+pagos mensuales de un préstamo a cuatro años, con una tasa anual del 10%, usa 10%/12 para la tasa y 4*12 para el número
+de pagos.
+
+====
+
+====
+
+[NOTE]
+====
+
+Para todos los argumentos, los pagos realizados quedan representados por un número negativo, mientras que los pagos
+recibidos se representan con positivos.
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/Pago.adoc[Pago], xref:/commands/Tasa.adoc[Tasa],
+xref:/commands/ValorActual.adoc[ValorActual] y xref:/commands/Períodos.adoc[Períodos].
+
+====

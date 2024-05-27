@@ -1,0 +1,73 @@
+= Comando LímiteIzquierda
+:page-en: commands/LimitBelow_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+LímiteIzquierda[ <Función>, <Valor> ]::
+  Calcula el http://en.wikipedia.org/wiki/es:L%C3%ADmite_de_una_funci%C3%B3n#L.C3.ADmites_laterales_izquierdo[límite
+  lateral izquierdo] (en inglés, http://en.wikipedia.org/wiki/Limit_of_a_function#One-sided_limits[_left-sided limit_]
+  de la función dada para el valor de su variable principal indicado.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++LímiteIzquierda[ℯ^x / x,  0]++`* da −∞**`++LímiteIzquierda[ln(x),  -1]++`** resulta *_indefinido_*, dado
+que lo está tal límite para _x tendiendo a -1_.
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+El comando obra del modo descripto; admite literales y suma la siguiente variante exclusiva de esta
+xref:/Vista_CAS.adoc[vista]:
+
+LímiteIzquierda[ [.small]#<# Expresión[.small]##>, <## Variable[.small]##>, <## Valor[.small]##>## ]::
+  Calcula el límite lateral izquierdo de la expresión multivariable dada para el valor indicado de la variable.Así,
+  *LímiteIzquierda*[f, v, t] establece el límite lateral izquierdo de _f_ para el valor _t_ de la variable _v_.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++LímiteIzquierda[x^y / y, y, 0]++`* da __-stem:[\infty]__**`++LímiteIzquierda[ln(cos(x)/x), 0 ]++`** da
+por resultado el signo *_?_* con el que en esta xref:/Vista_CAS.adoc[vista] se indica que no está definido el límite en
+cuestión.
+
+====
+
+LímiteIzquierda[ <Expresión>, <Valor> ]::
+  Da el límite lateral izquierdo de la expresión dada para el valor _t_ indicado de la variable principal.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++LímiteIzquierda[sqrt(2)^ñ / ñ, 0]++`* da -∞ (-infinito)*`++LímiteIzquierda[sen(π+y)^x / x, 0]++`* da -∞
+(infinito) mientras *`++LímiteDerecha[sen(π+y)^x / x, 0]++`* da ∞ (infinito).
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: No todos los límites pueden calcularse con GeoGebra
+y todo caso de tal índole aparecerá: - *indefinido* en la xref:/Vista_Algebraica.adoc[Vista Algebraica]- con el signo
+*_?_* al operar en la xref:/Vista_CAS.adoc[Vista CAS]Cuando el resultado _correcto_ sea precisamente _indefinido_, se
+registrará la misma respuesta.
+
+====
+
+'''''
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/Asíntota.adoc[Asíntota] , xref:/commands/LímiteDerecha.adoc[LímiteDerecha] y
+xref:/commands/Límite.adoc[Límite].
+
+====

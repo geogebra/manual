@@ -1,0 +1,32 @@
+= Comando ConservaSi
+:page-en: commands/KeepIf_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+ConservaSi( <Condición>, <Lista> )::
+  Crea una nueva lista que contiene solamente los elementos de la lista original que cumplen la condición.
+
+[EXAMPLE]
+====
+
+`++ ConservaSi(x<3, {1, 2, 3, 4, 1, 5, 6})++` devuelve la nueva lista _\{1, 2, 1}_.
+
+====
+
+[NOTE]
+====
+
+Para listas de números se puede utilizar una condición arbitraria. Para listas de otros objetos solamente se pueden usar
+condiciones de la forma `++x==constante++` o `++x!=constante++`.
+
+====
+
+ConservaSi( < Condición >, <Variable>, <Lista> )::
+  Esta sintaxis permite ingresar una condición más flexible.
+
+[EXAMPLE]
+====
+
+Si consideramos _P, Q, R_, `++ ConservaSi(x(A) < 3, A, {P, Q, R})++` filtrará los puntos de abscisa menor que _3_ para
+quitarlos de la lista. En la verificación, la variable _A_ es por _P_, luego _Q_ y finalmente _R_.
+
+====

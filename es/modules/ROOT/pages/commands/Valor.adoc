@@ -1,0 +1,33 @@
+= Comando Valor
+:page-en: commands/SetValue_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Valor( <Valor lógico>, <0|1> )::
+  Fija el estado de una variable lógica / casilla de control, con un 1 = _true_ (verdadero) y con 0 = _false_ (falso).
+
+[EXAMPLE]
+====
+
+Si _b_ es una variable lógica, `++ Valor(b, 1)++` la establece _true_.
+
+====
+
+Valor( <Objeto>, <Objeto> )::
+  Sean _A_ el primer objeto y _B_ el segundo. Si _A_ es un xref:/Objetos_libres_dependientes_y_auxiliares.adoc[objeto
+  libre] o un xref:/Puntos_y_Vectores.adoc[punto] restringido a un xref:/Objetos_Geométricos.adoc[recorrido o región],
+  su valor se define como el valor actual de _B_ (es decir que _A_ no cambiará si _B_ cambiara más adelante).
+
+[EXAMPLE]
+====
+
+Si _f_ es una función, `++Valor(f, ElementoAleatorio({cos(x), 3x+2, ln(x)}))++` define f como una de las funciones de la
+lista, elegida al azar.
+
+====
+
+Valor( <Lista>, <Número>, <Objeto> )::
+  Sea _n_ el _<Número>_. El comando Valor define el _n_-ésimo elemento de la lista a partir del valor actual del objeto.
+  El número _n_ puede ser, a lo sumo, 1 + (longitud de la lista).
+
+Valor( <xref:/Objetos_de_Acción.adoc[lista desplegable]>, <Número _n_ > )::
+  Define _n_ como el xref:/commands/ÍndiceElegido.adoc[índice del elemento seleccionado] en la lista desplegable.

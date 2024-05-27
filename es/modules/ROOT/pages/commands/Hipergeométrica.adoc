@@ -1,0 +1,97 @@
+= Comando Hipergeométrica
+:page-en: commands/HyperGeometric_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+*Hipergeométrica*[ <Tamaño de Población>, <Número de Éxitos>, <Tamaño de Muestra> ]::
+  Establece el histograma de esa http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_hipergeom%C3%A9trica[distribución
+  _hipergeométrica_] (http://en.wikipedia.org/wiki/Hypergeometric_distribution[_hypergeometric_] en inglés).*Parámetros*
+  en un ejemplo de bolillas negras _exitosas_:
+  _Tamaño de Población_: número de bolillas^en la urna^
+  _Número de Éxitos_: número de negras^en la urna^
+  _Tamaño de Muestra_: número de las extraídas
+
+El histograma expone la función de probabilidad del número de bolillas negras en la __muestra__^las extraídas^.
+
+*Hipergeométrica*[ <Población>, <Éxitos>, <Muestra>, <Booleana~Acumulativa~> ]::
+  Como en el caso anterior, se establece el histograma de la
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_hipergeom%C3%A9trica[distribución _hipergeométrica_] cuando el valor
+  _booleano_ es falso^_false_^Cuando es verdadero (_true_), el diagrama escalonado de la finción
+  http://en.wikipedia.org/wiki/es:Funci%C3%B3n_Distribuici%C3%B3n_Acumulada[acumulativa]^*_fda_*^.
+
+[EXAMPLE]
+====
+
+`++Hipergeométrica[10, 3, 5, x(A) > 0]++` xref:/Vista_Gráfica.adoc[grafica] el histograma correspondiente a la
+_http://en.wikipedia.org/wiki/es:Funci%C3%B3n_Distribuici%C3%B3n_Acumulada[acumulativo]_ de valor aproximado _2.5_
+siendo la abscisa de _A_ positiva y el unitario de la densidad de probabilidad en caso contrario.
+
+====
+
+*Hipergeométrica*[ <Población>, <Número de Éxitos>, <Tamaño de la Muestra>, <Valor de Variable>, <Booleana~Acumulativa~>
+]::
+  Siendo _`++X++`_ la http://en.wikipedia.org/wiki/es:Variable_aleatoria[variable aleatoria] de la
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_hipergeom%C3%A9trica[distribución _hipergeométrica_] y _v_ el valor
+  asignado, los resultados serían:
+  * P( X = _v_) si el valor _booleano_ es falso^_false_^
+  * P( X ≤ _v_) si fuera verdadero.[.small]#Si el valor _booleano_ es falso^_false_^ da por resultado el valor de la
+  http://en.wikipedia.org/wiki/es:Funci%C3%B3n_de_densidad_de_probabilidad[**_f_**unción de **_d_**ensidad de
+  **_p_**robabilidad^*_fdp_*^] de http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_hipergeom%C3%A9trica[distribución
+  _hipergeométrica_] para las condiciones dadas (número de éxitos y probabilidad indicadas).En caso contrario, el de la
+  http://en.wikipedia.org/wiki/es:Funci%C3%B3n_Distribuici%C3%B3n_Acumulada[distribución acumulativa]#
+
+[EXAMPLE]
+====
+
+El siguiente boceto ilustra _animadamente_ el tipo de diagrama que se despliega según el valor de la variable booleana y
+acorde a los valores de los parámetros que varían de modo aleatorio.
+
+====
+
+/Archivo:Hipergeo_gif.adoc[image:Hipergeo.gif[Hipergeo.gif,width=435,height=543]]
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+En esta xref:/Vistas.adoc[vista]^[.small]#asociada al xref:/Vista_CAS.adoc[_Sistema de Computación Algebraica_]#^, solo
+opera la siguiente variante de sintaxis:
+
+*Hipergeométrica*[ <Población>, <Número de Éxitos>, <Tamaño de la Muestra>, <Valor de Variable>, <Booleana~Acumulativa~>
+]
+
+'''''
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* *`++Hipergeométrica[10, 3, 3, round(random()), x(A) > 0]++`* puede dar como resultado aleatorio stem:[\frac\{7}\{24}]
+en la xref:/Vista_CAS.adoc[Vista CAS] o, según el valor que asuma el _valor de la variable_, _0.29_ en la
+xref:/Vista_Algebraica.adoc[Algebraica].[.small]#Este valor se modifica según el de verdad de la _booleana_ (abscisa de
+_A_ positiva o no) y cada vez que se recalculan, pulsanbdo [.kcode]#F9#, los valores aleatorios.#
++
+
+'''''
++
+Asumiendo que, sin devolución se seleccionan dos bolillas de un conjunto de 10 bolillas siendo un par de ellas negras...
+* *`++Hipergeométrica[10, 2, 2, 0, false]++`* establece stem:[\frac\{28}\{45}], la probabilidad de no escoger ninguna
+bolilla negra,
+* *`++Hipergeométrica[10, 2, 2, 1, false]++`* establece stem:[\frac\{16}\{45}], la probabilidad de escoger una bolilla
+negra,
+* *`++Hipergeométrica[10, 2, 2, 2, false]++`* establece stem:[\frac\{1}\{45}], la probabilidad de no escoger ambas
+bolillas negras,
+* *`++Hipergeométrica[10, 2, 2, 3, false]++`* establece _0_, la probabilidad de escoger tres bolillas negras.
+* *`++Hipergeométrica[10, 2, 2, 0, true]++`* establece stem:[\frac\{28}\{45}], la probabilidad de escoger cero (o menos)
+bolillas negras,
+* *`++Hipergeométrica[10, 2, 2, 1, true]++`* establece stem:[\frac\{44}\{45}], la probabilidad de escoger una o menos,
+bolillas negras,
+* *`++Hipergeométrica[10, 2, 2, 2, true]++`* establece _1_, la probabilidad de escoger dos o menos bolillas negras
+* *`++Hipergeométrica[10, 2, 2, 3, true]++`* establece _1_, la probabilidad de escoger tres o menos, bolillas negras.
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/HipergeométricaInversa.adoc[HipergeométricaInversa].
+
+====

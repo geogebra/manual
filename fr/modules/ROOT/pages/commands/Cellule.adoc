@@ -1,0 +1,26 @@
+= Commande Cellule
+:page-en: commands/Cell_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Cellule( <Colonne c>, <Ligne l> )::
+  Retourne une copie de la cellule du xref:/Tableur.adoc[tableur] repérée par les numéros de colonne _c_ et de ligne
+  _l_.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Cellule(2,1)++` retourne une copie du contenu de la cellule B1.
+
+====
+
+[NOTE]
+====
+
+*Notes:*
+
+* Par défaut les cellules du tableur sont des objets xref:/Objets_libres_dépendants_ou_auxiliaires.adoc[auxiliaires] et
+en ce cas cette commande retourne aussi un objet auxiliaire.
+* Vous devez vous assurer que les cellules appelées ont été créées antérieurement à l'appel de cette commande dans le
+xref:/Protocole_de_construction.adoc[Protocole de construction].
+
+====

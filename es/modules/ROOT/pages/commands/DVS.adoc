@@ -1,0 +1,32 @@
+= Comando DVS
+:page-en: commands/SVD_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+DVS( <Matriz> )::
+  Devuelve la http://en.wikipedia.org/wiki/es:Descomposici%C3%B3n_en_valores_singulares[descomposición en valores
+  singulares] de la matriz (como una lista de tres matrices).
+
+[EXAMPLE]
+====
+
+`++DVS({{3, 1, 1}, {-1, 3, 1}})++` devuelve la lista de elementos: stem:[
+\left(\begin\{array}\{}-0.71&0.71\\0.71&0.71\\\end\{array}\right) ], stem:[
+\left(\begin\{array}\{}3.16&0\\0&3.46\\\end\{array}\right)] y
+stem:[\left(\begin\{array}\{}-0.89&0.41\\0.45&0.82\\0&0.41\\\end\{array}\right)].
+
+====
+
+[NOTE]
+====
+
+* Este comando puede ser utilizado en la xref:/Vista_CAS.adoc[image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16]] xref:/Vista_CAS.adoc[Vista CAS]. Los números en la respuesta pueden variar en su orden
+según se opere en la xref:/Vista_Algebraica.adoc[image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16]] xref:/Vista_Algebraica.adoc[Vista Algebraica] o en la
+xref:/Vista_CAS.adoc[image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]] xref:/Vista_CAS.adoc[Vista
+CAS].
+* Ver también los comandos xref:/commands/ValoresPropios.adoc[ValoresPropios],
+xref:/commands/VectoresPropios.adoc[VectoresPropios], xref:/commands/Inversa.adoc[Inversa],
+xref:/commands/Traspone.adoc[Traspone] y xref:/commands/DiagonalizaciónJordan.adoc[DiagonalizaciónJordan].
+
+====

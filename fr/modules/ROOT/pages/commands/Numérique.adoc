@@ -1,0 +1,36 @@
+= Commande Numérique
+:page-en: commands/Numeric_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+*/Fichier:Menu_view_cas_svg.adoc[image:24px-Menu_view_cas.svg.png[Menu view cas.svg,width=24,height=24]] uniquement en
+fenêtre xref:/Calcul_formel.adoc[Calcul formel]*
+
+Numérique( <Expression> )::
+  Essaye de déterminer une approximation numérique de l'expression donnée. Le nombre de décimales dépend de l'option
+  _Arrondi_ choisie dans le xref:/Menu_Options.adoc[menu Options].
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Numérique(3 / 2)++` retourne _1.5_.
+
+====
+
+Numérique( <Expression>, <nombre de chiffres> )::
+  Essaye de déterminer une approximation numérique de l'expression donnée, avec _nombre de chiffres_ significatifs.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Numérique(sin(1), 20 )++` retourne _0.84147098480789650665_.
+
+====
+
+*Note :* Si vous ne précisez pas un nombre suffisant de chiffres vous pouvez obtenir un résultat erroné, ceci est dû au
+problème d' http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html[annulation en virgule flottante (document en
+anglais)]
+
+====

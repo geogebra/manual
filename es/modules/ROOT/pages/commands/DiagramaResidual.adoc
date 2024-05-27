@@ -1,0 +1,33 @@
+= Comando DiagramaResidual
+:page-en: commands/ResidualPlot_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+*DiagramaResidual*[ [.small]##<##Lista de Puntos[.small]##>, <##Función[.small]##>## ]::
+  Da por resultado una lista de puntos de abscisas - coordenadas *_x_* - iguales a las de los elementos de la lista y
+  ordenadas - coordenadas *_y_* - residuales respecto de la función indicada.Siendo el _enésimo_ elemento de la lista un
+  punto, _(a, b)_ por ejemplo, _(a, b-f(a))_ ocuparía la misma posición - _enésima_ - en la lista del resultado.
+
+[EXAMPLE]
+====
+
+*`++DiagramaResidual[ li, f ]++`*, dadas...
+
+* la xref:/Listas.adoc[lista] de puntos `++li = {(-2, 0), (-1,0), (0.5,0), (0,2), (1, 0)} ++` y
+* la xref:/Funciones.adoc[función] `++f(x) = 2x^5+ 3 x^4- 4x-2++`
+
+... establece y xref:/Vista_Gráfica.adoc[grafica] la siguiente xref:/Listas.adoc[lista] de
+xref:/Puntos_y_Vectores.adoc[puntos]: _\{(-2, 10), (-1, -3), (0.5, 3.75), (0, 4), (1, 1)}_
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] la xref:/Vista_CAS.adoc[Vista C~[.small]#omputación#~A~[.small]#lgebraica#~S~[.small]#imbólica#~]
+
+El comando obra de modo análogo en cuanto a la lista resultante.

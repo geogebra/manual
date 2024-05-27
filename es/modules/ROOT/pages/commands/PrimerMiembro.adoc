@@ -1,0 +1,92 @@
+= Comando PrimerMiembro
+:page-en: commands/LeftSide_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+En modo "directo", une ecuación se simplifica _espontáneamente_. Así, _x + 2 = 3x + 1_ resulta _x = 0.5_
+y**`++PrimerMiembro[ x + 2 = 3x + 1 ]++`** da por resultado la xref:/Funciones.adoc[función] multivariable *a(y,x) = x*
+
+PrimerMiembro( <Ecuación> )::
+  Da por resultado el contenido del primer miembro de la ecuación simplificada, tras el pasaje de términos
+  correspondiente.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++PrimerMiembro[7 x = 3 y]++`* da _7 x - 3 y_ siendo _0_ el xref:/commands/SegundoMiembro.adoc[_segundo
+miembro_]**`++PrimerMiembro[x + 2 = 3 x + 1]++`** da _x_ siendo _0.5_ el xref:/commands/SegundoMiembro.adoc[_segundo
+miembro_]
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] la xref:/Vista_CAS.adoc[Vista C~[.small]#omputación#~A~[.small]#lgebraica#~S~[.small]#imbólica#~]
+
+Se admiten literales en operaciones simbólicas y, además de la previa con algunas diferenciaciones, se añaden
+alernativas exclusivas de esta xref:/Vista_CAS.adoc[vista] que permiten ingresar una lista de ecuaciones.
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Alerta,title="Alerta",width=18,height=18] *Alerta*: |En esta xref:/Vista_CAS.adoc[vista], no
+se simplifican las ecuaciones.
+|===
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Se manejan con literalidad las distinciones entre
+primero y segundo miembro. Como en:*`++PrimerMiembro[7 x = 3 y]++`* que da *_7 x_* siendo el
+xref:/commands/SegundoMiembro.adoc[*_segundo miembro_*], *_3 y_* en lugar de *_7 x - 3 y_* y *0* respectivamente, como
+darían de ingresarlos desde la xref:/Barra_de_Entrada.adoc[Barra de Entrada]. Así se lo ilustra en cada explicación y en
+los ejemplos.
+
+====
+
+PrimerMiembro( <Ecuación> )::
+  Da por resultado el contenido del primer miembro de la ecuación.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++PrimerMiembro[7 x=3 y]++`* da *_7 x_*, siendo _3 y_ el xref:/commands/SegundoMiembro.adoc[_segundo
+miembro_]**`++PrimerMiembro[x + 3 = 3 x + 1]++`** da _x + 3_, siendo _3 x + 1_ el
+xref:/commands/SegundoMiembro.adoc[_segundo miembro_]
+
+====
+
+PrimerMiembro( <Lista de Ecuaciones> )::
+  Da por resultado la lista de cada primer miembro de las ecuaciones listadas.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++PrimerMiembro[{a^2 + b^2 = c^2,  x + 2 = 3 x + 1}]  ++`* da por resultado la lista __\{a^2^ + b^2^, x +
+2}__**`++PrimerMiembro[{a^2 + b^2 = c^2,  x + 2 = 3 x + 1, 3 a^2 + b^3 - c^2 = 7 x, 2 x + 7 = 3 x}]  ++`** da por
+resultado la lista *_\{ a^2^ + b^2^, x + 2, 3 a^2^ + b^3^ - c^2^, 2 x + 7}_*.
+
+====
+
+PrimerMiembro( <Lista de Ecuaciones>, <Índice> )::
+  Da por resultado el primer miembro de la ecuación que ocupa, en la lista, la posición indicada por el índice.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++PrimerMiembro[{a^2 + b^2 = c^2, x + 2 = 3x + 1, x + 2 = 3 x}, 1]++`* da __stem:[a^2 + b^2
+]__**`++PrimerMiembro[{a^2 + b^2 = c^2, x + 2 = 3x + 1, 2 x = 3 - x}, 2]++`** da _x + 2_.
+
+====
+
+'''''
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/SegundoMiembro.adoc[SegundoMiembro]
+====

@@ -1,0 +1,34 @@
+= Intervalles
+:page-en: Intervals
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Un intervalle est un ensemble de nombres réels compris en général entre un minimum et un maximum. Pour créer un
+intervalle, validez par ex. `++2 < x < 3++` dans xref:/Saisie.adoc[Saisie]. L'intervalle de l'exemple précédent est
+*ouvert*. Vous pouvez aussi le définir *fermé* (`++2 ≤ x ≤ 3++`) ou *semi-ouvert*(par ex. : `++2 ≤ x < 3++`).
+
+Par défaut, toute la bande _a ≤ x ≤ b_ du plan est coloriée, dans les propriétés de l'intervalle, vous pouvez choisir
+l'option "Afficher sur axe des x", afin que seul le segment représentant soit colorié.
+
+Pour déterminer si un nombre _c_ appartient à un intervalle _r_, validez `++r(c)++` dans xref:/Saisie.adoc[Saisie], le
+résultat est une valeur booléenne.
+
+[NOTE]
+====
+
+*Note :* Voir aussi xref:/Valeurs_booléennes.adoc[Valeurs booléennes] .
+
+====
+
+La généralisation des intervalles conduit aux xref:/Inéquations.adoc[Inéquations].
+
+== Commandes agissant sur les intervalles
+
+* Les commandes xref:/commands/Min.adoc[Min], xref:/commands/Max.adoc[Max],
+xref:/commands/MilieuCentre.adoc[MilieuCentre] pour un intervalle avec borne inférieure _a_ et borne supérieure _b_
+retournent les nombres _a_, _b_ et stem:[\frac\{a+b}2] respectivement. Le résultat ne dépend pas de la nature de
+l'intervalle : ouvert, fermé ou semi-ouvert.
+
+* La xref:/commands/Point.adoc[commande Point] retourne un xref:/Points_et_Vecteurs.adoc[point] déplaçable dont
+l'abscisse appartient à l'intervalle et l'ordonnée est 0.
+* La xref:/commands/PointDans.adoc[commande PointDans] retourne un point déplaçable dont l'abscisse appartient à
+l'intervalle et l'ordonnée peut être définie arbitrairement.

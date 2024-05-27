@@ -1,0 +1,60 @@
+= Commande Extremum
+:page-en: commands/Extremum_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Extremum( <Polynôme f> )::
+  Tous les extremums locaux du polynôme _f_ (en tant que points).
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Extremum(x³ + 3x² - 9x - 9)++` crée les extremums locaux (points) _(-3, 18)_ et _(1, -14)_ et les dessine
+dans xref:/Graphique.adoc[Graphique].
+
+====
+
+\{Extremum( <Polynôme f> )}::
+  Tous les extremums locaux du polynôme _f_ (en tant que liste de points).
+
+[EXAMPLE]
+====
+
+*Exemple :* `++{Extremum(x³ + 3x² - 9x - 9)}++` crée les extremums locaux (liste) _\{(-3, 18),(1, -14)}_ et les dessine
+dans xref:/Graphique.adoc[Graphique].
+
+====
+
+/Fichier:Tool_tool_png.adoc[image:Tool_tool.png[Tool tool.png,width=32,height=32]] Voir l' *outil* associé :
+/Fichier:Mode_extremum_svg.adoc[image:32px-Mode_extremum.svg.png[Mode extremum.svg,width=32,height=32]]
+xref:/tools/Extremums.adoc[Extremums].
+
+Extremum( <Fonction>, <x initial a>, <x final b> )::
+  L'extremum de la fonction _f_ sur l'intervalle ] _a ; b_ [.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Extremum(x³ + 3x² - 9x - 9 , 0, 4)++` ne créera que l'extremum local _(1, -14)_.
+
+====
+
+[NOTE]
+====
+
+*Note :* La fonction _f_ doit être continue sur ] _a ; b_ [, sinon, il peut être retourné de faux extremum à proximité
+de la discontinuité.
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* : Il y a d'office création d'une liste de points
+
+[EXAMPLE]
+====
+
+*Exemples :* `++Extremum(x²)++` vous retournera \{(0, 0)}`++Extremum(x³ + 3x² - 9x - 9)++` vous retournera \{(-3, 18),
+(1, -14)}.
+
+====

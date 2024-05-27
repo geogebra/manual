@@ -1,0 +1,68 @@
+= Comando Inversa
+:page-en: commands/Invert_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Inversa( <Matriz> )::
+  Da por resultado la inversa de la matriz dada.
+
+[EXAMPLE]
+====
+
+`++Inversa({{a, b}, {c, d}})++` da por resultado stem:[\begin\{pmatrix}\frac\{d}\{ad- bc} & \frac\{-b}\{ad-
+bc}\\\frac\{-c}\{ad- bc}& \frac\{a}\{ ad- bc}\end\{pmatrix}], la inversa de la matriz stem:[\begin\{pmatrix}a & b\\c &
+d\end\{pmatrix}].
+
+====
+
+[EXAMPLE]
+====
+
+`++Inversa({{1, 2}, {3, 4}})++` da por resultado stem:[\begin\{pmatrix}-2 & 1\\1.5 & -0.5\end\{pmatrix}], la inversa de
+la matriz stem:[\begin\{pmatrix}1 & 2\\3 & 4\end\{pmatrix}].
+
+====
+
+[NOTE]
+====
+
+En la image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[Vista CAS] se permiten
+las variables indefinidas.
+
+====
+
+Inversa( <Función> )::
+  Da por resultado la inversa de la función indicada.
+
+[EXAMPLE]
+====
+
+`++Inversa(sen(x))++` da por resultado _arcsen(x)_.
+
+====
+
+[NOTE]
+====
+
+La función debe contener una única _x_ y no se tiene en cuenta el dominio ni el rango, por ejemplo para f(x) = x^2 o
+f(x) = sen(x). Si hay más de una _x_ en la función, otro comando podría ayudarte:
+
+[EXAMPLE]
+====
+
+Tanto `++Invesa(FraccionesParciales((x + 1) / (x + 2)))++` como `++Inversa(CompletaCuadrado(x^2 + 2 x + 1))++` dan por
+resultado las inversas de dichas funciones.
+
+====
+
+====
+
+[NOTE]
+====
+
+* En la image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[Vista CAS], el
+comando puede funcionar también cuando las funciones contienen más de una _x_.
+* Ver también xref:/commands/ValoresPropios.adoc[Comando ValoresPropios], xref:/commands/VectoresPropios.adoc[Comando
+VectoresPropios], xref:/commands/DVS.adoc[Comando DVS], xref:/commands/Traspone.adoc[Comando Traspone],
+xref:/commands/DiagonalizaciónJordan.adoc[Comando DiagonalizaciónJordan]
+
+====

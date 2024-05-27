@@ -1,0 +1,157 @@
+= Commande Intersection
+:page-en: commands/Intersect_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Intersection( <Objet>, <Objet> )::
+  Intersection(<Ligne g>,<Ligne h>) : Point d’intersection entre les lignes _g_ et _h_.
+  Intersection(<Ligne g>,<Conique c>) : Tous les points d’intersection de la ligne _g_ avec la conique _c_ (max. 2).
+  Intersection(<Conique c~1~>, <Conique c~2~>) : Tous les points d’intersection entre les coniques _c~1~_ et _c~2~_
+  (max. 4).
+  Intersection(<Polynôme f~1~>,<Polynôme f~2~> ): Tous les points d’intersection entre les courbes C~f1~ et C~f2~ des
+  polynômes f~1~ et f~2~.
+  Intersection(<Polynôme f>,<Ligne g>) : Tous les points d’intersection entre la courbe C~f1~ du polynôme _f_ et la
+  ligne _g_.
+  Intersection( <Ligne>, <Courbe paramétrée>): Tous les points d’intersection de la ligne et de la
+  xref:/Courbes.adoc[courbe paramétrée].
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* Soit `++a: -3x + 7y = -10++` la droite passant par _A = (1, -1)_ et _B = (8, 2)_ et `++c: x^2 + 2y^2 = 8++` l'ellipse
+de foyers _C = (-2, 0)_ et _D = (2, 0)_. `++Intersection(a, c)++` retourne les points d'intersection _E = (-1.02,
+-1,87)_ et _F = (2.81, -0.22)_ de la droite et de l'ellipse.
+* `++Intersection(y = x + 3, Courbe(t, 2t, t, 0, 10))++` retourne _A(3,6)_.
+* `++Intersection(Courbe(2s, 5s, s,-10, 10 ), Courbe(t,2t,t,-10,10))++` retourne _A(0,0)_.
+
+====
+
+Intersection( <Objet>, <Objet>, <Numéro> )
+
+Chaque objet doit être une ligne, une conique, une fonction polynomiale ou une courbe implicite.
+
+Intersection(<Ligne g>,<Conique c>,<Nombre n>) : __n__^ème^ point d’intersection de la ligne _g_ avec la conique _c_.
+
+Intersection(<Conique c~1~>, <Conique c~2~>,<Nombre n>) : __n__^ème^ point d’intersection entre les coniques _c~1~_ et
+_c~2~_ .
+
+Intersection(<Polynôme f~1~>,<Polynôme f~2~>,<Nombre n>) : __n__^ème^point d’intersection entre les courbes C~f1~ et
+C~f2~ des polynômes f~1~ et f~2~.
+
+Intersection(<Polynôme f>,<Ligne g>,<Nombre n>) : __n__^ème^ point d’intersection entre la courbe C~f~ du polynôme _f_
+et la ligne _g_.
+
+Intersection( <Objet>, <Objet>, <Point Initial> )::
+  Intersection(<Fonction f>,<Fonction g>, <Point A>) : Premier point d’intersection entre C~f~ et C~g~ à partir de _A_
+  (par la méthode de Newton).
+  Intersection(<Fonction f>,<Ligne g>,<Point A>) : Premier point d’intersection entre C~f~ et la ligne _g_ à partir de
+  _A_ (par la méthode de Newton).
+
+Intersection( <Fonction f>, <Fonction g>, <x min>, <x max> )::
+  Tous les points d’intersection entre les courbes C~f~ et C~g~ sur l'intervalle [_min ; max_].
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+Soit `++f(x) = x^3 + x^2 - x++` et `++g(x) = 4 / 5 + 3 / 5 x++` deux fonctions. `++Intersection( f, g, -1, 2 )++`
+retourne les points d'intersection _A = (-0.43, 0.54)_ et _B = (1.1, 1.46)_ sur l'intervalle [ -1, 2 ] .
+
+====
+
+Intersection( <Courbe paramétrée 1>, <Courbe paramétrée 2>, <Paramètre 1>, <Paramètre 2> )::
+  Cherche un point d'intersection en utilisant une méthode itérative en démarrant aux valeurs données pour les
+  paramètres.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+Soit `++a = Courbe(cos(t), sin(t), t, 0, π)++` et `++b = Courbe(cos(t) + 1, sin(t), t, 0, π)++`.
+`++Intersection(a, b, 0, 2)++` retourne le point d'intersection _A = (0.5, 0.87)_.
+
+====
+
+/Fichier:Tool_tool_png.adoc[image:Tool_tool.png[Tool tool.png,width=32,height=32]] Voir l' *outil* associé :
+/Fichier:Mode_intersect_png.adoc[image:Mode_intersect.png[Mode intersect.png,width=32,height=32]]
+xref:/tools/Intersection.adoc[Intersection].
+
+/Fichier:Menu_view_cas_svg.adoc[image:20px-Menu_view_cas.svg.png[Menu view cas.svg,width=20,height=20]] *Calcul formel*
+
+Seule l'intersection de courbes représentatives de fonctions est active.
+
+Intersection( <Fonction f>, <Fonction g>)::
+  Tous les points d’intersection entre les courbes C~f~ et C~g~.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Intersection(x²,x)++` retourne la liste de points _\{(1,1),(0,0)}_
+
+====
+
+Bien que ce ne soit pas actuellement précisé, vous pouvez aussi limiter votre intervalle de travail :
+
+Intersection( <Fonction f>, <Fonction g>, <x min>, <x max> )::
+  Tous les points d’intersection entre les courbes C~f~ et C~g~ sur l'intervalle [_min ; max_].
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Intersection(x²,x,-0.5,0.5)++` retourne le point _(0,0)_
+
+====
+
+[NOTE]
+====
+
+*/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] Graphique 3D*
+
+Intersection(<Objet> , <Objet> )::
+
+[EXAMPLE]
+====
+
+*Exemples :* Lorsque l'intersection n'est pas vide :
+
+Intersection(<Ligne> , <Objet> )::
+  Le(s) *point*(s) d'intersection de la ligne avec un plan, un segment, un polygone, une conique, etc ;
+  *Note :* Intersection(<Ligne> , <Ligne> ) retourne 'non défini' si les lignes ne sont pas coplanaires , ou si elles
+  sont parallèles au sens strict comme au sens large ;
+
+  Intersection(<Ligne> , <Plan> ) retourne 'non défini' si la ligne est parallèle au plan, au sens strict comme au sens
+  large.
+
+====
+
+Intersection( <Plan> , <Objet> )::
+  Le(s) *point*(s) d'intersection du plan avec un segment, un polygone, une conique, etc ;
+  *Note :* Si l'on veut obtenir les *segments* d'intersection dans les deux commandes précédentes, il convient
+  d'utiliser
+
+  xref:/commands/IntersectionChemins.adoc[IntersectionChemins](<Ligne> , <Polygone> ) et IntersectionChemins( <Plan> ,
+  <Polygone> )
+
+Intersection( <Conique> , <Conique> )::
+  Le(s) point(s) d'intersection des coniques ;
+Intersection(<Plan>, <Plan>)::
+  La droite d'intersection des deux plans ;
+Intersection( <Plan>, <Polyèdre> )::
+  Le(s) polygone(s) d'intersection du polyèdre par le plan ;
+Intersection( <Sphère>, <Sphère> )::
+  Le cercle d'intersection des deux sphères ;
+Intersection( <Plan>, <Quadrique> )::
+  La conique d'intersection de la quadrique (sphère, cône, cylindre, ...) par le plan.
+
+*Note :* Voir aussi la commande xref:/commands/InterConique.adoc[InterConique]
+
+/Fichier:Tool_tool_png.adoc[image:Tool_tool.png[Tool tool.png,width=32,height=32]] Voir l' *outil* associé :
+/Fichier:Mode_intersectioncurve_png.adoc[image:Mode_intersectioncurve.png[Mode
+intersectioncurve.png,width=32,height=32]] xref:/tools/Intersection_de_deux_surfaces.adoc[Intersection de deux
+surfaces].
+
+====

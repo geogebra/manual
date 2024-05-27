@@ -1,0 +1,40 @@
+= Commande VarianceEchantillon
+:page-en: commands/SampleVariance_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+VarianceEchantillon( <Liste Nombres> )::
+  Retourne la http://en.wikipedia.org/wiki/fr:Variance_(statistiques_et_probabilit%C3%A9s)#Estimation[variance
+  d'échantillon] de la liste de nombres donnée.
+
+stem:[\frac\{1}\{n-1}\sum_\{i=1}^\{i=n} x_i^2 - \frac\{n}\{n-1} \overline\{x}^2 ]
+
+VarianceEchantillon( <Liste Nombres>, <Liste Effectifs> )::
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++VarianceEchantillon({1, 2, 3, 4, 5},{3, 2, 4, 4, 1})++` donne _1.67_ (_option 2 décimales_).
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Avec la possibilité de travailler en littéral.
+
+Si ces nombres ne sont pas définis, vous obtenez une formule littérale.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++VarianceEchantillon({x, y, z})++` donne stem:[\frac\{1}\{3} x² - \frac\{1}\{3}x y - \frac\{1}\{3}x z +
+\frac\{1}\{3}y² - \frac\{1}\{3}y z + \frac\{1}\{3}z²], avec l'outil ou la commande Factoriser
+`++Factoriser(VarianceEchantillon({x, y, z}))++` donnestem:[\frac\{x² - x y - x z + y² - y z + z²}\{3}].
+
+====

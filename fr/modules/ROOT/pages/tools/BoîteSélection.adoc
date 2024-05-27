@@ -1,0 +1,49 @@
+= Outil BoîteSélection
+:page-en: tools/Check_Box_Tool
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+/Fichier:Mode_showcheckbox_svg.adoc[image:32px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=32,height=32]]
+(code 52), dans la Boîte à outils par défaut /Fichier:Mode_slider_svg.adoc[image:32px-Mode_slider.svg.png[Mode
+slider.svg,width=32,height=32]]
+
+Cliquer dans la vue xref:/Graphique.adoc[Graphique] , afin de créer une case à cocher (voir
+xref:/Valeurs_booléennes.adoc[Valeurs_ booléennes]) pour afficher ou cacher un ou plusieurs objets. Dans la fenêtre qui
+s’est ouverte, spécifier quels objets doivent être pris en compte par cette case.
+
+[NOTE]
+====
+
+*Note :* Vous pouvez sélectionner les objets dans la liste proposée dans la fenêtre de dialogue ou les sélectionner à la
+souris dans n’importe quelle vue.
+
+====
+
+[NOTE]
+====
+
+*Note :* La case à cocher elle-même n'est qu'une visualisation d'une variable booléenne, et la boîte de dialogue n'est
+qu'une facilitation pour ajouter la variable booléenne au champ de visibilité conditionnelle de plusieurs objets en une
+seule fois. Vous pouvez faire la même chose en sélectionnant tous les objets et en entrant manuellement ensuite le nom
+du booléen dans le champ de visibilité conditionnelle de la sélection.
+
+====
+
+Script de Raymond (rami) pour mettre la taille à 13
+
+....
+(CheckBoxSetSize_1 = Button["Change the global CheckBoxSize to small"])
+CheckBoxSetSize_1.onClick = {  
+   Meld="The filename will by lost. \n"
+   Meld=Meld+"You will change? (Stop or OK)"
+   alert(Meld)
+   XML=""+ggbApplet.getXML()
+   XML=XML.replace(/checkboxSize="\d{1,2}/g, 'checkboxSize="13')
+   ggbApplet.setXML(XML)
+   Meld="Now the CheckboxSize must by small.\n"
+   Meld=Meld+'After close this message:\n'
+   Meld=Meld+' - Save the Applet in the correct directory under a new Name.\n'
+   Meld=Meld+' - Delete the button.\n'
+   Meld=Meld+' - optional execute: Menu / Options / Save Setings.'
+   alert(Meld)   
+}
+....

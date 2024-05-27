@@ -1,0 +1,27 @@
+= Commande Echantillon
+:page-en: commands/Sample_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Echantillon( <Liste L>, <Taille n> )::
+  Retourne une liste de _n_ éléments choisis au hasard parmi ceux de la liste _L_, chacun de ces éléments pouvant être
+  élu plusieurs fois.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Echantillon({1, 2, 3, 4, 5}, 5)++` retourne par exemple _liste1 = \{1, 2, 1, 5, 4}_.
+
+====
+
+Echantillon( <Liste>, <Taille>, false )::
+  Retourne une liste de _n_ éléments choisis au hasard parmi ceux de la liste _L_, chacun de ces éléments NE pouvant
+  être élu qu'une seule fois.
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel

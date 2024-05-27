@@ -1,0 +1,44 @@
+= Commande Poisson
+:page-en: commands/Poisson_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Poisson( <Moyenne λ> )::
+  Retourne l'histogramme d'une loi de http://en.wikipedia.org/wiki/fr:Loi_de_Poisson[Poisson] de moyenne λ.
+
+Poisson( <Moyenne>, <Booléen Cumul> )::
+  Retourne l'histogramme d'une Poisson distribution si _Cumul = false_.
+  Retourne l'histogramme cumulé d'une loi de Poisson si _Cumul = true_.
+  Le premier paramètre est le même que ci-dessus.
+
+Poisson( <Moyenne λ>, <Valeur Variable v>, <Booléen Cumul> )::
+  Soit X une variable aléatoire suivant une loi de Poisson.
+  Retourne P( X = _v_) si _Cumul_ = false.
+  Retourne P( X ≤ _v_) si _Cumul_ = true.
+  Le premier paramètre est le même que ci-dessus.
+
+Une syntaxe "cachée" : `++Poisson(1, 1..5)++` retournant _0.63153_, correspondant à Poisson[1, \{1, 2, 3, 4, 5}]. Si je
+ne commets pas d'erreur, il s'agit du calcul :
+Poisson(1,1,false)+Poisson(1,2,false)+Poisson(1,3,false)+Poisson(1,4,false)+Poisson(1,5,false) = stem:[\frac\{1}\{e} +
+\frac\{1}\{2 e} +\frac\{1}\{ 6 e} +\frac\{1}\{24 e} + \frac\{1}\{120 e} = \frac\{103}\{60 e} \approx 0.63153 ]
+
+_______________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul formel*
+Seule la syntaxe suivante est utilisable dans le xref:/Calcul_formel.adoc[Calcul formel] :
+
+Poisson( <Moyenne λ>, <Valeur Variable v>, <Booléen Cumul> )::
+  Soit X une variable aléatoire suivant une loi de Poisson.
+  Retourne P( X = _v_) si _Cumul_ = false.
+  Retourne P( X ≤ _v_) si _Cumul_ = true.
+  Le premier paramètre est le même que ci-dessus.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++Poisson(3, 1, true)++` retourne _stem:[\frac\{1}\{e³} 4]_ ;
+
+`++Poisson(3, 1, false)++` retourne _stem:[\frac\{3}\{e³}]_.
+
+====

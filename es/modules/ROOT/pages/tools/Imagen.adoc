@@ -1,0 +1,122 @@
+= Herramienta de Imagen
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+xref:/BOD.adoc[image:32px-Mode_image.svg.png[Mode image.svg,width=32,height=32]] Permite insertar una imagen en la
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Vista_Gráfica.adoc[Vista
+Gráfica]. Aparece en la caja que, por omisión, encabeza la xref:/tools/Texto.adoc[image:32px-Mode_text.svg.png[Mode
+text.svg,width=32,height=32]] Herramienta de texto (tercera caja desde la derecha).
+
+En primer lugar, selecciona la herramienta. Luego, indica la posición deseada para la imagen de alguna de las siguientes
+maneras:
+
+* Haz clic en xref:/Vista_Gráfica.adoc[Vista Gráfica] para fijar la esquina inferior izquierda de la imagen.
+* Haz clic sobre un punto pre-existente para fijar la esquina inferior izquierda de la imagen a ese punto.
+
+Luego, en la caja de diálogo que se abre, se puede seleccionar una imagen de entre los archivos de formato gráfico
+almacenados en tu computadora.
+
+[NOTE]
+====
+
+*Notas:*
+
+* En la versión clásica, de escritorio, después de seleccionar la herramienta
+xref:/BOD.adoc[image:20px-Mode_image.svg.png[Mode image.svg,width=20,height=20]] *Imagen*, puedes usar el _atajo_
+[.kcode]#Alt# + _clic derecho_ para pegar una imagen directamente desde el portapapeles del sistema en la
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Vista_Gráfica.adoc[Vista
+Gráfica].
+* Se admiten archivos transparentes de formato http://en.wikipedia.org/wiki/es:Portable_Network_Graphics[PNG] y
+http://en.wikipedia.org/wiki/es:Graphics_Interchange_Format[GIF], pero para los de formato PNG puede requerirse
+editarlos para dotarlos de un _canal alpha_ (por ejemplo, usando http://www.irfanview.com/[IrfanView], guardar usando el
+_plugin_ PNGOUT y seleccionado *RGB+Alpha*).
+* Las imágenes insertadas serán objetos auxiliares por defecto.
+
+====
+
+== Propiedades de las Imágenes
+
+La posición de una imagen puede ser absoluta - en pantalla - o relativa al sistema de coordenadas Esto puede
+establecerse utilizando la casilla correspondiente de la pestaña ‘Posición’ del
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]xref:/Cuadro_de_Propiedades.adoc[Cuadro de
+Propiedades] de la imagen. En la pestaña ‘Posición’ del
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]xref:/Cuadro_de_Propiedades.adoc[Cuadro de
+Propiedades], también puedes establecer hasta tres puntos como esquinas de la imagen, lo cual ofrece la flexibilidad de
+escalar, rotar y hasta distorsionar las imágenes (ver también el xref:/commands/Esquina.adoc[Comando Esquina]).
+
+* Esquina 1: posición de la esquina izquierda inferior de la imagen.
+* Esquina 2: posición inferior derecha de la imagen.
+
+[NOTE]
+====
+
+Solo puede fijarse esta esquina cuando ya se estableció la Esquina 1. De este modo se controla el ancho de la imagen.
+
+====
+
+* Esquina 4: posición superior izquierda de la imagen.
+
+[NOTE]
+====
+
+Solo puede fijarse cuando ya se estableció la Esquina 1. De este modo se controla la altura de la imagen.
+
+====
+
+[EXAMPLE]
+====
+
+Para explorar los efectos de los puntos esquina, crea tres puntos A, B y C y luego inserta una imagen.
+
+* Fija A como la Esquina 1 y B como la Esquina 2 de la imagen. Arrastra A y B con la herramienta
+xref:/tools/Elige_y_Mueve.adoc[Elige y Mueve], para ver cómo se modifica el ancho de la imagen.
+* Elimina al punto B como Esquina 2. Mantén A como Esquina 1 y añade C como la Esquina 4, para explorar cómo el
+desplazamiento de estos puntos influye en la imagen..
+* Finalmente, establece los tres puntos de esquina para observar cómo al arrastrarlos, se distorsiona la imagen.
+
+====
+
+[EXAMPLE]
+====
+
+Para adjuntar una imagen a un punto A, y que su ancho sea de 3 unidades y su altura de 4, puedes proceder del siguiente
+modo:
+
+* Fija ‘Esquina 1’ a A
+* Fija ‘Esquina 2’ a A + (3, 0)
+* Fija ‘Esquina 4’ a A + (0, 4)
+
+====
+
+[NOTE]
+====
+
+Al arrastrar el punto A con la xref:/Desplazamientos.adoc[herramienta]
+xref:/tools/Elige_y_Mueve.adoc[image:32px-Mode_move.svg.png[Mode move.svg,width=32,height=32]]
+xref:/tools/Elige_y_Mueve.adoc[Elige y Mueve], la medida de la imagen se conserva.
+
+====
+
+=== Imagen de Fondo
+
+Puede establecerse una imagen de fondo tildando la casilla correspondiente a "Imagen de Fondo" de la pestaña "Básico"
+del image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]xref:/Cuadro_de_Propiedades.adoc[Cuadro de
+Propiedades] de la imagen. Una imagen de fondo, yace tras los ejes de coordenadas y no puede seleccionarse con el ratón.
+
+[NOTE]
+====
+
+Para modificar la condición de "imágen de fondo" de una imagen, se debe abrir el
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]xref:/Cuadro_de_Propiedades.adoc[Cuadro de
+Propiedades] seleccionado el ítem image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Propiedades_ del
+xref:/Menú_Edita.adoc[Menú Edita] y quitar el tilde de la casilla correspondiente a *Imagen de Fondo* de la pestaña
+"Básico".
+
+====
+
+=== Transparencia
+
+Una imagen puede pasar a ser transparente para que puedan verse tanto los objetos como la cuadrícula y los ejes que
+queden tras ella. Para fijar esta condición de transparencia, se especifica un valor entre 0% y 100% para la _Opacidad_
+en la pestaña _Color_ del
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]xref:/Cuadro_de_Propiedades.adoc[Cuadro de
+Propiedades] de la imagen.

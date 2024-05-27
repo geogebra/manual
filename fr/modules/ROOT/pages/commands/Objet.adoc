@@ -1,0 +1,35 @@
+= Commande Objet
+:page-en: commands/Object_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Objet( <Nom Objet en Texte> )::
+  Retourne l’objet de Nom donné en texte (statique et/ou dynamique). Le résultat est toujours un objet dépendant.
+
+[NOTE]
+====
+
+*Note :* La commande *Objet* est l’inverse de la commande xref:/commands/Nom.adoc[Nom].
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :* Si les points _A1_, _A2_, ... existent ainsi que le curseur _n = 2_, alors `++Objet("A"+n)++` retourne une
+copie du point _A2_.
+
+====
+
+[NOTE]
+====
+
+*Note :* Vous devez vous assurer que les objets appelés ont été créées antérieurement à l'appel de cette commande dans
+le xref:/Protocole_de_construction.adoc[Protocole de construction].
+
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Attention,title="Attention",width=18,height=18] *Attention*: |La commande *Objet* ne peut être
+utilisée à l'intérieur d'outils xref:/Utilisateur.adoc[Utilisateur].
+|===

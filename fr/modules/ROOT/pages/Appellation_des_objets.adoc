@@ -1,0 +1,116 @@
+= Appellation des objets
+:page-en: Naming_Objects
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Vous pouvez affecter un nom donné à un objet quand vous le créez dans le champ de xref:/Saisie.adoc[Saisie] :
+
+* xref:/Points_et_Vecteurs.adoc[Points] : Dans GeoGebra, les points sont toujours nommés en utilisant des lettres
+majuscules. Frappez juste le nom (par ex. A, P) et un signe égal devant les coordonnées ou les commandes.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++C = (2, 4)++`, `++ P = (1; 180°)++`, `++Complexe = 2 + i++`
+
+====
+
+* xref:/Points_et_Vecteurs.adoc[Vecteurs] : En vue de distinguer les points des vecteurs, ceux-ci ont nécessairement un
+nom en lettres minuscules dans GeoGebra. De même, tapez le nom (par ex. v, u) et un signe égal devant les coordonnées du
+vecteur ou les commandes.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++v = (1, 3)++`, `++ u = (3; 90°)++`, `++complexe = 1 – 2i++`
+
+====
+
+* xref:/Lignes_et_Axes.adoc[Lignes], cercles, et xref:/Coniques.adoc[Coniques] : Ces objets peuvent être nommés en
+tapant leur nom et le symbole deux points devant leur équation ou commande.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++g:y = x + 3++`, `++c:(x-1)^2 + (y – 2)^2 = 4++`, `++hyp:x^2 – y^2 = 2++`
+
+====
+
+* xref:/Fonctions.adoc[Fonctions] : Vous pouvez nommer des fonctions en tapant, par exemple, `++f(x) =++` ou `++g(x)=++`
+avant la définition ou la commande de la fonction.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++h(x) = 2 x + 4++`, `++q(x) = x^2, trig(x) = sin(x)++`
+
+====
+
+[NOTE]
+====
+
+*Note :*
+
+* Si vous ne donnez pas manuellement un nom à un objet, GeoGebra lui en affectera un dans l’ordre alphabétique ;
+* Vous pouvez créer des indices dans les noms des objets en utilisant un symbole tiret__bas. Par exemple A~1~ est entré
+sous la forme `++A_1++` et S~AB~ est entré sous la forme `++S_{AB}++` ;
+* Si vous nommez un objet : un point, une droite … , par un nom de cellule (par ex. une droite nommée B2), il apparaîtra
+dans la dite cellule (une équation de la droite dans la cellule B2)
+
+====
+
+== Noms réservés
+
+Il y a quelques noms que vous ne pouvez utiliser pour les objets: x, y, z, axeX, axeY, axeZ, ainsi que ceux des
+fonctions mathématiques : abs, sgn, sqrt, exp, log, ln, ld, lg, cos, sin, tan, acos, arcos, arccos, asin, arcsin, atan,
+arctan, cosh, sinh, tanh, acosh, arcosh, arccosh, asinh, arcsinh, atanh, arctanh, atan2, erf, floor, ceil, round,
+random, conjugate, arg, gamma, gammaRegularized, beta, betaRegularized, sec, csc, cosec, cot, sech, csch, coth
+
+Vous pouvez créer des objets dépendants du nombre imaginaire _i_ ou de la constante d'Euler _e_, l'objet
+xref:/Objets_libres_dépendants_ou_auxiliaires.adoc[auxiliaire] réservé, nommé _i_ (resp. _e_) est alors créé. À partir
+de ce moment , vous ne pouvez utiliser ce nom pour d'autres objets. D'une autre manière, si vous définissez par exemple
+_e=3_, vous aurez à utiliser le caractère spécial _e_ de la liste de symboles pour obtenir la constante d'Euler.
+
+Dans la liste de symboles (intégrée par exemple à droite dans le champ de _Saisie_) , vous pouvez trouver les caractères
+spéciaux suivants :
+
+. π - La constante _pi_ pour les cercles et angles en radians, que vous pouvez aussi saisir directement par
+[.kcode]#Alt# + [.kcode]#p#
+. ℯ - Le nombre d'Euler, base de la fonction exponentielle stem:[ x \mapsto ℯ^x], que vous pouvez aussi saisir
+directement par [.kcode]#Alt# + [.kcode]#e#
+. ί - L'unité des imaginaires purs pour les nombres complexes tels que z = 3 + ί, que vous pouvez aussi saisir par
+[.kcode]#Alt# + [.kcode]#i#
+
+== Renommer des objets
+
+La manière la plus rapide pour modifier le nom d'un objet existant et de cliquer, en mode Déplacer
+/Fichier:Tool_Move_gif.adoc[image:Tool_Move.gif[Tool Move.gif,width=32,height=32]], une seule fois dessus et de
+commencer à taper le nouveau nom.
+
+Vous pouvez aussi renommer un objet en faisant dessus un clic droit, puis en sélectionnant le menu _Renommer_, ou en
+ouvrant le dialogue des xref:/Dialogue_Propriétés.adoc[_Propriétés ..._] et en saisissant le nouveau nom dans le champ
+_Nom_ dans l'onglet _Basique_.
+
+[NOTE]
+====
+
+*Notes:*
+
+* Les conséquences de cette modification sont répercutées automatiquement : cela signifie que le nom de l'objet est
+aussi modifié dans les définitions où il intervient.
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Ce n'est pas le cas dans les scripts ! S'il en est qui appelle cet objet, il vous faut modifier vous-même le nom dans
+le script.
+|===
+
+* Si vous affectez à un objet un nom déjà utilisé par un autre objet, alors le nom de cet objet va être modifié, par
+exemple si vous modifiez le nom du point _B_ en _A_ alors que le point _A_ existe déjà, ce point _A_ va être renommé
+_stem:[A_1]_.
+
+====
+
+Voir aussi xref:/Étiquettes_et_Légendes.adoc[Étiquettes_et_Légendes].

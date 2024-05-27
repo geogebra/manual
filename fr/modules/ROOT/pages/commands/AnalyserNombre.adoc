@@ -1,0 +1,27 @@
+= Commande AnalyserNombre
+:page-en: commands/ParseToNumber_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+AnalyserNombre( <Nombre a>, <Chaîne> )::
+  Analyse la syntaxe de la chaîne de caractères et affecte le résultat au xref:/Nombres_et_Angles.adoc[nombre] _a_. Le
+  nombre _a_ doit être défini et xref:/Objets_libres_dépendants_ou_auxiliaires.adoc[libre] avant de solliciter cette
+  commande.
+
+Il s'agit d'une xref:/commands/Commandes_Scripts.adoc[commande de script] qui ne va affecter la valeur du nombre qu'une
+seule fois.
+
+Pour convertir un texte _texte1_ en un nombre actualisé dynamiquement, utiliser la commande
+xref:/commands/DeBase.adoc[DeBase](texte1,10).
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+Soit le nombre _a_ défini par `++ a = 3 ++` et la chaîne de caractères définie par`++ texte1 = "6" ++`.
+
+`++ AnalyserNombre(a, texte1)++` retourne _a = 6_.
+
+====
+
+{empty}[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/AnalyserFonction.adoc[AnalyserFonction]

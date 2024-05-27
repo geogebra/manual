@@ -1,0 +1,30 @@
+= Commande MoyenneHarmonique
+:page-en: commands/HarmonicMean_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+MoyenneHarmonique( <Liste Nombres> )::
+  Retourne la http://en.wikipedia.org/wiki/fr:Moyenne_harmonique[moyenne harmonique] des nombres de la liste.
+
+stem:[h = \frac\{n}\{\frac\{1}\{a_1} + \frac\{1}\{a_2} + \cdots + \frac\{1}\{a_n}} ]
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++MoyenneHarmonique({8,10,12})++` donne le nombre _9.73_ ([.small]#Options : Arrondi : 2 décimales#)
+
+ou mieux `++TexteMath(MoyenneHarmonique({8,10,12}))++` le texte stem:[\frac\{360}\{37}]
+
+en effet stem:[\frac\{1}\{8}+\frac\{1}\{10}+\frac\{1}\{12}=\frac\{37}\{120}] et
+stem:[\frac\{3}\{\frac\{37}\{120}}=\frac\{360}\{37}].
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel , mais sans la possibilité d'effectuer du calcul
+littéral.

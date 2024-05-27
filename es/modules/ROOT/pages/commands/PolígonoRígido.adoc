@@ -1,0 +1,32 @@
+= Comando PolígonoRígido
+:page-en: commands/RigidPolygon_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+PolígonoRígido( <Polígono> )::
+  Crea una copia del polígono que solamente puede ser trasladado arrastrando su primer vértice y rotado arrastrando el
+  segundo.
+
+PolígonoRígido( <Polígono>, <Margen x>, <Margen y> )::
+  Crea una copia del polígono con el margen indicado que solamente puede ser trasladado arrastrando su primer vértice y
+  rotado arrastrando el segundo.
+
+PolígonoRígido( <PuntoLibre>, ..., <PuntoLibre> )::
+  Crea un polígono cuya forma no puede modificarse. Este polígono puede ser trasladado arrastrando su primer vértice y
+  rotado arrastrando el segundo.
+
+[NOTE]
+====
+
+La copia dependerá del polígono original. Si deseas modificar la forma de la copia, deberás modificar el original.
+
+====
+
+[NOTE]
+====
+
+Ver también las herramientas xref:/tools/Polígono.adoc[image:32px-Mode_polygon.svg.png[Mode
+polygon.svg,width=32,height=32]] xref:/tools/Polígono.adoc[Polígono] y
+xref:/tools/Polígono_rígido.adoc[image:32px-Mode_rigidpolygon.svg.png[Mode rigidpolygon.svg,width=32,height=32]]
+xref:/tools/Polígono_rígido.adoc[Polígono rígido].
+
+====

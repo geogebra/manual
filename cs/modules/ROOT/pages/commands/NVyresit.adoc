@@ -1,0 +1,58 @@
+= Příkaz NVyresit
+:page-en: commands/NSolve_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Tento příkaz je dostupný pouze v xref:/CAS_pohled.adoc[CAS pohledu]..
+
+NVyresit( <Rovnice> )::
+  Určí numerické řešení dané rovnice s neznámou _x_.
+
+[EXAMPLE]
+====
+
+`++NVyresit[cos(x) = x]++` vypočítá _\{x = 0.7390851332151606}_.
+
+====
+
+NVyresit( <Rovnice>, <Proměnná> )::
+  Určí numerické řešení dané rovnice se zadanou neznámou proměnnou.
+
+[EXAMPLE]
+====
+
+`++NVyresit[a^4 + 34a^3 - 34, a]++` vypočítá _\{a = 0.9904738886662206}_.
+
+====
+
+[NOTE]
+====
+
+Volitelně lze zadat počáteční bod intervalu pro hledání řešení, např. _a=3_.
+
+====
+
+NVyresit( <Seznam rovnic>, <Seznam proměnných> )::
+  Určí numericky řešení dané soustavy rovnic s danými neznámými.
+
+[EXAMPLE]
+====
+
+`++NVyresit[{π / x = cos(x - 2y), 2 y - π = sin(x)}, {x=3, y=1.5}]++` vypočítá _\{x = 3.141592651686591, y =
+1.570796327746508}_.
+
+====
+
+[NOTE]
+====
+
+Volitelně lze zadat počáteční body intervalů pro hledání řešení, např._\{x=3, y=1.5}_.
+
+====
+
+[NOTE]
+====
+
+* π se zadá stisknutím [.kcode]#Alt # + [.kcode]# p#.
+* Viz též xref:/commands/Vyresit.adoc[Příkaz_Vyresit] a xref:/commands/NReseni.adoc[Příkaz_NReseni].
+
+====

@@ -1,0 +1,34 @@
+= Commande Ajustement
+:page-en: commands/Fit_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Ajustement( <Liste Points>, <Liste Fonctions> )::
+  Calcule une combinaison linéaire des fonctions pour les points de la liste.
+
+[EXAMPLE]
+====
+
+*Exemple :* Avec _L=\{A,B,C,...}, f(x)=1, g(x)=x, h(x)=e^x, F=\{f,g,h}_
+
+la commande `++ Ajustement(L,F)++` recherche une fonction sous la forme _a + b x + c e^x^_ pour les points de la liste.
+
+====
+
+Ajustement( <Liste Points>, <Fonction> )::
+  Recherche une fonction par la méthode des moindres carrés pour les points de la liste. La fonction doit dépendre de un
+  ou plusieurs curseurs, ils seront utilisés comme valeur de départ du paramètre à optimiser. L'itération non-linéaire
+  peut ne pas converger, mais un ajustement des curseurs pour un meilleur point de départ peut l'y aider.
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/AjustExp.adoc[AjustExp],
+xref:/commands/AjustImplicite.adoc[AjustImplicite], xref:/commands/AjustLin.adoc[AjustLin],
+xref:/commands/AjustLinX.adoc[AjustLinX], xref:/commands/AjustLog.adoc[AjustLog],
+xref:/commands/AjustLogistique.adoc[AjustLogistique], xref:/commands/AjustPoly.adoc[AjustPoly],
+xref:/commands/AjustPuissance.adoc[AjustPuissance] et xref:/commands/AjustSin.adoc[AjustSin].
+
+*/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] Graphique 3D* : Si vous avez besoin d'une surface lisse passant les points
+A, B, C, D, E, F, vous pouvez essayer
+
+`++Ajustement({A, B, C, D, E, F}, {x y, x², y², x, y, 1})++`
+
+(Une caractéristique plutôt nouvelle, nécessite au moins autant de points que de fonctions.)

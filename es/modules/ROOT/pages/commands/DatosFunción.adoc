@@ -1,0 +1,15 @@
+= Comando DatosFunción
+:page-en: commands/DataFunction_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+DatosFunción( <Lista de números>, <Lista de números> )::
+  Devuelve una función que incluye los puntos (x~1~, y~1~), (x~2~, y~2~),...,(x~n~, y~n~) siendo \{x~1~, ..., x~n~},
+  \{y~1~, ..., y~n~} las listas ingresadas. En los intervalos en que no hay datos se aplica una interpolación lineal.
+
+[EXAMPLE]
+====
+
+`++DatosFunción({0, 1, 2, 4}, {0, 1, 4, 16})++` devuelve una función que pasa por los puntos (0, 0), (1,1), (2, 4), (4,
+16).
+
+====

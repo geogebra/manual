@@ -1,0 +1,72 @@
+= Comando LímiteDerecha
+:page-en: commands/LimitAbove_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+LímiteDerecha[ <Función>, <Valor> ]::
+  Calcula el http://en.wikipedia.org/wiki/es:L%C3%ADmite_de_una_funci%C3%B3n#L.C3.ADmites_laterales[límite lateral
+  derecho] (http://en.wikipedia.org/wiki/Limit_of_a_function#One-sided_limits[right sided] en inglés) de la función,
+  para el valor indicado de su variable principal
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++LímiteDerecha[1 / x, 0]++`* da ∞**`++LímiteDerecha[ln(x),  -1]++`** resulta *_indefinido_* dado que lo
+está tal límite para _x tendiendo a -1_.
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+En esta xref:/Vista_CAS.adoc[vista] el comando obra del modo descripto; se admiten literales en operaciones simbólicas y
+a la anterior, se suma la siguiente variante.
+
+LímiteDerecha[ <Expresión>, <Variable>, <Valor> ]::
+  Calcula el límite lateral derecho de la expresión multivariable dada para el valor fijado de la variable indicada.Así,
+  *LímiteDerecha*[f, v, t ] establece el límite lateral derecho de _f_ para el valor _t_ de la variable _v_.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++LímiteDerecha[abs(x) / ñ, ñ, 0]++`* da _∞_ (infinito)*`++LímiteDerecha[ abs(ñ + x) / x, x, 0 ]++`* da ∞
+(infinito).
+
+====
+
+LímiteDerecha[ <Expresión>, <Valor> ]::
+  Da por resultado el límite derecho lateral de la expresión dada para el valor indicado para su variable principal.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++LímiteDerecha[y^x / x, 0]++`* da stem:[\infty]**`++LímiteDerecha[ ln(e^(abs(x))), 0]++`** resulta *_?_*,
+signo que indica que tal límite está indefinido para _x tendiendo a -1_.
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: No todos los límites pueden calcularse con GeoGebra
+y todo caso de tal índole aparecerá: - *indefinido* en la xref:/Vista_Algebraica.adoc[Vista Algebraica]- con el signo
+*_?_* al operar en la xref:/Vista_CAS.adoc[Vista CAS]Cuando el resultado _correcto_ sea precisamente _indefinido_, se
+registrará la misma respuesta.
+
+====
+
+'''''
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/Asíntota.adoc[Asíntota], xref:/commands/LímiteIzquierda.adoc[LímiteIzquierda] y
+xref:/commands/Límite.adoc[Límite].
+
+====

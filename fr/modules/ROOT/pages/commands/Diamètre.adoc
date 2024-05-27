@@ -1,0 +1,38 @@
+= Commande Diamètre
+:page-en: commands/ConjugateDiameter_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Diamètre( <Ligne g>, <Conique c> )::
+  Crée le diamètre conjugué au diamètre de la conique _c_ parallèle à _g_.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Diamètre(-4x + 5y = -2, x² + 4 y² + 2x - 8y + 1 = 0)++` retourne la droite _5x + 16y = 11_
+
+====
+
+Diamètre( <Vecteur v>, <Conique c> )::
+  Crée le diamètre conjugué au diamètre de la conique _c_ ayant pour vecteur directeur _v_.
+
+[EXAMPLE]
+====
+
+*Exemple :* Soit le vecteur _u_ = (4,1). Alors `++Diamètre(u, x² + 4 y² + 2x - 8y + 1 = 0)++` retourne la droite _x+y =
+0_
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+_____________________________________________________________
+
+/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] *Graphique 3D* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D

@@ -1,0 +1,49 @@
+= Comando Ordena
+:page-en: commands/Sort_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Ordena( <Lista> )::
+  Ordena una lista de números, textos o puntos.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++ Ordena({3, 2, 1})++` devuelve la lista _\{1, 2, 3}_.
+* `++ Ordena({"peras", "manzanas", "higos"})++` devuelve la lista de elementos ordenados alfabéticamente.
+* `++ Ordena({(3, 2), (2, 5), (4, 1)}) ++` devuelve la lista _\{(2, 5), (3, 2), (4, 1)}_.
+
+====
+
+[NOTE]
+====
+
+Las listas de puntos se ordenan según sus abscisas.
+
+====
+
+Ordena( <Valores>, <Claves> )::
+  Ordena los elementos de la lista _Valores_ según sus correspondientes en la seguna lista _Claves_.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* Para ordenar la lista de polinomios `++lista1 = {x^3, x^2, x^6}++` según su grado, creamos la lista dependiente
+`++lista2 = Zip(Grado(a), a, lista1)++`. Luego, `++ Ordena(lista1, lista2)++` devuelve la lista deseada _lista3 = \{x^2,
+x^3, x^6}_.
+* Para dibujar el polígono cuyos vértices son las raíces complejas de stem:[x^\{10}-1] ordenadas por sus argumentos,
+crea la lista `++lista1 = {RaízCompleja(x^10-1)}++`, luego usa el comando `++Polígono(Ordena(lista1, arg(lista1)))++`.
+Este comando devuelve _pol1 = 2.94_.
+
+====
+
+[NOTE]
+====
+
+Puedes encontrar una estrategia para ordenar listas de objetos de cualquier tipo en este tutorial de
+/Tutorial:Orden_de_Listas_Avanzado.adoc[ordenamiento avanzado de listas].
+
+====

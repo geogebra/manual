@@ -1,0 +1,30 @@
+= Commande AttacherCopieAVue
+:page-en: commands/AttachCopyToView_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+AttacherCopieAVue( <Objet>, <Vue 0|1|2> )::
+  Si _Vue = 0_, une copie de l' objet cité est crée.
+  Si _Vue = 1_ ou 2 cette commande crée une copie dépendante de l' objet cité dont la taille dans la vue
+  xref:/Graphique.adoc[Graphique] citée est constante.
+
+[NOTE]
+====
+
+*Note :* Dès que la copie est crée, trois autres arguments sont ajoutés à la définition de la commande .
+
+====
+
+AttacherCopieAVue( <Objet>, <Vue 0|1|2>, <Point 1>, <Point 2>, <Écran Point 1>, <Écran Point 2> )::
+  Si _Vue = 0_, une copie de l' objet cité est crée.
+  Si _Vue = 1_ ou 2 cette commande crée une copie dépendante de l' objet cité dont la taille dans la vue
+  xref:/Graphique.adoc[Graphique] citée est transformée par la transformation affine qui au Point 1 associe le point
+  dont les coordonnées sur l'écran (en pixels)sont celles de Écran Point 1, et de même pour Point 2 avec Écran Point 2.
+
+[EXAMPLE]
+====
+
+*Exemple :* Si la première vue graphique est active,
+`++AttacherCopieAVue(Polygone((0,0),(1,0),(1,1),(0,1)),1,(0,0),(1,1),(0,0),(100,100)) ++`crée un carré 100px x 100px
+dans le coin supérieur gauche de Graphique 1.
+
+====

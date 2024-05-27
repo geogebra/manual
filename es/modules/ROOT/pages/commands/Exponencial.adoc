@@ -1,0 +1,36 @@
+= Comando Exponencial
+:page-en: commands/Exponential_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Exponencial( <Lambda>, x )::
+  Crea la función de distribución acumulada de la
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_exponencial[distribución exponencial] con parámetro _lambda_.
+Exponencial( <Lambda>, x, <Acumulada (true/false)> )::
+  Si _Acumulada_ es verdadero, crea la función de distribución acumulada de la distribución exponecnial, de lo contrario
+  crea su función de densidad de probabilidad.
+Exponencial( <Lambda>, <Valor variable __v__> )::
+  Evalúa la función de distribución acumulada de la distribución exponencial en el valor variable _v_, por ejemplo la
+  probabilidad _P(X ≤ v)_ donde _X_ es una variable aleatoria con distribución exponencial definida por el parámetro
+  _lambda_.
+
+[NOTE]
+====
+
+Devuelve la probabilidad para un valor dado de _x_ (o el área bajo la curva de la distribución exponencial a la
+izquierda del _x_ dado).
+
+====
+
+== Sintaxis CAS
+
+Exponencial( <Lambda>, <Valor variable __v__> )::
+  Evalúa la función de distribución acumulada de la distribución exponencial en el valor variable _v_, por ejemplo la
+  probabilidad _P(X ≤ v)_ donde _X_ es una variable aleatoria con distribución exponencial definida por el parámetro
+  _lambda_.
+
+[EXAMPLE]
+====
+
+`++Exponencial(2, 1)++` devuelve _stem:[1 - \frac\{1}\{e^\{2} } ]_, que es aproximadamente _0.86_.
+
+====

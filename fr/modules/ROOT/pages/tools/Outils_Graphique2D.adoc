@@ -1,0 +1,350 @@
+= Outils Graphique2D
+:page-en: tools/Graphics_Tools
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+[cols=",,,,,,,,,,",]
+|===
+|/Fichier:Mode_move_svg.adoc[image:32px-Mode_move.svg.png[Mode move.svg,width=32,height=32]]
+|/Fichier:Mode_point_svg.adoc[image:32px-Mode_point.svg.png[Mode point.svg,width=32,height=32]]
+|/Fichier:Mode_join_svg.adoc[image:32px-Mode_join.svg.png[Mode join.svg,width=32,height=32]]
+|/Fichier:Mode_orthogonal_svg.adoc[image:32px-Mode_orthogonal.svg.png[Mode orthogonal.svg,width=32,height=32]]
+|/Fichier:Mode_polygon_svg.adoc[image:32px-Mode_polygon.svg.png[Mode polygon.svg,width=32,height=32]]
+|/Fichier:Mode_circle2_svg.adoc[image:32px-Mode_circle2.svg.png[Mode circle2.svg,width=32,height=32]]
+|/Fichier:Mode_ellipse3_svg.adoc[image:32px-Mode_ellipse3.svg.png[Mode ellipse3.svg,width=32,height=32]]
+|/Fichier:Mode_angle_svg.adoc[image:32px-Mode_angle.svg.png[Mode angle.svg,width=32,height=32]]
+|/Fichier:Mode_mirroratline_svg.adoc[image:32px-Mode_mirroratline.svg.png[Mode mirroratline.svg,width=32,height=32]]
+|/Fichier:Mode_slider_svg.adoc[image:32px-Mode_slider.svg.png[Mode slider.svg,width=32,height=32]]
+|/Fichier:Mode_translateview_svg.adoc[image:32px-Mode_translateview.svg.png[Mode translateview.svg,width=32,height=32]]
+
+|/Fichier:Mode_moverotate_svg.adoc[image:32px-Mode_moverotate.svg.png[Mode moverotate.svg,width=32,height=32]]
+|/Fichier:Mode_pointonobject_svg.adoc[image:32px-Mode_pointonobject.svg.png[Mode pointonobject.svg,width=32,height=32]]
+|/Fichier:Mode_segment_svg.adoc[image:32px-Mode_segment.svg.png[Mode segment.svg,width=32,height=32]]
+|/Fichier:Mode_parallel_svg.adoc[image:32px-Mode_parallel.svg.png[Mode parallel.svg,width=32,height=32]]
+|/Fichier:Mode_regularpolygon_svg.adoc[image:32px-Mode_regularpolygon.svg.png[Mode
+regularpolygon.svg,width=32,height=32]]
+|/Fichier:Mode_circlepointradius_svg.adoc[image:32px-Mode_circlepointradius.svg.png[Mode
+circlepointradius.svg,width=32,height=32]] |/Fichier:Mode_hyperbola3_svg.adoc[image:32px-Mode_hyperbola3.svg.png[Mode
+hyperbola3.svg,width=32,height=32]] |/Fichier:Mode_anglefixed_svg.adoc[image:32px-Mode_anglefixed.svg.png[Mode
+anglefixed.svg,width=32,height=32]] |/Fichier:Mode_mirroratpoint_svg.adoc[image:32px-Mode_mirroratpoint.svg.png[Mode
+mirroratpoint.svg,width=32,height=32]] |/Fichier:Mode_text_svg.adoc[image:32px-Mode_text.svg.png[Mode
+text.svg,width=32,height=32]] |/Fichier:Mode_zoomin_svg.adoc[image:32px-Mode_zoomin.svg.png[Mode
+zoomin.svg,width=32,height=32]]
+
+|/Fichier:Mode_freehandshape1_png.adoc[image:Mode_freehandshape1.png[Mode freehandshape1.png,width=32,height=32]]
+|/Fichier:Mode_attachdetachpoint_svg.adoc[image:32px-Mode_attachdetachpoint.svg.png[Mode
+attachdetachpoint.svg,width=32,height=32]]
+|/Fichier:Mode_segmentfixed_svg.adoc[image:32px-Mode_segmentfixed.svg.png[Mode segmentfixed.svg,width=32,height=32]]
+|/Fichier:Mode_linebisector_svg.adoc[image:32px-Mode_linebisector.svg.png[Mode linebisector.svg,width=32,height=32]]
+|/Fichier:Mode_rigidpolygon_svg.adoc[image:32px-Mode_rigidpolygon.svg.png[Mode rigidpolygon.svg,width=32,height=32]]
+|/Fichier:Mode_compasses_svg.adoc[image:32px-Mode_compasses.svg.png[Mode compasses.svg,width=32,height=32]]
+|/Fichier:Mode_parabola_svg.adoc[image:32px-Mode_parabola.svg.png[Mode parabola.svg,width=32,height=32]]
+|/Fichier:Mode_distance_svg.adoc[image:32px-Mode_distance.svg.png[Mode distance.svg,width=32,height=32]]
+|/Fichier:Mode_mirroratcircle_svg.adoc[image:32px-Mode_mirroratcircle.svg.png[Mode
+mirroratcircle.svg,width=32,height=32]] |/Fichier:Mode_image1_png.adoc[image:Mode_image1.png[Mode
+image1.png,width=32,height=32]] |/Fichier:Mode_zoomout_svg.adoc[image:32px-Mode_zoomout.svg.png[Mode
+zoomout.svg,width=32,height=32]]
+
+|/Fichier:Mode_pen1_png.adoc[image:Mode_pen1.png[Mode pen1.png,width=32,height=32]]
+|/Fichier:Mode_intersect_svg.adoc[image:32px-Mode_intersect.svg.png[Mode intersect.svg,width=32,height=32]]
+|/Fichier:Mode_ray_svg.adoc[image:32px-Mode_ray.svg.png[Mode ray.svg,width=32,height=32]]
+|/Fichier:Mode_angularbisector_svg.adoc[image:32px-Mode_angularbisector.svg.png[Mode
+angularbisector.svg,width=32,height=32]]
+|/Fichier:Mode_vectorpolygon_svg.adoc[image:32px-Mode_vectorpolygon.svg.png[Mode vectorpolygon.svg,width=32,height=32]]
+|/Fichier:Mode_circle3_svg.adoc[image:32px-Mode_circle3.svg.png[Mode circle3.svg,width=32,height=32]]
+|/Fichier:Mode_conic5_svg.adoc[image:32px-Mode_conic5.svg.png[Mode conic5.svg,width=32,height=32]]
+|/Fichier:Mode_area_svg.adoc[image:32px-Mode_area.svg.png[Mode area.svg,width=32,height=32]]
+|/Fichier:Mode_rotatebyangle_svg.adoc[image:32px-Mode_rotatebyangle.svg.png[Mode rotatebyangle.svg,width=32,height=32]]
+|/Fichier:Mode_buttonaction_svg.adoc[image:32px-Mode_buttonaction.svg.png[Mode buttonaction.svg,width=32,height=32]]
+|/Fichier:Mode_showhideobject_svg.adoc[image:32px-Mode_showhideobject.svg.png[Mode
+showhideobject.svg,width=32,height=32]]
+
+| |/Fichier:Mode_midpoint_svg.adoc[image:32px-Mode_midpoint.svg.png[Mode midpoint.svg,width=32,height=32]]
+|/Fichier:Mode_polyline_svg.adoc[image:32px-Mode_polyline.svg.png[Mode polyline.svg,width=32,height=32]]
+|/Fichier:Mode_tangent_svg.adoc[image:32px-Mode_tangent.svg.png[Mode tangent.svg,width=32,height=32]] |
+|/Fichier:Mode_semicircle_svg.adoc[image:32px-Mode_semicircle.svg.png[Mode semicircle.svg,width=32,height=32]] |
+|/Fichier:Mode_slope_svg.adoc[image:32px-Mode_slope.svg.png[Mode slope.svg,width=32,height=32]]
+|/Fichier:Mode_translatebyvector_svg.adoc[image:32px-Mode_translatebyvector.svg.png[Mode
+translatebyvector.svg,width=32,height=32]]
+|/Fichier:Mode_showcheckbox_svg.adoc[image:32px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=32,height=32]]
+|/Fichier:Mode_showhidelabel_svg.adoc[image:32px-Mode_showhidelabel.svg.png[Mode showhidelabel.svg,width=32,height=32]]
+
+| |/Fichier:Mode_complexnumber_svg.adoc[image:32px-Mode_complexnumber.svg.png[Mode
+complexnumber.svg,width=32,height=32]] |/Fichier:Mode_vector_svg.adoc[image:32px-Mode_vector.svg.png[Mode
+vector.svg,width=32,height=32]] |/Fichier:Mode_polardiameter_svg.adoc[image:32px-Mode_polardiameter.svg.png[Mode
+polardiameter.svg,width=32,height=32]] | |/Fichier:Mode_circlearc3_svg.adoc[image:32px-Mode_circlearc3.svg.png[Mode
+circlearc3.svg,width=32,height=32]] | |/Fichier:Mode_createlist_svg.adoc[image:32px-Mode_createlist.svg.png[Mode
+createlist.svg,width=32,height=32]] |/Fichier:Mode_dilatefrompoint_svg.adoc[image:32px-Mode_dilatefrompoint.svg.png[Mode
+dilatefrompoint.svg,width=32,height=32]]
+|/Fichier:Mode_textfieldaction_svg.adoc[image:32px-Mode_textfieldaction.svg.png[Mode
+textfieldaction.svg,width=32,height=32]]
+|/Fichier:Mode_copyvisualstyle_svg.adoc[image:32px-Mode_copyvisualstyle.svg.png[Mode
+copyvisualstyle.svg,width=32,height=32]]
+
+| |/Fichier:Mode_extremum_png.adoc[image:32px-Mode_extremum.png[Mode extremum.png,width=32,height=32]]
+|/Fichier:Mode_vectorfrompoint_svg.adoc[image:32px-Mode_vectorfrompoint.svg.png[Mode
+vectorfrompoint.svg,width=32,height=32]] |/Fichier:Mode_fitline_svg.adoc[image:32px-Mode_fitline.svg.png[Mode
+fitline.svg,width=32,height=32]] |
+|/Fichier:Mode_circumcirclearc3_svg.adoc[image:32px-Mode_circumcirclearc3.svg.png[Mode
+circumcirclearc3.svg,width=32,height=32]] | |/Fichier:Mode_relation_svg.adoc[image:32px-Mode_relation.svg.png[Mode
+relation.svg,width=32,height=32]] | | |/Fichier:Mode_delete_svg.adoc[image:32px-Mode_delete.svg.png[Mode
+delete.svg,width=32,height=32]]
+
+| |/Fichier:Mode_roots_png.adoc[image:32px-Mode_roots.png[Mode roots.png,width=32,height=32]] |
+|/Fichier:Mode_locus_svg.adoc[image:32px-Mode_locus.svg.png[Mode locus.svg,width=32,height=32]] |
+|/Fichier:Mode_circlesector3_svg.adoc[image:32px-Mode_circlesector3.svg.png[Mode circlesector3.svg,width=32,height=32]]
+| |/Fichier:Mode_functioninspector_svg.adoc[image:32px-Mode_functioninspector.svg.png[Mode
+functioninspector.svg,width=32,height=32]] | | |
+
+| | | | | |/Fichier:Mode_circumcirclesector3_svg.adoc[image:32px-Mode_circumcirclesector3.svg.png[Mode
+circumcirclesector3.svg,width=32,height=32]] | | | | |
+|===
+
+Par défaut, dans xref:/Graphique.adoc[Graphique] les outils sont classés dans les boîtes à outils :
+
+xref:/Déplacements.adoc[Déplacements]
+
+/Fichier:Mode_move_svg.adoc[image:32px-Mode_move.svg.png[Mode move.svg,width=32,height=32]]
+xref:/tools/Déplacer.adoc[Déplacer]
+
+/Fichier:Mode_moverotate_svg.adoc[image:32px-Mode_moverotate.svg.png[Mode moverotate.svg,width=32,height=32]]
+xref:/tools/Tourner_autour_du_point.adoc[Tourner autour du point] (Absent en GGb6)
+
+/Fichier:Mode_freehandshape1_png.adoc[image:Mode_freehandshape1.png[Mode freehandshape1.png,width=32,height=32]]
+xref:/tools/Croquis.adoc[Croquis]
+
+/Fichier:Mode_pen1_png.adoc[image:Mode_pen1.png[Mode pen1.png,width=32,height=32]] xref:/tools/Stylo.adoc[Stylo]
+
+xref:/Points.adoc[Points]
+
+/Fichier:Mode_point_svg.adoc[image:32px-Mode_point.svg.png[Mode point.svg,width=32,height=32]]
+xref:/tools/Point.adoc[Point]
+
+/Fichier:Mode_pointonobject_svg.adoc[image:32px-Mode_pointonobject.svg.png[Mode pointonobject.svg,width=32,height=32]]
+xref:/tools/Point_sur_Objet.adoc[Point sur Objet]
+
+/Fichier:Mode_attachdetachpoint_svg.adoc[image:32px-Mode_attachdetachpoint.svg.png[Mode
+attachdetachpoint.svg,width=32,height=32]] xref:/tools/Lier_Libérer_Point.adoc[Lier/Libérer Point]
+
+/Fichier:Mode_intersect_svg.adoc[image:32px-Mode_intersect.svg.png[Mode intersect.svg,width=32,height=32]]
+xref:/tools/Intersection.adoc[Intersection]
+
+/Fichier:Mode_midpoint_svg.adoc[image:32px-Mode_midpoint.svg.png[Mode midpoint.svg,width=32,height=32]]
+xref:/tools/Milieu_ou_centre.adoc[Milieu ou centre]
+
+/Fichier:Mode_complexnumber_svg.adoc[image:32px-Mode_complexnumber.svg.png[Mode complexnumber.svg,width=32,height=32]]
+xref:/tools/Nombre_complexe.adoc[Nombre complexe]
+
+/Fichier:Mode_extremum_png.adoc[image:32px-Mode_extremum.png[Mode extremum.png,width=32,height=32]]
+xref:/tools/Extremums.adoc[Extremums]
+
+/Fichier:Mode_roots_png.adoc[image:32px-Mode_roots.png[Mode roots.png,width=32,height=32]]
+xref:/tools/Racines.adoc[Racines]
+
+xref:/Lignes.adoc[Lignes]
+
+/Fichier:Mode_join_svg.adoc[image:32px-Mode_join.svg.png[Mode join.svg,width=32,height=32]]
+xref:/tools/Droite.adoc[Droite]
+
+/Fichier:Mode_segment_svg.adoc[image:32px-Mode_segment.svg.png[Mode segment.svg,width=32,height=32]]
+xref:/tools/Segment.adoc[Segment]
+
+/Fichier:Mode_segmentfixed_svg.adoc[image:32px-Mode_segmentfixed.svg.png[Mode segmentfixed.svg,width=32,height=32]]
+xref:/tools/Segment_de_longueur_donnée.adoc[Segment de longueur donnée]
+
+/Fichier:Mode_ray_svg.adoc[image:32px-Mode_ray.svg.png[Mode ray.svg,width=32,height=32]]
+xref:/tools/Demi_droite.adoc[Demi-droite]
+
+/Fichier:Mode_polyline_svg.adoc[image:32px-Mode_polyline.svg.png[Mode polyline.svg,width=32,height=32]]
+xref:/tools/Ligne_brisée.adoc[Ligne brisée]
+
+/Fichier:Mode_vector_svg.adoc[image:32px-Mode_vector.svg.png[Mode vector.svg,width=32,height=32]]
+xref:/tools/Vecteur.adoc[Vecteur]
+
+/Fichier:Mode_vectorfrompoint_svg.adoc[image:32px-Mode_vectorfrompoint.svg.png[Mode
+vectorfrompoint.svg,width=32,height=32]] xref:/tools/Représentant.adoc[Représentant]
+
+xref:/Lignes_particulières.adoc[Lignes_particulières]
+
+/Fichier:Mode_orthogonal_svg.adoc[image:32px-Mode_orthogonal.svg.png[Mode orthogonal.svg,width=32,height=32]]
+xref:/tools/Perpendiculaire.adoc[Perpendiculaire]
+
+/Fichier:Mode_parallel_svg.adoc[image:32px-Mode_parallel.svg.png[Mode parallel.svg,width=32,height=32]]
+xref:/tools/Parallèle.adoc[Parallèle]
+
+/Fichier:Mode_linebisector_svg.adoc[image:32px-Mode_linebisector.svg.png[Mode linebisector.svg,width=32,height=32]]
+xref:/tools/Médiatrice.adoc[Médiatrice]
+
+/Fichier:Mode_angularbisector_svg.adoc[image:32px-Mode_angularbisector.svg.png[Mode
+angularbisector.svg,width=32,height=32]] xref:/tools/Bissectrice.adoc[Bissectrice]
+
+/Fichier:Mode_tangent_svg.adoc[image:32px-Mode_tangent.svg.png[Mode tangent.svg,width=32,height=32]]
+xref:/tools/Tangentes.adoc[Tangentes]
+
+/Fichier:Mode_polardiameter_svg.adoc[image:32px-Mode_polardiameter.svg.png[Mode polardiameter.svg,width=32,height=32]]
+xref:/tools/Polaire_ou_Diamètre.adoc[Polaire ou Diamètre]
+
+/Fichier:Mode_fitline_svg.adoc[image:32px-Mode_fitline.svg.png[Mode fitline.svg,width=32,height=32]]
+xref:/tools/Droite_d'ajustement.adoc[Droite d'ajustement]
+
+/Fichier:Mode_locus_svg.adoc[image:32px-Mode_locus.svg.png[Mode locus.svg,width=32,height=32]]
+xref:/tools/Lieu.adoc[Lieu]
+
+xref:/Polygones.adoc[Polygones]
+
+/Fichier:Mode_polygon_svg.adoc[image:32px-Mode_polygon.svg.png[Mode polygon.svg,width=32,height=32]]
+xref:/tools/Polygone.adoc[Polygone]
+
+/Fichier:Mode_regularpolygon_svg.adoc[image:32px-Mode_regularpolygon.svg.png[Mode
+regularpolygon.svg,width=32,height=32]] xref:/tools/Polygone_régulier.adoc[Polygone régulier]
+
+/Fichier:Mode_rigidpolygon_svg.adoc[image:32px-Mode_rigidpolygon.svg.png[Mode rigidpolygon.svg,width=32,height=32]]
+xref:/tools/Polygone_indéformable.adoc[Polygone indéformable]
+
+/Fichier:Mode_vectorpolygon_svg.adoc[image:32px-Mode_vectorpolygon.svg.png[Mode vectorpolygon.svg,width=32,height=32]]
+xref:/tools/Polygone_semi_déformable.adoc[Polygone semi-déformable]
+
+xref:/Cercles_et_Arcs.adoc[Cercles_et_Arcs]
+
+/Fichier:Mode_circle2_svg.adoc[image:32px-Mode_circle2.svg.png[Mode circle2.svg,width=32,height=32]]
+xref:/tools/Cercle_(centre_point).adoc[Cercle (centre-point)]
+
+/Fichier:Mode_circlepointradius_svg.adoc[image:32px-Mode_circlepointradius.svg.png[Mode
+circlepointradius.svg,width=32,height=32]] xref:/tools/Cercle_(centre_rayon).adoc[Cercle (centre-rayon)]
+
+/Fichier:Mode_compasses_svg.adoc[image:32px-Mode_compasses.svg.png[Mode compasses.svg,width=32,height=32]]
+xref:/tools/Compas.adoc[Compas]
+
+/Fichier:Mode_circle3_svg.adoc[image:32px-Mode_circle3.svg.png[Mode circle3.svg,width=32,height=32]]
+xref:/tools/Cercle_passant_par_trois_points.adoc[Cercle passant par trois points]
+
+/Fichier:Mode_semicircle_svg.adoc[image:32px-Mode_semicircle.svg.png[Mode semicircle.svg,width=32,height=32]]
+xref:/tools/Demi_cercle.adoc[Demi-cercle]
+
+/Fichier:Mode_circlearc3_svg.adoc[image:32px-Mode_circlearc3.svg.png[Mode circlearc3.svg,width=32,height=32]]
+xref:/tools/Arc_de_cercle_(centre_2_points).adoc[Arc de cercle (centre-2 points)]
+
+/Fichier:Mode_circumcirclearc3_svg.adoc[image:32px-Mode_circumcirclearc3.svg.png[Mode
+circumcirclearc3.svg,width=32,height=32]] xref:/tools/Arc_de_cercle_créé_par_3_points.adoc[Arc de cercle créé par 3
+points]
+
+/Fichier:Mode_circlesector3_svg.adoc[image:32px-Mode_circlesector3.svg.png[Mode circlesector3.svg,width=32,height=32]]
+xref:/tools/Secteur_circulaire_(centre_2_points).adoc[Secteur_circulaire_(centre-2_points)]
+
+/Fichier:Mode_circumcirclesector3_svg.adoc[image:32px-Mode_circumcirclesector3.svg.png[Mode
+circumcirclesector3.svg,width=32,height=32]] xref:/tools/Secteur_circulaire_créé_par_3_points.adoc[Secteur circulaire
+créé par 3 points]
+
+xref:/Coniques.adoc[Coniques]
+
+/Fichier:Mode_ellipse3_svg.adoc[image:32px-Mode_ellipse3.svg.png[Mode ellipse3.svg,width=32,height=32]]
+xref:/tools/Ellipse.adoc[Ellipse]
+
+/Fichier:Mode_hyperbola3_svg.adoc[image:32px-Mode_hyperbola3.svg.png[Mode hyperbola3.svg,width=32,height=32]]
+xref:/tools/Hyperbole.adoc[Hyperbole]
+
+/Fichier:Mode_parabola_svg.adoc[image:32px-Mode_parabola.svg.png[Mode parabola.svg,width=32,height=32]]
+xref:/tools/Parabole.adoc[Parabole]
+
+/Fichier:Mode_conic5_svg.adoc[image:32px-Mode_conic5.svg.png[Mode conic5.svg,width=32,height=32]]
+xref:/tools/Conique_passant_par_cinq_points.adoc[Conique passant par cinq points]
+
+xref:/Mesures.adoc[Mesures]
+
+/Fichier:Mode_angle_svg.adoc[image:32px-Mode_angle.svg.png[Mode angle.svg,width=32,height=32]]
+xref:/tools/Angle.adoc[Angle]
+
+/Fichier:Mode_anglefixed_svg.adoc[image:32px-Mode_anglefixed.svg.png[Mode anglefixed.svg,width=32,height=32]]
+xref:/tools/Angle_de_mesure_donnée.adoc[Angle de mesure donnée]
+
+/Fichier:Mode_distance_svg.adoc[image:32px-Mode_distance.svg.png[Mode distance.svg,width=32,height=32]]
+xref:/tools/Distance_ou_Longueur.adoc[Distance ou Longueur]
+
+/Fichier:Mode_area_svg.adoc[image:32px-Mode_area.svg.png[Mode area.svg,width=32,height=32]] xref:/tools/Aire.adoc[Aire]
+
+/Fichier:Mode_slope_svg.adoc[image:32px-Mode_slope.svg.png[Mode slope.svg,width=32,height=32]]
+xref:/tools/Pente.adoc[Pente]
+
+/Fichier:Mode_createlist_svg.adoc[image:32px-Mode_createlist.svg.png[Mode createlist.svg,width=32,height=32]]
+xref:/tools/Liste.adoc[Liste]
+
+/Fichier:Mode_relation_svg.adoc[image:32px-Mode_relation.svg.png[Mode relation.svg,width=32,height=32]]
+xref:/tools/Relation.adoc[Relation]
+
+/Fichier:Mode_functioninspector_svg.adoc[image:32px-Mode_functioninspector.svg.png[Mode
+functioninspector.svg,width=32,height=32]] xref:/tools/Inspecteur_de_fonction.adoc[Inspecteur de fonction]
+
+xref:/Transformations.adoc[Transformations]
+
+/Fichier:Mode_mirroratline_svg.adoc[image:32px-Mode_mirroratline.svg.png[Mode mirroratline.svg,width=32,height=32]]
+xref:/tools/Symétrie_axiale.adoc[Symétrie axiale]
+
+/Fichier:Mode_mirroratpoint_svg.adoc[image:32px-Mode_mirroratpoint.svg.png[Mode mirroratpoint.svg,width=32,height=32]]
+xref:/tools/Symétrie_centrale.adoc[Symétrie centrale]
+
+/Fichier:Mode_mirroratcircle_svg.adoc[image:32px-Mode_mirroratcircle.svg.png[Mode
+mirroratcircle.svg,width=32,height=32]] xref:/tools/Inversion.adoc[Inversion]
+
+/Fichier:Mode_rotatebyangle_svg.adoc[image:32px-Mode_rotatebyangle.svg.png[Mode rotatebyangle.svg,width=32,height=32]]
+xref:/tools/Rotation.adoc[Rotation]
+
+/Fichier:Mode_translatebyvector_svg.adoc[image:32px-Mode_translatebyvector.svg.png[Mode
+translatebyvector.svg,width=32,height=32]] xref:/tools/Translation.adoc[Translation]
+
+/Fichier:Mode_dilatefrompoint_svg.adoc[image:32px-Mode_dilatefrompoint.svg.png[Mode
+dilatefrompoint.svg,width=32,height=32]] xref:/tools/Homothétie.adoc[Homothétie]
+
+xref:/InterActions.adoc[InterActions] xref:/Insertions.adoc[Insertions]
+
+/Fichier:Mode_slider_svg.adoc[image:32px-Mode_slider.svg.png[Mode slider.svg,width=32,height=32]]
+xref:/tools/Curseur.adoc[Curseur]
+
+/Fichier:Mode_text_svg.adoc[image:32px-Mode_text.svg.png[Mode text.svg,width=32,height=32]]
+xref:/tools/Texte.adoc[Texte]
+
+/Fichier:Mode_image1_png.adoc[image:Mode_image1.png[Mode image1.png,width=32,height=32]] xref:/tools/Image.adoc[Image]
+
+/Fichier:Mode_buttonaction_svg.adoc[image:32px-Mode_buttonaction.svg.png[Mode buttonaction.svg,width=32,height=32]]
+xref:/tools/Bouton.adoc[Bouton]
+
+/Fichier:Mode_showcheckbox_svg.adoc[image:32px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=32,height=32]]
+xref:/tools/BoîteSélection.adoc[BoîteSélection] (des objets à Afficher/Cacher)
+
+/Fichier:Mode_textfieldaction_svg.adoc[image:32px-Mode_textfieldaction.svg.png[Mode
+textfieldaction.svg,width=32,height=32]] xref:/tools/ChampTexte.adoc[ChampTexte]
+
+xref:/Généraux.adoc[Généraux]
+
+/Fichier:Mode_translateview_svg.adoc[image:32px-Mode_translateview.svg.png[Mode translateview.svg,width=32,height=32]]
+xref:/tools/Déplacer_Graphique.adoc[Déplacer Graphique]
+
+/Fichier:Mode_zoomin_svg.adoc[image:32px-Mode_zoomin.svg.png[Mode zoomin.svg,width=32,height=32]]
+xref:/tools/Agrandissement.adoc[Agrandissement]
+
+/Fichier:Mode_zoomout_svg.adoc[image:32px-Mode_zoomout.svg.png[Mode zoomout.svg,width=32,height=32]]
+xref:/tools/Réduction.adoc[Réduction]
+
+/Fichier:Mode_showhideobject_svg.adoc[image:32px-Mode_showhideobject.svg.png[Mode
+showhideobject.svg,width=32,height=32]] xref:/tools/Afficher_cacher_l'objet.adoc[Afficher/cacher l'objet]
+
+/Fichier:Mode_showhidelabel_svg.adoc[image:32px-Mode_showhidelabel.svg.png[Mode showhidelabel.svg,width=32,height=32]]
+xref:/tools/Afficher_cacher_l'étiquette.adoc[Afficher/cacher l'étiquette]
+
+/Fichier:Mode_copyvisualstyle_svg.adoc[image:32px-Mode_copyvisualstyle.svg.png[Mode
+copyvisualstyle.svg,width=32,height=32]] xref:/tools/Copier_Style_graphique.adoc[Copier Style graphique]
+
+/Fichier:Mode_delete_svg.adoc[image:32px-Mode_delete.svg.png[Mode delete.svg,width=32,height=32]]
+xref:/tools/Effacer.adoc[Effacer]
+
+xref:/Utilisateur.adoc[Utilisateur]
+
+Vous pouvez réarranger ces boîtes à outils et enregistrer votre configuration dans la
+/s_index_php?title=En:Reference:File_Format_action=edit_redlink=1.adoc[Feuille de travail GeoGebra (:.ggb)]. Voir
+xref:/Barre_d'outils.adoc[Personnaliser la barre d'outils] pour les détails.
+
+[NOTE]
+====
+
+*Note :* Avec beaucoup d'outils de construction vous pouvez directement créer de nouveaux points en cliquant à un
+endroit vierge de Graphique.
+
+====

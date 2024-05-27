@@ -1,0 +1,86 @@
+= Comando GráficoEscalonado
+:page-en: commands/StepGraph_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+GráficoEscalonado [ <Lista de Puntos> ]::
+  Traza un gráfico de los llamados _escalonados_ o de _paso_ conectando los puntos listados, trazando un segmento
+  horizontal y a continuación uno vertical entre cada uno y el siguiente.
+
+[EXAMPLE]
+====
+
+`++GráficoEscalonado [{(1, 1), (3, 2), (4, 5), (5, 7)}]++`
+
+====
+
+GráficoEscalonado [ <Lista de Puntos>, <Conectados o no~true/false~> ]::
+  Según sea falso^[.small]#_false_#^ o no^[.small]#_true_#^ el valor de verdad de _Conectados_, el segmento horizontal
+  va hacia la abscisa del siguiente punto pero no se dibuja la vertical (_false_) o se se trazan ambos (_true_) entre
+  cada uno de los puntos listados.[.small]#En tal caso, cada punto se conecta al siguiente en la lista por un segmento
+  de recta horizontal y uno vertical.#
+
+[EXAMPLE]
+====
+
+`++GráficoEscalonado [{(1, 1), (3, 2), (4, 5), (5, 7)}, true]++`
+
+====
+
+GráficoEscalonado [ <Lista de abscisas coor-x>, <Lista de ordenadas coor-y> ]::
+  Traza un gráfico de los llamados de _pasos_, _gradas_ o _escalones_ -por su forma justamente escalonada- acorde a los
+  puntos determinados por sendas listas de coordenadas, trazando un segmento horizontal y a continuación uno vertical
+  para conectarlos.
+
+[EXAMPLE]
+====
+
+`++GráficoEscalonado [{1, 3, 4, 5}, {1, 2, 5, 7}]++`
+
+====
+
+GráficoEscalonado [ <Lista abscisas coor-x>, <Lista ordenadas coor-y>, <Conectados o no~true/false~> ]::
+  Según sea falso^[.small]#_false_#^ o no^[.small]#_true_#^ el valor de verdad de _Conectados_, se conectan los puntos
+  determinados por las listas, trazando solo el segmento horizontal que une las abscisas respectivas pero no el vertical
+  (_false_), o ambos (_true_) entre cada uno de los subsecuentes determinados por sendas listas.
+
+[EXAMPLE]
+====
+
+`++GráficoEscalonado [{1, 3, 4, 5}, {1, 2, 5, 7}, false]++`
+
+====
+
+GráficoEscalonado [ <Lista de abscisas coor-x>, <Lista de ordenadas coor-y>, <Conectados o no~true/false~>, <Estilo de
+Punto> ]::
+  Traza el gráfico con un estilo acorde al indicado.
+  Los valores para determinar el estilo son -2, -1, 0, 1, -1 y operan según se señala:
+  *_0_* = no se trazan puntos
+  *_1_* = punto pleno a la derecha
+  *_2_* = punto pleno a la derecha y hueco a la izquierda
+  *_-1_* = punto pleno a la izquierda
+  *_-2_* = punto pleno a la izquierda y hueco a la derecha
+
+[EXAMPLE]
+====
+
+`++GráficoEscalonado [{1, 3, 4, 5}, {1, 2, 5, 7}, false, 1]++`
+
+====
+
+GráficoEscalonado [ <Lista de Puntos>, <Conectados o no~true/false~>, <Estilo de Punto> ]::
+  Traza el gráfico de estilo acorde al indicado.
+
+[EXAMPLE]
+====
+
+`++GráficoEscalonado [{(1, 1), (3, 2), (4, 5), (5, 7)}, false, 1]++`
+
+====

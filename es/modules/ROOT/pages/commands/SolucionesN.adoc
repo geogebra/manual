@@ -1,0 +1,154 @@
+= Comando SolucionesN
+:page-en: commands/NSolutions_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[De] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+'''''
+
+[.small]#Busca una aproximación numérica a la o las soluciones de la ecuación dada o sistema listado en la(s)
+variable(s) indicada(s) desde cada valor inicial, si fuese señalado.#
+
+SolucionesN( <Ecuación> )::
+  Busca una aproximación numérica a la o las soluciones de la ecuación respecto de la variable principal. Siempre
+  conviene especificar el valor inicial cuando se trata de un no polinomio, como se ilustra más adelante.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* `++SolucionesN[x^6 - 2x + 1=0]++` da, con decimales según xref:/Menú_de_Opciones.adoc[_redondeo_,] _\{0.51,
+1}_ o __\{0.508660391642, 1}__**`++SolucionesN[cos(x) = x]++`** da __\{0.74}__^[.small]#[.small]#decimales según
+xref:/Menú_de_Opciones.adoc[_redondeo_]##^*`++SolucionesN[cos(t+ π / 4) = t / 5]++`* da, siendo `++t++` la variable
+principal, _\{-3}_ o cualquiera de las restantes soluciones resultante tras cada [.kcode]#F9# o [.kcode]#Intro# en la
+correspondiente fila.
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: [.small]#El resultado se expone con un número de
+decimales según xref:/Menú_de_Opciones.adoc[_redondeo_] pero internamente conserva su precisión por lo que, por ejemplo,
+la _copia_ de ese `++{-3}++` es _\{-2.99959413712754}_#
+
+====
+
+SolucionesN( <Ecuación>, <Variable> )::
+  Busca una aproximación numérica a las soluciones de la ecuación en la variable indicada. Siempre conviene especificar
+  el valor inicial cuando se trata de un no polinomio, como se ilustra más adelante.
+
+[EXAMPLE]
+====
+
+*`++SolucionesN[a^4 + 34a^3 = 34, a]++`* lista un par de soluciones; _\{-34, 0.99}_.
+
+====
+
+[NOTE]
+====
+
+Es opcional dar el valor de partida como _a=3_. Este adicional, irrelevante en el ejemplo dado, tiene impacto cuando las
+soluciones son múltiples y máxime cuando varían según el valor de partida indicado.Así, el comportamiento difiere entre
+`++SolucionesN[1- sin(x) = 0, x=-2]++` y `++SolucionesN[1- sin(x) = 0]++` radica en que, si no se da el valor de
+partida, el resultado varía cada vez que se procede a un recálculo pulsando [.kcode]#F9# o [.kcode]#Intro# en la fila
+correspondiente.
+
+====
+
+SolucionesN[.small]##[ <##Ecuación[.small]##>##, [.small]##<##variable=valor~inicial~[.small]##> ]##::
+  Busca una aproximación numérica a la o las soluciones de la ecuación respecto de la variable indicada y lista alguna
+  de las que se registran en una búsqueda desde el _valor inicial_.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++SolucionesN[cos(x) + 1 = 2, x= 0]++`* da __\{0}__**`++SolucionesN[1- sin(x) = 0, x = 0]++`** da
+_\{1.57}_ mientras *`++SolucionesN[1- sin(x) = 0]++`* da _\{58.12}_ u otra solución, diferente en el recálculo tras cada
+[.kcode]#F9# o [.kcode]#Intro# en la fila correspondiente.*`++SolucionesN[a^4 + 34a^3 = 34, a = 3]++`* lista el par
+__\{-34, 0.99}__**`++SolucionesN[ℯ^a - 2 π^a = 0,  a = 0]++`** lista la solución _\{-4.79}_
+
+====
+
+SolucionesN( <Lista de Ecuaciones>, <Lista de Variables> )::
+  Establece numéricamente la lista de la o las soluciones para el sistema de ecuaciones listado para las variables
+  indicadas.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* `++SolucionesN[{x^2 y^4+3 x y^3 = 2, 7 y^2 = x -ñ, ñ + 2 x = y }]++` da la lista _\{1.407, 0.708, -2.106}_
+mientras...`++SolucionesN[{x^2 y^4+3 x y^3 = 2, 7 y^2 = x -ñ, ñ + 2 x = y }, {ñ, x, y}]++` da _\{-2.106, 1.407, 0.708}_.
+
+====
+
+[NOTE]
+====
+
+[.small]#El último parámetro, la _Lista de variables_, puede omitirse y los resultados, de poder calcularse, aparecerán
+en el orden convencional, como se ilustra en el siguiente ejemplo.#
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++SolucionesN[{x^2 y^4+3 x y^3 = 2, 7 y^2 = x -5 }]++`* da __\{6.08,
+0.39}__**`++SolucionesN[{π / x = cos(x - 2y), 2 y - π = sin(x)}, {x, y}]++`** da la lista _\{40.06, 1.92}_ u otro
+resultado, diferente en el recálculo con cada [.kcode]#F9# o [.kcode]#Intro# en la fila correspondienteDe optar por la
+inclusión de los valores iniciales, se
+anotaría:*`++SolucionesN[{π / x = cos(x - 2y), 2 y - π = sin(x)}, {x=3, y=1.5}]++`* que, en este caso, daría
+persistentemente __\{3.14, 1.57}__**`++SolucionesN[{x^3 - 3 * x^2 - 4 * x + 12 = ñ, cos(x+π) / ñ = 3 ñ}, {x, ñ}]++`** da
+_\{2.87, -0.57}_ o _\{3.1, 0.58}_ u otra de las soluciones, diferente tras cada [.kcode]#F9# o [.kcode]#Intro#
+
+====
+
+[NOTE]
+====
+
+Un último parámetro con valores para una a o más de la _Lista de variables_ es optativo.Los valores iniciales de las
+variables pueden establecerse como elemento de determinación de resultados cuando son diversas las soluciones
+
+====
+
+'''''
+
+/Archivo:SolucionesN_CAS_PNG.adoc[image:560px-SolucionesN_CAS.PNG[SolucionesN CAS.PNG,width=560,height=441]]
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: [.small]#Es opcional establecer valores de inicio de
+la variable o de cada uno de las listadas. Como *`++a=3++`* en `++SolucionesN[a^4 + 34a^3 = 34]++` o
+*`++{x=3, y=1.5}++`* en `++SolucionesN[{π / x = cos(x - 2y), 2 y - π = sin(x)}]++`.La búsqueda se podría tornar más
+complicada pero opera de todos modos sea que se indiquen o no los datos de partida y, por otra parte, establecerlos
+tampoco garantiza el encuentro de una solución.La alternativa de tal indicación tiene impacto cuando la ecuación tiene
+numerosas soluciones, como se ilustra en el siguiente ejemplo, dado que de no establecer el valor de partida, se
+obtendrá un valor diferente en el recálculo tras cada [.kcode]#Intro# o [.kcode]#F9# en la fila correspondiente.En
+cambio, daría siempre el mismo resultado cuando se establece el valor de partida.#
+
+====
+
+[NOTE]
+====
+
+*Notas:*
+
+* De no establecerse el punto de partida, como *_a=3_* o *_\{x = 3, y = 1.5}_* al algoritmo numérico puede complicársele
+dar con la solución (aunque hacerlo no garantiza que se la encuentre)
+* *π* se obtiene pulsando [.kcode]##Alt##+[.kcode]#p#.
+* *SolucionesN* no opera adecuadamente para funciones asintóticas al eje x de abscisas. Generalmente, por otra parte,
+suelen poder reformularse.
++
+
+'''''
+* Ver también los comandos xref:/commands/Soluciones.adoc[Soluciones] y xref:/commands/ResoluciónN.adoc[ResoluciónN].
+
+====

@@ -1,0 +1,86 @@
+= Comando RellenaCeldas
+:page-en: commands/FillCells_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+RellenaCeldas( <Rango de Celdas>, <Objeto> )::
+  Copia los datos provenientes del objeto indicado, al conjunto de celdas determinado por el rango señalado.
+
+[NOTE]
+====
+
+*Notas:* Respecto de los parámetros...
+
+* las celdas se identifican por su _nombre_ que es el de la letra de la columna y a continuación el número de fila. Como
+_D3_ o _B7_, por ejemplo.
+* el del _Rango de Celdas_, debe ingresarse, como es habitual en las xref:/Hoja_de_Cálculo.adoc[hojas de cálculo].Por
+ejemplo, _B2:D5_.
+* el xref:/Objetos.adoc[_Objeto_] puede ser de cualquier tipo (una ecuación como _3 sin(x) + x^2_ ; una expresión;
+comandos operando sobre objetos como xref:/commands/AleatorioEntre.adoc[AleatorioEntre[0, 10]],
+xref:/commands/Vector.adoc[Vector[A, B]]... entre otros.
+
+====
+
+RellenaCeldas( <Celda>, <Lista> )::
+  Copia los valores desde la lista a la fila de celdas, a partir de la indicada, que le da cabida.
+RellenaCeldas( <Celda>, <Matriz> )::
+  Copia los valores desde la matriz al conjunto de celdas que, a partir de la indicada, le dan cabida.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++RellenaCeldas[C5, matriz1 + matriz2]++`* vuelca, a partir de *`++C5++`* hasta *`++F8++`*, los números
+resultantes de la suma de:
+
+* matriz1 = \{\{4, 5, 6, 7}, \{2, 3, 4, 5}, \{0, 1, 2, 3}, \{-2, -1, 0, 1}} y
+* matriz2 = \{\{3, 4, 5, 6}, \{1, 2, 3, 4}, \{-1, 0, 1, 2}, \{-3, -2, -1, 0}}
+
+====
+
+[EXAMPLE]
+====
+
+*`++RellenaCeldas[B2, {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}]++`* vuelca los números indicados en la segunda fila de la
+planilla, a partir de la columna B, en adelante.
+
+====
+
+[NOTE]
+====
+
+Las celdas resultantes son xref:/Objetos_libres_dependientes_y_auxiliares.adoc[objetos libres] (independientes incluso
+de la matriz).
+
+====
+
+[NOTE]
+====
+
+Las celdas resultantes son xref:/Objetos_libres_dependientes_y_auxiliares.adoc[objetos libres] (independientes de la
+lista).
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Se puede arrastrar/depositar directamente una lista
+desde la xref:/Vista_Algebraica.adoc[Vista Algebraica] a la xref:/Hoja_de_Cálculo.adoc[Hoja de Cálculo].En simultáneo,
+manteniendo pulsada la tecla [.kcode]#Shift# ([.kcode]#May# en algunos teclados) se puede decidir sobre las opciones que
+ofrece el correspondiente cuadro de diálogo (Objetos libres/dependientes -- Transpuestas).
+
+====
+
+[NOTE]
+====
+
+Es posible usar `++RellenaCeldas( <Celda>,Traspone({<Lista>})++` para rellenar verticalmente. Los corchetes extra
+convierten la lista en matriz, de ahí `++{lista}++`
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/RellenaColumna.adoc[RellenaColumna] y
+xref:/commands/RellenaFila.adoc[RellenaFila]
+====

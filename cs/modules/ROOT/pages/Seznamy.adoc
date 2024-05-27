@@ -1,0 +1,110 @@
+= Seznamy
+:page-en: Lists
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Seznam několika objektů (např. bodů, úseček, kružnic) lze vytvořit použitím složených závorek.
+
+[EXAMPLE]
+====
+
+* `++L = {A, B, C}++` vytvoří seznam, který obsahuje tři dříve definované body _A_, _B_ a _C_.
+* `++L = {(0, 0), (1, 1), (2, 2)}++` vytvoří seznam, který obsahuje tři zadané (bezejmenné) body.
++
+[NOTE]
+====
+
+V základním nastavení nejsou prvky tohoto seznamu zobrazeny v xref:/Grafický_pohled.adoc[Grafickém pohledu].
+
+====
+
+====
+
+Pro přístup k dílčím prvkům seznamu lze využít příkaz xref:/commands/Prvek.adoc[Prvek]. Seznamy mohou být užity jako
+argumenty některých xref:/commands/Seznam_(Příkazy).adoc[příkazů] a také v operacích se seznamy (které jsou zmíněny dále
+v tomto článku).
+
+== Porovnávání seznamů objektů
+
+Seznamy objektů lze porovnávat s využitím následující syntaxe:
+
+* Seznam1 == Seznam2: Ověří zda uvedené seznamy jsou shodné a jako výsledek odpoví _true_ nebo _false_.
+* Seznam1 != Seznam2: Ověří zda uvedené seznamy jsou různé a jako výsledek odpoví _true_ nebo _false_.
+
+== Operace se seznamy
+
+<Objekt> ∈ <Seznam> je prvkem
+
+<Seznam> ⊆ <Seznam> je podmnožinou
+
+<Seznam> ⊂ <Seznam> je vlastní podmnožinou
+
+<Seznam> \ <Seznam> množinový rozdíl
+
+== Užití předdefinovaných funkcí a operátorů na seznamy
+
+Užitím xref:/Předdefinované_funkce_a_operátory.adoc[předdefinovaných funkcí nebo operátorů] na seznamy, vznikne vždy
+jako výsledek nový seznam.
+
+=== Sčítání a odčítání
+
+* Seznam1 + Seznam2: Sečte odpovídající prvky seznamů.
++
+[NOTE]
+====
+
+Seznamy musí mít stejnou délku.
+
+====
+* Seznam + Číslo: Přičte Číslo ke každému prvku Seznamu.
+* Seznam1 - Seznam2: Odečte odpovídající prvky seznamů.
++
+[NOTE]
+====
+
+Seznamy musí mít stejnou délku.
+
+====
+* Seznam - Číslo: Odečte Číslo od každého prvku Seznamu.
+
+=== Násobení a dělení
+
+* Seznam1 * Seznam2: Vynásobí odpovídající prvky seznamů.
++
+[NOTE]
+====
+
+Seznamy musí mít stejnou délku. Pokud jsou seznamy vhodné matice, je použito násobení matic.
+
+====
+* Seznam * Číslo: Vynásobí každý prvek Seznamu Číslem.
+* Seznam1 / Seznam2: Vydělí prvky prvního seznamu odpovídajícími prvky druhého seznamu.
++
+[NOTE]
+====
+
+Seznamy musí mít stejnou délku.
+
+====
+* Seznam / Číslo: Vydělí každý prvek Seznamu Číslem.
+
+[NOTE]
+====
+
+Viz také xref:/Body_a_vektory.adoc[Vektorový součin].
+
+====
+
+=== Další příklady
+
+* Seznam^2: Umocní každý prvek seznamu na druhou.
+* 2^Seznam: Vytvoří seznam mocnin čísla 2 s prvky daného seznamu jako exponenty.
+* Seznam1^Seznam2: Vytvoří seznam _a^b^_, kde _a_ a _b_ jsou odpovídající si prvky Seznamu1 a Seznamu2.
+* sin(Seznam): Vytvoří seznam funkčních hodnot funkce sinus v prvcích zadaného seznamu. Stejným způsobem lze využít i
+uživatelsky definovaných xref:/Funkce.adoc[funkcí].
+
+[NOTE]
+====
+
+Anglická verze: /s_index_php?title=En:Lists_action=edit_redlink=1.adoc[Lists].
+
+====

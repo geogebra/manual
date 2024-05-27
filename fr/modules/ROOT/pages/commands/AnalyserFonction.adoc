@@ -1,0 +1,21 @@
+= Commande AnalyserFonction
+:page-en: commands/ParseToFunction_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+AnalyserFonction( <Fonction f>, <Chaîne> )::
+  Analyse la syntaxe de la chaîne de caractères et affecte le résultat à la xref:/Fonctions.adoc[fonction] _f_. La
+  fonction _f_ doit être définie et xref:/Objets_libres_dépendants_ou_auxiliaires.adoc[libre] avant de solliciter cette
+  commande.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+Soit la fonction f définie par `++ f(x) = 3x² + 2++` et la chaîne de caractères définie par `++ texte1 = "3x + 1"++`.
+
+`++ AnalyserFonction(f, texte1)++` retourne _f(x) = 3x + 1_.
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/AnalyserNombre.adoc[AnalyserNombre].

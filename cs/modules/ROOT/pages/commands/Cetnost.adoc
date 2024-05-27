@@ -1,0 +1,54 @@
+= Příkaz Cetnost
+:page-en: commands/Frequency_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Cetnost( <Seznam dat> )::
+  Vrací seznam četností všech hodnot ze seznamu _L_ ve vzestupném pořadí. Tento seznam je druhým sloupcem tabulky
+  četností, jež vytvoří xref:/commands/FrekvencniTabulka.adoc[Příkaz FrekvencniTabulka]. První sloupec tabulky četností
+  je tvořen setříděnými unikátními hodnotami seznamu _L_. Tyto setříděné hodnoty vrací
+  xref:/commands/Unikatni.adoc[Příkaz Unikatni].
+
+[EXAMPLE]
+====
+
+Vložte `++seznam1 = { "a", "a", "x", "x", "x", "b" }++`. `++Cetnost[seznam1]++` vrátí výsledek \{ 2, 1, 3 }. Příkaz
+`++Unikatni[seznam1]++` vrátí seznam \{ "a", "b", "x" }.
+
+====
+
+Cetnost( <Kumulativní>(Volitelné), <Seznam dat> )::
+  Jestliže je logická hodnota pro kumulativní četnosti _true_, příkaz vypíše seznam kumulativních četností ze seznamu
+  _L_ ve vzestupném pořadí. Přednastavenou hodnotou parametru kumulativni je _false_ - viz předchozí odstavec.
+
+[EXAMPLE]
+====
+
+Vložte`++seznam1 = { 0, 0, 0, 1 , 1, 2 }++`. `++Cetnost[true, seznam1]++` vypíše \{ 3, 5, 6 }.
+`++Cetnost[false, seznam1]++` vrátí \{ 3, 2, 1}. Výsledkem příkazu `++Unikatni[seznam1]++` je \{ 0, 1, 2 }.
+
+====
+
+Cetnost( <Seznam hranic tříd>, <Seznam dat>, )::
+  Vrací četnosti tříd v seznamu dat. Třídy jsou ve tvaru polouzavřeného intervalu [_a, b_). Poslední interval je
+  uvažován jako uzavřený [_a, b_].
+
+[EXAMPLE]
+====
+
+`++Cetnost[{1,2,3},  {1,1,2,3}]++` dá výsledek \{ 2, 2 }.
+
+====
+
+Cetnost( <Kumulativní>, <Seznam hranic tříd>, <Seznam dat> )::
+  Jestliže je logická hodnota pro kumulativní četnosti _true_, příkaz vypíše seznam kumulativních četností tříd v
+  seznamu _L_. Přednastavenou hodnotou nepovinného parametru kumulativni je _false_ - viz předchozí odstavec.
+
+Cetnost( <Seznam hranic tříd>, <Seznam dat>, < Užití hustoty>(logická hodnota) , <Měřítko hustoty> (Volitelné) )
+
+Vypíše četnosti tříd v seznamu dat _L_ pro sestrojení histogramu četností xref:/commands/Histogram.adoc[Příkaz
+Histogram].
+
+Cetnost( <Kumulativní (logická hodnota)>, <Seznam hranic tříd>, <Seznam dat>, < Užití hustoty>, <Měřítko hustoty>
+(Volitelné) )::
+  Jestliže je logická hodnota pro kumulativní četnosti _true_, příkaz vypíše seznam kumulativních četností tříd v
+  seznamu _L_. Přednastavenou hodnotou parametru kumulativni je _false_ - viz předchozí odstavec.

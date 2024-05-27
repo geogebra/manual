@@ -1,0 +1,175 @@
+= Listas
+:page-en: Lists
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Usando llaves pueden crearse listas que incluyan varios objetos, como...
+
+* puntos
+* segmentos
+* circunferencias... y otros
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++L = {A, B, C}++` establece una lista de tres puntos definidos previamente A, B, y C.
+* `++L = {(0, 0), (1, 1), (2, 2)}++` produce una lista de los puntos ingresados sin nominar.
+
+====
+
+[NOTE]
+====
+
+Por omisión, los elementos de las listas así creadas no se exponen en la xref:/Vista_Gráfica.adoc[Vista Gráfica].
+
+====
+
+== Gráficos [.small]##a##listados
+
+Encuadrando un conjunto de xref:/Objetos.adoc[objetos] expuestos en la xref:/Vista_Gráfica.adoc[Vista Gráfica] mientras
+se mantiene pulsada la tecla [.kcode]#Alt#, la lista de todo lo incluido deviene entrada.
+
+'''''
+
+Si los xref:/Objetos.adoc[objetos] se van escogiendo de la xref:/Vista_Algebraica.adoc[Vista Algebraica], puede
+desplazarse lo sombreado hasta la xref:/Barra_de_Entrada.adoc[entrada] para crear la lista. Pulsando [.kcode]#Ctrl# se
+puede incluir algún otro xref:/Objetos.adoc[objeto] para incorporarlo a lo ya sombreado.
+
+== Elemento por Elemento
+
+Para acceder a cierto elemento de la lista en particular, puede emplearse el comando
+xref:/commands/Elemento.adoc[Elemento] o los paréntesis de modo adecuado.Las listas pueden usarse como argumentos en
+operaciones (como se menciona más adelante) o con xref:/commands/Comandos_de_Lista.adoc[Comandos de Listas].
+
+== Comparar Listas de Objetos
+
+Pueden compararse dos listas de objetos empleando la siguiente sintaxis y comandos:
+
+* `++Lista1 == Lista2++` Controla si las dos listas son iguales como http://en.wikipedia.org/wiki/es:Tupla[tuplas]
+ordenadas y brinda como resultado de salida verdadero (_true_) o falso (_false_).
+* `++Lista1 != Lista2++` Controla si las dos listas son desiguales como http://en.wikipedia.org/wiki/es:Tupla[tuplas]
+ordenadas y opera del mismo modo que la anterior pero en sentido contrario (_false_ cuando son iguales y viceversa)
+* `++Único[lista1] == Único[lista2]++` o `++{lista1} \ {lista2} == {}++` Controla si sendas listas son iguales en tanto
+conjuntos (es decir, ignorando los elementos repetidos así como el orden en que se disponen)
+* `++Ordena[lista1] == Ordena[lista2]++` Controla si sendas listas son iguales en tanto
+http://en.wikipedia.org/wiki/es:Multiconjunto[multiconjunto] (es decir, ignorando el orden de los elementos).
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/Único.adoc[Único] y xref:/commands/Ordena.adoc[Ordena].
+
+====
+
+== Operaciones con Listas
+
+* `++<Objeto> ∈ <Lista>++` controla si el objeto es un elemento de la lista indicada
+* `++<Lista> ⊆ <Lista>++` controla si una lista es subconjunto de la otra
+* `++<Lista> ⊂ <Lista>++` controla si una lista es estricto subconjunto de la otra
+* `++<Lista> \ <Lista>++` conjunto diferencia
+
+=== Aplicar xref:/Operadores_y_Funciones_Predefinidas.adoc[Operaciones Predefinidas y Funciones] a las Listas
+
+Cada vez que se aplican xref:/Operadores_y_Funciones_Predefinidas.adoc[operaciones predefinidas y/o funciones] a listas,
+se obtiene como resultado, una nueva lista.
+
+=== Sumas y Restas
+
+* `++Lista + <número>++` Suma el _número_ a cada uno de los elementos de la lista.
+* `++Lista – <número>++` Resta el _número_ a cada uno de los elementos de la lista.
+
+=== Multiplicación y División
+
+* `++Lista * <número>++` Multiplica por el _número_, cada uno de los elementos de la lista.
+* `++Lista / <número>++` Divide cada elemento de la lista, por el _número_.
+* `++<número> / Lista++` Divide el _número_ por cada elemento de la lista.
+
+=== Operando con más de una lista
+
+* En las siguientes operaciones, comparaciones, sumas o restas y multiplicaciones o divisiones, cuando aparece
+involucrado dos o más listas, se requiere que tengan la misma longitud (el mismo número de elementos).
+
+=== Sumando y Restando Listas
+
+* `++Lista1 + Lista2++` Suma uno a uno, cada par de elementos correspondientes de una y otra lista..
+* `++Lista1 – Lista2++` Resta los elementos de la segunda lista a cada uno de os correspondientes de la primera.
+
+=== Producto de Listas
+
+* `++Lista1 * Lista2++` Multiplica uno a uno, cada par de elementos correspondientes de una y otra lista.
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Si sendas listas fueran matrices compatibles, se emplea la multiplicación de
+matrices.`++{1, 2,3}* {{1,0,0},{0,1,0},{0,0,1}} ++` da por resultado el producto de listas:
+
+stem:[\left(\begin\{array}\{rrr}1&0&0\\0&2&0\\0&0&3\\ \end\{array}\right)]
+
+Por otro lado:`++{{1, 2,3}}* {{1,0,0},{0,1,0},{0,0,1}} ++`da por resultado un producto de matrices:
+
+stem:[\left(\begin\{array}\{rrr}1&2&3\\ \end\{array}\right)]
+
+|===
+
+=== División entre Listas
+
+* `++Lista1 / Lista2++` Divide uno a uno, cada uno de los elementos de la primera lista por los correspondientes de la
+segunda.
+
+[NOTE]
+====
+
+En todos los casos, sendas listas deben tener igual longitud.En el último anotado, si las dos listas son matrices
+compatibles, se emplea la multiplicación de matrices.
+
+====
+
+* `++Lista / Número++` Divide cada elemento de la lista por el número .
+* `++Número / Lista++` Divide el número por cada elemento de la lista.
+
+[NOTE]
+====
+
+Ver también xref:/Puntos_y_Vectores.adoc[Producto Vectorial].
+
+====
+
+=== Otros Ejemplos
+
+Ejemplos usando funciones:
+
+* `++Lista^2++` Eleva al cuadrado cada elemento de la lista.
+* `++2^Lista++` Crea la lista de potencias de dos con los exponentes de la lista.
+* `++Lista1^Lista2++` Crea una lista de _a^b_, donde _a_ y _b_ son los elementos de la _Lista1_ y _Lista2_
+respectivamente.
+* `++sin(Lista)++` Aplica la función seno a cada elemento de la lista
+
+Las xref:/Funciones.adoc[funciones] creadas por los usuarios pueden aplicarse también y del mismo modo.
+
+=== Intercambios entre registro xref:/Vista_Algebraica.adoc[algebraico] y el de xref:/Hoja_de_Cálculo.adoc[Hoja de Cálculo]=
+
+[EXAMPLE]
+====
+
+Siendo *l_a := `++Secuencia[BinomialAleatorio[3, 0.1], ñ, 1, 1000, Mínimo[Máximo[AleatorioEntre[1, exF], 1], 1]]++`* la
+_lista_ de registro xref:/Vista_Algebraica.adoc[algebraico], copiando a la xref:/Hoja_de_Cálculo.adoc[Hoja de Cálculo],
+sendas [.mw-selflink .selflink]#listas# _l~o~_ y _l~f~_ definidas como:*l~o~ := `++Ordena[Único[la]]++`* y *l~f~ :=
+`++Zip[CuentaSi[x ≟ ñ, l_a], ñ, {0,1,2,3}]++`*, cundo se selecciona el rango de celdas en que se volcaron ambas listas y
+se crea la correspondiente xref:/Matrices.adoc[matriz], se obtiene una dinámica y aleatoriamente cambiante con cada
+pulsación de [.kcode]#F9#
+
+====
+
+'''''
+
+[NOTE]
+====
+
+Ver también el artículo sobre xref:/Matrices.adoc[Matrices].
+
+====

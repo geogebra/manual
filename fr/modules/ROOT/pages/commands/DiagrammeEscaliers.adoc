@@ -1,0 +1,47 @@
+= Commande DiagrammeEscaliers
+:page-en: commands/StepGraph_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+DiagrammeEscaliers( <Liste d'abscisses>, <Liste d'ordonnées> )::
+  Dessine un diagramme en escaliers pour la liste de points créés à partir des listes de coordonnées. Chaque point est
+  relié au suivant par un segment horizontal et un segment vertical.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++DiagrammeEscaliers({1, 3, 4, 5, 6}, {1, 2, 5, 7, 5})++` peut être considéré comme la représentation d'un
+regroupement en classes [1,3[, [3,4[, [4,5[ et [5,6] d'effectifs respectifs 1, 2, 5, 7 et 5.
+
+[NOTE]
+====
+
+*Note :* La valeur associée au diagramme est l'effectif total (ici _20_), en survolant avec votre pointeur les
+différentes marches, les info-bulles vous indiquent _Valeur_ (borne inférieure) , _Effectifs_ et fréquence en
+pourcentage, ainsi pour la 2ème marche l'info-bulle affiche _Valeur = 3_, _Effectifs = 2_ et _10%_ (2/(1+2+5+7+5)).
+
+====
+
+====
+
+DiagrammeEscaliers( <Liste de points> )::
+  Dessine un diagramme en escaliers pour la liste de points.
+
+DiagrammeEscaliers( <Liste d'abscisses>, <Liste d'ordonnées>, <Booléen Reliés> )::
+  Dessine un diagramme en escaliers pour la liste de points créés à partir des listes de coordonnées. Si _Reliés_ =
+  _false_, seul le segment horizontal est dessiné.
+
+DiagrammeEscaliers( <Liste de points>, <Booléen Reliés> )::
+  Dessine un diagramme en escaliers pour la liste de points. Si _Reliés_ = _false_, seul le segment horizontal est
+  dessiné.
+
+DiagrammeEscaliers( <Liste d'abscisses>, <Liste d'ordonnées>, <Booléen Reliés>, <Style des points> )::
+  Dessine un diagramme en escaliers.
+  Style des points est une valeur de -2, -1, 0, 1, -1 définissant le style du point comme suit :
+  0 = les points ne sont pas dessinés
+  1 = les points sont pleins à droite
+  2 = les points sont pleins à droite, les points sont ouverts à gauche
+  -1 = les points sont pleins à gauche
+  -2 = les points sont pleins à gauche, les points sont ouverts à droite
+
+DiagrammeEscaliers( <Liste de points>, <Booléen Reliés>, <Style des points> )::
+  Dessine un diagramme en escaliers comme décrit ci-dessus.

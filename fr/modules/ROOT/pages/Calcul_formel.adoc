@@ -1,0 +1,324 @@
+= Calcul formel
+:page-en: CAS_View
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Comme toute fenêtre, cette fenêtre *Calcul formel* peut être ouverte de manière indépendante, en cliquant sur le bouton
+/Fichier:View_window_png.adoc[image:View-window.png[View-window.png,width=13,height=16]] 'Afficher dans une nouvelle
+fenêtre' qui apparaît dans la partie droite du bandeau-titre lorsque vous survolez celui-ci avec votre pointeur, et vous
+pouvez de nouveau l' 'Afficher dans la fenêtre principale' en cliquant sur le bouton
+/Fichier:View_unwindow_png.adoc[image:View-unwindow.png[View-unwindow.png,width=13,height=16]].
+
+La fenêtre *Calcul formel* vous permet d'utiliser le moteur de calcul formel implémenté dans GeoGebra pour vos calculs
+formels. Cette fenêtre contient une colonne de cellules , chacune d'elle ayant une zone de saisie dans sa partie
+supérieure et une zone de sortie dans sa partie inférieure.
+
+Vous pouvez utiliser la zone de saisie de la même manière que le champ de xref:/Saisie.adoc[saisie] _normal_,
+(`++A:=(1,2,3)++` ; `++u:=(1,1,1)++`), aux différences suivantes :
+
+* vous pouvez utiliser des variables qui n'ont pas été définies, par ex. `++(a+b)^2++` est évalué en
+stem:[a^2+2ab+b^2] ;
+* Le signe `++ = ++` est utilisé pour les équations et la combinaison de signes `++ :   =++` pour les affectations. Cela
+signifie que la commande _a=2_ n'affecte pas la valeur 2 à la variable _a_. Voir la section concernant les
+xref:/.adoc[affectations] pour plus de détails.
+
+Un clic sur la 'pastille' de visibilité /Fichier:Hidden_gif.adoc[image:Hidden.gif[Hidden.gif,width=16,height=16]] à
+gauche de la zone de sortie, va provoquer, si cela est possible, l'affichage de la réponse dans Graphique (et Algèbre),
+en créant au besoin des noms, des affectations.
+
+== Barre d'outils
+
+La fenêtre Calcul formel dispose de sa barre d 'outils spécifique, que vous pouvez bien sûr personnaliser en
+sélectionnant _Barre d'outils personnalisée …_ du xref:/Menu_Outils.adoc[Menu_Outils], et choisissant 'Calcul formel'
+dans la liste déroulante au sommet de la fenêtre qui s'est ouverte.
+
+[cols=",,,,,,,,,,",]
+|===
+|/Fichier:Mode_evaluate_svg.adoc[image:32px-Mode_evaluate.svg.png[Mode
+evaluate.svg,width=32,height=32]]xref:/tools/Évaluer.adoc[Évaluer]
+|/Fichier:Mode_numeric_svg.adoc[image:32px-Mode_numeric.svg.png[Mode
+numeric.svg,width=32,height=32]]xref:/tools/Numérique.adoc[Numérique]
+|/Fichier:Mode_keepinput_svg.adoc[image:32px-Mode_keepinput.svg.png[Mode
+keepinput.svg,width=32,height=32]][.small]##xref:/tools/Conserver_la_saisie.adoc[Conserver la saisie]##
+|/Fichier:Mode_factor_svg.adoc[image:32px-Mode_factor.svg.png[Mode
+factor.svg,width=32,height=32]]xref:/tools/Factoriser.adoc[Factoriser]
+|/Fichier:Mode_expand_svg.adoc[image:32px-Mode_expand.svg.png[Mode
+expand.svg,width=32,height=32]]xref:/tools/Développer.adoc[Développer]
+|/Fichier:Mode_substitute_svg.adoc[image:32px-Mode_substitute.svg.png[Mode
+substitute.svg,width=32,height=32]]xref:/tools/Substituer.adoc[Substituer]
+|/Fichier:Mode_solve_svg.adoc[image:32px-Mode_solve.svg.png[Mode
+solve.svg,width=32,height=32]]xref:/tools/Résoudre.adoc[Résoudre]
+|/Fichier:Mode_nsolve_svg.adoc[image:32px-Mode_nsolve.svg.png[Mode
+nsolve.svg,width=32,height=32]][.small]##xref:/tools/Résoudre_numériquement.adoc[Résoudre numériquement]##
+|/Fichier:Mode_derivative_svg.adoc[image:32px-Mode_derivative.svg.png[Mode
+derivative.svg,width=32,height=32]]xref:/tools/Dérivée.adoc[Dérivée]
+|/Fichier:Menu_view_probability_svg.adoc[image:32px-Menu_view_probability.svg.png[Menu view
+probability.svg,width=32,height=32]][.small]##xref:/tools/Calculs_Probabilités.adoc[Calculs Probabilités]##
+|/Fichier:Mode_delete_svg.adoc[image:32px-Mode_delete.svg.png[Mode
+delete.svg,width=32,height=32]]xref:/tools/Effacer.adoc[Effacer]
+
+| | | | | | | | |/Fichier:Mode_integral_svg.adoc[image:32px-Mode_integral.svg.png[Mode
+integral.svg,width=32,height=32]]xref:/tools/Primitive.adoc[Primitive]
+|/Fichier:Mode_functioninspector_svg.adoc[image:32px-Mode_functioninspector.svg.png[Mode
+functioninspector.svg,width=32,height=32]][.small]##xref:/tools/Inspecteur_de_fonction.adoc[Inspecteur de fonction]## |
+|===
+
+* En cliquant sur un bouton de la barre d'outils, vous appliquez une commande à la ligne actuellement éditée ;
+* Vous pouvez ne sélectionner qu'une partie de l'expression entrée pour n'appliquer l'opération qu'à cette seule partie.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+En ligne 2, seul le *15* de la partie supérieure a été sélectionné avant de cliquer sur le bouton
+/Fichier:Mode_factor_svg.adoc[image:32px-Mode_factor.svg.png[Mode factor.svg,width=32,height=32]] 'Factoriser'
+
+En ligne 3, le pointeur était à la fin de la partie supérieure avant de cliquer sur le bouton
+/Fichier:Mode_factor_svg.adoc[image:32px-Mode_factor.svg.png[Mode factor.svg,width=32,height=32]] 'Factoriser'
+
+/Fichier:FactoPart_png.adoc[image:FactoPart.png[FactoPart.png,width=206,height=225]].
+
+====
+
+== Barre de style
+
+image:20px-Download-icons-device-screen.png[Download-icons-device-screen.png,width=20,height=14] *GeoGebra pour
+Ordinateurs* : Cliquez sur le bouton
+/Fichier:Stylingbar_point_right_svg.adoc[image:10px-Stylingbar_point_right.svg.png[Stylingbar point
+right.svg,width=10,height=10]] 'Bascule Barre de style' à gauche du titre *Calcul formel* dans le bandeau supérieur de
+la fenêtre.
+
+La barre de style fait apparaître ces deux boutons :
+
+[cols=",",]
+|===
+|image:20px-Stylingbar_text.svg.png[Stylingbar text.svg,width=20,height=20]
+|/Fichier:Cas_keyboard_png.adoc[image:Cas-keyboard.png[Cas-keyboard.png,width=20,height=20]]
+|===
+
+L'appui sur le bouton image:20px-Stylingbar_text.svg.png[Stylingbar text.svg,width=20,height=20] vous permet de gérer ce
+que vous entrez dans une ligne comme étant du xref:/Calcul_formel.adoc[texte], et ouvre le sous-menu :
+
+[cols=",,,",]
+|===
+|/Fichier:CASTexteC_PNG.adoc[image:CASTexteC.PNG[CASTexteC.PNG,width=24,height=25]]  /Fichier:Stylingbar_point_down_svg.adoc[image:10px-Stylingbar_point_down.svg.png[Stylingbar
+point down.svg,width=10,height=10]] |/Fichier:CASTexteG_PNG.adoc[image:CASTexteG.PNG[CASTexteG.PNG,width=28,height=26]]
+|/Fichier:Stylingbar_text_italic_svg.adoc[image:20px-Stylingbar_text_italic.svg.png[Stylingbar text
+italic.svg,width=20,height=20]]
+|/Fichier:Cas_keyboard_png.adoc[image:Cas-keyboard.png[Cas-keyboard.png,width=20,height=20]]
+|===
+
+vous avez accès alors à une palette de couleur
+/Fichier:PaletteTCAS_PNG.adoc[image:PaletteTCAS.PNG[PaletteTCAS.PNG,width=201,height=68]]
+
+et des boutons /Fichier:CASTexteG_PNG.adoc[image:CASTexteG.PNG[CASTexteG.PNG,width=28,height=26]] pour mettre le texte
+"en gras" , image:20px-Stylingbar_text_italic.svg.png[Stylingbar text italic.svg,width=20,height=20] pour mettre le
+texte "en italiques",
+
+L'appui sur le bouton `++++` vous donne accès au clavier virtuel en mode 'Calculatrice'
+/Fichier:Calculatrice_PNG.adoc[image:Calculatrice.PNG[Calculatrice.PNG,width=400,height=235]].
+
+image:20px-Download-icons-device-tablet.png[Download-icons-device-tablet.png,width=20,height=23] *GeoGebra pour
+Tablettes* : Tapez sur /Fichier:Stylingbar_icon_cas_svg.adoc[image:32px-Stylingbar_icon_cas.svg.png[Stylingbar icon
+cas.svg,width=32,height=23]] dans le coin supérieur droit de la fenêtre *Calcul formel*.
+
+/Fichier:Stylingbar_text_svg.adoc[image:16px-Stylingbar_text.svg.png[Stylingbar text.svg,width=16,height=16]] *Texte* :
+
+/Fichier:Stylingbar_dots_svg.adoc[image:16px-Stylingbar_dots.svg.png[Stylingbar dots.svg,width=16,height=16]]
+*Affichage*: Vous pouvez ouvrir de nouvelles fenêtres.
+
+en tapant /Fichier:Stylingbar_text_svg.adoc[image:16px-Stylingbar_text.svg.png[Stylingbar text.svg,width=16,height=16]]
+vous développez le menu, par l'ajout de trois boutons :
+
+[cols=",,",]
+|===
+|/Fichier:Stylingbar_color_white_svg.adoc[image:16px-Stylingbar_color_white.svg.png[Stylingbar color
+white.svg,width=16,height=16]] |/Fichier:CASTexteG_PNG.adoc[image:CASTexteG.PNG[CASTexteG.PNG,width=28,height=26]]
+|/Fichier:Stylingbar_text_italic_svg.adoc[image:20px-Stylingbar_text_italic.svg.png[Stylingbar text
+italic.svg,width=20,height=20]]
+|===
+
+en tapant /Fichier:Stylingbar_color_white_svg.adoc[image:16px-Stylingbar_color_white.svg.png[Stylingbar color
+white.svg,width=16,height=16]] vous avez accès à une palette de couleurs
+/Fichier:PaletteCW_PNG.adoc[image:PaletteCW.PNG[PaletteCW.PNG,width=341,height=125]]
+
+== Menus contextuels
+
+Pour sélectionner une (ou plusieurs lignes - avec l'aide de [.kcode]#Ctrl#) cliquez gauche sur la (les)
+cellule(s)numérotée(s) correspondante(s) Puis, un clic droit, va ouvrir un menu contextuel avec les options suivantes :
+
+* _Insérer au dessus_ : insère une ligne vide au dessus de la (première des) ligne(s) sélectionnée(s) ;
+* _Insérer en dessous_ : insère une ligne vide en dessous de la (dernière des) ligne(s) sélectionnée(s) ;
+* _Effacer la ligne_ n __ ou "Effacer _m_ lignes": efface la ligne _n_ ou les _m_ lignes sélectionnée(s) en provoquant
+un décalage des lignes vers le n° 1 ;
+* _xref:/Calcul_formel.adoc[Texte]_ : comme avec le bouton *T* de la barre de style, vous permet d'entrer un
+texte/commentaire ;
+* _Copier vers LaTeX_ : copie le codage LaTeX du contenu de la (des) ligne(s) sélectionnée(s) dans le Presse-Papiers, ce
+qui vous permet par exemple de le copier dans un Texte
+/Fichier:Tool_Insert_Text_gif.adoc[image:Tool_Insert_Text.gif[Tool Insert Text.gif,width=32,height=32]](n'oubliez pas
+alors de cocher Formule LaTeX).
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Attention,title="Attention",width=18,height=18] *Attention*: |si la ligne est un commentaire,
+vous obtenez comme code null \\, non pas le codage du texte !
+|===
+
+=== Menu contextuel si vous avez sélectionné une sortie :
+
+mais là, la sélection multiple n'est pas possible !
+
+* _Copier_ ;
+* _Copier vers LaTeX_ ;
+* _Copier en Formule LibreOffice_ ;
+* _Copier comme Image_.
+
+* Les deux premières permettant de coller dans un texte de Graphique,
+* la troisième pour insérer une formule dans Libre Office,
+* la dernière
+
+* soit dans Graphique par Éditer> Insérer Image depuis > Presse-papiers
+* dans un logiciel de traitement de textes (Libre Office, Word, Word Pad)
+* et aussi dans un logiciel de traitement d'images (Paint, Gimp).
+
+/Fichier:CopierSortie_png.adoc[image:CopierSortie.png[CopierSortie.png,width=687,height=219]]
+
+=== Texte ou non ?
+
+Lorsque vous voulez introduire un commentaire, si des mots sont des noms de variables définies, ils vont être remplacés
+par leurs valeurs, si vous n'avez pas défini votre ligne comme _texte_ :
+
+[NOTE]
+====
+
+*Note :* un visuel de l'action du bouton *T* ou de l'option _texte_ du menu contextuel
+/Fichier:CASTete_PNG.adoc[image:CASTete.PNG[CASTete.PNG,width=221,height=237]]
+
+====
+
+== Entrées basiques
+
+* [.kcode]#Entrée#: Évalue la saisie ;
+* [.kcode]#Ctrl# + [.kcode]#Entrée#: évalue numériquement la saisie , par ex. `++sqrt(2)++` retourne stem:[≈1.41] ;
+* [.kcode]#Alt# + [.kcode]#Entrée#: Vérifie la saisie mais ne l'évalue pas, par ex. `++ b+b++` reste _b+b_,
+`++ sqrt(2)++` retourne stem:[\small\{√} \;\sqrt\{2}] ; *Notez que les affectations sont toujours évaluées, par ex.
+`++ a := 5++`.
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Les raccourcis suivants ne fonctionnent pas en GGb6 :
+
+* Dans une ligne vide, tapez
+** [.kcode]#Espace# pour la sortie précédente ;
+** [.kcode]#)# pour la sortie précédente entre parenthèses ;
+** [.kcode]#=# pour l'entrée précédente.
+
+|===
+
+* Évitez la sortie à l'aide d'un point-virgule à la fin de votre entrée, par ex. `++ a := 5; ++`.
+
+== Variables
+
+=== Affectations & Connexion avec GeoGebra
+
+* Les affectations utilisent la notation `++ := ++` , par ex. `++ b := 5++`, `++ a(n) := 2n + 3++` ;
+* Pour libérer un nom de variable, utilisez `++Effacer[b]++` ou `++ b := ++` ;
+* Pour redéfinir une variable ou une fonction , vous devez le faire *dans la même cellule*, sinon elle sera considérée
+comme nouvelle variable/fonction et renommée ;
+* Les variables et fonctions sont toujours partagées entre _Calcul Formel_ et GeoGebra si c'est possible :
+** Si vous définissez `++ b:=5++` dans _Calcul Formel_, vous pouvez ensuite utiliser _b_ dans tout GeoGebra ;
+** Si vous avez une fonction définie par `++ f(x)=x^2++` dans GeoGebra, vous pouvez aussi utiliser cette fonction dans
+_Calcul Formel_.
+
+[NOTE]
+====
+
+*Note :* La sortie est toujours l'expression après le ":=", par exemple, . si vous validez b:=5, la sortie sera 5.
+
+====
+
+=== Saisie directe/par script
+
+Possibilité de définir une ligne du CAS directement dans [.kcode]#Saisie# en validant par exemple `++$1=x++` ou dans un
+script par `++ggbApplet.evalCommand("$1=x");++`
+
+=== Références des lignes
+
+Vous pouvez vous référer à d'autres lignes de _Calcul Formel_ de deux manières :
+
+* Références *statiques* de lignes :
+
+Reprend l'expression d'une autre ligne, mais *ne sera pas* actualisée si vous modifiez ensuite la ligne de référence :
+
+* `++ # ++` insère la sortie précédente ;
+* `++#5 ++` insère la sortie de la ligne 5.
+
+* Références *dynamiques* de lignes :
+
+Reprend l'expression d'une autre ligne, mais *sera* actualisée si vous modifiez ensuite la ligne de référence:
+
+* `++$++` insère la sortie précédente ;
+* `++$5++` insère la sortie de la ligne 5.
+
+== Équations
+
+* Les équations sont écrites en utilisant un simple signe égal , par ex. `++6x - 5 = 4x + 7++`
+* Vous pouvez appliquer des opérations arithmétiques sur les équations, par ex. `++(2x - 5 = 7) + 5++` ajoute 5 aux deux
+membres de l'équation.
+
+C'est utile pour présenter des résolutions pas à pas d'équations.
+
+[EXAMPLE]
+====
+
+*Exemple :* /Fichier:Equa1PasAPas_png.adoc[image:Equa1PasAPas.png[Equa1PasAPas.png,width=283,height=420]]
+
+====
+
+* `++MembreGauche[6x - 5 = 4x + 7]++` retourne _6x - 5_ et `++MembreDroite[6x - 5 = 4x + 7]++` retourne _4x + 7_
+
+[EXAMPLE]
+====
+
+*Exemple :* /Fichier:VerifEqua_PNG.adoc[image:VerifEqua.PNG[VerifEqua.PNG,width=303,height=347]] Je vérifie que pour la
+valeur de 'x' trouvée, le membre de gauche et le membre de droite prennent la même valeur.
+
+====
+
+== /Fichier:Menu_Properties_Gear_png.adoc[image:20px-Menu_Properties_Gear.png[Menu Properties Gear.png,width=20,height=20]]Options du Calcul formel
+
+Vous pouvez les définir en ouvrant la fenêtre de dialogue en cliquant le bouton
+/Fichier:Menu_Properties_Gear_png.adoc[image:Menu_Properties_Gear.png[Menu Properties Gear.png,width=24,height=24]]
+'Préférences', dans le coin supérieur droit, puis en choisissant
+/Fichier:View_cas24_png.adoc[image:View-cas24.png[View-cas24.png,width=22,height=22]] 'Calcul formel'.
+
+Vous pourrez choisir dans une liste déroulante le délai (5/10/20/30/60 secondes) accordé au module de calcul formel pour
+réaliser la tâche demandée.
+
+Vous pourrez choisir d' 'Afficher les exposants rationnels sous forme de racines' ou non.
+
+[EXAMPLE]
+====
+
+*Exemple :* /Fichier:CasRadicaux_PNG.adoc[image:CasRadicaux.PNG[CasRadicaux.PNG,width=302,height=183]] Entre l'appui sur
+le bouton /Fichier:Mode_solve_svg.adoc[image:32px-Mode_solve.svg.png[Mode solve.svg,width=32,height=32]] 'Résoudre', en
+fin de première ligne et en fin de deuxième, cette option a été désactivée.
+
+====
+
+== Commandes et outils
+
+pour une liste complète des commandes et des outils, voir xref:/commands/Commandes_Calcul_formel(toutes).adoc[Commandes
+Calcul_formel(toutes)] et xref:/tools/Outils_CAS.adoc[Outils CAS].
+
+une page spéciale xref:/commands/Commandes_Calcul_formel_Geometrie.adoc[Commandes_Calcul_formel_Geometrie]
+== Opérateurs booléens
+
+/Fichier:CAS366_png.adoc[image:CAS366.png[CAS366.png,width=288,height=577]]/Fichier:CAS366t_png.adoc[image:CAS366t.png[CAS366t.png,width=316,height=576]]
+
+Introduction du "ou exclusif" dans la 367 ⊕ ou [.kcode]#Alt# + [.kcode]#+#
+/Fichier:Xor_png.adoc[image:Xor.png[Xor.png,width=210,height=316]]

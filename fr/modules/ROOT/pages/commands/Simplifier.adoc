@@ -1,0 +1,66 @@
+= Commande Simplifier
+:page-en: commands/Simplify_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Simplifier( <Fonction> )::
+  Simplifie l'écriture, si c'est possible.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+* `++Simplifier(x + x + x)++` donne la fonction _f(x) = 3x_ ;
+* `++Simplifier(x + x² + x)++` donne la fonction _g(x) = x(x+2)_.
+
+====
+
+[NOTE]
+====
+
+*Note :* Dans une utilisation en ligne, cette commande nécessitant le chargement du module Calcul formel, l'exécution du
+fichier peut se trouver ralentie sur certains ordinateurs. Essayez de la remplacer par la commande
+xref:/commands/Polynôme.adoc[Polynôme]
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+* Si vous avez `++f(x)=x+x+x++`, `++Polynôme(f)++` donne _g(x) = 3x_ ;
+* Si vous avez `++h(x)=x+x²+x++`, `++Polynôme(f)++` donne _p(x) = x²+2x_ .
+
+====
+
+====
+
+Simplifier( <Texte> )::
+  Essaye de corriger des écritures par exemple des problèmes de signes (ce que la commande xref:/LaTeX.adoc[LaTeX]
+  réalise mieux et plus simplement)
+
+[EXAMPLE]
+====
+
+*Exemple :* Soit trois curseurs _a=1_, _b=-1_ et _c=1_.
+
+* `++"f(x) = "+a+"x²+"+b+"x+"+c ++`affichera f(x) = 1x²**+-1**x+1 ;
+* `++Simplifier("f(x) = "+a+"x²+"+b+"x+"+c) ++` affichera f(x) = 1x²**-** x+1.
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Seule la syntaxe suivante, avec la possibilité de travailler en littéral, est autorisée dans
+xref:/Calcul_formel.adoc[Calcul formel] :
+
+Simplifier( <Fonction> )::
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Simplifier(3 * x + 4 * x + a * x)++` donne, si _a_ n'est pas défini dans GeoGebra, _a x + 7 x_.
+
+====

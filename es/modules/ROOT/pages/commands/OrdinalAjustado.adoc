@@ -1,0 +1,26 @@
+= Comando OrdinalAjustado
+:page-en: commands/TiedRank_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+OrdinalAjustado( <Lista> )::
+  Devuelve una xref:/Listas.adoc[Lista] cuyo i-ésimo elemento es el _rango_ del i-ésimo elemento de la lista dada (El
+  _rango_ de un elemento en una lista es su posición en la lista xref:/commands/Ordena.adoc[Ordena](Lista)). Si hay
+  elementos repetidos, que ocupan las posiciones de la _k_ a la _l_ en la lista Ordena(Lista), se asocia a estos
+  elementos el promedio de los rangos _k_ hasta _l_.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++OrdinalAjustado({4, 1, 2, 3, 4, 2})++` da por resultado \{5.5, 1, 2.5, 4, 5.5, 2.5}.
+* `++OrdinalAjustado({3, 2, 2, 1})++` da por resultado \{4, 2.5, 2.5, 1}.
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/ListaOrdinal.adoc[ListaOrdinal].
+
+====

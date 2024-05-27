@@ -1,0 +1,41 @@
+= Commande ActualiserConstruction
+:page-en: commands/UpdateConstruction_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+ActualiserConstruction()::
+  Recalcul de tous les objets utilisés dans le fichier GeoGebra.
+
+Les nombres aléatoires sont régénérés. Comme par un [.kcode]#F9# ou [.kcode]#Ctrl# + [.kcode]#R#.
+
+[NOTE]
+====
+
+*Note :* Si vous voulez rafraîchir l'affichage (par ex. pour éliminer les xref:/Pister.adoc[traces] de
+xref:/Graphique.adoc[Graphique]), vous pouvez utiliser `++Agrandir(1)++` ce qui revient au même que [.kcode]#Ctrl# +
+[.kcode]#F# . Vous pouvez aussi avoir besoin d'abord de xref:/commands/SoitVueActive.adoc[SoitVueActive(1)] ou
+xref:/commands/SoitVueActive.adoc[SoitVueActive(2)] si vous utilisez deux fenêtres graphiques.
+
+====
+
+[NOTE]
+====
+
+*Note :* Si vous voulez exécuter cette commande plusieurs fois (par exemple pour enregistrer plusieurs valeurs d'un dé
+dans le tableur) vous pouvez l'utiliser ainsi `++Séquence( ActualiserConstruction(), k, 1, 10 )++` _Voir aussi
+ci-dessous :_
+
+====
+
+ActualiserConstruction( <Nombre de fois> )::
+  Exécute la commande `++ActualiserConstruction()++` le _Nombre de fois_ indiqué.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++ActualiserConstruction(10)++` actualise la construction 10 fois (par exemple pour enregistrer 10 valeurs au hasard
+d'un _dé_ `++dé=AléaEntreBornes(1, 6) ++` dans le tableur. "Rappel : " Ouvrir Tableur, et alors dans le menu contextuel
+de _dé_, sélectionner _Enregistrer dans Tableur_).
+
+====

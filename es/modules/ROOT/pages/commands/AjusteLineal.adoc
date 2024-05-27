@@ -1,0 +1,35 @@
+= Comando AjusteLineal
+:page-en: commands/FitLine_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+AjusteLineal( <Lista de Puntos> )::
+  Calcula la recta de regresión lineal de _y_ sobre _x_ de los puntos.
+
+[EXAMPLE]
+====
+
+`++AjusteLineal({(-2, 1), (1, 2), (2, 4), (4, 3), (5, 4)})++` da por resultado _0.4x + 2_.
+
+====
+
+== Sintaxis CAS
+
+AjusteLineal( <Lista de Puntos> )::
+  Calcula la recta de regresión lineal de _y_ sobre _x_ de los puntos.
+
+[EXAMPLE]
+====
+
+`++AjusteLineal({(-2, 1), (1, 2), (2, 4), (4, 3), (5, 4)})++` da por resultado _0.4x + 2_.
+
+====
+
+[NOTE]
+====
+
+* Ver también image:24px-Mode_fitline.svg.png[Mode fitline.svg,width=24,height=24]
+xref:/tools/Ajuste_lineal.adoc[Herramienta de Ajuste lineal] y el comando xref:/commands/AjusteRectaX.adoc[AjusteRectaX]
+* Si trabajas con números grandes o pequeños, deberías considerar normalizarlos para obtener resultados más precisos.
+Ver xref:/commands/Normaliza.adoc[Comando Normaliza].
+
+====

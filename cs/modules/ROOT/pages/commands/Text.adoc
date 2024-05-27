@@ -1,0 +1,57 @@
+= Příkaz Text
+:page-en: commands/Text_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Text( <Objekt> )::
+  Vrátí vzorec pro zadaný _objekt_ jako xref:/s_index_php?title=Text_action=edit_redlink=1.adoc[textový objekt].
+
+[EXAMPLE]
+====
+
+Pro _a = 2_ a _c = a^2^_ je výsledkem příkazu `++Text[c]++` text "4".
+
+====
+
+[NOTE]
+====
+
+Ve výchozím nastavení jsou za proměnné dosazeny hodnoty.
+
+====
+
+Text( <Objekt>, <Logická proměnná pro substituci proměnných> )::
+  Vrátí vzorec pro zadaný _objekt_ jako textový objekt. _Logická proměnná_ určuje, zda jsou za proměnné dosazeny hodnoty
+  (_true_), nebo zda jsou v textu zobrazeny názvy proměnných (_false_).
+
+[EXAMPLE]
+====
+
+Pro _a = 2_ a _c = a^2^_ je výsledkem příkazu
+
+* `++Text[c, true]++` text "4" a
+* `++Text[c, false]++` text "_a^2^_"
+
+====
+
+Text( <Objekt>, <Bod> )::
+  Vrátí vzorec pro zadaný _objekt_ jako textový objekt umístěný do zadaného _bodu_.
+Text( <Objekt>, <Bod>, <Substituce proměnných (logická hodnota)> )::
+  Vrátí vzorec pro zadaný _objekt_ jako textový objekt umístěný do zadaného _bodu_. _Logická proměnná_ určuje, zda jsou
+  za proměnné dosazeny hodnoty (_true_), nebo zda jsou v textu zobrazeny názvy proměnných (_false_).
+Text( <Objekt>, <Bod>, <Substituce proměnných (logická hodnota)>, <LaTeX (logická hodnota)> )::
+  Vrátí vzorec pro zadaný _objekt_ jako textový objekt umístěný do zadaného _bodu_. První _logická proměnná_ určuje, zda
+  jsou za proměnné dosazeny hodnoty (_true_), nebo zda jsou v textu zobrazeny názvy proměnných (_false_). Je-li hodnota
+  druhé logické proměnné _true_, pak je výsledek přeložen programem xref:/LaTeX.adoc[LaTeX].
+
+[EXAMPLE]
+====
+
+Výsledkem příkazu `++Text["ahoj", (2, 3)]++` je text _ahoj_ umístěný do bodu _(2, 3)_.
+
+====
+
+[NOTE]
+====
+
+Anglická verze: /s_index_php?title=En:Manual:Text_Command_action=edit_redlink=1.adoc[Text]
+====

@@ -1,0 +1,54 @@
+= Comando Dimensión
+:page-en: commands/Dimension_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+Dimensión[ <Objeto> ]::
+  Da por resultado la dimensión del _objeto_ indicado, como un vector, una matriz o una lista.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *Dimensión[ v~ector~ ]* da por resultado la dimensión del v~ector~`++Dimensión[{1, 2, 0, -4, 3}]++` da
+__5__**Dimensión[ m~atriz~ ]** da por resultado la dimensión de la
+m~atriz~`++Dimensión[  { {1, 3}, {2, 1}, {3, 4} }  ]++` da por resultado __\{3, 2}__**`++Dimensión[matriz1]++`** da
+_\{3,2}_ si _matriz~1~_ siendo *_matriz~1~_* = stem:[\left( \begin\{array}\{} 1 & 2 \\ 3 & 4 \\ 5 & 6 \\\end\{array}
+\right) ] ;
+
+====
+
+[EXAMPLE]
+====
+
+Siendo A, B, C, D y E puntos...tanto `++Dimensión[{A, B, C, D, E}] ++` como la lista de las primeras cinco letras del
+alfabeto, `++Dimensión[{"A", "B", "C", "D", "E"}]++` dan por resultado 5.
+
+====
+
+[NOTE]
+====
+
+Una xref:/Listas.adoc[lista] es también un _objeto_ cuya _Dimensión_ puede establecerse.
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+Se admiten literales para operaciones simbólicas y valores imaginarios o complejos lo que da mayor ductilidad en esta
+xref:/Vista_CAS.adoc[_vista_], al par de variantes descriptas
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Dimensión[ {37 + a² + (sqrt(-1) + a) ((sqrt(-1 )- a) ) , 9} ]++`* da por resultado
+__2__**`++Dimensión[{{ë, ü}, {á, ó}, {é, ñ}}]++`** da por resultado _\{3, 2}_ (siendo meramente literales sin valor
+asignado _ë_, _ü_, _á_, _ó_, _é_, _ñ_).
+
+====

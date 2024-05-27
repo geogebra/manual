@@ -1,0 +1,44 @@
+= Comando TestMediasT
+:page-en: commands/TTest2_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+TestMediasT(<Lista 1 de Datos Muestrales>,<Lista 2 de Datos Muestrales>,<Cola>,<Composición Booleana>)::
+  Establece una prueba _t_ de la diferencia entre sendas poblaciones medias usando las listas de datos muestrales dadas.
+
+  '''''
+  La _Cola_ tiene como posibles valores "<", ">" , "≠" que determinan las siguientes hipótesis alternativas:
+  "<" = diferencia en población media < 0
+  ">" = diferencia en población media > 0
+  "≠" = diferencia en población media ≠ 0
+  Si el parámetro _booleano_ es verdadero^_true_^, las varianzas de población se asumen iguales y las desviaciones
+  estándar muestrales se combinan en el cálculo.
+  Si es falso^_false_^, las varianzas de población no son asumidas iguales y las desviaciones estándar muestrales no se
+  combinan.
+
+'''''
+
+Los resultados se listan con el siguiente formato e información:
+
+*\{_valor de Probabilidad_, _prueba_* __t *estadística*__**}**
+
+'''''
+
+TestMediasT(<Media Muestral 1 >,<Desviación Estándar Muestral 1>, <Medida de Muestra 1>, <Media Muestral 2>,<Desviación
+Estándar Muestral 2 >, <Medida de Muestra 2>, <Cola>,<Composición Booleana>)::
+  Establece una prueba *_t_* de la diferencia entre sendas poblaciones medias usando la muestra estadística dada. La
+  _Cola_ y el parámetro _booleano_ se definen tal como para la sintaxis previa y del mismo modo se listan los
+  resultados:
+  *\{_valor de Probabilidad_, _prueba_* __t *estadística*__**}**
+
+== Variante
+
+TestMediasT[ <Media Muestral 1 >, <Desviación Estándar Muestral 1 >, <Medida de Muestra 1>, <Media Muestral 2 >,
+<Desviación Estándar Muestral 2 >, <Medida de Muestra 2>, <Valor crítico>, <Composición Booleana>]

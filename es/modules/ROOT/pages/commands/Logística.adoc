@@ -1,0 +1,21 @@
+= Comando Logística
+:page-en: commands/Logistic_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Logística( <Media __μ__>, <Escala __s__>, x )::
+  Crea la función de densidad acumulada de la
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_log%C3%ADstica[distribución logística] de media _μ_ y escala _s_.
+Logística( < Media __μ__>, < Escala __s__>, x, <Acumulada o no (true/false)> )::
+  Si _Acumulada_ es verdadero, crea la función de distribución acumulada de la distribución logística, de lo contrario
+  crea la función de densidad de probabilidad de la distribución logística.
+Logística( < Media __μ__>, < Escala __s__>, <Valor variable __v__> )::
+  Calcula el valor de la función de densidad acumulada de la distribución logística en el valor _v_, por ejemplo, la
+  probabilidad _P(X ≤ v)_ donde _X_ es una variable aleatoria de distribución logística de media _μ_ y escala _s_.
+
+[NOTE]
+====
+
+Devuelve al probabilidad para un valor dado de _x_ (o el area bajo la curva de la distribución logística a la izquierda
+del valor de _x_ dado).
+
+====

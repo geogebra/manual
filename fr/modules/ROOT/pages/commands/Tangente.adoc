@@ -1,0 +1,72 @@
+= Commande Tangente
+:page-en: commands/Tangent_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Je vous invite à consulter ce GGbRecueil
+https://www.geogebra.org/material/show/id/rXZQnJW4[image:64px-GGbBook.png[GGbBook.png,width=64,height=67]] *Tangente(s)
+et "graphique"*.
+
+Tangente( <Point A>, <Conique c> )::
+  (Toutes les) tangentes à _c_ passant par _A_.
+
+Tangente( <Point A>, <Fonction f> )::
+  Tangente à stem:[C_f] en _x = x(A)_
+  https://www.geogebra.org/material/show/id/rXZQnJW4[image:32px-GGbBook.png[GGbBook.png,width=32,height=34]].
+
+[NOTE]
+====
+
+*Note :* _x(A)_ l'abscisse du point _A_.
+
+====
+
+Tangente( <Point A>, <Courbe implicite c> )::
+  (Toutes les) tangentes à _c_ passant par _A_
+  https://www.geogebra.org/material/show/id/rXZQnJW4[image:32px-GGbBook.png[GGbBook.png,width=32,height=34]].
+
+Tangente( <Point A>, <Courbe g> )::
+  Tangente à la courbe _g_ au point _A_.
+
+[NOTE]
+====
+
+*Note :* valable pour "spline"Tangente( < Point A>, <Spline s> ) : Tangente à la spline _s_ au point _A_.
+
+[EXAMPLE]
+====
+
+*Exemple :* Soit `++A=(0,1)++`, `++B=(2,5)++` et `++C=(0,4)++` trois points. `++Tangente(A,Spline([A,B,C})) ++` donne
+_y=1.5x+1_.
+
+====
+
+====
+
+[NOTE]
+====
+
+*Note :* Si le point A n’est pas sur la courbe, alors vous obtenez la tangente au point M de la courbe tel que la
+distance AM soit minimale.
+https://www.geogebra.org/material/show/id/rXZQnJW4[image:32px-GGbBook.png[GGbBook.png,width=32,height=34]]
+
+====
+
+Tangente( <Abscisse a>, <Fonction f> )::
+  Tangente à stem:[C_f] au point d'abscisse _a_.
+
+Tangente( <Ligne >, <Conique c> )::
+  (Toutes les) tangentes à _c_ parallèles à la droite _d_ ou au segment _s_.
+
+Tangente( <Conique>, <Conique> )::
+  Toutes les tangentes communes aux deux coniques.
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Seules les 2 syntaxes suivantes sont garanties :
+
+Tangente( <Nombre>, <Fonction> )
+
+Tangente( <Point>, <Objet> )

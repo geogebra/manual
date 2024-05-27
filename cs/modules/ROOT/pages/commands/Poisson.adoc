@@ -1,0 +1,39 @@
+= Příkaz Poisson
+:page-en: commands/Poisson_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Poisson( <Průměr λ> )::
+  Zobrazí sloupcový graf http://en.wikipedia.org/wiki/cs:Poissonovo_rozd%C4%9Blen%C3%AD[Poissonova rozdělení] se střední
+  hodnotou λ . Parametr λ je názýván též intenzitou událostí. Jeho bodovým odhadem je průměrný počet událostí za časovou
+  jednotku.
+
+Poisson( <Průměr λ>, <Kumulativní (logická hodnota)> )::
+  Je-li volitelný parametr pro kumulativní hodnoty _true_, je zobrazen sloupcový graf distribuční funkce
+  http://en.wikipedia.org/wiki/cs:Poissonovo_rozd%C4%9Blen%C3%AD[Poissonova rozdělení] se střední hodnotou λ .
+  Je-li volitelný parametr pro kumulativní hodnoty _false_, je zobrazen sloupcový graf pravděpodobnostního rozdělení -
+  viz. předchozí odstavec.
+
+Poisson( <Průměr λ>, <Hodnota proměnné v>, <Kumulativní (logická hodnota)> )::
+  Nechť X je náhodná veličina s Poissonovým rozdělením.
+  P( X = _v_) pro Kumulativní = _false_.
+  P( X ≤ _v_) pro Kumulativní = _true_.
+
+[NOTE]
+====
+
+Související odkaz: xref:/commands/InverzniPoisson.adoc[Příkaz InverzniPoisson]
+
+====
+
+== CAS pohled
+
+Poisson( <Průměr λ>, x, <Kumulativní (logická hodnota)> )::
+  Nechť X je náhodná veličina s Poissonovým rozdělením.
+  P( X = _x_) pro Kumulativní = _false_.
+  P( X ≤ _x_) pro Kumulativní = _true_.
+
+[NOTE]
+====
+
+Anglická verze: /s_index_php?title=En:Manual:Poisson_Command_action=edit_redlink=1.adoc[Poisson]
+====

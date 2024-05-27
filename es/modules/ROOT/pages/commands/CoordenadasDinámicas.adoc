@@ -1,0 +1,67 @@
+= Comando CoordenadasDinámicas
+:page-en: commands/DynamicCoordinates_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+CoordenadasDinámicas[ <Punto>, <Valor~Abscisa~>, <Valor~Ordenada~> ]::
+  Crea un xref:/tools/Punto.adoc[punto], dependiente del indicado pero desplazable.Así,
+  *`++B = CoordenadasDinámicas[ A, vx, vy ]++`* crea el punto _B_ vinculado a _A_.Los valores de los dos últimos
+  parámetros establecen, el primero, su abscisa y el segundo, su ordenada, respectivamente.Al intentar mover el Punto,
+  _B_ a las coordenadas (x, y), _A_, se desplaza a esa posición y se calculan las coordenadas de _B_ según lo
+  establecido.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* Este comando suele emplearse para hacer más certeros los tanteos exploratoriosSi el punto _B_ quedó definido
+por *`++B = CoordenadasDinámicas[A, round(x(A)), round(y(A))]++`*, si se desplaza _B_ a (1.3, 2.1) con la
+xref:/Desplazamientos.adoc[herramienta] /Archivo:Mode_move_svg.adoc[image:32px-Mode_move.svg.png[link=[Herramienta de
+Elige y Mueve,width=32,height=32]] xref:/tools/Elige_y_Mueve.adoc[Elige y Mueve], _A_ se ubica en (1.3, 2.1) y _B_, en
+(1, 2).Si el punto _B_ quedó definido por *`++B = CoordenadasDinámicas[A, x(A), Mínimo[y(A), sin(x(A)) ] ]++`* crea un
+punto por debajo de sin(x).
+
+====
+
+[NOTE]
+====
+
+*Notas:* Todo opera mejor si _A_ no está xref:/Propiedades.adoc[visible] y es con el _mouse_ o ratón que se realiza el
+_arrastre_.Al menos uno de los dos valores, el asignado a la abscisa o el dado a la ordenada, debieran depender de _A_.
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_notice.png[image,width=40,height=40]
+
+|*`++B = PuntoEn[y < sin(x)]++`* sería una solución más práctica en este último caso.
+|===
+
+== Restringir la Posición de un Punto
+
+Las siguientes maniobras muestran otros modos de restringir la posición de un punto *C*:
+
+* Sea *`++A = Punto[EjeX]++`* y *`++B = Punto[EjeX]++`*. Al ingresar en la xref:/Barra_de_Entrada.adoc[Barra de
+Entrada]:*`++C = CoordenadasDinámicas[B, Mínimo[x(B), x(A)], 0]++`* y luego *`++Visibilidad[B, 1, 3  > 4]++`* y
+finalmente *`++Capa[C,  1]++`*, pulsando [.kcode]#Intro# en cada oportunidad, _C_ no podrá desplazarse a la derecha de
+_A_.
+* Es interesante considerar qué se ocasiona si se pasa a definir *`++A = (1, 2)++`* y anotar en la
+xref:/Barra_de_Entrada.adoc[Barra de Entrada]: *`++Visibilidad[A, 1, 1 > 0 ]++`* y pulsar [.kcode]#Intro#,
+*`++ B=CoordenadasDinámicas[A, Si[x(A) > 3, 3, Si[x(A) < -(3), -3, Si[x(A) < 0, round(x(A)), x(A)]]], Si[x(A) < 0, 0.5, Si[y(A) > 2, 2, Si[y(A) <0, 0, y(A)]]]]++`*,
+y pulsar [.kcode]#Intro#.
+
+== Puntos _Adhesivos_
+
+La serie de pasos convierte a _A_ en un punto _adhesivo_ cuando el punto _C_ se arrastra a sus proximidades.
+
+* Al definir *`++A= (1, 2)++`* y *`++B= (2, 3)++`* e ingresar en la xref:/Barra_de_Entrada.adoc[Barra de Entrada]:
+*`++Visibilidad[B, 1, 1 > 2]++`* y pulsar [.kcode]#Intro# y
+*`++C = CoordenadasDinámicas[B, Si[Distancia[A, B] < 1, x(A), x(B)], Si[Distancia[A, B] < 1, y(A), y(B)]]++`*.

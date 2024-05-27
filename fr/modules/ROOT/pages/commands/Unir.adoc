@@ -1,0 +1,58 @@
+= Commande Unir
+:page-en: commands/Join_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Unir( <Liste>, <Liste>, ... )::
+  Unit les deux (ou plus) listes.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Unir({5,4,3},{1,2,3})++` retourne la liste _\{5,4,3,1,2,3}_.
+
+====
+
+[NOTE]
+====
+
+*Note :* La nouvelle liste contient tous les éléments des listes initiales (sans réordonner les éléments, sans supprimer
+les éléments répétés).
+
+====
+
+Unir( <Liste de listes>)::
+  Unit les sous listes en une liste plus grande.
+
+[NOTE]
+====
+
+*Note :* La nouvelle liste contient tous les éléments des listes initiales (sans réordonner les éléments, sans supprimer
+les éléments répétés).
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+* `++Unir({{1, 2}})++` retourne la liste _\{1, 2}_.
+* `++Unir({{1, 2, 3}, {3, 4}, {8, 7}})++` retourne la liste _\{1, 2, 3, 3, 4, 8, 7}_.
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Avec la possibilité de travailler en littéral
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Unir({{a, b, c}, {c, d}, {h, g}}) ++` retourne la liste \{_a, b, c, c, d, h, g_}.
+
+====

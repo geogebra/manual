@@ -1,0 +1,79 @@
+= Commande PreuveDétaillée
+:page-en: commands/ProveDetails_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+PreuveDétaillée( <Expression booléenne> )::
+  Retourne quelques détails sur le résultat d'une preuve automatisée du caractère _vraie_ ou _fausse_ en général de
+  l'expression booléenne.
+
+Normalement, GeoGebra détermine si une xref:/Valeurs_booléennes.adoc[expression booléenne] est _vraie_ ou non
+numériquement. La commande `++PreuveDétaillée++`, comme le fait la commande `++Prouver++` utilise, quant à elle, des
+méthodes de calcul formel pour déterminer si une affirmation est _vraie_ ou _fausse_ en général, mais, en plus du
+résultat, à la différence de cette dernière, elle retourne quelques détails, sous forme de liste :
+
+* Une liste vide *\{}* si GeoGebra ne peut se prononcer sur la réponse ;
+* Une liste avec ce seul élément : *\{false}*, si l'assertion n'est pas _vraie_ dans tous les cas ;
+* Une liste avec ce seul élément : *\{true}*, si l'assertion est _vraie_ dans tous les cas (dans tous les cas où le
+diagramme peut être construit) ;
+* Une liste '_\{true,\{"..."}}_, contenant la valeur booléenne _true_ et une autre liste pour les _conditions
+non-dégénérées_, si l'assertion est _vraie_ sous certaines conditions,par ex. \{true,
+\{"PolygoneDégénéré(A,B,C,D)","SontEgaux(A,B)"}} . Cela signifie que si aucune de ces conditions n'est vérifiée, alors
+l'assertion est _vraie_ .
+
+[NOTE]
+====
+
+*Note :* La liste apparaît dans la fenêtre Algèbre, non affichée dans Graphique, un clic sur la pastille d'affichage, la
+fait apparaitre, sous forme de liste déroulante, dans Graphique.
+
+====
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+Nous définissons un triangle de sommets _A_, _B_ et _C_, et définissons `++D=MilieuCentre(B,C)++`,
+`++E=MilieuCentre(A,C)++`, `++p=Droite(A,B)++`, `++q=Droite(D,E)++`. La commande `++PreuveDétaillée(p∥q)++` retourne
+\{true}. Cela signifie que si le diagramme peut être construit, alors la _droite des milieux_ (DE) du triangle est
+parallèle au côté [AB].
+
+Soit le segment [AB] appelé _a_, et son milieu `++C=MilieuCentre(A,B)++`, et sa médiatrice `++b=Médiatrice(A,B)++`,
+`++D=Intersection(a,b)++`. `++PreuveDétaillée(C==D)++` retourne \{true,\{"SontÉgaux(A,B)"}} : ce qui précise que si les
+points _A_ et _B_ sont différents, alors les points _C_ et _D_ sont confondus.
+
+Soit le segment [AB] appelé _f_, un point _C_ quelconque de la droite (AB), et soit `++g=Segment(B, C)++` et
+`++h=Segment(A, C)++`, `++PreuveDétaillée(f==g+h)++` retourne \{true, \{"f+h=g", "h=g+f"}} : ce qui précise que si ni
+stem:[f+h=g], ni stem:[h=g+f], alors stem:[f=g+h]
+
+Nous définissons un quadrilatère de sommets _A_, _B_, __C__et _D_, et définissons les milieux _E_, _F_, _G_ et _H_ de
+ses côtés, puis `++f=Segment(E, F)++` et `++g=Segment(G, H)++` La commande `++PreuveDétaillée(SontÉgaux(f,g))++`
+retourne la liste \{true} .
+
+====
+
+[NOTE]
+====
+
+*Note :*
+
+--/s_index_php?title=Utilisateur:Noel_Lambert_action=edit_redlink=1.adoc[Noel Lambert]
+
+Je rappelle que cette commande en est à ses balbutiements ! La propriété devrait aussi être annoncée comme _vraie_ pour
+un quadrilatère dégénéré en triangle, si A et B sont confondus, alors leur milieu E existe et est confondu avec eux, le
+segment [EH] = [AH] est de même longueur que [FG] (propriété métrique du "segment des milieux") !
+
+Surtout que, si au lieu de l'égalité de longueur, on demande s'il y a parallélisme, la commande
+`++PreuveDétaillée(SontParallèles(Droite(F,G),Droite(E,H)))++`, elle, retourne \{true}, sans cas particulier ? Or, en
+cas de polygone dégénéré par une superposition des points B et D, les droites citées ne sont pas définies !
+
+====
+
+[NOTE]
+====
+
+*Note :* Voir aussi la commande xref:/commands/Prouver.adoc[Prouver], la page xref:/Valeurs_booléennes.adoc[Valeurs
+booléennes] et pour les curieux, la page (en anglais) sur les http://dev.geogebra.org/trac/wiki/TheoremProving[détails
+techniques des algorithmes].
+
+====

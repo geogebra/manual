@@ -1,0 +1,26 @@
+= Comando SonCongruentes
+:page-en: commands/AreCongruent_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+SonCongruentes( <Objeto>, <Objeto> )::
+  Decide si los objetos son congruentes.
+
+Normalmente este comando comprueba el resultado numéricamente. Este comportamiento puede ser cambiado usando el comando
+xref:/commands/Demuestra.adoc[Demuestra]
+
+[EXAMPLE]
+====
+
+`++SonCongruentes(Circunferencia((0, 0),1),x^2+y^2=1)++` y `++SonCongruentes(Circunferencia((1, 1),1),x^2+y^2=1)++`
+devuelven _true_ dado que las dos ciercunferencias tienen el mismo radio.
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/SonIguales.adoc[SonIguales], xref:/commands/EstánAlineados.adoc[EstánAlineados],
+xref:/commands/SonCocíclicos.adoc[SonCocíclicos], xref:/commands/SonConcurrentes.adoc[SonConcurrentes],
+xref:/commands/SonPerpendiculares.adoc[SonPerpendiculares] y xref:/commands/SonParalelas.adoc[SonParalelas].
+
+====

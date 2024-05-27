@@ -1,0 +1,75 @@
+= Accesibilidad
+:page-en: Accessibility
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+Para ver ejemplos de aplicaciones accesibles y más información, visita https://www.geogebra.org/m/sbkyyvtr[Accesibilidad
+en GeoGebra].
+
+====
+
+Al diseñar una aplicación es importante procurar (en la medida de lo posible) que sea accesible para todos los
+estudiantes.
+
+:toc:
+
+== Tamaño de letra, color y contraste
+
+Utilizar letras grandes, con un buen contraste, es importante. Selecciona una fuente grande en Opciones->Tamaño de letra
+antes de comenzar a diseñar tu aplicación. También puedes utilizar el atajo [.kcode]#Ctrl# + [.kcode]#2# para hacer
+todas las fuentes más grandes y todas las líneas más gruesas. [.kcode]#Ctrl# + [.kcode]#3# configura como formato
+predeterminado para todos los objetos nuevos, negro y sin relleno.
+
+Se recomienda utilizar colores oscuros sobre fondo blanco y líneas gruesas. El
+http://snook.ca/technical/colour_contrast/colour.html#fg=FF0000,bg=FFFFFF[Rojo] puro y el
+http://snook.ca/technical/colour_contrast/colour.html#fg=00FF00,bg=FFFFFF[Verde] no tienen buen contraste, por lo que es
+preferible utilizar versiones más oscuras, como
+http://snook.ca/technical/colour_contrast/colour.html#fg=0000FF,bg=FFFFFF[Azul],
+http://snook.ca/technical/colour_contrast/colour.html#fg=226600,bg=FFFFFF[Verde oscuro] o
+http://snook.ca/technical/colour_contrast/colour.html#fg=990033,bg=FFFFFF[Rojo oscuro].
+
+Si utilizas colores para distinguir entre objetos similares, considera también la posibilidad de utilizar líneas
+punteadas para alguno de ellos. Puedes encontrar sitios web en los que puedes comprobar si tu combinación de colores es
+buena, por ejemplo http://www.vischeck.com/
+
+== Deslizadores
+
+Coloca deslizadores cuando sea posible, ya que estos resultan usables para aquellos estudiantes cuya motricidad fina sea
+más limitada. Considera también la posibilidad de añadir a cada lado del deslizador Botones para "incrementar" o
+"disminuir".
+
+== Atajos del teclado
+
+Los alumnos pueden utilizar [.kcode]#Tab# para recorrer los objetos en una hoja que hayas diseñado. Es importante que
+hayas *destildado* la opción *"permitir seleccionar"* , desde las Propiedades del objeto -> Avanzado, para aquellos
+objetos que no quieras que sean seleccionados. Existe un atajo del teclado,
+[.kcode]##Ctrl##+[.kcode]##Shift##+[.kcode]#D# en la versión de escritorio cambia esta propiedad para aquellos objetos
+que no sean Botones/Deslizadores/Casillas de control/Puntos y Casillas de entrada.
+
+Las flechas del teclado [.kcode]#Derecha#, [.kcode]#Izquierda#, [.kcode]#Arriba# y [.kcode]#Abajo#, pueden ser
+utilizadas para cambiar los valores de un deslizador, una vez que este haya sido seleccionado.
+
+[.kcode]#Espacio# puede ser utilizada para activar un Botón, cambiar el estado de una Casilla de control, o bien para
+iniciar o detener la animación de un deslizador.
+
+[.kcode]#Esc# puede utilizarse para salir de una hoja de trabajo y [.kcode]#Entrar# para volver a ingresar (esto resulta
+especialemente útil si tienes varias hojas de trabajo GeoGebra en una misma página).
+
+[.kcode]#+# y [.kcode]#-# pueden ser usadas para mover un punto sobre un objeto (por ejemplo, en una circunferencia).
+
+Las aplicaciones GeoGebra son táctiles, de manera que los estudiantes pueden utilizarlas en tabletas grandes si fuera
+necesario.
+
+== Pistas
+
+Puedes proporcionar Pistas personalizadas para ciertos objetos utilizando la propiedad Subtítulo y cambiando cómo se
+muestra la pista: https://http://wiki.geogebra.org/es/Indicaciones
+
+== Lectores de pantalla
+
+Puedes adjuntar texto a la Vista Gráfica para que pueda ser leído por los lectores de pantalla.
+
+Si creas un objeto de texto en GeoGebra llamado `++altText++`, `++altText2++`, `++altText3D++` será adjuntado a la Vista
+Gráfica 1, Visa Gráfica 2 o Vista 3D, respectivamente.

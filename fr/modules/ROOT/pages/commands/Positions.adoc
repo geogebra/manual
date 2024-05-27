@@ -1,0 +1,25 @@
+= Commande Positions
+:page-en: commands/OrdinalRank_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Positions( <Liste L > )::
+  Retourne la liste, dans laquelle le __i__^ème^ élément est la position du __i__^ème^ élément de L lorsqu'elle est
+  xref:/commands/Trier.adoc[ordonnée]. Si des éléments sont répétés dans _L_ occupant des positions de _k_ à _l_ dans
+  Trier(L), les positions de _k_ à _l_ leur sont associées.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Positions({4, 1, 2, 3, 4, 2})++` retourne \{5, 1, 2, 4, 6, 3}. En effet `++Trier({4, 1, 2, 3, 4, 2})++`
+retourne `++ {1, 2, 2, 3, 4, 4} ++`
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/PositionMoy.adoc[PositionMoy].
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel

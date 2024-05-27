@@ -1,0 +1,40 @@
+= Commande Axes
+:page-en: commands/Axes_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Axes( <Conique c> )::
+  crée les deux axes de la conique _c_.
+
+[NOTE]
+====
+
+*Note :* Pour un cercle du plan xOy, crée, par son centre, les 2 droites parallèles aux axes du repère.
+
+====
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/GrandAxe.adoc[GrandAxe] et
+xref:/commands/PetitAxe.adoc[PetitAxe].
+
+[NOTE]
+====
+
+*/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] Graphique 3D*
+
+Il convient d'ajouter la syntaxe *Axes( <Quadrique>)*
+
+Axes( <Cylindre> ) : Les deux axes du cercle de base (pas nécessairement les mêmes que ceux retournés par la commande
+appliquée directement à ce cercle) et l'axe de révolution ;
+
+Axes( <Sphère> ) : Les trois droites passant par son centre et parallèles aux axes du repère.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Axes((x-1)²+(y+2)²+(z-3)²=9)++` crée les 3 droites définies par :
+
+X = (1, -2, 3) + λ (1, 0, 0) , X = (1, -2, 3) + λ (0, 1, 0) et X = (1, -2, 3) + λ (0, 0, 1)
+
+====
+
+====

@@ -1,0 +1,41 @@
+= Příkaz JednotkovyNormVektor
+:page-en: commands/UnitPerpendicularVector_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+JednotkovyNormVektor( < Přímka> )::
+  Jednotkový normální vektor dané přímky, tedy vektor kolmý na směr přímky, jehož velikost je 1.
+JednotkovyNormVektor( <Úsečka> )::
+  Jednotkový vektor kolmý na směr úsečky. Vektor je zobrazen jako vázaný v koncovém bodě úsečky.
+JednotkovyNormVektor( <Vektor> )::
+  Normování vektoru. Výsledkem je vektor stejného směru velikosti 1.
+
+[EXAMPLE]
+====
+
+Nechť _v=stem:[\begin\{pmatrix}3\\4\end\{pmatrix}]. Výsledkem `++JednotkovyNormVektor[v]++` je_
+stem:[\begin\{pmatrix}-0.8\\0.6\end\{pmatrix}]__.__
+
+====
+
+[EXAMPLE]
+====
+
+Výsledkem `++JednotkovyNormVektor[3x + 4y = 5]++` je vektor stem:[\begin\{pmatrix}0.6\\0.8\end\{pmatrix}].
+
+====
+
+== CAS pohled
+
+JednotkovyNormVektor( <Vektor> )::
+  Normování vektoru. Výsledkem je vektor stejného směru velikosti 1.
+
+[EXAMPLE]
+====
+
+`++JednotkovyNormVektor[(a, b)]++` dává stem:[(\frac\{-b}\{\sqrt\{a^\{2} + b^\{2}}}], stem:[\frac\{a}\{\sqrt\{a^\{2} +
+b^\{2}}})].
+
+====
+
+/s_index_php?title=En:Manual:UnitPerpendicularVector_Command_action=edit_redlink=1.adoc[en:Manual:UnitPerpendicularVector
+Command]

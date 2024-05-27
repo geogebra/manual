@@ -1,0 +1,59 @@
+= Comando TestMediaZ
+:page-en: commands/ZMeanTest_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+*TestMediaZ*[ <Lista de Datos de Muestra>, <σ>, <Media a contrastar>, <Cola> ]::
+  Realiza una prueba Z de la media de una población conociendo la lista de datos de la muestra y la
+  http://en.wikipedia.org/wiki/es:Desviaci%C3%B3n_est%C3%A1ndar[desviación estándar *σ*] dadas.
+
+La _Media a contrastar_ es la media de la población asumida en la hipótesis nula. *σ* es la desviación estándar de la
+población:
+
+**σ**~Desviación Estándar de Población~
+
+La _Cola_ tiene como valores posibles "<", ">" , "≠". Esto especifica las hipótesis alternativas como se indica a
+continuación.
+
+"<" = media de población < _Media a contrastar_
+
+">" = media de población > _Media a contrastar_
+
+"≠" = media de población ≠ _Media a contrastar_
+
+*TestMediaZ*[ <Muestra Media>, <σ>, <Tamaño Muestra>, <Media a contrastar>, <Cola> ]::
+  Realiza la prueba Z de muestreo de la media de una población empleando la lista de datos y la
+  http://en.wikipedia.org/wiki/es:Desviaci%C3%B3n_est%C3%A1ndar[desviación estándar] de la población dadas.
+
+La _Media a contrastar_ y la _Cola_ se definen como se refiriera.
+
+'''''
+
+[NOTE]
+====
+
+Tanto una como otra variante, lista los resultados de esta forma
+
+_\{valor de probabilidad, prueba Z estadística}_
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] En la xref:/Vista_CAS.adoc[Vista C~[.small]#omputación#~A~[.small]#lgebraica#~S~[.small]#imbólica#~]
+
+En esta xref:/Vista_CAS.adoc[vista] se admite la misma sintaxis y operatoria.
+
+'''''
+
+[NOTE]
+====
+
+Ver el comando xref:/commands/IntervaloMediaZ.adoc[IntervaloMediaZ].
+
+====

@@ -1,0 +1,109 @@
+= Opérateurs et fonctions pré-définies
+:page-en: Predefined_Functions_and_Operators
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Pour créer des nombres, des coordonnées ou des équations, utilisez le champ de xref:/Saisie.adoc[Saisie], vous pouvez
+utiliser les opérateurs et fonctions pré-définies.
+
+[NOTE]
+====
+
+*Note :* Les fonctions pré-définies utilisent des parenthèses, sans mettre d'espace entre le nom de la fonction et
+celles-ci.
+
+====
+
+[width="100%",cols="16%,12%,12%,12%,12%,12%,12%,12%",options="header",]
+|===
+|Opérateur / Fonction |Saisie |Opérateur / Fonction |Saisie |Opérateur / Fonction |Saisie |Opérateur / Fonction |Saisie
+|ℯ (http://en.wikipedia.org/wiki/fr:Constante_d%27Euler-Mascheroni[Constante d'Euler]) |[.kcode]#Alt# + [.kcode]#e# |π
+|[.kcode]#Alt# + [.kcode]#p# or pi |° (http://en.wikipedia.org/wiki/fr:Degr%C3%A9_(symbole)[Symbole Degré])
+|[.kcode]#Alt# + [.kcode]#o# | |
+
+|Addition |+ |Soustraction |- |Multiplication |* ou espace |Division |/
+
+|Exponentiation |^ ou ** ou exposant (`++x^2++` ou `++x2++`) |Factorielle |! |  |  |  | 
+
+|Produit scalaire |* ou espace |Produit vectoriel |⊗ ([.kcode]#Alt# + [.kcode]#*#) |  |  |  | 
+
+|Parenthèses |( ) |  |  |  |  |  | 
+
+|Abscisse |x( ) |Ordonnée |y( ) |Cote |z() a|
+[NOTE]
+====
+
+*Note :* Les opérateurs x, y et z peuvent être utilisés pour récupérer les coefficients d'une droite.
+
+====
+
+| 
+
+|Argument (fonctionne aussi avec Points/Vecteurs |arg( ) |Altitude(point/vecteur 3D) |alt() |Conjugué |conjugate( ) | 
+| 
+
+|Valeur absolue |abs( ) |Signe |sgn( ) |Racine carrée |sqrt( ) |Racine cubique |cbrt( )
+
+|Nbre aléatoire de [ 0 ; 1] |random( ) |  |  |  |  |  | 
+
+|Fonction exponentielle |exp( ) ou ℯ^x^ |  |  |  |  |  | 
+
+|Logarithme népérien |ln( ) ou log( ) |Log de base 2 |ld( ) |Logarithme décimal |lg( ) |Log de _x_ de base _b_ |log(b, x
+)
+
+|Cosinus |cos( ) |Sinus |sin( ) |Tangente |tan( ) |  | 
+
+|Arc cosinus |acos( ) |Arc sinus |asin( ) |Arc tangente |atan( )[.small]#(réponse dans ]-π/2 ; π/2])#
+|http://en.wikipedia.org/wiki/fr:Atan2[atan2] [.small]#(réponse dans ]-π ; π])# |atan2(y, x) ou arcTan2(y, x)
+
+|Arc cosinus en ° |acosd() |Arc sinus en ° |asind() |Arc tangente en °[.small]##(réponse dans ]-90° ; 90°])## |atand()
+|Arc tangente2 en °[.small]##(réponse dans ]-180° ; 180°])## |atan2d()
+
+|Cosinus hyperbolique |cosh( ) |Sinus hyperbolique |sinh( ) |Tangente hyperbolique |tanh( ) |  | 
+
+|Cosinus hyperbol. inverse |acosh( ) |Sinus hyperbol. inverse |asinh( ) |Tangente hyp. inverse |atanh( ) |  | 
+
+|Sécante |sec() |Cosécante |cosec() |Cotangente |cot() |  | 
+
+|Sécante hyperbol. |sech() |Cosécante hyp. |cosech() |Cotangente hyp. |coth() |  | 
+
+|Partie entière |floor( ) |Plus petit entier stem:[\ge] |ceil( ) |Arrondi |round( ) |  | 
+|===
+
+[cols=",,,,,",options="header",]
+|===
+|Fonction |Saisie |Fonction |Saisie |Fonction |Saisie
+|http://en.wikipedia.org/wiki/fr:Fonction_b%C3%AAta[Fonction Beta] Β(a, b) |beta(a, b) |Fct Beta incomplète Β(x;a, b)
+|beta(a, b, x) |Fct Beta incomplète régularisée I(x; a, b) |betaRegularized(a, b, x)
+
+|http://en.wikipedia.org/wiki/fr:Fonction_gamma[Fonction Gamma Γ(x)] |gamma( x) |Fct Gamma incomplète γ(a, x) |gamma(a,
+x) |Fct Gamma incomplète régularisée P(a,x) = γ(a, x) / Γ(a) |gammaRegularized(a, x)
+
+|http://en.wikipedia.org/wiki/fr:Fonction_d%27erreur[Fonction d'erreur gaussienne] |erf( x) |  |  |  | 
+|===
+
+[cols=",,",]
+|===
+|xref:/Fonction_PartieRéelle.adoc[Partie réelle] |Re( ) |/Fichier:Re_PNG.adoc[image:Re.PNG[Re.PNG,width=158,height=67]]
+
+|xref:/Fonction_PartieImaginaire.adoc[Partie imaginaire] |Im( )
+|/Fichier:Im_PNG.adoc[image:Im.PNG[Im.PNG,width=152,height=68]]
+
+|xref:/Fonction_PartieFractionnaire.adoc[Partie fractionnaire] |PartieFractionnaire(x)
+|/Fichier:PartieFractionnaire_PNG.adoc[image:PartieFractionnaire.PNG[PartieFractionnaire.PNG,width=147,height=64]]
+
+|xref:/Fonction_NRacine.adoc[Racine n ^ème^] |NRacine(x,n)
+|/Fichier:NRacine_PNG.adoc[image:NRacine.PNG[NRacine.PNG,width=154,height=67]]
+
+|http://en.wikipedia.org/wiki/fr:Fonction_digamma[Fonction digamma] |psi(x) |
+
+|http://en.wikipedia.org/wiki/fr:Fonction_polygamma[Fonction polygamma] est la (m+1) ^ème^ dérivée logarithmique de la
+http://en.wikipedia.org/wiki/fr:Fonction_gamma[Fonction Gamma], gamma(x)] (m=0,1) |polygamma(m, x) |
+
+|http://en.wikipedia.org/wiki/fr:Sinus_int%C3%A9gral[Fonction Sinus intégral] |sinIntegral(x) |
+
+|http://en.wikipedia.org/wiki/fr:Cosinus_int%C3%A9gral[Fonction Cosinus intégral] |cosIntegral(x) |
+
+|http://en.wikipedia.org/wiki/fr:Exponentielle_int%C3%A9grale[Fonction Exponentielle intégrale] |expIntegral(x) |
+
+|http://en.wikipedia.org/wiki/fr:Fonction_z%C3%AAta_de_Riemann[Fonction ζ de Riemann] |zeta(x) |
+|===

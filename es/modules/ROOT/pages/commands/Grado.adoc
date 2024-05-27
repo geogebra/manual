@@ -1,0 +1,90 @@
+= Comando Grado
+:page-en: commands/Degree_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+Grado( <Polinomio> )::
+  Da por resultado el http://en.wikipedia.org/wiki/es:Grado_(polinomio)[grado] del polinomio (en inglés
+  _http://en.wikipedia.org/wiki/Degree_of_a_polynomial[degree of a polynomial]_) en la variable correspondiente
+  (principal y única en este caso).
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Alerta,title="Alerta",width=18,height=18] *Alerta*: |Se admiten solo polinomios de una
+variable, sea *_x_*, *_y_* o *_z_*
+|===
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Grado[x^4 + 2 x^2]++`* da por resultado __4__**`++Grado[2 z^6  +  3 z^2 ]++`** da
+__6__**`++Grado[3 y^7  - 2 y^3 ]++`** da _7_
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] la xref:/Vista_CAS.adoc[Vista C~[.small]#omputación#~A~[.small]#lgebraica#~S~[.small]#imbólica#~]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Se suma la siguiente variantes
+
+[.small]#Grado[ [.small]##<##Polinomio[.small]##>, <##Variable[.small]#>#]#
+
+|===
+
+En esta xref:/Vista_CAS.adoc[vista] el comando obra de modo análogo al descripto, se suma una variante exclusiva y hasta
+pueden incluirse literales para operar simbólicamente. [.small]##
+
+[.small]##
+
+[.small]##
+
+[.small]##
+
+[NOTE]
+====
+
+A la variante previa se le añade la alternativa de aceptar polinomios multivariables, dando por resultado el grado de...
+
+* la variable principal o
+* la suma del de cada variable del mayor http://en.wikipedia.org/wiki/es:Monomio[monomio].
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Grado[7 y^12+a x^6 y^3+b x^2y^3]++`* da __12__**`++Grado[x^4 y^3 + 2 y^9]++`** da
+__9__**`++Grado[x^4 y^3 + 2 x^2 y^3]++`** da __7__**`++Grado[(3+ñ) x^5 y^3 + x^7 y^2]++`** da
+__9__**`++Grado[x^6 y^3 + 2 x^2 y^3]++`** da _9_
+
+====
+
+Grado( <Polinomio>, <Variable> )::
+  Da por resultado el grado del polinomio en la variable indicada.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Grado[x^6 y^3 + 2 x^2 y^5,  x]++`* da __6__**`++Grado[x^6 b y^3 + 3 w^4 x^2 y^5, w]++`** da
+__4__**`++Grado[x^6 b y^3 + 3 w^4 x^2 y^5]++`** da __11__**`++Grado[x^6 y^3 + 2 x^2 y^5, ñ]++`** da
+__0__**`++Grado[x^6 y^3 + 2 x^2 y^5,  y]++`** da _5_
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/Coeficientes.adoc[Coeficientes]
+====

@@ -1,0 +1,51 @@
+= Lieux géométriques
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Un *lieu géométrique* est un objet spécial, créé par
+
+* l'utilisation de l 'outil /Fichier:Tool_Locus_gif.adoc[image:Tool_Locus.gif[Tool Locus.gif,width=32,height=32]]
+xref:/tools/Lieu.adoc[Lieu] pour le lieu d'un point dépendant d'un point appartenant à un objet ;
+* de la commande xref:/commands/Lieu.adoc[Lieu] pour le lieu d'un point dépendant
+** d'un point appartenant à un objet ;
+** d'un curseur ;
+* ou suite à l'application de certaines commandes
+** de xref:/commands/Commandes_Maths_discrètes.adoc[Maths discrètes] comme
+xref:/commands/ArbreCouvrantMinimum.adoc[ArbreCouvrantMinimum]
+** ou de xref:/commands/Commandes_Calculs_et_Fonctions.adoc[Calculs & Fonctions] comme
+xref:/commands/RésolEquaDiff.adoc[RésolEquaDiff].
+
+Un *lieu géométrique* est un xref:/Objets_géométriques.adoc[chemin], les commandes appropriées peuvent donc lui être
+appliquées comme par exemple la commande xref:/commands/Point.adoc[Point]. On peut obtenir certaines de ses propriétés
+en lui appliquant des commandes telles que xref:/commands/Périmètre.adoc[Périmètre] ou
+xref:/commands/Premiers.adoc[Premiers].
+
+*Périmètre[ <Lieu> ]* : Si le lieu est fini, cette commande en retourne une estimation du périmètre. Sinon, elle
+retourne "non défini".
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Attention,title="Attention",width=18,height=18] *Attention*: |à bien comprendre cette notion
+de périmètre : Si a est un curseur variant entre -4 et 4, et M=(a,0.75a), votre lieu sera le segment joignant les points
+(-4,-3) et (4,3) de longueur 10, mais Longueur[Lieu[M,a]] vous retournera 20, car il faut décrire 2 fois le segment pour
+revenir au point de départ. Par contre, pas de "problème", si α est un curseur variant entre 0 et 2 π, et N=(1 ; α),
+votre lieu sera le cercle unité, de longueur 2 π [.underline]#~# 6.28, c'est ce que vous retournera Longueur[Lieu[N,α]].
+|===
+
+[NOTE]
+====
+
+*Note :* La commande xref:/commands/Longueur.adoc[Longueur][ <Lieu> ] vous permet de savoir combien de points
+définissent le lieu calculé et la commande xref:/commands/Premiers.adoc[Premiers][ <Lieu>, <Nombre> ] vous permet
+d'extraire des points pour les récupérer dans une liste, par exemple Premiers[ lieu1, Longueur[ lieu1 ] ].
+
+====
+
+Dans certaines situations, GeoGebra (> 4.2) pourra, grâce à la commande xref:/commands/EquationLieu.adoc[EquationLieu],
+calculer l'équation d'un *lieu géométrique* et le construire en tant que xref:/Courbes.adoc[courbe implicite].
+
+Un *lieu géométrique* possède la propriété xref:/Propriétés_d'un_objet.adoc[Remplissage] ce qui fait de lui un outil
+détourné pour le coloriage de formes quelconques délimitées par un chemin continu fermé.
+
+Un exemple :
+
+[[ggbContainer4b9492be1090e812accd1040742f0f94]]

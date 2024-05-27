@@ -1,0 +1,112 @@
+= Comando PolinomioAleatorio
+:page-en: commands/RandomPolynomial_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+PolinomioAleatorio( <Grado> , <Mínimo>, <Máximo> )::
+  Da por resultado un polinomio en _x_ del grado indicado (el mayor entero propuesto como máximo), cuyos coeficientes
+  (enteros) se seleccionan al azar entre el valor _mínimo_ y el _máximo_ establecidos (ambos incluidos).
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++PolinomioAleatorio[0, 0, 2]++`* da _1_ ó __2__**`++PolinomioAleatorio[2, 1, 2]++`** establece un
+polinomio aleatorio de grado 2 y solo _1_ y _2_ como coeficientes, como en los casos...
+
+* _2x^2^ + x + 1_ o
+* _2 x^2^ + 2 x + 2_
+
+====
+
+[NOTE]
+====
+
+El coeficiente de _x_ para la potencia del grado indicado es necesariamente no nulo.
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Pueden establecerse reales como topes del intervalo.
+
+====
+
+[EXAMPLE]
+====
+
+*`++PolinomioAleatorio[7 / 2, -pi, sqrt(11)]++`* da, entre otros uno de estos posibles polinomios:
+
+* x³ + 3x² + x + 3
+* -1x³ - 2x² - 2
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] la xref:/Vista_CAS.adoc[Vista C~[.small]#omputación#~A~[.small]#lgebraica#~S~[.small]#imbólica#~]
+
+Pueden incluirse literales en operaciones simbólicas y se admite, además de la anterior, la siguiente variante:
+
+PolinomioAleatorio( [.small]##<##Variable[.small]##>, <##Grado[.small]##>, <##Mínimo~en Coeficientes~[.small]##>,
+<##Máximo~en Coeficientes~[.small]#># )::
+  Da por resultado un polinomio en la variable indicada y del grado (entero) señalado como máximo, cuyos coeficientes
+  (enteros) se seleccionan al azar entre el valor mínimo y el máximo establecidos (ambos incluidos).
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* *`++PolinomioAleatorio[2,1,2] k + round(random()) x^(ñ round(random()))++`* puede dar, entre otros, polinomios como
+los siguientes:
+** _2k x² + k x + 2k + 1_
+** _k x² + 2k x + k_ ó _x^ñ^ + k x² + k x + k_... etc.
+* *`++PolinomioAleatorio[k, 5, -3, 5] ñ++`* puede dar, entre otros de quinto grado en *_k_* con coeficientes de valores
+entre +3 y 5 (ambos valores incluidos) en producto con _ñ_ como literal, alguno de los siguientes polinomios:
+** 2ñ x⁵ + 3ñ x⁴ + 4ñ x² - 2ñ x - 2ñ
+** ñ x⁵ + 2ñ x³ + 3ñ x² - 2ñ x - 2ñ
+** ñ x⁵ + 4ñ x⁴ - ñ x³ + 4ñ x² + ñ x + 5ñ
+
+====
+
+[EXAMPLE]
+====
+
+*`++PolinomioAleatorio[k, 7/ 2, -pi, sqrt(11)]++`* puede dar, entre otros, alguno de los siguientes polinomios:
+
+* -2stem:[\sqrt\{k}] stem:[k^\{3}] + stem:[k^\{2}] - 3 k - 3
+* -2 stem:[\sqrt\{k}] stem:[k^\{3}] +stem:[ k^\{2}] + k + 2
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: A tener en cuenta...
+
+* Si los valores ingresados como mínimo y/o máximo para los coeficientes no fueran enteros, el comando operará con el
+valor del correspondiente redondeo.
+* El valor asignado al grado debe ser entero o racional. De no serlo, el comando operará con el valor del
+correspondiente redondeo. Como en caso de ingresar en la xref:/Barra_de_Entrada.adoc[Barra de
+Entrada]:*`++PolinomioAleatorio[3 ℯ  / 2, -  pi, ℯ sqrt(11)]++`* que dará un polinomio como _-3x⁴ - 1x³ + 8x² + 6_, por
+ejemplo.
+
+====
+
+[NOTE]
+====
+
+El coeficiente de la variable para la potencia del grado indicado resultará necesariamente no nulo.
+
+====
+
+[NOTE]
+====
+
+También en esta xref:/Vista_CAS.adoc[_vista_] se aceptan reales en los extremos del intervalo.
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/Grado.adoc[Grado]
+====

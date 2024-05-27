@@ -1,0 +1,72 @@
+= Příkaz NSN
+:page-en: commands/LCM_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+NSN( <Číslo a>, <Číslo b> )::
+  Vypočítá nejmenší společný násobek čísel _a_ a _b_.
+
+[EXAMPLE]
+====
+
+`++NSN[12, 15]++` dává výsledek _60_.
+
+====
+
+NSN( <Seznam čísel> )::
+  Vypočítá nejmenší společný násobek čísel z daného seznamu.
+
+[EXAMPLE]
+====
+
+`++NSN[{12, 30, 18}]++` dává výsledek _180_.
+
+====
+
+== CAS pohled
+
+NSN( <Číslo a>, <Číslo b> )::
+  Vypočítá nejmenší společný násobek čísel _a_ a _b_.
+
+[EXAMPLE]
+====
+
+`++NSN[12, 15]++` dává výsledek _60_.
+
+====
+
+NSN( <Seznam čísel> )::
+  Vypočítá nejmenší společný násobek čísel z daného seznamu.
+
+[EXAMPLE]
+====
+
+`++NSN[{12, 30, 18}]++` dává výsledek _180_.
+
+====
+
+NSN( <Polynom f>, <Polynom g> )::
+  Vypočítá nejmenší společný násobek polynomů _f_ a _g_.
+
+[EXAMPLE]
+====
+
+`++NSN[x^2 + 4 x + 4, x^2 - x - 6]++` dává výsledek _x³ + x² - 8x - 12_.
+
+====
+
+NSN( <Seznam polynomů> )::
+  Vypočítá nejmenší společný násobek polynomů z daného seznamu.
+
+[EXAMPLE]
+====
+
+`++NSN[{x^2 + 4 x + 4, x^2 - x - 6, x³ - 4x² - 3x + 18}]++` dává výsledek _x⁴ - 2x³ - 11x² + 12x + 36_.
+
+====
+
+[NOTE]
+====
+
+Anglická verze: /s_index_php?title=En:Manual:LCM_Command_action=edit_redlink=1.adoc[LCM Command]
+
+====

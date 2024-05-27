@@ -1,0 +1,97 @@
+= Comando ResuelveNEDO
+:page-en: commands/NSolveODE_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+ResuelveNEDO( <Lista de derivadas>, <valor inicial de x>, <Lista de valores iniciales de y>, <valor final de -x> )::
+  Resuelve numéricamente) el sistema de ecuaciones diferenciales
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+`++f'(t, f, g, h) = g ++`
+
+`++g'(t, f, g, h) = h++`
+
+`++h'(t, f, g, h) = -t h + 3t g + 2f + t++`
+
+`++ResuelveNEDO[{f', g', h'}, 0, {1,2,-2}, 10]++`
+
+`++ResuelveNEDO[{f', g', h'}, 0, {1,2,-2}, -5]++` (resuelve el sistema de inversa de tiempo).
+
+'''''
+
+`++x1'(t, x1, x2, x3, x4) = x2++`
+
+`++x2'(t, x1, x2, x3, x4) = x3++`
+
+`++x3'(t, x1, x2, x3, x4) = x4++`
+
+`++x4'(t, x1, x2, x3, x4) = -8x1 + sin(t) x2 - 3x3 + t^2++`
+
+`++x10 = -0.4++`
+
+`++x20 = -0.3++`
+
+`++x30 = 1.8++`
+
+`++x40 = -1.5++`
+
+`++ResuelveNEDO[{x1', x2', x3', x4'}, 0, {x10, x20, x30, x40}, 20]++`
+
+'''''
+
+Péndulo
+
+`++g = 9.8++`
+
+`++l = 2++`
+
+`++a = 5++` (posición inicial)
+
+`++b = 3++` (fuerza inicial)
+
+`++y1'(t, y1, y2) = y2++`
+
+`++y2'(t, y1, y2) = (-g) / l sin(y1) ++`
+
+`++ResuelveNEDO[{y1', y2'}, 0, {a, b}, 20] ++`
+
+`++len = Longitud[IntegralNumérica1] ++`
+
+`++c = Deslizador[0, 1, 1 / len, 1, 100, false, true, true, false] ++`
+
+`++x1 = l seno(y(Punto[IntegralNumérica1, c])) ++`
+
+`++y1 = -l cos(y(Punto[IntegralNumérica1, c])) ++`
+
+`++A = (x1, y1) ++`
+
+`++Segmento[(0, 0), A]++`
+
+`++IniciaAnimación[]++`
+
+====
+
+**
+
+== Péndulo
+
+**
+
+[[ggbContainera7b7d97f6d400d714ab6238c8a9a93a9]][NOTE]
+====
+
+Ver también los comandos xref:/commands/ResuelveEDO.adoc[ResuelveEDO] y
+xref:/commands/CampoDirecciones.adoc[CampoDirecciones].
+
+====

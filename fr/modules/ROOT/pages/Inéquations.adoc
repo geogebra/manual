@@ -1,0 +1,33 @@
+= Inéquations
+:page-en: Inequalities
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+GeoGebra supporte les inéquations à une ou deux variables. Il n'y a pas de limitations pour que les inéquations
+apparaissent dans la fenêtre /Fichier:Menu_view_algebra_svg.adoc[image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16]]xref:/Algèbre.adoc[Algèbre], mais seulement des inéquations spécifiques peuvent être
+représentées dans la fenêtre /Fichier:Menu_view_graphics_svg.adoc[image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16]] xref:/Graphique.adoc[Graphique] :
+
+* inéquations polynomiales à une variable, par ex. _x^3 > x + 1_ ou _y^2>y_ ;
+* inéquations quadratiques à deux variables, par ex. _x^2 + y^2 + x*y ≤ 4_ ;
+* inéquations du type, par ex. _2x > sin(y)_ ou _y < sqrt(x)_.
+
+Comme signes d'inégalités, vous pouvez utiliser : <, >, ≤, ≥. Les symboles <= et => sont aussi valides.
+
+Utilisation en régionnement du plan : Soit une droite définie par a: 7x + 4y = 64 La saisie de a(x) >= y vous coloriera
+le demi-plan correspondant à 7x + 4y< = 64. (Vous pouvez permuter la zone coloriée dans les Propriétés > Style). De
+même, par exemple, avec la parabole représentant la fonction définie par f(x)=x²+2x+3, l'inéquation f(x) < y sera gérée.
+
+Les inéquations sont similaires aux fonctions, vous pouvez tester si _x_ et _y_ satisfont l'inéquation _a_ en validant
+_a(x,y)_ dans xref:/Saisie.adoc[saisie], et si _A_ est un point, la syntaxe _a(A)_ est valide elle aussi. En utilisant
+la xref:/commands/PointDans.adoc[commande PointDans], un point peut être contraint à rester dans une région définie par
+une inéquation. Pour une inéquation _b_ à une variable, par ex. _x > 3_, Point[b] retourne un point contraint de rester
+sur la partie de l'axe des abscisses satisfaisant à l'inéquation _b_ (ici ] 3 ; + stem:[ \infty ] [).
+
+Les conjonction (&& ou stem:[ \land ] ) et disjonction (|| ou stem:[ \lor ] ) d'inéquations sont aussi admises, par ex.
+_(x>y)&&(x+y<3)_ peut être représentée.
+
+Pour représenter l'ensemble des solutions d'une inéquation sous forme d'intervalles sur l'axe des abscisses,
+sélectionnez l'option _Afficher sur axe des x_ dans l'onglet _Style_ du
+/Fichier:Menu_options_svg.adoc[image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]]
+xref:/Dialogue_Propriétés.adoc[dialogue Propriétés] de l'inéquation .

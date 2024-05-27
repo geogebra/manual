@@ -1,0 +1,132 @@
+= Protocole de construction
+:page-en: Construction_Protocol
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Comme toute fenêtre, cette fenêtre *Protocole de construction* peut être ouverte de manière indépendante, en cliquant
+sur le bouton /Fichier:View_window_png.adoc[image:View-window.png[View-window.png,width=13,height=16]] _Afficher dans
+une nouvelle fenêtre_ qui apparaît dans la partie droite du bandeau-titre lorsque vous survolez celui-ci avec votre
+pointeur, et vous pouvez de nouveau l' _Afficher dans la fenêtre principale_ en cliquant sur le bouton
+/Fichier:View_unwindow_png.adoc[image:View-unwindow.png[View-unwindow.png,width=24,height=30]].
+
+Vous pouvez accéder au Protocole de Construction interactif en sélectionnant l’item
+/Fichier:Menu_view_construction_protocol_svg.adoc[image:24px-Menu_view_construction_protocol.svg.png[Menu view
+construction protocol.svg,width=24,height=24]] _Protocole de Construction_ dans le menu Affichage. C’est un tableau qui
+montre toutes les étapes de construction. Il vous permet de refaire étape par étape une construction préparée en
+utilisant la xref:/Barre_de_navigation.adoc[Barre de navigation] au pied de la vue Graphique.
+
+== Navigation et Modifications dans le Protocole de Construction
+
+Vous pouvez utiliser le clavier pour naviguer dans le Protocole de Construction :
+
+* Utilisez la [.kcode]#↑# ‘flèche haut’ pour aller à l’étape de construction précédente.
+* Utilisez la [.kcode]#↓# ‘flèche bas’ pour aller à l’étape de construction suivante.
+* Utilisez la touche [.kcode]#Début# pour aller au début de la construction.
+* Utilisez la touche [.kcode]#Fin# pour aller à la fin de la construction.
+* Utilisez la touche [.kcode]#Suppr# pour supprimer l’étape sélectionnée.
+
+[NOTE]
+====
+
+*Note :* Ceci va avoir une conséquence sur les autres objets dépendants de l’objet de cette étape.
+
+====
+
+Vous pouvez aussi utiliser la souris pour naviguer dans le Protocole de Construction :
+
+* Double clic sur une ligne pour sélectionner l’étape de construction.
+* Double clic sur l’entête de n’importe quelle colonne pour aller au début.
+* Glisser et Déposer une ligne pour déplacer une étape à une autre position dans le Protocole de Construction.
+
+[NOTE]
+====
+
+*Note :* Ceci n’est pas toujours possible du fait des dépendances entre objets.
+
+====
+
+* Clic droit sur une ligne pour ouvrir le Menu Contextuel de l’objet.
+
+[NOTE]
+====
+
+*Note :* Vous pouvez insérer des étapes de construction à n’importe quelle position. Sélectionnez l’étape de
+construction avant laquelle vous voulez insérer une nouvelle étape de construction. Laissez la fenêtre du Protocole de
+Construction ouverte pendant que vous créez un nouvel objet. Cette nouvelle étape de construction est immédiatement
+insérée à la position sélectionnée du Protocole de Construction.
+
+====
+
+== Barre de style
+
+La barre de style de cette fenêtre, ouverte en pressant le bouton
+/Fichier:Triangle_right_png.adoc[image:Triangle-right.png[Triangle-right.png,width=16,height=16]] contient, au départ,
+cinq boutons :
+/Fichier:BarreStyleProtocoleIni_png.adoc[image:BarreStyleProtocoleIni.png[BarreStyleProtocoleIni.png,width=257,height=65]]
+
+/Fichier:Header_column_png.adoc[image:Header_column.png[Header column.png,width=16,height=16]]
+
+/Fichier:BarreStyleProtocoleCol_png.adoc[image:BarreStyleProtocoleCol.png[BarreStyleProtocoleCol.png,width=243,height=207]]
+
+Le premier en partant de la gauche 'Colonnes' vous permet de choisir parmi 7 références, celles que vous voulez faire
+afficher en plus du numéro d'ordre 'No.' L'ordre des colonnes est celui qui apparaît dans le menu déroulant, vous ne
+pourrez le modifier.
+
+/Fichier:Menu_Properties_png.adoc[image:Menu_Properties.png[Menu Properties.png,width=16,height=16]]
+
+/Fichier:BarreStyleProtocoleOpt_png.adoc[image:BarreStyleProtocoleOpt.png[BarreStyleProtocoleOpt.png,width=279,height=95]]
+
+Le deuxième en partant de la gauche 'Options' vous permet de choisir si vous voulez 'Ne montrer que les points d'arrêt'
+ou toutes les constructions, et si désirez obtenir un 'protocole de construction colorié en rapport avec les couleurs
+respectives des objets.
+
+En utilisant la colonne 'Point d’arrêt', vous pouvez définir les seules étapes de la construction que vous désirez
+mettre en avant. Ceci n'a d'utilité que si vous sélectionnez l'option 'Ne montrer que les points d'arrêt'. Si tel est le
+cas, lorsque vous parcourez votre construction au moyen de la xref:/Barre_de_navigation.adoc[Barre de navigation], tous
+les objets créés entre deux points d'arrêt sont affichés en même temps, dans le protocole seuls les points d'arrêts sont
+affichés.
+
+[width="100%",cols="50%,50%",]
+|===
+|Si je veux détailler la construction du cercle inscrit dans un triangle, je vais laisser le protocole intégral. |
+
+|/Fichier:ProtoTout_PNG.adoc[image:ProtoTout.PNG[ProtoTout.PNG,width=422,height=546]] a|
+Si je dois travailler dans une construction plus longue, dont le départ est "Soit un triangle ABC, et son cercle inscrit
+..., je peux limiter le nombre d'étapes affichées pour arriver à ce
+stade./Fichier:ProtoArret_PNG.adoc[image:ProtoArret.PNG[ProtoArret.PNG,width=422,height=175]]
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :* J'ai rappelé les étapes de la construction du
+cercle inscrit, en nommant 'intelligemment' le centre _Inter2Bissect_ et un point du cercle par
+_ProjOrthoCentreSur1Coté_.
+
+====
+
+|===
+
+=== /Fichier:Export_html_png.adoc[image:16px-Export-html.png[Export-html.png,width=16,height=16]] Exporter en page Web
+
+GeoGebra vous permet d’exporter le Protocole de Construction en page web.
+
+Dans la fenêtre d’exportation du Protocole de Construction vous pouvez entrer un ‘Titre’, l’‘Auteur’, et une ‘Date’ pour
+la construction et choisir si vous voulez 'Insérer l' image de la construction' (dans ce cas vous pouvez en préciser
+'Largeur' et 'Hauteur') ou non, *OU* 'Insérer une image de toutes les vues ouvertes'.
+
+En plus, vous pouvez aussi choisir d’exporter un ‘Protocole de Construction Colorié’. Cela signifie que les objets dans
+le protocole de construction sont de la même couleur que les objets correspondants dans la construction. Il vous reste à
+choisir 'Exporter' dans un dossier de votre ordinateur ou copier le code dans le 'Presse-papiers'.
+
+[NOTE]
+====
+
+*Note :* Le fichier HTML exporté peut être visionné dans n’importe quel navigateur Internet (par ex. Firefox, Internet
+Explorer) et édité dans beaucoup de traitement de textes (par ex. OpenOffice Writer).
+
+====
+
+/Fichier:Menu_Print_Preview_png.adoc[image:Menu_Print_Preview.png[Menu Print Preview.png,width=16,height=16]]
+'Imprimer' : Vous ouvre la fenêtre de dialogue de votre imprimante.
+
+/Fichier:Help22_png.adoc[image:Help22.png[Help22.png,width=22,height=22]] 'Aide rapide' : ouvre la présente page dans
+votre navigateur.

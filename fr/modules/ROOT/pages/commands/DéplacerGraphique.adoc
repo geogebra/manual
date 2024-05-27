@@ -1,0 +1,23 @@
+= Commande DéplacerGraphique
+:page-en: commands/Pan_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+DéplacerGraphique( <x>, <y> )::
+  Déplace la vue Graphique de _x_ pixels vers la droite et _y_ pixels vers le haut.
+
+DéplacerGraphique( <x>, <y>, <z> )::
+  Déplace la vue courante de (x, y, z) si c'est Graphique 3D, ou seulement de (x,y) si c'est Graphique
+
+[NOTE]
+====
+
+*Notes:*
+
+* Si plusieurs xref:/Graphique.adoc[vues graphiques] sont ouvertes, seule celle qui est active est impactée ;
+* Voir aussi les commandes xref:/commands/Agrandir.adoc[Agrandir], xref:/commands/Réduire.adoc[Réduire],
+xref:/commands/SoitVueActive.adoc[SoitVueActive].
+
+====
+
+`++ DéplacerGraphique(0,0)++` est en concurrence avec `++Agrandir(1)++` pour rafraîchir l'écran. Apparemment elle est
+plus efficace

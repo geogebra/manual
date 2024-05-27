@@ -1,0 +1,77 @@
+= Commande Perpendiculaire
+:page-en: commands/PerpendicularLine_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Perpendiculaire( <Point A>, <Droite d> )::
+  Perpendiculaire par _A_ à la ligne _d_.
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :* Pour des objets 3D un troisième argument est
+ajouté pour préciser le "contexte" : si *Graphique* (i.e. 2D) est active, le plan _z=0_ est ajouté comme troisième
+argument, si *Graphique 3D* est active, c'est _Espace_ qui est ajouté. Voir
+`++Perpendiculaire(  <Point A>, <Ligne d> , <Contexte> )++` ci-dessous.
+
+====
+
+Perpendiculaire( <Point A>, <Segment s> )::
+  Perpendiculaire par _A_ au segment _s_.
+
+Perpendiculaire( <Point A>, <Vecteur stem:[\vec\{v}]> )::
+  Droite passant par A et orthogonale à stem:[\vec\{v}].
+
+/Fichier:Tool_tool_png.adoc[image:Tool_tool.png[Tool tool.png,width=32,height=32]] Voir l' *outil* associé :
+/Fichier:Mode_orthogonal_svg.adoc[image:32px-Mode_orthogonal.svg.png[Mode orthogonal.svg,width=32,height=32]]
+xref:/tools/Perpendiculaire.adoc[Perpendiculaire].
+
+________________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel, avec la possibilité de travailler en littéral :
+Les variables _a_, _b_, _m_ et _n_ n'étant pas définies dans GeoGebra, `++Perpendiculaire((m, n),y=a x +b)++` retourne :
+stem:[y = -\frac\{1}\{a} x + \frac\{a n + m}\{a}] on peut alors s'interroger sur cette formule littérale, ne semblant
+avoir de sens que si a ≠ 0 ! `++Perpendiculaire((m, n),y=b) ++` quant à elle, retourne sans problème : stem:[x = m]
+
+_____________________________________________________________
+
+/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] *Graphique 3D* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D
+
+Perpendiculaire( <Point A>, <Droite d> )::
+  Perpendiculaire par _A_ à la ligne _d_, *si* _A_ [.underline]#n'appartient pas à# _d_
+
+Il convient d'ajouter les syntaxes :
+
+Perpendiculaire( <Point A>, <Plan p> )::
+  Droite perpendiculaire au plan _p_, passant par le point _A_.
+Perpendiculaire( <Ligne d> , <Ligne f> )::
+  Droite perpendiculaire commune aux lignes _d_ et _f_.
+Perpendiculaire( <Point A>, <Direction 1> , <Direction 2> )::
+  si _Direction 1 = Ligne d_ et _Direction 2 = Ligne f_ , vous créez la droite orthogonale aux lignes _d_ et _f_,
+  parallèle par _A_ à leur perpendiculaire commune.
+  si _Direction 1 =stem:[\vec\{u}]_ et _Direction 2 = stem:[\vec\{v}]_, vous créez la droite orthogonale aux lignes
+  dirigées par les vecteurs _u_ et _v_, parallèle par _A_ à leur perpendiculaire commune.
+
+Perpendiculaire( <Point A>, <Ligne d> , <Contexte> )::
+  si _Contexte = <Plan p>_, vous créez la droite orthogonale à la ligne _d_, passant par le point _A_ et parallèle au
+  plan _p_, *si* _A_ [.underline]#n'appartient pas à# _d_.
+  si _Contexte = Espace_ : ce n'est rien d'autre que la commande Perpendiculaire( <Point A>, <Ligne d>)
+
+Note:
+
+{empty}1) Perpendiculaire(A, droite, PlanxOy) qui sera l'orthogonale à "droite" passant par "A" et parallèle au plan
+xOy. C'est cette droite qui sera créée avec l'outil "Perpendiculaire" utilisé dans la vue 2D. Cette droite existera
+toujours si le point A est sur la droite de départ.
+
+{empty}2) Perpendiculaire(A, droite, Espace) qui sera l'orthogonale à "droite" passant par "A" et sécante à "droite".
+C'est cette droite qui sera créée avec l'outil "Orthogonale" utilisé dans la vue 3D. Cette droite n'existera pas si le
+point A est sur la droite de départ.
+
+/Fichier:Tool_tool_png.adoc[image:Tool_tool.png[Tool tool.png,width=32,height=32]] Voir l' *outil* associé : (Noter la
+modification d'icône) /Fichier:Mode_orthogonalthreed_png.adoc[image:Mode_orthogonalthreed.png[Mode
+orthogonalthreed.png,width=32,height=32]] xref:/tools/Perpendiculaire.adoc[Orthogonale].

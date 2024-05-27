@@ -1,0 +1,44 @@
+= Commande Spline
+:page-en: commands/Spline_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Spline( <Liste de Points> )::
+  Crée une cubique, définie par morceaux, passant par tous les points.
+
+Spline( <Liste de Points>, <Degré ≥ 3> )::
+  Crée une http://en.wikipedia.org/wiki/fr:Spline[spline], du degré indiqué, passant par tous les points.
+
+[NOTE]
+====
+
+*Note :*
+
+Le résultat de la commande `++Spline() ++` est une courbe.
+
+L'algorithme est utilisé séparément pour les coordonnées x et y : d'abord, nous déterminons les valeurs de t qui
+correspondent aux points (basés sur des distances euclidiennes entre les points), puis nous exprimons les splines
+cubiques comme des fonctions t-> x et t-> y.
+
+====
+
+_____________________________________________________________
+
+/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] *Graphique 3D* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D
+
+== [#==]####[#.3D.3D]##==##
+
+Spline( <Liste de Points>, <Degré ≥ 3>, <Fonction de poids> )
+
+In the beta version we now have a syntax that lets you chose your own mapping from points to the parameter. The syntax
+is Spline[list of points, degree,function in x and y]. The last parameter says what should be the difference of t values
+for point P_i and P_\{i+1} given that their P_\{i+1}-P_i=(x,y). To get the spline you expect from "function" algorithm
+you should use abs(x)+0*y, to get the GeoGebra's default spline you can use sqrt(x^2+y^2). You can also try 0x+0y+1. The
+advantage of euclidian distance is that the result behaves nicely with respect to transformations: rotate(spline(list))
+gives the same as spline(rotate(list)). The function 0x+0y+1 has this property also
+
+You can start with this file that shows the "manual" approach:
+
+https://beta.geogebra.org/o/yDR3sKNW

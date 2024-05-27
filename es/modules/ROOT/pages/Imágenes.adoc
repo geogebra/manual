@@ -1,0 +1,199 @@
+= Imágenes
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+== Imágenes Aplicadas
+
+En la xref:/Vista_Gráfica.adoc[Vista Gráfica] pueden incluirse imágenes de distinto tipo y también es posible exportar
+su contenido con diferentes formatos, definiciones y dimensiones.
+
+[NOTE]
+====
+
+Son _formatos_ aceptados los de extensiones *_jpg_*, *_jpeg_*, *_png_*, *_gif_* o *_bmp_*.
+
+====
+
+=== Operando con Imágenes
+
+Para intercalar una imagen en la xref:/Vista_Gráfica.adoc[Vista Gráfica], se cuenta con una
+xref:/tools/Imagen.adoc[herramienta adecuada] xref:/tools/Imagen.adoc[image:32px-Mode_image.svg.png[Mode
+image.svg,width=32,height=32]]
+
+Emplearla, permite especificar la ubicación, de una de las siguientes maneras:
+
+* Un _clic_ en la xref:/Vista_Gráfica.adoc[Vista Gráfica] fija la esquina inferior izquierda de la imagen.
+* Un _clic_ sobre un punto lo establece como su esquina inferior izquierda.
+
+En la caja de diálogo que se abre, se puede seleccionar una imagen de entre los archivos de formato gráfico que aparecen
+listados, almacenados en los directorios o carpetas que se examinan a tal efecto.
+
+[NOTE]
+====
+
+*Notas:* Después de seleccionar la xref:/tools/Imagen.adoc[herramienta]
+xref:/tools/Imagen.adoc[image:32px-Mode_image.svg.png[Mode image.svg,width=32,height=32]], pueden usarse las teclas de
+atajo [.kcode]##Alt##+_clic_ para pegar una imagen directamente desde el portapapeles del sistema en la Vista Gráfica.
+
+==== Formatos
+
+===== http://en.wikipedia.org/wiki/es:Graphics_Interchange_Format[Formato _GIF_] - **_G_**~[.small]#raphics#~**_I_**~[.small]#nterchange#~ **_F_**~[.small]#ormat#~
+
+'''''
+
+Se admiten archivos transparentes de formato http://en.wikipedia.org/wiki/es:Graphics_Interchange_Format[GIF] y
+http://en.wikipedia.org/wiki/es:Portable_Network_Graphics[PNG] (en inglés,
+http://en.wikipedia.org/wiki/Graphics_Interchange_Format[GIF] y
+http://en.wikipedia.org/wiki/Portable_Network_Graphics[PNG]), pero para los de formato PNG pueden requerirse editarlos
+para dotarlos de un _canal alpha_. Por ejemplo, usando http://www.irfanview.com/[IrfanView], guardar usando el _plugin_
+PNGOUT y seleccionado *RGB+Alpha*
+
+====
+
+=== Imágenes _Instrumentales_
+
+Con el comando xref:/commands/ImagenHerramienta.adoc[ImagenHerramienta] se puede _aplicar_ la imagen correspondiente al
+ícono de una xref:/Herramientas.adoc[herramienta].
+
+[NOTE]
+====
+
+Pueden consultarse los números correspondientes a cada una de las xref:/Herramientas.adoc[herramienta], su
+xref:/HerramientasES.adoc[índice].
+
+====
+
+=== Imágenes Sombreadas
+
+Para xref:/Propiedades.adoc[_sombrear_] diferentes xref:/Objetos_Geométricos.adoc[_objetos_] (como polígonos, sectores
+circulares, cónicas cerradas, xref:/Lugar_Geométrico.adoc[lugares geométricos], _botones_ u otros), se puede
+seleccionar...
+
+* imágenes tomadas de los archivos gráficos ya almacenados en el equipo o escogidos entre los libremente disponibles
+* _moldes_ predefinidos con los que cuenta *_GeoGebra_* como los que ilustra el siguiente cuadro:
++
+/Archivo:PicturesFilling_png.adoc[image:PicturesFilling.png[PicturesFilling.png,width=158,height=120]]
+
+=== Imágenes Transformadas
+
+Las maniobras de transformación afectan a las imágenes y, operando adecuadamente, se puede partir de una de ellas para
+preparar un _ramillete_ como el siguiente:
+
+/Archivo:4x26_PNG.adoc[image:4x26.PNG[4x26.PNG,width=253,height=86]]
+
+'''''
+
+*`++Ejecuta[{"Reflect[image1, Corner[image1,1] ]","Reflect[image1, Line[Corner[image1,1],Corner[image1,2] ]]","Reflect[image1, Line[Corner[image1,1],Corner[image1,4] ]]"}]++`*
+
+'''''
+
+=== Exportando Imágenes
+
+La xref:/Exportando_Gráficos.adoc[Exportando Gráficos] se abre desde la opción del xref:/Menú_Archivo.adoc[Menú
+Archivo], la opción /Archivo:Image_x_generic_png.adoc[image:Image-x-generic.png[Image-x-generic.png,width=16,height=16]]
+xref:/Exportando_Gráficos.adoc[Vista Gráfica como Imagen (png, eps)….]. El submenú xref:/Menú_Archivo.adoc[Exporta]
+permite almacenar el contenido de la xref:/Vista_Gráfica.adoc[Vista Gráfica] en un archivo de formato pertinente:
+
+* Imagen (png, eps) ... png, EPS, PDF, SVG, EMF;
+* Imagen GIF animada ... en caso de depender el boceto dinámico de un deslizador
+* Imagen al portapapeles;
+* Imágenes como PSTricks ... ;
+* Imagen como PGF / TikZ ... ;
+* Imagen Asymptote ...
+
+== Propiedades de las Imágenes
+
+=== Posición
+
+La posición de una imagen puede ser absoluta - en pantalla - o relativa al sistema de coordenadas Esto puede
+establecerse en la casilla correspondiente de la pestaña ‘Básico’ del xref:/Cuadro_de_Propiedades.adoc[Cuadro de
+Propiedades] de la imagen. Esto se lleva adelante especificando los tres puntos vértices.
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/Esquina.adoc[Esquina].
+
+====
+
+La pestaña *Posición* del xref:/Cuadro_de_Propiedades.adoc[Cuadro de Propiedades] de la imagen ofrece la flexibilidad de
+escalar, rotar y hasta distorsionar las imágenes.
+
+* Esquina 1: posición de la esquina izquierda inferior de la imagen.
+* Esquina 2: posición inferior derecha de la imagen.
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_notice.png[image,width=40,height=40]
+
+|Solo puede fijarse esta esquina cuando ya se estableció la previa, porque de este modo se controla el ancho de la
+imagen.
+|===
+
+* Esquina 4: posición superior izquierda de la imagen.
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_notice.png[image,width=40,height=40]
+
+|Solo puede fijarse cuando ya se estableció la primera esquina, dado que de este modo se controla la altura de la
+imagen.
+|===
+
+[EXAMPLE]
+====
+
+*Ejemplos:* Para explorar los efectos de los puntos esquina, conviene crear tres puntos A, B y C.
+
+* Fijemos A como la primera y B como la segunda esquina de la imagen. Al arrastrar A y B con la
+xref:/Desplazamientos.adoc[herramienta] xref:/tools/Elige_y_Mueve.adoc[image:32px-Mode_move.svg.png[Mode
+move.svg,width=32,height=32]] xref:/tools/Elige_y_Mueve.adoc[Elige y Mueve], puede explorarse su influencia muy
+fácilmente.
+* Se puede elimina al punto B como segunda esquina. Podemos fijar, a continuación, A como la primera y C como la cuarta
+esquina, para explorar cómo el desplazamiento de estos puntos influye en la imagen..
+* Finalmente, pueden establecerse los tres puntos de esquina para observar cómo al arrastrarlos, se distorsiona la
+imagen.
+
+'''''
+
+Tras observar cómo influir sobre la posición y tamaño de una imagen, vale la pena experimentar otras alternativas. Al
+adjuntar una imagen a un punto A, se fija a 3 unidades su ancho y a 4, su altura, ubicando los siguientes puntos:
+
+* ‘Esquina 1’ en A
+* ‘Esquina 2’ en A + (3, 0)
+* ‘Esquina 4’ en A + (0, 4)
+
+====
+
+[NOTE]
+====
+
+Al arrastrar el punto A con la xref:/Desplazamientos.adoc[herramienta]
+xref:/tools/Elige_y_Mueve.adoc[image:32px-Mode_move.svg.png[Mode move.svg,width=32,height=32]]
+xref:/tools/Elige_y_Mueve.adoc[Elige y Mueve], la medida de la imagen se conserva.
+
+====
+
+=== Imagen de Fondo
+
+Puede establecerse una imagen de fondo tildando la casilla correspondiente a "Imagen de Fondo" de la pestaña *_Básico_*
+del xref:/Cuadro_de_Propiedades.adoc[Cuadro de Propiedades] de la imagen. Una imagen de fondo, yace tras los ejes de
+coordenadas y ya no vuelve a resultar accesible a la selección vía ratón o mouse.
+
+[NOTE]
+====
+
+Para modificar la condición de "telón de fondo" de una imagen, se debe abrir el xref:/Cuadro_de_Propiedades.adoc[Cuadro
+de Propiedades] seleccionado el ítem /Archivo:Menu_Properties_png.adoc[image:Menu_Properties.png[Menu
+Properties.png,width=16,height=16]] Propiedades… del xref:/Menú_Edita.adoc[Menú Edita] y quitar el tilde de la casilla
+correspondiente a Imagen de Fondo de la pestaña *_Básico_*.
+
+====
+
+=== Opacidad/Transparencia
+
+Los objetos, marcas de cuadrícula y/o ejes se _traslucen_ por detrás de una imagen _transparente_ y, por el contrario,
+quedan _tapiados_ por una completamente _opaca_. Para fijar el nivel de *_Opacidad_* de una imagen, se le especifica un
+valor entre 0% y 100% en la pestaña [.kcode]#Color# del correspondiente xref:/Cuadro_de_Propiedades.adoc[Cuadro de
+Propiedades].

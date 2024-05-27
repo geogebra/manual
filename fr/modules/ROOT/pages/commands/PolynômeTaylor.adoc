@@ -1,0 +1,55 @@
+= Commande PolynômeTaylor
+:page-en: commands/TaylorPolynomial_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+PolynômeTaylor( <Fonction f >, <Valeur a>, <Ordre n> )::
+  développement de Taylor d’ordre _n_ de la fonction _f_ en _x = a_ .
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++PolynômeTaylor(x^2, 3, 1)++` retourne _9 - 6 (x - 3)_, polynôme de Taylor de _x^2^_ en _x = 3_ d'ordre _1_.
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+PolynômeTaylor( <Fonction f >, <Valeur a>, <Ordre n> )::
+  développement de Taylor d’ordre _n_ de la fonction _f_ en _x = a_ .
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++PolynômeTaylor(x^2, a, 1)++` retourne _-a^2^ + 2 a x_, polynôme de Taylor de _x^2^_ en _x = a_ d'ordre _1_.
+
+====
+
+PolynômeTaylor( <Fonction f >, <Variable x><Valeur a>, <Ordre n> )::
+  développement de Taylor d’ordre _n_ de la fonction _f_ de variable _x_, en _x = a_ .
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++PolynômeTaylor(x^3 sin(y), x, 3, 2)++` retourne stem:[sin(y) (9 x^2 - 27 x + 27)], polynôme de Taylor en _x_, d'ordre
+_2_ de _x^3^ sin(y)_ en _x = 3_ ;
+
+`++PolynômeTaylor(x^3 sin(y), y, 3, 2)++` retourne stem:[\frac\{(cos(3) x^3 (2 y - 6) + sin(3) x^3 (-y^2 + 6 y - 7))}\{
+2} ], polynôme de Taylor de variable _y_, d'ordre _2_, de _x^3^ sin(y)_ en _y = 3_ .
+
+====
+
+[NOTE]
+====
+
+*Note :* L'ordre _n_ doit être un entier supérieur ou égal à zéro.
+
+====

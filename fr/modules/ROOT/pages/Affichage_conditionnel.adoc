@@ -1,0 +1,62 @@
+= Affichage conditionnel
+:page-en: Conditional_Visibility
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Non seulement vous pouvez afficher ou cacher certains objets, mais vous pouvez aussi faire dépendre cette propriété
+d’une certaine condition. Par exemple, vous désirez qu’un objet n’apparaisse sur l’écran que si vous cochez une case
+placée dans la vue xref:/Graphique.adoc[Graphique] ou que si un xref:/tools/Curseur.adoc[curseur] prend une certaine
+valeur.
+
+== Affichage conditionnel d’objets existants
+
+Vous pouvez utiliser l’outil /Fichier:Mode_showcheckbox_png.adoc[image:Mode_showcheckbox.png[Mode
+showcheckbox.png,width=32,height=32]] xref:/tools/BoîteSélection.adoc[BoîteSélection] pour créer une case à cocher
+contrôlant la visibilité sur l’écran d’un ou plusieurs objets existants.
+
+Une alternative est de créer une xref:/Valeurs_booléennes.adoc[variable booléenne] (par ex., `++b = true++`) en
+utilisant le Champ de xref:/Saisie.adoc[Saisie] et de la faire afficher en tant que case à cocher dans la vue
+xref:/Graphique.adoc[Graphique] en changeant sa visibilité (par ex., en utilisant le mode
+/Fichier:Mode_showhideobject_png.adoc[image:Mode_showhideobject.png[Mode showhideobject.png,width=32,height=32]]
+xref:/tools/Afficher_cacher_l'objet.adoc[Outil Afficher/cacher_l'objet] ou le
+xref:/Menu_contextuel.adoc[Menu_contextuel]). Pour utiliser cette variable booléenne comme condition pour l’affichage ou
+non de certains objets, vous devez suivre les étapes décrites ci-dessous.
+
+== Modifier la visibilité d’un objet nouvellement créé
+
+Dans le xref:/Dialogue_Propriétés.adoc[Dialogue_Propriétés], vous pouvez entrer une condition pour l’affichage d’un
+objet dans l’onglet ‘Avancé’.
+
+[NOTE]
+====
+
+*Note :* Vous pouvez utiliser les opérateurs logiques (par ex., ≠, ≥, ˄ ou encore stem:[\parallel]) de la fenêtre
+déroulante pour définir vos conditions.
+
+====
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* Si a est un curseur, alors la condition a<2 signifie que l’objet correspondant n’est seulement visible dans la vue
+Graphique que si la valeur du curseur est strictement plus petite que 2.
+
+* Si b est une variable booléenne, vous pouvez utiliser b comme condition. L’objet correspondant ne sera visible que si
+la valeur de b est _true_ et ne sera pas visible si la valeur de b est _false_.
+
+* Si g et h sont deux "lignes" et que vous désirez afficher un texte uniquement si les lignes sont parallèles, vous
+pouvez utiliser gstem:[\parallel]h comme condition pour le texte.
+
+[NOTE]
+====
+
+*Note :* Les symboles parallèles stem:[\parallel] ou perpendiculaires stem:[\perp] peuvent être trouvés dans la boîte de
+symboles à droite dans xref:/Saisie.adoc[Saisie].
+
+====
+
+====
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/SoitVisibleDansVue.adoc[SoitVisibleDansVue] ou
+xref:/commands/SoitConditionPourAfficherObjet.adoc[SoitConditionPourAfficherObjet].

@@ -1,0 +1,44 @@
+= Commande KhiCarré
+:page-en: commands/ChiSquared_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+KhiCarré( <Degré de liberté d>, <Valeur Variable v> )::
+  Calcule la valeur de la fonction cumulée de la loi du khi-carré en _v_, i.e. la probabilité _P(X≤v)_ où _X_ est une
+  variable aléatoire suivant une loi du khi-carré avec _d_ degrés de liberté.
+
+[NOTE]
+====
+
+*Note :* Retourne la probabilité pour une valeur donnée d'abscisse (ou l'aire sous la courbe de la loi du khi-carré, à
+gauche de l'abscisse donnée).
+
+====
+
+KhiCarré( <Degré de liberté>, <Valeur Variable v>, <Booléen Cumul> )::
+  Si _Cumul_ est _true_, calcule la valeur de la fonction densité cumulée de probabilité de la loi du khi-carré, sinon
+  calcule la valeur de la fonction densité de probabilité de la loi du khi-carré.
+
+KhiCarré( <Degré de liberté d >, x )::
+  Crée la fonction densité de probabilité de la http://en.wikipedia.org/wiki/fr:Loi_du_%CF%87%C2%B2[loi du khi-carré]
+  avec _d_ degrés de liberté.
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/InverseKhiCarré.adoc[InverseKhiCarré] .
+
+/Fichier:View_cas24_png.adoc[image:View-cas24.png[View-cas24.png,width=22,height=22]] *Calcul formel* Seule la syntaxe
+suivante est utilisable dans xref:/Calcul_formel.adoc[Calcul formel] :
+
+KhiCarré( <Degré de liberté d>, <Valeur Variable v> )::
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++KhiCarré(4, 3)++` en validant ou en cliquant sur le bouton
+/Fichier:Mode_evaluate_png.adoc[image:Mode_evaluate.png[Mode evaluate.png,width=32,height=32]] (Évaluer), retourne la
+valeur exacte stem:[\gamma(2, \frac\{3}\{2})] où stem:[\gamma] désigne la fonction gamma incomplète ;
+
+`++KhiCarré(4, 3)++` en cliquant sur le bouton /Fichier:Mode_numeric_png.adoc[image:Mode_numeric.png[Mode
+numeric.png,width=32,height=32]] (Numérique), retourne la valeur approchée _0.44_ (_option 2 décimales_).
+
+====

@@ -1,0 +1,36 @@
+= Comando Único
+:page-en: commands/Unique_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Único( <Lista> )::
+  Devuelve la lista de los elementos de la lista dada ordenados ascendentemente. Elementos repetidos se incluyen una
+  sola vez. Funciona para listas de números y listas de textos.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++ Único({1, 2, 4, 1, 4})++` devuelve _\{1, 2, 4}_.
+* `++ Único({"a", "b", "Hola", "Hola"})++` devuelve _\{"'Hola", "a", "b"}_.
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/Frecuencia.adoc[Frecuencia].
+
+====
+
+== Sintaxis CAS
+
+Único( <Lista> )::
+  Devuelve una lista en la que cada elemente de la lista dada aparece exactamente una vez.
+
+[EXAMPLE]
+====
+
+`++ Único({1, x, x, 1, a})++` devuelve _\{1, x, a}_.
+
+====

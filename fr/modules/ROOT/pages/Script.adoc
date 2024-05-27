@@ -1,0 +1,119 @@
+= Script
+:page-en: Scripting
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+GeoGebra supporte deux langages pour les scripts -- GGBScript et Javascript. Un script est une suite d'actions qui
+peuvent être déclenchées en :
+
+* cliquant sur, ou actualisant, un objet particulier ;
+* chargeant le fichier (dans le cas de Javascript) ;
+* utilisant des écouteurs Javascript (voir /Référence:JavaScript.adoc[Référence:JavaScript])
+
+Vous pouvez définir ce script dans la fenêtre d'écriture du xref:/Dialogue_Propriétés.adoc[dialogue Propriétés].
+
+== GGBScript
+
+Vous pouvez créer des scripts constitués de commandes GeoGebra.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+* _n_ est un xref:/tools/Curseur.adoc[curseur] à valeurs entières entre 1 et 3
+* `++liste1 = {"rouge", "vert", "bleu"}++`
+* dans les propriétés de _n_, définir dans l'onglet "Script"/"Par Actualisation" `++SoitCouleur[n, liste1(n)]++`
+* en modifiant la valeur du curseur _n_ vous changez sa couleur.
+
+====
+
+[NOTE]
+====
+
+*Note :* Utliser `++#++` pour introduire un commentaire.
+
+====
+
+Vous trouverez les commandes dédiées aux scripts dans cette page xref:/commands/Commandes_Scripts.adoc[Commandes
+Scripts].
+
+== JavaScript
+
+JavaScript est un langage de programmation utilisée par beaucoup de technologies Internet. À la différence des scripts
+GeoGebra, les scripts Javascript n'ont pas à être utilisés comme de simples suites de commandes, mais un contrôle de
+flux (`++if++`, `++while++`, `++for++`) peut être utilisé. Pour du JavaScript de base, vous pouvez trouver un tutoriel
+précieux sur https://developer.mozilla.org/en/JavaScript/Guide[developer.mozilla.org]. Dans GeoGebra, vous pouvez
+utiliser des méthodes spéciales JavaScript qui vous permettent de modifier la construction. Ces méthodes appartiennent à
+l'objet ggbApplet , ce qui signifie que vous devez l'appeler sous la forme
+`++ggbApplet.méthode_nom(paramètre,..,paramètre)++`. Pour une liste complète de ces méthodes voir
+/Référence:JavaScript.adoc[Référence:JavaScript].
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+....
+for(var i =0;i<10;i++) 
+   ggbApplet.evalCommand("A_"+i+"=(random()*10,random()*10)");
+....
+
+Ce script crée 10 points _A~0~_ à _A~9~_ ayant des coordonnées aléatoires.
+
+====
+
+=== Global JavaScript
+
+Dans l'onglet "JavaScript global" de l'onglet "Script" du xref:/Dialogue_Propriétés.adoc[dialogue Propriétés] vous
+pouvez définir quelques fonctions, ou faire quelques affectations qui doivent être réalisées avant que la construction
+ne soit chargée. Vous pouvez aussi définir la fonction _ggbOnInit()_, qui est appelée automatiquement une fois que la
+construction est chargée. La fonction _ggbOnInit()_ peut être utilisé pour enregistrer des écouteurs, comme vu
+ci-dessous.:
+
+[EXAMPLE]
+====
+
+....
+function Ajout(nom){
+    alert("L'objet "+nom+" a été ajouté.");
+}
+function ggbOnInit(){
+    ggbApplet.registerAddListener("Ajout");
+}
+....
+
+D'abord nous avons défini la fonction "Ajout" qui retourne un texte dépendant du _nom_ reçu. Ensuite, en utilisant la
+fonction _ggbOnInit_
+
+nous avons dit à GeoGebra d'appeler cette fonction "Ajout" chaque fois qu'un nouvel objet est ajouté. Lorsque la
+construction est chargée de nouveau, la fonction ggbOnInit est appelée, et ensuite, si l'utilisateur ajoute un point
+nommée par ex. _A_, un message "L'objet A a été ajouté" va apparaître.
+
+====
+
+Vous pouvez aussi utiliser des écouteurs pour des actions telles que Renommer, Supprimer. La liste complète est
+consultable dans /Référence:JavaScript.adoc[Référence:JavaScript].
+
+[NOTE]
+====
+
+*Note :* Toute méthode ggbApplet utilisée dans le JavaScript global à l'extérieur de ggbOnInit ne va pas fonctionner
+comme désiré car elle va être appelée avant que la construction ne soit chargée.
+
+====
+
+=== USB Data Logging
+
+Pour enregistrer des données à partir d'interface USB (Vernier - _Go!Motion_ et _Go!Temp_) on peut définir un écouteur
+en utilisant la méthode registerLoggerListener. Un tel écouteur peut ressembler à ceci :
+
+....
+function logger(valeur) {
+   var d = valeur * 1;
+   ggbApplet.evalCommand("(CopierObjetLibre[a],"+d+")");
+   ggbApplet.evalCommand("SoitValeur[a,a+1]");
+}
+....
+
+Ce script suppose qu'il y a un nombre libre _a_ dans la construction. Chaque fois que le nombre _d_ est capté, le point
+_(a,d)_ est construit et _a_ est augmenté de 1.

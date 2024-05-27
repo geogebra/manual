@@ -1,0 +1,135 @@
+= Commande TableauEffectifs
+:page-en: commands/FrequencyTable_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+TableauEffectifs( <Liste Données L> )::
+  Retourne un tableau (en tant que texte) dans lequel la première colonne contient une liste triée des éléments de _L_
+  sans répétition, et la seconde le nombre d'occurrences de chacune des valeurs de la première colonne.Les éléments de
+  la liste _L_ peuvent être des nombres ou des chaînes de caractères.
+
+TableauEffectifs( <Liste Bornes Classes C >, <Liste Données L> )::
+  Retourne un tableau (en tant que texte) dans lequel la première colonne contient les classes, et la seconde le nombre
+  d'éléments de _L_ appartenant à chaque intervalle de la première colonne. Tous les intervalles sont de la forme [a,b[
+  sauf le dernier qui est aussi fermé à droite.
+
+TableauEffectifs(<Liste Bornes Classes C >, <Liste Données L>, <Densité True|False> , <Echelle (optionnel)> )::
+  Retourne un tableau (en tant que texte) dans lequel la première colonne contient les classes, et la seconde les
+  effectifs pour l'xref:/commands/Histogramme.adoc[Histogramme] correspondant.
+
+[NOTE]
+====
+
+*Note :* Le facteur d' _Echelle_ n'intervient pas si l'utilisation de la _densité_ est à _false_.
+
+====
+
+TableauEffectifs(<Booléen Cumul>, <Liste Données L> )::
+  Retourne un tableau (en tant que texte) dans lequel la première colonne contient une liste triée des éléments de _L_
+  sans répétition, et la seconde le nombre d'occurrences, cumulées si le booléen _Cumul_ est _true_, de chacune des
+  valeurs de la première colonne.
+
+même principe que ci-dessus, pour :
+
+TableauEffectifs( <Booléen Cumul>,<Liste Bornes Classes C >, <Liste Données L>)
+
+TableauEffectifs( <Booléen Cumul>,<Liste Bornes Classes C >, <Liste Données L>, <Densité True|False> , <Echelle
+(optionnel)> )
+
+[NOTE]
+====
+
+*Note :* Cette commande est similaire aux commandes xref:/commands/Effectifs.adoc[Effectifs] et
+xref:/commands/Histogramme.adoc[Histogramme] . Les articles relatifs à ces commandes contiennent quelques exemples.
+
+====
+
+TableauEffectifs( <Liste Données>,<Echelle (optionnelle)> )::
+  Retourne un tableau (en tant que texte) dans lequel
+
+* la première colonne *Valeur* contient une liste triée des éléments de _<Liste Données>_ sans répétition,
+
+* la seconde nommée, selon la syntaxe utilisée :
+
+* {blank}
+** *Effectifs* : contient les nombres d'occurrences de chacune des valeurs de la première colonne ;
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++TableauEffectifs( {1, 1, 1, 2, 2, 3, 3, 4, 5} )++` retourne un tableau dont la première colonne _Valeur_ présente les
+entrées : 1, 2, 3 ,4 et 5 et la seconde _Effectifs_ les valeurs 3, 2 ,2, 1 et 1.
+
+/Fichier:TabEffEff_png.adoc[image:TabEffEff.png[TabEffEff.png,width=132,height=118]]
+
+[NOTE]
+====
+
+*Note :* Dans la liste apparaît trois fois le _1_ .
+
+====
+
+====
+
+* {blank}
+** *Fréquences* : contient les fréquences de chacune des valeurs de la première colonne ;
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++TableauEffectifs( {1, 1, 1, 2, 2, 3, 3, 4, 5} ,1/9)++` retourne un tableau dont la première colonne _Valeur_ présente
+les entrées : 1, 2, 3 ,4 et 5 et la seconde _Fréquences_ les résultats de 3/9, 2/9 ,2/9, 1/9 et 1/9, arrondis au nombre
+de décimales choisi dans _Options > Arrondi_.
+
+/Fichier:TabEffFreq_png.adoc[image:TabEffFreq.png[TabEffFreq.png,width=144,height=118]]
+
+[NOTE]
+====
+
+*Note :* Dans _1/9_, le _9_ est le nombre d'éléments de la liste .
+
+====
+
+====
+
+* {blank}
+** *Résultats* : contient les nombres d'occurrences de chacune des valeurs de la première colonne, multipliés par l'
+_<Echelle>_
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++TableauEffectifs( {1, 1, 1, 2, 2, 3, 3, 4, 5}, 2 )++` retourne un tableau dont la première colonne _Valeur_ présente
+les entrées : 1, 2, 3 ,4 et 5 et la seconde _Résultats_ les valeurs 6, 4 ,4, 2 et 2.
+
+/Fichier:TabEffRes_png.adoc[image:TabEffRes.png[TabEffRes.png,width=136,height=113]]
+
+[NOTE]
+====
+
+*Note :* Dans la liste apparaît trois fois le _1_ , et le nombre d’occurrences de _1_ (=3) a été multiplié par le
+facteur d'échelle _2_ pour devenir la valeur _6_ de la seconde colonne.
+
+====
+
+====
+
+Les éléments de la liste peuvent être des nombres ou des chaînes de caractères.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++TableauEffectifs( {"Rouge", "Rouge",  "Bleu", "Bleu","Blanc","Rouge"} )++` retourne un tableau dont la première
+colonne _Valeur_ présente les entrées : Blanc, Bleu et Rouge, (ordre alphabétique) et la seconde _Effectifs_ les valeurs
+1, 2 et 3.
+
+/Fichier:TabEffEffTxt_png.adoc[image:TabEffEffTxt.png[TabEffEffTxt.png,width=130,height=88]]
+
+====

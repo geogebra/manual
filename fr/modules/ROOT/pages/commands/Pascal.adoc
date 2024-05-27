@@ -1,0 +1,43 @@
+= Commande Pascal
+:page-en: commands/Pascal_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Pascal( <n>, <p> )::
+  Retourne l'histogramme d'une loi de http://en.wikipedia.org/wiki/fr:Loi_binomiale_n%C3%A9gative[Pascal].
+  _Paramètres :_
+  _n=Nombre Succès_ : nombre d'épreuves indépendantes de Bernoulli devant être réalisées ;
+  _p=Probabilité Succès_ : probabilité du succès dans une épreuve.
+
+La distribution de Pascal modélise le nombre d'échecs avant le nième succès dans des épreuves de Bernoulli répétées et
+mutuellement indépendants, chacune avec une probabilité de succès p.
+
+Pascal( <n>, <p>, <Booléen Cumul> )::
+  Retourne l'histogramme d'une loi de Pascal si _Cumul_ = false.
+  Retourne l'histogramme cumulé d'une loi de Pascal si _Cumul_ = true.
+  Les deux premiers paramètres sont les mêmes que ci-dessus.
+
+Pascal( <n>, <p>, <Valeur Variable v>, <Booléen Cumul> )::
+  Soit X une variable aléatoire suivant une loi de Pascal.
+  Retourne P( X = _v_) si _Cumul_ = false.
+  Retourne P( X ≤ _v_) si _Cumul_ = true.
+  Les deux premiers paramètres sont les mêmes que ci-dessus.
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/InversePascal.adoc[InversePascal].
+
+/Fichier:Menu_view_cas_svg.adoc[image:20px-Menu_view_cas.svg.png[Menu view cas.svg,width=20,height=20]] *Calcul formel*
+Seule la syntaxe suivante est utilisable dans xref:/Calcul_formel.adoc[Calcul formel].
+
+Pascal( <n>, <p>, <Valeur Variable v>, <Booléen Cumul> )
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+Le nombre de succès aux épreuves de Bernoulli indépendantes étant n = 1, la probabilité du succès étant p =
+stem:[\frac\{1}\{6}], la valeur de la variable étant v = 2 et "Cumul" = false., alors la probabilité de 2 échecs avant
+le succès est donnée par
+
+`++ Pascal( n, p, v, false)++` qui retourne _stem:[\frac\{25}\{216}]_
+
+====

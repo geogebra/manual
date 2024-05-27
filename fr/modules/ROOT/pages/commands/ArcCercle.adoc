@@ -1,0 +1,52 @@
+= Commande ArcCercle
+:page-en: commands/CircularArc_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+ArcCercle( <Centre C>, <Point A>, <Point B>)::
+  Arc du cercle de centre _C_ de rayon _CA_, construit dans le sens anti-horaire, de _A_ vers _B_.
+
+[NOTE]
+====
+
+*Note :* Le point _B_ n’appartient pas nécessairement à l’arc.
+
+====
+
+/Fichier:Tool_tool_png.adoc[image:Tool_tool.png[Tool tool.png,width=32,height=32]] Voir l' *outil* associé :
+/Fichier:Mode_circlearc3_svg.adoc[image:32px-Mode_circlearc3.svg.png[Mode circlearc3.svg,width=32,height=32]]
+xref:/tools/Arc_de_cercle_(centre_2_points).adoc[Arc_de_cercle_(centre-2_points)].
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel , mais sans la possibilité d'effectuer du calcul
+littéral.
+
+/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] *Graphique 3D* :
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+L'arc créé appartient bien sûr au plan _ABC_.
+
+*Restriction* : Que vous utilisiez l'outil ou la commande associée pour 3 points A, B et C en 3D, la conception du
+logiciel nécessitant une orientation dans l'espace ne vous permettra pas d'obtenir un arc plus grand qu'un
+demi-cercle !!
+
+Si vous désirez en obtenir un plus grand, il vous faut "truander" l'orientation, en insérant, par exemple,
+`++Vecteur((1, 0))++`, comme 4ème paramètre.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++ArcCercle(A, B, C, Vecteur((1, 0)))++`
+
+====
+
+|===

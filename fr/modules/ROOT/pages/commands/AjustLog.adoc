@@ -1,0 +1,37 @@
+= Commande AjustLog
+:page-en: commands/FitLog_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+AjustLog(<Liste Points>)::
+  Calcule la courbe de régression logarithmique .
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++AjustLog({(ℯ,1), (ℯ^2, 4)})++` retourne _- 2 + 3 ln(x)_ .
+
+====
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/Ajustement.adoc[Ajustement],
+xref:/commands/AjustExp.adoc[AjustExp], xref:/commands/AjustImplicite.adoc[AjustImplicite],
+xref:/commands/AjustLin.adoc[AjustLin], xref:/commands/AjustLinX.adoc[AjustLinX],
+xref:/commands/AjustLogistique.adoc[AjustLogistique], xref:/commands/AjustPoly.adoc[AjustPoly],
+xref:/commands/AjustPuissance.adoc[AjustPuissance] et xref:/commands/AjustSin.adoc[AjustSin].
+
+[NOTE]
+====
+
+*Note :* La constante d'Euler ℯ peut être obtenue en pressant [.kcode]#Alt # + [.kcode]# e#.
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+à une différence d'ordre dans l'affichage _3 ln(x) - 2_ .

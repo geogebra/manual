@@ -1,0 +1,33 @@
+= Comando DerivadaParamétrica
+:page-en: commands/ParametricDerivative_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+*DerivadaParamétrica*[ <Curva x=x(t), y=y(t)> ]::
+  Da por resultado una nueva xref:/Curvas.adoc[*_curva paramétrica_*] dada por _stem:[ \left( x(t), \frac\{y'(t)}\{
+  x'(t)} \right) ]_.
+
+[EXAMPLE]
+====
+
+*`++DerivadaParamétrica[Curva[2t, t², t, 0, 10]]++`*
+
+* da por resultado la curva paramétrica _(x(t) = 2t, y(t) = t)_
+* la curva dada como argumento para el comando es la función;*_f(x)=stem:[ \frac\{x²}\{4}]_*
+* el resultado es la derivada de la función: _f'(x)=stem:[ \frac\{x}\{2}]_.
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/Derivada.adoc[Derivada].
+
+====

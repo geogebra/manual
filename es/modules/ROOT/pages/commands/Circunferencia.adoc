@@ -1,0 +1,51 @@
+= Comando Circunferencia
+:page-en: commands/Circle_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Circunferencia( <Punto (centro)>, <Número o Valor numérico (radio)> )::
+  Establece la circunferencia con centro en el punto indicado y radio de longitud igual a la del valor dado.
+Circunferencia( <Punto>, <Segmento> )::
+  Establece la circunferencia con centro en el punto indicado y radio de longitud dada por el segmento.
+Circunferencia( <Punto (centro)>, <Punto> )::
+  Establece la circunferencia con centro en el primer punto indicado, que pasa por el segundo.
+Circunferencia( <Punto>, <Punto>, <Punto> )::
+  Establece la circunferencia que pasa por cada uno de los tres puntos dados (si los tres puntos no están alineados).
+
+[NOTE]
+====
+
+Ver también:
+
+* /Archivo:Tool_Compasses_gif.adoc[image:Tool_Compasses.gif[Tool Compasses.gif,width=32,height=32]]
+xref:/tools/Compás.adoc[Compás]
+* /Archivo:Tool_Circle_Center_Point_gif.adoc[image:Tool_Circle_Center_Point.gif[Tool Circle Center
+Point.gif,width=32,height=32]] xref:/tools/Circunferencia_(centro_punto).adoc[Circunferencia (centro-punto)]
+* /Archivo:Tool_Circle_Center_Radius_gif.adoc[image:Tool_Circle_Center_Radius.gif[Tool Circle Center
+Radius.gif,width=32,height=32]] xref:/tools/Circunferencia_(centro_radio).adoc[Circunferencia (centro-radio)]
+* /Archivo:Tool_Circle_3Points_gif.adoc[image:Tool_Circle_3Points.gif[Tool Circle 3Points.gif,width=32,height=32]]
+xref:/tools/Circunferencia_por_tres_puntos.adoc[Circunferencia por tres puntos].
+
+====
+
+Circunferencia( <Recta>, <Punto> )::
+  Crea una circunferencia con la recta como eje y que pasa a través del punto.
+Circunferencia( <Punto>, <Radio>, <Dirección> )::
+  Crea una circunferencia con el centro y radio indicados y con eje paralelo a la dirección, que puede ser una recta, un
+  vector o un plano (en este caso, la dirección será su vector normal).
+Circunferencia( <Punto>, <Punto>, <Dirección> )::
+  Crea una circunferencia con centro en el primer punto, que pasa por el segundo punto y cuyo eje es paralelo a la
+  dirección.
+
+[EXAMPLE]
+====
+
+`++Circunferencia( <Punto>, <Radio>, <Plano> )++` da por resultado una circunferencia paralela al plano.
+
+====
+
+[NOTE]
+====
+
+Si utilizas `++x = 0++` o `++y = 0++` en el parámetro _Dirección_ esta será interpretada como plano y no como recta
+
+====

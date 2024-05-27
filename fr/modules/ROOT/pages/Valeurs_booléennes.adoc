@@ -1,0 +1,74 @@
+= Valeurs booléennes
+:page-en: Boolean_values
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Vous pouvez utiliser les valeurs booléennes _true_ et _false_ dans GeoGebra. Tapez simplement, par exemple,
+`++a = true++` ou `++b = false++` dans le champ de xref:/Saisie.adoc[Saisie] et pressez la touche Entrée.
+
+== Cases à cocher et Touches flèches/espace
+
+Les valeurs booléennes libres peuvent être affichées par des cases à cocher dans xref:/Graphique.adoc[Graphique] (voir
+l'outil /Fichier:Mode_showcheckbox_png.adoc[image:Mode_showcheckbox.png[Mode
+showcheckbox.png,width=32,height=32]]xref:/tools/BoîteSélection.adoc[BoîteSélection]). En utilisant les touches _flèche_
+ou la touche "espace" de votre clavier, vous pouvez aussi changer vos valeurs booléennes dans Algèbre (voir section
+xref:/Animation.adoc[Animation manuelle]).
+
+[NOTE]
+====
+
+*Note :* Vous pouvez utiliser les valeurs booléennes comme des nombres de valeur 0 ou 1. Ceci vous permet d'utiliser une
+case à cocher comme vitesse dynamique d'un curseur animé, vous permettant ainsi de démarrer ou arrêter l'animation. Dans
+ce cas le bouton d'animation n'est affiché dans Graphique que s'il existe aussi un autre curseur dont la vitesse
+d'animation n'est pas dynamique.
+
+====
+
+== Opérations
+
+Vous pouvez utiliser les opérations suivantes pour les valeurs booléennes et l'écriture de conditions dans GeoGebra en
+les sélectionnant dans la table de symboles qui s'ouvre lorsque l'on clique sur le stem:[\fbox\{α}] à droite dans le
+champ de Saisie ou en les entrant au clavier :
+
+[NOTE]
+====
+
+*Note :* Intégrer le symbole ≟ dans un texte LaTeX par `++\stackrel{?}{=}++`, ou la macro `++\questeq++`.
+
+====
+
+[cols=",,,,",options="header",]
+|===
+|Opérations |Table |Clavier |Exemple |Types d'objets
+|Égal |≟ |== |a ≟ b ou a == b |nombres, points, lignes, coniques a, b
+
+|Différent |≠ |!= |a ≠ b ou a != b |nombres, points, lignes, coniques a, b
+
+|Plus petit que |< |< |a < b |nombres a, b
+
+|Plus grand que |> |> |a > b |nombres a, b
+
+|Plus petit ou égal à |≤ |<= |a ≤ b ou a <= b |nombres a, b
+
+|Plus grand ou égal à |≥ |>= |a ≥ b ou a >= b |nombres a, b
+
+|Et |∧ |&& |a ∧ b ou a && b |booléens a, b
+
+|Ou |∨ || | |a ∨ b ou a || b |booléens a, b
+
+|Non |¬ |! |¬a ou !a |booléen a
+
+|Ou exclusif | |[.kcode]##Alt##[.kcode]##+## |a ⊕ b |booléens a, b
+
+|Implication |→ |-> |a -> b |booléens a et b, c:a -> b toujours _true_ sauf dans le cas _a=true_ [.underline]#et#
+_b=false_
+
+|Parallèles |∥ | |a ∥ b |lignes a, b
+
+|Perpendiculaires |⊥ | |a ⊥ b |lignes a, b
+
+|Appartient à |∈ | |a ∈ liste1 |objet a, liste liste1
+
+|contenu dans |⊆ | |liste1 ⊆ liste2 |listes liste1 et liste2
+
+|strictement contenu dans |⊂ | |liste1 ⊂ liste2 |listes liste1 et liste2
+|===

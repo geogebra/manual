@@ -1,0 +1,23 @@
+= Comando Erlang
+:page-en: commands/Erlang_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Erlang( <Forma __k__>, <Proporción __λ__>, x )::
+  Crea la función de distribución acumulada de la
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_de_Erlang[distribución de Erlang] con factor de forma _k_ y de
+  proporción _λ_.
+Erlang( <Forma __k__>, <Proporción __λ__>, x, <Acumulada (true/false)> )::
+  Si _Acumulada_ es verdadero, crea la función de distribución acumulada de la distribución de Erlang, de lo contrario
+  crea su función de densidad de probabilidad.
+Erlang( <Forma __k__>, <Proporción __λ__>, <Valor variable __v__> )::
+  Evalúa la función de distribución acumulada de la distribución de Erlang en el valor variable _v_, por ejemplo, la
+  probabilidad _P(X ≤ v)_ donde _X_ es una variable aleatoria con distribución de Erlang definida por los parámetros
+  factor de forma _k_ y de proporción _λ_.
+
+[NOTE]
+====
+
+Devuelve la probabilidad para un valor dado de _x_ (o el área bajo la curva de la distribución de Erlang a la izquierda
+del _x_ dado).
+
+====

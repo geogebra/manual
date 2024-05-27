@@ -1,0 +1,112 @@
+= Fonctions
+:page-en: Functions
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Pour entrer une fonction vous pouvez utiliser des variables définies antérieurement (par ex. des nombres, des points,
+des vecteurs) ainsi que des autres fonctions.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* Fonction f: `++f(x) = 3 x^3 – x^2++`
+* Fonction g: `++g(x) = tan(f(x))++`
+* Fonction non nommée : `++sin(3 x) + tan(x)++`
+* Fonction puissance d'exposant rationnel (d'ensemble de définition IR : `++h(x) = x^(1/5)++`
+* Fonction puissance d'exposant réel (restriction de la précédente à IR^+^ : `++p(x) = x^(0.2)++`
+
+====
+
+[NOTE]
+====
+
+*Note :* Toutes les fonctions pré-définies (par ex. sin, cos, tan) sont décrites dans la section
+xref:/Opérateurs_et_fonctions_pré_définies.adoc[Opérateurs_et_fonctions_pré-définies].
+
+====
+
+Dans GeoGebra vous pouvez aussi utiliser des commandes pour obtenir par exemple,
+l'xref:/commands/Intégrale.adoc[intégrale] ou la xref:/commands/Dérivée.adoc[dérivée] d'une fonction. Vous pouvez
+utiliser la commande xref:/commands/Si.adoc[Si] pour obtenir des fonctions conditionnelles.
+
+[NOTE]
+====
+
+*Note :* Vous pouvez aussi utiliser les commandes f'(x) ou f''(x), … pour obtenir les dérivées première et seconde d'une
+fonction f définie précédemment.
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :* Définir la fonction _f_ par `++f(x) = 3 x^3 – x^2++`. Ensuite, vous pouvez valider
+`++g(x) = cos(f' (x + 2))++` pour définir une fonction _g_.
+
+====
+
+En outre, les courbes représentatives peuvent être translatées (voir la commande
+xref:/commands/Translation.adoc[Translation] ) et une courbe de fonction libre peut être déplacée avec la souris (voir
+le mode /Fichier:Tool_Move_gif.adoc[image:Tool_Move.gif[Tool Move.gif,width=32,height=32]]
+xref:/tools/Déplacer.adoc[Déplacer]). Les autres xref:/commands/Commandes_Transformations.adoc[Commandes
+Transformations] peuvent être aussi appliquées aux courbes représentatives, mais dans la plupart des cas, la courbe
+image n'est plus une courbe représentative de fonction.
+
+== Restriction d'une fonction à un Intervalle
+
+Pour restreindre une fonction à un intervalle [a ; b], utilisez la commande xref:/commands/Si.adoc[Si].
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Si(x≥3 ∧ x≤5,x^2)++` ou plus simplement `++Si(3≤ x≤5,x^2)++` définit la restriction de stem:[ f : x
+\mapsto x^2] à l'intervalle [3,5]
+
+Maintenant une saisie telle que `++x²,3<=x<=5++` fait aussi bien l'affaire.
+
+Ne pas confondre avec x² **(**3<=x<=5*)* qui vous définira une fonction sur IR, égale à x² sur [3,5] et nulle sinon.
+
+====
+
+== Algèbre vs CAS
+
+Une différence (assumée) de comportement :
+
+[cols=",,",options="header",]
+|===
+|... |Algèbre |CAS
+|Entrée |f(x)=1/x |g(x):=1/x
+|Sortie |stem:[f(x)=\frac\{1}\{x} ] |stem:[g(x):=\frac\{1}\{x} ]
+|Entrée |f(0) |g(0)
+|Sortie |a=∞ |?
+|===
+
+== Fonctions à plusieurs variables
+
+Vous pouvez définir dans GeoGebra des fonctions à plusieurs variables :
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+à deux variables
+
+1/ `++f(x, y) = x^2 + y^2++` dont la représentation graphique, une paraboloïde, est affichée en fenêtre 3D Vous pouvez
+aussi vous en servir pour définir des fonctions à une seule variable par ex. g. `++g(x) = f(x, 2)++` dont la
+représentation graphique, une parabole, est affichée en fenêtre 2D
+
+2/ `++f(x, y) = abs(x) + abs(y)++`.
+
+Utilisation ? : [.underline]#Les fonctions à 2 (ou 3) variables acceptent les points ou vecteurs 2D (ou 3D) comme
+arguments#.
+
+Soit, dans Graphique, 3 points A, B et C, `++f(A) ++` vous retournera la "Distance Taxi" de A à l'origine,
+`++f(Vecteur[B,C)] ++` vous retournera la "Distance Taxi" de B à C.
+
+à plus de 2 variables,
+
+`++h(a,b,c)=a+b+c ++` et si A est un point de Graphique 3D, `++h(A) ++` vous retournera la somme des coordonnées de A.
+
+====

@@ -1,0 +1,126 @@
+= Comando Curvatura
+:page-en: commands/Curvature_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+Curvatura( <Punto>, <[[Objetos|Objeto)]> ]::
+  Establece la curvatura del objeto (xref:/Funciones.adoc[función], xref:/Curvas.adoc[curva],
+  xref:/Secciones_Cónicas.adoc[cónica]) en el punto dado.
+
+Así:
+
+*Curvatura*[ <Punto>, <Función> ]:Calcula la curvatura de la función en el punto dado.
+
+[EXAMPLE]
+====
+
+Dado el punto *_A_*, `++Curvatura[A, x²]++` da por resultado _2_ cuando *_A_* ocupa el origen de coordenadas.
+
+====
+
+*Curvatura*[ <Punto>, <Curva> ]:Calcula la curvatura de la curva en el punto dado.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* `++Curvatura[(0, 0), Curva[cos(t), sin(2t), t, 0, π]]++` da por resultado
+_0_.`++Curvatura[A, AjustePolinómico[{A, B, C, D}, 3]]++` dados los puntos indicados, da por resultado el valor
+correspondiente acorde a la posición de **_A_**Dada la _f~lg~1~~_ de la ilustración posterior, se calcula la _curvatura_
+en un punto *_P~c~_* simplemente anotando:**`++cu_r := Curvatura[P_c, f_{lg_1}]++`**En el boceto se calculó también la
+xref:/commands/Pendiente.adoc[pendiente] en P_c de _f~lg~1~~_
+
+====
+
+[.small]##
+
+[EXAMPLE]
+====
+
+`++Curvatura[(0, 0), Cónica[{1, 1, 1, 2, 2, 3}]]++` da por resultado _0.15_.Sin embargo, al crear una elipse en un
+plano, incluso en el *_xOy_*, aún no opera acorde a lo esperado:Curvatura[ <Puto A>, <Cónica c> ]
+
+====
+
+'''''
+
+== Ejemplos y Variantes
+
+* *Curvatura[ <Punto>, <Función> ]*
+
+[EXAMPLE]
+====
+
+`++Curvatura[(0 ,0), x^2]++` da _2_.
+
+====
+
+* *Curvatura[ <Punto>, <Curva> ]*
+
+[EXAMPLE]
+====
+
+`++Curvatura[(0, 0), Curva[cos(t), sin(2t), t, 0, π]]++` da _0_.
+
+====
+
+* *Curvatura[ <Punto>, <Cónica> ]*
+
+[EXAMPLE]
+====
+
+`++Curvatura[(-1, 0), Cónica[{1, 1, 1, 2, 2, 3}]]++` da _2_.
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] la xref:/Vista_CAS.adoc[Vista C~[.small]#omputación#~A~[.small]#lgebraica#~S~[.small]#imbólica#~]
+
+Obra del modo ya descripto sin admitir literales más que para componer operaciones simbólicas.
+
+'''''
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/Pendiente.adoc[Pendiente] y
+xref:/commands/CírculoOsculador.adoc[CírculoOsculador].
+
+====
+
+== Cambios en la Curvatura
+
+En la ilustración se calculó también la xref:/commands/Pendiente.adoc[pendiente] en P_c de _f~lg~1~~_ para crear dos
+puntos determinados por la abscisa de P~c~ y sendas ordenadas acorde a la _curvatura_ y la
+xref:/commands/Pendiente.adoc[Pendiente] respectivamente.Ambos puntos de coordenadas (x(P_c), cu_r) y (x(P_c), m) dan
+lugar a correspondientes _lugares geométricos_ que permiten _estudiar_ cómo varía la curvatura a medida que varía la
+abscisa de P_c y otro tanto con la _curvatura_.
+
+'''''
+
+[.small]#Se parte de una función surgida de un xref:/commands/AjustePolinómico.adoc[AjustePolinómico] acotado por el
+valor del deslizador en marcha. xref:/commands/AjustePolinómico.adoc[AjustePolinómico] desde los puntos de un _lugar
+geométrico_ representativo del xref:/commands/ResuelveEDO.adoc[ResuelveEDO] (resolución de la _ecuación diferencial
+ordinaria_);*`++f_{lg_1} := AjustePolinómico[Primero[lg_1, Longitud[lg_1]], round(x_{(F)})]++`*#
+
+'''''
+
+Del punto _P_c_ en esa función se toman curvatura _cu_r_ y xref:/commands/Pendiente.adoc[pendiente] _m_ para dar lugar
+al par de puntos: *`++(x(P_c), cu_r)++`* y *`++(x(P_c), m)++`*
+
+Desde estos puntos se origina un _lugar geométrico_ para estudiar la curvatura y otro para la pendiente a medida que el
+xref:/commands/AjustePolinómico.adoc[AjustePolinómico] va quedando acotado por el valor del _deslizador_
+*`++x_{(F)}++`*./Archivo:Curvatura_y_Pendiente_lgs_gif.adoc[image:Curvatura_y_Pendiente_lgs.gif[Curvatura y Pendiente
+lgs.gif,width=655,height=549]]
+
+'''''
+
+[.small]##
+
+[.small]#Vale analizar en conjunto los cambios en la pendiente y en la curvatura en relación a la función que les da
+origen.#

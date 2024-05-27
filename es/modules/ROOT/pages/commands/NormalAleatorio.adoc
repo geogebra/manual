@@ -1,0 +1,48 @@
+= Comando NormalAleatorio
+:page-en: commands/RandomNormal_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+NormalAleatorio( <Media>, <Desviación Estándar> )::
+  Genera un número aleatorio a partir de una
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_normal#Generaci.C3.B3n_de_valores_para_una_variable_aleatoria_normal[distribución
+  normal], dadas la _media_ y la http://en.wikipedia.org/wiki/es:Desviaci%C3%B3n_est%C3%A1ndar[_desviación estándar_].
+
+[EXAMPLE]
+====
+
+*`++NormalAleatorio[3, 0.1]++`* establece un valor aleatorio, como _3.04_, a partir de una distribución normal con una
+media de _3_ y http://en.wikipedia.org/wiki/es:Desviaci%C3%B3n_est%C3%A1ndar[desviación estándar] _0.1_.[.small]#El
+resultado cambia cada vez que se pulsa [.kcode]#F9#.#
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] la xref:/Vista_CAS.adoc[Vista C~[.small]#omputación#~A~[.small]#lgebraica#~S~[.small]#imbólica#~]
+
+El comando obra del modo ya descripto y se admiten literales para operar simbólicamente en esta
+xref:/Vista_CAS.adoc[vista]
+
+[EXAMPLE]
+====
+
+*`++NormalAleatorio[3 k, 0.1 + ñ] ++`* establece un valor aleatorio, como _3k + 1.28ñ + 0.13]_, a partir de una
+distribución normal con una media de _3 k_ y http://en.wikipedia.org/wiki/es:Desviaci%C3%B3n_est%C3%A1ndar[desviación
+estándar] _0.1 + ñ_.[.small]#El resultado cambia cada vez que se reintroduce el comando pulsando [.kcode]#Intro# en la
+fila correspondiente.#
+
+====
+
+[NOTE]
+====
+
+Ver también:xref:/Operadores_y_Funciones_Predefinidas.adoc[Operadores y Funciones Predefinidas] como *random()* y otros
+vinculados a probabilidad.Los comandos...
+
+* xref:/commands/FijaSemilla.adoc[FijaSemilla]
+* xref:/commands/AleatorioEntre.adoc[AleatorioEntre]
+* xref:/commands/Elemento.adoc[Elemento]
+* xref:/commands/ElementoAleatorio.adoc[ElementoAleatorio]
+* xref:/commands/BinomialAleatorio.adoc[BinomialAleatorio]
+* xref:/commands/UniformeAleatorio.adoc[UniformeAleatorio]
+* xref:/commands/PoissonAleatorio.adoc[PoissonAleatorio].
+
+====

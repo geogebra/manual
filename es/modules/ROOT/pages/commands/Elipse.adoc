@@ -1,0 +1,46 @@
+= Comando Elipse
+:page-en: commands/Ellipse_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Elipse( <Punto (Foco)>, <Punto (Foco)>, <Longitud del Semieje mayor> )::
+  Crea una elipse con los focos indicados y la longitud indicada para el semieje mayor.
+
+[EXAMPLE]
+====
+
+`++Elipse((0, 1), (1, 1), 1)++` da por resultado _12x² + 16y² - 12x - 32y = -7_.
+
+====
+
+[NOTE]
+====
+
+Si la condición: _2*longitud del semieje mayor > Distancia entre los focos_ no se satisface, se obtiene una hipérbola.
+
+====
+
+Elipse( <Punto (Foco)>, <Punto (Foco)>, <Segmento (semieje mayor> )::
+  Crea una elipse cuyos focos son los puntos dados, y cuyo semieje mayor tiene una longitud igual a la del segmento.
+Elipse( <Punto (Foco)>, <Punto (Foco)>, <Punto (en la elipse)> )::
+  Crea una elipse cuyos focos son los dos primeros puntos indicados y que pasa por el tercero de ellos.
+
+[EXAMPLE]
+====
+
+`++Elipse((0, 1), (2, 1), (1,2))++` da por resultado _1x² + 2y² - 2x - 4y = -1_.
+
+====
+
+[EXAMPLE]
+====
+
+Sea _s = Segmento((0,1), (2,1))_ : `++Elipse((0, 1), (2, 1), s)++` da por resultado _3x² + 4y² - 6x - 8y = 5_.
+
+====
+
+[NOTE]
+====
+
+Ver también image:24px-Mode_ellipse3.svg.png[Mode ellipse3.svg,width=24,height=24] xref:/tools/Elipse.adoc[Elipse].
+
+====

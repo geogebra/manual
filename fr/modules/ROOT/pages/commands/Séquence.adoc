@@ -1,0 +1,106 @@
+= Commande Séquence
+:page-en: commands/Sequence_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Séquence( <Expression e>, <Variable k>, <de a>, <à b> )::
+  Liste des objets créés en utilisant l’expression _e_ et l’indice _k_ variant du nombre _a_ au nombre _b_.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++L = Séquence((2, i), i, 1, 5)++` crée une liste de 5 points dont l’ordonnée varie de 1 à 5 : L = \{_(2, 1), (2, 2),
+(2, 3), (2, 4), (2, 5)_} ;
+
+`++Séquence(x^i, i, 1, 10)++` retourne la liste \{_x, x², x³, x⁴, x⁵, x⁶, x⁷, x⁸, x⁹, x¹⁰_}.
+
+====
+
+Séquence( <Expression e>, <Variable k>, <de a>, <à b>, <pas p> )::
+  Liste des objets créés en utilisant l’expression _e_ et l’indice _k_ variant du nombre _a_ au nombre _b_ avec le pas
+  _p_.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++L = Séquence((2, i), i, 1, 3, 0.5)++` liste de 5 points dont l’ordonnée varie de 1 à 3 avec un pas de 0.5.: L =
+\{_(2, 1), (2, 1.5), (2, 2), (2, 2.5), (2, 3)_};
+
+`++Séquence(x^i, i, 1, 10, 2)++` retourne la liste \{_x, x³, x⁵, x⁷, x⁹_}.
+
+====
+
+Séquence( <Entier final n > )::
+  Liste des nombres de 1 à _n_, i.e. \{1,2,...,n}.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++Séquence(5)++` crée la liste \{_1, 2, 3, 4, 5_} ;
+
+`++L = 2^Séquence(4)++` crée la liste \{_2, 4 8, 16_}.
+
+[NOTE]
+====
+
+*Note :* Voir xref:/Listes.adoc[Listes] pour plus d'informations à propos des opérations sur les listes.
+
+====
+
+====
+
+Séquence( <Entier initial i >, <Entier final n > )::
+  Liste des entiers naturels ou relatifs successifs de _i_ à _n_ (croissante ou décroissante).
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++Séquence(7,13)++` crée la liste \{_7, 8, 9, 10, 11, 12, 13_} ;
+
+`++Séquence(18,14)++` crée la liste \{_18, 17, 16, 15, 14_} ;
+
+`++Séquence(-5, 5)++` crée la liste \{_-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5_} .
+
+[NOTE]
+====
+
+*Note :* Cette syntaxe possède un raccourci `++Séquence(7,13)++` peut être saisi tout simplement sous la forme
+`++7..13++` .
+
+====
+
+====
+
+[NOTE]
+====
+
+*Note :* Puisque les paramètres _a_ et _b_ et _n_ sont dynamiques, vous pouvez utiliser des
+xref:/tools/Curseur.adoc[curseurs].
+
+====
+
+*Non documentée : Séquence( de, à, pas )*
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Séquence(1.125,7.89,0.75)++` crée la liste \{_1.125, 1.875, 2.625, 3.375, 4.125, 4.875, 5.625, 6.375, 7.125, 7.875_}
+(option affichage 3 décimales)
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel

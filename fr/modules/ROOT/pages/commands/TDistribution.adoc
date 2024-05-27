@@ -1,0 +1,33 @@
+= Commande TDistribution
+:page-en: commands/TDistribution_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+TDistribution( <Degré Liberté d>, <Valeur Variable v> )::
+  Calcule la valeur de la fonction cumulée de la loi de Student en _v_, i.e. la probabilité _P(X≤v)_ où _X_ est une
+  variable aléatoire suivant une loi de Student avec _d_ degrés de liberté.
+
+[NOTE]
+====
+
+*Note :* Retourne la probabilité pour une valeur donnée d'abscisse (ou l'aire sous la courbe de la loi de Student, à
+gauche de l'abscisse donnée).
+
+====
+
+TDistribution( <Degré Liberté d>, <Valeur Variable v> , <Booléen Cumul> )::
+  Si _Cumul_ est _true_, calcule la valeur de la fonction densité cumulée de probabilité de la loi de Student, sinon
+  calcule la valeur de la fonction densité de probabilité de la loi de Student.
+
+TDistribution( <Degré Liberté d>, x, <Booléen Cumul> )::
+  Si _Cumul_ est _true_, crée la fonction densité cumulée de probabilité de la
+  http://en.wikipedia.org/wiki/fr:Loi_de_Student[loi de Student] avec _d_ degrés de liberté, sinon en crée la fonction
+  densité de probabilité.
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Seule la syntaxe suivante est utilisable dans xref:/Calcul_formel.adoc[Calcul formel] :
+
+TDistribution( <Degré Liberté d>, <Valeur Variable> )

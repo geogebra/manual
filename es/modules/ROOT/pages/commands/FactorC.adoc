@@ -1,0 +1,55 @@
+= Comando FactorC
+:page-en: commands/CFactor_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+== xref:/Vista_CAS.adoc[image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]]xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[De] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+Este xref:/commands/Comandos_CAS.adoc[comando], que factoriza la expresión respecto de la variable principal o de la
+indicada, aborda soluciones xref:/Números_complejos.adoc[**ℂ**omplejas] y admite literales en operaciones simbólicas.
+
+FactorC( <Expresión> )::
+  Factoriza la expresión, admitiendo literales y factores xref:/Números_complejos.adoc[[.small]##*ℂ*##omplejos].
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++FactorC[x³+ñ/2sqrt(-3)x²-1/3sqrt(-7)x+ ñ/6sqrt(21)]++`*
+xref:/tools/Evalúa.adoc[da][.small]##[.small]#/Archivo:Mode_evaluate_png.adoc[image:Mode_evaluate.png[Mode
+evaluate.png,width=32,height=32]]### stem:[\frac\{1}\{6} (\sqrt\{7} + 3ί x²) (\sqrt\{3} ñ - 2ί x)] y
+xref:/tools/Valor_Numérico.adoc[aproximadamente]^[.small]#xref:/tools/Valor_Numérico.adoc[Decimales] según
+xref:/Menú_de_Opciones.adoc[_redondeo_]#^ da /Archivo:Mode_numeric_png.adoc[image:Mode_numeric.png[Mode
+numeric.png,width=32,height=32]] __0.8 x³ + 0.9ί x² ñ - 0.9ί x + 0.8 ñ__xref:/tools/Valor_Numérico.adoc[Resultaría] con
+decimales según xref:/Menú_de_Opciones.adoc[_redondeo_], *`++FactorC[v^2 + x(A)^2]++`*
+/Archivo:Mode_numeric_png.adoc[image:Mode_numeric.png[Mode numeric.png,width=32,height=32]] _(v + 0.5 ί) (x - 0.5 ί)_
+siendo _v_ la variable principal y dependiendo de la posición del punto __A__**`++FactorC[x^2 + 4]++`** da _(x + 2 ί) (x
+- 2 ί)_, la factorización de x^2^ + 4.*`++FactorC[x^(2k) + ñ^(2k)]++`* [.small]## da stem:[\{ \left( x^\{k} + ί ñ^\{k}
+\right) \left( x^\{k} - ί ñ^\{k} \right)
+}]**`++FactorC[-6k^3 x ñ^2 - 3 k^2 x^2 ñ - 2 k^2 ñ^3 + 3 k x^3 - k x ñ^2 + x^2 ñ]++`** da _(3x k + ñ) (x + k ñ) (x - 2k
+ñ)_
+
+====
+
+FactorC( <Expresión>, <Variable> )::
+  Factoriza la expresión según la variable indicada, admitiendo literales y factores
+  xref:/Números_complejos.adoc[[.small]##*ℂ*##omplejos].
+
+[EXAMPLE]
+====
+
+*Ejemplos:*  *`++FactorC[v^2+4 x^2, v]++`* resulta __(v + 2 ί x) (v -2 ί x)__**`++FactorC[a^2 + x^2, a]++`** da _(a + ί
+x) (a - ί x)_, la factorización de _a^2^ + x^2^_ con respecto a __a__**`++FactorC[a^2 + v^2, v]++`** da _(v + ί a) (v -
+ί a)_, la factorización de _a^2^ + v^2^_ con respecto a _v_.
+
+====
+
+[NOTE]
+====
+
+*Notas:* Este comando opera con http://en.wikipedia.org/wiki/es:Entero_gaussiano[_enteros gaussianos_] de entre el
+conjunto xref:/Números_complejos.adoc[*ℂ*] de los
+http://en.wikipedia.org/wiki/es:N%C3%BAmero_complejo[_[.small]##*ℂ*##omplejos_] y
+xref:/commands/Factoriza.adoc[Factoriza], con *ℚ*, el de los
+http://en.wikipedia.org/wiki/es:N%C3%BAmero_racional[Números Racionales]Ver los comandos
+xref:/commands/Factoriza.adoc[Factoriza] y xref:/commands/Factores.adoc[Factores].
+
+====

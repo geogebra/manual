@@ -1,0 +1,61 @@
+= Comando Muestra
+:page-en: commands/Sample_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+Muestra( <Lista>, <Tamaño> )::
+  Da por resultado una lista del _tamaño_ especificado, tomando aleatoriamente ese número de elementos. Cada uno de los
+  elementos puede ser tomado más de una vez de la lista original.Así, *Muestra*[ li, n ] xref:/Listas.adoc[_lista_] _n_
+  elementos tomados aleatoriamente de _li_.
+Muestra( <Lista>, <Tamaño>, <Repetición o no (true|false)> )::
+  Da por resultado una lista tomando aleatoriamente un número de elementos, acorde al tamaño especificado.
+  Si el valor _booleano_ es verdadero^_true_^ en la elección pueden ser tomados más de una vez los escogidos de la lista
+  original.
+  Si el valor _booleano_ es falso^_false_^, solo puede tomarse cada elemento en una única ocasión.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+`++Muestra[{1, 2, 3, 4, 5}, 5, true]++` puede dar un resultado como el siguiente: _\{2, 3, 3, 4,
+5}_.`++Muestra[{1, 2, 3, 4, 5}, 4, false]++` puede dar un resultado como el siguiente: _\{4, 3, 2, 5}_
+
+====
+
+[EXAMPLE]
+====
+
+*`++Muestra[{1, 2, 3, 4, 5}, 5]++`* da, por ejemplo, _\{1, 2, 1, 5, 4}_.
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+Se admite cada una de las variantes previas.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Muestra[{1, 2, 3, 4, 5}, 5, true]++`* puede establecer, entre otras, la lista siguiente:
+_\{2,3,3,4,5}_.*`++Muestra[{-5, 2, ñ, 7, ú}, 3]++`* puede establecer, entre otras, una xref:/Listas.adoc[lista] como la
+siguiente: _\{7, ú, -5}_.`++Muestra[ {Secuencia[3], 4, 5, 6, 7, 8}, 3, false]++` puede, entre otras, establecer
+_\{**\{**1, 2, 3**}**, 8, 7}_.*`++Muestra[{estar, o no estar, contigo, es la medida, de mi tiempo}, 5]++`* puede dar,
+entre otras, la siguiente xref:/Listas.adoc[lista]:_\{contigo, es la medida, estar, es la medida, contigo}_
+
+====
+
+[NOTE]
+====
+
+En la variante...*`++Muestra[ <Lista>, <Tamaño>, <Repetición o no (true|false)> ]++`*... pueden incluirse, además de
+literales, xref:/Listas.adoc[listas] dentro de la _Lista_.
+
+====

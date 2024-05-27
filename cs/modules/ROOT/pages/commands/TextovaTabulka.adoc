@@ -1,0 +1,71 @@
+= Příkaz TextovaTabulka
+:page-en: commands/TableText_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+TextovaTabulka [ <Seznam 1>, <Seznam 2>, ... ]::
+  Vytvoří text, který obsahuje tabulku s objekty ze _seznamu_.
+
+[EXAMPLE]
+====
+
+* Výsledkem příkazu `++TextovaTabulka[{x^2, 4}, {x^3, 8}, {x^4, 16}]++` je tabulka jako textový objekt, tvořený třemi
+řádky a dvěma sloupci. Všechny položky v tabulce jsou zarovnány vlevo.
+* Výsledkem příkazu `++TextovaTabulka[Sequence[i^2, i, 1, 10]]++` je tabulka jako textový objekt, tvořený jedním řádkem.
+Všechny položky v tabulce jsou zarovnány vlevo.
+
+====
+
+[NOTE]
+====
+
+Ve výchozím nastavení je každý _seznam_ zobrazen v jednom řádku tabulky.
+
+====
+
+TextovaTabulka [ <Seznam 1>, <Seznam 2>, ...<Zarovnání textu> ]::
+  Vytvoří text obsahující tabulku s objekty ze _seznamu_. Volitelný text "zarovnání textu" řídí orientaci a zarovnání
+  textu v tabulce.
+
+[EXAMPLE]
+====
+
+* `++TextovaTabulka[{1,2,3,4},{1,4,9,16},"v"]++` vytvoří tabulku se dvěma sloupci a čtyřmi rádky, jejíž prvky jsou
+zarovnány vlevo.
+* `++TextovaTabulka[{1,2,3,4},{1,4,9,16},"h"]++` vytvoří tabulku se dvěma řádky a čtyřmi sloupci, jejíž prvky jsou
+zarovnány vlevo.
+* `++TextovaTabulka[{11.2,123.1,32423.9,"234.0"},"vr"]++` vytvoří tabulku tvořenou jedním sloupcem, jejíž prvky jsou
+zarovnány vpravo.
+
+====
+
+[NOTE]
+====
+
+Možné hodnoty jsou "vl", "vc", "vr", "v", "h", "hl", "hc", "hr". Výchozí je "hl".
+
+* "v" = svisle (vertical), tj. seznamy tvoří sloupce
+* "h" = vodorovně (horizontal), tj. seznamy tvoří řádky
+* "l" = zarovnání vlevo (left)
+* "r" = zarovnání vpravo (right)
+* "c" = vycentrovat (center)
+
+====
+
+Oddělovače lze specifikovat pomocí řetězce znaků ||||, ||, \{}, [] nebo (), vodorovné čáry lze zadat pomocí symbolu _ a
+svislé čáry pomocí symbolu | .
+
+[EXAMPLE]
+====
+
+* `++TableText[{{1,2},{3,4}},"c()"]++`
+* `++TableText[{{1,2},{3,4}},"c|_"]++`
+* `++TableText[{{1,2},{3,4}},"c||"]++`
+* `++TableText[{{1,2},{3,4}},"c||||"]++`.
+
+====
+
+[NOTE]
+====
+
+Anglická verze: /s_index_php?title=En:Manual:TableText_Command_action=edit_redlink=1.adoc[TableText]
+====

@@ -1,0 +1,56 @@
+= Commande Périodes
+:page-en: commands/Periods_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Périodes( <Taux>, <Paiement>, <Valeur Actuelle>, <Valeur Future (optionnelle)>, <Type (optionnel)> )::
+  Renvoie le nombre de versements nécessaires pour rembourser un emprunt, à taux d'intérêt constant.
+
+* *<Taux>* Taux d'intérêt par période.
+* *<Paiement>* Montant du versement par période.
+* *<Valeur Actuelle>* Montant du prêt.
+* *<Valeur Future (optionnelle)>* Montant désiré après le dernier paiement. Si vous n'entrez pas de _Valeur Future_,
+elle vaudra _0_ par défaut (remboursement total).
+* *<Type (optionnel)>* Indique quand le paiement est effectué. Si vous n'entrez pas de _Type_ (ou entrez _0_), il vaudra
+_0_ par défaut (paiement en fin de période), sinon entrez _1_ pour un paiement en début de période.
+
+[NOTE]
+====
+
+*Note :* Pour tous les arguments et résultats, les sommes payées sont représentées par des valeurs négatives et les
+sommes perçues par des valeurs positives.
+
+====
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* 1) On place 1000 € à intérêts composés sur un compte au taux annuel d'intérêt de 10% .
+
+Au bout de combien de temps ce montant aura-t-il doublé ?
+
+`++Périodes(0.1, 0, -1000, 2000,0)++` retourne _7.27_
+
+Il faudra laisser donc ce montant plus de 7 ans.
+
+* 2) Vous remboursez une dette de 500 € à un taux mensuel de 1%, par mensualité de 30 €.
+
+Combien devrez vous effectuer de versements ?
+
+`++Périodes(1%, -30, 500, 0) ++` retourne _18.32_
+
+====
+
+[NOTE]
+====
+
+*Note :* Assurez vous d'être cohérent pour les arguments `++<Taux>++` et `++<Nombre de Périodes>++`. Si vous calculez un
+remboursement mensuel pour un prêt sur 4 ans avec un taux d'intérêt annuel de 12%, entrez 12%/12 comme taux et 4*12
+comme nombre de périodes.
+
+====
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/Commandes_Financières.adoc[Toutes les commandes
+financières], les autres : xref:/commands/Paiement.adoc[Paiement], xref:/commands/Taux.adoc[Taux],
+xref:/commands/ValeurActuelle.adoc[ValeurActuelle] et xref:/commands/ValeurFuture.adoc[ValeurFuture].

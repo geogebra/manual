@@ -1,0 +1,103 @@
+= Animation
+:page-en: Animation
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+== Animation automatique
+
+GeoGebra vous permet d’animer un ou plusieurs nombres (ou angles) libres en même temps, s’ils sont affichés en tant que
+curseurs dans la vue xref:/Graphique.adoc[Graphique], mais aussi des points dépendants qui sont liés à un objet
+(segment, droite, fonction, courbe, etc.).
+
+Si vous voulez animer un nombre (ou angle) libres dans GeoGebra, ou un point dépendant, vous cliquez droit (MacOS:
+Ctrl-clic) sur le nombre, sur l’angle ou sur le point et cochez ‘Animer’ dans le
+xref:/Menu_contextuel.adoc[Menu_contextuel]. Et pour arrêter l’animation, enlevez la coche à ‘Animer’ dans ce même Menu
+contextuel.
+
+[NOTE]
+====
+
+*Note :* Si un nombre (ou angle, ou point) est animé, un bouton apparaît dans le coin inférieur gauche de la vue
+Graphique, vous permettant soit de mettre l’animation en /Fichier:Animate_Pause_png.adoc[image:Animate_Pause.png[Animate
+Pause.png,width=16,height=16]] pause , soit de poursuivre /Fichier:Animate_Play_png.adoc[image:Animate_Play.png[Animate
+Play.png,width=16,height=16]] l’animation. *Sauf si* dans les propriétés, vous avez défini _Vitesse_ par une variable,
+dans ce cas le bouton n'est pas affiché.
+
+====
+
+Dans la fenêtre de xref:/Dialogue_Propriétés.adoc[Dialogue_Propriétés], onglet ‘Curseur’ vous pouvez modifier le
+déroulement de l’animation :
+
+D'une part, vous pouvez déterminer la ‘Vitesse’ de l’animation.
+
+[NOTE]
+====
+
+*Note :* Une vitesse de 1 signifie que l’animation parcourt l’intervalle du curseur en environ 10 secondes.
+
+====
+
+D'autre part vous pouvez préciser comment l’animation est répétée :
+
+⇔ Alterné::
+  L’animation se reproduit aller/retour.
+
+⇒ Croissant::
+  L’animation se déroule suivant les valeurs croissantes du curseur. Lorsque son maximum est atteint, elle se poursuit
+  en repartant du minimum.
+
+⇐ Décroissant::
+  L’animation se déroule suivant les valeurs décroissantes du curseur. Lorsque son minimum est atteint, elle se poursuit
+  en repartant du maximum.
+
+⇒ Une fois (croissant)::
+  L’animation se déroule suivant les valeurs croissantes du curseur. Lorsque son maximum est atteint, elle s'arrête.
+
+[NOTE]
+====
+
+*Note :* Pendant qu’une animation automatique est active, GeoGebra demeure pleinement fonctionnel. Ceci vous permet de
+modifier votre construction pendant que l’animation s’exécute.
+
+====
+
+== Animation manuelle
+
+Pour modifier manuellement un nombre (ou angle) continûment, sélectionnez le mode
+/Fichier:Mode_move_png.adoc[image:Mode_move.png[Mode move.png,width=32,height=32]]
+xref:/tools/Déplacer.adoc[Outil_Déplacer]. Cliquez ensuite sur le nombre, sur l’angle ou sur le point lié et pressez
+
+* soit les touches [.kcode]#+# ou [.kcode]#–# ;
+* soit les flèches de votre clavier.
+
+L’utilisation d’une de ces touches vous permet de réaliser une animation manuelle.
+
+[EXAMPLE]
+====
+
+*Exemple :* Si les coordonnées d’un point dépendent d’un nombre k, P = (2 k, k ) par exemple, le point se déplacera sur
+une droite lorsque k sera modifié continûment.
+
+====
+
+[NOTE]
+====
+
+*Note :* Vous pouvez adapter l’incrément de votre curseur dans l’onglet ‘Curseur’ du
+xref:/Dialogue_Propriétés.adoc[Dialogue_Propriétés] de cet objet.
+
+====
+
+== Raccourcis clavier
+
+* [.kcode]#Maj# + [.kcode]#↑# utilise 0,1 fois l’incrément
+
+* [.kcode]#Ctrl# + [.kcode]#↑# utilise 10 fois l’incrément
+
+* [.kcode]#Alt# + [.kcode]#↑# utilise 100 fois l’incrément
+
+[NOTE]
+====
+
+*Note :* Un point sur une ligne peut aussi y être déplacé à l’aide des touches [.kcode]#+# ou [.kcode]#–#.
+
+====

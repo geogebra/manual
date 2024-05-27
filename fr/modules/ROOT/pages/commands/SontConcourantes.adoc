@@ -1,0 +1,31 @@
+= Commande SontConcourantes
+:page-en: commands/AreConcurrent_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+SontConcourantes( <Ligne>, <Ligne>, <Ligne> )::
+  se prononce sur la concurrence des lignes.
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Si les lignes sont parallèles, elles sont considérées comme ayant un point commun à l'infini, il s'ensuit que cette
+commande va retourner _true_ dans ce cas.
+|===
+
+Normalement cette commande détermine le résultat numériquement. Ce comportement peut être changé en utilisant la
+commande xref:/commands/Prouver.adoc[Prouver].
+
+[EXAMPLE]
+====
+
+*Exemple :* `++SontConcourantes(Droite((1,2),(3,4)),Droite((1,2),(3,5)),Droite((1,2),(3,6)))++` retourne _true_ car les
+trois droites contiennent le point (1,2).
+
+====
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/EstTangente.adoc[EstTangente],
+xref:/commands/SontAlignés.adoc[SontAlignés], xref:/commands/SontParallèles.adoc[SontParallèles],
+xref:/commands/SontPerpendiculaires.adoc[SontPerpendiculaires], xref:/commands/SontÉgaux.adoc[SontÉgaux],
+xref:/commands/SontCocycliques.adoc[SontCocycliques].

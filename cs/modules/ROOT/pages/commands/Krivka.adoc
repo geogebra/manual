@@ -1,0 +1,40 @@
+= Příkaz Krivka
+:page-en: commands/Curve_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Krivka( <Výraz __k1__>, <Výraz __k2__>, <Parametr proměnné __t__>, <Počáteční hodnota __a__>, <Koncová hodnota __b__>
+)::
+  Vytvoří kartézskou xref:/Křivky.adoc[parametrickou křivku]. Body této křivky mají _x_-ové souřadnice popsány funkcí
+  _k1_ proměnné _t_, _y_-ové souřadnice bodů křivky jsou popsány funkcí _k2_ proměnné _t_. Křivka je tedy popsána
+  bodovou funkcí [_k1(t)_ , _k2(t)_]. Reálný parametr (proměnná) _t_ nabývá hodnot z intervalu [_a_, _b_].
+
+[EXAMPLE]
+====
+
+Příkaz `++k = Krivka[2 cos(t), 2 sin(t), t, 0, 2 pi]++` vytvoří křivku s názvem _k_ a parametrem _t_, což bude kružnice
+s poloměrem 2 a středem v počátku soustavy souřadnic.
+
+====
+
+[NOTE]
+====
+
+Číslo _b_ musí být větší nebo rovno číslu _a_ a obě musí být konečná.
+
+====
+
+[NOTE]
+====
+
+Proměnná _x_ není dovolena jako parametr křivky.
+
+====
+
+Další detaily viz xref:/Křivky.adoc[Křivky].
+
+[NOTE]
+====
+
+/s_index_php?title=En:Curve_Command_action=edit_redlink=1.adoc[Curve Command]
+
+====

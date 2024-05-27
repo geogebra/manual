@@ -1,0 +1,129 @@
+= Función raízn
+:page-en: Nroot_Function
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+[.small]##
+
+== [#Funciones_y_Operaciones]#Funciones y Operaciones#
+
+*raízn*( <Expresión> , N (número natural) )::
+  Calcula la raíz e**_N_**ésima de la expresión dada.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*  
+
+* *`++raízn(x^8, 2)++`* crea la función _stem:[\sqrt[2]\{x^8}]_ con tal registro en la xref:/Vista_Algebraica.adoc[Vista
+Algebraica] y su representación en la xref:/Vista_Gráfica.adoc[Vista Gráfica]
+* Ingresado en la xref:/Vista_CAS.adoc[Vista CAS] , da por resultado _(|x|)⁴_
+* *`++raízn(16, 4)++`* da por resultado _2_.
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_notice.png[image,width=40,height=40]
+
+|Cuando en lugar de un calculo, se ingresar una expresión que resulte _dependiente_ de una variable, se crea una
+función. El resultado, expresado en forma algebraica, es entonces, gráficado. Como se ilustra en uno de los ejemplos
+desarrollados más adelante.
+|===
+
+[NOTE]
+====
+
+Para acceder directamente a cualquiera de las
+
+/Archivo:Funciones_I_PNG.adoc[image:282px-Funciones_I.PNG[Funciones I.PNG,width=282,height=107]]
+
+xref:/Operadores_y_Funciones_Predefinidas.adoc[Funciones Predefinidas] basta con:Desplegarlas y expandir su listado
+pulsando el signo [.kcode]##+##seleccionar la que corresponda
+
+/Archivo:Pega_PNG.adoc[image:262px-Pega.PNG[Pega.PNG,width=262,height=117]]
+
+y pulsar en el botón [.kcode]#Pega#.
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:*  
+
+* *`++p_1(x) = k raízn(k x,k)++`*, siendo _k_ un valor determinado por un deslizador, traza el
+xref:/Vista_Gráfica.adoc[gráfico] acorde a la correspondiente expresión. Es interesante notar el modo en que gráfico y
+expresión resultante cambian a medida que se modifica (manualmente o por animación) el valor de _k_.
+* *`++raízn(x^x(J) / x⁴ sen(y(J)x)^y(J), 4)++`* siendo *J* un punto, traza el xref:/Vista_Gráfica.adoc[gráfico] acorde a
+la correspondiente expresión resultante, según la posición de *_J_*, como, por ejemplo, la que se presenta a
+continuación
+
+====
+
+/Archivo:Raizn1_PNG.adoc[image:Raizn1.PNG[Raizn1.PNG,width=226,height=55]]
+
+[EXAMPLE]
+====
+
+*Ejemplos:* Se puede ensayar y registrar la secuencia de expresiones según distintos valores de las enteras coordenadas
+de _J_ - siendo _J_ un *`++Punto[-x]++`* en una parsimoniosa animaciòn.
+
+====
+
+'''''
+
+[NOTE]
+====
+
+Es interesante notar que en este último caso, en lugar del valor de un xref:/tools/Deslizador.adoc[deslizador] se
+emplean las xref:/commands/Coordenadas.adoc[coordenadas] de un punto para notar las modificaciones que sufre la
+función.Al respecto, si el punto _J_ se ubicara sobre uno de los ejes, al darle xref:/Animación.adoc[animación] se
+estarían observando los cambios del gráfico en función ya no exclusivamente de *_x_* ni solo en el efecto sobre los
+valores de *_y_* sino de una variable adicional, dinámica.
+
+====
+
+=== xref:/Vista_CAS.adoc[image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+En esta xref:/Vista_CAS.adoc[vista], se admiten formulaciones que contengan literales para operar simbólicamente y/o
+aquellas con _soluciones_ o raíces no reales.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* raízn(x^8, 2) da por resultado _(|x|)⁴_
++
+
+'''''
+
+Una expresión que no puede ser /Archivo:Mode_numeric_png.adoc[image:Mode_numeric.png[Mode
+numeric.png,width=32,height=32]] xref:/tools/Valor_Numérico.adoc[valorada numéricamente] ni representada preliminarmente
+como función, puede quedar formulada simbólicamente de modo tal que, posteriormente, se pueda obrar la
+/Archivo:Mode_substitute_32_gif.adoc[image:Mode_substitute_32.gif[Mode substitute 32.gif,width=32,height=32]]
+xref:/tools/Sustituye.adoc[sustitución] por valores para dar con el resultado. Sería el caso de:
+
+* *`++real(sqrt(-ñ² ί)) raízn(sqrt( -3ñ) x,  k sqrt(-7) )++`* que establece la siguiente expresión.
+
+====
+
+/Archivo:Raizn2_PNG.adoc[image:Raizn2.PNG[Raizn2.PNG,width=188,height=51]]
+
+'''''
+
+[NOTE]
+====
+
+Ver también la sección de xref:/Operadores_y_Funciones_Predefinidas.adoc[Operadores y Funciones Predefinidas].
+
+====

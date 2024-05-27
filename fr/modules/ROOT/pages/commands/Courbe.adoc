@@ -1,0 +1,63 @@
+= Commande Courbe
+:page-en: commands/Curve_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Courbe( <Expression stem:[e_1]>, <Expression stem:[e_2]>, <Variable t >, <de a>, <à b> )::
+  xref:/Courbes.adoc[Courbe paramétrée] de paramètre t variant dans l’intervalle [_a_ ; _b_], l’abscisse d’un point
+  étant Expression stem:[e_1] et son ordonnée Expression stem:[e_2].
+
+[EXAMPLE]
+====
+
+*Exemple :* `++ Courbe(2 cos(t), 2 sin(t),t,0,2 stem:[\pi]) ++` crée un cercle de rayon 2, de centre l'origine du
+repère.
+
+====
+
+[NOTE]
+====
+
+*Note :* Le nombre _b_ doit être supérieur ou égal au nombre _a_. Les paramètres _a_ et _b_ étant dynamiques vous pouvez
+très bien utiliser des xref:/tools/Curseur.adoc[curseurs].
+
+====
+
+Voir xref:/Courbes.adoc[Courbes] pour plus de détails.
+
+[NOTE]
+====
+
+*/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] Graphique 3D* Interviennent ici 3 expressions
+
+Courbe( <Expression stem:[e_1]> , <Expression stem:[e_2]> , <Expression stem:[e_3]> , <Variable t> , <de a> , <à b> )::
+  Construit dans l'espace cartésien la courbe paramétrée, de paramètre t variant dans l’intervalle [_a_ ; _b_] ,
+  l’abscisse d’un point étant expression stem:[e_1], son ordonnée expression stem:[e_2], et sa côte expression
+  stem:[e_3].
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Courbe(cos(t), sin(t), t, t, 0, 10π)++` crée une spirale 3d .
+
+====
+
+====
+
+== Saisie directe d'une courbe paramétrée
+
+`++(t,t)++` crée la droite d'équation _X = (0, 0) + t (1, 1)_ sous forme paramétrique, bien sûr par clic droit vous
+pouvez faire apparaître l'équation y=x ; `++(t,t²)++` crée la conique (parabole) d'équation _y=x²_ ;
+`++(sin(t),(cos(t)))++` crée la conique (cercle) d'équation _x² + y² = 1_.
+
+`++(t;t)++` crée la courbe polaire d'équation r(t)=t, (spirale d'Archimède) pour stem:[-10 \le t \le 10], (ce n'est pas
+vous qui avez fixé les bornes), et comme _t_ peut prendre des valeurs négatives et des valeurs positives, vous obtenez
+la spirale et sa symétrique par rapport à l'axe des ordonnées, préférez la syntaxe par exemple :
+`++Courbe((t;t), t, 0, 6  π ) ++` ;
+
+`++(t^2,t^3)++` crée la courbe paramétrée dont la définition est stem:[\left\\{ \begin\{array}\{}x = t^\{2}\\ y = t^\{3}
+\end\{array}\right\} -10 \le t \le 10 ] mais la commande associée est générée en *Courbe(t², t³, t, -10, 10)* (et ce
+n'est pas vous qui avez fixé les bornes).
+
+il en est de même si vous reprenez l'exemple de la spirale `++(cos(t), sin(t), t)++` elle correspondra alors à
+Courbe(cos(t), sin(t), t, t, -10, 10)

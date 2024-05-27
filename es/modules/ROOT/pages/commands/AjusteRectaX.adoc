@@ -1,0 +1,35 @@
+= Comando AjusteRectaX
+:page-en: commands/FitLineX_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+AjusteRectaX( <Lista de Puntos> )::
+  Calcula la regresión lineal de los puntos, de _x_ respecto de _y_.
+
+[EXAMPLE]
+====
+
+`++AjusteRectaX({(-1, 3), (2, 1), (3, 4), (5, 3), (6, 5)})++` da por resultado _1.1x - 0.1_.
+
+====
+
+== Sintaxis CAS
+
+AjusteRectaX( <Lista de Puntos> )::
+  Calcula la regresión lineal de los puntos, de _x_ respecto de _y_.
+
+[EXAMPLE]
+====
+
+`++AjusteRectaX({(-1, 3), (2, 1), (3, 4), (5, 3), (6, 5)})++` da por resultado _1.1x - 0.1_.
+
+====
+
+[NOTE]
+====
+
+* Ver también image:24px-Mode_fitline.svg.png[Mode fitline.svg,width=24,height=24] xref:/tools/Ajuste_lineal.adoc[Ajuste
+lineal] y xref:/commands/AjusteLineal.adoc[Comando AjusteLineal]
+* Si trabajas con números grandes o pequeños, deberías considerar normalizarlos para obtener un resultado más preciso.
+Ver xref:/commands/Normaliza.adoc[Comando Normaliza].
+
+====

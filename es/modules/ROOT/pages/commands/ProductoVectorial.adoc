@@ -1,0 +1,44 @@
+= Comando ProductoVectorial
+:page-en: commands/Cross_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+ProductoVectorial( <Vector> , <Vector> )::
+  Calcula el http://en.wikipedia.org/wiki/es:Producto_vectorial[producto vectorial] (o producto cruz) entre los vectores
+  indicados _u_ y _v_. En lugar de vectores puedes utilizar también listas.
+  Para vectores en 2D o puntos, el resultado es la componente en la dirección del eje z del producto vectorial.
+
+[EXAMPLE]
+====
+
+`++ProductoVectorial((1,2),(4,5))++` da por resultado -3.
+
+====
+
+[EXAMPLE]
+====
+
+`++ProductoVectorial((1, 3, 2), (0, 3, -2))++` da por resultado _(-12, 2, 3)_,
+`++ProductoVectorial({1, 3, 2}, {0, 3, -2})++` da por resultado _\{-12, 2, 3}_
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Aviso:* si un vector en la
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[Vista CAS] contiene
+variables indeterminadas, el comando da por resultado una fórmula para el producto vectorial, por ejemplo
+`++ProductoVectorial((a, b, c), (d, e, f))++` devuelve _(b f - c e, -a f + c d, a e - b d)_.
+
+====
+
+[NOTE]
+====
+
+*Notas:*
+
+* Puedes utilizar también el xref:/Operadores_y_Funciones_Predefinidas.adoc[operador] `++u ⊗ v++`
++
+* Ver también el xref:/commands/ProductoEscalar.adoc[Comando ProductoEscalar].
+
+====

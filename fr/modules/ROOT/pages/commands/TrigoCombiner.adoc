@@ -1,0 +1,69 @@
+= Commande TrigoCombiner
+:page-en: commands/TrigCombine_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+*Note :* Dans les dernières versions, il doit être souvent fait appel aussi simultanément à la commande
+xref:/commands/TrigoSimplifier.adoc[TrigoSimplifier] pour obtenir un résultat "plus agréable".
+
+====
+
+TrigoCombiner( <Expression> )::
+  Transforme une expression trigonométrique contenant des produits de fonctions trigonométriques en une expression sans
+  produits.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++TrigoCombiner(sin(x)cos(3x))++` retourne stem:[\{\frac\{1}\{2} \sin \left( 4 x \right) - \frac\{1}\{2} \sin \left( 2
+x \right)}] ;
+
+`++TrigoCombiner(sin(x) + cos(x))++` retourne stem:[ \{\sqrt\{2} cos \left( x - \frac\{1}\{4} \pi \right)} ], comparez
+avec le résultat de la syntaxe suivante ;
+
+`++TrigoCombiner((tan(x) + tan(2x)) / (1 - tan(x) tan(2x)))++` retourne stem:[\frac\{1} \{cos(3x)} sin(3x)], comparez
+avec le résultat de la syntaxe suivante.
+
+====
+
+TrigoCombiner( <Expression>, <Fonction cible> )::
+  Transforme une expression trigonométrique contenant des produits de fonctions trigonométriques en une expression sans
+  produits, en donnant la préférence à la fonction "cible" indiquée.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++TrigoCombiner(sin(x) + cos(x), sin(x))++` retourne stem:[ \{\sqrt\{2} sin \left( x + \frac\{1}\{4} \pi \right)} ] ;
+
+`++TrigoSimplifier(TrigoCombiner((tan(x) + tan(2x)) / (1 - tan(x) tan(2x)), tan(x)))++` retourne _tan(3x)_.
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Avec la possibilité de travailler en littéral :
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+Si les variables _p_ et _q_ ne sont pas définies dans GeoGebra
+
+`++TrigoSimplifier(TrigoCombiner((tan(p) + tan(q)) / (1 - tan(p) tan(q)), tan(x)))++` retourne _tan(p + q)_.
+
+====
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/TrigoDévelopper.adoc[TrigoDévelopper] et
+xref:/commands/TrigoSimplifier.adoc[TrigoSimplifier].

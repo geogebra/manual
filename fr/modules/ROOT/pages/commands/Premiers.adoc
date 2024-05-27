@@ -1,0 +1,72 @@
+= Commande Premiers
+:page-en: commands/First_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Premiers(<Liste>)::
+  Retourne la liste contenant uniquement le 1er élément de _Liste_.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Premiers({1,2,3})++` donne _\{1}_.
+
+====
+
+[NOTE]
+====
+
+*Note :* Pour obtenir le premier élément lui-même,utilisez par ex. la commande xref:/commands/Elément.adoc[Elément].
+
+====
+
+Premiers(<Liste>,<Nombre n>)::
+  Retourne la liste contenant uniquement les _n_ premiers éléments de _Liste_.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Premiers({1,2,3},2)++`donne _\{1,2}_.
+
+====
+
+Premiers( <Texte> )::
+  Retourne le premier caractère du _Texte_.
+
+Premiers( <Texte> , <Nombre n > )::
+  Retourne les _n_ premiers caractères du _Texte_.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Premiers("Hello",2)++` donne _"He"_ .
+
+====
+
+Premiers( <Lieu> , <Nombre n> )::
+  cette commande est utile pour
+  * les lieux engendrés par la commande xref:/commands/RésolEquaDiff.adoc[RésolEquaDiff], elle retourne la liste des
+  points créés lors des _n_ premières étapes de l'algorithme de résolution numérique des équations différentielles ;
+  * les lieux engendrés par les commandes xref:/commands/PlusCourteDistance.adoc[PlusCourteDistance] ,
+  xref:/commands/ReprésentantCommerce.adoc[ReprésentantCommerce], xref:/commands/Voronoi.adoc[Voronoi],
+  xref:/commands/ArbreCouvrantMinimum.adoc[ArbreCouvrantMinimum], xref:/commands/Enveloppe.adoc[Enveloppe] et
+  xref:/commands/EnveloppeConvexe.adoc[EnveloppeConvexe], elle retourne les sommets du graphe ;
+  * avec f(x)=mainlevée(x), Premiers(f,n) retourne la liste des n premiers points servant à construire la courbe.
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+seules les syntaxes concernant les listes sont proposées ; mais, pour moi, les syntaxes concernant les textes
+fonctionnent tout aussi bien.
+
+avec la possibilité de travailler en littéral, si "a", "b", "c", "d" et "e" ne sont pas définies dans GeoGebra, :
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Premiers({a, b, c, d, e},3)++` donne _\{a, b, c}_ .
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/Derniers.adoc[Derniers].

@@ -1,0 +1,23 @@
+= Příkaz T2StredniOdhad
+:page-en: commands/TMean2Estimate_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+T2StredniOdhad( <Seznam dat 1>, <Seznam dat 2>, <Hladina>, <Logická hodnota "sdužené"> )::
+  Vypočítá odhad intervalu spolehlivosti pro rozdíl mezi průměry populací _Seznam dat 1_ a _Seznam dat 2_ při dané
+  _hladině_ spolehlivosti.
+  Je-li _Sdružené_ = true, potom se předpokládá, že rozptyly populací jsou stejné, a směrodatné odchylky vzorků jsou při
+  výpočtu zkombinovány.
+  Je-li _Sdružené_ = false, potom se nepředpokládá, že rozptyly populací jsou stejné, a směrodatné odchylky vzorků se
+  při výpočtu nekombinují.
+  Výsledky jsou zapsány jako seznam \{dolní mez spolehlivosti, horní mez spolehlivosti}.
+T2StredniOdhad( <Průměr vzorku 1>, <Směrodatná odchylka vzorku 1>, <Velikost vzorku 1>, <Průměr vzorku 2>, <Směrodatná
+odchylka vzorku 2>, <Velikost vzorku 2>, <Předpokládaný průměr>, <Hladina>, <Logická hodnota "sdružené"> )::
+  Vypočítá odhad intervalu spolehlivosti pro rozdíl mezi průměry populací _vzorek 1_ a _vzorek 2_ pomocí zadaných
+  statistik a _hladiny_ spolehlivosti. Logická proměnná _sdružené_ je definována stejně jako výše. Výsledek je zapsán
+  jako seznam \{dolní mez spolehlivosti, horní mez spolehlivosti}.
+
+[NOTE]
+====
+
+Anglická verze: /s_index_php?title=En:Manual:TMean2Estimate_Command_action=edit_redlink=1.adoc[TMean2Estimate]
+====

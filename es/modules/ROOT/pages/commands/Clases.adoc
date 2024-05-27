@@ -1,0 +1,33 @@
+= Comando Clases
+:page-en: commands/Classes_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Clases( <Lista de datos>, <Inicio>, <Ancho de las clases> )::
+  Devuelve la lista de los extremos de las clases. El primer extremo (el mínimo) es igual a _Inicio_, mientras que el
+  último (el máximo) será mayor o igual al máximo de la _Lista_. Los demás extremos estarán igualmente espaciados entre
+  el mínimo y el máximo. La distancia entre dos extremos consecutivos será el _Ancho_ indicado.
+Clases( <Lista de datos>, <Número de clases> )::
+  Devuelve la lista de los extremos de las clases. El primer extremo (el mínimo) es igual a _Inicio_, mientras que el
+  último (el máximo) será igual al máximo de la _Lista_. Los demás extremos estarán igualmente espaciados entre el
+  mínimo y el máximo.
+
+[EXAMPLE]
+====
+
+`++Clases({1, 3, 5, 7, 8, 9, 10}, 3)++` devuelve \{1, 4, 7, 10}
+
+====
+
+[EXAMPLE]
+====
+
+`++Clases({0.1, 0.2, 0.4, 1.1}, 0, 1)++` devuelve \{0, 1, 2}
+
+====
+
+[NOTE]
+====
+
+Por convención, se utiliza la regla a ≤ x < b para cada clase, excepto para la última en la cual a ≤ x ≤ b
+
+====

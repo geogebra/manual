@@ -1,0 +1,115 @@
+= Curvas
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+GeoGebra, para la representación gráfica, opera con dos tipos de curvas: *paramétricas* e *implícitas*.
+
+== Curvas Paramétricas
+
+/Archivo:CardioidTangent_png.adoc[image:100px-CardioidTangent.png[CardioidTangent.png,width=100,height=104]]
+
+De formulación _a(t) = (f(t), g(t))_ siendo _t_ el parámetro real dentro de cierto rango, pueden crearse usando el
+comando xref:/commands/Curva.adoc[Curva].
+
+Estas curvas _pueden..._
+
+* vincularse a comandos como xref:/commands/Tangente.adoc[Tangente] o xref:/commands/Punto.adoc[Punto] y, desde
+*GeoGebra 4.2*, a xref:/commands/Interseca.adoc[Interseca][.small]####
++
+[NOTE]
+====
+
+También pueden emplearse ciertos xref:/commands/Comandos_de_Funciones_y_Cálculo.adoc[comandos de funciones y de
+cálculo], como, entre otros: xref:/commands/Derivada.adoc[Derivada], xref:/commands/Longitud.adoc[Longitud],
+xref:/commands/Curvatura.adoc[Curvatura], xref:/commands/VectorCurvatura.adoc[VectorCurvatura] y
+xref:/commands/CírculoOsculador.adoc[CírculoOsculador].
+
+====
+* complementarse con empleo de herramientas como xref:/tools/Punto.adoc[image:20px-Mode_point.svg.png[Mode
+point.svg,width=20,height=20]] xref:/tools/Punto.adoc[Punto] o la que traza
+xref:/tools/Tangentes.adoc[image:20px-Mode_tangent.svg.png[Mode tangent.svg,width=20,height=20]]
+xref:/tools/Tangentes.adoc[_tangentes_] por un punto de la curva, entre otras
+* asociarse a xref:/Operadores_y_Funciones_Predefinidas.adoc[expresiones aritméticas o funciones predefinidas].Por
+ejemplo, `++c(3)++` brinda el punto de posición paramétrica 3 en la curva _c_.
+* _definirse_ a partir de valores variables como los de los deslizadores. Como, por ejemplo, al tratar con:
++
+*`++Curva[ <Expresión>, <Expresión>, <Parámetro>, <Valorinicial>, <Valorfinal> ]++`*
++
+... tanto el _valor inicial_ como el _final_ pueden estar determinados por deslizadores o por variables dinámicas como
+la abscisa de un punto deslizable (como x(A), por ejemplo).
+
+[NOTE]
+====
+
+*Notas:* El boceto al pie ilustra _animadamente_ el modo en que se emplea un
+xref:/tools/Deslizador.adoc[image:40px-Mode_slider.svg.png[Mode slider.svg,width=40,height=40]]
+xref:/tools/Deslizador.adoc[deslizador] para determinar la xref:/commands/Curva.adoc[curva] desplegada según se aprecia.
+
+====
+
+/Archivo:Curvas_gif.adoc[image:Curvas_.gif[Curvas .gif,width=343,height=535]]
+
+'''''
+
+/Archivo:FitPolyExample_png.adoc[image:200px-FitPolyExample.png[FitPolyExample.png,width=200,height=137]]
+
+/Archivo:PolynomialExample_png.adoc[image:200px-PolynomialExample.png[PolynomialExample.png,width=200,height=137]]
+
+Como no siempre es posible idear qué curvas paramétricas pasarían por ciertos puntos dados para establecerlas, es
+conveniente y mejor en esos casos, recurrir a otras estrategias como...:
+
+* intentar un comando de _ajuste_ xref:/commands/AjustePolinómico.adoc[_polinómico_] o
+xref:/commands/AjusteExp.adoc[_exponencial_] u otros
+* operar para encontrar la función que los contenga con tanteos dinámicos.
+
+'''''
+
+=== Curvas Implícitas
+
+Se pueden ingresar, directamente desde la xref:/Barra_de_Entrada.adoc[Barra de Entrada], a partir de polinómicas en
+sendas variables, _x_ e _y_.
+
+[NOTE]
+====
+
+Actualmente, solo se generan a partir de las variables *_x_* e *_y_*.
+
+====
+
+[EXAMPLE]
+====
+
+`++x^4 + y^3 = 2x*y++`
+
+====
+
+/Archivo:ImplicitCurveExample_png.adoc[image:ImplicitCurveExample.png[ImplicitCurveExample.png,width=200,height=131]]
+
+[NOTE]
+====
+
+Además del ingreso directo, desde la xref:/Barra_de_Entrada.adoc[Barra de Entrada], pueden emplearse los comandos:-
+xref:/commands/CurvaImplícita.adoc[CurvaImplícita]- en algunos casos, como ilustran sus ejemplos,
+xref:/commands/EcuaciónLugar.adoc[EcuaciónLugar]
+
+====
+
+/Archivo:ImplicitCurveExample2_png.adoc[image:ImplicitCurveExample2.png[ImplicitCurveExample2.png,width=200,height=134]]
+
+'''''
+
+[NOTE]
+====
+
+* Apelando a la xref:/Herramientas.adoc[herramienta] xref:/tools/Punto.adoc[image:20px-Mode_point.svg.png[Mode
+point.svg,width=20,height=20]] xref:/tools/Punto.adoc[*Punto*] o al xref:/Comandos.adoc[comando]
+xref:/commands/Punto.adoc[Punto], puede ubicarse uno en la curva y desplazarlo con el ratón o _mouse_.
++
+[cols=",",]
+|===
+|image:18px-Attention.png[Alerta,title="Alerta",width=18,height=18] *Alerta*: |En algunos casos, sin embargo, el punto
+puede no resultar dependiente de la curva y operará, curiosamente, como si fuera libre.
+|===
+
+* Ver también el comando xref:/commands/CurvaImplícita.adoc[CurvaImplícita]
+
+====

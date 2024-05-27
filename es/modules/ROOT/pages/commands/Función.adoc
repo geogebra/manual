@@ -1,0 +1,27 @@
+= Comando Función
+:page-en: commands/Function_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Función( <Lista de números> )::
+  Devuelve la siguiene función: Los primeros dos números determinan el valor inicial de _x_ y el valor final de _x_
+  (extremos inferior y superior del intervalo dominio de la función). Los demás números son imágenes de la función,
+  correspondientes a elementos del dominio ubicados a intervalos regulares.
+
+[EXAMPLE]
+====
+
+* `++Función({1, 4, 0, 1, 0, 1, 0})++` devuelve una onda triangular entre _x=2_ y _x=4_.
+* `++Función({-3, 3, 0, 1, 2, 3, 4, 5})++` devuelve una función lineal de pendiente 1 restringida al intervalo [-3, 3].
+
+====
+
+Función ( <Expresión>, <Parámetro variable 1>, <Valor inicial>, <Valor final>, <Parámetro variable 2>, <Valor inicial>,
+<Valor final> )::
+  Restringe la visualziación de la superficie correspondiente a la función de dos variables en el espacio
+  tridimensional.
+  \{\{example|1=
+  La expresión `++a(x,y) =  x + 0y++` crea una función de dos variables cuyo gráfico en 3D es el plano _z_ de ecuación
+  _a(x,y) = x_.
+
+`++Función(u, u, 0, 3, v, 0, 2)++` crea la función de dos variables _b(u,v) = u_ cuyo gráfico en 3D es el rectángulo
+Polígono((0, 0, 0), (3, 0, 3), (3, 2, 3), (0, 2, 0)) incluido en el plano de ecuación _a(x,y) = x_.

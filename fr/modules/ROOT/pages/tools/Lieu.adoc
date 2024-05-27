@@ -1,0 +1,40 @@
+= Outil Lieu
+:page-en: tools/Locus_Tool
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+/Fichier:Mode_locus_svg.adoc[image:32px-Mode_locus.svg.png[Mode locus.svg,width=32,height=32]] (code 47), dans la Boîte
+à outils par défaut /Fichier:Mode_orthogonal_svg.adoc[image:32px-Mode_orthogonal.svg.png[Mode
+orthogonal.svg,width=32,height=32]]
+
+Sélectionner d’abord le point _Q_ dont le lieu va être dessiné. Ensuite cliquer sur le point _P_ dont _Q_ dépend.
+
+[NOTE]
+====
+
+*Note :* Le point P doit être un point sur un objet (droite, segment, cercle . . .).
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+* Valider `++f(x)=x^2–2 x–1++` dans le Champ de Saisie ;
+* Placer un nouveau point _A_ sur l’axe des x (voir l’outil xref:/tools/Point.adoc[Point] ; voir la commande
+xref:/commands/Point.adoc[Point] ) ;
+* Créer le point `++B=(x(A),f’(x(A)))++` qui dépend du point _A_, en validant cette commande dans le champ de saisie ;
+* Sélectionner l’outil /Fichier:Mode_locus_svg.adoc[image:32px-Mode_locus.svg.png[Mode locus.svg,width=32,height=32]]
+Lieu et cliquer successivement sur le point _B_ puis sur le point _A_ ;
+* Glisser le point _A_ le long de l’axe des _x_ pour voir le point _B_ se déplacer le long de son lieu.
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/Lieu.adoc[Lieu].
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Attention,title="Attention",width=18,height=18] *Attention*: |Un Lieu n'est pas défini lorsque
+le Point dépendant est construit par la xref:/commands/Point.adoc[Commande Point] avec deux paramètres ou la
+xref:/commands/ParamètreChemin.adoc[Commande ParamètreChemin].
+|===

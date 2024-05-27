@@ -1,0 +1,133 @@
+= Příkaz Delka
+:page-en: commands/Length_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Delka( <Vektor> )
+
+Dostaneme délku vektoru.
+
+Delka( <Bod> )
+
+Dostaneme délku polohového vektoru daného bodu .
+
+Delka( <Funkce>, <Počáteční hodnota x>, <Koncová hodnota x> )
+
+Dostaneme délku grafu funkce na intervalu [_x1, x2_].
+
+Delka( <Funkce>, <Počáteční Bod>, <Koncový Bod> )
+
+Dostaneme délku grafu funkce mezi body _A_ a _B_.
+
+Delka( <Křivka>, <Počáteční hodnota x>, <Koncová hodnota x> )
+
+Dostaneme délku křivky mezi hodnotami parametru _t1_ a _t2_.
+
+Delka( <Křivka>, <Počáteční Bod>, <Koncový Bod> )
+
+Dostaneme délku křivky _c_ mezi body _A_ a _B_ , které na křivce leží.
+
+Delka( <Seznam> )
+
+Dostaneme délku seznamu, což je počet prvků na seznamu.
+
+Delka( <Text> )
+
+Dostaneme počet znaků daného textu.
+
+Delka( <Místo> )
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Soubor:UnderConstruction_png.adoc[image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]]
+
+|Some content was not yet translated. See the
+/s_index_php?title=En:Manual:Length_Command_action=edit_redlink=1.adoc[English original]. Please
+//wiki.geogebra.org/s/cs/index.php?title=Manu%C3%A1l:P%C5%99%C3%ADkaz_Delka&action=edit[edit the manual page] if you
+have the rights for translation.
+|===
+
+Dostaneme počet bodů, které tvoří dané místo. Pro skutečnou délku místa používáme příkaz
+xref:/s_index_php?title=Perimeter_Command_action=edit_redlink=1.adoc[Perimeter][Locus]. Viz také článek o
+xref:/s_index_php?title=First_Command_action=edit_redlink=1.adoc[First Command].
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Následující text pojednává o vlastnosti, která je podporována pouze v
+/s_index_php?title=En:Release_Notes_GeoGebra_4_2_action=edit_redlink=1.adoc[GeoGebra 4.2 Beta].
+
+'''''
+
+Delka( <Oblouk> )::
+  Dostaneme *délku oblouku* (t.j. pouze délku zahnuté části) oblouku nebo výseče.
+
+|===
+
+== CAS pohled
+
+Delka( <Funkce>, <Počátek-x>, <Konec-x> )::
+  Vypočítá délku grafu funkce od bodu x=__t1__ k bodu x=__t2__.
+Delka( <Funkce>, <Proměnná>, <Počáteční Bod>, <Koncový Bod> )::
+  Vypočítá délku grafu od bodu a=__t1__ k bodu a=__t2__.
+Delka( <Křivka>, <Počátek-x>, <Konec-x> )::
+  [width="100%",cols="50%,50%",]
+  |===
+  a|
+  /Soubor:UnderConstruction_png.adoc[image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]]
+
+  |Some content was not yet translated. See the
+  /s_index_php?title=En:Manual:Length_Command_action=edit_redlink=1.adoc[English original]. Please
+  //wiki.geogebra.org/s/cs/index.php?title=Manu%C3%A1l:P%C5%99%C3%ADkaz_Delka&action=edit[edit the manual page] if you
+  have the rights for translation.
+  |===
+  Delka( <Křivka>, <Proměnná>, <Počáteční Bod>, <Koncový Bod> );;
+    [width="100%",cols="50%,50%",]
+    |===
+    a|
+    /Soubor:UnderConstruction_png.adoc[image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]]
+
+    |Some content was not yet translated. See the
+    /s_index_php?title=En:Manual:Length_Command_action=edit_redlink=1.adoc[English original]. Please
+    //wiki.geogebra.org/s/cs/index.php?title=Manu%C3%A1l:P%C5%99%C3%ADkaz_Delka&action=edit[edit the manual page] if you
+    have the rights for translation.
+    |===
+
+[EXAMPLE]
+====
+
+`++Delka[2 a, a,  0, 1]++` dostaneme stem:[\sqrt\{5}].
+
+====
+
+[EXAMPLE]
+====
+
+`++Delka[2 x, 0, 1]++` dostaneme stem:[\sqrt\{5}].
+
+====
+
+[EXAMPLE]
+====
+
+`++Delka[2x, 0, 1]++` dostaneme 2.23606797749979, přibližně stem:[\sqrt\{5}].
+
+====
+
+[NOTE]
+====
+
+Viz také nástroj /Soubor:Tool_Distance_gif.adoc[image:Tool_Distance.gif[Tool Distance.gif,width=32,height=32]]
+xref:/s_index_php?title=Distance_or_Length_Tool_action=edit_redlink=1.adoc[Distance or Length] .
+
+====
+
+[NOTE]
+====
+
+Pokud dané body neleží na grafu funkce, je interval určen jejich x-ovými souřadnicemi.
+
+====

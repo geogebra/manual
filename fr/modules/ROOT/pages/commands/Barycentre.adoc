@@ -1,0 +1,34 @@
+= Commande Barycentre
+:page-en: commands/Barycenter_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Barycentre( <Liste Points>, <Liste Masses> )::
+  Définit le barycentre du système de points massifs, de somme des masses non nulle !.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++Barycentre({(2,0),(0,2),(-2,0),(0,-2)}, {1,1,1,1})++` définit le point _A(0,0)_.
+
+`++Barycentre({(2,0),(0,2),(-2,0),(0,-2)}, {2,1,1,1})++` définit le point _B(0.4,0)_.
+
+L'abscisse de ce point étant la moyenne pondérée des abscisses : _stem:[ \frac\{2\times 2+1\times 0+1\times (-2)+1\times
+0}\{ 2+1+1+1 }] = stem:[\frac\{2}\{ 5 }] = 0.4_.
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+_____________________________________________________________
+
+/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] *Graphique 3D* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D

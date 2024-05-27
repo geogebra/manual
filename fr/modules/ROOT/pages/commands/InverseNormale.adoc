@@ -1,0 +1,24 @@
+= Commande InverseNormale
+:page-en: commands/InverseNormal_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+InverseNormale(<Moyenne μ>,<Ecart-type σ>,<Probabilité p >)::
+  Calcule _Φ^-1^(p) * σ + μ_ où _Φ ^-1^_ désigne la réciproque de la fonction de densité cumulée _Φ_ associée à
+  _N(0,1)_.
+
+[NOTE]
+====
+
+*Note :* Retourne l'abscisse telle que l'aire à sa gauche sous la courbe représentative de la loi normale soit égale à
+la probabilité _p_.
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/Normale.adoc[Normale].
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Vous pouvez l'utiliser pour construire une fonction `++f(x):=InverseNormale(0,1,x)++`

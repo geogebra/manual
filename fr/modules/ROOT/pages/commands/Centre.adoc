@@ -1,0 +1,41 @@
+= Commande Centre
+:page-en: commands/Center_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Centre( <Conique> )::
+  Retourne le centre d'un cercle,d'une ellipse ou d'une hyperbole.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Centre(x² + 4 y² + 2x - 8y + 1 = 0)++` retourne le point _(-1, 1)_
+
+====
+
+/Fichier:Tool_tool_png.adoc[image:Tool_tool.png[Tool tool.png,width=32,height=32]] Voir l' *outil* associé :
+/Fichier:Mode_midpoint_svg.adoc[image:32px-Mode_midpoint.svg.png[Mode midpoint.svg,width=32,height=32]]
+xref:/tools/Milieu_ou_centre.adoc[Milieu ou centre].
+
+_____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* : Ne sait traiter `++Centre(x² + 4 y² + 2 x - 8 y + 1 = 0)++` (retourne *?*) mais sait faire le travail en
+littéral : `++Centre( x² + y² - 2  a x - 2 b y  +a²  + b² -1 = 0) ++` retourne (a,b)
+
+_____________________________________________________________
+
+/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] *Graphique 3D* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D
+
+en ajoutant la possibilité bien sûr de *Centre[ <Sphère> ]* ;et plus généralement *Centre[ <Quadrique> ]*.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Centre(x^2 + (y-1)^2 + (z-2)^2 = 1)++` retourne le point _(0, 1, 2)_
+
+====

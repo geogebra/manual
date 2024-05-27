@@ -1,0 +1,47 @@
+= Příkaz NahodnyVyber
+:page-en: commands/Sample_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+NahodnyVyber( <Seznam>, <Velikost> )::
+  Vytvoří seznam prvků, jejichž počet je zadán, náhodně vybraných z daného seznamu; prvky mohou být vybrány opakovaně.
+NahodnyVyber( <Seznam>, <Velikost>, <Snahrazením> )::
+  Vytvoří seznam prvků, jejichž počet je zadán, náhodně vybraných z daného seznamu. Prvky mohou být vybrány opakovaně
+  jen tehdy, pokud má poslední parametr příkazu hodnotu _true_.
+
+[EXAMPLE]
+====
+
+`++NahodnyVyber[{1, 2, 3, 4, 5}, 5, true]++` vytvoří například _\{2, 3, 3, 4, 5}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++NahodnyVyber[{1, 2, 3, 4, 5}, 5]++` vytvoří například _\{1, 2, 1, 5, 4}_.
+
+====
+
+== CAS pohled
+
+NahodnyVyber( <Seznam>, <Velikost> )::
+  Vytvoří seznam prvků, jejichž počet je zadán, náhodně vybraných z daného seznamu; prvky mohou být vybrány opakovaně.
+
+[EXAMPLE]
+====
+
+`++NahodnyVyber[{-5, 2, a, 7, c}, 3]++` vytvoří například _\{a, 7, -5}_.
+
+====
+
+NahodnyVyber( <Seznam>, <Velikost>, <Snahrazením> )::
+  Vytvoří seznam prvků, jejichž počet je zadán, náhodně vybraných z daného seznamu. Prvky mohou být vybrány opakovaně
+  jen tehdy, pokud má poslední parametr příkazu hodnotu _true_.
+
+[EXAMPLE]
+====
+
+Zadaný seznam může také obsahovat seznamy: Nechť _List1_ je _\{1, 2,
+3}_.`++NahodnyVyber[{List1, 4, 5, 6, 7, 8}, 3, false]++` vytvoří například _\{6, \{1, 2, 3}, 4}_.
+
+====

@@ -1,0 +1,26 @@
+= Comando RazónEjes
+:page-en: commands/SetAxesRatio_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+ +
+RazónEjes( <Número>, <Número> )::
+  Establece la razón entre las escalas del xref:/Líneas_y_Ejes.adoc[Eje-x] y del xref:/Líneas_y_Ejes.adoc[Eje-y] de la
+  xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+  xref:/Vista_Gráfica.adoc[Vista Gráfica] activa, de modo tal que por cada X unidades del
+  xref:/Líneas_y_Ejes.adoc[Eje-x] corresponderán para el mismo número de píxeles, Y unidades en el
+  xref:/Líneas_y_Ejes.adoc[Eje-y] mientras el punto de coordenadas (0,0) quedará fijado en su posición original. Si se
+  ingresa 1 como razón, el eje correspondiente se fija y el otro se adapta.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++ RazónEjes(1,2)++` fija el eje _x_ y comprime el eje _y_.
+* `++ RazónEjes(2,1)++` fija el eje _y_ y estira el eje _x_.
+
+====
+
+RazónEjes( <Número>, <Número>, <Número> )::
+  De modo similar funciona para la xref:/Vista_3D.adoc[image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+  algebra 3Dgraphics.svg,width=16,height=16]] xref:/Vista_3D.adoc[Vista gráfica 3D].

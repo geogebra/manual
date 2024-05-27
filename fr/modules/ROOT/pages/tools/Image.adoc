@@ -1,0 +1,128 @@
+= Outil Image
+:page-en: tools/Image_Tool
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+/Fichier:Mode_image1_png.adoc[image:Mode_image1.png[Mode image1.png,width=32,height=32]] (code 26), dans la Boîte à
+outils par défaut /Fichier:Mode_slider_svg.adoc[image:32px-Mode_slider.svg.png[Mode slider.svg,width=32,height=32]]
+
+Cet outil permet d’ajouter une image dans la vue Graphique.
+
+* en cliquant dans la vue Graphique, vous spécifiez le coin inférieur gauche de l’image ;
+
+* en cliquant sur un point, vous désignez ce point comme coin inférieur gauche de l’image.
+
+Ensuite une boîte de dialogue d’ouverture de fichiers vous permet de choisir le fichier image à insérer (formats
+acceptés : gif, jpg, tif ou png)
+
+[NOTE]
+====
+
+*Note :* Après avoir activé l’outil /Fichier:Mode_image1_png.adoc[image:Mode_image1.png[Mode
+image1.png,width=32,height=32]] Image, vous pouvez utiliser le raccourci clavier _Alt-clic_ pour coller directement
+l’image contenue dans votre presse-papiers dans la vue Graphique.
+
+====
+
+[NOTE]
+====
+
+*Note :* Le glisser-déposer fonctionne avec les images.
+
+====
+
+== Propriétés des Images
+
+=== Position
+
+La position d’une image peut être absolue sur l’écran ou relative au repère de coordonnées. Vous pouvez spécifier cela
+dans l’onglet ‘Basique’ du xref:/Dialogue_Propriétés.adoc[Dialogue Propriétés] de l’image. Vous pouvez préciser jusqu’à
+trois coins dans l’onglet ‘Position’ de la boîte de dialogue des Propriétés. Cela peut permettre de modifier l’échelle,
+l’orientation et même d’obtenir une distorsion des images. (Voir aussi la commande xref:/commands/Coin.adoc[Coin]).
+
+* ‘Coin 1’ (position du coin inférieur gauche de l’image) ;
+* ‘Coin 2’ (position du coin inférieur droit de l’image)
+
+[NOTE]
+====
+
+*Note :* Ce coin ne peut être défini que si le ‘Coin 1’ l’a été auparavant. Il contrôle la largeur de l’image.
+
+====
+
+* ‘Coin 4’ (position du coin supérieur gauche de l’image)
+
+[NOTE]
+====
+
+*Note :* Ce coin ne peut être défini que si le ‘Coin 1’ l’a été auparavant. Il contrôle la hauteur de l’image.
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :* Afin de mieux comprendre l’influence des coins sur la déformation de l’image, créez trois points A, B et C.
+
+* Le point A étant le premier coin et le point B le second coin de votre image. En déplaçant les points A et B dans le
+mode /Fichier:Mode_move_svg.adoc[image:32px-Mode_move.svg.png[Mode move.svg,width=32,height=32]] Déplacer vous pouvez
+explorer facilement leur influence.
+* Le point A étant le premier coin et le point C le quatrième coin, observez comment le déplacement de ces points
+influence l’image.
+* Enfin, vous pouvez définir les trois coins par ces points et voir comment le déplacement de ces points déforme
+l’image.
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :* Vous savez maintenant comment modifier la position et la taille de votre image. Si vous voulez lier votre
+image à un point A et lui donner une largeur de 3 et une hauteur de 4 unités, vous pouvez le faire comme suit :
+
+* Définir ‘Coin 1’ par A ;
+* Définir ‘Coin 2’ par A + (3, 0) ;
+* Définir ‘Coin 4’ par A + (0, 4).
+
+====
+
+[NOTE]
+====
+
+*Note :* Si vous déplacez maintenant le point A dans le mode
+/Fichier:Mode_move_svg.adoc[image:32px-Mode_move.svg.png[Mode move.svg,width=32,height=32]] Déplacer , votre image
+conserve la taille désirée.
+
+====
+
+Une image peut aussi, maintenant, être repérée par son centre, plutôt que par ses coins, en cochant _Centrer Image_ dans
+l’onglet ‘Position’ de la boîte de dialogue des Propriétés.
+
+=== Image d’arrière-plan
+
+Vous pouvez définir une image comme ‘Arrière-plan’ dans l’onglet ‘Basique’ de la boîte de dialogue des Propriétés. Une
+image d’arrière-plan se trouve en arrière des axes de coordonnées et ne peut plus être sélectionnée à la souris.
+
+[NOTE]
+====
+
+*Note :* Pour changer l’état d’arrière-plan d’une image, choisissez
+/Fichier:Menu_Properties_png.adoc[image:Menu_Properties.png[Menu Properties.png,width=16,height=16]] Propriétés dans le
+xref:/Menu_Éditer.adoc[Menu Éditer].
+
+====
+
+=== Opacité
+
+Une image peut être rendue transparente dans le but de voir les images ou les axes situés en dessous. Vous pouvez
+définir l'opacité d’une image en spécifiant une valeur de ‘Opacité’ entre 0% et 100% dans l’onglet ‘Couleur’ de la boîte
+de dialogue des Propriétés.
+
+[NOTE]
+====
+
+*Note :* Des fichiers http://en.wikipedia.org/wiki/fr:Graphics_Interchange_Format[GIF]
+ethttp://en.wikipedia.org/wiki/fr:Portable_Network_Graphics[PNG] transparents sont utilisables, mais pour les PNG vous
+devez les éditer au préalable afin de les doter d'un canal alpha (en utilisant par exemple
+[http://www.irfanview.com/[IrfanView]], sauvegardez en utilisant le plugin PNGOUT et choisissez *RGB+Alpha*)
+
+====

@@ -1,0 +1,42 @@
+= Comando Ajusta
+:page-en: commands/Fit_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+*Ajusta*( <Lista de Puntos>, <Lista de Funciones> )::
+  Calcula una combinación lineal de las _funciones_ que se ajusta mejor a la lista de puntos.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++Ajusta({(-2, 3), (0, 1), (2, 1), (2, 3)}, {x^2, x})++` crea y grafica la función _0.625 x^2 - 0.25x_.
+* Dada la lista de puntos _L = \{A, B, C,...}_ y la de funciones _F = \{f, g, h}_ siendo _f(x)=1_, _g(x)=x_, _h(x)=ℯ^x_
+*`++Ajusta(L, F)++`* crea la función : *_`++a + b x + c ℯx++`_* que ajusta a la lista de puntos.
+
+====
+
+*Ajusta*( <Lista de Puntos>, <Función> )::
+  Calcula una función, con el método de mínimos cuadrados, que se ajusta a los puntos indicados.La Función depende de
+  uno o más deslizadores, que se toman como valores iniciales para el proceso de optimización.De no converger la
+  iteración no-lineal, podría ayudar ajustar los deslizadores a un _punto de partida_ más adecuado.
+
+[EXAMPLE]
+====
+
+Dado un deslizador _a_ que de a 1 en 1 varía en el intervalo de _-5_ a
+_5_,*`++Ajusta({(-2, 3), (0, 1), (2, 1), (2, 3)}, a + x^2)++`* crea y grafica la función _-1 + x^2_.
+
+====
+
+[NOTE]
+====
+
+* Ver también xref:/commands/AjusteBaseExp.adoc[AjusteBaseExp], xref:/commands/AjusteExp.adoc[AjusteExp],
+xref:/commands/AjusteImplícita.adoc[AjusteImplícita], xref:/commands/AjusteLineal.adoc[AjusteLineal],
+xref:/commands/AjusteLog.adoc[AjusteLog], xref:/commands/AjusteLogístico.adoc[AjusteLogístico],
+xref:/commands/AjustePolinómico.adoc[AjustePolinómico], xref:/commands/AjustePotencia.adoc[AjustePotencia],
+xref:/commands/AjusteRectaX.adoc[AjusteRectaX] y xref:/commands/AjusteSeno.adoc[AjusteSeno].
+* Si trabajas con números grandes o pequeños, deberías considerar normalizarlos para obtener un resultado más preciso.
+Ver xref:/commands/Normaliza.adoc[Normaliza]
+====

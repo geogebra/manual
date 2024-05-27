@@ -1,0 +1,112 @@
+= Líneas y Ejes
+:page-en: Lines_and_Axes
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+== Rectas
+
+Una recta se ingresa como una ecuación lineal en _x_ e _y_ o en forma paramétrica en la
+xref:/Barra_de_Entrada.adoc[Barra de Entrada]. En ambos casos, se pueden emplear en tal ecuación, variables previamente
+definidas (números, puntos, vectores).
+
+[NOTE]
+====
+
+El nombre de la recta debe ser anotado encabezando la entrada seguidos por [.kcode]## (los dos puntos).
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* Puede definirse una recta _g_ ingresando *`++g: 3x + 4y = 2++`* como ecuación lineal.
+* Debe establecerse un parámetro _t_ (como _t = 3_) antes de ingresar la recta _g_ en formato paramétrico
+*`++g: X = (-5, 5) + t (4, -3)++`*
+* En primer lugar, debe darse valor a los parámetros _m_ y _b_ - _m = 2_ y _b = -1_ en este caso - antes de ingresar la
+ecuación *`++g: y = m x + b++`* para obtener una recta _g_ según tal formato de tal ecuación.
+
+====
+
+=== Reciprocidad
+
+Dada una recta cuya ecuación toma la forma stem:[d: ax + by + c = 0] es posible obtener los
+xref:/commands/Coeficientes.adoc[coeficientes] con la siguiente sintaxis *x(d)*, *y(d)* y *z(d)*.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* Siendo `++d: 3x + 2y - 2 = 0++` :
+
+`++x(d)++` da 3 :
+
+`++y(d)++` da 2 y
+
+`++z(d)++` da -2.
+
+====
+
+[NOTE]
+====
+
+Suele ser útil el comando xref:/commands/Coeficientes.adoc[Coeficientes]
+====
+
+== Ejes
+
+A sendos ejes de coordenadas se accede con los términos correspondientes a través de _EjeX_ y _EjeY_ respectivamente.
+
+=== EjeX / EjeY --- Abscisas y Ordenadas de un xref:/commands/Punto.adoc[Punto]
+
+Para mencionar a uno u otro de los ejes, deben emplearse cada uno de los correspondientes términos:
+
+=== EjeX
+
+Corresponde a las abscisas.
+
+=== EjeY
+
+Corresponde a las ordenadas.
+
+=== Sobre los Ejes
+
+Se hace referencia a los ejes y a las coordenadas con diversos propósitos: asociados al
+xref:/Objetos_Geométricos.adoc[recorrido] en tanto ámbito en el que ubicar puntos, como ilustran los primeros dos
+ejemplos a continuación, o para vincularlos a la creación de otros xref:/Objetos.adoc[objetos], como se aprecia en los
+siguientes.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++A = Punto[EjeX]++``++B = Punto[EjeY]++`* *`++Perpendicular[A, EjeX]++`* construye la recta perpendicular
+al *_eje x_* que pasa por el punto _A_.*`++Perpendicular[B, EjeY]++`* construye la recta perpendicular al *_eje y_* que
+pasa por el punto _B_
+
+====
+
+Para referir a la abscisa u ordenada de un xref:/commands/Punto.adoc[punto], se requieren las funciones *x()* y *y()*,
+incluidos en los siguientes ejemplos.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++C = (x(A), y(B) )++``++P_i = (x(Interseca [ Recta [A, B] , EjeY] ), y(B) )++`* crea el punto *_P_i_* con
+las coordenadas indicadas.
+
+====
+
+== Valores de los Parámetros de una Recta
+
+A partir de ka recta *`++a: 2.2 x + 3.3 y = 4.4++`* se puede obtener el valor de cada parámetro según se lista:
+
+* *`++x(a)++`* brinda el valor 2.2
+* *`++y(a)++`* brinda el valor 3.3
+* *`++z(a)++`* brinda el valor -4.4 (porque GeoGebra almacena la ecuación de la recta como
+*`++2.2 x + 3.3 y - 4.4 = 0++`*)
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/Coeficientes.adoc[Coeficientes] y variantes en la lineal implícita.
+
+====

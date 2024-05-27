@@ -1,0 +1,29 @@
+= Commande SoitOptionEtiquette
+:page-en: commands/SetLabelMode_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+SoitOptionEtiquette(<Objet>,<Numéro n>)::
+  Affecte à l'objet l'option _n_ pour l'affichage de son étiquette, voir le tableau ci-dessous.
+
+[NOTE]
+====
+
+*Note :*
+
+* Par défaut, l'option est à 0 : Affichage du _Nom_ ;
+* Les entiers, différents de ceux qui figurent dans le tableau, sont traités comme s'ils valaient 0 ;
+* Pour 3 et 9, si l'objet ne possède de xref:/Étiquettes_et_Légendes.adoc[légende], c'est son _Nom_ qui est utilisé.
+
+.
+
+====
+
+[cols="^,",options="header",]
+|===
+|Numéro |Option
+|0 |Nom
+|1 |Nom + Valeur
+|2 |Valeur
+|3 |xref:/Étiquettes_et_Légendes.adoc[Légende]
+|9 |xref:/Étiquettes_et_Légendes.adoc[Légende] + Valeur
+|===

@@ -1,0 +1,25 @@
+= Commande SélectionObjets
+:page-en: commands/SelectObjects_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+SélectionObjets()::
+  Annule la sélection de tous les objets sélectionnés.
+
+SélectionObjets(<Objet>,<Objet>, ... )::
+  Annule la sélection de tous les objets sélectionnés et sélectionne tous les objets passés en paramètres.
+
+[NOTE]
+====
+
+*Note :* Tous les paramètres doivent être des objets xref:/Étiquettes_et_Légendes.adoc[nommés] (par ex.
+`++SélectionObjets(MilieuCentre(A,B))++` ne va pas fonctionner).
+
+====
+
+[NOTE]
+====
+
+*Note :* Cette commande annule maintenant tout déplacement en cours (utile dans les scripts). Déplacer un point A de
+script par actualisation `++Si(A==(1,1), SélectionObjets())++`, la cible (1,1) atteinte, il ne devrait plus se déplacer.
+
+====

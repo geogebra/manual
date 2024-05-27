@@ -1,0 +1,124 @@
+= Commande Si
+:page-en: commands/If_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Si( <Condition>, <Objet> )::
+  retourne une copie de l’objet si la condition prend la valeur _true_ (vrai), et un objet non défini si elle prend la
+  valeur _false_ (faux).
+Si( <Condition>, <Objet __a__>, <Objet __b__> )::
+  retourne une copie de l’objet _a_ si la condition prend la valeur _true_ (vrai), et une copie de l’objet _b_ si elle
+  prend la valeur _false_ (faux).
+
+[EXAMPLE]
+====
+
+*Exemple :* Soit _n_ un naturel. `++Si(n==3, x + y = 4, x - y = 4)++` retourne la droite dont une équation est _x_ + _y_
+= 4 lorsque _n_ = 3, et la droite dont une équation est _x_ - _y_ = 4 pour toutes les valeurs de _n_ différentes de 3.
+
+====
+
+Si( <Condition 1>, <Alors 1>, <Condition 2>, <Alors 2>, ... , <Sinon (optionnel)> )::
+  retourne une copie de l’objet "Alors 1" si la première condition est réalisée, de "Alors 2" si la deuxième condition
+  est réalisée etc.
+
+Si aucune des conditions n'est réalisée et qu'un "Sinon" est précisé, la commande retourne une copie de l’objet "Sinon".
+Sinon "non défini" est retourné.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Si(a ≟ 1, "Yvan", a ≟ 2,"Boris", a ≟ 3, "Marie", "Moi")++`
+
+Si __a__=1 la commande retourne le texte "Yvan", pour __a__=2' elle retourne "Boris", pour __a__=3 "Marie" et pour
+toutes les autres valeurs de _a_ elle retourne "Moi".
+
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Attention,title="Attention",width=18,height=18] *Attention*: |Les objets doivent être du même
+type.
+|===
+
+== Fonctions conditionnelles
+
+La commande *Si* ou des booléens peuvent être utilisés pour créer des fonctions conditionnelles. L'affichage dans
+Algèbre étant, en général, plus conventionnel, lors de l'utilisation de *Si* Ces fonctions peuvent être utilisées comme
+argument dans toute commande agissant sur une fonction, telle que xref:/commands/Dérivée.adoc[Dérivée],
+xref:/commands/Intégrale.adoc[Intégrale], et xref:/commands/Intersection.adoc[Intersection].
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* `++f(x) = S(x < 3, sin(x), x^2)++` ou `++f(x) = (x < 3) sin(x) +(x>=3) x^2 ++` retourne la fonction valant _sin(x)_
+pour _x < 3_ et _x^2^_ pour _x ≥ 3_
+
+La première syntaxe provoquant l'affichage stem:[f(x) = \left\\{\begin\{matrix} sin( x ) \space\space : \space x < 3\\
+x^\{2}\space\space\space\space\space\space\space\space\space\space : \space \text\{sinon} \end\{matrix}\right. ] dans
+Algèbre.
+
+* `++g(x) = Si(0 < x ∧ x<3, x^3)++` retourne la fonction valant _x^3^_ pour x entre 0 et 3 et non définie pour _x ≤ 0_
+ou _x ≥ 3_, avec pour affichage dans _Algèbre_ : x³ ((0 < x) ∧ (x < 3)), *MAIS* si vous validez cette écriture dans
+_Saisie_, vous obtenez la fonction valant _x^3^_ pour x entre 0 et 3 et *NULLE* pour _x ≤ 0_ ou _x ≥ 3_, une syntaxe
+plus simple `++g(x) = x^3, 0 < x <3++` retournant la fonction valant _x^3^_ pour x entre 0 et 3 et non définie pour _x ≤
+0_ ou _x ≥ 3_, avec pour affichage dans _Algèbre_ : x³, (0 < x < 3)
+** à ne pas confondre avec `++g(x) = x^3 (0 < x <3)++` avec pour affichage dans _Algèbre_ : x³ (0 < x < 3), vous obtenez
+la fonction valant _x^3^_ pour x entre 0 et 3 et *NULLE* pour _x ≤ 0_ ou _x ≥ 3_
+* `++h(x) = Si(-1  <  x  <  0, x³ + 1, 0  <  x  <  2, 1 - x, x² - 5)++` ou
+`++  (-1<x<0)(x^3+1)+(0<x<2)(1-x)+!(-1<x<2)(x^2-5)++` retourne la fonction valant stem:[x² - 5], sauf entre -1 et 0, où
+elle vaut stem:[x^\{3} +1], et entre 0 et 2, où elle vaut stem:[1-x].
+
+La première syntaxe provoquant l'affichage stem:[h(x) = \left\\{\begin\{matrix} x^\{3} + 1
+\space\space\space\space:\space\space -1 < x < 0\\ 1 - x\space : \space\space 0 < x < 2\\ x^\{2} - 5\space\space :
+\space\space\text\{sinon} \end\{matrix}\right. ] dans Algèbre. [.small]#_(Le rendu LaTeX n'est pas génial dans le
+wiki)_#
+
+* `++u(x) = Si(x < 2, x², x < 5, x, x < 6, (-x) / 7)++` correspond à stem:[h(x) = \left\\{\begin\{matrix} x²
+\space\space\space\space:\space\space x < 2\\x\space\space\space\space : \space\space x < 5\\ -
+\frac\{x}\{7}\space\space : \space\space x < 6 \end\{matrix}\right. ] dans Algèbre
+
+====
+
+[NOTE]
+====
+
+*Note :* Voir section: xref:/Valeurs_booléennes.adoc[Valeurs booléennes] pour les symboles utilisés dans les écritures
+de conditions.
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|*Dérivée(Si(condition, f(x), g(x)))* donne *Si(condition, f'(x), g'(x))*. Il n'y a pas pour l'instant d'évaluation
+"propre" des limites au niveau du point "critique".
+|===
+
+== La commande *Si* dans les Scripts
+
+La commande Si peut être utilisée dans les scripts pour accomplir différentes actions sous certaines conditions.
+
+[EXAMPLE]
+====
+
+*Exemple :* soit le nombre _n_ et le point _A_. La commande
+`++Si(Reste(n, 7) == 0, SoitCoordonnées(A, n, 0), SoitCoordonnées(A, n, 1))++` modifie les coordonnées du point _A_
+selon la condition donnée. Dans ce cas il est plus simple d'utiliser
+`++ SoitCoordonnées(A, n,Si(Reste(n, 7) == 0,0,1))++`.
+
+====
+
+Notez que les arguments de Si doivent être des objets ou des xref:/commands/Commandes_Scripts.adoc[Commandes_Scripts],
+et non des affectations. La syntaxe `++b=Si(a>1,2,3)++` est correcte, mais b=2 ou b=3 ne seront acceptés comme
+paramètres.
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel

@@ -1,0 +1,84 @@
+= Comando Secuencia
+:page-en: commands/Sequence_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Secuencia( <Expresión>, <Variable __k__>, <Valor inicial __a__>, <Valor final __b__> )::
+  Devuelve la lista de todos los objetos creados al evaluar la expresión mientras el índice _k_ varía en el rango del
+  valor inicial _a_ al valor final _b_.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++ Secuencia((2, k), k, 1, 5)++` crea una lista de puntos de abscisa 2 y ordenadas de valores sucesivos en el rango
+de 1 a 5: _\{(2, 1), (2, 2), (2, 3), (2, 4), (2, 5)}_
+* `++Secuencia(x^k, k, 1, 10)++` crea la lista \{_x, x², x³, x⁴, x⁵, x⁶, x⁷, x⁸, x⁹, x¹⁰_}
+
+====
+
+Secuencia( <Expresión>, <Variable __k__>, <Valor inicial __a__>, <Valor final __b__>, <Incremento> )::
+  Devuelve la lista de todos los objetos creados al evaluar la expresión mientras el índice _k_ varía en el rango del
+  valor inicial _a_ al valor final _b_ con el incremento dado.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++ Secuencia[(2, k), k, 1, 3, 0.5]++` crea una lista de puntos de abscisa 2 cuyas ordenadas varían de 1 a 3 con un
+incremento de 0.5: _\{(2, 1), (2, 1.5), (2, 2), (2, 2.5), (2, 3)}_
+* `++Secuencia(x^k, k, 1, 10, 2) ++` crea la lista \{_x, x³, x⁵, x⁷, x⁹_}
+
+====
+
+Secuencia( <Valor Final> )
+
+Crea la lista de números enteros de 1 hasta el valor final indicado.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++Secuencia(4)++` crea la lista _\{1, 2, 3, 4}_.
+* `++2^Secuencia(4)++` crea la lista _\{2, 4, 8, 16}_.
+
+====
+
+[NOTE]
+====
+
+Como los parámetros _a_ y _b_ son dinámicos, pueden utilizarse xref:/tools/Deslizador.adoc[deslizadores] en ambos casos
+precedentes.
+
+====
+
+Secuencia( <Valor inicial __k__>, <Valor final __n__> )::
+  Crea la lista de números enteros de _k_ a _n_ (ya sea creciente o decreciente).
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++ Secuencia(7,13)++` creates the list \{_7, 8, 9, 10, 11, 12, 13_}
+* `++ Secuencia(18,14)++` creates the list \{_18, 17, 16, 15, 14_}
+* `++ Secuencia(-5, 5)++` creates the list \{_-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5_}.
+
+[NOTE]
+====
+
+Esta sintaxis puede simplificarse, en lugar de utilizar por ejemplo `++ Secuencia(7,13)++` puede obtenerse ingresando en
+la barra de entrada `++7..13++` .
+
+====
+
+====
+
+[NOTE]
+====
+
+Ver xref:/Listas.adoc[listas] para más información.
+
+====

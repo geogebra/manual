@@ -1,0 +1,76 @@
+= Comando Distancia
+:page-en: commands/Distance_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Distancia( <Punto>, <Objeto (punto, recta, cónica...)> )::
+  Determina la menor distancia entre el punto y el objeto.
+
+[EXAMPLE]
+====
+
+`++Distancia((2, 1), x^2 + (y - 1)^2 = 1)++` da por resultado _1_
+
+====
+
+[NOTE]
+====
+
+El comando funciona para puntos, segmentos, rectas, cónicas, funciones y curvas dadas en forma implícita. Para
+funciones, utiliza un algoritmo numérico que funciona mejor para polinomios.
+
+[EXAMPLE]
+====
+
+Sea _f_ una función y _A_, un punto. `++Distancia(A, f)++` da por resultado la distancia entre _A_ y _(x(A), f(x(A)))_.
+
+====
+
+====
+
+Distancia( <Recta>, <Recta> )::
+  Establece la distancia entre un par de rectas.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++Distancia(y = x + 3, y = x + 1)++` da por resultado _1.41_
+* `++Distancia(y = 3x + 1, y = x + 1)++` da por resultado _0_
+
+====
+
+[NOTE]
+====
+
+La distancia entre dos secantes es *_0_* por lo que este comando resulta de interés para rectas paralelas.
+
+====
+
+[NOTE]
+====
+
+Ver también la herramienta image:20px-Mode_distance.svg.png[Mode distance.svg,width=20,height=20]
+xref:/tools/Distancia_o_Longitud.adoc[Distancia o longitud].
+
+====
+
+Distancia(<Punto>, <Punto> )::
+  Da por resultado la distancia entre sendos puntos.
+Distancia( <Recta>, <Recta> )::
+  Establece la distancia entre ambas rectas.
+
+[EXAMPLE]
+====
+
+Siendo _a: X = (-4, 0, 0) + λ*(4, 3, 0)_ y _b: X = (0, 0, 0) + λ*(0.8, 0.6, 0)_.`++Distancia(a, b)++` da por resultado
+_2.4_
+
+====
+
+[EXAMPLE]
+====
+
+`++Distancia((2, 1, 2), (1, 3, 0))++` da por resultado _3_
+
+====

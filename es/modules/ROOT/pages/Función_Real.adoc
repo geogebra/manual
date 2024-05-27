@@ -1,0 +1,90 @@
+= Función Real
+:page-en: Real_Function
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[.small]##
+
+== [#Funciones_y_Operaciones]#Funciones y Operaciones#
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+real( <Número Complejo> )::
+  Establece la parte real del xref:/Números_complejos.adoc[complejo] dado.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* En una y otra vista...
+
+*`++real( 7 + 3 ί )++`* da _7_, la parte real del complejo _7 + 3 ί_.
+
+*`++real( 17 ó + 3 ó ί )++`* solo es viable en la xref:/Vista_CAS.adoc[Vista CAS] en que se distingue la parte *_real_*,
+de la xref:/Función_Imaginaria.adoc[*_imaginaria_*] de la formulación simbólica.
+
+====
+
+[NOTE]
+====
+
+/Archivo:Funciones_Matemáticas_PNG.adoc[image:360px-Funciones_Matem%C3%A1ticas.PNG[Funciones
+Matemáticas.PNG,width=360,height=67]]
+
+Para acceder a cualquiera de las xref:/Operadores_y_Funciones_Predefinidas.adoc[funciones], basta con desplegar su
+listado pulsando sobre el signo *`+++++`* que aparece a la izquierda del botón de [.kcode]#Funciones Matemáticas#.
+
+/Archivo:Imaginaria_y_Pega_PNG.adoc[image:350px-Imaginaria_y_Pega.PNG[Imaginaria y Pega.PNG,width=350,height=143]]
+
+Tras seleccionar del listado la función deseada, se debe pulsar el botón [.kcode]#Pega#.
+
+/Archivo:Pega_Bottom_PNG.adoc[image:300px-Pega_Bottom.PNG[Pega Bottom.PNG,width=300,height=26]]
+
+Se _pega_ así, la función en la fila de trabajo, a completar, luego, con los datos precisos.
+
+====
+
+=== xref:/Vista_CAS.adoc[image:12px-Menu_view_cas.svg.png[Menu view cas.svg,width=12,height=12]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] la xref:/Vista_CAS.adoc[Vista C~[.small]#omputación#~A~[.small]#lgebraica#~S~[.small]#imbólica#~]
+
+Se admiten operaciones con soluciones o raíces no necesariamente reales así como la inclusión de literales para
+desarrollos simbólicos.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++real( 17 - ñ sqrt(- p ñ) )++` resulta xref:/tools/Evalúa.adoc[evaluada] como
+/Archivo:Mode_evaluate_png.adoc[image:Mode_evaluate.png[Mode evaluate.png,width=32,height=32]]
+** _-ñ stem:[\left \sqrt\{-p ñ} \right] + 17_ *o*, según la versión:
+** _stem:[\{imaginaria \left( \sqrt\{-p ñ} \right) imaginaria \left( ñ \right) - real \left( \sqrt\{-p ñ} \right) real
+\left( ñ \right) + 17}]_
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|[.small]#En esta formulaciones equivalentes se expresa la parte real de la resolución de los literales en el contexto
+del álgebra simbólica. Debe considerarse que se indica con _x(ñ)_ la eventual _porción real_ de *_ñ_* y con _y(ñ)_, la
+imaginaria. De /Archivo:Tool_Substitute_gif.adoc[image:Tool_Substitute.gif[Tool Substitute.gif,width=32,height=32]]
+xref:/tools/Sustituye.adoc[sustituirse] los literales por valores , el resultado sería numérico..#
+|===
+
+[NOTE]
+====
+
+*Notas:* El símbolo de los complejos, *ί*, se obtiene pulsando [.kcode]#Alt# + [.kcode]##i##Ver también...
+
+* las restantes xref:/Operadores_y_Funciones_Predefinidas.adoc[*_funciones_*] (y allí la función
+xref:/Operadores_y_Funciones_Predefinidas.adoc[*_real()_*]).
+* la xref:/Función_Imaginaria.adoc[Función Imaginaria]
+* la xref:/Función_parteFraccionaria.adoc[Función parteFraccionaria]
+
+====

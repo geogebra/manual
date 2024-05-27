@@ -1,0 +1,44 @@
+= Comando DistribuciónT
+:page-en: commands/TDistribution_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+DistribuciónF( <Grados de libertad>, x )::
+  Crea la función de distribución acumulada de la
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_t_de_Student[distribución t de Student] con los grados de libertad
+  dados.
+DistribuciónF( <Grados de libertad>, x, <Acumulada (true/false)> )::
+  Si _Acumulada_ es verdadero, crea la función de distribución acumulada de la distribución t de Student, de lo
+  contrario crea su función de densidad de probabilidad.
+DistribuciónF( <Grados de libertad>, <Valor variable __v__> )::
+  Evalúa la función de distribución acumulada de la distribución t de Student en el valor variable _v_, por ejemplo, la
+  probabilidad _P(X ≤ v)_ donde _X_ es una variable aleatoria con distribución t de Student definida por los grados de
+  libertad dados.
+
+[EXAMPLE]
+====
+
+`++DistribuciónT(10, 0)++` devuelve _0.5_.
+
+====
+
+[NOTE]
+====
+
+Devuelve la probabilidad para un valor dado de _x_ (o el área bajo la curva de la distribución F a la izquierda del _x_
+dado).
+
+====
+
+== Sintaxis CAS
+
+DistribuciónF( <Grados de libertad>, <Valor variable __v__> )::
+  Evalúa la función de distribución acumulada de la distribución t de Student en el valor variable _v_, por ejemplo, la
+  probabilidad _P(X ≤ v)_ donde _X_ es una variable aleatoria con distribución t de Student definida por los grados de
+  libertad dados.
+
+[EXAMPLE]
+====
+
+`++DistribuciónT(10, 0)++` devuelve _0.5_.
+
+====

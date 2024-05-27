@@ -1,0 +1,24 @@
+= Commande CaseACocher
+:page-en: commands/Checkbox_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+CaseACocher()::
+  Crée une xref:/InterActions.adoc[case à cocher] (booléen) (Boîte de sélection des objets à Afficher/Cacher).
+
+CaseACocher( <Légende> )::
+  Crée une case à cocher (booléen) avec la xref:/Étiquettes_et_Légendes.adoc[légende] donnée.
+
+CaseACocher( <Liste> )::
+  Crée une case à cocher qui, si elle n'est pas cochée, laisse invisibles les objets de la liste.
+
+[EXAMPLE]
+====
+
+*Exemple :* Soit _A_ et _B_ deux points. `++c=CaseACocher({A,B})++` crée une case à cocher _c_. Si _c_ est cochée, _A_
+et _B_ sont visibles, sinon ils ne sont pas visibles.
+
+====
+
+CaseACocher( <Légende>, <Liste> )::
+  Crée une case à cocher, avec la légende donnée, qui, si elle n'est pas cochée, laisse invisibles les objets de la
+  liste.

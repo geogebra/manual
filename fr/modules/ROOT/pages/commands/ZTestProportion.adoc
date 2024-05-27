@@ -1,0 +1,19 @@
+= Commande ZTestProportion
+:page-en: commands/ZProportionTest_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+ZTestProportion( <Proportion Échantillon>, <Taille Échantillon>, <Hypothèse Proportion>, <Queue> )::
+  Réalise un Z-test de la proportion dans une population dont on ne connaît que la proportion dans une partie de cette
+  population (échantillon).
+
+_Hypothèse Proportion_ est la proportion supposée dans la population dans une hypothèse nulle.
+
+_Queue_ peut être "<", ">" ou "≠" ce qui définit les hypothèses alternatives suivantes :
+
+"<" = proportions dans la population < _Hypothèse Proportion_
+
+">" = proportions dans la population > _Hypothèse Proportion_
+
+"≠" = proportions dans la population ≠ _Hypothèse Proportion_
+
+Les résultats sont fournis sous forme de liste \{Probabilité, statistique Z-test }.

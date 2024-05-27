@@ -1,0 +1,30 @@
+= Comando IntersecaRegiones
+:page-en: commands/IntersectRegion_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+IntersecaRegiones( <Polígono>, <Polígono> )::
+  Establece la intersección (solapamiento) de los dos polígonos. Opera exclusivamente cuando no se auto-intersecan y la
+  unión resulta un polígono individual.
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/IntersecaRecorridos.adoc[IntersecaRecorridos].
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+Dados dos polígonos:*`++pol1 := Polígono[A, B, C, D]++`* y**`++pol2 := Polígono[E, G, H, I]++`** de áreas _12_ y _9_
+respectivamente y cuyos correspondientes vértices son:`++A = (1, 4)++`, `++B = (1, 1)++`, `++C = (5, 1)++`,
+`++D = (5, 4)++`, `++E = (3, 5)++`, `++G = (3, 2)++`, `++H = (7, 2)++` e `++I = (5, 5)++`... se establece la
+intersección de ambos como:*`++pol3 := IntersecaRegiones[ pol1, pol2 ]++`* como _pol3 = 4_... como superposición entre
+pol1 _y_ pol2__.El siguiente boceto ilustra__ animadamente _el resultado gráfico de la intersección de los dos polígonos
+indicados, uno regular y el otro no, cuya área numéricamente expresada es la que corresponde a la figura lila._
+
+====
+
+/Archivo:Polisint_gif.adoc[image:Polisint.gif[Polisint.gif,width=471,height=562]]

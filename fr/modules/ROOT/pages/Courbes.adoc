@@ -1,0 +1,58 @@
+= Courbes
+:page-en: Curves
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Il y a deux types de courbes dans GeoGebra, en plus des représentations graphiques de fonctions.
+
+== Courbes paramétrées
+
+Les courbes paramétrées de la forme a(t)=(f(t),g(t)) où _t_ est un paramètre réel dans un domaine peuvent être créées en
+utilisant la xref:/commands/Courbe.adoc[Commande Courbe] ou directement, par exemple par la saisie de `++(t^2,t^3)++`.
+Elles peuvent être appelées dans les xref:/commands/Point.adoc[Commande Point], xref:/commands/Tangente.adoc[Commande
+Tangente] ,xref:/commands/Dérivée.adoc[Commande Dérivée], xref:/commands/Longueur.adoc[Commande Longueur],
+xref:/commands/Courbure.adoc[Commande Courbure] ,xref:/commands/VecteurCourbure.adoc[Commande VecteurCourbure] et
+xref:/commands/CercleOsculateur.adoc[Commande CercleOsculateur]
+
+[NOTE]
+====
+
+*Note :*
+
+* Les courbes paramétrées peuvent être appelées dans des fonctions prédéfinies et des opérations arithmétiques . Par
+exemple, la saisie de `++c(3)++` retourne le point de paramètre 3 sur la courbe _c_.
+* En utilisant la souris vous pouvez placer un point sur une courbe en utilisant l'outil xref:/tools/Point.adoc[Point]
+ou la commande xref:/commands/Point.adoc[Point].
+
+====
+
+Il n'est pas possible de créer une courbe paramétrée passant par des points donnés. Cependant vous pouvez essayer par
+ex. la xref:/commands/AjustPoly.adoc[Commande AjustPoly] pour obtenir une fonction dont la courbe représentative passe
+par ces points.
+
+== Courbes implicites
+
+Les courbes implicites sont définies par des polynômes des deux variables _x_ et _y_. Elles peuvent être définies
+directement dans xref:/Saisie.adoc[Saisie].
+
+[EXAMPLE]
+====
+
+*Exemple :* x^4+y^3=2x*y
+
+====
+
+ou aussi en utilisant la commande xref:/commands/CourbeImplicite.adoc[CourbeImplicite] ;
+
+et dans certains cas, par la commande xref:/commands/EquationLieu.adoc[EquationLieu] (voir les exemples).
+
+== Courbes en polaires
+
+Pour représenter une telle courbe, il est possible d'utiliser les différentes syntaxes équivalentes suivantes :
+
+[EXAMPLE]
+====
+
+*Exemples :* `++ρ=sin(2 θ)++`, ou `++sin(2 θ)++`, ou `++f(t)=(sin(2*t); t)++`, ou `++(sin(2*t); t)++`, ou
+`++f(t)=(sin(2*t); t), 0< t < 2 pi++`, ou `++(sin(2*t); t), 0 < t < 2 pi++`, ou `++Courbe[(sin(2*t); t), t, 0, 2pi]++`.
+
+====

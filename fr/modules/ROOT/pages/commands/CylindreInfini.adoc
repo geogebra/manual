@@ -1,0 +1,28 @@
+= Commande CylindreInfini
+:page-en: commands/InfiniteCylinder_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+*/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] Graphique 3D*
+
+CylindreInfini( <Point P>, <Vecteur v>, <Rayon r> )::
+  Crée un cylindre de révolution infini de rayon _r_ avec un axe de symétrie passant par _P_ et dirigé par _v_.
+CylindreInfini( <Point P>, <Point Q>, <Rayon r> )::
+  Crée un cylindre de révolution infini de rayon _r_ avec la droite (_PQ_) comme axe de symétrie.
+CylindreInfini( <Ligne a>, <Rayon r> )::
+  Crée un cylindre de révolution infini de rayon _r_ avec _a_ comme axe de symétrie.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++CylindreInfini(axeX, 2)++` crée le cylindre de rayon 2 ayant pour axe, celui des abscisses, pour équation
+_y²+z² = 4_
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/Cylindre.adoc[Cylindre].
+
+====

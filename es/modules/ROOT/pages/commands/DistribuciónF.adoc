@@ -1,0 +1,30 @@
+= Comando DistribuciónF
+:page-en: commands/FDistribution_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+DistribuciónF( <Grados de libertad numerador>, <Grados de libertad denominador>, x )::
+  Crea la función de distribución acumulada de la http://en.wikipedia.org/wiki/es:_Distribuci%C3%B3n_F[distribución F]
+  con parámetros _n, d_ (_n_ para _Grados de libertad numerador_, _d_ para _Grados de libertad denominador_).
+DistribuciónF( <Grados de libertad numerador>, <Grados de libertad denominador>, x, <Acumulada (true/false)> )::
+  Si _Acumulada_ es verdadero, crea la función de distribución acumulada de la distribución F, de lo contrario crea su
+  función de densidad de probabilidad.
+DistribuciónF( <Grados de libertad numerador>, <Grados de libertad denominador>, <Valor variable __v__> )::
+  Evalúa la función de distribución acumulada de la distribución F en el valor variable _v_, por ejemplo, la
+  probabilidad _P(X ≤ v)_ donde _X_ es una variable aleatoria con distribución F definida por los parámetros _n, d_ (_n_
+  para _Grados de libertad numerador_, _d_ para _Grados de libertad denominador_).
+
+[NOTE]
+====
+
+Este comando está también disponible en la xref:/Vista_CAS.adoc[image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16]] xref:/Vista_CAS.adoc[Vista CAS].
+
+====
+
+[NOTE]
+====
+
+Devuelve la probabilidad para un valor dado de _x_ (o el área bajo la curva de la distribución F a la izquierda del _x_
+dado).
+
+====

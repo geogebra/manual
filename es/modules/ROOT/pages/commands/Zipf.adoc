@@ -1,0 +1,51 @@
+= Comando Zipf
+:page-en: commands/Zipf_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Zipf( <Número de Elementos>, <Exponente> )::
+  Establece un gráfico de barras de una http://en.wikipedia.org/wiki/es:Ley_de_Zipf[_distribución Zipf_] (en inglés,
+  http://en.wikipedia.org/wiki/Zipf%27s_law[_Zipf distribution_]).
+  _Parámetros:_
+  _Número de Elementos_... cuyo rango se estudiará
+  _Exponente_... caracterizando la distribución
+
+Zipf( <Número de Elementos>, <Exponente>, <Acumulada o no~Booleana true/false~> )::
+  Si el valor _booleano_ es falso^_false_^, establece y xref:/Vista_Gráfica.adoc[grafica] el histograma correspondiente
+  a la http://en.wikipedia.org/wiki/es:Funci%C3%B3n_de_densidad_de_probabilidad[*_fdp_*, **_f_**unción de **_d_**ensidad
+  de **_p_**robabilidad] de la http://en.wikipedia.org/wiki/es:Ley_de_Zipf[_distribución Zipf_] y del diagrama
+  escalonado http://en.wikipedia.org/wiki/es:Funci%C3%B3n_Distribuici%C3%B3n_Acumulada[acumulativo] de
+  http://en.wikipedia.org/wiki/es:Ley_de_Zipf[Zipf], en caso contrario.
+
+Zipf( <Número de Elementos>, <Exponente>, <Valor Variable>, <Acumulada o no~Booleana true/false~> )
+
+Siendo X una http://en.wikipedia.org/wiki/es:Variable_aleatoria[variable aleatoria] de una
+http://en.wikipedia.org/wiki/es:Ley_de_Zipf[_distribución Zipf_]...
+
+* cuando el parámetro booleano es falso, el resultado es P( X = _v_)
+* cuando es verdadero, P( X ≤ _v_).
+
+== xref:/Vista_CAS.adoc[image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+En esta xref:/Vista_CAS.adoc[vista] obra de modo análogo al descripto la siguiente variante de sintaxis:
+
+Zipf( <Número de Elementos>, <Exponente>, <Valor Variable>, <Acumulada o no~Booleana true/false~> )
+
+'''''
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Zipf[ 10, 1 , 5, false]++`* ingresado...
+
+* desde la xref:/Barra_de_Entrada.adoc[Barra de Entrada] da por resultado 0.07
+* en la xref:/Vista_CAS.adoc[Vista CAS] da el xref:/tools/Valor_Numérico.adoc[valor numérico]
+/Archivo:Mode_numeric_png.adoc[image:Mode_numeric.png[Mode numeric.png,width=32,height=32]] __0.07__^decimales según
+xref:/Menú_de_Opciones.adoc[Redondeo] fijado^ y al xref:/tools/Evalúa.adoc[evaluarlo]
+/Archivo:Mode_evaluate_png.adoc[image:Mode_evaluate.png[Mode evaluate.png,width=32,height=32]]
+__stem:[\frac\{504}\{7381}]__El siguiente boceto ilustra _animadamente_ la operatoria del comando según los valores
+aleatorios de sus parámetros, incluyendo la variable _booleana_ que determina si el diagrama resultante será un
+histograma o uno escalonado acumulativo.
+
+====
+
+/Archivo:Zipf_1_gif.adoc[image:Zipf_1.gif[Zipf 1.gif,width=431,height=535]]

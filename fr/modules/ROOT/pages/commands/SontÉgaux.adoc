@@ -1,0 +1,46 @@
+= Commande SontÉgaux
+:page-en: commands/AreEqual_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+SontÉgaux( <Objet>, <Objet> )::
+  Détermine si les objets sont "égaux".
+
+Normalement cette commande détermine le résultat numériquement. Ce comportement peut être changé en utilisant la
+commande xref:/commands/Prouver.adoc[Prouver].
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++SontÉgaux(Segment((1, 2), (3, 4)), Segment((3, 4), (1, 6)])++` retourne _false_ . Ne pas confondre cette commande
+avec l'opération booléenne xref:/Valeurs_booléennes.adoc[égal], ainsi `++Segment((1,2),(3,4)) ≟ Segment((3,4),(1,6))++`
+retourne _true_ (les deux segments sont de même longueur).Cette dernière correspond à
+`++SontIsométriques(Segment((1, 2), (3, 4)), Segment((3, 4), (1, 6))++`
+
+[NOTE]
+====
+
+*Note :* L'outil xref:/tools/Relation.adoc[Relation] ou la commande xref:/commands/Relation.adoc[Relation] différentient
+égalité de segments et égalité de longueurs de segments.
+/Fichier:Relation_PNG.adoc[image:Relation.PNG[Relation.PNG,width=329,height=157]] et en pressant sur le bouton "Plus
+..." /Fichier:Relation2_PNG.adoc[image:Relation2.PNG[Relation2.PNG,width=336,height=215]]
+
+====
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++SontÉgaux(Cercle((0, 0),1),x^2+y^2=1)++` retourne _true_ car les 2 objets correspondent à "deux" cercles de même
+centre et même rayon.
+
+====
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/EstTangente.adoc[EstTangente],
+xref:/commands/SontIsométriques.adoc[SontIsométriques], xref:/commands/SontAlignés.adoc[SontAlignés],
+xref:/commands/SontParallèles.adoc[SontParallèles], xref:/commands/SontConcourantes.adoc[SontConcourantes],
+xref:/commands/SontPerpendiculaires.adoc[SontPerpendiculaires], xref:/commands/SontCocycliques.adoc[SontCocycliques].

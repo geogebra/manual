@@ -1,0 +1,16 @@
+= Commande PointAuHasardDans
+:page-en: commands/RandomPointIn_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+PointAuHasardDans( <Région> )::
+  Retourne un point, au hasard, appartenant à la région délimitée par
+  * le polygone donné ;
+  * la conique (fermée, sinon le point est _non défini_) donnée. Cette restriction exclut aussi les secteurs.
+
+PointAuHasardDans( <Liste Points> )::
+  mais jusqu'à preuve du contraire la syntaxe *PointAuHasardDans( <Point>, <Point>, <Point>, ... )* même si elle n'est
+  plus proposée fonctionne toujours
+  Retourne un point, au hasard, appartenant au polygone construit sur la liste de points.
+
+PointAuHasardDans( <xMin>, <xMax>, <yMin>, <yMax> )::
+  Retourne un point, au hasard, appartenant au rectangle déterminé par xMin ≤ x ≤ xMax et yMin ≤ y ≤ yMax.

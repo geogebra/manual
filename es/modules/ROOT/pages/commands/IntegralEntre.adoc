@@ -1,0 +1,58 @@
+= Comando IntegralEntre
+:page-en: commands/IntegralBetween_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+IntegralEntre( <Función>, <Función>, <Extremo inferior del intervalo>, <Extremo superior del intervalo> )::
+  Da por resultado el valor de la integral definida de la diferencia _f(x)-g(x)_ entre las dos funciones indicadas, en
+  el intervalo comprendido entre los valores _Extremo inferior del intervalo_ y _Extremo superior del intervalo_.
+
+[EXAMPLE]
+====
+
+*`++IntegralEntre[ sen(x),  cos(x), 0, pi ]++`*.
+
+====
+
+[NOTE]
+====
+
+Este comando sombrea, además, el área entre las funciones dentro del intervalo indicado.
+
+====
+
+IntegralEntre(<Función>, <Función>, <Extremo inferior del intervalo>, <Extremo superior del intervalo>, <Evaluar o no
+(true/false)>)::
+  Opera del mismo modo que la variante previa si el valor del último parámetro es _true_ (verdadero).En caso contrario,
+  si el valor del último parámetro es _false_, solamente se sombrea el área correspondiente, sin calcularse la integral.
+
+== Sintaxis para la Vista CAS
+
+IntegralEntre( <Función>, <Función>, <Extremo inferior del intervalo>, <Extremo superior del intervalo> )::
+  Da por resultado el valor de la integral definida de la diferencia _f(x)-g(x)_ entre las dos funciones indicadas, en
+  el intervalo comprendido entre los valores _Extremo inferior del intervalo_ y _Extremo superior del intervalo_.
+
+[EXAMPLE]
+====
+
+*`++IntegralEntre[ sen(x),  cos(x), pi / 4, pi * 5/4 ]++`* da por resultado stem:[2 \sqrt\{2}].
+
+====
+
+IntegralEntre( <Función>, <Función>, <Variable>, <Valor inicial>, <Valor final> )::
+  Da por resultado el valor de la integral definida de la diferencia _f(x)-g(x)_ entre las dos funciones dadas, con
+  respecto a la variable indicada, en el intervalo comprendido entre los valores _Valor inicial_ y _Valor final_.
+
+[EXAMPLE]
+====
+
+*`++IntegralEntre[ a sen(t), a cos(t), t, pi / 4, pi * 5/4 ]++`* da por resultado stem:[2 \sqrt\{2} a].
+
+====

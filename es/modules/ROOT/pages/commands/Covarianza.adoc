@@ -1,0 +1,55 @@
+= Comando Covarianza
+:page-en: commands/Covariance_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+Covarianza( [.small]##<##Lista de Números[.small]##>, <##Lista de Números[.small]##>## )::
+  Calcula la http://en.wikipedia.org/wiki/es:Covarianza[covarianza] entre los elementos de ambas listas.
+
+[EXAMPLE]
+====
+
+`++Covarianza[{1, 2, 3}, {1, 3, 7}]++` da por resultado _2_, la covarianza de _\{1, 2, 3}_ y _\{1, 3, 7}_
+
+====
+
+Covarianza( <Lista de Puntos> )::
+  Calcula la covarianza entre las coordenadas *_x_* e *_y_* de los puntos.
+
+[EXAMPLE]
+====
+
+`++Covarianza[{(1, 1), (2, 3), (3, 7)}]++` da por resultado _2_, la
+http://en.wikipedia.org/wiki/es:Covarianza[covarianza] entre las listas determinadas por las abscisas - _\{1, 2, 3}_ - y
+las ordenadas - _\{1, 3, 7}_ - de los puntos dados
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] la xref:/Vista_CAS.adoc[Vista C~[.small]#omputación#~A~[.small]#lgebraica#~S~[.small]#imbólica#~]
+
+En esta xref:/Vista_CAS.adoc[vista] el comando obra del modo ya descripto y se admiten literales para operar
+simbólicamente.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Covarianza[{1, 2 + ñ, 3 + ñ}, {1, 3 + ñ, 7 + ñ}]++`* establece como covarianza stem:[\{\frac\{2 ñ^\{2} +
+11 ñ + 18}\{9 } }]**`++Covarianza[{(ñ, ñ), (2 ñ, 3 ñ), (3 ñ, 7 ñ)}]++`** establece como covarianza *_2 ñ²_*.
+
+====
+
+'''''
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/Varianza.adoc[Varianza].
+
+====

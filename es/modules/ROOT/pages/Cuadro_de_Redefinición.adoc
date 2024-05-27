@@ -1,0 +1,88 @@
+= Cuadro de Redefinición
+:page-en: Redefine_Dialog
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+La herramienta que permite la redefinición de objetos es sumamente versátil para una modificación retrospectiva de lo
+construido. .
+
+[NOTE]
+====
+
+El elemento redefinido solo puede depender de otros previamente definidos. Es de hacer notar que también es posible
+cambiar el orden de las etapas o pasos de construcción en el
+/Archivo:Menu_view_construction_protocol_png.adoc[image:20px-Menu_view_construction_protocol.png[Menu view construction
+protocol.png,width=20,height=20]] xref:/Protocolo_de_Construcción.adoc[Protocolo de Construcción].
+
+====
+
+Resulta muy útil introducir cambios tras la construcción de cualquier objeto. Esto puede realizarse de diversos modos:
+
+'''''
+
+Con la xref:/Desplazamientos.adoc[herramienta] xref:/tools/Elige_y_Mueve.adoc[image:32px-Mode_move.svg.png[Mode
+move.svg,width=32,height=32]] xref:/tools/Elige_y_Mueve.adoc[Elige y Mueve] y un doble _clic_ sobre cualquier objeto de…
+
+* ... la xref:/Vista_Algebraica.adoc[Vista Algebraica] se abre:
+
+* un campo de edición que permite modificar directamente la representación algebraica de un objeto libre, cambio que se
+aplica al pulsar [.kcode]#Enter# ([.kcode]#Intro# en otros teclados).
+* la caja de diálogo de Redefine para obrar en relación al objeto dependiente.
+
+* ... de la xref:/Vista_Gráfica.adoc[Vista Gráfica] se abre la caja de diálogo de Redefine para operar en tal sentido
+
+* Cambiar cualquier objeto anotando su nombre y la nueva definición en la Barra de Entrada.
+* Abrir la xref:/Cuadro_de_Propiedades.adoc[Caja de Propiedades] y cambiar la definición de un objeto en la pestaña
+Básico.
+
+[NOTE]
+====
+
+Los xref:/Objetos.adoc[objetos] también pueden seleccionarse pulsando [.kcode]#F2# en una u otra
+xref:/Vistas.adoc[vista]
+====
+
+'''''
+
+A partir de la versión 4.2, se despliega de inmediato la caja de diálogo de Redefinición de un objeto recientemente
+creado al pulsar cualquier letra del teclado.
+
+'''''
+
+[NOTE]
+====
+
+*Notas:*
+
+* Los objetos fijos no pueden ser redefinidos a menos que previamente se lo _libere_ usando la pestaña *Básico* de la
+xref:/Cuadro_de_Propiedades.adoc[Caja de Propiedades]..
+* También se pueden redefinir objetos existentes anotando su nueva definiciòn en la xref:/Barra_de_Entrada.adoc[Barra de
+Entrada]. Por ejemplo, `++b:Segmento[A, B]++` para redefinir a `++b++` como segmento.
+
+====
+
+== Alternativas
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* Para ubicar un punto libre A sobre una recta *h*, un doble _clic_ sobre el punto *A* que abre la ventana de diálogo de
+*Redefine*. Entonces, se puede anotar el comando *`++Punto[h]++`* en el campo emergente en lugar de la definición previa
+y pulsar [.kcode]#Enter# ([.kcode]#Intro# en algunos teclado) para confirmar el cambio.
+* Para eliminar el punto *A* de esta recta de modo que vuelva a ser libre, es preciso obrar el cambio ubicándolo en
+cualquier posición de coordenadas, como *`++ (1, 2)++`* en lugar de la definición previa
+
+Otro ejemplo es la conversión de una recta *_h_* que pasa por dos puntos *A* y *B* en un segmento. Basta abrir la caja
+de diálogo de *Redefine* para *_h_* y en el campo emergente cambiar el contenido...
+
+* *`++Recta[A, B]++`* - por *`++Segmento[A, B]++`*
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/EstáDefinido.adoc[EstáDefinido]
+
+====

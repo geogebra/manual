@@ -1,0 +1,29 @@
+= Comando Triangular
+:page-en: commands/Triangular_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Triangular( <Límite inferior>, <Límite superior x>, <Moda>, x )::
+  Crea la función de distribución acumulada de la
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_triangular[distribución triangular] con los parámetros _límite
+  inferior, límite superior y moda_.
+Triangular( <Límite inferior>, <Límite superior x>, <Moda>, x, <Acumulada (true/false)> )::
+  Si _Acumulada_ es verdadero, crea la función de distribución acumulada de la distribución triangular, de lo contrario
+  crea su función de densidad de probabilidad.
+Triangular( <Límite inferior>, <Límite superior x>, <Moda>, <Valor variable __v__> )::
+  Evalúa la función de distribución acumulada de la distribución de triangular en el valor variable _v_, por ejemplo, la
+  probabilidad _P(X ≤ v)_ donde _X_ es una variable aleatoria con distribución triangular.
+
+[EXAMPLE]
+====
+
+`++Triangular(0, 5, 2, 2)++` devuelve _0.4_.
+
+====
+
+[NOTE]
+====
+
+Devuelve la probabilidad para un valor dado de _x_ (o el área bajo la curva de la distribución triangular a la izquierda
+del _x_ dado).
+
+====

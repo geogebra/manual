@@ -1,0 +1,132 @@
+= LaTeX
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+En GeoGebra también se pueden escribir fórmulas LaTeX.Para hacerlo, hay que tildar la casilla [.kcode]#Fórmula
+*_LaTeX_*# que aparece en la ventana de diálogo de la herramienta xref:/Textos.adoc[image:32px-Mode_text.svg.png[Mode
+text.svg,width=32,height=32]] xref:/tools/Texto.adoc[Texto] y anotar la fórmula según la sintaxis de *_LaTeX_*.
+
+[NOTE]
+====
+
+Para crear un texto que contenga una formula *_LaTeX_* así como xref:/Textos.adoc[texto] xref:/Textos.adoc[estático], se
+presentan alternativas:
+
+* ingresar la parte estática del texto y luego se añade la fórmula LaTeX entre un juego de símbolos de pesos ($).
+* incluir el texto en \text\{}.
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* Desde la xref:/Barra_de_Entrada.adoc[Barra de
+Entrada]...*`++LaTeX["\text{La longitud de la diagonal es } \sqrt{ 2 }"]++`*
+* Si se estuviera xref:/tools/Texto.adoc[insertando texto], con *Fórmula LaaTeX* tildado:
+
+* *`++"La longitud de la diagonal es $\sqrt{ 2 }$"++`* para anotar:*_La longitud de la diagonal es_ stem:[\sqrt\{ 2 }]*
+* *`++\text{La longitud de la diagonal es } \sqrt{ 2 }++`*
+* *`++\mbox{ La longitud de la diagonal es } \sqrt{2)++`*
+* Si se desea el texto recuadrado...*`++"\fbox{ \mbox{La longitud de la diagonal es { \sqrt{2} }"++`*
+
+* También se puede emplear la xref:/commands/FórmulaTexto.adoc[FórmulaTexto] para anotar la fórmula entrecomillada como
+en:*`++FórmulaTexto["\text{La longitud de la diagonal es } \sqrt{ 2 }"]++`*
+
+====
+
+[NOTE]
+====
+
+Se puede simplemente obtener un texto *_LaTeX_* conteniendo el valor de un objeto listado en la
+xref:/Vista_Algebraica.adoc[Vista Algebraica] arrastrándolo desde allí y depositándolo en la posición deseada de la
+xref:/Vista_Gráfica.adoc[Vista Gráfica] .
+
+====
+
+== Seleccionando Símbolos
+
+Se pueden seleccionar los símbolos más usuales en la sintaxis de las formulas más habituales, desde el menú desplegable
+que aparece a la derecha de la casilla de *_LaTeX_*.Esto intercala los códigos de *_LaTeX_* correspondientes en el campo
+de texto y deja ubicado el cursor entre un juego de llaves.Si se quiere crear un xref:/Textos.adoc[texto dinámico] con
+la formula, basta un _clic_ sobre un objeto para que GeoGebra inserte su nombre así como la sintaxis para el
+xref:/Textos.adoc[texto mixto].
+
+El menú que se despliega dentro de la *Caja de Diálogo* de /Archivo:Mode_text_png.adoc[image:Mode_text.png[Mode
+text.png,width=32,height=32]]xref:/tools/Texto.adoc[Texto], sea para seleccionar los símbolos matemáticos más usuales o
+las letras griegas o los operadores, hace muy sencilla la tarea de establecer una fórmula adecuada y prolija.
+
+Para crear un xref:/Textos.adoc[texto dinámico] con las fórmulas, se precisa seleccionar los objetos relacionados de la
+lista desplegable de Objetos, de modo que GeoGebra inserte sus nombres además de la sintaxis del xref:/Textos.adoc[texto
+mixto] en juego.
+
+Algunos comandos importantes de *_LaTeX_* aparecen en la siguiente tabla. Revisando cualquier documento sobre *_LaTeX_*
+se obtiene más información sobre el tema
+
+[width="100%",cols="20%,20%,20%,20%,20%",options="header",]
+|===
+|Entrada LaTeX |Resultado | |Entrada LaTeX |Resultado
+|a \cdot b |stem:[a \cdot b] | |x^\{2} |stem:[x^\{2}]
+|\frac\{a}\{b} |stem:[\frac\{a}\{b}] | |a_\{1} |stem:[a_\{1}]
+|\sqrt\{x} |stem:[\sqrt\{x}] | |\sin\alpha + \cos\beta |stem:[\sin\alpha + \cos\beta]
+|\sqrt[n]\{x} |stem:[\sqrt[n]\{x}] | |\int_\{a}^\{b} x dx |stem:[\int_\{a}^\{b} x dx]
+|\vec\{v} |stem:[\vec\{v}] | |\sum_\{i=1}^\{n} i^2 |stem:[\sum_\{i=1}^\{n} i^2]
+|\overline\{AB} |stem:[\overline\{AB}] | |\{a \choose b} |stem:[ \left( \begin\{array}\{} a \\ b \end\{array} \right) ]
+|\bgcolor\{00ff00} \{ABCD} a|
+....
+ABCD
+....
+
+| |\fgcolor\{ff0000}\{abcd} a|
+....
+abcd
+....
+
+|===
+
+== Nominaciones _Distinguidas_
+
+Es posible incluir detalles en las _referencias_ a los xref:/Objetos.adoc[objetos].
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Es posible, también, incluir en el
+xref:/Rótulos_y_Subtítulos.adoc[rótulo] de un objeto una formulación en *_LaTeX_* como en los ejemplos que aparecen a
+continuación.*Nombre _colorido_ y oras variantes*
+
+* *`++$\textcolor{red}{%n}$++`* para una en _Serif_ en _itálicas_ de color rojo
+* *`++$\textcolor{blue}{%n}$++`* en _Serif_ azul
+* *`++$\textcolor{magenta}\mathsf{%n}$++`* o *`++$\textcolor{magenta}\mathsf{%n}$++`* para incluir los colores posibles
+siendo su denominación en inglés:_black_, _red_, _blue_, _green_, _cyan_, _magenta_, _yellow_ y _white_.
+
+====
+
+== Ver también
+
+* El xref:/Sobre_LaTeX_medidas_de_fuentes_cajas_de_color_y_matemática_.adoc[Tutorial sobre LaTeX en GG]
+* http://mate.dm.uba.ar/~pdenapo/tutorial-latex/tutorial-latex.html[Mini-Tutorial de LaTeX]
+* http://www.tug.org[TeX user group]
+* xref:/Código_LaTeX_para_las_fórmulas_más_comunes.adoc[Código-LaTeX para las fórmulas más comunes] y para ampliar
+alternativa http://web.fi.uba.ar/~ssantisi/works/ecuaciones_en_latex/[la guía de ecuaciones en LaTeX]
+* xref:/Exporta_a_LaTeX_(PGF_PSTricks)_y_Asymptote.adoc[Exportando archivos GeoGebra a documentos LaTeX]
+
+'''''
+
+[NOTE]
+====
+
+*Notas:* Si bien los comandos más frecuentes de *_LaTeX_* en los contextos de matemáticas y los textos de de tal estilo
+operan adecuadamente en GeoGebra, GeoGebra de por sí solo admite un sub-conjunto de *_LaTeX_* usando
+http://forge.scilab.org/index.php/p/jlatexmath/[JLaTeXMath].Por lo tanto, los recursos más potentes y avanzados no
+resultan accesibles ni pueden sumarse, por ejemplo, a través de la inclusión de prestaciones adicionales.
+
+====

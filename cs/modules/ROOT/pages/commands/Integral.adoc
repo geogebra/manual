@@ -1,0 +1,58 @@
+= Příkaz Integral
+:page-en: commands/Integral_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Integral( <Funkce> )::
+  Vypočítá neurčitý http://en.wikipedia.org/wiki/cs:Integr%C3%A1l[integrál] funkce jedné proměnné.
+
+[EXAMPLE]
+====
+
+`++Integral[x³]++` dává _x⁴ / 4_ .
+
+====
+
+Integral( <Funckce>, <Proměnná> )::
+  Vypočítá neurčitý integrál podle dané proměnné.
+
+[EXAMPLE]
+====
+
+`++Integral[x³+3x y, x]++` dává stem:[\frac\{x² (x² + 6y)} 4 ].
+
+====
+
+Integral( <Funkce>, <a>, < b> )::
+  Vypočítá určitý integrál funkce jedné proměnné na intervalu [_a , b_].
+
+[NOTE]
+====
+
+Tento příkaz vystínuje plochu mezi grafem funkce a osou _x_.
+
+====
+
+Integral( <Funkce>, <a>, < b>, <Vyhodnotit (logická hodnota)> )::
+  Vypočítá určitý integrál funkce jedné proměnné na intervalu [_a , b_] a vybarví příslušnou plochu. Pokud je logická
+  hodnota _Vyhodnotit = false_, příkaz nevypočítá hodnotu integrálu.
+
+Integral( <Funkce>, <Funkce>, <Počáteční hodnota x>, <Koncová hodnota x> )::
+  Příkaz je identický s příkazem xref:/commands/IntegralMezi.adoc[Integral Mezi].
+
+Integral( <Funkce>, <Funkce>, <Počáteční hodnota x>, <Koncová hodnota x>, <Vyhodnotit (logická hodnota)> )::
+  Příkaz je identický s příkazem xref:/commands/IntegralMezi.adoc[Integral Mezi].
+
+== CAS pohled
+
+Integral( <Funkce> )::
+  Vypočítá neurčitý integrál funkce jedné proměnné.
+Integral( <Funckce>, <Proměnná> )::
+  Vypočítá neurčitý integrál podle dané proměnné.
+Integral( <Funkce>, <a>, < b> )::
+  Vypočítá určitý integrál funkce jedné proměnné na intervalu [_a , b_].
+
+[NOTE]
+====
+
+Anglická verze: /s_index_php?title=En:Integral_Command_action=edit_redlink=1.adoc[Integral]
+====

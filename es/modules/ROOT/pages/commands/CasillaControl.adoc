@@ -1,0 +1,20 @@
+= Comando CasillaControl
+:page-en: commands/Checkbox_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+CasillaControl( )::
+  Crea una xref:/Objetos_de_Acción.adoc[casilla de control].
+CasillaControl( <Rótulo> )::
+  Crea una casilla de control con el xref:/Rótulos_y_Subtítulos.adoc[Rótulo] indicado.
+CasillaControl( <Lista> )::
+  Crea una casilla de control que, cuando está destildada oculta los objetos listados.
+CasillaControl( <Rótulo> , <Lista> )::
+  Crea una casilla de control con el rótulo indicado que, cuando está destildada, oculta los objetos listados.
+
+[EXAMPLE]
+====
+
+Sean _A_ y _B_ puntos. `++c = CasillaControl({A,B})++` crea la casilla de control _c_. Cuando _c_ está tildada, _A_ y
+_B_ son visibles, en caso contrario, están ocultos.
+
+====

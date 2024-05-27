@@ -1,0 +1,45 @@
+= Commande Prisme
+:page-en: commands/Prism_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+*/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] Graphique 3D*
+
+Prisme( <Point>, <Point>, ...)::
+  Crée le prisme déterminé par les points donnés. Tous les points donnés, sauf le dernier, doivent être coplanaires, ce
+  sont les sommets d'un polygone de base.
+Prisme( <Polygone>, <Point>)::
+  Crée le prisme dont une base est le polygone donné, l'autre en étant l'image par la translation envoyant le premier
+  sommet du polygone sur le point donné
+Prisme( <Polygone>, <Hauteur>)::
+  Crée le prisme droit dont une base est le polygone donné, de _hauteur_ la hauteur donnée, la création tient compte de
+  l'orientation du polygone !
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Prisme(poly1, D)++`, crée le prisme de bases poly1 et poly2 obtenue par translation de vecteur stem:[\vec\{MD}] pour
+poly2=Polygone[M,....].
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++ Prisme(A, B, C, D)++`, crée le prisme de bases ABC et DEF obtenue par translation de vecteur stem:[\vec\{AD}]
+
+====
+
+/Fichier:Tool_tool_png.adoc[image:Tool_tool.png[Tool tool.png,width=32,height=32]] Voir les *outils* associés :
+/Fichier:Mode_prism_png.adoc[image:Mode_prism.png[Mode prism.png,width=32,height=32]] xref:/tools/Prisme.adoc[Prisme] et
+/Fichier:Mode_extrusion_png.adoc[image:Mode_extrusion.png[Mode extrusion.png,width=32,height=32]]
+xref:/tools/Extrusion_Prisme_Cylindre.adoc[Extrusion Prisme/Cylindre].
+
+====

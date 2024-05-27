@@ -1,0 +1,78 @@
+= Comando DE
+:page-en: commands/SD_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+DE( <Lista de Números> )::
+  Calcula la http://en.wikipedia.org/wiki/es:Desviaci%C3%B3n_est%C3%A1ndar[desviación estándar] de los números de la
+  lista.
+
+[EXAMPLE]
+====
+
+*`++DE[{1, 2, 3, 4, 5}]++`* establece _1.41_.
+
+====
+
+DE( <Lista de Números>, <Lista de Frecuencias> )::
+  Determina la http://en.wikipedia.org/wiki/es:Desviaci%C3%B3n_est%C3%A1ndar[desviación estándar] de la lista de números
+  según la de frecuencias indicada.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++DE[{1, 2, 3, 4, 9},{3,2,2,2,1}]++`* da
+__2.28__**`++DE[ {20, 40, 41, 42, 40, 54},  {20, 6, 4, 5, 2} ]++`** da _5.96_
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+En esta xref:/Vista_CAS.adoc[vista], *DE* obra como se ha descripto y admite la inclusión de literales.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++DE[{1, 2, 3, 4, 5}]++`* se xref:/tools/Evalúa.adoc[evalúa] como
+/Archivo:Mode_evaluate_png.adoc[image:Mode_evaluate.png[Mode evaluate.png,width=32,height=32]] stem:[\sqrt\{2}]. Con
+decimales según xref:/Menú_de_Opciones.adoc[redondeo], su xref:/tools/Valor_Numérico.adoc[valor numérico]
+/Archivo:Mode_numeric_png.adoc[image:Mode_numeric.png[Mode numeric.png,width=32,height=32]] _1.41_ coincide con el que
+se obtiene desde la xref:/Barra_de_Entrada.adoc[Barra de Entrada]**`++DE[{ó-ñ, ó+ñ}]++`** establece
+stem:[\{\left|ñ\right|}]**`++DE[Secuencia[5], Secuencia[(k + 1)(k -1), k, 2, 6]]++`**, con
+xref:/tools/Valor_Numérico.adoc[valor numérico]
+[.small]##[.small]#/Archivo:Mode_numeric_png.adoc[image:Mode_numeric.png[Mode
+numeric.png,width=32,height=32]]###__1.13__, se xref:/tools/Evalúa.adoc[evalúa] como
+[.small]#[.small]#/Archivo:Mode_evaluate_png.adoc[image:Mode_evaluate.png[Mode evaluate.png,width=32,height=32]]##
+stem:[\frac\{1182721 } \{45840}]**`++DE[{-3 + 2 x, -1- 4 x, -2 + 5 x^2}] ++`** se xref:/tools/Evalúa.adoc[evalúa] como
+/Archivo:Mode_evaluate_png.adoc[image:Mode_evaluate.png[Mode evaluate.png,width=32,height=32]] stem:[\frac\{\sqrt\{25x⁴
++ 10x³ + 28x² - 18x + 3} \sqrt\{2} } \{ 3 }]
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Al _tildar_ el redondelito que encabeza la fila, en
+el caso de stem:[\frac\{\sqrt\{25x⁴ + 10x³ + 28x² - 18x + 3} \sqrt\{2} } \{ 3 }], cobra entidad
+xref:/Vista_Algebraica.adoc[algebraica] y xref:/Vista_Gráfica.adoc[gráfica] la correspondiente
+xref:/Funciones.adoc[función].
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos...
+
+* xref:/commands/DEx.adoc[DEx] y xref:/commands/DEy.adoc[DEy]
+* xref:/commands/Media.adoc[Media]
+* xref:/commands/MediaX.adoc[MediaX]
+* xref:/commands/MediaY.adoc[MediaY]
+====

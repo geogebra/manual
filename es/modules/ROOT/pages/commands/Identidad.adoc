@@ -1,0 +1,57 @@
+= Comando Identidad
+:page-en: commands/Identity_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+*Identidad*[ <Número (o valor numérico)> ]::
+  Establece, acorde al número _n_ dado, la matriz identidad de orden (stem:[n\times n]) correspondiente.
+
+[EXAMPLE]
+====
+
+*`++Identidad[3]++`* da por resultado la matriz _stem:[\begin\{pmatrix}1&0&0\\0&1&0\\0&0&1\end\{pmatrix}]_.
+
+====
+
+[NOTE]
+====
+
+Si _A_ es una matriz cuadrada de orden _n_, `++A^0++` produce la misma matriz que *`++Identidad[n]++`*.
+
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Alerta,title="Alerta",width=18,height=18] *Alerta*: |Este comando es dinámico. Por ejemplo,
+`++Identidad[a]++` cambiará cuando *a* se modifique.
+|===
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+En esta xref:/Vista_CAS.adoc[vista] se admite la misma sintaxis y la inclusión de literales para operar simbólicamente.
+
+[NOTE]
+====
+
+*Notas:* la ilustración al pie expone el modo en que se podría _animar_ una matriz identidad a medida que cambia el
+valor del deslizador que determina el orden correspondiente.*`++Identidad[n]++`* coincide con el resultado de operar con
+una matriz cuadrada del mismo orden, como _ma_\{triz_n}_, así:*`++ ma_{triz_n}^0++`*.
+
+====
+
+/Archivo:Identidad_gif.adoc[image:Identidad_.gif[Identidad .gif,width=421,height=535]]
+
+[EXAMPLE]
+====
+
+*`++Identidad[4] ==  Encadena[{Secuencia[4]} , {Secuencia[4] + 4}, {Secuencia[4] + 8}, {Secuencia[4] + 12} ]^0++`* da
+por resultado un valor de verdad _cierto_ (_true_).
+
+====

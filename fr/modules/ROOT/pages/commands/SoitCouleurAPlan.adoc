@@ -1,0 +1,89 @@
+= Commande SoitCouleurAPlan
+:page-en: commands/SetBackgroundColor_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+SoitCouleurAPlan( <Objet>, <Rouge>, <Vert>, <Bleu> )::
+  Modifie la couleur d'arrière-plan de l'objet nommé. Ceci pour des textes, champs textes ou des cellules du tableur.
+
+[NOTE]
+====
+
+*Note :* Un ChampTexte prend comme couleur par défaut celle de l'arrière-plan de Graphique, vous pouvez, en utilisant
+cette commande, lui en assigner une autre.
+
+====
+
+Rouge, Vert et Bleu représentent les pourcentages de ces couleurs, le minimum étant 0, le maximum 1. Des valeurs _t_
+hors de cet intervalle sont traitées par la fonction stem:[2\left|\frac\{t}2-\mathrm
+round\left(\frac\{t}2\right)\right|.]
+
+SoitCouleurAPlan( <Objet>, "couleur" )::
+  Modifie la couleur d'arrière-plan de l'objet nommé. Ceci pour des textes, champs textes ou des cellules du tableur.
+
+La référence de couleur est fournie en tant que xref:/Textes.adoc[texte] étant :
+
+* un *nom de couleur en français*, voir les noms possibles ci-dessous ;
+
+* un *nom de couleur en anglais* parmi plus d'une centaine (voir /Référence:Couleurs.adoc[Couleurs]) ;
+
+[NOTE]
+====
+
+*Note :* Si vous utilisez cette commande dans un GeoGebraScript, vous devez utiliser les noms de couleur en anglais.
+
+====
+
+* une *chaîne hexadécimale* d'un des 2 types #RRVVBB et #ααRRVVBB, incluant le canal α (_00_ pour 100% transparent, _FF_
+pour 100% opaque );
+
+Une https://www.toutes-les-couleurs.com/code-couleur-html.php[page] de codes (parmi d'autres)
+
+[EXAMPLE]
+====
+
+*Exemple :* SoitCouleurAPlan(texte1, "#80FF0000") définit la couleur de l'arrière-plan du _texte1_ à _Rouge_ avec une
+opacité à _50%_
+
+====
+
+SoitCouleurAPlan( "couleur" ) +
+SoitCouleurAPlan(<Rouge>, <Vert>, <Bleu> )::
+  Si aucun objet n'est précisé, c'est alors la couleur d'arrière-plan de la fenêtre graphique active qui est modifiée.
+
+== Les noms de couleur français possibles sont listés ci-dessous.
+
+* Noir
+* Gris foncé
+* Gris
+* Bleu foncé
+* Bleu
+* Vert foncé
+* Vert
+* Marron
+* Crimson
+* Rouge
+* Magenta
+* Indigo
+* Pourpre
+* Brun
+* Orange
+* Or
+
+* Citron
+* Cyan
+* Turquoise
+* Bleu clair
+* Marine
+* Argent
+* Gris clair
+* Rose
+* Violet
+* Jaune
+* Jaune clair
+* Orange clair
+* Violet clair
+* Pourpre clair
+* Vert clair
+* Blanc
+
+ 

@@ -1,0 +1,67 @@
+= Commande Position
+:page-en: commands/IndexOf_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Position( <Objet>, <Liste> )::
+  Calcule la position de la première occurrence, à partir du début de la liste, d'_Objet_ dans _Liste_.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Position(5,{1,3,5,2,5,4})++` donne 3.
+
+====
+
+[NOTE]
+====
+
+*Note :* Si _Objet_ n'est pas trouvé, le résultat est *non défini*.
+
+====
+
+Position( <Objet>, <Liste>, <Position Départ> )::
+  identique à ce qui précède, mais la réponse est calculée à partir de la position de départ.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* `++Position(5,{1,3,5,2,5,4},3)++` donne 3.
+* `++Position(5,{1,3,5,2,5,4},4)++` donne 5.
+* `++Position(5,{1,3,5,2,5,4},6)++` donne *non défini*.
+
+====
+
+de même pour les textes :
+
+Position( <Texte>, <Texte>)::
+Position( <Texte>, <Texte>, <Position Départ> )::
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Position("Ge","GeoGebra",2)++` donne 4.
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Position("Ge","GeoGebra")++` donne 1.
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :*
+
+Mettre en lumière un aspect de cette commande :
+
+Soit un angle _a_ dont vous désirez faire apparaître le "statut" (dans un texte par exemple), ce statut prédéfini sera
+renvoyé par la commande :
+
+`++Elément({"aigu", "droit", "obtus", "plat", "rentrant"}, Position(true, {a < 90°, a == 90°, (90° < a) && (a < 180°), a == 180°, (180° < a) && (a <= 360°)}))++`
+
+====

@@ -1,0 +1,75 @@
+= Valores Lógicos
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Pueden emplearse las variables lógicas o _booleanas_ cierto - *_`++true++`_* - y falso - *_`++false++`_* - en
+GeoGebraBasta ingresar en la xref:/Barra_de_Entrada.adoc[Barra de Entrada]:
+
+* _`++a := true++`_ y pulsar [.kcode]#Enter# o
+* _`++b := false++`_ y pulsar [.kcode]#Enter# ([.kcode]#Intro# en otros teclados).
+
+== Casilla a Tildar y Teclas Flecha
+
+Las variables _booleanas_ libres pueden exponerse como casillas a tildar en la xref:/Vista_Gráfica.adoc[Vista Gráfica].
+
+[NOTE]
+====
+
+Ver herramienta xref:/tools/Casilla_de_Control.adoc[image:32px-Mode_showcheckbox.svg.png[Mode
+showcheckbox.svg,width=32,height=32]] xref:/tools/Casilla_de_Control.adoc[Casilla de Control para Exponer / Ocultar
+Objetos].
+
+====
+
+Apelando a las teclas-flecha se pueden cambiar las variables lógicas o _booleanas_ también en la
+xref:/Vista_Algebraica.adoc[Vista Algebraica].
+
+[NOTE]
+====
+
+También pueden usarse variables _booleanas_ como números, 0 o 1 acorde a su valor de verdad: 0^_false_^ ó 1^_true_^
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Esto permite usar un casillero como medio de
+asignación de velocidad dinámica de un deslizador animado.El valor _cierto_ como 1, controlaría el inicio y _false_, en
+tanto 0, detener la animación.En este caso, el botón de animación solo aparecerá en la xref:/Vista_Gráfica.adoc[Vista
+Gráfica] cuando hubiera también un deslizador animado con velocidad estática (es decir. no-dinámica).
+
+====
+
+[NOTE]
+====
+
+Ver xref:/Animación.adoc[Animación Manual]
+
+====
+
+== Operaciones Booleanas
+
+Las variables, operadores lógicos y condiciones _booleanas_ pueden...
+
+* seleccionarse de la tabla de símbolos desplegable con un _clic_ sobre el stem:[\fbox\{α}] a la derecha de la
+xref:/Barra_de_Entrada.adoc[Barra de Entrada]
+* ingresándolas usando el teclado.
+
+Se pueden usar en GeoGebra operaciones como las que figuran en la siguiente tabla:
+
+[cols=",,,,",options="header",]
+|===
+|Operación |Lista |Teclado |Ejemplo |Tipos de Objetos
+|Igual |≟ |== |a ≟ b o a == b |números, puntos, rectas, cónicas a, b
+|Desigual |≠ |!= |a ≠ b o a != b |números, puntos, rectas, cónicas a, b
+|Menor que |< |< |a < b |números a, b
+|Mayor que |> |> |a > b |números a, b
+|Menor o igual a |≤ |<= |a ≤ b o a <= b |números a, b
+|Mayor o igual a |≥ |>= |a ≥ b o a >= b |números a, b
+|.Y. |∧ |&& |a ∧ b o a && b |Booleanas a, b
+|.O. |∨ ||| |a ∨ b o a || b |Booleanas a, b
+|No |¬ |! |¬a o !a |Booleana a
+|Paralela |∥ | |a ∥ b |rectas a, b
+|Perpendicular |⊥ | |a ⊥ b |rectas a, b
+|Pertenece a |∈ | |a ∈ lista1 |número a, lista de números lista1
+|===

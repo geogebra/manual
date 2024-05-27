@@ -1,0 +1,26 @@
+= Comando Selecciona
+:page-en: commands/SelectObjects_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Selecciona( )::
+  Elimina la selección de todos los objetos.
+Selecciona( <Objeto>, <Objeto>, ... )::
+  Elimina la selección de todos los objetos y selecciona los pasados como parámetros. Todos los parámetros deben ser
+  obejos xref:/Rótulos_y_Subtítulos.adoc[etiquetados].
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* Dados los puntos _A_, _B_ y _C_, `++Selecciona(A, B, C)++` selecciona los puntos _A_, _B_ y _C_.
+* El comando`++Selecciona(PuntoMedio(A, B))++` no tiene efecto, más allá de eliminar la selección de todos los objetos.
+
+====
+
+[NOTE]
+====
+
+Este comando ahora cancela cualquier arrastre en curso (útil para el trabajo con guiones).
+
+====

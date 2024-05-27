@@ -1,0 +1,130 @@
+= Comando Extremo
+:page-en: commands/Extremum_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Extremo( <Polinomio> )::
+  Calcula numéricamente, crea y xref:/Vista_Gráfica.adoc[grafica] todos los puntos correspondientes a
+  http://en.wikipedia.org/wiki/es:Extremos_de_una_funci%C3%B3n[extremos locales] de la polinómica dada.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Extremo[x³ + 3x² - 2x + 1]++`* crea los puntos de coordenadas aproximadas *`++(0.29, 0.696)++`* y
+*`++(-2.3, 9.3)++`* y los xref:/Vista_Gráfica.adoc[grafica]**`++Extremo[(x⁴ - 3x³ - 4x² + 4) / 2]++`** crea los puntos
+correspondientes a los _extremos_ de coordenadas aproximadas:_(-0.68, 1.65)_, _(0, 2)_, _(2.93, -16.05)_
+
+====
+
+\{Extremo[ <Polinomio> ]}::
+  xref:/Listas.adoc[Lista] todos los extremos locales del polinomio en tanto lista de puntos)}}
+
+[EXAMPLE]
+====
+
+*`++{Extremo[(x⁴ - 3x³ - 4x² + 4) / 2]}++`* crea la lista de los puntos correspondientes a los _extremos_ de coordenadas
+aproximadas:_(-0.68, 1.65)_, _(0, 2)_, _(2.93, -16.05)_
+
+====
+
+[NOTE]
+====
+
+Si se encierra entre llaves el comando, el resultado xref:/Listas.adoc[_lista_] los puntos correspondientes.
+
+====
+
+Extremo( <Función>, <Valor x~Inicial~izquierdo~>~, <Valor x~Final~derecho~>~> )::
+  Calcula numéricamente, crea y xref:/Vista_Gráfica.adoc[grafica] el punto correspondiente al extremo de la _función_ en
+  el intervalo abierto *`++(<xizquierdo>, <xderecho>)++`*
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Extremo[(x⁴ - 3x³ - 4x² + 4) / 2, 0, 5]++`* crea solo el punto _(2.91, -16.05)_ el único de sus tres
+_extremos_ - _(-0.68, 1.653)_, _(0, 2)_, _(2.93, -16.05)_ - dentro del intervalo entre _0_ y
+__5__**`++Extremo[(x⁴ - 3x³ - 4x² + 4) / 2, x(X_i), x(X_f)]++`** crea, según la ubicación que sobre el
+xref:/Líneas_y_Ejes.adoc[eje x] de los puntos *`++X_i++`* y *`++X_f++`*, un punto coincidente con uno de los extremos o
+uno que queda _indefinido_.El punto extremo queda _indefinido_ si la posición de los puntos *`++X_i++`* y *`++X_f++`*
+que establecen el intervalo, fuera inadecuada.*`++Extremo[cos(3 pi x) / x, 0.1, 1.1]++`* da por resultado tres puntos
+que representa gráficamente extremos de *_stem:[\frac\{cos(3x π)}\{x}]_* en el intervalo especificado y cuyas
+coordenadas aproximadas se listan a continuación...
+
+* *`++(0.297, -3.17)++`* (un mínimo)
+* *`++(0.65, 1.52)++`* (un máximo) y
+* *`++(0.99, -1.006)++`* (otro mínimo)
+
+'''''
+
+[.small]#Los xref:/Listas.adoc[lista] como _\{(0.297, -3.17), (0.65, 1.52), (0.99, -1.006)}_ si se ingresa entre llaves
+*\{* *}* como *`++{Extremo[cos(3 pi x) / x, 0.1, 1.1]}++`*#
+
+====
+
+[NOTE]
+====
+
+La _función_ debe ser continua en el intervalo indicado por *`++[ <xizquierdo>, <xderecho> ]++`*. De no serlo podrían
+obtenerse "falsos" extremos próximos a las discontinuidades.
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Para mejor interpretar la información provista, es
+conveniente contar también con el gráfico de la función.
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] la xref:/Vista_CAS.adoc[Vista C~[.small]#omputación#~A~[.small]#lgebraica#~S~[.small]#imbólica#~]
+
+Sin admitir literales, el comando obra como ya se ha descripto.[.small]#Para algunas variantes es viable operar con el
+comando encerrñandolo entre llaves *\{* *}* para que el resultado sea una xref:/Listas.adoc[lista].#
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: En esta xref:/Vista_CAS.adoc[vista] se ofrece
+[.underline]#solo el primer extremo# numéricamente encontrado en lugar de establecerlos o listarlos exhaustivamente.
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Extremo[(x⁴ - 3x³ - 4x² + 4) / 2]++`* da por resultado, con decimales según
+xref:/Menú_de_Opciones.adoc[_redondeo_], _(-0.68, 1.65)_ el primero del conjunto _\{(-0.68, 1.65), (0, 2), (2.93,
+-16.05)}_ de extremosEmpleando las llaves para obtener la xref:/Listas.adoc[lista] del conjunto de _extremos_:
+*`++{Extremo[(x⁴ - 3x³ - 4x² + 4) / 2]}++`* da por resultado, con decimales según
+xref:/Menú_de_Opciones.adoc[_redondeo_], la xref:/Listas.adoc[lista] de extremos _*\{*(-0.68, 1.65), (0, 2), (2.93,
+-16.05)*}*_
+
+====
+
+[NOTE]
+====
+
+Para el registro xref:/Vista_Gráfica.adoc[gráfico] de un punto extremo calculado en esta xref:/Vista_CAS.adoc[vista], se
+debe _tildar_ el redondelito que encabeza la fila correspondiente.
+
+====
+
+[NOTE]
+====
+
+Ver también las herramientas: la de
+xref:/tools/Inspección_de_funciones.adoc[image:32px-Mode_functioninspector.svg.png[Mode
+functioninspector.svg,width=32,height=32]] xref:/tools/Inspección_de_funciones.adoc[Inspección de funciones] en este
+caso y los xref:/Comandos.adoc[comandos] xref:/commands/PuntoInflexión.adoc[PuntoInflexión],
+xref:/commands/Mínimo.adoc[Mínimo] y xref:/commands/Máximo.adoc[Máximo]
+
+====
+
+'''''
+
+/Archivo:Inflexión_Extremos_Curvatura_y_Pendiente_lg_inf_gif.adoc[image:Inflexi%C3%B3n_Extremos_Curvatura_y_Pendiente_lg_inf.gif[Inflexión
+Extremos Curvatura y Pendiente lg inf.gif,width=392,height=385]]
+
+[.small]#El boceto ilustra _animadamente_ la posición de los xref:/commands/PuntoInflexión.adoc[puntos de Inflexión] en
+azul y de los [.mw-selflink .selflink]#extremos# en rojo, sobre la curva de una función que surge del
+xref:/commands/AjustePolinómico.adoc[AjustePolinómico] de un xref:/Lugar_Geométrico.adoc[lugar geométrico].#

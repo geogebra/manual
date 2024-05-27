@@ -1,0 +1,109 @@
+= Exporter Graphique
+:page-en: Export_Graphics_Dialog
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Ce dialogue est accessible via le sous-menu Exporter du xref:/Menu_Fichier.adoc[menu Fichier]
+
+== /Fichier:Image_x_generic_png.adoc[image:Image-x-generic.png[Image-x-generic.png,width=32,height=32]] Graphique en tant qu'image (png, eps) ...
+
+Raccourci clavier : [.kcode]#Ctrl# + [.kcode]#Shift# + [.kcode]#P# (MacOS: [.kcode]#Cmd# + [.kcode]#Shift# +
+[.kcode]#P#)
+
+Ce menu vous permet d’enregistrer la vue Graphique en tant que fichier image sur votre ordinateur. Dans la fenêtre de
+dialogue apparue, vous pouvez choisir le 'Format' du fichier image, et préciser l’'Échelle' (en cm) et la 'Résolution'
+(en dpi) de l’image, et définir l'image comme 'Transparente'.
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :*
+
+Si vous créez 2 points nommés, obligatoirement, Export_1 et Export_2, ils vont servir à définir le rectangle exporté,
+sinon la partie visible de xref:/Graphique.adoc[Graphique] est exportée.
+
+====
+
+Quand vous exportez la vue Graphique en tant qu’image vous avez le choix entre les formats suivants :
+
+PNG – http://en.wikipedia.org/wiki/fr:Portable_Network_Graphics[Portable Network Graphics]::
+  C’est un format graphique basé sur les pixels. Plus grande est la résolution (dpi), et meilleure est la qualité
+  (300dpi seront habituellement suffisants).Les images PNG ne devraient ensuite pas être redimensionnées pour éviter une
+  perte de qualité.
+  Les fichiers graphiques PNG sont bien adaptés à l’utilisation sur des pages web (html) et avec les documents de
+  traitement de textes.
+
+[NOTE]
+====
+
+*Note :* Si vous insérez un fichier graphique PNG dans un document de traitement de textes (menu Insérer, Image à partir
+d’un fichier) assurez-vous que la taille est fixée à 100%. Sans cela l’échelle donnée (en cm) serait changée.
+
+====
+
+EPS – http://en.wikipedia.org/wiki/fr:Encapsulated_Postscript[Postscript Encapsulé]::
+  C’est un format graphique vectoriel. Les images EPS peuvent être redimensionnées sans perte de qualité. Les fichiers
+  graphiques EPS sont bien adaptés à l’utilisation avec des logiciels utilisant des graphiques vectoriels comme Corel
+  Draw et les traitements de texte professionnels comme xref:/LaTeX.adoc[LaTeX].
+  La résolution d’un graphique EPS est toujours 72dpi. Cette valeur est utilisée uniquement pour calculer la vraie
+  taille d’une image en cm et n’a pas d’effets sur sa qualité.
+
+[NOTE]
+====
+
+*Note :* L’effet de transparence avec des polygones pleins ou des coniques n’est pas possible en EPS.
+
+====
+
+PDF – http://en.wikipedia.org/wiki/fr:Portable_Document_Format[Portable Document Format]::
+  (voir Format EPS ci-dessus)
+
+[NOTE]
+====
+
+*Note :* Dans l’export SVG et PDF, vous avez l’option pour exporter les textes en tant que textes éditables ou en tant
+qu’images. Ceci enregistre le texte soit comme texte (ceci vous laisse la possibilité de l’éditer par exemple avec
+InkScape) soit comme une courbe de Bézier (ceci vous garantit que le texte aura le même aspect même si les polices
+correctes ne sont pas installées).
+
+====
+
+SVG – http://en.wikipedia.org/wiki/fr:Scalable_Vector_Graphic[Scalable Vector Graphic]::
+  (voir Format EPS ci-dessus)
+
+EMF – http://en.wikipedia.org/wiki/fr:Windows_Metafile_target%3D_blank[Enhanced Metafile]::
+  (voir Format EPS ci-dessus)
+
+== /Fichier:Empty16x16_png.adoc[image:Empty16x16.png[Empty16x16.png,width=32,height=32]] Graphique en GIF animé ...
+
+Lorsque la construction dynamique dépend d'un curseur, ce menu vous permet d'enregistrer une image de votre vue
+xref:/Graphique.adoc[Graphique] sous le format
+http://en.wikipedia.org/wiki/fr:Graphics_Interchange_Format#Gif_anim.C3.A9[GIF animé].
+
+Il vous suffit de tracer un rectangle de sélection autour de la partie de la construction que vous désirez exporter (ou
+de redimensionner la fenêtre GeoGebra) et de sélectionner ensuite Fichier -> Exporter -> Graphique en GIF animé ...
+
+Une fenêtre de dialogue va vous laisser choisir
+
+* le nom du _Curseur_ responsable de l'animation ;
+
+et les _Options_
+
+* le _Temps entre les vues_ (en ms)
+* et animation _En boucle ?_.
+
+== /Fichier:Menu_Copy_png.adoc[image:Menu_Copy.png[Menu Copy.png,width=32,height=32]] Graphique vers Presse-papiers
+
+Raccourci clavier : [.kcode]#Ctrl# + [.kcode]#Maj# + [.kcode]#C# (MacOS: [.kcode]#Cmd# + [.kcode]#Maj# + [.kcode]#C#)
+
+== /Fichier:Empty16x16_png.adoc[image:Empty16x16.png[Empty16x16.png,width=32,height=32]] Graphique vers PSTricks ...
+
+Raccourci clavier : [.kcode]#Ctrl# + [.kcode]#Maj# + [.kcode]#T# (MacOS: [.kcode]#Cmd# + [.kcode]#Maj# + [.kcode]#T#)
+
+== /Fichier:Empty16x16_png.adoc[image:Empty16x16.png[Empty16x16.png,width=32,height=32]] Graphique vers PGF/TikZ ...
+
+== /Fichier:Empty16x16_png.adoc[image:Empty16x16.png[Empty16x16.png,width=32,height=32]] Graphique vers Asymptote ...
+
+Ces trois dernières possibilités ouvrent une fenêtre de dialogue dans laquelle vous pouvez définir certains paramètres
+et récupérer le code généré.
+
+Voir aussi xref:/Exporter_vers_LaTeX_(PGF_PSTricks)_et_Asymptote.adoc[Exporter_vers_LaTeX_(PGF,_PSTricks)_et_Asymptote]

@@ -1,0 +1,75 @@
+= Commande Factoriser
+:page-en: commands/Factor_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Factoriser(<Polynôme>)::
+  Factorise le polynôme.
+
+[EXAMPLE]
+====
+
+*Exemples :*  `++Factoriser(x^2 + x - 6)++` retourne _f(x) = (x+3)(x-2)_ en traçant la
+courbe.`++Factoriser(x^2 - y^2)++` retourne _a(x,y) =(x+y)(x-y)_.
+
+====
+
+[NOTE]
+====
+
+*Note :* Dans une utilisation en ligne, cette commande nécessitant le chargement du module Calcul formel, l'exécution du
+fichier peut se trouver ralentie sur certains ordinateurs.
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Avec la possibilité de choisir la variable, ou de travailler en littéral.
+
+avec une syntaxe supplémentaire :
+
+Factoriser( <Nombre> )::
+  retourne la décomposition en facteurs premiers du nombre donné.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Factoriser(360)++` retourne _2³ 3² 5_. La xref:/commands/Facteurs.adoc[commande Facteurs] dans Algèbre retourne une
+matrice, facteur premier & exposant
+
+====
+
+Factoriser( <Polynôme> )::
+
+[EXAMPLE]
+====
+
+*Exemples :* Si les variables _a_ et _b_ ne sont pas définies dans GeoGebra
+
+`++Factoriser(a^2 + 2 a b + b^2)++` retourne _(a + b)^2^_
+
+====
+
+Factoriser( <Expression>, <Variable> )::
+  Factorise une expression en fonction de la variable précisée.
+
+[NOTE]
+====
+
+*Note :*
+
+Cette commande factorise les expressions sur l'ensemble ℚ des nombres rationnels ;
+
+Pour factoriser sur l'ensemble ℂ des nombres complexes, voir la commande
+xref:/commands/CFactorisation.adoc[CFactorisation] ;
+
+Pour factoriser sur les complexes irrationnels voir la commande xref:/commands/FactoriseCI.adoc[FactoriseCI];
+
+Pour factoriser sur les irrationnels voir la commande xref:/commands/FactoriseIrr.adoc[FactoriseIrr]
+====

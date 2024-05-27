@@ -1,0 +1,44 @@
+= Comando NormalInversa
+:page-en: commands/InverseNormal_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+*NormalInversa*[ <Media~μ~>, <Desviación Estándar~σ~>, <Probabilidad~P~> ]::
+  Calcula el valor correspondiente de la función:[.small]##_Φ^-1^(Probabilidad) * (Desviación Estándar) + (Media)_##o
+  sea, _Φ^-1^(P) * σ + μ_ siendo _Φ ^-1^_ la
+  http://en.wikipedia.org/wiki/es:Funci%C3%B3n_Distribuici%C3%B3n_Acumulada#Funci.C3.B3n_de_Distribuci.C3.B3n_Acumulada_Inversa_.28Funci.C3.B3n_Cuantil.29[inversa]
+  de la http://en.wikipedia.org/wiki/es:Funci%C3%B3n_Distribuici%C3%B3n_Acumulada[función acumulada^*_fda_*^] _Φ(x)_
+  asociada a _N(0,1)_.
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Da por resultado la coordenada _x_ con la
+probabilidad dada, para el área bajo la curva de distribución normal a la izquierda, de la abscisa dada (coordenada
+x).El valor de la probabilidad, _P_, debe estar dentro del rango apropiado, [0, 1].
+
+====
+
+[EXAMPLE]
+====
+
+*`++NormalInversa[10, 3, 1/2]++`* da _10_
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/Normal.adoc[Normal].
+
+====
+
+== Ilustrando Animadamente
+
+El boceto ilustra, _animadamente_, el resultado de la *NormalInversa* para distintos valores de _media_, _desviación
+estándar_ que se modifican con cierta aleatoriedad y una _probabilidad_ señalada.
+
+El trazo punteado corresponde al xref:/commands/LugarGeométrico.adoc[lugar geométrico] de los valores que iría tomando
+la *NormalInversa* si el punto que establece la _probabilidad_ se desplazara.
+
+Tal trazo, además, va modificándose según el valor que devenga para la _media_ *μ* y la _desviación estándar_ *σ*.
+/Archivo:Norma_i_gif.adoc[image:Norma_i_.gif[Norma i .gif,width=518,height=535]]

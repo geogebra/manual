@@ -1,0 +1,93 @@
+= Comando DiámetroConjugado
+:page-en: commands/ConjugateDiameter_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+DiámetroConjugado[ <Dirección (vector, recta, semirrecta o segmento)>, <Cónica> ]::
+  xref:/Vista_Gráfica.adoc[Grafica] la recta correspondiente al
+  http://en.wikipedia.org/wiki/es:Circunferencia#Di.C3.A1metros_Conjugados[diámetro conjugado] al de la
+  xref:/Secciones_cónicas.adoc[cónica] paralelo al dado (acorde al vector establecido por la recta, semirrecta o
+  segmento indicado).
+DiámetroConjugado[ <Vector>, <Cónica> ]::
+  xref:/Vista_Gráfica.adoc[Grafica] la recta correspondiente al
+  http://en.wikipedia.org/wiki/es:Circunferencia#Di.C3.A1metros_Conjugados[diámetro conjugado] al de la
+  xref:/Secciones_cónicas.adoc[cónica] paralelo al vector dado.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* Siendo _u_ = (4,1) un vector, entonces `++DiámetroConjugado[u, x² + 4 y² + 2x - 8y + 1 = 0]++`
+xref:/Vista_Gráfica.adoc[grafica] la recta cuyo registro algebraico es _x_ + _y_ =
+0**`++DiámetroConjugado[ Segmento[E, B], Cónica[A, B, C, D, E] ]++`**
+y**`++DiámetroConjugado[ DiámetroConjugado[ Segmento[E, B], Cónica[A, B, C, D, E]], Cónica[A, B, C, D, E]]++`**trazan el
+par de http://en.wikipedia.org/wiki/es:Circunferencia#Di.C3.A1metros_Conjugados[diámetros conjugados] a la
+xref:/commands/Cónica.adoc[Cónica[A, B, C, D, E]] siendo el primero conjugado al diámetro de tal cónica paralelo al
+xref:/commands/Segmento.adoc[Segmento[E, B]] y el siguiente, su conjugado.
+
+====
+
+[EXAMPLE]
+====
+
+`++DiámetroConjugado[-4x + 5y = -2, x^2 + 4 y^2 + 2x - 8y + 1 = 0]++` xref:/Vista_Gráfica.adoc[grafica] la recta cuyo
+registro algebraico es 5__x__ + 16__y__ = 11
+
+====
+
+[.small]##
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/Polar.adoc[Polar] y la xref:/Herramientas.adoc[herramienta]
+xref:/tools/Polar_o_Conjugado.adoc[image:32px-Mode_polardiameter.svg.png[Mode polardiameter.svg,width=32,height=32]]
+xref:/tools/Polar_o_Conjugado.adoc[Polar o Conjugado].
+
+====
+
+[.small]##
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|El boceto al pie ilustra _animadamente_ el trazado de la recta polar y el diámetro conjugado de la cónica.
+|===
+
+[.small]##
+
+/Archivo:Polardiametral_gif.adoc[image:Polardiametral.gif[Polardiametral.gif,width=273,height=539]]
+
+[.small]##
+
+[NOTE]
+====
+
+La cónica correspondiente va adoptando sucesivas variantes (circunferencia, elipse, parábola e hipérbola),Tanto la polar
+como el diámetro conjugado quedan trazados acorde al respectivo punto o vector que, como puede apreciarse, también van
+cambiando tal como la cónica, en cada ocasión.Respecto de la polar, en una de las alternativas se la ve coincidir con la
+recta que pasa por sendos puntos de contacto, en la cónica, de las tangentes trazadas desde el punto correspondiente.
+
+====
+
+[.small]##
+
+'''''
+
+[NOTE]
+====
+
+El comando opera de modo análogo en la xref:/Vista_CAS.adoc[image:24px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=24,height=24]]__xref:/Vista_CAS.adoc[Vista CAS]__.
+
+====
+
+'''''

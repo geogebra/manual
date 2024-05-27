@@ -1,0 +1,265 @@
+= Vista CAS
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+== [#Interfaz_de_la_Vista_CAS]#Interfaz de la image:24px-Menu_view_cas.svg.png[Menu view cas.svg,width=24,height=24] Vista CAS#
+
+Por omisión, la image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Vista CAS_ se abre junto a la
+xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+xref:/Vista_Gráfica.adoc[Vista gráfica] y, según cuál de las dos esté activa, la xref:/Barra_de_Herramientas.adoc[Barra
+de Herramientas] en el margen superior será de xref:/Herramientas_CAS.adoc[Herramientas CAS] o de
+xref:/Herramientas_Gráficas.adoc[Herramientas Gráficas], con los botones
+image:16px-Menu-edit-undo.svg.png[Menu-edit-undo.svg,width=16,height=16]image:16px-Menu-edit-redo.svg.png[Menu-edit-redo.svg,width=16,height=16]
+_Deshace / Rehace_ en la esquina superior derecha.
+
+[width="100%",cols="100%",]
+|===
+a|
+image:314px-CAS-View.png[CAS-View.png,width=314,height=220]
+
+Vista CAS
+
+|===
+
+Si bien la image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Vista CAS_ es parte de la
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Apariencias.adoc[_Apariencia CAS_], es
+posible xref:/GeoGebra_5_0_escritorio_vs_Web_o_Tablet.adoc[cambiar la disposición] de la interfaz de GeoGebra de acuerdo
+a las preferencias personales.
+
+== [#Creación_de_objetos_matemáticos]####[#Creaci.C3.B3n_de_objetos_matem.C3.A1ticos]##Creación de objetos matemáticos##
+
+=== Entrada directa
+
+En la image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Vista CAS_ es posible aprovechar el
+sistema CAS de GeoGebra (Computer Algebra System) para realizar cálculos simbólicos. Consiste en un conjunto de celdas
+con una _línea de entrada_ en la parte superior, que presentan la salida en la parte inferior. Estas _líneas de entrada_
+funcionan como la _barra de entrada_ pero con las siguientes diferencias:
+
+* Pueden emplearse expresiones literales (variables) sin valor asignado.
++
+[EXAMPLE]
+====
+
+Ingresa `++(a+b)^2++` en una _línea de entrada_ y presiona [.kcode]#Intro#. Se producirá la salida _a²+2ab+b²_.
+
+====
+* `++=++` se utiliza para ecuaciones y `++:=++` para asignaciones. Esto quiere decir que al ingresar `++a=2++` no se le
+asignará el valor 2 a la variable _a_. Consulta la xref:/.adoc[sección sobre asignaciones] para más detalles.
+* Las multiplicaciones deben explicitarse. Mientras que en la _xref:/Barra_de_Entrada.adoc[Barra de Entrada]_ es
+indistinto ingresar `++a (b+c)++` o `++a*(b+c)++`, en la image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] _Vista CAS_ solamente se admite `++a*(b+c)++`.
+
+=== Atajos de teclado para la entrada directa
+
+En la image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Vista CAS_ de GeoGebra Escritorio (para
+Windows) están disponibles los siguientes atajos para evaluar o controlar lo que se ingresa:
+
+[NOTE]
+====
+
+En lugar de utilizar estos atajos es posible recurrir a las xref:/Herramientas_CAS.adoc[herramientas] correspondientes
+en la xref:/.adoc[barra de herramientas de la vista CAS].
+
+====
+
+* [.kcode]#Intro#: Evalúa la entrada.
+* [.kcode]#Ctrl# + [.kcode]#Intro#: Evalúa la entrada numéricamente.
+
+[EXAMPLE]
+====
+
+`++sqrt(2)++` da _1.41_.
+
+====
+
+* [.kcode]#Alt# + [.kcode]#Intro#: Controla la entrada pero no la evalúa.
+
+[EXAMPLE]
+====
+
+`++b + b++` permanece como _b + b_.
+
+====
+
+[NOTE]
+====
+
+* Las asignaciones son evaluadas siempre. Por ejemplo, `++a := 5++`
+* Se concluye la salida con un punto y coma al final de la entrada como, por ejemplo, `++a := 5;++`
+
+====
+
+=== Asignaciones de variables y conexiones con otras vistas
+
+Las asignaciones requieren la notación `++:= ++`. Por ejemplo: `++b := 5++` o `++a(n) := 2n + 3++`.
+
+* Para liberar un nombre de variable se utiliza el comando `++Elimina(b)++`. Por ejemplo, `++Elimina(b)++` libera la
+variable _b_.
+* La redefinición de una variable o función debe realizarse *en la misma celda* en que fue creada. De lo contrario será
+considerada como un nuevo objeto y se le cambiará el nombre automáticamente a la variable o función previa.
+
+Las variables y funciones están siempre compartidas entre la image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] _Vista CAS_ y demás _vistas_ de GeoGebra, mientras sea posible. Por ejemplo:
+
+* Si se define `++b:=5++` en la image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Vista CAS_ se
+puede usar _b_ en cualquier otra vista de GeoGebra.
+* Si se ha definido la función `++f(x)=x^2++` en otra _vista_, se puede usar tal función también en la
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Vista CAS_.
+
+[NOTE]
+====
+
+La salida será siempre la expresión que se ingresa a la derecha del signo *`++:=++`*. Por ejemplo: cuando se ingresa
+`++b:=5++` la salida es _5_. No obstante, para evitar confusiones la salida muestra _b := 5_.
+
+====
+
+=== Ecuaciones
+
+Las ecuaciones se escriben usando simplemente el signo igual, por ejemplo: `++3x + 5 = 7++`.
+
+* Se pueden realizar operaciones sobre ambos miembros de una ecuación, lo cual resulta útil para resolver ecuaciones
+paso a paso.
++
+[EXAMPLE]
+====
+
+`++(3x + 5 = 7) - 5++` resta 5 a ambos miembros de la ecuación.
+
+====
+* Se puede extraer un solo miembro de una ecuación con los comandos `++PrimerMiembro()++` o `++SegundoMiembro()++`.
++
+[EXAMPLE]
+====
+
+`++PrimerMiembro(3x + 5 = 7)++` da por resultado _3 x + 5_ y `++SegundoMiembro(3x + 5 = 7)++` da _7_.
+
+====
+
+=== Referencias de Fila
+
+Se puede hacer referencia a otras filas de la image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+_Vista CAS_ de dos maneras:
+
+* Referencias *estáticas* de fila: El contenido de la fila se copia en nueva fila, que *no* es actualizada si la fila
+_referida_ es modificada a posteriori.
+** `++#++` copia la salida previa
+** `++#5++` copia la salida de la fila 5
+
+* Referencias *dinámicas* de fila: El contenido de la fila se copia en nueva fila, que *no* es actualizada si la fila
+_referida_ es modificada a posteriori.
+** `++$++` copia la salida previa
+** `++$5++` copia la salida de la fila 5
+
+== [#Comandos_CAS]#Comandos CAS#
+
+GeoGeobra ofrece una amplia variedad de _xref:/commands/Comandos_CAS.adoc[comandos]_ que pueden utilizarse para crear
+objetos en la image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Vista CAS_. Basta con comenzar a
+escribir el nombre de un _comando_ en la _línea de entrada_ para que GeoGebra ofrezca una lista de comandos para
+seleccionar.
+
+[NOTE]
+====
+
+La lista completa de _comandos_ está disponible en la sección xref:/commands/Comandos_CAS.adoc[Comandos CAS].
+
+====
+
+[NOTE]
+====
+
+A partir de GeoGebra 5 es posible utilizar algunos xref:/Geométricos_en_Vista_Algebraica_CAS.adoc[comandos
+_geométricos_] en la image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Vista CAS_.
+
+====
+
+== [#Barra_de_Herramientas_CAS]#Barra de Herramientas CAS#
+
+La xref:/Herramientas_CAS.adoc[barra de herramientas CAS] ofrece un repertorio de herramientas que pueden ser accionadas
+con el ratón y sirven para evaluar expresiones ingresadas y realizar cálculos. Inmediatamente después de ingresada la
+expresión se debe hacer clic en la _herramienta CAS_ correspondiente para aplicarla a lo ingresado.
+
+xref:/Herramientas_CAS.adoc[image:315px-Toolbar-CAS.png[Toolbar-CAS.png,width=315,height=32]]
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Aviso:* Si se selecciona un fragmento del texto
+ingresado, la herramienta se aplicará solamente a esa parte.
+
+====
+
+[NOTE]
+====
+
+La lista completa de _herramientas_ está disponible en la sección _xref:/Herramientas_CAS.adoc[Herramientas CAS]_.
+
+====
+
+== [#Menús_contextuales]####[#Men.C3.BAs_contextuales]##Menús contextuales##
+
+=== Menú contextual del encabezado de filas
+
+Al hacer clic derecho (MacOS [.kcode]##Ctrl##+clic) en el encabezado de una fila se despliega un _menú contextual_ con
+las siguientes opciones.
+
+* *Inserta arriba*: Inserta una fila vacía sobre la seleccionada.
+* *Inserta debajo*: Inserta una fila vacía debajo de la seleccionada.
+* *Elimina fila*: Borra el contenido de la fila seleccionada.
+* *Texto*: Alterna entre el resultado actual y un texto que incluye el resultado actual de la fila y que permite al
+usuario ingresar comentarios.
+* *Copia como LaTeX* (GeoGebra Escritorio): copia los contenidos de la fila seleccionada en el portapapeles para poder
+pegarlos luego, por ejemplo, en un xref:/Textos.adoc[texto].
+
+[NOTE]
+====
+
+Para copiar el contenido de múltiples filas en formato LaTeX se deben seleccionar las filas con [.kcode]##Ctrl##+clic
+(MacOS: [.kcode]##Cmd##+clic), y luego hacer clic derecho (MacOS: [.kcode]##Ctrl##+clic) en el encabezado de fila y
+seleccionar _Copia como LaTeX_.
+
+====
+
+=== Menú contextual de la salida
+
+Al hacer clic derecho (MacOS [.kcode]##Ctrl##+clic) sobre la salida de una fila se despliega un _menú contextual_ con
+las siguientes opciones.
+
+* *Copiar*: Copia el contenido de la fila en el portapapeles. Si luego se hace clic derecho en una nueva fila se puede
+*pegar* el contenido.
+* *Copiar como LaTeX*: Copia el contenido de la fila en formato LaTeX en el portapapeles, de modo que puede ser pegado
+en un xref:/Textos.adoc[objeto texto] o en un editor de código LaTeX.
+* *Copiar como fórmula LibreOffice*: Copia el contenido de la fila en formato de fórmula de LibreOffice en el
+portapapeles, de modo que puede ser pegado en un procesador de textos.
+* *Copiar como imagen*: Copia el contenido de la fila en formato PNG en el portapapeles, de modo que puede ser pegado
+como un xref:/Imágenes.adoc[objeto imagen] o en un procesador de textos.
+
+== [#Representación_de_objetos_matemáticos]####[#Representaci.C3.B3n_de_objetos_matem.C3.A1ticos]##Representación de objetos matemáticos##
+
+=== xref:/Barra_de_Estilo.adoc[Barra de estilo]
+
+La xref:/Barra_de_Estilo.adoc[_barra de estilo de la vista CAS_] ofrece botones para
+
+* image:16px-Stylingbar_text.svg.png[Stylingbar text.svg,width=16,height=16] cambiar el estilo del texto
+(image:16px-Stylingbar_text_bold.svg.png[Stylingbar text bold.svg,width=16,height=16] *negrita* y
+image:16px-Stylingbar_text_italic.svg.png[Stylingbar text italic.svg,width=16,height=16] _cursiva_) y el
+image:16px-Stylingbar_color_white.svg.png[Stylingbar color white.svg,width=16,height=16] color.
+* desplegar un image:16px-Cas-keyboard.png[Cas-keyboard.png,width=16,height=16] teclado virtual (GeoGebra Escritorio)
+* exponer otras image:16px-Stylingbar_dots.svg.png[Stylingbar dots.svg,width=16,height=16] xref:/Vistas.adoc[_vistas_]
+en la ventana de GeoGebra (GeoGebra Web y tabletas)
+
+=== Representación de objetos CAS en la image:20px-Menu_view_graphics.svg.png[Graphics View,title="Graphics View",width=20,height=20] _Vista Gráfica_
+
+En la image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Vista CAS_, el ícono que aparece a la
+izquierda de cada fila indica si el objeto definido en esa fila está oculto o no (cuando se trata de un objeto que
+admite una representación en la vista gráfica). Basta hacer clic en el pequeño ícono de
+image:16px-Mode_showhideobject.svg.png[Mode showhideobject.svg,width=16,height=16] _Mostrar/ocultar objeto_ para
+alternar el estado de visibilidad del objeto en la image:16px-Menu_view_graphics.svg.png[Graphics
+View,title="Graphics View",width=16,height=16] _xref:/Vista_Gráfica.adoc[Vista Gráfica]_.

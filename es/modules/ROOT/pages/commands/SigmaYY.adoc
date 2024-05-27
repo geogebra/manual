@@ -1,0 +1,40 @@
+= Comando SigmaYY
+:page-en: commands/SigmaYY_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+SigmaYY( <Lista de Puntos> )::
+  Calcula la suma de los cuadrados de los valores de las ordenadas (coordenadas _y_) de los
+  xref:/Puntos_y_Vectores.adoc[puntos] xref:/Listas.adoc[listados].
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++SigmaYY[{  (1,2), (2,-5), (3, 36) } ]++`* da _1325_ (resultado de sumar _2² + 5² + 36² = 4 + 25 + 1296 =
+1325_)Siendo *`++li = { (-3, 4), (-1, 4), (-2, 3), (1, 3), (2, 2), (1, 5) }++`* una xref:/Listas.adoc[lista] de puntos,
+*`++SigmaYY[ li ]++`* da por resultado __79__**`++SigmaYY[{  A, B, C } ]++`** puede dar _1325_ si fueran _A = (1,2)_, _B
+= (2,-5)_ y _C =(3, 36)_.
+
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Alerta,title="Alerta",width=18,height=18] *Alerta*: |El resultado cambiaría dinámicamente al
+desplazarse cualquiera de los puntos y/o modificarse alguna de sus ordenadas.
+|===
+
+[NOTE]
+====
+
+Ver también los comandos...
+
+* xref:/commands/SigmaXX.adoc[SigmaXX]
+* xref:/commands/SigmaXY.adoc[SigmaXY]
+====

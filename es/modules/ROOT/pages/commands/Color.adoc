@@ -1,0 +1,63 @@
+= Comando Color
+:page-en: commands/SetColor_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Color( <Objeto>, <Rojo>, <Verde>, <Azul> )::
+  Cambia el color del objeto. El rojo, verde y azul representan la cantidad del componente de color correspondiente,
+  siendo 0 el mínimo y 1 el máximo. Si el número ingresado no pertenece a ese intervalo se lo ajusta según la función
+  stem:[2\left|\frac\{t}2-\mathrm round\left(\frac\{t}2\right)\right|].
+Color( <Objeto>, <"Color"> )::
+  Cambia el color del objeto. El nombre del color se anota como xref:/Textos.adoc[texto], que puede ser:
+  * El nombre de un color en inglés (Ver /Referencia:Colores.adoc[Referencia de Colores]). Algunos nombres de color
+  también pueden escribirse en otros idiomas. Los aceptados en español se listan a continuación.
+  * Una cadena hexadecimal del tipo #AARRGGBB o #RRGGBB, donde _AA_ define la transparencia (00 corresponde a
+  transparencia completa y FF opacidad completa); _RR_ define la componente roja; _GG_, la verde; y _BB_, la azul.
+
+[EXAMPLE]
+====
+
+`++Color(texto1, "#80FF0000")++` establece el color del objeto _texto1_ existente como rojo, con un 50% de
+transparencia.
+
+====
+
+[NOTE]
+====
+
+Al utilizar este comando dentro de un guión (script) el nombre del color debe escribirse en inglés
+
+====
+
+* Negro
+* Gris oscuro
+* Gris
+* Azul oscuro
+* Azul
+* Verde oscuro
+* Verde
+* Carmesí
+* Rojo
+* Magenta
+* Añil
+* Púrpura
+* Marrón
+* Naranja
+* Dorado
+
+* Lima
+* Cian
+* Turquesa
+* Agua
+* Plateado
+* Gris claro
+* Rosa
+* Violeta
+* Amarillo
+* Amarillo claro
+* Naranja
+* Lila
+* Púrpura claro
+* Verde claro
+* Blanco
+
+ 

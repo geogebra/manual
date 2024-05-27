@@ -1,0 +1,36 @@
+= Comando TextoFracción
+:page-en: commands/FractionText_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+TextoFracción( <Número> )::
+  Convierte el número en una fracción, que se muestra como un objeto de texto (generado con LaTeX) en la
+  xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+  xref:/Vista_Gráfica.adoc[Vista Gráfica].
+
+[EXAMPLE]
+====
+
+Si _a: y = 1.5 x + 2_ es una recta, `++TextoFracción(Pendiente(a))++` devuelve un texto con la fracción
+stem:[\frac\{3}\{2}].
+
+====
+
+TextoFracción( <Punto> )::
+  Muestra las coordenadas del punto como fracciones, en la
+  xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+  xref:/Vista_Gráfica.adoc[Vista Gráfica].
+
+[EXAMPLE]
+====
+
+*Ejemplos:* Si _P=(1.33,0.8)_ es un punto, `++TextoFracción(P)++` devuelve un texto con las coordenadas stem:[ \left(
+\frac\{133}\{100} ,\frac\{4}\{5} \right) ].
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/TextoIrracional.adoc[TextoIrracional].
+
+====

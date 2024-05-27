@@ -1,0 +1,48 @@
+= Comando Normaliza
+:page-en: commands/Normalize_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+Normaliza( <Lista de números> )::
+  Da por resultado la lista de valores _normalizados_ de los números dados.
+
+[EXAMPLE]
+====
+
+`++Normaliza[{1, 2, 3, 4, 5}]++` da por resultado _\{0, 0.25, 0.5, 0.75, 1}_ .
+
+====
+
+Normaliza( <Lista de puntos> )::
+  Da por resultado la lista de puntos cuyas coordenadas tienen valores corresponden a los _normalizados_ de las de los
+  dados. Se _normaliza_ cada abscisa y cada ordenadas respecto de las de cada uno de los puntos listados.
+
+[EXAMPLE]
+====
+
+`++Normaliza[{(1,5), (2,4), (3,3), (4,2), (5,1)}] ++` da por resultado _\{(0,1), (0.25, 0.75), (0.5, 0.5), (0.75, 0.25),
+(1, 0)}_ .
+
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Alerta,title="Alerta",width=18,height=18] *Alerta*: |Solo opera para puntos en *_2D_* y queda
+en suspenso la eventual posibilidad futura de incluir los de *_3D_*.
+|===
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idea:* _Normalizar_ valores de una lista implica
+transformarlos para queden determinados dentro del rango [0 ; 1] a través del empleo de la función afín stem:[x \mapsto
+\frac\{x-Mín[lista]}\{Máx[lista]-Mín[lista]}] .
+
+====

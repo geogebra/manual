@@ -1,0 +1,95 @@
+= Comando VectorUnitario
+:page-en: commands/UnitVector_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+VectorUnitario( <Vector> )::
+  Establece el vector director de longitud unitaria con la misma dirección y orientación del dado, que debe haber sido
+  previamente establecido.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* Siendo _v=stem:[\begin\{pmatrix}3\\4\end\{pmatrix}]_, *`++VectorUnitario[v]++`* crea el vector de longitud
+unitaria _stem:[\begin\{pmatrix}0.6\\0.8\end\{pmatrix}]_.Siendo el punto _C = (4, 3)_, *`++VectorUnitario[Vector[C]]++`*
+crea el vector de longitud unitaria _stem:[\begin\{pmatrix}0.8\\0.6\end\{pmatrix}]_ que también se registra en la
+xref:/Vista_Gráfica.adoc[Vista Gráfica] y reacciona dinámicamente frente a los desplazamientos de _C_.
+
+====
+
+VectorUnitario( <Dirección (recta, semirrecta o segmento)> )::
+  Establece el vector director de longitud unitaria con la dirección acorde a la recta, semirrecta, segmento o incluso
+  del vector dado.
+VectorUnitario( <Expresión Lineal> )::
+  Establece el vector director de longitud unitaria correspondiente.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++VectorUnitario[3x + 4y = 5]++`* crea un vector de longitud unitaria
+_stem:[\begin\{pmatrix}0.8\\-0.6\end\{pmatrix}]_ que también se registra en la xref:/Vista_Gráfica.adoc[Vista
+Gráfica]**`++VectorUnitario[y(C) x +  x(C) y = 5]++`** siendo el punto _C =(4, 3)_, crea un vector de longitud unitaria
+_stem:[\begin\{pmatrix}0.8\\-0.6\end\{pmatrix}]_ que también se registra en la xref:/Vista_Gráfica.adoc[Vista Gráfica] y
+reacciona dinámicamente a los desplazamientos de _C_.
+
+====
+
+[EXAMPLE]
+====
+
+*`++VectorUnitario[Semirrecta[(2, 3), (-1, 2)]]++`* crea un vector de longitud unitaria _(-0.94868, -0.31623)_ que
+también se registra en la xref:/Vista_Gráfica.adoc[Vista Gráfica].
+
+====
+
+== xref:/Vista_CAS.adoc[image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+En esta xref:/Vista_CAS.adoc[vista] se admite la misma sintaxis pudiendo incluirse literales en operaciones simbólicas.
+
+VectorUnitario( <Vector> )::
+  Establece el vector de longitud unitaria con la misma dirección y orientación del dado.Tal vector ingresado puede
+  determinarlo el punto que establece su posición, incluso en 3D si se opera con la correspondiente versión de GeoGebra.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* Si el vector _v_ tiene coordenadas stem:[\begin\{pmatrix}3\\4\end\{pmatrix}].`++VectorUnitario[v]++` crea el
+vector de coordenadas __stem:[\left( \frac\{3}\{5} , \frac\{4}\{5} \right)]__También se puede obtener directamente
+`++VectorUnitario[(3,4)]++`
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++VectorUnitario[ (2, 4, 4) ]++`* da __\{stem:[\frac\{1}\{3}], stem:[\frac\{2}\{3}],
+stem:[\frac\{2}\{3}]}__con representación viable en la versión 3**D**.Cuando lo ingresado incluye variables a las que no
+se les ha asignado valor alguno, lo que se obtiene es la fórmula correspondiente.*`++VectorUnitario[ (a, b) ]++`* da
+__\{stem:[\frac\{a}\{\sqrt\{a^\{2} + b^\{2}}}], stem:[\frac\{b}\{\sqrt\{a^\{2} +
+b^\{2}}}]}__**`++VectorUnitario[ C ]++`** siendo el punto _C =(4, 3)_, da _\{stem:[\frac\{4}\{5}],
+stem:[\frac\{3}\{5}])_ y cuando se tilda el redondelito que encabeza la fila en que se lo ingresara, se registra tal
+vector unitario en la xref:/Vista_Gráfica.adoc[Vista Gráfica]. Vector que reacciona dinámicamente a los desplazamientos
+del punto _C_.
+
+====
+
+[NOTE]
+====
+
+Se puede operar en *3D*.
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/VectorNormalUnitario.adoc[VectorNormalUnitario].
+
+====

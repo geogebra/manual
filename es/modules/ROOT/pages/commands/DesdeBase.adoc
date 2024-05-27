@@ -1,0 +1,59 @@
+= Comando DesdeBase
+:page-en: commands/FromBase_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+DesdeBase( "<Número entre comillas (como texto)>", <Base> )::
+  Crea el número decimal equivalente al que el xref:/Textos.adoc[texto] expresa en la
+  /s_index_php?title=Es:w:Base_(aritmética)_action=edit_redlink=1.adoc[base] indicada.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++DesdeBase["FF", 16]++`* establece como resultado el número _255_.*`++DesdeBase["100000000", 2]++`*,
+256**`++DesdeBase["FF", 16] + DesdeBase["FF", 18]++`** da el numero _540_
+
+====
+
+[NOTE]
+====
+
+El xref:/Textos.adoc[texto] debe expresar un número *natural* y la
+http://en.wikipedia.org/wiki/es:Base_(aritm%C3%A9tica)[base] debe ser uno entre *_2_* y *_36_*.
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: La base debe ser _concordante_ con el valor
+expresado. Así, a "FF" le corresponde una http://en.wikipedia.org/wiki/es:Base_(aritm%C3%A9tica)[base] igual a 16 como
+mínimo. De asignársele una menor, el resultado quedará _indeterminado_.
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+El comando obra del mismo modo y admite integración de literales en operaciones simbólicas-
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++DesdeBase["FF", 16] ñ + DesdeBase["FF", 18] ί++`* da _255 ñ + 285 ί_
+
+====
+
+'''''
+
+[NOTE]
+====
+
+Ver el comando xref:/commands/ABase.adoc[ABase]
+====

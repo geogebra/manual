@@ -1,0 +1,46 @@
+= Comando Tasa
+:page-en: commands/Rate_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Tasa( <Número de períodos>, <Pago>, <Valor actual>, <Valor futuro (opcional)>, <Tipo (opcional)>, <Estimación
+(opcional)> )::
+  Da por resultado la tasa de interés por período de una anualidad.
+
+* *<Número de períodos>* Número total de cuotas por el préstamo.
+* *<Pago>* Monto que se paga en cada período.
+* *<Valor actual>* Monto del préstamo correspondiente al valor actual de una serie de pagos.
+* *<Valor futuro (opcional)>* Balance de caja previsto tras el último pago. De no ingresarse un valor futuro, se lo
+supone por omisión 0.
+* *<Tipo (opcional)>* Indica cuándo se deben efectuar los pagos. Si no se ingresa un valor o se anota un 0, se realiza
+al final de cada período. Si se ingresa un 1, será al inicio del período.
+* *<Estimación (opcional)>* Estimación de la tasa a adjudicarse.}}
+
+[EXAMPLE]
+====
+
+`++Tasa(5*12, -300, 10000)++` devuelve una tasa mensual de 0.02 (2%).
+
+[NOTE]
+====
+
+Si se realizan pagos mensuales de un préstamo a cinco años se debe emplear 5*12 para el `++<Número de períodos>++`.
+
+====
+
+====
+
+[NOTE]
+====
+
+Para todos los argumentos, los pagos realizados son representados por un número negativo, y los pagos recibidos por
+números positivos.
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/Pago.adoc[Pago], xref:/commands/Períodos.adoc[Períodos],
+xref:/commands/ValorActual.adoc[ValorActual] y xref:/commands/ValorFuturo.adoc[ValorFuturo].
+
+====

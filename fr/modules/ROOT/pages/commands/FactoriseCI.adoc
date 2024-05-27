@@ -1,0 +1,35 @@
+= Commande FactoriseCI
+:page-en: commands/CIFactor_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+*/Fichier:Menu_view_cas_svg.adoc[image:24px-Menu_view_cas.svg.png[Menu view cas.svg,width=24,height=24]] uniquement en
+fenêtre xref:/Calcul_formel.adoc[Calcul formel]*
+
+FactoriseCI( <Expression> )::
+  Factorise sur les complexes irrationnels
+
+[EXAMPLE]
+====
+
+*Exemple :* `++FactoriseCI(x^2+x+1)++`donne stem:[ \left( x + \frac\{-ί \sqrt\{3} + 1}\{2} \right) \left( x + \frac\{ί
+\sqrt\{3} + 1}\{2} \right)]
+
+====
+
+FactoriseCI( <Expression>, <Variable> )::
+  Factorise sur les complexes irrationnels en fonction de la variable citée.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++FactoriseCI(a^2+a+1,a)++` donne stem:[ \left( a + \frac\{-ί \sqrt\{3} + 1}\{2} \right) \left( a +
+\frac\{ί \sqrt\{3} + 1}\{2} \right)]
+
+====
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/FactoriseIrr.adoc[FactoriseIrr].

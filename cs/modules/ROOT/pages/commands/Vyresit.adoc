@@ -1,0 +1,42 @@
+= Příkaz Vyresit
+:page-en: commands/Solve_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Tento příkaz je dostupný pouze v xref:/CAS_pohled.adoc[CAS pohledu]..
+
+VyresitODE( <Rovnice> )::
+  Vyřeší danou rovnici pro hlavní proměnnou a vrátí seznam všech řešení.
+VyresitODE( <Rovnice>, <Proměnná> )::
+  Vyřeší rovnici pro zadanou proměnnou a vrátí seznam všech řešení.
+VyresitODE( <Seznam rovnic>, <Seznam proměnných> )::
+  Vyřeší množinu rovnic pro zadanou množinu proměnných a vrátí seznam všech řešení.
+
+[EXAMPLE]
+====
+
+* `++VyresitODE[{x = 4 x + y , y + x = 2}, {x, y}]++` dává _\{\{x = -1, y = 3}}_, což je výsledek řešení rovnic _x = 4x
++ y_ a _y + x = 2_,
+* `++VyresitODE[{2a^2 + 5a + 3 = b, a + b = 3}, {a, b}]++` dává _\{\{a = 0, b = 3}, \{a = -3, b = 6}}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++VyresitODE[x * a^2 = 4a, a]++` dává stem:[\\{a = \frac\{4}\{x}, a = 0\}], což je výsledek rovnice _x a^2^ = 4a_.
+
+====
+
+[EXAMPLE]
+====
+
+`++VyresitODE[x^2 = 4x]++` dává _\{x = 4, x = 0}_, což je výsledek rovnice _x^2^ = 4x_.
+
+====
+
+[NOTE]
+====
+
+Podívejte se také na xref:/commands/Reseni.adoc[příkaz Řešení].
+
+====

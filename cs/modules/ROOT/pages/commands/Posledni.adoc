@@ -1,0 +1,83 @@
+= Příkaz Posledni
+:page-en: commands/Last_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Posledni [ <Seznam> ]::
+  Vytvoří seznam, který obsahuje poslední prvek zadaného seznamu.
+Posledni [ <Seznam>, <Počet prvků> ]::
+  Vytvoří seznam, který obsahuje posledních _n_ prvků zadaného seznamu, kde _n_ je číslo zadané jako <Počet prvků>.
+Posledni [ <Text> ]::
+  Vytvoří a v grafu zobrazí znak, který je posledním písmenem zadaného textu.
+Posledni [ <Text>, <Počet prvků> ]::
+  Vytvoří a v grafu zobrazí znak, který je posledních _n_ písmen zadaného textu, kde _n_ je číslo zadané jako <Počet
+  prvků>.
+
+[EXAMPLE]
+====
+
+`++Posledni["Hello",2]++` vytvoří _"lo"_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Posledni["Hello"]++` vytvoří _"o"_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Posledni[{1, 4, 3}, 2]++` vytvoří _\{4, 3}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Posledni[{1, 4, 3}]++` vytvoří _\{3}_.
+
+====
+
+[NOTE]
+====
+
+K získání posledního prvku použijte příkaz `++Prvek[{1, 4, 3}, 3]++`.
+
+====
+
+== CAS pohled
+
+Posledni [ <Seznam> ]::
+  Vytvoří seznam, který obsahuje poslední prvek zadaného seznamu.
+Posledni [ <Seznam>, <Počet prvků> ]::
+  Vytvoří seznam, který obsahuje posledních _n_ prvků zadaného seznamu, kde _n_ je číslo zadané jako <Počet prvků>.
+
+[EXAMPLE]
+====
+
+`++Posledni[{1, 4, 3}, 2]++` vytvoří _\{4, 3}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Posledni[{1, 4, 3}]++` vytvoří _\{3}_.
+
+====
+
+[NOTE]
+====
+
+K získání posledního prvku použijte příkaz `++Prvek[{1, 4, 3}, 3]++`.
+
+====
+
+[NOTE]
+====
+
+Viz též xref:/commands/Prvni.adoc[Příkaz_Prvni].
+
+====

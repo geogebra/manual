@@ -1,0 +1,163 @@
+= Comando Derivada
+:page-en: commands/Derivative_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+Derivada( <Función> )::
+  Crea y xref:/Vista_Gráfica.adoc[grafica] la xref:/Funciones.adoc[función] correspondiente a la derivada de la
+  indicada, respecto de la variable principal.
+Derivada( <Función>, <Orden de la Derivada (número o valor numérico)> )::
+  Da por resultado la derivada del número de orden indicado de la función respecto de la variable principal.
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Si bien se puede operar con la
+xref:/commands/Integral.adoc[Integral][r] siendo *_r_* una recta, no sucede otro tanto con la *Derivada* dado que se
+espera una xref:/Funciones.adoc[función] lineal como entrada y resulta inaceptable un
+xref:/Objetos_Geométricos.adoc[objeto geométrico], la recta, en su lugar.Puede salvarse la situación
+anotando:*_`++Derivada[ Pendiente[r] x + y(Interseca[r, EjeY]) ]++`_*
+
+====
+
+[NOTE]
+====
+
+Puede usarse f'(x) en lugar de Derivada[f] así como f´'(x) en lugar de Derivada[f, 2] y así sucesivamente.
+
+====
+
+Derivada( <Función>, <Variable> )::
+  Da por resultado la derivada parcial de la función respecto de la variable, *`++x++`* , *`++y++`* o *`++z++`*
+  indicada.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Derivada[x^3 + x^2 + x]++`* crea y xref:/Vista_Gráfica.adoc[grafica] la xref:/Funciones.adoc[función]
+__3x² + 2x + 1__**`++Derivada[x^3 + x^2 + x, 2]++`** crea y xref:/Vista_Gráfica.adoc[grafica] la
+xref:/Funciones.adoc[función] __6 x + 2__**`++Derivada[yx³+3x y z, y]++`** da por resultado algebraico la
+xref:/Funciones.adoc[función] _3x³ y² + 3x z_
+
+====
+
+Derivada( <Función>, <Variable>, <Orden n de la Derivada (número o valor numérico)> )::
+  Da por resultado la derivada parcial de orden _n_ de la xref:/Funciones.adoc[función] respecto de la variable,
+  *`++x++`* , *`++y++`* o *`++z++`*, indicada.
+
+[EXAMPLE]
+====
+
+*`++Derivada[yx³+3x y z, y, 2]++`* da __6x³ y__**`++Derivada[sen(xy), y, 2]++`** da *_-sen(x y) x²_*
+
+====
+
+[NOTE]
+====
+
+Solo en la xref:/Vista_CAS.adoc[Vista CAS] puede establecerse la derivada parcial respecto de una variable distinta a
+_x_, _y_ o _z_.
+
+====
+
+Derivada;( <Curva> )::
+  Da por resultado la derivada de la xref:/Curvas.adoc[curva].
+
+Derivada( <Curva>, <Orden n de la Derivada (número o valor numérico)> )::
+  Da por resultado la derivada de orden _n_ de la curva.
+
+[NOTE]
+====
+
+Esta variante solo se aplica a xref:/Curvas.adoc[*_curva paramétrica_*] que, por otra parte, deben cumplir los
+requisitos habituales para que la derivada pueda obtenerse.
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:* Estando la xref:/Curvas.adoc[curva paramétrica] *_cp_* determinada por:
+*`++Curva[cos(t) + 3 cos(t 2 - 1), sen(t) - 3 sen(t (4 / 3 - 1)) 0.4 / 3, t, 3, 17]++`*...
+
+* Derivada[cp] establece el siguiente resultado y lo xref:/Vista_Gráfica.adoc[grafica]:
+/Archivo:Para_1_PNG.adoc[image:Para_1.PNG[Para 1.PNG,width=322,height=67]]
+* Derivada[cp, 2] establece el siguiente resultado y lo xref:/Vista_Gráfica.adoc[grafica]:
+/Archivo:Para2_PNG.adoc[image:Para2.PNG[Para2.PNG,width=326,height=67]]
+
+====
+
+/Archivo:Paramétricas_PNG.adoc[image:580px-Param%C3%A9tricas.PNG[Paramétricas.PNG,width=580,height=273]]
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]]xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+En esta xref:/Vista_CAS.adoc[vista] se admiten literales en operaciones simbólicas y, excepto las aplicadas a
+xref:/Curvas.adoc[curvas paramétricas], cada una de las variantes previas.
+
+Derivada( <Expresión> )::
+  Da por resultado la derivada de la expresión respecto de la variable principal.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++f_1(x):=Derivada[sen(x + π)²]++` da por resultado la xref:/Funciones.adoc[función] _f~1~(x):=2cos(x) sen(x)_ y la
+xref:/Vista_Gráfica.adoc[grafica]
+* `++f_2(x):=Derivada[sen(x + ñ π)²]++` da por resultado la xref:/Funciones.adoc[función] __f~2~(x):=2cos(x + ñ π) sen(x
++ ñ π)__Solo expone el resultado dado que no puede ser xref:/Vista_Gráfica.adoc[graficado] hasta que no se le asigne
+valor al literal _ñ_
+* `++Derivada[t^3]++` da _3 t^2^_
+
+====
+
+Derivada(<Expresión>, <Variable>)::
+  Da por resultado la derivada de la expresión con respecto a la variable indicada.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++Derivada[t^ñ, t]++` da _ñ t^\{ñ - 1}^_
+* `++Derivada[t^ñ, ñ]++` da _t^ñ^ ln(t)_
+
+====
+
+Derivada(<Expresión>, <Variable>, <Orden de la Derivada (número o valor numérico)> )::
+  Da por resultado la derivada de la expresión del orden indicado con respecto a la variable indicada.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Derivada[ñ x^2]++`* da por resultado _2 ñ x_. Siendo *`++f(x):=ñ x^3++`*...*`++Derivada[f(x)]++`* da por
+resultado __3 ñ x²__**`++Derivada[f(x), ñ]++`** da por resultado __x³__**`++Derivada[f(x), x, 2]++`** da por resultado
+_6 ñ x_.
+
+====
+
+'''''
+
+'''''
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/DerivadaParamétrica.adoc[DerivadaParamétrica].
+
+====
+
+[NOTE]
+====
+
+Ver también las herramientas: xref:/tools/Derivada.adoc[image:32px-Mode_derivative.svg.png[Mode
+derivative.svg,width=32,height=32]] xref:/tools/Derivada.adoc[Derivada] en este caso.
+
+====

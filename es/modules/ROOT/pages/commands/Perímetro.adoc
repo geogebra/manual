@@ -1,0 +1,26 @@
+= Comando Perímetro
+:page-en: commands/Circumference_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Perímetro( <Polígono> )::
+  Da como resultado el perímetro del polígono.
+Perímetro( <Cónica> )::
+  Si la cónica dada es una circunferencia o una elipse, entonces este comando da como resultado su perímetro. En caso
+  contrario, queda indefinido.
+Perímetro( <Lugar geométrico> )::
+  Si el lugar geométrico indicado es finito, este comando retorna su perímetro aproximado. En caso contrario, queda
+  indefinido.
+
+[EXAMPLE]
+====
+
+`++Perímetro(x^2 + 2y^2 = 1)++` da como resultado _5.4_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Perímetro(Polígono((1, 2), (3, 2), (4, 3)))++` da como resultado _6.58_.
+
+====

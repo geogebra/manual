@@ -1,0 +1,46 @@
+= Commande FractionTexte
+:page-en: commands/FractionText_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+FractionTexte( <Nombre> )::
+  Convertit _Nombre_ en une fraction qui est affichée en tant que texte LaTeX dans xref:/Graphique.adoc[Graphique].
+
+[EXAMPLE]
+====
+
+*Exemple :* Si _a: y = 1.5 x + 2_ est une droite, alors `++FractionTexte(Pente(a))++` vous donne le texte
+stem:[\frac\{3}\{2}].
+
+====
+
+[NOTE]
+====
+
+*Note :* Propriétés... > Algèbre > **Symbolique**Si cette case est cochée, une fraction entrée dans Saisie comme par ex
+`++a=3/7++`sera affichée ainsi dans Algèbre, et un texte associé LaTeX(nombre, true, true) (voir
+xref:/commands/LaTeX.adoc[LaTeX] ) peut-être obtenu par Glisser/déposer dans Graphique, avec pour affichage stem:[ a =
+\frac\{3}\{7}].
+
+====
+
+FractionTexte( <Point> )::
+  Affiche les deux coordonnées du point en fraction dans xref:/Graphique.adoc[Graphique].
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+Saisissez `++A=(1/3,5/7)++` dans le champ de saisie ;
+
+vous obtenez dans la fenêtre Algèbre A(0.33,0.71) (pour une option : 2 décimales)
+
+et cela reste ainsi, si vous glisser cette écriture dans la fenêtre Graphique.
+
+Saisissez `++FractionTexte(A)++` dans le champ de saisie ;
+
+vous obtenez dans la fenêtre Graphique, le texte : stem:[\left(\frac\{1}\{3}, \frac\{5}\{7} \right) ].
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/TexteMath.adoc[TexteMath].

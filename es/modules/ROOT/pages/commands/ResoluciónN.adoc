@@ -1,0 +1,75 @@
+= Comando ResoluciónN
+:page-en: commands/NSolve_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+== Sintaxis CAS
+
+Este comando sólo está disponible en la xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=18,height=18]] xref:/Vista_CAS.adoc[Vista CAS]
+
+ResoluciónN[ <Ecuación> ]::
+  Busca una aproximación numérica a la solución de la ecuación en la variable principal. Siempre conviene especificar el
+  valor inicial cuando se trata de una ecuación no polinómica, como se indica más adelante.
+ResoluciónN[ <Ecuación>, <Variable> ]::
+  Busca una aproximación numérica a las soluciones de la ecuación en la variable indicada. Siempre conviene especificar
+  el valor inicial cuando se trata de una ecuación no polinómica, como se indica más adelante.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++ResoluciónN[a^4 + 34a^3 = 34, a]++`* da _\{a = -34, a = 0.99}._
+
+====
+
+[EXAMPLE]
+====
+
+*`++ResoluciónN[x^6 - 2x + 1=0]++`* da por resultado _\{x = 0.51, x = 1}_
+
+====
+
+*ResoluciónN*[ <Ecuación>, <Variable=valor inicial> ]::
+  Busca una aproximación numérica a las soluciones de la ecuación en la variable indicada por encima del _valor inicia_.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++ResoluciónN[cos(x) = x, x = 0]++` da _\{0.74}_.
+* `++ResoluciónN[a^4 + 34a^3 = 34, a = 3]++` da la lista _\{-34, 0.99}_.
+
+====
+
+ResoluciónN[ <Lista de Ecuaciones>, <Lista de Variables> ]::
+  Busca una aproximación numérica a las soluciones del sistema de ecuaciones dado, para la lista de variables indicada.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* ResoluciónN[\{π / x = cos(x - 2y), 2 y - π = sen(x)}, \{x=3, y=1.5}] da _\{x = 3.14, y = 1.57}_
+
+====
+
+[NOTE]
+====
+
+*Notas:*
+
+* Es opcional establecer valores iniciales. Sin embargo, la búsqueda se podría tornar más complicada. Establecer dichos
+valores no garantiza que se encuentre una solución.
+* El número de decimales con que se expresan las soluciones es el establecido en la opción Redondeo que se encuentra en
+el Menú Opciones.
+* El comando no opera correctamente con funciones que tienen al eje x como asíntota. Por otra parte, en general pueden
+reformularse.
+* Solo funciona si las funciones son continuas.
+* Ver también los comandos xref:/commands/Resuelve.adoc[Resuelve] y xref:/commands/SolucionesN.adoc[SolucionesN]
+====

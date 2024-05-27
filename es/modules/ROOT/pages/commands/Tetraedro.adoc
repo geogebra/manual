@@ -1,0 +1,38 @@
+= Comando Tetraedro
+:page-en: commands/Tetrahedron_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[.small]##
+
+Tetraedro( <Punto>, <Punto>, <Dirección> )::
+  Crea un tetraedro teniendo como arista al segmento determinado por los dos puntos.
+  Los otros vértices quedan unívocamente determinados por la dirección dada, la cual debe ser:
+  * un vector, un segmento, una recta o una semirrecta *perpendicular* al segmento determinado por los dos puntos
+  * un polígono o un plano *paralelo* a dicho segmento.
+  El tetraedro creado tendrá:
+  * una cara con el segmento como arista en un plano ortogonal al vector/segmento/recta/semirrecta, o
+  * una cara con el segmento como arista en un plano paralelo al polígono/plano.
+
+Tetraedro( <Punto>, <Punto>, <Punto>)::
+  Crea un tetraedro con los tres puntos de la primera cara. Los puntos deben determinar un triángulo equilátero para que
+  el tetraedro se defina.
+
+Tetraedro( <Punto>, <Punto>)::
+  Crea un tetraedro con los dos puntos en la primera cara. El tercer punto se crea en forma automática sobre una
+  circunferencia, por lo que el icosaedro puede rotarse alrededor de la primera arista.
+
+[NOTE]
+====
+
+Tetraedro(A, B) es una forma abreviada de Tetraedro(A, B, C) siendo C = Punto(Circunferencia(PuntoMedio(A, B),
+Distancia(A, B) sqrt(3) / 2, Segmento(A, B))).
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/Cubo.adoc[Cubo], xref:/commands/Icosaedro.adoc[Icosaedro],
+xref:/commands/Octaedro.adoc[Octaedro], xref:/commands/Dodecaedro.adoc[Dodecaedro].
+
+====

@@ -1,0 +1,53 @@
+= Info-bulles
+:page-en: Tooltips
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Les info-bulles sont des textes qui apparaissent près du curseur de votre souris quand vous survolez un objet dans
+xref:/Graphique.adoc[Graphique].
+
+Dans l'onglet *Avancé* du xref:/Dialogue_Propriétés.adoc[Dialogue Propriétés] vous pouvez choisir entre cinq options :
+
+Automatique::
+  Les info-bulles sont visibles si seulement xref:/Algèbre.adoc[Algèbre] est affichée. L'info-bulle affiche le nom et le
+  type de l'objet type ; dans le cas d' xref:/Objets_libres_dépendants_ou_auxiliaires.adoc[objets dépendants] l'
+  info-bulle inclut la description de l'objet.
+
+Activée::
+  Les info-bulles sont visibles qu'Algèbre soit affichée ou non. Le contenu de l'info-bulle est le même que pour
+  l'option _Automatique_.
+
+Désactivée::
+  Les info-bulles ne sont pas affichées.
+
+Légende::
+  La xref:/Étiquettes_et_Légendes.adoc[légende] de l'objet sert d'info-bulle. Vous pouvez définir la _Légende_ dans
+  l'onglet *Basique* du Dialogue propriétés.
+
+Cellule suivante::
+  Si l'objet est une cellule du xref:/Tableur.adoc[tableur], le contenu de la cellule sur la droite sert d'info-bulle.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+Soit l'extrait de tableur ci-dessous :
+
+En sélectionnant la colonne *C*, et choisissant dans l'onglet 'Avancé' de ses propriétés, *Cellule suivante* dans la
+liste déroulante *Infobulle:* ,
+
+lorsque votre pointeur survolera le secteur *C2* dans Graphique, apparaîtra le texte temporaire stem:[ \fbox\{LV2 Esp}
+].
+
+====
+
+[cols=",,,,",options="header",]
+|===
+| |A |B |C |D
+|1 | | | |
+|2 | | |=SecteurCirculaire[O,B1,B2] |*LV2 Esp*
+|3 | | | |
+|===
+
+Dans l'onglet *Avancé* du xref:/Dialogue_Propriétés.adoc[Dialogue Propriétés] vous pouvez aussi choisir la langue et la
+durée d'affichage des info-bulles.

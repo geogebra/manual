@@ -1,0 +1,48 @@
+= Příkaz CFaktor
+:page-en: commands/CFactor_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Tento příkaz je dostupný pouze v xref:/CAS_pohled.adoc[CAS pohledu]..
+
+CFaktor( <Výraz> )::
+  Rozloží zadaný výraz na čitatele včetně možnosti komplexních čitatelů.
+CFaktor( <Výraz>, <Proměnná> )::
+  [width="100%",cols="50%,50%",]
+  |===
+  a|
+  /Soubor:UnderConstruction_png.adoc[image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]]
+
+  |Some content was not yet translated. See the
+  /s_index_php?title=En:Manual:CFactor_Command_action=edit_redlink=1.adoc[English original]. Please
+  //wiki.geogebra.org/s/cs/index.php?title=Manu%C3%A1l:P%C5%99%C3%ADkaz_CFaktor&action=edit[edit the manual page] if you
+  have the rights for translation.
+  |===
+  Rozloží zadaný výraz na čitatele podle dané proměnné včetně možnosti komplexních čitatelů..
+
+[EXAMPLE]
+====
+
+`++CFactor[a^2 + x^2, x]++` dostaneme _(x + a ί) (x - a ί)_, rozklad _a^2^ + x^2^_ podle _x_.
+
+====
+
+[EXAMPLE]
+====
+
+`++CFactor[a^2 + x^2, a]++` dostaneme _(a + x ί) (a - x ί)_, rozklad _a^2^ + x^2^_ podle _a_.
+
+====
+
+[EXAMPLE]
+====
+
+`++CFactor[x^2 + 4]++` dostaneme _(x + 2 ί) (x - 2 ί)_, rozklad _x^2^ + 4_.
+
+====
+
+[NOTE]
+====
+
+Viz také xref:/s_index_php?title=Factor_Command_action=edit_redlink=1.adoc[Factor Command].
+
+====

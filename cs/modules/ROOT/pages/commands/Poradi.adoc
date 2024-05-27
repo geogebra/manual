@@ -1,0 +1,29 @@
+= Příkaz Poradi
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Poradi( <Seznam> )::
+  Vytvoří seznam, jehož _i_-tý prvek je hodnost _i_-tého prvku seznamu zadaného (hodnost prvku je jeho pozice v seznamu
+  vzniklém užitím xref:/commands/Tridit.adoc[Příkaz_Tridit], tj. v zadaném setříděném seznamu). Pokud je v zadaném
+  seznamu více stejných prvků, které jsou v setříděném seznamu na pozicích _k_ až _l_, jsou těmto prvkům ve výsledném
+  seznamu přiřazeny hodnosti _k_ až _l_.
+
+[EXAMPLE]
+====
+
+`++Poradi[{4, 1, 2, 3, 4, 2}]++` vytvoří \{5, 1, 2, 4, 6, 3}.
+
+====
+
+[EXAMPLE]
+====
+
+`++Poradi[{3, 2, 2, 1}]++` vytvoří \{4, 2, 3, 1}.
+
+====
+
+[NOTE]
+====
+
+Viz též xref:/commands/PrumerovanePoradi.adoc[Příkaz_PrumerovanePoradi]
+
+====

@@ -1,0 +1,93 @@
+= Commande Longueur
+:page-en: commands/Length_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Longueur( <Objet> )::
+  Retourne la longueur de l'objet.
+
+* Longueur( <Point A> ) : Retourne la longueur _OA_ ;
+* Longueur( <Vecteur> ) : Retourne la norme de _Vecteur_ ;
+* Longueur(<Liste>) : Retourne la longueur, c’est-à-dire le nombre d’éléments de _Liste_ ;
+* Longueur( <Texte> ): Retourne le nombre de caractères de _Texte_ ;
+* Longueur( <Lieu> ): Retourne le nombre de points constituant le _Lieu_,
+** Utilisez la commande xref:/commands/Périmètre.adoc[Périmètre][Lieu] pour obtenir la longueur du lieu lui-même ;
+* Longueur( <Arc> ):Retourne la longueur de _Arc_, qui n'est rien d'autre que sa 'valeur' pour GeoGebra ;
+* Longueur( <Secteur> ) :Retourne la longueur de l'arc définissant _Secteur_, sa 'valeur' pour GeoGebra étant son aire.
+
+* Longueur(f) avec f(x)=mainlevée(x) retourne le nombre de points servant à construire la courbe.
+
+Longueur(<Fonction>, <Nombre x1>, <Nombre x2> )::
+  Retourne la longueur de l’arc de la courbe de la fonction sur l’intervalle [_x1, x2_].
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Longueur(2x, 0, 1)++` retourne 2.23606797749979, valeur approchée de stem:[\sqrt\{5}].
+
+====
+
+Longueur(<Fonction>, <Point A>, <Point B> )::
+  Retourne la longueur de l’arc de la courbe de la fonction entre les deux points _A_ et _B_.
+
+[NOTE]
+====
+
+*Note :* Si les points donnés n’appartiennent pas à la courbe, ce sont leurs abscisses qui déterminent l’intervalle.
+
+====
+
+Longueur(<Courbe c>,<Nombre t1>,<Nombre t2>)::
+  Retourne la longueur de l’arc de la courbe entre les valeurs _t1_ et _t2_ du paramètre.
+
+Longueur(<Courbe c>,<Point A>,<Point B>)::
+  Retourne la longueur de l’arc de la courbe de la fonction entre les deux points _A_ et _B_ de la courbe.
+
+/Fichier:Tool_tool_png.adoc[image:Tool_tool.png[Tool tool.png,width=32,height=32]] Voir l' *outil* associé :
+/Fichier:Mode_distance_svg.adoc[image:32px-Mode_distance.svg.png[Mode distance.svg,width=32,height=32]]
+xref:/tools/Distance_ou_Longueur.adoc[Distance ou Longueur].
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+N'utilisez que les syntaxes suivantes :
+
+Longueur( <Point> )
+
+Longueur( <Vecteur> )(même si ces 3 syntaxes ne sont même plus proposées)
+
+Longueur( <Texte>)
+
+Longueur(<Liste>) +
+Longueur(<Fonction>, <x min>, <x max> )::
+Longueur( <Fonction>, <Variable a>, <Nombre t1>, <Nombre t2> )::
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Longueur(2 a, a,  0, 1)++` retourne stem:[\sqrt\{5}].
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Longueur(2 x, 0, 1)++` retourne stem:[\sqrt\{5}].
+
+====
+
+_____________________________________________________________
+
+/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] *Graphique 3D* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D
+
+*uniquement* pour les objets classifiés "Point" ou "Vecteur".

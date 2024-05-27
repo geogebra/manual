@@ -1,0 +1,67 @@
+= Herramienta de Registro en Hoja de Cálculo
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+/s_index_php?title=Plantilla:TABu_action=edit_redlink=1.adoc[Plantilla:TABu]
+xref:/Desplazamientos.adoc[image:23px-Menu-record-to-spreadsheet.svg.png[Menu-record-to-spreadsheet.svg,width=23,height=23]]
+no aparece en la xref:/Barra_de_Herramientas.adoc[Barra de Herramientas] sino en el xref:/Menú_Contextual.adoc[Menú
+Contextual] asociado al xref:/Objetos.adoc[objeto] activo, cuando la xref:/Hoja_de_Cálculo.adoc[Hoja de Cálculo] está
+abierta.
+
+xref:/Desplazamientos.adoc[image:23px-Menu-record-to-spreadsheet.svg.png[Menu-record-to-spreadsheet.svg,width=23,height=23]]
+[.small]#(código 59)# pasa, tras ser pulsado, a registrar en la xref:/Hoja_de_Cálculo.adoc[Hoja de Cálculo], la
+secuencia de valores que, a medida que se desplaza o se le provoca cualquier tipo de cambio, toma un
+xref:/Objetos.adoc[objeto].Para suspender temporalmente el registro que se desencadenara, se cuenta con el botón
+/Archivo:Spreadsheettrace_record_gif.adoc[image:Spreadsheettrace_record.gif[Spreadsheettrace
+record.gif,width=16,height=16]] que una vez pulsado deviene
+/Archivo:Spreadsheettrace_pause_gif.adoc[image:Spreadsheettrace_pause.gif[Spreadsheettrace
+pause.gif,width=16,height=16]]Puede rastrearse el registro de valores cambiantes de
+xref:/Números_y_Ángulos.adoc[números], xref:/Puntos_y_Vectores.adoc[puntos] y xref:/Puntos_y_Vectores.adoc[vectores] así
+como de xref:/Objetos.adoc[objetos de todo tipo]: desde ya los xref:/Objetos_Geométricos.adoc[geométricos] y hasta los
+xref:/Textos.adoc[textos].
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Respecto de los xref:/Textos.adoc[textos], se
+vuelcan sus cambiantes _valores_ si en la cadena de caracteres se incluyen números o asignaciones algebraicas o, como se
+_ilustra_ en el siguiente ejemplo, si se *_copia_* su contenido literal que, por el motivo que fuese, registrara cambios
+en su desenvolvimiento.
+
+====
+
+[EXAMPLE]
+====
+
+Dado el punto *`++M=(AleatorioEntre[-3,3], AleatorioEntre[-3,3])++`* y el texto
+condicional...*`++tx := Si[x(M)>0,Si[y(M)>0 ,"1er","4to"],Si[ y(M)>0 ,"2do","3er"]] +" cuadrante"++`*, al establecer el
+registro de la *Copia* del texto en la xref:/Hoja_de_Cálculo.adoc[Hoja de Cálculo] a medida que se pulsa [.kcode]#F9#,
+los diferentes resultados se irán volcando en una de las columnas.El _volcado_ de _valores_ oscilaría entre 0 y 1
+aleatoriamente y dado que se _tildó_ la casilla que define que se registra la *Copia*, se encolumnan textos como _1er.
+Cuadrante_, _2do. Cuadrante_, _3er. Cuadrante_ o _4to. Cuadrante_.
+
+====
+
+/Archivo:Registro_PNG.adoc[image:350px-Registro_.PNG[Registro .PNG,width=350,height=499]]
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Cuando esta herramienta trabaja con
+xref:/Números_y_Ángulos.adoc[números], xref:/Puntos_y_Vectores.adoc[puntos] y xref:/Puntos_y_Vectores.adoc[vectores], en
+las dos primeras columnas vacías de la xref:/Hoja_de_Cálculo.adoc[Hoja de Cálculo] se registra la evolución de sus
+valores.
+
+====
+
+[.small]##
+
+[.small]##
+
+'''''
+
+[NOTE]
+====
+
+Ver también el artículo sobre xref:/Menú_contextual.adoc[Menú Contextual].
+
+====

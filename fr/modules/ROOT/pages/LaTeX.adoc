@@ -1,0 +1,134 @@
+= LaTeX
+:page-en: LaTeX
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Dans GeoGebra vous pouvez aussi écrire des formules LaTeX. Pour cela, cochez ‘Formule LaTeX’ dans la boîte de dialogue
+de l’outil /Fichier:Mode_text_svg.adoc[image:32px-Mode_text.svg.png[Mode text.svg,width=32,height=32]]
+xref:/tools/Texte.adoc[Outil Texte] et entrez votre formule dans la syntaxe LaTeX.
+
+[EXAMPLE]
+====
+
+*Exemple :* [.underline]#Dans l'outil Texte#, [.underline]#Formule LaTeX cochée#
+
+`++\text{La longueur de la diagonale est } \sqrt{ 2 }++` ;
+
+`++\fbox{ \mbox{ La longueur de la diagonale est    } \sqrt{2} } ++`, si on veut encadrer le texte.
+
+====
+
+[NOTE]
+====
+
+*Note :* Pour créer un texte qui contient à la fois du texte statique et une formule LaTeX, vous pouvez insérer le texte
+statique dans la balise \text\{} (ou \mbox\{}) .
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :* `++LaTeX["\text{La longueur de la diagonale est } \sqrt{ 2 }"]++`.
+
+====
+
+[NOTE]
+====
+
+*Note :* Vous pouvez aussi utiliser la commande xref:/commands/LaTeX.adoc[LaTeX] pour entrer votre formule entre
+guillemets.
+
+====
+
+[NOTE]
+====
+
+*Note :* Vous pouvez obtenir simplement un texte LaTeX affichant la valeur d'un objet des fenêtres Algèbre ou Calcul
+formel en le tirant de sa fenêtre à la position choisie pour le texte dans la fenêtre Graphique.
+
+====
+
+Vous pouvez sélectionner la syntaxe pour des formules de base dans la fenêtre déroulante. Le menu déroulant _Symboles_
+contient une liste de symboles mathématiques usuels, des lettres grecques et des symboles d'opérateurs. Le code LaTeX
+correspondant est inséré dans la zone de texte, le curseur se plaçant entre deux accolades. Si vous voulez créer un
+texte dynamique avec la formule, vous devez sélectionner votre objet dans la liste déroulante _Objets_, GeoGebra
+insérera son nom et la syntaxe pour texte mixte.
+
+Dans ce tableau, sont indiquées quelques commandes LaTeX. Veuillez consulter une documentation LaTeX pour de plus amples
+informations.
+
+[width="100%",cols="20%,20%,20%,20%,20%",options="header",]
+|===
+|Saisie LaTeX |Résultat | |Saisie LaTeX |Résultat
+|a \cdot b |stem:[a \cdot b] | |x^\{2} |stem:[x^\{2}]
+|\frac\{a}\{b} |stem:[\frac\{a}\{b}] | |a_\{1} |stem:[a_\{1}]
+|\sqrt\{x} |stem:[\sqrt\{x}] | |\sin\alpha + \cos\beta |stem:[\sin\alpha + \cos\beta]
+|\sqrt[n]\{x} |stem:[\sqrt[n]\{x}] | |\int_\{a}^\{b} x dx |stem:[\int_\{a}^\{b} x dx]
+|\vec\{v} |stem:[\vec\{v}] | |\sum_\{i=1}^\{n} i^2 |stem:[\sum_\{i=1}^\{n} i^2]
+|\overline\{AB} |stem:[\overline\{AB}] | |\{a \choose b} |stem:[ \left( \begin\{array}\{} a \\ b \end\{array} \right) ]
+|\bgcolor\{00ff00} \{Lambert} a|
+....
+Lambert 
+....
+
+| |\fgcolor\{ff0000}\{NoëL} a|
+....
+NoëL
+....
+
+|===
+
+Vous pouvez aussi utiliser LaTeX dans la Légende d'un objet :
+
+Ainsi pour mettre par exemple le nom de l'objet en couleur :
+
+* `++$\textcolor{black}{%n}$ ++` pour une police serif en italique
+
+* `++$\textcolor{black}\text{%n}$++` pour une police serif
+
+* `++$\textcolor{black}\mathsf{%n}$++` pour une police sans serif
+
+avec comme couleurs possibles : black, red, blue, green, cyan, magenta, yellow et white.
+
+et pour les tailles :
+
+\Huge (géant) \normalsize (normal) \huge (énorme) \small (petit) \LARGE (très grand)
+
+\footnotesize (assez petit) \Large (plus grand) \scriptsize (très petit) \large (grand)
+
+\tiny (minuscule)
+
+[EXAMPLE]
+====
+
+*Exemple :* `++$\footnotesize{\text{Axes Orientés = }%v}$++`
+
+====
+
+Tableau (texte) à colonnes "faussement fusionnées"
+
+....
+    \begin{tabular}{|l|l|l|l|l|l|l|}
+       \hline
+       DataSet &
+         \multicolumn{2}{c|}{A} &
+         \multicolumn{2}{c|}{B} &
+         \multicolumn{2}{c|}{C} \\
+       
+       \hline
+       D1 & 2.1\% & 2.1\% & 2.1\% & 2.1\% & 2.1\% & 2.1\% \\
+       \hline
+       D2 & 11.6\% & 11.6\% & 11.6\% & 11.6\% & 11.6\% & 11.6\% \\
+       \hline
+       D3 & 5.5\% & 5.5\% & 5.5\% & 5.5\% & 5.5\% & 5.5\% \\
+       \hline
+     \end{tabular}
+....
+
+== Tutoriel
+
+/Tutoriel:LaTeX_aide_Polices_Boites_math.adoc[aide_Polices_Boites_math]
+== Voir aussi
+
+* http://hivernal.org/resources/static/computing/doc/lshort-fr.pdf[Une courte(?) introduction à LaTeX]
+* http://www.gutenberg.eu.org/[Groupe francophone des utilisateurs de TeX]

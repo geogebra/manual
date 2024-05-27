@@ -1,0 +1,46 @@
+= Comando Sector
+:page-en: commands/Sector_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Sector( <Cónica>, <Punto Extremo>, <Punto Extremo Antihorario> )::
+  Determina el sector entre dos puntos sobre la cónica dada.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* Siendo `++c: x^2 + 2y^2 = 8++` una elipse y dos de sus puntos `++D = (-2.83, 0)++` y `++E = (0, -2)++`,
+`++Sector(c, D, E)++` establece el sector correspondiente y su área _d = 4.44_.
+* Dada la circunferencia `++c: x^2 + y^2 = 9++` y dos de sus puntos `++A = (3, 0)++` y `++B = (0, 3)++`.
+`++Sector( c, A, B )++` establece el sector correspondiente y su área _d = 7.07_.
+
+====
+
+[NOTE]
+====
+
+Opera únicamente para una circunferencia o elipse.
+
+====
+
+Sector( <Cónica>, <Valor del Parámetro>, <Valor del Parámetro> )::
+  Determina el sector sobre la cónica entre dos valores paramétricos, que deben ser números entre _0_ y _2π_.
+
+[EXAMPLE]
+====
+
+Dada la circunferencia `++c: x^2 + y^2 = 9++`. `++Sector( c, 0, 3/4 π )++` establece el sector correspondiente y su área
+_d = 10.6_.
+
+====
+
+[NOTE]
+====
+
+Opera internamente con los siguientes formatos paramétricos:
+
+* Circunferencia: _(r cos(t), r sin(t))_ donde _r_ es el radio de la circunferencia.
+* Elipse: _(a cos(t), b sin(t))_ donde _a_ y _b_ son las longitudes del primer semieje y del segundo, respectivamente.
+
+====

@@ -1,0 +1,41 @@
+= Commande Zipf
+:page-en: commands/Zipf_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Zipf( <Nombre d'éléments>, <Exposant> )::
+  Retourne un histogramme représentant une http://en.wikipedia.org/wiki/fr:Loi_de_Zipf[loi de Zipf].
+  _Paramètres:_
+  _Nombre d'éléments_: nombre d'éléments dont on étudie le rang ;
+  _Exposant_: exposant caractérisant la distribution.
+
+Zipf( <Nombre d'éléments>, <Exposant>, <Booléen Cumul> )::
+  Retourne un histogramme représentant une loi de Zipf si _Cumul = false_
+  Retourne un histogramme représentant une loi de Zipf si _Cumul = true_.
+  Les deux premiers paramètres sont les mêmes que ci-dessus.
+
+Zipf( <Nombre d'éléments>, <Exposant>, <ValeurVariable v>, <Booléen Cumul> )::
+  Soit X une variable aléatoire suivant une loi de Zipf.
+  Retourne P( X = _v_) si _Cumul = false_ ;
+  Retourne P( X ≤ _v_) si _Cumul = true_.
+  Les deux premiers paramètres sont les mêmes que ci-dessus.
+
+[NOTE]
+====
+
+*Note :* Voir aussi la commande xref:/commands/InverseZipf.adoc[InverseZipf].
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* : Seule la syntaxe suivante est utilisable dans xref:/Calcul_formel.adoc[Calcul formel] :
+
+Zipf( <Nombre d'éléments>, <Exposant>, <Valeur Variable >, <Booléen Cumul> )::
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Zipf( 10, 1 , 5, false)++` retourne _stem:[\frac\{504}\{7381}]_.
+
+====

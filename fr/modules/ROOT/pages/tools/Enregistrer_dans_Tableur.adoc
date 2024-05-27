@@ -1,0 +1,48 @@
+= Outil Enregistrer dans Tableur
+:page-en: tools/Record_to_Spreadsheet_Tool
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+*Cet xref:/tools/Outils_Tableur.adoc[outil] n'est accessible que lorsque la fenêtre
+/Fichier:Menu_view_spreadsheet_svg.adoc[image:32px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=32,height=32]] xref:/Tableur.adoc[Tableur] est ouverte.*
+
+*Cet outil n'apparaît plus dans la barre d'outils*
+
+/Fichier:Menu_record_to_spreadsheet_svg.adoc[image:32px-Menu-record-to-spreadsheet.svg.png[Menu-record-to-spreadsheet.svg,width=32,height=32]]
+(code 59)
+
+*Mais si la fenêtre xref:/Tableur.adoc[Tableur] est ouverte, dans le menu contextuel* (clic-droit) de l'objet
+enregistrable. Nouveauté aussi, pendant l'enregistrement, le bouton
+/Fichier:Spreadsheettrace_record_gif.adoc[image:Spreadsheettrace_record.gif[Spreadsheettrace
+record.gif,width=16,height=16]] apparaît dans l'entête de la colonne, par clic, il vous est possible de suspendre
+temporairement l'enregistrement, le bouton devient
+/Fichier:Spreadsheettrace_pause_gif.adoc[image:Spreadsheettrace_pause.gif[Spreadsheettrace
+pause.gif,width=16,height=16]]
+
+Ce mode vous permet d’enregistrer dans le xref:/Tableur.adoc[Tableur] les valeurs associées à un objet que vous
+modifiez.
+
+Ce mode fonctionne pour les nombres, les points, et les vecteurs, les segments, les polygones, ... et aussi pour les
+textes
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+Soit un point défini de manière aléatoire par : `++M=(AléaEntreBornes[-3,3],AléaEntreBornes[-3,3])++`.
+
+et soit le texte conditionnel `++Si[ x(M)>0,Si[y(M)>0 ,"1er","4ème"],Si[ y(M)>0 ,"2ème","3ème"]] +" quadrant"++`.
+
+Vous pouvez demander l'enregistrement des valeurs de ce texte dans le tableur, puis modifier la construction par appui
+sur [.kcode]#F9#, les différents résultats seront enregistrés dans une colonne du tableur.
+
+====
+
+[NOTE]
+====
+
+*Note :* GeoGebra utilise les premières colonnes vides du xref:/Tableur.adoc[Tableur] pour enregistrer les valeurs des
+objets sélectionnés.
+
+====

@@ -1,0 +1,33 @@
+= Comando Asíntota
+:page-en: commands/Asymptote_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Asíntota( <Cónica> )::
+  Da por resultado las asíntotas de la cónica.
+Asíntota( <Función> )::
+  GeoGebra intentará encontrar las asíntotas de la función y las devolverá en una lista. Es posible que no las encuentre
+  todas, por ejemplo, las asíntotas verticales de una función no racional como ln(x). *Esta sintáxis no está disponible
+  en las aplicaciones Calculadora Gráfica y Geometría*
+Asíntota( <Curva implícita> )::
+  Da por resultado una lista conteniendo todas las asíntotas de la curva implícita.
+
+[EXAMPLE]
+====
+
+`++Asíntota(x^3 + y^3 + y^2 - 3 x = 0)++` da por resultado la lista _\{x + y = -0.33}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Asíntota((x^3 - 2x^2 - x + 4) / (2x^2 - 2))++` da por resultado la lista _\{y = 0.5x - 1, x = 1, x = -1}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Asíntota(x^2 - y^2 /4 = 1)++` da por resultado las rectas _-2x + y = 0_ y _-2x - y = 0_.
+
+====

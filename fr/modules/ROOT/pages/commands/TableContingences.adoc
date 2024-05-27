@@ -1,0 +1,67 @@
+= Commande TableContingences
+:page-en: commands/ContingencyTable_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+TableContingences( <Liste de textes>, <Liste de textes> )::
+  Dessine une http://en.wikipedia.org/wiki/fr:Tableau_de_contingence[table de contingences] créée à partir des deux
+  listes données. Les valeurs uniques de la première liste sont utilisées pour les valeurs de ligne de la table. Les
+  valeurs uniques de la seconde liste sont utilisées pour les valeurs de colonne de la table.
+
+[NOTE]
+====
+
+*Note :* Voir la commande xref:/commands/Effectifs.adoc[Effectifs].
+
+====
+
+TableContingences( <Liste de textes>, <Liste de textes>, <Options> )::
+  Dessine une http://en.wikipedia.org/wiki/fr:Tableau_de_contingence[table de contingences] créée à partir des deux
+  listes données comme indiqué ci-dessus. Les textes _Options_ contrôlent l'affichage des calculs optionnels dans la
+  table.
+
+[NOTE]
+====
+
+*Note :* Les valeurs possibles pour _Options_ sont "|", "_", "+", "e", "k", "=".
+
+* "|" = affiche les pourcentages de colonne ;
+* "_" = affiche les pourcentages de ligne ;
+* "+" = affiche les pourcentages de total ;
+* "e" = affiche les nombres attendus ;
+* "k" = affiche les contributions du Khi carré ;
+* "=" = affiche les résultats d'un test du Khi carré.
+
+====
+
+TableContingences( <Liste TitresLignes>, <Liste TitresColonnes>, <Matrice Dépouillée> )::
+  Dessine une http://en.wikipedia.org/wiki/fr:Tableau_de_contingence[table de contingences] à partir de la liste des
+  titres des lignes, de la liste des titres des colonnes et de la matrice dépouillée des effectifs.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+Après validation des 3 définitions suivantes :
+
+`++TitresColonnes = {"Département 1", " Département 2", " Département 3", " Département 4"}++`
+
+`++TitresLignes = {"Voitures  neuves", "Voitures  d’occasion", "Cars  et  autobus  neufs", "Cars et autobus  d’occasion", "Camionnettes, camions  neufs", "Camionnettes, camions  d’occasion"}++`
+
+`++Dépouillée= {{9724, 15939, 8703, 10859}, {28460, 43794, 29290, 30320}, {23, 23, 32, 17}, {26, 43, 51, 43}, {1824, 2712, 1805, 8326}, {5107, 8499, 5004, 5239}} ++`
+
+La validation de :
+
+`++TableContingences(TitresLignes, TitresColonnes, Dépouillée)++`
+
+devrait vous donnez le tableau de la page 6/71 du https://euler.ac-versailles.fr/IMG/pdf/st2s_doc_acc.pdf[Document
+d'accompagnement ST2S]
+/Fichier:ContingenceST2S_png.adoc[image:750px-ContingenceST2S.png[ContingenceST2S.png,width=750,height=378]]
+
+(avec des nombres justifiés à droite, ce qui semble plus approprié que centrés)
+
+====
+
+TableContingences( <Liste TitresLignes>, <Liste TitresColonnes>, <Matrice Dépouillée>, <Options> )::
+  Dessine une http://en.wikipedia.org/wiki/fr:Tableau_de_contingence[table de contingences] comme indiqué ci-dessus,
+  avec les _Options_ décrites plus avant.

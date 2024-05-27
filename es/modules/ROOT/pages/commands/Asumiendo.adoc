@@ -1,0 +1,31 @@
+= Comando Asumiendo
+:page-en: commands/Assume_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+== Sintaxis CAS
+
+Asumiendo( <Condición>, <Expresión> )::
+  Evalúa la condición de acuerdo con la expresión.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++ Asumiendo(a > 0, Integral(exp(-a x), 0, inf))++` devuelve `++1 / a++`.
+* `++ Asumiendo(x>0 && n>0, Resuelve(log(n^2*(x/n)^lg(x))=log(x^2), x))++` devuelve `++{x = 100, x = n}++`
+* `++ Asumiendo(x<2,Simplifica(sqrt(x-2sqrt(x-1))))++` devuelve `++-sqrt(abs(x - 1)) + 1++`
+* `++ Asumiendo(x>2,Simplifica(sqrt(x-2sqrt(x-1))))++` devuelve `++sqrt(x - 1) - 1++`
+* `++ Asumiendo(k>0, Extremo(k*3*x^2/4-2*x/2))++` devuelve stem:[ \left\\{ \left(\frac\{2}\{3 k}, -\frac\{1}\{3 k}
+\right) \right\} ]
+* `++ Asumiendo(k>0, PuntoInflexión(0.25 k x^3 - 0.5x^2 + k))++` devuelve stem:[ \left\\{ \left(\frac\{2}\{3 k},
+\frac\{27 k^\{3} - 4}\{27 k^\{2}} \right) \right\} ]
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/Resuelve.adoc[Resuelve].
+
+====

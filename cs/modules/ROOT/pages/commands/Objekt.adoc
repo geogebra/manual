@@ -1,0 +1,34 @@
+= Příkaz Objekt
+:page-en: commands/Object_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Objekt [ <Název objektu ve formě textu> ]::
+  Přiřadí objekt zadanému názvu. Výsledkem je vždy závislý objekt.
+
+[NOTE]
+====
+
+Příkaz _Objekt_ je opakem příkazu xref:/commands/Nazev.adoc[Nazev].
+
+====
+
+[EXAMPLE]
+====
+
+Jestliže existují body _A1_, _A2_, ... , _A20_ a posuvník _n = 2_, potom `++Objekt["A" + n]++` vytvoří kopii bodu _A2_.
+
+====
+
+[NOTE]
+====
+
+Ujistěte se, že objekty, na které odkazujete, jsou *dříve* v xref:/Zápis_konstrukce.adoc[Zápisu konstrukce] než zadávaný
+příkaz
+
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Varování,title="Varování",width=18,height=18] *Varování*: |Tento příkaz nelze užít v
+xref:/Uživatelské_nástroje.adoc[Uživatelské_nástroje]
+|===

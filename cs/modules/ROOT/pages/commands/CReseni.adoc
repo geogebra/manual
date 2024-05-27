@@ -1,0 +1,53 @@
+= Příkaz CReseni
+:page-en: commands/CSolutions_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Tento příkaz je dostupný pouze v xref:/CAS_pohled.adoc[CAS pohledu]..
+
+CReseni( <Rovnice> )::
+  Vyřeší zadanou rovnici pro hlavní proměnnou a dostaneme seznam řešení, což umožňuje komplexní řešení.
+CReseni( <Rovnice>, <Proměnná> )::
+  [width="100%",cols="50%,50%",]
+  |===
+  a|
+  /Soubor:UnderConstruction_png.adoc[image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]]
+
+  |Some content was not yet translated. See the
+  /s_index_php?title=En:Manual:CSolutions_Command_action=edit_redlink=1.adoc[English original]. Please
+  //wiki.geogebra.org/s/cs/index.php?title=Manu%C3%A1l:P%C5%99%C3%ADkaz_CReseni&action=edit[edit the manual page] if you
+  have the rights for translation.
+  |===
+  Vyřeší zadanou rovnici pro danou neznámou a dostaneme seznam řešení, což umožňuje komplexní řešení.
+CReseni( <Seznam rovnic>, <Seznam proměnných> )::
+  Vyřeší soustavu rovnic pro dané neznámé a dostaneme seznam řešení, což umožňuje komplexní řešení.
+
+[EXAMPLE]
+====
+
+`++CReseni[{y^2 = x - 1, x = 2 * y - 1}, {x, y}]++` dostaneme stem:[\begin\{pmatrix}1 + 2 ί&1 + ί\\1 - 2 ί&1 -
+ί\end\{pmatrix}], komplexní řešení _y^2^ = x - 1_ and _x = 2 * y - 1_.
+
+====
+
+[EXAMPLE]
+====
+
+`++CReseni[a^2 = -1, a]++` dostaneme _\{ί, -ί}_, komplexní řešení _a^2^ = -1_.
+
+====
+
+[EXAMPLE]
+====
+
+`++CSReseni[x^2 = -1]++` dostaneme _\{ί, -ί}_, komplexní řešení _x^2^ = -1_.
+
+====
+
+[NOTE]
+====
+
+* Imaginární jednotku ί získáme stisknutím[.kcode]##ALT ## + [.kcode]# i#.
+* Viz také příkazy xref:/s_index_php?title=CSolve_Command_action=edit_redlink=1.adoc[CSolve Command] a
+xref:/s_index_php?title=Solutions_Command_action=edit_redlink=1.adoc[Solutions Command].
+
+====

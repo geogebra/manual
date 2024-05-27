@@ -1,0 +1,231 @@
+= Comando ResuelveEDO
+:page-en: commands/SolveODE_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+*→* *Resolución numérica*
+
+ResuelveEDO( <f(x,y)>, <x Inicial>, <y Inicial>, <x Final>, <Paso> )::
+  xref:/Vista_Gráfica.adoc[Grafica] como xref:/Lugar_Geométrico.adoc[_lugar geométrico_] la resolución numérica de la
+  ecuación a partir del punto con sendas coordenadas hasta la abscisa final indicada, con el _paso_ dado.Admite toda
+  **_E_**~cuación~ **_D_**~iferencial~ **_O_**~rdinaria~
+  http://en.wikipedia.org/wiki/es:Ecuaci%C3%B3n_diferencial_ordinaria_de_primer_orden[(*EDO*] en español)- como
+  *stem:[\begin\{equation}\frac\{dy}\{dx}=f(x,y) \end\{equation}]*
+
+[EXAMPLE]
+====
+
+*Ejemplos:* Siendo _0.1_ el _paso_, *_A_* el punto inicial, y *B* el que establece la abscisa
+final...*`++ResuelveEDO[-x y, x(A), y(A), x(B), 0.1]++`* xref:/Vista_Gráfica.adoc[grafica] la resolución de:
+*stem:[\begin\{equation} \frac\{dy}\{dx}=-xy \end\{equation}]* siendo su registro
+xref:/Vista_Algebraica.adoc[algebraico]: _IntegralNumérica1 = ResuelveEDO[-x y, x(A), y(A), x(B), 0.1]_
+
+'''''
+
+Puede analizarse el *lg_1 = `++ResuelveEDO[-x y, x(A), y(A), x(B), 0.1]++`*
+
+'''''
+
+Contando con los puntos *A*, *B* y *F*, un
+xref:/commands/AjustePolinómico.adoc[AjustePolinómico]**[**xref:/commands/Primero.adoc[Primero]**[**lg_1,
+xref:/commands/Longitud.adoc[Longitud]**[**lg_1**]** *]*, round(x(F))*]* de una lista representativa de los puntos sobre
+el lugar geométrico *_lg_1_* creado, expone la siguiente ecuación de resolución
+aproximada:*`++0.00016x⁹-0.00322x⁸+0.023 x⁷-0.045x⁶-0.173 x⁵+0.72 x⁴+0.4 x³-3.56 x²-0.2x+7.4++`*
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Para la solución "inversa", basta con anotar un
+valor negativo para _x Final_, como en *`++ResuelveEDO[-x*y, x(A), y(A), -5, 0.1]++`*.
+
+====
+
+[NOTE]
+====
+
+*Notas:* Considerar lo que permiten los siguientes comandos...
+
+* xref:/commands/Longitud.adoc[Longitud][ <Lugar Geométrico> ] para averiguar cuántos puntos componen un lugar
+geométrico.
+* xref:/commands/Primero.adoc[Primero][ <Lugar Geométrico>, <Número> ] para extraer los puntos como una lista, como en
+_xref:/commands/Primero.adoc['Primero****][lug1, Longitud[lug1]]_
+
+====
+
+ResuelveEDO( f(x,y)>, <g(x,y)>, <x Inicial>, <y Inicial>, <t Final>, <Paso> )::
+  Dados el valor para el punto inicial, el máximo valor del parámetro interno _t_ y el del paso para _t_, resuelve
+  numéricamente y expone como xref:/Lugar_Geométrico.adoc[lugar geométrico]. la EDO de primer orden
+  stem:[\begin\{equation} \frac\{dy}\{dx}=\frac\{f(x,y)}\{g(x,y)} \end\{equation}]
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Alerta,title="Alerta",width=18,height=18] *Alerta*: |Esta variante puede operar adecuadamente
+cuando la primera falla. Como cuando la curva de solución tiene puntos verticales.
+|===
+
+[EXAMPLE]
+====
+
+*`++ResuelveEDO[-x, y, x(A), y(A), 5, 0.1]++`*, siendo *_A_* el punto inicial, _0.1_ el _paso_ hasta el valor de abscisa
+_5_, resuelve la EDO: _stem:[\begin\{equation}\frac\{dy}\{dx}=- \frac\{x}\{y} \end\{equation}]_
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Para la solución "inversa", basta con anotar un
+valor negativo para _x Final_, como en *`++ResuelveEDO[y, x(A), y(A), -5, 0.1]++`*
+
+====
+
+/Archivo:EDO_0II_gif.adoc[image:EDO_0II_.gif[EDO 0II .gif,width=311,height=290]]
+
+ResuelveEDO( <b(x)>, <c(x)>, <f(x)>, <x~Inicial~>, <y~Inicial~>, <y'~Inicial~>, <x~Final~>, <Paso> )::
+  Resuelve y expone como xref:/Lugar_Geométrico.adoc[lugar geométrico] la EDO de segundo orden
+  stem:[\begin\{equation}y''+b(x)y'+c(x)y=f(x)\end\{equation}]
+
+[EXAMPLE]
+====
+
+*`++ResuelveEDO[cos(x), sin(x), x(A) sin(x)² + y(A) cos(x)², -3.14159, -1, -1, -6.28319, 0.1]++`*
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Complementan la resolución los siguientes
+comandos...
+
+* xref:/commands/Longitud.adoc[Longitud][ <LugarGeométrico> ] establece cuántos puntos componen el lugar geométrico
+computado
+* xref:/commands/Primero.adoc[Primero][ <lugar geométrico>, <Número> ] extrae tales puntos como una lista. Como, por
+ejemplo, xref:/commands/Primero.adoc[Primero[ lug1, Longitud[ lug1]]]
+
+====
+
+[NOTE]
+====
+
+*Notas:* El resultado se xref:/Vista_Gráfica.adoc[despliega] como xref:/Lugar_Geométrico.adoc[*_lugar geométrico_*] que,
+creado como xref:/Objetos_libres_dependientes_y_auxiliares.adoc[objeto auxiliar], por omisión se omite de la
+xref:/Vista_Algebraica.adoc[Vista Algebraica]El algoritmo está basado en el método numérico de
+http://en.wikipedia.org/wiki/es:M%C3%A9todo_de_Runge-Kutta[Runge-Kutta].
+
+====
+
+*→* *Resolución formal*
+
+ResuelveEDO(<f(x,y)>)::
+  Procura desarrollar la solución precisa de la EDO de primer orden: *stem:[\begin\{equation} \frac\{dy}\{dx}=f(x,y(x))
+  \end\{equation}]*
+ResuelveEDO( <f(x, y)>, <Punto en f> )::
+  Procura la función que pasando por el punto indicado resuelve formalmente la EDO de primer orden:
+  stem:[\frac\{dy}\{dx}(x)=f(x, y(x))].
+
+  '''''
+
+[EXAMPLE]
+====
+
+*`++ResuelveEDO[y'=y / x, (1,2)]++`* da _f(x) = 2 x_.
+
+====
+
+[EXAMPLE]
+====
+
+*`++ResuelveEDO[y / x]++`* da _f(x) = c~1~ x_.
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/CampoDirecciones.adoc[CampoDirecciones]
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] la xref:/Vista_CAS.adoc[Vista C~[.small]#omputación#~A~[.small]#lgebraica#~S~[.small]#imbólica#~]
+
+A las descriptas, se suman variantes exclusivas de esta xref:/Vista_CAS.adoc[vista] y se admiten literales en
+operaciones simbólicas.
+
+ResuelveEDO( <f(x, y)~Ecuación diferencial en _x_, _y_~> )::
+  Procura dar con la solución exacta para la EDO de primero o segundo orden dada.
+ResuelveEDO( <f(x, y)~Ecuación diferencial en _x_, _y_~>, <Punto(s) L en f> )::
+  Procura encontrar la solución exacta para la EDO de primero o segundo orden dada que pasa por el punto o lista de
+  puntos designado por _L_.
+ResuelveEDO( <f(x, y)~Ecuación diferencial en _x_, _y_~>, <Punto(s) L en f>, <Punto(s) L' en f'> )::
+  Procura encontrar la solución exacta para la EDO de primero o segundo orden dada, que pasa por el punto o lista de
+  puntos designado por _L_ y la *_f'_* pasando por el punto o lista de puntos de *_L'_* .
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++ResuelveEDO[y / x, y,  x]++`* da _y = c~1~ x_.*`++ResuelveEDO[y'' - 3y' + 2 = x, (2, 3), (1, 2)]++`* da
+un resultado levemente diferente según se trate de la versión 4.2 o superior:
+
+stem:[\{y = \frac\{-9 x^\{2} \textit\{e}^\{3} + 30 x \textit\{e}^\{3} + 32 \textit\{e}^\{3 x} - 32 \textit\{e}^\{6} +
+138 \textit\{e}^\{3} }\{54 \textit\{e}^\{3} } }]
+
+====
+
+[EXAMPLE]
+====
+
+*`++ResuelveEDO[y'=y / x,(1,2)]++`* da _y = 2 x_.
+
+====
+
+[EXAMPLE]
+====
+
+*`++ResuelveEDO[y'=y / x]++`* da _f(x) = c~1~ x_.
+
+====
+
+[NOTE]
+====
+
+Como primera y segunda derivadas de *_y_* , se puede anotarse *_y'_* e *_y''_* respectivamente.
+
+====
+
+ResuelveEDO( <f(w, v)~Ecuación diferencial en _w~variable independiente~_, _v~variable dependiente~_~>, v~variable
+dependiente~, w~variable independiente~ )::
+  Procura dar con la solución precisa de la EDO de primero o segundo orden dada.Opera de modo análogo a la variante
+  previa excepto que la función _f_ puede serlo respecto de variables diferentes a _x_ o _y_ como
+  stem:[\frac\{dv}\{dw}(w)=f(w, v(w))] siendo _v_ la variable dependiente y _w_ la independiente.
+
+[EXAMPLE]
+====
+
+*`++ResuelveEDO[v'=v / w, v,  w]++`* da _v = c~1~ w_.
+
+====
+
+ResuelveEDO( <f(w, v)~Ecuación diferencial en _w~variable independiente~_, _v~variable dependiente~_~>, v~variable
+dependiente~, w~variable independiente~, <Punto(s) L en f> )::
+  Combina parámetros de la segunda y cuarta variantes de sintaxis.
+
+ResuelveEDO( <f(w, v)~Ecuación diferencial en _w~variable independiente~_, _v~variable dependiente~_~>, v~variable
+dependiente~, w~variable independiente~, <Punto(s) L en f>, <Punto(s) L' en f'>)::
+  Combina parámetros de la tercera y cuarta variantes de sintaxis.
+
+[NOTE]
+====
+
+Para establecer compatibilidad con la xref:/Barra_de_Entrada.adoc[Barra de Entrada], si el primer parámetro es una
+expresión sin *y'* ni *y''*, se lo supone _segundo miembro_ de la EDO con _y'_ en el primero.
+
+====

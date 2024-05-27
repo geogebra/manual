@@ -1,0 +1,35 @@
+= Comando Ejes
+:page-en: commands/Axes_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Ejes( <Cónica> )::
+  Devuelve las ecuaciones de los ejes de la cónica.
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/EjeMayor.adoc[EjeMayor] y xref:/commands/EjeMenor.adoc[EjeMenor].
+
+====
+
+Ejes( <Cuádrica> )::
+  Crea los tres ejes de la cuádrica.
+
+[EXAMPLE]
+====
+
+`++ Ejes(x^2 + y^2 + z^2= 3)++` devuelve las tres rectas
+
+_a_: _X_ = (0, 0, 0) + _λ_ (1, 0, 0), _b_: _X_ = (0, 0, 0) + _λ_ (0, 1, 0) y _c_: _X_ = (0, 0, 0) + _λ_ (0, 0, 1)
+
+====
+
+[NOTE]
+====
+
+*Notas:* En particular:
+
+* si la cuádrica es un _cilindro_, el comando devuelve los dos ejes del círculo base y el eje de rotación.
+* si la cuádrica es una _esfera_, el comando devuelve los tres ejes paralelos a los ejes coordenados.
+
+====

@@ -1,0 +1,54 @@
+= Comando ÍndiceDe
+:page-en: commands/IndexOf_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+ÍndiceDe( <Objeto>, <Lista> )::
+  Devuelve la posición de la primera ocurrencia del Objeto en la Lista.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* `++ ÍndiceDe(5, {1, 3, 5, 2, 5, 4})++` devuelve _3_.
+
+====
+
+[NOTE]
+====
+
+Cuando el objeto no es encontrado en la lista, devuelve _indefinido_.
+
+====
+
+ÍndiceDe( < Objeto >, <Lista>, <Índice inicial> )::
+  Igual que en el caso anterior, pero la búsqueda comienza en el índice indicado.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++ ÍndiceDe(5, {1, 3, 5, 2, 5, 4}, 3)++` devuelve _3_.
+* `++ ÍndiceDe(5, {1, 3, 5, 2, 5, 4}, 4)++` devuelve _5_.
+* `++ ÍndiceDe(5, {1, 3, 5, 2, 5, 4}, 6)++` devuelve _indefinido_.
+
+====
+
+ÍndiceDe( <Texto>, <Texto> )::
+  Devuelve la posición a partir de la cual el primer texto aparece por primera vez en el segundo texto.
+
+[EXAMPLE]
+====
+
+`++ ÍndiceDe("Ge", "GeoGebra")++` devuelve _1_.
+
+====
+
+ÍndiceDe( <Texto>, <Texto>, <Índice inicial> )::
+  Igual que en el caso anterior, pero la búsqueda comienza en el índice indicado.
+
+[EXAMPLE]
+====
+
+`++ÍndiceDe("Ge", "GeoGebra",2)++` devuelve _4_.
+
+====

@@ -1,0 +1,110 @@
+= Nombrando Objetos
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Se le puede asignar un nombre a un xref:/Objetos.adoc[objeto] cuando se lo ha creado usando la
+xref:/Barra_de_Entrada.adoc[Barra de Entrada]:
+
+* xref:/Puntos_y_Vectores.adoc[Puntos]: En GeoGebra los puntos se nombran utilizando mayúsculas. Basta, entonces, con
+anotar el nombre (por ejemplo: A, P) y un signo igual antes de las coordenadas o comandos para que así se denomine.
+
+[EXAMPLE]
+====
+
+`++C = (2, 4)++`, `++ P = (1; 180°)++`
+
+====
+
+* xref:/Puntos_y_Vectores.adoc[Vectores]: Para distinguirlos de los puntos, GeoGebra reserva la letra minúscula para los
+vectores. Nuevamente, se debe anotar el nombre (sea _v_, _u_) y un signo igual antes de las coordenadas o del comando
+para que así se denomine.
+
+[EXAMPLE]
+====
+
+`++v = (1, 3)++`, `++ u = (3; 90°)++`
+
+====
+
+* xref:/Líneas_y_Ejes.adoc[Rectas], circunferencias y xref:/Secciones_cónicas.adoc[secciones cónicas]: Estos objetos
+pueden definirse por su nombre seguido de dos puntos antecediendo a su ecuación o comandos.
+
+[EXAMPLE]
+====
+
+`++g: y = x + 3++`, `++c: (x-1)^2 + (y – 2)^2 = 4++`, `++hyp: x^2 – y^2 = 2++`
+
+====
+
+* xref:/Funciones.adoc[Funciones]: Se pueden ingresar con un nombre que las caracterice como tales, por ejemplo,
+`++f(x) =++` o `++g(x)=++` previo a su fórmula o de los comandos que la definan.
+
+[EXAMPLE]
+====
+
+`++h(x) = 2 x + 4++`, `++q(x) = x^2, trig(x) = sin(x)++`
+
+====
+
+[NOTE]
+====
+
+*Notas:*
+
+* Si no se le asigna un nombre a un objeto manualmente, GeoGebra lo hace automáticamente, por orden alfabético.
+* Los nombres de los objetos pueden estar indexados. Para establecer un índice en el nombre de un objeto, basta con
+emplear el sub-guion o guion bajo. Por ejemplo A~1~ se anota como `++A_1++` y s~AB~ como `++s_{AB}++`. El guion bajo
+precede al o a los subíndices.
+
+====
+
+== Etiquetas Reservadas
+
+Hay algunos símbolos o secuencias de símbolos que no pueden utilizarse como nombres para a los
+xref:/Objetos.adoc[objetos]: x, y, z, EjeX, EjeY, EjeZ,abs, sgn, sqrt, exp, log, ln, ld, lg, cos, sen, tan, acos, arcos,
+arccos, asen, arcsen, atan, arctan, cosh, senh, tanh, acosh, arcosh, arccosh, asenh, arcsinh, atanh, arctanh, atan2,
+erf, floor, ceil, round, random, conjugado, arg, gamma, gammaRegularized, beta, betaRegularized, sec, csc, cosec, cot,
+sech, csch, coth____
+
+En la lista de símbolos desplegable que se encuentra en el extremo derecho de la xref:/Barra_de_Entrada.adoc[Barra de
+Entrada], se incluyen los siguientes caracteres especiales que identifican a las siguientes constantes:
+
+* π - la constante entre la circunferencia y su diámetro, _pi_, que también puede ingresarse pulsando [.kcode]#Alt-p#
+* ℯ - el número de Euler, por ejemplo para la función exponencial ℯ^x, que también puede ingresarse pulsando
+[.kcode]#Alt-e#
+* ί - la unidad imaginaria, que identifica el componente imaginario en los números complejos como en z = 3 + ί. También
+puede obtenerse pulsando [.kcode]#Alt-i#
+
+En tanto los nombres de variables como _e_ o _i_ no se hayan asignado aún, se los mantiene asociados a las constantes
+específicas que representan y se interpretan en tal sentido.
+
+== Cambiando el Nombre de un Objeto
+
+La forma más sencilla de cambiar el nombre de un objeto es seleccionándolo y comenzando a tipear el nuevo nombre.
+También se puede cambiar el nombre de un objeto ya creado de las siguientes maneras:
+
+* haciendo clic con el botón secundario del ratón en el objeto para seleccionar la opción _Renombra_ del
+xref:/Menú_contextual.adoc[Menú Contextual] desplegado para anotar el nuevo nombre que se deseara
+* abriendo el xref:/Cuadro_de_Propiedades.adoc[Cuadro de Propiedades] del objeto y anotando el nuevo nombre en la
+casilla de entrada *Nombre* de la pestaña *Básico*.
+
+[NOTE]
+====
+
+*Notas:*
+
+* Si se asignara un nombre ya en uso, se cambia el del objeto que lo ostentaba añadiéndole un número en el subíndice
+para distinguirlo.Por ejemplo, si se renombrara _A_ a _B_ y ya hubiera un objeto denominado _A_, este tomará el nombre
+_A_1_.
+* Las dependencias suelen resolverse automáticamente: esto significa que al cambiarse el nombre, se cambia también en su
+definición, de modo que si se tienen objetos dependientes de _A_ y a este objeto _A_ se lo renombra como _P_, los
+objetos dependientes de _A_ pasan a ser dependientes de _P_ automáticamente. Sin embargo, dentro de los guiones (o
+scripts) en los que se haga referencia al objeto renombrado, la modificación deberá realizarse manualmente.
+
+====
+
+[NOTE]
+====
+
+Ver también xref:/Rótulos_y_Subtítulos.adoc[Etiquetas y Rótulos].
+
+====

@@ -1,0 +1,50 @@
+= Příkaz JednotkovyVektor
+:page-en: commands/UnitVector_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+JednotkovyVektor( <Vektor> )::
+  Vektor délky 1, který má stejný směr i orientaci jako zadaný vektor. Původní vektor musí být předem definovaný.
+
+[EXAMPLE]
+====
+
+Nechť stem:[v = \begin\{pmatrix}3\\4\end\{pmatrix}]. `++JednotkovyVektor[v]++` dává
+_stem:[\begin\{pmatrix}0.6\\0.8\end\{pmatrix}]_.
+
+====
+
+JednotkovyVektor( < Přímka> )::
+  Jednotkový směrový vektor přímky.
+JednotkovyVektor( <Úsečka> )::
+  Jednotkový směrový vektor přímky, na niž úsečka leží. Vektor je zobrazen jako vázaný v jednom z koncových bodů.
+
+[EXAMPLE]
+====
+
+`++JednotkovyVektor[3x + 4y = 5]++` dává výsledek _stem:[\begin\{pmatrix}0.8\\-0.6\end\{pmatrix}]_.
+
+====
+
+== CAS pohled
+
+V prostředí CAS je možný jen zápis:
+
+JednotkovyVektor( <Vektor> )::
+  Vektor délky 1, který má stejný směr i orientaci jako zadaný vektor. Původní vektor musí být předem definovaný.
+
+[EXAMPLE]
+====
+
+`++JednotkovyVektor[{2, 4, 4}]++` dává _\{stem:[\frac\{1}\{3}], stem:[\frac\{2}\{3}], stem:[\frac\{2}\{3}]}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++JednotkovyVektor[{a, b}]++` dává _\{stem:[\frac\{a}\{\sqrt\{a^\{2} + b^\{2}}}], stem:[\frac\{b}\{\sqrt\{a^\{2} +
+b^\{2}}}]}_.
+
+====
+
+/s_index_php?title=En:Manual:UnitVector_Command_action=edit_redlink=1.adoc[en:Manual:UnitVector Command]

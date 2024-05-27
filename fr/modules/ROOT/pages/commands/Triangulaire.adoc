@@ -1,0 +1,33 @@
+= Commande Triangulaire
+:page-en: commands/Triangular_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Triangulaire( <Borne inférieure min>, <Borne supérieure max>, <Mode mod>, < Valeur Variable v> )::
+  Calcule la valeur de la fonction cumulée de la loi triangulaire en _v_, i.e. la probabilité _P(X≤v)_ où _X_ est une
+  variable aléatoire suivant une loi triangulaire de paramètres _min, max, mod_.
+
+[NOTE]
+====
+
+*Note :* Retourne la probabilité pour une valeur donnée d'abscisse (ou l'aire sous la courbe de la loi triangulaire, à
+gauche de l'abscisse donnée).
+
+====
+
+Triangulaire( <Borne inférieure min>, <Borne supérieure max>, <Mode mod>, , <Valeur Variable>, <Booléen Cumul> )::
+  Si _Cumul_ est _true_, calcule la valeur de la fonction densité cumulée de probabilité de la loi triangulaire, sinon
+  calcule la valeur de la fonction densité de probabilité de la loi triangulaire.
+
+Triangulaire( <Borne inférieure min>, <Borne supérieure max>, <Mode mod>, x, <Booléen Cumul> )::
+  Si _Cumul_ est _true_, crée la fonction densité cumulée de probabilité de la
+  http://en.wikipedia.org/wiki/fr:Loi_triangulaire[loi triangulaire] de paramètres _min, max, mod_, sinon en crée la
+  fonction densité de probabilité.
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Seule la syntaxe suivante est utilisable dans xref:/Calcul_formel.adoc[Calcul formel] :
+
+Triangulaire( <Borne inférieure min>, <Borne supérieure max>, <Mode mod>, < Valeur Variable v> )

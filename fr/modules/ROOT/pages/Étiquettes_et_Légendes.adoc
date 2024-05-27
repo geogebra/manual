@@ -1,0 +1,157 @@
+= Étiquettes et Légendes
+:page-en: Labels_and_Captions
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Dans GeoGebra, chaque objet possède une unique *étiquette*. Pour l'étiquetage vous pouvez choisir un ou plusieurs
+caractères, avec la possibilité de mettre des indices. Pour plus de détails, voir
+xref:/Appellation_des_objets.adoc[Appellation des objets].
+
+== Afficher/Cacher les étiquettes
+
+Vous pouvez afficher ou cacher les étiquettes des objets dans la vue graphique de différentes manières :
+
+* Sélectionnez /Fichier:Tool_Show_Hide_Label_gif.adoc[image:Tool_Show_Hide_Label.gif[Tool Show Hide
+Label.gif,width=32,height=32]] l'xref:/tools/Afficher_cacher_l'étiquette.adoc[outil Afficher/cacher l'étiquette] et
+clique sur l'objet dont vous voulez afficher ou cacher l'étiquette.
+* Ouvrez le xref:/Menu_contextuel.adoc[menu contextuel] de l'objet voulu et sélectionnez
+/Fichier:Tool_Show_Hide_Label_gif.adoc[image:Tool_Show_Hide_Label.gif[Tool Show Hide Label.gif,width=32,height=32]]
+Afficher l'étiquette.
+* Ouvrez le xref:/Dialogue_Propriétés.adoc[Dialogue Propriétés] pour l'objet voulu et cochez ou non la case 'Afficher
+l'étiquette :' dans l'onglet 'Basique'.
+
+== Nom et Valeur
+
+Dans GeoGebra, chaque objet possède un unique nom qui peut être utilisé pour étiqueter l'objet dans la vue graphique. De
+plus, un objet peut aussi être étiqueté en utilisant sa valeur, son nom et sa valeur, ou aussi à l'aide d'une légende.
+Vous pouvez définir la configuration dans l'onglet 'Basique' du dialogue 'Propriétés' en choisissant l'option désirée
+dans la liste déroulante à droite de la case 'Afficher l'étiquette :' .
+
+[NOTE]
+====
+
+*Note :* La valeur d'un point est son couple de coordonnées, la valeur d'une fonction est l'équation de sa courbe
+représentative.
+
+====
+
+== Légende
+
+Cependant, il vous arrive parfois de vouloir donner la même étiquette à plusieurs objets, par exemple, appeler ‘a’ les
+quatre côtés d’un carré. Dans ce cas, GeoGebra vous offre la possibilité des légendes pour tous les objets en plus des
+trois options d’étiquetage décrites ci-dessus. Vous pouvez définir la légende d’un objet dans l’onglet ‘Basique’ du
+Dialogue Propriétés en entrant la légende voulue dans le champ ‘Légende’. Ensuite, vous pouvez choisir l’option
+d’étiquetage ‘Légende’ dans la liste déroulante à droite de la case 'Afficher l'étiquette :' .
+
+[NOTE]
+====
+
+*Note :* Le champ Légende admet les *substituts* %n (nom) et %v (valeur), ainsi vous pouvez valider une telle légende
+pour un point : « Le point %n a pour coordonnées %v », son nom et ses coordonnées seront affichées dans la légende, cela
+permet d’ajouter du texte par rapport à l’option Nom&Valeur.
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :* Soit A le point de coordonnées (1,2) . En définissant sa légende par "Le point %n a pour coordonnées %v"
+vous obtiendrez comme légende affichée "Le point A a pour coordonnées (1,2)"
+
+====
+
+Vous pouvez aussi utiliser le format xref:/LaTeX.adoc[LaTeX] dans vos légendes, en encadrant votre commande LaTeX entre
+deux symboles "$" (dollar), (par ex. *$ x^\{2} $* ) vous pouvez aussi choisir vos caractères dans une liste d'opérateurs
+et caractères grecs les plus courants, il vous suffit de cliquer sur la petite boîte affichée à la fin du champ texte.
+
+[EXAMPLE]
+====
+
+*Exemple :* Si vous désirez obtenir une écriture mathématique correcte, utilisez LaTeX dans vos légendes, par ex. pour
+afficher une fraction, validez la légende : $\frac\{a}\{b}$ .
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :* L'utilisation de LaTeX vous permet aussi de
+choisir la taille ou la couleur pour vos légendes,
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+pour afficher "plus gros" validez la légende `++$ \scalebox{5} {%n} $++` ;
+
+pour afficher une légende en rouge, quelle que soit la couleur de l'objet, validez la légende
+`++ $\textcolor{red}{%n}$ ++`.
+
+====
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :* Lorsque vous validez `++ 1 + 3ί ++` vous obtenez
+un nombre complexe stem:[ z_\{1} ] dans Algèbre, mais aussi sa représentation graphique par un point étiqueté lui aussi
+stem:[ z_\{1} ], si vous avez envie que ce point soit étiqueté _Point ( Affixe)_ , demandez en l'affichage de la
+légende, où vous avez validé `++$M(%n)$++`, _M_ étant le nom que vous avez choisi pour ce point, il sera alors étiqueté
+stem:[ M(z_\{1})].
+
+====
+
+Les *substituts* utilisables dans les légendes :
+
+[cols=",,",options="header",]
+|===
+|substitut |affichage |(alternative)
+|%c |*(à partir de la version 4.2.27.0)* La valeur de la cellule adjacente à droite dans le tableur, qui devrait être un
+texte indépendant Non dynamique : à savoir la légende ne sera pas mise à jour, sauf si vous appuyez sur [.kcode]#F9# ou
+[.kcode]#Ctrl# + [.kcode]#R# |
+
+|%n |Nom | 
+
+|%v |Valeur | 
+
+|%f |Définition | 
+
+|%d |Description | 
+
+|%x |abscisse pour un point |coefficient _a_ pour une droite d'équation a x + b y + c = 0
+
+|%y |ordonnée pour un point |coefficient _b_ pour une droite d'équation a x + b y + c = 0
+
+|%z |cote (GGb5) |coefficient _c_ pour une droite d'équation a x + b y + c = 0
+|===
+
+[NOTE]
+====
+
+*/Fichier:GGb5_png.adoc[image:GGb5.png[GGb5.png,width=47,height=42]] en version 5 :*
+
+Possibilité de définir le style de l'objet dans un fichier de style par `++%style=NomStyle++`
+
+Pour plus d'informations, voir xref:/Appliquer_Modele.adoc[Appliquer Modele].
+
+====
+
+== Légendes et Info-Bulles en utilisant le Tableur
+
+Soit un extrait de tableur
+
+[cols=",,,,",options="header",]
+|===
+| |A |B |C |D
+|1 | | | |
+|2 | | |=SecteurCirculaire[O,B1,B2] |*LV2 Esp*
+|3 | | | |
+|===
+
+Alors dans l'onglet 'Basique' des propriétés du Secteur *C2*, je peux renseigner le champ 'Légende' par `++%c++`, et si
+je demande d'afficher la légende, sera affiché le texte permanent *LV2 Esp*;
+
+Ou, si je sélectionne la colonne *C*, et que dans l'onglet 'Avancé' de ses propriétés, je choisisse *Cellule suivante*
+dans la liste déroulante *Infobulle:* , lorsque mon pointeur survolera le secteur *C2*, apparaîtra le texte temporaire
+stem:[ \fbox\{LV2 Esp} ].

@@ -1,0 +1,24 @@
+= Příkaz Erlang
+:page-en: commands/Erlang_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Erlang( <Tvar k>, <Intenzita λ>, x )::
+  Vytvoří funkci hustoty pravděpdobnosti Erlangova rozdělení http://en.wikipedia.org/wiki/Erlang_distribution[(Erlang
+  distribution)] s parametry _k, λ_. Náhodná veličina s Erlangovým rozdělením vznikne součtem _k_ nezávislých náh.
+  veličin s exponenciálním rozdělení s intenzitou _λ_.
+Erlang( <Tvar k>, <Intenzita λ>, x, <Kumulativní (true/false)> )::
+  Pokud je parametr pro kumulativní hodnotu _true_ je vytvořena distribuční funkce. Pokud je parametr vynechán, nebo je
+  nastaven jako _false_, je sestrojena hustota pravděpodobnosti (viz. předchozí odstavec).
+Erlang( <Tvar k>, <Intenzita λ>, <Hodnota proměnné v> )::
+  Výpočet hodnoty distribuční funkce Erlangova rozdělení s parametry _k, λ_ pro hodnotu _v_, tj. pravděpodobnost
+  _P(X≤v)_, kde _X_ je náhodná veličina s Erlangovým rozdělením daným parametry _k, λ_, což je obsah plochy pod grafem
+  hustoty pravděpodobnosti, nalevo od hodnoty _v_.
+
+== CAS Syntaxe
+
+V prostředí xref:/CAS_pohled.adoc[CAS pohled] je možný jen příkaz tvaru:
+
+Erlang( <Tvar k>, <Intenzita λ>, <Hodnota proměnné v>)::
+  Výpočet hodnoty distribuční funkce Erlangova rozdělení s parametry _k, λ_ pro hodnotu _v_, tj. pravděpodobnost
+  _P(X≤v)_, kde _X_ je náhodná veličina s Erlangovým rozdělením daným parametry _k, λ_, což je obsah plochy pod grafem
+  hustoty pravděpodobnosti, nalevo od hodnoty _v_.

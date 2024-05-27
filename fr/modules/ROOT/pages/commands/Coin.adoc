@@ -1,0 +1,141 @@
+= Commande Coin
+:page-en: commands/Corner_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Coin( <Numéro> )::
+  Pour _Numéro=1, 2, 3, 4_ crée un point au coin de
+  /Fichier:Menu_view_graphics_svg.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+  xref:/Graphique.adoc[Graphique],
+
+pour _Numéro=5_ crée le point _(l,h)_, où _l_ et _h_ désignent la largeur et la hauteur en pixels de la fenêtre
+Graphique.
+
+pour _Numéro=6_ crée le point _(l,h)_, où _l_ et _h_ désignent la largeur et la hauteur en pixels de la fenêtre
+GeoGebra.
+
+Ceci, toujours pour la /Fichier:Menu_view_graphics1_svg.adoc[image:16px-Menu_view_graphics1.svg.png[Menu view
+graphics1.svg,width=16,height=16]] première fenêtre Graphique, même si c'est la seconde qui est active.
+
+[NOTE]
+====
+
+*Note :* Coin( <Numéro> ) ne fonctionne pas à l'intérieur d'autres commandes. Pour contourner ce fait, créer un point,
+par ex. `++C_1 = Coin(1)++` et l'utiliser.
+
+====
+
+Coin( <Image>, <Numéro> )::
+  Crée un point au coin de l'image (Numéro = 1, 2, 3, 4).
+
+Coin( <Texte>, <Numéro> )::
+  Crée un point au coin du texte (Numéro = 1, 2, 3, 4).
+
+[NOTE]
+====
+
+*Note :* Ceci ne fonctionne pas à l'intérieur d'une commande Séquence ou Compactée. Et aussi l'option "Position absolue
+sur l'écran" doit être désactivée.
+
+====
+
+Coin( <Vue graphique n>, <Numéro> )::
+  Crée un point de coordonnées celles du coin _Numéro_ de
+  /Fichier:Menu_view_graphics_svg.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+  Graphique n (/Fichier:Menu_view_graphics1_svg.adoc[image:16px-Menu_view_graphics1.svg.png[Menu view
+  graphics1.svg,width=16,height=16]]n = 1 ou
+  /Fichier:Menu_view_graphics2_svg.adoc[image:16px-Menu_view_graphics2.svg.png[Menu view
+  graphics2.svg,width=16,height=16]] 2) (ce point est créé dans la fenêtre Graphique active).
+
+Les valeurs possibles pour _Numéro_ comme ci-dessus.
+
+[NOTE]
+====
+
+*Note :* Coin(<Vue graphique n>, <Numéro> ) ne fonctionne pas à l'intérieur d'autres commandes. Pour contourner ce fait,
+créer un point, par ex. `++C_1 = Coin(1,1)++` et l'utiliser.
+
+====
+
+[NOTE]
+====
+
+*Note :* La numérotation des coins est faite dans le sens contraire de rotation des aiguilles d'une montre en commençant
+au coin inférieur gauche.
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :*
+
+Placer des objets au bon endroit sur l'écran :
+
+Parfois vous pouvez avoir des ennuis pour retrouver des objets quand vous ouvrez un fichier GeoGebra sur un autre
+ordinateur. La raison est souvent que la résolution est différente de celle de votre ordinateur personnel. Mais il y a
+différentes possibilités pour "retrouver" les objets disparus :
+
+. Placez les objets près du coin supérieur gauche. Comme ce coin est enregistré dans le fichier pour repérer la partie
+visible de Graphique, de tels objets devraient toujours être visibles.
+. Utilisez la commande *Coin* pour déterminer la position d'un objet relativement aux coins de Graphique.
+
+(Pour un peu plus d'informations, vous pouvez regarder ce
+http://www.geogebra.org/en/upload/files/english/Michael_Horvath/geogebra_placing_objects_exactly_on_the_screen.htm[tutoriel].(_en
+anglais_))
+
+====
+
+Coin( <Polygone> )::
+  retourne les sommets du polygone ;
+Coin( <Conique> )::
+  retourne les sommets de la conique (1 pour parabole, 2 pour hyperbole, 4 pour ellipse - mais aussi pour cercle) ;
+
+_____________________________________________________________
+
+/Fichier:Menu_view_graphics3D_png.adoc[image:Menu_view_graphics3D.png[Menu view graphics3D.png,width=24,height=24]]
+*Graphique 3D* :
+
+Coin(-1, <Numéro>)::
+  Crée un point au coin _Numéro_ de image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra
+  3Dgraphics.svg,width=16,height=16]Graphique 3D qui n'y est pas visible.
+
+Les valeurs possibles pour les coins : _Numéro_ de 1 à 8.
+
+pour _Numéro=9_ crée le point _(l,h,0)_, où _l_ et _h_ désignent la largeur et la hauteur en pixels de la fenêtre
+Graphique 3D.
+
+pour _Numéro=10_ crée le point _(l,h,0)_, où _l_ et _h_ désignent la largeur et la hauteur en pixels de la fenêtre
+GeoGebra ("équivalent" à Coin(6))
+
+pour _Numéro=11_ crée un point A qui contient la direction de vue (utiliser Vecteur() pour transformer en vecteur si
+besoin), ou la position de l’œil (pour la projection à points de fuite notamment).
+
+[NOTE]
+====
+
+*Note :* Coin[-1, <Numéro> ] ne fonctionne pas à l'intérieur d'autres commandes. Pour contourner ce fait, créer un
+point, par ex. `++C_1 = Coin(-1,1)++` et l'utiliser.
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :*
+
+L'axe "vertical" de l'espace de travail utilisé pour la rotation de la vue 3D correspond à
+
+`++Droite(MilieuCentre(Coin(-1,1), Coin(-1,3)), MilieuCentre(Coin(-1,5), Coin(-1,7))) ++`
+
+*sauf* si vous avez sélectionné l'option _axe y'Oy vertical_ dans les Préférences - Graphique 3D, dans ce cas, à
+`++Droite(MilieuCentre(Coin(-1,1), Coin(-1,6)), MilieuCentre(Coin(-1,4), Coin(-1,7))) ++`.
+
+====
+
+[NOTE]
+====
+
+*Note :* sur les "notes" : l'exemple-ci est-il un contre-exemple au fait qu'il est annoncé que les commandes Coin() ne
+fonctionneraient pas à l'intérieur d'autres commandes ?
+
+====

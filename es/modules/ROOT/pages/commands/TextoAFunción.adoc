@@ -1,0 +1,22 @@
+= Comando TextoAFunción
+:page-en: commands/ParseToFunction_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+TextoAFunción( <Función> , <Texto> )::
+  Analiza la cadena de texto y almacena el resultado en la xref:/Funciones.adoc[función] indicada, digamos _f_, que debe
+  estar definida y ser xref:/Objetos_libres_dependientes_y_auxiliares.adoc[libre] antes del empleo del comando.
+
+[EXAMPLE]
+====
+
+Sean `++ f(x) = 3x² + 2++` y `++ texto1 = "f(x) = 3x + 1"++`. Entonces `++TextoAFunción(f, texto1)++` redefine la
+función f como _f(x) = 3x + 1_.
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/TextoANúmero.adoc[TextoANúmero].
+
+====

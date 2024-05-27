@@ -1,0 +1,25 @@
+= Commande DémarrerAnimation
+:page-en: commands/StartAnimation_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+DémarrerAnimation()::
+  Reprend toutes les animations qui sont en "Pause".
+
+DémarrerAnimation( <Booléen b> )::
+  Si __b__=false, met en "Pause" toutes les animations, sinon les reprend.
+
+DémarrerAnimation( <Curseur ou Point>, <Curseur ou Point>, ... )::
+  Lance l'animation des points ou des curseurs cités, les points doivent appartenir à un
+  xref:/Objets_géométriques.adoc[chemin].
+
+DémarrerAnimation( <Curseur ou Point>, <Curseur ou Point>, ..., <Booléen b> )::
+  Si __b__=true, lance l'animation des points ou des curseurs cités, les points doivent appartenir à un
+  xref:/Objets_géométriques.adoc[chemin].
+  Si __b__=false, l'arrête définitivement.
+
+[NOTE]
+====
+
+*Note :* Voir aussi l'article xref:/Animation.adoc[Animation].
+
+====

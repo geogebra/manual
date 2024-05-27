@@ -1,0 +1,110 @@
+= Comando Límite
+:page-en: commands/Limit_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+Limite( <Función>, <Valor numérico> )::
+  Calcula el http://en.wikipedia.org/wiki/es:L%C3%ADmite_de_una_funci%C3%B3n[limite]
+  (http://en.wikipedia.org/wiki/Limit_of_a_function[_límit_] en inglés) de la xref:/Funciones.adoc[función] para el
+  valor fijado de su variable principal.
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Puede incluso ser infinito^[.small]#con un signo u
+otro#^ el valor ^[.small]#al que _tiende_#^ y/o el resultado.
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Límite[cos(x)/x,0]++`* resulta _indefinido_ ya que no está _definido_ tal límite para __x tendiendo a
+0__**`++Límite[(x^2+x)/ x^2, +∞]++`** da por resultado _1_
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+En esta xref:/Vista_CAS.adoc[vista] se admiten literales en operaciones simbólicas y, a la descripta, se suma la
+siguiente sintaxis exclusiva;
+
+Límite[ <Expresión>, <Variable>, <Valor> ]::
+  Calcula el límite de la expresión multivariable dada para el valor fijado de la variable indicada. Así, *Límite*[f, v,
+  t] establece el límite de _f_ para el valor _t_ de la variable _v_.
+Límite[ <Expresión>, <Valor> ]::
+  Da por resultado el límite de la expresión para el valor indicado, de su variable principal.
+
+[EXAMPLE]
+====
+
+*`++Límite[ñ sen(w)/w, ñ, 0]++`* da 0 y *`++Límite[ñ sen(w)/w, w, 0]++`* da _ñ_
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: La expresión puede ser una función multvariable y/o
+incluir literales.
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Límite[((ñ ü (1-cos(x)))/x^2)+ñ, 0 ]++`* da stem:[\frac\{(ñ ü + 2 ñ) }\{2}] el límite de:stem:[\frac\{(ñ
+ü (1 - cos(x)))}\{x² }+ ñ ] mientras...*`++Límite[((ñ ü (1-cos(x))) / x^2)+ñ, ñ, 0 ]++`* da
+__0__**`++Límite[a sin(x)/x, 0]++`** da __a__**`++Límite[ñ sen(t)/t, 0]++`** da __ñ__**`++Límite[ cos(x)/x,  0]++`** da
+por resultado el signo *_?_* con el que en esta xref:/Vista_CAS.adoc[vista] se indica que no está definido el límite en
+cuestión.
+
+====
+
+[NOTE]
+====
+
+*`++Límite[f(w), m]++`* establece el límite de _f_ para _w tendiendo a m_ como ilustran los siguientes ejemplos.
+
+====
+
+'''''
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: No todos los límites pueden calcularse y en tales
+casos aparecerá *indefinido* o, en la xref:/Vista_CAS.adoc[Vista CAS], el signo *_?_* por respuesta, del mismo modo que
+en las ocasiones en que el resultado _correcto_ resulte precisamente ese.Para obtener los límites de una función
+definida por tramos, están disponibles los comandos xref:/commands/LímiteDerecha.adoc[LímiteDerecha] y/o
+xref:/commands/LímiteIzquierda.adoc[LímiteIzquierda].
+
+====
+
+'''''
+
+[EXAMPLE]
+====
+
+Dada la xref:/Funciones.adoc[función] *_Si[x < 1, x², -2x]_*, lo adecuado es calcular sendos límites, a izquierda y
+derecha con...
+
+* *`++LímiteIzquierda[Si[x < 1, x², -2x], 1]++`* da por resultado _1_ y
+* *`++LímiteDerecha[Si[x < 1, x², -2x], 1]++`* da _-2_
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/Asíntota.adoc[Asíntota], xref:/commands/LímiteDerecha.adoc[LímiteDerecha] y
+xref:/commands/LímiteIzquierda.adoc[LímiteIzquierda].
+
+====

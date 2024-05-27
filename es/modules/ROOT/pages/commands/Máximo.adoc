@@ -1,0 +1,91 @@
+= Comando Máximo
+:page-en: commands/Max_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+Máximo[ <Lista> ]::
+  Da por resultado el número mayor de los que se encuentran en la lista.
+Máximo[ <Intervalo> ]::
+  Da por resultado el límite superior del intervalo.
+Máximo[ <Número>, <Número> ]::
+  Da por resultado el máximo valor entre los dos dados.
+Máximo[ <Función>, <Extremo inferior del intervalo>, <Extremos superior del intervalo> ]::
+  Calcula el punto correspondiente al máximo de la función en el intervalo dado. La función debiera ser continua y tener
+  un único máximo local en el intervalo.
+
+[EXAMPLE]
+====
+
+`++Máximo[12, 15]++` da por resultado _15_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Máximo[2 < x < 3]++` da por resultado _3_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Máximo[{-2, 12, -23, 17, 15}]++` da por resultado _17_.
+
+====
+
+[NOTE]
+====
+
+Para los intervalos abiertos y cerrados el resultado es el mismo.
+
+====
+
+[NOTE]
+====
+
+Si la entrada consta de objetos que no son números, este comando considera los números asociados con esos objetos. Por
+ejemplo, si la lista contiene segmentos, el comando _Máximo[ <Lista> ]_ devolverá el segmento de mayor longitud.
+
+====
+
+[NOTE]
+====
+
+Para funciones polinómicas, utiliza el xref:/commands/Extremo.adoc[Comando Extremo].
+
+====
+
+Máximo[<Lista de datos>, <Lista de Frecuencias> ]
+
+Da por resultado el valor máximo de la lista de datos cuya frecuencia es no nula.
+
+[EXAMPLE]
+====
+
+`++Máximo[{1, 2, 3, 4, 5}, {5, 3, 4, 2, 0}]++` da por resultado 4, el valor más alto entre aquellos cuya frecuencia es
+mayor a 0.
+
+====
+
+[EXAMPLE]
+====
+
+`++Máximo[exp(x)x^2,-3,-1]++` crea el punto (-2, 0.54134).
+
+====
+
+[NOTE]
+====
+
+Ver también xref:/commands/Extremo.adoc[Comando Extremo], xref:/commands/Mínimo.adoc[Comando Mínimo] y
+xref:/tools/Inspección_de_funciones.adoc[Herramienta de Inspección de funciones].
+
+====

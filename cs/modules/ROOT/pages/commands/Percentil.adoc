@@ -1,0 +1,19 @@
+= Příkaz Percentil
+:page-en: commands/Percentile_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Percentil( <Seznam čísel>, <Procento> )::
+  Nechť číslo P je zadané Procento.
+  Vrátí hodnotu, která odděluje prvních P*100 procent čísel zadaného seznamu, je-li tento seznam seřazen vzestupně. P
+  musí splňovat podmínku 0 <P ≤ 1.
+
+[NOTE]
+====
+
+Příkazy Kvartil a Percentil používají různá pravidla výpočtu a nedávají vždy shodné výsledky. Například,
+
+Q1[\{1,2,3,4}] = 2
+
+Percentil[\{1,2,3,4}, 0.25] = 1
+
+====

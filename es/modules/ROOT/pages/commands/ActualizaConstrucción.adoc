@@ -1,0 +1,29 @@
+= Comando ActualizaConstrucción
+:page-en: commands/UpdateConstruction_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+ActualizaConstrucción()::
+  Recalcula todos los objetos (los números aleatorios se vuelven a generar), tal como sucede al presionar [.kcode]#F9# o
+  [.kcode]#Ctrl# + [.kcode]#R#
+
+[NOTE]
+====
+
+Si quieres refrescar la vista (p. ej. para remover los xref:/Rastreo.adoc[rastros] de la
+xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+xref:/Vista_Gráfica.adoc[Vista Gráfica]) también se puede usar `++ZoomAcerca(1)++`, que es equivalente a presionar
+[.kcode]#Ctrl# + [.kcode]#F#. En caso de estar utilizando dos vistas gráficas puede ser necesario indicar cuál se desea
+afectar, con xref:/commands/VistaActiva.adoc[VistaActiva(1)] o xref:/commands/VistaActiva.adoc[VistaActiva(2)].
+
+====
+
+ActualizaConstrucción(<Número de veces>)::
+  Ejecuta el comando `++ActualizaConstrucción()++` tantas veces como se indica.
+
+[EXAMPLE]
+====
+
+`++ActualizaConstrucción(2)++` actualiza la construcción dos veces (p. ej. para registrar los resultados de diez
+lanzamientos de un dado en la hoja de cálculo).
+
+====

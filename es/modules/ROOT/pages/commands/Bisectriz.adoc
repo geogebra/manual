@@ -1,0 +1,37 @@
+= Comando Bisectriz
+:page-en: commands/AngleBisector_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Bisectriz( <Recta>, <Recta> )::
+  Crea ambas bisectrices de los ángulos delimitados por las rectas (segmentos o semirrectas).
+Bisectriz( <Punto>, <Punto>, <Punto> )::
+  Crea la bisectriz del ángulo determinado por los tres puntos.
+
+[EXAMPLE]
+====
+
+`++Bisectriz((1, 1), (4, 4), (7, 1))++` genera _a: x = 4_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Bisectriz(x + y = 1, x - y = 2)++` genera _a: x = 1.5_ y _b: y = -0.5_.
+
+====
+
+[NOTE]
+====
+
+El segundo punto es el vértice del ángulo.
+
+====
+
+[NOTE]
+====
+
+Ver también la herramienta image:20px-Mode_angularbisector.svg.png[Mode angularbisector.svg,width=20,height=20]
+xref:/tools/Bisectriz.adoc[Bisectriz].
+
+====

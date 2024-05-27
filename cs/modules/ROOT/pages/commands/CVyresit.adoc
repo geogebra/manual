@@ -1,0 +1,59 @@
+= Příkaz CVyresit
+:page-en: commands/CSolve_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Tento příkaz je dostupný pouze v xref:/CAS_pohled.adoc[CAS pohledu]..
+
+CVyresit( <Rovnice> )
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Soubor:UnderConstruction_png.adoc[image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]]
+
+|Some content was not yet translated. See the
+/s_index_php?title=En:Manual:CSolve_Command_action=edit_redlink=1.adoc[English original]. Please
+//wiki.geogebra.org/s/cs/index.php?title=Manu%C3%A1l:P%C5%99%C3%ADkaz_CVyresit&action=edit[edit the manual page] if you
+have the rights for translation.
+|===
+
+Vyřeší zadanou rovnici pro hlavní proměnnou a dostaneme seznam řešení, což umožňuje komplexní řešení.
+
+CVyresit( <Rovnice>, <Proměnná> )
+
+[EXAMPLE]
+====
+
+`++CVyresit[x^2 = -1]++` dostaneme _\{x = ί, x = -ί}_, komplexní řešení _x^2^ = -1_.
+
+====
+
+Vyřeší zadanou rovnici pro danou neznámou a dostaneme seznam řešení, což umožňuje komplexní řešení.
+
+CVyresit( <Seznam rovnic>, <Seznam proměnných> )
+
+Vyřeší soustavu rovnic pro zadané neznámé a dostaneme seznam řešení, což umožňuje komplexní řešení.
+
+[EXAMPLE]
+====
+
+`++CVyresit[{y^2 = x - 1, x = 2 * y - 1}, {x, y}]++` dostaneme _\{\{x = 1 + 2 ί, y = 1 + ί}, \{x = 1 - 2 ί, y = 1 -
+ί}}_, komplexní řešení _y^2^ = x_ a _x = 2 * y - 1_.
+
+====
+
+[EXAMPLE]
+====
+
+`++CVyresit[a^2 = -1, a]++` dostaneme _\{a = ί, a = -ί}_, komplexní řešení _a^2^ = -1_.
+
+====
+
+[NOTE]
+====
+
+* Imaginární jednotku ί získáme stisknutím [.kcode]#ALT # + [.kcode]# i#.
+* Viz také příkazy xref:/s_index_php?title=CSolutions_Command_action=edit_redlink=1.adoc[CSolutions Command] a
+xref:/s_index_php?title=Solve_Command_action=edit_redlink=1.adoc[Solve Command].
+
+====

@@ -1,0 +1,26 @@
+= Comando ResuelveCúbica
+:page-en: commands/SolveCubic_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[De] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+ResuelveCúbica[ <Polinomio Cúbico> ]::
+  Resuelve dado y da por resultado la lista de todas las raíces, reales o
+
+[EXAMPLE]
+====
+
+`++ResuelveCúbica[x³ - 1]++` da por resultado:\{ 1, stem:[ -\frac\{1}\{2} + i \frac\{\sqrt\{3}}\{2} ] , stem:[
+-\frac\{1}\{2} - i \frac\{\sqrt\{3}}\{2} ] } .
+
+====
+
+'''''
+
+[NOTE]
+====
+
+Suele ser necesario simplificar la respuesta manualmente, como en el caso de `++ResuelveCúbica[x³ + x² + x + 1]++`.que
+solo tras la simplificación da una respuesta _elegante_ como _\{ -1, i , -i }_ .
+
+====

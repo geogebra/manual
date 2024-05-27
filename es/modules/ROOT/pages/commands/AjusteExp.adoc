@@ -1,0 +1,30 @@
+= Comando AjusteExp
+:page-en: commands/FitExp_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+*AjusteExp*( <Lista de Puntos> )::
+  Establece, para los puntos listados, la curva de regresión exponencial de forma _aℯ^bx^_.
+
+[EXAMPLE]
+====
+
+*`++AjusteExp({(0, 1), (2, 4)})++`* da _ℯ^0.69x^_
+
+====
+
+[NOTE]
+====
+
+* Si deseas el resultado en la forma stem:[ a b ^ x ] utiliza entonces el xref:/commands/AjusteBaseExp.adoc[Comando
+AjusteBaseExp].
+* El número de Euler ℯ puede obtenerse presionando [.kcode]#ALT # + [.kcode]# e#.
+* Ver también xref:/commands/Ajusta.adoc[Ajusta], xref:/commands/AjusteBaseExp.adoc[AjusteBaseExp],
+xref:/commands/AjusteImplícita.adoc[AjusteImplícita], xref:/commands/AjusteLineal.adoc[AjusteLineal],
+xref:/commands/AjusteLog.adoc[AjusteLog], xref:/commands/AjusteLogístico.adoc[AjusteLogístico],
+xref:/commands/AjustePolinómico.adoc[AjustePolinómico],
+xref:/commands/AjustePotencia.adoc[AjustePotencia],xref:/commands/AjusteRectaX.adoc[AjusteRectaX] y
+xref:/commands/AjusteSeno.adoc[AjusteSeno].
+* Si trabajas con números grandes o pequeños, deberías considerar normalizarlos para obtener un resultado más preciso.
+Ver xref:/commands/Normaliza.adoc[Normaliza].
+
+====

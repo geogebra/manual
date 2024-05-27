@@ -1,0 +1,33 @@
+= Příkaz KombinacniCislo
+:page-en: commands/BinomialCoefficient_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+KombinacniCislo( <Číslo stem:[n]>, <Číslo stem:[r]> )::
+  Vypočte kombinační číslo stem:[ n \choose r ].
+
+[EXAMPLE]
+====
+
+`++KombinacniCislo[5, 3]++` dává výsledek _10_.
+
+====
+
+== CAS pohled
+
+KombinacniCislo( <Číslo stem:[n]>, <Číslo stem:[r]> )::
+  Vypočte kombinační číslo stem:[ n \choose r ]. Pokud jsou jako argumenty příkazu místo čísel vloženy nedefinované
+  proměnné, bude výstupem vzorec pro výpočet příslušného kombinačního čísla.
+
+[EXAMPLE]
+====
+
+`++KombinacniCislo[n, 3]++` dává výsledek stem:[\displaystyle \frac\{n^\{3} - 3 n^\{2} + 2 n}\{6}].
+
+====
+
+[NOTE]
+====
+
+/s_index_php?title=En:BinomialCoefficient_Command_action=edit_redlink=1.adoc[BinomialCoefficient command]
+
+====

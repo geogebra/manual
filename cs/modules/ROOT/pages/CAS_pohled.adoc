@@ -1,0 +1,79 @@
+= CAS pohled
+:page-en: CAS_View
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+CAS pohled umožňuje využívat CAS (Computer Algebra System) GeoGebry pro symbolické výpočty. Tento pohled se skládá z
+buněk, která každá má vstupní pole v horní části a oblast pro výstupy v dolní části. Vstupní pole lze užívat stejným
+způsobem jako standardní xref:/Vstupní_pole.adoc[Vstupní pole] s těmito rozdíly:
+
+* lze užívat proměnné, které nemají přiřazenou žádnou hodnotu, např. `++(a+b)^2++` bude vyhodnoceno jako
+_a^2+2*a*b+b^2_.
+* symbol `++=++` se užívá pro rovnice a symbol `++:=++` pro přiřazení. To znamená, že `++a=2++` *nepřiřadí* hodnotu 2 do
+proměnné _a_. Více viz xref:/.adoc[část o přiřazování].
+* násobení musí být explicitně vyznačeno. Zatímco ve xref:/Vstupní_pole.adoc[Vstupním poli] lze použít pro násobení buď
+`++a(b+c)++` nebo `++a*(b+c)++`, v CAS je platná pouze druhá možnost.
+
+== Základní vstup
+
+* [.kcode]#Enter#: vyhodnotit vstup
+* [.kcode]#Ctrl# + [.kcode]#Enter#: zkontroluje vstup, ale nevyhodnotí (neupraví) ho, např. _b + b_ zůstane _b + b_.
+Všimněme si, že přiřazení jsou vždy vyhodnocena, např. `++a := 5++`
+* V prázdném řádku lze vložit
+** [.kcode]#Space# pro předchozí výsledek,
+** `++)++` pro předchozí výsledek v závorkách,
+** `++=++` pro předchozí zadání.
+* Potlačit výstup lze napsáním středníku na konec vstupu, např. `++a := 5;++`.
+
+== Zobrazování a skrývání objektů
+
+Aktuální stav viditelnosti (viditelný nebo skrytý) objektu je v CAS pohledu zobrazen (pokud je to možné) ikonou nalevo
+od řádku, ve kterém byl daný objekt definován. Kliknutím přímo na malou bílou/mramorovou ikonku lze změnit viditelnost
+objektu v xref:/Grafický_pohled.adoc[Grafickém pohledu].
+
+== Panel nástrojů
+
+* Kliknutí na tlačítko na panelu nástrojů aplikuje příkaz na řádek, se kterým v daném okamžiku pracujeme.
+* Chceme-li provést operaci pouze na části vstupních dat, tuto část označíme.
+
+== Proměnné
+
+=== Přiřazování & Propojení s GeoGebrou
+
+* Pro přiřazení použijeme zápis `++:=++`, např. `++b := 5++`, `++a(n) := 2n + 3++`.
+* Chceme-li jméno proměnné znovu uvolnit, použijeme `++Smazat[b]++` nebo `++b :=++`.
+* Předefinování proměnné nebo funkce musí být provedeno *ve stejné buňce*, jinak bude proměnná (funkce) považována za
+novou a přejmenována.
+* Pokud je to možné, jsou proměnné a funkce vždy sdíleny mezi CAS pohledem a GeoGebrou. Pokud definujeme `++b:=5++` v
+CAS pohledu, lze _b_ užívat v celé GeoGebře. Máme-li v GeoGebře funkci `++f(x)=x^2++`, můžeme tuto funkci používat i v
+CAS pohledu.
+
+[NOTE]
+====
+
+Výstup bude vždy výraz *za* `++:=++`, např. napíšeme-li `++b:=5++`, výstup bude `++5++`.
+
+====
+
+=== Odkazování na řádky
+
+V CAS pohledu můžeme na řádky odkazovat dvěma způsoby:
+
+* Statický odkaz dosadí rovnici/vzorec/atd. z jiného řádku a *nebude* aktualizován i když se _odkazovaný_ řádek bude
+měnit.
+** `++#++` vloží předchozí výstup
+** `++#5++` vloží výstup řádku 5
+* Dynamický odkaz dosadí rovnici/vzorec/atd. z jiného řádku a *bude* aktualizován když se _odkazovaný_ řádek bude měnit.
+** `++$++` vloží předchozí výstup
+** `++$5++` vloží výstup řádku 5
+
+== Rovnice
+
+* Rovnice zapisujeme pomocí znaménka Rovná se, např. `++3x + 5 = 7++`
+* S rovnicemi můžeme provádět aritmetické operace, např. `++(3x + 5 = 7) - 5++` odečte 5 od obou stran rovnice. To je
+užitečné pro manuální řešení rovnic.
+* Z `++LevaStrana[3x + 5 = 7]++` dostaneme _3 x + 5_ a z `++PravaStrana[3x + 5 = 7]++` dostaneme _7_
+
+== Příkazy a nástroje
+
+Pro úplný seznam příkazů a nástrojů viz xref:/CAS_Specifický_příkaz.adoc[CAS příkazy] a xref:/CAS_nástroje.adoc[CAS
+nástroje].

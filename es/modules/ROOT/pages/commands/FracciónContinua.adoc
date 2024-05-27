@@ -1,0 +1,78 @@
+= Comando FracciónContinua
+:page-en: commands/ContinuedFraction_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+FracciónContinua[ <Número> ]::
+  Crea el texto correspondiente a una http://es.wikipedia.org/wiki/Fracci%C3%B3n_continua[fracción continua] de un
+  número dado.
+  El resultado es un xref:/Textos.adoc[objeto de texto] LaTeX.
+
+[EXAMPLE]
+====
+
+* *`++FracciónContinua[5.45]++`* ingresado tanto en la xref:/Barra_de_Entrada.adoc[Barra de Entrada] como en la
+xref:/Vista_CAS.adoc[Vista CAS], crea y muestra en la xref:/Vista_Gráfica.adoc[Vista Gráfica] el siguiente texto:
++
+_stem:[5 + \frac\{1}\{ 2+ \frac\{1}\{4+ \frac\{1}\{ 1+ \frac\{1}\{ 1 } } } }]_
+
+====
+
+[NOTE]
+====
+
+La fracción es calculada numéricamente con precisión 10^-8^
+
+====
+
+FracciónContinua[ <Número>, <Nivel> ]::
+  Crea el texto correspondiente a una fracción continua de un número dado. El número de cocientes es menor o igual que
+  el _Nivel_ sin exceder nunca el de los necesarios para alcanzar la precisión mencionada.
+FracciónContinua[ <Número>, <Nivel>, <Abreviado o no (true/false)> ]::
+  Opera de modo análogo. El argumento _Nivel_ es opcional y, cuando se asigana valor _booleano_ verdadero a _abreviado_,
+  se emplea la sintaxis más escueta para el resultado: el texto _LaTeX_ contiene una lista de los denominadores enteras
+  de la fracción continua.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* *`++FracciónContinua[5.45, true]++`* da _\{5; 2, 4, 1, 1}_
+* *`++FracciónContinua[5.45, 3, true]++`* da _\{5; 2, 4, ...}_ mientras...
+* *`++FracciónContinua[5.45, 3]++`* da::
++
+_stem:[5 + \frac\{1}\{ 2+ \frac\{1}\{4+ ... } }]_
+
+====
+
+[EXAMPLE]
+====
+
+*`++FracciónContinua[5.45, 3]++`* ingresado tanto en la xref:/Barra_de_Entrada.adoc[Barra de Entrada] como en la
+xref:/Vista_CAS.adoc[Vista CAS], crea y muestra en la xref:/Vista_Gráfica.adoc[Vista Gráfica] el siguiente texto:
+
+_stem:[5 + \frac\{1}\{ 2+ \frac\{1}\{4+ ... } }]_
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] la xref:/Vista_CAS.adoc[Vista C~[.small]#omputación#~A~[.small]#lgebraica#~S~[.small]#imbólica#~]
+
+El comando obra del modo descripto y se admiten literales para componer operaciones simbólicas en esta
+xref:/Vista_CAS.adoc[vista]
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Es preciso _tildar_ el redondelito que encabeza la
+fila correspondiente para que quede expuesto en la xref:/Vista_Gráfica.adoc[Vista Gráfica] activa, el texto o la
+definición de partida como es el caso de `++texte1:=FracciónContinua[5.45]++` .
+
+====

@@ -1,0 +1,21 @@
+= Comando Spline
+:page-en: commands/Spline_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Spline( <Lista de puntos> )::
+  Crea un http://en.wikipedia.org/wiki/es:Spline[spline] que pasa por todos los puntos dados.
+Spline( <Lista de puntos>, <Grado ≥ 3> )::
+  Crea un spline del grado dado, que pasa por todos los puntos dados.
+Spline( <Lista de puntos>, <Grado ≥ 3>, <Función de ponderación> )::
+  Crea un spline del grado dado, que pasa por todos los puntos dados. La función de ponderación indica cuál debería ser
+  la diferencia de _t_ valores para los puntos __P__~i~ y __P__~i+1~ dada su diferencia __P__~i+1~ - __P__~i~ = (_x_,
+  _y_). Para obtener el spline del algoritmo _función_ se debe usar `++abs(x)+0*y++`, para obtener el spline por defecto
+  de GeoGebra se debe usar `++sqrt(x^2+y^2)++`.
+
+[NOTE]
+====
+
+Usar la opción por defecto hace que el resultado se comporte correctamente al ser transformado, garantizando que
+`++Rota(Spline(lista), a)++` da el mismo resultado que `++Spline(Rota(lista, a))++`.
+
+====

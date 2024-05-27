@@ -1,0 +1,31 @@
+= Commande R2
+:page-en: commands/RSquare_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+R2( <Liste Points>,<Fonction> )::
+  Calcule le http://en.wikipedia.org/wiki/fr:Coefficient_de_d%C3%A9termination[coefficient de détermination], stem:[R² =
+  1-\frac\{SCE}\{nVarY} ,] entre les ordonnées des points de la liste et les images, par la fonction, de leurs
+  abscisses.
+
+SCE : xref:/commands/SommeCarrésErreurs.adoc[Somme des carrés des erreurs] (certains parlent de SCR, somme des carrés
+des résidus) ;
+
+nVarY : xref:/commands/nVarY.adoc[nVarY] .
+
+soit R² = stem:[1 - \frac\{SommeCarrésErreurs(<listePoints>,<Fonction>)}\{nVarY(<listePoints>) }].
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++R2({(-3,2),(-2,1),(-1,3),(0,4),(1,2),(2,4),(3,3),(4,5),(6,4)}, 0.5x + 2.5)++` retourne _0.28_ (_Option 2 décimales_).
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel

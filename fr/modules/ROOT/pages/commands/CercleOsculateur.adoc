@@ -1,0 +1,24 @@
+= Commande CercleOsculateur
+:page-en: commands/OsculatingCircle_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+CercleOsculateur( <Point>, <Objet> )::
+  Crée le cercle osculateur de l'objet (fonction, courbe ou conique) en son point donné
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* `++CercleOsculateur((0, 0), x^2)++` crée le cercle d'équation _x² + y² - y = 0_
+* `++CercleOsculateur((1, 0),Courbe(cos(t), sin(2t), t,0,2π))++`crée le cercle d'équation _x² + y² + 6x = 7_
+* `++CercleOsculateur((-1,0),Conique({1,1,1,2,2,3}))++` crée le cercle d'équation _x² + y² + 2x + 1y = -1_
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel

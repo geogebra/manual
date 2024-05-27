@@ -1,0 +1,39 @@
+= Comando Demuestra
+:page-en: commands/Prove_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Demuestra( <Proposición lógica> )::
+  Da por resultado el valor de verdad _true_ (*verdadero*) o _false_ (*falso*) de la proposición en general.
+
+Normalmente, GeoGebra decide en forma numérica si la xref:/Valores_Lógicos.adoc[proposición] es verdadera o no. Sin
+embargo, el comando Demuestra utiliza http://en.wikipedia.org/wiki/es:C%C3%A1lculo_simb%C3%B3lico[cálculo simbólico]
+para determinar si una proposición es _verdadera_ o _falsa_ en general. Si GeoGebra no puede determinar la respuesta, el
+resultado es _indefinido_.
+
+[EXAMPLE]
+====
+
+Se definen tres puntos libres `++A = (1, 2)++`, `++B = (3, 4)++`, `++C = (5, 6)++`, el comando
+`++EstánAlineados(A, B, C)++` devuelve _true_ , dado que el control numérico es realizado en las actuales coordenadas de
+los puntos. Utilizando `++ Demuestra(EstánAlineados(A, B, C))++`, se obtiene _false_ como respuesta, dado que los tres
+puntos no son colineales en general, _i. e._ cuando se cambian.
+
+====
+
+[EXAMPLE]
+====
+
+Sea un triángulo con vértices _A_, _B_ y _C_ y se define `++D=PuntoMedio(B,C)++`, `++E=PuntoMedio(A,C)++`,
+`++p=Recta(A,B)++`, `++q=Recta(D,E)++`. Ahora ambos, `++p∥q++` y `++ Demuestra(p∥q)++` devuelven _true_, dado que la
+línea media de un triángulo será siempre paralela al lado correspondiente.
+
+[[ggbContainer31d513293fab5ac59e066c56250cfc8f]]====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/DemuestraDetalles.adoc[DemuestraDetalles] , xref:/Valores_Lógicos.adoc[Valores
+Lógicos], https://github.com/kovzol/gg-art-doc/tree/master/pdf/english.pdf[GeoGebra Automated Reasoning Tools: A
+Tutorial] y http://dev.geogebra.org/trac/wiki/TheoremProving[technical details of the algorithms].
+
+====

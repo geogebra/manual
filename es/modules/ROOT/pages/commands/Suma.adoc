@@ -1,0 +1,66 @@
+= Comando Suma
+:page-en: commands/Sum_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Suma( <Lista> )::
+  Suma todos los elementos de la lista.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++Suma({1, 2, 3})++` devuelve el número _a = 6_.
+* `++Suma({x^2, x^3})++` devuelve _f(x) = x^2^ + x^3^_.
+* `++Suma(Secuencia(k, k, 1, 100))++` devuelve el número _a = 5050_.
+* `++Suma({(1, 2), (2, 3)})++` devuelve el punto _A = (3, 5)_.
+* `++Suma({(1, 2), 3})++` devuelve el punto _B = (4, 5)_
+* `++Suma({"a", "b", "c"})++` devuelve el texto _abc_.
+
+====
+
+Suma( <Lista>, <Número de elementos __n__> )::
+  Suma los primeros _n_ elementos de la lista.
+
+[EXAMPLE]
+====
+
+`++Suma({1, 2, 3, 4, 5, 6}, 4)++` devuelve el número _a = 10_.
+
+====
+
+Suma( <Lista>, <Lista de Frecuencias> )::
+  Suma los elementos de la lista según las frecuencias indicadas.
+
+[EXAMPLE]
+====
+
+`++Suma({1, 2, 3, 4, 5}, {3, 2, 4, 4, 1})++` devuelve _a = 40_.
+
+====
+
+[NOTE]
+====
+
+Este comando funciona con números, puntos, vectores, texto y funciones.
+
+====
+
+== Sintaxis CAS
+
+El siguiente comando solamente funciona en la xref:/Vista_CAS.adoc[image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16]] xref:/Vista_CAS.adoc[Vista CAS]
+
+Suma( <Expresión>, <Variable>, <Valor inicial>, <Valor final> )::
+  Calcula la suma stem:[\sum_\{t=ValorInicial}^\{ValorFinal}f(t)]. El resultado puede ser infinito.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++Suma(n^2, n, 1, 3)++` devuelve _14_.
+* `++Suma(r^k, k, 0, n)++` devuelve _stem:[\frac\{r^\{n+1} }\{r - 1} - \frac\{1}\{r - 1}]_.
+* `++Suma((1/3)^n, n, 0, Infinity)++` devuelve _stem:[\frac\{3}\{2}]_.
+
+====

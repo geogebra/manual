@@ -1,0 +1,36 @@
+= Commande ZEstimationMoyenne2
+:page-en: commands/ZMean2Estimate_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+ZEstimationMoyenne2( <Liste Données Éch1>, <Liste Données Éch2>, <σ1>, <σ2>, <Niveau> ]::
+  Estimation, au niveau de confiance α, de l'intervalle de confiance de la différence des moyennes de deux populations
+  dont on ne connaît que l'écart-type σ, et la liste des valeurs d'une partie de ces populations (échantillons).
+  L'intervalle de confiance est donné sous la forme \{ limite inférieure de confiance , limite supérieure de confiance
+  }.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+Soit donné deux échantillons `++ech1 = {1, 4, 5, 4, 1, 3, 4, 2}++`, `++ech2 = {2, 1, 3, 1, 2, 5, 2, 4}++` .
+
+L'écart-type de l'échantillon 1 `++EcartType(ech1) ++` est _σ_1 = 1.41_ (_option 2 décimales_) ( stem:[\sqrt \{2} ] en
+CAS), l'écart-type de l'échantillon 2 est `++EcartType(ech2)++` _σ_2 = 1.32_ (_option 2 décimales_) ( stem:[\frac\{\sqrt
+7}\{2} ] en CAS) et le niveau de confiance est 0.75. `++ZEstimationMoyenne2(ech1, ech2, σ_1,  σ_2, 0.75)++`retourne la
+liste _\{-0.29, 1.29}_.
+
+====
+
+ZEstimationMoyenne2( <Moy Éch1>, <σ1>, <Taille Éch1>, <Moy Éch2>, <σ2>, <Taille Éch2>, <Niveau> ]::
+  Estimation, au niveau de confiance α, de l'intervalle de confiance de la différence des moyennes de deux populations
+  dont on ne connaît que l'écart-type σ, et la moyenne des valeurs d'une partie de ces populations (échantillons).
+  L'intervalle de confiance est donné sous la forme \{ limite inférieure de confiance , limite supérieure de confiance
+  }.
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel

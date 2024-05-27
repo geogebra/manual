@@ -1,0 +1,38 @@
+= Příkaz FrekvencniTabulka
+:page-en: commands/FrequencyTable_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+FrekvencniTabulka( <Seznam dat L> )::
+  Vloží do nákresny tabulku (jako textový objekt), jejíž první sloupec tvoří setříděné možné hodnoty ze seznamu dat _L_
+  a v druhém sloupci jsou četnosti těchto hodnot. V seznam dat _L_ mohou být čísla nebo textové řetězce.
+
+FrequencniTabulka( <Kumulativní (logická hodnota)>, <Seznam dat L>)::
+  Jestliže _Kumulativní = false_, příkaz vrací stejnou tabulku jako v předchozím odstavci (přednastavená hodnota
+  volitelného parametru).
+  Jestliže _Kumulativní = true_, příkaz vrací tabulku, jejíž první sloupec tvoří setříděné možné hodnoty ze seznamu dat
+  _L_ a v druhém sloupci jsou kumulativní četnosti těchto hodnot.
+
+FrekvencniTabulka( <Seznam hranic tříd>, <Seznam dat L> )::
+  Vloží do nákresny tabulku (jako textový objekt), v prvním sloupci jsou intervaly (třídy) ve tvaru polouzavřeného
+  intervalu [_a,b_), ve druhém sloupci jsou četnosti hodnot v datovém souboru _L_, které leží v příslušném intervalu.
+  Poslední interval je uvažován jako uzavřený interval.
+
+FrekvencniTabulka( <Kumulativní (logická hodnota)>, <Seznam hranic tříd>, <Seznam dat> )
+
+FrekvencniTabulka( <Seznam hranic tříd>, <Seznam dat>, < Užití hustoty >, <Měřítko hustoty (volitelné)> )
+
+FrekvencniTabulka( <Kumulativní (logická hodnota)> (volitelné), <Seznam hranic tříd>, <Seznam dat>, < Užití hustoty>
+(volitelné), <Měřítko hustoty (volitelné)> )::
+  Pokud je kumulativní logická hodnota _true_ jsou k četnosti každé třídy připočítány i četnosti všech předcházejících
+  tříd. Pokud parametr pro kumulativní četnosti vynecháme, je použita hodnota _false_. Pokud je nastavena logická
+  hodnota pro užití hustoty _false_, jsou četnosti násobeny jen měřítkem hustoty, v opačném případě jsou navíc normovány
+  délkou intervalu _výška=(měřítko hustoty*četnost třídy/šířka třídy)_.
+  Přednastavené hodnoty: Užití hustoty = _true_, Měřítko hustoty = 1.
+
+[NOTE]
+====
+
+Tento příkaz je podobný příkazům xref:/commands/Cetnost.adoc[Příkaz Cetnost] a xref:/commands/Histogram.adoc[Příkaz
+Histogram]. V nápovědách k těmto příkazům najdete několik příkladů.
+
+====

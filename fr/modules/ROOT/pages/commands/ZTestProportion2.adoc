@@ -1,0 +1,18 @@
+= Commande ZTestProportion2
+:page-en: commands/ZProportion2Test_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+ZTestProportion2( <Proportion Éch1>, <Taille Éch1>, <Proportion Éch2>, <Taille Éch2>, <Queue> )
+
+Réalise un Z-test de la différence des proportions dans deux populations dont on ne connaît que les proportions dans une
+partie de ces populations (échantillons).
+
+_Queue_ peut être "<", ">" ou "≠" ce qui définit les hypothèses alternatives suivantes :
+
+"<" = différence des proportions dans les populations < 0
+
+">" = différence des proportions dans les populations > 0
+
+"≠" = différence des proportions dans les populations ≠ 0
+
+Les résultats sont fournis sous forme de liste \{Probabilité, statistique Z-test }.

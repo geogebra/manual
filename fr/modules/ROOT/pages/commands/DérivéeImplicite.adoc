@@ -1,0 +1,58 @@
+= Commande DérivéeImplicite
+:page-en: commands/ImplicitDerivative_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+DérivéeImplicite( <f(x,y)> )::
+  Calcule la dérivée implicite stem:[\frac\{dy}\{dx}] de l'expression donnée.
+
+[EXAMPLE]
+====
+
+*Exemple :*  
+
+* `++DérivéeImplicite(x^2+y^2)++` donne stem:[-\frac\{x}\{y}] ;
+* `++DérivéeImplicite(x^4+2y^2-8)++` donne stem:[-\frac\{x^3}\{y}].
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Vous pouvez ici, préciser le nom de votre variable et celui de votre fonction de cette variable.
+
+DérivéeImplicite( <Expression (x,y)>, <Fonction y de la variable x> ,<Variable x > )::
+  Calcule la dérivée implicite stem:[\frac\{dy}\{dx}] de l'expression donnée.
+
+[EXAMPLE]
+====
+
+*Exemples :*  
+
+* `++DérivéeImplicite(x^2+y^2)++` donne stem:[-\frac\{x}\{y}] ;
+* `++DérivéeImplicite(x^2+y^2,y,x)++` donne stem:[-\frac\{x}\{y}] ;
+* `++DérivéeImplicite(x^n+y^2,y,x)++` donne stem:[-n \frac\{x^\{n-1} }\{2 y}] ;
+* `++DérivéeImplicite(u^2+v,v,u)++` donne stem:[-2 u] ;
+* `++DérivéeImplicite(u^2+v,u,v)++` donne stem:[-\frac\{1}\{2 u}].
+
+====
+
+[NOTE]
+====
+
+*Note :*
+
+Pour ceux qui n'auraient pas compris :
+
+DérivéeImplicite(u^2+v,v,u), on dérive en u : u²+v = 0 devient 2u + stem:[\frac\{dv}\{du}] = 0 ; soit
+stem:[\frac\{dv}\{du}] = stem:[-2 u]
+
+DérivéeImplicite(u^2+v,u,v), on dérive en v : u²+v = 0 devient 2u stem:[\frac\{du}\{dv}] + 1 = 0 ; soit
+stem:[\frac\{dv}\{du}] = stem:[-\frac\{1}\{2 u}]
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/Dérivée.adoc[Dérivée].

@@ -1,0 +1,98 @@
+= Commande NSolutions
+:page-en: commands/NSolutions_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+NSolutions( <Équation> )::
+  Recherche une approximation numérique de la solution de l'équation de la variable _x_ donnée.
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+*Lorsque l'équation n'est pas polynomiale, il est conseillé d'utiliser la 3ème syntaxe : ie, donner une valeur de
+départ* !
+
+NSolutions( <Équation> )::
+  Recherche une approximation numérique de la solution de l'équation de la variable _x_ donnée.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++NSolutions(cos(x) = x)++` retourne _\{0.739085133215165}_.
+
+====
+
+NSolutions( <Équation>, <Variable v> )::
+  Recherche une approximation numérique de la solution de l'équation de la variable _v_ donnée.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++NSolutions(a^4 + 34a^3 - 34, a)++` retourne _\{0.9904738885580846}_.
+
+====
+
+*NSolutions*[ <Équation>, <Variable = valeur départ> ]::
+  Recherche une approximation numérique de la liste des solutions à l'équation donnée de variable donnée, supérieures à
+  _valeur départ_.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* `++NSolutions(cos(x) = x, x = 0)++` donne _\{0.74}_
+* `++NSolutions(a^4 + 34a^3 = 34, a = 3)++` donne la liste _\{-34, 0.99}_. Cet arrondi "-34" peut apparaître très
+dérangeant, car il est manifeste que si l'on donne à _a_ la valeur -34, les puissances vont s'annuler, mais il va rester
+-34 et non 0 ! Option : 15 décimales, remet les pendules à l'heure : _a = -34.00086498588374_
+
+====
+
+NSolutions( <Liste d'équations>, <Liste de Variables> )::
+  Recherche une approximation numérique des solutions du système d'équations.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++NSolutions({π / x = cos(x - 2y), 2 y - π = sin(x)}, {x=3, y=1.5})++` retourne _\{3.141592651686591,
+1.570796327746508}_.
+
+====
+
+[NOTE]
+====
+
+*Note :* Si vous ne donnez pas un point de départ, comme a=3 ou \{x=3, y=1.5}, l'algorithme peut peiner dans sa
+recherche (mais donner un point de départ ne garantit pas non plus la découverte d'une
+solution).`++NSolutions({π / x = cos(x - 2y), 2 y - π = sin(x)}, {x, y})++` retourne _\{-179.91, 1.94} (Option : 2
+décimales)_.
+
+====
+
+[NOTE]
+====
+
+*Note :*
+
+* NSolutions ne fonctionnera pas pour les fonctions qui ont l'axe des x comme asymptote. Elles doivent souvent être
+reformulées.
+* NSolutions ne fonctionne que pour des fonctions continues.
+
+====
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/Solutions.adoc[Solutions] et
+xref:/commands/NRésoudre.adoc[NRésoudre] .
+
+[NOTE]
+====
+
+*Note :* π est obtenu en pressant [.kcode]#Alt # + [.kcode]# p#.
+
+====

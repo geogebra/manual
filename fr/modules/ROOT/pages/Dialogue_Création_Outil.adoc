@@ -1,0 +1,60 @@
+= Dialogue Création Outil
+:page-en: Tool_Creation_Dialog
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+D’abord, réaliser la construction que l'outil devra répéter plus tard.
+
+Dans le menu Outils, cliquer /Fichier:Menu_Create_Tool_png.adoc[image:Menu_Create_Tool.png[Menu Create
+Tool.png,width=16,height=16]] 'Créer un nouvel outil' afin d’ouvrir la boîte de dialogue afférente. Renseigner les trois
+onglets 'Objets Finaux', 'Objets Initiaux', et 'Nom et Icône' afin de créer l'outil.
+
+[EXAMPLE]
+====
+
+*Exemple :* Créer un outil permettant de colorier un triangle équilatéral en 4 triangles équilatéraux (triangle de
+Sierpinsky).
+
+(Choisir Options, Etiquetage, Seulement les nouveaux points) ;
+
+* Avec l’outil /Fichier:Mode_regularpolygon_svg.adoc[image:32px-Mode_regularpolygon.svg.png[Mode
+regularpolygon.svg,width=32,height=32]] xref:/tools/Polygone_régulier.adoc[Polygone régulier] cliquer en deux endroits
+de la vue Graphique pour créer les deux sommets A et B, et répondre 3 pour créer le troisième sommet C ;
+* Avec l’outil /Fichier:Mode_midpoint_svg.adoc[image:32px-Mode_midpoint.svg.png[Mode midpoint.svg,width=32,height=32]]
+xref:/tools/Milieu_ou_centre.adoc[Milieu ou centre] cliquer sur les segments [AB], [BC] et [CA] pour créer leurs milieux
+D, E et F ;
+* Avec l’outil /Fichier:Mode_polygon_svg.adoc[image:32px-Mode_polygon.svg.png[Mode polygon.svg,width=32,height=32]]
+xref:/tools/Polygone.adoc[Polygone] créer le triangle central DEF (poly2) et dans ses propriétés choisir la couleur
+'blanc' avec 'Opacité' de 100% ;
+* Recommencer maintenant l’étape précédente pour les trois triangles DBE, FEC et ADF, en choisissant pour eux la couleur
+noire ;
+
+(Cachez les 6 points)
+
+* Ouvrir le menu 'Outils', sous-menu /Fichier:Menu_Create_Tool_png.adoc[image:Menu_Create_Tool.png[Menu Create
+Tool.png,width=16,height=16]] 'Créer un nouvel outil' ;
+* Préciser les 'Objets Finaux' : les 4 petits triangles : Sélectionner donc poly2, poly3, poly4 et poly5 ;
+* Préciser les 'Objets Initiaux': Supprimer A et B qui sont proposés et sélectionner poly1 ;
+* Préciser le 'Nom de l’outil' et le 'Nom de commande' pour le nouvel outil ;
+
+[NOTE]
+====
+
+*Note :* Le nom d’outil apparaît dans la xref:/Barre_d'outils.adoc[Barre_d'outils] GeoGebra, tandis que le nom de
+commande est utilisé dans le champ de xref:/Saisie.adoc[Saisie] de GeoGebra.
+
+====
+
+* Entrer un texte qui sera affiché dans l’Aide Barre d’outils ;
+* Choisir éventuellement une image stockée sur votre ordinateur comme icône dans la barre d’outils, GeoGebra la
+redimensionne automatiquement (32x32) pour l’adapter au bouton de la barre d’outils.
+
+====
+
+[NOTE]
+====
+
+*Note :* Les objets créés ne sont pas déplaçables, même s'ils ont été définis par une commande du type
+`++Point[<Chemin>]++`. Dans le cas où vous désireriez un objet créé déplaçable, vous pouvez définir une liste de
+commandes et la faire fonctionner grâce à la xref:/commands/Exécute.adoc[Commande Exécute].
+
+====

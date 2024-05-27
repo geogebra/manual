@@ -1,0 +1,66 @@
+= Comandos de Tortuga
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[.small]##
+
+== Comandos de Tortuga
+
+* xref:/commands/Tortuga.adoc[Tortuga]
+* xref:/commands/TortugaAvanza.adoc[TortugaAvanza]
+* xref:/commands/TortugaRetrocede.adoc[TortugaRetrocede]
+* xref:/commands/TortugaDerecha.adoc[TortugaDerecha]
+* xref:/commands/TortugaIzquierda.adoc[TortugaIzquierda]
+
+Listado de xref:/Comandos.adoc[Comandos] de xref:/commands/Tortuga.adoc[Tortuga]
+
+Esta categoría de xref:/Comandos.adoc[comandos] incluye a los siguientes:*xref:/commands/Tortuga.adoc[Tortuga]*
+
+* *Desplazamientos*:
+** xref:/commands/TortugaAvanza.adoc[TortugaAvanza]
+** xref:/commands/TortugaRetrocede.adoc[TortugaRetrocede]
+* *Giro*:
+** xref:/commands/TortugaDerecha.adoc[TortugaDerecha]
+** xref:/commands/TortugaIzquierda.adoc[TortugaIzquierda]
+* *Trazos*:
+** xref:/commands/TortugaArriba.adoc[TortugaArriba]
+** xref:/commands/TortugaAbajo.adoc[TortugaAbajo]
+
+[.small]##
+
+[.small]##
+
+[NOTE]
+====
+
+La convención tradicional emplea la metáfora de la _pluma_ o el _lápiz_ asociado a la *_tortuga_* activa en estado tal
+que al desplazarla deja trazo. Las indicaciones serían equivalentes a _conpluma_ o _bajapluma_ para reponer su trazado
+cuando previamente se hubiera establecido _sinpluma_ o _subepluma_.
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Respecto de las referencias, hay que tener en cuenta
+que si una primera tortuga hubiera sido creada, sería la denominada *_tortuga1_* y de allí en adelante, la asignación de
+nombres continuaría.Cada *_tortuga_* aparece en el origen de coordenadas con una orientación de 0° y _con pluma_ o
+_lápiz_ hacia _abajo_ de modo que al desplazarla deja rastro.
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idea:* Es posible emplear el comando
+xref:/commands/Coordenadas.adoc[Coordenadas].
+
+====
+
+[EXAMPLE]
+====
+
+*`++Coordenadas[tortuga1, 2, 3]++`* ubica a la _tortuga1_ en el punto (_2,3_). Su rumbo inicial no puede modificarse. El
+desplazamiento provoca el consecuente trazo a menos que se hubiera indicado antes
+xref:/commands/TortugaArriba.adoc[TortugaArriba] sin reponer luego el estado usual vía comando *TortugaAbajo*.
+
+====

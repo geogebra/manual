@@ -1,0 +1,30 @@
+= Commande AjustImplicite
+:page-en: commands/FitImplicit_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+AjustImplicite( <Liste de Points>, <Ordre> )::
+  crée la courbe implicite d'ordre n ≥ 2 "ajustant" la liste de points. Il faut au moins stem:[\frac\{n(n+3)}2] points.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+Soit les points A=(-2,1), B=(-1,2), C=(3,1), D=(2,-1), E =(-2,-1) et F=(2,2)
+
+`++ AjustImplicite( {A,B,C,D,E,F}, 2) ++` crée l'ellipse passant près de ces 6 points ;
+
+Modifier A par A=(-1,0) et C par C=(1,1)
+
+`++ AjustImplicite( {A,B,C,D,E,F}, 2) ++` crée l'hyperbole passant près de ces 6 points,
+
+une branche près de A,B et E, l'autre près de C, D et F.
+
+====
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : d'une part xref:/commands/CourbeImplicite.adoc[CourbeImplicite] et
+d'autre part xref:/commands/Ajustement.adoc[Ajustement], xref:/commands/AjustExp.adoc[AjustExp],
+xref:/commands/AjustLin.adoc[AjustLin], xref:/commands/AjustLinX.adoc[AjustLinX],
+xref:/commands/AjustLog.adoc[AjustLog], xref:/commands/AjustLogistique.adoc[AjustLogistique],
+xref:/commands/AjustPoly.adoc[AjustPoly], xref:/commands/AjustPuissance.adoc[AjustPuissance] et
+xref:/commands/AjustSin.adoc[AjustSin].

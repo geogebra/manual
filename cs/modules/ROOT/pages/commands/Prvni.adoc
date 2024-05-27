@@ -1,0 +1,91 @@
+= Příkaz Prvni
+:page-en: commands/First_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Prvni( <Seznam> )::
+  Vytvoří seznam, který obsahuje první prvek zadaného seznamu.
+Prvni( <Seznam>, <Počet prvků> )::
+  Vytvoří seznam, který obsahuje prvních _n_ prvků zadaného seznamu, kde _n_ je číslo zadané jako <Počet prvků>.
+Prvni( <Text> )::
+  Vytvoří a v grafickém pohledu zobrazí znak, který je prvním písmenem zadaného textu.
+Prvni( <Text>, <Počet prvků> )::
+  Vytvoří a v grafu zobrazí znak, který je prvních _n_ písmen zadaného textu, kde _n_ je číslo zadané jako <Počet
+  prvků>.
+Prvni( <Místo>, <Počet prvků> )::
+  Tento příkaz je vhodný pro
+  * místa vytvořená užitím xref:/commands/VyresitODE.adoc[Příkaz_VyresitODE] - Vytvoří seznam bodů, jež vznikly v
+  prvních _n_ krocích numerického řešení diferenciálních rovnic algoritmem ODE.
+  * místa vytvořená užitím xref:/commands/NejkratsiVzdalenost.adoc[Příkaz_NejkratsiVzdalenost],
+  xref:/commands/ObchodniCestujici.adoc[Příkaz_ObchodniCestujici], xref:/commands/Voronoi.adoc[Příkaz_Voronoi],
+  xref:/commands/MinimalniKostra.adoc[Příkaz_MinimalniKostra], xref:/commands/KonvexniObal.adoc[Příkaz_KonvexniObal] and
+  xref:/commands/Obal.adoc[Příkaz_Obal] - Určí vrcholy grafu.
+
+[EXAMPLE]
+====
+
+`++Prvni["Hello",2]++` vytvoří _"He"_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Prvni["Hello"]++` vytvoří _"H"_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Prvni[{1, 4, 3}, 2]++` vytvoří _\{1, 4}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Prvni[{1, 4, 3}]++` vytvoří _\{1}_.
+
+====
+
+[NOTE]
+====
+
+K získání prvního prvku použijte příkaz `++Prvek[{1, 4, 3}, 1]++`.
+
+====
+
+== CAS pohled
+
+Prvni( <Seznam> )::
+  Vytvoří seznam, který obsahuje první prvek zadaného seznamu.
+Prvni( <Seznam>, <Počet prvků> )::
+  Vytvoří seznam, který obsahuje prvních _n_ prvků zadaného seznamu, kde _n_ je číslo zadané jako <Počet prvků>.
+
+[EXAMPLE]
+====
+
+`++Prvni[{1, 4, 3}, 2]++` vytvoří _\{1, 4}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Prvni[{1, 4, 3}]++` vytvoří _\{1}_.
+
+====
+
+[NOTE]
+====
+
+K získání prvního prvku použijte příkaz `++Prvek[{1, 4, 3}, 1]++`.
+
+====
+
+[NOTE]
+====
+
+Viz též xref:/commands/Posledni.adoc[Příkaz_Posledni].
+
+====

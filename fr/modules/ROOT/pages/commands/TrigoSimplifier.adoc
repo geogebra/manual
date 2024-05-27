@@ -1,0 +1,38 @@
+= Commande TrigoSimplifier
+:page-en: commands/TrigSimplify_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+TrigoSimplifier( <Expression> )::
+  Retourne (théoriquement) une expression simplifiée, ce qui n'est pas toujours le cas en dehors de la fenêtre Calcul
+  formel.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++TrigoSimplifier(sin(x)^2 - cos(x)^2 + 1 )++` définit et représente la fonction _f(x)= 2 sin²(x)_ ;
+
+`++TrigoSimplifier(1-sin(x)^2)++` définit et représente la fonction _f(x)=cos²(x)_.
+
+====
+
+[NOTE]
+====
+
+*Note :* Cette commande ne fonctionne qu'avec les variables "x", "y", "z" et "t" dans
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] xref:/Algèbre.adoc[Algèbre]
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Ici tout nom de variable est admis.
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/TrigoDévelopper.adoc[TrigoDévelopper] et
+xref:/commands/TrigoCombiner.adoc[TrigoCombiner].

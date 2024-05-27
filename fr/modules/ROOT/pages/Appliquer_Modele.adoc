@@ -1,0 +1,116 @@
+= Appliquer Modele
+:page-en: Open_Dialog_Style_Templates
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+*/Fichier:GGb5_png.adoc[image:GGb5.png[GGb5.png,width=47,height=42]] en version 5 :*
+
+Menu *Fichier* > /Fichier:Menu_Open_png.adoc[image:Menu_Open.png[Menu Open.png,width=16,height=16]] *Ouvrir ...*
+
+Vous pouvez appliquer un modèle de style aux éléments de votre fichier actuel, en choisissant "Appliquer Modèle" dans la
+liste déroulante 'Fichiers de type :' de la fenêtre de dialogue.
+
+/Fichier:Appliquer_PNG.adoc[image:480px-Appliquer.PNG[Appliquer.PNG,width=480,height=114]]
+
+====
+
+== Tutoriel
+
+=== Créer un fichier Modèle :
+
+Dans un fichier GeoGebra, appelé par exemple _style.ggb_, on va pouvoir nommer et sauvegarder différents styles
+personnels, pour des objets de types différents ou de même type, applicables individuellement à chaque objet d'un autre
+fichier ggb.
+
+Par exemple : créez 2 points et 1 droite, puis définissez le style de chacun de ces objets dans leurs « Propriétés »
+leur couleur, style, … . En ajoutant dans le champ Légende de l'onglet Basique du dialogue « Propriétés » pour chacun de
+ces objets *%style=* suivi d'un nom, ce style pour ce type d'objet sera mémorisé.
+
+Les copies d'écran suivantes illustrent la définition d'un style de point GFR (gros-flèche-rouge) (j'ai aussi intégré
+dans mon fichier, un style de point GCB (gros-carré-bleu)) et un style de droite DPV (droite-pointillés-verte) :
+
+[cols="",]
+|===
+|/Fichier:GFR_PNG.adoc[image:GFR.PNG[GFR.PNG,width=607,height=231]]
+|/Fichier:DPV_PNG.adoc[image:DPV.PNG[DPV.PNG,width=586,height=207]]
+|===
+
+Si vous désirez que le style choisi soit appliqué à tous les objets du même type, alors vous devez lui donner le nom
+réservé de style par défaut : _defaultStyle_, soit *%style=defaultStyle*.
+
+La copie d'écran suivante illustre la définition d'un style par défaut, je n'ai pas à lui donner un nom tel que
+PAI(polygone – nids d'abeille – indigo), pour un polygone dont le remplissage est fait avec des nids d'abeille et de
+couleur Indigo :
+
+/Fichier:PAI_PNG.adoc[image:PAI.PNG[PAI.PNG,width=657,height=267]]
+
+*Lorsque vous avez terminé, ne pas oublier de sauvegarder votre fichier.*
+
+=== Appliquer un modèle à un fichier ggb :
+
+Ouvrez ou créez le fichier GeoGebra auquel vous désirez appliquer votre modèle.
+
+Ajoutez dans le champ Légende de chaque objet devant être conforme au modèle, %style= suivi du nom que vous avez
+mémorisé. Ainsi, pour tous les points, que je désire voir (gros-flèche-rouge), je vais inscrire : `++%style=GFR ++`,
+pour ceux que je veux voir (gros-carré-bleu), je vais inscrire : `++%style=GCB++`, et pour toutes les droites que je
+désire voir ( pointillés-verte), `++%style=DPV++`.
+
+Par contre, pour tous les objets devant recevoir votre style par défaut, vous n'avez pas à préciser, donc rien à
+inscrire pour les polygones.
+
+Dans le fichier illustré ci-dessous, pour le point B : %style=GFR, pour le point D : %style=GCB et pour la droite b
+(droite(GH)) : %style=DPV ; rien de précisé pour poly1.
+
+*En étant sûr de ne pas avoir d'objets sélectionnés, dans le menu Fichier , choisissez l'item Ouvrir …* .
+
+S'ouvre alors la fenêtre de dialogue : “Voulez-vous sauvegardez vos modifications ?”, à vous de voir, pas de risques si
+vous respectez bien la consigne suivante :
+
+[cols="",]
+|===
+|/Fichier:Appliquer_PNG.adoc[image:Appliquer.PNG[Appliquer.PNG,width=560,height=133]]
+
+|Déroulez la liste Fichiers de type, pour y sélectionner *Appliquer Modèle(.ggb)*, puis renseignez le champ Nom du
+fichier : par le nom de sauvegarde choisi lors de la création du modèle, donc dans cet exemple : style.ggb.
+|===
+
+[cols=",",options="header",]
+|===
+|Avant |Après
+|/Fichier:Avant_PNG.adoc[image:Avant.PNG[Avant.PNG,width=558,height=600]]
+|/Fichier:Après_PNG.adoc[image:Apr%C3%A8s.PNG[Après.PNG,width=558,height=600]]
+|===
+
+[NOTE]
+====
+
+*Note :* Vous trouvez cette manipulation une peu fastidieuse, je vous le concède.
+
+Mais elle décrit une manipulation permettant de choisir différents styles pour des objets d'un type donné, par exemple
+des points GFR et des points GCB. Si ce n'est pas votre cas, c'est-à-dire que vous définissez *un seul style 'style par
+défaut' par type* d'objet,
+
+. Ouvrez ou créez le fichier GeoGebra auquel vous désirez appliquer votre modèle,
+. Sélectionnez tous les objets devant recevoir votre *style par défaut* (sélection multiple à l'aide de la touche
+« Ctrl » )
+. Et ouvrez alors le fichier style.ggb sans oublier le *Appliquer Modèle(.ggb)*.
+
+====
+
+========= Loïc a écrit : Si vous voulez appliquer les nouveaux réglages par défaut à un ancien fichier, il suffit de :
+
+{empty}1. remplacer la partie euclidianView du fichier geogebra.xml de l'ancien fichier ggb par la partie euclidianView
+du nouveau fichier ggb.
+
+{empty}2. remplacer le fichier geogebra_defaults2d.xml de l'ancien fichier ggb par le fichier geogebra_defaults2d.xml du
+nouveau fichier ggb.
+
+{empty}3. ouvrir votre ancien fichier ggb dans GeoGebra, aller dans option > configuration par défaut
+
+{empty}4. sélectionner tous les objets de la construction (ctrl+a pour windows ou bien cmd+a pour osx)
+
+{empty}5. Cliquer sur le bouton "Appliquer à la sélection" en bas à gauche dans la fenêtre de configuration par défaut.
+
+Et voilà le tour est joué en moins d'une minute chrono, vous avez une nouvelle construction toute belle.

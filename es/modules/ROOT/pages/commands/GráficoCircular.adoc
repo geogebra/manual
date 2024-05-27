@@ -1,0 +1,26 @@
+= Comando GráficoCircular
+:page-en: commands/PieChart_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+GráficoCircular(< Lista de frecuencias >)::
+  Crea un gráfico circular a partir de la lista de frecuencias. El círculo completo representa el 100%, los datos
+  ingresados se muestran como sectores circulares.
+
+[EXAMPLE]
+====
+
+`++ GráficoCircular({20, 15, 40, 5, 10, 20})++` crea un gráfico circular de centro por defecto (0,0) y radio por defecto
+3.
+
+====
+
+GráficoCircular(< Lista de frecuencias >, < Centro >, < Radio >)::
+  Crea un gráfico circular con el centro y radio dados a partir de la lista de frecuencias. El círculo completo
+  representa el 100%, los datos ingresados se muestran como sectores circulares.
+
+[EXAMPLE]
+====
+
+`++ GráficoCircular({20, 15, 40, 5, 10, 20},(3,3),5)++` crea un gráfico circular de centro (3,3) y radio 5.
+
+====

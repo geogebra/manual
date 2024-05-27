@@ -1,0 +1,88 @@
+= Příkaz Derivace
+:page-en: commands/Derivative_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Derivace( <Funkce> )::
+  Dostaneme derivaci funkce podle hlavní proměnné.
+Derivace( <Funkce>, <Číslo n> )::
+  Dostaneme _n_-tou derivaci funkce podle hlavní proměnné.
+Derivace( <Funkce>, <Proměnná> )::
+  Dostaneme parciální derivaci funkce podle dané proměnné.
+Derivace( <Funkce>, <Proměnná>, <Číslo n> )::
+  Dostaneme _n_-tou parciální derivaci funkce podle dané proměnné.
+Derivace( <Křivka> )::
+  Dostaneme derivaci křivky.
+Derivace( <Křivka>, <Číslo n> )::
+  Dostaneme _n_-tou derivaci křivky.
+
+[EXAMPLE]
+====
+
+`++Derivace[x³+3x y, x, 2]++` dostaneme _6x_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Derivace[x³+3x y, x]++` dostaneme _3x²+3y_.
+
+====
+
+[NOTE]
+====
+
+Lze využít pouze u parametrických křivek.
+
+====
+
+[NOTE]
+====
+
+Lze využít pouze u parametrických křivek.
+
+====
+
+[NOTE]
+====
+
+Můžeme využít `++f'(x)++` místo `++Derivace[f]++` nebo `++f''(x)++` místo `++Derivace[f, 2]++`, atd.
+
+====
+
+== CAS pohled
+
+Derivace( <Výraz f> )::
+  Dostaneme derivaci _f_ podle hlavní proměnné.
+Derivace( <Výraz f>, <Proměnná a> )::
+  Dostaneme derivaci _f_ podle dané proměnné _a_.
+Derivace( <Výraz f>, <Proměnná a>, <Číslo n> )::
+  Dostaneme _n_-tou derivaci _f_ podle dané proměnné _a_.
+
+[EXAMPLE]
+====
+
+`++Derivace[a x^3, x, 2]++` dostaneme _6 a x_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Derivace[a x^3, a]++` dostaneme _x^3^_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Derivace[t^3]++` dostaneme _3 t^2^_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Derivace[x^2]++` dostaneme _2 x_.
+
+====

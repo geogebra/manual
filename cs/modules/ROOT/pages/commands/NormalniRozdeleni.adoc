@@ -1,0 +1,40 @@
+= Příkaz NormalniRozdeleni
+:page-en: commands/Normal_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+NormalniRozdeleni( <Střední Hodnota>, <Směrodatná odchylka>, x )
+
+Vytvoří a v grafu zobrazí funkci, která je hustotou pravděpodobnosti
+http://en.wikipedia.org/wiki/cs:Norm%C3%A1ln%C3%AD_rozd%C4%9Blen%C3%AD[normálního rozdělení] daného střední hodnotou a
+směrodatnou odchylkou.
+
+NormalniRozdeleni( <Střední Hodnota>, <Směrodatná odchylka>, x, <Distribuční (logická hodnota)> )
+
+Pokud má poslední proměnná příkazu hodnotu _true_, vytvoří a v grafu zobrazí funkci, která je distribuční funkcí
+normálního rozdělení daného střední hodnotou a směrodatnou odchylkou. V případě hodnoty _false_ je vytvořena a zobrazena
+hustota pravděpodobnosti tohoto rozdělení.
+
+NormalniRozdeleni( <Střední Hodnota>, <Směrodatná odchylka>, <Hodnota proměnné> )::
+  Vypočítá hodnotu funkce _Φ((x – μ) / σ)_ pro zadanou proměnnou _x_, kde _Φ_ je distribuční funkce standardního
+  (normovaného) normálního rozdělení _N(μ=0,σ=1)_.
+
+[NOTE]
+====
+
+Vypočítá pravděpodobnost realizace náhodné veličiny (nebo-li obsah plochy pod grafem funkce hustoty normovaného
+normálního rozdělení počítaný od -∞ až po hodnotu zadané proměnné _x_.
+
+====
+
+== CAS pohled
+
+NormalniRozdeleni( <Střední Hodnota>, <Směrodatná odchylka>, <Hodnota proměnné> )::
+  Vypočítá hodnotu funkce _Φ((x – μ) / σ)_, kde _Φ_ je distribuční funkce standardního (normovaného) normálního
+  rozdělení _N(μ=0,σ=1)_.
+
+[EXAMPLE]
+====
+
+`++NormalniRozdeleni[2, 0.5, 1]++` vypočítá stem:[\frac\{\sqrt\{2}}\{\sqrt\{\pi }e²}].
+
+====

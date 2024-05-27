@@ -1,0 +1,30 @@
+= Příkaz NastavitHodnotu
+:page-en: commands/SetValue_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+NastavitHodnotu( <Boolean>, <0|1> )::
+  Nastaví hodnotu logické proměnné / políčka: 1 = pravda, 0 = nepravda.
+
+[EXAMPLE]
+====
+
+Jestliže _b_ je logická proměnná, `++ NastavitHodnotu[b,1]++` nastaví hodnotu _b_ na _pravda_.
+
+====
+
+NastavitHodnotu( <Objekt>, <Objekt> )::
+  Jestliže "A" je xref:/Volné_závislé_a_pomocné_objekty.adoc[volný objekt] nebo xref:/Body_a_vektory.adoc[bod]
+  náležející xref:/Geometrické_objekty.adoc[cestě nebo oblasti], jeho hodnota je nastavena na aktuální hodnotu _B_ (t.j.
+  _A_ nezmění hodnotu, je-li hodnota _B_ později změněna).
+
+[EXAMPLE]
+====
+
+Je-li _f_ funkce, příkaz `++ NastavitHodnotu[f,NahodnyPrvek[{cos(x),3x+2,ln(x)}]]++` přiřadí náhodně funkci _f_ jeden z
+předpisů ze zadaného seznamu funkcí.
+
+====
+
+NastavitHodnotu( <Seznam>, <Číslo>, <Objekt> )::
+  Nastaví _n_-tý prvek zadaného volného seznamu na aktuální hodnotu daného objektu, kde _n_ je zadané číslo. Číslo _n_
+  může být nejvýše "1 + délka zadaného seznamu".

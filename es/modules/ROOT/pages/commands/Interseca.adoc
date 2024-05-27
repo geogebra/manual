@@ -1,0 +1,108 @@
+= Comando Interseca
+:page-en: commands/Intersect_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Interseca( <Objeto>, <Objeto> )::
+  Determina el/los punto/s de intersección entre dos objetos.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* Sean `++a: -3x+7y = -10 ++` una recta y `++b: x^2+ 2 y^2 =8++` una elipse. `++Interseca[a,b] ++` da por resultado los
+puntos de intersección entre la recta y la elipse: E=(-1.02, -1,87) y F = (2.81, -0.22).
+* `++Interseca[y = x + 3, Curva[t, 2t, t, 0, 10]] ++` da por resultado __A__=(3,6).
+* `++Interseca[Curva[2s, 5s, s,-10, 10 ], Curva[t, 2t, t, -10, 10]] ++` da por resultado __A__=(0,0).
+
+====
+
+Interseca( <Objeto>, <Objeto>, < índice del punto de intersección> )::
+  Da por resultado el n-ésimo punto de intersección entre dos objetos, que pueden ser rectas, cónicas, funciones
+  polinómicas o curvas implícitas.
+
+[EXAMPLE]
+====
+
+Sea `++a(x) = x^3 + x^2 - x++` una función y `++b: -3x + 5y = 4++` una recta, `++Interseca[a, b, 2]++` crea el punto de
+intersección de coordenadas _(-0.43, 0.54)_ entre la función y la recta.
+
+====
+
+Interseca( <Objeto>, <Objeto>, <Punto Inicial> )::
+  Determina todos los puntos de intersección entre los objetos indicados utilizando métodos numéricos, iterativos,
+  utilizando el punto dado como punto inicial.
+
+[EXAMPLE]
+====
+
+Sea `++a(x) = x^3 + x^2 - x++` una función y `++b: -3x + 5y = 4++` una recta, y __C__=(0,0.8), un punto.
+`++Interseca[a, b, C]++` crea un punto de intersección de la función y la recta de coordenadas _(-0.43, 0.54)_
+utilizando un método numérico iterativo.
+
+====
+
+Interseca( <Función>, <Función>, <Extremo inferior del intervalo>, <Extremo superior del intervalo> )::
+  Establece numéricamente los puntos de intersección entre las funciones dentro del intervalo establecido.
+
+[EXAMPLE]
+====
+
+Sean `++f(x) = x^3 + x^2 - x++` y `++g(x) = 4 / 5 + 3 / 5 x++` dos funciones. `++Interseca[ f, g, -1, 2 ]++` da por
+resultado __A__=(-0.43, 0.54) y __B__=(1.1, 1.46), los puntos de intersección entre las funciones que se encuentran
+dentro del intervalo[-1,2].
+
+====
+
+Interseca( <Curva 1>, <Curva 2>, <Parámetro 1>, <Parámetro 2> )::
+  Establece un punto de intersección usando un método iterativo que se inicia acorde a los parámetros dados.
+
+[EXAMPLE]
+====
+
+Sean**`++a = Curva[cos(t), sin(t), t, 0, π]++`** y
+*`++b = Curva[cos(t) + 1, sin(t), t, 0, π]++``++Interseca[a, b, 0, 2]++`* da por resultado el punto A = (0.5, 0.87).
+
+====
+
+== Sintaxis CAS
+
+Interseca( <Función>, <Función>)::
+  Da por resultado una lista que contiene los puntos de intersección entre los dos objetos.
+
+[EXAMPLE]
+====
+
+Sean**`++f(x) = x^3 + x^2 - x++`** y**`++g(x)=x++``++Interseca[f,g]++`** da por resultado la lista _\{(1, 1), (0, 0),
+(-2, -2)}_.
+
+====
+
+Interseca( <Objeto>, <Objeto> )::
+
+[EXAMPLE]
+====
+
+* *Interseca[ <Recta>, <Objeto> ]* establece los puntos de intersección entre la recta y el plano, segmento, polígono,
+cónica, etc.
+* *Interseca[ <Plano>, <Objeto> ]* establece los puntos de intersección entre el plano y el segmento, polígono, cónica.
+* *Interseca[ <Cónica>, <Cónica> ]* establece los hasta cuatro puntos de intersección entre las cónicas.
+* *Interseca[ <Plano>, <Plano> ]* crea la recta de intersección entre los dos planos.
+* *Interseca[ <Plano>, <Poliedro> ]* crea el polígono de intersección entre el plano y el poliedro.
+* *Interseca[ <Esfera>, <Esfera> ]* crea la circunferencia de intersección entre ambas esferas.
+* *Interseca[ <Plano>, <Cuádrica> ]* crea la cónica de intersección entre el plano y la superficie cuádrica.
+
+====
+
+[NOTE]
+====
+
+*Notas:*
+
+* Para obtener los puntos de intersección en una lista, utiliza `++{Interseca[f,g]}++`
+* Ver además, los comandos xref:/commands/IntersecaRecorridos.adoc[IntersecaRecorridos] e
+xref:/commands/IntersecaCónica.adoc[IntersecaCónica].
+* Ver además la herramienta image:22px-Mode_intersect.svg.png[Mode intersect.svg,width=22,height=22]
+xref:/tools/Intersección.adoc[Intersección].
+
+====

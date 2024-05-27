@@ -1,0 +1,54 @@
+= Comando TrigSimplifica
+:page-en: commands/TrigSimplify_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+[.small]##
+
+[.small]##
+
+[.small]##
+
+TrigSimplifica( <Expresión> )::
+  Simplifica la expresión trigonométrica indicada.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++TrigSimplifica[ 1-sin²(x)]++`* define y representa la xref:/Funciones.adoc[función]
+__cos²(x)__**`++TrigSimplifica[ sin(x)^2 - cos(x)^2 + 1 ]++`** define y representa la xref:/Funciones.adoc[función] _2
+sen(x)²_
+
+====
+
+[NOTE]
+====
+
+Cuando resulta posible, además del resultado algebraico y/o numérico, lo ingresado en la
+xref:/Barra_de_Entrada.adoc[Barra de Entrada], queda representado en la xref:/Vista_Gráfica.adoc[Vista Gráfica].
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] la xref:/Vista_CAS.adoc[Vista C~[.small]#omputación#~A~[.small]#lgebraica#~S~[.small]#imbólica#~]
+
+En esta xref:/Vista_CAS.adoc[vista] el comando obra de modo análogo al descripto y admite operaciones simbólicas aunque
+exclusivamente con la variable *_`++x++`_*.
+
+[NOTE]
+====
+
+*Notas:* Este comando opera para la variable *_x_* aunque hubiera otras en la expresión.
+Así:*`++TrigSimplifica[x- sin(y)^2]++`* da _-sin²(y)+x_ pero *`++TrigSimplifica[1- sin(y)^2]++`* da __cos²(y)__Cuando
+resulta posible, al _tildar_ el _redondelito_ que encabeza la correspondiente fila de la xref:/Vista_CAS.adoc[Vista
+CAS], lo ingresado cobra entidad xref:/Vista_Algebraica.adoc[algebraica] como xref:/Funciones.adoc[función] y es
+xref:/Vista_Gráfica.adoc[graficada]Ver también los comandos xref:/commands/TrigDesarrolla.adoc[TrigDesarrolla] y
+xref:/commands/TrigCombina.adoc[TrigCombina].
+
+====

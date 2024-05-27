@@ -1,0 +1,42 @@
+= Comando PoissonAleatorio
+:page-en: commands/RandomPoisson_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+PoissonAleatorio( <Media> )::
+  Genera un número aleatorio a partir de una http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_de_Poisson[distribución
+  de Poisson] con la media dada.
+
+[EXAMPLE]
+====
+
+`++PoissonAleatorio[3]++` establece un valor aleatorio desde una
+http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_de_Poisson[distribución de Poisson] con una media de _3_.
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+En esta xref:/Vista_CAS.adoc[vista] se admite la misma sintaxis y operatoria, incluyendo la incorporación de literales.
+
+[EXAMPLE]
+====
+
+`++Secuencia[PoissonAleatorio[3] p + BinomialAleatorio[5,0.75] b, ñ, 1, 3]++` da origen a una lista como la siguiente,
+que varía aleatoriamente:_\{6p + 6, 3p + 8, 3p + 6}_
+
+====
+
+[NOTE]
+====
+
+Ver también:xref:/Operadores_y_Funciones_Predefinidas.adoc[-Operadores y Funciones Predefinidas]-Los
+xref:/Comandos.adoc[comandos]...
+
+* xref:/commands/FijaSemilla.adoc[FijaSemilla]
+* xref:/commands/AleatorioEntre.adoc[AleatorioEntre]
+* xref:/commands/ElementoAleatorio.adoc[ElementoAleatorio]
+* xref:/commands/BinomialAleatorio.adoc[BinomialAleatorio]
+* xref:/commands/NormalAleatorio.adoc[NormalAleatorio]
+* xref:/commands/UniformeAleatorio.adoc[UniformeAleatorio].
+
+====

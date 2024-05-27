@@ -1,0 +1,60 @@
+= Příkaz TaylorovaRada
+:page-en: commands/TaylorPolynomial_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+TaylorovaRada( <Funkce>, <Číslo a>, <Číslo n> )::
+  Pro danou _funkci_ vytvoří Taylorův rozvoj stupně _n_ se středem v bodě _a_.
+
+[EXAMPLE]
+====
+
+Výsledkem příkazu `++TaylorovaRada[x^2, 3, 1]++` je polynom _6 x - 9_, tj. Taylorův polynom stupně _1_ pro funkci _x^2^_
+se středem v bodě _x = 3_.
+
+====
+
+== CAS pohled
+
+TaylorovaRada( <Funkce>, <Číslo a>, <Číslo n> )::
+  Pro danou _funkci_ vytvoří Taylorův rozvoj stupně _n_ se středem v bodě _a_.
+
+[EXAMPLE]
+====
+
+Výsledkem příkazu `++TaylorovaRada[x^2, a, 1]++` je polynom _-a^2^ + 2 a x_, tj. Taylorův polynom stupně _1_ pro funkci
+_x^2^_ se středem v bodě _x = a_.
+
+====
+
+TaylorovaRada( <Funkce>, <Proměnná>, <Číslo a>, <Číslo n> )::
+  Pro danou _funkci_ vytvoří Taylorův rozvoj stupně _n_ vzhledem k _proměnné x_ se středem v bodě _Proměnná = a_.
+
+[EXAMPLE]
+====
+
+Výsledkem příkazu `++TaylorPolynomial[x^3 sin(y), y, 3, 2]++` je funkce _stem:[\frac\{cos(3) x^\{3} (2 y - 6) + sin(3)
+x^\{3} (-y^\{2} + 6 y - 7)}\{2}]_ , tj. Taylorův rozvoj funkce _x^3^ sin(y)_ stupně _2_ vzhledem k proměnné _y_ se
+středem v bodě _y = 3_.
+
+====
+
+[EXAMPLE]
+====
+
+Výsledkem příkazu `++TaylorovaRada[x^3 sin(y), x, 3, 2]++` je funkce _sin(y) (9 x^2^ - 27 x + 27)_, tj. Taylorův rozvoj
+funkce _x^3^ sin(y)_ stupně _2_ vzhledem k proměnné _x_ se středem v bodě _x = 3_.
+
+====
+
+[NOTE]
+====
+
+Stupeň _n_ musí být nezáporné celé číslo.
+
+====
+
+[NOTE]
+====
+
+Anglická verze: /s_index_php?title=En:Manual:TaylorPolynomial_Command_action=edit_redlink=1.adoc[TaylorPolynomial]
+====

@@ -1,0 +1,57 @@
+= Commande CRésoudre
+:page-en: commands/CSolve_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+*/Fichier:Menu_view_cas_svg.adoc[image:24px-Menu_view_cas.svg.png[Menu view cas.svg,width=24,height=24]] uniquement en
+fenêtre xref:/Calcul_formel.adoc[Calcul formel]*
+
+CRésoudre( <Équation> )::
+  Résout l'équation, (vous pouvez omettre le _= 0_), de variable _x_, en autorisant les solutions complexes.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++CRésoudre(x²+4)++` retourne _\{x = 2ί , x = - 2ί}_ ;
+
+`++CRésoudre(x² = -1)++` retourne _\{x = ί, x = -ί}_.
+
+====
+
+CRésoudre( <Équation>, <Variable v> )::
+  Résout l'équation _Expression = 0_ de variable _v_, en autorisant les solutions complexes.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++CRésoudre(v²+4,v)++` retourne _\{v = 2ί , v = - 2ί}_.
+
+====
+
+CRésoudre( <Liste d'équations>, <Liste de Variables> )::
+  Résout un système d'équations et retourne la liste de toutes les solutions, y compris les solutions complexes.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++CRésoudre({y^2 = x- 1, x = 2 * y - 1}, {x, y})++` retourne _\{\{x = 1 + 2ί, y = 1 + ί}, \{x = 1 - 2ί, y = 1 - ί}}_.
+
+====
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/CSolutions.adoc[CSolutions],
+xref:/commands/RacineComplexe.adoc[RacineComplexe] et xref:/commands/Résoudre.adoc[Résoudre].
+
+====
+
+[NOTE]
+====
+
+*Note :* L'imaginaire ί est obtenu en pressant [.kcode]#ALT # + [.kcode]# i#.
+
+====

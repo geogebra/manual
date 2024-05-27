@@ -1,0 +1,56 @@
+= Commande Patron
+:page-en: commands/Net_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+*/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] Graphique 3D*
+
+Patron( <Polyèdre> , <Nombre> )::
+  Crée un développement du polyèdre convexe sur le plan contenant la face ayant servi de base à sa construction. Le
+  nombre doit être compris entre 0 et 1. Le développement est total lorsque ce nombre vaut 1.
+
+L'ouverture du patron peut être gérée à la souris.
+
+/Fichier:Tool_tool_png.adoc[image:Tool_tool.png[Tool tool.png,width=32,height=32]] Voir l' *outil* associé :
+/Fichier:Mode_net_png.adoc[image:Mode_net.png[Mode net.png,width=32,height=32]] xref:/tools/Patron.adoc[Patron].
+
+====
+
+[NOTE]
+====
+
+*Note :* Pour un cube, vous obtenez le développement en _croix latine_.
+
+====
+
+vous pouvez obtenir l'un quelconque des 11 patrons du cube, en forçant certaines arêtes à ne plus être mitoyennes, dans
+la syntaxe :
+
+Patron( <Cube>, <Nombre>, <Face>, <Arête>, <Arête>, ... )
+
+les résultats de mes investigations (fichier sur http://geogebra.org/material/show/id/136596[GeoGebratube]) :
+
+{empty}1) Patron(cube, Ouv, faceABCD, arêteAD, arêteBC, arêteBF, arêteAE)
+
+{empty}2) Patron(cube, Ouv, faceABCD, arêteAD, arêteBF, arêteAE)
+
+{empty}3) Patron(cube, Ouv, faceABCD, arêteAD,arêteBC, arêteAE)
+
+{empty}4) Patron(cube, Ouv, faceABCD, arêteAD,arêteBC, arêteAE, arêteBF, arêteCG)
+
+{empty}5) Patron(cube, Ouv, faceABCD, arêteEH)
+
+{empty}6) Patron(cube, Ouv, faceABCD, arêteEH, arêteBC)
+
+{empty}7) Patron(cube, Ouv, faceABCD, arêteAD, arêteCD, arêteAE)
+
+{empty}8) Patron(cube, Ouv, faceABCD, arêteCD, arêteAE, arêteDH, arêteEH)
+
+{empty}9) Patron(cube, Ouv, faceABCD, arêteCD, arêteAD, arêteDH, arêteEH)
+
+{empty}10) Patron(cube, Ouv, faceABCD, arêteCD, arêteAD, arêteDH, arêteAE)
+
+{empty}11) Patron(cube, Ouv, faceABCD, arêteAD, arêteCD, arêteEF, arêteFG)

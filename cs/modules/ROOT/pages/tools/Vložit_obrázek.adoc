@@ -1,0 +1,121 @@
+= Nástroj Vložit obrázek
+:page-en: tools/Image_Tool
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Soubor:UnderConstruction_png.adoc[image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]]
+
+|Some content was not yet translated. See the
+/s_index_php?title=En:Manual:Insert_Image_Tool_action=edit_redlink=1.adoc[English original]. Please
+//wiki.geogebra.org/s/cs/index.php?title=Manu%C3%A1l:N%C3%A1stroj_Vlo%C5%BEit_obr%C3%A1zek&action=edit[edit the manual
+page] if you have the rights for translation.
+|===
+
+Tento nástroj umožňuje vložit obrázek na nákresnu.
+
+Nejprve specifikujeme umístění obrázku a to jedním z následujících způsobů:
+
+* Kliknutím na nákresnu určíme umístění levého dolního rohu obrázku.
+* Kliknutím na bod určíme umístění levého dolního rohu obrázku.
+
+Poté se zobrazí dialogové okno Otevřít, kde vybereme obrázek ze složek uložených v počítači.
+
+== Vlastnosti obrázků
+
+Umístění obrázku může být absolutní, tedy v mřížce nebo relativní v soustavě souřadné. To můžeme nastavit v záložce
+Základní v xref:/s_index_php?title=Properties_Dialog_action=edit_redlink=1.adoc[Properties Dialog] obrázku.
+
+Můžeme specifikovat až tři rohové body obrázku v záložce Pozice v dialogu Vlastnosti. To nám umožňuje přizpůsobit
+měřítko a otáčet či dokonce deformovat obrázek (viz také příkaz
+xref:/s_index_php?title=Corner_Command_action=edit_redlink=1.adoc[Corner Command]).
+
+* Roh 1: pozice levého dolního rohu obrázku
+* Roh 2: pozice pravého dolního rohu obrázku
+
+* Roh 4: pozice levého horního rohu
+
+Obrázek můžeme nastavit také jako Obrázek na pozadí v tabulce Základní v
+xref:/s_index_php?title=Properties_Dialog_action=edit_redlink=1.adoc[Properties Dialog]. Obrázek na pozadí je umístěn za
+osami soustavy a nelze na něj kliknout myší.
+
+Průhlednost obrázku lze měnit, aby byl viditelný obrázek nebo osy za ním. Průhlednost obrázku nastavíme specifikací
+Neprůhlednosti mezi 0 % a 100 % v záložce Styl v dialogu Vlastnosti.
+
+[EXAMPLE]
+====
+
+Už jsme viděli, jak ovlivnit pozici a velikost obrázku. Pokud chceme svůj obrázek připojit k bodu A a nastavit jeho
+šířku na 3 a výšku na 4 jednotky, můžeme postupovat takto::
+
+* Označte Roh 1 jako A
+* Označte Roh 2 jako A + (3, 0)
+* Označte Roh 4 jako A + (0, 4)
+
+====
+
+[EXAMPLE]
+====
+
+Vytvoříme tři body A, B, a C a vyzkoušíme si možnosti rohových bodů.
+
+* Označme bod A jako první a roh B jako druhý roh našeho obrázku. Při pohybování body A a B v režimu
+/Soubor:Tool_Move_gif.adoc[image:Tool_Move.gif[Tool Move.gif,width=32,height=32]] Ukazovátko můžeme vyzkoušet jejich
+efekt.
+* Nyní odstraníme bod B, tedy druhý roh obrázku. Označíme bod A jako první a bod C jako čtvrtý roh a vyzkoušíme, jak
+můžeme ovlivnit obrázek při pohybování jednotlivými body.
+* Nakonec můžeme označit všechny tři rohové body a pozorovat, jak se obrázek při pohybování body zdeformuje.
+
+====
+
+[NOTE]
+====
+
+Chceme-li změnit nastavení obrázku na pozadí, můžeme otevřít dialog Vlastnosti
+zvolením/Soubor:Menu_Properties_png.adoc[image:Menu_Properties.png[Menu Properties.png,width=16,height=16]] Vlastnosti…
+v xref:/s_index_php?title=Edit_Menu_action=edit_redlink=1.adoc[Edit Menu].
+
+====
+
+[NOTE]
+====
+
+Pokud nyní budeme pohybovat bodem A v režimu /Soubor:Tool_Move_gif.adoc[image:Tool_Move.gif[Tool
+Move.gif,width=32,height=32]] xref:/s_index_php?title=Move_Tool_action=edit_redlink=1.adoc[Move], velikost našeho
+obrázku se nezmění.
+
+====
+
+[NOTE]
+====
+
+Tento roh lze označit pouze je-li již označen Roh 1. Tímto je určena výška obrázku.
+
+====
+
+[NOTE]
+====
+
+Tento roh lze označit pouze je-li již označen Roh 1. Tímto je určena šíře obrázku.
+
+====
+
+[NOTE]
+====
+
+Jsou podporovány průhledné soubory [http://en.wikipedia.org/wiki/Graphics_Interchange_Format[GIF]] a
+[http://en.wikipedia.org/wiki/Portable_Network_Graphics[PNG]] , ale u PNG souborů může být nutné je nejdříve upravit,
+protože používají alfa kanál (například použití v [http://www.irfanview.com/[IrfanView]], uložíme pomocí PNGOUT pluginu
+a vybereme *RGB+Alpha*)
+
+====
+
+[NOTE]
+====
+
+Po zvolení tohoto nástroje /Soubor:Tool_Insert_Image_gif.adoc[image:Tool_Insert_Image.gif[Tool Insert
+Image.gif,width=32,height=32]] Vložit obrázek můžeme využít klávesovou zkratku _Alt-click_, čímž vložíme obrázek na
+nákresnu přímo ze schránky počítače.
+
+====

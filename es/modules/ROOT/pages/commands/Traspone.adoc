@@ -1,0 +1,42 @@
+= Comando Traspone
+:page-en: commands/Transpose_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Traspone( <Matriz> )::
+  Da por resultado la matriz traspuesta de la dada.
+
+[EXAMPLE]
+====
+
+`++Traspone({{1,2,3},{4,5,6},{7,8,9}})++` devuelve stem:[\begin\{pmatrix}1&4&7\\ 2&5&8\\ 3&6&9\end\{pmatrix}].
+
+====
+
+== Sintaxis CAS
+
+Traspone( <Matriz> )::
+  Da por resultado la matriz traspuesta de la dada.
+
+[EXAMPLE]
+====
+
+`++Traspone({{a, b}, {c, d}})++` devuelve stem:[\begin\{pmatrix}a&c\\b&d\end\{pmatrix}]
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/ValoresPropios.adoc[ValoresPropios],
+xref:/commands/VectoresPropios.adoc[VectoresPropios], xref:/commands/DVS.adoc[DVS], xref:/commands/Inversa.adoc[Inversa]
+y xref:/commands/DiagonalizaciónJordan.adoc[DiagonalizaciónJordan].
+
+====
+
+[NOTE]
+====
+
+Es posible usar `++Traspone({<Lista>})++` para trasponer listas. Los corchetes extra convierten la lista en matriz, de
+ahí `++{lista}++`
+
+====

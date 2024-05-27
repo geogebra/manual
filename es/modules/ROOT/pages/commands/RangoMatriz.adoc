@@ -1,0 +1,49 @@
+= Comando RangoMatriz
+:page-en: commands/MatrixRank_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+RangoMatriz( <Matriz> )::
+  Da por resultado el http://en.wikipedia.org/wiki/es:Rango_de_una_matriz[rango] de la matriz indicada.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++RangoMatriz[{{1, 2}, {3, 4}}]++`* da por resultado __2__**`++RangoMatriz[{{2, 2}, {1, 1}}]++`** da por
+resultado _1_
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: No confundir
+con:*`++Dimensión[ { {2, 2}, {1, 1}]++`* que da por resultado _\{_ _2 , 2_ _}_
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+En esta xref:/Vista_CAS.adoc[vista] se admite la misma sintaxis pudiendo incluirse literales en operaciones simbólicas.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++RangoMatriz++`*[\{\{a~1~1~~ , a~1~2~~}, \{ a~2~1~~, a~2~2~~ }} ] da por resultado
+__2__**`++RangoMatriz++`**[\{\{a~1~1~~ , a~1~2~~}, \{k a~1~1~~, k a~1~2~~ }} ] da por resultado _1_
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/Determinante.adoc[Determinante].
+
+====

@@ -1,0 +1,65 @@
+= Příkaz Invertovat
+:page-en: commands/Invert_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Invertovat( <Matice> )::
+  Výpočet inverzní matice.
+  === CAS pohled
+  Invertovat( <Matice> );;
+    Výpočet inverzní matice.
+      [width="100%",cols="50%,50%",]
+    |===
+    a|
+    image:Ambox_content.png[image,width=40,height=40]
+
+    a|
+    Následující text pojednává o vlastnosti, která je podporována pouze v
+    /s_index_php?title=En:Release_Notes_GeoGebra_4_2_action=edit_redlink=1.adoc[GeoGebra 4.2 Beta].
+
+    '''''
+
+    Invertovat[ <Funkce> ]::
+      Určí inverzní funkci.
+
+    [NOTE]
+
+    ====
+
+    Předpis musí obsahovat jen jeden výskyt proměnné _x_ a nejsou řešeny předpoklady definičního oboru, např. pro
+    f(x)=x^2 or f(x) = sin(x).
+
+    Pokud se v zápisu funkce vyskytuje proměnná _x_ vícekrát, můžete jej upravit pomocí vhodných příkazů:
+
+    [EXAMPLE]
+
+    ====
+
+    `++Invertovat[ParcialniZlomky[(x+1)/(x+2)]]++` or `++Invertovat[UplnyCtverec[x^2+2x+1]]++`
+
+    ====
+
+    ====
+
+    |===
+  [EXAMPLE]
+
+  ====
+
+  `++Invertovat[{{a, b}, {c, d}}]++` výsledkem je inverzní matice stem:[ \begin\{pmatrix} \frac\{d}\{a* d- b* c} &
+  \frac\{-b}\{a* d- b* c}\\ \frac\{-c}\{a* d- b* c}& \frac\{a}\{ a* d- b* c} \end\{pmatrix} ].
+
+  ====
+
+[EXAMPLE]
+====
+
+`++Invertovat[{{1, 2}, {3, 4}}]++` vypočítá inverzní matici stem:[ \begin\{pmatrix} -2 & 1\\ 1.5 & -0.5 \end\{pmatrix}
+].
+
+====
+
+[NOTE]
+====
+
+Anglická verze: /s_index_php?title=En:Invert_Command_action=edit_redlink=1.adoc[Invert]
+====

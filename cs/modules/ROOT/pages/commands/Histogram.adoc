@@ -1,0 +1,70 @@
+= Příkaz Histogram
+:page-en: commands/Histogram_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Histogram( <Seznam hranic tříd>, <Seznam výšek> )::
+  Vytvoří histogram se sloupci daných výšek. Hranice tříd určují šířku i pozici sloupců na _x_-ové ose. Seznam hranic
+  tříd musí mít o jeden prvek víc, než seznam výšek.
+
+[EXAMPLE]
+====
+
+`++Histogram[{0, 1, 2, 3, 4, 5}, {2, 6, 8, 3, 1}]++` vytvoří histogram s 5 sloupci předepsaných výšek. První sloupec je
+sestrojen nad intervalem [0, 1], druhý sloupec je nad intervalem [1, 2], a tak dále.
+
+====
+
+Histogram( <Seznam hranic tříd>, <Seznam nezpracovaných dat>, < Užití hustoty> (volitelné) , <Měřítko hustoty
+(volitelné)> )::
+  Zobrazí histogram absolutních četností seznamu nezpracovaných dat. Hranice tříd musí tvořit vzestupná posloupnost,
+  dolní hranice prvního intervalu nesmí být větší než nejmenší z dat a obdobně horní hranice posledního intervalu nesmí
+  být menší než největší hodnota zpracovávaných dat. Výška sloupce je určena četností třídy. Pokud je nastavena logická
+  hodnota pro užití hustoty _false_, jsou četnosti násobeny jen měřítkem hustoty, v opačném případě jsou navíc normovány
+  délkou intervalu _výška=(měřítko hustoty*četnost třídy/šířka třídy)_.
+
+Přednastavené hodnoty: Užití hustoty = _true_, Měřítko hustoty = 1. Celkový obsah plochy histogramu je pak přímo počet
+dat.
+
+[EXAMPLE]
+====
+
+(_Základní histogram_)
+
+`++Histogram[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true]++` vytvoří histogram se třemi sloupci o výškách
+0.5 (první sloupec), 0.2 (druhý sloupec), a 0.1 (třetí sloupec).
+
+Celkový obsah plochy = 0.5*10 + 0.2*10 + 0.1*10 = 8.
+
+====
+
+[EXAMPLE]
+====
+
+(_Histogram absolutních četností_)
+
+`++Histogram[{10, 15, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, false]++` vytvoří histogram se třemi sloupci o výškách
+4 (první sloupec), 3 (druhý sloupec), a 1 (třetí sloupec). Výška sloupce je rovna počtu dat třídy. Histogram
+nezohledňuje různou šířku tříd, proto není vhodný pro odhad hustoty pravděpodobnosti.
+
+====
+
+[EXAMPLE]
+====
+
+(_Histogram relativních četností_)
+
+`++Histogram[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 10/ 8] ++` Vytvoří histogram se třemi sloupci o
+výškách 0.625 (první sloupec), .25 (druhý sloupec), and .125 (třetí sloupec).
+
+Máme-li soubor _n_ dat a všechny třídy mají stejnou šířku _w_, pak pro zobrazení relativních četností zadáme měřítko
+hustoty = _w/n_.
+
+====
+
+Histogram( <Kumulativní (logická hodnota)> (volitelné), <Seznam hranic tříd>, <Seznam nezpracovaných dat>, < Užití
+hustoty> (volitelné), <Měřítko hustoty (volitelné)> )::
+  Pokud je kumulativní logická hodnota _true_ jsou k četnosti každé třídy připočítány i četnosti všech předcházejících
+  tříd. Výsledný histogram můžeme použít pro odhad distribuční funkce. Pokud parametr pro kumulativní četnosti
+  vynecháme, je použita hodnota _false_ - předcházející příklady.
+
+/s_index_php?title=En:Histogram_Command_action=edit_redlink=1.adoc[en:Histogram_Command]

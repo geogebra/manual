@@ -1,0 +1,69 @@
+= Příkaz LaTeX
+:page-en: commands/FormulaText_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+LaTeX( <Objekt> )::
+  Vytvoří textový objekt s LaTeXovým formátováním, jehož obsah je vzorec pro zadaný objekt.
+
+[NOTE]
+====
+
+* Ve výchozím nastavení jsou ve výsledném textu za proměnné dosazovány jejich aktuální hodnoty.
+* Více o LaTeXovém formátování viz xref:/LaTeX.adoc[LaTeX].
+
+====
+
+[EXAMPLE]
+====
+
+Je-li _a=2_ a _f(x)=a x^2^_, potom výstupem příkazu `++LaTeX[f]++` je textový objekt stem:[2 x^2].
+
+====
+
+LaTeX( <Objekt>, <Pravdivostní hodnota pro substituci proměnných> )::
+  Vytvoří textový objekt s LaTeXovým formátováním, jehož obsah je vzorec pro zadaný objekt. Pravdivostní hodnota určuje,
+  zda bude ve výsledném textu za proměnnou dosazena její aktuální hodnota (_true_), nebo zda se ve vzorci zobrazí název
+  proměnné (_false_).
+
+[EXAMPLE]
+====
+
+Je-li _a=2_ a _f(x)=a x^2^_, potom výstupem příkazu
+
+* `++LaTeX[f,true]++` je textový objekt stem:[2 x^2],
+* `++LaTeX[f,false]++` je textový objekt stem:[a x^2].
+
+====
+
+LaTeX( <Objekt>, <Pravdivostní hodnota pro substituci proměnných> , <Pravdivostní hodnota pro zobrazení názvu objektu>
+)::
+  Vytvoří textový objekt s LaTeXovým formátováním, jehož obsah je vzorec pro zadaný objekt. První pravdivostní hodnota
+  určuje, zda bude ve výsledném textu za proměnnou dosazena její aktuální hodnota (_true_), nebo zda se ve vzorci
+  zobrazí název proměnné (_false_). Druhá pravdivostní hodnota určuje, zda bude (_true_), nebo nebude (_false_) ve
+  výsledném textu zobrazen název objektu.
+
+[EXAMPLE]
+====
+
+Je-li _a=2_ a _f(x)=a x^2^_, potom výstupem příkazu
+
+* `++LaTeX[f,true,false]++` je textový objekt stem:[2 x^2],
+* `++LaTeX[f,false,false]++` je textový objekt stem:[a x^2],
+* `++LaTeX[f,true,true]++` je textový objekt stem:[f(x) = 2 x^2],
+* `++LaTeX[f,false,true]++` je textový objekt stem:[f(x) = a x^2].
+
+====
+
+[NOTE]
+====
+
+Prostým přetažením objektu myší z algebraického okna do grafického pohledu vznikne textový objekt, který odpovídá
+výstupu příkazu `++LaTeX[<Objekt>,true,true]++`.
+
+====
+
+[NOTE]
+====
+
+/s_index_php?title=En:FormulaText_action=edit_redlink=1.adoc[FormulaText]
+====

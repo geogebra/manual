@@ -1,0 +1,87 @@
+= Comando TrigDesarrolla
+:page-en: commands/TrigExpand_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+TrigDesarrolla( <Expresión> )::
+  Transforma una expresión trigonométrica en otra que usa solamente variables simples como argumentos.
+  También puede desarrollar un producto en una expresión lineal.
+
+[EXAMPLE]
+====
+
+`++ TrigDesarrolla(sen(x)sen(x/3))++` devuelve stem:[\frac\{3}\{2 \; x^\{2}} \; cos \left( 2 \cdot \frac\{x}\{3} \right)
+- \frac\{3}\{2 \; x^\{2}} \; cos \left( 4 \cdot \frac\{x}\{3} \right) ].
+
+====
+
+[EXAMPLE]
+====
+
+`++ TrigDesarrolla(tan(x + y))++` devuelve stem:[\frac\{\frac\{sen(x)}\{cos(x)}+\frac\{sen(y)}\{cos(y)}}
+\{1-\frac\{sen(x)}\{cos(x)} \cdot \frac\{sen(y)}\{cos(y)}} ].
+
+====
+
+TrigDesarrolla( <Expresión>, <Función modelo> )::
+  Transforma una expresión trigonométrica en otra que usa solamente variables simples como argumentos, preferentemente
+  la función modelo dada.
+
+[EXAMPLE]
+====
+
+`++ TrigDesarrolla(tan(x + y), tan(x))++` devuelve stem:[\frac\{-tan(x) - tan(y)}\{tan(x) tan(y) - 1}].
+
+====
+
+== Sintaxis CAS
+
+La vista CAS puede devover diferentes resultados, según el modo de salida seleccionado:
+
+[EXAMPLE]
+====
+
+`++ TrigDesarrolla(tan(x + y))++` en modo /Archivo:Mode_evaluate_svg.adoc[image:32px-Mode_evaluate.svg.png[Mode
+evaluate.svg,width=32,height=32]] _Cálculo simbólico_ devuelve
+stem:[\frac\{\frac\{sen(x)}\{cos(x)}+\frac\{sen(y)}\{cos(y)}} \{1-\frac\{sen(x)}\{cos(x)} \cdot \frac\{sen(y)}\{cos(y)}}
+] en modo /Archivo:Mode_numeric_svg.adoc[image:32px-Mode_numeric.svg.png[Mode numeric.svg,width=32,height=32]] _Cálculo
+numérico_ devuelve stem:[\frac\{sen(x) cos(y) + sen(y) cos(x)}\{- sen(x) sen(y) +cos(x) cos(y) }] .
+
+====
+
+Los siguientes comandos están disponibles solamente en la xref:/Vista_CAS.adoc[image:16px-Menu_view_cas.svg.png[Menu
+view cas.svg,width=16,height=16]] xref:/Vista_CAS.adoc[Vista CAS]:
+
+TrigDesarrolla( <Expresión>, <Función modelo>, <Variable modelo> )::
+  Transforma una expresión trigonométrica en otra que usa solamente variables simples como argumentos, preferentemente
+  la función modelo y la variable modelo dadas.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++ TrigDesarrolla(sen(x), sen(x), x/2)++` devuelve stem:[2cos \left( \frac\{x}\{2} \right) sen \left( \frac\{x}\{2}
+\right) ]
+* `++ TrigDesarrolla(sen(x)/(1+cos(x)), tan(x), x/2)++` devuelve stem:[tan \left( \frac\{x}\{2} \right)].
+
+====
+
+TrigDesarrolla( <Expresión>, <Función modelo>, <Variable modelo>, <Variable modelo> )::
+  Transforma una expresión trigonométrica en otra que usa solamente variables simples como argumentos, preferentemente
+  la función modelo y las variables modelo dadas.
+
+[EXAMPLE]
+====
+
+`++ TrigDesarrolla(cosec(x) - cotg(x) + cosec(y) - cotg(y), tan(x), x/2, y/2)++` devuelve stem:[tan \left( \frac\{x}\{2}
+\right) +tan \left( \frac\{y}\{2} \right) ].
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/TrigSimplifica.adoc[TrigSimplifica] y
+xref:/commands/TrigCombina.adoc[TrigCombina].
+
+====

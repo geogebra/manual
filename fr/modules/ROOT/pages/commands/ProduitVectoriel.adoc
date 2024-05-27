@@ -1,0 +1,66 @@
+= Commande ProduitVectoriel
+:page-en: commands/Cross_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+ProduitVectoriel( <Vecteur stem:[\vec\{u}]> , <Vecteur stem:[\vec\{v}]> )
+
+* stem:[\vec\{u}] stem:[\begin\{pmatrix}a \\ b\end\{pmatrix} ] et stem:[\vec\{v}] stem:[\begin\{pmatrix}c \\
+d\end\{pmatrix}] étant deux vecteurs du plan, vous obtenez le déterminant du bivecteur, ou cote du produit vectoriel de
+_(a,b,0)_ et _(c,d,0)_.
+
+[EXAMPLE]
+====
+
+*Exemple :* Vous avez créé deux vecteurs du plan stem:[\vec\{u}] stem:[\begin\{pmatrix}2 \\ 2\end\{pmatrix}] et
+stem:[\vec\{v}]stem:[\begin\{pmatrix}-3 \\ 1\end\{pmatrix} ] `++ProduitVectoriel(u,v)++` retourne le nombre 8 = 2 x 1 -
+2 x -3.(Déterminant du bivecteur, ou cote du produit vectoriel de _(2,2,0)_ et _(-3,1,0)_).
+
+====
+
+* stem:[\vec\{u}] et stem:[\vec\{v}] étant deux vecteurs de l'espace (liste à 3 éléments), vous obtenez le vecteur
+(liste à 3 éléments) produit vectoriel des deux vecteurs.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++ProduitVectoriel({1, 3, 2}, {0, 3, -2})++` retourne _\{-12, 2, 3}_, correspondant au vecteur
+stem:[\begin\{pmatrix}-12 \\ 2 \\3\end\{pmatrix}],
+
+le vecteur produit vectoriel de stem:[\begin\{pmatrix}1 \\ 3\\2\end\{pmatrix} ] et de stem:[\begin\{pmatrix}0 \\
+3\\-2\end\{pmatrix} ].
+
+====
+
+[NOTE]
+====
+
+*Note :* Pour calculer directement le produit "vectoriel" de deux vecteurs _u_ et _v_ créés, vous pouvez utiliser, dans
+xref:/Saisie.adoc[Saisie] le produit `++u⊗v++`.
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Avec la possibilité de travailler en littéral.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+Les variables _a_, _b_, _c_, _d_, _e_ et _f_ n'étant pas définies dans votre fichier GeoGebra :
+
+`++ProduitVectoriel({a, b, c}, {d, e, f})++` retourne _\{b f - c e, -a f + c d, a e - b d}_ ;
+
+`++ProduitVectoriel({a, b}, {c,d})++` retourne _\{0, 0, a d - b c}_.
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/ProduitScalaire.adoc[ProduitScalaire].

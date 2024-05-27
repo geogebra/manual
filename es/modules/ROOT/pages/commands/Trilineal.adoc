@@ -1,0 +1,34 @@
+= Comando Trilineal
+:page-en: commands/Trilinear_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Trilineal( <Punto>, <Punto>, <Punto>, <Número>, <Número>, <Número> )::
+  Crea un punto de http://en.wikipedia.org/wiki/Trilinear_coordinates[coordenadas trilineales] correspondientes a la
+  terna de números dados, respecto de un triángulo cuyos vértices son los puntos indicados.
+
+== Algunos Ejemplos
+
+[cols=",,,",options="header",]
+|===
+|Punto |<Número> |<Número> |<Número>
+|A |1 |0 |0
+
+|B |0 |1 |0
+
+|C |0 |0 |1
+
+|Circuncentro |cos(stem:[\hat\{A}]) |cos(stem:[\hat\{B}]) |cos(stem:[\hat\{C}])
+
+|Incentro |1 |1 |1
+
+|Exincentro tangente a [BC] |-1 |1 |1
+
+|Exincentro tangente a [AC] |1 |-1 |1
+
+|Exincentro tangente a [AB] |1 |1 |-1
+
+|Baricentro |stem:[\frac\{1}\{a}] |stem:[\frac\{1}\{b}] |stem:[\frac\{1}\{c}]
+
+|Ortocentro |cos(stem:[\hat\{B}]) cos(stem:[\hat\{C}]) |cos(stem:[\hat\{A}]) cos(stem:[\hat\{C}])
+|cos(stem:[\hat\{A}])cos(stem:[\hat\{B}])
+|===

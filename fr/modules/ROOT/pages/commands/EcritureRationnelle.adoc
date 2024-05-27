@@ -1,0 +1,33 @@
+= Commande EcritureRationnelle
+:page-en: commands/Rationalize_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+*/Fichier:Menu_view_cas_svg.adoc[image:24px-Menu_view_cas.svg.png[Menu view cas.svg,width=24,height=24]] uniquement en
+fenêtre xref:/Calcul_formel.adoc[Calcul formel]*
+
+EcritureRationnelle( <Nombre> )::
+  Si le _nombre_ donné est rationnel, en retourne l'écriture rationnelle ;
+  Si le _nombre_ donné n'est pas rationnel, le retourne, le cas échéant, sous la forme d'une fraction de dénominateur
+  entier.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++EcritureRationnelle(3.5)++` retourne stem:[\frac\{7}\{2}] ;
+
+`++EcritureRationnelle(1/sqrt(2))++` retourne stem:[\frac\{\sqrt\{2} }\{2}] ;
+
+`++EcritureRationnelle(1/(sqrt(2)+sqrt(3))) ++` retourne stem:[\sqrt\{3} - \sqrt\{2} ] ;
+
+`++EcritureRationnelle(1/(sqrt(2)+sqrt(5))) ++` retourne stem:[\frac\{\sqrt\{5} - \sqrt\{2} }\{3}].
+
+====
+
+*Note :* Voir aussi la commande xref:/commands/FractionPropre.adoc[FractionPropre] .
+
+====

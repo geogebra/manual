@@ -1,0 +1,58 @@
+= Commande PPCM
+:page-en: commands/LCM_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+PPCM( <Nombre a>,<Nombre b>)::
+  Calcule le plus petit multiple commun à _a_ et à _b_.
+PPCM( <Liste Nombres>)::
+  Calcule le plus petit multiple commun aux éléments de la Liste.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++PPCM({12, 30, 18})++` donne _180_.
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++PPCM(12, 15)++` donne _60_.
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Avec, en plus, la possibilité de travailler sur des polynômes.
+
+PPCM( <Polynôme>, <Polynôme> )::
+  Calcule le plus petit multiple commun aux deux polynômes.
+PPCM( <Liste de Polynômes> )::
+  Calcule le plus petit multiple commun aux polynômes de la liste.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++PPCM({x^2 + 4 x + 4, x^2 - x - 6, x^3 - 4 x^2 - 3 x + 18})++` donne stem:[x^4 - 2 x^3 - 11 x^2 + 12 x + 36].
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++PPCM(x^2 + 4 x + 4, x^2 - x - 6)++` donne stem:[x^3 + x^2 - 8 x - 12].
+
+====

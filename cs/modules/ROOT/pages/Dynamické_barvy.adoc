@@ -1,0 +1,64 @@
+= Dynamické barvy
+:page-en: Dynamic_Colors
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Soubor:UnderConstruction_png.adoc[image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]]
+
+|Some content was not yet translated. See the
+/s_index_php?title=En:Manual:Dynamic_Colors_action=edit_redlink=1.adoc[English original]. Please
+//wiki.geogebra.org/s/cs/index.php?title=Manu%C3%A1l:Dynamick%C3%A9_barvy&action=edit[edit the manual page] if you have
+the rights for translation.
+|===
+
+V GeoGebře můžeme měnit barvu objektů pomocí záložky Barva v
+xref:/s_index_php?title=Properties_Dialog_action=edit_redlink=1.adoc[Properties Dialog]. Barvu objektu také můžeme měnit
+dynamicky: Otevřeme u objektu, jehož barvu chceme změnit dialog Vlastnosti a klikneme na záložku Pro pokročilé. Zde v
+sekci Dynamické barvy najdeme textová pole pro barvy Červená, Zelená a Modrá.
+
+Sekce Dynamické barvy také obsahuje textové pole, které nám umožňuje měnit průhlednost vybraného objektu. Můžeme zadat
+číslo z intervalu [0,1] (kde 0 znamená průhledný a 1 znamená 100% neprůhledný), stejně jako u posuvníku, abychom získali
+dynamickou průhlednost. Jiná čísla budou ignorována.
+
+== RGB / HSV / HSL
+
+Kvůli chování některých dynamických barev může být jednodušší použít jiný barevný model. V těchto případech místo
+standardního http://en.wikipedia.org/wiki/RGB[RGB] vybereme z rozbalovacího seznamu ve spodní části sekce Dynamické
+barvy v záložce Pro pokročilé dialogu Vlastnosti buď http://en.wikipedia.org/wiki/HSL_and_HSV[HSV] nebo
+http://en.wikipedia.org/wiki/HSL_and_HSV[HSL].
+
+[EXAMPLE]
+====
+
+Aby bod _A_ prošel všemi barvami duhy když jím budeme pohybovat doleva a doprava, přepneme do režimu HSV a nastavíme
+saturaci a hodnotu na 1 a odstín nastavíme na `++x(A)++`.
+
+====
+
+[EXAMPLE]
+====
+
+* Vytvoříme tři xref:/s_index_php?title=Slider_Tool_action=edit_redlink=1.adoc[slider] a, b, a c s intervalem od 0 do 1.
+* Vytvoříme mnohoúhelník, jehož barva bude ovlivněna hodnotami na posuvnících.
+* Otevřeme xref:/s_index_php?title=Properties_Dialog_action=edit_redlink=1.adoc[Properties Dialog] mnohoúhelníku
+mnohoúhelník1 a vložíme názvy tří posuvníků do textových polí barevných komponentů.
+* Zavřeme dialog vlastnosti a změníme hodnoty na posuvnících, abychom zjistili jak každý z barevných komponentů
+ovlivňuje výslednou barvu mnohoúhelníku.
+
+[NOTE]
+====
+
+U posuvníků můžeme zapnout animaci s různými rychlostmi, aby se barva mnohoúhelníku měnila automaticky.
+
+====
+
+====
+
+[NOTE]
+====
+
+Do každého z těchto textových polí můžeme zadat funkci v rozmezí [0, 1].
+
+====

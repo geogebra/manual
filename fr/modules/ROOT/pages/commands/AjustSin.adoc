@@ -1,0 +1,34 @@
+= Commande AjustSin
+:page-en: commands/FitSin_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+AjustSin( <Liste Points> )::
+  Recherche une courbe de régression sous la forme _a + b sin(cx + d)_.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++AjustSin({(1, 1), (2, 2), (3, 1), (4, 0), (5, 1), (6, 2)})++` retourne _1 + sin(1.5708x - 1.5708)_.
+
+====
+
+[NOTE]
+====
+
+*Note :* La liste doit contenir au moins 4 points, de préférence davantage. Elle doit couvrir au moins les deux points
+extrêmes. Les deux premiers extremums locaux ne doivent pas être trop différents de l'extremum absolu de la courbe.
+
+====
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/Ajustement.adoc[Ajustement],
+xref:/commands/AjustExp.adoc[AjustExp], xref:/commands/AjustImplicite.adoc[AjustImplicite],
+xref:/commands/AjustLin.adoc[AjustLin], xref:/commands/AjustLinX.adoc[AjustLinX],
+xref:/commands/AjustLog.adoc[AjustLog], xref:/commands/AjustLogistique.adoc[AjustLogistique],
+xref:/commands/AjustPoly.adoc[AjustPoly] et xref:/commands/AjustPuissance.adoc[AjustPuissance].
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel

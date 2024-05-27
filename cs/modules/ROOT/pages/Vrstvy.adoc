@@ -1,0 +1,35 @@
+= Vrstvy
+:page-en: Layers
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+Vrstvy jsou v GeoGebře využívány k rozlišení, který objekt se má vybrat nebo přetáhnout myší, pokud uživatel klikne na
+více objektů zároveň.
+
+====
+
+V základním nastavení jsou všechny objekty vykreslovány ve vrstvě 0, což je vlastně pozadí
+xref:/Grafický_pohled.adoc[grafického pohledu]. Celkem je k dispozici 10 vrstev (s čísly 0 až 9). Vrstvy s vyššími čísly
+jsou vykreslovány nad vrstvami s nižšími čísly.
+
+Na záložce Pro pokročilé v xref:/Dialog_Vlastnosti.adoc[dialogu Vlastnosti] lze změnit vrstvu vybraného objektu (k
+dispozici jsou vrstvy 0 až 9). Jakmile je změněna vrstva alespoň jednoho objektu tak, že to již není vrstva 0 (ale je to
+např. vrstva 3), jsou všechny nově vytvářené objekty kresleny do vrstvy s nejvyšším číslem, které se u vyskytuje u
+kteréhokoliv objektu v dokumentu.
+
+[NOTE]
+====
+
+Všechny objekty ve stejné vrstvě jako označený objekt lze vybrat volbou položky _Vybrat aktuální vrstvu_ (klávesová
+zkratka [.kcode]#Ctrl# + [.kcode]#L#) z menu _Úpravy_. Tato položka v menu je dostupná pouze pokud jsou všechny aktuálně
+vybrané objekty ve stejné vrstvě.
+
+====
+
+== Další možnosti využití vrstev
+
+* Při exportu do SVG jsou objety seskupeny podle vrstev.
+* Vrstvy mohou být ovládány s využitím rozhraní JavaScriptu pro
+xref:/Dialog_Export_pracovního_listu_jako_webová_stránka.adoc[aplety Geogebry].

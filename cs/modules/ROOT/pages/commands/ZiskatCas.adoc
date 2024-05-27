@@ -1,0 +1,48 @@
+= Příkaz ZiskatCas
+:page-en: commands/GetTime_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+ZiskatCas()::
+  Výstupem příkazu je seznam obsahující aktuální čas a datum v tomto pořadí:
+  milisekundy, sekundy, minuty, hodiny (0–23), den (1–31), měsíc (1–12), rok, měsíc (slovně), den (slovně), den (1 =
+  Neděle, 2 = Pondělí, atd.)
+
+[EXAMPLE]
+====
+
+`++ZiskatCas[]++` vrací jako výsledek seznam _\{178, 44, 34, 10, 11, 7, 2012, "Červenec", "Středa", 4}_
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Následující text pojednává o vlastnosti, která je podporována pouze v
+/s_index_php?title=En:Release_Notes_GeoGebra_4_2_action=edit_redlink=1.adoc[GeoGebra 4.2 Beta].
+
+'''''
+
+ZiskatCas( <Formát> )::
+  Argument _Formát_ je text, ve kterém fungují jako zástupné symboly následující znaky uvozené zpětným lomítkem (\):
+  d, D, j, l, N, S, w, z, W, F, m, M, n, t, L, Y, y, a, A, g, G, h, H, i, s, U – vysvětlení významu těchto znaků lze
+  nalézt např. zde (anglicky): http://php.net/manual/en/function.date.php
+
+[EXAMPLE]
+====
+
+`++ZiskatCas["Dnes je \l, \j\S \F \Y."]++` vrací jako výsledek text _Dnes je Středa, 11. Červenec 2012._
+
+====
+
+|===
+
+[NOTE]
+====
+
+Originální anglická verze manuálu: /s_index_php?title=En:Manual:GetTime_Command_action=edit_redlink=1.adoc[GetTime
+Command].
+
+====

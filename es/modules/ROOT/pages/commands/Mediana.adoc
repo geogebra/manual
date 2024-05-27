@@ -1,0 +1,35 @@
+= Comando Mediana
+:page-en: commands/Median_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Mediana( <Lista de números> )::
+  Determina la mediana de la lista de elementos.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++Mediana({1, 2, 3})++` devuelve _2_.
+* `++Mediana({1, 1, 8, 8})++` devuelve _4.5_.
+
+====
+
+Mediana( <Lista de números>, <Lista de frecuencias> )::
+  Calcula la mediana de la lista de números ponderada según la de frecuencias indicada.
+
+[EXAMPLE]
+====
+
+* `++Mediana({1, 2, 3}, {4, 1, 3})++` devuelve _1.5_.
+* `++Mediana({1, 2, 3, 4}, {6, 1, 3, 6})++` devuelve _3_.
+
+====
+
+[NOTE]
+====
+
+* Si la lista dada tiene un número par de elementos, la mediana es la media aritmética de los dos valores centrales.
+* Ver también el comando xref:/commands/Media.adoc[Media].
+
+====

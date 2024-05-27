@@ -1,0 +1,127 @@
+= Personnaliser Graphique
+:page-en: Customizing_the_Graphics_View
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Pour ajuster la partie visible de la vue xref:/Graphique.adoc[Graphique], vous pouvez déplacer l’arrière-plan de la vue
+Graphique en utilisant le mode /Fichier:Mode_translateview_png.adoc[image:Mode_translateview.png[Mode
+translateview.png,width=32,height=32]] xref:/tools/Déplacer_Graphique.adoc[Déplacer Graphique] et utiliser les
+différentes manières de zoomer :
+
+* Utilisez les outils /Fichier:Mode_zoomin_png.adoc[image:Mode_zoomin.png[Mode zoomin.png,width=32,height=32]]
+xref:/tools/Agrandissement.adoc[Agrandissement] et /Fichier:Mode_zoomout_png.adoc[image:Mode_zoomout.png[Mode
+zoomout.png,width=32,height=32]] xref:/tools/Réduction.adoc[Réduction] pour obtenir un zoom dans la vue Graphique.
+
+[NOTE]
+====
+
+*Note :* La position de votre clic détermine le centre du zoom.
+
+====
+
+* Utilisez la molette de votre souris pour obtenir un zoom dans la vue Graphique (le maintien simultané de la touche Alt
+enfoncée en multiplie le facteur).
+* Utilisez les raccourcis clavier pour agrandir ([.kcode]#Ctrl# +[.kcode]##+## ) , réduire ([.kcode]#Ctrl# + [.kcode]#−#
+).
+* Après un clic droit (MacOS : Ctrl - clic) sur une place libre de la vue Graphique, un Menu Contextuel apparaît vous
+permettant le ‘Zoom’.
+* Définissez un Rectangle de Zoom en cliquant droit (MacOS: Cmd - clic) sur une place libre de la vue Graphique et
+tirant la souris jusqu’au sommet opposé du rectangle désiré. Relâchez le bouton de la souris pour terminer le rectangle
+qui va être automatiquement ajusté pour remplir toute la vue Graphique en respectant le rapport d’axes de départ. Si
+vous définissez votre Rectangle de zoom en maintenant la touche Maj enfoncée, le rapport d’axes sera recalculé.
+* Vous pouvez aussi afficher ou cacher les axes de coordonnées et la grille de coordonnées dans la vue Graphique dans le
+menu Affichage.
+
+[NOTE]
+====
+
+*Note :* L’item ‘Recadrer’ vous permet d’obtenir une vue Graphique affichant tous vos objets visibles. Le rapport d’axes
+n’est pas nécessairement conservé !
+
+====
+
+[NOTE]
+====
+
+*Note :* Une autre manière d’afficher ou cacher les axes et la grille est un clic droit (MacOS: Ctrl-clic) sur l’arrière
+plan de la vue Graphique et de sélectionner les items correspondants
+/Fichier:Menu_Axes_gif.adoc[image:Menu_Axes.gif[Menu Axes.gif,width=16,height=16]] ‘Axes’ ou
+/Fichier:Grid_gif.adoc[image:Grid.gif[Grid.gif,width=16,height=16]] ‘Grille’ dans le Menu Contextuel apparu.
+
+====
+
+== Afficher et Cacher des objets
+
+Vous pouvez montrer ou cacher des objets dans Graphique de différentes manières :
+
+* Utilisez l'outil /Fichier:Mode_showhideobject_png.adoc[image:Mode_showhideobject.png[Mode
+showhideobject.png,width=32,height=32]] xref:/tools/Afficher_cacher_l'objet.adoc[Afficher/cacher l’objet] ;
+* Ouvrez le Menu Contextuel et cochez ou non l’item Afficher l’objet ;
+* Dans la Fenêtre xref:/Algèbre.adoc[Algèbre], Cliquez directement sur l’icône à gauche de chaque objet (
+/Fichier:Shown_gif.adoc[image:Shown.gif[Shown.gif,width=16,height=16]]‘affiché’ ou
+/Fichier:Hidden_gif.adoc[image:Hidden.gif[Hidden.gif,width=16,height=16]]‘caché’), pour en modifier la visibilité ;
+* Utilisez l’outil /Fichier:Mode_showcheckbox_png.adoc[image:Mode_showcheckbox.png[Mode
+showcheckbox.png,width=32,height=32]] xref:/tools/BoîteSélection.adoc[BoîteSélection] pour faire afficher ou cacher un
+ou plusieurs objets.
+
+Pour plus d'informations, voir xref:/Propriétés_d'un_objet.adoc[visibilité].
+
+== Personnaliser le repère et la grille
+
+Les axes de coordonnées et la grille peuvent être personnalisés en utilisant le xref:/Dialogue_Propriétés.adoc[Dialogue
+Propriétés] de Graphique. Après un clic droit (MacOS: Ctrl-clic) sur l’arrière plan de la vue Graphique, vous pouvez
+ouvrir cette fenêtre de dialogue en choisissant ‘Graphique ...’ dans le xref:/Menu_contextuel.adoc[Menu contextuel] de
+la vue Graphique.
+
+* Dans l’onglet ’Basique’, vous pouvez, par exemple, changer le style du trait et la couleur des axes de coordonnées et
+définir le rapport entre leurs unités.
+* En ouvrant les onglets ‘axeX’ ou ‘axeY’, vous pouvez personnaliser individuellement chacun des deux axes, définir la
+distance entre les graduations à une certaine valeur, l'étiquetage des axes ainsi que les unités angulaires `++°, π++`,
+métriques `++mm, cm, m ou km++` (le ² est utilisable, pour les autres exposants 3 ... il faudra faire un copier/coller
+depuis Saisie, après y avoir tapé par ex. [.kcode]#m # + [.kcode]# Alt# + [.kcode]#3# ) ou
+financières`++£ € $ ¥ ₩ ϯ ₫ ₪ ₮ ₨ ₹++`. Si vous désirez que les axes se coupent au point _(a,b)_, vous pouvez définir le
+paramètre _coupant en :_ à _b_ pour ‘axeX’ et à _a_ pour ‘axeY’ . L'option _Coller au bord_ signifie que l'axe va rester
+proche des bords inférieur ou gauche de la vue graphique. Pour ne dessiner uniquement que les branches des axes situées
+à droite ou au dessus de leur point d'intersection, cochez l'option _Branche D/H seulement"._
+* Dans l’onglet ‘Grille’, vous pouvez, par exemple, changer la couleur et le style du trait de la grille, et définir la
+distance entre les lignes de la grille à une certaine valeur. Trois types de grille sont proposés : cartésienne
+(Quadrillage principal (en fonction des distances sur les axes) Quadrillage complet (le précédent avec 5 subdivisions) ,
+polaire et isométrique (son maillage est constitué de triangles équilatéraux).
+
+[NOTE]
+====
+
+*Note :*
+
+* Il vous est possible de modifier l’échelle des axes dans n’importe quel mode en maintenant enfoncée la touche
+[.kcode]#Maj# (et sous Windows, c’est possible aussi avec la touche [.kcode]#Ctrl#) pendant que vous déplacez les
+graduations des axes.
+* Les plages des axes peuvent être définies dynamiquement, par ex. dans l'onglet ’Basique’, vous pouvez définir le
+minimum des X 'xmin:' à `++x(A)++` le minimum des Y 'ymin:' à `++y(A)++` pour vous assurer que le coin inférieur gauche
+de la vue restera le point _A_. Avec une telle configuration, la vue ne pourra être zoomée.
+
+====
+
+== Afficher la Barre de Navigation
+
+Vous pouvez ajouter la xref:/Barre_de_navigation.adoc[Navigation dans les étapes de construction] dans la vue Graphique,
+soit dans le menu contextuel (clic droit), soit dans l'onglet Basique des Préférences
+/Fichier:Configure_32_png.adoc[image:Configure-32.png[Configure-32.png,width=32,height=32]] Graphique. Vous pouvez aussi
+ajouter le bouton "Exécuter" pour permettre l'animation par étapes de la construction et un bouton pour afficher le
+xref:/Protocole_de_construction.adoc[Protocole de construction].
+
+== "Mélange"
+
+En dernière partie de l'onglet _Basique_ de la fenêtre de _Dialogue Préférences_, vous trouvez trois items :
+
+Couleur d'arrière-plan
+
+Vous permet de déterminer la couleur de l'arrière-plan de la fenêtre Graphique.
+
+Infobulles
+
+Vous permet de déterminer le comportement (Activé/Automatique/Désactivé) des Infobulles dans la fenêtre Graphique. Voir
+l'article sur les xref:/Info_bulles.adoc[Info-bulles] pour plus de détails.
+
+Afficher les coordonnées de la souris
+
+Autorise ou non l'affichage des coordonnées de la souris à proximité du curseur de la souris.

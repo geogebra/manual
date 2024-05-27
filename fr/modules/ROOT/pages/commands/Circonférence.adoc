@@ -1,0 +1,63 @@
+= Commande Circonférence
+:page-en: commands/Circumference_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Circonférence( <Conique> )::
+  Si la conique donnée est un cercle ou une ellipse, cette commande retourne sa circonférence. Sinon elle retourne "non
+  défini".
+
+[NOTE]
+====
+
+*Note :*
+
+[width="100%",cols="50%,50%",]
+|===
+|image:18px-Attention.png[Attention,title="Attention",width=18,height=18] *Attention*: a|
+*Circonférence( <Arc> )* : Retourne le périmètre "*total*"
+
+longueur de l'arc augmentée de la longueur de la corde qui le sous-tend.
+
+|===
+
+====
+
+[NOTE]
+====
+
+*Note :* Voir aussi la commande xref:/commands/Périmètre.adoc[Périmètre].
+
+La commande Circonférence tolère aussi Polygone ou Lieu comme argument.
+
+Circonférence( <Polygone> ) : Retourne le périmètre du polygone donné.
+
+Circonférence(<Lieu>) : Si le lieu est fini, retourne une valeur approchée de la longueur du lieu, sinon le résultat est
+non défini.
+
+«Remarque : Mais elle s'auto-transforme, vous validez `++Circonférence( poly1|lieu1 )++`, le nombre retourné a pour
+commande associée `++Périmètre(poly1|lieu)]++`.»
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Si _c_ est un cercle construit dans Graphique (ne fonctionne pas à ce jour pour un cercle de Graphique 3D)
+`++Circonférence( c ) ++` retourne sa circonférence ; *Mais* pour une ellipse, vous risquez de voir le message d'erreur
+"Calcul trop long, a été abandonné" ;
+
+Vous pouvez valider cette commande aussi avec une équation de cercle du plan `++Circonférence(x²+y²=9)++` retourne 6 π
+voir même en littéral,
+
+* si la variable _r_ n'est pas définie `++Circonférence(x²+y²=r²)++` retourne 2 π |r| ;
+* si les variables _a_, _b_, _c_ et _d_ ne sont pas définies `++Circonférence(Cercle((a, b),(c,d)))++` retourne stem:[2
+\sqrt\{a^\{2} - 2 a c + b^\{2} - 2 b d + c^\{2} + d^\{2}} \space \pi ]
+
+_____________________________________________________________
+
+/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] *Graphique 3D* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D

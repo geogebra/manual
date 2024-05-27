@@ -1,0 +1,89 @@
+= Utilisateur
+:page-en: tools/Custom_Tools
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+GeoGebra vous permet de créer vos propres outils de construction basés sur une construction existante. Une fois créés,
+vos outils peuvent être utilisés aussi bien à la souris qu’en commande dans le champ de xref:/Saisie.adoc[saisie].
+
+[NOTE]
+====
+
+*Note :* Les objets créés ne sont pas déplaçables, même s'ils ont été définis par une commande du type
+`++Point[<Chemin>]++`. Dans le cas où vous désireriez un objet créé déplaçable, vous pouvez définir une liste de
+commandes et la faire fonctionner grâce à la xref:/commands/Exécute.adoc[Commande Exécute].
+
+====
+
+D’abord, réaliser la construction que l'outil devra répéter plus tard.
+
+== Créer un outil
+
+Pour créer un outil personnel, utiliser l'option xref:/Dialogue_Création_Outil.adoc[Créer un nouvel outil] du
+xref:/Menu_Outils.adoc[Menu Outils]. Maintenant renseigner les trois onglets ‘Objets Finaux’, ‘Objets Initiaux’, et ‘Nom
+et Icône’ afin de créer l'outil.
+
+[NOTE]
+====
+
+*Note :* Pour l'icône, utiliser une image *.png dans le cas d'une utilisation en ligne.
+
+====
+
+== Sauvegarder un outil utilisateur
+
+Tous les outils sont automatiquement enregistrés dans le fichier GeoGebra. Ils peuvent être sauvegardés afin de pouvoir
+les réutiliser dans d’autres constructions GeoGebra. Dans le menu Outils, choisir ‘Gérer les outils’. Ensuite, choisir
+les outils à sauvegarder dans la liste qui est apparue. Cliquer sur le bouton ‘Sauvegarder sous…’ pour les enregistrer
+dans votre ordinateur.
+
+[NOTE]
+====
+
+*Note :* Les outils utilisateurs sont enregistrés dans des fichiers ayant pour extension ‘ggt’ afin d’être différenciés
+des habituels fichiers GeoGebra(‘ggb’).
+
+====
+
+== Accéder à un outil utilisateur
+
+Si vous ouvrez un nouveau fichier GeoGebra en utilisant l’item ‘Nouveau’ du menu Fichier, après avoir créé un outil
+personnel, celui-ci est toujours présent dans la barre d’outils GeoGebra. Mais si vous ouvrez une nouvelle fenêtre
+GeoGebra (item /Fichier:Menu_New_png.adoc[image:Menu_New.png[Menu New.png,width=16,height=16]] ‘Nouvelle fenêtre’ du
+xref:/Menu_Fichier.adoc[menu Fichier]), ou ouvrez GeoGebra un autre jour, votre outil personnel n’est plus présent dans
+la barre d’outils GeoGebra.
+
+Il y a différentes manières de vous assurer de la présence de vos outils personnels dans la barre d’outils (et liste des
+commandes) d’une nouvelle fenêtre GeoGebra.
+
+Par exemple, après avoir créé un nouvel outil personnel vous pouvez sauvegarder la configuration en sélectionnant l’item
+/Fichier:Menu_Save_png.adoc[image:Menu_Save.png[Menu Save.png,width=16,height=16]] ‘Enregistrer la configuration’ du
+xref:/Menu_Options.adoc[menu Options]. Dès cet instant, votre outil personnel sera toujours présent dans la barre
+d’outils GeoGebra.
+
+[NOTE]
+====
+
+*Note :* Vous pouvez retirer votre outil personnel de la barre d‘outils en sélectionnant l’item ‘Barre d’outils
+personnalisée…’ dans le xref:/Menu_Outils.adoc[menu Outils]. Sélectionner ensuite votre outil personnel dans la liste
+d’outils à gauche dans la fenêtre de dialogue apparue et cliquer sur le bouton ‘Retirer >’. Ne pas oublier de
+sauvegarder votre configuration après avoir retiré l’outil personnel.
+
+====
+
+== Importer un outil utilisateur
+
+Après avoir sauvegardé votre outil personnel sur votre ordinateur (dans un fichier ‘ggt’), vous pouvez à chaque instant
+l’importer dans une nouvelle fenêtre GeoGebra. Sélectionner simplement l’item
+/Fichier:Menu_Open_png.adoc[image:Menu_Open.png[Menu Open.png,width=16,height=16]] ‘Ouvrir’ dans le
+xref:/Menu_Fichier.adoc[menu Fichier] et ouvrir le fichier contenant votre outil.
+
+[NOTE]
+====
+
+*Note :*
+
+* L’ouverture d’un fichier d’outils GeoGebra n’affecte en rien la construction courante. Simplement, cela rajoute votre
+outil personnel dans la barre d’outils GeoGebra.
+* Vous pouvez aussi charger un outil par glisser-déposer.
+
+====

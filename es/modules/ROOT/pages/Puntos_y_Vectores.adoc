@@ -1,0 +1,93 @@
+= Puntos y Vectores
+:page-en: Points_and_Vectors
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Los puntos y vectores pueden ingresarse en la xref:/Barra_de_Entrada.adoc[Barra de Entrada], en Coordenadas cartesianas
+o polares (ver xref:/Números_y_Ángulos.adoc[Números y Ángulos]). Los puntos, también pueden crearse usando
+/Archivo:Mode_point_svg.adoc[image:23px-Mode_point.svg.png[Mode
+point.svg,width=23,height=23]]xref:/tools/Punto.adoc[Punto] y los vectores pueden crearse usando
+/Archivo:Mode_vectorfrompoint_svg.adoc[image:23px-Mode_vectorfrompoint.svg.png[Mode
+vectorfrompoint.svg,width=23,height=23]] xref:/tools/Equipolente.adoc[Equipolente] o
+/Archivo:Mode_vector_svg.adoc[image:23px-Mode_vector.svg.png[Mode vector.svg,width=23,height=23]]
+xref:/tools/Vector.adoc[Vector] o con una variedad de xref:/Comandos.adoc[comandos].
+
+[NOTE]
+====
+
+Las letras mayúsculas representan puntos y las minúsculas, vectores. Esta no es una convención obligatoria.
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* Para ingresar un punto _P_ o un vector _v_ en 2D en coordenadas cartesianas , se anota `++P = (1, 0)++` o
+`++v = (0, 5)++`
+* Para ingresar un punto _P_ o un vector _v_ en 3D en coordenadas cartesianas , se anota `++P = (1, 0, 2)++` o
+`++v = (0, 5, -1)++`
+* Para ingresar un punto en 2D en coordenadas polares se escribe `++P = (1; 0°)++` o `++v = (5; 90°)++`
+* Para ingresar un punto en 3D en coordenadas esféricas se escribe con tress coordenadas del tipo (ρ, θ, φ), como
+`++P = (1; 60°; 30°)++`.
+* Para ingresar un punto en la image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+xref:/Hoja_de_Cálculo.adoc[Hoja de Cálculo] se nombra como su celda, por ejemplo `++A2 = (1, 0)++`****
+
+====
+
+[NOTE]
+====
+
+Es necesario usar punto y coma para separar las Coordenadas polares. Si no se escribe el símobolo de grados, GeoGebra
+entedenderá que el ángulo está expresado en radianes.
+
+====
+
+Se puede acceder a las coordenadas de un punto, utilizando xref:/Operadores_y_Funciones_Predefinidas.adoc[funciones
+predefinidas] _x()_ and _y()_.
+
+[EXAMPLE]
+====
+
+Si *`++P=(1, 2)++`* es un punto y *`++v=(3, 4)++`* un vector,*`++x(P)++`* da por resultado 1 y *`++y(v)++`* da por
+resultado 4.
+
+====
+
+[NOTE]
+====
+
+Las Coordenadas polares de un punto _Q_ se pueden obtener usando `++abs(Q)++` and `++arg(Q)++`.
+
+====
+
+== Cálculos
+
+En GeoGebra se puede hacer cálculos con puntos y vectores.
+
+[EXAMPLE]
+====
+
+* Se puede obtener el punto medio M de dos puntos A y B ingresando `++M = (A + B) / 2++` en la Barra de Entrada.
+* La longitud de un vector _v_ puede ser carculada usando `++longitud = sqrt(v * v)++` o `++longitud = Longitud(v)++`
+* Si _A=(a,b)_, entonces `++A + 1++` da por resultado _(a + 1, b + 1)_. Si _A_ es un xref:/Números_Complejos.adoc[número
+complejo] _a+bί_, entonces `++A+1++` da por resultado _a + 1 + bί_.
+
+====
+
+== Producto Vectorial
+
+Para dos puntos o dos vectores _(a,b) y_ (c,d)_, `++(a, b)⊗(c, d)++` da por resultado la coordenada-z del producto
+vectorial_ (a, b, 0)⊗(c, d, 0) _como un número._
+
+La misma sintaxis es válida para listas, pero en tal caso el resultado es una lista.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++{1, 2} ⊗ {4, 5}++` da por resultado _\{0, 0, -3}_
+* `++{1, 2, 3} ⊗ {4, 5, 6}++` da por resultado _\{3, 6, -3}_.
+
+====

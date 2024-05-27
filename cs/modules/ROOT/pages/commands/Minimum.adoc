@@ -1,0 +1,63 @@
+= Příkaz Minimum
+:page-en: commands/Min_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Minimum( <Číslo>, <Číslo> )::
+  Poskytne menší ze dvou daných čísel _a_ a _b_.
+Minimum( <Seznam> )::
+  Poskytne nejmenší z čísel v Seznamu.
+
+[EXAMPLE]
+====
+
+`++Min[{-2, 12, -23, 17, 15}]++` odpoví _-23_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Min[12, 15]++` odpoví _12_.
+
+====
+
+[NOTE]
+====
+
+Pokud se zadání skládá z nečíselných objektů, potom příkaz Minimum[] bere v úvahu čísla přiřazená těmto objektům.
+Například, příkaz Minimum[Seznam úseček] sdělí délku nejkratší úsečky v Seznamu.
+
+====
+
+Minimum( <Interval> )::
+  Sdělí dolní hranici intervalu, např. `++Min[2 < x < 3]++` odpoví _2_. Platí stejně pro uzavřené i otevřené intervaly.
+Minimum( <Funkce>, <Počáteční hodnota x>, <Koncová hodnota x> )::
+  Spočítá (numericky) minimum funkce v daném intervalu. Funkce by měla mít v intervalu pouze jedno minimum.
+
+[NOTE]
+====
+
+Viz též xref:/commands/Extrem.adoc[Příkaz Extrem] a xref:/tools/Kontrola_funkce.adoc[Nástroj Kontrola funkce].
+
+====
+
+== CAS pohled
+
+Min( <Seznam> )::
+  Poskytne nejmenší z čísel v Seznamu.
+Min( <Číslo>, <Číslo> )::
+  Poskytne menší ze dvou daných čísel _a_ a _b_.
+
+[EXAMPLE]
+====
+
+`++Min[12, 15]++` odpoví _12_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Min[{-2, 12, -23, 17, 15}]++` odpoví _-23_.
+
+====

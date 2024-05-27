@@ -1,0 +1,42 @@
+= Comando Iteración
+:page-en: commands/Iteration_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+*Iteración*[ <Función>, <Valor Inicial~x~0~~>, <Número de Iteraciones~n~> ]::
+  Itera la función el _número_ de veces indicado _n_ a partir del valor inicial dado. Así, *Iteración[ f, x~0~, n ]*
+  itera _n_ veces desde el valor _f(x~0~)_, la función *_f_*.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* Tras definir *`++f(x) = x^2++`*... *`++Iteración[f,  3,  4]++`* da por resultado _43046721_ ya que
+__(((3^2^)^2^)^2^)^2^ = ((9^2^)^2^)^2^) = (81^2^)^2^ = 6561^2^ = 43046721__Dada la función *`++f(x) := x + 7++`*,
+*`++Iteración[f,  3,  4]++`'* da *_31_* dado que _(((3+7) +7) +7) +7 = 31_ -
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+Se admiten literales en operaciones simbólicas.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+*`++Iteración[ k x  + ñ, a, 4]++`* da:_k ( k (k (k a + ñ) + ñ) + ñ) + ñ_ mientras
+*`++Simplifica[Iteración[ k x  + ñ, a, 4]]++`* da __a k⁴ + k³ ñ + k² ñ + k ñ +
+ñ__**`++Iteración[k y + ñ x,  (x - r)(x + r), 4]++`** da: stem:[\{k y + ñ \left(k y + ñ \left(k y + ñ \left(k y + ñ
+\left(x - r \right) \left(x + r \right) \right) \right) \right)}] y
+*`++Simplifica[Iteración[k y + ñ x,  (x - r)(x + r), 4]]++`* da stem:[\{k ñ^\{3} y + k ñ^\{2} y + k ñ y + k y - r^\{2}
+ñ^\{4} + ñ^\{4} x^\{2}}]
+
+====

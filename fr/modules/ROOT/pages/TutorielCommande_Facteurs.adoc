@@ -1,0 +1,60 @@
+= Tutoriel:Commande Facteurs
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Facteurs(<Polynôme>)::
+  Retourne une liste de listes (matrice) _\{facteur,exposant}_ telles que le produit de tous ces facteurs à la puissance
+  donnée par l'exposant correspondant soit égal au polynôme donné.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Facteurs(x^8-1)++` retourne _\{\{x^4 + 1, 1}, \{x^2 + 1, 1}, \{x + 1, 1}, \{x - 1, 1}}_ .
+
+====
+
+[NOTE]
+====
+
+*Note :*
+
+Tous les facteurs ne sont pas irréductibles sur l'ensemble des réels.
+
+C'est le cas dans cet exemple pour le facteur x^4 + 1.
+
+On peut le factoriser sur les réels irrationnels `++FactoriseIrr(x^4+1)++` retourne
+`++ stem:[(x^2 - \sqrt{2} x + 1 ) (x^2 + \sqrt{2} x + 1 )]++`.
+
+====
+
+Facteurs( <Nombre> )::
+  retourne une matrice stem:[\left( \begin\{array}\{} premier_1 & exposant_1 \\ premier_2 & exposant_2 \\premier_3 &
+  exposant_3 \\ \end\{array} \right) ] telle que le produit de tous ces nombres premiers à la puissance donnée par
+  l'exposant correspondant soit égal au nombre donné. Les nombres premiers sont rangés dans l'ordre croissant.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* `++Facteurs(1024)++` retourne ( 2 10 ), parce que _1024=2^10^_.
+* `++Facteurs(42)++` retourne stem:[\left( \begin\{array}\{} 2 & 1 \\ 3 & 1 \\7 & 1 \\ \end\{array} \right) ], parce que
+stem:[42 = 2^1・3^1・7^1].
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Facteurs(x^8-1)++` retourne stem:[\left( \begin\{array}\{} x^4+1 & 1 \\ x^2+1 & 1 \\x+1& 1 \\x-1& 1 \\
+\end\{array} \right) ] .
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/FacteursPremiers.adoc[FacteursPremiers].

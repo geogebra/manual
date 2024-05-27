@@ -1,0 +1,54 @@
+= Commande ValeurActuelle
+:page-en: commands/PresentValue_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+ValeurActuelle( <Taux>, <Nombre de Périodes>, <Paiement>, <Valeur Future (optionnelle)>, <Type (optionnel)> )::
+  Calcule la valeur actuelle d'une suite de versements d'un montant donné (Paiement) pour un taux d'intérêt constant
+  pendant un nombre de périodes donné.
+
+* *<Taux>* Taux d'intérêt par période (en notation décimale ou en %).
+* *<Nombre de Périodes>* Nombre total de paiements pour le prêt.
+* *<Paiement>* Montant du versement par période.
+* *<Valeur Future (optionnelle)>* Montant désiré après le dernier paiement. Si vous n'entrez pas de _Valeur Future_,
+elle vaudra _0_ par défaut (remboursement total).
+* *<Type (optionnel)>* Indique quand le paiement est effectué. Si vous n'entrez pas de _Type_ (ou entrez _0_), il vaudra
+_0_ par défaut (paiement en fin de période), sinon entrez _1_ pour un paiement en début de période.
+
+[NOTE]
+====
+
+*Note :* Pour tous les arguments et résultats, les sommes payées sont représentées par des valeurs négatives et les
+sommes perçues par des valeurs positives.
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+Quelle somme déposer aujourd'hui sur un livret à 2,5% garanti, afin d'obtenir un capital de 70 000 € au bout de 15 ans ?
+
+`++ValeurActuelle(2.5%, 15, 0, 70000)++` retourne _-48332.59_ €
+
+[NOTE]
+====
+
+*Note :* Voir l'exemple réciproque avec xref:/commands/ValeurFuture.adoc[ValeurFuture].
+
+====
+
+====
+
+[NOTE]
+====
+
+*Note :* Assurez vous d'être cohérent pour les arguments `++<Taux>++` et `++<Nombre de Périodes>++`. Si vous calculez un
+remboursement mensuel pour un prêt sur 4 ans avec un taux d'intérêt annuel de 12%, entrez 12%/12 comme taux et 4*12
+comme nombre de périodes.
+
+====
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/Commandes_Financières.adoc[Toutes les commandes
+financières], les autres : xref:/commands/Paiement.adoc[Paiement], xref:/commands/Périodes.adoc[Périodes],
+xref:/commands/Taux.adoc[Taux], et xref:/commands/ValeurFuture.adoc[ValeurFuture].

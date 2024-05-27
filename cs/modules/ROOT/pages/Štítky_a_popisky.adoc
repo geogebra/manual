@@ -1,0 +1,87 @@
+= Štítky a popisky
+:page-en: Labels_and_Captions
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Každý objekt v GeoGebře má jedinečný *štítek*. Pro označení objektů lze využít jedno nebo více písmen volitelně s
+indexem. Pro další informace viz xref:/Pojmenování_objektů.adoc[Pojmenování objektů].
+
+== Zobrazení a skrytí štítků
+
+V Grafickém pohledu lze zobrazit nebo skrýt štítky objektů různými způsoby:
+
+* Zvolte nástroj /Soubor:Tool_Show_Hide_Label_gif.adoc[image:Tool_Show_Hide_Label.gif[Tool Show Hide
+Label.gif,width=32,height=32]] xref:/tools/Zobrazit_skrýt_popis.adoc[Zobrazit / skrýt popis] a myší vyberte objekt,
+jehož označení chcete zobrazit nebo skrýt.
+* V xref:/Kontextové_menu.adoc[Kontextovém menu] zvoleného objektu vyberte
+/Soubor:Tool_Show_Hide_Label_gif.adoc[image:Tool_Show_Hide_Label.gif[Tool Show Hide Label.gif,width=32,height=32]]
+Zobrazit popis.
+* Otevřete dialog xref:/Dialog_Vlastnosti.adoc[Vlastnosti] zvoleného objektu a zaškrtněte nebo odznačte zaškrtávací
+políčko Zobrazit popis.
+
+== Název a hodnota
+
+Každý objekt v GeoGebře má jedinečný název, který může být použit k jeho označení v Grafickém pohledu. Dále lze objekt
+označit pomocí jeho hodnoty nebo názvu a hodnoty. Způsob označení lze zvolit v dialogu Vlastnosti na záložce Základní
+výběrem možnosti Název, Hodnota, nebo Název & Hodnota z rozbalovací nabídky u volby Zobrazit popis.
+
+[NOTE]
+====
+
+Hodnota bodu jsou jeho souřadnice, hodnota funkce je její rovnice.
+
+====
+
+== Popisky
+
+Někdy je nutno označit různé objekty stejně, např. označit čtyři strany čtverce _a_. V takovém případě lze využít ke
+třem výše zmíněným způsobům označení ještě způsob čtvrtý, a to označení pomocí popisu. Popis objektu lze nastavit na
+záložce Základní dialogu Vlastnosti v textovém poli "Popisek". Poté lze vybrat možnost "Popisek" z rozbalovací nabídky u
+volby "Zobrazit popis".
+
+V popisku lze využít tyto zástupné symboly:
+
+[cols=",",options="header",]
+|===
+|Zástupný symbol |Význam
+|%v |Hodnota
+|%n |Název
+|%x |_x_-ová souřadnice (nebo koeficient _a_ u proměnné _x_ v rovnici přímky _a x + b y + c = 0_)
+|%y |_y_-ová souřadnice (nebo koeficient _b_ u proměnné _y_ v rovnici přímky _a x + b y + c = 0_)
+|%z |absolutní člen _c_ v rovnici přímky _a x + b y + c = 0_ (nebo také: _z_-ová souřadnice v chystaném 3D Pohledu)
+|===
+
+[EXAMPLE]
+====
+
+Nechť je _A_ bod se souřadnicemi (1,2). Nastavením popisku ¨Bod %n má souřadnice %v.¨ získáme označení ¨Bod A má
+souřadnice (1,2).¨
+
+====
+
+== LaTeX v popiscích
+
+V popiscích lze také využívat syntaxi xref:/LaTeX.adoc[LaTeXu] a to vložením požadovaných příkazů LaTeXu mezi dva znaky
+dolaru (např. `++$x^2$++` pro popis stem:[x^2]). Nejčastěji užívaná řecká písmena a další operátory lze vložit ze
+seznamu, který lze zobrazit stisknutím malého tlačítka na konci pole ¨Popis¨.
+
+[EXAMPLE]
+====
+
+Pro zobrazení pěkně formátovaného matematického označení lze využít syntaxe LaTeXu v popiscích, např pro zobrazení
+zlomku stem:[\frac\{a}\{b}] lze zadat `++$\frac{a}{b}$++`.
+
+====
+
+[NOTE]
+====
+
+LaTeXové popisky nefungují u textových polí, tlačítek a zaškrtávacích políček.
+
+====
+
+[NOTE]
+====
+
+Originální anglická verze: /s_index_php?title=En:Labels_and_Captions_action=edit_redlink=1.adoc[Labels and Captions].
+
+====

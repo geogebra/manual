@@ -1,0 +1,25 @@
+= Comando EstánAlineados
+:page-en: commands/AreCollinear_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+EstánAlineados( <Punto>, <Punto>, <Punto> )::
+  Determina si los puntos están alineados.
+
+Normalmente, este comando comprueba el resultado numéricamente. Este comportamiento puede cambiarse utilizando el
+comando xref:/commands/Comprueba.adoc[Comprueba].
+
+[EXAMPLE]
+====
+
+`++EstánAlineados((1, 2), (3, 4), (5, 6))++` devuelve _true_ dado que los tres puntos pertenecen a la misma recta.
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/SonConcurrentes.adoc[SonConcurrentes],
+xref:/commands/SonCocíclicos.adoc[SonCocíclicos], xref:/commands/SonIguales.adoc[SonIguales],
+xref:/commands/SonParalelas.adoc[SonParalelas], xref:/commands/SonPerpendiculares.adoc[SonPerpendiculares],
+xref:/commands/EsTangente.adoc[EsTangente]
+====

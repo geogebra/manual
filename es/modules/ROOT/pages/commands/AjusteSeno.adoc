@@ -1,0 +1,25 @@
+= Comando AjusteSeno
+:page-en: commands/FitSin_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+AjusteSeno( <Lista de Puntos> )::
+  Calcula la curva de regresión de la forma _a + b sin (c x + d)_.
+
+[EXAMPLE]
+====
+
+`++AjusteSeno({(1, 1), (2, 2), (3, 1), (4, 0), (5, 1), (6, 2)})++` devuelve _f(x) = 1 + 1 sen (1.57 x - 1.57)_.
+
+====
+
+[NOTE]
+====
+
+* La lista debería tener al menos cuatro puntos, preferentemente más. La lista debería contener al menos dos puntos
+extremos. Los primeros dos extremos locales no deberían diferir demasiado de los extremos absolutos de la curva.
+* Ver también xref:/commands/AjusteExp.adoc[AjusteExp], xref:/commands/AjusteLog.adoc[AjusteLog],
+xref:/commands/AjustePolinómico.adoc[AjustePolinómico] y xref:/commands/AjustePotencia.adoc[AjustePotencia].
+* Si trabajas con números grandes o pequeños deberías considerar normalizarlos para obtener un resultado más preciso.
+Ver xref:/commands/Normaliza.adoc[Comando Normaliza].
+
+====

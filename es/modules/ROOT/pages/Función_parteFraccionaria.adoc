@@ -1,0 +1,117 @@
+= Función parteFraccionaria
+:page-en: FractionalPart_Function
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[.small]##
+
+== [#Funciones_y_Operaciones]#Funciones y Operaciones#
+
+parteFraccionaria( <Expresión> )::
+  Da por resultado la parte fraccionaria de la expresión.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* `++parteFraccionaria(6/5)++` da por resultado
+
+* stem:[\frac\{1}\{5}] en la xref:/Vista_CAS.adoc[Vista CAS]
+* *0.2* en la xref:/Vista_Algebraica.adoc[Algebraica]
+
+`++parteFraccionaria(1/5+3/2+2)++` da::
+  * stem:[\frac\{7}\{10}] en la xref:/Vista_CAS.adoc[Vista CAS]
+  * *0.7* en la xref:/Vista_Algebraica.adoc[Algebraica]
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Alerta,title="Alerta",width=18,height=18] *Alerta*: |Solo se admiten racionales.
+|===
+
+[EXAMPLE]
+====
+
+*Para las expresiones negativas* :
+
+`++parteFraccionaria(-6/5)++` da
+
+* stem:[-\frac\{1}\{5}] en la xref:/Vista_CAS.adoc[Vista CAS]
+* *-0.2* en la xref:/Vista_Algebraica.adoc[Vista Algebraica].
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+No se debe confundir con la función *mantisa m(x) = x - E(x)*
+
+que da *0.8* siendo -0.2 = -1 + 0.8.
+
+|===
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención:
+
+La parte fraccional de una función se define en ocasiones como
+
+x − ⌊x⌋
+
+y en otras, como
+
+stem:[sgn(x)(\mid x\mid-\lfloor \mid x\mid\rfloor) ]
+
+*_GeoGebra_* emplea la segunda definición (que también asumen otros utilitarios conocidos).
+
+Para obtener la primera función, se puede anotar:
+
+*`++f(x) = x - floor(x)++`*
+
+Los siguientes dos gráficos ilustran las dos variantes descritas, siendo la inferior la que adopta *_GeoGebra_*.
+
+====
+
+[NOTE]
+====
+
+Para acceder directamente a cualquiera de las
+
+/Archivo:Funciones_I_PNG.adoc[image:282px-Funciones_I.PNG[Funciones I.PNG,width=282,height=107]]
+
+*_Funciones Predefinidas_*, basta con:-desplegarlas y expandir su listado pulsando el signo [.kcode]#+#-seleccionar la
+que corresponda - [.kcode]#parteFraccionaria# - y
+
+/Archivo:Pega_PNG.adoc[image:262px-Pega.PNG[Pega.PNG,width=262,height=117]]
+
+pulsar en [.kcode]#Pega#.
+
+====
+
+'''''
+
+/Archivo:Fractionalpart_png.adoc[image:360px-Fractionalpart.png[Fractionalpart.png,width=360,height=224]]
+
+'''''
+
+El comando previo - ParteFraccionaria - queda reemplazado por la función (tal como se revista respecto de otros, en la
+sección xref:/Operadores_y_Funciones_Predefinidas.adoc[correspondiente)]
+
+'''''
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Alerta,title="Alerta",width=18,height=18] *Alerta*: |Es importante anotar la función con
+minúscula inicial y los paréntesis para encerrar la expresión en juego.
+|===
+
+[NOTE]
+====
+
+Ver también...
+
+* las restantes xref:/Operadores_y_Funciones_Predefinidas.adoc[*_funciones_*]
+* la función xref:/Función_parteEntera.adoc[parteEntera]
+====

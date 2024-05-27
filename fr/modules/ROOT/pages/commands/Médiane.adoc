@@ -1,0 +1,62 @@
+= Commande Médiane
+:page-en: commands/Median_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Médiane( <Liste Nombres> )::
+  Calcule la médiane des nombres de la liste.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++Médiane({1, 2, 3})++` retourne _2_ ;
+
+`++Médiane({1, 5, 5, 8})++` retourne _5_ (valeur réelle) ;
+
+`++Médiane({1, 1, 8, 8})++` retourne _4.5_ (valeur fictive).
+
+====
+
+Médiane( <Liste Nombres>, <Liste Effectifs> )::
+  Calcule la médiane des nombres de la liste pondérés par leurs effectifs.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++Médiane({1, 2, 3}, {4,5,6})++` retourne _2_ (valeur réelle) ;
+
+`++Médiane({1, 8}, {2,2})++` retourne _4.5_ (valeur fictive).
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+N'hésitez pas à utiliser la deuxième syntaxe, même si elle n'apparaît pas dans l'_Aide Saisie_.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Médiane({1, 8}, {2,2})++` retourne _4.5_ (valeur fictive).
+
+====
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/Q1.adoc[Q1], xref:/commands/Q3.adoc[Q3] et
+xref:/commands/Centile.adoc[Centile].
+
+[NOTE]
+====
+
+*Note :*
+
+Lorsque le nombre d'éléments de la liste donnée est pair, c'est la moyenne des deux valeurs centrales qui est retournée
+comme médiane.
+
+====

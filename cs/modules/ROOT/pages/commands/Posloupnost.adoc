@@ -1,0 +1,82 @@
+= Příkaz Posloupnost
+:page-en: commands/Sequence_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Posloupnost( <Výraz>, <Proměnná>, <Počáteční hodnota>, <Koncová hodnota> )::
+  Vytvoří seznam objektů definovaných zadaným výrazem a zadanou proměnnou. Interval pro hodnoty proměnné je určen
+  počáteční a koncovou hodnotou.
+Posloupnost( <Výraz>, <Proměnná>, <Počáteční hodnota>, <Koncová hodnota>, <Krok> )::
+  Vytvoří seznam objektů definovaných zadaným výrazem a zadanou proměnnou. Interval pro hodnoty proměnné je určen
+  počáteční hodnotou, koncovou hodnotou a zadaným krokem.
+Posloupnost( <Koncová hodnota> )::
+  Vytvoří seznam čísel od 1 do zadané koncové hodnoty, tj. \{1, 2, ..., <Koncová hodnota>}.
+
+[EXAMPLE]
+====
+
+`++L = 2^Posloupnost[4]++` vytvoří seznam _\{2, 4, 8, 16}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++L = Posloupnost[(2, i), i, 1, 3, 0.5]++` vytvoří seznam bodů, jejichž _y_-ové souřadnice jsou vybrány z intervalu od
+1 do 3 s krokem 0.5: `++L = {(2, 1), (2, 1.5), (2, 2), (2, 2.5), (2, 3)}++`.
+
+====
+
+[EXAMPLE]
+====
+
+`++L =Posloupnost[(2, i), i, 1, 5]++` vytvoří seznam bodů, jejichž _y_-ové souřadnice jsou z intervalu od 1 do 5:
+`++L = {(2, 1), (2, 2), (2, 3), (2, 4), (2, 5)}++`.
+
+====
+
+[NOTE]
+====
+
+Pro více informací o operacích se seznamy viz xref:/Seznamy.adoc[Seznamy].
+
+====
+
+[NOTE]
+====
+
+Protože jsou hodnoty _a_ a _b_ aktivní prvky, je také možno použít xref:/tools/Posuvník.adoc[Nástroj_Posuvník] pro
+jejich zadání.
+
+====
+
+== CAS pohled
+
+Posloupnost( <Výraz>, <Proměnná>, <Počáteční hodnota>, <Koncová hodnota> )::
+  Vytvoří seznam objektů definovaných zadaným výrazem a zadanou proměnnou. Interval pro hodnoty proměnné je určen
+  počáteční a koncovou hodnotou.
+Posloupnost( <Výraz>, <Proměnná>, <Počáteční hodnota>, <Koncová hodnota>, <Krok> )::
+  Vytvoří seznam objektů definovaných zadaným výrazem a zadanou proměnnou. Interval pro hodnoty proměnné je určen
+  počáteční hodnotou, koncovou hodnotou a zadaným krokem.
+Posloupnost( <Koncová hodnota> )::
+  Vytvoří seznam čísel od 1 do zadané koncové hodnoty, tj. \{1, 2, ..., <Koncová hodnota>}.
+
+[EXAMPLE]
+====
+
+`++Posloupnost[5]++` vytvoří posloupnost _\{1, 2, 3, 4, 5}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Posloupnost[x^i, i, 1, 10, 2]++` vytvoří posloupnost _\{x, x³, x⁵, x⁷, x⁹}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Posloupnost[x^i, i, 1, 10]++` vytvoří posloupnost _\{x, x², x³, x⁴, x⁵, x⁶, x⁷, x⁸, x⁹, x¹⁰}_.
+
+====

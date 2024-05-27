@@ -1,0 +1,214 @@
+= Saisie
+:page-en: Input_Bar
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+== Saisie et Saisie Algèbre
+
+Dans GeoGebra image:20px-Download-icons-device-screen.png[Download-icons-device-screen.png,width=20,height=14] "Bureau",
+par défaut, le champ de saisie est situé en bas de la fenêtre GeoGebra..
+
+Vous pouvez gérer
+
+son affichage ou non dans le menu xref:/Menu_Affichage.adoc[Affichage] ;
+
+son affichage ou non, et sa position (en haut ou en bas), l'affichage ou non de la Liste des commandes dans vos
+xref:/Dialogue_Options.adoc[Préférences - Aspect].
+
+Dans GeoGebra image:20px-Download-icons-device-tablet.png[Download-icons-device-tablet.png,width=20,height=23]"Web et
+Application Tablettes" une _Saisie Algèbre_ est intégrée directement dans image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/Algèbre.adoc[Algèbre]. Il s'ensuit que _Saisie_ n'est plus affiché par défaut si
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _Algèbre_ l'est. Cependant, _Saisie_ peut
+être affichée à l'aide de image:16px-Menu-view.svg.png[Menu-view.svg,width=16,height=16] _Affichage_.
+
+Les deux champs _Saisie_ et _Saisie Algèbre_ fournissent les mêmes fonctionnalités dans GeoGebra. Cependant, le champ
+_Saisie Algèbre_ est doté en plus d'un _Éditeur d'équations_, vous facilant la saisie d'équations et expressions.
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:323px-Algebra-View.png[Algebra-View.png,width=323,height=210]
+
+GeoGebra image:20px-Download-icons-device-tablet.png[Download-icons-device-tablet.png,width=20,height=23]"Web et
+Application Tablettes"
+
+a|
+image:325px-Algebra-View-Desktop.png[Algebra-View-Desktop.png,width=325,height=210]
+
+GeoGebra image:20px-Download-icons-device-screen.png[Download-icons-device-screen.png,width=20,height=14] "Bureau"
+
+|===
+
+Les champs de saisie vous permettent de créer ou de redéfinir des objets mathématiques
+
+* directement, en utilisant leurs représentations algébriques (par ex., valeurs, coordonnées, équations). Les
+représentations sont affichées dans la fenêtre xref:/Algèbre.adoc[Algèbre]. Voir
+xref:/Objets_géométriques.adoc[Objets_géométriques] et xref:/Généraux.adoc[Généraux] pour plus de détails.
+* en utilisant des xref:/Commandes.adoc[Commandes].
+
+[NOTE]
+====
+
+*Note :* Toujours presser la touche [.kcode]#Entrée# après avoir tapé la saisie algébrique dans le champ de saisie.
+
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Attention,title="Attention",width=18,height=18] *Attention*: |Actuellement, tout clic à
+l'extérieur de Saisie, valide l'embryon de syntaxe (à condition qu'il soit valide absence de
+/Fichier:Attention_PNG.adoc[image:20px-Attention.PNG[Attention.PNG,width=20,height=19]] à gauche en web ou
+/Fichier:AttentionRond_PNG.adoc[image:20px-AttentionRond.PNG[AttentionRond.PNG,width=20,height=20]] à droite en bureau)
+|===
+
+[NOTE]
+====
+
+*Note :* En pressant la touche [.kcode]#Entrée# à n'importe quel instant, bascule le _focus_ entre le champ de
+[.mw-selflink .selflink]#Saisie# et la fenêtre xref:/Graphique.adoc[Graphique]. Ceci vous permet d'entrer des
+expressions ou commandes dans le champ de saisie sans avoir besoin d'y cliquer à la souris au préalable.
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :* En validant `++A=(1,1)++` vous créez un point xref:/Objets_libres_dépendants_ou_auxiliaires.adoc[libre] A de
+coordonnées (1,1). En validant `++A=MilieuCentre[(2,0),(4,0)]++` vous redéfinissez le point A : il devient un point
+xref:/Objets_libres_dépendants_ou_auxiliaires.adoc[dépendant].
+
+====
+
+== Aide du champ de saisie
+
+En pressant sur la touche [.kcode]#F1# lorsque votre pointeur est dans le champ de saisie, vous ouvrez une petite
+fenêtre de rappels sur la gestion de la saisie :
+
+*Utilisation du champ de saisie*
+
+[cols=",",]
+|===
+|[.kcode]#Entrée# |exécuter la saisie
+|[.kcode]#Échappe# |vide le champ de saisie
+|[.kcode]#↑# |saisie précédente
+|[.kcode]#↓# |saisie suivante
+|[.kcode]#F1# |aide sur la commande courante
+|===
+
+*Auto-complétion des commandes* Après avoir saisi les trois premiers caractères d'une commande, elle s'affichera
+
+[cols=",",]
+|===
+|[.kcode]#Entrée# |acceptation de la commande proposée
+|autre lettre |continuer la saisie
+|===
+
+L'ergonomie a évoluée encore, à la saisie des premières lettres s'affiche une liste déroulante des commandes avec leur
+syntaxe, vous pouvez y sélectionner la commande voulue, puis définir successivement les paramètres nécessaires, la
+frappe d'un paramètre suivie d'un appui sur [.kcode]#,# ou [.kcode]#'Tab'# vous positionnera sur la saisie du paramètre
+suivant.
+
+== Liste des commandes
+
+Vous pouvez gérer l'autorisation de son affichage ou non dans vos xref:/Dialogue_Options.adoc[Préférences - Aspect].Si
+elle est autorisée, la *liste des commandes* sera affichée ou non en utilisant la petite flèche
+/Fichier:Inputhelp_left_18x18_png.adoc[image:Inputhelp_left_18x18.png[Inputhelp left 18x18.png,width=18,height=18]]
+'Aide Saisie' à la droite du champ.
+
+== Historique des saisies.
+
+Ayant placé le curseur dans le champ de saisie vous pouvez, en utilisant les flèches [.kcode]#↑# haut et [.kcode]#↓# bas
+de votre clavier, faire défiler une à une les saisies précédentes.
+
+== Table de symboles.
+
+En cliquant sur le symbole *α* situé à droite dans le champ de saisie vous ouvrez une table dans laquelle sous pourrez
+sélectionner, par clic, des lettres grecques, des constantes de mathématiques ou de sciences physiques, des opérateurs
+logiques :
+
+[cols=",,,,,,,,,",]
+|===
+|α |β |γ |δ |ε |ζ |η |θ |ι |κ
+|λ |μ |ν |ξ |ο |ρ |σ |τ |υ |φ
+|Φ |Χ |Ψ |ω |Γ |Δ |Θ |∞ |⊗ |≟
+|≠ |≤ |≥ |¬ |∧ |∨ |→ |∥ |⊥ |∈
+|⊆ |⊂ |∡ |² |³ |° |ί |π |ℯ |
+|« |» |€ |œ |à |ç |é |è |ë |À
+|É |× |÷ |◢ |♂ |♀ |☮ |ℎ |ℏ |
+|===
+
+Les 5 premières lignes sont internationales, (la cinquième ayant pour dernier caractère, l'espace insécable) les deux
+dernières, nationales.
+
+Vous pouvez bien sûr, obtenir la plupart de ces symboles par frappe directe, quelques exemples pour mémoire :
+
+[cols=",,,,,,,,,,,,,,,,,,",]
+|===
+|→ |[.kcode]#Alt# + [.kcode]#p# |π |# |[.kcode]#Alt# + [.kcode]#i# |ί |# |[.kcode]#Alt# + [.kcode]#e# |ℯ |# |`++ = = ++`
+|≟ |# |`++  ||  ++` |∨ |# |`++ &  & ++` |∧ |←
+|===
+
+== Insérer le nom, la valeur, ou la définition d'un objet dans le champ de saisie.
+
+* *Insérer le nom d'un objet*: Activez le mode /Fichier:Mode_move_svg.adoc[image:32px-Mode_move.svg.png[Mode
+move.svg,width=32,height=32]] xref:/tools/Déplacer.adoc[Déplacer] et sélectionner l'objet dont vous voulez insérer le
+nom dans le champ de saisie. Pressez ensuite la touche [.kcode]#F5# de votre clavier.
+
+[NOTE]
+====
+
+*Note :* Le nom de l'objet est ajouté à la suite de toute expression écrite dans le champ de saisie avant que la touche
+[.kcode]#F5# ait été pressée.
+
+====
+
+* *Insérer la valeur d'un objet*: Pour insérer la valeur d'un objet (par ex., (1, 3), 3x – 5y = 12) dans le champ de
+saisie.
+** Activez le mode /Fichier:Mode_move_svg.adoc[image:32px-Mode_move.svg.png[Mode move.svg,width=32,height=32]]
+xref:/tools/Déplacer.adoc[Déplacer] et sélectionnez l'objet dont vous voulez insérer la valeur dans le champ de saisie.
+Pressez ensuite la touche [.kcode]#F4# de votre clavier.
+
+[NOTE]
+====
+
+*Note :* La valeur de l'objet est ajoutée à la suite de toute expression écrite dans le champ de saisie avant que la
+touche [.kcode]#F4# ait été pressée.
+
+====
+
+* *Insérer la commande de création d'un objet*: Il y a deux manières d'insérer la commande de création d'un objet (par
+ex., A = (4, 2), c = Cercle[A, B]) dans le champ de saisie.
+** En pressant la touche [.kcode]#Alt# cliquez sur un objet pour insérer sa définition dans le champ de saisie, à la
+place de toute expression ayant pu écrite auparavant.
+** Activez le mode /Fichier:Mode_move_svg.adoc[image:32px-Mode_move.svg.png[Mode move.svg,width=32,height=32]]
+xref:/tools/Déplacer.adoc[Déplacer] et sélectionnez l'objet dont vous voulez insérer la valeur dans le champ de saisie.
+Pressez ensuite la touche [.kcode]#F3# de votre clavier.
+
+[NOTE]
+====
+
+*Note :* La définition de l'objet remplace toute expression écrite dans le champ de saisie avant que la touche
+[.kcode]#F3# ait été pressée.
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :*
+
+*Une petite astuce pour ceux qui ne sont pas trop habiles avec les écritures stem:[\LaTeX] et qui auraient besoin de
+récupérer un code par exemple pour écrire une fonction*
+
+Vous validez, par exemple, `++ f(x) =(x^3 + 2 abs(x) -1/x)/sqrt(x²+1) ++` dans le champ de saisie,
+
+GeoGebra l'écrit en LaTeX dans la fenêtre Algèbre : stem:[f(x) = \frac\{x^\{3} + 2 | x | - \frac\{1}\{x} }
+\{\sqrt\{x^\{2} + 1} }],
+
+glissez/déposez cette écriture dans la fenêtre Graphique,
+
+sélectionnez le texte et pressez [.kcode]#F4# ,
+
+vous récupérez le code LaTeX : `++ "f(x) \, = \,\frac{x^{3} + 2 \; \left|x\right| - \frac{1}{x}}{\sqrt{x^{2} + 1}}" ++`
+dans le champ de saisie.
+
+====

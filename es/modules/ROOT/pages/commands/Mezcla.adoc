@@ -1,0 +1,50 @@
+= Comando Mezcla
+:page-en: commands/Shuffle_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+*Mezcla*[ <Lista> ]::
+  Da por resultado una lista con los mismos elementos pero reorganizados en un nuevo orden, aleatorio.
+
+[NOTE]
+====
+
+Al pulsar [.kcode]#F9# o [.kcode]#Ctrl# + [.kcode]#R# (atajo de la opción _Recálculo de Todos los Objetos_ del
+xref:/Menú_Vista.adoc[Menú Vista]) se opera nuevamente la _mezcla_ y resulta otro el orden de la lista.
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] la xref:/Vista_CAS.adoc[Vista C~[.small]#omputación#~A~[.small]#lgebraica#~S~[.small]#imbólica#~]
+
+En esta xref:/Vista_CAS.adoc[vista] el comando obra de modo análogo y se admiten literales para operar simbólicamente.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++Mezcla[{1, 2, 3}]++` resulta \{_2, 3, 1_} o \{_1, 3, 2_} o \{_1, 2, 3_}...
+* `++Mezcla[{"Adioses", "no", "dichos"}]++` da, por ejemplo, _\{"no", "dichos", "Adioses"}_ o _\{"no", "Adioses",
+"dichos"}_ o _\{"dichos", "no", "Adioses"}_ o _\{"dichos", "Adioses", "no"}_ o _\{"Adioses", "no", "dichos"}_ o
+_\{"Adioses", "dichos", "no"}_
+* `++Mezcla[Secuencia[20]]++` da los primeros 20 naturales en orden aleatorio
+* `++Mezcla[{3, 5, 1, 7, 3}]++` da, por ejemplo _\{5, 1, 3, 3, 7}_.
+* Si no tuvieran valor asignado ni _a_, ni _b_, ni _c_, en la xref:/Vista_CAS.adoc[Vista
+CAS]....*`++Mezcla[{a, b, c}]++`* puede dar \{_a, c, b_} o \{_c, a, b_} o \{_b, a, c_} entre otros.
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/ElementoAleatorio.adoc[ElementoAleatorio] y
+xref:/commands/AleatorioEntre.adoc[AleatorioEntre].
+
+====

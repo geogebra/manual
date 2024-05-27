@@ -1,0 +1,46 @@
+= Comando RotaTexto
+:page-en: commands/RotateText_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+*RotaTexto*[ <Texto>, <Angulo> ]::
+  Da por resultado el texto dado que queda expuesto, por xref:/LaTeX.adoc[LaTeX] y aparece rotado por el ángulo
+  indicado.
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: El ángulo se asume indicado en radianes a menos que
+se explicite el símbolo de grados *°*.
+
+====
+
+[NOTE]
+====
+
+El texto......debe entrecomillarse empleando el signo correspondiente `++ " ++`...rota en torno a la esquina superior
+izquierda (la que se identifica con el número 4) del recuadro que lo contiene
+
+====
+
+[EXAMPLE]
+====
+
+*RotaTexto*["a = 5", *45°*]
+
+====
+
+/Archivo:Rotando_gif.adoc[image:Rotando.gif[Rotando.gif,width=210,height=222]]
+
+'''''
+
+El boceto ilustra _animadamente_ el xref:/commands/TextoVertical.adoc[texto vertical] rotando a medida que cambia el
+valor del ángulo correspondiente.
+
+'''''
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/TextoVertical.adoc[TextoVertical].
+
+====

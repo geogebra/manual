@@ -1,0 +1,56 @@
+= Comando División
+:page-en: commands/Division_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+División[ <Número o valor numérico (dividendo)>, <Número o valor numérico (divisor)> ]::
+  xref:/Listas.adoc[Lista] el cociente (parte entera del resultado) y el resto de la división de sendos números.
+División[ <Polinomio (dividendo)>, <Polinomio (divisor)> ]::
+  xref:/Listas.adoc[Lista] el cociente y el resto de la división de sendos polinomios.
+
+[EXAMPLE]
+====
+
+`++División[x² + 3x + 1, x - 1]++` da _\{x + 4, 5}_
+
+====
+
+[EXAMPLE]
+====
+
+`++División(16,3)++` da _\{5, 1}_.
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+El comando obra del modo descripto, admitiendo tanto literales en operaciones simbólicas como valores imaginarios y/o
+complejos
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++División[ñ, 5]++`* da stem:[\{ \left\\{ \frac\{ñ}\{5}, 0 \right\}
+}]**`++División[ñ^2 + 3 ñ + 1, ñ - 1]++`** da
+__\{ñ+4.5}__**`++División[37 + a² + (sqrt(-1) + a) ((sqrt(-1 )- a) ) , 9]++`** da __\{4,
+0}__**`++División[x² -+2 a  i x - a², x - i a]++`** da __\{2x, -a² - x²}__**`++División[ñ sqrt(-5), 5]++`** da stem:[\{
+\left\\{ \frac\{\sqrt\{5} ñ ί}\{5}, 0 \right\} }]
+
+====
+
+'''''
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/ListaDivisores.adoc[ListaDivisores] y
+xref:/commands/ComúnDenominador.adoc[ComúnDenominador].
+
+====

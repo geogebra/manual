@@ -1,0 +1,76 @@
+= Příkaz Prvek
+:page-en: commands/Element_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Prvek( <Seznam>, <Pozice prvku> )::
+  Vrátí _n_-tý prvek seznamu.
+Prvek( <Matice>, <Řádek>, <Sloupec> )::
+  Vrátí prvek matice v příslušném řádku a sloupci.
+Prvek( <Seznam L>, <Index1>, <Index2>, ...)::
+  Pokud je seznam _L_ _n_- rozměrnou maticí, musíme specifikovat _n_ indexů matice pro označení konkrétního prvku.
+
+[EXAMPLE]
+====
+
+Zadejme třírozměrný seznam `++L={{{1, 2}, {3, 4}}, {{5, 6}, {7, 8}}}++`. Potom `++Prvek[L, 1, 2, 1]++` dává _3_,
+`++Prvek[L, 2, 2]++` dává _\{7, 8}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Prvek[{{1, 3, 2}, {0, 3, -2}}, 2, 3]++` dává _-2_, třetí prvek druhého řádku matice
+stem:[\begin\{pmatrix}1&3&2\\0&3&-2\end\{pmatrix}].
+
+====
+
+[EXAMPLE]
+====
+
+`++Prvek[{1, 3, 2}, 2]++` dává _3_, druhý prvek seznamu _\{1, 3, 2}_.
+
+====
+
+[NOTE]
+====
+
+Použití tohoto příkazu je možné jen, pokud jsou všechny prvky matice stejného typu (např. jen čísla nebo jen body).
+
+====
+
+== CAS pohled
+
+Prvek( <Seznam>, <Pozice prvku> )::
+  Vrátí _n_-tý prvek seznamu.
+Element( <Matice>, <Řádek>, <Sloupec> )::
+  Vrací prvek matice v daném řádku a sloupci.
+
+[EXAMPLE]
+====
+
+`++Prvek[{{a, b, c}, {d, e, f}}, 2, 3]++` dává _f_, třetí prvek druhého řádku matice
+stem:[\begin\{pmatrix}a&b&c\\d&e&f\end\{pmatrix}].
+
+====
+
+[EXAMPLE]
+====
+
+`++Prvek[{a, b, c}, 2]++` dává _b_, druhý prvek seznamu__\{a, b, c}__.
+
+====
+
+[NOTE]
+====
+
+Související příkazy: xref:/commands/Prvni.adoc[Příkaz_Prvni], xref:/commands/Posledni.adoc[Příkaz_Posledni] a
+xref:/commands/NahodnyPrvek.adoc[Příkaz_NahodnyPrvek].
+
+====
+
+[NOTE]
+====
+
+Anglická verze: /s_index_php?title=En:Manual:Element_Command_action=edit_redlink=1.adoc[Element]
+====

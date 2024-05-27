@@ -1,0 +1,40 @@
+= Comando AleatorioEntre
+:page-en: commands/RandomBetween_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+AleatorioEntre( <Mínimo> , <Máximo> )::
+  Genera un número entero aleatorio entre el mínimo y el máximo (inclusive).
+AleatorioEntre( <Mínimo> , <Máximo> , <Fijo o no (true/false)> )::
+  Si el último parámetro se indica como _verdadero_ = "true", se genera un número entero aleatorio entre el _mínimo_ y
+  el _máximo_ (inclusive), que se actualiza solamente una vez (cuando el archivo es cargado y también al
+  deshacer/rehacer).
+
+[EXAMPLE]
+====
+
+`++AleatorioEntre(0, 10, true)++` da por resultado un número entero entre _0_ y _10_ (inclusive)
+
+====
+
+[EXAMPLE]
+====
+
+`++AleatorioEntre(0, 10)++` devuelve un número entre _0_ y _10_ (inclusive)
+
+====
+
+[NOTE]
+====
+
+Presiona [.kcode]#F9# para ver la diferencia entre las dos sintaxis.
+
+====
+
+[NOTE]
+====
+
+Ver también xref:/commands/FijaSemilla.adoc[FijaSemilla], xref:/commands/ElementoAleatorio.adoc[ElementoAleatorio],
+xref:/commands/BinomialAleatorio.adoc[BinomialAleatorio], xref:/commands/NormalAleatorio.adoc[NormalAleatorio],
+xref:/commands/PoissonAleatorio.adoc[PoissonAleatorio], xref:/commands/UniformeAleatorio.adoc[UniformeAleatorio].
+
+====

@@ -1,0 +1,47 @@
+= Comando Períodos
+:page-en: commands/Periods_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Períodos( <Tasa>, <Pago>, <Valor Actual>, <Valor Futuro (opcional)>, <Tipo (opcional)> )::
+  Da por resultado el número de períodos de una anualidad en un régimen de cuotas fijas periódicas a una tasa de interés
+  constante.
+
+* *<Tasa>* Tasa de interés por período.
+* *<Pago>* Importe a pagar en cada período.
+* *<Valor actual>* Monto del préstamo correspondiente al valor actual de una serie de pagos.
+* *<Valor futuro (opcional)>* Balance de caja previsto tras el último pago. De no ingresarse un valor futuro, se lo
+supone 0.
+* *<Tipo (opcional)>* Indica cuándo se deben efectuar los pagos. Si no se ingresa un valor, o se ingresa un 0, se
+realiza al final de cada período; si se ingresa un 1 será al inicio del período.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* `++Períodos(10%/12, -200, -400, 10000)++` devuelve el número de cuotas de 39.98.
+`++Períodos(10%/12, -200, -400, 10000, 1)++` devuelve el número de cuotas de 39.7.
+
+[NOTE]
+====
+
+Si se realizan pagos mensuales a una tasa de interés anual del 10 por ciento, debe emplearse 10%/12 para la
+`++<Tasa>++`.
+
+====
+
+====
+
+[NOTE]
+====
+
+Para todos los argumentos, el dinero pagado es representado con números negativos, mientras que el dinero recibido se
+representa con negativos.
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/Pago.adoc[Pago], xref:/commands/Tasa.adoc[Tasa],
+xref:/commands/ValorActual.adoc[ValorActual] y xref:/commands/ValorFuturo.adoc[ValorFuturo].
+
+====

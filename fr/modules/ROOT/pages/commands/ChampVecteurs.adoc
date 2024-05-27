@@ -1,0 +1,37 @@
+= Commande ChampVecteurs
+:page-en: commands/SlopeField_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+ChampVecteurs( <f(x,y)> )::
+  Représente un http://en.wikipedia.org/wiki/fr:Champ_de_vecteurs[champ de vecteurs] pour l'équation différentielle
+  stem:[\frac\{dy}\{dx}=f(x,y)]
+
+[EXAMPLE]
+====
+
+*Exemple :* `++ChampVecteurs(x+y)++` représente le champ de vecteurs.
+
+====
+
+ChampVecteurs( <f(x,y)>, <Nombre n> )::
+  Représente un champ de vecteurs pour l'équation différentielle stem:[\frac\{dy}\{dx}=f(x,y)] dans une grille n fois n
+  (si Graphique est carré) ou une plus petite grille sinon. Par défaut la valeur est 40.
+
+ChampVecteurs( <f(x,y)>, <Nombre n>, <Longueur a> )::
+  Représente un champ de vecteurs pour l'équation différentielle stem:[\frac\{dy}\{dx}=f(x,y)]. Longueur a avec 0<a≤1
+  détermine la longueur des segments.
+
+ChampVecteurs( <f(x,y)>, <Nombre n>, <Longueur a>, <Min x>, <Min y>, <Max x>, <Max y> )::
+  Représente un champ de vecteurs pour l'équation différentielle stem:[\frac\{dy}\{dx}=f(x,y)] dans le rectangle précisé
+  (c'est plus rapide que de remplir la vue Graphique).
+
+[NOTE]
+====
+
+*Note :* Utilisez les outils suivants: xref:/tools/Déplacer_Graphique.adoc[Déplacer Graphique],
+xref:/tools/Agrandissement.adoc[Agrandissement], xref:/tools/Réduction.adoc[Réduction] et observez l'effet.
+
+====
+
+{empty}[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/RésolEquaDiff.adoc[RésolEquaDiff],
+xref:/commands/Lieu.adoc[Lieu], xref:/commands/Intégrale.adoc[Intégrale]

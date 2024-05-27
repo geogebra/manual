@@ -1,0 +1,35 @@
+= Comando Superficie
+:page-en: commands/Surface_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Superficie( <Expresión>, <Expresión>, <Expresión>, <Parámetro 1>, <Valor inicial 1>, <Valor final 1>, <Parámetro 2>,
+<Valor inicial 2>, <Valor final 2> )
+
+Da por resultado la superficie cartesiana paramétria 3D correspondiente a las expresiones _x_ (primera _<Expresión>_),
+_y_ (segunda _<Expresión>_) y _z_ (tercera _<Expresión>_) indicadas, utilizando los dos _<Parámetros>_ en sus
+correspondientes intervalos [_<Valor inicial>_, _<Valor final>_].
+
+[EXAMPLE]
+====
+
+Sean _r_ y _R_ dos números reales positivos:
+`++Superficie((R + r cos( u)) cos(v) , (R + r cos( u)) sen(v) , r sen(u ), u, 0, 2 π , v, 0, 2 π)++` crea un toro
+generado por una circunferencia de radio _r_ cuyo centro rota alrededor del eje z a una distancia _R_ del mismo.
+
+====
+
+[NOTE]
+====
+
+* _Valor final_ debe ser mayor o igual que _Valor inicial_ y ambos deben ser finitos.
+* No pueden utilizarse las letras _x, y_ y _z_ para nombrar a los parámetros .
+
+====
+
+Superficie( <Función>, <Ángulo> )::
+  Crea la superficie de revolución que se genera al rotar la _Función_ dada entre 0 y el _Ángulo_ dado alrededor del eje
+  x.
+
+Superficie( <Curva>, <Ángulo>, <Recta>)::
+  Crea la superficie de revolución que se genera al rotar la _Curva_ dada entre 0 y el _Ángulo_ dado alrededor de la
+  _Recta_ indicada.

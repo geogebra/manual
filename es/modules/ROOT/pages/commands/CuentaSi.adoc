@@ -1,0 +1,35 @@
+= Comando CuentaSi
+:page-en: commands/CountIf_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+CuentaSi( <Condición>, <Lista> )::
+  Cuenta el número de elementos de la lista que cumplen con la condición dada.
+
+[EXAMPLE]
+====
+
+* `++ CuentaSi(x < 3, {1, 2, 3, 4, 5})++` devuelve el número _2_.
+* `++ CuentaSi(x < 3, A1:A10)++`, dodne _A1:A10_ es una rango de celdas de la hoja de cálculo,cuenta las celdas cuyos
+valores son menores que _3_.
+
+====
+
+[NOTE]
+====
+
+Para listas de números se pueden utilizar condiciones arbitrarias. Para listas de otros objetos solamente pueden
+utilizarse condiciones de la forma `++x==constante++` o `++x!=constante++`.
+
+====
+
+CuentaSi( < Condición >, <Variable>, <Lista> )::
+  Como en el caso anterior, pero con una sintaxis más flexible.
+
+[EXAMPLE]
+====
+
+Dados los puntos _P_, _Q_, _R_ `++CuentaSi(x(A) < 3, A, {P, Q, R})++` contará solamente los puntos de abscisa menor que
+_3_. Para la verificación, la variable _A_ es reemplazada por _P_, luego _Q_ y luego _R_. Por lo tanto
+`++ CuentaSi(x(A) < 3, A, {(0, 1), (4, 2), (2, 2)})++` devuelve el número _2_.
+
+====

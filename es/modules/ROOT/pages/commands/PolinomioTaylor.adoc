@@ -1,0 +1,58 @@
+= Comando PolinomioTaylor
+:page-en: commands/TaylorPolynomial_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+PolinomioTaylor( <Función>, <número o valor numérico de x>, <Orden (número o valor numérico)> )::
+  Crea el desarrollo de la http://en.wikipedia.org/wiki/es:Serie_de_Taylor[serie de potencias] del orden dado, en torno
+  al valor de _x_ indicado. Así, *`++PolinomioTaylor[ f, a, n]++`* crea la
+  http://en.wikipedia.org/wiki/es:Serie_de_Taylor[serie] de orden _n_ en torno a _x = a_ para _f(x)_.
+
+[EXAMPLE]
+====
+
+*`++PolinomioTaylor[x^2, a, 1]++`* da por resultado:_9 + 6 (x - 3)_ o, de ingresarlo
+como;*`++Simplifica[PolinomioTaylor[ x^2, 3, 1]]++`*, da _6 x - 9_, la serie de potencias de _x^2^_ para _x = 3_ hasta
+el orden _1_.
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] la xref:/Vista_CAS.adoc[Vista C~[.small]#omputación#~A~[.small]#lgebraica#~S~[.small]#imbólica#~]
+
+A la anterior, se añade la siguiente alternativa, exclusiva de esta xref:/Vista_CAS.adoc[vista] y se admiten literales
+en operaciones simbólicas.
+
+PolinomioTaylor( <Expresión>, <número o valor numérico de x>, <Orden (número o valor numérico)> )::
+  Crea el desarrollo de la http://en.wikipedia.org/wiki/es:Serie_de_Taylor[serie de potencias] del orden indicado, en
+  torno al valor fijado para la expresión dada.
+
+PolinomioTaylor( <Expresión>, <Variable>, <Valor de la Variable>, <Orden (valor numérico)> )::
+  Crea el desarrollo de la serie de potencias del _orden_ dado para la _Expresión_ respecto de la _Variable_, en torno
+  al punto en que toma el _valor_ indicado.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++PolinomioTaylor[x^2, ñ, 1]++`* da:_ñ^2^ + 2 ñ (x - ñ)_, la serie de potencias de desarrollo al orden _1_
+de _x^2^_ en _x = ñ_.
+
+'''''
+
+Variantes exclusivas de la xref:/Vista_CAS.adoc[Vista CAS]:*`++PolinomioTaylor[x^3 sin(y), x, 3, 2]++`* da por
+resultado:_27sen(y) + 27sen(y) (x - 3) + 9 sen(y) (x - 3)^2^_, la serie de potencias hasta el orden _2_, de _x^3^
+sin(y)_ con respecto a _x_, en __x = 3__**`++PolinomioTaylor[x^3 sin(y), y, 3, 2]++`** da:stem:[\{x^\{3} sen \left( 3
+\right) + x^\{3} cos \left( 3 \right) \left(y - 3 \right) - x^\{3} \cdot \frac\{ sen \left( 3 \right)}\{2} \left(y - 3
+\right)^\{2} }]o __sen(3) x³ + cos(3) x³ (y - 3) - (sen(3) x³) / 2 (y - 3)²__o, de ingresar
+*`++Simplifica[PolinomioTaylor[x^3 sin(y), y, 3, 2]]++`*
+da/Archivo:Taylor2_PNG.adoc[image:470px-Taylor2.PNG[Taylor2.PNG,width=470,height=34]]o__stem:[x³\frac\{(-y² sin(3) + y
+(2cos(3) + 6sin(3)) - 6cos(3) - 7sin(3) ) }\{2}]__la expansión de la serie de potencias con respecta a _y_ de _x^3^
+sin(y)_ en _y = 3_ hasta orden __2__[.underline]##Empleando literales##;*`++PolinomioTaylor[x^3 sin(y), y, ñ, 2]++`* da
+por resultado:/Archivo:Tayloñ_PNG.adoc[image:Taylo%C3%B1.PNG[Tayloñ.PNG,width=446,height=47]]
+
+====
+
+[NOTE]
+====
+
+El número _n_ para indicar el orden debe ser un entero mayor o igual que cero
+
+====

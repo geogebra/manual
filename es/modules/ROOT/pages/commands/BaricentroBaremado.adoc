@@ -1,0 +1,20 @@
+= Comando BaricentroBaremado
+:page-en: commands/Barycenter_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+BaricentroBaremado( <Lista de Puntos>, <Lista de Pesos> )::
+  Establece el centro del conjunto de puntos listados, definido como el valor promedio de sus posiciones, con pesos
+  respectivos según indica la segunda lista. Se calcula según la
+  http://en.wikipedia.org/wiki/es:Centro_de_masas[fórmula] pertinente.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++BaricentroBaremado({(2,0),(0,2),(-2,0),(0,-2)}, {1,1,1,1})++` establece el punto de coordenadas _(0,0)_.
+* `++BaricentroBaremado({(2,0),(0,2),(-2,0),(0,-2)}, {2,1,1,1})++` establece el punto de coordenadas _(0.4,0)_. La
+abscisa del punto - su coordenada *_x_* - la determina la ecuación: _stem:[ \frac\{1}\{ 2+1+1+1 }*(2*2+1*0+1*(-2)+1*0)]
+= stem:[\frac\{1}\{ 5 }*2] = 0.4_
+
+====

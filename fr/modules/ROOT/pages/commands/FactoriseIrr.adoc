@@ -1,0 +1,35 @@
+= Commande FactoriseIrr
+:page-en: commands/IFactor_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+FactoriseIrr( <Polynôme> )::
+  Factorise sur les irrationels
+
+[EXAMPLE]
+====
+
+*Exemple :* `++FactoriseIrr(x^2+x-1)++` donne stem:[ \left( x + \frac\{-\sqrt\{5} + 1}\{2} \right) \left( x +
+\frac\{\sqrt\{5} + 1}\{2} \right)]
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Avec en plus, la possibilité de citer la variable
+
+FactoriseIrr( <Expression>, <Variable> )::
+
+[EXAMPLE]
+====
+
+*Exemple :* `++FactoriseIrr(a^2+a-1,a)++` donne stem:[ \left( a + \frac\{-\sqrt\{5} + 1}\{2} \right) \left(a +
+\frac\{\sqrt\{5} + 1}\{2} \right)]
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/FactoriseCI.adoc[FactoriseCI].

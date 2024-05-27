@@ -1,0 +1,73 @@
+= Příkaz Kdyz
+:page-en: commands/If_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Kdyz( <Podmínka>, <Pak> )::
+  Pokud je splněna <Podmínka> (má pravdivostní hodnotu _true_), vytvoří příkaz kopii objektu <Pak>, v opačném případě
+  (<Podmínka> má pravdivostní hodnotu _false_) vznikne nedefinovaný objekt.
+Kdyz( <Podmínka>, <Pak>, <Jinak> )::
+  Pokud je splněna <Podmínka> (má pravdivostní hodnotu _true_), vytvoří příkaz kopii objektu <Pak>; pokud <Podmínka>
+  není splněna (má pravdivostní hodnotu _false_), vytvoří příkaz kopii objektu <Jinak>.
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Varování,title="Varování",width=18,height=18] *Varování*: |Oba objekty musí být stejného typu.
+|===
+
+[NOTE]
+====
+
+Více o pravdivostních hodnotách v sekci xref:/Pravdivostní_hodnoty.adoc[Pravdivostní hodnoty].
+
+====
+
+== Podmíněné funkce
+
+Příkaz _Kdyz_ může být využit pro vytvoření podmíněných funkcí. Takové funkce pak mohou být užity jako argumenty
+jakéhokoliv příkazu, který funkci jako argument akceptuje, jako např. xref:/commands/Derivace.adoc[Derivace],
+xref:/commands/Integral.adoc[Integrál] a xref:/commands/Prusecik.adoc[Průsečík].
+
+[EXAMPLE]
+====
+
+* `++f(x) = Kdyz[x < 3, sin(x), x^2]++` vytvoří funkci, která je rovna sin(_x_) pro _x < 3_ a _x^2^_ pro _x ≥ 3_.
+* `++f(x) = Kdyz[x < 3 ∧ x>0, x^3]++` vytvoří funkci, která je rovna _x^3^_ pro _x_ mezi 0 a 3, ale není definována pro
+_x ≥ 3_ nebo _x ≤ 0_.
+
+====
+
+[NOTE]
+====
+
+Podrobněji o symbolech, které lze užít v podmínkových výrazech, v sekci xref:/Pravdivostní_hodnoty.adoc[Pravdivostní
+hodnoty].
+
+====
+
+[NOTE]
+====
+
+Derivací funkce definované jako *Kdyz[podmínka, f(x), g(x)]* je funkce *Kdyz[podmínka, f'(x), g'(x)]*. Příkaz neprovádí
+výpočty limit ani jinak neošetřuje chování funkce v problematických bodech.
+
+====
+
+== Příkaz Kdyz ve skriptování
+
+V mnoha programovacích jazycích má *když* význam „když je splněna podmínka, udělej něco; jinak udělej něco jiného“. V
+GeoGebře nejsou argumenty _Kdyz_ příkazy, ale hodnoty, z nichž jedna se se stane výslednou hodnotou příkazu _Kdyz_.
+Proto chcete-li nastavit hodnotu _b_ na 2 pokud je _a > 2_, správný způsob je `++NastavitHodnotu[b,Kdyz[a>2,2,b]]++`.
+Opačný způsob propojení _NastavitHodnotu_ a _Kdyz_ je nesprávný.
+
+[NOTE]
+====
+
+Viz xref:/commands/NastavitHodnotu.adoc[příkaz NastavitHodnotu].
+
+====
+
+[NOTE]
+====
+
+Anglická verze: /s_index_php?title=En:If_Command_action=edit_redlink=1.adoc[If]
+====

@@ -1,0 +1,42 @@
+= Commande Périmètre
+:page-en: commands/Perimeter_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Périmètre( <Polygone poly> )::
+  Périmètre du polygone _poly_.
+
+Périmètre( <Conique c> )::
+  Si la conique _c_ est un cercle ou une ellipse, cette commande en retourne le périmètre. Sinon, elle retourne "non
+  défini".
+
+[NOTE]
+====
+
+*Note :*
+
+Périmètre( <Arc> ) : Retourne le périmètre
+
+longueur de l'arc augmentée de la longueur de la corde qui le sous-tend.
+
+====
+
+[NOTE]
+====
+
+*Note :* Pour les 2 syntaxes précédentes, il y a redondance avec la commande
+xref:/commands/Circonférence.adoc[Circonférence].
+
+====
+
+Périmètre( <Lieu> )::
+  Si le lieu est fini, cette commande en retourne une estimation du périmètre. Sinon, elle retourne "non défini".
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Attention,title="Attention",width=18,height=18] *Attention*: |à bien comprendre cette notion
+de périmètre : Si a est un curseur variant entre -4 et 4, et M=(a,0.75a), votre lieu sera le segment joignant les points
+(-4,-3) et (4,3) de longueur 10, mais Longueur(Lieu(M,a)) vous retournera 20, car il faut décrire 2 fois le segment pour
+revenir au point de départ. Par contre, pas de "problème", si stem:[\alpha] est un curseur variant entre 0 et 2
+stem:[\Pi], et N=(1;stem:[\alpha]), votre lieu sera le cercle unité, de longueur 2 stem:[\Pi] stem:[\approx ] 6.28,
+c'est ce que vous retournera Longueur(Lieu[N,stem:[\alpha])).
+|===

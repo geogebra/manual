@@ -1,0 +1,16 @@
+= Příkaz ObdelnikovyDiagram
+:page-en: commands/BoxPlot_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+ObdelnikovyDiagram( <y-Posun>, <y-Měřítko>, <Seznam řádkových dat> )::
+  Ze zadaných dat vytvoří obdélníkový graf, jehož výška odpovídá druhé zadané proměnné. Svislou polohu grafu v
+  souřadnicovém systému určuje první zadaná proměnná.
+ObdelnikovyDiagram( <y-Posun>, <y-Měřítko>, <Počáteční hodnota>, <Q1>, <Median>, <Q3>, <Koncová hodnota> )::
+  Vytvoří obdélníkový graf pro zadaná statistická data na intervalu [_Počáteční hodnota, Koncová hodnota_].
+
+[EXAMPLE]
+====
+
+`++ObdelnikovyDiagram[0, 1, {2, 2, 3, 4, 5, 5, 6, 7, 7, 8, 8, 8, 9}]++`
+
+====

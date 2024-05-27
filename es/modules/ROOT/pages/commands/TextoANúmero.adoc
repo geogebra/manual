@@ -1,0 +1,26 @@
+= Comando TextoANúmero
+:page-en: commands/ParseToNumber_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+TextoANúmero( <Número>, <Texto> )::
+  Convierto el texto en un xref:/Números_y_Ángulos.adoc[número] y lo guarda en _a_, que debe ser un objeto
+  xref:/Objetos_libres_dependientes_y_auxiliares.adoc[libre] previamente definido.
+
+[EXAMPLE]
+====
+
+Sean `++ a = 3++` y `++ texto1 = "6"++`. `++ TextoANúmero(a, texto1)++` devuelve _a = 6_.
+
+====
+
+[NOTE]
+====
+
+*Notas:*
+
+* Este es un xref:/commands/Comandos_de_Guiones_Scripting.adoc[comando de guion] que establece el valor del número por
+una sola vez. Para convertirse el texto _texto1_ en un número que se actualice dinámicamente, utiliza
+xref:/commands/DesdeBase.adoc[DesdeBase](texto1,10).
+* Ver también el comando xref:/commands/TextoAFunción.adoc[TextoAFunción].
+
+====

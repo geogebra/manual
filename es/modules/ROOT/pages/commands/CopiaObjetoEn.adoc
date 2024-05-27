@@ -1,0 +1,44 @@
+= Comando CopiaObjetoEn
+:page-en: commands/AttachCopyToView_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+CopiaObjetoEn( <Objeto>, <Vista 0|1|2> )::
+  Si _Vista=0_, crea una copia del _objeto_. Si _Vista=1_ o _Vista=2_, crea una copia del objeto en la vista indicada,
+  dependiente del objeto original.
+CopiaObjetoEn( <Objeto>, <Vista 0|1|2>, <Punto 1>, <Punto 2>, <Pixel del Punto 1>, <Pixel del Punto 2> )::
+  Si _Vista=0_, crea una copia del _objeto_. Si _Vista=1_ o _Vista=2_ crea una copia del _objeto_ cuyas medidas se
+  ajustan de acuerdo a una transformación afín que hace corresponder _Punto 1_ a un punto cuyas coordenadas en pantalla
+  (en píxeles) son iguales a _Punto en pantalla 1_ y _Punto 2_ a un punto cuyas coordenadas en pantalla son iguales a
+  _Punto en pantalla 2_.
+
+[EXAMPLE]
+====
+
+Sea `++poli=Polígono((0,0),(1,0),(1,1),(0,1))++`. Si la primera Vista Gráfica está activa
+`++CopiaObjetoEn(poli,1,(0,0),(1,1),(0,0),(100,100))++` crea un cuadrado de 100px x 100px en la esquina superior
+izquierda de la Vista Gráfica.
+
+====
+
+[EXAMPLE]
+====
+
+Sea `++poli = Polígono( (0, 0), (1, 0), (1, 1), (0, 1))++`. Si la primera Vista Gráfica estuviera activa,
+`++CopiaObjetoEn(poli, 1)++` crea un cuadrado del mismo tamaño en la misma posición
+
+====
+
+[NOTE]
+====
+
+Una vez creada la copia, se le añaden a su definición de objeto otros tres argumentos nuevos.
+
+====
+
+[NOTE]
+====
+
+Aún las partes del objeto que queden por fuera del rectángulo que lo enmarca - entre la primera y la tercera _esquina_
+del _punto de pantalla_ - son efectivamente _mapeadas_.
+
+====

@@ -1,0 +1,57 @@
+= Outil Texte
+:page-en: tools/Text_Tool
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+/Fichier:Mode_text_svg.adoc[image:32px-Mode_text.svg.png[Mode text.svg,width=32,height=32]] (code 17), dans la Boîte à
+outils par défaut /Fichier:Mode_slider_svg.adoc[image:32px-Mode_slider.svg.png[Mode slider.svg,width=32,height=32]]
+
+Avec cet outil vous pouvez créer des textes statiques ou dynamiques, ou des formules LaTeX dans la vue
+xref:/Graphique.adoc[Graphique].
+
+* en cliquant dans Graphique pour y créer un texte à cette position ;
+* en cliquant sur un point pour créer un nouveau texte lié à ce point.
+
+[NOTE]
+====
+
+*Note :* Vous pouvez spécifier la position d’un texte comme Absolue sur l’écran ou relative au système de coordonnées
+dans l’onglet ‘Basique’ xref:/Dialogue_Propriétés.adoc[Dialogue Propriétés].
+
+====
+
+Ensuite apparaît xref:/Éditeur_Texte.adoc[l'éditeur de textes] dans lequel vous composez votre texte, qui peut être
+statique, dynamique, ou mixte.
+
+Le texte que vous tapez directement dans la fenêtre "Éditer" est considéré comme *statique*, c'est-à-dire qu'il n'est
+pas affecté par la modification des objets.
+
+Si vous désirez créer un texte dynamique qui affiche les modifications de valeur d'un objet, sélectionnez cet objet dans
+la liste déroulante "Objets". Le nom est affiché _encadré_ dans la fenêtre "Éditer", et selon votre choix, par clic
+droit, sa valeur ou son nom est affiché dans la fenêtre "Aperçu".
+
+Il est aussi possible de faire agir des opérations algébriques ou d'appliquer des commandes spécifiques à ces objets,
+simplement en cliquant dans le _cadre_ contenant l'objet voulu et en tapant l'opération algébrique ou la
+xref:/commands/Commandes_Textes.adoc[commande texte] GeoGebra désirée. Le résultat de ces opérations est affiché
+dynamiquement dans le texte final apparaissant dans Graphique. Vous pouvez même, au départ, sélectionnez dans la liste
+déroulante "Objets", un _champ vide_ pour y valider votre formule.
+
+[EXAMPLE]
+====
+
+*Exemple :* A étant un point du plan
+
+A `++ Si[Longueur[A] <=1, "est ", "n'est pas "]++` dans le disque unité fermé.
+
+_ce qui apparaît en grisé a été saisi dans un champ vide_
+
+====
+
+Les plus beaux résultats sont obtenus en utilisant le format LaTeX pour les formules. Son utilisation est simple et
+intuitive : cochez simplement "Formule LaTeX", et choisissez le modèle de la formule désirée dans la liste déroulante.
+Vous pouvez aussi choisir certains symboles ou opérateurs mathématiques dans la liste déroulante "Symboles".
+
+== Voir aussi
+
+* xref:/Textes.adoc[Textes]
+* xref:/LaTeX.adoc[LaTeX]
+* xref:/commands/Commandes_Textes.adoc[Commandes Textes]

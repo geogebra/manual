@@ -1,0 +1,74 @@
+= Comando ListaRaíces
+:page-en: commands/RootList_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+*ListaRaíces*[ <Lista> ]::
+  xref:/Listas.adoc[Lista] y xref:/Vista_Gráfica.adoc[grafica] sobre el xref:/Líneas_y_Ejes.adoc[eje _x_] los puntos
+  correspondientes a la lista de números \{a~1~,a~2~,...,a~n~}\{(a~1~, 0), (a~2~, 0),..., (a~n~, 0)}.
+
+[EXAMPLE]
+====
+
+*`++ListaRaíces[{3, 4, 5, 2, 1, 3}]++`* da por resultado la lista de puntos sobre el eje de las
+abscisas:*`++{ (3,0), (4,0), (5,0), (2,0), (1,0), (3,0)}++`*
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+En esta xref:/Vista_CAS.adoc[vista] se admite la misma sintaxis y la inclusión de literales para operar simbólicamente.
+
+[EXAMPLE]
+====
+
+*`++ListaRaíces[Secuencia[5] ñ]++`* da por resultado la lista _\{(ñ, 0), (2ñ, 0), (3ñ, 0), (4ñ, 0), (5ñ, 0)}_ que
+devendría de puntos si se le asignara valor a _ñ_ acaso empleando la herramienta para la
+/Archivo:Mode_substitute_png.adoc[image:Mode_substitute.png[Mode substitute.png,width=32,height=32]]
+xref:/tools/Sustituye.adoc[sustitución].
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Si esta asignación, en lugar de a través de una
+xref:/tools/Sustituye.adoc[sustitución] se realizara creando un deslizador _ñ_, sería preciso volver a pulsar
+[.kcode]#Enter# ([.kcode]#Intro# en algunos teclados) en la expresión correspondiente para que el resultado se
+correlacione dinámicamente con el valor que fuera tomando _ñ_.
+
+====
+
+'''''
+
+[EXAMPLE]
+====
+
+*`++ls := Sustituye[ListaRaíces[{3, 4, 5, 2, 1, 3}] ñ,{ñ = sqrt(3)}]++`* da _ls_ como lista disponible para representar
+puntos:*[.small]#\{stem:[(3 \sqrt3, 0), (4 \sqrt3, 0), (5 \sqrt3, 0), (2 \sqrt3, 0), ( \sqrt3, 0), (3 \sqrt3, 0)]}#*
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/ListaPuntos.adoc[ListaPuntos], xref:/commands/Raíz.adoc[Raíz] y
+xref:/commands/Raíces.adoc[Raíces]
+
+====
+
+[NOTE]
+====
+
+En uno u otro caso de asignación de valor a literales, a través de una xref:/tools/Sustituye.adoc[sustitución] o de un
+deslizador, para ver el registro gráfico de los puntos resultantes, será necesario tildar el redondelito a la derecha de
+la fila correspondiente en la xref:/Vista_CAS.adoc[Vista CAS].
+
+====

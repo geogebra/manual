@@ -1,0 +1,91 @@
+= Rótulos y Subtítulos
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+En GeoGebra, cada objeto tiene su propia y exclusiva *etiqueta*, compuesta por una o más letras y, eventualmente,
+subíndices. Para más detalles, consulta xref:/Nombrando_Objetos.adoc[Nombrando Objetos].
+
+== Mostrar y Ocultar Etiquetas
+
+Se pueden mostrar u ocultar las etiquetas de los xref:/Objetos.adoc[objetos] en la
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Vista_Gráfica.adoc[Vista Gráfica]
+de diferentes maneras:
+
+* Seleccionando la herramienta image:22px-Mode_showhidelabel.svg.png[Mode showhidelabel.svg,width=22,height=22]
+xref:/tools/Etiqueta_(in)visible.adoc[Mostrar / Ocultar Etiquta] y haciendo clic sobre el objeto cuya etiqueta se desea
+mostrar u ocultar.
+* Tildando o quitando el tilde a image:22px-Mode_showhidelabel.svg.png[Mode showhidelabel.svg,width=22,height=22]
+xref:/tools/Etiqueta_(in)visible.adoc[_Etiqueta visible_] en el xref:/Menú_contextual.adoc[menú contextual] del objeto
+en cuestión.
+* Abriendo el image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Cuadro_de_Propiedades.adoc[Cuadro de Propiedades] del objeto del que se trate para (des)tildar la casilla
+xref:/tools/Etiqueta_(in)visible.adoc[_Etiqueta visible_] de la pestaña *Básico*.
+
+== Nombre y Valor
+
+En GeoGebra, cada objeto tiene su propio y exclusivo nombre, que puede ser utilizado como etiqueta en la
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Vista_Gráfica.adoc[Vista
+Gráfica]. Además, se puede utilizar como etiqueta su _Valor_ o su _Nombre y valor_. Estas opciones se encuentran en la
+pestaña _Básico_ del
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]xref:/Cuadro_de_Propiedades.adoc[Cuadro de
+Propiedades de Objeto], en un menú desplegable junto a la casilla de verificación _Etiqueta visible_.
+
+[NOTE]
+====
+
+El valor de un punto es el par ordenado determinado por sus coordenadas; el de una función, por su ecuación.
+
+====
+
+== Rótulo
+
+En ocasiones es deseable que varios objetos ostenten la misma etiqueta, por ejemplo, si se quiere que las cuatro aristas
+de un cuadrado tengan _a_ por etiqueta. Para estos casos, GeoGebra ofrece la posibilidad de definir Rótulos, además de
+las opciones de etiquetado descritas más arriba. Puedes definir el Rótulo para un objeto en la pestaña _Básico_ del
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Cuadro_de_Propiedades.adoc[Cuadro de
+Propiedades] del objeto. Escribe el mismo en el campo de texto _Rótulo_ y selecciona luego _Rótulo_ en el menú
+desplegable que se encuentra junto a la casilla _Etiqueta visible_.
+
+Puedes utilizar los siguientes marcadores de posición en los rótulos:
+
+[cols=",",options="header",]
+|===
+|Marcador |Significado
+|%c |El valor de la celda adyacente a la derecha, que deberá ser un texto independiente.No siendo dinámico, el rótulo no
+se actualizará hasta que se pulse [.kcode]#F9# o [.kcode]#Ctrl# + [.kcode]#R#
+
+|%v |Valor
+
+|%n |Nombre
+
+|%d |Descripción
+
+|%f |Definición
+
+|%x |coordenada x o coeficiente x para la recta a x + b y + c = 0
+
+|%y |coordenada y o coeficiente x para la recta a x + b y + c = 0
+
+|%z |coordenada-z, disponible para la xref:/Vista_3D.adoc[Vista 3D] o término 'c' para la recta a x + b y + c = 0
+|===
+
+[EXAMPLE]
+====
+
+Sea A el punto de coordenadas (1,2). Estableciendo como rótulo "El punto %n tiene coordenadas %v", se visualizará "El
+punto A tiene coordenadas (1,2)"
+
+====
+
+=== xref:/LaTeX.adoc[LaTeX] en Rótulos
+
+Los rótulos pueden incluir fórmulas xref:/LaTeX.adoc[LaTeX] (delimitadas por signos de pesos como en $ x^\{2}$) y letras
+griegas u operadores, que pueden seleccionarse de la lista que se abre al hacer clic en el pequeño ícono que se
+encuentra al final del campo de texto _Rótulo_.
+
+[EXAMPLE]
+====
+
+Para lograr una notación matemática agradable, puede emplearse xref:/LaTeX.adoc[LaTeX] en los rótulos. Por ejemplo, para
+una fracción: $\frac\{a}\{b}$ .
+
+====

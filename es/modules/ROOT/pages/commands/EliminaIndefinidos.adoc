@@ -1,0 +1,21 @@
+= Comando EliminaIndefinidos
+:page-en: commands/RemoveUndefined_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+EliminaIndefinidos( <Lista> )::
+  Quita los elementos indefinidos de una lista.
+
+[EXAMPLE]
+====
+
+`++ EliminaIndefinidos(Secuencia((-1)^i, i, -3, -1, 0.5))++` quita el segundo y el cuarto elemento de la secuencia, ya
+que las expresiones stem:[(-1)^\{1.5}] y stem:[(-1)^\{2.5}] no están definidas, y devuelve la lista _\{-1, 1, -1}._
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/Suprime.adoc[Suprime].
+
+====

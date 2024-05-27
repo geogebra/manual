@@ -1,0 +1,64 @@
+= Commande Dérivée
+:page-en: commands/Derivative_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+*Dérivée*( <Fonction> )::
+  Calcule la dérivée de la fonction.
+
+*Dérivée*( <Fonction>, <Valeur n> )::
+  Calcule la dérivée _n^ème^ de la fonction._
+
+*Dérivée*( <Courbe> ) +
+*Dérivée*( <Courbe>, <Valeur n> )::
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++ Dérivée(Courbe(cos(t),t sin(t),t,0,π),2)++` donne la courbe paramétrique
+
+x = -cos(t) et y = cos(t) + sin(t) (-1) t + cos(t) pour 0 ≤ t ≤ π
+
+avec `++ Simplifier(Dérivée(Courbe(cos(t), t sin(t),t,0,π),2))++` le résultat est _plus beau_ pour
+
+y = -t sin(t) + 2cos(t)
+
+====
+
+[NOTE]
+====
+
+*Note :* Seulement pour des courbes paramétriques.
+
+====
+
+[NOTE]
+====
+
+*Note :* Vous pouvez utiliser `++f'(x)++` à la place de `++Dérivée(f)++`, ou `++f''(x)++` à la place de
+`++Dérivée(f, 2)++`, et ainsi de suite.
+
+====
+
+/Fichier:Menu_view_cas_svg.adoc[image:20px-Menu_view_cas.svg.png[Menu view cas.svg,width=20,height=20]] *Calcul formel*
+Dans le xref:/Calcul_formel.adoc[calcul formel] les seules syntaxes suivantes sont supportées :
+
+Dérivée( <Fonction f> ou <Expression f>)::
+  Calcule la dérivée de la fonction _f_ par rapport à _x_.
+Dérivée( <Fonction f> ou <Expression f>, <Variable a>)::
+  Calcule la dérivée de la fonction _f_ par rapport à _a_.
+Dérivée( <Fonction f> ou <Expression f>, <Variable a>, <Nombre n>)::
+  Calcule la dérivée __n__^ème^ de la fonction _f_ par rapport à _a_.
+
+[EXAMPLE]
+====
+
+*Exemples :* En supposant que avez déclaré la fonction _f_ par `++f(x):=a*x^3++`
+
+* `++Dérivée(x^2)++` donne _2x_.
+* `++Dérivée(f(x))++` donne _3 a x²_.
+* `++Dérivée(f(x), a)++` donne _x³_.
+* `++Dérivée(f(x), x, 2)++` donne _6 a x_.
+
+====

@@ -1,0 +1,99 @@
+= Comando Tangente
+:page-en: commands/Tangent_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Tangente( <Punto>, <Cónica> )::
+  Crea (todas) las tangentes a la sección cónica que pasan por el punto dado.
+
+[EXAMPLE]
+====
+
+`++Tangente((5, 4), 4x^2 - 5y^2 = 20)++` crea la recta _x - y = 1_
+
+====
+
+Tangente( <Punto>, <Función> )::
+  Crea la tangente a la función en _x = x(A)_.
+
+[EXAMPLE]
+====
+
+`++Tangente((1, 0), x^2)++` crea la recta _y = 2x - 1'_
+
+====
+
+[NOTE]
+====
+
+_x(A)_ es la abscisa del punto _A_.
+
+====
+
+Tangente( <Punto>, <Curva> )::
+  Crea la tangente a la curva en el punto dado.
+
+[EXAMPLE]
+====
+
+`++Tangente((0, 1), Curva(cos(t), sen(t), t, 0, π))++` da por resultado _y = 1_.
+
+====
+
+Tangente( <Valor de x (punto o número)>, <Función> )::
+  Crea la tangente a la función en el _Valor de x_.
+
+[EXAMPLE]
+====
+
+`++Tangente(1, x^2)++` da por resultado _y = 2x - 1_.
+
+====
+
+Tangente( <Recta>, <Cónica> )::
+  Crea (todas) las tangentes a la cónica que son paralelas a la recta dada.
+
+[EXAMPLE]
+====
+
+`++Tangente(y = 4, x^2 + y^2 = 4)++` da por resultado _y = 2_ y _y = -2_.
+
+====
+
+Tangente( <Circunferencia>, <Circunferencia> )::
+  Crea todas las tangentes que tienen en común las circunferencias (hasta cuatro).
+
+[EXAMPLE]
+====
+
+`++Tangente(x^2 + y^2 = 4, (x - 6)^2 + y^2 = 4)++` crea las rectas: _y = 2_, _y = -2_, _1.49x + 1.67y = 4.47_ y _-1.49x
++ 1.67y = -4.47_
+
+====
+
+Tangente( <Punto>, <Spline> )::
+  Crea la tangente al spline que pasa por el punto indicado.
+Tangente( <Punto>, <Curva implícita> )::
+  Crea la tangente a la curva implícita que pasa por el punto dado.
+
+[EXAMPLE]
+====
+
+`++Tangente((1,1), x^2+y^2=1))++` crea las rectas _x=1_ y _y=1_.
+
+====
+
+[EXAMPLE]
+====
+
+Sea _A = (0, 1)_, _B = (4, 4)_ y _C = (0, 4)_. `++Tangente(A, Spline({A, B, C}))++` crea la recta _a_: _y_ = _0.59x +
+1_.
+
+====
+
+[NOTE]
+====
+
+Ver también las herramientas: /Archivo:Mode_tangent_png.adoc[image:Mode_tangent.png[Mode
+tangent.png,width=32,height=32]] xref:/tools/Tangentes.adoc[Tangentes].
+
+====

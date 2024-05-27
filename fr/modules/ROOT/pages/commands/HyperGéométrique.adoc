@@ -1,0 +1,55 @@
+= Commande HyperGéométrique
+:page-en: commands/HyperGeometric_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+HyperGéométrique( <Taille Population>, <Nombre Succès>, <Taille Echantillon> )::
+  Retourne un histogramme de la loi http://en.wikipedia.org/wiki/fr:Loi_hyperg%C3%A9om%C3%A9trique[hypergéométrique].
+  _Paramètres:_
+  _Taille Population_: (nombre de boules dans l'urne) ;
+  _Nombre Succès_: (nombre de boules blanches dans l'urne) ;
+  _Taille Echantillon_: (nombre de boules tirées dans l'urne) ;
+
+(L'histogramme affiche la fonction de probabilité du nombre de boules blanches dans l'échantillon).
+
+HyperGéométrique( <Taille Population>, <Nombre Succès>, <Taille Echantillon>, <Booléen Cumul> )::
+  Retourne un histogramme de la loi hypergéométrique si _Cumul_ = false.
+  Retourne un histogramme cumulé de la loi hypergéométrique si _Cumul_ = true.
+  Les trois premiers paramètres sont les mêmes que ci-dessus.
+
+HyperGéométrique( <Taille Population>, <Nombre Succès>, <Taille Echantillon>, <Valeur Variable v>, <Booléen Cumul> )::
+  Soit X une variable aléatoire suivant une loi hypergéométrique.
+  Retourne P( X = _v_) si _Cumul_ = false.
+  Retourne P( X ≤ _v_) si _Cumul_ = true.
+  Les trois premiers paramètres sont les mêmes que ci-dessus.
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/InverseHyperGéométrique.adoc[InverseHyperGéométrique].
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* : Seule la syntaxe suivante est utilisable :
+
+HyperGéométrique( <Taille Population>, <Nombre Succès>, <Taille Echantillon>, <Valeur Variable v>, <Booléen Cumul> )
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+Supposons que vous tiriez, sans remise, deux billes dans une urne qui en contient dix, dont deux blanches :
+
+* `++HyperGéométrique(10, 2, 2, 0, false)++` retourne stem:[\frac\{28}\{45}], la probabilité d'obtenir zéro bille
+blanche ;
+* `++HyperGéométrique(10, 2, 2, 1, false)++` retourne stem:[\frac\{16}\{45}], la probabilité d'obtenir une bille
+blanche ;
+* `++HyperGéométrique(10, 2, 2, 2, false)++` retourne stem:[\frac\{1}\{45}], la probabilité d'obtenir les deux billes
+blanches ;
+* `++HyperGéométrique(10, 2, 2, 3, false)++` retourne _0_, la probabilité d'obtenir trois billes blanches ;
+* `++HyperGéométrique(10, 2, 2, 0, true)++` retourne stem:[\frac\{28}\{45}], la probabilité d'obtenir au plus zéro bille
+blanche ;
+* `++HyperGéométrique(10, 2, 2, 1, true)++` retourne stem:[\frac\{44}\{45}], la probabilité d'obtenir au plus une bille
+blanche ;
+* `++HyperGéométrique(10, 2, 2, 2, true)++` retourne _1_, la probabilité d'obtenir au plus deux billes blanches et
+* `++HyperGéométrique(10, 2, 2, 3, true)++` retourne _1_,la probabilité d'obtenir au plus trois billes blanches.
+
+====

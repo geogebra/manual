@@ -1,0 +1,34 @@
+= Příkaz NaplnitBunky
+:page-en: commands/FillCells_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+NaplnitBunky( <Rozsah buňky>, <Objekt> )::
+  Zkopíruje hodnotu (výraz, rovnici, atd.) do zvolených buněk v xref:/Tabulka.adoc[tabulce].
+
+[NOTE]
+====
+
+Parametr _Objekt_ může být jakýkoliv geometrický útvar nebo hodnota, např. `++3++`, `++NahodneMezi[0,10]++`, nebo
+`++Kruznice[A,B]++`.
+
+====
+
+[NOTE]
+====
+
+Parametr _Rozsah buňky_ musí být zadán ve tvaru _Počátek : Konec_, např. `++B2:D5++`.
+
+====
+
+NaplnitBunky( <Buňka>, <Seznam> )::
+  Prvky seznamu vloží do tabulky napravo od zadané buňky, např. `++NaplnitBunky[A1,{1,2,3,4,5}]++`.
+NaplnitBunky( <Buňka>, <Matice> )::
+  Prvky xref:/Matice.adoc[Matice] vepíše do tabulky. Buňka označuje pozici prvku v prvním řádku a prvním sloupci.
+
+[EXAMPLE]
+====
+
+Příkaz`++NaplnitBunky[A1,{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}]++` vloží do buněk _A1:C3_ čísla 1,2,3 do prvního řádku,
+čísla 4,5,6 do druhého řádku a do třetího řádku prvky posledního seznamu 7,8,9.
+
+====

@@ -1,0 +1,38 @@
+= Comando EscalonadaReducida
+:page-en: commands/ReducedRowEchelonForm_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+*EscalonadaReducida*[ <Matriz> ]::
+  Da por resultado la xref:/Matrices.adoc[matriz] http://en.wikipedia.org/wiki/es:Matriz_escalonada[escalonada reducida
+  por filas] (en inglés, http://en.wikipedia.org/wiki/Row_echelon_form[_row echelon form_]).
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++EscalonadaReducida[{{1,6,4},{2,8,9},{4,5,6}}]++`* establece:_\{\{1,0,0},\{0,1,0},\{0,0,1}}_, la
+matriz:[.small]##stem:[ \left( \begin\{array}\{} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \\ \end\{array} \right)
+]##**`++EscalonadaReducida[{{1,6,4},{2,8,9},{4,5,6},{2,3,7}} ]++`** establece:_\{\{1,0,0},\{0,1,0},\{0,0,1}}_, la
+matriz:stem:[\{\left(\begin\{array}\{}1&0&0\\0&1&0\\0&0&1\\0&0&0\\\end\{array}\right)}]
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+Admitiendo literales en operaciones simbólicas, en esta xref:/Vista_CAS.adoc[vista], el comando obra del modo descripto.
+
+[EXAMPLE]
+====
+
+*`++({{1,6,4},{2,8,9},{4,5,6}, {3,2, 5}} ñ + EscalonadaReducida[{{á,6,4},{2,8,9},{4,5 ó,6}}] k) ú++`* establece la
+matriz:[.small]#stem:[\{\left(\begin\{array}\{}k ú + ñ ú&6 ñ ú&4 ñ ú\\2 ñ ú&k ú + 8 ñ ú&9 ñ ú\\4 ñ ú&5 ñ ú&k ú + 6 ñ
+ú\\3 ñ ú&2 ñ ú&5 ñ ú\\\end\{array}\right)}]#
+
+====

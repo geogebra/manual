@@ -1,0 +1,61 @@
+= Commande Droite
+:page-en: commands/Line_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Droite( <Point A>, <Point B> )::
+  Crée la droite (AB) passant par les points _A_ et _B_.
+
+[NOTE]
+====
+
+*Note :* Pour l'équation affichée dans Algèbre
+
+* en Graphique 2D il a 4 écritures possibles :y = ax + b ; ax + by = c ; ax + by + c = 0 et paramétrique X = A + λ
+^stem:[ \overrightarrow\{AB}]^
+* en Graphique 3D il n'y a que l'écriture paramétrique X = A + λ ^stem:[ \overrightarrow\{AB}]^.
+
+====
+
+Droite( <Point A>, <Ligne parallèle d> )::
+  Crée la droite passant par _A_ et parallèle à _d_.
+
+Droite( <Point A>, <Vecteur v> )::
+  Crée la droite passant par _A_ et de vecteur *directeur* _v_.
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :* Si on connaît plutôt le vecteur normal _n_,
+[.kcode]#Saisie :# `++n (x,y)= n A++`.
+
+====
+
+/Fichier:Tool_tool_png.adoc[image:Tool_tool.png[Tool tool.png,width=32,height=32]] Voir les *outils* associés :
+/Fichier:Mode_join_svg.adoc[image:32px-Mode_join.svg.png[Mode join.svg,width=32,height=32]]
+xref:/tools/Droite.adoc[Droite] et /Fichier:Mode_parallel_svg.adoc[image:32px-Mode_parallel.svg.png[Mode
+parallel.svg,width=32,height=32]] xref:/tools/Parallèle.adoc[Parallèle] .
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Vous avez la possibilité de travailler en littéral,
+
+[EXAMPLE]
+====
+
+*Exemple :* si les variables _a_, _b_, _c_ et _d_ n'ont pas été définies,
+
+`++Droite((a,b),(c,d)) ++` retourne stem:[y = \frac\{a \space d - b \space c}\{a - c} + x \space \frac\{b - d}\{a - c}]
+
+====
+
+_____________________________________________________________
+
+/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] *Graphique 3D* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D

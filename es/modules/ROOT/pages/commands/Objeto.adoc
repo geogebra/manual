@@ -1,0 +1,62 @@
+= Comando Objeto
+:page-en: commands/Object_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+*Objeto*[ <Nombre del Objeto como Texto> ]::
+  Crea un objeto, copia del referido por su _Nombre_.El resultado es siempre un objeto dependiente.
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: El _Nombre_ del _Objeto_ debe ser expresado como
+xref:/Textos.adoc[texto], estático o dinámico.
+
+====
+
+[NOTE]
+====
+
+*Notas:* El comando xref:/commands/Nombre.adoc[Nombre] es el recíproco de *Objeto*.No todas las _cualidades_ y
+*xref:/Cuadro_de_Propiedades.adoc[propiedades]* del objeto _original_ se _duplican_ y verifican en el resultante.
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++H = Objeto[LetraDeCódigo[65 + n]]++`* crea un punto, _H_, que _copiará_ a los preexistentes _A_, _B_ y
+sucesivos a medida que el valor del xref:/tools/Deslizador.adoc[deslizador _n_] pase, por ejemplo, de _0_ al valor tope
+que se le hubiese asignado.Si existen los puntos _A1_, _A2_, ... , _A20_ y el deslizador _n = 2_,
+entonces...*`++Objeto["A" + n]++`* da por resultado una copia del punto _A2_.El punto resultante pasaría a ser copia de
+_A2_, _A3_ y así sucesivamente si el deslizador cobrara animación creciente.
+
+====
+
+[NOTE]
+====
+
+Debe controlarse , en el *xref:/Protocolo_de_Construcción.adoc[Protocolo de Construcción]*, que los objetos referidos
+hayan sido creados**antes** que este comando.
+
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Alerta,title="Alerta",width=18,height=18] *Alerta*: |El comando Objeto no puede incluirse en
+las xref:/Barra_de_Herramientas.adoc[Herramientas Personales].
+|===
+
+[NOTE]
+====
+
+Ver también el comando *xref:/commands/CopiaObjetoLibre.adoc[CopiaObjetoLibre]*.
+
+====

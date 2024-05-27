@@ -1,0 +1,49 @@
+= Commande Exponentielle
+:page-en: commands/Exponential_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Exponentielle( <Lambda λ>, <Valeur Variable v> )::
+  Calcule une valeur approchée de la fonction cumulée de la loi exponentielle en _v_, i.e. la probabilité _P(X≤v)_ où
+  _X_ est une variable aléatoire suivant une loi exponentielle de paramètre λ.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Exponentielle(2,1) ++`retourne _0.86_ (_Options > 2 décimales_).
+
+====
+
+[NOTE]
+====
+
+*Note :* Retourne la probabilité pour une valeur donnée d'abscisse (ou l'aire sous la courbe de la loi exponentielle, à
+gauche de l'abscisse donnée).
+
+====
+
+Exponentielle( <Lambda λ>, <Valeur Variable v> , <Booléen Cumul> )::
+  Si _Cumul_ est _true_, calcule une valeur approchée de la fonction densité cumulée de probabilité de la loi
+  exponentielle, sinon calcule une valeur approchée de la fonction densité de probabilité de la loi exponentielle.
+
+Exponentielle( <Lambda λ>, x , <Booléen Cumul> )::
+  Si _Cumul_ est _true_, crée la fonction densité cumulée de probabilité de la
+  http://en.wikipedia.org/wiki/fr:Loi_exponentielle[loi exponentielle] de paramètre λ, sinon en crée la fonction densité
+  de probabilité.
+
+{empty}[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/InverseExponentielle.adoc[InverseExponentielle]
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+avec une _meilleure_ écriture du résultat :
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Exponentielle(2,1) ++` retourne _stem:[1 - \frac\{1}\{e^\{2} } ]_.
+
+====

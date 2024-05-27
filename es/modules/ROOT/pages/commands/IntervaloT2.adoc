@@ -1,0 +1,30 @@
+= Comando IntervaloT2
+:page-en: commands/TMean2Estimate_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+IntervaloT2( <Lista de datos (muestra 1)>, <Lista de datos (muestra 2)>, <Nivel de confianza>, <Agrupado o no
+(true/false)> )::
+  Calcula el intervalo de confianza estimado de la diferencia entre dos poblaciones medias usando los conjuntos de datos
+  de sendas muestras y el _nivel_ de confianza.
+
+Si el parámetro booleano es verdadero, las varianzas de población se asumen iguales y las desviaciones estándar
+muestrales se combinan en el cálculo.
+
+Si es falso, las varianzas de población no son asumidas iguales y las desviaciones estándar muestrales no se combinan.
+
+Los resultados se listan en un formato del tipo \{_límite inferior de confianza_, _límite superior de confianza_}.
+
+IntervaloT2( <Media (muestra 1)>, <Desviación estándar (muestra 1)>, <Tamaño (muestra 1)>, <Media (muestra 2)>,
+<Desviación estándar (muestra 2)>, <Tamaño (muestra 2)>, <Nivel de confianza>, <Agrupado o no (true/false)> )::
+  Calcula un intervalo T de confianza estimada de la diferencia entre sendas poblaciones medias usando las muestras
+  dadas y el correspondiente _Nivel de confianza_.
+  Los resultados se listan en un formato del tipo \{_límite inferior de confianza_, _límite superior de confianza_}.
+  El efecto del parámetro _booleano_ es el previamente descripto.

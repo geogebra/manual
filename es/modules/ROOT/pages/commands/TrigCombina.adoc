@@ -1,0 +1,187 @@
+= Comando TrigCombina
+:page-en: commands/TrigCombine_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+TrigCombina( <Expresión> )::
+  Transforma una expresión que incluye productos de funciones trigonométricas en una equivalente que, en base a las
+  mismas variables, los expresa como combinación de sumas.[.small]##
+  [.small]##
+  [NOTE]
+
+  ====
+
+  En las últimas versiones, se opera en articulación con el comando xref:/commands/TrigSimplifica.adoc[TrigSimplifica]
+  para obtener un resultado "más agradable".
+
+  ====
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++TrigCombina[sin(x) cos(3x)]++` da, tanto en en la vista xref:/Vista_CAS.adoc[CAS] como en la
+xref:/Vista_Algebraica.adoc[Algebraica].stem:[\{\frac\{1}\{2} sin \left( 4 x \right) - \frac\{1}\{2} sin \left( 2 x
+\right)}]
+* `++TrigCombina[sin(x) + cos(x)]++` da stem:[ \{\sqrt\{2} cos \left( x - \frac\{1}\{4} \pi \right)} ] contrastando con
+el resultado de `++TrigCombina[sin(x) + cos(x), sin(x)]++` que da stem:[ \{\sqrt\{2} sin \left( x + \frac\{1}\{4} \pi
+\right)} ]
+* `++TrigCombina[(tan(x) + tan(2x)) / (1 - tan(x) tan(2x))]++` da stem:[\frac\{1} \{cos(3x)} sin(3x)] que podría
+contrastarse con el siguiente resultado:
+* `++TrigSimplifica[TrigCombina[(tan(x) + tan(2x)) / (1 - tan(x) tan(2x)), tan(x)]]++` da _tan(3x)_
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: A la salida indicada, se añade el registro
+xref:/Vista_Gráfica.adoc[gráfico] tanto si el ingreso fuese desde la xref:/Barra_de_Entrada.adoc[Barra de Entrada] como
+si, habiendo sido anotado en una fila de la xref:/Vista_CAS.adoc[Vista CAS], se _tilda_ el redondelito que la encabeza a
+la derecha.
+
+====
+
+TrigCombina( <Expresión>, <Función Destino> )::
+  Transforma una expresión que incluye productos de funciones trigonométricas en una equivalente que, en base a las
+  mismas variables y privilegiando la xref:/Funciones.adoc[_función_] propuesta como _destino_, los expresa como
+  [.underline]#combinación# de sumas.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++TrigCombina[ (tan(x) +tan(y))/(1-tan(x) tan(y)), tan(x)]++` da tan(x + y)
+* `++TrigCombina[ (tan(x) +tan(y))/(1- tan(x) tan(y)), tan(y)]++` da tan(x + y)
+* `++TrigCombina[sin(x) + cos(x), sin(x)]++` da stem:[ \{\sqrt\{2} sin \left( x + \frac\{1}\{4} \pi \right)} ]
+
+====
+
+'''''
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Los resultados de sendas funciones multivariables se
+registran tanto cuando se ingresa la expresión desde la xref:/Barra_de_Entrada.adoc[Barra de Entrada] como si se anotara
+en la xref:/Vista_CAS.adoc[Vista CAS] sin el de correlato xref:/Vista_Gráfica.adoc[gráfico] ni en uno ni en otro caso.
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+El comando obra del modo ya descripto, admitiendo literales en operaciones simbólicas.
+
+[EXAMPLE]
+====
+
+`++TrigCombina[sin(p) cos(3p)]++` da stem:[\{\frac\{1}\{2} sin \left( 4 p \right) - \frac\{1}\{2} sin \left( 2 p
+\right)}].
+
+====
+
+El resultado se resuelve más completa y concretamente.
+
+[EXAMPLE]
+====
+
+`++TrigCombina[sin(p) + cos(p), sin(x)]++` da stem:[ \{\sqrt\{2} sin \left( p + \frac\{1}\{4} \pi \right)} ].
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Cuando el resultado establecido incluye literales,
+no será posible el adicional registro xref:/Vista_Gráfica.adoc[gráfico] hasta que, eventualmente se les asigne algún
+valor por alguna de las posibles maniobras con las que cuenta GeoGebra, como la de
+/Archivo:Mode_substitute_32_gif.adoc[image:Mode_substitute_32.gif[Mode substitute 32.gif,width=32,height=32]]
+xref:/tools/Sustituye.adoc[sustitución].
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* *`++TrigCombina[ sin(p) cos(3 x)]++`* dastem:[\frac\{sen(p - 3 x) + sen(p + 3 x)}\{2}]
+* *`++TrigCombina[ (tan(k p)+tan(x))/(1-tan(k p) tan(x)),tan(x)]++`* da:_tan(k p + x)_
+* `++TrigCombina[ñ sin(x) + ú cos(x)]++` da...[.small]#stem:[\sqrt\{ñ² + ú²}] cos(stem:[\frac\{1}\{2} ] π sgn(ñ) sgn(ú)
+- stem:[\frac\{1}\{2} ] π sgn(ñ) - arctan(stem:[\frac\{ñ}\{ú} ]) + x)#
+* `++TrigCombina[ñ cos(á x + δ) + ú sen(á x + δ)]++` da...stem:[\sqrt\{ñ² + ú²}] cos(á x + δ + stem:[\frac\{1}\{2} ] π
+sgn(ñ) sgn(ú) - stem:[\frac\{1}\{2} ] π sgn(ú) - atan(stem:[\frac\{ú}\{ñ} ]
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/TrigDesarrolla.adoc[TrigDesarrolla] y
+xref:/commands/TrigSimplifica.adoc[TrigSimplifica].
+
+====
+
+=== Combinación Lineal Generalizada en xref:/Vista_CAS.adoc[Vista CAS]
+
+Una combinación lineal general se evidencia en el último ejemplo:`++TrigCombina[ñ cos(á x + δ) + ú sen(á x + δ)]++`
+da...stem:[\sqrt\{ñ² + ú²}] cos(á x + δ + stem:[\frac\{1}\{2} ] π sgn(ñ) sgn(ú) - stem:[\frac\{1}\{2} ] π sgn(ú) -
+atan(stem:[\frac\{ú}\{ñ} ]))Si la pregunta fuese, en particular, si *_f(x) = cos(x - π/4 )_* es o no, dentro de los
+reales, una combinación lineal de: _f~1~(x) = cos(x)_ y__f~2~(x) = sen(x)__... podría partirse de:
+
+* reformular _f(x)_ como *_f(x) = sen(x + π/4 )_*
+* valerse de la identidad trigonométrica:
++
+
+'''''
++
+_sen(a + b) = sen(a) cos(b) + cos(a) sen(b)_
++
+
+'''''
+* corroborar que para x ∈ R...__sen(x + π / 4) = cos(π/4) sen(x) + sen(π/4) cos(x)__De lo anterior, se desprende
+que:_f(x) = stem:[\frac\{\sqrt\{2} }\{2} ] f~1~(x) + stem:[\frac\{\sqrt\{2} }\{2} ] f~2~(x)_... se cumple ∀x ∈ R.Es
+decir:*_f(x) = stem:[\frac\{\sqrt\{2} }\{2} ] f~1~(x) + stem:[\frac\{\sqrt\{2} }\{2} ] f~2~(x)_*
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Alerta,title="Alerta",width=18,height=18] *Alerta*: |Hasta que todo literal no sea
+/Archivo:Mode_substitute_32_gif.adoc[image:Mode_substitute_32.gif[Mode substitute 32.gif,width=32,height=32]]
+xref:/tools/Sustituye.adoc[sustituido] por un valor específico, no será posible xref:/Vista_Gráfica.adoc[graficar] la
+expresión resultante.Ni siquiera _tildar_ el redondelito que encabeza la fila correspondiente en la
+xref:/Vista_CAS.adoc[Vista CAS].
+|===
+
+[.small]##
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Es muy recomendable el http://youtu.be/kM4GgJA5koY[video tutorial] que, en italiano, ilustra el empleo del comando para
+operar con expresiones que incluyen funciones trigonométricas.
+|===
+
+[.small]##
+
+[.small]##
+
+'''''
+
+[NOTE]
+====
+
+Los comandos xref:/commands/TrigDesarrolla.adoc[TrigDesarrolla] y xref:/commands/TrigSimplifica.adoc[TrigSimplifica]
+_combinados_ con [.underline]#TrigCombina# permiten el tratamiento compuesto de expresiones trigonométricas.
+
+====

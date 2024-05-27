@@ -1,0 +1,61 @@
+= Comando PuntoMedio
+:page-en: commands/Midpoint_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+PuntoMedio( <Segmento> )::
+  Crea el punto medio del segmento.
+
+[EXAMPLE]
+====
+
+Sea `++s = Segmento( (1, 1), (1, 5) )++`. `++PuntoMedio(s)++` crea el punto _(1, 3)_.
+
+====
+
+PuntoMedio( <Cónica> )::
+  Crea el centro de la cónica.
+
+[EXAMPLE]
+====
+
+`++PuntoMedio(x^2 + y^2 = 4)++` crea el punto de coordenadas _(0, 0)_.
+
+====
+
+PuntoMedio( <Intervalo> )::
+  Da por resultado el punto medio del intervalo (como número).
+
+[EXAMPLE]
+====
+
+`++PuntoMedio( -3 < x < 7 )++` da el número _2_
+
+====
+
+PuntoMedio( <Punto>, <Punto> )::
+  Crea el punto medio entre los puntos indicados.
+
+[EXAMPLE]
+====
+
+`++PuntoMedio( (1, 1), (5, 1) )++` *crea el punto _(3, 1)_.*
+
+====
+
+PuntoMedio( <Cuádrica> )::
+  Crea el centro de la cuádrica indicada (por ejemplo, una esfera o un cono).
+
+[EXAMPLE]
+====
+
+`++PuntoMedio(x^2 + y^2 + z^2 = 1)++` da por resultado _(0, 0, 0)_.
+
+====
+
+[NOTE]
+====
+
+Ver también las herramientas: /Archivo:Mode_midpoint_png.adoc[image:Mode_midpoint.png[Mode
+midpoint.png,width=32,height=32]] xref:/tools/Medio_o_Centro.adoc[Medio o Centro]
+
+====

@@ -1,0 +1,68 @@
+= Comando NotaciónCientífica
+:page-en: commands/ScientificText_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+NotaciónCientífica[ <Número> ]::
+  Presenta el número en http://en.wikipedia.org/wiki/es:Notaci%C3%B3n_cient%C3%ADfica[notación científica]
+NotaciónCientífica[ <Número>, <Precisión> ]::
+  Presenta el número en http://en.wikipedia.org/wiki/es:Notaci%C3%B3n_cient%C3%ADfica[notación científica], redondeado
+  al número de tantos dígitos significativos como los establecidos por la *precisión*
+
+[EXAMPLE]
+====
+
+`++NotaciónCientífica[ℯ, 5]++` da por resultado _2.7183 ×10^0^._
+
+====
+
+[EXAMPLE]
+====
+
+`++NotaciónCientíficar[0.002]++` da por resultado _2 ×10^-3^._
+
+====
+
+[NOTE]
+====
+
+Considerar también...
+
+* el comando en inglés /s_index_php?title=En:ScientificText_Command_action=edit_redlink=1.adoc[Scientific Text] que
+tiene un desempeño equivalente siendo el que corresponde al término
+/s_index_php?title=En:StandardForm_Command_action=edit_redlink=1.adoc[Standard Form] habitual en Reino Unido, mientras
+/s_index_php?title=En:ScientificText_Command_action=edit_redlink=1.adoc[Scientific Text] es más frecuente en EEUU
+* el artículo sobre http://en.wikipedia.org/wiki/it:Forma_canonica[Forma Canónica]
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+El funcionamiento es análogo en esta xref:/Vista_CAS.adoc[vista].
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Resulta conveniente emplear la asignación
+correspondiente como en:
+
+*`++tx := NotaciónCientífica[0.002]++`*
+
+====
+
+'''''
+
+[NOTE]
+====
+
+*Notas:* La base _euleriana_ *_ℯ_* se obtiene pulsando [.kcode]#ALT # + [.kcode]## e##Ver también el comando
+xref:/commands/TextoFracción.adoc[TextoFracción]
+
+====

@@ -1,0 +1,55 @@
+= Commande Sommet
+:page-en: commands/Vertex_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Sommet( <Conique c > )::
+  Retourne tous les sommets de la conique _c_.
+
+Sommet( <Inéquations> )::
+  Retourne le point d'intersection des frontières
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++Sommet((x + y < 3) && (x - y > 1))++` retourne le point (2,1) ;
+
+`++{Sommet((x + y < 3)∧(x - y > 1)&&(y>-2))}++` retourne la liste de points \{(2, 1), (5, -2), (-1, -2)} ;
+
+`++Sommet((y > x²) ∧ (y < x))++` retourne les deux points (0, 0) et (1, 1) ;
+
+`++{Sommet((y > x²) ∧ (y < x))}++` retourne la liste de points \{(0, 0), (1, 1)} .
+
+====
+
+Sommet( <Polygone poly > )::
+  Retourne tous les sommets du polygone _poly_.
+
+Sommet( <Polygone poly>, <Numéro n >)::
+  Retourne le n^ème^ sommet du polygone _poly_.
+
+[NOTE]
+====
+
+*Note :* Pour récupérer tous les sommets du polygone/de la conique/de l'inéquation sous forme de
+xref:/Listes.adoc[liste], utilisez `++{Sommet(<Objet>)}++`.
+
+====
+
+Sommet( <Segment>, <Numéro n >)::
+  (n = 1 ou 2) Retourne la n^ème^ extrémité du segment.
+
+équivaut à Point(<Segment>, <paramètre>) avec paramètre=0 ou 1
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul formel*
+: La commande Sommet ne retourne que le 1er sommet, utiliser `++{Sommet(<Objet>)}++` pour les obtenir tous.
+
+_____________________________________________________________
+
+/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] *Graphique 3D* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D
+
+en ce qui concerne polygones et coniques

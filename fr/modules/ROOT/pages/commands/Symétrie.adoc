@@ -1,0 +1,80 @@
+= Commande Symétrie
+:page-en: commands/Reflect_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Symétrie( <xref:/Objets_géométriques.adoc[Objet géométrique]>, <Point B> )::
+  Crée le symétrique de l'objet géométrique par rapport au point _B_.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* Symétrie(Point A,Point B) : Symétrique du point A par rapport au point B.
+* Symétrie(Ligne g,Point B ): Symétrique de la ligne g par rapport au point B.
+* Symétrie(Conique c,Point B) : Symétrique de la conique c par rapport à B.
+* Symétrie(Polygone poly,Point B) : Symétrique de poly par rapport au point B.
+
+[NOTE]
+====
+
+*Note :* Dans la construction du symétrique d'un polygone par rapport à un point, les nouveaux sommets et côtés sont
+créés aussi.
+
+====
+
+====
+
+Symétrie( <xref:/Objets_géométriques.adoc[Objet géométrique]>, <Droite d> )::
+  Crée le symétrique de l'objet géométrique par rapport à la droite _d_.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* Symétrie(Point A,Ligne h) : Symétrique du point A par rapport à la ligne h.
+* Symétrie(Ligne g,Ligne h) : Symétrique de la ligne g par rapport à la ligne h.
+* Symétrie(Conique c,Ligne h) : Symétrique de la conique c par rapport à h.
+* Symétrie(Polygone poly,Ligne h): Symétrique de poly par rapport à la ligne h.
+
+[NOTE]
+====
+
+*Note :* Dans la construction du symétrique d'un polygone par rapport à une droite, les nouveaux sommets et côtés sont
+créés aussi.
+
+====
+
+====
+
+Symétrie(<xref:/Objets_géométriques.adoc[Objet géométrique]>, <Cercle c> )::
+  Image de l'objet géométrique par l’inversion de pôle le centre du cercle c et de puissance le carré du rayon du cercle
+  _c_.
+
+Symétrie(Image image,Point B)::
+  Symétrique de image par rapport à B.
+Symétrie(Image image,Ligne h)::
+  Symétrique de image par rapport à h.
+
+/Fichier:Tool_tool_png.adoc[image:Tool_tool.png[Tool tool.png,width=32,height=32]] Voir les *outils* associés :
+/Fichier:Mode_mirroratpoint_svg.adoc[image:32px-Mode_mirroratpoint.svg.png[Mode mirroratpoint.svg,width=32,height=32]]
+xref:/tools/Symétrie_centrale.adoc[Symétrie centrale],
+/Fichier:Mode_mirroratline_svg.adoc[image:32px-Mode_mirroratline.svg.png[Mode mirroratline.svg,width=32,height=32]]
+xref:/tools/Symétrie_axiale.adoc[Symétrie axiale] , et
+/Fichier:Mode_mirroratcircle_svg.adoc[image:32px-Mode_mirroratcircle.svg.png[Mode
+mirroratcircle.svg,width=32,height=32]] xref:/tools/Inversion.adoc[Inversion].
+
+[NOTE]
+====
+
+*/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] Graphique 3D*
+
+S'ajoute la symétrie par rapport à un plan : Symétrie(<Objet>, <Plan>)
+
+/Fichier:Tool_tool_png.adoc[image:Tool_tool.png[Tool tool.png,width=32,height=32]] Voir l' *outil* associé :
+/Fichier:Mode_mirroratplane_png.adoc[image:Mode_mirroratplane.png[Mode mirroratplane.png,width=32,height=32]]
+xref:/tools/Symétrie_plane.adoc[Symétrie plane]
+
+====

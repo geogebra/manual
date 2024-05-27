@@ -1,0 +1,56 @@
+= Příkaz Suma
+:page-en: commands/Sum_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Suma( <Seznam> )::
+  Vypočítá součet všech prvků v _seznamu_.
+
+[EXAMPLE]
+====
+
+* Výsledkem příkazu `++Suma[{1, 2, 3}]++` je číslo _a = 6_.
+* Výsledkem příkazu `++Suma[{x^2,  x^3}]++` je funkce _f(x) = x^2^ + x^3^_.
+* Výsledkem příkazu `++Suma[Posloupnost[i, i, 1, 100]]++` je číslo _a = 5050_.
+* Výsledkem příkazu `++Suma[{(1, 2), (2, 3)}]++` je bod _A = (3, 5)_.
+* Výsledkem příkazu `++Suma[{(1, 2), 3}]++` je bod _B = (4, 2)_.
+* Výsledkem příkazu `++Suma[{"a", "b", "c"}]++` je text _"abc"_.
+
+====
+
+[NOTE]
+====
+
+Tento příkaz funguje s čísly, body, vektory, textem a funkcemi.
+
+====
+
+Suma( <Seznam>, <Počet prvků> )::
+  Vypočítá součet prvních _n_ členů v _seznamu_.
+
+[EXAMPLE]
+====
+
+Výsledkem příkazu `++Suma[{1, 2, 3, 4, 5, 6}, 4]++` je číslo _a = 10_.
+
+====
+
+[NOTE]
+====
+
+This command works for Tento příkaz funguje s čísly, body, vektory, textem a funkcemi.
+
+====
+
+== CAS pohled
+
+Suma( <Výraz>, <Proměnná t>, <Počáteční hodnota p>, <Koncová hodnota k> )::
+  Vypočítá součet stem:[\sum_\{t=s}^\{p}f(k)]. Koncovou hodnotou může být nekonečno.
+
+[EXAMPLE]
+====
+
+* Výsledkem příkazu `++Sum[i^2, i, 1, 3]++` je _14_.
+* Výsledkem příkazu `++Sum[r^i, i, 0, n]++` je _stem:[\frac\{r^\{n+1} - 1}\{r - 1}]_.
+* Výsledkem příkazu `++Sum[(1/3)^i, i, 0, \infty]++` je _stem:[\frac\{3}\{2}]_.
+
+====

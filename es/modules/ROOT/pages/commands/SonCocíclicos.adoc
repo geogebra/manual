@@ -1,0 +1,28 @@
+= Comando SonCocíclicos
+:page-en: commands/AreConcyclic_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[.small]##
+
+SonCocíclicos(<Punto>, <Punto>, <Punto>,<Punto>)::
+  Decide si los puntos son cocíclicos.
+
+Normalmente este comando comprueba el resultado numéricamente. Este comportamiento puede ser cambiado usando el comando
+xref:/commands/Demuestra.adoc[Demuestra]
+
+[EXAMPLE]
+====
+
+`++SonCocíclicos((1, 2), (3, 4), (1, 4), (3, 2))++` da _true_ dado que los puntos pertenecen a la misma circunferencia.
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/EstánAlineados.adoc[EstánAlineados],
+xref:/commands/SonConcurrentes.adoc[SonConcurrentes], xref:/commands/SonCongruentes.adoc[SonCongruentes],
+xref:/commands/SonIguales.adoc[SonIguales], xref:/commands/SonPerpendiculares.adoc[SonPerpendiculares] y
+xref:/commands/SonParalelas.adoc[SonParalelas].
+
+====

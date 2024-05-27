@@ -1,0 +1,55 @@
+= Commande LimDroite
+:page-en: commands/LimitAbove_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+LimDroite(<Fonction f >,<Valeur t>)::
+  Recherche la http://en.wikipedia.org/wiki/fr:Limite_(math%C3%A9matiques)[limite] à droite de la fonction _f_ en _t_.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++LimDroite(1 / x, 0)++` retourne stem:[\infty] .
+
+====
+
+[NOTE]
+====
+
+*Note :* Toutes les limites ne peuvent être calculées par GeoGebra, et *non défini* sera retourné dans ces cas (comme
+lorsque la limite à droite est effectivement non définie).
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Avec en plus la possibilité de changer de variable :
+
+LimDroite( <Fonction f>, <Variable v>, <Nombre t> )::
+  Recherche la limite à droite en _t_ de la fonction _f_ de la variable _v_ .
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++LimDroite(1 / a, a, 0)++` retourne stem:[\infty] .
+
+====
+
+[NOTE]
+====
+
+*Note :* Toutes les limites ne peuvent être calculées par GeoGebra, et *?* sera retourné dans ces cas (même si la limite
+à droite est effectivement non définie).
+
+====
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/Limite.adoc[Limite] et
+xref:/commands/LimGauche.adoc[LimGauche].

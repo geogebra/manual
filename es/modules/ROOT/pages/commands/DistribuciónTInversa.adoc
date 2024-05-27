@@ -1,0 +1,36 @@
+= Comando DistribuciónTInversa
+:page-en: commands/InverseTDistribution_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+*DistribuciónTInversa*[ <Grados de Libertad>, <Probabilidad> ]::
+  Calcula, para el valor señalado de grados de libertad y el asignado a la probabilidad, el valor de la
+  http://en.wikipedia.org/wiki/es:Funci%C3%B3n_Distribuici%C3%B3n_Acumulada#Funci.C3.B3n_de_Distribuci.C3.B3n_Acumulada_Inversa_.28Funci.C3.B3n_Cuantil.29[inversa]
+  de la http://en.wikipedia.org/wiki/es:Funci%C3%B3n_Distribuici%C3%B3n_Acumulada[función acumulada^*_fda_*^] de
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_t_de_Student[*Distribución t de Student*]
+  (http://en.wikipedia.org/wiki/Student%27s_t-distribution[_t-distribution_] en inglés).Así, *DistribuciónTInversa[d,
+  p]* establece el valor _r_ tal que:
+  _P(X ≤ r) = p_
+  ... siendo _X_ la http://en.wikipedia.org/wiki/es:Variable_aleatoria[variable aleatoria] sujeta a una
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_t_de_Student[*Distribución t de Student*] con _d_ grados de
+  libertad.
+
+[NOTE]
+====
+
+El valor de la probabilidad, _p_, debe estar dentro del rango apropiado, [0, 1].
+
+====
+
+[EXAMPLE]
+====
+
+*`++DistribuciónTInversa[3, 0.8]++`* da _0.98_
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/DistribuciónT.adoc[DistribuciónT].
+
+====

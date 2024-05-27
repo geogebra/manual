@@ -1,0 +1,63 @@
+= Comando Producto
+:page-en: commands/Product_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Producto( <Lista de números> )::
+  Calcula el producto de todos los números de la lista.
+Producto( <Lista de números>, <Número de elmentos __n__> )::
+  Calcula el producto de los primeros _n_ elementos de la lista.
+Producto( <Lista de números>, <Lista de frecuencias> )::
+  Calcula el producto de todos los elementos de la _lista de números_ respectivamente elevados a los valores indicados
+  en la _lista de frecuencias_.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* `++Producto({20, 40, 50, 60}, {4, 3, 2, 1})++` devuelve _1536000000000000_
+
+====
+
+[EXAMPLE]
+====
+
+`++Producto({1, 2, 3, 4}, 3)++` devuelve _6_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Producto({2, 5, 8})++` devuelve _80_.
+
+====
+
+`++Producto({sqrt(2), cbrt(3), sqrt(5), cbrt(-7)}, {4, 3, 2, 3})++` devuelve _-420_
+
+[NOTE]
+====
+
+Ambas listas deben ser del mismo tamaño.
+
+====
+
+== Sintaxis CAS
+
+Producto( <Lista de expresiones> )::
+  Calcula el producto de todas las expresiones de la lista.
+Producto( <Expresión>, <Variable>, <Índice inicial>, <Índice final> )::
+  Calcula el producto de las expresiones que se obtienen al sustituir la variable por cada uno de los enteros des el
+  _índice inial_ hasta el _índice final_.
+
+[EXAMPLE]
+====
+
+`++Producto(x + 1,  x,  2, 3)++` devuelve _12_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Producto({1, 2, x})++` devuelve _2x_.
+
+====

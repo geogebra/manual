@@ -1,0 +1,41 @@
+= Comando Encadena
+:page-en: commands/Join_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Encadena( <Lista>, <Lista>, ... )::
+  Encadena dos (o más) listas.
+Encadena( <Lista de listas> )::
+  Encadena las sublistas en una lista mayor.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++Encadena({{1, 2}})++` crea la lista _\{1, 2}_
+* `++Encadena({{1, 2, 3}, {3, 4}, {8, 7}})++` crea la lista _\{1, 2, 3, 3, 4, 8, 7}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Encadena({5, 4, 3}, {1, 2, 3})++` crea la lista _\{5, 4, 3, 1, 2, 3}_.
+
+====
+
+[NOTE]
+====
+
+La nueva lista contiene todos los elementos de cada una de las dadas, incluso si hubiera repetidos. Los elementos de la
+nueva lista no se reordenan.
+
+====
+
+[NOTE]
+====
+
+La nueva lista contiene todos los elementos de cada una de las dadas, incluso si hubiera repetidos. Los elementos de la
+nueva lista no se reordenan.
+
+====

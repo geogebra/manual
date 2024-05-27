@@ -1,0 +1,52 @@
+= Příkaz Zjednodusit
+:page-en: commands/Simplify_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Zjednodusit( <Funkce> )::
+  Pokud je to možné, zjednoduší předpis dané funkce.
+
+[EXAMPLE]
+====
+
+* `++Zjednodusit[x+x+x]++` dává výsledek stem:[f(x)=3x].
+* Pokud je definována funkce _g(x)=3x² - 2*x*x_, potom `++Zjednodusit[g]++` dává výsledek _h(x)=x²_.
+
+====
+
+Zjednodusit( <Text> )::
+  Pokusí se zjednodušit zadaný text např. odstraněním opakovaných záporů.
+
+[EXAMPLE]
+====
+
+Pokud je dáno _a=b=c=-1_, je výsledkem příkazu `++Zjednodusit["f(x) = " + a + "x² + " + b + "x + " + c]++` textový
+objekt _f(x)=-x^2 - x - 1_.
+
+====
+
+[NOTE]
+====
+
+Příkaz xref:/commands/LaTeX.adoc[LaTeX] je jednodušší a většinou poskytuje lepší výsledky.
+
+====
+
+== CAS pohled
+
+Zjednodusit( <Funkce> )::
+  Pokud je to možné zjednoduší výrazy v definici dané funkce. V těchto výrazech mohou být užity i nedefinované proměnné.
+
+[EXAMPLE]
+====
+
+`++Zjednodusit[3 * x + 4 * x + a * x]++` vrací _x * (a + 7)_.
+
+====
+
+[NOTE]
+====
+
+Originální anglická verze manuálu: /s_index_php?title=En:Manual:Simplify_Command_action=edit_redlink=1.adoc[Simplify
+Command].
+
+====

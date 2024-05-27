@@ -1,0 +1,38 @@
+= Commande CourbeImplicite
+:page-en: commands/ImplicitCurve_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+CourbeImplicite( <Liste Points> )::
+  Crée une xref:/Courbes.adoc[courbe implicite] passant par les points donnés. La longueur de la liste doit être
+  stem:[\frac\{n(n+3)}2] pour une courbe implicite de degré stem:[n].
+
+(la syntaxe *CourbeImplicite( <Point>, <Point>, ... , <Point> )* est aussi tolérée.)
+
+[NOTE]
+====
+
+*Note :*
+
+Pour 2 points A et B , en validant : `++CourbeImplicite({A,B})++`
+
+vous obtenez la droite (AB) ;
+
+`++CourbeImplicite({(13,11),(15,16)})++` retourne _-0.12x+0.05y=-1_.
+
+Pour 5 points A , B , C, D et E, en validant : `++CourbeImplicite({A,B,C,D,E})++`
+
+vous obtenez la conique associée à la commande Conique(A,B,C,D,E), mais ne pourrez lui appliquer les commandes Foyer,
+Sommet.
+
+====
+
+CourbeImplicite(<f(x,y)>)::
+  Crée la xref:/Courbes.adoc[courbe implicite] d'équation f(x,y) = 0.
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel , mais sans la possibilité d'effectuer du calcul
+littéral.

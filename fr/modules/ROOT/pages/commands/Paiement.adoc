@@ -1,0 +1,63 @@
+= Commande Paiement
+:page-en: commands/Payment_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Paiement( <Taux>, <Nombre de Périodes>, <Valeur Actuelle>, <Valeur Future (optionnelle)>, <Type (optionnel)> )::
+  Calcule le paiement périodique constant d'un investissement/prêt donné à taux d'intérêt constant.
+
+* *<Taux>* Taux d'intérêt par période (en notation décimale ou en %).
+* *<Nombre de Périodes>* Nombre total de paiements pour le prêt.
+* *<Valeur Actuelle>* Montant du prêt.
+* *<Valeur Future (optionnelle)>* Montant désiré après le dernier paiement. Si vous n'entrez pas de _Valeur Future_,
+elle vaudra _0_ par défaut (remboursement total).
+* *<Type (optionnel)>* Indique quand le paiement est effectué. Si vous n'entrez pas de _Type_ (ou entrez _0_), il vaudra
+_0_ par défaut (paiement en fin de période), sinon entrez _1_ pour un paiement en début de période.
+
+[NOTE]
+====
+
+*Note :* Pour tous les arguments et résultats, les sommes payées sont représentées par des valeurs négatives et les
+sommes perçues par des valeurs positives.
+
+====
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* 1) On contracte un emprunt de 1000 € sur 1 an à un taux annuel de 10%, qui sera remboursé par 12 mensualités égales.
+
+Quelle sera la valeur de chaque mensualité
+
+a) si la première est prélevée un mois après l’emprunt ?
+
+`++Paiement(10%/12, 12, 1000)++` retourne _-87.92_ €
+
+b) si la première est versée au moment de la signature du contrat ?
+
+`++Paiement(10%/12, 12, 1000, 0, 1)++` retourne _-87.19_ €
+
+* 2) En ouvrant un livret à un taux mensuel de 0,5%, je désire, en déposant un montant d'argent constant chaque premier
+du mois,
+
+du 1er janvier au 1er décembre, atteindre 1000 € au 1er janvier de l'année suivante.
+
+Quelle doit être la valeur du montant d’argent déposé chaque mois?
+
+`++Paiement(0.5%, 12, 0, 1000, 1) ++` retourne _-80.66_ €
+
+====
+
+[NOTE]
+====
+
+*Note :* Assurez vous d'être cohérent pour les arguments `++<Taux>++` et `++<Nombre de Périodes>++`. Si vous calculez un
+remboursement mensuel pour un prêt sur 4 ans avec un taux d'intérêt annuel de 12%, entrez 12%/12 comme taux et 4*12
+comme nombre de périodes.
+
+====
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/Commandes_Financières.adoc[Toutes les commandes
+financières], les autres : xref:/commands/Périodes.adoc[Périodes], xref:/commands/Taux.adoc[Taux],
+xref:/commands/ValeurActuelle.adoc[ValeurActuelle] et xref:/commands/ValeurFuture.adoc[ValeurFuture].

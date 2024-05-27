@@ -1,0 +1,82 @@
+= Comando Barras
+:page-en: commands/BarChart_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Barras( <Lista de Datos>, <Lista de Frecuencias> )::
+  Crea un diagrama de barras usando la lista de datos, acorde a las correspondientes frecuencias.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+`++Barras({10,11,12,13,14}, {5,8,12,0,1})++``++Barras({5, 6, 7, 8, 9}, {1, 0, 12, 43, 3})++``++Barras({0.3, 0.4, 0.5, 0.6}, {12, 33, 13, 4})++`
+
+====
+
+[NOTE]
+====
+
+Los números en la lista de datos deben acomodarse en orden creciente.
+
+====
+
+Barras( <Lista de Datos Brutos>, <Ancho de Barras>, <Factor de escala Vertical (opcional)> )::
+  Crea un diagrama usando los Datos Brutos para establecer las correspondientes barras, con el ancho dado y una altura
+  que depende del factor de escala vertical.
+
+[EXAMPLE]
+====
+
+* `++Barras({1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5}, 1)++`
+* `++Barras({1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5}, 1, 2)++`
+
+====
+
+Barras( <Lista de Datos>, <Lista de Frecuencias>, <Ancho de Barras> )::
+  Crea un diagrama de barras del ancho indicado, usando la Lista de Datos con sus correspondientes Frecuencias.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* `++Barras({10, 11, 12, 13 ,14}, {5, 8, 12, 0, 1}, 0.5)++` deja brechas entre las
+barras.`++Barras({10, 11, 12, 13, 14}, {5, 8, 12 ,0, 1}, 0)++` produce un gráfico _de agujas_ más que _de barras_ dado
+que se ha fijado nulo el ancho.
+
+====
+
+Barras( <Valor Inicial>, <Valor Final>, <Lista de Alturas> )::
+  Crea un diagrama en el intervalo dado: la cantidad de barras queda determinada por la longitud de la lista, cuyos
+  elementos son las alturas de las barras.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* `++Barras(10, 20, {1, 2, 3, 4, 5} )++` da por resultado un diagrama de cinco barras con alturas crecientes
+de _1_ a _5_ en el intervalo [_10, 20_]`++Barras(-1, 5, {2, 1, 4, 3, 5, 2})++` crea un diagrama de seis barras en el
+intervalo [_-1, 5_] cuyas respectivas alturas se corresponden a lo listado: _2, 1, 4, 3, 5, 2_.
+
+====
+
+Barras( <Valor Inicial>, <Valor Final>, <Expresión>, <Variable>, <De Número>, <A Número> )::
+  Crea un diagrama de barras sobre el intervalo dado, calculando las alturas utilizando la expresión cuya variable _k_
+  varía entre el número _c_ y el número _d_.
+Barras( <Valor Inicial>, <Valor Final>, <Expresión>, <Variable>, <De número>, <A número>, <Paso> )::
+  Crea un diagrama de barras sobre el intervalo dado, calculando las alturas utilizando la expresión cuya variable _k_
+  varía entre el número _c_ y el número _d_, incrementandose con un paso de longitud _s_.
+
+[EXAMPLE]
+====
+
+Si _p = 0.1_, _q = 0.9_, y _n = 10_, entonces `++Barras(-0.5, n + 0.5, nCr(n,k) * p^k * q^(n-k), k, 0, n)++` da por
+resultado un diagrama de barras en el intervalo [_-0.5, n+0.5_]. Las alturas de las barras dependen de las
+probabilidades calculadas utilizando la expresión dada.
+
+====
+
+[NOTE]
+====
+
+Es posible especificar un color diferente para cada barra en las
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] Propiedades_de_Objeto.
+
+====

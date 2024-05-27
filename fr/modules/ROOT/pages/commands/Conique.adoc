@@ -1,0 +1,43 @@
+= Commande Conique
+:page-en: commands/Conic_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Conique( <Point A>, <Point B>, <Point C>, <Point D>, <Point E> )::
+  Conique passant par les cinq points _A_, _B_, _C_, _D_, et _E_.
+
+[NOTE]
+====
+
+*Note :* Si quatre de ces points sont alignés, la conique n’est pas définie.
+
+====
+
+Conique( <Nombre a>, <Nombre b>, <Nombre c>, <Nombre d>, <Nombre e>, <Nombre f> )::
+  Retourne la conique stem:[a\cdot x^2+d\cdot x\cdot y + b\cdot y^2+e\cdot x+f\cdot y=-c].
+
+/Fichier:Tool_tool_png.adoc[image:Tool_tool.png[Tool tool.png,width=32,height=32]] Voir l' *outil* associé :
+/Fichier:Mode_conic5_svg.adoc[image:32px-Mode_conic5.svg.png[Mode conic5.svg,width=32,height=32]]
+xref:/tools/Conique_passant_par_cinq_points.adoc[Conique passant par cinq points] .
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/Coefficients.adoc[Coefficients] .
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+_____________________________________________________________
+
+/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] *Graphique 3D* :
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|`++Conique( a,b,c,d,e,f )++` vous retournera une conique du plan xOy quand bien même vous ayez obtenu__\{a,b,c,d,e,f}__
+comme résultat de `++Coefficients( c3D )++` pour une conique _c3D_ de l'espace.
+|===

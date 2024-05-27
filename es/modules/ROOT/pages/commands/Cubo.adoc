@@ -1,0 +1,41 @@
+= Comando Cubo
+:page-en: commands/Cube_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[.small]##
+
+Cubo( <Punto>, <Punto>, <Dirección> )::
+  Crea un cubo tomando como arista el segmento determinado por los puntos indicados. Los demás vértices serán
+  determinados en forma unívoca por la dirección dada, que deberá ser:
+  * un vector, un segmento, una recta perpendicular al segmento o,
+  * un polígono u otra superficie plana paralela al segmento.
+
+El cubo creado tendrá:
+
+* una cara con el segmento determinado por los dos puntos como arista en un plano ortogonal al vector/segmento/recta
+indicado en la dirección o
+* una cara con el segmento determinado por los dos puntos como arista en un plano paralelo al polígono/plano indicado en
+la dirección.
+
+Cubo( <Punto>, <Punto>, <Punto> )::
+  Crea un cubo tomando a los puntos como vértices de una cara. Los puntos tienen que dar lugar a un cuadrado para que el
+  cubo quede definido.
+
+Cubo( <Punto>, <Punto> )::
+  Crea un cubo cuya arista tiene vértices en los puntos indicados y el tercer punto se genera automáticamente en una
+  circunferencia, de manera que el cubo puede rotarse alrededor de la arista.
+
+[NOTE]
+====
+
+Esta sintaxis es una forma abreviada de la siguiente: Cubo( A, B, C ) siendo C = Punto(Circunferencia(B, Distancia(A,
+B), Segmento(A, B))).
+
+====
+
+[NOTE]
+====
+
+Ver también xref:/commands/Tetraedro.adoc[Tetraedro], xref:/commands/Dodecaedro.adoc[Dodecaedro],
+xref:/commands/Icosaedro.adoc[Icosaedro] y xref:/commands/Octaedro.adoc[Octaedro]
+====

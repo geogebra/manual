@@ -1,0 +1,118 @@
+= Comando Disposición
+:page-en: commands/SetPerspective_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Disposición( <Texto> )
+
+Cambia la disposición y visibilidad de las _Vistas_. El parámetro puede ser tanto una descripción completa de la
+disposición, la descripción de una de las vistas que se desea modificar, o el identificador de una de las apariencias
+estándares.
+
+== Descripción completa de la disposición de vistas
+
+Para cambiar completamente la disposición deben expresarse las posiciones de las vistas a través de una expresión. Las
+_Vistas_ se representan con variables (letras): la organización horizontal de las _Vistas_ se indica colocando las
+letras una tras otra, mientras que la organización vertical se indica con la barra de división `++/++`
+
+[cols=",",options="header",]
+|===
+|Letra |Vista
+|A |image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] xref:/Vista_Algebraica.adoc[Álgebra]
+
+|B |image:18px-Menu_view_probability.svg.png[Menu view probability.svg,width=18,height=18]
+xref:/Calculadora_de_probabilidades.adoc[Calculadora de probabilidades]
+
+|C |image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[CAS]
+
+|D |image:16px-Menu_view_graphics2.svg.png[Menu view graphics2.svg,width=16,height=16] xref:/Vista_Gráfica.adoc[Gráfica
+2]
+
+|G |image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Vista_Gráfica.adoc[Gráfica]
+
+|L |image:16px-Menu_view_construction_protocol.svg.png[Menu view construction protocol.svg,width=16,height=16]
+xref:/Protocolo_de_Construcción.adoc[Protocolo de Construcción]
+
+|P |image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Cuadro_de_Propiedades.adoc[Propiedades]
+
+|R |Análisis de datos (versión de escritorio)
+
+|S |image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+xref:/Hoja_de_Cálculo.adoc[Hoja de Cálculo]
+
+|T |image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=16,height=16]
+xref:/Vista_3D.adoc[Gráficos 3D]
+|===
+
+[EXAMPLE]
+====
+
+*Ejemplos:*  
+
+* `++Disposición("G")++` hace que solo la xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16]] xref:/Vista_Gráfica.adoc[Vista Gráfica] resulte visible
+* `++Disposición("AGS")++` hace visibles, alineadas horizontalmente, las _Vistas_:
+xref:/Vista_Algebraica.adoc[image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]]
+xref:/Vista_Algebraica.adoc[Vista Algebraica], xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16]] xref:/Vista_Gráfica.adoc[Vista Gráfica] y
+xref:/Vista_de_Hoja_de_Cálculo.adoc[image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16]] xref:/Vista_de_Hoja_de_Cálculo.adoc[Vista Hoja de cálculo]
+* `++Disposición("S/G")++` hace visibles tanto la
+xref:/Vista_de_Hoja_de_Cálculo.adoc[image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16]] xref:/Vista_de_Hoja_de_Cálculo.adoc[Vista Hoja de cálculo] en el sector superior,
+como la xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+xref:/Vista_Gráfica.adoc[Vista Gráfica], debajo.
+* `++Disposición("S/(GA)")++` es similar al ejemplo anterior; en el sector inferior se distribuyen la
+xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+xref:/Vista_Gráfica.adoc[Vista Gráfica] a la izquierda y -a la derecha- la
+xref:/Vista_Algebraica.adoc[image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]]
+xref:/Vista_Algebraica.adoc[Vista Algebraica], y encima de ellas la
+xref:/Vista_de_Hoja_de_Cálculo.adoc[image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16]] xref:/Vista_de_Hoja_de_Cálculo.adoc[Vista Hoja de cálculo].
+
+====
+
+== Cambios en una sola vista
+
+Para abrir o cerrar _Vistas_ individualmente, agrega los símbolos `+++++` o `++-++` antes de la letra de la _Vista_
+respectiva. Excepto en GeoGebra Clásico, se puede usar también `++Tools++` para las herramientas y `++Table++` para la
+tabla de valores.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*  
+
+* `++Disposición("+D")++` agrega la _Vista Gráfica_ 2 a la derecha de las actualmente mostradas.
+* `++Disposición("-D")++` quita la _Vista Gráfica_ 2 de las mostrades actualmente.
+* `++Disposición("+Tools")++` abre la barra lateral de la Calculadora Gráfica y activa la pestaña de herramientas.
+* `++Disposición("+Table")++` abre la barra lateral de la Calculadora Gráfica y activa la pestaña de tabla de valores.
+* `++Disposición("-Tools")++` cierra la barra lateral de la Calculadora Gráfica, independientemente de la pestaña
+activa.
+
+====
+
+== Apariencias estándares
+
+Se pueden emplear textos de un solo dígito para establecer las apariencias predefinidas:
+
+[cols=",",options="header",]
+|===
+|Texto |Apariencia
+|"1" |Álgebra y Gráficos
+|"2" |Geometría
+|"3" |Hoja de cálculo
+|"4" |CAS
+|"5" |3D
+|"6" |Probabilidades
+|===
+
+Cada uno de los anteriores se corresponde con "AG", "G", "SG", "CG", "AT" y "B" respectivamente pero, además, puede
+afectar la disposición de la xref:/Barra_de_Entrada.adoc[Barra de Entrada] y el contenido de la
+xref:/Barra_de_Herramientas.adoc[Barra de Herramientas].
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/VistaActiva.adoc[VistaActiva].
+
+====

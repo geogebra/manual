@@ -1,0 +1,36 @@
+= Comando Vértices
+:page-en: commands/Vertex_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Vértices( <Cónica> )::
+  Devuelve todos los vértices de la sección cónica.
+Vértices( <Inecuación> )::
+  Devuelve los puntos de intersección de las fronteras.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* *`++Vértices((x + y < 3) && (x - y > 1))++`* devuelve el punto _A = (2, 1)_.
+* *`++{Vértices((x + y < 3) ∧ (x - y > 1)&& (y > -2))}++`* devuelve la lista _l1 = \{(2, 1), (5, -2), (-1, -2)}_
+* *`++Vértices((y > x²) ∧ (y < x))++`* devuelve dos puntos _A = (0, 0)_ y _B = (1, 1)_.
+* *`++{Vértices((y > x²) ∧ (y < x))}++`* devuelve la lista _l1 = \{(0, 0), (1, 1)}_.
+
+====
+
+Vértices( <Polígono> )::
+  Devuelve (todos) los vértices del polígono.
+Vértices( <Polígono>, <Índice> )::
+  Devuelve el vértice el n-ésimo del polígono.
+
+[NOTE]
+====
+
+Para obtener los vértices de los objetos polígonos / cónicas / inecuaciones en una xref:/Listas.adoc[lista], utiliza
+`++{Vértices(Objeto)}++`.
+
+====
+
+Vértices( <Segmento>, <Índice> )::
+  Devuelve el punto inicial (Índice= 1) o el final (Índice = 2) del Segmento.

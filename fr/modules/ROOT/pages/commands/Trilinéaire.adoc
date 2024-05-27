@@ -1,0 +1,36 @@
+= Commande Trilinéaire
+:page-en: commands/Trilinear_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Trilinéaire( <Point A>,<Point B>,<Point C>,<Nombre u>, <Nombre v>, <Nombre w>)::
+  crée un point dont les coordonnées trilinéaires relativement au triangle _ABC_ sont _u : v : w_.
+
+Les distances de ce point aux côtés a, b et c du triangle étant (|ku|,|kv|,|kw|) où k =stem:[\frac\{2
+Aire(ABC)}\{au+bv+cw}].
+
+== Quelques exemples :
+
+[cols=",,,",options="header",]
+|===
+|Point |u |v |w
+|A |1 |0 |0
+
+|B |0 |1 |0
+
+|C |0 |0 |1
+
+|Centre cercle circonscrit |cos(stem:[\hat\{A}]) |cos(stem:[\hat\{B}]) |cos(stem:[\hat\{C}])
+
+|Centre cercle inscrit |1 |1 |1
+
+|Centre du cercle exinscrit tangent à [BC] |-1 |1 |1
+
+|Centre du cercle exinscrit tangent à [AC] |1 |-1 |1
+
+|Centre du cercle exinscrit tangent à [AB] |1 |1 |-1
+
+|Centre de gravité |stem:[\frac\{1}\{a}] |stem:[\frac\{1}\{b}] |stem:[\frac\{1}\{c}]
+
+|Orthocentre |cos(stem:[\hat\{B}]) cos(stem:[\hat\{C}]) |cos(stem:[\hat\{A}]) cos(stem:[\hat\{C}])
+|cos(stem:[\hat\{A}])cos(stem:[\hat\{B}])
+|===

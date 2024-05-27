@@ -1,0 +1,103 @@
+= Comando TablaTexto
+:page-en: commands/TableText_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+TablaTexto( <Lista>, <Lista>, ... )::
+  Crea un texto que contiene una tabla de la lista de objetos.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++TablaTexto({x^2, 4}, {x^3, 8}, {x^4, 16})++` crea un texto que contiene una tabla con tres filas y dos columnas.
+Todos los elementos de la tabla se alinean a la izquierda.
+* `++TablaTexto(Secuencia(i^2, i, 1, 10))++` crea una tabla con una fila. Todos sus elementos se alinean a la izquierda.
+
+====
+
+[NOTE]
+====
+
+Por omisión, cada lista se asocia a una fila de la tabla.
+
+====
+
+TablaTexto( <Lista>, <Lista>, ..., <Alineación del texto> )::
+  Crea un texto que contiene una tabla con la lista de objetos. El parámetro “Alineación del Texto” controla su
+  orientación y alineación, así como la alineación del separador de decimales.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++TablaTexto({1,2,3,4},{1,4,9,16},"v")++` crea una tabla de dos columnas y cuatro filas cuyos elementos se alinean a
+izquierda.
+* `++TablaTexto({1,2,3,4},{1,4,9,16},"h")++` crea una tabla de dos filas y cuatro columnas cuyos elementos se alinean a
+izquierda.
+* `++TablaTexto({11.2,123.1, 32423.9, "234.0"},"vr")++` crea una tabla con una columna cuyos elementos se alinean a
+derecha.
+* `++TablaTexto({A1:A10, B1:B10, C1:C10},"vl")++` crea una tabla con tres columnas cuyos elementos --alineados a la
+izquierda-- son objetos de la _Hoja de cálculo_ en las celdas indicadas.
+* `++TablaTexto({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "v.")++` crea una tabla cuyos elementos se alinean de
+acuerdo con los puntos decimales /Archivo:TabPtDec_png.adoc[image:TabPtDec.png[TabPtDec.png,width=152,height=111]]
+* `++TablaTexto({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "v%")++` crea una tabla cuyos elementos son convertidos a
+porcentajes y alineados según los puntos decimales
+/Archivo:TableuPourCent_png.adoc[image:200px-TableuPourCent.png[TableuPourCent.png,width=200,height=89]]
+
+====
+
+[NOTE]
+====
+
+Valores posibles: "vl", "vc", "vr", "v", "h", "hl", "hc", "hr". El valor por omisión es "hl".
+
+* "v" = vertical, dispone las listas en columnas
+* "h" = horizontal, dispone las listas en filas
+* "l" = alinea a izquierda
+* "r" = alinea a derecha
+* "c" = centrado
+* "." = alinea según el punto decimal
+* "a" = igual que "." pero completando con ceros las expresiones decimales de los demás números
+* "%" = convierte los valores a porcentajes y alinea los números según el punto decimal
+* "p" = igual que "%" pero completando con ceros las expresiones decimales de los demás números
+
+====
+
+También es posible insertar:
+
+* distintos tipos de paréntesis, utilizando los símbolos ||||, ||, \{}, [] o ().
+* separadores para filas, con el símbolo _
+* separadores de columnas, con el símbolo |
+* distintas opciones de color
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++TablaTexto({1, 2}, {3, 4}, "c()")++` crea stem:[\begin\{pmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{pmatrix} ]
+* `++TablaTexto({1, 2}, {3, 4}, "c|_")++` crea
+/Archivo:TabellaTesto_png.adoc[image:50px-TabellaTesto.png[TabellaTesto.png,width=50,height=56]]
+* `++TablaTexto({1, 2}, {3, 4}, "||")++` crea stem:[ \begin\{vmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{vmatrix} ]
+* `++TablaTexto({1, 2}, {3, 4}, "||||")++` crea stem:[\begin\{Vmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{Vmatrix} ]
+* `++TablaTexto({{"2x+3y=5","5x+8y=12"}},"{v")++` crea stem:[ \left\\{\begin\{matrix} 2x+3y=5\\ 5x+8y=12
+\end\{matrix}\right.]
+* `++TablaTexto({{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "-/|_v")++` crea una tabla con
+borde sin líneas de separación.
+* `++TablaTexto({{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "|11001 _110001 h")++` crea una
+tabla con borde y una línea de separación a la derecha de la primera columna y debajo de la primera fila. El valor 1 en
+la sintaxis significa que hay un separador entre los números y el valor 0 significa que no hay separación o bordes.
+* `++TablaTexto({{"\blue{0, 1, 2, 3, 4}", "\red{4, 3, 2, 1, 0}"}}, "v")++` crea una tabla en la cual los objetos de la
+primera fila son azules y los de la segunda fila son rojos.
+
+====
+
+[NOTE]
+====
+
+La xref:/Barra_de_Estilo.adoc[Barra de Estilo] de los objetos _TablaTexto_ permite personalizar la apariencia, el fondo,
+y el color y estilo del texto.
+
+====

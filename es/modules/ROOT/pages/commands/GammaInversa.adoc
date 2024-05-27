@@ -1,0 +1,39 @@
+= Comando GammaInversa
+:page-en: commands/InverseGamma_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+*GammaInversa*[ <Número~o valor numérico~>, <Número~o valor numérico~>, <Probabilidad> ]::
+  Calcula, para el valor señalado para cada parámetro y el _p_ para la probabilidad, el valor de la
+  http://en.wikipedia.org/wiki/es:Funci%C3%B3n_Distribuici%C3%B3n_Acumulada#Funci.C3.B3n_de_Distribuci.C3.B3n_Acumulada_Inversa_.28Funci.C3.B3n_Cuantil.29[inversa]
+  de la http://en.wikipedia.org/wiki/es:Funci%C3%B3n_Distribuici%C3%B3n_Acumulada[*_fda_*, acumulada] de
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_gamma[distribucin gamma] (en inglés,
+  http://en.wikipedia.org/wiki/Gamma_distribution[_gamma
+  distribution_]^http://mathworld.wolfram.com/GammaDistribution.html[_gamma~distribution~_]^)Así, *GammaInversa[α, β,
+  p]* da por resultado el menor entero _n_ tal que...
+  _P(X ≤ n) = p_
+  ... siendo _X_ una [[:w:es:Variable_aleatoria variable aleatoria] sujeta a una
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_gamma[distribucin gamma] para los parámetros dados.
+
+  '''''
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: El valor de la probabilidad _p_ debe estar dentro
+del rango válido, [0, 1].
+
+====
+
+[EXAMPLE]
+====
+
+*`++GammaInversa[10, 3, 1/2]++`* da _29_
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/Gamma.adoc[Gamma].
+
+====

@@ -1,0 +1,102 @@
+= Herramienta de Resolución Numérica
+:page-en: tools/Solve_Numerically_Tool
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+/Categoría:Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[image:18px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=18,height=18]] /Categoría:Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[Solo en]
+/Categoría:Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[CAS
+**C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~] image:32px-Mode_nsolve.svg.png[Mode
+nsolve.svg,width=32,height=32] [.small]#(código 1010 ) *Resolución Numérica*#
+
+====
+
+En xref:/Vista_CAS.adoc[image:View-cas24.png[View-cas24.png,width=22,height=22]] propone un valor numérico aproximado
+para un literal y/o alguna de las variables incluidas en una ecuación o sistema de ecuaciones. Para emplearla basta
+con...
+
+[.step]#1)# Ingresar la expresión a que incluya el literal cuyo valor numérico aproximado se quiere establecer
+[.step]#2)# Pulsar [.kcode]#Enter# ([.kcode]#_Intro_# en otros teclados) si la herramienta
+[.small]#xref:/Herramientas_CAS.adoc[image:32px-Mode_nsolve.svg.png[Mode nsolve.svg,width=32,height=32]]# ya estuviera
+seleccionada o _clic_ sobre image:32px-Mode_nsolve.svg.png[Mode nsolve.svg,width=32,height=32] si no lo estuviese.
+
+[.step]#3)# Si se hubiera pulsado [.kcode]#Enter# sin que estuviese
+xref:/Herramientas_CAS.adoc[image:32px-Mode_nsolve.svg.png[Mode nsolve.svg,width=32,height=32]] ya activada, arrastrar
+el ratón o _mouse_ sobre la o las expresiones para que queden seleccionadas todas las celdas de filas involucradas
+
+'''''
+
+== Alternativa para un Sistema
+
+[.step]#3~[.small]#sistema#~)# Si estuviera en juego un sistema, ingresar la expresión adicional en la siguiente fila y
+pulsar nuevamente [.kcode]#Enter# (o [.kcode]#_Intro_#) y así sucesivamente hasta completar la disposición de todas las
+ecuaciones.
+
+'''''
+
+[.step]#4)# Arrastrar el ratón o _mouse_ sobre la o las expresiones para que queden seleccionadas todas las celdas de
+filas involucradas
+
+'''''
+
+[NOTE]
+====
+
+Las filas, sucesivas o no, pueden irse seleccionando con ayuda de la tecla [.kcode]#Ctrl#.
+
+====
+
+'''''
+
+{empty}[.step]#5)# Activar la xref:/Herramientas_CAS.adoc[herramienta] image:32px-Mode_nsolve.svg.png[Mode
+nsolve.svg,width=32,height=32]
+
+[.step]#6)# Revisar el resultado que propone, para cada variable en juego en la ecuación o el sistema, una única lista
+con el valor numérico^[.small]#decimales según xref:/Menú_de_Opciones.adoc[_redondeo_]#^ aproximado.
+
+[NOTE]
+====
+
+El valor se expresa numéricamente con el número de decimales establecido por la xref:/Menú_de_Opciones.adoc[opción] de
+xref:/Menú_de_Opciones.adoc[redondeo.]
+
+====
+
+'''''
+
+La siguente figura ilustra un ejemplo en el que pueden contrastarse una de las diferencias entre el modo de operar
+formalmente de la xref:/Herramientas_CAS.adoc[herramienta] xref:/tools/Resuelve.adoc[image:32px-Mode_solve.svg.png[Mode
+solve.svg,width=32,height=32]] xref:/tools/Resuelve.adoc[Resuelve] y la
+xref:/Herramientas_CAS.adoc[image:32px-Mode_nsolve.svg.png[Mode nsolve.svg,width=32,height=32]] de búsqueda de valor
+numérico^[.small]#decimales según xref:/Menú_de_Opciones.adoc[_redondeo_]#^ aproximado.
+
+**
+
+/Archivo:Resuel_0_PNG.adoc[image:Resuel_0.PNG[Resuel 0.PNG,width=340,height=479]]
+
+'''''
+
+Se ilustran otras diferencias sustantivas con la xref:/Herramientas_CAS.adoc[herramienta]
+xref:/tools/Resuelve.adoc[image:32px-Mode_solve.svg.png[Mode solve.svg,width=32,height=32]]
+xref:/tools/Resuelve.adoc[Resuelve] de operatoria formal Se evidencia que la de
+xref:/Herramientas_CAS.adoc[image:32px-Mode_nsolve.svg.png[Mode nsolve.svg,width=32,height=32]] cálculo aproximado de
+valores numéricos opera, por ejemplo:
+
+* redondeando como puede notarse de contrastar resultados en las filas 6 y 7
+* aportando solo uno de los juegos de soluciones mientras xref:/tools/Resuelve.adoc[image:32px-Mode_solve.svg.png[Mode
+solve.svg,width=32,height=32]] xref:/tools/Resuelve.adoc[Resuelve] lista cada una de las posibles, tal como puede
+compararse entre las filas 8 y 9
+* con mayor generalidad de la implicada al mencionar el _redondeo_, image:32px-Mode_solve.svg.png[Mode
+solve.svg,width=32,height=32] xref:/tools/Resuelve.adoc[Resuelve] puede operar con literales y dejar los resultados
+expresados en términos de relaciones con otras variables o literales. Variables o literales a los que, eventualmente, se
+les pueda asignar valor con xref:/tools/Sustituye.adoc[image:32px-Mode_substitute.svg.png[Mode
+substitute.svg,width=32,height=32]] xref:/tools/Sustituye.adoc[Sustituye]
+* aplicada exclusivamente a encontrar el valor numérico. Sin acceso a expresar razones o relaciones con otros literales
+o variables como lo hace xref:/tools/Resuelve.adoc[image:32px-Mode_solve.svg.png[Mode solve.svg,width=32,height=32]]
+xref:/tools/Resuelve.adoc[Resuelve]
+
+**
+
+/Archivo:ResN_2_PNG.adoc[image:ResN_2.PNG[ResN 2.PNG,width=457,height=611]]

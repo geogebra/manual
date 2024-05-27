@@ -1,0 +1,26 @@
+= Příkaz Pascal
+:page-en: commands/Pascal_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Pascal( <Počet úspěchů>, <Pravděpodobnost úspěchu> )::
+  Vytvoří sloupcový graf http://en.wikipedia.org/wiki/Negative_binomial_distribution[Pascalova rozdělení] zadaných
+  parametrů.
+  _Parametry:_
+  _Počet úspěchů_: počet nezávislých Bernoulliho pokusů, jejichž výsledkem je úspěch
+  _Pravděpodobnost úspěchu_: pravděpodobnost úspěchu v jednom pokusu
+
+Pascal( <Počet úspěchů>, <Pravděpodobnost úspěchu>, <Distribuční (logická hodnota)> )::
+  Vytvoří sloupcový graf Pascalova rozdělení zadaných parametrů, je-li hodnota poslední proměnné příkazu rovna _false_.
+  Vytvoří sloupcový graf distribuční funkce Pascalova rozdělení zadaných parametrů, je-li hodnota poslední proměnné
+  příkazu rovna _true_.
+Pascal( <Počet úspěchů>, <Pravděpodobnost úspěchu>, <Hodnota proměnné>, <Distribuční (logická hodnota)> )::
+  Nechť X je náhodná veličina mající Pascalovo rozdělení zadaných parametrů a _v_ daná hodnota proměnné. Potom příkaz
+  vypočítá pravděpodobnost P( X = _v_), je-li hodnota poslední proměnné příkazu rovna _false_.
+  vypočítá pravděpodobnost P( X ≤ _v_), je-li hodnota poslední proměnné příkazu rovna _true_.
+
+== CAS pohled
+
+Pascal( <Počet úspěchů>, <Pravděpodobnost úspěchu>, x, <Distribuční (logická hodnota)> )::
+  Nechť X je náhodná veličina mající Pascalovo rozdělení zadaných parametrů. Potom příkaz
+  vypočítá pravděpodobnost P( X = _x_), je-li hodnota poslední proměnné příkazu rovna _false_.
+  vypočítá pravděpodobnost P( X ≤ _x_), je-li hodnota poslední proměnné příkazu rovna _true_.

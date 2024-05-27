@@ -1,0 +1,66 @@
+= Příkaz NReseni
+:page-en: commands/NSolutions_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Tento příkaz je dostupný pouze v xref:/CAS_pohled.adoc[CAS pohledu]..
+
+NReseni( <Rovnice> )::
+  Určí numericky řešení dané rovnice pro hlavní proměnnou _x_.
+
+[EXAMPLE]
+====
+
+`++NReseni[cos(x) = x]++` dává řešení _\{0.7390851332151606}_.
+
+====
+
+NReseni( <Rovnice> , <Proměnná> ) +
+NReseni( <Rovnice> , <Proměnná = počáteční hodnota> )::
+  Určí numericky řešení dané rovnice pro danou proměnnou.
+
+[EXAMPLE]
+====
+
+`++NReseni[a^4 + 34a^3 - 34, a]++` dává řešení _\{0.9904738886662206}_.
+
+====
+
+[NOTE]
+====
+
+Volitelně lze zadat počáteční hodnotu, např. _a=3_.
+
+====
+
+NReseni( <Seznam rovnic> , <Seznam proměnných> )::
+  Určí numericky řešení dané soustavy rovnic pro dané proměnné.
+
+[EXAMPLE]
+====
+
+`++NReseni[{π / x = cos(x - 2y), 2 y - π = sin(x)}, {x=3, y=1.5}]++` dává výsledek _\{3.141592651686591,
+1.570796327746508}_.
+
+====
+
+[NOTE]
+====
+
+Volitelně lze zadat počáteční hodnotu, např. _\{x=3, y=1.5}_.
+
+====
+
+[NOTE]
+====
+
+* π lze napsat klávesovou zkratkou [.kcode]#Alt # + [.kcode]# p#.
+* Viz také příkazy xref:/commands/Reseni.adoc[Reseni] a xref:/commands/NVyresit.adoc[NVyresit].
+
+====
+
+[NOTE]
+====
+
+Anglická verze: /s_index_php?title=En:Manual:NSolutions_Command_action=edit_redlink=1.adoc[NSolutions Command]
+
+====

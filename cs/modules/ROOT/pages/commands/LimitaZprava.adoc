@@ -1,0 +1,57 @@
+= Příkaz LimitaZprava
+:page-en: commands/LimitAbove_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+LimitaZprava( <Funkce f >, <Hodnota t> )::
+  Vypočítá http://en.wikipedia.org/wiki/cs:Limita_funkce#Limita_zprava_a_zleva[jednostrannou limitu funkce] _f_ pro
+  hodnotu hlavní proměnné blížící se k _t_.
+
+[EXAMPLE]
+====
+
+`++LimitaZleva[cot(x), 0]++` dává výsledek stem:[\infty] .
+
+====
+
+[NOTE]
+====
+
+V GeoGebře nelze spočítat všechny limity. V případě, že se limitu nepodaří určit, bude výsledkem _nedefinovaný_ objekt,
+stejně jako v případě, že _nedefinovaný_ je správný výsledek výpočtu limity.
+
+====
+
+== CAS pohled
+
+LimitaZprava( <Výraz f>, <Hodnota t>)::
+  Vypočítá jednostrannou limitu funkce _f_ pro pro hodnotu hlavní proměnné blížící se k _t_.
+LimitaZprava( <Výraz f>, <Proměnná a>, <Hodnota t> )::
+  Vypočítá limitu funkce _f_ pro hodnotu dané proměnné blížící se k _t_
+
+[EXAMPLE]
+====
+
+`++LimitaZprava[ 1/a, a, 0]++` dává výsledek stem:[\infty].
+
+====
+
+[EXAMPLE]
+====
+
+`++LimitaZprava[ 1/x, 0]++` dává výsledek _stem:[\infty]_ .
+
+====
+
+[NOTE]
+====
+
+Viz také příkazy xref:/commands/Limita.adoc[Limita] a xref:/commands/LimitaZleva.adoc[LimitaZleva].
+
+====
+
+[NOTE]
+====
+
+/s_index_php?title=En:Manual:LimitAbove_Command_action=edit_redlink=1.adoc[LimitAbove Command]
+
+====

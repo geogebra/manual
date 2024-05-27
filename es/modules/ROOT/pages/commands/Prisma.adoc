@@ -1,0 +1,42 @@
+= Comando Prisma
+:page-en: commands/Prism_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[.small]##
+
+Prisma( <Punto>, <Punto>, ... )::
+  Crea el prisma definido por los puntos dados.
+Prisma( <Polígono>, <Punto> )::
+  Crea un prisma con el polígono como base y el punto como primer vértice de la tapa.
+Prisma( <Polígono>, <Número (Altura)> )::
+  Crea un prisma recto con el polígono como base y la altura indicada.
+
+[EXAMPLE]
+====
+
+`++Prisma(poli1, 3)++` crea un prisma recto de base _poli1_ y altura 3.
+
+====
+
+[EXAMPLE]
+====
+
+`++Prisma(poli1, A)++` crea el prisma de base _poli1_ y punto _A_ en la tapa.
+
+====
+
+[EXAMPLE]
+====
+
+`++Prisma(A, B, C, D)++` crea el prisma de base ABC y tapa DEF. Los vectores AD, BE, CF son iguales.
+
+====
+
+[NOTE]
+====
+
+Ver también las herramientas image:24px-Mode_prism.svg.png[Mode prism.svg,width=24,height=24]
+xref:/tools/Prisma.adoc[Prisma] y image:24px-Mode_extrusion.svg.png[Mode extrusion.svg,width=24,height=24]
+xref:/tools/Prisma_o_Cilindro_desde_su_base.adoc[Prisma o Cilindro desde su base].
+
+====

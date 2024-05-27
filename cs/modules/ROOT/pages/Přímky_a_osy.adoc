@@ -1,0 +1,36 @@
+= Přímky a osy
+:page-en: Lines_and_Axes
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+== Přímky
+
+Přímku můžete zadat jako lineární rovnici proměnných _x_ a _y_ nebo v parametrickém tvaru. V obou případech lze použít
+dříve definované proměnné (např. čísla, body, vektory).
+
+[NOTE]
+====
+
+Na začátek vstupu můžete zadat název přímky následovaný dvojtečkou.
+
+====
+
+[EXAMPLE]
+====
+
+* Chcete-li například zadat přímku _g_ lineární rovnicí, zadejte `++g: 3x + 4y = 2++` .
+* V parametrickém tvaru můžete přímku zadat například takto: `++g: X = (-5, 5) + t (4, -3)++`
+* Definujte parametry _m_ = 2 a _b_ = -1. Potom můžete zadat rovnici `++h: y = m*x + b++` udávající přímku _h_ ve
+směrnicovém tvaru.
+
+====
+
+== Osy
+
+Na obě osy souřadnic lze v příkazech odkázat jmény _xAxis_ a _yAxis_.
+
+[EXAMPLE]
+====
+
+Příkazem `++Kolmice[A, OsaX]++` se sestrojí přímka procházející bodem _A_, kolmá na osu x.
+
+====

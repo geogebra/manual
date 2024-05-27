@@ -1,0 +1,239 @@
+= Commande Tableau
+:page-en: commands/TableText_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Tableau( <Liste 1>, <Liste 2>, ... )::
+  Crée un texte qui contient un tableau des listes d’objets.
+
+[NOTE]
+====
+
+*Note :* Par défaut, chaque liste est affichée dans une nouvelle ligne.
+
+====
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* `++Tableau({x^2, 4}, {x^3, 8}, {x^4, 16})++` crée un tableau à trois lignes et deux colonnes. Tous les éléments sont
+alignés à gauche.
+* `++Tableau(Séquence(i^2, i, 1, 10))++` crée un tableau à une ligne. Tous les éléments sont alignés à gauche.
+
+====
+
+Tableau( <Liste>, <Liste>, ..., <“Alignement du texte”> )::
+  Crée un texte qui contient un tableau des listes d’objets. Le texte optionnel “Alignement du texte” contrôle
+  l’orientation et l’alignement du texte.
+
+[NOTE]
+====
+
+*Note :* Les valeurs possibles sont "vl", "vc", "vr", "v", "h", "hl", "hc", "hr". Par défaut c’est "hl".
+
+* "v" = vertical, i. e. les listes sont en colonnes ;
+* "h" = horizontal, i. e. les listes sont en lignes ;
+* "l" = alignement à gauche ;
+* "r" = alignement à droite ;
+* "c" = centré.
+
+====
+
+L'ajout d'un `++.++` permet un alignement sur le point décimal, d'un `++%++` transforme en pourcentages avec alignement
+sur le point décimal. L'ajout d'un `++a++` ou d'un `++p++` reprend les options précédentes en complétant l'écriture au
+nombre de décimales. (Le nombre de décimales est celui qui est défini en _Options_)
+`++Tableau({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "v.")++` retourne
+/Fichier:TabPtDec_png.adoc[image:TabPtDec.png[TabPtDec.png,width=152,height=111]]
+`++Tableau({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "va")++` comme ci-dessus mais en forçant le nombre de décimales
+à être celui déclaré en _Options_ retourne /Fichier:Tab_a_Dec_png.adoc[image:Tab_a_Dec.png[Tab a
+Dec.png,width=252,height=130]] pour Options > 3 décimales
+`++Tableau({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "v%")++` retourne
+/Fichier:TableuPourCent_png.adoc[image:200px-TableuPourCent.png[TableuPourCent.png,width=200,height=89]]
+
+`++Tableau({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "vp")++` comme ci-dessus mais en forçant le nombre de décimales
+à être celui déclaré en _Options_
+
+[EXAMPLE]
+====
+
+*Exemple :* Une syntaxe non documentée, permettant d'utiliser un autre séparateur décimal, la virgule en France et la
+monnaie locale €, mais toutes les colonnes sont affectées, il serait bon de pouvoir différentier des colonnes
+quantités/prix
+
+* `++Tableau({{11, 2.5, 123}, {2.65, 3.57, 10.1}}, "v,.€")++` retourne
+/Fichier:TableuMonétaire_png.adoc[image:TableuMon%C3%A9taire.png[TableuMonétaire.png,width=197,height=88]]
+
+====
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* `++Tableau({1,2,3,4},{1,4,9,16},"v")++` crée un tableau à deux colonnes et quatre lignes avec alignement à gauche ;
+* `++Tableau({1,2,3,4},{1,4,9,16},"h")++` crée un tableau à quatre colonnes et deux lignes avec alignement à gauche ;
+* `++Tableau({11.2,123.1,32423.9,234.0},"vr")++` crée un tableau à une colonne avec alignement à droite.
+
+====
+
+https://www.geogebra.org/m/Eq5T3vV3[Exemple en ligne par Mike]
+
+Vous pouvez aussi ajouter des bordures en précisant||||, ||, \{}, [] ou () et du quadrillage, lignes horizontales par _
+et lignes verticales par | dans la chaîne.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* `++Tableau({1,2},{3,4},"c|_")++` pour le tableau
+/Fichier:TabellaTesto_png.adoc[image:50px-TabellaTesto.png[TabellaTesto.png,width=50,height=56]] ;
+* `++Tableau({1,2},{3,4},"c||||")++` pourstem:[\begin\{Vmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{Vmatrix} ] ;
+* `++Tableau({1,2},{3,4},"c()")++` pour stem:[\left( \begin\{array}\{} 1 & 2 \\ 3 & 4 \\ \end\{array} \right) ] ;
+* `++Tableau({1,2},{3,4},"c||")++` pour stem:[ \begin\{vmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{vmatrix} ] .
+
+====
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* `++Tableau({{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "-/|_v")++`
+
+pour stem:[\{\begin\{array}\{|lllll|}\hline 1&1&1&1&1 \\ 2&2&2&2&2 \\ 3&3&3&3&3 \\ 4&4&4&4&4 \\ \hline \end\{array}}]
+/Fichier:Tabslsc_png.adoc[image:Tabslsc.png[Tabslsc.png,width=130,height=85]] (pas de lignes intérieures)
+
+* `++Tableau({{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "|11001 _110001 h")++`
+
+pour stem:[\{\begin\{array}\{|l|lll|}\hline 1&2&3&4 \\ \hline 1&2&3&4 \\ 1&2&3&4 \\ 1&2&3&4 \\ 1&2&3&4 \\ \hline
+\end\{array}}] /Fichier:Tabla2_PNG.adoc[image:Tabla2_.PNG[Tabla2 .PNG,width=108,height=104]] Des 1 (ou des 0) indiquent
+la présence (ou non) des bordures verticales et horizontales.
+
+* `++Tableau({{1, 2, 3, 4},{5,6,7,8}}, "|11011_101")++`
+
+pour stem:[\{\begin\{array}\{|l|ll|l|}\hline 1&2&3&4 \\ 5&6&7&8 \\ \hline \end\{array}}]
+/Fichier:Tabcol_png.adoc[image:Tabcol.png[Tabcol.png,width=123,height=60]]
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :* et pour "fusionner" des colonnes
+
+* `++Tableau({{"\textbf{Cercle}"}, {Tableau({{"Rayon", "r "}, {"Aire",  "π r²"}, {"Circonférence", "2 π r"}}, "cc |010_0110")}}, "_111 |11 c")++`
+
+pour stem:[ \{\begin\{array}\{|c|}\hline \textbf\{Cercle} \\ \hline \{\begin\{array}\{c|c}Rayon&\text\{r } \\ \hline
+Aire&\text\{π r²} \\ \hline Circonférence&\text\{2 π r} \\ \end\{array}} \\ \hline \end\{array}} ]
+/Fichier:TabFusCol_png.adoc[image:TabFusCol.png[TabFusCol.png,width=188,height=118]]
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :* et pour un système
+
+* `++Tableau({{"2x+3y=5", "5x+8y=12"}}, "{v")++`
+
+pour stem:[\{\left\\{\begin\{array}\{l}2x+3y=5 \\ 5x+8y=12 \\ \end\{array}\right.}]
+/Fichier:Tabla3_PNG.adoc[image:Tabla3_.PNG[Tabla3 .PNG,width=129,height=48]]
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :* et pour dépouiller une série brute stockée en _liste1_
+
+* `++Tableau({Unir({{"x_i"}, Unique(liste1)}), Unir({{"e_i"}, Effectifs(liste1)})}, "ch|_")++`
+
+Soit liste1=Séquence(AléaEntreBornes(1, 6 )+0 k,k,1,100), on obtiendra quelque chose comme ça :
+
+stem:[ \{\begin\{array}\{|c|c|c|c|c|c|c|}\hline x_i&1&2&3&4&5&6 \\ \hline e_i&17&19&16&22&15&11 \\ \hline \end\{array}}
+] /Fichier:Tabla5_PNG.adoc[image:Tabla5.PNG[Tabla5.PNG,width=240,height=56]]
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :* Il est possible d'affecter des couleurs différentes par lignes :
+
+* `++Tableau({{"\black{1,2,3,4}", "\blue{2,4,6,8}", "\green{3,6,9,12}", "\red{4,8,12,16}"}}, "vr")++`
+
+pour/Fichier:TableauLignesCouleurs_PNG.adoc[image:TableauLignesCouleurs.PNG[TableauLignesCouleurs.PNG,width=125,height=115]]
+
+====
+
+[NOTE]
+====
+
+*Note :* Les listes peuvent être groupées en une seule liste, (c'est d'ailleurs la syntaxe retournée par le tableur).
+
+[EXAMPLE]
+====
+
+*Exemple :* `++ Tableau({{1,2},{3,4}},"c()")++` .
+
+====
+
+====
+
+== L'objet Tableau possède une barre de style très complète :
+
+/Fichier:StyleTableauTout_PNG.adoc[image:StyleTableauTout.PNG[StyleTableauTout.PNG,width=567,height=298]]
+
+== Présentation pas à pas
+
+Soit n un curseur entier entre 1 et 7
+
+`++Tableau(Extraite({{2x + 3, "\geq", 4 - 5x}, {"+5x", "", "+5x"}, {7x + 3, "\geq", 4}, {"-3", "", "-3"}, {7x, "\geq", 1}, {"\frac{7x}{7}", "\geq", "1/7"}, {x, "\geq", 0.14286}}, 1, n), "_001001000")++`
+
+vous présente la résolution pas à pas de l'inéquation 2x+3 > 4-5x
+
+/Fichier:Inecuaciones_paso_a_paso_gif.adoc[image:Inecuaciones_paso_a_paso.gif[Inecuaciones paso a
+paso.gif,width=304,height=421]]
+
+== Un tableau colorié
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Cette contribution de Michel Iroir, ne fonctionne qu'en Java, pas en html5
+|===
+
+[width="100%",cols="50%,50%",]
+|===
+|/Fichier:TableauColorieMI_png.adoc[image:150px-TableauColorieMI.png[TableauColorieMI.png,width=150,height=131]] a|
+bl = "\colorbox\{0099cc}\bold\textcolor\{white}"
+
+ja = "\colorbox\{yellow}\bold\textcolor\{black}"
+
+or = "\colorbox\{ff9933}\bold\textcolor\{white}"
+
+rg = "\colorbox\{ff0000}\bold\textcolor\{white}"
+
+Tableau(\{\{or + "\{+}", bl + "\{1}", bl + "\{2}", bl + "\{3}"}, \{rg + "\{1}", ja + "\{2}", ja + "\{3}", ja + "\{4}"},
+\{rg + "\{2}", ja + "\{3}", ja + "\{4}", ja + "\{5}"}, \{rg + "\{3}", ja + "\{4}", ja + "\{5}", ja + "\{6}"}}, "|_")
+
+|===
+
+Vous pouvez obtenir aussi un tableau comme ci-dessous, en le définissant dans le tableur, puis utilisant, après
+sélection et clic droit > Créer > Tableau
+/Fichier:TableauColoriéTableur_png.adoc[image:150px-TableauColori%C3%A9Tableur.png[TableauColoriéTableur.png,width=150,height=109]]
+
+Sinon, possibilité de se créer des tableaux en LaTeX avec "tabular"
+
+\begin\{tabular}\{cc}
+
+\multicolumn\{2}\{c}\{\text\{Carré}}\\ \hline x & \textcolor\{blue}\{x^2} \\ 1 & \textcolor\{blue}\{1} \\ 2 &
+\textcolor\{blue}\{4}\\ 3 & \textcolor\{blue}\{9}
+
+\end\{tabular}
+
+/Fichier:TabularCarreBleu_png.adoc[image:TabularCarreBleu.png[TabularCarreBleu.png,width=129,height=162]]

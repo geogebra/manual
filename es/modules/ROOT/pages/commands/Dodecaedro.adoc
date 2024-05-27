@@ -1,0 +1,36 @@
+= Comando Dodecaedro
+:page-en: commands/Dodecahedron_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Dodecaedro( <Punto>, <Punto>, <Dirección> )::
+  Crea un http://en.wikipedia.org/wiki/es:Dodecaedro[dodecaedro] que tiene una arista en los vértices dados. Los demás
+  vértices se determinan a partir de la dirección dada:
+  * un vector, un segmento, una recta o una semirrecta *ortogonales* a la arista, o
+  * un polígono o un plano *paralelos* a la arista.
+  El dodecaedro tendrá:
+  * una cara ortogonal a la dirección dada, o
+  * una cara paralela al plano dado.
+
+Dodecaedro( <Punto>, <Punto>, <Punto> )::
+  Crea un http://en.wikipedia.org/wiki/es:Dodecaedro[dodecaedro] con vértices en los tres puntos dados, que deben ser
+  consecutivos en un pentágono regular para que el poliedro pueda ser definido.
+
+Dodecaedro( <Punto>, <Punto> )::
+  Crea un http://en.wikipedia.org/wiki/es:Dodecaedro[dodecaedro] que tiene una arista en los vértices dados, y se crea
+  automáticamente un tercer punto que puede rotarse alrededor de la primera arista.
+
+[NOTE]
+====
+
+Dodecaedro[A, B] equivale a Dodecaedro[A, B, C] siendo C = Punto[Circunferencia[((1 - sqrt(5)) A + (3 + sqrt(5)) B) / 4,
+Distancia[A, B] sqrt(10 + 2sqrt(5)) / 4, Segmento[A, B]]]
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/Cubo.adoc[Cubo], xref:/commands/Tetraedro.adoc[Tetraedro],
+xref:/commands/Icosaedro.adoc[Icosaedro] y xref:/commands/Octaedro.adoc[Octaedro].
+
+====

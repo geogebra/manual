@@ -1,0 +1,70 @@
+= Commande EcartType
+:page-en: commands/SD_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+eTypeP( <Liste de données brutes> )::
+  Calcule l'écart-type des nombres de la liste.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++eTypeP(1, 2, 3, 4, 5)++` ou `++eTypeP({1, 2, 3, 4, 5})++` donne _1,41_ (arrondi à 2 décimales).
+
+====
+
+eTypeP( <Liste des valeurs>, <Liste des effectifs> )::
+
+[EXAMPLE]
+====
+
+*Exemple :* `++eTypeP({1, 2, 3, 4, 9},{3,2,2,2,1})++` donne _2.28_ (arrondi à 2 décimales).
+
+====
+
+[NOTE]
+====
+
+*Note :* N'est pas proposée, mais semble tout à fait opérationnelle :
+
+eTypeP( <Liste Bornes Classes>, <Liste Effectifs> )::
+  Calcule l'écart-type des centres des classes pondérés par les effectifs associés.
+  *Note :* Liste Bornes Classes a 1 élément de plus que Liste Effectifs .
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++eTypeP({20, 30, 40, 50}, {3, 9, 12})++` donne _6.96_ (arrondi à 2 décimales).
+
+====
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Avec parfois, l'écriture de la valeur exacte,et la possibilité de travailler en littéral.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++eTypeP({1, 2, 3, 4, 5})++`donne _stem:[\sqrt\{2}]_ ;
+
+Si les variables _a_ et _b_ ne sont pas définies dans GeoGebra :
+
+`++eTypeP({a-b,a+b}) ++` donne | b | ;
+
+`++eTypeP({-3 + 2 x, -1- 4 x, -2 + 5 x^2})++` donne le xref:/tools/Évaluer.adoc[résultat littéral]
+/Fichier:Mode_evaluate_png.adoc[image:Mode_evaluate.png[Mode evaluate.png,width=32,height=32]] stem:[\frac\{\sqrt\{25x⁴
++ 10x³ + 28x² - 18x + 3} \sqrt\{2} } \{ 3 }].
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/Moyenne.adoc[Moyenne].

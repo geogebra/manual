@@ -1,0 +1,66 @@
+= Commande VecteurOrthogonal
+:page-en: commands/PerpendicularVector_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+VecteurOrthogonal( <Droite d> )::
+  Vecteur orthogonal à la droite _d_.
+
+[NOTE]
+====
+
+*Note :* Une droite ayant pour équation _ax + by = c_ admettra stem:[\begin\{pmatrix}a \\ b\end\{pmatrix}] _comme
+vecteur orthogonal._
+
+====
+
+VecteurOrthogonal( <Segment s> )::
+  Vecteur orthogonal au segment _s_.
+
+VecteurOrthogonal( <Vecteur stem:[\vec\{v}] > )::
+  Vecteur orthogonal au vecteur stem:[\vec\{v}].
+
+[EXAMPLE]
+====
+
+*Exemple :* Soit v le vecteur de coordonnées stem:[\begin\{pmatrix}3 \\ 2 \end\{pmatrix}]`++VecteurOrthogonal((3, 2))++`
+crée le vecteur de coordonnées stem:[\begin\{pmatrix}-2 \\ 3 \end\{pmatrix}].
+
+====
+
+[NOTE]
+====
+
+*Note :* Un vecteur de coordonnées stem:[\begin\{pmatrix}a \\ b \end\{pmatrix}] _admettra stem:[\begin\{pmatrix}-b \\ a
+\end\{pmatrix}]_ comme vecteur orthogonal.
+
+====
+
+_____________________________________________________________
+
+/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] *Graphique 3D* :
+
+VecteurOrthogonal( <Plan p> )::
+  Vecteur orthogonal au plan _p_.
+
+[NOTE]
+====
+
+*Note :*
+
+Pour un plan dont une équation cartésienne est a x+ b y +c z = k, la commande retourne le vecteur
+stem:[\begin\{pmatrix}a \\ b \\ c\end\{pmatrix}]
+
+====
+
+_____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul formel*
+Ne fonctionne que pour les vecteurs. Avec la possibilité de travailler en littéral.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++VecteurOrthogonal((a, b))++` crée le vecteur de coordonnées _(-b, a)_.
+
+====

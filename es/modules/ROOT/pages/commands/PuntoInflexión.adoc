@@ -1,0 +1,61 @@
+= Comando PuntoInflexión
+:page-en: commands/InflectionPoint_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+PuntoInflexión[ <Polinomio> ]::
+  Establece todos los puntos de inflexión del polinomio sobre el gráfico de la función.
+
+[NOTE]
+====
+
+Para xref:/Listas.adoc[listar] los puntos basta con ingresar el comando entre llaves *\{* *}*
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++PuntoInflexión[x^3]++`* da por resultado __(0,
+0)__**`++{PuntoInflexión[ PolinomioAleatorio[7, -3, 3]]}++`** xref:/Listas.adoc[lista] los _puntos de inflexión_ del
+polinomio aleatorio de grado _7_ que podrían, entre otros, resultar _\{(0.138, -3.402), (0.62, -5), (1.74, 5)}_
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] la xref:/Vista_CAS.adoc[Vista C~[.small]#omputación#~A~[.small]#lgebraica#~S~[.small]#imbólica#~]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Sin admitir literales, el comando obra como ya se ha descripto.
+|===
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: A menos que el comando se encierre entre llaves *\{*
+*}*, en esta xref:/Vista_CAS.adoc[vista] se ofrece solo el primer punto de inflexión encontrado en lugar de listarlos
+exhaustivamente.
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos
+
+* xref:/commands/Extremo.adoc[Extremo]
+* xref:/commands/Mínimo.adoc[Mínimo] y
+* xref:/commands/Máximo.adoc[Máximo].
+
+====
+
+'''''
+
+El bpceto que se presenta a continuación, ilustra _animadamente_ la posición de los [.mw-selflink .selflink]#puntos de
+Inflexión# en azul y de los xref:/commands/Extremo.adoc[extremos] en rojo, sobre la curva de una función que surge del
+xref:/commands/AjustePolinómico.adoc[AjustePolinómico] de un xref:/Lugar_Geométrico.adoc[lugar geométrico].
+
+/Archivo:Inflexión_Extremos_Curvatura_y_Pendiente_lg_inf_gif.adoc[image:Inflexi%C3%B3n_Extremos_Curvatura_y_Pendiente_lg_inf.gif[Inflexión
+Extremos Curvatura y Pendiente lg inf.gif,width=392,height=385]]

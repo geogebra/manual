@@ -1,0 +1,11 @@
+= Příkaz PouzitiMatice
+:page-en: commands/ApplyMatrix_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+PouzitiMatice( <[[Matice)]>, <xref:/Geometrické_objekty.adoc[Objekt]> ]
+
+Určí a v grafu zobrazí transformaci zadaného objektu, pro kterou platí
+
+* bod _P_ daného objektu je zobrazen do bodu _M*P_ v případě, že je _M_ matice 2x2 nebo
+* bod _P_ daného objektu je zobrazen do bodu _obraz(M*(x(P), y(P), 1))_, kde _obraz_ je zobrazení, které bodu _(x,y,z)_
+přiřadí bod _(x/z, y/z)_, v případě, že je _M_ matice 3x3.

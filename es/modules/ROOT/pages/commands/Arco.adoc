@@ -1,0 +1,41 @@
+= Comando Arco
+:page-en: commands/Arc_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+ +
+Arco( <Circunferencia>, <Punto inicial >, <Punto final (en sentido antihorario)> )::
+  Da por resultado el arco correspondiente a la circunferencia indicada, dados un punto inicial y un punto final en
+  sentido antihorario.
+
+Arco( <Elipse>, <Punto inicial >, <Punto final (en sentido antihorario)> )::
+  Da por resultado el arco correspondiente a la elipse indicada, dados un punto inicial y un punto final en sentido
+  antihorario.
+
+Arco( <Circunferencia>, <Valor inicial del parámetro>, <Valor final> )::
+  Da por resultado el arco de circunferencia cuyos extremos están dados por los valores especificados del parámetro.
+
+[NOTE]
+====
+
+Internamente se utilizan las siguientes expresiones paramétricas:Circunferencia: (_r_ cos(_t_), _r_ sen(_t_)) siendo _r_
+el radio.
+
+====
+
+Arco( <Elipse>, <Valor inicial del parámetro>, <Valor final> )::
+  Da por resultado el arco de elipse cuyos extremos están dados por los valores especificados del parámetro.
+
+[NOTE]
+====
+
+Internamente se utilizan las siguientes expresiones paramétricas:Elipse: (_a_ cos(_t_), _b_ sen(_t_)) siendo _a_ y _b_
+las longitudes de los semiejes.
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/ArcoTresPuntos.adoc[ArcoTresPuntos].
+
+====

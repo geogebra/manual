@@ -1,0 +1,118 @@
+= Outil Calculs Probabilités
+:page-en: Probability_Calculator
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+*Cet outil n'est accessible que lorsque l'une des 2 fenêtres
+/Fichier:Menu_view_spreadsheet_svg.adoc[image:32px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=32,height=32]] xref:/Tableur.adoc[Tableur] ou
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]]
+xref:/Calcul_formel.adoc[Calcul formel] est active ;*
+
+*ou alors,*
+
+* le sélectionner dès l'ouverture de GeoGebra dans le volet latéral xref:/Associations.adoc[Associations];
+* le sélectionner dans le menu Affichage
+* utiliser [.kcode]#Ctrl# + [.kcode]#Maj# + [.kcode]##P##****
+
+/Fichier:Menu_view_probability_svg.adoc[image:32px-Menu_view_probability.svg.png[Menu view
+probability.svg,width=32,height=32]] (code 66) ,
+
+* dans la Boîte à outils par défaut /Fichier:Mode_onevarstats_svg.adoc[image:32px-Mode_onevarstats.svg.png[Mode
+onevarstats.svg,width=32,height=32]] dans
+/Fichier:Menu_view_spreadsheet_svg.adoc[image:32px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=32,height=32]] xref:/Tableur.adoc[Tableur]
+* dans la Boîte à outils par défaut
+/Fichier:Menu_view_probability_svg.adoc[image:32px-Menu_view_probability.svg.png[Menu view
+probability.svg,width=32,height=32]] dans /Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=32,height=32]] xref:/Calcul_formel.adoc[Calcul formel]
+
+Cliquer sur cet outil pour ouvrir une fenêtre de dialogue afin de calculer et représenter des distributions de
+probabilité.
+
+== Onglet "Distribution"
+
+* Pour choisir une distribution, la sélectionner dans la liste déroulante. L'appui sur le bouton
+/Fichier:Cumulative_distribution_png.adoc[image:Cumulative_distribution.png[Cumulative
+distribution.png,width=16,height=16]] sert de bascule pour cumulée ou non.
+
+Ensuite, en définir les paramètres dans les différents champs texte adjacents.
+
+* Pour calculer une probabilité, choisir un type d'intervalle à l'aide des boutons
+/Fichier:Interval_left_png.adoc[image:Interval-left.png[Interval-left.png,width=16,height=16]],
+/Fichier:Interval_between_png.adoc[image:Interval-between.png[Interval-between.png,width=16,height=16]] ou
+/Fichier:Interval_right_png.adoc[image:Interval-right.png[Interval-right.png,width=16,height=16]]. Ensuite, en définir
+les bornes dans les champs texte adjacents, elles sont modifiables par déplacement de leur représentation
+/Fichier:Stylingbar_point_up_svg.adoc[image:16px-Stylingbar_point_up.svg.png[Stylingbar point
+up.svg,width=16,height=16]] sur l'axe des abscisses du graphique.
+
+Options::
+  L'outil *Calculs Probabilités* possède une barre de style variable. Pour l'ouvrir, cliquer sur le premier bouton
+  /Fichier:Triangle_right_png.adoc[image:Triangle-right.png[Triangle-right.png,width=16,height=16]] en haut à droite
+  dans la barre de titre :
+
+Si la distribution choisie ne figure que dans la partie supérieure de la liste déroulante, apparaîtront seuls les 2
+boutons suivants :
+
+/Fichier:Normal_overlay_png.adoc[image:Normal-overlay.png[Normal-overlay.png,width=16,height=16]] 'Superposer la courbe
+normale' ;
+
+/Fichier:Export16_png.adoc[image:Export16.png[Export16.png,width=16,height=16]] pour Copier dans graphique,
+presse-papiers ou exporter le graphique
+
+sinon, pour les 4 dernières de la liste, s'y ajouteront les 3 boutons suivants :
+
+/Fichier:Line_graph_png.adoc[image:Line_graph.png[Line graph.png,width=16,height=16]] 'Diagramme en bâtons' ;
+
+/Fichier:Step_graph_png.adoc[image:Step_graph.png[Step graph.png,width=16,height=16]] 'Graphique en escaliers'
+
+/Fichier:Bar_graph_png.adoc[image:Bar_graph.png[Bar graph.png,width=16,height=16]] 'Barres'
+
+Glisser & Déposer::
+  Approcher votre pointeur /Fichier:Cursor_arrow_png.adoc[image:Cursor_arrow.png[Cursor arrow.png,width=16,height=16]]
+  du sommet de l'écran du graphique, qu'il se transforme en
+  /Fichier:Arrow_cursor_grabbing_png.adoc[image:Arrow_cursor_grabbing.png[Arrow cursor
+  grabbing.png,width=16,height=16]]. Avec cette _main_ glisser la représentation dans les vues graphiques 1 ou 2 pour y
+  créer un nouveau graphique, ou dans toute application qui accepte les images (par exemple traitement de textes
+  LibreOffice) pour y insérer une image du graphique.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+_X suit une loi Normale de moyenne 2 et d'écart-type 0,7_
+
+_1) Représenter sa fonction de densité et calculer la probabilité de l'événement « 1 ≤ X ≤ 3 »._ On choisit 'Normale'
+dans la liste déroulante, et on renseigne les champs μ `++2++` et σ `++0.7++` On clique sur
+/Fichier:Interval_between_png.adoc[image:Interval-between.png[Interval-between.png,width=16,height=16]] et on renseigne
+les champs borne inférieure `++1++` et borne supérieure `++3++` :
+
+/Fichier:Norm0_png.adoc[image:Norm0.png[Norm0.png,width=386,height=395]]
+
+La réponse à la deuxième partie de cette question est donc P(« 1 ≤ X ≤ 3 ») = 0,84687. (_options 5 décimales_) _2)
+Déterminer l'intervalle centré en 2 dans lequel on trouve X avec une probabilité de 0,95._ A ce jour, on détermine dans
+un premier temps,
+
+* soit la borne inférieure en cliquant
+/Fichier:Interval_left_png.adoc[image:Interval-left.png[Interval-left.png,width=16,height=16]] et renseignant le champ
+'=' `++0.025++` ( stem:[\frac\{1 - 0,95}\{2}] ),
+* soit la borne supérieure en cliquant
+/Fichier:Interval_right_png.adoc[image:Interval-right.png[Interval-right.png,width=16,height=16]] et renseignant le
+champ '=' `++0.025++`, ou en cliquant
+/Fichier:Interval_left_png.adoc[image:Interval-left.png[Interval-left.png,width=16,height=16]] et renseignant le champ
+'=' `++0.975++`
+
+et on peut trouver l'autre par symétrie par rapport à 2.
+
+/Fichier:Norm1_png.adoc[image:Norm1.png[Norm1.png,width=386,height=395]] ou
+/Fichier:Norm2_png.adoc[image:Norm2.png[Norm2.png,width=386,height=395]] ou
+/Fichier:Norm2bis_png.adoc[image:Norm2bis.png[Norm2bis.png,width=386,height=395]]
+
+La réponse à cette question est donc l'intervalle [0,62803 ; 3,37197]. (_options 5 décimales_) et finalement 'pour
+"vérifier"', on a en cliquant
+/Fichier:Interval_between_png.adoc[image:Interval-between.png[Interval-between.png,width=16,height=16]] et les champs
+borne inférieure `++0,62803++` et borne supérieure `++3,37197++`
+
+/Fichier:Norm3_png.adoc[image:Norm3.png[Norm3.png,width=386,height=395]]
+
+====

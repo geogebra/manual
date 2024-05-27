@@ -1,0 +1,128 @@
+= Comando Simplifica
+:page-en: commands/Simplify_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+*Simplifica*[ <Función> ]::
+  Crea y xref:/Vista_Gráfica.adoc[grafica] una versión, simplificada de ser posible, de los términos de la función dada,
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++f(x) := Simplifica[x + x + x]++`* da por resultado la función __f(x) =
+3x__**`++f(x) := Simplifica[x(sin(x)² + cos(x)²)]++`** crea la función __f(x) =
+x__**`++f(x) := Simplifica[- 2 * cos(x) * tan(x)]++`** crea la función __f(x) = -2
+sen(x)__**`++f(x) := Simplifica[(2x³ - 3x² - 62x - 105) / (2 (x + 5 / 2))]++`** crea la función _f(x) = x² - 4x - 21_
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:* Dada la xref:/Funciones.adoc[función] `++f(x)=x+x+x++`, *`++g(x) := Polinomio[f]++`* da por resultado la
+función __g(x) = 3x__Frente a la xref:/Funciones.adoc[función] `++h(x)=x+x²+x++`, `++Polinomio[h]++` da por resultado la
+función _p(x) = x²+2x_
+
+====
+
+[NOTE]
+====
+
+Operando en línea, este comando requiere de la carga del Sistema CAS de Álgebra. Como esta maniobra puede resultar lenta
+en ocasiones y/o equipos, es conveniente intentar, cada vez que sea posible, la alternativa que ofrece el comando
+xref:/commands/Polinomio.adoc[Polinomio].
+
+====
+
+*Simplifica*[ <Texto> ]
+
+Opera sobre el texto y deja el resultado expuesto en la xref:/Vista_Gráfica.adoc[Vista Gráfica].
+
+[EXAMPLE]
+====
+
+Para _a = 1_ _b = -1_ y _c = 1_...`++"f(x) = "+a+"x²+"+b+"x+"+c++` establece el texto "f(x) =
+1x²+-1x+1"*`++Simplifica["f(x) = "+a+"x²+"+b+"x+"+c]++`* crea el texto _f(x) = 1x²- x+1_
+
+====
+
+[NOTE]
+====
+
+Habitualmente el comando xref:/commands/FórmulaTexto.adoc[FórmulaTexto] produce mejores resultados y es más simple.
+
+====
+
+[NOTE]
+====
+
+El comando procura ordenar y _pasar en limpio_ las expresiones, eliminando repeticiones, consecutivos negativos... etc.
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+La variante aplicada a funciones obra de modo análogo y se admiten literales para operar simbólicamente.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Simplifica[(sqrt(-3) + 1) sen(x) / (sqrt(3) (1 - cos(x)²))]++`* resulta:_stem:[ \frac\{\sqrt\{3} ί+
+1}\{\sqrt\{3 } sen(x)} ]_ que por ser complejo, no admite registro
+xref:/Vista_Gráfica.adoc[gráfico]**`++Simplifica[(sqrt(3) + 1) sen(x) / (sqrt(3) (1 - cos(x)²))]++`** da como
+resultado:_stem:[ \frac\{\sqrt\{3}+ 3}\{3 sen(x)} ]_ y puede cobrar entidad xref:/Vista_Algebraica.adoc[algebraica] y
+xref:/Vista_Gráfica.adoc[gráfica],
+
+====
+
+[.small]##
+
+[.small]##
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Si se _tilda_ el redondelito que encabeza la fila en
+que se ingresara el comando, la función expone su correlato xref:/Vista_Gráfica.adoc[gráfico] cuando, como en este
+último caso, es posible.
+
+====
+
+[.small]##
+
+[.small]##
+
+[EXAMPLE]
+====
+
+*Ejemplos:* Sin tener _ñ_ valor asignado...*`++Simplifica[3  x + 4  x + ñ  x]++`* da _x ñ + 7x_
+mientras...*`++Factoriza[3  x + 4  x + ñ  x]++`* da *(ñ + 7) x`++Simplifica[ (ñ + 1) sen(x) / ( ñ  (1 - cos(x)²) )]++`*
+da stem:[\frac\{ñ + 1}\{ñ sen(x)}]
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Si se incluyen variables a las que no se les ha
+asignado un valor, el resultado es la correspondiente fórmula.
+
+====
+
+'''''
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/Factoriza.adoc[Factoriza] y xref:/commands/TrigSimplifica.adoc[TrigSimplifica].
+
+====
+
+/s_index_php?title=En:Simplify_Command_action=edit_redlink=1.adoc[en:Simplify Command]

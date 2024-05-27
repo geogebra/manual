@@ -1,0 +1,40 @@
+= Comando ZoomAleja
+:page-en: commands/ZoomOut_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+ZoomAleja( <Factor> )::
+  Aleja la xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+  xref:/Vista_Gráfica.adoc[Vista Gráfica] activa según el factor dado respecto al del enfoque actual, tomando como punto
+  de referencia el centro de la pantalla.
+
+[EXAMPLE]
+====
+
+`++ZoomAleja(2)++` aleja la vista.
+
+====
+
+ZoomAleja( <Factor>, <Punto (centro)> )::
+  Aleja la xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+  xref:/Vista_Gráfica.adoc[Vista Gráfica] activa según el factor dado respecto al del enfoque actual, tomando como
+  centro de referencia el punto dado.
+
+[EXAMPLE]
+====
+
+`++ZoomAleja(2, (0, 0))++`
+
+====
+
+[NOTE]
+====
+
+*Notas:*
+
+* `++ZoomAleja(t)++` y `++ZoomAleja(t,A)++` son equivalentes a `++ZoomAcerca(1/t)++` y `++ZoomAcerca(1/t,A)++`
+respectivamente.
+* Cuando están abiertas múltiples xref:/Vista_Gráfica.adoc[vistas gráficas], solo la activa es afectada.
+* Ver también los comandos xref:/commands/ZoomAcerca.adoc[ZoomAcerca], xref:/commands/VistaActiva.adoc[VistaActiva] y
+xref:/commands/DesplazaPíxeles.adoc[DesplazaPíxeles].
+
+====

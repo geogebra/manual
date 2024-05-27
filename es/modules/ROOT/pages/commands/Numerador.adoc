@@ -1,0 +1,49 @@
+= Comando Numerador
+:page-en: commands/Numerator_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+Numerador( <Función> )::
+  Establece el numerador de la función.
+
+[EXAMPLE]
+====
+
+*`++Numerador[(x² + 1)/(2x-1)]++`* crea la función _x² + 1_.
+
+====
+
+Numerador( <Número> )::
+  Para un número racional, retorna su numerador. Utiliza un método numérico que limita el comando a números con un
+  denominador pequeño. Si la entrada en un número irracional, se obtiene el numerador de su _fracción continua_.
+
+[NOTE]
+====
+
+Ver también xref:/commands/Denominador.adoc[Comando Denominador] y xref:/commands/TextoFracción.adoc[Comando
+TextoFracción].
+
+====
+
+== Sintaxis CAS
+
+Numerador( <Expresión> )::
+  Da por resultado el numerador de un número racional o expresión.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++Numerador[2/3 + 1/15]++` da por resultado _11_.
+* Si las variables _a, b_ y _c_ no han sido definidas previamente en GeoGebra, entonces `++Numerador[a/b]++` da por
+resultado _a_ y `++Numerador[Simplifica[a + b/c]]++` da por resultado _a c + b_
+
+====

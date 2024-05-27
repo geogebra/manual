@@ -1,0 +1,219 @@
+= Aplica Molde
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[.small]##
+
+Consultar /Archivo:Menu_Open_png.adoc[image:Menu_Open.png[Menu Open.png,width=16,height=16]] Opción
+xref:/Menú_Archivo.adoc[*Abre...*] del menú xref:/Menú_Archivo.adoc[*Archivo*] Se puede
+xref:/Apertura_de_Archivos_de_Molde.adoc[aplicar un molde] de estilo a los elementos de un archivo actual, seleccionando
+la opción *_Aplica Molde_* de la lista desplegable desde [.kcode]#*_Archivo de tipo:_*# del cuadro de diálogo
+desencadenado por el xref:/Menú_Archivo.adoc[*Abre...*] del xref:/Menú_Archivo.adoc[Menú Archivo].
+
+/Archivo:Molde_PNG.adoc[image:320px-Molde.PNG[Molde.PNG,width=320,height=93]]
+
+== Crear un Archivo de Moldes
+
+En un archivo GeoGebra llamado, por ejemplo, _estilo.ggb_, se pueden nominar y guardar diferentes estilos personales,
+para xref:/Objetos.adoc[objetos] del mismo o distinto tipo, aplicables individualmente a cada uno de los de otro archivo
+*.ggb*.
+
+Por ejemplo, se crean dos puntos y una recta y se les definen las características de cada uno acorde a las
+xref:/Propiedades_de_Objeto.adoc[«Propriedades»] que se fijaron para el color, estilo, … .
+
+En el campo de *_Título_* de la pestaña [.kcode]#Básico# del xref:/Cuadro_de_Ajustes.adoc[cuadro] de
+xref:/Propiedades_de_Objeto.adoc[Propriedades] de cada uno, se anota lo siguiente:
+
+*%style=*
+
+y a continuación el nombre que se le fuera a asignar a cada respectivo estilo con que será _memorizado_.
+
+Se ilustra a continuación la definición del estilo:
+
+* "ACA" (**_A_**ncho-**_C_**uadrado-**_A_**zul) de un punto
+* "APA" (**_A_**ncha-**_P_**unteada-**_A_**zul) de una recta
+* se refiere uno más, el "FRA" (**_F_**lecha-**_R_**oja-**_A_**ncha) de un punto
+
+[cols="",]
+|===
+|/Archivo:Molde6_PNG.adoc[image:310px-Molde6.PNG[Molde6.PNG,width=310,height=241]]
+|/Archivo:Molde7_PNG.adoc[image:310px-Molde7.PNG[Molde7.PNG,width=310,height=241]]
+|===
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: En la anotación, lo literal es *_%style=_* mientras
+que *_NombreEstilo_* es el que se elija, justamente, como el nombre del estilo.A continuación se ilustra la asignación
+del nombre de estilo *_CruzAzul_* para identificar el del punto correspondiente:
+
+*_%style=CruzAzul_*
+
+Este mismo procedimiento se puede seguir para nominar cada estilo asignado a los respectivos puntos u
+xref:/Objetos.adoc[objetos] de distinto tipo para los que se hubiera decidido por el que se deseara.
+
+====
+
+[EXAMPLE]
+====
+
+/Archivo:CruzAzul_PNG.adoc[image:300px-CruzAzul_.PNG[CruzAzul .PNG,width=300,height=260]]
+
+====
+
+'''''
+
+Para aplicar el estilo desarrollado a todos los objetos del mismo tipo, se les debe asignar un nombre reservado para el
+que se fija por omisión:
+
+_defaultStyle_
+
+Así:
+
+*%style=defaultStyle*
+
+A continuación se ilustra la definición de un estilo asignado a los polígonos que podría llamarse "PAV"
+(**_P_**olígono-de nido o _Colmena_ de **_A_**bejas-**_V_**erde) pero se establece como *%style=defaultStyle* para que
+sea el implícito o por omisión para este tipo de xref:/Objetos.adoc[objetos]:
+
+/Archivo:Molde5_PNG.adoc[image:440px-Molde5.PNG[Molde5.PNG,width=440,height=352]]
+
+'''''
+
+*Al terminar es imprescindible guardar el archivo.*
+
+'''''
+
+== Aplicar moldes a un archivo ggb
+
+Una vez abierto el archivo de GeoGebra a cuyos xref:/Objetos.adoc[objetos] se va a aplicar un molde, bastará con anotar
+en el campo de Título de cada uno, *%style=* y a continuación el nombre del respectivo estilo previamente _memorizado_.
+Así, se debe anotar:
+
+* `++%style=FRA++` para todos los puntos que se deseen de estilo "FRA" y
+* `++%style=ACA++` para los que se quieran "ACA"
+* para los demás, anotación alguna
+
+Por consiguiente, no se precisa hacer referencia a los polígonos que tendrán las características establecidas en el
+estilo implícito ya creado. Se ilustra previamente la asignación de cada estilo para cada punto y para la recta y la
+omisión en relación al polígono:
+
+* %style=FRA
+* %style=ACA
+* %style=APA
+* nada es preciso para el polígono
+
+*No debe haber xref:/Objetos.adoc[objetos] seleccionados en el momento en que se _Abre…_ un
+xref:/Menú_Archivo.adoc[archivo]*
+
+Cuando se despliega el cuadro de diálogo en que se consulta si se desea guardar las modificaciones realizadas, es
+importante atenerse al siguiente mecanismo:
+
+[cols="",]
+|===
+|/Archivo:Molde_PNG.adoc[image:320px-Molde.PNG[Molde.PNG,width=320,height=93]]
+
+|Seleccionar, de la lista desplegable de *_Archivos de Tipo:_*, la alternativa *Aplica Molde(.ggb)*, Luego, indicar como
+nombre del archivo el que corresponda al que tenga guardados los estilos creados. En este caso: estilo.ggb.
+|===
+
+[cols=",",options="header",]
+|===
+|Antes |Después
+|/Archivo:Antes_PNG.adoc[image:260px-Antes.PNG[Antes.PNG,width=260,height=209]]
+|/Archivo:DespuEs_PNG.adoc[image:260px-DespuEs.PNG[DespuEs.PNG,width=260,height=210]]
+|===
+
+[NOTE]
+====
+
+Esta operación, que permite asignar diferentes estilos a los xref:/Objetos.adoc[objetos] de cierto tipo, suele resultar
+ardua hasta que se automatiza.En caso de pretender un mismo estilo implícito para cada tipo de
+xref:/Objetos.adoc[objeto], basta con:
+
+. Abrir o crea un archivo de GeoGebra al que se le desea aplicar el molde,
+. Seleccionar todos los xref:/Objetos.adoc[objetos] que se desea que reciban el *estilo por omisión*
++
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Se pueden seleccionar varios con ayuda de la tecla
+[.kcode]#Ctrl#.
+
+. Abrir ahora el archivo del que se tomarán los estilos, en este caso *_estilo.ggb_* una vez seleccionado la opción
+*Aplica Molde (.ggb)*
+
+====
+
+== Aplicando Archivos de _Moldes_
+
+Se le puede asignar el mismo color e igual tamaño relativo a un conjunto de objetos, _aplicándoles_ un mismo _estilo_,
+previamente almacenado en lo que se denominará archivo de _molde_.
+
+Basta con abrir el xref:/Cuadro_de_Propiedades.adoc[cuadro de Propiedades] para cada objeto que ya cuenta con el estilo
+deseado y en la pestaña _Básico_, dirigirse al campo de *_Título_* para anotar lo siguiente:
+
+*_`++%style=NombreEstilo++`_*
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: En la anotación, lo literal es *_%style=_* mientras
+que *_NombreEstilo_* es el que se elija, justamente, como el nombre del estilo.A continuación se ilustra la asignación
+del nombre de estilo *_CruzAzul_* para identificar el del punto correspondiente:
+
+*_%style=CruzAzul_*
+
+Este mismo procedimiento se puede seguir para nominar cada estilo asignado a los respectivos puntos u
+xref:/Objetos.adoc[objetos] de distinto tipo para los que se hubiera decidido por el que se deseara.
+
+====
+
+[EXAMPLE]
+====
+
+/Archivo:CruzAzul_PNG.adoc[image:300px-CruzAzul_.PNG[CruzAzul .PNG,width=300,height=260]]
+
+====
+
+'''''
+
+Si se quiere aplicar un mismo estilo por omisión a todos los objetos, se precisa ingresar un nombre especia,
+*_reservado_*: `++%style=defaultStyle++`
+
+'''''
+
+Ahora, basta con guardar el archivo llamándolo, por ejemplo, *_estilo.ggb_*.
+
+== Atentos a Aplicar el molde a un archivo .ggb
+
+Primero es preciso abrir el archivo a cuyos objetos componentes se les quiera aplicar un estilo ya existente. Ahora, se
+debe añadir `++%style=NombreEstilo++` a cada objeto al que se le quiere aplicar el estilo específico.
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención:
+
+En la anotación, lo literal es *_%style=_* mientras que *_NombreEstilo_* es el que se retome, justamente, del nombre del
+estilo que se desea recuperar, como el de *_CruzAzul_* para identificar el del punto en el archivo almacenado como
+*_molde_* referente. Así:'**_%style=CruzAzul_**Este mismo procedimiento se puede seguir para recuperar del *_molde_*
+cada estilo asignado a los respectivos puntos u xref:/Objetos.adoc[objetos] de distinto tipo para los que ya se hubiera
+estipulado.
+
+====
+
+'''''
+
+Esto no es necesario si se les quiere aplicar el estilo que se registro como el estándar `++%style=defaultStyle++`.
+
+'''''
+
+Antes de pasar al siguiente paso, se debe verificar que no hubiera xref:/Objetos.adoc[objetos] seleccionados y guardar
+el boceto. Finalmente, se debe ir al _Abre..._ del xref:/Menú_Archivo.adoc[Menú Archivo] y seleccionar _Aplica MoLde
+(.ggb)_ del listado desplegable y elegir el archivo *_estilo.ggb_* para que resulte asignado.
+/Archivo:Molde_PNG.adoc[image:300px-Molde.PNG[Molde.PNG,width=300,height=88]]
+
+[NOTE]
+====
+
+Si previamente se seleccionan algunos xref:/Objetos.adoc[objetos] en particular, el *_estilo_* se les aplicará solo a
+tal conjunto.
+
+====

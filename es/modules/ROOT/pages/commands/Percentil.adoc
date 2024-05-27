@@ -1,0 +1,99 @@
+= Comando Percentil
+:page-en: commands/Percentile_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+*Percentil*[ <Lista de Números>, <Porcentaje>]::
+  Siendo _P_ el _Porcentaje_ tal que 0 < P ≤ 1, el _percentil_ da por resultado el valor (efectivo o calculado) en que
+  se _corta_ respecto de _P_, a la _lista de números_ ascendentemente ordenada .
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: El valor resultante puede ser uno concreto de la
+_lista de números_ ordenada o uno _figurado_. Así `++Percentil[ {1, 2, 3, 4, 5}, 0.5]++` da 3 mientras
+`++Percentil[ {2, 2, 4, 4}, 0.5]++` también da 3.
+
+====
+
+[EXAMPLE]
+====
+
+`++Percentil[{1, 2, 3, 4}, 0.5]++` da por resultado _2.5_
+
+====
+
+[NOTE]
+====
+
+Los comandos para el *xref:/commands/Cuartil1.adoc[primer _cuartil_, Cuartil1]*, *xref:/commands/Cuartil3.adoc[tercero,
+Cuartil3]* y *xref:/commands/Mediana.adoc[Mediana]* emplean dos reglas diferentes a la aplicada para el *Percentil* por
+lo que no siempre dan exactamente los mismos resultados, como se ilustra en los siguientes casos.
+
+====
+
+[EXAMPLE]
+====
+
+[.underline]#_Casos Ilustrativos_#
+
+`++ Cuartil1[ {1,2,3,4} ]++` da por resultado 1.5
+
+`++Percentil[ {1,2,3,4}, 0.25 ]++` da 1.25
+
+`++ Cuartil1[ {4, 9, 10, 11, 12, 13, 14, 15}]++` da 9.5
+
+`++Percentil[ {4, 9, 10, 11, 12, 13, 14, 15}, 0.25]++` da 9.25
+
+====
+
+[NOTE]
+====
+
+Se puede encontrar más información, en inglés, en
+https://commons.apache.org/proper/commons-math/javadocs/api-2.2/org/apache/commons/math/stat/descriptive/rank/Percentile.html[este
+enlace, que profundiza en detalles]
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+En esta xref:/Vista_CAS.adoc[vista], se opera de modo análogo admitiéndose literales para obrar, a posteriori, con una
+adecuada /Archivo:Mode_substitute_32_gif.adoc[image:Mode_substitute_32.gif[Mode substitute 32.gif,width=32,height=32]]
+xref:/tools/Sustituye.adoc[_sustitución_] o asignación de valor a través de, por ejemplo, un
+/Archivo:Mode_slider_png.adoc[image:Mode_slider.png[Mode slider.png,width=32,height=32]]
+xref:/tools/Deslizador.adoc[deslizador].
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+*`++Percentil[  Encadena[ { round(0.5+ 7 random()) ô },  (Secuencia[7] + round(3random()) )  ô + round(10 random()) ô], 0.25]++`*
+da por resultado la expresión que aparecen a continuación.Percentil[ \{ 8 ô, 5 ô, 6 ô, 7 ô, 8 ô, 9 ô, 10 ô, 11 ô }
+,stem:[\frac\{1}\{4}]]De modo
+análogo...*`++Percentil[  Encadena[ { round(0.5+ 7 random()) ñ },  (Secuencia[7] + round(3random()) )  ñ + round(10 random()) ñ], 0.25]++`*...
+en cuanto se asigne al literal _ñ_ un valor, a través del de un /Archivo:Mode_slider_png.adoc[image:Mode_slider.png[Mode
+slider.png,width=32,height=32]] xref:/tools/Deslizador.adoc[deslizador], ajustado por ejemplo a _1_, daría, según el
+listado aleatorio involucrado, un resultado como /Archivo:Mode_evaluate_png.adoc[image:Mode_evaluate.png[Mode
+evaluate.png,width=32,height=32]] stem:[\frac\{41}\{4}] al xref:/tools/Evalúa.adoc[evaluarlo] y, con
+/Archivo:Mode_numeric_png.adoc[image:Mode_numeric.png[Mode numeric.png,width=32,height=32]] _9.25_ como
+xref:/tools/Valor_Numérico.adoc[_valor numérico._]
+
+====
+
+[NOTE]
+====
+
+Ver también los siguientes comandos...
+
+* xref:/commands/Cuartil1.adoc[Cuartil1]
+* xref:/commands/Cuartil3.adoc[Cuartil3]
+* xref:/commands/Mediana.adoc[Mediana]
+====

@@ -1,0 +1,53 @@
+= Commande Curseur
+:page-en: commands/Slider_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Curseur( <Min>, <Max>, <Incrément>, <Vitesse>, <Longueur>, <EstUnAngle>, <Horizontal>, <Animé>, <Aléatoire>)
+
+Crée un xref:/tools/Curseur.adoc[curseur]
+
+* _Min_, _Max_ : définissent les bornes de la plage [Min,Max] dans laquelle le curseur prend ses valeurs ;
+
+- Ces deux arguments sont *obligatoires* ;
+
+Ils peuvent être définis à l'aide de variables.
+
+* _Incrément_ : définit l'incrément du curseur ;
+
+Il peut être défini à l'aide de variable ;
+
+- valeur par défaut : 0.1.
+
+* _Vitesse_ : définit la vitesse de variation du curseur lors d'une animation ;
+
+Elle peut être définie à l'aide de variable ;
+
+- valeur par défaut : 1.
+
+* _Longueur_ : définit la longueur en pixels du segment représentatif ;
+
+- valeur par défaut : 200.
+
+* _EstUnAngle_ : définit si le curseur est associé ou non à une mesure d'angle ;
+
+Cet argument prend les valeurs _true_ ou _false_ ;
+
+- valeur par défaut : _false_.
+
+* _Horizontal_ : définit la disposition du segment représentatif :
+
+soit horizontal (_true_), soit vertical (_false_) ;
+
+- valeur par défaut : _true_ .
+
+* _Animé_ : définit l'animation automatique du curseur ;
+
+- valeur par défaut : _false_.
+
+* _Aléatoire_ : définit si le curseur
+
+varie de manière continue dans [Min, Max] (_false_),
+
+ou prend des valeurs au hasard dans cet intervalle (_true_) ;
+
+- valeur par défaut : _false_.

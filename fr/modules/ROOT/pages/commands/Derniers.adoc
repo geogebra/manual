@@ -1,0 +1,46 @@
+= Commande Derniers
+:page-en: commands/Last_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Derniers( <Liste> )::
+  Retourne la liste contenant le dernier élément de la liste L.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Derniers({1,2,3})++` retourne \{3}.
+
+====
+
+Pour obtenir le dernier élément lui-même utilisez par ex. la commande xref:/commands/Elément.adoc[Elément] .
+
+Derniers( <Liste>,<Nombre> )::
+  Retourne la liste contenant les _n_ derniers éléments de la liste L.
+
+Derniers( <Texte> )::
+  Retourne le dernier caractère du texte.
+
+Derniers( <Texte> , <Nombre> )::
+  Retourne les _n_ derniers caractères du texte.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Derniers("Hello",2)++` retourne "lo".
+
+====
+
+/Fichier:View_cas24_png.adoc[image:View-cas24.png[View-cas24.png,width=22,height=22]] *Calcul formel* Dans le
+xref:/Calcul_formel.adoc[calcul formel] seules les syntaxes concernant les listes sont proposées ; mais, pour moi, les
+syntaxes concernant les textes fonctionnent tout aussi bien.
+
+avec la possibilité de travailler en littéral, si "a", "b", "c", "d" et "e" ne sont pas définies dans GeoGebra, :
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Derniers({a, b, c, d, e},3)++` donne _\{c, d, e}_ .
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/Premiers.adoc[Premiers].

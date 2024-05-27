@@ -1,0 +1,41 @@
+= Comando LogNormalInversa
+:page-en: commands/InverseLogNormal_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+LogNormalInversa( <Media μ>, <Desviación Estándar σ>, <Probabilidad p> )::
+  Calcula, para la probabilidad indicada, la
+  http://en.wikipedia.org/wiki/es:Funci%C3%B3n_Distribuici%C3%B3n_Acumulada#Funci.C3.B3n_de_Distribuci.C3.B3n_Acumulada_Inversa_.28Funci.C3.B3n_Cuantil.29[inversa]
+  de la http://en.wikipedia.org/wiki/es:Funci%C3%B3n_Distribuici%C3%B3n_Acumulada[*_fda_*, acumulada] de
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_log-normal[distribución Log-Normal] (o
+  /s_index_php?title=En:w:Log_normal_action=edit_redlink=1.adoc[log distribution] en inglés) en _p_ donde la
+  distribución Log-Normal está dada por la media _μ_ y la
+  http://en.wikipedia.org/wiki/es:Desviaci%C3%B3n_est%C3%A1ndar[desviación estándar muestral] _σ_.Así,
+  *LogNormalInversa[ μ, σ, p ]* da por resultado el menor entero _"t"_, tal que:
+  _P(X ≤ t) ≥ p_
+  ... siendo _X_ una http://en.wikipedia.org/wiki/es:Variable_aleatoria[variable aleatoria] sujeta a una
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_log-normal[distribución Log-Normal] con los valores paramétricos
+  dados.
+
+  '''''
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++LogNormalInversa[1000, 2, 1]++`* da por resultado **_stem:[ \infty
+]_****`++LogNormalInversa[10, 20, 1/3]++`** da, con decimales según xref:/Menú_de_Opciones.adoc[_redondeo_]: _3.996_
+
+====
+
+[NOTE]
+====
+
+El valor de la probabilidad debe restringirse al rango válido _[0, 1]_.
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/LogNormal.adoc[LogNormal].
+
+====

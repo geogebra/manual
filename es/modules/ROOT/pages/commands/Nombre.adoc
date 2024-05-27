@@ -1,0 +1,36 @@
+= Comando Nombre
+:page-en: commands/Name_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+*Nombre*[ <Objeto> ]::
+  Da por resultado el nombre de un objeto.Cuando se emplea autónomamente se expone, además, como texto en la
+  xref:/Vista_Gráfica.adoc[Vista Gráfica].
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Nombre[ B ]++`* da por resultado, como texto, el _nombre_ de _B_ que queda expuesto, así, en la
+xref:/Vista_Gráfica.adoc[Vista Gráfica].*`++Renombra[A, Nombre[B]+(n + 1)]++`* le otorga al preexistente punto _A_ el
+nombre *_B4_* si el valor de un deslizador adecuado como _n_ fuera 3 y el nombre del punto referido fuera _B_.Es
+interesante corroborar que este cambio de nombre en particular, establece un dato en la xref:/Hoja_de_Cálculo.adoc[Hoja
+de Cálculo] justamente en la celda *B4*.Como el comando no presenta un comportamiento dinámico, de cambiar el valor del
+deslizador *_n_*, el nombre permanece sin modificaciones.
+
+====
+
+[NOTE]
+====
+
+*Notas:* Este comando es sumamente funcional en textos dinámicos vinculados a xref:/Objetos.adoc[objetos] susceptibles
+de ser renombrados.Textos que se modifican, adaptándose después de haber sido renombrados los objetos.El comando
+*xref:/commands/Objeto.adoc[Objeto]* es el recíproco al de *Nombre*.
+
+====

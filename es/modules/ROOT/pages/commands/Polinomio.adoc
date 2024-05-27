@@ -1,0 +1,78 @@
+= Comando Polinomio
+:page-en: commands/Polynomial_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+Polinomio( <Función> )::
+  Establece el desarrollo de la función polinomial.
+Polinomio( <Lista de Puntos> )::
+  Crea la interpolación polinomial de grado _n-1_ a través de los _n_ puntos listados.
+
+[EXAMPLE]
+====
+
+`++Polinomio[{(1, 1), (2, 3), (3, 6)}]++` establece _0.5 x^2^ + 0.5 x_
+
+====
+
+[EXAMPLE]
+====
+
+`++Polinomio[(x - 3)^2]++` establece _x^2^ - 6x + 9_.
+
+====
+
+[NOTE]
+====
+
+El comando opera de modo análogo en la xref:/Vista_CAS.adoc[image:24px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=24,height=24]]__xref:/Vista_CAS.adoc[Vista CAS]__.
+
+Además, también pueden emplearse las fórmulas indicadas, incluyendo literales como la variable _a_ de los siguientes
+ejemplos, sin valor definido en GeoGebra.
+
+====
+
+Polinomio( <Función> )
+
+Establece el desarrollo de la función polinomial en _x_, agrupando los coeficientes.
+
+Polinomio( <Función>, <Variable> )
+
+Establece el desarrollo de la función polinomial en función de la variable, agrupando los coeficientes.
+
+[NOTE]
+====
+
+Ver el comando xref:/commands/PolinomioAleatorio.adoc[PolinomioAleatorio]
+====
+
+[EXAMPLE]
+====
+
+`++Polinomio[(x - 3)^2 + (a + x)^2, a]++` da por resultado _a^2^ + 2 x a + 2 x^2^ - 6 x + 9_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Polinomio[(x - 3)^2 + (a + x)^2]++` da por resultado _2 x^2^ + (2a - 6) x + a^2^ + 9_.
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: La sintaxis correspondiente a *Polinomio[ <Liste de
+Puntos> ]* pese a no figurar aún en la liste de las ofrecidas, también es aceptable (para versiones posteriores a la
+**5.63**__Texto en cursiva__).
+
+====

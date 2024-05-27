@@ -1,0 +1,76 @@
+= Objetos Geométricos
+:page-en: Geometric_Objects
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+== Objetos Geométricos de cada Tipo
+
+*_GeoGebra_* trabaja con diversos tipos de objetos geométricos:
+
+* xref:/Puntos_y_Vectores.adoc[Puntos y Vectores]
+* xref:/Líneas_y_Ejes.adoc[Líneas y Ejes]
+* xref:/Secciones_cónicas.adoc[Cónicas y Arcos]
+* xref:/Lugar_Geométrico.adoc[Lugares Geométricos (_locus_)]
+* xref:/Funciones.adoc[Funciones]
+* xref:/Curvas.adoc[Curvas]
+* xref:/Inecuaciones.adoc[Desigualdades e Inecuaciones]
+* xref:/Intervalos.adoc[Intervalos]
+== Recorridos
+
+Algunos de los objetos mencionados (rectas, xref:/Secciones_cónicas.adoc[secciones cónicas], arcos, polígonos,
+inecuaciones de variables simples, intervalos) así como las listas de puntos o los lugares geométricos suelen designarse
+_"recorridos"_.Puede definirse un xref:/Puntos_y_Vectores.adoc[punto] _sobre_ un recorrido usando el comando
+xref:/commands/Punto.adoc[*Punto*]. Cada punto en un recorrido queda asociado a un parámetro que lo vincula al trayecto
+con un número que va de 0 a 1. El comando xref:/commands/ParámetroRecorrido.adoc[ParámetroRecorrido] permite acceder a
+tal parámetro.
+
+[NOTE]
+====
+
+Una xref:/Listas.adoc[lista] que contenga recorridos resulta, a su vez, también un recorrido por el que puede
+desplazarse un punto - como en el listado de dos elipses que conforma un _circuito_ del punto
+*`++P = Punto[ {Cónica[T, U, V, W, Z], Refleja[ Cónica[T, U, V, W, Z], W] }]++`* - cuyo
+xref:/commands/ParámetroRecorrido.adoc[parámetro] se puede averigar -*`++ParámetroRecorridomando[P] ++`*-.
+
+====
+
+=== Trayectos Compuestos
+
+Se puede ubicar un punto en un _recorrido compuesto_ que, en tal sentido, da origen a un particular tipo de objeto, el
+de los *Pasos Compuestos*. Algunos casos de un punto en ese tipo de objeto serían, por ejemplo...
+
+* xref:/commands/Punto.adoc[Punto[\{Segmento[B, A], Segmento[B, C], Segmento[B, D], (1,1), Circunferencia[A,B], x y =
+1}]] o
+* xref:/commands/Punto.adoc[Punto[\{Segmento[D, C], Semicircunferencia[B, C], Segmento[B, A], Semicircunferencia[D,
+A]}]]
+
+**
+
+/Archivo:Pato_Paso_Complejo_png.adoc[image:300px-Pato_Paso_Complejo_.png[Pato Paso Complejo .png,width=300,height=203]]
+
+/Archivo:Pato_Paso_Complejo_png.adoc[]
+
+* Incluso un tramo de función puede ser parte de ese trayecto como en xref:/commands/Punto.adoc[Punto][ \{
+xref:/commands/Función.adoc[Función]**[**xref:/commands/AjustePolinómico.adoc[AjustePolinómico][\{E, F, G, H}, -1 +
+xref:/commands/CuentaSi.adoc[CuentaSi][x ≟ x, \{E, F, G, H}]], x(D), x(C)],
+xref:/commands/Semicircunferencia.adoc[Semicircunferencia][B, C],xref:/commands/Segmento.adoc[Segmento][B, A],
+xref:/commands/Semicircunferencia.adoc[Semicircunferencia][D, A]}]]]
+
+== Regiones
+
+Se puede restringir un punto a...
+
+* una _región_. Sea el área de un polígono, de un sector asociado a un arco o delimitada por una cónica; sea la
+determinada por inecuaciones de dos variables
+* un xref:/Lugar_Geométrico.adoc[_lugar geométrico_] o una superficie identificable
+
+A tal efecto, se puede recurrir al comando xref:/commands/PuntoEn.adoc[PuntoEn] o a la herramienta
+/Archivo:Mode_pointonobject_png.adoc[image:Mode_pointonobject.png[Mode pointonobject.png,width=32,height=32]]
+xref:/tools/Punto_en_Objeto.adoc[Punto en Objeto].
+
+[NOTE]
+====
+
+Ver también las herramientas: /Archivo:Mode_attachdetachpoint_png.adoc[image:Mode_attachdetachpoint.png[Mode
+attachdetachpoint.png,width=32,height=32]] xref:/tools/Punto_(des)vinculado.adoc[Punto (des)vinculado].
+
+====

@@ -1,0 +1,28 @@
+= Commande EcartTypeEchantillonX
+:page-en: commands/SampleSDX_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+EcartTypeEchantillonX( <Liste Points> )::
+  Retourne l'http://en.wikipedia.org/wiki/fr:%C3%89cart_type#.C3.89cart_type_empirique[écart-type empirique] des
+  abscisses des xref:/Points_et_Vecteurs.adoc[points] de la xref:/Listes.adoc[liste] de points donnée.
+
+L'effectif étant *_N_*, on calcule avec *_N-1_*
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++EcartTypeEchantillonX({(1,0),(2,2),(4,3),(5,4)})++` retourne _1.83_ (=stem:[\sqrt\{\frac\{10}\{3}}])alors que
+`++EcartTypeX({(1,0),(2,2),(4,3),(5,4)})++` retourne _1.58_ (=stem:[\sqrt\{\frac\{10}\{4}}]).
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+(Sans possibilité de travailler en littéral)

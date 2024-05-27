@@ -1,0 +1,69 @@
+= Nueva herramienta
+:page-en: Tool_Creation_Dialog
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+En primer lugar, es preciso elaborar la construcción que la herramienta debe poder trazar a posteriori.En el
+xref:/Menú_de_Herramientas.adoc[menú] de xref:/Herramientas.adoc[Herramientas] basta un _clic_ sobre
+/Archivo:Menu_Create_Tool_png.adoc[image:Menu_Create_Tool.png[Menu Create Tool.png,width=16,height=16]]
+xref:/Propias.adoc[_Nueva herramienta_] para abrir el correspondiente cuadro de diálogo.
+
+Ahora se precisa, para crear efectivamente la herramienta, completar los datos en las tres pestañas:
+
+* [.kcode]#Objetos de salida#,
+* [.kcode]#Objetos de entrada# y
+* [.kcode]#Nombre e Icono#
+
+== Receta de xref:/Herramientas.adoc[herramienta] _Cuadrada_
+
+[EXAMPLE]
+====
+
+Receta para crear una xref:/Herramientas.adoc[herramienta] _Cuadrada_ que trazará un cuadrado con dos _clic_ sucesivos
+en dos posiciones vacías de la xref:/Vista_Gráfica.adoc[Vista Gráfica] (que establecerán los puntos vértices de una de
+sus diagonales).
+
+* Construir un cuadrado empezando por dos puntos A y B que den lugar a los otros dos vértices para que al conectarlos,
+con la herramienta xref:/tools/Polígono.adoc[image:32px-Mode_polygon.svg.png[Mode polygon.svg,width=32,height=32]]
+xref:/tools/Polígono.adoc[Polígono], procuren el cuadrado deseado.Basta con indicar el
+xref:/tools/Medio_o_Centro.adoc[image:32px-Mode_midpoint.svg.png[Mode midpoint.svg,width=32,height=32]]
+xref:/tools/Medio_o_Centro.adoc[Punto medio o Centro] entre los dos marcados y llevar adelante las maniobras necesarias
+para que el ambos giren un ángulo recto alrededor de tal centro.
+* Seleccionar /Archivo:Menu_Create_Tool_png.adoc[image:Menu_Create_Tool.png[Menu Create Tool.png,width=16,height=16]]
+xref:/Propias.adoc[Nueva Herramienta] en el menú xref:/Menú_de_Herramientas.adoc[correspondiente].
+* Especificar en [.kcode]#Objetos de salida# al cuadrado con un _clic_ para seleccionarlo, o elegirlo en el menú que se
+descuelga a partir de la flechita derecha del campo de entrada correspondiente.
+* Además del _clic_ sobre el cuadrado o de su selección del menú descolgable, también deben especificarse sus lados como
+_Objetos de salida_.
+* Especificar los [.kcode]#Objetos de entrada#: GeoGebra automáticamente especifica los _Objetos de entrada_ (en este
+caso, los puntos A y B).También puede modificarse la selección de los objetos de entrada usando el menú desplegado o
+eligiéndolos con un _clic_ que los señale en la construcción
+* Anotar el _Nombre_ de la herramienta’ y el del xref:/Comandos.adoc[comando] para esta que se está creando.
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: El _Nombre_ de la herramienta aparecerá en la
+correspondiente xref:/Barra_de_Herramientas.adoc[_barra_] y el del nuevo comando que se le ha asociado podrá emplearse
+en la xref:/Barra_de_Entrada.adoc[Entrada] como uno más de los “propios” de GeoGebra.
+
+====
+
+[NOTE]
+====
+
+*Notas:*
+
+* Además, se puede anotar el texto que orienta y se expone en la xref:/Barra_de_Herramientas.adoc[Ayuda de la Barra de
+Herramientas].
+* También puede elegirse una imagen para que represente el ícono de la herramienta.GeoGebra se ocupa de escalarla para
+que se ajuste al nuevo botón de la Barra.
++
+
+'''''
+* Las salidas de las herramientas no son trasladables aún que se hubieran definido como **`++Punto[ <Recorrido> ]++`**En
+caso de precisarse salidas trasladables, se puede recurrir al comando xref:/commands/Ejecuta.adoc[Ejecuta] sobre la
+lista de los que deben emplearse.
+
+====

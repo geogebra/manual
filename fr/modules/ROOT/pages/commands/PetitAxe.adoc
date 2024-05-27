@@ -1,0 +1,31 @@
+= Commande PetitAxe
+:page-en: commands/MinorAxis_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+PetitAxe( <Conique> )::
+  Axe secondaire de la conique _c_.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++PetitAxe(Ellipse((-1, -1), (1, 1), (1, 2)))++` crée la droite dont une équation est __y=
+-x__`++PetitAxe(x^2 / 9 + y^2 / 4 = 1)++` crée la droite dont une équation est _x=0_
+
+====
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/GrandAxe.adoc[GrandAxe] et
+xref:/commands/Axes.adoc[Axes].
+
+_____________________________________________________________
+
+/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] *Graphique 3D* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D
+
+enfin ... `++PetitAxe(Ellipse((-1, -1, -1), (1, 1, 1), (1, 2, 3))) ++` crée la droite définie par X = (0, 0, 0) + λ
+(-0.70711, 0, 0.70711)
+
+c'est bien d'écrire un vecteur unitaire, mais ce serait aussi "pretty" d'écrire par ex. X = (0, 0, 0) + λ (-1, 0, 1)

@@ -1,0 +1,51 @@
+= Comando FactorizaCI
+:page-en: commands/CIFactor_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+== Sintaxis CAS
+
+[.small]#Este xref:/Comandos.adoc[comando], que factoriza la expresión respecto de la variable principal o de la
+indicada, aborda soluciones xref:/Números_complejos.adoc[**ℂ**omplejas] irracionales y admite literales en operaciones
+simbólicas.#
+
+FactorizaCI( <Expresión> )::
+  Factoriza la expresión, admitiendo literales y factores xref:/Números_complejos.adoc[[.small]##*ℂ*##omplejos]
+  irracionales.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++FactorizaCI[x^2+x+1]++`* da por resultado:stem:[\{ \left( x + \frac\{-ί \sqrt\{3} + 1}\{2} \right)
+\left( x + \frac\{ί \sqrt\{3} + 1}\{2} \right) }]
+
+====
+
+FactorizaCI( <Expresión>, <Variable> )::
+  Factoriza la expresión según la variable indicada, admitiendo literales y factores
+  xref:/Números_complejos.adoc[[.small]##*ℂ*##omplejos] irracionales.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*  *`++FactorC[a^2 + x^2, a]++`* da _(ί x+a) (- ί x+a)_, la factorización de _a^2^ + x^2^_ con respecto a
+__a__**`++FactorC[a^2 + v^2, v]++`** da _(ί a + v) (- ί a + v)_, la factorización de _a^2^ + v^2^_ con respecto a
+__v__**`++FactorizaCI[a^2+a+1,a]++`** da:stem:[ \left( a + \frac\{-ί \sqrt\{3} + 1}\{2} \right) \left( a + \frac\{ί
+\sqrt\{3} + 1}\{2} \right)]
+
+====
+
+[NOTE]
+====
+
+*Notas:* El comando xref:/commands/FactorC.adoc[FactorC] opera con
+http://en.wikipedia.org/wiki/es:Entero_gaussiano[_enteros gaussianos_] de entre el conjunto
+xref:/Números_complejos.adoc[*ℂ*] de los http://en.wikipedia.org/wiki/es:N%C3%BAmero_complejo[_[.small]##*ℂ*##omplejos_]
+y xref:/commands/Factoriza.adoc[Factoriza], con *ℚ*, el de los
+http://en.wikipedia.org/wiki/es:N%C3%BAmero_racional[Números Racionales]Ver el comando
+xref:/commands/FactorizaI.adoc[FactorizaI]
+
+'''''
+
+[.small]#Contrastar con los comandos xref:/commands/Factoriza.adoc[Factoriza] y xref:/commands/Factores.adoc[Factores]#.
+
+====

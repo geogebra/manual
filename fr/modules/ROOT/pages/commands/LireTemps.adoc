@@ -1,0 +1,53 @@
+= Commande LireTemps
+:page-en: commands/GetTime_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+LireTemps()::
+  Retourne une liste telle que _\{663, 37, 43, 14, 1, 7, 2011, "Juillet", "Vendredi", 6}_, ie la date et l'heure
+  actuelle dans cet ordre :
+  millisecondes, secondes, minutes, heures (0-23), date, mois (1-12), année, mois (en texte), jour (en texte), numéro du
+  jour (1 = Dimanche, 2 = Lundi, etc)
+
+LireTemps(<Format>)::
+  où _Format_ est un Texte, dont les caractères, cités dans le tableau ci-dessous, vont être remplacés par leur valeur,
+  lorsqu'ils sont précédés d'un antislash [.kcode]#\#.
+
+[width="99%",cols="20%,16%,16%,16%,16%,16%",]
+|===
+|*D* |Abrégé en 3 lettres du nom du jour |*l* |Nom complet du jour | |
+
+|*d* |N° à 2 chiffres du jour dans le mois |*j* |N° à 1 ou 2 chiffres du jour dans le mois | |
+
+|*N* |N° du jour, de 1 pour Lundi à 7 |*w* |N° du jour, de 0 pour Dimanche à 6 | |
+
+|*z* |N° du jour de 0 à 365 |*W* |N° de la semaine dans l'année | |
+
+|*M* |Nom abrégé en 3 lettres du mois |*F* |Nom complet du mois | |
+
+|*m* |N° à 2 chiffres du mois |*n* |N° à 1 ou 2 chiffres du mois |*t* |Nombre de jours dans le mois (28 à 31)
+
+|*Y* |N° à 4 chiffres de l'année |*y* |N° à 2 chiffres de l'année |*L* |1 pour année bissextile, 0 sinon
+
+|*a* |am ou pm |*A* |AM ou PM | |
+
+|*G* |Heures de 0 à 23 |*H* |Heures de 00 à 23 | |
+
+|*g* |Heures de 1 à 12 |*h* |Heures de 01 à 12 | |
+
+|*i* |Minutes de 00 à 59 |*s* a|
+Secondes de 00 à 59
+
+Des informations complémentaires au sujet de ces caractères sont données sur cette
+http://php.net/manual/en/function.date.php[page].
+
+.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++LireTemps("La date est \l, \j \F \Y")++` vous écrit le texte _La date est Lundi, 19 Novembre 2012_
+
+====
+
+| |
+|===

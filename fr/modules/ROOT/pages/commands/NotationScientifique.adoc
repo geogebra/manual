@@ -1,0 +1,40 @@
+= Commande NotationScientifique
+:page-en: commands/ScientificText_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+NotationScientifique( <Nombre> )::
+  Retourne le texte où le nombre est écrit en http://en.wikipedia.org/wiki/fr_:_Notation_scientifique[notation
+  scientifique]
+
+[EXAMPLE]
+====
+
+*Exemple :* `++NotationScientifique(0.002)++` retourne _2 × 10^-3^._
+
+====
+
+NotationScientifique( <Nombre>, <Précision> )::
+  Retourne le texte où le nombre est écrit en notation scientifique, en prenant en compte nombre de chiffres
+  significatifs défini par *précision*
+
+[EXAMPLE]
+====
+
+*Exemple :* `++NotationScientifique(ℯ,5)++` retourne _2.7183 × 10^0^._
+
+====
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+* par saisie directe `++NotationScientifique(0.002)++` affiche dans le CAS 2 × 10^-3^ mais la pastille d'affichage est
+inopérante, il vous faut glisser/déposer du CAS dans Graphique pour créer le texte associé ;
+* par affectation `++texte:=NotationScientifique(0.002)++` affiche dans le CAS texte := 2 × 10^-3^ qui est considéré
+comme un nombre, voir l'affichage dans Algèbre.
+
+[NOTE]
+====
+
+*Note :* La base ℯ de l'exponentielle eulérienne peut être obtenue en pressant [.kcode]#ALT # + [.kcode]# e#.
+
+====

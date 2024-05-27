@@ -1,0 +1,32 @@
+= Comando AjustePolinómico
+:page-en: commands/FitPoly_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+AjustePolinómico( <Lista de Puntos>, <Grado del Polinomio>)::
+  Establece la regresión polinómica del grado _n_ indicado.
+
+AjustePolinómico( <Función a mano alzada>, <Grado del Polinomio>)::
+  Calcula la regresión polinómica de grado _n_ de la curva dibujada con la Herramienta Figura a mano alzada.
+
+== CAS Syntax
+
+AjustePolinómico( <Lista de Puntos>, <Grado del Polinomio> )::
+  Calcula la regresión polinómica de grado _n_.
+
+[EXAMPLE]
+====
+
+`++AjustePolinómico({(-1, -1), (0, 1), (1, 1), (2, 5)}, 3)++` da por resultado _x^3^ - x^2^ + 1_.
+
+====
+
+[NOTE]
+====
+
+* Para grado _n_ debe haber al menos _n + 1_ puntos en la lista.
+* Ver también xref:/commands/AjusteExp.adoc[AjusteExp], xref:/commands/AjusteLog.adoc[AjusteLog],
+xref:/commands/AjustePotencia.adoc[AjustePotencia] y xref:/commands/AjusteSeno.adoc[AjusteSeno].
+* Si trabajas con números grandes o pequeños, deberías considerar normalizarlos para obtener un resultado más preciso.
+Ver xref:/commands/Normaliza.adoc[Comando Normaliza].
+
+====

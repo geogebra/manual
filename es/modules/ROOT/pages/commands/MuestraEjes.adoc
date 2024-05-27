@@ -1,0 +1,51 @@
+= Comando MuestraEjes
+:page-en: commands/ShowAxes_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+MuestraEjes( )::
+  Muestra los ejes en la vista activa.
+MuestraEjes( <True/False> )::
+  Muestra/oculta los ejes de la vista activa.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++MuestraEjes(true)++` muestra los ejes de la vista activa.
+* `++MuestraEjes(false)++` oculta los ejes de la vista activa.
+
+====
+
+MuestraEjes( <Vista 1|2|3>, <True/False> )::
+  Muestra/oculta los ejes de la xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view
+  graphics.svg,width=16,height=16]] xref:/Vista_Gráfica.adoc[Vista Gráfica] especificada por el número 1 o 2 (o 3 para
+  la .
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++MuestraEjes(1, true)++` muestra los ejes de la primera
+xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+xref:/Vista_Gráfica.adoc[Vista Gráfica]
+* `++MuestraEjes(2, false)++` oculta los ejes en la segunda
+xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+xref:/Vista_Gráfica.adoc[Vista Gráfica].
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/MuestraCuadrícula.adoc[MuestraCuadrícula].
+
+====
+
+[NOTE]
+====
+
+Para mostrar/ocultar un solo eje, usa el xref:/commands/Visibilidad.adoc[Comando Visibilidad]
+
+====

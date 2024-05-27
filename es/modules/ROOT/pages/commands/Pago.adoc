@@ -1,0 +1,46 @@
+= Comando Pago
+:page-en: commands/Payment_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Pago( <Tasa>, <Número de períodos>, <Valor actual>, <Valor futuro (opcional)>, <Tipo (opcional)> )::
+  Calcula el pago fijo periódico de una inversión o préstamo otorgado a una tasa de interés constante.
+
+* *<Tasa>* Tasa de interés por período.
+* *<Número de períodos>* Número total de cuotas por el préstamo.
+* *<Valor actual>* Monto correspondiente al valor actual de una serie de futuros pagos.
+* *<Valor futuro (opcional)>* Balance de caja previsto tras el último pago. De no ingresarse un valor futuro, se lo
+supone por omisión 0.
+* *<Tipo (opcional)>* Indica cuándo se deben efectuar los pagos. Si no se ingresa un valor o se anota un 0, se realiza
+al final de cada período; si se ingresa un 1 será al inicio.
+
+[EXAMPLE]
+====
+
+`++Pago(6%/12, 10, 10000, 0,1)++` devuelve un pago mensual para un préstamo de -1022.59.
+
+[NOTE]
+====
+
+Es preciso controlar la consistencia entre las unidades empleadas para la `++<Tasa>++` y el `++<Número de períodos>++`.
+Si deseas realizar pagos mensuales sobre un préstamo de cuatro años a un interés anual del 6 por ciento, se empleará
+6%/12 para la tasa y 4*12 para el número de pagos.
+
+====
+
+====
+
+[NOTE]
+====
+
+Para todos los argumentos, los pagos realizados quedan representados por un número negativo, y los pagos recibidos como
+números positivos.
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/Tasa.adoc[Tasa], xref:/commands/Períodos.adoc[Períodos],
+xref:/commands/ValorActual.adoc[ValorActual] y xref:/commands/ValorFuturo.adoc[ValorFuturo].
+
+====

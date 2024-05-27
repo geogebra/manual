@@ -1,0 +1,32 @@
+= Comando Cuartil1
+:page-en: commands/Quartile1_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Cuartil1( <Lista de datos brutos> )::
+  Determina el menor cuartil de los elementos de la lista.
+Cuartil1( <Lista de números>, <Lista de frecuencias> )::
+  Determina el menor cuartil de los elementos de la lista considerando sus respectivas frecuencias.
+
+[EXAMPLE]
+====
+
+`++ Cuartil1({1, 2, 3, 4})++` devuelve _1.5_.
+
+====
+
+Determines the lower quartile of the list elements considering the frequencies.
+
+[EXAMPLE]
+====
+
+`++ Cuartil1({1, 2, 3, 4}, {3, 2, 4, 2))++` devuelve _1_.
+
+====
+
+[NOTE]
+====
+
+GeoGebra utiliza el método *Moore & McCabe (2002)* para calcular cuartiles, ver
+http://mathworld.wolfram.com/Quartile.html
+
+====

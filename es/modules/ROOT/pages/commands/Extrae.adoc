@@ -1,0 +1,48 @@
+= Comando Extrae
+:page-en: commands/Take_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Extrae( <Lista>, <Posición inicial> )::
+  Crea la lista de los elementos desde de la _posición inicial_ hasta el final de la lista dada.
+Extrae( <Texto>, <Posición inicial> )::
+  Devuelve un texto que contiene los caracteres desde la _posición inicial_ hasta el final del texto dado.
+Extrae( <Lista>, <Posición inicial>, <Posición final> )::
+  Crea la lista de los elementos desde de la _posición inicial_ hasta la _posición final_ de la lista dada.
+Extrae( <Texto>, <Posición inicial>, <Posición final> )::
+  Devuelve un texto que contiene los caracteres desde la _posición inicial_ hasta la _posición final_ del texto dado.
+
+[EXAMPLE]
+====
+
+`++ Extrae("GeoGebra", 3, 6)++` devuelve el texto _oGeb_.
+
+====
+
+[EXAMPLE]
+====
+
+`++ Extrae({2, 4, 3, 7, 4}, 3, 4)++` devuelve _\{3, 7}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++ Extrae("GeoGebra", 3)++` devuelve el texto _oGebra_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Extrae({2, 4, 3, 7, 4}, 3)++` devuelve _\{3, 7, 4}_.
+
+====
+
+[NOTE]
+====
+
+En la xref:/Vista_CAS.adoc[image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]]
+xref:/Vista_CAS.adoc[Vista CAS] funciona únicamente para listas.
+
+====

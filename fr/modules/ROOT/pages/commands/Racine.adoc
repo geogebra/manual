@@ -1,0 +1,93 @@
+= Commande Racine
+:page-en: commands/Root_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Racine( <Polynôme f> )::
+  *Toutes* les racines du polynôme _f_ (en tant que points). (_même si Racine est au singulier_)
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Racine(x^3 - 3 * x^2 - 4 * x + 12)++` crée les trois points (-2,0),(2,0) et (3,0).
+
+====
+
+Racine( <Fonction f >, <x initial> )::
+  *Une* racine de _f_ à partir de _x initial_ par une méthode itérative.
+
+Racine( <Fonction f>, <x min>, <x max>)::
+  *Une* racine de _f_ sur [_min ; max_] par une méthode itérative.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+Soit f(x)=stem:[\frac\{sin(x)}\{x} ]
+
+Racine(f) provoque un message d'erreur *Argument illégal*
+
+ 
+
+*Mais* Racine(f,2) donne A=(π,0) (la première racine rencontrée à partir de 2)
+
+Racine(f,2,5) fera de même
+
+Racine(f,4,7) donne C=(6.28,0) (la première racine rencontrée à partir de 4)
+
+Racine(f,2,7) donne D=__non défini__ (parce qu'il y a 2 solutions sur cet intervalle).
+
+====
+
+/Fichier:Tool_tool_png.adoc[image:Tool_tool.png[Tool tool.png,width=32,height=32]] Voir l' *outil* associé :
+/Fichier:Mode_roots_svg.adoc[image:32px-Mode_roots.svg.png[Mode roots.svg,width=32,height=32]]
+xref:/tools/Racines.adoc[Racines].
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Racine( <Polynôme f> )::
+  Toutes les racines du polynôme _f_
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Racine(x^3 - 3 * x^2 - 4 * x + 12)++` donne la liste des trois racines _\{x = 3, x = 2, x = -2}_.
+
+====
+
+Racine(fonction) n'est pas proposée, mais si on reprend l'exemple précédent, on a :
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+Soit f(x)=stem:[\frac\{sin(x)}\{x} ]
+
+Racine(f) donne la liste stem:[\{x = k_1 π}]
+
+Racine(f,2) donne (π,0) (la première racine rencontrée à partir de 2)
+
+Racine(f,2,5) fera de même
+
+Racine(f,4,7) donne B=(6.28,0) (la première racine rencontrée à partir de 4)
+
+Racine(f,2,7) par contre, de nouveau, donne (?,?) (parce qu'il y a 2 solutions sur cet intervalle).
+
+====
+
+[NOTE]
+====
+
+*Note :* Cette commande n'est qu'une variante spéciale de la commande xref:/commands/Résoudre.adoc[Résoudre].
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/Racines.adoc[Racines].

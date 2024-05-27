@@ -1,0 +1,65 @@
+= Comando TextoIrracional
+:page-en: commands/SurdText_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+TextoIrracional( <Número> )::
+  Crea un texto que es representación del número dado de la forma stem:[\frac\{a+b\sqrt\{c}}\{d}].
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++ TextoIrracional(2.414213562373095)++` devuelve _stem:[1 + \sqrt\{2}]_
+* `++ TextoIrracional(2.439230484541326)++` devuelve _stem:[\frac\{7+3 \sqrt\{3} }\{5}]_
+
+====
+
+TextoIrracional( < Número >, <Lista> )::
+  Crea un texto que es representación del número dado en función de las constantes de la lista. Si la lista está vacía,
+  utiliza las constantes más usuales.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++ TextoIrracional(3.718281828459045, {exp(1)})++` devuelve _stem:[e + 1]_
+* `++ TextoIrracional(5.382332347441762, {sqrt(2), sqrt(3), sqrt(5)})++` devuelve _stem:[ \sqrt\{5} + \sqrt\{3} +
+\sqrt\{2}]_
+* `++ TextoIrracional(1.693147180559945, {ln(2)})++` devuelve _stem:[ \ln(2) + 1]_
+
+====
+
+TextoIrracional( <Punto> )::
+  Crea un texto que es representación del punto dado, con coordenadas de la forma stem:[\frac\{a+b\sqrt\{c}}\{d}].
+
+[EXAMPLE]
+====
+
+`++SurdText((2.414213562373095, 1.414213562373095))++` devuelve _(stem:[1 + \sqrt\{2}, \sqrt\{2})]_
+
+====
+
+[NOTE]
+====
+
+*Notas:*
+
+* Para usar este comando en un objeto de Texto, *_Fórmula LaTeX_* debe estar activado en la pestaña _Texto_ del cuadro
+de image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Cuadro_de_Propiedades.adoc[Propiedades]
+del texto.
+* Dado que el comando funciona a partir de un número decimal redondeado, es posible que el resultado no sea el esperado.
+* Si no se encuentra una respuesta plausible, se devuelve el mismo número.
+
+[EXAMPLE]
+====
+
+`++ TextoIrracional(1.23456789012345)++` devuelve _1.23456789012345_.
+
+====
+
+* Ver también los comandos xref:/commands/TextoFracción.adoc[TextoFracción] y
+xref:/commands/NotaciónCientífica.adoc[NotaciónCientífica].
+
+====

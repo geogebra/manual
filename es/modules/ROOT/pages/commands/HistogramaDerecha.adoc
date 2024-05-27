@@ -1,0 +1,42 @@
+= Comando HistogramaDerecha
+:page-en: commands/HistogramRight_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+HistogramaDerecha( <Lista de límites de clases>, <Lista de alturas> )::
+  Opera de igual modo que el comando xref:/commands/Histograma.adoc[Histograma] siendo la única diferencia que las
+  clases se cierran a derecha.
+
+HistogramaDerecha( <Lista de límites de clases>, <Lista de datos brutos>, <Usar densidad o no~true/false~> , <Factor de
+escala de densidad> (opcional) )::
+  Opera de igual modo que el comando xref:/commands/Histograma.adoc[Histograma] con la diferencia ya mencionada. Debe
+  tenerse en cuenta la siguiente excepción: si un dato resulta igual al límite derecho de una clase, se cuenta en esta
+  clase y no en la siguiente.
+
+HistogramaDerecha( <Lista de límites de clases>, <Lista de datos brutos>, <Usar densidad o no~true/false~> , <Factor de
+escala de densidad> (opcional) )::
+  Opera de igual modo que el comando xref:/commands/Histograma.adoc[Histograma] con la diferencia ya mencionada. Debe
+  tenerse en cuenta la siguiente excepción: si un dato resulta igual al límite derecho de una clase, se cuenta en esta
+  clase y no en la siguiente.
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Por convención se emplea la regla *_a < x ≤ b_* para
+cada clase excepto para la primera para la cual se estipula *_a ≤ x ≤ b_*
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/Histograma.adoc[Histograma].
+
+====

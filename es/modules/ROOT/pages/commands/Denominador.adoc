@@ -1,0 +1,44 @@
+= Comando Denominador
+:page-en: commands/Denominator_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+Denominador( <Función> )::
+  Da por resultado el denominador de una función racional.
+Denominador( <Número> )::
+  Devuelve el denominador canónico de un número racional. Como se calcula con un método numérico, esta función está
+  limitada a números con denominadores pequeños. Si se aplica a un número irracional, devuelve el denominador de su
+  xref:/commands/FracciónContinua.adoc[fracción continua]
+
+[EXAMPLE]
+====
+
+*`++Denominador[5 / (x²+2) ]++`* crea la función _f(x)=(x²+2)_.
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/Numerador.adoc[Numerador] y xref:/commands/TextoFracción.adoc[TextoFracción].
+
+====
+
+== Sintaxis CAS
+
+Denominador( <Expresión> )::
+  Devuelve el denominador canónico de un número racional o de una expresión racional.
+
+[EXAMPLE]
+====
+
+`++Denominador[2 / 3 + 1 / 15]++` da por resultado _15_.
+
+====

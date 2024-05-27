@@ -1,0 +1,27 @@
+= Commande VecteurCourbure
+:page-en: commands/CurvatureVector_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+VecteurCourbure( <Point>, <Objet> )::
+  Vecteur de courbure de l'objet (fonction, courbe ou conique) au point donné.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* `++VecteurCourbure((0, 0), x^2)++` crée le vecteur _(0, 2)_ ;
+* `++VecteurCourbure((0, 0), Courbe(cos(t), sin(2t), t, 0, π))++` crée le vecteur _(0, 0)_ ;
+* `++VecteurCourbure((-1, 0), Conique({1, 1, 1, 2, 2, 3}))++` crée le vecteur _(0, -2)_
+
+.
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel , mais sans la possibilité d'effectuer du calcul
+littéral.

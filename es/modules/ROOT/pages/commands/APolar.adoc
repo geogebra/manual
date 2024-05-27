@@ -1,0 +1,112 @@
+= Comando APolar
+:page-en: commands/ToPolar_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+APolar( <Vector> )::
+  Establece y xref:/Vista_Gráfica.adoc[grafica] el par. correspondiente al vector dado, en coordenadas polares:
+  _(módulo^[.small]#norma#^; ángulo polar^[.small]#argumento#^)_
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: También opera con los datos de un punto.
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++APolar[{1, sqrt(3)}]++`* crea y xref:/Vista_Gráfica.adoc[grafica] el punto con las coordenadas polares
+_(2; 60°)_ de __(1, stem:[\sqrt\{3}])__~[.small]#Resulta _(2; 1.0472 rad)_ si la unidad angular es el
+radián#~*`++APolar[{3, 2}]++`* establece y xref:/Vista_Gráfica.adoc[grafica] el punto con las coordenadas polares
+_(3.61; 33.7°)_ o _(3.6; 0.59 rad)_ ^[.small]#si la *Unidad angular* se hubiera ajustado a
+_radianes_#^**`++APolar[u]++`**, siendo *_u_* = stem:[ \left( \begin\{tabular}\{}1 \\ 1 \\ \end\{tabular} \right) ],
+crea el *vector* __(1.41 ; 45°)__En cambio, *`++APolar[{1, 1}]++`* crea el *punto* _(1.41; 45°)_
+
+====
+
+APolar( <Número Complejo> )::
+  Da por resultado el par _(módulo; argumento)_, notación trigonométrica del complejo dado.
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: También opera con los datos de un punto.
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++APolar[1 + sqrt(3) * ί]++`* crea y xref:/Vista_Gráfica.adoc[grafica] el punto de coordenadas _(2; 60°)_
+ó _(2 ; 1.05 rad)_ ^[.small]#para _radián_ como unidad angular#^Siendo A = (3,-4), *`++APolar[A]++`* establece y
+xref:/Vista_Gráfica.adoc[grafica] el punto de coordenadas polares _(5; 306.87°)_
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+En esta xref:/Vista_CAS.adoc[vista], el comando obra de modo análogo y se admiten literales en operaciones simbólicas.
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_notice.png[image,width=40,height=40]
+
+|Los ángulos se expresan en radianes o en términos de _arcotangente_.
+|===
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++APolar[1 + sqrt(3) * ί]++`* -acorde a la formulación
+http://en.wikipedia.org/wiki/es:N%C3%BAmero_complejo#Valor_absoluto_o_m.C3.B3dulo_de_un_n.C3.BAmero_complejo[del
+complejo]-, da por resultado _(2; stem:[\frac\{\pi}\{3}])_, las coordenadas polares de __(1, stem:[\sqrt\{3}]) *
+ί__**`++APolar[{1, sqrt(4)}]++`**, da stem:[(\sqrt\{5}; arctan(2))]**`++APolar[A]++`** da por resultado (stem:[5 ;
+-atan(\frac\{4}\{3})]) si A=(3,-4)*`++APolar[u]++`* da el punto _(1.41 ; 0.79)_ (stem:[\sqrt\{2} ; \frac\{\pi}\{4}]) si
+u = stem:[ \left( \begin\{tabular}\{}1 \\ 1 \\ \end\{tabular} \right) ].A su vez, *`++APolar[{1,1}]++`* da por resultado
+el punto (stem:[\sqrt\{2} ; \frac\{\pi}\{4}]).
+
+====
+
+'''''
+
+[.small]##
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Si bien en esta xref:/Vista_CAS.adoc[vista] se admiten literales, lo resultante no será _graficable_ hasta a que se les
+asigne un valor vía, por ejemplo, una adecuada /Archivo:Mode_substitute_png.adoc[image:20px-Mode_substitute.png[Mode
+substitute.png,width=20,height=20]] xref:/tools/Sustituye.adoc[sustitución].
+|===
+
+[.small]##
+
+[.small]##
+
+[EXAMPLE]
+====
+
+*`++APolar[(4ñ, 3 ñ)]++`* da por resultado (5 | ñ |; 0.64)
+
+====
+
+[NOTE]
+====
+
+El símbolo de los complejos, *ί*, se obtiene pulsando [.kcode]#Alt# + [.kcode]#i#.Ver también los comandos
+xref:/commands/AComplejo.adoc[AComplejo], xref:/commands/AExponencial.adoc[AExponencial] y
+xref:/commands/APunto.adoc[APunto].
+
+====

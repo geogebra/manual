@@ -1,0 +1,50 @@
+= Capas
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+En GeoGebra, se usan capas para determinar cuál de los objetos se selecciona o arrastra cuando un _clic_ involucra a
+varios simultáneamente.
+
+====
+
+Por omisión, los objetos se colocan en la capa 0, que es básicamente la del ‘fondo’ de la xref:/Vista_Gráfica.adoc[Vista
+Gráfica]. Hay en total 10 capas disponibles, numeradas del 0 al 9. Las de mayor numeración se superponen a las de valor
+más bajo. [.small]##
+
+[.small]##
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Cuando un objeto esté superpuesto o aledaño a otro, al aproximar el puntero del ratón o _mouse_ para desplazarlo,
+cambiar sus propiedades o para conocerlas, resultará afectado el ubicado en la capa de mayor valor.Si compartieran la
+misma _capa_, se presentará la necesidad de efectuar alguna maniobra para decidir cuál escoger.
+|===
+
+[.small]##
+
+[.small]##
+
+Usando la pestaña [.kcode]#*Avanzado*# del xref:/Cuadro_de_Propiedades.adoc[Cuadro de Propiedades], se puede cambiar la
+capa de cierto objeto (capas disponibles de la 0 a la 9). Una vez modificado el número de capa para al menos un objeto
+(con un valor diferente de 0 que es el del fondo), todos los nuevos objetos quedarán en la capa de valor más alto (por
+ejemplo, capa 3), ocupada por algún objeto.
+
+[NOTE]
+====
+
+Después de seleccionar cualquier objeto, se puede elegir todos los demás en la misma capa con el ítem _Selecciona la
+Capa Activa_ (xref:/Teclas_de_Atajos.adoc[teclas de atajo]: [.kcode]#Ctrl# + [.kcode]#L#) del menú
+xref:/Menú_Edita.adoc[Edita].Este ítem solo está disponible si todos los xref:/Objetos.adoc[objetos] seleccionados son
+de la misma capa .
+
+====
+
+== Algo más sobre el Uso de Capas
+
+* Para exportar objetos en formato *SVG*, se los agrupa por capa.
+* Las capas pueden controlarse usando la interfaz JavaScript para xref:/Cuadro_de_Exportación.adoc[applets de GeoGebra].

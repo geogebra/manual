@@ -1,0 +1,25 @@
+= Comando IntegralSimbólica
+:page-en: commands/IntegralSymbolic_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+IntegralSimbólica(<Función>)::
+  Devuelve la integral indefinida simbólica con respecto a la variable principal. La constante de integración c no es
+  creada automáticamente como un deslizador.
+
+[EXAMPLE]
+====
+
+`++ IntegralSimbólica(3x^2)++` devuelve stem:[x^3+c_\{1}].
+
+====
+
+IntegralSimbólica(<Función>, <Variable>)::
+  Devuelve la integral indefinida parcial con respecto a la variable dada. La constante de integración c no es creada
+  automáticamente como un deslizador.
+
+[EXAMPLE]
+====
+
+`++ IntegralSimbólica(x³+3x y, x)++` devuelve _stem:[ \frac\{1}\{4}x^4] + stem:[\frac\{3}\{2} x² y+c_\{1} ]_ .
+
+====

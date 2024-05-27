@@ -1,0 +1,33 @@
+= Příkaz Substituce
+:page-en: commands/Substitute_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Tento příkaz je dostupný pouze v xref:/CAS_pohled.adoc[CAS pohledu]..
+
+Substituce( <Výraz>, <Staré>, <Nové> )::
+  Ve _výrazu_ dosadí _nové_ místo _starého_ .
+Substituce( <Výraz>, <Seznam> )::
+  Ve _výrazu_ nahradí každou proměnnou ze seznamu zadanou proměnnou nebo číslem.
+
+[EXAMPLE]
+====
+
+Výsledkem příkazu `++Substituce[2x + 3y - z, {x=a, y=2, z=b}]++` je _2a - b + 6_.
+
+====
+
+[EXAMPLE]
+====
+
+Výsledkem příkazu
+
+`++Substitute[(3 m - 3)^2 - (m + 3)^2, m, a]++` je _8 a^2^ - 24 a_.
+
+====
+
+[NOTE]
+====
+
+Anglická verze: /s_index_php?title=En:Manual:Substitute_Command_action=edit_redlink=1.adoc[Substitute Command]
+
+====

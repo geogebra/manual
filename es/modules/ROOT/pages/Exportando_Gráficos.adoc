@@ -1,0 +1,249 @@
+= Exportando Gráficos
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+== /Archivo:Image_x_generic_png.adoc[image:Image-x-generic.png[Image-x-generic.png,width=32,height=32]] Gráfico como imagen (png, eps)...
+
+'''''
+
+[.small]#*Teclas de Atajo*: [.kcode]#Ctrl# + [.kcode]#Shift# + [.kcode]#P# (Mac OS: [.kcode]#Cmd# + [.kcode]#Shift# +
+[.kcode]#P#)#
+
+'''''
+
+Sucesivas alternativas del xref:/Menú_Archivo.adoc[_Exporta_] del xref:/Menú_Archivo.adoc[Menú Archivo] permiten
+almacenar el contenido de la xref:/Vista_Gráfica.adoc[Vista Gráfica] en uno de formato adecuado y/o en el
+_portapapeles_:
+
+* /Archivo:Image_x_generic_png.adoc[image:Image-x-generic.png[Image-x-generic.png,width=16,height=16]]
+xref:/Vista_Gráfica.adoc[Gráficos] como...
+** *_...Imagen (png, eps)..._*
+** *_... GIF animado_*
+** *_... PSTricks_*
+** *_... PGF/TikZ_*
+** **... Asymptote**____
+* /Archivo:Menu_Copy_png.adoc[image:Menu_Copy.png[Menu Copy.png,width=16,height=16]] xref:/Vista_Gráfica.adoc[Gráficos]
+al Portapapeles
+
+== xref:/Vista_Gráfica.adoc[Gráficos] como ... 
+
+=== xref:/Vista_Gráfica.adoc[Gráficos] como xref:/Imágenes.adoc[Imagen] (png, eps)...
+
+En el cuadro emergente, se puede seleccionar el *_Formato_* del archivo y cambiar la *_Escala_* (en cm) y la
+*_Resolución_* (en dpi) de la imagen que, además, puede establecerse o no como _Transparente_.
+
+[.small]##
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Con un par de puntos denominados `++Export_1++` y `++Export_2++`, se encuadra lo que se exportará que, por omisión, es
+directamente la xref:/Vista_Gráfica.adoc[zona Gráfica] visible.
+|===
+
+Cuando se exporta la xref:/Vista_Gráfica.adoc[Vista Gráfica] como imagen, se puede seleccionar cualquiera de los
+siguientes formatos:
+
+* http://en.wikipedia.org/wiki/es:Portable_Network_Graphics[PNG]
+* http://en.wikipedia.org/wiki/es:PDF[PDF]
+* http://en.wikipedia.org/wiki/es:PostScript_encapsulado[EPS]
+* http://en.wikipedia.org/wiki/es:Scalable_Vector_Graphics[SVG]
+* http://en.wikipedia.org/wiki/es:Metaarchivo_de_Windows[EMF]
+=== Formato http://en.wikipedia.org/wiki/es:Portable_Network_Graphics[PNG]
+
+([
+
+w:es:Portable_Network_Graphics|PNG)] – http://en.wikipedia.org/wiki/Portable_Network_Graphics[Portable Network
+Graphics]:Este es un formato gráfico _pixelado_.Cuanto mayor la resolución (dpi), mayor la calidad (300dpi suele
+bastar).
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Los gráficos PNG no debieran ser escalados
+subsecuentemente para evitar merma en la calidad
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idea:*
+
+De crearse dos puntos cuyos nombres deben ser, necesariamente, *_Export_1_* y *_Export_2_*, puede definirse el
+rectángulo de exportación.En caso contrario, se exporta toda el área visible de la xref:/Vista_Gráfica.adoc[Vista
+Gráfica].
+
+====
+
+Los archivos gráficos PNG son adecuados para las páginas web (html) y los documentos de los procesadores de texto.
+
+=== Formato ;([:w:es:PostScript_encapsulado|EPS)]
+
+([
+
+w:es:PostScript_encapsulado|EPS)] – http://en.wikipedia.org/wiki/Encapsulated_PostScript[Encapsulated Postscript]:Este
+es un formato gráfico vectorial. Las imágenes EPS pueden escalarse sin perder calidad y son adecuadas para emplearse en
+relación con programas gráficos vectoriales (como Corel Draw) y procesadores de textos profesionales (como
+xref:/LaTeX.adoc[LaTeX]).
+
+La resolución de un gráfico EPS es siempre de 72dpi. Este valor se usa solo para calcular la medida verdadera de una
+imagen en centímetros y no tiene efecto sobre la calidad de la imagen.
+
+=== Formato http://en.wikipedia.org/wiki/es:PDF[PDF]
+
+([
+
+w:es:PDF|PDF)] – http://en.wikipedia.org/wiki/Portable_Document_Format[Portable Document Format]:Este formato presenta
+coincidencias con el EPS.
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Ver Formato EPS en sección previa.
+
+====
+
+[NOTE]
+====
+
+El efecto de transparencia en el sombreado de polígonos o secciones cónicas, no es posible con EPS .
+
+====
+
+[NOTE]
+====
+
+Cuando en un documento se xref:/tools/Imagen.adoc[inserta una imagen] desde un archivo gráfico PNG, hay que verificar
+que la medida esté fijada al 100 %. De otro modo, la escala dada (en cm) cambiaría.
+
+====
+
+=== Formato http://en.wikipedia.org/wiki/es:Scalable_Vector_Graphics[SVG]
+
+([
+
+w:es:Scalable_Vector_Graphics|SVG)] – http://en.wikipedia.org/wiki/Scalable_Vector_Graphics[Scaleable Vector
+Graphic]:Gráfico de Vector Escalable.
+
+=== Formato http://en.wikipedia.org/wiki/es:Metaarchivo_de_Windows[EMF]
+
+([
+
+w:es:Metaarchivo_de_Windows|EMF)] – http://en.wikipedia.org/wiki/Windows_Metafile[Enhanced Meta Format]:Formato Meta
+Enriquecido
+
+'''''
+
+[NOTE]
+====
+
+Ver la sección previa Formato EPS.
+
+====
+
+[NOTE]
+====
+
+Ver en la sección previa, Formato EPS.
+
+====
+
+[NOTE]
+====
+
+Al exportar en SVG y PDF, se puede optar por tratar el texto como editable o como imagen.Esto almacena el texto de modo
+de poder editarlo (como en InkScape) o como /s_index_php?title=Es:w:Curva_de_Bézier_action=edit_redlink=1.adoc[curvas de
+Bezier]. Esto garantiza que el aspecto del texto resulte exactamente el mismo que el previsto, aún cuando no se cuente
+en el equipo de destino con las fuentes originales instaladas.
+
+====
+
+== xref:/Vista_Gráfica.adoc[Gráficos] como... GIF Animado
+
+Cuando la construcción dinámica depende de un /Archivo:Mode_slider_png.adoc[image:Mode_slider.png[Mode
+slider.png,width=32,height=32]] xref:/tools/Deslizador.adoc[deslizador], esta opción permite guardar la
+xref:/Vista_Gráfica.adoc[Vista Gráfica] como un archivo
+http://en.wikipedia.org/wiki/Animated_GIF#Animated_GIF[_animado_] de formato
+http://en.wikipedia.org/wiki/es:Graphics_Interchange_Format[GIF]. Basta con encuadrar la zona de la construcción a
+exportar enmarcándola con el selector del _mouse_ o ratón y luego indicar:xref:/Menú_Archivo.adoc[Archivo] ->
+xref:/Menú_Archivo.adoc[Exporta] ->
+/Archivo:Image_x_generic_png.adoc[image:Image-x-generic.png[Image-x-generic.png,width=16,height=16]] *Vista Gráfica como
+Imagen (png, eps)…* -> Vista Gráfica como GIF Animado
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Si no fuera posible encuadrar lo que se quiere
+exportar por excederse el ámbito de lo que se precisa, puede re-escalarse la ventana de GeoGebra.
+
+====
+
+'''''
+
+[NOTE]
+====
+
+Otra posibilidad es cambiar el tamaño de la ventana de la xref:/Vista_Gráfica.adoc[Vista Gráfica].
+
+====
+
+[.small]##
+
+/Archivo:Exportando_GIF_PNG.adoc[image:Exportando_GIF.PNG[Exportando GIF.PNG,width=396,height=167]]
+
+'''''
+
+== xref:/Vista_Gráfica.adoc[Gráficos] como GIF…[.small]##
+
+En el cuadro de diálogo que se despliega, se puede indicar:-El nombre del deslizafor que acompasará la animación;-Un par
+de *Opciones* adicionales permiten determinar...--__Tiempo entre cuadros (en ms)__^milisegundos^--_¿Cómo bucle?_ lo que
+indica si el deslizador ciclará en un bucle cerrado de animación.
+
+== xref:/Vista_Gráfica.adoc[Gráficos] al Portapapeles
+
+== /Archivo:Menu_Copy_png.adoc[image:Menu_Copy.png[Menu Copy.png,width=32,height=32]] [.small]#Exporta - Vista Gráfica al Portapapeles#
+
+Atajo de teclado: [.kcode]#Ctrl# + [.kcode]#Shift# + [.kcode]#C# (MacOS: [.kcode]#Cmd# + [.kcode]#Shift# + [.kcode]#C#)
+
+=== xref:/Vista_Gráfica.adoc[Gráficos] como PSTricks
+
+== [.small]#Exporta - Vista Gráfica como PSTricks…#
+
+Atajo de teclado: [.kcode]#Ctrl# + [.kcode]#Shift# + [.kcode]#T# (MacOS: [.kcode]#Cmd# + [.kcode]#Shift# + [.kcode]#T#)
+
+Este ítem del menú genera el código http://tug.org/PSTricks/main.cgi/[PSTricks] que permite intercalar la imagen de la
+xref:/Vista_Gráfica.adoc[Vista Gráfica] en un archivo de formato xref:/LaTeX.adoc[LaTeX].
+
+=== xref:/Vista_Gráfica.adoc[Gráficos] como PGF/TiKZ
+
+== [.small]#Exporta - Vista Gráfica como PGF/TiKZ…#
+
+Esta opción genera el código http://sourceforge.net/projects/pgf/[PGF] que permite guardar la
+xref:/Vista_Gráfica.adoc[Vista Gráfica] intercalar la imagen de la xref:/Vista_Gráfica.adoc[Vista Gráfica] en un archivo
+de formato xref:/LaTeX.adoc[LaTeX].
+
+=== xref:/Vista_Gráfica.adoc[Gráficos] como Asymptote
+
+Este ítem del menú genera el código http://asymptote.sourceforge.net/[Asymptote] ue permite guardar la
+xref:/Vista_Gráfica.adoc[Vista Gráfica].
+
+=== xref:/Vista_Gráfica.adoc[Gráficos] como LaTeX (PGF, PSTricks)
+
+Este ítem genera el código y permite intercalar la imagen de la xref:/Vista_Gráfica.adoc[Vista Gráfica] en un archivo de
+formato xref:/LaTeX.adoc[LaTeX].
+
+'''''
+
+[NOTE]
+====
+
+Ver también la sección xref:/Exporta_a_LaTeX_(PGF_PSTricks)_y_Asymptote.adoc[Exporta a LaTeX (PGF, PSTricks) y
+Asymptote].
+
+====
+
+[.small]##
+
+'''''

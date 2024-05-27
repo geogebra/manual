@@ -1,0 +1,35 @@
+= Comando NombreColumna
+:page-en: commands/ColumnName_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+NombreColumna( <Celda de la Hoja de Cálculo> )::
+  Da por resultado, como texto, el nombre de la columna de la celda indicada.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++NombreColumna[A1]++`* crea el texto _A_.
+
+'''''
+
+*`++Ejecuta[{"ColumnName[" + Element[ lc , n] + "]"  } ]++`* da la letra de la columna acorde al valor de *`++n++`*
+siendo *`++lc = Secuencia[LetraDeCódigo[65 + l] + (l + 1), l, 0, 5]++`* cuyo contenido
+resulta:**`++{"A1", "B2", "C3", "D4", "E5", "F6"}++`**Por eso, da el texto _A_, _B_, _C_, _D_... según _n_ sea 0, 1, 2,
+3...
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Como xref:/commands/Ejecuta.adoc[*Ejecuta*] requiere
+los nombres de los xref:/Comandos.adoc[comandos] en inglés, _NombreColumna_ se anota como _ColumnName_
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/Columna.adoc[Columna].
+
+====

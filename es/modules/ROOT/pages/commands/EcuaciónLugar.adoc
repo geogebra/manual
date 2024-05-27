@@ -1,0 +1,53 @@
+= Comando EcuaciónLugar
+:page-en: commands/LocusEquation_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+EcuaciónLugar( <Lugar Geométrico> )::
+  Calcula la ecuación del lugar geométrico indicado y la grafica como una curva implícita.
+
+EcuaciónLugar( <Punto del lugar>, <Punto variable> )::
+  Calcula y grafica la ecuación del lugar geométrico que crea un punto a medida que se desplaza el otro.
+
+[EXAMPLE]
+====
+
+Construir una parábola como lugar geométrico: Crea dos puntos libres _A_ y _B_ y la recta _d_ que pasa por ellos (esta
+será la directriz de la parábola). Crea un punto libre _F_ para el foco. A continuación, crea un punto _P_ sobre la
+recta, y una recta _p_ perpendicular a _d_ que pase por _P_. Crea también la mediatriz _b_ del segmento _FP_. Por
+último, crea el punto _Q_ (del cual se creará su lugar geométrico) como la intersección de las rectas _b_ y _p_, e
+ingresa en la Línea de entrada `++EcuaciónLugar(Q,P)++` para obtener la ecuación exacta y la gráfica del lugar
+geométrico
+
+====
+
+EcuaciónLugar( <Función lógica>, <Punto libre> )::
+  Calcula el lugar geométrico del punto libre que satisface la condición booleana.
+
+[EXAMPLE]
+====
+
+`++EcuaciónLugar(EstánAlineados(A,B,C),A)++` siendo _A_, _B_ y _C_ puntos libres, obtiene el lugar geométrico de los
+puntos _A_ tales que _A_, _B_ y _C_ están alineados (la recta que contiene a B y a C).
+
+====
+
+[NOTE]
+====
+
+*Notas:*
+
+* El lugar geométrico debe definirse a partir de un Punto (no de un deslizador).
+* Funciona solamente para un conjunto restringido de lugares geométricos, por ejemplo, utilizando puntos, rectas,
+círculos y cónicas, (semirrectas y segmentos son tratados como rectas).
+* Si el lugar geométrico resulta demasiado complejo, el programa retornará "indefinido".
+* Si no hay lugar geométrico, la curva implícita será el conjunto vacío 0=1.
+* Si el lugar geométrico es todo el plano, la curva implícita tendrá ecuación 0=0.
+* Los cálculos se realizan utilizando http://en.wikipedia.org/wiki/Gr%C3%B6bner_basis[bases de Gröbner], por lo tanto en
+ocasiones aparecerán ramas de la curva que no pertenecen al lugar original.
+* Para más información y ejemplos, consulta http://www.geogebra.org/student/b121563#[geogebra.org]. También está
+disponible una http://www.geogebra.org/book/title/id/mbXQuvUV[colección de lugares geométricos].
+* Ver también el comando xref:/Lugar_Geométrico.adoc[Lugar Geométrico] y
+https://github.com/kovzol/gg-art-doc/tree/master/pdf/english.pdf[GeoGebra Automated Reasoning Tools: A Tutorial] (en
+inglés).
+
+====

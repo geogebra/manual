@@ -1,0 +1,56 @@
+= Commande Polynôme
+:page-en: commands/Polynomial_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Polynôme( <Fonction> )::
+  Retourne l’écriture polynomiale développée de la fonction f.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Polynôme((x-3)2)++` retourne _x^2^ - 6x + 9_.
+
+====
+
+Polynôme( <Liste Points> )::
+  Crée l’interpolation polynomiale de degré au plus _n-1_ passant par les _n_ points donnés.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Polynôme({(1, 1), (2, 3), (3, 6)})++` retourne _0.5 x^2^ + 0.5 x_.
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+avec en plus, la possibilité d'utiliser des données littérales,
+
+Si la variable _a_ n'est pas définie dans GeoGebra :
+
+Polynôme( <Fonction> )::
+  Retourne l’écriture polynomiale en _x_ développée de la fonction (en groupant les coefficients).
+Polynôme( <Fonction>, <Variable> )::
+  Retourne l’écriture polynomiale développée de la fonction, en fonction de la variable (en groupant les coefficients).
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Polynôme((x - 3)^2 + (a + x)^2, a)++` retourne _a^2^ + 2 x a + 2 x^2^ - 6 x + 9_.
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Polynôme((x - 3)^2 + (a + x)^2)++` retourne _2 x^2^ + (2a - 6) x + a^2^ + 9_.
+
+====
+
+La deuxième syntaxe, *Polynôme( <Liste Points> )*, même si elle n'est pas actuellement proposée dans la liste des
+syntaxes est maintenant acceptée.

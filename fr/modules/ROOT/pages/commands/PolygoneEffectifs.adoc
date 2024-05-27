@@ -1,0 +1,38 @@
+= Commande PolygoneEffectifs
+:page-en: commands/FrequencyPolygon_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+*Note :* Le polygone des effectifs est une ligne brisée joignant tous les milieux des côtés supérieurs des barres d'un
+histogramme. Il s'ensuit que son utilisation est identique à celle de la xref:/commands/Histogramme.adoc[commande
+Histogramme].
+
+====
+
+PolygoneEffectifs( <Liste Bornes Classes>, <Liste Hauteurs> )::
+  Crée un polygone des effectifs avec des sommets de hauteurs données. Le milieu des classes détermine l'abscisse de
+  chaque sommet.
+
+[NOTE]
+====
+
+*Note :* Pour des exemples, voir xref:/commands/Histogramme.adoc[Histogramme].
+
+====
+
+PolygoneEffectifs( <Liste Bornes Classes>, <Liste Données>, <Densité true|false> , <Echelle (optionnel)> )::
+  Crée un polygone des effectifs représentant la liste de données. Le milieu des classes détermine l'abscisse de chaque
+  sommet, les classes déterminant combien de données leur appartiennent. L'ordonnée des sommets est déterminée comme
+  suit :
+
+* Si _Densité = true_, ordonnée = (Echelle) * (effectif de la classe) / (largeur de la classe)
+* Si _Densité = false_, ordonnée = effectif de la classe.
+
+Par défaut, Densité = true et Echelle = 1.
+
+PolygoneEffectifs( <Booléen Cumul>, <Liste Bornes Classes>, <Liste Données>, <Densité true|false> , <Echelle
+(optionnel)>)::
+  Si _Cumul=true_ et _Densité = false_, crée un polygone des effectifs cumulés croissants, si _Densité = true_, ce sont
+  les ordonnées définies ci-dessus qui sont cumulées.

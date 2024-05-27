@@ -1,0 +1,55 @@
+= Comando PaloHockey
+:page-en: commands/StickGraph_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+PaloHockey( <Lista de puntos> )::
+  Traza un gráfico de los llamados de _asta_ o _de Hockey_ por su forma de *_L_* invertida acorde a los puntos, trazando
+  un segmento vertical desde el _EjeX_ a cada uno de los puntos.
+
+[EXAMPLE]
+====
+
+`++PaloHockey[{(1, 1), (3, 2), (4, 5), (5, 7)}]++`
+
+====
+
+PaloHockey( <Lista de puntos>, <Horizontal o no~true/false~> )::
+  Según sea __cierto__^[.small]#_true_#^ o no^[.small]#_false_#^ el valor de verdad de la _Horizontal_, el segmento se
+  traza desde el eje de abscisas (_true_) o desde el _EjeY_, de ordenadas (_false_) a cada uno de los puntos listados.
+
+[EXAMPLE]
+====
+
+`++PaloHockey[{(1, 1), (3, 2), (4, 5), (5, 7)}, false]++`
+
+====
+
+PaloHockey( <<Lista de abscisas coor-x>, <Lista de ordenadas coor-y> )::
+  Traza un gráfico de los llamados de _asta_ o _de Hockey_ por su forma de *_L_* invertida acorde a los puntos
+  determinados por sendas listas de coordenadas, trazando un segmento vertical desde el _EjeX_ a cada uno de los puntos.
+
+[EXAMPLE]
+====
+
+`++PaloHockey[{1, 3, 4, 5}, {1, 2, 5, 7}]++`
+
+====
+
+PaloHockey( <Lista de abscisas coor-x>, <Lista de ordenadas coor-y>, <Horizontal o no~true/false~> )::
+  Según sea cierto o no el valor de verdad de la _Horizontal_, el segmento se traza desde el eje de abscisas (_true_) o
+  desde el _EjeY_, de ordenadas (_false_) a cada uno de los puntos determinados por sendas listas.
+
+[EXAMPLE]
+====
+
+`++PaloHockey[{1, 3, 4, 5}, {1, 2, 5, 7}, true]++`
+
+====

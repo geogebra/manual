@@ -1,0 +1,88 @@
+= Animace
+:page-en: Animation
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+== Automatická animace
+
+GeoGebra umožňuje animovat nejen volné body a/nebo úhly zároveň, ale také závislé body, které jsou vázány na objekt
+(úsečku, přímku, funkci, křivku atd.). Za účelem automatické animace musejí být volná čísla/úhly zobrazeny jako
+posuvníky v xref:/Grafický_pohled.adoc[Grafickém pohledu].
+
+Pro animaci volného čísla nebo úhlu, stejně jako závislého bodu, nejprve na tento objekt klikneme pravým tlačítkem myši
+(Mac OS: Ctrl-klik), poté v příslušném xref:/Kontextové_menu.adoc[kontextovém menu] aktivujeme volbu Animace zapnuta.
+Animaci zastavíme deaktivací této volby (zrušením zaškrtnutí) ve stejném kontextovém menu.
+
+[NOTE]
+====
+
+Po zapnutí animace se v levém dolním rohu Nákresny objeví tlačítko ovládání animace. Umožňuje nám animaci zastavit
+/Soubor:Animate_Pause_png.adoc[image:Animate_Pause.png[Animate Pause.png,width=16,height=16]] a zase spustit
+/Soubor:Animate_Play_png.adoc[image:Animate_Play.png[Animate Play.png,width=16,height=16]].
+
+====
+
+V dialogu xref:/Dialog_Vlastnosti.adoc[Vlastnosti] animovaného objektu na kartě Posuvník můžeme měnit chování animace:
+
+Jednak můžeme ovládat Rychlost animace.
+
+[NOTE]
+====
+
+Rychlost 1 znamená, že animace v rozsahu intervalu posuvníku trvá 10 sekund.
+
+====
+
+Můžeme si také zvolit způsob opakování animačního cyklu:
+
+⇔ Oscilující::
+  Cyklus animace střídá režimy Rostoucí a Klesající.
+⇒ Rostoucí::
+  Hodnota na posuvníku se pouze zvyšuje. Po dosažení maximální hodnoty se posuvník vrátí skokem zpět na minimální
+  hodnotu a pokračuje v animaci.
+⇐ Klesající::
+  Hodnota na posuvníku se pouze snižuje. Po dosažení minimální hodnoty se vrátí skokem zpět na maximální hodnotu a
+  pokračuje v animaci.
+
+[NOTE]
+====
+
+GeoGebra zůstává plně funkční i během aktivní animace. Můžeme tak provádět změny v konstrukci i během přehrávání
+animace.
+
+====
+
+== Manuální animace
+
+Pro manuální změnu hodnoty čísla a úhlu nebo pozice bodu vybereme nástroj xref:/tools/Ukazovátko.adoc[Ukazovátko]
+/Soubor:Tool_Move_gif.adoc[image:Tool_Move.gif[Tool Move.gif,width=32,height=32]] . Potom na příslušný objekt klikneme a
+stiskneme klávesu + nebo –, případně jednu z šipkových kláves. Podržením této klávesy vytvoříme manuální animaci, jejíž
+průběh odpovídá smyslu tlačítka.
+
+[EXAMPLE]
+====
+
+Pokud souřadnice bodu závisí na číslu _t_, například platí P = (2 t, t), bude se tento bod při průběžné změně _t_
+pohybovat podél odpovídající přímky.
+
+====
+
+[NOTE]
+====
+
+Krok posuvníku, tj. změnu jeho hodnoty při posunutí o jednu pozici, můžeme nastavit na kartě Posuvník v dialogu
+xref:/Dialog_Vlastnosti.adoc[Vlastnosti] příslušného objektu.
+
+====
+
+== Klávesové zkratky
+
+* Shift + šipková klávesa provede posun posuvníku o 0.1 jednotky (ve směru daném smyslem klávesy)
+* Ctrl + šipková klávesa provede posun posuvníku o 10 jednotek
+* Alt + šipková klávesa provede posun posuvníku o 100 jednotek
+
+[NOTE]
+====
+
+Bodem na přímce můžeme pohybovat podél této přímky také pomocí kláves + nebo –.
+
+====

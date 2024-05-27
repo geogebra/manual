@@ -1,0 +1,49 @@
+= Comando LogísticaInversa
+:page-en: commands/InverseLogistic_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+**LogísticaInversa**[.small]##[ <##Media[.small]##~μ~>,<##Escala[.small]##~s~>, <##Probabilidad[.small]##~p~> ]##::
+  Establece la http://en.wikipedia.org/wiki/es:Funci%C3%B3n_Distribuici%C3%B3n_Acumulada[*_fda_*]^[.small]#**f**unción
+  de **d**istribución **a**cumulada#^ acumulada inversa.Calcula, para la probabilidad _p_ indicada, la
+  http://en.wikipedia.org/wiki/es:Funci%C3%B3n_Distribuici%C3%B3n_Acumulada#Funci.C3.B3n_de_Distribuci.C3.B3n_Acumulada_Inversa_.28Funci.C3.B3n_Cuantil.29[inversa]
+  de la http://en.wikipedia.org/wiki/es:Funci%C3%B3n_Distribuici%C3%B3n_Acumulada[*_fda_*] de
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_log%C3%ADstica[distribución logística] con los valores paramétricos
+  dados.Así, *LogísticaInversa[μ, s, p ]* da por resultado el menor entero _"n"_, tal que:
+  _P(X ≤ n) ≥ p_
+  ... siendo _X_ una http://en.wikipedia.org/wiki/es:Variable_aleatoria[variable aleatoria] sujeta a una
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_log%C3%ADstica[distribución logística] con los valores paramétricos
+  media _μ_ y escala _s_. dados.
+
+  '''''
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: El valor de la probabilidad debe restringirse al
+rango válido _[0, 1]_.
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++LogísticaInversa[100, 2, 1]++`* resulta *∞*.*`++LogísticaInversa[10, 2, 1/2]++`* da _10_.
+
+====
+
+[NOTE]
+====
+
+El comando opera de modo análogo en la xref:/Vista_CAS.adoc[image:24px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=24,height=24]]__xref:/Vista_CAS.adoc[Vista CAS]__.
+
+====
+
+'''''
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/Logística.adoc[Logística].
+
+====

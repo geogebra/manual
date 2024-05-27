@@ -1,0 +1,178 @@
+= Comando Ángulo
+:page-en: commands/Angle_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Ángulo( <Objeto> )
+
+* *Cónica:* Devuelve el ángulo de inclinación del eje mayor de la cónica (Ver también el comando
+xref:/commands/Ejes.adoc[Ejes]).
+
+[EXAMPLE]
+====
+
+`++Ángulo(x²/4+y²/9=1)++` da por resultado _90°_ o _1.57_ si la unidad angular predeterminada es _radianes_.
+
+====
+
+[NOTE]
+====
+
+No es posible cambiar la unidad angular a Radianes en las versiones de GeoGebra 5.0 Web y Tablet.
+
+====
+
+* *Vector:* Devuevle el ángulo entre el eje _x_ y el vector dado.
+
+[EXAMPLE]
+====
+
+`++Ángulo(Vector((1, 1)))++` devuelve _45°_ o el valor correspondiente en _radianes_.
+
+====
+
+* *Punto:* Devuelve el ángulo entre el eje _x_ y el vector posición del punto dado.
+
+[EXAMPLE]
+====
+
+`++Ángulo((1, 1))++`devuelve _45°_ o el valor correspondiente en _radianes_.
+
+====
+
+* *Número:* Convierte el número en un ángulo en el intervalo [0,360°] o [0,2π] dependiendo de la unidad angular
+predeterminada.
+
+[EXAMPLE]
+====
+
+`++Ángulo(20)++` da por resultado _65.92°_ si la unidad angular utilizada es _grados_.
+
+====
+
+* *Polígono:* Crea todos los ángulos del polígono con orientación positiva (sentido antihorario).
+
+[EXAMPLE]
+====
+
+`++Ángulo(Polígono((4, 1), (2, 4), (1, 1)))++` devuelve _56.31°_, _52.13°_ y _71.57°_ o los valores correspondientes en
+_radianes_.
+
+====
+
+[NOTE]
+====
+
+Si el polígono fue creado en sentido antihorario, se obtendrán los ángulos interiores. Si fue creado en sentido horario,
+se obtendrán los ángulos exteriores.
+
+====
+
+Ángulo( <Vector>, <Vector> )::
+  Devuelve el ángulo entre los dos vectores (en el intervalo [0,360°] o en [0,2π] dependiendo la unidad angular
+  predeterminada).
+
+[EXAMPLE]
+====
+
+`++Ángulo(Vector((1, 1)), Vector((2, 5)))++` da por resultado _23.2°_ o su valor correspondiente en _radianes_.
+
+====
+
+Ángulo( <Recta>, <Recta> )::
+  Devuelve el ángulo entre los vectores directores de las dos rectas (en el intervalo [0,360°] o en [0,2π] dependiendo
+  la unidad angular predeterminada).
+
+[EXAMPLE]
+====
+
+* `++Ángulo(y = x + 2, y = 2x + 3)++` da por resultado _18.43°_ o el valor correspondiente en _radianes_.
+* `++Ángulo(Recta[(-2, 0, 0), (0, 0, 2)), Recta((2, 0, 0), (0, 0, 2)))++` da por resultado _90°_ o el valor
+correspondiente en _radianes_.
+
+y en la _Vista CAS_ :
+
+* `++Ángulo(x + 2,  2x + 3)++` da por resultado stem:[acos \left( 3 \cdot \frac\{\sqrt\{10}}\{10} \right)].
+* Si se define `++f(x) := x + 2++` y `++g(x) := 2x + 3++`, entonces el comando `++Ángulo[f(x), g(x)]++` da por resultado
+stem:[acos \left(3 \cdot \frac\{\sqrt\{10}}\{10} \right)].
+
+====
+
+Ángulo( <Recta>, <Plano> )::
+  Devuelve el ángulo entre la recta y el plano.
+
+[EXAMPLE]
+====
+
+* `++Ángulo[Recta((1, 2, 3),(-2, -2, 0)), z = 0)++` da por resultado _30.96°_ o el valor correspondiente en _radianes_.
+
+====
+
+Ángulo( <Plano>, <Plano> )::
+  Devuelve el ángulo entre los planos dados.
+
+[EXAMPLE]
+====
+
+* `++Ángulo(2x - y + z = 0, z = 0)++` da por resultado _114.09°_ o el valor correspondiente en _radianes_.
+
+====
+
+Ángulo( <Punto (lateral)>, <Vértice>, <Punto (lateral antihorario)> )::
+  Da por resultado el ángulo definidos por estos tres puntos (da por resultado un valor entre [0,360°] o entre [0,2π]
+  dependiendo de la unidad angular predeterminada).
+
+[EXAMPLE]
+====
+
+`++Ángulo((1, 1), (1, 4), (4, 2))++` da por resultado _56.31°_ o el valor correspondiente en _radianes_.
+
+====
+
+Ángulo( <Punto>, <Vértice>, <Ángulo> )::
+  Crea un ángulo de medida _α_ dibujado desde el _punto_ tomando como vértice el punto indicado en _vértice_.
+
+[EXAMPLE]
+====
+
+:*`++Ángulo((0, 0), (3, 3), 30°)++` da por resultado _30°_ y el punto _(1.9, -1.1)_.
+
+====
+
+[NOTE]
+====
+
+El punto _Rota( <Punto>, <Ángulo>, <Punto> )_ también es creado.
+
+====
+
+Ángulo( <Punto>, <Punto>, <Punto>, <Dirección> )::
+  Devuelve el ángulo definido por los tres puntos y la _Dirección_ dada, que puede ser una recta o un plano (en el
+  intervalo [0,360°] o en [0,2π] dependiendo de la unidad angular predeterminada).
+
+[EXAMPLE]
+====
+
+`++Ángulo((1, -1, 0),(0, 0, 0),(-1, -1, 0), EjeZ)++` da por resultado _270°_ y
+`++Ángulo((-1, -1, 0),(0, 0, 0),(1, -1, 0), EjeZ)++` da por resultado _90°_ o sus correspondientes valores en
+_radianes_.
+
+====
+
+[NOTE]
+====
+
+Utilizar una _Dirección_ permite saltear la restricción estándar para los ángulos en 3__D__ que se puede ajustar sólo a
+[0,180°] o [180°,360°], de modo que para los tres puntos dados, _A_, _B_, _C_ in 3__D__ los comandos
+`++Ánglulo(A, B, C)++` y `++Ángulo(C, B, A)++` dan por resultado las medidas reales en lugar de las restringidas a un
+cierto intervalo.
+
+====
+
+[NOTE]
+====
+
+Ver también las herramientas image:20px-Mode_angle.svg.png[Mode angle.svg,width=20,height=20]
+xref:/tools/Ángulo.adoc[Ángulo] y image:20px-Mode_anglefixed.svg.png[Mode anglefixed.svg,width=20,height=20]
+xref:/tools/Ángulo_dada_su_amplitud.adoc[Ángulo dada su amplitud].
+
+====

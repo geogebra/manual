@@ -1,0 +1,44 @@
+= Comando MuestraCuadrícula
+:page-en: commands/ShowGrid_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+MuestraCuadrícula( )::
+  Muestra la cuadrícula en la vista activa.
+MuestraCuadrícula( <True/False> )::
+  Muestra/oculta la cuadrícula de la vista activa.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++ MuestraCuadrícula(true)++` muestra la cuadrícula de la vista activa.
+* `++ MuestraCuadrícula(false)++` oculta la cuadrícula de la vista activa.
+
+====
+
+MuestraCuadrícula( <Vista>, <True/False> )::
+  Muestra/oculta la cuadrícula de la xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view
+  graphics.svg,width=16,height=16]] xref:/Vista_Gráfica.adoc[Vista Gráfica] especificada por el número 1 o 2 (o 3 para
+  la .
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* `++ MuestraCuadrícula(1, true)++` muestra la cuadrículade la primera
+xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+xref:/Vista_Gráfica.adoc[Vista Gráfica]
+* `++ MuestraCuadrícula(2, false)++` oculta la cuadrícula en la segunda
+xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+xref:/Vista_Gráfica.adoc[Vista Gráfica].
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/MuestraEjes.adoc[MuestraEjes].
+
+====

@@ -1,0 +1,45 @@
+= Comando AplicaMatriz
+:page-en: commands/ApplyMatrix_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+AplicaMatriz( <xref:/Matrices.adoc[Matriz]>, <xref:/Objetos_Geométricos.adoc[Objeto]> )::
+  Transforma el objeto _O_ de modo que a cada punto _P_ de _O_ le corresponde:
+
+* el punto _M*P_, si _P_ es un punto en _2D_ y _M_ es una matriz 2 x 2
+
+[EXAMPLE]
+====
+
+Sea `++M={{cos(π/2),-sen(π/2)}, {sen(π/2), cos(π/2)}}++` una matriz de transformación y `++u = (2,1)++` un vector dado
+(objeto).
+
+====
+
+`++ AplicaMatriz(M,u)++` devuelve el vector _u'=(-1,2)_, por ehjemplo, el resultado de una rotación matemática positiva
+de 90° del vector _u_.
+
+* el punto _proy(M*(x(P), y(P), 1))_, si _P_ es un punto _2D_ y _M_ una matriz 3 x 3: _proy_ es una proyección, que
+transforma el punto _(x, y, z)_ en _(x/z, y/z)_.
+
+[EXAMPLE]
+====
+
+Sea `++M={{1,1,0},{0,1,1},{1,0,1}}++` una matriz y `++u=(2,1)++` un vector.
+
+====
+
+`++ AplicaMatriz(M,u)++` devuelve el vector _u'=(1,0.67)_. En efecto, stem:[\begin\{pmatrix}1&1&0\\ 0&1&1\\1&0&1
+\end\{pmatrix}] stem:[\begin\{pmatrix}2\\ 1\\1 \end\{pmatrix}] = stem:[\begin\{pmatrix}3\\ 2\\3 \end\{pmatrix}], y (3/3
+= 1, 2/3 ≈ 0.67) (redondeado a 2 cifras decimales)
+
+* el punto _M*P_, si _P_ es un punto _3D_ y _M_ una matriz 3 x 3
+* el punto _N*P_, si _P_ es un punto _3D_ y _M_ una matriz 2 x 2: la matriz _N_ es la _matriz completa de orden 3_ de
+_M_: dado _M_ = stem:[\begin\{pmatrix}a&b\\ c&d \end\{pmatrix}], entonces _N_ = stem:[\begin\{pmatrix}a&b&0\\
+c&d&0\\0&0&1 \end\{pmatrix}]
+
+[NOTE]
+====
+
+Este comando también funciona con xref:/Imágenes.adoc[imágenes].
+
+====

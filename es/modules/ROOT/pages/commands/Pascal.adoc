@@ -1,0 +1,172 @@
+= Comando Pascal
+:page-en: commands/Pascal_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+*Pascal*[ [.small]##<##Número de Éxitos[.small]##>##, [.small]##<##Probabilidad de Éxito[.small]##>## ]::
+  Establece y xref:/Vista_Gráfica.adoc[grafica] el histograma correspondiente a una
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_binomial_negativa[distribución binomial negativa de Pascal] (del
+  inglés, http://mathworld.wolfram.com/NegativeBinomialDistribution.html[_Negative Binomial Distribution_]) para los
+  valores paramétricos indicados.
+
+[NOTE]
+====
+
+El valor de la probabilidad debe restringirse al rango válido _[0, 1]_.
+
+====
+
+== Parámetros
+
+* _Número de Éxitos_: número de intentos de Bernoulli independientes que deben ser positivos.
+* _Probabilidad de Éxito_: valor de la probabilidad de éxito en cada ensayo.
+
+*Pascal*[ <Número de Éxitos>, <Probabilidad de Éxito>, <Booleana~Acumulativa~> ]::
+  Si el valor _booleano_ es falso^_false_^, establece y xref:/Vista_Gráfica.adoc[grafica], tomando *x* como variable, el
+  histograma correspondiente a la http://en.wikipedia.org/wiki/es:Funci%C3%B3n_de_densidad_de_probabilidad[*_fdp_*,
+  **_f_**unción de **_d_**ensidad de **_p_**robabilidad] (en inglés,
+  /s_index_php?title=En:w:Probability_density_function_action=edit_redlink=1.adoc[*_pdf_*)]^[.small]#[.small]#**_p_**robabilty
+  **_d_**ensity **_f_**unction##^ de la http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_binomial_negativa[distribución
+  binomial negativa de Pascal] y el diagrama
+  http://en.wikipedia.org/wiki/es:Funci%C3%B3n_Distribuici%C3%B3n_Acumulada[acumulativo] correspondiente en caso
+  contrario.
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Sintetizando...P( X = _v_) si el parámetro booleano fuera falso.P( X ≤ _v_) si fuera verdadero.
+|===
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Pascal[12, 0.75]++`* da por resultado _0.98_ y xref:/Vista_Gráfica.adoc[grafica] el histograma
+correspondiente**`++Pascal[12, 0.75, true]++`** da _6.02_ (acumulativo) y xref:/Vista_Gráfica.adoc[grafica] el
+histograma correspondiente
+
+'''''
+
+*`++Pascal[1, 1/6, x(A) > 2] ++`* da _5.81_ cuando la abscisa de *`++A++`* es mayor que 2 y _0.84_ en caso contrario,
+presentando *dinámicamente* el diagrama acorde a la distribución acumulativa o no, en cada casoEl siguiente boceto
+ilustra _animadamente_ el tipo de diagrama, de barras o escalonado acumulativo, que se despliega según el valor de la
+_booleana_ y el de los restantes parámetros que también se modifican aleatoriamente.
+
+====
+
+/Archivo:Pascal_1_gif.adoc[image:Pascal_1.gif[Pascal 1.gif,width=532,height=543]]
+
+[.small]##
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Se suma una alternativa que *no* desenvuelve histogramasPascal[ <Éxitos>, <Probabilidad~Éxito~>, <Valor~Variable~>,
+<Booleana> ]
+|===
+
+[.small]##
+
+[.small]##
+
+*Pascal*[ <Número de Éxitos>, <Probabilidad de Éxito>, <Valor de Variable~v~>, <Booleana~Acumulativa~> ]::
+  Si el valor _booleano_ es falso^_false_^ da para el valor *_v_* asignado a la variable, el de la
+  http://en.wikipedia.org/wiki/es:Funci%C3%B3n_de_densidad_de_probabilidad[**_f_**unción de **_d_**ensidad de
+  **_p_**robabilidad^*_fdp_*^] de http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_binomial_negativa[distribución
+  binomial negativa de Pascal] con parámetros indicados.En caso contrario, el de la
+  http://en.wikipedia.org/wiki/es:Funci%C3%B3n_Distribuici%C3%B3n_Acumulada[distribución acumulativa]
+  correspondiente.Así, *Pascal[e, p, v, booleana]* da el valor para *_v_* de la *_fda_* de la
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_binomial_negativa[distribución binomial negativa de Pascal] para
+  parámetros dados y http://en.wikipedia.org/wiki/es:Variable_aleatoria[variable aleatoria] de
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_binomial_negativa[distribución binomial negativa de Pascal] igual a
+  *v*.En caso contrario, el de la distribución acumulativa.Así, si fuera *X* la
+  http://en.wikipedia.org/wiki/es:Variable_aleatoria[variable aleatoria] y _v_ el valor asignado, resultaría:
+  * P( X = _v_) si el valor booleano fuera falso.
+  * P( X ≤ _v_) si fuera verdadero.
+
+[EXAMPLE]
+====
+
+*`++Pascal[1, 1/3, 2, false]++`* da __0.15__^decimales según xref:/Menú_de_Opciones.adoc[redondeo]^
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+Exclusivamente opera la variante previa que calcula el valor correspondiente:
+
+*Pascal*[ <Número de Éxitos>, <Probabilidad de Éxito>, <Valor de Variable>, <Booleana~Acumulativa~> ]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|*Sin* diagramas, se opera también con literales
+|===
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Pascal[12, 0.75]++`* da por resultado __0.98__**`++Pascal[12, 0.75, true]++`** da
+__6.02__**`++Pascal[12, 0.75, false]++`** da __0.98__**`++Pascal[1, 1/6, 2, false]++`** da el
+xref:/tools/Valor_Numérico.adoc[valor]/Archivo:Mode_numeric_svg.adoc[image:23px-Mode_numeric.svg.png[Mode
+numeric.svg,width=23,height=23]] __0.116__^decimales según xref:/Menú_de_Opciones.adoc[Redondeo]^ y al
+xref:/tools/Evalúa.adoc[evaluarlo] resulta /Archivo:Mode_evaluate_svg.adoc[image:23px-Mode_evaluate.svg.png[Mode
+evaluate.svg,width=23,height=23]] __stem:[\frac\{25}\{216}]__**`++Pascal[1, 1/6, 2, true]++`** da como
+xref:/tools/Valor_Numérico.adoc[valor] aproximado /Archivo:Mode_numeric_svg.adoc[image:23px-Mode_numeric.svg.png[Mode
+numeric.svg,width=23,height=23]] _0.42_ y es xref:/tools/Evalúa.adoc[evaluado] como
+[.small]#*/Archivo:Mode_evaluate_png.adoc[image:Mode_evaluate.png[Mode evaluate.png,width=32,height=32]]* 3 *B*
+stem:[\{\left( 1, 3, \frac\{1}\{6} \right)}]#.
+
+'''''
+
+Operando con literales...*`++Pascal[1, p, 2, false]++`* da por resultado _p³ - 2p² + p_
+
+====
+
+[NOTE]
+====
+
+En esta xref:/Vista_CAS.adoc[vista] se admiten literales para xref:/tools/Evalúa.adoc[evaluaciones] simbólicas sujetas
+al valor dinámico de verdad de la variable booleana pero *no* se desenvuelven los diagramas^Si se tildara el redondelito
+de encabezamiento de la fila, quedará representado el deslizador correspondiente al valor, no el histograma^
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Pascal[ n, p, 3, false]++`* da por
+resultado:/Archivo:Pascal3_PNG.adoc[image:Pascal3.PNG[Pascal3.PNG,width=332,height=51]]
+
+'''''
+
+*`++Pascal[n, p, 2, x(A) > 2]++`* da por resultado Ι(n, 3, p) cuando la abscisa de *`++A++`* es mayor que 2 y, en caso
+contrario,/Archivo:Pascal2_PNG.adoc[image:Pascal2.PNG[Pascal2.PNG,width=332,height=51]]
+
+'''''
+
+*`++Pascal[n, 1/3, 3, false]++`* da /Archivo:Pascal1_PNG.adoc[image:Pascal1.PNG[Pascal1.PNG,width=320,height=54]]
+
+'''''
+
+Siendo...el número de éxitos en ensayos independientes de Bernoulli _n_ = 1la probabilidad de éxito _p_ =
+stem:[\frac\{1}\{6}]el valor asignado a la variable es _v = 2_ y falso (_false_) el valor
+_booleno_,*`++Pascal[n, p, v, false]++`* da el xref:/tools/Valor_Numérico.adoc[valor]
+/Archivo:Mode_numeric_svg.adoc[image:23px-Mode_numeric.svg.png[Mode numeric.svg,width=23,height=23]] __0.12__^decimales
+según xref:/Menú_de_Opciones.adoc[Redondeo]^ y al xref:/tools/Evalúa.adoc[evaluarlo]
+/Archivo:Mode_evaluate_svg.adoc[image:23px-Mode_evaluate.svg.png[Mode evaluate.svg,width=23,height=23]]
+_stem:[\frac\{25}\{216}]_
+
+====

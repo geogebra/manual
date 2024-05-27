@@ -1,0 +1,96 @@
+= Animación
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+GeoGebra permite no solo la animación simultánea de números y/o ángulos libres sino también de puntos dependientes que
+estén restringidos a un xref:/Objetos_Geométricos.adoc[recorrido] como, por ejemplo, un segmento, recta,
+xref:/Funciones.adoc[función], xref:/Curvas.adoc[curva], etc.
+
+== Animación Automática
+
+Para animarlos automáticamente, los números y/o ángulos libres deben aparecer como deslizadores en la
+xref:/Vista_Gráfica.adoc[Vista Gráfica]. Para proceder a una animación - sea de números y/o ángulos libres o de puntos
+dependientes -, basta un _clic_ derecho (para Mac OS: [.kcode]#Ctrl#-_clic_) sobre el número, ángulo o punto para
+seleccionar y tildar la opción de Animación en el emergente xref:/Menú_contextual.adoc[Menú Contextual].Para detener la
+animación, es preciso destildar la opción de Animación del mismo xref:/Menú_contextual.adoc[Menú Contextual].
+
+[NOTE]
+====
+
+Después de animar a un número y/o ángulo xref:/Objetos_libres_dependientes_y_auxiliares.adoc[libre] o a un punto
+xref:/Objetos_libres_dependientes_y_auxiliares.adoc[dependiente], aparecerá un botón de animación en la esquina inferior
+izquierda de la xref:/Vista_Gráfica.adoc[Vista Gráfica].Esto permite, ya sea pausar
+/Archivo:Animate_Pause_png.adoc[image:Animate_Pause.png[Animate Pause.png,width=16,height=16]] o
+/Archivo:Animate_Play_png.adoc[image:Animate_Play.png[Animate Play.png,width=16,height=16]] continuar una animación.
+
+====
+
+En el xref:/Cuadro_de_Propiedades.adoc[Cuadro de Propiedades] en la pestaña correspondiente a *Deslizador* es posible
+modificar el comportamiento de la animación en relación, por ejemplo, a su...
+
+- Velocidad
+
+[NOTE]
+====
+
+Fijarla a 1 implica que demandará 10 segundos el recorrido completo a través del intervalo cubierto por el deslizador.
+
+====
+
+- Régimen del Ciclo::
+⇔ Oscilante::
+  El ciclo de animación alterna entre un régimen Decreciente y uno Creciente.
+⇒ Creciente::
+  El valor del deslizador es siempre creciente cuando se decide el _Incremento_ . De modo que, al llegar a su máximo
+  valor, retorna al mínimo inicial para proseguir con la animación.
+⇐ Decreciente::
+  El valor del deslizador es siempre decreciente cuando se decide el _Decremento_ . De modo que, al llegar a su mínimo
+  valor, retorna al máximo para proseguir con la animación.
+⇒ Una vez (creciente)::
+  La animación se desarrolla mientras crecen los valores del deslizador. Una vez que se llega al máximo, se detiene.
+
+[NOTE]
+====
+
+Mientras la animación automática está activa, GeoGebra permanece completamente funcional. Esto permite hacer cambios en
+la construcción entre tanto.
+
+====
+
+== Animación Manual
+
+Para modificar manualmente, de forma continua un número o ángulo, basta seleccionar la herramienta
+xref:/tools/Elige_y_Mueve.adoc[image:32px-Mode_move.svg.png[Mode move.svg,width=32,height=32]]
+xref:/tools/Elige_y_Mueve.adoc[Elige y Mueve] y hacer clic sobre un número o ángulo libre y pulsar o [.kcode]#+# o
+[.kcode]#-# o las teclas flechas.Un _clic_ sobre un número o ángulo libre o sobre un punto dependiente, produce así,
+manualmente, un efecto de animación al mantener permanentemente, una de estas teclas, pulsada.
+
+[EXAMPLE]
+====
+
+Si las coordenadas de un punto dependen de un número _k_ como en P = (2 k, k), el punto se desplazará a lo largo de una
+recta si _k_ se modifica continuamente.
+
+====
+
+[NOTE]
+====
+
+Con las teclas-flecha puede desplazarse cualquier objeto libre empleando la herramienta
+xref:/tools/Elige_y_Mueve.adoc[image:32px-Mode_move.svg.png[Mode move.svg,width=32,height=32]]
+xref:/tools/Elige_y_Mueve.adoc[Elige y Mueve]
+
+====
+
+== Teclas de Atajo
+
+* [.kcode]#Shift# + [.kcode]#↑# establece cambios de a _0.1_ unidades
+* [.kcode]#Ctrl# + [.kcode]#↑# establece cambios de a 10 unidades
+* [.kcode]#Alt# + [.kcode]#↑# establece cambios de ancho de 100 unidades
+
+[NOTE]
+====
+
+*Notas:* También se puede mover cualquier punto a lo largo de una recta, empleando la tecla [.kcode]#+# o
+[.kcode]##–##Ver el xref:/Tutoriales.adoc[Tutorial] /Tutorial:Animándose.adoc[Animándose] para profundizar en este tema.
+
+====

@@ -1,0 +1,54 @@
+= Comando TestMediaT
+:page-en: commands/TTest_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+TestMediaT( <Lista de datos (muestra)>, <Media (hipótesis)>, <Cola>)::
+  Establece una prueba _t_ de una muestra de una población media usando la _lista de datos_ dada. La _Media a
+  contrastar_ es la población media asumida en la hipótesis nula. La _Cola_ tiene como posibles valores "<", ">" , "≠".
+  A continuación se especifican las hipótesis alternativas:
+  "<" = población media < _Media a contrastar_
+  ">" = población media > _Media a contrastar_
+  "≠" = población media ≠ _Media a contrastar_
+
+[NOTE]
+====
+
+El resultado se xref:/Listas.adoc[lista] con el siguiente formato..._\{valor de Probabilidad, prueba *t* estadística}_
+
+====
+
+[EXAMPLE]
+====
+
+`++TestMediaT[{1, 2, 3, 4, 5}, 3, "<"]++` da por resultado _\{0.5, 0}_.
+
+====
+
+TestMediaT(<Media (muestra)>, <Desviación estándar (muestra)>, <Tamaño (muestra)>, <Media (hipótesis)>, <Cola> )::
+  Establece una prueba _t_ de una muestra de una población usando la muestra estadística dada.La _Media a contrastar_ y
+  la _Cola_ se definen tal como para la sintaxis previa y del mismo modo se listan los resultados.
+
+  '''''
+
+[EXAMPLE]
+====
+
+`++TestMediaT[4, 1, 12, 4, "≠"]++` da por resultado _\{1, 0}_.
+
+====
+
+[NOTE]
+====
+
+Una y otra variante, el resultado se xref:/Listas.adoc[lista] con el siguiente formato..._\{valor de Probabilidad,
+prueba *t* estadística}_
+
+====

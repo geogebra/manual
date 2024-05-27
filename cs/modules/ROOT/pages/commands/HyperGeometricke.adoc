@@ -1,0 +1,41 @@
+= Příkaz HyperGeometricke
+:page-en: commands/HyperGeometric_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+HyperGeometricke( <Velikost populace N>, <Počet úspěchů M>, <Velikost vzorku n> )::
+  Zobrazí sloupcový graf hypergeometrického rozdělení.
+
+[NOTE]
+====
+
+Mějme konečný soubor _N_ jednotek, z nichž _M_ má sledovanou vlastnost (úspěch). Z tohoto souboru vybereme náhodně
+najednou nebo postupně (bez vracení) _n_ jednotek. Náhodná veličina, představující počet vybraných jednotek se
+sledovanou vlastností (úspěchů) má hypergeometrické rozdělení.
+
+====
+
+HyperGeometricke( <Velikost populace N>, <Počet úspěchů M>, <Velikost vzorku n>, <Kumulativní (logická hodnota)> )::
+  Pokud je volitelný parametr _Kumulativní_ = true, zobrazí distribuční funkci, tj pravděpodobnost, že je počet úspěchů
+  nejvýše rovný hodnotě proměnné. Pokud tento parametr vynecháme, je automaticky dosazeno "kumulativní"= false, viz.
+  předchozí odstavec.
+HyperGeometricke( <Velikost populace N>, <Počet úspěchů M>, <Velikost vzorku n>, <Hodnota proměnné v>, <Kumulativní
+(logická hodnota)> )::
+  Nechť X je Hypergeometricky rozdělená náhodná veličina. Pak příkaz vypočítá:
+  P( X = _v_) pokud je _Kumulativní_ = false.
+  P( X ≤ _v_) pokud je _Kumulativní_ = true.
+  První tři parametry mají stejný význam jako v předchozích zápisech.
+
+== CAS pohled
+
+V prostředí CAS je dostupný jen příkaz tvaru:
+
+HyperGeometricke( <Velikost populace N>, <Počet úspěchů M>, <Velikost vzorku n>, <Hodnota proměnné v>, <Kumulativní
+(logická hodnota)> )
+
+Nechť X je Hypergeometricky rozdělená náhodná veličina. Pak příkaz vypočítá:
+
+P( X = _v_) pokud je _Kumulativní_ = false.
+
+P( X ≤ _v_) pokud je _Kumulativní_ = true.
+
+První tři parametry mají stejný význam jako v předchozích zápisech.

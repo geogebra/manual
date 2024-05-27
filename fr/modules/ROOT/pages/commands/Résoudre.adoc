@@ -1,0 +1,139 @@
+= Commande Résoudre
+:page-en: commands/Solve_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Résoudre( <Équation en x> )::
+  Résout une équation (ou un ensemble d'équations) de la variable x et retourne une liste de toutes les solutions.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Résoudre(x^2 = 4x)++` retourne _\{x = 4, x = 0}_, la liste des solutions de l'équation _x^2^ = 4x_.
+
+====
+
+[NOTE]
+====
+
+*/Fichier:Menu_view_cas_svg.adoc[image:24px-Menu_view_cas.svg.png[Menu view cas.svg,width=24,height=24]] uniquement en
+fenêtre xref:/Calcul_formel.adoc[Calcul formel]*
+
+Résoudre( <Équation en x> )::
+  Résout une équation (ou un ensemble d'équations) de la variable x et retourne une liste de toutes les solutions.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Résoudre(x^2 = 4x)++` retourne _\{x = 4, x = 0}_, la liste des solutions de l'équation _x^2^ = 4x_.
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+|image:18px-Attention.png[Attention,title="Attention",width=18,height=18] *Attention*: a|
+En cas d'utilisation de fonctions définies par morceaux, utiliser xref:/commands/NRésoudre.adoc[NRésoudre]
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++f(x):= Si(x<=-2,x+6,Si(-2<=x<=2,x² ,-x+6))++`
+
+`++Résoudre($1 = 1)++`
+
+affiche *?*, alors que
+
+`++NRésoudre($1 = 1)++`
+
+donne la liste des 4 solutions\{x = -5, x = -1, x = 1, x = 5}.
+
+====
+
+|===
+
+Résoudre( <Équation>, <Variable> )::
+  Résout une équation (ou un ensemble d'équations) de la variable (ou un ensemble de variables) donnée et retourne une
+  liste de toutes les solutions.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Résoudre(x * a^2 = 4a, a)++` retourne stem:[\\{a = \frac\{4}\{x}, a = 0\}], les solutions de _x a^2^ = 4a_.
+
+====
+
+Résoudre( <Liste Équations>, <Liste Variables> )::
+  Résout un ensemble d'équations d'un ensemble de variables et retourne une liste de toutes les solutions.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Résoudre({2a^2+5a+3=b, a+b=3},{a,b})++` retourne \{\{a = 0, b = 3}, \{a = -3, b = 6}}.
+
+*Note :* Autre syntaxe possible : `++Résoudre((2a^2+5a+3=b) && (a+b=3),{a,b})++`
+
+====
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Résoudre({x = 4 x + y , y + x = 2}, {x, y})++` retourne _(x = -1 y = 3)_, l'unique solution du système stem:[
+\left\\{\begin\{matrix} x=4x+y \\ y+x=2 \end\{matrix}\right. ].
+
+====
+
+Résoudre( <Liste Équations Paramétriques>, <Liste Variables> )::
+  Résout un ensemble d'équations paramétriques pour un ensemble donné de variables et retourne une liste de toutes les
+  solutions.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+* `++Résoudre({(x, y) = (3, 2) + t (5, 1), (x, y) = (4, 1) + s (1, -1)}, {x, y, t, s})++` retourne _\{\{x = 3, y = 2, t
+= 0, s = -1}}_.
+
+====
+
+Résoudre( <Équation>, <Variable> , <Liste Conditions>)::
+  Résout l'équation de la variable donnée en prenant en compte les conditions et retourne la liste de toutes les
+  solutions.
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+* `++Résoudre(u *x < a,x, u>0)++` retourne _\{x < a / u}_, l'unique solution de _u *x < a_ vérifiant _u>0_
+* `++Résoudre(u *x < a,x, {u<0, a<0})++` retourne _\{x > a / u}_.
+
+====
+
+*Note :*
+
+* Le membre de droite de l'équation, dans toutes les syntaxes précédentes , peut être omis. Dans un tel cas, il est
+considéré comme égal à 0.
+* Parfois il vous faudra faire quelques manipulations pour aider l'algorithme de résolution à travailler, par exemple
+`++ Résoudre(TrigoDévelopper(sin(5/4 π+x)-cos(x-3/4 π)=sqrt(6) * cos(x)-sqrt(2))) ++` [.underline]#DEVRAIT# vous éviter
+le message "calcul trop compliqué" au lieu de vous retourner stem:[\mathbf\{ \left\\{ x = 2 \space k_1 \space \pi +
+\frac\{1}\{2} \space \pi, x = 2 \space k_2 \space \pi - \frac\{1}\{6} \space \pi \right\} }]
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/NRésoudre.adoc[NRésoudre],
+xref:/commands/Solutions.adoc[Solutions] , xref:/commands/NSolutions.adoc[NSolutions] ,
+xref:/commands/CRésoudre.adoc[CRésoudre] et xref:/commands/CSolutions.adoc[CSolutions] .
+
+====
+
+https://www.geogebra.org/o/t4qTWGP8[Investigation du comportement RésoudreVsSolutions]

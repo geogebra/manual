@@ -1,0 +1,32 @@
+= Commande Logistique
+:page-en: commands/Logistic_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Logistique( <Moyenne μ>, <Paramètre s>, <Valeur Variable v> )::
+  Calcule la valeur de la fonction cumulée de la loi logistique en _v_, i.e. la probabilité _P(X≤v)_ où _X_ est une
+  variable aléatoire suivant une loi logistique de paramètres _μ, s_.
+
+[NOTE]
+====
+
+*Note :* Retourne la probabilité pour une valeur donnée d'abscisse (ou l'aire sous la courbe de la loi logistique, à
+gauche de l'abscisse donnée).
+
+====
+
+Logistique( <Moyenne μ>, <Paramètre s>, <Valeur Variable v>, <Booléen Cumul> )::
+  Si _Cumul_ est _true_, calcule la valeur de la fonction densité cumulée de probabilité de la loi logistique en _v_,
+  sinon calcule la valeur de la fonction densité de probabilité de la loi logistique en _v_.
+
+Logistique( <Moyenne μ>, <Paramètre s>, x, <Booléen Cumul> )::
+  Si _Cumul_ est true, crée la fonction densité cumulée de probabilité de la loi logistique, sinon crée la fonction
+  densité de probabilité de la http://en.wikipedia.org/wiki/fr:Loi_logistique[loi logistique] de paramètres _μ, s_.
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/InverseLogistique.adoc[InverseLogistique].
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel

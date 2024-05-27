@@ -1,0 +1,38 @@
+= Comando GroebnerDegRevLex
+:page-en: commands/GroebnerDegRevLex_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[De] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+GroebnerDegRevLex( <Lista de Polinomios> )::
+  Establece las bases Gröbner de la lista de polinomios con respecto al orden inverso de grado léxico-gráfico de las
+  variables (también conocido como _orden total de grado inverso léxico-gráfico_ o _eliminación por orden_).
+
+[EXAMPLE]
+====
+
+`++GroebnerLexRevGrado[{x^3 - y - 2,x^2 + y + 1}]++` da por resultado: \{stem:[ y^\{2} - x + 3 y + 3, x y + x + y + 2,
+x^\{2} + y + 1 ]}
+
+====
+
+GroebnerDegRevLex( <Lista de Polinomios>, <Lista de Variables> )::
+  Establece las bases Gröbner de la lista de polinomios con respecto al orden inverso de grado léxico-gráfico de las
+  variables indicadas (también conocido como 'orden total inverso de grado léxico-gráfico _o_ eliminación por
+  orden__).__
+
+[EXAMPLE]
+====
+
+`++GroebnerLexRevGrado[{x^3 - y - 2,x^2 + y + 1},{y, x}]++` da por resultado:[.small]#**\{**stem:[ x^\{2} - y, y x - x,
+y^\{2} - y ]*}*.#
+
+====
+
+[NOTE]
+====
+
+Ver también los comandos xref:/commands/GroebnerLex.adoc[GroebnerLex] y
+xref:/commands/GroebnerLexDeg.adoc[GroebnerLexDeg].
+
+====

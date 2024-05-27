@@ -1,0 +1,41 @@
+= Comando Curva
+:page-en: commands/Curve_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+/en_Special:Upload?wpDestFile=Ejemplo_jpg.adoc[Archivo:Ejemplo.jpg]
+
+Curva( <Expresión>, <Expresión>, <Parámetro>, <Valor inicial>, <Valor final> )::
+  Da por resultado la xref:/Curvas.adoc[curva paramétrica] correspondiente determinada por las expresiones _x_ (primera
+  <Expresión>) e _y_ (segunda <Expresión >) definidas en función del parámetro, dentro del intervalo definido por
+  [_Valor inicial_, _Valor final_].
+
+[EXAMPLE]
+====
+
+`++Curva(2 cos(t), 2 sen(t), t, 0, 2π)++` crea una circunferencia de radio _2_ alrededor del origen de coordenadas.
+
+====
+
+Curva( <Expresión> , <Expresión> , <Expresión> , <Parámetro> , <Valor inicial> , <Valor final> )::
+  Da por resultado la curva paramétrica correspondiente determinada por las expresiones _x_ (primera <Expresión>), _y_
+  (segunda <Expresión >) y _z_ (tercera <Expresión >) definidas en función del parámetro, dentro del intervalo definido
+  por [_Valor inicial_, _Valor final_].
+
+[EXAMPLE]
+====
+
+`++Curva(cos(t), sen(t), t, t, 0, 10π)++` crea una espiral en 3D.
+
+====
+
+[NOTE]
+====
+
+*Notas:*
+
+* _Valor final_ debe ser mayor o igual a _Valor inicial_ y ambos deben ser finitos.
+* _x_, _y_ y _z_ no son elegibles como parámetros variables.
+* Ver xref:/Curvas.adoc[Curvas] para más detalles, y además los comandos xref:/commands/Derivada.adoc[Derivada] y
+xref:/commands/DerivadaParamétrica.adoc[DerivadaParamétrica].
+
+====

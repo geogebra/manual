@@ -1,0 +1,69 @@
+= LaTeX
+:page-en: LaTeX
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+V GeoGebře lze zapisovat vzorce, stačí k tomu v dialogovém okně nástroje
+/Soubor:Tool_Insert_Text_gif.adoc[image:Tool_Insert_Text.gif[Tool Insert Text.gif,width=32,height=32]]
+xref:/tools/Vložit_text.adoc[Vložit text] zaškrtnout zaškrtávací políčko _LaTeX vzorec_ a zapsat požadovaný vzorec v
+LaTeXové syntaxi.
+
+[NOTE]
+====
+
+Pokud je třeba kombinovat běžný text se vzorci, stačí vložit vzorce zapsané LaTeXovou syntaxí mezi dvojici symbolů
+dolaru ($).
+
+====
+
+[EXAMPLE]
+====
+
+Délka úhlopříčky jednotkového čtverce je $\sqrt\{2}$.
+
+====
+
+[NOTE]
+====
+
+LaTeXový vzorec popisující objekt, který je vypsán v algebraickém okně, lze snadno získat prostým přetažením objektu
+myší z algebraického okna do grafického pohledu (viz
+/s_index_php?title=Manuál:Příkaz_LaTeX_action=edit_redlink=1.adoc[příkaz LaTeX]).
+
+====
+
+Syntaxi pro často se vyskytující symboly a prvky vzorců lze vybrat z rozbalovací nabídky vedle zaškrtávacího políčka
+_LaTeX vzorec_. Tím se vloží příslušný LaTeXový kód do textového pole a kurzor je umístěn mezi dvojici složených
+závorek. Rozbalovací nabídka _Symboly_ pak obsahuje běžné matematické symboly, řecká písmena a operátory. Pokud budete
+chtít vytvořit dynamický text uvnitř vzorce, musíte příslušný objekt vybrat z rozbalovací nabídky _Objekty_. Tím se
+vloží na požadované místo textového pole editovatelný odkaz na daný objekt a ve výsledném textu se pak objeví jeho
+LaTeXový přepis.
+
+Některé důležité příkazy LaTeXu jsou ukázány v následující tabulce. Pro další informace nahlédněte do dokumentace LaTeXu
+(viz níže).
+
+[cols=",",options="header",]
+|===
+|Kód LaTeXu |Výstup
+|a \cdot b |stem:[a \cdot b]
+|\frac\{a}\{b} |stem:[\frac\{a}\{b}]
+|\sqrt\{x} |stem:[\sqrt\{x}]
+|\sqrt[n]\{x} |stem:[\sqrt[n]\{x}]
+|\vec\{v} |stem:[\vec\{v}]
+|\overline\{AB} |stem:[\overline\{AB}]
+|x^\{2} |stem:[x^\{2}]
+|a_\{1} |stem:[a_\{1}]
+|\sin\alpha + \cos\beta |stem:[\sin\alpha + \cos\beta]
+|\int_\{a}^\{b} x dx |stem:[\displaystyle\int_\{a}^\{b} x dx]
+|\sum_\{i=1}^\{n} i^2 |stem:[\displaystyle\sum_\{i=1}^\{n} i^2]
+|===
+
+== Užitečné odkazy
+
+* http://www.penguin.cz/~kocer/texty/lshort2e/lshort2e-cz.pdf[Ne příliš stručný úvod do systému LaTeX2e]
+* http://en.wikipedia.org/wiki/cs:LaTeX[LaTeX]
+
+[NOTE]
+====
+
+Anglická verze: /s_index_php?title=En:Manual:LaTeX_action=edit_redlink=1.adoc[LaTeX]
+====

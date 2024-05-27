@@ -1,0 +1,74 @@
+= Comando DiagramaCaja
+:page-en: commands/BoxPlot_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+DiagramaCaja( <y~Radio~>, <y~Escala~>, <Lista de Datos en Bruto> )::
+  Crea un diagrama usando los datos en bruto, cuya posición vertical en el sistema de coordenadas lo controla la
+  variable _y~Radio~_ y su altura, depende del factor _y~Escala~_.
+
+[EXAMPLE]
+====
+
+*`++DiagramaCaja[0, 1, {2, 2, 3, 4, 5, 5, 6, 7, 7, 8, 8, 8, 9}]++`*
+
+====
+
+DiagramaCaja( <y~Radio~>, <y~Escala~>, <Valor Inicial>, <Q1>, <Mediana>, <Q3>, <Valor Final> )::
+  Crea un diagrama para los datos estadísticos dados en el intervalo establecido.Así, siendo _a_ el *Valor Inicial* y
+  _b_ el *Valor Final*, sería el intervalo [_a_, _b_].
+DiagramaCaja( <Offset~y~>, <y~Escala~>, <Lista de Datos en Bruto>, <Atipicidades Booleanas> )::
+  Esta variante permite graficar las atipicidades ilustrándolas con una "'X"' en lugar de incluirlas en la caja.
+
+[EXAMPLE]
+====
+
+*`++DiagramaCaja[0,1,2,3,4,5,6]++`*
+
+====
+
+[NOTE]
+====
+
+*Notas:* Se considerarán http://en.wikipedia.org/wiki/es:Valor_at%C3%ADpico[valores atípicos o atipicidades] a los datos
+que quedan-por debajo de _Q1_ - 1.5 * RIQ ([.small]#http://en.wikipedia.org/wiki/es:Rango_intercuart%C3%ADlico[Rango
+intercuartílico RIQ]#)-o por encima de Q3 + 1.5 * RIQ
+([.small]#http://en.wikipedia.org/wiki/es:Rango_intercuart%C3%ADlico[RIQ] o
+/s_index_php?title=En:w:IQR_action=edit_redlink=1.adoc[IQR en inglés]#).La última imagen al pie ilustra básicamente este
+tipo de comportamiento del comando.
+
+====
+
+DiagramaCaja( <Offset~y~>, <Escala~y~>, <Lista de Datos>, <Lista de Frecuencias>, <Atipicidades Booleanas> )::
+  Crea un diagrama directamente de una tabla de frecuencias acorde a lo indicado por los parámetros en un simple
+  listado.
+
+  '''''
+
+[NOTE]
+====
+
+La imagen ilustra uno de los comportamientos detallados previamente
+
+====
+
+/Archivo:Diagrama_Caja_PNG.adoc[image:400px-Diagrama_Caja_.PNG[Diagrama Caja .PNG,width=400,height=302]]
+
+/Archivo:CjajaEstad_PNG.adoc[image:400px-CjajaEstad.PNG[CjajaEstad.PNG,width=400,height=188]]
+
+'''''
+
+[NOTE]
+====
+
+El comando opera de modo análogo en la xref:/Vista_CAS.adoc[image:24px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=24,height=24]]__xref:/Vista_CAS.adoc[Vista CAS]__.
+
+====

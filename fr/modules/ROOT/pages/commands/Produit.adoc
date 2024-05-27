@@ -1,0 +1,70 @@
+= Commande Produit
+:page-en: commands/Product_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Produit( <Liste Nombres> )::
+  Produit de tous les nombres de la liste.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Produit({1,2,3,4})++` retourne le nombre _24_.
+
+====
+
+Produit( <Liste Nombres>, <Nombre Éléments n> )::
+  Produit des _n_ premiers nombres de la liste.
+
+[EXAMPLE]
+====
+
+*Exemple :* `++Produit({1,2,3,4},3)++` retourne le nombre _6_.
+
+====
+
+Produit(<Liste Nombres>, <Liste Effectifs> )::
+  Calcule le produit de tous les éléments de la liste affecté chacun de l'exposant indiqué dans la Liste Effectifs
+
+[EXAMPLE]
+====
+
+*Exemples :* `++Produit( {2, 4, 5, 6}, {4, 3, 2, 1} )++` retourne
+__153600__`++Produit( {sqrt(2), cbrt(3), sqrt(5), cbrt(-7)}, {4, 3, 2, 3} )++` retourne _-420_
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Avec la possibilité de travailler en littéral pour la [.underline]#première# syntaxe :
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++Produit({2,e,5})++` retourne _10 e_ ;
+
+`++Produit({u,v,w})++` retourne _u v w_.
+
+====
+
+et une syntaxe supplémentaire :
+
+Produit( <Expression>, <Variable>, <Valeur de départ D>, <Valeur finale A> )::
+  Calcule le produit des valeurs prises par l'expression pour chaque valeur entière dans [_D ; A_] de la variable .
+
+[EXAMPLE]
+====
+
+*Exemples :*  
+
+`++Produit(x+1, x,1,2)++` retourne _6_ = (1+1)(2+1) ;
+
+`++Produit(n+1, n, 2, 3)++` retourne __12__= (2+1)(3+1).
+
+====

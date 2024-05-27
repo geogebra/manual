@@ -1,0 +1,52 @@
+= Comando Intercala
+:page-en: commands/Insert_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Intercala( <Objeto>, <Lista>, <Posición> )::
+  Inserta el objeto en la lista en la posición indicada.
+Intercala( <Lista>, <Lista>, <Posición> )::
+  Inserta todos los elementos de la primera lista en la segunda, en la posición indicada.
+
+[EXAMPLE]
+====
+
+`++ Intercala({11, 12}, {1, 2, 3, 4, 5}, -2)++` ubica los elementos de la primera lista al final de la segunda lista,
+antes del último elemento, y crea la lista _\{1, 2, 3, 4, 11, 12, 5}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++ Intercala({11, 12}, {1, 2, 3, 4, 5}, 3)++` ubica los elementos de la primmera lista en el tercer lugar (y
+siguientes) de la segunda lista, y crea la lista _\{1, 2, 11, 12, 3, 4, 5}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++ Intercala(x^2, {1, 2, 3, 4, 5}, -1)++` ubica _x^2^_ al final de la lista y crea _\{1, 2, 3, 4, 5, x^2^}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++ Intercala(x^2, {1, 2, 3, 4, 5}, 3)++` coloca _x^2^_ en la tercera posición y crea la lista _\{1, 2, x^2^, 3, 4, 5}_.
+
+====
+
+[NOTE]
+====
+
+Si la posición es un número negativo, entonces la ubicación se cuenta desde la derecha.
+
+====
+
+[NOTE]
+====
+
+Si la posición es un número negativo, entonces la ubicación se cuenta desde la derecha.
+
+====

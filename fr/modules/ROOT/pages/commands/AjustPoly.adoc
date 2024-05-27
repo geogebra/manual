@@ -1,0 +1,35 @@
+= Commande AjustPoly
+:page-en: commands/FitPoly_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+AjustPoly(<Liste Points>,<Degré>)::
+  Calcule une régression polynomiale de degré _n_.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++AjustPoly({(-1, -1), (0, 1), (1, 1), (2, 5)}, 3)++` retourne _x^3^ - x^2^ + 1_.
+
+====
+
+[NOTE]
+====
+
+*Note :* Pour un ordre _n_, la liste doit contenir au moins _n + 1_ points.
+
+====
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/Ajustement.adoc[Ajustement],
+xref:/commands/AjustExp.adoc[AjustExp], xref:/commands/AjustImplicite.adoc[AjustImplicite],
+xref:/commands/AjustLin.adoc[AjustLin], xref:/commands/AjustLinX.adoc[AjustLinX],
+xref:/commands/AjustLog.adoc[AjustLog], xref:/commands/AjustLogistique.adoc[AjustLogistique],
+xref:/commands/AjustPuissance.adoc[AjustPuissance] et xref:/commands/AjustSin.adoc[AjustSin].

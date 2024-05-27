@@ -1,0 +1,37 @@
+= Comando DistribuciónFInversa
+:page-en: commands/InverseFDistribution_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+*DistribuciónFInversa*[ <Grados de Libertad del Numerador>, <Grados de Libertad del Denominador>, <Probabilidad> ]::
+  Calcula, para el valor señalado para los grados de libertad y el asignado a la probabilidad, el valor de la
+  http://en.wikipedia.org/wiki/es:Funci%C3%B3n_Distribuici%C3%B3n_Acumulada#Funci.C3.B3n_de_Distribuci.C3.B3n_Acumulada_Inversa_.28Funci.C3.B3n_Cuantil.29[inversa]
+  de la http://en.wikipedia.org/wiki/es:Funci%C3%B3n_Distribuici%C3%B3n_Acumulada[función acumulada^*_fda_*^] de
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_F[*Distribución F*] (en inglés
+  http://en.wikipedia.org/wiki/F-distribution[_F-distribution_]).Así, *DistribuciónFInversa[n, d, p]* establece el valor
+  de _t_ tal que:
+  _P(X ≤ t) = p_
+  .. siendo _X_ la http://en.wikipedia.org/wiki/es:Variable_aleatoria[variable aleatoria] sujeta a una
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_F[*Distribución F*] con _n_ y _d_ como grados de libertad (del
+  numerador y el denominador respectivamente).
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: El valor de la probabilidad, _p_, debe estar dentro
+del rango apropiado, [0, 1].
+
+====
+
+[EXAMPLE]
+====
+
+*`++DistribuciónFInversa[10, 3, 1/2]++`* da _1.18_
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/DistribuciónF.adoc[DistribuciónF].
+
+====

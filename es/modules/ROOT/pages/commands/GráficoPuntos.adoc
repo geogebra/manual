@@ -1,0 +1,80 @@
+= Comando GráficoPuntos
+:page-en: commands/DotPlot_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+GráficoPuntos[ <Lista de Datos Brutos> ]::
+  A partir de la lista de números, traza el gráfico de puntos de modo tal que por cada número _a_ que aparezca en la
+  lista _k_ veces, la del resultado contiene puntos tales como _(a, 1), (a, 2) ,... ,(a, k)_.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* `++GráficoPuntos[{2, 5, 3, 4, 3, 5, 3}]++` crea el gráfico del conjunto de puntos de la siguiente
+xref:/Listas.adoc[lista] __*\{*(2, 1), (3, 1), (3, 2), (3, 3), (4, 1), (5, 1), (5, 2)*}*__Siendo
+*`++l_p := Secuencia[AleatorioEntre][-5, 5], ñ, 1, 10 + n_d]++`* una lista de valores que varía aleatoriamente según se
+indica...*`++GráficoPuntos[l_p]++`* da por resultado una lista como una de las ilustradas en el correspondiente _gráfico
+de puntos_:_\{(-5, 1), (-4, 1), (-3, 1), (-1, 1), (0, 1), (0, 2), (0, 3), (2, 1), (3, 1), (4, 1), (5, 1)}_ o \{(-5, 1),
+(-3, 1), (-3, 2), (-2, 1), (-2, 2), (-2, 3), (-1, 1), (-1, 2), (0, 1), (1, 1), (3, 1), (5, 1)}... entre otras
+aleatoriamente posibles.
+
+====
+
+'''''
+
+[.small]#El boceto ilustra _animadamente_ la lista de números de entrada y la de puntos y el gráfico resultantes.#
+
+[.small]##
+
+'''''
+
+/Archivo:Grafico_de_Puntos_gif.adoc[image:Grafico_de_Puntos.gif[Grafico de Puntos.gif,width=482,height=549]]
+
+'''''
+
+[.small]##
+
+[.small]##
+
+Nueva sintaxis
+
+GráficoPuntos[ <Lista de Datos Brutos>, <Pila de Puntos Adyacentes (opcional)>, <Factor de Escala (opcional)>]::
+  Crea el gráfico de puntos a partir de la lista de datos y la de puntos.Si aparece en la lista el dato e**_n_**ésimo
+  _k_ veces, la lista resultante contendrá lo siguiente:_(n, 1), (n, 2),..., (n, k)_.
+  Si se opta por un _Factor de Escala s_, la lista contendrá los puntos _(n, 1s), (n, 2s),..., (n, ks)_.
+  La _Pila de Puntos Adyacentes_ es una variable _booleana_ que toma el valor lógico **_cierto_**^_true_^ o
+  **_falso_**^_false_^ de modo que se _apilan_ los puntos cercanos si es verdadera.Optar por el valor _falso_ tiene el
+  mismo efecto que obviar esta variable opcional.
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: El comando puede también operar con
+xref:/Listas.adoc[listas] de xref:/Textos.adoc[textos]
+====
+
+[EXAMPLE]
+====
+
+`++GráficoPuntos[{"Rojo", "Rojo", "Rojo", "Azul", "Azul"}]++` da por resultado _\{(1, 1), (1, 2), (2, 1), (2, 2), (2,
+3)}_.
+
+====
+
+'''''
+
+[NOTE]
+====
+
+De operar con una xref:/Listas.adoc[lista] de xref:/Textos.adoc[textos], el comando ordenará el resultado
+alfabéticamente.Así, _Azul_ aparecerá dos veces y _Rojo_, tres y como la *_A_* precede a la *_R_* alfabéticamente, se
+obtendrá (1,1),(1,2) para _Azul_ y (2,1),(2,2),(2,3) para _Rojo_.
+
+====

@@ -1,0 +1,111 @@
+= Comando Soluciones
+:page-en: commands/Solutions_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[*De*] la xref:/Vista_CAS.adoc[Vista C~[.small]#omputación#~A~[.small]#lgebraica#~S~[.small]#imbólica#~]
+
+Este xref:/Comandos.adoc[comando], que resuelve la ecuación o el sistema para la variable o lista de variables indicada,
+obra sobre el conjunto *ℝ* de los
+http://en.wikipedia.org/wiki/es:N%C3%BAmeros_reales#Tipos_de_n.C3.BAmeros_reales[[.small]##*ℝ*##eales]. y admite
+literales en operaciones simbólicas.
+
+Soluciones( <Ecuación> )::
+  Lista las raíces
+  http://en.wikipedia.org/wiki/es:N%C3%BAmeros_reales#Tipos_de_n.C3.BAmeros_reales[[.small]##*ℝ*##eales] de la ecuación
+  (o sistema de ecuaciones) respecto de la variable principal.
+
+[EXAMPLE]
+====
+
+*Ejemplos:* *`++Soluciones[x^2 = 4x]++`* da _\{4, 0}_, soluciones de __x^2^ = 4x__**`++Soluciones[x^2 = x - 4]++`** da
+**\{}**[.small]##No ofrece las raíces [.small]##*ℂ*##omplejas *\{* stem:[\frac\{-ί \sqrt\{15} + 1}\{2}, \frac\{ί
+\sqrt\{15} + 1}\{2} , -1 ] *}* que brindaría
+xref:/commands/SolucionesC.adoc[SolucionesC]##*`++Soluciones[t^2 = 2 t +1]++`* da, siendo _t_ la variable principal, la
+lista de soluciones *\{* stem:[\sqrt\{2}] + 1, -stem:[\sqrt\{2}] + 1**}**
+
+====
+
+[NOTE]
+====
+
+Para acceder a las raíces xref:/Números_complejos.adoc[**ℂ**omplejas] eludidas, puede recurrirse al comando
+xref:/commands/SolucionesC.adoc[SolucionesC].
+
+====
+
+Soluciones( <Ecuación>, <Variable> )::
+  Lista las raíces
+  http://en.wikipedia.org/wiki/es:N%C3%BAmeros_reales#Tipos_de_n.C3.BAmeros_reales[[.small]##*ℝ*##eales] de la ecuación
+  respecto de la variable indicada.
+Soluciones( <Lista de Ecuaciones>, <Lista de Variables> )::
+  Lista las raíces
+  http://en.wikipedia.org/wiki/es:N%C3%BAmeros_reales#Tipos_de_n.C3.BAmeros_reales[[.small]##*ℝ*##eales] del sistema de
+  ecuaciones respecto de las variables dadas.
+
+[EXAMPLE]
+====
+
+*Ejemplos:*
+
+* *`++Soluciones[{2a^2 + 5a + 3 = b, a + b = 3}, {a, b}]++`*, da por resultado:stem:[\left (\begin\{array} 0&3\\ -3&6\\
+\end\{array}\right)] con las dos soluciones \{0,3} y \{-3,6}
+* *`++Soluciones[{ñ = k ñ + ü, ü + ñ = -2}, {ñ, ü}]++`* da:**\{**stem:[\begin\{array}\frac\{2}\{k - 2}&\frac\{-2 k +
+2}\{k - 2}\\\end\{array}]**}**la única solución del sistema stem:[\begin\{array}ñ = k ñ + ü \\ ü + ñ = -2 \\
+\end\{array}]
+* *`++Soluciones[{x = 4 x + y , y + x = 2}, {x, y}]++`* da _( -1 3)_, la única solución del sistema stem:[\begin\{array}
+x=4x+y \\ y+x=2 \\ \end\{array}]
+
+====
+
+[EXAMPLE]
+====
+
+*`++Soluciones[x * ñ^2 = 4ñ, ñ]++`* da stem:[\\{\frac\{4}\{x},0\}], soluciones de _x ñ^2^ = 4ñ_
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención:
+
+* Pueden ser necesarias algunas manipulaciones que permitan la operación de las soluciones automáticas. Por ejemplo, a
+expensas de comandos como xref:/commands/TrigDesarrolla.adoc[TrigDesarrolla].
+
+====
+
+[NOTE]
+====
+
+Siempre que sea viable, al _tildar_ el refondelito que encabeza la fila pertinente de la xref:/Vista_CAS.adoc[Vista
+CAS], además de cobrar entindad de xref:/Objetos.adoc[objeto] xref:/Vista_Algebraica.adoc[algebraico] la lista de
+raíces, se registran xref:/Vista_Gráfica.adoc[gráficamente] los puntos respectivos, sobre el
+xref:/Líneas_y_Ejes.adoc[eje _x_].
+
+====
+
+[EXAMPLE]
+====
+
+*`++ Soluciones[TrigDesarrolla[sin(5/4 π+x)-cos(x-3/4 π)=sqrt(6) * cos(x)-sqrt(2)]] ++`* da **\{**stem:[\frac\{1}\{2}]
+stem:[\pi], stem:[\frac\{11}\{6}] stem:[\pi]**}**
+
+====
+
+[NOTE]
+====
+
+*Notas:*
+
+* Revisar también los comandos xref:/commands/Resuelve.adoc[Resuelve] y xref:/commands/SolucionesC.adoc[SolucionesC]
+* El símbolo de los xref:/Números_complejos.adoc[**ℂ**omplejas], *ί*, se obtiene pulsando [.kcode]#Alt# + [.kcode]#i#
+
+====

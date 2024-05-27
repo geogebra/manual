@@ -1,0 +1,82 @@
+= Comando Integral
+:page-en: commands/Integral_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+Integral( <Función> )::
+  Da como resultado la integral indefinida con respecto a la variable principal.
+Integral( <Función>, <Variable> )::
+  Da como resultado la integral con respecto a la variable indicada.
+Integral( <Función>, <Extremo inferior del intervalo>, <Extremo superior del intervalo> )::
+  Da como resultado la integral definida en el intervalo _[Extremo inferior del intervalo , Extremo superior del
+  intervalo]_ con respecto a la variable principal.
+Integral( <Función>, <Extremo inferior del intervalo>, <Extremo superior del intervalo>, <Evaluar o no
+((true)/(false))>)::
+  Da como resultado la integral definida en el intervalo _[Extremo inferior del intervalo , Extremo superior del
+  intervalo]_ con respecto a la variable principal y sombrea la región relacionada si _Evaluar o no_ tiene como valor
+  _true_ (verdadero. En caso de que _Evaluar o no_ sea _false_ (falso) la región relacionada se sombrea, pero el valor
+  de la integral no se calcula.
+
+[EXAMPLE]
+====
+
+`++Integral(x³+3x y, x)++` devuelve _stem:[\frac\{1}\{4}x^4] + stem:[\frac\{3}\{2}] x² y_ .
+
+====
+
+[EXAMPLE]
+====
+
+`++Integral(x^3)++` devuelve stem:[x^4 \cdot 0.25].
+
+====
+
+[NOTE]
+====
+
+Este comando también sombrea el área entre la gráfica de la función y el eje x.
+
+====
+
+== Sintaxis CAS
+
+En la image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[Vista CAS] las
+variables indeterminadas también son permitidas como entradas.
+
+[EXAMPLE]
+====
+
+`++Integral(cos(a t), t)++` da por resultado stem:[\frac\{sen(a t)}\{a} + c_1].
+
+====
+
+Además, el siguiente comando solamente está disponible en la image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] _Vista CAS_:
+
+Integral( <Función>, <Variable>, <Extremo inferior del intervalo>, <Extremo superior del intervalo> )::
+  Da como resultado la integral definida en el intervalo _[Extremo inferior del intervalo, Extremo superior del
+  intervalo]_ con respecto a la variable indicada.
+
+[EXAMPLE]
+====
+
+`++Integral(cos(t), t, a, b)++` da por resultado stem:[- sen(a) + sen(b)].
+
+====
+
+[NOTE]
+====
+
+* No se garantiza que la solución sea continua, por ejemplo `++Integral(floor(x))++`, que es la integral de la función
+⌊x⌋ - en ese caso, puedes definir tu propia función, por ejemplo
+`++F(x)=(floor(x)² - floor(x))/2 + x floor(x) - floor(x)²++`, es decir, la función stem:[\frac\{⌊x⌋² - ⌊x⌋}\{2} + x
+\cdot⌊x⌋ - ⌊x⌋²]
+
+====

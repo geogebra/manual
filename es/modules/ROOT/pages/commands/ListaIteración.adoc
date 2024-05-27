@@ -1,0 +1,53 @@
+= Comando ListaIteración
+:page-en: commands/IterationList_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+*ListaIteración*[ <Función~f~>, <Valor Inicial~x~o~~>, <Número de Iteraciones~n~> ]::
+  Crea la xref:/Listas.adoc[lista] cuyos elementos son las *_n_* imágenes iterativas de la función para el valor inicial
+  indicado, que ocupa el primer lugar.
+
+[NOTE]
+====
+
+La longitud de la lista resultante excede en 1 el número de iteraciones.Así, *`++ListaIteración[ f, x_o, n ]++`* da por
+resultado la lista de longitud _n+1_ cuyos elementos son iteraciones de la función _f_ a partir del valor de _x_o_
+
+====
+
+[EXAMPLE]
+====
+
+Después de definir `++f(x) = x^2++` el comando `++ListaIteración[f, 3, 2]++` da por resultado la lista _L = \{3, 9, 81}_
+lo que equivale a _\{3,3^2^,(3^2^)^2^}_
+
+====
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+Se admiten literales para operar simbólicamente, dejando resultados disponibles para obrar vía
+/Archivo:Mode_substitute_png.adoc[image:Mode_substitute.png[Mode substitute.png,width=32,height=32]]
+xref:/tools/Sustituye.adoc[sustitución].
+
+[EXAMPLE]
+====
+
+*`++l_i := ListaIteración[k x^2 + ñ, 3, 2]++`* da por resultado la lista _l_i:=\{3, 3x² + ñ, 3x⁴ + x² ñ + ñ}_.
+
+====
+
+'''''
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/Iteración.adoc[Iteración].
+
+====

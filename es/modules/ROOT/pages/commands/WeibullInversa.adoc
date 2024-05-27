@@ -1,0 +1,37 @@
+= Comando WeibullInversa
+:page-en: commands/InverseWeibull_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+WeibullInversa( <Forma>, <Escala>, <Probabilidad> )::
+  Calcula, para la probabilidad indicada, la
+  http://en.wikipedia.org/wiki/es:Funci%C3%B3n_Distribuici%C3%B3n_Acumulada#Funci.C3.B3n_de_Distribuci.C3.B3n_Acumulada_Inversa_.28Funci.C3.B3n_Cuantil.29[inversa]
+  de la función http://en.wikipedia.org/wiki/es:Funci%C3%B3n_Distribuici%C3%B3n_Acumulada[*_fda_*, acumulada] de la
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_de_Weibull[_Distribución de Weibull_]
+  (http://en.wikipedia.org/wiki/Weibull_distribution[_Weibull distribution_] en inglés) con los valores paramétricos
+  dados.Así, *WeibullInversa[k, λ, p]* hace el cálculo para la probabilidad _p_ y da por resultado _t_ tal que:
+  *P(X ≤ t) = p*
+  .. siendo _X_ una http://en.wikipedia.org/wiki/es:Variable_aleatoria[variable aleatoria] sujeta a una
+  http://en.wikipedia.org/wiki/es:Distribuci%C3%B3n_de_Weibull[_Distribución de Weibull_] de parámetros *k* y *λ*.
+
+  '''''
+
+[EXAMPLE]
+====
+
+*`++WeibullInversa[24, 1/6, 1/3]++`* da por resultado _0.16_.
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/Weibull.adoc[Weibull].
+
+====
+
+[NOTE]
+====
+
+El valor de la probabilidad _p_ debe restringirse al rango válido _[0, 1]_.
+
+====

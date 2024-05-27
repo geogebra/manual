@@ -1,0 +1,29 @@
+= Příkaz Gama
+:page-en: commands/Gamma_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Gama( <Alfa>, <Beta>, x )::
+  Vytvoří hustotu pravděpodobnosti gama rozdělení s parametry _α, β_
+  (http://en.wikipedia.org/wiki/Gamma_distribution[gamma distribution]).
+Gama( <Alfa>, <Beta>, x, <Kumulativní (logická hodnota)> )::
+  Pokud je kumulativní hodnota=__true__, je výsledkem distribuční funkce gama rozdělení s parametry _α, β_, jinak je
+  vrácena hustota pravděpodobnosti (předchozí syntaxe).
+Gama( <Alfa>, <Beta>, <Hodnota proměnné x> )::
+  Vypočítá hodnotu distribuční funkce gama rozdělení pro danou hodnotu _x_.
+
+[NOTE]
+====
+
+Distribuční funkce náhodné proměnné _X_ pro hodnotu _x_ je pravěpodobnost _P(X≤x)_, tedy je to obsah plochy pod grafem
+hustoty pravděpodobnosti, nalevo od dané hodnoty _x_.
+
+====
+
+== CAS pohled
+
+V okně CAS je podporována jen syntaxe
+
+Gama( <Alfa>, <Beta>, <Hodnota proměnné x> )
+
+Vypočítá hodnotu distribuční funkce gama rozdělení s parametry _α, β_ pro danou hodnotu _x_, tj. pravěpodobnost
+_P(X≤x)_, kde _X_ je náhodná veličina s gama rozdělením.

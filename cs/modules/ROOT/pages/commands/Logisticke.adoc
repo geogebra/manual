@@ -1,0 +1,36 @@
+= Příkaz Logisticke
+:page-en: commands/Logistic_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Logisticke( <Průměr μ>, <Stupnice s>, x )::
+  Vytvoří funkci hustoty pravděpodobnosti logistického rozdělení
+  (http://en.wikipedia.org/wiki/Logistic_distribution[logistic distribution]) s parametry μ a s.
+Logisticke( <Průměr μ>, <Stupnice s>, x, <Kumulativní (logická hodnota)> )::
+  Pokud má pravdivostní hodnota _Kumulativní_ hodnotu _true_, vytvoří příkaz distribiční funkci logistického rozdělení,
+  jinak vytvoří funkci hustoty pravděpodobnosti.
+Logisticke( <Průměr μ>, <Stupnice s>, <Hodnota proměnné v> )::
+  Vypočte hodnotu distribuční funkce logistického rozdělení ve v, tj. pravděpodobnost P(X≤v), kde X je náhodná veličina
+  s logistickým rozdělením s parametry μ a s.
+
+[NOTE]
+====
+
+Výsledkem je pravděpodobnost pro danou hodnotu _x_-ové souřadnice (nebo plocha pod křivkou distribuční funkce
+logistického rozdělení nalevo od dané _x_-ové souřadnice).
+
+====
+
+== CAS pohled
+
+V xref:/CAS_pohled.adoc[CAS pohledu] je podporována pouze následující syntaxe:
+
+Logisticke( <Průměr μ>, <Stupnice s>, <Hodnota proměnné v> )::
+  Vypočte hodnotu distribuční funkce logistického rozdělení ve v, tj. pravděpodobnost P(X≤v), kde X je náhodná veličina
+  s logistickým rozdělením s parametry μ a s.
+
+[NOTE]
+====
+
+Anglická verze: /s_index_php?title=En:Manual:Logistic_Command_action=edit_redlink=1.adoc[Logistic Command]
+
+====

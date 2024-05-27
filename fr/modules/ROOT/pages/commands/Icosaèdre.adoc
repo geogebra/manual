@@ -1,0 +1,39 @@
+= Commande Icosaèdre
+:page-en: commands/Icosahedron_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+*/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] Graphique 3D*
+
+Icosaèdre( <Point A>, <Point B>, <Direction> )::
+  Crée un icosaèdre régulier convexe ayant le segment *[AB]* comme arête.
+
+Les autres sommets sont déterminés par la donnée "Direction", à choisir parmi :
+
+. un vecteur, un segment, une demi-droite, une droite *orthogonal(e)* à [AB] ;
+. un polygone dans un plan *parallèle* à [AB] ;
+. un plan *parallèle* à [AB].
+
+L'icosaèdre créé a :
+
+. une face d'arête [AB] dans un plan orthogonal au vecteur/segment donné, à la demi-droite/droite donnée ;
+. une face d'arête [AB] dans un plan parallèle à celui du polygone ;
+. une face d'arête [AB] dans un plan parallèle au plan donné.
+
+Icosaèdre( <Point A>, <Point B>, <Point C>)::
+  Crée un icosaèdre à partir des trois points d'une face, ces 3 points devant être les sommets d'un triangle
+  équilatéral.
+
+Icosaèdre( <Point A>, <Point B> )::
+  Crée un icosaèdre régulier convexe ayant le segment *[AB]* comme arête, vous pouvez ensuite le faire pivoter autour de
+  cette arête, en déplaçant à la souris le 1er point _C_ supplémentaire créé.
+  *Note :* Cette syntaxe est un raccourci de la commande précédente, avec [.underline]#C = Point(Cercle(MilieuCentre(A,
+  B), Distance(A, B) sqrt(3) / 2, Segment(A, B)))#.
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/Cube.adoc[Cube], xref:/commands/Octaèdre.adoc[Octaèdre],
+xref:/commands/Tétraèdre.adoc[Tétraèdre], xref:/commands/Dodécaèdre.adoc[Dodécaèdre] .
+
+====

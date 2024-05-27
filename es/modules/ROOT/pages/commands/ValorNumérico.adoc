@@ -1,0 +1,54 @@
+= Comando ValorNumérico
+:page-en: commands/Numeric_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[De] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+ValorNumérico[ <Expresión> ]::
+  Da por resultado una aproximación al valor numérico de la expresión dada.
+ValorNumérico[ <Expresión>, <Número de cifras significativas> ]::
+  Da por resultado una aproximación al valor numérico de la expresión dada, con el número fijado para las cifras
+  significativas.
+
+[EXAMPLE]
+====
+
+*`++ValorNumérico[sin(1), 20]++`* da por resultado __0.84__^[.small]#con 15 Decimales, _0.84147098480789650665_#^
+
+====
+
+[EXAMPLE]
+====
+
+*`++ValorNumérico[3/2]++`* da por resultado _1.5_.
+
+====
+
+[NOTE]
+====
+
+De no especificarse suficientes dígitos, se pueden obtener resultados aparentemente erróneos debido a la
+http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html[cancelación de punto flotante (_floating point
+cancelation_ en inglés)] por
+ejemplo:`++ValorNumérico[-500000000 / 785398163* sin(785398163 / 500000000 )* 1258025227.19^2 + 500000000 / 785398163* 1258025227.19^2,10 ]++`
+dará 0
+pero`++ValorNumérico[-500000000 / 785398163* sin(785398163 / 500000000) * 1258025227.19^2 +500000000 / 785398163 * 1258025227.19^2, 30 ]++`
+dará 0.318309886345536696694580314215
+
+====
+
+[NOTE]
+====
+
+El número de decimales depende del xref:/Menú_de_Opciones.adoc[redondeo _global_] elegido en el
+xref:/Menú_de_Opciones.adoc[Menú de Opciones].
+
+====

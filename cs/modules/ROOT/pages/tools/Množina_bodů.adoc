@@ -1,0 +1,33 @@
+= Nástroj Množina bodů
+:page-en: tools/Locus_Tool
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Nejprve klikneme na bod _B_, jehož množinu chceme získat a jehož poloha závisí na jiném bodě _A_. Poté, kliknutím na
+tento bod _A_, příslušnou množinu bodu _B_ sestrojíme (viz také příkaz xref:/commands/MnozinaBodu.adoc[MnozinaBodu]).
+
+[EXAMPLE]
+====
+
+* Zadáme `++f(x) = x^2 – 2 x – 1++` do _Vstupního řádku_ a stiskneme tlačítko _Enter_.
+* Na osu _x_ umístíme nový bod _A_ (viz nástroj /Soubor:Tool_New_Point_gif.adoc[image:Tool_New_Point.gif[Tool New
+Point.gif,width=32,height=32]]xref:/tools/Nový_bod.adoc[Nový bod] ; viz příkaz xref:/commands/Bod.adoc[Bod]).
+* Vytvoříme bod `++B = (x(A), f'(x(A)))++` který je závislý na bodu _A_.
+* Zvolíme nástroj /Soubor:Tool_Locus_gif.adoc[image:Tool_Locus.gif[Tool Locus.gif,width=32,height=32]] a postupně
+klikneme na body _B_ a _A_. Vykreslí se přímka - množina poloh bodu _B_ při pohybu bodu _A_.
+* Pohybujeme bodem _A_ po ose _x_ a sledujeme, jak se bod _B_ pohybuje po své množině.
+
+====
+
+[NOTE]
+====
+
+Bod _A_ musí být bodem na nějakém objektu (např. na přímce, úsečce/intervalu, kružnici).
+
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Varování,title="Varování",width=18,height=18] *Varování*: |Množina bodů není definována, pokud
+je závislý bod určen příkazem xref:/commands/Bod.adoc[Bod] se dvěma parametry nebo příkazem
+xref:/commands/ParametrCesty.adoc[ParametrCesty].
+|===

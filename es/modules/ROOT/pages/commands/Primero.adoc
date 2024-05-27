@@ -1,0 +1,62 @@
+= Comando Primero
+:page-en: commands/First_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Primero( <Lista> )::
+  Devuelve una nueva lista que contiene el primer elemento de la lista dada.
+Primero( <Lista>, <Número de elementos __n__> )::
+  Devuelve una nueva lista que contiene solamente los primeros _n_ elementos de la lista original.
+Primero( <Texto> )::
+  Devuelve el primer carácter del texto.
+Primero( <Texto> , <Número de elementos __n__> )::
+  Gives the first _n_ characters of the text.
+Primero( <Lugar geométrico>, <Número de elementos __n__> )::
+  Este comando puede utilizarse con
+  * lugares geométricos generados con xref:/commands/ResuelveEDO.adoc[Comando ResuelveEDO] - Devuelve la lista de los
+  puntos creados en los primeros _n_ pasos del algoritmo de resolución numérica de la ecuación diferencial ordinaria.
+  * lugares geométricos generados con los comandos xref:/commands/MenorDistancia.adoc[MenorDistancia],
+  xref:/commands/Viajante.adoc[Viajante], xref:/commands/Voronoi.adoc[Voronoi],
+  xref:/commands/ÁrbolRecubridorMínimo.adoc[ÁrbolRecubridorMínimo] y xref:/commands/CierreConvexo.adoc[CierreConvexo] -
+  Devuelve los vértices del grafo.
+
+[EXAMPLE]
+====
+
+`++Primero("Hola",2)++` devuelve _"Ho"_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Primero("Hola")++` devuelve _"H"_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Primero({1, 4, 3}, 2)++` devuelve _\{1, 4}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Primero({1, 4, 3})++` devuelve _\{1}_.
+
+====
+
+[NOTE]
+====
+
+Para obtener el primer elemento utiliza `++Elemento({1, 4, 3}, 1)++`.
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/Último.adoc[Último].
+
+====

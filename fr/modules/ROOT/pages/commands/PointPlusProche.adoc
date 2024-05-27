@@ -1,0 +1,31 @@
+= Commande PointPlusProche
+:page-en: commands/ClosestPoint_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+PointPlusProche( <Chemin C>, <Point A> )::
+  Retourne le point du xref:/Objets_géométriques.adoc[chemin] _C_ qui soit le plus proche du point _A_.
+
+[NOTE]
+====
+
+*Note :* Cette commande utilisée pour des xref:/Fonctions.adoc[fonctions] surtout polynomiales, retourne le point le
+plus proche et non plus le point de la courbe représentative de même ordonnée
+
+====
+
+PointPlusProche[ <Droite>, <Droite> ]::
+  Retourne
+
+* _non défini_ si les deux droites sont parallèles ;
+* leur point d'intersection, si elles sont sécantes ;
+
+[NOTE]
+====
+
+*/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=32,height=32]] Graphique 3D*
+
+* le point de la première droite qui soit le plus proche de la seconde droite (attention donc à l'ordre de vos
+paramètres).
+
+====

@@ -1,0 +1,103 @@
+= Commande Inverser
+:page-en: commands/Invert_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+*Note :* En mode Examen, la commande `++Inverser( <Fonction> )++` est désactivée si le Calcul formel n'est pas autorisé.
+Mais une nouvelle commande `++NInverser( <Fonction> )++` peut être utilisée.
+
+====
+
+Inverser( <Matrice> )::
+  Inverse la _Matrice_ donnée.
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Inverser({{1, 2}, {3, 4}})++` retourne stem:[\left(\begin\{array}-2 & 1\\1.5 & -0.5\end\{array} \right)], la matrice
+inverse de stem:[\left(\begin\{array}1 & 2\\3 & 4\end\{array} \right)].
+
+====
+
+Inverser( <Fonction> )::
+  Retourne la fonction réciproque de la _Fonction_ donnée .
+
+[width="100%",cols="50%,50%",]
+|===
+|image:18px-Attention.png[Attention,title="Attention",width=18,height=18] *Attention*: a|
+Hors Calcul formel, l'écriture de la fonction ne doit faire apparaître qu'une fois la variable _x_, de plus, ne sont
+pris en compte ni ensemble de définition, ni ensemble image, par exemple pour f(x)=x^2 ou f(x) = sin(x).
+
+|===
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+La fonction carrée n'est pas bijective sur stem:[ \R ], mais vous n'aurez pas de message d'erreur, `++Inverser(x²)++`,
+vous retournera la fonction, définie sur [0 ; + stem:[ \infty ][ par stem:[g(x) = \sqrt x ]; de même,
+`++Inverser(sin(x))++`, vous retournera la fonction, définie sur [-1 ; + 1] par stem:[h(x) = arcsin(x). ]
+
+====
+
+Si la variable _x_ apparaît plusieurs fois dans l'écriture de la fonction, l'appel direct de `++Inverser()++` va
+retourner une fonction _nondéfini_, mais d'autres commandes peuvent vous aider :
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+Les deux commandes
+
+`++Inverser(ElémentsSimples((x + 1) / (x + 2)))++` et
+
+`++Inverser(FormeCanonique(x²+2x+1))++`
+
+retournent les fonctions réciproques.
+
+====
+
+{empty}[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/NInverser.adoc[NInverser]
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+Avec la possibilité de travailler en littéral, et une prise en charge directe des écritures de fonctions.
+
+Inverser( <Matrice> )::
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+`++Inverser({{a, b}, {c, d}})++` retourne stem:[\left(\begin\{array}\frac\{d}\{ad- bc} & \frac\{-b}\{ad- bc}\\
+\frac\{-c}\{ad- bc}& \frac\{a}\{ ad- bc}\end\{array} \right)], la matrice inverse de stem:[\left(\begin\{array}a & b\\c
+& d\end\{array} \right)].
+
+====
+
+Inverser( <Fonction> )
+
+Ici, l'accès est facilité, ainsi, sans qu'il soit besoin de commandes supplémentaires :
+
+[EXAMPLE]
+====
+
+*Exemples :*
+
+`++Inverser((x + 1) / (x + 2))++` retourne stem:[\frac\{-2x+1}\{x-1} ] et
+
+`++Inverser(x^2 + 2 x + 1)++` retourne stem:[ \sqrt x - 1 ].
+
+====

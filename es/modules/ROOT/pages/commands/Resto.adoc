@@ -1,0 +1,30 @@
+= Comando Resto
+:page-en: commands/Mod_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Resto( <Número (dividendo)>, <Número (divisor)> )::
+  Devuelve el resto de la división entera entre el dividendo y el divisor.
+Resto( <Polinomio dividendo>, <Polinomio divisor> )::
+  Devuelve el polinomio resto de la división entera entre el polinomio dividendo y el polinomio divisor.
+
+[EXAMPLE]
+====
+
+`++ Resto(x^3 + x^2 + x + 6, x^2 - 3)++` devuelve _4 x + 9_.
+
+====
+
+[EXAMPLE]
+====
+
+`++ Resto(9, 4)++` devuelve _1_.
+
+====
+
+[NOTE]
+====
+
+Si deseas tener una función que provoque el mismo resultado, puedes crearla por tu cuenta, por ejemplo
+`++ Resto(x, y) = y (x / y - floor(x / y))++`.
+
+====

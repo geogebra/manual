@@ -1,0 +1,87 @@
+= Comando Frecuencia
+:page-en: commands/Frequency_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Frecuencia( <Lista de datos brutos> )::
+  Devuelve una lista con las frecuencias de cada uno de los valores de la lista dada. La lista original puede ser de
+  números o texto. La lista de frecuencias obtenida está ordenada de acuerdo a los valores únicos a los que corresponde
+  cada conteo. Para obtener la lista de estos valores se puede utilizar el comando xref:/commands/Único.adoc[Único].
+
+[EXAMPLE]
+====
+
+Ingresa `++lista1 = { "a", "a", "x", "x", "x", "b" }++`. `++ Frecuencia(lista1)++` devuelve la lista _\{ 2, 1, 3 }_.
+`++Único(lista1)++` devuelve la lista _\{ "a", "b", "x" }_.
+
+====
+
+Frecuencia( <Acumulada (true/false)>, <Lista de datos brutos> )::
+  Si _Acumulada_ = _false_, devuelve la misma lista que Frecuencia( <Lista de datos brutos> )
+  Si _Acumulada_ = _true_, devuelve la lista de frecuencias acumuladas de Frecuencia( <Lista de datos brutos> ) .
+
+[EXAMPLE]
+====
+
+Ingresa `++lista1 = { 0, 0, 0, 1, 1, 2 }++`. `++ Frecuencia(true, lista1)++` devuelve la lista _\{ 3, 5, 6 }_.
+`++Frequency(false, lista1)++` devuelve la lista__\{ 3, 2, 1}__. `++Único(lista1)++` devuelve la lista _\{ 0, 1, 2 }_.
+
+====
+
+Frecuencia( <Lista de límites de clases>, <Lista de datos brutos> )::
+  Devuelvue la lista de frecuencias de los valores de la lista dada agrupados según intervalos de la forma [a,b), siendo
+  _a_ y _b_ pares de números consecutivos de la lista de límites de clases dada. El último intervalo es de la forma
+  [a,b].
+
+[EXAMPLE]
+====
+
+`++ Frecuencia({1, 2, 3},  {1, 1, 2, 3})++` devuelve la lista _\{ 2, 2 }_.
+
+====
+
+Frecuencia( <Lista (textos)>, <Lista (textos)> )::
+  Devuelve una matriz de contingencia que cuenta la frecuencia de os pares de elementos correspondientes (uno de cada
+  lista). Las filas de la matriz corresponden a los valores únicos de la primera lista, y las columnas a los de la
+  segunda. Para obtener una lista de estos valores se puede usar el comando xref:/commands/Único.adoc[Único].
+
+[EXAMPLE]
+====
+
+Sea `++lista1 = {"a", "b", "b", "c", "c", "c", "c"}++` y `++lista2 =  {"a", "b", "a", "a", "c", "c", "d"}++`. Entonces
+`++ Frecuencia(lista1, lista2)++` devuelve la matriz stem:[\begin\{pmatrix} 1 & 0 & 0 & 0\\ 1 &1 & 0 &0 \\ 1 & 0 & 2 & 1
+\\ \end\{pmatrix}]
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/TablaContingencia.adoc[TablaContingencia].
+
+====
+
+Frecuencia( <Acumulada (true/false)>, <Lista de límites de clases>,<Lista de datos brutos> )::
+  Si _Acumulada_ = _false_, devuelve la misma lista que Frecuencia( <Lista de límites de clases>, <Lista de datos
+  brutos> )
+  Si _Acumulada_ = _true_, devuelve la lista de frecuencias acumuladas de Frecuencia( <Lista de límites de clases>,
+  <Lista de datos brutos> )
+
+Frecuencia( <Lista de límites de clases>, <Lista de datos brutos>, <Usar Densidad (true/false)>, <Factor de escala de
+densidad (opcional)> )::
+  Devuelve una lista de frecuencias para el correspondiente xref:/commands/Histograma.adoc[Comando Histograma].
+  Si _Usar Densidad_ = _false_, devuelve la misma lista que Frecuencia( <Lista de límites de clases>, <Lista de datos
+  brutos> )
+  Si _Usar Densidad_ = _true_, devuelve la lista de frecuencias de cada clase.
+
+[EXAMPLE]
+====
+
+Sea la lista de datos brutos `++datos = {1, 2, 2, 2, 3, 3, 4, 4, 4, 4}++` y `++clases={0, 2, 5}++` la lista de límites
+de clases. Entonces `++ Frecuencia(clases, datos, false)++` y `++ Frecuencia(clases, datos)++` devuelven ambos la lista
+_\{1, 9}_, mientras que `++Frequency(clases, datos, true)++` devuelve la lista _\{0.5, 3}_.
+
+====
+
+Frecuencia( <Acumulada (true/false)>, <Lista de límites de clases>, <Lista de datos brutos>, <Usar Densidad
+(true/false)>, <Factor de escala de densidad (opcional)> )::
+  Devuelve una lista de frecuencias para el correspondiente xref:/commands/Histograma.adoc[Comando Histograma].

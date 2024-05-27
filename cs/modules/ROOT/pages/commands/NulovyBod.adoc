@@ -1,0 +1,31 @@
+= Příkaz NulovyBod
+:page-en: commands/Root_Command
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+NulovyBod( <Mnohočlen> )::
+  Vypočítá a v grafu zobrazí všechny kořeny zadaného mnohočlenu jako průsečíky grafu funkce s osou x.
+
+NulovyBod( <Funkce>, <Puvodní hodnota x> )::
+  Newtonovou metodou se zadanou počáteční hodnotou (Původní hodnota) vypočítá jeden nulový bod dané funkce.
+
+NulovyBod( <Funkce>, <Počáteční hodnota x>, <Koncová hodnota x> )::
+  Metodou regula falsi vypočítá jeden nulový bod dané funkce na intervalu zadaném počáteční a koncovou hodnotou.
+
+== CAS pohled
+
+NulovyBod( <Polynom> )::
+  Vypočítá a v grafu zobrazí všechny kořeny zadaného polynomu jako průsečíky grafu funkce s osou x.
+
+[EXAMPLE]
+====
+
+`++NulovyBod[x^3 - 3 * x^2 - 4 * x + 12]++` vypočítá _\{x = 3, x = 2, x = -2}_.
+
+====
+
+[NOTE]
+====
+
+Tento příkaz je speciálním případem xref:/commands/Vyresit.adoc[Příkaz_Vyresit].
+
+====

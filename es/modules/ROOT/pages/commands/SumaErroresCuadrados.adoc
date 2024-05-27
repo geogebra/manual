@@ -1,0 +1,26 @@
+= Comando SumaErroresCuadrados
+:page-en: commands/SumSquaredErrors_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+/Archivo:UnderConstruction_png.adoc[image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]]
+
+|Página en proceso de traducción.
+|===
+
+SumaErroresCuadrados( <Lista de Puntos>, <Función> )::
+  Calcula la http://en.wikipedia.org/wiki/es:M%C3%ADnimos_cuadrados[suma de errores cuadrados],
+  (http://en.wikipedia.org/wiki/Least_squares[SSE] en inglés), entre las ordenadas -los valores de__y__- de los puntos y
+  las de la función para las abscisas correspondientes -los valores de _x_- de los puntos listados.
+
+[EXAMPLE]
+====
+
+Desde una lista de puntos: l := \{A, B, C, D, E}, se puede averiguar la diferencia entre las respectivas sumas de
+errores cuadrados (Gauss), comparando:`++sec_f=SumaErroresCuadrados[l, f]++` y `++sec_g=SumaErroresCuadrados[l, g]++`
+siendo `++f(x)=AjustePolinómico[l,3 ]++` y `++g(x)=AjustePolinómico[l, 2]++`.Este tipo de comparaciones ayuda a decidir
+el mejor tipo y grado de ajuste desde esa perspectiva.
+
+====

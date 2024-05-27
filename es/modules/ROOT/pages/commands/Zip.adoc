@@ -1,0 +1,48 @@
+= Comando Zip
+:page-en: commands/Zip_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Zip( <Expresión>, <Variable1>, <Lista1>, <Variable2>, <Lista2>, ...)::
+  Crea la xref:/Listas.adoc[lista] de los objetos que se obtienen al sustituir las variables de la expresión por los
+  elementos de las correspondientes listas. Si coinciden el número de varieables y el número de listas, cada variable se
+  toma de la lista que le sigue. Si hay una varianle más que listas, la última variable toma los valores 1, 2, 3, ...,
+  _k_ siendo _k_ la longitud de la lista más corta. La longitud de la lista obtenida es igual a la menor de las
+  longitudes de las listas consideradas.
+
+[EXAMPLE]
+====
+
+Pueden utilizarse funciones como variables: `++Zip(f(2), f, {x+1,x+3})++` da por resultado la lista _\{3, 5}_.
+
+====
+
+[EXAMPLE]
+====
+
+Consideremos la lista de números _lista1=\{1,2,5}_. `++Zip(Simplifica(a*x^(b-1), a, lista1,b)++` da por resultado la
+lista _\{1, 2x, 5x²}_.
+
+====
+
+[EXAMPLE]
+====
+
+Consideremos la lista de polinomios _lista1=\{x^2, x^3, x^6}_. `++Zip(Grado(a), a, lista1)++` da por resultado la lista
+_\{2, 3, 6}_.
+
+====
+
+[EXAMPLE]
+====
+
+Consideremos los puntos P, Q, R y S. `++Zip(PuntoMedio(A, B), A, {P, Q}, B, {R, S})++` devuelve la lista con los
+xref:/commands/PuntoMedio.adoc[puntos medios] de los segmentos _PR_ y _QS_.
+
+====
+
+[NOTE]
+====
+
+Los elementos de cada lista deben ser del mismo tipo.
+
+====

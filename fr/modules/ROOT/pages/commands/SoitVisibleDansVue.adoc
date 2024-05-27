@@ -1,0 +1,43 @@
+= Commande SoitVisibleDansVue
+:page-en: commands/SetVisibleInView_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+SoitVisibleDansVue( <Objet>, <Numéro 1|2|-1>, <Booléen> )::
+  Rend l'objet xref:/Propriétés_d'un_objet.adoc[visible] ou non dans
+
+[cols=",",options="header",]
+|===
+|Numéro |Vue
+|*1* |/Fichier:Menu_view_graphics_svg.adoc[image:24px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=24,height=24]] xref:/Graphique.adoc[Graphique]      
+
+|*2* |/Fichier:Menu_view_graphics2_svg.adoc[image:24px-Menu_view_graphics2.svg.png[Menu view
+graphics2.svg,width=24,height=24]] xref:/Graphique.adoc[Graphique 2]  
+
+|*-1* |/Fichier:Perspectives_algebra_3Dgraphics_svg.adoc[image:24px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+algebra 3Dgraphics.svg,width=24,height=24]] xref:/Graphique_3D.adoc[Graphique 3D]
+|===
+
+[EXAMPLE]
+====
+
+*Exemple :*
+
+Soit _a_ un booléen et _A_ un point 3D, ayant pour Script "Par Clic"
+
+`++a=!a ++`
+
+`++SoitVisibleDansVue(axeZ,-1, a)++`
+
+Alors le point _A_ sert de bouton "bascule" pour l'affichage de l'axe des "z".
+
+.
+
+====
+
+[NOTE]
+====
+
+*Note :* Les objets prédéfinis axeX,axeY ... axeZ et PlanxOy sont gérés par cette commande.
+
+====

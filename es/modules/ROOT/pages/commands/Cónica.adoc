@@ -1,0 +1,39 @@
+= Comando Cónica
+:page-en: commands/Conic_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Cónica( <Punto>, <Punto>, <Punto>, <Punto>, <Punto> )::
+  Devuelve la sección cónica que pasa por los cinco puntos.
+Cónica( <Número a>, <Número b>, <Número c>, <Número d>, <Número e>, <Número f> )::
+  Devuelve una sección cónica cuya ecuación tiene por coeficientes son los números dados: stem:[a\cdot x^2+d\cdot
+  xy+b\cdot y^2+e\cdot x+f\cdot y=-c]
+
+[EXAMPLE]
+====
+
+`++Cónica(2, 3, -1, 4, 2, -3)++` devuelve la cónica de ecuación _2x² + 4x y + 3y² + 2x - 3y = 1._
+
+====
+
+[EXAMPLE]
+====
+
+`++Cónica((0, -4), (2, 4), (3,1), (-2,3), (-3,-1))++` da por resultado _151x² - 37x y + 72y² + 14x - 42y = 1320_
+
+====
+
+[NOTE]
+====
+
+La sección cónica no queda efectivamente definida, si cuatro de estos cinco puntos estuvieran alineados.
+
+====
+
+[NOTE]
+====
+
+Ver también las herramientas: /Archivo:Mode_conic5_png.adoc[image:Mode_conic5.png[Mode conic5.png,width=32,height=32]]
+xref:/tools/Cónica_por_cinco_puntos.adoc[Cónica por cinco puntos] y el xref:/Comandos.adoc[comando]
+xref:/commands/Coeficientes.adoc[Coeficientes].
+
+====

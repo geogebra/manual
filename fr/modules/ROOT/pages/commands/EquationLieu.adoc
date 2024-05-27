@@ -1,0 +1,88 @@
+= Commande EquationLieu
+:page-en: commands/LocusEquation_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+EquationLieu( <Lieu> )::
+  Calcule l'équation d'un lieu et la représente en tant que xref:/Courbes.adoc[courbe implicite].
+
+[NOTE]
+====
+
+*Note :* Le _Lieu_ doit avoir été construit à partir d'un point, non d'un curseur.
+
+====
+
+EquationLieu( <Point Q décrivant le lieu>, <Point P> )::
+  Calcule l'équation d'un lieu en utilisant les entrées du point _Q_ décrivant le lieu et celles du point mobile _P_, et
+  la représente en tant que xref:/Courbes.adoc[courbe implicite].
+
+[EXAMPLE]
+====
+
+*Exemples :* *Paraboles*
+
+1) Décidons de construire une parabole en tant que lieu des *points équidistants* d'une droite (_d_) donnée, sa
+directrice, et d'un point _F_ donné, son foyer :
+
+Créons une droite _d_ et un point libre _F_. Maintenant, créons un point _P_ contraint à appartenir à _d_ (le point
+mobile),puis, par _P_, la perpendiculaire à _d_. Créons aussi la médiatrice _b_ des deux points _F_ et _P_. Finalement,
+le point _Q_ (le point décrivant le lieu) équidistant de _d_ et de _F_ est le point d'intersection des droites _p_ et
+_b_. Maintenant `++EquationLieu(Q,P)++` calcule l'équation exacte et représente la parabole recherchée.
+
+2) Intéressons nous au lieu de l'*orthocentre* du triangle ABC
+
+`++ A=(-1,1)++`, `++ B=(1,1)++`, et `++ C=Point(axeX)++`, définissons ces 3 points, puis 2 hauteurs et leur point
+d'intersection H (la commande TriangleCentre(A,B,C,4) pour construire H n'est pas compatible avec les algorithmes de
+lieux). La validation de `++EquationLieu(H,C)++` va définir la courbe implicite d'équation x²-y = 0, qui n'est rien
+d'autre que la parabole de référence.
+
+====
+
+[NOTE]
+====
+
+*Note :*
+
+* Cette commande ne fonctionne que pour un ensemble restreint de lieux géométriques : ceux qui utilisent des points, des
+lignes, des cercles, ou des coniques. (Demi-droites et segments sont traités comme étant des droites.)
+* Si le lieu est trop compliqué, alors GeoGebra va retourner 'non défini'.
+* S'il n'y a pas de lieu, alors la courbe implicite est l'ensemble vide 0=1.
+* Si le lieu est le plan tout entier, alors la courbe implicite a pour équation 0=0.
+* Le calcul est exécuté selon les http://en.wikipedia.org/wiki/fr:Base_de_Gr%C3%B6bner[bases de Gröbner], ce qui
+entraîne parfois l'apparition de branches de la courbe supplémentaires par rapport au lieu initial.
+
+====
+
+[NOTE]
+====
+
+*Note :* Voir aussi l'outil /Fichier:Mode_locus_svg.adoc[image:32px-Mode_locus.svg.png[Mode
+locus.svg,width=32,height=32]] xref:/tools/Lieu.adoc[Lieu] ainsi que la commande xref:/commands/Lieu.adoc[Lieu] .
+
+====
+
+EquationLieu( <Booléen>, <Point mobile> )::
+  Calcule le lieu du _Point mobile_ tel que la condition soit réalisée, et le retourne sous forme de courbe implicite.
+
+[EXAMPLE]
+====
+
+*Exemples :* `++EquationLieu(SontAlignés(A, B, C), C)++` calcule l'ensemble des positions du point mobile C telles que
+A, B et C soient alignés - ie la droite (AB) ;`++EquationLieu(SontPerpendiculaires(Droite(C,A), Droite(C,B)), C)++`
+calcule l'ensemble des positions du point mobile C telles que (CA) et (CB) soient perpendiculaires - ie le cercle de
+diamètre (AB).
+
+====
+
+[NOTE]
+====
+
+*Note :* Avec GeoGebra 5.0 et supérieure, un serveur distant peut être sollicité pour réaliser les calculs nécessaires,
+(ceci peut être désactivé en utilisant l'option de la ligne de commande `++--singularWS=enable:false++`).
+
+====
+
+* Informations et exemples sur ces http://www.geogebra.org/student/b121563#[GGbRecueil] de Noël Lambert et
+http://www.geogebra.org/book/title/id/mbXQuvUV[GGbRecueil] du développeur Zoltán Kovács
+* Un tutoriel : https://github.com/kovzol/gg-art-doc/blob/master/pdf/francais.pdf[Fonctionnalités de Raisonnement
+automatisé de GeoGebra].

@@ -1,0 +1,26 @@
+= Comando Celda
+:page-en: commands/Cell_Command
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Celda( <Columna>, <Fila> )::
+  Da por resultado una copia de la celda de la xref:/Hoja_de_Cálculo.adoc[hoja de cálculo] dada por la columna y la fila
+  indicadas.
+
+[EXAMPLE]
+====
+
+`++Celda(2, 1)++` da por resultado una copia de B1.
+
+====
+
+[NOTE]
+====
+
+* Por defecto, las celdas en la hoja de cálculo son objetos
+xref:/Objetos_libres_dependientes_y_auxiliares.adoc[auxiliares] por lo que este comando retorna objetos auxiliares
+también.
+* Debes asegurarte de que las celdas a las que haces referencia se hayan creado previamente en el
+image:16px-Menu_view_construction_protocol.svg.png[Menu view construction protocol.svg,width=16,height=16]
+xref:/Protocolo_de_Construcción.adoc[Protocolo de Construcción].
+
+====

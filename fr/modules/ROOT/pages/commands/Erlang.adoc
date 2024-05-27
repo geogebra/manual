@@ -1,0 +1,30 @@
+= Commande Erlang
+:page-en: commands/Erlang_Command
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Erlang( <Forme k>, <Intensité λ>, <Valeur Variable v> )::
+  Calcule la valeur de la fonction cumulée de la loi d'Erlang en _v_, i.e. la probabilité _P(X≤v)_ où _X_ est une
+  variable aléatoire suivant une loi d'Erlang de paramètres _k, λ_.
+
+[NOTE]
+====
+
+*Note :* Retourne la probabilité pour une valeur donnée d'abscisse (ou l'aire sous la courbe de la loi d'Erlang, à
+gauche de l'abscisse donnée).
+
+====
+
+Erlang( <Forme k>, <Intensité λ>, <Valeur Variable v>, <Booléen Cumul> )::
+  Si _Cumul_ est _true_, calcule la valeur de la fonction densité cumulée de probabilité de la loi d'Erlang, sinon
+  calcule la valeur de la fonction densité de probabilité de la loi d'Erlang.
+
+Erlang( <Forme k>, <Intensité λ>, x )::
+  Crée la fonction densité de probabilité de la http://en.wikipedia.org/wiki/fr:Distribution_d%27Erlang[loi d'Erlang] de
+  paramètres _k, λ_.
+
+____________________________________________________________
+
+/Fichier:Menu_view_cas_svg.adoc[image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]] *Calcul
+formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
