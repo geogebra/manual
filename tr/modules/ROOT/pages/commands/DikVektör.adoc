@@ -1,0 +1,74 @@
+= DikVektör Komut
+:page-en: commands/PerpendicularVector
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+DikVektör( <Doğru> )::
+  Bu doğruya dik vektörü verir.
+
+[EXAMPLE]
+====
+
+`++Doğru((1, 4), (5, -3))++` bir _j_ doğrusu olsun. `++DikVektör(j)++` komutu _j_ doğrusunun _u=(7, 4)_ dik vektörünü
+verir.
+
+====
+
+[NOTE]
+====
+
+_ax + by = c_ denklemi ile verilen doğrunun dik vektörü _(a, b)_ vektörüdür.
+
+====
+
+DikVektör( <Doğru Parçası> )::
+  Doğru parçasının aynı uzunluktaki dik vektörünü verir.
+DikVektör( <Vektör> )::
+  Verilen vektörün dik vektörünü verir.
+
+[EXAMPLE]
+====
+
+`++Vektör((-12, 8))++` bir _u_ vektörü olsun. `++DikVektör(u)++` komutu _u_ vektörünün _v=(-8, -12)_ dik vektörünü
+verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++DoğruParçası((3, 2), (14, 5))++` bir _k_ doğru parçası olsun. `++DikVektör(k)++` komutu _k_ doğru parçasının _u=(-3,
+11)_ dik vektörünü verir.
+
+====
+
+[NOTE]
+====
+
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_Görünümü.adoc[CAS Görünümünde] tanımsız
+değişkenlere de izin verilir.
+
+[EXAMPLE]
+====
+
+`++DikVektör((a, b))++` komutu _\{-b, a}_ vektörünü verir.
+
+====
+
+====
+
+DikVektör( <Düzlem> )::
+  Bu düzleme dik bir vektör verir.
+
+[EXAMPLE]
+====
+
+`++DikVektör(xOyDüzlemi)++` komutu xOy düzleminin _u=(0, 0, 1)_ dik vektörünü verir.
+
+====
+
+[NOTE]
+====
+
+xref:/commands/BirimDikVektör.adoc[BirimDikVektör] komutuna da bakın.
+
+====

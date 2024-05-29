@@ -1,0 +1,27 @@
+= UydurLojistik Komut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+UydurLojistik( <Nokta Listesi> )::
+  a/(1 + b e^(-kx)) şeklindeki regresyon eğrisini hesaplar.
+
+[EXAMPLE]
+====
+
+`++UydurLojistik({(-6, 2), (0, 2), (3, 4), (3.4, 8)})++` komutu stem:[ \frac\{1.98}\{1 - 0.03 e^\{1x}}] sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+* İlk ve son veri noktaları eğriye oldukça yakın olmalıdır. Liste en azından 3 tercihen daha fazla noktaya sahip
+olmalıdır.
+* xref:/commands/Uydur.adoc[Uydur], xref:/commands/UydurÜstel.adoc[UydurÜstel],
+xref:/commands/UydurBüyüme.adoc[UydurBüyüme], xref:/commands/UydurDoğru.adoc[UydurDoğru],
+xref:/commands/UydurDoğruX.adoc[UydurDoğruX], xref:/commands/UydurLog.adoc[UydurLog],
+xref:/commands/UydurPolinom.adoc[UydurPolinom], xref:/commands/UydurKuvvet.adoc[UydurKuvvet] ve
+xref:/commands/UydurSin.adoc[UydurSin] komutlarına da bakın.
+* Eğer büyük/küçük sayılar ile çalışıyorsanız daha doğru bir sonuç için bunları normalleştirmeyi düşünmelisiniz, bakın
+xref:/commands/Normalleştir.adoc[Normalleştir Komutu].
+
+====

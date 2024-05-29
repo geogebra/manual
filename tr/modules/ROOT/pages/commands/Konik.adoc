@@ -1,0 +1,38 @@
+= Konik Komut
+:page-en: commands/Conic
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Konik( <Nokta>, <Nokta>, <Nokta>, <Nokta>, <Nokta> )::
+  Verilen beş noktadan geçen koni kesitini verir.
+
+[EXAMPLE]
+====
+
+`++Konik((0, -4), (2, 4), (3,1), (-2,3), (-3,-1))++` komutu _151x² - 37x y + 72y² + 14x - 42y = 1320_ sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+Eğer noktalardan dördü bir doğru üzerinde kalıyorsa bu koni kesiti tanımsızdır.
+
+====
+
+Konik( <Sayı a>, <Sayı b>, <Sayı c>, <Sayı d>, <Sayı e>, <Sayı f> )::
+  stem:[a\cdot x^2+d\cdot xy+b\cdot y^2+e\cdot x+f\cdot y=-c] koni kesitini verir.
+
+[EXAMPLE]
+====
+
+`++Konik(2, 3, -1, 4, 2, -3)++` komutu _2x² + 4x y + 3y² + 2x - 3y = 1_ sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+image:24px-Mode_conic5.svg.png[Mode conic5.svg,width=24,height=24] xref:/tools/5_Noktadan_Geçen_Konik.adoc[5 Noktadan
+Geçen Konik] aracına ve xref:/commands/Katsayılar.adoc[Katsayılar] komutuna da bakın.
+
+====

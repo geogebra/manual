@@ -1,0 +1,32 @@
+= DoldurHücre Komut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+DoldurHücre( <HücreAralığı>, <Nesne> )::
+  Nesnenin değerini/denklemini v. b. verilen hücre aralığına kopyalar. Oluşan hücreler
+  xref:/Serbest_Bağımlı_ve_Yardımcı_Nesneler.adoc[serbest nesnelerdir], yani verilen nesneden bağımsızdır.
+
+[NOTE]
+====
+
+*Notlar:*
+
+* _HücreAralığı_ örneğin: _B2:D5_ şeklinde girilmelidir.
+* _Nesne_ herhangi bir şey olabilir, örneğin: _3_, _RastgeleArasında(0, 10)_, _Çember(A, B)_.
+* Hücreler satır ve sütunlarına göre etiketlenir, örneğin: _B2_.
+
+====
+
+DoldurHücre( <Hücre>, <Liste> )::
+  Listedeki değerleri verilen hücrenin sağındaki ilk hücrelere kopyalar. Oluşan hücreler
+  xref:/Serbest_Bağımlı_ve_Yardımcı_Nesneler.adoc[serbest nesnelerdir], yani verilen listeden bağımsızdır.
+
+DoldurHücre( <Hücre>, <Matris> )::
+  Matristeki değerleri hesap tablosuna kopyalar. Matrisin sol üst köşesi verilen hücre ile eşleşir.Oluşan hücreler
+  xref:/Serbest_Bağımlı_ve_Yardımcı_Nesneler.adoc[serbest nesnelerdir], yani verilen matristen bağımsızdır.
+
+[NOTE]
+====
+
+xref:/commands/DoldurSatır.adoc[DoldurSatır] ve xref:/commands/DoldurSütun.adoc[DoldurSütun] komutlarına da bakın.
+
+====

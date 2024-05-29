@@ -1,0 +1,46 @@
+= KÇöz Komut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+== CAS Sözdizimi
+
+KÇöz( <Denklem> )::
+  Verilen denklemi esas değişken için çözer ve tüm çözümlerin, ki karmaşık sayı çözümlerine de izin verilir, bir
+  listesini verir.
+KÇöz( <Denklem>, <Değişken> )::
+  Denklemi verilen değişken için çözer ve tüm çözümlerin, ki karmaşık sayı çözümlerine de izin verilir, bir listesini
+  verir.
+KÇöz( <Denklem Listesi>, <Değişken Listesi> )::
+  Denklemler kümesini verilen değişkenler kümesi için çözer ve tüm çözümlerin, ki karmaşık sayı çözümlerine de izin
+  verilir, bir listesini verir.
+
+[EXAMPLE]
+====
+
+`++KÇöz({y^2 = x - 1, x = 2 * y - 1}, {x, y})++` komutu _y^2^ = x_ ve _x = 2 * y - 1_ denklemlerinin _\{\{x = 1 - 2 ί, y
+= 1 + ί}, \{x = 1 + 2 ί, y = 1 - ί}}_ karmaşık sayı çözümlerini verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++KÇöz(a^2 = -1, a)++` komutu _a^2^ = -1_ denkleminin _\{a = ί, a = -ί}_ karmaşık sayı çözümlerini verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++KÇöz(x^2 = -1)++` komutu _x^2^ = -1_ denkleminin _\{x = ί, x = -ί}_ karmaşık sayı çözümlerini verir.
+
+====
+
+[NOTE]
+====
+
+*Notlar:*
+
+* ί karmaşık sayısı [.kcode]#ALT # + [.kcode]# i# tuşlarına basılarak elde edilir.
+* xref:/commands/KÇözümler.adoc[KÇözümler] ve xref:/commands/Çöz.adoc[Çöz] komutlarına da bakın.
+
+====

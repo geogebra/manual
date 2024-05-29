@@ -1,0 +1,176 @@
+= Açı Komut
+:page-en: commands/Angle
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Açı( <Nesne> )
+
+* *Konik:* Bir koni kesitinin ana ekseninin dönme (twist) açısını verir (xref:/commands/Eksenler.adoc[Eksenler] komutuna
+bakın).
+
+[EXAMPLE]
+====
+
+`++Açı(x²/4+y²/9=1)++` komutu _90°_ veya seçilmiş açı birimi _radyan_ ise _1.57_ sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+GeoGebra 5.0 Web ve Tablet Uygulaması Versiyonunda Radyan, Açı Birimi olarak ayarlanamaz.
+
+====
+
+* *Vektör:* _x_‐ekseni ve verilen vektör arasındaki açıyı verir.
+
+[EXAMPLE]
+====
+
+`++Açı(Vektör((1, 1)))++` komutu, _45°_ veya _radyan_ cinsinden buna karşılık gelen değeri verir.
+
+====
+
+* *Nokta:* _x_‐ekseni ve verilen noktanın konum vektörü arasındaki açıyı verir.
+
+[EXAMPLE]
+====
+
+`++Açı((1, 1))++` komutu, _45°_ veya _radyan_ cinsinden buna karşılık gelen değeri verir.
+
+====
+
+* *Sayı:* Bir sayıyı açıya çevirir (sonuç ayarlanmış açı birimine bağlı olarak [0,360°] veya [0,2π] aralığındadır).
+
+[EXAMPLE]
+====
+
+`++Açı(20)++` komutu, ayarlanmış açı birimi _derece_ iken _65.92°_ sonucunu verir.
+
+====
+
+* *Çokgen:* Çokgenin tüm açılarını matematiksel olarak pozitif yönlendirilmiş (saatin ters yönünde) şekilde oluşturur.
+
+[EXAMPLE]
+====
+
+`++Açı(Çokgen((4, 1), (2, 4), (1, 1)))++` komutu _56.31°_, _52.13°_ ve _71.57°_ veya bunların _radyan_ cinsinden
+karşılık geldiği değerleri verir.
+
+====
+
+[NOTE]
+====
+
+Eğer çokgen saatin ters yönünde oluşturulmuşsa iç açıları elde edersiniz. Eğer çokgen saat yönünde oluşturulmuşsa dış
+açıları elde edersiniz.
+
+====
+
+Açı( <Vektör>, <Vektör> )::
+  İki vektör arasındaki açıyı verir (sonuç ayarlanmış açı birimine bağlı olarak [0,360°] veya [0,2π] aralığındadır).
+
+[EXAMPLE]
+====
+
+`++Açı(Vektör((1, 1)), Vektör((2, 5)))++` komutu _23.2°_ veya _radyan_ cinsinden buna karşılık gelen değeri verir.
+
+====
+
+Açı( <Doğru>, <Doğru> )::
+  İki doğrunun doğrultman vektörleri arasındaki açıyı verir (sonuç ayarlanmış açı birimine bağlı olarak [0,360°] veya
+  [0,2π] aralığındadır).
+
+[EXAMPLE]
+====
+
+* `++Açı(y = x + 2, y = 2x + 3)++` komutu _18.43°_ veya _radyan_ cinsinden buna karşılık gelen değeri verir.
+* `++Açı(Doğru((-2, 0, 0), (0, 0, 2)), Doğru((2, 0, 0), (0, 0, 2)))++` komutu _90°_ veya _radyan_ cinsinden buna
+karşılık gelen değeri verir.
+
+ve _CAS Görünümünde_ :
+
+* `++Açı(x + 2,  2x + 3)++` komutu stem:[acos \left( 3 \cdot \frac\{\sqrt\{10}}\{10} \right)] sonucunu verir.
+* `++f(x) := x + 2++` ve `++g(x) := 2x + 3++` olarak tanımlayın ardından `++Açı(f(x), g(x))++` komutu girildiğinde
+stem:[acos \left(3 \cdot \frac\{\sqrt\{10}}\{10} \right)] sonucu elde edilir.
+
+====
+
+Açı( <Doğru>, <Düzlem> )::
+  Doğru ve düzlem arasındaki açıyı verir.
+
+[EXAMPLE]
+====
+
+* `++Açı(Doğru((1, 2, 3),(-2, -2, 0)), z = 0)++` komutu _30.96°_ veya _radyan_ cinsinden buna karşılık gelen değeri
+verir.
+
+====
+
+Açı( <Düzlem>, <Düzlem> )::
+  Verilen iki düzlem arasındaki açıyı verir.
+
+[EXAMPLE]
+====
+
+* `++Açı(2x - y + z = 0, z = 0)++` komutu _114.09°_ veya _radyan_ cinsinden buna karşılık gelen değeri verir.
+
+====
+
+Açı( <Nokta>, <Köşe>, <Nokta> )::
+  Verilen noktalar tarafından tanımlanan açıyı verir (sonuç ayarlanmış açı birimine bağlı olarak [0,360°] veya [0,2π]
+  aralığındadır).
+
+[EXAMPLE]
+====
+
+`++Açı((1, 1), (1, 4), (4, 2))++` komutu _56.31°_ veya _radyan_ cinsinden buna karşılık gelen değeri verir.
+
+====
+
+Açı( <Nokta>, <Köşe>, <Açı> )::
+  Verilen __nokta__dan geçen, verilen __köşe__ye sahip ve girilen _açı_ büyüklüğündeki açıyı verir.
+
+[EXAMPLE]
+====
+
+:*`++Açı((0, 0), (3, 3), 30°)++` komutu _30°_ ve _(1.9, -1.1)_ noktasını verir.
+
+====
+
+[NOTE]
+====
+
+_Döndür( <Nokta>, <Açı>, <Köşe> )_ noktası da oluşturulur.
+
+====
+
+Açı( <Nokta>, <Nokta>, <Nokta>, <Yön> )::
+  Noktalar tarafından tanımlanan ve verilen __Yön__deki (ki bu yön bir doğru veya bir düzlemle belirlenir) açıyı verir
+  (sonuç ayarlanmış açı birimine bağlı olarak [0,360°] veya [0,2π] aralığındadır).
+
+[EXAMPLE]
+====
+
+`++Açı((1, -1, 0),(0, 0, 0),(-1, -1, 0), zEkseni)++` komutu _270°_ değerini ve
+`++Açı((-1, -1, 0),(0, 0, 0),(1, -1, 0), zEkseni)++` komutu _90°_ değerini veya _radyan_ cinsinden bunlara karşılık
+gelen değerleri verir.
+
+====
+
+[NOTE]
+====
+
+_Yön_ kullanmak, 3__D__ de açıların sadece [0,180°] veya sadece [180°,360°] olarak ayarlanabilen standart gösterimini
+baypas etmeyi sağlar böylece 3__D__ de verilen _A_, _B_ ve _C_ noktaları için `++Açı(A, B, C)++` ve `++Açı(C, B, A)++`
+komutlarının verdiği kısıtlanmış aralıklardaki değerler yerine açının gerçek ölçüsünü verir.
+
+====
+
+[NOTE]
+====
+
+Aynı zamanda image:20px-Mode_angle.svg.png[Mode angle.svg,width=20,height=20] xref:/tools/Açı.adoc[Açı] ve
+image:20px-Mode_anglefixed.svg.png[Mode anglefixed.svg,width=20,height=20] xref:/tools/Verilen_ölçüde_açı.adoc[Verilen
+Ölçüde Açı] araçlarına da bakın.
+
+====

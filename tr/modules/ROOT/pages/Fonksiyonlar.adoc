@@ -1,0 +1,59 @@
+= Fonksiyonlar
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Bir fonksiyon girmek için diğer fonksiyonların yanı sıra önceden tanımlanmış değişkenleri (örneğin sayılar, noktalar,
+vektörler) kullanabilirsiniz.
+
+[EXAMPLE]
+====
+
+* Fonksiyon f: `++f(x) = 3 x^3 – x^2++`
+* Fonksiyon g: `++g(x) = tan(f(x))++`
+* Adsız fonksiyon: `++sin(3 x) + tan(x)++`
+
+====
+
+[NOTE]
+====
+
+Önceden tanımlanmış tüm fonksiyonlar (örneğin sin, cos, tan) xref:/Önceden_tanımlı_fonksiyonlar_ve_işlemler.adoc[Önceden
+tanımlı fonksiyonlar ve işlemler] bölümünde açıklanmaktadır.
+
+====
+
+GeoGebra'da bir fonksiyonun örneğin xref:/commands/İntegral.adoc[integralini] ve xref:/commands/Türev.adoc[türevini]
+elde etmek için komutlar da kullanabilirsiniz. Şarta bağlı fonksiyonlar elde etmek için xref:/commands/Eğer.adoc[Eğer
+Komutunu] kullanabilirsiniz.
+
+[NOTE]
+====
+
+Önceden tanımlı bir f(x) fonksiyonunun türevlerini elde etmek için f'(x), f''(x), … komutlarını da kullanabilirsiniz.
+
+====
+
+[EXAMPLE]
+====
+
+_f_ fonksiyonunu `++f(x) = 3 x^3 – x^2++` olarak tanımlayın. Ardından _g_ fonksiyonunu elde etmek için
+`++g(x) = cos(f' (x + 2))++` yazın.
+
+====
+
+Ek olarak, fonksiyonlar bir vektörle ötelenebilir (bakın xref:/commands/Ötele.adoc[Ötele Komutu]) ve serbest bir
+fonksiyon image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22]xref:/tools/Taşı.adoc[Taşı Aracı] kullanılarak
+taşınabilir. Fonksiyonlara diğer xref:/Dönüşüm_Komutlar.adoc[Dönüşüm Komutları] da uygulanabilir fakat pek çok durumda
+sonuç bir fonksiyon değil bir eğridir.
+
+== Fonksiyonu Aralığa Kısıtlama
+
+Bir fonksiyonu bir [a, b] aralığına kısıtlamak için xref:/commands/Fonksiyon.adoc[Fonksiyon Komutunu] veya
+xref:/commands/Eğer.adoc[Eğer Komutunu] kullanmanız gerekir.
+
+[EXAMPLE]
+====
+
+`++Eğer(3<=x<=5,x^2)++` ve `++Fonksiyon(x^2,3,5)++` komutlarının ikisi de [3,5] aralığına kısıtlanmış _x^2^_
+fonksiyonunu tanımlar.
+
+====

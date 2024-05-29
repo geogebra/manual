@@ -1,0 +1,47 @@
+= Çember Komut
+:page-en: commands/Circle
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Çember( <Nokta>, <Yarıçap Sayı> )::
+  Verilen merkez ve yarıçapa sahip çemberi verir.
+Çember( <Nokta>, <Doğru Parçası> )::
+  Verilen noktayı merkez ve verilen doğru parçasının uzunluğunu yarıçap kabul eden çemberi verir.
+Çember( <Nokta>, <Nokta> )::
+  Verilen ilk noktayı merkez kabul eden ve ikinci noktadan geçen çemberi verir.
+Çember( <Nokta>, <Nokta>, <Nokta> )::
+  Verilen üç noktadan (eğer aynı doğru üzerinde kalmıyorlarsa) geçen çemberi verir.
+
+[NOTE]
+====
+
+image:20px-Mode_compasses.svg.png[Mode compasses.svg,width=20,height=20] xref:/tools/Pergel.adoc[Pergel],
+image:20px-Mode_circle2.svg.png[Mode circle2.svg,width=20,height=20] xref:/tools/Merkez_ve_Nokta_ile_Çember.adoc[Merkez
+ve Nokta ile Çember], image:20px-Mode_circlepointradius.svg.png[Mode circlepointradius.svg,width=20,height=20]
+xref:/tools/Merkez_ve_Yarıçap_ile_Çember.adoc[Merkez ve Yarıçap ile Çember] ve image:20px-Mode_circle3.svg.png[Mode
+circle3.svg,width=20,height=20] xref:/tools/3_Noktadan_Geçen_Çember.adoc[3 Noktadan Geçen Çember] araçlarına da bakın.
+
+====
+
+Çember( <Doğru>, <Nokta> )::
+  Ekseni verilen doğru olan ve verilen noktadan geçen çemberi oluşturur.
+Çember( <Nokta>, <Yarıçap>, <Yön> )::
+  Verilen merkez ve yarıçapa sahip ve ekseni verilen yöne (bu yön bir doğru, vektör veya düzlem olabilir) paralel
+  çemberi oluşturur.
+Çember( <Nokta>, <Nokta>, <Yön> )::
+  İlk noktayı merkez kabul eden, ikinciden geçen ve ekseni verilen yöne paralel çemberi oluşturur.
+
+[EXAMPLE]
+====
+
+`++Çember( <Nokta>, <Yarıçap>, <Düzlem> )++` komutu bu düzleme paralel olan ve düzlemin normal (dik) vektörünü eksen
+kabul eden çemberi verir.
+
+====
+
+[NOTE]
+====
+
+Eğer _Yön_ için örneğin `++x = 0++` veya `++y = 0++` kullanırsanız, bu bir doğru olarak değil düzlem olarak ele
+alınacaktır.
+
+====

@@ -1,0 +1,58 @@
+= Şartlı Görünürlük
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Belirli nesneleri sadece göstermek veya gizlemenin yanı sıra bu nesnelerin görünürlük durumlarını belirli bir şarta da
+bağlayabilirsiniz. Örneğin bir nesnenin, image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Grafik_Görünümü.adoc[Grafik Görünümüne] yerleştirilmiş bir işaret kutusu
+işaretlendiğinde veya bir xref:/tools/Sürgü.adoc[sürgü] belirli bir değeri aldığında ekranda görünmesini
+isteyebilirsiniz.
+
+== Var Olan Nesnelerin Şarta Bağlı Olarak Gösterilmesi veya Gizlenmesi
+
+Var olan bir veya daha fazla nesnenin ekran üzerindeki görünürlüğünü kontrol eden bir işaret kutusu oluşturmak için
+image:24px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=24,height=24] xref:/tools/İşaret_Kutusu.adoc[İşaret
+Kutusu Aracını] kullanabilirsiniz.
+
+Alternatif olarak, xref:/Giriş_çubuğu.adoc[Giriş Çubuğunu] kullanarak (örneğin `++b = true++` yazarak) bir
+xref:/Mantık_Değerleri.adoc[mantıksal değişken] oluşturabilir ve bu değişkenin görünürlük durumunu (örneğin
+image:24px-Mode_showhideobject.svg.png[Mode showhideobject.svg,width=24,height=24]
+xref:/tools/Nesneyi_Göster_Gizle.adoc[Nesneyi Göster / Gizle Aracını] veya xref:/Bağlam_Menüsü.adoc[Bağlam Menüsünü]
+kullanarak) değiştirmek suretiyle image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+_Grafik Görünümünde_ bir işaret kutusu olarak gösterebilirsiniz. Dolayısıyla bir işaret kutusu görünür bir _Mantıksal
+değişkendir_.
+
+Bu mantıksal değişkeni belirli nesnelerin görünürlüğü için bir şart olarak kullanmak için, aşağıda açıklanan adımları
+takip etmelisiniz.
+
+== Yeni Oluşturulan Nesnelerin Görünürlüğünü Değiştirme
+
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Özellikler_Diyaloğu.adoc[Özelliklerde],
+_Gelişmiş_ sekmesinde bir nesnenin görünürlüğü için bir şart girebilirsiniz.
+
+[NOTE]
+====
+
+Şartlı önermelerinizi oluşturmak için giriş alanının sağındaki listeden mantık operatörlerini (örneğin ≠, ≥, ˄, ‖)
+seçebilirsiniz.
+
+====
+
+[EXAMPLE]
+====
+
+* Eğer a bir sürgü ise a < 2 şartlı önermesi, ilgili nesnenin sadece sürgü değeri 2'den küçükken
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Grafik Görünümünde_ gösterileceği
+anlamına gelir.
+* Eğer b mantıksal bir değişken ise b'yi bir şartlı önerme olarak kullanabilirsiniz. Karşılık gelen nesne b'nin değeri
+true (doğru) iken gösterilir ve b'nin değeri false (yanlış) iken gizlenir.
+* Eğer g ve h iki doğru ise ve bir metnin bu doğrular paralelken gösterilmesini istiyorsanız metin için şartlı önerme
+olarak g ‖ h kullanabilirsiniz.
+
+====
+
+[NOTE]
+====
+
+xref:/s_index_php?title=AyarlaGörünebilirlik_Komut_action=edit_redlink=1.adoc[AyarlaGörünebilirlik] komutuna da bakın.
+
+====

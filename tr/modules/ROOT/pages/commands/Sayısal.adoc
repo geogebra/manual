@@ -1,0 +1,51 @@
+= Sayısal Komut
+:page-en: commands/Numeric
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+== CAS Söz Dizimi
+
+Sayısal( <İfade> )::
+  Verilen ifadenin sayısal bir kestirimini belirlemeyi dener. Basamak sayısı xref:/Seçenekler_Menüsü.adoc[Seçenekler
+  Menüsünde] seçtiğiniz genel yuvarlama ayarına bağlıdır.
+
+[EXAMPLE]
+====
+
+`++Sayısal(3 / 2)++` komutu _1.5_ sonucunu verir.
+
+====
+
+Sayısal( <İfade>, <Önemli Basamak Sayısı> )::
+  Verilen ifadenin girilen önemli basamak sayısını kullanarak sayısal bir kestirimini belirlemeyi dener.
+
+[EXAMPLE]
+====
+
+`++Sayısal(sin(1), 20)++` komutu _0.84147098480789650665_ sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+Eğer yeterli sayıda basamak belirlemediyseniz http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html[kayan nokta
+sadeleştirmesine] bağlı olarak yanlış görünen bir cevap elde edebilirsiniz.
+
+[EXAMPLE]
+====
+
+`++Sayısal(-500000000/785398163*sin(785398163/500000000)*1258025227.19^2+500000000/785398163*1258025227.19^2,10)++`
+komutu _4096_ sonucunu verir fakat
+`++Sayısal(-500000000/785398163*sin(785398163/500000000)*1258025227.19^2+500000000/785398163*1258025227.19^2,30)++`
+komutu _0.318309886345536696694580314215_ sonucunu verecektir.
+
+====
+
+====
+
+[NOTE]
+====
+
+image:24px-Mode_nsolve.svg.png[Mode nsolve.svg,width=24,height=24] xref:/tools/Sayısal.adoc[Sayısal] aracına da bakın.
+
+====

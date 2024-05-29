@@ -1,0 +1,33 @@
+= DöndürMetin Komut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+DöndürMetin( <Metin>, <Açı> )::
+  Metni verilen açıyla döndürür. Sonucun görselinde xref:/LaTeX.adoc[LaTeX] kullanılır.
+
+[EXAMPLE]
+====
+
+`++DöndürMetin("a = 5", 45°)++`
+
+====
+
+[NOTE]
+====
+
+*Notlar:*
+
+* Metin çift tırnak `++"++` işaretlerinin arasında olmalıdır.
+* Metin, metni içeren kutunun sol üst köşesi ( köşe 4 olarak da bilinir) etrafında döndürülür ve koordinat sisteminin
+orijinine yerleştirilir.
+
+[EXAMPLE]
+====
+
+Eğer "GeoGebra" metnini, 42° döndürerek (6,6) noktasına konumlandırmak istiyorsanız
+`++Metin(DöndürMetin("GeoGebra", 42°), (6, 6),true,true)++` komutunu kullanın.
+
+====
+
+* Derece sembolünü `++°++` açık olarak kullanmadığınız sürece açı radyan cinsinden alınır.
+
+====

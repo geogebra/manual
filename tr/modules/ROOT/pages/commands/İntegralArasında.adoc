@@ -1,0 +1,48 @@
+= İntegralArasında Komut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+İntegralArasında( <Fonksiyon>, <Fonksiyon>, <Sayı>, <Sayı> )::
+  _f_ and _g_ gibi iki fonksiyonun _f(x) ‐ g(x)_ farkının _[a, b]_ aralığı üzerindeki belirli integralini verir. Burada,
+  esas değişken için _a_ ilk sayı ve _b_ ikinci sayıdır.
+İntegralArasında( <Fonksiyon>, <Fonksiyon>, <Sayı>, <Sayı>, <Mantıksal Değerlendirme> )::
+  Eğer _Değerlendirme_, _doğru_ ise esas değişkene göre _a_ ilk sayı ve _b_ ikinci sayı olmak üzere _f_ and _g_ gibi iki
+  fonksiyonun _f(x) ‐ g(x)_ farkının _[a, b]_ aralığı üzerindeki belirli integralini verir ve ilgili bölgeyi
+  gölgelendirir. __Değerlendirme__nin _yanlış_ olması durumunda ilgili bölge gölgelendirilir fakat integral değeri
+  hesaplanmaz.
+
+[EXAMPLE]
+====
+
+`++İntegralArasında(sin(x), cos(x), 0, pi)++`
+
+====
+
+[NOTE]
+====
+
+Bu komut aynı zamanda _f_ ve _g_ fonksiyonlarının grafikleri arasındaki alanı da gölgelendirir.
+
+====
+
+== CAS Söz Dizimi
+
+İntegralArasında( <Fonksiyon>, <Fonksiyon>, <Sayı>, <Sayı> )::
+  Esas değişkene göre _a_ ilk sayı ve _b_ ikinci sayı olmak üzere _f_ and _g_ gibi iki fonksiyonun _f(x) ‐ g(x)_
+  farkının _[a, b]_ aralığı üzerindeki belirli integralini verir.
+İntegralArasında( <Fonksiyon>, <Fonksiyon>, <Değişken>, <Sayı>, <Sayı> )::
+  Verilen değişken için _a_ ilk sayı ve _b_ ikinci sayı olmak üzere _f_ and _g_ gibi iki fonksiyonun _f ‐ g_ farkının
+  _[a, b]_ aralığı üzerindeki verilen değişkene göre belirli integralini verir.
+
+[EXAMPLE]
+====
+
+`++İntegralArasında(a * sin(t), a * cos(t), t, pi / 4, pi * 5 / 4)++` komutu stem:[2 \sqrt\{2} a] sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++İntegralArasında(sin(x), cos(x), pi / 4, pi * 5 / 4)++` komutu stem:[2 \sqrt\{2}] sonucunu verir.
+
+====

@@ -1,0 +1,239 @@
+= CAS Görünümü
+:page-en: CAS_View
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+== [#CAS_Görünümü_Kullanıcı_Ara_Yüzü]####[#CAS_G.C3.B6r.C3.BCn.C3.BCm.C3.BC_Kullan.C4.B1c.C4.B1_Ara_Y.C3.BCz.C3.BC]##image:24px-Menu_view_cas.svg.png[Menu view cas.svg,width=24,height=24] CAS Görünümü Kullanıcı Ara Yüzü##
+
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS Görünümü_ başlangıç ayarı olarak
+image:16px-Menu_view_graphics.svg.png[Graphics View,title="Graphics View",width=16,height=16]
+_xref:/Grafik_Görünümü.adoc[Grafik Görünümünün]_ yanında açılır. Bu _Görünümlerden_ hangisinin etkin olduğuna bağlı
+olarak, GeoGebra penceresinin en üstünde sağ köşedeki
+image:16px-Menu-edit-undo.svg.png[Menu-edit-undo.svg,width=16,height=16]image:16px-Menu-edit-redo.svg.png[Menu-edit-redo.svg,width=16,height=16]
+_Geri Al / Yeniden Yap_ düğmeleri ile birlikte ya xref:/tools/CAS_Araçları.adoc[_CAS Görünümü Araç Çubuğu_] ya da
+xref:/tools/Grafik_Araçları.adoc[_Grafik Görünümü Araç Çubuğu_] gösterilir.
+
+[width="100%",cols="100%",]
+|===
+a|
+image:314px-CAS-View.png[CAS-View.png,width=314,height=220]
+
+CAS Görünümü
+
+|===
+
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS Görünümü_,
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Perspektifler.adoc[_CAS Perspektifinin_]
+parçası olmakla birlikte ihtiyaçlarınıza göre GeoGebra'nın kullanıcı ara yüz
+xref:/GeoGebra_5_0_Masaüstü_X_Web_ve_Tablet_Uygulaması.adoc[yerleşimini değiştirebilirsiniz].
+
+== [#Matematiksel_Nesneler_Oluşturma]####[#Matematiksel_Nesneler_Olu.C5.9Fturma]##Matematiksel Nesneler Oluşturma##
+
+=== Doğrudan Giriş
+
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS Görünümü_, GeoGebra'nın Bilgisayar Cebir
+Sistemini (Computer Algebra System) sembolik hesaplamalar için kullanmanıza imkan verir. Üstte bir _Giriş Alanı_ ve
+altta çıktı gösteriminin olduğu hücrelerden oluşur. Bu _Giriş Alanlarını_, aşağıdaki farklarla normal
+_xref:/Giriş_Çubuğu.adoc[Giriş Çubuğu]_ gibi kullanabilirsiniz:
+
+* Herhangi bir değer ataması yapılmamış değişkenler kullanabilirsiniz.
+* `++=++` denklemler için ve `++:=++` atamalar için kullanılır. Bu `++a=2++` girdisinin _a_ ya 2 değerini atamayacağı
+anlamına gelir. Detaylar için xref:/.adoc[atamalar hakkındaki bölüme] bakın.
+* Çarpma açık şekilde işaretlenmelidir. _xref:/Giriş_Çubuğu.adoc[Giriş Çubuğunda]_ çarpma için hem `++a(b+c)++` hem
+de`++a*(b+c)++` kullanılabilirken image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS
+Görünümünde_ sadece `++a*(b+c)++` geçerlidir.
+
+=== Doğrudan Giriş için Klavye Kısa Yolları
+
+GeoGebra Masaüstü Sürümünün image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS Görünümünde_
+girdinizi hesaplamak veya kontrol etmek için aşağıdaki klavye kısa yolları size yardımcı olur.
+
+[NOTE]
+====
+
+Bu klavye kısa yollarını kullanmak yerine xref:/.adoc[_CAS Görünümü Araç Çubuğunda_] bunlara karşılık gelen
+xref:/tools/CAS_Araçları.adoc[_Araçları_] da kullanabilirsiniz.
+
+====
+
+* [.kcode]#Enter#: Girdinizi hesaplar.
+
+[NOTE]
+====
+
+*Notlar:*
+
+* Atamalar daima hesaplanır, örneğin `++a := 5++`
+* Herhangi bir çıktıyı girdinizin sonunda bir noktalı virgül kullanarak gizleyebilirsiniz, örneğin `++a := 5;++`
+
+.
+
+====
+
+=== Değişken Atamaları ve Diğer Görünümlerle Bağlantı
+
+Atamalar için `++:=++` gösterimini kullanabilirsiniz, örneğin `++b := 5++`, `++a(n) := 2n + 3++`.
+
+* _Bir adı açığa çıkarma_: Bir değişken adını yeniden açığa çıkarmak için `++Sil[b]++` kullanın.
+* _Bir değişken veya fonksiyonu yeniden tanımlama_: Bir değişken veya fonksiyonu yeniden tanımlayabilirsiniz, fakat bunu
+_aynı hücrede_ yapmalısınız aksi halde bu yeni bir değişken olarak ele alınacak ve otomatik olarak yeniden
+adlandırılacaktır.
+
+Eğer mümkünse değişkenler ve fonksiyonlar image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS
+Görünümü_ ve diğer _Görünümler_ tarafından daima paylaşılır. Örneğin:
+
+* Eğer image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS Görünümünde_ `++b:=5++` olarak
+tanımlarsanız, _b_ yi GeoGebra'nın tüm diğer _Görünümlerinde_ kullanabilirsiniz.
+* Eğer bir başka _Görünümde_ `++f(x)=x^2++` fonksiyonunu tanımlarsanız bu fonksiyonu
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS Görünümünde_ de kullanabilirsiniz.
+
+[NOTE]
+====
+
+Çıktı daima, sadece `++:=++` işaretinden *sonraki* ifade olacaktır, örneğin eğer `++b:=5++` yazarsanız çıktı _5_
+olacaktır. Lütfen gerçekte duruma açıklık getirmek için _b := 5_ ifadesinin gösterileceğini not edin.
+
+====
+
+=== Denklemler
+
+* Denklemleri sadece _Eşittir_ işaretini kullanarak yazabilirsiniz, örneğin `++3x + 5 = 7++`.
+* _Aritmetik İşlemler_: Aritmetik işlemleri denklemlere uygulayabilirsiniz ki bu manüel denklem çözümü için
+kullanışlıdır.
++
+[EXAMPLE]
+====
+
+`++(3x + 5 = 7) - 5++` denklemin her iki tarafından 5 çıkarır.
+
+====
+* _Bir Tarafı Almak_: Bir denklemin sol veya sağ tarafını `++SolTaraf()++` ve `++SağTaraf()++` komutlarını kullanarak
+alabilirsiniz.
++
+[EXAMPLE]
+====
+
+`++SolTaraf(3x + 5 = 7)++` komutu _3 x + 5_ verir ve `++SağTaraf(3x + 5 = 7)++` komutu _7_ verir.
+
+====
+
+=== Satır Göndermeleri
+
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS Görünümünde_ diğer satırlara iki yolla
+gönderme yapabilirsiniz:
+
+* *Statik satır göndermeleri* çıktıyı kopyalar ve _gönderme yapılan_ satırda daha sonra değişiklik yapılırsa _çıktı
+güncellenmeyecektir_
+** `++#++`: Önceki çıktıyı kopyalar.
+** `++#5++`: Satır 5'in çıktısını kopyalar.
+* *Dinamik satır göndermeleri* gerçek çıktı yerine bir başka satıra gönderme ekler ve böylece _gönderme yapılan_ satırda
+daha sonra değişiklik yapılırsa _çıktı güncellenecektir_
+** `++$++`: Önceki çıktıya bir gönderme ekler.
+** `++$5++`: Satır 5'in çıktısına bir gönderme ekler.
+
+== [#CAS_Komutları]####[#CAS_Komutlar.C4.B1]##CAS Komutları##
+
+GeoGebra, image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS Görünümünde_ nesneler oluşturmak
+için kullanılabilen geniş yelpazede _xref:/commands/CAS_Özel_Komutları.adoc[CAS Komutları]_ da sunar. Sadece _Komutun_
+adını _Giriş Alanına_ yazmaya başlayın ve GeoGebra, girdiniz ile eşleşen _Komutların_ bir listesini size önerecektir.
+
+[NOTE]
+====
+
+_Komutların_ tam bir listesi için xref:/commands/CAS_Özel_Komutları.adoc[CAS Komutları] bölümüne bakın.
+
+====
+
+[NOTE]
+====
+
+GeoGebra 5.0 ve sonraki sürümlerin image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS
+Görünümü_, xref:/commands/CAS_Görünümünün_Desteklediği_Geometri_Komutları.adoc[bazı _Geometri Komutlarının_] tam (kesin)
+versiyonlarını desteklemektedir
+
+====
+
+.
+
+== [#CAS_Görünümü_Araç_Çubuğu]####[#CAS_G.C3.B6r.C3.BCn.C3.BCm.C3.BC_Ara.C3.A7_.C3.87ubu.C4.9Fu]##CAS Görünümü Araç Çubuğu##
+
+xref:/tools/CAS_Araçları.adoc[_CAS Görünümü Araç Çubuğu_] size girdinizin değerini bulma ve hesaplamalar gerçekleştirme
+imkanı veren çeşitli _xref:/tools/CAS_Araçları.adoc[CAS Araçları]_ sunmaktadır. Sadece girdinizi yazın ve sonrasında
+girdinize uygulamak için karşılık gelen _CAS Aracını_ seçin.
+
+xref:/CAS_Tools.adoc[image:315px-Toolbar-CAS.png[Toolbar-CAS.png,width=315,height=32]]
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] İpucu:* GeoGebra Klasik 5'de girdi metninizin bir
+parçasını seçip bu işlemi sadece seçili kısma uygulayabilirsiniz. Bu özellik şu anda Klasik 6'da mevcut değildir.
+
+====
+
+[NOTE]
+====
+
+_Araçların_ tam bir listesi için bakın _xref:/tools/CAS_Araçları.adoc[CAS Araçları]_.
+
+====
+
+== [#Bağlam_Menüleri]####[#Ba.C4.9Flam_Men.C3.BCleri]##Bağlam Menüleri##
+
+=== Satır Başlığı Bağlam Menüsü
+
+GeoGebra Masaüstü Sürümünde aşağıdaki seçenekleri sunan _Bağlam Menüsünü_ göstermek için bir satırın başlığına sağ
+tıklayabilirsiniz (MacOS: [.kcode]#Ctrl#-tık):
+
+* *Üste Ekle*: Mevcut satırın üstüne boş bir satır ekler.
+* *Alta Ekle*: Mevcut satırın altına boş bir satır ekler.
+* *Satırı Sil*: Mevcut satırın içeriğini siler.
+* *Metin*: Mevcut sonuç ve satırda içerilen mevcut sonucu gösteren metin arasında geçiş yapar ki bu kullanıcıya yorumlar
+ekleme imkanı verir.
+* *LaTeX Olarak Kopyala* (GeoGebra Masaüstü): Mevcut satırın içeriğini bilgisayarınızın panosuna kopyalar. Bu size
+içeriği örneğin bir xref:/tools/Metin.adoc[Metin] nesnesine yapıştırma imkanı verir.
+
+[NOTE]
+====
+
+Birden fazla CAS satırının içeriğini LaTeX olarak kopyalamak için istediğiniz satırları [.kcode]#Ctrl#-tık (MacOS:
+[.kcode]#Cmd#-tık) ile seçin ve ardından bir satır başlığına sağ tıklayarak (MacOS: [.kcode]#Ctrl#-tık) _LaTeX Olarak
+Kopyala_ seçin.
+
+====
+
+=== Hücre Bağlam Menüsü
+
+GeoGebra Masaüstü Sürümünde aşağıdaki seçenekleri içeren bir _Bağlam Menüsünü_ göstermek için bir CAS çıktı hücresine
+sağ tıklayabilirsiniz (MacOS: [.kcode]#Ctrl#-tık):
+
+* *Kopyala*: Hücre içeriklerini bilgisayarınızın panosuna kopyalar. Ardından _Yapıştır_ seçeneğini göstermek için yeni
+bir hücreye sağ tıklayın.
+* *LaTeX Olarak Kopyala*: Hücre içeriklerini bilgisayarınızın panosuna LaTeX formatında kopyalar, böylece bu içerikler
+bir xref:/tools/Metin.adoc[Metin] nesnesine veya bir LaTeX editörüne yapıştırılabilir.
+* *LibreOffice Formülü Olarak Kopyala*: Hücre içeriklerini bilgisayarınızın panosuna LibreOffice formülü olarak
+kopyalar, böylece bunlar bir kelime işletim dokümanına kopyalanabilir.
+* *Resim Olarak Kopyala*: Hücre içeriklerini bilgisayarınızın panosuna PNG formatında kopyalar, böylece bu bir
+xref:/tools/Resim.adoc[Resim] nesnesine veya bir kelime işletim dokümanına yapıştırılabilir.
+
+== [#Matematiksel_Nesneleri_Gösterme]####[#Matematiksel_Nesneleri_G.C3.B6sterme]##Matematiksel Nesneleri Gösterme##
+
+=== xref:/Stil_Çubuğu.adoc[CAS Görünümü Stil Çubuğu]
+
+xref:/Stil_Çubuğu.adoc[_CAS Görünümü Stil Çubuğu_] aşağıdakiler için düğmeler sunar
+
+* image:16px-Stylingbar_text.svg.png[Stylingbar text.svg,width=16,height=16] metin stilini
+(image:16px-Stylingbar_text_bold.svg.png[Stylingbar text bold.svg,width=16,height=16] *koyu* ve
+image:16px-Stylingbar_text_italic.svg.png[Stylingbar text italic.svg,width=16,height=16] _italik_) olarak ve metin
+image:16px-Stylingbar_color_white.svg.png[Stylingbar color white.svg,width=16,height=16] rengini değiştirme
+* bir image:16px-Cas-keyboard.png[Cas-keyboard.png,width=16,height=16] sanal klavye gösterme (GeoGebra Masaüstü)
+* GeoGebra penceresinde ek image:16px-Stylingbar_dots.svg.png[Stylingbar dots.svg,width=16,height=16]
+xref:/Görünümler.adoc[_Görünümleri_] gösterme (GeoGebra Web ve Tablet Uygulamaları)
+
+=== CAS Nesnelerini image:20px-Menu_view_graphics.svg.png[Graphics View,title="Graphics View",width=20,height=20] _Grafik Görünümünde_ Gösterme
+
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CAS Görünümünde_, her satırın solundaki simge bu
+satırda tanımlanmış olan nesnenin (mümkün olması durumunda) mevcut görünürlük durumunu (gösteriliyor veya gizli)
+gösterir. Bu nesnenin image:16px-Menu_view_graphics.svg.png[Graphics View,title="Graphics View",width=16,height=16]
+_xref:/Grafik_Görünümü.adoc[Grafik Görünümündeki]_ görünürlük durumunu değiştirmek için doğrudan küçük
+image:16px-Mode_showhideobject.svg.png[Mode showhideobject.svg,width=16,height=16] _Nesneyi Göster / Gizle_ simgesine
+tıklayabilirsiniz.

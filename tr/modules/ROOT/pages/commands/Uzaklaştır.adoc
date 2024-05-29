@@ -1,0 +1,40 @@
+= Uzaklaştır Komut
+:page-en: commands/ZoomOut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Uzaklaştır( <Ölçek Faktörü> )::
+  Zooms the image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/s_index_php?title=Graphics_View_action=edit_redlink=1.adoc[Graphics View] out by given factor with respect to
+  current zoom, center of the screen is used as center point for the zoom.
+Uzaklaştır( <Ölçek Faktörü>, <Merkez Nokta> )::
+  Zooms the image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/s_index_php?title=Graphics_View_action=edit_redlink=1.adoc[Graphics View] out by given factor with respect to
+  current zoom, second parameter specifies center point for the zoom.
+
+[EXAMPLE]
+====
+
+`++Uzaklaştır(2, (0, 0))++`
+
+====
+
+[EXAMPLE]
+====
+
+`++Uzaklaştır(2)++` komutu görünümü uzaklaştırı.
+
+====
+
+[NOTE]
+====
+
+*Notlar:*
+
+* `++Uzaklaştır(t)++` ve `++Uzaklaştır(t, A)++` komutları sırasıyla `++Yakınlaştır(1/t)++` ve `++Yakınlaştır(1/t, A)++`
+komutlarına denktir.
+* If multiple _Graphics Views_ are present, the active one is used.
+* See also xref:/s_index_php?title=Yakınlaştır_Command_action=edit_redlink=1.adoc[Yakınlaştır],
+xref:/s_index_php?title=SetActiveView_Command_action=edit_redlink=1.adoc[SetActiveView],
+xref:/s_index_php?title=Pan_Command_action=edit_redlink=1.adoc[Pan] commands.
+
+====

@@ -1,0 +1,25 @@
+= UydurSin Komut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+UydurSin( <Nokta Listesi> )::
+  _a + b sin (c x + d)_ şeklindeki regresyon eğrisini hesaplar.
+
+[EXAMPLE]
+====
+
+`++UydurSin({(1, 1), (2, 2), (3, 1), (4, 0), (5, 1), (6, 2)})++` komutu _f(x) = 1 + 1 sin (1.57 x - 1.57)_ sonucunu
+verir.
+
+====
+
+[NOTE]
+====
+
+* Liste en az dört tercihen daha fazla noktaya sahip olmalıdır. Liste en az iki uç nokta içermelidir. İlk iki yerel uç
+nokta eğrinin mutlak uç noktalarından çok farklı olmamalıdır.
+* xref:/commands/UydurÜstel.adoc[UydurÜstel], xref:/commands/UydurLog.adoc[UydurLog],
+xref:/commands/UydurPolinom.adoc[UydurPolinom] ve xref:/commands/UydurKuvvet.adoc[UydurKuvvet] komutlarına da bakın.
+* Eğer büyük/küçük sayılar ile çalışıyorsanız daha doğru bir sonuç için bunları normalleştirmeyi düşünmelisiniz, bakın
+xref:/commands/Normalleştir.adoc[Normalleştir Komutu].
+
+====

@@ -1,0 +1,75 @@
+= Uzunluk Komut
+:page-en: commands/Length
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Uzunluk( <Nesne> )::
+  Nesnenin uzunluğunu verir.
+
+[EXAMPLE]
+====
+
+*Örnekler:*
+
+* `++Uzunluk( <Vektör> )++` vektörün uzunluğunu verir.
+* `++Uzunluk( <Nokta> )++` verilen noktanın konum vektörünün uzunluğunu verir.
+* `++Uzunluk( <Liste> )++` listenin uzunluğunu yani listedeki öğelerin sayısını verir.
+* `++Uzunluk( <Metin> )++` metindeki karakterlerin sayısını verir.
+* `++Uzunluk( <Geometrik Yer> )++` verilen geometrik yerin oluşturulduğu noktaların sayısını verir. Geometrik yerin
+kendi uzunluğunu elde etmek için
+xref:/s_index_php?title=ÇevreUzunluğu_Komut_action=edit_redlink=1.adoc[ÇevreUzunluğu](Geometrik Yer) komutunu kullanın.
+Detaylar için xref:/commands/İlk.adoc[İlk Komutu] hakkındaki makaleye bakın.
+* `++Uzunluk( <Yay> )++` bir yayın ve dilimin _yay uzunluğunu_ (yani sadece eğri parçasının uzunluğunu) verir.
+
+====
+
+Uzunluk( <Fonksiyon>, <Başlangıç x-Değeri>, <Bitiş x-Değeri> )::
+  Fonksiyon grafiğinin verilen aralıktaki uzunluğunu verir.
+Uzunluk( <Fonksiyon>, <Başlangıç Noktası>, <Bitiş Noktası> )::
+  Fonksiyon grafiğinin iki nokta arasındaki uzunluğunu verir.
+Uzunluk( <Eğri>, <Başlangıç t-Değeri>, <Bitiş t-Değeri> )::
+  Eğrinin bu iki _parametre_ değeri arasındaki uzunluğunu verir.
+Uzunluk( <Eğri>, <Başlangıç Noktası>, <Bitiş Noktası> )::
+  Eğrinin, eğri üzerinde kalan iki nokta arasındaki uzunluğunu verir.
+
+[EXAMPLE]
+====
+
+`++Uzunluk(2x, 0, 1)++` komutu yaklaşık stem:[\sqrt\{5}] olan _2.236067977_ değerini verir.
+
+====
+
+[NOTE]
+====
+
+Eğer verilen noktalar fonksiyon grafiğinin üzerinde kalmıyorsa bunların x-koordinatları aralığı belirlemekte kullanılır.
+
+====
+
+== CAS Söz Dizimi
+
+Uzunluk( <Fonksiyon>, <Başlangıç x-Değeri>, <Bitiş x-Değeri> )::
+  Fonksiyonun bu iki nokta arasındaki uzunluğunu hesaplar.
+Uzunluk( <Fonksiyon>, <Değişken>, <Başlangıç Değeri>, <Bitiş Değeri> )::
+  Fonksiyon grafiğinin __Başlangıç Noktası__ndan __Bitiş Noktası__na olan uzunluğunu hesaplar.
+
+[EXAMPLE]
+====
+
+`++Uzunluk(2 a, a,  0, 1)++` komutu stem:[\sqrt\{5}] sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++Uzunluk(2 x, 0, 1)++` komutu stem:[\sqrt\{5}] sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+image:22px-Mode_distance.svg.png[Mode distance.svg,width=22,height=22] xref:/tools/Uzaklık_veya_Uzunluk.adoc[Uzaklık
+veya Uzunluk] aracına da bakın.
+
+====

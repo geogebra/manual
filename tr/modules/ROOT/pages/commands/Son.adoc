@@ -1,0 +1,54 @@
+= Son Komut
+:page-en: commands/Last
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Son( <Liste> )::
+  Başlangıç listesinin son öğesini içeren yeni bir liste verir.
+Son( <Liste>, <n Öğe Sayısı> )::
+  Başlangıç listesinin sadece son _n_ öğesini içeren yeni bir liste verir.
+Son( <Metin> )::
+  Metnin son karakterini verir.
+Son( <Metin> , <n Öğe Sayısı> )::
+  Metnin son _n_ karakterini verir.
+
+[EXAMPLE]
+====
+
+`++Son("Merhaba", 2)++` komutu _"ba"_ sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++Son("Merhaba")++` komutu _"a"_ sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++Son({1, 4, 3}, 2)++` komutu _\{4, 3}_ sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++Son({1, 4, 3})++` komutu _\{3}_ sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+Son öğeyi elde etmek için `++Öğe({1, 4, 3}, 3)++` komutunu kullanın.
+
+====
+
+[NOTE]
+====
+
+xref:/commands/İlk.adoc[İlk] komutuna da bakın.
+
+====

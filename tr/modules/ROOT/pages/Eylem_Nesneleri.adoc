@@ -1,0 +1,69 @@
+= Eylem Nesneleri
+:page-en: Action_Objects
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Etkileşimli dinamik çalışma sayfaları için xref:/Betikleme.adoc[betikleme] yapan Eylem Nesneleri oldukça kullanışlı
+olabilmektedir. Bu şekilde dört tip eylem nesnesi vardır:
+
+== İşaret Kutuları
+
+İşaret kutuları, xref:/Mantık_Değerleri.adoc[mantık değerlerinin] grafiksel temsilleridir. Detaylar için
+image:22px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=22,height=22] xref:/tools/İşaret_Kutusu.adoc[İşaret
+Kutusu Aracına] bakın. İşaret Kutuları yukarıda bahsi geçen araç veya xref:/commands/İşaretKutusu.adoc[İşaretKutusu
+Komutu] kullanılarak oluşturulabilirler.
+
+== Girdi Kutuları
+
+Girdi Kutuları, xref:/Betikleme.adoc[betikler] için metin girdileri gibi çalışır. Betik, Girdi Kutusundaki metin
+değiştirilip ardından enter tuşuna basılarak veya Girdi Kutusundan çıkılarak tetiklenir. Girilen değere %0 değişkeni
+kullanılarak erişilebilir.
+
+[EXAMPLE]
+====
+
+`++a=a+%0++` betiğine sahip bir Girdi Kutusu girilen değeri _a_ sayısı kadar artıracaktır. Sadece _a_ bir
+xref:/Serbest_Bağımlı_ve_Yardımcı_Nesneler.adoc[serbest] nesne ise çalışır.
+
+====
+
+Eğer Girdi Kutusunun bir serbest nesnenin değerini değiştirmesini (veya bir bağımlı nesneyi yeniden tanımlamasını)
+istiyorsanız bu nesneyi, girdi kutusuna bağlı olacak şekilde belirleyebilirsiniz. Bu sayede herhangi bir betik eklemeniz
+gerekmez. Girdi Kutuları, image:22px-Mode_textfieldaction.svg.png[Mode textfieldaction.svg,width=22,height=22]
+xref:/tools/Girdi_Kutusu.adoc[Girdi Kutusu Aracı] veya
+xref:/s_index_php?title=GirdiKutusu_Komut_action=edit_redlink=1.adoc[GirdiKutusu Komutu] kullanılarak oluşturulabilir.
+
+== Düğmeler
+
+Düğmeler tıklandıklarında, betikleri tetikleyecek şekilde kullanılırlar. Her ne kadar betikler herhangi başka bir nesne
+(örneğin bir xref:/tools/Resim.adoc[resim]) tıklandığında tetiklenebilseler de bunun için düğmeler kullanmak çalışma
+sayfanızı daha anlaşılır ve kullanımı kolay hale getirir. Düğmeler, image:22px-Mode_buttonaction.svg.png[Mode
+buttonaction.svg,width=22,height=22] xref:/tools/Düğme.adoc[Düğme Aracı] veya xref:/commands/Düğme.adoc[Düğme Komutu]
+kullanılarak oluşturulabilirler.
+
+== Aşağı Açılır Listeler
+
+Eğer bir listenin içeriğini aşağı açılır bir liste şeklinde
+
+* image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Grafik_Görünümü.adoc[Grafik
+Görünümünde] göstermek isterseniz: listenin image:18px-Menu-options.svg.png[Menu-options.svg,width=18,height=18]
+xref:/Özellikler_Diyaloğu.adoc[Özellikler Diyaloğunun] _Temel_ sekmesindeki _Açılan liste olarak çiz_ kutusunu
+işaretleyin.
+* image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+xref:/Hesap_Tablosu_Görünümü.adoc[Hesap Tablosu Görünümünde] göstermek isterseniz: hesap tablosuna bir liste girin ve
+ardından image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Hesap Tablosu
+Seçeneklerinde_, _Düğmeler ve İşaret Kutuları Kullan_ kutusunu işaretleyin.
+
+Aşağı açılır bir listeden seçilecek bir öğe,
+xref:/s_index_php?title=Seçiliİndeks_Komut_action=edit_redlink=1.adoc[Seçiliİndeks] veya
+xref:/commands/SeçiliÖğe.adoc[SeçiliÖğe] komutları kullanılarak da elde edilebilir.
+
+[EXAMPLE]
+====
+
+`++x+1++`, `++x^2++`, `++sqrt(x)++` fonksiyonlarını içeren aşağı açılır bir liste oluşturmak için, ilk olarak giriş
+çubuğuna `++L={x+1, x^2,sqrt(x)}++` yazarak bir liste oluşturun. Ardından _Cebir Görünümünde_ bu listeye sağ tıklayın ve
+_Nesne Özellikleri..._ seçin. Ortaya çıkan diyalog penceresinde _Açılan liste olarak çiz_ seçimini yapın. Burada aynı
+zamanda bu aşağı açılır listeyi açıklayan bir başlık da girebilirsiniz. Hali hazırda seçili olan fonksiyonu _Grafik
+Görünümünde_ çizmek için, giriş çubuğuna `++SeçiliÖğe(L)++` komutunu girin.
+
+====

@@ -1,0 +1,174 @@
+= Önceden tanımlı fonksiyonlar ve işlemler
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+xref:/Giriş_çubuğu.adoc[Giriş Çubuğunu] kullanarak sayılar, koordinatlar ve denklemler oluşturmak için aynı zamanda
+aşağıdaki önceden tanımlı fonksiyonlar ve işlemleri de kullanabilirsiniz. Mantık operatörleri ve fonksiyonları,
+xref:/Mantık_Değerleri.adoc[Mantık Değerleri] hakkındaki makalede listelenmektedir.
+
+[NOTE]
+====
+
+Önceden tanımlı fonksiyonlar parantezler kullanılarak girilmelidir. Fonksiyon adı ve parantezler arasında boşluk
+bırakmamalısınız.
+
+====
+
+[cols=",",options="header",]
+|===
+|İşlem / Fonksiyon |Girdi
+|ℯ (http://en.wikipedia.org/wiki/tr:E_say%C4%B1s%C4%B1[Euler sayısı]) |[.kcode]#Alt# + [.kcode]#e#
+
+|ί (http://en.wikipedia.org/wiki/tr:%C4%B0_say%C4%B1s%C4%B1[Sanal birim]) |[.kcode]#Alt# + [.kcode]#i#
+
+|π |[.kcode]#Alt# + [.kcode]#p# veya pi
+
+|° (http://en.wikipedia.org/wiki/tr:Derece_simgesi[Derece sembolü]) |[.kcode]#Alt# + [.kcode]#o# veya deg
+
+|Toplama |+
+
+|Çıkarma |-
+
+|Çarpma |* veya Boşluk tuşu
+
+|Skalar çarpma |* veya Boşluk tuşu
+
+|Vektörel çarpma(bakın xref:/Noktalar_ve_Vektörler.adoc[Noktalar ve Vektörler]) |⊗
+
+|Bölme |/
+
+|Üs alma |^ veya üst indis (`++x^2++` veya `++x2++`)
+
+|Faktöriyel |!
+
+|Parantezler |( )
+
+|x-koordinatı |x( )
+
+|y-koordinatı |y( )
+
+|z-koordinatı |z( )
+
+|Argüman (3D noktalar / vektörler için de çalışır) |arg( )
+
+|Eşlenik |conjugate( )
+
+|xref:/s_index_php?title=Gerçel_Fonksiyon_action=edit_redlink=1.adoc[Gerçel] |real( )
+
+|xref:/s_index_php?title=Sanal_Fonksiyon_action=edit_redlink=1.adoc[Sanal] |imaginary( )
+
+|Mutlak değer |abs( )
+
+|Altitude angle (for 3D points / vectors) |alt( )
+
+|İşaret |sgn( ) veya sign()
+
+|Küçük veya eşit en büyük tamsayı |floor( )
+
+|Büyük veya eşit en küçük tamsayı |ceil( )
+
+|Yuvarla |round(x) veya round(x, y)
+
+|Kare kök |sqrt( )
+
+|Küp kök |cbrt( )
+
+|x'in n. dereceden kökü |nroot(x, n)
+
+|0 ve 1 arasında rastgele sayı |random( )
+
+|Üstel fonksiyon |exp( ) veya ℯ^x^
+
+|Logaritma (doğal, e tabanında) |ln( )
+
+|2 tabanında logaritma |log₂() veya ld( )
+
+|10 tabanında logaritma |log₁₀( ) veya log( ) veya lg( )
+
+|_x_ in _b_ tabanında logaritması |log(b, x )
+
+|Kosinüs |cos( )
+
+|Sinüs |sin( )
+
+|Tanjant |tan( )
+
+|Sekant |sec()
+
+|Kosekant |csc() veya cosec()
+
+|Kotanjant |cot() veya cotan()
+
+|Ark kosinüs (cevap radyan cinsinden) |acos( ) veya arccos( )
+
+|Ark kosinüs (cevap derece cinsinden) |acosd( )
+
+|Ark sinüs (cevap radyan cinsinden) |asin( ) or arcsin( )
+
+|Ark sinüs (cevap derece cinsinden) |asind( )
+
+|Ark tanjant (cevap radyan cinsinden, -π/2 ve π/2 arasında) |atan( ) veya arctan( )
+
+|Ark tanjant (cevap derece cinsinden, -90° ve 90° arasında) |atand( )
+
+|http://en.wikipedia.org/wiki/Atan2[Ark tanjant (cevap radyan cinsinden, -π ve π arasında)] |atan2(y, x)
+
+|http://en.wikipedia.org/wiki/Atan2[Ark tanjant (cevap derece cinsinden, -180° ve 180° arasında)] |atan2d(y, x)
+
+|Hiperbolik kosinüs |cosh( )
+
+|Hiperbolik sinüs |sinh( )
+
+|Hiperbolik tanjant |tanh( )
+
+|Hiperbolik sekant |sech( )
+
+|Hiperbolik kosekant |csch( )
+
+|Hiperbolik kotanjant |coth( ) veya cotanh()
+
+|Tershiperbolik kosinüs |acosh( ) veya arccosh( )
+
+|Tershiperbolik sinüs |asinh( ) veya arcsinh( )
+
+|Tershiperbolik tanjant |atanh( ) veya arctanh( )
+
+|http://mathworld.wolfram.com/BetaFunction.html[Beta fonksiyonu] Β(a, b) |beta(a, b)
+
+|http://mathworld.wolfram.com/IncompleteBetaFunction.html[Tam olmayan beta fonksiyonu] Β(x;a, b) |beta(a, b, x)
+
+|http://mathworld.wolfram.com/RegularizedBetaFunction.html[Tam olmayan düzenlenmiş beta fonksiyonu] I(x; a, b)
+|betaRegularized(a, b, x)
+
+|http://en.wikipedia.org/wiki/tr:Gama_fonksiyonu[Gama fonksiyonu Γ(x)] |gamma( x)
+
+|(Lower) http://mathworld.wolfram.com/IncompleteGammaFunction.html[tam olmayan gama fonksiyonu] γ(a, x) |gamma(a, x)
+
+|(Lower) http://mathworld.wolfram.com/RegularizedGammaFunction.html[tam olmayan düzenlenmiş gama fonksiyonu P(a,x) =
+γ(a, x) / Γ(a)] |gammaRegularized(a, x)
+
+|http://en.wikipedia.org/wiki/tr:Hata_fonksiyonu[Gauss Hata Fonksiyonu] |erf(x)
+
+|http://en.wikipedia.org/wiki/tr:Digama_fonksiyonu[Digama fonksiyonu] |psi(x)
+
+|http://tr.wikipedia.org/wiki/Poligama_fonksiyonu[Poligama fonksiyonu],
+http://tr.wikipedia.org/wiki/Gama_fonksiyonu[Gama fonksiyonu, gamma(x)]'in doğal logaritmasının (m+1). türevidir (m=0,1)
+|polygamma(m, x)
+
+|http://mathworld.wolfram.com/SineIntegral.html[Sinüs İntegral] fonksiyonu |sinIntegral(x)
+
+|http://mathworld.wolfram.com/CosineIntegral.html[Kosinüs İntegral] fonksiyonu |cosIntegral(x)
+
+|http://mathworld.wolfram.com/ExponentialIntegral.html[Üstel İntegral] fonksiyonu |expIntegral(x)
+
+|http://tr.wikipedia.org/wiki/Riemann_zeta_işlevi[Riemann-Zeta] fonksiyonu ζ(x) |zeta(x)
+
+|https://tr.wikipedia.org/wiki/Lambert_W_fonksiyonu[Lambert W fonksiyonu] LambertW(x, branch) |LambertW(x, 0),
+LambertW(x, -1)
+|===
+
+[NOTE]
+====
+
+x, y, z operatörleri bir doğrunun karşılık gelen katsayılarını elde etmek için kullanılabilir.
+
+====

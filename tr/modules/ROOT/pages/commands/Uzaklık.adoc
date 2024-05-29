@@ -1,0 +1,76 @@
+= Uzaklık Komut
+:page-en: commands/Distance
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Uzaklık( <Nokta>, <Nesne> )::
+  Bir nokta ve bir nesne arasındaki en kısa uzaklığı verir.
+
+[EXAMPLE]
+====
+
+`++Uzaklık((2, 1), x^2 + (y - 1)^2 = 1)++` komutu _1_ sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+Bu komut noktalar, doğru parçaları, doğrular, konikler, fonksiyonlar ve kapalı eğriler için çalışır. Fonksiyonlar için
+sayısal bir algoritma kullanır ki bu algoritma en iyi polinomlar için çalışır.
+
+[EXAMPLE]
+====
+
+_f_ bir fonksiyon ve _A_ bir nokta olsun. `++Uzaklık(A, f)++` komutu _A_ ve _(x(A), f(x(A)))_ arasındaki uzaklığı verir.
+
+====
+
+====
+
+Uzaklık( <Doğru>, <Doğru> )::
+  Bu iki doğru arasındaki uzaklığı verir.
+
+[EXAMPLE]
+====
+
+*Örnekler:*
+
+* `++Uzaklık(y = x + 3, y = x + 1)++` komutu _1.41_ sonucunu verir
+* `++Uzaklık(y = 3x + 1, y = x + 1)++` komutu _0_ sonucunu verir
+
+====
+
+[NOTE]
+====
+
+Kesişen doğrular arasındaki uzaklık _0_ dır. Dolayısıyla bu komut sadece paralel doğrular için ilgi çekicidir.
+
+====
+
+[NOTE]
+====
+
+image:20px-Mode_distance.svg.png[Mode distance.svg,width=20,height=20] xref:/tools/Uzaklık_veya_Uzunluk.adoc[Uzaklık
+veya Uzunluk] aracına da bakın .
+
+====
+
+Uzaklık( <Nokta>, <Nokta> )::
+  Bu iki nokta arasındaki uzaklığı verir.
+Uzaklık( <Doğru>, <Doğru> )::
+  Bu iki doğru arasındaki uzaklığı verir.
+
+[EXAMPLE]
+====
+
+_a: X = (-4, 0, 0) + λ*(4, 3, 0)_ ve _b: X = (0, 0, 0) + λ*(0.8, 0.6, 0)_ olsun. `++Uzaklık(a, b)++` komutu _2.4_
+sonucunu verir
+
+====
+
+[EXAMPLE]
+====
+
+`++Uzaklık((2, 1, 2), (1, 3, 0))++` komutu _3_ sonucunu verir
+
+====

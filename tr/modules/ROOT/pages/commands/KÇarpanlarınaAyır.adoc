@@ -1,0 +1,38 @@
+= KÇarpanlarınaAyır Komut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+== CAS Söz Dizimi
+
+KÇarpanlarınaAyır( <İfade> )::
+  Verilen ifadeyi karmaşık (kompleks) çarpanlara da imkan verecek şekilde çarpanlarına ayırır.
+
+[EXAMPLE]
+====
+
+`++KÇarpanlarınaAyır(x^2 + 4)++` komutu _x^2^ + 4_ ifadesinin _(x + 2 ί) (x - 2 ί)_ çarpanlarını verir.
+
+====
+
+KÇarpanlarınaAyır( <İfade>, <Değişken> )::
+  İfadeyi karmaşık (kompleks) çarpanlara da imkan verecek şekilde verilen değişkene göre çarpanlarına ayırır.
+
+[EXAMPLE]
+====
+
+*Örnekler:*
+
+* `++KÇarpanlarınaAyır(a^2 + x^2, a)++` komutu _a^2^ + x^2^_ ifadesinin _a_ değişkenine göre _(ί x + a) (- ί x + a)_
+çarpanlarını verir.
+* `++KÇarpanlarınaAyır(a^2 + x^2, x)++` komutu _a^2^ + x^2^_ ifadesinin _x_ değişkenine göre _(x + ί a) (x - ί a)_
+çarpanlarını verir.
+
+====
+
+[NOTE]
+====
+
+Bu komut ifadeleri http://en.wikipedia.org/wiki/Gaussian_rational[Kompleks Rasyonel Sayılar] kümesi üzerinde
+çarpanlarına ayırır. Rasyonel sayılar üzerinde çarpanlara ayırma için
+xref:/commands/ÇarpanlarınaAyır.adoc[ÇarpanlarınaAyır] komutuna bakın.
+
+====

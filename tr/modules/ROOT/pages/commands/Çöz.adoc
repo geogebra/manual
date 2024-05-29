@@ -1,0 +1,81 @@
+= Çöz Komut
+:page-en: commands/Solve
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+*Çöz* ve xref:/commands/Çözümler.adoc[Çözümler] komutları, bir denklem veya bir denklem sistemini gerçel sayılar kümesi
+üzerinde sembolik olarak çözer. Denklemleri sayısal olarak çözmek için xref:/commands/SÇöz.adoc[SÇöz Komutunu] kullanın.
+Denklemleri karmaşık sayılar kümesinde çözmek için xref:/commands/KÇöz.adoc[KÇöz Komutuna] bakın.
+
+====
+
+Aşağıdaki komutlar sadece image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/CAS_Görünümü.adoc[CAS Görünümünde] mevcuttur.
+
+Çöz( <x cinsinden denklem> )::
+  Verilen denklemi esas değişken için çözer ve tüm çözümlerin bir listesini verir.
+Çöz( <Denklem>, <Değişken> )::
+  Denklemi verilen değişken için çözer ve tüm çözümlerin bir listesini verir.
+Çöz( <Denklem Listesi>, <Değişken Listesi> )::
+  Denklemlerin kümesini, verilen değişkenler kümesi için çözer ve tüm çözümlerin bir listesini verir.
+
+[EXAMPLE]
+====
+
+*Örnekler:*
+
+* `++Çöz({x = 4 x + y , y + x = 2}, {x, y})++` komutu _x = 4x + y_ ve _y + x = 2_ denklemlerinin yegane _( x = -1, y = 3
+)_ çözümünü verir.
+* `++Çöz({2a^2 + 5a + 3 = b, a + b = 3}, {a, b})++` komutu _\{\{a = 0, b = 3}, \{a = -3, b = 6}}_ sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++Çöz(x * a^2 = 4a, a)++` komutu, _xa^2^ = 4a_ denkleminin \{stem:[a = \frac\{4}\{x}, a = 0]} çözümlerini verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++Çöz(x^2 = 4x)++` komutu _x^2^ = 4x_ denkleminin tüm çözümleri olan _\{x = 4, x = 0}_ listesini verir.
+
+====
+
+Çöz( <Denklem>, <Değişken> , <Kabul listesi>)::
+  Bir denklemi verilen değişken için kabuller listesine uygun olarak çözer ve tüm çözümlerin bir listesini verir.
+
+[EXAMPLE]
+====
+
+*Örnekler:*
+
+* `++Çöz(u *x < a,x, u>0)++` komutu, _u *x < a_ nın _u>0_ kabulüne uygun _\{x < a / u}_ çözümünü verir
+* `++Çöz(u *x < a,x, {u<0, a<0})++` komutu _\{x > a / u}_ sonucunu verir.
+
+====
+
+Solve( <Parametrik Denklem Listesi>, <Değişken Listesi> )::
+  Bir parametrik denklemler kümesini verilen değişkenler kümesi için çözer ve tüm çözümlerin bir listesini verir.
+
+[EXAMPLE]
+====
+
+* `++Çöz({(x, y) = (3, 2) + t*(5, 1), (x, y) = (4, 1) + s*(1, -1)}, {x, y, t, s})++` komutu _\{\{x = 3, y = 2, t = 0, s
+= -1}}_ sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+* Denklemlerin sağ tarafları (yukarıdaki tüm sözdizimlerinde) es geçilebilir. Eğer sağ taraf yoksa, 0 olarak ele alınır.
+* Kimi zaman otomatik çözücünün çalışmasını sağlamak için bazı değişiklikler yapmanız gerekir, örneğin
+`++ Çöz(TrigİfadeyiAç(sin(5/4 π + x) - cos(x - 3/4 π) = sqrt(6) * cos(x) - sqrt(2)))++`.
+* Parçalı tanımlı fonksiyonlar için xref:/commands/SÇöz.adoc[SÇöz Komutunu] kullanmanız gerekecektir.
+
+====

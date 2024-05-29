@@ -1,0 +1,43 @@
+= Polinom Komut
+:page-en: commands/Polynomial
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Polinom( <Fonksiyon> )::
+  Polinom fonksiyonun açık halini verir.
+Polinom( <Nokta Listesi> )::
+  Verilen n noktadan geçen derecesi _n-1_ olan interpolasyon (iç değerleme) polinomunu oluşturur.
+
+[EXAMPLE]
+====
+
+`++Polinom({(1, 1), (2, 3), (3, 6)})++` komutu _0.5 x^2^ + 0.5 x_ sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++Polinom((x - 3)^2)++` komutu _x^2^ - 6x + 9_ sonucunu verir.
+
+====
+
+== CAS Söz Dizimi
+
+Polinom( <Fonksiyon> )::
+  Fonksiyonu açar ve bunu (katsayıları gruplandırarak) _x_ cinsinden bir polinom olarak yazar.
+Polinom( <Fonksiyon>, <Değişken> )::
+  Fonksiyonu açar ve bunu (katsayıları gruplandırarak) verilen değişken cinsinden bir polinom olarak yazar.
+
+[EXAMPLE]
+====
+
+`++Polinom((x - 3)^2 + (a + x)^2, a)++` komutu _a^2^ + 2 x a + 2 x^2^ - 6 x + 9_ sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++Polinom((x - 3)^2 + (a + x)^2)++` komutu _2 x^2^ + (2a - 6) x + a^2^ + 9_ sonucunu verir.
+
+====

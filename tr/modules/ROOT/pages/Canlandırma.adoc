@@ -1,0 +1,93 @@
+= Canlandırma
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+== Otomatik Canlandırma
+
+GeoGebra sadece serbest sayılar ve/veya açıları değil aynı zamanda bir nesneye (doğru parçası, doğru, fonksiyon, eğri
+v.b.) bağlanmış bağımlı noktaları da aynı anda canlandırmanıza imkan verir. Serbest sayılar / açıların otomatik olarak
+canlandırılmaları için image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Grafik_Görünümü.adoc[Grafik Görünümünde] sürgü olarak gösterilmeleri gerekir.
+
+Eğer GeoGebra'da serbest bir sayı, bir açı veya bağımlı bir noktayı canlandırmak istiyorsanız bu sayı, açı veya noktanın
+xref:/Bağlam_Menüsü.adoc[Bağlam Menüsünde] _Canlandır_ seçimini yapmalısınız.
+
+[NOTE]
+====
+
+Serbest bir sayı, serbest bir açı veya bağımlı bir nokta canlandırıldıktan sonra
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Grafik Görünümünün_ sol alt köşesinde
+bir canlandırma düğmesi görünür. Bu düğme size canlandırmayı image:18px-Nav_pause_circle.svg.png[Nav pause
+circle.svg,width=18,height=18] durdurma veya image:18px-Nav_play_circle.svg.png[Nav play circle.svg,width=18,height=18]
+devam ettirme imkanı verir.
+
+====
+
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Özellikler_Diyaloğu.adoc[Özellikler
+Diyaloğunun] _Sürgü_ sekmesinde canlandırma davranışını değiştirebilirsiniz:
+
+Bir taraftan, canlandırmanın _Hızını_ kontrol edebilirsiniz.
+
+[NOTE]
+====
+
+Canlandırma hızının 1 olması, sürgünün değer aralığı boyunca bir kere koşturulmasının yaklaşık 10 saniye süreceği
+anlamına gelir.
+
+====
+
+Diğer taraftan, canlandırma döngüsünün nasıl tekrarlanacağına karar verebilirsiniz:
+
+⇔ _Salınan_::
+  Canlandırma döngüsü Azalan ve Artan arasında sırayla geçiş yapar.
+⇒ _Artan_::
+  Sürgü değeri daima artandır. Sürgü en büyük değerine ulaştıktan sonra, en küçük değerine geri atlar ve canlandırmayı
+  sürdürür.
+⇐ _Azalan_::
+  Sürgü değeri daima azalandır. Sürgü en küçük değerine ulaştıktan sonra, en büyük değerine geri atlar ve canlandırmayı
+  sürdürür.
+⇒ _Artan_ (_Bir kere_)::
+  Sürgü değeri daima artandır. Sürgü en büyük değerine ulaştıktan sonra, bu değerde durur ve canlandırmayı sonlandırır.
+
+[NOTE]
+====
+
+Bir otomatik canlandırma etkinleştirildiğinde, GeoGebra tamamıyla işlevsel olmayı sürdürür. Bu size canlandırma devam
+ederken inşanızda değişiklikler yapma imkanı verir.
+
+====
+
+== Manüel Canlandırma
+
+Bir sayı, açı veya noktanın konumunu manüel olarak değiştirmek için image:20px-Mode_move.svg.png[Mode
+move.svg,width=20,height=20]xref:/tools/Taşı.adoc[Taşı Aracını] seçin. Ardından bir serbest sayı, açı veya bağımlı bir
+noktaya tıklayın ve klavyenizin ya [.kcode]#+# veya [.kcode]#–# tuşuna yada yön tuşlarına basın. Bu tuşlardan birini
+basılı olarak tutmak size manüel canlandırma yapma imkanı verir.
+
+[EXAMPLE]
+====
+
+Eğer bir noktanın koordinatları P = (2 t, t) noktasında olduğu gibi bir _t_ sayısına bağlı ise, _t_ sürekli olarak
+değiştirildiğinde bu nokta bir doğru boyunca taşınacaktır.
+
+====
+
+[NOTE]
+====
+
+Bir sürgünün artışını image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] nesnenin __Özellikler
+Diyaloğu__nun _Sürgü_ sekmesinde ayarlayabilirsiniz.
+
+====
+
+== Klavye Kısa Yolları
+
+* [.kcode]#Shift# + yön tuşu, size 0.1 birimlik bir adım genişliği verir
+* [.kcode]#Ctrl# + yön tuşu, size 10 birimlik bir adım genişliği verir
+* [.kcode]#Alt# + yön tuşu, size 100 birimlik bir adım genişliği verir
+
+[NOTE]
+====
+
+Bir doğrunun üzerindeki bir nokta, bu doğru boyunca [.kcode]#+# ve [.kcode]#–# tuşları kullanılarak da taşınabilir.
+
+====

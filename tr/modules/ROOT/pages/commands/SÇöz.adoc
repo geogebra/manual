@@ -1,0 +1,63 @@
+= SÇöz Komut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+== CAS Sözdizimi
+
+Bu komut sadece image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_Görünümü.adoc[CAS
+Görünümünde] mevcuttur.
+
+SÇöz( <Denklem> )::
+  Denklemin esas değişken için bir çözümünü (sayısal olarak) bulmayı dener. Polinom olmayanlar için daima bir başlangıç
+  değeri belirlemelisiniz (aşağıya bakın).
+SÇöz( <Denklem>, <Değişken> )::
+  Denklemin verilen değişken için bir çözümünü (sayısal olarak) bulmayı dener. Polinom olmayanlar için daima bir
+  başlangıç değeri belirlemelisiniz (aşağıya bakın).
+SÇöz( <Denklem>, <Değişken = başlangıç değeri> )::
+  Verilen denklemin, başlangıç değeri ile verilen değişken için çözümlerinin listesini sayısal olarak bulur.
+
+[EXAMPLE]
+====
+
+*Örnekler:*
+
+* `++SÇöz(cos(x) = x, x = 0)++` komutu _\{x = 0.74}_ sonucunu verir
+* `++SÇöz(a^4 + 34a^3 = 34, a = 3)++` komutu _\{a = 0.99}_ sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++SÇöz(a^4 + 34a^3 = 34, a)++` komutu _\{a = -34, a = 0.99}_ sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++SÇöz(x^6 - 2x + 1 = 0)++` komutu _\{x = 0.51, x = 1}_ sonucunu verir.
+
+====
+
+SÇöz( <Denklem Listesi>, <Değişken Listesi> )::
+  Denklemler kümesinin, verilen değişkenler kümesi için bir çözümünü (sayısal olarak) bulmayı dener.
+
+[EXAMPLE]
+====
+
+`++SÇöz({pi / x = cos(x - 2y), 2 y - pi = sin(x)}, {x = 3, y = 1.5})++` komutu _\{x = 3.14, y = 1.57}_ sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+* Eğer _a=3_ veya _\{x = 3, y = 1.5}_ gibi bir başlangıç noktası vermezseniz, sayısal algoritma bir çözüm bulmakta
+zorlanabilir (ve bir başlangıç noktasının verilmesi bir çözüm bulunmasını garantilemez)
+* Basamak sayısı xref:/Seçenekler_Menüsü.adoc[genel yuvarlama] için yapılan seçime bağlıdır.
+* SÇöz x-eksenine asimptotik olan fonksiyonlar için veya diğer uç örnekler için çalışmaz. Yine de bunlar genellikle
+yeniden formüle edilebilir.
+* SÇöz sadece sürekli fonksiyonlar için çalışacaktır!
+* xref:/commands/Çöz.adoc[Çöz] ve xref:/commands/SÇözümler.adoc[SÇözümler] komutlarına da bakın.
+
+====

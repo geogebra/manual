@@ -1,0 +1,41 @@
+= Uydur Komut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Uydur( <Nokta Listesi>, <Fonksiyon Listesi> )::
+  _Fonksiyonların_, listedeki noktalara en iyi uyan doğrusal kombinasyonunu hesaplar.
+
+[EXAMPLE]
+====
+
+* `++Uydur({(-2, 3), (0, 1), (2, 1), (2, 3)}, {x^2, x})++` komutu _0.625 x^2 - 0.25x_ sonucunu verir.
+* _L = \{A, B, C, ...}_, _f(x) = 1_, _g(x) = x_, _h(x) = e^x_, _F = \{f, g, h}_ olsun. `++Uydur(L, F)++` komutu,
+listedeki noktalara uyan _a + b x + c e^x_ şeklinde bir fonksiyon hesaplar.
+
+====
+
+Uydur( <Nokta Listesi>, <Fonksiyon> )::
+  Listedeki noktalara hataların karesi toplamı minimum olacak şekilde uyan verilen formatta bir fonksiyon hesaplar. Bu
+  _fonksiyon_ optimize edilecek parametrelerin başlangıç değerleri olarak alınacak bir veya daha fazla sürgüye bağlı
+  olmalıdır. Doğrusal olmayan yineleme (iterasyon) yakınsak olmayabilir fakat sürgülerin daha iyi bir başlangıç
+  noktasına ayarlanması yardımcı olabilir.
+
+[EXAMPLE]
+====
+
+_a_ değer aralığı _-5_ ile _5_ arasında ve artışı 1 olan bir sürgü olsun.
+`++Uydur({(-2, 3), (0, 1), (2, 1), (2, 3)}, a + x^2)++` komutu _-1 + x^2_ sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+* xref:/commands/UydurÜstel.adoc[UydurÜstel], xref:/commands/UydurBüyüme.adoc[UydurBüyüme],
+xref:/commands/UydurDoğru.adoc[UydurDoğru], xref:/commands/UydurDoğruX.adoc[UydurDoğruX],
+xref:/commands/UydurLog.adoc[UydurLog], xref:/commands/UydurLojistik.adoc[UydurLojistik],
+xref:/commands/UydurPolinom.adoc[UydurPolinom], xref:/commands/UydurKuvvet.adoc[UydurKuvvet] ve
+xref:/commands/UydurSin.adoc[UydurSin] komutlarına da bakın.
+* Eğer büyük/küçük sayılarla çalışıyorsanız, daha kesin bir sonuç elde etmek için bunları normalleştirmeyi
+düşünmelisiniz, bakın xref:/commands/Normalleştir.adoc[Normalleştir Komutu].
+
+====

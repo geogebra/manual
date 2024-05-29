@@ -2,62 +2,49 @@
 :page-en: commands/Functions_and_Calculus_Commands
 ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
 
-Um eine Funktion einzugeben, können Sie vorher definierte Variablen (z.B. Zahlen, Punkte, Vektoren), sowie andere
-Funktionen verwenden.
+Im Moment gibt es folgende Befehle für Funktionen & Analysis:
 
-[EXAMPLE]
-====
-
-* Funktion f: `++f(x) = 3 x^3 – x^2++`
-* Funktion g: `++g(x) = tan(f(x))++`
-* Namenlose Funktion: `++sin(3 x) + tan(x)++`
-
-====
-
-[NOTE]
-====
-
-Informationen über alle vordefinierten Funktionen in GeoGebra (z.B. sin, cos, tan) finden Sie im Abschnitt
-xref:/Vordefinierte_Funktionen_und_Operatoren.adoc[Vordefinierte Funktionen und Operatoren].
-
-====
-
-Sie können auch Befehle im Zusammenhang mit Funktionen verwenden, um zum Beispiel das
-xref:/commands/Integral.adoc[Integral] oder die xref:/commands/Ableitung.adoc[Ableitung] einer Funktion zu berechnen.
-Sie können den Befehl xref:/commands/Wenn.adoc[Wenn] verwenden, um xref:/commands/Wenn.adoc[Bedingte Funktionen] zu
-erhalten.
-
-[NOTE]
-====
-
-Sie können auch die Eingabe f'(x) oder f''(x), … zum Berechnen der Ableitung einer zuvor definierten Funktion f(x)
-verwenden.
-
-====
-
-[EXAMPLE]
-====
-
-Definieren Sie zuerst die Funktion _f_ als `++f(x) = 3 x^3 – x^2++`. Danach können Sie mithilfe der Eingabe
-`++g(x) = cos(f' (x + 2))++` die Funktion _g_ in Abhängigkeit von Funktion _f_ erzeugen.
-
-====
-
-Zusätzlich können Sie Funktionen mithilfe eines Vektors verschieben (siehe Befehl
-xref:/commands/Verschiebe.adoc[Verschiebe]) und die Lage freier Funktionen kann mit dem Werkzeug
-image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22]xref:/tools/Bewege.adoc[Bewege] verändert werden. Auch
-andere xref:/commands/Transformation_(Befehle).adoc[Transfomationsbefehle] können auf die Funktionen angewendet werden,
-wobei das Ergebnis in den meisten Fällen keine Funktion, sondern eine Kurve ist.
-
-== Definitionsmenge einer Funktionen auf ein Intervall einschränken
-
-Sie können die Befehle xref:/commands/Funktion.adoc[Funktion] oder xref:/commands/Wenn.adoc[Wenn] dazu verwenden, um die
-Definitionsmenge einer Funktion auf ein Intervall [a, b] einzuschränken.
-
-[EXAMPLE]
-====
-
-`++Wenn[3<=x<=5,x^2]++` und `++Funktion[x^2,3,5]++` sind beide Definitionen der Funktion _x^2^_ beschränkt auf das
-Intervall [3,5].
-
-====
+* xref:/commands/Ableitung.adoc[Ableitung (Befehl)]
+* xref:/commands/Asymptote.adoc[Asymptote (Befehl)]
+* xref:/commands/Extremum.adoc[Extremum (Befehl)]
+* xref:/commands/Faktoren.adoc[Faktoren (Befehl)]
+* xref:/commands/Funktion.adoc[Funktion (Befehl)]
+* xref:/commands/Grad.adoc[Grad (Befehl)]
+* xref:/commands/Grenzwert.adoc[Grenzwert (Befehl)]
+* xref:/commands/ImpliziteAbleitung.adoc[ImpliziteAbleitung (Befehl)]
+* xref:/commands/ImpliziteKurve.adoc[ImpliziteKurve (Befehl)]
+* xref:/commands/Integral.adoc[Integral (Befehl)]
+* xref:/commands/IntegralZwischen.adoc[IntegralZwischen (Befehl)]
+* xref:/commands/Iteration.adoc[Iteration (Befehl)]
+* xref:/commands/Iterationsliste.adoc[Iterationsliste (Befehl)]
+* xref:/commands/Koeffizienten.adoc[Koeffizienten (Befehl)]
+* xref:/commands/KomplexeNullstelle.adoc[KomplexeNullstelle (Befehl)]
+* xref:/commands/Krümmung.adoc[Krümmung (Befehl)]
+* xref:/commands/Krümmungskreis.adoc[Krümmungskreis (Befehl)]
+* xref:/commands/Krümmungsvektor.adoc[Krümmungsvektor (Befehl)]
+* xref:/commands/Kurve.adoc[Kurve (Befehl)]
+* xref:/commands/LinkeSumme.adoc[LinkeSumme (Befehl)]
+* xref:/commands/LinksseitigerGrenzwert.adoc[LinksseitigerGrenzwert (Befehl)]
+* xref:/commands/LöseDgl.adoc[LöseDgl (Befehl)]
+* xref:/commands/NLöseDgl.adoc[NLöseDgl (Befehl)]
+* xref:/commands/Nenner.adoc[Nenner (Befehl)]
+* xref:/commands/Normalisiere.adoc[Normalisiere (Befehl)]
+* xref:/commands/Nullstelle.adoc[Nullstelle (Befehl)]
+* xref:/commands/Nullstellen.adoc[Nullstellen (Befehl)]
+* xref:/commands/NullstellenListe.adoc[NullstellenListe (Befehl)]
+* xref:/commands/Obersumme.adoc[Obersumme (Befehl)]
+* xref:/commands/ParametrischeAbleitung.adoc[ParametrischeAbleitung (Befehl)]
+* xref:/commands/Partialbruch.adoc[Partialbruch (Befehl)]
+* xref:/commands/PfadParameter.adoc[PfadParameter (Befehl)]
+* xref:/commands/Polynom.adoc[Polynom (Befehl)]
+* xref:/commands/Rechtecksumme.adoc[Rechtecksumme (Befehl)]
+* xref:/commands/RechtsseitigerGrenzwert.adoc[RechtsseitigerGrenzwert (Befehl)]
+* xref:/commands/Richtungsfeld.adoc[Richtungsfeld (Befehl)]
+* xref:/commands/Spline.adoc[Spline (Befehl)]
+* xref:/commands/TaylorReihe.adoc[TaylorReihe (Befehl)]
+* xref:/commands/Trapezsumme.adoc[Trapezsumme (Befehl)]
+* xref:/commands/TrigErweitere.adoc[TrigErweitere (Befehl)]
+* xref:/commands/TrigKombiniere.adoc[TrigKombiniere (Befehl)]
+* xref:/commands/TrigVereinfache.adoc[TrigVereinfache (Befehl)]
+* xref:/commands/Untersumme.adoc[Untersumme (Befehl)]
+* xref:/commands/Zähler.adoc[Zähler (Befehl)]

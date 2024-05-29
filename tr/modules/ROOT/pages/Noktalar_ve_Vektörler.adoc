@@ -1,0 +1,93 @@
+= Noktalar ve Vektörler
+:page-en: Points_and_Vectors
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Noktalar ve vektörler, Kartezyen veya kutupsal koordinatlar şeklinde xref:/Giriş_çubuğu.adoc[Giriş çubuğu] aracılığıyla
+girilebilirler (bakın xref:/Sayılar_ve_Açılar.adoc[Sayılar ve Açılar]). Noktalar aynı zamanda
+image:24px-Mode_point.svg.png[Mode point.svg,width=24,height=24] xref:/tools/Nokta_Araçları.adoc[Nokta Araçları]
+kullanılarak ve vektörler image:24px-Mode_vectorfrompoint.svg.png[Mode vectorfrompoint.svg,width=24,height=24]
+xref:/tools/Noktadan_vektör.adoc[Noktadan Vektör Aracı] veya image:24px-Mode_vector.svg.png[Mode
+vector.svg,width=24,height=24] xref:/tools/Vektör.adoc[Vektör Aracı] ve çeşitli xref:/Komutlar.adoc[komutlar]
+kullanılarak da oluşturulabilirler.
+
+[NOTE]
+====
+
+Büyük harf etiketleri noktaları gösterirken küçük harf etiketleri vektörleri verir. Bu düzen zorunlu değildir.
+
+====
+
+[EXAMPLE]
+====
+
+*Örnekler:*
+
+* 2D'de bir _P_ noktası veya bir _v_ vektörünü Kartezyen koordinatlarıyla girmek için `++P = (1, 0)++` veya
+`++v = (0, 5)++` kullanabilirsiniz.
+* 3D'de bir _P_ noktası veya bir _v_ vektörünü Kartezyen koordinatlarıyla girmek için `++P = (1, 0, 2)++` veya
+`++v = (0, 5, -1)++` kullanabilirsiniz.
+* 2D'de bir _P_ noktasını kutupsal koordinatlarıyla girmek için `++P = (1; 0°)++` veya `++v = (5; 90°)++`
+kullanabilirsiniz.
+* 3D'de bir _P_ noktasını küresel koordinatlarıyla girmek için (ρ, θ, φ) şeklinde üç koordinat, örneğin
+`++P = (1; 60°; 30°)++` girin.
+* Bir noktayı image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+xref:/Hesap_Tablosu_Görünümü.adoc[Hesap Tablosu Görünümüne] girmek için, noktayı hücre adresini kullanarak adlandırın
+örneğin: `++A2 = (1, 0)++`
+
+====
+
+[NOTE]
+====
+
+*Notlar:*
+
+* Kutupsal koordinatların arasında noktalı virgül kullanmanız gerekir. Derece sembolünü yazmazsanız GeoGebra bu açıyı
+radyan cinsinden girilmiş gibi ele alacaktır.
+* Noktalar ve vektörlerin koordinatları `++x()++` ve `++y()++` (ve 3D noktalar için `++z()++`)
+xref:/Önceden_tanımlı_fonksiyonlar_ve_işlemler.adoc[önceden tanımlı fonksiyonları] kullanılarak elde edilebilir.
+* _Q_ noktasının kutupsal koordinatları `++abs(Q)++` ve `++arg(Q)++` (ve aynı zamanda 3D noktalar için `++alt(Q)++`)
+kullanılarak elde edilebilir.
+
+====
+
+[EXAMPLE]
+====
+
+*Örnekler:*
+
+* Eğer `++P=(1,2)++` bir nokta ve `++v=(3,4)++` bir vektör ise `++x(P)++`, 1 sonucunu ve `++y(v)++`, 4 sonucunu verir.
+* `++abs(P)++`, 2.24 ve `++arg(P)++`, 26.57° sonucunu verir.
+
+====
+
+== Hesaplamalar
+
+GeoGebra'da, noktalar ve vektörler ile hesaplamalar da yapabilirsiniz.
+
+[EXAMPLE]
+====
+
+* İki A ve B noktasının M orta noktasını, Giriş Çubuğuna `++M = (A + B) / 2++` girerek oluşturabilirsiniz.
+* Bir _v_ vektörünün _uzunluğunu_ `++uzunluk = sqrt(v * v)++` veya `++uzunluk = Uzunluk(v)++`kullanarak
+hesaplayabilirsiniz.
+* Bir _v_ vektörünün _başlangıç veya bitiş noktalarının_ koordinatlarını sırasıyla `++Nokta(v, 0) ++` ve
+`++Nokta(v, 1) ++` komutlarını kullanarak elde edebilirsiniz.
+* Eğer _A = (a, b)_ ise `++A + 1++`, _(a + 1, b + 1)_ sonucunu verir. Eğer _A_ bir _a+bί_
+xref:/Karmaşık_Sayılar.adoc[karmaşık sayısı] ise `++A+1++`, _a + 1 + bί_ sonucunu verir.
+
+====
+
+== Vektörel Çarpım
+
+_(a, b)_ ve _(c, d)_ iki nokta veya vektör olsun. Bu taktirde `++(a, b) ⊗ (c, d)++`, _(a, b, 0) ⊗ (c, d, 0)_ vektörel
+çarpımının z-koordinatını tek bir sayı olarak verir.
+
+Benzer söz dizimi listeler için de geçerlidir fakat bu durumda sonuç bir liste olur.
+
+[EXAMPLE]
+====
+
+* `++{1, 2} ⊗ {4, 5}++` girdisi _\{0, 0, -3}_ sonucunu verir
+* `++{1, 2, 3} ⊗ {4, 5, 6}++` girdisi _\{3, 6, -3}_ sonucunu verir.
+
+====

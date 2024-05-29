@@ -1,0 +1,47 @@
+= Çözümler Komut
+:page-en: commands/Solutions
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+== CAS Sözdizimi
+
+Çözümler( <Denklem> )::
+  Verilen denklemi esas değişken için çözer ve tüm çözümlerin bir listesini verir.
+Çözümler( <Denklem>, <Değişken> )::
+  Denklemi verilen değişken için çözer ve tüm çözümlerin bir listesini verir.
+Çözümler( <Denklem Listesi>, <Değişken Listesi> )::
+  Denklemler kümesini verilen değişkenler kümesi için çözer ve tüm çözümlerin bir listesini verir.
+
+[EXAMPLE]
+====
+
+*Örnekler:*
+
+* `++Çözümler({x = 4 x + y , y + x = 2}, {x, y})++` komutu _x = 4x + y_ ve _y + x = 2_ denklemlerinin _\{\{-1, 3}}_
+yegane çözümünü stem:[\begin\{pmatrix}-1&3\end\{pmatrix}] şeklinde gösterir.
+* `++Çözümler({2a^2 + 5a + 3 = b, a + b = 3}, {a, b})++` komutu _\{\{-3, 6}, \{0, 3}}_ çözümlerini
+stem:[\begin\{pmatrix}-3&6\\0&3\end\{pmatrix}] şeklinde verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++Çözümler(x * a^2 = 4a, a)++` komutu _xa^2^ = 4a_ denkleminin \{stem:[\frac\{4}\{x},0]} çözümlerini verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++Çözümler(x^2 = 4x)++` komutu _x^2^ = 4x_ denkleminin _\{0, 4}_ çözümlerini verir.
+
+====
+
+[NOTE]
+====
+
+* Kimi zaman otomatik çözücünün çalışmasına imkan vermek için bazı değişimler yapmanız gerekir, örneğin
+`++ Çözümler(TrigİfadeyiAç(sin(5/4 π + x) - cos(x - 3/4 π) = sqrt(6) * cos(x) - sqrt(2))) ++`
+* xref:/commands/Çöz.adoc[Çöz] komutuna da bakın.
+
+====

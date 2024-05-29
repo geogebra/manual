@@ -1,0 +1,56 @@
+= Limit Komut
+:page-en: commands/Limit
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Limit( <Fonksiyon>, <Değer> )::
+  Fonksiyonun esas değişkeninin verilen değeri için http://en.wikipedia.org/wiki/tr:Fonksiyonun_limiti[limitini]
+  hesaplar. (Bu sonsuz sonucunu da verebilir.)
+
+[EXAMPLE]
+====
+
+`++Limit((x^2 + x) /  x^2, +∞)++` komutu _1_ sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+Tüm limitler GeoGebra ile hesaplanamaz, bu nedenle bu durumlarda (gerçek sonucun tanımsız olması durumunda olduğu gibi)
+_tanımsız_ sonucu verilecektir.
+
+====
+
+== CAS Söz Dizimi
+
+Limit( <İfade>, <Değer> )::
+  Fonksiyonun esas değişkeninin verilen değeri için limitini hesaplar.
+Limit( <İfade>, <Değişken>, <Değer> )::
+  Fonksiyonun verilen değişkeninin verilen değeri için limitini hesaplar.
+
+[EXAMPLE]
+====
+
+`++Limit(a sin(v) / v, v, 0)++` komutu _a_ sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++Limit(a sin(x) / x, 0)++` komutu _a_ sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+* Tüm limitler GeoGebra ile hesaplanamaz, bu nedenle bu durumlarda (gerçek sonucun tanımsız olması durumunda olduğu
+gibi) _?_ sonucu verilecektir.
+* Eğer bir xref:/commands/Eğer.adoc[parçalı tanımlı fonksiyonun] limitini bulmak istiyorsanız,
+xref:/commands/LimitSağdan.adoc[LimitSağdan] veya xref:/commands/LimitSoldan.adoc[LimitSoldan] komutunu kullanmanız
+gerekebilir, örneğin `++LimitSağdan(If(x>1, x^2, -2x), 1)++`
+* xref:/commands/Asimptot.adoc[Asimptot Komutu], xref:/commands/LimitSağdan.adoc[LimitSağdan Komutu] ve
+xref:/commands/LimitSoldan.adoc[LimitSoldan Komutuna] da bakın.
+
+====

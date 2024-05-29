@@ -1,0 +1,289 @@
+= Categoría:Objetos de Acción
+:page-en: Action_Objects
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Las /Comentarios:Núm_HerramientasES.adoc[herramientas] de _acción_ o **_inter_**acción sobre
+/Categoría:Objetos.adoc[objetos] están agrupadas, por omisión, en la /Categoría:Iconos.adoc[Barra de Herramientas] bajo
+el ícono xref:/tools/Deslizador.adoc[image:24px-Mode_slider.svg.png[Mode slider.svg,width=24,height=24]]
+xref:/tools/Deslizador.adoc[Deslizador]:
+
+xref:/tools/Deslizador.adoc[image:24px-Mode_slider.svg.png[Mode slider.svg,width=24,height=24]]
+xref:/tools/Deslizador.adoc[Deslizador]
+
+xref:/tools/Botón.adoc[image:24px-Mode_buttonaction.svg.png[Mode buttonaction.svg,width=24,height=24]]
+xref:/tools/Botón.adoc[Botón]
+
+xref:/tools/Casilla_de_Control.adoc[image:24px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=24,height=24]]
+xref:/tools/Casilla_de_Control.adoc[Casilla de Control]
+
+xref:/tools/Casilla_de_Entrada.adoc[image:24px-Mode_textfieldaction.svg.png[Mode
+textfieldaction.svg,width=24,height=24]] xref:/tools/Casilla_de_Entrada.adoc[Casilla de Entrada]
+
+Son adecuadas para diseñar hojas dinámicas interactivas con
+/s_index_php?title=Referencia:Xml_action=edit_redlink=1.adoc[guiones o _scripts_] incluidos, tal como se desprende de
+las siguientes descripciones.
+
+== Casillas
+
+=== Casillas de Control
+
+Las casillas de control son representaciones gráficas de
+/s_index_php?title=Comentarios:Algebra_desde_la_Barra_de_Entrada_action=edit_redlink=1.adoc[Valores Lógicos o
+_Booleanos_].
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Pueden crearse estas casillas con tal
+image:32px-Mode_showcheckbox.svg.png[Mode
+showcheckbox.svg,width=32,height=32]/Comentarios:Núm_HerramientasES.adoc[herramienta] o con el comando
+/s_index_php?title=Referencia:Xml_action=edit_redlink=1.adoc[CasillaControl]
+====
+
+image:32px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=32,height=32] [.small]#(código 52)# aparece en la caja
+que, por omisión, encabeza la [.mw-selflink .selflink]#herramienta# correspondiente a
+xref:/tools/Deslizador.adoc[image:32px-Mode_slider.svg.png[Mode slider.svg,width=32,height=32]] Un _clic_ sobre la
+xref:/Vista_Gráfica.adoc[Vista Gráfica] crea una casilla a tildar para exponer y ocultar uno o más
+/Categoría:Objetos.adoc[objetos].
+
+En la ventana emergente, se puede especificar qué /Categoría:Objetos.adoc[objetos] quedarían afectados por el estado de
+tal casilla.
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: El _estado_ de la casilla se corresponde a su valor
+de _verdad_ en términos
+/s_index_php?title=Comentarios:Algebra_desde_la_Barra_de_Entrada_action=edit_redlink=1.adoc[_boolenanos_].
+
+====
+
+[NOTE]
+====
+
+Estos objetos pueden seleccionarse desde la lista que ofrece la ventana de dialogo o directamente, con el _mouse_ o
+ratón en cualquier /s_index_php?title=Referencia:Vistas_action=edit_redlink=1.adoc[vista].
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: La casilla de control es una simple representación
+visual de una variable _booleana_ y la caja de diálogo es meramente un modo conveniente de añadirle al campo
+correspondiente la /s_index_php?title=Tutorial:Visibilidad_Condicional_y_Secuencias_action=edit_redlink=1.adoc[condición
+de visibilidad] a varios objetos simultáneamente.
+
+====
+
+[NOTE]
+====
+
+Ver la sección destinada a
+/s_index_php?title=Comentarios:Algebra_desde_la_Barra_de_Entrada_action=edit_redlink=1.adoc[Valores Lógicos o
+_Booleanos_].
+
+====
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Se podría conseguir el mismo resultado
+/s_index_php?title=Comentarios:Selección_de_Objetos_action=edit_redlink=1.adoc[seleccionando] todos los
+/Categoría:Objetos.adoc[objetos] y anotando el nombre de tal variable de valor _booleano_, manualmente, en el campo de
+/s_index_php?title=Tutorial:Visibilidad_Condicional_y_Secuencias_action=edit_redlink=1.adoc[visibilidad condicional] de
+cada uno de ellos.
+
+====
+
+[NOTE]
+====
+
+Ver también el /Categoría:Comando.adoc[comando]
+/s_index_php?title=Comentarios:Comando_CondiciónParaMostrarObjeto_action=edit_redlink=1.adoc[CondiciónParaMostrar]
+
+====
+
+'''''
+
+El siguiente es el guión o Script de Raymond (rami) para pasar al tamaño 13
+
+....
+(CheckBoxSetSize_1 = Botón["Cambia a pequeño el tamaño general de la Casilla"])
+CheckBoxSetSize_1.onClick = {  
+   Meld="El nombre del archivo se perderá. \n"
+   Meld=Meld+"¨Se acepta el cambio? (Alto o OK)"
+   alert(Meld)
+   XML=""+ggbApplet.getXML()
+   XML=XML.replace(/checkboxSize="\d{1,2}/g, 'checkboxSize="13')
+   ggbApplet.setXML(XML)
+   Meld="Será pequeño el tamaño de la Casilla.\n"
+   Meld=Meld+'Después de cerrar este mensaje:\n'
+   Meld=Meld+' - Es preciso guardar el Applet en tel directorio correcto bajo un Nombre nuevo.\n'
+   Meld=Meld+' - Borrar el botón.\n'
+   Meld=Meld+' - alternativamente se puede ejecutar: Menú / Opciones / Guardar Ajustes.'
+   alert(Meld)}
+}
+....
+
+'''''
+
+[.small]##
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Ver también el http://youtu.be/ZIRv_cq0Gac[video tutorial] que, en italiano, ilustra la operación de visibilidad
+condicional.
+|===
+
+[.small]##
+
+[.small]##
+
+== Casillas de Entrada
+
+Estas casillas, específicamente su campo de entrada de texto, suelen operar como vías de ejecución de
+/s_index_php?title=Referencia:Xml_action=edit_redlink=1.adoc[guiones o _scripts_].El guion se dispara cuando se modifica
+el _texto_ y tras dejar el campo correspondiente o cuando se presiona, para finalizar, [.kcode]#Intro# ([.kcode]#Enter#
+en algunos teclados).Se accede al valor insertado a partir de la variable %0.
+
+[EXAMPLE]
+====
+
+La casilla de entrada con `++a=a+%0++` en el guion, aumentará el valor de _a_ según el valor ingresado. Opera solamente
+si _a_ es /Categoría:Modalidad_del_Objeto.adoc[libre].
+
+====
+
+Si se quiere emplear el campo de texto de la casilla para modificar el valor de un objeto libre (o redefinir uno
+dependiente), basta con vincularlo a la casilla. De este modo, no es necesario tener que insertar guion alguno.
+
+'''''
+
+[NOTE]
+====
+
+Ver también las herramientas: [.small]#y el ejemplo en la /Tutorial:Hacia_el_Algebra_desde_la_Barra.adoc[sección
+ilustrativa] del /Categoría:Tutorial.adoc[tutorial] /Tutorial:Hacia_el_Algebra_desde_la_Barra.adoc[que ofrece varias
+dinámicas interactivas].#
+
+====
+
+=== Herramienta Casilla de Entrada
+
+Estas casillas pueden crearse empleando la /Comentarios:Núm_HerramientasES.adoc[herramienta]
+image:32px-Mode_textfieldaction.svg.png[Mode textfieldaction.svg,width=32,height=32] *Casilla de Entrada* o el
+/s_index_php?title=Comentarios:Comando_CasillaDeEntrada_action=edit_redlink=1.adoc[comando correspondiente].La
+/Comentarios:Núm_HerramientasES.adoc[herramienta] image:32px-Mode_textfieldaction.svg.png[Mode
+textfieldaction.svg,width=32,height=32] [.small]#(cogido 61)# aparece en la caja que, por omisión, encabeza la
+/Comentarios:Núm_HerramientasES.adoc[herramienta] correspondiente al
+xref:/tools/Deslizador.adoc[image:32px-Mode_slider.svg.png[Mode slider.svg,width=32,height=32]] Deslizador Un _clic_ en
+la xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+xref:/Vista_Gráfica.adoc[Vista Gráfica] permite insertar una /Categoría:Objetos_de_Acción.adoc[Casilla de Entrada]. En
+la caja de diálogo emergente es posible establecer su
+/s_index_php?title=Comentarios:Etiquetas_action=edit_redlink=1.adoc[rótulo] y su enlace al _objeto vinculado_.
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|[.small]#http://lokar.fmf.uni-lj.si/www/GeoGebra4/GG_Graphics/Insert_button_and_input_box.htm[Breve _pantallazo_, en
+inglés, sobre el empleo de la herramienta] y un ejemplo http://www.youtube.com/watch?v=If0iIe5SXvc[en italiano]#
+|===
+
+== Botones
+
+Un _clic_ sobre un /Categoría:Objetos_de_Acción.adoc[botón] dispara un guion.Aunque podría desencadenarlo un _clic_
+sobre otro objeto cualquiera, como por ejemplo, una /Categoría:Excluir_de_Impresión.adoc[imagen], el empleo de botones
+hace más intuitivo este tipo de funcionamiento de las hojas dinámicas. Pueden crearse usando la herramienta
+image:32px-Mode_buttonaction.svg.png[Mode buttonaction.svg,width=32,height=32]
+/s_index_php?title=Comentarios:Herramienta_de_Inserta_Botón_action=edit_redlink=1.adoc[Botón] o con el comando
+/Categoría:Comandos_de_Guiones_Scripting.adoc[Botón].
+
+=== Botón y Caja de Entrada
+
+Esta herramienta se emplea para ejecutar una serie de comandos con un solo _clic_ de un botón. La herramienta
+image:Mode_buttonaction.png[Mode buttonaction.png,width=32,height=32]
+/s_index_php?title=Comentarios:Herramienta_de_Inserta_Botón_action=edit_redlink=1.adoc[ **Botón**] permite la inserción
+de un botón en la xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16]] xref:/Vista_Gráfica.adoc[Vista Gráfica].Cuando el botón se crea, el subtítulo se
+habilita como _guion_ de GeoGebra (_script_) a ser ejecutado.
+
+'''''
+
+[NOTE]
+====
+
+Ver también el tutorial /Tutorial:Listas_Secuencias_y_Guiones_para_Jugar.adoc[Listas, Secuencias y Guiones para Jugar].
+
+====
+
+== Listas Desplegables
+
+Para mostrar el contenido de una lista desplegable organizada, basta con tildar...
+
+* en la xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+xref:/Vista_Gráfica.adoc[Vista Gráfica], la casilla *_Se extiende como lista desplegable_* en la pestaña
+[.kcode]#_Básico_# del /s_index_php?title=Manual:Referencias_y_Cuadros_de_Diálogo_action=edit_redlink=1.adoc[Cuadro de
+Propiedades] de la lista.
+
+image:340px-Lisgra_desplegable.PNG[Lisgra desplegable.PNG,width=340,height=466]
+
+* la casilla _Empleo de botones y casillas de control_ en la pestaña del
+/s_index_php?title=Comentarios:Comando_Sombreado_action=edit_redlink=1.adoc[Cuadro de Ajustes] que establece las
+opciones de la image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+/s_index_php?title=Manual:Hoja_de_Cálculo_action=edit_redlink=1.adoc[Hoja de Cálculo], cuando se hubiera ingresado una
+lista en una o más de sus celdas y se la quisiera exponer como _desplegable_.
+
+image:280px-Botones_desplegables.PNG[Botones desplegables.PNG,width=280,height=493]
+
+[NOTE]
+====
+
+El elemento seleccionado en una lista desplegable, se puede obtener también a partir de los comandos
+xref:/commands/ÍndiceElegido.adoc[ÍndiceElegido] y xref:/commands/ElementoElegido.adoc[ElementoElegido].
+
+====
+
+[EXAMPLE]
+====
+
+Para crear una lista desplegable con tres funciones `++x+1++`, `++x^2++`, `++sqrt(x)++`, se comienza por preparar una,
+anotando`++L={x+1, x^2,sqrt(x)}++` en la /s_index_php?title=Manual:Barra_de_Entrada_action=edit_redlink=1.adoc[Barra de
+Entrada].Luego, vía _clic_ derecho en la lista en la _Vista Algebraica_, seleccionando en
+/Categoría:Propiedades_de_Objeto.adoc[_Propiedades de Objeto..._], la opción _Lista desplegable_ en el cuadro contextual
+emergente. Incluso se puede añadir una anotación descriptiva del contenido de la lista creada.Para lograr la
+representación en la _Vista Gráfica_ de la función seleccionada, se ingresa el comando `++ElementoElegido(L)++` en la
+/s_index_php?title=Manual:Barra_de_Entrada_action=edit_redlink=1.adoc[Barra de Entrada].
+
+====
+
+'''''
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idea:* Para ilustrar la posibilidad de emplear un
+image:32px-Mode_buttonaction.svg.png[Mode buttonaction.svg,width=32,height=32]
+/s_index_php?title=Comentarios:Herramienta_de_Inserta_Botón_action=edit_redlink=1.adoc[botón] para activar el comando
+/Categoría:Comandos_de_Guiones_Scripting.adoc[ZoomAcerca] y _limpiar rastros_ en un boceto, ver el
+/Categoría:Tutoriales.adoc[tutorial] de /Tutorial:Hacia_el_Algebra_desde_la_Barra.adoc[Escenarios de Análisis]
+
+====
+
+[.small]##
+
+== Cajas Combinadas
+
+[.small]##
+
+[.small]####Las cajas combinadas, solo están disponibles cuando está visible una
+/s_index_php?title=Manual:Hoja_de_Cálculo_action=edit_redlink=1.adoc[Hoja de Cálculo].Se puede ingresar una lista en una
+celda de una hoja de cálculo y luego activar la opción _Empleo de Botones y Casillas de Control_ en la pestaña *Hoja de
+Cálculo* del /s_index_php?title=Comentarios:Comando_Sombreado_action=edit_redlink=1.adoc[Cuadro de Ajustes].La lista se
+convertirá en una caja combinada; los elementos seleccionados pueden obtenerse usando los comandos
+xref:/commands/ÍndiceElegido.adoc[ÍndiceElegido] y xref:/commands/ElementoElegido.adoc[ElementoElegido].

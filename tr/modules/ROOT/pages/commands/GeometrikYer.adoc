@@ -1,0 +1,43 @@
+= GeometrikYer Komut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+GeometrikYer( <Geometrik Yer Çizgisini Oluşturan Nokta Q>, <Nokta P>)::
+  _Q_ noktasının, _P_ noktasına bağlı olan geometrik yerini (eğriyi) verir.
+GeometrikYer( <Geometrik Yer Çizgisini Oluşturan Nokta Q>, <Sürgü t>)::
+  _Q_ noktasının, _t_ sürgüsünün aldığı değerlere bağlı olan geometrik yerini (eğriyi) verir.
+GeometrikYer( <Eğim Alanı>, <Nokta> )::
+  Verilen noktada türevi verilen eğim alanına eşit olan geometrik yeri (eğriyi) verir.
+GeometrikYer( <f(x, y)>, <Nokta> )::
+  Verilen noktada stem:[\frac\{dy}\{dx}=f(x,y)] diferansiyel denkleminin çözümüne eşit olan geometrik yeri (eğriyi)
+  verir. Sonuç sayısal olarak hesaplanır.
+
+[NOTE]
+====
+
+_P_ noktası, bir nesne (örneğin doğru, doğru parçası, çember) üzerindeki bir nokta olmalıdır.
+
+====
+
+Geometrik yerler xref:/Serbest_Bağımlı_ve_Yardımcı_Nesneler.adoc[yardımcı nesneler] olarak gösterilen özel nesne
+türleridir. GeometrikYer komutunun yanı sıra bazı
+xref:/s_index_php?title=Süreksiz_Matematik_Komutları_action=edit_redlink=1.adoc[Süreksiz Matematik Komutlarının] ve
+xref:/commands/ÇözADD.adoc[ÇözADD Komutunun] sonucudurlar. Geometrik yerler, xref:/commands/Nokta.adoc[Nokta Komutu]
+gibi yolla ilişkili komutlarla kullanılabilen xref:/Geometrik_Nesneler.adoc[yollardır]. Özellikleri nasıl elde
+edildiklerine bağlıdır, örneğin bakın
+xref:/s_index_php?title=ÇevreUzunluğu_Komut_action=edit_redlink=1.adoc[ÇevreUzunluğu] ve xref:/commands/İlk.adoc[İlk]
+komutları.
+
+[NOTE]
+====
+
+image:22px-Mode_locus.svg.png[Mode locus.svg,width=22,height=22] xref:/tools/Geometrik_Yer.adoc[Geometrik Yer] aracına
+da bakın.
+
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Uyarı,title="Uyarı",width=18,height=18] *Uyarı*: |Geometrik yer, bağımlı noktanın
+xref:/commands/Nokta.adoc[Nokta Komutunun] sonucu olan iki parametreli bir nokta veya
+xref:/commands/YolParametresi.adoc[YolParametresi Komutunun] sonucu olan bir nokta olması durumlarında tanımsızdır.
+|===

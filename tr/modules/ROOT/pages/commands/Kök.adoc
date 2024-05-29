@@ -1,0 +1,54 @@
+= Kök Komut
+:page-en: commands/Root
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Kök( <Polinom> )::
+  Polinomun tüm köklerini fonksiyon grafiği ve _x_-ekseninin kesişme noktaları olarak verir.
+
+[EXAMPLE]
+====
+
+`++Kök(0.1*x^2 - 1.5*x + 5)++` komutu _A = (5, 0)_ ve _B = (10, 0)_ sonucunu verir.
+
+====
+
+Kök( <Fonksiyon>, <Başlangıç x-Değeri> )::
+  Bir sayısal yinelemeli metot için _a_ başlangıç değerini kullanarak fonksiyonun bir kökünü verir.
+
+[EXAMPLE]
+====
+
+`++Kök(0.1*x^2 - 1.5*x + 5, 6)++` komutu _A = (5, 0)_ sonucunu verir.
+
+====
+
+Kök( <Fonksiyon>, <Başlangıç x-Değeri>, <Bitiş x-Değeri> )::
+  _a_, _Başlangıç x-Değeri_ ve _b_, _Bitiş x-Değeri_ olsun. Bu komut sayısal yinelemeli bir metot kullanarak fonksiyonun
+  [_a, b_] aralığındaki bir kökünü verir.
+
+[EXAMPLE]
+====
+
+`++Kök(0.1x² - 1.5x + 5, 8, 13)++` komutu _A = (10, 0)_ sonucunu verir.
+
+====
+
+== CAS Söz Dizimi
+
+Kök( <Polinom> )::
+  Polinomun tüm köklerini fonksiyon grafiği ve _x_-ekseninin kesişim noktaları olarak verir.
+
+[EXAMPLE]
+====
+
+`++Kök(x^3 - 3 * x^2 - 4 * x + 12)++` komutu _\{x = -2, x = 2, x = 3}_ sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_Görünümü.adoc[CAS Görünümünde] bu
+komut, xref:/commands/Çöz.adoc[Çöz Komutunun] sadece özel bir şeklidir.
+
+====

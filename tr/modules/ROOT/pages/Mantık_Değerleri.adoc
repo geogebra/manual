@@ -1,0 +1,60 @@
+= Mantık Değerleri
+:page-en: Boolean_values
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+GeoGebra'da _true (doğru)_ ve _false (yanlış)_ mantık değişkenlerini kullanabilirsiniz. Örneğin
+xref:/Giriş_çubuğu.adoc[Giriş çubuğuna] sadece `++a = true++` veya `++b = false++` yazın ve Enter tuşuna basın.
+
+== İşaret Kutuları ve Yön Tuşları
+
+Serbest Mantık değişkenleri image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Grafik_Görünümü.adoc[Grafik Görünümünde] işaret kutuları şeklinde gösterilebilirler (
+image:22px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=22,height=22]xref:/tools/İşaret_Kutusu.adoc[İşaret
+Kutusu Aracına] bakın). Bir Mantık değişkeni image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/Cebir_Görünümü.adoc[Cebir Görünümünde] seçildikten sonra bunun değerini
+değiştirmek için yön tuşlarını kullanabilirsiniz (xref:/Canlandırma.adoc[Manüel Canlandırmaya] bakın).
+
+[NOTE]
+====
+
+Mantık değişkenlerini aynı zamanda sayı (0 veya 1) olarak da kullanabilirsiniz. Bu, bir mantık değişkenini
+canlandırılmış bir sürgünün dinamik hızı olarak kullanma imkanı vererek karşılık gelen işaret kutusunu canlandırmayı
+başlatmak veya durdurmak için kullanma olanağı verir. Bu durumda canlandırma düğmesi, sadece hızı statik (değişken
+olmayan) canlandırılmış bir başka sürgü olması durumunda image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Grafik Görünümünde_ gösterilir.
+
+====
+
+== İşlemler
+
+GeoGebra'da Mantık değişkenleri ve şartları için aşağıdaki işlemleri (operatörleri) bunları Giriş Çubuğunun yanındaki
+listeden seçerek ya da klavye ile girerek kullanabilirsiniz:
+
+[cols=",,,,",options="header",]
+|===
+|İşlem |Liste |Klavye |Örnek |Nesne türleri
+|Eşit |≟ |== |a ≟ b veya a == b |sayılar, noktalar, doğrular, konikler, fonksiyonlar (CAS gerekir), düzlemler, a, b
+
+|Eşit değil |≠ |!= |a ≠ b veya a != b |sayılar, noktalar, doğrular, konikler, fonksiyonlar (CAS gerekir), düzlemler, a,
+b
+
+|Küçük | |< |a < b |sayılar a, b
+
+|Büyük | |> |a > b |sayılar a, b
+
+|Küçük eşit |≤ |<= |a ≤ b veya a <= b |sayılar a, b
+
+|Büyük eşit |≥ |>= |a ≥ b veya a >= b |sayılar a, b
+
+|Ve |∧ |&& |a ∧ b veya a && b |Mantık değişkenleri a, b
+
+|Veya |∨ ||| |a ∨ b veya a || b |Mantık değişkenleri a, b
+
+|Değil |¬ |! |¬a veya !a |Mantık değişkeni a
+
+|Paralel |∥ | |a ∥ b |doğrular a, b
+
+|Dik |⊥ | |a ⊥ b |doğrular a, b
+
+|Eleman |∈ | |a ∈ liste1 |sayı a, nokta listesi liste1
+|===

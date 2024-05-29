@@ -1,0 +1,29 @@
+= Fonksiyon Komut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Fonksiyon( <Sayı Listesi> )::
+  Takip eden fonksiyonu verir: İlk iki sayı başlangıç _x_-değeri ve bitiş _x_-değeridir ve geriye kalan sayılar
+  fonksiyonun eşit uzaklıklardaki noktalarda aldığı _y_-değerleridir.
+
+[EXAMPLE]
+====
+
+* `++Fonksiyon({2, 4, 0, 1, 0, 1, 0})++` komutu _x = 2_ ve _x = 4_ arasında bir üçgensel dalga verir.
+* `++Fonksiyon({-3, 3, 0, 1, 2, 3, 4, 5})++` komutu _x = -3_ ve _x = 3_ arasında eğimi__=1__ olan bir doğrusal denklem
+verir.
+
+====
+
+Fonksiyon( <İfade>, <Parametre Değişkeni 1>, <Başlangıç Değeri>, <Bitiş Değeri>, <Parametre Değişkeni 2>, <Başlangıç
+Değeri>, <Bitiş Değeri> )::
+  3D uzayda iki değişkenli bir fonksiyonu temsil eden yüzeyi kısıtlar.
+
+[EXAMPLE]
+====
+
+`++a(x, y) = x + 0y++` ifadesi 3D uzayında grafiği _z_ = _a_(_x_, _y_) = _x_ *[.underline]#düzlemi#* olan iki değişkenli
+bir fonksiyon oluşturur. `++Fonksiyon(u, u, 0, 3, v, 0, 2)++` komutu, 3D uzayında grafiği _z_ = _a_(_x_,_y_) = _x_
+düzleminde kalan Çokgen[(0, 0, 0), (3, 0, 3), (3, 2, 3), (0, 2, 0)] *[.underline]#dikdörtgeni#* olan iki değişkenli
+_b_(_u_, _v_) = _u_ fonksiyonunu oluşturur.
+
+====

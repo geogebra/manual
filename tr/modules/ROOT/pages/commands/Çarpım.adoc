@@ -1,0 +1,61 @@
+= Çarpım Komut
+:page-en: commands/Product
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Çarpım( <Ham Veri Listesi> )::
+  Listedeki tüm sayıların çarpımını hesaplar.
+Çarpım( <Sayı Listesi>, <Öğe Sayısı> )::
+  Listedeki ilk _n_ öğenin çarpımını hesaplar.
+Çarpım( <Sayı Listesi>, <Frekans Listesi> )::
+  _Sayı listesindeki_ her bir sayının _frekans listesinde_ karşılık gelen kuvvetlerini alıp bunların çarpımını hesaplar.
+
+[EXAMPLE]
+====
+
+*Örnekler:* `++Çarpım({20, 40, 50, 60}, {4, 3, 2, 1})++` komutu _1536000000000000_ sonucunu
+verir.`++Çarpım({sqrt(2), cbrt(3), sqrt(5), cbrt(-7)}, {4, 3, 2, 3})++` komutu _-420_ sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++Çarpım({1, 2, 3, 4}, 3)++` komutu _6_ sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++Çarpım({2, 5, 8})++` komutu _80_ sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+Bu iki liste aynı uzunlukta olmalıdır.
+
+====
+
+== CAS Söz Dizimi
+
+Çarpım( <İfade Listesi> )::
+  Listedeki yüm öğelerin çarpımını hesaplar.
+Çarpım( <İfade>, <Değişken>, <Başlangıç İndisi>, <Bitiş İndisi> )::
+  Verilen değişkenin yerine __başlangıç__tan __bitiş__e tüm tamsayıların alınmasıyla elde edilen ifadelerin çarpımını
+  hesaplar.
+
+[EXAMPLE]
+====
+
+`++Çarpım(x + 1,  x,  2, 3)++` komutu _12_ sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++Çarpım({1, 2, x})++` komutu _2x_ sonucunu verir.
+
+====

@@ -1,0 +1,32 @@
+= Asimptot Komut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Asimptot( <Konik> )::
+  Koniğin her iki asimptotunu verir.
+Asimptot( <Fonksiyon> )::
+  GeoGebra fonksiyonun asimptotlarını bulmayı dener ve bir liste verir. Bunların hepsini bulamayabilir, örneğin ln(x)
+  gibi rasyonel olmayan fonksiyonların düşey asimptotları. *Bu söz dizimi Grafik ve Geometri Uygulamalarında da
+  mevcuttur.*
+Asimptot( <Kapalı Eğri> )::
+  Kapalı Eğrinin tüm asimptotlarını içeren bir liste verir.
+
+[EXAMPLE]
+====
+
+`++Asimptot(x^3 + y^3 + y^2 - 3 x = 0)++` komutu _\{x + y = -0.33}_ listesini verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++Asimptot((x^3 - 2x^2 - x + 4) / (2x^2 - 2))++` komutu _\{y = 0.5x - 1, x = 1, x = -1}_ listesini verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++Asimptot(x^2 - y^2 /4 = 1)++` komutu _-2x + y = 0_ ve _-2x - y = 0_ doğrularını verir.
+
+====

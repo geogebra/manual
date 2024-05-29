@@ -1,0 +1,69 @@
+= Katsayılar Komut
+:page-en: commands/Coefficients
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Katsayılar( <Polinom> )::
+  stem:[a_kx^k+a_\{k-1}x^\{k-1}+\cdots+a_1x+a_0] polinomunun tüm stem:[a_k,a_\{k-1},\ldots,a_1, a_0] katsayılarının
+  listesini verir.
+Katsayılar( <Konik> )::
+  Koniğin stem:[a\cdot x^2 + b\cdot y^2 + c + d\cdot x\cdot y + e\cdot x + f\cdot y = 0] standart formundaki _a_, _b_,
+  _c_, _d_, _e_, _f_ katsayılarının listesini verir.
+
+[EXAMPLE]
+====
+
+`++Katsayılar(x^3 - 3 x^2 + 3 x)++` komutu stem:[x^3 - 3 x^2 + 3 x] polinomunun tüm katsayılarının _\{1, -3, 3, 0}_
+listesini verir.
+
+====
+
+[NOTE]
+====
+
+Kapalı formdaki bir _l: ax + by + c = 0_ doğrusu için _x_(_l_), _y_(_l_), _z_(_l_) söz dizimlerini kullanarak
+katsayıları elde etmek mümkündür.
+
+[EXAMPLE]
+====
+
+`++doğru: 3x + 2y - 2 = 0++` verilsin:
+
+* `++x(doğru)++` komutu 3 sonucunu
+* `++y(doğru)++` komutu 2 sonucunu
+* `++z(doğru)++` komutu -2 sonucunu verir
+
+====
+
+====
+
+[NOTE]
+====
+
+Uyum komutlarının (polinom olmayan) çıktıları için özel bir modu vardır. Örneğin eğer `++f(x) = UydurÜstel(l1)++` ise
+`++Katsayılar(f)++` komutu hesaplanmış parametreleri verir.
+
+====
+
+== CAS Söz Dizimi
+
+Katsayılar( <Polinom> )::
+  Polinomun esas değişkenine göre tüm katsayılarının listesini verir.
+Katsayılar( <Polinom>, <Değişken> )::
+  Polinomun verilen değişkene göre tüm katsayılarının listesini verir.
+
+[EXAMPLE]
+====
+
+* `++Katsayılar(a^3 - 3 a^2 + 3 a, a)++` komutu stem:[a^3 - 3 a^2 + 3 a] polinomunun tüm katsayılarının _\{1, -3, 3, 0}_
+listesini verir.
+* `++Katsayılar(a^3 - 3 a^2 + 3 a, x)++` komutu \{__a__³ - 3 __a__² + 3 _a_} sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++Katsayılar(x^3 - 3 x^2 + 3 x)++` komutu stem:[x^3 - 3 x^2 + 3 x] polinomunun tüm katsayılarının _\{1, -3, 3, 0}_
+listesini verir.
+
+====

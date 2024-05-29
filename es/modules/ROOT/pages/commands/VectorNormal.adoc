@@ -1,5 +1,5 @@
 = Comando VectorNormal
-:page-en: commands/PerpendicularVector_Command
+:page-en: commands/PerpendicularVector
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
 VectorNormal( <Dirección (vector, recta, semirrecta o segmento)> )::
@@ -9,7 +9,7 @@ VectorNormal( <Dirección (vector, recta, semirrecta o segmento)> )::
 [NOTE]
 ====
 
-Una recta con ecuación _ax + by = c_ establece stem:[\begin{pmatrix}a \\ b\end{pmatrix}] _como vector perpendicular._
+Una recta con ecuación _ax + by = c_ establece stem:[\begin\{pmatrix}a \\ b\end\{pmatrix}] _como vector perpendicular._
 
 ====
 
@@ -38,24 +38,24 @@ VectorNormal( <Vector> )::
 [NOTE]
 ====
 
-Un vector de coordenadas stem:[\begin{pmatrix}a \\ b \end{pmatrix}] _tienen a stem:[\begin{pmatrix}-b \\ a
-\end{pmatrix}]_ como el perpendicular.
+Un vector de coordenadas stem:[\begin\{pmatrix}a \\ b \end\{pmatrix}] _tienen a stem:[\begin\{pmatrix}-b \\ a
+\end\{pmatrix}]_ como el perpendicular.
 
 ====
 
 [EXAMPLE]
 ====
 
-Siendo _stem:[\begin{pmatrix}3 \\ 2 \end{pmatrix}]_ el vector ^stem:[\vec\{v}]^`++VectorNormal[(3, 2)]++` crea el de
-coordenadas stem:[\begin{pmatrix}-2 \\ 3 \end{pmatrix}]stem:[ - 2\choose 3].
+Siendo _stem:[\begin\{pmatrix}3 \\ 2 \end\{pmatrix}]_ el vector ^stem:[\vec\{v}]^`++VectorNormal[(3, 2)]++` crea el de
+coordenadas stem:[\begin\{pmatrix}-2 \\ 3 \end\{pmatrix}]stem:[ - 2\choose 3].
 
 ====
 
 [NOTE]
 ====
 
-Un vector de coordenadas stem:[\begin{pmatrix}a \\ b \end{pmatrix}] _tienen a stem:[\begin{pmatrix}-b \\ a
-\end{pmatrix}]_ como vector ortogonal.
+Un vector de coordenadas stem:[\begin\{pmatrix}a \\ b \end\{pmatrix}] _tienen a stem:[\begin\{pmatrix}-b \\ a
+\end\{pmatrix}]_ como vector ortogonal.
 
 ====
 
@@ -68,11 +68,11 @@ VectorNormal( <Plano> )::
 ====
 
 Para un plano determinado por la ecuación cartesiana *_a x+ b y +c z = k_*, el resultado es el vector
-stem:[\begin{pmatrix}a \\ b \\ c\end{pmatrix}]
+stem:[\begin\{pmatrix}a \\ b \\ c\end\{pmatrix}]
 
 ====
 
-== xref:/Vista_CAS.adoc[Vista CAS Computación Algebraica Simbólica]
+== xref:/Vista_CAS.adoc[image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]]xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
 
 En esta xref:/Vista_CAS.adoc[vista] se admite la misma sintaxis pudiendo incluirse literales en operaciones simbólicas.
 
@@ -83,8 +83,8 @@ VectorNormal( <Vector> )::
 ====
 
 Cuando los datos dados incluyen variables sin valor asignado, el resultado es la fórmula del vector perpendicular
-correspondiente.Dado el vector de coordenadas stem:[\begin{pmatrix}a \\ b \end{pmatrix}],
-*`++VectorNormal[(a, b)]++`*, crea el vector _stem:[\begin{pmatrix}-b \\ a \end{pmatrix}]_.
+correspondiente.Dado el vector de coordenadas stem:[\begin\{pmatrix}a \\ b \end\{pmatrix}],
+*`++VectorNormal[(a, b)]++`*, crea el vector _stem:[\begin\{pmatrix}-b \\ a \end\{pmatrix}]_.
 
 ====
 
@@ -95,11 +95,21 @@ correspondiente.Dado el vector de coordenadas stem:[\begin{pmatrix}a \\ b \end{p
 
 ====
 
+[NOTE]
+====
+
+[.small]#http://wiki.geogebra.org/uploads/2/20/GG_5_web_y_tablet_LMS_lianasaidon.pdf[image:20px-GGb5.png[GGb5.png,width=20,height=18]]
+/Manual:Página_Principal.adoc[En] la image:20px-Menu_view_graphics3D.png[Menu view graphics3D.png,width=20,height=20]
+/Manual:Menú_Vistas.adoc[Vista]
+/GeoGebra_Manual:AlRespecto.adoc[3]/s_index_php?title=Manual:Vista_3D_action=edit_redlink=1.adoc[[.kcode]#D#] de
+/GeoGebra_Manual:AlRespecto.adoc[la]
+/s_index_php?title=Manual:Notas_Lanzamiento_de_GeoGebra_5_0_action=edit_redlink=1.adoc[versión]
+http://wiki.geogebra.org/uploads/a/a4/Gu%C3%ADa_Tablets%25Win_8_.pdf[image:20px-View-graphics3D24.png[View-graphics3D24.png,width=20,height=20]]http://wiki.geogebra.org/uploads/2/20/GG_5_web_y_tablet_LMS_lianasaidon.pdf[5]#
 
 VectorNormal( <Plano> )::
   Crea un vector ortogonal al plano indicado.
 
-
+====
 
 [EXAMPLE]
 ====

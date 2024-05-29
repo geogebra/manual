@@ -1,0 +1,60 @@
+= Eğriler
+:page-en: Curves
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+GeoGebra aşağıdaki eğri türlerini destekler:
+
+== Parametrik Eğriler
+
+_t_ belirli bir aralıktaki reel bir parametre olmak üzere _a(t)_ = _(f(t), g(t))_ şeklindeki parametrik eğriler:
+
+* xref:/commands/Eğri.adoc[Eğri Komutu] kullanılarak veya
+* ifadeler _giriş çubuğuna_ doğrudan yazılarak, örneğin `++(t^2,t^3)++`
+
+oluşturulabilir.
+
+Parametrik Eğriler takip eden komutlarda değişken olarak kullanılabilir: xref:/commands/Teğet.adoc[Teğet],
+xref:/commands/Nokta.adoc[Nokta], xref:/commands/Kesiştir.adoc[Kesiştir], xref:/commands/Türev.adoc[Türev],
+xref:/commands/Uzunluk.adoc[Uzunluk], xref:/commands/Eğrilik.adoc[Eğrilik],
+xref:/commands/EğrilikVektörü.adoc[EğrilikVektörü] ve xref:/commands/DokunumÇemberi.adoc[DokunumÇemberi].
+
+[NOTE]
+====
+
+* Parametrik eğriler, önceden tanımlı fonksiyonlar ve aritmetik işlemlerle kullanılabilir. Örneğin, `++c(3)++` girdisi
+_c_ eğrisi üzerindeki 3 parametre değerine karşılık gelen noktayı verir.
+* Aynı zamanda bir eğri üzerine image:24px-Mode_point.svg.png[Mode point.svg,width=24,height=24]
+xref:/tools/Nokta.adoc[Nokta] aracını veya xref:/commands/Nokta.adoc[Nokta] komutunu kullanarak bir nokta
+yerleştirebilirsiniz. _a_ ve _b_ uç noktaları dinamik olduğundan bunlar için sürgü değişkenleri de kullanabilirsiniz
+(image:24px-Mode_slider.svg.png[Mode slider.svg,width=24,height=24] xref:/tools/Sürgü.adoc[Sürgü] aracına bakın).
+
+====
+
+Verilen noktalardan geçen bir parametrik eğri oluşturmak mümkün değildir. Bununla birlikte bu noktalardan geçen bir
+fonksiyon elde etmek için örneğin xref:/commands/UydurPolinom.adoc[UydurPolinom Komutunu] deneyebilirsiniz.
+
+== Kutupsal Eğriler
+
+Kutupsal koordinatlar kullanılarak tanımlanan bir eğriyi çizmek için aşağıdaki (denk) söz dizimlerinden biri
+kullanılabilir:
+
+[EXAMPLE]
+====
+
+`++ρ=sin(2 θ)++` veya `++sin(2 θ)++` veya `++f(t)=(sin(2*t); t)++` veya `++(sin(2*t); t)++` veya
+`++f(t)=(sin(2*t); t), 0< t < pi++` veya `++(sin(2*t); t), 0 < t < pi++` veya `++Eğri[(sin(2*t); t), t, 0, 2pi]++`.
+
+====
+
+== Kapalı Eğriler
+
+Kapalı eğriler _x_ ve _y_ değişkenleri cinsinden polinomlardır. Bunların denklemleri xref:/Giriş_Çubuğu.adoc[Giriş
+Çubuğu] kullanılarak doğrudan girilebilirler. xref:/commands/KapalıEğri.adoc[KapalıEğri] komutu bir noktalar listesinden
+geçen bir kapalı eğri üretir.
+
+[EXAMPLE]
+====
+
+`++x^4 + y^3 = 2xy++`
+
+====

@@ -1,0 +1,57 @@
+= LimitSoldan Komut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+LimitSoldan( <Fonksiyon>, <Değer> )::
+  Fonksiyonun esas değişkeninin verilen değeri için soldan http://en.wikipedia.org/wiki/tr:Tek_tarafl%C4%B1_limit[tek
+  taraflı limitini] hesaplar.
+
+[EXAMPLE]
+====
+
+`++LimitSoldan(1 / x, 0)++` komutu stem:[-\infty] sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+Tüm limitler GeoGebra ile hesaplanamaz, bu nedenle bu durumlarda (gerçek sonucun tanımsız olması durumunda olduğu gibi)
+_tanımsız_ sonucu verilecektir.
+
+====
+
+== CAS Söz Dizimi
+
+LimitSoldan( <İfade>, <Değer> )::
+  Fonksiyonun esas değişkeninin verilen değeri için soldan tek taraflı limitini hesaplar.
+LimitSoldan( <İfade>, <Değişken>, <Değer> )::
+  Çok değişkenli fonksiyonun verilen değişkeninin verilen değeri için soldan tek taraflı limitini hesaplar.
+
+[EXAMPLE]
+====
+
+`++LimitSoldan(1 / a, a, 0)++` komutu stem:[-\infty] sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++LimitSoldan(1 / x, 0)++` komutu stem:[-\infty] sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+Tüm limitler GeoGebra ile hesaplanamaz, bu nedenle bu durumlarda (gerçek sonucun tanımsız olması durumunda olduğu gibi)
+_?_ sonucu verilecektir.
+
+====
+
+[NOTE]
+====
+
+xref:/commands/Limit.adoc[Limit] ve xref:/commands/LimitSağdan.adoc[LimitSağdan] komutlarına da bakın.
+
+====

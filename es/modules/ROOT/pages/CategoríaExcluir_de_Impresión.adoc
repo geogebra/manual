@@ -1,0 +1,166 @@
+= Categoría:Excluir de Impresión
+:page-en: tools/Image
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+xref:/BOD.adoc[image:32px-Mode_image.svg.png[Mode image.svg,width=32,height=32]] [.small]#(código 26)# aparece en la
+caja que, por omisión, encabeza la /Comentarios:Núm_HerramientasES.adoc[herramienta] correspondiente a
+xref:/tools/Texto.adoc[image:32px-Mode_text.svg.png[Mode text.svg,width=32,height=32]] Permite intercalar una
+/Categoría:Workaround_templates.adoc[imagen] en la xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu
+view graphics.svg,width=16,height=16]] xref:/Vista_Gráfica.adoc[Vista Gráfica]. Emplearla, permite especificar la
+ubicación, de una de las siguientes maneras:
+
+* Un _clic_ en xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16]] xref:/Vista_Gráfica.adoc[Vista Gráfica] fija la esquina inferior izquierda de la
+imagen.
+* Un _clic_ sobre un punto se lo establece como su esquina inferior izquierda.
+
+Luego, en la caja de diálogo que se abre, se puede seleccionar una imagen de entre los archivos de formato gráfico que
+aparecen listados, almacenados en los directorios o carpetas que se examinan a tal efecto.
+
+[NOTE]
+====
+
+*Notas:* Después de seleccionar la herramienta image:20px-Mode_image.svg.png[Mode image.svg,width=20,height=20] *Inserta
+Imagen*, puede usarse el _atajo_ [.kcode]#Alt#} + _clic derecho_ para pegar una imagen directamente desde el
+portapapeles del sistema en la xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16]] xref:/Vista_Gráfica.adoc[Vista Gráfica].
+
+'''''
+
+Se admiten archivos transparentes de formato http://en.wikipedia.org/wiki/es:Portable_Network_Graphics[PNG] y
+http://en.wikipedia.org/wiki/es:Graphics_Interchange_Format[GIF] (en inglés,
+http://en.wikipedia.org/wiki/Graphics_Interchange_Format[Format GIF] y
+http://en.wikipedia.org/wiki/Portable_Network_Graphics[PNG]), pero para los de formato PNG pueden requerirse editarlos
+para dotarlos de un _canal alpha_ (por ejemplo, usando http://www.irfanview.com/[IrfanView], guardar usando el _plugin_
+PNGOUT y seleccionado *RGB+Alpha*).
+
+'''''
+
+Ver también el artículo sobre /Categoría:Workaround_templates.adoc[Imágenes] para profundizar respecto de las
+/Categoría:Workaround_templates.adoc[propiedades de las imágenes] o el modo de fijar, por ejemplo,
+/Categoría:Workaround_templates.adoc[imágenes de fondo]
+
+====
+
+== Propiedades de las Imágenes
+
+=== [#Posición]####[#Posici.C3.B3n]##Posición##
+
+La posición de una imagen puede ser absoluta - en pantalla - o relativa al sistema de coordenadas Esto puede
+establecerse en la casilla correspondiente de la pestaña ‘Básico’ del
+/s_index_php?title=Manual:Referencias_y_Cuadros_de_Diálogo_action=edit_redlink=1.adoc[Cuadro de Propiedades] de la
+imagen. Esto se lleva adelante especificando los tres puntos vértices. (Ver también el comando
+/Categoría:Comandos_de_GeoGebra.adoc[Esquina]). La pestaña ‘Posición’ del
+/s_index_php?title=Manual:Referencias_y_Cuadros_de_Diálogo_action=edit_redlink=1.adoc[Cuadro de Propiedades] de la
+imagen ofrece la flexibilidad de escalar, rotar y hasta distorsionar las imágenes.
+
+* Esquina 1: posición de la esquina izquierda inferior de la imagen.
+* Esquina 2: posición inferior derecha de la imagen.
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Solo puede fijarse esta esquina cuando ya se
+estableció la previa, porque de este modo se controla el ancho de la imagen.
+
+====
+
+* Esquina 4: posición superior izquierda de la imagen.
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Solo puede fijarse cuando ya se estableció la
+primera esquina, dado que de este modo se controla la altura de la imagen.
+
+====
+
+[EXAMPLE]
+====
+
+*Ejemplos:* Para explorar los efectos de los puntos esquina, conviene crear tres puntos A, B y C.
+
+* Fijemos A como la primera y B como la segunda esquina de la imagen. Al arrastrar A y B con la herramienta
+/s_index_php?title=Comentarios:Herramienta_de_Elige_y_Mueve_action=edit_redlink=1.adoc[Elige y Mueve], puede explorarse
+su influencia muy fácilmente.
+* Se puede elimina al punto B como segunda esquina. Podemos fijar, a continuación, A como la primera y C como la cuarta
+esquina, para explorar cómo el desplazamiento de estos puntos influye en la imagen..
+* Finalmente, pueden establecerse los tres puntos de esquina para observar cómo al arrastrarlos, se distorsiona la
+imagen.
+
+'''''
+
+Tras observar cómo influir sobre la posición y tamaño de una imagen, vale la pena experimentar otras alternativas. Al
+adjuntar una imagen a un punto A, se fija a 3 unidades su ancho y a 4, su altura, llevando adelante lo siguiente:
+
+* Fijar. ‘Esquina 1’ a A
+* Fijar. ‘Esquina 2’ a A + (3, 0)
+* Fijar. ‘Esquina 4’ a A + (0, 4)
+
+====
+
+[NOTE]
+====
+
+Al arrastrar el punto A con la xref:/Desplazamientos.adoc[herramienta] image:32px-Mode_move.svg.png[Mode
+move.svg,width=32,height=32]
+/s_index_php?title=Comentarios:Herramienta_de_Elige_y_Mueve_action=edit_redlink=1.adoc[Elige y Mueve], la medida de la
+imagen se conserva.
+
+====
+
+=== Imagen de Fondo
+
+Puede establecerse una imagen de fondo tildando la casilla correspondiente a "Imagen de Fondo" de la pestaña "Básico"
+del /s_index_php?title=Manual:Referencias_y_Cuadros_de_Diálogo_action=edit_redlink=1.adoc[Cuadro de Propiedades] de la
+imagen. Una imagen de fondo, yace tras los ejes de coordenadas y ya no vuelve a resultar accesible a la selección vía
+ratón o mouse.
+
+image:280px-Opacidad_I_.PNG[Opacidad I .PNG,width=280,height=458]
+
+/Archivo:Opacidad_I_PNG.adoc[]
+
+[NOTE]
+====
+
+Para modificar la condición de "telón de fondo" de una imagen, se debe abrir el
+/s_index_php?title=Manual:Referencias_y_Cuadros_de_Diálogo_action=edit_redlink=1.adoc[Cuadro de Propiedades]
+seleccionado el ítem image:Menu_Properties.png[Menu Properties.png,width=16,height=16] Propiedades… del
+xref:/Menú_Edita.adoc[Menú Edita] y quitar el tilde de la casilla correspondiente a *_Imagen de Fondo_* de la pestaña
+"Básico".
+
+====
+
+==== [#Transparencia]#Transparencia#
+
+Una imagen puede pasar a ser transparente para que puedan verse tanto los objetos como la cuadrícula y los ejes que
+queden tras ella.
+
+'''''
+
+Para fijar esta condición de transparencia de una imagen, se especifica para el sombreado un valor entre 0% y 100% para
+la _Opacidad_ en la pestaña [.kcode]#Color# del
+/s_index_php?title=Manual:Referencias_y_Cuadros_de_Diálogo_action=edit_redlink=1.adoc[Cuadro de Propiedades] de la
+imagen.
+
+'''''
+
+[NOTE]
+====
+
+image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Los archivos
+http://en.wikipedia.org/wiki/es:Graphics_Interchange_Format[GIF] y
+http://en.wikipedia.org/wiki/es:Portable_Network_Graphics[PNG] transparentes son más adecuados pero los *PNG* deben
+editarse para compatibilizar al canal _alpha_ (empleando, por ejemplo http://www.irfanview.com/[IrfanView], con el
+*_plugin_* *PNGOUT* con la opción *RGB+Alpha*)
+
+====
+
+[NOTE]
+====
+
+* Consultar el artículo sobre /Categoría:Workaround_templates.adoc[Imágenes]
+* Ver el breve http://www.youtube.com/watch?v=0LI75gjfo80[video tutorial] que, en italiano, detalla como emplear la
+herramienta.
+
+====

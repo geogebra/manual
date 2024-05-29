@@ -1,0 +1,37 @@
+= Eksenler Komut
+:page-en: commands/Axes
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Eksenler( <Konik> )::
+  Bir koni kesitinin asal ve yedek eksenlerinin denklemlerini verir.
+
+[NOTE]
+====
+
+Aynı zamanda xref:/commands/AsalEksen.adoc[AsalEksen] ve xref:/commands/YedekEksen.adoc[YedekEksen] komutlarına da
+bakın.
+
+====
+
+Eksenler( <Kuadrik> )::
+  Verilen kuadriğin 3 adet eksenini oluşturur.
+
+[EXAMPLE]
+====
+
+`++Eksenler(x^2 + y^2 + z^2= 3)++` komutu
+
+_a_: _X_ = (0, 0, 0) + _λ_ (1, 0, 0), _b_: _X_ = (0, 0, 0) + _λ_ (0, 1, 0) ve _c_: _X_ = (0, 0, 0) + _λ_ (0, 0, 1)
+doğrularını oluşturur.
+
+====
+
+[NOTE]
+====
+
+*Notlar:* Bu komut özel olarak:
+
+* verilen kuadrik bir _silindir_ ise taban çemberinin iki eksenini ve dönme eksenini verir.
+* verilen kuadrik bir _küre_ ise koordinat sisteminin eksenlerine paralel üç adet eksen verir.
+
+====

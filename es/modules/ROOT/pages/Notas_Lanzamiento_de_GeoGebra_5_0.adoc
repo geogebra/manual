@@ -1,0 +1,837 @@
+= Notas Lanzamiento de GeoGebra 5.0
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Aquí se ofrece un pantallazo sobre novedades de GeoGebra 5. Para una
+http://www.geogebra.org/help/geogebraquickstart_es.pdf[descripción] http://www.geogebra.org/help/docues.pdf[detallada],
+se abre la cordial invitación a consultar el xref:/Página_Principal.adoc[manual] en Español, actualizado para cada
+xref:/Comandos.adoc[comando] y xref:/Herramientas.adoc[herramienta]
+
+Se puede instalar una *versión estable de GeoGebra* usando la opción http://www.geogebra.org/download/[Descargas] .
+
+Información sobre el modo de ejecutar la *Versión 5 (con 3D)* se encuentra en
+http://www.geogebra.org/forum/viewtopic.php?f=52&t=19846[nuestro foro de usuarios].
+
+:toc:
+
+== xref:/Herramientas_3D_a_libro.adoc[Nuevas Herramientas]
+
+* xref:/tools/Plano.adoc[image:Mode_plane.png[Mode plane.png,width=32,height=32]] xref:/tools/Plano.adoc[Plano]
+* xref:/tools/Prisma.adoc[image:Mode_prism.png[Mode prism.png,width=32,height=32]] xref:/tools/Prisma.adoc[Prisma] recto
+* xref:/tools/Esfera_(centro_radio).adoc[image:Mode_spherepointradius.png[Mode
+spherepointradius.png,width=32,height=32]] xref:/tools/Esfera_(centro_radio).adoc[Esfera] (centro-radio)
+* xref:/tools/Vista_frontal.adoc[image:Mode_viewinfrontof.png[Mode viewinfrontof.png,width=32,height=32]]
+xref:/tools/Vista_frontal.adoc[Vista frontal]
+
+== Herramientas Ampliadas
+
+* xref:/tools/Croquis.adoc[image:Mode_freehandshape_32.gif[Mode freehandshape 32.gif,width=32,height=32]]
+xref:/tools/Croquis.adoc[Croquis] ahora también reconoce Elipses
+
+== Novedades
+
+=== Generalidades
+
+* Se pueden xref:/Apertura_de_Archivos_de_Molde.adoc[emplear archivos *_.ggb_*] para:
+** xref:/Aplica_Molde.adoc[aplicar estilos] a xref:/Objetos.adoc[objetos] de otros archivos
+** xref:/Inserta_Archivo.adoc[fusionarlo] con otro archivo
+
+* Se puede ingresar el separador decimal pulsando el que corresponda -sea el [.kcode]#.# o la [.kcode]#,# - desde el
+teclado numérico.
+* La regla http://en.wikipedia.org/wiki/Nonzero-rule[de no-cero] para polígonos que se auto-intersecan será ahora
+consistente con el comportamiento en xref:/Vista_3D.adoc[3D]
+* Admisión de *variables* globales en *guiones de Java* JavaScript Globales así como en funciones globales
+* El explorador de archivos en la xref:/Hoja_de_Cálculo.adoc[Hoja de Cálculo] será reemplazado próximamente por los
+archivos CSV mediante Archivos -> Abre y Archivos -> Abre desde GeoGebra
+* Se admiten las referencias a celdas de xref:/Hoja_de_Cálculo.adoc[Hoja de Cálculo] no definidas
+* Opacidad para los trazos de rectas y contornos de figuras
+* La xref:/Herramientas.adoc[herramienta] image:Mode_image.png[Mode image.png,width=32,height=32] de
+xref:/tools/Imagen.adoc[Imagen] admite archivos SVG desde GG 5.0.4.0
+* image:Menu_Point_Capturing.gif[Menu Point Capturing.gif,width=16,height=16] *Atracción punto-cuadrícula* es una
+alternativa se _muda_ del xref:/Menú_de_Opciones.adoc[Menú de Opciones] a la *_Barra de Estilo_*
+
+=== Lo Extendido a 3D
+
+* Puntos
+
+por ejemplo, A=(5,-2,1)
+
+* Vectores
+
+como u=(5,-2,1)
+
+como ProductoVectorial: a = u ⊗ v
+
+* Rectas
+* Segmentos
+* Semirrectas
+* Polígonos
+* Circunferencias
+
+=== Nuevos Tipos de Objetos
+
+==== Superficies y Planos
+
+===== [#Superficies]#Superficies#
+
+Como...
+
+* *_f(x,y) = sin(x *y)_* o
+* *_Función[sin(a *b), a, -5, 5, b, -5, 5]_*
+
+===== [#Planos]#Planos#
+
+Como *_x + y + z = 1_*
+
+==== Cuerpos
+
+===== [#Pirámides]####[#Pir.C3.A1mides]##Pirámides##
+
+* xref:/commands/Pirámide.adoc[*Pirámides*]
+
+===== [#Prismas]#Prismas#
+
+* xref:/commands/Prisma.adoc[*Prismas*]
+
+===== [#Esferas]#Esferas#
+
+* xref:/commands/Esfera.adoc[*Esferas*]
+
+===== [#Cilindros]#Cilindros#
+
+* xref:/commands/Cilindro.adoc[*Cilindros*]
+
+===== [#Conos]#Conos#
+
+* xref:/commands/Cono.adoc[*Conos*]
+
+== xref:/Vista_3D.adoc[Vista 3~*imensional*~]
+
+=== Desplazando Objetos
+
+* Desplazamiento-Izquierdo permite arrastrar puntos en la xref:/Vista_3D.adoc[Vista 3D]. Para cambiar al modo _a lo
+largo del plano xOy_, basta un _clic_ sobre el punto y uno más, pasa al de _a lo largo del eje z_ y así sucesivamente.
+
+=== Traslación de la Escena
+
+* [.kcode]#Shift# + [.kcode]#<-# (Izquierdo) permite arrastrar la Vista 3D (sin apuntar a un objeto desplazanble)
+* Empleo de la xref:/tools/Desplaza_Vista_Gráfica.adoc[image:Tool_Move_Graphics_View.gif[Tool Move Graphics
+View.gif,width=32,height=32]] herramienta xref:/tools/Desplaza_Vista_Gráfica.adoc[Desplaza Vista Gráfica]
+
+=== Rotación de la escena
+
+* Herramienta *Rota la Vista 3D*
+* Desplazamiento-Derecho y arrastre de la Vista 3D (sin apuntar a ningún objeto desplazable)
+* Rotación Continua con el _mouse_ o ratón
+* Vista del Frente de un Objeto (xref:/Barra_de_Herramientas.adoc[Barra de Herramientas])
+
+=== Zoom
+
+* Empleo de la rueda del ratón o mouse
+* Empleo de la Herramienta Zoom
+
+=== Cuadrícula
+
+* Expone/Oculta ejes, cuadrícula, plano xOy
+
+== Comandos
+
+=== Comandos Ampliados
+
+El comando xref:/commands/Coeficientes.adoc[Coeficientes] ahora puede emplearse con la salida de
+xref:/commands/Ajusta.adoc[Ajusta] (si no se trata de un polinomio) para acceder a los coeficientes to calculados para
+tal _ajuste_.
+
+Próximamente, xref:/commands/GráficoPuntos.adoc[GráficoPuntos] opera también con una lista de textos. Como, por ejemplo:
+xref:/commands/GráficoPuntos.adoc[GráficoPuntos][ \{"Rojo", "Rojo", "Rojo", "Azul", "Azul" } ]
+
+'''''
+
+Los siguientes comandos pasan a operar también con xref:/Secciones_cónicas.adoc[cónicas] además de con
+xref:/Curvas.adoc[curvas] y/o xref:/Funciones.adoc[funciones]:
+
+* xref:/commands/Curvatura.adoc[Curvatura[ <Punto> , <Objeto> ]]
+* xref:/commands/VectorCurvatura.adoc[VectorCurvatura[ <Punto> , <Objeto> ]]
+* xref:/commands/CírculoOsculador.adoc[CírculoOsculador[ <Punto> , <Objeto> ]]
+
+Cada uno de los siguientes comandos opera con objetos 2D/3D
+
+* xref:/commands/PuntoMedio.adoc[PuntoMedio[ <Punto> , <Punto> ]]
+* xref:/commands/Interseca.adoc[Comando Interseca]
+** xref:/commands/Interseca.adoc[Interseca[ <Recta> , <Recta> ]]
+** xref:/commands/Interseca.adoc[Interseca[ <Recta> , <Segmento> ]] y otros...
+** xref:/commands/Interseca.adoc[Interseca[<Recta>, <Cónica>]]
+** xref:/commands/Interseca.adoc[Interseca[<Cónica>, <Cónica>]]
+* xref:/commands/Vector.adoc[Vector[ <Punto> , <Punto> ]]
+* xref:/commands/Recta.adoc[Comando Recta]
+** xref:/commands/Recta.adoc[Recta[ <Punto> , <Punto> ]]
+** xref:/commands/Recta.adoc[Recta[Segmento[ <Punto> , <Punto> ]]
+** xref:/commands/Recta.adoc[Recta[ <Punto> , <Recta> ]] Establecerá como indefinida a la recta resultante si el punto
+está sobre la recta en **3D**__imensiones__**
+** xref:/commands/Recta.adoc[Recta[ <Punto> , <Segmento> ]]
+* xref:/commands/Perpendicular.adoc[Perpendicular[ <Punto> , <Recta> ]]
+* xref:/commands/Circunferencia.adoc[Circunferencia[ <Punto> , <Punto> , <Punto> ]]
+* xref:/commands/Distancia.adoc[Distancia[ <Punto> , <Punto> ]]
+* xref:/commands/Ángulo.adoc[Ángulo[ <Punto> , <Punto>, <Punto> ]]
+* *DiagramaPerimetral* sintaxis a ser confirmada. Puede ensayarse `++DiagramaPerimetral[x^2+y^2]++`
+* xref:/commands/UniformeAleatorio.adoc[UniformeAleatorio][ <Mínimo>, <Máximo>, <n> ]
+* xref:/commands/Mínimo.adoc[Mínimo][ <Lista de Datos>, <Lista de Frecuencias> ]
+* xref:/commands/Máximo.adoc[Máximo][ <Lista de Datos>, <Lista de Frecuencias> ]
+* xref:/commands/Área.adoc[Área]
+** xref:/commands/Área.adoc[Área][ <Poliedro> ]
+** xref:/commands/Área.adoc[Área][ <Cono> ]
+
+=== Nuevos Comandos image:18px-View-cas24.png[View-cas24.png,width=18,height=18] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[de] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+
+* xref:/commands/Laplace.adoc[Laplace][ <Función> ] Da por resultado la
+http://en.wikipedia.org/wiki/es:Transformada_de_Laplace[transformada de Laplace] de la función dada.
+* xref:/commands/Laplace.adoc[Laplace][ <Función>, <Variable> ] Da por resultado, para la variable indicada, la
+http://en.wikipedia.org/wiki/es:Transformada_de_Laplace[transformada de Laplace] de la función dada.
+* xref:/commands/LaplaceInversa.adoc[LaplaceInversa][ <Función> ] Da por resultado, en la xref:/Vista_CAS.adoc[Vista
+CAS], la http://en.wikipedia.org/wiki/es:Transformada_inversa_de_Laplace[inversa de la Transformada de Laplace] para la
+xref:/Funciones.adoc[función] dada
+* xref:/commands/LaplaceInversa.adoc[LaplaceInversa][ <Función>, <Variable> ] Da por resultado, en la
+xref:/Vista_CAS.adoc[Vista CAS], la http://en.wikipedia.org/wiki/es:Transformada_inversa_de_Laplace[inversa de la
+Transformada de Laplace] para la xref:/Funciones.adoc[función] dada en la variable indicada
+* xref:/commands/ResuelveCúbica.adoc[ResuelveCúbica][ <Polinomio Cúbico> ]
+* xref:/commands/GroebnerLex.adoc[GroebnerLex][ <Lista de Polinomios> ]
+* xref:/commands/GroebnerLex.adoc[GroebnerLex][ <Lista de Polinomios>, <Lista de Variables> ]
+* xref:/commands/GroebnerLexDeg.adoc[GroebnerLexDeg][ <Lista de Polinomios> ]
+* xref:/commands/GroebnerLexDeg.adoc[GroebnerLexDeg][ <Lista de Polinomios>, <Lista de Variables> ]
+* xref:/commands/GroebnerDegRevLex.adoc[GroebnerDegRevLex][ <Lista de Polinomios> ]
+* xref:/commands/GroebnerDegRevLex.adoc[GroebnerDegRevLex][ <Lista de Polinomios>, <Lista de Variables> ]
+* xref:/commands/Eliminación.adoc[Eliminación][ <Lista de Polinomios>, <Lista de Variables> ] Considera el sistema
+algebraico de ecuaciones definido por los polinomios y calcula uno equivalente tras ka eliminación de todas las
+variables indicadas
+* xref:/commands/Bisectriz.adoc[Bisectriz**[** <Recta >, <Recta> *]*] Opera de modo análogo en esta
+xref:/Vista_CAS.adoc[vista] aunque genera una sola recta. Para que se establezcan ambas, el comando debe anotarse entre
+llaves.
+
+=== Nuevos Comandos (pospuestos para GeoGebra 5.2)
+
+* xref:/commands/ResuelveCuártica.adoc[ResuelveCuártica][ <Polinomio de cuarto grado> ]
+* *MapaDensidad* con sintaxis a confirmar contando con la preliminar `++MapaDensidad[ sin(x)+sin(y) ]++`
+* *DiagramaMatriz* con sintaxis a confirmar contando con la preliminar
+`++DiagramaMatriz[{{0.9, 0.08, 0.03}, {0.15, 0.8, 0.05}, {0.25, 0.25, 0.5}}]++`
+* *CurvasNivel* con sintaxis a confirmar contando con la preliminar CurvasNivel[x^2+y^2]
+* Nyquist, a confirmarse
+* RangoCompetición
+* Poliedro
+
+== Nuevos Comandos
+
+* xref:/commands/Spline.adoc[Spline][ <Lista de Puntos> ]
+* xref:/commands/Spline.adoc[Spline][ <Lista de Puntos>, <Orden ≥ 3> ]
+* xref:/commands/Tangente.adoc[Tangente][ <Punto>, <Spline> ]
+* xref:/commands/AjusteImplícita.adoc[AjusteImplícita][ <Lista de puntos>, <Orden> ]
+* xref:/commands/Suprime.adoc[Suprime][ <Lista>, <Lista> ]
+* xref:/commands/SonIguales.adoc[SonIguales][ <Objeto>, <Objeto> ]
+* xref:/commands/EstánAlineados.adoc[EstánAlineados][ <Punto>, <Punto>, <Punto> ]
+* xref:/commands/SonConcurrentes.adoc[SonConcurrentes][ <Recta>, <Recta>, <Recta> ]
+* xref:/commands/SonCocíclicos.adoc[SonCocíclicos][ <Punto>, <Punto>, <Punto>, <Punto> ]
+* xref:/commands/SonParalelas.adoc[SonParalelas][ <Recta>, <Recta> ]
+* xref:/commands/SonPerpendiculares.adoc[SonPerpendiculares][ <Recta>, <Recta> ]
+* xref:/commands/Comprueba.adoc[Comprueba][ <Expresión Booleana> ]
+* xref:/commands/CompruebaDetalles.adoc[CompruebaDetalles][ <Expresión Booleana> ]
+* xref:/commands/ActualizaConstrucción.adoc[ActualizaConstrucción][ <Número de veces> ]
+* xref:/commands/IntersecaRecorridos.adoc[IntersecaRecorridos][ <Recta>, <Polígono> ]
+* xref:/commands/IniciaRegistro.adoc[IniciaRegistro][ <"Sensor">, <Variable>, <"Sensor">, <Variable>, ... ]
+* xref:/commands/DetieneRegistro.adoc[DetieneRegistro][ ]
+* xref:/commands/IniciaReporte.adoc[IniciaReporte]
+** xref:/commands/IniciaReporte.adoc[IniciaReporte][ ]
+** xref:/commands/IniciaReporte.adoc[IniciaReporte][ <Registro o no (true/false)> ]
+* xref:/commands/DirecciónVista.adoc[DirecciónVista][ <Dirección> ] fija la vista de dirección 3D como, por ejemplo, en
+frente de un plano; a través de una recta de dirección; etc.
+* xref:/commands/Disposición.adoc[Disposición][ <Dirección (texto)> ]
+* xref:/commands/Envoltura.adoc[Envoltura][ <Trayecto de creación de la Envoltura>, <Punto en Desplazamiento> ]
+* xref:/commands/AjusteImplícita.adoc[AjusteImplícita][ <Lista de Puntos>, <Orden> ]
+* xref:/commands/Barras.adoc[Barras][ <Lista de Datos Brutos>, <Ancho de Barras>, <Factor de escala vertical (opcional)>
+]
+* xref:/commands/GráficoPuntos.adoc[GráficoPuntos][ <Lista de Datos Brutos>, <Pila de Puntos Adyacentes (opcional)>,
+<Factor de Escala (opcional)>]
+* xref:/commands/TablaFrecuencias.adoc[TablaFrecuencias][ <Lista de Datos Brutos>, <Factor de escala (opcional)>]
+
+=== xref:/commands/Comandos_de_Matemática_Financiera.adoc[Comandos de Matemática Financiera]
+
+* xref:/commands/Pago.adoc[Pago][ <Tasa>, <Número de Períodos>, <Valor Actual>, <Valor Futuro (opcional)>, <Tipo
+(opcional)> ]
+* xref:/commands/Tasa.adoc[Tasa][ <Número de Períodos>, <Pago>, <Valor Actual>, <Valor Futuro (opcional)>, <Tipo
+(opcional)>, <Estimación (opcional)> ]
+* xref:/commands/Períodos.adoc[Períodos][ <Tasa>, <Pago>, <Valor Actual>, <Valor Futuro (opcional)>, <Tipo (opcional)> ]
+* xref:/commands/ValorActual.adoc[ValorActual][ <Tasa>, <Número de Períodos>, <Pago>, <Valor Futuro (opcional)>, <Tipo
+(opcional)> ] Comportamiento análogo al de la función disponible en una hoja de cálculos.
+* xref:/commands/ValorFuturo.adoc[ValorFuturo][ <Tasa>, <Número de Períodos>, <Pago>, <Valor Actual (opcional)>, <Tipo
+(opcional)> ] Comportamiento análogo al de la función disponible en una hoja de cálculos.
+* xref:/commands/IniciaRegistro.adoc[IniciaRegistro][ "<Sensor>", <Variable>, "<Sensor>", <Variable>, ... ] Opera con
+dispositivos de registro como, por ejemplo, un teléfono móvil.
+* xref:/commands/DetieneRegistro.adoc[DetieneRegistro][] Opera con dispositivos de registro como, por ejemplo, un
+teléfono móvil.
+
+== Comandos 3D
+
+=== General
+
+* xref:/commands/DirecciónVista.adoc[*DirecciónVista*][ <Dirección> ] fija la vista de dirección 3D como, por ejemplo,
+en frente de un plano; a través de una recta de dirección; etc.
+* xref:/commands/IntersecaRecorridos.adoc[IntersecaRecorridos][ <Plano>, <Polígono> ]
+* xref:/commands/IntersecaRecorridos.adoc[IntersecaRecorridos][ <Plano>, <Cuádrica> ]
+* xref:/commands/Rota.adoc[Rota][ <Objeto>, <Ángulo>, <Eje de Rotación> ]
+* xref:/commands/Rota.adoc[Rota][ <Objeto>, <Ángulo>, <Punto sobre Eje>, <Eje Directriz> ]
+* xref:/commands/Rota.adoc[Rota][ <Objeto>, <Ángulo>, <Punto sobre Eje>, <Plano> ]
+* xref:/commands/Rota.adoc[Rota][ <Objeto>, <Ángulo>, <Punto sobre Eje>, <Plano> ]
+* xref:/commands/Refleja.adoc[Refleja][ <Objeto>, <Plano> ] refleja un objeto en un plano
+
+==== Puntos
+
+* xref:/commands/Interseca.adoc[Interseca[ <Recta> , <Objeto> ]] crea el punto de intersección de una recta y un objeto,
+sea una recta, un segmento, un polígono, un plano, entre otros.
+* xref:/commands/Interseca.adoc[Interseca[ <Plano>, <Objeto> ]] crea el punto de intersección de un plano y un segmento,
+un polígono, etc
+* xref:/commands/PuntoMásCercano.adoc[PuntoMásCercano]
+** xref:/commands/PuntoMásCercano.adoc[PuntoMásCercano[ <Recta>, <Recta> ]]
+** xref:/commands/PuntoMásCercano.adoc[PuntoMásCercano[ <Región>, <Punto> ]]
+* xref:/commands/Esquina.adoc[Esquina][ 3, <Número> ] crea un punto en una de las esquinas de la
+xref:/Vista_3D.adoc[Vista 3D~*imensional*~][.small]##^pre-lanzamiento^##. Se admite un _número_ entre *_1_* y *_8_*.
+* xref:/commands/Centro.adoc[Centro][ <Cuádrica> ] crea el centro de la cuádríca dada (sea una esfera, cono, etc.)
+
+==== Rectas
+
+* xref:/commands/Interseca.adoc[Interseca[ <Plano> , <Plano> ]] crea la recta de intersección de dos planos
+* xref:/commands/Perpendicular.adoc[Perpendicular][ <Punto> , <Recta>, <Plano> ] crea una perpendicular a la recta por
+el punto, paralela al plano
+* xref:/commands/Perpendicular.adoc[Perpendicular][ <Punto> , <Recta>, Espacio ] crea una perpendicular a la recta por
+el punto, definida en el espacio
+* xref:/commands/Perpendicular.adoc[Perpendicular][ <Punto> , <Plano> ] crea la recta a través del punto, perpendicular
+al plano (opera con polígonos, etc.)
+* xref:/commands/Perpendicular.adoc[Perpendicular][ <Recta> , <Recta> ] crea la perpendicular a sendas rectas indicadas
+.
+* xref:/commands/Distancia.adoc[Distancia[ <Recta>, <Recta>]] establece la distancia entre rectas (segmentos o
+semirrectas), resultando distinto de cero solo si son secantes.
+* xref:/commands/Mediatriz.adoc[Mediatriz[ <Punto>, <Punto>, <Dirección> ]] Operando en la xref:/Vista_3D.adoc[Vista
+3D]:
+
+* si _Dirección_ es un plano, se obtendrá la mediatriz paralela a tal plano,
+* si _Dirección_ es un vector, la del plano ortogonal a tal vector, que pasa por A y B.
+
+==== Vectores
+
+* xref:/commands/VectorNormal.adoc[VectorNormal[ <Plano> ]] crea un vector perpendicular al plano
+* xref:/commands/VectorNormalUnitario.adoc[VectorNormalUnitario[ <Plano> ]] crea un vector unitario, perpendicular al
+plano
+
+==== Polígonos
+
+* xref:/commands/Interseca.adoc[Interseca][ <Plano>, <Poliedro> ] crea polígono(s) devenido(s) de la intersección de
+plano y poliedro
+* xref:/commands/Polígono.adoc[Polígono][ <Punto>, <Punto>, <Número de Vértices>, <Dirección> ] crea un polígono regular
+con el _Número_ de vértices indicado, orientado por la _Dirección_ como, por ejemplo, la de un plano a la que el
+polígono resultará, de ser posible, paralelo.
+
+==== Circunferencia
+
+* xref:/commands/Circunferencia.adoc[Comando Circunferencia]
+** xref:/commands/Circunferencia.adoc[Circunferencia[ <Recta>, <Punto> ]] crea la circunferencia con la recta como eje
+que pasa por el punto indicado
+** xref:/commands/Circunferencia.adoc[Circunferencia[<Punto>,<Radio>,<Dirección> ]] crea la circunferencia con centro,
+radio y ejes paralelos a la dirección, que puede ser la recta, vector o plano (en este caso: vector normal del plano)
+** xref:/commands/Circunferencia.adoc[Circunferencia[<Punto>, <Punto>, <Dirección> ]] crea la circunferencia con centro
+indicado, que pasa a través de un punto y tiene eje paralelo a la dirección indicada (puede resultar indefinida)
+
+==== Cónicas
+
+* xref:/commands/Interseca.adoc[Interseca][ <Plano>, <Cuádrica> ] crea la intersección cónica del plano y la cuádrica
+(esfera, cono, cilindro ...)
+* xref:/commands/Interseca.adoc[Interseca][ <Esfera>, <Esfera> ] crea la intersección circular de las dos esferas
+
+==== Planos
+
+* xref:/commands/Plano.adoc[Comando Plano]
+** xref:/commands/Plano.adoc[Plano[ <Punto> , <Punto> , <Punto> ]] crea el plano que determinan los puntos
+** xref:/commands/Plano.adoc[Plano[ <Punto> , <Recta> ]] crea el plano a través del punto y la recta
+** xref:/commands/Plano.adoc[Plano[ <Recta> , <Recta> ]] crea el plano a través de las rectas si estuvieran en el mismo
+plano
+** xref:/commands/Plano.adoc[Plano[ <Punto> , <Plano> ]] crea el plano paralelo al dado a través del punto
+* xref:/commands/PlanoPerpendicular.adoc[Comando PlanoPerpendicular]
+** xref:/commands/PlanoPerpendicular.adoc[PlanoPerpendicular[ <Punto> , <Recta> ]] crea el plano a través del punto que
+es perpendicular a la recta
+** xref:/commands/PlanoPerpendicular.adoc[PlanoPerpendicular[ <Punto> , <Vector> ]] crea el plano a través del punto que
+es perpendicular al vector
+* xref:/commands/PlanoBisector.adoc[Comando PlanoBisector]
+** xref:/commands/PlanoBisector.adoc[PlanoBisector[ <Punto> , <Punto> ]] crea el plano ortogonal bisector entre los dos
+puntos
+** xref:/commands/PlanoBisector.adoc[PlanoBisector[ <Segmento> ]] crea el plano ortogonal bisector del segmento
+
+==== Ángulos
+
+* xref:/commands/Ángulo.adoc[Ángulo]
+** xref:/commands/Ángulo.adoc[Ángulo][ <Recta>, <Plano> ]
+** xref:/commands/Ángulo.adoc[Ángulo][ <Plano>, <Plano> ]
+
+==== Esferas
+
+* xref:/commands/Esfera.adoc[Comando Esfera]
+** xref:/commands/Esfera.adoc[Esfera[ <Punto> , <Valor Numérico>]] crea una esfera con centro en el punto indicado y
+radio según el valor numérico
+** xref:/commands/Esfera.adoc[Esfera[ <Punto> , <Punto> ]] crea una esfera con centro en el primer punto indicado, que
+pasa por el segundo.
+
+==== Cilindros y Conos
+
+* xref:/commands/Cilindro.adoc[Comando Cilindro]
+** xref:/commands/Cilindro.adoc[Cilindro[ <Punto>, <Punto>, <Radio (número o valor numérico)> ]] crea un cilindro de
+revolución entre los puntos, indicando sendos centros y con el radio de valor numérico indicado
+** xref:/commands/Cilindro.adoc[Cilindro[ <Círculo>, <Altura (número o valor numérico)> ]] (cilindro circular recto,
+herramienta "Prisma/Cilindro desde la base": Arrastrando el círculo o seleccionándolo para ingresar, a continuación, la
+altura, se crea el cilindro circular recto)
+* xref:/commands/Cono.adoc[Comando Cono]
+** xref:/commands/Cono.adoc[Cono[ <Punto>, <Punto>, <Radio (número o valor numérico)> ]] crea un cono de revolución
+entre los puntos, con el primero como centro del disco en torno al primero con el radio de valor numérico indicado
+siendo el segundo, el vértice
+** xref:/commands/Cono.adoc[Cono[ <Círculo>, <Altura (número o valor numérico)> ]] (cono circular, herramienta
+"Pirámide/Cono desde la base": Arrastrando el círculo o seleccionándolo para ingresar, a continuación, la altura, se
+crea el cono circular)
+** xref:/commands/Cono.adoc[Cono**[** <Punto3D>, <Vector3D>, <Ángulo (número o valor de la amplitud)> *]*] Crea un cono
+infinito con el punto dado como vértice y un eje de simetría paralelo al vector indicado y ángulo de amplitud igual al
+doble de la anotada.
+* xref:/commands/Fondo.adoc[Fondo[ <Cuádrica Limitada> ]] crea la base de la cuádrica limitada (por ejemplo, círculo de
+un cilindro)
+* xref:/commands/Tapa.adoc[Tapa[ <Cuádrica Limitada> ]] crea el tope de la cuádrica limitada (por ejemplo, círculo de un
+cilindro)
+* xref:/commands/Extremos.adoc[Extremos][ <Cuádrica Limitada> ] crea el fondo y la tapa de la cuádrica limitada indicada
+(por ejemplo, círculos de un cilindro)
+* xref:/commands/Lateral.adoc[Lateral[ <Cuádrica Limitada> ]] crea el lateral de la cuádrica limitada
+
+==== Cuádricas
+
+* xref:/commands/CilindroInfinito.adoc[Comando CilindroInfinito]
+** xref:/commands/CilindroInfinito.adoc[CilindroInfinito[ <Punto> , <Vector>, <Valor Numérico del Radio> ]] crea un
+cilindro de revolución en torno al punto según la dirección del vector y el valor numérico indicado para el radio
+** xref:/commands/CilindroInfinito.adoc[CilindroInfinito[ <Punto>, <Punto>, <Valor Numérico del Radio> ]] crea un
+cilindro de revolución en torno al punto según la dirección implicada en sendos puntos y el valor numérico indicado para
+el radio
+** xref:/commands/CilindroInfinito.adoc[CilindroInfinito[ <Recta>, <Valor Numérico del Radio> ]] crea un cilindro de
+revolución acorde a la dirección de la recta y el valor numérico indicado para el radio
+* xref:/commands/ConoInfinito.adoc[Comando ConoInfinito]
+** xref:/commands/ConoInfinito.adoc[ConoInfinito[ <Punto> , <Vector>, <Valor del Ángulo> ]] crea un cono de revolución
+en torno al punto, según la dirección del vector, con el punto indicado como vértice y el número como amplitud angular
+del semi-ángulo del cono
+** xref:/commands/ConoInfinito.adoc[ConoInfinito[ <Punto>, <Punto>, <Valor del Ángulo> ]] crea un cono de revolución en
+torno al punto, según la dirección de sendos puntos, con el segundo punto indicado como vértice y el número como
+amplitud angular del semi-ángulo del cono
+** xref:/commands/ConoInfinito.adoc[ConoInfinito[ <Punto>, <Recta>, <Valor del Ángulo> ]] crea un cono de revolución con
+el punto como vértice, eje paralelo a la recta y el número como amplitud angular del semi-ángulo del cono.
+* xref:/commands/Lateral.adoc[Lateral][ <Cuádrica Limitada> ] crea la superficie lateral de la cuádrica indicada como,
+por ejemplo, la que _enrolla_ sendos círculos de un cilindro limitado.
+* xref:/commands/Ejes.adoc[Ejes][ <Cuádrica> ] crea los tres ejes de una cuádrica
+* xref:/commands/IntersecaCónica.adoc[IntersecaCónica]
+** xref:/commands/IntersecaCónica.adoc[IntersecaCónica][ <Plano>, <Cuádrica> ] Crea la xref:/Cónicas.adoc[cónica] de
+intersección entre el plano y la cuádrica indicadas.
+** xref:/commands/IntersecaCónica.adoc[IntersecaCónica][ <Cuádrica>, <Cuádrica> ] Crea la xref:/Cónicas.adoc[cónica] de
+intersección entre sendas cuádricas indicadas.
+
+==== Poliedros
+
+* xref:/commands/Pirámide.adoc[Comando Pirámide]
+** xref:/commands/Pirámide.adoc[Pirámide[ <Punto> , <Punto> , ... , <Punto> ]] crea una pirámide. Por ejemplo,
+*Pirámide[A, B, C, D]* crea la pirámide de base ABC y cúspide D
+** xref:/commands/Pirámide.adoc[Pirámide[ <Polígono>, <Punto Tope> ]] (herramienta "Pirámide/Cono desde la base" : una
+vez selecciona la base, se debe marcar/seleccionar el punto tope)
+** xref:/commands/Pirámide.adoc[Pirámide[ <Polígono>, <Valor Numérico de la Altura> ]] (herramienta "Pirámide/Cono desde
+la base": Basta con arrastrar o seleccionar el polígono y anotar el valor de la altura para crear la pirámide centrada
+adecuadamente.)
+* xref:/commands/Prisma.adoc[Comando Prisma]
+** xref:/commands/Prisma.adoc[Prisma[ <Punto> , <Punto> , ... , <Punto> , <Punto> ]] crea un prisma. Por ejemplo,
+*Prisma[A, B, C, D]*, crea el prisma con base ABC y tope DEF, vectores iguales AD, BE y CF.
+** xref:/commands/Prisma.adoc[Prisma[ <Polígono> , <Punto Tope> ]] (Herramienta "Prisma": Basta con arrastrar el
+polígono o seleccionarlo e ingresar uno de los puntos del tope para crear un prisma recto)
+** xref:/commands/Prisma.adoc[Prisma[ <Polígono> , <Valor Numérico de la Altura> ]] (Herramienta "Prisma/Cilindro desde
+la base": Basta con arrastrar el polígono o seleccionarlo e ingresar el valor de la altura para crear un prisma recto).
+Crea un prisma recto con el polígono como base y altura de tantas unidades como indique el valor numérico.
+
+==== Poliedros de Desarrollo en**red**ados
+
+* xref:/commands/Desarrollo.adoc[*Desarrollo*][ <Poliedro> , <Número> ] _despliega_ la red troquelada del
+http://en.wikipedia.org/wiki/es:Desarrollo_de_un_poliedro[desarrollo del sólido] platónico; la pirámide convexa o el
+prisma convexo.El número debe tener un valor entre 0 y 1 de modo que resulta completamente desplegada para el valor
+*_1_*.
+* xref:/commands/Desarrollo.adoc[Desarrollo][<Poliedro>, <Número>, <Cara>, <Arista>, <Arista>, ... ] _despliega_ el
+desarrollo sobre el plano que contiene a la _cara_ indicada como _base_ de la construcción, siguiendo el modelo acorde a
+las consecutivas _aristas_ anotadas.Actualmente, esta alternativa se aplica solo al cubo (se prevé incluir otros
+poliedros próximamente).
+
+=== xref:/commands/Comandos_de_3D.adoc[Sólidos] Platónicos
+
+* xref:/commands/Cubo.adoc[Cubo][ <Punto>, <Punto>, <Dirección> ] crea un cubo acorde a los puntos y la dirección
+indicados
+* xref:/commands/Dodecaedro.adoc[Dodecaedro][ <Punto>, <Punto>, <Dirección> ]
+* xref:/commands/Icosaedro.adoc[Icosaedro][ <Punto>, <Punto>, <Dirección> ]
+* xref:/commands/Octaedro.adoc[Octaedro][ <Punto>, <Punto>, <Dirección> ]
+* xref:/commands/Tetraedro.adoc[Tetraedro][ <Punto>, <Punto>, <Dirección> ]
+
+==== Curvas, Superficies
+
+* xref:/commands/Curva.adoc[Curva[ <expresión en t para coordenada x> , <en t para coordenada y> , <en t para coordenada
+z> , <t> , <t mínima> , <t máxima> ]]
+* xref:/commands/Función.adoc[Función[ <Expresión>, <Parámetro Variable 1>, <Valor Inicial>, <Valor Final>, <Parámetro
+Variable 2>, <Valor Inicial>, <Valor Final> ]]
+* xref:/commands/Superficie.adoc[Superficie[ <expresión en u, v para coordenada x> , <en u, v para coordenada y> , <en
+u, v para coordenada z> , <u> , <u mínima> , <u máxima>, <v> , <v mínima> , <v máxima> ]]
+
+==== Volumen
+
+* xref:/commands/Volumen.adoc[Volumen][ <xref:/commands/Cilindro.adoc[Cilindro]> ] Calcula y establece el valor del
+cilindro indicado.
+* xref:/commands/Volumen.adoc[Volumen][ <xref:/commands/Cono.adoc[Cono]> ] Calcula y establece el valor del cono
+indicado.
+* xref:/commands/Volumen.adoc[Volumen][ xref:/commands/Pirámide.adoc[Pirámide]> ] Calcula y establece el valor de la
+pirámide indicada.
+* xref:/commands/Volumen.adoc[Volumen][ <xref:/commands/Prisma.adoc[Prisma]> ] Calcula y establece el valor del prisma
+indicado.
+
+==== El tercer Plano
+
+Los siguientes comandos añaden automáticamente el plano *xOy* acorde a la dirección (la primera cada queda contenida en
+el plano *xOy*)
+
+* xref:/commands/Icosaedro.adoc[Icosaedro]
+* xref:/commands/Cubo.adoc[Cubo]
+* xref:/commands/Tetraedro.adoc[Tetraedro]
+* xref:/commands/Dodecaedro.adoc[Dodecaedro]
+* xref:/commands/Octaedro.adoc[Octaedro]
+==== Altura
+
+Da por resultado la altura "orientada" del sólido, cono o cilindro.
+
+* xref:/commands/Altura.adoc[Altura][ **<**Sólido*>* ]
+* xref:/commands/Altura.adoc[Altura][ **<**Cono*>* ]
+* xref:/commands/Altura.adoc[Altura][ **<**Cilindro*>* ]
+
+== Guiones - _Scripts_
+
+* *[.underline]#FijaDirecciónVista#*[ <Dirección> ] establece la orientación de la vista **3D**__imensional__ respecto
+de la dirección
+
+== Comandos de Tortuga
+
+* xref:/commands/Tortuga.adoc[Tortuga]
+* xref:/commands/TortugaAvanza.adoc[TortugaAvanza][ <Tortuga>, <Distancia> ]
+* xref:/commands/TortugaRetrocede.adoc[TortugaRetrocede][ <Tortuga>, <Distancia> ]
+* xref:/commands/TortugaDerecha.adoc[TortugaDerecha][ <Tortuga>, <Ángulo> ]
+* xref:/commands/TortugaIzquierda.adoc[TortugaIzquierda][ <Tortuga>, <Ángulo> ]
+
+== [#Ventana_Python]#Ventana Python#
+
+Sobre la Ventana http://dev.geogebra.org/trac/wiki/Jython[Python] pueden consultarse las
+/Referencia:Python.adoc[referencias descriptivas] de http://dev.geogebra.org/trac/wiki/Jython[estas preliminares
+alternativas] aún en desarrollo^[.small]#[.small]#[.small]#http://dev.geogebra.org/trac/wiki/Jython[Jython]###^ o, en
+este mismo artículo, la sección xref:/Notas_Lanzamiento_de_GeoGebra_5_0.adoc[correspondiente] y profundizar en
+https://launchpadlibrarian.net/18980633/Python%20para%20todos.pdf[_Phyton para Todos_] sobre cuestiones propias del
+lenguaje interpretado.
+
+=== Características Generales
+
+* *Experimental*: al pulsar el separador decimal en el teclado numérico se ingresa un *.*
+* La http://en.wikipedia.org/wiki/Nonzero-rule[regla asociada al índice] para polígonos auto-intersecados ahora es
+también consistente para **3D**~[.small]#imensiones#~
+* Además de funciones, se admiten *variables* globales en JavaScript Global
+
+=== Vista o Ventana Python
+
+Muy recomendable la guía que - en francés - desarrolla el tema y ofrece
+http://www.geogebra.org/en/upload/files/AAFrancais/NLambert/Python/DocPythonGGb.pdf[descripciones y ejemplos].
+
+==== Tortugas de Logo a Python
+
+Se incluye en esta _vista_ la presencia de un personaje peculiar, la /Referencia:Python.adoc[_tortuga_] que se menciona
+también en http://dev.geogebra.org/trac/wiki/Jython#Turtles[New Turtle object in Python] y se describe en
+/Referencia:Python.adoc[las referencias correspondientes].
+
+==== Guiones Python en GeoGebra 5.0
+
+La ventana de Python contiene tres paneles:
+
+* Interactivo
+
+Aquí puede introducir expresiones de Python y ver de inmediato su efecto. Con las teclas [.kcode]#Alt# +
+[.kcode]#Arriba# / [.kcode]#Alt# + [.kcode]#Abajo#}} se puede navegar por la historia de comandos ingresados.
+
+* De Guiones
+
+En que se puede escribir la secuencia de comandos a ser ejecutados al cargar el archivo. GGB. También puede ejecutarse
+el guion - _script_ - desde aquí, en cualquier momento.
+
+* De Eventos. Aquí puede seleccionar un objeto y enlazar cualquier _script_ de GeoGebra en Python de modo que para...
+** su ejecución basta un _clic_ sobre el tema
+** se acceda a editarlo para cambiar su valor.
+
+===== [#Ejemplo]#Ejemplo#
+
+En un guion - _script_ -, el objeto asociado al evento pueden auto-referenciarse. Para pegar una demostración al
+respecto en el panel interactivo, basta con copiarla desde la página de la
+http://www.geogebra.org/en/upload/files/AAFrancais/NLambert/Python/DocPythonGGb.pdf[guía elaborada en francés].
+
+==== Nombres en Python y GeoGebra
+
+Dado que tanto GeoGebra como Python operan con objetos que tienen nombres, es importante contar con un ágil acceso desde
+Python GeoGebra sin confundir los de sendos tipos. Los objetos GeoGebra se pueden referir (y crear) en Python
+anteponiendo a su nombre el prefijo *geo* o *`++$++`* .
+
+Así, si existiera un punto denominado A, exclusivamente se lo debe referir en Python como *`++$A++`* o geo.A.
+
+===== Puntos y Vectores
+
+* Se pueden crear puntos y vectores por sus coordenadas
+
+....
+ ++$A++ = Point(1, 2)
+ ++$B++ = Point(-2, 3)
+ ++$u++ = Vector(1, -1) 
+....
+
+* Incluso, crear un punto a partir de un vector...
+** *`++$C++`* = Point(*`++$u++`*)
+* Viceversa, un vector a partir de un punto...
+** *`++$r_A++`* = Vector(*`++$A++`*)
+
+O con dos puntos...
+
+* *`++v++`* = Vector(*`++$A++`*), *`++$B++`*)
+
+====== [#Entre_Puntos_y_Vectores]#Entre Puntos y Vectores#
+
+Si A es un punto o un vector...
+
+....
+*++$A.x++ da por resultado su abscisa  (++$A.x++)
+*++$A.y++ su ordenada (++$A.y++)
+*++$A.coords++ su par de coordenadas (++$A.coords++)
+....
+
+[NOTE]
+====
+
+Siempre se trata de resultados dinámicos
+
+====
+
+==== Resultados Dinámicos
+
+El resultado no es un número sino como una expresión cuyo valor se actualiza dinámicamente cuando el punto o el vector
+se desplazan.
+
+* Para obtener el valor actual, se debe apelar a A.x.value y a A.y.value. - valores de Ax y de Ay respectivamente-,
+atributos que también permiten asignar coordenadas a un punto y/o a un vector
+
+....
+*++$A.x++ = 3  (++$A.x++ es la abscisa)
+*++$B.coords++ = (-1, 2)  (++$B.coords ++ son las coordenadas)
+....
+
+* ... definen la abscisa de A como 3 y las coordenadas de B como (-1, 2) y para establecer puntos derivados de los
+precedentes. Así...
+
+....
+*++$C++ = Point(2*++$A.x++, 1+ ++$B.y++)   (++$A.x++ es la abscisa de A)
+....
+
+* ... creando un punto C en que la abscisa es el doble del de A y la ordenada, una unidad por encima de la de B.
+
+===== Atributos comunes a todos los elementos
+
+Los siguientes atributos no se aplican solo a puntos y vectores sino a todos los de objetos de GeoGebra.
+
+* _visible_ (booleana);
+* _color_ (para definirlo, por ejemplo, se utiliza Color.Red o Color(0,5, 0,9, 0,8) (de forma idéntica a
+java.awt.Color);
+* _label_ (etiqueta, una cadena);
+* _label_color_;
+* _label_visible_ (booleana);
+* _label_mode_ puede ser uno de las opciones, _nombre_, _nombre y valor_, _valor_, _subtítulo_
+* _caption_ (sub-título, una cadena);
+* _trace_ (booleana que si es verdadera, establecer que se deje _rastro_ o huella).
+
+Este guion o _script_ crea un punto rojo con una leyenda negra que dice "Dar clic aquí"
+
+* *`++$P++`* = Point(3, 1) (*`++$P++`* es la referencia al punto P)
+* *`++$P.color++`* = Color.RED
+* *`++$P.label_color++`* = *Color.BLACK*
+* *`++$P.label_mode++`* = *"caption"*
+* *`++$P.caption++`* = *"Dar clic aquí"*
+
+Los atributos pueden ser asignados directamente en la creación del objeto. La siguiente escritura tiene el mismo efecto
+que la anterior:
+
+* *`++$P++`* = Point(3, 1, color=Color.RED, label_color=Color.BLACK, label_mode='caption', caption="Dar clic aquí")
+
+(nuevamente, *`++$P++`* refiere al punto P)
+
+===== Trayectos
+
+====== [#Las_líneas_y_los_segmentos]####[#Las_l.C3.ADneas_y_los_segmentos]##Las líneas y los segmentos##
+
+Este _script_ traza una recta que pasa por los puntos A y B
+
+* *`++$l++`* = Line(*`++$A++`*, *`++$B++`*) (A y B se indican con el prefijo *`++$++`*)
+
+Este, una recta, l1, que pasa por A y tiene la dirección del vector u
+
+* *`++$l_1++`* = Line( *`++$A++`*, *`++$u++`*) (A y u se indican con el prefijo *`++$++`*)
+
+Pueden crearse también, semirrectas y segmentos
+
+* *`++$r++`* = Ray((1, 1), (2, 0)) (r se indica con el prefijo *`++$++`*)
+* *`++$s++`* = Segment((-3, 0), (2, 1)) (s se indica con el prefijo *`++$++`*)
+
+Los segmentos tienen dos atributos, el nombre del punto inicial y el del final. Las rectas, segmentos y semirrectas
+tienen como atributo el nombre del vector que les determina la dirección.
+
+===== Ejes
+
+Dos objetos especiales, *`++$xAxis++`* y *`++$yAxis++`* que representan los dos ejes de coordenadas, con los que por el
+momento es limitado lo que puede llevarse adelante, tienen los siguientes atributos - visible : permite modificar la
+visibilidad de un eje. Este _guion_ - script - oculta los dos ejes en la Vista Gráfica
+
+*`++$xAxis.visible++`* = *False* *`++$yAxis.visible++`* = *False*
+
+===== Círculos Elipses Hipérbolas Parábolas
+
+* Este guion o _script_ crea cuatro círculos de...
+** - C1 con centro en (1, 1) que pasa por el punto (3, 2)
+** - C2 que pasa por los puntos (0, 0), (4, 0), (4, 3)
+** - C3 con centro en A y radio BC
+** - C4 con centro en (-2, 0) y radio 3.
+*** *`++$C_1++`* = Circle((1, 1), (3, 2)) (C_1 se indica con el prefijo *`++$++`*)
+*** *`++$C_2++`* = Circle((0, 0), (4, 0), (4, 3)) (C_2 se indica con el prefijo *`++$++`*)
+*** *`++$C_3++`* = Circle(*`++$A++`*, Segment**`++($B++`**, *`++$C++`*))
+*** *`++$C_4++`* = Circle((-2, 0), 3) (C_4 se indica con el prefijo *`++$++`*)
+* Este _script_ crea dos elipses, dos hipérbolas y una parábola
+** E1 de focos (-2, 0), (2, 0) y longitud del semi-eje mayor igual a 3
+** E2 de focos (1, 1), (3, 1) que pasa por el punto (2, 2) ;
+** H1 de focos (-2, 0), (2, 0) y longitud del semi-eje mayor igual a 3;
+** H2 de focos (1, 1), (3, 1) que pasa por el punto (2, 2) ;
+** P de foco (0, 0) y recta directriz (AB).
+*** *`++$E_1++`* = Ellipse((-2, 0), (2, 0), 3) (E_1 se indica con el prefijo *`++$++`*)
+*** *`++$E_2++`* = Ellipse((1, 1), (3, 1), (2, 2)) (E_2 se indica con el prefijo *`++$++`*)
+*** *`++$H_1++`* = Hyperbola((-2, 0), (2, 0), 3) (H_1 se indica con el prefijo *`++$++`*)
+*** *`++$H_2++`* = Hyperbola((1, 1), (3, 1), (2, 2)) (H_2 se indica con el prefijo *`++$++`*)
+*** *`++$P++`* = Parabola((0, 0), Line(*`++$A, $B++`*) (P se indica con el prefijo *`++$++`*)
+
+===== Atributos de Recorridos
+
+Todos los recorridos (rectos y curvos) tiene como atributos...
+
+* Grosor (valor numérico);
+* Tipo de Trazo (cadena que puede indicar una de las opciones de trazo pleno o de uno de los punteados como el de guion
+corto, de guion largo, puntos, punto-raya).
+
+===== Métodos Especiales
+
+* - answer = input(<question>) abre una caja de diálogo vacía y la cadena previa se asocia a la respuesta
+* - answer = input(<question>, <default answer>) similar a la anterior, pero la ventana de la caja de diálogo muestra la
+respuesta como salida por omisión
+* - alert(<text>) muestra una ventana con el mensaje que contiene el texto
+* - debug(<text>) depura el texto escrito en la Consola de Java
+* - command(<text>) evalúa un comando GeoGebra y devuelve una lista de objetos
+* - command("3x+2y=12") crea la recta: 2x + 3y = 12
+* - command('Circle', (x, y), r) crea el círculo con centro en el punto (3, 2) y radio 4
+** - x, y = 3, 2
+** - r = 4
+** c: (x - 3)² + (y - 2)² = 16
+
+==== Acceso a la API de GeoGebra desde Python
+
+Para acceder a GgbAPI, basta con anteponer el prefijo de llamada a ggbApplet, (es decir, es la misma sintaxis que
+JavaScript)
+
+* ggbApplet.evalCommand ("x ^ 2 + y ^ 2 = 4")
+* ggbApplet.startAnimation ()
+
+=== Comprobaciones hacia Teoremas
+
+* xref:/commands/Comprueba.adoc[Comprueba[ <Expresión Booleana> ]]
+* xref:/commands/CompruebaDetalles.adoc[CompruebaDetalles[ <Expresión Booleana> ]]
+
+== [#Otras_Novedades]#Otras Novedades#
+
+=== Nuevas Teclas de Atajo
+
+* [.kcode]#Ctrl# -[.kcode]#Shift# - [.kcode]#Y#: Abre la Vista Python (deGuiones o *_Scripting_*)
+* Para desplazar xref:/Objetos.adoc[objetos] en xref:/Vista_3D.adoc[3D]:
+** [.kcode]#RePág# hacia abajo
+** [.kcode]#AvPág# hacia arriba
+
+Descripción de todas las xref:/Teclas_de_Atajos.adoc[Teclas de Atajos]
+
+=== Nuevos Parámetros Applet
+
+Descripción de todos los /Referencia:Parámetros_Applet.adoc[Parámetros Applet] Para emplear argumentos en la línea de
+comandos es preciso asegurarse de asignar suficiente memoria. Por
+ejemplo,*`++ java -Xms32m -Xmx1024m -jar geogebra.jar -settingsfile = geogebra. properties++`*
+
+=== Nuevos Argumentos para Línea de Comandos
+
+Descripción de Argumentos para cada Comando de Línea en la página de
+/Referencia:Argumentos_de_Línea_de_Comandos.adoc[Referencias correspondiente] .
+
+De los subsistemas _prover_ (el que *Comprueba*) se pueden tomar argumentos para comandos de línea empleando las
+opciones `++--proverhelp++`
+
+Se puede acceder a los argumentos de línea de comando para el sub-sistema de _prover_ usando la ayuda de
+`++--proverhelp++`, nominalmente: --prover=OPCIONES establece opciones para el subsistema que *_comprueba_* (el de
+_prover_) siendo OPCIONES una lista separada por comas, formada por los siguientes ajustes disponibles (aparecen entre
+paréntesis los que corresponden por omisión):
+
+engine::
+  ENGINE establece el__motor__ (_engine_) (Auto|OpenGeoProver|Recio|Botana|PureSymbolic) [Auto]
+
+timeout:SECS establece el tiempo máximo atribuido al _prover_ (en segundos) [5]
+
+maxterms::
+  NUMBER establece el número máximo términos [10000] (OpenGeoProver only)
+method::
+  METHOD establece el método (Wu|Groebner|Area) [Wu] (OpenGeoProver solamente)
+fpnevercoll::
+  BOOLEAN asume que tres puntos libres no son nunca colineales cuando se lo *_Comprueba_* (Prove [null] (Botana
+  solamente, fuerza el 'sí' cuando SingularWS no está disponible)
+usefixcoords::
+  NUMERO1NUMERO2 emplea coordenadas fijas para el primer NUMERO1 y para *Comprueba* (_Prove_) y NUMERO2 para
+  *CompruebaDetalles* (_ProveDetails_), máximo de 4 para ambos [42] (Botana solamente)
+
+transcext:BOOLEANA emplea anillo polinómico con coeficientes desde una extensión transcendental para *Comprueba* (Prove
+[true]) (Botana solamente, precisa SingularWS) captionalgebra:BOOLEANA muestra información de desglose algebraico en el
+_apunte_ o subtítulo del objeto [false] (Botana solamente)
+
+Ejemplo::
+  --prover=engine:Botana,timeout:10,fpnevercoll:true,usefixcoords:43
+
+Al emplear argumentos en los comandos de línea es preciso asegurarse la memoria suficiente.Por ejemplo....
+`++ java -Xms32m -Xmx1024m -jar geogebra.jar --settingsfile=geogebra.properties++`
+
+'''''
+
+=== Nuevos Comandos JavaScript
+
+* registerLoggerListener(Nombre_de_la_Función),
+** unregisterLoggerListener(Nombre_de_la_Función) para acceder a la conexión USB del dispositivo sensor y control de
+movimiento Vernier Go!Motion (USB Logger)
+* registerPenListener(Nombre_de_la_Función),
+** unregisterPenListener(Nombre_de_la_Función) para manejar la herramienta Lápiz
+* registerObjectClickListener(String objNombre, String JSNombre_de_la_Función);
+** unregisterObjectClickListener(String objNombre);
+* registerClickListener(String JSNombre_de_la_Función);
+** unregisterClickListener(String JSNombre_de_la_Función);
+
+Descripción de todos *Nuevos Métodos vinculados a JavaScript* (_guiones_ de Java) en las correspondientes
+/Referencia:JavaScript.adoc[Referencias].
+
+=== Archivos de Formato XML de GeoGebra
+
+La información sobre los *Archivos de Formato XML de GeoGebra* están documentados en la correspondiente página de
+/Referencia:XML.adoc[Referencias].
+
+== [#Licencia]#Licencia#
+
+Se brinda completa libertad para copiar, distribuir y transmitir GeoGebra con propósitos no comerciales. Por mayores
+detalles, se aconseja consultar los peculiares términos de http://www.geogebra.org/download/license.txt[la licencia
+GeoGebra].
+
+'''''

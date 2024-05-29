@@ -1,0 +1,37 @@
+= Alan Komut
+:page-en: commands/Area
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Alan( <Nokta>, ..., <Nokta> )::
+  Verilen noktalar ile belirlenen çokgenin alanını hesaplar.
+Alan( <Konik> )::
+  Koni kesitinin (çember veya elips) alanını hesaplar.
+Alan( <Çokgen> )::
+  Çokgenin alanını hesaplar.
+
+[EXAMPLE]
+====
+
+`++Alan(x^2 + y^2 = 2)++` komutu _6.28_ sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++Alan((0, 0), (3, 0), (3, 2), (0, 2))++` komutu _6_ sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+*Notlar:*
+
+* Çokgenler için, Cebirsel Alanın mutlak değeri hesaplanır (ki bu kendisiyle kesişen çokgenler için beklenmedik cevaplar
+verir)
+* İki fonksiyon grafiği arasındaki alanı hesaplamak için xref:/commands/Arasındakiİntegral.adoc[İntegralArasında]
+komutunu kullanmalısınız.
+* image:24px-Mode_area.svg.png[Mode area.svg,width=24,height=24] xref:/tools/Alan.adoc[Alan] aracına da bakın.
+
+====

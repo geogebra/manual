@@ -1,0 +1,54 @@
+= Doğrular ve Eksenler
+:page-en: Lines_and_Axes
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+== Doğrular
+
+Bir doğruyu Giriş Çubuğuna, _x_ ve _y_ cinsinden bir doğrusal denklem olarak veya parametrik formda girebilirsiniz. Her
+iki durumda da denklem içerisinde, önceden tanımlanmış değişkenler (örneğin sayılar, noktalar, vektörler)
+kullanılabilir.
+
+[NOTE]
+====
+
+Doğrunun adını, girdinizin en başında yazıp ardından iki nokta üst üste işareti kullanarak girebilirsiniz.
+
+====
+
+[EXAMPLE]
+====
+
+2D
+
+* _g_ doğrusunu bir doğrusal denklem olarak girmek için `++g: 3x + 4y = 2++` yazın.
+* Bir doğruyu parametrik biçimde girebilirsiniz dolayısıyla: `++g: X = (-5, 5) + t (4, -3)++`
+* _m_ = 2 ve _b_ = -1 parametrelerini tanımlayın. Ardından bir _h_ doğrusunu y-kesimi formunda elde etmek için
+`++h: y = m*x + b++` denklemini girebilirsiniz.
+
+====
+
+[EXAMPLE]
+====
+
+3D
+
+* Bir doğruyu parametrik biçimde girebilirsiniz dolayısıyla:
+** `++g: X = (1, 6, 3) + λ (7, -4, 4)++` ; veya
+** `++g: Doğru((1, 6, 3), Vektör((7, -4, 4)))++`
+* Bir doğruyu 2 düzlemin kesişimi olarak aşağıdaki birbirine denk 3 girdiyi kullanarak girebilirsiniz:
+** `++KesiştirYol(4x+7y=46,y+z=9)++`
+** `++(4x + 7y = 46, y + z = 9)++`
+** `++7y = 46 - 4x = 7(9 - z)++`
+
+====
+
+== Eksenler
+
+Komutlarda iki koordinat eksenini _xEkseni_ ve _yEkseni_ adlarıyla kullanabilirsiniz.
+
+[EXAMPLE]
+====
+
+`++DikDoğru(A, xEkseni)++` komutu, verilen bir A noktasından geçen _x_-eksenine dik doğruyu oluşturur.
+
+====

@@ -1,5 +1,5 @@
 = Commande Tableau
-:page-en: commands/TableText_Command
+:page-en: commands/TableText
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
 Tableau( <Liste 1>, <Liste 2>, ... )::
@@ -44,12 +44,11 @@ L'ajout d'un `++.++` permet un alignement sur le point décimal, d'un `++%++` tr
 sur le point décimal. L'ajout d'un `++a++` ou d'un `++p++` reprend les options précédentes en complétant l'écriture au
 nombre de décimales. (Le nombre de décimales est celui qui est défini en _Options_)
 `++Tableau({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "v.")++` retourne
-/Fichier:TabPtDec_png.adoc[image:TabPtDec.png[TabPtDec.png,width=152,height=111]]
-`++Tableau({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "va")++` comme ci-dessus mais en forçant le nombre de décimales
-à être celui déclaré en _Options_ retourne /Fichier:Tab_a_Dec_png.adoc[image:Tab_a_Dec.png[Tab a
-Dec.png,width=252,height=130]] pour Options > 3 décimales
+image:TabPtDec.png[TabPtDec.png,width=152,height=111] `++Tableau({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "va")++`
+comme ci-dessus mais en forçant le nombre de décimales à être celui déclaré en _Options_ retourne
+image:Tab_a_Dec.png[Tab a Dec.png,width=252,height=130] pour Options > 3 décimales
 `++Tableau({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "v%")++` retourne
-/Fichier:TableuPourCent_png.adoc[image:200px-TableuPourCent.png[TableuPourCent.png,width=200,height=89]]
+image:200px-TableuPourCent.png[TableuPourCent.png,width=200,height=89]
 
 `++Tableau({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "vp")++` comme ci-dessus mais en forçant le nombre de décimales
 à être celui déclaré en _Options_
@@ -62,7 +61,7 @@ monnaie locale €, mais toutes les colonnes sont affectées, il serait bon de p
 quantités/prix
 
 * `++Tableau({{11, 2.5, 123}, {2.65, 3.57, 10.1}}, "v,.€")++` retourne
-/Fichier:TableuMonétaire_png.adoc[image:TableuMon%C3%A9taire.png[TableuMonétaire.png,width=197,height=88]]
+image:TableuMon%C3%A9taire.png[TableuMonétaire.png,width=197,height=88]
 
 ====
 
@@ -87,8 +86,7 @@ et lignes verticales par | dans la chaîne.
 
 *Exemples :*
 
-* `++Tableau({1,2},{3,4},"c|_")++` pour le tableau
-/Fichier:TabellaTesto_png.adoc[image:50px-TabellaTesto.png[TabellaTesto.png,width=50,height=56]] ;
+* `++Tableau({1,2},{3,4},"c|_")++` pour le tableau image:50px-TabellaTesto.png[TabellaTesto.png,width=50,height=56] ;
 * `++Tableau({1,2},{3,4},"c||||")++` pourstem:[\begin\{Vmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{Vmatrix} ] ;
 * `++Tableau({1,2},{3,4},"c()")++` pour stem:[\left( \begin\{array}\{} 1 & 2 \\ 3 & 4 \\ \end\{array} \right) ] ;
 * `++Tableau({1,2},{3,4},"c||")++` pour stem:[ \begin\{vmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{vmatrix} ] .
@@ -103,18 +101,18 @@ et lignes verticales par | dans la chaîne.
 * `++Tableau({{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "-/|_v")++`
 
 pour stem:[\{\begin\{array}\{|lllll|}\hline 1&1&1&1&1 \\ 2&2&2&2&2 \\ 3&3&3&3&3 \\ 4&4&4&4&4 \\ \hline \end\{array}}]
-/Fichier:Tabslsc_png.adoc[image:Tabslsc.png[Tabslsc.png,width=130,height=85]] (pas de lignes intérieures)
+image:Tabslsc.png[Tabslsc.png,width=130,height=85] (pas de lignes intérieures)
 
 * `++Tableau({{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "|11001 _110001 h")++`
 
 pour stem:[\{\begin\{array}\{|l|lll|}\hline 1&2&3&4 \\ \hline 1&2&3&4 \\ 1&2&3&4 \\ 1&2&3&4 \\ 1&2&3&4 \\ \hline
-\end\{array}}] /Fichier:Tabla2_PNG.adoc[image:Tabla2_.PNG[Tabla2 .PNG,width=108,height=104]] Des 1 (ou des 0) indiquent
-la présence (ou non) des bordures verticales et horizontales.
+\end\{array}}] image:Tabla2_.PNG[Tabla2 .PNG,width=108,height=104] Des 1 (ou des 0) indiquent la présence (ou non) des
+bordures verticales et horizontales.
 
 * `++Tableau({{1, 2, 3, 4},{5,6,7,8}}, "|11011_101")++`
 
 pour stem:[\{\begin\{array}\{|l|ll|l|}\hline 1&2&3&4 \\ 5&6&7&8 \\ \hline \end\{array}}]
-/Fichier:Tabcol_png.adoc[image:Tabcol.png[Tabcol.png,width=123,height=60]]
+image:Tabcol.png[Tabcol.png,width=123,height=60]
 
 ====
 
@@ -127,7 +125,7 @@ pour stem:[\{\begin\{array}\{|l|ll|l|}\hline 1&2&3&4 \\ 5&6&7&8 \\ \hline \end\{
 
 pour stem:[ \{\begin\{array}\{|c|}\hline \textbf\{Cercle} \\ \hline \{\begin\{array}\{c|c}Rayon&\text\{r } \\ \hline
 Aire&\text\{π r²} \\ \hline Circonférence&\text\{2 π r} \\ \end\{array}} \\ \hline \end\{array}} ]
-/Fichier:TabFusCol_png.adoc[image:TabFusCol.png[TabFusCol.png,width=188,height=118]]
+image:TabFusCol.png[TabFusCol.png,width=188,height=118]
 
 ====
 
@@ -138,8 +136,8 @@ Aire&\text\{π r²} \\ \hline Circonférence&\text\{2 π r} \\ \end\{array}} \\ 
 
 * `++Tableau({{"2x+3y=5", "5x+8y=12"}}, "{v")++`
 
-pour stem:[\{\left\\{\begin\{array}\{l}2x+3y=5 \\ 5x+8y=12 \\ \end\{array}\right.}]
-/Fichier:Tabla3_PNG.adoc[image:Tabla3_.PNG[Tabla3 .PNG,width=129,height=48]]
+pour stem:[\{\left\\{\begin\{array}\{l}2x+3y=5 \\ 5x+8y=12 \\ \end\{array}\right.}] image:Tabla3_.PNG[Tabla3
+.PNG,width=129,height=48]
 
 ====
 
@@ -153,7 +151,7 @@ pour stem:[\{\left\\{\begin\{array}\{l}2x+3y=5 \\ 5x+8y=12 \\ \end\{array}\right
 Soit liste1=Séquence(AléaEntreBornes(1, 6 )+0 k,k,1,100), on obtiendra quelque chose comme ça :
 
 stem:[ \{\begin\{array}\{|c|c|c|c|c|c|c|}\hline x_i&1&2&3&4&5&6 \\ \hline e_i&17&19&16&22&15&11 \\ \hline \end\{array}}
-] /Fichier:Tabla5_PNG.adoc[image:Tabla5.PNG[Tabla5.PNG,width=240,height=56]]
+] image:Tabla5.PNG[Tabla5.PNG,width=240,height=56]
 
 ====
 
@@ -164,7 +162,7 @@ stem:[ \{\begin\{array}\{|c|c|c|c|c|c|c|}\hline x_i&1&2&3&4&5&6 \\ \hline e_i&17
 
 * `++Tableau({{"\black{1,2,3,4}", "\blue{2,4,6,8}", "\green{3,6,9,12}", "\red{4,8,12,16}"}}, "vr")++`
 
-pour/Fichier:TableauLignesCouleurs_PNG.adoc[image:TableauLignesCouleurs.PNG[TableauLignesCouleurs.PNG,width=125,height=115]]
+pourimage:TableauLignesCouleurs.PNG[TableauLignesCouleurs.PNG,width=125,height=115]
 
 ====
 
@@ -184,7 +182,7 @@ pour/Fichier:TableauLignesCouleurs_PNG.adoc[image:TableauLignesCouleurs.PNG[Tabl
 
 == L'objet Tableau possède une barre de style très complète :
 
-/Fichier:StyleTableauTout_PNG.adoc[image:StyleTableauTout.PNG[StyleTableauTout.PNG,width=567,height=298]]
+image:StyleTableauTout.PNG[StyleTableauTout.PNG,width=567,height=298]
 
 == Présentation pas à pas
 
@@ -194,8 +192,7 @@ Soit n un curseur entier entre 1 et 7
 
 vous présente la résolution pas à pas de l'inéquation 2x+3 > 4-5x
 
-/Fichier:Inecuaciones_paso_a_paso_gif.adoc[image:Inecuaciones_paso_a_paso.gif[Inecuaciones paso a
-paso.gif,width=304,height=421]]
+image:Inecuaciones_paso_a_paso.gif[Inecuaciones paso a paso.gif,width=304,height=421]
 
 == Un tableau colorié
 
@@ -209,7 +206,7 @@ image:Ambox_content.png[image,width=40,height=40]
 
 [width="100%",cols="50%,50%",]
 |===
-|/Fichier:TableauColorieMI_png.adoc[image:150px-TableauColorieMI.png[TableauColorieMI.png,width=150,height=131]] a|
+|image:150px-TableauColorieMI.png[TableauColorieMI.png,width=150,height=131] a|
 bl = "\colorbox\{0099cc}\bold\textcolor\{white}"
 
 ja = "\colorbox\{yellow}\bold\textcolor\{black}"
@@ -225,7 +222,7 @@ Tableau(\{\{or + "\{+}", bl + "\{1}", bl + "\{2}", bl + "\{3}"}, \{rg + "\{1}", 
 
 Vous pouvez obtenir aussi un tableau comme ci-dessous, en le définissant dans le tableur, puis utilisant, après
 sélection et clic droit > Créer > Tableau
-/Fichier:TableauColoriéTableur_png.adoc[image:150px-TableauColori%C3%A9Tableur.png[TableauColoriéTableur.png,width=150,height=109]]
+image:150px-TableauColori%C3%A9Tableur.png[TableauColoriéTableur.png,width=150,height=109]
 
 Sinon, possibilité de se créer des tableaux en LaTeX avec "tabular"
 
@@ -236,4 +233,4 @@ Sinon, possibilité de se créer des tableaux en LaTeX avec "tabular"
 
 \end\{tabular}
 
-/Fichier:TabularCarreBleu_png.adoc[image:TabularCarreBleu.png[TabularCarreBleu.png,width=129,height=162]]
+image:TabularCarreBleu.png[TabularCarreBleu.png,width=129,height=162]

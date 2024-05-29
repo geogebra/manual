@@ -1,0 +1,59 @@
+= Çarpanlar Komut
+:page-en: commands/Factors
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Çarpanlar( <Polinom> )::
+  _\{çarpan, üs}_ türünde listelerin bir listesini verir öyle ki tüm bu çarpanların karşılık gelen üslerinin alınmasıyla
+  elde edilen ifadelerin çarpımı verilen polinoma eşittir. Çarpanlar dereceleri artacak şekilde sıralanır.
+
+[EXAMPLE]
+====
+
+`++Çarpanlar(x^8 - 1)++` komutu _\{\{x - 1, 1}, \{x + 1, 1}, \{x^2 + 1, 1}, \{x^4 + 1, 1}}_ sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+Tüm çarpanların reel sayılar üzerinde indirgenemez olmadığını not ediniz.
+
+====
+
+Çarpanlar( <Sayı> )::
+  stem:[\left( \begin\{array}\{} asal_1 & üs_1 \\ asal_2 & üs_2 \\asal_3 & üs_3 \\ \end\{array} \right) ] türünde bir
+  matris verir öyle ki tüm asalların karşılık geldiği __üs__lerinin alınmasıyla elde edilen ifadelerin çarpımı verilen
+  sayıdır. Asallar küçükten büyüğe sıralanır.
+
+[EXAMPLE]
+====
+
+* `++Çarpanlar(1024)++` komutu _( 2 10 )_, since stem:[1024 = 2^\{10}] sonucunu verir.
+* `++Çarpanlar(42)++` komutu stem:[42 = 2^1・3^1・7^1] olduğundan stem:[\left( \begin\{array}\{} 2 & 1 \\ 3 & 1 \\7 & 1
+\\ \end\{array} \right) ] sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+xref:/commands/AsalÇarpanlar.adoc[AsalÇarpanlar] ve xref:/commands/ÇarpanlarınaAyır.adoc[ÇarpanlarınaAyır] komutlarına
+da bakın.
+
+====
+
+[NOTE]
+====
+
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_Görünümü.adoc[CAS Görünümünde] tanımsız
+değişkenler girdi olarak kullanılabilir ve sonuçlar düzgün matrisler olarak verilir.
+
+[EXAMPLE]
+====
+
+`++Çarpanlar(a^8 - 1)++` komutu stem:[\left( \begin\{array}\{} a - 1 & 1 \\ a +1 & 1 \\a^2 + 1& 1 \\a^4 + 1& 1 \\
+\end\{array} \right)] sonucunu verir.
+
+====
+
+====

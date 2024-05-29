@@ -1,0 +1,35 @@
+= Küp Komut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Küp( <Nokta>, <Nokta>, <Yön> )::
+  Verilen iki nokta arasındaki doğru parçasını kenar kabul eden bir küp oluşturur.
+  Diğer köşeler verilen yön ile bir tek şekilde belirlenir. Yönün aşağıdakilerden biri olması gerekir:
+  * bu doğru parçasına *dik* bir vektör, bir doğru parçası, bir doğru, bir ışın, veya
+  * bu doğru parçasına *paralel* bir çokgen, bir düzlem.
+  Oluşturulan küpün:
+  * verilen vektör/doğru parçası/doğru/ışına dik olan bir düzlemde bu doğru parçasını kenar kabul eden bir yüzü veya
+  * verilen çokgen/düzleme paralel olan bir düzlemde bu doğru parçasını kenar kabul eden bir yüzü olacaktır.
+
+Küp( <Nokta>, <Nokta>, <Nokta>)::
+  İlk yüzünün üç (komşu) köşesi verilen noktalar olan bir küp oluşturur. Küpün tanımlı olması için bu noktalar, bir kare
+  oluşturmaya başlamalıdır.
+
+Küp( <Nokta>, <Nokta>)::
+  İlk yüzünün iki (komşu) köşesi verilen noktalar olan bir küp oluşturur ve üçüncü köşe otomatik olarak bir çember
+  üzerinde oluşturulur böylece küp ilk kenarı etrafında döndürülebilir.
+
+[NOTE]
+====
+
+Küp(A, B) komutu, C = Nokta(Çember(B, Uzaklık(A, B), DoğruParçası(A, B))) olacak şekildeki Küp(A, B, C) komutu için
+kestirme yoldur.
+
+====
+
+[NOTE]
+====
+
+xref:/commands/DörtYüzlü.adoc[DörtYüzlü], xref:/commands/SekizYüzlü.adoc[SekizYüzlü],
+xref:/commands/YirmiYüzlü.adoc[YirmiYüzlü], xref:/commands/OnikiYüzlü.adoc[OnikiYüzlü] komutlarına da bakın.
+
+====

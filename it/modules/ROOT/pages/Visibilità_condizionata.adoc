@@ -1,0 +1,57 @@
+= Visibilità condizionata
+:page-en: Conditional_Visibility
+ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
+
+Oltre a mostrare o nascondere determinati oggetti, è inoltre possibile impostarne lo stato, in modo che sia dipendente
+da una condizione. Ad esempio, si può fare in modo che un oggetto sia visualizzato sullo schermo solo quando si attiva
+una casella di controllo posizionata nella image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Vista_Grafici.adoc[vista Grafici], oppure quando uno
+xref:/tools/Slider.adoc[slider] assume un determinato valore.
+
+== Visualizzazione condizionata degli oggetti
+
+Per creare una casella di controllo per la gestione della visualizzazione sullo schermo di uno o più oggetti già
+esistenti, utilizzare lo image:24px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=24,height=24]
+xref:/tools/Casella_di_controllo.adoc[strumento Casella di controllo].
+
+In alternativa è possibile creare una xref:/Valori_booleani.adoc[variabile booleana] (ad es. `++b = true++`)
+direttamente nella xref:/Barra_di_inserimento.adoc[barra di inserimento] e visualizzarla come casella di controllo nella
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Vista_Grafici.adoc[vista Grafici]
+modificandone lo stato di visualizzazione (ad es. con lo image:24px-Mode_showhideobject.svg.png[Mode
+showhideobject.svg,width=24,height=24] xref:/tools/Mostra_Nascondi_oggetto.adoc[strumento Mostra / Nascondi oggetto] o
+tramite il xref:/Menu_contestuale.adoc[menu contestuale]). Quindi una casella di controllo non è altro che una variabile
+booleana che stabilisce la condizione per la visualizzazione di un oggetto. Per impostare la visibilità degli oggetti,
+seguire le procedure indicate di seguito.
+
+== Modificare la visibilità di oggetti appena creati
+
+Nella scheda _Avanzate_ della image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Finestra_di_dialogo_Proprietà.adoc[finestra di dialogo _Proprietà_] è possibile inserire una condizione che
+definisce la visibilità di un oggetto.
+
+[NOTE]
+====
+
+Gli xref:/Valori_booleani.adoc[operatori logici] (ad es. ≠, ≥, ˄, ‖), utili per definire le condizioni, possono essere
+selezionati direttamente dall'elenco a discesa.
+
+====
+
+[EXAMPLE]
+====
+
+* Se a è uno slider, la condizione a < 2 indica che l'oggetto corrispondente verrà visualizzato nella vista _Grafici_
+solo quando il valore dello slider sarà inferiore a 2.
+* Se b è una variabile booleana, b può essere utilizzata come condizione. L'oggetto corrispondente verrà visualizzato
+solo quando il valore di b sarà _true_, mentre risulterà nascosto quando il valore di b è _false_.
+* Se g ed h sono due rette e si desidera visualizzare un testo quando tali rette sono parallele, basta utilizzare per il
+testo la condizione g ‖ h .
+
+====
+
+[NOTE]
+====
+
+Vedere anche il comando xref:/commands/ImpVisibileInVista.adoc[ImpVisibileInVista].
+
+====

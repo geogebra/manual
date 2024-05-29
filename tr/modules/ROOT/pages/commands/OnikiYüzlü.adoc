@@ -1,0 +1,35 @@
+= OnikiYüzlü Komut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+OnikiYüzlü( <Nokta>, <Nokta>, <Yön> )::
+  Verilen iki nokta arasındaki doğru parçasını kenar kabul eden bir on iki yüzlü oluşturur.
+  Diğer köşeler verilen yön ile bir tek şekilde belirlenir. Yönün aşağıdakilerden biri olması gerekir:
+  * bu doğru parçasına *dik* bir vektör, bir doğru parçası, bir doğru, bir ışın, veya
+  * bu doğru parçasına *paralel* bir çokgen, bir düzlem.
+  Oluşturulan on iki yüzlünün:
+  * verilen vektör/doğru parçası/doğru/ışına dik olan bir düzlemde bu doğru parçasını kenar kabul eden bir yüzü veya
+  * verilen çokgen/düzleme paralel olan bir düzlemde bu doğru parçasını kenar kabul eden bir yüzü olacaktır.
+
+OnikiYüzlü( <Nokta>, <Nokta>, <Nokta>)::
+  İlk yüzünün üç (komşu) köşesi verilen noktalar olan bir on iki yüzlü oluşturur. On iki yüzlünün tanımlı olması için bu
+  noktalar, bir düzgün beşgen oluşturmaya başlamalıdır.
+
+OnikiYüzlü( <Nokta>, <Nokta>)::
+  İlk yüzünün iki (komşu) köşesi verilen noktalar olan bir on iki yüzlü oluşturur ve üçüncü köşe otomatik olarak bir
+  çember üzerinde oluşturulur böylece on iki yüzlü ilk kenarı etrafında döndürülebilir.
+
+[NOTE]
+====
+
+OnikiYüzlü(A, B) komutu, C = Nokta(Çember(((1 - sqrt(5)) A + (3 + sqrt(5)) B) / 4, Uzaklık(A, B) sqrt(10 + 2sqrt(5)) /
+4, DoğruParçası(A, B))) olacak şekildeki OnikiYüzlü(A, B, C) komutu için kestirme yoldur.
+
+====
+
+[NOTE]
+====
+
+xref:/commands/Küp.adoc[Küp], xref:/commands/DörtYüzlü.adoc[DörtYüzlü], xref:/commands/YirmiYüzlü.adoc[YirmiYüzlü],
+xref:/commands/SekizYüzlü.adoc[SekizYüzlü] komutlarına da bakın.
+
+====

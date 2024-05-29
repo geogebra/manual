@@ -1,0 +1,60 @@
+= ÇarpanlarınaAyır Komut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+ÇarpanlarınaAyır( <Polinom> )::
+  Polinomu çarpanlarına ayırır.
+
+[EXAMPLE]
+====
+
+`++ÇarpanlarınaAyır(x^2 + x - 6)++` komutu _(x - 2) (x + 3)_ sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+Bu komut için Bilgisayar Cebir Sisteminin yüklenmesi gerekir, bu nedenle bazı bilgisayarlarda yavaş olabilir.
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] İpucu:* image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] xref:/CAS_Görünümü.adoc[CAS Görünümünde] aşağıdaki söz dizimlerini de kullanabilirsiniz:
+
+ÇarpanlarınaAyır( <Sayı> )::
+  Sayıyı asal çarpanlarının çarpımı şeklinde ifade eder.
+ÇarpanlarınaAyır( <İfade>, <Değişken> )::
+  İfadeyi verilen değişkene göre çarpanlarına ayırır.
+
+[EXAMPLE]
+====
+
+* `++ÇarpanlarınaAyır(x^2 - y^2, x)++` komutu _x^2^ - y^2^_ ifadesinin _x_ değişkenine göre _(x - y) (x + y)_,
+çarpanlarını verir.
+* `++ÇarpanlarınaAyır(x^2 - y^2, y)++` komutu _x^2^ - y^2^_ ifadesinin _y_ değişkenine göre _-(y - x) (y + x)_,
+çarpanlarını verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++ÇarpanlarınaAyır(360)++` komutu _2³ 3² 5_ sonucunu verir.
+
+====
+
+====
+
+[NOTE]
+====
+
+Bu komut ifadeleri http://en.wikipedia.org/wiki/Rational_number[Rasyonel Sayılar] üzerinde çarpanlarına ayırır.
+İrrasyonel reel sayılar üzerinde çarpanlarına ayırma için xref:/commands/İÇarpanlarınaAyır.adoc[İÇarpanlarınaAyır]
+komutuna bakın. Karmaşık (kompleks) sayılar üzerinde çarpanlarına ayırma için
+xref:/commands/KÇarpanlarınaAyır.adoc[KÇarpanlarınaAyır] ve xref:/commands/KİÇarpanlarınaAyır.adoc[KİÇarpanlarınaAyır]
+komutlarına bakın.
+
+====

@@ -1,5 +1,5 @@
 = Comando TablaTexto
-:page-en: commands/TableText_Command
+:page-en: commands/TableText
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
 TablaTexto( <Lista>, <Lista>, ... )::
@@ -41,10 +41,10 @@ derecha.
 * `++TablaTexto({A1:A10, B1:B10, C1:C10},"vl")++` crea una tabla con tres columnas cuyos elementos --alineados a la
 izquierda-- son objetos de la _Hoja de cálculo_ en las celdas indicadas.
 * `++TablaTexto({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "v.")++` crea una tabla cuyos elementos se alinean de
-acuerdo con los puntos decimales /Archivo:TabPtDec_png.adoc[image:TabPtDec.png[TabPtDec.png,width=152,height=111]]
+acuerdo con los puntos decimales image:TabPtDec.png[TabPtDec.png,width=152,height=111]
 * `++TablaTexto({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "v%")++` crea una tabla cuyos elementos son convertidos a
 porcentajes y alineados según los puntos decimales
-/Archivo:TableuPourCent_png.adoc[image:200px-TableuPourCent.png[TableuPourCent.png,width=200,height=89]]
+image:200px-TableuPourCent.png[TableuPourCent.png,width=200,height=89]
 
 ====
 
@@ -78,8 +78,7 @@ También es posible insertar:
 *Ejemplos:*
 
 * `++TablaTexto({1, 2}, {3, 4}, "c()")++` crea stem:[\begin\{pmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{pmatrix} ]
-* `++TablaTexto({1, 2}, {3, 4}, "c|_")++` crea
-/Archivo:TabellaTesto_png.adoc[image:50px-TabellaTesto.png[TabellaTesto.png,width=50,height=56]]
+* `++TablaTexto({1, 2}, {3, 4}, "c|_")++` crea image:50px-TabellaTesto.png[TabellaTesto.png,width=50,height=56]
 * `++TablaTexto({1, 2}, {3, 4}, "||")++` crea stem:[ \begin\{vmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{vmatrix} ]
 * `++TablaTexto({1, 2}, {3, 4}, "||||")++` crea stem:[\begin\{Vmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{Vmatrix} ]
 * `++TablaTexto({{"2x+3y=5","5x+8y=12"}},"{v")++` crea stem:[ \left\\{\begin\{matrix} 2x+3y=5\\ 5x+8y=12

@@ -1,0 +1,59 @@
+= Dinamik Renkler
+:page-en: Dynamic_Colors
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+GeoGebra'da nesnelerin renklerini image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Özellikler_Diyaloğu.adoc[Özellikler Diyaloğunun] _Renk_ sekmesini kullanarak değiştirebilirsiniz. Bir nesnenin
+rengi dinamik olarak değişecek şekilde de ayarlanabilir: rengini belirlemek istediğiniz nesnenin
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Özellikler Diyaloğunu_ açın, ardından _Gelişmiş_
+sekmesini seçin. _Dinamik Renkler_ bölümü, _Kırmızı_, _Yeşil_ ve _Mavi_ ana renk bileşenlerini girmenize imkan veren üç
+giriş kutusunu içerir.
+
+[NOTE]
+====
+
+* Ana renklerin RGB değerleri, image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] __Özellikler
+Diyaloğu__nun _Renk_ sekmesindeki _Öngörünüm_ kutusunun sağında gösterilir.
+* Dinamik renkler, [0,1] değer kümesine sahip bir fonksiyon girilerek de tanımlanabilir.
+
+====
+
+[EXAMPLE]
+====
+
+* 0'dan 1'e değerler alan üç a, b ve c xref:/tools/Sürgü.adoc[sürgüsü] oluşturun.
+* Rengi sürgü değerlerine dinamik olarak bağlı olan bir çokgen oluşturun.
+* Çokgenin image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Özellikler Diyaloğunu_ açın, ardından
+_Kırmızı_, _Yeşil_ ve _Mavi_ giriş kutularına bu üç sürgünün adlarını girin.
+* image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Özellikler Diyaloğunu_ kapatın ve her bir renk
+bileşeninin çokgenin rengini nasıl etkilediğini tespit etmek için sürgü değerlerini değiştirin.
+
+[NOTE]
+====
+
+Aynı zamanda çokgenin renginin otomatik olarak değişimini görmek için sürgüleri farklı hızlarda
+xref:/Canlandırma.adoc[canlandırabilirsiniz].
+
+====
+
+====
+
+_Dinamik Renkler_ bölümü seçili nesnenin _Donukluğunu_ değiştirmenize imkan veren bir giriş kutusu da içerir. Dinamik
+bir şeffaflık elde etmek için bir sürgünün yanı sıra [0,1] aralığında değer alan (burada 0 tamamen şeffaf ve 1 tamamen
+donuk anlamına gelmektedir) bir sayı girebilirsiniz. Diğer sayılar göz ardı edilecektir.
+
+== RGB / HSV / HSL
+
+Kimi dinamik renk örnekleri farklı bir renk modeli kullanılarak elde edilebilir. GeoGebra standart
+http://en.wikipedia.org/wiki/tr:RGB[RGB] modelinin yanı sıra
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] __Özellikler Diyaloğu__nun _Gelişmiş_ sekmesinin
+_Dinamik Renkler_ kısmının altında gösterilen aşağı açılır listeden seçilebilen iki ek
+http://en.wikipedia.org/wiki/tr:HSL_ve_HSV[HSV] ve http://en.wikipedia.org/wiki/tr:HSL_ve_HSV[HSL] modellerini sunar.
+
+[EXAMPLE]
+====
+
+Bir _A_ noktasının sağa ve sola taşınırken gök kuşağının tüm renklerini alması için _HSV_ moduna geçiş yapın, ardından
+_Doygunluk_ ve _Değer_ değerlerini 1 ve _Renk özü_ değerini `++x(A)++` olarak ayarlayın.
+
+====

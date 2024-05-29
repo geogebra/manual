@@ -1,0 +1,62 @@
+= BirimDikVektör Komut
+:page-en: commands/UnitPerpendicularVector
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+BirimDikVektör( <Doğru>)::
+  Verilen doğruya dik ve uzunluğu 1 olan vektörü verir.
+BirimDikVektör( <Doğru Parçası> )::
+  Verilen doğru parçasına dik ve uzunluğu 1 olan vektörü verir.
+BirimDikVektör( <Vektör> )::
+  Verilen vektöre dik ve uzunluğu 1 olan vektörü verir. İlk önce bu vektör tanımlanmalıdır.
+
+[EXAMPLE]
+====
+
+v=stem:[\begin\{pmatrix}3\\4\end\{pmatrix}] olsun. `++BirimDikVektör(v)++` komutu
+_stem:[\begin\{pmatrix}-0.8\\0.6\end\{pmatrix}]_ sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++s = DoğruParçası((1,1), (4,5))++` olsun.
+
+`++BirimDikVektör(s)++` komutu _stem:[\begin\{pmatrix}-0.8\\0.6\end\{pmatrix}]_ sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++BirimDikVektör(3x + 4y = 5)++` komutu _stem:[\begin\{pmatrix}0.6\\0.8\end\{pmatrix}]_ sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_Görünümü.adoc[CAS Görünümünde] tanımsız
+değişkenler içeren vektörler de geçerli girdilerdir.
+
+[EXAMPLE]
+====
+
+`++BirimDikVektör((a, b))++` komutu _(stem:[\frac\{-b}\{\sqrt\{a^\{2} + b^\{2}}}],stem:[\frac\{a}\{\sqrt\{a^\{2} +
+b^\{2}}}])_ sonucunu verir.
+
+====
+
+====
+
+== CAS Söz Dizimi
+
+BirimDikVektör( <Düzlem> )::
+  Bu düzleme dik birim vektörü oluşturur.
+
+[NOTE]
+====
+
+xref:/commands/DikVektör.adoc[DikVektör] komutuna da bakın.
+
+====

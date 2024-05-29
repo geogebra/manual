@@ -1,0 +1,39 @@
+= UydurPolinom Komut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+UydurPolinom( <Nokta Listesi>, <Polinomun Derecesi n> )::
+  Derecesi _n_ olan regresyon polinomunu hesaplar.
+
+[EXAMPLE]
+====
+
+`++UydurPolinom({(-1, -1), (0, 1), (1, 1), (2, 5)}, 3)++` komutu _f(x) = x^3^ - 1 x^2^ + 1_ sonucunu verir.
+
+====
+
+UydurPolinom( <Taslak Fonksiyon>, <Polinomun Derecesi n> )::
+  xref:/tools/Taslak_Şekil.adoc[Taslak Şekil Aracı] ile çizilen bir fonksiyon için derecesi _n_ olan regresyon
+  polinomunu hesaplar.
+
+== CAS Söz Dizimi
+
+UydurPolinom( <Nokta Listesi>, <Polinomun Derecesi n> )::
+  Derecesi _n_ olan regresyon polinomunu hesaplar.
+
+[EXAMPLE]
+====
+
+`++UydurPolinom({(-1, -1), (0, 1), (1, 1), (2, 5)}, 3)++` komutu _x^3^ - x^2^ + 1_ sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+* Derece _n_ ise listede en az _n + 1_ nokta olmalıdır.
+* xref:/commands/UydurÜstel.adoc[UydurÜstel], xref:/commands/UydurLog.adoc[UydurLog],
+xref:/commands/UydurKuvvet.adoc[UydurKuvvet] ve xref:/commands/UydurSin.adoc[UydurSin] komutlarına da bakın.
+* Eğer büyük/küçük sayılar ile çalışıyorsanız daha doğru bir sonuç için bunları normalleştirmeyi düşünmelisiniz, bakın
+xref:/commands/Normalleştir.adoc[Normalleştir Komutu].
+
+====

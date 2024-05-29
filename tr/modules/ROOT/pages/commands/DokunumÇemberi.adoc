@@ -1,0 +1,42 @@
+= DokunumÇemberi Komut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+DokunumÇemberi( <Nokta>, <Fonksiyon> )::
+  Fonksiyonun verilen noktadaki dokunum çemberini verir.
+DokunumÇemberi( <Nokta>, <Eğri> )::
+  Eğrinin verilen noktadaki dokunum çemberini verir.
+
+[EXAMPLE]
+====
+
+`++DokunumÇemberi((1, 0), Eğri(cos(t), sin(2t), t, 0, 2π))++` komutu _x² + y² + 6x = 7_ sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++DokunumÇemberi((0, 0), x^2)++` komutu _x² + y² - y = 0_ sonucunu verir.
+
+====
+
+DokunumÇemberi( <Nokta>, <Nesne> )::
+  Nesnenin (fonksiyon, eğri, konik) verilen noktadaki dokunum çemberini verir.
+
+[EXAMPLE]
+====
+
+*Örnekler:*
+
+* `++DokunumÇemberi((0, 0), x^2)++` komutu _x² + y² - y = 0_ sonucunu verir
+* `++DokunumÇemberi((1, 0), Eğri(cos(t), sin(2t), t, 0, 2π))++` komutu _x² + y² + 6x = 7_ sonucunu verir
+* `++DokunumÇemberi((-1, 0), Konik({1, 1, 1, 2, 2, 3}))++` komutu _x² + y² + 2x + 1y = -1_ sonucunu verir
+
+====
+
+[NOTE]
+====
+
+* Bu komut sadece 2D nesneler içindir. 3D için özel bir araç yapabilirsiniz örneğin https://www.geogebra.org/m/tan7dxjt
+
+====

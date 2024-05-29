@@ -1,0 +1,103 @@
+= Kesiştir Komut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Kesiştir( <Nesne>, <Nesne> )::
+  İki nesnenin kesişim noktalarını verir.
+
+[EXAMPLE]
+====
+
+*Örnekler:*
+
+* `++a: -3x + 7y = -10++` bir doğru ve `++c: x^2 + 2y^2 = 8++` bir elips olsun. `++Kesiştir(a, c)++` doğru ve elipsin
+_E_ = (-1.02, -1,87) ve _F_ = (2.81, -0.22) kesişim noktalarını verir.
+* `++Kesiştir(y = x + 3, Eğri(t, 2t, t, 0, 10))++` komutu __A__=(3,6) sonucunu verir.
+* `++Kesiştir(Eğri(2s, 5s, s,-10, 10), Eğri(t, 2t, t, -10, 10))++` komutu __A__=(0,0) sonucunu verir.
+
+====
+
+Kesiştir( <Nesne>, <Nesne>, <Kesişim Noktası İndeksi> )::
+  İki nesnenin n inci kesişim noktasını verir. Nesneler bir doğru, konik, polinom fonksiyon veya kapalı eğri olmalıdır.
+Kesiştir( <Nesne>, <Nesne>, <Başlangıç Noktası> )::
+  Bu iki nesnenin, başlangıç noktasından yinelemeli bir sayısal metot kullanarak elde edilen kesişim noktasını verir.
+Kesiştir( <Fonksiyon>, <Fonksiyon>, <Başlangıç x-Değeri>, <Bitiş x-Değeri> )::
+  Bu iki fonksiyonun verilen aralıktaki sayısal olarak belirlenmiş kesişim noktalarını verir.
+Kesiştir( <Eğri 1>, <Eğri 2>, <Parametre 1>, <Parametre 2> )::
+  Verilen parametrelerle başlayan yinelemeli sayısal bir metot kullanarak bir kesişim noktası bulur.
+
+[EXAMPLE]
+====
+
+`++a = Eğri(cos(t), sin(t), t, 0, π)++` ve `++b = Eğri(cos(t) + 1, sin(t), t, 0, π)++` olsun. `++Kesiştir(a, b, 0, 2)++`
+komutu _A = (0.5, 0.87)_ kesişim noktasını verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++f(x) = x^3 + x^2 - x++` ve `++g(x) = 4 / 5 + 3 / 5 x++` iki fonksiyon olsun. `++Kesiştir(f, g, -1, 2)++` bu iki
+fonksiyonun [ -1, 2 ] aralığındaki _A_ = (-0.43, 0.54) ve _B_ = (1.1, 1.46) kesişim noktalarını verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++a(x) = x^3 + x^2 - x++` bir fonksiyon, `++b: -3x + 5y = 4++` bir doğru ve _C_ = (0, 0.8) başlangıç noktası olsun.
+`++Kesiştir(a, b, C)++` yinelemeli bir sayısal metot kullanarak fonksiyon ve doğrunun _D_ = (-0.43, 0.54) kesişim
+noktasını verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++a(x) = x^3 + x^2 - x++` bir fonksiyon ve `++b: -3x + 5y = 4++` bir doğru olsun. `++Kesiştir(a, b, 2)++` bu fonksiyon
+ve doğrunun _C_ = (-0.43, 0.54) kesişim noktasını verir.
+
+====
+
+== CAS Söz Dizimi
+
+Kesiştir( <Fonksiyon>, <Fonksiyon> )::
+  İki nesnenin kesişim noktalarını içeren bir liste verir.
+
+[EXAMPLE]
+====
+
+`++f(x):= x^3 + x^2 - x++` ve `++g(x):= x++` iki fonksiyon olsun. `++Kesiştir(f(x), g(x))++` bu iki fonksiyonun kesişim
+noktalarının _\{(1, 1), (0, 0), (-2, -2)}_ listesini verir.
+
+====
+
+Kesiştir( <Nesne>, <Nesne> )::
+
+[EXAMPLE]
+====
+
+*Örnekler:*
+
+* `++Kesiştir( <Doğru> , <Nesne> )++` bir doğru ve bir düzlem, doğru parçası, çokgen, konik v.b. nesnenin kesişim
+noktalarını oluşturur.
+* `++Kesiştir( <Düzlem> , <Nesne> )++` bir düzlem ve bir doğru parçası, çokgen, konik v.b. nesnenin kesişim noktalarını
+oluşturur.
+* `++Kesiştir( <Konik>, <Konik> )++` iki koniğin kesişim noktalarını oluşturur
+* `++Kesiştir( <Düzlem>, <Düzlem> )++` iki düzlemin kesişim doğrusunu oluşturur.
+* `++Kesiştir( <Düzlem>, <Çokyüzlü> )++` bir düzlem ve çokyüzlünün kesişim çokgenlerini oluşturur.
+* `++Kesiştir( <Küre>, <Küre> )++` iki kürenin kesişim çemberini oluşturur.
+* `++Kesiştir( <Düzlem>, <Kuadrik> )++` düzlem ve kuadriğin (küre, koni, silindir, ...) kesiştiği koniği oluşturur.
+
+====
+
+[NOTE]
+====
+
+*Notlar:*
+
+* tüm kesişim noktalarını liste halinde elde etmek için örneğin`++{Kesiştir(a,b)}++` kullanabilirsiniz.
+* xref:/commands/KesiştirKonik.adoc[KesiştirKonik] ve xref:/commands/KesiştirYol.adoc[KesiştirYol] komutlarına da bakın.
+* image:22px-Mode_intersect.svg.png[Mode intersect.svg,width=22,height=22] xref:/tools/Kesiştir.adoc[Kesiştir] aracına
+da bakın.
+
+====

@@ -1,0 +1,64 @@
+= İlk Komut
+:page-en: commands/First
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+İlk( <Liste> )::
+  Verilen listenin ilk öğesini içeren yeni bir liste verir.
+İlk( <Liste>, <n Öğe Sayısı> )::
+  Verilen listenin sadece ilk _n_ öğesini içeren yeni bir liste verir.
+İlk( <Metin> )::
+  Metnin ilk karakterini verir.
+İlk( <Metin> , <n Öğe Sayısı> )::
+  Metnin ilk _n_ karakterini verir.
+İlk( <Geometrik Yer>, <n Öğe Sayısı> )::
+  Bu komut
+  * xref:/commands/ÇözADD.adoc[ÇözADD Komutu] ile üretilen geometrik yerler için (sayısal ADD-çözüm algoritmasının ilk
+  _n_ adımında oluşturulmuş olan noktaların listesini verir) ve
+  * xref:/commands/EnKısaMesafe.adoc[EnKısaMesafe],
+  xref:/s_index_php?title=GezginSatıcı_Komut_action=edit_redlink=1.adoc[GezginSatıcı],
+  xref:/commands/Voronoi.adoc[Voronoi], xref:/commands/EnKüçükDolanmaAğacı.adoc[EnKüçükDolanmaAğacı] ve
+  xref:/s_index_php?title=DışbükeyÖrtü_Komut_action=edit_redlink=1.adoc[DışbükeyÖrtü] Komutları kullanılarak üretilen
+  geometrik yerler için (çizgenin köşe sayısını verir)
+  kullanışlıdır.
+
+[EXAMPLE]
+====
+
+`++İlk("Merhaba",2)++` komutu _"Me"_ sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++İlk("Merhaba")++` komutu _"M"_ sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++İlk({1, 4, 3}, 2)++` komutu _\{1, 4}_ sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++İlk({1, 4, 3})++` komutu _\{1}_ sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+İlk öğeyi elde etmek için `++Öğe({1, 4, 3}, 1)++` komutunu kullanın.
+
+====
+
+[NOTE]
+====
+
+xref:/commands/Son.adoc[Son] komutuna da bakın.
+
+====

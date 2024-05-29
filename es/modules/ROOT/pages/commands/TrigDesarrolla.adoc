@@ -1,5 +1,5 @@
 = Comando TrigDesarrolla
-:page-en: commands/TrigExpand_Command
+:page-en: commands/TrigExpand
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
 TrigDesarrolla( <Expresión> )::
@@ -40,10 +40,9 @@ La vista CAS puede devover diferentes resultados, según el modo de salida selec
 [EXAMPLE]
 ====
 
-`++ TrigDesarrolla(tan(x + y))++` en modo /Archivo:Mode_evaluate_svg.adoc[image:32px-Mode_evaluate.svg.png[Mode
-evaluate.svg,width=32,height=32]] _Cálculo simbólico_ devuelve
-stem:[\frac\{\frac\{sen(x)}\{cos(x)}+\frac\{sen(y)}\{cos(y)}} \{1-\frac\{sen(x)}\{cos(x)} \cdot \frac\{sen(y)}\{cos(y)}}
-] en modo /Archivo:Mode_numeric_svg.adoc[image:32px-Mode_numeric.svg.png[Mode numeric.svg,width=32,height=32]] _Cálculo
+`++ TrigDesarrolla(tan(x + y))++` en modo image:32px-Mode_evaluate.svg.png[Mode evaluate.svg,width=32,height=32]
+_Cálculo simbólico_ devuelve stem:[\frac\{\frac\{sen(x)}\{cos(x)}+\frac\{sen(y)}\{cos(y)}} \{1-\frac\{sen(x)}\{cos(x)}
+\cdot \frac\{sen(y)}\{cos(y)}} ] en modo image:32px-Mode_numeric.svg.png[Mode numeric.svg,width=32,height=32] _Cálculo
 numérico_ devuelve stem:[\frac\{sen(x) cos(y) + sen(y) cos(x)}\{- sen(x) sen(y) +cos(x) cos(y) }] .
 
 ====

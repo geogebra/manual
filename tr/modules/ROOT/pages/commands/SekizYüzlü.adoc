@@ -1,0 +1,35 @@
+= SekizYüzlü Komut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+SekizYüzlü( <Nokta>, <Nokta>, <Yön> )::
+  Verilen iki nokta arasındaki doğru parçasını kenar kabul eden bir sekiz yüzlü oluşturur.
+  Diğer köşeler verilen yön ile bir tek şekilde belirlenir. Yönün aşağıdakilerden biri olması gerekir:
+  * bu doğru parçasına *dik* bir vektör, bir doğru parçası, bir doğru, bir ışın, veya
+  * bu doğru parçasına *paralel* bir çokgen, bir düzlem.
+  Oluşturulan sekiz yüzlünün:
+  * verilen vektör/doğru parçası/doğru/ışına dik olan bir düzlemde bu doğru parçasını kenar kabul eden bir yüzü veya
+  * verilen çokgen/düzleme paralel olan bir düzlemde bu doğru parçasını kenar kabul eden bir yüzü olacaktır.
+
+SekizYüzlü( <Nokta>, <Nokta>, <Nokta>)::
+  İlk yüzünün köşeleri verilen noktalar olan bir sekiz yüzlü oluşturur. Sekiz yüzlünün tanımlı olması için bu noktalar
+  bir eşkenar üçgen çizmelidir.
+
+SekizYüzlü( <Nokta>, <Nokta>)::
+  İlk yüzünün iki köşesi verilen noktalar olan bir sekiz yüzlü oluşturur ve üçüncü köşe otomatik olarak bir çember
+  üzerinde oluşturulur böylece sekiz yüzlü ilk kenarı etrafında döndürülebilir.
+
+[NOTE]
+====
+
+SekizYüzlü(A, B) komutu, C = Nokta(Çember(OrtaNokta(A, B), Uzaklık(A, B) sqrt(3) / 2, DoğruParçası(A, B))) olacak
+şekildeki SekizYüzlü(A, B, C) için kestirme yoldur.
+
+====
+
+[NOTE]
+====
+
+xref:/commands/Küp.adoc[Küp], xref:/commands/DörtYüzlü.adoc[DörtYüzlü], xref:/commands/YirmiYüzlü.adoc[YirmiYüzlü],
+xref:/commands/OnikiYüzlü.adoc[OnikiYüzlü] komutlarına da bakın.
+
+====

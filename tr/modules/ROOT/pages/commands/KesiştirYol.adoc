@@ -1,0 +1,56 @@
+= KesiştirYol Komut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+KesiştirYol( <Doğru>, <Çokgen> )::
+  Doğru ve çokgen arasındaki kesişim yolunu oluşturur.
+KesiştirYol( <Çokgen>, <Çokgen> )::
+  Verilen iki çokgenin kesişim çokgenini oluşturur.
+
+[EXAMPLE]
+====
+
+`++KesiştirYol(dörtgen, üçgen)++` verilen iki çokgenin kesişimi olarak yeni bir çokgen oluşturur.
+
+====
+
+[EXAMPLE]
+====
+
+`++KesiştirYol(a, üçgen)++` _a_ doğrusu ve _üçgen_ çokgeninin birinci ve ikinci kesişim noktaları arasındaki doğru
+parçasını oluşturur.
+
+====
+
+[NOTE]
+====
+
+Bu yeni çokgen bir dörtgen, beşgen ya da altıgen olabilir. Bu verilen çokgenlerin köşelerinin konumlarına bağlıdır.
+
+====
+
+KesiştirYol( <Düzlem>, <Çokgen> )::
+  Düzlem ve çokgen arasındaki kesişim yolunu oluşturur.
+KesiştirYol( <Düzlem>, <Kuadrik> )::
+  Düzlem ve kuadrik arasındaki kesişim yolunu oluşturur.
+
+[EXAMPLE]
+====
+
+`++KesiştirYol(a, küre)++` _a_ düzlemi ve _küre_ kuadriğinin kesişimi olarak bir çember oluşturur.
+
+====
+
+[EXAMPLE]
+====
+
+`++KesiştirYol(a, üçgen)++` _a_ düzlemi ve _üçgen_ çokgeninin birinci ve ikinci kesişim noktaları arasındaki doğru
+parçasını çokgenin düzleminde oluşturur.
+
+====
+
+[NOTE]
+====
+
+xref:/commands/Kesiştir.adoc[Kesiştir] ve xref:/commands/KesiştirKonik.adoc[KesiştirKonik] komutlarına da bakın.
+
+====

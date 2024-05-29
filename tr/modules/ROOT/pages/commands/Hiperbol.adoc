@@ -1,0 +1,47 @@
+= Hiperbol Komut
+:page-en: commands/Hyperbola
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Hiperbol( <Odak>, <Odak>, <Yarı Asal Eksen Uzunluğu> )::
+  Verilen odak noktalarına ve yarı asal eksen uzunluğuna sahip hiperbolü oluşturur.
+Hiperbol( <Odak>, <Odak>, <Doğru Parçası> )::
+  Verilen odak noktalarına sahip ve yarı asal eksen uzunluğu doğru parçasının uzunluğuna eşit olan hiperbolü oluşturur.
+Hiperbol( <Odak>, <Odak>, <Nokta> )::
+  Verilen odaklara sahip ve verilen noktadan geçen hiperbolü oluşturur.
+
+[EXAMPLE]
+====
+
+`++Hiperbol((1, 1), (2, 1), (-2,-4))++` komutu _-2.69x² + 1.30y² + 8.07x - 2.62y = 4.52_ sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++a = DoğruParçası((0,1), (2,1))++` olsun. `++Hiperbol((4, 1), (-2, 1), a)++` komutu _-5x² + 4y² + 10x - 8y = -19_
+sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++Hiperbol((0, -4), (2, 4), 1)++` komutu _-8xy - 15y² + 8y = -16_ sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+Eğer _0 < 2*yarı asal eksen uzunluğu < Odaklar arasındaki uzaklık_ koşulu sağlanmıyorsa bir elips elde edersiniz.
+
+====
+
+[NOTE]
+====
+
+image:24px-Mode_hyperbola3.svg.png[Mode hyperbola3.svg,width=24,height=24] xref:/tools/Hiperbol.adoc[Hiperbol] aracına
+da bakın.
+
+====

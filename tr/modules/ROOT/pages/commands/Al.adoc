@@ -1,0 +1,48 @@
+= Al Komut
+:page-en: commands/Take
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Al( <Liste>, <Başlangıç Yeri> )::
+  İlk listenin __Başlangıç Yeri__nden bitişine kadar öğelerini içeren bir liste verir.
+Al( <Metin>, <Başlangıç Yeri> )::
+  İlk metnin __Başlangıç Yeri__nden bitişine kadar öğelerini içeren bir metin verir.
+Al( <Liste>, <Başlangıç Yeri>, <Bitiş Yeri> )::
+  İlk listenin __Başlangıç Yeri__nden __Bitiş Yeri__ne kadar öğelerini içeren bir liste verir.
+Al( <Metin>, <Başlangıç Yeri>, <Bitiş Yeri> )::
+  İlk metnin __Başlangıç Yeri__nden __Bitiş Yeri__ne kadar öğelerini içeren bir metin verir.
+
+[EXAMPLE]
+====
+
+`++Al("GeoGebra", 3, 6)++` komutu _oGeb_ metnini verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++Al({2, 4, 3, 7, 4}, 3, 4)++` komutu _\{3, 7}_ listesini verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++Al("GeoGebra", 3)++` komutu _oGebra_ metnini verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++Al({2, 4, 3, 7, 4}, 3)++` komutu _\{3, 7, 4}_ listesini verir.
+
+====
+
+[NOTE]
+====
+
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_Görünümü.adoc[CAS Görünümünde] sadece
+listeler için çalışır
+
+====

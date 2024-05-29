@@ -1,0 +1,47 @@
+= Elips Komut
+:page-en: commands/Ellipse
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+Elips( <Odak>, <Odak>, <Yarı Asal Eksen Uzunluğu> )::
+  İki odak noktası ve yarı asal eksen uzunluğuna sahip elipsi oluşturur.
+
+[EXAMPLE]
+====
+
+`++Elips((0, 1), (1, 1), 1)++` komutu _12x² + 16y² - 12x - 32y = -7_ sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+Eğer _2*yarı asal eksen uzunluğu > Odak noktaları arasındaki uzaklık_ koşulu sağlanmıyorsa, bir hiperbol elde edersiniz.
+
+====
+
+Elips( <Odak>, <Odak>, <Doğru Parçası> )::
+  İki noktayı odakları kabul eden yarı asal eksen uzunluğu verilen doğru parçasının uzunluğuna eşit olan elipsi
+  oluşturur.
+Elips( <Odak>, <Odak>, <Nokta> )::
+  İki noktayı odakları kabul eden verilen noktadan geçen elipsi oluşturur.
+
+[EXAMPLE]
+====
+
+`++Elips((0, 1), (2, 1), (1,2))++` komutu _1x² + 2y² - 2x - 4y = -1_ sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+__s = DoğruParçası((0,1), (2,1))__olsun. `++Elips((0, 1), (2, 1), s)++` komutu _3x² + 4y² - 6x - 8y = 5_ sonucunu verir.
+
+====
+
+[NOTE]
+====
+
+image:24px-Mode_ellipse3.svg.png[Mode ellipse3.svg,width=24,height=24] xref:/tools/Elips.adoc[Elips] aracına da bakın.
+
+====

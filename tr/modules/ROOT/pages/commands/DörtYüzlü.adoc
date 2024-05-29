@@ -1,0 +1,37 @@
+= DörtYüzlü Komut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+DörtYüzlü( <Nokta>, <Nokta>, <Yön> )::
+  Verilen iki nokta arasındaki doğru parçasını kenar kabul eden bir dört yüzlü oluşturur.
+  Diğer köşeler verilen yön ile bir tek şekilde belirlenir. Yönün aşağıdakilerden biri olması gerekir:
+  * bu doğru parçasına *dik* bir vektör, bir doğru parçası, bir doğru, bir ışın, veya
+  * bu doğru parçasına *paralel* bir çokgen, bir düzlem.
+
+Oluşturulan dört yüzlünün:
+
+* verilen vektör/doğru parçası/doğru/ışına dik olan bir düzlemde bu doğru parçasını kenar kabul eden bir yüzü veya
+* verilen çokgen/düzleme paralel olan bir düzlemde bu doğru parçasını kenar kabul eden bir yüzü olacaktır.
+
+DörtYüzlü( <Nokta>, <Nokta>, <Nokta>)::
+  Verilen üç nokta ilk yüzünün köşeleri olacak şekilde bir dört yüzlü oluşturur. Dört yüzlünün tanımlı olması için bu
+  noktalar bir eşkenar üçgen çizmelidir.
+
+DörtYüzlü( <Nokta>, <Nokta>)::
+  İlk yüzünün iki köşesi verilen noktalar olan bir dört yüzlü oluşturur ve üçüncü köşe otomatik olarak bir çember
+  üzerinde oluşturulur böylece dört yüzlü ilk kenarı etrafında döndürülebilir.
+
+[NOTE]
+====
+
+DörtYüzlü(A, B) komutu, C = Nokta(Çember(OrtaNokta(A, B), Uzaklık(A, B) sqrt(3) / 2, DoğruParçası(A, B))) olacak
+şekildeki DörtYüzlü(A, B, C) için kestirme yoldur.
+
+====
+
+[NOTE]
+====
+
+xref:/commands/Küp.adoc[Küp], xref:/commands/SekizYüzlü.adoc[SekizYüzlü], xref:/commands/YirmiYüzlü.adoc[YirmiYüzlü],
+xref:/commands/OnikiYüzlü.adoc[OnikiYüzlü] komutlarına da bakın.
+
+====

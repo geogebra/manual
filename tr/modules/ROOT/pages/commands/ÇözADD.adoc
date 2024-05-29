@@ -1,0 +1,90 @@
+= ÇözADD Komut
+ifdef::env-github[:imagesdir: /tr/modules/ROOT/assets/images]
+
+ÇözADD( <f'(x, y)> )::
+  Birinci dereceden stem:[\frac\{dy}\{dx}(x)=f'(x, y(x))] adi diferansiyel denkleminin (ADD) tam çözümünü bulmayı dener.
+ÇözADD( <f'(x, y)>, <f üzerinde Nokta> )::
+  Birinci dereceden stem:[\frac\{dy}\{dx}(x)=f'(x, y(x))] ADD'nin tam çözümünü bulmayı dener ve verilen noktadan geçen
+  çözümü verir.
+ÇözADD( <f'(x, y)>, <Başlangıç x>, <Başlangıç y>, <Bitiş x>, <Adım> )::
+  Birinci dereceden stem:[\frac\{dy}\{dx}=f'(x, y)] ADD'ni _x_ için verilen başlangıç noktası, bitiş ve adım değerlerini
+  kullanarak sayısal olarak çözer.
+
+[EXAMPLE]
+====
+
+`++ÇözADD(-x*y, x(A), y(A), 5, 0.1)++` komutu önceden tanımlanmış _A_ noktasını başlangıç noktası olarak kullanarak
+stem:[\frac\{dy}\{dx}=-xy] denklemini çözer.
+
+====
+
+[EXAMPLE]
+====
+
+`++ÇözADD(y / x, (1, 2))++` komutu _y = 2x_ sonucunu verir.
+
+====
+
+[EXAMPLE]
+====
+
+`++ÇözADD(2x / y)++` komutu _stem:[\sqrt\{2} \sqrt\{-c_\{1}+x^\{2}}]_ sonucunu verir, burada stem:[c_\{1}] bir sabittir.
+
+====
+
+[NOTE]
+====
+
+* xref:/commands/Uzunluk.adoc[Uzunluk]( <Geometrik Yer> ) komutu, kaç adet noktanın hesaplanmış geometrik yerde
+kaldığını öğrenme imkanı verir.
+* xref:/commands/İlk.adoc[İlk]( <Geometrik Yer>, <Sayı> ) bu noktaları bir liste olarak çıkartma imkanı verir.
+* "Ters" çözümü bulmak için, sadece _Bitiş x_ yerine negatif bir değer girin. Örneğin
+`++ÇözADD(-x*y, x(A), y(A), -5, 0.1)++`
+
+====
+
+[NOTE]
+====
+
+stem:[c_\{1}] karşılık gelen bir sürgü ile yardımcı nesne olarak oluşturulacaktır.
+
+====
+
+ÇözADD( <y'>, <x'>, <Başlangıç x>, <Başlangıç y>, <Bitiş t>, <Adım> )::
+  Birinci dereceden stem:[\frac\{dy}\{dx}=\frac\{f(x, y)}\{g(x, y)}] ADD'ni dahili bir t parametresinin başlangıç
+  noktası, en büyük değeri ve adım değerini kullanarak çözer. Komutun bu versiyonu ilk komutun çalışmadığı örneğin çözüm
+  eğrisinin düşey noktalarının olduğu durumlarda çalışabilir.
+ÇözADD( <b(x)>, <c(x)>, <f(x)>, <Başlangıç x>, <Başlangıç y>, <Başlangıç y'>, <Bitiş x>, <Adım> )::
+  İkinci dereceden stem:[y'' + b(x) y' + c(x) y = f(x)] ADD'ni çözer.
+
+[EXAMPLE]
+====
+
+`++ÇözADD(x^2, 2x, 2x^2 + x, x(A), y(A), 0, 5, 0.1)++` komutu önceden tanımlı _A_ noktasını başlangıç noktası gibi
+kullanarak bu ikinci dereceden ADD çözer.
+
+====
+
+[EXAMPLE]
+====
+
+`++ÇözADD(-x, y, x(A), y(A), 5, 0.1)++` komutu stem:[\frac\{dy}\{dx}=- \frac\{x}\{y} ] denklemini önceden tanımlı _A_
+noktasını başlangıç noktası gibi kullanarak çözer.
+
+====
+
+[NOTE]
+====
+
+Sonucu daima bir geometrik yer olarak verir. Hali hazırda kullanılan algoritmalar
+http://en.wikipedia.org/wiki/tr:Runge-Kutta_y%C3%B6ntemleri[Runge-Kutta sayısal metotlarını] temel almaktadır.
+
+====
+
+[NOTE]
+====
+
+"Ters" çözümü bulmak için, sadece _Bitiş t_ yerine negatif bir değer girin. Örneğin
+`++ÇözADD(-x, y, x(A), y(A), -5, 0.1)++`.
+
+====

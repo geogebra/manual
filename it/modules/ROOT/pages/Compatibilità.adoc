@@ -1,0 +1,34 @@
+= Compatibilità
+:page-en: Compatibility
+ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
+
+GeoGebra è compatibile con le precedenti versioni, nel senso che i file creati con versioni precedenti dovrebbero
+aprirsi senza problemi nelle versioni successive. Le modifiche ad alcuni comandi e strumenti possono causare
+comportamenti diversi dei file nelle varie versioni.
+
+Differenze tra GeoGebra 4.4 e 5.0
+
+* La http://en.wikipedia.org/wiki/Nonzero-rule[winding rule] per poligoni complessi (auto intersecanti) è stata
+modificata, quindi la visualizzazione sarà diversa.
+
+Differenze tra GeoGebra 3.2 e 4.0
+
+* le liste di angoli, integrali, diagrammi a barre, istogrammi, ecc.. ora sono visibili
+* le liste \{Segmento[A,B], Segmento[B,C] } possono ora essere trascinate col mouse
+* la circonferenza di dato raggio (ad es. Circonferenza[(1,1),2]) può ora essere trascinata col mouse
+* Distanza[ Punto, Segmento ] è ora applicabile direttamente (senza tracciare la retta come nella v. 3.2)
+* Angolo[A,B,C] ora si ridimensiona automaticamente se B è troppo vicino ad A o C
+* Integrale[funzione f, funzione g, a, b] ora è IntegraleTra[funzione f, funzione g, a, b].
+* Gli oggetti risultanti dalla traslazione secondo un vettore libero ora possono essere trascinati, ad es. Trasla[A,
+Vettore[(1,1)]]
+* I punti appartenenti a cammini ora hanno un comportamento diverso quando il cammino subisce una modifica, (ad es. i
+punti su una conica).
+
+== Compatibilità con LaTeX
+
+La visualizzazione di testo xref:/LaTeX.adoc[LaTeX] è stata notevolmente migliorata, ma alcuni errori nella sintassi
+LaTeX che venivano ignorati nella v. 3.2 ora creano testo incompleto o mancante nella v. 4.0.
+
+* Assicurarsi che ogni `++\left\{++` abbia un corrispondente `++\right\}++`.
+* Per ulteriori informazioni su come ottimizzare la visualizzazione dei testi LaTeX fare riferimento a
+http://forum.geogebra.org/viewtopic.php?f=10&t=33463[questo articolo] nel Forum degli utenti di GeoGebra.
