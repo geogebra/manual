@@ -1,0 +1,93 @@
+= Guide d'installation
+:page-en: Installation_Guide
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+== GeoGebra ne veut pas démarrer
+
+* S'assurer que Java est installé : http://www.java.com/en/download/installed.jsp[Ai-je Java?]
+* Supprimer le registre de configuration de GeoGebra avec cet outil : https://sites.google.com/site/javaprefs/[Outil
+Préférences Java]
+* Si cela ne fonctionne pas, essayer une réinstallation (ci-dessous).
+
+== Webstart
+
+=== Réinstallation de la Webstart sous Windows XP
+
+* Menu Démarrer, Exécuter ..., taper "javaws -viewer" dans le champ Ouvrir et appuyer sur Entrée
+* Cliquer droit sur GeoGebra -> Supprimer
+* Relancer la http://www.geogebra.org/webstart/geogebra.jnlp[Webstart GeoGebra]
+
+=== Réinstallation de la Webstart sous Windows 7
+
+* Dans le menu Démarrer taper "javaws -viewer" dans le champ de recherche et appuyer sur Entrée
+* Cliquer droit sur GeoGebra -> Supprimer
+* Relancer la http://www.geogebra.org/webstart/geogebra.jnlp[Webstart GeoGebra]
+
+=== Réinstallation Webstart sous Windows Vista
+
+* Désactiver l'https://en.wikipedia.org/wiki/fr:User_Account_Control[UAC]
+* Redémarrer l'ordinateur
+* Dans le menu Démarrer taper "javaws -viewer" dans le champ de recherche et appuyer sur Entrée
+* Cliquer droit sur GeoGebra -> Supprimer
+* Relancer la http://www.geogebra.org/webstart/geogebra.jnlp[Webstart GeoGebra]
+* Réactiver l'https://en.wikipedia.org/wiki/fr:User_Account_Control[UAC]
+=== Réinstallation Webstart sur un Mac
+
+* Supprimer GeoGebra.app du dossier Applications.
+* Aller dans les Préférences Java -> Réseau -> Afficher les fichiers cache et supprimer le fichier GeoGebra.app qui est
+là et relancer la http://www.geogebra.org/webstart/geogebra.jnlp[Webstart GeoGebra]
+
+=== Réinstallation Webstart sur Linux
+
+* Ouvrir un terminal
+* Javaws -viewer
+* Cliquer droit sur geogebra.jnlp -> Supprimer
+* Relancer la http://www.geogebra.org/webstart/geogebra.jnlp[Webstart GeoGebra]
+
+== Problèmes avec l'appliquette
+
+Premièrement, vérifier que Java fonctionne correctement sur l'ordinateur:
+http://www.java.com/en/download/help/testvm.xml[testvm]
+
+* Puis Panneau de configuration Java -> Général -> Fichiers Internet temporaires -> Paramètres -> Supprimer les fichiers
+...
+* Pour obtenir le Panneau de configuration Java dans Windows 7, ouvrir le Panneau de configuration puis taper "Java"
+dans la boîte de recherche (en haut à droite).
+
+== Associer les fichiers .ggb avec Webstart (Windows)
+
+* Menu Démarrer -> Exécuter -> javaws -verbose -import -shortcut -association
+http://www.geogebra.org/webstart/geogebra.jnlp
+
+== Des problèmes avec l'installateur en mode hors connexion (Windows) en supprimant une ancienne version de GeoGebra
+
+* Menu Démarrer -> Exécuter -> Explorer C: \ Program Files \ Zero G Registry
+* Modifier ce fichier dans le Bloc-notes: *.com.zerog.registry.xml* et supprimer les bits relatifs à GeoGebra
+
+[NOTE]
+====
+
+*Note :* C: \ Program Files \ Zero G Registry est un dossier caché, donc normalement il n'apparaît pas dans C: \ Program
+Files
+
+====
+
+== Installation réseau (Windows)
+
+* Installation sur une machine autonome
+* Copier les fichiers de C: \ Program Files \ GeoGebra sur le réseau
+* Associer les fichiers .ggb et . ggt avec GeoGebra.exe
+
+== Installation silencieuse réseau (Windows)
+
+* Télécharger l'installeur : http://geogebra.googlecode.com/files/GeoGebra-Windows-Installer-3-2-47-0.msi[msi]
+* msiexec /i GeoGebra-Windows-Installer-3-2-47-0.msi /quiet
+
+== Autres messages d'erreur
+
+* Message d'erreur «Installer l'interface utilisateur n'est pas pris en charge»
+
+Il s'agit sûrement d'un problème avec un nom d'utilisateur Windows contenant des caractères spéciaux, par exemple : !, #
+
+Solution: Créer un autre utilisateur, par exemple essai et installer à l'aide de ce
+http://www.hauser-wenz.de/s9y/index.php?/archives/138-Installer-User-Interface-Mode-Not-Supported.html[fichier]

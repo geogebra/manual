@@ -1,0 +1,101 @@
+= Propriétés d'un objet
+:page-en: Object_Properties
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Les propriétés suivantes peuvent être spécifiées par le xref:/Dialogue_Propriétés.adoc[Dialogue Propriétés].
+
+== Afficher et Cacher des objets
+
+Vous pouvez montrer ou cacher des objets dans xref:/Graphique.adoc[Graphique] de différentes manières :
+
+* Utilisez le mode image:32px-Mode_showhideobject.svg.png[Mode showhideobject.svg,width=32,height=32]
+xref:/tools/Afficher_cacher_l_objet.adoc[Outil_Afficher/cacher_l'objet].
+* Ouvrez le xref:/Menu_contextuel.adoc[Menu_contextuel] cochez ou non l’item image:32px-Mode_showhideobject.svg.png[Mode
+showhideobject.svg,width=32,height=32] Afficher l’objet.
+* Dans la Fenêtre Algèbre, cliquez directement sur la pastille à gauche de chaque objet
+(image:16px-Algebra_shown.svg.png[Algebra shown.svg,width=16,height=16] ‘affiché’ ou
+image:16px-Algebra_hidden.svg.png[Algebra hidden.svg,width=16,height=16] ‘caché’).
+* Utilisez l’outil image:32px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=32,height=32]
+xref:/tools/BoîteSélection.adoc[BoîteSélection] pour faire afficher ou cacher un ou plusieurs objets.
+
+[NOTE]
+====
+
+*Note :* Pour rendre un objet "invisible" dans la Fenêtre Algèbre, déclarez le
+xref:/Objets_libres_dépendants_ou_auxiliaires.adoc[auxiliaire]. [.small]#et bien sûr, ne pas demander que les Objets
+auxiliaires y soient affichés !#
+
+====
+
+== Objets fixes
+
+Vous pouvez décider qu'un objet doit être fixe par xref:/Dialogue_Propriétés.adoc[Dialogue Propriétés]. Les objets fixes
+(xref:/Objets_libres_dépendants_ou_auxiliaires.adoc[libres et dépendants], les deux) ne peuvent être déplacés, ???
+xref:/Dialogue_Redéfinir.adoc[redéfinis] ou xref:/tools/Effacer.adoc[supprimés] ??? *Pour éviter qu'un objet soit
+modifié par l'utilisateur, [.underline]#le plus simple et efficace est de désactiver "Sélectionnable"# dans l'onglet
+"Avancé" de ses "Propriétés".*
+
+== Remplissage
+
+Pour les xref:/Courbes.adoc[Courbes] et xref:/Objets_géométriques.adoc[régions] fermées, vous pouvez préciser le
+remplissage dans l'onglet 'Style' du dialogue des propriétés de l'objet .
+
+Il y a 10 types de remplissage :
+
+Standard
+
+L'objet est rempli par la couleur choisie dans l'onglet 'Couleur'. La même couleur est utilisée pour la frontière de
+l'objet. Dans l'onglet 'Style' vous pouvez régler l'opacité -- par ex. les coniques ont par défaut une opacité à 0 ce
+qui signifie qu'elles sont transparentes.
+
+Hachures
+
+L'objet est hachuré, l'angle des hachures et la distance entre elles peuvent être précisés. La même épaisseur du trait
+est utilisée pour les hachures et la frontière de l'objet.
+
+Image
+
+Vous pouvez choisir une image enregistrée sur votre ordinateur. L'image est utilisée pour un pavage de la région, sa
+taille est fixée en pixels et son coin supérieur gauche est positionné au coin supérieur gauche de la région.
+
+Quadrillage
+
+Quadrille l'objet, soit parallèlement aux axes (angle 0°), soit incliné à 45°. La dimension des carrés est précisée par
+_Espacement_. L'épaisseur du trait des hachures est la même que celle des frontières de l'objet.
+
+Damiers
+
+Remplit l'objet par un damier, soit parallèlement aux axes (angle 0°), soit incliné à 45°. La dimension des carrés est
+précisée par _Espacement_.
+
+Points
+
+Remplit l'objet par un réseau pointé parallèlement aux axes. L' _Espacement_ des points peut être précisé.
+
+Nids d'abeille
+
+Remplit l'objet par un réseau hexagonal. La dimension des hexagones est précisée par _Espacement_. L'épaisseur des
+traits est la même que celle des frontières de l'objet.
+
+Briques
+
+Remplit l'objet par un mur de briques (2x1). 5 orientations peuvent être choisies. La dimension des rectangles est
+précisée par _Espacement_. L'épaisseur des traits est la même que celle des frontières de l'objet.
+
+Cannage
+
+Remplit l'objet par un cannage. 2 orientations peuvent être choisies. La dimension des fils est précisée par
+_Espacement_. L'épaisseur des traits est la même que celle des frontières de l'objet.
+
+Symboles
+
+Remplit l'objet par un tampon de symbole choisi dans la liste. L' _Espacement_ des symboles peut être précisé.
+
+Vous pouvez choisir d' _Inverser le remplissage_ pour remplir toute la fenêtre graphique avec votre modèle, à
+l'exception de l'objet sélectionné.
+
+== Propriétés avancées
+
+Les propriétés avancées xref:/Couleurs_dynamiques.adoc[Couleurs_dynamiques] et
+xref:/Affichage_conditionnel.adoc[Affichage_conditionnel] sont énumérées dans l'article
+xref:/Fonctionnalités_avancées.adoc[Fonctionnalités_avancées].
