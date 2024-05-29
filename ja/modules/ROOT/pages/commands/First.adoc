@@ -1,0 +1,61 @@
+= First コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+First( <リスト> )::
+  与えられたリストの最初の要素を含む新しいリストを返す．
+First( <リスト>, <要素の数 n> )::
+  与えられたリストの最初の _n_ 個の要素だけを含む新しいリストを返す．
+First( <テキスト> )::
+  与えられたテキストの最初の文字を返す．
+First( <テキスト> , <要素の数 n> )::
+  与えられたテキストの最初の _n_ 文字を返す．
+First( <Locus>, <Number n of elements> )::
+  Tこのコマンドは次のような場合に便利である：
+  * xref:/commands/NSolveODE.adoc[NSolveODE コマンド]によって生成される軌跡 - 数値ODE解法アルゴリズムの最初の _n_
+  ステップで作成された点のリストを返す．
+  * xref:/commands/ShortestDistance.adoc[ShortestDistance コマンド],
+  xref:/commands/TravelingSalesman.adoc[TravelingSalesman コマンド], xref:/commands/Voronoi.adoc[Voronoi コマンド],
+  xref:/commands/MinimumSpanningTree.adoc[MinimumSpanningTree コマンド], xref:/commands/ConvexHull.adoc[ConvexHull
+  コマンド] によって生成される軌跡 -グラフの頂点を返す．
+
+[EXAMPLE]
+====
+
+`++First("Hello",2)++` 出力： _"He"_.
+
+====
+
+[EXAMPLE]
+====
+
+`++First("Hello")++` 出力： _"H"_．
+
+====
+
+[EXAMPLE]
+====
+
+`++First({1, 4, 3}, 2)++` 出力： _\{1, 4}_．
+
+====
+
+[EXAMPLE]
+====
+
+`++First({1, 4, 3})++` 出力： _\{1}_．
+
+====
+
+[NOTE]
+====
+
+最初の要素を取得するには `++Element({1, 4, 3}, 1)++`.
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/Last.adoc[Last コマンド]．
+
+====

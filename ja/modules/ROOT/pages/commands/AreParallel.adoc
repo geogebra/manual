@@ -1,0 +1,24 @@
+= AreParallel コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+AreParallel( <直線>, <直線> )::
+  直線が平行かどうかを判定する．
+
+通常，このコマンドは結果を数値で計算する．この動作は xref:/commands/Prove.adoc[Prove]コマンドで変更できる．
+
+[EXAMPLE]
+====
+
+`++AreParallel(Line[(1, 2), (3, 4)), Line((5, 6),(7,8)))++` 出力： _true_ ，与えられた直線は平行である．
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/AreCollinear.adoc[AreCollinear], xref:/commands/AreConcurrent.adoc[AreConcurrent],
+xref:/commands/AreCongruent.adoc[AreCongruent], xref:/commands/AreConcyclic.adoc[AreConcyclic],
+xref:/commands/AreEqual.adoc[AreEqual], xref:/commands/ArePerpendicular.adoc[ArePerpendicular],
+xref:/commands/IsTangent.adoc[IsTangent] コマンド．
+
+====

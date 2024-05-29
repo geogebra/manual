@@ -1,0 +1,67 @@
+= Invert コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Invert( <行列> )::
+  与えられた行列の逆行列を返す．
+
+[EXAMPLE]
+====
+
+`++Invert({{a, b}, {c, d}})++` 出力： stem:[\begin\{pmatrix}\frac\{d}\{ad- bc} & \frac\{-b}\{ad- bc}\\\frac\{-c}\{ad-
+bc}& \frac\{a}\{ ad- bc}\end\{pmatrix}]．これは行列 stem:[\begin\{pmatrix}a & b\\c & d\end\{pmatrix}]の逆行列．
+
+====
+
+[EXAMPLE]
+====
+
+`++Invert({{1, 2}, {3, 4}})++` 出力： stem:[\begin\{pmatrix}-2 & 1\\1.5 & -0.5\end\{pmatrix}]． これは行列
+stem:[\begin\{pmatrix}1 & 2\\3 & 4\end\{pmatrix}]の逆行列．
+
+====
+
+[NOTE]
+====
+
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CASビュー.adoc[CASビュー]
+では未定義の変数も利用できる．
+
+====
+
+Invert( <関数> )::
+  与えられた関数の逆関数を返す．
+
+[EXAMPLE]
+====
+
+`++Invert(sin(x))++` 出力： _asin(x)_．
+
+====
+
+[NOTE]
+====
+
+例えば f(x) = x^2 や f(x) =\sin(x) のように，関数は _x_ をただ一つ含む必要があり，定義域や値域は考慮されない．
+
+====
+
+関数に _x_ が複数含まれている場合は，別のコマンドが必要になる：
+
+[EXAMPLE]
+====
+
+`++Invert(PartialFractions((x + 1) / (x + 2)))++` と `++Invert(CompleteSquare(x^2 + 2 x + 1))++` は複数の _x_
+があるが，他のコマンドを併用することで逆関数を求められる．
+
+====
+
+[NOTE]
+====
+
+* image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View] では１つ以上の _x_ が入った関数の逆関数を扱える．
+* こちらも参照： xref:/commands/Eigenvalues.adoc[Eigenvalues コマンド], xref:/commands/Eigenvectors.adoc[Eigenvectors
+コマンド], xref:/commands/SVD.adoc[SVD コマンド], xref:/commands/Transpose.adoc[Transpose コマンド],
+xref:/commands/JordanDiagonalization.adoc[JordanDiagonalization コマンド]．
+
+====

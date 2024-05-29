@@ -1,0 +1,28 @@
+= AreEqual コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+AreEqual( <オブジェクト>, <オブジェクト> )::
+  オブジェクトが等しいかどうかを判定する．
+
+通常，このコマンドは結果を数値で計算する．この動作は xref:/commands/Prove.adoc[Prove]コマンドで変更できる．
+
+[EXAMPLE]
+====
+
+`++AreEqual(Circle((0, 0),1),x^2+y^2=1)++` 出力： _true_ ，２の円は同じ中心と半径をもつ．
+
+====
+
+[NOTE]
+====
+
+*Notes:*
+
+* `++AreEqual(Segment((1, 2), (3, 4)), Segment((3, 4), (1, 6)))++` と
+`++Segment((1, 2), (3, 4)) == Segment((3, 4), (1, 6))++` は異なる．後者は長さを比較する．
+* こちらも参照： xref:/commands/AreCollinear.adoc[AreCollinear], xref:/commands/AreConcyclic.adoc[AreConcyclic],
+xref:/commands/AreConcurrent.adoc[AreConcurrent], xref:/commands/AreCongruent.adoc[AreCongruent],
+xref:/commands/ArePerpendicular.adoc[ArePerpendicular], xref:/commands/AreParallel.adoc[AreParallel],
+xref:/commands/IsTangent.adoc[IsTangent] コマンド．
+
+====

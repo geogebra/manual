@@ -1,0 +1,87 @@
+= Solve コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+このコマンドは xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View] でのみ利用できます。.
+
+[NOTE]
+====
+
+*Solve* コマンドと xref:/commands/Solutions.adoc[Solutions]
+コマンドは，実数上で方程式または連立方程式を記号的に解く．方程式を数値的に解くには， xref:/commands/NSolve.adoc[NSolve
+コマンド]を使用する．複素数の範囲で方程式を解く場合は， xref:/commands/CSolve.adoc[CSolve コマンド]を参照．
+
+====
+
+== CAS での書式
+
+以下のコマンドはimage:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/CASビュー.adoc[CASビュー]でのみ使用可能．
+
+Solve( <xの方程式> )::
+  与えられた方程式を主変数について解き，すべての解のリストを返す．
+Solve( <方程式>, <変数> )::
+  与えられた方程式を指定された変数について解き，すべての解のリストを返す．
+Solve( <xの方程式>, <条件> )::
+  指定された条件のもとで，方程式 x を解く．
+Solve( <方程式のリスト>, <変数のリスト> )::
+  指定された未知変数に対する連立方程式を解き，全ての解のリストを返す．
+
+[EXAMPLE]
+====
+
+* `++Solve({x = 4 x + y , y + x = 2}, {x, y})++` は，解 _( x = -1, y = 3 )_ を返す．
+* `++Solve({2a^2 + 5a + 3 = b, a + b = 3}, {a, b})++` は，解 _\{\{a = 0, b = 3}, \{a = -3, b = 6}}_ を返す．
+
+====
+
+[EXAMPLE]
+====
+
+`++Solve(x^2=1, x>0)++` 出力： stem:[\{x = 1}]
+
+====
+
+[EXAMPLE]
+====
+
+`++Solve(x * a^2 = 4a, a)++` は，解 \{stem:[a = \frac\{4}\{x}, a = 0]} を返す．
+
+====
+
+[EXAMPLE]
+====
+
+`++Solve(x^2 = 4x)++` は，解 _\{x = 4, x = 0}_ を返す．
+
+====
+
+Solve( <方程式>, <変数> , <条件のリスト>)::
+  方程式を指定された条件のもとで指定された変数について解き，すべての解のリストを返す．
+
+[EXAMPLE]
+====
+
+* `++Solve(u *x < a,x, u>0)++` は， _u>0_ の条件のもとでの解 _\{x < a / u}_ を返す．
+* `++Solve(u *x < a,x, {u<0, a<0})++` は， _\{x > a / u}_ を返す．
+
+====
+
+Solve( <List of Parametric Equations>, <List of Variables> )::
+  媒介変数を用いた連立方程式を解き，すべての解のリストを返す．
+
+[EXAMPLE]
+====
+
+* `++Solve({(x, y) = (3, 2) + t*(5, 1), (x, y) = (4, 1) + s*(1, -1)}, {x, y, t, s})++` は，解 _\{\{x = 3, y = 2, t = 0,
+s = -1}}_ を返す．
+
+====
+
+[NOTE]
+====
+
+* （上記のどの構文でも）方程式の右辺を省略することができる．右辺がない場合は0として扱われる．
+* CASを使用する際には，いくつかの操作を加える必要がある場合がある．例：`++ Solve(TrigExpand(sin(5/4 π + x) - cos(x - 3/4 π) = sqrt(6) * cos(x) - sqrt(2)))++`.
+* 区分的に定義された関数の場合は，xref:/commands/NSolve.adoc[NSolve]コマンドを使用する必要がある．
+
+====

@@ -1,0 +1,73 @@
+= PerpendicularVector コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+PerpendicularVector( <直線> )::
+  直線に垂直なベクトル（法線ベクトル）を返す．
+
+[EXAMPLE]
+====
+
+`++Line((1, 4), (5, -3))++` を直線 _j_　とする． `++PerpendicularVector(j)++` は，直線 _j_　に垂直なベクトル _u=(7, 4)_
+を返す．
+
+====
+
+[NOTE]
+====
+
+直線の方程式が _ax + by = c_ とするとき，この直線に垂直なベクトルは _(a, b)_．
+
+====
+
+PerpendicularVector( <線分> )::
+  直線に垂直で大きさが線分の長さに等しいベクトル（の１つ）を返す．
+PerpendicularVector( <ベクトル> )::
+  与えられたベクトルに垂直なベクトルを返す．
+
+[EXAMPLE]
+====
+
+`++Vector((-12, 8))++` をベクトルb _u_ とする． `++PerpendicularVector(u)++` は，ベクトル __u__に垂直なベクトル _v=(-8,
+-12)_ を返す．
+
+====
+
+[EXAMPLE]
+====
+
+`++Segment((3, 2), (14, 5))++` を線分 _k_ とする． `++PerpendicularVector(k)++` は，線分 _k_ に垂直なベクトル _u=(-3,
+11)_ を返す．
+
+====
+
+[NOTE]
+====
+
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CASビュー.adoc[CASビュー]
+では未定義の変数も利用できる．
+
+[EXAMPLE]
+====
+
+`++PerpendicularVector((a, b))++` 出力： _\{-b, a}_.
+
+====
+
+====
+
+PerpendicularVector( <平面> )::
+  与えれられた平面に直交するベクトルを返す．
+
+[EXAMPLE]
+====
+
+`++PerpendicularVector(xOyPlane)++` は，xy平面に垂直なベクトル _u=(0, 0, 1)_ を返す．
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/UnitPerpendicularVector.adoc[UnitPerpendicularVector コマンド]．
+
+====

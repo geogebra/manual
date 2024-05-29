@@ -1,0 +1,91 @@
+= SetImage コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+SetImage( <オブジェクト>, <画像> )::
+  与えられたオブジェクトを画像で埋める．
+
+[NOTE]
+====
+
+オブジェクトは，多角形，円，ボタンなど，塗りつぶしが可能である必要がある．
+
+====
+
+SetImage( <オブジェクト>, <テキスト> )::
+  GeoGebraの定義済みアクション画像を使用して，オブジェクトを塗りつぶす．選択可能な画像は，下記の表にリストされている．
+  \{\{Notes| 1=現在のバージョンでは，ボタンオブジェクトのみをサポートしている．画像の名前（テキストパラメータ）は"
+  "で囲み，英語で表記する必要がある．
+
+[EXAMPLE]
+====
+
+`++SetImage(button1,"pause")++` は， GeoGebra の定義済みの一時停止アイコンを button1 に表示する．
+
+====
+
+GeoGebraのあらかじめ定義されたアクション画像
+
+[width="100%",cols="50%,50%",options="header",]
+|===
+|テキスト |画像
+|pause a|
+/ファイル:Pause_svg.adoc[image:20px-Pause.svg.png[link,width=20,height=20]]
+
+|play a|
+/ファイル:Play_svg.adoc[image:20px-Play.svg.png[link,width=20,height=20]]
+
+|stop a|
+/ファイル:Stop_svg.adoc[image:20px-Stop.svg.png[link,width=20,height=20]]
+
+|replay a|
+/ファイル:Replay_svg.adoc[image:20px-Replay.svg.png[link,width=20,height=20]]
+
+|skip_next a|
+/ファイル:Skip_next_svg.adoc[image:20px-Skip_next.svg.png[link,width=20,height=20]]
+
+|skip_previous a|
+/ファイル:Skip_previous_svg.adoc[image:20px-Skip_previous.svg.png[link,width=20,height=20]]
+
+|loop a|
+/ファイル:Loop_svg.adoc[image:20px-Loop.svg.png[loop,width=20,height=20]]
+
+|zoom_in a|
+/ファイル:Zoom_in_svg.adoc[image:20px-Zoom_in.svg.png[link,width=20,height=20]]
+
+|zoom_out a|
+/ファイル:Zoom_out_svg.adoc[image:20px-Zoom_out.svg.png[link,width=20,height=20]]
+
+|close a|
+/ファイル:Close_svg.adoc[image:20px-Close.svg.png[link,width=20,height=20]]
+
+|arrow_up a|
+/ファイル:Arrow_upward_svg.adoc[image:20px-Arrow_upward.svg.png[link,width=20,height=20]]
+
+|arrow_down a|
+/ファイル:Arrow_downward_svg.adoc[image:20px-Arrow_downward.svg.png[link,width=20,height=20]]
+
+|arrow_forward a|
+/ファイル:Arrowforward_svg.adoc[image:20px-Arrowforward.svg.png[link,width=20,height=20]]
+
+|arrow_back a|
+/ファイル:Arrow_forward_svg.adoc[image:20px-Arrow_forward.svg.png[link,width=20,height=20]]
+
+|fast_forward a|
+/ファイル:Fast_forward_svg.adoc[image:20px-Fast_forward.svg.png[link,width=20,height=20]]
+
+|fast_rewind a|
+/ファイル:Fast_rewind_svg.adoc[image:20px-Fast_rewind.svg.png[link,width=20,height=20]]
+
+|zoom_to_fit a|
+/ファイル:Zoom_to_fit_svg.adoc[image:20px-Zoom_to_fit.svg.png[link,width=20,height=20]]
+
+|center_view a|
+/ファイル:Filter_center_focus_svg.adoc[image:20px-Filter_center_focus.svg.png[link,width=20,height=20]]
+
+|help a|
+/ファイル:Question_mark_svg.adoc[image:20px-Question_mark.svg.png[link,width=20,height=20]]
+
+|settings a|
+/ファイル:Settings_svg.adoc[image:20px-Settings.svg.png[link,width=20,height=20]]
+
+|===

@@ -1,0 +1,55 @@
+= 曲線
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+GeoGebraは以下の種類の曲線をサポートしている：
+
+== パラメトリック曲線
+
+特定の範囲内の実数パラメータ _t_ を用いて，形式 'a(t) _=_ (f(t), g(t)) _のパラメトリック曲線を作成することができる：_
+
+* xref:/commands/Curve.adoc[Curve コマンド] を使うか，
+* _入力バー_ に直接式を入力する．例:`++(t^2,t^3)++`．
+
+パラメトリック曲線は以下のコマンドの引数として使用できる：: xref:/commands/Tangent.adoc[Tangent],
+xref:/commands/Point.adoc[Point], xref:/commands/Intersect.adoc[Intersect], xref:/commands/Derivative.adoc[Derivative],
+xref:/commands/Length.adoc[Length], xref:/commands/Curvature.adoc[Curvature],
+xref:/commands/CurvatureVector.adoc[CurvatureVector], xref:/commands/OsculatingCircle.adoc[OsculatingCircle]．
+
+[NOTE]
+====
+
+* パラメトリック曲線は，あらかじめ定義された関数や演算で使用することができる．例：入力`++c(3)++`は，曲線 _c_
+上のパラメータ位置 3 の点を返す．
+* image:24px-Mode_point.svg.png[Mode point.svg,width=24,height=24] xref:/tools/点.adoc[点 ツール]または
+xref:/commands/Point.adoc[Point コマンド]を使って曲線上に点を配置することもできる．端点 _a_ と _b_
+は動的なので，スライダー変数も利用できる（image:24px-Mode_slider.svg.png[Mode slider.svg,width=24,height=24]
+xref:/tools/スライダー.adoc[スライダー_ツール]を参照のこと）．
+
+====
+
+特定の点を通るパラメトリック曲線を作ることはできない．しかし，与えられた点を通過する関数を得るために，」例えば
+xref:/commands/FitPoly.adoc[FitPoly コマンド] を試すことができる．
+
+== 極曲線
+
+極座標を用いて定義された曲線を描くためには，以下の（同等の）構文のどれかを使用することが可能である：
+
+[EXAMPLE]
+====
+
+`++ρ=sin(2 θ)++`, `++sin(2 θ)++`, `++f(t)=(sin(2*t); t)++`, `++(sin(2*t); t)++`, `++f(t)=(sin(2*t); t), 0< t < pi++`,
+`++(sin(2*t); t), 0 < t < pi++`, `++Curve[(sin(2*t); t), t, 0, 2pi]++`.
+
+====
+
+== 陰関数の曲線
+
+陰曲線は変数 _x_ と _y_ の多項式である．xref:/入力バー.adoc[入力バー]を使って直接入力することもできる．
+xref:/commands/ImplicitCurve.adoc[ImplicitCurve] は，点のリストを通して陰曲線を生成する．
+
+[EXAMPLE]
+====
+
+`++x^4 + y^3 = 2xy++`
+
+====

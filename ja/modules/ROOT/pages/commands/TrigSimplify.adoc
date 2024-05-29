@@ -1,0 +1,44 @@
+= TrigSimplify コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+TrigSimplify( <式> )::
+  与えられた三角関数の式を簡単にする．
+
+[EXAMPLE]
+====
+
+* `++TrigSimplify(1 - sin(x)^2)++` 出力： _cos²(x)_.
+* `++TrigSimplify(sin(x)^2 - cos(x)^2 + 1)++` 出力： _2 sin²(x)_.
+
+====
+
+[NOTE]
+====
+
+このコマンドはimage:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+xref:/数式ビュー.adoc[数式ビュー]で"x"， "y"， "z" という変数に対してのみ機能する．
+
+====
+
+== CAS での書式
+
+TrigSimplify( <式> )::
+  与えられた三角関数の式を簡単にする．
+
+[EXAMPLE]
+====
+
+* `++TrigSimplify(1 - sin(x)^2)++` 出力： _cos²(x)_
+* `++TrigSimplify(sin(x)^2 - cos(x)^2 + 1)++` 出力： _2 sin²(x)_.
+
+====
+
+[NOTE]
+====
+
+* image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/CASビュー.adoc[CASビュー]では，このコマンドはすべての変数に対して機能する．
+* こちらも参照： xref:/commands/TrigExpand.adoc[TrigExpand コマンド] ， xref:/commands/TrigCombine.adoc[TrigCombine
+コマンド].
+
+====

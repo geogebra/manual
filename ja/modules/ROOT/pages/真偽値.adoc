@@ -1,0 +1,52 @@
+= 真偽値
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+GeoGebraでは，真偽値 _true_ と _false_ を使用できる．入力バーに `++a = true++` や `++b = false++`
+と入力し，[.kcode]#Enter#
+キーを押すだけである．真偽値を用いることで，例えばオブジェクトのxref:/条件付き表示.adoc[条件付き表示]を定義することが可能である．
+
+== チェックボックスと矢印キー
+
+自由な真偽値は，image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/グラフィックスビュー.adoc[グラフィックスビュー]
+でチェックボックスとして表示される（xref:/tools/表示／非表示のチェックボックス.adoc[チェックボックスツール]を参照）．image:16px-Menu_view_algebra.svg.png[Menu
+view algebra.svg,width=16,height=16] xref:/数式ビュー.adoc[数式ビュー]
+で真偽値を選択した後，矢印キーを使って真偽値の値を変更することができる（xref:/アニメーション.adoc[マニュアルアニメーション]を参照）.
+
+[NOTE]
+====
+
+真偽値を数値（0または1）のように使用することもできる．これにより，チェックボックスをアニメーションスライダーの動的速度として利用し，アニメーションを開始または停止させることが可能である．この場合，アニメーションボタンは，静的（つまり動的でない）速度を持つアニメーションスライダーが存在する時のみ
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _グラフィックスビュー_ に表示される．
+
+====
+
+== 演算
+
+GeoGebraの真偽値と条件に対して，入力バーの隣にあるリストから選択するか，キーボードを使用して入力することで，以下の演算を使用できる：
+
+[width="100%",cols="20%,20%,20%,20%,20%",options="header",]
+|===
+|演算 |リスト |キーボード |例 |オブジェクトのタイプ
+|等しい |≟ |== |a ≟ b or a == b |数値, 点, 直線, 円錐曲線, 関数 (CAS必要), 平面, a, b
+|等しくない |≠ |!= |a ≠ b or a != b |数値, 点, 直線, 円錐曲線, 関数 (CAS必要), 平面, a, b
+|より小さい | |< |a < b |数値 a, b
+|より大きい | |> |a > b |数値 a, b
+|以下 |≤ |<= |a ≤ b or a <= b |数値 a, b
+|以上 |≥ |>= |a ≥ b or a >= b |数値 a, b
+|かつ |∧ |&& |a ∧ b または a && b |真偽値 a, b
+|または |∨ ||| |a ∨ b または a || b |真偽値 a, b
+|否定 |¬ |! |¬a または !a |真偽値 a
+|排他的論理和 | |[.kcode]##Alt##[.kcode]##+## |a ⊕ b |真偽値 a, b
+|含意 |→ |-> |a -> b |真偽値 a, b
+|平行 |∥ | a|
+a ∥ b
+
+直線 a, b
+
+|
+|垂直 |⊥ | |a ⊥ b |直線 a, b
+|含まれる |∈ | |a ∈ list1 |数値 a, 数値のリスト list1
+|部分集合 |⊆ | |list1 ⊆ list2 |リスト list1 と list2
+|真部分集合 |⊂ | |list1 ⊂ list2 |リスト list1 と list2
+|===

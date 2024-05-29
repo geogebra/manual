@@ -1,0 +1,54 @@
+= 関数
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+関数を入力するには，他の関数と同様に，事前に定義した変数（数値，点，ベクトルなど）を使用することができる．
+
+[EXAMPLE]
+====
+
+* 関数 f: `++f(x) = 3 x^3 – x^2++`
+* 関数 g: `++g(x) = tan(f(x))++`
+* 名前のない関数: `++sin(3 x) + tan(x)++`
+
+====
+
+[NOTE]
+====
+
+利用可能なすべての定義済み関数（例：sin，cos，tan）は，[[組み込みの関数と演算子\{定義済み関数と演算子]]のセクションを参照のこと．
+
+====
+
+GeoGebraでは，関数を xref:/commands/Integral.adoc[積分] や
+xref:/commands/Derivative.adoc[微分]するためのコマンドを使用することができる．また，xref:/commands/If.adoc[If
+コマンド]を使用して xref:/commands/If.adoc[条件付き関数]を得ることも可能である．
+
+[NOTE]
+====
+
+f'(x) または f''(x), ... というコマンドを使って，あらかじめ定義された関数 f(x) の導関数を求めることもできる．
+
+====
+
+[EXAMPLE]
+====
+
+関数を`++f(x) = 3 x^3 – x^2++`と定義したあと，コマンド `++g(x) = cos(f' (x + 2))++` を入力すると，関数 _g_ が得られる．
+
+====
+
+さらに，関数はベクトルによって平行移動することが可能です（ xref:/commands/Translate.adoc[Translate
+コマンド]を参照）．自由関数はimage:22px-Mode_move.svg.png[Mode
+move.svg,width=22,height=22]xref:/tools/移動.adoc[移動_ツール]を使用して動かすことができる．他のxref:/commands/変換.adoc[変換]コマンドも関数に適用可能であるが，多くの場合，結果は関数ではなく曲線となる．
+
+== 区間に制限された関数
+
+関数を区間[a, b]に限定するには，xref:/commands/Function.adoc[Function コマンド]かxref:/commands/If.adoc[If
+コマンド]を使う必要がある．
+
+[EXAMPLE]
+====
+
+`++If[3<=x<=5,x^2]++` と `++Function[x^2,3,5]++` はともに区間 [3,5] に制限された関数 _x^2^_ を定義している．
+
+====

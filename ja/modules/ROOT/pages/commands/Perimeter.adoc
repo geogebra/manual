@@ -1,0 +1,30 @@
+= Perimeter コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Perimeter( <多角形> )::
+  多角形の周囲長を返す．
+Perimeter( <円錐曲線> )::
+  与えられた2次曲線が円または楕円の場合，このコマンドはその周囲長を返す．それ以外は未定義となる．
+Perimeter( <軌跡> )::
+  与えられた軌跡が有限であれば，このコマンドはそのおおよその周囲長を返す．そうでなければ結果は未定義となる．
+
+[EXAMPLE]
+====
+
+`++Perimeter(x^2 + 2y^2 = 1)++` 出力： _5.4_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Perimeter(Polygon((1, 2), (3, 2), (4, 3)))++` 出力： _6.58_.
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/Circumference.adoc[Circumference] コマンド
+
+====

@@ -1,0 +1,27 @@
+= FDistribution コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+FDistribution( <分子自由度>, <分母自由度>, x )::
+  http://en.wikipedia.org/wiki/ja:F%E5%88%86%E5%B8%83[F分布] の累積密度関数(cdf)をパラメータ _n, d_ （_n_ は
+  _分子の自由度_， _d_ は _分母の自由度_）で作成する．
+FDistribution( <分子自由度>, <分母自由度>, x, <累積の真偽値> )::
+  _累積の真偽値_ が _true_ の場合，F分布の累積分布関数（cdf）を作成し，_false_
+  の場合はF分布の確率密度関数（pdf）を作成する．
+FDistribution( <分子自由度>, <分母自由度>, <変数値 v> )::
+  変数値 _v_ におけるF分布の累積分布関数の値，すなわち確率 _P(X ≤ v)_ を計算する．ここで _X_ は，パラメータ _n, d_ （_n_
+  は _分子の自由度_， _d_ は _分母の自由度_）によって定義されるF分布に従う確率変数である．
+
+[NOTE]
+====
+
+このコマンドは image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/CASビュー.adoc[CASビュー]でも利用可である．
+
+====
+
+[NOTE]
+====
+
+指定された _x_ 座標の値に対する確率（または，その _x_ 座標の左側にあるF分布曲線の下の面積）を返す．
+
+====

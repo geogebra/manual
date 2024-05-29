@@ -1,0 +1,35 @@
+= CFactor コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+このコマンドは xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View] でのみ利用できます。.
+
+== CAS での書式
+
+CFactor( <式> )::
+  与えられた式を複素数を含む因数に分解する．
+
+[EXAMPLE]
+====
+
+`++CFactor(x^2 + 4)++` 出力： _(x + 2 ί) (x - 2 ί)_．
+
+====
+
+CFactor( <式>, <変数> )::
+  与えられた式を与えられた変数について，複素数を含む因数に分解する．
+
+[EXAMPLE]
+====
+
+* `++CFactor(a^2 + x^2, a)++` 出力： _(ί x + a) (- ί x + a)_　（ _a_ に関しての因数分解．）
+* `++CFactor(a^2 + x^2, x)++` 出力： _(x + ί a) (x - ί a)_　（ _x_ に関しての因数分解．）
+
+====
+
+[NOTE]
+====
+
+このコマンドは、複素有理数（_a + bi_ の形で _a_ と _b_ が有理数である複素数）の範囲で式を因数分解する．
+有理数の範囲で因数分解するのは，このコマンドを参照：xref:/commands/Factor.adoc[Factor コマンド]．
+
+====

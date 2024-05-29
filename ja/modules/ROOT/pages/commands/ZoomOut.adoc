@@ -1,0 +1,37 @@
+= ZoomOut コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+ZoomOut( <倍率> )::
+  指定された倍率で現在のズームに対してimage:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/グラフィックスビュー.adoc[グラフィックスビュー] をズームアウトする．ズームの中心点として画面の中心が使用される．
+ZoomOut( <倍率>, <中心点> )::
+  指定された倍率でimage:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/グラフィックスビュー.adoc[グラフィックスビュー]
+  を現在のズームに対してズームアウトする．2番目のパラメータはズームの中心点を指定する．
+
+[EXAMPLE]
+====
+
+`++ZoomOut(2, (0, 0))++`
+
+====
+
+[EXAMPLE]
+====
+
+`++ZoomOut(2)++` ビューを1/2に縮小する．
+
+====
+
+[NOTE]
+====
+
+*Notes:*
+
+* `++ZoomOut(t)++` と `++ZoomOut(t, A)++` は `++ZoomIn(1/t)++` と `++ZoomIn(1/t, A)++` にそれぞれ相当する．
+* 複数の image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/グラフィックスビュー.adoc[グラフィックスビュー]が存在する場合，アクティブなものにコマンドが適用される．
+* こちらも参照： xref:/commands/ZoomIn.adoc[ZoomIn], xref:/commands/SetActiveView.adoc[SetActiveView],
+xref:/commands/Pan.adoc[Pan] コマンド．
+
+====

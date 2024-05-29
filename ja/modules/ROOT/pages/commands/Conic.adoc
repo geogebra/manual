@@ -1,0 +1,48 @@
+= Conic コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Conic( <点>, <点>, <点>, <点>, <点> )::
+  指定された5点を通る円錐曲線を返す．
+
+[EXAMPLE]
+====
+
+`++Conic((0, -4), (2, 4), (3,1), (-2,3), (-3,-1))++` 出力： _151x² - 37x y + 72y² + 14x - 42y = 1320_ .
+
+====
+
+[NOTE]
+====
+
+点のうち4点が同一直線上にある場合，その円錐曲線は定義されない，
+
+====
+
+Conic( <数値 a>, <数値 b>, <数値 c>, <数値 d>, <数値 e>, <数値 f> )::
+  円錐曲線 stem:[a\cdot x^2+d\cdot xy+b\cdot y^2+e\cdot x+f\cdot y=-c]を返す．
+
+[EXAMPLE]
+====
+
+`++Conic(2, 3, -1, 4, 2, -3)++` 出力 _2x² + 4x y + 3y² + 2x - 3y = 1_ .
+
+====
+
+Conic( <リスト> )::
+  円錐曲線 stem:[a\cdot x^2+d\cdot xy+b\cdot y^2+e\cdot x+f\cdot y=-c]を返す．
+
+[EXAMPLE]
+====
+
+`++Conic({2, 3, -1, 4, 2, -3})++` 出力： _2x² + 4x y + 3y² + 2x - 3y = 1_ .
+
+====
+
+[NOTE]
+====
+
+image:24px-Mode_conic5.svg.png[Mode conic5.svg,width=24,height=24]
+xref:/tools/５点を通る２次曲線.adoc[５点を通る2次曲線] ツールと xref:/commands/Coefficients.adoc[Coefficients]
+コマンドを参照．
+
+====

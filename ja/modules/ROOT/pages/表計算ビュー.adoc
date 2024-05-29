@@ -1,0 +1,234 @@
+= 表計算ビュー
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+== [#表計算ビューのユーザーインターフェース]####[#.E8.A1.A8.E8.A8.88.E7.AE.97.E3.83.93.E3.83.A5.E3.83.BC.E3.81.AE.E3.83.A6.E3.83.BC.E3.82.B6.E3.83.BC.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9]##表計算ビューのユーザーインターフェース##
+
+デフォルトでは，image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _表計算ビュー_ は
+image:16px-Menu_view_graphics.svg.png[Graphics View,title="Graphics View",width=16,height=16]
+_xref:/グラフィックスビュー.adoc[グラフィックスビュー]_　の隣に表示される． これら 2 つの _ビュー_
+のどちらをアクティブにしているかによって，GeoGebra ウィンドウの上部に
+xref:/表計算ツール.adoc[_表計算ビューのツールバー_] か
+xref:/グラフィックスツール.adoc[_グラフィックスビューのツールバー_] のどちらかが表示され，右上に
+image:16px-Menu-edit-undo.svg.png[Menu-edit-undo.svg,width=16,height=16]image:16px-Menu-edit-redo.svg.png[Menu-edit-redo.svg,width=16,height=16]
+_元に戻す／やり直し_ ボタンが表示される．
+
+[width="100%",cols="100%",]
+|===
+a|
+image:314px-Spreadsheet-View.png[Spreadsheet-View.png,width=314,height=220]
+
+表計算ビュー
+
+|===
+
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _表計算ビュー_ は
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+xref:/パースペクティブ.adoc[_表計算・統計 パースペクティブ_] の一部であるが，GeoGebra
+のユーザーインターフェースのレイアウトは必要に応じて
+xref:/GeoGebra_5_0_デスクトップ_vs_ウェブ・タブレットアプリ.adoc[変更する]ことができる．
+
+=== image:24px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=24,height=24] 表計算ビューのカスタマイズ
+
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _表計算ビュー_
+は，以下の方法でカスタマイズできる．
+
+* image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] __[[設定ダイアログ]}__を開き，
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _表計算・統計_
+(GeoGebraデスクトップ) オプションを選択する
+* image:16px-Stylingbar_icon_spreadsheet.svg.png[Stylingbar icon spreadsheet.svg,width=16,height=12]
+xref:/スタイルバー.adoc[_表計算のスタイルバー_]を開き，
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _設定_
+を選択する（GeoGebraウェブ・タブレットアプリ）
+
+表示されるダイアログウィンドウで，レイアウトを変更することができる．
+
+* _xref:/入力バー.adoc[入力バー]_ を表示する
+* _枠線_ を表示する
+* _列_ または _行_ の _ヘッダー_ を表示する
+* _縦_ または _横_ の _スクロールバー_ を表示する
+
+さらに，以下の方法でimage:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+_表計算ビュー_ の動作を変更することができる．
+
+* _ボタン_ や _チェックボックス_，_ツールチップ_ の使用を許可する．
+* _コマンドの前_ に "=" が必要
+* _オートコンプリート_ の利用
+
+== [#数学オブジェクトの作成]####[#.E6.95.B0.E5.AD.A6.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.81.AE.E4.BD.9C.E6.88.90]##数学オブジェクトの作成##
+
+GeoGebra のimage:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _表計算ビュー_
+では，すべてのセルに特定の名前がついており，各セルを直接指定することができる． \{\{Example|1=__A__ 列 _1_ 行目のセルは
+__A1__と名付けられる．
+
+[NOTE]
+====
+
+これらのセル名は，式や _xref:/コマンド.adoc[コマンド]_ で使用して，対応するセルの内容を指定することができる．
+
+====
+
+=== 直接入力，選択，コマンド
+
+_表計算のセル_ には，数値だけでなく，GeoGebra
+に対応したあらゆるxref:/一般のオブジェクト.adoc[一般のオブジェクト]やxref:/幾何オブジェクト.adoc[幾何オブジェクト]（例：点の座標，xref:/関数.adoc[関数]，xref:/コマンド.adoc[コマンド]など）を入力することができる．
+
+表計算で隣接していない列やセルを選択するには，ショートカットキー [.kcode]#Ctrl#（MacOS: [.kcode]#Cmd#）　ー　クリック
+を使用する．
+
+=== 相対セルの名前
+
+あるセルから別のセルに内容をコピーする場合，通常，すべての参照は貼り付け先の位置に合わせて変更される．
+
+[EXAMPLE]
+====
+
+`++A1=1++`，`++A2=2++`とする．_B1_ に`++(A1, A1)++`)を入力する．_B1_ を _B2_ にコピーすると（[.kcode]#Ctrl# +
+[.kcode]#C#, [.kcode]#Ctrl# + [.kcode]#V#　，またはセルの角をドラッグすることで），_B2_ には _(A2, A2)_ が表示される．
+
+====
+
+この動作を防ぐためには，参照するセルの列または行の前に`++$++`記号を挿入することで，参照が固定される．
+
+[NOTE]
+====
+
+MacOSでは，コピー＆ペーストのショートカットは[.kcode]##Cmd## + [.kcode]#C#, [.kcode]#Cmd# + [.kcode]#V#．
+
+====
+
+== [#表計算ビューへのデータ入力]####[#.E8.A1.A8.E8.A8.88.E7.AE.97.E3.83.93.E3.83.A5.E3.83.BC.E3.81.B8.E3.81.AE.E3.83.87.E3.83.BC.E3.82.BF.E5.85.A5.E5.8A.9B]##image:24px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=24,height=24] 表計算ビューへのデータ入力##
+
+=== 手動入力, コマンド, トレース（残像）を記録
+
+手動でimage:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _表計算ビュー_
+のセルに項目を追加する以外にも，xref:/commands/FillColumn.adoc[_FillColumn_]， xref:/commands/FillRow.adoc[_FillRow_]，
+xref:/commands/FillCells.adoc[_FillCells_]
+といったコマンドを使用することができる．また，xref:/残像.adoc[_表計算に記録する_]
+機能を使用してデータを入力することもできる．
+
+=== image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] 数式ビューからデータをコピーする
+
+簡単なドラッグ＆ドロップ操作で，image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+xref:/数式ビュー.adoc[数式ビュー]からimage:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _表計算ビュー_
+にオブジェクトをコピーすることも可能である．リストをドラッグすると，その要素はマウスの左ボタンまたはタッチスクリーンを離したセルから水平方向に貼り付けられる．[.kcode]##Shift##キーを押しながらドラッグすると，マウスボタンを離したときにダイアログウィンドウが開き，ペーストされるオブジェクトがxref:/自由、従属、補助オブジェクト.adoc[自由か依存か]を選択したり，コピーされたオブジェクトの垂直方向の配置を選択したりできる（オプションの
+_転置_ をチェック）.
+
+=== 他の表計算ソフトからデータをコピー
+
+GeoGebra では，他の表計算ソフトウェアからimage:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _表計算ビュー_ にデータをインポートすることができる．
+
+* インポートしたいデータを選択してコピーする．例えば，キーボードショートカットの[.kcode]##Ctrl## + [.kcode]#C#（Mac OS:
+[.kcode]#Cmd# + [.kcode]#C#）を使って，データをコンピュータのクリップボードにコピーすることができる．
+* GeoGebra ウィンドウを開き，image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+_表計算ビュー_ を表示する．
+* 最初のデータ値を含む表計算のシートのセルをクリックする（例：_A1_ セル）．
+* コンピュータのクリップボードから GeoGebra のimage:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _表計算ビュー_ にデータを貼り付ける．例えば，セルを選択し，キーボードショートカット
+[.kcode]#Ctrl# + [.kcode]#V# (Mac OS: [.kcode]#Cmd# + [.kcode]#V#)
+を使って，データを選択されたセルに貼り付けることができる．
+
+.
+
+=== 他のアプリケーションからデータファイルをインポート
+
+また，_.txt_，_.csv_，_.dat_
+形式で保存されていれば，他のアプリケーションからデータをインポートすることもできる．image:16px-Menu_view_spreadsheet.svg.png[Menu
+view spreadsheet.svg,width=16,height=16] _表計算ビュー_ の空いているセルを右クリックし，_データファイルをインポート..._
+オプションを選択する．
+
+[NOTE]
+====
+
+GeoGebra は，ドット [.kcode]#.# を小数部の区切り文字として使用し，カンマ [.kcode]#,#
+をフィールドの区切り文字として使用する．インポートする前に，データファイルがこれらの設定と一致しているかどうかを確認のこと．
+
+====
+
+=== 表計算ビューのツールバー
+
+xref:/表計算ツール.adoc[_表計算ビューのツールバー_] には，image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _表計算ビュー_ でオブジェクトを作成するためのさまざまな _xref:/ツール.adoc[ツール]_
+が用意されている．_xref:/ツールバー.adoc[ツールバー]_ の各アイコンは，関連する _xref:/ツール.adoc[ツール]_
+の選択を含むxref:/ツール.adoc[_ツールボックス_] を表している．_ツールボックス_ を開くには，_表計算ビューのツールバー_
+（GeoGebra Web・タブレットアプリ）に表示されている対応するデフォルトの _ツール_ をクリックするか，_ツールバーアイコン_
+の右下隅にある小さな矢印（GeoGebraデスクトップ）をクリックする必要がある．
+
+image:146px-Toolbar-Spreadsheet.png[Spreadsheet Tools,title="Spreadsheet Tools",width=146,height=32]
+
+[NOTE]
+====
+
+_表計算ビューのツールバー_ の _ツール_ は，生成されるオブジェクトの性質や ツール
+の機能に応じて整理されている．例えば，xref:/表計算ツール.adoc[_データ分析ツールボックス_]にはデータを分析する _ツール_
+が含まれている．
+
+====
+
+== [#数学オブジェクトの表示]####[#.E6.95.B0.E5.AD.A6.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.81.AE.E8.A1.A8.E7.A4.BA]##数学オブジェクトの表示##
+
+=== 他のビューでのスプレッドシートオブジェクトの表示
+
+可能であれば，GeoGebraは _表計算のセル_
+に入力されたオブジェクトのグラフィカルな表現をimage:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _xref:/グラフィックスビュー.adoc[グラフィックスビュー]_
+でも同時に表示される．それにより，オブジェクトの名前は，最初に作成した際に使用した _表計算のセル_ の名前（例えば
+_A5_，_C1_ ）と一致する．
+
+[NOTE]
+====
+
+デフォルトでは，_表計算オブジェクト_ はimage:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+_xref:/数式ビュー.adoc[数式ビュー]_ のxref:/自由、従属、補助オブジェクト.adoc[_補助オブジェクト_] に分類される．これらの
+_補助オブジェクト_ の表示/非表示は，_xref:/コンテキストメニュー.adoc[コンテキストメニュー]_ から _補助オブジェクト_
+を選択するか，xref:/数式ビュー.adoc[_数式ビューのスタイルバー_] の
+image:16px-Stylingbar_algebraview_auxiliary_objects.svg.png[Stylingbar algebraview auxiliary
+objects.svg,width=16,height=16] アイコン をクリックすることで行うことができる．
+
+====
+
+=== スプレッドシートデータを他の _ビュー_ で使用する
+
+複数のセルを選択し，右クリック（Mac OSでは[.kcode]##Cmd##クリック）することで，_表計算データ_
+を処理することができる．表示される _xref:/コンテキストメニュー.adoc[コンテキストメニュー]_ から，_作成_
+サブメニューを選び，適切なオプション（_リスト_，_点のリスト_，_行列の作成_，_表の作成_，_点を結ぶ折れ線_，_演算表_）を選択する．
+
+=== 演算表
+
+パラメータが2つある関数では，一番上の行に1つ目のパラメータの値を，左の列に2つ目のパラメータの値を記入した _演算表_
+を作成し，その中に記述することができる．関数自体は左上のセルに入力する．
+
+適切なセルに関数とパラメータの値を入力した後，目的の _演算表_
+の矩形領域をマウスで選択する．次に，選択領域上で右クリック（MacOS：[.kcode]#Cmd#-クリック）し，表示されるxref:/コンテキストメニュー.adoc[コンテキストメニュー]で
+_作成_ から _演算表_ オプションを選択する．
+
+[EXAMPLE]
+====
+
+`++A1 = x y++`, `++A2 = 1++`, `++A3 = 2++`, `++A4 = 3++`, `++B1 = 1++`, `++C1 = 2++`, `++D1 = 3++`とする．セル _A1:D4_
+をマウスで選択する．次に，選択セル上で右クリック（MacOS：[.kcode]#Cmd#-クリック）し，_xref:/コンテキストメニュー.adoc[コンテキストメニュー]_
+から _作成_ → _演算表_ を選択して，指定された関数に挿入された値の代入結果を含む表を作成する．
+
+====
+
+=== 表計算ビューのスタイルバー
+
+xref:/スタイルバー.adoc[_表計算ビューのスタイルバー_] には，以下のボタンがある．
+
+* _xref:/入力バー.adoc[入力バー]_ の表示／非表示(GeoGebraデスクトップ)
+* テキストのスタイルを image:16px-Stylingbar_text_bold.svg.png[Stylingbar text bold.svg,width=16,height=16] *太字*
+または image:16px-Stylingbar_text_italic.svg.png[Stylingbar text italic.svg,width=16,height=16] _斜体_ に変更
+* テキストの配置を image:16px-Stylingbar_spreadsheet_align_left.svg.png[Stylingbar spreadsheet align
+left.svg,width=16,height=16] _左寄せ_, image:16px-Stylingbar_spreadsheet_align_center.svg.png[Stylingbar spreadsheet
+align center.svg,width=16,height=16] _中央揃え_, image:16px-Stylingbar_spreadsheet_align_right.svg.png[Stylingbar
+spreadsheet align right.svg,width=16,height=16] _右寄せ_
+
+のいずれかに設定
+
+* セルのimage:16px-Stylingbar_color_white.svg.png[Stylingbar color white.svg,width=16,height=16] 背景色を変更
+* セルの境界線を変更（GeoGebraデスクトップ）
+* image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+_xref:/プロパティダイアログ.adoc[プロパティダイアログ]_ を開く(GeoGebraウェブ・タブレットアプリ)
+* GeoGebra ウィンドウに追加のimage:16px-Stylingbar_dots.svg.png[Stylingbar dots.svg,width=16,height=16]
+_xref:/s_index_php?title=ビュー_action=edit_redlink=1.adoc[ビュー]_ を表示（GeoGebraウェブ・タブレットアプリ）

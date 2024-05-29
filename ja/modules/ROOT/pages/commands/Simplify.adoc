@@ -1,0 +1,60 @@
+= Simplify コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Simplify( <関数> )::
+  可能な場合，与えられた関数の項を簡単にする．
+Simplify( <テキスト> )::
+  繰り返される否定を取り除いたりして、文章の表現をきれいにすることを試みる．
+
+[EXAMPLE]
+====
+
+For _a_ = _b_ = _c_ = -1 `++Simplify("f(x) = " + a + "x² + " + b + "x + " + c)++` 出力テキスト： _f(x) = -x^2^ - x - 1_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Simplify(x + x + x)++` 関数を出力； _f(x) = 3x_.
+
+====
+
+[NOTE]
+====
+
+通常， xref:/commands/FormulaText.adoc[FormulaText コマンド] の方が良い結果が得られ，シンプル．
+
+====
+
+[NOTE]
+====
+
+このコマンドはCAS(Computer Algebra
+System)をロードする必要があるため，コンピュータによっては動作が遅くなることがある．その場合は
+xref:/commands/Polynomial.adoc[多項式コマンド] を使用．
+
+====
+
+== CAS での書式
+
+Simplify( <関数> )::
+  可能な場合，与えられた関数の項を簡単にする．未定義の変数を項に含めることができる．
+
+[EXAMPLE]
+====
+
+* `++Simplify(3 * x + 4 * x + a * x)++` 出力： `++ a x + 7x++`.
+* `++Assume(x<2,Simplify(sqrt(x-2sqrt(x-1))))++` 出力： `++-sqrt(abs(x - 1)) + 1++`
+* `++Assume(x>2,Simplify(sqrt(x-2sqrt(x-1))))++` 出力： `++sqrt(x - 1) + 1++`
+
+====
+
+[NOTE]
+====
+
+参照： xref:/commands/Factor.adoc[Factor コマンド], xref:/commands/Assume.adoc[Assume コマンド],
+xref:/commands/PartialFractions.adoc[PartialFractions コマンド], xref:/commands/Expand.adoc[Expand コマンド],
+xref:/commands/Polynomial.adoc[Polynomial コマンド]
+
+====

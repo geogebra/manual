@@ -1,0 +1,35 @@
+= ContinuedFraction コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+ContinuedFraction( <数値> )::
+  指定された数値の
+  http://en.wikipedia.org/wiki/ja:%E9%80%A3%E5%88%86%E6%95%B0[連分数]を作成し，結果はLaTeXxref:/テキスト.adoc[テキストオブジェクト]として出力される．この分数は，精度
+  10^-8^ で数値的に計算される．
+ContinuedFraction( <数値>, <レベル> )::
+  指定された数値の連分数を生成する．商の数は _レベル_
+  以下となるが，上記の精度を達成するために必要な商の数を超えることはない．
+ContinuedFraction( <数値>, <レベル>, <簡略化horthand true|false> )::
+  最初の２つの引数は上記と同じ，_レベル_ はオプションである．_簡略化_ が true
+  なら，結果の表記はより短くなる：LaTeXテキストには、連分数の整数部分のリストが含まれる．
+
+[EXAMPLE]
+====
+
+* `++ContinuedFraction(5.45, true)++` 出力： [_5; 2, 4, 1, 1_]
+* `++ContinuedFraction(5.45, 3, true)++` 出力： [_5; 2, 4, ..._]
+
+====
+
+[EXAMPLE]
+====
+
+`++ContinuedFraction(5.45, 3)++` gives _stem:[5 + \frac\{1}\{ 2+ \frac\{1}\{4+ ... } }]_
+
+====
+
+[EXAMPLE]
+====
+
+`++ContinuedFraction(5.45)++` 出力： _stem:[5 + \frac\{1}\{ 2+ \frac\{1}\{4+ \frac\{1}\{ 1+ \frac\{1}\{ 1 } } } }]_
+
+====

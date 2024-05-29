@@ -1,0 +1,172 @@
+= 組み込みの関数と演算子
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+　
+xref:/入力バー.adoc[入力バー]を使って数値、座標、方程式を作成するには，以下の定義済みの関数や演算を使用することもできます．論理演算子と関数は，xref:/真偽値.adoc[真偽値]についての記事にリストされています．
+
+[NOTE]
+====
+
+定義済み関数は括弧を使って入力する必要がある．関数名と括弧の間にスペースを入れないこと．
+
+====
+
+[cols=",",options="header",]
+|===
+|Operation / Function |Input
+|ℯ (http://en.wikipedia.org/wiki/ja:%E3%83%8D%E3%82%A4%E3%83%94%E3%82%A2%E6%95%B0[ネイピア数]) |[.kcode]#Alt# +
+[.kcode]#e#
+
+|ί (http://en.wikipedia.org/wiki/ja:%E8%99%9A%E6%95%B0%E5%8D%98%E4%BD%8D[虚数単位]) |[.kcode]#Alt# + [.kcode]#i#
+
+|π |[.kcode]#Alt# + [.kcode]#p# or pi
+
+|° (http://en.wikipedia.org/wiki/ja:%C2%B0[角度の「°」]) |[.kcode]#Alt# + [.kcode]#o# or deg
+
+|加算 |+
+
+|減算 |-
+
+|乗算 |* or Space key
+
+|スカラー積（内積） |* or Space key
+
+|ベクトル積(　外積，　参照 xref:/s_index_php?title=Points_and_Vectors_action=edit_redlink=1.adoc[Points and Vectors]) |⊗
+
+|徐算 |/
+
+|べき乗 |^ or superscript (`++x^2++` or `++x2++`)
+
+|階乗 |!
+
+|カッコ |( )
+
+|x座標 |x( )
+
+|y座標 |y( )
+
+|z座標 |z( )
+
+|偏角 (３次元の点やベクトルにも適用可) |arg( )
+
+|共役 |conjugate( )
+
+|xref:/s_index_php?title=Real_Function_action=edit_redlink=1.adoc[実数部分] |real( )
+
+|xref:/s_index_php?title=Imaginary_Function_action=edit_redlink=1.adoc[虚数部分] |imaginary( )
+
+|絶対値 |abs( )
+
+|高度角，仰角(３次元の点やベクトルの) |alt( )
+
+|符号（正：1，負：-1,0：0) |sgn( ) or sign()
+
+|床関数（自分以下の最大の整数） |floor( )
+
+|天井関数（自分以上の最小の整数） |ceil( )
+
+|最も近い整数（または小数点以下y桁)に四捨五入 |round(x) or round(x, y)
+
+|平方根 |sqrt( )
+
+|立方根 |cbrt( )
+
+|n乗根x |nroot(x, n)
+
+|0と1の間の乱数 |random( )
+
+|指数（底はe） |exp( ) または ℯ^x^
+
+|自然対数 (底はe) |ln( )
+
+|底が２の対数 |log₂() または ld( )
+
+|底が10の対数 |log₁₀( ) または log( ) or lg( )
+
+|_x_ の底 _b_ に対する対数 |log(b, x )
+
+|コサイン |cos( )
+
+|サイン |sin( )
+
+|タンジェント |tan( )
+
+|セカント |sec()
+
+|コセカント |csc() または cosec()
+
+|コタンジェント |cot() または cotan()
+
+|アークコサイン (コサインの逆関数，弧度法で答える) |acos( ) または arccos( )
+
+|アークコサイン (コサインの逆関数，度数法で答える) |acosd( )
+
+|アークサイン (サインの逆関数，弧度法で答える) |asin( ) または arcsin( )
+
+|アークサイン (サインの逆関数，度数法で答える) |asind( )
+
+|アークタンジェント (タンジェントの逆関数，-π/2 から π/2の間で弧度法で答える) |atan( ) または arctan( )
+
+|アークタンジェント (タンジェントの逆関数，-90° から 90°の間で度数法で答える) |atand( )
+
+|http://ja.wikipedia.org/wiki/Atan2[アークタンジェント2 (-π から π の間の弧度法で答える)] |atan2(y, x)
+
+|http://ja.wikipedia.org/wiki/Atan2[アークタンジェント2 (-180° から 180° の間の度数方で答える)] |atan2d(y, x)
+
+|ハイパボリックコサイン |cosh( )
+
+|ハイパボリックサイン |sinh( )
+
+|ハイパボリックタンジェント |tanh( )
+
+|ハイパボリックセカント |sech( )
+
+|ハイパボリックコセカント |csch( )
+
+|ハイパボリックコタンジェント |coth( ) または cotanh()
+
+|逆双曲線コサイン |acosh( ) または arccosh( )
+
+|逆双曲線サイン |asinh( ) または arcsinh( )
+
+|逆双曲線タンジェント |atanh( ) または arctanh( )
+
+|http://mathworld.wolfram.com/BetaFunction.html[Beta function] Β(a, b) |beta(a, b)
+
+|http://mathworld.wolfram.com/IncompleteBetaFunction.html[Incomplete beta function] Β(x;a, b) |beta(a, b, x)
+
+|http://mathworld.wolfram.com/RegularizedBetaFunction.html[Incomplete regularized beta function] I(x; a, b)
+|betaRegularized(a, b, x)
+
+|http://en.wikipedia.org/wiki/Gamma_function[Gamma function Γ(x)] |gamma( x)
+
+|(Lower) http://mathworld.wolfram.com/IncompleteGammaFunction.html[incomplete gamma function] γ(a, x) |gamma(a, x)
+
+|(Lower) http://mathworld.wolfram.com/RegularizedGammaFunction.html[incomplete regularized gamma function P(a,x) = γ(a,
+x) / Γ(a)] |gammaRegularized(a, x)
+
+|http://en.wikipedia.org/wiki/Error_function[Gaussian Error Function] |erf(x)
+
+|http://en.wikipedia.org/wiki/Digamma_function[Digamma function] |psi(x)
+
+|The http://en.wikipedia.org/wiki/Polygamma_function[Polygamma function] is the (m+1)th derivative of the natural
+logarithm of the http://en.wikipedia.org/wiki/Gamma_function[Gamma function, gamma(x)] (m=0,1) |polygamma(m, x)
+
+|The http://mathworld.wolfram.com/SineIntegral.html[Sine Integral] function |sinIntegral(x)
+
+|The http://mathworld.wolfram.com/CosineIntegral.html[Cosine Integral] function |cosIntegral(x)
+
+|The http://mathworld.wolfram.com/ExponentialIntegral.html[Exponential Integral] function |expIntegral(x)
+
+|The http://en.wikipedia.org/wiki/Riemann_zeta_function[Riemann-Zeta] function ζ(x) |zeta(x)
+
+|https://en.wikipedia.org/wiki/Lambert_W_function[Lambert's W function] LambertW(x, branch) |LambertW(x, 0), LambertW(x,
+-1)
+|===
+
+[NOTE]
+====
+
+The x, y, z operators can be used to get corresponding coefficients of a line.
+
+====

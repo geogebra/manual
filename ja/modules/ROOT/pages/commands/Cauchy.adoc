@@ -1,0 +1,27 @@
+= Cauchy コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Cauchy( <中央値>, <スケール>, x )::
+  http://en.wikipedia.org/wiki/ja:%E3%82%B3%E3%83%BC%E3%82%B7%E3%83%BC%E5%88%86%E5%B8%83[コーシー分布]の累積密度関数(cdf)を作成する．
+Cauchy( <中央値>, <スケール>, x, <累積の真偽値>)::
+  _累積の真偽値_ が _true_ の場合，コーシー分布の累積分布関数（cdf）を生成し，_false_
+  の場合はコーシー分布の確率密度関数（pdf）を生成する．
+Cauchy( <中央値>, <スケール>, <変数値 v> )::
+  変数値 _v_ におけるコーシー分布の累積分布関数の値，すなわち確率 _P(X ≤ v)_ を計算する．ここで _X_ は，_中央値_ と
+  _スケール_ のパラメータによって定義されるコーシー分布に従う確率変数である．
+
+[NOTE]
+====
+
+指定された _x_ 座標の値に対する確率（または，その _x_ 座標の左側にあるコーシー分布曲線の下の面積）を返す．
+
+====
+
+[EXAMPLE]
+====
+
+`++Cauchy(1, 2, 3)++` 出力： _0.75_ （ image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+xref:/数式ビュー.adoc[数式ビュー] ）， _stem:[\frac\{3}\{4}]_ （image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] xref:/CASビュー.adoc[CASビュー]）．
+
+====

@@ -1,0 +1,22 @@
+= ConjugateDiameter コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+ConjugateDiameter( <直線>, <円錐曲線> )::
+  指定された直線と平行な直径のhttp://en.wikipedia.org/wiki/Conjugate_diameters[共役直径](英語）を円錐曲線に対して返す．
+
+[EXAMPLE]
+====
+
+`++ConjugateDiameter(-4x + 5y = -2, x^2 + 4 y^2 + 2x - 8y + 1 = 0)++` 出力：直線 5__x__ + 16__y__ = 11
+
+====
+
+ConjugateDiameter( <ベクトル>, <円錐曲線> )::
+  指定されたベクトルと平行な直径のhttp://en.wikipedia.org/wiki/Conjugate_diameters[共役直径](英語）を円錐曲線に対して返す．
+
+[EXAMPLE]
+====
+
+ベクトル _u_ = (4,1) とする． `++ConjugateDiameter(u, x^2 + 4 y^2 + 2x - 8y + 1 = 0)++` 出力：直線 _x_ + _y_ = 0
+
+====

@@ -1,0 +1,32 @@
+= Iteration コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Iteration( <関数>, <開始値>, <反復回数> )::
+  与えられた開始値を用いて，関数を__n__ 回（_n_ = 反復回数）繰り返す．
+
+[EXAMPLE]
+====
+
+* `++f(x) = x^2++`を定義した後，`++Iteration(f, 3, 2)++` を実行すると， (3^2^)^2^ = 81という結果が得られる．
+* 　_繰り返しの足し算_：3への7の繰り返し加算を求めるには，`++g(x) = x + 7++`と定義し，`++Iteration(g, 3, 4)++`
+により，(((3+7) +7) +7) +7 = 31となる．
+
+====
+
+Iteration( <式>, <変数>, ..., <開始値>, <反復回数> )::
+  与えられた開始値を用いて、式を__n__回繰り返す（__n__は繰り返しの回数）.その結果は，xref:/commands/IterationList.adoc[IterationList
+  コマンド]を同じパラメータで実行した際の出力リストの最後の要素になる．
+
+[EXAMPLE]
+====
+
+ :`++Iteration(a^2+1,a,{(1+ί)/(sqrt(2))},5)++` は複素数の反復計算を行う
+
+====
+
+[NOTE]
+====
+
+詳細は xref:/commands/IterationList.adoc[IterationList コマンド] を参照．
+
+====

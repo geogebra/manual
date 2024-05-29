@@ -1,0 +1,22 @@
+= TiedRank コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+TiedRank( <リスト> )::
+  与えられたリスト _L_ の _i_ 番目の要素のランク（要素のランクは xref:/commands/Sort.adoc[Sort](L) での位置）を _i_
+  番目の要素とするリストを返す．_L_ に同じ値の要素が複数あり，Sort[L] で _k_ から _l_
+  の位置を占める場合，これらの要素には _k_ から _l_ の位置の平均値がランクとして割り当てられる．
+
+[EXAMPLE]
+====
+
+* `++TiedRank({4, 1, 2, 3, 4, 2})++` 出力： \{5.5, 1, 2.5, 4, 5.5, 2.5}.
+* `++TiedRank({3, 2, 2, 1})++` 出力； \{4, 2.5, 2.5, 1}.
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/OrdinalRank.adoc[OrdinalRank コマンド]
+
+====

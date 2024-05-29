@@ -1,0 +1,37 @@
+= Curve コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Curve( <式>, <式>, <媒介変数>, <開始値>, <終了値> )::
+  指定された区間 [_開始値_, _終了値_ ]
+  において，媒介変数を用いて，__x__の式（最初の<式>）と__y__の式（2番目の<式>）を与えると，直交
+  xref:/曲線.adoc[パラメトリック曲線] を返す．
+
+[EXAMPLE]
+====
+
+`++Curve(2 cos(t), 2 sin(t), t, 0, 2π)++` は，座標系の原点を中心とした半径 _2_ の円を作成する．
+
+====
+
+Curve( <式> , <式>, <式>, <媒介変数>, <開始値>, <終了値> )::
+  指定された区間 [_開始値_, _終了値_ ]
+  において，媒介変数を用いて，__x__の式（最初の<式>），__y__の式（2番目の<式>），__z__の式（3番目の<式>）を与えると，3D直交パラメトリック曲線を返す．
+
+[EXAMPLE]
+====
+
+`++Curve(cos(t), sin(t), t, t, 0, 10π)++` は3Dらせんを作成する．
+
+====
+
+[NOTE]
+====
+
+*Notes:*
+
+* _終了値_ は _開始値_ 以上，両方とも有限な値でなければならない．
+* _x_, _y_, _z_ は媒介変数として使えない．
+* 詳細は xref:/曲線.adoc[曲線] を参照．　また， xref:/commands/Derivative.adoc[Derivative コマンド] ，
+xref:/commands/ParametricDerivative.adoc[Parametric Derivative コマンド]も参照のこと．
+
+====

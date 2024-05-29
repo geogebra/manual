@@ -1,0 +1,26 @@
+= Substitute コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+このコマンドは xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View] でのみ利用できます。.
+
+== CAS での書式
+
+Substitute( <式>, <変数>, <代入する値> )::
+  式の _変数_ を _代入する値_ に置き換える．
+
+[EXAMPLE]
+====
+
+* `++Substitute((3 m - 3)^2 - (m + 3)^2, m, a)++` 出力： _8 a^2^ - 24 a_.
+
+====
+
+Substitute( <式>, <代入リスト> )::
+  変数のリストを用いて，式中の各変数を選択した変数または数値に置き換える．
+
+[EXAMPLE]
+====
+
+`++Substitute(2x + 3y - z, {x = a, y = 2, z = b})++` は， _2a - b + 6_ を返す．
+
+====

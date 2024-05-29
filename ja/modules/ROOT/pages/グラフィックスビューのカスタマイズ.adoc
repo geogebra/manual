@@ -1,0 +1,102 @@
+= グラフィックスビューのカスタマイズ
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/グラフィックスビュー.adoc[グラフィックスビュー]
+の表示される部分を調整するためには，xref:/tools/グラフィックスビューの移動.adoc[グラフィックスビュー移動ツール]
+を使用してドラッグし，以下のズーム方法を利用する：
+
+* image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _グラフィックスビュー_
+をズームするには，image:24px-Mode_zoomin.svg.png[Mode zoomin.svg,width=24,height=24]
+xref:/tools/ズームイン.adoc[ズームイン_ツール] や image:24px-Mode_zoomout.svg.png[Mode zoomout.svg,width=24,height=24]
+xref:/tools/ズームアウト.adoc[ズームアウト_ツール] を使用する．
+
+[NOTE]
+====
+
+クリックの位置でズームの中心が決まる．
+
+====
+
+* マウスのスクロールホイールを使ってimage:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+_グラフィックスビュー_ をズームすることができる．
+* キーボードショートカットでズームイン [.kcode]#Ctrl# + [.kcode]#+#，ズームアウト [.kcode]#Ctrl # + [.kcode]# -#　．
+* image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+__グラフィックスビュー__の何もない場所で右クリック（Mac
+OSでは[.kcode]##Ctrl##-クリック）すると，コンテキストメニューが表示され，ズームを行うことができる．
+* image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _グラフィックスビュー_
+のimage:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/プロパティダイアログ.adoc[プロパティダイアログ] （下記参照）で _x_ 軸と _y_ 軸の範囲を指定することもできる．
+
+== オブジェクトの表示と非表示
+
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+xref:/数式ビュー.adoc[数式ビュー]では，各オブジェクトの左側にあるアイコンは，そのオブジェクトの現在の表示状態（表示または非表示）を示している．オブジェクトの表示状態を変更するには，小さな丸いアイコンを直接クリックする．詳しくはxref:/オブジェクトのプロパティ.adoc[オブジェクトの表示]を参照．
+
+== グラフィックスビューのプロパティ (プロパティ ダイアログ)
+
+座標軸，グリッド，その他いくつかのプロパティは，image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _グラフィックスビュー_
+のimage:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/プロパティダイアログ.adoc[プロパティダイアログ]
+を使ってカスタマイズすることができる．グラフィックスビューで右クリック（MacOSでは[.kcode]##Ctrl##-クリック）し，表示されるxref:/コンテキストメニュー.adoc[コンテキストメニュー]から
+_グラフィックスビュー..._ を選択すると，このダイアログウィンドウを開くことができる．
+
+== 座標軸とグリッドのカスタマイズ
+
+軸とグリッドの表示／非表示を切り替えるには，image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _グラフィックスビュー_
+のなにもないところで右クリック（MacOSでは[.kcode]##Ctrl##-クリック）し，表示されるコンテキストメニューから対応する項目image:20px-Stylingbar_graphicsview_show_or_hide_the_axes.svg.png[Stylingbar
+graphicsview show or hide the axes.svg,width=20,height=20] _軸_ または
+image:20px-Stylingbar_graphicsview_show_or_hide_the_grid.svg.png[Stylingbar graphicsview show or hide the
+grid.svg,width=20,height=20] _グリッド_ を選択する．さらに設定するには，
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] __プロパティダイアログ__を開く必要がある．
+
+* _基本_
+タブでは，例えば座標軸の線のスタイルや色を変更したり，軸間の比率を設定することができる．軸の比率をコマンドやユーザーの操作で変更できないようにするには，ロックアイコンを使ってロックすることができる．
+
+* _x軸_ と _y軸_
+のタブをクリックすると，軸を個別にカスタマイズでき，目盛りの距離，ラベル付け，軸の表示，単位などを設定できる．軸の交点を
+_(a,b)_ にしたい場合は，_x軸_ の _もう1つの軸との切片_ パラメータを _b_ に，_y軸_ の _もう1つの軸との切片_ パラメータを
+_a_ に設定する．軸の交点の右側または上側の軸の部分のみを描画するには，_正の向きのみ_ を選択する．
+
+* _グリッド_
+のタブでは，座標グリッドの色と線のスタイルを変更したり，グリッド線の距離と比率を特定の値に設定したり，グリッドの表示・非表示を設定したりできる．グリッドには3つのタイプがある：直交座標，極座標，アイソメトリック座標（同じ寸法の）．
+
+[NOTE]
+====
+
+* 軸の拡大縮小は，どのモードでも[.kcode]##Shift##キー（PCでは[.kcode]##Ctrl##キーも）を押しながら軸をドラッグする．
+* 軸の範囲は動的に指定することができる．例えば，_基本_ タブで _x 最小_ を `++x(A)++` に，_y 最小_
+を`++y(A)++`に設定することで，ビューの左下隅が 点 _A_
+に留まるようにすることができる．このような設定では，ビューをズームすることはできない．
+
+====
+
+== ナビゲーションバーの表示
+
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _プロパティダイアログ_ の _基本_
+タブで作図ステップナビゲーションバーを有効にすることにより，image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _グラフィックスビュー_
+にxref:/ナビゲーションバー.adoc[作図手順のナビゲーションバー]を追加することができる．また，作図手順をアニメーションで表示するための
+_再生_ ボタンや，image:16px-Menu_view_construction_protocol.svg.png[Menu view construction
+protocol.svg,width=16,height=16] _xref:/作図手順.adoc[作図手順]を開く_ ボタンを追加することもできる．
+
+== その他の設定
+
+これらの設定は，image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _プロパティダイアログ_ の _基本_
+タブの最後の部分にある．
+
+背景色
+
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _グラフィックスビュー_
+の背景色を変更できる．
+
+ツールのヒント（ツールチップ）
+
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _グラフィックスビュー_
+でのxref:/ツールチップ.adoc[ツールのヒント（ツールチップ）]の動作を設定できる．詳細はxref:/ツールチップ.adoc[ツールのヒント（ツールチップ）]の項目を参照．
+
+マウスの座標を表示
+
+マウスポインタの横にマウス座標を表示できるようにする．

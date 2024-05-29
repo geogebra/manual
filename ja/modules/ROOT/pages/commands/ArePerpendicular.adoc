@@ -1,0 +1,24 @@
+= ArePerpendicular コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+ArePerpendicular( <直線>, <Line> )::
+  直線が垂直かどうかを判定する．
+
+通常，このコマンドは結果を数値で計算する．この動作は xref:/commands/Prove.adoc[Prove]コマンドで変更できる．
+
+[EXAMPLE]
+====
+
+`++ArePerpendicular(Line((-1, 0), (0, -1)), Line((0, 0),(2,2)))++` 出力： _true_ ，与えられた直線は垂直である．
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/AreCollinear.adoc[AreCollinear], xref:/commands/AreConcurrent.adoc[AreConcurrent],
+xref:/commands/AreConcyclic.adoc[AreConcyclic], xref:/commands/AreCongruent.adoc[AreCongruent],
+xref:/commands/AreEqual.adoc[AreEqual], xref:/commands/AreParallel.adoc[AreParallel],
+xref:/commands/IsTangent.adoc[IsTangent] コマンド．
+
+====

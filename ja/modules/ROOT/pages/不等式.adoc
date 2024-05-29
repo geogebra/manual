@@ -1,0 +1,26 @@
+= 不等式
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+GeoGebraは1変数または2変数の不等式をサポートしている． image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16]
+xref:/数式ビュー.adoc[数式ビュー]で表示される不等式に制限はないが，image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/グラフィックスビュー.adoc[グラフィックスビュー]
+で描画できるのは特定の不等式のみである：
+
+* 1変数の多項式不等式， 例： _x^3 > x + 1_ , _y^2>y_,
+* 2変数の2次不等式, 例： _x^2 + y^2 + x*y ≤ 4_,
+* 1変数の線形不等式, 例： _2x > sin(y)_ or _y < sqrt(x)_.
+
+不等号には <, >, ≤, ≥ が使える．記号 <= と => も有効．
+不等式においても，論理演算（かつ，または）がサポートされている．例： _(x>y)&&(x+y<3)_ ．
+
+不等式の解をx軸上の1つまたは複数の区間として表示するためには，不等式の
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/プロパティダイアログ.adoc[プロパティダイアログ]内の __スタイル__タブから _x軸上に表示_
+オプションを選択する．（ただし，これは全ての不等式に対して機能するわけではない．）
+
+不等式は関数に似ている．xref:/入力バー.adoc[入力バー]に`++a(x,y)++`と入力することで，_x_ と _y_
+が不等式aを満たすかどうかを確認することができる．また，_A_
+が点の場合，`++a(A)++`)という構文が有効である．xref:/commands/PointIn.adoc[PointIn
+コマンド]を使えば，不等式で与えられた領域に点を制限することができる．変数，例えば _x_ における不等式 _b_
+に対して，`++Point(b)++` は不等式 _b_ を満たす x 軸の部分に制限された点を返す．

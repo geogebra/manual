@@ -1,0 +1,17 @@
+= RectangleSum コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+RectangleSum( <関数>, <xの開始値>, <xの終了値>, <長方形の数>, <Position for rectangle start> )::
+  _xの開始値_　と　_xの終了値_　をの間を__n__等分し，各区間の左端点から分数 _d_ (0 ≤ _d_ ≤ 1)
+  の割合だけ右にずらした点での関数値と小区間の幅の積の総和（__n__個の長方形の面積の総和）を計算する．
+  _d = 0_ の場合はxref:/commands/LeftSum.adoc[LeftSum]と同じで、_d = 1_ の場合は与えられた関数の右和を計算する.
+
+[NOTE]
+====
+
+* このコマンドは長方形も描画する．
+* このコマンドは視覚的な補助として設計されているため，長方形の数が大きすぎると正確な値が得られない．
+* こちらのコマンドも参照： xref:/commands/UpperSum.adoc[UpperSum], xref:/commands/LowerSum.adoc[LowerSum],
+xref:/commands/LeftSum.adoc[LeftSum] , xref:/commands/TrapezoidalSum.adoc[TrapezoidalSum].
+
+====

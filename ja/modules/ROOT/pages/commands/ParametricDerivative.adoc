@@ -1,0 +1,14 @@
+= ParametricDerivative コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+ParametricDerivative( <曲線> )::
+  _stem:[ \left( x(t), \frac\{y'(t)}\{ x'(t)} \right) ]_ によって与えられる新しい xref:/曲線.adoc[媒介曲線] を返す．
+
+[EXAMPLE]
+====
+
+`++ParametricDerivative(Curve(2t, t², t, 0, 10))++` は媒介曲線 _(x(t) = 2t, y(t) = t)_ を返す．
+コマンドの引数として与えられた曲線は，関数 _f(x) = stem:[ \frac\{x²}\{4}]_ ，そして結果はその関数の微分である： _f'(x) =
+stem:[ \frac\{x}\{2}]．_
+
+====

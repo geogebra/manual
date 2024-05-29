@@ -1,0 +1,22 @@
+= RandomBinomial コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+RandomBinomial( <試行回数>, <確率> )::
+  与えられた試行回数 _n_ と確率　_p_ を持つ二項分布からランダムな数を生成する．
+
+[EXAMPLE]
+====
+
+`++RandomBinomial(3, 0.1)++` は _j ∈ \{0, 1, 2, 3}_ を返す．ここで，_j_ である確率は，1回の成功確率が
+__0.1__である事象が3回の試行中に _j_ 回発生する確率に等しい．
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/SetSeed.adoc[SetSeed コマンド], xref:/commands/RandomBetween.adoc[RandomBetween コマンド],
+xref:/commands/RandomElement.adoc[RandomElement コマンド], xref:/commands/RandomNormal.adoc[RandomNormal コマンド],
+xref:/commands/RandomPoisson.adoc[RandomPoisson コマンド], xref:/commands/RandomUniform.adoc[RandomUniform コマンド].
+
+====

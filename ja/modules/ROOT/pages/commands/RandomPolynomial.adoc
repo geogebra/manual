@@ -1,0 +1,39 @@
+= RandomPolynomial コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+RandomPolynomial( <次数> , <係数の最小値>, <係数の最大値> )::
+  次数 _d_ の _x_ の多項式をランダムに生成し，その（整数の）係数が _最小値_ から _最大値_
+  までの範囲内に含まれるものを返す．
+
+[EXAMPLE]
+====
+
+* `++RandomPolynomial(0, 1, 2)++` は，_1_ または _2_ を返す．
+* `++RandomPolynomial(2, 1, 2)++` は，係数が _1_ または _2_ の次数2であるランダムな多項式を返す，例： _2x^2^ + x + 1_．
+
+====
+
+== CAS での書式
+
+以下のコマンドは image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CASビュー.adoc[CASビュー]
+でのみ利用可能．
+
+RandomPolynomial( <変数>, <次数> , <係数の最小値>, <係数の最大値> )::
+  次数 _d_ の 与えられた変数の多項式をランダムに生成し，その（整数の）係数が _最小値_ から _最大値_
+  までの範囲内に含まれるものを返す．
+
+[EXAMPLE]
+====
+
+* `++RandomPolynomial(a, 0, 1, 2)++` は，_1_ または _2_ を返す．
+* `++RandomPolynomial(a, 2, 1, 2)++` は，係数が _1_ または _2_ の次数2であるランダムな a についての多項式を返す，例：
+_2a^2^ + a + 1_.
+
+====
+
+[NOTE]
+====
+
+_最小値_ や _最大値_ が整数でない場合は，どちらの場合も，代わりに _round(minimum)_ や _round(maximum)_ が使われる．
+
+====

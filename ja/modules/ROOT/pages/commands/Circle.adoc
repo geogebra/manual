@@ -1,0 +1,45 @@
+= Circle コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Circle( <点>, <半径の数値> )::
+  指定された中心と半径を持つ円を生成する．
+Circle( <点>, <線分> )::
+  指定された中心と，指定された線分の長さに等しい半径を持つ円を生成する．
+Circle( <点>, <点> )::
+  与えられた中心と，与えられた点を通る円を生成する．
+Circle( <点>, <点>, <点> )::
+  与えられた3点を通る円を生成する（それらが同一直線上にない場合）．
+
+[NOTE]
+====
+
+image:20px-Mode_compasses.svg.png[Mode compasses.svg,width=20,height=20] xref:/tools/コンパス.adoc[コンパス],
+image:20px-Mode_circle2.svg.png[Mode circle2.svg,width=20,height=20]
+xref:/tools/中心と円周上の１点で決まる円.adoc[中心と円周上の１点で決まる円],
+image:20px-Mode_circlepointradius.svg.png[Mode circlepointradius.svg,width=20,height=20]
+xref:/tools/中心と半径で決まる円.adoc[中心と半径で決まる円], image:20px-Mode_circle3.svg.png[Mode
+circle3.svg,width=20,height=20] xref:/tools/３点を通る円.adoc[３点を通る円] ツール参照．
+
+====
+
+Circle( <直線>, <点> )::
+  直線を軸とし、点を通る円を作成する．
+Circle( <点>, <半径>, <向き> )::
+  中心，半径，向き（直線，ベクトル，平面のいずれか）と平行な軸を持つ円を作成する．
+Circle( <点>, <点>, <向き> )::
+  中心と通る点，向き直線，ベクトル，平面のいずれか）と平行な軸を持つ円を作成する．
+  中心と通る点を結ぶ線分が向きに垂直でない場合は作成されない．
+
+[EXAMPLE]
+====
+
+`++Circle( <点>, <半径>, <平面> )++` は，平面に平行で，平面の法線ベクトルと同じ方向の軸を持つ円を生成する．
+
+====
+
+[NOTE]
+====
+
+方向を（例） `++x = 0++` または `++y = 0++` を __向き__に指定すると，線ではなく面として解釈される．
+
+====

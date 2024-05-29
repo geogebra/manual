@@ -1,0 +1,24 @@
+= InflectionPoint コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+InflectionPoint( <多項式> )::
+  多項式のすべての変曲点を関数グラフ上の点として返す．
+
+[EXAMPLE]
+====
+
+`++InflectionPoint[x^3]++` 出力： _(0, 0)_.
+
+====
+
+== CAS での書式
+
+InflectionPoint( <関数> )::
+  (可能であれば）関数のすべての変曲点をリストとして返す．
+
+[EXAMPLE]
+====
+
+`++InflectionPoint[x exp(-x)]++` 出力： stem:[ \left\\{ \left(2, \frac\{2}\{\textit\{e}^\{2}} \right) \right\} ].
+
+====

@@ -1,0 +1,39 @@
+= ApplyMatrix コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+ApplyMatrix( <xref:/行列.adoc[行列]>, <xref:/s_index_php?title=Geometric_Objects_action=edit_redlink=1.adoc[Object]> )::
+  オブジェクト _O_ 上の点 _P_ が次のようにマッピングされるように，オブジェクト _O_ を変換する：
+
+* _P_ が _2次元_ 点であり，_M_ が2×2行列である場合，点 _P_ を点 _M*P_ にマッピング
+
+[EXAMPLE]
+====
+
+`++M={{cos(π/2),-sin(π/2)}, {sin(π/2), cos(π/2)}}++` を変換行列，`++u = (2,1)++`
+をベクトルとする（オブジェクト）．`++ApplyMatrix(M,u)++` はベクトル _u'=(-1,2)_ を返す．すなわち，ベクトル _u_
+を数学的に90° 正の方向に回転させた結果である．
+
+====
+
+* _P_ が __2次元__点であり，_M_ が3×3行列である場合，P(x,y)より _M(x,y,1) =(x’, y’,z’)_ として，__(x,y)__を__(x/z,
+y/z)__にマッピング
+
+[EXAMPLE]
+====
+
+行列 `++M={{1,1,0},{0,1,1},{1,0,1}}++` とベクトル `++u=(2,1)++` とする． `++ApplyMatrix(M,u)++` はベクトル
+__u'=(1,0.67)__を返す．stem:[\begin\{pmatrix}1&1&0\\ 0&1&1\\1&0&1 \end\{pmatrix}] stem:[\begin\{pmatrix}2\\ 1\\1
+\end\{pmatrix}] = stem:[\begin\{pmatrix}3\\ 2\\3 \end\{pmatrix}]　である． (3/3 = 1, 2/3 ≈ 0.67) (小数点第２位四捨五入)
+
+====
+
+* _P_ が _3次元_ 点であり，_M_ が3×3行列である場合，点 _P_ を点 _M*P_ にマッピング
+* _P_ が _3次元_ 点であり，_M_ が2×2行列である場合，_M_ = stem:[\begin\{pmatrix}a&b\\ c&d \end\{pmatrix}] から _N_ =
+stem:[\begin\{pmatrix}a&b&0\\ c&d&0\\0&0&1 \end\{pmatrix}] を作り，点 _P_ を点 _N*P_ にマッピング
+
+[NOTE]
+====
+
+このコマンドは四角形やxref:/tools/画像の挿入.adoc[画像]でも機能する．変換行列の行列式が0の場合，"未定義"を返す．
+
+====

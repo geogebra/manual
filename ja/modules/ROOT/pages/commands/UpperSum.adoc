@@ -1,0 +1,25 @@
+= UpperSum コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+UpperSum( <関数>, <xの開始値>, <xの終了値>, <長方形の数> )::
+  [xの開始値, xの終了値]という区間における関数の 上限和
+  を，__n__個の長方形を使って（区間を__n__等分して、各小区間の最大値での関数値と小区間の幅の積の総和）計算する．
+
+[EXAMPLE]
+====
+
+`++UpperSum(x^2, -2, 4, 6)++` 出力： _35_.
+
+====
+
+[NOTE]
+====
+
+*Notes:*
+
+* このコマンドは上限和の長方形も描画する．
+* このコマンドは視覚的な補助として設計されているため，長方形の数が大きすぎると正確な値が得られない．
+* こちらのコマンドも参照：xref:/commands/LowerSum.adoc[LowerSum], xref:/commands/LeftSum.adoc[LeftSum],
+xref:/commands/RectangleSum.adoc[RectangleSum], and xref:/commands/TrapezoidalSum.adoc[TrapezoidalSum].
+
+====

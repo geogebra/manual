@@ -1,0 +1,107 @@
+= ExportImage コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+ExportImage( <プロパティ>, <値>, <プロパティ>, <値>, ... )::
+  現在アクティブなビュー（または "ビュー"パラメータで指定されたビュー）の画像をエクスポートする．
+
+[NOTE]
+====
+
+* 以下の例にあるコマンド構文で使用される _プロパティ_ は英語で入力する必要がある．
+* 画像として保存されるビューに関連する _値_ は以下の通り：
+
+* 1 は image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _グラフィックスビュー_
+* 2 は image:16px-Menu_view_graphics2.svg.png[Menu view graphics2.svg,width=16,height=16] _グラフィックスビュー_ 2
+* -1 は image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=16,height=16]
+_空間図形ビュー_
+
+====
+
+[EXAMPLE]
+====
+
+* `++ExportImage("scale", 5)++`
+
+現在のビューのポップアップを表示し，ユーザーが右クリック -> 名前を付けて画像を保存... できるようにする．
+
+* `++ExportImage("filename", "image.png")++`
+
+現在のビューを "image.png "というファイルで保存する．
+
+* `++ExportImage("filename", "image.png", "view", 2)++`
+
+グラフィックスビュー 2を "image.png "というファイルで保存する．
+
+* `++ExportImage("filename", "image.png", "view", -1)++`
+
+空間図形ビューを "image.png "というファイルで保存する．
+
+* `++ExportImage("filename", "image.png", "dpi", 300)++`
+
+現在のビューを300dpi（ドット/インチ）で "image.png "というファイルに保存する．
+
+* `++ExportImage("filename", "image.png", "scale", 2)++`
+
+現在のビューをスケール2（つまり通常の画面解像度の2倍）で "image.png"というファイルに保存する．
+
+* `++ExportImage("filename", "image.png", "scalecm", 2, "dpi", 600)++`
+
+現在のビューを600dpiの解像度と1単位=2cmの縮尺で "image.png"というファイルに保存する．
+
+* `++ExportImage("filename", "image.png", "width", 1000)++`
+
+現在のビューを幅=1000ピクセルで "image.png "というファイルに保存する．
+
+* `++ExportImage("filename", "image.png", "height", 1000)++`
+
+現在のビューを高さ=1000ピクセルで "image.png "というファイルに保存する．
+
+* `++ExportImage("filename", "image.png", "transparent", true)++`
+
+"image.png"という名前の透明なPNGファイルを保存する．
+
+"transparent" プロパティを _false_ に設定すると，背景画像も一緒に保存される．
+
+* `++ExportImage("filename", "image.svg", "type", "svg")++`
+
+現在のビューをSVG形式の"image.svg"というファイル名で保存する．
+
+* `++ExportImage("filename", "image.gif", "type", "gif", "slider", a, "loop", true, "time", 200, "width", 400)++`
+
+スライダー "a"
+を用いて制御される現在のビューのアニメーションGIFを，フレームごとに200msの間隔でループ保存する．*ビューの幅とスライダーのステップ数は小さく保つようにする．*
+
+* `++ExportImage("filename", "image.gif", "type", "gif", "view", -1, "rotate", 360°, "slider", a, "loop", true, "time", 200)++`
+
+スライダー"a"によって制御される現在のビューのアニメーションGIFを，フレームごとに200msの間隔でループ保存し，アニメーション中にビューを360度回転させる．*ビューのサイズとステップ数は小さく保つようにする．*
+
+* `++ExportImage("type", "pdf", "filename", "test.pdf")++`
+
+現在のビューの PDF を作成する （または，グラフィックスビュー2が開かれている場合は，2ページの PDF を作成する）．
+
+* `++ExportImage("type", "pdf", "filename", "test.pdf", "slider", n)++`
+
+各ページがスライダー "n"　の1ステップに対応する，現在のビューの *複数ページ* のPDFを作成する．
+
+* `++pic1 = ExportImage("view", 2, "corner", A, "corner2", B)++`
+
+ビュー2のGeoGebra画像を作成し，`++A++`と`++B++`で定義された位置にそのビューを配置する．
+
+====
+
+[NOTE]
+====
+
+*Notes:*
+
+* GeoGebra Classic
+5では，`++filename++`パラメータが指定されていない場合，画像はクリップボードにコピーされる．Chromeブラウザでは，`++"clipboard", true++`と設定することで，画像をクリップボードにコピーすることができる．
+* エクスポートをトリミングするには，トリミングする矩形を定義するために点`++Export_1++`と`++Export_2++`を作成する．（*これらはメニューからのエクスポートもトリミングする．例えば「ファイル」→「画像をエクスポート」*）
+* いくつかの構文はGeoGebra 5 Classicではサポートいない．
+* Chromeでは，`++"type", "webm"++` という実験的な構文を試すと，アニメーションGIFよりも速く，小さく書き出すことができる．
+* グラフィックスビューでモノクロ出力を得るには，`++"grayscale", true++`（PNG形式のみ）という構文を試すことができる．
+* 空間図形ビューでは，ビットマップ形式（例えばpngやgif）のみがサポートされている．GeoGebra Classic
+5で高解像度の出力を得るには，次のコマンドを試すことができる：`++ExportImage("filename", "c:\Users\<username>\AppData\image.png", "view", -1, "width", 2000)++`.
+ここで，**<username>**をWindowsのユーザー名に変更する．
+
+====

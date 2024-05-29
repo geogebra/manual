@@ -1,0 +1,53 @@
+= 再定義ダイアログ
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+オブジェクトの再定義は，作図を変更する非常に多用途な方法である．ただし，これによってimage:16px-Menu_view_construction_protocol.svg.png[Menu
+view construction protocol.svg,width=16,height=16] xref:/作図手順.adoc[作図手順]の順序が変わる可能性がある．
+
+[NOTE]
+====
+
+再定義された要素は，作図の順序で先に定義された要素にのみ依存できるため，image:16px-Menu_view_construction_protocol.svg.png[Menu
+view construction protocol.svg,width=16,height=16]
+xref:/作図手順.adoc[作図手順]内の要素の順序を変更する必要が生じるかもしれない．
+
+====
+
+GeoGebra では，オブジェクトはさまざまな方法で再定義することができる：
+
+* image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22] xref:/tools/移動.adoc[移動_ツール]
+を選択し，image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+xref:/数式ビュー.adoc[数式ビュー] の任意のオブジェクトをダブルクリックする．
+** 自由オブジェクトの場合，編集フィールドが開かれ，オブジェクトの代数的表現を直接変更することができる．これらの変更を適用するには，[.kcode]##Enter##キーを押す．
+** 依存オブジェクトの場合，再定義ダイアログが開き，オブジェクトを再定義できる．
+* image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22] xref:/tools/移動.adoc[移動_ツール] を選択し，
+image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16]xref:/グラフィックスビュー.adoc[グラフィックスビュー]のオブジェクトをダブルクリックする．再定義ダイアログが開き，オブジェクトを再定義できる．
+* xref:/入力バー.adoc[入力バー]にそのオブジェクトの名前と新しい定義を入力することで，任意のオブジェクトを再定義できる．
+* image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/プロパティダイアログ.adoc[プロパティダイアログ]を開き，_基本_ タブでオブジェクトの定義を変更する．
+
+[NOTE]
+====
+
+入力バーで既存のオブジェクトを再定義することもできる．例えば，`++a:Segment[A, B]++`と入力すると，`++a++`が線分に再定義される．
+
+====
+
+== 例
+
+[EXAMPLE]
+====
+
+既存の自由点Aを既存の線h上に置くためには，まずA点をダブルクリックして再定義ダイアログウィンドウを開く必要がある．次に，表示されるテキストフィールドで定義をPoint(h)に変更し，[.kcode]##Enter##を押す．この線から点Aを取り除き，再び自由にするには，点Aを自由座標，例えば（1,
+2）に再定義する必要がある．
+
+====
+
+[EXAMPLE]
+====
+
+もう一つの例は，2点 _A_ と _B_ を通る直線 _h_ を線分に変換することである．直線 _h_
+の再定義ダイアログを開き，`++Line(A, B)++`を`++Segment(A, B)++`に変更する．
+
+====

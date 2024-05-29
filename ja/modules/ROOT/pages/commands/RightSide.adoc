@@ -1,0 +1,49 @@
+= RightSide コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+RightSide( <等式> )::
+  簡約した方程式の右辺を返す．
+
+[EXAMPLE]
+====
+
+`++RightSide(x + 2 = 3x + 1)++` 出力： _0.5_
+
+====
+
+== CAS での書式
+
+RightSide( <等式> )::
+  方程式の右辺を返す．
+RightSide( <等式のリスト> )::
+  方程式の右辺のリストを返す．
+RightSide( <等式のリスト>, <インデックス> )::
+  リストのインデックスで指定された方程式の右辺を返す．
+
+[EXAMPLE]
+====
+
+`++RightSide({a^2 + b^2 = c^2, x + 2 = 3 x + 1}, 1)++` 出力： stem:[c^2].
+
+====
+
+[EXAMPLE]
+====
+
+`++RightSide({a^2 + b^2 = c^2, x + 2 = 3x + 1})++` 出力： _\{c^2^, 3x + 1}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++RightSide(x + 3 = 3 x + 1)++` 出力： _3 x + 1_.
+
+====
+
+[NOTE]
+====
+
+参照： xref:/commands/LeftSide.adoc[LeftSide コマンド].
+
+====

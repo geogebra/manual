@@ -1,0 +1,53 @@
+= PathParameter コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+PathParameter( <パス上の点> )::
+  xref:/幾何オブジェクト.adoc[パス].に属する点のパラメータ（ _0_ から _1_ までの数値）を返す．
+
+[EXAMPLE]
+====
+
+Let `++f(x) = x² + x - 1++` とし，この関数のグラフ上の点 `++A = (1, 1)++` について，`++PathParameter(A)++` は _a = 0.47_
+を出力します．
+
+====
+
+次の表には、すべての実数を区間(-1,1)に写像するために使用される関数
+stem:[f(x)=\frac\{x}\{1+|x|}]　があり，stem:[\phi(X,A,B)=\frac\{\overrightarrow\{AX}\cdot\overrightarrow\{AB}}\{|AB|^2}]
+は線分 AB から実数への線形写像で，A を 0 に、B を 1 に対応させる．
+
+[cols=",",]
+|===
+|直線 AB |stem:[\frac\{f(\phi(X,A,B))+1}2]
+
+|半直線 AB |stem:[f(\phi(X,A,B))]
+
+|線分 AB |stem:[\phi(X,A,B)]
+
+|中心が _C_ で半径が _r_ の円 |stem:[\alpha\in(-\pi,\pi)] とするとき，点 stem:[X=C+(r\cdot cos(\alpha),r\cdot
+sin(\alpha))]の path parameter は， stem:[\frac\{\alpha+\pi}\{2\pi}]．
+
+|中心 _C_ と半軸が stem:[\vec\{a}], stem:[\vec\{b}] である楕円 |stem:[\alpha\in(-\pi,\pi)] とするとき，点
+stem:[X=C+\vec\{a}\cdot cos(\alpha)+\vec\{b}\cdot sin(\alpha)] の path parameter は, stem:[\frac\{\alpha+\pi}\{2\pi}]．
+
+|双曲線 |点 stem:[X = C \pm \vec\{a} ·cosh(t) + \vec\{b} ·sinh(t)] の path parameter は stem:[ \frac\{f(t)+1}\{4}] or
+stem:[\frac\{f(t)+3}\{4}]．
+
+|頂点Vと軸の方向がstem:[\vec\{v}]である放物線． |点 stem:[V+\frac\{1}\{2}p\cdot t^2\cdot \vec\{v}+p\cdot t \cdot
+\vec\{v}^\{\perp}] の path parameter は stem:[\frac\{f(t)+1}2]．
+
+|折れ線A~1...A~n~~ |XがA~k~A~k+1~上にある場合， _X_ の path parameterはstem:[\frac\{k-1+\phi(X,A,B)}\{n-1}]．
+
+|多角形 A~1...A~n~~ |XがA~k~A~k+1~上にある場合（A~n+1~=A~1~とする）， _X_ の path
+parameterはstem:[\frac\{k-1+\phi(X,A,B)}\{n}]．
+
+|パスのリスト L=\{p~1~,...,p~n~} |Xがp~k~上にあり，p~k~に対するXのPath parameterが _t_ である場合，Lに対する _X_ の path
+parameterはstem:[\frac\{k-1+t}\{n}]．
+
+|点のリスト L=\{A~1~,...,A~n~} |A~k~ の path parameter は stem:[\frac\{k-1}\{n}]. Point[L,t] は stem:[A_\{\lfloor
+tn\rfloor+1}] を返す．
+
+|軌跡 |
+
+|陰関数の曲線 |使用可能な式はない．
+|===

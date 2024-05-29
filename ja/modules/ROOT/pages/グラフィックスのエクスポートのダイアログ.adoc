@@ -1,0 +1,74 @@
+= グラフィックスのエクスポートのダイアログ
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+以下は *GeoGebra Classic 5* にのみ適用される．新しいバージョンについては xref:/commands/ExportImage.adoc[ExportImage()]
+コマンドを参照のこと．
+
+====
+
+このダイアログには，ファイルメニューの _エクスポート_
+サブメニューからアクセスできる．(項目image:Image-x-generic.png[Image-x-generic.png,width=16,height=16]グラフィックスビューを画像として
+(png, eps)...)
+
+キーボードショートカット： [.kcode]#Ctrl# + [.kcode]#Shift# + [.kcode]#U# (Mac OS: [.kcode]#Cmd# + [.kcode]#Shift# +
+[.kcode]#U#)
+
+このダイアログでは，GeoGebra の image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/グラフィックスビュー.adoc[グラフィックスビュー]
+を画像ファイルとしてコンピュータに保存することができる．表示されるダイアログウィンドウで，画像ファイルの _フォーマット_
+を選択し，_画像の縮尺_ （cm単位）と _解像度_ （dpi）を変更し，画像を _透明_ に設定することができる．
+
+[NOTE]
+====
+
+_Export_1_ と _Export_2_
+という名前の点を作成すると，これらの点がエクスポートされる長方形の領域を定義する．そうでなければ，表示されている
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _グラフィックビュー_
+全体がエクスポートされる．
+
+====
+
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/グラフィックスビュー.adoc[グラフィックスビュー]を画像としてエクスポートする場合，以下のフォーマットから選択できる：
+
+PNG – http://en.wikipedia.org/wiki/ja:Portable_Network_Graphics[Portable Network Graphics]::
+  これはピクセルベースのグラフィックフォーマットである．解像度（dpi）が高ければ高いほど，画質も向上する（通常，300dpiで十分）．PNGグラフィックは品質を保つため，後からの拡大・縮小は避けるべきである．
+  PNGグラフィックファイルは，ウェブページ（HTML）やワープロ文書での使用に最適である．
+
+[NOTE]
+====
+
+PNG画像ファイルをワープロ文書に挿入する際（メニュー「挿入」→「ファイルから画像」），サイズが
+100%に設定されているかを確認する．そうでない場合，指定された縮尺（cm単位）が変更されてしまう可能性がある．
+
+====
+
+EPS – http://en.wikipedia.org/wiki/ja:Encapsulated_PostScript[Encapsulated Postscript]::
+  これはベクターグラフィックスフォーマットである．EPS画像は品質を損なうことなく拡大・縮小が可能である．EPSグラフィックファイルは，ベクターグラフィックプログラム（例：CorelDRAW）や専門的なテキスト処理システム（例：xref:/LaTeX.adoc[LaTeX]）での使用に最適である．
+  EPSグラフィックの解像度は常に72dpiで，この値は画像の実際のサイズをセンチメートルで計算するためにのみ使用され，画像の品質には影響しない．
+
+[NOTE]
+====
+
+EPSでは，塗りつぶされた多角形や円錐曲線での透明効果は実現できない．オブジェクトは100%不透明か完全に透明のどちらかしか設定できない．
+
+====
+
+PDF – http://en.wikipedia.org/wiki/jp:Portable_Document_Format[Portable Document Format]::
+  (上記のEPSフォーマットを参照)
+
+[NOTE]
+====
+
+SVGおよびPDFエクスポートでは，テキストを編集可能なテキストまたは図形としてエクスポートするオプションがある．これにより，テキストはテキストとして（例えばInkscapeでテキストを編集することができる）またはベジエ曲線として保存される（これは，正しいフォントがインストールされていなくてもテキストが同じように見えることを保証する）．
+
+====
+
+SVG – http://en.wikipedia.org/wiki/jp:Scalable_Vector_Graphics[Scalable Vector Graphic]::
+  (上記のEPSフォーマットを参照)
+
+EMF – http://en.wikipedia.org/wiki/jp:Windows_Metafile[Enhanced Metafile]::
+  (上記のEPSフォーマットを参照)

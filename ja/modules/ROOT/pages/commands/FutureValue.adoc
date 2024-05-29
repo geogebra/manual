@@ -1,0 +1,42 @@
+= FutureValue コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+FutureValue( <比率>, <期間の数>, <支払>, <現在の値 (optional)>, <型(optional)> )::
+  定期的な一定の支払いと一定の金利に基づいて，ローンの将来の残高（または将来の値）を返す．
+
+* *<比率>* 期間ごとの利率．
+* *<期間の数>* 返済（または投資）の総支払回数．
+* *<支払>* 毎回の支払（または受取）額．
+* *<現在の値(optional)>* 将来受け取る一連の支払いの現在価値．値を入力しない場合は0とみなされる．
+* *<型(optional)>*
+支払いがいつ行われるかを示す．値を入力しないか，0を入力した場合，支払いは期間の終わりに行われる．1を入力した場合，支払いは期間の始まりに行われる．
+
+[EXAMPLE]
+====
+
+`++FutureValue(10%/12, 15, -200, 0, 1)++` は，将来の値 3207.99 を返す．
+
+====
+
+[NOTE]
+====
+
+`++<比率>++` and
+`++<期間の数>++`の単位を同じにする．年利10%の4年ローンを毎月返済する場合，比率（利率）には10%÷12を，期間の数（支払回数）には4×12をそれぞれ用いる．
+
+====
+
+[NOTE]
+====
+
+すべての引数において，支払いは負の数で表し，受け取りは正の数で表す．
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/Payment.adoc[Payment], xref:/commands/Rate.adoc[Rate],
+xref:/commands/PresentValue.adoc[Present Value], xref:/commands/Periods.adoc[Periods] コマンド．
+
+====

@@ -1,0 +1,74 @@
+= カスタムツール
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+GeoGebraでは，既存の作図を基にして，独自の作図ツールを作成することができる．作成したカスタムツールは，ポインティングデバイスだけでなく，xref:/入力バー.adoc[入力バー]でのコマンドとしても使用できる．すべてのツールはGeoGebraファイルに自動的に保存される．
+
+[NOTE]
+====
+
+ツールの出力は，たとえ`++Point[<Path>]++`として定義されていたとしても，移動することはできない（マウスでドラッグすることはできない）．移動可能な出力が必要な場合，コマンドリストを定義して，
+xref:/commands/Execute.adoc[Execute コマンド]で実行することができる．
+
+====
+
+== カスタムツールの作成
+
+カスタムツールを作成するには， image:16px-Menu-tools.svg.png[Menu-tools.svg,width=16,height=16]
+xref:/ツールメニュー.adoc[ツールメニュー]のimage:16px-Menu-tools-new.svg.png[Menu-tools-new.svg,width=16,height=16]
+xref:/ツール作成ダイアログ.adoc[新規ツール作成]オプションを使用する．.
+
+== カスタムツールの保存
+
+GGBファイルとして保存すると，すべてのカスタムツールが保存される．ツールを別のファイルに保存するには，xref:/ツール管理ダイアログ.adoc[ツール管理ダイアログ]
+（image:16px-Menu-tools.svg.png[Menu-tools.svg,width=16,height=16]
+xref:/ツールメニュー.adoc[ツールメニュー]のimage:16px-Menu-tools.svg.png[Menu-tools.svg,width=16,height=16]
+_ツールの管理_ オプション）を使用する．
+
+[NOTE]
+====
+
+カスタムツールは，通常のGeoGebraファイル（GGB）と区別するためにGGTファイルとして保存される．
+
+====
+
+== カスタムツールへのアクセス
+
+カスタムツールを作成した後，image:16px-Menu-file.svg.png[Menu-file.svg,width=16,height=16]
+xref:/ファイルメニュー.adoc[ファイルメニュー]からimage:16px-Menu-file-new.svg.png[Menu-file-new.svg,width=16,height=16]__新規__を選んでGeoGebraの新しいインターフェースを開いても，作成したツールはツールバーに残る．しかし，新しいGeoGebraウィンドウを開く（image:16px-Menu-file.svg.png[Menu-file.svg,width=16,height=16]
+_ファイルメニュー_ の image:Menu_New.png[Menu
+New.png,width=16,height=16]__新規ウィンドウ__から），またはGeoGebraを終了して後で再度開くと，カスタムツールはツールバーには表示されなくなる．
+
+カスタムツールが新しい GeoGebra ウィンドウのツールバーに表示されるようにするには，いくつかの方法がある：
+
+* 新しいカスタムツールを作成した後，image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/オプションメニュー.adoc[オプションメニュー]のimage:16px-Menu-file-save.svg.png[Menu-file-save.svg,width=16,height=16]__設定を保存__
+項目を使用して設定を保存することができる．これにより，カスタマイズしたツールは今後GeoGebraツールバーの一部となる．
+
+[NOTE]
+====
+
+image:16px-Menu-tools.svg.png[Menu-tools.svg,width=16,height=16]__ツールメニュー__
+から　image:16px-Menu-tools-customize.svg.png[Menu-tools-customize.svg,width=16,height=16]__ツールバーのカスタマイズ__
+を開いた後，ツールバーからカスタムツールを削除できる．次に，表示されるダイアログウィンドウの左側にあるツールリストからカスタムツールを選択し，GeoGebraデスクトップ版では
+_削除_ ボタンをクリック，GeoGebra
+Web版とタブレットアプリ版では右側へドラッグアンドドロップする．カスタムツールを削除した後，設定の保存を行う．
+
+====
+
+== カスタツールのインポート
+
+* カスタムツールを（GGTファイルとして）コンピュータに保存した後，新しいGeoGebraウィンドウにいつでもインポートすることが可能である．image:16px-Menu-file.svg.png[Menu-file.svg,width=16,height=16]__ファイルメニュー__
+からimage:16px-Menu-file-open.svg.png[Menu-file-open.svg,width=16,height=16]_開く_
+を選択し，カスタムツールのファイルを開くと，インポートが完了する．
+
+[NOTE]
+====
+
+* GeoGebra で GeoGebra ツールファイル（GGT）を開いても，現在の作図には影響しない．このツールを現在の GeoGebra
+ツールバーの一部にするだけである．
+* また，ファイルマネージャから GGT ファイルをドラッグし，GeoGebra ウィンドウにドロップして読み込むこともできる．
+
+====
+
+* xref:/ツール作成ダイアログ.adoc[ツール作成ダイアログ]
+* xref:/ツール管理ダイアログ.adoc[ツール管理ダイアログ]

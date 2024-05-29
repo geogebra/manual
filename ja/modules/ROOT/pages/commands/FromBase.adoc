@@ -1,0 +1,21 @@
+= FromBase コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+FromBase( "<数値のテキスト>", <進法の底> )::
+  与えられた
+  http://en.wikipedia.org/wiki/Radix[底]の数を10進数に変換する．底は2から36の間でなければならない．数は整数でなければならない．
+
+[EXAMPLE]
+====
+
+* `++FromBase("FF", 16)++` 出力： 255（16進法でFF）
+* `++FromBase("100000000", 2)++` 出力： 256（2進法で100000000）
+
+====
+
+[NOTE]
+====
+
+参照：xref:/commands/ToBase.adoc[ToBase] コマンド
+
+====

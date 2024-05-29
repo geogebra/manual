@@ -1,0 +1,27 @@
+= ReplaceAll コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+ReplaceAll( <テキスト>, <一致するテキスト>, <置換するテキスト> )::
+  指定された __テキスト__内の _一致するテキスト_ を，_置換するテキスト_ で置き換えた新しいテキストを生成する．
+
+[EXAMPLE]
+====
+
+`++ReplaceAll("3cos(t)+cos(2y)", "cos", "sin")++` は，新しいテキスト `++"3sin(t)+sin(2y)" を生成する．++`.
+
+====
+
+[NOTE]
+====
+
+LaTeX形式のテキストを作成するには，xref:/commands/FormulaText.adoc[FormulaText]コマンドを使用する．
+
+====
+
+[EXAMPLE]
+====
+
+`++FormulaText(ReplaceAll("3cos(t)+cos(2y)", "cos", "sin"))++` は，新しいLaTeX形式のテキスト `++"3sin(t)+sin(2y)"++`
+を生成する．
+
+====

@@ -1,0 +1,55 @@
+= 動的な色
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+GeoGebraでは，image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/プロパティダイアログ.adoc[プロパティダイアログ] の _色_
+タブを使用してオブジェクトの色を変更できる．また，オブジェクトの色を動的に変更することも可能である：色を定義したいオブジェクトのimage:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+_プロパティダイアログ_ を開き，_上級_ タブを選択する，_動的な色_ セクションには，基本色の成分である__赤__，_緑_，_青_
+を入力するための3つの入力ボックスがある．
+
+[NOTE]
+====
+
+* 基本色のRGB値は，image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _プロパティダイアログ_ の _色_
+タブにある _プレビュー_ ボックスの右側に表示される．
+* 動的な色は，範囲[0,1]の関数を入力して定義することもできる．
+
+====
+
+[EXAMPLE]
+====
+
+* 区間が0から1の 3つのxref:/tools/スライダー.adoc[スライダー] a，b，cを作る．
+* 多角形を作成し，その色はスライダーの値に動的に関連付ける．
+* 多角形のimage:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _プロパティダイアログ_
+を開き，3つのスライダーの名前を _赤_，_緑_，_青_ の入力ボックスに入力する．
+* プimage:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _プロパティダイアログ_
+を閉じてスライダの値を変え， 各色成分が多角形の色にどのような影響を与えるかを調べる．
+
+[NOTE]
+====
+
+多角形の色が自動的に変化するのを見るために，スライダーを異なる速度でxref:/アニメーション.adoc[アニメーション]させることもできる．
+
+====
+
+====
+
+_動的な色_
+セクションには，選択されたオブジェクトの不透明度を変更するための入力ボックスも含まれている．[0,1]の範囲で数値（0は透明，1は100%不透明を意味する）またはスライダーを使用して，動的な不透明度を設定できる．それ以外の数値は無視される．
+
+== RGB / HSV / HSL
+
+いくつかの動的な色パターンは異なるカラーモデルを使って得ることができる．デフォルトの RGB の他に，GeoGebra には
+http://en.wikipedia.org/wiki/ja:HSL%E8%89%B2%E7%A9%BA%E9%96%93%E3%81%A8HSV%E8%89%B2%E7%A9%BA%E9%96%93[HSV] と
+http://en.wikipedia.org/wiki/ja:HSL%E8%89%B2%E7%A9%BA%E9%96%93%E3%81%A8HSV%E8%89%B2%E7%A9%BA%E9%96%93[HSL] という 2
+つのモデルがあり，image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _プロパティダイアログ_ の _上級_
+タブの _動的な色_ セクションの下に表示されるドロップダウンリストで選択できる．
+
+[EXAMPLE]
+====
+
+点 _A_ を左右に動かしたときに虹のすべての色を通過させるには，HSVモードに切り替えて，_彩度_ と _値（明度）_
+を1に設定し，色相を`++x(A)++`にする．
+
+====

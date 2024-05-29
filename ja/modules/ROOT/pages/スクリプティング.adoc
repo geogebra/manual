@@ -1,0 +1,107 @@
+= スクリプティング
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+スクリプトとはコマンドの列であって，それらが順に実行されるようなものである。GeoGebraでは2種類のスクリプト言語をサポートしている。それはGGBScript
+と Javascriptである。スクリプトは以下の場合に実行(triggered)される：
+
+* 特定の対象をクリックしたとき
+* 特定の対象をアップデートした時（その対象の値やプロパティが変更されたとき）
+* ファイルを読み込んだ時（JavaScriptの場合）
+* Javascript のイベントリスナーが発動した時(
+xref:/s_index_php?title=リファレンス：JavaScript_action=edit_redlink=1.adoc[リファレンス：JavaScript] を参照のこと)
+
+ユーザーは，image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/オブジェクトのプロパティ.adoc[オブジェクトのプロパティ]の中の「スクリプティング(Scripting)」というタブを通してスクリプトをセットすることができる。
+
+== GGBScript
+
+GeoGebraコマンドから構成されるようなスクリプトを作ることができます。Inputバーに入力する方法と同じように使えます。スクリプトを実行する(triggering)と，（スクリプトの中のコマンドが）順番に一つ一つ実行されます。
+
+[EXAMPLE]
+====
+
+* _a_ を整数に値をとる xref:/tools/スライダー.adoc[スライダー] で，１から３までの値をとるものとします。
+(したがって1ずつ増やせるようになっています。)
+* `++list1 = {"red", "green", "blue"}++` とタイプしてください
+* 'a _のプロパティを開き，"On Update" スクリプトのところに `++SetColor(a, Element(list1, a))++` とタイプしてください。_
+* スライダーを動かすたびごとに色が変わります。
+
+====
+
+*解説：*
+スライダーが動かされるたびに，アップデート（のキュー）が発生します。ですから，動くたびごとに，スクリプトは呼び出され，リストの中から一つの色が呼び出されて，スライダー
+a の色が変更されます。
+
+[NOTE]
+====
+
+文頭に `++#++` があるとコメント行になります
+
+====
+
+[NOTE]
+====
+
+スクリプトでのみ使用できるコメントもあります。それらは xref:/commands/スクリプティング.adoc[スクリプティング　コマンド]
+のページで見ることができます。
+
+====
+
+== JavaScript
+
+JavaScriptは多くのインターネット技術で用いられているプログラム言語である。GeoGebra
+スクリプトとは違って，JavaScriptではコマンドたちは一列に並んだ順に実行されなければいけないわけではなく，コントロールフロー
+(`++if++`, `++while++`, `++for++`) を用いることができる。一般的なJavaScriptについては，
+https://developer.mozilla.org/en/JavaScript/Guide[developer.mozilla.org]にわかりやすいチュートリアルがある。 .
+GeoGebraでは，作図を変更するような，特別なJavaScriptのメソッドを使用することができる。これらのメソッドはggbAppletという対象(object)に属しており，
+`++ggbApplet.method_name(parameter,..,parameter)++`という方法で呼び出すことができる。これらのメソッドのリストについてはxref:/s_index_php?title=リファレンス：JavaScript_action=edit_redlink=1.adoc[リファレンス：JavaScript]を参照してほしい。
+
+[EXAMPLE]
+====
+
+....
+for(var i =0;i<10;i++) 
+   ggbApplet.evalCommand("A_"+i+"=(random()*10,random()*10)");
+....
+
+このスクリプトは，乱数によって座標が決められた，10個の__A~0~__ から __A~9~__という点を生成することができる。
+
+====
+
+[NOTE]
+====
+
+JavaScript によるスクリプトはいろいろなことができるが，多くの作業はより単純なGeoGebraScriptを用いても実現可能である。
+
+====
+
+=== Global JavaScript
+
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]プロパティのスクリプティングタグにある「グローバルJavaScript」では，（変数ではなく）「関数」を定義することができ，ここで定義した関数は（同じファイル内の）他のスクリプトでも用いることができる。`++ggbOnInit()++`という関数を定義することができ，これは作図が読み込まれたときに自動的に一度実行される。このggbOnInit関数は以下にしめしたような，いくつかのイベントリスナーを登録するのに用いることができる。
+
+[EXAMPLE]
+====
+
+....
+function onAdd(name){
+    alert("Object "+name+" was added.");
+}
+
+function ggbOnInit(){
+    ggbApplet.registerAddListener("onAdd");
+}
+....
+
+まず，onAddという関数を定義してある。ここでは，引数の文字列に依存したメッセージを表示するようにしてある。そのあとで，ggbOnInit関数を用いて，GeoGebraに新しい対象物が定義されるたびにこの関数を呼び出すように設定している。一度作図をリロードすると，ggbOnInit関数が再度実行され，その後はたとえば点Aを追加したならば"Object
+A was added"というメッセージが表示されるだろう。
+
+====
+
+イベントリスナーは，名前の再定義，消去，クリアなどの動作に対して行うことができる。xref:/s_index_php?title=リファレンス：JavaScript_action=edit_redlink=1.adoc[リファレンス：JavaScript]にすべてのリストが説明されている。
+
+[NOTE]
+====
+
+グローバルJavaScriptにおいてggbOnInitの外でggbAppletメソッドを用いると，意図したようには作動しない。というのは，これらは作図が読み込まれる前に実行されるメソッドだからだ。
+
+====

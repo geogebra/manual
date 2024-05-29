@@ -1,0 +1,30 @@
+= Polar コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Polar( <点>, <円錐曲線> )::
+  指定された点の円錐曲線に対する http://en.wikipedia.org/wiki/Polar_curve[極線]を作成する．
+
+[EXAMPLE]
+====
+
+`++Polar((0,2), y = x^2 - 3x + 5)++` 出力：直線 1.5__x__ + 0.5__y__ = 4
+
+====
+
+[NOTE]
+====
+
+こちらも参照： image:24px-Mode_polardiameter.svg.png[Mode polardiameter.svg,width=24,height=24]
+xref:/tools/極線または直径.adoc[極線または直径] ツール.
+
+====
+
+Polar(<直線>, <円錐曲線>)::
+  極線と二次曲線が与えられたとき，その極を求める．
+
+[EXAMPLE]
+====
+
+`++Polar(1.5x+0.5y=4, y = x^2 - 3x + 5)++` 出力：点 _(0, 2)_
+
+====

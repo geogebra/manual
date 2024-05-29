@@ -1,0 +1,24 @@
+= Determinant コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Determinant( <行列> )::
+  行列の行列式を返す．
+
+[EXAMPLE]
+====
+
+`++Determinant({{1, 2}, {3, 4}})++` 出力： _a = -2_.
+
+====
+
+== CAS での書式
+
+Determinant( <行列> )::
+  行列の行列式を返す．行列に未定義の変数が含まれている場合，行列式の公式を返す．
+
+[EXAMPLE]
+====
+
+`++Determinant({{1, a}, {b, 4}})++` 出力： _-a b + 4_.
+
+====

@@ -1,0 +1,26 @@
+= JordanDiagonalization コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+== CAS での書式
+
+JordanDiagonalization( <行列> )::
+  与えられた行列を ( SJS^\{-1} ) の形に分解する．ここで J
+  はhttp://en.wikipedia.org/wiki/ja:%E3%82%B8%E3%83%A7%E3%83%AB%E3%83%80%E3%83%B3%E6%A8%99%E6%BA%96%E5%BD%A2[ジョルダン標準形]である．
+
+[EXAMPLE]
+====
+
+`++JordanDiagonalization({{1, 2}, {3, 4}})++` 出力： stem:[ \left(\begin\{array}\{}\sqrt\{33} - 3&-\sqrt\{33} -
+3\\6&6\\\end\{array}\right) ], stem:[ \left(\begin\{array}\{}\frac\{\sqrt\{33} + 5}\{2}&0\\0&\frac\{-\sqrt\{33} +
+5}\{2}\\\end\{array}\right) ]
+
+====
+
+[NOTE]
+====
+
+* こちらも参照： xref:/commands/Eigenvalues.adoc[Eigenvalues コマンド], xref:/commands/Eigenvectors.adoc[Eigenvectors
+コマンド], xref:/commands/SVD.adoc[SVD コマンド], xref:/commands/Invert.adoc[Invert コマンド],
+xref:/commands/Transpose.adoc[Transpose コマンド]．
+
+====

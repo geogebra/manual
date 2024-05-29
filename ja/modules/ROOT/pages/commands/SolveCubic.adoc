@@ -1,0 +1,25 @@
+= SolveCubic コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+このコマンドは xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View] でのみ利用できます。.
+
+== CAS での書式
+
+SolveCubic( <３次多項式> )::
+  与えられた http://en.wikipedia.org/wiki/ja:%E4%B8%89%E6%AC%A1%E9%96%A2%E6%95%B0[三次多項式]
+  を解き，全ての解のリストを返す．
+
+[EXAMPLE]
+====
+
+`++SolveCubic(x³ - 1)++` 出力： \{ 1, stem:[ \frac\{1}\{2} (\sqrt\{3} i -1) ] , stem:[ \frac\{1}\{2} (\sqrt\{3} (-i) -1)
+] } .
+
+====
+
+[NOTE]
+====
+
+多くの場合，答えは非常に扱いにくいものである．例えば、`++SolveCubic(x³ + x² + x + 2)++`の場合，`++Solve(x³ + x² + x + 2)++`や`++CSolve(x³ + x² + x + 2)++`の方がより適している場合もある．
+
+====

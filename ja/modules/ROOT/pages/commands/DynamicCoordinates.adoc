@@ -1,0 +1,61 @@
+= DynamicCoordinates コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+DynamicCoordinates( <点>, <x座標>, <y座標> )::
+  指定された座標で新しい点を作成する．この点は依存点であるが，移動可能である．新しい点を座標 (x, y)
+  に移動しようとすると，指定された点がそこに移動され，新しい点の座標が再計算される．この機能は，指定された点がxref:/オブジェクトのプロパティ.adoc[表示]
+  されていない場合，そしてマウスでドラッグする場合に最も効果的である．与えられた座標の少なくとも一つは，指定された点に依存している必要がある．
+
+[EXAMPLE]
+====
+
+* 点 _A_ を定義後，
+`++B = DynamicCoordinates(A, round(x(A)), round(y(A)))++`で点Bを作成する．image:20px-Mode_move.svg.png[Mode
+move.svg,width=20,height=20]xref:/tools/移動.adoc[移動_ツール] を使って _B_ を (1.3, 2.1) に移動させようとすると，点 _A_
+は(1.3, 2.1)になり，_B_ は (1,2) に表示される.
+* `++B = DynamicCoordinates(A, x(A), min(y(A), sin(x(A))))++` sin(x)の下に点を作成する．
+
+[NOTE]
+====
+
+`++PointIn(y < sin(x))++` is the easier solution in this case.
+
+====
+
+以下は，点 _C_ の位置を制限する他の方法の例:
+
+* `++A = Point(xAxis)++` ， `++B = Point(xAxis)++`　とする．
+
+xref:/入力バー.adoc[入力バー] に入力する:
+
+`++DynamicCoordinates(B, Min(x(B), x(A)), 0)++` と入力し， [.kcode]#Enter#　キーを押す．
+
+`++SetVisibleInView(B, 1, false)++` と入力し， s [.kcode]#Enter# 　キーを押す．
+
+`++SetLayer(C,  1)++` と入力し， [.kcode]#Enter#　キーを押す．
+
+そうすると，_C_ を _A_ の右に移動させることはできない．
+
+* `++A=(1, 2)++` と定義する．
+
+xref:/入力バー.adoc[入力バー] に入力する:
+
+`++SetVisibleInView(A, 1, false)++` と入力し， [.kcode]#Enter#　キーを押す．
+
+`++B = DynamicCoordinates(A, If(x(A) > 3, 3, If(x(A) < -3, -3, If(x(A) < 0, round(x(A)), x(A)))), If(x(A) < 0, 0.5, If(y(A) > 2, 2, If(y(A) < 0, 0, y(A)))))++`
+と入力し， [.kcode]#Enter#　キーを押す．
+
+* この例では，点 _C_ が近づくと点 _A_ が接着点のように振る舞う．　`++A = (1, 2)++` ， `++B = (2, 3)++` と定義する．
+
+xref:/入力バー.adoc[入力バー] に入力する:
+
+`++SetVisibleInView(B, 1, false)++` と入力し， [.kcode]#Enter# 　キーを押す．
+
+`++C = DynamicCoordinates(B, If(Distance(A, B) < 1, x(A), x(B)), If(Distance(A, B) < 1, y(A), y(B)))++`.
+
+====
+
+DynamicCoordinates( <点>, <x座標>, <y座標>, <z座標> )::
+  指定された座標で新しい点を３D空間に作成する．この点は依存点であるが，移動可能である．新しい点を座標 (x, y, z)
+  に移動しようとすると，指定された点がそこに移動され，新しい点の座標が再計算される．この機能は，指定された点がxref:/オブジェクトのプロパティ.adoc[表示]
+  されていない場合，そしてマウスでドラッグする場合に最も効果的である．与えられた座標の少なくとも一つは，指定された点に依存している必要がある．

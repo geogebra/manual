@@ -1,0 +1,23 @@
+= FitGrowth コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+FitGrowth( <点のリスト> )::
+  リスト内の点に stem:[ a b ^ x ] の形の関数を計算する．（xref:/commands/FitExp.adoc[FitExp][ <点のリスト> ]
+  と非常に似ているが，わずかに異なる）．
+
+[EXAMPLE]
+====
+
+`++FitGrowth({(0, 1), (2, 3), (4, 3), (6, 4)})++` 出力： _1.31_ stem:[ \cdot ] _1.23^x^_.
+
+====
+
+[NOTE]
+====
+
+* `++Fit(list, a*b^x)++`を使用して，直接最小二乗法によるフィッティングを行うことができる．
+* こちらも参照： xref:/commands/Fit.adoc[Fit], xref:/commands/FitExp.adoc[FitExp], xref:/commands/FitLine.adoc[FitLine],
+xref:/commands/FitLineX.adoc[FitLineX], xref:/commands/FitLog.adoc[FitLog],
+xref:/commands/FitLogistic.adoc[FitLogistic], xref:/commands/FitPoly.adoc[FitPoly], xref:/commands/FitPow.adoc[FitPow],
+xref:/commands/FitSin.adoc[FitSin]
+====

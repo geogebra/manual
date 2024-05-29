@@ -1,0 +1,20 @@
+= SetAxesRatio コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+SetAxesRatio( <数値>, <数値> )::
+  アクティブなimage:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/グラフィックスビュー.adoc[グラフィックスビュー] のアスペクト比を変更する．変更後， xref:/直線と軸.adoc[_x_ 軸]
+  上の1X単位が _y_
+  軸上の1Y単位と同じピクセル数に相当するように調整され，点(0,0)は元の座標系での位置を維持する．単位比率が使用された場合，指定された軸は1として固定され，もう一方の軸は調整される．
+
+[EXAMPLE]
+====
+
+* `++SetAxesRatio(1,2)++` _x_ 軸は固定され，_y_ 軸は圧縮される．
+* `++SetAxesRatio(2,1)++` _y_ 軸は固定され，_x_ 軸は圧縮される．.
+
+====
+
+SetAxesRatio( <数値>, <数値>, <数値> )::
+  上記の構文と似ているが， image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra
+  3Dgraphics.svg,width=16,height=16] xref:/空間図形ビュー.adoc[空間図形ビュー]で動作する．

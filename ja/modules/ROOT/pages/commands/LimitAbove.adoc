@@ -1,0 +1,57 @@
+= LimitAbove コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+LimitAbove( <関数>, <値> )::
+  主関数変数が与えられた値に右側から近づくときの関数のhttp://en.wikipedia.org/wiki/ja:%E7%89%87%E5%81%B4%E6%A5%B5%E9%99%90[片側極限]を求める．
+
+[EXAMPLE]
+====
+
+`++LimitAbove(1 / x, 0)++` 出力： _stem:[\infty]_ .
+
+====
+
+[NOTE]
+====
+
+すべての極限が GeoGebra で計算できるわけではないので，そのような場合は 未定義 が返される（正しい結果が 未定義
+の場合も同様）．
+
+====
+
+== CAS での書式
+
+LimitAbove( <式>, <値> )::
+  主関数変数が与えられた値に右側から近づくときの関数の極限を求める．
+LimitAbove( <式>, <変数>, <値> )::
+  与えられた変数が与えられた値に右側から近づくときの多変数関数の極限を求める．
+
+[EXAMPLE]
+====
+
+`++LimitAbove(1 / a, a, 0)++` 出力 stem:[\infty] .
+
+====
+
+[EXAMPLE]
+====
+
+`++LimitAbove(1 / x, 0)++` 出力 stem:[\infty] .
+
+====
+
+[NOTE]
+====
+
+すべての極限が GeoGebra で計算できるわけではないので，そのような場合は _?_ が返される（正しい結果が 未定義
+の場合も同様）．
+
+====
+
+[NOTE]
+====
+
+こちらのコマンドも参照： xref:/commands/Limit.adoc[Limit コマンド] ， xref:/commands/LimitBelow.adoc[LimitBelow
+コマンド].
+
+====

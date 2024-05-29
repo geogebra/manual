@@ -1,0 +1,26 @@
+= LeftSum コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+LeftSum( <関数>, <xの開始値>, <xの終了値>, <長方形の数> )::
+  区間内の関数の左和を _n_ 個の長方形で（区間を__n__等分して，各小区間の左端点での関数値と小区間の幅の積の総和）計算する
+  ．
+
+[EXAMPLE]
+====
+
+`++LeftSum(x^2 + 1, 0, 2, 4)++` 出力： _a_ = 3.75
+
+====
+
+[NOTE]
+====
+
+*Notes:*
+
+* このコマンドは左和の長方形も描画する．
+* このコマンドは視覚的な補助として設計されているため，長方形の数が大きすぎると正確な値が得られない．
+* こちらのコマンドも参照： xref:/commands/RectangleSum.adoc[RectangleSum],
+xref:/commands/TrapezoidalSum.adoc[TrapezoidalSum], xref:/commands/LowerSum.adoc[LowerSum],
+xref:/commands/UpperSum.adoc[UpperSum].
+
+====

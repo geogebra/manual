@@ -1,0 +1,26 @@
+= Zipf コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Zipf( <要素数>, <指数> )::
+  http://en.wikipedia.org/wiki/ja:%E3%82%B8%E3%83%83%E3%83%97%E3%81%AE%E6%B3%95%E5%89%87[ジップ]分布の棒グラフを返す．
+  パラメータ:
+  _要素数_: 要素の数 (順位を調べる要素の数)
+  _指数_: 分布を特徴付ける指数
+Zipf( <要素数>, <指数> , <累積の真偽値> )::
+  _累積の真偽値_ が _false_ の場合，ジップ分布の棒グラフを返す．
+  _累積の真偽値_ が _true_ の場合，累積ジップ分布のグラフを返す．
+  最初の２つのパラメータは上記と同じ．
+Zipf( <要素数>, <指数> , <変数値 v>, <累積の真偽値> )::
+  X をジップ分布の確率変数とする．
+  _累積の真偽値_ が _false_ の場合， P( X = _v_) を返す．
+  _累積の真偽値_ が _true_ の場合， P( X ≤ _v_) を返す．
+  最初の２つのパラメータは上記と同じ．
+
+[EXAMPLE]
+====
+
+`++Zipf(10, 1 , 5, false)++` 出力： _0.07_ （ image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] _数式ビュー_）， _stem:[\frac\{504}\{7381}]_ （ image:16px-Menu_view_cas.svg.png[Menu
+view cas.svg,width=16,height=16] _CASビュー_）．
+
+====

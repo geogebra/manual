@@ -1,0 +1,61 @@
+= PerpendicularLine コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+PerpendicularLine( <点>, <直線> )::
+  指定された点を通り，その点から指定された直線に垂直な直線を作成する．
+PerpendicularLine( <点>, <線分> )::
+  指定された点を通り，与えられた線分に垂直な直線を作成する．
+PerpendicularLine( <点>, <ベクトル> )::
+  指定された点を通り，与えられたベクトルに垂直な直線を作成する．
+
+[EXAMPLE]
+====
+
+ベクトルを `++u = Vector((5, 3), (1, 1))++` ，点 `++A = (-2, 0)++` をするとき， `++PerpendicularLine(A, u)++` は直線 _c:
+2x + y = -4_ を返す．
+
+====
+
+[EXAMPLE]
+====
+
+直線 _c_ を2点 _A_ = (-3, 3) ， _B_ = (0, 1) を通る線分とするとき， `++PerpendicularLine(A, c)++` は直線 __d: -3x + 2y =
+15__を返す．
+
+====
+
+[EXAMPLE]
+====
+
+直線の方程式を `++c: -3x + 4y = -6++`，点`++A = (-2, -3)++` とするとき， `++PerpendicularLine(A, c)++` は直線 _d_:
+-4__x__ - 3__y__ = 17 を返す．
+
+====
+
+[NOTE]
+====
+
+3Dオブジェクトに対しては，このコマンドに第3の引数が加わり，挙動が指定される．2Dビューがアクティブな場合は，第3引数として平面z=0が用いられ，3Dビューがアクティブな場合は，代わりに空間が用いられる．詳細は，下記の
+PerpendicularLine( <Point>, <Line>, <Context> ) を参照のこと．
+
+====
+
+PerpendicularLine( <点>, <平面> )::
+  指定された点を通り，与えられた平面に垂直な直線を作成する．
+PerpendicularLine( <直線> , <直線> )::
+  2直線の交点を通り，与えられた直線に垂直な直線を作成する．(3D)
+PerpendicularLine( <点>, <方向>, <方向> )::
+  指定された点を通り，与えられた2つの方向（直線またはベクトル）に垂直な直線を作成する．
+PerpendicularLine( <点>, <直線>, <Context> )::
+  点を通る直線に対して，文脈(Context)に応じた垂線を作成する．
+  * PerpendicularLine( <点>, <直線>, <平面> ) ：点を通り平面に平行な，与えられた直線に垂直な直線を作成する．
+  * PerpendicularLine( <点>, <直線>, スペース )
+  点を通って与えられた直線に垂直な直線を作成する．この2つの直線は交点を持つように決定される．３Dにおいて点が直線上にある場合，このコマンドは未定義となる．
+
+[NOTE]
+====
+
+こちらも参照： image:22px-Mode_linebisector.svg.png[Mode linebisector.svg,width=22,height=22]
+xref:/tools/垂線.adoc[垂線] ツール．
+
+====

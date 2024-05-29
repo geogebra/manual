@@ -1,0 +1,32 @@
+= Unique コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Unique( <リスト> )::
+  指定されたリストの要素を重複なしに昇順で返す．数値リストでもテキストリストでも使用できる．
+
+[EXAMPLE]
+====
+
+* `++Unique({1, 2, 4, 1, 4})++` 出力： _\{1, 2, 4}_.
+* `++Unique({"a", "b", "Hello", "Hello"})++` 出力： _\{"'Hello", "a", "b"}_.
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/Frequency.adoc[Frequency コマンド].
+
+====
+
+== CAS での書式
+
+Unique( <リスト> )::
+  指定されたリストの各要素が一度だけ出現するリストを返す．
+
+[EXAMPLE]
+====
+
+`++Unique({1, x, x, 1, a})++` 出力： _\{1, x, a}_.
+
+====

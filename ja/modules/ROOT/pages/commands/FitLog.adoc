@@ -1,0 +1,35 @@
+= FitLog コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+FitLog( <点のリスト> )::
+  対数回帰曲線を計算する．
+
+[EXAMPLE]
+====
+
+`++FitLog({(ℯ, 1), (ℯ^2, 4)})++` 出力： _-2 + 3 ln(x)_.
+
+====
+
+== CAS での書式
+
+FitLog( <点のリスト> )::
+  対数回帰曲線を計算する．
+
+[EXAMPLE]
+====
+
+`++FitLog({(ℯ, 1), (ℯ^2, 4)})++` 出力： _3 ln(x) - 2_.
+
+====
+
+[NOTE]
+====
+
+* オイラー数 ℯ は [.kcode]#ALT # + [.kcode]# e# で入力できる．
+* こちらも参照： xref:/commands/FitExp.adoc[FitExp コマンド], xref:/commands/FitPoly.adoc[FitPoly コマンド],
+xref:/commands/FitPow.adoc[FitPow コマンド], xref:/commands/FitSin.adoc[FitSin コマンド] コマンド．
+* 大きな数字や小さな数字を扱う場合は，より正確な結果を得るために正規化を検討する必要がある．こちらのコマンド参照：
+xref:/commands/Normalize.adoc[Normalize コマンド]．
+
+====

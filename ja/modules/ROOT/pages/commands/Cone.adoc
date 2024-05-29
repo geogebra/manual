@@ -1,0 +1,26 @@
+= Cone コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Cone( <円>, <高さ> )::
+  与えられた底辺と高さを持つ円錐を作成する．
+Cone( <点>, <点>, <半径> )::
+  与えられた点（1点目が円の中心，2点目が頂点）と半径を用いて，円錐を作成する．
+Cone( <点>, <ベクトル>, <角度α> )::
+  与えられた点を頂点とし，与えられたベクトルに平行な対称軸と，開き角が 2α の無限円錐を作成する．
+
+[NOTE]
+====
+
+角度α ≥ stem:[\frac\{\pi}\{2}]の場合はこのコマンドは，_未定義_ を返す．
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/InfiniteCone.adoc[InfiniteCone] コマンド， image:24px-Mode_cone.svg.png[Mode
+cone.svg,width=24,height=24] xref:/tools/円錐.adoc[円錐] ツール ， image:24px-Mode_conify.svg.png[Mode
+conify.svg,width=24,height=24] xref:/tools/角錐または円錐に押し出す.adoc[角錐または円錐に押し出す]
+ツール，これは．円をドラッグまたは選択し，高さを入力することで直円錐を作成するものである．
+
+====

@@ -1,0 +1,25 @@
+= AreCongruent コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+AreCongruent( <オブジェクト>, <オブジェクト> )::
+  オブジェクトが合同かどうかを判定する．
+
+通常，このコマンドは結果を数値で計算する．この動作は xref:/commands/Prove.adoc[Prove]コマンドで変更できる．
+
+[EXAMPLE]
+====
+
+`++AreCongruent(Circle((0, 0),1),x^2+y^2=1)++` と `++AreCongruent(Circle((1, 1),1),x^2+y^2=1)++` の出力：
+_true_，２つの縁は同じ半径をもつから合同である．
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/AreEqual.adoc[AreEqual], xref:/commands/AreCollinear.adoc[AreCollinear],
+xref:/commands/AreConcyclic.adoc[AreConcyclic], xref:/commands/AreConcurrent.adoc[AreConcurrent],
+xref:/commands/ArePerpendicular.adoc[ArePerpendicular], xref:/commands/AreParallel.adoc[AreParallel],
+xref:/commands/IsTangent.adoc[IsTangent] コマンド．
+
+====

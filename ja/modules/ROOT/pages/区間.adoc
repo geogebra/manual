@@ -1,0 +1,25 @@
+= 区間
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+区間は上限と下限の間にある数値の集合である．区間を作成するには，xref:/入力バー.adoc[入力バー]に例えば `++2 < x < 3++`
+と入力する．この例の区間は開いている．閉じた（`++2 ≤ x ≤ 3++`）区間や半閉じた（`++2 ≤ x < 3++`）区間を定義することもできる．
+
+[NOTE]
+====
+
+こちらも参照： xref:/真偽値.adoc[真偽値]．
+
+====
+
+数値 _c_ が区間 _r_ に属しているかを判定するには，入力バーに
+`++r(c)++`と入力する．結果は真偽値として得られる．区間はxref:/不等式.adoc[不等式]で表す．
+
+== 区間のコマンド
+
+* 下限 _a_ と上限 _b_
+を持つ区間におけるxref:/commands/Min.adoc[Min]（区間），xref:/commands/Max.adoc[Max](区間），xref:/commands/Midpoint.adoc[Midpoint](区間）は，それぞれ数値
+_a_，_b_，および
+stem:[\frac\{a+b}2]を返す．結果は，区間が開区間であるか，閉区間であるか，半開区間であるかには依存しない．
+* xref:/commands/Point.adoc[Point]（区間）
+，x座標が区間に属し，y座標が0である移動可能なxref:/点とベクトル.adoc[点]を返す．
+* xref:/commands/PointIn.adoc[PointIn]（区間） は，x座標が区間に属し，y座標を任意に変更できる移動可能な点を返す．

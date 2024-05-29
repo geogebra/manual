@@ -1,0 +1,33 @@
+= Trilinear コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Trilinear( <点>, <点>, <点>, <数値>, <数値>, <数値 )::
+  与えられた三角形に対して，与えられた数を http://en.wikipedia.org/wiki/Trilinear_coordinates[三線座標（trilinear
+  coordinates）]として持つ点を生成する．
+
+== いくつかの例
+
+[cols=",,,",options="header",]
+|===
+|点 |<数値> |<数値> |<数値>
+|A |1 |0 |0
+
+|B |0 |1 |0
+
+|C |0 |0 |1
+
+|外心 |cos(stem:[\hat\{A}]) |cos(stem:[\hat\{B}]) |cos(stem:[\hat\{C}])
+
+|内心 |1 |1 |1
+
+|[BC]で接する傍接円の中心 |-1 |1 |1
+
+|[AC]で接する傍接円の中心 |1 |-1 |1
+
+|[AB]で接する傍接円の中心 |1 |1 |-1
+
+|重心 |stem:[\frac\{1}\{a}] |stem:[\frac\{1}\{b}] |stem:[\frac\{1}\{c}]
+
+|垂心 |cos(stem:[\hat\{B}]) cos(stem:[\hat\{C}]) |cos(stem:[\hat\{A}]) cos(stem:[\hat\{C}])
+|cos(stem:[\hat\{A}])cos(stem:[\hat\{B}])
+|===

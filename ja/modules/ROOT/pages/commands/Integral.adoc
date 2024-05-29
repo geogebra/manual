@@ -1,0 +1,69 @@
+= Integral コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Integral( <関数> )::
+  主変数に関して不定積分を行う
+Integral( <関数>, <変数> )::
+  与えられた変数に関する偏積分を返す．
+Integral( <関数>, <xの開始値e>, <xの終了値> )::
+  主変数に関して、区間 _[xの開始値, xの終了値]_ 上での定積分を求める.
+Integral( <関数>, <xの開始値>, <xの終了値>, <Boolean Evaluate> )::
+  主変数に関して，区間　_[xの開始値, xの終了値]_　における関数の定積分を求め，関連する領域に色を塗る．_Evaluate_ が
+  _true_ の場合は積分値は計算されるが，_Evaluate_ が__false__ の場合は積分値は計算されない．
+
+[EXAMPLE]
+====
+
+`++Integral(x³+3x y, x)++` 出力： _stem:[\frac\{1}\{4}x^4] + stem:[\frac\{3}\{2}] x² y_ .
+
+====
+
+[EXAMPLE]
+====
+
+`++Integral(x^3)++` 出力： stem:[x^4 \cdot 0.25].
+
+====
+
+[NOTE]
+====
+
+このコマンドは、関数 _f" のグラフと "x" 軸との間の領域に色を塗る．_
+
+====
+
+== CAS での書式
+
+　 image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View] では，未定義の変数も入力として許可される．
+
+[EXAMPLE]
+====
+
+`++Integral(cos(a t), t)++` 出力： stem:[\frac\{sin(a t)}\{a} + c_1].
+
+====
+
+さらに、以下のコマンドはimage:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] __CAS
+View__でのみ使用可能である：
+
+Integral( <関数>, <変数>, <xの開始値>, <xの終了値> )::
+  与えられた変数に関して、区間 _[xの開始値, xの終了値]_ 上での定積分を求める.
+
+[EXAMPLE]
+====
+
+`++Integral(cos(t), t, a, b)++` yields stem:[- sin(a) + sin(b)].
+
+====
+
+[NOTE]
+====
+
+* 答えが連続であるとは限らない．例えば、`++Integral(floor(x))++`は関数⌊x⌋の積分は連続ではない．このような場合，例えば
+`++F(x)=(floor(x)² - floor(x))/2 + x floor(x) - floor(x)²++` のような独自の関数を定義することができる． すなわち，関数
+stem:[\frac\{⌊x⌋² - ⌊x⌋}\{2} + x \cdot⌊x⌋ - ⌊x⌋²]．
+
+* GeoGebraの一部のバージョンでは数値アルゴリズムが使用されているため，漸近線に向かって積分すること，例えば`++Integral(ln(x), 0, 1)++`のような計算は実行できない．このような場合は，`++Integral(ln(x), 0, 1, false)++`を検討する．
+
+====

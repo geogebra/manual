@@ -1,0 +1,14 @@
+= SumSquaredErrors コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+SumSquaredErrors( <点のリスト>, <関数> )::
+  リスト内の点の _y_ 値と _x_ 値の関数値との二乗誤差和（SSE）を計算する．
+
+[EXAMPLE]
+====
+
+点のリスト`++L={(1, 2), (3, 5),(2, 2), (5, 2), (5, 5)}++`があり，`++f(x)=FitPoly(L,1)++`，`++g(x)=FitPoly(L,2)++`
+とした場合，`++SumSquaredErrors(L,f)++`は _9_，`++SumSquaredErrors(L,g)++`は _6.99_
+をそれぞれ与える．ガウスの最小二乗法の原則に従えば，二乗誤差の和が小さい _g(x)_ のほうが最良の適合を示すといえる．
+
+====

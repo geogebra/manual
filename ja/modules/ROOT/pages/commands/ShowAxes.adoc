@@ -1,0 +1,37 @@
+= ShowAxes コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+ShowAxes( )::
+  アクティブなビューの軸を表示する．
+ShowAxes( <真偽値> )::
+  アクティブなビューの軸の 表示/非表示 を切り替える．
+
+[EXAMPLE]
+====
+
+* `++ShowAxes(true)++` アクティブなビューの軸を表示する．
+* `++ShowAxes(false)++` アクティブなビューの軸を非表示にする．
+
+====
+
+ShowAxes( <ビュー>, <真偽値> )::
+  1または2（空間図形ビューの場合は3）で指定されたimage:16px-Menu_view_graphics.svg.png[Menu view
+  graphics.svg,width=16,height=16] _グラフィックスビュー_ の軸の 表示/非表示 を切り替える．
+
+[EXAMPLE]
+====
+
+* `++ShowAxes(1, true)++` は， image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+_グラフィックスビュー_ の軸を表示させる．
+* `++ShowAxes(2, false)++` は，image:16px-Menu_view_graphics2.svg.png[Menu view graphics2.svg,width=16,height=16]
+_グラフィックス2 ビュー_ の軸を非表示にする．
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/ShowGrid.adoc[ShowGrid コマンド]． 1つの軸を表示/非表示するには
+xref:/commands/SetVisibleInView.adoc[SetVisibleInView コマンド] を利用する．
+
+====

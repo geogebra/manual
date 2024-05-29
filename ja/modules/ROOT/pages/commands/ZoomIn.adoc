@@ -1,0 +1,89 @@
+= ZoomIn コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+ZoomIn( )::
+  image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/グラフィックスビュー.adoc[グラフィックスビュー] をデフォルトの初期位置に戻す．
+
+ZoomIn( <倍率> )::
+  指定された倍率で現在のズームに対してimage:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/グラフィックスビュー.adoc[グラフィックスビュー] をズームインする．ズームの中心点として画面の中心が使用される．
+
+[EXAMPLE]
+====
+
+`++ZoomIn(1)++` はビューを変更ないが，トレースを削除する．
+
+====
+
+`++ZoomIn(2)++` はビューを２倍に拡大する．
+
+`++ZoomIn(0.5)++` iは `++ZoomOut(2)++` に相当する．（ビューを1/2に縮小する．）
+
+ZoomIn( <倍率>, <中心点> )::
+  指定された倍率でimage:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/グラフィックスビュー.adoc[グラフィックスビュー]
+  を現在のズームに対してズームインする．2番目のパラメータはズームの中心点を指定する．
+
+[EXAMPLE]
+====
+
+`++ZoomIn(2, (0, 0))++`
+
+====
+
+ZoomIn( <x最小>, <y最小>, <x最大>, <y最大> )::
+  image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/グラフィックスビュー.adoc[グラフィックスビュー] を，頂点 (x最小, y最小) と (x最大, y最大)
+  で定義される矩形にズームする．
+
+[EXAMPLE]
+====
+
+_a_ スライダーとするとき，`++ZoomIn(-a, -a, a, a)++`を使うと，ビューのズームがスライダー _a_ の値に応じて変化する．
+
+====
+
+[EXAMPLE]
+====
+
+`++ZoomIn(0, 1, 5, 6)++`
+
+====
+
+[NOTE]
+====
+
+これらのパラメータが依存しているかラベルが設定されている場合，ビューの境界は動的になる．この挙動を避けるためには，xref:/commands/CopyFreeObject.adoc[CopyFreeObject
+コマンド]を使用する．
+
+====
+
+ZoomIn( <x最小>, <y最小>, <z最小>, <x最大>, <y最大>, <z最大> )::
+  3Dグラフィックスビューを，頂点 (x最小, y最小, z最小) と (x最大, y最大, z最大) で定義される立方体にズームする．
+
+[EXAMPLE]
+====
+
+`++ZoomIn(-5, -5, -5, 5, 5, 5)++`
+
+====
+
+[NOTE]
+====
+
+T2D版の動的な挙動はサポートされていない．
+
+====
+
+[NOTE]
+====
+
+*Notes:*
+
+* 複数の image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/グラフィックスビュー.adoc[グラフィックスビュー]が存在する場合，アクティブなものにコマンドが適用される．
+* こちらも参照： xref:/commands/ZoomOut.adoc[ZoomOut], xref:/commands/SetActiveView.adoc[SetActiveView],
+xref:/commands/Pan.adoc[Pan] コマンド．
+
+====

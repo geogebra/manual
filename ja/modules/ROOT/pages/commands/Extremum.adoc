@@ -1,0 +1,56 @@
+= Extremum コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Extremum( <多項式> )::
+  多項式関数の極値をすべて，関数グラフ上の点の形で返す．
+Extremum( <関数>, <xの開始値>, <xの終了値> )::
+  開区間( <開始x-Value>, <終了x-Value> )における関数の極値を(数値的に)計算する．
+
+[EXAMPLE]
+====
+
+`++Extremum((x⁴ - 3x³ - 4x² + 4) / 2, 0, 5)++` は，与えられた区間で極値__(2.93, -16.05)__を作成し，それを
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/グラフィックスビュー.adoc[グラフィックスビュー]に表示する．
+
+====
+
+[EXAMPLE]
+====
+
+`++Extremum(x³ + 3x² - 2x + 1)++` は、極値__(0.29, 0.70)__ と _(-2.29, 9.30)_ を作成し、それらを
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/グラフィックスビュー.adoc[グラフィックスビュー]に表示する．
+
+====
+
+[NOTE]
+====
+
+関数は[ <の開始値>, <xの終了値>
+]の区間で連続である必要がある．そうでなければ，不連続点の近くで誤った極値が算出されるかもしれない．
+
+====
+
+== CAS での書式
+
+Extremum( <関数> )::
+  関数の極値をすべて返すことを試みる．（関数は連続で微分可能である必要がある．）
+
+[EXAMPLE]
+====
+
+`++Extremum(x³ + 3x² - 2x + 1)++` は、点のリストを作成し，それらをプロットする． _stem:[ \left\\{
+\left(\frac\{-\sqrt\{15} - 3}\{3}, \frac\{10 \; \sqrt\{15} + 45}\{9} \right), \left(\frac\{\sqrt\{15} - 3}\{3},
+\frac\{-10 \; \sqrt\{15} + 45}\{9} \right) \right\}]_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Assume(0 < x < 20, Extremum(15/2 * sin( 2/15*pi * x) + 56/5))++` 与えられた範囲の極値を与える． _stem:[ \left\\{
+\left(\frac\{15}\{4}, \frac\{187}\{10} \right), \left(\frac\{45}\{4}, \frac\{37}\{10} \right), \left(\frac\{75}\{4},
+\frac\{187}\{10} \right) \right\} ]_.
+
+====

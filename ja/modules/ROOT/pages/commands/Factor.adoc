@@ -1,0 +1,58 @@
+= Factor コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Factor[ <多項式> ]::
+  多項式を因数分解する．
+
+[EXAMPLE]
+====
+
+`++Factor(x^2 + x - 6)++` 出力： _(x - 2) (x + 3)_.
+
+====
+
+[NOTE]
+====
+
+このコマンドはCAS(Computer Algebra System)をロードする必要があるため，コンピュータによっては動作が遅くなることがある．
+
+====
+
+== CASでの書式
+
+Factor[ <多項式> ]
+
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CASビュー.adoc[CASビュー]
+では以下の書式も使用できる:
+
+Factor( <数> )::
+  数を素因数分解する
+  ;Factor[ <式>, <変数> ]
+
+[EXAMPLE]
+====
+
+`++Factor(360)++` 出力： _2³ 3² 5_.
+
+====
+
+Factor( <式>, <変数> )::
+  与えられた変数について式を因数分解する．
+
+[EXAMPLE]
+====
+
+* `++Factor(x^2 - y^2, x)++` 出力： _(x - y) (x + y)_, _x^2^ - y^2^_ の__x__についての因数分解,
+* `++Factor(x^2 - y^2, y)++` 出力： _-(y - x) (y + x)_, _x^2^ - y^2^_ の__y__についての因数分解．
+
+====
+
+[NOTE]
+====
+
+このコマンドはhttp://en.wikipedia.org/wiki/Rational_number[有理数]の範囲で因数分解します．
+実数の範囲で因数分解するときは xref:/commands/IFactor.adoc[IFactor
+コマンド]，複素数の範囲で因数分解するときはxref:/commands/CFactor.adoc[CFactor コマンド] または
+xref:/commands/CIFactor.adoc[CIFactor コマンド]をそれぞれ参照．
+
+====

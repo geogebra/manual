@@ -1,0 +1,36 @@
+= ShowGrid コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+ShowGrid( )::
+  アクティブなビューのグリッドを表示する．
+ShowGrid( <真偽値> )::
+  アクティブなビューのグリッドの 表示/非表示 を切り替える．
+
+[EXAMPLE]
+====
+
+* `++ShowGrid(true)++` アクティブなビューのグリッドを表示する．
+* `++ShowGrid(false)++` アクティブなビューのグリッドを非表示にする．
+
+====
+
+ShowGrid( <ビュー>, <真偽値> )::
+  1または2（空間図形ビューの場合は3）で指定されたimage:16px-Menu_view_graphics.svg.png[Menu view
+  graphics.svg,width=16,height=16] _グラフィックスビュー_ のグリッドの 表示/非表示 を切り替える．
+
+[EXAMPLE]
+====
+
+* `++ShowGrid(1, true)++` は， image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+_グラフィックスビュー_ のグリッドを表示させる．
+* `++ShowGrid(2, false)++` は， image:16px-Menu_view_graphics2.svg.png[Menu view graphics2.svg,width=16,height=16]
+_グラフィックス2 ビュー_ のグリッドを非表示にする．
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/ShowAxes.adoc[ShowAxes コマンド]．
+
+====

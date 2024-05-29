@@ -1,0 +1,53 @@
+= Limit コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Limit( <関数>, <値> )::
+  主関数変数が与えられた値に近づくときの関数のhttp://en.wikipedia.org/wiki/ja:%E9%96%A2%E6%95%B0%E3%81%AE%E6%A5%B5%E9%99%90[極限]を求める．(このとき，極限が無限大になる可能性もある）．
+
+[EXAMPLE]
+====
+
+`++Limit((x^2 + x) /  x^2, +∞)++` 出力： _1_.
+
+====
+
+[NOTE]
+====
+
+すべての極限が GeoGebra で計算できるわけではないので，そのような場合は _未定義_ が返される（正しい結果が 未定義
+の場合も同様）．
+
+====
+
+== CAS での書式
+
+Limit( <式>, <値> )::
+  主関数変数が与えられた値に近づくときの関数の極限を求める．
+Limit( <式>, <変数>, <値> )::
+  与えられた変数が与えられた値に近づくときの関数の極限を求める．
+
+[EXAMPLE]
+====
+
+`++Limit(a sin(v) / v, v, 0)++` 出力 _a_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Limit(a sin(x) / x, 0)++` 出力： _a_.
+
+====
+
+[NOTE]
+====
+
+* すべての極限が GeoGebra で計算できるわけではないので，そのような場合は _?_ が返される（正しい結果が 未定義
+の場合も同様）．
+* xref:/commands/If.adoc[部分的に定義された関数] の極限を求めるには，xref:/commands/LimitAbove.adoc[LimitAbove]や
+xref:/commands/LimitBelow.adoc[LimitBelow]というコマンドを使う必要がある．例：`++LimitAbove(If(x>1, x^2, -2x), 1)++`
+* こちらのコマンドも参照： xref:/commands/Asymptote.adoc[Asymptote コマンド], xref:/commands/LimitAbove.adoc[LimitAbove
+コマンド] and xref:/commands/LimitBelow.adoc[LimitBelow コマンド].
+
+====

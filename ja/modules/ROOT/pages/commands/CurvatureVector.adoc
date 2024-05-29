@@ -1,0 +1,33 @@
+= CurvatureVector コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+CurvatureVector( <点>, <関数> )::
+  与えられた点における関数の曲率ベクトルを計算する
+CurvatureVector( <点>, <曲線> )::
+  与えられた点における曲線の曲率ベクトルを計算する．
+
+[EXAMPLE]
+====
+
+`++CurvatureVector((0, 0), Curve(cos(t), sin(2t), t, 0, π))++` 出力：ベクトル _(0, 0)_.
+
+====
+
+[EXAMPLE]
+====
+
+`++CurvatureVector((0, 0), x^2)++` 出力：ベクトル _(0, 2)_.
+
+====
+
+CurvatureVector( <点>, <オブジェクト> )::
+  与えられた点におけるオブジェクト（関数，曲線，円錐曲線）の曲率ベクトルを計算する．
+
+[EXAMPLE]
+====
+
+* `++CurvatureVector((0, 0), x^2)++` 出力：ベクトル _(0, 2)_
+* `++CurvatureVector((0, 0), Curve(cos(t), sin(2t), t, 0, π))++` 出力：ベクトル _(0, 0)_
+* `++CurvatureVector((-1, 0), Conic({1, 1, 1, 2, 2, 3}))++` 出力：ベクトル _(0, -2)_
+
+====

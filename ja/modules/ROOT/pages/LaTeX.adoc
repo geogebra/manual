@@ -1,0 +1,74 @@
+= LaTeX
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+GeoGebra では数式も書くことができます。そのためには、image:24px-Mode_text.svg.png[Mode text.svg,width=24,height=24]
+xref:/tools/テキストの挿入.adoc[テキストの挿入] のダイアログウィンドウで LaTeX数式のチェックボックスをチェックし，数式を
+LaTeX 構文で入力します．
+
+[NOTE]
+====
+
+LaTeXの数式とテキストをテキストを含むテキストを作成するには，__LaTex数式__を起動した状態で，テキストを「text\{}」の中に入力します．
+
+====
+
+[EXAMPLE]
+====
+
+`++\text{斜辺の長さは } \sqrt{ 2 }++`
+
+====
+
+[NOTE]
+====
+
+xref:/commands/FormulaText.adoc[FormulaText コマンド] を使って，数式を引用符で囲んで入力することもできます．
+
+====
+
+[EXAMPLE]
+====
+
+`++FormulaText["\text{斜辺の長さは } \sqrt{ 2 }"]++`
+
+====
+
+\{\{Note|image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+xref:/数式ビュー.adoc[数式ビュー]にあるオブジェクトをドラッグし，image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16]xref:/グラフィックスビュー.adoc[グラフィックスビュー]にドロップするだけで，__数式ビュー__にあるオブジェクトが値を含んだLaTeXテキストが表示されます．
+
+一般的な数式記号の構文は、LaTeX チェックボックスの隣のドロップダウンメニューから（GeoGebra
+デスクトップ版の場合），または入力フィールドの下の__詳細__メニューから（GeoGebra
+ウェブおよびタブレットアプリ版の場合）選ぶことができます．すると、対応する LaTeX
+コードがテキストフィールドに挿入され，カーソルが中括弧の中に置かれます．_シンボル_ の
+ドロップダウンメニューには，一般的な数学記号，ギリシャ文字，演算子などが含まれています．数式に動的なテキストを入れたい場合は，
+image:16px-GeoGebra_48.png[GeoGebra
+48.png,width=16,height=16]オブジェクトのドロップダウンリストから関連するオブジェクトを選び，GeoGebra
+に値を含むテキストを表示させます．
+
+以下の表に、いくつかの重要なLaTeXコマンドの説明があります。詳細はLaTeXのドキュメントを参照してください。
+
+[cols=",",options="header",]
+|===
+|LaTeX 入力 |出力
+|a \cdot b |stem:[a \cdot b]
+|\frac\{a}\{b} |stem:[\frac\{a}\{b}]
+|\sqrt\{x} |stem:[\sqrt\{x}]
+|\sqrt[n]\{x} |stem:[\sqrt[n]\{x}]
+|\vec\{v} |stem:[\vec\{v}]
+|\overline\{AB} |stem:[\overline\{AB}]
+|x^\{2} |stem:[x^\{2}]
+|a_\{1} |stem:[a_\{1}]
+|\sin\alpha + \cos\beta |stem:[\sin\alpha + \cos\beta]
+|\int_\{a}^\{b} x dx |stem:[\int_\{a}^\{b} x dx]
+|\sum_\{i=1}^\{n} i^2 |stem:[\sum_\{i=1}^\{n} i^2]
+|===
+
+構文を使って，きれいに整形された化学式を入力できます`++\ce, \mathchoice, \mskip, \lower, \raise, \mkern++`．
+
+詳しくは https://mhchem.github.io/MathJax-mhchem/[こちらの文書] をご覧ください．
+
+== 関連記事
+
+* http://folk.uio.no/knutm/mmcs2008/lshort2e.pdf[The Not So Short Introduction To LaTeX]
+* http://www.tug.org[TeX user group]

@@ -1,0 +1,34 @@
+= Denominator コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Denominator( <関数> )::
+  関数の分母を返す．
+Denominator( <数> )::
+  有理数に対してはその分母を返す．このコマンドは分数を約分したときに得られる最も簡単な分母に限られる．無理数に対しては、そのxref:/commands/ContinuedFraction.adoc[連分数展開]の分母を返す．
+
+[EXAMPLE]
+====
+
+`++Denominator(5 / (x^2 + 2))++`出力： _f(x)=(x^2^ + 2)_.
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/Numerator.adoc[Numerator コマンド] ， xref:/commands/FractionText.adoc[FractionText
+コマンド].
+
+====
+
+== CAS での書式
+
+Denominator( <式> )::
+  有理数または式の分母を返す．
+
+[EXAMPLE]
+====
+
+`++Denominator(2 / 3 + 1 / 15)++` 出力： _15_.
+
+====

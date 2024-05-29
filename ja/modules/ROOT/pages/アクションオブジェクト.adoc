@@ -1,0 +1,63 @@
+= アクションオブジェクト
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+xref:/スクリプティング.adoc[スクリプト]を使ったインタラクティブなワークシートには，アクションオブジェクトが便利である．
+それには4つのタイプがある：
+
+== チェックボックス
+
+チェックボックスは，xref:/真偽値.adoc[真偽値]のグラフィカルな表現である．詳細はimage:22px-Mode_showcheckbox.svg.png[Mode
+showcheckbox.svg,width=22,height=22]
+xref:/tools/表示／非表示のチェックボックス.adoc[表示／非表示のチェックボックス_ツール]を参照．チェックボックスは前述のツールまたはxref:/commands/Checkbox.adoc[Checkbox
+コマンド]を使って作成できる．
+
+== 入力ボックス
+
+入力ボックスはxref:/スクリプティング.adoc[スクリプト]のテキスト入力として機能する．スクリプトは，入力ボックス内のテキストを変更し，[.kcode]##Enter##を押すか，入力ボックスから離れることで起動する，挿入された値には，
+%0 変数を使用してアクセスできる．
+
+[EXAMPLE]
+====
+
+入力ボックスの _クリックして_ スクリプトに`++a=a+%0++`を指定すると，数値 _a_ が入力された値だけ増加する．ただし， _a_
+がxref:/自由、従属、補助オブジェクト.adoc[自由]の場合のみ動作する．
+
+====
+
+入力ボックスに自由オブジェクトの値を変更させたい場合（または依存オブジェクトを再定義したい場合），そのオブジェクトをリンクとして定義することができる．そうすれば，スクリプトを挿入する必要はない．
+入力ボックスは,xref:/tools/入力ボックスを挿入.adoc[入力ボックスを挿入_ツール]またはxref:/commands/InputBox.adoc[InputBox
+コマンド]を使用して作成することができる．
+
+== ボタン
+
+ボタンは，クリックされることによってスクリプトをトリガーするためのものである．スクリプトは他のオブジェクト（xref:/tools/画像の挿入.adoc[画像]など）をクリックしてもトリガーできるが，ボタンを使用すると，ワークシートがより直感的になる．.
+ボタンはimage:22px-Mode_buttonaction.svg.png[Mode buttonaction.svg,width=22,height=22]
+xref:/tools/ボタン.adoc[ボタン_ツール]またはxref:/commands/Button.adoc[Button コマンド]で作成できる．
+
+== ドロップダウンリスト
+
+ドロップダウンリストでリストの内容を表示したい場合は：
+
+* image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/グラフィックスビュー.adoc[グラフィックスビュー]の場合：リストのimage:18px-Menu-options.svg.png[Menu-options.svg,width=18,height=18]
+xref:/プロパティダイアログ.adoc[プロパティダイアログ] の _基本_ タブにある _ドロップダウンリストとして表示_
+にチェックを入れる．
+* image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+xref:/表計算ビュー.adoc[表計算ビュー]の場合:
+スプレッドシートにリストを入力し，image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+_スプレッドシートオプション_ の _ボタンとチェックボックスを使用する_ をチェックする．
+
+ドロップダウンリストの選択された要素は，xref:/commands/SelectedIndex.adoc[SelectedIndex]
+コマンドとxref:/commands/SelectedElement.adoc[SelectedElement] コマンドを使って取得することもできる．
+
+[EXAMPLE]
+====
+
+3つの関数`++x+1++`, `++x^2++`,
+`++sqrt(x)++`でドロップダウンリストを作成する，まず入力バーに`++L={x+1, x^2,sqrt(x)}++`と入力してリストを作る．次に，_数式ビュー_
+でリスト _L_ を右クリックし，_オブジェクトのプロパティ..._ を選択する．表示されたダイアログウィンドウの _基本_
+タブにある _ドロップダウンリストとして表示_
+にチェックを入れる．ドロップダウンリストを説明するキャプションを入力することもできる．現在選択されている関数を
+_グラフィックスビュー_ にプロットするには，入力バーに`++SelectedElement(L)++` と入力する．
+
+====

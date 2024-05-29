@@ -1,0 +1,36 @@
+= Numerator コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Numerator( <関数> )::
+  関数の分子を返す．
+Numerator( <Number> )::
+  有理数に対してはその分子を返す．このコマンドは分数を約分したときに得られる最も簡単な分子に限られる．無理数に対しては、そのxref:/commands/ContinuedFraction.adoc[連分数展開]の分子を返す．
+
+[EXAMPLE]
+====
+
+`++Numerator((3x² + 1) / (2x - 1))++` 出力： _f(x) = 3x² + 1_.
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/Denominator.adoc[Denominator コマンド] ， xref:/commands/FractionText.adoc[FractionText
+コマンド].
+
+====
+
+== CAS での書式
+
+Numerator( <式> )::
+  有理数または式の分子を返す．
+
+[EXAMPLE]
+====
+
+* `++Numerator(2/3 + 1/15)++` 出力： _11_.
+* 変数 _a, b, c_ が GeoGebra でこのコマンドを入力する前に定義されていない場合， `++Numerator(a/b)++` は _a_，
+`++Numerator(Simplify(a + b/c))++` は _a c + b_ を返す．
+
+====

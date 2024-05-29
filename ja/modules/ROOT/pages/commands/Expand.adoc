@@ -1,0 +1,33 @@
+= Expand コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Expand( <式> )::
+  式を展開する．
+
+[EXAMPLE]
+====
+
+`++Expand((2 x - 1)^2 + 2 x + 3)++` 出力： stem:[4 x^2 - 2 x + 4].
+
+====
+
+[NOTE]
+====
+
+このコマンドはCAS(Computer Algebra
+System)をロードする必要があるため，コンピュータによっては動作が遅くなることがある．その場合は
+xref:/commands/Polynomial.adoc[多項式コマンド] を使用．
+
+====
+
+== CAS での書式
+
+Expand( <Expression> )::
+  式を展開する．
+
+[EXAMPLE]
+====
+
+`++Expand((2 x - 1)^2 + 2 x + 3)++` 出力： stem:[4 x^2 - 2 x + 4].
+
+====

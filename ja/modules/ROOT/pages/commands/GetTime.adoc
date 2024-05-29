@@ -1,0 +1,26 @@
+= GetTime コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+GetTime()::
+  現在の時刻と日付をこの順序で並べたリストを返す：
+  ミリ秒，秒，分，時（0-23），日付，月（1-12），年，月（テキスト），曜日（テキスト），曜日（1 = 日曜，2 = 月曜など）．
+
+[EXAMPLE]
+====
+
+`++GetTime()++` は，このようなリストを返す： _\{647, 59, 39, 23, 28, 2, 2011, "February", "Monday", 2}_.
+
+====
+
+GetTime( "<フォーマット>" )::
+  _フォーマット_ をテンプレートとして使用し，バックスラッシュ(\)で前置された以下の文字を置き換えてテキストを作成する．
+  d, D, j, l, N, S, w, z, W, F, m, M, n, t, L, Y, y, a, A, g, G, h, H, i, s,
+  U．これらの文字の説明はこちら-http://php.net/manual/en/function.date.php
+  .
+
+[EXAMPLE]
+====
+
+`++GetTime("The date is \l the \j\S of \F \Y")++` 出力： _The date is Thursday the 5th of July 2012_
+
+====

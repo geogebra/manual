@@ -1,0 +1,34 @@
+= ToPolar コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+ToPolar( <ベクトル> )::
+  ベクトルを極座標に変換する．
+ToPolar( <複素> )::
+  複素数を極座標に変換する．
+
+[EXAMPLE]
+====
+
+`++ToPolar(1 + sqrt(3) * ί)++` 出力： _(2; 60°)_ を image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/数式ビュー.adoc[数式ビュー] に， _(2; stem:[\frac\{\pi}\{3}])_ を
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CASビュー.adoc[CASビュー]に．
+
+====
+
+[EXAMPLE]
+====
+
+`++ToPolar({1, sqrt(3)})++` 出力： _(2; 60°)_ を image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/数式ビュー.adoc[数式ビュー] に， _(2; stem:[\frac\{\pi}\{3}])_ を
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CASビュー.adoc[CASビュー]に．
+
+====
+
+[NOTE]
+====
+
+* 虚数単位 ί は [.kcode]#ALT # + [.kcode]# i#　と押すと得られる．
+* こちらも参照： xref:/commands/ToComplex.adoc[ToComplex コマンド], xref:/commands/ToExponential.adoc[ToExponential
+コマンド], xref:/commands/ToPoint.adoc[ToPoint コマンド].
+
+====

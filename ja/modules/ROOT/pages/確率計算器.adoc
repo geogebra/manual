@@ -1,0 +1,68 @@
+= 確率計算器
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+image:18px-Menu_view_probability.svg.png[Menu view probability.svg,width=18,height=18] _確率計算器_
+はGeoGebraの主要なパースペクティブの一つである．これを利用して確率分布を計算・グラフ化したり，統計的な検定を行ったりすることができる．
+
+== 分布
+
+_分布_
+タブでは，様々な確率分布をグラフに描画することができる．ドロップダウンメニューから作業したい分布（例：正規分布，二項分布）を選択するだけで，GeoGebraがそれをグラフにしてくれる．その後，隣接するテキストボックスで分布のパラメータを調整できる．
+
+また，分布の見た目を変更するために用意されているボタンを使用することができる：
+
+* image:Cumulative_distribution.png[Cumulative distribution.png,width=16,height=16]
+分布の確率密度関数と累積分布関数の切り替え
+* image:Interval-left.png[Interval-left.png,width=16,height=16]
+image:Interval-between.png[Interval-between.png,width=16,height=16]
+image:Interval-right.png[Interval-right.png,width=16,height=16] グラフを変更して累積確率（例：_P(x ≤ X)_, _P(x ≥ X)_
+）を計算する．確率を計算するためには，提供されたボタンで区間タイプを選択する．その後，隣接するテキストボックスで区間を調整するか，グラフの
+_x_ 軸上にあるマーカーをドラッグする．
+
+[width="100%",cols="100%",]
+|===
+a|
+image:Probability-Calculator-View-Distribution.png[Probability-Calculator-View-Distribution.png,width=858,height=705]
+
+_確率計算器_: _分布_ タブ
+
+|===
+
+== 確率計算器 スタイルバー
+
+　__確率計算器 スタイルバー__では， image:Normal-overlay.png[Normal-overlay.png,width=16,height=16] 分布に _正規曲線_
+を重ね合わせるオプションや，
+image:Export16.png[Export16.png,width=16,height=16]グラフをエクスポートするオプションがある．
+
+[NOTE]
+====
+
+　分布を画像ファイル（.png）としてエクスポートしたり，コンピュータのクリップボード（GeoGebra
+Desktop）にコピーしたり，image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16]xref:/グラフィックスビュー.adoc[グラフィックスビュー]（GeoGebra
+Desktop）にコピーすることができる．
+
+====
+
+*ドラッグ・アンド・ドロップ*：GeoGebraデスクトップ版では，分布のプロットをimage:16px-Menu_view_graphics.svg.png[Menu
+view graphics.svg,width=16,height=16] _グラフィックスビュー_ または画像を受け入れる他のアプリケーションに転送するために
+__ドラッグ・アンド・ドロップ__を使用できる． image:18px-Menu_view_probability.svg.png[Menu view
+probability.svg,width=18,height=18] _確率計算器_
+の画面上部にマウスを置くと，カーソルが手の形のカーソルに変わる．この新しいカーソルを使って．プロットを
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]__グラフィックスビュー1__ または _2_
+にドラッグして新しいプロットを作成することも，プロットの画像を他のアプリケーションにドラッグすることもできる．
+
+== 統計
+
+_統計_ タブでは，様々な統計検定を実施することができる．ドロップダウンメニューから実行したい検定（例：_平均のZ検定_
+）を選択し，_帰無仮説_ と _対立仮説_
+を指定する．その後，　隣接するテキストボックスで検定のパラメータを調整すると，GeoGebraが自動的に統計検定の結果を出力する．
+
+[width="100%",cols="100%",]
+|===
+a|
+image:Probability-Calculator-View-Statistics.png[Probability-Calculator-View-Statistics.png,width=406,height=705]
+
+_確率計算器_：_統計_ タブ
+
+|===

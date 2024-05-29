@@ -1,0 +1,20 @@
+= RunClickScript コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+RunClickScript( <オブジェクト> )::
+  オブジェクトに関連付けられたクリックスクリプトを実行する（もしオブジェクトにクリックスクリプトがあれば）．
+
+[EXAMPLE]
+====
+
+_A_ と _B_ を点とし，_B_ の _クリックして_ スクリプトを`++SetValue(B,(1,1))++`，_A_ の _クリックして_
+スクリプトをcode>RunClickScript(B)に設定すると，点 _A_ をクリックすると，点 _B_ が (1,1) に移動する．
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/RunUpdateScript.adoc[RunUpdateScript] コマンド．
+
+====

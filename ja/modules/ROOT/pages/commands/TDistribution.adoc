@@ -1,0 +1,38 @@
+= TDistribution コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+TDistribution( <自由度>, x )::
+  与えられた自由度におけるhttp://en.wikipedia.org/wiki/ja:T%E5%88%86%E5%B8%83[T分布]の累積密度関数(cdf)を作成する．
+TDistribution( <自由度>, x, <累積の真偽値> )::
+  _累積の真偽値_ が _true_ の場合，T分布の累積分布関数（cdf）を作成し，_false_
+  の場合はT分布の確率密度関数（pdf）を作成する．
+TDistribution( <自由度>, <変数値v> )::
+  変数値 _v_ におけるT分布の累積分布関数の値，すなわち確率 _P(X ≤ v)_ を計算する．ここで _X_
+  は，与えられた自由度におけるT分布に従う確率変数である．
+
+[EXAMPLE]
+====
+
+`++TDistribution(10, 0)++` 出力： _0.5_.
+
+====
+
+[NOTE]
+====
+
+指定された _x_ 座標の値に対する確率（または，その _x_ 座標の左側にあるT分布曲線の下の面積）を返す．
+
+====
+
+== CAS での書式
+
+TDistribution( <自由度>, <変数値v> )::
+  変数値 _v_ におけるT分布の累積分布関数の値，すなわち確率 _P(X ≤ v)_ を計算する．ここで _X_
+  は，与えられた自由度におけるT分布に従う確率変数である．
+
+[EXAMPLE]
+====
+
+`++TDistribution(10, 0)++` 出力： _0.5_.
+
+====

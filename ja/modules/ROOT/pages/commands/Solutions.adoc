@@ -1,0 +1,53 @@
+= Solutions コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+このコマンドは xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View] でのみ利用できます。.
+
+[NOTE]
+====
+
+バージョン823から，このコマンドはxref:/commands/Solve.adoc[Solve]コマンドと同様に動作するが，結果の形式が異なる．_Solutions_
+コマンドは解のリストを返し，_Solve_ コマンドは _変数名=解_ という形式の方程式のリストを返す．
+
+====
+
+== CAS での書式
+
+Solutions( <方程式> )::
+  与えられた方程式を主変数について解き，すべての解のリストを返す．
+Solutions( <方程式>, <変数> )::
+  与えられた方程式を指定した変数について解き，すべての解のリストを返す．
+Solutions( <方程式のリスト>, <変数のリスト> )::
+  指定された未知変数に対する連立方程式を解き，全ての解のリストを返す．
+
+[EXAMPLE]
+====
+
+* `++Solutions({x = 4 x + y , y + x = 2}, {x, y})++` は，解 _\{\{-1, 3}}_ を stem:[\begin\{pmatrix}-1&3\end\{pmatrix}]
+と表示する．
+* `++Solutions({2a^2 + 5a + 3 = b, a + b = 3}, {a, b})++` は，解 _\{\{-3, 6}, \{0, 3}}_ を
+stem:[\begin\{pmatrix}-3&6\\0&3\end\{pmatrix}] と表示する．
+
+====
+
+[EXAMPLE]
+====
+
+`++Solutions(x * a^2 = 4a, a)++` は，解 \{stem:[\frac\{4}\{x},0]} を返す．
+
+====
+
+[EXAMPLE]
+====
+
+`++Solutions(x^2 = 4x)++` は，解 _\{0, 4}_ で返す．
+
+====
+
+[NOTE]
+====
+
+* CASを使用する際には，いくつかの操作を加える必要がある場合がある．例：`++ Solutions(TrigExpand(sin(5/4 π + x) - cos(x - 3/4 π) = sqrt(6) * cos(x) - sqrt(2))) ++`
+* こちらも参照： xref:/commands/Solve.adoc[Solve コマンド]．
+
+====

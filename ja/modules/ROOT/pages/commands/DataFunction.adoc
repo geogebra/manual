@@ -1,0 +1,13 @@
+= DataFunction コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+DataFunction( <List of Numbers>, <List of Numbers> )::
+  入力されたリスト \{x~1~, ..., x~n~}, \{y~1~, ..., y~n~}によって、点(x~1~, y~1~), (x~2~, y~2~),...,(x~n~, y~n~)
+  を通る関数を返す．これらの点の間は線形補間される．このコマンドはセンサーで使われる．
+
+[EXAMPLE]
+====
+
+* `++DataFunction({0, 1, 2, 4}, {0, 1, 4, 16})++` は、点(0, 0)、(1,1)、(2, 4)、(4, 16)を通る関数を返す．
+
+====

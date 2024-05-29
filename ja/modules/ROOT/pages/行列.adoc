@@ -1,0 +1,124 @@
+= 行列
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+GeoGebraは実数行列をサポートしており，行列の各行が含まれるリストのxref:/リスト.adoc[リスト]として表現される．
+
+[EXAMPLE]
+====
+
+GeoGebraでは， \{\{1, 2, 3}, \{4, 5, 6}, \{7, 8, 9}} は3x3 行列 stem:[\begin\{pmatrix}1&2&3\\ 4&5&6\\ 7&8&9
+\end\{pmatrix}]を表す．
+
+====
+
+LaTeX書式を使用した行列をimage:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/グラフィックスビュー.adoc[グラフィックスビュー]
+に表示するには，xref:/commands/FormulaText.adoc[FormulaText_コマンド] を使用するか，行列定義を _数式ビュー_ から
+_グラフィックスビュー_ に ドラッグ&ドロップする．
+
+[EXAMPLE]
+====
+
+xref:/入力バー.adoc[入力バー]に `++FormulaText[{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}]++`
+と入力すると，LaTeXフォーマットで行列が表示される．
+
+====
+
+== 行列の要素へアクセス
+
+行列の特定の要素にアクセスするには，xref:/commands/Element.adoc[Element
+コマンド]か，以下の例に示す簡略化された構文を使うことができる：
+
+[EXAMPLE]
+====
+
+行列を`++matrix={{1, 2}, {3, 4}}++`とするとき:
+
+* `++matrix(1, 1) ++` は， (1, 1) 成分の _1_ を返す．
+* `++matrix(2, 2)++`, `++matrix(-1,2)++`, `++matrix(2,-1) ++`, `++matrix(-1,-1) ++` はすべて (2, 2)　成分の__4__
+を返す．.
+* 一般に，`++matrix(i, j) ++`, は行列の _i_ 行， _j_ 列の成分， ( _i_, _j_ ) 成分を返す．
+
+====
+
+== 行列の演算
+
+行列演算は _リストによる演算_ なので，以下の構文に従って記述された結果を得ることができる．
+
+[NOTE]
+====
+
+いくつかの構文は，行列の集合で同じ方法で定義されていない操作を表現することができる．
+
+====
+
+=== 加法・減法
+
+* `++Matrix1 + Matrix2++`: 同じ型の2つの行列，つまり同じ数の行と列を持つ行列同士の対応する要素を加算する．
+* `++Matrix1 – Matrix2++`: 同じ型の2つの行列，つまり同じ数の行と列を持つ行列同士の対応する要素を減算する．
+
+=== 乗法と除法
+
+* `++Matrix * Number++`: _行列_ の各要素に指定された _数_ を乗ずる．
+* `++Matrix1 * Matrix2++`: 結果の行列を得るために行列乗算を用いる．
+
+[EXAMPLE]
+====
+
+\{\{1, 2}, \{3, 4}, \{5, 6}} * \{\{1, 2, 3}, \{4, 5, 6}} は行列 \{\{9, 12, 15}, \{19, 26, 33}, \{29, 40, 51}} を返す．
+
+====
+
+[NOTE]
+====
+
+最初の行列 (Matrix1) の行と2番目の行列 (Matrix2) の列は同じ要素数でなければならない．
+
+====
+
+* `++2x2 Matrix * Point (or Vector)++`: _2x2行列_ と _Point / Vector_ を掛け合わせ，点を生成する．
+
+[EXAMPLE]
+====
+
+\{\{1, 2}, \{3, 4}} * (3, 4) は点 _A_ = (11, 25) を返す．
+
+====
+
+* `++3x3 Matrix * Point (or Vector)++`: _3x3行列_ と _Point / Vector_ を掛け合わせ，点を生成する．
+
+[EXAMPLE]
+====
+
+\{\{1, 2, 3}, \{4, 5, 6}, \{0, 0, 1}} * (1, 2) は点 _A_ = (8, 20) を返す．
+
+====
+
+[NOTE]
+====
+
+これは，同次座標を使用するアフィン変換の特別なケースである：点には (x, y, 1) を，ベクトルには (x, y, 0)
+を使用する．したがって，この例は次のものと同等です：`++{{1, 2, 3}, {4, 5, 6}, {0, 0, 1}} * {1, 2, 1}++`．
+
+====
+
+* `++Matrix1 / Matrix2++`: 同じ型の2つの行列，つまり同じ数の行と列を持つ行列同士の対応する要素を除算，_Matrix1_ の要素を
+_Matrix2_ の要素で割る．
+
+[NOTE]
+====
+
+しかし， GeoGebra は構文 `++Matrix1 * Matrix2 ^(-1)++`をサポートしている．
+
+====
+
+== その他の演算
+
+xref:/commands/ベクトルと行列.adoc[Matrix コマンド] のセクションには，行列に関連する以下のようなコマンドがある：
+
+* xref:/commands/Determinant.adoc[Determinant](行列): 与えられた行列の行列式を返す
+* xref:/commands/Invert.adoc[Invert](行列): 与えられた行列の逆行列を返す
+* xref:/commands/Transpose.adoc[Transpose](行列): 与えられた行列を転置する
+* xref:/commands/ApplyMatrix.adoc[ApplyMatrix](行列,Object): 行列で与えられたアフィン変換をオブジェクトに適用する
+* xref:/commands/ReducedRowEchelonForm.adoc[ReducedRowEchelonForm](行列): 与えられた行列をEEWF（Reduced row echelon
+form）形式に変換する

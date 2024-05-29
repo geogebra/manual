@@ -1,0 +1,38 @@
+= Fit コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Fit( <点のリスト>, <関数のリスト> )::
+  リスト内の _点_ に最も適合する _関数_ の線形結合を計算する．
+
+[EXAMPLE]
+====
+
+* `++Fit({(-2, 3), (0, 1), (2, 1), (2, 3)}, {x^2, x})++` 出力： _0.625 x^2 - 0.25x_.
+* 点のリストを _L = \{A, B, C, ...}_,関数を _f(x) = 1_, _g(x) = x_, _h(x) = e^x_ とし，関数のリスト _F = \{f, g, h}_
+を定義するとき， `++Fit(L, F)++` は _a + b x + c e^x_ の形で点のリストに最も適合する関数を返す．
+
+====
+
+Fit( <点のリスト>, <関数> )::
+  リスト内の点に対して最小二乗法で関数を計算する．この _関数_
+  は，最適化されるべきパラメータの初期値として取られる1つ以上のスライダーに依存する．非線形反復は収束しない可能性があるが，スライダーをより適切な開始点に調整することで改善されるかもしれない．
+
+[EXAMPLE]
+====
+
+スライダー__a__ を範囲 _-5_ から _5_ で増分１とする． `++Fit({(-2, 3), (0, 1), (2, 1), (2, 3)}, a + x^2)++` 出力： _-1 +
+x^2_.
+
+====
+
+[NOTE]
+====
+
+* こちらも参照： xref:/commands/FitExp.adoc[FitExp], xref:/commands/FitGrowth.adoc[FitGrowth],
+xref:/commands/FitLine.adoc[FitLine], xref:/commands/FitLineX.adoc[FitLineX], xref:/commands/FitLog.adoc[FitLog],
+xref:/commands/FitLogistic.adoc[FitLogistic], xref:/commands/FitPoly.adoc[FitPoly], xref:/commands/FitPow.adoc[FitPow],
+xref:/commands/FitSin.adoc[FitSin] コマンド．
+* 大きな数字や小さな数字を扱う場合は，より正確な結果を得るために正規化を検討する必要がある．こちらのコマンド参照：
+xref:/commands/Normalize.adoc[Normalize コマンド]．
+
+====

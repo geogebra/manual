@@ -1,0 +1,54 @@
+= Root コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Root( <多項式> )::
+  多項式のすべての根が，関数グラフと _x_ 軸の交点として求める．
+
+[EXAMPLE]
+====
+
+`++Root(0.1*x^2 - 1.5*x + 5)++` 出力： _A = (5, 0)_ ， _B = (10, 0)_.
+
+====
+
+Root( <関数>, <xの初期値> )::
+  数値解析法の初期値 _a_ を用いて関数の根を1つ求める．
+
+[EXAMPLE]
+====
+
+`++Root(0.1*x^2 - 1.5*x + 5, 6)++` 出力： _A = (5, 0)_.
+
+====
+
+Root( <関数>, <xの開始値>, <xの終了値> )::
+  _a_ を _xの開始値_、_b_ を _xの終了値_ とする．このコマンドは，数値解析法を用いて区間[ _a, b_
+  ]内の関数の根を1つ求める．
+
+[EXAMPLE]
+====
+
+`++Root(0.1x² - 1.5x + 5, 8, 13)++` 出力： _A = (10, 0)_.
+
+====
+
+== CAS での書式
+
+Root( <多項式> )::
+  多項式のすべての根が，関数グラフと _x_ 軸の交点として求める．
+
+[EXAMPLE]
+====
+
+`++Root(x^3 - 3 * x^2 - 4 * x + 12)++` 出力 _\{x = -2, x = 2, x = 3}_.
+
+====
+
+[NOTE]
+====
+
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View]では，
+このコマンドはxref:/commands/Solve.adoc[Solve コマンド]の特別なバージョンに過ぎない．
+
+====

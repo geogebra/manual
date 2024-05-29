@@ -1,0 +1,26 @@
+= AreConcurrent コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+AreConcurrent( <直線>, <直線>, <直線> )::
+  ３つの直線が一点で交わるかどうかを判定する．直線が平行である場合，それらは無限遠に共通点を持つとみなされ，このコマンドは
+  _真_ を返す．
+
+通常，このコマンドは結果を数値で計算する．この動作は xref:/commands/Prove.adoc[Prove]コマンドで変更できる．
+
+[EXAMPLE]
+====
+
+`++AreConcurrent(Line((1, 2), (3, 4)), Line((1, 2), (3, 5)), Line((1, 2), (3, 6)))++` 出力： _true_ ，３つの直線は
+(1,2)で交わる．
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/AreCollinear.adoc[AreCollinear], xref:/commands/AreConcyclic.adoc[AreConcyclic],
+xref:/commands/AreCongruent.adoc[AreCongruent], xref:/commands/AreEqual.adoc[AreEqual],
+xref:/commands/ArePerpendicular.adoc[ArePerpendicular], xref:/commands/AreParallel.adoc[AreParallel],
+xref:/commands/IsTangent.adoc[IsTangent] コマンド．
+
+====

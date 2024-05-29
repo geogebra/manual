@@ -1,0 +1,33 @@
+= Cube コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Cube( <点>, <点>, <向き> )::
+  与えられた２点を結ぶ _線分_ を辺とする立方体を作成する．
+  他の頂点は，以下のいずれかである与えられた方向によって一意に決定される：
+  * _線分_ に垂直なベクトル，線分，直線，または半直線， もしくは
+  * _線分_ に平行な多角形や平面．
+  作成される立方体には，以下の面が含まれる：
+  * 指定されたベクトル／線分／直線／半直線に垂直な平面上に，その _線分_ を一辺とする面， または
+  * 多角形／平面に平行な平面上に，その _線分_ を一辺とする面．
+
+Cube( <点>, <点>, <点>)::
+  正方形を形成する3点で定義される立方体を作成する．
+
+Cube( <点>, <点>)::
+  最初の辺を中心に回転可能な立方体を，最初の面の隣接する2点で定義する．
+
+[NOTE]
+====
+
+Cube(A, B) は Cube(A, B, C) の省略形であり，C は以下の方法で決定される： C = Point(Circle(B, Distance(A, B), Segment(A,
+B))).
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/Tetrahedron.adoc[Tetrahedron], xref:/commands/Octahedron.adoc[Octahedron],
+xref:/commands/Icosahedron.adoc[Icosahedron], xref:/commands/Dodecahedron.adoc[Dodecahedron] コマンド．
+
+====

@@ -1,0 +1,45 @@
+= Hyperbola コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Hyperbola( <焦点>, <焦点>, <主軸の長さの半分> )::
+  2つの焦点と主軸の長さを持つ楕円を求める．
+Hyperbola( <焦点>, <焦点>, <線分> )::
+  2つの焦点を持つ双曲線を求める。この双曲線の主軸の長さは指定した線分の２倍である．
+Hyperbola( <焦点>, <焦点>, <点> )::
+  2つの焦点で，与えられた点を通る双曲線を求める．
+
+[EXAMPLE]
+====
+
+`++Hyperbola((1, 1), (2, 1), (-2,-4))++` 出力： _-2.69x² + 1.30y² + 8.07x - 2.62y = 4.52_ .
+
+====
+
+[EXAMPLE]
+====
+
+Let `++a = Segment((0,1), (2,1))++`. `++Hyperbola((4, 1), (-2, 1), a)++` 出力： _-5x² + 4y² + 10x - 8y = -19_ .
+
+====
+
+[EXAMPLE]
+====
+
+`++Hyperbola((0, -4), (2, 4), 1)++` 出力： _-8xy - 15y² + 8y = -16_.
+
+====
+
+[NOTE]
+====
+
+_0<2* 主軸の長さの半分（主軸の長さ） < 焦点間の距離_ という条件が満たされなければ，楕円になる．
+
+====
+
+[NOTE]
+====
+
+こちらも参照：image:24px-Mode_hyperbola3.svg.png[Mode hyperbola3.svg,width=24,height=24] xref:/tools/双曲線.adoc[双曲線]
+ツール．
+
+====

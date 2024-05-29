@@ -1,0 +1,41 @@
+= OsculatingCircle コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+OsculatingCircle( <点>, <関数> )::
+  与えられた点での関数の接触円を返す．
+OsculatingCircle( <点>, <曲線> )::
+  与えられた点における曲線の接触円を返す．
+
+[EXAMPLE]
+====
+
+`++OsculatingCircle((1, 0), Curve(cos(t), sin(2t), t, 0, 2π))++` 出力： _x² + y² + 6x = 7_.
+
+====
+
+[EXAMPLE]
+====
+
+`++OsculatingCircle((0, 0), x^2)++` 出力： _x² + y² - y = 0_.
+
+====
+
+OsculatingCircle( <点>, <オブジェクト> )::
+  与えられた点におけるオブジェクト（関数，曲線，円錐曲線）の接触円を返す．
+
+[EXAMPLE]
+====
+
+* `++OsculatingCircle((0, 0), x^2)++` 出力： _x² + y² - y = 0_
+* `++OsculatingCircle((1, 0), Curve(cos(t), sin(2t), t, 0, 2π))++` 出力： _x² + y² + 6x = 7_
+* `++OsculatingCircle((-1, 0), Conic({1, 1, 1, 2, 2, 3}))++` 出力： _x² + y² + 2x + 1y = -1_
+
+====
+
+[NOTE]
+====
+
+* このコマンドは2Dオブジェクト専用である．3Dの場合は，次のようなカスタムツールを作ることができる．
+https://www.geogebra.org/m/tan7dxjt
+
+====

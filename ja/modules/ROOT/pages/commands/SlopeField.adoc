@@ -1,0 +1,40 @@
+= SlopeField コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+SlopeField( <f(x,y)> )::
+  微分方程式 stem:[\frac\{dy}\{dx}=f(x,y)] の http://en.wikipedia.org/wiki/Slope_field[スロープフィールド] を表示する．
+
+[EXAMPLE]
+====
+
+`++SlopeField(x+y)++` はスロープフィールドを表示する．
+
+====
+
+SlopeField( <f(x,y)>, <数値 n> )::
+  微分方程式 stem:[\frac\{dy}\{dx}=f(x,y)] のスロープフィールドを ( stem:[n \times n] )
+  グリッド上にプロットする（image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/グラフィックスビュー.adoc[グラフィックスビュー]
+  が正方形であれば）．そうでない場合は，より小さいグリッドになる．デフォルトは 40 である．
+
+SlopeField( <f(x,y)>, <数値 n>, <長さの倍率 a> )::
+  微分方程式 stem:[\frac\{dy}\{dx}=f(x,y)] のスロープフィールドをプロットする．長さの倍率 ( 0<a≤1 )
+  は線分の長さを決定する．
+
+SlopeField( <f(x,y)>, <数値 n>, <長さの倍率 a>, <x最小>, <y最小>, <x最大>, <y最大> )::
+  微分方程式 stem:[\frac\{dy}\{dx}=f(x,y)] のスロープフィールドを，指定された矩形内にプロットする（
+  image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/グラフィックスビュー.adoc[グラフィックスビュー]を塗りつぶすのではなく）．
+
+[NOTE]
+====
+
+*Notes:*
+
+* image:22px-Mode_translateview.svg.png[Mode translateview.svg,width=22,height=22]
+xref:/tools/グラフィックスビューの移動.adoc[グラフィックスビューの移動], image:22px-Mode_zoomin.svg.png[Mode
+zoomin.svg,width=22,height=22] xref:/tools/ズームイン.adoc[ズームイン], image:22px-Mode_zoomout.svg.png[Mode
+zoomout.svg,width=22,height=22] xref:/tools/ズームアウト.adoc[ズームアウト] ツールを使って，効果を観察．
+* こちらも参照： xref:/commands/SolveODE.adoc[SolveODE], xref:/commands/Locus.adoc[Locus],
+xref:/commands/Integral.adoc[Integral]
+====

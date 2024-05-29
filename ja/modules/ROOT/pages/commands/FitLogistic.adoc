@@ -1,0 +1,25 @@
+= FitLogistic コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+FitLogistic( <点のリスト> )::
+  与えられた点のリストに対して ロジスティック回帰曲線 （stem:[ \frac\{a}\{1 +be^\{-kx}}] の形式)を計算する．
+
+[EXAMPLE]
+====
+
+`++FitLogistic({(-6, 2), (0, 2), (3, 4), (3.4, 8)})++` 出力： stem:[ \frac\{1.98}\{1 - 0.03 e^\{1x}}].
+
+====
+
+[NOTE]
+====
+
+* 最初と最後の点は回帰曲線にかなり近い必要がある．リストには少なくとも3点は含まれているべきで，できればそれ以上が望ましい．
+* こちらも参照： xref:/commands/Fit.adoc[Fit], xref:/commands/FitExp.adoc[FitExp],
+xref:/commands/FitGrowth.adoc[FitGrowth], xref:/commands/FitLine.adoc[FitLine], xref:/commands/FitLineX.adoc[FitLineX],
+xref:/commands/FitLog.adoc[FitLog], xref:/commands/FitPoly.adoc[FitPoly], xref:/commands/FitPow.adoc[FitPow],
+xref:/commands/FitSin.adoc[FitSin]コマンド．
+* 大きな数字や小さな数字を扱う場合は，より正確な結果を得るために正規化を検討する必要がある．こちらのコマンド参照：
+xref:/commands/Normalize.adoc[Normalize コマンド]．
+
+====

@@ -1,0 +1,49 @@
+= Polynomial コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Polynomial( <関数> )::
+  展開した多項式関数を返す．
+Polynomial( <点のリスト> )::
+  与えられた _n_ 個の点を通る _n-1_ 次の補間多項式を作る．
+
+[EXAMPLE]
+====
+
+`++Polynomial({(1, 1), (2, 3), (3, 6)})++` 出力： _0.5 x^2^ + 0.5 x_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Polynomial(f(x,y)=y^2+(x+y)^2)++` 出力： _x^2^+2xy+2x^2^_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Polynomial((x - 3)^2)++` 出力： _x^2^ - 6x + 9_.
+
+====
+
+== CAS での書式
+
+Polynomial( <関数> )::
+  関数を展開して、xの多項式に変形する（係数はまとめる）．
+Polynomial( <関数>, <変数> )::
+  関数を展開して、__変数__の多項式に変形する（係数はまとめる）．
+
+[EXAMPLE]
+====
+
+`++Polynomial((x - 3)^2 + (a + x)^2, a)++` 出力： _a^2^ + 2 x a + 2 x^2^ - 6 x + 9_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Polynomial((x - 3)^2 + (a + x)^2)++` 出力： _2 x^2^ + (2a - 6) x + a^2^ + 9_.
+
+====

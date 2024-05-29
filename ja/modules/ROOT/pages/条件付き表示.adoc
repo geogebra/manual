@@ -1,0 +1,54 @@
+= 条件付き表示
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+特定のオブジェクトを単に表示または非表示にするだけでなく，特定の条件に応じてその表示・非表示を制御することもできる．たとえば，
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/グラフィックスビュー.adoc[グラフィックスビュー]
+に配置されたチェックボックスをオンにしたり，xref:/tools/スライダー.adoc[スライダー]
+を特定の値に変更したときに，オブジェクトが画面上に表示されるように設定することが可能である．
+
+== 既存のオブジェクトを条件付きで表示または非表示にする
+
+image:24px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=24,height=24]
+xref:/tools/表示／非表示のチェックボックス.adoc[チェックボックスツール]
+を使用すると，画面上の1つまたは複数の既存のオブジェクトの表示・非表示を制御するチェックボックスを作成できる．
+
+別の方法として，xref:/入力バー.adoc[入力バー]を使用してxref:/真偽値.adoc[真偽値]（例：`++b = true++`）を作成し，その表示・非表示を変更することで（例：
+image:24px-Mode_showhideobject.svg.png[Mode showhideobject.svg,width=24,height=24]
+xref:/tools/表示／非表示のチェックボックス.adoc[チェックボックスツール]
+やxref:/コンテキストメニュー.adoc[コンテキストメニュー]を使用して），image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _グラフィックスビュー_
+内でチェックボックスとして表示させることができる．従って，チェックボックスは表示・非表示の _真偽値_
+と言える．特定のオブジェクトの表示・非表示をこの真偽値に依存させるには，以下に記述されている手順に従う必要がある．
+
+== 新規作成オブジェクトの表示・非表示を変更する
+
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/プロパティダイアログ.adoc[プロパティダイアログ]では，_上級_ タブでオブジェクトの表示条件を入力することができる．
+
+[NOTE]
+====
+
+条件文を作成するために，入力フィールドの右側にある[.kcode]##α##を押して表示されるリストからxref:/真偽値.adoc[論理演算子]（例：≠，≧，˄，‖）を選択することができる．
+
+====
+
+[EXAMPLE]
+====
+
+* aがスライダーの場合，a <
+2という条件文は，スライダーの値が2より小さい場合にのみ，対応するオブジェクトがimage:16px-Menu_view_graphics.svg.png[Menu
+view graphics.svg,width=16,height=16] _グラフィックスビュー_ に表示されることを意味する．
+* bが真偽値の場合，bを条件文として使うことができる．対応するオブジェクトは，bの値が true
+のときは常に表示され，false　のときは非表示になる．
+* g と h が2つの直線で，これらの直線が平行になるときにテキストを表示したい場合は，テキストの条件文として g‖h
+を使うことができる.
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/SetVisibleInView.adoc[SetVisibleInView] コマンド．
+
+====

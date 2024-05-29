@@ -1,0 +1,67 @@
+= Coefficients コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Coefficients( <多項式> )::
+  多項式 stem:[a_kx^k+a_\{k-1}x^\{k-1}+\cdots+a_1x+a_0] の全ての係数のリスト stem:[a_k,a_\{k-1},\ldots,a_1, a_0]
+  を返す．.
+
+[EXAMPLE]
+====
+
+`++Coefficients(x^3 - 3 x^2 + 3 x)++` は stem:[x^3 - 3 x^2 + 3 x] の係数をリストの形式 _\{1, -3, 3, 0}_ で返す．
+
+====
+
+Coefficients( <円錐曲線> )
+
+円錐曲線の標準形 : stem:[a\cdot x^2 + b\cdot y^2 + c + d\cdot x\cdot y + e\cdot x + f\cdot y = 0] の係数 _a_, _b_, _c_,
+_d_, _e_, _f_ をリストの形で返す．
+
+[NOTE]
+====
+
+陰形式で表された直線 _l: ax + by + c = 0_ に対して，_x_(_l_), _y_(_l_), _z_(_l_)
+という書式で係数を取り出すことができる．
+
+[EXAMPLE]
+====
+
+`++line: 3x + 2y - 2 = 0++` のとき:
+
+* `++x(line)++` は 3　を返す．
+* `++y(line)++` は 2　を返す．
+* `++z(line)++` は -2　を返す．
+
+====
+
+====
+
+[NOTE]
+====
+
+非多項式の場合、フィッティングコマンドの出力には特別なモードがあります。例えば、`++f(x) = FitExp(l1)++`
+としたとき、`++Coefficients(f)++`は計算されたパラメータを返します。
+
+====
+
+== CAS での書式
+
+Coefficients( <多項式> )::
+  主変数の多項式の全ての係数のリストを返す．
+Coefficients( <多項式>, <変数> )::
+  与えられた変数の多項式について全係数のリストを返す．
+
+[EXAMPLE]
+====
+
+* `++Coefficients(a^3 - 3 a^2 + 3 a, a)++` は stem:[a^3 - 3 a^2 + 3 a] の係数をリスト形式 _\{1, -3, 3, 0}_ で返す．
+* `++Coefficients(a^3 - 3 a^2 + 3 a, x)++` は \{__a__³ - 3 __a__² + 3 _a_} を返す．
+
+====
+
+[EXAMPLE]
+====
+
+`++Coefficients(x^3 - 3 x^2 + 3 x)++` は stem:[x^3 - 3 x^2 + 3 x] の係数をリストの形式 _\{1, -3, 3, 0}_ で返す．
+
+====

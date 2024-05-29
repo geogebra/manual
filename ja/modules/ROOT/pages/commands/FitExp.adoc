@@ -1,0 +1,25 @@
+= FitExp コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+FitExp( <点のリスト> )::
+  指数回帰曲線を _aℯ^bx^_ の形式で計算する．
+
+[EXAMPLE]
+====
+
+`++FitExp({(0, 1), (2, 3), (4, 3), (6, 4)})++` 出力： _1.31ℯ^0.21x^_.
+
+====
+
+[NOTE]
+====
+
+* stem:[ a b ^ x ] の形の回帰曲線が必要な場合は， xref:/commands/FitGrowth.adoc[FitGrowth コマンド]を利用する．
+* `++Fit(list, a*exp(b*x))++`を使用して，直接最小二乗法によるフィッティングを行うことができる．
+* オイラー数 ℯ は [.kcode]#ALT # + [.kcode]# e# で入力できる．
+* こちらも参照： xref:/commands/Fit.adoc[Fit], xref:/commands/FitGrowth.adoc[FitGrowth],
+xref:/commands/FitLine.adoc[FitLine], xref:/commands/FitLineX.adoc[FitLineX], xref:/commands/FitLog.adoc[FitLog],
+xref:/commands/FitLogistic.adoc[FitLogistic], xref:/commands/FitPoly.adoc[FitPoly], xref:/commands/FitPow.adoc[FitPow],
+xref:/commands/FitSin.adoc[FitSin] コマンド．
+
+====

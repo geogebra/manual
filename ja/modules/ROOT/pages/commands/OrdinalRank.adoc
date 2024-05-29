@@ -1,0 +1,22 @@
+= OrdinalRank コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+OrdinalRank( <リスト> )::
+  リスト _L_ の _i_ 番目の要素の順位を _i_
+  番目の要素とするリストを返す（要素の順位とはxref:/commands/Sort.adoc[Sort](L)での位置）．_L_
+  に同じ値の要素が複数あり，Sort[L]で _k_ から _l_ の位置にある場合，それらの要素には _k_ から _l_
+  の順位が割り当てられる．
+
+[EXAMPLE]
+====
+
+* `++OrdinalRank({4, 1, 2, 3, 4, 2})++` 出力： _\{5, 1, 2, 4, 6, 3}_
+* `++OrdinalRank({3, 2, 2, 1})++` 出力： _\{4, 2, 3, 1}_
+
+====
+
+[NOTE]
+====
+
+こちらのコマンドも参照： xref:/commands/TiedRank.adoc[TiedRank]
+====

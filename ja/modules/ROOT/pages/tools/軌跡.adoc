@@ -1,0 +1,38 @@
+= 軌跡 ツール
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+点 _A_ に依存し，軌跡を描くべき点 _B_ を選択する．次に点 _A_ を選択して点 __B__の軌跡を作成する．
+
+[EXAMPLE]
+====
+
+* _入力バー_ に `++f(x) = x^2 – 2 x – 1++` と入力して， _Enter-key_ を押す．
+* _x_ 軸上に新しい点 _A_ を置く（image:22px-Mode_point.svg.png[Mode point.svg,width=22,height=22]
+xref:/tools/点.adoc[点] ツール，または xref:/commands/Point.adoc[Point] コマンドを参照）．
+* '入力バー __に `++B = (x(A), f'(x(A)))++` と入力して，__A _に依存する点_ B _を作成する．_
+* image:22px-Mode_locus.svg.png[Mode locus.svg,width=22,height=22] _軌跡_ ツールを選択し，点 _B_ と点 _A_
+を連続して選択する．
+* 点 _A_ を__x__ 軸に沿ってドラッグすると，点 _B_ が軌跡に沿って移動するのを確認できる．
+
+====
+
+[NOTE]
+====
+
+点 _A_ は，オブジェクト（直線，線分／区間，円など）上の点でなければならない．
+
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[警告,title="警告",width=18,height=18] *警告*: |点が2つのパラメータを持つ
+xref:/commands/Point.adoc[Point コマンド]，またはxref:/commands/PathParameter.adoc[PathParameter
+コマンド]に依存している場合，軌跡は未定義になる．
+|===
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/Locus.adoc[Locus] コマンド．
+
+====

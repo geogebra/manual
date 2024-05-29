@@ -1,0 +1,29 @@
+= TriangleCenter コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+TriangleCenter( <点>, <点>, <点>, <数値> )::
+  gives _n_-th 三角形 _ABC_ の _n_ 番目の [[w:ja:三角形の中心|]中心] を返す． _n < 3054_　で動作する．
+
+[EXAMPLE]
+====
+
+_A = (1, -2)_, _B = (6, 1)_ and _C = (4, 3)_ とする． `++TriangleCenter(A, B, C, 2)++` は，三角形 _ABC_ の重心 _D =
+(3.67, 0.67)_ を出力する．
+
+====
+
+== 代表的な三角形の中心
+
+[cols=",",options="header",]
+|===
+|数値 n |中心
+|1 |内心
+|2 |重心
+|3 |重心
+|4 |垂心
+|5 |http://en.wikipedia.org/wiki/ja:%E4%B9%9D%E7%82%B9%E5%86%86[九点円]の中心
+|6 |http://en.wikipedia.org/wiki/ja:%E9%A1%9E%E4%BC%BC%E4%B8%AD%E7%B7%9A[ルモアーヌ点（類似重心）]
+|7 |http://en.wikipedia.org/wiki/ja:%E3%82%B8%E3%82%A7%E3%83%AB%E3%82%B4%E3%83%B3%E3%83%8C%E7%82%B9[ジェルゴンヌ点]
+|8 |http://en.wikipedia.org/wiki/ja:%E3%83%8A%E3%83%BC%E3%82%B2%E3%83%AB%E7%82%B9[ナーゲル点]
+|13 |第1フェルマー点
+|===

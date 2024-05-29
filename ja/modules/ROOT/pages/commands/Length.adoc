@@ -1,0 +1,71 @@
+= Length コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Length( <オブジェクト> )::
+  オブジェクトの長さを返す．
+
+[EXAMPLE]
+====
+
+* `++Length( <Vector> )++` ベクトルの大きさを返す．
+* `++Length( <Point> )++` 与えられた点のおける位置ベクトルの大きさを返す．
+* `++Length( <List> )++` リストの大きさ（リストの要素の個数）を返す．
+* `++Length( <Text> )++` テキストの中の文字数を返す．
+* `++Length( <Locus> )++`
+与えられた軌跡を構成する点の数を返す．軌跡自体の長さを得るには、xref:/commands/Perimeter.adoc[Perimeter]コマンド(軌跡)を使用のこと．詳細はxref:/commands/First.adoc[First
+コマンド] に関する記事を参照．
+* `++Length( <Arc> )++` は、円弧または扇形の _円弧の長さ_ （曲線部分の長さ）を返す．
+
+====
+
+Length( <関数>, <x開始値>, <x終了値> )::
+  与えられた区間内の関数グラフの長さを返す．
+Length( <関数>, <開始点>, <終了点> )::
+  2点間の関数グラフの長さを返す．
+Length( <曲線>, <t開始値>, <t終了値> )::
+  _パラメータ t_ の2つの値の間の曲線の長さを返す．
+Length( <曲線>, <開始点>, <終了点> )::
+  曲線上にある2点間の曲線の長さを返す．
+
+[EXAMPLE]
+====
+
+`++Length(2x, 0, 1)++` 出力： _2.236067977_，これはstem:[\sqrt\{5}]の近似値．
+
+====
+
+[NOTE]
+====
+
+与えられた点が関数のグラフ上にない場合，そのx座標が区間を決定するのに使われる．
+
+====
+
+== CAS での書式
+
+Length( <関数>, <x開始値>, <x終了値> )::
+  2点間の関数グラフの長さを計算する．
+Length( <関数>, <変数>, <開始点>, <終了点> )::
+  _開始点_ と _終了点_ 間の関数グラフの長さを計算する．
+
+[EXAMPLE]
+====
+
+`++Length(2 a, a,  0, 1)++` 出力 stem:[\sqrt\{5}].
+
+====
+
+[EXAMPLE]
+====
+
+`++Length(2 x, 0, 1)++` 出力： stem:[\sqrt\{5}].
+
+====
+
+[NOTE]
+====
+
+こちらも参照： image:22px-Mode_distance.svg.png[Mode distance.svg,width=22,height=22]
+xref:/tools/距離または長さ.adoc[距離または長さ] ツール．
+
+====

@@ -1,0 +1,37 @@
+= GroebnerLexDeg コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+このコマンドは xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View] でのみ利用できます。.
+
+== CAS での書式
+
+GroebnerLexDeg( <多項式のリスト> )::
+  変数の次数付き辞書式順序（ _grlex_， _tdeg_， _lexdeg_， _全次数辞書式順序_，または _消去順序_
+  としても知られている）に関して，多項式のリストのグレブナー基底を計算する．
+GroebnerLexDeg( <多項式のリスト>, <変数のリスト> )::
+  指定された変数の次数付き辞書式順序（ _grlex_， _tdeg_， _lexdeg_， _全次数辞書式順序_，または _消去順序_
+  としても知られている）に関して，多項式のリストのグレブナー基底を計算する．
+
+[EXAMPLE]
+====
+
+`++GroebnerLexDeg({x^3 - y -2, x^2 + y + 1},{y, x})++` 出力： \{stem:[ x^\{2} + y + 1, -y x - y - x - 2, y^\{2} + 3 y -
+x + 3 ]}.
+
+====
+
+[EXAMPLE]
+====
+
+`++GroebnerLexDeg({x^3 - y - 2, x^2 + y + 1})++` 出力： \{stem:[ -y^\{2} + x - 3 y - 3, -x y - x - y - 2, x^\{2} + y +
+1]}.
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/GroebnerDegRevLex.adoc[GroebnerDegRevLex], xref:/commands/GroebnerLex.adoc[GroebnerLex]
+コマンド．
+
+====

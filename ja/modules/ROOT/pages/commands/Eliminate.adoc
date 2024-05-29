@@ -1,0 +1,23 @@
+= Eliminate コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+このコマンドは xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View] でのみ利用できます。.
+
+== CAS での書式
+
+Eliminate( <多項式のリスト>, <変数のリスト> )::
+  多項式で定義された連立方程式を解析し，指定された変数を消去した後の新しい連立方程式を求める．
+
+[EXAMPLE]
+====
+
+`++Eliminate({x^2 + x, y^2 - x}, {x})++` 出力： \{stem:[ y^\{4} + y^\{2} ]}.
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/GroebnerLexDeg.adoc[GroebnerLexDeg] コマンド．
+
+====

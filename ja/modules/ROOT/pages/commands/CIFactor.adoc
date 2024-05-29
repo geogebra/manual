@@ -1,0 +1,34 @@
+= CIFactor コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+このコマンドは xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View] でのみ利用できます。.
+
+== CAS での書式
+
+CIFactor( <式> )::
+  複素無理数の範囲で因数分解する．
+CIFactor( <式>, <変数> )::
+  複素無理数の範囲で与えられた変数について因数分解する．
+
+[EXAMPLE]
+====
+
+`++CIFactor[a^2 + a + 1, a]++` 出力： stem:[ \left( a + \frac\{-ί \sqrt\{3} + 1}\{2} \right) \left( a + \frac\{ί
+\sqrt\{3} + 1}\{2} \right)]．
+
+====
+
+[EXAMPLE]
+====
+
+`++CIFactor[x^2 + x + 1]++` 出力： stem:[ \left( x + \frac\{-ί \sqrt\{3} + 1}\{2} \right) \left( x + \frac\{ί \sqrt\{3}
++ 1}\{2} \right)]．
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/IFactor.adoc[IFactor] コマンド．
+
+====

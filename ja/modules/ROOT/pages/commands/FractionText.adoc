@@ -1,0 +1,47 @@
+= FractionText コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+FractionText( <数値> )::
+  与えられた数値の分数形を含むLaTeXテキストを生成し，image:16px-Menu_view_graphics.svg.png[Menu view
+  graphics.svg,width=16,height=16] xref:/グラフィックスビュー.adoc[グラフィックスビュー]で表示する．
+FractionText( <点> )::
+  与えられた点の座標の分数形を含むLaTeXテキストを生成し，image:16px-Menu_view_graphics.svg.png[Menu view
+  graphics.svg,width=16,height=16] xref:/グラフィックスビュー.adoc[グラフィックスビュー]で表示する．
+FractionText( <数値>, <分子に符号の真偽値>)::
+  与えられた数値の分数形を含むLaTeXテキストを生成し，image:16px-Menu_view_graphics.svg.png[Menu view
+  graphics.svg,width=16,height=16] xref:/グラフィックスビュー.adoc[グラフィックスビュー]で表示する．
+  真偽値は，分数の負の符号がどこに表示されるかを設定する．_true_ の場合，マイナス記号は分子に表示され，_false_
+  の場合は分数の前に表示される．
+
+[EXAMPLE]
+====
+
+数値を _n = -0.8_ とする．
+
+* `++FractionText(n, true)++`は， LaTeX形式のテキスト： stem:[\frac\{- 4}\{5}]を生成する．
+* `++FractionText(n, false)++`は， LaTeX形式のテキスト： stem:[-\frac\{4}\{5}]を生成する．
+
+====
+
+[EXAMPLE]
+====
+
+点を _A=(1.33,0.8)_ とする． `++FractionText(A)++`は， LaTeX形式のテキスト： _stem:[ \left( \frac\{133}\{100}
+,\frac\{4}\{5} \right) ]_ を生成する．
+
+====
+
+[EXAMPLE]
+====
+
+直線を__a: y = 1.5 x + 2__ とする．`++FractionText(Slope(a))++`は， LaTeX形式のテキスト：
+stem:[\frac\{3}\{2}]を生成する．
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/SurdText.adoc[SurdText] コマンド．
+
+====

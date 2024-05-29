@@ -1,0 +1,31 @@
+= Normal コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Normal( <平均>, <標準偏差>, x )::
+  http://en.wikipedia.org/wiki/ja:%E6%AD%A3%E8%A6%8F%E5%88%86%E5%B8%83[正規分布]の累積密度関数(cdf)を作成する．
+
+Normal( <平均>, <標準偏差>, x, <累積の真偽値> )::
+  _累積の真偽値_ が _true_ の場合，平均が μ ，標準偏差が σ の正規分布の累積分布関数（cdf）を作成し，_false_
+  の場合は正規分布の確率密度関数（pdf）を作成する．
+
+Normal( <平均 μ>, <標準偏差 σ>, <変数値 v> )::
+  変数 _v_ における関数 stem:[\Phi \left(\frac\{x- \mu}\{\sigma} \right) ]の値を計算する．ここで，_Φ_ は平均 _μ_
+  と標準偏差　_σ_　を持つ標準正規分布 _N(0,1)_ の累積分布関数である．
+
+[NOTE]
+====
+
+指定された _x_ 座標の値に対する確率（または，その _x_ 座標の左側にある正規分布曲線の下の面積）を返す．
+
+====
+
+[EXAMPLE]
+====
+
+`++Normal(2, 0.5, 1)++` 出力： _0.02_ （
+/ファイル:Menu_view_algebra_svg.adoc[image:16px-Menu_view_algebra.svg.png[links=,width=16,height=16]]
+xref:/数式ビュー.adoc[数式ビュー] ，stem:[\frac\{erf(-\sqrt\{2})+1}\{2}] （
+/ファイル:Menu_view_cas_svg.adoc[image:16px-Menu_view_cas.svg.png[links=,width=16,height=16]]
+xref:/CASビュー.adoc[CASビュー]）
+
+====

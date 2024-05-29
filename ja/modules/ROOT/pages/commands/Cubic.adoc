@@ -1,0 +1,45 @@
+= Cubic コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Cubic( <点A>, <点B>, <点C>, <指数n> )::
+  与えられた三角形ABCに対して，n次の http://en.wikipedia.org/wiki/Catalogue_of_Triangle_Cubics[三角形3次曲線]
+  を生成する．
+
+[EXAMPLE]
+====
+
+_A = (0, 1)_, _B = (2, 1)_, __C = (1, 2)__とするとき， `++Cubic(A, B, C, 2)++` は，陰関数曲線 __-x³ + 3x² + 5x y² - 14x
+y + 7x - 5y² + 14y = 9__を返す．
+
+====
+
+[NOTE]
+====
+
+このコマンドは現在開発中であり，サポートされている指数 _n_ の範囲は変更される可能性がある．
+
+====
+
+== 一般的な三角形３次曲線
+
+[cols=",",options="header",]
+|===
+|Index n |Cubic
+|K001
+|http://en.wikipedia.org/wiki/ja:%E3%83%8E%E3%82%A4%E3%83%99%E3%83%AB%E3%82%B0%E4%B8%89%E6%AC%A1%E6%9B%B2%E7%B7%9A[ノイベルグ三次曲線]
+
+|K002 |トムソン立方体,http://en.wikipedia.org/wiki/ja:17%E7%82%B93%E6%AC%A1%E6%9B%B2%E7%B7%9A[17点3次曲線]
+
+|K003 |マッケイキュービックhttp://en.wikipedia.org/wiki/McCay_cubic[(英語）]
+
+|K004 |ダルブーキュービックhttp://en.wikipedia.org/wiki/Cubic_plane_curve#Darboux_cubic[（英語）]
+
+|K005
+|ナポレオン立方体，フォイエルバッハ立方体http://en.wikipedia.org/wiki/Cubic_plane_curve#Napoleon.E2.80.93Feuerbach_cubic[（英語）]
+
+|K007 |ルーカスキュービックhttp://en.wikipedia.org/wiki/Cubic_plane_curve#Lucas_cubic[（英語）]
+
+|K017 |1st ブロカード・キュービック
+
+|K018 |2nd ブロカード・キュービック
+|===

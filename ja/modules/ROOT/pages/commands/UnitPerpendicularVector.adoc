@@ -1,0 +1,61 @@
+= UnitPerpendicularVector コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+UnitPerpendicularVector( <直線>)::
+  与えられた直線に垂直で長さが１のベクトルを返す．
+UnitPerpendicularVector( <線分> )::
+  与えられた線分に垂直で長さが１のベクトルを返す．
+UnitPerpendicularVector( <ベクトル> )::
+  与えられたベクトルと垂直な単位ベクトル（長さが１のベクトル）を返す．ベクトルは先に定義されなければならない．
+
+[EXAMPLE]
+====
+
+ベクトル v=stem:[\begin\{pmatrix}3\\4\end\{pmatrix}]とする． `++UnitPerpendicularVector(v)++` 出力：
+_stem:[\begin\{pmatrix}-0.8\\0.6\end\{pmatrix}]_.
+
+====
+
+[EXAMPLE]
+====
+
+線分を`++s = Segment((1,1), (4,5))++`とする．
+
+`++UnitPerpendicularVector(s)++` 出力： _stem:[\begin\{pmatrix}-0.8\\0.6\end\{pmatrix}]_．
+
+====
+
+[EXAMPLE]
+====
+
+`++UnitPerpendicularVector(3x + 4y = 5)++` 出力： _stem:[\begin\{pmatrix}0.6\\0.8\end\{pmatrix}]_．
+
+====
+
+[NOTE]
+====
+
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/CASビュー.adoc[CASビュー]では未定義の変数を含むベクトルもサポートされている．
+
+[EXAMPLE]
+====
+
+`++UnitPerpendicularVector((a, b))++` 出力： _(stem:[\frac\{-b}\{\sqrt\{a^\{2} +
+b^\{2}}}],stem:[\frac\{a}\{\sqrt\{a^\{2} + b^\{2}}}])_．
+
+====
+
+====
+
+== CAS での書式
+
+UnitPerpendicularVector( <平面> )::
+  与えれられた平面に直交する単位ベクトルを返す．
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/PerpendicularVector.adoc[PerpendicularVector コマンド]．
+
+====

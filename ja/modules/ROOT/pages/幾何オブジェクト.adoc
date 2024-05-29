@@ -1,0 +1,42 @@
+= 幾何オブジェクト
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+== 幾何オブジェクトの種類
+
+GeoGebraは多くの種類の幾何オブジェクトを扱うことができる．
+
+* xref:/点とベクトル.adoc[点とベクトル]
+* xref:/直線と軸.adoc[直線と軸]
+* xref:/二次曲線.adoc[二次曲線]
+* xref:/関数.adoc[関数]
+* xref:/曲線.adoc[曲線]
+* xref:/不等式.adoc[不等式]
+* xref:/区間.adoc[区間]
+
+== パス
+
+点のリスト，軌跡，および上記に挙げたオブジェクト（直線，円錐曲線，円弧，多角形，関数，単一変数の不等式，区間）は _パス_
+と呼ばれる．xref:/commands/Point.adoc[Point
+コマンド]を使用して，特定のxref:/点とベクトル.adoc[点]がパスに属するように定義することができる．パス上の各点にはパスパラメータがあり，これは0から1までの数値である．このパラメータを取得するには，xref:/commands/PathParameter.adoc[PathParameter
+コマンド]を使用する．
+
+[NOTE]
+====
+
+他のパスのxref:/リスト.adoc[リスト]もパスとなる．
+
+====
+
+== 領域
+
+また，xref:/commands/PointIn.adoc[PointIn コマンド]やimage:24px-Mode_pointonobject.svg.png[Mode
+pointonobject.svg,width=24,height=24] xref:/tools/オブジェクト上の点.adoc[オブジェクト上の点_ツール]を使って，点を
+_領域_ （多角形，円錐，円弧，2変数不等式）に制限することもできる．
+
+[NOTE]
+====
+
+こちらも参照： image:24px-Mode_attachdetachpoint.svg.png[Mode attachdetachpoint.svg,width=24,height=24]
+xref:/tools/点を付ける／外す.adoc[点を付ける／外す_ツール]．
+
+====

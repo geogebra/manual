@@ -1,0 +1,227 @@
+= CASビュー
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+== [#CASビューのユーザーインターフェース]####[#CAS.E3.83.93.E3.83.A5.E3.83.BC.E3.81.AE.E3.83.A6.E3.83.BC.E3.82.B6.E3.83.BC.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9]##image:24px-Menu_view_cas.svg.png[Menu view cas.svg,width=24,height=24] CASビューのユーザーインターフェース##
+
+デフォルトでは，image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CASビュー_ は
+image:16px-Menu_view_graphics.svg.png[Graphics View,title="Graphics View",width=16,height=16]
+_xref:/グラフィックスビュー.adoc[グラフィックスビュー]_　の隣に表示される． これら 2 つの _ビュー_
+のどちらをアクティブにしているかによって，GeoGebra ウィンドウの上部に xref:/CASツール.adoc[_CASビューのツールバー_] か
+xref:/グラフィックスツール.adoc[_グラフィックスビューのツールバー_] のどちらかが表示され，右上に
+image:16px-Menu-edit-undo.svg.png[Menu-edit-undo.svg,width=16,height=16]image:16px-Menu-edit-redo.svg.png[Menu-edit-redo.svg,width=16,height=16]
+_元に戻す／やり直し_ ボタンが表示される．
+
+[width="100%",cols="100%",]
+|===
+a|
+image:314px-CAS-View.png[CAS-View.png,width=314,height=220]
+
+CASビュー
+
+|===
+
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CASビュー_ は
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/パースペクティブ.adoc[_CAS
+パースペクティブ_] の一部であるが，GeoGebra のユーザーインターフェースのレイアウトは必要に応じて
+xref:/GeoGebra_5_0_デスクトップ_vs_ウェブ・タブレットアプリ.adoc[変更する]ことができる．
+
+== [#数学オブジェクトの作成]####[#.E6.95.B0.E5.AD.A6.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.81.AE.E4.BD.9C.E6.88.90]##数学オブジェクトの作成##
+
+=== 直接入力
+
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CASビュー_
+を使用すると，GeoGebraのCAS（数式処理システム）を利用して記号計算を行うことができる．これは，上部に
+_入力フィールド_，下部に出力表示を備えたセルで構成されている．これらの _入力フィールド_ は通常の
+_xref:/入力バー.adoc[入力バー]_ と同様に使用できるが，以下の点が異なる：
+
+* 値が割り当てられていない変数を使うことができる．
+* `++=++` は方程式に，`++:=++`は代入に使われる．これは，`++a=2++`という入力が _a_ に値 2
+を代入しないことを意味する．詳細はxref:/.adoc[代入のセクション]を参照のこと．
+* 乗算は明示的にマークする必要がある．_xref:/入力バー.adoc[入力バー]_
+では乗算に`++a(b+c)++`と`++a*(b+c)++`の両方を使うことができるが,image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] _CASビュー_ では`++a*(b+c)++`だけが有効である．
+
+=== 直接入力のためのキーボードショートカット
+
+GeoGebra デスクトップ版の image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CASビュー_
+では，以下のキーボードショートカットが入力を計算したり確認したりするのに役立つ．
+
+[NOTE]
+====
+
+これらのキーボードショートカットを使用する代わりに，xref:/.adoc[_CASビューのツールバー_] の対応する
+xref:/CASツール.adoc[_ツール_] を使用することもできる．
+
+====
+
+* [.kcode]#Enter#: 入力を計算する．
+
+[NOTE]
+====
+
+*Notes:*
+
+* 代入は常に評価される．例：`++a := 5++`と入力すると，`++a := 5++`と出力される．
+* 例えば`++a := 5;++`のように，入力の最後にセミコロンを付けて出力を抑制することもできる．
+
+====
+
+=== 変数の割り当てと他のビューとの接続
+
+`++b := 5++`, `++a(n) := 2n + 3++`のように，代入に `++:=++`表記を使うことができる．
+
+* _名前を解放する_：変数名を再度使用可能にするためには，`++Delete(b)++` を使用する．
+* _変数や関数の再定義_：変数や関数を再定義することは可能であるが，それは**同じセル内**で行わなければならない．そうでない場合，新しい変数として扱われ，自動的に名前が変更される．
+
+変数と関数は，可能な限り常にimage:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CASビュー_
+と他のビュー間で共有される．例：
+
+* image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CASビュー_ で `++b:=5++`
+を定義すると，GeoGebra の他のすべての _ビュー_ で _b_ を使うことができる．
+* 別の _ビュー_ で関数 `++f(x)=x^2++` を定義した場合，image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] _CASビュー_ でもこの関数を使用できる．
+
+[NOTE]
+====
+
+出力は常に`++:=++`の**後**の式だけになる．例えば，`++b:=5++`と入力した場合，出力は _5_ になる．また，実際には _b := 5_
+が表示されることにも注意する．
+
+====
+
+=== 方程式
+
+* 例えば，`++3x + 5 = 7++` のように，単純な _イコール_ 記号を使って方程式を書くことができる.
+* _算術演算_：方程式に対して算術演算を行うことができ，手動で方程式を解くのに便利である．
++
+[EXAMPLE]
+====
+
+`++(3x + 5 = 7) - 5++` は，方程式の両辺から5を引く．
+
+====
+* _片方の辺の抽出_：`++LeftSide()++`コマンドと
+`++RightSide()++`コマンドを使用すると，方程式の左辺または右辺を抽出できる．
++
+[EXAMPLE]
+====
+
+`++LeftSide(3x + 5 = 7)++` は， _3 x + 5_ を返し， `++RightSide(3x + 5 = 7)++` は _7_ を返す．
+
+====
+
+=== 行の参照
+
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CASビュー_
+で他の行を参照するには2つの方法がある：
+
+* *静的な行参照* は出力をコピーし，その後 _参照された_ 行が変更されても**更新されない**
+** `++#++`: 前の出力をコピーする．
+** `++#5++`: 5行目の出力をコピーする．
+* *動的な行参照* は実際の出力ではなく，別の行への参照を挿入する．そのため．_参照された_
+行が後に変更された場合，その参照も**更新される**
+** `++$++`: 前の出力への参照を挿入する.
+** `++$5++`: 5行目の出力への参照を挿入する．
+
+== [#CASコマンド]####[#CAS.E3.82.B3.E3.83.9E.E3.83.B3.E3.83.89]##CASコマンド##
+
+GeoGebraには，image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CASビュー_
+でオブジェクトを作成するために使用できる幅広い _xref:/CASコマンド.adoc[CASコマンド]_ がある．_コマンド_ を
+_入力フィールド_ に入力し始めると，GeoGebraは入力に合致する _コマンド_ のリストが表示される．
+
+[NOTE]
+====
+
+コマンドの全リストはxref:/CASコマンド.adoc[CASコマンド]のセクションを参照．
+
+====
+
+[NOTE]
+====
+
+GeoGebra 5.0以降，image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _CASビュー_ は
+xref:/CASビューがサポートする幾何コマンド.adoc[いくつかの _幾何コマンド_]に対して，厳密な計算をサポートしている．
+
+====
+
+== [#CASビューのツールバー]####[#CAS.E3.83.93.E3.83.A5.E3.83.BC.E3.81.AE.E3.83.84.E3.83.BC.E3.83.AB.E3.83.90.E3.83.BC]##CASビューのツールバー##
+
+xref:/CASツール.adoc[_CASビューのツールバー_] には，入力を評価し計算を行うための様々な _xref:/CASツール.adoc[CASツール]_
+が用意されている．入力をして，その後で対応する _CASツール_ を選択するだけで，入力に適用できる．
+
+xref:/CAS_Tools.adoc[image:315px-Toolbar-CAS.png[Toolbar-CAS.png,width=315,height=32]]
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] ヒント:* GeoGebra Classic 5
+では，入力テキストの一部を選択して，この選択された部分にのみ操作を適用することができる．この機能は今のところ Classic 6
+では利用できない．
+
+====
+
+[NOTE]
+====
+
+_ツール_ の全リストは _xref:/CASツール.adoc[CASツール]_ を参照．
+
+====
+
+== [#コンテキストメニュー]####[#.E3.82.B3.E3.83.B3.E3.83.86.E3.82.AD.E3.82.B9.E3.83.88.E3.83.A1.E3.83.8B.E3.83.A5.E3.83.BC]##コンテキストメニュー##
+
+=== 行ヘッダーのコンテキストメニュー
+
+GeoGebra デスクトップ版では，行のヘッダを右クリック（MacOS：[.kcode]#Ctrl#-クリック）すると，以下のオプションを含む
+_コンテキストメニュー_ が表示される：
+
+* *上に挿入*: 現在の行の上に空の行を挿入する．
+* *下に挿入*: 現在の行の下に空の行を挿入する．
+* *行を消去*: 現在の行の内容を削除する．
+* *テキスト*:
+計算結果そのものか，その結果に関するユーザーのコメントを含むテキスト表示かを切り替えることができる．これによりユーザーはコメントを挿入することが可能になる．
+* *LaTeXとしてコピー* (GeoGebra ディスクトップ):
+現在の行の内容をコンピュータのクリップボードにコピーし，例えばxref:/テキスト.adoc[テキスト]オブジェクトなどに貼り付けることができる．
+
+[NOTE]
+====
+
+複数のCASの行の内容をLaTeXとしてコピーするには，[.kcode]##Ctrl##クリック（MacOSでは[.kcode]#Ctrl#-クリック）で必要な行を選択し，行のヘッダー上で右クリック（MacOSでは[.kcode]#Ctrl#-クリック）して
+_LaTeXとしてコピー_ を選択する．
+
+====
+
+=== セルのコンテキストメニュー
+
+GeoGebra デスクトップ版では，CAS 出力セルを右クリック（MacOS では
+[.kcode]#Ctrl#-クリック）すると，以下のオプションを含む _コンテキストメニュー_ が表示される：
+
+* *コピー*:
+セルの内容をコンピュータのクリップボードにコピーする．次に，**貼り付け**オプションを表示するには，新しいセルを右クリックする．
+* *LaTeXとしてコピー*:
+セルの内容をLaTeX形式でコンピュータのクリップボードにコピーし，xref:/テキスト.adoc[テキスト]オブジェクトやLaTeXエディタに貼り付けることができる．
+* *LibreOfficeの数式としてコピー*:
+セルの内容をLibreOfficeの数式形式でコンピュータのクリップボードにコピーし，ワープロ文書に貼り付けることができる．
+* *画像としてコピー*:
+セルの内容をPNG形式でコンピュータのクリップボードにコピーし，xref:/tools/画像の挿入.adoc[イメージ]オブジェクトやワープロ文書に貼り付けることができる．
+
+== [#数学オブジェクトの表示]####[#.E6.95.B0.E5.AD.A6.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.81.AE.E8.A1.A8.E7.A4.BA]##数学オブジェクトの表示##
+
+=== xref:/スタイルバー.adoc[_CASビューのスタイルバー_]
+
+xref:/スタイルバー.adoc[_CASビューのスタイルバー_]には，以下のボタンがある．
+
+* image:16px-Stylingbar_text.svg.png[Stylingbar text.svg,width=16,height=16] ：
+テキストのスタイル(image:16px-Stylingbar_text_bold.svg.png[Stylingbar text bold.svg,width=16,height=16] *太字* と
+image:16px-Stylingbar_text_italic.svg.png[Stylingbar text italic.svg,width=16,height=16]
+_斜体_)と　image:16px-Stylingbar_color_white.svg.png[Stylingbar color white.svg,width=16,height=16]色を変更する
+* image:16px-Cas-keyboard.png[Cas-keyboard.png,width=16,height=16] ： 仮想キーボードを表示する (GeoGebraデスクトップ)
+* image:16px-Stylingbar_dots.svg.png[Stylingbar dots.svg,width=16,height=16]
+：GeoGebraウィンドウに追加のxref:/表示.adoc[_ビュー_] を追加する(GeoGebraウェブ・タブレットアプリ)
+
+=== image:20px-Menu_view_graphics.svg.png[Graphics View,title="Graphics View",width=20,height=20] _グラフィックスビュー_ にCASオブジェクトを表示する
+
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+__CASビュー__では，各行の左側にあるアイコンが，可能であればその行で定義されたオブジェクトの現在の表示状態（表示または非表示）を示している．image:16px-Menu_view_graphics.svg.png[Graphics
+View,title="Graphics View",width=16,height=16] _xref:/グラフィックスビュー.adoc[グラフィックスビュー]_
+でオブジェクトの表示状態を変更するには，image:16px-Mode_showhideobject.svg.png[Mode
+showhideobject.svg,width=16,height=16] _オブジェクトの表示/非表示_ の小さなアイコンを直接クリックする．

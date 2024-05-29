@@ -1,0 +1,34 @@
+= Axes コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+Axes( <円錐曲線> )::
+  円錐曲線の長軸と短軸の方程式を返す．
+
+[NOTE]
+====
+
+参照： xref:/commands/MajorAxis.adoc[MajorAxis] ， xref:/commands/MinorAxis.adoc[MinorAxis] コマンド
+
+====
+
+Axes( <二次曲面> )::
+  与えられた二次曲面の 3 軸 を求める．
+
+[EXAMPLE]
+====
+
+`++Axes(x^2 + y^2 + z^2= 3)++` ３つの直線を返す．
+
+_a_: _X_ = (0, 0, 0) + _λ_ (1, 0, 0), _b_: _X_ = (0, 0, 0) + _λ_ (0, 1, 0) , _c_: _X_ = (0, 0, 0) + _λ_ (0, 0, 1)
+
+====
+
+[NOTE]
+====
+
+*Notes:* 特に：
+
+* _円柱_ の場合: 底面の円の中心を通る 2 軸と，円柱の回転軸の 1 軸が求められる．
+* _球_ の場合: 座標系と同じ方向の 3 軸が求められる．
+
+====

@@ -1,0 +1,45 @@
+= TrigCombine コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+TrigCombine( <式> )::
+  三角関数の積を含む式を，変数の和を含むが積を含まない式に変換する．
+
+[EXAMPLE]
+====
+
+* `++TrigCombine(sin(x) cos(3x))++` 出力： stem:[\{\frac\{1}\{2} sin \left( 4 x \right) - \frac\{1}\{2} sin \left( 2 x
+\right)}]
+* `++TrigCombine(sin(x) + cos(x))++` 出力： stem:[ \{\sqrt\{2} cos \left( x - \frac\{1}\{4} \pi \right)} ].
+
+====
+
+TrigCombine( <式>, <目標関数> )::
+  三角関数の積を含む三角関数の式を，目標関数を優先して，変数の和を含むが積を含まない式に変換する．
+
+[EXAMPLE]
+====
+
+`++TrigCombine(sin(x) + cos(x), sin(x))++` 出力： stem:[ \{\sqrt\{2} sin \left( x + \frac\{1}\{4} \pi \right)} ].
+
+====
+
+[NOTE]
+====
+
+*Notes:*
+
+* image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View] では未定義の変数も使うことができる．
+* {blank}
++
+[EXAMPLE]
+====
+
+`++TrigCombine(sin(p) cos(3p))++` 出力： stem:[\{\frac\{1}\{2} sin \left( 4 p \right) - \frac\{1}\{2} sin \left( 2 p
+\right)}].
+
+====
+* こちらも参照： xref:/commands/TrigExpand.adoc[TrigExpand コマンド] ， xref:/commands/TrigSimplify.adoc[TrigSimplify
+コマンド].
+
+====

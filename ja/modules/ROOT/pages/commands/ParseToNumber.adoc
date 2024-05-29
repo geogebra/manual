@@ -1,0 +1,38 @@
+= ParseToNumber コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+ParseToNumber( <数値>, <文字列> )::
+  文字列を解析し，その結果をxref:/数値と角度.adoc[数値] _a_ に格納する．このコマンドを使用する前に，数値 _a_
+  は定義済みのxref:/自由、従属、補助オブジェクト.adoc[自由]な数値でなければならない．
+
+[EXAMPLE]
+====
+
+数値 `++ a = 3++` を定義後， `++ text1 = "6"++`. `++ ParseToNumber(a, text1)++` とコマンドを入力すると _a = 6_ を返す．
+
+====
+
+[NOTE]
+====
+
+これは，数値の値を一度だけ設定するxref:/commands/スクリプティング.adoc[スクリプティング_コマンド]である．テキスト
+_text1_ を動的に更新される数値に変換するには，xref:/commands/FromBase.adoc[FromBase](text1,10)を使用する．
+
+====
+
+ParseToNumber( <Text> )::
+  テキストを解析し，結果をxref:/数値と角度.adoc[数値]に格納する．
+
+[EXAMPLE]
+====
+
+`++ParseToNumber("1+2+5-pi")++` 出力： _a = 4.86_.
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/ParseToFunction.adoc[ParseToFunction] コマンド．
+
+====

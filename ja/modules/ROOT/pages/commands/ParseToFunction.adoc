@@ -1,0 +1,42 @@
+= ParseToFunction コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+ParseToFunction( <テキスト> )::
+  関数定義が含まれるテキストを解析し，それに応じたxref:/関数.adoc[関数]を生成する．
+
+[EXAMPLE]
+====
+
+* `++ ParseToFunction("x^2")++` は関数 _f_(_x_) = __x__^2^ _を作成する，_
+* `++ ParseToFunction("t+2/t"})++` は関数 _f_(_t_) = _t_ + 2/_t_ を作成する．
+
+====
+
+ParseToFunction( <関数>, <テキスト> )::
+  文字列を解析し，その結果をxref:/関数.adoc[関数] _f_ に格納する．このコマンドを使用する前に，関数 _f_ は定義済みの
+  xref:/自由、従属、補助オブジェクト.adoc[自由]な関数でなければならない．
+
+[EXAMPLE]
+====
+
+関数 `++ f(x) = 3x² + 2++` を定義後， `++ text1 = "f(x) = 3x + 1"++`，`++ ParseToFunction(f, text1)++`
+とコマンドを入力すると _f(x) = 3x + 1_　を返す．
+
+====
+
+ParseToFunction( <テキスト>, <変数のリスト> )::
+  関数定義が含まれるテキストを解析し，リストで定義されている変数に対応する xref:/関数.adoc[関数] を作成する．
+
+[EXAMPLE]
+====
+
+`++ ParseToFunction("2u+3v",{"u", "v"})++` は関数 _a(u,v) = 2u + 3v_ を作成する．
+
+====
+
+[NOTE]
+====
+
+こちらも参照： xref:/commands/ParseToNumber.adoc[ParseToNumber] コマンド．
+
+====

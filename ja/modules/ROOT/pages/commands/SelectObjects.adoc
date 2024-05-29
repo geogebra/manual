@@ -1,0 +1,24 @@
+= SelectObjects コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+SelectObjects( )::
+  選択されているすべてのオブジェクトの選択を解除する．
+SelectObjects( <オブジェクト>, <オブジェクト>, ... )::
+  すべてのオブジェクトの選択を解除し，パラメータとして渡されたラベル付きオブジェクトを選択する．パラメータはすべてxref:/ラベルと見出し.adoc[ラベル]
+  付きである必要がある．
+
+[EXAMPLE]
+====
+
+* _A_, _B_, _C_ を点とする．コマンド `++SelectObjects(A, B, C)++` は点 _A_, _B_, _C_ を選択する．
+* コマンド `++SelectObjects(Midpoint(A, B))++`
+は，選択されたすべてのオブジェクトの選択を解除するだけで，何の効果もない．
+
+====
+
+[NOTE]
+====
+
+このコマンドは現在進行中のドラッグをキャンセルする（スクリプトでの使用に便利）．
+
+====

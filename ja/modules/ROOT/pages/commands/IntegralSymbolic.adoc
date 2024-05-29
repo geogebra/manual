@@ -1,0 +1,24 @@
+= IntegralSymbolic コマンド
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+== CAS での書式
+
+IntegralSymbolic(<関数>)::
+  主変数に関する不定積分を出力する．積分定数 _c_ は自動的にスライダーとしては表示されない．
+
+[EXAMPLE]
+====
+
+`++IntegralSymbolic(3x^2)++` 出力： stem:[x^3+c_\{1}].
+
+====
+
+IntegralSymbolic(<関数>, <変数>)::
+  与えられた変数に関する偏積分を出力する．積分定数 _c_ は自動的にスライダとして表示されない．
+
+[EXAMPLE]
+====
+
+`++IntegralSymbolic(x³+3x y, x)++` 出力： _stem:[ \frac\{1}\{4}x^4] + stem:[\frac\{3}\{2} x² y+c_\{1} ]_ .
+
+====
