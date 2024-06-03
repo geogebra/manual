@@ -1,0 +1,61 @@
+= Dinamikus színek
+:page-en: Dynamic_Colors
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+A GeoGebrában megváltoztathatja az alakzatok színét a xref:/Tulajdonságok_párbeszédablak.adoc[Tulajdonságok
+párbeszédablakban]. Továbbá lehetséges az alakzatok színét dinamikusan megváltoztatni. Ehhez nyissa meg a
+xref:/Tulajdonságok_párbeszédablak.adoc[Tulajdonságok párbeszédablakot] a kívánt alakzathoz, majd kattintson a _Haladó_
+tabra. A __Dinamikus színek__nél megadhatja a piros, zöld és kék (RGB) színek értékeit.
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* A fő színek RGB értéke a__Tulajdonságok párbeszédablak__ _Szín_ -> _Előnézet_ mezejének jobb oldalán található. A
+dinamikus szín értékének kiszámításához ossza el az egyes színek értékét 255-tel.
+* A dinamikus szín meghatározása egy függvény megadásával (a beviteli mezőben a _[0, 1]_ intervallumon) is lehetséges.
+
+====
+
+[EXAMPLE]
+====
+
+* Hozzon létre három xref:/tools/Csúszka.adoc[csúszkát] a _[0, 1]_ intervallumon.
+* Hozzon létre egy szokszöget, amelynek színét a csúszkákkal szeretné szabályozni.
+* Nyissa meg a sokszöghöz tartozó xref:/Tulajdonságok_párbeszédablak.adoc[Tulajdonságok párbeszédablakot], majd írja a
+csúszkák nevét a _piros_, _zöld_ és _kék_ színek beviteli mezejébe.
+* Zárja be a _Tujaldonságok párbeszédablakot_, majd változtassa meg a csúszkák értékét. Ezzel a sokszög színe is
+megváltozik.
+
+[NOTE]
+====
+
+*Jegyzet:* Ezen kívül a csúszkákat animálhatja is (pl. különböző sebességgel), hogy a sokszög színe automatikusan
+változzon.
+
+====
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Továbbá megadható az alakzat átlátszatlansága az itt található szövegdobozban. A 0 tejlesen átlátszóvá, az 1
+teljesen láthatóvá teszi az alakzatot.
+
+====
+
+== RGB / HSV / HSL
+
+Egyes dinamikus színeknél egyszerűbb más színmodellt használni. Ilyen esetben az alapértelmezett
+http://en.wikipedia.org/wiki/RGB_color_model[RGB] helyett alkalmazhatja a http://en.wikipedia.org/wiki/HSL_and_HSV[HSL]
+vagy a http://en.wikipedia.org/wiki/HSL_and_HSV[HSV] színmodelleket.
+
+[EXAMPLE]
+====
+
+Egy _A_ pont létrehozásához, amelynek színe vízszintes elmozgatásnál változik, állítsa be a _HSV_ színmodellt és adja
+meg a következő értékeket: _Színárnyalat_: x(A), _Telítettség_: 1 és _Érték_: 1.
+
+====

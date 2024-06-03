@@ -1,0 +1,69 @@
+= Szöveg parancs
+:page-en: commands/Text
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Szöveg[ <Alakzat> ]::
+  Megadja xref:/Szövegek.adoc[szövegként] az adott alakzat képletét (értékét).
+
+[EXAMPLE]
+====
+
+Ha _a = 2_ és _c = a^2^_, akkor a `++Szöveg[c]++` eredménye a következő szöveg: _"4"_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A változóknál azok értékeit adja meg.
+
+====
+
+Szöveg[ <Alakzat>, <Logikai érték a változók behelyettesítéséhez> ]::
+  Megadja szövegként az alakzat képletét. Ha a logikai érték = _true_, úgy a változóknál azok értékeit adja meg, ha
+  _false_, akkor nem történik behelyettesítés.
+
+[EXAMPLE]
+====
+
+Ha _a = 2_ és _c = a^2^_, akkor a
+
+* `++Szöveg[c, true]++` parancs eredménye a következő szöveg: _"4"_
+* `++Szöveg[c, false]++` parancs eredménye a következő szöveg: _"a^2^"_
+
+====
+
+Szöveg[ <Alakzat>, <Pont> ]::
+  Megadja szövegként az alakzat képletét a megadott pontban.
+
+[EXAMPLE]
+====
+
+`++Szöveg["GeoGebra", (2, 3)]++` eredménye a _(2, 3)_ helyen lévő szövegrészlet.
+
+====
+
+Szöveg[ <Alakzat>, <Pont>, <Logikai érték a változók behelyettesítéséhez> ]::
+  Megadja szövegként az alakzat értékét a megadott pontban. Ha a logikai érték = _true_, úgy a változóknál azok értékeit
+  adja meg, ha _false_, akkor nem történik behelyettesítés.
+
+[EXAMPLE]
+====
+
+Ha _a = 2_ és _c = a^2^_, akkor a `++Szöveg[c, (2, 1), true]++` parancs eredménye a következő szöveg: _"4"_, a _(2, 1)_
+helyen.
+
+====
+
+Szöveg[ <Alakzat>, <Pont>, <Logikai érték változó behelyettesítéséhez>, <Logikai érték LateX formulához> ]::
+  Megadja szövegként az alakzat értékét a megadott pontban. Ha a logikai érték = _true_, úgy a változóknál azok értékeit
+  adja meg, ha _false_, akkor nem történik behelyettesítés. Ha a LateX formula logikai értéke = _true_, úgy a szöveg
+  xref:/LaTEX.adoc[LaTEX] segítségével jelenik meg.
+
+[EXAMPLE]
+====
+
+Ha _a = 2_ és _c = a^2^_, akkor a `++Szöveg[c, (2, 1), true, true]++` parancs eredménye a következő LateX szöveg: _"4"_,
+a _(2, 1)_ helyen.
+
+====

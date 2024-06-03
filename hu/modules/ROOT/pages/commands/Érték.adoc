@@ -1,0 +1,30 @@
+= Érték parancs
+:page-en: commands/SetValue
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Érték[ <Logikai>, < 0|1> ]::
+  Meghatározza a megadottt logikai kifejezés értékét (_1 = true_, _0 = false_).
+
+[EXAMPLE]
+====
+
+Legyen _b_ a logikai érték. Az `++Érték[b,1]++` parancs a _b_ logikai értékét _true_-ra változtatja.
+
+====
+
+Érték[ <Alakzat>, <Alakzat> ]::
+  Legyen _A_ az első és _B_ a második alakzat. Ha _A_ egy xref:/Geometriai_alakzatok.adoc[úton vagy tartományban] lévő
+  xref:/Szabad_Függő_és_Segéd_alakzatok.adoc[szabad alakzaton] vagy xref:/Pontok_és_Vektorok.adoc[ponton] van, úgy annak
+  értéke a _B_ értékét veszi át (_A_ nem változik, ha ezután _B_ értéke változik.)
+
+[EXAMPLE]
+====
+
+Legyen _f_ egy függvény. Az `++Érték[f, VéletlenElem[{cos(x), 3x+2, ln(x)}]]++` véletlenszerűen meghatározza a függvényt
+a listában lévő elemek egyikével.
+
+====
+
+Érték[ <Lista>, <Szám>, <Alakzat> ]::
+  Meghatározza az alakzat értékét a lista _n_-edik elemével. Az _n_ a megadott szám, amelynek maximális értéke _lista
+  hossza + 1_ lehet.

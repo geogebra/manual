@@ -1,0 +1,16 @@
+= MetszetTartomány parancs
+:page-en: commands/IntersectRegion
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+MetszetTartomány[ <Sokszög>, <Sokszög> ]::
+  A két sokszög metszetét jelöli. A parancs akkor működik csak, ha a két sokszög nincsen teljes fedésben.
+
+[EXAMPLE]
+====
+
+Legyenek `++A = (1, 4)++`, `++B = (1, 1)++`, `++C = (5, 1)++`, `++D = (5, 4)++`, `++E = (3, 5)++`, `++G = (3, 2)++`,
+`++H = (7, 2)++` és `++I = (5, 5)++` a két sokszög csúcsai. A `++Sokszög[A, B, C, D]++` parancs eredménye _sokszög1 =
+12_ és a `++Sokszög[E, G, H, I]++` parancs eredménye _sokszög2 = 9_. A `++MetszetTartomány[ sokszög1, sokszög2 ]++`
+parancs eredménye a két sokszög következő metszete: _sokszög3 = 4_.
+
+====

@@ -1,0 +1,32 @@
+= MintaVariancia parancs
+:page-en: commands/SampleVariance
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+MintaVariancia[ <Nyers adatok listája> ]::
+  Meghatározza az adott lista http://en.wikipedia.org/wiki/Sample_variance#Population_variance_and_sample_variance[minta
+  varianciáját].
+
+MintaVariancia[ <Számok listája>, <Gyakoriságok listája> ]::
+  Meghatározza az adott lista http://en.wikipedia.org/wiki/Sample_variance#Population_variance_and_sample_variance[minta
+  varianciáját] a megadott gyakoriságokat figyelembe véve.
+
+[EXAMPLE]
+====
+
+`++MintaVariancia[ {1, 2, 3, 4, 5}, {3, 2, 4, 4, 1} ]++` eredménye _a = 1.29_.
+
+====
+
+== CAS nézet
+
+MintaVariancia[ <Nyers adatok listája> ]::
+  Meghatározza az adott lista http://en.wikipedia.org/wiki/Sample_variance#Population_variance_and_sample_variance[minta
+  varianciáját].
+  Ha a minta változót tartalmaz, megadja a variancia meghatározására alkalmas képletet.
+
+[EXAMPLE]
+====
+
+`++MintaVariancia[{x, y, z}]++` megadja a stem:[\frac\{x² - x y - x z + y² - y z + z²}\{3}] képletet.
+
+====

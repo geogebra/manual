@@ -1,0 +1,34 @@
+= Trilineáris parancs
+:page-en: commands/Trilinear
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Trilineáris[ <Pont>, <Pont>, <Pont>, <Szám>, <Szám>, <Szám> ]::
+  Létrehoz egy pontot, melynek http://en.wikipedia.org/wiki/Trilinear_coordinates[trilineáris koordinátái] a megdott
+  számok, a háromszög pontjainak figyelembe vételével.
+
+== Néhány példa
+
+[cols=",,,",options="header",]
+|===
+|Pont |<Szám> |<Szám> |<Szám>
+|A |1 |0 |0
+
+|B |0 |1 |0
+
+|C |0 |0 |1
+
+|Körülírt kör középpontja |cos(stem:[\hat\{A}]) |cos(stem:[\hat\{B}]) |cos(stem:[\hat\{C}])
+
+|Beírt kör középpontja |1 |1 |1
+
+|[BC] érintő körének középpontja |-1 |1 |1
+
+|[AC] érintő körének középpontja |1 |-1 |1
+
+|[AB] érintő körének középpontja |1 |1 |-1
+
+|Súlypont |stem:[\frac\{1}\{a}] |stem:[\frac\{1}\{b}] |stem:[\frac\{1}\{c}]
+
+|Magasságpont |cos(stem:[\hat\{B}]) cos(stem:[\hat\{C}]) |cos(stem:[\hat\{A}]) cos(stem:[\hat\{C}])
+|cos(stem:[\hat\{A}])cos(stem:[\hat\{B}])
+|===

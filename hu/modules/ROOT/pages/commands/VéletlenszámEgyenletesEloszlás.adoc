@@ -1,0 +1,58 @@
+= VéletlenszámEgyenletesEloszlás parancs
+:page-en: commands/RandomUniform
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+VéletlenszámEgyenletesEloszlás[ <Alsó határ>, <Felső határ> ]::
+  Megadja egy http://hu.wikipedia.org/wiki/Egyenletes_eloszlás[egyenletes eloszlás] egy véletlenszerű számát a megadott
+  intervallumban [_alsó határ_, _felső határ_].
+
+[EXAMPLE]
+====
+
+`++ VéletlenszámEgyenletesEloszlás[0, 1]++` eredménye egy _0_ és _1_ közötti véletlenszerű valós szám.
+
+====
+
+VéletlenszámEgyenletesEloszlás[ <Minimum>, <Maximum>, <Minták száma> ]::
+  Megadja egy http://hu.wikipedia.org/wiki/Egyenletes_eloszlás[egyenletes eloszlás] _n_ valós számú listáját a megadott
+  intervallumban [_alsó határ_, _felső határ_].
+
+[EXAMPLE]
+====
+
+`++ VéletlenszámEgyenletesEloszlás[0, 1, 3]++` eredménye egy lista, amely három véletlenszerű valós számot tartalmaz a
+[_0_, _1_] intervallumban.
+
+====
+
+== CAS nézet
+
+VéletlenszámEgyenletesEloszlás[ <Alsó határ>, <Felső határ> ]::
+  Megadja egy http://hu.wikipedia.org/wiki/Egyenletes_eloszlás[egyenletes eloszlás] egy véletlenszerű számát a megadott
+  intervallumban [_alsó határ_, _felső határ_].
+
+[EXAMPLE]
+====
+
+`++ VéletlenszámEgyenletesEloszlás[0, 1]++` eredménye egy _0_ és _1_ közötti véletlenszerű valós szám.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A `++ VéletlenszámEgyenletesEloszlás[0,1]++` parancs egyenlő a `++random()++` paranccsal (lásd
+xref:/Előre_definiált_Függvények_és_Operátorok.adoc[Előre definiált Függvények és Operátorok]).
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd továbbá http://wiki.geogebra.org/en/SetSeed_Command[SetSeed],
+xref:/commands/Véletlenszám.adoc[Véletlenszám], xref:/commands/VéletlenElem.adoc[VéletlenElem],
+xref:/commands/VéletlenszámBinomiálisEloszlás.adoc[VéletlenszámBinomiálisEloszlás],
+xref:/commands/VéletlenszámNormálisEloszlás.adoc[VéletlenszámNormálisEloszlás],
+xref:/commands/VéletlenszámPoissonEloszlás.adoc[VéletlenszámPoissonElolszlás].
+
+====

@@ -1,0 +1,17 @@
+= TömegKözéppont parancs
+:page-en: commands/Barycenter
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+TömegKözéppont[ <Pontok listája>, <Súlyok listája> ]::
+  Beálltja egy pontrendszer közepét a listán, amely a pontok helyeinek átlaga, azok súlyozását figyelembe véve a
+  https://hu.wikipedia.org/wiki/Tömegközéppont[megfelelő képlet] használatával.
+
+[EXAMPLE]
+====
+
+* `++TömegKözéppont[{(2, 0), (0, 2), (-2, 0), (0, -2)}, {1, 1, 1, 1}]++` eredménye az _A(0, 0)_ pont.
+* `++TömegKözéppont[{(2, 0), (0, 2), (-2, 0), (0, -2)}, {2, 1, 1, 1}]++` eredménye a _B(0.4, 0)_ pont. A pont "x"
+koordinátája a _stem:[ \frac\{1}\{ 2+1+1+1 }*(2*2+1*0+1*(-2)+1*0)] = stem:[\frac\{1}\{ 5 }*2] = 0.4_ képlettel lett
+kiszámítva.
+
+====

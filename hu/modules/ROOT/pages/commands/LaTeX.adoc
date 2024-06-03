@@ -1,0 +1,53 @@
+= LaTeX parancs
+:page-en: commands/FormulaText
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+LaTeX[ <Alakzat> ]::
+  Létrehozza a megadott alakzat értékét LaTeX szövegként.
+
+[EXAMPLE]
+====
+
+Legyen _a = 2_ és _f(x) = a x^2^_.
+
+`++LaTeX[f]++` eredménye _2 x^2^_ (mint LaTeX szöveg).
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Változóknál az azokhoz tartozó értékek kerülnek a szövegbe.
+
+====
+
+LaTeX[ <Alakzat>, <Logikai érték a változók behelyettesítéséhez> ]::
+  Létrehozza amegadott alakzat értékét LaTeX szövegként. A logikai érték határozza meg, hogy a változók helyett azok
+  értékei kerüljenek a szövegbe (true) vagy a változók neve (false).
+
+[EXAMPLE]
+====
+
+Legyen _a = 2_ és _f(x) = a x^2^_.
+
+`++LaTeX[f, true]++` eredménye _2 x^2^_ (mint LaTeX szöveg).
+
+`++LaTeX[f, false]++` eredménye _a x^2^_ (mint LaTeX szöveg).
+
+====
+
+LaTeX[ <Alakzat>, <Logikai érték a változók behelyettesítéséhez>, <Logikai érték nevek megjelenítéséhez> ]::
+  Létrehozza amegadott alakzat értékét LaTeX szövegként. A logikai érték határozza meg, hogy a változók helyett azok
+  értékei kerüljenek a szövegbe (true) vagy hogy a változók neve (false). A második logikai érték megadja, hogy az
+  alakzat neve a szövegben megjelenjen (true) vagy ne (false).
+
+[EXAMPLE]
+====
+
+Legyen _a = 2_ és _f(x) = a x^2^_.
+
+`++LaTeX[f, true, true]++` eredménye _f(x) = 2 x^2^_ (mint LaTeX szöveg).
+
+`++LaTeX[f, false, false]++` eredménye _a x^2^_ (mint LaTeX szöveg).
+
+====

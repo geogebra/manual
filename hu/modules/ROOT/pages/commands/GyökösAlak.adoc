@@ -1,0 +1,59 @@
+= GyökösAlak parancs
+:page-en: commands/SurdText
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+GyökösAlak[ <Szám> ]::
+  Létrehozza a szám gyökös alakját a következő formában: stem:[\frac\{a+b\sqrt\{c}}\{d}].
+
+[EXAMPLE]
+====
+
+* `++GyökösAlak[2.414213562373095]++` eredménye _stem:[1 + \sqrt\{2}]_
+* `++GyökösAlak[2.439230484541326]++` eredménye _stem:[\frac\{7+3 \sqrt\{3} }\{5}]_
+
+====
+
+GyökösAlak[ <Szám>, <Lista> ]::
+  Létrehozza a szám gyökös alakját a listában megadott állandók többszöröseként. Ha a lista üres, úgy általános
+  állandókat használ.
+
+[EXAMPLE]
+====
+
+* `++GyökösAlak[3.718281828459045, {exp(1)}]++` eredménye _stem:[e + 1]_
+* `++GyökösAlak[5.382332347441762, {sqrt(2), sqrt(3), sqrt(5)}]++` eredménye _stem:[ \sqrt\{5} + \sqrt\{3} + \sqrt\{2}]_
+* `++GyökösAlak[1.693147180559945, {ln(2)}]++` eredménye _stem:[ \ln(2) + 1]_
+
+====
+
+GyökösAlak[ <Pont> ]::
+  Létrehozza a pont gyökös alakját, a pont koordinátái a következő formában vannak: stem:[\frac\{a+b\sqrt\{c}}\{d}].
+
+[EXAMPLE]
+====
+
+`++GyökösAlak[(2.414213562373095, 1.414213562373095)]++` eredménye _(stem:[1 + \sqrt\{2}, \sqrt\{2})]_
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* Ha szöveggel szeretnénk használni a parancsot, úgy engedélyeznünk kell a ""LaTeX" opciót a szöveg
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Tulajdonságok_párbeszédablak.adoc[Tulajdonságok párbeszédablak] menüjének Szöveg lapján.
+* Mivel a parancs működik kerekített tizedesszámmal, néha nem várt eredményt kaphatunk.
+* Ha nincsen megfelelő eredmény, úgy a megadott számot kapjuk vissza.
+
+[EXAMPLE]
+====
+
+`++GyökösAlak[1.23456789012345]++` eredménye _1.23456789012345_.
+
+====
+
+* Lásd továbbá a xref:/commands/TörtAlak.adoc[TörtAlak] és xref:/commands/NormálAlak.adoc[NormálAlak] parancsokat.
+
+====

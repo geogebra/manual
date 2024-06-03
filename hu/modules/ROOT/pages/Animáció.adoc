@@ -1,0 +1,88 @@
+= Animáció
+:page-en: Animation
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+== Automatikus animáció
+
+A GeoGebra nem csak szabad számok és/vagy pontok egyidejű animációját teszi lehetővé, hanem alakzathoz (szakasz,
+egyenes, függvény, görbe, stb...) rögzített függő pontokét is. Az automatikus animációhoz a szabad számokat/szögeket
+csúszkaként kell megjeleníteni a xref:/Geometria_ablak.adoc[Geometria ablakban].
+
+Ha animálni szeretnénk egy szabad számot vagy szöget, illetve függő pontot, kattintsunk a számon, szögön vagy ponton
+jobb gombbal (Mac OS: Ctrl-click) és válasszuk az Animáció be opciót a megjelenő xref:/Helyi_menü.adoc[Helyi menüből].
+Az animáció megállításához, ismét kattintsunk az Animáció be opción.
+
+[NOTE]
+====
+
+*Jegyzet:* Az animáció elindításakor egy animáció gomb jelenik meg Rajzlap bal alsó sarkában. Ennek segítségével
+image:Animate_Pause.png[Animate Pause.png,width=16,height=16] leállítható vagy image:Animate_Play.png[Animate
+Play.png,width=16,height=16] folytatható az animáció.
+
+====
+
+A xref:/Tulajdonságok_párbeszédablak.adoc[Tulajdonságok párbeszédablak] Csúszka fülén beállíthatók az animáció
+jellemzői:
+
+Egyrészt megadható az animáció sebessége.
+
+[NOTE]
+====
+
+*Jegyzet:* Az 1-es sebesség azt jelenti, hogy az animáció 10 másodperc alatt fut végig egyszer a csúszka intervallumán.
+
+====
+
+Másrészt meghatározható az animáció ismétlődésének típusa:
+
+⇔ Oszilláló::
+  Az animáció felváltva Növekvő és Csökkenő.
+⇒ Növekvő::
+  A csúszka értéke folyamatosan nő. Miután elérte a maximumot, visszaugrik a minimális értékre és az animáció
+  folytatódik.
+⇐ Csökkenő::
+  A csúszka értéke folyamatosan csökken. Miután elérte a minimumot, visszaugrik a maximális értékre és az animáció
+  folytatódik.
+
+[NOTE]
+====
+
+*Jegyzet:* Az automatikus animáció közben a GeoGebra zavartalanul funkcionál. A szerkesztés megváltoztatható az animáció
+futása közben is.
+
+====
+
+== Kézi animáció
+
+Egy szám, szög vagy pont kézi megváltoztatásához válasszuk a image:Tool_Move.gif[Tool Move.gif,width=32,height=32]
+xref:/tools/Mozgatás.adoc[Mozgatás eszközt]. Kattintsunk ezután a szabad számon, szögön vagy egy függő ponton és nyomjuk
+le a + vagy – gombok, vagy a nyilak egyikét. Nyomva tartva az adott gombot az animáció elindul.
+
+[EXAMPLE]
+====
+
+Ha a pont koordinátája a _t_ szám értékétől függ pl. a P = (2 t, t) összefüggés alapján, akkor "t" folyamatos
+változásakor a P pont egy egyenesen mozog.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A csúszka növekedésének lépésközét az objektum xref:/Tulajdonságok_párbeszédablak.adoc[Tulajdonságok
+párbeszédablakának] Csúszka fülén állíthatjuk be.
+
+====
+
+== [#Gyorsbillentyűk_=]####[#Gyorsbillenty.C5.B1k_.3D]##Gyorsbillentyűk =##
+
+* Shift + nyíl 0.1 egységnyi lépést jelent
+* Ctrl + nyíl 10 egységnyi lépést jelent
+* Alt + nyíl 100 egységnyi lépést jelent
+
+[NOTE]
+====
+
+*Jegyzet:* Egy egyenesen lévő pont a + vagy – gombok segítségével is mozgatható az egyenesen.
+
+====

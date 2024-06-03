@@ -1,0 +1,22 @@
+= FüggvénykéntMegad parancs
+:page-en: commands/ParseToFunction
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+FüggvénykéntMegad[ <Szabad függvény>, <Kifejezés (idézőjelek között)> ]::
+  Az _f_ xref:/Függvények.adoc[függvény] a beírt kifejezésnek megfelelően lesz értelmezve . Előzőleg _f_-et
+  xref:/Szabad_Függő_és_Segéd_alakzatok.adoc[szabad] függvényként kell definiálni.:
+
+[EXAMPLE]
+====
+
+Legyen `++ f(x) = 3x² + 2++` és `++ szöveg1 = "f(x) = 3x + 1"++`. `++FüggvénykéntMegad[f, szöveg1]++` eredménye _f(x) =
+3x + 1_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd a xref:/commands/SzámkéntMegad.adoc[SzámkéntMegad] parancsot.
+
+====

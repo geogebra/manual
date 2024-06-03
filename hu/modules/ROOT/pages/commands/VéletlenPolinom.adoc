@@ -1,0 +1,51 @@
+= VéletlenPolinom parancs
+:page-en: commands/RandomPolynomial
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+VéletlenPolinom[ <Fokszám>, <Együtthatók minimuma>, <Együtthatók maximuma> ]::
+  Létrehoz egy véletlenszerű polinomot _x_ változóval és adott fokszámmal, melynek (egész számú) együtthatói a megadott
+  minimum és maximum érték között mozognak.
+
+[EXAMPLE]
+====
+
+* `++ VéletlenPolinom[0, 1, 2]++` eredménye _1_ vagy _2_ és
+* `++ VéletlenPolinom[2, 1, 2]++` eredménye egy tetszőleges másodfokú polinom az _1_ ill. _2_ együtthatókkal, pl. _2x^2^
++ x + 1_.
+
+====
+
+== CAS nézet
+
+VéletlenPolinom[ <Fokszám>, <Együtthatók minimuma>, <Együtthatók maximuma> ]::
+  Létrehoz egy véletlenszerű polinomot _x_ változóval és adott fokszámmal, melynek (egész számú) együtthatói a megadott
+  minimum és maximum érték között mozognak.
+
+[EXAMPLE]
+====
+
+* `++ VéletlenPolinom[0, 1, 2]++` eredménye _1_ vagy _2_ és
+* `++ VéletlenPolinom[2, 1, 2]++` eredménye egy tetszőleges másodfokú polinom az _1_ ill. _2_ együtthatókkal, pl. _2x^2^
++ x + 1_.
+
+====
+
+VéletlenPolinom[ <Változó>, <Fokszám>, <Együtthatók minimuma>, <Együtthatók maximuma> ]::
+  Létrehoz egy véletlenszerű polinomot adott változóval és fokszámmal, melynek (egész számú) együtthatói a megadott
+  minimum és maximum érték között mozognak.
+
+[EXAMPLE]
+====
+
+* `++ VéletlenPolinom[a, 0, 1, 2]++` eredménye _1_ vagy _2_ és
+* `++ VéletlenPolinom[a, 2, 1, 2]++` eredménye egy tetszőleges másodfokú polinom az _1_ ill. _2_ együtthatókkal, pl.
+_2a^2^ + a + 1_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Ha a minimum ill. maximum érték nem egész szám, úgy az kerekítve lesz.
+
+====

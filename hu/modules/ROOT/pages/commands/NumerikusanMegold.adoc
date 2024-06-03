@@ -1,0 +1,60 @@
+= NumerikusanMegold parancs
+:page-en: commands/NSolve
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Ez a parancs csak xref:/CAS_nézet.adoc[CAS nézetben] érhető el..
+
+NumerikusanMegold[ <Egyenlet>]::
+  Megkísérli megtalálni az egyenlet numerikus meoldását az _x_ változóra.
+
+[EXAMPLE]
+====
+
+`++NumerikusanMegold[cos(x) = x]++` eredménye _\{x = 0.7390851332151606}_.
+
+====
+
+NumerikusanMegold[ <Egyenlet>, <Változó> ]::
+  Megkísérli megtalálni az egyenlet numerikus meoldását a megadott ismeretlen változóra.
+
+[EXAMPLE]
+====
+
+`++NumerikusanMegold[a^4 + 34a^3 = 34, a]++` eredménye _\{a = -34.00086498588374, a = 0.9904738885574178}_.
+
+====
+
+NumerikusanMegold[ <Egyenlet>, <Változó=kezdőérték> ]::
+  Megkísérli megtalálni az egyenlet numerikus megoldását az ismeretlen változóra, megadott kezdőértékkel.
+
+[EXAMPLE]
+====
+
+* `++NumerikusanMegold[cos(x) = x, x = 0]++` eredménye _\{0.74}_
+* `++NumerikusanMegold[a^4 + 34a^3 = 34, a = 3]++` eredménye a következő lista: _\{-34, 0.99}_.
+
+====
+
+Numerikusan Megold[ <Egyenletek listája>, <Változók listája> ]::
+  Megkísérli megtalálni az egyenletrendszer numerikus megoldását a megadott ismeretlen változókra.
+
+[EXAMPLE]
+====
+
+`++NumerikusanMegold[{π / x = cos(x - 2y), 2 y - π = sin(x)}, {x = 3, y = 1.5}]++` eredménye _\{x = 3.141592651686591, y
+= 1.570796327746508}_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* Ha nincsen kezdőérték megadva (pl. _a = 3_ vagy \{_x = 3, y = 1.5_}), akkor előfordulhat, hogy a numerikus algoritmus
+csak nehezen, vagy egyáltalán nem talál megoldást (kezdőérték megadásával sem garantált az egyenlet megoldása).
+* A tizedesvessző utáni számjegyek száma a xref:/Beállítások_menü.adoc[beállításoknál] adható meg.
+* A π az [.kcode]#Alt # + [.kcode]# p# billentyűkombinációval érhető el.
+* Lásd a xref:/commands/Megold.adoc[Megold] és xref:/commands/NumerikusMegoldás.adoc[NumerikusMegoldás] parancsokat.
+
+====

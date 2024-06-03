@@ -1,0 +1,35 @@
+= SzorzatAlakKomplex parancs
+:page-en: commands/CFactor
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Ez a parancs csak xref:/CAS_nézet.adoc[CAS nézetben] érhető el..
+
+SzorzatAlakKomplex[ <Kifejezés> ]::
+  Tényezőkre bontja a megadott kifejezést. Komplex kifejezések is megadhatók.
+
+[EXAMPLE]
+====
+
+A `++SorozatAlakKomplex[x^2 + 4]++` parancs eredménye _(x + 2 ί) (x - 2 ί)_, vagyis a _x^2^ + 4_ kifejezés tényezőkre
+bontott alakja.
+
+====
+
+SzorzatAlakKomplex[ <Kifejezés>, <Változó> ]::
+  Tényezőkre bontja a megadott kifejezést egy bizonyos változóra vonatkozóan. Komplex kifejezések is megadhatók.
+
+[EXAMPLE]
+====
+
+A `++SorozatAlakKomplex[a^2 + x^2, a]++` kifejezés eredménye _(ί x + a) (- ί x + a)_, vagyis a _a^2^ + x^2^_ kifejezés
+tényezőkre bontott alakja, az _a_ változóra vonatkozóan.A `++SorozatAlakKomplex[a^2 + x^2, x]++` kifejezés eredménye _(x
++ ί a) (x - ί a)_, vagyis a _a^2^ + x^2^_ kifejezés tényezőkre bontott alakja, az _x_ változóra vonatkozóan.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Racionális számok tényezőkre való bontásához lásd a xref:/commands/SzorzatAlak.adoc[SorozatokAlak parancsot].
+
+====

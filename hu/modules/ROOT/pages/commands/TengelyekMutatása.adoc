@@ -1,0 +1,38 @@
+= TengelyekMutatása parancs
+:page-en: commands/ShowAxes
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+TengelyekMutatása[ ]::
+  Mutatja a tengelyeket az aktív nézetben.
+TengelyekMutatása[ <Logikai érték> ]::
+  Mutatja/elrejti a tengelyeket az aktív nézetben.
+
+[EXAMPLE]
+====
+
+* A `++TengelyekMutatása[true]++` parancs megjeleníti a tengelyeket az akítv nézetben.
+* A `++TengelyekMutatása[false]++` parancs elrejti a tengelyeket az aktív nézetben.
+
+====
+
+TengelyekMutatása[ <Nézet>, <Logikai érték> ]::
+  Mutatja/elrejtni a tengelyeket a image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  _Geometria ablakban_ (1 vagy 2) (vagy a image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra
+  3Dgraphics.svg,width=16,height=16] _3D-s nézetben_ (3)).
+
+[EXAMPLE]
+====
+
+* A `++TengelyekMutatása[1, true]++` parancs megjeleníti a tengelyeket a image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Rajzlapon_.
+* A `++TengelyekMutatása[2, false]++` elrejti a tengelyeket a image:16px-Menu_view_graphics2.svg.png[Menu view
+graphics2.svg,width=16,height=16] _Rajzlap 2-n_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd továbbá a xref:/commands/RácsMutatása.adoc[RácsMutatása parancsot].
+
+====

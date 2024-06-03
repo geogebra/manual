@@ -1,0 +1,34 @@
+= MásolásCellákba parancs
+:page-en: commands/FillCells
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+MásolásCellákba[ <Cellatartomány>, <Alakzat> ]::
+  A megadott cellatartományba másolja az alakzat értékét/egyenletét, stb. A létrehozott cella egy
+  xref:/Szabad_Függő_és_Segéd_alakzatok.adoc[szabad alakzat], vagyis független a másolt alakzattól.
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* A _cellatartományt_ következőképpen kell megadni: pl. _B2:D5_.
+* Az _alakzat_ lehet bármilyen objektum, pl. _3_, _Véletlenszám[0, 10]_, _Kör[A, B]_.
+* A cellákat oszlopok és sorok jelölik, pl. _B2_
+
+====
+
+MásolásCellákba[ <Kezdő cella>, <Lista> ]::
+  A lista értékeit a megadott cellától jobbra lévő cellákba másolja. A létrehozott cellák
+  xref:/Szabad_Függő_és_Segéd_alakzatok.adoc[szabad alakzatok], vagyis függetlenek a listától.
+
+MásolásCellákba[ <Kezdő cella>, <Mátrix> ]::
+  A táblázatba másolja a mátrix értékeit. A kezdő cella a mátrix bal felső sarka. A létrehozott cellák
+  xref:/Szabad_Függő_és_Segéd_alakzatok.adoc[szabad alakzatok], vagyis függetlenek a mátrixtól.
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd a xref:/commands/MásolásSorba.adoc[MásolásSorba] és xref:/commands/MásolásOszlopba.adoc[MásolásOszlopba]
+parancsokat.
+
+====

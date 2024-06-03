@@ -1,0 +1,65 @@
+= Integrál parancs
+:page-en: commands/Integral
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Integrál[ <Függvény> ]::
+  Megadja a függvény határozatlan integrálját.
+Integrál[ <Függvény>, <Kezdő x-érték>, <Lezáró x-érték> ]::
+  Megadja a függvény határozott integrálját a [ _Kezdő x-érték , Lezáró x-érték_] intervallumon.
+Integrál[ <Függvény>, <Kezdő x-érték>, <Lezáró x-érték>, <Logikai érték> ]::
+  Megadja a függvény határozott integrálját a [ _Kezdő x-érték , Lezáró x-érték_] intervallumon. Ha a logikai érték
+  _true_, beszínezi a megfelelő területet a rajzlapon. Ha a logikai érték _false_, beszínezi a megfelelő területet a
+  rajzlapon, de nem számolja ki a határozott integrál értékét.
+
+[EXAMPLE]
+====
+
+`++Integrál[x³]++` eredménye _x⁴ / 4_ .
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Ez a parancs beszínezi az _f_ grafikonja és az _x_-tengely közé eső megfelelő területet.
+
+====
+
+== CAS nézet
+
+Integrál[ <Függvény> ]::
+  Megadja a függvény határozatlan integrálját.
+Integrál[ <Függvény>, <Változó> ]::
+  Megadja a függvény _t_ változó szerinti határozatlan integrálját.
+Integrál[ <Függvény>, <Kezdő x-érték>, <Lezáró x-érték> ]::
+  Megadja a függvény határozott integrálját a [ _Kezdő x-érték , Lezáró x-érték_] intervallumon.
+Integrál[ <Függvény>, <Változó>, <Kezdőérték>, <Végérték> ]::
+  Megadja a függvény _t_ változó szerinti határozott integrálját a [ _Kezdő x-érték , Végérték_] intervallumon.
+
+[EXAMPLE]
+====
+
+`++Integrál[cos(t), t, a, b]++` eredménye sin(b) - sin(a) értéket.
+
+====
+
+[EXAMPLE]
+====
+
+`++Integrál[cos(x), a, b]++` eredménye sin(b) - sin(a) értéket.
+
+====
+
+[EXAMPLE]
+====
+
+`++Integrál[cos(a t), t]++` eredménye sin(a t)/a+c2 kifejezést.
+
+====
+
+[EXAMPLE]
+====
+
+`++Integál[cos(x)]++` eredménye sin(x)+c1.
+
+====

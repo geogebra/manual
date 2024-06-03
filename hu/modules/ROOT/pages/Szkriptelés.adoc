@@ -1,0 +1,112 @@
+= Szkriptelés
+:page-en: Scripting
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+A szkript parancsok sorozata, amelyek egymás után hajtódnak végre. A GeoGebra két szkriptelési nyelvet támogat -
+GGBScript-et és Javascript-et. A végrehajtásuk a következő módokon kezdődhet el:
+
+* egy adott objektumra való kattintással
+* egy adott objektum frissítésével (ha az objektum értéke vagy tulajdonságai változnak)
+* a GGB fájl betöltésével (JavaScript nyelvű szkriptelés esetén)
+* Javascript figyelők által (lásd /Referencia:JavaScript.adoc[Referencia:JavaScript])
+
+Ezt a szkriptet a Szkriptelés panelon lehet bevinni a xref:/Tulajdonságok_párbeszédablak.adoc[Tulajdonságok
+párbeszédablak]-on.
+
+== GGBScript
+
+Lehet olyan szkripteket készíteni, amelyek GeoGebra parancsokat tartalmaznak, olyanokat, amelyeket az
+xref:/s_index_php?title=Input_Bar_action=edit_redlink=1.adoc[Input Bar]-ba is be lehet írni. Miután a szkript elkezd
+végrehajtódni, a parancsok egymás után hajtódnak végre.
+
+*Magyarázat:* Mindig, amikor a csúszkát mozgatják, egy frissítés (update) történik. Tehát, minden mozgatásra meghívódik
+a szkript, és "a" megkapja a listából valamelyik színt, hogy olyanra változzon az "a" csúszka színe.
+
+/s_index_php?title=Sablon:Help_action=edit_redlink=1.adoc[Sablon:Help]
+
+== JavaScript
+
+A JavaScript egy olyan programozási nyelv, amelyek sokféle Internetes technológia alkalmazza. Ellentétben a GeoGebra
+szkriptekkel, JavaScript-ben a parancsoknak nem kell egy egyszerű sorozatként végrehajtódnia, hanem egy vezérlési
+szerkezet (`++if++`, `++while++`, `++for++`) is használható. Az általános JavaScript-ről egy jó kis ismertető található
+a https://developer.mozilla.org/en/JavaScript/Guide[developer.mozilla.org] címen. A GeoGebrában, speciális JavaScript
+metódusok használhatók, amelyek lehetővé teszik, hogy megváltoztassák a konstrukciót. Ezek a metódusok a ggbApplet
+objektumhoz tartoznak, ami azt is jelenti, hogy meghívhatók a következőképpen:
+`++ggbApplet.method_name(parameter,..,parameter)++`. Ezeknek a metódusoknak egy teljes listájáért lásd:
+/Referencia:JavaScript.adoc[Referencia:JavaScript].
+
+A GeoGebra tartalmazza a saját JavaScript motorját. Amkor egy konstrukciót exportálnak
+xref:/s_index_php?title=Dynamic_Worksheet_action=edit_redlink=1.adoc[Dynamic Worksheet]-ként, ki lehet választani, hogy
+ezt a motort használják, vagy pedig azt, amelyik a böngészőben található. Ha a JavaScriptet szerkesztjük egy HTML
+oldalon, akkor a ggbApplet változó nem kap kezdeti értéket, hanem magunknak kell inicializálni például a következő
+kóddal: `++ggbApplet=document.applets[0];++`.
+
+=== Global JavaScript
+
+A Globális JavaScript részben, ami a Szkriptelés fülön érhető el a xref:/Tulajdonságok_párbeszédablak.adoc[Tulajdonságok
+párbeszédablak]-ból, *függvényeket* (nem változókat) lehet definiálni amelyek elérhetőek lesznek a többi szkriptből.
+Létrehozható a _ggbOnInit()_ nevű (és szignatúrájú) függvény is, amelyik automatikusan meghívódik, amikor a konstrukciót
+betöltik. A ggbOnInit függvény arra használható, hogy regisztráljanak néhány figyelőt, amint az alábbi példa mutatja:
+
+Arra is használhatók a figyelők, hogy olyan történésekre reagáljanak mint például az átnevezés, törlés, vagy a
+konstrukció teljes törlése. Ezeknek egy teljes listája elérhető a /Referencia:JavaScript.adoc[Referencia:JavaScript]
+címen.
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+
+|Some content was not yet translated.
+|===
+
+[EXAMPLE]
+====
+
+....
+function onAdd(name){
+    alert("A "+name+" nevű objektum hozzáadva.");
+}
+
+function ggbOnInit(){
+    ggbApplet.registerAddListener("onAdd");
+}
+....
+
+Először definiáljuk az _onAdd_ függvényt, ami egy sztringtől függő üzenetet mutat. Ezután, a _ggbOnInit_ függvény
+használata segítségével, arra utasítottuk a GeoGebrát, hogy hívja meg ezt a függvényt mindig, amikor egy új objektum jön
+létre. Ha újratöltjük a konstrukcónkat, a ggbOnInit függvény meghívódik, és ettől fogva, amikor a felhasználó egy pontot
+ad hozzá a konstrukcióhoz, aminek a neve legyen pl. _A_, a következő üzenet jelenik meg: "A A nevű objektum hozzáadva".
+
+====
+
+[EXAMPLE]
+====
+
+....
+for(var i =0;i<10;i++) 
+   ggbApplet.evalCommand("A_"+i+"=(random()*10,random()*10)");
+....
+
+Ez a szkript 10 pontot hoz létre _A~0~_-tól _A~9~_-ig véletlenszerű koordinátákkal.
+
+====
+
+[EXAMPLE]
+====
+
+* _a_ egy egész-értékű xref:/s_index_php?title=Slider_Tool_action=edit_redlink=1.adoc[csúszka] 1-től 3-ig
+* `++list1 = {"red", "green", "blue"}++`
+* az _a_ tulajdonságai között, állítsuk be az "On Update" szkriptet a következőre `++SetColor[a, Element[list1, a]]++`
+* a csúszka mozgatásával annak színe változtatható, mivel a red az pirosat, a green az zöldet, a blue az pedig kéket
+jelent
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A ggbApplet metódusok használata a globális javascript-ben, de ggbOnInit metóduson kívül nem úgy fog működni,
+amint szeretnénk, mivel ezek előbb hívódnak meg így, mielőtt a konstrukció betöltődik.
+
+====

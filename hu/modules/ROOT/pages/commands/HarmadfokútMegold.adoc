@@ -1,0 +1,26 @@
+= HarmadfokútMegold parancs
+:page-en: commands/SolveCubic
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+== CAS Syntax
+
+HarmadfokútMegold[ <Harmadfokú polinom> ]::
+  Megoldja az adott https://hu.wikipedia.org/wiki/Harmadfokú_egyenlet[harmadfokú egyenletet]. Eredményként egy listát
+  kapunk, amely az összes megoldást tartalmazza.
+
+[EXAMPLE]
+====
+
+A `++HarmadfokútMegold[x³ - 1]++` parancs eredménye a következő lista: \{ 1, stem:[ \frac\{1}\{2} (\sqrt\{3} i -1) ] ,
+stem:[ \frac\{1}\{2} (\sqrt\{3} (-i) -1) ] } .
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+Az eredményt gyakran kell majd manuálisan egyszerűsítenünk, pl. `++HarmadfokútMegold[x³ + x² + x + 1]++`.
+
+====

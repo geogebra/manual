@@ -1,0 +1,26 @@
+= EgyPontraIlleszkedikE parancs
+:page-en: commands/AreConcurrent
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+EgyPontraIlleszkedikE[ <Egyenes>, <Egyenes>, <Egyenes> ]::
+  Meghatározza, hogy az egyenesek egy pontra illeszkednek-e. Ha az egyenesek párhuzamosak, akkor megvizsgálja, hogy azok
+  egymásra illeszkednek-e és "true"-t ad vissza, ha igen, mivel ezáltal végtelen közös pontjuk van.
+  Ez a parancs alapértelmezettként numerikus megoldást mutat. A xref:/commands/Bizonyít.adoc[Bizonyít] parancs
+  használatával ez megváltoztatható.
+
+[EXAMPLE]
+====
+
+`++EgyPontraIlleszkedikE[Egyenes[(1, 2), (3, 4)], Egyenes[(1, 2), (3, 5)], Egyenes[(1, 2), (3, 6)]]++` eredménye _true_,
+mivel az egyenesnek van közös (1, 2) pontjuk.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd továbbá a xref:/commands/KollineárisE.adoc[KollineárisE],
+xref:/commands/EgyKörreIlleszkedikE.adoc[EgyKörreIlleszkedikE], xref:/commands/EgyenlőE.adoc[EgyenlőE],
+xref:/commands/MerőlegesE.adoc[MerőlegesE] és xref:/commands/PárhuzamosE.adoc[PárhuzamosE] parancsokat.
+
+====

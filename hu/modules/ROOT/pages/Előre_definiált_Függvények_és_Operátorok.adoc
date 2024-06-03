@@ -1,0 +1,160 @@
+= Előre definiált Függvények és Operátorok
+:page-en: Predefined_Functions_and_Operators
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+A xref:/Parancssor.adoc[Parancssorban] számok, koordináták vagy egyenletek beírásakor használhatjuk a következő előre
+definiált függvényeket és operátorokat. Logikai operátorok és függvények listája a xref:/Logikai_értékek.adoc[Logikai
+értékek] címszó alatt található.
+
+[NOTE]
+====
+
+*Jegyzet:* Az előre definiált függvények használatakor zárójeleket kell alkalmaznunk. Szóközt nem kell tenni a függvény
+neve és a zárójel közé.
+
+====
+
+[cols=",",options="header",]
+|===
+|Művelet / Függvény |Bevitel
+|ℯ (http://en.wikipedia.org/wiki/E_(mathematical_constant)[Euler féle szám]) |[.kcode]#Alt# + [.kcode]#e#
+
+|ί (http://en.wikipedia.org/wiki/Imaginary_unit[képzetes egység]) |[.kcode]#Alt# + [.kcode]#i#
+
+|π |[.kcode]#Alt# + [.kcode]#p# vagy pi
+
+|° (http://en.wikipedia.org/wiki/Degree_symbol[fok szimbólum]) |[.kcode]#Alt# + [.kcode]#o#
+
+|Összeadás |+
+
+|Kivonás |-
+
+|Szorzás |* vagy szóköz
+
+|Skaláris szorzat |* vagy szóköz
+
+|Vektoriális szorzat(lásd xref:/Pontok_és_Vektorok.adoc[Pontok és vektorok]) |⊗
+
+|Osztás |/
+
+|Exponens vagy kitevő |^ vagy felső index (`++x^2++` or `++x2++`)
+
+|Faktoriális |!
+
+|Zárójelek |( )
+
+|x-koordináta |x( )
+
+|y-koordináta |y( )
+
+|Argumentum |arg( )
+
+|Konjugált |conjugate( )
+
+|Abszolútérték |abs( )
+
+|Előjel |sgn( ) or sign()
+
+|Négyzetgyök |sqrt( )
+
+|Köbgyök |cbrt( )
+
+|Véletlenszám 0 és 1 között |random( )
+
+|Exponenciális függvény |exp( ) vagy ℯ^x^
+
+|Logaritmus (természetes, e alapú) |ln( ) vagy log( )
+
+|Logaritmus 2-es alapú |ld( )
+
+|Logaritmus 10-es alapú |lg( )
+
+|_x_-nek _b_ alapú logaritmusa |log(b, x )
+
+|Koszinusz |cos( )
+
+|Szinusz |sin( )
+
+|Tangens |tan( )
+
+|Szekáns |sec()
+
+|Koszekáns |cosec()
+
+|Kotangens |cot()
+
+|Arcus koszinusz |acos( ) vagy arccos( )
+
+|Arcus szinusz |asin( ) vagy arcsin( )
+
+|Arcus tangens (eredménye -π/2 és π/2 közötti) |atan( ) vagy arctan( )
+
+|http://en.wikipedia.org/wiki/Atan2[Arcus tangens (eredménye -π és π közötti)] |atan2(y, x)
+
+|Hiperbolikus koszinusz |cosh( )
+
+|Hiperbolikus szinusz |sinh( )
+
+|Hiperbolikus tangens |tanh( )
+
+|Hiperbolikus szekáns |sech( )
+
+|Hiperbolikus koszekáns |cosech( )
+
+|Hiperbolikus kotangens |coth( )
+
+|Area hiperbolikus koszinusz |acosh( ) vagy arccosh( )
+
+|Area hiperbolikus szinusz |asinh( ) vagy arcsinh( )
+
+|Area hipergolikus tangens |atanh( ) vagy arctanh( )
+
+|Kisebb vagy egyenlő egész (Egészrész) |floor( )
+
+|Nagyobb vagy egyenlő egész |ceil( )
+
+|Kerekítés |round( )
+
+|http://mathworld.wolfram.com/BetaFunction.html[Béta-függvény] Β(a, b) |beta(a, b)
+
+|http://mathworld.wolfram.com/IncompleteBetaFunction.html[Incomplete beta function] Β(x;a, b) |beta(a, b, x)
+
+|http://mathworld.wolfram.com/RegularizedBetaFunction.html[Incomplete regularized beta function] I(x; a, b)
+|betaRegularized(a, b, x)
+
+|http://en.wikipedia.org/wiki/Gamma_function[Gamma-függvény Γ(x)] |gamma( x)
+
+|(Lower) http://mathworld.wolfram.com/IncompleteGammaFunction.html[incomplete gamma function] γ(a, x) |gamma(a, x)
+
+|(Lower) http://mathworld.wolfram.com/RegularizedGammaFunction.html[incomplete regularized gamma function P(a,x) = γ(a,
+x) / Γ(a)] |gammaRegularized(a, x)
+
+|http://en.wikipedia.org/wiki/Error_function[Gauss-féle hibafüggvény] |erf(x)
+
+|Komplex szám valósrésze (ValósRész) |real( )
+
+|Komplex szám képzetes része (KépzetesRész) |imaginary( )
+
+|http://en.wikipedia.org/wiki/Digamma_Parancs[Digamma-függvény] |psi(x)
+
+|http://en.wikipedia.org/wiki/Polygamma_function[Polygamma-függvény] a
+http://en.wikipedia.org/wiki/Gamma_function[Gamma-függvéy, gamma(x)] természetes logaritmusának (m+1)-dik deriváltja.
+(m=0,1) |polygamma(m, x)
+
+|http://mathworld.wolfram.com/SineIntegral.html[Sinus Integral] function |sinIntegral(x)
+
+|http://mathworld.wolfram.com/CosineIntegral.html[Cosinus Integral] function |cosIntegral(x)
+
+|http://mathworld.wolfram.com/ExponentialIntegral.html[Exponential Integral] function |expIntegral(x)
+
+|http://en.wikipedia.org/wiki/Riemann_zeta_function[Riemann-féle Zéta]-függvény ζ(x) |zeta(x)
+|===
+
+[EXAMPLE]
+====
+
+`++Conjugate(17 + 3 * ί)++` eredménye _-3 ί + 17_, a _17 + 3 ί_ komplex szám konjugáltja.
+
+Lásd a xref:/Komplex_számok.adoc[Komplex számok] oldalon a részleteket.
+
+====

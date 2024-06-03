@@ -1,0 +1,26 @@
+= SpearmanRangkorreláció parancs
+:page-en: commands/Spearman
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+SpearmanRangkorreláció[ <Pontok listája> ]::
+  Megadja a listán lévő pontok x és y koordinátáinak http://hu.wikipedia.org/wiki/Korreláció[Spearman
+  rangkorrelációját].
+
+[EXAMPLE]
+====
+
+Legyen `++Lista = {(-3, 4), (-1, 4), (-2, 3), (1, 3), (2, 2), (1, 5)}++` egy pontokat tartalmazó lista. A
+`++SpearmanRangkorreláció[ Lista ]++` parancs eredménye _a = -0.37_.
+
+====
+
+SpearmanRangkorreláció[ <Számok listája>, <Számok listája> ]::
+  Megadja a két lista Spearman rangkorrelációját.
+
+[EXAMPLE]
+====
+
+Legyenek `++Lista1 = {3, 2, 4, 5, 1, 6, 8, 9}++` és `++Lista2 = {5, 6, 8, 2, 1, 3, 4, 7}++` listák. A
+`++SpearmanRangkorreláció[ Lista1, Lista2 ]++` parancs eredménye _a = 0.24_.
+
+====

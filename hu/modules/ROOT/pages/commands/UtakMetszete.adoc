@@ -1,0 +1,57 @@
+= UtakMetszete parancs
+:page-en: commands/IntersectPath
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+UtakMetszete[ <Egyenes>, <Sokszög> ]::
+  Létrehozza az egyenes és a sokszög metszetét.
+UtakMetszete[ <Sokszög>, <Sokszög> ]::
+  Létrehozza két sokszög metszetét.
+UtakMetszete[ <Sík>, <Sokszög> ]::
+  Létrehozza a sík és a sokszög metszetét.
+UtakMetszete[ <Sík>, <Kvadrik (Másodrendű felület)> ]::
+  Létrehozza a sík és a kvadrik metszetét.
+
+[EXAMPLE]
+====
+
+Az `++ UtakMetszete[ a, gömb ]++` létrehoz egy kört, amely az "a" sík és a "gömb" kvadrik metszete.
+
+====
+
+[EXAMPLE]
+====
+
+Az `++ UtakMetszete[ a, háromszög ]++` parancs létrehozza az "a" sík és a "háromszög" sokszög két metszéspontja közötti
+szakaszt a síkon.
+
+====
+
+[EXAMPLE]
+====
+
+Az `++UtakMetszete[ négyszög, háromszög ]++` parancs létrehozza azt a sokszöget, amely a két megadott sokszög metszete.
+
+[NOTE]
+====
+
+*Jegyzet:* Az új sokszög a megadott sokszögek csúcspontjaitól függően lehet négyszög, ötszög vagy hatszög.
+
+====
+
+====
+
+[EXAMPLE]
+====
+
+Az `++UtakMetszete[ a, háromszög ]++` parancs létrehozza az "a" egyenes és a "háromszög" sokszög két metszéspontja
+közötti szakaszt.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd továbbá a xref:/commands/Metszéspont.adoc[Metszéspont] és xref:/commands/MetszésVonal.adoc[MetszésVonal]
+parancsokat.
+
+====

@@ -1,0 +1,28 @@
+= GörbeillesztésSin parancs
+:page-en: commands/FitSin
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+GöbeillesztésSin[ <Pontok listája> ]::
+  Kiszámítja az _a + b sin (c x + d)_ alakú regressziós görbét.
+
+[EXAMPLE]
+====
+
+`++GöbeillesztésSin[{(1, 1), (2, 2), (3, 1), (4, 0), (5, 1), (6, 2)}]++` eredménye _f(x) = 1 + 1 sin (1.57 x - 1.57)_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* A listának legalább négy pontot kell tartalmaznia, de minél több, annál jobb. Ezenkívül legyen legalább két kieső
+(extremális) pont a listán. Az első két helyi extremális pont ne térjen el túlságosan a görbe abszolút extremális
+pontjaitól.
+* Lásd továbbá a xref:/commands/GörbeillesztésExp.adoc[GörbeillesztésExp],
+xref:/commands/GörbeillesztésLogaritmikus.adoc[GörbeillesztésLogaritmikus parancs],
+xref:/commands/GörbeillesztésPolinom.adoc[GörbeillesztésPolinom] és
+xref:/commands/GörbeillesztésHatvány.adoc[GörbeillesztésHatvány] parancsokat.
+
+====

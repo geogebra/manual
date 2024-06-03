@@ -1,0 +1,50 @@
+= KeresztTábla parancs
+:page-en: commands/ContingencyTable
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+KeresztTábla[ <Szöveg lista>, <Szöveg lista> ]::
+  Rajzol egy https://hu.wikipedia.org/wiki/Kontingenciatáblázat[kombinációs táblázatot] a megadott listákat használva.
+  Az első lista elemei a sorok értéke, a második lista elemei pedig az oszlopok értéke.
+
+KeresztTábla[ <Szöveg lista>, <Szöveg lista>, <Opciók> ]::
+  Rajzol egy https://hu.wikipedia.org/wiki/Kontingenciatáblázat[kombinációs táblázatot] a megadott listákat használva.
+  Az "Opciók" szöveg az opcionális számítások megjelenítését határozza meg a táblázaton belül.
+
+[NOTE]
+====
+
+*Jegyzet:* Possible values for _Options_ are "|", "_", "+", "e", "k", "=".
+
+* "|" = Oszlopok százalékának mutatása
+* "_" = Sorok százalékának mutatása
+* "+" = Százalék összesen
+* "e" = Várható érték mutatása
+* "k" = Khí-négyzet eloszlás mutatása
+* "=" = Khí-négyzet próba eredményének mutatása
+
+====
+
+KeresztTábla[ <Nyers adatok listája>, <Oszlop értékek listája>, <Gyakoriság tábla> ]::
+  Rajzol egy https://hu.wikipedia.org/wiki/Kontingenciatáblázat[kombinációs táblázatot] a megadott nyers adatok
+  listáját, oszlop értékek listáját és a gyakoriság táblát felhasználva.
+
+[EXAMPLE]
+====
+
+`++KeresztTábla[ {"Férfi","Nő"},{"Jobbkezes", "Balkezes"},{{43,9},{44,4}}]++` eredménye az adatokhoz tartozó kombinációs
+táblázat.
+
+====
+
+KeresztTábla[ <Nyers adatok listája>, <Oszlop értékek listája> <Gyakoriság tábla>, <Opciók> ]::
+  Rajzol egy https://hu.wikipedia.org/wiki/Kontingenciatáblázat[kombinációs táblázatot] a megadott nyers adatok
+  listáját, oszlop értékek listáját és a gyakoriság táblát felhasználva. Az "Opciók" szöveg az opcionális számítások
+  megjelenítését határozza meg a táblázaton belül.
+
+[EXAMPLE]
+====
+
+`++KeresztTábla[ {"Férfi","Nő"},{"Jobbkezes", "Balkezes"},{{43,9},{44,4}},"_"]++` eredménye egy kombinációs táblázat,
+amely mutatja a sorok százalékait.
+
+====

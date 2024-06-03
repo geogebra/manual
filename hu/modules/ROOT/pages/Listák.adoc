@@ -1,0 +1,96 @@
+= Listák
+:page-en: Lists
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+A _\{ }_ zárójelek segítségével létrehozhatók objektumokat tartalmazó listák (pl. pontokat, szakaszokat, köröket
+tartalmazó listák).
+
+[EXAMPLE]
+====
+
+* `++L = {A, B, C}++` létrehoz egy listát, amely a három, már létrehozott A, B és C pontokat tartalmazza.
+* `++L = {(0, 0), (1, 1), (2, 2)}++` létrehozza a három megadott pontot és az azokat tartalmazó listát.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A listán lévő elemek alapvetően megjelennek a xref:/Geometria_ablak.adoc[rajzlapon].
+
+====
+
+Ha hozzá szeretne férni a lista egyes elemeihez, használhatja az xref:/commands/Elem.adoc[Elem parancsot], vagy
+zárójeleket. A listák megadhatóak listaműveletek argumentumaként (további információt lejjebb talál) vagy használhatja a
+xref:/commands/Lista_parancsok.adoc[Lista parancsokat].
+
+== Objektumokat tartalmazó listák összehasonlítása
+
+A következőképpen tud összehasonlítani két, objektumokat tartalmazó listát:
+
+* Lista1 == Lista2: ellenőrzi, hogy a két lista megegyezik-e. Az eredmény _true_, ha a két lista megegyezik, illetve
+_false_, ha azok különböznek.
+* Lista1 != Lista2: ellenőrzi, hogy a két lista különbözik-e. Ha különböznek, úgy az eredmény _true_, ha megegyeznek,
+akkor _false_.
+
+== Funkciók és műveletek használata listáknál
+
+Ha xref:/Előre_definiált_Függvények_és_Operátorok.adoc[előre definiált függvényeket vagy operátorokat] használ, akkor
+eredményként egy új listát kap.
+
+=== Összeadás és kivonás
+
+* Lista1 + Lista2: Összeadja a két lista elemeit (elemenként).
+
+[NOTE]
+====
+
+*Jegyzet:* A két listának egyenlő hosszúságúnak kell lennie (megegyező elemszám).
+
+====
+
+* Lista + Szám: Hozzáadja a számot a lista minden eleméhez.
+* Lista1 - Lista2: Kivonja a második lista elemeit az első lista elemeiből (elemenként).
+
+[NOTE]
+====
+
+*Jegyzet:* A két listának egyenlő hosszúságúnak kell lennie (megegyező elemszám).
+
+====
+
+* Lista - Szám: Kivonja a számot a lista minden eleméből.
+
+=== Szorzás és osztás
+
+* Lista1 * Lista2: Összeszorozza a két lista elemeit (elemenként).
+
+[NOTE]
+====
+
+*Jegyzet:* A két listának egyenlő hosszúságúnak kell lennie (megegyező elemszám). Ha a listák mátrixok, amelyek
+alkalmasak a szorzásra, úgy mátrixszorzás történik.
+
+====
+
+* Lista * Szám: Összeszorozza a lista összes elemét a megadott számmal.
+* Lista1 / Lista2: Az első lista elemeit elosztja a második lista elemeivel (elemenként).
+
+[NOTE]
+====
+
+*Jegyzet:* A két listának egyenlő hosszúságúnak kell lennie (megegyező elemszám).
+
+====
+
+* Lista / Szám: Elosztja a lista összes elemét a megadott számmal.
+* Szám / Lista: Elossza a számot a lista összes elemével.
+
+=== További példák
+
+* Lista^2: A lista összes elemét négyzetre emeli.
+* 2^Lista: Létrehoz egy listát, amely ketteseket tartalmaz és a megadott lista elemei a kettesek kitevői.
+* Lista1^Lista2: Létrehoz egy _a^b_ elemeket tartalmazó listát, amelynél _a_ az első, _b_ pedig a második lista
+megfelelő eleme.
+* sin(Lista): A lista összes elemére alkalmazza a szinusz függvényt. Egyéni xref:/Függvények.adoc[függvényeknél] is
+ugyanígy működik.

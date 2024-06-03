@@ -1,0 +1,50 @@
+= Ellipszis parancs
+:page-en: commands/Ellipse
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Ellipszis[ <Fóuszpont>, <Fókuszpont>, <Főtengely hossza (szám)> ]::
+  Létrehoz egy ellipszist a két megadott fókuszponttal és a főtengely hosszával.
+
+[EXAMPLE]
+====
+
+`++Ellipszis[(0, 1), (1, 1), 1]++` eredménye _12x² + 16y² - 12x - 32y = -7_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Ha a _2*főtengely hossza > fókuszpontok közti távolság_ feltétel nem teljesül, a parancs eredménye egy
+hiperbola.
+
+====
+
+Ellipszis[ <Fóuszpont>, <Fókuszpont>, <Szakasz> ]::
+  Létrehoz egy ellipszist a két megadott fókuszponttal és a szakasszal, mint főtengely hosszával.
+  `++Ellipszis[(0, 1), (2, 1), s]++` eredménye _3x² + 4y² - 6x - 8y = 5_.
+
+[EXAMPLE]
+====
+
+Legyen _s = Szakasz[(0,1), (2,1)]_ :
+
+====
+
+Ellipszis[ <Pont>, <Pont>, <Pont> ]::
+  Létrehoz egy ellipszist a két megadott fókuszponttal (első két pont), amely a harmadik ponton szintén áthalad.
+
+[EXAMPLE]
+====
+
+`++Ellipszis[(0, 1), (2, 1), (1,2)]++` eredménye _1x² + 2y² - 2x - 4y = -1_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd az image:Tool_Ellipse.gif[Tool Ellipse.gif,width=32,height=32] xref:/tools/Ellipszis.adoc[Ellipszis]
+eszközt .
+
+====

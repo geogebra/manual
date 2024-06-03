@@ -1,0 +1,34 @@
+= Laplace parancs
+:page-en: commands/Laplace
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+== CAS Syntax
+
+Laplace[ <Függvény> ]::
+  Megadja a függvény https://hu.wikipedia.org/wiki/Laplace-transzformáció[Laplace transzformáltját].
+
+[EXAMPLE]
+====
+
+`++ Laplace[sin(t)]++` eredménye stem:[\mathbf\{\frac\{1}\{s^\{2} + 1}} ]
+
+====
+
+Laplace[ <Függvény>, <Változó> ]::
+  Megadja a függvény Laplace transzformáltját, a megadott változó figyelembe vételével.
+
+[EXAMPLE]
+====
+
+`++Laplace[sin(a*t),t]++` eredménye stem:[\mathbf\{\frac\{a}\{a^\{2} + t^\{2}}}]
+
+`++Laplace[sin(a*t),a]++` eredménye stem:[\mathbf\{\frac\{t}\{a^\{2} + t^\{2}}}]
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd továbbá az xref:/commands/InverzLaplace.adoc[InverzLaplace] parancsot.
+
+====

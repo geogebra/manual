@@ -1,0 +1,100 @@
+= Kép beszúrása eszköz
+:page-en: tools/Image
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Ez az eszköz lehetővé teszi képek beszúrását és beágyazását a xref:/Geometria_ablak.adoc[geometriai ablakba].
+
+Először helyezze el a képet. Ez a következőképpen lehetséges:
+
+* Kattintson a rajzlapon egy pontra, hogy meghatározza a kép alsó bal sarkának helyét.
+* Kattintson egy létező pontra, ez a pont lesz a kép alsó bal sarkának helye.
+
+Ezután megjelenik egy párbeszédablak, amelyben böngészhet a számítógépen lévő adatok között és kiválaszthat egy képet.
+
+[NOTE]
+====
+
+*Jegyzet:* A image:Tool_Insert_Image.gif[Tool Insert Image.gif,width=32,height=32] Kép beszúrása eszköz aktiválása után
+a vágólapról is beszúrhat egy képet a rajzlapra, ha a hely kiválasztásánál lenyomva tartja az [.kcode]#Alt# billentyűt.
+
+====
+
+== Képek tulajdonságai
+
+A xref:/Tulajdonságok_párbeszédablak.adoc[Tulajdonságok párbeszédablakban] az __Alapbeállítások__nál megadhatja, hogy a
+beszúrt kép helye abszolút legyen-e a képernyőhöz képest vagy relatív a koordináta-rendszerhez.
+
+Szintén ebben a párbeszédablakban a __Pozíció__nál megadhatja a kép sarokpontjait (max. hármat), ezáltal nagyíthatja,
+kicsinyítheti, elforgathatja vagy eltorzíthatja a képet (lásd xref:/commands/SarokPont.adoc[SarokPont parancs]).
+
+* Sarokpont1: A kép bal alsó sarka.
+* Sarokpont2: A kép jobb alsó sarka.
+
+[NOTE]
+====
+
+*Jegyzet:* A második sarokpont csak az első meghatározása után adható meg, a két sarokpont távolsága a kép szélessége.
+
+====
+
+* Sarokpont4: A kép bal felső sarka.
+
+[EXAMPLE]
+====
+
+Hozzon létre három, _A_, _B_ és _C_ pontot, és szúrjon be egy képet a rajzlapra.
+
+* Adja meg az _A_ pontot első sarokpontnak és a _B_ pontot másodiknak. Kattintson a image:Tool_Move.gif[Tool
+Move.gif,width=32,height=32] xref:/tools/Mozgatás.adoc[Mozgatás eszközre] és húzza az _A_ és _B_ pontot a kép
+szélességének beállításához.
+* Távolítsa el a második sarokpontot és adja meg a _C_ pontot negyedik sarokpontként. Szintén a image:Tool_Move.gif[Tool
+Move.gif,width=32,height=32] xref:/tools/Mozgatás.adoc[Mozgatás eszközzel] beállíthatja a kép magasságát az _A_ és _C_
+pont mozgatásával.
+* Ádja meg az összes pontot sarokpontnak. A kép eltorzításához mozgassa el az egyes pontokat.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A negyedik sarokpont csak az első meghatározása után adható meg, a két sarokpont távolsága a kép magassága.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Ha elmozgatja az _A_ pontot a image:Tool_Move.gif[Tool Move.gif,width=32,height=32]
+xref:/tools/Mozgatás.adoc[Mozgatás eszközzel], úgy csak a kép helye változik meg, a mérete megmarad.
+
+====
+
+A xref:/Tulajdonságok_párbeszédablak.adoc[Tulajdonságok párbeszédablakban] az __Alapbeállítások__nál a képet
+beállíthatja háttérképnek, amely ezáltal a koordináta-rendszer mögé kerül. A háttérkép már nem jelölhető ki az egérrel.
+
+[NOTE]
+====
+
+*Jegyzet:* A háttérkép tulajdonságainak megváltoztatásához vagy a kép előre hozásához kattintson a
+xref:/Tulajdonságok_párbeszédablak.adoc[Tulajdonságok párbeszédablakban] a image:Menu_Properties.png[Menu
+Properties.png,width=16,height=16] _Tulajdonságok..._ opcióra .
+
+====
+
+A beszúrt kép átlátszatlanságát megnövelheti, hogy a mögötte lévő képek és a koordináta-rendszer jobban láthatóak
+legyenek. Ehhez nyissa meg a xref:/Tulajdonságok_párbeszédablak.adoc[Tulajdonságok párbeszédablakot] és a
+__Szín__nélváltoztassa meg az átlátszatlanság százalékát (0% - 100%).
+
+[EXAMPLE]
+====
+
+Ha a kép méretét konkrétan meg szeretné határozni (pl. 3 egység széles és 4 egység magas), úgy a sarokpontokat a
+következőképpen adhatja meg:
+
+Hozzon létre egy _A_ pontot és szúrja be a képet a rajzlapra.
+
+* Adja meg az _A_ pontot első sarokpontnak.
+* Második sarokpontnak adja meg az _A + 0.3_ kifejezést (közvetlenül beírhatja a mezőbe)
+* Negyedik sarokpontnak adja meg az _A + 0.4_ kifejezést (szintén a mezőben)
+
+====

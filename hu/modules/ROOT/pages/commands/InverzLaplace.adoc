@@ -1,0 +1,33 @@
+= InverzLaplace parancs
+:page-en: commands/InverseLaplace
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+== CAS Syntax
+
+InverzLaplace[ <Függvény> ]::
+  Megadja a függvény http://en.wikipedia.org/wiki/Inverse_Laplace_transform[inverz Laplace transzformáltját].
+InverzLaplace[ <Függvény>, <Változó> ]::
+  Megadja a függvény inverz Laplace transzformáltját a megadott változó figyelembe vételével.
+
+[EXAMPLE]
+====
+
+`++InverzLaplace[ exp(- a*b),a]++` eredménye stem:[\mathbf\{Dirac(a-b)}]
+
+`++InverzLaplace[ exp(- a*b),b]++` eredménye stem:[\mathbf\{Dirac(b-a)}]
+
+====
+
+[EXAMPLE]
+====
+
+`++ InverzLaplace[1/(1+t^2)]++` eredménye stem:[\mathbf\{ sin(t)} ].
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd továbbá a xref:/commands/Laplace.adoc[Laplace] parancsot.
+
+====

@@ -1,0 +1,49 @@
+= Hiperbola parancs
+:page-en: commands/Hyperbola
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Hiperbola[F pont,G pont, a szám]::
+  Létrehozza az _F_ és _G_ fókuszpontú hiperbolát, melynek fél nagytengelye _a_ hosszúságú.
+
+[EXAMPLE]
+====
+
+`++Hiperbola[(0, -4), (2, 4), 1]++` eredménye _-8xy - 15y² + 8y = -16_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Feltétel: _0 < 2a < Távolság[F, G]_
+
+====
+
+Hiperbola[F pont, G pont, s szakasz]::
+  Létrehozza az _F_ és _G_ fókuszpontú hiperbolát, melynek fél nagytengelye a megadott _s_ szakasszal egyenlő hosszú.
+
+[EXAMPLE]
+====
+
+Legyen a = Szakasz[(0,1), (2,1)]. A `++Hiperbola[(4, 1), (-2, 1), a]++` parancs eredménye _-5x² + 4y² + 10x - 8y = -19_
+.
+
+====
+
+Hiperbola[F pont, G pont, A pont]::
+  Létrehozza az _F_ és _G_ fókuszpontú, _A_ ponton áthaladó hiperbolát.
+
+[EXAMPLE]
+====
+
+`++Hiperbola[(1, 1), (2, 1), (-2,-4)]++` eredménye _-2.69x² + 1.30y² + 8.07x - 2.62y = 4.52_ .
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd még a image:Tool_Hyperbola.gif[Tool Hyperbola.gif,width=32,height=32]
+xref:/tools/Hiperbola.adoc[Hiperbola] eszközt.
+
+====

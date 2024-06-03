@@ -1,0 +1,99 @@
+= Sorozat parancs
+:page-en: commands/Sequence
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Sorozat[ <Kifejezés>, <Változó>, <Kezdőérték>, <Záróérték> ]::
+  A változó behelyettesítésével a kifejezésbe (kezdőértéktől a záróértékig), létrehozza az így keletkező objektumok
+  sorozatát listaként.
+
+[EXAMPLE]
+====
+
+`++Sorozat[(2, i), i, 1, 5]++` létrehoz egy pontokat tartalmazó listát, ahol az _i_ változó a pontok y koordinátáját
+jelöli: _\{(2, 1), (2, 2), (2, 3), (2, 4), (2, 5)}_.
+
+====
+
+Sorozat[ <Kifejezés>, <Változó>, <Kezdőérték>, <Záróérték>, <Lépésköz> ]::
+  A változó behelyettesítésével a kifejezésbe (kezdőértéktől a záróértékig, megadott lépésközzel), létrehozza az így
+  keletkező objektumok sorozatát listaként.
+
+[EXAMPLE]
+====
+
+`++Sorozat[(2, i), i, 1, 3, 0.5]++` létrehoz egy pontokat tartalmazó listát, ahol a 0.5 lépéssel változó _i_ változó
+értéke a pontok y koordinátáját jelöli: _\{(2, 1), (2, 1.5), (2, 2), (2, 2.5), (2, 3)}_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A _kezdőérték_ és _záróérték_ dinamikusak és ezáltal xref:/tools/Csúszka.adoc[csúszkák] is lehetnek.
+
+====
+
+Sorozat[ <Záróérétk> ]::
+  Létrehoz egy _1 - záróérték_ számokat tartalmazó listát.
+
+[EXAMPLE]
+====
+
+* `++ Sorozat[4]++` eredménye a következő lista: _\{1, 2, 3, 4}_.
+* `++2^ Sorozat[4]++` eredménye a következő lista: _\{2, 4, 8, 16}_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* További információkhoz lásd: xref:/Listák.adoc[Listák].
+
+====
+
+== CAS nézet
+
+Sorozat[ <Kifejezés>, <Változó>, <Kezdőérték>, <Záróérték> ]::
+  A változó behelyettesítésével a kifejezésbe (kezdőértéktől a záróértékig), létrehozza az így keletkező objektumok
+  sorozatát listaként.
+
+[EXAMPLE]
+====
+
+`++Sorozat[x^i, i, 1, 10]++` eredménye a következő sorozat: _\{x, x², x³, x⁴, x⁵, x⁶, x⁷, x⁸, x⁹, x¹⁰}_.
+
+====
+
+Sorozat[ <Kifejezés>, <Változó>, <Kezdőérték>, <Záróérték>, <Lépésköz> ]::
+  A változó behelyettesítésével a kifejezésbe (kezdőértéktől a záróértékig, megadott lépésközzel), létrehozza az így
+  keletkező objektumok sorozatát listaként.
+
+[EXAMPLE]
+====
+
+`++Sequence[x^i, i, 1, 10, 2]++` eredménye a következő sorozat: _\{x, x³, x⁵, x⁷, x⁹}_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A _kezdőérték_ és _záróérték_ dinamikusak és ezáltal xref:/tools/Csúszka.adoc[csúszkák] is lehetnek.
+
+====
+
+Sorozat[ <Záróérték> ]::
+
+[EXAMPLE]
+====
+
+* `++ Sorozat[5]++` eredménye a következő lista: _\{1, 2, 3, 4,5}_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* További információkhoz lásd: xref:/Listák.adoc[Listák].
+
+====

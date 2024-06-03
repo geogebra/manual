@@ -1,0 +1,108 @@
+= Mátrixok
+:page-en: Matrices
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+A GeoGebra a mátrixokat listákat tartalmazó listaként jeleníti meg, a listán lévő listák a mátrix egyes sorai.
+
+[EXAMPLE]
+====
+
+Például a \{\{1, 2, 3}, \{4, 5, 6}, \{7, 8, 9}} lista a következő, 3x3-mas mátrix GeoGebrás változata:
+stem:[\begin\{pmatrix}1&2&3\\ 4&5&6\\ 7&8&9 \end\{pmatrix}]
+
+====
+
+Ha egy szép LaTeX-formájú mátrixot szeretne megjeleníteni a rajzlapon, használja a xref:/commands/LaTeX.adoc[LaTeX
+parancsot].
+
+[EXAMPLE]
+====
+
+A mátrix LaTeX-formájú megjelenítéséhez írja a következő kódot a parancssorba:
+`++LaTeX[{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}]++`.
+
+====
+
+== Műveletek mátrixokkal
+
+== Összeadás és kivonás
+
+* Mátrix1 + Mátrix2: Összeadja a két mátrix összetartozó elemeit.
+* Mátrix1 - Mátrix2: Kivonja a két mátrix összetartozó elemeit.
+
+== Szorzás és osztás
+
+* Mátrix * Szám: A mátrix összes elemét beszorozza a számmal.
+
+* Mátrix1 * Mátrix2: Összeszorozza a két mátrixot a mátrixszorzás szabályai szerint.
+
+[EXAMPLE]
+====
+
+\{\{1, 2}, \{3, 4}, \{5, 6}} * \{\{1, 2, 3}, \{4, 5, 6}} eredménye a \{\{9, 12, 15}, \{19, 26, 33}, \{29, 40, 51}}
+mátrix.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Az első mátrix sorai számának meg kell egyeznie a második mátrix oszlopainak számával.
+
+====
+
+* 2x2 Mátrix * Pont (vagy vektor): Összeszorozza a mátrixot a ponttal (vagy vektorral), eredményül egy pontot ad.
+
+[EXAMPLE]
+====
+
+\{\{1, 2}, \{3, 4}} * (3, 4) eredménye az A = (11, 25) pont.
+
+====
+
+* 3x3 Mátrix * Pont (vagy vektor): Összeszorozza a mátrixot a ponttal (vagy vektorral), eredményül egy pontot ad.
+
+[EXAMPLE]
+====
+
+\{\{1, 2, 3}, \{4, 5, 6}, \{0, 0, 1}} * (1, 2) eredménye az A = (8, 20) pont.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Ez az affín transzformáció egy speciális esete homogén koordinátákkal (pont: (x, y, 1), vektor: (x, y, 0)). A
+példa egyenértékű a következővel: `++{{1, 2, 3}, {4, 5, 6}, {0, 0, 1}} * {1, 2, 1}++`.
+
+====
+
+* Mátrix1 / Mátrix2: Elossza az első mátrix elemeit a második mátrix megfelelő elemeivel.
+
+[NOTE]
+====
+
+*Jegyzet:* A GeoGebra a következő írásmódot is támogatja: `++Mátrix1 * Mátrix2 ^(-1)++` .
+
+====
+
+== További műveletek mátrixokkal
+
+Lásd a xref:/commands/Vektor_Mátrix_parancsok.adoc[Vektor & Mátrix parancsok] szócikket.
+
+* xref:/commands/Determináns.adoc[Determináns][ <Mátrix> ]: Kiszámítja a mátrix determinánsát.
+* xref:/commands/Inverz.adoc[Inverz][ <Mátrix> ]: Megadja a mátrix inverzét.
+* xref:/commands/Transzponált.adoc[Transzponált][ <Mátrix> ]: Transzponálja a mátrixot.
+* xref:/commands/MátrixTranszformáció.adoc[MátrixTranszformáció][ <Mátrix>, <Alakzat> ]: Megadja a mátrix által
+meghatározott alakzat egy affín képét.
+* xref:/commands/RedukáltLépcsősAlakúMátrix.adoc[RedukáltLépcsősAlakúMátrix][ <Mátrix> ]: Megadja a mátrix redukált
+lépcsős alakját.
+
+== Megjegyzés
+
+[NOTE]
+====
+
+*Jegyzet:* Mátrixot könnyen létrehozhat táblázatból.
+
+====

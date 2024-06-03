@@ -1,0 +1,77 @@
+= Komplex számok
+:page-en: Complex_Numbers
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+A GeoGebra közvetlenül nem támogatja komplex számok bevitelét, de xref:/Pontok_és_Vektorok.adoc[pontok] használatával
+szimulálhatóak komplex számokkal történő műveletek.
+
+[EXAMPLE]
+====
+
+Ha a _3 + 4í_ komplex kifejezést a parancssorba írja, akkor megkapja a _(3, 4)_ pontot a
+xref:/Geometria_ablak.adoc[rajzlapon]. A pont koordinátái komplex számként jelennek meg az
+xref:/Algebra_nézet.adoc[Algebra nézetben].
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Minden pontot megjeleníthet komplex számként az xref:/Algebra_nézet.adoc[Algebra nézetben]. Ehhez nyissa meg
+a pont xref:/Tulajdonságok_párbeszédablak.adoc[Tulajdonságok párbeszédablakát], és válassza ki a __Komplex szám__ot a
+koordináták megjelenítésére az _Algebra_ részben.
+
+====
+
+Ha az _í_ nem neve egy objektumnak sem, úgy a GeoGebra egy új bevitelnél (pl. _q = 3 + 4í_) felismeri a _0 + 1í_
+képzeletbeli egységként, ill. az _í = (0, 1)_ rendezett párként (kivéve xref:/CAS_nézet.adoc[CAS nézetben]). Az _í_
+képzeletbeli egységet megtalálja a parancssor jeleket tartalmazó táblázatában vagy használhatja az [.kcode]#Alt# +
+[.kcode]#i# billentyűkombinációt.
+
+[EXAMPLE]
+====
+
+Összeadás és kivonás:
+
+* `++(2 + 1ί) + (1 – 2ί)++` eredménye 3 – 1ί.
+* `++(2 + 1ί) - (1 – 2ί)++` eredménye 1 + 3ί.
+
+====
+
+[EXAMPLE]
+====
+
+Szorzás és osztás:
+
+* `++(2 + 1ί) * (1 – 2i)++` eredménye 4 – 3ί.
+* `++(2 + 1ί) / (1 – 2i)++` eredménye 0 + 1ί.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A `++(2, 1)*(1, -2)++` szorzás eredménye a két vektor skaláris szorzata.
+
+====
+
+A következő parancsokat és xref:/Előre_definiált_Függvények_és_Operátorok.adoc[előre definiált operátorokat] is
+alkalmazhatja:
+
+* `++x(z)++` vagy `++real(z)++` eredménye a _z_ komplex szám képzeletbeli része.
+* `++y(z)++` vagy `++imaginary(z)++` eredménye a _z_ komplex szám képzeletbeli része.
+* `++abs(z)++` vagy `++Hossz[z]++` eredménye a _z_ komplex szám abszolút értéke.
+* `++arg(z)++` vagy `++Szög[z]++` eredménye a _z_ komplex szám argumentuma.
+* `++conjugate(z)++` vagy `++Tükrözés[z,xAxis]++` eredménye a _z_ komplex szám konjugáltja.
+
+A GeoGebra felismer xref:/Számok_és_Szögek.adoc[valós] és komplex számokat tartalmazó kifejezéseket is.
+
+[EXAMPLE]
+====
+
+* `++3 + (4 + 5ί)++` eredménye 7 + 5ί.
+* `++3 - (4 + 5ί)++` eredménye -1 - 5ί.
+* `++3 / (0 + 1ί)++` eredménye 0 - 3ί.
+* `++3 * (1 + 2ί)++` eredménye 3 + 6ί.
+
+====

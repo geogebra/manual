@@ -1,0 +1,25 @@
+= Kerület parancs
+:page-en: commands/Perimeter
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Kerület[ <Sokszög> ]::
+  Megadja a sokszög kerületét.
+Kerület[ <Kúpszelet> ]::
+  Megadja a kúpszelet kerületét.
+Kerület< <Mértani hely> ]::
+  Ha a megadott mértani hely véges, a parancs annak a kerületét (megközelítőleg) adja meg. Ha a mértani hely végtelen,
+  úgy annak kerülete nem határozható meg.
+
+[EXAMPLE]
+====
+
+A `++Kerület[x^2 + 2y^2 = 1]++` parancs eredménye _5.4_.
+
+====
+
+[EXAMPLE]
+====
+
+A `++Kerület[Sokszög[(1, 2), (3, 2), (4, 3)]]++` parancs eredménye _6.58_.
+
+====

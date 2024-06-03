@@ -1,0 +1,56 @@
+= PolárAlakban parancs
+:page-en: commands/ToPolar
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+PolárAlakban[ <Vektor> ]::
+  Átváltja a vektor koordinátáit polárkoordinátákra.
+
+[EXAMPLE]
+====
+
+`++PolárAlakban[{1, sqrt(3)}]++` eredménye _(2; 60°)_.
+
+====
+
+PolárAlakban[ <Komplex szám> ]::
+  Átváltja a komplex számot polárkoordinátákra.
+
+[EXAMPLE]
+====
+
+`++PolárAlakban[1 + sqrt(3) * ί]++` eredménye _(2; 60°)_.
+
+====
+
+== CAS nézet
+
+PolárAlakban[ <Vektor> ]::
+  Átváltja a vektor koordinátáit polárkoordinátákra.
+
+[EXAMPLE]
+====
+
+`++PolárAlakban[(1, sqrt(3))]++` eredménye _(2; stem:[\frac\{\pi}\{3}])_.
+
+====
+
+PolárAlakban[ <Komplex szám> ]::
+  Átváltja a komplex számot polárkoordinátákra.
+
+[EXAMPLE]
+====
+
+`++PolárAlakban[1 + sqrt(3) * ί]++` eredménye _(2; stem:[\frac\{\pi}\{3}])_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* Az ί képzeletbeli egység az [.kcode]#ALT # + [.kcode]# i# billentyűkombinációval érhető el.
+* Lásd az xref:/commands/ExponenciálisAlakban.adoc[ExponenciálisAlakban],
+xref:/commands/Komplexszámként.adoc[Komplexszámként] és xref:/commands/Pontként.adoc[Pontként] parancsokat.
+
+====

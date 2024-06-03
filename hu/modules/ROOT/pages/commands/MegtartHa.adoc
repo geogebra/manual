@@ -1,0 +1,32 @@
+= MegtartHa parancs
+:page-en: commands/KeepIf
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+MegtartHa[ <Feltétel>, <Lista> ]::
+  Az eredeti lista azon elemeiből hoz létre egy új listát, amelyek teljesítik a felételt.
+
+[EXAMPLE]
+====
+
+`++MegtartHa[x<3, {1, 2, 3, 4, 1, 5, 6}]++` eredménye a következő lista: _\{1, 2, 1}_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Számokat tartalmazó listáknál bármilyen feltétel megadható. Más objektumokat tartalmazó listáknál csak
+következő formájú felételek adhatók meg: `++x==konstans++` vagy `++x!=konstans++`.
+
+====
+
+MegtartHa[ <Feltétel>, <Változó>, <Lista> ]::
+  A parancs rugalmasabb feltételeket megadását teszi lehetővé.
+
+[EXAMPLE]
+====
+
+Legyenek _P, Q, R_ pontok. A `++MegtartHa[x(A) < 3, A, {P, Q, R}]++` parancs azkból a pontokból hoz létre egy új listát,
+amelyek x koordinátája kisebb háromnál. A feltétel ellenőrzésénél a pontok sorban helyettesítik az _A_ változót.
+
+====

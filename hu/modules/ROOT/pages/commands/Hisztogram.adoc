@@ -1,0 +1,102 @@
+= Hisztogram parancs
+:page-en: commands/Histogram
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Hisztogram[ <Osztályok határainak listája>, <Magasságok listája>]::
+  Létrehoz egy hisztogramot megadott magasságú oszlopokkal. Az osztályok határai határozzák meg az oszlopok szélességét
+  és pozícióját.
+
+[EXAMPLE]
+====
+
+`++Hisztogram[{0, 1, 2, 3, 4, 5}, {2, 6, 8, 3, 1}]++` eredménye egy megadott magasságú, 5 oszlopos hisztogram. Az első
+oszlop a [_0, 1_] intervallumon helyezkedik el, a második az [_1, 2_] intervallumon, stb.
+
+====
+
+Hisztogram[ <Osztályok határainak listája>, <Nyers adatok listája>, <Logikai érték (Sűrűség?)>, <Sűrűségi tényező
+(opcionális)> ]::
+  Létrehoz egy hisztogramot a megadott nyers adatok listájából. Az osztályok határai határozzák meg az oszlopok
+  szélességét és pozícióját, és hogy hány elemet tartalmaznak az egyes osztályok. Az oszlopok magassága a
+  következőképpen alakul:
+
+* Ha a _logikai érték = true_, úgy az oszlopok magassága = (Sűrűségi tényező)*(Osztályok gyakorisága) / (Osztályok
+szélessége)
+* Ha a _logikai érték = false", úgy az oszlopok magassága = Osztályok gyakorisága._
+
+Az alapértelmezett _logikai érték = true_ és a _sűrűségi tényező = 1_.
+
+[NOTE]
+====
+
+*Jegyzet:* Az nyers adatok minden elemének az osztályok határán belül kell lennie, különben _nem definiált_ az eredmény.
+
+====
+
+[EXAMPLE]
+====
+
+(_alapértelmezett hisztogram_)
+
+`++Hisztogram[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true]++` eredménye egy 3 oszlopot tartalmazó
+hisztogram a következő oszlopmagasságokkal: első oszlop magassága = 0.5, második oszlop magassága = 0.2, harmadik oszlop
+magassága = 0.1.
+
+A hisztogram területe = 0.5*10 + 0.2*10 + 0.1*10 = 8.
+
+====
+
+[EXAMPLE]
+====
+
+(_összeg hisztogram_)
+
+`++Hisztogram[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, false]++` létrehoz egy 3 oszlopos hisztogramot a
+következő magasságokkal: első oszlop magassága = 5, második oszlop magassága = 2, harmadik oszlop magassága = 1. A
+hisztogram nem alkalmaz sűrűségi tényezőt, az oszlopok magasságát az egyes osztályokban lévő elemek száma határozza meg.
+
+====
+
+[EXAMPLE]
+====
+
+(_viszonylagos gyakorisági hisztogram_)
+
+`++Hisztogram[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 10/ 8]++` eredménye egy 3 oszlopból álló
+hisztogram a következő magasságokkal: első oszlop magassága = 0.625, második oszlop magassága: 0.25, harmadik oszlop
+magassága = 0.125. Ez a hisztogram a sűrűségi tényezővel számítja ki az oszlopok magasságát, amely az egyes osztályokban
+lévő értékek viszonyán alapszik.
+
+Legyen n az elemek száma és o az oszlopok konstans szélessége. Az o/n sűrűségi tényező eredménye egy viszonylagos
+gyakorisági hisztogram.
+
+====
+
+[EXAMPLE]
+====
+
+(_normalizált hisztogram_)
+
+`++Hisztogram[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 1/8]++` létrehoz egy 3 oszlopból álló
+hisztogramot a következő oszlopmagasságokkal: első oszlop magassága = 0.0625, második oszlop magassága = 0.025, harmadik
+oszlop magassága = 0.0125.
+
+A hisztogram területe = 0.0625*10 + 0.025*10 + 0.0125*10 = 1.
+
+Legyen n az elemek száma, így a sűrűségi tényező = 1/n. Az eredmény egy normalizált hisztogram, mely oszlopainak
+összterülete = 1. Ez a fajta hisztogram hasznos lehet, ha a hisztogramot egy gyakorisági görbéhez akarjuk igazítani.
+
+====
+
+Hisztogram[ <Logikai érték (Halmozott?)>, <Osztályok határainak listája>, <Nyers adatok listája>, <Logikai érték
+(Sűrűség?)>, <Sűrűségi tényező (opcionális)> ]::
+  Ha a _logikai érték = true", úgy egy olyan hisztogram az eredmény, amelynek oszlopmagasságai megegyeznek az osztályok
+  gyakoriságának és az összes előző gyakoriság összegével._
+
+[EXAMPLE]
+====
+
+`++Hisztogram[true, {10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true]++` eredménye egy három oszlopból álló
+hisztogram a következő magasságokkal: első oszlop = 0.5, második oszlop = 0.7, harmadik oszlop = 0.8.
+
+====

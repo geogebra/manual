@@ -1,0 +1,40 @@
+= Egyesít parancs
+:page-en: commands/Join
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Egyesít[ <Lista>, <Lista>, ... ]::
+  Egyesíti a két (vagy több) megadott listát.
+
+[EXAMPLE]
+====
+
+`++Egyesít[{5, 4, 3}, {1, 2, 3}]++` eredménye a következő lista: _\{5, 4, 3, 1, 2, 3}_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Az új lista átrendezés nélkül tartalmazza a megadott listák elemeit. Többször előforduló elemek is
+megmaradnak.
+
+====
+
+Egyesít[ <Listák listája> ]::
+  Egyesíti a listán lévő listákat.
+
+[EXAMPLE]
+====
+
+* `++Egyesít[{{1, 2}}]++` eredménye a következő lista: _\{1, 2}_.
+* `++Egyesít[{{1, 2, 3}, {3, 4}, {8, 7}}]++` eredménye a következő lista: _\{1, 2, 3, 3, 4, 8, 7}_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Az új lista átrendezés nélkül tartalmazza a megadott listák elemeit. Többször előforduló elemek is
+megmaradnak.
+
+====

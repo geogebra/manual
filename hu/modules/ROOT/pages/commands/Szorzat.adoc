@@ -1,0 +1,58 @@
+= Szorzat parancs
+:page-en: commands/Product
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Szorzat[ <Számok listája> ]::
+  Kiszámítja a listán lévő számok szorzatát.
+
+[EXAMPLE]
+====
+
+`++Szorzat[{2, 5, 8}]++` eredménye _80_.
+
+====
+
+Szorzat[ <Számok listája>, <Elemek száma> ]::
+  Kiszámítja a listán lévő első _n_ szám szorzatát.
+
+[EXAMPLE]
+====
+
+`++Szorzat[{1, 2, 3, 4}, 3]++` eredménye _6_.
+
+====
+
+Szorzat[ <Számok listája>, <Gyakoriságok listája> ]::
+  Az első listán lévő számokat sorban hatványozza a második listán lévő számokkal, majd kiszámítja az így kapott számok
+  szorzatát.
+
+[EXAMPLE]
+====
+
+`++Szorzat[ {20, 40, 50, 60}, {4, 3, 2, 1} ]++` eredménye
+__1536000000000000__`++Szorzat[ {sqrt(2), sqrt(3), sqrt(5), cbrt(-7)}, {4, 3, 2, 3} ]++` eredménye _-420_
+
+====
+
+== CAS nézet
+
+Szorzat[ <Kifejezések listája> ]::
+  Kiszámítja a listán lévő kifejezések szorzatát.
+
+[EXAMPLE]
+====
+
+`++Szorzat[{1, 2, x}]++` eredménye _2x_.
+
+====
+
+Szorzat[ <Kifejezés>, <Változó>, <Kezdő sorszám>, <Záró sorszám> ]::
+  Kiszámítja az összes azoknak a kifejezésnek a szorzatát, amelyek a változó behelyettesítésénél (kezdő sorszámtól záró
+  sorszámig) létrejönnek.
+
+[EXAMPLE]
+====
+
+`++Szorzat[x + 1,  x,  2, 3]++` eredménye _12_.
+
+====

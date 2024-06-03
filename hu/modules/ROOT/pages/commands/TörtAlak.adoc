@@ -1,0 +1,31 @@
+= TörtAlak parancs
+:page-en: commands/FractionText
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+TörtAlak[ <Szám> ]::
+  Tört alakú számra konvertálja a megadott számot, amely (LaTeX) szövegként jelenik meg a
+  xref:/Geometria_ablak.adoc[geometriai ablakban].
+TörtAlak[ <Pont> ]::
+  A megadott pont koordinátáit adja meg (LaTeX) szövegként a xref:/Geometria_ablak.adoc[geometriai ablakban].
+
+[EXAMPLE]
+====
+
+Ha _A=(1.33,0.8)_ egy pont, akkor a `++TörtAlak[A]++` parancs a _stem:[ \left( \frac\{133}\{100} ,\frac\{4}\{5} \right)
+]_ koordinátákat hozza létre szövegként.
+
+====
+
+[EXAMPLE]
+====
+
+Ha _a: y = 1.5 x + 2_ egy egyenes, akkor a `++TörtAlak[Meredekség[a]]++` eredménye a _3/2_ tört alak szövegként.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd a xref:/commands/GyökösAlak.adoc[GyökösAlak] parancsot.
+
+====

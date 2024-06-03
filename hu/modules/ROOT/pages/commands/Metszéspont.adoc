@@ -1,0 +1,121 @@
+= Metszéspont parancs
+:page-en: commands/Intersect
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Metszéspont[ <Alakzat>, <Alakzat> ]::
+  Kiszámítja két alakzat metszéspontját.
+
+[EXAMPLE]
+====
+
+* Legyen `++a: -3x + 7y = -10++` egy egyenes és `++c: x^2 + 2y^2 = 8++` egy ellipszis. A`++Metszéspont[a, c]++` parancs
+eredményei a két alakzat metszéspontjai: _E_ = (-1.02, -1,87) és _F_ = (2.81, -0.22).
+* `++Metszéspont[y = x + 3, GörbeParaméteres[t, 2t, t, 0, 10]]++` eredménye __A__=(3,6).
+* `++Metszéspont[GörbeParaméteres[2s, 5s, s,-10, 10 ], GörbeParaméteres[t, 2t, t, -10, 10]]++` eredménye __A__=(0,0).
+
+====
+
+Metszéspont[ <Alakzat>, <Alakzat>, <Metszéspont száma> ]::
+  Kiszámítja két alakzat n-edik metszéspontját.
+
+[EXAMPLE]
+====
+
+Legyen `++a(x) = x^3 + x^2 - x++` egy függvény és `++b: -3x + 5y = 4++` egy egyenes. A `++Metszéspont[a, b, 2]++`
+parancs eredménye a függvény és az egyenes _C_ = (-0.43, 0.54) metszéspontja.
+
+====
+
+Metszéspont[ <Alakzat>, <Alakzat>, <Kezdőpont> ]::
+  Kiszámítja két alakzat metszéspontjainak megközelítő értékét egy adott kezdőpontban a
+  http://hu.wikipedia.org/wiki/Newton-módszer[Newton-módszerrel.]
+
+[EXAMPLE]
+====
+
+Legyen `++a(x) = x^3 + x^2 - x++` egy függvény, `++b: -3x + 5y = 4++` egy egyenes és _C_ = (0, 0.8) a kezdőpont. A
+`++Metszéspont[a, b, C]++` parancs eredménye a függvény és a vonal Newton-módszerrel kiszámított megközelítő _D_ =
+(-0.43, 0.54) metszéspontja.
+
+====
+
+Metszéspont[ <Függvény>, <Függvény>, <Kezdő x-érték>, <Lezáró x-érték>]::
+  Kiszámítja a két függvény metszéspontjait a megadott intervallumon.
+
+[EXAMPLE]
+====
+
+Legyen `++f(x) = x^3 + x^2 - x++` és `++g(x) = 4 / 5 + 3 / 5 x++` a függvény. A `++ Metszéspont[ f, g, -1, 2 ]++`
+parancs eredményei a két függvény _A_ = (-0.43, 0.54) és _B_ = (1.1, 1.46) metszéspontjai a [ -1, 2 ] intervallumon.
+
+====
+
+Metszéspont[ <Görbe 1>, <Görbe 2>, <Paraméter 1>, <Paraméter 2> ]
+
+Kiszámítja a két görbe metszéspontjainak megközelítő értékét a
+http://hu.wikipedia.org/wiki/Newton-módszer[Newton-módszerrel,] amely a megadott paraméterekből indul ki.
+
+[EXAMPLE]
+====
+
+Legyen `++a = GörbeParaméteres[cos(t), sin(t), t, 0, π]++` és `++b = GörbeParaméteres[cos(t) + 1, sin(t), t, 0, π]++`. A
+`++Metszéspont[a, b, 0, 2]++` eredménye a két görbe _A = (0.5, 0.87)_ megközelítő metszéspontja.
+
+====
+
+== CAS nézet
+
+Metszéspont[ <Függvény>, <Függvény> ]::
+  Kiszámítja két függvény metszéspontját.
+
+[EXAMPLE]
+====
+
+Legyen `++f(x):= x^3 + x^2 - x++` és `++g(x):= x++` a két függvény. A `++Metszéspont[ f(x), g(x) ]++` parancs eredménye
+a következő, a két függvény metszéspontjait tartalmazó lista: _\{(1, 1), (0, 0), (-2, -2)}_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd a image:Tool_Intersect_Two_Objects.gif[Tool Intersect Two Objects.gif,width=32,height=32]
+xref:/tools/Két_alakzat_metszéspontja.adoc[Két alakzat metszéspontja] eszközt.
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Following text is about a feature that is supported only in 5.0 beta version.
+
+'''''
+
+[NOTE]
+====
+
+*Jegyzet:* A GeoGebra 5-ös verziójától ez a parancs 3D-s alakzatokkal is működik.
+
+====
+
+|===
+
+Metszéspont[ <Alakzat>, <Alakzat> ]
+
+[EXAMPLE]
+====
+
+* `++Metszéspont[ <Egyenes> , <Alakzat> ]++` kiszámítja egy egyenes és egy alakzat (sík, szakasz, sokszög, kúpszelet,
+stb.) metszéspontjait.
+* `++ Metszéspont[ <Sík> , <Alakzat> ]++` kiszámítja egy sík és egy szakasz, sokszög, kúpszelet, stb. metszéspontjait.
+* `++ Metszéspont[ <Kúpszelet>, <Kúpszelet> ]++` kiszámítja a két kúpszelet metszéspontjait.
+* `++ Metszéspont[ <Sík>, <Sík> ]++` kiszámítja két sík metszépontjait tartalmazó vonalat.
+* `++ Metszéspont[ <Sík>, <Poliéder> ]++` kiszámítja a sík és poliéder metszéspontjait tartalmazó sokszögeket.
+* `++ Metszéspont[ <Gömb>, <Gömb> ]++` kiszámítja a két gömb metszéspontjait tartalmazó körét.
+* `++Metszéspont[ <Sík>, <Másodrendű felület> ]++` kiszámítja a sík és a másodrendű felület(gömb, kúp, cilinder, ...)
+metszéspontjait tartalmazó kúpszeletet.
+
+====

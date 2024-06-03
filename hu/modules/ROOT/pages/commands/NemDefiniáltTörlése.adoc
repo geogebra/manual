@@ -1,0 +1,24 @@
+= NemDefiniáltTörlése parancs
+:page-en: commands/RemoveUndefined
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+NemDefiniáltTörlése[ <Lista> ]::
+  Törli a megadott lista összes nem definiált elemét és létrehoz egy új listát, amely csak a definiált elemeket
+  tartalmazza.
+
+[EXAMPLE]
+====
+
+`++ NemDefiniáltTörlése[Sorozat[(-1)^i, i, -3, -1, 0.5]]++` törli a második és negyedik elemet, mivel azok kitevője nem
+egész szám és ezáltal nem definiáltak, és létrehozza a \{-1, 1, -1} listát.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+Lásd továbbá a xref:/commands/Töröl.adoc[Töröl parancsot].
+
+====

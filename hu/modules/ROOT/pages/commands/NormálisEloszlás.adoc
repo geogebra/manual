@@ -1,0 +1,33 @@
+= NormálisEloszlás parancs
+:page-en: commands/Normal
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+NormálisEloszlás[ <Átlag>, <Szórás>, x ]::
+  Megrajzolja a normális eloszlás sűrűségfüggvényét (PDF).
+NormálisEloszlás[ <Átlag>, <Szórás>, x, <Eloszlásfüggvény logikai értéke> ]::
+  Ha a logikai érték igaz, megrajzolja a normális eloszlás eloszlásfüggvényét. Ha hamis, akkor a normális eloszlás
+  sűrűségfüggvényét.
+NormálisEloszlás[ <Átlag>, <Szórás>, <Változó értéke> ]::
+  Meghatározza a _Φ((x – μ) / σ)_ függvény értékét az adott változóra ahol _Φ_ a standard normális eloszlás
+  eloszlásfüggvénye (_Átlag=μ=0_, _Szórás=σ=1_).
+
+[NOTE]
+====
+
+*Jegyzet:* Meghatározza a valószínűséget adott x koordinátánál nem nagyobb értékre (vagyis a Gauss-görbe alatti
+területet az adott x koordinátánál kisebb értékekre).
+
+====
+
+== CAS nézet
+
+NormálisEloszlás[ <Átlag>, <Szórás>, <Változó értéke> ]::
+  Meghatározza a _Φ((x – μ) / σ)_ függvény értékét az adott változóra ahol _Φ_ a standard normális eloszlás
+  eloszlásfüggvénye (_Átlag=μ=0_, _Szórás=σ=1_).
+
+[EXAMPLE]
+====
+
+`++NormálisEloszlás[2, 0.5, 1]++` megadja stem:[0.5 erf(-\sqrt\{2}) + 0.5]-öt.
+
+====

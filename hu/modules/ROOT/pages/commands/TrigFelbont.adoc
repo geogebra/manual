@@ -1,0 +1,69 @@
+= TrigFelbont parancs
+:page-en: commands/TrigExpand
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+TrigFelbont[ <Kifejezés> ]::
+  Átalakítja a megadott trigonometrikus kifejezést egy olyan kifejezéssé, amely csak egyszerű változókat és
+  argumentumokat tartalmaz.
+
+[EXAMPLE]
+====
+
+`++TrigFelbont[tan(x + y)]++` eredménye stem:[\frac\{cos(x) sin(y) + cos(y) sin(x)}\{cos(x) cos(y) - sin(x) sin(y)}].
+
+====
+
+TrigFelbont[ <Kifejezés>, <Célfüggvény> ]::
+  A célfüggvény figyelembe vételével átalakítja a megadott trigonometrikus kifejezést egy olyan kifejezéssé, amely csak
+  egyszerű változókat és argumentumokat tartalmaz.
+
+[EXAMPLE]
+====
+
+`++TrigFelbont[tan(x + y), tan(x)]++` eredménye stem:[\frac\{-tan(x) - tan(y)}\{tan(x) tan(y) - 1}].
+
+====
+
+== CAS szintaxis
+
+A következő parancsok csak image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/CAS_nézet.adoc[CAS nézetben] érhetők el:
+
+TrigFelbont[ <Kifejezés>, <Célfüggvény>, <Célváltozó> ]::
+  A célfüggvény és a célváltozó figyelembe vételével átalakítja a megadott trigonometrikus kifejezést egy olyan
+  kifejezéssé, amely csak egyszerű változókat és argumentumokat tartalmaz.
+
+[EXAMPLE]
+====
+
+`++TrigFelbont[sin(x)/(1+cos(x)), tan(x), x/2]++` eredménye stem:[tan \left( \frac\{x}\{2} \right)].
+
+====
+
+[EXAMPLE]
+====
+
+`++TriFelbont[sin(x), sin(x), x/2]++` eredménye stem:[2cos \left( \frac\{x}\{2} \right) sin \left( \frac\{x}\{2} \right)
+].
+
+====
+
+TrigFelbont[ <Kifejezés>, <Célfüggvény>, <Cél változó>, <Célváltozó> ]::
+  A célfüggvény és a célváltozók figyelembe vételével átalakítja a megadott trigonometrikus kifejezést egy olyan
+  kifejezéssé, amely csak egyszerű változókat és argumentumokat tartalmaz.
+
+[EXAMPLE]
+====
+
+`++TrigFelbont[csc(x) - cot(x) + csc(y) - cot(y), tan(x), x/2, y/2]++` eredménye stem:[tan \left( \frac\{x}\{2} \right)
++tan \left( \frac\{y}\{2} \right) ].
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd továbbá a xref:/commands/TrigEgyszerűsít.adoc[TrigEgyszerűsít] és
+xref:/commands/TrigEgyesít.adoc[TrigEgyesít] parancsokat.
+
+====

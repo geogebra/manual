@@ -1,0 +1,58 @@
+= Sokszög parancs
+:page-en: commands/Polygon
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Sokszög[ <Pont>, ..., <Pont> ]::
+  Létrehoz egy sokszögett megadott csúcspontokkal.
+
+[EXAMPLE]
+====
+
+`++Sokszög[(1, 1), (3, 0), (3, 2), (0, 4)]++` eredménye egy négyszög.
+
+====
+
+Sokszög[ <Pont>, <Pont>, <Csúcsok száma> ]::
+  Létrehoz egy szabályos sokszöget adott számú csúcsponttal.
+
+[EXAMPLE]
+====
+
+`++Sokszög[(1, 1), (4, 1), 6]++` eredménye egy szabályos hatszög.
+
+====
+
+Sokszög[ <Pontok listája> ]::
+  Létrehoz egy sokszöget a megadott listán lévő csúcspontokkal.
+
+[EXAMPLE]
+====
+
+`++Sokszög[{(0, 0), (2, 1), (1, 3)}]++` eredménye egy háromszög.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd a image:Tool_Polygon.gif[Tool Polygon.gif,width=32,height=32] xref:/tools/Sokszög.adoc[Sokszög] és
+image:Tool_Regular_Polygon.gif[Tool Regular Polygon.gif,width=32,height=32] xref:/tools/Szabályos_sokszög.adoc[Szabályos
+sokszög] eszközöket.
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Following text is about a feature that is supported only in 5.0 beta version.
+
+'''''
+
+Sokszög[ <Pont>, <Pont>, <Csúcsok száma>, <Irány> ]::
+  Létrehoz egy szabályos sokszöget adott számú csúcsponttal a megadott iránnyal párhuzamosan (pl. egy sík, amellyel a
+  sokszög párhuzamos, amennyiben ez lehetséges).
+
+|===

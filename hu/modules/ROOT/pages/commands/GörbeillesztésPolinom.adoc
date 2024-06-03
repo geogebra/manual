@@ -1,0 +1,38 @@
+= GörbeillesztésPolinom parancs
+:page-en: commands/FitPoly
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+GörbeillesztésPolinom[ <Pontok listája> , <Fokszám> ]::
+  Kiszámítja a pontok "n"-ed fokú regressziós görbéjét.
+
+[EXAMPLE]
+====
+
+`++GörbeillesztésPolinom[{(-1, -1), (0, 1), (1, 1), (2, 5)}, 3]++` eredménye _f(x) = x^3^ - 1 x^2^ + 1_.
+
+====
+
+== CAS nézet
+
+GörbeillesztésPolinom[ <Pontok listája>, <Fokszám> ]::
+  Kiszámítja a pontok "n"-ed fokú regressziós görbéjét.
+
+[EXAMPLE]
+====
+
+`++GörbeillesztésPolinom[{(-1, -1), (0, 1), (1, 1), (2, 5)}, 3]++` eredménye _x^3^ - x^2^ + 1_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* Az "n"-ed fok kiszámításához legalább "n + 1" pontnak kell lennie a listán.
+* Lásd továbbá a xref:/commands/GörbeillesztésExp.adoc[GörbeillesztésExp],
+xref:/commands/GörbeillesztésLogaritmikus.adoc[GörbeillesztésLogaritmikus],
+xref:/commands/GörbeillesztésHatvány.adoc[GörbeillesztésHatvány] és
+xref:/commands/GörbeillesztésSin.adoc[GörbeillesztésSin] parancsokat.
+
+====

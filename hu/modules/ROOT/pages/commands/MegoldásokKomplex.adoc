@@ -1,0 +1,53 @@
+= MegoldásokKomplex parancs
+:page-en: commands/CSolutions
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Ez a parancs csak xref:/CAS_nézet.adoc[CAS nézetben] érhető el..
+
+== CAS nézet
+
+MegoldásokKomplex[ <Egyenlet> ]::
+  Megoldja a megadott egyenletet az x változóra és létrehoz egy listát, amely az összes megoldást tartalmazza. Komplex
+  megoldások is lehetségesek.
+
+[EXAMPLE]
+====
+
+`++MegoldásKomplex[x^2 = -1]++` eredménye _\{ί, -ί}_, vagyis az _x^2^ = -1_ egyenlet komplex megoldásait tartalmazó
+lista.
+
+====
+
+MegoldásokKomplex[ <Egyenlet>, <Változó> ]::
+  Megoldja a megadott egyenletet a megadott ismeretlen változóra és létrehoz egy listát, amely az összes megoldást
+  tartalmazza. Komplex megoldások is lehetségesek.
+
+[EXAMPLE]
+====
+
+`++MegoldásokKomplex[a^2 = -1, a]++` eredménye _\{ί, -ί}_, vagyis az _a^2^ = -1_ egyenlet komplex megoldásait tartalmazó
+lista.
+
+====
+
+MegoldásokKomplex[ <Egyenletek listája>, <Változók listája> ]::
+  Megoldja a megatott egyenletrendszert a megadott ismeretlen változóra és létrehoz egy listát, amely az összes
+  megoldást tartalmazza. Komplex megoldások lehetségesek.
+
+[EXAMPLE]
+====
+
+`++MegoldásokKomplex[{y^2 = x - 1, x = 2 * y - 1}, {x, y}]++` eredménye a követzekő lista: stem:[\begin\{pmatrix}1 + 2
+ί&1 + ί\\1 - 2 ί&1 - ί\end\{pmatrix}].
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* A komplex egységet (ί) a következő billentyűkombinációval kapja meg: [.kcode]#ALT # + [.kcode]# i#.
+* Lásd a xref:/commands/MegoldKomplex.adoc[MegoldKomplex] és a xref:/commands/Megoldások.adoc[Megoldások] parancsokat.
+
+====

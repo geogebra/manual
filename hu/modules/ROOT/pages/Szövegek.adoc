@@ -1,0 +1,55 @@
+= Szövegek
+:page-en: Texts
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Szövegeket a xref:/commands/Szöveg.adoc[Szöveg parancssal] vagy a image:Tool_Insert_Text.gif[Tool Insert
+Text.gif,width=32,height=32]xref:/tools/Szöveg_beszúrása.adoc[Szöveg beszúrása eszközzel] hozhat létre, továbbá ha a
+szöveget idézőjelben (" ") közvetlenül a xref:/Parancssor.adoc[Parancssorba] írja.
+
+Statikus szöveg::
+  A statikus szövegek függetlenek minden matematikai objektumtól, azok változásai nem befolyásolják a tartalmukat.
+
+Dinamikus szöveg::
+  A dinamikus szövegek objektumok értékeit tartalmazzák, azok tartalma az objektumok (értékeinek) megváltoztatásával
+  szintén megváltozik.
+
+Kevert szöveg::
+  A statikus és dinamikus szöveg kombinációja.
+  Kevert szöveg létrehozásához előbb írja be a szöveg statikus részét (p.l. "A pont ="), majd kattintson arra az
+  alakzatra, amelynek értékét a szövegbe szeretné illeszteni.
+
+[NOTE]
+====
+
+*Jegyzet:* A GeoGebra automatikusan átváltja a szöveg szintaxisát ("A pont = " + A ), hogy azt kevert szöveggé alakítsa.
+A szöveg statikus része idézőjelbe kerül, dinamikus részét pluszjellel (+) kapcsolja a szöveghez.
+
+====
+
+[cols=",",options="header",]
+|===
+|Bevitel |Leírás
+|Ez egy statikus szöveg. |Statikus szöveg
+|A |Dinamikus szöveg (ha létezik _A_ pont)
+|"A pont = " + A |Két részből álló kevert szöveg az _A_ pont értékével
+|"a = " + a + "cm" |Három részből álló kevert szöveg az _a_ szám értékével
+|===
+
+[NOTE]
+====
+
+*Jegyzet:* Ha egy statikus szöveget szeretne létrehozni, amely tartalmazza egy létező objektum _xx_ nevét, úgy azt
+idézőjelbe kell tennie ("xx"), különben a GeoGebra kevert szöveget generál, amely az objektum neve (_xx_) helyett annak
+értékét mutatja. Viszont minden egyéb szöveget, amely nem tartalmaz létező objektumneveket, megadhat idézőjel nélkül is.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Több részből álló kevert szövegnél a statikus részeknek idézőjelben kell lenniük. A dinamikus és statikus
+szövegeket pluszjellel (+) kapcsolhat össze. A 4.0-ás verziótól ez már nem feltétlenül szükséges.
+
+====
+
+Matematikai képleteknél használhat xref:/LaTEX.adoc[LaTEX] szöveget is.

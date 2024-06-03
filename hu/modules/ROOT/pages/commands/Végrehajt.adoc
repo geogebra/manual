@@ -1,0 +1,27 @@
+= Végrehajt parancs
+:page-en: commands/Execute
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Végrehajt[ <Szöveg lista> ]::
+  Végrehajtja a parancsok listáját, amely szövegként lett megadva.
+
+[EXAMPLE]
+====
+
+`++Végrehajt[{"A=(1,1)","B=(3,3)","C = Középpont[A, B]"}]++` létrehozza az _A, B_ pontokat és azok _C_ középpontját.
+
+`++Végrehajt[Egyesít[{"f_{1} = 1", "f_{2} = 1"}, Sorozat["f_{"+(i + 2) + "} = f_{" + (i+1) + "} + f_{"+ i +"}", i, 1, 10]]]++`
+létrehozza a http://hu.wikipedia.org/wiki/Fibonacci-számok[Fibonacci sorozat] első 10 számát.
+
+====
+
+Végrehajt[ <Szöveg lista>, <Paraméter>, <Paraméter>,...]::
+  Helyettesíti a listában %1-vel az első paramétert, %2-vel a második paramétert, stb. Összesen kilenc paraméter adható
+  meg. A helyettesítés után a programm újra végrehajtja a parancsokat.
+
+[EXAMPLE]
+====
+
+`++Végrehajt[{"Középpont[%1,%2]"},A,B]++` létrehozza az _AB_ szakasz középpontját.
+
+====

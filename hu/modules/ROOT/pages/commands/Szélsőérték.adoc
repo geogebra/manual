@@ -1,0 +1,34 @@
+= Szélsőérték parancs
+:page-en: commands/Extremum
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Szélsőérték[ <Polinom> ]::
+  Megadja a polinomfüggvény szélsőértékeit a függvény grafikonjára illeszkedő pontokkal.
+
+[EXAMPLE]
+====
+
+`++Szélsőérték[x³ + 3x² - 2x + 1]++` megadja a helyi maximumokat: _(0.29, 0.70)_ és _(-2.29, 9.30)_ és jelöli azokat a
+xref:/Geometria_ablak.adoc[geometriai ablakban].
+
+====
+
+Szélsőérték[ <Függvény>,<Kezdő x-érték>, <Lezáró x-érték>]::
+  Kiszámtíja a függvény szélsőértékeit a <Kezdő x-érték,Lezáró x-érték> nyílt intervallumon. A függvény legyen folytonos
+  a [Kezdő x-érték,Lezáró x-érték>] zárt intervallumon.
+
+[EXAMPLE]
+====
+
+`++Szélsőérték[(x⁴ - 3x³ - 4x² + 4) / 2, 0, 5]++` megadja a _(2.93, -16.05)_ helyi maximumot az adott intervallumban és
+jelöli azokat a xref:/Geometria_ablak.adoc[geometriai ablakban].
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Hogy ne kerüljön sor rossz helyi maximumok megadására, a függvénynek a [ <Kezdő x-érték>, <Lezáró x-érték>]
+zárt intervallumon folytonosnak kell lennie.
+
+====

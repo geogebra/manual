@@ -1,0 +1,33 @@
+= EgyenlőE parancs
+:page-en: commands/AreEqual
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+EgyenlőE[ <Alakzat>, <Alakzat> ]::
+  Meghatározza, hogy a két alakzat egyenlő-e.
+  Ez a parancs alapértelmezettként numerikus megoldást mutat. A xref:/commands/Bizonyít.adoc[Bizonyít] parancs
+  használatával ez megváltoztatható.
+
+[EXAMPLE]
+====
+
+`++ EgyenlőE[Kör[(0, 0),1],x^2+y^2=1]++` eredménye _true_, mivel a két kör középpontja és sugara megegyezik.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* `++ EgyenlőE[Szakasz[(1, 2), (3, 4)], Szakasz[(3, 4), (1, 6)]]++` nem ugyanaz mint a
+`++Szakasz[(1, 2), (3, 4)] == Szakasz[(3, 4), (1, 6)]++`, mivel az utóbbi csak a szakaszok hosszát hasonlítja össze.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd továbbá a xref:/commands/KollineárisE.adoc[KollineárisE],
+xref:/commands/EgyPontraIlleszkedikE.adoc[EgyPontraIlleszkedikE],
+xref:/commands/EgyKörreIlleszkedikE.adoc[EgyKörreIlleszkedikE], xref:/commands/MerőlegesE.adoc[MerőlegesE] és
+xref:/commands/PárhuzamosE.adoc[PárhuzamosE] parancsokat.
+
+====

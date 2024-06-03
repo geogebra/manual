@@ -1,0 +1,61 @@
+= Pontok és Vektorok
+:page-en: Points_and_Vectors
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Pontokat és vektorokat a xref:/Parancssor.adoc[parancssorban] adhatunk meg Descartes- vagy polár-koordinátáikkal (lásd
+még a xref:/Számok_és_Szögek.adoc[Számok és Szögek] oldalt). Létrehozhatjuk még ezeket a image:Tool_New_Point.gif[Tool
+New Point.gif,width=32,height=32] xref:/tools/Pont_eszközök.adoc[Pont eszközök], a image:Tool_Vector_from_Point.gif[Tool
+Vector from Point.gif,width=32,height=32] xref:/tools/Vektor_pontból.adoc[Vektor pontból eszköz], valamint a
+image:Tool_Vector_between_Two_Points.gif[Tool Vector between Two Points.gif,width=32,height=32]
+xref:/tools/Vektor.adoc[Vektor eszköz] és számos xref:/Parancsok.adoc[parancs] segítségével.
+
+[NOTE]
+====
+
+*Jegyzet:* A nagybetűk általában pontokat, míg a kisbetűk vektorokat jelentenek. De nem köttelező ehhez ragaszkodni.
+
+====
+
+[EXAMPLE]
+====
+
+* A P pontot vagy v vektort Descartes-koordinátáikkal adjuk meg: `++P = (1, 0) vagy v = (0, 5)++`.
+* Polár-koordináták használatához gépeljük be: `++P = (1; 0°)++` vagy `++v = (5; 90°)++`.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Polár-koordináták elválasztására pontos vesszőt használunk, míg a Descartes-koordinátáknál vesszőt. Ha nem
+írjuk be a fok jelet, a GeoGebra radiánként kezeli az értéket.
+
+====
+
+== Számítások
+
+A GeoGebrában számításokat végezhetünk a pontokkal és a vektorokkal is.
+
+[EXAMPLE]
+====
+
+* Az A, B pontok által meghatározott szakasz F felezőpontját létrehozhatjuk úgy , hogy a parancsorba beírjuk
+`++F = (A + B) / 2++`.
+* A v vektor hossza kiszámolható a `++hossz = sqrt(v * v)++` műveletekkel.
+* Ha _A = (a, b)_, akkor `++A + 1++` eredménye _(a + 1, b + 1)_. Ha _A_ az _a+bί_ xref:/Komplex_számok.adoc[komplex
+szám], akkor `++A+1++` eredménye _a + 1 + bί_.
+
+====
+
+== Vektoriális szorzat
+
+Két pont vagy vektor `++(a, b) ⊗ (c, d)++` szorzásának eredménye, a megfelelő térvektorok vektoriális szorzatának _(a,
+b, 0) ⊗ (c, d, 0)_ értéke. Hasonló szintakszis használatos a listáknál, de ekkor az eredmény is lista.
+
+[EXAMPLE]
+====
+
+* `++{1, 2} ⊗ {4, 5}++` eredménye _\{0, 0, -3}_
+* `++{1, 2, 3} ⊗ {4, 5, 6}++` eredménye _\{3, 6, -3}_.
+
+====

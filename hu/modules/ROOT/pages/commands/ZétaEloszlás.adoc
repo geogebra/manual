@@ -1,0 +1,34 @@
+= ZétaEloszlás parancs
+:page-en: commands/Zipf
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+ZétaEloszlás[ <Elemek száma>, <Kitevő> ]::
+  Egy Zéta-eloszlás oszlopdiagramját hozza létre.
+  _Paraméterek:_
+  _Elemek száma:_ az elemek száma, amelyeket tanulmányozunk.
+  _Kitevő:_ az eloszlást jellemzi.
+
+ZétaEloszlás[ <Elemek száma>, <Kitevő>, <Eloszlásfüggvény logikai értéke> ]::
+  Egy Zéta-eloszlás oszlopdiagramját hozza létre, ha az eloszlásfüggvény logikai értéke _false_.
+  Egy Pascal-eloszlást hoz létre, ha az eloszlásfüggvény logikai értéke _true_.
+  Az első két paraméter megegyezik a fenti parancs paramétereivel.
+
+ZétaEloszlás[ <Elemek száma>, <Kitevő>, <Változó értéke>, <Eloszlásfüggvény logikai értéke> ]::
+  Legyen _X_ egy zéta-eloszlású valószínűségi változó. A parancs a következő valószínűséget számítja ki:
+  _P( X = v), ha az eloszlásfüggvény logikai értéke_ false__.__
+  _P( X ≤ v), ha az eloszlásfüggvény logikai értéke_ true__.__
+  Az első két paraméter megegyezik a fenti parancs paramétereivel.
+
+== CAS nézet
+
+ZétaEloszlás[ <Elemek száma>, <Kitevő>, <Változó értéke>, <Eloszlásfüggvény logikai értéke> ]::
+  Legyen _X_ egy zéta-eloszlású valószínűségi változó. A parancs a következő valószínűséget számítja ki:
+  _P( X = v), ha az eloszlásfüggvény logikai értéke_ false__.__
+  _P( X ≤ v), ha az eloszlásfüggvény logikai értéke_ true__.__
+
+[EXAMPLE]
+====
+
+`++ZétaEloszlás[ 10, 1 , 5, false]++` eredménye _stem:[\frac\{504}\{7381}]_.
+
+====

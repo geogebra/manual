@@ -1,0 +1,34 @@
+= Normalizál parancs
+:page-en: commands/Normalize
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Normalizál[ <Számok listája> ]::
+  Eredményként egy listát kapunk, amely a megadott számok "normalizált" alakját tartalmazza.
+
+[EXAMPLE]
+====
+
+`++Normalizál[{1, 2, 3, 4, 5}]++` eredménye _\{0, 0.25, 0.5, 0.75, 1}_.
+
+====
+
+Normalizál[ <Pontok listája> ]::
+  Eredményként egy listát kapunk, amely a megadott pontok "normalizált" alakját tartalmazza.
+
+[EXAMPLE]
+====
+
+`++Normalizál[{(1,5), (2,4), (3,3), (4,2), (5,1)}]++` eredménye _\{(0,1), (0.25,0.75), (0.5,0.5), (0.75,0.25), (1,0)}_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* Ez a parancs nem működik 3D-s pontoknál.
+* A "normalizálás" művelet egy [0, 1] intervallumon lévő "x" értéket számít ki a következő lineáris függvény
+használatával: stem:[x \mapsto \frac\{x-Min[list]}\{Max[list]-Min[list]}].
+
+====

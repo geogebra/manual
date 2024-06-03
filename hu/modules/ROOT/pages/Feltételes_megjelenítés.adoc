@@ -1,0 +1,48 @@
+= Feltételes megjelenítés
+:page-en: Conditional_Visibility
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Az objektumok elrejtése és megjelenítése mellett egy objektum láthatósága függhet egy feltételtől is, például hogy egy
+szöveg csak akkor legyen látható, ha egy meghatározott jelölőnégyzet ki lett jelölve, vagy ha egy
+xref:/tools/Csúszka.adoc[csúszka] bizonyos értéket vesz fel.
+
+== Objektumok felételes megjelenítése és elrejtése
+
+A image:Tool_Check_Box_to_Show_Hide_Objects.gif[Tool Check Box to Show Hide Objects.gif,width=32,height=32]
+xref:/tools/Jelölőnégyzet_alakzatok_elrejtéséhez_és_megjelenítéséhez.adoc[Jelölőnégyzet alakzatok elrejtéséhez és
+megjelenítéséhez eszközt] használhatja arra, hogy létrehozzon egy jelölőnégyzetet, amely egy vagy több objektum
+láthatóságát befolyásolja. Jelölőnégyzet helyet létrehozhat xref:/Logikai_értékek.adoc[logikai változót] is (pl.
+`++b = true++`), amelyet jelölőnégyzetként megjeleníthet a xref:/Geometria_ablak.adoc[rajzlapon] (pl. a
+image:Tool_Show_Hide_Object.gif[Tool Show Hide Object.gif,width=32,height=32]
+xref:/tools/Alakzat_mutatása_elrejtése.adoc[Alakzat mutatása / elrejtése eszközzel], vagy a xref:/Helyi_menü.adoc[Helyi
+menüben]). Vagyis egy jelölőnégyzet nem más mint egy látható logikai változó.
+
+A xref:/Logikai_értékek.adoc[logikai változók] alkalmazásával kapcsolatos információkat a következő bekezdésben talál.
+
+== Újonnan létrehozott objektumok láthatóságának megváltoztatása
+
+A xref:/Tulajdonságok_párbeszédablak.adoc[Tulajdonságok párbeszédablak] _Haladó_ részében megadhatja a kijelölt objektum
+láthatóságának feltételét.
+
+[NOTE]
+====
+
+*Jegyzet:* Logikai operátorokat (pl. ≠, ≥, ˄) a megfelelő mező melletti listán talál.
+
+====
+
+[EXAMPLE]
+====
+
+* Legyen _a_ egy szám xref:/tools/Csúszka.adoc[csúszkája] és _k_ egy kör. Nyissa meg a kör
+xref:/Tulajdonságok_párbeszédablak.adoc[Tulajdonságok párbeszédablakát] és adja meg az _a < 2_ feltételt a _Haladó_
+részben. A kör ezután csak akkor látható a rajzlapon, ha a csúszka értéke kisebb 2-nél.
+* Egy _b_ logikai változó megadható bármely objektum megjelenítési feltételeként. Nyissa meg egy tetszőleges objektum
+xref:/Tulajdonságok_párbeszédablak.adoc[Tulajdonságok párbeszédablakát] és adja meg a _Haladó_ részben a _b_ logikai
+változót a megjelenítés feltételeként. Az objektum látható, ha a logikai változó értéke _true_, illetve nem látható, ha
+annak értéke _false_.
+* Legyen _g_ és _h_ két egyenes és _szöveg1_ egy szöveg, amely látható, ha a két egyenes egymással párhuzamos. Nyissa
+meg a szöveg xref:/Tulajdonságok_párbeszédablak.adoc[Tulajdonságok párbeszédablakát], majd adja meg ezt a feltételt a
+_Haladó_ részben.
+
+====

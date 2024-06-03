@@ -1,0 +1,84 @@
+= Munkaasztal parancs
+:page-en: commands/SetPerspective
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Munkaasztal[ <Szöveg> ]
+
+Megváltoztatja a nézetek elrendezését és láthatóságát. A szöveg a beállításokat határozza meg. A szövegnek egy érvényes
+kifejezésnek kell lennie - a nézeteket különféle változók (betűk) képviselik: a nézetek vízszintes elrendezését a betűk
+egymás mellé helyezése határozza meg, a függőleges elrendezést pedig az `++ /++` osztásjel.
+
+[cols=",",options="header",]
+|===
+|Betű |Nézet
+|A |image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] xref:/Algebra_nézet.adoc[Algebra]
+
+|B |image:18px-Menu_view_probability.svg.png[Menu view probability.svg,width=18,height=18]
+xref:/Valószínűség_számítás.adoc[Valószínűség-számítás]
+
+|C |image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_nézet.adoc[CAS]
+
+|D |image:16px-Menu_view_graphics2.svg.png[Menu view graphics2.svg,width=16,height=16]
+xref:/Geometria_ablak.adoc[Rajzlap 2]
+
+|G |image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Geometria_ablak.adoc[Rajzlap]
+
+|L |image:16px-Menu_view_construction_protocol.svg.png[Menu view construction protocol.svg,width=16,height=16]
+xref:/A_szerkesztés_lépései.adoc[A szerkesztés lépései]
+
+|P |xref:/Tulajdonságok_párbeszédablak.adoc[Tulajdonságok]
+
+|R |Adatanalízis (csak asztali gépen)
+
+|S |image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+xref:/Táblázatkezelő_nézet.adoc[Táblázatkezelő]
+
+|T |image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=16,height=16]
+xref:/3D_s_grafika_nézet.adoc[3D-s grafika]
+|===
+
+[EXAMPLE]
+====
+
+ 
+
+* A `++Munkaasztal["G"]++` parancs csak a image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Geometria ablakot_ jeleníti meg.
+* A `++Munkaasztal["AGS"]++` parancs az image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+_Algebra nézetet_, a image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Geometria
+ablakot_ és a image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Táblázatkezelő
+nézetet_ jeleníti meg vízszintesen elrendezve.
+* A `++Munkaasztal["S/G"]++` parancs a image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Táblázatkezelő nézetet_ és a image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Geometria ablakot_ jeleníti meg. A "Táblázatkezelő nézet" az ablak felső részén
+található, alatta pedig a "Geometria ablak".
+* A `++Munkaasztal["S/(GA)"]++` parancs eredménye hasonló a fenti parancs eredményéhez. Az ablak alsó részének bal
+oldalán a image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Geometria ablak_ található,
+jobb oldalán pedig az image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _Algebra nézet._
+
+====
+
+A betűk helyett adhatunk meg számot is, amelyek előre definiált munkaasztalokat állítanak be.
+
+[cols=",",options="header",]
+|===
+|Szöveg |Munkaasztal
+|"1" |Algebra és Geometria
+|"2" |Geometria
+|"3" |Táblázatkezelő
+|"4" |CAS-komputeralgebra
+|"5" |3D-s grafika
+|"6" |Statisztika
+|===
+
+Ezek nagyjából megfelelnek az "AG", "G", "SG", "CG", "AT" és "B" beállításoknak, viszont hatással vannak a
+xref:/Parancssor.adoc[Parancssorra] és az xref:/Eszköztár.adoc[Eszköztár] tartalmára is.
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* Lásd továbbá a xref:/commands/AktívRajzlap.adoc[AktívRajzlap parancsot].
+
+====

@@ -1,0 +1,15 @@
+= LevélÁgDiagram parancs
+:page-en: commands/StemPlot
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+LevélÁgDiagram[ <Lista> ]::
+  A megadott listán lévő adatokból létrehoz egy szár-levél diagramot. A kiugró értékeket külön sorolja fel, azok a
+  diagramon nem jelennek meg.
+  Kiugró értéknek számít minden olyan érték, amely kívül esik a [ Q1 - 1.5 (Q3 - Q1) , Q3 + 1.5 (Q3 - Q1) ]
+  intervallumon.
+
+LevélÁgDiagram[ <Lista>, <Igazítás -1|0|1> ]::
+  A megadott listál lévő adatokból létrehoz egy szár-levél diagramot.
+  ha az _Igazítás_ = -1, akkor az alapértelmezett szár egységet elosztja 10-zel.
+  ha az _Igazítás_ = 0, akkor nem történik semmi.
+  ha az _Igazítás_ = 1, úgy a szár egyéget megszorozza 10-zel.

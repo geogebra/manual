@@ -1,0 +1,76 @@
+= Objektumok elnevezése
+:page-en: Naming_Objects
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Ha a xref:/Parancssor.adoc[Parancssorban] létrehozunk egy alakzatot, csak meghatározott nevet rendelhetünk hozzá:
+
+* xref:/Pontok_és_Vektorok.adoc[Pontok]: A GeoGebrában a pontokat mindig nagybetű, vagy nagybetűvel kezdődő név jelöli.
+Csak gépeljük be a nevet (pl. A vagy P), majd az egyenlőségjelet és végül a koordinátákat vagy parancsokat.
+
+[EXAMPLE]
+====
+
+`++C = (2, 4)++`, `++ P = (1; 180°)++`
+
+====
+
+* xref:/Pontok_és_Vektorok.adoc[Vektorok]: Azért, hogy meg tudjuk különböztetni a pontokat és a vektorokat, a GeoGebra
+mindig kisbetűt, vagy kisbetűvel kezdődő nevet használ a vektorok jelölésére. Ismét gépeljük be a nevet (pl. v vagy u),
+majd az egyenlőségjel után a koordinátákat vagy parancsokat.
+
+[EXAMPLE]
+====
+
+`++v = (1, 3)++`, `++ u = (3; 90°)++`
+
+====
+
+* xref:/Egyenesek_és_tengelyek.adoc[Egyenesek], körök és xref:/Kúpszeletek.adoc[Kúpszeletek]: Gépeljük be ezeknek az
+alakzatoknak a nevét, majd kettőspont után az egyenletüket vagy parancsokat.
+
+[EXAMPLE]
+====
+
+`++g: y = x + 3++`, `++c: (x-1)^2 + (y – 2)^2 = 4++`, `++hyp: x^2 – y^2 = 2++`
+
+====
+
+* xref:/Függvények.adoc[Függvények]: Függvényt elnevezhetünk úgy, hogy begépeljük a nevét pl. `++f(x) =++` vagy
+`++g(x)=++` a függvény egyenlete vagy parancsa elé.
+
+[EXAMPLE]
+====
+
+`++h(x) = 2 x + 4++`, `++q(x) = x^2, trig(x) = sin(x)++`
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* Ha nem adunk nevet egy alakzatnak, akkor a GeoGebra automatikusan ábécé sorrendben nevezi el az új alakzatokat. Az
+alakzatok átnvezhetők.
+* Használhatunk indexet is az alakzatok nevében, ezt aláhúzással kell hozzáfűzni. Például ahhoz, hogy A~1~ jelenjen meg,
+`++A_1++`-et kell begépelnünk, s~AB~ megjelenéséhez `++s_{AB}++`-t.
+
+====
+
+== Foglalt címkék
+
+A következő címkéket nem lehet alakzatok megnevezésére használni: x, y, xAxis, yAxis, zAxis, abs, sgn, sqrt, exp, log,
+ln, ld, lg, cos, sin, tan, acos, arcos, arccos, asin, arcsin, atan, arctan, cosh, sinh, tanh, acosh, arcosh, arccosh,
+asinh, arcsinh, atanh, arctanh, atan2, erf, floor, ceil, round, random, conjugate, arg, gamma, gammaRegularized, beta,
+betaRegularized, sec, csc, cosec, cot, sech, csch, coth
+
+A parancssorban használhatunk szimbólumokat. A következő konstansokat speciális karakterek jelölik:
+
+* π - a pi állandó (Ludolph-féle szám) billentyűkombinációja [.kcode]#Alt-p#
+* ℯ - az Euler-konstans, pl. az ℯ^x exponenciális függvénynél, billentyűkombinációja [.kcode]#Alt-e#
+* ί - képzetes rész, pl. a z = 3 + ί komplex számnál, amit az [.kcode]#Alt-i# billentyűkombinációval is beírhatunk.
+
+Amennyiben az ℯ ill. ί változót még nem használtuk létező alakzat neveként, addig a GeoGebra Euler-konstansnak ill.
+képzetes résznek fogja azt felismerni, ha egy új kifejezésben használjuk.
+
+Lásd még a xref:/Címkék_és_feliratok.adoc[Címkék és feliratok] részt!

@@ -1,0 +1,39 @@
+= Polinom parancs
+:page-en: commands/Polynomial
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Polinom[ <Függvény> ]::
+  Felbontja a függvényt.
+
+[EXAMPLE]
+====
+
+`++Polinom[(x - 3)^2]++` eredménye _x^2^ - 6x + 9_.
+
+====
+
+Polinom[ <Pontok listája> ]::
+  Létrehoz egy _n-1_-ed fokú interpolációs polinomot (http://hu.wikipedia.org/wiki/Interpoláció[polinomális
+  interpoláció]), amely átmegy a megadott pontokon.
+
+== CAS nézet
+
+Polinom[ <Függvény> ]::
+  Felbontja a függvényt és összevonja az együtthatókat.
+
+[EXAMPLE]
+====
+
+`++Polinom[(x - 3)^2 + (a + x)^2]++` eredménye _2 x^2^ + (2a - 6) x + a^2^ + 9_.
+
+====
+
+Polinom[ <Függvény>, <Változó> ]::
+  Felbontja a függvényt a megadott változóra és összevonja az együtthatókat.
+
+[EXAMPLE]
+====
+
+`++Polinomal[(x - 3)^2 + (a + x)^2, a]++` eredménye _a^2^ + 2 x a + 2 x^2^ - 6 x + 9_.
+
+====

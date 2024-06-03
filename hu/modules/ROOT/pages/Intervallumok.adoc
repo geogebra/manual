@@ -1,0 +1,28 @@
+= Intervallumok
+:page-en: Intervals
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Intervallum alatt a valós számoknak megadott alsó és felső határ közötti halmazát értjük. Megadásához üssük be a
+xref:/Parancssor.adoc[Parancssorba] pl. a `++2 < x < 3++` kifejezést, mely nyílt intervallumot határoz meg. Hasonlóan
+definiálhatunk zárt (`++2 ≤ x ≤ 3++`) és félig zárt (`++2 ≤ x < 3++`) intervallumokat is.
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd még xref:/Logikai_értékek.adoc[Logikai értékek].
+
+====
+
+Annak megállapítására hogy egy adott _c_ szám a megadott _r_ intervallumhoz tartozik-e, gépeljük be a Parancssorba az
+`++r(c)++` kifejezést, mely Logikai értéket eredményez. Az intervallumok általánosításai az
+xref:/Egyenlőtlenségek.adoc[Egyenlőtlenségek].
+
+== Intervallum parancsok
+
+* A xref:/commands/Minimum.adoc[Minimum], xref:/commands/Maximum.adoc[Maximum], xref:/commands/Középpont.adoc[Középpont]
+parancsok eredménye az "a" alsó határú, "b" felső határú intervallum esetén _a_, _b_ illetve stem:[\frac\{a+b}2]. Az
+eredmény független attól, hogy az intervallum zárt, nyitott vagy félig zárt.
+* A xref:/commands/Pont.adoc[Pont] parancs eredménye egy mozgatható xref:/Pontok_és_Vektorok.adoc[pont], melynek
+x-koordinátája az intervallumhoz tartozik, y-koordinátája 0.
+* A xref:/commands/BelsőPont.adoc[BelsőPont] parancs eredménye egy mozgatható pont, melynek x-koordinátája az
+intervallumhoz tartozik, y-koordinátája önkényesen változtatható.

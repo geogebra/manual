@@ -1,0 +1,26 @@
+= Eltávolítás parancs
+:page-en: commands/Remove
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Eltávolítás[ <Lista>, <Lista> ]::
+  Az első listáról eltávolítja a második listán lévő elemeket, ahányszor azok a második listán előfordulnak.
+
+[EXAMPLE]
+====
+
+`++ Eltávolítás[{1,3,4,4,9},{1,4,5}]++` eredménye a `++{3,4,9}++` lista.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* {blank}
++
+Lásd továbbá a xref:/commands/NemDefiniáltTörlése.adoc[NemDefiniáltTörlése] parancsot.
+* Következőképpen is megadhatjuk a parancsot, ha a halmazelméleti különbséget szeretnénk megkapni:
+`++{1,3,4,4,9} \ {1,4,5}++`.
+
+====

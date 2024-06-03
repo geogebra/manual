@@ -1,0 +1,95 @@
+= Oszlopdiagram parancs
+:page-en: commands/BarChart
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Oszlopdiagram[ <Kezdőérték>, <Végérték>, <Magasságok listája> ]::
+  Létrehoz egy oszlopdiagramot, függően a megadott intervallumtól: az oszlopok számát a lista hossza, magasságát a lista
+  elemei határozzák meg.
+
+[EXAMPLE]
+====
+
+`++Oszlopdiagram[10, 20, {1, 2, 3, 4, 5} ]++` eredménye egy öt oszlopból álló diagram, azok magasságai a megadott
+intervallumban vannak [10, 20].
+
+====
+
+Oszlopdiagram[ <Kezdőérték>, <Végérték>, <Kifejezés>, <Változó>, <Szám mettől>, <Szám meddig>, <Lépésköz nagyság> ]::
+  Létrehoz egy oszlopdiagramot az adott intervallumban [Kezdőérték, Végérték], az oszlopok magasságai a változótó
+  értékétől függően kerülnek kiszámításra, amely lépéstávolságban fut a kezdőértéktől a végértékig.
+
+Oszlopdiagram[ <Kezdőérték>, <Végérték>, <Kifejezés>, <Változó>, <Szám mettől>, <Szám meddig> ]::
+  Létrehoz egy diagramot az adott intervallumban [Kezdőérték, Végérték], az oszlopok magasságai a változótól függő érték
+  alapján kerülnek kiszámításra. A változó értéke a kezdőértéktől a végértékig fut.
+
+[EXAMPLE]
+====
+
+Ha _p = 0.1_, _q = 0.9_, és _n = 10_ számok, akkor az
+`++Oszlopdiagram[ -0.5, n + 0.5, BinomiálisEgyüttható[n,k] * p^k * q^(n-k), k, 0, n ]++` parancs egy oszlopdiagramot
+eredményez a [_-0.5, n+0.5_] intervallumban. Az oszlopok magassága azoktól a valószínűségektől függ, amelyek az adott
+kifejezés alapján kerültek kiszámításra.
+
+====
+
+Oszlopdiagram[ <Nyers adatok listája>, <Oszlopok szélessége> ]::
+  Létrehoz egy oszlopdiagramot a megadott nyers adatok listájából; az oszlopok szélessége egyenlő a megadott
+  szélességgel.
+
+[EXAMPLE]
+====
+
+`++Oszlopdiagram[ {1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5}, 1]++`
+
+====
+
+Oszlopdiagram[ <Adatok listája>, <Gyakoriságok listája> ]::
+  Létrehoz egy oszlopdiagramot az adatok listájából a megfelelő gyakoriságokkal.
+
+[EXAMPLE]
+====
+
+* `++Oszlopdiagram[{10, 11, 12, 13, 14}, {5, 8, 12, 0, 1}]++`
+* `++Oszlopdiagram[{5, 6, 7, 8, 9}, {1, 0, 12, 43, 3}]++`
+* `++Oszlopdiagram[{0.3, 0.4, 0.5, 0.6}, {12, 33, 13, 4}]++`
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A listák adatainak növekvő sorrendben kell lenniük.
+
+====
+
+Oszlopdiagram[ <Adatok listája>, <Gyakoriságok listája>, <Oszlopok szélessége> ]::
+  Létrehoz egy oszlopdiagramot az adatok listájából a megfelelő gyakoriságokkal és megadott oszlopszélességgel.
+
+[EXAMPLE]
+====
+
+* Az `++Oszlopdiagram[{10, 11, 12, 13, 14}, {5, 8, 12, 0, 1}, 0.5]++` parancs helyet hagy az oszlopok között.
+* Az `++Oszlopdiagram[{10, 11, 12, 13, 14}, {5, 8, 12, 0, 1}, 0]++` parancs vonalból álló oszlopokat hoz létre.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Az oszlopok színe megadható.
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Following text is about a feature that is supported only in 5.0 beta version.
+
+'''''
+
+Minden oszlopdiagram oszlopainak színét meg lehet adni.
+
+|===

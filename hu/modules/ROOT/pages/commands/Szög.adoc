@@ -1,0 +1,116 @@
+= Szög parancs
+:page-en: commands/Angle
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Szög [ <Alakzat> ]
+
+* *Kúpszelet:* Megadja az adott kúpszelet és az x tengely által bezárt szöget (lásd
+xref:/commands/Tengelyek.adoc[Tengelyek]).
+
+[EXAMPLE]
+====
+
+`++Szög[x²/4+y²/9=1]++` eredménye _90°_.
+
+====
+
+* *Vektor:* Megadja az adott vektor és az x tengely által bezárt szöget.
+
+[EXAMPLE]
+====
+
+`++Szög[Vektor[(1, 1)]]++` eredménye _45°_.
+
+====
+
+* *Pont:* Megadja a ponthoz tartozó helyvektor és az x tengely által bezárt szöget.
+
+[EXAMPLE]
+====
+
+`++Szög[(1, 1)]++` eredménye _45°_.
+
+====
+
+* *Szám:* Átváltja a számot egy 0 és 2π között lévő szögre.
+
+[EXAMPLE]
+====
+
+`++Szög[20]++` eredménye _65.92°_.
+
+====
+
+* *Sokszög:* Megadja a sokszög összes szögét (pozitív körüljárási irányban, azaz az óramutató járásával ellentétes
+irányban).
+
+[EXAMPLE]
+====
+
+`++Szög[Sokszög[(4, 1), (2, 4), (1, 1)] ]++` eredménye _56.31°_, _52.13°_ és _71.57°_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Ha a sokszög pontjai pozitív körüljárási irányban vannak megadva, az eredmény a belső szögekre vonatkozik. Ha
+a pozitív körüljárási iránnyal ellentétes irányban vannak megadva, az eredmény a külső szögekre vonatkozik.
+
+====
+
+Szög [ <Vektor >, <Vektor > ]::
+  Megadja a két vektor által bezárt szöget(0° és 360° között).
+
+[EXAMPLE]
+====
+
+`++Szög[Vektor[(1, 1)], Vektor[(2, 5)]]++` eredménye _23.2°_.
+
+====
+
+Szög [ <Egyenes>, <Egyenes> ]::
+  Megadja a két egyenes irányvektora által bezárt szöget (0° és 360° között).
+
+[EXAMPLE]
+====
+
+`++Szög[y = x + 2, y = 2x + 3]++` eredménye _18.43°_.
+
+====
+
+Szög [ <Pont >, <Csúcsont >, <Pont > ]::
+  Megadja a három pont által meghatározott szöget (0° és 360° között).
+
+[EXAMPLE]
+====
+
+`++Szög[(1, 1), (1, 4), (4, 2)]++` eredménye _56.31°_.
+
+====
+
+Szög[ <Pont>, <Csúcspont>, <Szög> ]::
+  Létrehoz egy α nagyságú szöget, a pont és a csúcspontból kiindulva.
+
+[EXAMPLE]
+====
+
+`++Szög[(0, 0), (3, 3), 30°]++` eredménye _(1.9, -1.1)_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Ennél a parancsnál a _Forgatás[ <Alakzat>, <Szög>, <Pont> ]_ parancs eredménye is megrajzolásra kerül.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd a image:16px-Tool_Angle.gif[Tool Angle.gif,width=16,height=16] xref:/tools/Szög.adoc[Szög] és
+image:16px-Tool_Angle_Fixed.gif[Tool Angle Fixed.gif,width=16,height=16] xref:/tools/Szög_adott_mérettel.adoc[Szög adott
+mérettel] eszközöket.
+
+====

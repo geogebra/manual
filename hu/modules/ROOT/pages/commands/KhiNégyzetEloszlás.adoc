@@ -1,0 +1,27 @@
+= KhiNégyzetEloszlás parancs
+:page-en: commands/ChiSquared
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+KhiNégyzetEloszlás[ <Szabadságfokok>, x ]::
+  Megrajzolja a _Szabadságfokok_-kal meghatározott khi-négyzet eloszlás sűrűségfüggvényét (PDF).
+KhiNégyzetEloszlás[ <Szabadságfokok>, x, <Eloszlásfüggvény logikai értéke> ]::
+  Ha a logikai érték igaz, megrajzolja a khi-négyzet eloszlású valószínűségi változó eloszlásfüggvényét. Ha hamis, akkor
+  a sűrűségfüggvényét.
+KhiNégyzetEloszlás[ <Szabadságfokok>, <Változó értéke> ]::
+  Kiszámítja az adott változóra az eloszlásfüggvény értékét, vagyis P(X≤v)-t, ahol X a _Szabadságfokok_-kal
+  meghatározott khi-négyzet eloszlású valószínűségi változó.
+
+== CAS nézet
+
+xref:/CAS_nézet.adoc[CAS nézet]-ben csak egy szintakszis elfogadott:
+
+KhiNégyzetEloszlás[ <Szabadságfokok>, <Változó értéke> ]::
+  Kiszámítja az adott változóra az eloszlásfüggvény értékét, vagyis P(X≤v)-t, ahol X a _Szabadságfokok_-kal
+  meghatározott khi-négyzet eloszlású valószínűségi változó.
+
+[EXAMPLE]
+====
+
+`++KhiNégyzetEloszlás[4, 3]++` megadja stem:[\gamma(2, \frac\{3}\{2})]-t, ami kb. _0.44_.
+
+====

@@ -1,0 +1,47 @@
+= SimulóKör parancs
+:page-en: commands/OsculatingCircle
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+SimulóKör[ <Pont>, <Függvény> ]::
+  Létrehozza a függvény simulókörét a megadott pontban.
+
+[EXAMPLE]
+====
+
+`++SimulóKör[(0,0), x^2]++` eredménye _x² + y² - y = 0_.
+
+====
+
+SimulóKör[ <Pont>, <Görbe> ]::
+  Létrehozza a paraméteres görbe simulókörét a megadott pontban.
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Following text is about a feature that is supported only in 5.0 beta version.
+
+'''''
+
+[NOTE]
+====
+
+*Jegyzet:* A GeoGebra 5-ös verziójától ez a parancs kúpszeletekkel is működik.
+
+====
+
+SimulóKör[ <Pont>, <Alakzat> ]::
+  Létrehozza az alakzat simulókörét a megadott pontban.
+
+[EXAMPLE]
+====
+
+* `++ SimulóKör[(0, 0), x^2]++` eredménye _x² + y² - y = 0_
+* `++ SimulóKör[(1, 0), Curve[cos(t), sin(2t), t, 0, 2π]]++` eredménye _x² + y² + 6x = 7_
+* `++ SimulóKör[(-1, 0), Conic[{1, 1, 1, 2, 2, 3}]]++` eredménye _x² + y² + 2x + 1y = -1_
+
+====
+
+|===

@@ -1,0 +1,33 @@
+= SzorzatAlakKomplexI parancs
+:page-en: commands/CIFactor
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+== CAS Syntax
+
+SzorzatAlakKomplexI[ <Kifejezés> ]::
+  Szorzattá alakítja a kifejezést az irracionális komplex számok halmazán.
+SzorzatAlakKomplexI[ <Kifejezés>, <Változó> ]::
+  Szorzattá alakítja a kifejezést az irracionális komplex számok halmazán a megadott változó figyelembe vételével.
+
+[EXAMPLE]
+====
+
+A `++ SzorzatAlakKomplexI[a^2 + a + 1, a]++` parancs eredménye stem:[ \left( a + \frac\{-ί \sqrt\{3} + 1}\{2} \right)
+\left( a + \frac\{ί \sqrt\{3} + 1}\{2} \right)]
+
+====
+
+[EXAMPLE]
+====
+
+A `++SzorzatAlakKomplexI[x^2 + x + 1]++` parancs eredménye stem:[ \left( x + \frac\{-ί \sqrt\{3} + 1}\{2} \right) \left(
+x + \frac\{ί \sqrt\{3} + 1}\{2} \right)]
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd továbbá a xref:/commands/SzorzatAlak.adoc[SzorzatAlak] parancsot.
+
+====

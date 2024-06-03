@@ -1,0 +1,78 @@
+= Ha parancs
+:page-en: commands/If
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Ha[ <Feltétel>, <Akkor> ]::
+  Létrehozza az objektum másolatát, ha a feltétel teljesül (_true_), illetve egy nem definiált objektumot ha a feltétel
+  nem teljesül (_false_).
+
+[EXAMPLE]
+====
+
+* Legyen _n_ = 3. `++Ha[n==3, x + y = 4]++` eredménye a _x_ + _y_ = 4 egyenes, mivel a feltétel (n==3) logikai értéke
+_true_.
+* Legyen _n_ = 4. `++Ha[n==3, x + y = 4]++` eredménye egy nem definiált objektum, mivel a feltétel (n==3) nem teljesül
+(_false_).
+
+====
+
+Ha[ <Feltétel>, <Akkor>, <Különben> ]::
+  Létrehozza az első objektum (_akkor_) másolatát, ha a feltétel teljesül (_true_), illetve a második objektum
+  (_különben_) másolatát, ha a feltétel nem teljesül (_false_).
+
+[EXAMPLE]
+====
+
+Legyen _n_ a szám. `++Ha[n==3, x + y = 4, x - y = 4]++` eredménye _x_ + _y_ = 4, ha _n_ = 3, illetve _x_ - _y_ = 4
+minden más _n_ értéknél.
+
+====
+
+== Feltételes függvények
+
+A _Ha_ parancs segítségével feltételhez kötött függvényeket hozhatunk létre. Az feltételhez kötött függvények más
+parancsok, pl. xref:/commands/Derivált.adoc[derivált], xref:/commands/Integrál.adoc[integrál] és
+xref:/commands/Metszéspont.adoc[metszéspont] parancsok argumentumai lehetnek.
+
+[EXAMPLE]
+====
+
+* `++f(x) = Ha[x < 3, sin(x), x^2]++` eredménye egy olyan függvény, amely a _sin(x)_ értéket veszi fel ha _x < 3_ és az
+_x^2^_ értéket ha _x ≥ 3_.
+* `++f(x) = Ha[0 <= x <= 3, sin(x)]++` erdeménye egy olyan függvény, amely a _sin(x)_ értéket veszi fel 0 és 3 közötti x
+értékeknél, más x értékeknél pedig nem definiált.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* A _Ha[Feltétel, f(x), g(x)]_ parancs deriváltja _Ha[Feltétel, f'(x), g'(x)]_. A kritikus pontoknál a határértékek nem
+kerülnek kiszámításra.
+* Lásd: xref:/Logikai_értékek.adoc[Logikai értékek] a feltétel megadásában használatos jelekért.
+
+====
+
+== Ha parancs alkalmazása scriptben
+
+_Ha_ parancsokat scriptekben is lehet alkalmazni, amelyek bizonyos feltételekhez kötik az eseményeket.
+
+[EXAMPLE]
+====
+
+Legyen _n_ egy szám és _A_ egy pont. A `++Ha[Maradék[n, 7] == 0, PontKoordinátái[A, n, 0], PontKoordinátái[A, n, 1]]++`
+a megadott feltétel logikai értéke alapján változtatja meg az _A_ pont koordinátáit. Ilyen esetben a
+`++ PontKoordinátái[A, n, If[Maradék[n, 7] == 0,0,1]]++` parancs használata az egyszerűbb megoldás.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A _Ha_ parancs argumentumainak objektumoknak vagy xref:/commands/Script_parancsok.adoc[script parancsoknak]
+kell lenniük, nem hozzárendeléseknek. A`++ b = Ha[a > 1, 2, 3]++` parancs helyes, de a _b = 2_ vagy _b = 3_ nem
+fogadhatóak el a parancs argumentumaiként.
+
+====

@@ -1,0 +1,26 @@
+= Átmérő parancs
+:page-en: commands/ConjugateDiameter
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Átmérő[ <Egyenes>, <Kúpszelet> ]::
+  A megadott kúpszeletre vonatkozóan berajzol egy vonalat, amelyre az átmérő illeszkedik, az átmérő konjugáltja és
+  párhuzamos a megadott egyenessel.
+
+[EXAMPLE]
+====
+
+`++ Átmérő[-4x + 5y = -2, x^2 + 4 y^2 + 2x - 8y + 1 = 0]++` eredménye a következő egyenes: 5__x__ + 16__y__ = 11
+
+====
+
+Átmérő[ <Vektor>, <Kúpszelet> ]::
+  A megadott kúpszeletre vonatkozóan berajzol egy vonalat, amelyre az átmérő illeszkedik, az átmérő konjugáltja és
+  párhuzamos a megadott vektorral.
+
+[EXAMPLE]
+====
+
+Legyen _u_ = (4,1) egy vektor. Az `++Átmérő[u, x^2 + 4 y^2 + 2x - 8y + 1 = 0]++` parancs eredménye a következő egyenes:
+_x_ + _y_ = 0
+
+====

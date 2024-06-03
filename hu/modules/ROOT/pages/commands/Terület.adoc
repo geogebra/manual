@@ -1,0 +1,37 @@
+= Terület parancs
+:page-en: commands/Area
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Terület[ <Pont>, ..., <Pont> ]::
+  Kiszámítja a megadott pontok által meghatározott sokszög területét.
+Terület[ <Kúpszelet> ]::
+  Kiszámítja a megadott kúpszelet területét (kör vagy ellipszis).
+Terület[ <Sokszög> ]::
+  Kiszámítja a megadott sokszög területét.
+
+[EXAMPLE]
+====
+
+`++Terület[x^2 + y^2 = 2]++` eredménye _6.28_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Terület[(0, 0), (3, 0), (3, 2), (0, 2)]++` eredménye _6_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* Sokszögeknél az algebrai terület abszolút értékét kapjuk eredményül (amely saját magát metsző sokszögnél nem várt
+eredményhez vezethet).
+* Két függvény által közrezárt terület kiszámításához használjuk a xref:/commands/KözrezártTerület.adoc[Közrezárt
+terület] parancsot.
+* Lásd image:Tool_Area.gif[Tool Area.gif,width=32,height=32] xref:/tools/Terület.adoc[Terület] eszközt
+
+====

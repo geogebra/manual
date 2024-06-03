@@ -1,0 +1,68 @@
+= A Geometria Nézet beállításai
+:page-en: Customizing_the_Graphics_View
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+A rajzlap xref:/Geometria_ablak.adoc[Geometria ablakban] látszódó részének beállításához a
+image:Tool_Move_Graphics_View.gif[Tool Move Graphics View.gif,width=32,height=32]
+xref:/tools/Rajzlap_mozgatása.adoc[Rajzlap mozgatása eszközt] kell választanunk, majd az egérrel megfoghatjuk és
+húzhatjuk a rajzlapot. Kicsinyítés és nagyítás a következő módszerekkel valósítható meg:
+
+* Használható a image:Tool_Zoom_In.gif[Tool Zoom In.gif,width=32,height=32] xref:/tools/Nagyítás.adoc[Nagyítás eszköz]
+és image:Tool_Zoom_Out.gif[Tool Zoom Out.gif,width=32,height=32] xref:/tools/Kicsinyítés.adoc[Kicsinyítés eszköz] a
+Geometria ablakban
++
+[NOTE]
+====
+
+*Jegyzet:* A zoomolás középpontja az a pont lesz, amelyre kattintottunk.
+
+====
+* Az egér görgőjének segítségével is zoomolhatunk a Geometria ablakban.
+* Gyorsbillentyűket is használhatunk a nagyításhoz (Ctrl +) és kicsinyítéshez (Ctrl -).
+* A jobb egérgombbal (Mac OS: Ctrl-gomb) a rajzlap egy üres pontjára kattintva megjelenik a Helyi menü, amelyben szintén
+lehetőség van zoomolásra.
+* Húzzunk ki az egér jobb gombjával (Mac OS: Cmd-gomb) egy téglalapot a zoomoláshoz. Az egér gombjának felengedése után
+a kijelölt terület automatikusan kitölti az egész Geometria ablakot.
+
+[NOTE]
+====
+
+*Jegyzet:* Megjeleníthetjük vagy elrejthetjük a koordinátatengelyeket és a rácsot a jobb gombra (Mac OS: Ctrl - klikk)
+kattintva, majd a megjelenő Helyi menüből a image:Menu_Axes.gif[Menu Axes.gif,width=16,height=16] Tengelyek vagy a
+image:Grid.gif[Grid.gif,width=16,height=16] Rács ikon választásával.
+
+====
+
+== Alakzatok mutatása/rejtése
+
+Az xref:/Algebra_nézet.adoc[Algebra nézetben] az objektumok előtti kis kör ikon mutatja az alakzat aktuális láthatósági
+állapotát (látható vagy rejtett). Ez megváltoztatható közvetlenül az ikonra kattintva. Lásd még a
+xref:/Objektum_tulajdonságai.adoc[láthatóság] oldalt.
+
+== Koordinátatengelyek és rács testreszabása
+
+A koordinátatengelyek és a rács tulajdonságai beállíthatók a Geometria nézet
+xref:/Tulajdonságok_párbeszédablak.adoc[Tulajdonságok párbeszédablakban]. Jobb klikk (Mac OS: Ctrl-gomb) a rajzlapon,
+majd a megjelenő xref:/Helyi_menü.adoc[Helyi menüből] válasszuk a Rajzlap... lehetőséget.
+
+* Az Alap fülön beállítható például a koordinátatengelyek színe, vonalvastagsága, léptékük aránya egymáshoz.
+* Az xTengely vagy yTengely füleket választva beállítható külön-külön is a beosztások távolsága, feliratozás,
+láthatóság, egységek és egyebek. Ha a koordinátatengelyek metszépontjaként _(a,b)_ pontot szeretnénk beállítani, írjuk
+be a _Keresztül_ paraméterhez az xTengely esetén _b_ , az yTengely esetén _a_ értékét. A _Szélhez igazít_ beállítás azt
+jelenti, hogy a tengely közvetlenül a képernyő alsó vagy bal oldali szélén helyezkedik el. A _Csak pozitív irány_
+beállítás esetén a tengelyeknek a metszésponttól felfelé, illetve jobbra eső része lesz csak látható.
+* A Rács fület választva beállítható például a vonal színe, stílusa, láthatósága, a rácsvonalak távolsága, aránya
+bizonyos határig. Háromféle rács közül választhatunk: Descartes, Izometrikus, Poláris.
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* Bármely módban megváltoztathatjuk a koordinátatengelyek skáláját, ha a Shift gombot (vagy PC- n még a Ctrl -t)
+lenyomva, az adott tengelyt húzzuk.
+* A tengelyek skálája dinamikusan is megadható. Az Alap fülön például x-minimum: `++x(A)++` és y-minimum:`++y(A)++`
+beállítással elérhető, hogy mindig a nézet bal alsó sarkában maradjon az _A_ pont. Ilyen beállításnál azonban nem
+zoomolhatunk.
+
+====

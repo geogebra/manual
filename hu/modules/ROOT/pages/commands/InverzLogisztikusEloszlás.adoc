@@ -1,0 +1,19 @@
+= InverzLogisztikusEloszlás parancs
+:page-en: commands/InverseLogistic
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+InverzLogisztikusEloszlás[ <Középérték α>, <Paraméter β>, <Valószínűség> ] +
+InversLogistischeVerteilung[ <Erwartungswert α>, <Parameter β>, <Wahrscheinlichkeit> ]::
+  Kiszámítja https://en.wikipedia.org/wiki/Logistic_distribution[logisztikus eloszlás] inverz kumulatív
+  eloszlásfüggvényét a megadott "p" valószínűség figyelembe vételével, melynél a logisztikus eloszlást a "β" paraméter
+  és a "α" középérték határozza meg.
+  Más szavakkal: Ha a függvény az "X" véletlenszerű változó eloszlását határozza meg, úgy a parancs megkeresi azt a "t"
+  értéket, amelyre a "P(X ≤ t) = p" érvényes.
+  A "p" valószínűségnek a [0,1] intervallumon kell lennie.
+
+[EXAMPLE]
+====
+
+`++ InverzLogisztikusEloszlás[100,2,1]++` eredménye stem:[ \infty ].
+
+====

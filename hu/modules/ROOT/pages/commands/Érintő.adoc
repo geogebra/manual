@@ -1,0 +1,79 @@
+= Érintő parancs
+:page-en: commands/Tangent
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Érintő[ <Pont>, <Kúpszelet> ]::
+  Létrehozza a kúpszelet (összes) érintőjét, amely a megadott ponton áthalad.
+
+[EXAMPLE]
+====
+
+`++ Érintő[(5, 4), 4x^2 - 5y^2 = 20]++` eredménye _x - y = 1_.
+
+====
+
+Érintő[ <Pont>, <Függvény> ]::
+  Létrehozza a függvény érintőjét, amely áthalad az _x = x(A)_ ponton.
+
+[EXAMPLE]
+====
+
+`++Érintő[(1, 0), x^2]++` eredménye _y = 2x - 1_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Az _x(A)_ az _A_ pont _x_ koordinátája.
+
+====
+
+Érintő[ <Pont a görbén>, <Görbe> ]::
+  Létrehozza a görbe (összes) érintőjét, amely áthalad a megadott ponton.
+
+[EXAMPLE]
+====
+
+`++Érintő[(0, 1), GörbeParaméteres[cos(t), sin(t), t, 0, π]]++` eredménye _y = 1_.
+
+====
+
+Érintő[ <x- érték>, <Függvény> ]::
+  Létrehozza a függvény érintőjét, amely áthalad az _x = x-érték_ ponton.
+
+[EXAMPLE]
+====
+
+`++Érintő[1, x^2]++` eredménye _y = 2x - 1_.
+
+====
+
+Érintő[ <Párhuzamos egyenes>, <Kúpszelet> ]::
+  Létrehozza a kúpszelet (összes) érintőjét, amely párhuzamos a megadott egyenessel.
+
+[EXAMPLE]
+====
+
+`++Érintő[y = 4, x^2 + y^2 = 4]++` eredménye _y = 2_ und _y = -2_.
+
+====
+
+Érintő[ <Kör>, <Kör> ]::
+  Létrehozza a két kör (összes) közös érintőjét (max. 4).
+
+[EXAMPLE]
+====
+
+`++Érintő[x^2 + y^2 = 4, (x - 6)^2 + y^2 = 4]++` eredménye _y = 2_, _y = -2_, _1.49x + 1.67y = 4.47_ és _-1.49x + 1.67y
+= -4.47_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd továbbá image:Tool_Tangents.gif[Tool Tangents.gif,width=32,height=32] xref:/tools/Érintők.adoc[Érintők
+eszköz].
+
+====

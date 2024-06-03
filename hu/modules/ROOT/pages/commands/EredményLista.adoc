@@ -1,0 +1,38 @@
+= EredményLista parancs
+:page-en: commands/Zip
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+EredményLista[ <Kifejezés>, <Változó1>, <Lista1>, <Változó2>, <Lista2>,...> ]::
+  Létrehoz egy listát, amely objektumokat tartalmaz. Az objektumok úgy jönnek létre, hogy a megfelelő listák elemeit a
+  kifejezésekben lévő változókkal helyettesíti be. Az így kapott új lista legalább olyan hosszú, mint a megadott listák.
+
+[EXAMPLE]
+====
+
+Legyen a _lista1=\{x^2, x^3, x^6}_ polinomok listája. `++EredményLista[Fokszám[a], a, lista1]++` eredménye a _\{2, 3,
+6}_ lista.
+
+====
+
+[EXAMPLE]
+====
+
+Legyenek P, Q, R, és S pontok. `++EredményLista[Középpont[A, B], A, {P, Q}, B, {R, S}]++` eredménye egy olyan lista,
+amely a _PR_ és _QS_ szakaszok xref:/commands/KözépPont.adoc[középpontjait] tartalmazza.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A listák elemeinek megegyező típusúaknak kell lenniük.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Elegendő egy listát megadni. Ilyen esetben pl. a "for each" és más kifejezések is átvehetőek különböző
+programnyelvekből.
+
+====

@@ -1,0 +1,51 @@
+= Gyakoriság parancs
+:page-en: commands/Frequency
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Gyakoriság[ <Nyers adatok listája> ]::
+  Listába foglalja a nyers adatok listája minden elemének gyakoriságát. Az megadott lista eleme lehet szám vagy szöveg.
+  Az eredeti elemek szerint növekvő sorrendbe rendezi. Ha meg szeretnénk kapni a gyakoriságnak megfelelő listabeli
+  elemeket, használjuk az xref:/commands/Elemek.adoc[Elemek parancs]-ot.
+
+[EXAMPLE]
+====
+
+Legyen `++lista1 = { "a", "a", "x", "x", "x", "b" }++`. `++Gyakoriság[lista1]++` megadja a \{ 2, 1, 3} listát.
+
+====
+
+Gyakoriság[ <Logikai érték (Halmozott?)>, <Nyers adatok listája> ]::
+  Ha a logikai érték hamis, megadja a Gyakoriság[ <Nyers adatok listája> ] listát.
+  Ha a logikai érték igaz, megadja a Gyakoriság[ <Nyers adatok listája> ]-ra vonatkozó kumulatív gyakoriságot tartalmazó
+  listát.
+
+[EXAMPLE]
+====
+
+Legyen `++lista1 = { 0, 0, 0, 1 , 1, 2 }++`. `++Gyakoriság[true, lista1]++` megadja a \{ 3, 5, 6 } listát.
+`++Gyakoriság[false, lista1]++` megadja a \{ 3, 2, 1} listát.
+
+====
+
+Gyakoriság[ <Osztályok határainak listája>, <Nyers adatok listája> ]::
+  Listába foglalja a nyers adatok listája minden elemének az egyes osztályokban előforduló gyakoriságát. Az osztályok
+  határai mindig [a, b) intervallumokat alkotnak kivéve a legnagyobb intervallumot. A legnagyobb intervallum [a, b] zárt
+  intervallum.
+
+[EXAMPLE]
+====
+
+`++Gyakoriság[{1,2,3},  {1,1,2,3}]++` megadja a \{ 2, 2 } listát.
+
+====
+
+Gyakoriság[ <Logikai érték (Halmozott?)>, <Osztályok határainak listája>, <Nyers adatok listája> ]::
+  Ha a logikai érték hamis, megadja a Gyakoriság[ <Osztályok határainak listája>, <Nyers adatok listája> ] listát.
+  Ha a logikai érték igaz, megadja a Gyakoriság[ <Osztályok határainak listája>, <Nyers adatok listája> ]-ra vonatkozó
+  kumulatív gyakoriságot tartalmazó listát.
+Gyakoriság[ <Osztályok határainak listája>, <Nyers adatok listája>, <Logikai érték (Sűrűség?)>, <Sűrűségi tényező
+(opcionális)> ]::
+  Megadja a megfelelő xref:/commands/Hisztogram.adoc[Hisztogram parancs]-ra vonatkozó gyakoriságok listáját.
+Gyakoriság[ <Logikai érték (Halmozott?)>, <Osztályok határainak listája>, <Nyers adatok listája>, <Logikai érték
+(Sűrűség?)>, <Sűrűségi tényező (opcionális)> ]::
+  Megadja a megfelelő xref:/commands/Hisztogram.adoc[Hisztogram parancs]-ra vonatkozó gyakoriságok listáját.

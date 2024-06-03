@@ -1,0 +1,47 @@
+= Megold parancs
+:page-en: commands/Solve
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Ez a parancs csak xref:/CAS_nézet.adoc[CAS nézetben] érhető el..
+
+Megold[ <Egyenlet x-re> ]::
+  Megoldja az egyenletet _x_ változóra és a megoldásokból létrehoz egy listát.
+
+[EXAMPLE]
+====
+
+`++Megold[x^2 = 4x]++` eredménye _\{x = 4, x = 0}_.
+
+====
+
+Megold[ <Egyenlet>, <Változó> ]::
+  Megoldja az egyenletet a megadott változóra és a megoldásokból létrehoz egy listát.
+
+[EXAMPLE]
+====
+
+`++Megold[x * a^2 = 4a, a]++` eredménye stem:[\\{a = \frac\{4}\{x}, a = 0\}].
+
+====
+
+Megold[ <Egyenletek listája>, <Változók listája> ]::
+  Megoldja az egyenletrendszert a megadott változókra és a megoldásokból létrehoz egy listát.
+
+[EXAMPLE]
+====
+
+* `++ Megold[{x = 4 x + y , y + x = 2}, {x, y}]++` eredménye _( x = -1, y = 3 )_, az _x = 4x + y_ és _y + x = 2_
+egyenletrendszer egyetlen megoldása.
+* `++ Megold[{2a^2 + 5a + 3 = b, a + b = 3}, {a, b}]++` eredménye _\{\{a = 0, b = 3}, \{a = -3, b = 6}}_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* Az egyenletek jobb oldalát le lehet hagyni, ilyen esetben az automatikusan _0_.
+* Lásd továbbá a xref:/commands/Megoldások.adoc[Megoldások] parancsot.
+
+====

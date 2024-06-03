@@ -1,0 +1,25 @@
+= PoissonEloszlás parancs
+:page-en: commands/Poisson
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+PoissonEloszlás[ <Középérték λ> ]::
+  Megrajzolja a λ középértékkel megadott Poisson-eloszlás oszlopdiagramját.
+PoissonEloszlás[ <Középérték λ>, <Eloszlásfüggvény logikai értéke> ]::
+  Ha a logikai érték igaz, megrajzolja a Poisson-eloszlás oszlopdiagramját.
+  Ha a logikai érték hamis, megrajzolja a kumulatív Poisson-eloszlás oszlopdiagramját.
+  Az első paramétert lásd fenn.
+PoissonEloszlás[ <Középérték λ>, <Változó értéke>, <Eloszlásfüggvény logikai értéke> ]::
+  Legyen X egy Poisson-eloszlást követő valószínűségi változó.
+  Megadja P( X = v)-t ha a logikai érték = false.
+  Megadja P( X ≤ v)-t ha a logikai érték = true.
+  Az első paramétert lásd fenn.
+
+== CAS nézet
+
+xref:/CAS_nézet.adoc[CAS nézet]-ben csak egy szintakszis elfogadott:
+
+PoissonEloszlás[ <Középérték λ>, <Változó értéke>, <Eloszlásfüggvény logikai értéke> ]::
+  Legyen X egy Poisson-eloszlást követő valószínűségi változó.
+  Megadja P( X = v)-t ha a logikai érték = false.
+  Megadja P( X ≤ v)-t ha a logikai érték = true.
+  Az első paramétert lásd fenn.

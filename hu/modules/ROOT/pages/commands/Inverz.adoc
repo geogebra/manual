@@ -1,0 +1,74 @@
+= Inverz parancs
+:page-en: commands/Invert
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Inverz[ <Mátrix> ]::
+  Kiszámítja a megadott mátrix inverzét.
+  Inverz[ <Függvény> ];;
+    Kiszámítja a függvény inverzét.
+      [EXAMPLE]
+
+  ====
+
+  `++Inverz[sin(x)]++` eredménye _asin(x)_.
+
+  ====
+  [NOTE]
+
+  ====
+
+  *Jegyzet:*
+
+  A függvény csak egy _x_ értéket tartalmazhat. Az értelmezési tartomány és az értéktartomány adott esetben a
+  függvényhez vannak igazítva, mint pl. f(x) = x^2 vagy f(x) = sin(x). Ha több _x_ értéket tartalmaz a függvény, úgy a
+  következő parancsok segíthetnek:
+
+  [EXAMPLE]
+
+  ====
+
+  A `++Inverz[ParciálisTört[(x + 1) / (x + 2)]]++` és `++Inverz[TeljesNégyzet[x^2 + 2 x + 1]]++` parancsok eredménye
+  mindkét esetben a függvény inverze.
+
+  ====
+
+  ====
+
+[EXAMPLE]
+====
+
+`++Inverz[{{1, 2}, {3, 4}}]++` eredménye stem:[ \begin\{pmatrix} -2 & 1\\ 1.5 & -0.5 \end\{pmatrix} , a \begin\{pmatrix}
+1 & 2\\ 3 & 4 \end\{pmatrix} ] mátrix inverze.
+
+====
+
+== CAS nézet
+
+Inverz [ <Mátrix> ]::
+  Kiszámítja a megadott mátrix inverzét.
+  Inverz[ <Függvény> ];;
+    Kiszámítja a függvény inverzét.
+      [EXAMPLE]
+
+  ====
+
+  * `++Inverz[(x + 1) / (x + 2)]++` eredménye _stem:[\frac\{-2x + 1}\{x - 1}]_.
+  * `++Inverz[x^2 + 2 x + 1]++` eredménye _stem:[\sqrt x - 1]_.
+
+  ====
+  [NOTE]
+
+  ====
+
+  *Jegyzet:* A xref:/CAS_nézet.adoc[CAS nézetben] a parancs több _x_ értéket tartalmazó függvényekkel is működik.
+
+  ====
+
+[EXAMPLE]
+====
+
+`++Inverz[{{a, b}, {c, d}}]++` eredménye stem:[ \begin\{pmatrix} \frac\{d}\{ad- bc} & \frac\{-b}\{ad- bc}\\
+\frac\{-c}\{ad- bc}& \frac\{a}\{ ad- bc} \end\{pmatrix} , a \begin\{pmatrix} a & b\\ c & d \end\{pmatrix} ] mátrix
+inverze.
+
+====

@@ -1,0 +1,92 @@
+= NormálVektor parancs
+:page-en: commands/PerpendicularVector
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+NormálVektor[ <Egyenes> ]::
+  Az adott egyenesre merőleges vektort hoz létre.
+NormálVektor[ <Szakasz> ]::
+  Az adott vektorra merőleges, vele egyenlő hosszúságú vektort hoz létre.
+NormálVektor[ <Vektor> ]::
+  Az adott vektorra merőleges vektort hoz létre.
+
+[EXAMPLE]
+====
+
+Adott az `++u=Vektor[ (-12, 8) ]++` vektor. `++NormálVektor[ u ]++` létrehozza az "u"-ra merőleges _v=(-8, -12)_
+vektort.
+
+====
+
+[EXAMPLE]
+====
+
+Adott a `++k=Szakasz[ (3, 2), (14, 5) ]++` szakasz. `++NormélVektor[ k ]++` létrehozza a "k"-ra merőleges _u=(-3, 11)_
+vektort.
+
+====
+
+[EXAMPLE]
+====
+
+Adott a `++j=Egyenes[ (1, 4), (5, -3) ]++` egyenes. `++NormálVektor[ j ]++` létrehozza a "j"-re merőleges _u=(7, 4)_
+vektort'.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Az _(a, b)_ koordinátájú vektorra merőleges a _(-b, a)_ vektor.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Az _ax + by = c_ egyenlettel megadott egyenes normálvektora _(a, b)_.
+
+====
+
+== CAS nézet
+
+NormálVektor[ <Vektor> ]::
+  Az adott vektorra merőleges vektort ad eredményül.
+
+[EXAMPLE]
+====
+
+* `++NormálVektor[(3, 2)]++` eredménye a _\{-2, 3}_ vektor.
+* `++NormálVektor[(a, b)]++` eredménye a _\{-b, a}_ vektor.
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Following text is about a feature that is supported only in 5.0 beta version.
+
+'''''
+
+NormálVektor[ <Sík> ]::
+  Létrehoz a megadott síkra merőleges vektort.
+
+[EXAMPLE]
+====
+
+`++NormálVektor[ xySík ]++` eredménye az xy síkra merőleges _u=(0, 0, 1)_ vektor.
+
+====
+
+|===
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+Lásd még az xref:/commands/EgységnyiNormálVektor.adoc[EgységnyiNormálVektor parancsot].
+
+====

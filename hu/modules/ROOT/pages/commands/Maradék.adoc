@@ -1,0 +1,54 @@
+= Maradék parancs
+:page-en: commands/Mod
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Maradék[ <Osztandó szám>, <Osztó szám> ]::
+  Kiszámítja az osztás maradékát (osztandó számot az osztó számmal).
+
+[EXAMPLE]
+====
+
+`++Maradék[9, 4]++` erdménye _1_.
+
+====
+
+Maradék[ íOsztandó polinom>, <Osztó polinom> ]::
+  Kiszámítja a polinom osztás maradékát (osztandó polinomot az osztó polinommal).
+
+[EXAMPLE]
+====
+
+`++Maradék[x^3 + x^2 + x + 6, x^2 - 3]++` eredménye _4 x + 9_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+Ha funkcióként szeretnénk megadni, úgy írhatjuk például a következőt: `++mod(x, y) = y (x / y - floor(x / y))++`.
+
+====
+
+== CAS nézet
+
+Maradék[ <Osztandó szám>, <Osztó szám> ]::
+  Kiszámítja az osztás maradékát (osztandó számot az osztó számmal).
+
+[EXAMPLE]
+====
+
+`++Maradék[9, 4]++` erdménye _1_.
+
+====
+
+Maradék[ <Osztandó polinom>, <Osztó polinom> ]::
+  Kiszámítja a polinomok osztásának maradékát (osztandó polinomot az osztó polinommal).
+
+[EXAMPLE]
+====
+
+`++Maradék[x^3 + x^2 + x + 6, x^2 - 3]++` eredménye _4 x + 9_.
+
+====

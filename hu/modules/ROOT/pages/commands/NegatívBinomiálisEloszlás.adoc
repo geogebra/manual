@@ -1,0 +1,37 @@
+= NegatívBinomiálisEloszlás parancs
+:page-en: commands/Pascal
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+NegatívBinomiálisEloszlás[ <Siker küszöbértéke>, <Siker valószínűsége> ]::
+  Megrajzolja a http://hu.wikipedia.org/wiki/Negat%C3%ADv_binomi%C3%A1lis_eloszl%C3%A1s[negatív binomiális eloszlás]
+  oszlopdiagramját.
+  _Siker küszöbértéke_: a független Bernoulli kísérletek száma, mely szükséges a sikerhez.
+  _Siker valószínűsége_: kísérletenként a siker valószínűsége.
+NegatívBinomiálisEloszlás[ <Siker küszöbértéke>, <Siker valószínűsége>, <Eloszlásfüggvény logikai értéke> ]::
+  Ha a logikai érték hamis, megrajzolja a hipergeometrikus eloszlás oszlopdiagramját.
+  Ha a logikai érték igaz, megrajzolja a kumulatív hipergeometrikus eloszlás oszlopdiagramját.
+NegatívBinomiálisEloszlás[ <Siker küszöbértéke>, <Siker valószínűsége>, <Változó értéke >, <Eloszlásfüggvény logikai
+értéke> ]::
+  Legyen X egy negatív binomiális valószínűségi változó.
+  Megadja P( X = v)-t ha a logikai érték = false.
+  Megadja P( X ≤ v)-t ha a logikai érték = true.
+
+== CAS nézet
+
+CAS nézetben csak a következő szintakszis elfogadott:
+
+NegatívBinomiálisEloszlás[ <Siker küszöbértéke>, <Siker valószínűsége>, <Változó értéke >, <Eloszlásfüggvény logikai
+értéke> ]::
+  Legyen _X_ egy negatív binomiális valószínűségi változó.
+  Megadja P( X = v)-t ha a logikai érték = false.
+  Megadja P( X ≤ v)-t ha a logikai érték = true.
+
+[EXAMPLE]
+====
+
+Legyen a független Bernuolli-kísérletek siker küszöbértéke _n = 1_, a siker valószínűsége _p = 1/6_, a változó értéke _v
+= 2_ és a logikai érték = _false_. A
+
+`++NegatívBinomiálisEloszlás[ n, p, v, false]++` parancs eredménye ezáltal _25/216_.
+
+====

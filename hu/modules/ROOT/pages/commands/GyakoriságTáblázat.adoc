@@ -1,0 +1,30 @@
+= GyakoriságTáblázat parancs
+:page-en: commands/FrequencyTable
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+GyakoriságTáblázat[ <Nyers adatok listája> ]::
+  Létrehoz egy táblázatot (szövegként), melynek első oszlopa a megadott lista egyes elemeit, a második lista ezek
+  abszolút gyakoriságát tartalmazza. A lista számokat vagy szöveget tartalmazhat.
+
+GyakoriságTáblázat[ <Osztályok határainak listája>, <Nyers adatok listája>]::
+  Létrehoz egy táblázatot (szövegként), melynek első oszlopa az intervallumot (oszályokat), második oszlopa a nyers
+  adatok listájának elemeinek számát tartalmazza (szövegként), melyek az adott osztályhoz tartoznak. Minden intervallum
+  _[x, y)_ formában van megadva, a legtágabb intervallum _[x, y]_ formában.
+
+GyakoriságTáblázat[ <Osztályok határainak listája>, <Nyers adatok listája>, <Logikai érték (Sűrűség?)>, <Sűrűségi
+tényező (opcionális)> ]::
+  Létrehoz egy táblázatot (szövegként), melynek az első oszlopa az intervallumot (osztályokat), második oszlopa az
+  osztályokhoz tartozó xref:/commands/Hisztogram.adoc[hisztogram] parancs gykoriságát tartalmazza.
+
+GyakoriságTáblázat[ <Logikai érték (Halmozott?)>, <Osztályok határainak listája>, <Nyers adatok listája>, <Logikai érték
+(Sűrűség?)>, <Sűrűségi tényező (opcionális)> ]::
+  Létrehoz egy táblázatot (szövegként), melynek első oszlopa az intervallumot (oszályokat), a második oszlopa az
+  osztályokhoz tartozó xref:/commands/Hisztogram.adoc[hisztogram] parancs gykoriságát tartalmazza.
+
+[NOTE]
+====
+
+*Jegyzet:* A parancs hasonló a xref:/commands/Gyakoriság.adoc[gyakoriság] és xref:/commands/Hisztogram.adoc[hisztogram]
+parancsokhoz. Ezeknél a parancsoknál talál hasznos példákat.
+
+====

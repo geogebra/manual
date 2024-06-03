@@ -1,0 +1,20 @@
+= KülönbségFüggvény parancs
+:page-en: commands/ResidualPlot
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+KülönbségFüggvény[ <Pontok listája>, <Függvény> ]::
+  Létrehoz egy pontokból álló új listát. A pontok x koordinátja egyenlő a megadott listán lévő pontok x koordinátáival,
+  az y koordináták az _f_ függvény és az eredeti pont különbsége. Vagyis, ha a listán lévő _i_-dik elem az _(a, b)_ pont
+  és _f_ a függvény, úgy a létrehozott új pont _(a, b-f(a))_.
+
+[EXAMPLE]
+====
+
+Legyen
+`++Lista = {(-1, 1), (-0.51, 2), (0, 0.61), (0.51, -1.41), (0.54, 1.97), (1.11, 0.42), (1.21, 2.53), (-0.8, -0.12)}++`
+egy pontokat tartalmazó lista és `++f(x) = x^5 + x^4 - x - 1++` egy függvény. A `++KülönbségFüggvény[ Lista, f ]++`
+parancs eredménye a következő lista: _Lista1 = \{(-1, 1), (-0.51, 2.46), (0, 1.61), (0.51, 0), (0.54, 3.38), (1.11,
+-0.66), (1.21, 0), (-0.8, 0)}_, a hozzátartozó pontok a image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16]xref:/Geometria_ablak.adoc[rajzlapon] jelennek meg.
+
+====

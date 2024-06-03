@@ -1,0 +1,43 @@
+= KözrezártTerület parancs
+:page-en: commands/IntegralBetween
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+KözreZártTerület[ <Függvény>, <Függvény>, <Kezdő x-érték>, <Lezáró x-érték> ]::
+  Megadja két, _f_ és _g_ függvény _f(x) - g(x)_ különbségének határozatlan integrálját az _[x, y]_ intervallumon, ahol
+  _x_ a kezdő érték és _y_ a záróérték.
+
+[NOTE]
+====
+
+*Jegyzet:* Ez a parancs az _f_ és _g_ függvény grafikonját is kisatírozza.
+
+====
+
+KözrezártTerület[ <Függvény>, <Függvény>, <Kezdő x-érték>, <Lezáró x-érték>, <Logikai érték> ]::
+  Megadja két, _f_ és _g_ függvény _f(x) - g(x)_ különbségének határozatlan integrálját az _[x, y]_ intervallumon, ahol
+  _x_ a kezdő érték és _y_ a záróérték, és az azzal kapcsolatos területet kisatírozza, ha a _logikai érték = true_. Ha a
+  _logikai érték = false_, úgy az azzal kapcsolatos terület lesz kisatírozva, de nem történik integrálszámítás.
+
+== CAS nézet
+
+KözrezártTerület[ <Függvény>, <Függvény>, <Kezdő x-érték>, <Lezáró x-érték> ]::
+  Megadja két, _f_ és _g_ függvény _f(x) - g(x)_ különbségének határozatlan integrálját az _[x, y]_ intervallumon, ahol
+  _x_ a kezdő érték és _y_ a záróérték.
+
+[EXAMPLE]
+====
+
+`++KözrezártTerület[sin(x), cos(x), π / 4, π * 5 / 4]++` eredménye stem:[2 \sqrt\{2}].
+
+====
+
+KözrezártTerület[ <Függvény>, <Függvény>, <Változó>, <Kezdőérték>, <Végérték> ]::
+  Megadja két, _f_ és _g_ függvény egy adott változó szerinti _f(x) - g(x)_ különbségének határozatlan integrálját az
+  _[x, y]_ intervallumon, ahol _x_ a kezdő érték és _y_ a záróérték.
+
+[EXAMPLE]
+====
+
+`++ KözrezártTerület[a * sin(t), a * cos(t), t, π / 4, π * 5 / 4]++` eredménye stem:[2 \sqrt\{2} a].
+
+====

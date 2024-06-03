@@ -1,0 +1,23 @@
+= Jelölőnégyzet parancs
+:page-en: commands/Checkbox
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Jelölőnégyzet[]::
+  Létrehoz egy xref:/tools/Aktív_eszközök.adoc[jelölőnégyzetet].
+
+Jelölőnégyzet[ <Felirat> ]::
+  Létrehoz egy jelölőnégyzetet megadott xref:/Címkék_és_feliratok.adoc[felirattal].
+
+Jelölőnégyzet[ <Lista> ]::
+  Létrehoz egy jelölőnégyzetet, amely a lista alakzatait elrejti, ha nincsen kipipálva.
+
+[EXAMPLE]
+====
+
+Legyenek _A_ és _B_ pontok. A `++c = Jelölőnégyzet[{A,B}]++` parancsnál akkor látható az _A_ és a _B_ pont, ha "c" ki
+van pipálva, különben rejtve vannak.
+
+====
+
+Jelölőnégyzet[ <Felirat>, <Lista> ]::
+  Létrehoz egy jelölőnégyzetet a megadott felirattal, amely az alakzatokat csak akkor mutatja, ha ki van pipálva.

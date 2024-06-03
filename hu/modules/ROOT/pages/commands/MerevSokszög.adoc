@@ -1,0 +1,22 @@
+= MerevSokszög parancs
+:page-en: commands/RigidPolygon
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+MerevSokszög[ <Sokszög> ]::
+  Létrehozza a megadott sokszög másolatát, amelyet csak eltolni és elforgatni lehet. A létrehozott sokszöget annak első
+  sarokpontjának húzásával lehet eltolni és második sarokpontjának húzásával elforgatni.
+
+MerevSokszög[ <Sokszög>, <x eltolás>, <y eltolás> ]::
+  Létrehozza a megadott sokszög másolatát, adott x és y eltolással az eredeti sokszöghöz képest. Az új sokszöget csak
+  eltolni és elforgatni lehet (szintén az első két sarokpont húzásával).
+
+MerevSokszög[ <Pont>,..., <Pont> ]::
+  Létrehoz egy sokszöget, amelyet csak eltolni és elforgatni lehet (szintén az első két sarokpont húzásával).
+
+[NOTE]
+====
+
+*Jegyzet:* A sokszög másolata követi az eredeti sokszög változásait. Ha megakarja változtatni a sokszög formáját, úgy az
+eredeti sokszög formáját kell megváltoztatnia.
+
+====

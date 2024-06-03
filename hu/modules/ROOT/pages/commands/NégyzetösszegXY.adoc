@@ -1,0 +1,27 @@
+= NégyzetösszegXY parancs
+:page-en: commands/SigmaXY
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+NégyzetösszegXY[ <Pontok listája> ]::
+  Meghatározza a listán lévő pontok _x_ és _y_ koordinátáinak szorzatának összegét.
+
+[EXAMPLE]
+====
+
+Egy pontokat tartalmazó lista http://hu.wikipedia.org/wiki/Kovariancia[kovarianciáját] a következőképpen számíthatja ki:
+`++ NégyzetösszegXY[Lista]/Hossz[Lista] - ÁtlagX[Lista] * ÁtlagY[Lista]++`.
+
+====
+
+NégyzetösszegXY[ <x-koordináták listája>, <y-koordináták listája> ]::
+  Meghatározza az _x_ és _y_ koordináták szorzatának összegét.
+
+[EXAMPLE]
+====
+
+Legyenek `++A = (-3, 4)++`, `++B = (-1, 4)++`, `++C = (-2, 3)++` és `++D = (1, 3)++` pontok. Az
+`++{x(A), x(B), x(C), x(D)}++` paranccsal megkapja a következő listát: _Lista1 = \{-3, -1, -2, 1}_, az x koordináták
+listáját, és az `++{y(A), y(B), y(C), y(D)}++` paranccsal a _Lista2 = \{4, 4, 3, 3}_ listát, vagyis az y koordináták
+listáját. A `++NégyzetösszegXY[ Lista1, Lista2 ]++` parancs eredménye _a = -19_.
+
+====

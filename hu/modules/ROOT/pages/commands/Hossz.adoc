@@ -1,0 +1,77 @@
+= Hossz parancs
+:page-en: commands/Length
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Hossz[ <Alakzat> ]::
+  Megadja az alakzat hosszát.
+
+[EXAMPLE]
+====
+
+* `++Hossz[ <Vektor> ]++` kiszámítja a vektor hosszát.
+* `++Hossz[ <Pont> ]++` kiszámítja a helyvektor hosszát (origót és pontot összekötő vektor hossza).
+* `++Hossz[ <Lista> ]++` megadja a lista hosszát (elemek száma).
+* `++Hossz[ <Szöveg> ]++` megadja a szöveg hosszát (karakterek száma).
+* `++Hossz[ <Mértani hely> ]++` megadja azon pontok számát, amelyekből a mértani hely összetevődik. A mértani hely
+hosszának meghatározásához a xref:/commands/Kerület.adoc[Kerület parancs] áll rendelkezésre. Részletekért lásd az
+xref:/commands/Első.adoc[Első parancsot.]
+* `++Hossz[<Ív>]++` megadja az ív hosszát.
+
+====
+
+Hossz[ <Függvény>, <Kezdő x-érték>, <Lezáró x-érték> ]::
+  Kiszámítja a függvény grafikonjának hosszát a megadott intervallumon.
+
+[EXAMPLE]
+====
+
+`++Hossz[2x, 0, 1]++` eredménye 2.23606797749979, vagyis stem:[\sqrt\{5}].
+
+====
+
+Hossz[ <Függvény>, <Kezdőpont>, <Végpont> ]::
+  Kiszámítja a függvény grafikonjának hosszát két pont között.
+
+[NOTE]
+====
+
+*Jegyzet:* Ha a megadott pontok nem illeszkednek a függvényre, úgy azok x koordinátái határozzák meg az intervallumot.
+
+====
+
+Hossz[ <Görbe>, <Kezdő x-érték>, <Lezáró x-érték> ]::
+  Kiszámítja a görbe hosszát a megadott paraméteres értéket között.
+
+Hossz[ <Görbe>, <Kezdőpont>, <Végpont> ]::
+  Kiszámítja a görbe hosszát a két görbére illeszkedő pont között.
+
+== CAS nézet
+
+Hossz[ <Függvény>, <Kezdő x-érték>, <Lezáró x-érték> ]::
+  Kiszámítja a függvény hosszát a két megadott x érték között.
+
+[EXAMPLE]
+====
+
+`++Hossz[2 x, 0, 1]++` eredménye stem:[\sqrt\{5}].
+
+====
+
+Hossz[ <Függvény>, <Változó>, <Kezdőpont>, <Végpont> ]::
+  Kiszámítja a függvény hosszát a kezdőponttól a végpontig.
+
+[EXAMPLE]
+====
+
+`++Hossz[2 a, a,  0, 1]++` eredménye stem:[\sqrt\{5}].
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+Lásd image:Tool_Distance.gif[Tool Distance.gif,width=32,height=32] xref:/tools/Távolság.adoc[Távolság eszköz].
+
+====

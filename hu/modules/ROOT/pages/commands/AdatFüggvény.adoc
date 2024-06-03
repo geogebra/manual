@@ -1,0 +1,16 @@
+= AdatFüggvény parancs
+:page-en: commands/DataFunction
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+AdatFüggvény[ <Számok listája>, <Számok listája> ]::
+  Eredménye egy olyan függvény, amely összeköti a (x~1~, y~1~), (x~2~, y~2~),...,(x~n~, y~n~) pontokat, ahol \{x~1~,
+  ..., x~n~}, \{y~1~, ..., y~n~} a beviteli lista. A pontok között lineáris interpoláció történik. Ezt a parancsot a
+  xref:/Nézetek.adoc[Szenzor] alkalmazásnál használhatjuk.
+
+[EXAMPLE]
+====
+
+* `++ AdatFüggvény[{0, 1, 2, 4}, {0, 1, 4, 16}]++` eredménye egy olyan függvény, amely áthalad a (0, 0), (1,1), (2, 4),
+(4, 16) pontokon.
+
+====

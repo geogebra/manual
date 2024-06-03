@@ -1,0 +1,61 @@
+= DinamikusKoordináták parancs
+:page-en: commands/DynamicCoordinates
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+DinamikusKoordináták[ <Pont>, <X>, <Y> ]
+
+Létrehoz egy pontot a megadott _X_ és _Y_ koordinátákkal. Ez a pont egy
+xref:/Szabad_Függő_és_Segéd_alakzatok.adoc[függő], de mozgatható alakzat. Ha az új pontot az (x, y) koordinátákra
+helyezi, az _A_ pont oda oda tolódik és az új pont koordinátái kiszámításra kerülnek. A parancs leginkább akkor működik,
+ha az _A_ pont nem xref:/Objektum_tulajdonságai.adoc[látható]. Legalább az egyik koordinátának (_X_, _Y_) függenie kell
+az _A_ ponttól.
+
+[EXAMPLE]
+====
+
+* Legyen _A_ a pont és `++B = DinamikusKoordináták[A, round(x(A)), round(y(A))]++` a parancs. Ha a _B_ pontot a (1.3,
+2.1) koordinátákra elmozgatja a image:Tool_Move.gif[Tool Move.gif,width=32,height=32]
+xref:/tools/Mozgatás.adoc[Mozgatás] eszközzel, úgy az _A_ pont a (1.3, 2.1) koordinátákra helyeződik és a _B_ pont az
+(1,2) koordinátáknál jelenik meg.
+* `++B = DinamikusKoordináták[A, x(A), min(y(A), sin(x(A)))]++` létrehoz egy pontot sin(x) alatt.
+
+A következő példák a _C_ pont pozicíójának korlátozásának más megoldásait mutatják.
+
+[NOTE]
+====
+
+*Jegyzet:* Ebben az esetben a `++BelsőPont[y < sin(x)]++` parancs az egyszerűbb megoldás.
+
+====
+
+* Legyen `++A = Pont[xTengely]++` és `++B = Pont[xTengely]++`.
+
+Írja a xref:/Parancssor.adoc[parancssorba] a követzekőket:
+
+`++DinamikusKoordináták[B, Min[x(B), x(A)], 0]++` és nyomja meg az [.kcode]#Enter#-t.
+
+`++ MegjelenítésRajzlapon[B, 1, false]++` és nyomja meg az [.kcode]#Enter#-t.
+
+`++Réteg[C,  1]++` és nyomja meg az [.kcode]#Enter#-t.
+
+Most a _C_ pont már nem tolható el az _A_ pont jobb oldalára.
+
+* Legyen `++A=(1, 2)++`.
+
+Írja a xref:/Parancssor.adoc[parancssorba] a követzekőket:
+
+`++ MegjelenítésRajzlapon[A, 1, false]++` és nyomja meg az [.kcode]#Enter# -t.
+
+`++B = DinamikusKoordináták[A, Ha[x(A) > 3, 3, If[x(A) < -3, -3, Ha[x(A) < 0, round(x(A)), x(A)]]], Ha[x(A) < 0, 0.5, Ha[y(A) > 2, 2, Ha[y(A) < 0, 0, y(A)]]]]++`
+és nyomja meg az [.kcode]#Enter#-t.
+
+* Ez a példa az _A_ pontból egy ragadó pontot csinál, ha a _C_ pontot a közelébe húzza.
+* Legyen `++A = (1, 2)++` és `++B = (2, 3)++`.
+
+Írja a xref:/Parancssor.adoc[parancssorba] a követzekőket:
+
+`++ MegjelenítésRajzlapon[B, 1, false]++` és nyomja meg az [.kcode]#Enter#-t.
+
+`++C = DinamikusKoordináták[B, Ha[Távolság[A, B] < 1, x(A), x(B)], Ha[Távolság[A, B] < 1, y(A), y(B)]]++`.
+
+====

@@ -1,0 +1,26 @@
+= GammaEloszlás parancs
+:page-en: commands/Gamma
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+GammaEloszlás[ <Alfa>, <Beta>, x ]::
+  Megrajzolja az _α, β_ paraméterekkel adott gamma-eloszlású valószínűségi változó sűrűségfüggvényét.
+GammaEloszlás[ <Alfa>, <Beta>, <Eloszlásfüggvény logikai értéke> ]::
+  Ha a logikai érték igaz, megrajzolja a gamma-eloszlású valószínűségi változó eloszlásfüggvényét, egyéb esetben a
+  sűrűségfüggvényét.
+GammaEloszlás[ <Alfa>, <Beta>, <Változó értéke> ]::
+  Kiszámítja az adott változóra az eloszlásfüggvény értékét, vagyis P(X≤v)-t, ahol X egy _α, β_ által meghatározott
+  gamma-eloszlású valószínűségi változó.
+
+[NOTE]
+====
+
+*Jegyzet:* Meghatározza a valószínűséget adott x koordináta értékre (vagy a gamma-eloszlás görbéje alatti területet az
+adott x koordinátánál kisebb értékekre).
+
+====
+
+== CAS nézet
+
+GammaEloszlás[ <Alfa>, <Beta>, <Változó értéke> ]::
+  Kiszámítja az eloszlásfüggvény értékét gamma-eloszlásnál, vagyis P(X≤v)-t, ahol X egy _α, β_ által meghatározott
+  gamma-eloszlású valószínűségi változó.

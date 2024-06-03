@@ -1,0 +1,21 @@
+= FEloszlás parancs
+:page-en: commands/FDistribution
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+FEloszlás[ <Számláló szabadságfoka >, <Nevező szabadságfoka >, x ]::
+  Megrajzolja a _Számláló szabadságfoka_ és _Nevező szabadságfoka_ paraméterekkel meghatározott F-eloszlás
+  sűrűségfüggvényét (PDF).
+FEloszlás[ <Számláló szabadságfoka >, <Nevező szabadságfoka >, x, <Eloszlásfüggvény logikai értéke> ]::
+  Ha a logikai érték igaz, megrajzolja az F-eloszlású valószínűségi változó eloszlásfüggvényét. Ha hamis, akkor a
+  sűrűségfüggvényét.
+FEloszlás[ <Számláló szabadságfoka >, <Nevező szabadságfoka >, <Változó értéke> ]::
+  Kiszámítja az adott változóra az eloszlásfüggvény értékét, vagyis P(X≤v)-t, ahol X a _Számláló szabadságfoka_ és
+  _Nevező szabadságfoka_ paraméterekkel meghatározott F-eloszlású valószínűségi változó.
+
+== CAS nézet
+
+xref:/CAS_nézet.adoc[CAS nézet]-ben csak egy szintakszis elfogadott:
+
+FEloszlás[ <Számláló szabadságfoka >, <Nevező szabadságfoka >, <Változó értéke> ]::
+  Kiszámítja az adott változóra az eloszlásfüggvény értékét, vagyis P(X≤v)-t, ahol X a _Számláló szabadságfoka_ és
+  _Nevező szabadságfoka_ paraméterekkel meghatározott F-eloszlású valószínűségi változó.

@@ -1,0 +1,93 @@
+= CAS nézet
+:page-en: CAS_View
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+A CAS nézet lehetővé teszi a GeoGebra számítógépes algebrai rendszerének használatát (CAS = Computer Algebra System) a
+törtekkel, egyenletekkel, ismeretlen változókkal és képletekkel való számoláshoz. A CAS nézet be- és kiviteli sorokból
+áll.
+
+A sorok használata hasonló a xref:/Parancssor.adoc[parancssor] használatával, de a következő különbségekkel:
+
+* Ismeretlen változók (még nem definiált változók) is megadhatók. Pl. a `++(a+b)^2++` bevitel eredménye _a^2+2*a*b+b^2_.
+* Egyenleteknél a `++=++`, hozzárendeléseknél a `++:=++` kódot kell megadni. Vagyis az `++a=2++` bevitelnél az _a_ nem
+kapja meg a 2-t értékként.
+
+== A bevitel alapjai
+
+* [.kcode]#Enter#: bevitel kiértékelése
+* [.kcode]#Ctrl# + [.kcode]#Enter#: numerikus kiértékelés, pl _3/4_ = _0.75_
+* [.kcode]#Alt# + [.kcode]#Enter#: bevitel ellenőrzése kiértékelés nélkül, pl. _b+b_ eredménye _b+b_
+* Üres sorokban a következő billentyűkombinációkat használhatja:
+** ) az előző eredményhez zárójelben
+** = az előző eredményhez
+* A kiértékelés elkerülhető, ha pontosvesszőt ír a bevitel végéhez, pl. _a:=5;_
+
+== Objektumok mutatása és elrejtése
+
+CAS nézetben a sor bal végében található kis pötty mutatja a megjelenítési módot (mutat vagy elrejt). Rákattintva
+megváltoztathatja a megjelenítési módot a xref:/Geometria_ablak.adoc[Geometria ablakban].
+
+== Eszköztár
+
+* Ha az eszköztárban egy eszközre kattint, úgy az az aktuális sorra alkalmazható.
+* Ha a bevitel csak egy részére szeretné alkalmazni az eszközt, jelölje ki a kívánt részt majd kattintson az eszközre.
+
+== A fejléc menü használata
+
+Jobb egérgombbal a sor fejlécére kattintva (bal széle) megjelenik egy kis menüablak a következő opciókkal:
+
+* _Beszúrás fölé_: az aktuális sor fölé beszúr egy üres sort
+* _Beszúrás alá_: az aktuális sor alá beszúr egy üres sort
+* _Sor törlése_: törli az aktuális sort
+* _Szöveg_: megjegyzések beszúrása
+* _Másolás LaTeX-be_: a vágólapra helyezi a sor tartalmát LaTeX szövegként.
+
+== A sorok menüjének használata
+
+Jobb egérgombbal a sorba kattintva megjenik egy kis menüablak a következő opciókkal:
+
+* _Másolás_: A sor tartalmát a vágólapra másolja (jobb egérgombbal egy új cellába kattintva megjelenik a _Beillesztés_
+opció)
+* _Másolás LaTeX-be_: A sor tartalmát LaTeX szövegként a vágólapra másolja
+* _Másikés LibreOffice képletként_: A sor tartalmát LibreOffice képletként a vágólapra másolja
+* _Másolás képként_: A sor tartalmát képként (PNG formátumban) a vágólapra másolja
+
+== Változók
+
+=== Hozzárendelések és kapcsolat a GeoGebrával
+
+* Hozzárendeléseknél a `++:=++` jelölés engedélyezett, pl. `++b := 5++`, `++a(n) := 2n + 3++`
+* Változók neveit a `++Töröl[<Változó>]++` kóddal törölheti
+* Egy változó vagy függvény újradefiniálását a megfelelő sorban kell végrehajtani, különben egy új és átnevezett
+változó/függvény jön létre
+* A változókat és függvényeket a GeoGebra a CAS nézetből átveszi, amennyiben ez lehetséges. Ha definiálja a `++b := 5++`
+változót CAS nézetben, úgy a _b_ változóhoz az egész programban hozzáférhet. Ha a GeoGebrában deifiniált egy függvényt,
+úgy az a CAS nézetben is elérhető.
+
+=== Sorhivatkozások
+
+CAS nézetben kétféleképpen hivatkozhat sorokra:
+
+* Statikus hivatkozások egy sor eredményét másolják, úgy, hogy a másolandó sor utólagos változtatásai nincsenek hatással
+az új sorra.
+
+* `++#++` az előző kivitelt (eredményt) másolja
+* `++#5++` az ötödik sor kivitelét (eredményét) másolja
+
+* Dinamikus hivatkozásoknál az új sor tartalma is megváltozik, ha a másolandó sorban változás történik.
+
+* `++$++` az előző kivitelt (eredményt) másolja
+* `++$5++` az ötödik sor kivitelét (eredményét) másolja
+
+== Egyenletek
+
+* Egyenletek az _=_ jellel lehet definiálni, pl. _"3x + 5 = 7"_
+* Lehetőség van számtani műveleteket végrehajtani, pl. a _"(3x + 5 = 7) - 5"_ bevitel az egyenlet mindkét oldalából
+levon 5-öt. Ez akkor hasznos, ha az egyenleteket úgy szeretné megoldani, ahogy azt papíron tenné.
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd továbbá xref:/commands/CAS_parancsok.adoc[CAS parancsok] és xref:/tools/CAS_eszközök.adoc[CAS eszközök]
+
+====

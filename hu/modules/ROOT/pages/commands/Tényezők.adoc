@@ -1,0 +1,79 @@
+= Tényezők parancs
+:page-en: commands/Factors
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Tényezők[ <Polinom> ]::
+  Eredményül egy listákat tartalmazó listát ad _\{Tényező, Kitevő}_, amely egyenként tartalmazza a polinom tényezőit.
+
+[EXAMPLE]
+====
+
+`++Tényezők[x^8 - 1]++` eredménye a _\{\{x^4 + 1, 1}, \{x^2 + 1, 1}, \{x + 1, 1}, \{x - 1, 1}}_ mátrix.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Nem mindegyik tényező bontható a racionális számok halmazán belül további tényezőkre .
+
+====
+
+Tényezők[ <Szám> ]::
+  Prímtényezőkre bontja a megadott számot. Eredményül egy listát _\{Prímszám, Kitevő}_ ad, amely egyenként tartalmazza
+  az adott szám tényezőit. A prímtényezők növekvő sorrendben vannak felsorolva.
+
+[EXAMPLE]
+====
+
+* `++Tényezők[1024]++` eredménye a _\{\{2, 10}}_ mátrix, mivel stem:[1024 = 2^\{10}].
+* `++Tényezők[42]++` eredménye a _\{\{2, 1}, \{3, 1}, \{7, 1}}_ mátrix, mivel stem:[42 = 2^1・3^1・7^1]:
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd a xref:/commands/PrímTényezők.adoc[PrímTényezők] és xref:/commands/SzorzatAlak.adoc[SzorzatAlak]
+parancsokat.
+
+====
+
+== CAS nézet
+
+Tényezők[ <Polinom> ]::
+  Eredményül egy listákat tartalmazó listát ad _\{Tényező, Kitevő}_, amely egyenként tartalmazza a polinom tényezőit.
+
+[EXAMPLE]
+====
+
+`++Tényezők[x^8 - 1]++` eredménye a _\{\{x^4 + 1, 1}, \{x^2 + 1, 1}, \{x + 1, 1}, \{x - 1, 1}}_ mátrix.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Nem mindegyik tényező bontható a racionális számok halmazán belül további tényezőkre .
+
+====
+
+Tényezők[ <Szám> ]::
+  Prímtényezőkre bontja a megadott számot. Eredményül egy listát _\{Prímszám, Kitevő}_ ad, amely egyenként tartalmazza
+  az adott szám tényezőit. A prímtényezők növekvő sorrendben vannak felsorolva.
+
+[EXAMPLE]
+====
+
+* `++Tényezők[1024]++` eredménye a _\{\{2, 10}}_ mátrix, mivel stem:[1024 = 2^\{10}].
+* `++Tényezők[42]++` eredménye a _\{\{2, 1}, \{3, 1}, \{7, 1}}_ mátrix, mivel stem:[42 = 2^1・3^1・7^1].
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd a xref:/commands/PrímTényezők.adoc[PrímTényezők] és xref:/commands/SzorzatAlak.adoc[SzorzatAlak]
+parancsokat.
+
+====

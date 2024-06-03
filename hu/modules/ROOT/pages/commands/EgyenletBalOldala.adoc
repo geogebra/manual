@@ -1,0 +1,54 @@
+= EgyenletBalOldala parancs
+:page-en: commands/LeftSide
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+EgyenletBalOldala[ <Egyenlet> ]::
+  Megadja az egyszerűsített egyenlet bal oldalát.
+
+[EXAMPLE]
+====
+
+`++EgyenletBalOldala[x + 2 = 3 x + 1]++` eredménye _x_.
+
+====
+
+== CAS nézet
+
+EgyenletBalOldala[ \{<Egyenletek>} ]::
+  Megadja az egyenlet bal oldalát.
+
+[EXAMPLE]
+====
+
+`++EgyenletBalOldala[x + 3 = 3 x + 1]++` eredménye _x + 3_.
+
+====
+
+EgyenletBalOldala[ \{<Egyenletek listája>} ]::
+  Létrehoz egy listát az egyenletek bal oldalaiból.
+
+[EXAMPLE]
+====
+
+`++EgyenletBalOldala[{a^2 + b^2 = c^2, x + 2 = 3 x + 1}]++` eredménye stem:[ \left\\{a^2 + b^2, x + 2 \right\} ] .
+
+====
+
+EgyenletBalOldala[ \{<Egyenletek listája>, <sorszám>} ]::
+  Megadja az adott sorszámú egyenlet bal oldalát.
+
+[EXAMPLE]
+====
+
+`++EgyenletBalOldala[{a^2 + b^2 = c^2, x + 2 = 3 x + 1}, 1]++` eredménye stem:[a^2 + b^2].
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+Lásd xref:/commands/EgyenletJobbOldala.adoc[EgyenletJobbOldala].
+
+====

@@ -1,0 +1,16 @@
+= Comments:TömegKözéppont parancs
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+TömegKözéppont[ <Pontok listája>, <Súlyok listája> ]::
+  Létrehozza a tömegközéppontot, vagyis a lista pontjainak átlagát a pontokhoz tartozó súlyozásokkal, a hozzátartozó
+  http://hu.wikipedia.org/wiki/Tömegközéppont[képlettel].
+
+[EXAMPLE]
+====
+
+* A `++TömegKözéppont[{(2, 0), (0, 2), (-2, 0), (0, -2)}, {1, 1, 1, 1}]++` parancs az _A(0, 0)_ pontot eredményezi.
+* A `++TömegKözéppont[{(2, 0), (0, 2), (-2, 0), (0, -2)}, {2, 1, 1, 1}]++` a _B(0.4, 0)_ pontot eredményezi. A pont x
+koordinátája a következőképpen lett kiszámítva: _stem:[ \frac\{1}\{ 2+1+1+1 }*(2*2+1*0+1*(-2)+1*0)] = stem:[\frac\{1}\{
+5 }*2] = 0.4_
+
+====

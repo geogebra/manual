@@ -1,0 +1,36 @@
+= LáncTört parancs
+:page-en: commands/ContinuedFraction
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+LáncTört[ <Szám> ]::
+  Létrehoz egy [https://hu.wikipedia.org/wiki/Lánctört[lánctörtet]] a megadott számból. Az eredmény egy LaTeX
+  xref:/Szövegek.adoc[szöveg]. A tört számítása numerikus, 10^-8^ pontossággal.
+LáncTört[ <Szám>, <Szint> ]::
+  Létrehoz egy lánctörtet a megadott számból. A hányados kisebb vagy egyenlő a "szinttel", de sosem nagyobb annál az
+  értéknél, amely szükséges a fent említett pontosság eléréséhez.
+LáncTört[ <Szám>, <Szint>, <Eredmény listaként megadása (true|false)> ]::
+  Az első két argumentum ("Szám" és "Szint") megegyezik a fenti leírással, viszont a "Szint" opcionális. Ha az utolsó
+  érték true, akkor az eredményt rövidebb szintaxisban kapjuk meg: a LaTeX szöveg listaként tartalmazza a lánctört egész
+  számos részeit.
+
+[EXAMPLE]
+====
+
+* `++LáncTört[5.45, true]++` eredménye [_5; 2, 4, 1, 1_]
+* `++LáncTört[5.45, 3, true]++` eredménye [_5; 2, 4, ..._]
+
+====
+
+[EXAMPLE]
+====
+
+`++ContinuedFraction[5.45, 3]++` gives _stem:[5 + \frac\{1}\{ 2+ \frac\{1}\{4+ ... } }]_
+
+====
+
+[EXAMPLE]
+====
+
+`++ LáncTört[5.45]++` eredménye _stem:[5 + \frac\{1}\{ 2+ \frac\{1}\{4+ \frac\{1}\{ 1+ \frac\{1}\{ 1 } } } }]_
+
+====

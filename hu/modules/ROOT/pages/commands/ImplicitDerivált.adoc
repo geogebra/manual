@@ -1,0 +1,44 @@
+= ImplicitDerivált parancs
+:page-en: commands/ImplicitDerivative
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+ImplicitDerivált[ <f(x, y)> ]::
+  Meghatározza a megadott kifejezés http://en.wikipedia.org/wiki/Implicit_derivative[implicit deriváltját.]
+
+[EXAMPLE]
+====
+
+`++ImplicitDerivált[x + 2 y]++` eredménye _-0.5_.
+
+====
+
+== CAS Syntax
+
+ImplicitDerivált[ <f(x, y)> ]::
+  Meghatározza a megadott kifejezés http://en.wikipedia.org/wiki/Implicit_derivative[implicit deriváltját.]
+
+[EXAMPLE]
+====
+
+`++ ImplicitDerivált[x + 2 y]++` eredménye _-stem:[\frac\{1}\{2}]_.
+
+====
+
+ImplicitDerivált[ <Kifejezés>,<Függő változó>, <Független változó> ]::
+  Meghatározza a megadott kifejezés http://en.wikipedia.org/wiki/Implicit_derivative[implicit deriváltját.]
+
+[EXAMPLE]
+====
+
+`++ ImplicitDerivált[x^2 + y^2, y, x]++` eredménye _-stem:[\frac\{x}\{y}]_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+Lásd xref:/commands/Derivált.adoc[derivált].
+
+====

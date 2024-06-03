@@ -1,0 +1,26 @@
+= BoxPlot parancs
+:page-en: commands/BoxPlot
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+BoxPlot[ <yEltolás>, <yMéret>, <Nyers adatok listája> ]::
+  Létrehoz egy Box-Plotot a megadott nyers adatok listájából. A Box-Plot vertikális elhelyezése a koordiáta-rendszerben
+  az yEltolás-tól és az yMéret-től (amely a magasságot szabályozza) függ.
+
+[EXAMPLE]
+====
+
+`++BoxPlot[0, 1, {2, 2, 3, 4, 5, 5, 6, 7, 7, 8, 8, 8, 9}]++`
+
+====
+
+BoxPlot[ <yEltolás>, <yMéret>, <Kezdőérték>, <Első kvartilis>, <Medián>, <Harmadik kvartilis>, <Végérték> ]::
+  Létrehoz egy Box-Plotot a megadott statisztikai adatokkal a kezdő- és végérték közötti intervallumban.
+
+BoxPlot[ <yEltolás>, <yMéret>, <Nyers adatok listája>, <Kiugró értékek elhagyása (logikai érték)> ]::
+  Ez a parancs lehetővé teszi, hogy a kiugró értékek "X"-ként jelenjenek meg és ne a Box-Plotban. Kiugró értéknek
+  számítanak azok az értékek, amelyek kívül esnek a http://hu.wikipedia.org/wiki/Medián[medián]értéke ± 1.5 * [első
+  kvartális - harmadik kvartális] intervallumon.
+
+BoxPlot[ <yEltolás>, <yMéret>, <Nyers adatok listája>, <Gyakoriságok listája>, <Kiugró értékek elhagyása (logikai
+érték)> ]::
+  Létrehoz egy Box-Plotot a megadott gyakorisági táblázat adataiból.

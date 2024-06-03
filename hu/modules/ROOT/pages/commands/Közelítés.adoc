@@ -1,0 +1,38 @@
+= Közelítés parancs
+:page-en: commands/Numeric
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Ez a parancs csak xref:/CAS_nézet.adoc[CAS nézetben] érhető el..
+
+Közelítés[ <Kifejezés> ]::
+  A parancs megkísérli a kifejezés numerikus közelítő értékének kiszámítását. A kerekítés mértéke a
+  xref:/Beállítások_menü.adoc[beállításoknál] adható meg.
+
+[EXAMPLE]
+====
+
+`++ Közelítés[3 / 2]++` eredménye _1.5_.
+
+====
+
+KözelítőÉrték[ <KIfejezés>, <Pontosság> ]::
+  A parancs megkísérli a pontosság figyelembevételével a kifejezés numerikus közelítő értékének kiszítását.
+
+[EXAMPLE]
+====
+
+`++ Közelítés[sin(1), 20]++` eredménye _0.84147098480789650665_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Ha a tizedesvessző után kevés számjegy van megadva, úgy az eredmény nem pontos (
+http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html[floating point cancelation]).
+A`++ Közelítés[-500000000/785398163*sin(785398163/500000000)*1258025227.19^2+500000000/785398163*1258025227.19^2,10]++`
+parancs eredménye 0, de a
+`++ Közelítés[-500000000/785398163*sin(785398163/500000000)*1258025227.19^2+500000000/785398163*1258025227.19^2,30]++`
+parancs eredménye 0.318309886345536696694580314215
+
+====

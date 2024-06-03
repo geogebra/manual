@@ -1,0 +1,45 @@
+= Megoldások parancs
+:page-en: commands/Solutions
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Ez a parancs csak xref:/CAS_nézet.adoc[CAS nézetben] érhető el..
+
+Megoldások[ <Egyenlet> ]::
+  Megoldja az egyenletet _x_ változóra és a megoldásokból létrehoz egy listát.
+
+[EXAMPLE]
+====
+
+`++Megoldások[x^2 = 4x]++` eredménye _\{4, 0}_.
+
+====
+
+Megoldások[ <Egyenlet>, <Változó> ]::
+  Megoldja az egyenletet a megadott változóra és a megoldásokból létrehoz egy listát.
+
+[EXAMPLE]
+====
+
+`++Megoldások[x * a^2 = 4a, a]++` eredménye stem:[\\{\frac\{4}\{x},0\}].
+
+====
+
+Megoldások[ <Egyenletek listája>, <Változók listája> ]::
+  Megoldja az egyenletrendszert megadott változóra és a megoldásokból létrehoz egy listát.
+
+[EXAMPLE]
+====
+
+* `++ Megoldások[{x = 4 x + y , y + x = 2}, {x, y}]++` eredménye _\{\{-1, 3}}_, az _x = 4x + y_ és _y + x = 2_
+egyenletrendszer egyetlen megoldása, amelyet _stem:[\begin\{pmatrix}-1&3\end\{pmatrix}]_ mátrixként jelenít meg.
+* `++ Megoldások[{2a^2 + 5a + 3 = b, a + b = 3}, {a, b}]++` eredménye _\{\{0, 3}, \{-3, 6}}_, amelyet _stem:[\left
+(\begin\{array}\{cc} 0&3\\ -3&6\\ \end\{array}\right)]_-ként jelenít meg.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd továbbá a xref:/commands/Megold.adoc[Megold] parancsot.
+
+====

@@ -1,0 +1,49 @@
+= VektoriálisSzorzat parancs
+:page-en: commands/Cross
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+VektoriálisSzorzat[ <Vektor>, <Vektor> ]::
+  Kiszámítja a megadott két vektor http://hu.wikipedia.org/wiki/Vektoriális_szorzat[vektoriális szorzatát].
+
+[EXAMPLE]
+====
+
+`++VektoriálisSzorzat[{1, 3, 2}, {0, 3, -2}]++` eredménye _\{-12, 2, 3}_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A xref:/Parancssor.adoc[parancssorban] alkalmazható az `++u ⊗ v++` írásmód.
+
+====
+
+== CAS Syntax
+
+VektoriálisSzorzat[ <Vector u> , <Vector v> ]::
+  Kiszámítja a megadott két vektor [http://hu.wikipedia.org/wiki/Vektoriális_szorzat%7Cvektoriális[szorzatát]].
+  Ha egy vektor tartalmaz ismeretlen változót, úgy a parancs egy képletet ad meg a vektoriális szorzat kiszámításához.
+
+[EXAMPLE]
+====
+
+`++VektoriálisSzorzat[{a, b, c}, {d, e, f}]++` eredménye _\{b f - c e, -a f + c d, a e - b d}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++VektoriálisSzorzat[{1, 3, 2}, {0, 3, -2}]++` eredménye _\{-12, 2, 3}_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+Lásd xref:/commands/SkalárisSzorzat.adoc[SkalárisSzorzat].
+
+====

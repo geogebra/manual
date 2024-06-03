@@ -1,0 +1,23 @@
+= KétmintásTPróba parancs
+:page-en: commands/TTest2
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+KétmintásTPróba[ <1. minta listája>, <2. minta listája>, <"<", ">" , "≠">, <true I false> ]::
+  Kétmintás t-próbát hajt végre. Megvizsgálja, hogy különbözik-e az átlaga a két alapsokaságnak, melyből a minták
+  származnak. A "<", ">" , "≠" paraméterek jelentése az alábbi:
+  "<" = a két átlag különbsége < 0
+  ">" = a két átlaga különbsége > 0
+  "≠" = a két átlaga különbsége≠ 0
+
+Ha a logikai érték _true_, akkor feltételezzük, hogy a két alapsokaság varianciája (szórásnégyzete) egyenlő, és a közös
+variancia összevont (pooled) becslését alkalmazzuk.
+
+Ha a logikai érték _false_, akkor feltételezzük, hogy a két alapsokaság varianciája (szórásnégyzete) nem egyezik meg, és
+nem alkalmazzuk a varianciák összevont becslését.
+
+Listaként adja meg az eredményt: \{P érték, t} .
+
+KétMintásTPróba[ <1 minta átlaga>, <1. minta szórása>, <1. minta elemszáma>, <2. minta átlaga>, <2. minta szórása>, <2.
+minta elemszáma>, <"<", ">" , "≠">, <igaz I hamis>]
+
+Kétmintás t-próbát hajt végre. _<"<", ">" , "≠">, <true I false>_ paraméterek jelentése megegyezik az előbbiekkel.

@@ -1,0 +1,51 @@
+= Középpont parancs
+:page-en: commands/Midpoint
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Középpont[ <Szakasz> ]::
+  Meghatározza az adott szakasz szakaszfelező pontját.
+
+[EXAMPLE]
+====
+
+Legyen `++s = Szakasz[(1, 1), (1, 5)]++`. A `++ Középpont[s]++` parancs eredménye az _(1, 3)_ pont.
+
+====
+
+Középpont[ <Kúpszelet> ]::
+  Meghatározza az adott kúpszelet középpontját.
+
+[EXAMPLE]
+====
+
+`++ Középpont[x^2 + y^2 = 4]++` eredménye _(0, 0)_.
+
+====
+
+Középpont[ <Intervallum> ]::
+  Meghatározza az adott intervallum középpontját (számként).
+
+[EXAMPLE]
+====
+
+`++ Középpont[2 < x < 4]++` eredménye _3_.
+
+====
+
+Középpont[ <Pont>, <Pont> ]::
+  Meghatározza a két pontot összekötő szakasz szakaszfelező pontját.
+
+[EXAMPLE]
+====
+
+`++ Középpont[(1, 1), (5, 1)]++` eredménye _(3, 1)_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd továbbá a image:Tool_Midpoint_or_Center.gif[Tool Midpoint or Center.gif,width=32,height=32]
+xref:/tools/Felező_vagy_középpont.adoc[Felező vagy középpont] eszközt.
+
+====

@@ -1,0 +1,36 @@
+= Iteráció parancs
+:page-en: commands/Iteration
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Iteráció[ <Függvény>, <Kezdőérték x~0~>, <Iterációk száma n> ]::
+  A függvény _n_-szeres iterációját eredményezi _x~0~_ kezdőértékkel.
+
+[EXAMPLE]
+====
+
+*Ismételt hozzáadás*
+
+Ez a parancs ismétetlődő hozzáadásoknál is hasznos lehet. Pl. ha mindig 7-et szeretnénk hozzáadni:
+
+Legyen `++g(x) = x + 7++`. Az `++ Iteráció[g, 3, 4]++` parancs eredménye _(((3+7) +7) +7) +7 = 31_.
+
+====
+
+[EXAMPLE]
+====
+
+`++f(x) = x^2++` definiálása után az `++Iteráció[f, 3, 2]++` parancs eredménye _(3^2^)^2^=81_.
+
+====
+
+Iteráció[ <Kifejezés>, <Változó neve>, ..., <Kezdőérték>, <Iterációk száma> ]::
+  A kifejezés _n_-szeres iterációját eredményezi (_n_ = iterációk száma) a megadott kezdőérték használatával. Az
+  eredmény az xref:/commands/IterációLista.adoc[IterációLista parancs] eredményének utolsó eleme (megegyező
+  paraméterekkel).
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd továbbá az xref:/commands/IterációLista.adoc[IterációLista parancsot].
+
+====

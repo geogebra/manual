@@ -1,0 +1,18 @@
+= KétMintásTPróbaÁtlagBecslése parancs
+:page-en: commands/TMean2Estimate
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+KétMintásTPróbaÁtlagBecslése[ <1. minta elemeinek listája >, <2. minta elemeinek listája>, <Szignifikancia-szint>, <true
+I false> ]::
+  Konfidencia intervallumot becsül a két alapsokaság átlaga közötti különbségre az adott szignifikancia-szinten a két
+  minta alapján.
+  Ha a logikai érték _true_, akkor feltételezzük, hogy a két alapsokaság varianciája (szórásnégyzete) egyenlő, és a
+  közös variancia összevont (pooled) becslését alkalmazzuk.
+  Ha a logikai érték _false_, akkor feltételezzük, hogy a két alapsokaság varianciája (szórásnégyzete) nem egyezik meg,
+  és nem alkalmazzuk a varianciák összevont becslését.
+  Az eredményt listába foglalja: \{konfidencia intervallum alsó határa, konfidencia intervallum felső határa}.
+KétMintásTPróbaÁtlagBecslése[ <1 minta átlaga>, <1. minta szórása>, <1. minta elemszáma>, <2. minta átlaga>, <2. minta
+szórása>, <2. minta elemszáma>, <Szignifikancia-szint>, <true I false>]::
+  Konfidencia intervallumot becsül a két alapsokaság átlaga közötti különbségre az adott szignifikancia-szinten a
+  statisztikai adatok alapján. A logikai értékek jelentése megegyezik az előbbivel.
+  Az eredményt listába foglalja: \{konfidencia intervallum alsó határa, konfidencia intervallum felső határa}.

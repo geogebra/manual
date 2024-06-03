@@ -1,0 +1,55 @@
+= BizonyításRészletek parancs
+:page-en: commands/ProveDetails
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Following text is about a feature that is supported only in 5.0 beta version.
+
+'''''
+
+\{\{\{1}}}
+
+|===
+
+BizonyításRészletek[ <Logikai Kifejezés> ]::
+  A parancs az automatikus bizonyítás eredményének néhány részletét adja vissza.
+
+Általában a GeoGebra numerikus számítások segítségével dönti el, hogy egy xref:/Logikai_értékek.adoc[logikai kifejezés]
+igaz-e vagy nem. A BizonyításRészletek parancs viszont szimbolikus módszereket alkalmaz annak meghatározására, hogy egy
+állítás általában igaz-e vagy hamis. Ez a parancs úgy működik, mint a xref:/commands/Bizonyít.adoc[Bizonyít] parancs, de
+ezen kívül még az eredmény néhány részletét is megadja egy xref:/Listák.adoc[listában]. A lista
+
+* egy üres lista *\{}*, ha a GeoGebra nem tudta meghatározni a választ.
+* egy egy elemet tartalmazó lista: *\{false}*, azaz \{hamis}, ha az állítás általánosságban nem igaz.
+* egy egy elemet tartalmazó lista: *\{true}*, azaz \{igaz}, ha az állítás mindig igaz.
+* egy több elemet tartalmazó lista, a _true_ (igaz) logikai értékkel és egy másik listával a _nem-degeneráltság
+feltételeivel_, és ha az állítás bizonyos feltételek mellett igaz, pl. \{true, \{"KollineárisE[A,B,C],EgyenlőE[C,D]"}}.
+Ez azt jelenti, hogy ha egyik feltétel sem igaz, akkor az állítás igaz lesz.
+* egy lista *\{true,\{"..."}}*, ha az állítás bizonyos feltételek mellett igaz, de ezeket a feltételeket nem lehet
+lefordítani emberi olvasásra alkalmas formátumra valamilyen okból.
+
+[EXAMPLE]
+====
+
+Definiáljunk egy háromszöget az _A_, _B_ és _C_ csúcsokkal, és adjuk meg a következőket: `++D=Középpont[B,C]++`,
+`++E=Középpont[A,C]++`, `++p=Egyenes[A,B]++`, `++q=Egyenes[D,E]++`. Most ha `++BizonyításRészletek[p∥q]++` a
+következővel tér vissza: \{true,\{"EgyenlőE[A,B]"}}, az azt jelenti, hogy ha az _A_ és _B_ csúcsok különböznek, akkor a
+_DE_ középvonala a háromszögnek párhuzamos az _AB_ oldallal.
+
+====
+
+Lehetséges, hogy a nem-degeneráltság feltételeit tartalmazó lista nem a lehetséges legjobb halmaz. A fenti példa esetén,
+a legegyszerűbb halmaz az üres halmaz lenne.
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd még a xref:/commands/Bizonyít.adoc[Bizonyít] parancsot, a xref:/Logikai_értékek.adoc[logikai értékeket]
+és http://dev.geogebra.org/trac/wiki/TheoremProving[az algoritmusok megvalósításának technikai részleteit].
+
+====

@@ -1,0 +1,26 @@
+= MátrixTranszformáció parancs
+:page-en: commands/ApplyMatrix
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+MátrixTranszformáció[ <Mátrix, <Alakzat> ]::
+  Átalakítja az O alakzatot úgy, hogy annak P pontjának a következőképpen történjen a hozzárendelése:
+
+* az M*P ponthoz (M mátrixszal), ha az M mátrix egy 2x2 méretű mátrix.
+* az (M*(x(P), y(P), 1)) vetítési pontjához, melynél a vetítési pont az (x,y,z) pontból a (x/z, y/z) pontra vetített
+pont, ha az M mátrix egy 3x3 méretű mátrix.
+
+[EXAMPLE]
+====
+
+Legyen `++M={{cos(π/2),-sin(π/2)}, {sin(π/2), cos(π/2)}}++` a transzformációs mátrix és `++u = (2,1)++` az adott vektor
+(alakzat). A `++MátrixTranszformáció[M,u]++` parancs a 90°-kal a pozitív körüljárási irányban elforgatott _u´=(-1,2)_
+vektort eredményezi.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Ez a parancs a következőnél is működik: xref:/tools/Kép_beszúrása.adoc[Képek beszúrása].
+
+====

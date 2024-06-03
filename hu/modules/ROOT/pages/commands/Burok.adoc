@@ -1,0 +1,18 @@
+= Burok parancs
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Burok[ <Pontok listája>, <Százalék> ]::
+  Létrehozza a pontok karakterisztikus burkát, ahogy az az http://www.geosensor.net/papers/duckham08.PR.pdf[Efficient
+  generation of simple polygons for characterizing the shape of a set of points in the plane] dokumentumban le van írva
+  angolul. Ha a százalék p=1, úgy az eredmény egyenlő a xref:/commands/KonvexBurok.adoc[KonvexBurok] parancs
+  eredményével. Minél alacsonyabb a százalék értéke, annál kisebb a burok területe. A p=0 értéknél a burok területe nem
+  feltétlenül minimális.
+  A létrehozott objektum egy xref:/commands/MértaniHely.adoc[mértani hely], vagyis egy
+  xref:/Szabad_Függő_és_Segéd_alakzatok.adoc[segéd alakzat.]
+
+[NOTE]
+====
+
+*Jegyzet:* p értékek, melyek kisebbek 0-nál és nagyobbak 1-nél, a 0, ill. 1 értéket kapják.
+
+====

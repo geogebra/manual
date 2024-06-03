@@ -1,0 +1,29 @@
+= LognormálisEloszlás parancs
+:page-en: commands/LogNormal
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+LognormálisEloszlás[ <Középérték>, <Szórás>, x ]::
+  Megrajzolja a _Középérték_ és _Szórás_ paraméterekkel megadott lognormális eloszlású valószínűségi változó
+  sűrűségfüggvényét.
+LognormálisEloszlás[ <Középérték>, <Szórás>, x, <Eloszlásfüggvény logikai értéke> ]::
+  Ha a logikai érték igaz, megrajzolja az lognormális eloszlású valószínűségi változó eloszlásfüggvényét. Ha hamis,
+  akkor a sűrűségfüggvényét (PDF).
+LognormálisEloszlás[ <Középérték>, <Szórás>, <Változó értéke> ]::
+  Kiszámítja az adott változóra az eloszlásfüggvény értékét, vagyis P(X≤v)-t, ahol X a _Középérték_ és _Szórás_
+  paraméterek által meghatározott lognormális eloszlást követő valószínűségi változó.
+
+[NOTE]
+====
+
+*Jegyzet:* Meghatározza a valószínűséget adott _x_ koordináta értékre (vagyis a lognormális eloszlás görbéje alatti
+területet az adott _x_ koordinátánál kisebb értékekre)
+
+====
+
+== CAS nézet
+
+xref:/CAS_nézet.adoc[CAS nézet]-ben csak az alábbi szintakszis elfogadott:
+
+LognormálisEloszlás[ <Középérték>, <Szórás>, <Változó értéke> ]::
+  Kiszámítja az adott változóra az eloszlásfüggvény értékét, vagyis P(X≤v)-t, ahol X a _Középérték_ és _Szórás_
+  paraméterek által meghatározott lognormális eloszlást követő valószínűségi változó.

@@ -1,0 +1,29 @@
+= LogisztikusEloszlás parancs
+:page-en: commands/Logistic
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+LogisztikusEloszlás[ <Középérték>, <Paraméter s>, x ]::
+  Megrajzolja a _Középérték_ és _s_ paraméterekkel megadott logisztikus eloszlású valószínűségi változó
+  sűrűségfüggvényét.
+LogisztikusEloszlás[ <Középérték>, <Paraméter s>, <Eloszlásfüggvény logikai értéke> ]::
+  Ha a logikai érték igaz, megrajzolja a logisztikus eloszlású valószínűségi változó eloszlásfüggvényét. Ha hamis, akkor
+  a sűrűségfüggvényét (PDF).
+LogisztikusEloszlás[ <Középérték>, <Paraméter s>, <Változó értéke> ]::
+  Kiszámítja az adott változóra az eloszlásfüggvény értékét, vagyis P(X≤v)-t, ahol X a _Középérték_ és _s_ paraméterek
+  által meghatározott logisztikus eloszlást követő véletlen valószínűségi változó.
+
+[NOTE]
+====
+
+*Jegyzet:* Meghatározza a valószínűséget adott x koordináta értékre (vagyis a logisztikus eloszlás görbéje alatti
+területet az adott _x_ koordinátánál kisebb értékekre).
+
+====
+
+== CAS nézet
+
+xref:/CAS_nézet.adoc[CAS nézet]-ben csak az alábbi szintakszis elfogadott:
+
+LogisztikusEloszlás[ <Középérték>, <Paraméter s>, <Változó értéke> ]::
+  Kiszámítja az adott változóra az eloszlásfüggvény értékét, vagyis P(X≤v)-t, ahol X a _Középérték_ és _s_ paraméterek
+  által meghatározott logisztikus eloszlást követő valószínűségi változó.

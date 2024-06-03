@@ -1,0 +1,43 @@
+= Görbeillesztés parancs
+:page-en: commands/Fit
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Görbeillesztés[ <Pontok listája>, <Függvény lista> ]::
+  A megadott pontok regressziós görbéjeként a lista függvényeinek lineáris kombinációját számolja ki.
+
+[EXAMPLE]
+====
+
+* `++Görbeillesztés[{(-2, 3), (0, 1), (2, 1), (2, 3)}, {x^2, x}]++` eredménye _0.625 x^2 - 0.25x_.
+* Legyenek _L = \{A, B, C, ...}_, _f(x) = 1_, _g(x) = x_, _h(x) = e^x_, _F = \{f, g, h}_. `++Görbeillesztés[L, F]++`
+eredménye egy olyan _a + b x + c e^x_ alakú funkció, amely leginkább illeszkedik a megadott pontokhoz.
+
+====
+
+Görbeillesztés[ <Pontok listája>, <Függvény> ]::
+  Kiszámítja a minimális négyzetes hiba függvényt a listában megadott pontok alapján. A függvénynek egy vagy több
+  csúszkától függenie kell, melyek a paraméter optimalizált kezdőértékei. A nem lineáris iteráció valószínűleg nem
+  konvergens, ilyen esetben segíthet a csúszka igazítása, egy optimálisabb kezdőérték eléréséhez.
+
+[EXAMPLE]
+====
+
+Legyen _a_ a csúszka a _-5_, _5_ intervallumon, 1-es lépéstávolsággal.
+`++Görbeillesztés[{(-2, 3), (0, 1), (2, 1), (2, 3)}, a + x^2]++` eredménye _-1 + x^2_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd a xref:/commands/GörbeillesztésExp.adoc[GörbeillesztésExp],
+xref:/commands/GörbeillesztésExp2.adoc[GörbeillesztésExp2],
+xref:/commands/GörbeillesztésEgyenes.adoc[GörbeillesztésEgyenes],
+xref:/commands/GörbeillesztésEgyenesX.adoc[GörbeillesztésEgyenesX],
+xref:/commands/GörbeillesztésLogaritmikus.adoc[GörbeillesztésLogaritmikus],
+xref:/commands/GörbeillesztésLogisztikus.adoc[GörbeillesztésLogisztikus],
+xref:/commands/GörbeillesztésPolinom.adoc[GörbeillesztésPolinom],
+xref:/commands/GörbeillesztésHatvány.adoc[GörbeillesztésHatvány] és
+xref:/commands/GörbeillesztésSin.adoc[GörbeillesztésSin] parancsokat.
+
+====

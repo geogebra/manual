@@ -1,0 +1,30 @@
+= MértaniHely parancs
+:page-en: commands/Locus
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+MértaniHely[ <Pont a mértani hely kirajzolásához>, <Mozgó pont> ]::
+  Létrehoz egy mértani helyet a _<Pont a mértani hely kirajzolásához>_ ponthoz, amely a mozgó ponttól függ.
+
+[NOTE]
+====
+
+*Jegyzet:* A mozgó pontnak egy alakzaton kell elhelyezkednie (pl. egyenes, szakasz, kör).
+
+====
+
+MértaniHely[ <Pont a mértani hely kirajzolásához>, <Csúszka> ]::
+  Létrehoz egy mértani helyet a megadott ponthoz, amely a csúszka értékeitől függ.
+
+MértaniHely[ <Iránymező>, <Pont> ]::
+  Létrehoz egy mértani helyet, amely az iránymezőnek felel meg a megadott pontban.
+
+MértaniHely[ <f(x, y)>, <Pont> ]::
+  Létrehoz egy mértani helyet, amely a stem:[\frac\{dy}\{dx}=f(x,y)] differenciálegyenletnek felel meg a megadott
+  pontban. A megoldás egy szám.
+
+A mértani helyek bizonyos objektumtípusok, amelyek xref:/Szabad_Függő_és_Segéd_alakzatok.adoc[segéd alakzatként]
+jelennek meg. A _MértaniHely_ parancs mellett a xref:/commands/Diszkrét_matematika_parancsok.adoc[diszkrét matematika
+parancsok] és xref:/commands/DifferenciálEgyenletNumerikusan.adoc[DifferenciálEgyenletNumerikusan] parancs eredményei is
+lehetnek. A mértani helyek xref:/Geometriai_alakzatok.adoc[utak], ezért használhatóak utaktól függő parancsoknál is (pl.
+xref:/commands/Pont.adoc[Pont parancs]). Tulajdonságaik attól függenek, hogy hogyan lettek létre hozva. Lásd pl. a
+xref:/commands/Kerület.adoc[Kerület] és xref:/commands/Első.adoc[Első] parancsokat.

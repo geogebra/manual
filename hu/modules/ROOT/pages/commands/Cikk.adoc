@@ -1,0 +1,43 @@
+= Cikk parancs
+:page-en: commands/Sector
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Cikk[ <Kúpszelet>, <Pont>, <Pont> ]::
+  Létrehoz egy cikket a kúpszeleten a megadott két pont között.
+
+[EXAMPLE]
+====
+
+* Legyen `++c: x^2 + 2y^2 = 8++` egy ellipszis, `++D = (-2.83, 0)++` és `++E = (0, -2)++` pedig két pont az ellipszisen.
+A `++Cikk[ c, D, E ]++` parancs eredménye _d = 4.44_.
+* Legyen `++c: x^2 + y^2 = 9++` egy kör, `++A = (3, 0)++` és `++B = (0, 3)++` két pont a körön. A `++Cikk[ c, A, B ]++`
+parancs eredménye _d = 7.07_
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A parancs csak ellipsziseknél és köröknél működik.
+
+====
+
+Cikk[ <Kúpszelet>, <Szám>, <Szám> ]::
+  Létrehoz egy cikket a kúpszeleten a megadott két paraméter között ( _0_ és _2π_).
+
+[EXAMPLE]
+====
+
+Legyen `++c: x^2 + y^2 = 9++` egy kör. A `++Cikk[ c, 0, 3/4 π ]++` parancs eredménye _d = 10.6_
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A következő paraméteres alakok használatosak:
+
+* Kör: _(r cos(t), r sin(t))_ ahol _r_ a kör rádiusza.
+* Ellipszis: _(a cos(t), b sin(t))_ ahol _a_ és _b_ a fő- ill. a melléktengely hossza.
+
+====

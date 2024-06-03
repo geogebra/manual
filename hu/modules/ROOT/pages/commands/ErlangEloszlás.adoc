@@ -1,0 +1,28 @@
+= ErlangEloszlás parancs
+:page-en: commands/Erlang
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+ErlangEloszlás[ <k paraméter>, <λ paraméter>, x]::
+  Megrajzolja a _k, λ_ paraméterekkel megadott Erlang-eloszlású valószínűségi változó sűrűségfüggvényét.
+ErlangEloszlás[ <k paraméter>, <λ paraméter>, <Eloszlásfüggvény logikai értéke> ]::
+  Ha a logikai érték igaz, megrajzolja az Erlang-eloszlás eloszlásfüggvényét. Ha hamis, akkor az Erlang-eloszlás
+  sűrűségfüggvényét (PDF).
+ErlangEloszlás[ <k paraméter>, <λ paraméter>, <Változó értéke> ]::
+  Kiszámítja az adott változóra az eloszlásfüggvény értékét, vagyis P(X≤v)-t, ahol X a _k_ és _λ_ paraméterek által
+  meghatározott Erlang-eloszlást követő valószínűségi változó.
+
+[NOTE]
+====
+
+*Jegyzet:* Meghatározza a valószínűséget adott x koordináta értékre (vagyis az Erlang-eloszlás görbéje alatti területet
+az adott x koordinátánál kisebb értékekre).
+
+====
+
+== CAS nézet
+
+xref:/CAS_nézet.adoc[CAS nézet]-ben csak az alábbi szintakszis elfogadott:
+
+ErlangEloszlás[ <k paraméter>, <λ paraméter>, <Változó értéke> ]::
+  Kiszámítja az adott változóra az eloszlásfüggvény értékét, vagyis P(X≤v)-t, ahol X a _k_ és _λ_ paraméterek által
+  meghatározott Erlang-eloszlást követő valószínűségi változó.

@@ -1,0 +1,19 @@
+= PárosTPróba parancs
+:page-en: commands/TTestPaired
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+PárosTPróba[ <1. minta listája>, <2. minta listája>, <"<", ">" , "≠">]::
+  Páros t-próbát hajt végre két alapsokasággal. Lehetséges értékei ("<", ">" , "≠") a következőképpen határozzák meg az
+  alternatív hipotézist:
+  "<" = az alapsokaság átlaga < Becsült átlag
+  ">" = az alapsokaság átlaga > Becsült átlag
+  "≠" = az alapsokaság átlaga ≠ Becsült átlag
+
+Az eredményeket egy lista tartalmazza \{Valószínűség értéke, t-tesztstatisztika}.
+
+[EXAMPLE]
+====
+
+`++PárosTPróba[{1, 2, 3, 4, 5}, {1, 1, 3, 5, 5}, "<"]++` eredménye _\{0.5, 0}_.
+
+====

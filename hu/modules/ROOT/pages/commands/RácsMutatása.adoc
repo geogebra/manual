@@ -1,0 +1,38 @@
+= RácsMutatása parancs
+:page-en: commands/ShowGrid
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+RácsMutatása[ ]::
+  Mutatja a rácsot az aktív nézetben.
+RácsMutatása[ <Logikai érték> ]::
+  Mutatja/elrejti a rácsot az aktív nézetben.
+
+[EXAMPLE]
+====
+
+* A `++RácsMutatása[true]++` parancs megjeleníti a rácsot az akítv nézetben.
+* A `++RácsMutatása[false]++` parancs elrejti a rácsot az aktív nézetben.
+
+====
+
+RácsMutatása[ <Nézet>, <Logikai érték> ]::
+  Mutatja/elrejtni a rácsot a image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  _Geometria ablakban_ (1 vagy 2) (vagy a image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra
+  3Dgraphics.svg,width=16,height=16] _3D-s nézetben_ (3)).
+
+[EXAMPLE]
+====
+
+* A `++RácsMutatása[1, true]++` parancs megjeleníti a rácsot a image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Rajzlapon_.
+* A `++RácsMutatása[2, false]++` elrejti a rácsot a image:16px-Menu_view_graphics2.svg.png[Menu view
+graphics2.svg,width=16,height=16] _Rajzlap 2-n_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd továbbá a xref:/commands/TengelyekMutatása.adoc[TengelyekMutatása parancsot].
+
+====

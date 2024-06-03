@@ -1,0 +1,80 @@
+= Címkék és feliratok
+:page-en: Labels_and_Captions
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+A GeoGebrában minden objektum egyedi névvel rendelkezik. Elnevezéskor használhatunk egy vagy több betűt, illetve
+indexeket is. További részletek az xref:/Objektumok_elnevezése.adoc[Objektumok elnevezése] oldalon.
+
+== Feliratok mutatása, elrejtése
+
+A Geometria nézetben az alakzatok feliratai elrejthetők vagy mutathatók a következő módokon:
+
+* Válasszuk a image:Tool_Show_Hide_Label.gif[Tool Show Hide Label.gif,width=32,height=32]
+xref:/tools/Felirat_mutatása_elrejtése.adoc[Felirat mutatása / elrejtése eszközt] és kattintsunk azon az alakzaton,
+melynek feliratát elrejteni vagy mutatni kívánjuk.
+* Nyissuk ki a kívánt alakzat xref:/Helyi_menü.adoc[helyi menüjét] és válasszuk a image:Tool_Show_Hide_Label.gif[Tool
+Show Hide Label.gif,width=32,height=32] Felirat mutatását.
+* Nyissuk ki a kívánt alakzat xref:/Tulajdonságok_párbeszédablak.adoc[Tulajdonságok párbeszédablakát], és az Alap fülön
+állítsuk be megfelelően a Felirat mutatása jelölőnégyzetet.
+
+== Név és érték
+
+A GeoGebrában minden alakzatnak egyedi neve van, amely a Geometria nézetben megjelenhet az alakzat mellett. Ezenkívül az
+alakzat értéke vagy neve és értéke is szerepelhet feliratként. Mindez beállítható a Tulajdonságok párbeszédablak Alap
+fülén a Felirat mutatás jelölőnégyzet kiválasztása után megjelenő legördülő menüben a megfelelő választással (Név, Név
+és érték, Érték).
+
+[NOTE]
+====
+
+*Jegyzet:* Pont értéke a koordinátáit jelenti, míg egy függvény értéke, annak egyenlete.
+
+====
+
+== Címke
+
+Előfordulhat, hogy több alakzatot is azonos névvel szeretnénk jelölni ábránkon, pl. egy négyzet mindegyik oldalát
+`++a++`-val. A fenti három feliratozási lehetőségen kívüI, a GeoGebra erre is módot ad. Az alakzat Tulajdonságok
+párbeszédablakának Alap fülén a Címke mezőbe írjuk be a kívánt elnevezést, majd a feliratozási lehetőségek közül
+válasszuk a "Címkét".
+
+A következőparaméterek használhatók feliratokban:
+
+[cols=",",options="header",]
+|===
+|Paraméter |Jelentés
+|%v |Érték
+|%n |Név
+|%x |x-koordináta (vagy x együtthatója az a x + b y + c = 0 egyenletben)
+|%y |y-koordináta (vagy y együtthatója az a x + b y + c = 0 egyenletben)
+|%z |a 'c' konstans az a x + b y + c = 0 egyenletben (3D nézetben lehet: z-koordináta is)
+|===
+
+[EXAMPLE]
+====
+
+Legyen A az (1,2) koordinátájú pont. Állítsuk be feliratként "%n pont %v koordinátákkal". Eredményül "A pont (1,2)
+koordinátákkal" feliratot kapjuk.
+
+====
+
+=== LaTeX a feliratokban
+
+xref:/LaTEX.adoc[LaTeX] kód is használható a feliratokban, a kívánt parancsot dollárjelek közé zárva (pl. *$ x^\{2} $*).
+Kiválaszthatók továbbá a leggyakrabban használt Görög betűk és operátorok is a megjelenő listából, ha a "Felirat" mező
+jobb szélén található kis négyzetre klikkelünk.
+
+[EXAMPLE]
+====
+
+Ha valóban szépen formázott matematikai szöveget szeretnénk, használjuk a LaTeX parancsokat a feliratokban, pl. törtet
+megjeleníthetünk a Felirat mezőbe írt "$\frac\{a}\{b}$" paranccsal
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* LaTeX parancsok nem használhatók a Szövegmezőkben, Gombokon és Jelölőnégyzeteknél
+
+====

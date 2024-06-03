@@ -1,0 +1,25 @@
+= Helyettesít parancs
+:page-en: commands/Substitute
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Ez a parancs csak xref:/CAS_nézet.adoc[CAS nézetben] érhető el..
+
+Helyettesít[ <Kifejezés>, <Mit>, <Mire> ]::
+  A _mit_ _mire_ helyettesíti a kifejezésben.
+
+[EXAMPLE]
+====
+
+`++Helyettesít[(3 m - 3)^2 - (m + 3)^2, m, a]++` eredménye _8 a^2^ - 24 a_.
+
+====
+
+Helyettesít[ <Kifejezés>, <Csere lista> ]::
+  Helyettesíti a megadott kifejezésben lévő összes, a csere listán szereplő _mit_ _mire_.
+
+[EXAMPLE]
+====
+
+`++Helyettesít[2x+3y-z,{x=a,y=2,z=b}]++` eredménye _2a - b + 6_.
+
+====

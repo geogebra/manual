@@ -1,0 +1,63 @@
+= HipergeometrikusEloszlás parancs
+:page-en: commands/HyperGeometric
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+HipergeometrikusEloszlás[ <Statisztikai sokaság mérete>, <Sikeres kísérletek száma>, <Minta mérete>]::
+  Megrajzolja egy hipergeometrikus eloszlás oszlopdiagramját.
+  _Paraméterek:_
+  _Statisztikai sokaság mérete:_ A dobozban található golyók száma.
+  _Sikeres kísérletek száma:_ A dobozban lévő fehér golyók száma.
+  _Minta mérete:_ A kihúzott fehér golyók száma.
+
+Az oszlopdiagram szemlélteti a kihúzott fehér golyók számának eloszlásfüggvényét.
+
+HipergeometrikusEloszlás[ <Statisztikai sokaság mérete>, <Sikeres kísérletek száma>, <Minta mérete>, <Eloszlásfüggvény
+logikai értéke> ]::
+  Ha a logikai érték hamis, megrajzolja a hipergeometrikus eloszlás oszlopdiagramját.
+  Ha a logikai érték igaz, megrajzolja a kumulatív hipergeometrikus eloszlás oszlopdiagramját.
+  Az első három paramétert lásd fenn.
+HipergeometrikusEloszlás[ <Statisztikai sokaság mérete>, <Sikeres kísérletek száma>, <Minta mérete>, <Változó értéke >,
+<Eloszlásfüggvény logikai értéke> ]::
+  Legyen X egy hipergeometrikus valószínűségi változó.
+  Megadja P( X = _v_)-t ha a _logikai érték_ = false.
+  Megadja P( X ≤ _v_)-t ha a _logikai érték_ = true.
+  Az első három paramétert lásd fenn.
+
+== CAS nézet
+
+xref:/CAS_nézet.adoc[CAS nézet]-ben csak egy szintakszis elfogadott:
+
+HipergeometrikusEloszlás[ <Statisztikai sokaság mérete>, <Sikeres kísérletek száma>, <Minta mérete>, <Változó értéke >,
+<Eloszlásfüggvény logikai értéke> ]
+
+Legyen X egy hipergeometrikus valószínűségi változó.
+
+Megadja P( X = _v_)-t ha a _logikai érték_ = false.
+
+Megadja P( X ≤ _v_)-t ha a _logikai érték_ = true.
+
+Az első három paramétert lásd fenn.
+
+[EXAMPLE]
+====
+
+Tegyük fel, hogy 10 golyó közül 2 fehér a dobozban. Húzzunk ki két golyót visszatevés nélkül.
+
+* `++HipergeometrikusEloszlás[10, 2, 2, 0, false]++` megadja a stem:[\frac\{28}\{45}]-öt, annak a valószínűségét, hogy 0
+fehér golyót húzunk ki,
+* `++HipergeometrikusEloszlás[10, 2, 2, 1, false]++` megadja a stem:[\frac\{16}\{45}]-öt, tannak a valószínűségét, hogy
+1 fehér golyót húzunk ki,
+* `++HipergeometrikusEloszlás[10, 2, 2, 2, false]++` megadja az stem:[\frac\{1}\{45}]-öt, annak a valószínűségét, hogy
+mindkét fehér golyót kihúzzuk,
+* `++HipergeometrikusEloszlás[10, 2, 2, 3, false]++` megadja a _0_-t, annak a valószínűségét, hogy 3 fehér golyót húzunk
+ki.
+* `++HipergeometrikusEloszlás[10, 2, 2, 0, true]++` megadja a stem:[\frac\{28}\{45}]-öt, annak a valószínűségét, hogy 0
+(vagy kevesebb) fehér golyót húzunk ki,
+* `++HipergeometrikusEloszlás[10, 2, 2, 1, true]++` megadja a stem:[\frac\{44}\{45}]-öt, annak a valószínűségét, hogy 1
+vagy annál kevesebb fehér golyót húzunk ki,
+* `++HipergeometrikusEloszlás[10, 2, 2, 2, true]++` megadja az _1_-et, annak a valószínűségét, hogy 2 vagy annál
+kevesebb fehér golyót húzunk ki és
+* `++HipergeometrikusEloszlás[10, 2, 2, 3, true]++` megadja az _1_-et, annak a valószínűségét, hogy 3 vagy annál
+kevesebb fehér golyót húzunk ki.
+
+====

@@ -1,0 +1,32 @@
+= Percentilis parancs
+:page-en: commands/Percentile
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Percentilis[ <Számok listája>, <Százalék (törtként)> ]::
+  Legyen _P_ a megadott százalék.
+  Megadja azt az értéket, amelyet az adott lista első _P_ százaléka ad, ha az növekvő sorrendben van. A _P_ értékének
+  _0_ és _1_ között kell lennie.
+
+[EXAMPLE]
+====
+
+`++Percentilis[{1, 2, 3, 4}, 0.25]++` eredménye _1.25_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A xref:/commands/Q1.adoc[Q1] és a Percentilis parancsok különbözőképpen számolnak ezért az eredményeik nem
+mindig megegyezőek.
+
+[EXAMPLE]
+====
+
+`++Q1[{1, 2, 3, 4}]++` eredménye _1.5_.
+
+`++Percentilis[{1, 2, 3, 4}, 0.25]++` eredménye _1.25_.
+
+====
+
+====

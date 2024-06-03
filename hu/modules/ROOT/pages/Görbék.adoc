@@ -1,0 +1,41 @@
+= Görbék
+:page-en: Curves
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+A GeoGebrában kétfajta görbe létezik:
+
+== Paraméteres görbék
+
+A paraméteres görbék a(t)=(f(t),g(t)) alakúak, ahol t egy valós paraméter egy meghatározott tartományban. A
+xref:/commands/GörbeParaméteres.adoc[GörbeParaméteres paranccsal] lehet őket létrehozni. Az
+xref:/commands/Érintő.adoc[Érintő], xref:/commands/Pont.adoc[Pont] és xref:/commands/Metszéspont.adoc[Metszéspont]
+parancsokban megadhatóak paraméterként.
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* A paraméteres görbéket előre definiált funkciókkal és aritmetikus műveletekkel használhatja kifejezésekben. Pl. a
+`++c(3)++` bevitel eredménye egy, a _c_ görbén lévő pont a _3_ paraméterértékkel.
+* Az egér segítségével az image:Tool_New_Point.gif[Tool New Point.gif,width=32,height=32]xref:/tools/Új_pont.adoc[Új
+pont eszközzel] vagy a xref:/commands/Pont.adoc[Pont paranccsal] létrehozhat egy pontot egy paraméteres görbén. Mivel a
+görbe _a_ kezdő- és _b_ végértéke dinamikusan megváltoztatható, használhat csúszkát is az értékek megadására (lásd
+image:Tool_Slider.gif[Tool Slider.gif,width=32,height=32]xref:/tools/Csúszka.adoc[Csúszka eszköz]).
+
+====
+
+Egy paraméteres görbét nem lehet meglévő pontokból létrehozni, viszont a
+xref:/commands/GörbeillesztésPolinom.adoc[GörbeillesztésPolinom paranccsal] megpróbálhatja egy függvény létrehozását a
+pontokból.
+
+== Implicit görbék
+
+Az implicit görbék _x_ és _y_ változós polinomok. A xref:/Parancssor.adoc[Parancssorban] adhatók meg.
+
+[EXAMPLE]
+====
+
+`++x^4 + y^3 = 2x*y++`
+
+====

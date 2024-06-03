@@ -1,0 +1,32 @@
+= Gyök parancs
+:page-en: commands/Root
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Gyök[ <Polinom> ]::
+  Megjelöli a polinom összes gyökét a függvény grafikonja és az _x_ tengely metszéspontjaként.
+Gyök[ <Függvény>, <Kezdő x -érték> ]::
+  Kiszámítja a függvény egyik gyökét a Newton-módszer alkalmazásával. A megadott _Kezdő x -érték_-kel indítja a
+  közelítést.
+Gyök[ <Függvény>, <Kezdő x-érték>, <Lezáró x-érték>]::
+  Kiszámítja a függvény egyik gyökét a [ _Kezdő x-érték_, _Lezáró x-érték]_ intervallumon.
+
+== CAS nézet
+
+Gyök[ <Polinom> ]::
+  Megadja a polinom összes gyökét a függvény grafikonja és az _x_ tengely metszéspontjaként.
+
+[EXAMPLE]
+====
+
+`++Gyök[x^3 - 3 * x^2 - 4 * x + 12]++` megadja a _\{x = 3, x = 2, x = -2}_ listát.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+Ez a parancs a xref:/commands/Megold.adoc[Megold parancs] egy változata.
+
+====

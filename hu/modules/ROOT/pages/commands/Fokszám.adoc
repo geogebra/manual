@@ -1,0 +1,37 @@
+= Fokszám parancs
+:page-en: commands/Degree
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Fokszám[ <Polinom> ]::
+  Megadja a polinom fokszámát.
+
+[EXAMPLE]
+====
+
+`++Fokszám[x^4 + 2 x^2]++` eredménye _4_.
+
+====
+
+== CAS nézet
+
+Fokszám[ <Polinom> ]::
+  Megadja a polinom fokszámát a fő változóhoz, vagy a http://hu.wikipedia.org/wiki/Monom[monomhoz].
+
+[EXAMPLE]
+====
+
+* `++Fokszám[x^4 + 2 x^2]++` eredménye _4_.
+* `++Fokszám[x^6 y^3 + 2 x^2 y^3]++` eredménye _9_.
+
+====
+
+Fokszám[ <Polinom>, <Változó> ]::
+  Megadja a polinom fokszámát a megadott változóhoz.
+
+[EXAMPLE]
+====
+
+* `++Fokszám[x^4 y^3 + 2 x^2 y^3, x]++` eredménye _4_.
+* `++Fokszám[x^4 y^3 + 2 x^2 y^3, y]++` eredménye _3_.
+
+====

@@ -1,0 +1,89 @@
+= Maximum parancs
+:page-en: commands/Max
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Maximum[ <Lista> ]::
+  Megadja a listán lévő számok maximumát.
+
+[EXAMPLE]
+====
+
+`++Maximum[{-2, 12, -23, 17, 15}]++` eredménye _17_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Ha a lista nem számokat tartalmaz, úgy az objektumokkal összefüggő számok a meghatározóak. Például egy
+listánál, amely szakaszokat tartalmaz, a _Maximum[ <lista> ]_ parancs eredménye a listán lévő leghosszabb szakasz.
+
+====
+
+Maximum[ <Intervallum> ]::
+  Megadja az intervallum felső határát.
+
+[EXAMPLE]
+====
+
+`++Maximum[2 < x < 3]++` eredménye _3_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A parancs nem különbözteti meg a nyitott és zárt intervallumot.
+
+====
+
+Maximum[ <Szám>, <Szám> ]::
+  Megadja a két szám maximumát (a számok közül a nagyobbikat).
+
+[EXAMPLE]
+====
+
+`++Maximum[12, 15]++` eredménye _15_.
+
+====
+
+Maximum[ <Függvény>, <Kezdő x-érték>, <Lezáró x-érték> ]::
+  Kiszámítja egy függvény maximumát a megadott intervallumon (_[kezdő x-érték, lezáró x-érték]_). A függvénynek csak egy
+  maximuma lehet a megadott intervallumon belül.
+
+[EXAMPLE]
+====
+
+`++Maximum[ x^3 + 2x^2 - 1, -2, 0]++` eredménye a (-1.33, 0.19) pont.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd xref:/commands/Szélsőérték.adoc[Szélsőérték], xref:/commands/Minimum.adoc[Minimum] és
+xref:/tools/Függvényvizsgálat.adoc[Függvényvizsgálat].
+
+====
+
+== CAS nézet
+
+Maximum[ <Lista> ]::
+  Megadja a listán lévő számok maximumát.
+
+[EXAMPLE]
+====
+
+`++Maximum[{-2, 12, -23, 17, 15}]++` eredménye _17_.
+
+====
+
+Maximum[ <Szám>, <Szám> ]::
+  Megadja a két szám maximumát (a számok közül a nagyobbikat).
+
+[EXAMPLE]
+====
+
+`++Maximum[12, 15]++` eredménye _15_.
+
+====

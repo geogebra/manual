@@ -1,0 +1,38 @@
+= Kicsinyítés parancs
+:page-en: commands/ZoomOut
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Kicsinyítés[ <Arány> ]::
+  A megadott arányban kicsinyíti a xref:/Geometria_ablak.adoc[geometriai ablakot] (az aktuális nagyságra vonatkozóan). A
+  képernyő közepe a kicsinyítés középpontja.
+
+[EXAMPLE]
+====
+
+`++Kicsinyítés[2]++` a geometriai ablak méretét a felére csökkenti.
+
+====
+
+Kicsinyítés[ <Arány>, <Középpont>]::
+  A megadott arányban kicsinyíti a xref:/Geometria_ablak.adoc[geometriai ablakot] (az aktuális nagyságra vonatkozóan). A
+  megadott pont a nagyítás középpontja.
+
+[EXAMPLE]
+====
+
+`++Kicsinyítés[2, (0, 0)]++`
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* A `++Kicsinyítés[t]++` és `++Kicsinyítés[t, A]++` parancsok egyenlőek a `++Nagyítás[1/t]++` és `++Nagyítás[1/t, A]++`
+parancsokkal.
+* Ha több xref:/Geometria_ablak.adoc[geometriai ablak] van megnyitva, a parancs az aktuális geometriai ablakra
+vonatkozik.
+* Lásd xref:/commands/Nagyítás.adoc[Nagyítás].
+
+====

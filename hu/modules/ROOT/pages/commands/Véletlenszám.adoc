@@ -1,0 +1,53 @@
+= Véletlenszám parancs
+:page-en: commands/RandomBetween
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Véletlenszám[ <Minimum egész>, <Maximum egész> ]::
+  Megad egy véletlenszerű számot a [_minimum egész, maximum egész_] nyitott intervallumon.
+
+[EXAMPLE]
+====
+
+`++Véletlenszám[0, 10]++` eredménye egy _0_ és _10_ közötti véletlenszerű szám (a megadott határértékeket is beleértve).
+
+====
+
+Véletlenszám[ <Legkisebb érték(egész szám)>, <Legnagyobb érték(egész szám>>, <Logikai konstans> ]::
+  Ha a _logikai konstans = true_, úgy egy véletlenszerű számot hoz létre a megadott [_legkisebb érték, legnagyobb
+  érték_] intervallumon, amely csak a fájl újabb megnyitásánál és a _Visszavonás/Újra_ használatánál lesz frissítve.
+
+[EXAMPLE]
+====
+
+`++Véletlenszám[0, 10, true]++` eredménye egy _0_ és _10_ közötti szám (a megadott határértékeket is beleértve.)
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Nyomja meg az [.kcode]#F9# billentyűt, hogy látható legyen a két írásmód közti különbség.
+
+====
+
+== CAS nézet
+
+Véletlenszám[ <Minimum egész>, <Maximum egész> ]::
+  Megad egy véletlenszerű számot a [_minimum egész, maximum egész_] nyitott intervallumon.
+
+[EXAMPLE]
+====
+
+`++Véletlenszám[0, 10]++` eredménye egy _0_ és _10_ közötti véletlenszerű szám (a megadott határértékeket is beleértve).
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd továbbá a xref:/commands/VéletlenszámBinomiálisEloszlás.adoc[VéletlenszámBinomiálisEloszlás],
+xref:/commands/VéletlenszámNormálisEloszlás.adoc[VéletlenszámNormálisEloszlás],
+xref:/commands/VéletlenszámPoissonEloszlás.adoc[VéletlenszámPoissonEloszlás] és
+xref:/commands/VéletlenszámEgyenletesEloszlás.adoc[VéletlenszámEgyenletesEloszlás] parancsokat.
+
+====

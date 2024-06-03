@@ -1,0 +1,61 @@
+= LKKT parancs
+:page-en: commands/LCM
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+LKKT[ <Szám>, <Szám> ]::
+  Meghatározza a két szám legkisebb közös többszörösét.
+LKKT[ <Számok listája> ]::
+  Meghatározza a listán szereplő számok legkisebb közös többszörösét.
+
+[EXAMPLE]
+====
+
+`++LKKT[{12, 30, 18}]++` megadja a _180_-at.
+
+====
+
+[EXAMPLE]
+====
+
+`++LKKT[12, 15]++` megadja a _60_-at.
+
+====
+
+== CAS nézet
+
+LKKT[ <Szám>, <Szám> ]::
+  Meghatározza a két szám legkisebb közös többszörösét.
+LKKT[ <Polinom>, <Polinom> ]::
+  Meghatározza a két polinom legkisebb közös többszörösét.
+LKKT[ <Számok listája> ]::
+  Meghatározza a listán szereplő számok legkisebb közös többszörösét.
+LKKT[ <Polinomok listája> ]::
+  Meghatározza a listán szereplő polinomok legkisebb közös többszörösét.
+
+[EXAMPLE]
+====
+
+`++LKKT[{x^2 + 4 x + 4, x^2 - x - 6, x³ - 4x² - 3x + 18}]++` megadja _x⁴ - 2x³ - 11x² + 12x + 36_-ot.
+
+====
+
+[EXAMPLE]
+====
+
+`++LKKT[{12, 30, 18}]++` megadja a _180_-at.
+
+====
+
+[EXAMPLE]
+====
+
+`++LKKT[x^2 + 4 x + 4, x^2 - x - 6]++` megadja _x³ + x² - 8x - 12_-t.
+
+====
+
+[EXAMPLE]
+====
+
+`++LKKT[12, 15]++` megadja a _60_-at.
+
+====

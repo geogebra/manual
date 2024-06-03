@@ -1,0 +1,24 @@
+= Rangsor parancs
+:page-en: commands/TiedRank
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Rangsor[ <Lista> ]::
+  Megad egy olyan listát, melynek _i_-dik eleme az eredeti lista _i_-dik eleme rangjával egyenlő (elem rangja a
+  xref:/commands/Rendezés.adoc[Rendezés][ <Lista> ]-beli pozicióját jelenti). Ha a lista több azonos elemet tartalmaz,
+  melyek _k_-tól _l_-ig szerepelnek a xref:/commands/Rendezés.adoc[Rendezés][ <Lista> ]-ban, akkor _k_-tól _l_-ig a
+  rangok átlaga jelenik meg az elemek helyén.
+
+[EXAMPLE]
+====
+
+* `++Rangsor[{4, 1, 2, 3, 4, 2}]++` eredménye a \{5.5, 1, 2.5, 4, 5.5, 2.5} lista.
+* `++Rangsor[{3, 2, 2, 1}]++` eredménye a \{4, 2.5, 2.5, 1} lista.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd továbbá a xref:/commands/Sorrend.adoc[Sorrend parancsot].
+
+====

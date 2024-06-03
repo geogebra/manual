@@ -1,0 +1,36 @@
+= SzórásNégyzet parancs
+:page-en: commands/Variance
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+SzórásNégyzet[ <Számok listája> ]::
+  Meghatározza a listát alkotó számok szórásnégyzetét.
+SzórásNégyzet[ <Számok listája>, <Gyakoriságok listája> ]::
+  Meghatározza a listát alkotó számok szórásnégyzetét a gyakoriságok figyelembe vételével.
+
+[EXAMPLE]
+====
+
+`++ SzórásNégyzet[{1, 2, 3} , {1, 2, 1}]++` eredménye _0.5_.
+
+====
+
+[EXAMPLE]
+====
+
+`++SzórásNégyzet[{1, 2, 3}]++` megadja _0.67_-et.
+
+====
+
+== CAS nézet
+
+SzórásNégyzet[ <Számok listája> ]::
+  Meghatározza a listát alkotó számok szórásnégyzetét. Ha a lista nem definiált változót tartalmaz, akkor a
+  szórásnégyzet meghatározására alkalmas képletet ad.
+
+[EXAMPLE]
+====
+
+* `++SzórásNégyzet[{1, 2, a}]++` eredménye a _stem:[\frac\{2}\{9} a^\{2} - \frac\{2}\{3} a + \frac\{2}\{3}]_ képlet.
+* `++SzórásNégyzet[{1, 2, a} {20, 3, 1}]++` eredménye _0_.
+
+====

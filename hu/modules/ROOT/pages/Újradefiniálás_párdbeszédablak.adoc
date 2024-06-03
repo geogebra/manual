@@ -1,0 +1,75 @@
+= Újradefiniálás párdbeszédablak
+:page-en: Redefine_Dialog
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Az újradefiniálás egy egyszerű módszer az alakzatok megváltoztatására, de nem szabad elfelejteni, hogy ezzel a
+folyamattal megváltozhatnak a xref:/A_szerkesztés_lépései.adoc[szerkesztés lépései].
+
+[NOTE]
+====
+
+*Jegyzet:* Csak létező objektumokat lehet újradefiniálni. Lehetséges, hogy a szerkesztés lépéseit át kell rendeznie.
+
+====
+
+A GeoGebrában az újradefiniálás következőképpen működik:
+
+* Aktiválja a image:Tool_Move.gif[Tool Move.gif,width=32,height=32] xref:/tools/Mozgatás.adoc[Mozgatás eszközt] és
+kétszer kattintson egy alakzatra az xref:/Algebra_nézet.adoc[Algebra nézetben].
+
+* Szabad objektumoknál megnyílik egy ablak, amelyben szerkesztheti az alakzat algebrai megjelenítését. Változások
+elmentéséhez nyomja meg az [.kcode]#Enter#-t.
+* Függő alakzatoknál az újradefiniálás párbeszédablak nyílik meg, amelyben az alakzat definícióját megváltoztathatja.
+
+* Aktiválja a image:Tool_Move.gif[Tool Move.gif,width=32,height=32] xref:/tools/Mozgatás.adoc[Mozgatás eszközt] és
+kétszer kattintson egy alakzatra az xref:/Geometria_ablak.adoc[rajzlapon].
+
+* Egy alakzat megváltoztatásához írja annak nevét és az új paramétereit a beviteli mezőbe, majd nyomja meg az
+[.kcode]#Enter#-t.
+* Nyissa meg egy alakzatnál a xref:/Tulajdonságok_párbeszédablak.adoc[Tulajdonságok párbeszédablakot] és változtassa meg
+annak definícióját a _Tulajdonságok... -> Alap_ beállításnál.
+
+* A GeoGebra 4.2-es verziójától az éppen létrehozott objektumok újradefiniálása egy tetszőleges billentyű megnyomásával
+lehetséges.
+
+[NOTE]
+====
+
+*Jegyzet:* Fix objektumokat nem lehet újradefiniálni. Az újradefiniálás előtt előbb szabaddá kell tenni őket (a
+xref:/Tulajdonságok_párbeszédablak.adoc[Tulajdonságok párbeszédablakban] beállítható.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Már létező objektumok a beviteli mezőben is újradefiniálhatóak.
+
+[EXAMPLE]
+====
+
+Írja az `++a:szakasz[A, B]++` kódot a beviteli mezőbe, hogy újradefiniálja az `++a++`-t.
+
+====
+
+====
+
+== Példák
+
+[EXAMPLE]
+====
+
+Egy létező _A_ pont egy létező _h_ egyenesre illesztéséhez kattintson kétszer a pontra a
+xref:/Geometria_ablak.adoc[Geometria ablakban]. Írja a `++Pont[h]++` kódot a megnyíló újradefiniálás párbeszédablak
+beviteli mezejébe és üssön [.kcode]#Enter#-t. Az _A_ pontot szabad koordináták (pl. _(1, 2)_) megadásával
+felszabadíthatja.
+
+====
+
+[EXAMPLE]
+====
+
+Egy két, _A_ és _B_ ponton áthaladó _h_ egyenesből úgy definiálhat szakaszt, hogy az újradefiniálás párbeszédablak
+beviteli mezejébe a következő kódot írja: `++Szakasz[A, B]++`.
+
+====

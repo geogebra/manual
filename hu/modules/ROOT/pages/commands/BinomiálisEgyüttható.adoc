@@ -1,0 +1,35 @@
+= BinomiálisEgyüttható parancs
+:page-en: commands/BinomialCoefficient
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+BinomiálisEgyüttható[ <Szám (n)>, <Szám (k)> ]::
+  Kiszámolja az stem:[ n \choose k ] kifejezés binomiális együtthatóját. Az első szám az összes elem száma (n), a
+  második pedig a választott elemek száma (k).
+
+[EXAMPLE]
+====
+
+A `++BinomiálisEgyüttható[5, 3]++` parancs eredménye _10_.
+
+====
+
+== CAS nézet
+
+BinomiálisEgyüttható[ <Szám (n)>, <Szám (k)> ]::
+  Kiszámolja a stem:[ n \choose k ] kifejezés binomiális együtthatóját. Az első szám az összes elem száma (n), a második
+  pedig a választott elemek száma (k). Ha a megadott érték nem definiált változót tartalmaz, a parancs a binomiális
+  együttható kiszámolásához szükséges képletet eredményezi.
+
+[EXAMPLE]
+====
+
+A `++BinomiálisEgyüttható[n, 3]++` parancs eredménye stem:[\frac\{n^\{3} - 3 n^\{2} + 2 n}\{6}].
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd még az xref:/commands/NPr.adoc[nPr parancsot].
+
+====

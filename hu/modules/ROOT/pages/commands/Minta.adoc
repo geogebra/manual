@@ -1,0 +1,48 @@
+= Minta parancs
+:page-en: commands/Sample
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Minta[ <Lista>, <Elemszám> ]::
+  Listát generál az eredeti lista elemei közül _n_-t véletleszerűen kiválasztva. A kiválasztott elemek ismétlődhetnek.
+
+[EXAMPLE]
+====
+
+`++Minta[{1, 2, 3, 4, 5}, 5]++` megadja például _\{1, 2, 1, 5, 4}_-et.
+
+====
+
+Minta[ <Lista>, <Elemszám>, <Logikai érték ismétlődésre> ]
+
+Listát generál az eredeti lista elemei közül _n_-t véletleszerűen kiválasztva. A kiválasztott elemek csak abban az
+esetben ismétlődhetnek, ha a logikai érték igaz.
+
+[EXAMPLE]
+====
+
+`++Minta[{1, 2, 3, 4, 5}, 5, true]++` megadja például _\{2, 3, 3, 4, 5}_-öt.
+
+====
+
+== CAS nézet
+
+Minta[ <Lista>, <Elemszám> ]::
+  Listát generál az eredeti lista elemei közül _n_-t véletleszerűen kiválasztva. A kiválasztott elemek ismétlődhetnek.
+Minta[ <Lista>, <Elemszám>, <Logikai érték ismétlődésre> ]::
+  Listát generál az eredeti lista elemei közül _n_-t véletleszerűen kiválasztva. A kiválasztott elemek csak abban az
+  esetben ismétlődhetnek, ha a logikai érték igaz.
+
+[EXAMPLE]
+====
+
+A lista elemei között szerepelhet lista is: Legyen _Lista1_ _\{1, 2, 3}_.`++Minta[{Lista1, 4, 5, 6, 7, 8}, 3, false]++`
+megadja például _\{6, \{1, 2, 3}, 4}_-et.
+
+====
+
+[EXAMPLE]
+====
+
+`++Minta[{-5, 2, a, 7, c}, 3]++` megadja például _\{a, 7, -5}_-öt.
+
+====

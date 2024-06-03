@@ -1,0 +1,28 @@
+= WeibullEloszlás parancs
+:page-en: commands/Weibull
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+WeibullEloszlás[ <Alakparaméter>, <Skálaparaméter>, x ]::
+  Megrajzolja az __Alakparaméter__rel és a __Skálaparaméter__rel meghatározott Weibull eloszlás sűrűségfüggvényét (PDF).
+WeibullEloszlás[ <Alakparaméter>, <Skálaparaméter>, x, <Eloszlásfüggvény logikai értéke> ]::
+  Ha a logikai érték igaz, megrajzolja a Weibull eloszlású valószínűségi változó eloszlásfüggvényét. Ha hamis, akkor a
+  sűrűségfüggvényét.
+WeibullEloszlás[ <Alakparaméter>, <Skálaparaméter>, <Változó értéke> ]::
+  Kiszámítja az adott változóra az eloszlásfüggvény értékét, vagyis P(X≤v)-t, ahol X az __Alakparaméter__rel és a
+  __Skálaparaméter__rel meghatározott Weibull eloszlású valószínűségi változó.
+
+[NOTE]
+====
+
+*Jegyzet:* Meghatározza a valószínűséget adott _x_ koordináta értékre (vagy a Weibull eloszlás görbéje alatti területet
+az adott _x_ koordinátánál kisebb értékekre).
+
+====
+
+== CAS nézet
+
+xref:/CAS_nézet.adoc[CAS nézet]-ben csak egy szintakszis elfogadott:
+
+WeibullEloszlás[ <Alakparaméter>, <Skálaparaméter>, <Változó értéke> ]::
+  Kiszámítja az adott változóra az eloszlásfüggvény értékét, vagyis P(X≤v)-t, ahol X az __Alakparaméter__rel és a
+  __Skálaparaméter__rel meghatározott Weibull eloszlású valószínűségi változó.

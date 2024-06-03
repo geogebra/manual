@@ -1,0 +1,24 @@
+= AlakzatokKijelölése parancs
+:page-en: commands/SelectObjects
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+AlakzatokKijelölése[]::
+  Megszüntetni az alakzatok kijelölését.
+AlakzatokKijelölése[ <Alakzat>, <Alakzat>,... ]::
+  Korábbi alakzatok kijelölését megszünteti, s kiemeli a paraméterlistában szereplő alakzatokat. Minden paraméternek
+  xref:/Címkék_és_feliratok.adoc[névvel ellátott] alakzatnak kell lennie.
+
+[EXAMPLE]
+====
+
+* Adottak _A_, _B_ és _C_ pontok. Az `++AlakzatokKijelölése[A, B, C]++` parancs kijelöli az _A_, _B_ és _C_ pontokat.
+* Az `++AlakzatokKijelölése[Felezőpont[A, B]]++` parancs nem csinál semmit.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Ennek a parancsnak a hatását az egér vonszolása megszűnteti (szkriptekben hasznos lehet).
+
+====

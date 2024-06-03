@@ -1,0 +1,449 @@
+= HangLejátszás parancs
+:page-en: commands/PlaySound
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+HangLejátszás[ <Hang>, <Időtartam (secundum)>, <Hangszer száma> ]::
+  Lejátssza az adott http://de.wikipedia.org/wiki/Musical_Instrument_Digital_Interface[MIDI hangot], megadott
+  időtartammal.
+  A hangnak egy _0_ és _127_ közötti számnak kell lennie. Minden szám egy MIDI-hangot jelöl az alábbi táblázat szerint.
+  Pl. a _hang = 60a_ egy _C_ hang.
+  Az időtartamot másodpercben kell megadni.
+  A hangszer száma egy egész szám, amely meghatározza, hogy milyen szintetikus hangszer játssza le a hangot. A különböző
+  rendszereken más-más hangszerek támogatottak.
+
+*MIDI hangok*
+
+Oktáv
+
+C
+
+C#
+
+D
+
+D#
+
+E
+
+F
+
+F#
+
+G
+
+G#
+
+A
+
+A#
+
+B
+
+*0*
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+*1*
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+
+21
+
+22
+
+23
+
+*2*
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+31
+
+32
+
+33
+
+34
+
+35
+
+*3*
+
+36
+
+37
+
+38
+
+39
+
+40
+
+41
+
+42
+
+43
+
+44
+
+45
+
+46
+
+47
+
+*4*
+
+48
+
+49
+
+50
+
+51
+
+51
+
+53
+
+54
+
+55
+
+56
+
+57
+
+58
+
+59
+
+*5*
+
+60
+
+61
+
+62
+
+63
+
+64
+
+65
+
+66
+
+67
+
+68
+
+69
+
+70
+
+71
+
+*6*
+
+72
+
+73
+
+74
+
+75
+
+76
+
+77
+
+78
+
+79
+
+80
+
+81
+
+82
+
+83
+
+*7*
+
+84
+
+85
+
+86
+
+87
+
+88
+
+89
+
+90
+
+91
+
+92
+
+93
+
+94
+
+95
+
+*8*
+
+96
+
+97
+
+98
+
+99
+
+100
+
+101
+
+102
+
+103
+
+104
+
+105
+
+106
+
+107
+
+*9*
+
+108
+
+109
+
+110
+
+111
+
+112
+
+113
+
+114
+
+115
+
+116
+
+117
+
+118
+
+119
+
+*10*
+
+120
+
+121
+
+122
+
+123
+
+124
+
+125
+
+126
+
+127
+
+HangLejátszás[ <Hangsor>, <Hangszer száma> ]::
+  Lejátssza a megadott hangsort a http://www.jfugue.org[JFuge] segítségével.
+  A hangsor egy szöveg, amely JFuge parancsokat tartalmaz.
+  A hangszer száma meghatározza, hogy milyen szintetikus hangszer játssza le a hangsort.
+  Az alapvető parancsokat az alábbi táblázat foglalja össze. Egy teljes listát itt talál:
+  http://www.jfugue.org/jfugue-chapter1.pdf%7CThe[Complete Guide to JFugue]
+
+*Alap JFugue parancsok*
+
+Karakter
+
+Parancs
+
+A-G
+
+A (betűként) megadott hangot lejátssza az 5. oktávban.
+
+Félhangok lejátszására írja hozzá a b vagy a # jelet
+
+Az oktáv megváltoztatásához írja hozzá a kívánt oktáv számát, pl. A4
+
+Ha nem lett másképp megadva, úgy a hang egy negyed hang.
+
+{empty}[szám]
+
+Lejátssza a (számként) megadott MIDI-hangot (0-127).
+
++
+
+A megadott hangokat egyszerre játssza le, pl. C+E+G
+
+R
+
+Szünet
+
+w, h, q, i, s
+
+A hanghoz írva megadja annak hosszát
+
+w = egész hang
+
+h = fél hang
+
+q = negyed hang
+
+i = nyolcad hang
+
+s = tizenhatod hang
+
+/n
+
+A végéhez hozzáírva meghatározza a hang/szünet hosszát (tizedesszámként megadva)
+
+/1 = egész hang
+
+/.5 = fél hang
+
+/.25 = negyed hang
+
+/2 = kétszeres hanghossz
+
+I[szám]
+
+A hangszer száma
+
+V
+
+V egy _0_ és _15_ közötti számmal együtt a MIDI-csatornát határozza meg. A _V9_ a MIDI-Percussion-csatorna.
+
+Szóköz
+
+Lejátssza az azelőtti hangot, hangokat vagy a szünetet.
+
+[EXAMPLE]
+====
+
+`++ HangLejátszás["C+E+G  Rw  Ai Bi Ci  A4i B4i C4i ", 0]++`
+
+Negyed CEG, egész szünet, nyolcad A, B és C, majd az egész egy oktávval mélyebben. A választott hangszer a zongora.
+
+====
+
+[EXAMPLE]
+====
+
+`++ HangLejátszás["I[56] C5q D5q I[71] G5q F5q", 0]++`
+
+Különböző hangszerekkel játssza le a hangokat. Trombita = 56 és Klarinét = 71.
+
+====
+
+[EXAMPLE]
+====
+
+`++ HangLejátszás["V0 A3q B3q C3q B3q V1 A2h C2h", 0]++`
+
+Különböző hangon játssza le a sort.
+
+====
+
+HangLejátszás[ <Fájl> ]::
+  Lejátssza az adott MIDI-fájlt (*.mid) vagy egy egyszerű szövegfájlt (*.txt), ha az JFuge szöveget tartalmaz.
+  Pl. HangLejátszás["path/to/my/File.mid"]
+
+HangLejátszás[ <Függvény>, <Kezdőérték>, <Végérték> ]::
+  Lejátssza azt az idő-érték hangot, amelyet a függvény a [-1, 1] intervallumon létrehoz. Az időegység másodpercben van
+  megadva, a lejátszás a kezdőérték és a végérték között történik. A hangot 8 bitben, 8000-es mintavételezési
+  frekvenciával hozza létre.
+
+[EXAMPLE]
+====
+
+`++ HangLejátszás[sin(440 2Pi x), 0, 1]++`
+
+Egy 440 Hz-es szinuszgörbe hangját (A hang) játssza le 1 másodperces időtartammal.
+
+====
+
+Hanglejátszás[ <Függvény>, <Kezdőérték>, <Végérték>, <Mintavétel sűrűsége>, <Mintavétel mélysége> ]::
+  Lejátssza azt az idő-érték hangot, amelyet a függvény a [-1, 1] intervallumon létrehoz. Az időegység másodpercben van
+  megadva, a lejátszás a kezdőérték és a végérték között történik. A mintavétel sűrűsége és mélysége megadható.
+  A "Mintavétel sűrűsége" a másodpercenkénti mintavételt jelenti. Engedélyezett értékek: _8000, 16000, 22050_ és
+  _44100_.
+  A "Mintavétel mélysége" egy minta nagysága bitben megadva. Engedélyezett értékek: _8_ és _16_.
+
+Hanglejátszás[ <Logikai érték lejátszáshoz> ]::
+  A logikai értéktől függően elindítja vagy szünetelteti a lejátszást.
+  _true_ = lejátszás, _false_ = szüneteltetés.
+
+http://www.jfugue.org/exchange.html[További információ és példák a JFuge-hoz]

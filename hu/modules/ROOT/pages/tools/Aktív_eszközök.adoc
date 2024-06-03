@@ -1,0 +1,58 @@
+= Aktív eszközök
+:page-en: Action_Objects
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+A xref:/Szkriptelés.adoc[szrkiptelést] tartalmazó interaktív munkalapoknál hasznos lehet az aktív eszközök használata.
+Az aktív eszközöknek négy típusa létezik:
+
+== Jelölőnégyzetek
+
+A jelölőnégyzetek a xref:/Logikai_értékek.adoc[Logikai értékek] grafikus megfelelői. Részletekért lásd a
+image:22px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=22,height=22]
+xref:/tools/Jelölőnégyzet_alakzatok_elrejtéséhez_és_megjelenítéséhez.adoc[Jelölőnégyzet alakzatok elrejtéséhez és
+megjelenítéséhez eszköz] oldalt. Jelölnégyzeteket a fent említett eszköz segítségével, vagy a
+xref:/commands/Jelölőnégyzet.adoc[Jelölőnégyzet paranccsal] lehet létrehozni.
+
+== Beviteli mezők
+
+A beviteli mezők a xref:/Szkriptelés.adoc[Szkriptelés] szövegbevitelét szolgálja. The script is triggered by changing
+text in the Input Box and either pressing enter or leaving the Input Box. The inserted value may be accessed using the
+%0 variable.
+
+[EXAMPLE]
+====
+
+Input Box with `++a=a+%0++` in script will increase number _a_ by the entered value. Works only if _a_ is
+xref:/Szabad_Függő_és_Segéd_alakzatok.adoc[free].
+
+====
+
+If you want the Input Box to change value of a free object (or redefine dependent object), you may define that object as
+linked. This way you don't have to insert any script. Input Boxes can be created using the
+image:22px-Mode_textfieldaction.svg.png[Mode textfieldaction.svg,width=22,height=22]
+xref:/tools/Beviteli_mező_beszúrása.adoc[Beviteli mező beszúrása eszköz] or the
+xref:/commands/BeviteliMező.adoc[BeviteliMező parancs].
+
+== Gombok
+
+Buttons are meant to trigger scripts by being clicked. Although scripts can be triggered by clicking any other object
+(e.g. an xref:/tools/Kép_beszúrása.adoc[kép]), using buttons for this makes your worksheet more intuitive. Buttons can
+be created using the image:22px-Mode_buttonaction.svg.png[Mode buttonaction.svg,width=22,height=22]
+xref:/tools/Gomb_beszúrása.adoc[Gomb beszúrása eszköz] or the xref:/commands/Gomb.adoc[Gomb parancs].
+
+== Legördülő listák
+
+If you want to show the contents of a list in a drop-down list
+
+* in the image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Geometria_ablak.adoc[Geometria ablak]: check the _Draw as drop-down list_ box in the _Basics_ tab of the
+image:18px-Menu-options.svg.png[Menu-options.svg,width=18,height=18]
+xref:/Tulajdonságok_párbeszédablak.adoc[Tulajdonságok párbeszédablak] of the list.
+* in the image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+xref:/Táblázatkezelő_nézet.adoc[Táblázatkezelő nézet]: enter a list into the spreadsheet, then check the _Use Buttons
+and Checkboxes_ box in the image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+_Spreadsheet Options_.
+
+The selected element of a drop-down list may be also obtained using
+xref:/commands/KijelöltElemSorszáma.adoc[KijelöltElemSorszáma] és xref:/commands/KijelöltElem.adoc[KijelöltElem]
+parancsok.

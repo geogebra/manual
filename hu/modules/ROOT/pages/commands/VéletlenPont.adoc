@@ -1,0 +1,25 @@
+= VéletlenPont parancs
+:page-en: commands/RandomPointIn
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+RandomPointIn[ <Region> ]
+
+Creates a random point inside given polygon or conic.
+
+RandomPointIn[ <List of Points> ]
+
+Returns a random point inside the polygon with given vertices.
+
+[EXAMPLE]
+====
+
+`++RandomPointIn[Polygon[A,B,C]]++` and `++RandomPointIn[A,B,C]++` both give random point inside triangle ABC.
+
+====
+
+To get a random point that belongs to the list use
+xref:/s_index_php?title=RandomElement_Command_action=edit_redlink=1.adoc[Random Element] instead.
+
+RandomPointIn[ <xMin>, <xMax>, <yMin>, <yMax> ]
+
+Creates a random point with x-coordinate from interval [xMin,xMax] and y-coordinate from interval [yMin, yMax].

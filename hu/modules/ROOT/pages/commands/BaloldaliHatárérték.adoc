@@ -1,0 +1,38 @@
+= BaloldaliHatárérték parancs
+:page-en: commands/LimitBelow
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+BaloldaliHatárérték[ <Függvény>, <Érték> ]::
+  Meghatározza a függvény baloldali határértékét a változó adott értékére.
+
+== CAS nézet
+
+BaloldaliHatárérték[ <Kifejezés>, <Érték> ]::
+  Meghatározza a kifejezés baloldali határértékét a változó adott értékére.
+
+[EXAMPLE]
+====
+
+`++BaloldaliHatárérték[1 / x, 0]++` megadja stem:[-\infty]-t .
+
+====
+
+BaloldaliHatárérték[ <Kifejezés>, <__v__ Változó>, <__t__ Érték> ]::
+  Meghatározza a többváltozós kifejezés baloldali határértékét a változó adott értékére.
+
+[EXAMPLE]
+====
+
+`++BaloldaliHatárérték[1 / a, a, 0]++` megadja stem:[-\infty]-t.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+Lásd még a xref:/commands/Határérték.adoc[Határérték parancs]-ot és a
+xref:/commands/JobboldaliHatárérték.adoc[JobboldaliHatárérték parancs]-ot.
+
+====

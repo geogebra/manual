@@ -1,0 +1,37 @@
+= Rendezés parancs
+:page-en: commands/Sort
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Rendezés[ <Lista> ]::
+  Rendezi a listát, melynek elemei lehetnek számok, szavak vagy pontok.
+
+[NOTE]
+====
+
+*Jegyzet:* Pontok listáját az _x_ koordináta szerint rendezi.
+
+====
+
+[EXAMPLE]
+====
+
+* `++Rendezés[{3, 2, 1}]++` megadja az _\{1, 2, 3}_ listát.
+* `++Rendezés[{"szilva", "alma", "fa"}]++` a lista elemeit ABC szerint rendezi.
+* `++Rendezés[{(3, 2), (2, 5), (4, 1)}]++` megadja a _\{(2, 5), (3, 2), (4, 1)}_ listát.
+
+====
+
+Rendezés[ <Értékek>, <Kulcsok> ]::
+  Rendezi az első lista értékeit a hozzá tartozó, második listán lévő kulcsok figyelembe vételével.
+
+[EXAMPLE]
+====
+
+* Ha pl. a `++Lista1 = {x^3, x^2, x^6}++` polinomokat szeretné fokszámuk szerint rendezni, először hozza létre a
+fokszámokat tartalmazó listát: `++Lista2 = EredményLista[Fokszám[a], a, Lista]++`.A `++Rendezés[Lista1, Lista2]++`
+parancs eredménye a polinomok kívánt sorrendje: _Lista3 = \{x^2, x^3, x^6}_. (A _Lista3_ a _Lista2_ létrehozása, mint
+köztes lépés, nélkül is létrehozható).
+* Hozza létre a `++Lista1 = {KomplexGyök[x^10-1]}++` listát. A `++Sokszög[Rendezés[Lista1, arg(Lista1)]]++` paranccsal a
+következő sokszöget kapja: _Sokszög1 = 2.94_.
+
+====

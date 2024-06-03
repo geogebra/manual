@@ -1,0 +1,28 @@
+= TEloszlás parancs
+:page-en: commands/TDistribution
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+TEloszlás[ <Szabadságfokok>, x ]::
+  Megrajzolja a __Szabadságfokok__kal meghatározott T eloszlás sűrűségfüggvényét (PDF).
+TEloszlás[ <Szabadságfokok>, x , <Eloszlásfüggvény logikai értéke> ]::
+  Ha a logikai érték igaz, megrajzolja a T eloszlású valószínűségi változó eloszlásfüggvényét. Ha hamis, akkor a
+  sűrűségfüggvényét.
+TEloszlás[ <Szabadságfokok>, <Változó értéke> ]::
+  Kiszámítja az adott változóra az eloszlásfüggvény értékét, vagyis P(X≤v)-t, ahol X a __Szabadságfokok__kal
+  meghatározott T eloszlású valószínűségi változó.
+
+[NOTE]
+====
+
+*Jegyzet:* Meghatározza a valószínűséget adott _x_ koordináta értékre (vagy a T eloszlás görbéje alatti területet az
+adott _x_ koordinátánál kisebb értékekre).
+
+====
+
+== CAS nézet
+
+xref:/CAS_nézet.adoc[CAS nézet]-ben csak egy szintakszis elfogadott:
+
+TEloszlás[ <Szabadságfokok>, <Változó értéke> ]::
+  Kiszámítja az adott változóra az eloszlásfüggvény értékét, vagyis P(X≤v)-t, ahol X a __Szabadságfokok__kal
+  meghatározott T eloszlású valószínűségi változó.

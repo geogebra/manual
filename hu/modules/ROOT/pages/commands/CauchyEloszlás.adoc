@@ -1,0 +1,33 @@
+= CauchyEloszlás parancs
+:page-en: commands/Cauchy
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+CauchyEloszlás[ <Medián>, <Szélesség>,x ]::
+  Megrajzolja a Cauchy-eloszlás sűrűségfüggvényét (PDF).
+CauchyEloszlás[ <Medián>, <Szélesség>, x, <Eloszlásfüggvény logikai értéke> ]::
+  Ha a logikai érték igaz, megrajzolja a Cauchy-eloszlás eloszlásfüggvényét. Ha hamis, akkor a Cauchy-eloszlás
+  sűrűségfüggvényét.
+CauchyEloszlás[ <Medián>, <Szélesség>, <Változó értéke> ]::
+  Kiszámítja az adott változóra az eloszlásfüggvény értékét, vagyis _P(X≤v)_-t, ahol _X_ egy a medián és a szélesség
+  által meghatározott Cauchy valószínűségi változó.
+
+[NOTE]
+====
+
+*Jegyzet:* Meghatározza a valószínűséget adott _x_ koordináta értékre (vagy a Cauchy-eloszlás görbéje alatti területet
+az adott _x_ koordinátánál kisebb értékekre).
+
+====
+
+== CAS nézet
+
+CauchyEloszlás[ <Medián>, <Szélesség>, <Változó értéke> ]::
+  Kiszámítja az adott változóra az eloszlásfüggvény értékét, vagyis _P(X≤v)_-t, ahol _X_ egy a medián és a szélesség
+  által meghatározott Cauchy valószínűségi változó.
+
+[EXAMPLE]
+====
+
+`++CauchyEloszlás[1, 2, 3]++` megadja a _stem:[\frac\{3}\{4}]_-et.
+
+====

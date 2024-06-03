@@ -1,0 +1,58 @@
+= Csúcspont parancs
+:page-en: commands/Vertex
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Csúcspont[ <Kúpszelet> ]::
+  Megadja a kúspszelet összes csúcsát.
+
+CsúcsPont[ <Egyenlőtlenség> ]::
+  Megadja az egyenlőtlenség széleinek metszéspontjait.
+
+[EXAMPLE]
+====
+
+* `++ CsúcsPont[(x + y < 3) && (x - y > 1)]++` eredménye a következő pont: _A = (2, 1)_.
+* `++{CsúcsPont[(x + y < 3) ∧ (x - y > 1) && (y > - 2)]}++` eredménye a következő lista: _lista1 = \{(2, 1), (5, -2),
+(-1, -2)}_.
+* `++ CsúcsPont[(y > x²) ∧ (y < x)]++` eredménye a következő két pont: _A = (0, 0)_ és _B = (1, 1)_.
+* `++{CsúcsPont[(y > x²) ∧ (y < x)]}++` eredménye a következő lista: _lista1 = \{(0, 0), (1, 1)}_.
+
+====
+
+Csúcspont[ <Sokszög> ]::
+  Megadja a sokszög összes csúcspontját.
+
+Csúcspont[ <Sokszög>, <Sorszám> ]::
+  Megadja a sokszög n-edik (sorszám) csúcspontját.
+
+[NOTE]
+====
+
+*Jegyzet:* A sokszög/kúpszelet csúcspontjait tartalmazó xref:/Listák.adoc[listát] a következőképpen kaphatja meg:
+`++{Csúcspont[Object]}++`.
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Following text is about a feature that is supported only in 5.0 beta version.
+
+'''''
+
+[NOTE]
+====
+
+*Jegyzet:* A GeoGebra 5-ös verziójától ez a parancs 3D-s alakzatokkal is fog működni.
+
+Csúcspont[ <Kúpszelet> ]::
+  Megadja a kúspszelet összes csúcsát.
+Vertex[ <Sokszög> ]::
+  Megadja a sokszög összes csúcspontját.
+
+====
+
+|===

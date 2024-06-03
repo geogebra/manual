@@ -1,0 +1,39 @@
+= GyakoriságGrafikon parancs
+:page-en: commands/FrequencyPolygon
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+*Jegyzet:* A gyakorisági grafikon egy olyan vonaldiagram, melynél egy hisztogram oszlopainak felső felezőpontjai vannak
+összekötve. A parancs alkalmazása megfelel a xref:/commands/Hisztogram.adoc[Hisztogram] parancs alkalmazásával.
+
+====
+
+GyakoriságGrafikon[ <Osztályok határainak listája>, <Magasságok listája>]::
+  Létrehoz egy gyakorisági grafikont a megadott magasságok listájából. Az osztályok határainak listája határozza meg a
+  csomópontok x koordinátáját.
+
+GyakoriságGrafikon[ <Osztályok határainak listája>, <Nyers adatok listája>, <Logikai érték (Sűrűség?)>, <Sűrűségi
+tényező (opcionális)> ]::
+  Létrehoz egy gyakorisági grafikont a megadott nyers adatok listájából. Az osztályok határainak listája a csomópontok x
+  koordinátáját és az osztályok adatelemeinek számát határozza meg. A csomópontok y koordinátája a következőképpen kerül
+  meghatározásra:
+
+* Ha a _logikai érték = true_, úgy az oszlopmagasság (y) = (Sűrűségi tényező) * (Osztály gyakorisága) /
+(Osztályszélesség)
+* Ha a _logikai érték = false", úgy az oszlopmagasság (y) = Osztály gyakorisága._
+
+Az alapértelmezett _logikai érték = true_ és _Sűrűségi tényező = 1_.
+
+GyakoriságGrafikon[ <Logikai érték (Halmozott?)>, <Osztályok határainak listája>, <Nyers adatok listája>, <Logikai érték
+(Sűrűség?)>, <Sűrűségi tényező (opcionális)> ]::
+  Ha a _logikai érték (Halmozott?) = true_, akkor egy olyan Gyakoriági grafikont hoz létre, melynél minden csomópont y
+  koordinátája az osztályok gyakoriságának és az előtte lévő gyakoriságok összege.
+
+[NOTE]
+====
+
+*Jegyzet:* Példákért lásd a xref:/commands/Hisztogram.adoc[Hisztogram] parancsot.
+
+====

@@ -1,0 +1,32 @@
+= Osztályok parancs
+:page-en: commands/Classes
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Osztályok[ <Adat lista>, <Osztályok száma> ]::
+  Az osztályok határainak listáját adja meg. Az első határ egyenlő az adat lista legkisebb elemével, az utolsó határ
+  egyenlő a legnagyobb listabeli elemmel. Az osztályok szélessége egyenlő.
+
+[EXAMPLE]
+====
+
+`++Osztályok[{0.1, 0.2, 0.4, 1.1}, 0, 1]++` eredménye \{0, 1, 2}.
+
+====
+
+Osztályok[ <Adat lista>, <Kezdeti érték>, <Osztályok szélessége> ]::
+  Az osztályok határainak listáját adja meg. Az első határ egyenlő a kezdeti értékkel, az utolsó határ egyenlő a
+  legnagyobb listabeli elemmel, az osztályok szélessége a megadott paraméter.
+
+[EXAMPLE]
+====
+
+`++Osztályok[{1, 3, 5, 7, 8, 9, 10}, 3]++` eredménye \{1, 4, 7, 10}.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A parancs minden osztálynál az a ≤ x < b szabályt használja, kivéve az utolsó osztálynál, amely a ≤ x ≤ b.
+
+====

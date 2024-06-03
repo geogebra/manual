@@ -1,0 +1,61 @@
+= NumerikusMegoldás parancs
+:page-en: commands/NSolutions
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Ez a parancs csak xref:/CAS_nézet.adoc[CAS nézetben] érhető el..
+
+NumerikusMegoldás[ <Egyenlet> ]::
+  Kiszámítja az adott egyenlet numerikus megoldásait az _x_ változóra.
+
+[EXAMPLE]
+====
+
+`++NumerikusMegoldás[cos(x) = x]++` eredménye _\{0.74}_ vagy _\{0.739085133215165}_ (a tizedesvessző utáni számjegyek
+száma a választott xref:/Beállítások_menü.adoc[beállításon] múlik.)
+
+====
+
+NumerikusMegoldás[ <Egyenlet>, <Változó> ]::
+  Kiszámítja az adott egyenlet numerikus megoldásait a megadott ismeretlen változóra.
+
+[EXAMPLE]
+====
+
+`++NumerikusMegoldás[a^4 + 34a^3 = 34, a]++` eredménye a következő lista: _\{a = -34.0008649858, a = 0.9904738885}_.
+
+====
+
+NumerikusMegoldás[ <Egyenlet>, <Változó=Kezdőérték> ]::
+  Kiszámítja az adott egyenlet numerikus megoldásait az ismeretlen változóra, megadott kezdőértékkel.
+
+[EXAMPLE]
+====
+
+* `++ NumerikusMegoldás[cos(x) = x, x = 0]++` eredménye _\{0.74}_
+* `++NumerikusMegoldás[a^4 + 34a^3 = 34, a = 3]++` eredménye a következő lista: _\{-34, 0.99}_.
+
+====
+
+NumerikusMegoldás[ <Egyenletek listája>, <Változók listája> ]::
+  Kiszámítja az adott egyenletrendszer numerikus megoldásait a megadott ismeretlen változókra.
+
+[EXAMPLE]
+====
+
+`++NumerikusMegoldás[{π / x = cos(x - 2y), 2 y - π = sin(x)}, {x = 3, y = 1.5}]++` eredménye a következő lista: _\{3.14,
+1.57}_
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* Ha nincsen kezdőérték megadva (pl. _a = 3_ vagy \{_x = 3, y = 1.5_}), akkor előfordulhat, hogy a numerikus algoritmus
+csak nehezen, vagy egyáltalán nem talál megoldást (kezdőérték megadásával sem garantált az egyenlet megoldása).
+* A tizedesvessző utáni számjegyek száma a xref:/Beállítások_menü.adoc[beállításoknál] adható meg.
+* A π az [.kcode]#Alt # + [.kcode]# p# billentyűkombinációval érhető el.
+* Lásd a xref:/commands/Megold.adoc[Megold] és xref:/commands/NumerikusanMegold.adoc[NumerikusanMegold] parancsokat.
+
+====

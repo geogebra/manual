@@ -1,0 +1,52 @@
+= SarokPont parancs
+:page-en: commands/Corner
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+SarokPont[ <Sarok száma> ]::
+  Az _n=1, 2, 3, 4_ számoknál a parancs a xref:/Geometria_ablak.adoc[geometriai ablakban] sarokpontokat rajzol. Az _n=5_
+  számnál a _(w, h)_ pont kerül megjelenítésre, melynél _b_ és _h_ a geometriai ablak pixelben megadott szélessége és
+  magassága. Ez a parancs az első geometriai ablakban hoz létre sarokpontot, függetlenűl attól, hogy a második
+  geometriai ablak is aktív.
+
+Sarok[Pont <Geometria nézet>, <Sarok száma> ]::
+  Létrehoz egy sarokpontot a xref:/Geometria_ablak.adoc[geometriai ablakban] (rajzlap (1,2)), amely az adott ablakban
+  nem látható. Az _n=1, 2, 3, 4_ számoknál a parancs a xref:/Geometria_ablak.adoc[geometriai ablakban] (rajzlapon)
+  sarokpontokat rajzol. Az _n=5_ számnál a _(w, h)_ pont kerül megjelenítésre, melynél _b_ és _h_ a geometriai ablak
+  pixelben megadott szélessége és magassága.
+
+SarokPont[ <Kép>, <Sarok száma> ]::
+  Létrehozza a kép megadott sarokpontját (_n=1, 2, 3, 4_).
+
+SarokPont[ <Szöveg>, <Sarok száma>]::
+  Létrehozza a szöveg megadott sarokpontját(_n= 1, 2, 3, 4_).
+
+[NOTE]
+====
+
+*Jegyzet:* A SarokPont[ <Szöveg>, <Sarok száma> ] parancs nem használható a xref:/commands/Sorozat.adoc[Sorozatok] és
+xref:/commands/EredményLista.adoc[EredményLista] parancsokkal együtt.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A sarokpontok számozása a bal alsó sarokban lévő pontnál kezdődik és az óramutató járásával ellentétes
+irányban történik.
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Following text is about a feature that is supported only in 5.0 beta version.
+
+'''''
+
+SarokPont[-1, <Szám> ]::
+  Létrehoz egy pontot a 3D-s nézet egyik sarkában (_1_ és _8_ közötti számokkal alkalmazható).
+
+|===

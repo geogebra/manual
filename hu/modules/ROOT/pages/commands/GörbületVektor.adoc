@@ -1,0 +1,72 @@
+= GörbületVektor parancs
+:page-en: commands/CurvatureVector
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+GörbületVektor[ <Pont>, <Függvény> ]::
+  Létrehozza az adott pontban a függvény görbületi vektorát.
+
+[EXAMPLE]
+====
+
+`++GörbületVektor[(0,0), x^2]++` eredménye a _(0, 2)_ vektor.
+
+====
+
+GörbületVektor[ <Pont>, <Görbe> ]::
+  Létrehozza az adott pontban a görbe görbületi vektorát.
+
+[EXAMPLE]
+====
+
+`++GörbületVektor[(0, 0), GörbeParaméteres[cos(t), sin(2t), t, 0, π]]++` eredménye _(0, 0)_ vektor.
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Following text is about a feature that is supported only in 5.0 beta version.
+
+'''''
+
+[NOTE]
+====
+
+*Jegyzet:* A GeoGebra 5-ös verziójától ez a parancs kúpszeletekre is alkalmazható.
+
+====
+
+|===
+
+GörbületVektor[ <Pont>, <Szabad alakzat> ]::
+  Kiszámítja az adott pontban a szabad alakzat (függvény, görbe, kúpszelet) görbületi vektorát.
+
+* *GörbületVektor[ <Pont>, <Függvény> ]*: Kiszámítja az adott pontban a függvény görbületi vektorát.
+
+[EXAMPLE]
+====
+
+`++ GörbületVektor[(0 ,0), x^2]++` eredménye a _(0, 2)_ vektor.
+
+====
+
+* *GörbületVektor[ <Pont>, <Görbe> ]*: Kiszámítja az adott pontban a görbe görbületi vektorát.
+
+[EXAMPLE]
+====
+
+`++ GörbületVektor[(0, 0), GörbeParaméteres[cos(t), sin(2t), t, 0, π]]++` eredménye a _(0, 0)_ vektor.
+
+====
+
+* *GörbületVektor[ <Pont>, <Kúpszelet> ]*: Kiszámítja az adott pontban a kúpszelet görbületi vektorát.
+
+[EXAMPLE]
+====
+
+`++ GörbületVektor[(-1 ,0), Kúpszelet[{1, 1, 1, 2, 2, 3}]]++` eredménye a _(0, -2)_ vektor.
+
+====

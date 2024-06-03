@@ -1,0 +1,37 @@
+= NégyzetöszegXX parancs
+:page-en: commands/SigmaXX
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+NégyzetösszegXX[ <Pontok listája> ]::
+  Meghatározza az adott pontok _x_ koordinátáinak négyzetének összegét.
+
+[EXAMPLE]
+====
+
+Legyen `++Lista = { (-3, 4), (-1, 4), (-2, 3), (1, 3), (2, 2), (1, 5) } ++` egy pontokból álló lista. A
+`++  NégyzetösszegXX[ Lista ] ++` eredménye _a = 20_.
+
+====
+
+NégyzetösszegXX[ <Nyers adatok listája> ]::
+  Kiszámítja a nyers adatok négyzetének összegét.
+
+[EXAMPLE]
+====
+
+Egy számokat tartalmazó lista varianciáját a következőképpen számíthatja ki:
+`++ NégyzetösszegXX[Lista]/Hossz[Lista] - Átlag[Lista]^2++`.
+
+====
+
+NégyzetösszegXX[ <Számok listája>, <Gyakoriságok listája> ]::
+  Kiszámítja a listán lévő számok négyzetének összegét azok gyakoriságától függően.
+
+[EXAMPLE]
+====
+
+Legyen `++Lista1 = {3, 2, 4, 3, 3, 2, 1, 1, 2, 3, 3, 4, 5, 3, 2, 1, 1, 2, 3}++` egy számokból álló lista. Az
+`++Elemek[ Lista1 ]++` parancs eredménye a következő lista: _Lista2 = \{1, 2, 3, 4, 5}_ és a `++Gyakoriság[ Lista1 ]++`
+parancs eredménye _Lista3 = \{4, 5, 7, 2, 1}_. A `++NégyzetösszegXX[ Lista2, Lista3 ]++` parancs eredménye _a = 144_.
+
+====

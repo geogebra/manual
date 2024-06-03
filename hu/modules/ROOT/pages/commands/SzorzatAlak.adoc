@@ -1,0 +1,53 @@
+= SzorzatAlak parancs
+:page-en: commands/Factor
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+SzorzatAlak [ <Polinom> ]::
+  Szorzattá alakítja a megadott polinomot.
+
+[EXAMPLE]
+====
+
+`++SzorzatAlak[x^2 + x - 6]++` eredménye _(x + 3) (x - 2)_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A parancsnak a számítógépes algebrai rendszert kell betöltenie, ezért, számítógéptől függően, több időbe
+telhet a parancs végrehajtása.
+
+====
+
+== CAS nézet
+
+SzorzatAlak[ <Polinom> ]::
+  Szorzattá alakítja a megadott polinomot.
+
+[EXAMPLE]
+====
+
+`++SzorzatAlak[x^2 - y^2]++` eredménye _(x + y) (x - y)_.
+
+====
+
+SzorzatAlak[ <Kikfejezés>, <Változó> ]::
+  A megadott változóra vonatkozóan szorzattá alakítja a kifejezést.
+
+[EXAMPLE]
+====
+
+* `++SzorzatAlak[x^2 - y^2, x]++` eredménye _(x + y) (x - y)_.
+* `++SzorzatAlak[x^2 - y^2, y]++` eredménye _(-x - y) (-x + y)_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Ez a parancs http://hu.wikipedia.org/wiki/Racionális_számok[racionális számokat] alkalmaz a szorzattá
+alakításnál. Komplex számokkal történő szorzattá alakításhoz a
+xref:/commands/SzorzatAlakKomplex.adoc[SzorzatAlakKomplex] parancs áll rendelkezésre.
+
+====

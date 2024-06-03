@@ -53,6 +53,6 @@ for (const lang of active) {
     }
     fs.writeFileSync(`${lang}/modules/ROOT/nav.adoc`, localNav, 'utf8');
     fs.writeFileSync(`${lang}/modules/ROOT/pages/missing.adoc`, '= Missing translations\n\n * '
-    + missing.join('\n * ') + '\n == Extra translations \n\n * '
+    + missing.join('\n * ') + '\n\n== Extra translations\n\n * '
     + orphans.join('\n * '), 'utf8');
 }

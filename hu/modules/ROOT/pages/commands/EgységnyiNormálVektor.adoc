@@ -1,0 +1,73 @@
+= EgységnyiNormálVektor parancs
+:page-en: commands/UnitPerpendicularVector
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+EgységnyiNormálVektor[ <Egyenes> ]::
+  Eredményül az egyenes egy egység hosszú normálvektorát adja.
+
+[EXAMPLE]
+====
+
+`++EgységnyiNormálVektor[3x + 4y = 5]++` eredménye _stem:[\begin\{pmatrix}0.6\\0.8\end\{pmatrix}]_.
+
+====
+
+EgységnyiNormálVektor[ <Szakasz> ]::
+  Eredményül a szakasz egy egység hosszú normálvektorát adja.
+
+[EXAMPLE]
+====
+
+Legyen `++s = Szakasz[(1,1), (4,5)]++`.
+
+`++EgységnyiNormálVektor[s]++` eredménye _stem:[\begin\{pmatrix}-0.8\\0.6\end\{pmatrix}]_.
+
+====
+
+EgységnyiNormálVektor[ <Vektor> ]::
+  Eredményül a megadott vektor egy egység hosszú normálvektorát adja. Az adott vektort a parancs előtt létre kell hozni.
+
+[EXAMPLE]
+====
+
+Legyen v=stem:[\begin\{pmatrix}3\\4\end\{pmatrix}]. `++ EgységnyiNormálVektor[v]++` eredménye
+_stem:[\begin\{pmatrix}-0.8\\0.6\end\{pmatrix}]_.
+
+====
+
+== CAS nézet
+
+EgységnyiNormálVektor[ <Vektor> ]::
+  Eredményül a megadott vektor egy egység hosszú normálvektorát adja.
+
+[EXAMPLE]
+====
+
+`++ EgységnyiNormálVektor[(a, b)]++` eredménye (stem:[\frac\{-b}\{\sqrt\{a^\{2} + b^\{2}}}],
+stem:[\frac\{a}\{\sqrt\{a^\{2} + b^\{2}}}]).
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Following text is about a feature that is supported only in 5.0 beta version.
+
+'''''
+
+EgységnyiNormálVektor[ <Sík> ]::
+  Eredményül a megadott síkra ortogonális, egy egység hosszú vektort adja.
+
+|===
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+Lásd xref:/commands/NormálVektor.adoc[NormálVektor].
+
+====

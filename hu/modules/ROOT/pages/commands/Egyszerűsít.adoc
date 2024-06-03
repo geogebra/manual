@@ -1,0 +1,53 @@
+= Egyszerűsít parancs
+:page-en: commands/Simplify
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Egyszerüsít[ <Függvény> ]::
+  Egyszerűsíti a megadott függvény termét, ha lehetséges.
+
+[EXAMPLE]
+====
+
+`++Egyszerűsít[x + x + x]++` eredménye a következő függvény: _f(x) = 3x_.
+
+====
+
+Egyszerűsít[ <Szöveg> ]::
+  Kísérletet tesz a szöveg rendezésére ill. egyszerűsítésére, pl. többször előforduló negatív változók eltávolításával.
+
+[EXAMPLE]
+====
+
+Legyen _a = b = c = -1_. Az `++Egyszerűsít["f(x) = " + a + "x² + " + b + "x + " + c]++` parancs eredménye _f(x) = -x^2 -
+x - 1_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* A xref:/commands/LaTeX.adoc[LaTeX] parancs általában jobb eredményt ad és egyszerűbb.
+* Hasznos lehet továbbá a xref:/commands/Polinom.adoc[Polinom parancs].
+
+====
+
+== CAS nézet
+
+Egyszerűsít[ <Függvény> ]::
+  Egyszerűsíti a megadott függvény termét, ha lehetséges. A függvény nem tartalmazhat ismeretlen változót.
+
+[EXAMPLE]
+====
+
+`++Egyszerűsít[3 * x + 4 * x + a * x]++` eredménye _xa + 7x_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd továbbá a xref:/commands/SzorzatAlak.adoc[SzorzatAlak] parancsot.
+
+====

@@ -1,0 +1,48 @@
+= EgységVektor parancs
+:page-en: commands/UnitVector
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+EgységVektor[ <Vektor> ]::
+  A megadott vektorral egyállású, azonos irányú, egység hosszúságú vektort eredményez. A vektort előzőleg definiálni
+  kell.
+EgységVektor[ <Egyenes> ]::
+  Az adott egyenes irányába mutató egység hosszúságú vektort eredményez.
+EgységVektor[ <Szakasz> ]::
+  Az adott szakasz irányába mutató egység hosszúságú vektort eredményez.
+
+[EXAMPLE]
+====
+
+`++EgységVektor[3x + 4y = 5]++` eredménye _stem:[\begin\{pmatrix}0.8\\-0.6\end\{pmatrix}]_.
+
+====
+
+[EXAMPLE]
+====
+
+Legyen _v=stem:[\begin\{pmatrix}3\\4\end\{pmatrix}]. `++EgységVektor[v]++` eredménye_
+stem:[\begin\{pmatrix}0.6\\0.8\end\{pmatrix}]__.__
+
+====
+
+== CAS nézet
+
+xref:/CAS_nézet.adoc[CAS nézetben] csak egyféle szintaxis engedélyezett:
+
+EgységVektor[ <Vektor> ]::
+  A megadott vektorral egyállású, azonos irányú, egység hosszúságú vektort eredményez.
+
+[EXAMPLE]
+====
+
+`++EgységVektor[{2, 4, 4}]++`eredménye _\{stem:[\frac\{1}\{3}], stem:[\frac\{2}\{3}], stem:[\frac\{2}\{3}]}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++EgységVektor[{a, b}]++` eredménye _\{stem:[\frac\{a}\{\sqrt\{a^\{2} + b^\{2}}}], stem:[\frac\{b}\{\sqrt\{a^\{2} +
+b^\{2}}}]}_.
+
+====

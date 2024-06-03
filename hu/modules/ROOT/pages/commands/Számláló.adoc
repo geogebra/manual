@@ -1,0 +1,28 @@
+= Számláló parancs
+:page-en: commands/Numerator
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Számláló[ <Függvény> ]::
+  Megadja a függvény számlálóját.
+  * Lásd továbbá a xref:/commands/Nevező.adoc[Nevező parancsot].
+
+[EXAMPLE]
+====
+
+`++Számláló[(3x² + 1) / (2x - 1)]++` eredménye _f(x) = 3x² + 1_.
+
+====
+
+== CAS nézet
+
+Számláló[ <Kifejezés> ]::
+  Megadja egy racionális szám vagy kifejezés számlálóját.
+
+[EXAMPLE]
+====
+
+* `++Számláló[2/3 + 1/15]++` eredménye _11_.
+* Ha az _a, b_ és _c_ változók még nem definiáltak, akkor a `++Számláló[a/b]++` parancs eredménye _a_, valamint a
+`++Számláló[a + b/c]++` parancs eredménye _a c + b_
+
+====

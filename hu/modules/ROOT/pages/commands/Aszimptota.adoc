@@ -1,0 +1,33 @@
+= Aszimptota parancs
+:page-en: commands/Asymptote
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Aszimptota[ <Kúpszelet> ]::
+  Megadja a kúpszelet két aszimptotáját.
+
+[EXAMPLE]
+====
+
+`++Aszimptota[x^2 - y^2 /4 = 1]++` a következő egyeneseket eredményezi: _-2x + y = 0_ és _-2x - y = 0_.
+
+====
+
+Aszimptota[ <Függvény> ]::
+  Megadja függvény összes aszimptotáját listaként.
+
+[EXAMPLE]
+====
+
+`++Aszimptota[(x^3 - 2x^2 - x + 4) / (2x^2 - 2)]++` a következő listát eredményezi: _\{y = 0.5x - 1, x = 1, x = -1}_.
+
+====
+
+Aszimptota[ <Implicit görbe> ]::
+  Megadja az implicit görbe összes aszimptotáját listaként.
+
+[EXAMPLE]
+====
+
+`++Aszimptota[x^3 + y^3 + y^2 - 3 x = 0]++` a következő listát eredményezi: _\{x + y = -0.33}_.
+
+====

@@ -1,0 +1,39 @@
+= Kúpszelet parancs
+:page-en: commands/Conic
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Kúpszelet[ <Pont1>, <Pont2>, <Pont3>, <Pont4>, <Pont5> ]::
+  Létrehoz egy kúpszeletet az öt megadott ponttal.
+
+[EXAMPLE]
+====
+
+`++Kúpszelet[(0, -4), (2, 4), (3,1), (-2,3), (-3,-1)]++` eredménye _151x² - 37x y + 72y² + 14x - 42y = 1320_ .
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Ha négy pont egy egyenesen fekszik, a kúpszelet nem hozható létre.
+
+====
+
+Kúpszelet[ <Szám1>, <Szám2>, <Szám3>, <Szám4>, <Szám5> ]::
+  Létrehoz egy stem:[a\cdot x^2+d\cdot xy+b\cdot y^2+e\cdot x+f\cdot y=-c] formájú kúpszeletet.
+
+[EXAMPLE]
+====
+
+`++Kúpszelet[2, 3, -1, 4, 2, -3]++` eredménye _2x² + 4x y + 3y² + 2x - 3y = 1_ .
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd a image:Tool_Conic_5Points.gif[Tool Conic 5Points.gif,width=32,height=32]
+xref:/tools/Kúpszelet_öt_ponton_keresztül.adoc[Kúpszelet öt ponton keresztül] eszközt és az
+xref:/commands/Együtthatók.adoc[Együtthatók] parancsot.
+
+====

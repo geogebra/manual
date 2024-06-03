@@ -1,0 +1,16 @@
+= Unió parancs
+:page-en: commands/Union
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Unió[ <Lista>, <Lista> ]::
+  Egyesíti a két listát. Többször előforduló elemek csak egyszer kerülnek a listába.
+Unió[ <Sokszög>, <Sokszög> ]::
+  Megkeresi a két sokszög unióját. Csak olyan sokszögeknél működik, amelyek nem metszik önmagukat, valamint ahol az unió
+  egy általános sokszög.
+
+[EXAMPLE]
+====
+
+`++Unió[ {1, 2, 3, 4, 5}, {3, 2, 1, 7} ]++` eredménye a `++{1, 2, 3, 4, 5, 7}++` lista.
+
+====

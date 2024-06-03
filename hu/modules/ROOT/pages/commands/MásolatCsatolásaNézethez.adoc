@@ -1,0 +1,40 @@
+= MásolatCsatolásaNézethez parancs
+:page-en: commands/AttachCopyToView
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+MásolatCsatolásaNézethez[ <Objektum>, <Nézet 0|1|2> ]
+
+A Nézet=0 opció egy másolatot hoz létre az adott objektumról. A Nézet=1 illetve a Nézet=2 opció az adott objektumtól
+függő másolatot hoz létre, amelynek mérete a xref:/Geometria_ablak.adoc[Geometria ablakban] változatlan marad.
+
+[EXAMPLE]
+====
+
+Legyen a parancs a követzekő: `++négyzet = Sokszög[(0, 0), (1, 0), (1, 1), (0, 1)]++`. Ha Nézet=1 van megadva, a
+`++MásolatCsatolásaNézethez[négyzet, 1]++` parancs egy megegyező méretű és pozíciójú másolatot hoz létre .
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Ha már létezik másolat, úgy a parancs automatikusan három másik paramétert tartalmaz.
+
+====
+
+MásolatCsatolásaNézethez[ <Objektum>, <Nézet 0|1|2>, <Pont 1>, <Pont 2>, <Képernyő pont 1>, <Képernyő pont 2> ]
+
+A Nézet=0 opció az objektum másolatot hozza létre. A Nézet=1 illetve a Nézet=2 opció az adott objektumtól függő
+másolatot hoz létre, amelynek méretét a xref:/Geometria_ablak.adoc[Geometria ablakban] a következő affin transzformáció
+határozza meg: A Pont 1 arra a pontra kerül leképezésre, amelynek a képernyőkoordinátái (pixelben) a Képernyő pont 1-nek
+felelnek meg, a Pont 2 pedig arra a pontra, amelynek a képernyőkoordinátái (pixelben) a Képernyő pont 2-nek felelnek
+meg.
+
+[EXAMPLE]
+====
+
+Legyen a parancs a követzekő: `++négyzet = Sokszög[(0, 0), (1, 0), (1, 1), (0, 1)]++`. Ha Nézet=1 van megadva, a
+`++MásolatCsatolásaNézethez[négyzet, 1, (0, 0), (1, 1), (0, 0), (100, 100)]++` egy 100px x 100px méretű négyzetet hoz
+létre a geometriai ablak felső bal sarkában.
+
+====

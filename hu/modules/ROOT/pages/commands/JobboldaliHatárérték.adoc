@@ -1,0 +1,38 @@
+= JobboldaliHatárérték parancs
+:page-en: commands/LimitAbove
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+JobboldaliHatárérték[ <Függvény>, <Érték> ]::
+  Meghatározza a függvény jobboldali határértékét a változó adott értékére.
+
+== CAS nézet
+
+JobboldaliHatárérték[ <Kifejezés>, <Érték> ]::
+  Meghatározza a kifejezés jobboldali határértékét a változó adott értékére.
+
+[EXAMPLE]
+====
+
+`++JobboldaliHatárérték[1 / x, 0]++` megadja stem:[\infty]-t .
+
+====
+
+JobboldaliHatárérték[ <Kifejezés>, <__v__ Változó>, <__t__ Érték> ]::
+  Meghatározza a többváltozós kifejezés jobboldali határértékét a változó adott értékére.
+
+[EXAMPLE]
+====
+
+`++JobboldaliHatárérték[1 / a, a, 0]++` megadja stem:[\infty]-t.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+Lásd még a xref:/commands/Határérték.adoc[Határérték parancs]-ot és a
+xref:/commands/BaloldaliHatárérték.adoc[BaloldaliHatárérték parancs]-ot.
+
+====

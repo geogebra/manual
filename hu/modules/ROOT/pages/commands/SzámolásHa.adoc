@@ -1,0 +1,35 @@
+= SzámolásHa parancs
+:page-en: commands/CountIf
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+SzámolásHa[ <Feltétel>, <Lista> ]::
+  Megadja azoknak a listán lévő elemeknek a számát, amelyek teljesítik a megadott feltételt.
+
+[EXAMPLE]
+====
+
+* `++SzámolásHa[x < 3, {1, 2, 3, 4, 5}]++` eredménye _2_.
+* `++SzámolásHa[x < 3, A1:A10]++`, ahol _A1:A10_ a cellatartomány a xref:/Táblázatkezelő_nézet.adoc[táblázatkezelő
+nézetben]. Megadja azon elemek számát, amelyek kisebbek _3_-nál.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Bármilyen feltétel alkalmazható számokat tartalmazó listáknál. Más objektumokat tartalmazó listáknál csak
+`++x==konstans++` vagy `++x!=konstans++` formájú feltételek alkalmazhatók.
+
+====
+
+SzámolásHa[<Feltétel>, <Változó>, <Lista> ]::
+  Ez a beviteli mód rugalmasabb feltételek megadását teszi lehetővé, páldául a _P_, _Q_ és _R_ pontoknál akkor számolja
+  a `++SzámolásHa[x(A) < 3, A, {P, Q, R}]++` parancs a pontokat, ha azok x koordinátája kisebb háromnál. A feltétel
+  ellenőrzésénél az _A_ változót sorban helyetesítik a _P_, _Q_ és _R_ pontok.
+
+[EXAMPLE]
+====
+
+`++SzámolásHa[x(A) < 3, A, {(0, 1), (4, 2), (2, 2)}]++` eredménye _2_.
+
+====

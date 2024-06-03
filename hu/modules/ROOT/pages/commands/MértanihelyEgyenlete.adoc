@@ -1,0 +1,70 @@
+= MértanihelyEgyenlete parancs
+:page-en: commands/LocusEquation
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+MértanihelyEgyenlete[ <Mértani hely> ]::
+  Kiszámítja a mértani hely egyenletét és megrajzolja implicit görbeként.
+MértanihelyEgyenlete[ <Mértani hely pontja>, <Mozgó pont> ]::
+  Kiszámítja egy mértani hely egyenletét a megadott pontjának és a mozgó pont használatával és megrajzolja implicit
+  görbeként.
+
+[EXAMPLE]
+====
+
+Hozzunk létre egy parabolát mértani helyként: szerkesszünk két, "A" és "B" szabad pontot, majd egy "d" egyenest, amely
+átmegy ezeken a pontokon (ez lesz a parabola direktrixe). Fókuszként hozzunk létre egy "F" szabad pontot, majd egy _P_
+pontot a _d_ egyenesen (mozgó pont). Ezután szerkesszük meg a "p" egyenest, amely merőleges a "d" egyenesre és áthalad a
+"P" ponton. Hozzuk létre az "FP" szakasz "b" szakaszfelező merőlegest. Végül legyen a "Q" pont a "p" és "b" egyenes
+metszéspontja. A `++MértanihelyEgyenlete[Q,P]++` parancs kiszámítja és megrajzolja a mértani hely pontos egyenletét.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* Csak korlátozott mértani helyeknél működik, pl. pontok, egyenesek, körök, kúpszeletek használatánál. [Sugarakat és
+szakaszokat végtelen egyenesként kezel]
+* A a mértani hely túl bonyolult, úgy az eredmény 'nem definiált'.
+* A mértani hely egyenletének kiszámítása a https://en.wikipedia.org/wiki/Gröbner_basis[Gröbner-bázis] alapján történik,
+emiatt néha előfordulhat, hogy a görbe olyan ágakkal rendelkezik, amelyek nem részei az eredeti mértani helynek.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A mértani helyet pontból kell létrehozni (nem csúszkából).
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Following text is about a feature that is supported only in 5.0 beta version.
+
+'''''
+
+[NOTE]
+====
+
+*Jegyzet:* A GeoGebra 5.2-es és ettől újabb verziója a kiszámításhoz a távoli webszervert használja (ezt a
+`++--singularWS=enable:false++` parancssor opcióval lehet kikapcsolni).
+
+====
+
+|===
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* További információkat és példákat a http://www.geogebra.org/student/b121563#[GeoGebra]-on találhatunk.
+* Lásd továbbá a xref:/commands/MértaniHely.adoc[MértaniHely] parancsot.
+
+====

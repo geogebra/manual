@@ -1,0 +1,65 @@
+= Nagyítás parancs
+:page-en: commands/ZoomIn
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Nagyítás[ <Arány> ]::
+  A megadott arányban kinagyítja a xref:/Geometria_ablak.adoc[geometriai ablakot] (az aktuális nagyságra vonatkozóan). A
+  képernyő közepe a nagyítás középpontja.
+
+[EXAMPLE]
+====
+
+A `++Nagyitás[1]++` parancs nem okoz változást.
+
+A `++Nagyítás[2]++` parancs kétszeresére nagyítja a geometriai ablakot.
+
+A `++Nagyítás[0.5]++` parancs egyenlő a `++Kicsinyítés[2]++` parancssal, a geometriai ablak mérete a felére csökken.
+
+====
+
+Nagyítás [ <Arány>, <Középpont> ]::
+  A megadott arányban kinagyítja a xref:/Geometria_ablak.adoc[geometriai ablakot] (az aktuális nagyságra vonatkozóan). A
+  megadott pont a nagyítás középpontja.
+
+[EXAMPLE]
+====
+
+`++Nagyítás[2, (0, 0)]++`
+
+====
+
+Nagyítás[ <Min x>, <Min y>, <Max x>, <Max y> ]::
+  A megadott pontokhoz igazítja a xref:/Geometria_ablak.adoc[geometriai ablak] méretét.
+
+[EXAMPLE]
+====
+
+Ha _a_ egy csúszka, a `++Nagyítás[-a, -a, a, a]++` parancs eredménye egy _a_ csúszkától függő nagyítás.
+
+====
+
+[EXAMPLE]
+====
+
+`++Nagyítás[0, 1, 5, 6]++`
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Ha függő paramétereket ad meg, úgy a geometriai ablak határai dinamikusak lesznek. Ennek elkerülésére
+alkalmazza az xref:/commands/AlakzatMásolása.adoc[AlakzatMásolása] parancsot.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* Ha több xref:/Geometria_ablak.adoc[geometriai ablak] van megnyitva, a parancs az aktuális geometriai ablakra
+vonatkozik.
+* Lásd xref:/commands/Kicsinyítés.adoc[Kicsinítés].
+
+====

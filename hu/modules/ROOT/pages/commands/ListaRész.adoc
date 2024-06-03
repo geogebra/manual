@@ -1,0 +1,45 @@
+= ListaRész parancs
+:page-en: commands/Take
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+ListaRész[ <Lista>, <Kezdő pozíció> ]::
+  Létrehoz egy új listát, amely a kezdő pozíciótól tartalmazza a megadott lista elemeit.
+
+[EXAMPLE]
+====
+
+`++ListaRész[{2, 4, 3, 7, 4}, 3]++` eredménye a következő lista: _\{3, 7, 4}_.
+
+====
+
+ListaRész[ <Lista>, <Kezdő pozíció>, <Végső pozíció> ]::
+  Létrehoz egy új listát, amely a kezdő pozíciótól a végső pozícióig tartalmazza a megadott lista elemeit.
+
+[EXAMPLE]
+====
+
+`++ListaRész[{2, 4, 3, 7, 4}, 3, 4]++` eredménye a következő lista: _\{3, 7}_.
+
+====
+
+ListaRész[ <Szöveg>, <Kezdő pozíció>, <Végső pozíció> ]::
+  Létrehoz egy szöveget, amely a kezdő pozíciótól a végső pozícióig tartalmazza a megadott szöveget.
+
+[EXAMPLE]
+====
+
+`++ListaRész["GeoGebra", 3, 6]++` eredménye a következő szöveg: _oGeb_.
+
+====
+
+== CAS nézet
+
+ListaRész[ <Lista>, <Kezdő pozíció>, <Végső pozíció> ]::
+  Létrehoz egy új listát, amely a kezdő pozíciótól a végső pozícióig tartalmazza a megadott lista elemeit.
+
+[EXAMPLE]
+====
+
+`++ListaRész[{1, 2, a, 4, 5}, 2, 4]++` eredménye a következő lista: _\{2, a, 4}_.
+
+====

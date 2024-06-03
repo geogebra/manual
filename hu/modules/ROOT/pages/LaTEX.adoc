@@ -1,0 +1,69 @@
+= LaTeX
+:page-en: LaTeX
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+A GeoGebrában lehetősége van LaTeX képlet használatára, amely a kevert szöveg egy speciális fajtája. LaTeX szöveg
+létrehozásához aktiválja a image:Tool_Insert_Text.gif[Tool Insert
+Text.gif,width=32,height=32]xref:/tools/Szöveg_beszúrása.adoc[Szöveg beszúrása eszközt], kattintson a rajzlapra vagy egy
+alakzatra, majd a megjelenő ablakban jelölje ki a _LaTeX formula_ melletti jelölőnégyzetet vagy írja a LaTeX képletet a
+parancssorba.
+
+[NOTE]
+====
+
+*Jegyzet:* Olyan kevert szöveget is létrehozhat, amely mind statikus, mind LaTeX szöveget is tartalmaz. Írja be a szöveg
+statikus részét, majd két $ (dollár) jel közé illessze be a LaTeX képletet.
+
+====
+
+[EXAMPLE]
+====
+
+\szöveg\{A diagonális hossza } \sqrt\{ 2 }
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* xref:/commands/LaTeX.adoc[LaTeX parancsokat] is használhat.
+
+====
+
+[EXAMPLE]
+====
+
+LaTeX["\szöveg\{A diagonális hossza } \sqrt\{ 2 }"]
+
+====
+
+LaTeX képleteknél használható jeleket a _LaTeX formula_ gombra kattintva, a megjelenő ablakban talál. Ha kiválaszt egy
+jelet, úgy az annak megfelelő LaTeX szöveg a parancssorba, a kurzor _\{ }_ zárójel közé kerül. A legördülő lista gyakran
+használatos matematikai jeleket, görög betűket és műveleti jeleket tartalmaz. Ha egy képleten belül dinamikus szöveget
+szeretne használni, szintén válassza ki a jelet, amely automatikusan a kevert szövegbe (képletbe) kerül.
+
+A következő táblázatban talál néhány gyakori, matematikai képleteknél használatos LaTeX parancsot. További információt a
+LaTeX internetes dokumentációjában találhat.
+
+[cols=",",options="header",]
+|===
+|LaTeX szöveg |Eredmény
+|a \cdot b |stem:[a \cdot b]
+|\frac\{a}\{b} |stem:[\frac\{a}\{b}]
+|\sqrt\{x} |stem:[\sqrt\{x}]
+|\sqrt[n]\{x} |stem:[\sqrt[n]\{x}]
+|\vec\{v} |stem:[\vec\{v}]
+|\overline\{AB} |stem:[\overline\{AB}]
+|x^\{2} |stem:[x^\{2}]
+|a_\{1} |stem:[a_\{1}]
+|\sin\alpha + \cos\beta |stem:[\sin\alpha + \cos\beta]
+|\int_\{a}^\{b} x dx |stem:[\int_\{a}^\{b} x dx]
+|\sum_\{i=1}^\{n} i^2 |stem:[\sum_\{i=1}^\{n} i^2]
+|===
+
+== Lásd továbbá
+
+* http://folk.uio.no/knutm/mmcs2008/lshort2e.pdf[The Not So Short Introduction To LaTeX]
+* http://www.tug.org[TeX user group]
+* http://wiki.geogebra.org/en/LaTeX-code_for_the_most_common_formulas
+* http://wiki.geogebra.org/en/LaTeX-tips_font_size_color_box_and_math

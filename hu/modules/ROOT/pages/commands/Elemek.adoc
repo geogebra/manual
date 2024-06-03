@@ -1,0 +1,34 @@
+= Elemek parancs
+:page-en: commands/Unique
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Elemek[ <Lista> ]::
+  Az adott lista elemeit növekvő sorrendbe rendezi, majd listát alkot azokból. Az ismétlődő elemek csak egyszer
+  szerepelnek.
+
+[EXAMPLE]
+====
+
+* `++Elemek[{1, 2, 4, 1, 4}]++` eredménye az _\{1, 2, 4}_ lista.
+* `++Elemek[{"a", "b", "Hello", "Hello"}]++` eredménye a _\{"'Hello", "a", "b"}_ lista.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd továbbá a xref:/commands/Gyakoriság.adoc[Gyakoriság parancsot].
+
+====
+
+== CAS nézet
+
+Elemek[ <Lista> ]::
+  Megadja a lista elemeiből alkotott listát, amelyen minden elem csak egyszer fordul elő.
+
+[EXAMPLE]
+====
+
+`++Elemek[{1, x, x, 1, a}]++` eredménye az _\{1, x, a}_ lista.
+
+====

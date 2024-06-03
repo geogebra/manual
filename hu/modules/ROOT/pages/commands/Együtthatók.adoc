@@ -1,0 +1,48 @@
+= Együtthatók parancs
+:page-en: commands/Coefficients
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Együtthatók[ <Polinom> ]::
+  Megadja egy stem:[\\{a_k,a_\{k-1},\ldots,a_1, a_0\}] alakú polinom összes együtthatójának listáját
+  stem:[a_kx^k+a_\{k-1}x^\{k-1}+\cdots+a_1x+a_0].
+
+[EXAMPLE]
+====
+
+`++Együttható[x^3 - 3 x^2 + 3 x]++` eredménye a következő lista, mely a stem:[x^3 - 3 x^2 + 3 x] polinom összes
+együtthatóját tartalmazza: _\{1, -3, 3, 0}_.
+
+====
+
+Együtthatók[ <Kúpszelet> ]::
+  Megadja az stem:[\\{a, b, c, d, e, f\}] listát egy stem:[a\cdot x^2 + b\cdot y^2 + c + d\cdot x\cdot y + e\cdot x +
+  f\cdot y = 0] alakú kúpszelethez.
+
+[NOTE]
+====
+
+*Jegyzet:* Egy stem:[l: ax + by + c = 0] egyenes együtthatóit a következő parancsok adják meg _:_ stem:[x(l), y(l),
+z(l)].
+
+[EXAMPLE]
+====
+
+A `++l: 3x + 2y - 2 = 0++` egyenes együtthatói: az `++x(l)++` eredménye 3, az `++y(l)++` eredménye 2, és a `++z(l)++`
+eredménye -2
+
+====
+
+====
+
+== CAS nézet
+
+Együtthatók[ <Polinom> ]::
+  Megadja a polinom (egyetlen változójához) összes együtthatóját.
+
+[EXAMPLE]
+====
+
+`++Együttható[x^3 - 3 x^2 + 3 x]++` eredménye _\{1, -3, 3, 0}_, amely az stem:[x^3 - 3 x^2 + 3 x] polinom összes
+együtthatójának listája.
+
+====

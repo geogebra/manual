@@ -1,0 +1,54 @@
+= GörbeParaméteres parancs
+:page-en: commands/Curve
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+GörbeParaméteres[ <Kifejezés>, <Kifejezés>, <Változó>, <Kezdőérték>, <Záróérték> ]::
+  Létrehoz az x és y kifejezésekhez (első és második <Kifejezés>) egy xref:/Görbék.adoc[görbét] megadott paraméterrel a
+  [_Kezdőérték_, _Záróérték_] intervallumban.
+
+[EXAMPLE]
+====
+
+`++GörbeParaméteres[2 cos(t), 2 sin(t), t, 0, 2π]++` létrehoz az origó körül egy _2_ sugarú kört.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* A __Záróérték__nek nagyobbnak vagy egyenlőnek kell lennie a __Kezdőérték__kel.
+* Az _x_ változó nem használható paraméterként.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Részletekért lásd a xref:/Görbék.adoc[Görbék], valamint a xref:/commands/Derivált.adoc[Derivált] és a
+xref:/commands/DeriváltParaméteres.adoc[DeriváltParaméteres] parancsokat.
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Following text is about a feature that is supported only in 5.0 beta version.
+
+'''''
+
+GörbeParaméteres[ <Kifejezés>, <Kifejezés>, <Kifejezés>, <Változó>, <Kezdőérték>, <Végérték> ]::
+  Létrehoz a megadott kifejezésekhez (x, y, z) egy paraméteres görbét a [_Kezdőérték_, _Záróérték_] intervallumban.
+
+[EXAMPLE]
+====
+
+`++GörbeParaméteres[cos(t), sin(t), t, t, 0, 10π]++` eredménye egy 3D-s spirál.
+
+====
+
+|===

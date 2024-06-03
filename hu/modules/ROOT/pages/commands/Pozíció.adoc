@@ -1,0 +1,55 @@
+= Pozíció parancs
+:page-en: commands/IndexOf
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Pozíció[ <Alakzat>, <Lista> ]::
+  Megadja azt a pozíciót (index), ahol az adott alakzat először szerepel a listán.
+
+[EXAMPLE]
+====
+
+`++Pozíció[5, {1, 3, 5, 2, 5, 4}]++` eredménye _3_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Ha az alakzat nem szerepel a listán, a pozíciója _nem definiált_.
+
+====
+
+Pozíció[ <Alakzat>, <Lista>, <Kezdő sorszám> ]::
+  A parancs megegyezik a fenti paranccsal, de annyi különbséggel, hogy a megadott kezdő sorszámtól keresi az alakzatot a
+  listán.
+
+[EXAMPLE]
+====
+
+* `++ Pozíció[5, {1, 3, 5, 2, 5, 4}, 3]++` eredménye _3_.
+* `++ Pozíció[5, {1, 3, 5, 2, 5, 4}, 4]++` eredménye _5_.
+* `++ Pozíció[5, {1, 3, 5, 2, 5, 4}, 6]++` eredménye _nem definiált_.
+
+====
+
+Pozíció[ <Szöveg>, <Szöveg> ]::
+  Megadja azt a pozíciót (index), ahol a szövegrészlet (első szöveg) az egész szövegben (második szöveg) először
+  szerepel.
+
+[EXAMPLE]
+====
+
+`++Pozíció["Ge", "GeoGebra"]++` eredménye _1_.
+
+====
+
+Pozíció[ <Szöveg>, <Szöveg>, <Kezdő sorszám> ]::
+  A parancs megegyezik a fenti paranccsal, de annyi különbséggel, hogy a megadott kezdő sorszámtól keresi a
+  szövegrészletet a szövegben.
+
+[EXAMPLE]
+====
+
+`++Pozíció["Ge", "GeoGebra",2]++` eredménye _4_.
+
+====

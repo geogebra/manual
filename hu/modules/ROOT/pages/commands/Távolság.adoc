@@ -1,0 +1,46 @@
+= Távolság parancs
+:page-en: commands/Distance
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Távolság[ <Pont>, <Alakzat> ]::
+  Kiszámítja pont és alakzat távolságát.
+
+[EXAMPLE]
+====
+
+`++Távolság[(2, 1), x^2 + (y - 1)^2 = 1]++` eredménye _1_
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A parancs pontoknál, szakaszoknál, egyeneseknél, kúpszeleteknél és implicit görbéknél alkalmazható.
+
+====
+
+Távolság[ <Egyenes>, <Egyenes> ]::
+  Kiszámítja két párhuzamos egyenes távolságát.
+
+[EXAMPLE]
+====
+
+* `++Távolság[y = x + 3, y = x + 1]++` eredménye _1.41_.
+* `++Távolság[y = 3x + 1, y = x + 1]++` eredménye _0_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A parancsnak párhuzamos egyeneseknél van értelme, mivel két egymást metsző egyenes távolsága 0.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd a image:Tool_Distance.gif[Tool Distance.gif,width=32,height=32] xref:/tools/Távolság.adoc[Távolság]
+eszközt .
+
+====

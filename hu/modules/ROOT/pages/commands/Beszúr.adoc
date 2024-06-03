@@ -1,0 +1,62 @@
+= Beszúr parancs
+:page-en: commands/Insert
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Beszúr[ <Alakzat>, <Lista>, <Pozíció> ]::
+  A listán beszúr egy alakzatot a megadott helyre.
+Beszúr[ <List>, <List>, <Pozíció> ]::
+  Beszúrja az első lista összes elemét a második listába a megadott helyen.
+
+[EXAMPLE]
+====
+
+A
+
+`++Beszúr[{11, 12}, {1, 2, 3, 4, 5}, -2]++` parancs beszúrja az első lista elemeit a második lista utolsó előtti helyére
+és létrehozza a következő listát: _\{1, 2, 3, 4, 11, 12, 5}_.
+
+====
+
+[EXAMPLE]
+====
+
+A
+
+`++Beszúr[{11, 12}, {1, 2, 3, 4, 5}, 3]++` parancs az első lista elemeit beszúrja a második lista harmadik helyére és
+létrehozza a következő listát: _\{1, 2, 11, 12, 3, 4, 5}_.
+
+====
+
+[EXAMPLE]
+====
+
+A
+
+`++Beszúr[x^2, {1, 2, 3, 4, 5}, -1]++` parancs az _x^2^_ kifejezést hozzáadja a lista végéhez és létrehozza a következő
+listát: _\{1, 2, 3, 4, 5, x^2^}_.
+
+====
+
+[EXAMPLE]
+====
+
+A
+
+`++Beszúr[x^2, {1, 2, 3, 4, 5}, 3]++` parancs az _x^2^_ kifejezést a beszúrja a lista harmadik helyére és létrehozza a
+következő listát: _\{1, 2, x^2^, 3, 4, 5}_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Ha a pozíció egy negatív szám, akkor a helyet jobbról számolja.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Ha a pozíció egy negatív szám, akkor a helyet jobbról számolja.
+
+====

@@ -1,0 +1,69 @@
+= Összeg parancs
+:page-en: commands/Sum
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Összeg[ <Lista> ]::
+  Kiszámítja a listán lévő elemek összegét.
+
+[EXAMPLE]
+====
+
+ 
+
+* `++ Összeg[{1, 2, 3}]++` eredménye _a = 6_.
+* `++ Összeg[{x^2, x^3}]++` eredménye _f(x) = x^2^ + x^3^_.
+* `++ Összeg[Folge[i, i, 1, 100]]++` eredménye _a = 5050_.
+* `++ Összeg[{(1, 2), (2, 3)}]++` eredménye az _A = (3, 5)_ pont.
+* `++ Összeg[{(1, 2), 3}]++` eredménye a _B = (4, 5)_ pont.
+* `++ Összeg[{"a","b","c"}]++` eredménye az _"abc"_ szöveg.
+
+====
+
+Összeg[ <Lista>, <Elemek száma> ]::
+  Kiszámítja a listán lévő első _n_ elem összegét.
+
+[EXAMPLE]
+====
+
+`++Összeg[{1, 2, 3, 4, 5, 6}, 4]++` eredménye _a = 10_.
+
+====
+
+Összeg[ <Lista>, <Gyakoriságok listája> ]::
+  Kiszámítja a listán lévő elemek összegét a gyakoriság figyelembe vételével.
+
+[EXAMPLE]
+====
+
+`++Összeg[{1, 2, 3, 4, 5}, {3, 2, 4, 4, 1}]++` eredménye _a = 40_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Ez a parancs számoknál, pontoknál, vektoroknál, szövegeknél és függvényeknél működik.
+
+====
+
+== CAS nézet
+
+Összeg[ <Lista> ]::
+  Kiszámítja a listán lévő elemek összegét.
+  * `++Összeg[{1, 2, 3}]++` eredménye _6_.
+  * `++Összeg[{a, b, c}]++` eredménye _a + b + c_.}}
+
+Összeg[ <Kifejezés>, <Változó>, <Kezdőérték>, <Végérték> ]::
+  Kiszámítja a stem:[\sum_\{t=s}^\{e}f(t)] összeget, melynél _s_ a kezdőérték és _e_ a végérték. A végérték végtelen is
+  lehet.
+
+[EXAMPLE]
+====
+
+ 
+
+* `++Összeg[i^2, i, 1, 3]++` eredménye _14_.
+* `++Összeg[r^i, i, 0, n]++` eredménye _stem:[\frac\{r^\{n+1} }\{r - 1} - \frac\{1}\{r - 1}]_.
+* `++Összeg[(1/3)^i, i, 0, Infinity]++` eredménye _stem:[\frac\{3}\{2}]_.
+
+====

@@ -1,0 +1,62 @@
+= Függvények
+:page-en: Functions
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Egy függvény megadásakor használhatunk előre definiált változókat (pl. számokat, pontokat, vektorokat) és függvényeket
+is.
+
+[EXAMPLE]
+====
+
+* f függvény: `++f(x) = 3 x^3 – x^2++`
+* g függvény: `++g(x) = tan(f(x))++`
+* függvény név nélkül: `++sin(3 x) + tan(x)++`
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A beépített függvények (pl. sin, cos, tan) mindegyikének leírása megtalálható az
+xref:/Előre_definiált_Függvények_és_Operátorok.adoc[Előre definiált Függvények és Operátorok] oldalon.
+
+====
+
+A GeoGebrában ugyanígy használhatunk parancsokat egy függvény xref:/commands/Integrál.adoc[Integráljának] és
+xref:/commands/Derivált.adoc[Deriváltjának] meghatározására. Ugyancsak használhatjuk a xref:/commands/Ha.adoc[Ha
+parancsot] a xref:/commands/Ha.adoc[Feltételes függvényekhez].
+
+[NOTE]
+====
+
+*Jegyzet:* Szintén használhatóak az f'(x) vagy f''(x), ... jelölések az előzőleg definiált f(x) függvény deriváltjainak
+meghatározására.
+
+====
+
+[EXAMPLE]
+====
+
+Definiáljuk az _f_ függvényt: `++f(x) = 3 x^3 – x^2++`. Ezután a "g" függvényt megadhatjuk a következő módon:
+`++g(x) = cos(f' (x + 2))++` .
+
+====
+
+Ezentúl a függvények eltolhatók adott vektorral (lásd az xref:/commands/Eltolás.adoc[Eltolás parancsot]), egy szabad
+függvény pedig elmozgatható az egér segítségével is a image:Tool_Move.gif[Tool Move.gif,width=32,height=32]
+xref:/tools/Mozgatás.adoc[Mozgatás eszköz] kiválasztása után. Más
+xref:/commands/Transzformációk_parancsok.adoc[Transzformáció parancsok] is alkalmazhatók függvényekre, de eredményül a
+legtöbb esetben nem függvényt, hanem csak görbét kapunk.
+
+== Függvény leszűkítése intervallumra
+
+Egy függvényt leszűkíthetünk az [a, b] intervallumra a xref:/commands/Függvény.adoc[Függvény parancs] vagy a
+xref:/commands/Ha.adoc[Ha parancs] segítségével.
+
+[EXAMPLE]
+====
+
+`++Ha[x≥3 ∧ x≤5,x^2]++` és `++Függvény[x^2,3,5]++` parancsok egyaránt a [3,5] intervallumra leszűkített _x^2^_ függvényt
+eredményezik.
+
+====

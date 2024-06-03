@@ -1,0 +1,46 @@
+= Logikai értékek
+:page-en: Boolean_values
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+A GeoGebrában használhatók a _true_ (igaz) és _false_ (hamis) logikai értékek. Gépeljük csak be a
+xref:/Parancssor.adoc[Parancssorba] a `++a = true++` vagy `++b = false++` értéket és üssünk Entert.
+
+== Jelölőnégyzet és Nyilak
+
+Szabad Logikai értékek Jelölőnégyzetként jelenhetnek meg a xref:/Geometria_ablak.adoc[Geometria ablakban] (lásd a
+image:Tool_Check_Box_to_Show_Hide_Objects.gif[Tool Check Box to Show Hide
+Objects.gif,width=32,height=32]xref:/s_index_php?title=Jelölőnégyzet_eszköz_action=edit_redlink=1.adoc[Jelölőnégyzet
+eszközt]). A billentyűzet nyilainak segítségével a Logikai változók az Algebra nézetben is megváltoztathatók (lásd az
+xref:/Animáció.adoc[Kézi animáció fejezetét]).
+
+[NOTE]
+====
+
+*Jegyzet:* A Logikai változók számként is megadhatók (értékük 0 vagy 1). Ez lehetőséget ad arra, hogy egy jelölő
+négyzetet alkalmazzunk egy dinamikus sebességgel megadott csúszka animációjának elindítására és megállítására. Ebben az
+esetben, az animáció gomb csak akkor látható a Rajzlapon, ha van statikusan (vagyis nemdinamikusan) beállított csúszka
+is.
+
+====
+
+== Műveletek
+
+A GeoGebrában a következő műveletek és függvények alkalmazhatók Logikai értékekre kiválasztva közvetlenül a
+Parancssorban megjelenő szimbólum táblázatból vagy a billentyűzetről beírva:
+
+[cols=",,,,",options="header",]
+|===
+|Művelet |Szimbólum |Billentyűzet |Példa |Objektum típusa
+|Egyenlő-e |≟ |== |a ≟ b vagy a == b |szám, pont, egyenes, kúpszelet a, b
+|Nem egyenlő |≠ |!= |a ≠ b vagy a != b |szám, pont, egyenes, kúpszelet a, b
+|Kisebb |< |< |a < b |szám a, b
+|Nagyobb |> |> |a > b |szám a, b
+|Kisebb vagy egyenlő |≤ |<= |a ≤ b vagy a <= b |szám a, b
+|Nagyobb vagy egyenlő |≥ |>= |a ≥ b vagy a >= b |szám a, b
+|És |∧ |&& |a ∧ b vagy a && b |Logikai értékek a, b
+|Vagy |∨ ||| |a ∨ b vagy a || b |logikai értékek a, b
+|Nem |¬ |! |¬a vagy !a |logikai érték a
+|Párhuzamos |∥ | |a ∥ b |egyenesek a, b
+|Merőleges |⊥ | |a ⊥ b |egyenesek a, b
+|Eleme |∈ | |a ∈ lista1 |szám a, számok listája lista1
+|===

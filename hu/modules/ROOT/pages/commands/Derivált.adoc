@@ -1,0 +1,124 @@
+= Derivált parancs
+:page-en: commands/Derivative
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Derivált[ <Függvény> ]::
+  Meghatározza a függvény deriváltját a fő változó figyelembe vételével.
+
+[EXAMPLE]
+====
+
+`++ Derivált[x^3 + x^2 + x]++` eredménye _3x² + 2x + 1_.
+
+====
+
+Derivált[ <Függvény>, <Szám> ]::
+  Meghatározza a függvény _k_-dik deriváltját fő változó figyelembe vételével.
+
+[EXAMPLE]
+====
+
+`++ Derivált[x^3 + x^2 + x, 2]++` eredménye _6x + 2_.
+
+====
+
+Derivált[ <Függvény>, <Változó> ]::
+  Meghatározza a függvény deriváltját az adott változó figyelembe vételével.
+
+[EXAMPLE]
+====
+
+`++ Derivált[x^3 y^2 + y^2 + xy, y]++` eredménye _2x³y + x + 2y_.
+
+====
+
+Derivált[ <Görbe>, <Változó>, <Szám> ]::
+  Meghatározza a függvény _k_-dik deriváltját az adott változó figyelembe vételével.
+
+[EXAMPLE]
+====
+
+`++ Derivált[x^3 + 3x y, x, 2]++` eredménye _6x_.
+
+====
+
+Derivált[ <Görbe>]::
+  Meghatározza a görbe deriváltját.
+
+[EXAMPLE]
+====
+
+`++ Derivált[GörbeParaméteres[cos(t), t sin(t), t, 0, π]]++` eredménye a következő görbe: _x = -sin(t), y = sin(t) + t
+cos(t)_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Csak paraméteres görbéknél működik.
+
+====
+
+Derivált[ <Görbe>, <Szám> ]::
+  Meghatározza a görbe _k_-dik deriváltját.
+
+[EXAMPLE]
+====
+
+`++ Derivált[GörbeParaméteres[cos(t), t sin(t), t, 0, π], 2]++` eredménye a következő görbe: _x = -cos(t), y = 2cos(t) -
+t sin(t)_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Csak paraméteres görbéknél működik.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Az `++f'(x)++`-et is használhatja a `++ Derivált[f]++` parancs helyett, vagy az `++f''(x)++`-t a
+`++ Derivált[f, 2]++` helyett, stb.
+
+====
+
+== CAS nézet
+
+Derivált[ <Kifejezés> ]::
+  Meghatározza a kifejezés deriválját a fő változó figyelembe vételével.
+Derivált[ <Kifejezés>, <Változó> ]::
+  Meghatározza a függvény deriváltját a megadott változó figyelembe vételével.
+Derivált[ <Kifejezés>, <Változó>, <Szám> ]::
+  Meghatározza a függvény _k_-dik deriváltját a megadott változó figyelembe vételével.
+
+[EXAMPLE]
+====
+
+`++Derivált[a x^3, x, 2]++` eredménye _6 a x_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Derivált[a x^3, a]++` eredménye _x^3^_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Derivált[t^3]++` eredménye _3 t^2^_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Derivált[x^2]++` eredménye _2 x_.
+
+====

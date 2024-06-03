@@ -1,0 +1,45 @@
+= VonalGrafikon parancs
+:page-en: commands/StickGraph
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+VonalGrafikon[ <Pontok listája> ]::
+  A megadott pontokból létrehoz egy vonal grafikont. Minden ponthoz rajzol egy függőleges vonalat az x tengelytől a
+  pontig.
+VonalGrafikon[ <Pontok listája>, <Logikai érték (Vízszintes?)> ]::
+  A megadott pontokból létrehoz egy vonal grafikont. Ha _Vízszintes = true_, úgy merőleges szakaszokat rajzol az y
+  tengelytől a pontokig. Ha "Vízszintes = false", akkor függőleges szakaszokat rajzol az x tengelytől a pontokig.
+VonalGrafikon[ <x-koordináták listája>, <y-koordináták listája> ]::
+  Megrajzolja a két listából létrehozott pontok vonal grafikonját. Minden ponthoz egy függőleges vonalat rajzol az x
+  tengelytől a pontig.
+VonalGrafikon[ <x-koordináták listája>, <y-koordináták listája>, <Logikai érték (Vízszintes?)> ]::
+  Megrajzolja a két listából létrehozott pontok vonal grafikonját. Ha _Vízszintes = true_, úgy merőleges szakaszokat
+  rajzol az y tengelytől a pontokig. Ha "Vízszintes = false", akkor függőleges szakaszokat rajzol az x tengelytől a
+  pontokig.
+
+[EXAMPLE]
+====
+
+`++VonalGrafikon[{1, 3, 4, 5}, {1, 2, 5, 7}, true]++`
+
+====
+
+[EXAMPLE]
+====
+
+`++VonalGrafikon[{1, 3, 4, 5}, {1, 2, 5, 7}]++`
+
+====
+
+[EXAMPLE]
+====
+
+`++VonalGrafikon[{(1, 1), (3, 2), (4, 5), (5, 7)}, false]++`
+
+====
+
+[EXAMPLE]
+====
+
+`++VonalGrafikon[{(1, 1), (3, 2), (4, 5), (5, 7)}]++`
+
+====

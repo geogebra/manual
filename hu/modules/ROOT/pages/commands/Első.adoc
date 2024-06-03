@@ -1,0 +1,77 @@
+= Első parancs
+:page-en: commands/First
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Első[ <Lista> ]::
+  Listát alkot az eredeti lista első eleméből.
+Első[ <Lista>, <Elemek száma> ]::
+  Új listát alkot, mely az eredeti lista első _n_ elemét tartalmazza.
+Első[ <Szöveg> ]::
+  Megadja a szöveg első karakterét.
+Első[ <Szöveg>, <Elemek száma> ]::
+  Megadja a szöveg első _n_ karakterét.
+Első[ <Mértani hely>, <Elemek száma> ]::
+  Ez a parancs az alábbi esetekben használható:
+  * A xref:/commands/DifferenciálEgyenletNumerikusan.adoc[DifferenciálEgyenletNumerikusan] parancs segítségével
+  előállított mértani helyeknél - megadja azon pontok listáját, melyeket a differenciálegyenlet numerikus megoldási
+  algoritmusának első _n_ lépése generál.
+  * A xref:/commands/LegrövidebbÚt.adoc[LegrövidebbÚt], az xref:/commands/UtazóÜgynök.adoc[UtazóÜgynök], a
+  xref:/commands/Voronoi.adoc[Voronoi], a xref:/commands/MinimálisFeszítőFa.adoc[MinimálisFeszítőFa] a
+  xref:/commands/KonvexBurok.adoc[KonvexBurok] és xref:/commands/Burok.adoc[Burok] parancsok segítségével előállított
+  mértani helyeknél - megadja a gráf csúcsait.
+
+[EXAMPLE]
+====
+
+`++Első["Hello",2]++` megadja a _"He"_-t.
+
+====
+
+[EXAMPLE]
+====
+
+`++Első["Hello"]++` megadja a _"H"_-t.
+
+====
+
+[EXAMPLE]
+====
+
+`++Első[{1, 4, 3}, 2]++` megadja az _\{1, 4}_ listát.
+
+====
+
+[EXAMPLE]
+====
+
+`++Első[{1, 4, 3}]++` megadja az _\{1}_ listát.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Ha a lista első elemét szeretnénk megkapni, használjuk az `++Elem[{1, 4, 3}, 1]++` parancsot.
+
+====
+
+== CAS nézet
+
+Első[ <Lista> ]::
+  Listát alkot az eredeti lista első eleméből.
+Első[ <Lista>, <Elemek száma> ]::
+  Új listát alkot, mely az eredeti lista első _n_ elemét tartalmazza.
+
+[EXAMPLE]
+====
+
+`++Első[{1, 4, 3}, 2]++` megadja az _\{1, 4}_ listát.
+
+====
+
+[EXAMPLE]
+====
+
+`++Első[{1, 4, 3}]++` megadja az _\{1}_ listát.
+
+====

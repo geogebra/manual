@@ -1,0 +1,42 @@
+= IrányMező parancs
+:page-en: commands/SlopeField
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+IrányMező[ <f(x,y)> ]::
+  Megrajzolja a stem:[\frac\{dy}\{dx}=f(x,y)] egyenlet https://en.wikipedia.org/wiki/Slope_field[iránymezejét].
+
+[EXAMPLE]
+====
+
+`++IrányMező[x+y]++` megrajzolja az iránymezőt. __
+
+====
+
+IrányMező[ <f(x,y)>, <Szám> ]::
+  Megrajzolja a stem:[\frac\{dy}\{dx}=f(x,y)] differenciálegyenlet iránymezejét egy n számon az n rácson (ha a
+  image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Geometria_ablak.adoc[Geometria
+  ablak] egy négyzet), vagy egy kisebb rácson, ha nem. Az alapértelmezett 40.
+
+IrányMező[ <f(x,y)>, <Szám>, <Hossz szorzója> ]::
+  Megrajzolja a stem:[\frac\{dy}\{dx}=f(x,y)] differenciálegyenlet iránymezejét. A hossz szorzója (0<a≤1) a szakaszok
+  hosszát határozza meg.
+
+IrányMező[ <f(x,y)>, <Szám>, <Hossz szorzója>, <Min x>, <Min y>, <Max x>, <Max y> ]::
+  Megrajzolja a stem:[\frac\{dy}\{dx}=f(x,y)] differenciálegyenlet iránymezejét a megadott téglalapban (a
+  image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Geometria_ablak.adoc[Geometria
+  ablak] kitöltése helyett).
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+* Használjuk a következő eszközöket: image:22px-Mode_translateview.svg.png[Mode translateview.svg,width=22,height=22]
+xref:/tools/Rajzlap_mozgatása.adoc[Rajzlap mozgatása eszköz], image:22px-Mode_zoomin.svg.png[Mode
+zoomin.svg,width=22,height=22] xref:/tools/Nagyítás.adoc[Nagyítás eszköz], image:22px-Mode_zoomout.svg.png[Mode
+zoomout.svg,width=22,height=22] xref:/tools/Kicsinyítés.adoc[Kicsinyítés eszköz] és figyeljük meg, milyen hatással
+vannak a szerkesztésre.
+* Lásd továbbá a xref:/commands/DifferenciálEgyenletNumerikusan.adoc[DifferenciálEgyenletNumerikusan],
+xref:/commands/MértaniHely.adoc[MértaniHely] és xref:/commands/Integrál.adoc[Ingegrál] parancsokat.
+
+====

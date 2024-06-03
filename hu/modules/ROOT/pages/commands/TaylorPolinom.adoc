@@ -1,0 +1,45 @@
+= TaylorPolinom parancs
+:page-en: commands/TaylorPolynomial
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+TaylorPolinom[ <Függvény>, <x-érték>, <Fokszám> ]::
+  Létrehozza az adott függvény Taylor-sorát az _x = x-érték_ helyen, megadott fokszámmal.
+
+[EXAMPLE]
+====
+
+`++TaylorPolinom[x^2, 3, 1]++` eredménye _9 + 6 (x - 3)_.
+
+====
+
+== CAS nézet
+
+TayloPolinom[ <Kifejezés>, <x-érétk>, <Fokszám> ]::
+  Létrehozza az adott függvény Taylor-sorát az _x = x-érték_ helyen, megadott fokszámmal.
+
+[EXAMPLE]
+====
+
+`++ TaylorPolinom[x^2, a, 1]++` eredménye _a^2^ + 2a (x - a)_.
+
+====
+
+TaylorPolinom[ <Kifejezés>, <Változó>, <Változó értéke>, <Fokszám> ]::
+  Létrehozza az adott függvény többváltozós Taylor-sorát a változók megadott értékeivel az _x = Változó értéke_ helyen,
+  megadott fokszámmal.
+
+[EXAMPLE]
+====
+
+* `++ TaylorPolinom[x^3 sin(y), x, 3, 2]++` eredménye _27 sin(y) + 27 sin(y) (x - 3) + 9 sin(y) (x - 3)^2^_.
+* `++ TaylorPolinom[x^3 sin(y), y, 3, 2]++` eredménye _sin(3) x^3^ + cos(3) x^3^ (y - 3) - stem:[\frac\{sin(3) x^3}\{2}]
+(y - 3)^2^_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A fokszámnak >= 0 kell lennie.
+
+====

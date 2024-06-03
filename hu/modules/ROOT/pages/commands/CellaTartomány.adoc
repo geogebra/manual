@@ -1,0 +1,22 @@
+= CellaTartomány parancs
+:page-en: commands/CellRange
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+CellaTartomány[ <Kezdő cella>, <Befejező cella>]::
+  Létrehoz egy listát, amely az összes cella értékét tartalmazza a megadott cellatartományon belül.
+
+[EXAMPLE]
+====
+
+Legyen `++A1 = 1++`, `++A2 = 4++`, `++A3 = 9++`.
+
+A `++CellaTartomány[A1, A3]++` parancs a következő listát eredményezi: \{1, 4, 9}.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Az `++A1:A3++` egy rövidebb szintaxis.
+
+====

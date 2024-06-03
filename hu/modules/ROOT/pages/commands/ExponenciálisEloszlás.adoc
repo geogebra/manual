@@ -1,0 +1,33 @@
+= ExponenciálisEloszlás parancs
+:page-en: commands/Exponential
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+ExponenciálisEloszlás[ <Lambda>, x ]::
+  Megrajzolja a _Lambda_ paraméterrel megadott exponenciális eloszlás sűrűségfüggvényét (PDF).
+ExponenciálisEloszlás[ <Lambda>, x, <Eloszlásfüggvény logikai értéke> ]::
+  Ha a logikai érték igaz, megrajzolja az exponenciális eloszlású valószínűségi változó eloszlásfüggvényét. Ha hamis,
+  akkor a sűrűségfüggvényét (PDF).
+ExponenciálisEloszlás[ <Lambda>, <Változó értéke> ]::
+  Kiszámítja az adott változóra az eloszlásfüggvény értékét, vagyis P(X≤v)-t, ahol X a λ paraméter által meghatározott
+  exponenciális eloszlást követő valószínűségi változó.
+
+[NOTE]
+====
+
+*Jegyzet:* Meghatározza a valószínűséget adott _x_ koordináta értékre (vagyis az exponenciális eloszlás görbéje alatti
+területet az adott _x_ koordinátánál kisebb értékekre).
+
+====
+
+== CAS nézet
+
+ExponenciálisEloszlás[ <Lambda>, <Változó értéke> ]::
+  Kiszámítja az adott változóra az eloszlásfüggvény értékét, vagyis P(X≤v)-t, ahol X a λ paraméter által meghatározott
+  exponenciális eloszlást követő valószínűségi változó.
+
+[EXAMPLE]
+====
+
+`++ExponenciálisEloszlás[2, 1]++` megadja _stem:[\frac\{e^\{2}-1}\{e^\{2} } ]_-t, ami kb. _0.86_.
+
+====

@@ -1,0 +1,78 @@
+= TáblázatSzöveg parancs
+:page-en: commands/TableText
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+TáblázatSzöveg[ <Lista>, <Lista>, ... ]::
+  Létrehoz egy táblázatot a megadott listák elemeiből, szövegobjektumként.
+
+[EXAMPLE]
+====
+
+* `++TáblázatSzöveg[{x^2, 4}, {x^3, 8}, {x^4, 16}]++` létrehoz egy három sorból és két oszlopból álló táblázatot. A
+táblázat elemei balra vannak igazítva.
+* `++TáblázatSzöveg[Sorozat[i^2, i, 1, 10]]++` létrehoz egy egy sorból álló táblázatot. A táblázat elemei balra vannak
+igazítva.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Minden lista külön oszlopba kerül.
+
+====
+
+TáblázatSzöveg[ <Lista>, <Lista>, ... , <Szöveg igazítása> ]::
+  Létrehoz egy táblázatot a megadott listák elemeiből, szövegobjektumként. A __Szöveg igazításá__val megadhatja a szöveg
+  elhelyezését és igazítását a táblázatban.
+  *Jegyzet:*
+
+[EXAMPLE]
+====
+
+* `++ TáblázatSzöveg[{1, 2, 3, 4}, {1, 4, 9, 16}, "v"]++` létrehoz egy két oszlopból és négy sorból álló táblázatot. A
+táblázat elemei balra vannak zárva.
+* `++ TáblázatSzöveg[{1, 2, 3, 4}, {1, 4, 9, 16}, "h"]++` létrehoz egy két sorból és négy oszlopból álló táblázatot. A
+táblázat elemei balra vannak zárva.
+* `++ TáblázatSzöveg[{11.2, 123.1, 32423.9, "234.0"}, "vr"]++` létrehoz egy egy sorból álló táblázatot. A táblázat
+elemei jobbra vannak zárva.
+
+====
+
+A következő jelek szintén megadhatók:
+
+* zárójelek különböző fajtái: ||||, ||, \{}, [] vagy ()
+* Sorokat elválasztó jel: _
+* Oszlopokat elválasztó jel: |
+
+[EXAMPLE]
+====
+
+* `++ TáblázatSzöveg[{1, 2}, {3, 4}, "c()"]++` eredménye a következő szöveg: stem:[\begin\{pmatrix}\{} 1 & 2 \\ 3 & 4 \\
+\end\{pmatrix} ]
+* `++ TáblázatSzöveg[{1, 2}, {3, 4}, "c|_"]++` eredménye a következő szöveg:
+image:50px-TabellaTesto.png[TabellaTesto.png,width=50,height=56]
+* `++ TáblázatSzöveg[{1, 2}, {3, 4}, "||"]++` eredménye a következő szöveg: stem:[ \begin\{vmatrix}\{} 1 & 2 \\ 3 & 4 \\
+\end\{vmatrix} ]
+* `++ TáblázatSzöveg[{1, 2}, {3, 4}, "||||"]++`eredménye a következő szöveg: stem:[\begin\{Vmatrix}\{} 1 & 2 \\ 3 & 4 \\
+\end\{Vmatrix} ]
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* A szövegeknek színt is lehet adni és tetszőlegesen beállítható a választóvonal is.
+
+[EXAMPLE]
+====
+
+* `++ TáblázatSzöveg[{{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "-/|_v"]++` eredménye egy
+táblázat, amely nem tartalmaz választóvonalakat.
+* `++ TáblázatSzöveg[{{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "|11001 _110001 h"]++`.
++
+Az 1 a választóvonal megjelenítését, a 0 a választóvonal elrejtését jelenti.
+
+====
+
+====

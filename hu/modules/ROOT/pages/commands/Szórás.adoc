@@ -1,0 +1,44 @@
+= Szórás parancs
+:page-en: commands/SD
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Szórás[ <Nyers adatok listája> ]::
+  Meghatározza az adott számok szórását.
+
+[EXAMPLE]
+====
+
+`++Szórás[{1, 2, 3, 4, 5}]++` eredménye _1.41_.
+
+====
+
+Szórás[ <Számok listája>, <Gyakoriságok listája> ]::
+  Meghatározza az adott számok szórását a megadott gyakoriságokat is figyelembe véve.
+
+[EXAMPLE]
+====
+
+`++Szórás[{20, 40, 41, 42, 40, 54}, {20, 6, 4, 5, 2} ]++` eredménye _5.96_
+
+====
+
+== CAS nézet
+
+Szórás[ <Számok listája> ]::
+  Meghatározza az adott számok szórását.
+
+[EXAMPLE]
+====
+
+`++Szórás[{1, 2, 3, 4, 5}]++` eredménye stem:[\sqrt\{2}].
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+Lásd még az xref:/commands/Átlag.adoc[Átlag parancsot].
+
+====

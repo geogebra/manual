@@ -1,0 +1,84 @@
+= Utolsó parancs
+:page-en: commands/Last
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Utolsó[ <Lista> ]::
+  Listát alkot az eredeti lista utolsó eleméből.
+Utolsó[<Lista>, <Elemek száma>]::
+  Új listát alkot, mely az eredeti lista utolsó _n_ elemét tartalmazza.
+Utolsó[ <Szöveg> ]::
+  Megadja a szöveg utolsó karakterét.
+Utolsó[ <Szöveg>, <Elemekszáma> ]::
+  Megadja a szöveg utolsó _n_ karakterét.
+
+[EXAMPLE]
+====
+
+`++Utolsó["Hello",2]++` megadja a _"lo"_-t.
+
+====
+
+[EXAMPLE]
+====
+
+`++Utolsó["Hello"]++` megadja az _"o"_-t.
+
+====
+
+[EXAMPLE]
+====
+
+`++Utolsó[{1, 4, 3}, 2]++` megadja a _\{4, 3}_ listát.
+
+====
+
+[EXAMPLE]
+====
+
+`++Utolsó[{1, 4, 3}]++` megadja a _\{3}_-at.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Ha a lista utolsó elemét szeretnénk megkapni, használjuk az `++Elem[{1, 4, 3}, 3]++` parancsot.
+
+====
+
+== CAS nézet
+
+Utolsó[ <Lista> ]::
+  Listát alkot az eredeti lista utolsó eleméből.
+Utolsó[ <Lista>, <Elemek száma> ]::
+  Új listát alkot, mely az eredeti lista utolsó _n_ elemét tartalmazza.
+
+[EXAMPLE]
+====
+
+`++Utolsó[{1, 4, 3}, 2]++` megadja a _\{4, 3}_ listát.
+
+====
+
+[EXAMPLE]
+====
+
+`++Utolsó[{1, 4, 3}]++` megadja a _\{3}_-at.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+Lásd még az xref:/commands/Első.adoc[Első parancsot].
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Ha a lista utolsó elemét szeretnénk megkapni, használjuk az `++Elem[{1, 4, 3}, 3]++`parancsot.
+
+====

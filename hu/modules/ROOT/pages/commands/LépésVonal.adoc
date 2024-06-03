@@ -1,0 +1,72 @@
+= LépésVonal parancs
+:page-en: commands/StepGraph
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+LépésVonal[ <Pontok listája> ]::
+  A megadott listán lévő pontokból létrehoz egy diagramot, amelyen minden pont egy vízszintes vonallal kapcsolódik a
+  lista következő pontjához.
+LépésVonal[ <Pontok listája>, <Logikai érték (összefüggő)> ]::
+  A megadott listán lévő pontokból létrehoz egy diagramot. Ha a logikai érték "false", akkor egy vízszintes vonalat
+  rajzolt a következő pont x koordinátája felé, viszont nem rajzol függőleges vonalat. Ha a logikai érték "true", úgy az
+  összes pont kapcsolódik a lista következő pontjához egy vízszintes és egy függőleges vonallal.
+LépésVonal[ <x-koordináták listája>, <y-koordináták listája> ]::
+  A megadott listán lévő pontokból létrehoz egy diagramot. Minden pont egy vízszintes vonallal kapcsolódik a lista
+  következő pontjához.
+LépésVonal[ <x-koordináták listája>, <y-koordináták listája>, <Logikai érték (összefüggő)> ]::
+  A megadott listán lévő pontokból létrehoz egy diagramot. Ha a logikai érték "false", akkor egy vízszintes vonalat
+  rajzolt a következő pont x koordinátája felé, viszont nem rajzol függőleges vonalat. Ha a logikai érték "true", úgy az
+  összes pont kapcsolódik a lista következő pontjához egy vízszintes és egy függőleges vonallal.
+LépésVonal[ <x-koordináták listája>, <y-koordináták listája>, <Logikai érték (összefüggő)>, <Pont stílusa>]::
+  A fentebb leírt módon létrehoz egy diagramot.
+  Poin stílus értéke (_-2, -1, 0, 1, -1_) a következőképpen határozza meg a pontok megjelenítését:
+  _0_ = nem rajzol pontot
+  _1_ = telített pont jobb oldalon
+  _2_ = telített pont jobb oldalon, üres pont bal oldalon
+  _-1_ = telített pont bal oldalon
+  _-2_ = telített pont bal oldalon, üres pont jobb oldalon
+
+LépésVonal[ <Pontok listája>, <Logikai érték (összefüggő)>, <Pont stílusa> ]
+
+A fentebb leírt módon létrehoz egy diagramot.
+
+[EXAMPLE]
+====
+
+`++LépésVonal[{(1, 1), (3, 2), (4, 5), (5, 7)}, false, 1]++`
+
+====
+
+[EXAMPLE]
+====
+
+`++LépésVonal[{1, 3, 4, 5}, {1, 2, 5, 7}, false, 1]++`
+
+====
+
+[EXAMPLE]
+====
+
+`++LépésVonal[{1, 3, 4, 5}, {1, 2, 5, 7}, false]++`
+
+====
+
+[EXAMPLE]
+====
+
+`++LépésVonal[{1, 3, 4, 5}, {1, 2, 5, 7}]++`
+
+====
+
+[EXAMPLE]
+====
+
+`++LépésVonal[{(1, 1), (3, 2), (4, 5), (5, 7)}, true]++`
+
+====
+
+[EXAMPLE]
+====
+
+`++LépésVonal[{(1, 1), (3, 2), (4, 5), (5, 7)}]++`
+
+====

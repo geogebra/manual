@@ -1,0 +1,65 @@
+= Elem parancs
+:page-en: commands/Element
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Elem[ <Lista>, <Elem sorszáma> ]::
+  Megadja a lista adott sorszámú elemét.
+Elem[ <Mátrix>, <Sor>, <Oszlop> ]::
+  Megadja a mátrix adott sorában és oszlopában található elemet.
+Elem[ <lLista>, <Index1>, <Index2>,...]::
+  Egymásba ágyazott lista esetén az indexek segítségével adható meg a keresett elem vagy lista.
+
+[EXAMPLE]
+====
+
+Legyen__L=\{\{\{1, 2}, \{3, 4}}, \{\{5, 6}, \{7, 8}}}__. Ekkor `++Elem[L, 1, 2, 1]++` megadja _3_-at,
+`++Elem[L, 2, 2]++` megadja _\{7, 8}_-at.
+
+====
+
+[EXAMPLE]
+====
+
+`++Elem[{{1, 3, 2}, {0, 3, -2}}, 2, 3]++` megadja a _-2_-t, a második sorban található harmadik elemet a
+stem:[\begin\{pmatrix}1&3&2\\0&3&-2\end\{pmatrix}] mátrixban.
+
+====
+
+[EXAMPLE]
+====
+
+`++Elem[{1, 3, 2}, 2]++` megadja _3_ -at, az _\{1, 3, 2}_ lista második elemét.
+
+====
+
+== CAS nézet
+
+Elem[ <Lista>, <Elem sorszáma> ]::
+  Megadja a lista adott sorszámú elemét.
+Elem[ <Mátrix>, <Sor>, < Oszlop> ]::
+  Megadja a mátrix adott sorában és oszlopában található elemet.
+
+[EXAMPLE]
+====
+
+`++Elem[{{a, b, c}, {d, e, f}}, 2, 3]++` megadja _f_-et, a második sorban található harmadik elemet az
+stem:[\begin\{pmatrix}a&b&c\\d&e&f\end\{pmatrix}] mátrixban.
+
+====
+
+[EXAMPLE]
+====
+
+`++Elem[{a, b, c}, 2]++` megadja _b_-t, az _\{a, b, c}_ lista második elemét.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:*
+
+Lásd még az xref:/commands/Első.adoc[Első parancsot], az xref:/commands/Utolsó.adoc[Utolsó parancsot] és a
+xref:/commands/VéletlenElem.adoc[VéletlenElem parancsot].
+
+====

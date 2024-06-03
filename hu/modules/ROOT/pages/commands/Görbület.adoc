@@ -1,0 +1,38 @@
+= Görbület parancs
+:page-en: commands/Curvature
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Görbület[ <Pont>, <Függvény> ]::
+  Kiszámítja az adott pontban a függvény görbületét.
+
+[EXAMPLE]
+====
+
+`++Görbület[(0 ,0), x^2]++` eredménye _2_.
+
+====
+
+Görbület[ <Pont>, <Görbe> ]::
+  Kiszámítja az adott pontban a görbe görbületét.
+
+[EXAMPLE]
+====
+
+`++Görbület[(0, 0), GörbeParaméteres[cos(t), sin(2t), t, 0, π]]++` eredménye _0_.
+
+====
+
+Görbület[ <Pont>, <Szabad alakzat> ]::
+  Kiszámítja az adott pontban a szabad alakzat (függvény, görbe, kúpszelet) görbületét.
+
+[EXAMPLE]
+====
+
+* Görbület[ <Pont>, <Függvény> ]*: Kiszámítja az adott pontban a függvény görbületét.*
+* `++Görbület[(0 ,0), x^2]++` eredménye _2_.
+* Görbület[ <Pont>, <Görbe> ]*: Kiszámítja az adott pontban a görbe görbületét.*
+* `++Gürbölet[(0, 0), GörbeParaméteres[cos(t), sin(2t), t, 0, π]]++` eredménye _0_.
+* Görbület[ <Pont>, <Kúpszelet> ]*: Kiszámítja az adott pontban a kúpszelet görbületét.*
+* `++Görbület[(-1 ,0), Kúpszelet[{1, 1, 1, 2, 2, 3}]]++` eredménye _2_.
+
+====

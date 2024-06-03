@@ -1,0 +1,29 @@
+= HáromszögEloszlás parancs
+:page-en: commands/Triangular
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+HáromszögEloszlás[ <Alsó határ>, <Felső határ>, <Modálérték>, x ]::
+  Megrajzolja a _Alsó határ, Felső határ, Modálérték_ paraméterekkel meghatározott háromszög-eloszlás sűrűségfüggvényét
+  (PDF).
+HáromszögEloszlás[ <Alsó határ>, <Felső határ>, <Modálérték>, x, <Eloszlásfüggvény logikai értéke> ]::
+  Ha a logikai érték igaz, megrajzolja a háromszög-eloszlást követő valószínűségi változó eloszlásfüggvényét. Ha hamis,
+  akkor a sűrűségfüggvényét.
+HáromszögEloszlás[ <Alsó határ>, <Felső határ>, <Modálérték>, <Változó értéke> ]::
+  Kiszámítja az adott változóra az eloszlásfüggvény értékét, vagyis P(X≤v)-t, ahol X egy _Alsó határ, Felső határ,
+  Modálérték_ paraméterekkel meghatározott háromszög-eloszlású valószínűségi változó.
+
+[NOTE]
+====
+
+*Jegyzet:* Meghatározza a valószínűséget adott _x_ koordináta értékre (vagy a háromszög-eloszlás görbéje alatti
+területet az adott x koordinátánál kisebb értékekre).
+
+====
+
+== CAS nézet
+
+xref:/CAS_nézet.adoc[CAS nézet]-ben csak egy szintakszis elfogadott:
+
+HáromszögEloszlás[ <Alsó határ>, <Felső határ>, <Modálérték>, <Változó értéke> ]::
+  Kiszámítja az adott változóra az eloszlásfüggvény értékét, vagyis P(X≤v)-t, ahol X egy _Alsó határ, Felső határ,
+  Modálérték_ paraméterekkel meghatározott háromszög-eloszlású valószínűségi változó.

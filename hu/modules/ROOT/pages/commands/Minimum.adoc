@@ -1,0 +1,65 @@
+= Minimum parancs
+:page-en: commands/Min
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Minimum[ <Szám>, <Szám> ]::
+  Meghatározza az adott két szám minimumát.
+Minimum[ <Lista> ]::
+  Meghatározza az adott listán szereplő számok minimumát.
+Minimum[ <Intervallum> ]::
+  Megadja az intervallum alsó határát, pl. `++Minimum[2 < x < 3]++` eredménye _2_. Nyílt és zárt intervalum esetén
+  ugyanaz.
+Minimum[ <Függvény>, <Kező x-érték>, <Záró x-érték> ]::
+  Kiszámítja a függvény minimumát az adott intervallumon. A függvénynek csak egy minimum helye lehet az adott
+  intervallumon.
+
+[EXAMPLE]
+====
+
+`++Minimum[{-2, 12, -23, 17, 15}]++` eredménye _-23_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Minimum[12, 15]++` eredménye _12_.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Ha a megadott lista nem számokat tartalmaz, akkor a Minimum[ <Lista> ] az alakzatokkal kapcsolatba hozható
+számokat veszi figyelembe. Például a Minimum[ <szakaszok listája> ] megadja a legrövidebb szakasz hosszát.
+
+====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd még a xref:/commands/Szélsőérték.adoc[Szélsőérték parancs]-ot és a
+xref:/tools/Függvényvizsgálat.adoc[Függvényvizsgálat eszköz]-t.
+
+====
+
+== CAS nézet
+
+Minimum[ <Lista> ]::
+  Megadja a listán szereplő számok minimumát.
+Minimum[ <Szám>, <Szám> ]::
+  Megadja a két szám minimumát.
+
+[EXAMPLE]
+====
+
+`++Minimum[12, 15]++` eredménye _12_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Minimum[{-2, 12, -23, 17, 15}]++` eredménye _-23_.
+
+====

@@ -1,0 +1,70 @@
+= Geometria ablak
+:page-en: Graphics_View
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+Az xref:/Eszköztár.adoc[eszköztárban] található xref:/Eszközök.adoc[szerkesztő eszközök] segítségével egerünkkel
+geometriai szerkesztéseket végezhetünk a Geometria ablakban. Bármely eszközt kiválasztva, az eszköztár végén megjelenik
+annak súgója, így segítve az eszköz használatát. A Geometria ablakban létrehozott alakzatok leírása azonnal megjelenik
+az xref:/Algebra_nézet.adoc[Algebra nézetben].
+
+[NOTE]
+====
+
+*Jegyzet:* Ha a image:Tool_Move.gif[Tool Move.gif,width=32,height=32] xref:/tools/Mozgatás.adoc[Mozgatás eszközt]
+választjuk, alakzatunkat módosíthatjuk az egér húzásával. Ezzel egyidőben az alakzat leírása is aktualizálódik az
+Algebra nézetben.
+
+====
+
+Az eszköztárban található valamennyi ikon egy eszközkészletet reprezentál, mely hasonló funkciójú eszközökből áll. Ezt
+az eszközkészletet megjeleníthetjük, ha az adott eszköz jobb alsó sarkában található nyílra kattintunk.
+
+[NOTE]
+====
+
+*Jegyzet:* A szerkesztő eszközök részben a létrehozott alakzat típusa szerint, részben az eszközök funkciója szerint
+kerültek csoportosításra. Találhatunk eszközöket, melyekkel pontokat hozhatunk létre xref:/tools/Pont_eszközök.adoc[Pont
+eszközök] (default icon image:Tool_New_Point.gif[Tool New Point.gif,width=32,height=32]) és eszközöket, melyekkel
+geometriai transzformációkat valósíthatunk meg xref:/tools/Transzformációs_eszközök.adoc[Transzformációs eszközök]
+(default icon image:Tool_Reflect_Object_in_Line.gif[Tool Reflect Object in Line.gif,width=32,height=32]).
+
+====
+
+The Graphics View may include various types of grid and axes – see
+xref:/s_index_php?title=Customizing_the_Graphics_View_action=edit_redlink=1.adoc[Customizing the Graphics View] for
+details.
+
+== Formázóléc
+
+You can find a button to toggle the styling bar in the upper right corner of the Graphics-View. Depending on the tool
+you select, there are shown different buttons to enhance your construction. By default you are able to _show/hide the
+coordinate axes_ and the _grid_ or change the xref:/s_index_php?title=Options_Menu_action=edit_redlink=1.adoc[point
+capturing]. Additionally there are buttons _set color_, _set point style_, _set label style_, _set line style_, _set
+color and transparency_, _set text color_, _set font style to bold_, _set font style to italic_ or _set text size_.
+
+== Second Graphics View
+
+A second graphics view may be opened using the xref:/s_index_php?title=View_Menu_action=edit_redlink=1.adoc[View Menu].
+If two Graphics Views are opened, one of them is always active (either it's being worked with and it has bold caption,
+or it is the last view that has been worked with). All visible objects created by
+xref:/s_index_php?title=Commands_action=edit_redlink=1.adoc[Commands] appear in the active graphics view. For each
+object you can specify in which Graphic View(s) it will be visible using the _Advanced_ tab of the
+xref:/s_index_php?title=Properties_Dialog_action=edit_redlink=1.adoc[Properties Dialog].
+
+== Copy & Paste
+
+Via Keybord Shortcut [.kcode]#Ctrl# + [.kcode]#C# and [.kcode]#Ctrl# + [.kcode]#V# (Mac OS:[.kcode]#Cmd# + [.kcode]#C#
+and [.kcode]#Cmd# + [.kcode]#V#) you can Copy and Paste selected object (except if they depend on the axes) into either
+the same window or into another. Copy & Paste will copy every ancestor of the selected objects but makes the
+non-selected objects invisible. If you copy objects depending on sliders into a new window, it will copy the slider
+(invisible) into the window, too. The pasted object is fixed when you click on the Graphics View. If the copied object
+depends at least one Point then it can snap onto existing points when pasted (but only the Point following the mouse
+pointer will do this).
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+
+|Some content was not yet translated.
+|===

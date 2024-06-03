@@ -1,0 +1,53 @@
+= Bizonyít parancs
+:page-en: commands/Prove
+ifdef::env-github[:imagesdir: /hu/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Following text is about a feature that is supported only in 5.0 beta version.
+
+'''''
+
+\{\{\{1}}}
+
+|===
+
+Bizonyít[ <Logikai Kifejezés> ]::
+  Meghatározza, hogy az adott logikai kifejezés általánosságban igaz-e vagy nem.
+
+Általában a GeoGebra a xref:/Logikai_értékek.adoc[logikai kifejezés] helyességét numerikus számításokkal dönti el. A
+Bizonyít parancs viszont szimbolikus módszereket alkalmaz, hogy meghatározza, hogy egy állítás általánosságban "true"
+(igaz) vagy pedig "false" (hamis). Ha a GeoGebra nem tudja meghatározni az eredményt, a válasz "undefined" (nem
+definiált).
+
+[EXAMPLE]
+====
+
+Három pontot definiálunk, `++A=(1,2)++`, `++B=(3,4)++`, `++C=(5,6)++`. A `++KollineárisE[A,B,C]++` parancs eredménye
+_true_ (igaz), mivel a numerikus ellenőrzés a pont aktuális koordinátáival történik. A
+`++Bizonyít[KollineárisE[A,B,C]]++` parancsot alkalmazva _false_ (hamis) eredményt kapjuk, mivel a három pont
+általánosságban nem esik egy egyenesre, pl. ha megváltoztatjuk a pontok helyzetét.
+
+====
+
+[EXAMPLE]
+====
+
+Definiáljunk egy háromszöget az _A_, _B_ és _C_ csúcsokkal, majd adjuk meg a következőket: `++D=Középpont[B,C]++`,
+`++E=Középpont[A,C]++`, `++p=Egyenes[A,B]++`, `++q=Egyenes[D,E]++`. Most mind `++p∥q++` és `++Bizonyít[p∥q]++` eredménye
+_true_ (igaz), mivel a háromszög középvonala mindig párhuzamos lesz a megfelelő oldallal.
+
+[[ggbContainera643780a2490ed899a9ce7dfb2778d9e]]====
+
+[NOTE]
+====
+
+*Jegyzet:* Lásd még a xref:/commands/BizonyításRészletek.adoc[BizonyításRészletek] parancsot, a
+xref:/Logikai_értékek.adoc[Logikai értékeket] és http://dev.geogebra.org/trac/wiki/TheoremProving[az algoritmus
+technikai részleteit].
+
+====
