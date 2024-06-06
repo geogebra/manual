@@ -14,6 +14,11 @@ Once you're done with your changes, you can commit them to your forked repositor
 GitHub will also suggest to create a pull request for your changes, please do so.
 One of the maintainers will verify your pull request and if it provides an improvement, the pull request will be merged (so your changes will become part of the manual).
 
+## Page format
+The pages are written in AsciiDoc. We do not want to duplicate the [AsciiDoc documentation](https://docs.asciidoctor.org/asciidoc/latest/) here, just provide a few highlights:
+* Rendering images in GitHub: to render image correctly both in GitHub and the docs site, each page has to contain `ifdef::env-github[:imagesdir: /**/modules/ROOT/assets/images]` where `**` should be replaced by your language code. This is included in all pages that were initially imported from Wiki.
+* Using special characters in code blocks: to allow `((` and `{` in math blocks, please check [the passthrough macro](https://docs.asciidoctor.org/asciidoc/latest/pass/pass-macro/).
+
 ## Language links
 To make sure your page is linked correctly to its counterparts in other languages, the `page-en` property has to be set. For example the [english page for Angle command](https://github.com/geogebra/manual/blob/main/en/modules/ROOT/pages/commands/Angle.adoc?plain=1) contains this just below the page's heading:
 ```asciidoc
