@@ -26,6 +26,11 @@ To make sure your page is linked correctly to its counterparts in other language
 ```
 You can copy this line to your translation of the given English page and it will get linked to all existing translations.
 
+## Publishing changes
+In general all changes are published online the day after they were merged into this repository.
+That currently happens at 5:46 AM GMT or when triggered manually by developers.
+See the [list of recent deploymnents](https://github.com/geogebra/docs/actions/workflows/antora.yml) for details.
+
 ## Watching for changes
 GitHub allows you to see the history of any part of this repository, e.g. for the English pages you can check
 https://github.com/geogebra/manual/commits/main/en/modules/ROOT/pages
