@@ -1,0 +1,22 @@
+= IsFactored Command
+:page-en: commands/IsFactored
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+IsFactored( <Polynomial> )::
+  Returns ''true'' if the polygon is factored and ''false'' otherwise.
+
+[EXAMPLE]
+====
+
+* `IsFactored(x)` yields _true_ +
+* `IsFactored(0.5)` yields _true_ +
+* `IsFactored(5)` yields _true_ +
+* `IsFactored(x^2-1)` yields _false_ +
+* `IsFactored(x^2-2)` yields _true_ +
+* `IsFactored(x(x+1))` yields _true_ +
+* `IsFactored(x(2x+2))` yields _false_ +
+* `IsFactored(x^3-1)` yields _false_ +
+* `IsFactored(x(x/2+1/2))` yields _false_ +
+//* `IsFactored((x+1)(x^2-1))` yields _false_ +
+* `IsFactored(-2x-2)` yields _false_ +
+* `IsFactored(2x+2)` yields _false_ +
