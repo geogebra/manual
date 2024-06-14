@@ -17,14 +17,14 @@ ResuelveEDO( <f(x,y)>, <x Inicial>, <y Inicial>, <x Final>, <Paso> )::
   ecuación a partir del punto con sendas coordenadas hasta la abscisa final indicada, con el _paso_ dado.Admite toda
   **_E_**~cuación~ **_D_**~iferencial~ **_O_**~rdinaria~
   http://en.wikipedia.org/wiki/es:Ecuaci%C3%B3n_diferencial_ordinaria_de_primer_orden[(*EDO*] en español)- como
-  *stem:[\begin\{equation}\frac\{dy}\{dx}=f(x,y) \end\{equation}]*
+  *stem:[\begin\{equation}\frac{dy}\{dx}=f(x,y) \end\{equation}]*
 
 [EXAMPLE]
 ====
 
 *Ejemplos:* Siendo _0.1_ el _paso_, *_A_* el punto inicial, y *B* el que establece la abscisa
 final...*`++ResuelveEDO[-x y, x(A), y(A), x(B), 0.1]++`* xref:/Vista_Gráfica.adoc[grafica] la resolución de:
-*stem:[\begin\{equation} \frac\{dy}\{dx}=-xy \end\{equation}]* siendo su registro
+*stem:[\begin\{equation} \frac{dy}\{dx}=-xy \end\{equation}]* siendo su registro
 xref:/Vista_Algebraica.adoc[algebraico]: _IntegralNumérica1 = ResuelveEDO[-x y, x(A), y(A), x(B), 0.1]_
 
 '''''
@@ -64,7 +64,7 @@ _xref:/commands/Primero.adoc['Primero****][lug1, Longitud[lug1]]_
 ResuelveEDO( f(x,y)>, <g(x,y)>, <x Inicial>, <y Inicial>, <t Final>, <Paso> )::
   Dados el valor para el punto inicial, el máximo valor del parámetro interno _t_ y el del paso para _t_, resuelve
   numéricamente y expone como xref:/Lugar_Geométrico.adoc[lugar geométrico]. la EDO de primer orden
-  stem:[\begin\{equation} \frac\{dy}\{dx}=\frac\{f(x,y)}\{g(x,y)} \end\{equation}]
+  stem:[\begin\{equation} \frac{dy}\{dx}=\frac{f(x,y)}\{g(x,y)} \end\{equation}]
 
 [cols=",",]
 |===
@@ -76,7 +76,7 @@ cuando la primera falla. Como cuando la curva de solución tiene puntos vertical
 ====
 
 *`++ResuelveEDO[-x, y, x(A), y(A), 5, 0.1]++`*, siendo *_A_* el punto inicial, _0.1_ el _paso_ hasta el valor de abscisa
-_5_, resuelve la EDO: _stem:[\begin\{equation}\frac\{dy}\{dx}=- \frac\{x}\{y} \end\{equation}]_
+_5_, resuelve la EDO: _stem:[\begin\{equation}\frac{dy}\{dx}=- \frac{x}\{y} \end\{equation}]_
 
 ====
 
@@ -127,11 +127,11 @@ http://en.wikipedia.org/wiki/es:M%C3%A9todo_de_Runge-Kutta[Runge-Kutta].
 *→* *Resolución formal*
 
 ResuelveEDO(<f(x,y)>)::
-  Procura desarrollar la solución precisa de la EDO de primer orden: *stem:[\begin\{equation} \frac\{dy}\{dx}=f(x,y(x))
+  Procura desarrollar la solución precisa de la EDO de primer orden: *stem:[\begin\{equation} \frac{dy}\{dx}=f(x,y(x))
   \end\{equation}]*
 ResuelveEDO( <f(x, y)>, <Punto en f> )::
   Procura la función que pasando por el punto indicado resuelve formalmente la EDO de primer orden:
-  stem:[\frac\{dy}\{dx}(x)=f(x, y(x))].
+  stem:[\frac{dy}\{dx}(x)=f(x, y(x))].
 
   '''''
 
@@ -175,7 +175,7 @@ ResuelveEDO( <f(x, y)~Ecuación diferencial en _x_, _y_~>, <Punto(s) L en f>, <P
 *Ejemplos:* *`++ResuelveEDO[y / x, y,  x]++`* da _y = c~1~ x_.*`++ResuelveEDO[y'' - 3y' + 2 = x, (2, 3), (1, 2)]++`* da
 un resultado levemente diferente según se trate de la versión 4.2 o superior:
 
-stem:[\{y = \frac\{-9 x^\{2} \textit\{e}^\{3} + 30 x \textit\{e}^\{3} + 32 \textit\{e}^\{3 x} - 32 \textit\{e}^\{6} +
+stem:[\{y = \frac{-9 x^\{2} \textit\{e}^\{3} + 30 x \textit\{e}^\{3} + 32 \textit\{e}^\{3 x} - 32 \textit\{e}^\{6} +
 138 \textit\{e}^\{3} }\{54 \textit\{e}^\{3} } }]
 
 ====
@@ -205,7 +205,7 @@ ResuelveEDO( <f(w, v)~Ecuación diferencial en _w~variable independiente~_, _v~v
 dependiente~, w~variable independiente~ )::
   Procura dar con la solución precisa de la EDO de primero o segundo orden dada.Opera de modo análogo a la variante
   previa excepto que la función _f_ puede serlo respecto de variables diferentes a _x_ o _y_ como
-  stem:[\frac\{dv}\{dw}(w)=f(w, v(w))] siendo _v_ la variable dependiente y _w_ la independiente.
+  stem:[\frac{dv}\{dw}(w)=f(w, v(w))] siendo _v_ la variable dependiente y _w_ la independiente.
 
 [EXAMPLE]
 ====

@@ -6,7 +6,7 @@ VarianceEchantillon( <Liste Nombres> )::
   Retourne la https://en.wikipedia.org/wiki/fr:Variance_(statistiques_et_probabilit%C3%A9s)#Estimation[variance
   d'échantillon] de la liste de nombres donnée.
 
-stem:[\frac\{1}\{n-1}\sum_\{i=1}^\{i=n} x_i^2 - \frac\{n}\{n-1} \overline\{x}^2 ]
+stem:[\frac{1}\{n-1}\sum_\{i=1}^\{i=n} x_i^2 - \frac{n}\{n-1} \overline{x}^2 ]
 
 VarianceEchantillon( <Liste Nombres>, <Liste Effectifs> )::
 
@@ -32,8 +32,8 @@ Si ces nombres ne sont pas définis, vous obtenez une formule littérale.
 [EXAMPLE]
 ====
 
-*Exemple :* `++VarianceEchantillon({x, y, z})++` donne stem:[\frac\{1}\{3} x² - \frac\{1}\{3}x y - \frac\{1}\{3}x z +
-\frac\{1}\{3}y² - \frac\{1}\{3}y z + \frac\{1}\{3}z²], avec l'outil ou la commande Factoriser
-`++Factoriser(VarianceEchantillon({x, y, z}))++` donnestem:[\frac\{x² - x y - x z + y² - y z + z²}\{3}].
+*Exemple :* `++VarianceEchantillon({x, y, z})++` donne stem:[\frac{1}\{3} x² - \frac{1}\{3}x y - \frac{1}\{3}x z +
+\frac{1}\{3}y² - \frac{1}\{3}y z + \frac{1}\{3}z²], avec l'outil ou la commande Factoriser
+`++Factoriser(VarianceEchantillon({x, y, z}))++` donnestem:[\frac{x² - x y - x z + y² - y z + z²}\{3}].
 
 ====

@@ -29,12 +29,12 @@ TrigCombina( <Expresión> )::
 *Ejemplos:*
 
 * `++TrigCombina[sin(x) cos(3x)]++` da, tanto en en la vista xref:/Vista_CAS.adoc[CAS] como en la
-xref:/Vista_Algebraica.adoc[Algebraica].stem:[\{\frac\{1}\{2} sin \left( 4 x \right) - \frac\{1}\{2} sin \left( 2 x
+xref:/Vista_Algebraica.adoc[Algebraica].stem:[\{\frac{1}\{2} sin \left( 4 x \right) - \frac{1}\{2} sin \left( 2 x
 \right)}]
-* `++TrigCombina[sin(x) + cos(x)]++` da stem:[ \{\sqrt\{2} cos \left( x - \frac\{1}\{4} \pi \right)} ] contrastando con
-el resultado de `++TrigCombina[sin(x) + cos(x), sin(x)]++` que da stem:[ \{\sqrt\{2} sin \left( x + \frac\{1}\{4} \pi
+* `++TrigCombina[sin(x) + cos(x)]++` da stem:[ \{\sqrt{2} cos \left( x - \frac{1}\{4} \pi \right)} ] contrastando con
+el resultado de `++TrigCombina[sin(x) + cos(x), sin(x)]++` que da stem:[ \{\sqrt{2} sin \left( x + \frac{1}\{4} \pi
 \right)} ]
-* `++TrigCombina[(tan(x) + tan(2x)) / (1 - tan(x) tan(2x))]++` da stem:[\frac\{1} \{cos(3x)} sin(3x)] que podría
+* `++TrigCombina[(tan(x) + tan(2x)) / (1 - tan(x) tan(2x))]++` da stem:[\frac{1} \{cos(3x)} sin(3x)] que podría
 contrastarse con el siguiente resultado:
 * `++TrigSimplifica[TrigCombina[(tan(x) + tan(2x)) / (1 - tan(x) tan(2x)), tan(x)]]++` da _tan(3x)_
 
@@ -62,7 +62,7 @@ TrigCombina( <Expresión>, <Función Destino> )::
 
 * `++TrigCombina[ (tan(x) +tan(y))/(1-tan(x) tan(y)), tan(x)]++` da tan(x + y)
 * `++TrigCombina[ (tan(x) +tan(y))/(1- tan(x) tan(y)), tan(y)]++` da tan(x + y)
-* `++TrigCombina[sin(x) + cos(x), sin(x)]++` da stem:[ \{\sqrt\{2} sin \left( x + \frac\{1}\{4} \pi \right)} ]
+* `++TrigCombina[sin(x) + cos(x), sin(x)]++` da stem:[ \{\sqrt{2} sin \left( x + \frac{1}\{4} \pi \right)} ]
 
 ====
 
@@ -84,7 +84,7 @@ El comando obra del modo ya descripto, admitiendo literales en operaciones simb�
 [EXAMPLE]
 ====
 
-`++TrigCombina[sin(p) cos(3p)]++` da stem:[\{\frac\{1}\{2} sin \left( 4 p \right) - \frac\{1}\{2} sin \left( 2 p
+`++TrigCombina[sin(p) cos(3p)]++` da stem:[\{\frac{1}\{2} sin \left( 4 p \right) - \frac{1}\{2} sin \left( 2 p
 \right)}].
 
 ====
@@ -94,7 +94,7 @@ El resultado se resuelve más completa y concretamente.
 [EXAMPLE]
 ====
 
-`++TrigCombina[sin(p) + cos(p), sin(x)]++` da stem:[ \{\sqrt\{2} sin \left( p + \frac\{1}\{4} \pi \right)} ].
+`++TrigCombina[sin(p) + cos(p), sin(x)]++` da stem:[ \{\sqrt{2} sin \left( p + \frac{1}\{4} \pi \right)} ].
 
 ====
 
@@ -113,12 +113,12 @@ substitute 32.gif,width=32,height=32] xref:/tools/Sustituye.adoc[sustitución].
 
 *Ejemplos:*
 
-* *`++TrigCombina[ sin(p) cos(3 x)]++`* dastem:[\frac\{sen(p - 3 x) + sen(p + 3 x)}\{2}]
+* *`++TrigCombina[ sin(p) cos(3 x)]++`* dastem:[\frac{sen(p - 3 x) + sen(p + 3 x)}\{2}]
 * *`++TrigCombina[ (tan(k p)+tan(x))/(1-tan(k p) tan(x)),tan(x)]++`* da:_tan(k p + x)_
-* `++TrigCombina[ñ sin(x) + ú cos(x)]++` da...[.small]#stem:[\sqrt\{ñ² + ú²}] cos(stem:[\frac\{1}\{2} ] π sgn(ñ) sgn(ú)
-- stem:[\frac\{1}\{2} ] π sgn(ñ) - arctan(stem:[\frac\{ñ}\{ú} ]) + x)#
-* `++TrigCombina[ñ cos(á x + δ) + ú sen(á x + δ)]++` da...stem:[\sqrt\{ñ² + ú²}] cos(á x + δ + stem:[\frac\{1}\{2} ] π
-sgn(ñ) sgn(ú) - stem:[\frac\{1}\{2} ] π sgn(ú) - atan(stem:[\frac\{ú}\{ñ} ]
+* `++TrigCombina[ñ sin(x) + ú cos(x)]++` da...[.small]#stem:[\sqrt{ñ² + ú²}] cos(stem:[\frac{1}\{2} ] π sgn(ñ) sgn(ú)
+- stem:[\frac{1}\{2} ] π sgn(ñ) - arctan(stem:[\frac{ñ}\{ú} ]) + x)#
+* `++TrigCombina[ñ cos(á x + δ) + ú sen(á x + δ)]++` da...stem:[\sqrt{ñ² + ú²}] cos(á x + δ + stem:[\frac{1}\{2} ] π
+sgn(ñ) sgn(ú) - stem:[\frac{1}\{2} ] π sgn(ú) - atan(stem:[\frac{ú}\{ñ} ]
 
 ====
 
@@ -133,8 +133,8 @@ xref:/commands/TrigSimplifica.adoc[TrigSimplifica].
 === Combinación Lineal Generalizada en xref:/Vista_CAS.adoc[Vista CAS]
 
 Una combinación lineal general se evidencia en el último ejemplo:`++TrigCombina[ñ cos(á x + δ) + ú sen(á x + δ)]++`
-da...stem:[\sqrt\{ñ² + ú²}] cos(á x + δ + stem:[\frac\{1}\{2} ] π sgn(ñ) sgn(ú) - stem:[\frac\{1}\{2} ] π sgn(ú) -
-atan(stem:[\frac\{ú}\{ñ} ]))Si la pregunta fuese, en particular, si *_f(x) = cos(x - π/4 )_* es o no, dentro de los
+da...stem:[\sqrt{ñ² + ú²}] cos(á x + δ + stem:[\frac{1}\{2} ] π sgn(ñ) sgn(ú) - stem:[\frac{1}\{2} ] π sgn(ú) -
+atan(stem:[\frac{ú}\{ñ} ]))Si la pregunta fuese, en particular, si *_f(x) = cos(x - π/4 )_* es o no, dentro de los
 reales, una combinación lineal de: _f~1~(x) = cos(x)_ y__f~2~(x) = sen(x)__... podría partirse de:
 
 * reformular _f(x)_ como *_f(x) = sen(x + π/4 )_*
@@ -148,8 +148,8 @@ _sen(a + b) = sen(a) cos(b) + cos(a) sen(b)_
 
 '''''
 * corroborar que para x ∈ R...__sen(x + π / 4) = cos(π/4) sen(x) + sen(π/4) cos(x)__De lo anterior, se desprende
-que:_f(x) = stem:[\frac\{\sqrt\{2} }\{2} ] f~1~(x) + stem:[\frac\{\sqrt\{2} }\{2} ] f~2~(x)_... se cumple ∀x ∈ R.Es
-decir:*_f(x) = stem:[\frac\{\sqrt\{2} }\{2} ] f~1~(x) + stem:[\frac\{\sqrt\{2} }\{2} ] f~2~(x)_*
+que:_f(x) = stem:[\frac{\sqrt{2} }\{2} ] f~1~(x) + stem:[\frac{\sqrt{2} }\{2} ] f~2~(x)_... se cumple ∀x ∈ R.Es
+decir:*_f(x) = stem:[\frac{\sqrt{2} }\{2} ] f~1~(x) + stem:[\frac{\sqrt{2} }\{2} ] f~2~(x)_*
 
 [cols=",",]
 |===

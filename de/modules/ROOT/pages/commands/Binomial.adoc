@@ -40,22 +40,22 @@ Binomial( <Anzahl der Versuche>, <Erfolgswahrscheinlichkeit>, <Anzahl der Erfolg
 ====
 
 Betrachten wir die Übertragung von Datenpaketen über eine fehlerhafte Verbindung. Sei die Wahrscheinlichkeit, dass ein
-beliebiges Datenpaket bei der Übertragung über diese Verbindung beschädigt wird, stem:[\frac\{1}\{10}]. Damit beträgt
-die Wahrscheinlichkeit ein beliebiges Datenpaket erfolgreich (fehlerfrei) zu übertragen stem:[\frac\{9}\{10}].
+beliebiges Datenpaket bei der Übertragung über diese Verbindung beschädigt wird, stem:[\frac{1}\{10}]. Damit beträgt
+die Wahrscheinlichkeit ein beliebiges Datenpaket erfolgreich (fehlerfrei) zu übertragen stem:[\frac{9}\{10}].
 
-* `++Binomial[3, 0.9, 0, false]++` ergibt _stem:[\frac\{1}\{1000}]_, die Wahrscheinlichkeit, keines von drei
+* `++Binomial[3, 0.9, 0, false]++` ergibt _stem:[\frac{1}\{1000}]_, die Wahrscheinlichkeit, keines von drei
 Datenpaketen erfolgreich zu übertragen.
-* `++Binomial[3, 0.9, 1, false]++` ergibt _stem:[\frac\{27}\{1000}]_, die Wahrscheinlichkeit, genau eines von drei
+* `++Binomial[3, 0.9, 1, false]++` ergibt _stem:[\frac{27}\{1000}]_, die Wahrscheinlichkeit, genau eines von drei
 Datenpaketen erfolgreich zu übertragen.
-* `++Binomial[3, 0.9, 2, false]++` ergibt _stem:[\frac\{243}\{1000}]_, die Wahrscheinlichkeit, genau zwei von drei
+* `++Binomial[3, 0.9, 2, false]++` ergibt _stem:[\frac{243}\{1000}]_, die Wahrscheinlichkeit, genau zwei von drei
 Datenpaketen erfolgreich zu übertragen.
-* `++Binomial[3, 0.9, 3, false]++` ergibt _stem:[\frac\{729}\{1000}]_, die Wahrscheinlichkeit, alle drei Datenpakete
+* `++Binomial[3, 0.9, 3, false]++` ergibt _stem:[\frac{729}\{1000}]_, die Wahrscheinlichkeit, alle drei Datenpakete
 erfolgreich zu übertragen.
-* `++Binomial[3, 0.9, 0, true]++` ergibt _stem:[\frac\{1}\{1000}]_, die Wahrscheinlichkeit, keines von dreien
+* `++Binomial[3, 0.9, 0, true]++` ergibt _stem:[\frac{1}\{1000}]_, die Wahrscheinlichkeit, keines von dreien
 Datenpaketen erfolgreich zu übertragen.
-* `++Binomial[3, 0.9, 1, true]++` ergibt _stem:[\frac\{7}\{250}]_, die Wahrscheinlichkeit, höchstens eines von drei
+* `++Binomial[3, 0.9, 1, true]++` ergibt _stem:[\frac{7}\{250}]_, die Wahrscheinlichkeit, höchstens eines von drei
 Datenpaketen erfolgreich zu übertragen,
-* `++Binomial[3, 0.9, 2, true]++` ergibt _stem:[\frac\{271}\{1000}]_, die Wahrscheinlichkeit, höchstens zwei von drei
+* `++Binomial[3, 0.9, 2, true]++` ergibt _stem:[\frac{271}\{1000}]_, die Wahrscheinlichkeit, höchstens zwei von drei
 Datenpaketen erfolgreich zu übertragen,
 * `++Binomial[3, 0.9, 3, true]++` ergibt _1_, die Wahrscheinlichkeit, höchstens drei von drei Datenpaketen erfolgreich
 zu übertragen,

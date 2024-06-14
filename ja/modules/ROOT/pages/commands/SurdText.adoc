@@ -2,13 +2,13 @@
 ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
 SurdText( <数値> )::
-  以下の形式で数値のテキスト表現を作成する： stem:[\frac\{a+b\sqrt\{c}}\{d}].
+  以下の形式で数値のテキスト表現を作成する： stem:[\frac{a+b\sqrt{c}}\{d}].
 
 [EXAMPLE]
 ====
 
-* `++SurdText(2.414213562373095)++` 出力： _stem:[1 + \sqrt\{2}]_
-* `++SurdText(2.439230484541326)++` 出力： _stem:[\frac\{7+3 \sqrt\{3} }\{5}]_
+* `++SurdText(2.414213562373095)++` 出力： _stem:[1 + \sqrt{2}]_
+* `++SurdText(2.439230484541326)++` 出力： _stem:[\frac{7+3 \sqrt{3} }\{5}]_
 
 ====
 
@@ -19,18 +19,18 @@ SurdText( <数値>, <リスト> )::
 ====
 
 * `++SurdText(3.718281828459045, {exp(1)})++` 出力： _stem:[e + 1]_
-* `++SurdText(5.382332347441762, {sqrt(2), sqrt(3), sqrt(5)})++` 出力： _stem:[ \sqrt\{5} + \sqrt\{3} + \sqrt\{2}]_
+* `++SurdText(5.382332347441762, {sqrt(2), sqrt(3), sqrt(5)})++` 出力： _stem:[ \sqrt{5} + \sqrt{3} + \sqrt{2}]_
 * `++SurdText(1.693147180559945, {ln(2)})++` 出力： _stem:[ \ln(2) + 1]_
 
 ====
 
 SurdText( <点> )::
-  以下の形式で点の座標のテキスト表現を作成する： stem:[\frac\{a+b\sqrt\{c}}\{d}].
+  以下の形式で点の座標のテキスト表現を作成する： stem:[\frac{a+b\sqrt{c}}\{d}].
 
 [EXAMPLE]
 ====
 
-`++SurdText((2.414213562373095, 1.414213562373095))++` 出力 _(stem:[1 + \sqrt\{2}, \sqrt\{2})]_
+`++SurdText((2.414213562373095, 1.414213562373095))++` 出力 _(stem:[1 + \sqrt{2}, \sqrt{2})]_
 
 ====
 

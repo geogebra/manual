@@ -17,7 +17,7 @@ Angle( <Objet> )
 
 * Angle(<Point A>) : Angle entre l’axe (Ox) et le vecteur stem:[\overrightarrow\{OA}] (L'angle est dessiné à l'origine
 du repère).
-* Angle(<Vecteur stem:[\vec\{v}]>) : Angle entre l’axe (Ox) et le vecteur stem:[\vec\{v}] (L'angle est dessiné à
+* Angle(<Vecteur stem:[\vec{v}]>) : Angle entre l’axe (Ox) et le vecteur stem:[\vec{v}] (L'angle est dessiné à
 l'origine du vecteur).
 * Angle(<Conique c>) : Angle de l’axe principal de la conique _c_ par rapport à l’axe (Ox) (voir la commande
 xref:/commands/Axes.adoc[Axes]).
@@ -43,9 +43,9 @@ sinon les angles extérieurs.
 
 ====
 
-Angle( <Vecteur stem:[\vec\{v}_1]>,<Vecteur stem:[\vec\{v}_2]> )::
-  Angle des vecteurs stem:[\vec\{v}_1] et stem:[\vec\{v}_2] (entre 0 et 360°) (L'angle est dessiné à l'origine du
-  vecteur stem:[\vec\{v}_1]).
+Angle( <Vecteur stem:[\vec{v}_1]>,<Vecteur stem:[\vec{v}_2]> )::
+  Angle des vecteurs stem:[\vec{v}_1] et stem:[\vec{v}_2] (entre 0 et 360°) (L'angle est dessiné à l'origine du
+  vecteur stem:[\vec{v}_1]).
 
 [EXAMPLE]
 ====
@@ -93,8 +93,8 @@ image:View-cas24.png[View-cas24.png,width=22,height=22] *Calcul formel* :
 
 Cette commande fonctionne à l'identique dans la fenêtre Calcul formel aux différences suivantes :
 
-Pour : *Angle(<Point A>)* et *Angle(<Vecteur stem:[\vec\{v}]>)* *Angle( <Vecteur stem:[\vec\{v}_1]>,<Vecteur
-stem:[\vec\{v}_2]> )* *Angle( <Droite g>, <Droite h> )* L'angle n'est pas dessiné.
+Pour : *Angle(<Point A>)* et *Angle(<Vecteur stem:[\vec{v}]>)* *Angle( <Vecteur stem:[\vec{v}_1]>,<Vecteur
+stem:[\vec{v}_2]> )* *Angle( <Droite g>, <Droite h> )* L'angle n'est pas dessiné.
 
 Pour : *Angle(Polygone poly)* Seul le 1er angle est retourné. pour les avoir tous, il faut utiliser la syntaxe *liste*
 *\{ Angle(Polygone poly)}*
@@ -105,7 +105,7 @@ un *nombre* (donc un angle ne saurait être dessiné).
 [EXAMPLE]
 ====
 
-*Exemple :* `++Angle((-1, 1), (2, 4), (5, 1))++` retourne stem:[ \frac\{1}\{2} \; \pi ] (_1.57_ dans la fenêtre
+*Exemple :* `++Angle((-1, 1), (2, 4), (5, 1))++` retourne stem:[ \frac{1}\{2} \; \pi ] (_1.57_ dans la fenêtre
 Algèbre).
 
 ====
@@ -121,7 +121,7 @@ Angle[(1,2),(0,0),(3,4)] ou Angle[Vecteur[(1,2)],Vecteur[(3,4)]].
 image:View-cas24.png[View-cas24.png,width=22,height=22] *Calcul formel* :
 
 * `++Angle[x + 2,  -x + 3]++`. ou
-* `++f(x) := x + 2++` `++g(x) := -x + 3++` `++Angle[f(x) , g(x)]++` retournent stem:[\frac\{1}\{2} \space \Pi].
+* `++f(x) := x + 2++` `++g(x) := -x + 3++` `++Angle[f(x) , g(x)]++` retournent stem:[\frac{1}\{2} \space \Pi].
 
 ====
 

@@ -19,7 +19,7 @@ DerivadaImplícita[ <Expresión> ]::
 ====
 
 *Ejemplos:* *`++DerivadaImplícita[x + 2 y]++`* da __-0.5__**`++DerivadaImplícita[x^2 +  y^2]++`** da por resultado
-__-stem:[\frac\{x}\{y}]__**`++DerivadaImplícita[x^4+2y^2-8]++`** da _-stem:[\frac\{x³}\{y}]_
+__-stem:[\frac{x}\{y}]__**`++DerivadaImplícita[x^4+2y^2-8]++`** da _-stem:[\frac{x³}\{y}]_
 
 ====
 
@@ -36,9 +36,9 @@ DerivadaImplícita[ <Expresión>, <Variable Independiente>, <Variable Dependient
 ====
 
 *Ejemplos:* *`++DerivadaImplícita[x^2 +  y^2, y, x]++`* da
-__-stem:[\frac\{x}\{y}]__**`++DerivadaImplícita[x^2 + y^2, x, y]++`** da
-__-stem:[\frac\{y}\{x}]__**`++DerivadaImplícita[x^2 + 2 y^2, x, y]++`** da __-stem:[\frac\{2
-y}\{x}]__**`++DerivadaImplícita[x^2 +  2 y^2, y, x]++`** da _-stem:[\frac\{x}\{2 y}]_
+__-stem:[\frac{x}\{y}]__**`++DerivadaImplícita[x^2 + y^2, x, y]++`** da
+__-stem:[\frac{y}\{x}]__**`++DerivadaImplícita[x^2 + 2 y^2, x, y]++`** da __-stem:[\frac{2
+y}\{x}]__**`++DerivadaImplícita[x^2 +  2 y^2, y, x]++`** da _-stem:[\frac{x}\{2 y}]_
 
 ====
 
@@ -48,27 +48,27 @@ y}\{x}]__**`++DerivadaImplícita[x^2 +  2 y^2, y, x]++`** da _-stem:[\frac\{x}\{
 En términos generales...
 
 *`++DerivadaImplícita[u^2+v,v,u]++`*, derivada en u sería _u²+v = 0_ lo que podría formularse como _2u +
-stem:[\frac\{dv}\{du}] = 0_ resultando stem:[\frac\{dv}\{du}] = stem:[-2 u] *`++DerivadaImplícita[u^2+v,u,v]++`*
-derivada en v sería _u²+v = 0_ lo que podría formularse como 2u stem:[\frac\{du}\{dv}] + 1 = 0 resultando
-stem:[\frac\{dv}\{du}] = stem:[-\frac\{1}\{2 u}]
+stem:[\frac{dv}\{du}] = 0_ resultando stem:[\frac{dv}\{du}] = stem:[-2 u] *`++DerivadaImplícita[u^2+v,u,v]++`*
+derivada en v sería _u²+v = 0_ lo que podría formularse como 2u stem:[\frac{du}\{dv}] + 1 = 0 resultando
+stem:[\frac{dv}\{du}] = stem:[-\frac{1}\{2 u}]
 
 ====
 
 DerivadaImplícita[ <Expresión> ]
 
 DerivadaImplícita[ <Expresión(x,y)>, <Función y de la variable x> ,<Variable x > ]::
-  Da por resultado la derivada implícita stem:[\frac\{dy}\{dx}] de la expresión dada.
+  Da por resultado la derivada implícita stem:[\frac{dy}\{dx}] de la expresión dada.
 
 [EXAMPLE]
 ====
 
 *Ejemplos:*  
 
-* *`++DerivadaImplícita[x^2+y^2]++`* da por resultado stem:[-\frac\{x}\{y}] ;
-* *`++DerivadaImplícita[x^2+y^2,y,x]++`* da por resultado stem:[-\frac\{x}\{y}] ;
-* *`++DérivéeImplicite[x^n+y^2,y,x]++`* da por resultado stem:[-n \frac\{x^\{n-1} }\{2 y}] ;
+* *`++DerivadaImplícita[x^2+y^2]++`* da por resultado stem:[-\frac{x}\{y}] ;
+* *`++DerivadaImplícita[x^2+y^2,y,x]++`* da por resultado stem:[-\frac{x}\{y}] ;
+* *`++DérivéeImplicite[x^n+y^2,y,x]++`* da por resultado stem:[-n \frac{x^\{n-1} }\{2 y}] ;
 * *`++DerivadaImplícita[u^2+v,v,u]++`* da por resultado stem:[-2 u] ;
-* *`++DerivadaImplícita[u^2+v,u,v]++`* da por resultado stem:[-\frac\{1}\{2 u}].
+* *`++DerivadaImplícita[u^2+v,u,v]++`* da por resultado stem:[-\frac{1}\{2 u}].
 
 ====
 
@@ -86,10 +86,10 @@ xref:/Barra_de_Entrada.adoc[Barra de Entrada] devendrían *_indeterminadas_* o *
 
 Empleando literales de variables no definidas, se puede obtener resultados como en los siguientes casos:
 
-* DerivadaImplícita[u^2+v,v,u], siendo la derivada en u : u²+v = 0 da por resultado 2u + stem:[\frac\{dv}\{du}] = 0 ;
-siendo stem:[\frac\{dv}\{du}] = stem:[-2 u]
-* DerivadaImplícita[u^2+v,u,v], siendo la derivada en v : u²+v = 0 da por resultado 2u stem:[\frac\{du}\{dv}] + 1 = 0 ;
-siendo stem:[\frac\{dv}\{du}] = stem:[-\frac\{1}\{2 u}]
+* DerivadaImplícita[u^2+v,v,u], siendo la derivada en u : u²+v = 0 da por resultado 2u + stem:[\frac{dv}\{du}] = 0 ;
+siendo stem:[\frac{dv}\{du}] = stem:[-2 u]
+* DerivadaImplícita[u^2+v,u,v], siendo la derivada en v : u²+v = 0 da por resultado 2u stem:[\frac{du}\{dv}] + 1 = 0 ;
+siendo stem:[\frac{dv}\{du}] = stem:[-\frac{1}\{2 u}]
 
 ====
 
@@ -104,7 +104,7 @@ xref:/commands/DerivadaParamétrica.adoc[DerivadaParamétrica]
 [EXAMPLE]
 ====
 
-*Ejemplos:* *`++DerivadaImplícita[m^2 +  2 ñ^2, ñ, m]++`* da __-stem:[\frac\{m}\{2
-ñ}]__**`++DerivadaImplícita[ñ x^2 + y^2x, y, x]++`** da stem:[-\frac\{-2 x ñ - y²}\{2x y}]
+*Ejemplos:* *`++DerivadaImplícita[m^2 +  2 ñ^2, ñ, m]++`* da __-stem:[\frac{m}\{2
+ñ}]__**`++DerivadaImplícita[ñ x^2 + y^2x, y, x]++`** da stem:[-\frac{-2 x ñ - y²}\{2x y}]
 
 ====

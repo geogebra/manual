@@ -8,8 +8,8 @@ TrigExpand( <Expression> )::
 [EXAMPLE]
 ====
 
-`++TrigExpand(tan(x + y))++` gives stem:[\frac\{\frac\{sin(x)}\{cos(x)}+\frac\{sin(y)}\{cos(y)}}
-\{1-\frac\{sin(x)}\{cos(x)} \cdot \frac\{sin(y)}\{cos(y)}} ].
+`++TrigExpand(tan(x + y))++` gives stem:[\frac{\frac{sin(x)}\{cos(x)}+\frac{sin(y)}\{cos(y)}}
+\{1-\frac{sin(x)}\{cos(x)} \cdot \frac{sin(y)}\{cos(y)}} ].
 
 ====
 
@@ -18,8 +18,8 @@ It can also expand a product into a linear expression
 [EXAMPLE]
 ====
 
-`++TrigExpand(sin(x)sin(x/3))++` gives stem:[\frac\{3}\{2 \; x^\{2}} \; cos \left( 2 \cdot \frac\{x}\{3} \right) -
-\frac\{3}\{2 \; x^\{2}} \; cos \left( 4 \cdot \frac\{x}\{3} \right) ].
+`++TrigExpand(sin(x)sin(x/3))++` gives stem:[\frac{3}\{2 \; x^\{2}} \; cos \left( 2 \cdot \frac{x}\{3} \right) -
+\frac{3}\{2 \; x^\{2}} \; cos \left( 4 \cdot \frac{x}\{3} \right) ].
 
 ====
 
@@ -30,7 +30,7 @@ TrigExpand( <Expression>, <Target Function> )::
 [EXAMPLE]
 ====
 
-`++TrigExpand(tan(x + y), tan(x))++` gives stem:[\frac\{-tan(x) - tan(y)}\{tan(x) tan(y) - 1}].
+`++TrigExpand(tan(x + y), tan(x))++` gives stem:[\frac{-tan(x) - tan(y)}\{tan(x) tan(y) - 1}].
 
 ====
 
@@ -42,9 +42,9 @@ CAS syntaxes may show different results, depending on the selected output mode:
 ====
 
 `++TrigExpand(tan(x + y))++` in image:32px-Mode_evaluate.svg.png[Mode evaluate.svg,width=32,height=32] _Evaluate_ mode
-gives stem:[\frac\{\frac\{sin(x)}\{cos(x)}+\frac\{sin(y)}\{cos(y)}} \{1-\frac\{sin(x)}\{cos(x)} \cdot
-\frac\{sin(y)}\{cos(y)}} ] in image:32px-Mode_numeric.svg.png[Mode numeric.svg,width=32,height=32] _Numeric_ mode gives
-stem:[\frac\{sin(x) cos(y) + sin(y) cos(x)}\{- sin(x) sin(y) +cos(x) cos(y) }] .
+gives stem:[\frac{\frac{sin(x)}\{cos(x)}+\frac{sin(y)}\{cos(y)}} \{1-\frac{sin(x)}\{cos(x)} \cdot
+\frac{sin(y)}\{cos(y)}} ] in image:32px-Mode_numeric.svg.png[Mode numeric.svg,width=32,height=32] _Numeric_ mode gives
+stem:[\frac{sin(x) cos(y) + sin(y) cos(x)}\{- sin(x) sin(y) +cos(x) cos(y) }] .
 
 ====
 
@@ -60,8 +60,8 @@ TrigExpand( <Expression>, <Target Function>, <Target Variable> )::
 
 *Examples:*
 
-* `++TrigExpand(sin(x), sin(x), x/2)++` gives stem:[2cos \left( \frac\{x}\{2} \right) sin \left( \frac\{x}\{2} \right) ]
-* `++TrigExpand(sin(x)/(1+cos(x)), tan(x), x/2)++` gives stem:[tan \left( \frac\{x}\{2} \right)].
+* `++TrigExpand(sin(x), sin(x), x/2)++` gives stem:[2cos \left( \frac{x}\{2} \right) sin \left( \frac{x}\{2} \right) ]
+* `++TrigExpand(sin(x)/(1+cos(x)), tan(x), x/2)++` gives stem:[tan \left( \frac{x}\{2} \right)].
 
 ====
 
@@ -72,8 +72,8 @@ TrigExpand( <Expression>, <Target Function>, <Target Variable>, <Target Variable
 [EXAMPLE]
 ====
 
-`++TrigExpand(csc(x) - cot(x) + csc(y) - cot(y), tan(x), x/2, y/2)++` gives stem:[tan \left( \frac\{x}\{2} \right) +tan
-\left( \frac\{y}\{2} \right) ].
+`++TrigExpand(csc(x) - cot(x) + csc(y) - cot(y), tan(x), x/2, y/2)++` gives stem:[tan \left( \frac{x}\{2} \right) +tan
+\left( \frac{y}\{2} \right) ].
 
 ====
 

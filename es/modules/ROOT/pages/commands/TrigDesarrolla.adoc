@@ -9,16 +9,16 @@ TrigDesarrolla( <Expresión> )::
 [EXAMPLE]
 ====
 
-`++ TrigDesarrolla(sen(x)sen(x/3))++` devuelve stem:[\frac\{3}\{2 \; x^\{2}} \; cos \left( 2 \cdot \frac\{x}\{3} \right)
-- \frac\{3}\{2 \; x^\{2}} \; cos \left( 4 \cdot \frac\{x}\{3} \right) ].
+`++ TrigDesarrolla(sen(x)sen(x/3))++` devuelve stem:[\frac{3}\{2 \; x^\{2}} \; cos \left( 2 \cdot \frac{x}\{3} \right)
+- \frac{3}\{2 \; x^\{2}} \; cos \left( 4 \cdot \frac{x}\{3} \right) ].
 
 ====
 
 [EXAMPLE]
 ====
 
-`++ TrigDesarrolla(tan(x + y))++` devuelve stem:[\frac\{\frac\{sen(x)}\{cos(x)}+\frac\{sen(y)}\{cos(y)}}
-\{1-\frac\{sen(x)}\{cos(x)} \cdot \frac\{sen(y)}\{cos(y)}} ].
+`++ TrigDesarrolla(tan(x + y))++` devuelve stem:[\frac{\frac{sen(x)}\{cos(x)}+\frac{sen(y)}\{cos(y)}}
+\{1-\frac{sen(x)}\{cos(x)} \cdot \frac{sen(y)}\{cos(y)}} ].
 
 ====
 
@@ -29,7 +29,7 @@ TrigDesarrolla( <Expresión>, <Función modelo> )::
 [EXAMPLE]
 ====
 
-`++ TrigDesarrolla(tan(x + y), tan(x))++` devuelve stem:[\frac\{-tan(x) - tan(y)}\{tan(x) tan(y) - 1}].
+`++ TrigDesarrolla(tan(x + y), tan(x))++` devuelve stem:[\frac{-tan(x) - tan(y)}\{tan(x) tan(y) - 1}].
 
 ====
 
@@ -41,9 +41,9 @@ La vista CAS puede devover diferentes resultados, según el modo de salida selec
 ====
 
 `++ TrigDesarrolla(tan(x + y))++` en modo image:32px-Mode_evaluate.svg.png[Mode evaluate.svg,width=32,height=32]
-_Cálculo simbólico_ devuelve stem:[\frac\{\frac\{sen(x)}\{cos(x)}+\frac\{sen(y)}\{cos(y)}} \{1-\frac\{sen(x)}\{cos(x)}
-\cdot \frac\{sen(y)}\{cos(y)}} ] en modo image:32px-Mode_numeric.svg.png[Mode numeric.svg,width=32,height=32] _Cálculo
-numérico_ devuelve stem:[\frac\{sen(x) cos(y) + sen(y) cos(x)}\{- sen(x) sen(y) +cos(x) cos(y) }] .
+_Cálculo simbólico_ devuelve stem:[\frac{\frac{sen(x)}\{cos(x)}+\frac{sen(y)}\{cos(y)}} \{1-\frac{sen(x)}\{cos(x)}
+\cdot \frac{sen(y)}\{cos(y)}} ] en modo image:32px-Mode_numeric.svg.png[Mode numeric.svg,width=32,height=32] _Cálculo
+numérico_ devuelve stem:[\frac{sen(x) cos(y) + sen(y) cos(x)}\{- sen(x) sen(y) +cos(x) cos(y) }] .
 
 ====
 
@@ -59,9 +59,9 @@ TrigDesarrolla( <Expresión>, <Función modelo>, <Variable modelo> )::
 
 *Ejemplos:*
 
-* `++ TrigDesarrolla(sen(x), sen(x), x/2)++` devuelve stem:[2cos \left( \frac\{x}\{2} \right) sen \left( \frac\{x}\{2}
+* `++ TrigDesarrolla(sen(x), sen(x), x/2)++` devuelve stem:[2cos \left( \frac{x}\{2} \right) sen \left( \frac{x}\{2}
 \right) ]
-* `++ TrigDesarrolla(sen(x)/(1+cos(x)), tan(x), x/2)++` devuelve stem:[tan \left( \frac\{x}\{2} \right)].
+* `++ TrigDesarrolla(sen(x)/(1+cos(x)), tan(x), x/2)++` devuelve stem:[tan \left( \frac{x}\{2} \right)].
 
 ====
 
@@ -72,8 +72,8 @@ TrigDesarrolla( <Expresión>, <Función modelo>, <Variable modelo>, <Variable mo
 [EXAMPLE]
 ====
 
-`++ TrigDesarrolla(cosec(x) - cotg(x) + cosec(y) - cotg(y), tan(x), x/2, y/2)++` devuelve stem:[tan \left( \frac\{x}\{2}
-\right) +tan \left( \frac\{y}\{2} \right) ].
+`++ TrigDesarrolla(cosec(x) - cotg(x) + cosec(y) - cotg(y), tan(x), x/2, y/2)++` devuelve stem:[tan \left( \frac{x}\{2}
+\right) +tan \left( \frac{y}\{2} \right) ].
 
 ====
 

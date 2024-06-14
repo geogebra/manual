@@ -11,10 +11,10 @@ TrigSviluppa(Espressione)::
 
 *Esempi:*
 
-* `++TrigSviluppa(tan(x + y))++` restituisce stem:[\frac\{\frac\{sin(x)}\{cos(x)}+\frac\{sin(y)}\{cos(y)}}
-\{1-\frac\{sin(x)}\{cos(x)} \cdot \frac\{sin(y)}\{cos(y)}} ].
-* `++TrigSviluppa(sin(x)sin(x/3))++` restituisce stem:[\frac\{3}\{2 \; x^\{2}} \; cos \left( 2 \cdot \frac\{x}\{3}
-\right) - \frac\{3}\{2 \; x^\{2}} \; cos \left( 4 \cdot \frac\{x}\{3} \right) ].
+* `++TrigSviluppa(tan(x + y))++` restituisce stem:[\frac{\frac{sin(x)}\{cos(x)}+\frac{sin(y)}\{cos(y)}}
+\{1-\frac{sin(x)}\{cos(x)} \cdot \frac{sin(y)}\{cos(y)}} ].
+* `++TrigSviluppa(sin(x)sin(x/3))++` restituisce stem:[\frac{3}\{2 \; x^\{2}} \; cos \left( 2 \cdot \frac{x}\{3}
+\right) - \frac{3}\{2 \; x^\{2}} \; cos \left( 4 \cdot \frac{x}\{3} \right) ].
 
 ====
 
@@ -25,7 +25,7 @@ TrigSviluppa(Espressione, Funzione obiettivo)::
 [EXAMPLE]
 ====
 
-`++TrigSviluppa(tan(x + y), tan(x))++` restituisce stem:[\frac\{-tan(x) - tan(y)}\{tan(x) tan(y) - 1}].
+`++TrigSviluppa(tan(x + y), tan(x))++` restituisce stem:[\frac{-tan(x) - tan(y)}\{tan(x) tan(y) - 1}].
 
 ====
 
@@ -38,9 +38,9 @@ Le sintassi CAS possono restituire risultati diversi secondo la modalità di out
 
 Il comando `++TrigSviluppa(tan(x + y))++` in modalità image:32px-Mode_evaluate.svg.png[Mode
 evaluate.svg,width=32,height=32] _Calcolo simbolico_ restituisce
-stem:[\frac\{\frac\{sin(x)}\{cos(x)}+\frac\{sin(y)}\{cos(y)}} \{1-\frac\{sin(x)}\{cos(x)} \cdot \frac\{sin(y)}\{cos(y)}}
+stem:[\frac{\frac{sin(x)}\{cos(x)}+\frac{sin(y)}\{cos(y)}} \{1-\frac{sin(x)}\{cos(x)} \cdot \frac{sin(y)}\{cos(y)}}
 ] in modalità image:32px-Mode_numeric.svg.png[Mode numeric.svg,width=32,height=32] _Calcolo numerico_ restituisce
-stem:[\frac\{sin(x) cos(y) + sin(y) cos(x)}\{- sin(x) sin(y) +cos(x) cos(y) }] .
+stem:[\frac{sin(x) cos(y) + sin(y) cos(x)}\{- sin(x) sin(y) +cos(x) cos(y) }] .
 
 ====
 
@@ -56,9 +56,9 @@ TrigSviluppa(Espressione, Funzione obiettivo, Variabile obiettivo)::
 
 *Esempi:*
 
-* `++TrigSviluppa(sin(x), sin(x), x/2)++` restituisce stem:[2cos \left( \frac\{x}\{2} \right) sin \left( \frac\{x}\{2}
+* `++TrigSviluppa(sin(x), sin(x), x/2)++` restituisce stem:[2cos \left( \frac{x}\{2} \right) sin \left( \frac{x}\{2}
 \right)]
-* `++TrigSviluppa(sin(x)/(1+cos(x)), tan(x), x/2)++` restituisce stem:[tan \left( \frac\{x}\{2} \right)].
+* `++TrigSviluppa(sin(x)/(1+cos(x)), tan(x), x/2)++` restituisce stem:[tan \left( \frac{x}\{2} \right)].
 
 ====
 
@@ -69,8 +69,8 @@ TrigSviluppa(Espressione, Funzione obiettivo, Variabile obiettivo, Variabile obi
 [EXAMPLE]
 ====
 
-`++TrigSviluppa(csc(x) - cot(x) + csc(y) - cot(y), tan(x), x/2, y/2)++` restituisce stem:[tan \left( \frac\{x}\{2}
-\right)+tan \left( \frac\{y}\{2} \right)].
+`++TrigSviluppa(csc(x) - cot(x) + csc(y) - cot(y), tan(x), x/2, y/2)++` restituisce stem:[tan \left( \frac{x}\{2}
+\right)+tan \left( \frac{y}\{2} \right)].
 
 ====
 

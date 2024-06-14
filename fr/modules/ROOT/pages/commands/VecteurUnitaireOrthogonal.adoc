@@ -18,8 +18,8 @@ _stem:[\begin{pmatrix}0.6\\0.8\end{pmatrix}]_.
 VecteurUnitaireOrthogonal( <Segment> )::
   Vecteur orthogonal unitaire au segment _s_.
 
-VecteurUnitaireOrthogonal( <Vecteur stem:[\vec\{v}] > )::
-  Vecteur orthogonal unitaire au vecteur stem:[\vec\{v}].
+VecteurUnitaireOrthogonal( <Vecteur stem:[\vec{v}] > )::
+  Vecteur orthogonal unitaire au vecteur stem:[\vec{v}].
 
 [EXAMPLE]
 ====
@@ -51,8 +51,8 @@ VecteurUnitaireOrthogonal( <Plan p> )::
 
 Pour un plan dont une équation cartésienne est a x+ b y +c z = k,
 
-en désignant par stem:[ n=\sqrt\{a²+b²+c²}], la commande retourne le vecteur stem:[\begin{pmatrix}\frac\{a}\{n} \\
-\frac\{ b}\{n} \\ \frac\{ c}\{n}\end{pmatrix}]
+en désignant par stem:[ n=\sqrt{a²+b²+c²}], la commande retourne le vecteur stem:[\begin{pmatrix}\frac{a}{n} \\
+\frac{ b}\{n} \\ \frac{ c}\{n}\end{pmatrix}]
 
 ====
 
@@ -69,11 +69,11 @@ travailler en littéral.
 
 Soit le vecteur _v_ de coordonnées stem:[\begin{pmatrix}3\\4\end{pmatrix}].
 
-`++VecteurUnitaireOrthogonal(v)++` crée le vecteur de coordonnées _stem:[\left( \frac\{-4}\{5} , \frac\{3}\{5} \right)]_
+`++VecteurUnitaireOrthogonal(v)++` crée le vecteur de coordonnées _stem:[\left( \frac{-4}\{5} , \frac{3}\{5} \right)]_
 
 mais, vous pouvez aussi saisir directement `++VecteurUnitaireOrthogonal((3,4)).++`
 
-`++VecteurUnitaireOrthogonal((a, b))++` retourne (stem:[-\frac\{b}\{\sqrt\{a² + b²}}], stem:[\frac\{a}\{\sqrt\{a² +
+`++VecteurUnitaireOrthogonal((a, b))++` retourne (stem:[-\frac{b}\{\sqrt{a² + b²}}], stem:[\frac{a}{\sqrt{a² +
 b²}}] ).
 
 ====

@@ -3,22 +3,22 @@
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
 TexteMath( <Nombre> )::
-  Crée un texte représentant le nombre sous la forme stem:[\frac\{a+b\sqrt\{c}}\{d}].
+  Crée un texte représentant le nombre sous la forme stem:[\frac{a+b\sqrt{c}}\{d}].
 
 [EXAMPLE]
 ====
 
 *Exemples :*
 
-`++TexteMath(2.414213562373095)++` crée _stem:[1 + \sqrt\{2}]_ ;
+`++TexteMath(2.414213562373095)++` crée _stem:[1 + \sqrt{2}]_ ;
 
-`++TexteMath( 2.439230484541326 )++` crée _stem:[\frac\{7+3 \sqrt\{3} }\{5}]_ .
+`++TexteMath( 2.439230484541326 )++` crée _stem:[\frac{7+3 \sqrt{3} }\{5}]_ .
 
 ====
 
-Si `++z_1=sqrt(2)+ ί sqrt(3)++` alors `++TexteMath(z_1)++` crée _stem:[ \sqrt\{2}+ \sqrt\{3}ί ]_ Si
-`++z_2 = 2.414213562373095 + ί 2.439230484541326)++` alors `++TexteMath(z_2)++` crée _stem:[ 1 + \sqrt\{2}+\frac\{7+3
-\sqrt\{3} }\{5}ί]_
+Si `++z_1=sqrt(2)+ ί sqrt(3)++` alors `++TexteMath(z_1)++` crée _stem:[ \sqrt{2}+ \sqrt{3}ί ]_ Si
+`++z_2 = 2.414213562373095 + ί 2.439230484541326)++` alors `++TexteMath(z_2)++` crée _stem:[ 1 + \sqrt{2}+\frac{7+3
+\sqrt{3} }\{5}ί]_
 
 TexteMath( <Nombre>, <Liste> )::
   Crée un texte représentant le nombre comme multiple des constantes de la liste. Si la liste est vide, une liste des
@@ -29,25 +29,25 @@ TexteMath( <Nombre>, <Liste> )::
 
 *Exemples :*
 
-`++TexteMath(4.71238898038469,{pi})++` crée _stem:[3 . \frac\{ \pi}\{2}]_ ;
+`++TexteMath(4.71238898038469,{pi})++` crée _stem:[3 . \frac{ \pi}\{2}]_ ;
 
 `++TexteMath(3.718281828459045, {exp(1)})++` crée _stem:[e + 1]_ ;
 
-`++TexteMath(5.382332347441762, {sqrt(2), sqrt(3), sqrt(5)})++` crée _stem:[ \sqrt\{5} + \sqrt\{3} + \sqrt\{2}]_ ;
+`++TexteMath(5.382332347441762, {sqrt(2), sqrt(3), sqrt(5)})++` crée _stem:[ \sqrt{5} + \sqrt{3} + \sqrt{2}]_ ;
 
 `++TexteMath(1.693147180559945, {ln(2)})++` crée _stem:[ \ln\{(2)} + 1 ]_.
 
 ====
 
 TexteMath( <Point> )::
-  Crée un texte représentant le point, dont les coordonnées sont sous la forme stem:[\frac\{a+b\sqrt\{c}}\{d}].
+  Crée un texte représentant le point, dont les coordonnées sont sous la forme stem:[\frac{a+b\sqrt{c}}\{d}].
 
 [EXAMPLE]
 ====
 
 *Exemples :* Soit A = (2.414213562373095, 0.882842712474619)
 
-`++TexteMath(A) ++` crée stem:[ ( 1 + \sqrt\{2} , \frac\{3 + \sqrt\{2} }\{5} ) ].
+`++TexteMath(A) ++` crée stem:[ ( 1 + \sqrt{2} , \frac{3 + \sqrt{2} }\{5} ) ].
 
 ====
 

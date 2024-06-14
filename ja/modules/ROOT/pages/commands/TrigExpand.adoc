@@ -8,16 +8,16 @@ TrigExpand( <式> )::
 [EXAMPLE]
 ====
 
-`++TrigExpand(sin(x)sin(x/3))++` 出力： stem:[\frac\{3}\{2 \; x^\{2}} \; cos \left( 2 \cdot \frac\{x}\{3} \right) -
-\frac\{3}\{2 \; x^\{2}} \; cos \left( 4 \cdot \frac\{x}\{3} \right) ].
+`++TrigExpand(sin(x)sin(x/3))++` 出力： stem:[\frac{3}\{2 \; x^\{2}} \; cos \left( 2 \cdot \frac{x}\{3} \right) -
+\frac{3}\{2 \; x^\{2}} \; cos \left( 4 \cdot \frac{x}\{3} \right) ].
 
 ====
 
 [EXAMPLE]
 ====
 
-`++TrigExpand(tan(x + y))++` 出力： stem:[\frac\{\frac\{sin(x)}\{cos(x)}+\frac\{sin(y)}\{cos(y)}}
-\{1-\frac\{sin(x)}\{cos(x)} \cdot \frac\{sin(y)}\{cos(y)}} ].
+`++TrigExpand(tan(x + y))++` 出力： stem:[\frac{\frac{sin(x)}\{cos(x)}+\frac{sin(y)}\{cos(y)}}
+\{1-\frac{sin(x)}\{cos(x)} \cdot \frac{sin(y)}\{cos(y)}} ].
 
 ====
 
@@ -27,7 +27,7 @@ TrigExpand( <式>, <目標関数> )::
 [EXAMPLE]
 ====
 
-`++TrigExpand(tan(x + y), tan(x))++` 出力： stem:[\frac\{-tan(x) - tan(y)}\{tan(x) tan(y) - 1}].
+`++TrigExpand(tan(x + y), tan(x))++` 出力： stem:[\frac{-tan(x) - tan(y)}\{tan(x) tan(y) - 1}].
 
 ====
 
@@ -39,9 +39,9 @@ CASでは選択した出力モードによって異なる結果を示す場合�
 ====
 
 `++TrigExpand(tan(x + y))++` image:32px-Mode_evaluate.svg.png[Mode evaluate.svg,width=32,height=32] _評価_
-モードの出力： stem:[\frac\{\frac\{sin(x)}\{cos(x)}+\frac\{sin(y)}\{cos(y)}} \{1-\frac\{sin(x)}\{cos(x)} \cdot
-\frac\{sin(y)}\{cos(y)}} ] image:32px-Mode_numeric.svg.png[Mode numeric.svg,width=32,height=32] _数値_ モードの出力：
-stem:[\frac\{sin(x) cos(y) + sin(y) cos(x)}\{- sin(x) sin(y) +cos(x) cos(y) }] .
+モードの出力： stem:[\frac{\frac{sin(x)}\{cos(x)}+\frac{sin(y)}\{cos(y)}} \{1-\frac{sin(x)}\{cos(x)} \cdot
+\frac{sin(y)}\{cos(y)}} ] image:32px-Mode_numeric.svg.png[Mode numeric.svg,width=32,height=32] _数値_ モードの出力：
+stem:[\frac{sin(x) cos(y) + sin(y) cos(x)}\{- sin(x) sin(y) +cos(x) cos(y) }] .
 
 ====
 
@@ -54,9 +54,9 @@ TrigExpand( <式>, <目標関数>, <目標変数> )::
 [EXAMPLE]
 ====
 
-* `++TrigExpand(sin(x), sin(x), x/2)++` 出力： stem:[2cos \left( \frac\{x}\{2} \right) sin \left( \frac\{x}\{2} \right)
+* `++TrigExpand(sin(x), sin(x), x/2)++` 出力： stem:[2cos \left( \frac{x}\{2} \right) sin \left( \frac{x}\{2} \right)
 ]
-* `++TrigExpand(sin(x)/(1+cos(x)), tan(x), x/2)++` 出力： stem:[tan \left( \frac\{x}\{2} \right)].
+* `++TrigExpand(sin(x)/(1+cos(x)), tan(x), x/2)++` 出力： stem:[tan \left( \frac{x}\{2} \right)].
 
 ====
 
@@ -66,8 +66,8 @@ TrigExpand( <式>, <目標関数>, <目標変数>, <目標変数> )::
 [EXAMPLE]
 ====
 
-`++TrigExpand(csc(x) - cot(x) + csc(y) - cot(y), tan(x), x/2, y/2)++` 出力： stem:[tan \left( \frac\{x}\{2} \right) +tan
-\left( \frac\{y}\{2} \right) ].
+`++TrigExpand(csc(x) - cot(x) + csc(y) - cot(y), tan(x), x/2, y/2)++` 出力： stem:[tan \left( \frac{x}\{2} \right) +tan
+\left( \frac{y}\{2} \right) ].
 
 ====
 

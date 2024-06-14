@@ -3,19 +3,19 @@
 ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
 
 LöseDgl( <f'(x, y)> )::
-  Versucht eine exakte Lösung der gewöhnlichen Differentialgleichung erster Ordnung stem:[\frac\{dy}\{dx}(x)=f'(x,
+  Versucht eine exakte Lösung der gewöhnlichen Differentialgleichung erster Ordnung stem:[\frac{dy}\{dx}(x)=f'(x,
   y(x))] zu finden.
 LöseDgl( <f'(x, y)>, <Punkt von f> )::
-  Versucht eine exakte Lösung der gewöhnlichen Differentialgleichung erster Ordnung stem:[\frac\{dy}\{dx}(x)=f'(x,
+  Versucht eine exakte Lösung der gewöhnlichen Differentialgleichung erster Ordnung stem:[\frac{dy}\{dx}(x)=f'(x,
   y(x))] zu finden, wobei die Lösung durch den gegebenen Punkt verläuft.
 LöseDgl( <f'(x, y)>, <Start x>, <Start y>, <Ende x>, <Schrittweite> )::
-  Versucht eine exakte Lösung der gewöhnlichen Differentialgleichung erster Ordnung stem:[\frac\{dy}\{dx}=f'(x,y) ]
+  Versucht eine exakte Lösung der gewöhnlichen Differentialgleichung erster Ordnung stem:[\frac{dy}\{dx}=f'(x,y) ]
   numerisch, mit gegebenem Startpunkt, Ende und Schrittweite für _x_ zu finden.
 
 [EXAMPLE]
 ====
 
-`++LöseDgl[-x*y, x(A), y(A), 5, 0.1]++` löst die Gleichung stem:[\frac\{dy}\{dx}=-xy] beginnend mit dem zuvor
+`++LöseDgl[-x*y, x(A), y(A), 5, 0.1]++` löst die Gleichung stem:[\frac{dy}\{dx}=-xy] beginnend mit dem zuvor
 definierten Startpunkt _A_.
 
 ====
@@ -30,7 +30,7 @@ definierten Startpunkt _A_.
 [EXAMPLE]
 ====
 
-`++LöseDgl[2x / y]++` liefert stem:[\sqrt\{2} \sqrt\{-c_\{1}+x^\{2}}], wobei stem:[c_\{1}] eine Konstante ist.
+`++LöseDgl[2x / y]++` liefert stem:[\sqrt{2} \sqrt{-c_\{1}+x^\{2}}], wobei stem:[c_\{1}] eine Konstante ist.
 
 ====
 
@@ -55,7 +55,7 @@ stem:[c_\{1}] wird als Hilfsobjekt mit einem entsprechenden Schieberegler erstel
 
 LöseDgl( <y'>, <x'>, <Start x>, <Start y>, <Ende t>, <Schrittweite> )::
   Versucht eine exakte Lösung der gewöhnliche Differentialgleichung erster Ordnung
-  stem:[\frac\{dy}\{dx}=\frac\{f(x,y)}\{g(x,y)} ] mit gegebenem Startpunkt, Maximalwert eines internen Parameters _t_
+  stem:[\frac{dy}\{dx}=\frac{f(x,y)}\{g(x,y)} ] mit gegebenem Startpunkt, Maximalwert eines internen Parameters _t_
   und der Schrittweite für _t_ zu finden. Diese Version des Befehls könnte auch dann funktionieren, falls der erste
   Befehl nicht funktioniert, wenn z. B. die Lösungskurve vertikale Punkte besitzt.
 LöseDgl( <b(x)>, <c(x)>, <f(x)>, <Start x>, <Start y>, <Start y'>, <Ende x>, <Schrittweite> )::
@@ -73,7 +73,7 @@ definierten Startpunkt _A_.
 [EXAMPLE]
 ====
 
-`++LöseDgl[-x, y, x(A), y(A), 5, 0.1]++` löst stem:[\frac\{dy}\{dx}=- \frac\{x}\{y} ] beginnend mit dem zuvor
+`++LöseDgl[-x, y, x(A), y(A), 5, 0.1]++` löst stem:[\frac{dy}\{dx}=- \frac{x}\{y} ] beginnend mit dem zuvor
 definierten Startpunkt _A_.
 
 ====
@@ -138,7 +138,7 @@ LöseDgl( <Gleichung>, <Abhängige Variable>, <Unabhängige Variable>, <Punkt(e)
 [EXAMPLE]
 ====
 
-`++LöseDgl[y'' - 3y' + 2 = x, (2, 3), (1, 2)]++` berechnet stem:[ y = \frac\{-9 x^2 e^3 + 30 x e^3 - 32 \{(e^3)}^2 + 138
+`++LöseDgl[y'' - 3y' + 2 = x, (2, 3), (1, 2)]++` berechnet stem:[ y = \frac{-9 x^2 e^3 + 30 x e^3 - 32 \{(e^3)}^2 + 138
 e^3 + 32 e^\{3 x} }\{54 e^3} ].
 
 ====

@@ -4,18 +4,18 @@ ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 SolveODE( <f'(x, y)> )::
   Attempts to find the exact solution of the first order ordinary differential equation (ODE)
-  stem:[\frac\{dy}\{dx}(x)=f'(x, y(x))].
+  stem:[\frac{dy}\{dx}(x)=f'(x, y(x))].
 
 [EXAMPLE]
 ====
 
-`++SolveODE(2x / y)++` yields _stem:[\sqrt\{2} \sqrt\{-c_\{1}+x^\{2}}]_, where stem:[c_\{1}] is a constant.
+`++SolveODE(2x / y)++` yields _stem:[\sqrt{2} \sqrt{-c_\{1}+x^\{2}}]_, where stem:[c_\{1}] is a constant.
 
 ====
 
 SolveODE( <f'(x, y)>, <Point on f> )
 
-Attempts to find the exact solution of the first order ODE stem:[\frac\{dy}\{dx}(x)=f'(x, y(x))] and use the solution
+Attempts to find the exact solution of the first order ODE stem:[\frac{dy}\{dx}(x)=f'(x, y(x))] and use the solution
 which goes through the given point.
 
 [EXAMPLE]
@@ -33,12 +33,12 @@ stem:[c_\{1}] will be created as an auxiliary object with a corresponding slider
 ====
 
 SolveODE( <f'(x, y)>, <Start x>, <Start y>, <End x>, <Step> )::
-  Solves first order ODE stem:[\frac\{dy}\{dx}=f'(x, y)] numerically with given start point, end and step for _x_.
+  Solves first order ODE stem:[\frac{dy}\{dx}=f'(x, y)] numerically with given start point, end and step for _x_.
 
 [EXAMPLE]
 ====
 
-`++SolveODE(-x*y, x(A), y(A), 5, 0.1)++` solves stem:[\frac\{dy}\{dx}=-xy] using previously defined _A_ as a starting
+`++SolveODE(-x*y, x(A), y(A), 5, 0.1)++` solves stem:[\frac{dy}\{dx}=-xy] using previously defined _A_ as a starting
 point.
 
 ====
@@ -54,14 +54,14 @@ point.
 ====
 
 SolveODE( <y'>, <x'>, <Start x>, <Start y>, <End t>, <Step> )::
-  Solves first order ODE stem:[\frac\{dy}\{dx}=\frac\{f(x, y)}\{g(x, y)}] with given start point, maximal value of an
+  Solves first order ODE stem:[\frac{dy}\{dx}=\frac{f(x, y)}\{g(x, y)}] with given start point, maximal value of an
   internal parameter _t_ and step for _t_. This version of the command may work where the first one fails e.g. when the
   solution curve has vertical points.
 
 [EXAMPLE]
 ====
 
-`++SolveODE(-x, y, x(A), y(A), 5, 0.1)++` solves stem:[\frac\{dy}\{dx}=- \frac\{x}\{y} ] using previously defined _A_ as
+`++SolveODE(-x, y, x(A), y(A), 5, 0.1)++` solves stem:[\frac{dy}\{dx}=- \frac{x}\{y} ] using previously defined _A_ as
 a starting point.
 
 ====
@@ -131,7 +131,7 @@ SolveODE( <Equation>, <Point(s) on f>, <Point(s) on f'> )::
 [EXAMPLE]
 ====
 
-`++SolveODE(y'' - 3y' + 2 = x, (2, 3), (1, 2))++` yields stem:[ y = \frac\{-9 x^2 e^3 + 30 x e^3 - 32 \{(e^3)}^2 + 138
+`++SolveODE(y'' - 3y' + 2 = x, (2, 3), (1, 2))++` yields stem:[ y = \frac{-9 x^2 e^3 + 30 x e^3 - 32 \{(e^3)}^2 + 138
 e^3 + 32 e^\{3 x} }\{54 e^3} ].
 
 ====
