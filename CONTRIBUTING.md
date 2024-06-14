@@ -27,8 +27,8 @@ To make sure your page is linked correctly to its counterparts in other language
 You can copy this line to your translation of the given English page and it will get linked to all existing translations.
 
 ## Publishing changes
-In general all changes are published online the day after they were merged into this repository.
-That currently happens at 5:46 AM GMT or when triggered manually by developers.
+Publishing changes takes some time, in general it should happen within 10 minutes from the moment your changes were merged into this repository.
+For minor changes that do not need to be published immediatelly you can add `[ci skip]` to your commit message, then they will be processed in the next daily build around 5:40 AM GMT.
 See the [list of recent deploymnents](https://github.com/geogebra/docs/actions/workflows/antora.yml) for details.
 
 ## Watching for changes
