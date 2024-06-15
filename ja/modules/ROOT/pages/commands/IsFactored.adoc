@@ -1,0 +1,22 @@
+= IsFactored コマンド
+:page-en: commands/IsFactored
+ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
+
+IsFactored( <Polynomial> )::
+  多項式が因数分解できる場合は ''true'' を返し，そうでない場合は ''false'' を返す．
+
+[EXAMPLE]
+====
+* `IsFactored(x)` 出力： _true_ +
+* `IsFactored(0.5)` 出力： _true_ +
+* `IsFactored(5)` 出力： _true_ +
+* `IsFactored(x^2-1)` 出力： _false_ +
+* `IsFactored(x^2-2)` 出力： _true_ +
+* `IsFactored(x(x+1))` 出力： _true_ +
+* `IsFactored(x(2x+2))` 出力： _false_ +
+* `IsFactored(x^3-1)` 出力： _false_ +
+* `IsFactored(x(x/2+1/2))` 出力： _false_ +
+* `+IsFactored((x+1)(x^2-1))+` 出力： _false_ +
+* `IsFactored(-2x-2)` 出力： _false_ +
+* `IsFactored(2x+2)` 出力： _false_ +
+====
