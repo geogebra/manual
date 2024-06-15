@@ -36,6 +36,11 @@ for (const lang of active) {
         const content = fs.readFileSync(filePath, 'utf8');
         const pageEn = content.match(/:page-en:(.*)/);
         if (!pageEn) {
+            if (lang == "ja" && fs.existsSync(filePath.replace(/ja.modules/,'en/modules'))) {
+                const lines = content.split('\n');
+                const fixedContent = lines[0]+'\n:page-en:'+simplePath(filePath).replace('.adoc','')+'\n'+lines.slice(1).join('\n')
+                fs.writeFileSync(filePath, fixedContent, 'utf8')
+            }
             orphans.push(simplePath(filePath));
         } else {
            translations[pageEn[1].trim()] = filePath;
@@ -55,6 +60,6 @@ for (const lang of active) {
        fs.writeFileSync(`${lang}/modules/ROOT/nav.adoc`, localNav, 'utf8');
     }
     fs.writeFileSync(`${lang}/modules/ROOT/pages/missing.adoc`, '= Missing translations\n\n * '
-    + missing.join('\n * ') + '\n\n== Extra translations\n\n * '
-    + orphans.join('\n * '), 'utf8');
+    + missing.map(k=>`xref:en@manual::${k}.adoc[${k}]`).join('\n * ') + '\n\n== Extra translations\n\n * '
+    + orphans.map(k=>`xref:${k}[${k.substr(0, k.length - 4)}]`).join('\n * '), 'utf8');
 }
