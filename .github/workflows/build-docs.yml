@@ -4,6 +4,10 @@ on:
   push:
     branches: [ "main" ]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,7 +18,9 @@ jobs:
     - name: Build
       env:
         DOCS_TOKEN: ${{ secrets.DOCS_TOKEN }}
+      # sleep a bit to make sure merging 5 PRs in the same minute only triggers one actual build
       run: |
+        sleep 60
         curl -L \
         -X POST \
         -H "Accept: application/vnd.github+json" \
