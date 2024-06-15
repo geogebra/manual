@@ -1,8 +1,17 @@
 = GCD コマンド
+:page-en: commands/GCD
 ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
 GCD(<数値>, <数値> )::
   2つの数値の最大公約数を計算する．
+
+[EXAMPLE]
+====
+
+`++GCD(12, 15)++` 出力： _3_.
+
+====
+
 GCD( <数値のリスト> )::
   リストの要素の最大公約数を計算する．
 
@@ -10,13 +19,6 @@ GCD( <数値のリスト> )::
 ====
 
 `++GCD({12, 30, 18})++` 出力： _6_.
-
-====
-
-[EXAMPLE]
-====
-
-`++GCD(12, 15)++` 出力： _3_.
 
 ====
 
@@ -30,7 +32,15 @@ cas.svg,width=16,height=16] xref:/CASビュー.adoc[CASビュー] では以下�
 
 GCD( <多項式>, <多項式> )::
   2つの多項式の最大公約数を計算する．
-GCD( <List of Polynomials> )::
+
+[EXAMPLE]
+====
+
+`++GCD(x^2 + 4 x + 4, x^2 - x - 6)++` 出力： _x + 2_.
+
+====
+
+GCD( <多項式のリスト> )::
   リストの多項式の最大公約数を計算する．
 
 [EXAMPLE]
@@ -40,16 +50,9 @@ GCD( <List of Polynomials> )::
 
 ====
 
-[EXAMPLE]
-====
-
-`++GCD(x^2 + 4 x + 4, x^2 - x - 6)++` 出力： _x + 2_.
-
-====
-
 [NOTE]
 ====
 
-xref:/commands/LCM.adoc[LCM コマンド] と xref:/commands/ExtendedGCD.adoc[ExtendedGCD コマンド]も参照
+参照：xref:/commands/LCM.adoc[LCM コマンド]， xref:/commands/ExtendedGCD.adoc[ExtendedGCD コマンド]．
 
 ====
