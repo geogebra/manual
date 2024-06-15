@@ -1,8 +1,7 @@
 = LCM コマンド
+:page-en: commands/LCM
 ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
-LCM[ <数値のリスト> ]::
-  リストの要素の最小公倍数を計算する．
 LCM[ <数値>, <数値> ]::
   2つの数値の最小公倍数を計算する．
 
@@ -13,12 +12,16 @@ LCM[ <数値>, <数値> ]::
 
 ====
 
+LCM[ <数値のリスト> ]::
+  リストの要素の最小公倍数を計算する．
+
 [EXAMPLE]
 ====
 
 `++LCM({12, 30, 18})++` 出力： _180_.
 
 ====
+
 
 [NOTE]
 ====
@@ -30,6 +33,15 @@ cas.svg,width=16,height=16] xref:/CASビュー.adoc[CASビュー] では以下�
 
 LCM( <多項式>, <多項式> )::
   2つの多項式の最小公倍数を計算する．
+
+
+[EXAMPLE]
+====
+
+`++LCM(x^2 + 4 x + 4, x^2 - x - 6)++` 出力： stem:[x^3 + x^2 - 8 x - 12].
+
+====
+
 LCM( <多項式のリスト> )::
   リストの多項式の最小公倍数を計算する．
 
@@ -40,16 +52,10 @@ LCM( <多項式のリスト> )::
 
 ====
 
-[EXAMPLE]
-====
-
-`++LCM(x^2 + 4 x + 4, x^2 - x - 6)++` 出力： stem:[x^3 + x^2 - 8 x - 12].
-
-====
 
 [NOTE]
 ====
 
-xref:/commands/GCD.adoc[GCD コマンド]も参照．
+参照：xref:/commands/GCD.adoc[GCD コマンド]．
 
 ====
