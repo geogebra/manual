@@ -12,6 +12,14 @@ Min( <List> )::
 
 ====
 
+[NOTE]
+====
+
+If the input consists of non-numeric objects, then this command considers the numbers associated with those objects. If
+you have a list of segments for example, the command Min( <List> ) will yield the minimum segment length.
+
+====
+
 Min( <Interval> )
 
 Returns the lower bound of the interval.
@@ -22,14 +30,13 @@ Returns the lower bound of the interval.
 `++Min(2 < x < 3)++` yields _2_ .
 
 ====
-
 [NOTE]
 ====
 
-If the input consists of non-numeric objects, then this command considers the numbers associated with those objects. If
-you have a list of segments for example, the command Min( <List> ) will yield the minimum segment length.
+Open and closed intervals are not distinguished.
 
 ====
+
 
 Min( <Number>, <Number> )
 
@@ -42,12 +49,6 @@ Returns the minimum of the two given numbers.
 
 ====
 
-[NOTE]
-====
-
-Open and closed intervals are not distinguished.
-
-====
 
 Min( <Function>, <Start x-Value>, <End x-Value> )::
   Calculates (numerically) the *local* minimum point for function in the given interval. Function should be continuous
