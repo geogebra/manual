@@ -61,5 +61,5 @@ for (const lang of active) {
     }
     fs.writeFileSync(`${lang}/modules/ROOT/pages/missing.adoc`, '= Missing translations\n\n * '
     + missing.map(k=>`xref:en@manual::${k}.adoc[${k}]`).join('\n * ') + '\n\n== Extra translations\n\n * '
-    + orphans.map(k=>`xref:${k}[${k.substr(0, k.length - 4)}]`).join('\n * '), 'utf8');
+    + orphans.map(k=>`xref:${k}[${k.substr(0, k.length - 5)}]`).join('\n * '), 'utf8');
 }
