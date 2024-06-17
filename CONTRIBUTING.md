@@ -22,7 +22,7 @@ The pages are written in AsciiDoc. We do not want to duplicate the [AsciiDoc doc
 ## Language links
 To make sure your page is linked correctly to its counterparts in other languages, the `page-en` property has to be set. For example the [english page for Angle command](https://github.com/geogebra/manual/blob/main/en/modules/ROOT/pages/commands/Angle.adoc?plain=1) contains this just below the page's heading:
 ```asciidoc
-:page-en:commands/Point
+:page-en: commands/Point
 ```
 You can copy this line to your translation of the given English page and it will get linked to all existing translations.
 

@@ -38,7 +38,7 @@ for (const lang of active) {
         if (!pageEn) {
             if (lang == "ja" && fs.existsSync(filePath.replace(/ja.modules/,'en/modules'))) {
                 const lines = content.split('\n');
-                const fixedContent = lines[0]+'\n:page-en:'+simplePath(filePath).replace('.adoc','')+'\n'+lines.slice(1).join('\n')
+                const fixedContent = lines[0]+'\n:page-en: '+simplePath(filePath).replace('.adoc','')+'\n'+lines.slice(1).join('\n')
                 fs.writeFileSync(filePath, fixedContent, 'utf8')
             }
             orphans.push(simplePath(filePath));
