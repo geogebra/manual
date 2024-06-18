@@ -1,7 +1,8 @@
 = 表計算ビュー
+:page-en: Spreadsheet_View
 ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
-== [#表計算ビューのユーザーインターフェース]####[#.E8.A1.A8.E8.A8.88.E7.AE.97.E3.83.93.E3.83.A5.E3.83.BC.E3.81.AE.E3.83.A6.E3.83.BC.E3.82.B6.E3.83.BC.E3.82.A4.E3.83.B3.E3.82.BF.E3.83.BC.E3.83.95.E3.82.A7.E3.83.BC.E3.82.B9]##表計算ビューのユーザーインターフェース##
+== [#表計算ビューのユーザーインターフェース]#表計算ビューのユーザーインターフェース#
 
 デフォルトでは，image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _表計算ビュー_ は
 image:16px-Menu_view_graphics.svg.png[Graphics View,title="Graphics View",width=16,height=16]
@@ -32,7 +33,7 @@ xref:/GeoGebra_5_0_デスクトップ_vs_ウェブ・タブレットアプリ.ad
 image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _表計算ビュー_
 は，以下の方法でカスタマイズできる．
 
-* image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] __[[設定ダイアログ]}__を開き，
+* image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/設定ダイアログ.adoc[_設定ダイアログ_] を開き，
 image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _表計算・統計_
 (GeoGebraデスクトップ) オプションを選択する
 * image:16px-Stylingbar_icon_spreadsheet.svg.png[Stylingbar icon spreadsheet.svg,width=16,height=12]
@@ -54,11 +55,17 @@ _表計算ビュー_ の動作を変更することができる．
 * _コマンドの前_ に "=" が必要
 * _オートコンプリート_ の利用
 
-== [#数学オブジェクトの作成]####[#.E6.95.B0.E5.AD.A6.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.81.AE.E4.BD.9C.E6.88.90]##数学オブジェクトの作成##
+== [#数学オブジェクトの作成]#数学オブジェクトの作成#
 
 GeoGebra のimage:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _表計算ビュー_
-では，すべてのセルに特定の名前がついており，各セルを直接指定することができる． \{\{Example|1=__A__ 列 _1_ 行目のセルは
-__A1__と名付けられる．
+では，すべてのセルに特定の名前がついており，各セルを直接指定することができる． 
+
+[EXAMPLE]
+====
+
+　　_A_ 列 _1_ 行目のセルは _A1_ と名付けられる．
+
+====
 
 [NOTE]
 ====
@@ -72,7 +79,7 @@ __A1__と名付けられる．
 _表計算のセル_ には，数値だけでなく，GeoGebra
 に対応したあらゆるxref:/一般のオブジェクト.adoc[一般のオブジェクト]やxref:/幾何オブジェクト.adoc[幾何オブジェクト]（例：点の座標，xref:/関数.adoc[関数]，xref:/コマンド.adoc[コマンド]など）を入力することができる．
 
-表計算で隣接していない列やセルを選択するには，ショートカットキー [.kcode]#Ctrl#（MacOS: [.kcode]#Cmd#）　ー　クリック
+表計算で隣接していない列やセルを選択するには，ショートカットキー [.kcode]#Ctrl#（MacOS: [.kcode]#Cmd#）+クリック
 を使用する．
 
 === 相対セルの名前
@@ -82,12 +89,11 @@ _表計算のセル_ には，数値だけでなく，GeoGebra
 [EXAMPLE]
 ====
 
-`++A1=1++`，`++A2=2++`とする．_B1_ に`++(A1, A1)++`)を入力する．_B1_ を _B2_ にコピーすると（[.kcode]#Ctrl# +
-[.kcode]#C#, [.kcode]#Ctrl# + [.kcode]#V#　，またはセルの角をドラッグすることで），_B2_ には _(A2, A2)_ が表示される．
+`++A1=1++`，`++A2=2++` とする． _B1_ に `++(A1, A1)++` を入力する．_B1_ を _B2_ にコピーすると（[.kcode]#Ctrl# +[.kcode]#C#, [.kcode]#Ctrl# + [.kcode]#V#，またはセルの角をドラッグすることで）， _B2_ には _(A2, A2)_ が表示される．
 
 ====
 
-この動作を防ぐためには，参照するセルの列または行の前に`++$++`記号を挿入することで，参照が固定される．
+この動作を防ぐためには，参照するセルの列または行の前に `++$++` 記号を挿入することで，参照が固定される．
 
 [NOTE]
 ====
@@ -96,7 +102,7 @@ MacOSでは，コピー＆ペーストのショートカットは[.kcode]##Cmd##
 
 ====
 
-== [#表計算ビューへのデータ入力]####[#.E8.A1.A8.E8.A8.88.E7.AE.97.E3.83.93.E3.83.A5.E3.83.BC.E3.81.B8.E3.81.AE.E3.83.87.E3.83.BC.E3.82.BF.E5.85.A5.E5.8A.9B]##image:24px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=24,height=24] 表計算ビューへのデータ入力##
+== [#表計算ビューへのデータ入力]#表計算ビューへのデータ入力#
 
 === 手動入力, コマンド, トレース（残像）を記録
 
@@ -166,7 +172,7 @@ _表計算ビューのツールバー_ の _ツール_ は，生成されるオ�
 
 ====
 
-== [#数学オブジェクトの表示]####[#.E6.95.B0.E5.AD.A6.E3.82.AA.E3.83.96.E3.82.B8.E3.82.A7.E3.82.AF.E3.83.88.E3.81.AE.E8.A1.A8.E7.A4.BA]##数学オブジェクトの表示##
+== [#数学オブジェクトの表示]#数学オブジェクトの表示#
 
 === 他のビューでのスプレッドシートオブジェクトの表示
 
@@ -206,7 +212,7 @@ _作成_ から _演算表_ オプションを選択する．
 [EXAMPLE]
 ====
 
-`++A1 = x y++`, `++A2 = 1++`, `++A3 = 2++`, `++A4 = 3++`, `++B1 = 1++`, `++C1 = 2++`, `++D1 = 3++`とする．セル _A1:D4_
+`++A1 = x y++`, `++A2 = 1++`, `++A3 = 2++`, `++A4 = 3++`, `++B1 = 1++`, `++C1 = 2++`, `++D1 = 3++` とする．セル _A1:D4_
 をマウスで選択する．次に，選択セル上で右クリック（MacOS：[.kcode]#Cmd#-クリック）し，_xref:/コンテキストメニュー.adoc[コンテキストメニュー]_
 から _作成_ → _演算表_ を選択して，指定された関数に挿入された値の代入結果を含む表を作成する．
 
