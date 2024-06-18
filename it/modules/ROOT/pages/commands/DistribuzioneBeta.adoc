@@ -1,0 +1,18 @@
+= Comando DistribuzioneBeta
+:page-en: commands/BetaDist
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+DistribuzioneBeta( Numero α, Numero β, Valore variabile v )::
+  Crea la funzione di distribuzione cumulata (cdf) di una distribuzione beta con parametri _α, β_ e valore della variabile _v_, che è la probabilità _P(X≤v)_ dove _X_ è una variabile casuale di una distribuzione beta di parametri _α_ e _β_
+
+DistribuzioneBeta( Numero α, Numero β, Valore variabile v, Booleano Cumulata )::
+  Se Cumulata è _true_, crea la funzione di distribuzione cumulata di una distribuzione beta di parametri _α_ e _β_ e valore della variabile _v_. Se Cumulata è _false_, crea la funzione di densità di probabilità (pdf) della distribuzione beta corrispondente per _v_.
+
+
+DistribuzioneBeta( Numero α, Numero β, x, Booleano Cumulata )::
+  Se Cumulata è _true_, crea la funzione di distribuzione cumulata di una distribuzione beta di parametri _α_ e _β_, altrimenti crea la funzione di densità di probabilità (pdf) della distribuzione beta corrispondente.
+
+[NOTE]
+====
+Vedere anche il comando xref:/commands/BetaInversa.adoc[BetaInversa].
+====
