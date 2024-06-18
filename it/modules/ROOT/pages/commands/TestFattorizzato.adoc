@@ -1,0 +1,22 @@
+= Comando TestFattorizzato
+:page-en: commands/IsFactored
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+TestFattorizzato( Polinomio )::
+  Restituisce ''true'' se il polinomio è fattorizzato con coefficienti in stem:[\mathbb Q] e ''false'' in caso contrario. In generale, affinché un polinomio sia considerato fattorizzato, il coefficiente del termine principale di ciascun fattore deve essere positivo.
+
+[EXAMPLE]
+====
+* `TestFattorizzato(x)` restituisce _true_ +
+* `TestFattorizzato(0.5)` restituisce _true_ +
+* `TestFattorizzato(5)` restituisce _true_ +
+* `TestFattorizzato(x^2-1)` restituisce _false_ +
+* `TestFattorizzato(x^2-2)` restituisce _true_ +
+* `TestFattorizzato(x(x+1))` restituisce _true_ +
+* `TestFattorizzato(x(2x+2))` restituisce _false_ +
+* `TestFattorizzato(x^3-1)` restituisce _false_ +
+* `TestFattorizzato(x(x/2+1/2))` restituisce _false_ +
+* `+TestFattorizzato((x+1)(x^2-1))+` restituisce _false_ +
+* `TestFattorizzato(-2x-2)` restituisce _false_ +
+* `TestFattorizzato(2x+2)` restituisce _false_ +
+====
