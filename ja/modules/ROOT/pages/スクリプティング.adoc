@@ -1,60 +1,74 @@
 = スクリプティング
+:page-en: Scripting
 ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
-スクリプトとはコマンドの列であって，それらが順に実行されるようなものである。GeoGebraでは2種類のスクリプト言語をサポートしている。それはGGBScript
-と Javascriptである。スクリプトは以下の場合に実行(triggered)される：
+GeoGebra は GGBScript と Javascrip の2種類のスクリプト言語をサポートしている．
+それはGGBScript と Javascriptである．image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/オブジェクトのプロパティ.adoc[オブジェクトのプロパティ]の「スプリクト記述」のタブでスクリプトをセットすることができる．
 
-* 特定の対象をクリックしたとき
-* 特定の対象をアップデートした時（その対象の値やプロパティが変更されたとき）
-* ファイルを読み込んだ時（JavaScriptの場合）
-* Javascript のイベントリスナーが発動した時(
-xref:/s_index_php?title=リファレンス：JavaScript_action=edit_redlink=1.adoc[リファレンス：JavaScript] を参照のこと)
+[NOTE]
+====
+スクリプトを動作させるには． _プロパティ_ を閉じる必要がある．
+====
 
-ユーザーは，image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
-xref:/オブジェクトのプロパティ.adoc[オブジェクトのプロパティ]の中の「スクリプティング(Scripting)」というタブを通してスクリプトをセットすることができる。
+異なるオブジェクトは異なるタイプのスクリプトをサポートする．スクリプトは以下の場合に実行(triggered)される：
+
+* 特定の対象をクリックしたとき（_クリックして_ タブ）
+* 特定の対象をアップデートした時（そのオブジェクトの値やプロパティが変更されたとき）（_最新情報_ タブ）
+* 入力ボックスの値を変更したとき(_変更時_タブ）
+* オブジェクトをドラッグした後，マウスボタンを離した時（タッチデバイスの場合は画面から指を離した時）（_ドラッグエンド時_ タブ）
+* ファイルを読み込んだ時（JavaScriptの場合 _グローバルJavaスクリプト_ タブ）
+* Javascript のイベントリスナーが発動した時(xref:/s_index_php?title=リファレンス：JavaScript_action=edit_redlink=1.adoc[リファレンス：JavaScript] を参照)
+
+入力ボックスにおけるOnUpdateスクリプトとOnChangeスクリプトの違いは，OnUpdateタブに記述されたスクリプトは，入力ボックスからフォーカスが外れた際にのみ実行される（例えば，ボタンをクリックしたり，グラフィックビューをクリックしたりする場合など），一方で，OnChangeタブに記述されたスクリプトは，入力ボックスの内容が変更された瞬間，かつ入力ボックスにフォーカスが当たっている間にすぐに実行される．
+
+[NOTE]
+====
+
+* 入力ボックスの 変更時 スクリプトと 最新情報 スクリプトの違いをこのデモで確認：https://www.geogebra.org/m/bek5uqah
+* ドラッグ可能な点に対する ドラッグエンド時 スクリプトをこのデモで確認：https://www.geogebra.org/m/kxgvyqvj 
+
+====
 
 == GGBScript
 
-GeoGebraコマンドから構成されるようなスクリプトを作ることができます。Inputバーに入力する方法と同じように使えます。スクリプトを実行する(triggering)と，（スクリプトの中のコマンドが）順番に一つ一つ実行されます。
+GeoGebraコマンドから構成されるようなスクリプトを作ることができます．入力バーに入力する方法と同じように使える．スクリプトを実行する(triggering)と，（スクリプトの中のコマンドが）順番に一つ一つ実行される．
 
 [EXAMPLE]
 ====
 
-* _a_ を整数に値をとる xref:/tools/スライダー.adoc[スライダー] で，１から３までの値をとるものとします。
-(したがって1ずつ増やせるようになっています。)
-* `++list1 = {"red", "green", "blue"}++` とタイプしてください
-* 'a _のプロパティを開き，"On Update" スクリプトのところに `++SetColor(a, Element(list1, a))++` とタイプしてください。_
-* スライダーを動かすたびごとに色が変わります。
+* _a_ を整数に値をとる xref:/tools/スライダー.adoc[スライダー] で，１から３までの値をとるものとする．
+(増分は1)
+* 入力バーに `++list1 = {"red", "green", "blue"}++` と入力する．
+* _a_ のプロパティを開き， "最新情報" スクリプトのところに `++SetColor(a, Element(list1, a))++` と入力する．　
+* スライダーを動かすたびごとに色が変わる．
 
 ====
 
 *解説：*
-スライダーが動かされるたびに，アップデート（のキュー）が発生します。ですから，動くたびごとに，スクリプトは呼び出され，リストの中から一つの色が呼び出されて，スライダー
-a の色が変更されます。
+スライダーが動かされるたびに，最新情報（アップデートのキュー）が発生する．動くたびごとに，スクリプトは呼び出され，リストの中から一つの色が呼び出されて，スライダーa の色が変更される
 
 [NOTE]
 ====
 
-文頭に `++#++` があるとコメント行になります
+文頭に `++#++` があるとコメント行になる．
 
 ====
 
 [NOTE]
 ====
 
-スクリプトでのみ使用できるコメントもあります。それらは xref:/commands/スクリプティング.adoc[スクリプティング　コマンド]
-のページで見ることができます。
-
+スクリプトでのみ使用できるコメントがある．それらは xref:/commands/スクリプティング.adoc[スクリプティング　コマンド]のを参照のこと．
 ====
 
 == JavaScript
 
-JavaScriptは多くのインターネット技術で用いられているプログラム言語である。GeoGebra
-スクリプトとは違って，JavaScriptではコマンドたちは一列に並んだ順に実行されなければいけないわけではなく，コントロールフロー
-(`++if++`, `++while++`, `++for++`) を用いることができる。一般的なJavaScriptについては，
-https://developer.mozilla.org/en/JavaScript/Guide[developer.mozilla.org]にわかりやすいチュートリアルがある。 .
-GeoGebraでは，作図を変更するような，特別なJavaScriptのメソッドを使用することができる。これらのメソッドはggbAppletという対象(object)に属しており，
-`++ggbApplet.method_name(parameter,..,parameter)++`という方法で呼び出すことができる。これらのメソッドのリストについてはxref:/s_index_php?title=リファレンス：JavaScript_action=edit_redlink=1.adoc[リファレンス：JavaScript]を参照してほしい。
+JavaScriptは多くのインターネット技術で用いられているプログラム言語である．GeoGebra
+スクリプトとは違って，JavaScriptではコマンドは一列に並んだ順に実行されなければいけないわけではなく，コントロールフロー
+(`++if++`, `++while++`, `++for++`) を用いることができる．一般的なJavaScriptについては，
+https://developer.mozilla.org/en/JavaScript/Guide[developer.mozilla.org]にわかりやすいチュートリアルがある.
+GeoGebraでは，作図を変更するような，特別なJavaScriptのメソッドを使用することができる．これらのメソッドはggbAppletという対象(object)に属しており，
+`++ggbApplet.method_name(parameter,..,parameter)++` という方法で呼び出すことができる．これらのメソッドのリストについてはxref:/s_index_php?title=リファレンス：JavaScript_action=edit_redlink=1.adoc[リファレンス：JavaScript]を参照のこと．
 
 [EXAMPLE]
 ====
@@ -64,20 +78,20 @@ for(var i =0;i<10;i++)
    ggbApplet.evalCommand("A_"+i+"=(random()*10,random()*10)");
 ....
 
-このスクリプトは，乱数によって座標が決められた，10個の__A~0~__ から __A~9~__という点を生成することができる。
+このスクリプトは，乱数によって座標が決められた，10個の__A~0~__ から __A~9~__という点を生成することができる．
 
 ====
 
 [NOTE]
 ====
 
-JavaScript によるスクリプトはいろいろなことができるが，多くの作業はより単純なGeoGebraScriptを用いても実現可能である。
+JavaScript によるスクリプトはいろいろなことができるが，多くの作業はより単純なGeoGebraScriptを用いても実現可能である．
 
 ====
 
 === Global JavaScript
 
-image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]プロパティのスクリプティングタグにある「グローバルJavaScript」では，（変数ではなく）「関数」を定義することができ，ここで定義した関数は（同じファイル内の）他のスクリプトでも用いることができる。`++ggbOnInit()++`という関数を定義することができ，これは作図が読み込まれたときに自動的に一度実行される。このggbOnInit関数は以下にしめしたような，いくつかのイベントリスナーを登録するのに用いることができる。
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]プロパティのスクリプティングタグにある「グローバルJavaScript」では，（変数ではなく）「関数」を定義することができ，ここで定義した関数は（同じファイル内の）他のスクリプトでも用いることができる．`++ggbOnInit(name,api)++` という作図が読み込まれたときに自動的に一度実行される関数を定義することができる．このggbOnInit関数は以下に示したような，いくつかのイベントリスナーを登録するのに用いることができる．
 
 [EXAMPLE]
 ====
@@ -92,16 +106,16 @@ function ggbOnInit(){
 }
 ....
 
-まず，onAddという関数を定義してある。ここでは，引数の文字列に依存したメッセージを表示するようにしてある。そのあとで，ggbOnInit関数を用いて，GeoGebraに新しい対象物が定義されるたびにこの関数を呼び出すように設定している。一度作図をリロードすると，ggbOnInit関数が再度実行され，その後はたとえば点Aを追加したならば"Object
-A was added"というメッセージが表示されるだろう。
+まず，onAddという関数を定義してある．ここでは，引数の文字列に依存したメッセージを表示するようにしてある．そのあとで，ggbOnInit関数を用いて，GeoGebraに新しい対象物が定義されるたびにこの関数を呼び出すように設定している．一度作図をリロードすると，ggbOnInit関数が再度実行され，その後はたとえば点Aを追加したならば "Object
+A was added" というメッセージが表示される．
 
 ====
 
-イベントリスナーは，名前の再定義，消去，クリアなどの動作に対して行うことができる。xref:/s_index_php?title=リファレンス：JavaScript_action=edit_redlink=1.adoc[リファレンス：JavaScript]にすべてのリストが説明されている。
+イベントリスナーは，名前の再定義，消去，クリアなどの動作に対して行うことができる．xref:/s_index_php?title=リファレンス：JavaScript_action=edit_redlink=1.adoc[リファレンス：JavaScript]にすべてのリストが説明されている．
 
 [NOTE]
 ====
 
-グローバルJavaScriptにおいてggbOnInitの外でggbAppletメソッドを用いると，意図したようには作動しない。というのは，これらは作図が読み込まれる前に実行されるメソッドだからだ。
+グローバルJavaScriptにおいてggbOnInitの外でggbAppletメソッドを用いると，意図したようには作動しない．というのは，これらは作図が読み込まれる前に実行されるメソッドであるからである．
 
 ====
