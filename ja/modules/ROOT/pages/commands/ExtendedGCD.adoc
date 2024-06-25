@@ -6,35 +6,33 @@ ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
 ExtendedGCD( <整数>,<整数> )::
   https://en.wikipedia.org/wiki/ja:%E3%83%99%E3%82%BA%E3%83%BC%E3%81%AE%E7%AD%89%E5%BC%8F[ベズーの等式] stem:[as+bt=
-  GCD(a,b)]の整数係数 stem:[s, t]，および与えられた整数 stem:[a] と stem:[b] の最大公約数を含むリストを返す．
-  結果は，https://en.wikipedia.org/wiki/ja:%E3%83%A6%E3%83%BC%E3%82%AF%E3%83%AA%E3%83%83%E3%83%89%E3%81%AE%E4%BA%92%E9%99%A4%E6%B3%95#.E6.8B.A1.E5.BC.B5.E3.81.95.E3.82.8C.E3.81.9F.E4.BA.92.E9.99.A4.E6.B3.95[拡張ユークリッドの互除法]で計算される．
+  GCD(a,b)] の整数係数 stem:[s, t] ，および与えられた整数 stem:[a] と stem:[b] の最大公約数を含むリストを返す．
+  結果は， https://ja.wikipedia.org/wiki/ユークリッドの互除法#拡張された互除法[拡張ユークリッドの互除法] で計算される．
 
 [EXAMPLE]
 ====
 
-`++ExtendedGCD(240,46)++` 出力： \{stem:[-9,47,2]}. (この結果をベズーの等式に当てはめると以下の通り： stem:[-9 \cdot
+`++ExtendedGCD(240,46)++` 出力： {stem:[-9,47,2]}. (この結果をベズーの等式に当てはめると以下の通り： stem:[-9 \cdot
 240+47 \cdot 46=2]）．
 
 ====
 
 ExtendedGCD( <多項式>, <多項式> )::
   https://en.wikipedia.org/wiki/ja:%E3%83%99%E3%82%BA%E3%83%BC%E3%81%AE%E7%AD%89%E5%BC%8F#.E5.A4.9A.E9.A0.85.E5.BC.8F.E3.81.AB.E5.AF.BE.E3.81.97.E3.81.A6[多項式に対するベズーの等式]
-  stem:[A(x)S(x) + B(x)T(x) = GCD(A(x), B(x))]の多項式係数 stem:[S(x), T(x)]，および与えられた多項式 stem:[A(x)] と
+  stem:[A(x)S(x) + B(x)T(x) = GCD(A(x), B(x))] の多項式係数 stem:[S(x), T(x)]，および与えられた多項式 stem:[A(x)] と
   stem:[B(x)] の最大公約数を含むリストを返す．
-  結果は，https://en.wikipedia.org/wiki/ja:%E3%83%A6%E3%83%BC%E3%82%AF%E3%83%AA%E3%83%83%E3%83%89%E3%81%AE%E4%BA%92%E9%99%A4%E6%B3%95#.E6.8B.A1.E5.BC.B5.E3.81.95.E3.82.8C.E3.81.9F.E4.BA.92.E9.99.A4.E6.B3.95[拡張ユークリッドの互除法]で計算される．
+  結果は， https://ja.wikipedia.org/wiki/ユークリッドの互除法#拡張された互除法[拡張ユークリッドの互除法] で計算される．
 
 [EXAMPLE]
 ====
 
-`++ExtendedGCD(x^2-1,x+4)++` 出力： \{stem:[1,-x+4,15]}.
+`++ExtendedGCD(x^2-1,x+4)++` 出力： {stem:[1,-x+4,15]}.
 （この結果を多項式に対するベズーの等式に当てはめると以下の通り：stem:[1 \cdot (x^2-1) + (-x+4) \cdot (x+4) = 15]）．
 
 ====
 
 [NOTE]
 ====
-
-*Notes:*
 
 * 2つの多項式のGCDは一意ではない（スカラー倍までは一意）．
 * こちらも参照： xref:/commands/GCD.adoc[GCD コマンド]．
