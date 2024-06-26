@@ -12,6 +12,14 @@ Max( <List> )::
 
 ====
 
+[NOTE]
+====
+
+If the input consists of non-numeric objects, then this command considers the numbers associated with those objects. If
+you have a list of segments for example, the command _Max( <List> )_ will yield the maximum segment length.
+
+====
+
 Max( <Interval> )
 
 Returns the upper bound of the interval.
@@ -26,8 +34,7 @@ Returns the upper bound of the interval.
 [NOTE]
 ====
 
-If the input consists of non-numeric objects, then this command considers the numbers associated with those objects. If
-you have a list of segments for example, the command _Max( <List> )_ will yield the maximum segment length.
+Open and closed intervals are treated the same.
 
 ====
 
@@ -42,12 +49,6 @@ Returns the maximum of the two given numbers.
 
 ====
 
-[NOTE]
-====
-
-Open and closed intervals are treated the same.
-
-====
 
 Max( <Function>, <Start x-Value>, <End x-Value> )::
   Calculates (numerically) the *local* maximum point of the function in the given interval. The function should be
