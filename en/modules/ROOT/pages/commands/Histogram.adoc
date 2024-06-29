@@ -90,15 +90,14 @@ This is useful for fitting a histogram with a density curve.
 
 ====
 
-Histogram( <Boolean Cumulative>, <List of Class Boundaries>, <List of Raw Data>, <Boolean Use Density> , <Density Scale
-Factor> (optional) )::
+Histogram( <Boolean Cumulative>, <List of Class Boundaries>, <List of Raw Data>, <Boolean Use Density> , <Density Scale Factor> (optional) )::
   If Cumulative is true this creates a histogram where each bar height equals the frequency of the class plus the sum of
   all previous frequencies.
 
 [EXAMPLE]
 ====
 
- :`++Histogram(true, {10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true)++` creates a histogram with 3 bars, with
+ `++Histogram(true, {10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true)++` creates a histogram with 3 bars, with
 the heights 0.5 (first bar), 0.7 (second bar), and 0.8 (third bar).
 
 ====
