@@ -4,51 +4,6 @@ ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
 Derivative( <関数> )::
   関数の主要な変数に関する導関数を返す．
-Derivative( <関数>, <数値> )::
-  関数の主要な変数に関する__n__次導関数を返す．（nは<数値>に等しい．）
-Derivative( <関数>, <変数> )::
-  与えられた変数に関する関数の偏微分を返す．
-Derivative( <関数>, <変数>, <数値> )::
-  与えられた変数に関する関数の__n__ 階偏導関数を返す．（nは<数値>に等しい．）
-Derivative( <曲線> )::
-  曲線の導関数を返す．
-Derivative( <曲線>, <数値> )::
-  曲線の__n__次導関数を返す．（nは<数値>に等しい．）
-
-[EXAMPLE]
-====
-
-`++Derivative(Curve(cos(t), t sin(t), t, 0, π), 2)++` 出力：曲線 _x = -cos(t), y = 2cos(t) - t sin(t)_.
-
-====
-
-[EXAMPLE]
-====
-
-`++Derivative(Curve(cos(t), t sin(t), t, 0, π))++` 出力： 曲線 _x = -sin(t), y = sin(t) + t cos(t)_.
-
-====
-
-[EXAMPLE]
-====
-
-`++Derivative(x^3 + 3x y, x, 2)++` 出力： _6x_.
-
-====
-
-[EXAMPLE]
-====
-
-`++Derivative(x^3 y^2 + y^2 + xy, y)++` 出力： _2x³y + x + 2y_.
-
-====
-
-[EXAMPLE]
-====
-
-`++Derivative(x^3 + x^2 + x, 2)++` 出力： _6x + 2_.
-
-====
 
 [EXAMPLE]
 ====
@@ -57,10 +12,60 @@ Derivative( <曲線>, <数値> )::
 
 ====
 
+Derivative( <関数>, <数値> )::
+  関数の主要な変数に関する__n__次導関数を返す．（nは<数値>に等しい．）
+
+[EXAMPLE]
+====
+
+`++Derivative(x^3 + x^2 + x, 2)++` 出力： _6x + 2_.
+
+====
+
+Derivative( <関数>, <変数> )::
+  与えられた変数に関する関数の偏微分を返す．
+
+[EXAMPLE]
+====
+
+`++Derivative(x^3 y^2 + y^2 + xy, y)++` 出力： _2x³y + x + 2y_.
+
+====
+
+Derivative( <関数>, <変数>, <数値> )::
+  与えられた変数に関する関数の__n__ 階偏導関数を返す．（nは<数値>に等しい．）
+
+[EXAMPLE]
+====
+
+`++Derivative(x^3 + 3x y, x, 2)++` 出力： _6x_.
+
+====
+
+Derivative( <曲線> )::
+  曲線の導関数を返す．
+
+[EXAMPLE]
+====
+
+`++Derivative(Curve(cos(t), t sin(t), t, 0, π))++` 出力： 曲線 _x = -sin(t), y = sin(t) + t cos(t)_.
+
+====
+
 [NOTE]
 ====
 
 これはパラメトリック曲線でのみ有効．
+
+====
+
+Derivative( <曲線>, <数値> )::
+  曲線の__n__次導関数を返す．（nは<数値>に等しい．）
+
+[EXAMPLE]
+====
+
+`++Derivative(Curve(cos(t), t sin(t), t, 0, π), 2)++` 出力：曲線 _x = -cos(t), y = 2cos(t) - t sin(t)_.
 
 ====
 
@@ -81,15 +86,20 @@ Derivative( <曲線>, <数値> )::
 
 == CAS での書式
 
-Derivative( <式> )
+Derivative( <式> )::
 
 関数の主要な変数に関する導関数を返す．
 
-Derivative( <式>, <変数> )
+[EXAMPLE]
+====
+
+`++Derivative(x^2)++` 出力： _2x_.
+
+====
+
+Derivative( <式>, <変数> )::
 
 与えられた変数に関する関数の偏微分を返す．
-
-Derivative( <式>, <変数>, <数値> )
 
 [EXAMPLE]
 ====
@@ -98,12 +108,9 @@ Derivative( <式>, <変数>, <数値> )
 
 ====
 
-[EXAMPLE]
-====
 
-`++Derivative(x^2)++` 出力： _2x_.
 
-====
+Derivative( <式>, <変数>, <数値> )::
 
 与えられた変数に関する式の__n__次導関数を返す．（nは<数値>に等しい．）
 
