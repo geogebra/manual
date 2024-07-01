@@ -3,13 +3,13 @@
 ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
 Factors( <多項式> )::
-  与えられた多項式をすべての因数の対応する指数乗の積として表すときの、_\{因数, 指数}_
+  与えられた多項式をすべての因数の対応する指数乗の積として表すときの、_{因数, 指数}_
   の形のリストを返します。因数は次数が小さい順に並べられます。
 
 [EXAMPLE]
 ====
 
-`++Factors(x^8 - 1)++` 出力：リスト _\{\{x - 1, 1}, \{x + 1, 1}, \{x^2 + 1, 1}, \{x^4 + 1, 1}}_.
+`++Factors(x^8 - 1)++` 出力：リスト _{{x - 1, 1}, {x + 1, 1}, {x^2 + 1, 1}, {x^4 + 1, 1}}_.
 
 ====
 
@@ -46,12 +46,14 @@ Factors( <数値> )::
 image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CASビュー.adoc[CASビュー]
 では、未定義の変数を入力として使用することができ，結果は適切な行列として返される．
 
+====
+
 [EXAMPLE]
 ====
 
 `++Factors(a^8 - 1)++` 出力： stem:[\left( \begin\{array}\{} a - 1 & 1 \\ a +1 & 1 \\a^2 + 1& 1 \\a^4 + 1& 1 \\
 \end\{array} \right)].
 
-====
+
 
 ====
