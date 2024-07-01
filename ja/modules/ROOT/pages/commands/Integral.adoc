@@ -3,21 +3,7 @@
 ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
 Integral( <関数> )::
-  主変数に関して不定積分を行う
-Integral( <関数>, <変数> )::
-  与えられた変数に関する偏積分を返す．
-Integral( <関数>, <xの開始値e>, <xの終了値> )::
-  主変数に関して、区間 _[xの開始値, xの終了値]_ 上での定積分を求める.
-Integral( <関数>, <xの開始値>, <xの終了値>, <Boolean Evaluate> )::
-  主変数に関して，区間　_[xの開始値, xの終了値]_　における関数の定積分を求め，関連する領域に色を塗る．_Evaluate_ が
-  _true_ の場合は積分値は計算されるが，_Evaluate_ が__false__ の場合は積分値は計算されない．
-
-[EXAMPLE]
-====
-
-`++Integral(x³+3x y, x)++` 出力： _stem:[\frac{1}\{4}x^4] + stem:[\frac{3}\{2}] x² y_ .
-
-====
+  主変数に関して不定積分を行う．
 
 [EXAMPLE]
 ====
@@ -26,12 +12,35 @@ Integral( <関数>, <xの開始値>, <xの終了値>, <Boolean Evaluate> )::
 
 ====
 
+Integral( <関数>, <変数> )::
+  与えられた変数に関する偏積分を返す．
+
+[EXAMPLE]
+====
+
+`++Integral(x³+3x y, x)++` 出力： _stem:[\frac{1}\{4}x^4] + stem:[\frac{3}\{2}] x² y_ .
+
+====
+
+Integral( <関数>, <xの開始値e>, <xの終了値> )::
+  主変数に関して、区間 _[xの開始値, xの終了値]_ 上での定積分を求める.
+
 [NOTE]
 ====
 
 このコマンドは、関数 _f" のグラフと "x" 軸との間の領域に色を塗る．_
 
 ====
+
+Integral( <関数>, <xの開始値>, <xの終了値>, <Boolean Evaluate> )::
+  主変数に関して，区間　_[xの開始値, xの終了値]_　における関数の定積分を求め，関連する領域に色を塗る．_Evaluate_ が
+  _true_ の場合は積分値は計算されるが，_Evaluate_ が__false__ の場合は積分値は計算されない．
+
+
+
+
+
+
 
 == CAS での書式
 
