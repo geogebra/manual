@@ -3,13 +3,13 @@
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 Factors( <Polynomial> )::
-  Gives a list of lists of the type _\{factor, exponent}_ such that the product of all these factors raised to the power
+  Gives a list of lists of the type _{factor, exponent}_ such that the product of all these factors raised to the power
   of the corresponding exponents equals the given polynomial. The factors are sorted by degree in ascending order.
 
 [EXAMPLE]
 ====
 
-`++Factors(x^8 - 1)++` yields _\{\{x - 1, 1}, \{x + 1, 1}, \{x^2 + 1, 1}, \{x^4 + 1, 1}}_.
+`++Factors(x^8 - 1)++` yields _{{x - 1, 1}, {x + 1, 1}, {x^2 + 1, 1}, {x^4 + 1, 1}}_.
 
 ====
 
@@ -47,12 +47,13 @@ See also xref:/commands/PrimeFactors.adoc[PrimeFactors Command] and xref:/comman
 In the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_View.adoc[CAS View] undefined
 variables can be used as input and the results are returned as proper matrices.
 
+====
+
 [EXAMPLE]
 ====
 
 `++Factors(a^8 - 1)++` yields stem:[\left( \begin\{array}\{} a - 1 & 1 \\ a +1 & 1 \\a^2 + 1& 1 \\a^4 + 1& 1 \\
 \end\{array} \right)].
 
-====
 
 ====
