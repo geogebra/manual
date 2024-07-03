@@ -4,6 +4,14 @@ ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
 OsculatingCircle( <点>, <関数> )::
   与えられた点での関数の接触円を返す．
+
+[EXAMPLE]
+====
+
+`++OsculatingCircle((0, 0), x^2)++` 出力： _x² + y² - y = 0_.
+
+====
+
 OsculatingCircle( <点>, <曲線> )::
   与えられた点における曲線の接触円を返す．
 
@@ -11,13 +19,6 @@ OsculatingCircle( <点>, <曲線> )::
 ====
 
 `++OsculatingCircle((1, 0), Curve(cos(t), sin(2t), t, 0, 2π))++` 出力： _x² + y² + 6x = 7_.
-
-====
-
-[EXAMPLE]
-====
-
-`++OsculatingCircle((0, 0), x^2)++` 出力： _x² + y² - y = 0_.
 
 ====
 
