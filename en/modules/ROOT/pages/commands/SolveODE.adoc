@@ -13,7 +13,14 @@ SolveODE( <f'(x, y)> )::
 
 ====
 
-SolveODE( <f'(x, y)>, <Point on f> )
+[NOTE]
+====
+
+stem:[c_\{1}] will be created as an auxiliary object with a corresponding slider.
+
+====
+
+SolveODE( <f'(x, y)>, <Point on f> )::
 
 Attempts to find the exact solution of the first order ODE stem:[\frac{dy}\{dx}(x)=f'(x, y(x))] and use the solution
 which goes through the given point.
@@ -25,12 +32,7 @@ which goes through the given point.
 
 ====
 
-[NOTE]
-====
 
-stem:[c_\{1}] will be created as an auxiliary object with a corresponding slider.
-
-====
 
 SolveODE( <f'(x, y)>, <Start x>, <Start y>, <End x>, <Step> )::
   Solves first order ODE stem:[\frac{dy}\{dx}=f'(x, y)] numerically with given start point, end and step for _x_.
@@ -66,7 +68,15 @@ a starting point.
 
 ====
 
-SolveODE( <b(x)>, <c(x)>, <f(x)>, <Start x>, <Start y>, <Start y'>, <End x>, <Step> )
+[NOTE]
+====
+
+To find the "reverse" solution, just enter a negative value for _End t_, for example
+`++SolveODE(-x, y, x(A), y(A), -5, 0.1)++`.
+
+====
+
+SolveODE( <b(x)>, <c(x)>, <f(x)>, <Start x>, <Start y>, <Start y'>, <End x>, <Step> )::
 
 Solves second order ODE stem:[y'' + b(x) y' + c(x) y = f(x)].
 
@@ -78,13 +88,7 @@ starting point.
 
 ====
 
-[NOTE]
-====
 
-To find the "reverse" solution, just enter a negative value for _End t_, for example
-`++SolveODE(-x, y, x(A), y(A), -5, 0.1)++`.
-
-====
 
 [NOTE]
 ====
