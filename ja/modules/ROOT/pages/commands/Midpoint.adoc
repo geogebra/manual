@@ -4,35 +4,16 @@ ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
 Midpoint( <線分> )::
   線分の中点を返す．
+
+[EXAMPLE]
+====
+
+`++線分をs = Segment((1, 1), (1, 5))++`としたとき， `++Midpoint(s)++` は _(1, 3)_ を返す．
+
+====
+
 Midpoint( <円錐曲線> )::
   円錐曲線（円または楕円）の中心を返す．
-Midpoint( <Interval> )::
-  (数値として)区間の真ん中の値を返す．
-Midpoint( <点>, <点> )::
-  ２点の中点を返す．
-Midpoint( <Quadric> )::
-  ２次曲面（球，円錐など）の真ん中の点を返す．
-
-[EXAMPLE]
-====
-
-`++Midpoint(x^2 + y^2 + z^2 = 1)++` 出力： _(0, 0, 0)_.
-
-====
-
-[EXAMPLE]
-====
-
-`++Midpoint((1, 1), (5, 1))++` 出力： _(3, 1)_.
-
-====
-
-[EXAMPLE]
-====
-
-`++Midpoint(2 < x < 4)++` 出力： _3_.
-
-====
 
 [EXAMPLE]
 ====
@@ -41,10 +22,33 @@ Midpoint( <Quadric> )::
 
 ====
 
+Midpoint( <Interval> )::
+  (数値として)区間の真ん中の値を返す．
+
 [EXAMPLE]
 ====
 
-`++線分をs = Segment((1, 1), (1, 5))++`としたとき， `++Midpoint(s)++` は _(1, 3)_ を返す．
+`++Midpoint(2 < x < 4)++` 出力： _3_.
+
+====
+
+Midpoint( <点>, <点> )::
+  ２点の中点を返す．
+
+[EXAMPLE]
+====
+
+`++Midpoint((1, 1), (5, 1))++` 出力： _(3, 1)_.
+
+====
+
+Midpoint( <Quadric> )::
+  ２次曲面（球，円錐など）の真ん中の点を返す．
+
+[EXAMPLE]
+====
+
+`++Midpoint(x^2 + y^2 + z^2 = 1)++` 出力： _(0, 0, 0)_.
 
 ====
 
