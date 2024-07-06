@@ -4,31 +4,11 @@ ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
 PerpendicularLine( <点>, <直線> )::
   指定された点を通り，その点から指定された直線に垂直な直線を作成する．
-PerpendicularLine( <点>, <線分> )::
-  指定された点を通り，与えられた線分に垂直な直線を作成する．
-PerpendicularLine( <点>, <ベクトル> )::
-  指定された点を通り，与えられたベクトルに垂直な直線を作成する．
 
 [EXAMPLE]
 ====
 
-ベクトルを `++u = Vector((5, 3), (1, 1))++` ，点 `++A = (-2, 0)++` をするとき， `++PerpendicularLine(A, u)++` は直線 _c:
-2x + y = -4_ を返す．
-
-====
-
-[EXAMPLE]
-====
-
-直線 _c_ を2点 _A_ = (-3, 3) ， _B_ = (0, 1) を通る線分とするとき， `++PerpendicularLine(A, c)++` は直線 __d: -3x + 2y =
-15__を返す．
-
-====
-
-[EXAMPLE]
-====
-
-直線の方程式を `++c: -3x + 4y = -6++`，点`++A = (-2, -3)++` とするとき， `++PerpendicularLine(A, c)++` は直線 _d_:
+直線の方程式を `++c: -3x + 4y = -6++`，点 `++A = (-2, -3)++` とするとき， `++PerpendicularLine(A, c)++` は直線 _d_:
 -4__x__ - 3__y__ = 17 を返す．
 
 ====
@@ -40,6 +20,31 @@ PerpendicularLine( <点>, <ベクトル> )::
 PerpendicularLine( <Point>, <Line>, <Context> ) を参照のこと．
 
 ====
+
+PerpendicularLine( <点>, <線分> )::
+  指定された点を通り，与えられた線分に垂直な直線を作成する．
+
+[EXAMPLE]
+====
+
+直線 _c_ を2点 _A_ = (-3, 3) ， _B_ = (0, 1) を通る線分とするとき， `++PerpendicularLine(A, c)++` は直線 __d: -3x + 2y =
+15__を返す．
+
+====
+
+PerpendicularLine( <点>, <ベクトル> )::
+  指定された点を通り，与えられたベクトルに垂直な直線を作成する．
+
+[EXAMPLE]
+====
+
+ベクトルを `++u = Vector((5, 3), (1, 1))++` ，点 `++A = (-2, 0)++` をするとき， `++PerpendicularLine(A, u)++` は直線 _c:
+2x + y = -4_ を返す．
+
+====
+
+
+
 
 PerpendicularLine( <点>, <平面> )::
   指定された点を通り，与えられた平面に垂直な直線を作成する．
