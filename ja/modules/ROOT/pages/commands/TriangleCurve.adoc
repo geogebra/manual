@@ -2,11 +2,9 @@
 :page-en: commands/TriangleCurve
 ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
-TriangleCurve[ <点>, <点>, <点>, <等式> ] +
-TriangleCurve( < 点P>, <点Q>, <点R>, <Equation in A, B, C> )::
+TriangleCurve( < 点P>, <点Q>, <点R>, <A, B, Cの方程式> )::
   点 _P_，_Q_，_R_
-  に関するhttps://en.wikipedia.org/wiki/Barycentric_coordinate_system_(mathematics)[重心座標（英文）]（英文）を用いて，陰伏多項式を生成する．この方程式は第四パラメータによって与えられ，重心座標は
-  _A_，_B_，_C_ として参照される．
+  に関する https://en.wikipedia.org/wiki/Barycentric_coordinate_system_(mathematics)[重心座標（英文）]（英文）を用いて，陰伏多項式を生成する．この方程式は第四パラメータによって与えられ，重心座標は  _A_，_B_，_C_ として参照される．
 
 [EXAMPLE]
 ====
@@ -30,7 +28,7 @@ _ABC_ は面積が等しい 2 つの部分に分かれる．
 [EXAMPLE]
 ====
 
-点 _P_, _Q_, _R_ が与えられたとき，`++TriangleCurve(P, Q, R, (A - B)*(B - C)*(C - A) = 0)++`は，三角形 _PQR_
+点 _P_, _Q_, _R_ が与えられたとき，`++TriangleCurve(P, Q, R, (A - B)*(B - C)*(C - A) = 0)++` は，三角形 _PQR_
 の中線からなる3次曲線を生成する．
 
 ====
@@ -38,7 +36,7 @@ _ABC_ は面積が等しい 2 つの部分に分かれる．
 [NOTE]
 ====
 
-入力点は _A_，_B_，_C_ と呼ぶことができるが，この場合，_A_ は重心座標として解釈されるため，式中で _x(A)_
+入力点は _A_，_B_，_C_ と名付けることができるが，この場合，_A_ は重心座標として解釈されるため，式中で _x(A)_
 のような式を使用することはできない．
 
 ====
