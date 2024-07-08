@@ -10,24 +10,25 @@ Zip( <式>, <変数1>, <リスト1>, <変数2>, <リスト2>, ...)::
 [EXAMPLE]
 ====
 
-_list1=\{1, 2, 5}_ を数のリストとする． `++Zip(Simplify(a*x^(b-1)), a, list1,b)++` はリスト _\{1, 2x, 5x²}_ を返す．
-
-====
-
-[EXAMPLE]
-====
-
-_list1=\{x^2, x^3, x^6}_ を多項式のリストとする． `++Zip(Degree(a), a, list1)++` はリスト _\{2, 3, 6}_ を返す．
-
-====
-
-[EXAMPLE]
-====
-
 点 P, Q, R, S を定義する． `++Zip(Midpoint(A, B), A, {P, Q}, B, {R, S})++` は，線分 _PR_ と _QS_ の
 xref:/commands/Midpoint.adoc[midpoint（中点）] を返す．
 
 ====
+
+[EXAMPLE]
+====
+
+_list1={x^2, x^3, x^6}_ を多項式のリストとする． `++Zip(Degree(a), a, list1)++` はリスト _{2, 3, 6}_ を返す．
+
+====
+
+[EXAMPLE]
+====
+
+_list1={1, 2, 5}_ を数のリストとする． `++Zip(Simplify(a*x^(b-1)), a, list1,b)++` はリスト _{1, 2x, 5x²}_ を返す．
+
+====
+
 
 [NOTE]
 ====
@@ -41,6 +42,6 @@ xref:/commands/Midpoint.adoc[midpoint（中点）] を返す．
 [EXAMPLE]
 ====
 
-`++Zip(f(2), f, {x+1,x+3})++` はリスト _\{3, 5}_ を返す．
+`++Zip(f(2), f, {x+1,x+3})++` はリスト _{3, 5}_ を返す．
 
 ====
