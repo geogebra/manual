@@ -9,8 +9,6 @@ If( <Condition>, <Then> )::
 [EXAMPLE]
 ====
 
-*Examples:*
-
 * Let _n_ = 3. `++If(n==3, x + y = 4)++` yields line _x_ + _y_ = 4, because the condition on number _n_ is met.
 * Let _n_ = 4. `++If(n==3, x + y = 4)++` creates an _undefined_ object, because the condition on number _n_ is not met .
 
@@ -49,8 +47,6 @@ xref:/commands/Integral.adoc[Integral], and xref:/commands/Intersect.adoc[Inters
 [EXAMPLE]
 ====
 
-*Examples:*
-
 * `++f(x) = If(x < 3, sin(x), x^2)++` yields a piecewise function that equals _sin(x)_ for _x < 3_ and _x^2^_ for _x ≥
 3_.
 * `++f(x) = If(0 <= x <= 3, sin(x))++` yields a function that equals _sin(x)_ for x between 0 and 3 (and undefined
@@ -85,8 +81,6 @@ y + b_ when the slider value is 3.
 
 [NOTE]
 ====
-
-*Notes:*
 
 * Derivative of _If(condition, f(x), g(x))_ gives _If(condition, f'(x), g'(x))_. It does not do any evaluation of limits
 at the critical points.
