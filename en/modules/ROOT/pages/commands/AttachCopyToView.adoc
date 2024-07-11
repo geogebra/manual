@@ -15,7 +15,14 @@ creates a square with the same size at the same position.
 
 ====
 
-AttachCopyToView( <Object>, <View 0|1|2>, <Point 1>, <Point 2>, <Screen Point 1>, <Screen Point 2> )
+[NOTE]
+====
+
+Once the copy is created, three other arguments are added to the command definition.
+
+====
+
+AttachCopyToView( <Object>, <View 0|1|2>, <Point 1>, <Point 2>, <Screen Point 1>, <Screen Point 2> )::
 
 If _View = 0_, a copy of given object is created. For _View = 1_ or _View = 2_ this command creates a dependent copy of
 given object whose size in given image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
@@ -29,13 +36,6 @@ _Screen Point 2_.
 Let `++poly = Polygon((0, 0), (1, 0), (1, 1), (0, 1))++`. If Graphics View 1 is active,
 `++AttachCopyToView(poly, 1, (0, 0), (1, 1), (0, 0), (100, 100))++` creates a _100px x 100px_ square in the top left
 corner of the Graphics View.
-
-====
-
-[NOTE]
-====
-
-Once the copy is created, three other arguments are added to the command definition.
 
 ====
 
