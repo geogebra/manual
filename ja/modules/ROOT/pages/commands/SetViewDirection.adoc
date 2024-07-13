@@ -8,21 +8,9 @@ SetViewDirection( <向き> )::
 [EXAMPLE]
 ====
 
-`++SetViewDirection(x + y + z = 1)++`
-
-====
-
-[EXAMPLE]
-====
-
-`++SetViewDirection((0, 0, 1))++`
-
-====
-
-[EXAMPLE]
-====
-
-`++SetViewDirection(Vector((0, 0, 1)))++`
+* `++SetViewDirection(x + y + z = 1)++`
+* `++SetViewDirection((0, 0, 1))++`
+* `++SetViewDirection(Vector((0, 0, 1)))++`
 
 ====
 
@@ -43,18 +31,16 @@ SetViewDirection( <向き>, <Boolean animated> )::
 ====
 
 事前に作成したスライダー _α_ の値に応じて空間図形ビューを回転させるためには，スライダー _α_ の _最新情報_
-スクリプトタブで`++SetViewDirection(Vector((1; α; -30°)), false)++`とコマンドを入力する．
+スクリプトタブで `++SetViewDirection(Vector((1; α; -30°)), false)++` とコマンドを入力する．
 
 ====
 
 [NOTE]
 ====
 
-*Notes:*
-
 * ビューの方向は，直線，線分，平面などに設定できる．
-* 例えば`++SetViewDirection(x + y + z = 1)++` を2回実行した場合，2つの可能な結果があり，_2回目_
-にはビューが180°回転する．曖昧さを避けるためには，例えば`++SetViewDirection(Vector((0, 0, 1)))++`を使用する．
+* 例えば `++SetViewDirection(x + y + z = 1)++` を2回実行した場合，2つの可能な結果があり，_2回目_
+にはビューが180°回転する．曖昧さを避けるためには，例えば `++SetViewDirection(Vector((0, 0, 1)))++` を使用する．
 * こちらも参照： image:24px-Mode_viewinfrontof.png[Mode viewinfrontof.png,width=24,height=24]
 xref:/ビューを揃える.adoc[ビューを揃える] ツール．
 
