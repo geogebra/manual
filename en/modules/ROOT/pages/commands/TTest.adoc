@@ -10,22 +10,22 @@ TTest( <List of Sample Data>, <Hypothesized Mean>, <Tail> )::
   ">" = population mean > _Hypothesized Mean_
   "≠" = population mean ≠ _Hypothesized Mean_
 
-Results are returned in list form as _\{Probability value, t-test statistic}_.
+Results are returned in list form as _{Probability value, t-test statistic}_.
 
 [EXAMPLE]
 ====
 
-`++TTest({1, 2, 3, 4, 5}, 3, "<")++` yields _\{0.5, 0}_.
+`++TTest({1, 2, 3, 4, 5}, 3, "<")++` yields _{0.5, 0}_.
 
 ====
 
 TTest( <Sample Mean>, <Sample Standard Deviation>, <Sample Size>, <Hypothesized Mean>, <Tail> )::
   Performs a one-sample t-test of a population mean using the given sample statistics. _Hypothesized Mean_ and _Tail_
-  are defined as above. Results are returned in list form as _\{Probability value, t-test statistic}_.
+  are defined as above. Results are returned in list form as _{Probability value, t-test statistic}_.
 
 [EXAMPLE]
 ====
 
-`++TTest(4, 1, 12, 4, "≠")++` yields _\{1, 0}_.
+`++TTest(4, 1, 12, 4, "≠")++` yields _{1, 0}_.
 
 ====
