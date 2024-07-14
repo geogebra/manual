@@ -9,24 +9,24 @@ ChiSquaredTest( <Matrix> )::
   the given matrix of observed counts using the rule:
   stem:[ \text\{expected count} = \frac{\text\{row total} × \text\{column total}}\{\text\{total observed counts}} ]
 
-Results are returned in list form as _\{Probabilty value, chi-squared test statistic}_.
+Results are returned in list form as _{Probabilty value, chi-squared test statistic}_.
 
 [EXAMPLE]
 ====
 
-`++ChiSquaredTest({{1, 2, 1}, {3, 2, 3}})++` yields _\{0.69, 0.75}_.
+`++ChiSquaredTest({{1, 2, 1}, {3, 2, 3}})++` yields _{0.69, 0.75}_.
 
 ====
 
 ChiSquaredTest( <Observed List>, <Expected List> )::
   Performs a http://en.wikipedia.org/wiki/Goodness_of_fit[Goodness of Fit test] that compares the given list of observed
   counts against the given list of expected counts.
-  Results are returned in list form as _\{Probabilty value, chi-squared test statistic}_.
+  Results are returned in list form as _{Probabilty value, chi-squared test statistic}_.
 
 [EXAMPLE]
 ====
 
-`++ChiSquaredTest({1, 2, 3, 4}, {3, 2, 4, 2})++` yields _\{0.31, 3.58}_.
+`++ChiSquaredTest({1, 2, 3, 4}, {3, 2, 4, 2})++` yields _{0.31, 3.58}_.
 
 ====
 
@@ -38,6 +38,6 @@ ChiSquaredTest( <Observed Matrix>, <Expected Matrix> )::
 [EXAMPLE]
 ====
 
-`++ChiSquaredTest({{1, 2, 1}, {3, 2, 3}}, {{2, 3, 2}, {4, 2, 3}})++` yields _\{0.45, 1.58}_.
+`++ChiSquaredTest({{1, 2, 1}, {3, 2, 3}}, {{2, 3, 2}, {4, 2, 3}})++` yields _{0.45, 1.58}_.
 
 ====
