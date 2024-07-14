@@ -13,13 +13,12 @@ ZoomIn( <倍率> )::
 [EXAMPLE]
 ====
 
-`++ZoomIn(1)++` はビューを変更ないが，トレースを削除する．
+* `++ZoomIn(1)++` はビューを変更ないが，トレースを削除する．
+* `++ZoomIn(2)++` はビューを２倍に拡大する．
+* `++ZoomIn(0.5)++` iは `++ZoomOut(2)++` に相当する．（ビューを1/2に縮小する．）
 
 ====
 
-`++ZoomIn(2)++` はビューを２倍に拡大する．
-
-`++ZoomIn(0.5)++` iは `++ZoomOut(2)++` に相当する．（ビューを1/2に縮小する．）
 
 ZoomIn( <倍率>, <中心点> )::
   指定された倍率でimage:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
@@ -38,12 +37,6 @@ ZoomIn( <x最小>, <y最小>, <x最大>, <y最大> )::
   xref:/グラフィックスビュー.adoc[グラフィックスビュー] を，頂点 (x最小, y最小) と (x最大, y最大)
   で定義される矩形にズームする．
 
-[EXAMPLE]
-====
-
-_a_ スライダーとするとき，`++ZoomIn(-a, -a, a, a)++`を使うと，ビューのズームがスライダー _a_ の値に応じて変化する．
-
-====
 
 [EXAMPLE]
 ====
@@ -57,6 +50,13 @@ _a_ スライダーとするとき，`++ZoomIn(-a, -a, a, a)++`を使うと，�
 
 これらのパラメータが依存しているかラベルが設定されている場合，ビューの境界は動的になる．この挙動を避けるためには，xref:/commands/CopyFreeObject.adoc[CopyFreeObject
 コマンド]を使用する．
+
+====
+
+[EXAMPLE]
+====
+
+_a_ スライダーとするとき，`++ZoomIn(-a, -a, a, a)++` を使うと，ビューのズームがスライダー _a_ の値に応じて変化する．
 
 ====
 
@@ -79,8 +79,6 @@ T2D版の動的な挙動はサポートされていない．
 
 [NOTE]
 ====
-
-*Notes:*
 
 * 複数の image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
 xref:/グラフィックスビュー.adoc[グラフィックスビュー]が存在する場合，アクティブなものにコマンドが適用される．
