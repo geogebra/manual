@@ -5,18 +5,18 @@ ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 ZMean2Estimate( <List of Sample Data 1>, <List of Sample Data 2>, <σ1>, <σ2>, <Level> )::
   Calculates a Z confidence interval estimate of the difference between two population means using the given sample data
   sets, population standard deviations and confidence _Level_.
-  Results are returned in list form as \{lower confidence limit, upper confidence limit}.
+  Results are returned in list form as {lower confidence limit, upper confidence limit}.
 
 [EXAMPLE]
 ====
 
 Two sample data `++list1 = {1, 4, 5, 4, 1, 3, 4, 2}++`, `++list2 = {2, 1, 3, 1, 2, 5, 2, 4}++` are given. The standard
 deviation of list1 is `++σ_1 = sqrt(2)++`, the standard deviation of list2 is `++σ_2  = sqrt(1.75)++` and the confidence
-level is 0.75. `++ZMean2Estimate(list1, list2, σ_1,  σ_2, 0.75)++` yields _list3 = \{-0.29, 1.29}_.
+level is 0.75. `++ZMean2Estimate(list1, list2, σ_1,  σ_2, 0.75)++` yields _list3 = {-0.29, 1.29}_.
 
 ====
 
 ZMean2Estimate( <Sample Mean 1>, <σ1>, <Sample Size 1>, <Sample Mean 2 >, <σ2>, <Sample Size 2>, <Level>)::
   Calculates a Z confidence interval estimate of the difference between two population means using the given sample
   means, population standard deviations and confidence _Level_.
-  Results are returned in list form as \{lower confidence limit, upper confidence limit}.
+  Results are returned in list form as {lower confidence limit, upper confidence limit}.
