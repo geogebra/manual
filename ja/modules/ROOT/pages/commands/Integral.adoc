@@ -18,7 +18,7 @@ Integral( <関数>, <変数> )::
 [EXAMPLE]
 ====
 
-`++Integral(x³+3x y, x)++` 出力： _stem:[\frac{1}\{4}x^4] + stem:[\frac{3}\{2}] x² y_ .
+`++Integral(x³+3x y, x)++` 出力： _stem:[\frac{1}{4}x^4] + stem:[\frac{3}{2}] x² y_ .
 
 ====
 
@@ -28,12 +28,12 @@ Integral( <関数>, <xの開始値e>, <xの終了値> )::
 [NOTE]
 ====
 
-このコマンドは、関数 _f" のグラフと "x" 軸との間の領域に色を塗る．_
+このコマンドは、関数 _f_ のグラフと _x_ 軸との間の領域に色を塗る．
 
 ====
 
 Integral( <関数>, <xの開始値>, <xの終了値>, <Boolean Evaluate> )::
-  主変数に関して，区間　_[xの開始値, xの終了値]_　における関数の定積分を求め，関連する領域に色を塗る．_Evaluate_ が
+  主変数に関して，区間　_[xの開始値, xの終了値]_ 　における関数の定積分を求め，関連する領域に色を塗る． _Evaluate_ が
   _true_ の場合は積分値は計算されるが，_Evaluate_ が__false__ の場合は積分値は計算されない．
 
 
@@ -50,7 +50,7 @@ xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View] では，�
 [EXAMPLE]
 ====
 
-`++Integral(cos(a t), t)++` 出力： stem:[\frac{sin(a t)}\{a} + c_1].
+`++Integral(cos(a t), t)++` 出力： stem:[\frac{sin(a t)}{a} + c_1].
 
 ====
 
@@ -70,10 +70,10 @@ Integral( <関数>, <変数>, <xの開始値>, <xの終了値> )::
 [NOTE]
 ====
 
-* 答えが連続であるとは限らない．例えば、`++Integral(floor(x))++`は関数⌊x⌋の積分は連続ではない．このような場合，例えば
+* 答えが連続であるとは限らない．例えば、`++Integral(floor(x))++` は関数⌊x⌋の積分は連続ではない．このような場合，例えば
 `++F(x)=(floor(x)² - floor(x))/2 + x floor(x) - floor(x)²++` のような独自の関数を定義することができる． すなわち，関数
-stem:[\frac{⌊x⌋² - ⌊x⌋}\{2} + x \cdot⌊x⌋ - ⌊x⌋²]．
+stem:[\frac{⌊x⌋² - ⌊x⌋}{2} + x \cdot⌊x⌋ - ⌊x⌋²]．
 
-* GeoGebraの一部のバージョンでは数値アルゴリズムが使用されているため，漸近線に向かって積分すること，例えば`++Integral(ln(x), 0, 1)++`のような計算は実行できない．このような場合は，`++Integral(ln(x), 0, 1, false)++`を検討する．
+* GeoGebraの一部のバージョンでは数値アルゴリズムが使用されているため，漸近線に向かって積分すること，例えば `++Integral(ln(x), 0, 1)++ `のような計算は実行できない．このような場合は，`++Integral(ln(x), 0, 1, false)++` を検討する．
 
 ====
