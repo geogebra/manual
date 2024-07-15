@@ -8,8 +8,24 @@ ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
 CSolutions( <方程式> )::
   与えられた方程式を主な変数について解き，複素数解を含むすべての解のリストを返す．
+
+[EXAMPLE]
+====
+
+`++CSolutions(x^2 = -1)++` は， _{ί, -ί}_ を解として返す．
+
+====
+
 CSolutions( <方程式>, <変数> )::
   与えられた方程式を与えられた変数について解き，複素数解を含むすべての解のリストを返す．
+
+[EXAMPLE]
+====
+
+`++CSolutions(a^2 = -1, a)++` は， _{ί, -ί}_ を解として返す．
+
+====
+
 CSolutions( <方程式のリスト>, <変数のリスト> )::
   与えられた変数の連立方程式を解き，複素数解を含むすべての解のリストを返す．
 
@@ -21,24 +37,8 @@ CSolutions( <方程式のリスト>, <変数のリスト> )::
 
 ====
 
-[EXAMPLE]
-====
-
-`++CSolutions(a^2 = -1, a)++` は， _\{ί, -ί}_ を解として返す．
-
-====
-
-[EXAMPLE]
-====
-
-`++CSolutions(x^2 = -1)++` は， _\{ί, -ί}_ を解として返す．
-
-====
-
 [NOTE]
 ====
-
-*Notes:*
 
 * 虚数単位 ί は [.kcode]#ALT# + [.kcode]#i# を押す．
 * こちらも参照： xref:/commands/CSolve.adoc[CSolve コマンド]， xref:/commands/Solutions.adoc[Solutions コマンド].
