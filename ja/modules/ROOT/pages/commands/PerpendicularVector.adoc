@@ -22,16 +22,6 @@ PerpendicularVector( <直線> )::
 
 PerpendicularVector( <線分> )::
   直線に垂直で大きさが線分の長さに等しいベクトル（の１つ）を返す．
-PerpendicularVector( <ベクトル> )::
-  与えられたベクトルに垂直なベクトルを返す．
-
-[EXAMPLE]
-====
-
-`++Vector((-12, 8))++` をベクトルb _u_ とする． `++PerpendicularVector(u)++` は，ベクトル __u__に垂直なベクトル _v=(-8,
--12)_ を返す．
-
-====
 
 [EXAMPLE]
 ====
@@ -41,20 +31,33 @@ PerpendicularVector( <ベクトル> )::
 
 ====
 
+PerpendicularVector( <ベクトル> )::
+  与えられたベクトルに垂直なベクトルを返す．
+
+[EXAMPLE]
+====
+
+`++Vector((-12, 8))++` をベクトル _u_ とする． `++PerpendicularVector(u)++` は，ベクトル __u__に垂直なベクトル _v=(-8,
+-12)_ を返す．
+
+====
+
+
 [NOTE]
 ====
 
 image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CASビュー.adoc[CASビュー]
 では未定義の変数も利用できる．
 
+====
+
 [EXAMPLE]
 ====
 
-`++PerpendicularVector((a, b))++` 出力： _\{-b, a}_.
+`++PerpendicularVector((a, b))++` 出力： _{-b, a}_.
 
 ====
 
-====
 
 PerpendicularVector( <平面> )::
   与えれられた平面に直交するベクトルを返す．
