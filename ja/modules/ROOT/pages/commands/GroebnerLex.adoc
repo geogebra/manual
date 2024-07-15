@@ -2,13 +2,21 @@
 :page-en: commands/GroebnerLex
 ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
-このコマンドは xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View] でのみ利用できます。.
+このコマンドは xref:/CASビュー.adoc[CAS View] でのみ利用できる.
 
 == CAS での書式
 
 GroebnerLex( <多項式のリスト> )::
   変数の辞書式順序（ _lex_， _plex_，または _純粋辞書式順序_
   としても知られている）に関して，多項式のリストのグレブナー基底を計算する．
+
+[EXAMPLE]
+====
+
+`++GroebnerLex({x^3-y-2,x^2+y+1})++` 出力： \{stem:[ y^{3} + 4 y^{2} + 7 y + 5, x - y^{2} - 3 y - 3 ]}.
+
+====
+
 GroebnerLex( <多項式のリスト>, <変数のリスト> )::
   指定された変数の辞書式順序（ _lex_， _plex_，または _純粋辞書式順序_
   としても知られている）に関して，多項式のリストのグレブナー基底を計算する．
@@ -16,16 +24,10 @@ GroebnerLex( <多項式のリスト>, <変数のリスト> )::
 [EXAMPLE]
 ====
 
-`++GroebnerLex({x^3-y-2,x^2+y+1},{y,x})++` 出力： \{stem:[ -x^\{3} - x^\{2} + 1, -y - x^\{2} - 1 ]}.
+`++GroebnerLex({x^3-y-2,x^2+y+1},{y,x})++` 出力： \{stem:[ -x^{3} - x^{2} + 1, -y - x^{2} - 1 ]}.
 
 ====
 
-[EXAMPLE]
-====
-
-`++GroebnerLex({x^3-y-2,x^2+y+1})++` 出力： \{stem:[ y^\{3} + 4 y^\{2} + 7 y + 5, x - y^\{2} - 3 y - 3 ]}.
-
-====
 
 [NOTE]
 ====
