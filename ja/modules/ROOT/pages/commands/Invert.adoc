@@ -8,14 +8,6 @@ Invert( <行列> )::
 [EXAMPLE]
 ====
 
-`++Invert({{a, b}, {c, d}})++` 出力： stem:[\begin{pmatrix}\frac{d}\{ad- bc} & \frac{-b}\{ad- bc}\\\frac{-c}\{ad-
-bc}& \frac{a}{ ad- bc}\end{pmatrix}]．これは行列 stem:[\begin{pmatrix}a & b\\c & d\end{pmatrix}]の逆行列．
-
-====
-
-[EXAMPLE]
-====
-
 `++Invert({{1, 2}, {3, 4}})++` 出力： stem:[\begin{pmatrix}-2 & 1\\1.5 & -0.5\end{pmatrix}]． これは行列
 stem:[\begin{pmatrix}1 & 2\\3 & 4\end{pmatrix}]の逆行列．
 
@@ -28,6 +20,16 @@ image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS
 では未定義の変数も利用できる．
 
 ====
+
+[EXAMPLE]
+====
+
+`++Invert({{a, b}, {c, d}})++` 出力： stem:[\begin{pmatrix}\frac{d}\{ad- bc} & \frac{-b}\{ad- bc}\\\frac{-c}\{ad-
+bc}& \frac{a}{ ad- bc}\end{pmatrix}]．これは行列 stem:[\begin{pmatrix}a & b\\c & d\end{pmatrix}]の逆行列．
+
+====
+
+
 
 Invert( <関数> )::
   与えられた関数の逆関数を返す．
@@ -60,7 +62,7 @@ Invert( <関数> )::
 ====
 
 * image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
-xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View] では１つ以上の _x_ が入った関数の逆関数を扱える．
+xref:/CASビュー.adoc[CAS View] では１つ以上の _x_ が入った関数の逆関数を扱える．
 * こちらも参照： xref:/commands/Eigenvalues.adoc[Eigenvalues コマンド], xref:/commands/Eigenvectors.adoc[Eigenvectors
 コマンド], xref:/commands/SVD.adoc[SVD コマンド], xref:/commands/Transpose.adoc[Transpose コマンド],
 xref:/commands/JordanDiagonalization.adoc[JordanDiagonalization コマンド]．
