@@ -4,8 +4,6 @@ ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
 Numerator( <関数> )::
   関数の分子を返す．
-Numerator( <Number> )::
-  有理数に対してはその分子を返す．このコマンドは分数を約分したときに得られる最も簡単な分子に限られる．無理数に対しては、そのxref:/commands/ContinuedFraction.adoc[連分数展開]の分子を返す．
 
 [EXAMPLE]
 ====
@@ -13,6 +11,10 @@ Numerator( <Number> )::
 `++Numerator((3x² + 1) / (2x - 1))++` 出力： _f(x) = 3x² + 1_.
 
 ====
+
+Numerator( <Number> )::
+  有理数に対してはその分子を返す．このコマンドは分数を約分したときに得られる最も簡単な分子に限られる．無理数に対しては、そのxref:/commands/ContinuedFraction.adoc[連分数展開]の分子を返す．
+
 
 [NOTE]
 ====
