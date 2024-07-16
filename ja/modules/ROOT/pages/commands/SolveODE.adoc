@@ -3,23 +3,23 @@
 ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
 SolveODE( <f'(x, y)> )::
-  一階常微分方程式（ODE） stem:[\frac{dy}\{dx}(x)=f'(x, y(x))]の厳密解を求める．
+  一階常微分方程式（ODE） stem:[\frac{dy}{dx}(x)=f'(x, y(x))]の厳密解を求める．
 
 [EXAMPLE]
 ====
 
-`++SolveODE(2x / y)++` 出力： _stem:[\sqrt{2} \sqrt{-c_\{1}+x^\{2}}]_, ここで， stem:[c_\{1}] は定数．
+`++SolveODE(2x / y)++` 出力： _stem:[\sqrt{2} \sqrt{-c_{1}+x^{2}}]_, ここで， stem:[c_{1}] は定数．
 
 ====
 
 [NOTE]
 ====
 
-stem:[c_\{1}] は，補助オブジェクトとして自動的にスライダーが作成される．
+stem:[c_{1}] は，補助オブジェクトとして自動的にスライダーが作成される．
 
 ====
 SolveODE( <f'(x, y)>, <f上の点> )::
-  1 階常微分方程式（ODE） stem:[\frac{dy}\{dx}(x)=f'(x, y(x))]の厳密解から，与えられた点を通る解を求める．
+  1 階常微分方程式（ODE） stem:[\frac{dy}{dx}(x)=f'(x, y(x))]の厳密解から，与えられた点を通る解を求める．
 
 [EXAMPLE]
 ====
@@ -29,13 +29,13 @@ SolveODE( <f'(x, y)>, <f上の点> )::
 ====
 
 SolveODE( <f'(x, y)>, <x開始値>, <　y開始値>, <x終了値>, <間隔> )::
-  1 階常微分方程式（ODE） stem:[\frac{dy}\{dx}(x)=f'(x, y)]を与えられた _x_
+  1 階常微分方程式（ODE） stem:[\frac{dy}{dx}(x)=f'(x, y)]を与えられた _x_
   の開始値，終了値，間隔を使って数値的に解く．
 
 [EXAMPLE]
 ====
 
-`++SolveODE(-x*y, x(A), y(A), 5, 0.1)++` は stem:[\frac{dy}\{dx}=-xy] を，あらかじめ定義した _A_
+`++SolveODE(-x*y, x(A), y(A), 5, 0.1)++` は stem:[\frac{dy}{dx}=-xy] を，あらかじめ定義した _A_
 を出発点として解く．
 
 ====
@@ -56,13 +56,13 @@ SolveODE( <f'(x, y)>, <x開始値>, <　y開始値>, <x終了値>, <間隔> )::
 
 SolveODE( <y'>, <x'>, <x開始値>, <y開始値>, <t終了値>, <間隔> )::
   開始点，内部パラメータ _t_ の最大値，及び _t_
-  のステップを指定して一階常微分方程式（ODE）stem:[\frac{dy}\{dx}=\frac{f(x, y)}\{g(x, y)}]
+  のステップを指定して一階常微分方程式（ODE）stem:[\frac{dy}{dx}=\frac{f(x, y)}{g(x, y)}]
   を解く．このコマンドのバージョンは，例えば解の曲線に垂直な点が存在する場合など，最初のバージョンが失敗する可能性がある状況でも機能することがある．
 
 [EXAMPLE]
 ====
 
-`++SolveODE(-x, y, x(A), y(A), 5, 0.1)++` solves stem:[\frac{dy}\{dx}=- \frac{x}\{y} ] は，あらかじめ定義した _A_
+`++SolveODE(-x, y, x(A), y(A), 5, 0.1)++` solves stem:[\frac{dy}{dx}=- \frac{x}{y} ] は，あらかじめ定義した _A_
 を出発点として解く．
 
 ====
@@ -128,8 +128,8 @@ SolveODE( <等式>, <f上の点（のリスト）>, <f'上の点（のリスト�
 [EXAMPLE]
 ====
 
-`++SolveODE(y'' - 3y' + 2 = x, (2, 3), (1, 2))++` 出力： stem:[ y = \frac{-9 x^2 e^3 + 30 x e^3 - 32 \{(e^3)}^2 + 138
-e^3 + 32 e^\{3 x} }\{54 e^3} ].
+`++SolveODE(y'' - 3y' + 2 = x, (2, 3), (1, 2))++` 出力： stem:[ y = \frac{-9 x^2 e^3 + 30 x e^3 - 32 {(e^3)}^2 + 138
+e^3 + 32 e^{3 x} }{54 e^3} ].
 
 ====
 
