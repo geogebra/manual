@@ -2,7 +2,7 @@
 :page-en: commands/Solve
 ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
-このコマンドは xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View] でのみ利用できます。.
+このコマンドは xref:/CASビュー.adoc[CAS View] でのみ利用できる.
 
 [NOTE]
 ====
@@ -20,10 +20,34 @@ xref:/CASビュー.adoc[CASビュー]でのみ使用可能．
 
 Solve( <xの方程式> )::
   与えられた方程式を主変数について解き，すべての解のリストを返す．
+
+[EXAMPLE]
+====
+
+`++Solve(x^2 = 4x)++` は，解 _{x = 4, x = 0}_ を返す．
+
+====
+
 Solve( <方程式>, <変数> )::
   与えられた方程式を指定された変数について解き，すべての解のリストを返す．
+
+[EXAMPLE]
+====
+
+`++Solve(x * a^2 = 4a, a)++` は，解 {stem:[a = \frac{4}{x}, a = 0]} を返す．
+
+====
+
 Solve( <xの方程式>, <条件> )::
   指定された条件のもとで，方程式 x を解く．
+
+[EXAMPLE]
+====
+
+`++Solve(x^2=1, x>0)++` 出力： stem:[{x = 1}]
+
+====
+
 Solve( <方程式のリスト>, <変数のリスト> )::
   指定された未知変数に対する連立方程式を解き，全ての解のリストを返す．
 
@@ -31,28 +55,7 @@ Solve( <方程式のリスト>, <変数のリスト> )::
 ====
 
 * `++Solve({x = 4 x + y , y + x = 2}, {x, y})++` は，解 _( x = -1, y = 3 )_ を返す．
-* `++Solve({2a^2 + 5a + 3 = b, a + b = 3}, {a, b})++` は，解 _\{\{a = 0, b = 3}, \{a = -3, b = 6}}_ を返す．
-
-====
-
-[EXAMPLE]
-====
-
-`++Solve(x^2=1, x>0)++` 出力： stem:[\{x = 1}]
-
-====
-
-[EXAMPLE]
-====
-
-`++Solve(x * a^2 = 4a, a)++` は，解 \{stem:[a = \frac{4}\{x}, a = 0]} を返す．
-
-====
-
-[EXAMPLE]
-====
-
-`++Solve(x^2 = 4x)++` は，解 _\{x = 4, x = 0}_ を返す．
+* `++Solve({2a^2 + 5a + 3 = b, a + b = 3}, {a, b})++` は，解 _{{a = 0, b = 3}, {a = -3, b = 6}}_ を返す．
 
 ====
 
@@ -62,8 +65,8 @@ Solve( <方程式>, <変数> , <条件のリスト>)::
 [EXAMPLE]
 ====
 
-* `++Solve(u *x < a,x, u>0)++` は， _u>0_ の条件のもとでの解 _\{x < a / u}_ を返す．
-* `++Solve(u *x < a,x, {u<0, a<0})++` は， _\{x > a / u}_ を返す．
+* `++Solve(u *x < a,x, u>0)++` は， _u>0_ の条件のもとでの解 _{x < a / u}_ を返す．
+* `++Solve(u *x < a,x, {u<0, a<0})++` は， _{x > a / u}_ を返す．
 
 ====
 
@@ -73,7 +76,7 @@ Solve( <List of Parametric Equations>, <List of Variables> )::
 [EXAMPLE]
 ====
 
-* `++Solve({(x, y) = (3, 2) + t*(5, 1), (x, y) = (4, 1) + s*(1, -1)}, {x, y, t, s})++` は，解 _\{\{x = 3, y = 2, t = 0,
+* `++Solve({(x, y) = (3, 2) + t*(5, 1), (x, y) = (4, 1) + s*(1, -1)}, {x, y, t, s})++` は，解 _{{x = 3, y = 2, t = 0,
 s = -1}}_ を返す．
 
 ====
