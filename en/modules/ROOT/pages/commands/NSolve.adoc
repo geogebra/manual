@@ -14,7 +14,7 @@ NSolve( <Equation> )::
 [EXAMPLE]
 ====
 
-`++NSolve(x^6 - 2x + 1 = 0)++` yields _\{x = 0.51, x = 1}_.
+`++NSolve(x^6 - 2x + 1 = 0)++` yields _{x = 0.51, x = 1}_.
 
 ====
 
@@ -25,7 +25,7 @@ NSolve( <Equation>, <Variable> )::
 [EXAMPLE]
 ====
 
-`++NSolve(a^4 + 34a^3 = 34, a)++` yields _\{a = -34, a = 0.99}_.
+`++NSolve(a^4 + 34a^3 = 34, a)++` yields _{a = -34, a = 0.99}_.
 
 ====
 
@@ -37,8 +37,8 @@ NSolve( <Equation>, <Variable = starting value> )::
 
 *Examples:*
 
-* `++NSolve(cos(x) = x, x = 0)++` yields _\{x = 0.74}_
-* `++NSolve(a^4 + 34a^3 = 34, a = 3)++` yields _\{a = 0.99}_.
+* `++NSolve(cos(x) = x, x = 0)++` yields _{x = 0.74}_
+* `++NSolve(a^4 + 34a^3 = 34, a = 3)++` yields _{a = 0.99}_.
 
 ====
 
@@ -48,14 +48,14 @@ NSolve( <List of Equations>, <List of Variables> )::
 [EXAMPLE]
 ====
 
-`++NSolve({pi / x = cos(x - 2y), 2 y - pi = sin(x)}, {x = 3, y = 1.5})++` yields _\{x = 3.14, y = 1.57}_.
+`++NSolve({pi / x = cos(x - 2y), 2 y - pi = sin(x)}, {x = 3, y = 1.5})++` yields _{x = 3.14, y = 1.57}_.
 
 ====
 
 [NOTE]
 ====
 
-* If you don't give a starting point like _a=3_ or _\{x = 3, y = 1.5}_ the numerical algorithm may find it hard to find
+* If you don't give a starting point like _a=3_ or _{x = 3, y = 1.5}_ the numerical algorithm may find it hard to find
 a solution (and giving a starting point doesn't guarantee that a solution will be found)
 * The number of decimals depends on the choosen in xref:/Options_Menu.adoc[global rounding].
 * NSolve won't work for functions that are asymptotic to the x-axis or other extreme examples. They can often be
