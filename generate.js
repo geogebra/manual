@@ -41,7 +41,9 @@ for (const lang of active) {
                 const fixedContent = lines[0]+'\n:page-en: '+simplePath(filePath).replace('.adoc','')+'\n'+lines.slice(1).join('\n')
                 fs.writeFileSync(filePath, fixedContent, 'utf8')
             }
-            orphans.push(simplePath(filePath));
+            if (simplePath(filePath) != "missing.adoc") {
+                orphans.push(simplePath(filePath));
+            }
         } else {
            translations[pageEn[1].trim()] = filePath;
         }
