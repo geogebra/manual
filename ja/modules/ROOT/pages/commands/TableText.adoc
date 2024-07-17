@@ -90,7 +90,7 @@ TableText( <リスト>, <リスト>, ..., <テキストの揃え>, <セル幅の
 
 以下のものを挿入することも可能である：
 
-* 次の記号 ||||, ||, \{}, [], () を使用して，さまざまな種類の括弧を表す．
+* 次の記号 ||||, ||, {}, [], () を使用して，さまざまな種類の括弧を表す．
 * 記号 _ を使って行を区切る．
 * 記号 | を使って列を区切る．
 * 色の違い
@@ -98,16 +98,16 @@ TableText( <リスト>, <リスト>, ..., <テキストの揃え>, <セル幅の
 [EXAMPLE]
 ====
 
-* `++TableText({1, 2}, {3, 4}, "c()")++` は，テキストstem:[\begin{pmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end{pmatrix} ]
+* `++TableText({1, 2}, {3, 4}, "c()")++` は，テキストstem:[\begin{pmatrix}{} 1 & 2 \\ 3 & 4 \\ \end{pmatrix} ]
 を作成する．
 * `++TableText({1, 2}, {3, 4}, "c|_")++` は，テキスト image:50px-TabellaTesto.png[TabellaTesto.png,width=50,height=56]
 を作成する．
-* `++TableText({1, 2}, {3, 4}, "||")++` は，テキスト stem:[ \begin\{vmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{vmatrix} ]
+* `++TableText({1, 2}, {3, 4}, "||")++` は，テキスト stem:[ \begin{vmatrix}{} 1 & 2 \\ 3 & 4 \\ \end{vmatrix} ]
 を作成する．
-* `++TableText({1, 2}, {3, 4}, "||||")++` は，テキスト stem:[\begin\{Vmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{Vmatrix} ]
+* `++TableText({1, 2}, {3, 4}, "||||")++` は，テキスト stem:[\begin{Vmatrix}{} 1 & 2 \\ 3 & 4 \\ \end{Vmatrix} ]
 を作成する．
-* `++TableText({{"2x+3y=5","5x+8y=12"}},"{v")++` は，テキスト stem:[ \left\\{\begin\{matrix} 2x+3y=5\\ 5x+8y=12
-\end\{matrix}\right.] を作成する．
+* `++TableText({{"2x+3y=5","5x+8y=12"}},"{v")++` は，テキスト stem:[ \left{\begin{matrix} 2x+3y=5\\ 5x+8y=12
+\end{matrix}\right.] を作成する．
 * `++TableText({{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "-/|_v")++`
 は，外枠はあるが，セルを分ける内部の線がない表を作成する．
 * `++TableText({{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "|11001 _110001 h")++`
