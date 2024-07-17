@@ -28,7 +28,7 @@ Normalize( <点のリスト> )::
 * 大きな数値や小さな数値を使って計算する場合（例えば
 xref:/commands/FitGrowth.adoc[FitGrowth]というコマンドを使う場合），正規化することで丸め誤差やオーバーフローエラーを防ぐことができる．
 * このコマンドは3D空間座標の点には使えない．
-* __正規化__の操作は、一次関数stem:[x \mapsto \frac{x-Min[list]}\{Max[list]-Min[list]}]を用いて値__x__を区間[0,
+* __正規化__の操作は、一次関数stem:[x \mapsto \frac{x-Min[list]}{Max[list]-Min[list]}]を用いて値__x__を区間[0,
 1]に対応させる操作である．
 
 ====
