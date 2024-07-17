@@ -6,13 +6,13 @@ Prove( <論理式> )::
   与えられた論理式が一般的に真か偽かを返す．
 
 通常、GeoGebraは数値計算を用いてxref:/真偽値.adoc[論理式] 論理式が _true_ か _false_
-かを判断する．しかし，Proveコマンドはhttps://en.wikipedia.org/wiki/Symbolic_computation[記号演算(英文)]を使用して，一般に文が真偽を判断する．GeoGebraが答えを導き出せない場合，結果は
+かを判断する．しかし，Proveコマンドは https://en.wikipedia.org/wiki/Symbolic_computation[記号演算(英文)] を使用して，一般に文が真偽を判断する．GeoGebraが答えを導き出せない場合，結果は
 _未定義_ となる．
 
 [EXAMPLE]
 ====
 
-３つの自由点`++A=(1,2)++`, `++B=(3,4)++`, `++C=(5,6)++`を定義する．
+３つの自由点 `++A=(1,2)++`, `++B=(3,4)++` , `++C=(5,6)++` を定義する．
 
 `++AreCollinear(A,B,C)++` コマンドは，点の現在の座標を数値チェックを行うため，_true_
 を返す.`++Prove(AreCollinear(A,B,C))++` を使用すると,_false_
@@ -24,10 +24,12 @@ _未定義_ となる．
 ====
 
 頂点__A__, _B_, _C_ を持つ三角形を定義し，`++D=MidPoint(B,C)++`, `++E=MidPoint(A,C)++`, `++p=Line(A,B)++`,
-`++q=Line(D,E)++`　と定義する．三角形の中線は常に対応する辺に平行であるため，`++p∥q++` および `++Prove(p∥q)++`の両方が
+`++q=Line(D,E)++`　と定義する．三角形の中線は常に対応する辺に平行であるため，`++p∥q++` および `++Prove(p∥q)++` の両方が
 _true_ となる．
 
-[[ggbContainer90bbaaa120c8276cc2115231a3ca39f0]]====
+[[ggbContainer90bbaaa120c8276cc2115231a3ca39f0]]
+
+====
 
 [NOTE]
 ====
