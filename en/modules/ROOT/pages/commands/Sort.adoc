@@ -30,7 +30,7 @@ Sort( <Values>, <Keys> )::
 * In order to sort a list of polynomials `++list1 = {x^3, x^2, x^6}++` according to degree, create the dependent list of
 degrees `++list2 = Zip(Degree(a), a, list1)++`. After that, `++ Sort(list1, list2)++` yields the requested _list3 =
 {x^2, x^3, x^6}_.
-* In order to draw the polygon having as vertices the complex roots of stem:[x^\{10}-1], sorted by their arguments,
+* In order to draw the polygon having as vertices the complex roots of stem:[x^{10}-1], sorted by their arguments,
 create `++list1 = {ComplexRoot(x^10-1)}++`, then use the command `++Polygon(Sort(list1, arg(list1)))++`. This command
 yields _poly1 = 2.94_.
 
