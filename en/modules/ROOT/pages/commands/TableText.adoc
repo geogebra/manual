@@ -92,7 +92,7 @@ The _width_ and the _height_ of a _TableText_ depend on the font size setting.
 
 It's also possible to insert:
 
-* different types of brackets, using the following symbols ||||, ||, \{}, [] or ()
+* different types of brackets, using the following symbols ||||, ||, {}, [] or ()
 * line separators, using the symbol _
 * column separators, using the symbol |
 * different colourings
@@ -100,13 +100,13 @@ It's also possible to insert:
 [EXAMPLE]
 ====
 
-* `++TableText({1, 2}, {3, 4}, "c()")++` creates the text stem:[\begin{pmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end{pmatrix} ]
+* `++TableText({1, 2}, {3, 4}, "c()")++` creates the text stem:[\begin{pmatrix}{} 1 & 2 \\ 3 & 4 \\ \end{pmatrix} ]
 * `++TableText({1, 2}, {3, 4}, "c|_")++` creates the text
 image:50px-TabellaTesto.png[TabellaTesto.png,width=50,height=56]
-* `++TableText({1, 2}, {3, 4}, "||")++` creates the text stem:[ \begin\{vmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{vmatrix} ]
-* `++TableText({1, 2}, {3, 4}, "||||")++` creates the text stem:[\begin\{Vmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{Vmatrix} ]
-* `++TableText({{"2x+3y=5","5x+8y=12"}},"{v")++` creates the text stem:[ \left\\{\begin\{matrix} 2x+3y=5\\ 5x+8y=12
-\end\{matrix}\right.]
+* `++TableText({1, 2}, {3, 4}, "||")++` creates the text stem:[ \begin{vmatrix}{} 1 & 2 \\ 3 & 4 \\ \end{vmatrix} ]
+* `++TableText({1, 2}, {3, 4}, "||||")++` creates the text stem:[\begin{Vmatrix}{} 1 & 2 \\ 3 & 4 \\ \end{Vmatrix} ]
+* `++TableText({{"2x+3y=5","5x+8y=12"}},"{v")++` creates the text stem:[ \left\{\begin{matrix} 2x+3y=5\\ 5x+8y=12
+\end{matrix}\right.]
 * `++TableText({{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "-/|_v")++` creates a table with
 border and no separation lines.
 * `++TableText({{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "|11001 _110001 h")++` creates a
