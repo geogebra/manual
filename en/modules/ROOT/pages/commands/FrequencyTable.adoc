@@ -5,23 +5,27 @@ ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 FrequencyTable( <List of Raw Data> )::
   Returns a table (as text) whose first column contains sorted list of unique elements of list _L_ and second column
   contains the count of the occurrences of value in the first column. List _L_ can be numbers or text.
+
 FrequencyTable( <Boolean Cumulative>, <List of Raw Data> )::
   If _Cumulative = false_, returns the same table as Frequency( <List of Raw Data> )
   If _Cumulative = true_, returns a table whose first column is the same as in FrequencyTable( <List of Raw Data> ) and
   the second contains cumulative frequencies of values in the first column.
+
 FrequencyTable( <List of Class Boundaries>, <List of Raw Data> )::
   Returns a table (as text) whose first column contains intervals (classes) and second column contains the count of
   numbers in _List of Raw Data_, which belong to the interval in the first column. All intervals except the highest
   interval are of the form [a, b). The highest interval has the form [a, b].
+
 FrequencyTable( <Boolean Cumulative>, <List of Class Boundaries>, <List of Raw Data> )::
   If _Cumulative = false_, returns the same table as FrequencyTable( <List of Class Boundaries>, <List of Raw Data> )
   If _Cumulative = true_, returns a table whose first column is the same as in FrequencyTable( <List of Raw Data> ) and
   the second contains cumulative frequencies of values in the first column.
+
 FrequencyTable( <List of Class Boundaries>, <List of Raw Data>, <Use Density> , <Density Scale Factor (optional)> )::
   Returns a table (as text) whose first column contains intervals (classes) and second contains frequencies for the
   corresponding xref:/commands/Histogram.adoc[Histogram Command].
-FrequencyTable( <Boolean Cumulative>, <List of Class Boundaries>, <List of Raw Data>, <Use Density> , <Density Scale
-Factor (optional)> )::
+
+FrequencyTable( <Boolean Cumulative>, <List of Class Boundaries>, <List of Raw Data>, <Use Density> , <Density Scale Factor (optional)> )::
   Returns a table (as text) whose first column contains intervals (classes) and second contains frequencies for the
   corresponding xref:/commands/Histogram.adoc[Histogram Command].
 
