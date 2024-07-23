@@ -3,17 +3,19 @@
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 Plane( <Polygon> )::
-  Creates a plane through the polygon.
+  Creates the plane containing the given polygon.
 Plane( <Conic> )::
-  Creates a plane through the conic.
+  Creates the plane containing the conic.
 Plane( <Point>, <Plane> )::
-  Creates a plane through the given point, parallel to the given plane.
+  Creates the plane through the given point, parallel to the given plane.
 Plane( <Point>, <Line> )::
-  Creates a plane through the given point and line.
+  Creates the plane through the given point and line.
 Plane( <Line> , <Line> )::
-  Creates the plane through the lines (if the lines are in the same plane).
+  Creates the plane through the lines (that must be intersecting or parallel to each other).
 Plane( <Point>, <Point>, <Point> )::
-  Creates a plane through three points.
+  Creates the plane through the given points.
+Plane( <Point>, <Vector>, <Vector> )::
+  Creates the plane through the given point and having as normal vector the cross product of the given vectors (that must not be collinear).
 
 [NOTE]
 ====
