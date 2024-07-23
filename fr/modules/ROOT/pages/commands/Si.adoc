@@ -12,7 +12,7 @@ Si( <Condition>, <Objet __a__>, <Objet __b__> )::
 [EXAMPLE]
 ====
 
-*Exemple :* Soit _n_ un naturel. `++Si(n==3, x + y = 4, x - y = 4)++` retourne la droite dont une équation est _x_ + _y_
+Soit _n_ un naturel. `++Si(n==3, x + y = 4, x - y = 4)++` retourne la droite dont une équation est _x_ + _y_
 = 4 lorsque _n_ = 3, et la droite dont une équation est _x_ - _y_ = 4 pour toutes les valeurs de _n_ différentes de 3.
 
 ====
@@ -27,7 +27,7 @@ Sinon "non défini" est retourné.
 [EXAMPLE]
 ====
 
-*Exemple :* `++Si(a ≟ 1, "Yvan", a ≟ 2,"Boris", a ≟ 3, "Marie", "Moi")++`
+`++Si(a ≟ 1, "Yvan", a ≟ 2,"Boris", a ≟ 3, "Marie", "Moi")++`
 
 Si __a__=1 la commande retourne le texte "Yvan", pour __a__=2' elle retourne "Boris", pour __a__=3 "Marie" et pour
 toutes les autres valeurs de _a_ elle retourne "Moi".
@@ -84,7 +84,7 @@ wiki)_#
 [NOTE]
 ====
 
-*Note :* Voir section: xref:/Valeurs_booléennes.adoc[Valeurs booléennes] pour les symboles utilisés dans les écritures
+Voir section: xref:/Valeurs_booléennes.adoc[Valeurs booléennes] pour les symboles utilisés dans les écritures
 de conditions.
 
 ====
@@ -105,7 +105,7 @@ La commande Si peut être utilisée dans les scripts pour accomplir différentes
 [EXAMPLE]
 ====
 
-*Exemple :* soit le nombre _n_ et le point _A_. La commande
+soit le nombre _n_ et le point _A_. La commande
 `++Si(Reste(n, 7) == 0, SoitCoordonnées(A, n, 0), SoitCoordonnées(A, n, 1))++` modifie les coordonnées du point _A_
 selon la condition donnée. Dans ce cas il est plus simple d'utiliser
 `++ SoitCoordonnées(A, n,Si(Reste(n, 7) == 0,0,1))++`.
