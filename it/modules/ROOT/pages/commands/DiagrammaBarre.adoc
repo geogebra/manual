@@ -30,8 +30,6 @@ DiagrammaBarre(Lista di dati grezzi, Larghezza delle barre, Fattore di scala ver
 [EXAMPLE]
 ====
 
-*Esempi:*
-
 * `++DiagrammaBarre({1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5}, 1)++`
 * `++DiagrammaBarre({1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5}, 1, 2)++`
 
@@ -43,8 +41,6 @@ DiagrammaBarre(Lista di dati, Lista di frequenze, Larghezza delle barre)::
 
 [EXAMPLE]
 ====
-
-*Esempi:*
 
 * `++DiagrammaBarre({10, 11, 12, 13, 14}, {5, 8, 12, 0, 1}, 0.5)++` lascia spazi tra le barre.
 * `++DiagrammaBarre({10, 11, 12, 13, 14}, {5, 8, 12, 0, 1}, 0)++` genera un grafico con barre di larghezza 0, cioè un
@@ -64,9 +60,9 @@ di altezze rispettivamente uguali a 1, 2, 3, 4, 5.
 
 ====
 
-DiagrammaBarre(Valore iniziale _a_, Valore finale _b_, Espressione, Variabile _k_, Dal numero _c_, Al numero _d_)::
-  Genera un diagramma a barre nell'intervallo (_a, b_): l'altezza delle barre viene calcolata utilizzando l'espressione
-  indicata, al variare di _k_ da _c_ a _d_.
+DiagrammaBarre(Valore iniziale, Valore finale, Espressione, Variabile, Dal numero, Al numero)::
+  Genera un diagramma a barre nell'intervallo (_Valore iniziale_, _Valore finale_): l'altezza delle barre viene calcolata utilizzando l'espressione
+  indicata, al variare della _variablie_ nell'intervallo [_Dal numero_ , _Al numero_].
 
 [EXAMPLE]
 ====
@@ -78,10 +74,10 @@ l'espressione indicata.
 
 ====
 
-DiagrammaBarre(Valore iniziale _a_, Valore finale _b_, Espressione, Variabile _k_, Dal numero _c_, Al numero _d_, Passo
-_s_)::
-  Genera un diagramma a barre nell'intervallo (_a, b_): l'altezza delle barre viene calcolata utilizzando l'espressione
-  indicata, al variare di _k_ da _c_ a _d_, con passo _s_.
+DiagrammaBarre(Valore iniziale, Valore finale, Espressione, Variabile, Dal numero, Al numero, Passo)::
+  Genera un diagramma a barre nell'intervallo (_Valore iniziale_, _Valore finale_): l'altezza delle barre viene calcolata utilizzando l'espressione
+  indicata, al variare della _variablie_ nell'intervallo [_Dal numero_ , _Al numero_] con il _Passo_ indicato.
+
 
 [NOTE]
 ====
