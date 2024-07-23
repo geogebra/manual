@@ -34,7 +34,7 @@ BarChart( <List of Raw Data>, <Width of Bars>, <Vertical Scale Factor (optional)
 ====
 
 BarChart( <List of Data> , <List of Frequencies>, <Width of Bars> )::
-  Creates a bar chart using the list of data and corresponding frequencies; the bars have width _w_.
+  Creates a bar chart using the list of data and corresponding frequencies. Bars' width is given.
 
 [EXAMPLE]
 ====
@@ -51,14 +51,14 @@ BarChart( <Start Value>, <End Value>, <List of Heights> )::
 [EXAMPLE]
 ====
 
-`++BarChart(10, 20, {1, 2, 3, 4, 5})++` gives you a bar chart with five bars of specified height in the interval [10,
+`++BarChart(10, 20, {1, 2, 3, 4, 5})++` gives a bar chart with five bars of specified height in the interval [10,
 20].
 
 ====
 
 BarChart( <Start Value>, <End Value> , <Expression>, <Variable>, <From Number>, <To Number> )::
-  Creates a bar chart over the given interval (Start Value, End Value), that calculates the bars’ heights using the
-  expression whose variable _k_ varies from number _c_ to number _d_.
+  Creates a bar chart over the interval [_Start Value_, _End Value_], that calculates the bars’ heights using the
+  expression of the given _Variable_ in the interval [_From number_, _To number_].
 
 [EXAMPLE]
 ====
@@ -70,8 +70,9 @@ If _p = 0.1_, _q = 0.9_, and _n = 10_ are numbers, then
 ====
 
 BarChart( <Start Value>, <End Value>, <Expression>, <Variable>, <From Number>, <To Number>, <Step Width> )::
-  Creates a bar chart over the given interval (Start Value, End Value), the bars’ heights are calculated using the given
-  expression in which the variable _k_ varies from number _c_ to number _d_ using step width _s_.
+  Creates a bar chart over the interval [_Start Value_, _End Value_], that calculates the bars’ heights using the
+  expression of the given _Variable_ in the interval [_From number_, _To number_] with given _Step width_.
+
 
 [NOTE]
 ====
