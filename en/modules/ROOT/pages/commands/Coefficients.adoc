@@ -9,7 +9,7 @@ Coefficients( <Polynomial> )::
 [EXAMPLE]
 ====
 
-`++Coefficients(x^3 - 3 x^2 + 3 x)++` yields _{1, -3, 3, 0}_, the list of all coefficients of stem:[x^3 - 3 x^2 + 3 x].
+`++Coefficients(x^3 - 3 x^2 + 3 x)++` yields _{1, -3, 3, 0}_.
 
 ====
 
@@ -29,20 +29,20 @@ _y_(_l_), _z_(_l_).
 [EXAMPLE]
 ====
 
-Given `++line: 3x + 2y - 2 = 0++`:
+Given line `++l: 3x + 2y - 2 = 0++`:
 
 
-* `++x(line)++` returns 3
-* `++y(line)++` returns 2
-* `++z(line)++` returns -2
+* `++x(l)++` returns 3
+* `++y(l)++` returns 2
+* `++z(l)++` returns -2
 
 ====
 
 [NOTE]
 ====
 
-There's a special mode (for non-polynomials) for the output of the fitting commands eg if `++f(x) = FitExp(l1)++` then
-`++Coefficients(f)++` will return the calculated parameters
+For non-polynomial curves obtained using one the fitting commands e.g. `++f(x) = FitExp(l1)++`, the command 
+`++Coefficients(f)++` will return the list of the calculated parameters.
 
 ====
 
@@ -54,7 +54,7 @@ Coefficients( <Polynomial> )::
 [EXAMPLE]
 ====
 
-`++Coefficients(x^3 - 3 x^2 + 3 x)++` yields _{1, -3, 3, 0}_, the list of all coefficients of stem:[x^3 - 3 x^2 + 3 x].
+`++Coefficients(x^3 - 3 x^2 + 3 x)++` yields _{1, -3, 3, 0}_.
 
 ====
 
@@ -64,8 +64,7 @@ Coefficients( <Polynomial>, <Variable> )::
 [EXAMPLE]
 ====
 
-* `++Coefficients(a^3 - 3 a^2 + 3 a, a)++` yields _{1, -3, 3, 0}_, the list of all coefficients of stem:[a^3 - 3 a^2 +
-3 a]
+* `++Coefficients(a^3 - 3 a^2 + 3 a, a)++` yields _{1, -3, 3, 0}_.
 * `++Coefficients(a^3 - 3 a^2 + 3 a, x)++` yields {__a__³ - 3 __a__² + 3 _a_}.
 
 ====
