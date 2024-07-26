@@ -2,10 +2,10 @@
 :page-en: commands/LimitAbove
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
-LimiteDestro(Funzione f, Valore t)::
+LimiteDestro(Funzione, Valore)::
   Calcola il
   http://en.wikipedia.org/wiki/it:_Limite_di_una_funzione#Limite_destro.2C_sinistro.2C_per_eccesso.2C_per_difetto[limite
-  destro] della funzione _f_ quando la variabile _t_ tende al valore indicato.
+  destro] della _funzione_ quando la variabile tende al _valore_ indicato.
 
 [EXAMPLE]
 ====
@@ -24,11 +24,18 @@ casi in cui il calcolo è corretto e la funzione non ammette limite).
 
 == Sintassi CAS
 
-LimiteDestro(Espressione _f_, Valore _t_)::
-  Calcola il limite destro della funzione _f_, al tendere della variabile indipendente della funzione al valore _t_
-  indicato.
-LimiteDestro(Espressione _f_, Variabile _v_, Valore _t_)::
-  Calcola il limite destro della funzione _f_ in più variabili, al tendere della variabile _v_ al valore _t_ indicato.
+LimiteDestro(Espressione, Valore)::
+  Calcola il limite destro della funzione, al tendere della variabile indipendente della funzione al valore indicato.
+
+[EXAMPLE]
+====
+
+`++LimiteDestro(1/x, 0)++` restituisce stem:[\infty] .
+
+====
+
+LimiteDestro(Espressione, Variabile, Valore)::
+  Calcola il limite destro della funzione in più variabili, al tendere della _variabile_ al _valore_ indicato.
 
 [EXAMPLE]
 ====
@@ -37,12 +44,6 @@ LimiteDestro(Espressione _f_, Variabile _v_, Valore _t_)::
 
 ====
 
-[EXAMPLE]
-====
-
-`++LimiteDestro(1/x, 0)++` restituisce stem:[\infty] .
-
-====
 
 [NOTE]
 ====
