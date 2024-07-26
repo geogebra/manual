@@ -21,12 +21,22 @@ Vedere anche il comando xref:/commands/Derivata.adoc[Derivata].
 
 == Sintassi CAS
 
+DerivataImplicita (f(x, y))::
+  Determina la http://en.wikipedia.org/wiki/en:Implicit_derivative[derivata implicita] dell'espressione indicata.
+
+[EXAMPLE]
+====
+
+`++DerivataImplicita(x + 2y)++` restituisce _-stem:[\frac{1}{2}]_.
+
+====
+
 DerivataImplicita(Espressione, Variabile dipendente, Variabile indipendente)::
   Determina la http://en.wikipedia.org/wiki/en:Implicit_derivative[derivata implicita] dell'espressione indicata.
 
 [EXAMPLE]
 ====
 
-`++DerivataImplicita(x^2 + y^2, y, x)++` restituisce _-stem:[\frac{x}\{y}]_.
+`++DerivataImplicita(x^2 + y^2, y, x)++` restituisce _-stem:[\frac{x}{y}]_.
 
 ====
