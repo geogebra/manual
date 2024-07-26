@@ -13,9 +13,19 @@ Denominator( <Function> )::
 ====
 
 Denominator( <Number> )::
-  For a rational number returns its denominator. It uses a numerical method, which limits this command to numbers with
+  For a rational number returns its (simplified) denominator. It uses a numerical method, which limits this command to numbers with
   small denominator. For irrational input the denominator of its xref:/commands/ContinuedFraction.adoc[continued
   fraction] is returned.
+
+[EXAMPLE]
+====
+
+* `++Denominator(5 / 3)++` yields 3.
+* `++Denominator(10 / 6)++` yields 3.
+* `++Denominator(15 / 3)++` yields 1.
+
+
+====
 
 [NOTE]
 ====
