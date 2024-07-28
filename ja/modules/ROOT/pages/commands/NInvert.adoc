@@ -1,0 +1,23 @@
+= NInvert Command
+:page-en: commands/NInvert
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+NInvert( <関数> )::
+逆関数の数式を表示せずに逆関数のグラフを表示する．数式を取得したい場合は，このコマンドの代わりに　xref:./Invert.adoc[Invert コマンド] を使用する．
+
+[EXAMPLE]
+====
+
+`++NInvert(sin(x))++` は， _-1 < x < 1_ の範囲で _sin(f(x)) = x_ となるような関数のグラフを表示する．
+
+====
+
+[NOTE]
+====
+
+* f(x) = x^2^ やf(x) = sin(x)のように，本来は定義域や値域の制約を考慮すべき関数でも，その制約は考慮されない．
+
+* このコマンドは， _x_ を1つだけ含む関数に対してより速く動作する．
+より効率的に作成するために，関数を変形してxが1つだけになるようにする（例えば， `NInvert(x^2+2x)` ではなく， `NInvert((x+1)^2-1)` を使用する）．
+
+====
