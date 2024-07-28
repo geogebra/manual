@@ -13,6 +13,14 @@ Coefficients( <Polynomial> )::
 
 ====
 
+[NOTE]
+====
+
+For non-polynomial curves obtained using one the fitting commands e.g. `++f(x) = FitExp(l1)++`, the command 
+`++Coefficients(f)++` will return the list of the calculated parameters.
+
+====
+
 Coefficients( <Conic> )::
 
 Returns the list of the coefficients _a_, _b_, _c_, _d_, _e_, _f_ of a conic in standard form: stem:[a\cdot x^2 + b\cdot
@@ -35,14 +43,6 @@ Given line `++l: 3x + 2y - 2 = 0++`:
 * `++x(l)++` returns 3
 * `++y(l)++` returns 2
 * `++z(l)++` returns -2
-
-====
-
-[NOTE]
-====
-
-For non-polynomial curves obtained using one the fitting commands e.g. `++f(x) = FitExp(l1)++`, the command 
-`++Coefficients(f)++` will return the list of the calculated parameters.
 
 ====
 
