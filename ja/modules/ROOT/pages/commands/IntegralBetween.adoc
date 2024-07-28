@@ -5,15 +5,10 @@ ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 IntegralBetween( <関数>, <関数>, <数>, <数> )::
   主変数に関して，区間 _[a, b]_ 上での2つの関数 _f_ と _g_ の差 _f(x) ‐ g(x)_ の定積分を求める．ここで， _a_ は最初の数， _b_ は2番目の数である．
 
-IntegralBetween( <関数>, <関数>, <数>, <数>, <Boolean Evaluate> )::
-
-主変数に関して，区間 _[a, b]_ 上での2つの関数 _f_ と _g_ の差 _f(x) ‐ g(x)_ 
-の定積分を求め，関連する領域を塗りつぶす．ここで， _a_ は最初の数， _b_ は2番目の数である． _Evaluate_ が _true_ の場合は積分値は計算されるが， _false_ の場合は積分値は計算されない．
-
 [EXAMPLE]
 ====
 
-`++IntegralBetween(sin(x), cos(x), 0, pi)++`
+`++IntegralBetween(sin(x), cos(x), 0, pi)++  出力：2`
 
 ====
 
@@ -23,6 +18,13 @@ IntegralBetween( <関数>, <関数>, <数>, <数>, <Boolean Evaluate> )::
 このコマンドは、関数 _f_ のグラフと _g_ のグラフの間の領域に色を塗る．
 
 ====
+
+IntegralBetween( <関数>, <関数>, <数>, <数>, <Boolean Evaluate> )::
+
+主変数に関して，区間 _[a, b]_ 上での2つの関数 _f_ と _g_ の差 _f(x) ‐ g(x)_ 
+の定積分を求め，関連する領域を塗りつぶす．ここで， _a_ は最初の数， _b_ は2番目の数である． _Evaluate_ が _true_ の場合は積分値は計算されるが， _false_ の場合は積分値は計算されない．
+
+
 
 == CAS での書式
 
