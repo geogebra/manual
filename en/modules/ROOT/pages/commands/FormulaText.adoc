@@ -3,7 +3,7 @@
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 FormulaText( <Object> )::
-  Returns the formula for the object as a LaTeX text.
+  Returns the formula for the object as a LaTeX text. In the formula values are substituted for variables.
 
 [EXAMPLE]
 ====
@@ -12,10 +12,10 @@ Let _a = 2_ and _f(x) = a x^2^_. `++FormulaText(f)++` returns _2 x^2^_ (as a LaT
 
 ====
 
-FormulaText( <Object>, <Boolean for Substitution of Variables> )
+FormulaText( <Object>, <Boolean for Substitution of Variables> )::
 
-Returns the formula for the object as LaTeX text. The Boolean variable determines if values are substituted for
-variables (_true_) or if variable names are shown in the text (_false_).
+  Returns the formula for the object as LaTeX text. The Boolean variable determines if values are substituted for
+  variables (_true_) or if variable names are shown in the text (_false_).
 
 [EXAMPLE]
 ====
@@ -25,13 +25,6 @@ Let _a = 2_ and _f(x) = a x^2^_.
 `++FormulaText(f, true)++` returns _2 x^2^_ (as a LaTeX text).
 
 `++FormulaText(f, false)++` returns _a x^2^_ (as a LaTeX text).
-
-====
-
-[NOTE]
-====
-
-By default, values are substituted for variables.
 
 ====
 
