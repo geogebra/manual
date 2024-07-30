@@ -3,39 +3,39 @@
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 TaylorPolynomial( <Function>, <x-Value>, <Order Number> )::
-  Creates the power series expansion for the given function at the point _x-Value_ to the given order.
+  Creates the Taylor series expansion of the given function at the point _x-Value_ up to the given order.
 
 [EXAMPLE]
 ====
 
-`++TaylorPolynomial(x^2, 3, 1)++` gives _9 + 6 (x - 3)_, the power series expansion of _x^2^_ at _x = 3_ to order _1_.
+`++TaylorPolynomial(x^2, 3, 1)++` gives _9 + 6 (x - 3)_, the Taylor series expansion of _x^2^_ at _x = 3_ up to order _1_.
 
 ====
 
 == CAS Syntax
 
 TaylorPolynomial( <Expression>, <x-Value>, <Order Number> )::
-  Creates the power series expansion for the given expression at the point _x-Value_ to the given order.
+  Creates the Taylor series expansion of the given expression at the point _x-Value_ up to the given order.
 
 [EXAMPLE]
 ====
 
-`++TaylorPolynomial(x^2, a, 1)++` gives _a^2^ + 2a (x - a)_, the power series expansion of _x^2^_ at _x = a_ to order
+`++TaylorPolynomial(x^2, a, 1)++` gives _a^2^ + 2a (x - a)_, the Taylor series expansion of _x^2^_ at _x = a_ up to order
 _1_.
 
 ====
 
 TaylorPolynomial( <Expression>, <Variable>, <Variable Value>, <Order Number> )::
-  Creates the power series expansion for the given expression with respect to the given variable at the point _Variable
-  Value_ to the given order.
+  Creates the Taylor series expansion of the given expression with respect to the given variable at the point _Variable
+  Value_ up to the given order.
 
 [EXAMPLE]
 ====
 
-* `++TaylorPolynomial(x^3 sin(y), x, 3, 2)++` gives _27 sin(y) + 27 sin(y) (x - 3) + 9 sin(y) (x - 3)^2^_, the power
-series expansion with respect to _x_ of _x^3^ sin(y)_ at _x = 3_ to order _2_.
+* `++TaylorPolynomial(x^3 sin(y), x, 3, 2)++` gives _27 sin(y) + 27 sin(y) (x - 3) + 9 sin(y) (x - 3)^2^_, the Taylor 
+series expansion with respect to _x_ of _x^3^ sin(y)_ at _x = 3_ up to order _2_.
 * `++TaylorPolynomial(x^3 sin(y), y, 3, 2)++` gives _x^3^ sin(3) + x^3^ cos(3) (y - 3) - x^3^ stem:[\frac{sin(3) }{2}]
-(y - 3)^2^_, the power series expansion with respect to _y_ of _x^3^ sin(y)_ at _y = 3_ to order _2_.
+(y - 3)^2^_, the Taylor series expansion with respect to _y_ of _x^3^ sin(y)_ at _y = 3_ up to order _2_.
 
 ====
 
