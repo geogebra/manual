@@ -2,8 +2,8 @@
 :page-en: commands/If
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
-Se(Condizione, Oggetto)::
-  Restituisce una copia dell'oggetto se la condizione è soddisfatta (_true_), e un oggetto _non definito_ se la
+Se(Condizione, Allora)::
+  Restituisce una copia dell'oggetto _Allora_ se la condizione è soddisfatta (_true_), e un oggetto _non definito_ se la
   condizione non è soddisfatta (_false_).
 
 [EXAMPLE]
@@ -17,8 +17,8 @@ non è soddisfatta.
 
 ====
 
-Se(Condizione, Oggetto a, Oggetto b)::
-  Restituisce una copia dell'oggetto _a_ se la condizione è soddisfatta (_true_), e una copia dell'oggetto _b_ se la
+Se(Condizione, Allora, Altrimenti)::
+  Restituisce una copia dell'oggetto _Allora_ se la condizione è soddisfatta (_true_), e una copia dell'oggetto _Altrimenti_ se la
   condizione non è soddisfatta (_false_). *Entrambi gli oggetti devono essere dello stesso tipo*.
 
 [EXAMPLE]
@@ -55,12 +55,13 @@ xref:/commands/Integrale.adoc[Integrale], e xref:/commands/Intersezione.adoc[Int
 
 *Esempi:*
 
-* `++f(x) = Se(x < 3, sin(x), x^2)++` restituisce la funzione a tratti stem:[f(x) = \left\\{\begin\{matrix}\{} sin(x)& :
-&x < 3\\ x^\{2}& : &\text\{altrove} \end\{matrix}\right ]
+* `++f(x) = Se(x < 3, sin(x), x^2)++` restituisce la funzione a tratti stem:[f(x) = \begin{cases} \begin{array}{rcl}\sin (x) & :& x < 3 \\
+x^{2} + 2 & :& \text{altrove}\end{array}\end{cases} ].
 * `++f(x) = Se(0<=x<=3, sin(x))++` restituisce la funzione sin(x) per le _x_ tra 0 e 3 e non è definita altrove. In
 questo caso è possibile utilizzare anche una versione più compatta del comando: `++f(x) = sin(x), 0 <= x <= 3++`
-* `++f(x) =Se(x<-1,x²,-1<=x<=1,1,-x²+2)++` restituisce la funzione a tratti stem:[f(x) = \left\\{\begin\{matrix}\{}
-x^\{2}& : &x < -1\\ 1& :& -1 ≤ x ≤ 1\\ -x^\{2} + 2& : &\text\{altrove} \end\{matrix}\right ].
+* `++f(x) =Se(x<-1,x²,-1<=x<=1,1,-x²+2)++` restituisce la funzione a tratti stem:[f(x) = \begin{cases} \begin{array}{rcl}x^{2} & :& x < -1 \\
+1 & : &-1 \leq x \leq 1 \\-x^{2} + 2 & :& \text{otherwise}\end{array}\end{cases} ].
+
 
 ====
 
