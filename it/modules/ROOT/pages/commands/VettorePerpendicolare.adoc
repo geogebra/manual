@@ -3,25 +3,39 @@
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
 VettorePerpendicolare(Retta)::
-  Genera il vettore perpendicolare alla retta indicata.
-
-[NOTE]
-====
-
-Una retta di equazione _ax + by = c_ ha il vettore perpendicolare di componenti _(a, b)_.
-
-====
-
-VettorePerpendicolare(Segmento)::
-  Genera il vettore perpendicolare al segmento indicato, avente la stessa lunghezza.
-
-VettorePerpendicolare(Vettore)::
-  Genera il vettore perpendicolare al vettore indicato.
+  Genera il vettore perpendicolare alla retta indicata, con punto iniziale in (0,0).
 
 [EXAMPLE]
 ====
 
-`++VettorePerpendicolare((3,2))++` genera il vettore (-2,3)
+Data la retta _j_ definita come `++Line((1, 4), (5, -3))++`, il comando `++VettorePerpendicolare(j)++` restituisce il vettore _u_=(7, 4).
+
+====
+
+[NOTE]
+====
+
+Il vettore perpendicolare a una retta di equazione _ax + by = c_ ha componenti _(a, b)_.
+
+====
+
+VettorePerpendicolare(Segmento)::
+  Genera il vettore perpendicolare al segmento indicato, avente la stessa lunghezza e con punto iniziale in (0,0).
+
+[EXAMPLE]
+====
+
+Sia _k_ il segmento definito come `++Segmento((3, 2), (14, 5))++`. Il comando `++VettorePerpendicolare(k)++` genera il vettore _u_=(-3, 11).
+
+====
+
+VettorePerpendicolare(Vettore)::
+  Genera il vettore perpendicolare al vettore indicato, con punto iniziale in (0,0).
+
+[EXAMPLE]
+====
+
+`++VettorePerpendicolare((3,2))++` genera il vettore _u_=(-2,3)
 
 ====
 
@@ -31,14 +45,15 @@ VettorePerpendicolare(Vettore)::
 Nella image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[vista CAS] è possibile
 utilizzare anche variabili algebriche non associate a valori.
 
+====
+
 [EXAMPLE]
 ====
 
-`++VettorePerpendicolare((a, b))++` restituisce il vettore _\{-b, a}_.
+`++VettorePerpendicolare((a, b))++` restituisce il vettore _{-b, a}_.
 
 ====
 
-====
 
 VettorePerpendicolare(Piano)::
   Genera un vettore perpendicolare al piano indicato.
@@ -46,7 +61,7 @@ VettorePerpendicolare(Piano)::
 [EXAMPLE]
 ====
 
-`++VettorePerpendicolare(PianoxOy)++` genera il vettore _u=(0, 0, 1)_ perpendicolare al piano xOy.
+`++VettorePerpendicolare(pianoXY)++` genera il vettore _u=(0, 0, 1)_ perpendicolare al piano xOy.
 
 ====
 
