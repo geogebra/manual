@@ -3,23 +3,14 @@
 ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
 TrigExpand( <式> )::
-  三角関数の式を，単純な変数を引数とする式に変換する．
+  変数の和で表された三角関数を単一変数の三角関数に展開したり，三角関数の積を線形形式に展開したりする．
 
 [EXAMPLE]
 ====
 
-`++TrigExpand(tan(x + y))++` 出力： stem:[\frac{\frac{\sin(x)}{\cos(x)}+\frac{\sin(y)}{\cos(y)}}
-{1-\frac{\sin(x)}{\cos(x)} \cdot \frac{\sin(y)}{\cos(y)}} ].
+* `++TrigExpand(tan(x + y))++` 出力： stem:[\frac{\frac{\sin(x)}{\cos(x)}+\frac{\sin(y)}{\cos(y)}}{1-\frac{\sin(x)}{\cos(x)} \cdot \frac{\sin(y)}{\cos(y)}} ].
 
-====
-
-また，積を線形表現に展開することもできる．
-
-[EXAMPLE]
-====
-
-`++TrigExpand(sin(x)sin(x/3))++` 出力： stem:[\frac{3}{2 \; x^{2}} \; \cos \left( 2 \cdot \frac{x}{3} \right) -
-\frac{3}{2 \; x^{2}} \; \cos \left( 4 \cdot \frac{x}{3} \right) ].
+* `++TrigExpand(sin(x)sin(x/3))++` 出力： stem:[\frac{1}{2} \; \cos \left( 2 \cdot \frac{x}{3} \right) -\frac{1}{2} \; \cos \left( 4 \cdot \frac{x}{3} \right) ].
 
 ====
 
@@ -27,7 +18,7 @@ TrigExpand( <式> )::
 
 
 TrigExpand( <式>, <目標関数> )::
-  与えられた目標関数を優先し，三角関数の式を引数として単純な変数だけを用いる式に変換する．
+  変数の和の三角関数を，（可能な場合）与えられた単一変数の目標関数を含む式に展開する．
 
 [EXAMPLE]
 ====
@@ -54,7 +45,7 @@ stem:[\frac{\sin(x) \cos(y) + \sin(y) \cos(x)}{- \sin(x) \sin(y) +\cos(x) \cos(y
 xref:/CASビュー.adoc[CAS View] でのみ使用可能：
 
 TrigExpand( <式>, <目標関数>, <目標変数> )::
-  与えられた目標関数と目標変数を優先し，三角関数の式を引数として単純な変数だけを用いる式に変換する．
+  三角関数の式を，（可能な場合）与えられた目標関数と変数だけを含む式に展開する．
 
 [EXAMPLE]
 ====
@@ -66,7 +57,7 @@ TrigExpand( <式>, <目標関数>, <目標変数> )::
 ====
 
 TrigExpand( <式>, <目標関数>, <目標変数>, <目標変数> )::
-  与えられた目標関数と目標変数を優先し，三角関数の式を引数として単純な変数だけを用いる式に変換する．
+  三角関数の式を，（可能な場合）与えられた目標関数と変数だけを含む式に展開する．
 
 [EXAMPLE]
 ====
