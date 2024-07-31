@@ -6,6 +6,12 @@ ApplyMatrix( <xref:/Matrices.adoc[Matrix]>, <xref:/Geometric_Objects.adoc[Object
   Transforms the object _O_ so that point _P_ of _O_ is mapped to:
 
 * point _M*P_, if _P_ is a _2D_ point and _M_ is a 2 x 2 matrix
+* point _project(M*(x(P), y(P), 1))_, if _P_ is a _2D_ point and _M_ a 3 x 3 matrix: _project_ is a projection, mapping
+point _(x, y, z)_ to _(x/z, y/z)_.
+* point _M*P_, if _P_ is a _3D_ point and _M_ a 3 x 3 matrix
+* point _N*P_, if _P_ is a _3D_ point and _M_ a 2 x 2 matrix: the matrix _N_ is the _completion or order 3_ of _M_:
+given _M_ = stem:[\begin{pmatrix}a&b\\ c&d \end{pmatrix}] then _N_ = stem:[\begin{pmatrix}a&b&0\\ c&d&0\\0&0&1
+\end{pmatrix}]
 
 [EXAMPLE]
 ====
@@ -16,9 +22,6 @@ Let `++M={{cos(π/2),-sin(π/2)}, {sin(π/2), cos(π/2)}}++` be the transformati
 
 ====
 
-* point _project(M*(x(P), y(P), 1))_, if _P_ is a _2D_ point and _M_ a 3 x 3 matrix: _project_ is a projection, mapping
-point _(x, y, z)_ to _(x/z, y/z)_.
-
 [EXAMPLE]
 ====
 
@@ -28,11 +31,6 @@ _u'=(1,0.67)_. In effect stem:[\begin{pmatrix}1&1&0\\ 0&1&1\\1&0&1 \end{pmatrix}
 places)
 
 ====
-
-* point _M*P_, if _P_ is a _3D_ point and _M_ a 3 x 3 matrix
-* point _N*P_, if _P_ is a _3D_ point and _M_ a 2 x 2 matrix: the matrix _N_ is the _completion or order 3_ of _M_:
-given _M_ = stem:[\begin{pmatrix}a&b\\ c&d \end{pmatrix}] then _N_ = stem:[\begin{pmatrix}a&b&0\\ c&d&0\\0&0&1
-\end{pmatrix}]
 
 [NOTE]
 ====
