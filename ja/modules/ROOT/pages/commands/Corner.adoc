@@ -8,22 +8,19 @@ Corner( <隅の番号> )::
   と _h_
   はグラフィックスビューの幅と高さをピクセル単位で表したものである．第二のグラフィックスビューがアクティブであっても，常にimage:16px-Menu_view_graphics1.svg.png[Menu
   view graphics1.svg,width=16,height=16] xref:/グラフィックスビュー.adoc[第一のグラフィックスビュー]が使用される．
-Corner( <グラフィックスビュー1,2,-1>, <隅の番号> )::
-  image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
-  グラフィックスビューの1または２の角に，そのビューでは決して表示されない点を作成する．サポートされている数 _n_
-  の値は，上の _1, 2, 3, 4, 5_ である．
 
 [NOTE]
 ====
 
-image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=16,height=16]
-xref:/空間図形ビュー.adoc[空間図形ビュー]の角には `++-1++` を使用する．（数で指定できる値は1から8まで）；_n=9_ の場合は点
-_(w, h, 0)_ を返す．ここで　_w_ と _h_ は空間図形ビューの幅と高さをピクセル単位で表す；_n=10_ の場合は点 _(w, h, 0)_
-を返し,_w_ と _h_ はメインウィンドウの幅と高さをピクセル単位で表す；_n=11_
-の場合は視点方向（平行投影の場合）または視点位置（例えば透視投影の場合）を返す；_n=12_
-の場合は画面の左から右への方向を返す；_n=13_ の場合はx，y，z軸のスケールを返す．
+Corner( <隅の番号> )
+は他のコマンドの中では機能しない．代わりに，例えば `++C_1 = Corner(1)++` を作って使用する．
 
 ====
+
+Corner( <グラフィックスビュー1,2,-1>, <隅の番号> )::
+  image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  グラフィックスビューの隅に，そのビューでは表示されない点を作成する．グラフィックスビュー1または２でサポートされている数 _n_
+  の値は，上記の _1, 2, 3, 4, 5_ である．
 
 [NOTE]
 ====
@@ -33,30 +30,33 @@ Corner( <グラフィックスビュー1,2>, <隅の番号> )
 
 ====
 
+
 [NOTE]
 ====
 
-Corner( <隅の番号> ) は他のコマンドの中では機能しない．代わりに，例えば `++C_1 = Corner(1)++` を作って使用する．
+image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=16,height=16]
+xref:/空間図形ビュー.adoc[空間図形ビュー]の隅には `++-1++` を使用する．（数で指定できる値は1から8まで）　さらに：
+
+* `++Corner(-1,9)++` は点 (_w_, _h_, 0) を返す． _w_ と _h_ は，空間図形スビューの幅と高さをピクセル単位で表したものである．
+* `++Corner(-1,10)++` は点 (_w_, _h_, 0) を返す． _w_ と _h_ はメインウィンドウの幅と高さをピクセル単位で表したものである．
+* `++Corner(-1,11)++` は視点方向(平行投影の場合)，または視点位置 (例： 透視投影の場合)を返す．
+* `++Corner(-1,12)++` は画面の左から右への方向を返す．
+* `++Corner(-1,13)++` はx，y，z軸のスケールを返す．
 
 ====
 
 Corner( <画像>, <隅の番号> )::
-  画像の角に点を作成する．（番号 _n = 1, 2, 3, 4_）
+  画像の角に点を作成する．（番号 _n_ = 1, 2, 3, 4）
 
 Corner( <テキスト>, <隅の番号> )::
-  テキストの角に点を作成する．（番号 _n = 1, 2, 3, 4_）
+  テキストの角に点を作成する．（番号 _n_ = 1, 2, 3, 4）
 
 [NOTE]
 ====
 
-Corner( <Text>, <Number of Corner> ) は xref:/commands/Sequence.adoc[Sequence] または xref:/commands/Zip.adoc[Zip]
+* Corner( <テキスト>, <隅の番号> )  は xref:/commands/Sequence.adoc[Sequence] または xref:/commands/Zip.adoc[Zip]
 のコマンドの中では機能しない． 同時に _画面上の固定された位置_ プロパティのチェックも外す必要がある．
 
-====
-
-[NOTE]
-====
-
-コーナーの番号は反時計回りで，左下から始まる．
+* コーナーの番号は反時計回りで，左下から始まる．
 
 ====
