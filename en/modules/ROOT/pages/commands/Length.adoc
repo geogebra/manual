@@ -31,10 +31,6 @@ Length( <Function>, <Start x-Value>, <End x-Value> )::
 
 Length( <Function>, <Start Point>, <End Point> )::
   Yields the length of the function graph between the two points.
-Length( <Curve>, <Start t-Value>, <End t-Value> )::
-  Yields the length of the curve between the two values *of the parameter*.
-Length( <Curve>, <Start Point>, <End Point> )::
-  Yields the length of the curve between the two points that lie on the curve.
 
 [NOTE]
 ====
@@ -42,6 +38,13 @@ Length( <Curve>, <Start Point>, <End Point> )::
 If the given points do not lie on the function graph, their x‐coordinates are used to determine the interval.
 
 ====
+
+Length( <Curve>, <Start t-Value>, <End t-Value> )::
+  Yields the length of the curve between the two values *of the parameter*.
+Length( <Curve>, <Start Point>, <End Point> )::
+  Yields the length of the curve between the two points that lie on the curve.
+
+
 
 == CAS Syntax
 
@@ -56,7 +59,7 @@ Length( <Function>, <Start x-Value>, <End x-Value> )::
 ====
 
 Length( <Function>, <Variable>, <Start x-Value>, <End x-Value> )::
-  Calculates the length of a function graph from _Start Point_ to _End Point_.
+  Calculates the length of a function graph from _Start x-value_ to _End x-value_.
 
 [EXAMPLE]
 ====
