@@ -3,7 +3,7 @@
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 PerpendicularVector( <Line> )::
-  Returns the perpendicular vector to the line, with starting point at (0,0).
+  Returns one of the perpendicular vector to the line.
 
 [EXAMPLE]
 ====
@@ -20,7 +20,7 @@ The components of the perpendicular vector to a line of equation _ax + by = c_ a
 ====
 
 PerpendicularVector( <Segment> )::
-  Returns the perpendicular vector to the segment, having the same length and with starting point at (0,0).
+  Returns one of the perpendicular vector to the segment, having the same length.
 
 [EXAMPLE]
 ====
@@ -30,7 +30,7 @@ Let `++Segment((3, 2), (14, 5))++` be the segment _k_. `++PerpendicularVector(k)
 ====
 
 PerpendicularVector( <Vector> )::
-  Returns the perpendicular vector to the given vector, with starting point at (0,0).
+  Returns one of the perpendicular vector to the given vector.
 
 [EXAMPLE]
 ====
@@ -38,6 +38,21 @@ PerpendicularVector( <Vector> )::
 Let `++Vector((-12, 8))++` be the vector _u_. `++PerpendicularVector(u)++` yields vector _v=(-8, -12)_.
 ====
 
+[NOTE]
+====
+
+If a point is specified in the definition of the line, segment, or vector, the perpendicular vector will originate from that point. Otherwise, the origin will be at (0, 0).
+
+====
+
+[EXAMPLE]
+====
+
+* If point A is _(1, 4)_ and point B is _(5, -3)_, let `++Line(A, B)++` be the line _i_,`++PerpendicularVector(i)++` will have its origin at A.
+
+* Let `++Line((1, 4), (5, -3))++` be the line _j_. `++PerpendicularVector(j)++` will have its origin at (0, 0).
+
+====
 [NOTE]
 ====
 In the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_View.adoc[CAS View] undefined
