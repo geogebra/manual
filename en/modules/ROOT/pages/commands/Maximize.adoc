@@ -21,7 +21,25 @@ Maximize( <Dependent number>, <Free number> )::
   _local_ maximum point in the interval. If the construction is complicated, this command might return ? to avoid using
   too much processor time.
 
+[Example]
+====
+
+Let _a_ be a slider in [0,10] and _t1_ the right triangle with vertices _C_=(_a_, 0), _A_=(0, 0) and _B_=(0,10 - _a_).
+`++Maximize(t1,a)++` gives 5, the value of _a_ that maximizes the area of _t_1.
+
+====
+
+
+
 Maximize( <Dependent Number>, <Point on Path> )::
+Calculates the position of the point which gives the maximal value of the dependent number. The point must be a point on a path and the path will be used as the search interval. The relationship should be continuous and have only one local maximum point in the interval. If the construction is complicated, this command might return ? to avoid using too much processor time.
+
+[Example]
+====
+
+Let _c_ be a circle, _C_ a point on it and _D_ a point outside the circle. If _f_ = Segment(C,D) then `++Maximize(f,C)++` creates the point on _c_ having maximum distance from _D_.
+
+====
 
 [NOTE]
 ====
