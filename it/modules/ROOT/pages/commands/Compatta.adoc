@@ -12,33 +12,34 @@ Compatta(Espressione, Variabile1, Lista1, Variabile2, Lista2, ...)::
 [EXAMPLE]
 ====
 
-Sia _lista1=\{1, 2, 5}_ una lista di numeri. `++Compatta(Semplifica(a*x^(b-1)), a, lista1,b)++` restituisce la lista
-_\{1, 2x, 5x²}_.
-
-====
-
-[EXAMPLE]
-====
-
-Sia _lista1=\{x^2, x^3, x^6}_ una lista di polinomi. `++Compatta(Grado(a), a, lista1)++` restituisce la lista _\{2, 3,
-6}_.
-
-====
-
-[EXAMPLE]
-====
-
 Siano _P_, _Q_, _R_, _S_ dei punti. `++Compatta(PuntoMedio(A, B), A, {P, Q}, B, {R, S})++` restituisce una lista
 contenente i xref:/commands/PuntoMedio.adoc[punti medi] dei segmenti _PR_ e _QS_.
 
 ====
 
-A partire dalla versione 5.0.258, possono essere utilizzate anche le funzioni come variabili:
+[EXAMPLE]
+====
+
+Sia _lista1={x^2, x^3, x^6}_ una lista di polinomi. `++Compatta(Grado(a), a, lista1)++` restituisce la lista _{2, 3,
+6}_.
+
+====
+
 
 [EXAMPLE]
 ====
 
-`++Compatta(f(2), f, {x+1,x+3})++` restituisce la lista _\{3, 5}_.
+Sia _lista1={1, 2, 5}_ una lista di numeri. `++Compatta(Semplifica(a*x^(b-1)), a, lista1,b)++` restituisce la lista
+{1, 2x, 5x²}_.
+
+====
+
+
+
+[EXAMPLE]
+====
+
+Le variabili possono anche essere funzioni: `++Compatta(f(2), f, {x+1,x+3})++` restituisce la lista _{3, 5}_.
 
 ====
 
