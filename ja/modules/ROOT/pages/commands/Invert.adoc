@@ -44,26 +44,12 @@ Invert( <関数> )::
 [NOTE]
 ====
 
-例えば f(x) = x^2 や f(x) =sin(x) のように，関数は _x_ をただ一つ含む必要があり，定義域や値域は考慮されない．
+* f(x) = x^2 や f(x) =sin(x) でも,定義域や値域は考慮されない．
 
-====
+* このコマンドは， _x_ を1つだけ含む関数に対してより速く動作する．
+より効率的に作成するために，関数を変形してxが1つだけになるようにする（例えば， `Invert(x^2+2x)` ではなく， `Invert((x+1)^2-1)` を使用する）．
 
-関数に _x_ が複数含まれている場合は，別のコマンドが必要になる：
-
-[EXAMPLE]
-====
-
-`++Invert(PartialFractions((x + 1) / (x + 2)))++` と `++Invert(CompleteSquare(x^2 + 2 x + 1))++` は複数の _x_
-があるが，他のコマンドを併用することで逆関数を求められる．
-
-====
-
-[NOTE]
-====
-
-* image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
-xref:/CASビュー.adoc[CAS View] では１つ以上の _x_ が入った関数の逆関数を扱える．
-* こちらも参照： xref:/commands/Eigenvalues.adoc[Eigenvalues コマンド], xref:/commands/Eigenvectors.adoc[Eigenvectors
+* こちらも参照： xref:./NInvert.adoc[NInvert コマンド], xref:/commands/Eigenvalues.adoc[Eigenvalues コマンド], xref:/commands/Eigenvectors.adoc[Eigenvectors
 コマンド], xref:/commands/SVD.adoc[SVD コマンド], xref:/commands/Transpose.adoc[Transpose コマンド],
 xref:/commands/JordanDiagonalization.adoc[JordanDiagonalization コマンド]．
 
