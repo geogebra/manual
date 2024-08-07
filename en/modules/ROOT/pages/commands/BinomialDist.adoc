@@ -7,37 +7,39 @@ BinomialDist( <Number of Trials>, <Probability of Success> )::
   The parameter _Number of Trials_ specifies the number of independent Bernoulli trials and the parameter _Probability
   of Success_ specifies the probability of success in one trial.
 
-[NOTE]
-====
-
-*BinomialDist( <Number of Trials>, <Probability of Success>,<List of values>)* is also available.
-
-====
-
 BinomialDist( <Number of Trials>, <Probability of Success>, <Boolean Cumulative> )::
   Returns a bar graph of a Binomial distribution when _Cumulative_ = false.
   Returns a graph of a cumulative Binomial distribution when _Cumulative_ = true.
   First two parameters are same as above.
+
 BinomialDist( <Number of Trials>, <Probability of Success>, <Variable Value>, <Boolean Cumulative> )::
   Let X be a Binomial random variable and let v be the variable value.
   Returns P( X = _v_) when _Cumulative_ = false.
   Returns P( X ≤ _v_) when _Cumulative_ = true.
   First two parameters are same as above.
 
+BinomialDist( <Number of Trials>, <Probability of Success>, <List of values>)::
+  Calculates P(_u_ ≤ X ≤ _v_) by applying the previous syntax (with _Cumulative_ = false) and adding the values obtained when the elements of the _List of values_ are used as _variable values_.
+
+[EXAMPLE]
+====
+
+`++BinomialDist(10, 0.2, {1,2,3})++` yields _0.77175_, and is equivalent to `++BinomialDist(10, 0.2, 1, false)++` + `++BinomialDist(10, 0.2, 2, false)++` + `++BinomialDist(10, 0.2, 3, false)++`
+
+====
+
+
 [NOTE]
 ====
 
-A simplified syntax is available to calculate P(_u_ ≤ X ≤ _v_): e.g. `++BinomialDist(10, 0.2, 1..3)++` yields _0.77175_,
-that is the same as BinomialDist(10, 0.2, {1, 2, 3}). This syntax also works in the CAS View
+The syntaxes `++BinomialDist(10, 0.2, {1,2,3})++` and  `++BinomialDist(10, 0.2, 1..3)++` are equivalent.
 
 ====
 
 
 
-== CAS Specific Syntax
+== CAS Syntax
 
-In image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_View.adoc[CAS View] only one syntax
-is allowed:
 
 BinomialDist( <Number of Trials>, <Probability of Success>, <Variable Value>, <Boolean Cumulative> )::
   Let X be a Binomial random variable and let v be the variable value.
@@ -78,5 +80,15 @@ successfully.
 successfully.
 * `++BinomialDist(3, 0.9, 4, true)++` yields _1_, the probability of at most four of three packets being transferred
 successfully.
+
+====
+
+BinomialDist( <Number of Trials>, <Probability of Success>, <List of values>)::
+  Calculates P(_u_ ≤ X ≤ _v_) by applying the previous syntax (with _Cumulative_ = false) and adding the values obtained when the elements of the _List of values_ are used as _variable values_.
+
+[EXAMPLE]
+====
+
+`++BinomialDist(10, 0.2, {1,2,3})++` yields stem:[\frac{1507328}{1953125}], and is equivalent to `++BinomialDist(10, 0.2, 1, false)++` + `++BinomialDist(10, 0.2, 2, false)++` + `++BinomialDist(10, 0.2, 3, false)++`
 
 ====
