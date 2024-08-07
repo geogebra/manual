@@ -2,32 +2,31 @@
 :page-en: commands/Cauchy
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
-Cauchy(Mediana, Scala, x)::
-  Genera la funzione di distribuzione cumulativa di una
-  http://en.wikipedia.org/wiki/it:Distribuzione_di_Cauchy[distribuzione di Cauchy].
-
-Cauchy(Mediana, Scala, x, Booleano Cumulativa)::
-  Se _Cumulativa_ è _true_, genera la funzione di distribuzione cumulativa della distribuzione di Cauchy; in caso
-  contrario genera la funzione di densità di probabilità della distribuzione di Cauchy.
-
 Cauchy(Mediana, Scala, Valore variabile)::
-  Calcola il valore della funzione di distribuzione cumulativa della distribuzione di Cauchy in _v_ (_Valore
-  variabile_), cioè la probabilità _P(X ≤ v)_ dove _X_ è una variabile casuale di Cauchy avente per parametri la
-  _mediana_ e la _scala_ indicate.
-
-[NOTE]
-====
-
-Restituisce la probabilità relativa a un determinato valore di _x_ (ovvero l'area sottesa dalla curva della
-distribuzione di Cauchy alla sinistra dell'ascissa _x_ indicata).
-
-====
+  Calcola il valore della funzione di distribuzione cumulativa di una http://en.wikipedia.org/wiki/it:Distribuzione_di_Cauchy[distribuzione di Cauchy] in _Valore variabile_, cioè la probabilità _P(X ≤ v)_ dove _X_ è una variabile casuale di Cauchy avente per parametri la _Mediana_ e la _Scala_ indicate.
 
 [EXAMPLE]
 ====
 
-`++Cauchy(1, 2, 3)++` restituisce _0.75_ nella image:16px-Menu_view_algebra.svg.png[Menu view
-algebra.svg,width=16,height=16] xref:/Vista_Algebra.adoc[vista Algebra] e _stem:[\frac{3}\{4}]_ nella
-image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[vista CAS].
+`++Cauchy(1, 2, 3)++` restituisce _0.75_ nella _vista Algebra_ e _stem:[\frac{3}{4}]_ nella _vista CAS_.
 
 ====
+
+Cauchy(Mediana, Scala, Valore variabile, Booleano Cumulata)::
+Se _Cumulata_ è _true_, genera la funzione di distribuzione cumulativa in _Valore variabile_ della distribuzione di Cauchy; in caso
+  contrario genera la funzione di densità di probabilità della distribuzione di Cauchy avente per parametri la _Mediana_ e la _Scala_ indicate.
+
+Cauchy(Mediana, Scala, x, Booleano Cumulata)::
+  Se _Cumulata_ è _true_, genera la funzione di distribuzione cumulativa della distribuzione di Cauchy; in caso
+  contrario genera la funzione di densità di probabilità della distribuzione di Cauchy avente per parametri la _Mediana_ e la _Scala_ indicate.
+
+
+[NOTE]
+====
+
+Questa sintassi restituisce la probabilità relativa a un determinato valore di _x_ (ovvero l'area sottesa dalla curva della
+distribuzione di Cauchy alla sinistra dell'ascissa _x_ indicata).
+
+====
+
+
