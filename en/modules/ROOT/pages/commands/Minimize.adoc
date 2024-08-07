@@ -21,7 +21,20 @@ Minimize( <Dependent number>, <Free number> )::
   _local_ minimum in the interval. If the construction is complicated, this command might return ? to avoid using too
   much processor time.
 
+[EXAMPLE]
+====
+Let _a_ be a slider in [0,10] and _t1_ the right triangle with vertices _C_ = (_a_, 0), _A_ = (0, 0) and _B_ = (0,10 - _a_). `++Minimize(t1, a)++` gives 0, the value of _a_ that minimizes the area of _t1_ (when the triangle degenerates into a segment).
+====
+
 Minimize( <Dependent Number>, <Point on Path> )::
+Calculates the position of the point which gives the minimal value of the dependent number. The point must be a point on a path and the path will be used as the search interval. The relationship should be continuous and have only one local minimum point in the interval. If the construction is complicated, this command might return ? to avoid using too much processor time.
+
+[EXAMPLE]
+====
+
+Let _c_ be a circle, _C_ a point on it and _D_ a point outside the circle. If `++f = Segment(C,D)++` then `++Minimize(f,C)++` creates the point on _c_ having minimum distance from _D_.
+
+====
 
 [NOTE]
 ====
