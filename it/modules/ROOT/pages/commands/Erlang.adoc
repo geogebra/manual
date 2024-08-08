@@ -2,23 +2,22 @@
 :page-en: commands/Erlang
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
-Erlang(Forma, Velocità, x)::
-  Genera la funzione di distribuzione cumulativa di una http://en.wikipedia.org/wiki/Erlang_distribution[distribuzione
-  di Erlang] avente parametri di forma e velocità indicati.
-
-Erlang(Forma, Velocità, x, Booleano Cumulativa)::
-  Se _Cumulativa_ è _true_, genera la funzione di distribuzione cumulativa della distribuzione di Erlang, altrimenti
-  genera la funzione di densità di probabilità della distribuzione di Erlang.
-
 Erlang(Forma, Tasso, Valore variabile)::
-  Calcola il valore della funzione di distribuzione cumulativa della distribuzione di Erlang in corrispondenza del
+  Calcola il valore della funzione di distribuzione cumulata della distribuzione di Erlang in corrispondenza del
   valore _v_ della variabile, cioè la probabilità _P(X ≤ v)_ dove _X_ è una variabile casuale avente distribuzione di
-  Erlang di parametri di forma e velocità indicati.
+  Erlang di parametri di _forma_ e _tasso_ indicati.
 
 [NOTE]
 ====
 
-Restituisce la probabilità relativa a un determinato valore di _x_ (ovvero l'area sottesa dalla curva della
-distribuzione di Erlang alla sinistra dell'ascissa _x_ indicata).
+Questa sintassi restituisce la probabilità relativa al valore indicato della variabile, che è l'area sottesa dalla curva della distribuzione Erlang alla sinistra dell'ascissa indicata.
 
 ====
+
+Erlang(Forma, Tasso, Valore variabile, Booleano Cumulata)::
+  Se _Cumulata_ è _true_, calcola il valore della funzione di distribuzione cumulata di una distribuzione di Erlang con _forma_ e _tasso_ indicati in corrispondenza del _valore variabile_, altrimenti calcola il valore della funzione densità di probabilità di una distribuzione di Erlang con _forma_ e _tasso_ indicati in corrispondenza del _valore variabile_.
+
+Erlang(Forma, Tasso, x, Booleano Cumulata)::
+  Se _Cumulata_ è _true_, genera la funzione di distribuzione cumulata della distribuzione di Erlang, altrimenti
+  genera la funzione di densità di probabilità della distribuzione di Erlang con _forma_ e _tasso_ indicati.
+
