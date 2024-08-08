@@ -2,37 +2,33 @@
 :page-en: commands/Exponential
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
-Esponenziale(Parametro, x)::
-  Genera la funzione di distribuzione cumulativa di una
-  http://en.wikipedia.org/wiki/it:Distribuzione_esponenziale[distribuzione esponenziale] di parametro λ indicato.
-
-Esponenziale(Parametro, x, Booleano Cumulativa)::
-  Se _Cumulativa_ è _true_, genera la funzione di distribuzione cumulativa della distribuzione esponenziale, altrimenti
-  genera la funzione di densità di probabilità della distribuzione esponenziale.
-
-Esponenziale(Parametro, Valore variabile)::
-  Calcola il valore della funzione di distribuzione cumulativa della distribuzione esponenziale in corrispondenza del
-  valore della variabile _v_, cioè la probabilità _P(X ≤ v)_ dove _X_ è una variabile casuale con distribuzione
-  esponenziale di parametro indicato λ.
+Esponenziale(Lambda, Valore variabile)::
+  Calcola il valore della funzione di distribuzione cumulata di una distribuzione Esponenziale in corrispondenza del _valore variabile v_ specificato, cioè calcola la probabilità _P(X≤v)_ dove _X_ è una variabile casuale con distribuzione Esponenziale con parametro _lambda_ indicato.
 
 [NOTE]
 ====
 
-Restituisce la probabilità relativa a un determinato valore di _x_ (ovvero l'area sottesa dalla curva della
-distribuzione esponenziale alla sinistra dell'ascissa _x_ indicata).
+Questa sintassi restituisce la probabilità relativa al valore indicato della variabile, che è l'area sottesa dalla curva della distribuzione Esponenziale alla sinistra dell'ascissa indicata.
 
 ====
 
+Esponenziale(Lambda, Valore variabile, Booleano Cumulata)::
+  Se _Cumulata_ è _true_, calcola il valore della funzione di distribuzione cumulata di una distribuzione Esponenziale con parametro _lambda_ in corrispondenza del _valore variabile_, altrimenti calcola il valore della funzione densità di probabilità di una distribuzione Esponenziale con parametro _lambda_ in corrispondenza del _valore variabile_.
+
+
+Esponenziale(Lambda, x, Booleano Cumulata)::
+  Se _Cumulata_ è _true_, genera la funzione di distribuzione cumulata di una distribuzione Esponenziale, altrimenti genera la funzione densità di probabilità di una distribuzione Esponenziale di parametro _lambda_ indicato.
+
+
 == Sintassi CAS
 
-Esponenziale(Parametro, Valore variabile)::
-  Calcola il valore della funzione di distribuzione cumulativa della distribuzione esponenziale in corrispondenza del
-  valore della variabile _v_, cioè la probabilità _P(X ≤ v)_ dove _X_ è una variabile casuale con distribuzione
-  esponenziale di parametro indicato λ.
+Esponenziale(Lambda, Valore variabile)::
+  Calcola il valore della funzione di distribuzione cumulata di una distribuzione Esponenziale in corrispondenza del _valore variabile v_ specificato, cioè calcola la probabilità _P(X≤v)_ dove _X_ è una variabile casuale con distribuzione Esponenziale con parametro _lambda_ indicato.
+
 
 [EXAMPLE]
 ====
 
-`++Esponenziale(2, 1)++` restituisce _stem:[1 - \frac{1}\{e^\{2} } ]_, che vale circa _0.86_.
+`++Esponenziale(2, 1)++` restituisce _stem:[1 - \frac{1}{e^{2} } ]_, che vale circa _0.86_.
 
 ====

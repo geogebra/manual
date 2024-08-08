@@ -3,31 +3,30 @@
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
 ChiQuadro(Gradi di libertà, Valore variabile)::
-  Genera la funzione di distribuzione cumulativa di una
-  http://en.wikipedia.org/wiki/it:Distribuzione_chi_quadrato[distribuzione Chi quadro], cioè la probabilità _P(X≤v)_ dove _X_ è una variabile casuale con distribuzione
-  Chi quadro avente i _Gradi di libertà_ indicati.
-
-ChiQuadro(Gradi di libertà, Valore variabile, Booleano Cumulata)::
-  Se _Cumulata_ è _true_, calcola il valore della funzione di distribuzione cumulativa di una distribuzione _Chi quadro_ in corrispondenza del
-  _Valore variabile_, cioè la probabilità_ P(X ≤ v) _dove_ X _è una variabile casuale con distribuzione Chi quadro avente i gradi di libertà indicati._
-
-
-ChiQuadro(Gradi di libertà, x, Booleano Cumulativa)::
-  Se _Cumulativa_ è _true_, genera la funzione di distribuzione cumulativa di una distribuzione _Chi quadro_, altrimenti
-  genera la funzione densità di probabilità di una distribuzione _Chi quadro_.
-
+  Calcola il valore della funzione di distribuzione cumulativa di una  http://en.wikipedia.org/wiki/it:Distribuzione_chi_quadrato[distribuzione Chi quadro] in corrispondenza del valore della variabile specificato _v_, cioè calcola la probabilità _P(X≤v)_ dove _X_ è una variabile casuale con distribuzione Chi quadro avente i _Gradi di libertà_ indicati.
 
 [EXAMPLE]
 ====
 
-`++ChiQuadro(4, 3)++` restituisce stem:[\gamma(2, \frac{3}\{2})], che vale circa _0.44_.
+`++ChiQuadro(4, 3)++` restituisce stem:[\gamma\left(2, \frac{3}{2}\right)], che vale circa _0.44_.
 
 ====
 
 [NOTE]
 ====
 
-Restituisce la probabilità relativa al valore indicato dell'ascissa (ovvero l'area sottesa dalla curva della
-distribuzione Chi quadro alla sinistra dell'ascissa indicata).
+Questa sintassi restituisce la probabilità relativa al valore indicato della variabile, che è l'area sottesa dalla curva della distribuzione Chi quadro alla sinistra dell'ascissa indicata.
 
 ====
+
+ChiQuadro(Gradi di libertà, Valore variabile, Booleano Cumulata)::
+  Se _Cumulata_ è _true_, calcola il valore della funzione di distribuzione cumulativa di una distribuzione _Chi quadro_ in corrispondenza del _Valore variabile_, cioè la probabilità _P(X ≤ v)_ dove _X_ è una variabile casuale con distribuzione Chi quadro avente i gradi di libertà indicati.
+
+
+ChiQuadro(Gradi di libertà, x, Booleano Cumulativa)::
+  Se _Cumulata_ è _true_, genera la funzione di distribuzione cumulativa di una distribuzione _Chi quadro_, altrimenti genera la funzione densità di probabilità di una distribuzione _Chi quadro_ avente i gradi di libertà indicati.
+
+
+
+
+
