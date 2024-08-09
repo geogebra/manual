@@ -3,12 +3,18 @@
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 InverseNormal( <Mean>, <Standard Deviation>, <Probability> )::
-  Calculates the function stem:[\Phi^{-1}(P) \cdot \sigma + \mu ] with given probability _P_, mean _μ_ and standard
-  deviation _σ_, where stem:[\Phi^{-1}] is the inverse of the cumulative distribution function _Φ_ for _N(0,1)_.
+  Evaluates the expression stem:[\Phi^{-1}(P) \cdot \sigma + \mu ] at given probability _P_, where stem:[\Phi^{-1}] is the inverse of the cumulative distribution function _Φ_ for _N(0,1)_, defined by the given parameters _mean_ and _standard deviation_.
 
 [NOTE]
 ====
 
-Returns the _x_-coordinate with the given probability to the left under the normal distribution curve.
+Returns the _x_-coordinate of the point with the given probability (area) to the left, under the normal distribution curve.
+
+====
+
+[EXAMPLE]
+====
+
+`++InverseNormal(50, 2, 0.9)++` yields 52.56, that is the 90th percentile of a normal distribution with a mean of 50 and standard deviation 4.5.
 
 ====
