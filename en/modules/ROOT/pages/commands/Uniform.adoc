@@ -2,15 +2,15 @@
 :page-en: commands/Uniform
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
-Uniform( <Lower Bound>, <Upper Bound>, <Mode>, <Variable Value> )::
+Uniform( <Lower Bound>, <Upper Bound>, <Variable Value> )::
   Evaluates the cumulative distribution function of a uniform distribution at _variable value v_, i.e. calculates the
-  probability _P(X ≤ v)_ where _X_ is a random variable with a uniform distribution in [_lower bound_, _upper bound_] with the given _mode_.
+  probability _P(X ≤ v)_ where _X_ is a random variable with a uniform distribution in [_lower bound_, _upper bound_].
 
 
-Uniform( <Lower Bound>, <Upper Bound>, <Mode>, <Variable Value>, <Boolean Cumulative> )::
+Uniform( <Lower Bound>, <Upper Bound>, <Variable Value>, <Boolean Cumulative> )::
   If _Cumulative = true_, evaluates the cumulative distribution function of a http://en.wikipedia.org/wiki/Uniform_distribution_(continuous)[uniform
-  distribution] with given _mode_ at the given _variable value_ in [_lower bound_, _upper bound_], otherwise it evaluates the probability density function of the distribution at _variable value_.
+  distribution] at the given _variable value_ in [_lower bound_, _upper bound_], otherwise it evaluates the probability density function of the distribution at _variable value_.
 
-Uniform( <Lower Bound>, <Upper Bound>, <Mode>, x, <Boolean Cumulative> )::
-  If _Cumulative_ is true, creates the cumulative distribution function of a uniform distribution with given _mode_ in [_lower bound_, _upper bound_], otherwise it creates the probability density function of a unifrom distribution with given _mode_ in [_lower bound_, _upper bound_].
+Uniform( <Lower Bound>, <Upper Bound>, x, <Boolean Cumulative> )::
+  If _Cumulative_ is true, creates the cumulative distribution function of a uniform distribution in [_lower bound_, _upper bound_], otherwise it creates the probability density function of a unifrom distribution in [_lower bound_, _upper bound_].
 
