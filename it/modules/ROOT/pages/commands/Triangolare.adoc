@@ -2,19 +2,8 @@
 :page-en: commands/Triangular
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
-Triangolare(Limite inferiore, Limite superiore, Moda, x)::
-  Genera la funzione di distribuzione cumulativa di una
-  http://en.wikipedia.org/wiki/it:Distribuzione_triangolare[distribuzione triangolare] avente i parametri di limite
-  inferiore, superiore e moda indicati.
-
-Triangolare(Limite inferiore, Limite superiore, Moda, x, Booleano Cumulativa)::
-  Se _Cumulativa_ è _true_, genera la funzione di distribuzione cumulativa della distribuzione triangolare, altrimenti
-  genera la funzione di densità di probabilità della distribuzione triangolare.
-
 Triangolare(Limite inferiore, Limite superiore, Moda, Valore variabile)::
-  Calcola il valore della funzione di distribuzione cumulativa della distribuzione triangolare in corrispondenza del
-  valore della variabile _v_ indicato, cioè la probabilità _P(X ≤ v)_ dove _X_ è una variabile casuale con distribuzione
-  triangolare avente parametri di limite inferiore, superiore e moda indicati.
+  Calcola il valore della funzione di distribuzione cumulata di una distribuzione triangolare in corrispondenza del _valore variabile v_ specificato, cioè calcola la probabilità _P(X≤v)_ dove _X_ è una variabile casuale con distribuzione triangolare con _limite inferiore_, _limite superiore_ e _moda_ indicati.
 
 [EXAMPLE]
 ====
@@ -26,7 +15,15 @@ Triangolare(Limite inferiore, Limite superiore, Moda, Valore variabile)::
 [NOTE]
 ====
 
-Restituisce la probabilità relativa a un determinato valore di _x_ (cioè l'area sottesa dalla curva della distribuzione
-triangolare alla sinistra dell'ascissa _x_ indicata).
+uesta sintassi restituisce la probabilità relativa al valore indicato della variabile, che è l'area sottesa dalla curva della distribuzione triangolare alla sinistra dell'ascissa indicata.
+
 
 ====
+
+Triangolare(Limite inferiore, Limite superiore, Moda, Valore variabile, Booleano Cumulata)::
+  Se _Cumulata_ è _true_, calcola il valore della funzione di distribuzione cumulata di una http://en.wikipedia.org/wiki/it:Distribuzione_triangolare[distribuzione triangolare] con i parametri di _limite
+  inferiore_, _limite superiore_ e _moda_ indicati in corrispondenza del _valore variabile_, altrimenti calcola il valore della funzione densità di probabilità di una distribuzione triangolare con i parametri indicati, in corrispondenza del _valore variabile_.
+
+Triangolare(Limite inferiore, Limite superiore, Moda, x, Booleano Cumulativa)::
+  Se _Cumulata_ è _true_, genera la funzione di distribuzione cumulata di una distribuzione triangolare, altrimenti genera la funzione densità di probabilità di una distribuzione triangolare avente i parametri indicati.
+
