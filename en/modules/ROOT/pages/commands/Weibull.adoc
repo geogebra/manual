@@ -2,16 +2,9 @@
 :page-en: commands/Weibull
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
-Weibull( <Shape>, <Scale>, x )::
-  Creates cumulative density function (cdf) of http://en.wikipedia.org/wiki/Weibull_distribution[Weibull distribution]
-  with parameters shape _k_ and scale _λ_
-Weibull( <Shape>, <Scale>, x, <Boolean Cumulative> )::
-  If _Cumulative_ is true, creates cumulative distribution function of Weibull distribution, otherwise creates pdf of
-  Weibull distribution.
 Weibull( <Shape>, <Scale>, <Variable Value> )::
-  Calculates the value of cumulative distribution function of Weibull distribution at variable value _v_, i.e. the
-  probability _P(X ≤ v)_ where _X_ is a random variable with Weibull distribution given by parameters shape _k_ and
-  scale _λ_.
+  Evaluates the cumulative distribution function of a Weibull distribution at _variable value v_, i.e. calculates the
+  probability _P(X ≤ v)_ where _X_ is a random variable with a Weibull distribution defined by the given parameters _shape_ and _scale_.
 
 [EXAMPLE]
 ====
@@ -24,7 +17,14 @@ Weibull( <Shape>, <Scale>, <Variable Value> )::
 [NOTE]
 ====
 
-Returns the probability for a given _x_-coordinate's value (or area under the Weibull distribution curve to the left of
-the given _x_-coordinate).
+This syntax returns the probability at a given value, that is the area under the Erlang distribution curve to the left of the given _x_-coordinate.
 
 ====
+
+Weibull( <Shape>, <Scale>, <Variable Value>, <Boolean Cumulative> )::
+  If _Cumulative = true_, evaluates the cumulative distribution function of a Weibull distribution with given _shape_ and _scale_ at the given _variable value_, otherwise it evaluates the probability density function of the distribution at _variable value_.
+
+Weibull( <Shape>, <Scale>, x, <Boolean Cumulative> )::
+ If _Cumulative = true_, creates the cumulative density function (cdf) of a Weibull distribution with given _shape_ and _scale_, otherwise it creates the probability density function (pdf) of the distribution.
+
+
