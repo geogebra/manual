@@ -3,20 +3,20 @@
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 SetCoords( <Object>, <x>, <y> )::
-  Changes cartesian coordinates of xref:/Free_Dependent_and_Auxiliary_Objects.adoc[free] objects. This command uses
-  values of the coordinates, not their definitions, therefore the object stays free.
+  Sets the cartesian coordinates of xref:/Free_Dependent_and_Auxiliary_Objects.adoc[free] objects in a 2D View as the given coordinates. This command uses
+  the coordinates values, not their definitions, therefore the object stays free.
+
+SetCoords( <Object>, <x>, <y>, <z> )::
+  Sets the cartesian coordinates of xref:/Free_Dependent_and_Auxiliary_Objects.adoc[free] objects in the 3D View as the given coordinates. This command uses
+  the coordinates values, not their definitions, therefore the object stays free.
 
 [NOTE]
 ====
 
-This also works for Points on paths and in regions. The Point will be moved to the closest possible place
+* This also works for points on paths and in regions. The point will be moved to the closest possible position.
 
-====
+* This command works also for sliders, buttons, checkboxes, input Boxes and Images. 
 
-[NOTE]
-====
-
-This command now works for Sliders, Buttons, Checkboxes, Input Boxes, Images. If "Absolute Screen Position" is selected
-then _x_, _y_ are in screen pixels.
+* If the option "Absolute Screen Position" is selected, then _x_, _y_ and _z_ are in screen pixels.
 
 ====
