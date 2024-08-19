@@ -3,7 +3,30 @@
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
 TestoVerticale(Testo)::
-  Restituisce il testo indicato, ruotato di 90° in senso antiorario. Il risultato è in formato xref:/LaTeX.adoc[LaTeX].
+  Crea un testo in formato xref:/LaTeX.adoc[LaTeX] contenente il testo indicato, ruotato di 90° in senso antiorario.
+
+[NOTE]
+====
+
+* Il testo deve essere indicato tra virgolette `++"++` per consentire a GeoGebra di riconoscerlo come tale.
+* Il testo viene ruotato in modo tale che l'angolo in alto a sinistra (Corner 4) del rettangolo che lo contiene sia in corrispondenza dell'origine del sistema di riferimento.
+
+====
+
+[EXAMPLE]
+====
+
+* `++TeastoVerticale("a = 5")++` crea il testo LaTeX "_a_ = 5" visualizzato verticalmente, con l'angolo in alto a sinistra del rettangolo del testo in (0,0).
+
+====
 
 TestoVerticale(Testo, Punto)::
-  Consente di specificare la posizione del testo indicato.
+  Crea nella posizione indicata (punto) un testo in formato xref:/LaTeX.adoc[LaTeX] contenente il testo dato, ruotato di 90° in senso antiorario.
+
+[EXAMPLE]
+====
+
+* `++TestoVerticale("GeoGebra", (6, 6))++` crea il testo LaTeX "_GeoGebra_" visualizzato verticalmente, con l'angolo in alto a snistra del rettangolo del testo in (6,6).
+
+
+====
