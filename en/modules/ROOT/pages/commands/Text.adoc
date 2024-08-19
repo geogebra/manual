@@ -3,24 +3,24 @@
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 Text( <Object> )::
-  Returns the formula of the object as a xref:/Texts.adoc[text object].
+  Creates a xref:/Texts.adoc[text] containing the formula of the given object.
 
 [EXAMPLE]
 ====
 
-If _a = 2_ and _c = a^2^_, then `++Text(c)++` returns the text _"4"_.
+If _a = 2_ and _c = a^2^_, then `++Text(c)++` creates the text _"4"_.
 
 ====
 
 [NOTE]
 ====
 
-By default, values are substituted to variables.
+By default, values are substituted to the corresponding variables.
 
 ====
 
 Text( <Object>, <Boolean for Substitution of Variables> )::
-  Returns the formula of the object as a text object. The Boolean variable determines whether values are substituted to
+  Creates a text containing the formula of the given object. The Boolean variable determines whether values are substituted to
   variables (_true_) or variable names are shown in the text (_false_).
 
 [EXAMPLE]
@@ -28,49 +28,48 @@ Text( <Object>, <Boolean for Substitution of Variables> )::
 
 If _a = 2_ and _c = a^2^_, then
 
-* `++Text(c, true)++` returns the text _"4"_ and
-* `++Text(c, false)++` returns the text _"a^2^"_.
+* `++Text(c, true)++` creates the text _"4"_ and
+* `++Text(c, false)++` creates the text _"a^2^"_.
 
 ====
 
 Text( <Object>, <Point> )::
-  Returns the formula of the object as a text object at the position of the given point.
+  Creates a text containing the formula of the given object at the given position (point). 
 
 [EXAMPLE]
 ====
 
-`++Text("hello", (2, 3))++` returns the text _"hello"_ at the position _(2, 3)_.
+`++Text("hello", (2, 3))++` creates the text _"hello"_ at _(2, 3)_.
 
 ====
 
 Text( <Object>, <Point>, <Boolean for Substitution of Variables> )::
-  Returns the formula of the object as a text object, at the position of the given point. The Boolean variable
+   Creates a text containing the formula of the given object at the given position (point). The Boolean variable
   determines whether values are substituted to variables (_true_) or variable names are shown in the text (_false_).
 
 [EXAMPLE]
 ====
 
-If _a = 2_ and _c = a^2^_, then `++Text(c, (2, 1), true)++` returns the text _"4"_ at the position _(2, 1)_.
+If _a = 2_ and _c = a^2^_, then `++Text(c, (2, 1), true)++` creates the text _"4"_ at _(2, 1)_.
 
 ====
 
 Text( <Object>, <Point>, <Boolean for Substitution of Variables>, <Boolean for LaTeX formula> )::
-  Returns the formula of the object as a text object at the position of the given point. First Boolean variable
+   Creates a text containing the formula of the given object at the given position (point). The first Boolean variable
   determines whether values are substituted to variables (_true_) or variable names are shown in the text (_false_). If
   the second Boolean variable is _true_, the text is rendered using xref:/LaTeX.adoc[LaTeX].
 
 [EXAMPLE]
 ====
 
-If _a = 2_ and _c = a^2^_, then `++Text(c, (2, 1), true, true)++` returns the LaTeX text _"4"_ at the position _(2, 1)_.
+If _a = 2_ and _c = a^2^_, then `++Text(c, (2, 1), true, true)++` creates the LaTeX text _"4"_ at _(2, 1)_.
 
 ====
 
 Text( <Object>, <Point>, <Boolean for Substitution of Variables>, <Boolean for LaTeX formula>, <Horizontal alignment [-1|0|1]>, <Vertical alignment [-1|0|1]> )::
-  Returns the formula of the object as a text object at the position of the given point. The first Boolean variable
+   Creates a text containing the formula of the given object at the given position (point). The first Boolean variable
   determines whether values are substituted to variables (_true_) or variable names are shown in the text (_false_). If
-  the second Boolean variable is _true_, the text is rendered using xref:/LaTeX.adoc[LaTeX]. The values -1, 0, 1 for
-  horizontal and vertical alignment shift the text object from the default position respectively as follows:
+  the second Boolean variable is _true_, the text is rendered using xref:/LaTeX.adoc[LaTeX]. The values -1, 0, 1 define the horizontal and vertical alignment, shifting the text from the default position respectively as follows:
   * -1: horizontal shift leftwards / vertical shift downwards
   * 0: centers the text object horizontally / vertically at the given point
   * 1: horizontal shift rightwards / vertical shift upwards
@@ -78,7 +77,7 @@ Text( <Object>, <Point>, <Boolean for Substitution of Variables>, <Boolean for L
 [EXAMPLE]
 ====
 
-If _a = 2_ and _c = a^2^_, then `++Text(c, (2, 1), true, true, -1, 0)++` returns the LaTeX text _"4"_ to the left of
+If _a = 2_ and _c = a^2^_, then `++Text(c, (2, 1), true, true, -1, 0)++` creates the LaTeX text _"4"_ to the left of
 _(2, 1)_, and vertically aligned with the point.
 
 ====
