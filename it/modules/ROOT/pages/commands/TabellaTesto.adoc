@@ -26,26 +26,6 @@ TabellaTesto(Lista, Lista,..., Allineamento del testo)::
   Crea un testo contenente una tabella degli oggetti delle liste. Il testo opzionale “Allineamento del testo” controlla
   l'orientamento e l'allineamento del testo nella tabella, e l'allineamento dei numeri rispetto al separatore decimale.
 
-[EXAMPLE]
-====
-
-* `++TabellaTesto({1, 2, 3, 4},{1, 4, 9, 16},"v")++` crea un testo avente due colonne e quattro righe i cui elementi
-sono allineati a sinistra.
-* `++TabellaTesto({1, 2, 3, 4},{1, 4, 9, 16},"h")++` crea un testo avente due righe e quattro colonne i cui elementi
-sono allineati a sinistra.
-* `++TabellaTesto({11.2, 123.1, 32423.9, 234.0},"vr")++` crea un testo di una colonna i cui elementi sono allineati a
-destra.
-* `++TabellaTesto({A1:A10, B1:B10, C1:C10}, "vl")++` crea un testo di tre colonne con allineamento a sinistra: gli
-elementi di ciascuna colonna sono gli oggetti presenti nelle celle indicate del _Foglio di calcolo_.
-* `++TabellaTesto({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "v.")++` crea un testo in cui i valori numerici sono
-allineati rispetto al separatore decimale: image:TabPtDec.png[TabPtDec.png,width=152,height=111]
-* `++TabellaTesto({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "v%")++` crea un testo i cui elementi vengono convertiti
-in percentuale, e allineati rispetto al separatore decimale:
-image:200px-TableuPourCent.png[TableuPourCent.png,width=200,height=89]
-* https://www.geogebra.org/m/Eq5T3vV3[Esempio online di Michael Borcherds]
-
-====
-
 [NOTE]
 ====
 
@@ -64,6 +44,28 @@ tabella abbiano lo stesso numero di cifre decimali
 tabella abbiano lo stesso numero di cifre decimali
 
 ====
+
+[EXAMPLE]
+====
+
+* `++TabellaTesto({1, 2, 3, 4},{1, 4, 9, 16},"v")++` crea un testo avente due colonne e quattro righe i cui elementi
+sono allineati a sinistra.
+* `++TabellaTesto({1, 2, 3, 4},{1, 4, 9, 16},"h")++` crea un testo avente due righe e quattro colonne i cui elementi
+sono allineati a sinistra.
+* `++TabellaTesto({11.2, 123.1, 32423.9, 234.0},"vr")++` crea un testo di una colonna i cui elementi sono allineati a
+destra.
+* `++TabellaTesto({A1:A10, B1:B10, C1:C10}, "vl")++` crea un testo di tre colonne con allineamento a sinistra: gli
+elementi di ciascuna colonna sono gli oggetti presenti nelle celle indicate del _Foglio di calcolo_.
+* `++TabellaTesto({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "v.")++` crea un testo in cui i valori numerici sono
+allineati rispetto al separatore decimale: image:TabPtDec.png[TabPtDec.png,width=152,height=111]
+* `++TabellaTesto({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "v%")++` crea un testo i cui elementi vengono convertiti
+in percentuale, e allineati rispetto al separatore decimale:
+image:200px-TableuPourCent.png[TableuPourCent.png,width=200,height=89]
+* https://www.geogebra.org/m/Eq5T3vV3[Esempi online di Michael Borcherds]
+
+====
+
+
 
 TabellaTesto(Lista, Lista, ..., Allineamento del testo, Larghezza minima celle)::
   Crea un testo contenente una tabella degli oggetti delle liste, aventi l'allineamento e la larghezza delle celle (in
@@ -90,6 +92,13 @@ px e alta 80 px.
 
 ====
 
+[NOTE]
+====
+
+La _larghezza_ e _altezza_ dei un oggetto _TabellaTesto_ dipendono anche dalle impostazioni delle dimensioni del carattere.
+
+====
+
 È inoltre possibile inserire:
 
 * vari tipi di parentesi, utilizzando nella stringa i simboli ||||, ||, \{}, [] oppure ()
@@ -100,12 +109,11 @@ px e alta 80 px.
 [EXAMPLE]
 ====
 
-* `++TabellaTesto({1,2},{3,4},"c()")++` crea il testo stem:[\begin{pmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end{pmatrix} ]
+* `++TabellaTesto({1,2},{3,4},"c()")++` crea il testo stem:[\begin{pmatrix}{} 1 & 2 \\ 3 & 4 \\ \end{pmatrix} ]
 * `++TabellaTesto({1,2},{3,4},"c|_")++` crea il testo image:50px-TabellaTesto.png[TabellaTesto.png,width=50,height=56]
-* `++TabellaTesto({1,2},{3,4},"||")++` crea il testo stem:[ \begin\{vmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{vmatrix} ]
-* `++TabellaTesto({1,2},{3,4},"||||")++` crea il testo stem:[\begin\{Vmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{Vmatrix} ]
-* `++TabellaTesto({{"2x+3y=5","5x+8y=12"}},"{v")++` crea il sistema stem:[ \left\\{\begin\{matrix} 2x+3y=5\\ 5x+8y=12
-\end\{matrix}\right.]
+* `++TabellaTesto({1,2},{3,4},"||")++` crea il testo stem:[ \begin{vmatrix}{} 1 & 2 \\ 3 & 4 \\ \end{vmatrix} ]
+* `++TabellaTesto({1,2},{3,4},"||||")++` crea il testo stem:[\begin{Vmatrix}{} 1 & 2 \\ 3 & 4 \\ \end{Vmatrix} ]
+* `++TabellaTesto({{"2x+3y=5","5x+8y=12"}},"{v")++` crea il sistema stem:[ \left\{\begin{matrix} 2x+3y=5\\ 5x+8y=12 \end{matrix}\right.]
 * `++TabellaTesto({{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "-/|_v")++` crea una tabella
 con bordo senza linee di divisione tra le righe: image:Tabslsc.png[Tabslsc.png,width=130,height=85]
 * `++TabellaTesto({{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "|11001 _110001 h")++` crea
