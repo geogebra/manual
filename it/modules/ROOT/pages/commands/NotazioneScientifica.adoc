@@ -3,10 +3,24 @@
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
 NotazioneScientifica(Numero)::
-  Visualizza il numero indicato in http://it.wikipedia.org/wiki/Notazione_scientifica[notazione scientifica]
+  Crea un testo contenente il numero indicato in http://it.wikipedia.org/wiki/Notazione_scientifica[notazione scientifica]. 
+
+[NOTE]
+====
+
+Il testo viene posizionato con l'angolo in alto a destra (Corner 4) del rettangolo che lo contiene in corrispondenza dell'origine del sistema di coordinate.
+
+====
+
+[EXAMPLE]
+====
+
+`++NotazioneScientifica(0.002)++` crea il testo _2 × 10^-3^._
+
+====
+
 NotazioneScientifica(Numero , Precisione)::
-  Visualizza il numero in notazione scientifica, con il numero delle cifre significative pari al valore specificato nel
-  parametro _precisione_.
+  Crea un testo contenente il numero indicato in notazione scientifica, con il numero delle cifre significative indicate nel parametro _precisione_.
 
 [EXAMPLE]
 ====
@@ -15,9 +29,3 @@ NotazioneScientifica(Numero , Precisione)::
 
 ====
 
-[EXAMPLE]
-====
-
-`++NotazioneScientifica(0.002)++` restituisce _2 × 10^-3^._
-
-====
