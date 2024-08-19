@@ -3,7 +3,33 @@
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 VerticalText( <Text> )::
-  Returns xref:/Texts.adoc[text] rotated by 90° counter-clockwise. xref:/LaTeX.adoc[LaTeX] is used for rendering of the
-  result.
+  Creates a xref:/LaTeX.adoc[LaTeX] xref:/Texts.adoc[text], containing the given text rotated 90° counter-clockwise.
+[NOTE]
+====
+
+* The text needs to be enclosed in double quotes `++"++`.
+* The text is rotated such that the top left corner (also known as Corner 4) of the box containing it is placed at the origin of the coordinate system.
+
+====
+
+[EXAMPLE]
+====
+
+* `++VerticalText("a = 5")++` creates the LaTeX text "_a_ = 5" displayed vertically, with its top left corner at (0,0)
+
+====
+
 VerticalText( <Text>, <Point> )::
-  This allows the location of the Text to be specified.
+ Creates at the given point a xref:/LaTeX.adoc[LaTeX] xref:/Texts.adoc[text], containing the given text rotated 90° counter-clockwise. 
+
+
+[EXAMPLE]
+====
+
+* `++VerticalText("GeoGebra", (6, 6))++` creates the LaTeX text "_GeoGebra_" displayed vertically, with its top left corner at (6,6)
+
+
+====
+
+
+
