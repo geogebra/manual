@@ -2,44 +2,80 @@
 :page-en: commands/SD
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
-SD( <List of Numbers> )::
+SD( <List of Raw Data> )::
   Calculates the http://en.wikipedia.org/wiki/Standard_deviation[standard deviation] of the numbers in the list.
 
+[NOTE]
+====
+
+This command has also the equivalent syntax `stdevp( <List of Raw Data> )`.
+
+====
+
 [EXAMPLE]
 ====
 
-`++SD({1, 2, 3, 4, 5})++` yields _1.41_
+* `++SD({1, 2, 3, 4, 5})++` yields _1.41_
+
+* `++stdevp({1, 2, 3, 4, 5})++` yields _1.41_
 
 ====
 
-[EXAMPLE]
-====
-
-`++stdevp({1, 2, 3, 4, 5})++` yields _1.41_
-
-====
-
-SD( <List of Numbers>, <List of Frequencies> )::
+SD( <List of Raw Data>, <List of Frequencies> )::
   Calculates the weighted _standard deviation_ of the given numbers.
 
+[NOTE]
+====
+
+This command has also the equivalent syntax `stdevp( <List of Raw Data>, <List of Frequencies> )`.
+
+====
+
 [EXAMPLE]
 ====
 
-`++SD({20, 40, 41, 42, 40, 54}, {20, 6, 4, 5, 2, 1})++` yields _10.98_
+* `++SD({1, 2, 3, 4, 5}, {5, 4, 3, 2, 1})++` yields _1.25_
+* `++stdevp({1, 2, 3, 4, 5}, {5, 4, 3, 2, 1})++` yields _1.25_
 
 ====
 
 == CAS Syntax
 
-SD( <List of Numbers> )::
+SD( <List Raw Data> )::
   Calculates the _standard deviation_ of the numbers in the list.
+
+[NOTE]
+====
+
+This command has also the equivalent syntax `stdevp( <List of Raw Data> )`.
+
+====
 
 [EXAMPLE]
 ====
 
 * `++SD({1, 2, 3, 4, 5})++` yields stem:[\sqrt{2}].
+* `++stdevp({1, 2, 3, 4, 5})++` yields stem:[\sqrt{2}].
 * `++SD({-3 + 2 x, -1- 4 x, -2 + 5 x^2})++` is xref:/tools/Evaluate.adoc[evaluated] as stem:[ \sqrt{2}
 \frac{\sqrt{25x⁴ + 10x³ + 28x² - 18x + 3} } { 3 } ].
+
+====
+
+SD( <List of Raw Data>, <List of Frequencies> )::
+  Calculates the weighted _standard deviation_ of the given numbers.
+
+[NOTE]
+====
+
+This command has also the equivalent syntax `stdevp( <List of Raw Data>, <List of Frequencies> )`.
+
+====
+
+[EXAMPLE]
+====
+
+* `++SD({1, 2, 3, 4, 5}, {5, 4, 3, 2, 1})++` yields stem:[\frac{\sqrt{14}}{3}]
+* `++stdevp({1, 2, 3, 4, 5}, {5, 4, 3, 2, 1})++` yields stem:[\frac{\sqrt{14}}{3}]
 
 ====
 
