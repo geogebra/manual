@@ -3,7 +3,7 @@
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 Sum( <List> )::
-  Calculates the sum of all list elements.
+  Calculates the sum of all the elements in the list.
 
 [EXAMPLE]
 ====
@@ -17,7 +17,7 @@ Sum( <List> )::
 ====
 
 Sum( <List>, <Number of Elements> )::
-  Calculates the sum of the first _n_ list elements.
+  Calculates the sum of the first _n_ elements in the list.
 
 [EXAMPLE]
 ====
@@ -27,7 +27,7 @@ Sum( <List>, <Number of Elements> )::
 ====
 
 Sum( <List>, <List of Frequencies> )::
-  Returns the sum of given list of numbers considering the frequencies.
+  Returns the sum of the given list of values, considering the related frequencies.
 
 [EXAMPLE]
 ====
@@ -39,17 +39,18 @@ Sum( <List>, <List of Frequencies> )::
 [NOTE]
 ====
 
-This command works for numbers, points, vectors, text, and functions.
+* This command works for numbers, points, vectors, text, and functions.
+* Lists must contain objects of the same type.
 
 ====
 
 == CAS Syntax
 
-The following command only works in the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+The following command works only in the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
 xref:/CAS_View.adoc[CAS View].
 
 Sum( <Expression>, <Variable>, <Start Value>, <End Value> )::
-  Computes sum stem:[\sum_{t=Start Value}^{End Value}f(t)]. End value might be infinity.
+  Computes the sum stem:[\sum_{t=Start Value}^{End Value}f(t)]. End value can also be infinity.
 
 [EXAMPLE]
 ====
