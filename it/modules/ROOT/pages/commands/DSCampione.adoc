@@ -2,24 +2,40 @@
 :page-en: commands/SampleSD
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
-DSCampione(Lista di numeri)::
+DSCampione(Lista di dati grezzi)::
   Restituisce la http://en.wikipedia.org/wiki/it:_Deviazione_standard[deviazione standard del campione] della
   xref:/Liste.adoc[lista] di numeri indicata.
+
+[NOTE]
+====
+
+Questo comando ha anche la sintassi equivalente `devstc(Lista di dati grezzi)`.
+
+====
 
 [EXAMPLE]
 ====
 
-`++DSCampione({1, 2, 3})++` restituisce _1_.
+* `++DSCampione({1, 2, 3})++` restituisce _1_.
+* `++devstc({1, 2, 3})++` restituisce _1_.
 
 ====
 
 DSCampione(Lista di numeri, Lista di frequenze)::
   Restituisce la deviazione standard del campione di numeri aventi le frequenze indicate.
 
+[NOTE]
+====
+
+Questo comando ha anche la sintassi equivalente `devstc(Lista di numeri, Lista di frequenze)`.
+
+====
+
 [EXAMPLE]
 ====
 
-`++DSCampione({1, 2, 3, 4, 4},{1, 1, 1, 2})++` restituisce _1.08_.
+* `++DSCampione({1, 2, 3, 4},{1, 1, 1, 2})++` restituisce _1.3_.
+* `++devstc({1, 2, 3, 4},{1, 1, 1, 2})++` restituisce _1.3_.
 
 ====
 
@@ -29,12 +45,13 @@ DSCampione(Lista di numeri, Lista di frequenze)::
 Se la lista contiene variabili non definite, nella image:16px-Menu_view_cas.svg.png[Menu view
 cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[vista CAS], il comando restituisce il calcolo algebrico della
 deviazione standard del campione.
+====
 
 [EXAMPLE]
 ====
 
-`++DSCampione({1, 2, a})++` restituisce stem:[\frac{\sqrt{a²-3a+3}}\{\sqrt{3}}].
+`++DSCampione({1, 2, a})++` restituisce stem:[\frac{\sqrt{a²-3a+3}}{\sqrt{3}}].
 
 ====
 
-====
+
