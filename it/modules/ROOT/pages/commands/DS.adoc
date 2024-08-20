@@ -2,39 +2,80 @@
 :page-en: commands/SD
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
-DS(Lista di numeri)::
-  Calcola la http://en.wikipedia.org/wiki/it:Deviazione_standard[deviazione standard] dei valori della lista.
+DS(Lista dati grezzi)::
+  Calcola la http://en.wikipedia.org/wiki/it:Deviazione_standard[deviazione standard] dei valori della lista. 
+
+[NOTE]
+====
+
+Questo comando ha la sintassi equivalente `devstp(Lista dati grezzi)`.
+
+====
 
 [EXAMPLE]
 ====
 
-`++DS({1, 2, 3, 4, 5})++` restituisce _1.41_
+* `++DS({1, 2, 3, 4, 5})++` restituisce _1.41_
+* `++devstp({1, 2, 3, 4, 5})++` restituisce _1.41_
+
 
 ====
 
-DS(Lista di numeri, Lista di frequenze)::
+DS(Lista dati grezzi, Lista frequenze)::
   Calcola la deviazione standard pesata dei valori indicati.
 
+[NOTE]
+====
+
+Questo comando ha la sintassi equivalente `devstp(Lista dati grezzi, Lista frequenze)`.
+
+====
+
 [EXAMPLE]
 ====
 
-`++DS({20, 40, 41, 42, 40, 54}, {20, 6, 4, 5, 2})++` restituisce _5.96_
+* `++DS({1, 2, 3, 4, 5}, {5, 4, 3, 2, 1})++` restituisce _1.25_
+* `++devstp({1, 2, 3, 4, 5}, {5, 4, 3, 2, 1})++` restituisce _1.25_
 
 ====
 
 == Sintassi CAS
 
-DS(Lista di numeri)::
+DS(Lista dati grezzi)::
   Calcola la deviazione standard dei valori indicati.
+
+[NOTE]
+====
+
+Questo comando ha la sintassi equivalente `devstp(Lista dati grezzi)`.
+
+====
 
 [EXAMPLE]
 ====
 
-*Esempi:*
-
 * `++DS({1, 2, 3, 4, 5})++` restituisce stem:[\sqrt{2}].
+* `++devstp({1, 2, 3, 4, 5})++` restituisce stem:[\sqrt{2}].
 * `++DS({-3 + 2 x, -1- 4 x, -2 + 5 x^2})++` restituisce il xref:/tools/Calcola.adoc[risultato simbolico] stem:[
-\sqrt{2} \frac{\sqrt{25x⁴ + 10x³ + 28x² - 18x + 3} } \{ 3 } ]
+\sqrt{2} \frac{\sqrt{25x⁴ + 10x³ + 28x² - 18x + 3} }{ 3 } ]
+
+====
+
+DS(Lista dati grezzi, Lista frequenze)::
+  Calcola la deviazione standard pesata dei valori indicati.
+
+[NOTE]
+====
+
+Questo comando ha la sintassi equivalente `devstp(Lista dati grezzi, Lista frequenze)`.
+
+====
+
+[EXAMPLE]
+====
+
+* `++DS({1, 2, 3, 4, 5}, {5, 4, 3, 2, 1})++` restituisce stem:[\frac{\sqrt{14}}{3}]
+* `++devstp({1, 2, 3, 4, 5}, {5, 4, 3, 2, 1})++` restituisce stem:[\frac{\sqrt{14}}{3}]
 
 ====
 
