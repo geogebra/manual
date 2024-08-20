@@ -3,7 +3,7 @@
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
 Regressione(Lista di punti, Lista di Funzioni)::
-  Calcola una funzione che è combinazione lineare delle _funzioni_ e meglio approssima i _punti_ della lista.
+  Determina una funzione che è combinazione lineare delle _funzioni_ assegnate e approssima al meglio i _punti_ della lista.
 
 [EXAMPLE]
 ====
@@ -11,16 +11,15 @@ Regressione(Lista di punti, Lista di Funzioni)::
 *Esempi:*
 
 * `++Regressione({(-2, 3), (0, 1), (2, 1), (2, 3)}, {x^2, x})++` restituisce 0.625 __x__^2 - 0.25__x__.
-* Dati _L=\{A, B, C,...}, f(x) = 1, g(x) = x, h(x) = e^x, F = \{f, g, h}_, il comando `++ Regressione(L,F)++` calcola
+* Dati _L={A, B, C,...}, f(x) = 1, g(x) = x, h(x) = e^x, F = {f, g, h}_, il comando `++ Regressione(L,F)++` calcola
 una funzione del tipo _a + b x + c e^x_ che approssima i punti della lista.
 
 ====
 
 Regressione(Lista di punti, Funzione)::
-  Calcola una funzione di errore quadratico minimo, utilizzando i punti della lista. La _Funzione_ deve dipendere da uno
+  Determina una funzione approssimante i punti della lista con errore quadratico minimo rispetto al modello indicato. La _Funzione_ modello assegnata deve dipendere da uno
   o più slider, presi come valori iniziali dei parametri da ottimizzare. L'iterazione è di tipo non lineare e può non
-  convergere: in questo caso provare a modificare i valori degli slider in modo da ricercare un migliore valore
-  iniziale.
+  convergere: in questo caso provare a modificare i valori degli slider in modo da ricercare un migliore valore iniziale.
 
 [EXAMPLE]
 ====
