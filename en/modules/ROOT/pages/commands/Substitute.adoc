@@ -5,17 +5,20 @@ ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 == CAS Syntax
 
 Substitute( <Expression>, <from>, <to> )::
-  Substitutes _from_ in _expression_ with _to_.
+  Replaces in _expression_ all occurrences of _from_ with _to_ and evaluates the result when variables are substituted with values.
 
 [EXAMPLE]
 ====
 
 * `++Substitute((3 m - 3)^2 - (m + 3)^2, m, a)++` yields _8 a^2^ - 24 a_.
 
+* `++Substitute((3 m - 3)^2 - (m + 3)^2, m, 2)++` yields _-16_.
+
+
 ====
 
 Substitute( <Expression>, <Substitution List> )::
-  Substitutes in _expression_ every variable of the list with the variable or number you choose for it.
+  Replaces in _expression_ every occurrence of the variables in the _substitution list_ with the corresponding terms or values, and evaluates numerical substitutions.
 
 [EXAMPLE]
 ====
