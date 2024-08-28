@@ -2,15 +2,47 @@
 :page-en: tools/Two_Variable_Regression_Analysis
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
-Select two columns with paired number data in the spreadsheet, then activate this tool to open a dialog that creates
-graphs and calculates two-variable statistics from the data. The dialog has four panels: a statistics panel, a data
-panel and two graph panels. Only one graph panel is visible when the dialog is first opened. Use the options menu to
-show the others.
+Select a set of cells in the spreadsheet, then click the tool to open the Data Source dialog window. Use the image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] icon on top right of the dialog to refine the description of the type of selected data, then press the _Analyze_ button to start the data analysis and display relevant data and graphs.
+In the dropdown menu below the graph, select a regression model for the data. The selected model’s graph will be drawn on the plot, and its equation will be displayed beneath.
 
-The dialog opens with a scatterplot of the selected data. In the drop down menu below the graph you can select different
-regression models for the data. When a model is selected its graph is drawn on the plot and the equation is shown
-beneath.
+[NOTE]
+====
 
-Options
+In the web version, the graph is displayed without pressing the Analyze button.
 
-Drag and Drop
+====
+
+== Data Analysis Dialog panels
+* *Opens the Data Source dialog*
+
+* *Show Statics* +
+Shows a table of basic statistics, such as the mean and standard deviation.
+
+* *Show Data Source* +
+Allows to select / deselect analyzed data
+
+* *Show 2nd Plot* +
+Shows another plot of the same data.
+
+* Swaps the data on the vertical axis (Y-axis) and the horizontal axis (X-axis).
+
+
+== Graph Options
+* Use the dropdown list above the displayed plot to switch between the Scatter plot and the Residual Plot of current data.
+* Select the image:Export16.png[Export16.png,width=16,height=16] icon to access the following further options:
+ ** Copy to  image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]Graphics View
+ ** Copy to Clipboard (GeoGebra Desktop only)
+ ** Export as Picture (In the Desktop version, a dialog opens to choose the picture format. In the Web version, the graph is exported as a .png image file).
+* Change the graph settings and display depending on the desired analysis by selecting the  Options icon (Desktop version) or the image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] icon (web,apps). 
+
+
+[NOTE]
+====
+
+In the GeoGebra desktop version, use drag-and-drop to create a dynamic copy of a plot in the Graphics View or transfer a picture of the current plot to other applications that accept images. 
+When hovering the mouse near the top of the plot window, the cursor changes to a hand icon. Drag the mouse pointer to image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Graphics_View.adoc[Graphics
+View] 1 or 2 to create a dynamic copy of the current plot. Any change in the analyzed data will be applied to both the original and copied plots. 
+If the plot is dragged into an application other than GeoGebra, the exported plot will be static—a snapshot of the GeoGebra plot—and will not be updated when GeoGebra data are updated or modified.
+
+====
+

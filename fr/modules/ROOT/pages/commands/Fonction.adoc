@@ -8,7 +8,7 @@ Fonction( <Fonction>, <x min>, <x max> )::
 [NOTE]
 ====
 
-*Note :* Cette commande *n'est qu'une commande de représentation*. Pour restreindre l'ensemble de définition, créez une
+Cette commande *n'est qu'une commande de représentation*. Pour restreindre l'ensemble de définition, créez une
 fonction définie avec des conditions à l'aide de la xref:/commands/Si.adoc[commande Si], par ex.
 `++f(x) = Si(-1 < x && x < 1, x²)++`, ou un "raccourci" `++f(x)=x²,(-1<x<1)++`. *Attention !* Si vous oubliez la virgule
 `++,++` dans ce raccourci, la fonction créée est définie sur stem:[IR] ! (nulle en dehors de ]-1,1[) .
@@ -18,7 +18,7 @@ fonction définie avec des conditions à l'aide de la xref:/commands/Si.adoc[com
 [EXAMPLE]
 ====
 
-*Exemple :* `++f(x) = Fonction(x^2, -1, 1)++` dessine l'arc de la parabole représentative d'équation y=__x^2^__ sur
+`++f(x) = Fonction(x^2, -1, 1)++` dessine l'arc de la parabole représentative d'équation y=__x^2^__ sur
 l'intervalle [_-1_, _1_]. Cependant, bien que `++g(x) = 2 f(x)++` crée effectivement la fonction définie par _g(x) = 2
 x^2^_ comme attendu, l'ensemble de définition de g n'est pas l'intervalle [_-1_, _1_].
 

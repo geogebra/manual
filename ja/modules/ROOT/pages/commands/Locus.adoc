@@ -4,12 +4,6 @@ ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
 Locus( <軌跡の点Q>, <点P>)::
   点 _P_ の動きに応じて，点 _Q_ の描く軌跡 (locus) を返す．
-Locus( <軌跡の点Q>, <スライダーt>)::
-  スライダー _t_ がとる値に応じて，点 _Q_ の描く軌跡 (locus) を返す．
-Locus( <ベクトル場>, <点> )::
-  与えられた点におけるベクトル場の方程式と一致する軌跡曲線を返す．
-Locus( <f(x, y)>, <点> )::
-  指定された点における微分方程式 stem:[\frac{dy}{dx}=f(x,y)] の解に等しい軌跡曲線を返す．解は数値的に計算される．
 
 [NOTE]
 ====
@@ -17,6 +11,15 @@ Locus( <f(x, y)>, <点> )::
 点 _P_ は，オブジェクト (例えば，線分，円) 上にある点である必要がある．
 
 ====
+
+Locus( <軌跡の点Q>, <スライダーt>)::
+  スライダー _t_ がとる値に応じて，点 _Q_ の描く軌跡 (locus) を返す．
+Locus( <ベクトル場>, <点> )::
+  与えられた点におけるベクトル場の方程式と一致する軌跡曲線を返す．
+Locus( <f(x, y)>, <点> )::
+  指定された点における微分方程式 stem:[\frac{dy}{dx}=f(x,y)] の解に等しい軌跡曲線を返す．解は数値的に計算される．
+
+
 
 軌跡は特定のオブジェクトタイプであり，xref:/自由、従属、補助オブジェクト.adoc[自由、従属、補助オブジェクト]
 として表示される．Locusコマンドだけでなく，いくつかのxref:/commands/離散数学.adoc[離散数学_コマンド] や
@@ -31,9 +34,7 @@ xref:/commands/SolveODE.adoc[SolveODE コマンド] の結果としても現れ�
 
 ====
 
-[cols=",",]
-|===
-|image:18px-Attention.png[警告,title="警告",width=18,height=18] *警告*:
-|従属する点が2つのパラメータを持つxref:/commands/Point.adoc[Point
+image:18px-Attention.png[警告,title="警告",width=18,height=18] *警告*
+
+従属する点が2つのパラメータを持つxref:/commands/Point.adoc[Point
 コマンド]やxref:/commands/PathParameter.adoc[PathParameter コマンド]の結果である場合，その軌跡は未定義になる．
-|===

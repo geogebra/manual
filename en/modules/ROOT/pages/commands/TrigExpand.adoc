@@ -3,7 +3,7 @@
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 TrigExpand( <Expression> )::
-  Transforms a trigonometric expression into an expression using only simple variables as arguments.
+  Expands trigonometric functions of a sum of variables into trigonometric functions of a single variable, or expands products of trigonometric functions into linear expressions.
 
 [EXAMPLE]
 ====
@@ -11,21 +11,14 @@ TrigExpand( <Expression> )::
 `++TrigExpand(tan(x + y))++` gives stem:[\frac{\frac{\sin(x)}{\cos(x)}+\frac{\sin(y)}{\cos(y)}}
 {1-\frac{\sin(x)}{\cos(x)} \cdot \frac{\sin(y)}{\cos(y)}} ].
 
-====
 
-It can also expand a product into a linear expression
-
-[EXAMPLE]
-====
-
-`++TrigExpand(sin(x)sin(x/3))++` gives stem:[\frac{3}{2 \; x^{2}} \; \cos \left( 2 \cdot \frac{x}{3} \right) -
-\frac{3}{2 \; x^{2}} \; \cos \left( 4 \cdot \frac{x}{3} \right) ].
+`++TrigExpand(sin(x)sin(x/3))++` gives stem:[\frac{1}{2} \; \cos \left( 2 \cdot \frac{x}{3} \right) -
+\frac{1}{2} \; \cos \left( 4 \cdot \frac{x}{3} \right) ].
 
 ====
 
 TrigExpand( <Expression>, <Target Function> )::
-  Transforms a trigonometric expression into an expression using only simple variables as arguments, preferring the
-  given target function.
+  Expands trigonometric functions of a sum of variables into expressions containing (when possible) the given target function of a single variable.
 
 [EXAMPLE]
 ====
@@ -52,8 +45,7 @@ The following commands are only available in the image:16px-Menu_view_cas.svg.pn
 xref:/CAS_View.adoc[CAS View]:
 
 TrigExpand( <Expression>, <Target Function>, <Target Variable> )::
-  Transforms a trigonometric expression into an expression using only simple variables as arguments, preferring the
-  given target function and target variable.
+  Expands trigonometric expressions into expressions containing (when possible) only the given target function and variable.
 
 [EXAMPLE]
 ====
@@ -64,8 +56,8 @@ TrigExpand( <Expression>, <Target Function>, <Target Variable> )::
 ====
 
 TrigExpand( <Expression>, <Target Function>, <Target Variable>, <Target Variable> )::
-  Transforms a trigonometric expression into an expression using only simple variables as arguments, preferring the
-  given target function and target variables.
+  Expands trigonometric expressions into expressions containing (when possible) only the given target function and variables.
+
 
 [EXAMPLE]
 ====

@@ -11,8 +11,7 @@ equations in complex numbers see xref:/commands/CSolve.adoc[CSolve Command].
 
 ====
 
-The following commands are only available in the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
-xref:/CAS_View.adoc[CAS View].
+
 
 Solve( <Equation in x> )::
   Solves a given equation for the main variable and returns a list of all solutions.
@@ -24,13 +23,18 @@ Solve( <Equation in x> )::
 
 ====
 
+== CAS Syntax
+
+The following commands are only available in the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/CAS_View.adoc[CAS View].
+
 Solve( <Equation>, <Variable> )::
   Solves an equation for a given unknown variable and returns a list of all solutions.
 
 [EXAMPLE]
 ====
 
-`++Solve(x * a^2 = 4a, a)++` yields {stem:[a = \frac{4}{x}, a = 0]}, the solutions of _xa^2^ = 4a_.
+`++Solve(x * a^2 = 4a, a)++` yields {stem:[a = \frac{4}{x}, a = 0]}.
 
 ====
 
@@ -50,10 +54,7 @@ Solve( <List of Equations>, <List of Variables> )::
 [EXAMPLE]
 ====
 
-*Examples:*
-
-* `++Solve({x = 4 x + y , y + x = 2}, {x, y})++` yields _( x = -1, y = 3 )_, the sole solution of _x = 4x + y_ and _y +
-x = 2_
+* `++Solve({x = 4 x + y , y + x = 2}, {x, y})++` yields _( x = -1, y = 3 )_
 * `++Solve({2a^2 + 5a + 3 = b, a + b = 3}, {a, b})++` yields _{{a = 0, b = 3}, {a = -3, b = 6}}_.
 
 ====
@@ -63,8 +64,6 @@ Solve( <Equation>, <Variable> , <List of assumptions>)::
 
 [EXAMPLE]
 ====
-
-*Examples:*
 
 * `++Solve(u *x < a,x, u>0)++` yields _{x < a / u}_, the solution of _u *x < a_ assuming that _u>0_
 * `++Solve(u *x < a,x, {u<0, a<0})++` yields _{x > a / u}_.

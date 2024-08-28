@@ -3,7 +3,7 @@
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 FormulaText( <Object> )::
-  Returns the formula for the object as a LaTeX text.
+  Returns the formula that defines the object as a LaTeX text. Values are substituted for variables by default.
 
 [EXAMPLE]
 ====
@@ -12,10 +12,18 @@ Let _a = 2_ and _f(x) = a x^2^_. `++FormulaText(f)++` returns _2 x^2^_ (as a LaT
 
 ====
 
-FormulaText( <Object>, <Boolean for Substitution of Variables> )
+[NOTE]
+====
 
-Returns the formula for the object as LaTeX text. The Boolean variable determines if values are substituted for
-variables (_true_) or if variable names are shown in the text (_false_).
+In GeoGebra Classic v.5, the command `++FormulaText($1)++` returns the content of cell 1 of the CAS View as a LaTeX text.
+
+====
+
+
+FormulaText( <Object>, <Boolean for Substitution of Variables> )::
+
+  Returns the formula that defines the object as a LaTeX text. The Boolean variable determines if values are substituted for
+  variables (_true_) or if variable names are shown in the text (_false_).
 
 [EXAMPLE]
 ====
@@ -28,15 +36,8 @@ Let _a = 2_ and _f(x) = a x^2^_.
 
 ====
 
-[NOTE]
-====
-
-By default, values are substituted for variables.
-
-====
-
 FormulaText( <Object>, <Boolean for Substitution of Variables>, <Boolean Show Name> )::
-  Returns the formula for the object as LaTeX text. The first Boolean variable determines if values are substituted for
+ Returns the formula that defines the object as a LaTeX text. The first Boolean variable determines if values are substituted for
   variables (_true_) or if variable names are shown in the text (_false_), the second Boolean variable determines if the
   object name is shown in the text (_true_) or not (_false_).
 

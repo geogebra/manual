@@ -2,11 +2,6 @@
 :page-en: commands/NSolve
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
-== CAS Syntax
-
-This command is only available in the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
-xref:/CAS_View.adoc[CAS View].
-
 NSolve( <Equation> )::
   Attempts (numerically) to find a solution for the equation for the main variable. For non-polynomials you should
   always specify a starting value (see below).
@@ -17,6 +12,12 @@ NSolve( <Equation> )::
 `++NSolve(x^6 - 2x + 1 = 0)++` yields _{x = 0.51, x = 1}_.
 
 ====
+
+== CAS Syntax
+
+These syntaxes are only available in the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/CAS_View.adoc[CAS View].
+
 
 NSolve( <Equation>, <Variable> )::
   Attempts (numerically) to find a solution of the equation for the given unknown variable. For non-polynomials you
@@ -34,8 +35,6 @@ NSolve( <Equation>, <Variable = starting value> )::
 
 [EXAMPLE]
 ====
-
-*Examples:*
 
 * `++NSolve(cos(x) = x, x = 0)++` yields _{x = 0.74}_
 * `++NSolve(a^4 + 34a^3 = 34, a = 3)++` yields _{a = 0.99}_.

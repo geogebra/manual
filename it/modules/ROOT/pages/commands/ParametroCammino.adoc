@@ -14,8 +14,8 @@ _a = 0.47_.
 
 ====
 
-Nella seguente tabella stem:[f(x)=\frac{x}\{1+|x|}] è una funzione, utilizzata per mappare tutti i numeri reali
-nell'intervallo (-1,1) e stem:[\phi(X,A,B)=\frac{\overrightarrow\{AX}\cdot\overrightarrow\{AB}}\{|AB|^2}] è una mappa
+Nella seguente tabella stem:[f(x)=\frac{x}{1+|x|}] è una funzione, utilizzata per mappare tutti i numeri reali
+nell'intervallo (-1,1) e stem:[\phi(X,A,B)=\frac{\overrightarrow{AX}\cdot\overrightarrow{AB}}{|AB|^2}] è una mappa
 lineare dalla retta AB a valori reali, che manda A in 0 e B in 1.
 
 [cols=",",]
@@ -27,28 +27,23 @@ lineare dalla retta AB a valori reali, che manda A in 0 e B in 1.
 |Segmento AB |stem:[\phi(X,A,B)]
 
 |Circonferenza di centro _C_ e raggio _r_ |Il punto stem:[X=C+(r\cdot cos(\alpha),r\cdot sin(\alpha))], dove
-stem:[\alpha\in(-\pi,\pi)] ha parametro cammino stem:[\frac{\alpha+\pi}\{2\pi}]
+stem:[\alpha\in(-\pi,\pi)] ha parametro cammino stem:[\frac{\alpha+\pi}{2\pi}]
 
-|Ellisse di centro _C_ e semiassi stem:[\vec{a}], stem:[\vec{b}] |Il punto stem:[X=C+\vec{a}\cdot
-cos(\alpha)+\vec{b}\cdot sin(\alpha)], dove stem:[\alpha\in(-\pi,\pi)] ha parametro cammino
-stem:[\frac{\alpha+\pi}\{2\pi}]
+|Ellisse di centro _C_ e semiassi stem:[\vec{a}], stem:[\vec{b}] |Il punto stem:[X=C+\vec{a}\cdot cos(\alpha)+\vec{b}\cdot sin(\alpha)], dove stem:[\alpha\in(-\pi,\pi)] ha parametro cammino
+stem:[\frac{\alpha+\pi}{2\pi}]
 
-|Iperbole |Il punto stem:[X = C \pm \vec{a} ·cosh(t) + \vec{b} ·sinh(t)] ha parametro cammino stem:[
-\frac{f(t)+1}\{4}] oppure stem:[\frac{f(t)+3}\{4}]
+|Iperbole |Il punto stem:[X = C \pm \vec{a} ·cosh(t) + \vec{b} ·sinh(t)] ha parametro cammino stem:[ \frac{f(t)+1}{4}] oppure stem:[\frac{f(t)+3}{4}]
 
-|Parabola con vertice V e asse di direzione stem:[\vec{v}]. |Il punto stem:[V+\frac{1}\{2}p\cdot t^2\cdot
-\vec{v}+p\cdot t \cdot \vec{v}^\{\perp}] ha parametro cammino stem:[\frac{f(t)+1}2].
-
+|Parabola con vertice V e asse di direzione stem:[\vec{v}]. |Il punto stem:[V+\frac{1}{2}p\cdot t^2\cdot \vec{v}+p\cdot t \cdot \vec{v}^{\perp}] ha parametro cammino stem:[\frac{f(t)+1}2].
 |Spezzata A~1...A~n~~ |Se X appartiene ad A~k~A~k+1~, il parametro cammino di _X_ è stem:[\frac{k-1+\phi(X,A,B)}\{n-1}]
 
-|Poligono A~1...A~n~~ |Se X appartiene ad A~k~A~k+1~ (con A~n+1~=A~1~), il parametro cammino di _X_ è
-stem:[\frac{k-1+\phi(X,A,B)}\{n}]
+|Poligono A~1...A~n~~ |Se X appartiene ad A~k~A~k+1~ (con A~n+1~=A~1~), il parametro cammino di _X_ è stem:[\frac{k-1+\phi(X,A,B)}{n-1}]
 
-|Lista di cammini L=\{p~1~,...,p~n~} |Se X appartiene a p~k~ e il parametro cammino di _X_ rispetto a p~k~ è _t_, allora
-il parametro cammino di _X_ rispetto a _L_ è stem:[\frac{k-1+t}\{n}]
+|Lista di cammini L={p~1~,...,p~n~} |Se X appartiene a p~k~ e il parametro cammino di _X_ rispetto a p~k~ è _t_, allora
+il parametro cammino di _X_ rispetto a _L_ è stem:[\frac{k-1+t}{n}]
 
-|Lista di punti L=\{A~1~,...,A~n~} |Il parametro cammino di A~k~ èstem:[\frac{k-1}\{n}]. Punto[L,t] restituisce
-stem:[A_\{\lfloor tn\rfloor+1}].
+|Lista di punti L={A~1~,...,A~n~} |Il parametro cammino di A~k~ è stem:[\frac{k-1}{n}]. Punto[L,t] restituisce
+stem:[A_{\lfloor tn\rfloor+1}].
 
 |Luogo |
 

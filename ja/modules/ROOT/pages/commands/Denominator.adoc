@@ -4,8 +4,6 @@ ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
 Denominator( <関数> )::
   関数の分母を返す．
-Denominator( <数> )::
-  有理数に対してはその分母を返す．このコマンドは分数を約分したときに得られる最も簡単な分母に限られる．無理数に対しては、そのxref:/commands/ContinuedFraction.adoc[連分数展開]の分母を返す．
 
 [EXAMPLE]
 ====
@@ -13,6 +11,17 @@ Denominator( <数> )::
 `++Denominator(5 / (x^2 + 2))++` 出力： _f(x)=(x^2^ + 2)_.
 
 ====
+
+Denominator( <数> )::
+ 有理数に対しては，その（約分された）分母を返す．このコマンドは数値的な方法を使用するため，小さな分母を持つ数に限られる．無理数に対しては、そのxref:/commands/ContinuedFraction.adoc[連分数展開]の分母を返す．
+
+[EXAMPLE]
+====
+* `++Denominator(5 / 3)++` 出力： 3.
+* `++Denominator(10 / 6)++` 出力： 3.
+* `++Denominator(15 / 3)++` 出力： 1.
+====
+
 
 [NOTE]
 ====

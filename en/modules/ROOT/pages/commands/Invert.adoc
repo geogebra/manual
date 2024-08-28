@@ -13,6 +13,13 @@ stem:[\begin{pmatrix}1 & 2\\3 & 4\end{pmatrix}].
 
 ====
 
+[NOTE]
+====
+
+* In the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_View.adoc[CAS View] undefined
+variables are allowed too.
+====
+
 [EXAMPLE]
 ====
 
@@ -21,13 +28,6 @@ bc}& \frac{a}{ad- bc}\end{pmatrix}], the inverse matrix of stem:[\begin{pmatrix}
 
 ====
 
-[NOTE]
-====
-
-In the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_View.adoc[CAS View] undefined
-variables are allowed too.
-
-====
 
 Invert( <Function> )::
   Gives the inverse of the function.
@@ -42,28 +42,15 @@ Invert( <Function> )::
 [NOTE]
 ====
 
-The function must contain just one _x_ and no account is taken of domain or range, for example for f(x) = x^2 or f(x) =
-sin(x). If there is more than one _x_ in the function another command might help you:
+* No account is taken of domain or range, for example for f(x) = x^2^ or f(x) = sin(x).
+
+* The command works faster for functions that only contain one _x_.
+To make your construction more efficient you may want to rearrange your functions and use eg `NInvert((x+1)^2-1)` rather than `NInvert(x^2+2x)`.
+
+* See also xref:./NInvert.adoc[NInvert Command], xref:./Eigenvalues.adoc[Eigenvalues Command], xref:./Eigenvectors.adoc[Eigenvectors Command],
+xref:./SVD.adoc[SVD Command], xref:/commands/Transpose.adoc[Transpose Command], xref:./JordanDiagonalization.adoc[JordanDiagonalization Command]
 
 ====
 
-[EXAMPLE]
-====
-
-Both `++Invert(PartialFractions((x + 1) / (x + 2)))++` and `++Invert(CompleteSquare(x^2 + 2 x + 1))++` yield the inverse
-functions.
-
-====
 
 
-
-[NOTE]
-====
-
-* In the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_View.adoc[CAS View], the
-command also works if the function contains more than one _x_.
-* See also xref:/commands/Eigenvalues.adoc[Eigenvalues Command], xref:/commands/Eigenvectors.adoc[Eigenvectors Command],
-xref:/commands/SVD.adoc[SVD Command], xref:/commands/Transpose.adoc[Transpose Command],
-xref:/commands/JordanDiagonalization.adoc[JordanDiagonalization Command]
-
-====

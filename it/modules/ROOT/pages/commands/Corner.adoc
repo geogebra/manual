@@ -3,7 +3,7 @@
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
 Corner(Numero del corner)::
-  Restituisce il punto, non visibile sullo schermo, corrispondente all'n-esimo (n = 1, 2, 3, 4) vertice che delimita la
+  Restituisce il punto, non visibile sullo schermo, corrispondente all'n-esimo (_n_ = 1, 2, 3, 4) vertice che delimita la
   image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Vista_Grafici.adoc[vista
   Grafici]. Questo comando è applicabile esclusivamente alla prima image:16px-Menu_view_graphics.svg.png[Menu view
   graphics.svg,width=16,height=16] _vista Grafici_, anche se la seconda è attiva. Invece `++Corner(5)++` restituisce il
@@ -13,7 +13,7 @@ Corner(Numero del corner)::
 [NOTE]
 ====
 
-Corner[Numero del corner] non è applicabile all'interno di altri comandi. Nel caso ciò fosse necessario, creare ad
+Corner(Numero del corner) non è applicabile all'interno di altri comandi. Nel caso ciò fosse necessario, creare ad
 esempio `++C_1 = Corner(1)++` e utilizzare tale oggetto all'interno di altri comandi.
 
 ====
@@ -36,31 +36,31 @@ creare ad esempio `++C_1 = Corner(1)++` e utilizzare tale oggetto all'interno di
 
 Utilizzare il valore -1 per indicare la image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra
 3Dgraphics.svg,width=16,height=16] _vista Grafici 3D_ ed ottenere il punto, non visibile sullo schermo, corrispondente
-all'n-esimo (1 ≤ n ≤ 8) vertice di tale vista. Inoltre:
+all'n-esimo (1 ≤ _n_ ≤ 8) vertice di tale vista. Inoltre:
 
 * `++Corner(-1,9)++` restituisce il punto (ℓ, _h_, 0), dove ℓ e _h_ sono rispettivamente la larghezza e l'altezza della
-_vista_ in pixel.
+_vista_ 3D in pixel.
 * `++Corner(-1,10)++` restituisce il punto (ℓ, _h_, 0), dove ℓ e _h_ sono rispettivamente la larghezza e l'altezza della
 finestra principale in pixel.
 * `++Corner(-1,11)++` restituisce la direzione di vista (per le proiezioni parallele) o la posizione dell'occhio (ad es.
 in una proiezione prospettiva).
 * `++Corner(-1,12)++` restituisce la direzione della vista da sinistra a destra.
-* `++Corner(-1,13)++` restituisce la scala degli assi x, y, z
+* `++Corner(-1,13)++` restituisce la scala degli assi _x_, _y_, _z_
 
 ====
 
 Corner(Immagine, Numero del corner)::
-  Restituisce il punto corrispondente all'n-esimo (n = 1, 2, 3, 4) vertice dell'immagine.
+  Restituisce il punto corrispondente all'_n_-esimo (_n_ = 1, 2, 3, 4) vertice dell'immagine.
 
 Corner(Testo, Numero del corner)::
-  Restituisce il punto corrispondente all'n-esimo (n = 1, 2, 3, 4) vertice del testo. L'opzione _Posizione assoluta
+  Restituisce il punto corrispondente all'_n_-esimo (_n_ = 1, 2, 3, 4) vertice del testo. L'opzione _Posizione assoluta
   sullo schermo_ non deve essere attiva.}}
 
 [NOTE]
 ====
 
 * La numerazione dei corner è antioraria, a partire dal corner inferiore sinistro
-* Il comando Corner(Testo, Numero n del corner) non è applicabile all'interno dei comandi
+* Il comando Corner(Testo, Numero del corner) non è applicabile all'interno dei comandi
 xref:/commands/Successione.adoc[Successione] o xref:/commands/Compatta.adoc[Compatta] .
 
 ====

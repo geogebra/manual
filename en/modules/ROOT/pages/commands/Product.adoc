@@ -41,6 +41,18 @@ The two lists must have the same length.
 
 ====
 
+Product( <Expression>, <Variable>, <Start Value>, <End Value> )::
+  Calculates the product of the expressions that are obtained by replacing the given variable with every integer from the given
+  _start_ to the given _end_ values.
+
+[EXAMPLE]
+====
+
+* `++Product(k, k,  1, 7)++` yields 5040
+* `++Product(x + k,  k,  2, 3)++` yields _f_(_x_)=(_x_ + 2)(_x_ + 3).
+
+====
+
 == CAS Syntax
 
 Product( <List of Expressions> )::
@@ -53,9 +65,9 @@ Product( <List of Expressions> )::
 
 ====
 
-Product( <Expression>, <Variable>, <Start Index>, <End Index> )::
-  Calculates the product of the expressions that are obtained by replacing the given variable with every integer from
-  _start_ to _end_.
+Product( <Expression>, <Variable>, <Start Value>, <End Value> )::
+  Calculates the product of the expressions that are obtained by replacing the given variable with every integer from the given
+  _start_ to the given _end_ values.
 
 [EXAMPLE]
 ====

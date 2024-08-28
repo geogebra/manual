@@ -8,7 +8,7 @@ Barres( <Liste Données>, <Liste Effectifs> )::
 [NOTE]
 ====
 
-*Note :* Les données doivent être ordonnées dans l'ordre croissant.
+Les données doivent être ordonnées dans l'ordre croissant.
 
 ====
 
@@ -30,7 +30,7 @@ Barres( <Liste Données>, <Liste Effectifs>, <Largeur Barres w> )::
 [EXAMPLE]
 ====
 
-*Exemple :* =
+=
 
 * `++Barres({5,6,7,8},{5,8,12,1},0.5) ++` laisse un espace entre les barres ;
 * `++Barres({10,11,12,13,14},{5,8,12,0,1},0) ++` est un diagramme en bâtons.
@@ -43,7 +43,7 @@ Barres( <Série brute > , <Largeur Barres> )::
 [EXAMPLE]
 ====
 
-*Exemple :* `++Barres( {1,1,1,2,2,2,2,2,3,3,3,5,5,5,5}, 1)++`
+`++Barres( {1,1,1,2,2,2,2,2,3,3,3,5,5,5,5}, 1)++`
 
 ====
 
@@ -54,7 +54,7 @@ Barres( <Valeur Début>, <Valeur Fin>, <Liste Hauteurs> )::
 [EXAMPLE]
 ====
 
-*Exemple :* `++Barres(10, 20, {1,2,3,4,5} )++` vous donne un diagramme à cinq barres de hauteurs données sur
+`++Barres(10, 20, {1,2,3,4,5} )++` vous donne un diagramme à cinq barres de hauteurs données sur
 l’intervalle [_10, 20_].
 
 ====
@@ -66,7 +66,7 @@ Barres( <Valeur Début a>, <Valeur Fin b>, <Expression>, <Variable k>, <de c>, <
 [EXAMPLE]
 ====
 
-*Exemple :* Si p = 0.1, q = 0.9, et n = 10 sont des nombres, alors
+Si p = 0.1, q = 0.9, et n = 10 sont des nombres, alors
 `++Barres(-0.5,n+0.5,Combinaison(n,k)*p^k*q^(n-k),k,0,n) ++` vous donne un diagramme en barres sur l’intervalle [_-0.5,
 n+0.5_]. Les hauteurs des barres étant les probabilités calculées par l’expression donnée.
 
@@ -79,7 +79,7 @@ Barres( <Valeur Début a>, <Valeur Fin b>, <Expression>, <Variable k>, <de c>, <
 [EXAMPLE]
 ====
 
-*Exemple :* `++Barres(0, π, abs(cos(k)),k,0,π,π/9)++` vous donne un diagramme en 10 barres.
+`++Barres(0, π, abs(cos(k)),k,0,π,π/9)++` vous donne un diagramme en 10 barres.
 
 ====
 
@@ -92,7 +92,7 @@ Barres( <Série brute>, <Largeur Barres>, <Echelle (optionnelle)> )::
 [EXAMPLE]
 ====
 
-*Exemple :* `++Barres( {1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5}, 1, 2)++`
+`++Barres( {1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5}, 1, 2)++`
 
 ====
 

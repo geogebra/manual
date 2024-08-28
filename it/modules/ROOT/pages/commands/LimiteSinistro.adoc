@@ -2,10 +2,10 @@
 :page-en: commands/LimitBelow
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
-LimiteSinistro(Funzione f, Valore t)::
+LimiteSinistro(Funzione, Valore)::
   Calcola il
   http://en.wikipedia.org/wiki/it:_Limite_di_una_funzione#Limite_destro.2C_sinistro.2C_per_eccesso.2C_per_difetto[limite
-  sinistro] della funzione _f_ quando la variabile tende al valore _t_ indicato.
+  sinistro] della _funzione_ quando la variabile indipendente tende al _valore_ indicato.
 
 [EXAMPLE]
 ====
@@ -24,11 +24,19 @@ casi in cui il calcolo è corretto e la funzione non ammette limite).
 
 == Sintassi CAS
 
-LimiteSinistro(Espressione f, Valore t)::
-  Calcola il limite sinistro della funzione _f_, al tendere della variabile indipendente della funzione al valore _t_
-  indicato.
-LimiteSinistro(Espressione f, Variabile v, Valore t)::
-  Calcola il limite sinistro della funzione _f_ in più variabili, al tendere della variabile _v_ al valore _t_ indicato.
+LimiteSinistro(Espressione, Valore)::
+  Calcola il limite sinistro della funzione, al tendere della variabile indipendente della funzione al _valore_ indicato.
+
+[EXAMPLE]
+====
+
+`++LimiteSinistro(1/x, 0)++` restituisce stem:[-\infty] .
+
+====
+
+
+LimiteSinistro(Espressione, Variabile, Valore)::
+  Calcola il limite sinistro della funzione data in più variabili, al tendere della _variabile_ al _valore_ indicato.
 
 [EXAMPLE]
 ====
@@ -37,12 +45,6 @@ LimiteSinistro(Espressione f, Variabile v, Valore t)::
 
 ====
 
-[EXAMPLE]
-====
-
-`++LimiteSinistro(1/x, 0)++` restituisce stem:[-\infty] .
-
-====
 
 [NOTE]
 ====

@@ -2,8 +2,9 @@
 :page-en: commands/IsFactored
 ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
-IsFactored( <Polynomial> )::
-  多項式が因数分解できる場合は ''true'' を返し，そうでない場合は ''false'' を返す．
+IsFactored( <多項式> )::
+  多項式が有理数係数（ stem:[\mathbb Q] ）で因数分解されていれば ''true'' を，そうでなければ ’‘false’' を返す．一般に，多項式が因数分解されているとみなすためには，各因子の先頭項の係数が正である必要がある．
+ただし，実際の動作はこの通りではない場合もある．
 
 [EXAMPLE]
 ====

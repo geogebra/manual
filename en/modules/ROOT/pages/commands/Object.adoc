@@ -2,6 +2,8 @@
 :page-en: commands/Object
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
+*This command is deprecated - use in new files is unsupported*
+
 Object( <Name of Object as Text> )::
   Returns the object for a given name. The result is always a dependent object.
 
@@ -16,27 +18,10 @@ _A2_.
 [NOTE]
 ====
 
-The *Object* command is the opposite of the xref:/commands/Name.adoc[Name] command.
+* The *Object* command is the opposite of the xref:/commands/Name.adoc[Name] command.
 
-====
+* Object command cannot be used in xref:/tools/Custom_Tools.adoc[Custom Tools]
 
-[cols=",",]
-|===
-|image:18px-Attention.png[Warning,title="Warning",width=18,height=18] *Warning*: |Object command cannot be used in
-xref:/tools/Custom_Tools.adoc[Custom Tools]
-|===
-
-[cols=",",]
-|===
-|image:18px-Attention.png[Warning,title="Warning",width=18,height=18] *Warning*: |*Object command is deprecated - use in
-new files is unsupported*
-|===
-
-[NOTE]
-====
-
-You must make sure that the objects you refer to are *earlier* in the
-image:16px-Menu_view_construction_protocol.svg.png[Menu view construction protocol.svg,width=16,height=16]
-xref:/Construction_Protocol.adoc[Construction_Protocol] than this command
+* Make sure that the objects you refer to are *earlier* in the image:16px-Menu_view_construction_protocol.svg.png[Menu view construction protocol.svg,width=16,height=16] xref:/Construction_Protocol.adoc[Construction_Protocol] than this command
 
 ====

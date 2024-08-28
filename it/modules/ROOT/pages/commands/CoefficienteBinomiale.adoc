@@ -2,9 +2,15 @@
 :page-en: commands/BinomialCoefficient
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
-CoefficienteBinomiale(Numero, Numero)::
-  Calcola il coefficiente binomiale stem:[ n \choose k ], dove _n_ e _k_ sono rispettivamente il primo e il secondo
-  numero indicati.
+[NOTE]
+====
+
+L'inserimento di questo comando viene autocompletato come il comando equivalente `nCr(n, k)`.
+
+====
+
+CoefficienteBinomiale(Numero n, Numero k)::
+  Calcola il coefficiente binomiale stem:[ n \choose k ], dove _n_ e _k_ sono rispettivamente il primo e il secondo numero indicati, ovvero calcola il numero di modi di scegliere _k_ oggetti tra _n_ disponibili, senza ripetizione (combinazioni).
 
 [EXAMPLE]
 ====
@@ -16,16 +22,14 @@ CoefficienteBinomiale(Numero, Numero)::
 [NOTE]
 ====
 
-Se nella image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[vista CAS] una o
-entrambe le variabili non sono definite, il comando restituisce la forma algebrica del calcolo del coefficiente
-binomiale.
+Nella image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[vista CAS] è possibile utilizzare variabili come argomenti del comando: in questo caso esso restituisce la formula per il calcolo del coefficiente binomiale.
+
+====
 
 [EXAMPLE]
 ====
 
-`++CoefficienteBinomiale(n,3)++` restituisce stem:[\frac{n^\{3} - 3 n^\{2} + 2 n}\{6}].
-
-====
+`++CoefficienteBinomiale(n,3)++` restituisce stem:[\frac{n^3 - 3 n^2 + 2 n}{6}].
 
 ====
 

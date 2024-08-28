@@ -2,9 +2,6 @@
 :page-en: commands/NSolutions
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
-The following commands are only available in the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
-xref:/CAS_View.adoc[CAS View].
-
 NSolutions( <Equation> )::
   Attempts (numerically) to find a solution for the equation for the main variable. For non-polynomials you should
   always specify a starting value (see below)
@@ -16,6 +13,11 @@ NSolutions( <Equation> )::
 choosen in xref:/Options_Menu.adoc[global rounding])
 
 ====
+
+== CAS Syntax
+
+The following syntaxes are only available in the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/CAS_View.adoc[CAS View].
 
 NSolutions( <Equation>, <Variable> )::
   Attempts (numerically) to find a solution of the equation for the given unknown variable. For non-polynomials you
@@ -33,8 +35,6 @@ NSolutions( <Equation>, <Variable = starting value> )::
 
 [EXAMPLE]
 ====
-
-*Examples:*
 
 * `++NSolutions(cos(x) = x, x = 0)++` yields _{0.74}_
 * `++NSolutions(a^4 + 34a^3 = 34, a = 3)++` yields the list _{0.99}_.

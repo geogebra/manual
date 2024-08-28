@@ -2,9 +2,6 @@
 :page-en: commands/NSolutions
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
-I seguenti comandi sono disponibili esclusivamente nella image:16px-Menu_view_cas.svg.png[Menu view
-cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[vista CAS]:
-
 SoluzioniN(Equazione)::
   Ricerca le soluzioni dell'equazione indicata (applicando tecniche numeriche), rispetto alla variabile principale. Per
   le equazioni non polinomiali è necessario indicare un valore iniziale (vedere più avanti).
@@ -12,10 +9,16 @@ SoluzioniN(Equazione)::
 [EXAMPLE]
 ====
 
-`++SoluzioniN(x^6-2x+1=0)++` restituisce _\{0.51, 1}_ se l'xref:/Menu_Opzioni.adoc[arrotondamento] è fissato a 2 cifre
+`++SoluzioniN(x^6-2x+1=0)++` restituisce _{0.51, 1}_ se l'xref:/Menu_Opzioni.adoc[arrotondamento] è fissato a 2 cifre
 decimali.
 
 ====
+
+== Sintassi CAS
+
+Le seguenti sintassi sono disponibili esclusivamente nella image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[vista CAS]:
+
 
 SoluzioniN(Equazione, Variabile)::
   Ricerca le soluzioni dell'equazione (applicando tecniche numeriche), rispetto alla variabile indicata. Per le
@@ -26,8 +29,8 @@ SoluzioniN(Equazione, Variabile)::
 
 *Esempi:*
 
-* `++SoluzioniN(cos(x)=x, x)++` restituisce _\{0.74}_
-* `++SoluzioniN(a^4+34a^3=34, a)++` restituisce la lista _\{-34, 0.99}_.
+* `++SoluzioniN(cos(x) = x, x)++` restituisce _{0.74}_
+* `++SoluzioniN(a^4 + 34a^3 = 34, a)++` restituisce la lista _{-34, 0.99}_.
 
 ====
 
@@ -37,10 +40,8 @@ SoluzioniN(Equazione, Variabile = valore iniziale)::
 [EXAMPLE]
 ====
 
-*Esempi:*
-
-* `++SoluzioniN(cos(x)=x, x)++` restituisce _\{0.74}_
-* `++SoluzioniN(a^4+34a^3=34, a=3)++` restituisce la lista _\{0.99}_.
+* `++SoluzioniN(cos(x) = x, x)++` restituisce _{0.74}_
+* `++SoluzioniN(a^4 + 34a^3 = 34, a = 3)++` restituisce la lista _{0.99}_.
 
 ====
 
@@ -50,14 +51,14 @@ SoluzioniN(Lista di equazioni, Lista di variabili)::
 [EXAMPLE]
 ====
 
-`++SoluzioniN({pi/x=cos(x-2y), 2y-pi=sin(x)}, {x=3, y=1.5})++` restituisce _\{3.14, 1.57}_.
+`++SoluzioniN({pi/x = cos(x - 2y), 2y - pi = sin(x)}, {x = 3, y = 1.5})++` restituisce _{3.14, 1.57}_.
 
 ====
 
 [NOTE]
 ====
 
-* Se non viene indicato un valore iniziale, ad es. _a = 3_ oppure _\{x = 3, y = 1.5}_, l'algoritmo numerico utilizzato
+* Se non viene indicato un valore iniziale, ad es. _a = 3_ oppure _{x = 3, y = 1.5}_, l'algoritmo numerico utilizzato
 potrebbe fallire nella ricerca della soluzione (l'indicazione di un valore iniziale non garantisce comunque che
 l'algoritmo riesca a determinare una soluzione).
 * Il numero di decimali visualizzati dipende dalle impostazioni globali di xref:/Menu_Opzioni.adoc[arrotondamento].

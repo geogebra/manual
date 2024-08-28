@@ -11,8 +11,8 @@ to determine whether a statement is true or false in general. This command works
 xref:/commands/Prove.adoc[Prove] command, but also returns some details of the result as a xref:/Lists.adoc[list]:
 
 * An empty list *{}* if GeoGebra cannot determine the answer.
-* A list with one element: *\{false}*, if the statement is not true in general.
-* A list with one element: *\{true}*, if the statement is always true (in all cases when the diagram can be
+* A list with one element: *{false}*, if the statement is not true in general.
+* A list with one element: *{true}*, if the statement is always true (in all cases when the diagram can be
 constructed).
 * A list with more elements, containing the boolean value _true_ and another list for some so-called _non-degeneracy
 conditions_, if the statement is true under certain conditions, e.g. {true, {"AreCollinear(A,B,C),AreEqual(C,D)"}}.
@@ -25,7 +25,7 @@ translated to human readable form for some reasons.
 ====
 
 Let us define a triangle with vertices _A_, _B_ and _C_, and define `++D=MidPoint(B,C)++`, `++E=MidPoint(A,C)++`,
-`++p=Line(A,B)++`, `++q=Line(D,E)++`. Now `++ProveDetails(p∥q)++` returns \{true}, which means that if the diagram can
+`++p=Line(A,B)++`, `++q=Line(D,E)++`. Now `++ProveDetails(p∥q)++` returns {true}, which means that if the diagram can
 be constructed, then the midline _DE_ of the triangle is parallel to the side _AB_.
 
 ====

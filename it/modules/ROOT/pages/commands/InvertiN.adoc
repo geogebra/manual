@@ -1,0 +1,26 @@
+= Comando InvertiN
+:page-en: commands/NInvert
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+InvertiN(Funzione)::
+Traccia il grafico della funzione inversa della funzione data, calcolata numericamente (quindi l'equazione non è visualizzata in _Vista Algebra_).
+Per visualizzare l'equazione delll'inversa, utilizzare il  xref:./Inverti.adoc[Comando Inverti].
+
+[EXAMPLE]
+====
+
+`++InvertiN(sin(x))++` visualizza il grafico di una funzione _f_ tale che _sin(f(x)) = x_ per -1 < _x_ < 1.
+
+====
+
+[NOTE]
+====
+
+* Dominio e codominio non vengono considerati per l'invertibilità, ad esempio per f(x) = x^2^ o f(x) = sin(x).
+
+* Il comando funziona più velocemente per funzioni che contengono una sola _x_.
+Quindi quando possibile è meglio riscrivere le equazioni da invertire, al fine di rendere la costruzione più efficiente.
+Ad esempio è preferibile utilizzare una sintassi tipo `InvertiN((x+1)^2-1)` piuttosto che `InvertiN(x^2+2x)`.
+
+====
+

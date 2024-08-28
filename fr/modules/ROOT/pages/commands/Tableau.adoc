@@ -8,7 +8,7 @@ Tableau( <Liste 1>, <Liste 2>, ... )::
 [NOTE]
 ====
 
-*Note :* Par défaut, chaque liste est affichée dans une nouvelle ligne.
+Par défaut, chaque liste est affichée dans une nouvelle ligne.
 
 ====
 
@@ -30,7 +30,7 @@ Tableau( <Liste>, <Liste>, ..., <“Alignement du texte”> )::
 [NOTE]
 ====
 
-*Note :* Les valeurs possibles sont "vl", "vc", "vr", "v", "h", "hl", "hc", "hr". Par défaut c’est "hl".
+Les valeurs possibles sont "vl", "vc", "vr", "v", "h", "hl", "hc", "hr". Par défaut c’est "hl".
 
 * "v" = vertical, i. e. les listes sont en colonnes ;
 * "h" = horizontal, i. e. les listes sont en lignes ;
@@ -56,7 +56,7 @@ image:200px-TableuPourCent.png[TableuPourCent.png,width=200,height=89]
 [EXAMPLE]
 ====
 
-*Exemple :* Une syntaxe non documentée, permettant d'utiliser un autre séparateur décimal, la virgule en France et la
+Une syntaxe non documentée, permettant d'utiliser un autre séparateur décimal, la virgule en France et la
 monnaie locale €, mais toutes les colonnes sont affectées, il serait bon de pouvoir différentier des colonnes
 quantités/prix
 
@@ -119,7 +119,7 @@ image:Tabcol.png[Tabcol.png,width=123,height=60]
 [EXAMPLE]
 ====
 
-*Exemple :* et pour "fusionner" des colonnes
+et pour "fusionner" des colonnes
 
 * `++Tableau({{"\textbf{Cercle}"}, {Tableau({{"Rayon", "r "}, {"Aire",  "π r²"}, {"Circonférence", "2 π r"}}, "cc |010_0110")}}, "_111 |11 c")++`
 
@@ -132,7 +132,7 @@ image:TabFusCol.png[TabFusCol.png,width=188,height=118]
 [EXAMPLE]
 ====
 
-*Exemple :* et pour un système
+et pour un système
 
 * `++Tableau({{"2x+3y=5", "5x+8y=12"}}, "{v")++`
 
@@ -144,7 +144,7 @@ pour stem:[\{\left\\{\begin\{array}\{l}2x+3y=5 \\ 5x+8y=12 \\ \end\{array}\right
 [EXAMPLE]
 ====
 
-*Exemple :* et pour dépouiller une série brute stockée en _liste1_
+et pour dépouiller une série brute stockée en _liste1_
 
 * `++Tableau({Unir({{"x_i"}, Unique(liste1)}), Unir({{"e_i"}, Effectifs(liste1)})}, "ch|_")++`
 
@@ -158,7 +158,7 @@ stem:[ \{\begin\{array}\{|c|c|c|c|c|c|c|}\hline x_i&1&2&3&4&5&6 \\ \hline e_i&17
 [EXAMPLE]
 ====
 
-*Exemple :* Il est possible d'affecter des couleurs différentes par lignes :
+Il est possible d'affecter des couleurs différentes par lignes :
 
 * `++Tableau({{"\black{1,2,3,4}", "\blue{2,4,6,8}", "\green{3,6,9,12}", "\red{4,8,12,16}"}}, "vr")++`
 
@@ -169,12 +169,12 @@ pourimage:TableauLignesCouleurs.PNG[TableauLignesCouleurs.PNG,width=125,height=1
 [NOTE]
 ====
 
-*Note :* Les listes peuvent être groupées en une seule liste, (c'est d'ailleurs la syntaxe retournée par le tableur).
+Les listes peuvent être groupées en une seule liste, (c'est d'ailleurs la syntaxe retournée par le tableur).
 
 [EXAMPLE]
 ====
 
-*Exemple :* `++ Tableau({{1,2},{3,4}},"c()")++` .
+`++ Tableau({{1,2},{3,4}},"c()")++` .
 
 ====
 

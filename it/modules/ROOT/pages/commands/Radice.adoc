@@ -13,8 +13,8 @@ Radice(Polinomio)::
 
 ====
 
-Radice(Funzione, Numero a)::
-  Calcola una radice della funzione utilizzando un metodo numerico iterativo con valore iniziale _a_.
+Radice(Funzione, x iniziale)::
+  Calcola una radice della funzione utilizzando un metodo numerico iterativo con valore iniziale indicato.
 
 [EXAMPLE]
 ====
@@ -23,8 +23,8 @@ Radice(Funzione, Numero a)::
 
 ====
 
-Radice(Funzione, Numero a, Numero b)::
-  Calcola una radice della funzione nell'intervallo [_a, b_] utilizzando un metodo numerico iterativo.
+Radice(Funzione, x iniziale, x finale)::
+  Calcola una radice della funzione nell'intervallo [_x iniziale_, _x finale_] utilizzando un metodo numerico iterativo.
 
 [EXAMPLE]
 ====
@@ -36,13 +36,12 @@ Radice(Funzione, Numero a, Numero b)::
 == Sintassi CAS
 
 Radice(Polinomio)::
-  Calcola tutte le radici del polinomio, cioè i punti di intersezione tra il grafico della funzione corrispondente e
-  l'asse _x_.
+  Calcola tutte le radici del polinomio, cioè i punti di intersezione tra il grafico della funzione corrispondente e l'asse _x_.
 
 [EXAMPLE]
 ====
 
-`++Radice(x^3-3*x^2-4*x+12)++` restituisce _\{x=3, x=2, x=-2}_.
+`++Radice(x^3-3*x^2-4*x+12)++` restituisce _{x=3, x=2, x=-2}_.
 
 ====
 

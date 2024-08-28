@@ -2,27 +2,44 @@
 :page-en: commands/NSolveODE
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
-RisolviNEDO(Lista derivate, Ascissa iniziale, Lista ordinate iniziali, Ascissa finale)::
+RisolviNEDO(Lista derivate, x iniziale, Lista y iniziali, x finale)::
   Risolve numericamente il sistema di equazioni differenziali indicato.
 
 [EXAMPLE]
 ====
+Siano
 
-Siano _f'(t, f, g, h) = g_,     _g'(t, f, g, h) = h_    e    _h'(t, f, g, h) = -t h + 3t g + 2f + t_
+`++f'(t, f, g, h) = g++`
+
+`++g'(t, f, g, h) = h++`    e
+
+`++h'(t, f, g, h) = -t h + 3t g + 2f + t++`.
+
+Allora
 
 `++RisolviNEDO({f', g', h'}, 0, {1,2,-2}, 10)++`
 
-`++RisolviNEDO({f', g', h'}, 0, {1,2,-2}, -5)++`.
+`++RisolviNEDO({f', g', h'}, 0, {1,2,-2}, -5)++`. (risolve il sistema a ritroso nel tempo)
 
 ====
 
 [EXAMPLE]
 ====
+Siano
 
-Siano _x1'(t, x1, x2, x3, x4) = x2_,    _x2'(t, x1, x2, x3, x4) = x3_,    _x3'(t, x1, x2, x3, x4) = x4_,     e   
-_x4'(t, x1, x2, x3, x4) = -8x1 + sin(t) x2 - 3x3 + t^2_.
+`++x1'(t, x1, x2, x3, x4) = x2++`
 
-Siano inoltre _x10 = -0.4_,    _x20 = -0.3_,    _x30 = 1.8_    e    _x40 = -1.5_
+`++x2'(t, x1, x2, x3, x4) = x3++`
+
+`++x3'(t, x1, x2, x3, x4) = x4++`     e
+
+`++x4'(t, x1, x2, x3, x4) = -8x1 + sin(t) x2 - 3x3 + t^2++`.
+
+Siano inoltre 
+
+`++x10 = -0.4++`,    `++x20 = -0.3++`,    `++x30 = 1.8++`    e    `++x40 = -1.5++`
+
+Allora
 
 `++RisolviNEDO({x1', x2', x3', x4'}, 0, {x10, x20, x30, x40}, 20)++`
 
@@ -33,9 +50,13 @@ Siano inoltre _x10 = -0.4_,    _x20 = -0.3_,    _x30 = 1.8_    e    _x40
 
 Simulazione di un pendolo:
 
-Siano _g = 9.8_,   _l = 2_,   _a = 5_ la posizione iniziale   e   _b = 3_ la forza iniziale.
+Siano `++g = 9.8++`,   `++l = 2++`,  `++a = 5++` la posizione iniziale   
 
-Siano inoltre _y1'(t, y1, y2) = y2_   e   _y2'(t, y1, y2) = (-g) / l sin(y1)_
+e   `++b = 3++` la forza iniziale.
+
+Siano inoltre `++y1'(t, y1, y2) = y2++`   e   `++y2'(t, y1, y2) = (-g) / l sin(y1)++`
+
+Allora
 
 `++RisolviNEDO({y1', y2'}, 0, {a, b}, 20) ++`
 

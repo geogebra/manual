@@ -8,7 +8,7 @@ Integral( <Function> )::
 [EXAMPLE]
 ====
 
-`++Integral(x^3)++` yields stem:[x^4 \cdot 0.25].
+`++Integral(x³)++` gives _stem:[\frac{1}{4}x^4]_ .
 
 ====
 
@@ -18,12 +18,19 @@ Integral( <Function>, <Variable> )::
 [EXAMPLE]
 ====
 
-`++Integral(x³+3x y, x)++` gives _stem:[\frac{1}{4}x^4] + stem:[\frac{3}{2}] x² y_ .
+`++Integral(x³+3x y, x)++` gives _stem:[\frac{1}{4}x^4+\frac{3}{2}x^2 y]_ .
 
 ====
 
 Integral( <Function>, <Start x-Value>, <End x-Value> )::
   Gives the definite integral over the interval _[Start x-Value , End x-Value]_ with respect to the main variable.
+
+[EXAMPLE]
+====
+
+`++Integral(x³, 1, 2)++` yields 3.75.
+
+====
 
 [NOTE]
 ====
@@ -50,11 +57,8 @@ variables are allowed as input as well.
 
 ====
 
-Furthermore, the following command is only available in the image:16px-Menu_view_cas.svg.png[Menu view
-cas.svg,width=16,height=16] _CAS View_:
-
-Integral( <Function>, <Variable>, <Start x-Value>, <End x-Value> )::
-  Gives the definite integral over the interval _[Start x-Value , End x-Value]_ with respect to the given variable.
+Integral( <Function>, <Variable>, <Start Value>, <End Value> )::
+  Gives the definite integral over the interval [_Start Value_ , _End Value_] of the given variable.
 
 [EXAMPLE]
 ====

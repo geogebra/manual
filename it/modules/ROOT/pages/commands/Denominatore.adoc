@@ -4,15 +4,27 @@ ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
 Denominatore(Funzione)::
   Restituisce il denominatore di una funzione.
+
+[EXAMPLE]
+====
+
+`++Denominatore(5 / (x²+2))++` restituisce _f(x) = (x² + 2)_.
+
+====
+
 Denominatore(Numero)::
-  Restituisce il denominatore di un numero razionale. Questo comando utilizza un metodo numerico, che ne limita
+  Restituisce il denominatore (semplificato) di un numero razionale. Questo comando utilizza un metodo numerico, che ne limita
   l'applicabilità a numeri aventi un denominatore piccolo. Se viene inserito un numero irrazionale il comando
   restituisce il numeratore della relativa xref:/commands/FrazioneContinua.adoc[frazione continua].
 
 [EXAMPLE]
 ====
 
-`++Denominatore(5 / (x²+2))++` restituisce _f(x) = (x² + 2)_.
+* `++Denominatore(5 / 3)++` restituisce 3.
+
+* `++Denominatore(10 / 6)++` restituisce 3.
+
+* `++Denominatore(15 / 3)++` restituisce 1.
 
 ====
 
@@ -32,6 +44,6 @@ Denominatore(Espressione)::
 [EXAMPLE]
 ====
 
-`++Denominatore(2/3+1/15)++` restituisce _15_.
+`++Denominatore(2 / 3 + 1 / 15)++` restituisce _15_.
 
 ====

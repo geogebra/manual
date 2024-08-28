@@ -10,23 +10,23 @@ TestT(Lista dati campione, Media ipotizzata, Coda)::
   ">" = media popolazione > _Media ipotizzata_
   "≠" = media popolazione ≠ _Media ipotizzata_
 
-I risultati sono restituiti in una lista del tipo \{valore _P_, test statistico _t_}.
+I risultati sono restituiti in una lista del tipo {valore _P_, test statistico _t_}.
 
 [EXAMPLE]
 ====
 
-`++TestT({1, 2, 3, 4, 5}, 3, "<")++` restituisce _\{0.5, 0}_.
+`++TestT({1, 2, 3, 4, 5}, 3, "<")++` restituisce _{0.5, 0}_.
 
 ====
 
 TestT(Media campione, Deviazione standard campione, Dimensione campione, Media ipotizzata, Coda)::
   Applica un test _t_ a un campione della media di una popolazione, utilizzando le statistiche indicate. _Media
-  ipotizzata_ e _Coda_ sono definite come sopra. I risultati sono restituiti in una lista del tipo \{valore _P_, test
+  ipotizzata_ e _Coda_ sono definite come sopra. I risultati sono restituiti in una lista del tipo {valore _P_, test
   statistico _t_}.
 
 [EXAMPLE]
 ====
 
-`++TestT(4, 1, 12, 4, "≠")++` restituisce _\{1, 0}_.
+`++TestT(4, 1, 12, 4, "≠")++` restituisce _{1, 0}_.
 
 ====

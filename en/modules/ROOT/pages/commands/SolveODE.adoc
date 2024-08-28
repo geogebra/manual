@@ -22,8 +22,8 @@ stem:[c_{1}] will be created as an auxiliary object with a corresponding slider.
 
 SolveODE( <f'(x, y)>, <Point on f> )::
 
-Attempts to find the exact solution of the first order ODE stem:[\frac{dy}{dx}(x)=f'(x, y(x))] and use the solution
-which goes through the given point.
+Attempts to find the exact solution of the first order ODE stem:[\frac{dy}{dx}(x)=f'(x, y(x))] and returns the solution
+through the given point (Cauchy problem).
 
 [EXAMPLE]
 ====
@@ -119,7 +119,7 @@ SolveODE( <Equation> )::
 ====
 
 SolveODE( <Equation>, <Point(s) on f> )::
-  Attempts to find the exact solution of the given first or second order ODE which goes through the given point(s).
+  Attempts to find the exact solution of the given first or second order ODE which goes through the given point or list of points.
 
 [EXAMPLE]
 ====
@@ -129,8 +129,8 @@ SolveODE( <Equation>, <Point(s) on f> )::
 ====
 
 SolveODE( <Equation>, <Point(s) on f>, <Point(s) on f'> )::
-  Attempts to find the exact solution of the given first or second order ODE and goes through the given _point(s) on f_
-  and _f'_ goes through the given _point(s) on f'_ .
+  Attempts to find the exact solution of the given first or second order ODE and goes through the given _point (or list of points) on f_
+  and _f'_ goes through the given _point (or list of points) on f'_ .
 
 [EXAMPLE]
 ====
@@ -141,7 +141,7 @@ e^3 + 32 e^{3 x} }{54 e^3} ].
 ====
 
 SolveODE( <Equation>, <Dependent Variable>, <Independent Variable>, <Point(s) on f> )::
-  Attempts to find the exact solution of the given first or second order ODE which goes through the given point(s).
+  Attempts to find the exact solution of the given first or second order ODE which goes through the given point (or list of points).
 
 [EXAMPLE]
 ====
@@ -151,8 +151,8 @@ SolveODE( <Equation>, <Dependent Variable>, <Independent Variable>, <Point(s) on
 ====
 
 SolveODE( <Equation>, <Dependent Variable>, <Independent Variable>, <Point(s) on f>, <Point(s) on f'> )::
-  Attempts to find the exact solution of the given first or second order ODE which goes through the given _point(s) on
-  f_ and _f'_ goes through the given _point(s) on f'_ .
+  Attempts to find the exact solution of the given first or second order ODE which goes through the given _point (or list of points) on
+  f_ and _f'_ goes through the given _point (or list of points) on f'_ .
 
 [EXAMPLE]
 ====

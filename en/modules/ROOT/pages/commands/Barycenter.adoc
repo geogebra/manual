@@ -1,6 +1,17 @@
 = Barycenter Command
 :page-en: commands/Barycenter
+:page-aliases: commands/Barycentre.adoc
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+image:64px-Globe.png[Globe.png,width=64,height=64,role=left] This command differs among variants of English:
+
+* Barycenter (US)
+* Barycentre (UK + Aus)
+
+====
 
 Barycenter( <List of Points>, <List of Weights> )::
   Set the center of a system of points in the list, defined as the average of their positions, weighted by their value,
@@ -8,8 +19,6 @@ Barycenter( <List of Points>, <List of Weights> )::
 
 [EXAMPLE]
 ====
-
-*Examples:*
 
 * `++Barycenter({(2, 0), (0, 2), (-2, 0), (0, -2)}, {1, 1, 1, 1})++` yields point _A(0, 0)_
 * `++Barycenter({(2, 0), (0, 2), (-2, 0), (0, -2)}, {2, 1, 1, 1})++` yields point _B(0.4, 0)_. The _x_-coordinate of

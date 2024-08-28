@@ -15,8 +15,7 @@ ordinatamente indicata nella seconda lista. La prima barra occupa l'intervallo [
 
 ====
 
-Istogramma(Lista degli estremi delle classi, Lista dei dati grezzi, Booleano _Usa densità_, Fattore di scala densità
-(facoltativo))::
+Istogramma(Lista degli estremi delle classi, Lista dei dati grezzi, Booleano _Usa densità_, Fattore di scala densità (facoltativo))::
   Genera un istogramma utilizzando i dati grezzi. Gli estremi delle classi determinano la larghezza e la posizione di
   ciascuna barra dell'istogramma e vengono utilizzati per determinare il numero degli elementi appartenenti a ciascuna
   classe. L'altezza delle barre è determinata come segue:
@@ -58,6 +57,14 @@ barre sono uguali al numero dei valori contenuti in ciascuna classe.
 altezze rispettivamente 5/8, 2/8 e 1/8. Questo istogramma utilizza un fattore di scala della densità, e le altezze delle
 barre sono uguali alla proporzione dei valori dei dati contenuti in ciascuna classe, rispetto al totale dei dati.
 
+* _Istogramma normalizzato_
+
+`++Istogramma({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 1/8) ++` genera un istogramma avente 3 barre, di
+altezze rispettivamente 0.0625, 0.025 e 0.0125 . L'area totale dell'istogramma è 0.0625*10 + 0.025*10 + 0.0125*10 = 1.
+Se _n_ è il numero di valori dei dati, allora ponendo il _Fattore di scala densità_ = _1/n_ si genera un istogramma
+normalizzato avente area totale 1. Questo tipo di impostazione è utile per approssimare un istogramma con una curva di
+densità.
+
 ====
 
 [NOTE]
@@ -70,21 +77,9 @@ si ottiene un istogramma relativo.
 
 ====
 
-[EXAMPLE]
-====
 
-* _Istogramma normalizzato_
 
-`++Istogramma({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 1/8) ++` genera un istogramma avente 3 barre, di
-altezze rispettivamente 0.0625, 0.025 e 0.0125 . L'area totale dell'istogramma è 0.0625*10 + 0.025*10 + 0.0125*10 = 1.
-Se _n_ è il numero di valori dei dati, allora ponendo il _Fattore di scala densità_ = _1/n_ si genera un istogramma
-normalizzato avente area totale 1. Questo tipo di impostazione è utile per approssimare un istogramma con una curva di
-densità.
-
-====
-
-Istogramma(Booleano _Cumulativa_, Lista degli estremi delle classi, Lista dei dati grezzi, Booleano _Usa densità_,
-Fattore di scala densità (facoltativo))::
+Istogramma(Booleano _Cumulativa_, Lista degli estremi delle classi, Lista dei dati grezzi, Booleano _Usa densità_, Fattore di scala densità (facoltativo))::
   Se il booleano _Cumulativa_ è _true_, genera un istogramma in cui l'altezza di ciascuna barra è uguale alla frequenza
   della classe, più la somma di tutte le frequenze precedenti.
 

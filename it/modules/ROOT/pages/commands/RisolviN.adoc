@@ -2,11 +2,6 @@
 :page-en: commands/NSolve
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
-== Sintassi CAS
-
-Questo comando è disponibile esclusivamente nella image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
-xref:/Vista_CAS.adoc[vista CAS].
-
 RisolviN(Equazione)::
   Ricerca le soluzioni dell'equazione (applicando tecniche numeriche) rispetto alla variabile principale. Per le
   equazioni non polinomiali è necessario indicare un valore iniziale (vedere più avanti).
@@ -14,9 +9,15 @@ RisolviN(Equazione)::
 [EXAMPLE]
 ====
 
-`++RisolviN(x^6-2x+1=0)++` restituisce _\{x = 0.51, x = 1}_
+`++RisolviN(x^6 - 2x + 1 = 0)++` restituisce _{x = 0.51, x = 1}_
 
 ====
+== Sintassi CAS
+
+Queste sintassi sono disponibilie esclusivamente nella image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/Vista_CAS.adoc[vista CAS].
+
+
 
 RisolviN(Equazione, Variabile)::
   Ricerca le soluzioni dell'equazione (applicando tecniche numeriche) rispetto alla variabile indicata. Per le equazioni
@@ -25,7 +26,7 @@ RisolviN(Equazione, Variabile)::
 [EXAMPLE]
 ====
 
-`++RisolviN(a^4+34a^3=34, a)++` restituisce _\{a = -34, a = 0.99}_.
+`++RisolviN(a^4 + 34a^3 = 34, a)++` restituisce _{a = -34, a = 0.99}_.
 
 ====
 
@@ -38,8 +39,8 @@ RisolviN(Equazione, Variabile=valore iniziale)::
 
 *Esempi:*
 
-* `++RisolviN(cos(x)=x, x=0)++` restituisce _\{x = 0.74}_
-* `++RisolviN(a^4+34a^3=34, a=3)++` restituisce _\{a = 0.99}_.
+* `++RisolviN(cos(x) = x, x = 0)++` restituisce _{x = 0.74}_
+* `++RisolviN(a^4 + 34a^3 = 34, a = 3)++` restituisce _{a = 0.99}_.
 
 ====
 
@@ -49,14 +50,14 @@ RisolviN(Lista di equazioni, Lista di variabili)::
 [EXAMPLE]
 ====
 
-`++RisolviN({pi/x=cos(x-2y), 2y-pi=sin(x)}, {x=3, y=1.5})++` restituisce _\{x = 3.14, y = 1.57}_.
+`++RisolviN({pi/x = cos(x - 2y), 2y - pi = sin(x)}, {x = 3, y = 1.5})++` restituisce _{x = 3.14, y = 1.57}_.
 
 ====
 
 [NOTE]
 ====
 
-* Se non viene indicato un valore iniziale, ad es. _a = 3_ oppure _\{x = 3, y = 1.5}_, l'algoritmo numerico utilizzato
+* Se non viene indicato un valore iniziale, ad es. _a = 3_ oppure _{x = 3, y = 1.5}_, l'algoritmo numerico utilizzato
 potrebbe fallire nella ricerca della soluzione (l'indicazione di un valore iniziale non garantisce comunque che
 l'algoritmo riesca a determinare una soluzione).
 * Il numero di decimali visualizzati dipende dalle impostazioni globali di xref:/Menu_Opzioni.adoc[arrotondamento]

@@ -4,22 +4,30 @@ ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
 Integrale(Funzione)::
   Determina l'integrale indefinito della funzione rispetto alla variabile indipendente.
+[EXAMPLE]
+====
+
+`++Integrale(x³)++` restituisce stem:[\frac{1}{4}x^4]
+
+====
+
 Integrale(Funzione, Variabile)::
   Restituisce l'integrale della funzione rispetto alla variabile indicata.
-Integrale(Funzione, Numero a, Numero b)::
-  Calcola l'integrale definito della funzione nell'intervallo (_a , b_).
 
 [EXAMPLE]
 ====
 
-`++Integrale(x³ + 3x y, x)++` restituisce stem:[\frac{1}\{4}x^4] + stem:[\frac{3}\{2}] x² y.
+`++Integrale(x³+3x y, x)++` restituisce stem:[\frac{1}{4}x^4] + stem:[\frac{3}{2}] x² y.
 
 ====
+
+Integrale(Funzione, x iniziale, x finale)::
+  Calcola l'integrale definito della funzione nell'intervallo (_x iniziale_ , _x finale_).
 
 [EXAMPLE]
 ====
 
-`++Integrale(x³)++` restituisce stem:[x^4 \cdot 0.25].
+`++Integrale(x³, 1, 2)++` restituisce 3.75.
 
 ====
 
@@ -30,10 +38,9 @@ Questo comando evidenzia anche l'area tra il grafico della funzione _f_ e l'asse
 
 ====
 
-Integrale(Funzione, Numero a, Numero b, Booleano Valutazione)::
-  Calcola l'integrale definito della funzione nell'intervallo [_a , b_] ed evidenzia la relativa area quando
-  _Valutazione = true_. Se _Valutazione = false_ viene evidenziata l'area ma non viene calcolato il valore
-  dell'integrale.
+Integrale(Funzione, x iniziale, x finale, Booleano Calcola)::
+  Calcola l'integrale definito della funzione nell'intervallo [_x iniziale_ , _x finale_] ed evidenzia la relativa area quando
+  _Calcola_ = _true_. Se _Calcola = false_ viene evidenziata l'area ma non viene calcolato il valore dell'integrale.
 
 == Sintassi CAS
 
@@ -43,12 +50,9 @@ utilizzare anche variabili algebriche non associate ad alcun valore.
 [EXAMPLE]
 ====
 
-`++Integrale(cos(a t), t)++` restituiscestem:[\frac{sin(a t)}\{a} + c_1].
+`++Integrale(cos(a t), t)++` restituisce stem:[\frac{sin(a t)}{a} + c_1].
 
 ====
-
-Il seguente comando è disponibile esclisivamente nella image:16px-Menu_view_cas.svg.png[Menu view
-cas.svg,width=16,height=16] _vista CAS_:
 
 Integrale(Funzione, Variabile, valore iniziale, valore finale)::
   Calcola l'integrale definito della funzione, tra il valore iniziale e finale della variabile indicata.
@@ -56,8 +60,7 @@ Integrale(Funzione, Variabile, valore iniziale, valore finale)::
 [EXAMPLE]
 ====
 
-`++Integrale(cos(t), t, a, b)++` restituisce stem:[sin(b) - sin(a)].
-
+`++Integrale(cos(t), t, a, b)++` restituisce stem:[- sin(a) + sin(b)].
 ====
 
 [NOTE]
@@ -65,7 +68,7 @@ Integrale(Funzione, Variabile, valore iniziale, valore finale)::
 
 * La continuità del risultato non è garantita, come nel caso di `++Integrale(floor(x))++`, cioè l'integrale della
 funzione ⌊x⌋. In tal caso è necessario ridefinire la funzione, come ad esempio
-`++F(x) = (floor(x)² - floor(x))/2 + x floor(x) - floor(x)²++`, cioè stem:[\frac{⌊x⌋² - ⌊x⌋}\{2} + x \cdot⌊x⌋ - ⌊x⌋²]
+`++F(x) = (floor(x)² - floor(x))/2 + x floor(x) - floor(x)²++`, cioè stem:[\frac{⌊x⌋² - ⌊x⌋}{2} + x \cdot⌊x⌋ - ⌊x⌋²]
 * In alcune versioni di GeoGebra viene utilizzato un algoritmo numerico per l'integrazione nell'intorno di un asintoto,
 quindi un comando del tipo `++Integrale(ln(x), 0, 1)++` restituirà 'non definito'. Per visualizzare l'integrale,
 utilizzare `++Integrale(ln(x), 0, 1, false)++`

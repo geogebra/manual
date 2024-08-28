@@ -13,8 +13,14 @@ Numerator( <関数> )::
 ====
 
 Numerator( <Number> )::
-  有理数に対してはその分子を返す．このコマンドは分数を約分したときに得られる最も簡単な分子に限られる．無理数に対しては、そのxref:/commands/ContinuedFraction.adoc[連分数展開]の分子を返す．
+  有理数に対しては，その（約分された）分子を返す．このコマンドは数値的な方法を使用するため，小さな分子を持つ数に限られる．無理数に対しては、そのxref:/commands/ContinuedFraction.adoc[連分数展開]の分子を返す．
 
+[EXAMPLE]
+====
+* `++Numerator(5 / 3)++` 出力： 5.
+* `++Numerator(10 / 6)++` 出力： 5.
+* `++Numerator(12 / 3)++` 出力： 4.
+====
 
 [NOTE]
 ====
