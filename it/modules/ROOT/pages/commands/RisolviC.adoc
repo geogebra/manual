@@ -7,9 +7,25 @@ ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 RisolviC(Equazione)::
   Risolve l'equazione indicata rispetto alla variabile principale, nel campo dei numeri complessi, restituendo la lista
   delle soluzioni.
+
+[EXAMPLE]
+====
+
+`++RisolviC(x^2=-1)++` restituisce _{x = ί, x = -ί}_.
+
+====
+
 RisolviC(Equazione, Variabile)::
   Risolve l'equazione rispetto alla variabile indicata, nel campo dei numeri complessi, restituendo la lista delle
   soluzioni.
+
+[EXAMPLE]
+====
+
+`++RisolviC(a^2=-1, a)++` restituisce _{a = ί, a = -ί}_.
+
+====
+
 RisolviC(Lista di equazioni, Lista di variabili)::
   Risolve un sistema di equazioni rispetto alle variabili indicate, nel campo dei numeri complessi, restituendo la lista
   delle soluzioni.
@@ -17,23 +33,10 @@ RisolviC(Lista di equazioni, Lista di variabili)::
 [EXAMPLE]
 ====
 
-`++RisolviC({y^2=x-1, x=2*y-1}, {x, y})++` restituisce _\{\{x = 1 - 2 ί, y = 1 + ί}, \{x = 1 + 2 ί, y = 1 - ί}}_.
+`++RisolviC({y^2=x-1, x=2*y-1}, {x, y})++` restituisce _{{x = 1 - 2 ί, y = 1 + ί}, {x = 1 + 2 ί, y = 1 - ί}}_.
 
 ====
 
-[EXAMPLE]
-====
-
-`++RisolviC(a^2=-1, a)++` restituisce _\{a = ί, a = -ί}_.
-
-====
-
-[EXAMPLE]
-====
-
-`++RisolviC(x^2=-1)++` restituisce _\{x = ί, x = -ί}_.
-
-====
 
 [NOTE]
 ====
