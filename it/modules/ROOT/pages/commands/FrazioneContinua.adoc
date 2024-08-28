@@ -10,25 +10,24 @@ FrazioneContinua(Numero)::
 [EXAMPLE]
 ====
 
-`++FrazioneContinua(5.45)++` restituisce _stem:[5 + \frac{1}\{ 2+ \frac{1}\{4+ \frac{1}\{ 1+ \frac{1}\{ 1 } } } }]_
-</math>
+`++FrazioneContinua(5.45)++` restituisce _stem:[5 + \frac{1}{ 2+ \frac{1}{4+ \frac{1}{ 1+ \frac{1}{ 1 } } } }]_
 
 ====
 
 FrazioneContinua(Numero, Livello)::
-  Genera la frazione continua approssimante il numero indicato. Il numero dei quozienti è minore o uguale a _Livello_,
-  ma non supera mai il numero di quozienti necessari per raggiungere la precisione precedentemente indicata.
+  Genera la frazione continua approssimante il numero indicato. Il numero dei quozienti sarà minore o uguale a _Livello_,
+  senza superare il numero di quozienti necessari per raggiungere la precisione di 10^-8^.
 
 [EXAMPLE]
 ====
 
-`++FrazioneContinua(5.45, 3)++` restituisce _stem:[5 + \frac{1}\{ 2+ \frac{1}\{4+ ... } }]_
+`++FrazioneContinua(5.45, 3)++` restituisce _stem:[5 + \frac{1}{ 2+ \frac{1}{4+ ... } }]_
 
 ====
 
 FrazioneContinua(Numero, Livello (facoltativo), Abbreviata true|false)::
-  I primi due parametri utilizzano le precedenti sintassi. Quando _Abbreviata_ è _true_, il risultato sarà espresso in
-  forma abbreviata: il testo LaTeX conterrà l'elenco delle parti intere della frazione continua.
+  Genera la frazione continua approssimante il numero indicato. Se il parametro _livello_ viene specificato, il numero dei quozienti sarà minore o uguale a _Livello_,
+  senza superare il numero di quozienti necessari per raggiungere la precisione di 10^-8^. Quando _Abbreviata_ è _true_, il testo LaTeX conterrà l'elenco delle parti intere della frazione continua.
 
 [EXAMPLE]
 ====

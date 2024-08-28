@@ -3,7 +3,7 @@
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 FitPoly( <List of Points>, <Degree of Polynomial> )::
-  Calculates the regression polynomial of degree _n_.
+  Calculates the polynomial regression model of given _degree_ that fits the specified _points_.
 
 [EXAMPLE]
 ====
@@ -13,13 +13,24 @@ FitPoly( <List of Points>, <Degree of Polynomial> )::
 ====
 
 FitPoly( <Freehand Function>, <Degree of Polynomial> )::
-  Calculates the regression polynomial of degree _n_ for a function drawn by the
+  Calculates the polynomial regression model of given _degree_ that fits a function drawn using the
   xref:/tools/Freehand_Shape.adoc[Freehand Shape Tool].
+
+[NOTE]
+====
+
+* To obtain a polynomial of degree _n_ the list must contain at least _n_ + 1 points.
+* See also xref:/commands/FitExp.adoc[FitExp Command], xref:/commands/FitLog.adoc[FitLog Command],
+xref:/commands/FitPow.adoc[FitPow Command] and xref:/commands/FitSin.adoc[FitSin Command].
+* When working with big/small numbers, consider normalizing them for a more accurate result. See
+xref:/commands/Normalize.adoc[Normalize Command].
+
+====
 
 == CAS Syntax
 
 FitPoly( <List of Points>, <Degree of Polynomial> )::
-  Calculates the regression polynomial of degree _n_.
+  Calculates the polynomial regression model of given _degree_ that fits the specified _points_.
 
 [EXAMPLE]
 ====
@@ -28,13 +39,4 @@ FitPoly( <List of Points>, <Degree of Polynomial> )::
 
 ====
 
-[NOTE]
-====
 
-* For order _n_ there must be at least _n + 1_ Points in the list.
-* See also xref:/commands/FitExp.adoc[FitExp Command], xref:/commands/FitLog.adoc[FitLog Command],
-xref:/commands/FitPow.adoc[FitPow Command] and xref:/commands/FitSin.adoc[FitSin Command].
-* If you work with big/small numbers, you should consider normalizing them for a more accurate result, see
-xref:/commands/Normalize.adoc[Normalize Command].
-
-====

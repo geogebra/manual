@@ -3,15 +3,19 @@
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
 ImpCoordinate(Oggetto, x, y)::
-  Modifica le coordinate cartesiane di xref:/Oggetti_liberi_dipendenti_e_ausiliari.adoc[oggetti liberi]. Questo comando
+  Imposta le coordinate cartesiane di un xref:/Oggetti_liberi_dipendenti_e_ausiliari.adoc[oggetto libero] nella Vista 2D utilizzando i valori indicati nel comando. Questo comando
   utilizza i valori delle coordinate, non le relative definizioni, quindi l'oggetto rimane libero.
+
+ImpCoordinate(Oggetto, x, y, z)::
+  Imposta le coordinate cartesiane di un xref:/Oggetti_liberi_dipendenti_e_ausiliari.adoc[oggetto libero] nella Vista 3D utilizzando i valori indicati nel comando. Questo comando
+  utilizza i valori delle coordinate, non le relative definizioni, quindi l'oggetto rimane libero.
+
 
 [NOTE]
 ====
 
-* Il comando è applicabile anche a punti su cammini o in regioni. Il punto verrà spostato nella posizione più vicina
-possibile.
-* Il comando è applicabile anche a slider, pulsanti, caselle di controllo, campi di inserimento e immagini. La selezione
-dell'opzione "Posizione assoluta sullo schermo" collega i parametri _x_, _y_ ai pixel dello schermo.
+* Il comando è applicabile anche a punti su cammini o in regioni. Il punto verrà spostato nella posizione più vicina possibile.
+* Il comando è applicabile anche a slider, pulsanti, caselle di controllo, campi di inserimento e immagini. 
+* La selezione dell'opzione "Posizione assoluta sullo schermo" richiede l'inserimento dei valori di _x_, _y_, _z_ in pixel dello schermo.
 
 ====

@@ -7,7 +7,7 @@ Integrale(Funzione)::
 [EXAMPLE]
 ====
 
-`++Integrale(x³)++` restituisce _stem:[\frac{1}{4}x^4]
+`++Integrale(x³)++` restituisce stem:[\frac{1}{4}x^4]
 
 ====
 
@@ -17,7 +17,7 @@ Integrale(Funzione, Variabile)::
 [EXAMPLE]
 ====
 
-`++Integrale(x³+3x y, x)++` restituisce _stem:[\frac{1}{4}x^4] + stem:[\frac{3}{2}] x² y_ .
+`++Integrale(x³+3x y, x)++` restituisce stem:[\frac{1}{4}x^4] + stem:[\frac{3}{2}] x² y.
 
 ====
 
@@ -40,7 +40,7 @@ Questo comando evidenzia anche l'area tra il grafico della funzione _f_ e l'asse
 
 Integrale(Funzione, x iniziale, x finale, Booleano Calcola)::
   Calcola l'integrale definito della funzione nell'intervallo [_x iniziale_ , _x finale_] ed evidenzia la relativa area quando
-  _Calcola_ = _true_. Se _Calcola_ = false_ viene evidenziata l'area ma non viene calcolato il valore dell'integrale.
+  _Calcola_ = _true_. Se _Calcola = false_ viene evidenziata l'area ma non viene calcolato il valore dell'integrale.
 
 == Sintassi CAS
 
@@ -68,7 +68,7 @@ Integrale(Funzione, Variabile, valore iniziale, valore finale)::
 
 * La continuità del risultato non è garantita, come nel caso di `++Integrale(floor(x))++`, cioè l'integrale della
 funzione ⌊x⌋. In tal caso è necessario ridefinire la funzione, come ad esempio
-`++F(x) = (floor(x)² - floor(x))/2 + x floor(x) - floor(x)²++`, cioè stem:[\frac{⌊x⌋² - ⌊x⌋}\{2} + x \cdot⌊x⌋ - ⌊x⌋²]
+`++F(x) = (floor(x)² - floor(x))/2 + x floor(x) - floor(x)²++`, cioè stem:[\frac{⌊x⌋² - ⌊x⌋}{2} + x \cdot⌊x⌋ - ⌊x⌋²]
 * In alcune versioni di GeoGebra viene utilizzato un algoritmo numerico per l'integrazione nell'intorno di un asintoto,
 quindi un comando del tipo `++Integrale(ln(x), 0, 1)++` restituirà 'non definito'. Per visualizzare l'integrale,
 utilizzare `++Integrale(ln(x), 0, 1, false)++`

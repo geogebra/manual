@@ -3,42 +3,39 @@
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
 IrrazionaleInTesto(Numero)::
-  Genera la rappresentazione del numero indicato in formato testo, nella forma stem:[\frac{a+b\sqrt{c}}\{d}].
+  Crea un testo contenente il numero dato, riscritto nella forma stem:[\frac{a+b\sqrt{c}}{d}].
 
 [EXAMPLE]
 ====
 
 *Esempi:*
 
-* `++IrrazionaleInTesto(2.414213562373095)++` genera il testo _stem:[\sqrt{2} + 1]_
-* `++IrrazionaleInTesto(2.43923048454132)++` genera il testo _stem:[\frac{7+3 \sqrt{3} }\{5}]_
+* `++IrrazionaleInTesto(2.414213562373095)++` crea il testo _stem:[1 + \sqrt{2}]_
+* `++IrrazionaleInTesto(2.43923048454132)++` crea il testo _stem:[\frac{7+3 \sqrt{3} }{5}]_
 
 ====
 
 IrrazionaleInTesto(Numero, Lista)::
-  Genera la rappresentazione testuale del numero, come multiplo delle costanti indicate nella lista. Se la lista è vuota
+  Crea un testo contenente il numero dato riscritto come multiplo delle costanti indicate nella lista. Se la lista è vuota
   viene automaticamente utilizzata una lista di costanti di uso comune.
 
 [EXAMPLE]
 ====
 
-*Esempi:*
-
-* `++IrrazionaleInTesto(3.718281828459045, {exp(1)})++` genera il testo _stem:[e + 1]_
-* `++IrrazionaleInTesto(5.382332347441762, {sqrt(2), sqrt(3), sqrt(5)})++` genera il testo _stem:[ \sqrt{5} + \sqrt{3}
-+ \sqrt{2}]_
-* `++IrrazionaleInTesto(1.693147180559945, {ln(2)})++` genera il testo _stem:[ \ln\{2} + 1]_
+* `++IrrazionaleInTesto(3.718281828459045, {exp(1)})++` crea il testo _stem:[e + 1]_
+* `++IrrazionaleInTesto(5.382332347441762, {sqrt(2), sqrt(3), sqrt(5)})++` crea il testo _stem:[ \sqrt{5} + \sqrt{3} + \sqrt{2}]_
+* `++IrrazionaleInTesto(1.693147180559945, {ln(2)})++` crea il testo _stem:[ \ln(2) + 1]_
 
 ====
 
 IrrazionaleInTesto(Punto)::
-  Genera la rappresentazione delle coordinate del punto indicato in formato testo, nella forma
-  stem:[\frac{a+b\sqrt{c}}\{d}].
+  Crea un testo contenente le coordinate del punto indicato, riscritte nella forma stem:[\frac{a+b\sqrt{c}}{d}].
 
 [EXAMPLE]
 ====
 
 `++IrrazionaleInTesto((2.414213562373095, 1.414213562373095))++` genera il testo _(stem:[1 + \sqrt{2}, \sqrt{2})]_
+
 
 ====
 
@@ -49,16 +46,8 @@ IrrazionaleInTesto(Punto)::
 _Testo_ della image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
 xref:/Finestra_di_dialogo_Proprietà.adoc[finestra di dialogo Proprietà] dell'oggetto testo.
 * Poiché questo comando si basa su tecniche di arrotondamento, in alcuni casi il risultato non è quello atteso.
-* Se il software non è in grado di ottenere questo tipo di rappresentazione, viene restituito il numero.
+* Se il software non è in grado di ottenere questo tipo di rappresentazione, viene restituito il numero. Ad esempio il comando `++IrrazionaleInTesto(1.23456789012345)++` restituisce 1.23456789012345.
 
-[EXAMPLE]
-====
-
-`++IrrazionaleInTesto(1.23456789012345)++` restituisce 1.23456789012345 .
-
-====
-
-* Vedere anche i comandi xref:/commands/FrazioneInTesto.adoc[FrazioneInTesto] e
-xref:/commands/NotazioneScientifica.adoc[NotazioneScientifica].
+* Vedere anche i comandi xref:/commands/FrazioneInTesto.adoc[FrazioneInTesto] e xref:/commands/NotazioneScientifica.adoc[NotazioneScientifica].
 
 ====

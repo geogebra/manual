@@ -3,34 +3,23 @@
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 RotateText( <Text>, <Angle> )::
-  Returns text rotated by given angle. xref:/LaTeX.adoc[LaTeX] is used for rendering of the result.
-
-[EXAMPLE]
-====
-
-`++RotateText("a = 5", 45°)++`
-
-====
+  Creates a new xref:/LaTeX.adoc[LaTeX] text, rotated by the given angle
 
 [NOTE]
 ====
 
 * The text needs to be enclosed in double quotes `++"++`.
-* The text is rotated around the top left corner (also known as corner 4) of the box containing the text, and placed at
-the origin of the coordinate system.
+* The text is rotated around the top left corner (also known as Corner 4) of the box containing it, and placed at the origin of the coordinate system.
+* The default setting for the angle is radians. Use the degree symbol `++°++` for rotation angles measured in degrees.
 
 ====
 
 [EXAMPLE]
 ====
 
-If you want to place the text "GeoGebra", rotated by 42°, at point (6,6), use the command
-`++Text(RotateText("GeoGebra", 42°), (6, 6),true,true)++`
+* `++RotateText("a = 5", 45°)++`
+
+* If you want to place the text "GeoGebra", rotated by 42°, at point (6,6), use the command `++Text(RotateText("GeoGebra", 42°), (6, 6),true,true)++`
 
 ====
 
-[NOTE]
-====
-* The angle is in radians unless you explicitly use the degree symbol `++°++`.
-
-====

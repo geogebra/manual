@@ -3,13 +3,12 @@
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
 RegLogistica(Lista di punti)::
-  Genera la curva di regressione nella forma a / (1+b e^(-kx)).
+  Genera la curva di regressione nella forma stem:[\frac{a}{1+b e^{-kx}}].
 
 [EXAMPLE]
 ====
 
-`++RegLogistica({(-6, 2), (0, 2), (3, 4), (3.4, 8)})++` restituisce la funzione di equazione stem:[ \frac{1.98}\{1 -
-0.03 e^\{1x}}].
+`++RegLogistica({(-6, 2), (0, 2), (3, 4), (3.4, 8)})++` restituisce la funzione di equazione stem:[ \frac{1.98}{1 -0.03 e^\{1x}}].
 
 ====
 

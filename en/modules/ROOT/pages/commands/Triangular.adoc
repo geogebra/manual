@@ -2,16 +2,9 @@
 :page-en: commands/Triangular
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
-Triangular( <Lower Bound>, <Upper Bound>, <Mode>, x )::
-  Creates cumulative density function of http://en.wikipedia.org/wiki/Triangular_distribution[triangular distribution]
-  with parameters _lower Bound, upper Bound, Mode_.
-Triangular( <Lower Bound>, <Upper Bound>, <Mode>, x, <Boolean Cumulative> )::
-  If _Cumulative_ is true, creates cumulative distribution function of triangular distribution, otherwise creates
-  probability density function of triangular distribution.
 Triangular( <Lower Bound>, <Upper Bound>, <Mode>, <Variable Value> )::
-  Calculates the value of cumulative distribution function of triangular distribution at _Variable Value v_, i.e. the
-  probability _P(X≤v)_ where _X_ is a random variable with triangular distribution given by parameters _lower Bound,
-  upper Bound, Mode_.
+  Evaluates the cumulative distribution function of a triangular distribution at _variable value v_, i.e. calculates the
+  probability _P(X ≤ v)_ where _X_ is a random variable with a triangular distribution in [_lower bound_, _upper bound_] with the given _mode_.
 
 [EXAMPLE]
 ====
@@ -23,7 +16,13 @@ Triangular( <Lower Bound>, <Upper Bound>, <Mode>, <Variable Value> )::
 [NOTE]
 ====
 
-Returns the probability for a given _x_-coordinate's value (or area under the triangular distribution curve to the left
-of the given _x_-coordinate).
+This syntax returns the probability at a given value, that is the area under the triangular distribution curve to the left of the given _x_-coordinate.
 
 ====
+
+Triangular( <Lower Bound>, <Upper Bound>, <Mode>, <Variable Value>, <Boolean Cumulative> )::
+  If _Cumulative = true_, evaluates the cumulative distribution function of a http://en.wikipedia.org/wiki/Triangular_distribution[triangular distribution]
+  with given _mode_ at the given _variable value_ in [_lower bound_, _upper bound_], otherwise it evaluates the probability density function of the distribution at _variable value_.
+
+Triangular( <Lower Bound>, <Upper Bound>, <Mode>, x, <Boolean Cumulative> )::
+  If _Cumulative_ is true, creates the cumulative distribution function of a triangular distribution with given _mode_ in [_lower bound_, _upper bound_], otherwise it creates the probability density function of a triangular distribution with given _mode_ in [_lower bound_, _upper bound_].
