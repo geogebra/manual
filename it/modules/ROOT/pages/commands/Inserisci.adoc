@@ -8,14 +8,7 @@ Inserisci(Oggetto, Lista, Posizione)::
 [EXAMPLE]
 ====
 
-`++Inserisci(x^2, {1, 2, 3, 4, 5}, -1)++` inserisce _x^2^_ alla fine della lista e restituisce _\{1, 2, 3, 4, 5, x^2^}_.
-
-====
-
-[EXAMPLE]
-====
-
-`++Inserisci(x^2, {1, 2, 3, 4, 5}, 3)++` inserisce _x^2^_ al terzo posto e restituisce _\{1, 2, x^2^, 3, 4, 5}_.
+`++Inserisci(x^2, {1, 2, 3, 4, 5}, 3)++` inserisce _x^2^_ al terzo posto e restituisce _{1, 2, x^2^, 3, 4, 5}_.
 
 ====
 
@@ -23,25 +16,25 @@ Inserisci(Oggetto, Lista, Posizione)::
 ====
 
 Se la posizione è indicata da un numero negativo, il conteggio della posizione inizia da destra.
+
+====
+
+[EXAMPLE]
+====
+
+`++Inserisci(x^2, {1, 2, 3, 4, 5}, -1)++` inserisce _x^2^_ alla fine della lista e restituisce _{1, 2, 3, 4, 5, x^2^}_.
 
 ====
 
 Inserisci(Lista, Lista, Posizione)::
   Inserisce tutti gli elementi della prima lista nella seconda lista, a partire dalla posizione indicata.
 
-[EXAMPLE]
-====
-
-`++Inserisci({11, 12}, {1, 2, 3, 4, 5}, -2)++` inserisce gli elementi della prima lista a partire dalla seconda
-posizione da destra della seconda lista e restituisce _\{1, 2, 3, 4, 11, 12, 5}_.
-
-====
 
 [EXAMPLE]
 ====
 
 `++Inserisci({11, 12}, {1, 2, 3, 4, 5}, 3)++` inserisce gli elementi della prima lista a partire dalla terza posizione
-della seconda lista e restituisce _\{1, 2, 11, 12, 3, 4, 5}_.
+della seconda lista e restituisce _{1, 2, 11, 12, 3, 4, 5}_.
 
 ====
 
@@ -49,5 +42,13 @@ della seconda lista e restituisce _\{1, 2, 11, 12, 3, 4, 5}_.
 ====
 
 Se la posizione è indicata da un numero negativo, il conteggio della posizione inizia da destra.
+
+====
+
+[EXAMPLE]
+====
+
+`++Inserisci({11, 12}, {1, 2, 3, 4, 5}, -2)++` inserisce gli elementi della prima lista a partire dalla seconda
+posizione da destra della seconda lista e restituisce _{1, 2, 3, 4, 11, 12, 5}_.
 
 ====

@@ -2,17 +2,16 @@
 :page-en: commands/TMean2Estimate
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
-StimaTMedia2(Lista dati campione 1, Lista dati campione 2, Livello, Booleano Combinata)::
-  Calcola una stima T dell'intervallo di confidenza della differenza tra due medie della popolazione, utilizzando i dati
-  campione e il _Livello_ di confidenza indicati.
+StimaTMedia2(Lista dati campione 1, Lista dati campione 2, Livello di confidenza, Booleano Combinata)::
+  Calcola una stima _T_ dell'intervallo di confidenza della differenza tra due medie della popolazione, utilizzando i dati
+  campione e il _Livello di confidenza_ indicati.
   Se _Combinata_ = true, allora le varianze della popolazione sono supposte uguali, e nel calcolo le deviazioni standard
   dei campioni vengono combinate.
   Se _Combinata_ = false, allora le varianze della popolazione non sono supposte uguali, e nel calcolo le deviazioni
   standard dei campioni non vengono combinate.
-  I risultati sono restituiti in una lista del tipo \{limite inferiore di confidenza, limite superiore di confidenza}.
+  I risultati sono restituiti in una lista del tipo {limite inferiore di confidenza, limite superiore di confidenza}.
 
-StimaTMedia2(Media campione 1 , Deviazione standard campione 1, Dimensione campione 1, Media campione 2, Deviazione
-standard campione 2, Dimensione campione 2, Livello, Booleano Combinata)::
-  Calcola una stima T dell'intervallo di confidenza della differenza tra due medie della popolazione, utilizzando le
+StimaTMedia2(Media campione 1 , Deviazione standard campione 1, Dimensione campione 1, Media campione 2, Deviazione standard campione 2, Dimensione campione 2, Livello di confidenza, Booleano Combinata)::
+  Calcola una stima _T_ dell'intervallo di confidenza della differenza tra due medie della popolazione, utilizzando le
   statistiche e il _Livello_ di confidenza indicati. _Combinata_ è definito come sopra. I risultati sono restituiti in
-  una lista del tipo \{limite inferiore di confidenza, limite superiore di confidenza}.
+  una lista del tipo {limite inferiore di confidenza, limite superiore di confidenza}.

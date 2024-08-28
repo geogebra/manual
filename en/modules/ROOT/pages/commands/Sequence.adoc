@@ -2,40 +2,7 @@
 :page-en: commands/Sequence
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
-Sequence( <Expression>, <Variable k>, <Start Value a>, <End Value b> )::
-  Yields a list of objects created using the given expression and the index _k_ that ranges from start value _a_ to end
-  value _b_.
 
-[EXAMPLE]
-====
-
-* `++Sequence((2, k), k, 1, 5)++` creates a list of points whose _y_-coordinates range from 1 to 5: _{(2, 1), (2, 2),
-(2, 3), (2, 4), (2, 5)}_
-* `++Sequence(x^k, k, 1, 10)++` creates the list {_x, x², x³, x⁴, x⁵, x⁶, x⁷, x⁸, x⁹, x¹⁰_}
-
-====
-
-Sequence( <Expression>, <Variable k>, <Start Value a>, <End Value b>, <Increment> )::
-  Yields a list of objects created using the given expression and the index _k_ that ranges from start value _a_ to end
-  value _b_ with given increment.
-
-[EXAMPLE]
-====
-
-* `++Sequence((2, k), k, 1, 3, 0.5)++` creates a list of points whose _y_-coordinates range from 1 to 3 with an
-increment of _0.5_: _{(2, 1), (2, 1.5), (2, 2), (2, 2.5), (2, 3)}_
-* `++Sequence(x^k, k, 1, 10, 2)++` creates the list {_x, x³, x⁵, x⁷, x⁹_}.
-
-====
-
-
-[NOTE]
-====
-
-Since the parameters _a_ and _b_ are dynamic you could use xref:/tools/Slider.adoc[slider] variables in both cases above
-as well.
-
-====
 Sequence( <End Value > )::
 
 Creates a list of integers from 1 to the given end value.
@@ -70,9 +37,49 @@ the same result by typing in the input bar `++7..13++` .
 
 ====
 
+Sequence( <Start value k>, <End value n>, <Increment> )::
+  Creates a list of integers from _k_ to _n_ using the given increment.
+
+[EXAMPLE]
+====
+
+* `++Sequence(7,13,2)++` creates the list {7, 9, 11, 13}
+* `++Sequence(7,13,4)++` creates the list {7, 11}
+
+====
+
+Sequence( <Expression>, <Variable k>, <Start Value a>, <End Value b> )::
+  Yields a list of objects created using the given expression and the index _k_ that ranges from start value _a_ to end
+  value _b_.
+
+[EXAMPLE]
+====
+
+* `++Sequence((2, k), k, 1, 5)++` creates a list of points whose _y_-coordinates range from 1 to 5: _{(2, 1), (2, 2),
+(2, 3), (2, 4), (2, 5)}_
+* `++Sequence(x^k, k, 1, 10)++` creates the list {_x, x², x³, x⁴, x⁵, x⁶, x⁷, x⁸, x⁹, x¹⁰_}
+
+====
+
+Sequence( <Expression>, <Variable k>, <Start Value a>, <End Value b>, <Increment> )::
+  Yields a list of objects created using the given expression and the index _k_ that ranges from start value _a_ to end
+  value _b_ with given increment.
+
+[EXAMPLE]
+====
+
+* `++Sequence((2, k), k, 1, 3, 0.5)++` creates a list of points whose _y_-coordinates range from 1 to 3 with an
+increment of _0.5_: _{(2, 1), (2, 1.5), (2, 2), (2, 2.5), (2, 3)}_
+* `++Sequence(x^k, k, 1, 10, 2)++` creates the list {_x, x³, x⁵, x⁷, x⁹_}.
+
+====
+
+
 [NOTE]
 ====
 
-See xref:/Lists.adoc[Lists] for more information on list operations.
+* Since the parameters _a_ and _b_ are dynamic you could use xref:/tools/Slider.adoc[slider] variables in both cases above as well.
+
+* See xref:/Lists.adoc[Lists] for more information on list operations.
 
 ====

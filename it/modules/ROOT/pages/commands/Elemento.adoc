@@ -8,7 +8,7 @@ Elemento(Lista, Numero n)::
 [EXAMPLE]
 ====
 
-`++Elemento({1, 3, 2}, 2)++` restituisce _3_, il secondo elemento di _\{1, 3, 2}_.
+`++Elemento({1, 3, 2}, 2)++` restituisce _3_, il secondo elemento di _{1, 3, 2}_.
 
 ====
 
@@ -17,13 +17,11 @@ Elemento(Lista, Numero n)::
 
 Nella image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[vista CAS] è possibile
 utilizzare anche variabili algebriche non associate a valori.
-
+====
 [EXAMPLE]
 ====
 
-`++Elemento({a, b, c}, 2)++` restituisce _b_, il secondo elemento della lista _\{a, b, c}_.
-
-====
+`++Elemento({a, b, c}, 2)++` restituisce _b_, il secondo elemento della lista _{a, b, c}_.
 
 ====
 
@@ -44,13 +42,13 @@ stem:[\begin{pmatrix}1&3&2\\0&3&-2\end{pmatrix}].
 Nella image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[vista CAS] è possibile
 utilizzare anche variabili algebriche non associate a valori.
 
+====
+
 [EXAMPLE]
 ====
 
 `++Elemento({{a, b, c}, {d, e, f}}, 2, 3)++` restituisce _f_, il terzo elemento della seconda riga della matrice
 stem:[\begin{pmatrix}a&b&c\\d&e&f\end{pmatrix}].
-
-====
 
 ====
 
@@ -61,8 +59,8 @@ Elemento(Lista L, Indice1, Indice2, ...)::
 [EXAMPLE]
 ====
 
-Sia L=\{\{\{1,2},\{3,4}},\{\{5,6},\{7,8}}}. Allora `++Elemento(L,1,2,1)++` restituisce 3, `++Elemento(L,2,2)++`
-restituisce \{7,8}.
+Sia _L = {{{1, 2}, {3, 4}}, {{5, 6}, {7, 8}}}_. Allora `++Elemento(L,1,2,1)++` restituisce 3, `++Elemento(L,2,2)++`
+restituisce {7,8}.
 
 ====
 

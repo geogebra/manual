@@ -11,8 +11,7 @@ Restituisce la trasformata di Laplace della funzione indicata.
 [EXAMPLE]
 ====
 
-`++ Laplace(sin(t))++` restituisce stem:[\mathbf\{\frac{1}\{t^\{2} + 1};} ]
-
+`++ Laplace(sin(t))++` restituisce stem:[\mathbf{\frac{1}{s^{2} + 1}} ]
 ====
 
 Laplace(Funzione, Variabile)
@@ -20,11 +19,10 @@ Laplace(Funzione, Variabile)
 [EXAMPLE]
 ====
 
-*Esempi:*
+`++Laplace(sin(a*t),t)++` restituisce stem:[\mathbf{\frac{a}{a^{2} + t^{2}}}]
 
-`++Laplace(sin(a*t),t)++` restituisce stem:[\mathbf\{\frac{a}{a^\{2} + t^\{2}}}] ;
+`++Laplace(sin(a*t),a)++` restituisce stem:[\mathbf{\frac{t}{a^{2} + t^{2}}}]
 
-`++Laplace(sin(a*t),a)++` restituisce stem:[\mathbf\{\frac{t}\{a^\{2} + t^\{2}}}]
 
 ====
 

@@ -4,7 +4,7 @@ ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 RandomPointIn( <Region> )::
 
-Creates a random point inside given polygon or (full) conic.
+Creates a random point inside a given polygon or closed conic.
 
 RandomPointIn( <List of Points> )::
 
@@ -15,9 +15,11 @@ Returns a random point inside the polygon with given vertices.
 
 `++RandomPointIn(Polygon(A,B,C))++` and `++RandomPointIn(A,B,C)++` both give random point inside triangle ABC.
 
+To get a random point that belongs to the list use xref:/commands/RandomElement.adoc[Random Element] instead.
+
+
 ====
 
-To get a random point that belongs to the list use xref:/commands/RandomElement.adoc[Random Element] instead.
 
 RandomPointIn( <xMin>, <xMax>, <yMin>, <yMax> )::
 

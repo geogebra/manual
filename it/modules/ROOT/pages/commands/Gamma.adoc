@@ -2,20 +2,18 @@
 :page-en: commands/Gamma
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
-Gamma(Numero α, Numero β, x)::
-  Genera la funzione di distribuzione cumulativa di una
-  http://en.wikipedia.org/wiki/it:Distribuzione_Gamma[distribuzione Gamma] avente parametri _α, β_.
-Gamma(Numero α, Numero β, x, <Booleano cumulativa>)::
-  Se _Cumulativa_ è _true_, genera la funzione di distribuzione cumulativa della distribuzione Gamma, altrimenti genera
-  la funzione di densità di probabilità della distribuzione Gamma.
-Gamma(Numero α, Numero β, Valore variabile v)::
-  Calcola il valore della funzione di distribuzione cumulativa della distribuzione Gamma in _v_, cioè la probabilità
-  _P(X ≤ v)_ dove _X_ è una variabile casuale con distribuzione Gamma avente parametri _α, β_.
+Gamma(Alfa, Beta, Valore variabile)::
+  Calcola il valore della funzione di distribuzione cumulata di una http://en.wikipedia.org/wiki/it:Distribuzione_Gamma[distribuzione Gamma] in corrispondenza del _valore variabile v_ specificato, cioè calcola la probabilità _P(X≤v)_ dove _X_ è una variabile casuale con distribuzione Gamma con parametri _alfa_ e _beta_ indicati.
 
 [NOTE]
 ====
 
-Restituisce la probabilità relativa a un determinato valore di _x_ (ovvero l'area sottesa dalla curva della
-distribuzione Gamma alla sinistra dell'ascissa x indicata).
+Questa sintassi restituisce la probabilità relativa al valore indicato della variabile, che è l'area sottesa dalla curva della distribuzione Gamma alla sinistra dell'ascissa indicata.
 
 ====
+
+Gamma(Alfa, Beta, Valore variabile, Booleano Cumulata)::
+ Se _Cumulata_ è _true_, calcola il valore della funzione di distribuzione cumulata di una distribuzione Gamma con parametri _alfa_ e _beta_ in corrispondenza del _valore variabile_, altrimenti calcola il valore della funzione densità di probabilità di una distribuzione Gamma con parametri _alfa_ e _beta_ indicati in corrispondenza del _valore variabile_.
+
+Gamma(Alfa, Beta, x, Booleano Cumulata)::
+ Se _Cumulata_ è _true_, genera la funzione di distribuzione cumulata di una distribuzione Gamma, altrimenti genera la funzione densità di probabilità di una distribuzione Gamma di parametri _alfa_ e _beta_ indicati.

@@ -2,55 +2,15 @@
 :page-en: commands/Sequence
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
-Successione(Espressione, Variabile, Numero, Numero)::
-  Genera una lista di oggetti, utilizzando l'espressione indicata e i valori della variabile compresi tra i due numeri
-  indicati.
-
-[EXAMPLE]
-====
-
-*Esempi:*
-
-* `++Successione((2, k), k, 1, 5)++` genera una lista di punti aventi le ordinate variabili tra 1 e 5: \{(2, 1), (2, 2),
-(2, 3), (2, 4), (2, 5)}
-* `++Successione(x^k, k, 1, 10)++` genera la lista \{_x, x², x³, x⁴, x⁵, x⁶, x⁷, x⁸, x⁹, x¹⁰_}
-
-====
-
-Successione(Espressione, Variabile, Numero, Numero, Incremento)::
-  Genera una lista di oggetti, utilizzando l'espressione indicata e i valori della variabile compresi tra i due numeri
-  indicati, secondo l'incremento dato.
-
-[EXAMPLE]
-====
-
-*Esempi:*
-
-* `++L = Successione((2, k), k, 1, 3, 0.5)++` genera una lista di punti, le cui ordinate variano tra 1 e 3 con
-incremento 0.5: L = \{(2, 1), (2, 1.5), (2, 2), (2, 2.5), (2, 3)}
-* `++Successione(x^k, k, 1, 10, 2)++` genera la lista \{_x, x³, x⁵, x⁷, x⁹_}.
-
-====
-
-Successione(Valore finale)
+Successione(Valore finale)::
 
 Genera una lista, contenente i numeri interi da 1 al valore indicato.
 
 [EXAMPLE]
 ====
 
-*Esempi:*
-
-* `++Successione(4)++` genera la lista _\{1, 2, 3, 4}_.
-* `++2^Successione(4)++` genera la lista _\{2, 4, 8, 16}_.
-
-====
-
-[NOTE]
-====
-
-I valori utilizzati nella sintassi per definire l'intervallo della variabile sono dinamici: è quindi possibile
-utilizzare anche xref:/tools/Slider.adoc[slider].
+* `++Successione(4)++` genera la lista _{1, 2, 3, 4}_.
+* `++2^Successione(4)++` genera la lista _{2, 4, 8, 16}_.
 
 ====
 
@@ -60,13 +20,13 @@ Successione(Valore iniziale, Valore finale)::
 [EXAMPLE]
 ====
 
-*Esempi:*
+`++Successione(7,13)++` crea la lista {_7, 8, 9, 10, 11, 12, 13_}
 
-`++Successione(7,13)++` crea la lista \{_7, 8, 9, 10, 11, 12, 13_}
+`++Successione(18,14)++` crea la lista {_18, 17, 16, 15, 14_}
 
-`++Successione(18,14)++` crea la lista \{_18, 17, 16, 15, 14_}
+`++Successione(-5, 5)++` crea la lista {_-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5_}.
 
-`++Successione(-5, 5)++` crea la lista \{_-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5_}.
+====
 
 [NOTE]
 ====
@@ -76,11 +36,52 @@ Questa sintassi può essere ulteriormente semplificata: invece di utilizzare ad 
 
 ====
 
+Successione(Valore iniziale, Valore finale, Incremento)::
+  Crea una lista di numeri interi compresi tra il valore iniziale e quello finale indicati, con passo incrementale specificato
+
+[EXAMPLE]
 ====
+
+`++Successione(7,13,2)++` crea la lista {7, 9, 11, 13}
+
+`++Successione(7,13,4)++` crea la lista {7, 11}
+
+====
+
+
+Successione(Espressione, Variabile, Valore iniziale, Valore finale)::
+  Genera una lista di oggetti, utilizzando l'espressione indicata e i valori della variabile compresi tra i valori iniziale e finale indicati.
+
+[EXAMPLE]
+====
+
+* `++Successione((2, k), k, 1, 5)++` genera una lista di punti aventi le ordinate variabili tra 1 e 5: {(2, 1), (2, 2),
+(2, 3), (2, 4), (2, 5)}
+* `++Successione(x^k, k, 1, 10)++` genera la lista {_x, x², x³, x⁴, x⁵, x⁶, x⁷, x⁸, x⁹, x¹⁰_}
+
+====
+
+Successione(Espressione, Variabile, Valore iniziale, Valore finale, Incremento)::
+  Genera una lista di oggetti, utilizzando l'espressione indicata e i valori della variabile compresi tra i valori iniziale e finale dati, con passo incrementale specificato.
+
+[EXAMPLE]
+====
+
+*Esempi:*
+
+* `++L = Successione((2, k), k, 1, 3, 0.5)++` genera una lista di punti, le cui ordinate variano tra 1 e 3 con
+incremento 0.5: L = {(2, 1), (2, 1.5), (2, 2), (2, 2.5), (2, 3)}
+* `++Successione(x^k, k, 1, 10, 2)++` genera la lista {_x, x³, x⁵, x⁷, x⁹_}.
+
+====
+
 
 [NOTE]
 ====
 
-Vedere xref:/Liste.adoc[Liste] per ulteriori informazioni sulle operazioni con le liste.
+* I valori utilizzati nella sintassi per definire l'intervallo della variabile sono dinamici: è quindi possibile utilizzare anche xref:/tools/Slider.adoc[slider].
+* Vedere xref:/Liste.adoc[Liste] per ulteriori informazioni sulle operazioni con le liste.
 
 ====
+
+

@@ -5,23 +5,24 @@ ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 Elimina(Oggetto)::
   Elimina l’oggetto e tutti i relativi oggetti dipendenti.
 
+[EXAMPLE]
+====
+
+Siano _P_ un punto, _sli_ uno slider, e _seg=Segmento(P,sli)_. Il comando `++Elimina(sli)++` cancella dalla costruzione lo slider _sli_ e il segmento _seg_, ma non elimina il punto _P_, perchè non è dipendente dallo slider _sli_ eliminato .
+
+====
+
+
+== Sintassi CAS
+
+Elimina(Oggetto)::
+  Elimina l’oggetto e tutti i relativi oggetti dipendenti in GeoGebra e rimuove ogni valore assegnato all'oggetto nella Vista CAS.
+
+
 [NOTE]
 ====
 
 Vedere anche lo strumento image:24px-Mode_delete.svg.png[Mode delete.svg,width=24,height=24]
 xref:/tools/Elimina.adoc[Elimina].
-
-====
-
-== Sintassi CAS
-
-Elimina(Oggetto)::
-  Elimina l’oggetto e tutti i relativi oggetti dipendenti in GeoGebra e rimuove ogni valore assegnato all'oggetto nel
-  CAS.
-
-[EXAMPLE]
-====
-
-`++Elimina(a)++` cancella definitivamente _a_.
 
 ====

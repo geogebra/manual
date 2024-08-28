@@ -1,19 +1,18 @@
 = Maximize Command
 :page-en: commands/Maximize
+:page-aliases: commands/Maximise.adoc
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:64px-Globe.png[Globe.png,width=64,height=64]
+[NOTE]
+====
+image:64px-Globe.png[Globe.png,width=64,height=64,role=left]
 
-a|
 This command differs among variants of English:
 
-* Maximize (US)  
-* Maximise (UK + Aus)  
+* Maximize (US)
+* Maximise (UK + Aus)
 
-|===
+====
 
 Maximize( <Dependent number>, <Free number> )::
   Calculates the free number which gives the maximal value of the dependent number. The free number must be a slider and
@@ -21,7 +20,25 @@ Maximize( <Dependent number>, <Free number> )::
   _local_ maximum point in the interval. If the construction is complicated, this command might return ? to avoid using
   too much processor time.
 
+[Example]
+====
+
+Let _a_ be a slider in [0,10] and _t1_ the right triangle with vertices _C_=(_a_, 0), _A_=(0, 0) and _B_=(0,10 - _a_).
+`++Maximize(t1,a)++` gives 5, the value of _a_ that maximizes the area of _t1_.
+
+====
+
+
+
 Maximize( <Dependent Number>, <Point on Path> )::
+Calculates the position of the point which gives the maximal value of the dependent number. The point must be a point on a path and the path will be used as the search interval. The relationship should be continuous and have only one local maximum point in the interval. If the construction is complicated, this command might return ? to avoid using too much processor time.
+
+[Example]
+====
+
+Let _c_ be a circle, _C_ a point on it and _D_ a point outside the circle. If _f_ = Segment(C,D) then `++Maximize(f,C)++` creates the point on _c_ having maximum distance from _D_.
+
+====
 
 [NOTE]
 ====

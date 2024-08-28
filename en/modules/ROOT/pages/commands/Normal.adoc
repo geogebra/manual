@@ -2,24 +2,10 @@
 :page-en: commands/Normal
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
-Normal( <Mean>, <Standard Deviation>, x )::
-  Creates cumulative density function (cdf) of http://en.wikipedia.org/wiki/Normal_distribution[normal distribution].
+Normal( <Mean>, <Standard Deviation>, <Variable Value> )::
+  Evaluates the function stem:[\Phi \left(\frac{x- \mu}{\sigma} \right) ] at _variable value v_, where _Φ_ is the cumulative
+  distribution function of _N(0,1)_ with given _mean μ_ and _standard deviation σ_.
 
-Normal( <Mean>, <Standard Deviation>, x, <Boolean Cumulative> )::
-  If _Cumulative_ is true, creates cumulative distribution function of normal distribution with mean μ and standard
-  deviation σ, otherwise creates pdf of normal distribution.
-
-Normal( <Mean μ>, <Standard Deviation σ>, <Variable Value v> )::
-  Calculates the function stem:[\Phi \left(\frac{x- \mu}{\sigma} \right) ] at _v_ where _Φ_ is the cumulative
-  distribution function for _N(0,1)_ with mean _μ_ and standard deviation _σ_.
-
-[NOTE]
-====
-
-Returns the probability for a given _x_-coordinate's value (or area under the normal distribution curve to the left of
-the given _x_-coordinate).
-
-====
 
 [EXAMPLE]
 ====
@@ -29,3 +15,19 @@ xref:/Algebra_View.adoc[Algebra View] and stem:[\frac{erf(-\sqrt{2})+1}{2}] in t
 image:16px-Menu_view_cas.svg.png[links=,width=16,height=16] xref:/CAS_View.adoc[CAS View].
 
 ====
+
+[NOTE]
+====
+
+This syntax returns the probability at a given value, that is the area under the normal distribution curve to the left of the given _x_-coordinate.
+
+====
+
+Normal( <Mean>, <Standard Deviation>, <Variable Value>, <Boolean Cumulative> )::
+  If _Cumulative = true_, evaluates the cumulative distribution function of a http://en.wikipedia.org/wiki/Normal_distribution[normal distribution] with given _mean_ and _standard deviation_ at the given _variable value_, otherwise it evaluates the probability density function of the distribution at _variable value_.
+
+Normal( <Mean>, <Standard Deviation>, x, <Boolean Cumulative> )::
+ If _Cumulative = true_, creates the cumulative density function (cdf) of a normal distribution with given _mean_ and _standard deviation_, otherwise it creates the probability density function (pdf) of the distribution.
+
+
+

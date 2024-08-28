@@ -9,7 +9,7 @@ FrazioneInTesto(Numero)::
 [EXAMPLE]
 ====
 
-Data la retta _a: y = 1.5 x + 2_, `++FrazioneInTesto(Pendenza(a))++` crea il testo LaTeX stem:[\frac{3}\{2}].
+Data la retta _a: y = 1.5 x + 2_, `++FrazioneInTesto(Pendenza(a))++` crea il testo LaTeX stem:[\frac{3}{2}].
 
 ====
 
@@ -21,12 +21,11 @@ FrazioneInTesto(Punto)::
 [EXAMPLE]
 ====
 
-Sia _A=(1.33, 0.8)_ un punto, allora `++FrazioneInTesto(A)++` genera il testo _stem:[ \left( \frac{133}\{100}
-,\frac{4}\{5} \right) ]_.
+Sia _A=(1.33, 0.8)_ un punto, allora `++FrazioneInTesto(A)++` genera il testo _stem:[ \left( \frac{133}{100} ,\frac{4}{5} \right) ]_.
 
 ====
 
-FrazioneInTesto(Numero, Booleano)::
+FrazioneInTesto(Numero, Booleano Frazione singola)::
   Crea e visualizza nella image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
   xref:/Vista_Grafici.adoc[vista Grafici] un testo LaTeX contenente il numero, espresso in formato frazionario.
   Il valore booleano indicato definisce la posizione di un possibile segno negativo della frazione: se _true_, il segno
@@ -39,8 +38,8 @@ FrazioneInTesto(Numero, Booleano)::
 
 Sia _n = -0.8_ un numero.
 
-* `++FrazioneInTesto(n, true)++` genera il testo stem:[\frac{- 4}\{5}].
-* `++FrazioneInTesto(n, false)++` genera il testo stem:[-\frac{4}\{5}].
+* `++FrazioneInTesto(n, true)++` genera il testo stem:[\frac{- 4}{5}].
+* `++FrazioneInTesto(n, false)++` genera il testo stem:[-\frac{4}{5}].
 
 ====
 

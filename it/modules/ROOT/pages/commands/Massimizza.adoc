@@ -9,7 +9,25 @@ Massimizza(Numero dipendente, Numero libero)::
   restituire ?, terminando automaticamente l'esecuzione per evitare un utilizzo troppo elevato dei tempi di calcolo del
   processore.
 
-Massimizza(Numero dipendente, Punto su cammino)
+[EXAMPLE]
+====
+
+Sia _a_ uno slider a valori in [0,10] e _t1_ il triangolo rettangolo di vertici _C_ = (_a_, 0), _A_ = (0, 0) e _B_ = (0,10 - _a_). `++Massimizza(t1,a)++` restituisce 5, il valore di _a_ che massimizza l'area del triangolo _t1_.
+
+====
+
+Massimizza(Numero dipendente, Punto su cammino)::
+
+    Calcola la posizione del punto che determina il valore massimo del numero dipendente. Il punto deve essere su un cammino e il cammino verrà utilizzato come dominio del calcolo. La relazione deve essere continua e
+  avere un solo _massimo_ locale nell'intervallo. Se la costruzione è particolarmente complicata, il comando potrebbe restituire ?, terminando automaticamente l'esecuzione per evitare un utilizzo troppo elevato dei tempi di calcolo del processore.
+
+[EXAMPLE]
+====
+
+Sia _c_ una circonferenza, _C_ un punto su di essa e _D_ un punto esterno alla circonferenza. Se _f_ = _Segmento_(_C_,_D_) allore `++Massimizza(f,C)++` crea il punto su _c_ avente distanza massima da _D_.
+
+====
+
 
 [NOTE]
 ====
