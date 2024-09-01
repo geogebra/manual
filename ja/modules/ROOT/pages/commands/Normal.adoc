@@ -2,7 +2,7 @@
 :page-en: commands/Normal
 ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
-Normal( <平均>, <標準偏差>, )::
+Normal( <平均>, <標準偏差>, <変数値> )::
   変数 _v_ における関数 stem:[\Phi \left(\frac{x- \mu}{\sigma} \right) ]の値を計算する．ここで，_Φ_ は _平均 μ_
   と _標準偏差 σ_　を持つ標準正規分布 _N(0,1)_ の累積分布関数である．
 
@@ -23,8 +23,9 @@ image:16px-Menu_view_cas.svg.png[links=,width=16,height=16] xref:/CASビュー.a
 ====
 
 Normal( <平均>, <標準偏差>, <変数値>, <累積の真偽値> )::
- 与えられたパラメータ（_平均_ と _標準偏差_）の https://ja.wikipedia.org/%E6%AD%A3%E8%A6%8F%E5%88%86%E5%B8%83[正規分布]について，_累積の真偽値_ が _true_ の場合は変数値での
-累積分布関数（cdf）の値を，_false_ の場合は変数値での確率密度関数（pdf）の値を返す．
+ 与えられたパラメータ（_平均_ と _標準偏差_）の https://ja.wikipedia.org/wiki/%E6%AD%A3%E8%A6%8F%E5%88%86%E5%B8%83[正規分布]について，
+_累積の真偽値_ が _true_ の場合は _変数値_ での
+累積分布関数（cdf）の値を，_false_ の場合は _変数値_ での確率密度関数（pdf）の値を返す．
 
 Normal( <平均>, <標準偏差>, x, <累積の真偽値> )::
  与えられたパラメータ（_平均_ と _標準偏差_）の正規分布について，_累積の真偽値_ が _true_ の場合は
