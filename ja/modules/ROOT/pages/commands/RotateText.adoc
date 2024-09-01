@@ -3,33 +3,22 @@
 ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
 RotateText( <テキスト>, <角度> )::
-  指定された角度でテキストを回転させ，結果はxref:/LaTeX.adoc[LaTeX] を用いてレンダリングされる．
-
-[EXAMPLE]
-====
-
-`++RotateText("a = 5", 45°)++`
-
-====
+  与えられた角度だけ回転した新しい xref:/LaTeX.adoc[LaTeX]テキストを作成する．
 
 [NOTE]
 ====
 
 * テキストは二重引用符`++"++`で囲む必要がある．
-* テキストは，テキストを含む枠の左上隅 （隅4ともいう）を中心に回転さ れ，座標系の原点に置かれる．
+* テキストは，テキストを含む枠の左上隅 （xref:/commands/Corner.adoc[隅]4ともいう）を中心に回転さ れ，座標系の原点に置かれる．
+* 明示的に度記号`++°++`を使用しないと，角度はラジアン単位となる．
 
 ====
 
 [EXAMPLE]
 ====
 
-"GeoGebra "を 42°回転したテキストを点(6,6)に置きたい場合は，次のコマンドを使う．  `++Text(RotateText("GeoGebra", 42°), (6, 6),true,true)++`
+* `++RotateText("a = 5", 45°)++`
 
-====
-
-[NOTE]
-====
-
-* 明示的に度記号`++°++`を使用しないと，角度はラジアン単位となる．
+* "GeoGebra "を 42°回転したテキストを点(6,6)に置きたい場合は，次のコマンドを使う．  `++Text(RotateText("GeoGebra", 42°), (6, 6),true,true)++`
 
 ====
