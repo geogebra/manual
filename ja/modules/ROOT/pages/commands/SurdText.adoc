@@ -2,8 +2,18 @@
 :page-en: commands/SurdText
 ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
+SurdText( <点> )::
+  以下の形式で _点_ の座標のテキスト表現を作成する： stem:[\frac{a+b\sqrt{c}}{d}].
+
+[EXAMPLE]
+====
+
+`++SurdText((2.414213562373095, 1.414213562373095))++` 出力 _(stem:[1 + \sqrt{2}, \sqrt{2})]_
+
+====
+
 SurdText( <数値> )::
-  以下の形式で数値のテキスト表現を作成する： stem:[\frac{a+b\sqrt{c}}{d}].
+  以下の形式で _数値_ のテキスト表現を作成する： stem:[\frac{a+b\sqrt{c}}{d}].
 
 [EXAMPLE]
 ====
@@ -14,7 +24,7 @@ SurdText( <数値> )::
 ====
 
 SurdText( <数値>, <リスト> )::
-  リスト内の定数の倍数として数値のテキスト表現を作成する．リストが空の場合，一般的な定数のリストが使用される．
+  _リスト_ 内の定数の倍数として _数値_ のテキスト表現を作成する．リストが空の場合，一般的な定数のリストが使用される．
 
 [EXAMPLE]
 ====
@@ -25,15 +35,6 @@ SurdText( <数値>, <リスト> )::
 
 ====
 
-SurdText( <点> )::
-  以下の形式で点の座標のテキスト表現を作成する： stem:[\frac{a+b\sqrt{c}}{d}].
-
-[EXAMPLE]
-====
-
-`++SurdText((2.414213562373095, 1.414213562373095))++` 出力 _(stem:[1 + \sqrt{2}, \sqrt{2})]_
-
-====
 
 [NOTE]
 ====
