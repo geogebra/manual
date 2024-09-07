@@ -2,16 +2,15 @@
 :page-en: tools/Locus
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
-Select a point _B_ that depends on another point _A_ and whose locus should be drawn. Then, select point _A_ to create
-the locus of point _B_.
+Given a point _B_ that depends on another point _A_ belonging to a geometric object (e.g. line, segment, circle), activate the tool then select point _B_ and point _A_ to generate the locus of point _B_ when _A_ moves along its constraint.
 
 [EXAMPLE]
 ====
 
 * Type `++f(x) = x^2 – 2 x – 1++` into the _Input Bar_ and press the [.kcode]#Enter# key.
-* Place a new point _A_ on the _x_-axis (see image:22px-Mode_point.svg.png[Mode point.svg,width=22,height=22]
+* Place a point _A_ on the _x_-axis (see image:22px-Mode_point.svg.png[Mode point.svg,width=22,height=22]
 xref:/tools/Point.adoc[Point] tool or xref:/commands/Point.adoc[Point] command).
-* Create point `++B = (x(A), f'(x(A)))++` that depends on point _A_.
+* Create the point `++B = (x(A), f'(x(A)))++` that depends on point _A_.
 * Select the tool image:22px-Mode_locus.svg.png[Mode locus.svg,width=22,height=22] _Locus_ and successively select point
 _B_ and point _A_ to create the locus.
 * Drag point _A_ along the _x_-axis to see point _B_ moving along its locus line.
@@ -20,15 +19,12 @@ _B_ and point _A_ to create the locus.
 
 [WARNING]
 ====
-Locus is undefined, if the dependent
-point depends on xref:/commands/Point.adoc[Point Command] with two parameters or
-xref:/commands/PathParameter.adoc[PathParameter Command].
+Locus will be _undefined_ if the dependent point has been defined using the xref:/commands/Point.adoc[Point Command] with two parameters or the xref:/commands/PathParameter.adoc[PathParameter Command].
 ====
 
 [NOTE]
 ====
 
-* Point _A_ has to be a point on an object (e.g. line, segment/interval, circle).
 * See also xref:/commands/Locus.adoc[Locus] command.
 
 ====
