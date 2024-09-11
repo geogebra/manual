@@ -37,7 +37,7 @@ for (const lang of active) {
     listFilesSync(`${lang}/modules/ROOT/pages`, filePath => {
         const content = fs.readFileSync(filePath, 'utf8');
         const pageEn = content.match(/:page-en:(.*)/);
-        if (!pageEn) {
+        if (!pageEn || allEn.indexOf(pageEn[1].trim()) == -1) {
             if (lang == "ja" && fs.existsSync(filePath.replace(/ja.modules/,'en/modules'))) {
                 const lines = content.split('\n');
                 const fixedContent = lines[0]+'\n:page-en: '+simplePath(filePath).replace('.adoc','')+'\n'+lines.slice(1).join('\n')
