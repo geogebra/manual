@@ -31,6 +31,7 @@ const allEn = [];
 listFilesSync(`en/modules/ROOT/pages`, filePath => allEn.push(simplePath(filePath).replace('.adoc', '')));
 for (const lang of active) {
     const orphans = [];
+    const duplicates = [];
     const translations = {};
     const partials = [];
     listFilesSync(`${lang}/modules/ROOT/pages`, filePath => {
@@ -48,6 +49,10 @@ for (const lang of active) {
         } else {
             if (content.includes('UnderConstruction.png')) {
                 partials.push(simplePath(filePath));
+            }
+            if (translations[pageEn[1].trim()]) {
+              duplicates.push(simplePath(translations[pageEn[1].trim()]));
+              duplicates.push(simplePath(filePath));
             }
             translations[pageEn[1].trim()] = filePath;
         }
@@ -71,11 +76,15 @@ for (const lang of active) {
         : orphans.map(k=>`\n * xref:${k}[${k.substr(0, k.length - 5)}]`).join('');
     const partialList = !partials.length ? "All clear"
         : partials.map(k=>`\n * xref:${k}[${k.substr(0, k.length - 5)}]`).join('');
+    const dupeList = !duplicates.length ? "All clear"
+            : duplicates.map(k=>`\n * xref:${k}[${k.substr(0, k.length - 5)}]`).join('');
     fs.writeFileSync(`${lang}/modules/ROOT/pages/missing.adoc`, '= Translation issues\n'
         + '\n== Extra translations\n'
         + orphanList
         + '\n\n== Missing translations\n'
         + missingList
         + '\n\n== Partial translations\n'
-        + partialList, 'utf8');
+        + partialList
+        + '\n\n== Duplicate translations\n'
+        + dupeList, 'utf8');
 }
