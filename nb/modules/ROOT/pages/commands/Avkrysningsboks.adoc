@@ -1,0 +1,25 @@
+= Avkrysningsboks Kommando
+:page-en: commands/Checkbox
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Avkrysningsboks[]::
+  Lager en xref:/Handlingsobjekt.adoc[avkrysningsboks].
+Avkrysningsboks[ <Tekst> ]::
+  Lager en avkrysningsboks med den gitte xref:/Navn_og_objekttekster.adoc[objektteksten].
+Avkrysningsboks[ <Liste> ]::
+  Lager en avkrysningsboks som skjuler objektene i listen når den ikke er avkrysset.
+
+[EXAMPLE]
+====
+
+Skjule/vise to punkt:
+
+* `++A=(1,2)++`, `++B=(2,1)++` - La _A_ og _B_ være punkter.
+* `++c=Avkrysningsboks[{A,B}]++` - Lager avkrysningsboksen _c_.
+* Når _c_ er krysset av vil _A_ og _B_ være synlige.
+* Når _c_ ikke er avkrysset vil _A_ og _B_ ikke være synlige.
+
+====
+
+Avkrysningsboks[ <Tekst>, <Liste> ]::
+  Lager en avkrysningsboks med den gitte teksten. Når boksen er krysset av er objektene synlige, ellers ikke.

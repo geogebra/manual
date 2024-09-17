@@ -1,0 +1,21 @@
+= KortesteAvstand Kommando
+:page-en: commands/ShortestDistance
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+KortesteAvstand[ <Liste med linjestykker>, <Startpunkt A>, <Sluttpunkt B>, <Boolsk Vektet> ]::
+  Finner den korteste avstanden mellom startpunktet _A_ og sluttpunktet _B_ på en graf gitt av en liste med
+  linjestykker.
+  * Dersom _Boolsk Vektet_ = false blir hver kant vektet som 1 og kommandoen finner den veien som har lavest antall
+  kanter.
+  * Dersom _Boolsk Vektet_ = true blir linjestykkene vektet ut fra lengden, og kommandoen finner den korteste
+  geometriske avstanden.
+  Det returnerte objektet er en xref:/commands/GeometriskSted.adoc[lokus] (geometrisk sted) og er derfor et
+  hjelpeobjekt.

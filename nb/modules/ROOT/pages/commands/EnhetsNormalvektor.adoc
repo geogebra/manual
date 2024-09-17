@@ -1,0 +1,54 @@
+= EnhetsNormalvektor Kommando
+:page-en: commands/UnitPerpendicularVector
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+EnhetsNormalvektor[ <Linje> ]::
+  Returnerer en vektor med lengde 1 som står normalt på linjen.
+EnhetsNormalvektor[ <Linjestykke> ]::
+  Returnerer en vektor med lengde 1 som står normalt på linjestykket.
+EnhetsNormalvektor[ <Vektor> ]::
+  Returnerer en vektor med lengde 1 som står normalt på vektoren. Vektoren må defineres først.
+
+[EXAMPLE]
+====
+
+La stem:[v=\begin\{pmatrix}3\\4\end\{pmatrix}]. `++EnhetsNormalvektor[v]++` gir
+_stem:[\begin\{pmatrix}-0.8\\0.6\end\{pmatrix}]_.
+
+====
+
+[EXAMPLE]
+====
+
+`++EnhetsNormalvektor[3x + 4y = 5]++` gir _stem:[\begin\{pmatrix}0.6\\0.8\end\{pmatrix}]_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også kommandoene xref:/commands/Normalvektor.adoc[Normalvektor] og
+xref:/commands/Retningsvektor.adoc[Retningsvektor].
+
+====
+
+== CAS-delen
+
+EnhetsNormalvektor[ <Vektor> ]::
+  Returnerer en vektor med lengde 1 som står normalt på vektoren.
+
+[EXAMPLE]
+====
+
+`++EnhetsNormalvektor[(3,4)]++` gir stem:[\left(\frac\{-b}\{\sqrt\{a^\{2} + b^\{2} } },\frac\{a}\{\sqrt\{a^\{2} + b^\{2}
+} }\right)=\left(-\frac\{4}\{5},\frac\{3}\{5}\right)].
+
+====

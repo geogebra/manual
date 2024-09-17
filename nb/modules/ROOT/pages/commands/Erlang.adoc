@@ -1,0 +1,54 @@
+= Erlang Kommando
+:page-en: commands/Erlang
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Erlang[ <Form k>, <Fart λ>, x ]::
+  Lager https://en.wikipedia.org/wiki/no:Tetthetsfunksjon[tetthetsfunksjoen] til Erlangfordelingen med parametrar _k,
+  λ_.
+
+Erlang[ <Form k>, <Fart λ>, <Variabelverdi v> ]::
+  Finn verdien av den https://en.wikipedia.org/wiki/no:Kumulativ_fordelingsfunksjon[kumulative fordelingsfunksjonen] til
+  Erlangfordelingen ved _v_. Det vil si sannsynligheten _P(X≤v)_ der _X_ er en Erlangfordelt stokastisk variabel med
+  parametrene _k, λ_.
+
+Erlang[ <Form k>, <Fart λ>, x, <Boolsk Kumulativ> ]::
+  La _X_ være en Erlangfordelt stokastisk variabel med parametrene _k, λ_.
+  * Dersom _kumulativ = false_ blir https://en.wikipedia.org/wiki/no:Tetthetsfunksjon[tetthetsfunksjoen] til _X_
+  returnert.
+  * Dersom _kumulativ = true_ blir den https://en.wikipedia.org/wiki/no:Kumulativ_fordelingsfunksjon[kumulative
+  fordelingsfunksjonen] til _X_ returnert.
+
+== CAS-delen
+
+Syntaksen er lik i CAS-delen.
+
+[NOTE]
+====
+
+*Se også* verktøyet image:Tool_Probability_Calculator.gif[Tool Probability Calculator.gif,width=32,height=32]
+xref:/tools/Sannsynlighetskalkulator.adoc[Sannsynlighetskalkulator] og kommandoer for de ulike
+sannsynlighetsfordelingene:
+
+=== [#Kontinuerlige]#Kontinuerlige#
+
+* [.mw-selflink .selflink]#Erlang#
+* xref:/commands/FordelingCauchy.adoc[FordelingCauchy]
+* xref:/commands/FordelingF.adoc[FordelingF]
+* xref:/commands/FordelingGamma.adoc[FordelingGamma]
+* xref:/commands/FordelingNormal.adoc[FordelingNormal]
+* xref:/commands/FordelingT.adoc[FordelingT]
+* xref:/commands/FordelingWeibull.adoc[FordelingWeibull]
+* xref:/commands/KjiKvadrat.adoc[KjiKvadrat]
+* xref:/commands/LogNormal.adoc[LogNormal]
+* xref:/commands/Logistisk.adoc[Logistisk]
+* xref:/commands/Trekantfordeling.adoc[Trekantfordeling]
+* xref:/commands/Uniform.adoc[Uniform]
+=== [#Diskrete]#Diskrete#
+
+* xref:/commands/FordelingBernoulli.adoc[FordelingBernoulli]
+* xref:/commands/FordelingBinomial.adoc[FordelingBinomial]
+* xref:/commands/FordelingHypergeometrisk.adoc[FordelingHypergeometrisk]
+* xref:/commands/FordelingPascal.adoc[FordelingPascal]
+* xref:/commands/FordelingPoisson.adoc[FordelingPoisson]
+* xref:/commands/Zipf.adoc[Zipf]
+====

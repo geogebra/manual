@@ -1,0 +1,43 @@
+= Ulike Kommando
+:page-en: commands/Unique
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Ulike[ <Liste L> ]::
+  Returnerer en liste med elementene i _L_ i stigende rekkefølge, men hvert element blir kun tatt med en gang.
+  Kommandoen kan brukes både for tall og tekst.
+
+[EXAMPLE]
+====
+
+* `++Ulike[{1, 2, 4, 1, 4}]++` gir _\{1, 2, 4}_.
+* `++Ulike[{"a", "b", "Hallo", "Hallo"}]++` gir _\{"Hallo", "a", "b"}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også kommandoen xref:/commands/Frekvens.adoc[Frekvens] som gir tallet på forekomsten av hvert unike element i
+_L_.
+
+====
+
+== CAS-delen
+
+Ulike[ <Liste L> ]::
+  Returnerer en liste hvor hvert element fra _L_ opptrer kun en gang.
+
+[EXAMPLE]
+====
+
+`++Ulike[{1, x, x, 1, a}]++` gir _\{1, x, a}_.
+
+====

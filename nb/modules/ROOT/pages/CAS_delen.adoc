@@ -1,0 +1,78 @@
+= CAS-delen
+:page-en: CAS_View
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+I CAS-delen (Computer Algebra System) kan du gjøre symbolske beregninger. Visningen består av rader, hvor hver av dem
+har et inndatafelt øverst og et utdatafelt nederst. Du kan bruke inndatafeltene i CAS-delen på samme måte som det
+normale xref:/Inntastingsfelt.adoc[inntastingsfeltet], med følgende forskjeller:
+
+* Du kan bruke variabler som ikke er tildelt noen verdi, f.eks `++ (a + b) ^ 2 ++` evaluerer til _a^2 + 2 a b + b^2_
+* `++=++` brukes for likninger og `++:=++` for tilordninger. Dette betyr at `++ a = 2 ++` *ikke* vil tildele verdi 2 til
+_a_. Se xref:/.adoc[delen om tilordninger] for detaljer.
+* Multiplikasjon bør merkes tydelig. I xref:/Inntastingsfelt.adoc[inntastingsfeltet] kan du bruke `++a(b+c)++`,
+`++a (b+c)++` og `++ a*(b+c) ++` for multiplikasjon, mens i CAS-delen er kun mellomrom og * gyldig som multiplikasjon.
+
+== Grunnleggende inntasting
+
+* [.kcode]#Enter#: Beregn inntastet uttrykk
+* [.kcode]#Alt# + [.kcode]#Enter#: Sjekk inntastet uttykk uten å beregne det. For eksempel vil `++b+b++` forbli
+_b+b_(ikke _2b_). Merk at tilordninger, for eksempel `++a:=5++`, alltid blir beregnet.
+* På en tom rad kan du skrive
+** [.kcode]#Mellomrom# for forrige resultat
+** `++)++` for forrige resultat i parentes
+** `++=++` for forrige inntasting
+* Undertrykke resultatet ved å avslutte uttrykket med et semikolon. For eksempel `++a := 5;++`
+
+== Verktøylinjen
+
+* Ved å klikke på et verktøy i verktøylinjen blir gjeldende rad evaluert med det valgte verktøyet
+* Du kan bruke verktøy på valgte deler av uttrykk:
+** Skriv inn et uttrykk
+** Merk en del av uttrykket - dette gjøres ved å holde inne [.kcode]#Shift# og bevege pekeren med piltastene
+** Delen av uttrykket som ønskes evaluert er nå merket med blått
+** Trykk på verktøyet eller trykk [.kcode]#Enter# om verktøyet allerede er valgt
+
+== Variabler
+
+=== Tilordninger
+
+* For å tildele en verdi brukes notasjonen :=, f.eks `++ a:=5 ++`, `++ f(n):=2n+3 ++`
+* For å frigjøre et variabelnavn igjen brukes `++Slett[a]++` eller `++a:= ++`
+* Variabler og funksjoner er alltid delt mellom CAS-delen og xref:/Algebrafelt.adoc[algebrafeltet] hvis mulig. Hvis du
+definerer `++b:=5++` i CAS-delen, så kan du bruke _b_ i alle deler av GeoGebra. Hvis du har en funksjon `++f(x)=x^2++` i
+algebrafeltet, kan du også bruke denne funksjonen i CAS-delen.
+
+[NOTE]
+====
+
+*Merk:*
+
+Utdata/returverdi vil alltid være uttrykket rett *etter* `++:=++`. For eksempel: Hvis du skriver `++b:=5++` vil utdata
+være `++5 ++`, ikke `++b:=5++`.
+
+====
+
+.
+
+=== Referanser
+
+Du kan referere til andre rader i CAS-vinduet på to måter:
+
+* Statiske referanser setter inn tekst fra en annen rad slik at inntastingen din endres.
+** `++#++` setter inn tidligere resultat
+** `++#5++` setter inn resultatet fra rad 5
+* Dynamiske referanser bruker tekst fra en annen rad uten å ende inntastingen din.
+** `++$++` setter inn tidligere resultat
+** `++$5++` setter inn resultatet fra rad 5
+
+== Ligninger
+
+* Likninger skrives ved hjelp av likhetstegnet, f.eks `++3 x+5=7++`
+* Du kan utføre aritmetiske operasjoner på ligninger, f.eks `++(3x + 5 = 7) - 5++` trekker fra 5 på begge sider av
+ligningen. Dette er nyttig når en ønsker å løse ligningen manuelt.
+* `++Venstreside[3x + 5 = 7]++` returnerer _3 x + 5_ og `++Høyreside[3x + 5 = 7]++` returnerer _7_.
+
+== Kommandoer og verktøy
+
+Se xref:/CAS_Spesielle_kommandoer.adoc[CAS-kommandoer] og xref:/CAS_verktøy.adoc[CAS-verktøy] for en komplett liste over
+kommandoer og verktøy.

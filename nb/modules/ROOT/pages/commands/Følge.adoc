@@ -1,0 +1,94 @@
+= Følge Kommando
+:page-en: commands/Sequence
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Følge[ <Sluttverdi b> ]::
+  Lager en liste med tall fra 1 til _b_.
+
+[EXAMPLE]
+====
+
+* `++Følge[8]++` lager listen _\{1, 2, 3, 4, 5, 6, 7, 8}_.
+* `++2^Følge[4]++` lager listen _\{2, 4, 8, 16}_.
+
+====
+
+Følge[ <Uttrykk>, <Variabel i>, <Tall a>, <Tall b> ]::
+  Gir en liste med objekt som lages når variabelen _i_ går over tallene fra _a_ til _b_ i det gitte uttrykket.
+
+[EXAMPLE]
+====
+
+`++Følge[(2, i), i, 1, 5]++` lager en liste med punkt som har _x_-koordinat lik 2 og _y_-koordinat som går fra 1 til 5:
+_\{(2, 1), (2, 2), (2, 3), (2, 4), (2, 5)}_.
+
+====
+
+Følge[ <Uttrykk>, <Variabel i>, <Tall a>, <Tall b>, <Trinnlengde t> ]::
+  Gir en liste med objekt som lages når variabelen _i_ går over tallene fra _a_ til _b_ med trinnlengde _t_ i det gitte
+  uttrykket.
+
+[EXAMPLE]
+====
+
+`++Følge[(2, i), i, 1, 3, 0.5]++` lager en liste med punkt som har _x_-koordinat lik 2 og _y_-koordinat som går fra 1
+til 3 med trinnlengde 0.5: _\{(2, 1), (2, 1.5), (2, 2), (2, 2.5), (2, 3)}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Siden parametrene _a_ og _b_ er dynamiske kan xref:/tools/Glider.adoc[glidere] blir brukt i de to siste
+eksemplene ovenfor.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se xref:/Lister.adoc[lister] for mer informasjon om listeoperasjoner.
+
+====
+
+== CAS-delen
+
+Følge[ <Sluttverdi b> ]::
+  Lager en liste med tall fra 1 til _b_.
+
+[EXAMPLE]
+====
+
+* `++Følge[8]++` lager listen _\{1, 2, 3, 4, 5, 6, 7, 8}_.
+* `++2^Følge[4]++` lager listen _\{2, 4, 8, 16}_.
+
+====
+
+Følge[ <Uttrykk>, <Variabel i>, <Tall a>, <Tall b> ]::
+  Gir en liste med objekt som lages når variabelen _i_ går over tallene fra _a_ til _b_ i det gitte uttrykket.
+
+[EXAMPLE]
+====
+
+`++Følge[x^i, i, 1, 10]++` lager listen _\{x, x², x³, x⁴, x⁵, x⁶, x⁷, x⁸, x⁹, x¹⁰}_.
+
+====
+
+Følge[ <Uttrykk>, <Variabel i>, <Tall a>, <Tall b>, <Trinnlengde t> ]::
+  Gir en liste med objekt som lages når variabelen _i_ går over tallene fra _a_ til _b_ med trinnlengde _t_ i det gitte
+  uttrykket.
+
+[EXAMPLE]
+====
+
+`++Følge[x^i, i, 1, 10, 2]++` lager listen _\{x, x³, x⁵, x⁷, x⁹}_.
+
+====

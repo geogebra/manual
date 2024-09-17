@@ -1,0 +1,41 @@
+= Normalvektor Kommando
+:page-en: commands/PerpendicularVector
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Normalvektor[ <Linje> ]::
+  Returnerer normalvektoren til linja.
+Normalvektor[ <Linjestykke> ]::
+  Returnerer normalvektoren til linjestykket av samme lengde.
+Normalvektor[ <Vektor> ]::
+  Returnerer normalvektoren til den gitte vektor.
+
+[NOTE]
+====
+
+*Merk:* En vektor med koordinater _(a, b)_ har normalvektoren _(- b, a)_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Ei linje med likning _ax + by = c_ har normalvektoren _(a, b)_.
+
+====
+
+== CAS-delen
+
+Normalvektor[ <Vektor> ]::
+  Returnerer normalvektoren til den gitte vektor.
+
+[EXAMPLE]
+====
+
+* `++Normalvektor[(3, 2)]++` gir vektoren _(-2, 3)_.
+* `++Normalvektor[(a, b)]++` gir vektoren _(-b, a)_.
+
+====
+
+== Se også
+
+xref:/commands/EnhetsNormalvektor.adoc[EnhetsNormalvektor].

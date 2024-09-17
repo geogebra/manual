@@ -1,0 +1,51 @@
+= RegSin Kommando
+:page-en: commands/FitSin
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+RegSin[ <Liste med punkt> ]::
+  Finner regresjonskurven i form av en trigonometrisk funksjon stem:[a+b\cdot sin(cx+d)].
+
+[EXAMPLE]
+====
+
+`++RegSin[{(1, 1), (2, 2), (3, 1), (4, 0), (5, 1), (6, 2)}]++` gir stem:[1+sin(1.57x-1.57)].
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Listen bør inneholde minst 4 punkter, helst flere, og bør gå over et intervall som inneholder minst 2
+ekstremalpunkter. De første to lokale ekstremalpunktene bør ikke være veldig forskjellige fra de absolutte
+ekstremalpunktene til kurven.
+* Regresjonskurven er den kurven som passer best med punktene i listen.
+* Eulers tall ℯ kan du skrive ved [.kcode]#ALT # + [.kcode]# e#.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* For mer informasjon om regresjon med GeoGebra se:
+http://www.geogebra.no/filer/opplaring/RegresjonMedGeoGebra.pdf[Regresjon med GeoGebra].
+* Se også verktøyet image:Tool_Two_Variable_Regression_Analysis.gif[Tool Two Variable Regression
+Analysis.gif,width=32,height=32] xref:/tools/Regresjonsanalyse.adoc[Regresjonsanalyse] i
+xref:/Regneark.adoc[regnearket].
+* Se også de andre regresjonskommandoene xref:/commands/Reg.adoc[Reg], xref:/commands/RegEksp.adoc[RegEksp],
+xref:/commands/RegEksp2.adoc[RegEksp2], xref:/commands/RegLin.adoc[RegLin], xref:/commands/RegLinX.adoc[RegLinX],
+xref:/commands/RegLog.adoc[RegLog], xref:/commands/RegLogist.adoc[RegLogist], xref:/commands/RegPoly.adoc[RegPoly] og
+xref:/commands/RegPot.adoc[RegPot].
+
+====

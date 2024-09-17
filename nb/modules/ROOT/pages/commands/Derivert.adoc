@@ -1,0 +1,88 @@
+= Derivert Kommando
+:page-en: commands/Derivative
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Derivert[ <Funksjon> ]::
+  Returnerer den deriverte av funksjonen.
+Derivert[ <Funksjon>, <Tall n> ]::
+  Returnerer den _n_-te deriverte av funksjonen. Den _n_-te deriverte er det samme som å derivere _n_ ganger.
+Derivert[ <Funksjon>, <Variabel> ]::
+  Returnerer den partiellderiverte av funksjonen med hensyn på den oppgitte variabelen.
+Derivert[ <Funksjon>, <Variabel>, <Tall n> ]::
+  Returnerer den _n_-te partiellderiverte av funksjonen med hensyn på den oppgitte variabelen.
+Derivert[ <Kurve> ]::
+  Returnerer den deriverte av kurven.
+Derivert[ <Kurve>, <Tall n> ]::
+  Returnerer den _n_-te deriverte av kurven.
+
+[EXAMPLE]
+====
+
+`++Derivert[x^3+3xy,x,2]++` gir stem:[6x].
+
+====
+
+[EXAMPLE]
+====
+
+`++Derivert[x^3+3xy,x]++` gir stem:[3x^2+3y].
+
+====
+
+[EXAMPLE]
+====
+
+`++Derivert[x^2,2]++` gir _2_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Derivert[x^2]++` gir _2x_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Kommandoen kan bare brukes på parametriske kurver.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Kommandoen kan bare brukes på parametriske kurver.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Det er også mulig å bruke `++f'(x)++` istedenfor `++Derivert[f]++`, eller `++f''(x)++` istedenfor
+`++Derivert[f, 2]++`, og så videre.
+
+====
+
+== CAS-delen
+
+Noen av kommandoene ovenfor fungerer også symbolsk i xref:/CAS_delen.adoc[CAS-delen]:
+
+* Derivert[ <Funksjon> ]
+* Derivert[ <Funksjon>, <Variabel> ]
+* Derivert[ <Funksjon>, <Variabel>, <Tall n> ]
+
+Se xref:/Symbolsk_og_numerisk_metode.adoc[Symbolsk og numerisk metode] for flere detaljer om symbolsk løsning.
+
+== Se også
+
+Verktøyet image:Tool_Derivative.gif[Tool Derivative.gif,width=32,height=32] xref:/tools/Derivert.adoc[Derivert].

@@ -1,0 +1,49 @@
+= Forenkle Kommando
+:page-en: commands/Simplify
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Forenkle[ <Funksjon> ]::
+  Forenkler leddene i funksjonen dersom det er mulig.
+Forenkle[ <Tekst> ]::
+  Kommandoen prøver å rydde opp i tekstuttrykket, blant annet ved å fjerne repeterende minustegn.
+
+[EXAMPLE]
+====
+
+For _a=b=c=-1_ vil `++Forenkle["f(x) = " + a + "x²" + b + "x" + c]++` gir _f(x) = - x² - x - 1_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Forenkle[x + x + x]++` gir funksjonen _f(x) = 3x_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Kommandoen xref:/commands/Formeltekst.adoc[Formeltekst] er enklere og vil vanligvis gi bedre resultat.
+
+====
+
+== CAS-delen
+
+Forenkle[ <Funksjon> ]::
+  Forenkler leddene i funksjonen dersom det er mulig. Udefinerte variabler kan inkluderes i leddene.
+
+[EXAMPLE]
+====
+
+`++Forenkle[3 * x + 4 * x + a * x]++` gir _x a + 7 x_.
+
+====

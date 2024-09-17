@@ -1,0 +1,35 @@
+= Objekt Kommando
+:page-en: commands/Object
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Objekt[ <Navn på objektet som tekst> ]::
+  Returnerer en kopi av objektet som har det gitte navnet. Resultatet er alltid et avhengig objekt.
+
+[NOTE]
+====
+
+*Merk:* _Objekt_- kommandoen er motsatsen til xref:/commands/Navn.adoc[navn]- kommandoen.
+
+====
+
+[EXAMPLE]
+====
+
+Hvis punktene _A1_, _A2_, ... , _A20_ og glider _n = 2_ eksisterer, da vil `++Objekt["A" + n]++` gi deg en kopi av
+punktet _A2_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Objektet du refererer til må stå *tidligere* i xref:/Konstruksjonsforklaring.adoc[konstruksjonsforklaringen] enn
+denne kommandoen.
+
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Obs,title="Obs",width=18,height=18] *Obs*: |Objekt- kommandoen kan ikke brukes i
+xref:/Egne_verktøy.adoc[egne verktøy].
+|===

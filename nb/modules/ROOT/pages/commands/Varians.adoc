@@ -1,0 +1,26 @@
+= Varians Kommando
+:page-en: commands/Variance
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Varians[ <Liste med tall> ]::
+  Beregner variansen til elementene i listen.
+
+[EXAMPLE]
+====
+
+`++Varians[{1, 2, 3}]++` gir _0,67_.
+
+====
+
+== CAS-delen
+
+Varians[ <Liste med tall> ]::
+  Beregner variansen til elementene i listen. Dersom listen inneholder ukjente variabler, gir kommandoen en formel for
+  variansen.
+
+[EXAMPLE]
+====
+
+`++Varians[{1, 2, a}]++` gir _stem:[\frac\{2 a^\{2} - 6 a + 6}\{9}]_.
+
+====

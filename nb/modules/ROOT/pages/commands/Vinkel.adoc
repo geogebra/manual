@@ -1,0 +1,47 @@
+= Vinkel Kommando
+:page-en: commands/Angle
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Vinkel[ <Vektor u>, <Vektor v> ]::
+  Returnerer vinkelen mellom to vektorer _u_ og _v_. Vinkelen vil være mellom 0° og 360°.
+Vinkel[ <Linje g>, <Linje h> ]::
+  Returnerer vinkelen mellom retningsvektorene til to linjer _g_ og _h_. Vinkelen vil være mellom 0° og 360°.
+Vinkel[ <Punkt A>, <Punkt B>, <Punkt C> ]::
+  Returnerer vinkelen mellom _BA_ og _BC_ (mellom 0° og 360°), hvor punktet _B_ er vinkelens toppunkt.
+Vinkel[ <Punkt A>, <Punkt B>, <Vinkel α> ]::
+  Returnerer vinkelen med størrelse _α_ tegnet fra punktet _A_ med toppunkt _B_.
+Vinkel[ <Kjeglesnitt> ]::
+  Returnerer vinkelen mellom hovedaksen til et kjeglesnitt og x-aksen (se kommandoen xref:/commands/Akser.adoc[Akser]).
+Vinkel[ <Vektor> ]::
+  Returnerer vinkelen mellom x-aksen og den gitte vektoren.
+Vinkel[ <Punkt> ]::
+  Returnerer vinkelen mellom x-aksen og posisjonsvektoren til det gitte punktet.
+Vinkel[ <Tall>]::
+  Gjør tallet om til en vinkel. Dette er det samme som å konvertere radianer til grader(begrenset fra 0° og 360°). I
+  intervallet [0, 2π] tilsvarerer dette å gange tallet med stem:[\frac\{360}\{2π}].
+Vinkel[Mangekant]::
+  Returnerer alle vinklene i en mangekant i positiv dreieretning (mot klokka).
+
+[NOTE]
+====
+
+*Merk:* Hvis mangekanten ble laget i positive dreieretning, vil du få de indre vinklene. Hvis mangekanten ble laget i
+negativ dreieretning får du de ytre vinklene.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Punktet Rotere[A, α, B] blir også tegnet.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også verktøyene image:Tool_Angle.gif[Tool Angle.gif,width=32,height=32] xref:/tools/Vinkel.adoc[Vinkel] og
+image:Tool_Angle_Fixed.gif[Tool Angle Fixed.gif,width=32,height=32] xref:/tools/Vinkel_med_fast_størrelse.adoc[Vinkel
+med fast størrelse].
+
+====

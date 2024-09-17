@@ -1,0 +1,41 @@
+= Q1 Kommando
+:page-en: commands/Quartile1
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Q1[ <Liste med tall> ]::
+  Bestemmer nedre https://en.wikipedia.org/wiki/no:_kvartil[kvartil] av listen med tall.
+
+[EXAMPLE]
+====
+
+`++Q1[{1, 2, 3, 4}]++` gir _1.5_.
+
+====
+
+Q1[ <Liste med tall L>, <Liste med frekvenser F> ]::
+  Bestemmer nedre https://en.wikipedia.org/wiki/no:_kvartil[kvartil] av tallene i listen _L_ når tallet på hvert element
+  i _L_ er gitt av det tilsvarende elementet i _F_.
+
+[EXAMPLE]
+====
+
+`++Q1[{1, 2, 3, 4}, {3, 2, 4, 2}]++` gir _1_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også kommandoen xref:/commands/Q3.adoc[Q3].
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+GeoGebra bruker *Moore & McCabe (2002)* metoden til å kalkulere kvartiler, for mer informasjon se
+http://mathworld.wolfram.com/Quartile.html
+
+====

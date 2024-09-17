@@ -1,0 +1,72 @@
+= SettInn Kommando
+:page-en: commands/Insert
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+SettInn[ <Liste L1>, <Liste L2>, <Posisjon> ]::
+  Setter inn alle elementene fra _L1_ inn i _L2_ i den gitte posisjonen.
+
+[EXAMPLE]
+====
+
+`++SettInn[{11, 12}, {1, 2, 3, 4, 5}, 3]++` plasserer elementene i _L1_ i den tredje posisjonen (og følgende posisjoner)
+i _L2_, dette gir listen _\{1, 2, 11, 12, 3, 4, 5}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Dersom posisjonen er et negativt tall, telles posisjonen fra høyre.
+
+[EXAMPLE]
+====
+
+`++SettInn[{11, 12}, {1, 2, 3, 4, 5}, -2]++` plasserer elementene i _L1_ i enden av _L2_, foran det siste elementet.
+Dette gir listen _\{1, 2, 3, 4, 11, 12, 5}_.
+
+====
+
+====
+
+SettInn[ <Objekt>, <Liste>, <Posisjon> ]::
+  Setter objektet inn i listen på den gitte posisjonen.
+
+[EXAMPLE]
+====
+
+`++SettInn[x^2, {1, 2, 3, 4, 5}, 3]++` plasserer _x^2^_ som element nummer tre og gir listen _\{1, 2, x^2^, 3, 4, 5}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Dersom posisjonen er et negativt tall, telles posisjonen fra høyre.
+
+[EXAMPLE]
+====
+
+`++SettInn[x^2, {1, 2, 3, 4, 5}, -1]++` plasserer _x^2^_ som siste element og gir listen _\{1, 2, 3, 4, 5, x^2^}_.
+
+====
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Elementene til objektet/listen som skal settes inn, trenger ikke å være av samme datatype som elementene i listen de
+blir satt inn i.
+* Se også kommandoene xref:/commands/LeggTil.adoc[LeggTil] og xref:/commands/SettSammen.adoc[SettSammen].
+
+====

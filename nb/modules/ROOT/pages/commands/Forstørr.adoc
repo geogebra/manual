@@ -1,0 +1,35 @@
+= Forstørr Kommando
+:page-en: commands/Dilate
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Forstørr[ <Objekt>, <Forstørr med faktoren r> ]::
+  Lager en kopi av objektet der avstanden fra hvert punkt til origo blir forstørret med faktoren _r_ i forhold til
+  originalen.
+
+[EXAMPLE]
+====
+
+* Definerer en trekant med `++trekant=Mangekant[(0,1), (1,1), (1,0)]++`
+* `++Forstørr[trekant, 2]++` gir da en ny trekant med hjørner (0,2), (2,2) og (2,0).
+
+====
+
+Forstørr[ <Objekt>, <Forstørr med faktoren r>, <Forstørr fra punktet S> ]::
+  Lager en kopi av objektet der avstanden fra hvert punkt til _S_ blir forstørret med faktoren _r_ i forhold til
+  originalen.
+
+[NOTE]
+====
+
+*Merk:* Se også verktøyet image:Tool_Dilate_from_Point.gif[Tool Dilate from Point.gif,width=32,height=32]
+xref:/tools/Forstørr_objekt_fra_punkt_med_faktor.adoc[Forstørr objekt fra punkt med faktor].
+
+====

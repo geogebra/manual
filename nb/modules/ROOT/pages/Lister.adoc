@@ -1,0 +1,131 @@
+= Lister
+:page-en: Lists
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Ved å bruke klammeparenteser kan du lage lister som kan inneholde mange forskjellige typer objekter (f.eks. punkter,
+linjestykker og sirkler).
+
+[EXAMPLE]
+====
+
+* `++L = {A, B, C}++` gir en liste som inneholder de tre tidligere definerte punktene _A_, _B_ og _C_.
+* `++L = {(0, 0), (1, 1), (2, 2)}++` gir en liste som inneholder de tre innskrevne punktene.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Som standard vil ikke elementene i denne listen bli vist i xref:/Grafikkfelt.adoc[grafikkfeltet].
+
+====
+
+For å hente ut et spesielt element fra en liste kan du bruke kommandoen xref:/commands/Element.adoc[Element]. Lister kan
+brukes som argument i listeoperasjoner (se lengre ned på siden) eller xref:/commands/Liste_Kommandoer.adoc[Liste
+Kommandoer].
+
+== Å sammenligne lister av objekter
+
+Du kan sammenligne to lister av objekter ved de følgende syntaksene og kommandoene:
+
+* `++Liste1 == Liste2++`: Sjekker om de to listene er like som ordnet tallpar, og gir _true_ eller _false_ som resultat.
+* `++Liste1 != Liste2++`: Sjekker om de to listene er ulike som ordnet tallpar, og gir _true_ eller _false_ som
+resultat.
+* `++Ulike[liste1] == Ulike[liste2]++` eller `++{liste1} \ {liste2} == {}++` : Sjekker om de to listene er like som
+mengder (dvs. alle repeterende elementer og rekkefølge på elementene blir ignorert).
+* `++Sorter[liste1] == Sorter[liste2]++`: Sjekker om de to listene er like som multimengder (dvs. rekkefølgen på
+elementene blir ignorert).
+
+[NOTE]
+====
+
+*Merk:* Se også kommandoene xref:/commands/Ulike.adoc[Ulike] og xref:/commands/Sorter.adoc[Sorter].
+
+====
+
+== Listeoperasjoner
+
+<Objekt> ∈ <Liste> er et element i
+
+<Liste> ⊆ <Liste> er en delmengde av
+
+<Liste> ⊂ <Liste> er en streng delmengde av
+
+<List> \ <List> differansen mellom mengdene
+
+== Bruk av forhåndsdefinerte operasjoner og funksjoner på lister
+
+Dersom du bruker xref:/Forhåndsdefinerte_funksjoner_og_operatorer.adoc[forhåndsdefinerte funksjoner og operatorer] på
+lister vil du alltid få en ny liste som resultat.
+
+=== Addisjon og subtraksjon
+
+* Liste1 + Liste2: Adderer sammen samsvarende elementer i de to listene.
+
+[NOTE]
+====
+
+*Merk:* De to listene må ha samme lengde.
+
+====
+
+* Liste + Tall: Adderer tallet til hvert av elementene i listen.
+* Liste1 – Liste2: Subtraherer elementene i Liste2 fra de samsvarende elementene i Liste1.
+
+[NOTE]
+====
+
+*Merk:* De to listene må ha samme lengde.
+
+====
+
+* Liste – Tall: Subtraherer tallet fra hvert element i listen.
+
+=== Multiplikasjon og divisjon
+
+* Liste1 * Liste2: Multipliserer samsvarende elementer i de to listene.
+
+[NOTE]
+====
+
+*Merk:* De to listene må ha samme lengde. Dersom de to listene er kompatible matriser vil matrisemultiplikasjon bli
+brukt.
+
+====
+
+* Liste * Tall: Multipliserer hvert element i listen med tallet.
+* Liste1 / Liste2: Dividerer elementene i den første listen med samsvarende elementer i den andre listen.
+
+[NOTE]
+====
+
+*Merk:* De to listene må ha samme lengde.
+
+====
+
+* Liste / Tall: Dividerer hvert element i listen med tallet.
+* Tall / Liste: Dividerer tallet med hvert element i listen.
+
+[NOTE]
+====
+
+*Merk:* Se også seksjonen om xref:/Punkt_og_vektorer.adoc[vektorprodukt].
+
+====
+
+=== Andre eksempler
+
+* Liste^2: Kvadrerer hvert element i listen.
+* 2^Liste: Lager en liste hvor elementene er potenser av to med eksponenter fra listen.
+* Liste1^Liste2: Lager en liste med elementer _a^b_, hvor _a_ and _b_ er samsvarende elementer i henholdsvis Liste1 og
+Liste2.
+* sin(Liste): Bruker sinus-funksjonen på hvert element i listen. Brukerdefinerte xref:/Funksjoner.adoc[funksjoner] kan
+også bli brukt på tilsvarende måte.

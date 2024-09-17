@@ -1,0 +1,62 @@
+= Velg Kommando
+:page-en: commands/Take
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Velg[ <Liste L>, <Startposisjon m> ]::
+  Gir en ny liste som inneholder alle elementene fra og med posisjon _m_ og ut listen.
+Velg[ <Tekst>, <Startposisjon m> ]::
+  Gir en ny tekst som inneholder alle tegnene fra og med posisjon _m_ og ut teksten.
+Velg[ <Liste L>, <Startposisjon m>, <Sluttposisjon n> ]::
+  Gir en ny liste som inneholder alle elementene fra og med posisjon _m_ til og med posisjon _n_ i _L_.
+Velg[ <Tekst>, <Startposisjon m>, <Sluttposisjon n> ]::
+  Gir en ny tekst som inneholder alle tegnene fra og med posisjon _m_ til og med posisjon _n_ i den opprinnelige
+  teksten.
+
+[EXAMPLE]
+====
+
+`++Velg["GeoGebra", 3, 6]++` gir teksten _oGeb_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Velg[{2, 4, 3, 7, 4}, 3, 4]++` gir _\{3, 7}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Velg["GeoGebra", 3]++` gir teksten _oGebra_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Velg[{2, 4, 3, 7, 4}, 3]++` gir _\{3, 7, 4}_.
+
+====
+
+== CAS-delen
+
+Velg[ <Liste L>, <Startposisjon m>, <Sluttposisjon n> ]::
+  Gir en ny liste som inneholder alle elementene fra og med posisjon _m_ til og med posisjon _n_ i _L_. Listen kan også
+  inneholde udefinerte variabler.
+
+[EXAMPLE]
+====
+
+`++Velg[{1, 2, a, 4, 5}, 2, 4]++` gir _\{2, a, 4}_.
+
+====

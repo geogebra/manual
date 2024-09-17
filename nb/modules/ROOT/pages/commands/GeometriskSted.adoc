@@ -1,0 +1,90 @@
+= GeometriskSted Kommando
+:page-en: commands/Locus
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+GeometriskSted[ <Punkt på geometrisk sted Q>, <Punkt P> ]::
+  Gir det geometriske stedet til punktet _Q_ som er avhengig av punktet _P_. Det vil si kurven _Q_ sveiper over når _P_
+  sveiper over de mulige verdiene punktet kan ha.
+GeometriskSted[ <Punkt på geometrisk sted Q>, <Glider a> ]::
+  Gir det geometriske stedet til punktet _Q_ som er avhengig av glideren _a_. Det vil si kurven _Q_ sveiper over når _a_
+  sveiper over verdimengden sin.
+
+[EXAMPLE]
+====
+
+* Opprett en glider _a_ ved hjelp av kommandoen xref:/commands/Glider.adoc[Glider] eller verktøyet
+image:Tool_Slider.gif[Tool Slider.gif,width=32,height=32] xref:/tools/Glider.adoc[Glider].
+* Skriv inn punktet `++Q=(a, 2a)++`
+* `++GeometriskSted[Q, a]++` gir da linjen som _Q_ sveiper over når _a_ sveiper over verdimengen sin.
+
+====
+
+[EXAMPLE]
+====
+
+* Skriv inn funksjonen `++f(x)=x^2++` i inntastingsfeltet.
+* Opprett et punkt _P_ på funksjonsgrafen ved å bruke verktøyet image:Tool_New_Point.gif[Tool New
+Point.gif,width=32,height=32] xref:/tools/Nytt_punkt.adoc[Nytt punkt] eller verktøyet
+image:Tool_Point_in_Region.gif[Tool Point in Region.gif,width=32,height=32] xref:/tools/Punkt_på_objekt.adoc[Punkt på
+objekt].
+* Skriv inn punktet `++Q=(2x(P), y(P))++`
+* `++GeometriskSted[Q, P]++`gir da kurven som _Q_ sveiper over når _P_ sveiper over sine mulige verdier.
+
+====
+
+[NOTE]
+====
+
+*Merk:* _x(P)_ gir _x_-koordinaten til _P_, mens _y(P)_ gir _y_-koordinaten til _P_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Punktet _P_ må være et punkt på et objekt; for eksempel en linje, et linjestykke en sirkel eller en
+funksjonsgraf.
+
+====
+
+GeometriskSted[ <Retningsdiagram>, <Punkt> ]::
+  Gir det geometriske stedet som samsvarer med retningsdiagrammet i det gitte punktet.
+GeometriskSted[ <f(x, y)>, <Punkt> ]::
+  Gir det geometriske stedet som samsvarer medl løsningen av differensiallikningen stem:[\frac\{dy}\{dx}=f(x,y)].
+  Løsningen blir funnet numerisk.
+
+[NOTE]
+====
+
+*Merk:* Geometriske steder er spesifikke objekttyper og opptrer som
+xref:/Frie_objekt_avhengige_objekt_og_hjelpeobjekt.adoc[hjelpeobjekt]. De kan også lages ved heljp av enkelte
+xref:/commands/Diskret_matematikk_Kommandoer.adoc[Diskret matematikk kommandoer] og kommandoen
+xref:/commands/LøsODE.adoc[LøsODE]. Geometriske steder er xref:/Geometriske_objekt.adoc[stier] og kan bli brukt i
+sti-relaterte kommandoer som xref:/commands/Punkt.adoc[Punkt]. Egenskapene deres avhenger av hvordan de ble laget, se
+for eksempel kommandoene xref:/commands/Omkrets.adoc[Omkrets] og xref:/commands/Første.adoc[Første]. Et annet navn for
+geometrisk sted er lokus.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også verktøyet image:Tool_Locus.gif[Tool Locus.gif,width=32,height=32]
+xref:/tools/Geometrisk_sted.adoc[Geometrisk sted].
+
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Obs,title="Obs",width=18,height=18] *Obs*: |Et geometrisk sted er udefinert når det avhengige
+punktet er et resultat av kommandoen xref:/commands/Punkt.adoc[Punkt] med to parametre, eller kommandoen
+xref:/commands/StiParameter.adoc[StiParameter].
+|===

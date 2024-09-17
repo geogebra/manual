@@ -1,0 +1,36 @@
+= StandardavvikX Kommando
+:page-en: commands/SDX
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+StandardavvikX[ <Liste med punkt> ]::
+  Finner https://en.wikipedia.org/wiki/no:Standardavvik[standardavviket] til _x_-koordinatene til punktene i listen.
+
+[EXAMPLE]
+====
+
+`++StandardavvikX[(1, 2), (2, 4), (3, 6)]++` gir 0.82.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Se også kommandoen xref:/commands/UtvalgStandardavvikX.adoc[UtvalgStandardavvikX]. Denne benyttes for å finne
+standardavviket når man kun har et utvalg av data fra en populasjon, mens standardavvik kommandoen benyttes når man har
+data fra hele populasjonen. Jo flere elementer man har i listen, jo mer likt blir resulatet for disse to kommandoene.
+Grunnen til dette er at det eneste som skiller de to statistiske størrelsene er at utvalgsstandardavviket har _N - 1_ i
+nevneren, mens standardavviket har _N_, der _N_ er antall elementer i listen.
+* Se også kommandoene xref:/commands/GjennomsnittX.adoc[GjennomsnittX], xref:/commands/Standardavvik.adoc[Standardavvik]
+og xref:/commands/StandardavvikY.adoc[StandardavvikY].
+
+====

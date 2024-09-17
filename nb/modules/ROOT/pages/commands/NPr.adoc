@@ -1,0 +1,35 @@
+= NPr Kommando
+:page-en: commands/NPr
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+nPr[ <Tall n>, <Tall r> ]::
+  Gir antall mulige https://en.wikipedia.org/wiki/no:Permutasjon[permutasjoner] når _r_ elementer blir trekt fra _n_
+  elementer uten tilbakelegging.
+
+[EXAMPLE]
+====
+
+`++nPr[10, 2]++` gir _90_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også xref:/commands/NCr.adoc[nCr] som regner ut binomialkoeffisienten.
+
+====
+
+== CAS-delen
+
+nPr[ <Tall n>, <Tall r> ]::
+  Gir antall mulige https://en.wikipedia.org/wiki/no:Permutasjon[permutasjoner] når _r_ elementer blir trekt fra _n_
+  elementer uten tilbakelegging. Dersom du skriver inn udefinerte variabler for _n_ og _r_, så vil kommandoen gi en
+  formel for nPr.
+
+[EXAMPLE]
+====
+
+`++nPr[a, 3]++` gir stem:[a^3-3a^2+2a].
+
+====

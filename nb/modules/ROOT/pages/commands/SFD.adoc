@@ -1,0 +1,73 @@
+= SFD Kommando
+:page-en: commands/GCD
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+SFD[ <Tall a>, <Tall b> ]::
+  Beregner største felles divisor for tallene _a_ og _b_.
+
+[EXAMPLE]
+====
+
+`++SFD[12, 15]++` gir _3_.
+
+====
+
+SFD[ <Liste med tall> ]::
+  Beregner største felles divisor for tallene i listen.
+
+[EXAMPLE]
+====
+
+`++SFD[{12, 30, 18}]++` gir _6_.
+
+====
+
+== CAS-delen
+
+SFD[ <Tall a>, <Tall b> ]::
+  Beregner største felles divisor for tallene _a_ og _b_.
+
+[EXAMPLE]
+====
+
+`++SFD[12, 15]++` gir _3_.
+
+====
+
+SFD[ <Polynom>, <Polynom> ]::
+  Beregner største felles divisor for to polynomer.
+
+[EXAMPLE]
+====
+
+`++SFD[x^2 + 4 x + 4, x^2 - x - 6]++` gir _x + 2_.
+
+====
+
+SFD[ <Liste med tall> ]::
+  Beregner største felles divisor for tallene i listen.
+
+[EXAMPLE]
+====
+
+`++SFD[{12, 30, 18}]++` gir _6_.
+
+====
+
+SFD[ <Liste med polynom> ]::
+  Beregner største felles divisor for polynomene i listen.
+
+[EXAMPLE]
+====
+
+`++SFD[{x^2 + 4 x + 4, x^2 - x - 6, x³ - 4x² - 3x + 18}]++` gir _x + 2_.
+
+====

@@ -1,0 +1,69 @@
+= NLøs Kommando
+:page-en: commands/NSolve
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Denne kommandoen er bare tilgjengelig i xref:/CAS_delen.adoc[CAS-delen].
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+NLøs[ <Likning> ]::
+  Løser likningen numerisk med hensyn på hovedvariabelen og gir en liste med alle løsningene.
+NLøs[ <Likning>, <Variabel> ]::
+  Løser likningen numerisk med hensyn på den gitte variabelen og gir en liste med alle løsningene.
+NLøs[ <Likning>, <Variabel = startverdi> ]::
+  Løser likningen numerisk med hensyn på den gitte variabelen og gir en liste med alle løsningene. Den numeriske
+  algoritmen starter med å prøve den gitte startverdien.
+NLøs[ <Liste med likninger>, <Liste med variabler> ]::
+  Løser likningesettet numerisk med hensyn på de gitte variablene og gir en liste med alle løsningene.
+
+[EXAMPLE]
+====
+
+`++NLøs[{π / x = cos(x - 2y), 2 y - π = sin(x)}, {x=3, y=1.5}]++` gir _\{x = 3.141592651686591, y = 1.570796327746508}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++NLøs[a^4 + 34a^3 - 34, a=3]++` gir _\{a = -34.0008649859, a = 0.9904738886}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++NLøs[a^4 + 34a^3 - 34, a]++` gir _\{a = -34.0008649859, a = 0.9904738886}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++NLøs[cos(x) = x]++` gir _\{x = 0.7390851332151606}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Det er valgfritt å oppgi startverdier, slik som _\{x=3, y=1.5}_, for den numeriske algoritmen.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* π får du ved å trykke [.kcode]#Alt # + [.kcode]# p# eller ved å skrive _pi_.
+* Se også kommandoene xref:/commands/Løs.adoc[Løs], xref:/commands/CLøs.adoc[CLøs] og
+xref:/commands/NLøsninger.adoc[NLøsninger].
+
+====

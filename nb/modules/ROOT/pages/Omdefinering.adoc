@@ -1,0 +1,66 @@
+= Omdefinering
+:page-en: Redefine_Dialog
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Omdefinering av objekter er en fleksibel måte å endre en konstruksjon på. Legg merke til at dette også kan endre
+rekkefølgjen på konstruksjonsstegene i xref:/Konstruksjonsforklaring.adoc[konstruksjonsforklaringen].
+
+[NOTE]
+====
+
+*Merk:* Det redefinerte objektet kan kun være avhengig av objekter som er definert tidligere i konstruksjonsrekkefølgen
+-- du må kanskje endre rekkefølgen på elementene i konstruksjonsforklaringen.
+
+====
+
+I GeoGebra kan et objekt bli omdefinert på flere måter:
+
+* Velg verktøyet image:Tool_Move.gif[Tool Move.gif,width=32,height=32] xref:/tools/Flytt.adoc[Flytt] og dobbeltklikk på
+objektet i xref:/Algebrafelt.adoc[algebrafeltet].
+** For frie objekt åpnes et redigeringsfelt som lar deg forandre direkte på den algebraiske representasjonen til
+objektet. Trykk [.kcode]#Enter# for å iverksette endringene.
+** For avhengige objekt vil dialogboksen for omdefinering bli åpnet.
+* Velg verktøyet image:Tool_Move.gif[Tool Move.gif,width=32,height=32] xref:/tools/Flytt.adoc[Flytt] og dobbeltklikk på
+objektet i xref:/Grafikkfelt.adoc[grafikkfeltet]. Dette åpner dialogboksen for omdefinering.
+** Endre objektet ved å skrive inn navn og ny definisjon i inntastingsfeltet i dialogboksen.
+** Åpne xref:/Egenskaper.adoc[dialogboksen for egenskaper] for objektet og endre definisjonen til objektet under fanen
+_Basis_.
+* Fra GeoGebra 4.2 vil dialogboksen for omdefinering for et objekt som nettopp har blitt laget, bli åpnet dersom du
+trykker på en vilkårlig bokstav på tastaturet.
+
+[NOTE]
+====
+
+*Merk:*
+
+* Låste objekter kan ikke bli omdefinert. Objektet må bli låst opp (under fanen _Basis_ i
+xref:/Egenskaper.adoc[egenskaper] for objektet) før det kan bli omdefinert.
+* Du kan også omdefinere eksisterende objekt i xref:/Inntastingsfelt.adoc[inntastingsfeltet]. For eksempel kan du skrive
+`++a:Linjestykke[A, B]++` for å omdefinere _a_ til å være et linjestykke.
+
+====
+
+[EXAMPLE]
+====
+
+For å plassere et eksisterende fritt punkt _A_ på en eksisterende linje _h_ må du først dobbeltklikke på _A_ for å åpne
+dialogboksen for omdefinering, så må du endre definisjonen til `++Punkt[h]++` i tekstfeltet og trykke _Bruk_ eller _OK_.
+For å gjøre punktet fritt igjen kan du omdefinere det til frie koordinater, for eksempel (1, 2).
+
+====
+
+[EXAMPLE]
+====
+
+For å gjøre en linje gjennom to punkt _A_ og _B_ om til et linjestykke dobbeltklikker du på linjen og endrer
+`++Linje[A, B]++` til `++Linjestykke[A, B]++`.
+
+====

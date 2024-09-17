@@ -1,0 +1,23 @@
+= StilkOgBladPlott Kommando
+:page-en: commands/StemPlot
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+StilkOgBladPlott[ <Liste> ]::
+  Gir et stilk-og-blad plott av tallene i listen. Avvik blir fjernet fra plottet og opplistet for seg selv.
+  Avvik er definert som verdier utenfor intervallet [ xref:/commands/Q1.adoc[Q1] - 1.5 (xref:/commands/Q3.adoc[Q3] -
+  xref:/commands/Q1.adoc[Q1]) , xref:/commands/Q3.adoc[Q3] + 1.5 (xref:/commands/Q3.adoc[Q3] -
+  xref:/commands/Q1.adoc[Q1]) ]
+
+StilkOgBladPlott[ <Liste>, <Justering -1|0|1> ]::
+  Gir et stilk-og-blad plott av tallene i listen.
+  Dersom _Justering_ = -1 blir standardverdien til stilkenheten delt på 10.
+  Dersom _Jusetring_ = 0 blir ingenting endret.
+  Dersom _Justering_ = 1 blir standardverdien til stilkenheten ganget med 10.

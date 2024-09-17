@@ -1,0 +1,51 @@
+= Linjer og akser
+:page-en: Lines_and_Axes
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+== Linjer
+
+Du kan skrive inn en linje i xref:/Inntastingsfelt.adoc[inntastingsfeltet] enten som en lineær likning i _x_ og _y_
+eller på parametrisk form. I begge tilfellene kan tidligere definerte variabler (f.eks. tall, punkter og vektorer) bli
+brukt i likningen.
+
+[NOTE]
+====
+
+*Merk:* For å navngi linjen kan du før selve likningen skrive inn det ønskede navnet etterfulgt av et kolon.
+
+====
+
+[EXAMPLE]
+====
+
+* Skriv inn `++g: 3x + 4y = 2++` for å skrive inn en linje _g_ som en lineær likning.
+* Skriv inn `++g: X = (-5, 5) + t (4, -3)++` for å skrive inn en linje _g_ på parametrisk form.
+* Definer parametrene _m_ = 2 og _b_ = -1. Du kan nå skrive inn likningen `++h: y = m*x + b++` for å få en linje _h_ på
+form gitt av stigningstallet og skjæringspunktet med _y_-aksen.
+
+====
+
+== Akser
+
+De to koordinataksene er tilgjengelige som kommandoer ved å bruke navnene _xAkse_ og _yAkse_.
+
+[EXAMPLE]
+====
+
+Kommandoen `++NormalLinje[A, xAxis]++` konstruerer normalelinjen på _x_-aksen gjennom det gitte punktet _A_.
+
+====
+
+== Hvordan få parametrene til en linje
+
+Dersom en linje står på standardform (l: ax+yb=c) kan du få parametrene _a_ og _b_ ved henholdsvis å bruke `++x(l)++` og
+`++y(l)++`. Skjæringspunktet med _y_-aksen får du ved å bruke `++l(0)++`, mens stignigstallet er gitt av funksjonen
+`++Stigning[l]++`.

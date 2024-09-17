@@ -1,0 +1,43 @@
+= SettSammen Kommando
+:page-en: commands/Join
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+SettSammen[ <Liste med lister> ]::
+  Setter sammen listene til en lang liste.
+
+[EXAMPLE]
+====
+
+* `++SettSammen[{{1, 2}}]++` gir listen _\{1, 2}_.
+* `++SettSammen[{{1, 2, 3}, {3, 4}, {8, 7}}]++` gir listen _\{1, 2, 3, 3, 4, 8, 7}_.
+
+====
+
+SettSammen[ <Liste>, <Liste>, ... ]::
+  Sett sammen to (eller flere) lister til en liste.
+
+[EXAMPLE]
+====
+
+`++SettSammen[{5, 4, 3}, {1, 2, 3}]++` gir listen _\{5, 4, 3, 1, 2, 3}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Listene trenger ikke å inneholde elementer av samme datatype.
+* Rekkefølgen på elementene endres ikke når den nye listen lages.
+* Se også kommandoene xref:/commands/LeggTil.adoc[LeggTil] og xref:/commands/SettInn.adoc[SettInn].
+
+====

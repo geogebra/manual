@@ -1,0 +1,31 @@
+= BoksPlott Kommando
+:page-en: commands/BoxPlot
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+BoksPlott[ <y-verdi>, <y-skala>, <Liste med rådata> ]::
+  Lager et boksplott ved å bruke listen med rådata. Den vertikale posisjonen i koordinatsystemet blir bestemt av
+  _y-verdi_, mens _y-skala_ avgjør høyden langs _y_-aksen.
+BoksPlott[ <y-verdi>, <y-skala>, <Liste med rådata>, <Boolsk ekstremverdi> ]::
+  Denne varianten av kommandoen lar avvik bli plottet som "X"-er istedet for å bli inkludert i plottet. Avvik er data
+  som ligger under xref:/commands/Q1.adoc[Q1] - 1.5 * https://en.wikipedia.org/wiki/IQR[IQR] eller over
+  xref:/commands/Q3.adoc[Q3] + 1.5 * https://en.wikipedia.org/wiki/IQR[IQR].
+BoksPlott[ <y-verdi>, <y-skala>, <Liste med rådata>, <Liste med frekvenser>, <Boolsk ekstremverdi> ]::
+  Plotter data fra en frekvenstabell som et boksplott.
+BoksPlott[ <y-verdi>, <y-skala>, <Startverdi>, <Q1>, <Median>, <Q3>, <Sluttverdi> ]::
+  Lager et boksplott for de gitte statistiske verdiene i intervallet [_Startverdi_, _Sluttverdi_].
+
+[EXAMPLE]
+====
+
+`++BoksPlott[0, 1, {2, 2, 3, 4, 5, 5, 6, 7, 7, 8, 8, 8, 9}]++` gir et boksplott på "x"-aksen med utstrekning 1 i
+"y"-retning. Minste verdi er 2, nedre kvartil er 3.5, medianen er 6, øvre kvartil er 8 og høyeste verdi er 9.
+
+====

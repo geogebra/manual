@@ -1,0 +1,104 @@
+= Histogram Kommando
+:page-en: commands/Histogram
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Histogram[ <Liste med klassegrenser G>, <Liste med høyder H> ]::
+  Lager et histogram der søylene har høyder gitt av listen _H_. Klassegrensene bestemmer bredden og posisjonen til hver
+  søyle i histogrammet.
+
+[EXAMPLE]
+====
+
+`++Histogram[{0, 1, 2, 3, 4, 5}, {2, 6, 8, 3, 1}]++` lager et histogram med 5 søyler, hvor søylene har høyde 2, 6, 8, 3
+og 1. Den første søylen blir plassert i intervallet _[0, 1]_, den andre søylen i intervallet _[1, 2]_ og så videre.
+
+====
+
+Histogram[ <Liste med klassegrenser G>, <Liste med rådata D>, <Bruk tetthet>, <Tetthetsfaktor> (valgfri) ]::
+  Lager et histogram fra den gitte listen _D_. Klassegrensene bestemmer bredden og posisjonen til hver søyle i
+  histogrammet og hvor mange dataelement som finnes i hver klasse. Høyden på søylene bestemmes på følgende måte:
+  * Dersom _Bruk tetthet = false_: _høyde = Klassefrekvens_
+  * Dersom _Bruk tetthet = true_: _høyde = (Tetthetsfaktor)*(Klassefrekvens)/(Klassebredde)_
+  Som standard har man _Bruk tetthet = true_ og _Tetthetsfaktor = 1_. Det vil lage et histogram med totalt areal lik
+  tallet på dataverdier.
+
+[EXAMPLE]
+====
+
+(_Standard histogram_)
+
+`++Histogram[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true]++` lager et histogram med 3 søyler, hvor søylene
+har høyde 0.5 (første søyle), 0.2 (andre søyle), og 0.1 (tredje søyle).
+
+Histogrammet har totalt areal = 0.5*10 + 0.2*10 + 0.1*10 = 8.
+
+====
+
+Histogram[ <Boolsk kumulativ>, <Liste med klassegrenser G>, <Liste med rådata D>, <Bruk tetthet>, <Tetthetsfaktor>
+(valgfri) ]::
+  Dersom _kumulativ = false_ vil kommandoen gi det samme som forrige kommando.
+  Dersom _kumulativ = true_ vil kommandoen lage et histogram hvor hver søyle har høyde lik klassefrekvensen pluss summen
+  av alle tidligere frekvenser.
+
+[EXAMPLE]
+====
+
+`++Histogram[true, {10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true]++` lager et histogram med 3 søyler, hvor
+søylene har høyde 0.5 (første søyle), 0.7 (andre søyle), og 0.8 (tredje søyle).
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også kommandoen xref:/commands/HistogramHøyre.adoc[Histogram Høyre].
+
+====
+
+[EXAMPLE]
+====
+
+(_Normalisert histogram_)
+
+`++Histogram[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 1/8] ++` lager et histogram med 3 søyler, hvor
+søylene har høyde 0.0625 (første søyle), 0.025 (andre søyle), og 0.0125 (tredje søyle).
+
+Dette histogrammet har totalt areal = 0.0625*10 + 0.025*10 + 0.0125*10 = 1.
+
+Dersom _n_ er tallet på dataverdier, så vil tetthetsfaktor= 1/_n_ lage et histogram med totalt areal = 1. Dette er
+nyttig for å tilpasse histogrammet med en tetthetskurve.
+
+====
+
+[EXAMPLE]
+====
+
+(_Relativ frekvens histogram_)
+
+`++Histogram[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 10/ 8]++` lager et histogram med 3 søyler, hvor
+søylene har høyde 0.625 (første søyle), 0.25 (andre søyle), og 0.125 (tredje søyle). Dette histogrammet vil bruke
+tetthetsskalering for å gi søyler med høyde lik andelen av verdier i hver klasse.
+
+Dersom _n_ er tallet på dataverdier og klassene har en konstant bredde _w_, så vil tetthetsfaktor=w/n lage et relativ
+frekvens histogram.
+
+====
+
+[EXAMPLE]
+====
+
+(_Tall histogram_)
+
+`++Histogram[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, false]++` lager et histogram med 3 søyler, hvor søylene
+har høyde 5 (første søyle), 2 (andre søyle), og 1 (tredje søyle). Dette histogrammet vil ikke bruke tetthetsskalering og
+gir dermed søyler med høyde lik tallet på verdier i hver klasse.
+
+====

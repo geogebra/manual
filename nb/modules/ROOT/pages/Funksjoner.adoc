@@ -1,0 +1,69 @@
+= Funksjoner
+:page-en: Functions
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Når du skriv inn en funksjon kan du bruke tidligere definerte variabler (f.eks. tall, punkt, vektorer) i tillegg til
+andre funksjoner.
+
+[EXAMPLE]
+====
+
+* Funksjon f: `++f(x) = 3 x³ – x²++`
+* Funksjon g: `++g(x) = tan(f(x))++`
+* Navnløs funksjon: `++sin(3 x) + tan(x)++`
+
+====
+
+[NOTE]
+====
+
+*Merk:* Alle tilgjengelige forhåndsdefinerte funksjoner (f.eks. sin, cos, tan) er forklart på siden
+xref:/Forhåndsdefinerte_funksjoner_og_operatorer.adoc[Forhåndsdefinerte funksjoner og operatorer].
+
+====
+
+I GeoGebra kan du bruke kommandoer til å finne for eksempel xref:/commands/Integral.adoc[integralet] og den
+xref:/commands/Derivert.adoc[deriverte] av en funksjon. Du kan også bruke kommandoen xref:/commands/Dersom.adoc[Dersom]
+til å lage funksjoner med vilkår.
+
+[NOTE]
+====
+
+*Merk:* Du kan også bruke kommandoene f'(x), f''(x), f'''(x), osv for å få de deriverte av en tidligere definert
+funksjon f(x).
+
+====
+
+[EXAMPLE]
+====
+
+Definer funksjonen _f_ som `++f(x) = 3 x³ – x²++`. Du kan bruke denne til å lage en funksjon _g_ ved å skrive
+`++g(x) = cos(f' (x + 2))++`.
+
+====
+
+Funksjoner kan flyttes med en vektor (se kommandoen xref:/commands/Flytt.adoc[Flytt]). En fri funksjon kan også flyttes
+ved bruk av verktøyet image:Tool_Move.gif[Tool Move.gif,width=32,height=32] xref:/tools/Flytt.adoc[Flytt]. Andre
+xref:/commands/Transformasjon_Kommandoer.adoc[transformasjonskommandoer] kan brukes på funksjoner, men i de fleste
+tilfeller blir resultatet en xref:/Kurver.adoc[kurve] og ikke en funksjon.
+
+== Avgrense en funksjon til et intervall
+
+For å avgrense en funksjon til intervallet [_a_, _b_], kan du bruke kommandoen xref:/commands/Funksjon.adoc[Funksjon]
+eller kommandoen xref:/commands/Dersom.adoc[Dersom].
+
+[EXAMPLE]
+====
+
+`++Dersom[x≥3 ∧ x≤5,x²]++` og `++Funksjon[x²,3,5]++` er begge definisjoner for funksjonen _x²_ avgrenset til intervallet
+[3,5].
+
+====

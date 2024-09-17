@@ -1,0 +1,47 @@
+= Kurve Kommando
+:page-en: commands/Curve
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Kurve[ <Uttrykk u~1~>, <Uttrykk u~2~>, <Parametervariabel t>, <Tall a>, <Tall b> ]::
+  Gir den kartesiske xref:/Kurver.adoc[parametriske kurven] for det gitte _x_-uttrykket _u~1~_ og _y_-uttrykket _u~2~_
+  (med parameter _t_) i intervallet [_a_, _b_].
+
+[EXAMPLE]
+====
+
+`++Kurve[2*cos(t), 2*sin(t), t, 0, 2*pi]++` lager en sirkel med radius 2 om origo i koordinatsystemet.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* _b_ må være større eller lik _a_ og begge må være endelig
+* _x_, _y_ eller _z_ kan ikke brukes som parametervariabel
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se siden xref:/Kurver.adoc[Kurver] for flere detaljer.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også kommandoene xref:/commands/Derivert.adoc[Derivert] og
+xref:/commands/ParametriskDerivert.adoc[ParametriskDerivert].
+
+====

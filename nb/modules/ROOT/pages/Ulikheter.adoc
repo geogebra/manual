@@ -1,0 +1,37 @@
+= Ulikheter
+:page-en: Inequalities
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+GeoGebra støtter bruk av ulikheter med en eller to variabler. Det er ingen begrensinger på visning av ulikheter i
+xref:/Algebrafelt.adoc[algebrafeltet], men kun noen spesielle ulikheter kan tegnes i
+xref:/Grafikkfelt.adoc[grafikkfeltet]:
+
+* polynomulikheter i en variabel, f.eks. _x^3 > x + 1_ eller _y^2>y_,
+* kvadratiske ulikheter i to variabler, f.eks. _x^2 + y^2 + x*y ≤ 4_,
+* ulikheter som er lineære i en variabel, f.eks. _2x > sin(y)_ eller _y < sqrt(x)_.
+
+Som ulikhetstegn kan du bruke <, >, ≤, ≥. Symbolene <= og => blir også akseptert. Konjunksjon og diskonjunksjon er også
+støttet for ulikheter, f.eks. kan _(x>y)&&(x+y<3)_ bli tegnet.
+
+For å vise løsningen av en ulikhet som ett eller flere intervall på x-aksen, velg _Vis på x-aksen_ under fanen _Stil_ i
+dialogboksen for xref:/Egenskaper.adoc[egenskaper] til ulikheten.
+
+Ulikheter ligner på funksjoner, du kan sjekke om _x_ og _y_ tilfredsstiller ulikheten _a_ ved å skrive _a(x,y)_ i
+xref:/Inntastingsfelt.adoc[inntastingsfeltet]. Også når _A_ er et punkt, er syntaksen _a(A)_ gyldig. Et punkt kan bli
+låst til en region ved å bruke ulikheter i kommandoen xref:/commands/PunktI.adoc[PunktI].
+
+[EXAMPLE]
+====
+
+Dersom _b_ er en ulikhet i variabelen _x_ vil `++PunktI[b]++` gi et punkt som er låst til den delen av x-aksen som
+tilfredsstiller _b_.
+
+====

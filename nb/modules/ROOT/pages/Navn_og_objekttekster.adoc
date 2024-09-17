@@ -1,0 +1,88 @@
+= Navn og objekttekster
+:page-en: Labels_and_Captions
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+I GeoGebra har hvert objekt sitt unike *navn*. Navnet til et objekt kan inneholde en eller flere bokstaver og eventuelle
+indekser. For detaljer se siden xref:/Gi_navn_til_objekt.adoc[Gi navn til objekt].
+
+== Vis og skjul navn
+
+Du kan vise eller skjule objektnavnet i xref:/Grafikkfelt.adoc[grafikkfeltet] på flere måter:
+
+* Velg verktøyet image:Tool_Show_Hide_Label.gif[Tool Show Hide Label.gif,width=32,height=32]
+xref:/tools/Vis_eller_skjul_navn_på_objekt.adoc[Vis eller skjul navn på objekt] og trykk på det objektet som du vil vise
+eller skjule navnet på.
+* Åpne xref:/Kontekstmeny.adoc[kontekstmenyen] for det ønskede objektet og velg image:Tool_Show_Hide_Label.gif[Tool Show
+Hide Label.gif,width=32,height=32] _Vis navn_.
+* Åpne xref:/Egenskaper.adoc[dialogboksen for egenskaper] for det ønskede objektet og merk av eller fjern merket i
+avkrysningsboksen _Vis navn_ under fanen _Basis_.
+
+== Navn og verdi
+
+I GeoGebra har hvert objekt et unikt navn som kan identifisere det i grafikkfeltet. I tillegg kan objektet også
+identifiseres ved å bruke bare verdien eller både navnet og verdien. Du kan endre innstillingene for dette under fanen
+_Basis_ i xref:/Egenskaper.adoc[egenskaper]. Velg ønsket visning fra nedtrekksmenyen bak _Vis navn_.
+
+[NOTE]
+====
+
+*Merk:* Verdien til et punkt er gitt ved koordinatene, mens verdien til en funksjon er gitt ved likningen til
+funksjonen.
+
+====
+
+== Objekttekst
+
+Av og til kan det hende at du ønsker å identifisere flere objekt med det samme navnet. Et eksempel på dette kan være at
+du ønsker å kalle alle de fire sidene i et kvadrat for `++a++`. For å få til dette, kan du høyreklikke på hver av sidene
+etter tur og velge xref:/Egenskaper.adoc[egenskaper]. Under fanen _Basis_ gir du objektet en objekttekst, og velger
+_Objekttekst_ fra nedtrekksmenyen bak _Vis navn_.
+
+Du kan bruke følgende plassholdere i objettekster:
+
+[cols=",",options="header",]
+|===
+|Plassholder |Betydning
+|%v |Verdi
+|%n |Navn
+|%x |x-koordinat (eller x-koeffisienten for linjen a x + b y + c = 0)
+|%y |y-koordinat (eller y-koeffisienten for linjen a x + b y + c = 0)
+|%z |'c'-leddet for linjen a x + b y + c = 0 (også: z-koordinaten, klar for 3D visning)
+|===
+
+[EXAMPLE]
+====
+
+La _A_ være et punkt med koordinater (1,2). Dersom du setter objektteksten til å være "Punkt %n har koordinater %v" får
+du "Punkt A har koordinater (1,2)"
+
+====
+
+== LaTeX i objekttekster
+
+Du kan også bruke xref:/LaTeX.adoc[LaTeX] i navn og objekttekster ved å skrive LaTeX kommandoen mellom dollartegn
+(f.eks. `++$ x^{2} $++`). De meste brukte greske bokstavene og operatorene finner du ved å trykke på det lille ikonet
+helt til høyre i inntastingsfeltet.
+
+[EXAMPLE]
+====
+
+Dersom du vil vise en fint formatert matematikktekst kan du bruke LaTex i objektteksten. For å vise en brøk som stem:[
+\frac\{a}\{b} ], må du skrive inn: *`++$\frac{a}{b}$++`*.
+
+====
+
+[NOTE]
+====
+
+*Merk:* LaTeX-tekster vil ikke virke for tekstfelt, knapper eller avkrysningsbokser.
+
+====

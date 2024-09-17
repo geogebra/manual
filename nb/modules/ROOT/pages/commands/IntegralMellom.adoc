@@ -1,0 +1,54 @@
+= IntegralMellom Kommando
+:page-en: commands/IntegralBetween
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+IntegralMellom[ <Funksjon f>, <Funksjon g>, <Startverdi a>, <Sluttverdi b> ]::
+  Finner det bestemte integralet av differansen _f(x) ‐ g(x)_ over intervallet _[a, b]_ med hensyn på hovedvariabelen.
+IntegralMellom[ <Funksjon f>, <Funksjon g>, <Startverdi a>, <Sluttverdi for b>, <Boolsk evaluer> ]::
+  Skraverer området mellom funksjonene _f_ og _g_ i intervallet _[a, b]_.
+  * Dersom _Boolsk evaluer = true_ blir også det bestemte integralet i intervallet beregnet.
+  * Dersom _Boolsk evaluer = false_ blir ikke det bestemte integralet beregnet.
+
+[NOTE]
+====
+
+*Merk:* Kommandoen vil også skravere arealet mellom grafene til funksjonene _f_ og _g_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også kommandoen xref:/commands/Integral.adoc[Integral].
+
+====
+
+== CAS-delen
+
+IntegralMellom[ <Funksjon f>, <Funksjon g>, <Startverdi a>, <Sluttverdi for b> ]::
+  Finner det bestemte integralet av differansen _f(x) ‐ g(x)_ over intervallet _[a, b]_ med hensyn på hovedvariabelen.
+IntegralMellom[ <Funksjon f>, <Funksjon g>, <Variabel>, <Startverdi a>, <Sluttverdi b> ]::
+  Finner det bestemte integralet av differansen _f(x) ‐ g(x)_ over intervallet _[a, b]_ med hensyn på den gitte
+  variabelen.
+
+[EXAMPLE]
+====
+
+`++IntegralMellom[a * sin(t), a * cos(t), t, π / 4, π * 5 / 4]++` gir stem:[2 \sqrt\{2} a].
+
+====
+
+[EXAMPLE]
+====
+
+`++IntegralMellom[sin(x), cos(x), π / 4, π * 5 / 4]++` gir stem:[2 \sqrt\{2}].
+
+====

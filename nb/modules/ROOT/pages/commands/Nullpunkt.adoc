@@ -1,0 +1,33 @@
+= Nullpunkt Kommando
+:page-en: commands/Root
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Nullpunkt[ <Polynom> ]::
+  Gir alle nullpunktene til polynomet som skjæringspunkt mellom funksjonsgrafen og _x_-aksen.
+Nullpunkt[ <Funksjon>, <Tall a> ]::
+  Gir ett nullpunkt til funksjonen ved https://en.wikipedia.org/wiki/Newton%27s_method[Newtons metode], med startverdi
+  _a_.
+Nullpunkt[ <Funksjon>, <Tall a>, <Tall b> ]::
+  Gir ett nullpunkt til funksjonen i intervallet [_a_,_b_] (https://en.wikipedia.org/wiki/no:Regula_falsi[regula
+  falsi]).
+
+== CAS-delen
+
+Nullpunkt[ <Polynom> ]::
+  Gir alle nullpunktene til polynomet som skjæringspunkt mellom funksjonsgrafen og _x_-aksen.
+
+[EXAMPLE]
+====
+
+`++Nullpunkt[x^3 - 3 * x^2 - 4 * x + 12]++` gir \{_x_ = 3, _x_ = 2, _x_ = -2}.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+Denne kommandoen er egentlig bare en variant av kommandoen xref:/commands/Løs.adoc[Løs].
+
+====

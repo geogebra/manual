@@ -1,0 +1,54 @@
+= ImplisittDerivert Kommando
+:page-en: commands/ImplicitDerivative
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Denne kommandoen er bare tilgjengelig i xref:/CAS_delen.adoc[CAS-delen].
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+ImplisittDerivert[ <Uttrykk f(x, y)> ]::
+  Beregner den implisitt deriverte av det gitte uttrykket.
+
+[EXAMPLE]
+====
+
+`++ImplisittDerivert[x + 2 y]++` gir _-0.5_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+Se også kommandoen xref:/commands/Derivert.adoc[Derivert].
+
+====
+
+== CAS-delen
+
+ImplisittDerivert[ <Uttrykk f(x, y)> ]::
+  Beregner den implisitt deriverte av det gitte uttrykket.Kommandoen godtar også udefinerte variabler.
+ImplisittDerivert[ <Uttrykk>, <Avhengig variabel>, <Uavhengig variabel> ]::
+  Beregner den implisitt deriverte av det gitte uttrykket.
+
+[EXAMPLE]
+====
+
+* `++ImplisittDerivert[x^2 + y^2, y, x]++` gir _-stem:[\frac\{x}\{y}]_
+* `++ImplisittDerivert[x^2 + y^2, x, y]++` gir _-stem:[\frac\{y}\{x}]_
+
+====
+
+[EXAMPLE]
+====
+
+`++ImplisittDerivert[a*x + y]++` gir _-a_.
+
+====

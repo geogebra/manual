@@ -1,0 +1,73 @@
+= MFM Kommando
+:page-en: commands/LCM
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+MFM[ <Tall a>, <Tall b> ]::
+  Returnerer minste felles multiplum for to tall, _a_ og _b_.
+MFM[ <Liste med tall> ]::
+  Returnerer minste felles multiplum for listen med tall.
+
+[EXAMPLE]
+====
+
+`++MFM[{12, 30, 18}]++` gir _180_.
+
+====
+
+[EXAMPLE]
+====
+
+`++MFM[12, 15]++` gir _60_.
+
+====
+
+== CAS-delen
+
+MFM[ <Tall a>, <Tall b> ]::
+  Returnerer minste felles multiplum for to tall, _a_ og _b_.
+MFM[ <Liste med tall> ]::
+  Returnerer minste felles multiplum for listen med tall.
+MFM[ <Polynom a>, <Polynom b> ]::
+  Regner ut minste felles multiplum for polynom _a_ og _b_
+MFM[ <Liste med polynom> ]::
+  Regner ut minste felles multiplum for listen av polynom.
+
+[EXAMPLE]
+====
+
+`++MFM[{x^2 + 4 x + 4, x^2 - x - 6, x^3 - 4 x^2 - 3 x + 18}]++` gir stem:[x^4 - 2 x^3 - 11 x^2 + 12 x + 36].
+
+====
+
+[EXAMPLE]
+====
+
+`++MFM[x^2 + 4 x + 4, x^2 - x - 6]++` gir stem:[x^3 + x^2 - 8 x - 12].
+
+====
+
+[EXAMPLE]
+====
+
+`++MFM[{12, 30, 18}]++` gir _180_.
+
+====
+
+[EXAMPLE]
+====
+
+`++MFM[12, 15]++` gir _60_.
+
+====
+
+== Se også
+
+https://en.wikipedia.org/wiki/no:Minste_felles_multiplum[Minste felles multiplum] på Wikipedia.

@@ -1,0 +1,29 @@
+= TilfeldigPoisson Kommando
+:page-en: commands/RandomPoisson
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+TilfeldigPoisson[ <Tall m> ]::
+  Returnerer et tilfeldig heltall fra en Poissonfordeling med middelverdi _m_.
+
+[EXAMPLE]
+====
+
+`++TilfeldigPoisson[20]++` returnerer et tilfeldig heltall fra Poissonfordelingen med middelverdi 20.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Poissonfordeling er en tilnærmelse av en binomisk fordeling når _n_ er stor og _p_ er liten. Her er _n_ antall
+forsøk og _p_ sannsynligheten for gunstige utfall. Middelverdien blir da stem:[m=n\cdot p].
+
+====
+
+== Se også
+
+Wikipedia på https://en.wikipedia.org/wiki/no:Poissonfordeling[Poissonfordeling] og kommandoene
+xref:/commands/SettStartverdi.adoc[SettStartverdi], xref:/commands/TilfeldigBinomial.adoc[TilfeldigBinomial],
+xref:/commands/TilfeldigElement.adoc[TilfeldigElement], xref:/commands/TilfeldigMellom.adoc[TilfeldigMellom],
+xref:/commands/TilfeldigNormalfordeling.adoc[TilfeldigNormalfordeling] og
+xref:/commands/TilfeldigUniform.adoc[TilfeldigUniform].

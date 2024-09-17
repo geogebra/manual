@@ -1,0 +1,64 @@
+= LaTeX
+:page-en: LaTeX
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+I GeoGebra kan du også skrive inn formler. For å gjøre det, huk av boksen LaTeX-formel i dialogboksen du får opp når du
+bruker verktøyet image:Tool_Insert_Text.gif[Tool Insert Text.gif,width=32,height=32]
+xref:/tools/Sett_inn_tekst.adoc[Sett inn tekst], og skriv inn formelen med LaTeX-syntaks. Når du huker av for LaTeX får
+du også en nedtrekksmeny ved _LaTeX-formel_. Der kan du få satt inn koden for kvadratrøtter, matriser, integral med mer.
+
+[NOTE]
+====
+
+*Merk:* For å lage tekst som inneholder både LaTeX-formler og vanlig xref:/Tekster.adoc[statisk tekst] kan du skrive den
+statiske teksten som vanlig og sette LaTeX-delen mellom dollartegn ($).
+
+====
+
+[EXAMPLE]
+====
+
+Lengden av diagonalen er $\sqrt\{ 2 }$.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Du kan enkelt få en LaTeX-tekst som inneholder verdien til et objekt i xref:/Algebrafelt.adoc[algebrafeltet] ved
+å dra objektet fra algebrafeltet og slippe det i xref:/Grafikkfelt.adoc[grafikkfeltet].
+
+====
+
+Du kan velge syntaksen for vanlige symbol fra nedtrekksmenyen med tittel _Symbol_. Velger du et symbol fra denne menyen
+blir LaTeX-koden for symbolet satt inn i teksten. Symbolmenyen inneholder vanlige matematiske symbol, greske bokstaver
+og operatorer. Dersom du vil lage xref:/Tekster.adoc[dynamisk tekst] i formelen må du velge objektene fra
+nedtrekksmenyen _Objekt_. GeoGebra setter da inn navnet til objektet og syntaksen for blandet tekst.
+
+Noen viktige LaTeX kommandoer forklares i tabellen under. Se i dokumentasjonen til LaTeX for mer informasjon.
+
+[cols=",",options="header",]
+|===
+|LaTeX input |Resultat
+|a \cdot b |stem:[a \cdot b]
+|\frac\{a}\{b} |stem:[\frac\{a}\{b}]
+|\sqrt\{x} |stem:[\sqrt\{x}]
+|\sqrt[n]\{x} |stem:[\sqrt[n]\{x}]
+|\vec\{v} |stem:[\vec\{v}]
+|\overline\{AB} |stem:[\overline\{AB}]
+|x^\{2} |stem:[x^\{2}]
+|a_\{1} |stem:[a_\{1}]
+|\sin\alpha + \cos\beta |stem:[\sin\alpha + \cos\beta]
+|\int_\{a}^\{b} x dx |stem:[\int_\{a}^\{b} x dx]
+|\sum_\{i=1}^\{n} i^2 |stem:[\sum_\{i=1}^\{n} i^2]
+|===
+
+[NOTE]
+====
+
+*Merk:* Se også
+
+* http://folk.uio.no/knutm/mmcs2008/lshort2e.pdf[The Not So Short Introduction To LaTeX]
+* http://www.tug.org[TeX user group]
+
+====

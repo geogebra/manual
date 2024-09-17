@@ -1,0 +1,69 @@
+= Integral Kommando
+:page-en: commands/Integral
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Integral[ <Funksjon> ]::
+  Returnerer det ubestemte integralet av funksjonen.
+Integral[ <Funksjon>, <Tall a>, <Tall b> ]::
+  Returnerer det bestemte integralet av funksjonen i intervallet _[a, b]_.
+Integral[ <Funksjon>, <Tall a>, <Tall b>, <Boolsk test> ]::
+  Skyggelegger området under funksjonen og returnerer det bestemte integralet av funksjonen i intervallet _[a, b]_
+  dersom den boolske testen returnerer _true_. Dersom den boolske verdien returnerer _false_, vil fortsatt området under
+  funksjonen skyggelegges, men integralet blir ikke regnet ut.
+
+[EXAMPLE]
+====
+
+`++Integral[x^3]++` returnerer stem:[\frac\{x^4}\{4}].
+
+====
+
+[NOTE]
+====
+
+*Merk:* Denne kommandoen tegner også arealet mellom grafen til funksjonen og x-aksen.
+
+====
+
+== CAS-delen
+
+Integral[ <Funksjon> ]::
+  Returnerer det ubestemte integralet av funksjonen.
+Integral[ <Funksjon>, <Variabel> ]::
+  Returnerer det ubestemte integralet av funksjonen med hensyn på variabelen.
+Integral[ <Funksjon>, <Tall a>, <Tall b> ]::
+  Returnerer det bestemte integralet av funksjonen i intervallet _[a, b]_.
+Integral[ <Funksjon>, <Variabel>, <Tall a>, <Tall b> ]::
+  Returnerer det bestemte integralet av funksjonen i intervallet _[a, b]_ med hensyn på variabelen.
+
+[EXAMPLE]
+====
+
+`++Integral[cos(t), t, a, b]++` gir stem:[sin(b) - sin(a)].
+
+====
+
+[EXAMPLE]
+====
+
+`++Integral[cos(x), a, b]++` gir stem:[sin(b) - sin(a)].
+
+====
+
+[EXAMPLE]
+====
+
+`++Integral[cos(a t), t]++` gir stem:[\frac\{sin(a t)}\{a} + c_1].
+
+====
+
+[EXAMPLE]
+====
+
+`++Integral[cos(x)]++` gir stem:[sin(x) + c_1].
+
+====
+
+== Se også
+
+https://en.wikipedia.org/wiki/no:Integral_(matematikk)[Wikipedia på integral.]

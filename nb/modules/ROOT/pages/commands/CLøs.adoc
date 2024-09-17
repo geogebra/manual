@@ -1,0 +1,56 @@
+= CLøs Kommando
+:page-en: commands/CSolve
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Denne kommandoen er bare tilgjengelig i xref:/CAS_delen.adoc[CAS-delen].
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+CLøs[ <Likning> ]::
+  Løser likningen med hensyn på hovedvariabelen og gir en liste med alle løsningene. Kommandoen tillater komplekse
+  løsninger.
+CLøs[ <Likning>, <Vaiabel> ]::
+  Løser likningen med hensyn på den gitte variabelen og gir en liste med alle løsningene. Kommandoen tillater komplekse
+  løsninger.
+CLøys[ <Liste med likninger>, <Liste med variabler> ]::
+  Løser likningssettet med hensyn på de gitte variablene og gir en liste med alle løsningene. Kommandoen tillater
+  komplekse løsninger.
+
+[EXAMPLE]
+====
+
+`++CLøs[{y^2 = x - 1, x = 2 * y - 1}, {x, y}]++` gir _\{\{x = 1 + 2 ί, y = 1 + ί}, \{x = 1 - 2 ί, y = 1 - ί}}_, som er
+de komplekse løsningene til _y^2^ = x_ og _x = 2 * y - 1_.
+
+====
+
+[EXAMPLE]
+====
+
+`++CLøs[a^2 = -1, a]++` gir _\{a = ί, a = -ί}_, som er de komplekse løsningene til _a^2^ = -1_.
+
+====
+
+[EXAMPLE]
+====
+
+`++CLøs[x^2 = -1]++` gir _\{x = ί, x = -ί}_, som er de komplekse løsningene til _x^2^ = -1_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* I CAS-delen må den imaginære enheten ί benyttes. For å skrive ί trykker du [.kcode]#ALT # + [.kcode]# i#.
+* Se også kommandoene xref:/commands/CLøsninger.adoc[Cløsninger], xref:/commands/Løs.adoc[Løs] og
+xref:/commands/Løsninger.adoc[Løsninger].
+
+====

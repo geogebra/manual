@@ -1,0 +1,23 @@
+= TilfeldigBinomial Kommando
+:page-en: commands/RandomBinomial
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+TilfeldigBinomial[ <Tall n>, <Tall p> ]::
+  Returnerer et tilfeldig tall fra en binomialfordeling med _n_ forsøk og sannsynlighet _p_.
+
+[EXAMPLE]
+====
+
+`++TilfeldigBinomial[1000, 0.5]++` returnerer et tall mellom 0 og 1000, hvor 500 er middelverdien. Siden det tilfeldige
+tallet er binomialfordelt, vil sannsynligheten for å få et tall nærme 500 være mye større enn sannsynligheten for å få
+et tall nærme 0 eller 1000. Kommandoen tilsvarer å kaste en mynt 1000 ganger, hvor svaret er antall mynt kastene ga.
+
+====
+
+== Se også
+
+Wikipedia på https://en.wikipedia.org/wiki/no:Binomisk_fordeling[binomisk fordeling] og kommandoene
+xref:/commands/SettStartverdi.adoc[SettStartverdi], xref:/commands/TilfeldigElement.adoc[TilfeldigElement],
+xref:/commands/TilfeldigMellom.adoc[TilfeldigMellom],
+xref:/commands/TilfeldigNormalfordeling.adoc[TilfeldigNormalfordeling],
+xref:/commands/TilfeldigPoisson.adoc[TilfeldigPoisson] og xref:/commands/TilfeldigUniform.adoc[TilfeldigUniform].

@@ -1,0 +1,40 @@
+= Linjediagram Kommando
+:page-en: commands/FrequencyPolygon
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+[NOTE]
+====
+
+*Merk:* Et linjediagram er en linjegraf tegnet ved å forbinde alle midtpunktene til toppen av søylene i et histogram.
+Bruken av denne kommandoen er derfor den samme som for kommandoen xref:/commands/Histogram.adoc[Histogram].
+
+====
+
+Linjediagram[ <Liste med klassegrenser>, <Liste med høyder> ]::
+  Lager et linjediagram basert på punkter med x-verdi gitt av klassegrensene og y-verdi gitt av høydene.
+
+[NOTE]
+====
+
+*Merk:* Se kommandoen xref:/commands/Histogram.adoc[Histogram] for eksempler.
+
+====
+
+Linjediagram[ <Liste med klassegrenser>, <Liste med rådata>, <Boolsk tetthet>, <Tetthetsfaktor> (valgfri) ]::
+  Lager et linjediagram ved å bruke listen med rådata. Klassegrensene bestemmer x-koordinaten til punktene og blir brukt
+  til å bestemme antall dataelementer i hver klasse. Y-verdien til punktene blir bestemt på følgende måte:
+  * Dersom _Boolsk tetthet = true_, høyde = Tetthetsfaktor*Klassefrekvens/Klassebredde
+  * Dersom _Boolsk tetthet = false_, høyde = Klassefrekvens
+  Som standard har vi _Boolsk tetthet=true_ og _Tetthetsfaktor=1_.
+Linjediagram[ <Boolsk kumulativ>, <Liste med klassegrenser>, <Liste med rådata>, <Boolsk tetthet>, <Tetthetsfaktor>
+(valgfri) ]::
+  Dersom Boolsk kumulativ er _true_ lager denne kommandoen et linjediagram hvor y-koordinaten til hvert punkt er lik
+  klassefrekvensen pluss summen av alle tidligere frekvenser.

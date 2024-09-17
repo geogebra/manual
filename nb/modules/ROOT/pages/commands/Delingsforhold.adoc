@@ -1,0 +1,30 @@
+= Delingsforhold Kommando
+:page-en: commands/AffineRatio
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Delingsforhold[ <Punkt A>, <Punkt B>, <Punkt C> ]
+
+Returnerer delingsforholdet _λ_ til tre punkter _A_, _B_ og _C_, som ligger på ei rett linje slik at _C_ = _A_ + _λ_ *
+_AB_.
+
+[EXAMPLE]
+====
+
+`++A=Punkt[{1,2}]++`
+
+`++B=Punkt[{2,2}]++`
+
+`++C=Punkt[{-1,2}]++`
+
+`++a=Delingsforhold[A, B, C]++` vil lagre verdien -2 til _a_. Dette fordi __C__=(1,2) + (-2)*[1,0], hvor __A__=(1,2) og
+__AB__=[1,0]
+
+====

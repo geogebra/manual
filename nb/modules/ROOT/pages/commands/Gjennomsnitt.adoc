@@ -1,0 +1,61 @@
+= Gjennomsnitt Kommando
+:page-en: commands/Mean
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Gjennomsnitt[ <Liste med tall> ]::
+  Beregner gjennomsnittet av tallene i listen.
+
+[EXAMPLE]
+====
+
+* `++Gjennomsnitt[{1, 2, 3}]++` gir 2, som er stem:[\frac\{1+2+3}\{3}]
+* `++Gjennomsnitt[{2, 5, 3, 7}]++` gir 4.25, som er stem:[\frac\{2+5+3+7}\{4}]
+
+====
+
+Gjennomsnitt[ <Liste med tall L>, <Liste med frekvenser F> ]::
+  Beregner gjennomsnittet av tallene i _L_ når tallet på hvert element i _L_ er gitt av det tilsvarende elementet i _F_.
+
+[EXAMPLE]
+====
+
+La _L = \{1, 2, 3, 4}_ og _F = \{2, 1, 1, 5}_. `++Gjennomsnitt[L, F]++` gir da 3, som er
+stem:[\frac\{1\cdot2+2+3+4\cdot5}\{9}]
+
+====
+
+[NOTE]
+====
+
+*Merk:* Listene _L_ og _F_ må være like lange.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også kommandoene xref:/commands/GjennomsnittX.adoc[GjennomsnittX],
+xref:/commands/GjennomsnittY.adoc[GjennomsnittY], xref:/commands/GeometriskGjennomsnitt.adoc[GeometriskGjennomsnitt],
+xref:/commands/HarmoniskGjennomsnitt.adoc[HarmoniskGjennomsnitt] og xref:/commands/SA.adoc[SA (Standardavvik)].
+
+====
+
+== CAS-delen
+
+Gjennomsnitt[ <Liste med tall> ]::
+  Beregner gjennomsnittet av tallene i listen. Dersom svaret ikke er et heltall, gis det som en brøk.
+
+[EXAMPLE]
+====
+
+`++Gjennomsnitt[{2, 5, 3, 7}]++` gir stem:[\frac\{17}\{4}]
+
+====

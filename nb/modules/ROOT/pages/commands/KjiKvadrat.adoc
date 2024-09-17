@@ -1,0 +1,63 @@
+= KjiKvadrat Kommando
+:page-en: commands/ChiSquared
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+KjiKvadrat[ <Frihetsgrader d>, x ]::
+  Lager https://en.wikipedia.org/wiki/no:Tetthetsfunksjon[tetthetsfunksjonen] til kjikvadratfordelingene med _d_
+  frihetsgrader.
+
+KjiKvadrat[ <Frihetsgrader d>, <Variabelverdi v> ]::
+  Finner verdien av den https://en.wikipedia.org/wiki/no:Kumulativ_fordelingsfunksjon[kumulative fordelingsfunksjonen]
+  til kjikvadratfordelingene ved _v_. Det vil si sannsynligheten _P(X≤v)_ der _X_ er en kjikvadratfordelt stokastisk
+  variabel med _d_ fridomsgrader.
+
+KjiKvadrat[ <Frihetsgrader d>, x, <Boolsk kumulativ> ]::
+  La _X_ være en kjikvadratfordelt stokastisk variabel med _d_ fridomsgrader.
+  * Dersom _kumulativ = false_ blir https://en.wikipedia.org/wiki/no:Tetthetsfunksjonen[tetthetsfunksjonen] til _X_
+  returnert.
+  * Dersom _kumulativ = true_ blir den https://en.wikipedia.org/wiki/no:Kumulativ_fordelingsfunksjon[kumulative
+  fordelingsfunksjonen] til _X_ returnert.
+
+== CAS-delen
+
+I CAS-delen er bare en syntaks tilgjengelig:
+
+KjiKvadrat[ <Frihetsgrader d>, <Variabel v> ]
+
+[EXAMPLE]
+====
+
+`++KjiKvadrat[4, 3]++` gir stem:[\gamma(2, \frac\{3}\{2})], som er tilnærmet lik _0.44_.
+
+====
+
+[NOTE]
+====
+
+*Se også* verktøyet image:Tool_Probability_Calculator.gif[Tool Probability Calculator.gif,width=32,height=32]
+xref:/tools/Sannsynlighetskalkulator.adoc[Sannsynlighetskalkulator] og kommandoer for de ulike
+sannsynlighetsfordelingene:
+
+=== [#Kontinuerlige]#Kontinuerlige#
+
+* xref:/commands/Erlang.adoc[Erlang]
+* xref:/commands/FordelingCauchy.adoc[FordelingCauchy]
+* xref:/commands/FordelingF.adoc[FordelingF]
+* xref:/commands/FordelingGamma.adoc[FordelingGamma]
+* xref:/commands/FordelingNormal.adoc[FordelingNormal]
+* xref:/commands/FordelingT.adoc[FordelingT]
+* xref:/commands/FordelingWeibull.adoc[FordelingWeibull]
+* [.mw-selflink .selflink]#KjiKvadrat#
+* xref:/commands/LogNormal.adoc[LogNormal]
+* xref:/commands/Logistisk.adoc[Logistisk]
+* xref:/commands/Trekantfordeling.adoc[Trekantfordeling]
+* xref:/commands/Uniform.adoc[Uniform]
+=== [#Diskrete]#Diskrete#
+
+* xref:/commands/FordelingBernoulli.adoc[FordelingBernoulli]
+* xref:/commands/FordelingBinomial.adoc[FordelingBinomial]
+* xref:/commands/FordelingHypergeometrisk.adoc[FordelingHypergeometrisk]
+* xref:/commands/FordelingPascal.adoc[FordelingPascal]
+* xref:/commands/FordelingPoisson.adoc[FordelingPoisson]
+* xref:/commands/Zipf.adoc[Zipf]
+====

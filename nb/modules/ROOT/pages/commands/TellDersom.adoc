@@ -1,0 +1,48 @@
+= TellDersom Kommando
+:page-en: commands/CountIf
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+TellDersom[ <Vilkår>, <Liste> ]::
+  Teller antall elementer i listen som oppfyller vilkåret.
+
+[EXAMPLE]
+====
+
+* `++TellDersom[x < 3, {1, 2, 3, 4, 5}]++` gir "2".
+* `++TellDersom[x < 3, A1:A10]++` (hvor _A1:A10_ er ei rekke av celler i regnearket) teller alle celler med verdier
+mindre enn "3".
+
+====
+
+[NOTE]
+====
+
+*Merk:* For lister med tall kan vilkårlige vilkår brukes. For lister med andre objekter kan bare vilkår på formen
+`++x==konstant++` eller `++x!=konstant++` brukes.
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Følgende tekst handler om en funksjon som kun er støttet i xref:/Release_Notes_GeoGebra_4_2.adoc[GeoGebra 4.2 Beta].
+
+'''''
+
+TellDersom[ <Vilkår>, <Variabel>, <Liste> ]::
+  Denne syntaksen åpner for mer fleksible vilkår. Ta for eksempel punktene _P, Q, R_:
+  `++TellDersom[x(A) < 3, A, {P, Q, R}]++` teller kun de punktene som har _x_-koordinat mindre enn 3. Variabelen A blir
+  etter tur erstattet av _P_, _Q_ og _R_ for å kontrollere om de oppfyller vilkåret.
+
+|===

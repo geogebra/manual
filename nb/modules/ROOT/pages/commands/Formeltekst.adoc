@@ -1,0 +1,57 @@
+= Formeltekst Kommando
+:page-en: commands/FormulaText
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Formeltekst[ <Objekt> ]::
+  Returnerer formelen for objektet som en LaTeX-tekst.
+
+[EXAMPLE]
+====
+
+Hvis _a = 2_ and _f(x) = a x^2^_, vil `++Formeltekst[f]++` returnere _2 x^2^_ (som en LaTeX tekst).
+
+====
+
+[NOTE]
+====
+
+*Merk:* Verdier substitueres inn for variabler.
+
+====
+
+Formeltekst[ <Objekt>, <Boolsk verdi for substitusjon av variabler> ]::
+  Returnerer formelen for objektet som en LaTeX tekst. Den boolske variabelen bestemmer om verdier skal settes inn for
+  variablene (_true_) eller om variabelnavnet skal vises i teksten (false).
+
+[EXAMPLE]
+====
+
+Hvis _a = 2_ og _f(x) = a x^2^_, så vil
+
+* `++Formeltekst[f, true]++` returnere _2 x^2^_ (som en LaTeX tekst)
+* `++Formeltekst[f, false]++` returnere _a x^2^_ (som en LaTeX tekst).
+
+====
+
+Formeltekst[ <Objekt>, <Boolsk verdi for substitusjon av variabler>, <Boolsk Vis navn> ]::
+  Returnerer formelen for objektet som en LaTeX tekst. Den første boolske variabelen bestemmer om verdier skal settes
+  inn for variablene (_true_) eller om variabelnavn skal vises i teksten (_false_). Den andre boolske variabelen
+  bestemmer om objektets navn skal vises i teksten (_true_) eller ikke (_false_).
+
+[EXAMPLE]
+====
+
+Hvis _a = 2_ og _f(x) = a x^2^_, så vil
+
+* `++Formeltekst[f, true, true]++` returnere _f(x)=2 x^2^_ (som en LaTeX tekst)
+* `++Formeltekst[f, false, false]++` returnere _a x^2^_ (som en LaTeX tekst).
+
+====

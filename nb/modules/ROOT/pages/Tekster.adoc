@@ -1,0 +1,64 @@
+= Tekster
+:page-en: Texts
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Tekstobjekter kan du lett lage ved å bruke kommandoen xref:/commands/Tekst.adoc[Tekst], verktøyet
+image:Tool_Insert_Text.gif[Tool Insert Text.gif,width=32,height=32] xref:/tools/Sett_inn_tekst.adoc[Sett inn tekst]
+eller ved å dra et objekt fra xref:/Algebrafelt.adoc[algebrafeltet] til xref:/Grafikkfelt.adoc[grafikkfeltet]. En annen
+metode *for avanserte brukere* (forklart nedenfor) er å skrive rett inn i xref:/Inntastingsfelt.adoc[inntastingsfeltet].
+
+Statisk tekst::
+  Avhenger ikke av noen matematiske objekter og blir vanligvis ikke påvirker av endringer i konstruksjonen.
+
+Dynamisk tekst::
+  Inneholder verdier av objekter, teksten endres automatisk når objektene blir endret.
+
+Blandet tekst::
+  Teksten inneholder en kombinasjon av statisk og dynamisk tekst. For å lage en blandet tekst, må du skrive inn den
+  statiske delen som vanlig tekst (f.eks. Punkt _A_ =), så trykker du på objektet med verdien du vil vise i den
+  dynamiske delen av teksten.
+
+[NOTE]
+====
+
+*Merk:* GeoGebra legger automatisk til syntaksen ("Punkt A = " + A) som er nødvendig for å lage den blandede teksten:
+hermetegn for den statiske delen og et plusstegn (+) for å sette sammen de ulike delene av teksten.
+
+====
+
+[cols=",",options="header",]
+|===
+|Inndata |Forklaring
+|Dette er statisk tekst |Statisk tekst
+|A |Dynamisk tekst (dersom punkt A eksisterer)
+|"Punkt A = " + A |Blandet tekst med en statisk del og en dynamisk del som gir verdien til punkt _A_
+|"a = " + a + "cm" |Blandet tekst med tre deler; den dynamiske delen gir verdien til tallet _a_
+|===
+
+[NOTE]
+====
+
+*Merk:* Dersom et objekt med navn _xx_ allerede eksisterer og du vil lage en statisk tekst som inneholder navnet til
+objektet, må du skrive det i hermetegn ("xx"). Elles vil GeoGebra automatisk lage en dynamisk tekst som gir deg verdien
+av objektet _xx_ istedet for navnet. All tekst som ikke samsvarer med navnet til et objekt kan du imidlertidig skrive
+uten hermetegn.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Inni en blandet tekst må den statiske delen stå i hermetegn. Forskjellige deler av teksten knyttes sammen med
+plusstegn (+). Fra og med versjon 4.0 er plusstegnet ikke lenger obligatorisk.
+
+====
+
+Tekstobjekt kan også bruke xref:/LaTeX.adoc[LaTeX] for å vise matematikk.

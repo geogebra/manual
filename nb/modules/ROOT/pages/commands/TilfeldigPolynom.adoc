@@ -1,0 +1,64 @@
+= TilfeldigPolynom Kommando
+:page-en: commands/RandomPolynomial
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+TilfeldigPolynom[ <Grad n>, <Minimumsverdi for koeffisienter a>, <Maksimumsverdi for koeffisienter b> ]::
+  Genererer et tilfeldig polynom av grad _n_ i _x_. Polynomet har heltallskoeffisienter i intervallet [_a_, _b_].
+
+[EXAMPLE]
+====
+
+* `++TilfeldigPolynom[0, 1, 2]++` gir 1 eller 2.
+* `++TilfeldigPolynom[2, 1, 2]++` gir et tilfeldig andregradspolynom med koeffisienter lik 1 eller 2, for eksempel
+_2x^2^ + x + 1_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Dersom tallene _a_ og _b_ ikke er heltall vil _floor(a)_ og _floor(b)_ bli brukt.
+
+====
+
+== CAS-delen
+
+TilfeldigPolynom[ <Grad n>, <Minimumsverdi for koeffisienter a>, <Maksimumsverdi for koeffisienter b> ]::
+  Genererer et tilfeldig polynom av grad _n_ i _x_. Polynomet har heltallskoeffisienter i intervallet [_a_, _b_].
+
+[EXAMPLE]
+====
+
+* `++TilfeldigPolynom[0, 1, 2]++` gir 1 eller 2.
+* `++TilfeldigPolynom[2, 1, 2]++` gir et tilfeldig andregradspolynom med koeffisienter lik 1 eller 2, for eksempel
+_2x^2^ + x + 1_.
+
+====
+
+TilfeldigPolynom[ <Variabel v>, <Grad n>, <Minimumsverdi for koeffisienter a>, <Maksimumsverdi for koeffisienter b> ]::
+  Genererer et tilfeldig polynom av grad _n_ i variabelen _v_. Polynomet har heltallskoeffisienter i intervallet [_a_,
+  _b_].
+
+[EXAMPLE]
+====
+
+* `++TilfeldigPolynom[a, 0, 1, 2]++` gir 1 eller 2.
+* `++TilfeldigPolynom[a, 2, 1, 2]++` gir et tilfeldig andregradspolynom med koeffisienter lik 1 eller 2, for eksempel
+_2a^2^ + a + 1_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Dersom tallene _a_ og _b_ ikke er heltall vil _round(a)_ og _round(b)_ bli brukt.
+
+====

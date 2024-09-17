@@ -1,0 +1,52 @@
+= Zipf Kommando
+:page-en: commands/Zipf
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Zipf[ <Antall element>, <Eksponent> ]::
+  Returner en søylegraf for Zipf fordelingen.
+  Parametrer:
+  _Antall element_: antallet element vi ser på rangen til
+  _Eksponent_: eksponenten som karakteriserer fordelingen
+
+Zipf[ <Antall element>, <Eksponent>, <Boolsk kumulativ> ]::
+  Returnerer en søylegraf for Zipf fordelingen dersom _kumulativ = false_.
+  Eller returnerer en søylegraf for den kumulative Zipf fordelingen dersom _kumulativ = true_.
+Zipf[ <Antall element>, <Eksponent>, <Variabelverdi v>, <Boolsk kumulativ> ]::
+  La _X_ være en Zipf fordelt stokastisk variabel.
+  * Returnerer _P(X = v)_ dersom _kumulativ = false_.
+  * Returnerer _P(X ≤ v)_ dersom _kumulativ = true_.
+
+[NOTE]
+====
+
+*Merk:*
+
+* Se også kommandoen xref:/commands/InversZipf.adoc[InversZipf].
+* Se også kommandoene for de andre diskrete sannsynlighetsfordelingene
+xref:/commands/FordelingBernoulli.adoc[FordelingBernoulli], xref:/commands/FordelingBinomial.adoc[FodelingBinomial],
+xref:/commands/FordelingHypergeometrisk.adoc[FordelingHypergeometrisk],
+xref:/commands/FordelingPascal.adoc[FordelingPascal] og xref:/commands/FordelingPoisson.adoc[FordelingPoisson].
+* Se også kommandoene for de kontinuerlige sannsynlighetsfordelingene xref:/commands/Erlang.adoc[Erlang],
+xref:/commands/FordelingCauchy.adoc[Fordeling Cauchy], xref:/commands/FordelingF.adoc[FordelingF],
+xref:/commands/FordelingGamma.adoc[FordelingGamma], xref:/commands/FordelingNormal.adoc[FordelingNormal],
+xref:/commands/FordelingT.adoc[FordelingT], xref:/commands/FordelingWeibull.adoc[FordelingWeibull],
+xref:/commands/KjiKvadrat.adoc[KjiKvadrat], xref:/commands/LogNormal.adoc[LogNormal],
+xref:/commands/Logistisk.adoc[Logistisk], xref:/commands/Trekantfordeling.adoc[Trekantfordeling] og
+xref:/commands/Uniform.adoc[Uniform].
+
+====
+
+== CAS-delen
+
+Zipf[ <Antall element>, <Eksponent>, <Variabelverdi>, <Boolsk kumulativ> ]::
+  La _X_ være en Zipf fordelt stokastisk variabel.
+  * Returnerer _P(X = v)_ dersom _kumulativ = false_.
+  * Returnerer _P(X ≤ v)_ dersom _kumulativ = true_.

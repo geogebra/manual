@@ -1,0 +1,59 @@
+= Sorter Kommando
+:page-en: commands/Sort
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Sorter[ <Liste> ]::
+  Sorterer elementene i listen.
+
+[EXAMPLE]
+====
+
+* `++Sorter[{3, 2, 1}]++` gir listen _\{1, 2, 3}_.
+* `++Sorter[{"rips", "blåbær", "jordbær"}]++` gir listen \{"blåbær", "jordbær", "rips"}
+* `++Sorter[{(3, 2), (2, 5), (4, 1)}]++` gir listen _\{(2, 5), (3, 2), (4, 1)}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+Elementene kan være tall, tekstobjekter eller punkter.
+
+* Tall sorteres i stigende rekkefølge.
+* Tekst sorteres alfabetisk.
+* Punkt sorteres i stigende rekkefølge etter verdien på _x_-koordinaten.
+
+====
+
+Sorter[ <Liste med verdier>, <Sorter etter> ]::
+  Sorterer listen med verdier basert på listen med sorteringskriterie.
+
+[EXAMPLE]
+====
+
+* Dersom du skal sortere en liste med polynom `++L1 = {x^3, x^2, x^6}++` med hensyn på graden, så lager du først den
+avhengige lista `++L2 = Zip[Grad[a], a, L1]++`. Deretter bruker du kommandoen `++Sorter[L1, L2]++` som gir "liste3=
+\{x^2, x^3, x^6}_._
+* Dersom du vil tegne en mangekant som har hjørner lik de komplekse røttene til stem:[x^\{10}-1], sortert med hensyn på
+argumentet, lager du listen `++L1 = {ComplexRoot[x^10-1]}++`, og bruker kommandoen `++Mangekant[Sorter[L1, arg(L1)]]++`.
+
+====
+
+[NOTE]
+====
+
+*Merk:* På opplæringssidene finnes det en artikkel om avansert liste sortering i GeoGebra:
+/s_index_php?title=En:Tutorial:Advanced_List_Sorting_action=edit_redlink=1.adoc[en:Tutorial:Advanced List Sorting] (på
+engelsk).
+
+====

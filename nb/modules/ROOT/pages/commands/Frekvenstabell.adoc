@@ -1,0 +1,40 @@
+= Frekvenstabell Kommando
+:page-en: commands/FrequencyTable
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Frekvenstabell[ <Liste med rådata L> ]::
+  Gir en tabell (som tekst) der *første kolonne* inneholder en sortert liste med de unike elementene i _L_ og '*ndre
+  kolonne* inneholder antallet forekomster i _L_ av elementet i første kolonne. Listen _L_ kan inneholde tall eller
+  tekst.
+
+Frekvenstabell[ <Kumulativ>, <Liste med rådata L> ]::
+  Dersom _Kumulativ = false_, gir den samme tabellen som Frekvenstabell[ <Liste med rådata L> ]
+  Dersom _Kumulativ = true_, gir en tabell der første kolonne inneholder de unike elementene i _L_ og andre kolonne
+  inneholder de kumulative frekvensene av elementene i første kolonne.
+
+Frekvenstabell[ <Liste med klassegrenser>, <Liste med rådata L> ]::
+  Gir en tabell (som tekst) der første kolonne inneholder intervallene og andre kolonne inneholder antallet på
+  forekomster i _L_ som hører til intervallet i første kolonne. Alle intervallene er på formen _[a, b)_ med unntak av
+  det siste intervallet som er på formen _[a, b]_.
+
+Frekvenstabell[ <Kumulativ>, <Liste med klassegrenser>, <Liste med rådata L> ]::
+  Dersom _Kumulativ = false_, gir den samme tabellen som Frekvenstabell[ <Liste med klassegrenser>, <Liste med rådaten
+  L> ]
+  Dersom _Kumulativ = true_, gir en tabell der første kolonne inneholder de unike elementene i _L_ og andre kolonne
+  inneholder de kumulative frekvensene som hører til intervallet i første kolonne.
+
+Frekvenstabell[ <Liste med klassegrenser>, <Liste med rådata>, <Bruk tetthet>, <Tetthetsfaktor> (valgfri) ]::
+  Gir en tabell (som tekst) der første kolonne inneholder intervallene og andre kolonne inneholder frekvenser for de
+  samsvarende xref:/commands/Histogram.adoc[Histogram kommandoen].
+
+Frekvenstabell[ <Kumulativ>, <Liste med klassegrenser>, <Liste med rådata>, <Bruk tetthet>, <Tetthetsfaktor> (valgfri)
+]::
+  Gir en tabell (som tekst) der første kolonne inneholder intervallene og andre kolonne inneholder frekvenser for den
+  samsvarende xref:/commands/Histogram.adoc[Histogram kommandoen].
+
+[NOTE]
+====
+
+*Se også* kommandoene xref:/commands/Frekvens.adoc[Frekvens] og xref:/commands/Histogram.adoc[Histogram].
+
+====

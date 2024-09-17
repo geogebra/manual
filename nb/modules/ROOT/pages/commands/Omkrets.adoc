@@ -1,0 +1,30 @@
+= Omkrets Kommando
+:page-en: commands/Perimeter
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Omkrets[ <Mangekant> ]::
+  Gir omkretsen til mangekanten.
+Omkrets[ <Kjeglesnitt> ]::
+  Gir omkretsen til et kjeglesnitt.
+Omkrins[ <Geometrisk sted> ]::
+  Hvis det geometriske stedet er endelig vil en tilnærming til omkretsen bli gitt. Ellers er resultatet udefinert.
+
+[EXAMPLE]
+====
+
+`++A=Punkt[{0,0}]++`
+
+`++s=Sirkel[A,1]++`
+
+`++o=Omkrets[s]++`
+
+lagrer omkretsen til _o_ for en sirkel med radius lik 1.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Dette har bare mening for sirkler og ellipser.
+
+====

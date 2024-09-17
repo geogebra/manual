@@ -1,0 +1,87 @@
+= Animasjon
+:page-en: Animation
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+== Automatisk animasjon
+
+GeoGebra lar deg ikke bare animere xref:/Tall_og_vinkler.adoc[frie tall og vinkler], men også avhengige punkt som er
+bundet til et objekt (f.eks. linjestykker, linjer, funksjoner, kurver o.l.). For at de skal kunne animeres automatisk må
+frie tall/vinkler vises som xref:/commands/Glider.adoc[glidere] i xref:/Grafikkfelt.adoc[grafikkfeltet].
+
+Dersom du vil animere et fritt tall, en vinkel eller et avhengig punkt må du høyreklikke (Mac OS:Ctrl-klikk) på tallet,
+vinkelen eller punktet og velge _Animasjon på_ fra xref:/Kontekstmeny.adoc[kontekstmenyen] som åpnes. For å stoppe
+animasjon må du avhuke _Animasjon på_ fra samme meny.
+
+[NOTE]
+====
+
+*Merk:* Etter å ha satt på animasjonen vil en animasjonsknapp vises i nedre venstre hjørne av grafikkfeltet. Den lar deg
+image:Animate_Pause.png[Animate Pause.png,width=16,height=16] pause ellerimage:Animate_Play.png[Animate
+Play.png,width=16,height=16] fortsette animasjonen.
+
+====
+
+I xref:/Egenskaper.adoc[dialogboksen for egenskaper] under fanen _Glider_ kan du endre oppførselen til animasjonen:
+
+* Du kan endre farten til animasjonen.
+
+[NOTE]
+====
+
+*Merk:* Dersom farten er 1 vil det ta omtrent 10 sekund å gjennomføre animasjonen en gang.
+
+====
+
+* Du kan endre hvordan animasjonssyklusen repeteres:
+
+⇔ Begge veier::
+  Animasjonssyklusen veksler mellom å øke og minke verdien til glideren.
+⇒ Økende::
+  Verdien til glidaren øker alltid. Når den kommer til maksimum, hopper den tilbake til minimum og starter på nytt.
+⇐ Minkende::
+  Verdien til glideren minker alltid. Når den kommer til minimum, hopper den tilbake til maksimum og starter på nytt.
+⇒ Økende (en gang)::
+  Verdien til glideren øker og gjennomfører animasjonen kun en gang.
+
+[NOTE]
+====
+
+*Merk:* GeoGebra fungerer som vanlig mens en automatisk animasjon er aktivert. Dette lar deg endre en konstruksjon mens
+animasjonen spilles.
+
+====
+
+== Manuell animasjon
+
+For å manuelt endre et tall, en vinkel eller en punktposisjon kontinuerlig velger du verktøyet image:Tool_Move.gif[Tool
+Move.gif,width=32,height=32] xref:/tools/Flytt.adoc[Flytt], trykker på det frie tallet, vinkelen eller det avhengige
+punktet og bruker [.kcode]#+# og [.kcode]#-# eller piltastene. Ved å holde inne en av disse tastene får du en manuell
+animasjon.
+
+[EXAMPLE]
+====
+
+Dersom koordinatene til et punkt avhenger av et tall _t_ som i _P = (2t, t)_, vil punktet følge en rett linje når _t_
+endres kontinuerlig.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Du kan endre steglengden til glideren under fanen _Glider_ i xref:/Egenskaper.adoc[egenskaper].
+
+====
+
+== Tastatursnarveier
+
+* [.kcode]#Shift# + piltast gir steg på 0.1 enheter
+* [.kcode]#Ctrl# + piltast gir steg på 10 enheter
+* [.kcode]#Alt# + piltast gir steg på 100 enheter
+
+[NOTE]
+====
+
+*Merk:* Et punkt på en linje kan også flyttes ved å bruke [.kcode]#+# eller [.kcode]#-#.
+
+====

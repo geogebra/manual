@@ -1,0 +1,42 @@
+= Ekstremalpunkt Kommando
+:page-en: commands/Extremum
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Ekstremalpunkt[ <Polynom> ]::
+  Finner alle lokale ekstremalpunkt for polynomfunksjonen som punkt på funksjonsgrafen.
+Ekstremalpunkt[ <Funksjon f>, <Tall a>, <Tall b> ]::
+  Finner (numerisk) eventuelle ekstremalpunkt av _f_ i det åpne intervallet _<a, b>_.
+
+[EXAMPLE]
+====
+
+`++Ekstremalpunkt[(x⁴ - 3x³ - 4x² + 4) / 2, 0, 5]++` finner det lokale ekstrempunktet _(2.93, -16.05)_ i det gitte
+intervallet _<0, 5>_, og viser det i image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Grafikkfelt.adoc[Grafikkfeltet].
+
+====
+
+[EXAMPLE]
+====
+
+`++Ekstremalpunkt[x³ + 3x² - 2x + 1]++` lager de lokale ekstramalpunktene _(0.29, 0.70)_ og _(-2.29, 9.30)_, og viser
+dem i image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Grafikkfelt.adoc[Grafikkfeltet].
+
+====
+
+[NOTE]
+====
+
+*Merk:* Funksjonen _f_ må være kontinuerlig i det lukkede intervallet _[a, b]_, ellers kan kommandoen finne falske
+ekstremalpunkt nær diskontinuitetspunktene.
+
+====

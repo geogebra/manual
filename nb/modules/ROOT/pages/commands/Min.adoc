@@ -1,0 +1,87 @@
+= Min Kommando
+:page-en: commands/Min
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Min[ <Tall a>, <Tall b> ]::
+  Returnerer det minste tallet av _a_ eller _b_.
+Min[ <Liste> ]::
+  Returnerer det minste tallet som er i listen.
+Min[ <Funksjon>, <Tall a>, <Tall b> ]::
+  Regner ut (numerisk) og returnerer punktet til minimumsverdien for funksjonen på intervallet _[a, b]_. Funksjonen
+  returnerer bare et punkt likevel om funksjonen har flere punkter med samme minimumsverdi(som for eksempel _sin(x)_ på
+  et intervall over flere perioder).
+Min[ <Intervall> ]::
+  Returnerer den nedre grensen for intervallet, uavhengig av om intervallet er åpent eller lukket.
+
+[EXAMPLE]
+====
+
+`++Min[2 < x < 3]++` returnerer _2_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Min[cos(x), 0, 6]++` returnerer punktet _(π, -1)_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Min[{-2, 12, -23, 17, 15}]++` returnerer _-23_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Min[12, 15]++` returnerer _12_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også xref:/commands/Ekstremalpunkt.adoc[ekstremalpunkt] og xref:/tools/Funksjonsanalyse.adoc[funksjonsanalyse
+verktøyet].
+
+====
+
+[NOTE]
+====
+
+*Merk:* Hvis listen inneholder ikke-numeriske objekter, vil Min[] evaluere listen med hensyn på hvilken tall-verdi
+objektene returnerer. For eksempel, Min[Liste av linjestykker] vil returnere linjen som har minst lengde.
+
+====
+
+== CAS-delen
+
+Min[ <Tall a>, <Tall b> ]::
+  Returnerer det minste tallet av _a_ eller _b_.
+Min[ <Liste> ]::
+  Returnerer det minste tallet som er i listen.
+
+[EXAMPLE]
+====
+
+`++Min[{-2, 12, -23, 17, 15}]++` returnerer _-23_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Min[12, 15]++` returnerer _12_.
+
+====

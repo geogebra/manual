@@ -1,0 +1,58 @@
+= Løs Kommando
+:page-en: commands/Solve
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Denne kommandoen er bare tilgjengelig i xref:/CAS_delen.adoc[CAS-delen].
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Løs[ <Likning> ]::
+  Løser likningen med hensyn på hovedvariabelen og gir en liste med alle løsningene.
+
+[EXAMPLE]
+====
+
+`++Løs[x^2 = 4x]++` gir _\{x = 4, x = 0}_, som er løsingene av _x^2^ = 4x_.
+
+====
+
+Løs[ <Likning>, <Variabel> ]::
+  Løser likningen med hensyn på den gitte variablen og gir en liste med alle løsningene.
+
+[EXAMPLE]
+====
+
+`++Løs[x * a^2 = 4a, a]++` gir stem:[\\{a = \frac\{4}\{x}, a = 0\}], som er løsingene av _x a^2^ = 4a_.
+
+====
+
+Løs[ <Liste med likninger>, <Liste med variabler> ]::
+  Løser likningesettet for de gitte variablene og gir en liste med alle løsningene.
+
+[EXAMPLE]
+====
+
+* `++Løs[{x = 4 x + y , y + x = 2}, {x, y}]++` gir _\{\{x = -1, y = 3}}_, som er den eneste løsningen av _x = 4x + y_ og
+_y + x = 2_.
+* `++Løs[{2a^2 + 5a + 3 = b, a + b = 3}, {a, b}]++` gir _\{\{a = 0, b = 3}, \{a = -3, b = 6}}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Høyre side i likningene kan utelates (i alle syntaksene). Dersom den høyre siden utelates, settes den til å være lik
+0.
+* Se også verktøyet image:Tool_Solve.gif[Tool Solve.gif,width=32,height=32] xref:/tools/Løs.adoc[Løs].
+* Se også kommandoene xref:/commands/Løsninger.adoc[Løsninger] , xref:/commands/CLøs.adoc[CLøs] og
+xref:/commands/CLøsninger.adoc[CLøsninger].
+
+====

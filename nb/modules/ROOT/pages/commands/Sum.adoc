@@ -1,0 +1,79 @@
+= Sum Kommando
+:page-en: commands/Sum
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Sum[ <Liste> ]::
+  Beregner summen av alle elementene i listen.
+
+[EXAMPLE]
+====
+
+* `++Sum[{1, 2, 3}]++` gir tallet _a = 6_.
+* `++Sum[{x^2,  x^3}]++` gir _f(x) = x^2^ + x^3^_.
+* `++Sum[Følge[i, i, 1, 100]]++` gir tallet _a = 5050_.
+* `++Sum[{(1, 2), (2, 3)}]++` gir punktet _A = (3, 5)_.
+* `++Sum[{(1, 2), 3}]++` gir punktet _B = (4, 2)_.
+* `++Sum[{"a", "b", "c"}]++` gir teksten _"abc"_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Denne kommandoen fungerer for tall, punkter, vektorer, tekst og funksjoner.
+
+====
+
+Sum[ <Liste>, <n antall elementer> ]::
+  Beregner summen av de _n_ første elementene i listen.
+
+[EXAMPLE]
+====
+
+`++Sum[{1, 2, 3, 4, 5, 6}, 4]++` gir tallet _a = 10_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Denne kommandoen fungerer for tall, punkter, vektorer, tekst og funksjoner.
+
+====
+
+Sum[ <Liste L>, <Liste med frekvenser F> ]::
+  Finner summen av tallene i _L_ når antallet av hvert element i _L_ er gitt av det tilsvarende elementet i _F_.
+
+[EXAMPLE]
+====
+
+`++Sum[{1,2,3}, {2,2,2}]++` gir tallet _a = 12_ .
+
+====
+
+== CAS-delen
+
+Følgende kommandoer fungerer kun i CAS-delen.
+
+Sum[ <Liste> ]::
+  Beregner summen av elementene i listen.
+
+[EXAMPLE]
+====
+
+* `++Sum[{1, 2, 3}]++` gir _6_.
+* `++Sum[{a, b, c}]++` gir _a + b + c_.
+
+====
+
+Sum[ <Uttrykk f(t)>, <Variabel>, <Startverdi>, <Sluttverdi> ]::
+  Beregner summen stem:[\sum_\{t=s}^\{e}f(t)]. Sluttverdien kan være uendelig.
+
+[EXAMPLE]
+====
+
+* `++Sum[i^2, i, 1, 3]++` gir _14_.
+* `++Sum[r^i, i, 0, n]++` gir _stem:[\frac\{r^\{n+1} - 1}\{r - 1}]_.
+* `++Sum[(1/3)^i, i, 0, inf]++` gir _stem:[\frac\{3}\{2}]_.
+
+====

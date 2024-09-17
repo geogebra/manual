@@ -1,0 +1,58 @@
+= Funksjon Kommando
+:page-en: commands/Function
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Funksjon[ <Funksjon f>, <Tall a>, <Tall b> ]::
+  Returnerer funksjonen _f_ og tegner den på intervallet [_a_, _b_].
+
+[EXAMPLE]
+====
+
+`++f(x) = Funksjon[x^2, -1, 1]++` returnerer en funksjon stem:[f(x)=x^2] der grafen kun vises på intervallet _[-1, 1]_.
+Du kan imidlertid finne verdien til _f(-2)_, som er utfor intervallet, så funksjonen er ikke avgrenset til _[-1,1]_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Denne kommandoen virker ikke med _Verktøy / Lag nytt verktøy_. Bruk heller kommandoen
+xref:/commands/Dersom.adoc[Dersom] som nevnt over.
+
+====
+
+[NOTE]
+====
+
+*Merk:* *Det frarådes å bruke denne kommandoen.* For å avgrense domenet til en funksjon, bruk heller
+xref:/commands/Dersom.adoc[Dersom]; for eksempel `++f(x) = Dersom[-1 ≤ x ≤ 1, x^2]++`, her er intervallet _[-1,1]_.
+
+====
+
+Funksjon[ <Liste med tall> ]::
+  Returnerer den følgende funksjonen: De to første tallene (_a_ og _b_) avgjør start- og sluttverdi til _x_. De
+  resterende tallene er _y_-verdiene til funksjonen. _y_-verdiene blir plassert mellom _a_ og _b_ med like stor avstand
+  mellom hver verdi.
+
+[EXAMPLE]
+====
+
+* `++Funksjon[{2, 4, 0, 1, 0, 1, 0}]++` gir en trekantet bølge mellom _x=2_ og _x=4_.
+* `++Funksjon[{-3, 3, 0, 1, 2, 3, 4, 5}]++` gir en rett linje med stigningstall lik _1_ mellom _x=-3_ og _x=3_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også https://en.wikipedia.org/wiki/no:Funksjon_(matematikk)[wikipedia på funksjon].
+
+====

@@ -1,0 +1,35 @@
+= TTest Kommando
+:page-en: commands/TTest
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+TTest[ <Liste med utvalgsdata>, <Forventet gjennomsnitt>, <Hale> ]::
+  Gjør en ett-utvalgs T-test av et populasjonsgjennomsnitt ved å bruke den gitte listen med utvalgsdata og det
+  forventede populasjonsgjennomsnittet i nullhypotesen.
+  _Hale_ kan ha følgende verdier
+  * _<_ betyr: _populasjonsgjennomsnitt < forventet gjennomsnitt_
+  * _>_ betyr: _populasjonsgjennomsnitt > forventet gjennomsnitt_
+  * _≠_ betyr: _populasjonsgjennomsnitt ≠ forventet gjennomsnitt_
+  Resultatet vises som en liste på formen _\{sannsynlighetsverdi, T-test statistikkverdi}_.
+TTest[ <Utvalgsgjennomsnitt>, <Standardavvik for utvalget>, <Utvalgsstørrelse>, <Forventet gjennomsnitt>, <Hale> ]::
+  Gjør en ett-utvalgs T-test av et populasjonsgjennomsnitt ved å bruke det gitte utvalgsgjennomsnittet, standardavviket,
+  den gitte utvalgsstørrelsen og det forventede populasjonsgjennomsnittet i nullhypotesen.
+  _Hale_ kan ha følgende verdier
+  * _<_ betyr: _populasjonsgjennomsnitt < forventet gjennomsnitt_
+  * _>_ betyr: _populasjonsgjennomsnitt > forventet gjennomsnitt_
+  * _≠_ betyr: _populasjonsgjennomsnitt ≠ forventet gjennomsnitt_
+  Resultatet vises som en liste på formen _\{sannsynlighetsverdi, T-test statistikkverdi}_.
+
+[NOTE]
+====
+
+*Merk:* Se også kommandoene xref:/commands/TTest2.adoc[TTest2] og xref:/commands/TTestParet.adoc[TTestParet].
+
+====

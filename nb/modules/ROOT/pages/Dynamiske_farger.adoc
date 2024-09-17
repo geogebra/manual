@@ -1,0 +1,58 @@
+= Dynamiske farger
+:page-en: Dynamic_Colors
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+I GeoGebra kan du endre fargen på et objekt under fanen _Farge_ i xref:/Egenskaper.adoc[dialogboksen for egenskaper]. Du
+kan imidlertid også la fargen til et objekt endres dynamisk. Det gjør du ved å gå til fanen _Avansert_ i
+xref:/Egenskaper.adoc[egenskaper] der du finner seksjonen _Dynamiske farger_. Den inneholder tekstbokser for
+fargekomponentene rød, grønn og blå.
+
+[NOTE]
+====
+
+*Merk:* I hver av disse tekstboksene kan du skrive inn en funksjon med verdi mellom 0 og 1.
+
+====
+
+[EXAMPLE]
+====
+
+* Lag tre xref:/tools/Glider.adoc[glidere] _a_, _b_ og _c_ med et intervall fra 0 til 1.
+* Lag en mangekant der fargen skal avhenge av verdien til de tre gliderene.
+* Åpne xref:/Egenskaper.adoc[Egenskaper] for mangekanten og skriv inn navnet til de tre gliderene i tekstboksene for
+hver av fargekomponentene.
+* Lukk Egenskaper og endre verdien på gliderene for å se hvordan de påvirker fargen til mangekanten.
+
+[NOTE]
+====
+
+*Merk:* Du kan også xref:/Animasjon.adoc[animere] gliderene med forskjellig fart for å se fargen endre seg automatisk.
+
+====
+
+====
+
+Seksjonen for dynamiske farger inneholder også en tekstboks for fyllgrad. Der kan du også skrive inn en funksjon (eller
+et tall) med verdi mellom 0 og 1 (der 0 er 100% gjennomsiktig og 1 er ugjennomsiktig). Tall utenfor [0,1] blir ignorert.
+
+== RGB / HSV / HSL
+
+For noen dynamiske farger oppførslar kan det være enklere med en annen modell. Istedenfor å bruke standard RGB(rød,
+grønn, blå) kan du velge enten HSV eller HSL(https://en.wikipedia.org/wiki/HSL_and_HSV[engelsk wikipedia]) fra
+nedtrekksmenyen.
+
+[EXAMPLE]
+====
+
+For å få et punkt _A_ til å gå gjennom alle fargene i regnbuen når du flytter det mot venstre og høyre bytt til HSV og
+la _Metning_ og _Verdi_ være 1, mens _Fargetone_ er `++x(A)++`.
+
+====

@@ -1,0 +1,111 @@
+= Frekvens Kommando
+:page-en: commands/Frequency
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Frekvens[ <Liste med rådata L> ]::
+  Gir en liste med antall forekomster for hvert unike element i _L_. Listen kan inneholde tall eller tekst. Den
+  returnerte listen er sortert i stigende rekkefølge for de unike elementene i _L_.
+
+[EXAMPLE]
+====
+
+* Skriv inn `++liste1 = { "a", "x", "a", "b", "x", "x" }++`.
+* `++Frekvens[liste1]++` gir listen \{ 2, 1, 3 }.
+* `++Ulike[liste1]++` gir listen \{ "a", "b", "x" }.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også kommandoen xref:/commands/Ulike.adoc[Ulike] som gir en liste med de tilsvarende unike elementene i _L_.
+
+====
+
+Frekvens[ <Kumulativ>, <Liste med rådata L> ]::
+  Dersom _Kumulativ_ = _false_, blir den samme listen returnert som ved bruk av kommandoen Frekvens[ <Liste med rådata
+  L> ].
+  Dersom __Kumulativ__= _true_, blir det returnert en liste med de kumulative frekvensene for Frekvens[ <Liste med
+  rådata L> ].
+
+[EXAMPLE]
+====
+
+* Skriv inn `++liste1 = { 0, 0, 0, 1, 1, 2 }++`.
+* `++Frekvens[true, liste1]++` gir listen \{ 3, 5, 6 }.
+* `++Frekvens[false, liste1]++` gir listen \{ 3, 2, 1}.
+* `++Ulike[liste1]++` gir listen \{ 0, 1, 2 }
+
+====
+
+Frekvens[ <Liste med klassegrenser>, <Liste med rådata L> ]::
+  Gir en liste med antall elementer i _L_ som ligger innenfor intervallet laget av klassegrensene. Alle intervallene er
+  på formen [a, b) med unntak av det siste intervallet som er på formen [a, b].
+
+[EXAMPLE]
+====
+
+`++Frekvens[{1, 2, 3},  {1, 1, 2, 3, 2}]++` gir listen \{ 2, 3 } siden 2 elementer ligger i intervallet _[1, 2)_ og 3
+elementer ligger i intervallet _[2,3]_.
+
+====
+
+Frekvens[ <Kumulativ>, <Liste med klassegrenser>, <Liste med rådata L> ]::
+  Dersom _Kumulativ_ = _false_, blir den samme listen returnert som ved bruk av kommandoen Frekvens[ <Liste med
+  klassegrenser>, <Liste med rådata L> ].
+  Dersom __Kumulativ__= _true_, blir det returnert en liste med de kumulative frekvensene for Frekvens[ <Liste med
+  klassegrenser>, <Liste med rådata L> ].
+
+Frekvens[ <Liste med klassegrenser>, <Liste med rådata L>, <Bruk tetthet>, <Tetthetsfaktor> (valgfri) ]::
+  Gir en liste med frekvenser for den tilsvarende xref:/commands/Histogram.adoc[Histogram kommandoen].
+  Dersom _Bruk tetthet_ = _false_, blir den samme listen returnert som ved bruk av kommandoen Frekvens[ <Liste med
+  klassegrenser>, <Liste med rådata L> ]
+  Dersom _Bruk tetthet_ = _true_, blir det returnert en liste med frekvensene for hver klasse.
+
+[EXAMPLE]
+====
+
+La `++data = {1, 2, 2, 2, 3, 3, 4, 4, 4, 4}++` være listen med rådata og `++klasser={0, 2, 5}++` er listen med
+klassegrenser. Da vil `++Frekvens[klasser, data, false]++` og `++Frekvens[klasser, data]++` begge returnere listen _\{1,
+9}_, mens `++Frekvens[klasser, data, true]++` returnerer listen _\{0.5, 3}_.
+
+====
+
+Frekvens[ <Kumulativ>, <Liste med klassegrenser>, <Liste med rådata L>, <Bruk tetthet>, <Tetthetsfaktor(valgfri)> ]::
+  Gir en liste med frekvenser for den tilsvarende xref:/commands/Histogram.adoc[Histogram kommandoen].
+
+Frekvens[ <Tekstliste 1>, <Tekstliste 2> ]::
+  Gir en forekomstmatrise som inneholder tallet på parede elementer fra de to listene. Radene i matrisen gir de unike
+  elementene i den første listen, mens kolonnene gir de unike elementene i den andre listen.
+
+[EXAMPLE]
+====
+
+La `++liste1 = {"a", "b", "b", "c", "c", "c", "c"}++` og `++liste2 =  {"a", "b", "a", "a", "c", "c", "d"}++`. Da vil
+`++Frekvens[ liste1, liste2 ]++` returnere matrisen stem:[\begin\{pmatrix} 1 & 0 & 0 & 0\\ 1 &1 & 0 &0 \\ 1 & 0 & 2 & 1
+\\ \end\{pmatrix}]
+
+====
+
+[NOTE]
+====
+
+*Merk:* For å få unike element for hver liste må kommandoen xref:/commands/Ulike.adoc[Ulike[ <Tekstliste> ]] bli brukt.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også kommandoene xref:/commands/Frekvenstabell.adoc[Frekvenstabell] og
+xref:/commands/Histogram.adoc[Histogram].
+
+====

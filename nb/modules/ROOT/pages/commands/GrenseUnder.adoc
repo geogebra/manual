@@ -1,0 +1,75 @@
+= GrenseUnder Kommando
+:page-en: commands/LimitBelow
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+GrenseUnder[ <Funksjon f>, <Verdi t> ]::
+  Finner den venstresidige grenseverdien til funksjonen _f_ når verdien _t_ blir satt inn for hovedvariabelen i
+  funksjonen.
+
+[EXAMPLE]
+====
+
+`++GrenseUnder[1 / x, 0]++` gir stem:[-\infty] .
+
+====
+
+[NOTE]
+====
+
+*Merk:* Ikke alle grenseverdier kan bli funnet av GeoGebra, så _udefinert_ vil bli returnert både i de tilfellene og når
+det korrekte resultatet er udefinert.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også kommandoene xref:/commands/Grenseverdi.adoc[Grenseverdi] og xref:/commands/GrenseOver.adoc[GrenseOver].
+
+====
+
+== CAS-delen
+
+GrenseUnder[ <Funksjon f>, <Verdi t> ]::
+  Finner den venstresidige grenseverdien til funksjonen _f_ når verdien _t_ blir satt inn for hovedvariabelen i
+  funksjonen.
+GrenseUnder[ <Uttrykk f>, <Variabel v>, <Verdi t> ]::
+  Finner den venstresidige grenseverdien til multivariabeluttrykket _f_ når verdien _t_ blir satt inn for variabelen _v_
+  i funksjonen.
+
+[EXAMPLE]
+====
+
+`++GrenseUnder[1 / a, a, 0]++` gir stem:[-\infty] .
+
+====
+
+[EXAMPLE]
+====
+
+`++GrenseUnder[1 / x, 0]++` gir stem:[-\infty] .
+
+====
+
+[NOTE]
+====
+
+*Merk:* Ikke alle grenseverdier kan bli funnet av GeoGebra, så _udefinert_ vil bli returnert både i de tilfellene og når
+det korrekte resultatet er udefinert.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også kommandoene xref:/commands/Grenseverdi.adoc[Grenseverdi] og xref:/commands/GrenseOver.adoc[GrenseOver].
+
+====

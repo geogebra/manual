@@ -1,0 +1,51 @@
+= TTest2 Kommando
+:page-en: commands/TTest2
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+TTest2[ <Liste med utvalgsdata 1>, <Liste med utvalgsdata 2>, <Hale>, <Boolsk gruppert> ]::
+  Gjør en to-utvalgs T-test av differansen mellom to populasjonsgjennomsnitt ved å bruke de gitte listene med
+  utvalgsdata.
+  Dersom _Boolsk gruppert = true_, blir det lagt til grunn at variansen til populasjonene er like og standardavviket til
+  utvalgene blir kombinert i beregningen.
+  Dersom _Boolsk gruppert =false_, blir det ikke lagt til grunn at variansen til populasjonane er like og
+  standardavviket til utvalgene blir ikke kombinert i berekgningen.
+
+_Hale_ kan ha følgende verdier
+
+* _<_ betyr: _differanse i populasjonsgjennomsnitt < 0_
+* _>_ betyr: _differanse i populasjonsgjennomsnitt > 0_
+* _≠_ betyr: _differanse i populasjonsgjennomsnitt ≠ 0_
+
+Resultatet blir gitt som en liste på formen _\{sannsynlighetsverdi, T-test statistikkverdi}_.
+
+TTest2[ <Utvalgsgjennomsnitt 1>, <Standardavvik 1>, <Uvalgsstørrelse 1>, <Utvalgsgjennomsnitt 2>, <Standardavvik 2>,
+<Utvalgsstørrelse 2>, <Hale>, <Boolsk gruppert> ]::
+  Gjør en to-utvalgs T-test av differansen mellom to populasjonsgjennomsnitt ved å bruke de gitte
+  utvalgsgjennomsnittene, standardavvikene og utvalgsstørrelsene.
+  Dersom _Boolsk gruppert = true_, blir det lagt til grunn at variansen til populasjonene er like og standardavviket til
+  utvalgene blir kombinert i beregningen.
+  Dersom _Boolsk gruppert =false_, blir det ikke lagt til grunn at variansen til populasjonane er like og
+  standardavviket til utvalgene blir ikke kombinert i berekgningen.
+
+_Hale_ kan ha følgende verdier
+
+* _<_ betyr: _differanse i populasjonsgjennomsnitt < 0_
+* _>_ betyr: _differanse i populasjonsgjennomsnitt > 0_
+* _≠_ betyr: _differanse i populasjonsgjennomsnitt ≠ 0_
+
+Resultatet blir gitt som en liste på formen _\{sannsynlighetsverdi, T-test statistikkverdi}_.
+
+[NOTE]
+====
+
+*Merk:* Se også kommandoene xref:/commands/TTest.adoc[TTest] og xref:/commands/TTestParet.adoc[TTestParet].
+
+====

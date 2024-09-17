@@ -1,0 +1,33 @@
+= ByttUt Kommando
+:page-en: commands/Substitute
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Denne kommandoen er bare tilgjengelig i xref:/CAS_delen.adoc[CAS-delen].
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+ByttUt[ <Uttrykk>, <Fra>, <Til> ]::
+  Bytter ut _fra_ med _til_ i uttrykket.
+
+[EXAMPLE]
+====
+
+`++ByttUt[(3 m - 3)^2 - (m + 3)^2, m, a]++` gir__8 a^2^ - 24 a__.
+
+====
+
+ByttUt[ <Uttrykk>, <Liste med forandringer> ]::
+  I uttrykket blir alle variablene i listen byttet ut med de variablene eller tallene som du velger for dem.
+
+[EXAMPLE]
+====
+
+`++ByttUt[2x + 3y - z, {x=a, y=2, z=b}]++` gir _2a - b + 6_.
+
+====

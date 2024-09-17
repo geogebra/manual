@@ -1,0 +1,68 @@
+= Invers Kommando
+:page-en: commands/Invert
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Invers[ <Matrise M> ]::
+  Returnerer den inverse matrisen til "M".
+  Invers[ <Funksjon f> ];;
+    Returnerer den inverse funksjonen til _f_.
+    [NOTE]
+
+  ====
+
+  *Merk:*
+
+  Kommandoen tar ikke hensyn til definisjonsmengde eller verdimengde, og funksjonen kan kun inneholde ett ledd med _x_,
+  for eksempel _f(x)=x^2_ eller _f(x) = sin(x)_. Dersom det er flere enn en _x_ i funksjonen må du bruke en annen
+  kommando i tillegg:
+
+  [EXAMPLE]
+
+  ====
+
+  Både `++Invers[Delbrøkoppspalting[(x + 1) / (x + 2)]]++` og`++Invers[FullstendigKvadrat[x^2 + 2 x + 1]]++` gir de
+  inverse funskjonene selv om det er flere enn ett ledd som inneholder _x_.
+
+  ====
+
+  ====
+
+[EXAMPLE]
+====
+
+`++Invers[{{1, 2}, {3, 4}}]++` gir stem:[ \begin\{pmatrix} -2 & 1\\ 1.5 & -0.5 \end\{pmatrix} , som er den inverse
+matrisen til \begin\{pmatrix} 1 & 2\\ 3 & 4 \end\{pmatrix} ].
+
+====
+
+== CAS-delen
+
+Invers[ <Matrise M> ]::
+  Returnerer den inverse matrisen til _M_. Kan også brukes for matriser med udefinerte variabler.
+  Invers[ <Funksjon f> ];;
+    Returnerer den inverse funksjonen til _f_. Kommandoen kan også brukes for funskjoner som inneholder flere ledd med
+    _x_.
+    [EXAMPLE]
+
+  ====
+
+  `++Invers[(x + 1) / (x + 2)]++` som gir stem:[\frac\{-2x+1}\{x-1}].
+
+  ====
+
+[EXAMPLE]
+====
+
+`++Invers[{{a, b}, {c, d}}]++` gir stem:[ \begin\{pmatrix} \frac\{d}\{ad- bc} & \frac\{-b}\{ad- bc}\\ \frac\{-c}\{ad-
+bc}& \frac\{a}\{ ad- bc} \end\{pmatrix} , som er den inverse matrisen til \begin\{pmatrix} a & b\\ c & d \end\{pmatrix}
+].
+
+====

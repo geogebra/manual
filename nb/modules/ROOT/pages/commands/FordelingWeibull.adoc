@@ -1,0 +1,54 @@
+= FordelingWeibull Kommando
+:page-en: commands/Weibull
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+FordelingWeibull[ <Form k>, <Skala λ>, x ]::
+  Lager https://en.wikipedia.org/wiki/no:Tetthetsfunksjon[sannsynlighetstetthetsfunksjonen] til Weibullfordelingen med
+  parametre _k, λ_.
+FordelingWeibull[ <Form>, <Skala λ>, <Variabelverdi v> ]::
+  Finner verdien av den https://en.wikipedia.org/wiki/no:Kumulativ_fordelingsfunksjon[kumulative fordelingsfunksjonen]
+  til Weibullfordelingen ved _v_. Det vil si sannsynligheten _P(X≤v)_ hvor _X_ er en Weibullfordelt stokastisk variabel
+  med parametre _k, λ_.
+FordelingWeibull[ <Form k>, <Skala λ>, x, <Boolsk kumulativ> ]::
+  La _X_ være en Weibullfordelt stokastisk variabel med parametre _k, λ_.
+  * Dersom _kumulativ = false_ blir https://en.wikipedia.org/wiki/no:Tetthetsfunksjon[sannsynlighetstetthetsfunksjonen]
+  til _X_ returnert.
+  * Dersom _kumulativ = true_ blir den https://en.wikipedia.org/wiki/no:Kumulativ_fordelingsfunksjon[kumulative
+  fordelingsfunksjonen] til _X_ returnert.
+
+[NOTE]
+====
+
+*Merk:*
+
+* Se også verktøyet image:Tool_Probability_Calculator.gif[Tool Probability Calculator.gif,width=32,height=32]
+xref:/tools/Sannsynlighetskalkulator.adoc[Sannsynlighetskalkulator].
+* Se også kommandoen xref:/commands/InversWeibull.adoc[InversWeibull].
+* Se også kommandoene for de andre kontinuerlige sannsynlighetsfordelingene xref:/commands/Erlang.adoc[Erlang],
+xref:/commands/FordelingCauchy.adoc[Fordeling Cauchy], xref:/commands/FordelingF.adoc[FordelingF],
+xref:/commands/FordelingGamma.adoc[FordelingGamma], xref:/commands/FordelingNormal.adoc[FordelingNormal],
+xref:/commands/FordelingT.adoc[FordelingT], xref:/commands/KjiKvadrat.adoc[KjiKvadrat],
+xref:/commands/LogNormal.adoc[LogNormal], xref:/commands/Logistisk.adoc[Logistisk],
+xref:/commands/Trekantfordeling.adoc[Trekantfordeling] og xref:/commands/Uniform.adoc[Uniform].
+* Se også kommandoene for de diskrete sannsynlighetsfordelingene
+xref:/commands/FordelingBernoulli.adoc[FordelingBernoulli], xref:/commands/FordelingBinomial.adoc[FordelingBinomial],
+xref:/commands/FordelingHypergeometrisk.adoc[FordelingHypergeometrisk],
+xref:/commands/FordelingPascal.adoc[FordelingPascal], xref:/commands/FordelingPoisson.adoc[FordelingPoisson] og
+xref:/commands/Zipf.adoc[Zipf].
+
+====
+
+== CAS-delen
+
+FordelingWeibull[ <Form k>, <Skala λ>, <Variabelverdi v> ]::
+  Finner verdien av den https://en.wikipedia.org/wiki/no:Kumulativ_fordelingsfunksjon[kumulative fordelingsfunksjonen]
+  til Weibullfordelingen ved _v_. Det vil si sannsynligheten _P(X≤v)_ hvor _X_ er en Weibullfordelt stokastisk variabel
+  med parametre _k, λ_.

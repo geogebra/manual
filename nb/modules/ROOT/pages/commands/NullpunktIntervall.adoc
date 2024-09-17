@@ -1,0 +1,30 @@
+= NullpunktIntervall Kommando
+:page-en: commands/Roots
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+NullpunktIntervall[ <Funksjon>, <Startverdi a>, <Sluttverdi b> ]::
+  Finner nullpunktene til funksjonen i intervallet [_a_, _b_]. Funksjonen må være kontinuerlig i det gitte intervallet.
+  Siden det benyttes en numerisk algoritme, er det ikke sikkert at kommandoen finner alle nullpunktene.
+
+[EXAMPLE]
+====
+
+La funksjonen være `++f(x) = 3x³ + 3x² - x++`. Da vil `++NullpunktIntervall[f, -2, 1]++` gi
+`++A = (-1.264, 0), B = (0, 0), C = (0.264, 0)++`
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også kommandoen xref:/commands/Nullpunkt.adoc[Nullpunkt].
+
+====

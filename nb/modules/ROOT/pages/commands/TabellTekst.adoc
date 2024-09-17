@@ -1,0 +1,64 @@
+= TabellTekst Kommando
+:page-en: commands/TableText
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+TabellTekst[ <Liste 1>, <Liste 2>, ... ]::
+  Lager en tekst som inneholder en tabell med listeobjektene.
+
+[EXAMPLE]
+====
+
+* `++TabellTekst[{x^2, 4}, {x^3, 8}, {x^4, 16}]++` lager en tabell som et tekstobjekt med tre rader og to kolonner. Alle
+elementene i tabellen er venstrejusterte.
+* `++TabellTekst[Følge[i^2, i, 1, 10]]++` lager en tabell som et tekstobjekt med en rad. Alle elementene i tabellen er
+venstrejusterte.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Hver liste blir vist som en ny rad i tabellen.
+
+====
+
+TabellTekst[ <Liste 1>, <Liste 2>, ..., <Justering av tekst> ]::
+  Lager en tekst som inneholder en tabell med listeobjektene. Den valgfrie teksten "Justering av tekst" kontrollerer
+  orientering og justering av tabellteksten.
+
+[EXAMPLE]
+====
+
+* `++TabellTekst[{1,2,3,4},{1,4,9,16},"v"]++` gir en tekst med to kolonner og fire rader, hvor elementene er
+venstrejusterte.
+* `++TabellTekst[{1,2,3,4},{1,4,9,16},"h"]++` gir en tekst med to rader og fire kolonner, hvor elementene er
+venstrejusterte.
+* `++TabellTekst[{11.2,123.1,32423.9,"234.0"},"vr"]++` gir en tekst med en rad, hvor elementene er høyrejusterte.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Mulige verdier er: "vl", "vc", "vr", "v", "h", "hl", "hc", "hr". Som standard brukes "hl".
+
+* "v" = vertikal, dvs. listene er kolonner
+* "h" = horisontal, dvs. listene er rader
+* "l" = venstrejustert
+* "r" = høyrejustert
+* "c" = sentrert
+
+====
+
+For å lage klammer rundt tabellteksten skrives ||||, ||, \{}, [] eller () inn i "Justering av tekst". Horisontale linjer
+spesifiseres ved _ og vertikale linjer ved |
+
+[EXAMPLE]
+====
+
+* `++TabellTekst[{{1,2},{3,4}},"c()"]++`
+* `++TabellTekst[{{1,2},{3,4}},"c|_"]++`
+* `++TabellTekst[{{1,2},{3,4}},"c||"]++`
+* `++TabellTekst[{{1,2},{3,4}},"c||||"]++`.
+
+====

@@ -1,0 +1,47 @@
+= CFaktor Kommando
+:page-en: commands/CFactor
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Denne kommandoen er bare tilgjengelig i xref:/CAS_delen.adoc[CAS-delen].
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+CFaktor[ <Uttrykk> ]::
+  https://en.wikipedia.org/wiki/no:Faktorisering[Faktoriserer] et gitt uttrykk.
+CFaktor[ <Uttrykk>, <Variabel> ]::
+  https://en.wikipedia.org/wiki/no:Faktorisering[Faktoriserer] et uttrykk med tanke på en gitt variabel.
+
+[EXAMPLE]
+====
+
+`++CFaktor[x^2 - y^2,x]++` gir _(x + y) (x - y)_, som er faktoriseringen av _x^2^ - y^2^_ med hensyn på x.
+
+`++CFaktor[x^2 + y^2,y]++` gir _(ί x + y) (-ί x + y)_, som er faktoriseringen av _x^2^ + y^2^_ med hensyn på y.
+
+====
+
+[EXAMPLE]
+====
+
+`++CFaktor[x^2 + 4]++` gir _(x + 2 ί) (x - 2 ί)_, som er faktoriseringen av _x^2^ + 4_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* CFaktor tillater kun uttrykk som lar seg faktorisere med https://en.wikipedia.org/wiki/no:Rasjonalt_tall[rasjonale]
+faktorer. Eksempelvis vil ikke stem:[x^2-2] la seg faktorisere siden faktorene stem:[(x-\sqrt\{2})(x+\sqrt\{2})]
+innholder https://en.wikipedia.org/wiki/no:Irrasjonalt_tall[irrasjonelle tall].
+* CFaktor tillater også xref:/Komplekse_tall.adoc[komplekse] faktorer, i motsetning til kommandoene
+xref:/commands/Faktorer.adoc[Faktorer] og xref:/commands/Faktoriser.adoc[Faktoriser].
+
+====

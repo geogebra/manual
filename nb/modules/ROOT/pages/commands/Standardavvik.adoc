@@ -1,0 +1,53 @@
+= Standardavvik Kommando
+:page-en: commands/SD
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Standardavvik[ <Liste med tall> ]::
+  Finner https://en.wikipedia.org/wiki/no:Standardavvik[standardavviket] til tallene i listen.
+Standardavvik[ <Liste med tall L>, <Liste med frekvenser F> ]::
+  Finner https://en.wikipedia.org/wiki/no:Standardavvik[standardavviket] til tallene i _L_ når tallet på hvert element i
+  L er gitt av det tilsvarende elementet i _F_.
+
+[EXAMPLE]
+====
+
+`++Standardavvik[{1, 2, 3, 4, 5}, {5, 1, 1, 3, 9}]++` gir _1.7_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Standardavvik[{1, 2, 3, 4, 5}]++` gir _1.41_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Se også kommandoen xref:/commands/UtvalgStandardavvik.adoc[UtvalgStandardavvik]. Denne benyttes for å finne
+standardavviket når man kun har et utvalg av data fra en populasjon, mens standardavvik kommandoen benyttes når man har
+data fra hele populasjonen. Jo flere elementer man har i listen, jo mer likt blir resulatet for disse to kommandoene.
+Grunnen til dette er at det eneste som skiller de to statistiske størrelsene er at utvalgsstandardavviket har _N - 1_ i
+nevneren, mens standardavviket har _N_, der _N_ er antall elementer i listen.
+* Se også kommandoene xref:/commands/Gjennomsnitt.adoc[Gjennomsnitt],
+xref:/commands/StandardavvikX.adoc[StandardavvikX], xref:/commands/StandardavvikY.adoc[StandardavvikY] og
+xref:/commands/Varians.adoc[Varians].
+
+====
+
+== CAS-delen
+
+Standardavvik[ <Liste med tall> ]::
+  Finner https://en.wikipedia.org/wiki/no:Standardavvik[standardavviket] til tallene i listen. Kommandoen gir det
+  eksakte svaret, dersom listen inneholder udefinerte variabler blir det returnert en formel for svaret.
+
+[EXAMPLE]
+====
+
+* `++Standardavvik[{1, 2, 3, 4, 5}]++` gir stem:[\sqrt\{2}].
+* `++Standardavvik[{2, 3, 5, a}]++` gir stem:[\{\frac\{\sqrt\{3a^2-20a+52} }\{4} }].
+
+====

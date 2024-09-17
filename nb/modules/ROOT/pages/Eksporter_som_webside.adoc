@@ -1,0 +1,125 @@
+= Eksporter som webside
+:page-en: Embedding_in_Webpages
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+For å lage en html-fil må du gå til xref:/Filmeny.adoc[Fil-menyen], *Eksporter*,
+image:Export-html.png[Export-html.png,width=32,height=32] *Dynamisk ark som webside (html)...* og så velge fanen
+*Eksporter som webside* i xref:/Eksporter_dialogboks_for_arbeidsark.adoc[dialogboksen] som kommer opp.
+
+* Øverst i eksporteringsvinduet kan du skrive inn tittel, forfatter og dato for det dynamiske arbeidsarket ditt.
+* Under fanen _Generelt_ kan du legge til tekst over og under konstruksjonen (f.eks. en forklaring av konstruksjonen og
+noen oppgaver).
+* Under fanen _Avansert_ kan du endre funksjonaliteten til den dynamiske konstruksjonen (f.eks. kan du legge til et
+gjennopprettingsikon og velge om javaskript skal brukes) i tillegg til å modifisere brukergrensesnittet i den
+interaktive appleten (f.eks. vise xref:/Verktøylinje.adoc[verktøylinjen]), modifisere høyde og bredde, aktivere lagring,
+utskrift med mer).
+
+[NOTE]
+====
+
+*Merk:* Dersom størrelsen til appleten blir for stor til å passe på en dataskjerm med standard oppløsing (1024 x 768)
+kan det være lurt å endre størrelsen før du eksporterer det som et dynamisk arbeidsark.
+
+====
+
+Den eksporterte HTML-filen (f.eks. sirkel.html) kan vises med alle internettlesere. For at den dynamiske konstruksjonen
+skal fungere må Java være installert på maskinen eller _Eksporter bare til HTML 5_ være valgt under eksporteringen.
+Dersom du vil bruke det dynamiske arbeidsarket på nettverket på skolen må du spørre den lokale data-administratoren om
+Java-plugin er installert eller om nettleserene er oppdatert(nødvendig for HTML5 støtte).
+
+[NOTE]
+====
+
+*Merk:* HTML5-støtten er enda ny, og en kan forvente bedre resultat med Java. Derimot er Java sjeldent tilgjengelig på
+enheter som nettbrett og mobiler.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Du kan redigere teksen i det dynamiske arbeidsarket med mange tekstbehandlingsprogram ved å åpne den eksporterte
+HTML-filen. Du kan også redigere appleten ved å åpne HTML-filen i GeoGebra og eksportere den med samme navn.
+* Se siden xref:/Legg_inn_i_CMS_VLE_(Moodle)_og_Wiki.adoc[Legg inn i CMS, VLE (Moodle) og Wiki] for detaljer om hvordan
+du kan eksportere GeoGebra appleter til disse systemene.
+
+====
+
+== Avanserte innstillinger
+
+*Funksjonalitet*:
+
+* _Tillat høyreklikk, zooming og tastaturredigering_: Ved å velge dette kan brukeren av arbeidsarket høyreklikke på
+objekt eller i grafikkfeltet for å åpne xref:/Kontekstmeny.adoc[kontekstmenyen] (f.eks.
+xref:/tools/Vis_eller_skjul_objekt.adoc[vis eller skjul objekt], xref:/Sporing.adoc[sporing av / på],
+xref:/Egenskaper.adoc[dialogboks for egenskaper]). Det er også mulig å bruke vanlige
+xref:/Tastatursnarveier.adoc[tastatursnarveier].
+* _Tillat flytting av navn_: Ved å velge dette blir det mulilg å flytte navnet til punkt og andre objekt.
+* _Vis knapp for å starte konstruksjonen på nytt_: En gjennopprettingsknapp vises i øvre høyre hjørnet av den
+interaktive appleten slik at en kan starte på nytt og gjenopprette hele konstruksjonen.
+* _Bruk nettleser for Javaskript_: Javaskript aktiveres. Dette lar nettleseren din vise konstruksjonen skikkelig.
+
+*Brukergrensesnitt*:
+
+* _Vis menylinje_: Menylinjen vises i den interaktive appleten.
+* _Tillat lagring og utskrift_: Gjør det mulig å lagre, skrive ut og angre konstruksjonen. Siden dette lar appleten få
+tilgang til harddisk og skrivere, blir en /Referanse:Parametere_til_applet.adoc[signert applet] brukt og alle brukere av
+appleten blir spurt om han stoler på den.
+* _Vis verktøylinje_: Verktøylinjen vises i den interaktive appleten slik at en kan bruke geometriske verktøy.
+* _Vis hjelp for verktøylinja_: I kombinasjon med verktøylinjen kan du også vise hjelp for verktøylinjen. Brukere kan da
+sjekke hvordan et verktøy kan brukes.
+* _Vis inntastingsfeltet_: Inntastingsfeltet vises nederst i den interaktive appleten og lar brukerene skrive inn
+algebraiske uttrykk og kommandoer.
+* _Tillat omskalering_: Når dette valget er huket av vil appleten prøve å omskalere konstruksjonen med hensyn til
+zoomingen i nettleseren. I tillegg blir størrelsen på appleten endret. Dette valget blir ignorert dersom flere
+xref:/Oppsett.adoc[oppsett] er vist i appleten.
+* _Bredde_ og _Høyde_: Lar deg endre bredden og høyden på appleten.
+
+[NOTE]
+====
+
+*Merk:* Dersom du reduserer størrelsen på appleten kan det hende at viktige deler av arbeidsarket ikke er synlige for
+brukeren.
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Hint:* Dersom du inkluderer menylinja, verktøylinjen og
+inntastingsfeltet, kan det være lurt å justere høyden på den interaktive appleten.
+
+====
+
+*Filer*:
+
+* _Eksporter berre til HTML 5_: Eksporterer appleten til HTML5 istedenfor Java. Denne funksjonen ble tilgjenglig i
+versjon 4.2.
+* _Fjern linjeskift_: Fjerner linjeskift fra den resulterende koden. Dette er nødvendig for eksempel når du inkluderer
+appleten i http://wordpress.com[WordPress], men gjør koden mer rotete og vanskligere å redigere.
+* _Fil-nedtrekksmenyen_: Du kan velge om du vil lagre som en HTML-fil eller om du vil eksportere til utklippstavla som
+HTML, MediaWiki, GoogleGadget eller Moodle. Se også siden xref:/Legg_inn_i_CMS_VLE_(Moodle)_og_Wiki.adoc[Legg inn i CMS,
+VLE (Moodle) og Wiki]
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Hint:* Mengden data som er nødvendig for å laste ned
+appleten blir _betydelig_ redusert (400kB istedenfor 1300kB) når følgende vilkår er oppfylt:
+
+* bare et grafikkfelt er i bruk (ikke rekneark, algebrafelt eller lignende)
+* menylinjen, inntastingsfeltet osv. er ikke med
+* "Bruk nettleser for Javaskript" er huket av
+* ingen CAS-kommandoer blir brukt (f.eks. f'(x), Integral, Tangent, ReknUt)
+
+====

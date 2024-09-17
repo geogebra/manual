@@ -1,0 +1,43 @@
+= NIntegral Kommando
+:page-en: commands/NIntegral
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Denne kommandoen er bare tilgjengelig i xref:/CAS_delen.adoc[CAS-delen].
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+NIntegral[ <Funksjon f>, <Startverdi a>, <Sluttverdi b> ]::
+  Finner det bestemte integralet stem:[\int_a^bf(x)\mathrm\{d}x] numerisk.
+NIntegral[ <Funksjon f>, <Variabel t>, <Startverdi a>, <Sluttverdi b> ]::
+  Finner det bestemte integralet stem:[\int_a^bf(t)\mathrm\{d}t] numerisk.
+
+[EXAMPLE]
+====
+
+`++NIntegral[ℯ^(-a^2), a, 0, 1]++` gir _0.746824132812427_.
+
+====
+
+[EXAMPLE]
+====
+
+`++NIntegral[ℯ^(-x^2), 0, 1]++` gir _0.746824132812427_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* I stedet for å skrive _ℯ^x_ for eksponentialfunksjonen, kan du skrive _exp(x)_. Se
+xref:/Forhåndsdefinerte_funksjoner_og_operatorer.adoc[Forhåndsdefinerte funksjoner og operatorer].
+* Eulers tall ℯ kan du skrive ved å bruke [.kcode]#Alt # + [.kcode]# e#.
+
+====

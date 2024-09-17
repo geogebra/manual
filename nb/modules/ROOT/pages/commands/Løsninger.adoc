@@ -1,0 +1,57 @@
+= Løsninger Kommando
+:page-en: commands/Solutions
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Denne kommandoen er bare tilgjengelig i xref:/CAS_delen.adoc[CAS-delen].
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Løsninger[ <Likning> ]::
+  Løser likningen med hensyn på hovedvariabelen og gir en liste med alle løsningene.
+Løsninger[ <Likning>, <Variabel> ]::
+  Løser likningen med hensyn på den gitte variabelen og gir en liste med alle løsningene.
+Løsninger[ <Liste med likninger>, <Liste med variabler> ]::
+  Løser likningesettet med hensyn på de gitte variablene og gir en liste med alle løsningene.
+
+[EXAMPLE]
+====
+
+* `++Løsninger[{x = 4 x + y , y + x = 2}, {x, y}]++` gir _\{\{-1, 3}}_, som er den eneste løsningen av _x = 4x + y_ and
+_y + x = 2_. Løsningen blir vist som stem:[\begin\{pmatrix} -1&3 \end\{pmatrix}].
+** `++Løsninger[{2a^2 + 5a + 3 = b, a + b = 3}, {a, b}]++` gir _\{\{0, 3}, \{-3, 6}}_, som blir vist som
+stem:[\begin\{pmatrix} 0&3\\ -3&6 \end\{pmatrix}].
+
+====
+
+[EXAMPLE]
+====
+
+`++Løsninger[x * a^2 = 4a, a]++` gir stem:[\\{\frac\{4}\{x},0\}], som er løsningene av _x a^2^ = 4a_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Løsninger[x^2 = 4x]++` gir _\{4, 0}_, som er løsningene av _x^2^ = 4x_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Den høyre siden i likningene kan utelates i alle syntaksene ovenfor. Dersom den høyre siden mangler settes den som
+standard lik 0.
+* Se også kommandoene xref:/commands/Løs.adoc[Løs] , xref:/commands/NLøs.adoc[NLøs],
+xref:/commands/NLøsninger.adoc[NLøsninger], xref:/commands/CLøs.adoc[CLøs] og
+xref:/commands/CLøsninger.adoc[CLøsninger].
+
+====

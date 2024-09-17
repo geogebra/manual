@@ -1,0 +1,35 @@
+= Determinant Kommando
+:page-en: commands/Determinant
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Determinant[ <Matrise> ]::
+  Gir determinanten til matrisen.
+
+[EXAMPLE]
+====
+
+`++Determinant[{{1, 2}, {3, 4}}]++` gir _a = -2_.
+
+====
+
+== CAS-delen
+
+Determinant[ <Matrise> ]
+
+Gir determinanten til matrisen. Dersom matrisen inneholder udefinerte variabler, gir kommandoen uttrykket for
+determinanten.
+
+[EXAMPLE]
+====
+
+`++Determinant[{{1, a}, {b, 4}}]++` gir _-a b + 4_.
+
+====

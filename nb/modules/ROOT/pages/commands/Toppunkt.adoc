@@ -1,0 +1,34 @@
+= Toppunkt Kommando
+:page-en: commands/Vertex
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Toppunkt[ <Kjeglesnitt> ]::
+  Returnerer alle toppunkt på kjeglesnittet.
+Toppunkt[ <Mangekant> ]::
+  Returnerer alle toppunktene til mangekanten.
+Toppunkt[ <Mangekant>, <Tall n> ]::
+  Returnerer det _n_-te toppunkt til mangekanten.
+
+[NOTE]
+====
+
+*Merk:* For å få toppunktene returnert som en xref:/Lister.adoc[liste], bruk krøllparenteser rundt kommandoen:
+`++{Toppunkt[k]}++`.
+
+====
+
+Toppunkt[ <Ulikhet> ]::
+  Returnerer punktene som skjærer grensene til ulikhetene.
+
+[EXAMPLE]
+====
+
+`++Toppunkt[(x + y < 3) && (x - y > 1)]++` returnerer punktet (2,1) ;
+
+`++{Toppunkt[(x + y < 3) ∧ (x - y > 1)&& (y>-2)]}++` returnerer listen \{(2, 1), (5, -2), (-1, -2)} ;
+
+`++Toppunkt[(y > x²) ∧ (y < x)]++` returnerer to punkt (0, 0) og (1, 1) ;
+
+`++{Toppunkt[(y > x²) ∧ (y < x)]}++` returnerer listen \{(0, 0), (1, 1)}.
+
+====

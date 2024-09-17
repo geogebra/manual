@@ -1,0 +1,60 @@
+= Lag verktøy
+:page-en: Tool_Creation_Dialog
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Først må du lage den konstruksjonen som verktøyet skal kunne lage seinere. Gå så til
+xref:/Verktøymeny.adoc[Verktøy-menyen] og trykk på image:Menu_Create_Tool.png[Menu Create Tool.png,width=16,height=16]
+_Lag nytt verktøy_ for å åpne dialogboksen. Her må du fylle inn hva som skal være ut-objekt(sluttobjekt),
+inn-objekt(startobjekt), navnet og ikonet som verktøyet skal ha.
+
+[EXAMPLE]
+====
+
+Hvordan lage et verktøy som lager et kvadrat fra to punkt:
+
+* Lag to punkt _A_ og _B_.
+* Lag punktene A’ og B’ ved å bruke verktøyet image:Tool_Angle_Fixed.gif[Tool Angle
+Fixed.gif,width=32,height=32]xref:/tools/Vinkel_med_fast_størrelse.adoc[Vinkel med fast størrelse] to ganger med 90
+grader på punktene A+B(=A’) og B+A’(=B’).
+* Bind alle punktene i sammen med verktøyet image:Tool_Polygon.gif[Tool Polygon.gif,width=32,height=32]
+xref:/tools/Mangekant.adoc[Mangekant] for å få kvadratet Mangekant1.
+* Velg image:Menu_Create_Tool.png[Menu Create Tool.png,width=16,height=16] _Lag nytt verktøy_ fra Verktøy-menyen.
+* Spesifiser sluttobjekt - resultatet til verktøyet:
+** Trykk på kvadratet eller velg det fra nedtrekkslisten med objekter i vinduet.
+** Om du ønsker, kan du også ha punktene (A’ og B’), vinklene og/eller linjestykkene mellom punktene som sluttobjekt.
+Dette kan være nyttig om du skal bruke punktene eller egenskapene til kvadratet videre i en konstruksjon.
+* Spesifiser startobjekt:
+** GeoGebra vil automatisk foreslå startobjekt (her: punkt _A_ og _B_).
+** Du kan også endre startobjekt ved å trykke på de eller velge de fra nedtrekkslisten i vinduet.
+* Spesifiser navn og kommando for det nye verktøyet.
+
+[NOTE]
+====
+
+*Merk:* Verktøynavnet vil vises på xref:/Verktøylinje.adoc[verktøylinjen] i GeoGebra, mens kommandonavnet kan brukes i
+xref:/Inntastingsfelt.adoc[inntastingsfeltet].
+
+====
+
+* Du kan også skrive inn hjelpetekst som vises når du holder musen over verktøyet.
+* Du kan også velge et bilde som ikon for verktøyet. GeoGebra vil automastisk endre størrelsen på bildet slik at det
+passer på verktøylinjen.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sluttobjekt fra egne verktøy er ikke flyttbar, selv om de er definert som `++Punkt[<Sti>]++`. Dersom du trenger
+et flyttbart objekt kan du definere en liste med kommandoer og bruke den med kommandoen
+xref:/commands/Utfør.adoc[Utfør].
+
+====

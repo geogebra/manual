@@ -1,0 +1,39 @@
+= Eksponential Kommando
+:page-en: commands/Exponential
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Eksponential[ <Tall λ>, x ]::
+  Lager https://en.wikipedia.org/wiki/no:Tetthetsfunksjon[tetthetsfunksjonen] til eksponentialfordelingen med
+  vekstparameter _λ_.
+Eksponential[ <Tall λ>, <Variabelverdi v> ]::
+  Finner verdien av den kumulative fordelingsfunksjonen til eksponentialfordelingen ved _v_. Det vil si sannsynligheten
+  _P(X≤v)_ der _X_ er en eksponentialfordelt stokastisk variabel med vekstparameter _λ_.
+Eksponential[ <Tall λ>, x, <Boolsk Kumulativ> ]::
+  La _X_ være en eksponentialfordelt stokastisk variabel med parameter _λ_.
+  * Dersom _kumulativ = false_ blir https://en.wikipedia.org/wiki/no:Tetthetsfunksjon[tetthetsfunksjonen] til _X_
+  returnert.
+  * Dersom _kumulativ = true_ blir den kumulative fordelingsfunksjonen til _X_ returnert
+
+[NOTE]
+====
+
+*Merk:*
+
+* Se også verktøyet image:Tool_Probability_Calculator.gif[Tool Probability Calculator.gif,width=32,height=32]
+xref:/tools/Sannsynlighetskalkulator.adoc[Sannsynlighetskalkulator].
+* Se også kommandoen xref:/commands/InversEksponential.adoc[InversEksponential].
+
+====
+
+== CAS-delen
+
+Eksponential[ <Tall λ>, <Variabelverdi v> ]::
+  Finner verdien av den kumulative fordelingsfunksjonen til eksponentialfordelingen ved _v_. Det vil si sannsynligheten
+  _P(X≤v)_ der _X_ er en eksponentialfordelt stokastisk variabel med vekstparameter _λ_.
+
+[EXAMPLE]
+====
+
+`++Eksponential[2, 1]++` gir _stem:[\frac\{e^\{2} - 1}\{e^\{2} } ]_, som er tilnærmet lik _0.86_.
+
+====

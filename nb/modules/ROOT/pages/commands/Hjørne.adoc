@@ -1,0 +1,28 @@
+= Hjørne Kommando
+:page-en: commands/Corner
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Hjørne[ <Tall n> ]::
+  Lager et punkt i hjørnet av xref:/Grafikkfelt.adoc[grafikkfeltet] (_n_ = 1, 2, 3, 4, 5). Punktet vil ikke være synlig
+  på skjermen. Hvis _n_ = 5 returneres punktet _(b,h)_, hvor _b_ og _h_ er bredde og høyde til grafikkfeltet.
+Hjørne[ <Tall g>, <Tall n> ]::
+  Lik _Hjørne[<Tall n>]_, men grafikkfelt kan også velges med _g_ = 1 eller 2.
+Hjørne[ <Bilde>, <Tall n> ]::
+  Lager et punkt i hjørnet av bildet (_n_ = 1, 2, 3, 4).
+Hjørne[ <Tekst>, <Tall n> ]::
+  Lager et punkt i hjørnet til teksten (_n_ = 1, 2, 3, 4).
+
+[NOTE]
+====
+
+*Merk:* Kommandoen bruker bestandig _Grafikkfelt 1_, selv om _Grafikkfelt 2_ er aktivt. Med _Hjørne[<Tall g>,<Tall n>]_
+kan også grafikkfelt velges, se under.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Nummereringen av hjørner starter nede til venstre og går mot klokka.
+
+====

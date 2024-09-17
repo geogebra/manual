@@ -1,0 +1,24 @@
+= SumKvadratavvik Kommando
+:page-en: commands/SumSquaredErrors
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+SumKvadratavvik[ <Liste med punkt>, <Funksjon> ]::
+  Finner kvadratavvik summen, SSE, mellom _y_-koordinatene til punktene i listen og verdien til funksjonen evaluert for
+  _x_-koordinatene til punktene i listen.
+
+[EXAMPLE]
+====
+
+Dersom du har en liste med punkt _L=\{A, B, C, D, E}_ og funksjonene `++f(x)=RegPoly[L, 1]++` og
+`++g(x)=RegPoly[L, 2]++`, så vil det være den funksjonen som har lavest kvadratavvik som gir den beste
+kurvetilpasningen. Man må altså sammenligne `++sse_f=SumKvadratavvik[L, f]++` og `++sse_g=SumKvadratavvik[L, g]++`.
+
+====

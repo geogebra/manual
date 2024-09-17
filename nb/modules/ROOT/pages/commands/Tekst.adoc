@@ -1,0 +1,82 @@
+= Tekst Kommando
+:page-en: commands/Text
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Tekst[ <Objekt> ]::
+  Gir formelen for objektet som et xref:/Tekster.adoc[tekstobjekt].
+
+[EXAMPLE]
+====
+
+Dersom _a = 2_ og _f(x) = a x^2^_, så vil `++Tekst[f]++` gi _2 x^2^_ (som et tekstobjekt).
+
+====
+
+[NOTE]
+====
+
+*Merk:* Som standard blir verdier satt inn for variabler.
+
+====
+
+Tekst[ <Objekt>, <Boolsk verdi for substitusjon av variabler> ]::
+  Gir formelen for objektet som et xref:/Tekster.adoc[tekstobjekt].
+  * Dersom _Boolsk verdi = true_ blir verdier satt inn for variabler
+  * Dersom _Boolsk verdi = false_ blir variabelnavn stående i teksten
+
+[EXAMPLE]
+====
+
+Dersom _a = 2_ og _f(x) = a x^2^_, så vil
+
+* `++Tekst[f, true]++` gi _2 x^2^_ (som et tekstobjekt)
+* `++Tekst[f, false]++` gi _a x^2^_ (som et tekstobjekt)
+
+====
+
+Tekst[ <Objekt>, <Punkt> ]::
+  Gir formelen for objektet som et xref:/Tekster.adoc[tekstobjekt] med posisjon i det gitte punktet.
+
+[EXAMPLE]
+====
+
+`++Tekst["hallo", (2, 3)]++` gir teksten "hallo" i punktet _(2, 3)_.
+
+====
+
+Tekst[ <Objekt>, <Punkt>, <Boolsk verdi for substitusjon av variabler> ]::
+  Gir formelen for objektet som et xref:/Tekster.adoc[tekstobjekt] med posisjon i det gitte punktet.
+  * Dersom _Boolsk verdi = true_ blir verdier satt inn for variabler
+  * Dersom _Boolsk verdi = false_ blir variabelnavn stående i teksten
+
+[EXAMPLE]
+====
+
+Dersom _a = 2_ og _f(x) = a x^2^_, så vil
+
+* `++Tekst[f, (2, 3), true]++` gi _2 x^2^_ (som et tekstobjekt) i punktet _(2, 3)_
+* `++Tekst[f, (2, 3), false]++` gi _a x^2^_ (som et tekstobjekt) i punktet _(2, 3)_
+
+====
+
+Tekst[ <Objekt>, <Punkt>, <Boolsk verdi for substitusjon av variabler>, <Boolsk for LaTeX-formel> ]::
+  Gir formelen for objektet som et xref:/Tekster.adoc[tekstobjekt] med posisjon i det gitte punktet.
+  * Dersom _Boolsk verdi = true_ blir verdier satt inn for variabler
+  * Dersom _Boosk verdi = false_ blir variabelnavn stående i teksten
+  * Dersom _Boolsk Latex = true_ blir objektet en xref:/LaTeX.adoc[LaTeX] tekst
+  * Dersom _Boosk Latex = false_ blir objektet et vanlig tekstobjekt
+
+[NOTE]
+====
+
+*Merk:* Se også kommandoen xref:/commands/Formeltekst.adoc[Formeltekst].
+
+====

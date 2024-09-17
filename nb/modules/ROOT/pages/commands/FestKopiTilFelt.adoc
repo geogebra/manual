@@ -1,0 +1,29 @@
+= FestKopiTilFelt Kommando
+:page-en: commands/AttachCopyToView
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+FestKopiTilFelt[ <Objekt>, <Felt 0|1|2> ]::
+  Dersom _Felt = 0_ blir det laget en kopi av objektet. Dersom _Felt = 1_ eller _2_ blir det laget en avhengig kopi av
+  det gitte objektet som har konstant størrelse i det valgte xref:/Grafikkfelt.adoc[grafikkfeltet].
+
+[NOTE]
+====
+
+*Merk:* Når kopien er laget blir tre andre argument lagt til i definisjonen av kommandoen.
+
+====
+
+FestKopiTilFelt[ <Objekt>, <Felt 0|1|2>, <Punkt 1>, <Punkt 2>, <Skjermpunkt 1>, <Skjermpunkt 2> ]::
+  Dersom _Felt = 0_ blir det laget en kopi av objektet. Dersom _Felt = 1_ eller _2_ blir det laget en avhengig kopi av
+  det gitte objektet i det valgte xref:/Grafikkfelt.adoc[grafikkfeltet]. Størrelsen til kopien blir bestemt av den
+  affine transformasjonen som avbilder _Punkt 1_ til et punkt som har skjermkoordinater (i piksler) lik _Skjermpunkt 1_
+  og tilsvarende for _Punkt 2_.
+
+[EXAMPLE]
+====
+
+Dersom det første grafikkfeltet er aktivt vil
+`++FestKopiTilFelt[Mangekant[(0,0),(1,0),(1,1),(0,1)],1,(0,0),(1,1),(0,0),(100,100)]++` lage et 100px x 100px kvadrat i
+øvre venstre hjørne av grafikkfeltet.
+
+====

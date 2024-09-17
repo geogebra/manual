@@ -1,0 +1,70 @@
+= Taylorpolynom Kommando
+:page-en: commands/TaylorPolynomial
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Taylorpolynom[ <Funksjon>, <Tall a>, <Tall n> ]::
+  Returnerer https://en.wikipedia.org/wiki/no:Taylorrekke[Taylorrekken] med grad _n_ til den gitte funksjonen om punktet
+  stem:[x = a].
+
+[EXAMPLE]
+====
+
+`++Taylorpolynom[x^2, 3, 1]++` gir stem:[9 + 6(x - 3) = 6x - 9] som er Taylorrekken av første grad til stem:[x²] om
+stem:[x = 3].
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Tallet _n_ som avgjør graden til Taylorrekken må være et heltall større eller lik 0.
+* Når Taylorrekken utvikles rundt punktet _a=0_ kalles også rekken Maclaurinrekke.
+
+====
+
+== CAS-delen
+
+Taylorpolynom[ <Funksjon>, <Tall a>, <Tall n> ]::
+  Returnerer Taylorrekken av grad _n_ til den gitte funksjonen om punktet stem:[x = a].
+Taylorpolynom[ <Funksjon>, <Variabel v>, <Tall a>, <Tall n> ]::
+  Returnerer Taylorrekken av grad _n_ til den gitte funksjonen med hensyn på variabel _v_ om punktet _v = a_.
+
+[EXAMPLE]
+====
+
+`++Taylorpolynom[sin(x) cos(y),y,0,3]++` gir stem:[\operatorname\{sin} \left( x \right) - \frac\{\operatorname\{sin}
+\left( x \right)}\{2} \; y^\{2}], som er Taylorrekken av tredje grad med hensyn på _y_ til stem:[sin(x) cos(y)] om
+stem:[y = 0].
+
+====
+
+[EXAMPLE]
+====
+
+`++Taylorpolynom[sin(x) cos(y),x,0,3]++` gir stem:[\operatorname\{cos} \left( y \right) \; x -
+\frac\{\operatorname\{cos} \left( y \right)}\{6} \; x^\{3}], som er Taylorrekka av tredje grad med hensyn på _x_ til
+stem:[sin(x) cos(y)] om stem:[x = 0].
+
+====
+
+[EXAMPLE]
+====
+
+`++Taylorpolynom[sin(x), 0, 3]++` gir stem:[x - \frac\{1}\{6 }x^3] som er Taylorrekken av tredje grad til stem:[sin(x)]
+om stem:[x = 0].
+
+====
+
+== Se også
+
+Wikipedia på https://en.wikipedia.org/wiki/no:Taylorrekke[Taylorrekke].

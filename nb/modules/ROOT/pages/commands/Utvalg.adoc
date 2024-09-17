@@ -1,0 +1,59 @@
+= Utvalg Kommando
+:page-en: commands/Sample
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Utvalg[ <Liste L>, <Størrelse n> ]::
+  Gir en liste med _n_ tilfeldige element fra _L_. Hvert element kan velgs flere ganger.
+
+[EXAMPLE]
+====
+
+`++Utvalg[{1, 2, 3, 4, 5}, 5]++` kan for eksempel gi _\{1, 2, 1, 5, 4}_.
+
+====
+
+Utvalg[ <Liste L>, <Størrelse n>, <Med utskifting> ]::
+  Gir en liste med _n_ tilfeldige element fra _L_.
+  Dersom _Med utskifting = true_ kan hvert element velges flere ganger.
+  Dersom _Med utskifting = false_ kan hvert element kun velges en gang.
+
+[EXAMPLE]
+====
+
+* `++Utvalg[{1, 2, 3, 4, 5}, 5, true]++` gir for eksempel _\{2, 3, 3, 4, 5}_.
+* `++Utvalg[{1, 2, 3, 4, 5}, 5, false]++` gir for eksempel _\{1, 4, 3, 2, 5}_.
+
+====
+
+== CAS-delen
+
+Utvalg[ <Liste L>, <Størrelse n> ]::
+  Gir en liste med _n_ tilfeldige element fra _L_. Hvert element kan velges flere ganger, og ett eller flere av
+  elementene i listen kan være udefinerte variabler.
+
+[EXAMPLE]
+====
+
+`++Utvalg[{-5, 2, a, 7, c}, 3]++` gir for eksempel _\{a, 7, -5}_.
+
+====
+
+Utvalg[ <Liste L>, <Størrelse n>, <Med utskifting> ]::
+  Gir en liste med _n_ tilfeldige element fra _L_. Ett eller flere av elementene i listen kan være udefinerte variabler.
+  Dersom _Med utskifting = true_ kan hvert element velges flere ganger.
+  Dersom _Med utskifting = false_ kan hvert element kun velges en gang.
+
+[NOTE]
+====
+
+*Merk:* Elementene i listen kan være av forskjellige datatyper, for eksempel tall, tekst, liste, punkt også videre.
+
+====

@@ -1,0 +1,32 @@
+= Zip Kommando
+:page-en: commands/Zip
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Zip[ <Uttrykk>, <Var1>, <Liste1>, <Var2>, <Liste2>, ... ]::
+  Returnerer en xref:/Lister.adoc[liste] med objektene en får når variablene i det gitte uttrykket byttes ut med
+  elementene i de samsvarende listene. Lengden på den resulterende listen er lik den minste verdien av lengden til den
+  minste av de gitte listene.
+
+[EXAMPLE]
+====
+
+* La _P, Q, R, S_ være punkt. `++Zip[Midtpunkt[A, B], A, {P, Q}, B, {R, S}]++` gir en liste som inneholder
+xref:/commands/Midtpunkt.adoc[midtpunkta] til linjestykkene _PR_ og _QS_.
+* La _Liste1 = \{x^2, x^3, x^6}_. `++Zip[Grad[a], a, Liste1]++` gir listen _\{2, 3, 6}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* I hver liste må elementene være av same type.
+
+====

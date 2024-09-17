@@ -1,0 +1,60 @@
+= Grad Kommando
+:page-en: commands/Degree
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Grad[ <Polynom> ]::
+  Gir graden til polynomet.
+
+[EXAMPLE]
+====
+
+`++Grad[x^4 + 2 x^2]++` gir _4_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Polynomet kan bare ha en ukjent parameter, denne må være _x_, _y_ eller _z_.
+
+====
+
+== CAS-delen
+
+Grad[ <Polynom> ]::
+  Gir graden til polynomet med hensyn på hovedvariabelen.
+
+[EXAMPLE]
+====
+
+* `++Grad[x^4 + 2 x^2]++` gir _4_,
+* `++Grad[x^6 + x y^3 + 2 x^2 - y^3]++` gir _6_.
+* `++Grad[x^6 y^3 + 2 x^2 y^3]++` gir _9_.
+
+====
+
+Grad[ <Polynom>, <Variabel> ]::
+  Gir graden til polynomet med hensyn på den gitte variabelen.
+
+[EXAMPLE]
+====
+
+* `++Grad[x^4 y^3 + 2 x^2 y^3, x]++` gir _4_,
+* `++Grad[x^4 y^3 + 2 x^2 y^3, y]++` gir _3_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Alle bokstaver kan brukes som parametre i polynomet så lenge de ikke har en definert verdi.
+
+====

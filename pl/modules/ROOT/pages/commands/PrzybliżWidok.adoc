@@ -1,0 +1,39 @@
+= PrzybliżWidok Polecenie
+:page-en: commands/ZoomIn
+ifdef::env-github[:imagesdir: /pl/modules/ROOT/assets/images]
+
+PrzybliżWidok[ <Czynnik Skalujący> ]::
+  Przybliża Widok Grafiki stosując czynnik skalujący w odniesieniu do aktualnego przybliżenia, środek ekranu jest
+  używany jako punkt centralny dla powiększenia. Przykład: PrzybliżWidok[1] nie zmienia niczego. PrzybliżWidok[2]
+  przybliża widok grafiki dwukrotnie, PrzybliżWidok[0.5] jest równoważne OddalWidok[2] i oddala widok dwukrotnie
+  PrzybliżWidok[ <Czynnik Skalujący>, <Punkt Środkowy> ];;
+    Przybliża Widok Grafiki stosując czynnik skalujący w odniesieniu do aktualnego przybliżenia, drugi parametr (punkt)
+    jest używany jako punkt centralny dla powiększenia.
+      PrzybliżWidok[ <Min x>, <Min y>, <Max x>, <Max y> ]::
+      Powiększa Widok Grafiki, aby można było zobaczyć prostokąt określony przez wierzchołki (Min x, Min y), (Max x, Max
+      y). Jeśli którykolwiek z tych parametrów jest zależny, granice widoku są dynamiczne (np. jeśli a jest suwakiem,
+      PrzybliżWidok [-a,-a, a, a] sprawia, że przybliżenie widoku odbywa się w zależności od suwaka a) . Aby tego
+      uniknąć, należy użyć polecenia KopiujObiektSwobodny Uwaga: Jeśli wiele Widoków Grafiki jest widocznych, dotyczy to
+      aktywnego widoku.
+      [width="100%",cols="50%,50%",]
+    |===
+    a|
+    image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+
+    |Some content was not yet translated.
+    |===
+  [width="100%",cols="50%,50%",]
+  |===
+  a|
+  image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+
+  |Some content was not yet translated.
+  |===
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+
+|Some content was not yet translated.
+|===

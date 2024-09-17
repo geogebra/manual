@@ -1,0 +1,66 @@
+= Handlingsobjekt
+:page-en: Action_Objects
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+For interaktive arbeidsark med xref:/Scripting.adoc[scripting] kan handlingsobjekt være nyttige. Det er fire typer
+handlingsobjekt:
+
+== Avkrysningsbokser
+
+Avkrysningsbokser er grafiske representasjoner av xref:/Boolske_verdier.adoc[boolske verdier].
+
+[NOTE]
+====
+
+*Se også* verktøyet image:Tool_Check_Box_to_Show_Hide_Objects.gif[Tool Check Box to Show Hide
+Objects.gif,width=32,height=32] xref:/tools/Avkrysningsboks_for_å_vise_og_skjule_objekt.adoc[Avkrysningsboks for å vise
+og skjule objekt] og kommandoen xref:/commands/Avkrysningsboks.adoc[Avkrysningsboks] for mer informasjon om hvordan du
+lager og bruker avkrysningsbokser.
+
+====
+
+== Tekstfelt
+
+Tekstfelt blir brukt for å skrive inn tekst som kan brukes av xref:/Scripting.adoc[script]. Scriptet kjøres ved å endre
+teksten i tekstfeltet og så trykke [.kcode]#Enter# eller forlate tekstfeltet. Den innskrevne verdien kan nås ved bruk av
+variablen %0.
+
+[EXAMPLE]
+====
+
+Tekstfelt med `++a=a+%0++` i script vil øke verdien til _a_ med den innskrevne verdien. Dette fungerer bare dersom _a_
+er et xref:/Frie_objekt_avhengige_objekt_og_hjelpeobjekt.adoc[fritt objekt].
+
+====
+
+Dersom du vil at tekstfeltet skal endre verdien til et fritt objekt (eller redefinere et avhengig objekt) kan du
+definere objektet som linket. På den måten treng du ikke skrive inn et script.
+
+[NOTE]
+====
+
+*Merk:* Tekstfelt kan lages med verktøyet image:Tool_Insert_Textfield.gif[Tool Insert Textfield.gif,width=32,height=32]
+xref:/tools/Sett_inn_et_tekstfelt.adoc[Sett inn et tekstfelt] eller kommandoen xref:/commands/Tekstfelt.adoc[Tekstfelt].
+
+====
+
+== Knapper
+
+Knapper er ment for å kjøre script når de blir trykt på. Selv om script blir kjørt også ved å trykke på andre objekt
+(for eksempel et xref:/tools/Sett_inn_bilde.adoc[bilde]), vil bruk av knapper gjøre arbeidsarket mer intuitivt.
+
+[NOTE]
+====
+
+*Merk:* Knapper kan lages med verktøyet image:Tool_Insert_Button.gif[Tool Insert Button.gif,width=32,height=32]
+xref:/tools/Sett_inn_en_knapp.adoc[Sett inn en knapp] eller kommandoen xref:/commands/Knapp.adoc[Knapp].
+
+====
+
+== Kombinasjonsbokser
+
+Kombinasjonsbokser er bare tilgjengelg i xref:/Regneark.adoc[regnearket]. Du kan skrive inn ei liste i ei celle og så
+skru på valget _Bruk knapper og avkrysningsbokser_ under fanene _Regneark_ i
+xref:/Dialogboks_for_egenskaper.adoc[dialogboksen for egenskaper]. Listene vil bli gjort om til en kombinasjonsboks og
+et element kan hentes ut ved å bruke en av kommandoene xref:/commands/ValgteIndeks.adoc[ValgteIndeks] og
+xref:/commands/ValgteElement.adoc[ValgteElement].

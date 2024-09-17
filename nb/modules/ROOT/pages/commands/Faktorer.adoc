@@ -1,0 +1,90 @@
+= Faktorer Kommando
+:page-en: commands/Factors
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Faktorer[ <Polynom> ]::
+  Gir en liste med lister av typen _\{faktor, eksponent}_ slik at produktet av alle faktorene opphøyd i den tilsvarende
+  eksponenten gir polynomet. Faktorene er sortert etter grad i synkende orden.
+Faktorer[ <Tall> ]::
+  Gir en liste med lister av typen _\{primtall, eksponent}_ slik at produktet av alle primtallene opphøyd i den
+  tilsvarende eksponenten gir tallet. Primtallene er sortert i stigende rekkefølge.
+
+[EXAMPLE]
+====
+
+* `++Faktorer[1024]++` gir _\{\{2, 10}}_, siden stem:[1024 = 2^\{10}].
+* `++Faktorer[42]++` gir _\{\{2, 1}, \{3, 1}, \{7, 1}}_, siden stem:[42 = 2^1 * 3^1 * 7^1].
+
+====
+
+[EXAMPLE]
+====
+
+`++Faktorer[x^8 - 1]++` gir _\{\{x^4 + 1, 1}, \{x^2 + 1, 1}, \{x + 1, 1}, \{x - 1, 1}}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Ikke alle disse faktorene er ureduserbare over de reelle tallene.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også kommandoene xref:/commands/Primfaktorer.adoc[Primfaktorer] og
+xref:/commands/Faktoriser.adoc[Faktoriser].
+
+====
+
+== CAS-delen
+
+Faktorer[ <Polynom> ]::
+  Gir en liste med lister av typen _\{faktor, eksponent}_ slik at produktet av alle faktorene opphøyd i den tilsvarende
+  eksponenten gir polynomet. Faktorene er sortert etter grad i synkende orden.
+Faktorer[ <Tall> ]::
+  Gir en liste med lister av typen _\{primtall, eksponent}_ slik at produktet av alle primtallene opphøyd i den
+  tilsvarende eksponenten gir tallet. Primtallene er sortert i stigende rekkefølge.
+
+[EXAMPLE]
+====
+
+* `++Faktorer[1024]++`gir _\{\{2, 10}}_, vist som stem:[\begin\{pmatrix} 2&10 \end\{pmatrix}], siden stem:[1024 =
+2^\{10}].
+** `++Faktorer[42]++` gir _\{\{2, 1}, \{3, 1}, \{7, 1}}_, vist som stem:[\begin\{pmatrix} 2&1\\ 3&1\\ 7&1
+\end\{pmatrix}], siden stem:[42 = 2^1 * 3^1 * 7^1].
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også kommandoene xref:/commands/Primfaktorer.adoc[Primfaktorer] og
+xref:/commands/Faktoriser.adoc[Faktoriser].
+
+====
+
+[NOTE]
+====
+
+*Merk:* Ikke alle faktorene er ureduserbare over de reelle tallene.
+
+====
+
+[EXAMPLE]
+====
+
+`++Faktorar[x^8 - 1]++` gir _\{\{x^4 + 1, 1}, \{x^2 + 1, 1}, \{x + 1, 1}, \{x - 1, 1}}_, vist som stem:[\begin\{pmatrix}
+x^4+1&1\\ x^2+1&1\\ x+1&1\\ x-1&1 \end\{pmatrix}].
+
+====

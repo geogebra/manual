@@ -1,0 +1,187 @@
+= Forhåndsdefinerte funksjoner og operatorer
+:page-en: Predefined_Functions_and_Operators
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Når du skal skrive inn tall, koordinater eller likninger i xref:/Inntastingsfelt.adoc[Inntastingsfeltet] kan du også
+bruke de forhåndsdefinerte funksjonene og operasjonene som er listet opp nedenfor. Logiske operatorer og funksjoner er
+listet i artikkelen om xref:/Boolske_verdier.adoc[Boolske verdier].
+
+[NOTE]
+====
+
+*Merk:* Du må bruke parenteser når du skriver inn de forhåndsdefinerte funksjonene. Husk at du ikke må ha mellomrom
+mellom funksjonsnavnet og parentesene. Eksempelvis er `++sin (45°)++` ugyldig, mens `++sin(45°)++` er gyldig.
+
+====
+
+Her er noen eksempler:
+
+[EXAMPLE]
+====
+
+`++conjugate(17 + 3ί)++` gir _-3 ί + 17_, den kompleks konjugerte til _17 + 3 ί_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også siden om xref:/Komplekse_tall.adoc[komplekse tall].
+
+====
+
+Du kan også bruke punkter og vektorer når du benytter de forhåndsdefinerte funksjonene.
+
+[EXAMPLE]
+====
+
+For å lage midtpunktet M mellom A og B kan du skrive `++M = (A + B) / 2++`.
+
+====
+
+[EXAMPLE]
+====
+
+For å beregne lengden til en vektor v kan du skrive `++l = sqrt(v * v)++`.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også siden om xref:/Punkt_og_vektorer.adoc[punkt og vektorer].
+
+====
+
+[cols=",",options="header",]
+|===
+|Operasjon / Funksjon |Inndata
+|Addisjon |+
+
+|Subtraksjon |-
+
+|Multiplikasjon |* eller [.kcode]#mellomrom#
+
+|Skalarprodukt |* eller [.kcode]#mellomrom#
+
+|Vektorprodukt eller determinant (se xref:/Punkt_og_vektorer.adoc[Punkt og vektorer]) |⊗
+
+|Divisjon |/
+
+|Potens |^ eller hevet skrift (`++x^2++` eller `++x2++`)
+
+|Fakultet |!
+
+|Parenteser |( )
+
+|x-koordinat |x( )
+
+|y-koordinat |y( )
+
+|Argument https://en.wikipedia.org/wiki/nn:Argument_i_matematikk[w:nn:Argument i matematikk] |arg( )
+
+|Kompleks konjugert |conjugate( )
+
+|Absoluttverdi |abs( )
+
+|Fortegn (returnerer -1 eller 1) |sgn( ) eller sign( )
+
+|Kvadratrot |sqrt( )
+
+|Kubikkrot |cbrt( )
+
+|Tilfeldig tall mellom 0 og 1 |random( )
+
+|Eksponentialfunksjonen |exp( ) eller ℯ^x^
+
+|Logaritme (naturlig, med grunntall ℯ) |ln( ) eller log( )
+
+|Logaritme med grunntall 2 |ld( )
+
+|Logaritme med grunntall 10 |lg( )
+
+|Logaritmen til _x_ med grunntall _b_ |log(b, x )
+
+|Cosinus |cos( )
+
+|Sinus |sin( )
+
+|Tangens |tan( )
+
+|Secans |sec( )
+
+|Cosecans |cosec( )
+
+|Cotangens |cot( )
+
+|Arcus cosinus (også kalt invers cosinus) |acos( ) eller arccos( )
+
+|Arcus sinus (også kalt invers sinus) |asin( ) eller arcsin( )
+
+|Arcus tangens - returnerer et tall mellom -π/2 og π/2 (også kalt invers tangens) |atan( ) eller arctan( )
+
+|Dobbel arcus tangens (returnerer et tall mellom -π og π) https://en.wikipedia.org/wiki/Atan2[Engelsk wikipedia]
+|atan2(y, x)
+
+|Cosinus hyperbolicus (også kalt hyperbolsk cosinus) |cosh( )
+
+|Sinus hyperbolicus (også kalt hyperbolsk sinus) |sinh( )
+
+|Tangens hyperbolicus (også kalt hyperbolsk tangens) |tanh( )
+
+|Secans hyperbolicus (også kalt hyperbolsk secans) |sech( )
+
+|Cosecans hyperbolicus (også kalt hyperbolsk cosecans) |cosech( )
+
+|Cotangens hyperbolicus (også kalt hyperbolsk cotangens) |coth( )
+
+|Arcus cosinus hyperbolicus (også kalt antihyperbolsk cosinus) |acosh( ) eller arccosh( )
+
+|Arcus sinus hyperbolicus (også kalt antihyperbolsk sinus) |asinh( ) eller arcsinh( )
+
+|Arcus tangens hyperbolicus (også kalt antihyperbolsk tangens) |atanh( ) eller arctanh( )
+
+|Største heltall mindre enn eller lik |floor( )
+
+|Minste heltall større enn eller lik |ceil( )
+
+|Avrunding |round( )
+
+|Betafunksjonen Β(a, b) http://mathworld.wolfram.com/BetaFunction.html[MathWorld] |beta(a, b)
+
+|Ufullstendig betafunksjon Β(x;a, b) (et spesialtilfelle av betafunksjonen)
+http://mathworld.wolfram.com/IncompleteBetaFunction.html[MathWorld] |beta(a, b, x)
+
+|Regulær betafunksjon I(x; a, b) http://mathworld.wolfram.com/RegularizedBetaFunction.html[MathWorld]
+|betaRegularized(a, b, x)
+
+|Gammafunksjonen https://en.wikipedia.org/wiki/no:Gammafunksjonen[Wikipedia] |gamma( x)
+
+|Ufullstendig gammafunksjon γ(a, x) http://mathworld.wolfram.com/IncompleteGammaFunction.html[MathWorld] |gamma(a, x)
+
+|Regulær gammafunksjon http://mathworld.wolfram.com/RegularizedGammaFunction.html[MathWorld] |gammaRegularized(a, x)
+
+|Gaussian feilfunksjon https://en.wikipedia.org/wiki/Error_function[Engelsk wikipedia] |erf(x)
+
+|Reell del - returnerer den reelle delen av et imaginært tall (i CAS-delen må ί benyttes) |reell( )
+
+|Imaginær del - returnerer den imaginære delen av et imaginært tall (i CAS-delen må ί benyttes) |imaginær( )
+
+|Digammafunksjonen https://en.wikipedia.org/wiki/Digamma_function[Engelsk wiki] |psi(x)
+
+|Polygammafunksjonen https://en.wikipedia.org/wiki/Polygamma_function[Engelsk wiki] |polygamma(m, x)
+
+|Sinus integral http://mathworld.wolfram.com/SineIntegral.html[MathWorld] |sinIntegral(x)
+
+|Cosinus integral http://mathworld.wolfram.com/CosineIntegral.html[MathWorld] |cosIntegral(x)
+
+|Eksponent integral http://mathworld.wolfram.com/ExponentialIntegral.html[MathWorld] |expIntegral(x)
+|===

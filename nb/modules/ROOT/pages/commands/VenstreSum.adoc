@@ -1,0 +1,50 @@
+= VenstreSum Kommando
+:page-en: commands/LeftSum
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+VenstreSum[ <Funksjon f>, <Tall a>, <Tall b>, <Antall rektangler n> ]::
+  Kommandoen returnerer en tilnærming til arealet under grafen til funksjonen. Intervallet [_a_, _b_] deles opp i _n_
+  delintervall med bredde _(a - b)/n_. I hvert delintervall tegnes ett rektangel med bredde lik intervallbredden og
+  høyde bestemt av funksjonsverdien til _x_-verdien til venstre grense av delintervallet. Kommandoen returnerer deretter
+  summen av arealet til alle rektanglene.
+
+[EXAMPLE]
+====
+
+Definer funksjonen stem:[f(x)=x^2+3x+4] og skriv inn `++VenstreSum[f, -2, 2, 2]++`. Intervallet [-2, 2] deles da opp i
+to delintevall [-2, 0] og [0, 2]. Rektangler tegnes i grafikkfeltet med bredde 2 og høyde lik _f(-2)_ og _f(0)_. Summen
+av arealet til rektanglene returneres.
+
+Høyden til det første rektangelet er stem:[f(-2)=(-2)^2+3(-2)+4=2].
+
+Høyden til det andre rektangelet er stem:[f(0)=0^2+3\cdot 0+4=4].
+
+Arealet som returneres er: stem:[2\cdot2+2\cdot4=4+8=12].
+
+Det eksakte areal mellom _f(x)_ og x-akse er `++Integral[f, -2, 2]]++` = 21.33 (evt. stem:[\frac\{64}\{3}] i CAS-delen).
+
+====
+
+[NOTE]
+====
+
+*Merk:* Kommandoen gir samme svar som xref:/commands/RektangelSum.adoc[RektangelSum][ <Funksjon f>, <Tal a>, <Tal b>,
+<Tal på rektangel n>, 0 ].
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også kommandoene xref:/commands/RektangelSum.adoc[RektangelSum], xref:/commands/SumOver.adoc[SumOver] og
+xref:/commands/SumUnder.adoc[SumUnder].
+
+====

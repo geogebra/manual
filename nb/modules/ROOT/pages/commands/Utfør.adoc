@@ -1,0 +1,35 @@
+= Utfør Kommando
+:page-en: commands/Execute
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Utfør[ <Liste med tekster> ]::
+  Utfører listen med kommandoer, hvor kommandoene er angitt som tekst.
+
+[EXAMPLE]
+====
+
+* `++Utfør[{"A = (1, 1)", "B = (3, 3)", "C = Midtpunkt[A, B]"}]++` lager punktene _A_, _B_ og _C_, hvor _C_ ligger midt
+i mellom _A_ og _B_.
+* `++Utfør[SettSammen[{"f_{1}=1","f_{2}=1"}, Følge["f_{"+(i+2)+"}=f_{"+(i+1)+"}+f_{"+i+"}",i,1,10]]]++` lager de 10
+første elementene i https://en.wikipedia.org/wiki/no:Fibonaccitall[Fibonacci følgen].
+
+====
+
+Utfør[ <Liste med tekster>, <Parameter 1>, <Parameter 2>, ...]::
+  Kommandoen erstatter %1 for parameter 1, %2 for parameter 2 og så videre for hver tekst i listen. Opptil 9 parametre
+  kan brukes. Etter utbyttingen blir kommandoene i teksten utført.
+
+[EXAMPLE]
+====
+
+`++Utfør[{"Midtpunkt[%1, %2]"}, A, B]++` lager midtpunktet på linjestykket _AB_.
+
+====

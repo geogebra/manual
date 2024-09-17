@@ -1,0 +1,67 @@
+= Komplekse tall
+:page-en: Complex_Numbers
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+GeoGebra støtter ikke komplekse tall direkte, men du kan bruke xref:/Punkt_og_vektorer.adoc[punkt] for å simulere
+operasjoner med komplekse tall.
+
+[EXAMPLE]
+====
+
+Hvis du skriver inn det komplekse tallet 3 + 4ί i inntastingsfeltet, får du punkt (3, 4) i grafikkfeltet. Punktets
+koordinater vises som 3 + 4ί i algebrafeltet.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Du kan vise alle punkt som et komplekst tall i xref:/Algebrafelt.adoc[algebrafeltet]. Åpne
+xref:/Egenskaper.adoc[egenskaper], gå til fanen kalt _Algebra_ og velg _Komplekse tall_ fra listen kalt _Koordinater_.
+
+====
+
+Den imaginærenheten ί kan velges fra symbolboksen i inntastingsfeltet eller skrives med [.kcode]#Alt # + [.kcode]#
+i#(Mac OS: [.kcode]#Option# + [.kcode]#i#). Med mindre du skriver det inn i xref:/CAS_delen.adoc[CAS-delen] eller du har
+definert variabelen *i* tidligere, gjenkjennes variabelen *i* som det ordnede paret i = (0, 1) eller det komplekse
+tallet 0 + 1ί. Dette betyr at du også kan bruke variabelen i for å skrive komplekse tall i inntastingsfeltet (f.eks. q =
+3 + 4i), men ikke i CAS-delen.
+
+[EXAMPLE]
+====
+
+Addisjon og subtraksjon:
+
+* (2 + 1ί) + (1 – 2ί) gir det komplekse tallet 3 – 1ί.
+* (2 + 1ί) - (1 – 2ί) gir det komplekse tallet 1 + 3ί.
+
+====
+
+[EXAMPLE]
+====
+
+Multiplikasjon og divisjon:
+
+* (2 + 1ί) * (1 – 2i) gir det komplekse tallet 4 – 3ί.
+* (2 + 1ί) / (1 – 2i) gir det komplekse tallet 0 + 1ί.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Vanlig multiplikasjon gir skalarproduktet av vektorene: `++(2, 1)*(1, -2)=2*1+1*(-2)=2-2=0++`.
+
+====
+
+GeoGebra gjenkjenner også uttrykk som kombinerer både xref:/Tall_og_vinkler.adoc[reelle] og komplekse tall.
+
+[EXAMPLE]
+====
+
+* 3 + (4 + 5ί) gir det komplekse tallet 7 + 5ί.
+* 3 - (4 + 5ί) gir det komplekse tallet -1 - 5ί.
+* 3 / (0 + 1ί) gir det komplekse tallet 0 - 3ί.
+* 3 * (1 + 2ί) gir det komplekse tallet 3 + 6ί.
+
+====

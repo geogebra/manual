@@ -1,0 +1,99 @@
+= Lengde Kommando
+:page-en: commands/Length
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Lengde[ <Vektor> ]::
+  Returnerer lengden til en vektor.
+Lengde[ <Punkt> ]::
+  Returnerer lengden fra origo til punktet.
+Lengde[ <Funksjon>, <Tall x1>, <Tall x2> ]::
+  Returnerer lengden til funksjonsgrafen i intervallet _[x1, x2]_.
+Lengde[ <Funksjon>, <Punkt A>, <Punkt B> ]::
+  Returnerer lengden til funksjonsgrafen mellom de to punktene _A_ og _B_.
+Lengde[ <Kurve>, <Tall t1>, <Tall t2> ]::
+  Returnerer lengden av kurven mellom parameterverdiene _t1_ og _t2_.
+Lengde[ <Kurve>, <Startpunkt>, <Sluttpunkt> ]::
+  Returnerer lengden av kurven mellom punktene _A_ og _B_ som ligger på kurven.
+Lengde[ <Liste> ]::
+  Returnerer antall elementer i listen.
+Lengde[ <Tekst> ]::
+  Returnerer antall bokstaver i teksten.
+Lengde[ <Geometrisk sted> ]::
+  Returnerer antall punkt som et gitt geometrisk sted er definert av. Bruk
+  xref:/commands/Omkrets.adoc[Omkrets][Geometrisk sted] for å finne lengden til det geometriske stedet. For detaljer se
+  artikkelen om kommandoen xref:/commands/Første.adoc[første].
+
+[EXAMPLE]
+====
+
+`++Lengde["abcd"]++` gir 4.
+
+====
+
+[EXAMPLE]
+====
+
+`++Lengde[{0,1,2}]++` gir 3.
+
+====
+
+[EXAMPLE]
+====
+
+`++Lengde[2x, 0, 1]++` returnerer 2.24, omtrent lik stem:[\sqrt\{5}].
+
+====
+
+[NOTE]
+====
+
+*Merk:* Hvis de gitte punktene ikke ligger på funksjonsgrafen, blir deres x- koordinater brukt til å bestemme
+intervallet.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+Se også image:Tool_Distance.gif[Tool Distance.gif,width=32,height=32] xref:/tools/Avstand_eller_lengde.adoc[Avstand
+eller lengde] verktøyet.
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Følgende tekst handler om en funksjon som kun er støttet i xref:/Release_Notes_GeoGebra_4_2.adoc[GeoGebra 4.2 Beta].
+
+'''''
+
+Lengde[ <Sirkelbue> ]::
+  Returnerer buelengden(det vil si, lengden til den krumme delen) til en sirkelbue eller en sektor.
+
+|===
+
+== CAS-delen
+
+Lengde[ <Funksjon>, <Tall x1>, <Tall x2> ]::
+  Returnerer lengden til funksjonsgrafen i intervallet _x=[x1, x2]_.
+Lengde[ <Funksjon>, <Variabel a>, <Tall t1>, <Tall t2> ]::
+  Returnerer lengden til funksjonsgrafen fra a=t1 til a=t2.
+
+[EXAMPLE]
+====
+
+`++Lengde[2 a, a,  0, 1]++` gir stem:[\sqrt\{5}].
+
+====
+
+[EXAMPLE]
+====
+
+`++Lengde[2 x, 0, 1]++` gir stem:[\sqrt\{5}].
+
+====

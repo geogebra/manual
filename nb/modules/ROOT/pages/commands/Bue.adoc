@@ -1,0 +1,30 @@
+= Bue Kommando
+:page-en: commands/Arc
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Bue[ <Sirkel>, <Punkt A>, <Punkt B> ]::
+  Returnerer sirkelbuen mellom punktene _A_ og _B_ på sirkelen.
+Bue[ <Ellipse>, <Punkt A>, <Punkt B> ]::
+  Returnerer ellipsebuen mellom punktene _A_ og _B_ på ellipsen.
+Bue[ <Sirkel>, <Tall t~1~>, <Tall t~2~> ]::
+  Returnerer sirkelbuen mellom parameterverdiene _t~1~_ og _t~2~_ på sirkelen.
+Bue[ <Ellipse>, <Tall t~1~>, <Tall t~2~> ]::
+  Returnerer ellipsebuen mellom parameterverdiene _t~1~_ og _t~2~_ på ellipsen.
+
+[NOTE]
+====
+
+*Merk:* Internt er disse parameterframstillingene brukt:
+
+* Sirkel: _(r cos(t), r sin(t))_ der _r_ er radiusen til sirkelen.
+* Ellipse: _(a cos(t), b sin(t))_ der _a_ og _b_ er lengden på den store og den lille halvaksen til ellipsen.
+
+====

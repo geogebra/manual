@@ -1,0 +1,34 @@
+= InversNormalfordeling Kommando
+:page-en: commands/InverseNormal
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+InversNormalfordeling[ <Gjennomsnitt μ>, <Standardavvik σ>, <Sannsynlighet p> ]::
+  Gir tallet "t" slik at _P(X≤t) = p_, hvor _X_ er en normalfordelt stokastisk variabel med parametrene _μ_ og _σ_.
+
+[NOTE]
+====
+
+*Merk:*
+
+* Kommandoen finn inversen til normalfordelingen sin
+https://en.wikipedia.org/wiki/no:Kumulativ_fordelingsfunksjon[kumulative fordelingsfunksjon] for sannsynligheten _p_.
+Dette tilsvarer å finne _Φ^-1^(p) * σ + μ_, hvor _Φ ^-1^_ er inversen til den kumulative fordelingsfunksjonen _Φ_ for
+standard-normalfordelingen _N(0,1)_.
+* Sannsynligheten _p_ må ligge i intervallet _[0, 1]_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også kommandoen xref:/commands/FordelingNormal.adoc[FordelingNormal].
+
+====

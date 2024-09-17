@@ -1,0 +1,60 @@
+= FordelingCauchy Kommando
+:page-en: commands/Cauchy
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+FordelingCauchy[ <Median m>, <Skala s>, x ]::
+  Lager https://en.wikipedia.org/wiki/no:Tetthetsfunksjon[sannsynlighetstetthetsfunksjonen] til Cauchyfordelingen med
+  parametrene _m, s_.
+FordelingCauchy[ <Median m>, <Skala s>, <Variabelverdi v> ]::
+  Finner verdien av den https://en.wikipedia.org/wiki/no:Kumulativ_fordelingsfunksjon[kumulative fordelingsfunksjonen]
+  til Cauchyfordelingen ved _v_. Det vil si sannsynligheten _P(X≤v)_ hvor _X_ er en Cauchyfordelt stokastisk variabel
+  med parametrene _m, s_.
+FordelingCauchy[ <Median m>, <Skala s>, x, <Boolsk kumulativ> ]::
+  La _X_ være en Cauchyfordelt stokastisk variabel med parametrene _m, s_.
+  * Dersom _kumulativ = false_ blir https://en.wikipedia.org/wiki/no:Tetthetsfunskjon[Sannsynlighetstetthetsfunkjsonen]
+  til _X_ returnert.
+  * Dersom _kumulativ = true_ blir den https://en.wikipedia.org/wiki/no:Kumulativ_fordelingsfunksjon[kumulative
+  fordelingsfunksjonen] til _X_ returnert.
+
+[NOTE]
+====
+
+*Merk:*
+
+* Se også verktøyet image:Tool_Probability_Calculator.gif[Tool Probability Calculator.gif,width=32,height=32]
+xref:/tools/Sannsynlighetskalkulator.adoc[Sannsynlighetskalkulator].
+* Se også kommandoen xref:/commands/InversCauchy.adoc[InversCauchy].
+* Se også kommandoene for de andre kontinuerlige sannsynlighetsfordelingene xref:/commands/Erlang.adoc[Erlang],
+xref:/commands/FordelingF.adoc[FordelingF], xref:/commands/FordelingGamma.adoc[FordelingGamma],
+xref:/commands/FordelingNormal.adoc[FordelingNormal], xref:/commands/FordelingT.adoc[FordelingT],
+xref:/commands/FordelingWeibull.adoc[FordelingWeibull], xref:/commands/KjiKvadrat.adoc[KjiKvadrat],
+xref:/commands/LogNormal.adoc[LogNormal], xref:/commands/Logistisk.adoc[Logistisk],
+xref:/commands/Trekantfordeling.adoc[Trekantfordeling] og xref:/commands/Uniform.adoc[Uniform].
+* Se også kommandoene for de diskrete sannsynlighetsfordelingene
+xref:/commands/FordelingBernoulli.adoc[FordelingBernoulli], xref:/commands/FordelingBinomial.adoc[FordelingBinomial],
+xref:/commands/FordelingHypergeometrisk.adoc[FordelingHypergeometrisk],
+xref:/commands/FordelingPascal.adoc[FordelingPascal], xref:/commands/FordelingPoisson.adoc[FordelingPoisson] og
+xref:/commands/Zipf.adoc[Zipf].
+
+====
+
+== CAS-delen
+
+FordelingCauchy[ <Median m>, <Skala s>, <Variabelverdi v> ]::
+  Finner verdien av den kumulative fordelingsfunksjonen til Cauchyfordelingen ved _v_. Det vil si sannsynligheten
+  _P(X≤v)_ hvor _X_ er en Cauchyfordelt stokastisk variabel med parametrene _m, s_.
+
+[EXAMPLE]
+====
+
+`++FordelingCauchy[1, 2, 3]++` gir _stem:[\frac\{3}\{4}]_.
+
+====

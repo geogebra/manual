@@ -1,0 +1,61 @@
+= Skjæring Kommando
+:page-en: commands/Intersect
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+Skjæring[<Linje g>, <Linje h>]::
+  Returnerer skjæringspunktet mellom linjene _g_ og _h_.
+Skjæring[<Linje>, <Kjeglesnitt>]::
+  Returnerer skjæringspunktene mellom linjen og kjeglesnittet (maksimalt 2).
+Skjæring[ <Linje>, <Kjeglesnitt>, <Tall n> ]::
+  Returnerer det _n_-te skjæringspunktet mellom linjen og kjeglesnittet.
+Skjæring[ <Kjeglesnitt c>, <Kjeglesnitt d> ]::
+  Returnerer alle skjæringspunkt mellom kjeglesnittene _c_ og _d_ (maksimalt 4).
+Skjæring[ <Kjeglesnitt c>, <Kjeglesnitt d>, <Tall n> ]::
+  Returnerer det _n_-te skjæringspunktet mellom kjeglesnittene _c_ og _d_.
+Skjæring[ <Polynom f>, <Polynom g> ]::
+  Returnerer alle skjæringspunkt mellom polynomene _f_ og _g_.
+Skjæring[ <Polynom f>, <Polynom g>, <Tall n> ]::
+  Returnerer det _n_-te skjæringspunktet mellom polynomene _f_ og _g_.
+Skjæring[ <Polynom>, <Linje> ]::
+  Returnerer alle skjæringspunkt mellom polynomet og linjen.
+Skjæring[ <Polynom>, <Linje>, <Tall n> ]::
+  Returnerer det _n_-te skjæringspunktet mellom polynomet og linjen.
+Skjæring[ <Funksjon f>, <Funksjon g>, <Punkt A> ]::
+  Returnerer et skjæringspunkt mellom funksjon _f_ og _g_ ved hjelp av Newtons metode med startpunkt _A_.
+Skjæring[ <Funksjon>, <Linje>, <Punkt A> ]::
+  Returnerer et skjæringspunkt mellom funksjonen og linjen ved hjelp av Newtons metode med startpunkt _A_.
+Skjæring[ <Funksjon f>, <Funksjon g>, <Tall a>, <Tall b> ]::
+  Returnerer alle skjæringspunkt mellom funksjon _f_ og _g_ på intervallet _[a, b]_.
+Skjæring[ <Linje>, <Parametrisk kurve>]::
+  Returnerer skjæringspunkt mellom linjen og en xref:/Kurver.adoc[parametrisk kurve].
+
+[EXAMPLE]
+====
+
+`++Skjæring[y=x+3, Kurve[t, 2t, t, 0, 10]]++` returnerer _A(3,6)_
+
+====
+
+== Se også
+
+Se også verktøyet image:Tool_Intersect_Two_Objects.gif[Tool Intersect Two
+Objects.gif,width=32,height=32]xref:/tools/Skjæring_mellom_to_objekt.adoc[skjæring mellom to objekt].
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Følgende tekst handler om en funksjon som kun er støttet i xref:/Release_Notes_GeoGebra_5_0.adoc[GeoGebra 5.0 Beta].
+
+'''''
+
+[NOTE]
+====
+
+*Merk:* Når GeoGebra 5 kommer vil denne kommandoen også fungere på 3D-objekter.
+
+====
+
+|===

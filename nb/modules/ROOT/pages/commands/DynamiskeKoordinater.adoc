@@ -1,0 +1,78 @@
+= DynamiskeKoordinater Kommando
+:page-en: commands/DynamicCoordinates
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+DynamiskeKoordinater[ <Punkt A>, <Tall a>, <Tall b> ]::
+  Lager et punkt med koordinater _(a, b)_. Punktet er xref:/Frie_objekt_avhengige_objekt_og_hjelpeobjekt.adoc[avhengig],
+  men kan flyttes. Når du flytter punktet med dynamiske koordinater til koordinatane _(x, y)_ vil punktet _A_ flyttes
+  dit isteden og koordinatene for punktet med dynamiske koordinater blir kalkulert på nytt. Minst en av _a_ og _b_ bør
+  være avhengig av _A_ slik at punktet med dynamiske koordinater faktisk får ny koordinat når det flyttes.
+
+[NOTE]
+====
+
+*Merk:* Det kan i enkelte sammenhenger være nyttig å skjule punktet A med kommandoen
+xref:/commands/VelgVisningIGrafikkfelt.adoc[VelgVisningIGrafikkfelt].
+
+====
+
+[EXAMPLE]
+====
+
+Lag et punk som alltid avrunner x- og y-koordinatene til heltall:
+
+* `++A=(1,2)++` - Lager et punkt _A_.
+* `++B=DynamiskeKoordinater[A,round(x(A)),round(y(A))]++` - Lager det dynamiske punktet _B_.
+* Når du flytter _A_ eller _B_ med verktøyet image:Tool_Move.gif[Tool
+Move.gif,width=32,height=32]xref:/tools/Flytt.adoc[Flytt] til (1.3, 1.5), vil punkt _A_ være lik (1.3, 1.5) og _B_
+(1,2).
+
+====
+
+[EXAMPLE]
+====
+
+Lag et punkt som alltid er under eller lik sin(x):
+
+* `++B=DynamiskeKoordinater[A,x(A),min(y(A),sin(x(A)))]++`
+
+====
+
+[EXAMPLE]
+====
+
+Lag et punkt _C_ som ikke kan flyttes til høyre for punktet _A_:
+
+* `++A=Punkt[xAkse]++` - Lager et punkt som er festet til x-aksen.
+* `++B=Punkt[xAkse]++` - Lager et punkt som er festet til x-aksen.
+* Flytt punkt _A_ og _B_ bort fra origo - slik at du får bedre oversikt over hva de neste kommandoene gjør.
+* `++C=DynamiskeKoordinater[B, min(x(B),x(A)),0]++` - Lager et punkt _C_ med x-koordinat fra _A_ eller _B_, avhengig av
+hvem av de som er minst.
+* `++VelgVisningIGrafikkfelt[B, 1, false]++` - Skjuler punkt B.
+* `++VelgLag[C, 1]++` - Setter punkt _C_ et lag over _A_ (lag 0 er standard).
+
+====
+
+[EXAMPLE]
+====
+
+Lag et punkt _C_ som låser seg til punktet _A_ når det har avstand mindre enn 1 til punkt A.
+
+* `++A=(1,2)++` og `++B=(2,3)++` - Lager punktene _A_ og _B_.
+* `++VelgVisningIGrafikkfelt[B, 1, false]++` - Skjuler punkt _B_.
+* `++C=DynamiskeKoordinater[B, Dersom[Avstand[A, B] < 1, x(A), x(B)], Dersom[Avstand[A, B] < 1, y(A), y(B)]]++` - Lager
+_C_ som er låst til _A_ dersom avstanden er mindre enn 1 i x- eller y-retning.
+
+====
+
+[EXAMPLE]
+====
+
+Begrenser punktet _A_ inni en boks med fire-punkts "hale" ved hjelp av nestede
+xref:/commands/Dersom.adoc[Dersom]-argument.
+
+* `++A=(1,2)++` - Lager et punkt _A_.
+* `++VelgVisningIGrafikkfelt[A, 1, false]++` - Skjuler punkt _A_.
+* `++B=DynamiskeKoordinater[A, Dersom[x(A) > 3, 3, Dersom[x(A) < -(3), -3, Dersom[x(A)< 0, round(x(A)), x(A)]]], Dersom[x(A) < 0, 0.5, Dersom[y(A) > 2, 2, Dersom[y(A) <0, 0, y(A)]]]]++`
+
+====

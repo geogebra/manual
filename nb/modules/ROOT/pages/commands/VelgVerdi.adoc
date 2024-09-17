@@ -1,0 +1,48 @@
+= VelgVerdi Kommando
+:page-en: commands/SetValue
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+VelgVerdi[ <Boolsk>, <0|1> ]::
+  Setter verdien til en xref:/Boolske_verdier.adoc[boolsk verdi] eller en xref:/Handlingsobjekt.adoc[avkrysningsboks]
+  til _true_ dersom det andre argumentet er 1, og til _false_ dersom det andre argumentet er 0.
+VelgVerdi[ <Objekt A>, <Objekt B> ]::
+  Dersom _A_ er et xref:/Frie_objekt_avhengige_objekt_og_hjelpeobjekt.adoc[fritt] objekt eller et
+  xref:/Punkt_og_vektorer.adoc[punkt] begrenset til xref:/Geometriske_objekt.adoc[en sti eller en region] vil verdien
+  til _A_ bli satt lik den nåværende verdien til _B_; det vil si at _A_ ikke vil endre verdi dersom verdien til _B_ blir
+  endret i ettertid.
+
+[EXAMPLE]
+====
+
+Dersom _b_ er en boolsk verdi vil `++Velgverdi[b, 1]++` sette _b_ til _true_.
+
+====
+
+[EXAMPLE]
+====
+
+La _f_ være en funksjon, `++ VelgVerdi[f, TilfeldigElement[{cos(x), 3x+2, ln(x)}]]++` definerer (tilfeldig) _f_ til å
+være en av funksjonene i listen.
+
+====
+
+VelgVerdi[ <Liste L>, <Tall n>, <Objekt B> ]::
+  Setter verdien til element nummer _n_ i _L_ til den nåværende verdien til _B_.
+
+[NOTE]
+====
+
+*Merk:*
+
+Du kan også endre verdien til et objekt under fanen _Basis_ i xref:/Egenskaper.adoc[dialogboksen for egenskaper] eller i
+xref:/Omdefinering.adoc[dialogboksen for omdefinering].
+
+====

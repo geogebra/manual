@@ -1,0 +1,98 @@
+= Matriser
+:page-en: Matrices
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+GeoGebra kan også behandle matriser. De angis som en liste av lister som inneholder radene i matrisen.
+
+For å vise en matrise i xref:/Grafikkfelt.adoc[grafikkfeltet] med xref:/LaTeX.adoc[LaTeX]-formatering bruker du
+kommandoen xref:/commands/Formeltekst.adoc[Formeltekst].
+
+[EXAMPLE]
+====
+
+I xref:/Inntastingsfelt.adoc[inntastingsfeltet] kan du skrive `++Formeltekst[{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}]++` for å
+få en matrise med LaTeX-formatering.
+
+====
+
+== Matriseoperasjoner
+
+=== Eksempler på addisjon og subtraksjon av matriser
+
+* Matrise1 + Matrise2: Adderer samsvarende elementer i to kompatible matriser.
+* Matrise1 – Matrise2: Subtraherer samsvarande elementer i to kompatible matriser.
+
+=== Eksempler på multiplikasjon av matriser
+
+* Matrise * Tall: Multipliserer hvert element i matrisen med tallet.
+* Matrise1 * Matrise2: Bruker matrisemultiplikasjon for å finne svarmatrisen.
+
+* 2x2 Matrise * Punkt (eller vektor): Multipliserer matrisen med punktet/vektoren og gir et punkt som resultat.
+
+[EXAMPLE]
+====
+
+\{\{1, 2}, \{3, 4}} * (3, 4) gir punktet A = (11, 25).
+
+====
+
+* 3x3 Matrix * Punkt (eller vektor): Multipliserer matrisen med punktet/vektoren og gir et punkt som resultat.
+
+[EXAMPLE]
+====
+
+\{\{1, 2, 3}, \{4, 5, 6}, \{0, 0, 1}} * (1, 2) gir punktet A = (8, 20).
+
+====
+
+[NOTE]
+====
+
+*Merk:* Dette er et spesialtilfelle av affine transformasjoner hvor homogene koordinater blir brukt: (x, y, 1) for et
+punkt og (x, y, 0) for en vektor. Dette eksemplet er derfor ekvivalent med
+`++{{1, 2, 3}, {4, 5, 6}, {0, 0, 1}} * {1, 2, 1}++`.
+
+====
+
+== Andre Eksempler
+
+Se også seksjonen xref:/commands/Vektor_Matrise_Kommandoer.adoc[Vektor & Matrise Kommandoer].
+
+* xref:/commands/Determinant.adoc[Determinant][Matrise]: Beregner determinanten til den gitte matrisen.
+* xref:/commands/Invers.adoc[Invers][Matrise]: Finner inversen til matrisen.
+* xref:/commands/Transponer.adoc[Transponer][Matrise]: Finner den transponerte til matrisen.
+* xref:/commands/BrukMatrise.adoc[BrukMatrise][Matrise, Objekt]: Bruker en affin transformasjon, gitt av matrisen, på
+objektet.
+* xref:/commands/RedusertRadEchelonForm.adoc[RedusertRadEchelonForm][Matrise]: Konverterer matrisen til redusert
+rad-echelon form (redusert trappeform).
+
+[EXAMPLE]
+====
+
+\{\{1, 2}, \{3, 4}, \{5, 6}} * \{\{1, 2, 3}, \{4, 5, 6}} gir matrisen _stem:[\begin\{pmatrix} 9&12&15\\ 19&26&33\\
+29&40&51 \end\{pmatrix}]_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Radene i den første matrisen og kolonnene i den siste matrisen må ha like mange elementer.
+
+====
+
+[EXAMPLE]
+====
+
+I GeoGebra vil\{\{1, 2, 3}, \{4, 5, 6}, \{7, 8, 9}} representere matrisen _stem:[\begin\{pmatrix} 1&2&3\\ 4&5&6\\ 7&8&9
+\end\{pmatrix}]_.
+
+====

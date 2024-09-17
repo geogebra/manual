@@ -1,0 +1,80 @@
+= Maks Kommando
+:page-en: commands/Max
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+Maks[ <Tall a>, <Tall b> ]::
+  Returnerer det største tallet av _a_ eller _b_.
+Maks[ <Liste> ]::
+  Returnerer det største tallet i listen.
+Maks[ <Funksjon>, <Startverdi for x>, <Sluttverdi for x> ]::
+  Regner ut (numerisk) og returnerer punktet til maksimumsverdien for funksjonen på intervallet _[a, b]_. Funksjonen
+  returnerer bare et punkt likevel om funksjonen har flere punkter med samme maksimumsverdi(for eksempel sin(x) som
+  inneholder flere toppunkter på gitte intervall).
+Maks[ <Intervall> ]::
+  Returnerer den øverste grensen for intervallet, uavhengig av om intervallet er åpent eller lukket.
+
+[EXAMPLE]
+====
+
+`++Maks[cos(x), 0, 6]++` returnerer punktet _(0, 1)_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Max[{-2, 12, -23, 17, 15}]++` returnerer _17_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Maks[12, 15]++` returnerer _15_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Hvis listen inneholder ikke-numeriske objekter, vil _Maks[]_ evaluere listen med hensyn på hvilken tall-verdi
+objektene returnerer. For eksempel, Maks[Liste av linjestykker] vil returnere linjestykket som er lengst.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Se også xref:/commands/Ekstremalpunkt.adoc[ekstremalpunkt] som returnerer *alle* ekstremalpunkt på et gitt
+intervall, og xref:/tools/Funksjonsanalyse.adoc[funksjonsanalyse verktøyet].
+
+====
+
+== CAS-delen
+
+Maks[ <Tall a>, <Tall b> ]::
+  Returnerer det største tallet av _a_ eller _b_.
+Maks[ <Liste> ]::
+  Returnerer det største tallet i listen.
+
+[EXAMPLE]
+====
+
+`++Max[{-2, 12, -23, 17, 15}]++` returnerer _17_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Maks[12, 15]++` returnerer _15_.
+
+====

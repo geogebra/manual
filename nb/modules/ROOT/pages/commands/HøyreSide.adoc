@@ -1,0 +1,52 @@
+= HøyreSide Kommando
+:page-en: commands/RightSide
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+HøyreSide[ <Likning> ]::
+  Returnerer høyresiden av den forenklede likningen.
+
+[EXAMPLE]
+====
+
+`++HøyreSide[x + 2 = 3x + 1]++` gir _0,5_.
+
+====
+
+== CAS-delen
+
+HøyreSide[ <Likning> ]::
+  Returnerer høyresiden av den gitte likningen.
+HøyreSide[ <Liste med likninger> ]::
+  Returnerer listen med høyresider til likningene.
+HøyreSide[ <Liste med likninger>, <Indeks> ]::
+  Returnerer høyresiden til likningen i listen som er gitt av indeksen.
+
+[EXAMPLE]
+====
+
+`++HøyreSide[{a^2 + b^2 = c^2, x + 2 = 3 x + 1}, 1]++` gir stem:[c^2].
+
+====
+
+[EXAMPLE]
+====
+
+`++HøyreSide[{a^2 + b^2 = c^2, x + 2 = 3x + 1}]++` gir stem:[\left\\{c^2, 3x + 1\right\}].
+
+====
+
+[EXAMPLE]
+====
+
+`++HøyreSide[x + 2 = 3x + 1]++` gir _3x + 1_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+Se også kommandoen xref:/commands/VenstreSide.adoc[VenstreSide].
+
+====

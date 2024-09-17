@@ -1,0 +1,36 @@
+= TGjennomsnitt2Estimat Kommando
+:page-en: commands/TMean2Estimate
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+TGjennomsnitt2Estimat[ <Liste med utvalgsdata 1>, <Liste med utvalgsdata 2>, <Nivå>, <Boolsk gruppert> ]::
+  Finner et T-konfidensintervallestimat for differansen mellom to populasjonsgjennomsnitt ved å bruke de to gitte
+  listene med utvalgsdata og det gitte konfidensnivået. Dersom:
+  * _Boolsk gruppert = true_, blir det lagt til grunn at variansen til populasjonene er lik og standardavviket til
+  utvalgene blir kombinert i beregningen.
+  * _Boolsk gruppert =false_, blir det ikke lagt til grunn at variansen til populasjonene er lik og standardavviket til
+  utvalgene blir ikke kombinert i beregningen.
+  Resultatet blir gitt som en liste på formen _\{nedre konfidensgrense, øvre konfidensgrense}_.
+TGjennomsnitt2Estimat[ <Utvalgsgjennomsnitt 1>, <Utvalgs-standardavvik 1>, <Utvalgsstørrelse 1>, <Utvalgsgjennomsnitt
+2>, <Utvalgs-standardavvik 2>, <Utvalgsstørrelse 2>, <Nivå>, <Boolsk gruppert> ]::
+  Finner et T-konfidensintervallestimat for differansen mellom to populasjonsgjennomsnitt ved å bruke de gitte
+  utvalgsgjennomsnittene, standardavvikene, utvalgsstørrelsene og det gitte konfidensnivået. Dersom:
+  * _Boolsk gruppert = true_, blir det lagt til grunn at variansen til populasjonene er lik og standardavviket til
+  utvalgene blir kombinert i beregningen.
+  * _Boolsk gruppert =false_, blir det ikke lagt til grunn at variansen til populasjonene er lik og standardavviket til
+  utvalgene blir ikke kombinert i beregningen.
+  Resultatet blir gitt som en liste på formen _\{nedre konfidensgrense, øvre konfidensgrense}_.
+
+[NOTE]
+====
+
+*Merk:* Se også kommandoen xref:/commands/TGjennomsnittEstimat.adoc[TGjennomsnittEstimat].
+
+====

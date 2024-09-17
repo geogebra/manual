@@ -1,0 +1,54 @@
+= FordelingPascal Kommando
+:page-en: commands/Pascal
+ifdef::env-github[:imagesdir: /nb/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Denne siden har ikke blitt korrekturlest enda.
+|===
+
+FordelingPascal[ <Antall treff>, <Sannsynlighet for treff> ]::
+  Returner et søylediagram for Pascalfordelingen.
+  Parametre:
+  _Antall treff_: Antall uavhengige Bernoulli forsøk som må gi suksess.
+  _Sannsynlighet for treff_: sannsynlighet for treff i et forsøk.
+
+FordelingPascal[ <Antall treff>, <Sannsynlighet for treff>, <Boolsk kumulativ> ]::
+  Dersom _kumulativ = false_ blir det returnert et søylediagram for Pascalfordelingen.
+  Dersom _kumulativ = true_ blir det returnert et søylediagram for den kumulative Pascalfordelingen.
+FordelingPascal[ <Antall treff t>, <Sannsynlighet for treff p>, <Variabelverdi v>, <Boolsk kumulativ> ]::
+  La _X_ være en Pascalfordelt stokastisk variabel med parametre _t, p_.
+  * Dersom _kumulativ = false_ blir _P(X = v)_ returnert.
+  * Dersom _kumulativ = true_ blir _P(X ≤ v)_ returnert.
+
+[NOTE]
+====
+
+*Merk:*
+
+* Se også verktøyet image:Tool_Probability_Calculator.gif[Tool Probability Calculator.gif,width=32,height=32]
+xref:/tools/Sannsynlighetskalkulator.adoc[Sannsynlighetskalkulator].
+* Se også kommandoen xref:/commands/InversPascal.adoc[InversPascal].
+* Se også kommandoene for de andre diskrete sannsynlighetsfordelingene
+xref:/commands/FordelingBernoulli.adoc[FordelingBernoulli], xref:/commands/FordelingBinomial.adoc[FordelingBinomial],
+xref:/commands/FordelingHypergeometrisk.adoc[FordelingHypergeometrisk],
+xref:/commands/FordelingPoisson.adoc[FordelingPoisson] og xref:/commands/Zipf.adoc[Zipf].
+* Se også kommandoene for de kontinuerlige sannsynlighetsfordelingene xref:/commands/Erlang.adoc[Erlang],
+xref:/commands/FordelingCauchy.adoc[Fordeling Cauchy], xref:/commands/FordelingF.adoc[FordelingF],
+xref:/commands/FordelingGamma.adoc[FordelingGamma], xref:/commands/FordelingNormal.adoc[FordelingNormal],
+xref:/commands/FordelingT.adoc[FordelingT], xref:/commands/FordelingWeibull.adoc[FordelingWeibull],
+xref:/commands/KjiKvadrat.adoc[KjiKvadrat], xref:/commands/LogNormal.adoc[LogNormal],
+xref:/commands/Logistisk.adoc[Logistisk], xref:/commands/Trekantfordeling.adoc[Trekantfordeling] og
+xref:/commands/Uniform.adoc[Uniform].
+
+====
+
+== CAS-delen
+
+FordelingPascal[ <Antall treff t>, <Sannsynlighet for treff p>, <Variabelverdi v>, <Boolsk kumulativ> ]::
+  La _X_ være en Pascalfordelt stokastisk variabel med parametre _t, p_.
+  * Dersom _kumulativ = false_ blir _P(X = v)_ returnert.
+  * Dersom _kumulativ = true_ blir _P(X ≤ v)_ returnert.
