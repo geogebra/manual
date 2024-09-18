@@ -1,0 +1,36 @@
+= Lokus naredba
+:page-en: commands/Locus
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Lokus[ <točka Q koja određuje crtu lokusa>, <točka P> ]::
+  Daje krivulju koju crta točka _Q_ zavisna od točke _P_.
+Lokus[ <točka koja određuje crtu lokusa>, <klizač> ]::
+  Konstruira krivulju koju crta točka _Q_, koja je zavisna o vrijednostima pridruženima klizaču _t_.
+
+[NOTE]
+====
+
+Točka _P_ je točka koja pripada nekom objektu (pravcu, dužini, kružnici,...)
+
+====
+
+Lokusi su objekti posebnog tipa, i pojavljuju se kao xref:/Nezavisni_Zavisni_i_Pomoćni_objekti.adoc[pomoćni objekti].
+Osim ovih naredbi, lokusi mogu biti i rezultati nekih naredbi xref:/commands/Diskretna_matematika_naredbe.adoc[Diskretne
+matematike] i xref:/commands/RiješiODJ.adoc[RiješiODJ]. Lokusi su xref:/Geometrijski_objekti.adoc[putanje] i mogu se
+koristiti unutar naredbi koje se odnose na putanje kao što su xref:/commands/Točka.adoc[Točka]. Njihova svojstva ovise o
+tome kako su dobiveni, pogledajte npr. naredbu xref:/commands/Opseg.adoc[Opseg] ili
+xref:/commands/Početni.adoc[Početni].
+
+[NOTE]
+====
+
+Pogledajte još i alat image:Tool_Locus.gif[Tool Locus.gif,width=32,height=32] xref:/tools/Lokus.adoc[Lokus].
+
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Upozorenje,title="Upozorenje",width=18,height=18] *Upozorenje*: |Lokus će biti nedefiniran
+kada je zavisna točka rezultat naredbe xref:/commands/Točka.adoc[Točka] od dva argumenta, ili naredbe
+xref:/commands/ParametarPutanje.adoc[ParametarPutanje].
+|===

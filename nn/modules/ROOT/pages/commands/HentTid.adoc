@@ -1,0 +1,42 @@
+= HentTid Kommando
+:page-en: commands/GetTime
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+HentTid[ ]::
+  Gjev ei liste med det noverande tidspunktet og den noverande datoen i følgjande rekkefølgje
+  * millisekund (0-999)
+  * sekund (0-59)
+  * minutt (0-59)
+  * timer (0-23)
+  * dato (1-31)
+  * måned (1-12)
+  * år (som tal)
+  * måned (som tekst)
+  * dag (som tekst)
+  * dag (som tal, der 1 = Søndag, 2 = Mandag...)
+
+[EXAMPLE]
+====
+
+*Døme:* `++HentTid[]++` gjev ei liste som _\{673, 3, 38, 14, 23, 10, 2012, "Oktober", "Tysdag", 3}_
+
+====
+
+HentTid[ <Format> ]::
+  Kommandoen erstatter kvar av dei følgjande bokstavane når dei har ein _backslash_ (\) før seg:
+  d, D, j, l, N, S, w, z, W, F, m, M, n, t, L, Y, y, a, A, g, G, h, H, i, s, U - forklaringa på kva bokstavane står for
+  finn du her http://php.net/manual/en/function.date.php (engelsk lenke).
+
+[EXAMPLE]
+====
+
+*Døme:* `++HentTid["Datoen i dag er \l \j\S \F \Y"]++` vil gje teksten _Datoen i dag er Tysdag 23. Oktober 2012_
+
+====
+
+[NOTE]
+====
+
+*Merk:* _Format_ er en tekst og må difor stå i hermeteikn " ".
+
+====

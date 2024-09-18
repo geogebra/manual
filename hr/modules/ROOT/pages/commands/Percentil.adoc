@@ -1,0 +1,19 @@
+= Percentil naredba
+:page-en: commands/Percentile
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Percentil[ <lista brojeva>, <postotak> ]::
+  Neka je P jednako zadanom _postotku_.
+  Uzima vrijednost iz liste koja dijeli početni dio do postotka P kada je lista sortirana u rastućem poretku. _Postotak_
+  treba biti broj iz intervala 0 < P ≤ 1.
+
+[NOTE]
+====
+
+Naredbe kvartila i Percentil koriste različita pravila i ne daju uvijek suglasne rezultate. Na primjer,
+
+Q1[\{1,2,3,4}] = 2
+
+Percentil[\{1,2,3,4}, 0.25] = 1
+
+====

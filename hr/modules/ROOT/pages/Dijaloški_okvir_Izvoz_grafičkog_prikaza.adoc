@@ -1,0 +1,69 @@
+= Dijaloški okvir Izvoz grafičkog prikaza
+:page-en: Export_Graphics_Dialog
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Ovaj je podizbornik dostupan iz podizbornika Izvoz izbornika xref:/Izbornik_Datoteka.adoc[Datoteka] (stavak
+image:Image-x-generic.png[Image-x-generic.png,width=16,height=16] Grafički prikaz kao slika (png, eps)….)
+
+Tipkovnička kratica: [.kcode]#Ctrl# + [.kcode]#Shift# + [.kcode]#P# (Mac OS: [.kcode]#Cmd# + [.kcode]#Shift# +
+[.kcode]#P#)
+
+Ovaj podizbornik omogućava spremanje GeoGebra xref:/Grafički_prikaz.adoc[grafičkog prikaza] kao slikovne datoteke na
+vaše računalo. U otvorenom dijaloškom okviru odaberite datotečni format, promijenite mjerilo u centimetrima i rezoluciju
+slike u točkicama po inču (dpi), te označite / odznačite Prozirnost.
+
+[NOTE]
+====
+
+Ako napravite točke s nazivom Export_1 i Export_2 one će definirati pravokutnik izvoza, inače će se izvesti vidljivi dio
+Grafičkog prikaza.
+
+====
+
+Kada izvozite Grafički prikaz kao sliku možete izabrati jedan od slijedećih formata:
+
+PNG – https://en.wikipedia.org/wiki/Portable_Network_Graphics[Portable Network Graphics]::
+  Ovo je standard zapisivanja rasterskih slika s nepatentiranim algoritmom. Viša rezolucija (u dpi) daje bolju kvalitetu
+  slike (300dpi će najčešće biti sasvim dostatna). Veličinu PNG slike ne bi trebalo naknadno mijenjati jer se gubi na
+  kvaliteti.
+  PNG grafičke datoteke su prikladne za upotrebu unutar web-stranica (_HTML_) i u tekstualnim dokumentima.
+
+[NOTE]
+====
+
+Svaki put kada umetnete PNG sliku u dokument nekog programa za obradu teksta (izbornik __Umetni__> _Slika iz datoteke_)
+provjerite je li veličina postavljena na 100 %, inače će se dotično mjerilo u centimetrima promijeniti.
+
+====
+
+EPS – https://en.wikipedia.org/wiki/Encapsulated_Postscript[Encapsulated Postscript]::
+  Ovo je vektorski zadan grafički format. EPS crteže možemo povećavati ili smanjivati bez gubitka kvalitete. EPS
+  grafičke datoteke su prikladne za korištenje s vektorskim grafičkim programima (npr., _Corel Draw_) ili profesionalni
+  tekst procesor sustav (npr. xref:/LaTeX.adoc[LaTeX]).
+  Rezolucija EPS grafičkih datoteka je uvijek 72dpi. Ova vrijednost se odnosi samo na izračun stvarne veličine crteža u
+  cm i nema učinka na njegovu kvalitetu.
+
+[NOTE]
+====
+
+Učinci transparentnosti kao što su ispuna mnogokuta ili konika nisu mogući s EPS formatom.
+
+====
+
+PDF – https://en.wikipedia.org/wiki/Portable_Document_Format[Portable Document Format]::
+  (vidi EPS format gore)
+
+[NOTE]
+====
+
+U SVG i PDF izvoznom formatu možete izvesti tekst kao tekst za uređivanje ili tekst kao gotov oblik. Ako je tekst
+pohranjen kao tekst možete ga dalje uređivati nekim programima kao što je npr. _InkScape_, a ako uključite ‘Izvoz teksta
+kao oblik’, tekst će na slici izgledati isto, čak i ako odgovarajući font nije instaliran na računalu.
+
+====
+
+SVG – https://en.wikipedia.org/wiki/Scalable_Vector_Graphic[Scalable Vector Graphic]::
+  (vidi EPS format gore)
+
+EMF – https://en.wikipedia.org/wiki/Windows_Metafile[Enhanced Metafile]::
+  (vidi EPS format gore)

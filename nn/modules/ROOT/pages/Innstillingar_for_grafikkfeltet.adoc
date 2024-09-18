@@ -1,0 +1,94 @@
+= Innstillingar for grafikkfeltet
+:page-en: Customizing_the_Graphics_View
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+For å justere den synlege delen av xref:/Grafikkfelt.adoc[grafikkfeltet], kan du dra i det med verktøyet
+image:Tool_Move_Graphics_View.gif[Tool Move Graphics View.gif,width=32,height=32]
+xref:/tools/Flytt_grafikkfeltet.adoc[Flytt grafikkfeltet] eller ved å zoome på ein av følgjande måtar:
+
+* Du kan bruke image:Tool_Zoom_In.gif[Tool Zoom In.gif,width=32,height=32] xref:/tools/Forstørr.adoc[Forstørr] og
+image:Tool_Zoom_Out.gif[Tool Zoom Out.gif,width=32,height=32] xref:/tools/Forminsk.adoc[Forminsk Verktøy] for å zoome
+grafikkfeltet inn og ut.
++
+[NOTE]
+====
+
+*Merk:* Posisjonen du trykkjer på vert sentrum for zoominga.
+
+====
+* Du kan bruke rullehjulet på musa for å zoome.
+* Du kan bruke hurtigtastane [.kcode]#Ctrl# + [.kcode]#+# for å zoome inn og [.kcode]#Ctrl# + [.kcode]#-# for å zoome
+ut.
+* Du kan bruke xref:/Kontekstmeny.adoc[kontekstmenyen] som du opnar ved å høgreklikke (Mac OS: Ctrl-klikk) ein tom stad
+i grafikkfeltet.
+* Du kan angje eit zoom-rektangel ved å høgreklikke (Mac OS: Cmd-klikk) på ein tom stad i grafikkfeltet og dra musa til
+du har det ønska zoom-rektangelet. Slipp museknappen for å fullføre. Den synlege delen av grafikkfeltet vil då vere det
+området som var innanfor zoom-rektangelet.
+* Du kan også angje eit område for _x_- og _y_-aksen i xref:/Eigenskapar.adoc[dialogboksen for eigenskapar] for
+grafikkfeltet (sjå xref:/.adoc[under]).
+
+== Vise og skjule objekt
+
+I xref:/Algebrafelt.adoc[algebrafeltet] viser ikonet til venstre for kvart objekt om det er synleg eller ikkje. Ved å
+trykkje på dette ikonet kan du skjule/vise objektet. For meir informasjon sjå sida om
+xref:/Objekteigenskapar.adoc[synlegheit].
+
+== Eigenskapar for grafikkfeltet
+
+Koordinataksane, rutenettet og nokre andre eigenskapar kan verte tilpassa ved hjelp av
+xref:/Eigenskapar.adoc[Eigenskapar] for grafikkfeltet. Høgreklikk i grafikkfeltet og vel Grafikkfelt 1/2... som vert
+vist i xref:/Kontekstmeny.adoc[kontekstmenyen].
+
+== Tilpassing av koordinataksar og rutenett
+
+For å vise eller skjule aksane og rutenettet, høgreklikk (Mac OS: Ctrl-klikk) i grafikkfeltet og vel
+image:Menu_Axes.gif[Menu Axes.gif,width=16,height=16] _Aksar_ eller image:Grid.gif[Grid.gif,width=16,height=16]
+_Rutenett_ frå kontekstmenyen. For fleire innstillingar må du opne dialogboksen for eigenskapar. Der finn du:
+
+* Under fana _Basis_, kan du til dømes endre linjestil og farge for koordinataksane, samt angje forholdet mellom aksane.
+For å sikre at forholdet mellom aksane ikkje kan verte endra av ein kommando eller handling frå brukaren kan du låse det
+med låseikonet.
+
+* Ved å klikke på fanene _xAkse_ og _yAkse_ kan du tilpasse aksane individuelt, setje avstanden til aksemerka, namn på
+aksen, synlegheit, setje eining med meir. Dersom du ønskjer at aksane skal krysse i eit punkt _(a, b)_, kan du sette
+_Kryss ved_ parameter for _xAkse_ til _b_ og _yAkse_ til _a_. Alternativt _Fest til kanten_ som betyr at linja forblir
+nær botn eller venstre kant av skjermen. For å teikne berre den delen av koordinatsystemet som er til høgre eller over
+skjeringa mellom aksane kan du velje _Berre i positiv retning_.
+
+* Under fana _Rutenett_, kan du endre farge og linjestil for rutenettet, setje avstand mellom strekane, og velje om det
+skal vere synleg eller ikkje. Tre typar rutenett er tilgjengelege: Kartesisk, Polar og Isometrisk.
+
+[NOTE]
+====
+
+*Merk:*
+
+* Akseskalering er mogleg i kvar modus ved å trykkje og halde inne [.kcode]#Skift#-tasten (PC: også
+[.kcode]#Ctrl#-tasten) medan du drar aksen med musa.
+* Området for aksane kan vere dynamisk, til dømes under _Basis_ fana kan du setje _x-min_ til `++x(A)++` og _y-min_ til
+`++y(A)++` for å sikre nedre venstre hjørne av visninga er i punkt _A_. Du kan då ikkje zoome i visninga.
+
+====
+
+== Vis navigasjonslinje
+
+Du kan leggje xref:/Navigasjonslinje.adoc[navigasjonslinja for konstruksjonsforklaringa] til grafikkfeltet ved å
+aktivere den under fana _Basis_ i eigenskapar for grafikkfeltet. Du kan også leggje på avspillingsknappen for å tillate
+animerte konstruksjonstrinn og ein knapp for å vise xref:/Konstruksjonsprotokoll.adoc[konstruksjonsforklaringa].
+
+== Diverse innstillingar
+
+Dese innstillingane er plassert i siste del av _Basis_ fana.
+
+Bakgrunnsfarge
+
+Let deg endre bakgrunnsfarga til grafikkfeltet.
+
+Verktøytips
+
+Let deg setje oppførselen til verktøytips i grafikkfeltet. Sjå eigen artikkel om xref:/Verktøytips.adoc[verktøytips] for
+detaljar.
+
+Vis mus-koordinatar
+
+Aktiverer visning av mus-koordinatar ved sida av musepekaren.

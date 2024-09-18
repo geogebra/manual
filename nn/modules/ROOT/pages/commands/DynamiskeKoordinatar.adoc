@@ -1,0 +1,35 @@
+= DynamiskeKoordinatar Kommando
+:page-en: commands/DynamicCoordinates
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+DynamiskeKoordinatar[ <Punkt A>, <Tal X>, <Tal Y> ]::
+  Lager eit punkt med koordinatar _(X, Y)_. Punktet er
+  xref:/Frie_objekt_avhengige_objekt_og_hjelpeobjekt.adoc[avhengig], men kan verte flytta. Når du prøver å flytte det
+  nye punktet til koordinatane _(x, y)_ vil punktet _A_ verte flytta dit istaden og koordinatane for det nye punktet
+  vert funne. Kommandoen fungerer best dersom _A_ er xref:/Objekteigenskapar.adoc[usynleg]. Minst ein av _x_ og _y_ bør
+  vere avhengig av _A_.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* Lag eit punkt _A_. `++B=DynamiskeKoordinatar[A,round(x(A)),round(y(A))]++`. Når du prøver å flytte _B_ til (1.3,2.1)
+ved å bruke image:Tool_Move.gif[Tool Move.gif,width=32,height=32] verktøyet xref:/tools/Flytt.adoc[Flytt], punkt _A_
+vert (1.3,2.1) og _B_ vert vist i (1,2).
+* `++B=DynamiskeKoordinatar[A,x(A),min(y(A),sin(x(A)))]++` lagar eit punkt under eller lik sin(x).
+
+* La A=Punkt[xAkse] og B=Punkt[xAkse]. Skriv i xref:/Inntastingsfelt.adoc[inntastingsfeltet]:
+`++DynamiskeKoordinatar[B, Min[x(B),x(A)],0] ++`, og trykk [.kcode]#Enter#, `++VelVisingIGrafikkfelt[B, 1, false]++`, og
+trykk [.kcode]#Enter#, `++VelLag[C, 1]++`, og trykk [.kcode]#Enter#. _C_ kan no ikkje verte flytta til høgre for _A_.
+
+* Definer A=(1,2). Skriv i xref:/Inntastingsfelt.adoc[inntastingsfeltet]: `++VelVisingIGrafikkfelt[A, 1, false]++` og
+trykk [.kcode]#Enter#,
+`++ B=DynamiskeKoordinatar[A, Dersom[x(A) > 3, 3, Dersom[x(A) < -(3), -3, Dersom[x(A)< 0, round(x(A)), x(A)]]], Dersom[x(A) < 0, 0.5, Dersom[y(A) > 2, 2, Dersom[y(A) <0, 0, y(A)]]]]++`,
+og trykk [.kcode]#Enter#.
+
+* Definer A=(1,2) og B=(2,3). Skriv i xref:/Inntastingsfelt.adoc[inntastingsfeltet]:
+`++VelVisingIGrafikkfelt[B, 1, false]++` og trykk [.kcode]#Enter#,
+`++C=DynamiskeKoordinatar[B, Dersom[Avstand[A, B] < 1, x(A), x(B)], Dersom[Avstand[A, B] < 1, y(A), y(B)]]++`.
+
+====

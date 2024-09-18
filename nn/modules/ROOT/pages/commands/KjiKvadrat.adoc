@@ -1,0 +1,60 @@
+= KjiKvadrat Kommando
+:page-en: commands/ChiSquared
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+KjiKvadrat[ <Fridomsgrader d>, x ]::
+  Lagar https://en.wikipedia.org/wiki/nn:Sannsynstettleiksfunksjon[sannsynstettleiksfunksjonen] til kjikvadratfordelinga
+  med _d_ fridomsgrader.
+KjiKvadrat[ <Fridomsgrader d>, <Variabelverdi v> ]::
+  Finn verdien av den https://en.wikipedia.org/wiki/no:Kumulativ_fordelingsfunksjon[kumulative fordelingsfunksjonen] til
+  kjikvadratfordelinga ved _v_. Det vil seie sannsynet _P(X≤v)_ der _X_ er ein kjikvadratfordelt stokastisk variabel med
+  _d_ fridomsgrader.
+KjiKvadrat[ <Fridomsgrader d>, x, <Boolsk kumulativ> ]::
+  La _X_ vere ein kjikvadratfordelt stokastisk variabel med _d_ fridomsgrader.
+  * Dersom _kumulativ = false_ vert
+  https://en.wikipedia.org/wiki/nn:Sannsynstettleiksfunksjon[sannsynstettleiksfunksjonen] til _X_ returnert
+  * Dersom _kumulativ = true_ vert den https://en.wikipedia.org/wiki/no:Kumulativ_fordelingsfunksjon[kumulative
+  fordelingsfunksjonen] til _X_ returnert
+
+== CAS-delen
+
+KjiKvadrat[ <Fridomsgrader d>, <Variabelverdi> ]::
+  Finn verdien av den kumulative fordelingsfunksjonen til kjikvadratfordelinga ved _v_. Det vil seie sannsynet _P(X≤v)_
+  der _X_ er ein kjikvadratfordelt stokastisk variabel med _d_ fridomsgrader.
+
+[EXAMPLE]
+====
+
+*Døme:* `++KjiKvadrat[4, 3]++` gjev stem:[\gamma(2, \frac\{3}\{2})], som er tilnærma _0.44_.
+
+====
+
+[NOTE]
+====
+
+*Sjå også* verktøyet image:Tool_Probability_Calculator.gif[Tool Probability Calculator.gif,width=32,height=32]
+xref:/tools/Sannsynskalkulator.adoc[Sannsynskalkulator] og kommandoane for dei ulike sannsynsfordelingane:
+
+=== [#Kontinuerlege]#Kontinuerlege#
+
+* xref:/commands/Erlang.adoc[Erlang]
+* xref:/commands/FordelingCauchy.adoc[FordelingCauchy]
+* xref:/commands/FordelingF.adoc[FordelingF]
+* xref:/commands/FordelingGamma.adoc[FordelingGamma]
+* xref:/commands/FordelingNormal.adoc[FordelingNormal]
+* xref:/commands/FordelingT.adoc[FordelingT]
+* xref:/commands/FordelingWeibull.adoc[FordelingWeibull]
+* [.mw-selflink .selflink]#KjiKvadrat#
+* xref:/commands/LogNormal.adoc[LogNormal]
+* xref:/commands/Logistisk.adoc[Logistisk]
+* xref:/commands/Trekantfordeling.adoc[Trekantfordeling]
+* xref:/commands/Uniform.adoc[Uniform]
+=== [#Diskrete]#Diskrete#
+
+* xref:/commands/FordelingBernoulli.adoc[FordelingBernoulli]
+* xref:/commands/FordelingBinomial.adoc[FordelingBinomial]
+* xref:/commands/FordelingHypergeometrisk.adoc[FordelingHypergeometrisk]
+* xref:/commands/FordelingPascal.adoc[FordelingPascal]
+* xref:/commands/FordelingPoisson.adoc[FordelingPoisson]
+* xref:/commands/Zipf.adoc[Zipf]
+====

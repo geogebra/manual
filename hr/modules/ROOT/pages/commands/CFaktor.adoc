@@ -1,0 +1,32 @@
+= CFaktor naredba
+:page-en: commands/CFactor
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Ova je naredba dostupna samo u xref:/CAS_prikaz.adoc[CAS prikazu].
+
+CFaktor[ <izraz> ]::
+  Faktorizira dani izraz, uz kompleksne faktore.
+CFaktor[ <izraz>, <varijabla> ]::
+  Faktorizira dani izraz, u odnosu na zadanu varijablu, uz kompleksne faktore.
+
+[EXAMPLE]
+====
+
+* `++CFactor[a^2 + x^2, a]++` daje _(a + x ί) (a - x ί)_, faktorizaciju od _a^2^ + x^2^_ u odnosu na _a_.
+* `++CFactor[a^2 + x^2, x]++` daje _(x + a ί) (x - a ί)_, faktorizaciju od _a^2^ + x^2^_ u odnosu na _x_.
+
+====
+
+[EXAMPLE]
+====
+
+`++CFactor[x^2 + 4]++` daje _(x + 2 ί) (x - 2 ί)_, faktorizaciju od _x^2^ + 4_.
+
+====
+
+[NOTE]
+====
+
+Pogledajte još i xref:/commands/Faktoriziraj.adoc[naredbu Faktoriziraj].
+
+====

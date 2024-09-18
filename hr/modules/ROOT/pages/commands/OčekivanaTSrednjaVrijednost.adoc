@@ -1,0 +1,28 @@
+= OčekivanaTSrednjaVrijednost naredba
+:page-en: commands/TMeanEstimate
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+OčekivanaTSrednjaVrijednost[ <lista podataka uzorka>, <razina> ]::
+  Izračunava T interval pouzdanosti za očekivanje koristeći danu listu podataka uzorka i _razinu_ pouzdanosti. Rezultat
+  je lista oblika \{donja granica pouzdanosti, gornja granica pouzdanosti}.
+
+[EXAMPLE]
+====
+
+* `++OčekivanaTSrednjaVrijednost[{1, 2, 3, 4, 5, 6}, 0.9]++` daje listu _\{1.96, 5.04}_.
+* `++OčekivanaTSrednjaVrijednost[{1, 1, 1, 2, 3, 4, 5, 6, 6, 6}, 0.9]++` daje listu _\{2.24, 4.76}_ .
+
+====
+
+OčekivanaTSrednjaVrijednost[ <srednja vrijednost uzorka>, <standardna devijacija uzorka>, <veličina uzorka>, <razina>
+]::
+  Izračunava T interval pouzdanosti za očekivanje koristeći dane statističke podatke uzorka i _razinu_ pouzdanosti.
+  Rezultat je lista oblika \{donja granica pouzdanosti, gornja granica pouzdanosti}.
+
+[EXAMPLE]
+====
+
+* `++OčekivanaTSrednjaVrijednost[3.5, 1.871, 6, 0.9]++` (pri čemu je 3.5 aritmetička sredina liste brojeva \{1, 2, 3, 4,
+5, 6}, a stem:[1.871\approx \sqrt\{3.5}]) daje listu _\{1.96, 5.04}_.
+
+====

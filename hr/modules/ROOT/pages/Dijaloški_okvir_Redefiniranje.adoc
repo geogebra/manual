@@ -1,0 +1,55 @@
+= Dijaloški okvir Redefiniranje
+:page-en: Redefine_Dialog
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Redefiniranje objekata je vrlo moćan alat za promjenu konstrukcije. Imajte na umu da time može biti promijenjen
+redoslijed koraka konstrukcije u xref:/Opis_konstrukcije.adoc[Opisu konstrukcije].
+
+[NOTE]
+====
+
+Objekti koje redefinirate mogu zavisiti jedino o objektioma definiranima ranije -- možda ćete morati izmijeniti
+redoslijed elemenata u xref:/Opis_konstrukcije.adoc[Opisu konstrukcije].
+
+====
+
+U GeoGebri, svaki objekt može biti redefiniran na različite načine:
+
+* Odaberite alat image:Tool_Move.gif[Tool Move.gif,width=32,height=32] xref:/tools/Pomicanje.adoc[Pomicanje] i dvaput
+kliknite na neki objekt u xref:/Algebarski_prikaz.adoc[algebarskom prikazu].
+** Za nezavisne objekte otvorit će se polje za uređivanje koje vam omogućava izravan unos nove algebarske vrijednosti.
+Pritisnite tipku _Enter_ za prihvat promjene.
+** Za zavisne objekte otvorit će se dijaloški okvir _Redefiniranje_ koji vam dozvoljava redefiniranje objekta.
+* Odaberite alat image:Tool_Move.gif[Tool Move.gif,width=32,height=32] xref:/tools/Pomicanje.adoc[Pomicanje] i dvaput
+kliknite na neki objekt u xref:/Grafički_prikaz.adoc[grafičkom prikazu]. Tada će se otvoriti dijaloški okvir
+_Redefiniranje_ kroz koji ćete izmijeniti objekt.
+** Objekt možete izmijeniti i unosom njegovog naziva i nove definicije u traku za unos.
+** Otvorite dijaloški okvir Svojstva i promijenite neki objekt kroz polje za definiciju na kartici _Osnovno_.
+
+[NOTE]
+====
+
+Nepomični objekti se ne mogu redefinirati. Ukoliko ih ipak želite redefinirati najprije ih morate učiniti pomičnima kroz
+xref:/Dijaloški_okvir_Svojstva.adoc[dijaloški okvir Svojstva].
+
+====
+
+== Primjeri
+
+[EXAMPLE]
+====
+
+Kako biste smjestili nezavisnu točku _A_ na neki postojeći pravac _h_, potrebno je dvostrukim klikom na točku _A_
+otvoriti dijaloški okvir Redefiniranje za točku _A_ i tada upisati `++Točka(h)++` u polje za tekst pa kliknuti na gumb
+_U redu_. Kako biste pomaknuli točku s pravca i učinili ju ponovo nezavisnom potrebno je redefinirati ju s nekim
+slobodnim koordinatama, na primjer (1, 2).
+
+====
+
+[EXAMPLE]
+====
+
+Drugi primjer je prevođenje pravca _h_ kroz dvije točke _A_ i _B_ u dužinu. Otvorite dijaloški okvir Redefiniranje za
+pravac _h_ i upišite naredbu `++Dužina(A, B)++` u otvoreno tekstualno polje.
+
+====

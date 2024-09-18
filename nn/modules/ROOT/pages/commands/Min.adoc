@@ -1,0 +1,92 @@
+= Min Kommando
+:page-en: commands/Min
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Min[ <Tal a>, <Tal b> ]::
+  Gjev det minste av tala _a_ og _b_.
+Min[ <Liste av tal> ]::
+  Gjev det største av tala i lista.
+Min[ <Intervall> ]::
+  Gjev nedre grense for intevallet.
+Min[ <Funksjon>, <Tal a>, <Tal b> ]::
+  Finn punktet som minimerer funksjonen på intervallet [_a_, _b_]. Funksjonen kan kun ha eit minimum på intervallet.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Min[2 < x < 3]++` gjev _2_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Min[{-2, 12, -23, 17, 15}]++` gjev _-23_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Min[12, 15]++` gjev _12_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Opne og lukka intervall vert handsama likt.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Dersom elementa i lista består av ikke-numeriske objekt vil *Min[]* bruke tala som er assosiert med desse
+objekta. Til dømes vil *Min[<Liste av segment>]* gje den minste segmentlengda.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Sjå også verktøyet image:Tool_Minimum.gif[Tool Minimum.gif,width=32,height=32] xref:/tools/Minimum.adoc[Minimum] for
+bruk i xref:/Rekneark.adoc[reknearket].
+* Sjå også kommandoane xref:/commands/Ekstremalpunkt.adoc[Ekstremalpunkt], xref:/commands/Maks.adoc[Maks] og verktøyet
+image:Tool_Function_Inspector.gif[Tool Function Inspector.gif,width=32,height=32]
+xref:/tools/Funksjonsanalyse.adoc[Funksjonsanalyse].
+
+====
+
+== CAS-delen
+
+Min[ <Tal a>, <Tal b> ]::
+  Gjev det minste av tala _a_ og _b_.
+Min[ <Liste av tal> ]::
+  Gjev det største av tala i lista.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Min[{-2, 12, -23, 17, 15}]++` gjev _-23_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Min[12, 15]++` gjev _12_.
+
+====

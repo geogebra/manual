@@ -1,0 +1,41 @@
+= Persentil Kommando
+:page-en: commands/Percentile
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Persentil[ <Liste med tal>, <Prosent p> ]::
+  Gjev verdien som kuttar av dei første _p_ prosenta av tala i lista når elementa er sortert i stigande rekkefølgje. Vi
+  må ha 0 < p ≤ 1.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Persentil[{1, 2, 3, 4}, 0.25]++` gjev _1.25_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Kommandoane Q1, Q3 og Persentil bruker forskjellige reglar og gjev difor ikkje alltid samsvarande resultat.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Q1[{1, 2, 3, 4}]++` gjev _1.5_.
+
+`++Persentil[{1, 2, 3, 4}, 0.25]++` gjev _1.25_.
+
+====
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoane xref:/commands/Q1.adoc[Q1] og xref:/commands/Q3.adoc[Q3].
+
+====

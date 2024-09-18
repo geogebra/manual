@@ -1,0 +1,26 @@
+= Kompatibilitet
+:page-en: Compatibility
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+GeoGebra er bakoverkompatibelt på den måten at alle filer laga i ein gammel versjon skal kunne verte opna feilfritt i
+noverande versjon. Ein del ting vil imidlertid oppføre seg ulikt i 3.2 og 4.0:
+
+* lister av vinklar, integral, søylediagram, histogram og liknande er no synlege
+* lister \{Linjestykke[A, B], Linjestykke[B, C] } kan no verte flytta
+* sirklar med gjeven radius (t.d. Sirkel[(1, 1), 2]) er flyttbar
+* Avstand[Punkt, Linjestykke] gjev avstanden til linjestykket (gav avstanden til den forlenga linja i 3.2)
+* Vinkel[A, B, C] vil endre storleik dersom _B_ er for nær til _A_ eller _C_
+* Integral[funksjon f, funksjon g, a, b] heiter no IntegralMellom[funksjon f, funksjon g, a, b].
+* Objekt som er ein translasjon med ein fri vektor er no flyttbare, t.d. Flytt[A, Vektor[(1, 1)]]
+* Punkt på stiar kan oppføre seg ulikt når stia vert endra, t.d. punkt på eit kjeglesnitt
+
+== LaTeX likningar
+
+Tekst og likningar laga med xref:/LaTeX.adoc[LaTeX] er no finare, men nokre feil i LaTeX-syntaks som vart ignorert i 3.2
+vil gje manglande tekst i 4.0.
+
+* Sjekk at alle `++\left\{++` har ein samsvarande `++\right.++`.
+* Matriser treng spesifisering av kolonner (sjølvom den kan vere tom). Bruk
+`++ $ \begin{array}{} a & b \\ c & d \\ \end{array}$++` for venstrestilte kolonner eller
+`++ $ \begin{array}{rr} a & b \\ c & d \\ \end{array}$++` for høgrestilte. Gammel syntaks
+`++$ \begin{array} a & b \\ c & d \\ \end{array}$++` vil ikkje fungere.

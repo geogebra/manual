@@ -1,0 +1,82 @@
+= Faktori naredba
+:page-en: commands/Factors
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Faktori[ <polinom> ]::
+  Daje listu listi _\{faktor,eksponent}_ takvu da je umožak svih faktora potenciranih odgovarajućim eksponentima jednak
+  zadanom polinomu.
+Faktori[ <broj> ]::
+  Daje listu listi _\{prost broj,eksponent}_ takvu da je umožak svih prostih brojeva potenciranih odgovarajućim
+  eksponentima jednak zadanom broju. Prosti brojevi sortirani su u rastućem redoslijedu.
+
+[EXAMPLE]
+====
+
+* `++Faktori[1024]++` daje listu _\{\{2, 10}}_, jer je _1024 = 2^10^_.
+* `++Faktori[42]++` daje _\{\{2, 1}, \{3, 1}, \{7, 1}}_, jer je _42 = 2^1^ 3^1^ 7^1^_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Faktori[x^8 - 1]++` daje listu _\{\{x^4 + 1, 1}, \{x^2 + 1, 1}, \{x + 1, 1}, \{x - 1, 1}}_.
+
+====
+
+[NOTE]
+====
+
+Svi faktori nisu ireducibilni na skupu realnih brojeva.
+
+====
+
+[NOTE]
+====
+
+Pogledajte također xref:/commands/ProstiFaktori.adoc[naredbu ProstiFaktori] i xref:/commands/Faktoriziraj.adoc[naredbu
+Faktoriziraj].
+
+====
+
+== CAS prikaz
+
+Faktori[ <polinom> ]::
+  Daje listu listi _\{faktor,eksponent}_ takvu da je umožak svih faktora potenciranih odgovarajućim eksponentima jednak
+  zadanom polinomu.
+Faktori[ <broj> ]::
+  Daje listu listi _\{prost broj,eksponent}_ takvu da je umožak svih prostih brojeva potenciranih odgovarajućim
+  eksponentima jednak zadanom broju. Prosti brojevi sortirani su u rastućem redoslijedu.
+
+[EXAMPLE]
+====
+
+* `++Faktori[1024]++` daje _\{\{2, 10}}_, prikazano u obliku matrice stem:[\begin\{pmatrix} 2&10 \end\{pmatrix}], jer je
+_1024 = 2^10^_.
+** `++Faktori[42]++` daje _\{\{2, 1}, \{3, 1}, \{7, 1}}_, prikazano u obliku matrice stem:[\begin\{pmatrix} 2&1\\ 3&1\\
+7&1 \end\{pmatrix}], jer je _42 = 2^1^ 3^1^ 7^1^_.
+
+====
+
+[NOTE]
+====
+
+Pogledajte također i xref:/commands/ProstiFaktori.adoc[naredbu ProstiFaktori] i xref:/commands/Faktoriziraj.adoc[naredbu
+Faktoriziraj].
+
+====
+
+[NOTE]
+====
+
+Svi faktori nisu ireducibilni na skupu realnih brojeva.
+
+====
+
+[EXAMPLE]
+====
+
+`++Faktor[x^8 - 1]++` daje _\{\{x^4 + 1, 1}, \{x^2 + 1, 1}, \{x + 1, 1}, \{x - 1, 1}}_, prikazano u obliku matrice
+stem:[\begin\{pmatrix} x^4+1&1\\ x^2+1&1\\ x+1&1\\ x-1&1 \end\{pmatrix}].
+
+====

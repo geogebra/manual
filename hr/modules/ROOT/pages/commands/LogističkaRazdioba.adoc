@@ -1,0 +1,29 @@
+= LogističkaRazdioba naredba
+:page-en: commands/Logistic
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+LogističkaRazdioba[ <očekivanje μ>, <skala s>, x ]::
+  Kreira funkciju gustoće vjerojatnosti (fgv) za https://en.wikipedia.org/wiki/Logistic_distribution[logističku
+  razdiobu] zadanu parametrima _μ, s_.
+LogističkaRazdioba[ <očekivanje μ>, <skala s>, x, <kumulacija - logička vrijednost> ]::
+  Ako je _kumulacija - logička vrijednost_ = true, izradit će kumulativnu funkciju distribucije logističke razdiobe, u
+  suprotnom će izraditi fgv za logističku razdiobu.
+LogističkaRazdioba[ <očekivanje μ>, <skala s>, <vrijednost varijable v> ]::
+  Izračunava vrijednost kumulativne funkcije distribucije logističke razdiobe za zadani _v_, t.j. vjerojatnost _P(X≤v)_
+  gdje je _X_ slučajna varijabla logističke razdiobe zadane parametrima _μ, s_.
+
+[NOTE]
+====
+
+Daje vjerojatnost za zadanu vrijednost _x_-koordinate (ili površinu ispod krivulje logističke razdiobe lijevo od zadane
+_x_-koordinate).
+
+====
+
+== CAS prikaz
+
+xref:/CAS_prikaz.adoc[CAS prikaz] podržava samo sljedeću sintaksu:
+
+LogističkaRazdioba[ <očekivanje μ>, <skala s>, <vrijednost varijable v> ]::
+  Izračunava vrijednost kumulativne funkcije distribucije logističke razdiobe za zadani _v_, t.j. vjerojatnost _P(X≤v)_
+  gdje je _X_ slučajna varijabla logističke razdiobe zadane parametrima _μ, s_.

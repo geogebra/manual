@@ -1,0 +1,17 @@
+= BrukMatrise Kommando
+:page-en: commands/ApplyMatrix
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+BrukMatrise[ <Matrise M>, <Objekt O> ]::
+  Transformerer objektet slik at punktet _P_ på _O_ vert avbilda til
+
+* punktet _M*P_ dersom _M_ er ei 2x2 matrise, eller
+* punktet _projiser(M*(x(P), y(P), 1))_ der _projiser_ er ein projeksjon som avbildar punktet _(x, y, z)_ til punktet
+_(x/z, y/z)_ når _M_ er ei 3x3 matrise.
+
+[NOTE]
+====
+
+*Merk:* Objektet kan også vere eit bilete.
+
+====

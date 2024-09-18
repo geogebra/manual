@@ -1,0 +1,39 @@
+= NIntegral Kommando
+:page-en: commands/NIntegral
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Denne kommandoen er tilgjengeleg berre i xref:/CAS_delen.adoc[CAS-delen].
+
+NIntegral[ <Funksjon f>, <Tal a>, <Tal b> ]::
+  Finn det bestemte integralet stem:[\int_a^bf(x)\mathrm\{d}x] numerisk.
+NIntegral[ <Funksjon f>, <Variabel t>, <Tal a>, <Tal b>]::
+  Finn det bestemte integralet stem:[\int_a^bf(t)\mathrm\{d}t] numerisk.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++NIntegral[ℯ^(-a^2), a, 0, 1]++` gjev _0.746824132812427_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++NIntegral[ℯ^(-x^2), 0, 1]++` gjev _0.746824132812427_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* I staden for å bruke _ℯ^x_ for eksponentialfunksjonen kan du bruke _exp(x)_. Sjå
+xref:/Førehandsdefinerte_funksjonar_og_operatorar.adoc[Førehandsdefinerte funksjonar og operatorar].
+* ℯ skriv du ved å bruke [.kcode]#Alt # + [.kcode]# e#.
+
+====

@@ -1,0 +1,32 @@
+= ErKonsyklisk Kommando
+:page-en: commands/AreConcyclic
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Varsel,title="Varsel",width=18,height=18] *Varsel*: |Denne kommandoen er ikkje ferdig
+konstruert. Syntaksen og returnerte verdiar kan verte endra.
+|===
+
+ErKonsyklisk[ <Punkt>, <Punkt>, <Punkt>, <Punkt> ]::
+  Avgjer om punkta er konsykliske.
+  Normalt vil denne kommandoen finne svaret numerisk. Ved bruk av kommandoen xref:/commands/Bevis.adoc[Bevis] er det
+  imidlertid mogleg å gjere dette eksakt.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++ErKonsyklisk[(1, 2), (3, 4), (1, 4), (3, 2)]++` gjev _true_ sidan punkta ligg på same sirkel.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoane xref:/commands/ErKolineær.adoc[ErKolineær], xref:/commands/ErLike.adoc[ErLike],
+xref:/commands/ErParallell.adoc[ErParallell], xref:/commands/ErSamanfallande.adoc[ErSamanfallande] og
+xref:/commands/ErVinkelrett.adoc[ErVinkelrett].
+
+====

@@ -1,0 +1,72 @@
+= Element naredba
+:page-en: commands/Element
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Element[ <lista>, <pozicija elementa n> ]::
+  Daje _n_-ti element zadane liste.
+Element[ <matrica>, <redak>, <stupac> ]::
+  Daje element matrice iz zadanog retka i stupca.
+Element[ <lista L>, <indeks1>, <indeks2>, ... ]::
+  Pedviđena lista L je _n_-dimenzionalna lista, pa se može specificirati do _n_ indeksa kako bi se dobio element (ili
+  lista elemenata) sa zadanim koordinatama.
+
+[EXAMPLE]
+====
+
+Neka je _L=\{\{\{1, 2}, \{3, 4}}, \{\{5, 6}, \{7, 8}}}_. Tada naredba `++Element[L, 1, 2, 1]++` daje _3_, a
+`++Element[L, 2, 2]++` daje _\{7, 8}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Element[{{1, 3, 2}, {0, 3, -2}}, 2, 3]++` daje _-2_, treći element drugoga retka matrice
+stem:[\begin\{pmatrix}1&3&2\\0&3&-2\end\{pmatrix}].
+
+====
+
+[EXAMPLE]
+====
+
+`++Element[{1, 3, 2}, 2]++` daje _3_, drugi element iz _\{1, 3, 2}_.
+
+====
+
+[NOTE]
+====
+
+Kako bi ova naredba imala smisla, liste ili matirce moraju sadržavati samo objekte istoga tipa (npr., samo brojeve ili
+samo točke).
+
+====
+
+== CAS prikaz
+
+Element[ <lista>, <pozicija elementa> ]::
+  Daje _n_-ti element zadane liste.
+Element[ <matrica>, <redak>, <stupac> ]::
+  Daje element matrice iz zadanog retka i stupca.
+
+[EXAMPLE]
+====
+
+`++Element[{{a, b, c}, {d, e, f}}, 2, 3]++` daje _f_, treći element drugoga retka
+matricestem:[\begin\{pmatrix}a&b&c\\d&e&f\end\{pmatrix}].
+
+====
+
+[EXAMPLE]
+====
+
+`++Element[{a, b, c}, 2]++` daje _b_, drugi element iz _\{a, b, c}_.
+
+====
+
+[NOTE]
+====
+
+Pogledajte još i naredbe xref:/commands/Početni.adoc[Početni], xref:/commands/Posljednji.adoc[Posljednji] i
+xref:/commands/SlučajniElement.adoc[SlučajniElement].
+
+====

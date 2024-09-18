@@ -1,0 +1,37 @@
+= Uniform Kommando
+:page-en: commands/Uniform
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Uniform[ <Nedre grense min>, <Øvre grense maks>, x ]::
+  Lagar https://en.wikipedia.org/wiki/nn:Sannsynstettleiksfunksjon[sannsynstettleiksfunksjonen] til den uniforme
+  fordelinga på intervallet _[min, maks]_.
+Uniform[ <Nedre grense min>, <Øvre grense maks>, <Variabelverdi v> ]::
+  Finn verdien av den https://en.wikipedia.org/wiki/no:Kumulativ_fordelingsfunksjon[kumulative fordelingsfunksjonen] til
+  den uniforme fordelinga ved _v_. Det vil seie sannsynet _P(X≤v)_ der _X_ er ein uniformt fordelt stokastisk variabel
+  på intervallet _[min, maks]_.
+Uniform[ <Nedre grense min>, <Øvre grense maks>, x, <Boolsk kumulativ> ]::
+  La _X_ vere ein uniformt fordelt stokastisk variabel på intervallet _[min, maks]_.
+  * Dersom _kumulativ = false_ vert
+  https://en.wikipedia.org/wiki/nn:Sannsynstettleiksfunksjon[sannsynstettleiksfunksjonen] til _X_ returnert
+  * Dersom _kumulativ = true_ vert den https://en.wikipedia.org/wiki/no:Kumulativ_fordelingsfunksjon[kumulative
+  fordelingsfunksjonen] til _X_ returnert
+
+[NOTE]
+====
+
+*Merk:*
+
+* Sjå også kommandoen xref:/commands/TilfeldigUniform.adoc[TilfeldigUniform].
+* Sjå også kommandoane for dei andre kontinuerlege sannsynsfordelingane xref:/commands/Erlang.adoc[Erlang],
+xref:/commands/FordelingCauchy.adoc[Fordeling Cauchy], xref:/commands/FordelingF.adoc[FordelingF],
+xref:/commands/FordelingGamma.adoc[FordelingGamma], xref:/commands/FordelingNormal.adoc[FordelingNormal],
+xref:/commands/FordelingT.adoc[FordelingT], xref:/commands/FordelingWeibull.adoc[FordelingWeibull],
+xref:/commands/KjiKvadrat.adoc[KjiKvadrat], xref:/commands/LogNormal.adoc[LogNormal],
+xref:/commands/Logistisk.adoc[Logistisk] og xref:/commands/Trekantfordeling.adoc[Trekantfordeling].
+* Sjå også kommandoane for dei diskrete sannsynsfordelingane xref:/commands/FordelingBernoulli.adoc[FordelingBernoulli],
+xref:/commands/FordelingBinomial.adoc[FordelingBinomial],
+xref:/commands/FordelingHypergeometrisk.adoc[FordelingHypergeometrisk],
+xref:/commands/FordelingPascal.adoc[FordelingPascal], xref:/commands/FordelingPoisson.adoc[FordelingPoisson] og
+xref:/commands/Zipf.adoc[Zipf].
+
+====

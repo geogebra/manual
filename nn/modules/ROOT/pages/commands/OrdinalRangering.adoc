@@ -1,0 +1,31 @@
+= OrdinalRangering Kommando
+:page-en: commands/OrdinalRank
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+OrdinalRangering[ <Liste L> ]::
+  Gjev ei liste der element _i_ er lik rangen til element _i_ i L.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++OrdinalRangering[{4, 1, 2, 3, 4, 2}]++` gjev \{5, 1, 2, 4, 6, 3}.
+* `++OrdinalRangering[{3, 2, 2, 1}]++` gjev \{4, 2, 3, 1}.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Rangen til eit element er posisjonen i lista det får når kommandoen `++Sorter[L]++` vert brukt. Dersom det finst
+fleire like element i _L_ vil dei få rang _n_, _n + 1_ og så vidare.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoen xref:/commands/BundenRangering.adoc[BundenRangering].
+
+====

@@ -1,0 +1,81 @@
+= StupčastiDijagram naredba
+:page-en: commands/BarChart
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+StupčastiDijagram[ <lista podataka>, <lista frekvencija> ]::
+  Crta stupčasti dijagram koristeći listu podataka s odgovarajućim frekvencijama.
+
+[NOTE]
+====
+
+Listu podataka moraju činiti brojevi aritmetičkog reda.
+
+====
+
+[EXAMPLE]
+====
+
+* `++StupčastiDijagra[{10,11,12,13,14}, {5,8,12,0,1}]++`
+* `++StupčastiDijagra[{5, 6, 7, 8, 9}, {1, 0, 12, 43, 3}]++`
+* `++StupčastiDijagra[{0.3, 0.4, 0.5, 0.6}, {12, 33, 13, 4}]++`
+
+====
+
+StupčastiDijagram[ <lista podataka>, <lista frekvencija>, <širina stupaca w> ]::
+  Crta stupčasti dijagram koristeći listu podataka i odgovarajuću listu frekvencija; stupci su širine "w".
+
+[NOTE]
+====
+
+Listu podataka moraju činiti brojevi aritmetičkog reda.
+
+====
+
+[EXAMPLE]
+====
+
+* `++StupčastiDijagram[{10,11,12,13,14}, {5,8,12,0,1}, 0.5]++` ostavlja razmak između stupaca.
+* `++StupčastiDijagram[{10,11,12,13,14}, {5,8,12,0,1}, 0]++` daje linijski dijagram.
+
+====
+
+StupčastiDijagram[ <lista neobrađenih podataka>, <širina stupaca> ]::
+  Crta stupčasti dijagram koristeći listu neobrađenih podataka; stupci su zadane širine.
+
+[EXAMPLE]
+====
+
+`++StupčastiDijagram[ {1,1,1,2,2,2,2,2,3,3,3,5,5,5,5}, 1]++`
+
+====
+
+StupčastiDijagram[ <početna vrijednost>, <završna vrijednost>, <lista visina> ]::
+  Crta stupčasti dijagram na danom intervalu: broj stupaca određuje duljina liste, a njeni elementi određuju visinu
+  stupaca.
+
+[EXAMPLE]
+====
+
+`++StupčastiDijagram[10, 20, {1,2,3,4,5} ]++` daje stupčasti dijagram s pet stupaca navedenih visina na intervalu [_10,
+20_].
+
+====
+
+StupčastiDijagram[ <početna vrijednost a>, <završna vrijednost b>, <izraz>, <varijabla k>, <od broja c>, <do broja d>
+]::
+  Crta stupčasti dijagram na danom intervalu [_a, b_]. Visine stupaca izračunava zadani izraz kojem varijabla "k" varira
+  od broja "c" do broja "d".
+
+[EXAMPLE]
+====
+
+Ako su _p = 0.1_, _q = 0.9_ i _n = 10_ zadani brojevi, onda
+`++StupčastiDijagra[ -0.5, n + 0.5, BinomniKoeficijent[n,k]*p^k*q^(n-k), k, 0, n ]++` daje stupčasti dijagram na
+intervalu [_-0.5, n+0.5_]. Visine stupaca ovise o izračunataoj vjerojatnosti pomoću danog izraza.
+
+====
+
+StupčastiDijagram[ <početna vrijednost a>, <završna vrijednost b>, <izraz>, <varijabla k>, <od broja c>, <do broja d>,
+<širina koraka s> ]::
+  Crta stupčasti dijagram na danom intervalu [_a, b_]. Visine stupaca izračunava zadani izraz u koje varijabla "k"
+  varira od broja "c" do broja "d" korakom "s".

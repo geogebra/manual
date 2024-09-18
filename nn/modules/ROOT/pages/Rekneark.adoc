@@ -1,0 +1,76 @@
+= Rekneark
+:page-en: Spreadsheet_View
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+I GeoGebra sitt rekneark har kvar celle eit eige namn som let deg direkte adressere kvar celle. Til dømes vil cella i
+kolonne A og rad 1 heite A1.
+
+[NOTE]
+====
+
+*Merk:* Desse cellenamna kan verte brukt i uttrykk og kommandoar for å adressere innhaldet i samsvarande celle.
+
+====
+
+I cellene i reknearket kan du ikkje berre leggje inn tal, men også alle typar xref:/Generelle_objekt.adoc[generelle] og
+xref:/Geometriske_objekt.adoc[geometriske objekter] som vert støtta av GeoGebra (til dømes koordinatar til punkt,
+xref:/Funksjonar.adoc[funksjonar] og xref:/Kommandoar.adoc[kommandoar]). Dersom det er mogleg vil GeoGebra umiddelbart
+vise ein grafisk representasjon av objektet du skrev i cella i xref:/Grafikkfelt.adoc[grafikkfeltet]. Namnet til
+objektet i grafikkfeltet samsvarer med namnet på cella i reknearket som vart brukt for å lage det.
+
+[EXAMPLE]
+====
+
+*Døme:* Skriv (1,1) i cella B4. Punktet (1,1) vert vist i grafikkfeltet med namnet B4.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Som standard er objekt i reknearket klassifisert som
+xref:/Frie_objekt_avhengige_objekt_og_hjelpeobjekt.adoc[hjelpeobjekt] i xref:/Algebrafelt.adoc[algebrafeltet].
+
+====
+
+== Relative cellenamn
+
+Dersom du kopierer innhald frå ei celle til ei anna vil som standard alle referansar tilsvarende målet sin posisjon
+verte endra.
+
+[EXAMPLE]
+====
+
+*Døme:* La A1=1, A2=2. Sett B1 til `++(A1, A1)++`. Ved å kopiere B1 til B2 (anten via [.kcode]#Ctrl# + [.kcode]#C#,
+[.kcode]#Ctrl# + [.kcode]#V# eller ved å dra i cella sitt hjørne), får du `++(A2, A2)++` i B2.
+
+====
+
+[NOTE]
+====
+
+*Merk:* På Mac er kopier og lim xref:/Tastatursnarvegar.adoc[snarvegane] [.kcode]#Cmd# + [.kcode]#C# og [.kcode]#Cmd# +
+[.kcode]#V#.
+
+====
+
+For å unngå dette, kan du setje $ før kolonna og/eller raden med den refererte cella. `++$A1++` låser kun kolonnen,
+`++A$1++` låser kun raden og `++$A$1++` låser både rad og kolonne.
+
+[EXAMPLE]
+====
+
+*Døme:* I dømet over, sett B1 til `++($A$1,A1)++` for å låse den eine referansecella ved kopiering. Når B1 vert kopiert
+til B2 vil B2 innehalde `++(A1,A2)++`.
+
+====
+
+== Få data inn i reknearket
+
+Foruten å manuelt leggje til oppføringar i reknearket kan du bruke xref:/commands/FyllKolonne.adoc[FyllKolonne],
+xref:/commands/FyllRad.adoc[FyllRad] eller xref:/commands/FyllCeller.adoc[FyllCeller]. Sjå også sida
+xref:/Sporing.adoc[sporing til rekneark].
+
+== Bruk reknearkdata i andre visningar
+
+Du kan handsame reknearkdata ved å velje fleire celler, høgreklikke og velje eit element frå "Lag"-undermenyen.

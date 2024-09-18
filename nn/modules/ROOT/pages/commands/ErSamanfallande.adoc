@@ -1,0 +1,34 @@
+= ErSamanfallande Kommando
+:page-en: commands/AreConcurrent
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Varsel,title="Varsel",width=18,height=18] *Varsel*: |Denne kommandoen er ikkje ferdig
+konstruert. Syntaksen og returnerte verdiar kan verte endra.
+|===
+
+ErSamanfallande[ <Linje>, <Linje>, <Linje> ]::
+  Avgjer om linjene er samanfallande. Dersom linjene er parallelle, er dei ansett å ha eit felles punkt i uendeleg slik
+  at kommandoen gjev _true_ i det tilfellet.
+  Normalt vil denne kommandoen finne svaret numerisk. Ved bruk av kommandoen xref:/commands/Bevis.adoc[Bevis] er det
+  imidlertid mogleg å gjere dette eksakt.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++ErSamanfallande[Linje[(1, 2), (3, 4)], Linje[(1, 2), (3, 5)], Linje[(1, 2), (3, 6)]]++` gjev _true_ sidan alle
+linjene går gjennom punktet (1,2).
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoane xref:/commands/ErKolineær.adoc[ErKolineær], xref:/commands/ErKonsyklisk.adoc[ErKonsyklisk],
+xref:/commands/ErLike.adoc[ErLike], xref:/commands/ErParallell.adoc[ErParallell] og
+xref:/commands/ErVinkelrett.adoc[ErVinkelrett].
+
+====

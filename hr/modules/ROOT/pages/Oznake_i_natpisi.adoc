@@ -1,0 +1,81 @@
+= Oznake i natpisi
+:page-en: Labels_and_Captions
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+U GeoGebri, svaki objekt ima jedinstvenu *oznaku*. Za označavanje objekta možete izabrati jedno ili više slova, moguće
+je i sa indeksom. Za detalje pogledajte xref:/Imenovanje_objekata.adoc[Imenovanje objekata].
+
+== Pokazivanje i skrivanje oznaka
+
+Možete pokazati ili sakriti oznaku objekta u grafičkom prikazu na razne načine:
+
+* Odaberite alat image:Tool_Show_Hide_Label.gif[Tool Show Hide Label.gif,width=32,height=32]
+xref:/tools/Pokaži_sakrij_oznaku.adoc[Pokaži / sakrij oznaku] i kliknite na objekt čiju oznaku želite sakriti ili
+pokazati.
+* Otvorite xref:/Skočni_izbornik.adoc[Skočni izbornik] željenog objekta i izaberite image:Tool_Show_Hide_Label.gif[Tool
+Show Hide Label.gif,width=32,height=32] Pokaži oznaku.
+* Otvorite xref:/Dijaloški_okvir_Svojstva.adoc[Dijaloški okvir Svojstva] željenog objekta i označite ili odznačite
+kontrolni okvir Pokaži oznaku u kartici Osnovno.
+
+== Naziv i Vrijednost
+
+U GeoGebri, svaki objekt ima jedinstven naziv koji se može koristiti za označavanje u grafičkom prikazu. Osim toga,
+objekt se može označiti koristeći njegovu vrijednost ili koristeći naziv i vrijednost. Postavke označavanja možete
+mijenjati u dijaloškom okviru svojstva izborom odgovarajuće opcije Naziv, Vrijednot, ili Naziv i vrijednost iz padajućeg
+izbornika desno od kontrolnog okvira Pokaži oznaku.
+
+[NOTE]
+====
+
+Vrijednost točke su njene koordinate, dok je vrijednost funkcije njena jednadžba.
+
+====
+
+== Natpis
+
+Međutim, nekad ćete poželjeti različitim objektima zadati jednaku oznaku, na primjer, kako biste označili četiri
+stranice kvadrata `++a++`. U tom slučaju, GeoGebra daje, umjesto tri gore spomenute opcije, mogućnost izbora natpisa za
+označavanje objekta. Natpis možete postaviti u dijaloškom okviru svojstva tako da upišete željeni natpis u tekstualno
+polje Natpis: kartice Osnovno. Nakon toga, možete izabrati opciju "Natpis" iz padajućeg izbornika desno od kontorlnog
+okvira "Pokaži oznaku".
+
+Možete koristiti i slijedeće zamjenske znakove u natpisima:
+
+[cols=",",options="header",]
+|===
+|Zamjenski znak |Značenje
+|%v |Vrijednost
+|%n |Naziv
+|%x |x koordinata (ili x koeficijent pravca a x + b y + c = 0)
+|%y |y koordinata (ili x koeficijent pravca a x + b y + c = 0)
+|%z |slobodni član 'c' pravca a x + b y + c = 0 (također: z-koordinata, kod 3D prikaza)
+|===
+
+[EXAMPLE]
+====
+
+Neka je A točka s koordinatama (1,2). Upišemo li za natpis "Točka %n ima koordinate %v" dobit ćemo natpis "Točka A ima
+koordinate (1,2)"
+
+====
+
+=== LaTeX u natpisima
+
+Možete u oznakama koristiti i xref:/LaTeX.adoc[LaTeX], tako da željenu LaTeX naredbu zatvorite znakovima za dolar (npr.
+*$ x^\{2} $*), ili izabrati s liste najčešće korištena grčka slova i operatore, tako da kliknete na mali okvirić na
+kraju polja za natpis.
+
+[EXAMPLE]
+====
+
+ako želite prikazati lijepo formatiran matematički tekst, koristeći LaTeX, u naslovima, npr. koristiti razlomak u
+natpisu, u tekstualnom polju natpisa upišite "$\frac\{a}\{b}$"
+
+====
+
+[NOTE]
+====
+
+LaTeX natpisi ne rade za tekstualna polja, gumbe i potvrdne okvire.
+
+====

@@ -1,0 +1,17 @@
+= Ljuska naredba
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Ljuska[ <lista točaka>, <postotak p> ]::
+  Kreira karakterističnu ljusku točaka kako je opisano u http://www.geosensor.net/papers/duckham08.PR.pdf[Efficient
+  generation of simple polygons for characterizing the shape of a set of points in the plane]. Za _p=1_, rezultat je
+  isti kao i kod naredbe xref:/commands/KonveksnaLjuska.adoc[KonveksnaLjuska]. Ako je postotak manji, bit će i manja
+  površina ljuske. Za _p=0_ površina dobivenog oblika nije nužno minimalna.
+  Izlazni objekt je xref:/commands/Lokus.adoc[lokus], koji je xref:/Nezavisni_Zavisni_i_Pomoćni_objekti.adoc[pomoćni]
+  objekt.
+
+[NOTE]
+====
+
+Vrijednosti za _p_ veće od 1 uzimaju se kao 1, vrijednosti manje od 0 uzimaju se kao 0.
+
+====

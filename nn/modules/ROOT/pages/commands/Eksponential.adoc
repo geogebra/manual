@@ -1,0 +1,43 @@
+= Eksponential Kommando
+:page-en: commands/Exponential
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Eksponential[ <Tal λ>, x ]::
+  Lagar https://en.wikipedia.org/wiki/nn:Sannsynstettleiksfunksjon[sannsynstettleiksfunksjonen] til
+  eksponentialfordelinga med vekstparameter _λ_.
+Eksponential[ <Tal λ>, <Variabelverdi v> ]::
+  Finn verdien av den https://en.wikipedia.org/wiki/no:Kumulativ_fordelingsfunksjon[kumulative fordelingsfunksjonen] til
+  eksponentialfordelinga ved _v_. Det vil seie sannsynet _P(X≤v)_ der _X_ er ein eksponentialfordelt stokastisk variabel
+  med vekstparameter _λ_.
+Eksponential[ <Tal λ>, x, <Boolsk Kumulativ> ]::
+  La _X_ vere ein eksponentialfordelt stokastisk variabel med parameter _λ_.
+  * Dersom _kumulativ = false_ vert
+  https://en.wikipedia.org/wiki/nn:Sannsynstettleiksfunksjon[sannsynstettleiksfunksjonen] til _X_ returnert
+  * Dersom _kumulativ = true_ vert den https://en.wikipedia.org/wiki/no:Kumulativ_fordelingsfunksjon[kumulative
+  fordelingsfunksjonen] til _X_ returnert
+
+[NOTE]
+====
+
+*Merk:*
+
+* Sjå også verktøyet image:Tool_Probability_Calculator.gif[Tool Probability Calculator.gif,width=32,height=32]
+xref:/tools/Sannsynskalkulator.adoc[Sannsynskalkulator].
+* Sjå også kommandoen xref:/commands/InversEksponential.adoc[InversEksponential].
+
+====
+
+== CAS-delen
+
+Eksponential[ <Tal λ>, <Variabelverdi v> ]::
+  Finn verdien av den kumulative fordelingsfunksjonen til eksponentialfordelinga ved _v_. Det vil seie sannsynet
+  _P(X≤v)_ der _X_ er ein eksponentialfordelt stokastisk variabel med vekstparameter _λ_.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Eksponential[2, 1]++` gjev _stem:[\frac\{e^\{2} - 1}\{e^\{2} } ]_, som er tilnærma lik _0.86_.
+
+====

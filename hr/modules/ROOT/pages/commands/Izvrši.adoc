@@ -1,0 +1,27 @@
+= Izvrši naredba
+:page-en: commands/Execute
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Izvrši[ <lista tekstova> ]::
+  Izvršava listu naredbi koje su upisane kao tekstiovi.
+
+[EXAMPLE]
+====
+
+* `++Izvrši[{"A=(1,1)","B=(3,3)","C=Središte[A,B]"}]++` izradit će točke _A, B_ i njihovo središte _C_.
+
+* `++Izvrši[Spoji[{"f_{1}=1","f_{2}=1"},Niz["f_{"+(i+2)+"}=f_{"+(i+1)+"}+f_{"+i+"}",i,1,10]]]++` načinit će niz od prvih
+10 elemenata https://en.wikipedia.org/wiki/Fibonacci_sequence[Fibonaccijevog niza].
+
+====
+
+Izvrši[ <lista tekstova>, <parametar>, <parametar>, ... ]::
+  Zamjenjuje %1 s parametrom 1, %2 s parametrom 2 i tako redom za svaki tekst liste. Može se zadati najviše 9
+  parametara. Nakon zamjene, scripta će se izvršiti.
+
+[EXAMPLE]
+====
+
+`++Izvrši[{"Središte[%1,%2]"},A,B]++` napravit će središte dužine _AB_.
+
+====

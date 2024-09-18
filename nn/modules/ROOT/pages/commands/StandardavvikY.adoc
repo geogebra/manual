@@ -1,0 +1,28 @@
+= StandardavvikY Kommando
+:page-en: commands/SDY
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+StandardavvikY[ <Liste med punkt> ]::
+  Finn https://en.wikipedia.org/wiki/nn:Standardavvik[standardavviket] til _y_-koordinatane til punkta i lista.
+
+[EXAMPLE]
+====
+
+*Døme:* `++StandardavvikY[(1, 2), (2, 4), (3, 6)]++` gjev 1.63.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Sjå også kommandoen xref:/commands/UtvalStandardavvikY.adoc[UtvalStandardavvikY]. Denne vert brukt for å finne
+standardavviket når ein berre har eit utval av data frå ein populasjon, medan standardavvik kommandoen nyttast når ein
+har data frå heile populasjonen. Jo fleire element det er i lista, desto meir likt blir resultatet for desse to
+kommandoane. Grunnen til dette er at det einaste som skil dei to statistiske storleikane er at utvalsstandardavviket har
+_N - 1_ i nemnaren, medan standardavviket har _N_, der _N_ er talet på element i lista.
+* Sjå også kommandoane xref:/commands/GjennomsnittY.adoc[GjennomsnittY],
+xref:/commands/Standardavvik.adoc[Standardavvik] og xref:/commands/StandardavvikX.adoc[StandardavvikX].
+
+====

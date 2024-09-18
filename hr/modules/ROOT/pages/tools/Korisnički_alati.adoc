@@ -1,0 +1,64 @@
+= Korisnički alati
+:page-en: tools/Custom_Tools
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Na temelju postojeće konstrukcije u GeoGebri možete napraviti svoje vlastite alate.
+
+Kada je napravljen, vaš se alat može koristiti na oba načina, pomoću miša (odabirom ikone iz alatne trake) i kao naredba
+iz xref:/Traka_za_unos.adoc[trake za unos]. Svi alati se automatski spremaju u vašu “ggb” datoteku.
+
+[NOTE]
+====
+
+Izlazni objekti ne mogu se pomicati sami po sebi, čak i kada su definirani kao `++Točka[<Putanja>]++`. Ako želite
+pomične objekta, možete definirati listu naredbi i korisitit ih pomoću naredbe xref:/commands/Izvrši.adoc[Izvrši].
+
+====
+
+== Izrada korisničkog alata
+
+Za stvaranje novog alata u izborniku xref:/Izbornik_Alati.adoc[Alati] odaberite
+xref:/Dijaloški_okvir_Izrada_novog_alata.adoc[Izrada novog alata]. U dijaloškom okviru koji se otvorio možete
+specificirati izlazne i ulazne objekte vašeg alata i odabrati ikonu, naziv za alat i naredbu.
+
+== Spremanje korisničkog alata
+
+Kada ste spremili konstrukciju kao GGB datoteku, svi su korisnički alati u njoj pohranjeni. Kako biste alate spremili u
+druge datoteke koristite xref:/Dijaloški_okvir_Upravljanje_alatima.adoc[Dijaloški okvir Upravljanje alatima] (opcija
+Upravljanje alatima... xref:/Izbornik_Alati.adoc[izbornika Alati]).
+
+== Dohvat korisničkih alata
+
+Ako otvorite novo Geogebra sučelje koristeći stavak Nova izbornika Datoteka, nakon što ste napravili korisnički alat, on
+će još uvijek biti dio GeoGebra alatne trake. Međutim ako otvrite novi GeoGebra prozor (stavak image:Menu_New.png[Menu
+New.png,width=16,height=16] Novi prozor izbornika xref:/Izbornik_Datoteka.adoc[Datoteka]), ili ako otvorite GeoGebru
+drugog dana, vaš korisnički alat neće biti dio alatne trake. Različitim načinima možete osigurati da vaš korisnički alat
+bude prikazan kao dio alatne trake kod otvaranja novog GeoGebra prozora:
+
+Nakon što ste napravili novi korisnički Možete pospremiti postavke koristeći gumb Spremi postavke u
+xref:/Dijaloški_okvir_Postavke.adoc[dijaloškom okviru Postavke] izbornika xref:/Izbornik_Postavke.adoc[Postavke]. Od tog
+trenutka, vaš će korisnički alat biti dio alatne trake.
+
+[NOTE]
+====
+
+Možete premjestiti ikonu vašeg alata iz alatne trake uz pomoć dijaloškog okvira Prilagodba alatne trake… izbornika
+xref:/Izbornik_Alati.adoc[Alati]. Tada odaberite vaš korisnički alat s liste alata na lijevoj strani dijaloškog okvira i
+kliknite na gumb Ukloni. Nemojte zaboraviti spremiti postavke nakon što ste uklonili vaš korisnički alat.
+
+====
+
+== Uvoz korisničkog alata
+
+Nakon što ste spremili vaš korisnički alat na računalo (kao GGT datoteku), možete ga uvesti u novi GeoGebra prozor u
+bilo kojem trenutku. Jednostavno odaberite stavak image:Menu_Open.png[Menu Open.png,width=16,height=16] Otvori izbornika
+xref:/Izbornik_Datoteka.adoc[Datoteke] i otvorite datoteku s vašim korisničkim alatom.
+
+[NOTE]
+====
+
+* Otvaranje GeoGebra datoteke (GGT), koja sadrži ala, neće imati utjecaja na vašu trenutnu konstrukciju, već će samo taj
+alat postati dio alatne trake.
+* Također možete ubaciti GGT datoteku povlačeći ju s foldera u kojem se nalazi i ispuštajući ju u GeoGebra prozor.
+
+====

@@ -1,0 +1,103 @@
+= Siste Kommando
+:page-en: commands/Last
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Siste[ <Liste L> ]::
+  Lagar ei ny liste som inneheld det siste elementet i _L_.
+Siste[ <Liste L>, <Tal på element n> ]::
+  Lagar ei ny liste som inneheld dei siste _n_ elementa i _L_.
+Siste[ <Tekst> ]::
+  Gjev det siste teiknet i teksten.
+Siste[ <Tekst>, <Tal på element n> ]::
+  Gjev dei siste _n_ teikna i teksten.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Siste["Hallo",2]++` gjev _"lo"_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Siste["Hallo"]++` gjev _"o"_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Siste[{1, 4, 3}, 2]++` gjev _\{4, 3}_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Siste[{1, 4, 3}]++` gjev _\{3}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* For å få det siste elementet i _L_ kan du bruke kommandoen `++Element[L, k]++`, der _k_ er talet på element i
+lista.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoen xref:/commands/Første.adoc[Første].
+
+====
+
+== CAS-delen
+
+Siste[ <Liste L> ]::
+  Lagar ei ny liste som inneheld det siste elementet i _L_.
+Siste[ <Liste L>, <Tal på element n> ]::
+  Lagar ei ny liste som inneheld dei siste _n_ elementa i _L_.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Siste[{1, 4, 3}, 2]++` gjev _\{4, 3}_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Siste[{1, 4, 3}]++` gjev _\{3}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* For å få det siste elementet i _L_ kan du bruke kommandoen `++Element[L, k]++`, der _k_ er talet på element i
+lista.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoen xref:/commands/Første.adoc[Første].
+
+====

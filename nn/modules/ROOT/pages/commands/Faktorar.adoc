@@ -1,0 +1,90 @@
+= Faktorar Kommando
+:page-en: commands/Factors
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Faktorar[ <Polynom> ]::
+  Gjev ei liste med lister av typen _\{faktor, eksponent}_ slik at produktet av alle desse faktorane opphøgd i den
+  tilsvarande eksponenten gjev polynomet. Faktorane er sortert etter grad i synkande orden.
+Faktorar[ <Tal> ]::
+  Gjev ei liste med lister av typen _\{primtal, eksponent}_ slik at produktet av alle desse primtala opphøgd i den
+  tilsvarande eksponenten gjev talet. Primtala er sortert i stigande rekkefølgje.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++Faktorar[1024]++` gjev _\{\{2, 10}}_, sidan stem:[1024 = 2^\{10}].
+* `++Faktorar[42]++` gjev _\{\{2, 1}, \{3, 1}, \{7, 1}}_, sidan stem:[42 = 2^1 * 3^1 * 7^1].
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Faktorar[x^8 - 1]++` gjev _\{\{x^4 + 1, 1}, \{x^2 + 1, 1}, \{x + 1, 1}, \{x - 1, 1}}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Ikkje alle desse faktorane er ureduserbare over dei reelle tala.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoane xref:/commands/Primfaktorar.adoc[Primfaktorar] og
+xref:/commands/Faktoriser.adoc[Faktoriser].
+
+====
+
+== CAS-delen
+
+Faktorar[ <Polynom> ]::
+  Gjev ei liste med lister av typen _\{faktor, eksponent}_ slik at produktet av alle desse faktorane opphøgd i den
+  tilsvarande eksponenten gjev polynomet. Faktorane er sortert etter grad i synkande orden.
+Faktorar[ <Tal> ]::
+  Gjev ei liste med lister av typen _\{primtal, eksponent}_ slik at produktet av alle desse primtala opphøgd i den
+  tilsvarande eksponenten gjev talet. Primtala er sortert i stigande rekkefølgje.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++Faktorar[1024]++`gjev _\{\{2, 10}}_, vist som stem:[\begin\{pmatrix} 2&10 \end\{pmatrix}], sidan stem:[1024 =
+2^\{10}].
+** `++Faktorar[42]++` gjev _\{\{2, 1}, \{3, 1}, \{7, 1}}_, vist som stem:[\begin\{pmatrix} 2&1\\ 3&1\\ 7&1
+\end\{pmatrix}], sidan stem:[42 = 2^1 * 3^1 * 7^1].
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoane xref:/commands/Primfaktorar.adoc[Primfaktorar] og
+xref:/commands/Faktoriser.adoc[Faktoriser].
+
+====
+
+[NOTE]
+====
+
+*Merk:* Ikkje alle desse faktorane er ureduserbare over dei reelle tala.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Faktorar[x^8 - 1]++` gjev _\{\{x^4 + 1, 1}, \{x^2 + 1, 1}, \{x + 1, 1}, \{x - 1, 1}}_, vist som
+stem:[\begin\{pmatrix} x^4+1&1\\ x^2+1&1\\ x+1&1\\ x-1&1 \end\{pmatrix}].
+
+====

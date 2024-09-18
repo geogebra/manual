@@ -1,0 +1,97 @@
+= Integral Kommando
+:page-en: commands/Integral
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Integral[ <Funksjon> ]::
+  Finn det ubestemte integralet til funksjonen.
+Integral[ <Funksjon>, <Tal a>, <Tal b> ]::
+  Finn det bestemte integralet av funksjonen i intervallet _[a, b]_.
+Integral[ <Funksjon>, <Tall a>, <Tall b>, <Boolsk test> ]::
+  Skraverar området under funksjonen i intervallet _[a, b]_.
+  * Dersom _Boolsk test = true_ vert også det bestemte integralet i intervallet utrekna
+  * Dersom _Boolsk test = false_ vert ikkje det bestemte under funksjonen utrekna
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Integral[x^3]++` gjev stem:[\frac\{x^4}\{4}].
+
+====
+
+[NOTE]
+====
+
+*Merk:* Kommandoen vil også skravere arealet mellom grafen til funksjonen og x-aksen.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoen xref:/commands/IntegralMellom.adoc[IntegralMellom].
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også https://en.wikipedia.org/wiki/nn:Integral[Wikipedia på integral].
+
+====
+
+== CAS-delen
+
+Integral[ <Funksjon> ]::
+  Gjev det ubestemte integralet av funksjonen.
+Integral[ <Funksjon>, <Variabel> ]::
+  Gjevdet ubestemte integralet av funksjonen med omsyn på den gjevne variabelen.
+Integral[ <Funksjon>, <Tal a>, <Tal b> ]::
+  Gjev det bestemte integralet av funksjonen i intervallet _[a, b]_.
+Integral[ <Funksjon>, <Variabel>, <Tal a>, <Tal b> ]::
+  Gjev det bestemte integralet av funksjonen i intervallet _[a, b]_ med omsyn på den gjevne variabelen.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Integral[cos(t), t, a, b]++` gjev stem:[sin(b) - sin(a)].
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Integral[cos(x), a, b]++` gjev stem:[sin(b) - sin(a)].
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Integral[cos(a t), t]++` gjev stem:[\frac\{sin(a t)}\{a} + c_1].
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Integral[cos(x)]++` gjev stem:[sin(x) + c_1].
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også verktøyet image:Tool_Integral.gif[Tool Integral.gif,width=32,height=32]
+xref:/tools/Integral.adoc[Integral].
+
+====

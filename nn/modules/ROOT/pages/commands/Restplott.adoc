@@ -1,0 +1,17 @@
+= Restplott Kommando
+:page-en: commands/ResidualPlot
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Restplott[ <Liste med punkt L>, <Funksjon f> ]::
+  Gjev ei liste med punkt som har _x_-koordinatar lik _x_-koordinatane til elementa i _L_ og y-koordinatar lik restane
+  med omsyn på _f_. Dersom element _i_ i _L_ er eit punkt (_a_, _b_) vil element _i_ i resultatet vere gjeve av _(a, b -
+  f(a))_.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+La _L = \{(1, 1), (2, 2), (2, 5)}_ og _f(x) = x^2^_. `++Restplott[L, f]++` gjev då lista _\{(1, 0), (2, -2), (2, 1)}_.
+
+====

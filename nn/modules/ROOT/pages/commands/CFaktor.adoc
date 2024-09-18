@@ -1,0 +1,45 @@
+= CFaktor Kommando
+:page-en: commands/CFactor
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Denne kommandoen er tilgjengeleg berre i xref:/CAS_delen.adoc[CAS-delen].
+
+CFaktor[ <Uttrykk> ]::
+  https://en.wikipedia.org/wiki/nn:Faktorisering[Faktoriserer] uttrykket.
+CFaktor[ <Uttrykk>, <Variabel> ]::
+  https://en.wikipedia.org/wiki/nn:Faktorisering[Faktoriserer] eit uttrykk med omsyn på ein gjeven variabel.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++CFaktor[x^2 - y^2,x]++` gjev _(x + y) (x - y)_, som er faktoriseringa av _x^2^ - y^2^_ med omsyn på _x_.
+
+`++CFaktor[x^2 + y^2,y]++` gjev _(ί x + y) (-ί x + y)_, som er faktoriseringa av _x^2^ + y^2^_ med omsyn på _y_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++CFaktor[x^2 + 4]++` gjev _(x + 2 ί) (x - 2 ί)_, som er faktoriseringa av _x^2^ + 4_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* I CAS-delen må ί nyttast for den imaginære eininga. For å skrive ί trykker du [.kcode]#ALT # + [.kcode]# i#.
+* CFaktor tillet kun uttrykk som let seg faktorisere med https://en.wikipedia.org/wiki/no:Rasjonalt_tall[rasjonale]
+faktorar. Til dømes vil ikkje stem:[x^2-2] la seg faktorisere sidan faktorane stem:[(x-\sqrt\{2})(x+\sqrt\{2})] inneheld
+https://en.wikipedia.org/wiki/no:Irrasjonalt_tall[irrasjonelle tal].
+* I motsetning til kommandoane /s_index_php?title=Manual:Faktorar_Kommando_action=edit_redlink=1.adoc[Faktorar] og
+/s_index_php?title=Manual:Faktoriser_Kommando_action=edit_redlink=1.adoc[Faktoriser] tillet CFaktor også komplekse
+faktorar.
+
+====

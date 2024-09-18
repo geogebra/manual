@@ -1,0 +1,23 @@
+= RaščlaniNaFunkciju naredba
+:page-en: commands/ParseToFunction
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+RaščlaniNaFunkciju[ <funkcija>, <niz znakova> ]::
+  Raščlanjuje niz znakova i sprema rezultat kao xref:/Funkcije.adoc[funkciju] _f_. Funkcija _f_ mora biti definirana kao
+  xref:/Nezavisni_Zavisni_i_Pomoćni_objekti.adoc[nezavisna] prije upotrebe ove naredbe.
+
+[EXAMPLE]
+====
+
+Neka je "f" definirana kao `++f(x)=x^2++`. Nakon unosa naredbe `++RaščlaniNaFunkciju[f, "x^3"]++` dobit ćete funkciju
+$f(x)=x³$.
+
+====
+
+[EXAMPLE]
+====
+
+Neka je "f" definirana kao `++f(x)=x^2++`, a funkcija "g" kao `++g(x)=sin(x)++`. Nakon unosa naredbe
+`++RaščlaniNaFunkciju[f, "f(g(x))"]++` dobit ćete funkciju $f(x)=sin^2(x)$.
+
+====

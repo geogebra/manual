@@ -1,0 +1,61 @@
+= Posljednji naredba
+:page-en: commands/Last
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Posljednji[ <lista> ]::
+  Daje novu listu koja sadrži posljednji element liste.
+Posljednji[ <lista>, <broj elemenata n> ]::
+  Daje novu listu koja sadrži posljednjih _n_ elemenata iz zadane liste.
+Posljednji[ <tekst> ]::
+  Daje posljednji zank iz zadanog teksta.
+Posljednji[ <tekst>, <broj elemenata n> ]::
+  Daje posljednjih _n_ znakova iz zadanog teksta.
+
+[EXAMPLE]
+====
+
+`++Posljednji["Hello",2]++` daje _"lo"_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Posljednji["Hello"]++` daje _"o"_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Posljednji[{1, 4, 3}, 2]++` daje _\{4, 3}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Posljednji[{1, 4, 3}]++` daje _\{3}_.
+
+====
+
+[NOTE]
+====
+
+Kako biste dobili podljednji element liste koristite naredbu `++Element[{1, 4, 3}, 3]++`.
+
+====
+
+== CAS prikaz
+
+Posljednji[ <lista> ]::
+  Daje novu listu koja sadrži posljednji element liste.
+Posljednji[ <lista>, <broj elemenata n> ]::
+  Daje novu listu koja sadrži posljednjih _n_ elemenata iz zadane liste.
+
+[NOTE]
+====
+
+Pogledajte još i naredbu xref:/commands/Početni.adoc[Početni].
+
+====

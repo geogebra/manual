@@ -1,0 +1,65 @@
+= Max Naredba
+:page-en: commands/Max
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+Max[ <Broj>, <Broj > ]::
+  kao rezultat daje (naj)veći broj.
+Max[ <Lista> ]::
+  kao rezultat daje najveći broj niza brojeva.
+
+[EXAMPLE]
+====
+
+`++Max[{-2, 12, -23, 17, 15}]++` je _17_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Max[12, 15]++` je _15_.
+
+====
+
+[NOTE]
+====
+
+Ako su ulazni podaci ne-numeričke figure, naredba Max [] uzima u obzir numeričke vrijednosti povezane s tim figurama. Na
+primjer, naredba Max[Lista duži] kao rezultat će dati duž najveće dužine.
+
+====
+
+Max[ <Interval> ]::
+  kao rezultat daje gornju granicu intervala, na primjer naredba `++Max[2 < x < 3]++` daje rezultat 3. Rezultat, ove
+  naredbe, isti je i za otvoreni i za zatvoreni interval.
+Max[ <Funkcija>, <Početna x-vrijednost>, <Krajnja x-vrijednost> ]::
+  računa tačke maksimuma funkcije na datom intervalu, ukoliko ih ima.
+
+[NOTE]
+====
+
+Vidi naredba xref:/Ekstrem_Naredba.adoc[Ekstrem] i alat
+xref:/s_index_php?title=Inspektor_Funkcija_Alat_action=edit_redlink=1.adoc[Inspektor/Analiza funkcije].
+
+====
+
+== CAS Sintaksa
+
+Max[ <Lista> ]::
+  kao rezultat daje (naj)veći broj.
+Max[ <Broj>, <Broj> ]::
+  kao rezultat daje najveći broj niza brojeva.
+
+[EXAMPLE]
+====
+
+`++Max[{-2, 12, -23, 17, 15}]++` je _17_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Max[12, 15]++` je _15_.
+
+====

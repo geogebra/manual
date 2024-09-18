@@ -1,0 +1,67 @@
+= Min Naredba
+:page-en: commands/Min
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+Min[ <Broj>, <Broj> ]::
+  kao rezultat daje (naj)manji broj.
+Min[ <Lista> ]::
+  kao rezultat daje najmanji broj niza brojeva.
+
+[EXAMPLE]
+====
+
+`++Min[{-2, 12, -23, 17, 15}]++` je _-23_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Min[12, 15]++` je _12_.
+
+====
+
+[NOTE]
+====
+
+Ako su ulazni podaci ne-numeričke figure, onda naredba Min[] uzima u obzir numeričke vrijednosti povezane s tim
+figurama. Na primjer, naredba Min[Lista duži] kao rezultat će dati duž najmanje dužine.
+
+====
+
+Min[ <Interval> ]
+
+kao rezultat daje gornju granicu intervala, na primjer naredba `++Min[2 < x < 3]++` daje rezultat _2_. Rezultat, ove
+naredbe, isti je i za otvoreni i za zatvoreni interval.
+
+Min[ <Funkcija>, <Početna x-vrijednost>, <Krajnja x-vrijednost> ]::
+  računa tačke minimuma funkcije na datom intervalu, ukoliko ih ima.
+
+[NOTE]
+====
+
+Vidi naredba xref:/Ekstrem_Naredba.adoc[Ekstrem] i alat
+xref:/s_index_php?title=Inspektor_Funkcija_Alat_action=edit_redlink=1.adoc[Inspektor/Analiza funkcije].
+
+====
+
+== CAS Sintaksa
+
+Min[ <Lista> ]::
+  kao rezultat daje (naj)manji broj.
+Min[ <Broj>, <Broj> ]::
+  kao rezultat daje najmanji broj niza brojeva.
+
+[EXAMPLE]
+====
+
+`++Min[{-2, 12, -23, 17, 15}]++` je _-23_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Min[12, 15]++` je _12_.
+
+====

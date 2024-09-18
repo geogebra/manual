@@ -1,0 +1,110 @@
+= Første Kommando
+:page-en: commands/First
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Første[ <Liste L> ]::
+  Lagar ei ny liste som inneheld det første elementet i _L_.
+Første[ <Tekst> ]::
+  Gjev det første teiknet i teksten.
+Første[ <Liste L>, <Tal på element n> ]::
+  Lagar ei ny liste som inneheld dei første _n_ elementa i _L_.
+Første[ <Tekst>, <Tal på element n> ]::
+  Gjev dei første _n_ teikna i teksten.
+Første[ <Geometrisk stad>, <Tal på element n> ]::
+  Kommandoen er nyttig for
+  * xref:/commands/GeometriskStad.adoc[geometriske stadar] laga av kommandoen xref:/commands/LøysODE.adoc[LøysODE] - Han
+  gjev då ei liste med punkt som vart laga av dei _n_ første stega i den numeriske ODE-løysingsalgoritmen.
+  * xref:/commands/GeometriskStad.adoc[geometriske stadar] laga av kommandoane
+  xref:/commands/KortasteAvstand.adoc[KortasteAvstand], xref:/commands/KortasteRute.adoc[KortasteRute],
+  xref:/commands/Voronoi.adoc[Voronoi], xref:/commands/MinsteSpenntre.adoc[MinsteSpenntre],
+  xref:/commands/KonveksInnhylling.adoc[KonveksInnhylling] og xref:/commands/Innhylling.adoc[Innhylling] - Han gjev då
+  dei _n_ første nodane til grafen.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Første["Hallo", 2]++` gjev _"Ha"_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Første[{1, 4, 3}, 2]++` gjev _\{1, 4}_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Første["Hallo"]++` gjev _"H"_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Første[{1, 4, 3}]++` gjev _\{1}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* For å få det første elementet i _L_ kan du bruke kommandoen `++Element[L, 1]++`.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoen xref:/commands/Siste.adoc[Siste].
+
+====
+
+== CAS-delen
+
+Første[ <Liste L> ]::
+  Lagar ei ny liste som inneheld det første elementet i _L_.
+Første[ <Liste L>, <Tal på element n> ]::
+  Lagar ei ny liste som inneheld dei første _n_ elementa i _L_.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Første[{1, 4, 3}, 2]++` gjev _\{1, 4}_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Første[{1, 4, 3}]++` gjev _\{1}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* For å få det første elementet i _L_ kan du bruke kommandoen `++Element[L, 1]++`.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoen xref:/commands/Siste.adoc[Siste].
+
+====

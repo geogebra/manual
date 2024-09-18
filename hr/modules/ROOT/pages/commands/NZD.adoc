@@ -1,0 +1,61 @@
+= NZD naredba
+:page-en: commands/GCD
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+NZD[ <broj a>, <broj b> ]::
+  Izračunava najveći zajednički djelitelj brojeva _a_ i _b_.
+NZD[ <lista brojeva> ]::
+  Izračunava najveći zajednički djelitelj brojeva iz dane liste.
+
+[EXAMPLE]
+====
+
+`++NZD[{12, 30, 18}]++` daje _6_.
+
+====
+
+[EXAMPLE]
+====
+
+`++NZD[12, 15]++` daje _3_.
+
+====
+
+== CAS prikaz
+
+NZD[ <broj>, <broj> ]::
+  Izračunava najveći zajednički djelitelj dvaju brojeva.
+NZD[ <lista brojeva> ]::
+  Izračunava najveći zajednički djelitelj brojeva iz dane liste.
+NZD[ <polinom>, <polinom> ]::
+  Izračunava najveći zajednički djelitelj dvaju polinoma.
+NZD[ <lista polinoma> ]::
+  Izračunava najveći zajednički djelitelj dvaju polinoma.
+
+[EXAMPLE]
+====
+
+`++NZD[{x^2 + 4 x + 4, x^2 - x - 6, x³ - 4x² - 3x + 18}]++` daje _x + 2_.
+
+====
+
+[EXAMPLE]
+====
+
+`++NZD[x^2 + 4 x + 4, x^2 - x - 6]++` daje _x + 2_.
+
+====
+
+[EXAMPLE]
+====
+
+`++NZD[{a^3b,12a^3, 18a^2}]++` daje stem:[a^2].
+
+====
+
+[EXAMPLE]
+====
+
+`++NZD[12a, 15a]++` daje _3a_.
+
+====

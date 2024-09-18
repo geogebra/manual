@@ -1,0 +1,56 @@
+= Tekstovi
+:page-en: Texts
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Tekstove možemo lako kreirati upotrebom naredbe xref:/commands/Tekst.adoc[Tekst] ili alata
+image:Tool_Insert_Text.gif[Tool Insert Text.gif,width=32,height=32] xref:/tools/Umetanje_teksta.adoc[Umetanje teksta],
+ili povlačenjem objekta iz Aalgebarskog prikaza u grafički prikaz (ako na primjer iz algebarskog prikaza povlačimo
+funkciju u grafički prikaz, u grafičkom prikazu ćemo dobiti tekst koji sadrži jednadžbu funkcije). Drugi način je
+ukucavanjem direktno u xref:/Traka_za_unos.adoc[traku za unos] - preporuča se *naprednim korisnicima* (opisan je ispod).
+
+Statičan tekst::
+  ne zavisi o bilo kojem matematičkom objektu, obično promjene konstrukcije nemaju utjecaja na njega.
+
+Dinamičan tekst::
+  sadrži vrijednosti objekata koje se automatski prilagođavaju promjenama tih objekata.
+
+Mješoviti tekst::
+  je kombinacija statičnog i dinamičnog teksta. Kako biste napravili takav tekst, unosite statični dio teksta pomoću
+  tipkovnice (npr., Točka A =). Tada kliknite na objekt čiju vrijednost želite prikazati.
+
+[NOTE]
+====
+
+GeoGebra automatski dodaje sintaksu ("Točka A = " + A ) koja je neophodna kod unosa mješovitog teksta: statični tekst
+treba pisati unutar znakova navodnika a znak plus (+) služi za povezivanje različitih dijelova teksta .
+
+====
+
+[cols=",",options="header",]
+|===
+|Unos |Opis
+|Ovo je statičan tekst |Statičan tekst
+|A |Dinamičan tekst (ako točka A postoji)
+|"Točka A = " + A |Dvostruko miješani tekst uz upotrebu vrijednosti točke A
+|"a = " + a + "cm" |Trostruko miješani tekst uz upotrebu vrijednosti broja a
+|===
+
+[NOTE]
+====
+
+Ako objekt s nazivom xx već postoji i želite napraviti statičan tekst koristeći naziv ovog objekta, morate ga upisati
+unutar navodnika ("xx"), inače će GeoGebra automatski napraviti dinamičan tekst koji će prikazivati vrijednost objekta
+xx umjesto njegovog naziva. Međutim, statičan tekst koji ne odgovara nazivu niti jednog postojećeg objekta, možete
+unositi i bez navodnika.
+
+====
+
+[NOTE]
+====
+
+Unutar mješovitog teksta, statični dio mora biti unutar navodnika. Različiti dijelovi teksta (statični i dinamični
+dijelovi) mogu biti povezani pomoću znaka plus (+). Od verzije 4.0, + znakovi nisu obavezni.
+
+====
+
+U tekstovi možete koristiti xref:/LaTeX.adoc[LaTeX] za unos matematičkog teksta.

@@ -1,0 +1,37 @@
+= PoligonFrekvencija naredba
+:page-en: commands/FrequencyPolygon
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+Poligon frekvencija se sastoji od dužina koje povezuju polovišta vrhova stupaca histograma. Stoga je uporaba ove naredbe
+ista kao i uporaba xref:/commands/Histogram.adoc[Histogram naredba].
+
+====
+
+PoligonFrekvencija[ <lista granica razreda>, <lista visina> ]::
+  Crta poligon frekvencija s vrhovima u danim visinama. Granice razreda određuju _x_ koordinatu svakog vrha.
+
+[NOTE]
+====
+
+Za primjer pogledajte xref:/commands/Histogram.adoc[naredbu Histogram].
+
+====
+
+PoligonFrekvencija[ <lista granica razreda>, <lista neobrađenih podataka>, <koristi gustoću - logička vrijednost>,
+<skala gustoće> (opcionalno) ]::
+  Crta poligon frekvencija koristeći neobrađene podatke. Granice razreda određuju _x_ koordinatu vrhova i koriste se za
+  određivanje koliko podataka leži u svakom razredu. Koordinata _y_ vrha se određuje ovako:
+
+* Ako je _koristi gustoću = true_, visina = (skala gustoće) * (frekvencija razreda) / (širina razreda)
+* Ako je _koristi gustoću = false_, visina = frekvencija razreda
+
+Zadane postavke su: koristi gustoću = _true_ i skala gustoće = 1.
+
+PoligonFrekvencija[ <kumulacija - logička vrijednost>, <lista granica razreda>, <lista neobrađenih podataka>, <koristi
+gustoću - logička vrijednost>, <skala gustoće> (opcionalno) ]
+
+Ako je vrijednost kumulacije _true_ crta poligon frekvencije u kojem je koordinata _y_ svakog vrha jednaka zbroju
+frekvencije tog razreda i svih prethodnih frekvencija.

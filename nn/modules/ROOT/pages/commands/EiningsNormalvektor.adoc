@@ -1,0 +1,53 @@
+= EiningsNormalvektor Kommando
+:page-en: commands/UnitPerpendicularVector
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+EiningsNormalvektor[ <Linje> ]::
+  Gjev ein vektor med lengde 1 som står normalt på linja.
+EiningsNormalvektor[ <Linjestykke> ]::
+  Gjev ein vektor med lengde 1 som står normalt på linjestykket.
+EiningsNormalvektor[ <Vektor> ]::
+  Gjev ein vektor med lengde 1 som står normalt på vektoren. Vektoren må verte definert først.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+La stem:[v=\begin\{pmatrix}3\\4\end\{pmatrix}]. `++EiningsNormalvektor[v]++` gjev
+_stem:[\begin\{pmatrix}-0.8\\0.6\end\{pmatrix}]_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++EiningsNormalvektor[3x + 4y = 5]++` gjev _stem:[\begin\{pmatrix}0.6\\0.8\end\{pmatrix}]_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoane xref:/commands/Normalvektor.adoc[Normalvektor] og
+xref:/commands/Retningsvektor.adoc[Retningsvektor].
+
+====
+
+== CAS-delen
+
+EiningsNormalvektor[ <Vektor> ]::
+  Gjev ein vektor med lengde 1 som står normalt på vektoren.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++EiningsNormalvektor[(a,b)]++` gjev stem:[\left(\frac\{-b}\{\sqrt\{a^\{2} + b^\{2} } },\frac\{a}\{\sqrt\{a^\{2} +
+b^\{2} } }\right)].
+* `++EiningsNormalvektor[(3,4)]++` gjev stem:[\left(-\frac\{4}\{5},\frac\{3}\{5}\right)].
+
+====

@@ -1,0 +1,32 @@
+= TrekantKurve Kommando
+:page-en: commands/TriangleCurve
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+TrekantKurve[ <Punkt P>, <Punkt Q>, <Punkt R>, <Likning i A, B og C> ]::
+  Lagar eit implisitt polynom, der likninga i barysentriske koordinater med omsyn på _P_, _Q_ og _R_ er gjeve av den
+  fjerde parameteren.
+  Barysentriske koordinatar vert referert til som _A_, _B_ og _C_.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* Dersom _P_, _Q_ og _R_ er punkt så vil `++Trekantkurve[P, Q, R, (A - B)*(B - C)*(C - A) = 0]++` gje ei kubisk kurve
+beståande av medianen til trekanten _PQR_.
+* Dersom _A_, _B_ og _C_ er punkt så vil `++TrekantKurve[A, B, C, A*C = 1/8]++` lage ein hyperbel slik at tangenten
+gjennom _A_ og _C_ deler trekanten _ABC_ i to like store areal.
+* Dersom _A_, _B_ og _C_ er punkt så vil `++TrekantKurve[A, B, C, A² + B² + C² - 2B C - 2C A - 2A B = 0]++` lage ei
+Steiner innellipse (den unike ellipsa innskrive i trekanten som tangerar midtpunkta til sidene i trekanten) til
+trekanten _ABC_ og `++TrekantKurve[A, B, C, B C + C A + A B = 0]++` lager Steiner ellipsa (den unike ellipsa som går
+hjennom hjørnepunkta til trekanten og har trekantens midtpunkt som sentrum) til trekanten _ABC_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Punkta som vert gjeve som argument til kommandoen kan verte kalla _A_, _B_ eller _C_, men du kan då til dømes
+ikkje bruke _x(A)_ i likninga i det fjerde argumentet sidan _A_ då er den barysentriske koordinaten.
+
+====

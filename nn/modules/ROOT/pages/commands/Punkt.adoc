@@ -1,0 +1,40 @@
+= Punkt Kommando
+:page-en: commands/Point
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Punkt[ <Objekt> ]::
+  Lagar eit punkt på objektet. Punktet kan verte flytta rundt på xref:/Geometriske_objekt.adoc[stia] definert av
+  objektet.
+Punkt[ <Liste> ]::
+  Lagar eit punkt frå lista som inneheld to tal.
+Punkt[ <Objekt>, <Parameter> ]::
+  Lagar eit punkt, med gjeven xref:/commands/StiParameter.adoc[stiparameter], på objektet.
+Punkt[ <Punkt P>, <Vektor v> ]::
+  Gjev sluttpunktet til _v_ når startpunktet til _v_ er _P_.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+La `++P = (1, 2)++` og `++v = (1, 4)++`.
+
+Det nye punktet vert då _(2, 6)_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++Punkt[{1, 2}]++` gjev punktet _(1, 2)_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også verktøya image:Tool_New_Point.gif[Tool New Point.gif,width=32,height=32]
+xref:/tools/Nytt_punkt.adoc[Nytt punkt] og image:Tool_Point_in_Region.gif[Tool Point in Region.gif,width=32,height=32]
+xref:/tools/Punkt_på_objekt.adoc[Punkt på objekt].
+
+====

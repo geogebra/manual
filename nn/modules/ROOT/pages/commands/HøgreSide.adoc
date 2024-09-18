@@ -1,0 +1,60 @@
+= HøgreSide Kommando
+:page-en: commands/RightSide
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+HøgreSide[ <Likning> ]::
+  Gjev høgresida av den forenkla likninga.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++HøgreSide[x + 2 = 3x + 1]++` gjev 0,5.
+
+====
+
+== CAS-delen
+
+HøgreSide[ <Likning> ]::
+  Gjev høgresida av den gjevne likninga.
+HøgreSide[ <Liste med likningar> ]::
+  Gjev lista med høgresider i likningane.
+HøgreSide[ <Liste med likningar>, <Indeks> ]::
+  Gjev høgresida til likninga i lista som er gjeven av indeksen.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++HøgreSide[{a^2 + b^2 = c^2, x + 2 = 3 x + 1}, 1]++` gjev stem:[c^2].
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++HøgreSide[{a^2 + b^2 = c^2, x + 2 = 3x + 1}]++` gjev stem:[\\{c^2, 3x + 1\}]__.__
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++HøgreSide[x + 2 = 3x + 1]++` gjev _3x + 1_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+Sjå også kommandoen xref:/commands/VenstreSide.adoc[VenstreSide].
+
+====

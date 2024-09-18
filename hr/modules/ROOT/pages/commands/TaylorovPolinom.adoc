@@ -1,0 +1,50 @@
+= TaylorovPolinom naredba
+:page-en: commands/TaylorPolynomial
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+TaylorovPolinom[ <funkcija>, <vrijednost a>, <redni broj n> ]::
+  Kreira red potencija za zadanu funkciju u okolini točke s apscisom _x = a_ reda _n_.
+
+[EXAMPLE]
+====
+
+`++TaylorovPolinom[x^2, 3, 1]++` dati će _6 x - 9_, red potencija za _x^2^_ za _x = 3_ reda _1_.
+
+====
+
+== CAS prikaz
+
+TaylorovPolinom[ <izraz>, <vrijednost a>, <redni broj n> ]::
+  Kreira red potencija za zadanu funkciju u okolini točke s apscisom _x = a_ reda _n_.
+TaylorovPolinom[ <izraz>, <varijabla>, <vrijednost varijable a>, <redni broj n> ]::
+  Kreira red potencija za zadanu funkciju u okolini točke s apscisom _x = a_ reda _n_, u odnosu na zadanu varijablu.
+
+[EXAMPLE]
+====
+
+`++TaylorovPolinom[x^3 sin(y), y, 3, 2]++` daje _stem:[\frac\{cos(3) x^\{3} (2 y - 6) + sin(3) x^\{3} (-y^\{2} + 6 y -
+7)}\{2}]_ , red potencija u odnosu na varijablu _y_ za funkciju _x^3^ sin(y)_ u okolini _y = 3_ reda _2_.
+
+====
+
+[EXAMPLE]
+====
+
+`++TaylorovPolinom[x^3 sin(y), x, 3, 2]++` daje _sin(y) (9 x^2^ - 27 x + 27)_, red potencija u odnosu na varijablu _x_
+za funkciju _x^3^ sin(y)_ u okolini _x = 3_ reda _2_.
+
+====
+
+[EXAMPLE]
+====
+
+`++TaylorovPolinom[x^2, a, 1]++` daje _-a^2^ + 2 a x_, red potencija za funkciju _x^2^_ u okolini _x = a_ reda _1_.
+
+====
+
+[NOTE]
+====
+
+Red _n_ treba biti cijeli broj veći ili jednak nuli.
+
+====

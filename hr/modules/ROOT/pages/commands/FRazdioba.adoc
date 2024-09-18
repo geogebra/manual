@@ -1,0 +1,29 @@
+= FRazdioba naredba
+:page-en: commands/FDistribution
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+FRazdioba[ <brojnik stupnja slobode b>, <nazivnik stupnja slobode n>, x ]::
+  Izradit će funkciju gustoće vjerojatnosti (fgv) za https://en.wikipedia.org/wiki/F-distribution[F-razdiobu] s
+  parametrima _b, n_.
+FRazdioba[ <brojnik stupnja slobode>, <nazivnik stupnja slobode>, x, <kumulacija - logička vrijednost> ]::
+  Ako je _kumulacija - logička vrijednost_ true, izradit će kumulativnu fukciju distribucije F-razdiobe, u suprotnom će
+  izraditi fgv za F-razdiobu.
+FRazdioba[ <brojnik stupnja slobode b>, <nazivnik stupnja slobode n>, <vrijednost varijable v> ]::
+  Izračunava vrijednost kumulativne fukcije distribucije F-razdiobe za zadanu vrijednost varijable _v_, t.j.
+  vjerojatnost _P(X≤v)_ gdje je _X_ slučajna varijabla F-razdiobe zadane parametrima _b, n_.
+
+[NOTE]
+====
+
+Daje vjerojatnost za zadanu vrijednost _x_-koordinate (ili površinu ispod krivulje F-razdiobe lijevo od zadane
+_x_-koordinate).
+
+====
+
+== CAS prikaz
+
+xref:/CAS_prikaz.adoc[CAS prikaz] podržava samo sljedeću sintaksu:
+
+FRazdioba[ <brojnik stupnja slobode b>, <nazivnik stupnja slobode n>, <vrijednost varijable v> ]::
+  Izračunava vrijednost kumulativne fukcije distribucije F-razdiobe za zadanu vrijednost varijable _v_, t.j.
+  vjerojatnost _P(X≤v)_ gdje je _X_ slučajna varijabla F-razdiobe zadane parametrima _b, n_.

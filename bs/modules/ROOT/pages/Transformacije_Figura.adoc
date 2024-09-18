@@ -1,0 +1,45 @@
+= Transformacije Figura
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+Do interaktivnih radnih listova sa xref:/Skriptiranje.adoc[skriptom] transformacija figura možemo doći i na sljedeće
+načine. Postoje četiri različita tipa:
+
+== Okvir za izbor
+
+Okvir za izbor je grafička reprezentacije xref:/Boolean_vrijednost.adoc[Boolean-logičke vrijednost] promjenljivih. Za
+detalje pogledajte alat xref:/Okvir_za_izbor_Prikaži_Sakrij_figuru_Alat.adoc[Okvir za izbor Prikaži/Sakrij figuru].
+Okvir za izbor može se kreirati ili upotrebom gore spomenutog alata ili naredbom
+xref:/IzborniOkvir_Naredba.adoc[IzborniOkvir].
+
+== Tekst polja
+
+Tekst polja služe za unos teksta koji se može koristiti za xref:/Skriptiranje.adoc[skriptiranje]. Skript se aktivira
+promjenom teksta u tekst polju ili pritiskom na enter ili napuštanjem tekst polja. Vrijednostima unosa može se
+pristupiti pomoću %0 promjenljive.
+
+[EXAMPLE]
+====
+
+Tekst polje kojem je u skriptu navedeno `++a=a+%0++` povećat će _a_ za unesenu vrijednost. Ovo će funkcionisati samo u
+slučaju ako je _a_ xref:/Nezavisne_Zavisne_i_Pomoćne_figure.adoc[nezavisna figura].
+
+====
+
+Ako želite imati tekst polje kako biste mijenjali vrijednosti nezavisne figure (ili redefinirali zavisnu figuru),
+potrebno je da prvo definirate figuru na koju se tekst polje odnosi. U tom slučaju ne morate unositi nikakav skript.
+Tekst polja možete kreirati i upotrebom alata xref:/Ubaci_TekstPolje_Alat.adoc[Ubaci TekstPolje] ili pomoću naredbe
+xref:/TekstPolje_Naredba.adoc[TekstPolje].
+
+== Dugme
+
+Klikom na dugme je predviđeno pokretanje skripta. Iako se skript može pokrenuti klikom na neku figuru (npr. na
+xref:/Ubacivanje_slike_Alat.adoc[sliku]), upotrebom dugmeta vaš će dinamički radni list biti intuitivniji. Dugme možete
+kreirati i upotrebom alata xref:/UbaciDugme_Alat.adoc[UbaciDugme] ili naredbe xref:/Dugme_Naredba.adoc[Dugme].
+
+== Kontekstualni izbornik
+
+Kontekstualni izbornik je omogućen samo u xref:/Tabelarni_prikaz.adoc[tabelarnom prikazu]. Možete unijeti listu u ćeliju
+tabele i zatim uključiti postavku _Koristi dugme i okvir za izbor_ u podizborniku Tabela
+xref:/Opcije_Dijaloški_okvir.adoc[dijaloškog okvira Postavke]. Lista će postati kontekstualni izbornik; a element liste
+možete označiti pomoću naredbi xref:/OznačiteIndeks_Naredba.adoc[OznačiteIndeks] ili
+xref:/OznačiteElement_Naredba.adoc[OznačiteElement].

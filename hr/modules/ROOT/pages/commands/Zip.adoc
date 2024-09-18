@@ -1,0 +1,29 @@
+= Zip naredba
+:page-en: commands/Zip
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Zip[ <izraz>, <varijabla1>, <lista1>, <varijabla2>, <lista2>, ... ]::
+  Kreira xref:/Liste.adoc[listu] objekata dobivenih zamjenom varijabli u izrazu elementima iz odgovarajućih listi.
+  Duljina dobivene liste je minimum duljina svih ulaznih listi.
+
+[EXAMPLE]
+====
+
+Neka je _lista1=\{x^2, x^3, x^6}_ lista polinoma. `++Zip[Stupanj[a], a, lista1]++` daje listu _\{2, 3, 6}_.
+
+====
+
+[EXAMPLE]
+====
+
+Neka su P, Q, R, S, T neke točke. `++Zip[Polovište[A,B],A,{P,Q},B,{R,S}]++` daje listu koja sadrži
+xref:/commands/Polovište.adoc[polovišta] dužina _PR_ i _QS_.
+
+====
+
+[NOTE]
+====
+
+U svim listama elementi moraju biti jednakog tipa.
+
+====

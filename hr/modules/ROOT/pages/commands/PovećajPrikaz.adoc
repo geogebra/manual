@@ -1,0 +1,31 @@
+= PovećajPrikaz naredba
+:page-en: commands/ZoomIn
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+PovećajPrikaz[ <faktor> ]::
+  Povećava (zumira) xref:/Grafički_prikaz.adoc[grafički prikaz] za zadani fakrot u odnosu na vežeći, središte ekrana se
+  koristi kao središte zumiranja.
+
+[EXAMPLE]
+====
+
+`++PovećajPrikaz[1]++` neće načiniti ništa, `++PovećajPrikaz[2]++` povećava (zumira) prikaz dvostruko,
+`++PovećajPrikaz[0.5]++`je ekvivalentno naredbi `++SmanjiPrikaz[2]++`, tj. dvostruko smanjuje prikaz.
+
+====
+
+PovećajPrikaz[ <faktor>, <središte> ]::
+  Povećava (zumira) xref:/Grafički_prikaz.adoc[grafički prikaz] za zadani fakrot u odnosu na vežeći, drugi parametar
+  specificira središte zumiranja.
+PovećajPrikaz[ <min x>, <min y>, <max x>, <max y> ]::
+  Povećava (zumira) xref:/Grafički_prikaz.adoc[grafički prikaz] do pravokutnika zadanog vrhovima (min-x, min-y), (max-x,
+  max y). Ako je bilo koji od ovih parametara zavisan ili je oznaka postavljena, granice prikaza će biti dinamične (npr.
+  ako je _a_ klizač, `++PovećajPrikaz[-a,-a,a,a]++` određuje da će povećanje zavisiti o promjeni _a_). Ako želite to
+  izbjeći, koristite naredbu xref:/commands/KopirajNezavisniObjekt.adoc[KopirajNezavisniObjekt].
+
+[NOTE]
+====
+
+Ako je prikazano više xref:/Grafički_prikaz.adoc[grafičkih prikaza], naredba će se odnositi na onaj koji je aktivan.
+
+====

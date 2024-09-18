@@ -1,0 +1,69 @@
+= NLøysingar Kommando
+:page-en: commands/NSolutions
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Denne kommandoen er tilgjengeleg berre i xref:/CAS_delen.adoc[CAS-delen].
+
+NLøysingar[ <Likning> ]::
+  Finn ei numerisk løysing på likninga for hovedvariabelen.
+NLøysingar[ <Likning>, <Variabel> ]::
+  Finn ei numerisk løysing på likninga for den gjevne variabelen.
+NLøysingar[ <Likning>, <Variabel = startverdi> ]::
+  Finn ei numerisk løysing på likninga for den gjevne variabelen. Den numeriske algoritma startar med å prøve den gjevne
+  startverdien.
+NLøysingar[ <Liste med likningar>, <Liste med variablar> ]::
+  Finn ei numerisk løysing på settet av likningar for det gjevne settet av variablar.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++NLøysingar[{π / x = cos(x - 2y), 2 y - π = sin(x)}, {x=3, y=1.5}]++` gjev _\{3.141592651686591, 1.570796327746508}_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++NLøysingar[a^4 + 34a^3 - 34, a=3]++` gjev _\{-34.0008649859, 0.9904738886}_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++NLøysingar[a^4 + 34a^3 - 34, a]++` gjev _\{-34.0008649859, 0.9904738886}_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++NLøysingar[cos(x) = x]++` gjev _\{0.7390851332151606}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Det er valfritt å gje starverdiar for den numeriske algoritma _\{x=3, y=1.5}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* π får du ved å trykke [.kcode]#Alt # + [.kcode]# p#. Det er også mogleg å berre skrive _pi_.
+* Sjå også kommandoane xref:/commands/Løysingar.adoc[Løysingar], xref:/commands/CLøysingar.adoc[CLøysingar] og
+xref:/commands/NLøys.adoc[NLøys].
+
+====

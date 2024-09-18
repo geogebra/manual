@@ -1,0 +1,57 @@
+= Tekstar
+:page-en: Texts
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Tekstobjekt kan verte laga ved å bruke kommandoen xref:/commands/Tekst.adoc[Tekst], verktøyet
+image:Tool_Insert_Text.gif[Tool Insert Text.gif,width=32,height=32] xref:/tools/Set_inn_tekst.adoc[Set inn tekst] eller
+ved å dra eit objekt frå xref:/Algebrafelt.adoc[algebrafeltet] til xref:/Grafikkfelt.adoc[grafikkfeltet]. Ein anna
+metode *for avanserte brukarar* (forklart lenger ned) er å skrive rett inn i
+xref:/Inntastingsfelt.adoc[inntastingsfeltet].
+
+Statisk tekst::
+  Avheng ikkje av nokon matematiske objekt og vert vanlegvis ikkje påverka av endringar i konstruksjonen.
+
+Dynamisk tekst::
+  Inneheld verdiar av objekt som automatisk vert endra når objekta vert endra.
+
+Blanda tekst::
+  Teksten inneheld ein kombinasjon av statisk og dynamisk tekst. For å lage blanda tekst, må du skrive inn den statiske
+  delen som vanleg tekst (t.d. Punkt _A_ =), så trykkar du på objektet med verdien du vil vise i den dynamiske delen av
+  teksten.
+
+[NOTE]
+====
+
+*Merk:* GeoGebra legg automatisk til syntaksen ("Punkt A = " + A) som er naudsynt får å lage den blanda teksten:
+hermeteikn for den statiske delen og eit plussteikn (+) for å setje saman dei ulike delane av teksten.
+
+====
+
+[cols=",",options="header",]
+|===
+|Inndata |Forklaring
+|Dette er statisk tekst |Statisk tekst
+|A |Dynamisk tekst (dersom punkt A eksisterer)
+|"Punkt A = " + A |Blanda tekst med ein statisk del og ein dynamisk del som gjev verdien til punkt _A_
+|"a = " + a + "cm" |Blanda tekst med tre delar; den dynamiske delen gjev verdien av talet _a_
+|===
+
+[NOTE]
+====
+
+*Merk:* Dersom eit objekt med namn _xx_ allereie eksisterer og du vil lage ein statisk tekst som inneheld namnet til
+objekt, må du skrive det i hermeteikn ("xx"). Elles vil GeoGebra automatisk lage ein dynamisk tekst som gjev deg verdien
+av objektet _xx_ i staden for namnet. All tekst som ikkje samsvarar med namnet til eit objekt kan du skrive utan
+hermeteikn.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Inni ein blanda tekst må den statiske delen stå i hermeteikn. Forskjellige delar av teksten kan knytast saman
+med plussteikn (+). Frå og med versjon 4.0 er ikkje plussteiknet lengre obligatorisk.
+
+====
+
+Tekstobjekt kan også bruke xref:/LaTeX.adoc[LaTeX] for å vise matematikk.

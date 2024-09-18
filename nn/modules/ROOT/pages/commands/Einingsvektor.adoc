@@ -1,0 +1,48 @@
+= Einingsvektor Kommando
+:page-en: commands/UnitVector
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Einingsvektor[ <Vektor> ]::
+  Gjev ein vektor med lengde 1 som har same retning og orientering som den gjevne vektoren. Vektoren må verte definert
+  først.
+Einingsvektor[ <Linje> ]::
+  Gjev retningsvektoren med lengde 1 til linja.
+Einingsvektor[ <Linjestykke> ]::
+  Gjev retningsvektoren med lengde 1 til linjestykket.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Einingsvektor[3x + 4y = 5]++` gjev _stem:[\begin\{pmatrix}0.8\\-0.6\end\{pmatrix}]_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+La _v=stem:[\begin\{pmatrix}3\\4\end\{pmatrix}]. `++Einingsvektor[v]++` gjev_
+stem:[\begin\{pmatrix}0.6\\0.8\end\{pmatrix}]__.__
+
+====
+
+== CAS-delen
+
+Einingsvektor[ <Vektor> ]::
+  Gjev ein vektor med lengde 1 som har same retning og orientering som den gjevne vektoren.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++Einingsvektor[(a, b)]++` gjev _stem:[\left(\frac\{a}\{\sqrt\{a^\{2} + b^\{2} } }, \frac\{b}\{\sqrt\{a^\{2} + b^\{2}
+} }\right)]_.
+* {blank}
++
+`++Einingsvektor[(2, 4, 4)]++` gjev _stem:[\left(\frac\{1}\{3}, \frac\{2}\{3}, \frac\{2}\{3}\right)]_.
+
+====

@@ -1,0 +1,32 @@
+= Linjediagram Kommando
+:page-en: commands/FrequencyPolygon
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+*Merk:* Eit linjediagram er ein linjegraf teikna ved å forbinde alle midtpunkta til toppen av søylene i eit histogram.
+Bruken av denne kommandoen er difor den same som for kommandoen xref:/commands/Histogram.adoc[Histogram].
+
+====
+
+Linjediagram[ <Liste med klassegrenser>, <Liste med høgder> ]::
+  Lagar eit linjediagram basert på punkt med x-verdi gjeven av klassegrensene og med y-verdi frå dei gjevne høgdene.
+
+[NOTE]
+====
+
+*Merk:* For døme sjå kommandoen xref:/commands/Histogram.adoc[Histogram].
+
+====
+
+Linjediagram[ <Liste med klassegrenser>, <Liste med rådata>, <Boolsk tettleik>, <Tettleiksfaktor> (valfri) ]::
+  Lagar eit linjediagram ved å bruke rådata frå lista. Klassegrensene bestemmer x-koordinaten til punkta og vert brukt
+  til å bestemme talet på dataelement i kvar klasse. Y-verdien til punkta vert bestemt av
+  * Dersom _Boolsk tettleik = true_, høgde = Tettleiksfaktor*Klassefrekvens/Klassebreidde
+  * Dersom _Boolsk tettleik = false_, høgde = Klassefrekvens
+  Som standard har vi Bruk _Tettleik=true_ og _Tettleiksfaktor=1_.
+Linjediagram[ <Boolsk kumulativ>, <Liste med klassegrenser>, <Liste med rådata>, <Boolsk tettleik>, <Tettleiksfaktor>
+(valfri) ]::
+  Dersom Boolsk kumulativ er _true_ lagar denne kommandoen eit linjediagram der y-koordinaten til kvart punkt er lik
+  klassefrekvensen pluss summen av alle tidlegare frekvensar.

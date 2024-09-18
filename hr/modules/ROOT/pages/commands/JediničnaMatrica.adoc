@@ -1,0 +1,26 @@
+= JediničnaMatrica naredba
+:page-en: commands/Identity
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+JediničnaMatrica[ <broj n> ]::
+  Izradit će jediničnu matricu zadanog reda (stem:[n\times n]).
+
+[EXAMPLE]
+====
+
+`++JediničnaMatrica[3]++` daje matricu _stem:[\begin\{pmatrix}1&0&0\\0&1&0\\0&0&1\end\{pmatrix}]_.
+
+====
+
+[NOTE]
+====
+
+Ako je _A_ kvadratna matrica reda _n_, `++A^0++` izradit će jednaku matricu kao i `++JediničnaMatrica[n]++`.Ova naredba
+nije dinamična tj. `++JediničnaMatrica[a]++` neće se mijenjati kada se *a* mijenja.
+
+====
+
+== CAS prikaz
+
+JediničnaMatrica[ <broj n> ]::
+  Izradit će jediničnu matricu zadanog reda (stem:[n\times n]).

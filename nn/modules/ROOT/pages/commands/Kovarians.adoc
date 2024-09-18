@@ -1,0 +1,53 @@
+= Kovarians Kommando
+:page-en: commands/Covariance
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Kovarians[ <Liste med punkt> ]::
+  Finn https://en.wikipedia.org/wiki/nn:Kovarians[kovariansen] mellom _x_- og _y_-koordinatane til punkta i lista.
+Kovarians[ <Liste med tal x>, <Liste med tal y> ]::
+  Finn https://en.wikipedia.org/wiki/nn:Kovarians[kovariansen] mellom elementa i dei to listene _x_ og _y_.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Kovarians[{1, 2, 3}, {1, 3, 7}]++` gjev _2_, som er kovariansen mellom _\{1, 2, 3}_ og _\{1, 3, 7}_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Kovarians[{(1, 1), (2, 3), (3, 7)}]++` gir _2_, som er kovariansen mellom _\{1, 2, 3}_ og _\{1, 3, 7}_.
+
+====
+
+== CAS-delen
+
+Kovarians[ <Liste med punkt> ]::
+  Finn https://en.wikipedia.org/wiki/nn:Kovarians[kovariansen] mellom _x_- og _y_-koordinatane til punkta i lista. Lista
+  kan også innehalde punkt med udefinerte koordinatar.
+Kovarians[ <Liste med tal x>, <Liste med tal y> ]::
+  Finn https://en.wikipedia.org/wiki/nn:Kovarians[kovariansen] mellom elementa i dei to listene _x_ og _y_. Listene kan
+  også innehalde udefinerte variablar.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Kovarians[{1, b}, {a, 3}]++` gjev stem:[\frac\{-ab+a+3b-3}\{4}], som er kovariansen mellom _\{1, b}_ og _\{a, 3}_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Kovarians[{(1, a), (b, 3)}]++` gjev stem:[\frac\{-ab+a+3b-3}\{4}], som er kovariansen mellom _\{1, b}_ og _\{a, 3}_.
+
+====

@@ -1,0 +1,26 @@
+= Kompatibilnost
+:page-en: Compatibility
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+GeoGebra je kompatibilan program u smislu da se sve datoteke kreirane nekom od prethodnih verzija otvaraju bez problema.
+No, nekoliko stvari je različito u verziji 3.2 i 4.0:
+
+* Liste uglova, integrala, dijagrama, histograma itd. sada su vidljive
+* Liste \{Duž[A,B], Duž[B,C] } se sada mogu pomjerati
+* Kružnica zadatog poluprečnika (na primjer Kružnica[(1,1),2]) može se pomjerati
+* Udaljenost[ Tačka, Duž ] daje udaljenost do date duži (bilo je ekstrapolirano u 3.2)
+* Ugao[A,B,C] sada mijenja veličinu ako je tačka B previše blizu tačke A ili C
+* Integral[funkcija f,funkcija g, a, b] je sada opisan kao IntegralIzmeđu[funkcija f,funkcija g,a,b].
+* Figure koje su translatirane za slobodni vektor mogu se sada pomjerati, npr. Translacija[A, Vektor[(1,1)]]
+
+== LaTeX
+
+xref:/LaTeX.adoc[LaTeX] je sada zgodniji, ali neke pogreške u LaTeX sintaksi koje su ignorirane u veriji 3.2 uzrokovat
+će nedostatak teksta u verziji 4.0.
+
+* Provjerite da li svako `++\left\{++` ima korespodentno `++\right.++`
+* Niz treba specifikaciju kolone (također to može biti i prazno).
+
+Molimo, koristite `++ $ \begin{array}{} a & b \\ c & d \\ \end{array}$++` za lijevo poravnanje kolone i
+`++ $ \begin{array}{rr} a & b \\ c & d \\ \end{array}$++` za desno poravnanje kolone. Stara sintaksa
+`++$ \begin{array} a & b \\ c & d \\ \end{array}$++` neće više raditi.

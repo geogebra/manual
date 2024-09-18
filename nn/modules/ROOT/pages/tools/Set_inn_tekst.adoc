@@ -1,0 +1,50 @@
+= Set inn tekst Verktøy
+:page-en: tools/Text
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Med dette verktøyet kan du lage statisk og dynamisk tekst eller xref:/LaTeX.adoc[LaTeX-formlar] i
+xref:/Grafikkfelt.adoc[grafikkfeltet].
+
+Først må du spesifisere posisjonen til teksten på ein av dei følgjande måtane:
+
+* Trykk ein plass i grafikkfeltet for å plassere teksten der.
+* Trykk på eit punkt for å feste teksten til punktet.
+
+[NOTE]
+====
+
+*Merk:* Posisjonen til teksten kan vere absolutt eller relativt til eit koordinatsystem. Du kan spesifisere dette i
+fanene _Basis_ og _Posisjon_ når du opnar xref:/Eigenskapar.adoc[dialogboks for eigenskapar] for teksten.
+
+====
+
+Ein dialogboks vert opna der du kan skrive inn teksten samt velje om den skal vere statisk, dynamisk eller blanda.
+
+Teksten du skriv direkte i _Rediger_-feltet er statisk, det vil seie at den ikkje vert påverka av at objekt vert endra.
+Dersom du vil ha ein dynamisk tekst, som viser den skiftande verdien til eit objekt, vel du objektet frå nedtrekksmenyen
+_Objekt_. Namnet til objektet vert då vist i ein liten grå boks i _Rediger_-feltet, og verdien vert vist i
+_Førehandsvis_-feltet. Ved å høgreklikke på den dynamiske teksten i _Rediger_-feltet kan du velje om det er
+_Definisjonen_ eller verdien som skal verte vist.
+
+Det er også mogleg å gjere algebraiske operasjonar eller spesifisere kommandoar på objekt. Dette gjer du ved å trykke i
+den grå boksen og skrive inn den algebraiske operasjonen eller xref:/commands/Tekst_Kommandoar.adoc[tekstkommandoen].
+Resultatet vert vist i _Førehandsvis_-feltet.
+
+[EXAMPLE]
+====
+
+*Døme:* Skriv inn RoterTekst["A", pi] for å skrive ein A opp-ned.
+
+====
+
+Det beste visuelle resultatet får du ved å bruke xref:/LaTeX.adoc[LaTeX-formatering]. Du kan anten skrive inn LaTeX-kode
+eller bruke formlane som ligg i nedtrekksmenyen. Du kan også velje ei mengde av matematiske symbol og operatorar (samt
+ein del andre symbol og teikn) frå nedtrekksmenyen _Symbol_.
+
+[NOTE]
+====
+
+*Merk:* Sjå også sidene xref:/LaTeX.adoc[LaTeX] og xref:/Tekstar.adoc[Tekstar] og
+xref:/commands/Tekst_Kommandoar.adoc[tekstkommandoar].
+
+====

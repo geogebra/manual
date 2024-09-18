@@ -1,0 +1,58 @@
+= Vektorprodukt Kommando
+:page-en: commands/Cross
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Vektorprodukt[ <Vektor u>, <Vektor v> ]::
+  Finn https://en.wikipedia.org/wiki/nn:Kryssprodukt[vektorproduktet] (også kalt kryssproduktet) av vektorane _u_ og
+  _v_.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Vektorprodukt[{1, 3, 2}, {0, 3, -2}]++` gjev _\{-12, 2, 3}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* I xref:/Inntastingsfelt.adoc[inntastingsfeltet] kan du også skrive `++u ⊗ v++`.
+* Sjå også kommandoen xref:/commands/Skalarprodukt.adoc[Skalarprodukt].
+
+====
+
+== CAS-delen
+
+Kryssprodukt[ <Vektor u>, <Vektor v> ]::
+  Finn https://en.wikipedia.org/wiki/nn:Kryssprodukt[vektorproduktet] (også kalt kryssproduktet) av vektorane _u_ og
+  _v_.
+  Vektorane kan også innehalde udefinerte variablar. Kommandoen gjev då eit uttrykk for vektorproduktet.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Vektorprodukt[{a, b, c}, {d, e, f}]++` gjev _\{b f - c e, -a f + c d, a e - b d}_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Vektorprodukt[{1, 3, 2}, {0, 3, -2}]++` gjev _\{-12, 2, 3}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoen xref:/commands/Skalarprodukt.adoc[Skalarprodukt].
+
+====

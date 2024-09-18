@@ -1,0 +1,75 @@
+= Grafikkfelt
+:page-en: Graphics_View
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Ved å bruke xref:/Verktøy.adoc[verktøya] som er tilgjengelege på xref:/Verktøylinje.adoc[verktøylinja] kan du ved bruk
+av musa lage geometriske konstruksjonar i grafikkfeltet. Vel eit konstruksjonsverktøy frå verktøylinja og bruk *hjelp*
+for verktøylinja (?-ikonet i høgre del av verktøylinja) for å finne ut korleis det valde verktøyet vert brukt. Alle
+objekt du konstruerar i grafikkfeltet vil også ha ein algebraisk representasjon i xref:/Algebrafelt.adoc[algebrafeltet].
+
+[NOTE]
+====
+
+*Merk:* Etter å ha aktivert verktøyet image:Tool_Move.gif[Tool Move.gif,width=32,height=32]
+xref:/tools/Flytt.adoc[Flytt] kan du flytte objekt i grafikkfeltet ved å dra dei med musa. Den algebraiske
+representasjonen i algebrafeltet vil verte endra kontinuerleg.
+
+====
+
+Alle ikon på xref:/Verktøylinje.adoc[verktøylinja] representerer ei verktøykasse som inneheld konstruksjonar av liknande
+type. For å opne ei verktøykasse trykkjer du på den lille pila i det nedre høgre hjørne av verktøylinjeikonet.
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Hint:* Konstruksjonsverktøy er organisert ut ifrå type
+eller funksjonalitet til objekta som dei gjev. Du finn verktøy som lagar forskjellige typar punkt i
+xref:/Punktverktøy.adoc[punkt verktøykassa] (standard ikon: image:Tool_New_Point.gif[Tool New
+Point.gif,width=32,height=32]) og verktøy som let deg utføre geometriske transformasjonar i
+xref:/Verktøy_for_omformingar.adoc[transformasjons verktøykassa] (standard ikon:
+image:Tool_Reflect_Object_in_Line.gif[Tool Reflect Object in Line.gif,width=32,height=32]).
+
+====
+
+Grafikkfeltet kan innehalde forskjellige typar av rutenett og aksar. Du finn meir om dette på sida
+xref:/Innstillingar_for_grafikkfeltet.adoc[Innstillingar for grafikkfeltet].
+
+== Stilmeny
+
+image:NO_stilmeny_grafikkfelt.png[NO stilmeny grafikkfelt.png,width=113,height=44]
+
+Du finn ein knapp for å vise stilmenyen i det øvre venstre hjørne av grafikkfeltet. Avhengig av kva for verktøy du vel
+vil stilmenyen gi deg forskjellige val som vil påvirke utsjånaden av konstruksjonen. Som standard kan du velje _vis
+eller skul aksane_, _vis eller skjul rutenett_ eller setje val for _xref:/Meny_for_eigenskapar.adoc[punkstyring]_. I
+tillegg vil nokre verktøy gi val for å velje _farge_, _punktstil_, _tekststil_, _linjestil_, _gjennomsiktigheit_,
+_tekstfarge_, _tekststorleik_, _feit tekst_ og _kursiv tekst_.
+
+== Grafikkfelt nummer to
+
+Det er mogleg å opne eit andre grafikkfelt frå xref:/Vis_meny.adoc[Vis-menyen]. Dersom to grafikkfelt er opne, vil kun
+eit av dei vere aktivt. Det aktive grafikkfeltet vil ha feit tittel. Alle synlege objekt laga med
+xref:/Kommandoar.adoc[kommandoar] kjem i det aktive grafikkfeltet. For kvart objekt kan du spesifisere kva for
+grafikkfelt det skal vere synleg i. Dette gjer du i fana _Avansert_ i xref:/Eigenskapar.adoc[dialogboksen for
+eigenskapar].
+
+== Kopier og lim inn
+
+Ved å bruke tastatursnarvegane [.kcode]#Ctrl# + [.kcode]#C# og [.kcode]#Ctrl# + [.kcode]#V# (Mac OS: [.kcode]#Cmd# +
+[.kcode]#C# og [.kcode]#Cmd# + [.kcode]#V#) kan du kopiere og lime inn valde objekt (unntatt dersom dei avheng av
+aksane) anten i same vindague eller i eit anna. Kopier og lim inn vil kopiere alle objekt som det kopierte objektet er
+avhengig av, men dei umarkerte objekta vil verte usynlege.
+
+[EXAMPLE]
+====
+
+*Døme:* Lag ei linje _l_ i grafikkfeltet. Bruk verktøyet image:Tool_Perpendicular_Line.gif[Tool Perpendicular
+Line.gif,width=32,height=32] xref:/tools/Normal_linje.adoc[Normal linje] til å finne normalen _n_ til ei linje gjennom
+eit punkt på linja. Dersom du no kopierer normalen og limar den inn i eit anna vindauge vil også linja _l_ verte
+kopiert, men kopien av _l_ vil vere usynleg.
+
+====
+
+Dersom du kopierar objekt som er avhengige av ein xref:/commands/Glidar.adoc[glidar] til eit nytt vindauge, vil ein
+usynleg kopi av glidaren også verte kopiert til dette vindauget. Det innlimte objektet vert festa når du trykkjer i
+grafikkfeltet. Dersom det kopierte objektet er avhengig av minst eit punkt, kan det verte festa i eksisterande punkt når
+det vert limt inn (men berre punktet som følgjer musepekaren vil gjere dette).

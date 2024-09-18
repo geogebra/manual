@@ -1,0 +1,51 @@
+= Uzorak naredba
+:page-en: commands/Sample
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Uzorak[ <lista L>, <veličina n> ]::
+  Daje listu od _n_ slučajno izabranih elemenata iz _L_; elementi mogu biti izabrani i više puta.
+Uzorak[ <lista L>, <veličina n>, <ponavljanje - logička vrijednost> ]::
+  Daje listu od _n_ slučajno izabranih elemenata iz _L_. Elementi mogu biti izabrani i više puta ako i samo ako je
+  zadnji parametar jednak true.
+
+[EXAMPLE]
+====
+
+* {blank}
++
+`++Uzorak[{1, 2, 3, 4, 5}, 5, true]++` daje na primjer _\{2, 3, 3, 4, 5}_.
+* {blank}
++
+`++Uzorak[{1, 2, 3, 4, 5}, 5, false]++` daje na primjer _\{5, 4, 1, 2, 3}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Uzorak[{1, 2, 3, 4, 5}, 5]++` dati će na primjer _\{1, 2, 1, 5, 4}_.
+
+====
+
+== CAS prikaz
+
+Uzorak[ <lista L>, <veličina n> ]::
+  Daje listu od _n_ slučajno izabranih elemenata iz _L_; elementi mogu biti izabrani i više puta.
+Uzorak[ <lista L>, <veličina n>, <ponavljanje - logička vrijednost> ]::
+  Daje listu od _n_ slučajno izabranih elemenata iz _L_. Elementi mogu biti izabrani i više puta ako i samo ako je
+  zadnji parametar jednak true.
+
+[EXAMPLE]
+====
+
+Lista može jednako tako sadržavati i liste kao svoje elemente: Neka je _lista1_ jednaka _\{1, 2,
+3}_.`++Uzorak[{lista1, 4, 5, 6, 7, 8}, 3, false]++` daje na primjer _\{6, \{1, 2, 3}, 4}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Uzorak[{-5, 2, a, 7, c}, 3]++` može dati _\{a, 7, -5}_.
+
+====

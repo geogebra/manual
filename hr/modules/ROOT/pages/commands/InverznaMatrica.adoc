@@ -1,0 +1,66 @@
+= InverznaMatrica naredba
+:page-en: commands/Invert
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+InverznaMatrica[ <matrica> ]::
+  Daje inverznu matricu zadane matrice.
+
+[EXAMPLE]
+====
+
+`++Inverzna[{{a, b}, {c, d}}]++` daje stem:[\begin\{pmatrix}\frac\{d}\{ad- bc} & \frac\{-b}\{ad- bc}\\\frac\{-c}\{ad-
+bc}& \frac\{a}\{ ad- bc}\end\{pmatrix}], inverznu matricu matrice stem:[\begin\{pmatrix}a & b\\c & d\end\{pmatrix}].
+
+====
+
+[EXAMPLE]
+====
+
+`++Inverzna[{{1, 2}, {3, 4}}]++` daje stem:[\begin\{pmatrix}-2 & 1\\1.5 & -0.5\end\{pmatrix}], inverznu matricu matrice
+stem:[\begin\{pmatrix}1 & 2\\3 & 4\end\{pmatrix}].
+
+====
+
+[NOTE]
+====
+
+U image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View] nedefinirane varijable su dozovljene također.
+
+====
+
+InverznaMatrica[ <funkcija> ]::
+  daje inverznu funkciju zadane funkcije.
+
+[EXAMPLE]
+====
+
+`++Inverzna[sin(x)]++` daje _asin(x)_.
+
+====
+
+[NOTE]
+====
+
+Funkcije smije sadržavati samo jedan _x_, a ne uzima se u obzir domena i skup vrijednosti funkcije. Na primjer za f(x) =
+x^2 ili f(x) = sin(x). Ako se u zadanoj funkciji nalazi više _ikseva_ neka dodatna naredba može vam pomoći kao na
+primjer:
+
+[EXAMPLE]
+====
+
+Oboje `++Inverzna[ParcijalniRazlomci[(x + 1) / (x + 2)]]++` i `++Inverzna[PotpuniKvadrat[x^2 + 2 x + 1]]++` produciraju
+inverzne funkcije.
+
+====
+
+====
+
+[NOTE]
+====
+
+U image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View], naredba radi čak i u slučaju kada ima više
+_ikseva_.
+
+====

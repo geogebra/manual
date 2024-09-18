@@ -1,0 +1,62 @@
+= Sortiraj naredba
+:page-en: commands/Sort
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Sortiraj[ <lista> ]::
+  Sortira listu brojeva, tekstova ili točaka.
+
+[EXAMPLE]
+====
+
+* `++Sortiraj[{3, 2, 1}]++` daje listu _\{1, 2, 3}_.
+* `++Sortiraj[{"smokve", "breskve", "jabuke",}]++` daje listu tekstova u abecednom poretku.
+* `++Sortiraj[{(3, 2), (2, 5), (4, 1)}]++` daje _\{(2, 5), (3, 2), (4, 1)}_.
+
+====
+
+[NOTE]
+====
+
+Lista točaka se sortira prema _x_-koordinati.
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Tekst koji slijedi odnosi se na mogućnosti koje su podržane samo u inačici
+http://wiki.geogebra.org/en/Release_Notes_GeoGebra_4.2[GeoGebra 4.2 Beta].
+
+'''''
+
+Sortiraj[ <vrijednosti>, <ključevi> ]::
+  Sortira prvu listu _vrijednosti_ u skladu sa odgovarajućom listom _ključeva_.
+
+[EXAMPLE]
+====
+
+`++lista1 = {KompleksniKorijen[x^10-1]}++`, `++Mnogokut[Sortiraj[lista1, arg(lista1)]] ++`
+
+====
+
+[EXAMPLE]
+====
+
+želite li sortirati listu polinoma `++lista1 = {x^3, x^2, x^6}++` prema stupnjevima, napravite odgovarajuću listu
+stupnjeva `++lista2 = Zip[Stupanj[a], a, lista1]++`. Nakon toga, `++ Sortiraj[lista1, lista2]++` daje željenu listu
+_lista3 = \{x^2, x^3, x^6}_
+
+====
+
+|===
+
+[NOTE]
+====
+
+Postoji zaobilazni način sortiranja liste proizvoljnih objekata kako je objašnjeno u
+http://wiki.geogebra.org/en/Tutorial:Advanced_List_Sorting[Tutorialu:Advanced List Sorting].
+
+====

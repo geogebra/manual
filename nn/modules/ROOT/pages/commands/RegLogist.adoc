@@ -1,0 +1,40 @@
+= RegLogist Kommando
+:page-en: commands/FitLogistic
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+RegLogist[ <Liste med punkt> ]::
+  Finn regresjonskurva i form av ein logistisk funksjon stem:[\frac\{a}\{1+b\cdot e^\{-kx}}] .
+
+[EXAMPLE]
+====
+
+*Døme:* `++RegLogist[{(1, 1), (2, 2), (3, 3)}]++` gjev stem:[\frac\{4}\{1+9e^\{-1.099x} } ] .
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Regresjonskurva er den kurva som passar best med punkta i lista.
+* Lista bør innehalde minst 3 punkt, helst fleire. Det første og det siste datapunktet må ligge forholdsvis nær kurva.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* For meir informasjon om regresjon med GeoGebra sjå:
+http://www.geogebra.no/filer/opplaring/RegresjonMedGeoGebra.pdf[Regresjon med GeoGebra].
+* Sjå også verktøyet image:Tool_Two_Variable_Regression_Analysis.gif[Tool Two Variable Regression
+Analysis.gif,width=32,height=32] xref:/tools/Regresjonsanalyse.adoc[Regresjonsanalyse] i
+xref:/Rekneark.adoc[reknearket].
+* Sjå også dei andre regresjonskommandoane xref:/commands/Reg.adoc[Reg], xref:/commands/RegEksp.adoc[RegEksp],
+xref:/commands/RegEksp2.adoc[RegEksp2], xref:/commands/RegLin.adoc[RegLin], xref:/commands/RegLinX.adoc[RegLinX],
+xref:/commands/RegLog.adoc[RegLog], xref:/commands/RegPoly.adoc[RegPoly], xref:/commands/RegPot.adoc[RegPot] og
+xref:/commands/RegSin.adoc[RegSin].
+
+====

@@ -1,0 +1,55 @@
+= CLøysingar Kommando
+:page-en: commands/CSolutions
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Denne kommandoen er tilgjengeleg berre i xref:/CAS_delen.adoc[CAS-delen].
+
+CLøysingar[ <Likning> ]::
+  Løyser likninga for hovedvariabelen og gjev ei liste med alle løysingane. Kommandoen tillet komplekse løysingar.
+CLøysingar[ <Likning>, <Variabel> ]::
+  Løyser likninga for den gjevne ukjende variabelen og gjev ei liste med alle løysingane. Kommandoen tillet komplekse
+  løysingar.
+
+CLøysingar[ <Liste med likningar>, <Liste med variablar> ]
+
+Løyser likningssettet for settet av ukjende variablar og gjev ei liste med alle løysingane. Kommandoen tillet komplese
+løysingar.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++CLøysingar[{y^2 = x - 1, x = 2 * y - 1}, {x, y}]++` gjev stem:[\begin\{pmatrix}1 + 2 ί&1 + ί\\1 - 2 ί&1 -
+ί\end\{pmatrix}], som er dei komplekse løysingane til _y^2^ = x - 1_ og _x = 2 * y - 1_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++CLøys[a^2 = -1, a]++` gjev _\{ί, -ί}_, som er dei komplekse løysingane til _a^2^ = -1_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++CLøys[x^2 = -1]++` gjev _\{ί, -ί}_, som er dei komplekse løysingane til _x^2^ = -1_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* I CAS-delen må ί nyttast for den imaginære eininga. For å skrive ί trykker du [.kcode]#ALT # + [.kcode]# i#.
+* Sjå også kommandoane xref:/commands/CLøys.adoc[Cløys], xref:/commands/Løys.adoc[Løys] og
+xref:/commands/Løysingar.adoc[Løysingar].
+
+====

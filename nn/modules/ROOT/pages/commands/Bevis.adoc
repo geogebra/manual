@@ -1,0 +1,56 @@
+= Bevis Kommando
+:page-en: commands/Prove
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|This page is about a feature that is supported only in
+xref:/s_index_php?title=Release_Notes_GeoGebra_5_0_action=edit_redlink=1.adoc[GeoGebra 5.0 Beta].
+|===
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Varsel,title="Varsel",width=18,height=18] *Varsel*: |Denne kommandoen er ikkje ferdig
+konstruert. Syntaksen og returnerte verdiar kan verte endra. Det kan oppstå problem ved bruk av kommandoen.
+|===
+
+Bevis[ <Boolsk uttrykk> ]::
+  Returnerer om det gjevne boolske uttrykket generelt er _true_ eller _false_.
+  Normalt vil GeoGebra avgjere om xref:/Boolske_verdiar.adoc[boolske uttrykk] er sanne ved bruk av numeriske
+  utrekningar. Denne kommandoen vil imidlertid ta i bruk symbolske metodar for å avgjere om uttrykket generelt er _true_
+  eller _false_. Dersom GeoGebra ikkje kan avgjere svaret vert _udefinert_ returnert.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+Vi definerer tre frie punkt `++A = (1, 2)++`, `++B = (3, 4)++` og `++C = (5, 6)++`. Kommandoen
+`++ErKollineær[A, B, C]++` gjev _true_ sidan ein numerisk test vert brukt på dei noverande koordinatane til punkta. Ved
+å bruke `++Bevis[ErKollineær[A, B, C]]++` får du _false_ sidan dei tre punkta generelt ikkje er kollineære (t.d. dersom
+du endrar eit av punkta).
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+Definer ein trekant med hjørner _A_, _B_ and _C_, og definer `++D = MidtPunkt[B, C]++`, `++E = MidtPunkt[A, C]++`,
+`++p=Linje[A, B]++`, `++q=Linje[D, E]++`. Nå vil både `++p∥q++` og `++Bevis[p∥q]++` gi _true_, sidan ei midtlinje til
+ein trekant alltid vil vere parallell med den aktuelle sida.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommanden xref:/commands/BevisDetaljar.adoc[BevisDetaljar], sida om xref:/Boolske_verdiar.adoc[boolske
+verdiar] og forklaringa på dei http://dev.geogebra.org/trac/wiki/TheoremProving[tekniske detaljane til algoritma]
+(engelsk lenke).
+
+====

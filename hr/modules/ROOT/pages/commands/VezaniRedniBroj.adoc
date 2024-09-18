@@ -1,0 +1,29 @@
+= VezaniRedniBroj naredba
+:page-en: commands/TiedRank
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+VezaniRedniBroj[ <lista L> ]::
+  Dati će listu, čiji je _i_-ti element jednak poretku _i_-tog elementa od L (poredak elementa je jednak njegovoj
+  poziciji u xref:/commands/Sortiraj.adoc[Sortiraj][L]). Ako je više jednakih elemenata u L koji zauzimaju pozicije od
+  _k_ do _l_ u Sortiraj[L], tim elementima će biti pridružena aritmetička sredina rednih brojeva od _k_ do _l_ .
+
+[EXAMPLE]
+====
+
+`++VezaniRedniBroj[{3, 2, 2, 1}]++` daje \{4, 2.5, 2.5, 1}.
+
+====
+
+[EXAMPLE]
+====
+
+`++VezaniRedniBroj[{4, 1, 2, 3, 4, 2}]++` daje \{5.5, 1, 2.5, 4, 5.5, 2.5} .
+
+====
+
+[NOTE]
+====
+
+Pogledajte još i xref:/commands/ListaRednihBrojeva.adoc[ListaRednihBrojeva naredba]
+
+====

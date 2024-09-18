@@ -1,0 +1,29 @@
+= GamaRazdioba naredba
+:page-en: commands/Gamma
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+GamaRazdioba[ <alfa>, <beta>, x ]::
+  Izradit će funkciju gustoće vjerojatnosti (fgv) https://en.wikipedia.org/wiki/Gamma_distribution[gama razdiobe] s
+  parametrima _α, β_.
+GamaRazdioba[ <alfa>, <beta>, x, <kumulacija - logička vrijednost> ]::
+  Ako je _kumulacija - logička vrijednost_ true, izradit će kumulativnu funkciju distribucije gama razdiobe, u suprotnom
+  će izraditi fgv za gama razdiobu.
+GamaRazdioba[ <alfa>, <beta>, <vrijednost varijable v> ]::
+  Izračunava vrijednost kumulativne funkcije distribucije gama razdiobe za zadanu vrijednost _v_, t.j. vjerojatnost
+  _P(X≤v)_ gdje je _X_ slučajna varijabla gama razdiobe zadana parametrima _α, β_.
+
+[NOTE]
+====
+
+Daje vjerojatnost za zadanu vrijednost _x_-koordinate (ili površinu ispod krivulje gama razdiobe lijevo od zadane
+_x_-koordinate).
+
+====
+
+== CAS prikaz
+
+xref:/CAS_prikaz.adoc[CAS prikaz] podržava samo sljedeću sintaksu:
+
+GamaRazdioba[ <alfa>, <beta>, <vrijednost varijable> ]::
+  Izračunava vrijednost kumulativne funkcije distribucije gama razdiobe za zadanu vrijednost _v_, t.j. vjerojatnost
+  _P(X≤v)_ gdje je _X_ slučajna varijabla gama razdiobe zadana parametrima _α, β_.

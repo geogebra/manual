@@ -1,0 +1,75 @@
+= Invers Kommando
+:page-en: commands/Invert
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Invers[ <Matrise M> ]::
+  Finn den inverse matrisa til _M_.
+  Invers[ <Funksjon f> ];;
+    Finn den inverse funksjonen til _f_.
+    [NOTE]
+
+  ====
+
+  *Merk:*
+
+  Funksjonen må innehalde berre eit ledd med _x_ og det vert ikkje teken omsyn til definisjonsmengde eller verdimengde;
+  til dømes for _f(x)=x^2_ eller _f(x) = sin(x)_. Dersom det er meir enn ein _x_ i funksjonen må du bruke ein annan
+  kommando i tillegg.:
+
+  [EXAMPLE]
+
+  ====
+
+  *Døme:*
+
+  Både `++Invers[Delbrøkoppspalting[(x + 1) / (x + 2)]]++` og`++Invers[FullstendigKvadrat[x^2 + 2 x + 1]]++` gjev dei
+  inverse funksjonane sjølv om det er meir enn eit ledd som inneheld _x_.
+
+  ====
+
+  ====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Invers[{{1, 2}, {3, 4}}]++` gjev stem:[ \begin\{pmatrix} -2 & 1\\ 1.5 & -0.5 \end\{pmatrix} , som er den inverse
+matrisa til \begin\{pmatrix} 1 & 2\\ 3 & 4 \end\{pmatrix} ].
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoane xref:/commands/Determinant.adoc[Determinant] og xref:/commands/Transponer.adoc[Transponer].
+
+====
+
+== CAS-delen
+
+Invers[ <Matrise M> ]::
+  Finn den inverse matrisa til _M_. Kan også verte brukt på matriser med udefinerte variablar.
+  Invers[ <Funksjon f> ];;
+    Finn den inverse funksjonen til _f_. Kommandoen kan også verte brukt på funksjonar der meir enn eit ledd inneheld
+    _x_.
+    [EXAMPLE]
+
+  ====
+
+  *Døme:*
+
+  `++Invers[(x + 1) / (x + 2)]++` som gjev stem:[\frac\{-2x+1}\{x-1}].
+
+  ====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Invers[{{a, b}, {c, d}}]++` gjev stem:[ \begin\{pmatrix} \frac\{d}\{ad- bc} & \frac\{-b}\{ad- bc}\\ \frac\{-c}\{ad-
+bc}& \frac\{a}\{ ad- bc} \end\{pmatrix} , som er den inverse matrisa til \begin\{pmatrix} a & b\\ c & d \end\{pmatrix}
+].
+
+====

@@ -1,0 +1,22 @@
+= Delingsforhold Kommando
+:page-en: commands/AffineRatio
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Delingsforhold[ <Punkt A>, <Punkt B>, <Punkt C> ]::
+  Gjev delingsforholdet _λ_ til tre punkt _A_, _B_ og _C_, som ligg på ei rett linje der _C_ = _A_ + _λ_ * _AB_.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++A=Punkt[{1,2}]++`
+
+`++B=Punkt[{2,2}]++`
+
+`++C=Punkt[{-1,2}]++`
+
+`++a=Delingsforhold[A, B, C]++` vil lagre verdien -2 til _a_ sidan __C__=(1,2) + (-2)*[1,0], der __A__=(1,2) og
+__AB__=[1,0]
+
+====

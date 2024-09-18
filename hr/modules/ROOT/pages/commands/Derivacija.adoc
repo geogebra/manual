@@ -1,0 +1,79 @@
+= Derivacija naredba
+:page-en: commands/Derivative
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Derivacija[ <funkcija> ]::
+  Crta derivaciju zadane funkcije u odnosu na glavnu varijablu.
+Derivacija[ <funkcija>, <broj n> ]::
+  Crta __n__^tu^ derivaciju zadane funkcije u odnosu na glavnu varijablu.
+Derivacija[ <funkcija>, <varijabla> ]::
+  Izračunava parcijalnu derivaciju zadane funkcije u odnosu na zadanu varijablu.
+Derivacija[ <funkcija>, <varijabla>, <broj n> ]::
+  Izračunava __n__^tu^ parcijalnu derivaciju zadane funkcije u odnosu na zadanu varijablu.
+Derivacija[ <krivulja> ]::
+  Crta derivaciju zadane krivulje.
+Derivacija[ <krivulja>, <broj> ]::
+  Crta __n__^tu^ derivaciju zadane krivulje.
+
+[EXAMPLE]
+====
+
+`++Derivacija[x³+3x y, x, 2]++` daje _6x_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Derivacija[x³+3x y, x]++` daje _3x²+3y_.
+
+====
+
+[NOTE]
+====
+
+Ima utjecaja samo na parametarski zadane krivulje.
+
+====
+
+[NOTE]
+====
+
+Možete koristiti i `++f'(x)++` umjesto `++Derivacija[f]++`, ili `++f''(x)++` umjesto `++Derivacija[f, 2]++`, i tako
+dalje.
+
+====
+
+== CAS prikaz
+
+U xref:/CAS_prikaz.adoc[CAS prikazu] su moguće samo slijedeće sintakse:
+
+Derivacija[ <izraz e> ]::
+  Daje derivaciju od "e" u odnosu na glavnu varijablu.
+
+[EXAMPLE]
+====
+
+* `++Derivacija[x^2]++` daje _2 x_.
+* `++Derivacija[t^3]++` daje _3 t^2^_.
+
+====
+
+Derivacija[ <izraz e>, <varijabla a> ]::
+  Daje derivaciju od "e" u odnosu na varijablu _a_.
+Derivacija[ <izraz e>, <varijabla a>, <broj n> ]::
+  Daje __n__^tu^ derivaciju od "e" u odnosu na varijablu _a_.
+
+[EXAMPLE]
+====
+
+`++Derivacija[a x^3, x, 2]++` daje _6 a x_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Derivacija[a x^3, a]++` daje _x^3^_.
+
+====

@@ -1,0 +1,18 @@
+= TTest naredba
+:page-en: commands/TTest
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+TTest[ <lista podataka uzorka>, <očekivana srednja vrijednost>, <broj krakova> ]::
+  Izvršit će T test aritmetičke sredine uzorka kristeći danu listu podataka. _Hipotetsko očekivanje_ ili očekivana
+  srednja vrijednost pretpostavljena je u nul hipotezi. _Krak_ može primiti vrijednosti "<", ">" , "≠". One opisuju
+  hipotezu kako je dolje opisano.
+  "<" = aritmetička sredina < _očekivana srednja vrijednost_
+  ">" = aritmetička sredina > _očekivana srednja vrijednost_
+  "≠" = aritmetička sredina ≠ _očekivana srednja vrijednost_
+
+Rezultat je lista oblika \{P vrijednost, T statistički test}.
+
+TTest[ <srednja vrijednost uzorka>, <standardna devijacija uzorka>, <veličina uzorka>, <očekivana srednja vrijednost>,
+<broj krakova> ]::
+  Izvršit će T test aritmetičke sredine uzorka kristeći dane statističke podatke uzorka. _Očekivana srednja vrijednost_
+  i _broj krakova_ su definirani gore. Rezultat je lista oblika \{P vrijednost, T statistički test}.

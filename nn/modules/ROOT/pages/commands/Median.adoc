@@ -1,0 +1,55 @@
+= Median Kommando
+:page-en: commands/Median
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Median[ <Liste med tal> ]::
+  Finn https://en.wikipedia.org/wiki/nn:Median[medianen] av tala i lista.
+
+[EXAMPLE]
+====
+
+*Døme:* `++Median[{1, 2, 3}]++` gjev 2.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Dersom lengda på lista er eit partal vil det aritmetiske gjennomsnittet av dei to senterelementa verte
+returnert.
+
+[EXAMPLE]
+====
+
+*Døme:* `++Median[{1, 1, 8, 8}]++` gjev 4.5
+
+====
+
+====
+
+Median[ <Liste med tal L>, <Liste med frekvensar F> ]
+
+Finn https://en.wikipedia.org/wiki/nn:Median[medianen] av tala i lista _L_ når talet på førekomstar av kvart tal i _L_
+er gjeve av samsvarande element i _F_.
+
+== CAS-delen
+
+Median[ <Liste med tal> ]::
+  Finn https://en.wikipedia.org/wiki/nn:Median[medianen] av tala i lista.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++Median[{1, 2, 3}]++` gjev 2
+* `++Median[{1, 1, 8, 8}]++` gjev stem:[\frac\{9}\{2}]
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++Median[{1, 3, 2}, {2, 1, 3}]++` gjev 2, sidan 2 er medianen i lista 1, 1, 2, 2, 2, 3.
+
+====

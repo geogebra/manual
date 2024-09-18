@@ -1,0 +1,31 @@
+= Krivulja naredba
+:page-en: commands/Curve
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Krivulja[ <izraz e1>, <izraz e2>, <varijabla t>, <početna vrijednost a>, <krajnja vrijednost b> ]::
+  Daje xref:/Krivulje.adoc[parametarsku krivulju] u kartezijevim koordinatama sa zadanim izrazima _e1_ za x i _e2_ za y
+  (koji koriste parametar t) unutar zadanog intervala [_a, b_].
+
+[EXAMPLE]
+====
+
+Unos `++c = Krivulja[2 cos(t), 2 sin(t), t, 0, 2 pi]++` napravit će krug polumjera 2 sa središtem u ishodištu
+koorsinatnog sustava.
+
+====
+
+[NOTE]
+====
+
+Broj _b_ treba biti veći ili jednak broju _a_ i oba moraju biti konačni.
+
+====
+
+[NOTE]
+====
+
+_x_ nije dozvoljen kao varijabla za parametar
+
+====
+
+Pogledajte xref:/Krivulje.adoc[Krivulje] za detalje.

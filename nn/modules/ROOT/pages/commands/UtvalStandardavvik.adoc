@@ -1,0 +1,54 @@
+= UtvalStandardavvik Kommando
+:page-en: commands/SampleSD
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+UtvalStandardavvik[ <Liste med tal> ]::
+  Finn utvalsstandardavviket (også kalla https://en.wikipedia.org/wiki/nn:Standardavvik[det empiriske standardavviket])
+  til den gjevne lista med tal.
+UtvalStandardavvik[ <Liste med tal L>, <Liste med frekvensar F> ]::
+  Finn utvalsstandardavviket til tala i _L_ når talet på kvart element i L er gjeve av det samsvarande elementet i _F_.
+
+[EXAMPLE]
+====
+
+*Døme:* `++UtvalStandardavvik[{1, 2, 3, 4, 5}, {5, 1, 1, 3, 9}]++` gjev _1.74_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++UtvalStandardavvik[{1, 2, 3, 4, 5}]++` gjev _1.58_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Jo fleire element det er i lista desto meir likt vert resultatet med det ein får frå kommandoen
+xref:/commands/Standardavvik.adoc[Standardavvik]. Grunnen til dette er at det einaste som skil dei to statistiske
+storleikane er at utvalsstandardavviket har _N - 1_ i nemnaren, medan standardavviket har _N_, der _N_ er talet på
+element i lista.
+* Sjå også kommandoane xref:/commands/UtvalStandardavvikX.adoc[UtvalStandardavvikX] og
+xref:/commands/UtvalStandardavvikY.adoc[UtvalStandardavvikY] og xref:/commands/VariansUtval.adoc[VariansUtval].
+
+====
+
+== CAS-delen
+
+UtvalStandardavvik[ <Liste med tal> ]::
+  Finn utvalsstandardavviket (også kalla https://en.wikipedia.org/wiki/nn:Standardavvik[det empiriske standardavviket])
+  til den gjevne lista med tal. Kommandoen gjev det eksakte svaret, dersom lista inneheld udefinerte variablar vert
+  resultatet ein formel for svaret.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++UtvalStandardavvik[{1, 2, 3, 4, 5}]++` gjev stem:[\frac\{\sqrt\{5} }\{\sqrt\{2} }].
+* `++UtvalStandardavvik[{1, 2, a}]++` gjev stem:[\frac\{\sqrt\{a²-3a+3}}\{\sqrt\{3}}].
+
+====

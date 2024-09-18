@@ -1,0 +1,53 @@
+= Ako Naredba
+:page-en: commands/If
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+Ako[ uvjet, figura _a_ ]::
+  kao rezultat daje kopiju figure _a_ ako je logička vrijednost uvjeta _true-istinita_, odnosno nedefiniranu figuru ako
+  je logička vrijednost uvjeta _false-neistinita_.
+
+Ako[ uvjet, figura _a_, figura _b_ ]::
+  kao rezultat daje kopiju figure _a_ ako je logička vrijednost uvjeta _true-istinita_, odnosno kopiju figure _b_ ako je
+  logička vrijednost uvjeta _false-neistinita_.
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Upozorenje,title="Upozorenje",width=18,height=18] *Upozorenje*: |Obje figure moraju biti istog
+tipa.
+|===
+
+== Uvjetne funkcije
+
+Naredbu _Ako_ možemo koristiti da kreiramo uvjetne funkcije. Tako kreirane funkcije možemo koristiti kao argument u
+naredbama koje to omogućavaju, kao na primjer xref:/Izvod_Naredba.adoc[Izvod], xref:/Integral_Naredba.adoc[Integral] i
+xref:/s_index_php?title=PresječneTačke_Naredba_action=edit_redlink=1.adoc[PresječneTačke].
+
+[EXAMPLE]
+====
+
+* `++f(x) = Ako[x < 3, sin(x), x^2]++` daje funkciju _sin(x)_ za _x < 3_ i funkciju _x^2^_ za _x ≥ 3_
+* `++f(x) = Ako[x < 3 ∧ x>0, x^3]++` daje funkciju _x^3^_ za x između 0 i 3, a nedefinisano za _x ≥ 3_ ili _x ≤ 0_.
+
+====
+
+[NOTE]
+====
+
+Vidi: xref:/Boolean_vrijednost.adoc[Boolean/logička vrijednost] za simbole koji se koriste u uvjetnim naredbama.
+
+====
+
+[NOTE]
+====
+
+Naredba Izvod od *Ako[uvjet, f(x), g(x)]* kao rezultat daje *Ako[uvjet, f'(x), g'(x)]*, no neće izvršiti izračunavanja
+granica u kritičnim tačkama.
+
+====
+
+== Ako naredba u skriptu
+
+U mnogim programskim jezicima naredba *Ako* znači "Ako je naredba zadovoljena, učini nešto, u suprotnom učini nešto
+drugo". U GeoGebri, argumenti naredbe Ako nisu naredbe, već vrijednosti nastale kao rezultat naredbe. Dakle, ukoliko
+želimo, na primjer, postaviti vrijednost _b_ na 2 uz uvjet _a > 2_, korektan način da ovo uradimo je sljedeći
+`++PostaviVrijednost[b,Ako[a>2,2,b]]++`.

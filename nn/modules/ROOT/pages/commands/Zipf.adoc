@@ -1,0 +1,44 @@
+= Zipf Kommando
+:page-en: commands/Zipf
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Zipf[ <Tal på element>, <Eksponent> ]::
+  Returner ein søylegraf for Zipf fordelinga.
+  Parametrar:
+  _Tal på element_: talet på element vi ser på rangen til
+  _Eksponent_: eksponenten som karakteriserer fordelinga
+
+Zipf[ <Tal på element>, <Eksponent>, <Boolsk kumulativ> ]::
+  Dersom _kumulativ = false_ vert det returnert ein søylegraf for Zipf fordelinga.
+  Dersom _kumulativ = true_ vert det returnert ein søylegraf for den kumulative Zipf fordelinga.
+Zipf[ <Tal på element>, <Eksponent>, <Variabelverdi v>, <Boolsk kumulativ> ]::
+  La _X_ vere ein Zipf fordelt stokastisk variabel.
+  * Dersom _kumulativ = false_ vert _P(X = v)_ returnert.
+  * Dersom _kumulativ = true_ vert _P(X ≤ v)_ returnert.
+
+[NOTE]
+====
+
+*Merk:*
+
+* Sjå også kommandoen xref:/commands/InversZipf.adoc[InversZipf].
+* Sjå også kommandoane for dei andre diskrete sannsynsfordelingane
+xref:/commands/FordelingBernoulli.adoc[FordelingBernoulli], xref:/commands/FordelingBinomial.adoc[FodelingBinomial],
+xref:/commands/FordelingHypergeometrisk.adoc[FordelingHypergeometrisk],
+xref:/commands/FordelingPascal.adoc[FordelingPascal] og xref:/commands/FordelingPoisson.adoc[FordelingPoisson].
+* Sjå også kommandoane for dei kontinuerlege sannsynsfordelingane xref:/commands/Erlang.adoc[Erlang],
+xref:/commands/FordelingCauchy.adoc[Fordeling Cauchy], xref:/commands/FordelingF.adoc[FordelingF],
+xref:/commands/FordelingGamma.adoc[FordelingGamma], xref:/commands/FordelingNormal.adoc[FordelingNormal],
+xref:/commands/FordelingT.adoc[FordelingT], xref:/commands/FordelingWeibull.adoc[FordelingWeibull],
+xref:/commands/KjiKvadrat.adoc[KjiKvadrat], xref:/commands/LogNormal.adoc[LogNormal],
+xref:/commands/Logistisk.adoc[Logistisk], xref:/commands/Trekantfordeling.adoc[Trekantfordeling] og
+xref:/commands/Uniform.adoc[Uniform].
+
+====
+
+== CAS-delen
+
+Zipf[ <Tal på element>, <Eksponent>, <Variabelverdi v>, <Boolsk kumulativ> ]::
+  La _X_ vere ein Zipf fordelt stokastisk variabel.
+  * Dersom _kumulativ = false_ vert _P(X = v)_ returnert.
+  * Dersom _kumulativ = true_ vert _P(X ≤ v)_ returnert.

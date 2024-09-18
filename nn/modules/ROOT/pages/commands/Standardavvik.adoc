@@ -1,0 +1,55 @@
+= Standardavvik Kommando
+:page-en: commands/SD
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Standardavvik[ <Liste med tal> ]::
+  Finn https://en.wikipedia.org/wiki/nn:Standardavvik[standardavviket] til tala i lista.
+Standardavvik[ <Liste med tal L>, <Liste med frekvensar F> ]::
+  Finn https://en.wikipedia.org/wiki/nn:Standardavvik[standardavviket] til tala i _L_ når talet på kvart element i L er
+  gjeve av det samsvarande elementet i _F_.
+
+[EXAMPLE]
+====
+
+*Døme:* `++Standardavvik[{1, 2, 3, 4, 5}, {5, 1, 1, 3, 9}]++` gjev _1.7_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++Standardavvik[{1, 2, 3, 4, 5}]++` gjev _1.41_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Sjå også kommandoen xref:/commands/UtvalStandardavvik.adoc[UtvalStandardavvik]. Denne vert brukt for å finne
+standardavviket når ein berre har eit utval av data frå ein populasjon, medan standardavvik kommandoen nyttast når ein
+har data frå heile populasjonen. Jo fleire element det er i lista, desto meir likt blir resultatet for desse to
+kommandoane. Grunnen til dette er at det einaste som skil dei to statistiske storleikane er at utvalsstandardavviket har
+_N - 1_ i nemnaren, medan standardavviket har _N_, der _N_ er talet på element i lista.
+* Sjå også kommandoane xref:/commands/Gjennomsnitt.adoc[Gjennomsnitt],
+xref:/commands/StandardavvikX.adoc[StandardavvikX], xref:/commands/StandardavvikY.adoc[StandardavvikY] og
+xref:/commands/Varians.adoc[Varians].
+
+====
+
+== CAS-delen
+
+Standardavvik[ <Liste med tal> ]::
+  Finn https://en.wikipedia.org/wiki/nn:Standardavvik[standardavviket] til tala i lista. Kommandoen gjev det eksakte
+  svaret og dersom lista inneheld udefinerte variablar vert det gjeve ein formel for svaret.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++Standardavvik[{1, 2, 3, 4, 5}]++` gjev stem:[\sqrt\{2}].
+* `++Standardavvik[{2, 3, 5, a}]++` gjev stem:[\{\frac\{\sqrt\{3a^2-20a+52} }\{4} }].
+
+====

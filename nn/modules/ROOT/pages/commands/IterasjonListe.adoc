@@ -1,0 +1,24 @@
+= IterasjonListe Kommando
+:page-en: commands/IterationList
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+IterasjonListe[ <Funksjon f>, <Tal stem:[x_0]>, <Tal på iterasjonar n> ]::
+  Gjev ei liste med lengde _n + 1_ der kvart element er gjeven av iterasjonar av _f_ med startverdi stem:[x_0]. For kvar
+  iterasjon vert det forrige elementet i lista sett inn for variabelen i funksjonen.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++La f(x) = x^2++`, kommandoen `++IterasjonListe[f, 3, 2]++` gjev då stem:[\\{3, 9, 81\}]
+* `++La f(x) = x^2+2++`, kommandoen `++IterasjonListe[f, 1, 3]++` gjev då stem:[\\{1, 3, 11, 123\}]
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoen xref:/commands/Iterasjon.adoc[Iterasjon].
+
+====

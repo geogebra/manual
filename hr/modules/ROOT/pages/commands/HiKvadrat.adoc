@@ -1,0 +1,36 @@
+= HiKvadrat naredba
+:page-en: commands/ChiSquared
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+HiKvadrat[ <stupanj slobode d>, x ]::
+  Izradit će funkciju gustoće vjerojatnosti (fgv) https://en.wikipedia.org/wiki/Chi-square_distribution[Hi-kvadrat
+  razdiobe] s _d_ stupnjeva slobode.
+HiKvadrat[ <stupanj slobode d>, x, <kumulacija - logička vrijednost> ]::
+  Ako je _kumulacija - logička vrijednost_ jednaka true, izradit će kumulativnu funkciju distribucije Hi-kvadrat
+  razdiobe, u suprotnom će izraditi fgv za Hi-kvadrat razdiobu.
+HiKvadrat[ <stupanj slobode d>, <vrijednost varijable v> ]::
+  Izračunat će vrijednost kumulativne funkcije distribucije Hi-kvadrat razdiobe za zadanu vrijednost _v_, t.j.
+  vjerojatnost _P(X≤v)_ gdje je _X_ slučajna varijabla Hi-kvadrat razdiobe s _d_ stupnjeva slobode.
+
+[NOTE]
+====
+
+Daje vjerojatnost za zadanu vrijednost _x_-koordinate (ili površinu ispod krivulje Hi-kvadrat razdiobe lijevo od zadane
+_x_-koordinate).
+
+====
+
+== CAS prikaz
+
+xref:/CAS_prikaz.adoc[CAS prikaz] podržava samo sljedeću sintaksu:
+
+HiKvadrat[ <stupanj slobode d>, <vrijednost varijable v> ]::
+  Izračunat će vrijednost kumulativne funkcije distribucije Hi-kvadrat razdiobe za zadanu vrijednost _v_, t.j.
+  vjerojatnost _P(X≤v)_ gdje je _X_ slučajna varijabla Hi-kvadrat razdiobe s _d_ stupnjeva slobode.
+
+[EXAMPLE]
+====
+
+`++HiKvadrat[4, 3]++` daje stem:[\gamma(2, \frac\{3}\{2})], što približno iznosi _0.44_.
+
+====

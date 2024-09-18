@@ -1,0 +1,26 @@
+= Zamijeni Naredba
+:page-en: commands/Substitute
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+== CAS Sintaksa
+
+Zamijeni[ <Izraz>, <od>, <do> ]::
+  Zamjena _iz_ _izraza_ s _u_.
+
+[EXAMPLE]
+====
+
+* `++Zamijeni[(x^2 / (4x + 6))^2 + 6(x^2 / (4x + 6)) + 8, x^2, a*(4x + 6)]++` daje _a^2^ + 6 a + 8_.
+* `++Zamijeni[(3 m - 3)^2 - (m + 3)^2, m, a]++` daje _8 a^2^ - 24 a_.
+
+====
+
+Zamijeni[ <Izraz>, <Lista> ]::
+  Zamijeni u __izrazu__svaku promjenljivu liste s promjenljivom ili brojem kojim želiš.
+
+[EXAMPLE]
+====
+
+`++Zamijeni[2x + 3y - z, {x = a, y = 2, z = b}]++`daje _2a - b + 6_.
+
+====

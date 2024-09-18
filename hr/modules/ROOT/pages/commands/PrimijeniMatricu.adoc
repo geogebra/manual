@@ -1,0 +1,11 @@
+= PrimijeniMatricu naredba
+:page-en: commands/ApplyMatrix
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+PrimijeniMatricu[ <xref:/Matrice.adoc[matrica] M>, <objekt O> ]
+
+Transformira objekt tako da se točka _P_ koja pripada objektu _O_ preslkikava u
+
+* točku _M*P_ ako je _M_ 2x2 matrica ili
+* točku _projekcija(M*(x(P), y(P), 1))_ ako je _M_ 3x3 matrica, gdje je _projeckcija_ točka u koju perspektivna
+transformacija _(x/z, y/z)_ preslikava točku _(x,y,z)_ .

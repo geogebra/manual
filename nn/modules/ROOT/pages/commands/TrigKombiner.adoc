@@ -1,0 +1,64 @@
+= TrigKombiner Kommando
+:page-en: commands/TrigCombine
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+TrigKombiner[ <Uttrykk> ]::
+  Gjer eit trigonometrisk uttrykk med produkt av trigonometriske funksjonar om til eit uttrykk som kun involverar summar
+  av trigonometriske uttrykk.
+TrigKombiner[ <Uttrykk>, <Målfunksjon> ]::
+  Gjer eit trigonometrisk uttrykk med produkt av trigonometriske funksjonar om til eit uttrykk som kun involverar summar
+  av trigonometriske uttrykk, der den gjevne målfunksjonen er føretrekt.
+
+[EXAMPLE]
+====
+
+*Døme:* `++TrigKombiner[(tan(x) + tan(y)) / (1 - tan(x) tan(y)), tan(x)]++` gjev _tan(x + y)_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++TrigKombiner[sin(x) cos(3x)]++` gjev funksjonen stem:[\frac\{sin(4x)-sin(2x)}\{2}].
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Kommandoen fungerer berre med _x_, _y_ og _z_ som variabel.
+* Sjå også kommandoane xref:/commands/TrigForenkle.adoc[TrigForenkle] og xref:/commands/TrigUtvid.adoc[TrigUtvid].
+
+====
+
+== CAS-delen
+
+TrigKombiner[ <Uttrykk> ]::
+  Gjer eit trigonometrisk uttrykk med produkt av trigonometriske funksjonar om til eit uttrykk som kun involverar summar
+  av trigonometriske uttrykk.
+TrigKombiner[ <Uttrykk>, <Målfunksjon> ]::
+  Gjer eit trigonometrisk uttrykk med produkt av trigonometriske funksjonar om til eit uttrykk som kun involverar summar
+  av trigonometriske uttrykk, der den gjevne målfunksjonen er føretrekt.
+
+[EXAMPLE]
+====
+
+*Døme:* `++TrigKombiner[(tan(p) + tan(q)) / (1 - tan(p) tan(q)), tan(x)]++` gjev _tan(p + q)_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++TrigKombiner[sin(p) cos(3p)]++` gjev funksjonen stem:[\frac\{sin(4p)-sin(2p)}\{2}].
+
+====
+
+[NOTE]
+====
+
+*Merk:* Alle bokstavar kan verte brukt som variablar.
+
+====

@@ -1,0 +1,44 @@
+= NCr Kommando
+:page-en: commands/BinomialCoefficient
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+nCr[ <Tal n>, <Tal r> ]::
+  Finn binomialkoeffisienten stem:[ n \choose r ].
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++nCr[5, 3]++` gjev _10_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Gjev talet på uordna utval når _r_ element vert trekt frå _n_ element utan tilbakelegging.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoen xref:/commands/NPr.adoc[nPr].
+
+====
+
+== CAS-delen
+
+nCr[ <Tal n>, <Tal r> ]::
+  Finn binomialkoeffisienten stem:[ n \choose r ]. Dersom du skriv inn udefinerte variablar i staden for tal vil
+  kommandoen gje ein formel for binomialkoeffisienten.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++nCr[n, 3]++` gjev stem:[\frac\{n^\{3} - 3 n^\{2} + 2 n}\{6}].
+
+====

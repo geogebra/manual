@@ -1,0 +1,41 @@
+= Trinngraf Kommando
+:page-en: commands/StepGraph
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Trinngraf[ <Liste med punkt> ]::
+  Teiknar ein trinngraf frå den gjevne lista med punkt. Det vert teikna eit horisontalt linestykke frå eit punkt og til
+  _x_-verdien for neste punkt i lista.
+Trinngraf[ <Liste med punkt>, <Boolsk Bind saman> ]::
+  Teiknar ein trinngraf frå den gjevne lista med punkt. Det vert teikna eit horisontalt linestykke frå eit punkt og til
+  _x_-verdien for neste punkt i lista.
+  Dersom _Bind saman = true_ vert det også teikna eit vertikalt linjestykke frå eit punkt til _y_-verdien for forrige
+  punkt i lista.
+  Dersom _Bind saman = false_ vert det ikkje teikna eit vertikalt linjestykke.
+
+Trinngraf[ <Liste med punkt>, <Boolsk Bind saman>, <Punktstil> ]::
+  Teiknar ein trinngraf som beskrive over. _Punktstil_ kan verte sett til -2, -1, 0, 1, 2 og avgjer korleis punkta skal
+  verte teikna
+  * 0 = ingen punkt vert teikna
+  * 1 = solide punkt vert teikna til høgre
+  * 2 = solide punkt vert teikna til høgre og opne punkt vert teikna til venstre
+  * -1 = solide punkt vert teikna til venstre
+  * -2 = solide punkt vert teikna til venstre og opne punkt vert teikna til høgre
+
+Trinngraf[ <Liste med x-koordinatar>, <Liste med y-koordinatar> ]::
+  Teiknar ein trinngraf frå punkta ein får ved å kombinere _x_- og _y_-koordinatane i dei to listene. Det vert teikna
+  eit horisontalt linestykke frå eit punkt og til _x_-verdien for neste punkt i lista.
+Trinngraf[ <Liste med x-koordinatar>, <Liste med y-koordinatar>, <Boolsk Bind saman> ]::
+  Teiknar ein trinngraf frå punkta ein får ved å kombinere _x_- og _y_-koordinatane i dei to listene. Det vert teikna
+  eit horisontalt linestykke frå eit punkt og til _x_-verdien for neste punkt i lista.
+  Dersom _Bind saman = true_ vert det også teikna eit vertikalt linjestykke frå eit punkt til _y_-verdien for forrige
+  punkt i lista.
+  Dersom _Bind saman = false_ vert det ikkje teikna eit vertikalt linjestykke.
+
+Trinngraf[ <Liste med x-koordinatar>, <Liste med y-koordinatar>, <Boolsk Bind saman>, <Punktstil> ]::
+  Teiknar ein trinngraf som beskrive over. _Punktstil_ kan verte sett til -2, -1, 0, 1, 2 og avgjer korleis punkta skal
+  verte teikna
+  * 0 = ingen punkt vert teikna
+  * 1 = solide punkt vert teikna til høgre
+  * 2 = solide punkt vert teikna til høgre og opne punkt vert teikna til venstre
+  * -1 = solide punkt vert teikna til venstre
+  * -2 = solide punkt vert teikna til venstre og opne punkt vert teikna til høgre

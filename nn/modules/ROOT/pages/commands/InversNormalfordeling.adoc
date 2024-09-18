@@ -1,0 +1,26 @@
+= InversNormalfordeling Kommando
+:page-en: commands/InverseNormal
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+InversNormalfordeling[ <Gjennomsnitt μ>, <Standardavvik σ>, <Sannsyn p> ]::
+  Gjev talet _t_ slik at _P(X≤t) = p_, der _X_ er ein normalfordelt stokastisk variabel med parametrar _μ_ og _σ_.
+
+[NOTE]
+====
+
+*Merk:*
+
+* Kommandoen finn altså inversen til normalfordelinga sin
+https://en.wikipedia.org/wiki/no:Kumulativ_fordelingsfunksjon[kumulative fordelingsfunksjon] for sannsynet _p_. Dette
+tilsvarer å finne _Φ^-1^(p) * σ + μ_, der _Φ ^-1^_ er inversen til den kumulative fordelingsfunksjonen _Φ_ for
+standard-normalfordelinga _N(0,1)_.
+* Sannsynet _p_ må ligge i intervallet _[0, 1]_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoen xref:/commands/FordelingNormal.adoc[FordelingNormal].
+
+====

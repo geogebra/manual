@@ -1,0 +1,26 @@
+= Zip Kommando
+:page-en: commands/Zip
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Zip[ <Uttrykk>, <Var1>, <Liste1>, <Var2>, <Liste2>, ... ]::
+  Lagar ei xref:/Lister.adoc[liste] med objekta ein får når variablane i det gjevne uttrykket vert bytta ut med elementa
+  i dei samsvarande listene. Lengda på den resulterande lista er lik den minste verdien av lengda til den minste av dei
+  gjevne listene.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* La _P, Q, R, S_ vere punkt. `++Zip[Midtpunkt[A, B], A, {P, Q}, B, {R, S}]++` gjev ei liste som inneheld
+xref:/commands/Midtpunkt.adoc[midtpunkta] til linjestykka _PR_ og _QS_.
+* La _liste1 = \{x^2, x^3, x^6}_. `++Zip[Grad[a], a, liste1]++` gjev lista _\{2, 3, 6}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* I kvar liste må elementa vere av same type.
+
+====

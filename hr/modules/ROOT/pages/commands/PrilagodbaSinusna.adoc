@@ -1,0 +1,30 @@
+= PrilagodbaSinusna naredba
+:page-en: commands/FitSin
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+PrilagodbaSinusna[ <lista točaka> ]::
+  Izračunava prilagođenu krivulju oblika _a + b sin(cx + d)_.
+
+[EXAMPLE]
+====
+
+`++PrilagodbaSinusna[{(1, 1), (2, 2), (3, 1), (4, 0), (5, 1), (6, 2)}]++` dati će _1 + sin(1.5708x - 1.5708)_.
+
+====
+
+[NOTE]
+====
+
+* Lista treba sadržavati najmanje 4 točke, no preporuča se više. Lista treba pokrivati bar dvije točke ekstrema. Prva
+dva lokalna ekstrema ne bi trebala biti previše različita od apsolutnih ekstrema krivulje.
+* Vidi još i xref:/commands/PrilagodbaEksponencijalna.adoc[PrilagodbaEksponencijalna naredba],
+xref:/commands/PrilagodbaLogaritamska.adoc[PrilagodbaLogaritamska naredba],
+xref:/commands/PrilagodbaPolinomna.adoc[PrilagodbaPolinomna naredba] i
+xref:/commands/PrilagodbaPotencijska.adoc[PrilagodbaPotencijska naredba].
+
+====
+
+== CAS prikaz
+
+PrilagodbaSinusna[ <lista točaka> ]::
+  Izračunava prilagođenu krivulju oblika _a + b sin(cx + d)_.

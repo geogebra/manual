@@ -1,0 +1,54 @@
+= RiješiODJ naredba
+:page-en: commands/SolveODE
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+RiješiODJ[ <f'(x,y)>, <početni x>, <početni y>, <krajnji x>, <korak> ]::
+  Rješava običnu diferencijalnu jednadžbu prvog stupnja (ODJ) stem:[\frac\{dy}\{dx}=f'(x,y)] numeričkim putem uz zadanu
+  početnu točku te završetak & korak za _x_.
+  Na primjer za rješenje ODJ stem:[\frac\{dy}\{dx}=-xy] koristeći _A_ za početnu točku, ukucajte
+  `++RiješiODJ[-x*y, x(A), y(A), 5, 0.1].++`
+RiješiODJ[ <y'>, <x'>, <početni x>, <početni y>, <krajnji t>, <korak> ]::
+  Rješava običnu diferencijalnu jednadžbu prvog stupnja stem:[\frac\{dy}\{dx}=\frac\{f(x,y)}\{g(x,y)}] za zadanu početnu
+  točku, najveću vrijednost internog parametra _t_ te zadani korak za _t_. Ova verzija naredbe može raditi kada prva
+  zakaže npr. kada krivulja koja predstavlja rješenje ima točke iste apscise.
+  Na primjer za rješenje ODJ stem:[\frac\{dy}\{dx}=- \frac\{x}\{y} ] koristeći _A_ za početnu točku, ukucajte
+  `++RiješiODJ[-x, y, x(A), y(A), 5, 0.1].++`
+RiješiODJ[ [ <b(x)>, <c(x)>, <f(x)>, <početni x>, <početni y>, <početni y'>, <krajnji x>, <korak> ]::
+  Rješava ODJ drugog stupnja stem:[y''+b(x)y'+c(x)y=f(x)] .
+
+[NOTE]
+====
+
+Uvijek daje rezultat kao lokus. Logaritmi rješavanja se trenutno baziraju na Runge-Kutta numeričkim metodama.
+
+====
+
+[NOTE]
+====
+
+xref:/commands/Duljina.adoc[Duljina][ <lokus> ] omogućit će pronalaženje koliko je točaka u izračunatom lokusu i
+xref:/commands/Početni.adoc[Početni][ <lokus>, <broj> ] omogućit će izdvajanje točaka u listu, na primjer
+Početni[lokus1,Duljina[lokus1]].
+
+====
+
+== CAS prikaz
+
+RiješiODJ[ <jednadžba> ]::
+  Pokušava naći točno rješenje ODJ prvog stupnja stem:[\frac\{dy}\{dx}(x)=f(x, y(x))].
+RiješiODJ[ <jednadžba>, <zavisna varijabla>, <nezavisna varijabla> ]::
+  Pokušava naći točno rješenje ODJ prvog stupnja stem:[\frac\{dv}\{dw}(w)=f(w, v(w))].
+
+[EXAMPLE]
+====
+
+`++RiješiODJ[y / x, y,  x]++` daje _y = c~1~ x_.
+
+====
+
+[EXAMPLE]
+====
+
+`++RiješiODJ[y / x]++` daje _y = c~1~ x_.
+
+====

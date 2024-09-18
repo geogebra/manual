@@ -1,0 +1,55 @@
+= Utval Kommando
+:page-en: commands/Sample
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Utval[ <Liste L>, <Storleik n> ]::
+  Gjev ei liste med _n_ tilfeldige element frå _L_. Eit element kan verte valt fleire gongar.
+Utval[ <Liste L>, <Storleik n>, <Med utskifting> ]::
+  Gjev ei liste med _n_ tilfeldige element frå _L_.
+  Dersom _Med utskifning = true_ kan eit element vert valt fleire gongar.
+  Dersom _Med utskifning = false_ kan eit element ikkje vert valt fleire gongar.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++Utval[{1, 2, 3, 4, 5}, 5, true]++` gjev til dømes _\{2, 3, 3, 4, 5}_.
+* `++Utval[{1, 2, 3, 4, 5}, 5, false]++` gjev til dømes _\{1, 4, 3, 2, 5}_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Utval[{1, 2, 3, 4, 5}, 5]++` gjev til dømes _\{1, 2, 1, 5, 4}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Elementa i lista kan vere av forskjellige datatyper, til dømes tal, tekst, lister, punkt og så vidare.
+
+====
+
+== CAS-delen
+
+Utval[ <Liste>, <Storleik> ]::
+  Gjev ei liste med _n_ tilfeldige element frå _L_. Eit element kan verte valt fleire gongar. Eit eller fleire av
+  elementa i lista kan vere udefinerte variablar.
+Utval[ <Liste>, <Storleik>, <Med utskifting> ]::
+  Gjev ei liste med _n_ tilfeldige element frå _L_. Eit eller fleire av elementa i lista kan vere udefinerte variablar.
+  Dersom _Med utskifning = true_ kan eit element vert valt fleire gongar.
+  Dersom _Med utskifning = false_ kan eit element ikkje vert valt fleire gongar.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Utval[{-5, 2, a, 7, c}, 3]++` gjev til dømes _\{a, 7, -5}_.
+
+====

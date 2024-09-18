@@ -1,0 +1,45 @@
+= OstatakDijeljenja naredba
+:page-en: commands/Mod
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+OstatakDijeljenja[ <broj djeljenik a>, <broj djelitelj b> ]::
+  Izračunava ostatak pri dijeljenju cijelog broja _a_ cijelim brojem _b_.
+OstatakDijeljenja[ <polinom djeljenik>, <polinom djelitelj> ]::
+  Daje ostatak pri dijeljenju dvaju polinoma.
+
+[EXAMPLE]
+====
+
+`++OstatakDijeljenja[x^3 + x^2 + x + 6, x^2 - 3]++` daje__4 x + 9__.
+
+====
+
+[EXAMPLE]
+====
+
+`++OstatakDijeljenja[9, 4]++` daje _1_.
+
+====
+
+== CAS prikaz
+
+OstatakDijeljenja[ <broj djeljenik a>, <broj djelitelj b> ]::
+  Izračunava ostatak pri dijeljenju cijelog broja _a_ cijelim brojem _b_.
+
+[EXAMPLE]
+====
+
+* `++OstatakDijeljenja[2a+3, a ]++` daje _3_.
+* `++OstatakDijeljenja[2a+3, 2 ]++` daje _1_.
+
+====
+
+OstatakDijeljenja[ <polinom djeljenik>, <polinom djelitelj> ]::
+  Daje ostatak pri dijeljenju dvaju polinoma.
+
+[EXAMPLE]
+====
+
+`++OstatakDijeljenja[x^3 + x^2 + x + a, x^2 - 3]++` daje__4 x + a+3__.
+
+====

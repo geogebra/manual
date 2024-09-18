@@ -1,0 +1,45 @@
+= FyllCeller Kommando
+:page-en: commands/FillCells
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+FyllCeller[ <Celleområde>, <Objekt> ]::
+  Kopierer verdien/likninga til objektet til det gjevne celleområdet i xref:/Rekneark.adoc[reknearket]. Dei resulterande
+  cellene er xref:/Frie_objekt_avhengige_objekt_og_hjelpeobjekt.adoc[frie objekt] og er dermed uavhengige av objektet.
+
+[NOTE]
+====
+
+*Merk:* Parameteren _Objekt_ kan vere kva som helst; til dømes: _3_, _TilfeldigMellom[0,10]_ eller _Sirkel[A,B]_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Parameteren _Celleområde_ må verte skrive inn som til dømes: _B2:D5_.
+
+====
+
+FyllCeller[ <Celle>, <Liste> ]::
+  Kopierer verdiane frå lista til dei første cellene til høgre for den gjevne cella i xref:/Rekneark.adoc[reknearket].
+  Dei resulterande cellene er xref:/Frie_objekt_avhengige_objekt_og_hjelpeobjekt.adoc[frie objekt] og er dermed
+  uavhengige av lista.
+
+FyllCeller[ <Celle>, <Matrise> ]::
+  Kopierer verdiane frå matrisa til xref:/Rekneark.adoc[reknearket]. Elementet i det øvre venstre hjørnet av matrisa
+  vert plassert i den gjevne cella. Dei resulterande cellene er
+  xref:/Frie_objekt_avhengige_objekt_og_hjelpeobjekt.adoc[frie objekt] og er dermed uavhengige av matrisa.
+
+[NOTE]
+====
+
+*Merk:* Celler vert skrivne med kolonne og rad; til dømes _B2_ som er andre kolonne og andre rad.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoane xref:/commands/FyllKolonne.adoc[FyllKolonne] og xref:/commands/FyllRad.adoc[FyllRad].
+
+====

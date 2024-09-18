@@ -1,0 +1,99 @@
+= GeometriskStad Kommando
+:page-en: commands/Locus
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+GeometriskStad[ <Punkt på geometrisk stad Q>, <Punkt P> ]::
+  Gjev kurva for den geometriske staden til punktet _Q_ som er avhengig av punkt _P_. Det vil seie kurva _Q_ sveiper
+  over når _P_ sveiper over dei moglege verdiane punktet kan ha.
+GeometriskStad[ <Punkt på geometrisk stad Q>, <Glidar a> ]::
+  Gjev kurva for den geometriske staden til punktet _Q_ som er avhengig av glidaren _a_. Det vil seie kurva _Q_ sveiper
+  over når _a_ sveiper over verdimengda si.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* Opprett ein glidar _a_ ved hjelp av kommandoen xref:/commands/Glidar.adoc[Glidar] eller verktøyet
+image:Tool_Slider.gif[Tool Slider.gif,width=32,height=32] xref:/tools/Glidar.adoc[Glidar].
+* Skriv inn punktet `++Q=(a, 2a)++`
+* `++GeometriskStad[Q, a]++` gjev då linja som _Q_ sveiper over når _a_ sveiper over verdimengda si.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* Skriv inn funksjonen `++f(x)=x^2++` i inntastingsfeltet.
+* Opprett eit punkt _P_ på funksjonsgrafen ved bruk av eit av verktøya image:Tool_New_Point.gif[Tool New
+Point.gif,width=32,height=32] xref:/tools/Nytt_punkt.adoc[Nytt punkt] eller image:Tool_Point_in_Region.gif[Tool Point in
+Region.gif,width=32,height=32] xref:/tools/Punkt_på_objekt.adoc[Punkt på objekt].
+* Skriv inn punktet `++Q=(2x(P), y(P))++`
+* `++GeometriskStad[Q, P]++` gjev då kurva som _Q_ sveiper over når _P_ sveiper over sine moglege verdiar.
+
+====
+
+[NOTE]
+====
+
+*Merk:* _x(P)_ gjev _x_-koordinaten til _P_, medan _y(P)_ gjev _y_-koordinaten til _P_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Punktet _P_ må vere eit punkt på eit objekt; til dømes ei linje eit linjestykke, ein sirkel eller ein
+funksjonsgraf.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Geometriske stader er spesifikke objekttypar og opptrer som
+xref:/Frie_objekt_avhengige_objekt_og_hjelpeobjekt.adoc[hjelpeobjekt]. Dei kan også verte laga av nokre
+xref:/commands/Diskret_matematikk_Kommandoar.adoc[Diskret matematikk kommandoar] og kommandoen
+xref:/commands/LøysODE.adoc[LøysODE]. Geometriske stader er xref:/Geometriske_objekt.adoc[stiar] og kan verte brukt i
+sti-relaterte kommandoar som xref:/commands/Punkt.adoc[Punkt]. Eigenskapane deira avheng av korleis dei vart laga, sjå
+tildømes kommandoane xref:/commands/Omkrins.adoc[Omkrins] og xref:/commands/Første.adoc[Første]. Eit anna namn for
+geometrisk stad er lokus.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også verktøyet image:Tool_Locus.gif[Tool Locus.gif,width=32,height=32]
+xref:/tools/Geometrisk_stad.adoc[Geometrisk stad].
+
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Varsel,title="Varsel",width=18,height=18] *Varsel*: |Ein geometrisk stad er udefinert når det
+avhengige punktet er eit resultat av kommandoen xref:/commands/Punkt.adoc[Punkt] med to parametrar, eller kommandoen
+xref:/commands/StiParameter.adoc[StiParameter].
+|===
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Following text is about a feature that is supported only in
+xref:/s_index_php?title=Release_Notes_GeoGebra_4_2_action=edit_redlink=1.adoc[GeoGebra 4.2 Beta].
+
+'''''
+
+GeometriskStad[ <Retningsdiagram>, <Punkt> ]::
+  Gjev kurva til den geometriske staden som Returns the locus curve which samsvarer med retningsdiagrammet i det gjevne
+  punktet.
+GeometriskStad[ <f(x, y)>, <Punkt> ]::
+  Gjev kurva til den geometriske staden som samsvarer med løysinga av differensiallikninga
+  stem:[\frac\{dy}\{dx}=f(x,y)]. Løysinga vert funne numerisk.
+
+|===

@@ -1,0 +1,19 @@
+= OčekivanaTSrednjaVrijednost2 naredba
+:page-en: commands/TMean2Estimate
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+OčekivanaTSrednjaVrijednost2[ <lista podataka uzorka 1>, <lista podataka uzorka 2>, <razina>, <vrsta varijabilnosti -
+logička vrijednost> ]::
+  Izračunava T interval pouzdanosti očekivanja za razliku između dvaju očekivanja koristeći dane liste podataka uzoraka
+  i _razinu_ pouzdanosti.
+  Ako je _vrsta varijabilnosti - logička vrijednost_ = true, tada se varijance populacija smatraju jednakima i
+  standardne devijacije uzoraka se kombiniraju u računu.
+  Ako je _vrsta varijabilnosti - logička vrijednost_ = false, tada se varijance populacija ne smatraju jednakima i
+  standardne devijacije uzoraka se ne kombiniraju.
+  Rezultat se dobiva u obliku liste \{donja granica pouzdanosti, gornja granica pouzdanosti}.
+OčekivanaTSrednjaVrijednost2[ <srednja vrijednost uzorka 1>, <standardna devijacija uzorka 1>, <veličina uzorka 1>,
+<srednja vrijednost uzorka 2>, <standardna devijacija uzorka 2>, <veličina uzorka 2>, <razina>, <vrsta varijabilnosti -
+logička vrijednost> ]::
+  Izračunava T interval pouzdanosti očekivanja za razliku između dvaju očekivanja koristeći dane statističke podatke
+  uzoraka i _razinu_ pouzdanosti. Za _vrstu varijabilnosti - logička vrijednost_ ivrijedi isto što i gore napisano.
+  Rezultat se dobiva u obliku liste \{donja granica pouzdanosti, gornja granica pouzdanosti}.

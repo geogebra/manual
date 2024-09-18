@@ -1,0 +1,69 @@
+= Produkt Kommando
+:page-en: commands/Product
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Produkt[ <Liste med tal> ]::
+  Finn produktet av tala i lista.
+Produkt[ <Liste med tal>, <Tal n> ]::
+  Finn produktet av dei "n" første tala i lista.
+Produkt[ <Liste med tal L >, <Liste med frekvensar F> ]::
+  Finn produktet av tala i _L_ når talet på kvart element i _L_ er gjeve av det samsvarande elementet i _F_.
+
+[EXAMPLE]
+====
+
+*Døme:* `++Produkt[ {3, 2, 5, 4}, {2, 3, 5, 2} ]++` gjev _3600000_
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Produkt[{1, 2, 3, 4}, 3]++` gjev _6_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Produkt[{1, 2, 3, 4}]++` gjev _24_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Listene må ha same lengde.
+
+====
+
+== CAS-delen
+
+I xref:/CAS_delen.adoc[CAS-delen] er berre følgjande syntaks lovleg:
+
+Produkt[ <Liste med uttrykk> ]::
+  Finn produktet av elementa i lista.
+Produkt[ <Uttrykk>, <Variabel>, <Tal a>, <Tal b> ]::
+  Finn produktet av uttrykka ein får ved å erstatte den gjevne variabelen med alle heiltal i intervallet [_a_,_b_].
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Produkt[x + 1,  x,  2, 3]++` gjev _12_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Produkt[{1, 2, x}]++` gjev _2x_.
+
+====

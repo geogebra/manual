@@ -1,0 +1,69 @@
+= Faktoriser Kommando
+:page-en: commands/Factor
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Faktoriser[ <Polynom> ]::
+  Faktoriser polynomet.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Faktoriser[x^2 + x - 6]++` gjev _f(x) = (x - 2) (x + 3)_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoane
+
+* xref:/commands/Faktorar.adoc[Faktorar] som gjev faktorane til eit tal.
+* xref:/commands/CFaktor.adoc[Cfaktor] som også tillet komplekse faktorar.
+
+====
+
+== CAS-delen
+
+Faktoriser[ <Polynom> ]::
+  Faktoriserer polynomet.
+Faktoriser[ <Uttrykk>, <Variabel> ]::
+  Faktoriserer uttrykket med omsyn på den gjevne variabelen.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++Faktoriser[x^2 - y^2, x]++` gjev _(x + y) (x - y)_, som er faktoriseringa av _x^2^ - y^2^_ med omsyn på _x_,
+* `++Faktoriser[x^2 - y^2, y]++` gjev _(-x - y) (-x + y)_, som er faktoriseringa av _x^2^ - y^2^_ med omsyn på _y_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Factor[x^2 - y^2]++` gjev _(x + y) (x - y)_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også verktøyet image:Tool_Factor.gif[Tool Factor.gif,width=32,height=32]
+xref:/tools/Faktoriser.adoc[Faktoriser].
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoane
+
+* xref:/commands/Faktorar.adoc[Faktorar] som gjev faktorane til eit tal.
+* xref:/commands/CFaktor.adoc[Cfaktor] som også tillet komplekse faktorar.
+
+====

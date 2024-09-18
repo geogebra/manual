@@ -1,0 +1,56 @@
+= Umetni naredba
+:page-en: commands/Insert
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Umetni[ <lista 1>, <lista 2>, <pozicija> ]::
+  Umeće sve elemente _liste 1_ u _listu 2_ na zadanu poziciju.
+
+[EXAMPLE]
+====
+
+`++Umetni[{11, 12}, {1, 2, 3, 4, 5}, -2]++` smjestit će elemente prve liste na kraj druge liste ispred njenog zadnjeg
+elementa i izradit će listu _\{1, 2, 3, 4, 11, 12, 5}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Umetni[{11, 12}, {1, 2, 3, 4, 5}, 3]++` smjestit će elemente prve liste na treće (i sljedeća) mjesto(a) druge liste i
+izradit će listu _\{1, 2, 11, 12, 3, 4, 5}_.
+
+====
+
+[NOTE]
+====
+
+Ako je pozicija negativan broj, tada se položaj računa zdesna.
+
+====
+
+Umetni[ <objekt>, <lista>, <pozicija> ]
+
+....
+: Umeće objekt u listu na zadanu poziviju. 
+....
+
+[EXAMPLE]
+====
+
+`++Umetni[x^2, {1, 2, 3, 4, 5}, -1]++` smjestit će _x^2^_ na kraj liste i izradit će listu _\{1, 2, 3, 4, 5, x^2^}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Umetni[x^2, {1, 2, 3, 4, 5}, 3]++` smjestit će _x^2^_ na treće mjesto i izraditi listu _\{1, 2, x^2^, 3, 4, 5}_.
+
+====
+
+[NOTE]
+====
+
+Ako je pozicija negativan broj, tada se položaj računa zdesna.
+
+====

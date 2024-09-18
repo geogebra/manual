@@ -1,0 +1,42 @@
+= Faktoriziraj naredba
+:page-en: commands/Factor
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Faktoriziraj[ <polinom> ]::
+  Faktorizira polinom.
+
+[EXAMPLE]
+====
+
+`++Faktoriziraj[x^2 + x - 6]++` daje _f(x) = (x - 2) (x + 3)_.
+
+====
+
+== CAS prikaz
+
+Faktoriziraj[ <polinom> ]::
+  Faktorizira polinom.
+Faktoriziraj[ <izraz>, <varijabla> ]::
+  Factorizira zadani izraz u odnosu na zadanu varijablu.
+
+[EXAMPLE]
+====
+
+* `++Faktoriziraj[x^2 - y^2, x]++` daje _(x + y) (x - y)_, faktorizaciju od _x^2^ - y^2^_ u odnosu na _x_,
+* `++Faktoriziraj[x^2 - y^2, y]++` daje _(-x - y) (-x + y)_, faktorizaciju od _x^2^ - y^2^_ u odnosu na _y_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Faktoriziraj[x^2 - y^2]++` daje _(x + y) (x - y)_.
+
+====
+
+[NOTE]
+====
+
+Pogledajte još i xref:/commands/CFaktor.adoc[CFaktor naredba].
+
+====

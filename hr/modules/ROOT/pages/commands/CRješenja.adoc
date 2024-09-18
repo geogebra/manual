@@ -1,0 +1,42 @@
+= CRješenja naredba
+:page-en: commands/CSolutions
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Ova je naredba dostupna samo u xref:/CAS_prikaz.adoc[CAS prikazu].
+
+CRješenja[ <jednadžba> ]::
+  Rješit će zadanu jednadžbu u odnosu na glavnu nepoznanicu i dat će listu rješenja, uključujući i kompleksna.
+CRješenja[ <jednadžba>, <varijabla> ]::
+  Rješit će zadanu jednadžbu u odnosu na zadanu nepoznanicu i dat će listu rješenja, uključujući i kompleksna.
+CRješenja[ <lista jednadžbi>, <lista varijabli> ]::
+  Rješit će sustav zadanih jednadžbi u odnosu na zadane nepoznanici i dat će listu rješenja, uključujući i kompleksna.
+
+[EXAMPLE]
+====
+
+`++CRješenja[{y^2 = x - 1, x = 2 * y - 1}, {x, y}]++` daje stem:[\begin\{pmatrix}1 + 2 ί&1 + ί\\1 - 2 ί&1 -
+ί\end\{pmatrix}].
+
+====
+
+[EXAMPLE]
+====
+
+`++CRješenja[a^2 = -1, a]++` daje _\{ί, -ί}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++CRješenja[x^2 = -1]++` daje _\{ί, -ί}_.
+
+====
+
+[NOTE]
+====
+
+* Imaginarna jedinica ί se dobiva pritiskom tipki [.kcode]#ALT # + [.kcode]# i#.
+* Pogledajte još i naredbe xref:/commands/CRiješi.adoc[CRiješi] i xref:/commands/Rješenja.adoc[Rješenja].
+
+====

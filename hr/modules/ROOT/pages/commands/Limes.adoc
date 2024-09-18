@@ -1,0 +1,43 @@
+= Limes naredba
+:page-en: commands/Limit
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Limes[ <funkcija f>, <broj t> ]::
+  Izračunava https://en.wikipedia.org/wiki/Limit_of_a_function[limes] funkcije _f_ za danu vrijednost t kojoj teži
+  zavisna varijabla.
+
+[NOTE]
+====
+
+Limes može biti i beskonačno.
+
+====
+
+== CAS prikaz
+
+Limes[ <izraz f>, <vrijednost t> ]::
+  Izračunava limes izraza _f_ za danu vrijednost t kojoj teži glavna varijabla.
+Limes[ <izraz f>, <varijabla v>, <vrijednost t> ]::
+  Izračunava limes izraza _f_ za danu vrijednost t kojoj teži dana varijabla v.
+
+[EXAMPLE]
+====
+
+`++Limes[a sin(v)/v, v, 0]++` daje _a_ .
+
+====
+
+[EXAMPLE]
+====
+
+`++Limes[a sin(x)/x, 0]++` daje _a_ .
+
+====
+
+[NOTE]
+====
+
+Pogledajte još xref:/commands/Asimptota.adoc[naredbu Asimptota], xref:/commands/LimesOdozgo.adoc[naredbu LimesOdozgo] i
+xref:/commands/LimesOdozdo.adoc[naredbu LimesOdozdo].
+
+====

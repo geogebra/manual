@@ -1,0 +1,89 @@
+= Histogram naredba
+:page-en: commands/Histogram
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Histogram[ <lista granica razreda>, <lista visina> ]::
+  Crta histogram sa stupcima zadane visine. Lista granica razreda određuje širinu i položaj svakog stupca histograma.
+
+[EXAMPLE]
+====
+
+`++Histogram[{0, 1, 2, 3, 4, 5}, {2, 6, 8, 3, 1}]++` crta histogram s pet stupaca zadane visine. Prvi stupac je nad
+intervalom [_0, 1_], drugi je nad intervalom [_1, 2_] i tako dalje.
+
+====
+
+Histogram[ <lista granica razreda>, <lista neobrađenih podataka>, <koristi gustoću - logička vrijednost>, <skala
+gustoće> (opcionalno) ]::
+  Crta histogram koristeći neobrađene podatke. Granice razreda određuju širinu i položaj svakog stupca histograma i one
+  određuju koliko podataka leži u svakom razredu. Visine stupaca određuju se ovako:
+
+* Ako je _koristi gustoću = true_, visina = (skala gustoće) * (frekvencija razreda) / (širina razreda)
+* Ako je _koristi gustoću = false_, visina = frekvencija razreda
+
+Zadane postavke su: koristi gustoću = true i skala gustoće = 1. To crta histogram ukupne površine "n", gdje je "n" broj
+podataka.
+
+[EXAMPLE]
+====
+
+(_Histogram po zadanim postavkama_)
+
+`++Histogram[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true]++` crta histogram sa tri stupca, prvi visine 0.5,
+drugi 0.2 i treći 0.1.
+
+Ukupna površina ovog histograma je = 0.5*10 + 0.2*10 + 0.1*10 = 8.
+
+====
+
+[EXAMPLE]
+====
+
+(_Preračunati Histogram_)
+
+`++Histogram[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, false]++` crta histogram sa tri stupca, prvi visine 5,
+drugi 2 i treći 1. Ovaj histogram ne koristi skalu gustoće i daje visine stupaca jednake broju vrijednosti svakog
+razreda.
+
+====
+
+[EXAMPLE]
+====
+
+(_Histogram relativnih frekvencija_)
+
+`++Histogram[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 10/8] ++` crta histogram sa tri stupca, prvi
+visine 0.625, drugi 0.25 i treći 0.125. Ovaj histogram koristi gustoćua da bi preračunao visine stupaca koje su
+proporcionalne vrijednostima u svakom razredu.
+
+Ako je n broj podataka i ako razredi imaju konstantnu širinu w tada je skala gustoće = w/n.
+
+====
+
+[EXAMPLE]
+====
+
+(_Normirani Histogram_)
+
+`++Histogram[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 1/8]  ++` crta histogram sa tri stupca, prvi
+visine 0.0625, drugi 0.025 i treći 0.0125.
+
+Ukupna površina ovog histograma je = 0.0625*10 + 0.025*10 + 0.0125*10 = 1.
+
+Ako je n broj podataka, tada skala gustoće = 1/n crta histogram ukupne površine = 1. Ovo je pogodno za prilagodbu
+histograma s gustoćom krivulje.
+
+====
+
+Histogram[ <kumulacija - logička vrijednost>, <lista granica razreda>, <lista neobrađenih podataka>, <koristi gustoću -
+logička vrijednost>, <skala gustoće> (opcionalno) ]::
+  Ako je kumulacija = true crta histogram u kojem je visina svakog stupca jednaka frekvenciji razreda kojoj je pridodan
+  zbroj frekvencija svih prethodnih razreda.
+
+[EXAMPLE]
+====
+
+ :`++Histogram[true, {10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true]++` crta histogram sa tri stupca, prvi
+visine 0.5, drugi 0.7 i treći 0.8.
+
+====

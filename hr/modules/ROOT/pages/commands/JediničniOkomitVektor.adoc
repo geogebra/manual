@@ -1,0 +1,38 @@
+= JediničniOkomitVektor naredba
+:page-en: commands/UnitPerpendicularVector
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+JediničniOkomitVektor[ <pravac> ]::
+  Daje vektor okomit na zadani pravac duljine 1.
+JediničniOkomitVektor[ <dužina> ]::
+  Daje vektor duljine 1, okomit na zadanu dužinu.
+JediničniOkomitVektor[ <vektor> ]::
+  Daje vektor duljine 1, okomit na zadani vektor.
+
+[EXAMPLE]
+====
+
+Neka je _v=stem:[\begin\{pmatrix}3\\4\end\{pmatrix}]. `++JediničniOkomitVektor[v]++` daje_
+stem:[\begin\{pmatrix}-0.8\\0.6\end\{pmatrix}]__.__
+
+====
+
+[EXAMPLE]
+====
+
+`++JediničniOkomitVektor[3x + 4y = 5]++` daje _stem:[\begin\{pmatrix}0.6\\0.8\end\{pmatrix}]_.
+
+====
+
+== CAS prikaz
+
+JediničniOkomitVektor[ <vektor> ]::
+  Daje vektor duljine 1, okomit na zadani vektor.
+
+[EXAMPLE]
+====
+
+`++JediničniOkomitVektor[{a, b}]++` daje _\{stem:[\frac\{-b}\{\sqrt\{a^\{2} + b^\{2}}}], stem:[\frac\{a}\{\sqrt\{a^\{2}
++ b^\{2}}}]}_.
+
+====

@@ -1,0 +1,51 @@
+= Dersom Kommando
+:page-en: commands/If
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Dersom[ <Vilkår>, <Objekt> ]::
+  Returnerer ein kopi av objektet dersom vilkåret har verdien _true_, eller returnerer eit udefinert objekt dersom
+  vilkåret har verdien _false_.
+Dersom[ <Vilkår>, <Objekt a>, <Objekt b> ]::
+  Returnerer ein kopi av objektet _a_ dersom vilkåret har verdien _true_, eller returnerer objekt _b_ dersom vilkåret
+  har verdien _false_.
+
+[NOTE]
+====
+
+*Merk:* Objekt _a_ og _b_ må vere av same type.
+
+====
+
+== Funksjonar med vilkår
+
+Kommandoen *Dersom* kan verte brukt til å lage funksjonar med vilkår. Slike funksjonar kan verte brukt som argument i
+alle kommandoar som tek ein funksjon som argument, til dømes xref:/commands/Derivert.adoc[Derivert],
+xref:/commands/Integral.adoc[Integral] og xref:/commands/Skjering.adoc[Skjering].
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++f(x) = Dersom[x < 3 ∧ x>0, x^3]++` lagar ein funksjon f(x) lik _x^3^_ for x mellom 0 og 3 og udefinert elles.
+* `++g(x) = Dersom[x < 3, sin(x), x^2]++` lagar ein funksjon g(x) lik _sin(x)_ for _x < 3_ og _x^2^_ for _x ≥ 3_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Sjå seksjonen: xref:/Boolske_verdiar.adoc[Boolske verdiar] for symbola som vert brukt i funksjonar med vilkår.
+* Derivert av *Dersom[<Vilkår>, f(x), g(x)]* gjev *Dersom[<Vilkår>, f'(x), g'(x)]*. Grensene vert ikkje evaluert ved dei
+kritiske punkta.
+
+====
+
+== Skripting med Dersom
+
+I mange programmeringsspråk har *dersom* tydninga _dersom vilkåret held, gjer noko; dersom ikkje, gjer noko anna_. I
+GeoGebra er derimot argumenta for *dersom* verdiar, ikkje kommandoar, og resultatet vert ein av desse verdiane. Difor,
+om du ønskjer å sette verdien av _b_ til 3 dersom _a > 2_, så må det verte gjort på følgjande måte:
+`++b=Dersom[a > 2, 3]++`.

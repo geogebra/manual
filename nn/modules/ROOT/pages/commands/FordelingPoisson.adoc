@@ -1,0 +1,44 @@
+= FordelingPoisson Kommando
+:page-en: commands/Poisson
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+FordelingPoisson[ <Gjennomsnitt λ> ]::
+  Returner eit søylediagram for https://en.wikipedia.org/wiki/no:Poissonfordeling[Poissonfordelinga] med gjennomsnitt
+  _λ_.
+FordelingPoisson[ <Gjennomsnitt λ>, <Boolsk kumulativ> ]::
+  Dersom _kumulativ = false_ vert det returnert eit søylediagram for Poissonfordelinga.
+  Dersom _kumulativ = true_ vert det returnert eit søylediagram for den kumulative Poissonfordelinga.
+FordelingPoisson[ <Gjennomsnitt λ>, <Variabelverdi v>, <Boolsk kumulativ> ]::
+  La _X_ vere ein Poissonfordelt stokastisk variabel med gjennomsnitt _λ_.
+  * Dersom _kumulativ = false_ vert _P(X = v)_ returnert.
+  * Dersom _kumulativ = true_ vert _P(X ≤ v)_ returnert.
+
+[NOTE]
+====
+
+*Merk:*
+
+* Sjå også verktøyet image:Tool_Probability_Calculator.gif[Tool Probability Calculator.gif,width=32,height=32]
+xref:/tools/Sannsynskalkulator.adoc[Sannsynskalkulator].
+* Sjå også kommandoane xref:/commands/InversPoisson.adoc[InversPoisson] og
+xref:/commands/TilfeldigPoisson.adoc[TilfeldigPoisson].
+* Sjå også kommandoane for dei andre diskrete sannsynsfordelingane
+xref:/commands/FordelingBernoulli.adoc[FordelingBernoulli], xref:/commands/FordelingBinomial.adoc[FordelingBinomial],
+xref:/commands/FordelingHypergeometrisk.adoc[FordelingHypergeometrisk],
+xref:/commands/FordelingPascal.adoc[FordelingPascal] og xref:/commands/Zipf.adoc[Zipf].
+* Sjå også kommandoane for dei kontinuerlege sannsynsfordelingane xref:/commands/Erlang.adoc[Erlang],
+xref:/commands/FordelingCauchy.adoc[Fordeling Cauchy], xref:/commands/FordelingF.adoc[FordelingF],
+xref:/commands/FordelingGamma.adoc[FordelingGamma], xref:/commands/FordelingNormal.adoc[FordelingNormal],
+xref:/commands/FordelingT.adoc[FordelingT], xref:/commands/FordelingWeibull.adoc[FordelingWeibull],
+xref:/commands/KjiKvadrat.adoc[KjiKvadrat], xref:/commands/LogNormal.adoc[LogNormal],
+xref:/commands/Logistisk.adoc[Logistisk], xref:/commands/Trekantfordeling.adoc[Trekantfordeling] og
+xref:/commands/Uniform.adoc[Uniform].
+
+====
+
+== CAS-delen
+
+FordelingPoisson[ <Gjennomsnitt>, <Variabelverdi>, <Boolsk kumulativ> ]::
+  La _X_ vere ein Poissonfordelt stokastisk variabel med gjennomsnitt _λ_.
+  * Dersom _kumulativ = false_ vert _P(X = v)_ returnert.
+  * Dersom _kumulativ = true_ vert _P(X ≤ v)_ returnert.

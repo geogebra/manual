@@ -1,0 +1,34 @@
+= ErLike Kommando
+:page-en: commands/AreEqual
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Varsel,title="Varsel",width=18,height=18] *Varsel*: |Denne kommandoen er ikkje ferdig
+konstruert. Syntaksen og returnerte verdiar kan verte endra.
+|===
+
+ErLike[ <Objekt>, <Objekt> ]::
+  Avgjer om to objekt er like.
+  Normalt vil denne kommandoen finne svaret numerisk. Ved bruk av kommandoen xref:/commands/Bevis.adoc[Bevis] er det
+  imidlertid mogleg å gjere dette eksakt.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++ErLike[Linjestykke[(1, 2), (3, 4)], Linjestykke[(3, 4), (1, 6)]]++` gjev _true_ sidan dei to linjestykka har same
+lengde. Denne kommandoen er ein ekvivalent til xref:/Boolske_verdiar.adoc[erlik-operatoren], slik at
+`++Linjestykke[(1, 2), (3, 4)] ≟ Linjestykke[(3, 4), (1, 6)]++` vil gi eksakt same resultat..
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoane xref:/commands/ErKolineær.adoc[ErKolineær], xref:/commands/ErKonsyklisk.adoc[ErKonsyklisk],
+xref:/commands/ErParallell.adoc[ErParallell], xref:/commands/ErSamanfallande.adoc[ErSamanfallande] og
+xref:/commands/ErVinkelrett.adoc[ErVinkelrett].
+
+====

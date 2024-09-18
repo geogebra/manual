@@ -1,0 +1,35 @@
+= Strekk Kommando
+:page-en: commands/Stretch
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Strekk[ <Objekt O>, <Vektor v> ]::
+  Objektet vert strukke prallelt med retninga gjeve av vektoren med ein faktor _f_ lik lengda av vektoren. Det vil seie
+  at at for alle punkt på _O_ som er på linja vinkelrett gjennom startpunktet til _v_ vert det nye punktet likt det
+  gamle. For alle andre punkt vert det nye punktet gjeve av at avstanden til denne linja vert multiplisert med _f_.
+Strekk[ <Objekt O>, <Linje>, <Tal f> ]::
+  Det vert laga eit nytt objekt ved at det gjevne objektet vert strukke vinkelrett på linja med ei faktor _f_. Det vil
+  seie at for alle punkt på _O_ vert det laga eit nytt punkt der avstanden til linja vert multiplisert med faktoren _f_.
+
+[EXAMPLE]
+====
+
+*Døme:* La objektet vere ein trekant med hjørner _A = (1, 1)_, _B = (5, 1)_ og _C = (3, 3)_. La linja vere gjeve av
+_x_-aksen og _f = 2_. Det vil då verte laga ein ny trekant med hjørner _(1, 2)_, _(5, 2)_ og _(3, 6)_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* La objektet vere ein sirkel med sentrum i origo og radius 1. La vektoren peke i _y-retning_, ha lengde 2 og
+starte på _x_-aksen. Alle punkt på sirkelen (bortsett frå dei som ligg på _x_-aksen) vert da strukke med ein faktor 2 i
+_y_-retning slik at det nye objektet vert ei ellipse.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Dersom _f_ er negativ kjem det nye objektet på andre sida av linja.
+
+====

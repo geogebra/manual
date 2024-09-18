@@ -1,0 +1,69 @@
+= Početni naredba
+:page-en: commands/First
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Početni[ <lista> ]::
+  Proizvodi novu listu koja sadrži samo početni element zadane liste.
+Početni[ <lista>, <broj elemenata n> ]::
+  Proizvodi novu listu koja sadrži upravo prvih _n_ elemenata iz zadane liste.
+Početni[ <tekst> ]::
+  Daje prvi znak iz zadanog teksta.
+Početni[ <tekst>, <broj elemenata n> ]::
+  Daje prvih _n_ znakova iz zadanog teksta.
+Početni[ <lokus>, <broj elemenata> ]::
+  Ova je naredba korisna za
+  * lokuse generirane pomoću naredbe xref:/commands/RiješiODJ.adoc[RiješiODJ] - daje listu točaka koje su dobivene u
+  prvih _n_ koraka algoritma za rješavanje ODJ (obična diferencijana jednadžba).
+  * lokuse generirane pomoću naredbi xref:/commands/NajkraćaPutanja.adoc[NajkraćaPutanja],
+  xref:/commands/PutujućiTrgovac.adoc[PutujućiTrgovac], xref:/commands/VoronoijevDijagram.adoc[VoronoijevDijagram],
+  xref:/commands/NajmanjeRazgranatoStablo.adoc[NajmanjeRazgranatoStablo],
+  xref:/commands/KonveksnaLjuska.adoc[KonveksnaLjuska] i xref:/commands/Ljuska.adoc[Ljuska] - daje vrhove grafa.
+
+[EXAMPLE]
+====
+
+`++Početni["Hello",2]++` yields _"He"_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Početni["Hello"]++` daje _"H"_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Početni[{1, 4, 3}, 2]++` daje _\{1, 4}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Početni[{1, 4, 3}]++` daje _\{1}_.
+
+====
+
+[NOTE]
+====
+
+Kako biste dobili prvi element koristite naredbu `++Element[{1, 4, 3}, 1]++`.
+
+====
+
+== CAS prikaz
+
+Početni[ <lista> ]::
+  Proizvodi novu listu koja sadrži samo početni element zadane liste.
+Početni[ <lista>, <broj elemenata n> ]::
+  Proizvodi novu listu koja sadrži upravo prvih _n_ elemenata iz zadane liste.
+
+[NOTE]
+====
+
+Pogledajte još i naredbu xref:/commands/Posljednji.adoc[Posljednji].
+
+====

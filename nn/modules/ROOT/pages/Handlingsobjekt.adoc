@@ -1,0 +1,67 @@
+= Handlingsobjekt
+:page-en: Action_Objects
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+For interaktive arbeidsark med xref:/Scripting.adoc[scripting] kan handlingsobjekt vere nyttige. Det er fire typar
+handlingsobjekt:
+
+== Avkryssingsboksar
+
+Avkryssingsboksar er grafiske representasjonar av xref:/Boolske_verdiar.adoc[boolske verdiar].
+
+[NOTE]
+====
+
+*Merk:* Sjå verktøyet image:Tool_Check_Box_to_Show_Hide_Objects.gif[Tool Check Box to Show Hide
+Objects.gif,width=32,height=32] xref:/tools/Avkryssingsboks_for_å_vise_og_skjule_objekt.adoc[Avkryssingsboks for å vise
+og skjule objekt] og kommandoen xref:/commands/Avkryssingsboks.adoc[Avkryssingsboks] for meir informasjon om korleis du
+lager og bruker avkryssingsboksar.
+
+====
+
+== Tekstfelt
+
+Tekstfelt vert brukt for å skrive inn tekst ved skriving av xref:/Scripting.adoc[script]. Script vert sett i verk ved å
+endre teksten i tekstfeltet og så anten trykke [.kcode]#Enter# eller forlate tekstfeltet. Den innskrevne verdien kan nås
+ved bruk av variablen %0.
+
+[EXAMPLE]
+====
+
+*Døme:* Tekstfelt med `++a=a+%0++` i script vil øke verdien til _a_ med den innskrevne verdien. Dette fungerer berre
+dersom _a_ er eit xref:/Frie_objekt_avhengige_objekt_og_hjelpeobjekt.adoc[fritt objekt].
+
+====
+
+Dersom du vil at tekstfeltet skal endre verdien til eit fritt objekt (eller redefinere eit avhengig objekt) kan du
+definere objektet som linka. På den måten treng du ikkje å skrive inn eit script.
+
+[NOTE]
+====
+
+*Merk:* Tekstfelt kan verte laga med verktøyet image:Tool_Insert_Textfield.gif[Tool Insert
+Textfield.gif,width=32,height=32] xref:/tools/Set_inn_eit_tekstfelt.adoc[Set inn eit tekstfelt] eller kommandoen
+xref:/commands/Tekstfelt.adoc[Tekstfelt].
+
+====
+
+== Knappar
+
+Knappar er meint for å køyre script når dei vert trykt på. Sjølvom script vert køyrt også ved å trykke på andre objekt
+(t.d. eit xref:/tools/Set_inn_bilde.adoc[bilde]), vil bruk av knappar gjere arbeidsarket meir intuitivt.
+
+[NOTE]
+====
+
+*Merk:* Knappar kan verte laga med verktøyet image:Tool_Insert_Button.gif[Tool Insert Button.gif,width=32,height=32]
+xref:/tools/Set_inn_ein_knapp.adoc[Set inn ein knapp] eller kommandoen xref:/commands/Knapp.adoc[Knapp].
+
+====
+
+== Kombinasjonsboksar
+
+Kombinasjonsboksar er berre tilgjengelg i xref:/Rekneark.adoc[reknearket]. Du kan skrive inn ei liste i ei celle og så
+skru på valet _Bruk knappar og avkryssingsboksar_ under fana _Rekneark_ i
+xref:/Dialogboks_for_innstillingar.adoc[dialogboksen for innstillingar]. Lista vil verte gjort om til ein
+kombinasjonsboks og eit element kan verte henta ut ved å bruke ein av kommandoane
+xref:/commands/ValdeIndeks.adoc[ValdeIndeks] og xref:/commands/ValdeElement.adoc[ValdeElement].

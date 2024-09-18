@@ -1,0 +1,61 @@
+= Tablični prikaz
+:page-en: Spreadsheet_View
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+U GeoGebrinom tabličnom prikazu svaka ćelija ima specifičan naziv koji omogućava direktno adresiranje. Na primjer,
+ćelija u stupcu A i u prvom retku nazvana je A1.
+
+[NOTE]
+====
+
+Imena ovih ćelija mogu se koristiti u izrazima i naredbama kako bi se pozvao sadržaj odgovarajuće ćelije.
+
+====
+
+U ćelije tablice možete unijeti ne samo brojeve, već sve tipove xref:/Opći_objekti.adoc[općih] i
+xref:/Geometrijski_objekti.adoc[geometrijskih] objekata koje GeoGebra podržava (npr., koordinate točaka,
+xref:/Funkcije.adoc[funkcije], xref:/Naredbe.adoc[naredbe]). Ukoliko je moguće, GeoGebra će odmah u
+xref:/Grafički_prikaz.adoc[grafičkom prikazu] prikazati objekt kojeg ste unjeli u ćeliju tablice. Na taj način, naziv
+objekta odgovara nazivu ćelije koju ste u početku koristili kod stvaranja objekta (npr., A5, C1).
+
+[NOTE]
+====
+
+Zadano je da se objekti uneseni preko tablice klasificiraju u xref:/Algebarski_prikaz.adoc[algebarskom prikazu] kao
+xref:/Nezavisni_Zavisni_i_Pomoćni_objekti.adoc[pomoćni objekti]. Možete pokazati ili skriti pomoćne objekte tako da
+označite "Pomoćni objekti" u xref:/Izbornik_Pogled.adoc[izborniku Pogled].
+
+====
+
+== Relativni nazivi ćelija
+
+Zadano je da se sve veze relativno mijenjaju prema odredišnoj ukoliko se kopiraju sadržaji iz jedne ćelije u drugu.
+
+[EXAMPLE]
+====
+
+Neka je A1=1,A2=3. U B1 unesite (A1,A1). Kopirajući B1 u B2 (ili kombinacija tipki [.kcode]#Ctrl# + [.kcode]#C#,
+[.kcode]#Ctrl# + [.kcode]#V# ili povlačeći rub ćelije) dobit ćete (A2,A2) tj. (3,3) u B2 .
+
+====
+
+Kako biste to izbjegli, upišite $ ispred oznake stupca i/ili retka ćelije koju kopirate.
+
+[NOTE]
+====
+
+Kod MacOS kopiraj & zalijepi xref:/Tipkovničke_kratice.adoc[kratice] su [.kcode]#Cmd# + [.kcode]#C# i [.kcode]#Cmd# +
+[.kcode]#V#
+
+====
+
+== Unos podataka u tablicu
+
+Osim ručnog unosa, možete koristiti naredbe xref:/commands/PuniStupac.adoc[PuniStupac],
+xref:/commands/PuniRedak.adoc[PuniRedak] ili xref:/commands/PuniĆelije.adoc[PuniĆelije]. Pogledajte još poglavlje
+xref:/Praćenje.adoc[zapis u tablicu].
+
+== Korištenje podataka iz tablice u ostalim prikazima
+
+Podatke iz tablice možete obrađivati označivši raspon ćelija, desnim klikom na označeno pojavit će se skočni izbornik te
+izaberite jednu stavku iz podizbornika "Izradi".

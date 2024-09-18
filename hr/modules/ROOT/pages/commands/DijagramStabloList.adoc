@@ -1,0 +1,14 @@
+= DijagramStabloList naredba
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+DijagramStabloList[ <lista> ]::
+  Daje dijagram stablo-list zadane liste brojeva. Brojevi koji značajno odstupaju ne prikazuju se u dijagramu nego
+  izdvojeno.
+  Značajno odstupajući brojevi su oni koji su izvan intervala [ Q1 - 1.5 (Q3 - Q1) , Q3 + 1.5 (Q3 - Q1) ], gdje su Q
+  kvartili.
+
+DijagramStabloList[ <lista>, <podešavanje -1|0|1> ]::
+  Daje dijagram stablo-list zadane liste brojeva.
+  Ako je "podešavanje" = -1 dodijeljena jedinična vrijednost podijeljena je s 10
+  Ako je "podešavanje" = 0 ništa nije promijenjeno
+  Ako je "podešavanje" = 1 dodijeljena jedinična vrijednost pomnožena je s 10

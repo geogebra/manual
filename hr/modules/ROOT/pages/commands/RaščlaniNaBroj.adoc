@@ -1,0 +1,15 @@
+= RaščlaniNaBroj naredba
+:page-en: commands/ParseToNumber
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+RaščlaniNaBroj[ <broj>, <niz znakova> ]::
+  Raščlanjuje niz znakova (tekstualni) i pohranjuje ga u xref:/Brojevi_i_kutovi.adoc[broj] _a_. Broj _a_ mora biti
+  definiran i xref:/Nezavisni_Zavisni_i_Pomoćni_objekti.adoc[nezavisan] prije nego li se koristi ova naredba.
+
+[EXAMPLE]
+====
+
+* Neka je zadan tekst `++f="1.500"++` i broj `++a=0++`. Naredba `++RaščlaniNaBroj[a,f]++` daje vrijednost _a=1.5_.
+* Neka je zadan tekst `++f="3/2"++` i broj `++a=0++`. Naredba `++RaščlaniNaBroj[a,f]++` daje vrijednost _a=1.5_.
+
+====

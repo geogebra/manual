@@ -1,0 +1,23 @@
+= NajkraćaPutanja naredba
+:page-en: commands/ShortestDistance
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+NajkraćaPutanja[ <lista dužina>, <početna točka>, <krajnja točka>, <faktor uključivanja - logička vrijednost> ]::
+  Nalazi najkraću udaljenost između početne i krajnje točke https://en.wikipedia.org/wiki/Graph_(mathematics)[grafa]
+  zadanog listom dužina. Ako je "faktor uključivanja - logička vrijednost" jednak false, težinska
+  https://en.wikipedia.org/wiki/Weighted_graph#Weighted_graphs_and_networks[vrijednost] za svaki brid bi trebala biti 1
+  (t.j. tražimo stazu s najmanjim brojem bridova), inače je jednaka duljini odgovarajuće dužine (tada tražimo
+  geometrijski najkraću stazu).
+
+[EXAMPLE]
+====
+
+Neka su zadane točke `++A=(-2, 5), B=(-1, 5), C=(1, 4), D=(3, 3), E=(-2, 4), F=(0, 0)++`, i dužine
+`++a=Dužina[A, B], b=Dužina[B, C], c=Dužina[C, D], d=Dužina[A, F], e= Dužina[A, E], f=Dužina[F, C], g=Dužina[F, D]++`,
+te lista dužina `++lista1={g, d, a, b, c, f, e}++` . Naredba `++NajkraćaPutanja[lista1, D, E, true]++` daje pomoćni
+objekt _lokus1_ kao crtu koja povezuje redom točke__C, D, B, A, E__, dok naredba
+`++NajkraćaPutanja[lista1, D, E, false]++` daje pomoćni objekt _lokus2_ koji povezuje točke _D, F, A, E_.
+`++Duljina[lokus1]++` daje vrijednost 5 jer je uključeno 5 vrhova, odnosno `++Duljina[lokus2]++` daje broj 4 jer je
+uključeno 4 vrha. Želimo li vidjeti duljinu lokusa treba koristiti naredbu xref:/commands/Opseg.adoc[Opseg].
+
+====

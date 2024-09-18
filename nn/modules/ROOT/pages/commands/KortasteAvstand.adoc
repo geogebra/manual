@@ -1,0 +1,12 @@
+= KortasteAvstand Kommando
+:page-en: commands/ShortestDistance
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+KortasteAvstand[ <Liste med linjestykke>, <Punkt A>, <Punkt B>, <Boolsk Vekta> ]::
+  Finn kortaste veg mellom startpunkt _A_ og sluttpunkt _B_ på ein graf gjeven av ei liste med linjestykke.
+  * Dersom _Boolsk Vekta_ = false vert vekta av kvar kant rekna som 1 og kommandoen finn vegen med det lågaste talet på
+  kantar.
+  * Dersom _Boolsk Vekta_ = true er vekta gjeven av lengden på linjestykka og kommandoen finn den kortaste geometriske
+  avstanden.
+  Det returnerte objektet er ein xref:/commands/GeometriskStad.adoc[lokus] (geometrisk stad) og er difor eit
+  hjelpeobjekt.

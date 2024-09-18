@@ -1,0 +1,475 @@
+= SpelLyd Kommando
+:page-en: commands/PlaySound
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+SpelLyd[ <Fil> ]::
+  Speler ei MIDI-fil (*.mid) eller ei tekstfil (* .txt) som inneheld ein JFugue musikk streng.
+  "Fil" gjev bana til mappa fila ligg i
+SpelLyd[ <Boolsk Spel> ]::
+  Pausar eller tek opp at avspelinga.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++SpelLyd[true]++` tek opp at avspelinga.
+* `++SpelLyd[false]++` pausar avspelinga.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++SpelLyd["c:/mappe/miFil.mid"]++`.
+
+====
+
+SpelLyd[ <Notesekvens>, <Instrument> ]::
+  Speler av ein MIDI-notesekvens ved bruk av ein http://www.jfugue.org[JFugue] musikk streng.
+  _Notesekvens_ er ein tekststreng som bruker JFugue teiknkommandoar.
+  _Instrument_ er det MIDI instrumentet som vert brukt når notesekvenser vert avspilt.
+
+Dei grunnleggjande kommandoane er gjeve under. Ei full beskriving av alle kommandoar finn du her:
+http://www.jfugue.org/jfugue-chapter1.pdf[The Complete Guide to JFugue] (engelsk lenke).
+
+*Grunnleggjande JFugue Kommandoar*
+
+Teikn
+
+Kommando
+
+A-G
+
+Speler noten gjeve av bokstaven i oktav 5
+
+For kryss eller b for legg til # eller b
+
+For å endre oktav legg til oktavnummer, til dømes A4
+
+Notelengden er fjerdelsnotar med mindre noko anna vert spesifisert
+
+{empty}[tal]
+
+Speler MIDI-noten gjeve av talet (0-127)
+
++
+
+Speler av notar samtidig i ein harmoni, til dømes C+E+G
+
+R
+
+Pause
+
+w, h, q, i, s
+
+Legg til etter ein note eller pause for å setje lengda
+
+w = heilnote
+
+h = halvnote
+
+q = fjerdedelsnote
+
+i = åttandedelsnote
+
+s = sekstandedelsnote
+
+/n
+
+Legg til etter ein note eller paue for å setje lengda til n (eit desimaltal)
+
+/1 = heilnote
+
+/.5 = halvnote
+
+/.25 = fjerdedelsnote
+
+/2 = to takter
+
+I[tal]
+
+Veljer instrument
+
+V
+
+V etterfulgt av eit tal frå 0 til 15 set MIDI kanalen. "V9" set MIDI slagverkskanalen.
+
+Space
+
+Speler den forrige noten, kombinasjonen av notar eller pause.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++SpelLyd["C+E+G  Rw  Ai Bi Ci  A4i B4i C4i ", 0]++`
+
+Speler ein fjerdedelsnote akkord CEG; pause av lengde som ein heilnote; speler åttandedelsnotane A, B, C; speler dem
+igjen i ein oktav lågare. Instrumentet som vert brukt er piano.
+
+====
+
+SpelLyd[ <Note>, <Lengde>, <Instrument> ]::
+  Speler av ein MIDI-note.
+  _Note_ er eit heiltal frå 0 til 127 som representerer noten (sjå tabellen under).
+  _Lengde_ er lengra på noten i sekund.
+  _Instrument_ er eit heiltal som avgjer kva for eit instrument som vert brukt. Sjå
+  http://www.classicalmidiconnection.com/General_Midi.html[tekniske spesifikasjonar] (engelsk lenke) for moglege
+  instrument.
+
+Dei fleste instrument er støtta, men det kan vere forskjellar mellom ulike plattformar.
+
+*MIDI-notar*
+
+Oktav
+
+C
+
+C#
+
+D
+
+D#
+
+E
+
+F
+
+F#
+
+G
+
+G#
+
+A
+
+A#
+
+B
+
+*0*
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+*1*
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+
+21
+
+22
+
+23
+
+*2*
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+31
+
+32
+
+33
+
+34
+
+35
+
+*3*
+
+36
+
+37
+
+38
+
+39
+
+40
+
+41
+
+42
+
+43
+
+44
+
+45
+
+46
+
+47
+
+*4*
+
+48
+
+49
+
+50
+
+51
+
+51
+
+53
+
+54
+
+55
+
+56
+
+57
+
+58
+
+59
+
+*5*
+
+60
+
+61
+
+62
+
+63
+
+64
+
+65
+
+66
+
+67
+
+68
+
+69
+
+70
+
+71
+
+*6*
+
+72
+
+73
+
+74
+
+75
+
+76
+
+77
+
+78
+
+79
+
+80
+
+81
+
+82
+
+83
+
+*7*
+
+84
+
+85
+
+86
+
+87
+
+88
+
+89
+
+90
+
+91
+
+92
+
+93
+
+94
+
+95
+
+*8*
+
+96
+
+97
+
+98
+
+99
+
+100
+
+101
+
+102
+
+103
+
+104
+
+105
+
+106
+
+107
+
+*9*
+
+108
+
+109
+
+110
+
+111
+
+112
+
+113
+
+114
+
+115
+
+116
+
+117
+
+118
+
+119
+
+*10*
+
+120
+
+121
+
+122
+
+123
+
+124
+
+125
+
+126
+
+127
+
+SpelLyd[ <Funksjon>, <Tal a>, <Tal b> ]::
+  Speler ein lyd generert av funksjonen (ein funksjon av tida med verdimengde [-1, 1]). Tidseininga er sekund og lyden
+  vert spilt frå minimumsverdien _a_ til maksimumsverdien _b_. Lyden vert generert med ei oppløsning på 8-bit med ein
+  samplingsfrekvens på 8000 samples per sekund.
+
+[EXAMPLE]
+====
+
+*Døme:* `++PlaySound[sin(440 2Pi x), 0, 1]++`
+
+Speler tonen til ei rein sinusbølge med frekvens 440 Hz (tonen A) i eit sekund.
+
+====
+
+SpelLyd[ <Funksjon>, <Tal a>, <Tal b>, <Samplingsfrekvens>, <Tal på bits> ]
+
+Speler ein lyd generert av funksjonen (ein funksjon av tida med verdimengde [-1, 1]). Tidseininga er sekund og lyden
+vert spilt frå minimumsverdien _a_ til maksimumsverdien _b_. Samplingsmetoden vert spesifisert ved talet på bit og
+samplingsfrekvensen.
+
+"Samplingsfrekvens" er talet på funksjonsverdiar som vert tatt kvart sekund. Lovlege verdiar er 8000, 11025, 16000,
+22050 og 44100
+
+"Tal på bits" er datastorleiken på ein sample i bits. Lovlege verdiar er 8 og 16.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++SpelLyd["V0 A3q B3q C3q B3q V1 A2h C2h", 0]++`
+
+Speler noter i harmoni med ulike stemmer.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++SpelLyd["I[56] C5q D5q I[71] G5q F5q", 0]++`
+
+Speler notar med ulike instrument. Trompet = 56 og Klarinett = 71.
+
+====

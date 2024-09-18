@@ -1,0 +1,46 @@
+= ZoomInn Kommando
+:page-en: commands/ZoomIn
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+ZoomInn[ <Skaleringsfaktor> ]::
+  Zoomer inn i xref:/Grafikkfelt.adoc[grafikkfeltet] med den gjevne skaleringsfaktoren. Sentrum av skjermen vert brukt
+  som Zoom-punkt.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++ZoomInn[1]++` gjer ingenting
+* `++ZoomInn[2]++` zoomer inn med ein faktor på 2
+* `++ZoomInn[0.5]++` er det same som `++ZoomUt[2]++`
+
+====
+
+ZoomInn[ <Skaleringsfaktor>, <Sentrumspunkt> ]::
+  Zoomer inn i xref:/Grafikkfelt.adoc[grafikkfeltet] med den gjevne skaleringsfaktoren. Det gjevne punktet vert brukt
+  som Zoom-punkt.
+ZoomInn[ <Min x>, <Min y>, <Maks x>, <Maks y> ]::
+  Zoomer inn i xref:/Grafikkfelt.adoc[grafikkfeltet] til rektanglet gjeve av hjørna (Min x, Min y), (Maks x, Maks y).
+  Dersom ein eller fleire av desse parametrane er xref:/Frie_objekt_avhengige_objekt_og_hjelpeobjekt.adoc[avhengige
+  variablar] vil grensene verte dynamiske.
+
+[NOTE]
+====
+
+*Merk:*
+
+* For å unngå dette kan ein bruke kommandoen xref:/commands/KopierFrittObjekt.adoc[KopierFrittObjekt]
+* Dersom fleire xref:/Grafikkfelt.adoc[grafikkfelt] er opne skjer zoominga i det som er aktivt.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Sjå også verktøyet image:Tool_Zoom_In.gif[Tool Zoom In.gif,width=32,height=32] xref:/tools/Forstørr.adoc[Forstørr].
+* Sjå også kommandoen xref:/commands/ZoomUt.adoc[ZoomUt].
+
+====

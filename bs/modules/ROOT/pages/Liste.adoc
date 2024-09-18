@@ -1,0 +1,112 @@
+= Liste
+:page-en: Lists
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+Koristeći se vitičastim zagradama možemo kreirati listu nekoliko figura (npr. tačaka, duži, kružnica).
+
+[EXAMPLE]
+====
+
+* `++L = {A, B, C}++` kreira listu koja se sastoji od tri prethodno definisane tačke A, B, i C.
+* `++L = {(0, 0), (1, 1), (2, 2)}++` kreira listu unesenih tačaka, iako su one neimenovane.
+
+====
+
+[NOTE]
+====
+
+Prema osnovnim postavkama, elementi ove liste neće biti prikazani na xref:/Radna_površ.adoc[radnoj površi].
+
+====
+
+Za pristup pojedinim elemenatima liste koristimo naredbu xref:/Element_Naredba.adoc[Element]. Liste možemo koristiti i
+kao argumente kod operiranja s listama (dalje u ovom članku) ili kod xref:/Lista_Naredbe.adoc[naredbi za liste].
+
+== Upoređivanje listi figura
+
+Možemo međusobno porediti dvije liste figura:
+
+* `++Lista1 == Lista2++`: Provjerava da li su liste međusobno jednake kao uređene liste
+https://en.wikipedia.org/wiki/Tuple[n-torki] i kao rezultat daje true ili false.
+* `++Lista1 != Lista2++`: Provjerava da li su liste međusobno različito uređene liste n-torki i kao rezultat daje true
+ili false.
+* `++Jedinstvena[lista1] == Jedinstvena[lista2]++` ili `++{lista1} \ {lista2} == {}++` : Provjerava da li su liste
+međusobno jednake kao skupovi (tj. svi ponovljeni elementi su zanemareni, kao i redoslijed elementa).
+* `++Sortiraj[lista1] == Sortiraj[lista2]++`: Provjerava da li su liste međusobno jednake kao
+https://en.wikipedia.org/wiki/Multiset[višestruki skupovi] (tj. zanemaruje se redoslijed elemenata).
+
+Vidi naredbe xref:/s_index_php?title=Jedinstvena_Naredba_action=edit_redlink=1.adoc[Jedinstvena] i
+xref:/Sortiraj_Naredba.adoc[Sortiraj] .
+
+== Operacija s listama
+
+<Figura> ∈ <Lista> je element od
+
+<Lista> ⊆ <Lista> je podskup od
+
+<Lista> ⊂ <Lista> je pravi podskup od
+
+<Lista> \ <Lista> razlika lista (razlika skupova)
+
+== Primjenjivanje operacija i funkcija na liste
+
+Ako primjenjujemo xref:/Predefinirane_Funkcije_i_Operatori.adoc[operacije ili predefinirane funkcije] na liste, uvijek
+ćemo kao rezultat dobiti novu listu.
+
+=== Sabiranje i oduzimanje
+
+* Lista1 + Lista2: Sabira odgovarajuće elemente dvije liste.
++
+[NOTE]
+====
+
+Liste moraju biti iste dužine.
+
+====
+* List + Broj: Dodaje broj svakom elementu liste.
+* Lista1 – Lista2: Oduzima odgovarajuće elemente druge liste od odgovarajućih elemenata prve liste.
++
+[NOTE]
+====
+
+Liste moraju biti iste dužine.
+
+====
+* Lista – Broj: Oduzima broj od svakog elementa liste.
+
+=== Množenje i dijeljenje
+
+* Lista1 * Lista2: Množi odgovarajuće elemente dvije liste.
++
+[NOTE]
+====
+
+Liste moraju biti iste dužine. Ako su liste kompatibilne matrice, koristi se matrično množenje.
+
+====
+* Lista * Broj: Množi svaki element liste brojem.
+* Lista1 / Lista2: Dijeli odgovarajuće elemente prve liste odgovarajućim elementima druge liste.
++
+[NOTE]
+====
+
+Liste moraju biti iste dužine.
+
+====
+* Lista / Broj: Dijeli svaki element, liste brojem.
+* Broj/ Lista: Dijeli broj svakim elementom liste.
+
+[NOTE]
+====
+
+Vidi xref:/Tačke_i_Vektori.adoc[Vektorski proizvod].
+
+====
+
+=== Ostali primjeri
+
+* Lista^2: Kvadrira svaki element liste.
+* 2^Lista: Kreirat će listu stepena baze 2 s eksponentima iz zadane liste.
+* Lista1^Lista2: kreirat će listu stepena _a^b_, gdje su _a_ i _b_ odgovarajući elementi iz Lista1 i Lista2.
+* sin(Lista): Primjenjuje funkciju sinus na svaki element liste. Korisnički definisane xref:/Funkcije.adoc[funkcije]
+mogu se jednako tako primijeniti na liste.

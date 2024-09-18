@@ -1,0 +1,48 @@
+= LeggTil Kommando
+:page-en: commands/Append
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+LeggTil[ <Liste>, <Objekt> ]::
+  Legg objektet til i lista.
+LeggTil[ <Objekt>, <Liste> ]::
+  Legg lista til objektet.
+
+[EXAMPLE]
+====
+
+*Døme:* `++LeggTil[4, {1, 2, 3}]++` gjev _\{4, 1, 2, 3}_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++LeggTil[{1, 2, 3}, 4]++` gjev _\{1, 2, 3, 4}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+Objektet og lista treng ikkje vere av same datatype.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++LeggTil[{1, 2, 3}, "a"]++` gjev _\{1, 2, 3, 4}_.
+* La _A_ vere punktet (2, 2). `++LeggTil[A, {1, 2, 3}]++` gjev då _\{(2, 2), 1, 2, 3}_.
+
+====
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoane xref:/commands/SetInn.adoc[SetInn] og xref:/commands/SetSaman.adoc[SetSaman].
+
+====

@@ -1,0 +1,37 @@
+= Determinant Kommando
+:page-en: commands/Determinant
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Determinant[ <Matrise> ]::
+  Gjev determinanten av matrisa.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Determinant[{{1, 2}, {3, 4}}]++` gjev _a = -2_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoane xref:/commands/Invers.adoc[Invers] og xref:/commands/Transponer.adoc[Transponer].
+
+====
+
+== CAS-delen
+
+Determinant[ <Matrise> ]::
+  Gjev determinanten av matrisa. Dersom matrisa inneheld udefinerte variablar gjev kommandoen uttrykket for
+  determinanten.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Determinant[{{1, a}, {b, 4}}]++` gjev _-a b + 4_.
+
+====

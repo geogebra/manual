@@ -1,0 +1,25 @@
+= Varijanca naredba
+:page-en: commands/Variance
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Varijanca[ <lista brojeva> ]::
+  Izračunava varijancu liste elemenata.
+
+[EXAMPLE]
+====
+
+`++Varijanca[{1, 2, 3}]++` daje _0.67_.
+
+====
+
+== CAS prikaz
+
+Varijanca[ <lista brojeva> ]::
+  Izračunava varijancu liste elemenata. Ako lista sadrži nedefinirane varijable, naredba daje formulu varijance.
+
+[EXAMPLE]
+====
+
+`++Varijanca[{1, 2, a}]++` daje _stem:[\frac\{2 a^\{2} - 6 a + 6}\{9}]_.
+
+====

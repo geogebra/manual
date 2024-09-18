@@ -1,0 +1,61 @@
+= NZV naredba
+:page-en: commands/LCM
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+NZV[ <broj a>, <broj b> ]::
+  Izračunava najmanji zajednički višekratnik brojeva _a_ i _b_.
+NZV[ <lista brojeva> ]::
+  Izračunava najmanji zajednički višekratnik brojeva iz dane liste.
+
+[EXAMPLE]
+====
+
+`++NZV[{12, 30, 18}]++` daje _180_.
+
+====
+
+[EXAMPLE]
+====
+
+`++NZV[12, 15]++` daje _60_.
+
+====
+
+== CAS prikaz
+
+NZV[ <broj>, <broj> ]::
+  Izračunava najmanji zajednički višekratnik dvaju brojeva.
+NZV[ <lista brojeva> ]::
+  Izračunava najmanji zajednički višekratnik brojeva iz dane liste.
+NZV[ <polinom>, <polinom> ]::
+  Izračunava najmanji zajednički višekratnik dvaju polinoma.
+NZV[ <lista polinoma> ]::
+  Izračunava najmanji zajednički višekratnik polinoma iz liste.
+
+[EXAMPLE]
+====
+
+`++NZV[{x^2 + 4 x + 4, x^2 - x - 6, x³ - 4x² - 3x + 18}]++` daje _x⁴ - 2x³ - 11x² + 12x + 36_.
+
+====
+
+[EXAMPLE]
+====
+
+`++NZV[x^2 + 4 x + 4, x^2 - x - 6]++` daje _x³ + x² - 8x - 12_.
+
+====
+
+[EXAMPLE]
+====
+
+`++NZV[{a^3b,12a^3, 18a^2}]++` daje stem:[36a^3b].
+
+====
+
+[EXAMPLE]
+====
+
+`++NZV[12a, 15a]++` daje _60a_.
+
+====

@@ -1,0 +1,46 @@
+= FordelingWeibull Kommando
+:page-en: commands/Weibull
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+FordelingWeibull[ <Form k>, <Skala λ>, x ]::
+  Lagar https://en.wikipedia.org/wiki/nn:Sannsynstettleiksfunksjon[sannsynstettleiksfunksjonen] til Weibullfordelinga
+  med parametrar _k, λ_.
+FordelingWeibull[ <Form k>, <Skala λ>, <Variabelverdi v> ]::
+  Finn verdien av den https://en.wikipedia.org/wiki/no:Kumulativ_fordelingsfunksjon[kumulative fordelingsfunksjonen] til
+  Weibullfordelinga ved _v_. Det vil seie sannsynet _P(X≤v)_ der _X_ er ein Weibullfordelt stokastisk variabel med
+  parametrar _k, λ_.
+FordelingWeibull[ <Form k>, <Skala λ>, x, <Boolsk kumulativ> ]::
+  La _X_ vere ein Weibullfordelt stokastisk variabel med parametrar _k, λ_.
+  * Dersom _kumulativ = false_ vert
+  https://en.wikipedia.org/wiki/nn:Sannsynstettleiksfunksjon[sannsynstettleiksfunksjonen] til _X_ returnert.
+  * Dersom _kumulativ = true_ vert den https://en.wikipedia.org/wiki/no:Kumulativ_fordelingsfunksjon[kumulative
+  fordelingsfunksjonen] til _X_ returnert.
+
+[NOTE]
+====
+
+*Merk:*
+
+* Sjå også verktøyet image:Tool_Probability_Calculator.gif[Tool Probability Calculator.gif,width=32,height=32]
+xref:/tools/Sannsynskalkulator.adoc[Sannsynskalkulator].
+* Sjå også kommandoen xref:/commands/InversWeibull.adoc[InversWeibull].
+* Sjå også kommandoane for dei andre kontinuerlege sannsynsfordelingane xref:/commands/Erlang.adoc[Erlang],
+xref:/commands/FordelingCauchy.adoc[Fordeling Cauchy], xref:/commands/FordelingF.adoc[FordelingF],
+xref:/commands/FordelingGamma.adoc[FordelingGamma], xref:/commands/FordelingNormal.adoc[FordelingNormal],
+xref:/commands/FordelingT.adoc[FordelingT], xref:/commands/KjiKvadrat.adoc[KjiKvadrat],
+xref:/commands/LogNormal.adoc[LogNormal], xref:/commands/Logistisk.adoc[Logistisk],
+xref:/commands/Trekantfordeling.adoc[Trekantfordeling] og xref:/commands/Uniform.adoc[Uniform].
+* Sjå også kommandoane for dei diskrete sannsynsfordelingane xref:/commands/FordelingBernoulli.adoc[FordelingBernoulli],
+xref:/commands/FordelingBinomial.adoc[FordelingBinomial],
+xref:/commands/FordelingHypergeometrisk.adoc[FordelingHypergeometrisk],
+xref:/commands/FordelingPascal.adoc[FordelingPascal], xref:/commands/FordelingPoisson.adoc[FordelingPoisson] og
+xref:/commands/Zipf.adoc[Zipf].
+
+====
+
+== CAS-delen
+
+FordelingWeibull[ <Form k>, <Skala λ>, <Variabelverdi v> ]::
+  Finn verdien av den https://en.wikipedia.org/wiki/no:Kumulativ_fordelingsfunksjon[kumulative fordelingsfunksjonen] til
+  Weibullfordelinga ved _v_. Det vil seie sannsynet _P(X≤v)_ der _X_ er ein Weibullfordelt stokastisk variabel med
+  parametrar _k, λ_.

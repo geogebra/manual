@@ -1,0 +1,39 @@
+= Frekvenstabell Kommando
+:page-en: commands/FrequencyTable
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Frekvenstabell[ <Liste med rådata L> ]::
+  Gjev ein tabell (som tekst) der første kolonne inneheld ei sortert liste med dei unike elementa i _L_ og andre kolonne
+  inneheld talet på førekomstar i _L_ av elementet i første kolonne. Lista _L_ kan innehalde tal eller tekst.
+
+Frekvenstabell[ <Kumulativ>, <Liste med rådata L> ]::
+  Dersom _Kumulativ = false_, gjev den same tabellen som Frekvenstabell[ <Liste med rådata L> ]
+  Dersom _Kumulativ = true_, gjev ein tabell der første kolonne inneheld dei unike elementa i _L_ og andre kolonne
+  inneheld dei kumulative frekvensane av elementa i første kolonne.
+
+Frekvenstabell[ <Liste med klassegrenser>, <Liste med rådata L> ]::
+  Gjev ein tabell (som tekst) der første kolonne inneheld intervalla og andre kolonne inneheld talet på førekomstar i
+  _L_ som høyrer til intervallet i første kolonne. Alle intervalla er på forma _[a, b)_ med unntak av det siste
+  intervallet som er på forma _[a, b]_.
+
+Frekvenstabell[ <Kumulativ>, <Liste med klassegrenser>, <Liste med rådata L> ]::
+  Dersom _Kumulativ = false_, gjev den same tabellen som Frekvenstabell[ <Liste med klassegrenser>, <Liste med rådata L>
+  ]
+  Dersom _Kumulativ = true_, gjev ein tabell der første kolonne inneheld dei unike elementa i _L_ og andre kolonne
+  inneheld dei kumulative frekvensane som høyrer til intervallet i første kolonne.
+
+Frekvenstabell[ <Liste med klassegrenser>, <Liste med rådata>, <Bruk tettleik>, <Tettleiksfaktor (valfri)> ]::
+  Gjev ein tabell (som tekst) der første kolonne inneheld intervalla og andre kolonne inneheld frekvensar for den
+  samsvarande xref:/commands/Histogram.adoc[Histogram kommandoen].
+
+Frekvenstabell[ <Kumulativ>, <Liste med klassegrenser>, <Liste med rådata>, <Bruk tettleik>, <Tettleiksfaktor (valfri)>
+]::
+  Gjev ein tabell (som tekst) der første kolonne inneheld intervalla og andre kolonne inneheld frekvensar for den
+  samsvarande xref:/commands/Histogram.adoc[Histogram kommandoen].
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoane xref:/commands/Frekvens.adoc[Frekvens] og xref:/commands/Histogram.adoc[Histogram].
+
+====

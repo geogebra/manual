@@ -1,0 +1,64 @@
+= TekstKaoTablica naredba
+:page-en: commands/TableText
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+TekstKaoTablica[ <lista>, <lista>, ... ]::
+  Izradit će tekst koji sadrži tablicu listi objekata.
+
+[NOTE]
+====
+
+Svaka lista se ispisuje u novom retku tablice.
+
+====
+
+[EXAMPLE]
+====
+
+* `++TekstKaoTablica[{x^2, 4}, {x^3, 8}, {x^4, 16}]++` izradit će tablicu kao tekstualni objekt s tri retka i dva
+stupca. Svi podaci u tablici su lijevo poravnani.
+* `++TekstKaoTablica[Niz[i^2, i, 1, 10]]++` izradit će tablicu s jednim stupcem kao tekst. Svi podaci u tablici su
+lijevo poravnani.
+
+====
+
+TekstKaoTablica[ <lista>, <lista>, ..., <poravnanje teksta> ]::
+  Izradit će tekst koji sadrži tablicu listi objekata. Neobavezan parametar _poravnanje teksta_ kontrolira orijentaciju
+  i poravnanje teksta u tablici.
+
+[EXAMPLE]
+====
+
+* `++TekstKaoTablica[{1,2,3,4},{1,4,9,16},"v"]++` kreira tablicu s dva stupca i četiri retka u kojoj su elementi
+poravnani lijevo.
+* `++TekstKaoTablica[{1,2,3,4},{1,4,9,16},"h"]++` kreira tablicu s dva retka i četiri stupca u kojoj su elementi
+poravnani lijevo.
+* `++TekstKaoTablica[{11.2,123.1,32423.9,"234.0"},"r"]++` kreira tablicu kojoj su elementi poravnani desno.
+
+====
+
+[NOTE]
+====
+
+Moguće vrijednosti su "vl", "vc", "vr", "v", "h", "hl", "hc", "hr". Zadano je "hl".
+
+* "v" = vertikalan, tj. liste su stupci
+* "h" = horizontalan, tj. liste su retci
+* "l" = lijevo poravnan
+* "r" = desno poravnan
+* "c" = centriran.
+
+====
+
+Sada su podržane i zagrade, i to ||||, ||, \{}, [] ili (), s horizontalnim linijama navodeći _ i vertikalnim linijama
+navodeći |
+
+[EXAMPLE]
+====
+
+====
+
+* `++TekstKaoTablica[{{1,2},{3,4}},"c()"]++`
+* `++TekstKaoTablica[{{1,2},{3,4}},"c|_"]++`
+* `++TekstKaoTablica[{{1,2},{3,4}},"c||"]++`
+* `++TekstKaoTablica[{{1,2},{3,4}},"c||||"]++`.

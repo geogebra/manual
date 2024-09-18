@@ -1,0 +1,46 @@
+= Uzorak Naredba
+:page-en: commands/Sample
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+Uzorak[ <Lista >, <Veličina> ]::
+  Kreira listu od _n_ slučajno izabranih elemenata liste; elementi mogu biti izabrani i više puta.
+Uzorak[ <Lista>, <Veličina>, <Boolean-logička vrijednost> ]::
+  Kreira listu od _n_ slučajno izabranih elemenata liste; elementi mogu biti izabrani i više puta ako i samo ako je
+  zadnji parametar jednak true-istina.
+
+[EXAMPLE]
+====
+
+`++ Uzorak[{1, 2, 3, 4, 5}, 5, true]++` kreirat će na primjer _lista1 = \{2, 3, 3, 4, 5}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Uzorak[{1, 2, 3, 4, 5}, 5]++` kreirat će na primjer listu _\{1, 2, 1, 5, 4}_.
+
+====
+
+== CAS Prikaz
+
+Uzorak[ <Lista>, <Veličina> ]::
+  Kreira listu od _n_ slučajno izabranih elemenata liste; elementi mogu biti izabrani i više puta.
+Uzorak[ <Lista>, <Veličina>, <Boolean-logička vrijednost> ]::
+  Kreira listu od _n_ slučajno izabranih elemenata liste; elementi mogu biti izabrani i više puta ako i samo ako je
+  zadnji parametar jednak true-istina.
+
+[EXAMPLE]
+====
+
+Lista može sadržavati i liste kao svoje elemente: Neka je _Lista1_ jednaka _\{1, 2,
+3}_.`++Uzorak[{Lista1, 4, 5, 6, 7, 8}, 3, false]++` kreirat će na primjer listu _\{6, \{1, 2, 3}, 4}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Uzorak[{-5, 2, a, 7, c}, 3]++` kreirat će na primjer listu _\{a, 7, -5}_.
+
+====

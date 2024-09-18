@@ -1,0 +1,34 @@
+= Slojevi
+:page-en: Layers
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+U GeoGebri slojevi se koriste i kako bismo odredili objekt koji ćemo označiti ili povlačiti ukoliko korisnik istovremeno
+može kliknuti na više različitih objekata.
+
+====
+
+Zadano je da se svi objekti crtaju u sloju 0, što je osnovni sloj (razina) pozadine u grafičkom prikazu. Ukupno je
+dostupno 10 razina (brojevi od 0 do 9) i slojevi zadani višim brojem crtaju se iznad slojeva koji su nuzmerirani nižim
+brojem.
+
+Koristeći karticu Dodatno dijaloškog okvira xref:/Dijaloški_okvir_Svojstva.adoc[Svojstva], možete mijenjati slojeve
+određenim objektima u padajućem izborniku _Razina_. Kada jednom promijenitie sloj 0 (npr. na sloj 3), svi novi objekti
+biti će nacrtani u sloju s višim brojem.
+
+[NOTE]
+====
+
+Nakon što označite neki objekt, možete označiti sve objekte istog sloja odabravši Odaberi trenutnu razinu (tipkovnička
+kratica: [.kcode]#Ctrl# + [.kcode]#L#) u izborniku Uređivanje. Ovaj je stavak izbornika Uređivanje dostupan samo ukoliko
+svi označeni objekti pripadaju istom sloju.
+
+====
+
+== Buduća upotreba slojeva
+
+* Za SVG izvoz, objekti će biti grupirani preko slojeva.
+* Slojevi će se kontrolirati pomoću JavaScript sučelja za xref:/Dijaloški_okvir_Izvoz_dinamičkog_uratka.adoc[GeoGebra
+aplete].

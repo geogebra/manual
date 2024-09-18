@@ -1,0 +1,61 @@
+= Gjennomsnitt Kommando
+:page-en: commands/Mean
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Gjennomsnitt[ <Liste med tal> ]::
+  Finn gjennomsnittet av tala i lista.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++Gjennomsnitt[{1, 2, 3}]++` gjev 2, som er stem:[\frac\{1+2+3}\{3}]
+* `++Gjennomsnitt[{2, 5, 3, 7}]++` gjev 4.25, som er stem:[\frac\{2+5+3+7}\{4}]
+
+====
+
+Gjennomsnitt[ <Liste med tal L>, <Liste med frekvensar F> ]::
+  Finn gjennomsnittet av tala i _L_ når talet på kvart element i _L_ er gjeve av det samsvarande elementet i _F_.
+
+[EXAMPLE]
+====
+
+*Døme:* La _L = \{1, 2, 3, 4}_ og _F = \{2, 1, 1, 5}_. `++Gjennomsnitt[L, F]++` gjev da 3, som er
+stem:[\frac\{1\cdot2+2+3+4\cdot5}\{9}].
+
+====
+
+[NOTE]
+====
+
+*Merk:* Listene _L_ og _F_ må vere like lange.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Sjå også verktøyet image:Tool_Mean.gif[Tool Mean.gif,width=32,height=32] xref:/tools/Gjennomsnitt.adoc[Gjennomsnitt] i
+xref:/Rekneark.adoc[reknearket].
+* Sjå også kommandoane xref:/commands/GjennomsnittX.adoc[GjennomsnittX],
+xref:/commands/GjennomsnittY.adoc[GjennomsnittY], xref:/commands/GeometriskGjennomsnitt.adoc[GeometriskGjennomsnitt],
+xref:/commands/HarmoniskGjennomsnitt.adoc[HarmoniskGjennomsnitt], xref:/commands/Standardavvik.adoc[Standardavvik] og
+xref:/commands/Varians.adoc[Varians].
+
+====
+
+== CAS-delen
+
+Gjennomsnitt[ <Liste med tal> ]::
+  Finn gjennomsnittet av tala i lista. Kommandoen gjev det eksakte svaret (som brøk) og dersom lista inneheld udefinerte
+  variablar vert det gjeve ein formel for svaret.
+
+[EXAMPLE]
+====
+
+*Døme:* `++Gjennomsnitt[{2, 5, 3, a}]++` gjev stem:[\frac\{a+10}\{4}]
+
+====

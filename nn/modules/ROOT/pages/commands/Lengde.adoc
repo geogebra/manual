@@ -1,0 +1,120 @@
+= Lengde Kommando
+:page-en: commands/Length
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Lengde[ <Vektor> ]::
+  Finn lengda til vektoren.
+Lengde[ <Punkt> ]::
+  Finn lengda frå origo til punktet.
+Lengde[ <Liste> ]::
+  Finn talet på element i lista.
+Lengde[ <Tekst> ]::
+  Finn talet på teikn i teksten.
+Lengde[ <Geometrisk stad> ]::
+  Finn talet på punkt som ein xref:/commands/GeometriskStad.adoc[geometrisk stad] (lokus) er definert av.
+  Bruk *xref:/commands/Omkrins.adoc[Omkrins][ <Geometrisk stad> ]* for å finne lengda til den geometriske staden. Fleire
+  detaljar finn du i artikkelen om kommandoen xref:/commands/Første.adoc[Første].
+Lengde[ <Linjestykke> ]::
+  Finn lengda til linjestykket.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Lengde["abcd!"]++` gjev 5.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Lengde[{0,1,2}]++` gjev 3.
+
+====
+
+[NOTE]
+====
+
+*Merk:* I GeoGebra 4.2 kjem alle kommandoane over under kommandoen *Lengde[ <Objekt> ]*.
+
+====
+
+Lengde[ <Funksjon>, <Tal x1>, <Tal x2> ]::
+  Finn lengda til funksjonsgrafen i intervallet _[x1, x2]_.
+Lengde[ <Funksjon>, <Startpunkt A>, <Sluttpunkt B> ]::
+  Finn lengda til funksjonsgrafen mellom dei to punkta _A_ og _B_.
+Lengde[ <Kurve>, <Tal t1>, <Tal t2> ]::
+  Finn lengda av kurva mellom parameterverdiane _t1_ og _t2_.
+Lengde[ <Kurve>, <Startpunkt A>, <Sluttpunkt B> ]::
+  Finn lengda av kurva mellom dei to punkta _A_ og _B_ som ligg på kurva.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Lengde[2x, 0, 1]++` gjev 2.24, som er omtrent lik stem:[\sqrt\{5}].
+
+====
+
+[NOTE]
+====
+
+*Merk:* Dersom dei gjevne punkta ikkje ligg på funksjonsgrafen, vert _x_-koordinatane deira brukt til å finne
+intervallet.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+Sjå også verktøyet image:Tool_Distance.gif[Tool Distance.gif,width=32,height=32]
+xref:/tools/Avstand_eller_lengde.adoc[Avstand eller lengde].
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Following text is about a feature that is supported only in
+xref:/s_index_php?title=Release_Notes_GeoGebra_4_2_action=edit_redlink=1.adoc[GeoGebra 4.2 Beta].
+
+'''''
+
+Lengde[ <Sirkelboge> ]::
+  Finn bogelengda (altså lengda til den krumme delen) til ein sirkelboge eller sirkelsektor.
+
+|===
+
+== CAS-delen
+
+Lengde[ <Funksjon>, <Tal x1>, <Tal x2> ]::
+  Finn lengda til funksjonsgrafen i intervallet _[x1, x2]_.
+Lengde[ <Funksjon>, <Variabel a>, <Tal t1>, <Tal t2> ]::
+  Finn lengda til funksjonsgrafen frå _a = t1_ til _a = t2_.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Lengde[2 a, a,  0, 1]++` gjev stem:[\sqrt\{5}].
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Lengde[2 x, 0, 1]++` gjev stem:[\sqrt\{5}].
+
+====

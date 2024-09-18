@@ -1,0 +1,35 @@
+= Funkcija Naredba
+:page-en: commands/Function
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+Funkcija[ <Funkcija _f_ >, <Početna x-vrijednost __a__>, <Krajnja x-vrijednost __b__> ]::
+  kreira graf funkcije _f_ na intervalu [_a_, _b_], koji nije definiran van intervala [_a_, _b_].
+
+[EXAMPLE]
+====
+
+`++f(x) = Funkcija [x^2, -1, 1]++` crta graf funkcije x^2^ na intervalu [-1, 1]. Ako zatim utipkate `++g(x) = 2 f(x)++`
+bit će kreirana i funkcija _g(x) = 2 x^2^_, ali ne i njena restrikcija na interval [-1, 1].
+
+====
+
+[NOTE]
+====
+
+Ova funkcija se koristi samo za kreiranje grafa funkcije na zadanom intervalu. Za restrikciju domene funkcije koristite
+uvjetnu naredbu xref:/Ako_Naredba.adoc[Ako], npr. `++f(x) = If[-1 < x < 1, x²]++`.
+
+====
+
+Funkcija[<Lista brojeva>]::
+  kreira sljedeću funkciju: prva dva broja određuju početni i krajnju vrijednost za promjenljivu _x_. Ostali brojevi
+  predstavljaju interpolirane _y_-vrijednosti funkcije na jednakim udaljenostima između početne i krajnje vrijednosti.
+
+[EXAMPLE]
+====
+
+`++Funkcija[{2, 4, 0, 1, 0, 1, 0}]++` kreira trokutasti val između _x=2_ i _x=4_.
+
+`++Funkcija[{-3, 3, 0, 1, 2, 3, 4, 5}]++` kreira pravu s koeficijentom smjera _1_ između _x=-3_ i _x=3_.
+
+====

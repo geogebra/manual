@@ -1,0 +1,58 @@
+= Minimum naredba
+:page-en: commands/Min
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Minimum[ <broj a>, <broj b> ]::
+  Daje minimum danih brojeva _a_ i _b_.
+Minimum[ <lista> ]::
+  Izračunava minimum brojeva iz liste.
+
+[EXAMPLE]
+====
+
+`++Minimum[{-2, 12, -23, 17, 15}]++` daje _-23_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Minimum[12, 15]++` daje _12_.
+
+====
+
+[NOTE]
+====
+
+Ako se unos sastoji od podataka koji nisu numerički, tada naredba Minimum uzima brojeve koji su pridruženi tim
+objektima. Na primjer, Minimum[<lista dužina>] će dati najmanju duljinu dužine.
+
+====
+
+Minimum[ <interval> ]::
+  Daje donju granicu intervala, npr. `++Minimum[2 < x < 3]++` daje 2. Jednako je za otvorene i zatvorene intervale.
+Minimum[ <funkcija>, <početna vrijednost x>, <završna vrijednost x> ]::
+  Daje točku iz danog intervala u kojoj funkcija postiže najmanju vrijednost. Funkcija treba imati samo jednu takvu
+  točku unutar zadanog intervala.
+
+[NOTE]
+====
+
+Pogledajte još i xref:/commands/Ekstrem.adoc[naredbu Ekstrem] i xref:/tools/Ispitivač_funkcije.adoc[alat Ispitivač
+funkcije].
+
+====
+
+== CAS prikaz
+
+Minimum[ <lista> ]::
+  Izračunava minimum brojeva iz liste.
+Minimum[ <broj>, <broj> ]::
+  Izračunava minimum danih brojeva _a_ i _b_.
+
+[EXAMPLE]
+====
+
+`++Minimum[sqrt(2), sqrt(3)]++` daje stem:[\sqrt\{2}].
+
+====

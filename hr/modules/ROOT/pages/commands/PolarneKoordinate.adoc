@@ -1,0 +1,35 @@
+= PolarneKoordinate naredba
+:page-en: commands/ToPolar
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Ova je naredba dostupna samo u xref:/CAS_prikaz.adoc[CAS prikazu].
+
+PolarneKoordinate[ <kompleksan broj> ]::
+  Prebacuje kompleksan broj u polarne koordinate.
+
+[EXAMPLE]
+====
+
+`++PolarneKoordinate[1 + sqrt(3) * ί]++` daje '(2; stem:[\frac\{\pi}\{3}])_, polarne koordinate od_ 1 + stem:[\sqrt\{3}]
+* ί__.__
+
+====
+
+[NOTE]
+====
+
+* Imaginarna jedinica ί može se dobiti pritiskanjem tipki [.kcode]#ALT # + [.kcode]# i#.
+* Pogledajte još i naredbe xref:/commands/KompleksanZapis.adoc[KompleksanZapis],
+xref:/commands/EksponencijalniZapis.adoc[EksponencijalniZapis] i xref:/commands/KoordinatniZapis.adoc[KoordinatniZapis].
+
+====
+
+PolarneKoordinate[ <vektor> ]::
+  Prebacuje vektor u njegove polarne koordinate.
+
+[EXAMPLE]
+====
+
+`++PolarneKoordinate[{1, sqrt(3)}]++` daje _(2; stem:[\frac\{\pi}\{3}])_, polarne koordinate od _(1, stem:[\sqrt\{3}])_.
+
+====

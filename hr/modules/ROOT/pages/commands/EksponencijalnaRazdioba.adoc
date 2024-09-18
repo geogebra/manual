@@ -1,0 +1,34 @@
+= EksponencijalnaRazdioba naredba
+:page-en: commands/Exponential
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+EksponencijalnaRazdioba[ <lambda>, x ]::
+  Izradit će fukciju gustoće vjerojatnosti (fgv) za
+  https://en.wikipedia.org/wiki/Exponential_distribution[eksponencijalnu razdiobu] s parametrom učestalosti λ.
+EksponencijalnaRazdioba[ <lambda>, x, <kumulacija - logička vrijednost> ]::
+  Ako je _kumulacija - logička vrijednost_ jednaka true, izradit će kumulativnu funkciju distribucije (kfr) za
+  eksponencijalnu razdiobu, u protivnom će izraditi fgv za eksponencijalnu razdiobu.
+EksponencijalnaRazdioba[ <lambda>, <vrijednost varijable v> ]::
+  Izračunava vrijednost kumulativne funkcije distribucije eksponencijalne razdiobe za zadanu vrijednost varijable _v_,
+  t.j. vjerojatnost _P(X≤v)_ gdje je _X_ eksponencijalna slučajna varijabla s parametrom učestalosti λ.
+
+[NOTE]
+====
+
+Daje vjerojatnost za danu vrijednost _x_-koordinate (ili površinu ispod krivulje eksponencijalne razdiobe lijevo od
+zadane _x_-koordinate).
+
+====
+
+== CAS prikaz
+
+EksponencijalnaRazdioba[ <lambda>, <vrijednost varijable v> ]::
+  Izračunava vrijednost kumulativne funkcije distribucije eksponencijalne razdiobe za zadanu vrijednost varijable _v_,
+  t.j. vjerojatnost _P(X≤v)_ gdje je _X_ eksponencijalna slučajna varijabla s parametrom učestalosti λ.
+
+[EXAMPLE]
+====
+
+`++EksponencijalnaRazdioba[2, 1]++` daje _stem:[\frac\{e^\{2}-1}\{e^\{2} } ]_, što približno iznosi _0.86_.
+
+====

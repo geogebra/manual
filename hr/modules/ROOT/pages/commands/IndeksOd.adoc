@@ -1,0 +1,31 @@
+= IndeksOd naredba
+:page-en: commands/IndexOf
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+IndeksOd[ <objekt>, <lista> ]::
+  Daje poziciju prvog pojavljivanja zadanog objekta u zadanoj listi, npr. `++IndeksOd[5,{1,3,5,2,5,4}]++` daje 3. Kada
+  objekt nije pronađen, rezultat je _nedefinirano_.
+IndeksOd[ <objekt>, <lista>, <početni indeks> ]::
+  Jednako kao u prethodnoj naredbi, samo što pretraživanje počinje od zadanog indeksa.
+
+[EXAMPLE]
+====
+
+* `++IndeksOd[5,{1,3,5,2,5,4},3]++` daje 3.
+* `++IndeksOd[5,{1,3,5,2,5,4},4]++` daje 5.
+* `++IndeksOd[5,{1,3,5,2,5,4},6]++` daje _nedefinirano_.
+
+====
+
+IndeksOd[ <tekst a>, <tekst b> ]::
+  Daje poziciju prvog pojavljivanja teksta a unutar teksta b, npr. `++IndeksOd["Ge","GeoGebra"]++` daje 1, a
+  `++IndeksOd["Geb","GeoGebra"]++` daje 4.
+IndeksOd[ <tekst>, <tekst>, <početni indeks> ]::
+  Jednako kao u prethodnoj naredbi, samo što pretraživanje počinje od zadanog indeksa.
+
+[EXAMPLE]
+====
+
+`++IndeksOd["Ge","GeoGebra",2]++` daje 4.
+
+====

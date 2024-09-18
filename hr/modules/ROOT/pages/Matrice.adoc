@@ -1,0 +1,90 @@
+= Matrice
+:page-en: Matrices
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+GeoGebra podržava matrice koje su reprezentirane kao liste lista koje sadrže retke matrice.
+
+[EXAMPLE]
+====
+
+U GeoGebri,, \{\{1, 2, 3}, \{4, 5, 6}, \{7, 8, 9}} predstavlja 3x3 matricu
+_$\begin\{pmatrix}1&2&3\\4&5&6\\7&8&9\end\{pmatrix}$_.
+
+====
+
+Kako biste dobili lijep prikaz matrice u grafičkom prikazu, koristeći LaTeX format, upotrijebite naredbu
+xref:/commands/TekstFormulom.adoc[TekstFormulom].
+
+[EXAMPLE]
+====
+
+U traku za unos utipkajte matrica1=\{\{1, 2, 3}, \{4, 5, 6}, \{7, 8, 9}} i zatim upišite naredbu
+`++TekstFormulom[matrica1, false, true]++` ili direktno unesite `++TekstFormulom[{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}]++`
+pa ćete dobit prikaz u LaTeX formatu. Na prvi način dobit ćete i matricu1 u algebarskom prikazu i prikazanu matricu (kao
+tekst) u grafičkom prikazu, a na drugi način samo prikazanu matricu (kao tekst) u grafičkom prikazu.
+
+====
+
+== Operacije s matricama
+
+=== Primjeri zbrajanja i oduzimanja
+
+* matrica1 + matrica2: Zbraja odgovarajuće elemente dviju usklađenih matrica.
+* matrica1 – matrica2: Oduzima odgovarajuće elemente dviju usklađenih matrica.
+
+=== Primjeri množenja
+
+* matrica * broj: Množi svaki element matrice danim brojem.
+* matrica1 * matrica2: Koristi matrično množenje za izračunavanje matrice koja je rezultat množenja.
+
+[NOTE]
+====
+
+Retci prve i stupci druge matrice moraju imati jednak broj elemenata.
+
+====
+
+[EXAMPLE]
+====
+
+\{\{1, 2}, \{3, 4}, \{5, 6}} * \{\{1, 2, 3}, \{4, 5, 6}} dat će matricu \{\{9, 12, 15}, \{19, 26, 33}, \{29, 40, 51}}.
+
+====
+
+* 2x2 matrica * točka (ili vektor): Množi matricu danom točkom ili vektorom i daje točku kao rezultat.
+
+[EXAMPLE]
+====
+
+\{\{1, 2}, \{3, 4}} * (3, 4) daje točku A = (11, 25).
+
+====
+
+* 3x3 matrica * točka (ili vektor): Množi matricu danom točkom ili vektorom i daje točku kao rezultat.
+
+[EXAMPLE]
+====
+
+\{\{1, 2, 3}, \{4, 5, 6}, \{0, 0, 1}} * (1, 2) daje točku A = (8, 20).
+
+====
+
+[NOTE]
+====
+
+Ovo je specijalni slučaj afine transformacije gdje se koriste homogene koordinate: (x, y, 1) za točku i (x, y, 0) za
+vektor. Ovaj primjer je zato ekvivalentan s: `++{{1, 2, 3}, {4, 5, 6}, {0, 0, 1}} * {1, 2, 1}++`.
+
+====
+
+== Ostali primjeri
+
+Pogledajte i poglavlje xref:/commands/Vektor_i_matrica_naredbe.adoc[Matrične naredbe]
+
+* xref:/commands/Determinanta.adoc[Determinanta][matrica]: Izračunava determinantu dane matrice.
+* xref:/commands/InverznaMatrica.adoc[InverznaMatrica][matrica]: Daje inverznu matricu zadane matrice.
+* xref:/commands/TransponiranaMatrica.adoc[TransponiranaMatrica][matrica]: Daje transponiranu matricu zadane matrice.
+* xref:/commands/PrimijeniMatricu.adoc[PrimijeniMatricu][matrica,objekt]: Primjenit će afinu transformaciju zadanu
+matricom na objekt.
+* xref:/commands/ReduciraniRedakEchelonoveForme.adoc[ReduciraniRedakEchelonoveForme][matrica]: Konvertira matricu u
+matricu s reduciranim recima echelonove forme.

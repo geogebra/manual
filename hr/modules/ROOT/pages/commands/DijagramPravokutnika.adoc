@@ -1,0 +1,18 @@
+= DijagramPravokutnika naredba
+:page-en: commands/BoxPlot
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+DijagramPravokutnika[ <pomak po y osi>, <skala na y osi>, <lista neobrađenih podataka> ]::
+  Crta dijagram pravokutnika koristeći neobrađene podatke. Njegovu vertikalnu poziciju u koordinatnom sustavu određuje
+  parametar "pomak po y osi", a visinu "skala na y osi".
+
+[EXAMPLE]
+====
+
+`++DijagramPravokutnika[0, 1, {2,2,3,4,5,5,6,7,7,8,8,8,9}]++`
+
+====
+
+DijagramPravokutnika[ <pomak po y osi>, <skala na y osi>, <početna vrijednost a>, <Q1>, <medijan>, <Q3>, <završna
+vrijednost b> ]::
+  Crta dijagram pravokutnika zadanih statističkih podataka na intervalu [_a, b_].

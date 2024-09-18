@@ -1,0 +1,38 @@
+= SigmaXX Kommando
+:page-en: commands/SigmaXX
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+SigmaXX[ <Liste med punkt> ]::
+  Finn kvadratsummen av _x_-koordinatane til dei gjevne punkta.
+SigmaXX[ <Liste med tal> ]::
+  Finn kvadratsummen av tala i lista.
+SigmaXX[ <Liste med tal L>, <Liste med frekvensar F> ]::
+  Finn kvadratsummen av tala i _L_ når talet på kvart element i _L_ er gjeve av det samsvarande elementet i _F_.
+
+[EXAMPLE]
+====
+
+*Døme:* `++SigmaXX[{1, 2, 3}, {3, 2, 1}]++` gjev 20 som er stem:[1^2\cdot 3 + 2^2\cdot 2 + 3^2\cdot 1].
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++SigmaXX[{1, 2, 3}]++` gjev 14 som er 1^2^ + 2^2^ + 3^2^.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++SigmaXX[{(1, 3), (2, 4), (3, 5)}]++` gjev 14 som er 1^2^ + 2^2^ + 3^2^.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoane xref:/commands/SigmaXY.adoc[SigmaXY] og xref:/commands/SigmaYY.adoc[SigmaYY].
+
+====

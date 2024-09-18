@@ -1,0 +1,26 @@
+= BrukDersom Kommando
+:page-en: commands/KeepIf
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+BrukDersom[ <Vilkår>, <Liste> ]::
+  Lagar ei ny liste som inneheld dei elementa i den opphavlege lista som oppfyller vilkåret.
+
+[EXAMPLE]
+====
+
+*Døme:* `++BrukDersom[x<3, {1, 2, 3, 4, 1, 5, 6}]++` returnerer lista stem:[\\{1, 2, 1\}].
+
+====
+
+[NOTE]
+====
+
+*Merk:* For lister med tal kan vilkårlege vilkår verte brukt. For lister med andre objekt kan berre vilkår på forma
+`++x==konstant++` eller `++x!=konstant++` verte brukt.
+
+====
+
+BrukDersom[ <Vilkår>, <Variabel>, <Liste> ]::
+  Denne syntaksen åpnar for meir fleksible vilkår; til dømes for punkt _P, Q, R_:
+  `++BrukDersom[x(A) < 3, A, {P, Q, R}]++` vil ta punkt som har _x_-koordinat større enn 3 ut av lista. Variabelen _A_
+  vert etter tur erstatta av _P_, _Q_ og _R_ for å kontrollere om dei oppfyller vilkåret.

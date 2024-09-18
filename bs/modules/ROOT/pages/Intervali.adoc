@@ -1,0 +1,28 @@
+= Intervali
+:page-en: Intervals
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+Interval je skup svih brojeva između donje i gornje granice intervala. Kako bi kreirali interval upišimo npr.
+`++2 < x < 3++` u xref:/Traka_za_Unos.adoc[traku za unos]. U ovom primjeru interval `++2 < x < 3++` je otvoreni
+interval. Također možemo definirati i zatvoreni (`++2 ≤ x ≤ 3++`) ili poluotvoreni-poluzatvoreni (`++2 ≤ x < 3++`)
+interval.
+
+[NOTE]
+====
+
+Vidi i xref:/Boolean_vrijednost.adoc[Boolean vrijednost].
+
+====
+
+Da bi odredili pripada li neki broj _c_ intervalu _r_ upišimo `++r(c)++` u traku za unos. Rezultat će biti
+Boolean-logička vrijednost.Generalizacije intervala su xref:/Nejednakosti.adoc[Nejednakosti].
+
+== Naredbe za intervale
+
+* Naredbe xref:/Min_Naredba.adoc[Minimum], xref:/Max_Naredba.adoc[Maksimum], xref:/Središte_Naredba.adoc[Središte] za
+interval određen brojevima _a_ i _b_ daju redom brojeve _a_, _b_ i stem:[\frac\{a+b}2]. Na rezultat neće uticati da li
+je interval otovren, zatvoren ili poluotvoren-poluzatvoren.
+* Naredba xref:/Tačka_Naredba.adoc[Tačka] kreira pomičnu xref:/Tačke_i_Vektori.adoc[tačku] čija x-koordinata pripada
+intervalu, a y-koordinata jednaka je 0.
+* Naredba xref:/TačkaU_Naredba.adoc[TačkaU] kreira pomičnu tačku čija x-koordinata pripada intervalu, a y-koordinata
+može se proizvoljno mijenjati.

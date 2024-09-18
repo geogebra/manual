@@ -1,0 +1,63 @@
+= Funksjonar
+:page-en: Functions
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Når du skriv inn ein funksjon kan du bruke tidlegare definerte variablar (t.d. tal, punkt, vektorar) i tillegg til andre
+funksjonar.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* Funksjon f: `++f(x) = 3 x^3 – x^2++`
+* Funksjon g: `++g(x) = tan(f(x))++`
+* Namnløs funksjon: `++sin(3 x) + tan(x)++`
+
+====
+
+[NOTE]
+====
+
+*Merk:* Alle tilgjengelege førehandsdefinerte funksjonar (t.d. sin, cos, tan) er forklart på sida
+xref:/Førehandsdefinerte_funksjonar_og_operatorar.adoc[Førehandsdefinerte funksjonar og operatorar].
+
+====
+
+I GeoGebra kan du bruke kommandoar til å finne til dømes xref:/commands/Integral.adoc[integralet] og den
+xref:/commands/Derivert.adoc[deriverte] av ein funksjon. Du kan også bruke kommandoen xref:/commands/Dersom.adoc[Dersom]
+til å lage funksjonar med vilkår.
+
+[NOTE]
+====
+
+*Merk:* Du kan også bruke kommandoane f'(x) eller f''(x), … for å få dei deriverte av ein tidlegare definert funksjon
+f(x).
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* Definer funksjonen _f_ som `++f(x) = 3 x^3 – x^2++`. Du kan bruke denne til å lage ein funksjon _g_ ved å skrive
+`++g(x) = cos(f' (x + 2))++`.
+
+====
+
+Funksjonar kan verte flytta med ein vektor (sjå kommandoen xref:/commands/Flytt.adoc[Flytt]). Ein fri funksjon kan også
+verte flytta ved bruk av verktøyet image:Tool_Move.gif[Tool Move.gif,width=32,height=32] xref:/tools/Flytt.adoc[Flytt].
+Andre xref:/commands/Transformasjon_Kommandoar.adoc[transformasjonskommandoar] kan også verte brukt på funksjonar, men i
+dei fleste høve vert resultatet ei xref:/Kurver.adoc[kurve] og ikkje ein funksjon.
+
+== Avgrense ein funksjon til eit intervall
+
+For å avgrense ein funksjon til intervallet [_a_, _b_], kan du bruke kommandoen xref:/commands/Funksjon.adoc[Funksjon]
+eller kommandoen xref:/commands/Dersom.adoc[Dersom].
+
+[EXAMPLE]
+====
+
+*Døme:* `++Dersom[x≥3 ∧ x≤5,x^2]++` og `++Funksjon[x^2,3,5]++` er begge definisjonar for funksjonen _x^2^_ avgrensa til
+intervallet [3,5]
+
+====

@@ -1,0 +1,67 @@
+= GrenseOver Kommando
+:page-en: commands/LimitAbove
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+GrenseOver[ <Funksjon f>, <Verdi t> ]::
+  Finn den høgre einsidige grenseverdien til funksjonen _f_ når verdien _t_ vert sett inn for hovedvariabelen i
+  funksjonen.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++GrenseOver[1 / x, 0]++` gjev stem:[\infty] .
+
+====
+
+[NOTE]
+====
+
+*Merk:* Ikkje alle grenseverdiar kan verte funne av GeoGebra, så _udefinert_ vil verte returnert både i dei tilfella og
+når det korrekte resultatet er udefinert.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoane xref:/commands/Grenseverdi.adoc[Grenseverdi] og
+xref:/commands/GrenseUnder.adoc[GrenseUnder].
+
+====
+
+== CAS-delen
+
+GrenseOver[ <Uttrykk f>, <Verdi t> ]::
+  Finn den høgre einsidige grenseverdien til uttrykket _f_ når verdien _t_ vert sett inn for hovedvariabelen i
+  funksjonen.
+GrenseOver[ <Uttrykk f>, <Variabel v>, <Verdi t> ]::
+  Finn den høgre einsidige grenseverdien til uttrykket _f_ når verdien _t_ vert sett inn for variabelen _v_ i
+  funksjonen.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++GrenseOver[1 / a, a, 0]++` gjev stem:[\infty] .
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++GrenseOver[1 / x, 0]++` gjev stem:[\infty] .
+
+====
+
+[NOTE]
+====
+
+*Merk:* Ikkje alle grenseverdiar kan verte funne av GeoGebra, så _?_ vil verte returnert både i dei tilfella og når det
+korrekte resultatet er udefinert.
+
+====

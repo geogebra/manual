@@ -1,0 +1,36 @@
+= Glidar Kommando
+:page-en: commands/Slider
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Glidar[ <Min>, <Maks>, <Animasjonssteg s>, <Fart f>, <Breidde>, <Er vinkel>, <Horisontal>, <Animasjon>, <Tilfeldig> ]::
+  Lagar ein xref:/tools/Glidar.adoc[glidar] som har verdiar i intervallet _[Min, Maks]_. _Breidde_ gjev breidda på
+  glidaren i pixlar.
+  * Dersom _Animasjon = true_ køyrer animasjonen med gjeven steglengde _s_ og fart _f_, elles er den i ro.
+  * Dersom _Er vinkel = true_ representer glidaren ein vinkel, elles er den eit tal.
+  * Dersom _Horisontal = true_ er glidaren horisontal, elles er den vertikal.
+  * Dersom _Tilfeldig = true_ hoppar verdien for glidaren tilfeldig mellom dei moglege verdiane, elles er den ikkje
+  tilfeldig.
+
+[NOTE]
+====
+
+*Merk:* Berre dei to første parametrane er naudsynte. For å kunne bruke berre to parametrar må du skrive kommandoen som
+`++Glidar[ <Min>, <Maks> ]++` sjølv om dette ikkje kjem som eit alternativ i inntastingsfeltet. Dei andre parametrane
+har følgjande standardverdiar
+
+* _Animasjonssteg = 0.1_
+* _Fart = 1_
+* _Breidde = 100_
+* _Er vinkel = false_
+* _Horisontal = true_
+* _Animasjon = false_
+* _Tilfeldig = false_
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også verktøyet image:Tool_Slider.gif[Tool Slider.gif,width=32,height=32] xref:/tools/Glidar.adoc[Glidar].
+
+====

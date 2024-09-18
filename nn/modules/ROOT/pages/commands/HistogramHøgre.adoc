@@ -1,0 +1,22 @@
+= HistogramHøgre Kommando
+:page-en: commands/HistogramRight
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+HistogramHøgre[ <Liste med klassegrenser G>, <Liste med høgder H> ]::
+  Gjer det same som `++Histogram[G, H]++`
+
+HistogramHøgre[ <Liste med klassegrenser G>, <Liste med rådata D>, <Bruk tettleik>, <Tettleiksfaktor f> (valfri) ]::
+  Gjer det same som `++Histogram[G, D, Bruk tettleik, f]++`, bortsett frå at dersom ein verdi i lista fell saman med den
+  høgre grensa på ein klasse så vil han verte talt i denne klassen og ikkje i den neste.
+
+HistogramHøgre[ <Boolsk kumulativ>, <Liste med klassegrenser G>, <Liste med rådata D>, <Bruk tettleik>, <Tettleiksfaktor
+f> (valfri) ]::
+  Gjer det same som `++Histogram[Boolsk kumulativ, G, D, Bruk tettleik, f]++`, bortsett frå at dersom ein verdi i lista
+  fell saman med den høgre grensa på ein klasse så vil han verte talt i denne klassen og ikkje i den neste.
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoen xref:/commands/Histogram.adoc[Histogram].
+
+====

@@ -1,0 +1,43 @@
+= CjelobrojnoDijeljenje naredba
+:page-en: commands/Div
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+CjelobrojnoDijeljenje[ <broj djeljenik>, <broj djelitelj> ]::
+  Izračunava količnik (cjelobrojni dio rezultata) dvaju zadanih brojeva.
+CjelobrojnoDijeljenje[ <polinom djeljenik>, <polinom djelitelj> ]::
+  Daje polinom količnik dvaju zadanih polinoma.
+
+[EXAMPLE]
+====
+
+`++CjelobrojnoDijeljenje[x^2 + 3 x + 1, x - 1]++` daje _f(x) = x + 4_.
+
+====
+
+[EXAMPLE]
+====
+
+`++CjelobrojnoDijeljenje[16, 3]++` daje _5_.
+
+====
+
+== CAS prikaz
+
+CjelobrojnoDijeljenje[ <broj djeljenik>, <broj djelitelj> ]::
+  Izračunava količnik (cjelobrojni dio rezultata) dvaju zadanih brojeva.
+CjelobrojnoDijeljenje[ <polinom djeljenik>, <polinom djelitelj> ]::
+  Daje polinom količnik dvaju zadanih polinoma.
+
+[EXAMPLE]
+====
+
+Neka varijabla _a_ nije definirana. `++CjelobrojnoDijeljenje[a (x^2-1) , x - 1]++` daje _x a + a_.
+
+====
+
+[EXAMPLE]
+====
+
+Neka varijabla _a_ nije definirana. `++CjelobrojnoDijeljenje[16a, 3a]++` daje _5_.
+
+====

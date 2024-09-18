@@ -1,0 +1,39 @@
+= Kjedebrøk Kommando
+:page-en: commands/ContinuedFraction
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Kjedebrøk[ <Tal> ]::
+  Finn https://en.wikipedia.org/wiki/nn:Kjedebr%C3%B8k[kjedebrøken] til det gjevne talet. Resultatet er eit LaTeX
+  xref:/Tekstar.adoc[tekst objekt]. Brøken vert berekna numerisk til ein presisjon på 10^-8^.
+Kjedebrøk[ <Tal>, <Nivå> ]::
+  Finn kjedebrøken for det gjevne talet. Talet på kvotientar er mindre eller lik _Nivå_, men vil aldri overskride talet
+  på kvotientar som er nødvendig for å oppnå ein presisjon på 10^-8^.
+Kjedebrøk[ <Tal>, <Nivå (valfri)>, <Kortform true|false> ]::
+  Dei to første argumenta har same tyding som ovanfor.
+  * Dersom _Kortform = false_ vert resultatet gjeven som ovanfor
+  * Dersom _Kortform = true_ vil LaTeX xref:/Tekstar.adoc[tekst objektet] innehalde ei liste med heiltalsdelen av
+  kjedebrøken.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++Kjedebrøk[[5.45, true]++` gjev [5; 2, 4, 1, 1]
+* `++Kjedebrøk[[5.45, 3, true]++` gjev [5; 2, 4, ...]
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++Kjedebrøk[5.45, 3]++` gjev _stem:[5 + \frac\{1}\{ 2+ \frac\{1}\{4+ ... } }]_
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++Kjedebrøk[5.45]++` gjev _stem:[5 + \frac\{1}\{ 2+ \frac\{1}\{4+ \frac\{1}\{ 1+ \frac\{1}\{ 1 } } } }]_
+
+====

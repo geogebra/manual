@@ -1,0 +1,64 @@
+= Søylediagram Kommando
+:page-en: commands/BarChart
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Søylediagram[ <Liste med data>, <Liste med frekvensar> ]::
+  Lagar eit søylediagram ved bruk av lista med tal og dei tilhøyrande frekvensane. Søylende har breidde 1.
+Søylediagram[ <Liste med data>, <Liste med frekvensar>, <Søylebreidde b> ]::
+  Lagar eit søylediagram ved bruk av lista med og tal og dei tilhøyrande frekvensane. Søylene har breidde _b_.
+  *Merk:*
+Søylediagram[ <Liste med rådata>, <Søylebreidde b> ]::
+  Lagar eit søylediagram frå lista med rådata. Søylene har breidde _b_.
+Søylediagram[ <Starverdi a>, <Sluttverdi b>, <Liste med høgder> ]::
+  Lagar eit søylediagram over intervallet _[a, b]_. Talet på søyler er bestemd av talet på elementer i lista som gjev
+  høgda til søylene.
+Søylediagram[ <Startverdi a>, <Sluttverdi b>, <Uttrykk>, <Variabel k>, <Frå verdi c>, <Til verdi d> ]::
+  Lagar eit søylediagram over intevallet _[a, b]_. Høgda på søylene vert bestemd av uttrykket der variabelen _k_ tek
+  verdiar frå talet _c_ til talet _d_.
+Søylediagram[ <Startverdi a>, <Sluttverdi b>, <Uttrykk>, <Variabel k>, <Frå verdi c>, <Til verdi d>, <Breidde s> ]::
+  Lagar eit søylediagram over intervallet _[a, b]_. Høgda på søylene vert bestemd av uttrykket der variabelen _k_ tek
+  verdiar frå talet _c_ til talet _d_. Breidda på søylene er gjeven av _s_.
+  \{\{Example| 1=Dersom _p = 0.1_, _q = 0.9_, og _n = 10_ er tal så vil
+  `++Søylediagram[ -0.5, n + 0.5, Binomialkoeffisient[n,k] * p^k * q^(n-k), k, 0, n, 0.5 ]++` gjev tilsvarande
+  søylediagram som i døme over, men med søylebreidde 0.5.
+
+[EXAMPLE]
+====
+
+*Døme:* Dersom _p = 0.1_, _q = 0.9_, og _n = 10_ er tal så vil
+`++Søylediagram[ -0.5, n + 0.5, Binomialkoeffisient[n,k] * p^k * q^(n-k), k, 0, n ]++` gje eit søylediagram i
+intervallet [_-0.5, n+0.5_]. Høgdene til søylene avheng av sannsynene berekna frå det oppgjevne uttrykket.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++Søylediagram[10, 20, {1, 2, 3, 4, 5} ]++` gjev eit søylediagram med fem søyler med dei gjevne høgdene i
+intervallet [10, 20].
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* :`++Søylediagram[{1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5}, 1]++` lagar eit søylediagram der med fire søyler
+med breidde 0.5. Første søyle er plassert i x=1 og har høgde 3, andre søyle i x=2 og har høgde 5 osv.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* :`++Søylediagram[{10, 11, 12, 13, 14}, {5, 8, 12, 0, 1}, 0.5]++` lagar eit søylediagram der første søyle er
+plassert ved x=10 og har høgde 5, andre søyle er plassert ved x=11 og har høgde 8 osv. Søylene har breidde 0,5.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* :`++Søylediagram[{10, 11, 12, 13, 14}, {5, 8, 12, 0, 1}]++` lagar eit søylediagram der første søyle er plassert
+ved x=10 og har høgde 5, andre søyle er plassert ved x=11 og har høgde 8 osv.
+
+====

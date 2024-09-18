@@ -1,0 +1,38 @@
+= Toppunkt Kommando
+:page-en: commands/Vertex
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Toppunkt[ <Kjeglesnitt> ]::
+  Finn alle "toppunkta" til kjeglesnittet.
+  * For ein sirkel er det punkta med høgast og lågast _x_- og _y_-verdi; altså 4 punkt
+  * For ei ellipse er det skjeringspunkta mellom aksane (den store og den vesle) og ellipsa; altså 4 punkt
+  * For ein parabel er det toppunktet eller bunnpunktet; altså 1 punkt
+  * For ein hyperbel er det vendepunkta, altså 2 punkt
+
+Toppunkt[ <Ulikskap> ]::
+  Gjev alle skjeringspunkta mellom grensene til ulikskapane
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++Toppunkt[(x + y < 3) && (x - y > 1)]++` gjev punktet (2,1)
+* `++{Toppunkt[(x + y < 3) ∧ (x - y > 1) && (y>-2)]}++` gjev lista \{(2, 1), (5, -2), (-1, -2)}
+* `++Toppunkt[(y > x²) ∧ (y < x)]++` gjev dei to punkta (0, 0) og (1, 1)
+* `++{Toppunkt[(y > x²) ∧ (y < x)]}++` gjev lista \{(0, 0), (1, 1)}.
+
+====
+
+Toppunkt[ <Mangekant> ]::
+  Finn alle hjørna til mangekanten.
+Toppunkt[ <Mangekant>, <Tal n> ]::
+  Finn hjørne nummer _n_ i mangekanten.
+
+[NOTE]
+====
+
+*Merk:* For å få resultatet som ei liste er det berre å skrive krøllparantesar \{ } rundt kommandoen:
+`++{Toppunkt[mangekant1]}++`
+
+====

@@ -1,0 +1,29 @@
+= Nultočka naredba
+:page-en: commands/Root
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Nultočka[ <polinom> ]::
+  Daje sve nultočke polinoma (kao točke na _x_-osi)
+Nultočka[ <funkcija>, <početna vrijednost a> ]::
+  Daje nultočku funkcije sa početnom vrijednošću _a_ (Newtonova metoda) .
+Nultočka[ <funkcija>, <početna vrijednost a>, <završna vrijednost b> ]::
+  Daje nultočku funkcije na intervalu [_a, b_] (metoda regula falsi)
+
+== CAS prikaz
+
+Nultočka[ <polinom> ]::
+  Daje sve nultočke polinoma.
+
+[EXAMPLE]
+====
+
+`++Nultočka[x^3 - 3 * x^2 - 4 * x + 12]++` daje _\{x = 3, x = 2, x = -2}_.
+
+====
+
+[NOTE]
+====
+
+Ova je naredba samo specijalni oblik xref:/commands/Riješi.adoc[naredbe Riješi].
+
+====

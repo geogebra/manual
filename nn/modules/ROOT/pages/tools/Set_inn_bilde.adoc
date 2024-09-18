@@ -1,0 +1,107 @@
+= Set inn bilde Verktøy
+:page-en: tools/Image
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Dette verktøyet let deg setje inn eit bilde i xref:/Grafikkfelt.adoc[grafikkfeltet].
+
+Først må du spesifisere kor i grafikkfeltet bilde skal verte plassert. Du kan bestemme posisjonen til det nedre venstre
+hjørne til bilde ved å:
+
+* trykkje ein plass i grafikkfeltet
+* trykkje på eit punkt
+
+Ein opne-fil dialogboks vert då opna og du kan velje ei bildefil frå datamaskina.
+
+[NOTE]
+====
+
+*Merk:* Etter å ha valt verktøyet image:Tool_Insert_Image.gif[Tool Insert Image.gif,width=32,height=32] kan du bruke
+tastatursnarvegen [.kcode]#Alt#-klikk for å direkte lime inn eit bilde frå utklippstavla.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Gjennomsiktige GIF- og PNG-filer er tillete, men for PNG-filer må du først redigere dei slik at dei har ein
+alfa-kanal.
+
+====
+
+== Bildeeigenskapar
+
+Posisjonen til bildet kan vere absolutt eller relativt til eit koordinatsystem. Du kan spesifisere dette i fanene
+_Basis_ og _Posisjon_ når du opnar xref:/Eigenskapar.adoc[dialogboks for eigenskapar] for bildet. Under fana _Farge_ kan
+du endre fyllgraden til bildet slik at det vert gjennomsiktig. Under _Posisjon_ kan du også spesifisere tre av
+hjørnepunkta. Det gjev deg fleksibilitet til å skalere, rotere og forvrenge bildet (sjå også kommandoen
+xref:/commands/Hjørne.adoc[Hjørne]).
+
+* _Hjørne 1_: posisjonen til nedre venstre hjørne av bildet
+* _Hjørne 2_: posisjonen til nedre høgre hjørne av bildet
+
+[NOTE]
+====
+
+*Merk:* Dette hjørnet kan kun bli satt dersom _Hjørne 1_ allereie er satt. Det avgjer breidda til bildet.
+
+====
+
+* _Hjørne 4_: posisjonen til øvre venstre hjørne av bildet
+
+[NOTE]
+====
+
+*Merk:* Dette hjørnet kan kun bli satt dersom _Hjørne 1_ allereie er satt. Det avgjer høgda til bildet.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* Lag tre punkt _A_, _B_ og _C_ for å utforske effekten av hjørnepunkt.
+
+* Sett punkt _A_ som _Hjørne 1_ og punkt _B_ som _Hjørne 2_ på bildet. Ved å dra punkt _A_ og _B_ ved bruk av verktøyet
+image:Tool_Move.gif[Tool Move.gif,width=32,height=32] xref:/tools/Flytt.adoc[Flytt] kan du sjå effekten av dei på
+bildet.
+* Fjern punkt _B_ som _Hjørne 2_ og sett punkt _C_ som _Hjørne 4_. Dra punkt _A_ og _C_ for å sjå effekten av dei på
+bildet.
+* Sett punkt _B_ som _Hjørne 2_ igjen. Dra på punkta og sjå korleis bildet vert forvrengt.
+
+[NOTE]
+====
+
+*Merk:* Dersom bildet ikkje oppdaterer seg når du flytter på punkta, kan du bruke _Oppdater alt_ frå
+xref:/Vis_meny.adoc[vis-menyen].
+
+====
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* Dersom du vil feste bildet til eit punkt _A_, setje breidda til 3 og høgda til 4 gjer du som følgjer:
+
+* Sett _Hjørne 1_ til punkt _A_
+* Sett _Hjørne 2_ til _A_ + (3, 0)
+* Sett _Hjørne 4_ til _A_ + (0, 4)
+
+[NOTE]
+====
+
+*Merk:* Dersom du no dreg punkt _A_ vil ikkje storleiken til bildet verte endra.
+
+====
+
+====
+
+Bildet kan verte sett som bakgrunnsbilde under fana _Basis_ når du opnar xref:/Eigenskapar.adoc[dialogboks for
+eigenskapar] for bildet. Eit bakgrunnsbilde ligg bak koordinatsystemet og kan ikkje verte valt med musa.
+
+[NOTE]
+====
+
+*Merk:* For å endre bakgrunnsbildet må du opne xref:/Eigenskapar.adoc[dialogboksen for eigenskapar] ved å velje
+_Eigenskapar_ frå menyen xref:/Redigeringsmeny.adoc[Rediger].
+
+====

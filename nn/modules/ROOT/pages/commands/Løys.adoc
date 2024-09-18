@@ -1,0 +1,53 @@
+= Løys Kommando
+:page-en: commands/Solve
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Denne kommandoen er tilgjengeleg berre i xref:/CAS_delen.adoc[CAS-delen].
+
+Løys[ <Likning> ]::
+  Løyser likninga for hovedvariabelen og gjev ei liste med alle løysingane.
+Løys[ <Likning>, <Variabel> ]::
+  Løyser likninga for den gjevne variabelen og gjev ei liste med alle løysingane.
+Løys[ <List med likningar>, <Liste med variablar> ]::
+  Løyser settet av likningar for dei gjevne ukjente variablane og gjev ei liste med alle løysingane.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++Løys[{x = 4 x + y , y + x = 2}, {x, y}]++` gjev _\{\{x = -1, y = 3}}_, som er den einaste løysinga av _x = 4x + y_
+og _y + x = 2_.
+* `++Løys[{2a^2 + 5a + 3 = b, a + b = 3}, {a, b}]++` gjev _\{\{a = 0, b = 3}, \{a = -3, b = 6}}_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Løys[x * a^2 = 4a, a]++` gjev stem:[\\{a = \frac\{4}\{x}, a = 0\}], som er løysingane av _x a^2^ = 4a_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Løys[x^2 = 4x]++` gjev _\{x = 4, x = 0}_, som er løysingane av _x^2^ = 4x_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Høgre sida kan verte utelatt i kvar av syntaksane over. Dersom høgre sida manglar vert ho sett lik 0.
+* Sjå også verktøyet image:Tool_Solve.gif[Tool Solve.gif,width=32,height=32] xref:/tools/Løys.adoc[Løys].
+* Sjå også kommandoane xref:/commands/Løysingar.adoc[Løysingar] , xref:/commands/CLøys.adoc[CLøys] og
+xref:/commands/CLøysingar.adoc[CLøysingar].
+
+====

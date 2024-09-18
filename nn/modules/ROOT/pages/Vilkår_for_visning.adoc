@@ -1,0 +1,53 @@
+= Vilkår for visning
+:page-en: Conditional_Visibility
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+I tillegg til å berre vise eller skjule eit objekt kan du også setje vilkår som avgjer om objektet er synleg eller
+ikkje. Til dømes kan du setje eit objekt til å vere synleg dersom ein xref:/Handlingsobjekt.adoc[avkryssingsboks] eller
+xref:/tools/Glidar.adoc[glidar] i xref:/Grafikkfelt.adoc[grafikkfeltet] har ein bestemt verdi.
+
+== Vilkår for visning av eksisterande objekt
+
+Du kan bruke verktøyet image:Tool_Check_Box_to_Show_Hide_Objects.gif[Tool Check Box to Show Hide
+Objects.gif,width=32,height=32] xref:/tools/Avkryssingsboks_for_å_vise_og_skjule_objekt.adoc[Avkryssingsboks for å vise
+og skjule objekt] for å lage ein avkryssingsboks som kontrollerer synlegheiten av eit eller fleire eksisterande objekt.
+
+Alternativt kan du lage ein xref:/Boolske_verdiar.adoc[boolsk variabel] (t.d. `++b = true++`) ved å bruke
+xref:/Inntastingsfelt.adoc[inntastingsfeltet] og gjere det til ein synleg avkryssingsboks i
+xref:/Grafikkfelt.adoc[grafikkfeltet] ved å endre synlegheitsstatusen (t.d. ved å bruke verktøyet
+image:Tool_Show_Hide_Object.gif[Tool Show Hide Object.gif,width=32,height=32]
+xref:/tools/Vis_eller_skjul_objekt.adoc[Vis eller skjul objekt] eller xref:/Kontekstmeny.adoc[kontekstmenyen]). For å
+bruke denne boolske variabelen som eit vilkår for synlegheit for spesifikke objekt må du følgje stega i forklaringa
+under.
+
+== Endre synlegheit på nyleg laga objekt
+
+I xref:/Eigenskapar.adoc[eigenskapar] kan du skrive inn vilkår for visning av eit objekt under fana _Avansert_.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* Dersom _a_ er ein glidar, så vil vilkåret a < 2 tyde at objektet i grafikkfeltet er synleg når glidaren har ein verdi
+lågare enn 2.
+* Dersom _b_ er ein boolsk variabel kan du bruke _b_ som eit vilkår. Objektet er synleg når _b_ er _true_ og skjult når
+_b_ er _false_.
+* Dersom _g_ og _h_ er to linjer og du at ein tekst skal vere synleg når dei er paralelle kan du bruke g∥h som vilkår
+for teksten.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Du kan bruke logiske operatorar (t.d. ≠, ≥, ˄, ‖) frå nedtrekksmenyen for å setje vilkår.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoen xref:/commands/VelVisingIGrafikkfelt.adoc[VelVisingIGrafikkfelt].
+
+====

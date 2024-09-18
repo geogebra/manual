@@ -1,0 +1,25 @@
+= Aproksimacija naredba
+:page-en: commands/Numeric
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Ova je naredba dostupna samo u xref:/CAS_prikaz.adoc[CAS prikazu].
+
+Aproksimacija[ <izraz> ]::
+  Pokušava odrediti numeričku aproksimaciju danog izraza. Broj decimalnih mjesta zavisi od postavkama zaokruživanja koje
+  ste izabrali u izborniku xref:/Izbornik_Postavke.adoc[Postavke].
+Aproksimacija[ <izraz>, <broj značajnih znamenki> ]::
+  Pokušava odrediti numeričku aproksimaciju danog izraza, koristeći broj zadanih znamenki.
+
+[EXAMPLE]
+====
+
+`++Aproksimacija[sin(1), 20]++` daje _0.84147098480789650665_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Aproksimacija[3 / 2]++` daje__1.5__.
+
+====

@@ -1,0 +1,28 @@
+= Jedinstveni naredba
+:page-en: commands/Unique
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Jedinstveni[ <lista> ]::
+  Daje listu elemenata iz zadane liste u rastućem poretku, pri čemu su elementi koji se više puta ponavljaju uključeni
+  samo jednom. Funkcionira i za liste brojeva i za liste tekstova. Pogledajte još i naredbu
+  xref:/commands/Frekvencija.adoc[Frekvencija].
+
+[EXAMPLE]
+====
+
+* `++Jedinstveni[{1, 2, 4, 1, 4}]++` daje _\{1, 2, 4}_.
+* `++Jedinstveni[{"a", "b", "Zdravo", "Zdravo"}]++` daje _\{_ "Zdravo", "a", "b"}_._
+
+====
+
+== CAS prikaz
+
+Jedinstveni[ <lista> ]::
+  Daje listu u kojoj se elementi početne liste pojavljuju jedanput.
+
+[EXAMPLE]
+====
+
+`++Jedinstveni[{1, x, x, 1, a}]++` daje _\{1, x, a}_.
+
+====

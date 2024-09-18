@@ -1,0 +1,19 @@
+= Prilagodba naredba
+:page-en: commands/Fit
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Prilagodba[ <lista točaka>, <lista funkcija> ]::
+  Izračunava linearnu kombinaciju funkcija prema točkama iz liste.
+
+[EXAMPLE]
+====
+
+S podacima _L=\{A,B,C,...}, f(x)=1, g(x)=x, h(x)=e^x, F=\{f,g,h}_ naredba`++ Prilagodba[L,F]++` izračunava funkciju
+oblika _a + b x + c e^x_ koja je prilagođena zadanim točkama.
+
+====
+
+Prilagodba[ <lista točaka>, <funkcija> ]::
+  Izračunava najmanju kvadratnu grešku u odnosu na točke iz liste. Funkcija treba biti zavisna od jednog ili više
+  klizača, koji predstavljaju početnu vrijednost parametara koji se optimiraju. Nelinearna iteracija možda neće
+  konvergirati, ali namještanje klizača na bolje početne vrijednosti može pomoći.

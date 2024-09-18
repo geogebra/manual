@@ -1,0 +1,25 @@
+= TTest2 naredba
+:page-en: commands/TTest2
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+TTest2[ <lista podataka uzorka 1>, <lista podataka uzorka 2>, <broj krakova>, <vrsta varijabilnosti - logička
+vrijednost> ]::
+  Izvršit će T test razlike između dviju aritmetičkih sredina koristeći dane liste podataka. Broj krakova ima moguće
+  vrijednosti "<", ">" , "≠" kojima su određene slijedeće alternativne hipoteze:
+  "<" = razlika aritmetičkih sredina je < 0
+  ">" = razlika aritmetičkih sredina je > 0
+  "≠" = razlika aritmetičkih sredina je ≠ 0
+
+Ako je _vrsta varijabilnosti - logička vrijednost_ = true, tada se varijance uzoraka smatraju jednakima pa se standardne
+devijacije uzoraka kombiniraju u proračunu.
+
+Ako je _vrsta varijabilnosti - logička vrijednost_ = false, tada se varijance uzoraka ne smatraju jednakima pa se
+standardne devijacije uzoraka ne kombiniraju.
+
+Rezultat je lista oblika \{P vrijednost, T statistički test}.
+
+TTest2[ <srednja vrijednost uzorka 1>, <standardna devijacija uzorka 1>, <veličina uzorka 1>, <srednja vrijednost uzorka
+2>, <standardna devijacija uzorka 2>, <veličina uzorka 2>, <broj krakova>, <vrsta varijabilnosti - logička vrijednost>
+]::
+  Izvršit će T test razlike između dviju aritmetičkih sredina koristeći dane statističke podatke za uzorke. _broj
+  krakova_ i _vrsta varijabilnosti - logička vrijednost_ opisani su gore.

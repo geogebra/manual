@@ -1,0 +1,78 @@
+= Točke i vektori
+:page-en: Points_and_Vectors
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Točke i vektori mogu se unijeti iz xref:/Traka_za_unos.adoc[trake za unos] u kartezijevim ili polarnim koordinatama
+(vidi xref:/Brojevi_i_kutovi.adoc[brojeve i kutove]). Točke možemo načiniti i pomoću image:Tool_New_Point.gif[Tool New
+Point.gif,width=32,height=32] xref:/Alati_za_točku.adoc[alata za točku], image:Tool_Vector_from_Point.gif[Tool Vector
+from Point.gif,width=32,height=32] xref:/tools/Vektor_iz_točke.adoc[alata vektor iz točke],
+image:Tool_Vector_between_Two_Points.gif[Tool Vector between Two Points.gif,width=32,height=32]
+xref:/tools/Vektor_između_dviju_točaka.adoc[alata vektor između dviju točaka] i različitim
+xref:/Naredbe.adoc[naredbama].
+
+[NOTE]
+====
+
+Velika slova označavaju točke, dok mala slova označavaju vektore. Ovaj dogovor nije obavezan.
+
+====
+
+[EXAMPLE]
+====
+
+* Kako biste unijeli točku P ili vektor _v_ u kartezijevim koordinatama možete upisati `++P = (1, 0)++` ili
+`++v = (0, 5)++` u traku za unos.
+* Kako biste unijeli točku u xref:/Tablični_prikaz.adoc[tabličnom prikazu], nazovite je koristeći adresu ćelije:
+`++A2 = (1, 0)++`
+* Kako biste unijeli točku ili vektor u polarnim koordinatama unesite `++P = (1; 0°)++` ili `++v = (5; 90°)++`.
+
+====
+
+[NOTE]
+====
+
+Trebate koristiti točku zarez kod odvajanja polarnih koordinata. Ako ne ukucate znak za stupanj, GeoGebra će uzeti da je
+mjera kuta u radijanima.
+
+====
+
+Koordinate točaka i vektora možete dohvatiti koristeći xref:/Preddefinirane_funkcije_i_operatori.adoc[preddefinirane
+funkcije i operatore] _x_ i _y_.
+
+[EXAMPLE]
+====
+
+Ako je `++P=(1,2)++` točka i `++v=(3,4)++` vektor, `++x(P)++` daje 1, a `++y(v)++` daje 4.
+
+====
+
+Polarne koordinate točke _Q_ mogu se dohvatitii koristeći `++abs(Q)++` i `++arg(Q)++`.
+
+== Izračuni
+
+U GeoGebri možete računati s točkama i vektorima.
+
+[EXAMPLE]
+====
+
+* Možete načiniti polovište M između dviju točaka A i B unosom `++M = (A + B) / 2++` u traci za unos.
+* Možete izračunati duljinu vektora _v_ pomoću `++duljina = sqrt(v * v)++`
+* Ako je _A = (a, b)_, tada `++A + 1++` daje _(a + 1, b + 1)_. Ako je _A_ xref:/Kompleksni_brojevi.adoc[komleksan broj]
+_a+bί_, tada `++A+1++` daje _a + 1 + bί_.
+
+====
+
+== Vektorski umnožak
+
+Za dvije točke ili vektora `++(a, b) ⊗ (c, d)++` daje z-coordinate vektorskog umnoška _(a, b, 0) ⊗ (c, d, 0)_ kao običan
+broj.
+
+Slična sintaksa koja za nizove, samo što je rezultat u ovom slučaju niz.
+
+[EXAMPLE]
+====
+
+* `++{1, 2} ⊗ {4, 5}++` daje _\{0, 0, -3}_
+* `++{1, 2, 3} ⊗ {4, 5, 6}++` daje _\{3, 6, -3}_.
+
+====

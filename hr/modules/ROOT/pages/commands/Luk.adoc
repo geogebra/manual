@@ -1,0 +1,27 @@
+= Luk naredba
+:page-en: commands/Arc
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Luk[ <konika>, <točka A>, <točka B> ]::
+  Konstruira luk konike između točaka _A_ i _B_ koje pripadaju zadanoj konici.
+
+[NOTE]
+====
+
+Ova naredba djeluje samo kod kružnice ili elipse.
+
+====
+
+Luk[ <konika>, <vrijednost parametra t1>, <vrijednost parametra t2> ]::
+  Konstruira luk konike između dvaju parametarskih vrijednosti _t1_ i _t2_ za kružnicu i elipsu. Za ostale konike
+  rezultat je nedefiniran.
+
+[NOTE]
+====
+
+U parametarskom obliku konike su zadane na sljedeći način:
+
+* kružnica: _(r cos(t), r sin(t))_ gdje je _r_ polumjer kružnice.
+* elipsa: _(a cos(t), b sin(t))_ gdje su _a_ i _b_ duljine prve i druge poluosi.
+
+====

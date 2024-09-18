@@ -1,0 +1,36 @@
+= Retningsdiagram Kommando
+:page-en: commands/SlopeField
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Retningsdiagram[ <f(x, y)> ]::
+  Teiknar eit retningsdiagram for differensiallikninga stem:[\frac\{dy}\{dx}=f(x,y)].
+Retningsdiagram[ <f(x, y)>, <Tal n> ]::
+  Teiknar eit retningsdiagram for differensiallikninga stem:[\frac\{dy}\{dx}=f(x,y)] på eit _n_ x _n_ rutenett.
+  Standardverdien for _n_ er 40.
+Retningsdiagram[ <f(x, y)>, <Tal n>, <Lengde multiplikator a> ]::
+  Teiknar eit retningsdiagram for differensiallikninga stem:[\frac\{dy}\{dx}=f(x,y)] på eit _n_ x _n_ rutenett.
+  Multiplikatoren _0 < a ≤ 1_ avgjer lengda på linjestykka.
+Retningsdiagram[ <f(x, y)>, <Tal n>, <Lengde multiplikator a>, <Min x>, <Min y>, <Maks x>, <Maks y> ]::
+  Teiknar eit retningsdiagram for differensiallikninga stem:[\frac\{dy}\{dx}=f(x,y)] på eit _n_ x _n_ rutenett innafor
+  rektangelet bestemt av (_x~min~_, _y~min~_) og (_x~maks~_, _y~maks~_). Multiplikatoren _0 < a ≤ 1_ avgjer lengda på
+  linjestykka.
+
+[EXAMPLE]
+====
+
+*Døme:* `++Retningsdiagram[x+y]++` gjev retningsidagrammet for stem:[\frac\{dy}\{dx}=x+y].
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Bruk verktøya image:Tool_Move_Graphics_View.gif[Tool Move Graphics View.gif,width=32,height=32]
+xref:/tools/Flytt_grafikkfeltet.adoc[Flytt grafikkfeltet], image:Tool_Zoom_In.gif[Tool Zoom In.gif,width=32,height=32]
+xref:/tools/Forstørr.adoc[Forstørr] og image:Tool_Zoom_Out.gif[Tool Zoom Out.gif,width=32,height=32]
+xref:/tools/Forminsk.adoc[Forminsk] og observer kva som skjer med retningsdiagrammet.
+* Sjå også kommandoane xref:/commands/LøysODE.adoc[LøysODE] og xref:/commands/GeometriskStad.adoc[GeometriskStad].
+
+====

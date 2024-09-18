@@ -1,0 +1,83 @@
+= TrigUtvid Kommando
+:page-en: commands/TrigExpand
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+TrigUtvid[ <Uttrykk> ]::
+  Gjer eit trigonometrisk uttrykk om til eit uttrykk der kvar funksjon kun har ein variabel som argument.
+TrigUtvid[ <Uttrykk>, <Målfunksjon> ]::
+  Gjer eit trigonometrisk uttrykk om til eit uttrykk der kvar funksjon kun har ein variabel som argument, og der den
+  gjevne målfunksjonen er føretrekt.
+
+[EXAMPLE]
+====
+
+*Døme:* `++TrigUtvid[tan(x + y), tan(x)]++` gjev stem:[\frac\{-tan(x) - tan(y)}\{tan(x) tan(y) - 1}].
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++TrigUtvid[tan(x + y)]++` gjev stem:[\frac\{cos(x) sin(y) + cos(y) sin(x)}\{cos(x) cos(y) - sin(x) sin(y)}].
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Kommandoen fungerer berre med _x_, _y_ og _z_ som variabel.
+* Sjå også kommandoane xref:/commands/TrigForenkle.adoc[TrigForenkle] og xref:/commands/TrigKombiner.adoc[TrigKombiner].
+
+====
+
+== CAS-delen
+
+TrigUtvid[ <Uttrykk> ]::
+  Gjer eit trigonometrisk uttrykk om til eit uttrykk der kvar funksjon kun har ein variabel som argument.
+TrigUtvid[ <Uttrykk>, <Målfunksjon> ]::
+  Gjer eit trigonometrisk uttrykk om til eit uttrykk der kvar funksjon kun har ein variabel som argument, og der den
+  gjevne målfunksjonen er føretrekt.
+TrigUtvid[ <Uttrykk>, <Målfunksjon>, <Målvariabel> ]::
+  Gjer eit trigonometrisk uttrykk om til eit uttrykk der kvar funksjon kun har ein variabel som argument, og der den
+  gjevne målfunksjonen og målvariabelen er føretrekt.
+TrigUtvid[ <Uttrykk>, <Målfunksjon>, <Målvariabel>, <Målvariabel> ]::
+  Gjer eit trigonometrisk uttrykk om til eit uttrykk der kvar funksjon kun har ein variabel som argument, og der den
+  gjevne målfunksjonen og dei gjevne målvariablane er føretrekt.
+
+[EXAMPLE]
+====
+
+*Døme:* `++TrigUtvid[csc(x) - cot(x) + csc(y) - cot(y), tan(x), x/2, y/2]++` gjev
+stem:[tan(\frac\{x}\{2})+tan(\frac\{y}\{2})].
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++TrigUtvid[sin(x), sin(x), x/2]++` gjev stem:[2cos(\frac\{x}\{2})sin(\frac\{x}\{2})].
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++TrigUtvid[tan(x + y), tan(x)]++` gjev stem:[\frac\{-tan(x) - tan(y)}\{tan(x) tan(y) - 1}].
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++TrigUtvid[tan(x + y)]++` gjev stem:[\frac\{cos(x) sin(y) + cos(y) sin(x)}\{cos(x) cos(y) - sin(x) sin(y)}].
+
+====
+
+[NOTE]
+====
+
+*Merk:* Alle bokstavar kan verte brukt som variablar.
+
+====

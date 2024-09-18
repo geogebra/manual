@@ -1,0 +1,46 @@
+= Akcijski objekti
+:page-en: Action_Objects
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Akcijski objekti su korsni kod xref:/Skriptiranje.adoc[skriptiranja] za izradu interaktivnih apleta. Četiri su različita
+tipa tih objekata
+
+== Potvrdni okviri
+
+Potvrdni okviri su grafičke reprezentacije xref:/Boolean_vrijednosti.adoc[logičkih varijabli]. Za detalje pogledajte
+alat xref:/tools/Potvrdni_okvir_za_prikaz_i_skrivanje_objekata.adoc[Potvrdni okvir za prikaz i skrivanje objekata].
+Potvrdni okviri mogu se napraviti korištenjem gore spomenutog alata ili naredbe
+xref:/commands/PotvrdniOkvir.adoc[PotvrdniOkvir].
+
+== Tekstualna polja
+
+Tekstualna polja služe za unos teksta koji se može koristiti za xref:/Skriptiranje.adoc[skriptiranje]. Skripta se
+aktivira izmjenom teksta u tekstualnom polju i nakon toga ili pritiskom tipke enter ili napuštanjem tekstualnog polja.
+Vrijednost unosa može se dohvatiti korištenjem varijable %0.
+
+[EXAMPLE]
+====
+
+Tekstualno polje kojem je u skriptiranju navedeno `++a=a+%0++` povećat će _a_ za unesenu vrijednost. Radi jedino ako je
+_a_ xref:/Nezavisni_Zavisni_i_Pomoćni_objekti.adoc[nezavisan objekt].
+
+====
+
+Ako želite imati tekstualno polje kako biste mijenjali vrijednosti nezavisnog objekta (ili redefinirali zavisni objekt),
+morate prvo definirati objekt na koji se tekstualno poljeveže. U tom slučaju ne morate unositi bilo kakvu skriptu.
+Tekstualna polja možete načiniti korištenjem alata xref:/tools/Umetanje_tekstualnog_polja.adoc[Umetanje tekstualnog] ili
+pomoću naredbe xref:/commands/TekstualnoPolje.adoc[TekstualnoPolje].
+
+== Gumbi
+
+Gumbi su zamišljeni za pokretanje skripte klikom na gumb. Iako se skripte mogu pokrenuti klikom na neki drugi objekt
+(npr. na xref:/tools/Umetanje_slike.adoc[sliku]), korištenjem gumba će vaš uradak bit intuitivniji. Gumbe možemo
+napraviti korištenjem alata xref:/tools/Umetanje_gumba.adoc[Umetanje gumba] ili naredbe xref:/commands/Gumb.adoc[Gumb].
+
+== Padajuće liste
+
+Padajuće liste su dostupne jedino u xref:/Tablični_prikaz.adoc[tabličnom prikazu]. Možete unijeti listu u ćeliju tablice
+i zatim uključiti postavku _Koristi gumbe i potvrdne okvire_ u podizborniku Tablica
+xref:/Dijaloški_okvir_Postavke.adoc[dijaloškog okvira Postavke]. Lista će se pretvoriti u padajuću listu; označeni
+element padajuće liste može se dohvatiti korištenjem naredbi xref:/commands/OdaberiIndeks.adoc[OdaberiIndeks] ili
+xref:/commands/OdaberiElement.adoc[OdaberiElement].

@@ -1,0 +1,29 @@
+= TRazdioba naredba
+:page-en: commands/TDistribution
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+TRazdioba[ <stupanj slobode d>, x ]::
+  Izradit će funkciju gustoće vjerojatnosti (fgv) https://en.wikipedia.org/wiki/Student%27s_t-distribution[studentove
+  t-razdiobe] s _d_ stupnjeva slobode.
+TRazdioba[ <stupanj slobode d>, x, <kumulacija - logička vrijednost> ]::
+  Ako je _kumulacija - logička vrijednost_ jednaka true, izradit će kumulativnu funkciju distribucije t-razdiobe, u
+  suprotnom će izraditi fgv za t-razdiobu.
+TRazdioba[ <stupanj slobode d>, <vrijednost varijable v> ]::
+  Izračunava vrijednost kumulativne funkcije distribucije t-razdiobe za zadani _v_, t.j. vjerojatnost _P(X≤v)_ gdje je
+  _X_ slučajna varijabla t-razdiobe s _d_ stupnjeva slobode.
+
+[NOTE]
+====
+
+Daje vjerojatnost za zadanu vrijednost _x_-koordinate (ili površinu ispod krivulje t-razdiobe lijevo od zadane g
+_x_-koordinate).
+
+====
+
+== CAS prikaz
+
+xref:/CAS_prikaz.adoc[CAS prikaz] podržava samo ovu sintaksu:
+
+TRazdioba[ <stupanj slobode d>, <vrijednost varijable v> ]::
+  Izračunava vrijednost kumulativne funkcije distribucije t-razdiobe za zadani _v_, t.j. vjerojatnost _P(X≤v)_ gdje je
+  _X_ slučajna varijabla t-razdiobe s _d_ stupnjeva slobode.

@@ -1,0 +1,44 @@
+= JediničniNormalniVektor Naredba
+:page-en: commands/UnitPerpendicularVector
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+JediničniNormalniVektor[ <Prava> ]::
+  kreira normalni vektor dužine 1 na datu pravu.
+JediničniNormalniVektor[ <SegmentDuž> ]::
+  kreira normalni vektor dužine 1 na datu duž.
+JediničniNormalniVektor[ <Vektor> ]::
+  kreira normalni vektor dužine 1 na dati vektor. Vektor mora biti prvo definiran.
+
+[EXAMPLE]
+====
+
+Neka je _v=stem:[\begin\{pmatrix}3\\4\end\{pmatrix}]. Naredba `++JediničniNormalniVektor[v]++` daje_
+stem:[\begin\{pmatrix}-0.8\\0.6\end\{pmatrix}]__.__
+
+====
+
+[EXAMPLE]
+====
+
+Naredba
+
+`++JediničniNormalniVektor[3x + 4y = 5]++` daje _stem:[\begin\{pmatrix}0.6\\0.8\end\{pmatrix}]_.
+
+====
+
+== CAS Prikaz
+
+U xref:/CAS_Prikaz.adoc[CAS prikazu] dostupna je samo jedna od sintaksi naredbe:
+
+JediničniNormalniVektor[ <Vektor> ]::
+  koja daje normalni vektor dužine 1 na dati vektor.
+
+[EXAMPLE]
+====
+
+Naredba
+
+`++JediničniNormalniVektor[{a, b}]++` daje _\{stem:[\frac\{-b}\{\sqrt\{a^\{2} + b^\{2}}}],
+stem:[\frac\{a}\{\sqrt\{a^\{2} + b^\{2}}}]}_.
+
+====

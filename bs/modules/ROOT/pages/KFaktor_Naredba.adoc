@@ -1,0 +1,38 @@
+= KFaktor Naredba
+:page-en: commands/CFactor
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+Ova naredba je omogućena samo u xref:/CAS_Prikaz.adoc[CAS Prikazu].
+
+KFaktor[ <Izraz> ]::
+  Faktorizira/rastavlja algebarski izraz na proste faktore u polju kompleksnih brojeva.
+KFaktor[ <Izraz>, <Promjenljiva> ]::
+  Faktorizira/rastavlja algebarski izraz na proste faktore u polju kompleksnih brojeva u odnosu na zadatu promjenljivu.
+
+[EXAMPLE]
+====
+
+`++KFaktor[a^2 + x^2, x]++` daje _(x + a ί) (x - a ί)_, faktorizaciju od _a^2^ + x^2^_ u odnosu na promjenljivu _x_.
+
+====
+
+[EXAMPLE]
+====
+
+`++KFaktor[a^2 + x^2, a]++` daje _(a + x ί) (a - x ί)_, faktorizaciju od _a^2^ + x^2^_ u odnosu na promjenljivu _a_.
+
+====
+
+[EXAMPLE]
+====
+
+`++KFaktor[x^2 + 4]++` daje _(x + 2 ί) (x - 2 ί)_, faktorizaciju od _x^2^ + 4_.
+
+====
+
+[NOTE]
+====
+
+Vidi naredbu xref:/Faktoriziraj_Naredba.adoc[Faktoriziraj].
+
+====

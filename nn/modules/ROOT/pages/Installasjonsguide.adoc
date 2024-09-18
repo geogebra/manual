@@ -1,0 +1,328 @@
+= Installasjonsguide
+:page-en: Installation_Guide
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+:toc:
+
+== Installasjon av Geogebra
+
+Geogebra fungerer på mange forskjellige system:
+
+*Offline installasjon*
+
+* xref:/.adoc[GNU/Linux]
+* xref:/.adoc[Mac OS X]
+* xref:/.adoc[Windows]
+
+*Online installasjon*
+
+* xref:/.adoc[Chrome applikasjon]
+* xref:/.adoc[Java Webstart]
+* xref:/.adoc[Nettbrett]
+
+Det anbefalast å installere ein offline installasjon av Geogebra, då du ikkje er avhengig av internett for å arbeide med
+Geogebra. Under kan du lese meir om installasjonen for dei ulike systema.
+
+[NOTE]
+====
+
+*Merk:* Alle utgåvene av Geogebra, utanom HTML5-utgåva(nettbrett/Chrome), krev Java. Du kan installere Java frå denne
+http://java.com/inc/BrowserRedirect1.jsp?locale=en[heimesidå]. For å sjekke om du allereie har installert Java, kan du
+http://java.com/en/download/installed.jsp[sjekke her].
+
+====
+
+== GNU/Linux
+
+Denne seksjonen forklarar korleis du installerer Geogebra lokalt. Om du ynskjer kan du og bruke Java Webstart, som er
+xref:/.adoc[forklart her].
+
+GNU/Linux kjem i mange variantar. Dei fleste linux distribusjonar er utgåver av anten http://ubuntu.com[Ubuntu] eller
+http://fedoraproject.org[Fedora](ein gratis variant av Red Hat). Ubuntu brukar pakkesystemet _deb_, medan Fedora brukar
+pakkesystemet _rpm_. Desse deb- eller rpm-filene kan lastas ned og installerast med pakkebehandlaren til distribusjonen.
+Installasjonen går difor som følgjer:
+
+* Last ned deb- eller rpm-fil
+* Opne fila i pakkebehandlaren ved å dobbeltklikke på ho
+* Vel å installere programmet
+
+=== Detaljert framgangsmetode
+
+Her visast detaljert framgangsmetode for Ubuntu, men andre distribusjonar har tilsvarande framgangsmetode.
+
+Gå til http://www.geogebra.org/cms/nb/download/[nedlastingssida] og last ned deb-fila.
+
+image:Download_linux.png[Download linux.png,width=536,height=143]
+
+Vel å lagre fila.
+
+image:Save_deb_no.png[Save deb no.png,width=387,height=305]
+
+Opne deb-fila ved å dobbeltklikke på ho i filbehandlaren eller opne direkte frå nedlastinga i nettlesaren.
+
+image:Downloaded_deb_no.png[Downloaded deb no.png,width=429,height=319]
+
+_Ubuntu programvaresenter_ opnast. Trykk på Geogebra og vel *Installer*.
+
+image:Programvaresenter_ubuntu.png[Programvaresenter ubuntu.png,width=735,height=501]
+
+Medan installasjonen held på visast _Framgang_ i toppen av vindauget.
+
+image:Ubuntu_installing_no.png[Ubuntu installing no.png,width=177,height=87]
+
+Når Geogebra er installert finn du det på menyen. Du kan og søkje etter det frå Unity-menyen.
+
+image:Ubuntu_installed.png[Ubuntu installed.png,width=214,height=90]
+
+=== Installasjon utan manuell nedlasting
+
+Geogebra kan og installerast på dei fleste distribusjonar av GNU/Linux utan nedlasting. Opne berre pakkebehandlaren og
+søk etter Geogebra.
+
+[NOTE]
+====
+
+*Merk:* I siste langtidsstøtta versjon av Ubuntu (12.04 Precise Pangolin) finns kun versjon 4.0 av Geogebra i _Ubuntu
+programvaresenter_. Denne versjonen manglar xref:/CAS_delen.adoc[CAS-delen]. Om siste versjon ynskjas, kan den lastast
+ned frå http://www.geogebra.org/cms/nb[heimesida]. Framgangsmetoden for dette er vist under xref:/.adoc[Detaljert
+framgangsmetode].
+
+====
+
+=== Installasjon på Unix-system som ikkje har pakkebehandlar
+
+Du kan og installere Geogebra på andre Unix-system.
+
+Opne ein terminal. Last ned tar.gz-fila:
+
+`++wget http://www.geogebra.org/download/?os=unix -O GeoGebra-Unixlike-Installer.tar.gz++`
+
+Pakk ut fila:
+
+`++tar zxvf GeoGebra-Unixlike-Installer.tar.gz++`
+
+Gå til utpakka katalog:
+
+`++cd geogebra-4.2.51.0++`
+
+Lag /usr/share/geogebra(dette er ein bug i 4.2.51):
+
+`++sudo mkdir /usr/share/geogebra++`
+
+Installer:
+
+`++sudo ./install.sh++`
+
+Køyr:
+
+`++geogebra++`
+
+Om du ynskjer ein snarveg på skrivebordet, kan du peike til */usr/bin/geogebra*. Avinstallasjon gjerast ved:
+
+`++sudo ./uninstall.sh++`
+
+For fleire detaljar, les fila *README* som følgjer med.
+
+== Mac OS X
+
+For Mac OS X kan du velgje mellom å installere Geogebra lokalt på maskina eller starte Geogebra frå xref:/.adoc[Java
+Webstart]. I dette avsnittet er lokal/offline installasjon forklart.
+
+Installasjonen på Mac OS X gjerast i følgjande steg:
+
+* http://www.geogebra.org/download/?os=mac[Last ned geogebra]
+* Pakk fila ut
+* Dra Geogebra over til *Programmer*
+* *Høgreklikk* på Geogebra og vel *Åpne*
+* Trykk på *Åpne* i dialogvindauget som kjem opp
+* Geogebra er no installert og kan opnast på vanleg måte heretter
+
+=== Detaljert framgangsmetode
+
+Gå til http://www.geogebra.org/cms/nb/download/[nedlastingssida] og vel *Mac OS X*.
+
+image:Install_mac_os_x.png[Install mac os x.png,width=412,height=130]
+
+Siste versjon av Geogebra blir lasta ned til di maskin i ei zip-fil.
+
+image:Download_mac_os_x.png[Download mac os x.png,width=366,height=134]
+
+Om du brukar Safari, vil zip-fila verte automatisk pakka ut. Om du brukar Chrome eller andre nettlesarar, må du sjølv
+pakke ut zip-fila ved å dobbeltklikke på ho i Finder.
+
+image:Downloaded_zip_file_mac.png[Downloaded zip file mac.png,width=454,height=258]
+
+Når fila er pakka ut vil ho få ikon likt Geogebra sin logo. For å installere legg fila i mappen *Programmer*. Gjer dette
+ved å dra fila i Finder.
+
+image:Downloaded_mac_os_x.png[Downloaded mac os x.png,width=453,height=256]
+
+Fyrste gong Geogebra skal opnast, vil du få eit sikkerheitsvarsel: _Kan ikke åpne «GeoGebra» fordi den kommer fra en
+ukjent utvikler._ For å kome forbi denne varslinga må ein:
+
+* [.kcode]#Ctrl#-klikke på GeoGebra
+* Vel *Åpne* heilt øverst på menyen
+* Vel knappen *Åpne* i dialogvindauget
+
+image:Sikkerhetsvarsel_mac_os_x.png[Sikkerhetsvarsel mac os x.png,width=423,height=207]
+
+Geogebra er no installert, og du kan heretter opne Geogebra på vanleg måte frå Finder eller Spotlight.
+
+== Windows
+
+Denne seksjonen forklarar korlei du installerar Geogebra lokalt. Om du heller ynskjer å bruke Java Webstart, kan du
+xref:/.adoc[lese om det her].
+
+For Windows installerast Geogebra på følgjande måte:
+
+* http://www.geogebra.org/download/?os=win[Last ned] siste versjon
+* Køyr fila
+* Bekreft sikkerheitsvarselet
+* Følg instruksane til installasjonsprogrammet
+
+=== Detaljert framgangsmetode
+
+Bilda her er frå Internet Explorer, men framgangsmetoden er den same for andre nettlesarar.
+
+Gå til http://www.geogebra.org/cms/nb/download[nedlastingssida] og vel *Windows*.
+
+image:Download_windows.png[Download windows.png,width=445,height=82]
+
+Vel *Køyr* i dialogen som visast nedst i vindauget.
+
+image:Download_windows_confirm_no.png[Download windows confirm no.png,width=529,height=96]
+
+Vent medan fila lastast ned.
+
+image:Downloading_windows_no.png[Downloading windows no.png,width=524,height=89]
+
+Når fila er lasta ned køyres installasjonsfila, og du må klikke *Ja* i sikkerheitsvarselet som kjem.
+
+image:Windows_brukerkontroll.png[Windows brukerkontroll.png,width=471,height=349]
+
+Installasjonsprogrammet opnast. Vel språk og trykk på *Next*.
+
+image:Choose_language_no.png[Choose language no.png,width=262,height=76]
+
+Les brukarvilkåra og godta ved å trykke på *Godta*.
+
+image:Accept_no.png[Accept no.png,width=89,height=34]
+
+Vel *Standard* som installasjonstype og klikk på *Neste*. Om du sjølv ynskjar å avgjere kvafor mappe Geogebra skal
+installerast til, kan du velgje *Custom*.
+
+image:Installation_type_windows_no.png[Installation type windows no.png,width=492,height=182]
+
+Geogebra installerast. Når installasjonen er ferdig kan du velgje om du ynskjer å opne Geogebra med ein gong.
+
+image:Installation_windows_done_no.png[Installation windows done no.png,width=401,height=194]
+
+Du finn no Geogebra på startmenyen.
+
+image:Windows_start_menu_no.png[Windows start menu no.png,width=268,height=171]
+
+== Chrome applikasjon
+
+[NOTE]
+====
+
+*Merk:* Geogebra som applikasjon i Chrome er ein lett-versjon av Geogebra. Dette tyder at han er ufullkomen i forhold
+til fullversjonen, til dømes manglar xref:/CAS_delen.adoc[CAS]. Applikasjonen er god nok for enkle konstruksjonar, men
+for meir avansert bruk anbefalast det å installere Geogebra lokalt på datamaskina. Applikasjonen krev og nettilgang for
+å brukast.
+
+====
+
+=== Installasjon
+
+Opne Chrome og gå til http://www.geogebra.org/cms/nb/download/[nedlastingssida]. Vel *GeoGebra Chrome App*.
+
+image:Install_chrome_app.png[Install chrome app.png,width=365,height=118]
+
+Klikk på *Legg til* i dialogvindauget som dukkar opp.
+
+image:Install_chrome_app_confirm_no.png[Install chrome app confirm no.png,width=476,height=155]
+
+Godta tilgangane Geogebra krev med knappen *Godta*.
+
+image:Chrome_permissions_no.png[Chrome permissions no.png,width=406,height=448]
+
+Geogebra lastast no inn i fana. For å seinare opne Geogebra, opne ei ny tom fane. Om det ikkje allereie er valt, vel
+*Programmer* i botnen av fana.
+
+image:Chrome_choose_program_no.png[Chrome choose program no.png,width=430,height=47]
+
+Vel Geogebra i lista av tilgjengelege applikasjonar.
+
+image:Chrome_app.png[Chrome app.png,width=729,height=132]
+
+Geogebra opnast no i fana.
+
+== Java Webstart
+
+Java Webstart er ein snarveg som lagrast på di datamaskin. Snarvegen peikar til siste versjon av Geogebra på nett. Når
+Geogebra startast frå snarvegen vil Geogebra lastast ned til di datamaskin og lagrast. Kvar gong Geogebra opnast, vil
+Java Webstart sjekke om det finns ein nyare versjon tilgjengeleg på Geogebras webtenarar. Difor er Java Webstart kjekt
+når ein ynskjer å bruke siste versjon av Geogebra.
+
+[NOTE]
+====
+
+*Merk:* Java Webstart fungerer kun når internett er tilgjengeleg, sjølv om siste versjon er lasta ned til di datamaskin.
+
+====
+
+=== Installasjon
+
+Gå til http://www.geogebra.org/cms/nb/download/[nedlastingssida] og vel *Java Webstart*.
+
+image:Download_webstart.png[Download webstart.png,width=393,height=94]
+
+Ei fil kalla _geogebra.jnlp_ lastast ned til di datamaskin. Flytt fila til ein plass du finn ho, til dømes _Programmer_
+på Mac, _Skrivebord_ eller _Dokumenter_ på Linux/Mac/Windows. Du kan no starte Geogebra ved å dobbeltklikke på fila.
+
+Ved fyrste oppstart, eller når ein ny versjon er tilgjengeleg vil Geogebra lastast ned. Då visast følgjande dialog:
+
+image:Webstart_downloading_latest.png[Webstart downloading latest.png,width=525,height=262]
+
+[NOTE]
+====
+
+*Merk:* Grunna naturen til Java Webstart, passar webstart dårlig i eit klasserom med mange datamaskiner. Til dømes vil
+ein klasse på 30 elevar, alle med Geogebra Webstart trengje minimum 4 minutt for nedlasting av siste versjon når dei har
+10Mbit på deling.
+
+Installasjonen er ≈10MByte:
+
+stem:[\frac\{10 \textrm\{MB} \cdot 30 \textrm\{elever} \cdot 8 \textrm\{bit} }\{10 \textrm\{Mbit/sekund} \cdot 60
+\textrm\{sekund} } = 4 \textrm\{minutt} ]
+
+====
+
+== Nettbrett
+
+Det er mogleg å bruke ein avgrensa web-utgåve av Geogebra på nettbrett som Android, Ipad og Windows RT. Webapplikasjonen
+krev ingen installasjon og er tilgjengeleg på http://geogebraweb.appspot.com/app.html[geogebraweb.appspot.com/app.html].
+Dette er same utgåve som xref:/.adoc[Chrome applikasjonen] og HTML5-utgåven på http://geogebratube.org[Geogebra Tube].
+Du kan og opne utgåva for nettbrett ved å surfe på nettbrettet til http://www.geogebra.org/cms/nb/[Geogebras nettside]
+og klikke på *Last ned*.
+
+[NOTE]
+====
+
+*Merk:* HTML5-applikasjonen fungerer best med ein oppdatert nettleser, som til dømes Google Chrome.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Gjennom sommaren 2013 jobbar Geogebra med ei utvida nettbrettutgåve. Denne utgåva vil verte tilgjengeleg i App
+Store, Google Play og Windows Store.
+
+====
+
+== Problem
+
+Om du skulle få problem med installasjonen, kan du sjå på xref:/Problem_med_installasjon.adoc[denne sida] for
+løysningar.

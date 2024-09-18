@@ -1,0 +1,26 @@
+= CauchyjevaRazdioba naredba
+:page-en: commands/Cauchy
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+CauchyjevaRazdioba[ <medijan>, <skala>, x ]::
+  Izradit će funkciju gustoće vjerojatnosti (fgv) za https://en.wikipedia.org/wiki/Cauchy_distribution[Cauchyjevu
+  razdiobu].
+CauchyjevaRazdioba[ <medijan>, <skala>, x, <kumulacija - logička vrijednost> ]::
+  Ako je _kumulacija - logička vrijednost_ jednaka true, izradit će kumulativnu funkciju distribucije Cauchyjeve
+  razdiobe, u suprotnom će izraditi fgv za Cauchyjevu razdiobu.
+CauchyjevaRazdioba[ <medijan m>, <skala s>, <vrijednost varijable v> ]::
+  Izračunava vrijednost kumulativne funkcije distribucije Cauchyjeve razdiobe za zadanu vrijednost varijable _v_, t.j.
+  vjerojatnost _P(X≤v)_ gdje je _X_ Cauchyjeva slučajna varijabla s zadanim parametrima _m, s_.
+
+== CAS prikaz
+
+CauchyjevaRazdioba[ <medijan m>, <skala s>, <vrijednost varijable v> ]::
+  Izračunat će vrijednost kumulativne funkcije distribucije Cauchyjeve razdiobe za zadanu vrijednost varijeble _v_, t.j.
+  vjerojatnost _P(X≤v)_ gdje je _X_ Cauchyjeva slučajna varijabla s zadanim parametrima _m, s_.
+
+[EXAMPLE]
+====
+
+`++CauchyjevaRazdioba[1, 2, 3]++` daje _stem:[\frac\{3}\{4}]_.
+
+====

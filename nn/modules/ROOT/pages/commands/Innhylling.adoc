@@ -1,0 +1,18 @@
+= Innhylling Kommando
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Innhylling[ <Liste med punkt>, <Prosent p> ]::
+  Lagar ei karakteristisk innhylling av punktet slik det er beskreve i
+  http://www.geosensor.net/papers/duckham08.PR.pdf[Efficient generation of simple polygons for characterizing the shape
+  of a set of points in the plane] (engelsk lenke). For _p=1_ er resultatet det same som for kommandoen
+  xref:/commands/KonveksInnhylling.adoc[KonveksInnhylling]. Med lågare prosent vert areal av innhyllinga lågare. Arealet
+  av innhyllinga er ikkje nødvendigvis lågast for _p=0_.
+  Det returnerte objektet er ein xref:/commands/GeometriskStad.adoc[lokus] (geometrisk stad) og er difor eit
+  xref:/Frie_objekt_avhengige_objekt_og_hjelpeobjekt.adoc[hjelpeobjekt].
+
+[NOTE]
+====
+
+*Merk:* Verdiar av _p_ høgare enn 1 vert handsama som 1 og verdiar lågare enn 0 vert handsama som 0.
+
+====

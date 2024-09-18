@@ -1,0 +1,59 @@
+= HipergeometrijskaRazdioba naredba
+:page-en: commands/HyperGeometric
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+HipergeometrijskaRazdioba[ <veličina populacije>, <broj povoljnih događaja>, <veličina uzorka> ]::
+  Rezultat će biti stupčasti dijagram https://en.wikipedia.org/wiki/Hypergeometric_distribution[hipergeometrijske
+  razdiobe].
+  _Parametri:_
+  _veličina populacije_: broj loptica u urni
+  _broj povoljnih događaja_: broj bijelih loptica u urni
+  _veličina uzorka_:broj loptica izvučenih iz urne
+
+Stupčasti dijagram prikazuje funkciju vjerojatnosti pojavljivanja bijelih loptica u uzorku.
+
+HipergeometrijskaRazdioba[ <veličina populacije>, <broj povoljnih događaja>, <veličina uzorka>, <kumulacija - logička
+vrijednost> ]::
+  Rezultat će biti stupčasti dijagram hipergeometrijske razdiobe za _kumulacija - logička vrijednost_ = false.
+  Rezultat će biti stupčasti dijagram kumulativne hipergeometrijske razdiobe za _kumulacija - logička vrijednost_ =
+  true.
+  Ostala tri parametra jednaka su gore opisanima.
+HipergeometrijskaRazdioba[ <veličina populacije>, <broj događaja>, <veličina uzorka>, <vrijednost varijable>,
+<kumulacija - logička vrijednost> ]::
+  Neka je X hipergeometrijska slučajna varijabla.
+  Daje P( X = _v_) ako je _kumulacija - logička vrijednost_ = false.
+  Daje P( X ≤ _v_) ako je _kumulacija - logička vrijednost_ = true.
+  Ostala tri parametra jednaka su gore opisanima.
+
+== CAS prikaz
+
+xref:/CAS_prikaz.adoc[CAS prikaz] podržava samo ovu sintaksu:
+
+HipergeometrijskaRazdioba[ <veličina populacije>, <broj događaja>, <veličina uzorka>, <vrijednost varijable>,
+<kumulacija - logička vrijednost> ]
+
+Neka je X hipergeometrijska slučajna varijabla.
+
+Daje P( X = _v_) ako je _kumulacija - logička vrijednost_ = false.
+
+Daje P( X ≤ _v_) ako je _kumulacija - logička vrijednost_ = true.
+
+Ostala tri parametra jednaka su gore opisanima.
+
+[EXAMPLE]
+====
+
+Pretpostavimo da izvlačimo bez vraćanja dvije loptice od deset, između kojih su dvije bijele.
+
+* `++HipergeometrijskaRazdioba[10, 2, 2, 0, false]++` daje stem:[\frac\{28}\{45}], vjerojatnost izbora niti jedne bijele
+loptice,
+* `++HyperGeometric[10, 2, 2, 1, false]++` daje stem:[\frac\{16}\{45}], vjerojatnost izbora jedne bijele loptice,
+* `++HyperGeometric[10, 2, 2, 2, false]++` daje stem:[\frac\{1}\{45}], vjerojatnost izbora dvije bijele loptice,
+* `++HyperGeometric[10, 2, 2, 3, false]++` daje _0_, vjerojatnost izbora tri bijele loptice.
+* `++HyperGeometric[10, 2, 2, 0, true]++` dajestem:[\frac\{28}\{45}], vjerojatnost izbora niti jedne (ili manje) bijelih
+loptica,
+* `++HyperGeometric[10, 2, 2, 1, true]++` daje stem:[\frac\{44}\{45}], vjerojatnost izbora najviše jedne bijele loptice,
+* `++HyperGeometric[10, 2, 2, 2, true]++` daje _1_, vjerojatnost izbora najviše dvije bijele loptice, i
+* `++HyperGeometric[10, 2, 2, 3, true]++` daje _1_, vjerojatnost izbora najviše tri bijele loptice.
+
+====

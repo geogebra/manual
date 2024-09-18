@@ -1,0 +1,169 @@
+= Predefinirane Funkcije i Operatori
+:page-en: Predefined_Functions_and_Operators
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+Da kreirate brojeve, koordinate, ili jednačine pomoću xref:/Traka_za_Unos.adoc[Trake za unos] možete koristiti sljedeće
+prethodno definirane funkcije i operacije. Logički operatori i funkcije su navedene u članku o
+xref:/Boolean_vrijednost.adoc[Boolean vrijednost].
+
+[cols=",",options="header",]
+|===
+|Operacija / Funkcija |Ulaz
+|Sabiranje |+
+
+|Oduzimanje |-
+
+|Množenje |* ili Space
+
+|Skalarni proizvod |* ili Space
+
+|Vektorski proizvod ili determinanta (vidi xref:/Tačke_i_Vektori.adoc[Tačke i Vektori]) |⊗
+
+|Dijeljenje |/
+
+|Eksponent |^ ili superscript (`++x^2++` ili `++x2++`)
+
+|Faktorijel |!
+
+|Zagrade |( )
+
+|x-koordinate |x( )
+
+|y-koordinate |y( )
+
+|Argument |arg( )
+
+|Konjugacija |conjugate( )
+
+|Apsolutna vrijednost |abs( )
+
+|Znak |sgn( ) ili sign()
+
+|Kvadratni korijen |sqrt( )
+
+|Kubni korijen |cbrt( )
+
+|Slučajni broj između 0 i 1 |random( )
+
+|Eksponencijalna funkcija |exp( ) ili ℯ^x^
+
+|Logaritam (prirodni, s bazom e) |ln( ) ili log( )
+
+|Logaritam s bazom 2 |ld( )
+
+|Logaritam s bazom 10 |lg( )
+
+|Logaritam od _x_ s bazom _b_ |log(b, x )
+
+|Kosinus |cos( )
+
+|Sinus |sin( )
+
+|Tangens |tg( )
+
+|Secant |sec()
+
+|Cosecant |cosec()
+
+|Cotangens |ctg()
+
+|Arc kosinus |acos( ) ili arccos( )
+
+|Arc sinus |asin( ) ili arcsin( )
+
+|Arc tangens (daje rezultat između -π/2 i π/2) |atan( ) ili arctg( )
+
+|https://en.wikipedia.org/wiki/Atan2[Arc tangent (daje rezultat između -π i π)] |atan2(y, x)
+
+|Hyperbolic cosine |cosh( )
+
+|Hyperbolic sine |sinh( )
+
+|Hyperbolic tangent |tanh( )
+
+|Hyperbolic secant |sech( )
+
+|Hyperbolic cosecant |cosech( )
+
+|Hyperbolic cotangent |coth( )
+
+|Antihyperbolic cosine |acosh( ) or arccosh( )
+
+|Antihyperbolic sine |asinh( ) or arcsinh( )
+
+|Antihyperbolic tangent |atanh( ) or arctanh( )
+
+|Greatest integer less than or equal |floor( )
+
+|Least integer greater than or equal |ceil( )
+
+|Round |round( )
+
+|http://mathworld.wolfram.com/BetaFunction.html[Beta function] Β(a, b) |beta(a, b)
+
+|http://mathworld.wolfram.com/IncompleteBetaFunction.html[Incomplete beta function] Β(x;a, b) |beta(a, b, x)
+
+|http://mathworld.wolfram.com/RegularizedBetaFunction.html[Incomplete regularized beta function] I(x; a, b)
+|betaRegularized(a, b, x)
+
+|https://en.wikipedia.org/wiki/Gamma_function[Gamma function] |gamma( x)
+
+|(Lower) http://mathworld.wolfram.com/IncompleteGammaFunction.html[incomplete gamma function] γ(a, x) |gamma(a, x)
+
+|(Lower) http://mathworld.wolfram.com/RegularizedGammaFunction.html[incomplete regularized gamma function]
+|gammaRegularized(a, x)
+
+|https://en.wikipedia.org/wiki/Error_function[Gaussian Error Function] |erf(x)
+|===
+
+[EXAMPLE]
+====
+
+`++Conjugate(17 + 3 * ί)++` gives _-3 ί + 17_, the conjugated complex number of _17 + 3 ί_.
+
+See xref:/s_index_php?title=Complex_Numbers_action=edit_redlink=1.adoc[Complex Numbers] for details.
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Slijedeći tekst odnosi se samo na naredbe podržane u http://wiki.geogebra.org/en/Release_Notes_GeoGebra[4.2GeoGebra 4.2
+Beta].
+
+'''''
+
+[cols=",",]
+|===
+|https://en.wikipedia.org/wiki/Digamma_function[Digamma function] |psi(x)
+
+|The https://en.wikipedia.org/wiki/Polygamma_function[Polygamma function] is the (m+1)th derivative of the natural
+logarithm of the https://en.wikipedia.org/wiki/Gamma_function[Gamma function, gamma(x)] (m=0,1) |polygamma(m, x)
+
+|The http://mathworld.wolfram.com/SineIntegral.html[Sine Integral] function |sinIntegral(x)
+
+|The http://mathworld.wolfram.com/CosineIntegral.html[Cosine Integral] function |cosIntegral(x)
+
+|The http://mathworld.wolfram.com/ExponentialIntegral.html[Exponential Integral] function |expIntegral(x)
+|===
+
+|===
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+
+|Some content was not yet translated.
+|===
+
+[NOTE]
+====
+
+Unaprijed definirane funkcije moraju biti upisane pomoću zagrade. Ne smijete staviti razmak između naziva funkcije i
+zagrada.
+
+====

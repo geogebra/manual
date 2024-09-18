@@ -1,0 +1,52 @@
+= Dynamiske fargar
+:page-en: Dynamic_Colors
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+I GeoGebra kan du endre fargen på eit objekt under fana _Farge_ i xref:/Eigenskapar.adoc[dialogboksen for eigenskapar].
+Du kan imidlertid også la fargen til eit objekt verte endra dynamisk. Det gjer du ved å gå til fana _Avansert_ i
+xref:/Eigenskapar.adoc[eigenskapar] der du finn seksjonen _Dynamiske fargar_. Den inneheld tekstboksar for
+fargekomponentane raud, grøn og blå.
+
+[NOTE]
+====
+
+*Merk:* I kvar av desse tekstboksane kan du skrive inn ein funksjon med verdimengde [0, 1].
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* Lag tre xref:/tools/Glidar.adoc[glidarar] _a_, _b_ og _c_ med eit intervall frå 0 til 1.
+* Lag ein mangekant der fargen skal avhenge av verdien til dei tre glidarane.
+* Opne xref:/Eigenskapar.adoc[Eigenskapar] for mangekanten og skriv inn namnet til dei tre glidarane i tekstboksane for
+kvar av fargekomponentane.
+* Lukk Eigenskapar og endre verdien på glidarane for å sjå korleis dei påverker fargen til mangekanten.
+
+[NOTE]
+====
+
+*Merk:* Du kan også xref:/Animasjon.adoc[animere] glidarane med forskjellig fart for å sjå fargen endre seg automatisk.
+
+====
+
+====
+
+Seksjonen for dynamiske fargar inneheld også ein tekstboks for fyllgrad. Der kan du også skrive inn ein funksjon (eller
+eit tal) med verdimengde [0,1] (der 0 er gjennomsiktig og 1 er 100% ugjennomsiktig). Tal utafor [0,1] vert ignorert.
+
+== RGB / HSV / HSL
+
+For nokre dynamisk farge oppførslar kan det vere enklare med ein annan modell. Istadenfor å bruke standard RGB(rød,
+grøn, blå) kan du velje anten HSV eller HSL(https://en.wikipedia.org/wiki/HSL_and_HSV[engelsk wikipedia]) frå
+nedtrekksmenyen.
+
+[EXAMPLE]
+====
+
+*Døme:* For å få eit punkt _A_ til å gå gjennom alle fargane i regnboga når du flyttar det mot venstre og høgre bytt til
+HSV og la _Metning_ og _Verdi_ vere 1, medan _Fargetone_ er `++x(A)++`.
+
+====

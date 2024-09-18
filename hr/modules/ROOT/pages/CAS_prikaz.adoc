@@ -1,0 +1,64 @@
+= CAS prikaz
+:page-en: CAS_View
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|Ova stranica odnosi se na mogućnosti koje su podržane samo u inačici
+http://wiki.geogebra.org/en/Release_Notes_GeoGebra_4.2[GeoGebra 4.2 Beta].
+|===
+
+== Osnovni unos
+
+* [.kcode]#Enter#: vrednuje unos
+* [.kcode]#Ctrl# + [.kcode]#Enter#: kontrolira unos ali ga ne vrednuje, npr. _b + b_ ostaje _b + b_. Napomenimo da se
+pridruživanja uvijek vrednuju, npr. a := 5
+* U prazan redak utipkajte
+** [.kcode]#Razmaknica# tipku kako biste dobili prethodni rezultat
+** `++)++` kako biste dobili prethodni rezultat u zagradama
+** `++=++` kako biste dobili prethodni unos
+* Obustavljanje izlaza (rezultata) postižete pritiskom tipke točka-zarez na kraju unosa, npr. `++a := 5;++`
+
+== Alatna traka
+
+* Pritisak gumba alatne trake izvršit će naredbu u važećem retku
+* Možete označiti dio unesenog teksta kako biste primijenili operaciju samo na označeni dio unosa
+
+== Varijable
+
+=== Pridruživanja & veze s GeoGebrom
+
+* Za pridruživanje koriste se znakovi :=, npr. `++b := 5++`, `++a(n) := 2n + 3++`
+* Kako biste oslobodili naziv varijable za novu upotrebu, koristite naredbu `++Izbriši[b]++` ili`++b :=++`
+* • Redefiniranje varijable ili funkcije morate izvesti u retku u kojem su zadane, jer će inače biti tretirane kao novi
+objekti i samim time biti preimenovani.
+* Varijable i funkcije uvijek su zajedničke za CAS prikaz i GeoGebru ako je to moguće. Ako definirate `++b:=5++` u CAS
+prikazu, tada možete koristiti _b_ u čitavoj GeoGebri. Ako imate funkciju `++f(x)=x^2++` u GeoGebri, također ju možete
+koristiti u CAS prikazu.
+
+=== Pozivanje redaka
+
+Druge retke u CAS prikazu možete pozvati na dva načina
+
+* Statički poziv retka uključit će tekst iz pozvanog retka ali takav unos neće biti izmijenjen ukoliko se kasnije
+pozvani redak bude mijenjao.
+** `++#++` uključit će prethodni izlaz (rezultat)
+** `++#5++` uključit će izlaz (rezultat) iz stupca 5
+* Dinamički poziv retka koristi tekst iz drugog retka i sam će se nadograditi ukoliko pozvani redak bude mijenjao.
+** `++$++` uključit će prethodni rezultat
+** `++$5++` uključit će rezultat iz stupca 5
+
+== Jednadžbe
+
+* Jednadžbe se zapisuju upotrebom znaka jednakosti, npr. `++3x + 5 = 7++`
+* Možete izvršavati aritmetičke operacije nad jednadžbom, npr. `++(3x + 5 = 7) - 5++` oduzima 5 od obje strane
+jednadžbe. Ovo je korisno kod ručnog rješavanja jednadžbe.
+* `++LijevaStrana[3x + 5 = 7]++` daje _3 x + 5_ a `++DesnaStrana[3x + 5 = 7]++` daje _7_
+
+== Naredbe i alati
+
+Potpunu listu naredbi i alata pogledajte ovdje xref:/commands/CAS_posebne_naredbe.adoc[CAS posebne naredbe] i
+xref:/tools/CAS_alati.adoc[CAS alati].

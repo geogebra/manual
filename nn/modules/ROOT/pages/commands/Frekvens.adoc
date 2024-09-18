@@ -1,0 +1,107 @@
+= Frekvens Kommando
+:page-en: commands/Frequency
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Frekvens[ <Liste med rådata L> ]::
+  Gjev ei liste med talet på førekomstar for kvart unikt element i _L_. Lista kan innehalde tal eller tekst. Den
+  returnerte lista vert sortert i stigande rekkefølgje av dei unike elementa i _L_.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* Skriv inn `++liste1 = { "a", "x", "a", "b", "x", "x" }++`.
+* `++Frekvens[liste1]++` gjev lista \{ 2, 1, 3 }.
+* `++Ulike[liste1]++` gjev lista \{ "a", "b", "x" }.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoen xref:/commands/Ulike.adoc[Ulike] som gjev ei liste med dei tilsvarande unike elementa i _L_.
+
+====
+
+Frekvens[ <Kumulativ>, <Liste med rådata L> ]::
+  Dersom _Kumulativ = false_, vert den same lista returnert som ved bruk av kommandoen Frekvens[ <Liste med rådata L> ].
+  Dersom _Kumulativ = true_, vert ei liste med dei kumulative frekvensane for Frekvens[ <Liste med rådata L> ]
+  returnert.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* Skriv inn `++liste1 = { 0, 0, 0, 1, 1, 2 }++`.
+* `++Frekvens[true, liste1]++` gjev lista \{ 3, 5, 6 }.
+* `++Frekvens[false, liste1]++` gjev lista \{ 3, 2, 1}.
+* `++Ulike[liste1]++` gjev lista \{ 0, 1, 2 }
+
+====
+
+Frekvens[ <Liste med klassegrenser>, <Liste med rådata L> ]::
+  Gjev ei liste med talet på element i _L_ som ligg innafor intervalla laga av klassegrensene. Alle intervalla er på
+  forma [a, b) med unntak av det siste intervallet som er på forma [a, b].
+
+[EXAMPLE]
+====
+
+*Døme:* `++Frekvens[{1, 2, 3},  {1, 1, 2, 3, 2}]++` gjev lista \{ 2, 3 } sidan 2 element ligg i intervallet _[1, 2)_ og
+3 element ligg i intervallet _[2,3]_.
+
+====
+
+Frekvens[ <Kumulativ>, <Liste med klassegrenser>, <Liste med rådata L> ]::
+  Dersom _Kumulativ = false_, vert den same lista returnert som ved bruk av kommandoen Frekvens[ <Liste med
+  klassegrenser>, <Liste med rådata L> ].
+  Dersom _Kumulativ = true_, vert ei liste med dei kumulative frekvensane for Frekvens[ <Liste med klassegrenser>,
+  <Liste med rådata L> ] returnert.
+
+Frekvens[ <Liste med klassegrenser>, <Liste med rådata L>, <Bruk tettleik>, <Tettleiksfaktor (valfri)> ]::
+  Gjev ei liste med frekvensar for den samsvarande xref:/commands/Histogram.adoc[Histogram kommandoen].
+  Dersom _Bruk tettleik_ = _false_, vert den same lista returnert som ved bruk av kommandoen Frekvens[ <Liste med
+  klassegrenser>, <Liste med rådata L> ].
+  Dersom _Bruk tettleik_ = _true_, vert det returnert ei liste med frekvensane for kvar klasse.
+
+[EXAMPLE]
+====
+
+*Døme:* La `++data = {1, 2, 2, 2, 3, 3, 4, 4, 4, 4}++` vere lista med rådata og `++klassar={0, 2, 5}++` vere lista med
+klassegrenser. Då vil `++Frekvens[klassar, data, false]++` og `++Frekvens[klassar, data]++` begge returnera lista _\{1,
+9}_, medan `++Frekvens[klassar, data, true]++` returnerer lista _\{0.5, 3}_.
+
+====
+
+Frekvens[ <kumulativ>, <Liste med klassegrenser L>, <Liste med rådata>, <Bruk tettleik>, <Tettleiksfaktor(valfri)> ]::
+  Gjev ei liste med frekvensar for den samsvarande xref:/commands/Histogram.adoc[Histogram kommandoen].
+
+Frekvens[ <Tekstliste 1>, <Tekstliste 2> ]::
+  Gjev ei førekomstmatrise som inneheld talet på para element frå dei to listene. Radene i matrisa gjev dei unike
+  elementa i den første lista, medan kolonnane gjev dei unike elementa i den andre lista.
+
+[EXAMPLE]
+====
+
+*Døme:* La `++liste1 = {"a", "b", "b", "c", "c", "c", "c"}++` og `++liste2 =  {"a", "b", "a", "a", "c", "c", "d"}++`. Da
+vil `++Frekvens[ liste1, liste2 ]++` returnere matrisa stem:[\begin\{pmatrix} 1 & 0 & 0 & 0\\ 1 &1 & 0 &0 \\ 1 & 0 & 2 &
+1 \\ \end\{pmatrix}]
+
+====
+
+[NOTE]
+====
+
+*Merk:* For å få unike element for kvar einskild liste må kommandoen xref:/commands/Ulike.adoc[Ulike[ <Tekstliste> ]]
+verte brukt.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoane xref:/commands/Frekvenstabell.adoc[Frekvenstabell] og
+xref:/commands/Histogram.adoc[Histogram].
+
+====

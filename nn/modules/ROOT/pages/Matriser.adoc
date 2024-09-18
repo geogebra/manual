@@ -1,0 +1,92 @@
+= Matriser
+:page-en: Matrices
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+GeoGebra støttar også matriser som vert representert som lister av lister, der dei innerste listene inneheld radene til
+matrisa.
+
+For å vise ei matrise i xref:/Grafikkfelt.adoc[grafikkfeltet] med xref:/LaTeX.adoc[LaTeX]-formattering bruker du
+kommandoen xref:/commands/Formeltekst.adoc[Formeltekst].
+
+[EXAMPLE]
+====
+
+*Døme:* I xref:/Inntastingsfelt.adoc[inntastingsfeltet] kan du skrive
+`++Formeltekst[{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}]++` for å få ei matrise med LaTeX-formattering.
+
+====
+
+== Matriseoperasjonar
+
+=== Addisjons og subtraksjonsdøme
+
+* Matrise1 + Matrise2: Legg saman samsvarande element i to kompatible matriser.
+* Matrise1 – Matrise2: Subtraherer saman samsvarande element i to kompatible matriser.
+
+=== Multiplikasjonsdøme
+
+* Matrise * Tal: Multipliserar kvart element i matrisa med det gjevne talet.
+* Matrise1 * Matrise2: Bruker matrisemultiplikasjon for å finne den resulterande matrisa.
+
+[EXAMPLE]
+====
+
+*Døme:* \{\{1, 2}, \{3, 4}, \{5, 6}} * \{\{1, 2, 3}, \{4, 5, 6}} gjev matrisa \{\{9, 12, 15}, \{19, 26, 33}, \{29, 40,
+51}}.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Talet på element i radene til den første matrisa må vere lik talet på element i kollonane til den andre matrisa.
+
+====
+
+* 2x2 Matrise * Punkt (eller Vektor): Multipliserer matrisa med det gjevne punktet/vektoren og gjev eit punkt som
+resultat.
+
+[EXAMPLE]
+====
+
+*Døme:* \{\{1, 2}, \{3, 4}} * (3, 4) gjev punktet A = (11, 25).
+
+====
+
+* 3x3 Matrix * Point (eller Vektor): Multipliserer matrisa med det gjevne punktet/vektoren og gjev eit punkt som
+resultat.
+
+[EXAMPLE]
+====
+
+*Døme:* \{\{1, 2, 3}, \{4, 5, 6}, \{0, 0, 1}} * (1, 2) gjev punktet A = (8, 20).
+
+====
+
+[NOTE]
+====
+
+*Merk:* Dette er eit spesialtilfelle av affine transformasjonar der homogene koordinatar vert brukt: (x, y, 1) for eit
+punkt og (x, y, 0) for ein vektor. Dømet er derfor ekvivalent med `++{{1, 2, 3}, {4, 5, 6}, {0, 0, 1}} * {1, 2, 1}++`.
+
+====
+
+== Andre døme
+
+Sjå også seksjonen xref:/commands/Vektor_Matrise_Kommandoar.adoc[Vektor & Matrise Kommandoar].
+
+* xref:/commands/Determinant.adoc[Determinant][Matrise]: Finn determinanten til matrisa.
+* xref:/commands/Invers.adoc[Invers][Matrise]: Finn inversen til matrisa.
+* xref:/commands/Transponer.adoc[Transponer][Matrise]: Finn den transponerte av matrisa.
+* xref:/commands/BrukMatrise.adoc[BrukMatrise][Matrise, Objekt]: Bruker en affin transformasjon, gjeve av matrisa, på
+objektet.
+* xref:/commands/RedusertRadEchelonForm.adoc[RedusertRadEchelonForm][Matrise]: Konverterer matrisa til redusert
+rad-echelon form.
+
+[EXAMPLE]
+====
+
+*Døme:* I GeoGebra vil\{\{1, 2, 3}, \{4, 5, 6}, \{7, 8, 9}} representere matrisa _stem:[\begin\{pmatrix} 1&2&3\\ 4&5&6\\
+7&8&9 \end\{pmatrix}]_.
+
+====

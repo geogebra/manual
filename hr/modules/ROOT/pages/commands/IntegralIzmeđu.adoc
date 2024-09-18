@@ -1,0 +1,39 @@
+= IntegralIzmeđu naredba
+:page-en: commands/IntegralBetween
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+IntegralIzmeđu[ <funkcija f>, <funkcija g>, <početna vrijednost a>, <krajnja vrijednost b> ]::
+  Daje određeni integral razlike funkcija _f(x)-g(x)_ na intervalu [_a , b_] u odnosu na glavnu varijablu.
+IntegralIzmeđu[ <funkcija f>, <funkcija g>, <početna vrijednost a>, <krajnja vrijednost b>, <izvrši - logička
+vrijednost> ]::
+  Daje određeni integral razlike funkcija _f(x) ‐ g(x)_ na intervalu [_a , b_] u odnosu na glavnu varijablu i crta
+  odgovarajuću površinu ako je _izvrši - logička vrijednost = true_. U slučaju da je _izvrši - logička vrijednost =
+  false_ odgovarajuća površina se crta ali se ne izračunava vrijednost integrala.
+
+[NOTE]
+====
+
+Ova naredba također crta površinu između grafova funkcija _f_ i _g_.
+
+====
+
+== CAS prikaz
+
+IntegralIzmeđu[ <funkcija f>, <funkcija g>, <početna vrijednost a>, <krajnja vrijednost b> ]::
+  Daje određeni integral razlike funkcija _f(x) ‐ g(x)_ na intervalu [_a , b_] u odnosu na glavnu varijablu.
+IntegralIzmeđu[ <funkcija f>, <funkcija g>, <varijabla>, <početna vrijednost a>, <krajnja vrijednost b> ]::
+  Daje određeni integral razlike funkcija _f(x)-g(x)_ na intervalu [_a , b_] u odnosu na zadanu varijablu.
+
+[EXAMPLE]
+====
+
+`++IntegralIzmeđu[a * sin(t), a * cos(t), t, π / 4, π * 5 / 4]++` daje stem:[2 \sqrt\{2} a].
+
+====
+
+[EXAMPLE]
+====
+
+`++IntegralIzmeđu[sin(x), cos(x), π / 4, π * 5 / 4]++` daje stem:[2 \sqrt\{2}].
+
+====

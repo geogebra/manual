@@ -1,0 +1,72 @@
+= Tekst Kommando
+:page-en: commands/Text
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Tekst[ <Objekt> ]::
+  Gjev formelen for objektet som eit xref:/Tekstar.adoc[tekstobjekt].
+Tekst[ <Objekt>, <Boolsk verdi for substitusjon av variablar> ]::
+  Gjev formelen for objektet som eit xref:/Tekstar.adoc[tekstobjekt].
+  * Dersom _Boolsk verdi = true_ vert verdiar sett inn for variablar
+  * Dersom _Boolsk verdi = false_ vert variabelnamna ståande i teksten
+
+[EXAMPLE]
+====
+
+*Døme:* Dersom _a = 2_ og _f(x) = a x^2^_, så vil
+
+* `++Tekst[f, true]++` gje _2 x^2^_ (som eit tekstobjekt)
+* `++Tekst[f, false]++` gje _a x^2^_ (som eit tekstobjekt)
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* Dersom _a = 2_ og _f(x) = a x^2^_, så vil `++Tekst[f]++` gje _2 x^2^_ (som eit tekstobjekt).
+
+====
+
+[NOTE]
+====
+
+*Merk:* Som standard vert verdiar sett inn for variablar.
+
+====
+
+Tekst[ <Objekt>, <Punkt> ]::
+  Gjev formelen for objektet som eit xref:/Tekstar.adoc[tekstobjekt] med posisjon ved det gjevne punktet.
+Tekst[ <Objekt>, <Punkt>, <Boolsk verdi for substitusjon av variablar> ]::
+  Gjev formelen for objektet som eit xref:/Tekstar.adoc[tekstobjekt] med posisjon ved det gjevne punktet.
+  * Dersom _Boolsk verdi = true_ vert verdiar sett inn for variablar
+  * Dersom _Boolsk verdi = false_ vert variabelnamna ståande i teksten
+
+[EXAMPLE]
+====
+
+*Døme:* Dersom _a = 2_ og _f(x) = a x^2^_, så vil
+
+* `++Tekst[f, (2, 3), true]++` gje _2 x^2^_ (som eit tekstobjekt) ved punktet _(2, 3)_
+* `++Tekst[f, (2, 3), false]++` gje _a x^2^_ (som eit tekstobjekt) ved punktet _(2, 3)_
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++Tekst["hallo", (2, 3)]++` gjev teksten "hallo" ved punktet _(2, 3)_.
+
+====
+
+Tekst[ <Objekt>, <Punkt>, <Boolsk verdi for substitusjon av variablar>, <Boolsk for LaTeX-formel> ]::
+  Gjev formelen for objektet som eit xref:/Tekstar.adoc[tekstobjekt] med posisjon ved det gjevne punktet.
+  * Dersom _Boolsk verdi = true_ vert verdiar sett inn for variablar
+  * Dersom _Boolsk verdi = false_ vert variabelnamna ståande i teksten
+  * Dersom _Boolsk Latex = true_ vert objektet ein xref:/LaTeX.adoc[LaTeX] tekst
+  * Dersom _Boolsk Latex = false_ vert objektet eit vanleg tekstobjekt
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoen xref:/commands/Formeltekst.adoc[Formeltekst].
+
+====

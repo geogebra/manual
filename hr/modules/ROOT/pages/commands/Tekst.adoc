@@ -1,0 +1,53 @@
+= Tekst naredba
+:page-en: commands/Text
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Tekst[ <objekt> ]::
+  Daje formulu objekta u obliku xref:/Tekstovi.adoc[teksta].
+
+[NOTE]
+====
+
+Zadano je da vrijednosti zamjenjuju varijable.
+
+====
+
+Tekst[ <objekt>, <zamjena varijabli – logička vrijednost> ]
+
+Daje formulu objekta u obliku teksta. Zamjena varijabli - logička vrijednost određuje hoće li vrijednost zamijeniti
+naziv varijable (_true_) ili će u tekstu biti prikazan naziv varijable (_false_).
+
+[EXAMPLE]
+====
+
+Ako je _a = 2_ i _c = a^2^_, tada naredba `++Tekst[c]++` proizvodi tekst _"4"_.
+
+====
+
+[EXAMPLE]
+====
+
+Ako je _a = 2_ i _c = a^2^_, tada
+
+* `++Tekst[c, true]++` proizvodi tekst _"4"_.
+* `++Tekst[c, false]++` proizvodi tekst _"a^2^"_
+
+====
+
+Tekst[ <objekt>, <točka> ]::
+  Daje formulu objekta u obliku teksta koji je smješten na poziciji zadane točke.
+
+[EXAMPLE]
+====
+
+`++Tekst["zdravo", (2, 3)]++` smješta dani tekst na poziciji (2, 3).
+
+====
+
+Tekst[ <objekt>, <točka>, <zamjena varijabli – logička vrijednost> ]::
+  Daje formulu objekta u obliku teksta koji je smješten na poziciji zadane točke. Zamjena varijabli – logička vrijednost
+  određuje hoće li iznos zamijeniti naziv varijable (_true_) ili će u tekstu biti prikazan naziv varijable (_false_).
+Tekst[ <objekt>, <točka>, <zamjena varijabli – logička vrijednost>, <LaTeX formula – logička vrijednost> ]::
+  Daje formulu objekta u obliku teksta koji je smješten na poziciji zadane točke. Zamjena varijabli – logička vrijednost
+  određuje hoće li iznos zamijeniti naziv varijable (_true_) ili će u tekstu biti prikazan naziv varijable (_false_).
+  Ako je LaTeX formula – logička vrijednost jednaka true, rezultat se prikazuje koristeći xref:/LaTeX.adoc[LaTeX].

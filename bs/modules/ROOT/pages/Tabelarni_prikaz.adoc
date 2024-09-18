@@ -1,0 +1,62 @@
+= Tabelarni prikaz
+:page-en: Spreadsheet_View
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+U GeoGebra tabelarnomom prikazu svaka ćelija ima specifičan naziv koji omogućava direktno adresiranje. Na primjer,
+ćelija u koloni A i u prvom redu nazvana je A1.
+
+[NOTE]
+====
+
+Imena ovih ćelija mogu se koristiti u izrazima i naredbama kako bi se pozvao sadržaj odgovarajuće ćelije.
+
+====
+
+U ćelije tabele možete unijeti ne samo brojeve, već sve tipove xref:/Opće_figure.adoc[općih] i
+xref:/Geometrijske_Figure.adoc[geometrijskih] figura koje GeoGebra podržava (npr., koordinate tačaka,
+xref:/Funkcije.adoc[funkcije], xref:/Naredbe.adoc[naredbe]). Ukoliko je moguće, GeoGebra će odmah na
+xref:/Radna_površ.adoc[radnoj površi] prikazati figure koje ste unijeli u ćeliju tablice. Na taj način, naziv figure
+odgovara nazivu ćelije koju ste u početku koristili kod kreiranja figure (npr., A5, C1).
+
+[NOTE]
+====
+
+Zadano je da se figure unesene putem tabele klasificiraju u xref:/Algebarski_Prikaz.adoc[algebarskom prikazu] kao
+xref:/Nezavisne_Zavisne_i_Pomoćne_figure.adoc[pomoćne figure]. Možete prikazati ili sakriti pomoćne figure tako da
+označite "Pomoćne figure" u xref:/Prikaz.adoc[izborniku Prikaz].
+
+====
+
+== Relativni nazivi ćelija
+
+Zadano je da se sve veze relativno mijenjaju prema odredišnoj ćeliji ukoliko se kopiraju sadržaji iz jedne ćelije u
+drugu.
+
+[EXAMPLE]
+====
+
+Neka je A1=1,A2=3. U B1 unesite (A1,A1). Kopirajući B1 u B2 (ili kombinacija tipki [.kcode]#Ctrl# + [.kcode]#C#,
+[.kcode]#Ctrl# + [.kcode]#V# ili pomjeranjem ruba ćelije) dobit ćete (A2,A2) tj. (3,3) u B2 .
+
+====
+
+Kako biste to izbjegli, upišite $ ispred oznake kolone i/ili reda ćelije koju kopirate.
+
+[NOTE]
+====
+
+Kod MacOS kopiraj & zalijepi xref:/Tastaturne_kratice.adoc[kratice] su [.kcode]#Cmd# + [.kcode]#C# i [.kcode]#Cmd# +
+[.kcode]#V#
+
+====
+
+== Unos podataka u tablicu
+
+Osim ručnog unosa, možete koristiti naredbe xref:/IspuniKolonu_Naredba.adoc[IspuniKolonu],
+xref:/IspuniRed_Naredba.adoc[IspuniRed] ili xref:/IspuniĆelije_Naredba.adoc[IspuniĆelije]. Pogledajte još poglavlje
+xref:/Tragom.adoc[zapis u tabelu].
+
+== Korištenje podataka iz tabele u ostalim prikazima
+
+Podatke iz tabele možete obrađivati označivši raspon ćelija, desnim klikom na označeno pojavit će se kontekstualni
+izbornik te izaberite jednu stavku iz podizbornika "Kreiraj".

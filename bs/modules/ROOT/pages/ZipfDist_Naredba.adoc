@@ -1,0 +1,47 @@
+= ZipfDist Naredba
+:page-en: commands/Zipf
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+ZipfDist[ <Broj elemenata>, <Eksponent> ]
+
+kao rezultat daje štapičasti dijagram https://en.wikipedia.org/wiki/Zipf%27s_law[Zipf distribucije].
+
+_Parametri:_
+
+* _Broj elemenata_: broj elemenata čiji rang proučavamo
+* _Eksponent_: eksponent koji karakterizira distribuciju
+
+ZipfDist[ <Broj elemenata>, <Eksponent>, <Kumulativna Boolean-logička vrijednost> ]
+
+kao rezultat daje štapičasti dijagram Zipf distribucije ako je _Kumulativna Boolean-logička vrijednost_ = false.
+
+kao rezultat daje dijagram Zipf distribucije ako je _Kumulativna Boolean-logička vrijednost_ = true.
+
+Prva dva parametra su jednaka prethodno opisanim parametrima.
+
+ZipfDist[ <<Broj elemenata>, <Eksponent>, <Vrijednost promjenljive>, <Kumulativna Boolean-logička vrijednost> ]
+
+Neka je X Zipf slučajna promjenljiva.
+
+kao rezultat daje P( X = _v_) ako je _Kumulativna Boolean-logička vrijednost_ = false.
+
+kao rezultat daje P( X ≤ _v_)ako je _Kumulativna Boolean-logička vrijednost_ = true.
+
+Prva dva parametra su jednaka prethodno opisanim parametrima.
+
+== CAS Prikaz
+
+ZipfDist[ <<Broj elemenata>, <Eksponent>, <Vrijednost promjenljive>, <Kumulativna Boolean-logička vrijednost> ]
+
+Neka je X Zipf slučajna promjenljiva.
+
+kao rezultat daje P( X = _v_) ako je _Kumulativna Boolean-logička vrijednost_ = false.
+
+kao rezultat daje P( X ≤ _v_)ako je _Kumulativna Boolean-logička vrijednost_ = true.
+
+[EXAMPLE]
+====
+
+`++ZipfDist[ 10, 1 , 5, false]++` daje _stem:[\frac\{504}\{7381}]_.
+
+====

@@ -1,0 +1,29 @@
+= Ulikskapar
+:page-en: Inequalities
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+GeoGebra støttar bruk av ulikskapar med ein eller to variablar. Det er ingen grenser for ulikskapar til å verte vist i
+xref:/Algebrafelt.adoc[algebrafeltet], men kun nokre ulikskapar kan verte teikna i
+xref:/Grafikkfelt.adoc[grafikkfeltet]:
+
+* polynomulikskapar i ein variabel, t.d. _x^3 > x + 1_ eller _y^2>y_,
+* kvadratiske ulikskapar i to variable, t.d. _x^2 + y^2 + x*y ≤ 4_,
+* ulikskapar som er lineæer i ein variabel, t.d. _2x > sin(y)_ eller _y < sqrt(x)_.
+
+For ulikskapsteikn kan du bruke <, >, ≤, ≥. Symbola <= og => vert også godteke. Konjunksjon og diskonjunksjon er også
+støtta for ulikskapar, t.d. kan _(x>y)&&(x+y<3)_ verte teikna.
+
+For å vise løysinga av ein ulikskap som eit eller fleire intervall på x-aksen, vel _Vis på x-aksen_ under fana _Stil_ i
+dialogboksen for xref:/Eigenskapar.adoc[eigenskapar] til ulikskapen.
+
+Ulikskapar liknar på funksjonar, du kan sjekke om _x_ og _y_ tilfredsstiller ulikskapen _a_ ved å skrive _a(x,y)_ i
+xref:/Inntastingsfelt.adoc[inntastingsfeltet]. Også når _A_ er eit punkt, er syntaksen _a(A)_ lovleg. Eit punkt kan
+verte låst til ein region ved å bruke ulikskapar i kommandoen xref:/commands/PunktI.adoc[PunktI].
+
+[EXAMPLE]
+====
+
+*Døme:* Dersom _b_ er ein ulikskap i varibalen _x_ vil `++PunktI[b]++` gi eit punkt som er låst til den delen av x-aksen
+som tilfredsstillar _b_.
+
+====

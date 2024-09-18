@@ -1,0 +1,44 @@
+= NormalniVektor Naredba
+:page-en: commands/PerpendicularVector
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+NormalniVektor[ <Prava> ]::
+  kreira normalni vektor prave.
+NormalniVektor[ <Duž> ]::
+  kreira normalni vektor duži iste dužine.
+NormalniVektor[ <Vektor> ]::
+  kreira normalni vektor datog vektora.
+
+[NOTE]
+====
+
+vektor određen koordinatama _(a, b)_ ima normalni vektor određen koordinatama _(-b, a)_.
+
+====
+
+[NOTE]
+====
+
+Prava data jednačinom _ax + by = c_ ima normalni vektor određen koordinatama _(a, b)_.
+
+====
+
+== CAS Prikaz
+
+NormalniVektor[ <Vektor> ]::
+  kreira normalni vektor datog vektora.
+
+[EXAMPLE]
+====
+
+* `++NormalniVektor[(3, 2)]++` daje vektor određen koordinatama _\{-2, 3}_.
+* `++NormalniVektor[(a, b)]++` daje vektor određen koordinatama _\{-b, a}_.
+
+====
+
+[NOTE]
+====
+
+Vidi također naredbu xref:/JediničniNormalniVektor_Naredba.adoc[JediničniNormalniVektor].
+
+====

@@ -1,0 +1,45 @@
+= Funksjon Kommando
+:page-en: commands/Function
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Funksjon[ <Funksjon f>, <Tal a>, <Tal b> ]::
+  Gjev grafen til funksjonen _f_ på intervallet [_a_, _b_].
+
+[EXAMPLE]
+====
+
+*Døme:* `++f(x) = Funksjon[x^2, -1, 1]++` lagar ein funksjon _f(x)=x^2^_ der grafen berre vert vist på intervallet
+[_-1_, _1_]. Du kan imidlertid finne verdien _f(-2)=4_, så funksjonen er ikkje avgrensa til [_-1_, _1_].
+
+====
+
+[NOTE]
+====
+
+*Merk:* Denne kommandoen vil ikkje virke med _Verktøy / Lag nytt verktøy_. Bruk kommandoen
+xref:/commands/Dersom.adoc[Dersom] som over.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Denne kommandoen bør berre verte brukt til å avgrense det viste intervallet av funksjonen. For å avgrense domene
+til funksjonen må ein funksjon med vilkår på domene verte laga med kommandoen xref:/commands/Dersom.adoc[Dersom]; til
+dømes `++f(x) = Dersom[-1 ≤ x ≤ 1, x^2]++`.
+
+====
+
+Funksjon[ <Liste med tal> ]::
+  Gjev den følgjande funksjonen: Dei to første tala (_a_ og _b_) avgjer startverdien til _x_ og sluttverdien til _x_.
+  Dei resterande tala er _y_-verdiane til funksjonen plassert mellom _a_ og _b_ med lik avstand mellom kvar verdi.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++Funksjon[{2, 4, 0, 1, 0, 1, 0}]++` gjev ei trekanta bølgje mellom _x=2_ og _x=4_.
+* `++Funksjon[{-3, 3, 0, 1, 2, 3, 4, 5}]++` gjev ei rett linje med stigningstal lik _1_ mellom _x=-3_ og _x=3_.
+
+====

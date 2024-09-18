@@ -1,0 +1,52 @@
+= RektangelSum Kommando
+:page-en: commands/RectangleSum
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+RektangelSum[ <Funksjon f>, <Tal a>, <Tal b>, <Tal på rektangel n>, <Posisjon for rektangelstart d> ]::
+  Kommandoen gjev ei tilnærming til arealet under grafen til funksjonen. Intervallet [_a_, _b_] vert delt opp i _n_
+  delintervall med breidde _(a - b)/n_. I kvart delintervall vert det teikna eit rektangel med breidde lik
+  intervallbreidda og høgde bestemt av funksjonsverdien for ein _x_-verdi lik: stem:[x_0 + (a-b)\frac\{d}\{n}], der
+  stem:[x_0] er _x_-verdien til starten på intervallet. Kommandoen finn summen av areala til alle rektangla.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+Definer funksjonen stem:[f(x)=x^2+3x+4] og skriv inn `++RektangelSum[f, -2, 2, 2, 0.6]++`. Intervallet [-2, 2] vert då
+delt opp i to delintevall [-2, 0] og [0, 2] der det vert teikna rektangel med breidde lik 2.
+
+Høgda til det første rektangelet er stem:[f(-2+2\cdot0.6)=f(-0.8)=(-0.8)^2+3(-0.8)+4=2.24].
+
+Høgda til det andre rektangelet er stem:[f(0+2\cdot0.6)=f(1.2)=1.2^2+3\cdot 1.2+4=9.04].
+
+Arealet som vert returnert er: stem:[2(2.24+9.04)=22.56].
+
+Det eksakte svaret gjeve av `++Integral[f, -2, 2]]++` er 21.33 (evt. stem:[\frac\{64}\{3}] i CAS-delen).
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+Vi må ha _0 ≤ d ≤ 1_.
+
+* Dersom _d = 0_ vert høgda til rektangla bestemt av startverdien til kvart delintervall og kommandoen gjer det same som
+xref:/commands/VenstreSum.adoc[VenstreSum].
+* Dersom _d = 0.5_ vert høgda til rektangla bestemt av midtverdien til kvart delintervall.
+* Dersom _d = 1_ vert høgda til rekangla bestemt av sluttverdien til kvart delintervall.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Når _n_ går mot uendeleg vil svaret bli likt som for kommandoen xref:/commands/Integral.adoc[Integral].
+* Sjå også kommandoane xref:/commands/VenstreSum.adoc[VenstreSum], xref:/commands/SumOver.adoc[SumOver],
+xref:/commands/SumUnder.adoc[SumUnder] og xref:/commands/TrapesSum.adoc[TrapesSum].
+
+====

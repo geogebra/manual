@@ -1,0 +1,87 @@
+= MFM Kommando
+:page-en: commands/LCM
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+MFM[ <Tal a>, <Tal b> ]::
+  Finn minste felles multiplum for dei to tala _a_ og _b_.
+MFM[ <Liste med tal> ]::
+  Finn minste felles multiplum for tala i lista.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++LCM[{12, 30, 18}]++` gjev _180_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++LCM[12, 15]++` gjev _60_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoen xref:/commands/SFD.adoc[SFD] (Største felles divisor).
+
+====
+
+== CAS-delen
+
+MFM[ <Tal a>, <Tal b> ]::
+  Finn minste felles multiplum for dei to tala _a_ og _b_.
+MFM[ <Liste med tal> ]::
+  Finn minste felles multiplum for elementa i lista.
+MFM[ <Polynom>, <Polynom> ]::
+  Finn minste felles multiplum for dei to polynoma.
+MFM[ <Liste med polynom> ]::
+  Finn minste felles multiplum for polynoma i lista.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++LCM[{x^2 + 4 x + 4, x^2 - x - 6, x^3 - 4 x^2 - 3 x + 18}]++` gjev stem:[x^4 - 2 x^3 - 11 x^2 + 12 x + 36].
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++LCM[x^2 + 4 x + 4, x^2 - x - 6]++` gjev stem:[x^3 + x^2 - 8 x - 12].
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++LCM[{12, 30, 18}]++` gjev _180_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++LCM[12, 15]++` gjev _60_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoen xref:/commands/SFD.adoc[SFD] (Største felles divisor).
+
+====

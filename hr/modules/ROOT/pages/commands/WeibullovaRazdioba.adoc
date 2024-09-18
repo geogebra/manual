@@ -1,0 +1,29 @@
+= WeibullovaRazdioba naredba
+:page-en: commands/Weibull
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+WeibullovaRazdioba[ <oblik k >, <skala λ>, x ]::
+  Kreira funkciju gustoće vjerojatnosti (fgv) https://en.wikipedia.org/wiki/Weibull_distribution[Weibullove razdiobe]
+  zadane parametrima _k, λ_.
+WeibullovaRazdioba[ <oblik>, <skala>, x, <kumulacija - logička vrijednost> ]::
+  Ako je _kumulacija - logička vrijednost_ = true, izradit će kumulativnu funkciju distribucije za Weibullovu razdiobu,
+  u suprotnom će izraditi fgv za Weibullovu razdiobu.
+WeibullovaRazdioba[ <oblik k>, <skala λ>, <vrijednost varijable v> ]::
+  Izračunava vrijednost kumulativne funkcije distribucije Weibullove razdiobe za zadani _v_, t.j. vjerojatnost _P(X≤v)_
+  gdje je _X_ slučajna varijabla Weibullove razdiobe zadane parametrima _k, λ_.
+
+[NOTE]
+====
+
+Daje vjerojatnost za zadanu vrijednost _x_-koordinate (ili područje ispod krivulje Weibullove razdiobe lijevo od zadane
+_x_-koordinate).
+
+====
+
+== CAS prikaz
+
+xref:/CAS_prikaz.adoc[CAS prikaz] podržava jedino sljedeću sintaksu:
+
+WeibullovaRazdioba[ <oblik k>, <skala λ>, <vrijednost varijable v> ]::
+  Izračunava vrijednost kumulativne funkcije distribucije Weibullove razdiobe za zadani _v_, t.j. vjerojatnost _P(X≤v)_
+  gdje je _X_ slučajna varijabla Weibullove razdiobe zadane parametrima _k, λ_.

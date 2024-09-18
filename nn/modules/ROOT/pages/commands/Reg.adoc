@@ -1,0 +1,36 @@
+= Reg Kommando
+:page-en: commands/Fit
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Reg[ <Liste med punkt L>, <Liste med funksjonar F> ]::
+  Finn den lineærkombinasjonen av funksjonar frå _F_ som passar best med punkta i _L_.
+Reg[ <Liste med punkt>, <Funksjon> ]::
+  Finn funksjonen på den gjevne forma som har det minste kvadratisk avviket frå punkta i lista. Funksjonen må vere
+  avhengig av ein eller fleire xref:/commands/Glidar.adoc[glidare] som vert brukt som startverdiar for optimaliseringa.
+  Det er ikkje sikkert at den ikkje-lineære iterasjonen konvergerar, men det kan hjelpe å justere glidarane til andre
+  startverdiar.
+
+[EXAMPLE]
+====
+
+*Døme:* Med _L = \{A, B, C,...} og F = \{1, x, exp(x)}_ vil kommandoen `++Reg[L, F]++` finne den funksjonen på forma _a
++ b x + c e^x_ som passar best med punkta i _L_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* For meir informasjon om regresjon med GeoGebra sjå:
+http://www.geogebra.no/filer/opplaring/RegresjonMedGeoGebra.pdf[Regresjon med GeoGebra].
+* Sjå også verktøyet image:Tool_Two_Variable_Regression_Analysis.gif[Tool Two Variable Regression
+Analysis.gif,width=32,height=32] xref:/tools/Regresjonsanalyse.adoc[Regresjonsanalyse] i
+xref:/Rekneark.adoc[reknearket].
+* Sjå også dei andre regresjonskommandoane xref:/commands/RegEksp.adoc[RegEksp], xref:/commands/RegEksp2.adoc[RegEksp2],
+xref:/commands/RegLin.adoc[RegLin], xref:/commands/RegLinX.adoc[RegLinX], xref:/commands/RegLog.adoc[RegLog],
+xref:/commands/RegLogist.adoc[RegLogist], xref:/commands/RegPoly.adoc[RegPoly], xref:/commands/RegPot.adoc[RegPot] og
+xref:/commands/RegSin.adoc[RegSin].
+
+====

@@ -1,0 +1,25 @@
+= Pripoji naredba
+:page-en: commands/Append
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Pripoji[ <lista>, <objekt> ]::
+  Listi pripaja zadani objekt.
+
+[EXAMPLE]
+====
+
+* `++Pripoji[{1, 2, 3}, 4]++` daje _\{1, 2, 3, 4}_.
+* `++Pripoji[{1, 2, 3}, (5, 5)]++` daje _\{1, 2, 3, (5, 5)}_.
+
+====
+
+Pripoji[ <objekt>, <lista> ]::
+  Pripaja listu zadanom objektu.
+
+[EXAMPLE]
+====
+
+* `++Pripoji[4, {1, 2, 3}]++` daje _\{4, 1, 2, 3}_.
+* `++Pripoji[(5, 5), {1, 2, 3}]++` daje _\{(5, 5), 1, 2, 3}_.
+
+====

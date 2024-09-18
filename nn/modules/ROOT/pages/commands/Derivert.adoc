@@ -1,0 +1,104 @@
+= Derivert Kommando
+:page-en: commands/Derivative
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Derivert[ <Funksjon> ]::
+  Gjev den deriverte av funksjonen.
+Derivert[ <Funksjon>, <Tal n> ]::
+  Gjev den _n_-te deriverte av funksjonen.
+Derivert[ <Funksjon>, <Variabel> ]::
+  Gjev den partiellderiverte av funksjonen med omsyn på den gjevne variabelen.
+Derivert[ <Funksjon>, <Variabel>, <Tal n> ]::
+  Gjev den _n_-te partiellderiverte av funksjonen med omsyn på den gjevne variabelen.
+Derivert[ <Kurve> ]::
+  Gjev den deriverte av kurva.
+Derivert[ <Kurve>, <Tal n> ]::
+  Gjev den _n_-te deriverte av kurva.
+
+[EXAMPLE]
+====
+
+*Døme:* Derivert[x^3+3xy,x,2] gjev stem:[6x]
+====
+
+[EXAMPLE]
+====
+
+*Døme:* Derivert[x^3+3xy,x] gjev stem:[3x^2+3y]
+
+====
+
+[NOTE]
+====
+
+*Merk:* Kommandoen kan berre verte brukt på parametriske kurver.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Kommandoen kan berre verte brukt på parametriske kurver.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Det er mogleg å bruke `++f'(x)++` i staden for `++Derivert[f]++`, eller `++f''(x)++` i staden for
+`++Derivert[f, 2]++`, og så vidare.
+
+====
+
+== CAS-delen
+
+Derivert[ <Uttrykk f> ]::
+  Gjev den deriverte av _f_ med omsyn på hovedvariabelen.
+Derivert[ <Uttrykk f>, <Variabel a> ]::
+  Gjev den deriverte av _f_ med omsyn på den gjevne variabelen _a_.
+Derivert[ <Uttrykk f>, <Variabel a>, <Tal n> ]::
+  Gjev den _n_-te deriverte av _f_ med omsyn på den gjevne variabelen _a_.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Derivert[a x^3, x, 2]++` gjev _6 a x_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Derivert[a x^3, a]++` gjev _x^3^_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Derivert[t^3]++` gjev _3 t^2^_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Derivert[x^2]++` gjev _2 x_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også verktøyet image:Tool_Derivative.gif[Tool Derivative.gif,width=32,height=32]
+xref:/tools/Derivert.adoc[Derivert].
+
+====

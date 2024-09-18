@@ -1,0 +1,41 @@
+= VelVerdi Kommando
+:page-en: commands/SetValue
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+VelVerdi[ <Boolsk>, <0|1> ]::
+  Sett verdien til ein xref:/Boolske_verdiar.adoc[boolsk verdi] eller ein xref:/Handlingsobjekt.adoc[avkryssingsboks]
+  til _true_ dersom andre argument er 1, og til _false_ dersom andre argument er 0.
+VelVerdi[ <Objekt A>, <Objekt B> ]::
+  Dersom _A_ er eit xref:/Frie_objekt_avhengige_objekt_og_hjelpeobjekt.adoc[fritt] objekt eller eit
+  xref:/Punkt_og_vektorar.adoc[punkt] begrensa til xref:/Geometriske_objekt.adoc[ei sti eller ein region] vil verdien
+  til _A_ verte sett lik verdien til den noverande verdien til _B_; det vil seie at _A_ ikkje vil endre verdi dersom
+  verdien til _B_ vert endra seinare.
+
+[EXAMPLE]
+====
+
+*Døme:* Dersom _b_ er ein boolsk verdi vil `++Velverdi[b, 1]++` sette _b_ til _true_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* La _f_ vere ein funksjon, `++ VelVerdi[f, TilfeldigElement[{cos(x), 3x+2, ln(x)}]]++` definerer, tilfeldig, _f_
+til å vere ein av funksjonane i lista.
+
+====
+
+VelVerdi[ <Liste L>, <Tal n>, <Objekt B> ]::
+  Sett verdien til element nummer _n_ i _L_ til den noverande verdien til _B_.
+
+[NOTE]
+====
+
+*Merk:*
+
+* Sjå også sida xref:/Endre_verdiar.adoc[Endre verdiar].
+* Du kan også endre verdien til eit objekt under fana _Basis_ i xref:/Eigenskapar.adoc[dialogboks for eigenskapar] eller
+i xref:/Omdefinering.adoc[dialogboks for omdefinering].
+
+====

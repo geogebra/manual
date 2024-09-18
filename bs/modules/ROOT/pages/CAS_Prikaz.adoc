@@ -1,0 +1,52 @@
+= CAS Prikaz
+:page-en: CAS_View
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+== Osnovni unos
+
+* [.kcode]#Enter#: izračunava unos
+* [.kcode]#Ctrl# + [.kcode]#Enter#: provjerava, ali ne izračunava unos, na primjer _b + b_ ostaje _b + b_. Napomenimo da
+se u zadacima uvijek koriste izračunate vrijednosti, kao na primjer a := 5
+* U prazan red ukucajmo
+** [.kcode]#Space# za unos prethodnog izlaznog rezultata
+** `++)++` za unos prethodnog izlaznog rezultata unutar zagrada
+** `++=++` za unos prethodne ulazne vrijednosti
+* Ako ukucamo tačku-zarez na kraju našeg unosa izlazni rezultat neće biti prikazan, na primjer `++a := 5;++`
+
+== Alatna traka
+
+* Kliknimo na ikonu alatne trake da primjenimo naredbu u aktuelnom redu.
+* Možemo označiti samo dio ulaznog teksta i primjeniti operacije samo na taj selektovani dio.
+
+== Promjenljive
+
+=== Zadaci & Veza s GeoGebrom
+
+* U zadacima koristimo sljedeću notaciju := , na primjer `++b := 5++`, `++a(n) := 2n + 3++`
+* Da bismo promjenili ime promjenjive, koristimo `++Obriši[b]++` ili `++b :=++`
+* Promjenljive i fukcije, ukoliko je to moguće, uvijek se dijele između CAS prikaza i GeoGebre. Ako definiramo
+`++b:=5++` u CAS prikazu, onda _b_ možemo koristiti u svim segmentima GeoGebre. Ako u GeoGebri zadamo funkciju
+`++f(x)=x^2++` možemo je, također koristiti i u CAS prikazu.
+
+=== Reference reda
+
+U CAS prikazu možemo se pozivati na prethodne redove na sljedeća dva načina
+
+* Statički red u odnosu na unos teksta iz drugog reda, tako da unos bude promijenjen.
+** `++#++` unos prethodnog izlaznog rezultata
+** `++#5++`unos izlaznog rezultata reda 5
+* Dinamički red u odnosu na unos teksta iz drugog reda, ali tako da unos bude nepromijenjen.
+** `++$++` unos prethodnog izlaznog rezultata
+** `++$5++` unos izlaznog rezultata reda 5
+
+== Jednačine
+
+* Jednačine pišemo jednostavnom upotrebom znaka jednakosti, na primjer `++3x + 5 = 7++`
+* Nad jednačinama možemo izvoditi aritmetičke operacije, kao na primjer `++(3x + 5 = 7) - 5++` oduzimajući 5 s obje
+strane jednačine. Ovo je korisno za ručno rješavanje jednačina.
+* Naredba `++LijevaStrana[3x + 5 = 7]++` daje _3 x + 5_, dok naredba `++DesnaStrana[3x + 5 = 7]++` kao rezultat daje _7_
+
+== Naredbe i Alati
+
+Za kompletnu listu naredbi i alata vidi xref:/commands/CAS_Specifične_naredbe.adoc[CAS- Specifične naredbe] i
+xref:/CAS_Alati.adoc[CAS Alati].

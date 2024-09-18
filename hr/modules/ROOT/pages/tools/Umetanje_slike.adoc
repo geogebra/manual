@@ -1,0 +1,104 @@
+= Umetanje slike alat
+:page-en: tools/Image
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Ovaj alat omogućava umetanje slika u konstrukciju.
+
+Prvo odredite smještaj slike na jedan od dva slijedeća načina:
+
+* Klikom na grafički prikaz odredili ste položaj lijevog donjeg ugla slike.
+* Klikom na točku odredili ste točku za koju se vezuje lijevi donji ugao slike.
+
+Nakon toga pokaže se dijaloški okvir za otvaranje datoteka u kojem odabirete željenu sliku.
+
+[NOTE]
+====
+
+Nakon što ste odabrali alat image:Tool_Insert_Image.gif[Tool Insert Image.gif,width=32,height=32] Umetanje slike ,
+možete koristiti tipkovničku kraticu _Alt-klik_ kako biste direktno zalijepili sliku iz međuspremnika u Grafički prikaz.
+
+====
+
+[NOTE]
+====
+
+Datoteke s prozirnim [https://en.wikipedia.org/wiki/Graphics_Interchange_Format[GIF]] i
+[https://en.wikipedia.org/wiki/Portable_Network_Graphics[PNG]] slikama su podržane, ali za PNG ekstenziju prvo ćete ih
+morati urediti tako da imaju alfa kanal (na primjer koristeći [http://www.irfanview.com/[IrfanView]], spremiti koristeći
+PNGOUT plugin i izabirući *RGB+Alpha*)
+
+====
+
+== Svojstva slika
+
+*Položaj slike* može biti apsolutan na zaslonu ili relativan u koordinatnom sustavu što odredite u kartici 'Položaj'
+xref:/Dijaloški_okvir_Svojstva.adoc[dijaloškog okvira Svojstva] slike.
+
+Možete odabrati tri točke na uglovima slike u kartici ‘Položaj’ dijaloškog okvira Svojstva. To vam daje i mogućnost
+smanjenja ili povećanje, zakretanja i ukošenja slike. (također pogledajte naredbu xref:/commands/Ugao.adoc[Ugao]).
+
+* 1. ugao: položaj lijevog donjeg ugla slike
+* 2. ugao: položaj desnog donjeg ugla slike
+
+[NOTE]
+====
+
+njega se može podesiti jedino ako je prethodno određen 1. ugao. 2. ugao kontrolira širinu slike.
+
+====
+
+* 4. ugao: položaj gornjeg lijevog ugla slike
+
+[NOTE]
+====
+
+njega se može podesiti jedino ako je prethodno određen 1. ugao. Kontrolira visinu slike.
+
+====
+
+[EXAMPLE]
+====
+
+Nacrtajte tri točke A, B i C i istražite učinak pridruživanja tih točaka uglovima slike.
+
+* Postavite točku A za prvi i B za drugi ugao vaše slike. Povlačenjem točaka A i B alatom image:Tool_Move.gif[Tool
+Move.gif,width=32,height=32] Pomicanje vrlo lako ćete otkriti učinak.
+* Podesite sada točku A kao prvu i C kao četvrtu i ispitajte učinak na sliku povlačeći A i C.
+* I na kraju postavite sve tri točke za uglove slike, pa uočite kako povlačenje točaka utječe na sliku.
+
+====
+
+[EXAMPLE]
+====
+
+Vidjeli ste kako utjecati na položaj i veličinu slike. Ako želite priključiti sliku točki A i odrediti njezinu širinu na
+3 i visinu na 4 jedinične dužine, napravite sljedeće::
+
+* 1. ugao: A
+* 2. ugao: A + (3, 0)
+* 4. ugao: A + (0, 4)
+
+====
+
+[NOTE]
+====
+
+Kada budete povlačili točku A alatom image:Tool_Move.gif[Tool Move.gif,width=32,height=32]
+xref:/tools/Pomicanje.adoc[Pomicanje], slika neće mijenjati veličinu.
+
+====
+
+Na kartici 'Osnovno' xref:/Dijaloški_okvir_Svojstva.adoc[dijaloškog okvira Svojstva] možete postaviti sliku da bude
+*pozadinska*. Tada slika leži iza koordinatnih osi i ne može se odabrati pomoću miša.
+
+[NOTE]
+====
+
+Za promjenu svojstava pozadinske slike potrebno je otvoriti xref:/Dijaloški_okvir_Svojstva.adoc[Dijaloški okvir
+Svojstva] odabirom podizbornika image:Menu_Properties.png[Menu Properties.png,width=16,height=16] Svojstva… izbornika
+xref:/Izbornik_Uređivanje.adoc[Uređivanje].
+
+====
+
+Slika se može učiniti prozirnom tako da se vide koordinatne osi ili slika koja leži iza nje. Prozirnost slike možete
+podesiti određujući vrijednost _Neprozirnost_ između 0% i 100% u kartici 'Boja' dijaloškog okvira Svojstva.

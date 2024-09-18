@@ -1,0 +1,20 @@
+= VarijancaUzorka naredba
+:page-en: commands/SampleVariance
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+VarijancaUzorka[ <lista brojeva> ]::
+  Izračunava https://en.wikipedia.org/wiki/Sample_variance#Population_variance_and_sample_variance[varijancu uzorka]
+  dane liste brojeva.
+
+== CAS prikaz
+
+VarijancaUzorka[ <lista brojeva> ]::
+  Izračunava https://en.wikipedia.org/wiki/Sample_variance#Population_variance_and_sample_variance[varijancu uzorka]
+  dane liste brojeva. Ako lista sadrži nedefinirane varijable, dobit će se formula za varijancu uzorka.
+
+[EXAMPLE]
+====
+
+`++VarijancaUzorka[{x, y, z}]++` daje stem:[\frac\{x² - x y - x z + y² - y z + z²}\{3}].
+
+====

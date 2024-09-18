@@ -1,0 +1,72 @@
+= Sum Kommando
+:page-en: commands/Sum
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Sum[ <Liste> ]::
+  Finn summen av alle elementa i lista.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++Sum[{1, 2, 3}]++` gjev talet 6.
+* `++Sum[{x^2,  x^3}]++` gjev _f(x) = x^2^ + x^3^_.
+* `++Sum[Følge[i, i, 1, 100]]++` gjev talet 5050.
+* `++Sum[{(1, 2), (2, 3)}]++` gjev punktet (3, 5).
+* `++Sum[{(1, 2), 3}]++` gjev punktet (4, 2).
+* `++Sum[{"a", "b", "c"}]++` gjev teksten _"abc"_.
+
+====
+
+Sum[ <Liste>, <Tal på element n> ]::
+  Finn summen av dei _n_ første elementa i lista.
+Sum[ <Liste L>, <Liste med frekvensar F> ]::
+  Finn summen av alle tala i _L_ når talet på kvart element i _L_ er gjeve av det samsvarande elementet i _F_.
+
+[EXAMPLE]
+====
+
+*Døme:* `++Sum[{1, 2, 3, 4, 5, 6}, 4]++` gjev talet 10.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Kommandoen fungerer for tall, punkt, vektorar, tekst og funksjonar.
+* Sjå også verktøyet image:Tool_Sum.gif[Tool Sum.gif,width=32,height=32] xref:/tools/Sum.adoc[Sum] i
+xref:/Rekneark.adoc[reknearket].
+
+====
+
+== CAS-delen
+
+Sum[ <Liste> ]::
+  Finn summen av alle elementa i lista.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++Sum[{1, 2, 3}]++` gjev _6_.
+* `++Sum[{a, b, c}]++` gjev _a + b + c_.
+
+====
+
+Sum[ <Uttrykk>, <Variabel>, <Startverdi>, <Sluttverdi> ]::
+  Finn summen stem:[\sum_\{t=s}^\{e}f(t)]. Sluttverdien kan vere uendeleg.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++Sum[i^2, i, 1, 3]++` gjev _14_.
+* `++Sum[r^i, i, 0, n]++` gjev stem:[\frac\{r^\{n+1} - 1}\{r - 1}].
+* `++Sum[(1/3)^i, i, 0, inf]++` gjev stem:[\frac\{3}\{2}].
+
+====

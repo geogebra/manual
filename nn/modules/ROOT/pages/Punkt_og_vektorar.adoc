@@ -1,0 +1,86 @@
+= Punkt og vektorar
+:page-en: Points_and_Vectors
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Punkt og vektorar kan du lage ved bruk av xref:/Inntastingsfelt.adoc[inntastingsfeltet] i kartesiske eller
+polarkoordinatar (sjå sida om xref:/Tal_og_vinklar.adoc[Tal og vinklar]). Punkt kan også verte laga ved å bruke
+verktøyet image:Tool_New_Point.gif[Tool New Point.gif,width=32,height=32] xref:/tools/Nytt_punkt.adoc[Nytt punkt], medan
+vektorar kan verte laga ved bruk av verktøya image:Tool_Vector_from_Point.gif[Tool Vector from
+Point.gif,width=32,height=32] xref:/tools/Vektor_frå_punkt.adoc[Vektor frå punkt] eller
+image:Tool_Vector_between_Two_Points.gif[Tool Vector between Two Points.gif,width=32,height=32]
+xref:/tools/Vektor_mellom_to_punkt.adoc[Verktøy mellom to punkt] i tillegg til fleire xref:/Kommandoar.adoc[kommandoar].
+
+[NOTE]
+====
+
+*Merk:* Store bokstavar vert brukt som punkt, medan små bokstavar vert brukt for vektorar. Denne konvensjonen er ikkje
+obligatorisk.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* For å skrive inn eit punkt _P_ eller ein vektor _v_ i kartesiske koordinatar kan du skrive: `++P = (1, 0)++` eller
+`++v = (0, 5)++`.
+* For å skrive inn eit tal i xref:/Rekneark.adoc[reknearket] kan du namngi det ved bruk av cellenamnet:
+`++A2 = (1, 0)++`
+* For å skrive inn eit punkt _P_ eller ein vektor _v_ i polarkoordinatar kan du skrive: `++P = (1; 0°)++` eller
+`++v = (5; 90°)++`.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Du må bruke semikolon for å separere polarkoordinatane. Dersom du ikkje skriv inn symbolet for gradar, vil
+GeoGebra handsame den som om den var i radianar.
+
+====
+
+Koordinatar til punkt og vektorar kan du finne ved å bruke dei
+xref:/Førehandsdefinerte_funksjonar_og_operatorar.adoc[førehandsdefinerte funksjonane] _x_ og _y_.
+
+[EXAMPLE]
+====
+
+*Døme:* Dersom `++P=(1,2)++` er eit punkt og `++v=(3,4)++` er ein vektor vil `++x(P)++` gi 1 og `++y(v)++` gi 4.
+
+====
+
+Polarkoordinatane til eit punkt _Q_ kan du finne ved `++abs(Q)++` og `++arg(Q)++`.
+
+== Utrekningar
+
+I GeoGebra kan du gjere utrekningar med punkt og vektorar.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* Du kan lage midtpunktet _M_ til to punkt _A_ og _B_ ved å skrive `++M = (A + B) / 2++` i inntastingsfeltet.
+* Du kan rekne ut lengda til ein vektor _v_ ved `++lengde = sqrt(v * v)++`
+* Dersom _A = (a, b)_, så vil `++A + 1++` gi _(a + 1, b + 1)_.
+* Dersom _A_ er eit xref:/Komplekse_tal.adoc[komplekst tal] _a+bί_, så vil `++A+1++` gi _a + 1 + bί_.
+
+====
+
+== Vektorprodukt
+
+For to punkt eller vektorar vil `++(a, b) ⊗ (c, d)++` gi _z_-koordinaten til vektorproduktet _(a, b, 0) ⊗ (c, d, 0)_ som
+eit einskild tal.
+
+Ein liknande syntaks er lovleg for lister, men resultatet vert då ei liste.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++{1, 2} ⊗ {4, 5}++` gjev _\{0, 0, -3}_
+* `++{1, 2, 3} ⊗ {4, 5, 6}++` gjev _\{3, 6, -3}_.
+
+====

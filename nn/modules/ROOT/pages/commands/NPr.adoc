@@ -1,0 +1,46 @@
+= NPr Kommando
+:page-en: commands/NPr
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+nPr[ <Tal n>, <Tal r> ]::
+  Gjev talet på mulige https://en.wikipedia.org/wiki/nn:Permutasjon[permutasjonar] _r_ element vert trekt frå _n_
+  element utan tilbakelegging.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++nPr[10, 2]++` gjev _90_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoen xref:/commands/NCr.adoc[nCr].
+
+====
+
+== CAS-delen
+
+nPr[ <Tal n>, <Tal r> ]::
+  Gjev talet på mulige https://en.wikipedia.org/wiki/nn:Permutasjon[permutasjonar] når _r_ element vert trekt frå _n_
+  element. Dersom du skriv inn udefinerte variablar for _n_ og _r_ vil kommandoen gje ein formel for nPr.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++nPr[a, 3]++` gjev stem:[a^3-3a^2+2a].
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|I GeoGebra skrives kommandoen med liten n, slik: nPr. Er det mulig å bytte navnet i tittelen på denne siden?
+|===

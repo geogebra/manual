@@ -1,0 +1,29 @@
+= ListaRednihBrojeva naredba
+:page-en: commands/OrdinalRank
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+ListaRednihBrojeva[ <lista L> ]::
+  Daje listu, čiji je _i_-ti element jednak poretku _i_-tog elementa početne liste L (poredak je pozicija nakon
+  izvršenja naredbe xref:/commands/Sortiraj.adoc[Sortiraj][L]). Ako je u listi L nekoliko jednakih elemenata koji
+  zauzimaju pozicije od _k_ do _l_ u Sortiraj[L], tada su tim elementima pridruženi redni brojevi od _k_ do _l_.
+
+[EXAMPLE]
+====
+
+`++ListaRednihBrojeva[{4, 1, 2, 3, 4, 2}]++` daje \{5, 1, 2, 4, 6, 3}.
+
+====
+
+[EXAMPLE]
+====
+
+`++ListaRednihBrojeva[{3, 2, 2, 1}]++` daje \{4, 2, 3, 1}.
+
+====
+
+[NOTE]
+====
+
+Pogledajte još i naredbu xref:/commands/VezaniRedniBroj.adoc[VezaniRedniBroj].
+
+====

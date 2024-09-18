@@ -1,0 +1,28 @@
+= StandardavvikX Kommando
+:page-en: commands/SDX
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+StandardavvikX[ <Liste med punkt> ]::
+  Finn https://en.wikipedia.org/wiki/nn:Standardavvik[standardavviket] til _x_-koordinatane til punkta i lista.
+
+[EXAMPLE]
+====
+
+*Døme:* `++StandardavvikX[(1, 2), (2, 4), (3, 6)]++` gjev 0.82.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Sjå også kommandoen xref:/commands/UtvalStandardavvikX.adoc[UtvalStandardavvikX]. Denne vert brukt for å finne
+standardavviket når ein berre har eit utval av data frå ein populasjon, medan standardavvik kommandoen nyttast når ein
+har data frå heile populasjonen. Jo fleire element det er i lista, desto meir likt blir resultatet for desse to
+kommandoane. Grunnen til dette er at det einaste som skil dei to statistiske storleikane er at utvalsstandardavviket har
+_N - 1_ i nemnaren, medan standardavviket har _N_, der _N_ er talet på element i lista.
+* Sjå også kommandoane xref:/commands/GjennomsnittX.adoc[GjennomsnittX],
+xref:/commands/Standardavvik.adoc[Standardavvik] og xref:/commands/StandardavvikY.adoc[StandardavvikY].
+
+====

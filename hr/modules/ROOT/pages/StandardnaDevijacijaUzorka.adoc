@@ -1,0 +1,27 @@
+= StandardnaDevijacijaUzorka
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+StandardnaDevijacijaUzorka[ <lista brojeva> ]::
+  Izračunava https://en.wikipedia.org/wiki/Standard_deviation#Estimation[standardnu devijaciju uzorka] dane
+  xref:/Liste.adoc[liste] brojeva.
+
+[EXAMPLE]
+====
+
+`++StandardnaDevijacijaUzorka[{1, 2, 3}]++` daje _1_.
+
+====
+
+== CAS prikaz
+
+StandardnaDevijacijaUzorka[ <lista brojeva> ]::
+  Izračunava https://en.wikipedia.org/wiki/Standard_deviation#Estimation[standardnu devijaciju uzorka] dane
+  xref:/Liste.adoc[liste] brojeva. Ako lista sadrži nedefinirane varijable, dobiva se formula za izračunavanje
+  standardne devijacije uzorka.
+
+[EXAMPLE]
+====
+
+`++StandardnaDevijacijaUzorka[{1, 2, a}]++` daje stem:[\frac\{\sqrt\{a²-3a+3}}\{\sqrt\{3}}].
+
+====

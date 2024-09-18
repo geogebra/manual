@@ -1,0 +1,29 @@
+= BytUt Kommando
+:page-en: commands/Substitute
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Denne kommandoen er tilgjengeleg berre i xref:/CAS_delen.adoc[CAS-delen].
+
+BytUt[ <Uttrykk>, <Frå>, <Til> ]::
+  Byttar _frå_ i uttrykket med _til_.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++BytUt[(3 m - 3)^2 - (m + 3)^2, m, a]++` gjev _8 a^2^ - 24 a_.
+
+====
+
+BytUt[ <Uttrykk>, <Liste med endringar> ]::
+  I uttrykket vert alle variablane i lista bytta ut med dei variablane eller tala som du vel for dei.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++BytUt[2x + 3y - z, {x=a, y=2, z=b}]++` gjev _2a - b + 6_.
+
+====

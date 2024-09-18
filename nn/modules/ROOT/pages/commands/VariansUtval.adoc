@@ -1,0 +1,49 @@
+= VariansUtval Kommando
+:page-en: commands/SampleVariance
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+VariansUtval[ <Liste med tal> ]::
+  Finn utvalsvariansen (også kalt den empiriske variansen) til den gjevne lista med tal.
+VariansUtval[ <Liste med tal L>, <Liste med frekvensar F> ]::
+  Finn utvalsvariansen til tala i _L_ når talet på kvart element i _L_ er gjeve av det samsvarande elementet i _F_.
+
+[EXAMPLE]
+====
+
+*Døme:* `++VariansUtval[{1, 2, 3, 4, 5}, {5, 1, 1, 3, 9}]++` gjev _3.04_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++VariansUtval[{1, 2, 3, 4, 5}]++` gjev _2.5_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Jo fleire element det er i lista desto likare vert resultatet med det ein får frå kommandoen
+xref:/commands/Varians.adoc[Varians]. Grunnen til dette er at det einaste som skil dei to statistiske storleikane er at
+utvalsvariansen har _N - 1_ i nemnaren, medan variansen har _N_, der _N_ er antall element i lista.
+* Sjå også kommandoane xref:/commands/UtvalStandardavvik.adoc[UtvalStandardavvik] og
+xref:/commands/Varians.adoc[Varians].
+
+====
+
+== CAS-delen
+
+VariansUtval[ <Liste med tal> ]
+
+Finn utvalsvariansen (også kalt den empiriske variansen) til den gjevne lista med tal. Kommandoen gjev det eksakte
+svaret og dersom lista inneheld udefinerte variablar vert det gjeve ein formel for svaret.
+
+[EXAMPLE]
+====
+
+*Døme:* `++Varians[{2, 3, 5, a}]++` gjev _stem:[\frac\{3a^2-20a+52}\{12}]_.
+
+====

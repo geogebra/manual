@@ -1,0 +1,75 @@
+= Kompleksni brojevi
+:page-en: Complex_Numbers
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+GeoGebra ne podržava direktno kompleksne brojeve , ali možemo koristiti xref:/Tačke_i_Vektori.adoc[tačke] da simuliramo
+operacije s kompleksnim brojevima.
+
+[EXAMPLE]
+====
+
+Ako ukucamo kompleksni broj 3 + 4ί u traku za unos, na radnoj površi bit će kreirana tačka (3, 4). U algebarskom prikazu
+koordinate ove točke bit će prikazane kao 3 + 4ί.
+
+====
+
+[NOTE]
+====
+
+Možete prikazati bilo koju tačku kao kompleksni broj u xref:/Algebarski_Prikaz.adoc[algebarskom prikazu]. Otvorite
+xref:/Osobine_Dijaloški_okvir.adoc[dijaloški okvir osobine] za tačku i označite Kompleksni broj iz padajućeg izbornika
+Koordinate na kartici Algebra.
+
+====
+
+Imaginarnu jedinicu ί možemo izabrati iz okvira simboli u traci za unos ili napisati pomoću [.kcode]#Alt# + [.kcode]#i#.
+Ukoliko promjenljivu ί ukucamo u xref:/CAS_Prikaz.adoc[CAS prikazu] ili definiramo prethodno, promjenljiva ί bit će
+prepoznata kao uređeni par ί = (0, 1) ili kompleksni broj 0 + 1ί, što znači da možemo koristiti promjenljivu ί kako bi
+ukucali kompleksni broj u traku za unos (npr., q = 3 + 4 ί), ali ne i u CAS.
+
+[EXAMPLE]
+====
+
+Sabiranje i oduzimanje:
+
+* `++(2 + 1ί) + (1 – 2ί)++` kao rezultat daje kompleksan broj 3 – 1ί.
+* `++(2 + 1ί) - (1 – 2ί)++` kao rezultat daje kompleksan broj 1 + 3ί.
+
+====
+
+[EXAMPLE]
+====
+
+Množenje i dijeljenje:
+
+* `++(2 + 1ί) * (1 – 2i)++` kao rezultat daje kompleksan brojr 4 – 3ί.
+* `++(2 + 1ί) / (1 – 2i)++` kao rezultat daje kompleksan broj 0 + 1ί.
+
+====
+
+[NOTE]
+====
+
+Uobičajeno množenje `++(2, 1)*(1, -2)++` kao rezultat daje skalarni proizvod dva vektora.
+
+====
+
+Sljedeće naredbe i xref:/Predefinirane_Funkcije_i_Operatori.adoc[operatori] mogu također biti korišteni:
+
+* `++x(z)++` ili `++real(z)++` kao rezultat daje realni dio kompleksnog broja _z_
+* `++y(z)++` ili `++imaginary(z)++` kao rezultat daje imaginarni dio kompleksnog broja _z_
+* `++abs(z)++` ili `++Dužina[z]++` kao rezultat daje modul kompleksnog broja__z__
+* `++arg(z)++` ili `++Ugao[z]++` kao rezultat daje argument kompleksnog broja _z_
+* `++conjugate(z)++` ili `++Simetrija[z,xOsa]++` kao rezultat daje konjugovano kompleksni broj kompleksnog broja _z_
+
+GeoGebra takođe prepoznaje izraze koji uključuju xref:/Brojevi_i_Uglovi.adoc[realne] i kompleksne brojeve.
+
+[EXAMPLE]
+====
+
+* `++3 + (4 + 5ί)++` kao rezultat daje kompleksan broj 7 + 5ί.
+* `++3 - (4 + 5ί)++` kao rezultat daje kompleksan broj -1 - 5ί.
+* `++3 / (0 + 1ί)++` kao rezultat daje kompleksan broj 0 - 3ί.
+* `++3 * (1 + 2ί)++` kao rezultat daje kompleksan broj 3 + 6ί.
+
+====

@@ -1,0 +1,31 @@
+= NormalnaRazdioba naredba
+:page-en: commands/Normal
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+NormalnaRazdioba[ <aritmetička sredina μ>, <standardna devijacija σ>, x ]::
+  Daje funkciju gustoće vjerojatnosti (fgv) https://en.wikipedia.org/wiki/Normal_distribution[normalne razdiobe].
+NormalnaRazdioba[ <aritmetička sredina μ>, <standardna devijacija σ>, x, <kumulacija - logička vrijednost> ]::
+  Ako je _kumulacija - logička vrijednost_ = true, daje kumulativnu funkciju distribucije normalne razdiobe, u suprotnom
+  daje fgv normalne razdiobe.
+NormalnaRazdioba[ <aritmetička sredina μ>, <standardna devijacija σ>, <vrijednost varijable v> ]::
+  Izračunava funkciju _Φ((x – μ) / σ)_ za zadani _v_ gdje je _Φ_ kumulativna funkcija distribucije za _N(0,1)_.
+
+[NOTE]
+====
+
+Daje vjerojatnost za zadanu vrijednost _x_-koordinate (ili površinu ispod krivulje normalne razdiobe lijevo od
+zadane__x__-koordinate).
+
+====
+
+== CAS prikaz
+
+NormalnaRazdioba[ <aritmetička sredina μ>, <standardna devijacija σ>, <vrijednost varijable v> ]::
+  Izračunava funkciju _Φ((x – μ) / σ)_ za zadani _v_ gdje je _Φ_ kumulativna funkcija distribucije za _N(0,1)_.
+
+[EXAMPLE]
+====
+
+`++Normal[2, 0.5, 1]++` daje stem:[0.5 erf(-\sqrt\{2}) + 0.5].
+
+====

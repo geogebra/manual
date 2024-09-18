@@ -1,0 +1,59 @@
+= Uvećanje Naredba
+:page-en: commands/ZoomIn
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+Uvećanje[ <Faktor> ]::
+  Uvećanje trenutne xref:/Radna_površ.adoc[radne površi] za dati faktor je naredba koja za centar uvećanja uzima
+  tačku-centar ekrana.
+Uvećanje[ <Faktor>, <Tačka-centar> ]::
+  Uvećanje trenutne xref:/Radna_površ.adoc[radne površi] za dati faktor je naredba u kojoj drugi parametar određuje
+  centar-tačku uvećanja.
+Uvećanje[ <Min x>, <Min y>, <Max x>, <Max y> ]::
+  Uvećanje trenutne radne površi za paralelogram određen tjemenima (Min x, Min y), (Max x, Max y).
+
+[EXAMPLE]
+====
+
+Ako je _a_ klizač, naredba `++Uvećanje[-a, -a, a, a]++` čini da zumiranje prikaza zavisi od klizač _a_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Uvećanje[0, 1, 5, 6]++`
+
+====
+
+[EXAMPLE]
+====
+
+`++Uvećanje[2, (0, 0)]++`
+
+====
+
+[EXAMPLE]
+====
+
+`++Uvećanje[1]++` prikaz će ostati nepromijenjen
+
+`++Uvećanje[2]++` uvećava prikaz
+
+`++Uvećanje[0.5]++`ekvivalentno je sa `++Umanjenje[2]++`, tj. umanjenjem prikaza.
+
+====
+
+[NOTE]
+====
+
+Ako bilo koji od ovih parametara zavisi ili ima oznaku skupa, granice prikaza postaju dinamične. Da bi izbjegli ovakvo
+ponašanje, koristite naredbu xref:/KopirajNezavisnuFiguru_Naredba.adoc[KopirajNezavisnuFiguru].
+
+====
+
+[NOTE]
+====
+
+Ako je više xref:/Radna_površ.adoc[radnih površi] otvoreno, naredba se odnosi na onu trenutno aktivnu.
+
+====

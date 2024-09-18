@@ -1,0 +1,37 @@
+= Kovarijanca naredba
+:page-en: commands/Covariance
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Kovarijanca[ <lista brojeva>, <lista brojeva> ]::
+  Izračunava kovarijancu koristeći elemente iz obje liste.
+Kovarijanca[ <lista točaka> ]::
+  Izračunava kovarijancu koristeći _x_- i _y_-koordinate danih točaka.
+
+[EXAMPLE]
+====
+
+`++Kovarijanca[{(1, 1), (2, 3), (3, 7)}]++` daje _2_, kovarijancu od _\{1, 2, 3}_ i _\{1, 3, 7}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Kovarijanca[{1, 2, 3}, {1, 3, 7}]++` daje _2_, kovarijancu od _\{1, 2, 3}_ i _\{1, 3, 7}_.
+
+====
+
+== CAS prikaz
+
+Kovarijanca[ <lista brojeva>, <lista brojeva> ]::
+  Izračunava kovarijancu koristeći elemente iz obje liste.
+Kovarijanca[ <lista točaka> ]::
+  Izračunava kovarijancu koristeći _x_- i _y_-koordinate danih točaka.
+
+[EXAMPLE]
+====
+
+`++Kovarijanca[{(a, 1), (2, 3), (3, 7)}]++` daje _stem:[\frac\{-8a+26}\{9}]_, kovarijancu od _\{a, 2, 3}_ i _\{1, 3,
+7}_.
+
+====

@@ -1,0 +1,53 @@
+= Dinamične Boje
+:page-en: Dynamic_Colors
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+U GeoGebri možete mijenjati boje figura na kartici Boja xref:/Osobine_Dijaloški_okvir.adoc[dijaloškog okvira Osobine].
+Međutim, boje figura možete mijenjati i dinamički tako da otvorite dijaloški okvir osobine određene figure i otvorite
+karticu Napredne postavke. Tamo ćete naći odjeljak Dinamičke boje s tekstualnim poljima za komponente boje Crvena,
+Zelena i Plava.
+
+[NOTE]
+====
+
+U svako tekstualno polje možete unijeti funkciju s vrijednostima na intervalu [0, 1].
+
+====
+
+[EXAMPLE]
+====
+
+* Konstruirajte tri xref:/Klizač_Alat.adoc[klizača] a, b, i c s intervalima od 0 do 1.
+* Konstruirajte mnogougao na čiju će boju uticati vrijednosti klizača.
+* Otvorite xref:/Osobine_Dijaloški_okvir.adoc[dijaloškog okvira Osobine] za taj mnogougao i unesite imena klizača u
+tekstualna polja za komponente boje.
+* Zatvorite dijaloški okvir osobine i mijenjajte vrijednosti klizača kako biste istražili na koji način promjena
+vrijednosti pojedine komponente utiče na promjenu boje mnogougla.
+
+[NOTE]
+====
+
+Također, možete i animirati klizače s različitim brzinama kako bi se boje automatski mijenjale.
+
+====
+
+====
+
+Odjeljak Dinamičke boje sadrži i tekstualno polje koje vam omogućava izmjenu providnosti označene figure. Možete unijeti
+broj u intervalu [0,1] (gdje 0 znači providno, a 1 znači 100% neprovidno), ali i ime klizača da bi ste postigli dinamiku
+providnosti. Brojevi izvan zadanog intervala bit će ignorirani.
+
+== RGB / HSV / HSL
+
+Za neke dinamičke boje ponekad je preporučljivo koristiti drugačiji model boja. Tada, umjesto zadanog
+https://en.wikipedia.org/wiki/RGB[RGB] odaberite ili https://en.wikipedia.org/wiki/HSL_and_HSV[HSV] ili
+https://en.wikipedia.org/wiki/HSL_and_HSV[HSL] model iz padajuće liste na dnu odjeljka Dinamičke boje
+xref:/Osobine_Dijaloški_okvir.adoc[dijaloškog okvira Osobine].
+
+[EXAMPLE]
+====
+
+Kako biste postigli da tačka _A_ prima sve dugine boje dok je pomjerate lijevo desno, prebacite na HSV model i postavite
+Zasićenje i Vrijednost na 1, a Nijansu na `++x(A)++`.
+
+====

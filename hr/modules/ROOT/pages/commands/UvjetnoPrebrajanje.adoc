@@ -1,0 +1,23 @@
+= UvjetnoPrebrajanje naredba
+:page-en: commands/CountIf
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+UvjetnoPrebrajanje[ <uvjet>, <lista> ]::
+  prebraja broj elemenata liste koji zadovoljavaju zadani uvjet.
+
+[EXAMPLE]
+====
+
+* `++UvjetnoPrebrajanje[x < 3, {1, 2, 3, 4, 5}]++` daje broj 2.
+* `++UvjetnoPrebrajanje[x < 3, A1:A10]++`, gdje je _A1:A10_ raspon ćelija u tablici, prebraja sva polja čije su
+vrijednosti manje od 3.
+
+====
+
+[NOTE]
+====
+
+Kod liste brojeva mogu se koristiti proizvoljni uvjeti. Kod ostalih listi mogu se koristiti samo uvjeti
+`++x==konstanta++` ili `++x!=konstanta++`.
+
+====

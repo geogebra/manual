@@ -1,0 +1,164 @@
+= LøysODE Kommando
+:page-en: commands/SolveODE
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+LøysODE[ <f'(x y)> ]::
+  Prøver å finne den eksakte løysinga av den ordinære differensiallikninga av første orden
+  stem:[\frac\{dy}\{dx}(x)=f'(x, y(x))].
+LøysODE[ <f'(x y)>, <Punkt på f> ]::
+  Prøver å finne den eksakte løysinga av den ordinære differensiallikninga av første orden
+  stem:[\frac\{dy}\{dx}(x)=f'(x, y(x))] der løysinga går gjennom det gjevne punktet.
+LøysODE[ <f'(x y)>, <Start x~0~>, <Start y~0~>, <Slutt x~1~>, <Steg s> ]::
+  Løyser den første ordens ordinære differensiallikninga stem:[\frac\{dy}\{dx}=f'(x,y)] numerisk med startpunkt _(x~0~,
+  y~0~)_, sluttverdi _x~1~_ for _x_ og steglengde _s_ for _x_.
+LøysODE[ <f(x,y)>, <g(x,y)>, <Start x~0~>, <Start y~0~>, <Slutt t>, <Steg s> ]::
+  Løyser den første ordens ordinære differensiallikninga stem:[\frac\{dy}\{dx}=\frac\{f(x,y)}\{g(x,y)}] numerisk med
+  startpunkt _(x~0~, y~0~)_, maksimal verdi for ein intern parameter _t_ og steglengde _s_ for _t_. Denne versjonen av
+  kommandoen kan virke der den førre versjonen feiler, til dømes når løysingskurva har vertikale punkt.
+LøysODE[ <b(x)>, <c(x)>, <f(x)>, <Start x>, <Start y>, <Start y'>, <Slutt x>, <Steg>]::
+  Løyser den andre ordens ordinære differensiallikninga stem:[y''+b(x)y'+c(x)y=f(x)] numerisk.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++LøysODE[-x, y, x(A), y(A), 5, 0.1]++` løyser stem:[\frac\{dy}\{dx}=- \frac\{x}\{y} ] ved å bruke eit tidlegare
+definert punkt _A_ som startpunkt.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++LøysODE[-x*y, x(A), y(A), 5, 0.1]++` løyser stem:[\frac\{dy}\{dx}=-xy] ved å bruke eit tidlegare definert punkt _A_
+som startpunkt.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++LøysODE[y / x,(1,2)]++` yields _f(x) = 2 x_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++LøysODE[y / x]++` gjev _f(x) = c~1~ x_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Resultatet av kommandoen er alltid ein xref:/commands/GeometriskStad.adoc[geometriske stad] (lokus). Algoritmen
+er for augeblikket basert på Runge-Kutta numeriske metodar.
+
+====
+
+[NOTE]
+====
+
+*Merk:* For å finne løysinga for _x_-verdiar som er mindre enn _x(A)_ er det berre å skrive inn ein negativ sluttverdi
+for _t_, til dømes `++LøysODE[-x, y, x(A), y(A), -5, 0.1]++`.
+
+====
+
+[NOTE]
+====
+
+*Merk:* For å finne løysinga for _x_-verdiar som er mindre enn _x(A)_ er det berre å skrive inn ein negativ sluttverdi
+for _x_, til dømes `++LøysODE[-x*y, x(A), y(A), -5, 0.1]++`
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* xref:/commands/Lengde.adoc[Lengde][ <Geometrisk stad> ] let deg finne talet på punkt som er i den berekna
+xref:/commands/GeometriskStad.adoc[geometriske staden].
+* xref:/commands/Første.adoc[Første][ <Geometrisk stad>, <Tal> ] let deg ta ut punkta som ei liste; til dømes ved
+`++Første[Lok1, Lengde[Lok1]]++`.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommanoen xref:/commands/Retningsdiagram.adoc[Retningsdiagram].
+
+====
+
+== CAS-delen
+
+LøysODE[ <Likning> ]::
+  Prøver å finne den eksakte løysinga av den ordinære differensiallikninga av første orden stem:[\frac\{dy}\{dx}(x)=f(x,
+  y(x))]. For første- og andrederiverte av _y_ kan du bruke _y'_ og _y''_.
+LøysODE[ <Likning y'=f(x, y)>, <Punkt L på f> ]::
+  Prøver å finne den eksakte løysinga av den første eller andre ordens ordinære differensiallikninga
+  stem:[\frac\{dy}\{dx}(x)=f(x, y(x))] som går gjennom punktet (eller lista med punkt) _L_.
+LøysODE[ <y'=f(x, y)>, <Punkt L på f>, <Punkt L' på f'> ]::
+  Prøver å finne den eksakte løysinga av den første eller andre ordens ordinære differensiallikninga
+  \frac\{dy}\{dx}(x)=f(x, y(x))\) og går gjennom punktet (eller lista med punkt) _L_ og _f'_ går gjennom punktet (eller
+  lista med punkt) _L'_ .
+LøysODE[ <Likning v'=f(u,v)>, <Avhengig variabel v>, <Uavhengig variabel w> ]::
+  Prøver å finne den eksakte løysinga av den ordinære differensiallikninga av første orden stem:[\frac\{dv}\{dw}(w)=f(w,
+  v(w))].
+LøysODE[ <Likning v'=f(u,v)>, <Avhengig variabel v>, <Uavhengig variabel w>, <Punkt L på f> ]::
+  Kombinerer parametrar frå syntaks nummer to og fire.
+SolveODE[ <Likning v'=f(u,v)>, <Avhengig variabel v>, <Uavhengig variabel w>, <Punkt L på f>, <Punkt L' på f'> ]::
+  Kombinerer parametrar frå syntaks nummer tre og fire.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++LøysODE[v'=v / w, w,  v]++` gjev _v = c~1~ w_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++LøysODE[y'=y / x,(1,2)]++` gjev _y = 2 x_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++LøysODE[y'=y / x,(1,2)]++` gjev _y = 2 x_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++LøysODE[y'=y / x]++` gjev _f(x) = c~1~ x_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* For kompabilitet med inntastingsfeltet; dersom første parameter er eit uttrykk uten _y'_ eller _y''_, vil det
+vere det same som høgre sida i ei ordinær differensiallikning med venstre side lik _y'_.
+
+====

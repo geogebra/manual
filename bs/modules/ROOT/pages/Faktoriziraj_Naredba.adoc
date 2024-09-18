@@ -1,0 +1,43 @@
+= Faktoriziraj Naredba
+:page-en: commands/Factor
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+Faktoriziraj[ <Polinom> ]::
+  Faktorizira/rastavlja polinom na proste faktore u polju realnih brojeva.
+
+[EXAMPLE]
+====
+
+`++Faktoriziraj[x^2 + x - 6]++` daje _f(x) = (x - 2) (x + 3)_.
+
+====
+
+== CAS Sintaksa
+
+Faktoriziraj[ <Polinom> ]::
+  Faktorizira/rastavlja polinom na proste faktore u polju realnih brojeva.
+Faktoriziraj[ <Izraz>, <Promjenljiva> ]::
+  Faktorizira/rastavlja algebarski izraz na proste faktore u polju realnih brojeva u odnosu na zadatu promjenljivu.
+
+[EXAMPLE]
+====
+
+* `++Faktoriziraj[x^2 - y^2, x]++` daje _(x + y) (x - y)_, faktorizaciju od _x^2^ - y^2^_ u odnosu na promjenljivu _x_,
+* `++Faktoriziraj[x^2 - y^2, y]++` daje _(-x - y) (-x + y)_, faktorizaciju od _x^2^ - y^2^_ u odnosu na promjenljivu
+_y_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Faktoriziraj[x^2 - y^2]++`daje _(x + y) (x - y)_.
+
+====
+
+[NOTE]
+====
+
+Vidi xref:/KFaktor_Naredba.adoc[KFaktor Naredba].
+
+====

@@ -1,0 +1,84 @@
+= Problem med installasjon
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+:toc:
+
+== Webstart
+
+=== Webstart reinstallasjon på Windows XP
+
+* Startmeny, Kjør..., skriv inn "javaws -viewer" og trykk [.kcode]#Enter#
+* Høgreklikk på GeoGebra -> Slett
+* Køyr GeoGebra Webstart på nytt
+
+=== Webstart reinstallasjon på Windows 7
+
+* Skriv inn "javaws -viewer" i Startmenyen og trykk [.kcode]#Enter#
+* Høgreklikk på GeoGebra -> Slett
+* Køyr GeoGebra Webstart på nytt
+
+=== Webstart reinstallasjon på Windows Vista
+
+* Deaktiver UAC
+* Start maskina på nytt
+* Skriv inn "javaws -viewer" i Startmenyen og trykk [.kcode]#Enter#
+* Høgreklikk på GeoGebra -> Slett
+* Køyr GeoGebra Webstart på nytt
+* Aktiver UAC
+
+=== Webstart reinstallasjon på Mac
+
+* Slett GeoGebra.app frå Program-mappa
+* Gå til Systemvalg via Programmer i Finder eller via Spotlight
+* Gå til Java under kategorien _Annet_
+* Under fana _General_ klikk på knappen _View_
+* Merk alle filer som heter geogebra
+* Klikk på det røde krysset øverst i vinduet
+* Lukk vinduene og køyr GeoGebra Webstart på nytt
+
+=== Webstart reinstallasjon på Linux
+
+* Opne ein terminal
+* javaws -viewer
+* Høgreklikk på geogebra.jnlp -> Slett
+* Køyr GeoGebra Webstart på nytt
+
+== Applet problem
+
+Sjekk om Java fungerer på maskina di: http://www.java.com/en/download/help/testvm.xml
+
+* Gå til Java på kontrollpanelet -> General -> Temporary Internet Files -> Settings -> Delete files...
+* For å finne Java på kontrollpanelet til Windows 7, opne kontrollpanelet og skriv inn "Java" i søkeboksen oppe til
+høgre.
+* På Mac finnes kontrollpanelet til Java under Systemvalg
+
+== Assosiere .ggb filer med Webstart
+
+*Windows*
+
+* Startmeny -> Kjør -> javaws -verbose -import -shortcut -association http://www.geogebra.org/webstart/geogebra.jnlp
+
+*Linux eller Mac*
+
+* Åpne ein terminal
+* javaws -verbose -import -shortcut -association http://www.geogebra.org/webstart/geogebra.jnlp
+
+== Problem med at offline-installasjonen (Windows) fjernar ein gammel versjon av GeoGebra
+
+* Startmeny -> Kjør -> explorer C:\Programfiler\Zero G Registry
+* Rediger denne fila i Notisblokk: .com.zerog.registry.xml. Fjern alt som omhandlar GeoGebra.
+
+NB! C:\Programfiler\Zero G Registry er ei skjult mappe og vil vanlegvis ikkje vere synleg i C:\Programfiler
+
+== Nettverksinstallasjon (Windows)
+
+* Installer på ei enkeltståande maskin
+* Kopier filene frå C:\Programfiler\GeoGebra til nettverket
+* Assosier .ggb og .ggt filer med GeoGebra.exe
+
+== Andre feilmeldinger
+
+Feilmelding: "Installer User Interface Not Supported" Dette er eit problem når Windows brukarnamnet ditt inneheld
+uvanlege teikn, som til dømes !, # Løysing: Lag ein annan bruker, t.d. Test, og installer medan du er pålogga med den
+brukaren
+http://www.hauser-wenz.de/s9y/index.php?/archives/138-Installer-User-Interface-Mode-Not-Supported.html[referanse]

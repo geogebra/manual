@@ -1,0 +1,103 @@
+= Liste
+:page-en: Lists
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Koristeći se vitičastim zagradama možete izraditi listu nekoliko objekata (npr. točaka, dužina, kružnica).
+
+[EXAMPLE]
+====
+
+* `++L = {A, B, C}++` daje listu koja se sastoji od tri prethodno definirane točke A, B, i C.
+* `++L = {(0, 0), (1, 1), (2, 2)}++` stvara listu unesenih točaka, iako su one neimenovane.
+
+====
+
+[NOTE]
+====
+
+Prema zadanim postavkama, elementi ove liste nisu prikazani u xref:/Grafički_prikaz.adoc[grafičkom prikazu].
+
+====
+
+Za dohvat pojedinih elemenata liste koristite naredbu xref:/commands/Element.adoc[Element]. Liste možete koristiti i kao
+argumente kod operiranja s listama (dalje u ovom članku) ili kod xref:/commands/Lista_naredbe.adoc[naredbi za liste].
+
+== Uspoređivanje lista objekata
+
+Možete uspoređivati dvije liste objekata:
+
+* List1 == List2: Uspoređuje jesu li liste objekata jednake i vraća true ili false kao rezultat.
+* List1 != List2: Uspoređuje jesu li liste objekata različite i vraća true ili false kao rezultat.
+
+== Operacija s listama
+
+<Object> ∈ <List> je element od
+
+<List> ⊆ <List> je podskup od
+
+<List> ⊂ <List> je pravi podskup od
+
+<List> \ <List> razlika lista (razlika skupova)
+
+== Primjenjivanje operacija i funkcija na liste
+
+Ako primjenjujete xref:/Preddefinirane_funkcije_i_operatori.adoc[operacije ili predefinirane funkcije] na liste, uvijek
+ćete dobiti novu listu kao rezultat.
+
+=== Zbrajanje i oduzimanje
+
+* Lista1 + Lista2: Zbraja odgovarajuće elemente dviju lista.
++
+[NOTE]
+====
+
+Dvije liste moraju biti jednakih duljina.
+
+====
+* List + Broj: Pribraja broj svakom elementu liste.
+* Lista1 – Lista2: Oduzima odgovarajuće elemente druge liste od odgovarajućih elemenata prve liste.
++
+[NOTE]
+====
+
+Dvije liste moraju biti jednakih duljina.
+
+====
+* Lista – Broj: Oduzima broj od svakog elementa liste.
+
+=== Množenje i dijeljenje
+
+* Lista1 * Lista2: Množi odgovarajuće elemente dviju lista.
++
+[NOTE]
+====
+
+Liste moraju biti jednakih duljina. Ako su dvije liste kompatibilne matrice, koristi se matrično množenje.
+
+====
+* Lista * Broj: Množi svaki element liste brojem.
+* Lista1 / Lista2: Dijeli odgovarajuće elemente prve liste odgovarajućim elementima druge liste.
++
+[NOTE]
+====
+
+Liste moraju biti jednakih duljina.
+
+====
+* Lista / Broj: Dijeli svaki element, liste brojem.
+* Broj/ Lista: Dijeli broj svakim elementom liste.
+
+[NOTE]
+====
+
+Vidi još xref:/Točke_i_vektori.adoc[Vektorski produkt].
+
+====
+
+=== Ostali primjeri
+
+* Lista^2: Kvadrira svaki element liste.
+* 2^Lista: Napravit će listu potencija baze 2 s eksponentima iz zadane liste.
+* Lista1^Lista2: Napravit će listu potencija _a^b_, gdje su _a_ i _b_ odgovarajući elementi iz Lista1 i Lista2.
+* sin(Lista): Primjenjuje funkciju sinus na svaki element liste. Korisnički definiane xref:/Funkcije.adoc[funkcije] mogu
+se jednako tako primijeniti na liste.

@@ -1,0 +1,32 @@
+= TrapesSum Kommando
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+TrapesSum[ <Funksjon f>, <Tal a>, <Tal b>, <Tal på trapes n> ]::
+  Kommandoen gjev ei tilnærming til arealet under grafen til funksjonen. Intervallet [_a_, _b_] vert delt opp i n
+  delintervall med breidde _(a - b)/n_. I kvart delintervall vert det teikna eit trapes med breidde lik
+  intervallbreidda. Hjørna til trapeset er punkta _(a, 0)_, _(b, 0)_, _(a, f(a))_ og _(b, f(b))_. Kommandoen finn summen
+  av areala til alle rektangla.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+Definer funksjonen stem:[f(x)=x^2+3x+4] og skriv inn `++TrapesSum[f, -2, 2, 2]++`. Intervallet [-2, 2] vert då delt opp
+i to delintevall [-2, 0] og [0, 2] der det vert teikna to trapes med breidde lik 2.
+
+Arealet som vert funne er 24.
+
+Det eksakte svaret gjeve av `++Integral[f, -2, 2]]++` er 21.33 (evt. stem:[\frac\{64}\{3}] i CAS-delen).
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Når _n_ går mot uendeleg vil svaret bli likt som for kommandoen xref:/commands/Integral.adoc[Integral].
+* Sjå også kommandoen xref:/commands/RektangelSum.adoc[RektangelSum].
+
+====

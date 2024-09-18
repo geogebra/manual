@@ -1,0 +1,21 @@
+= UvjetnoZadržavanje naredba
+:page-en: commands/KeepIf
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+UvjetnoZadržavanje[ <uvjet>, <lista> ]::
+  Izradit će novu listu koja sadrži samo one elemente početne liste koji zadovoljavaju zadani uvjet.
+
+[EXAMPLE]
+====
+
+`++UvjetnoZadržavanje[x<3, {1, 2, 3, 4, 1, 5, 6}]++` izradit će listu _\{1, 2, 1}_.
+
+====
+
+[NOTE]
+====
+
+Kod liste brojeva mogu se koristiti proizvoljni uvjeti. Kod ostalih listi mogu se koristiti samo uvjeti
+`++x==konstanta++` ili `++x!=konstanta++`.
+
+====

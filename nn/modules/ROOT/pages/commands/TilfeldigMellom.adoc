@@ -1,0 +1,43 @@
+= TilfeldigMellom Kommando
+:page-en: commands/RandomBetween
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+TilfeldigMellom[ <Tal a>, <Tal b> ]::
+  Genererer eit tilfeldig heiltal mellom _a_ og _b_, inkludert _a_ og _b_ sjølv.
+TilfeldigMellom[ <Minste heiltal>, <Største heiltal>, <Boolsk låst> ]::
+  Genererer eit tilfeldig heiltal mellom _a_ og _b_, inkludert _a_ og _b_ sjølv.
+  Dersom _Boolsk låst = false_ vert det generert eit nytt tal når vi oppdaterer (trykker [.kcode]#F9#)
+  Dersom _Boolsk låst = true_ vert det genererte talet låst og kan ikkej verte oppdatert
+
+[EXAMPLE]
+====
+
+*Døme:* `++TilfeldigMellom[-1,1]++` kan gje tala -1, 0 eller 1.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Du kan bruke _Oppdater alt_ i xref:/Vis_meny.adoc[Vis-menyen] (eller trykke [.kcode]#F9# eller
+[.kcode]##Ctrl##+[.kcode]#R#) for å få eit nytt tilfeldig tal.
+* Sjå også dei andre kommandoane for tilfeldige tal: xref:/commands/SetStartverdi.adoc[SetStartverdi],
+xref:/commands/TilfeldigBinomial.adoc[TilfeldigBinomial],
+xref:/commands/TilfeldigElement.adoc[TilfeldigElement],xref:/commands/TilfeldigNormalfordeling.adoc[TilfeldigNormalfordeling],
+xref:/commands/TilfeldigPoisson.adoc[TilfeldigPoisson] og xref:/commands/TilfeldigUniform.adoc[TilfeldigUniform].
+
+====
+
+== CAS-delen
+
+TilfeldigMellom[ <Tal a>, <Tal b> ]::
+  Genererer eit tilfeldig heiltal mellom _a_ og _b_, inkludert _a_ og _b_ sjølv.
+
+[EXAMPLE]
+====
+
+*Døme:* `++TilfeldigMellom[-1,1]++` kan gje tala -1, 0 eller 1.
+
+====

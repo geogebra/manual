@@ -1,0 +1,52 @@
+= BevisDetaljar Kommando
+:page-en: commands/ProveDetails
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+|This page is about a feature that is supported only in
+xref:/s_index_php?title=Release_Notes_GeoGebra_5_0_action=edit_redlink=1.adoc[GeoGebra 5.0 Beta].
+|===
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Varsel,title="Varsel",width=18,height=18] *Varsel*: |Denne kommandoen er ikkje ferdig
+konstruert. Syntaksen og returnerte verdiar kan verte endra. Det kan oppstå problem ved bruk av kommandoen.
+|===
+
+BevisDetaljar[ <Boolsk uttrykk> ]::
+  Returnerer nokre detaljar om resultatet av det automatiske beviset.
+  Normalt vil GeoGebra avgjere om xref:/Boolske_verdiar.adoc[boolske uttrykk] er sanne ved bruk av numeriske
+  utrekningar. Denne kommandoen vil imidlertid ta i bruk symbolske metodar for å avgjere om uttrykket generelt er _true_
+  eller _false_. Denne kommandoen fungerer på same måte som kommandoen xref:/commands/Bevis.adoc[Bevis], men gjev også
+  nokre detaljar som ei xref:/Lister.adoc[liste].
+  * Ei tom liste *\{}* dersom GeoGebra ikkje kan avgjere svaret.
+  * Ei liste med eit element: *\{false}* dersom uttrykket ikkje er generelt sant.
+  * Ei liste med eit element: *\{true}* dersom uttrykket alltid er sant.
+  * Ei liste med fleire element: inneheld den boolske verdien _true_ og ei liste for dei såkalla _ikkje-degenererte
+  vilkåra_ dersom uttrykket er sant under nokre vilkår. Til dømes vil *\{true, \{"DegenerertMangekant[A, B, C, D"}}*
+  vere sann dersom ingen av vilkåra er sanne.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+Definer ein trekant med hjørner _A_, _B_ og _C_, og definer `++D = MidtPunkt[B, C]++`, `++E = MidtPunkt[A, C]++`,
+`++p=Linje[A, B]++` og `++q=Linje[D, E]++`. Då vil `++BevisDetaljar[p∥q]++` gi \{true, \{"ErLike[A, B]"}}, som vil seie
+at dersom punkta _A_ og _B_ er ulike så vil midtlinja _DE_ til trekanten vere parallell til sida _AB_.
+
+====
+
+Det kan skje at lista med ikkje-degenererte vilkår ikkje er den enklaste moglege mengda.
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommanden xref:/commands/Bevis.adoc[Bevis], sida om xref:/Boolske_verdiar.adoc[boolske verdiar] og
+forklaringa på dei http://dev.geogebra.org/trac/wiki/TheoremProving[tekniske detaljane til algoritma] (engelsk lenke).
+
+====

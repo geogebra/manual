@@ -1,0 +1,62 @@
+= Frekvencija naredba
+:page-en: commands/Frequency
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Frekvencija[ <lista neobrađenih podataka> ]::
+  Daje listu broja pojavljivanja svakog pojedinog elementa iz ulazne liste. U ulaznoj listi trebaju biti brojevi ili
+  tekstovi. Ulazna lista se prethodno sortira prema rastućem poretku. Ako uz to želimo dobiti i odgovarajuću listu
+  jedinstvenih elemenata u rastućem poretku trebamo koristiti naredbu Jedinstveni[ <lista> ]
+
+[EXAMPLE]
+====
+
+Unos `++lista1 = {"ovo", "je", "tekst", "a", "ovo", "nije"}++`. `++Frekvencija[lista1]++` daje izlaznu listu \{1, 1, 1,
+2, 1}
+
+====
+
+[EXAMPLE]
+====
+
+Unos `++lista1 = { "a", "a", "x", "x", "x", "b" }++`. `++Frekvencija[lista1]++` daje listu \{ 2, 1, 3 }.
+`++Jedinstveni[lista1]++` stvara listu \{ "a", "b", "x" }.
+
+====
+
+Frekvencija[ <kumulacija - logička vrijednost>, <lista neobrađenih podataka> ]::
+  Ako je _kumulacija - logička vrijednost_ = false, radi isto što i naredba Frekvencija[ <lista neobrađenih podataka> ]
+  Ako je _kumulacija - logička vrijednost_ = true, daje listu _kumulativnih frekvencija_ iz naredbe Frekvencija[ <lista
+  neobrađenih podataka> ].
+
+[EXAMPLE]
+====
+
+Unos `++lista1 = { 0, 0, 0, 1 , 1, 2 }++`. `++Frekvencija[true, lista1]++` daje listu \{ 3, 5, 6 }.
+`++Frequency[false, list1]++` returns the list \{ 3, 2, 1}. `++Unique[list1]++` returns the list \{ 0, 1, 2 }
+
+====
+
+Frekvencija[ <lista granica razreda>, <lista neobrađenih podataka> ]::
+  Daje listu broja pojavljivanja onih elemenata iz ulazne liste koji se nalaze unutar intervala formiranih pomoću _liste
+  granica razreda_. Svi intervali osim posljednjeg su oblika [a, b). Posljednji interval je oblika [a, b].
+
+[EXAMPLE]
+====
+
+`++Frekvencija[{1,2,3},  {1,1,2,3}]++` dati će \{ 2, 2 }.
+
+====
+
+Frekvencija[ <kumulacija - logička vrijednost>, <lista granica razreda>, <lista neobrađenih podataka> ]::
+  Ako je _kumulacija - logička vrijednost_ = false, radi isto što i naredba Frekvencija[ <lista granica razreda>, <lista
+  neobrađenih podataka> ]
+  Ako je _kumulacija - logička vrijednost_ = true, daje listu _kumulativnih frekvencija_ iz naredbe Frekvencija[ <lista
+  granica razreda>, <lista neobrađenih podataka> ]
+
+Frekvencija[ <lista granica razreda>, <lista neobrađenih podataka>, <koristi gustoću - logička vrijednost>, <skala
+gustoće> (opcionalno) ]::
+  Vraća listu frekvencija za odgovarajuću xref:/commands/Histogram.adoc[Histogram naredba].
+
+Frekvencija[ <kumulacija - logička vrijednost>, <lista granica razreda>, <lista neobrađenih podataka>, <koristi gustoću
+- logička vrijednost>, <skala gustoće> (opcionalno) ]::
+  Vraća listu frekvencija za odgovarajuću xref:/commands/Histogram.adoc[Histogram naredba].

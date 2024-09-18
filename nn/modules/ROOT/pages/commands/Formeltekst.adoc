@@ -1,0 +1,58 @@
+= Formeltekst Kommando
+:page-en: commands/FormulaText
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Formeltekst[ <Objekt> ]::
+  Gjev formelen for objektet som ein xref:/LaTeX.adoc[LaTeX] tekst.
+Formeltekst[ <Objekt>, <Boolsk verdi for substitusjon av variablar> ]::
+  Gjev formelen for objektet som ein xref:/LaTeX.adoc[LaTeXtekst].
+  * Dersom _Boolsk verdi = true_ vert verdiar sett inn for variablar
+  * Dersom _Boosk verdi = false_ vert variabelnamna ståande i teksten
+
+[EXAMPLE]
+====
+
+*Døme:* Dersom _a = 2_ og _f(x) = a x^2^_, så vil
+
+* `++Formeltekst[f, true]++` gje _2 x^2^_ (som ein LaTeX tekst)
+* `++Formeltekst[f, false]++` gje _a x^2^_ (som ein LaTeX tekst)
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* Dersom _a = 2_ og _f(x) = a x^2^_, så vil `++Formeltekst[f]++` gje _2 x^2^_ (som ein LaTeX tekst).
+
+====
+
+[NOTE]
+====
+
+*Merk:* Som standard vert verdiar sett inn for variablar.
+
+====
+
+Formeltekst[ <Objekt>, <Boolsk verdi for substitusjon av variablar>, <Boolsk Vis namn> ]::
+  Gjev formelen for objektet som ein xref:/LaTeX.adoc[LaTeX] tekst.
+  * Dersom _Boolsk verdi = true_ vert verdiar sett inn for variablar
+  * Dersom _Boosk verdi = false_ vert variabelnamna ståande i teksten
+  * Dersom _Boolsk Vis = true_ vert objektnamnet ståande i teksten
+  * Dersom _Boosk Vis = false_ vert objektnamnet fjerna frå teksten
+
+[EXAMPLE]
+====
+
+*Døme:* Dersom _a = 2_ og _f(x) = a x^2^_, så vil
+
+* `++Formeltekst[f, true, true]++` gje _f(x)=2 x^2^_ (som ein LaTeX tekst)
+* `++Formeltekst[f, false, false]++` gje _a x^2^_ (som ein LaTeX tekst)
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoen xref:/commands/Tekst.adoc[Tekst].
+
+====

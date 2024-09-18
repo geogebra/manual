@@ -1,0 +1,22 @@
+= LikningForGeometriskStad Kommando
+:page-en: commands/LocusEquation
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+LikningForGeometriskStad[ <Geometrisk stad> ]::
+  Finn likninga for den xref:/commands/GeometriskStad.adoc[geometriske staden] (lokusen) og teiknar grafen som ei
+  xref:/Kurver.adoc[implisitt kurve].
+LikningForGeometriskStad[ <Geometrisk stad>, <Flyttbart punkt> ]::
+  Finn likninga for den xref:/commands/GeometriskStad.adoc[geometriske staden] (lokusen) og teiknar grafen som ei
+  xref:/Kurver.adoc[implisitt kurve].
+
+[NOTE]
+====
+
+*Merk:*
+
+* Fungerer berre når den geometriseke staden er til dømes linjer, sirklar eller kjeglesnitt
+* Dersom den geometriske staden er for komplisert vil _udefinert_ verte returnert
+* Berekninga vert utført ved bruk av Gröbner basisen, så det kan hende at det vil oppstå ekstra greiner på kurva som
+ikkje var på den opprinnelege geometriske staden
+
+====

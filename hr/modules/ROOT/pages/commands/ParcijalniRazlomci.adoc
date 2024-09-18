@@ -1,0 +1,31 @@
+= ParcijalniRazlomci naredba
+:page-en: commands/PartialFractions
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+ParcijalniRazlomci[ <funkcija> ]::
+  Daje ako je moguće https://en.wikipedia.org/wiki/Partial_fraction[parcijalne razlomke] zadane funkcije u odnosu na
+  glavnu varijablu. Graf funkcije će biti nacrtan u xref:/Grafički_prikaz.adoc[Grafičkom prikazu].
+
+[EXAMPLE]
+====
+
+`++ParcijalniRazlomci[x^2 / (x^2 - 2x + 1)]++` daje _1 + stem:[\frac\{2}\{x - 1}] + stem:[\frac\{1}\{x^2 - 2x + 1}]._
+
+====
+
+== CAS prikaz
+
+ParcijalniRazlomci[ <funkcija> ]
+
+Daje ako je moguće parcijalne razlomke zadane funkcije u odnosu na glavnu varijablu.
+
+ParcijalniRazlomci[ <funkcija>, <varijabla> ]
+
+Daje ako je moguće parcijalne razlomke zadane funkcije u odnosu na zadanu varijablu.
+
+[EXAMPLE]
+====
+
+`++ParcijalniRazlomci[a^2 / (a^2 - 2a + 1), a]++` daje _1 + stem:[\frac\{2}\{a - 1}] + stem:[\frac\{1}\{a^2 - 2a + 1}]._
+
+====

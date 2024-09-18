@@ -1,0 +1,23 @@
+= Massesenter Kommando
+:page-en: commands/Barycenter
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Massesenter[ <Liste med punkt>, <Liste med massar> ]::
+  Finn punktet til https://en.wikipedia.org/wiki/nn:Massesenter[massesenteret] av punkta i lista når vekta til kvart
+  punkt er gjeve av det samsvarande elementet i lista med massar. Massesenteret er det vekta snittet av posisjonen til
+  punkta.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Massesenter[{(2, 0), (0, 2), (-2, 0), (0, -2)}, {1, 1, 1, 1}]++` gjev punktet _(0,0)_ som også er middelposisjonen
+sidan vekta til kvart punkt er lik.
+
+`++Massesenter[{(2, 0), (0, 2), (-2, 0), (0, -2)}, {2, 1, 1, 1}]++` gjev punktet _(0.4,0)_.
+
+* _x_-koordinaten til punktet vart funne slik _stem:[ \frac\{1}\{ 2+1+1+1 }\cdot(2\cdot2+1\cdot0+1\cdot(-2)+1\cdot0)] =
+stem:[\frac\{1}\{ 5 }\cdot2] = 0.4_
+
+====

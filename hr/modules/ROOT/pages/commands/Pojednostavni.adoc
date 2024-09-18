@@ -1,0 +1,44 @@
+= Pojednostavni naredba
+:page-en: commands/Simplify
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Pojednostavni[ <funkcija> ]::
+  Pojednostavnit će zapis funkcije ako je to moguće.
+
+[EXAMPLE]
+====
+
+* `++Pojednostavni[x + x + x]++` dat će funkciju _f(x) = 3x_.
+* `++Pojednostavni[sin(x) / cos(x)]++` dat će funkciju _f(x) = tan(x)_.
+* `++Pojednostavni[-2 sin(x) cos(x)]++` dat će funkciju _f(x) =sin(-2 x)_.
+
+====
+
+Pojednostavni[ <tekst> ]::
+  Pokušava pročistiti tekst izraza tako da izbaci višestruke minuse i slično.
+
+[EXAMPLE]
+====
+
+Za _a=b=c=-1_ `++Pojednostavni["f(x) = " + a + "x² + " + b + "x + " + c]++` daje _f(x)=-x^2 - x - 1_.
+
+====
+
+[NOTE]
+====
+
+xref:/commands/TekstFormulom.adoc[naredba TekstFormulom] obično daje bolji rezultat i jednostavnija je.
+
+====
+
+== CAS prikaz
+
+Pojednostavni[ <funkcija> ]::
+  Pojednostavnit će zapis dane funkcije, ako je moguće. Nedefinirane varijable mogu biti uključene u zapis funkcije.
+
+[EXAMPLE]
+====
+
+`++Pojednostavni[3 * x + 4 * x + a * x]++` daje _x * (a + 7)_.
+
+====

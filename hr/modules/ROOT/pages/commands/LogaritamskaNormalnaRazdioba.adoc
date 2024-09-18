@@ -1,0 +1,29 @@
+= LogaritamskaNormalnaRazdioba naredba
+:page-en: commands/LogNormal
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+LogaritamskaNormalnaRazdioba[ <očekivanje μ>, <standardna devijacija σ>, x ]::
+  Izradit će funkciju gustoće vjerojatnosti (fgv) of https://en.wikipedia.org/wiki/Log-normal_distribution[logaritamske
+  normalne razdiobe] zadane parametrima _μ, σ_.
+LogaritamskaNormalnaRazdioba[ <očekivanje μ>, <standardna devijacija σ>, x, <kumulacija - logička vrijednost> ]::
+  Ako je _kumulacija - logička vrijednost_ = true, izradit će kumulativnu funkciju distribucije za logaritamsku normalnu
+  razdiobu, inače će izraditi fgv za logaritamsku normalnu razdiobu.
+LogaritamskaNormalnaRazdioba[ <očekivanje μ>, <standardna devijacija σ>, <vrijednost varijable v> ]::
+  Izračunat će vrijednost kumulativne funkcije distribucije logaritamske normalne razdiobe za zadani _v_, t.j.
+  vjerojatnost _P(X≤v)_ gdje je _X_ slučajna varijabla logaritamske normalne razdibe zadane parametrima _μ, σ_.
+
+[NOTE]
+====
+
+Daje vjerojatnost za zadanu vrijednost _x_-koordinate (ili površinu ispod krivulje logaritamske normalne razdiobe lijevo
+od zadane _x_-koordinate).
+
+====
+
+== CAS prikaz
+
+xref:/CAS_prikaz.adoc[CAS prikaz] podržava samo ovu sintaksu:
+
+LogaritamskaNormalnaRazdioba[ <očekivanje μ>, <standardna devijacija σ>, <vrijednost varijable v> ]::
+  Izračunat će vrijednost kumulativne funkcije distribucije logaritamske normalne razdiobe za zadani _v_, t.j.
+  vjerojatnost _P(X≤v)_ gdje je _X_ slučajna varijabla logaritamske normalne razdibe zadane parametrima _μ, σ_.

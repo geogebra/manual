@@ -1,0 +1,66 @@
+= Niz naredba
+:page-en: commands/Sequence
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Niz[ <izraz>, <varijabla i>, <početna vrijednost a>, <krajnja vrijednost b> ]::
+  Proizvodi listu objekata dobivenih iz danog izraza upotrebom indeksa__i__ koji se mijenja na intervalu od _a_ do _b_.
+Niz[ <izraz>, <varijabla i>, <početna vrijednost>, <krajnja vrijednost>, <korak povećanja> ]::
+  Proizvodi listu objekata dobivenih iz danog izraza upotrebom indeksa _i_ koji se mijenja na intervalu od _a_ do _b_ s
+  danim korakom povećanja.
+Niz[ <krajnja vrijednost b> ]::
+  Proizvodi listu brojeva od 1 do _b_, npr. \{1, 2, ..., b}.
+
+[EXAMPLE]
+====
+
+`++L = Niz[(2, i), i, 1, 3, 0.5]++` daje listu točaka kojima se _y_-koordinate mijenjaju od 1 do 3 s prirastom 0.5:
+`++L = {(2, 1), (2, 1.5), (2, 2), (2, 2.5), (2, 3)}++`.
+
+====
+
+[EXAMPLE]
+====
+
+`++L = Niz[(2, i), i, 1, 5]++` napravit će listu točaka čije _y_-koordinate poprimaju vrijednosti od 1 to 5:
+`++L = {(2, 1), (2, 2), (2, 3), (2, 4), (2, 5)}++`.
+
+====
+
+[NOTE]
+====
+
+Kako bi parametri _a_ i _b_ bili dinamični možete koristiti xref:/tools/Klizač.adoc[klizač] za promjenu vrijednosti
+varijabli.
+
+====
+
+== CAS prikaz
+
+Niz[ <izraz>, <varijabla i>, <početna vrijednost a>, <krajnja vrijednost b> ]::
+  Proizvodi listu objekata dobivenih iz danog izraza upotrebom indeksa__i__ koji se mijenja na intervalu od _a_ do _b_.
+Niz[ <izraz>, <varijabla i>, <početna vrijednost a>, <krajnja vrijednost b>, <korak povećanja> ]::
+  Proizvodi listu objekata dobivenih iz danog izraza upotrebom indeksa _i_ koji se mijenja na intervalu od _a_ do _b_ s
+  danim korakom povećanja.
+Niz[ <krajnja vrijednost> ]::
+  Proizvodi listu brojeva od 1 do _b_, npr. \{1, 2, ..., b}.
+
+[EXAMPLE]
+====
+
+`++Niz[5]++` daje niz _\{1, 2, 3, 4, 5}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Niz[x^i, i, 1, 10, 2]++` daje niz _\{x, x³, x⁵, x⁷, x⁹}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Ni[x^i, i, 1, 10]++` daje niz _\{x, x², x³, x⁴, x⁵, x⁶, x⁷, x⁸, x⁹, x¹⁰}_.
+
+====

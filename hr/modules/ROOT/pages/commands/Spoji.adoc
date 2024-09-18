@@ -1,0 +1,37 @@
+= Spoji naredba
+:page-en: commands/Join
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Spoji[ <lista>, <lista>, ... ]::
+  Spaja liste.
+Spoji[ <lista listi> ]::
+  Spaja podliste u jednu dulju listu.
+
+[EXAMPLE]
+====
+
+* `++Spoji[{{1, 2}}]++` izradit će listu _\{1, 2}_.
+* `++Spoji[{{1, 2, 3}, {3, 4}, {8, 7}}]++` izradit će listu _\{1, 2, 3, 3, 4, 8, 7}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Spoji[{5, 4, 3}, {1, 2, 3}]++` izradit će listu _\{5, 4, 3, 1, 2, 3}_.
+
+====
+
+[NOTE]
+====
+
+Nova lista sadrži sve elemente početnih listi makar oni bili i jednaki. Elementi nove liste ne mijenjaju poredak.
+
+====
+
+[NOTE]
+====
+
+Nova lista sadrži sve elemente početnih listi makar oni bili i jednaki. Elementi nove liste ne mijenjaju poredak.
+
+====

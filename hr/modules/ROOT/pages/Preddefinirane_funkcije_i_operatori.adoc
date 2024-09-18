@@ -1,0 +1,160 @@
+= Preddefinirane funkcije i operatori
+:page-en: Predefined_Functions_and_Operators
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Brojeve, jednadžbe ili koordinate možemo unositi izravno iz xref:/Traka_za_unos.adoc[trake za unos] i koristeći sljedeće
+unaprijed definirane funkcije i operacije. Logičke operacije i funkcije izlistane su u članku
+xref:/Boolean_vrijednosti.adoc[Boolean vrijednosti].
+
+[NOTE]
+====
+
+Predefinirane funkcije koristimo sa zagradama. Ne smijete ostaviti razmak između naziva funkcije i zagrada.
+
+====
+
+[cols=",",options="header",]
+|===
+|Operacija / Funkcija |Unos
+|Zbrajanje |+
+
+|Oduzimanje |-
+
+|Množenje |* ili razmaknica
+
+|Skalarni umnožak |* ili razmaknica
+
+|Vektorski umnožak ili umnožak determinanti (vidi xref:/Točke_i_vektori.adoc[Točke i vektori]) |⊗
+
+|Dijeljenje |/
+
+|Potenciranje |^ ili eksponent (`++x^2++` ili `++x2++`)
+
+|Faktorijela |!
+
+|Zagrade |( )
+
+|x-koordinata |x( )
+
+|y-koordinata |y( )
+
+|Argument |arg( )
+
+|Konjugirani broj |konjugirano( )
+
+|Apsolutna vrijednost |abs( )
+
+|Predznak |sgn( ) or sign()
+
+|Kvadratni korijen |sqrt( )
+
+|Kubni korijen |cbrt( )
+
+|Slučajan broj između 0 i 1 |random( )
+
+|Eksponencijalna funkcija |exp( ) or ℯ^x^
+
+|Logaritam (prirodni po e) |ln( ) or log( )
+
+|Logaritam po 2 |ld( )
+
+|Logaritam po 10 |lg( )
+
+|Logaritam od _x_ po bazi _b_ |log(b, x )
+
+|Kosinus |cos( )
+
+|Sinus |sin( )
+
+|Tangens |tan( )
+
+|Sekans |sec()
+
+|Kosekans |cosec()
+
+|Kotangens |cot()
+
+|Arkus kosinus |acos( ) or arccos( )
+
+|Arkus sinus |asin( ) or arcsin( )
+
+|Arkus tangens (vraća broj između -π/2 i π/2) |atan( ) or arctan( )
+
+|https://en.wikipedia.org/wiki/Atan2[Arkus tangens (vraća broj između -π i π))] |atan2(y, x)
+
+|Kosinus hiperbolni |cosh( )
+
+|Sinus hiperbolni |sinh( )
+
+|Tangens hiperbolni |tanh( )
+
+|Sekans hiperbolni |sech( )
+
+|Kosekans hiperbolni |cosech( )
+
+|Kotangens hiperbolni |coth( )
+
+|Area kosinus hiperbolni |acosh( ) or arccosh( )
+
+|Area sinus hiperbolni |asinh( ) or arcsinh( )
+
+|Area tangens hiperbolni |atanh( ) or arctanh( )
+
+|Najveće cijelo manje od ili jednako |floor( )
+
+|Najmanje cijelo veće od ili jednako |ceil( )
+
+|Zaokruženo |round( )
+
+|http://mathworld.wolfram.com/BetaFunction.html[Beta funkcija] Β(a, b) |beta(a, b)
+
+|http://mathworld.wolfram.com/IncompleteBetaFunction.html[Nepotpuna beta funkcija] Β(x;a, b) |beta(a, b, x)
+
+|http://mathworld.wolfram.com/RegularizedBetaFunction.html[Nepotpuna regularna beta funkcija] I(x; a, b)
+|betaRegularized(a, b, x)
+
+|https://en.wikipedia.org/wiki/Gamma_function[Gama funkcija] |gamma( x)
+
+|(Lower) http://mathworld.wolfram.com/IncompleteGammaFunction.html[Nepotpuna gama funkcija] γ(a, x) |gamma(a, x)
+
+|(Lower) http://mathworld.wolfram.com/RegularizedGammaFunction.html[Nepotpuna regularna gama funkcija]
+|gammaRegularized(a, x)
+
+|https://en.wikipedia.org/wiki/Error_function[Gausova funkcija greške] |erf(x)
+|===
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Tekst koji slijedi odnosi se na mogućnosti koje su podržane samo u inačici
+http://wiki.geogebra.org/en/Release_Notes_GeoGebra_4.2[GeoGebra 4.2 Beta].
+
+'''''
+
+[cols=",",]
+|===
+|https://en.wikipedia.org/wiki/Digamma_function[Digama funkcija] |psi(x)
+
+|https://en.wikipedia.org/wiki/Polygamma_function[Poligama funkcija] je (m+1)-va derivacija prirodnog logaritma
+https://en.wikipedia.org/wiki/Gamma_function[Gama funkcije, gamma(x)] (m=0,1) |polygamma(m, x)
+
+|http://mathworld.wolfram.com/SineIntegral.html[Integral sinusa] funkcija |sinIntegral(x)
+
+|http://mathworld.wolfram.com/CosineIntegral.html[Integral kosinusa] funkcija |cosIntegral(x)
+
+|http://mathworld.wolfram.com/ExponentialIntegral.html[Integral eksponencijalni] funkcija |expIntegral(x)
+|===
+
+|===
+
+[EXAMPLE]
+====
+
+`++konjugirano(17 + 3 * ί)++` daje _-3 ί + 17_, konjugirano kompleksni broj od _17 + 3 ί_.
+
+Vidi xref:/Kompleksni_brojevi.adoc[Kompleksni brojevi] za detalje.
+
+====

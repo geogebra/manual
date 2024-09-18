@@ -1,0 +1,74 @@
+= Ako naredba
+:page-en: commands/If
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Ako[ <uvjet>, <onda> ]::
+  Daje kopiju zadanog objekta ako je logička vrijednost uvjeta _true_, odnosno nedefinirani objekt ako je ta vrijednost
+  _false_.
+Ako[ <uvjet>, <onda a>, <inače b> ]::
+  Daje kopiju objekta _a_ ako je logička vrijednost uvjeta _true_, tj. kopiju objekta _b_ ako je ta vrijednost _false_.
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Upozorenje,title="Upozorenje",width=18,height=18] *Upozorenje*: |Oba objekta trebaju biti
+istog tipa.
+|===
+
+== Uvjetne funkcije
+
+Kako biste kreirali uvjetnu funkciju možete koristiti uvjetnu naredbu _Ako_. Derivacije i integrale takvih funkcija kao
+i njihova sjecišta možete koristiti na isti način kao i kod "običnih" funkcija - pogledajte naredbe
+xref:/commands/Derivacija.adoc[Derivacija], xref:/commands/Integral.adoc[Integral] i
+xref:/commands/Sjecište.adoc[Sjecište].
+
+[EXAMPLE]
+====
+
+* `++f(x) = Ako[x < 3, sin(x), x^2]++` daje funkciju koja je jednaka _sin(x)_ za _x < 3_ i _x^2^_ za _x ≥ 3_
+* `++f(x) = Ako[x < 3 ∧ x>0, x^3]++` daje funkciju koja je jednaka _x^3^_ za x između 0 i 3 i nedefinirano za _x ≥ 3_
+ili _x ≤ 0_.
+
+====
+
+[NOTE]
+====
+
+Pogledajte poglavlje xref:/Boolean_vrijednosti.adoc[Boolean vrijednosti] za simbole koje ćete koristiti u uvjetnim
+iskazima. Simbole poput ≟, ∧, ≥ naći ćete u padajućem izborniku desno od trake za unos.
+
+====
+
+[NOTE]
+====
+
+Derivacija od *Ako[uvjet, f(x), g(x)]* daje *Ako[uvjet, f'(x), g'(x)]*. Ona neće načiniti nikakvo izračunavanje limesa u
+kritičnim točkama.
+
+====
+
+== Ako naredba u skriptiranju
+
+U mnogim programskim jezicima *ako* ima značenje "Ako je uvjet ispunjen, učini zadano; inače učini nešto drugo". U
+GeoGebri, argumenti za Ako nisu naredbe, već vrijednosti, jedna od njih će biti rezultat. Tako ako želite na primjer
+postaviti vrijednost za _b_ na 2 kada je _a > 2_, ispravan način je `++PostaviVrijednost[b,Ako[a>2,2,b]]++`. Drugi je
+način ugnježđena naredba PostaviVrijednost i Ako je neispravan.
+
+== CAS prikaz
+
+Ako[ <uvjet>, <onda> ]::
+  Ako[ <uvjet>, <onda>, <inače> ];;
+  [width="100%",cols="50%,50%",]
+  |===
+  a|
+  image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+
+  |Some content was not yet translated.
+  |===
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+
+|Some content was not yet translated.
+|===

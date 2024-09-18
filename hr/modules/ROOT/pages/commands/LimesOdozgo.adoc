@@ -1,0 +1,51 @@
+= LimesOdozgo naredba
+:page-en: commands/LimitAbove
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+LimesOdozgo[ <funkcija f>, <vrijednost t> ]
+
+Izračunava https://en.wikipedia.org/wiki/Limit_of_a_function#One-sided_limits[limes zdesna] funkcije _f_ za zadanu
+vrijednost _t_ kojoj teži nezavisna varijabla.
+
+[NOTE]
+====
+
+Svi se limesi ne mogu izračunati pomoću programa GeoGebra, pa će u tom slučaju biti vraćen odgovor *nedefinirano*
+(jednako kada je i ispravan rezultat nedefinirano).
+
+====
+
+== CAS prikaz
+
+LimesOdozgo[ <izraz f>, <vrijednost t> ]::
+  Izračunava limes zdesna izraza _f_ za zadanu vrijednost _t_ glavne varijable.
+LimesOdozgo[ <izraz f>, <varijabla v>, <vrijednost t> ]::
+  Izračunava limes zdesna izraza od više varijabli _f_ za zadanu vrijednost _t_ zadane varijable _v_.
+
+[EXAMPLE]
+====
+
+`++LimesOdozgo[x / a, a, 0]++` daje stem:[ sgn(x) \infty] .
+
+====
+
+[EXAMPLE]
+====
+
+`++LimesOdozgo[1 / a, a, 0]++` daje stem:[\infty] .
+
+====
+
+[EXAMPLE]
+====
+
+`++LimesOdozgo[1 / x, 0]++` daje stem:[\infty] .
+
+====
+
+[NOTE]
+====
+
+Pogledajte još xref:/commands/Limes.adoc[naredbu Limes] i xref:/commands/LimesOdozdo.adoc[naredbu LimesOdozdo].
+
+====

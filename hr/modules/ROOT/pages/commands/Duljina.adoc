@@ -1,0 +1,70 @@
+= Duljina naredba
+:page-en: commands/Length
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Duljina[ <vektor> ]::
+  Izračunava duljinu vektora.
+Duljina[ <točka> ]::
+  Izračunava duljinu radijus-vektora zadane točke.
+Duljina[ <funkcija>, <početna vrijednost x>, <završna vrijednost x> ]::
+  Izračunava duljinu grafa funkcije na intervalu [_x1, x2_].
+Duljina[ <funkcija>, <početna točka A>, <završna točka B> ]::
+  Izračunava duljinu grafa funkcije između točaka _A_ i _B_.
+Duljina[ <krivulja>, <početna vrijednost t1>, <završna vrijednost t1> ]::
+  Izračunava duljinu krivulje između parametarskih vrijednosti _t1_ i _t2_.
+Duljina[ <krivulja>, <početna točka>, <završna točka> ]::
+  Izračunava duljinu krivulje između dviju točaka b _A_ i _B_ koje pripadaju krivulji.
+Duljina[ <lista> ]::
+  Izračunava duljinu liste, tj. broj elemenata liste.
+Duljina[ <tekst> ]::
+  Izračunava koliko je znakova u tekstu.
+Duljina[ <lokus> ]::
+  Izračunava broj točaka pomoću kojih je dani lokus načinjen. Koristite naredbu xref:/commands/Opseg.adoc[Opseg][Locus]
+  kako biste dobili duljinu samog lokusa. Za više detalja pogledajte članak o naredbi
+  xref:/commands/Početni.adoc[Početni].
+
+[EXAMPLE]
+====
+
+`++Duljina[2x, 0, 1]++` dat će stem:[\sqrt\{5}].
+
+====
+
+[NOTE]
+====
+
+Ako dane točke ne pripadaju grafu funkcije, tada se koriste njihove x‐koordinate u određivanju intervala.
+
+====
+
+[NOTE]
+====
+
+Pogledajte još i alat image:Tool_Distance.gif[Tool Distance.gif,width=32,height=32]
+xref:/tools/Udaljenost_ili_duljina.adoc[Udaljenost ili duljina].
+
+====
+
+== CAS prikaz
+
+Duljina[ <funkcija>, <početna vrijednost t1>, <završna vrijednost t2> ]::
+  Izračunava duljinu grafa funkcije između x=__t1__ i x=__t2__.
+Duljina[ <funkcija>, <varijabla a>, <početna točka t1>, <krajnja točka t2> ]::
+  Izračunava duljinu grafa funkcije između a=__t1__ i a=__t2__.
+
+[EXAMPLE]
+====
+
+`++Duljina[2x, 0, 1]++` dajestem:[\sqrt\{5}].
+
+====
+
+[EXAMPLE]
+====
+
+`++Duljina[2a, a,  0, 1]++` daje stem:[\sqrt\{5}].
+
+====
+
+Duljina[<dužina>]::
+  Izračunava duljinu dužine.

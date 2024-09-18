@@ -1,0 +1,41 @@
+= LaTexFormula Naredba
+:page-en: commands/FormulaText
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+LaTexFormula[ <Figura> ]::
+  kao rezultat daje LaTex formulu za figuru.
+
+[EXAMPLE]
+====
+
+Ako je _a = 2_ i _f(x) = a x^2^_, onda `++LaTexFormula[f]++` daje _2 x^2^_ (kao LaTeX).
+
+====
+
+LaTexFormula[ <Figura>, <Boolean-ova promjenljiva za supstituciju promjenjivih> ]::
+  kao rezultat daje LaTex formulu za figuru. Boolean-ova promjenjiva određuje da li će vrijednosti promjenljivih u
+  formuli biti zamjenjena s promjenljivim (_true-istina_) ili će imena promjenljivih biti prikazana u tekstu
+  (_false-neistina_).
+
+[EXAMPLE]
+====
+
+Ako je _a = 2_ i _f(x) = a x^2^_, onda `++LaTexFormula[f]++` daje _2 x^2^_ (kao LaTeX) i `++LaTexFormula[f, false]++`
+daje _a x^2^_ (kao LaTeX) .
+
+====
+
+LaTexFormula[ <Figura>, <Boolean-ova promjenljiva za supstituciju promjenjivih>, <Boolean-ova promjenljiva Prikaži ime>
+]::
+  kao rezultat daje LaTex formulu za figuru. Prva Boolean-ova promjenjiva određuje da li će vrijednosti promjenljivih u
+  formuli biti zamjenjena s promjenljivim (_true-istina_) ili će imena promjenljivih biti prikazana u tekstu
+  (_false-neistina_), dok druga Boolean-ova promjenljiva određuje da li će ime figure biti prikazano u tekstu
+  (_true-istina_) ili ne (_false-neistina_).
+
+[EXAMPLE]
+====
+
+Ako je _a = 2_ i _f(x) = a x^2^_, onda `++LaTexFormula[f, true, true]++` daje _f(x)=2 x^2^_ (kao LaTeX) i
+`++LaTexFormula[f, false, false]++` daje _a x^2^_ (kao LaTeX) .
+
+====

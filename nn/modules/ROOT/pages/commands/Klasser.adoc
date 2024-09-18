@@ -1,0 +1,32 @@
+= Klasser Kommando
+:page-en: commands/Classes
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Klasser[ <Liste med data L>, <Tal på klasser n> ]::
+  Gjev ei liste med klassegrenser. Den første grensa (_min_) er lik minste verdi i _L_, medan siste den siste grensa
+  (_maks_) er lik største verdi i _L_. Resten av grensene vil verte plassert med same avstand mellom _min_ og _maks_.
+Klasser[ <Liste med data L>, <Start S>, <Klassebreidde b> ]::
+  Gjev ei liste med klassegrenser. Den første grensa er lik _S_. Avstanden mellom klassegrensene vil vere gjeven av _b_.
+  Den siste grensa vil vere det lågaste talet på forma _S + n*b_, der _n_ er eit heiltal. Den siste grensa er større
+  eller lik den største verdien i _L_.
+
+[EXAMPLE]
+====
+
+*Døme:* `++Klasser[{0.1, 0.2, 0.4, 1.1}, 0, 1]++` gjev \{0, 1, 2}
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++Klasser[{1, 3, 5, 7, 8, 9, 10}, 3]++` gjev \{1, 4, 7, 10}
+
+====
+
+[NOTE]
+====
+
+*Merk:* Resultatet avheng berre av _n_ og minste og største verdi i _L_.
+
+====

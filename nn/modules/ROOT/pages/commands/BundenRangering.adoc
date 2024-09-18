@@ -1,0 +1,30 @@
+= BundenRangering Kommando
+:page-en: commands/TiedRank
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+BundenRangering[ <Liste L> ]::
+  Gjev ei liste der element _i_ er lik rangen til element _i_ i _L_.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++BundenRangering[{4, 1, 2, 3, 4, 2}]++` gjev \{5.5, 1, 2.5, 4, 5.5, 2.5}.
+* `++BundenRangering[{3, 2, 2, 1}]++` gjev \{4, 2.5, 2.5, 1}.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Rangen til eit element er posisjonen i lista det får når kommandoen `++Sorter[L]++` vert brukt. Dersom det finst
+fleire like element i _L_, vil snittet av rangen tilhøyrande desse elementa verte brukt.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoen xref:/commands/OrdinalRangering.adoc[OrdinalRangering]
+====

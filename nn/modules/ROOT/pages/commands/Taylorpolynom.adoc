@@ -1,0 +1,58 @@
+= Taylorpolynom Kommando
+:page-en: commands/TaylorPolynomial
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Taylorpolynom[ <Funksjon>, <Tal a>, <Tal n> ]::
+  Finn Taylorrekka av grad _n_ til den gjevne funksjonen om punktet _x = a_.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Taylorpolynom[x^2, 3, 1]++` gjev _6 x - 9_ som er Taylorrekka av første grad til _x^2^_ om _x = 3_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Talet _n_ som avgjer graden til Taylorrekka må vere eit heiltal større eller lik 0.
+
+====
+
+== CAS-delen
+
+Taylorpolynom[ <Uttrykk>, <Tal a>, <Tal n> ]::
+  Finn Taylorrekka av grad _n_ til den gjevne funksjonen om punktet _x = a_.
+Taylorpolynom[ <Uttrykk>, <Variabel v>, <Tal a>, <Tal n> ]::
+  Finn Taylorrekka av grad _n_ til den gjevne funksjonen med omsyn på variabelen _v_ om punktet _v = a_.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Taylorpolynom[x^3 sin(y), y, 3, 2]++` gjev _stem:[\frac\{1}\{2}(cos(3) x^\{3} (2 y - 6) + sin(3) x^\{3} (-y^\{2} + 6
+y - 7))]_, som er Taylorrekka av andre grad med omsyn på _y_ til _x^3^ sin(y)_ om _y = 3_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Taylorpolynom[x^3 sin(y), x, 3, 2]++` gjev _sin(y) (9 x^2^ - 27 x + 27)_, som er Taylorrekka av andre grad med omsyn
+på _x_ til _x^3^ sin(y)_ om _x = 3_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Taylorpolynom[x^2, 3, 1]++` gjev _6 x - 9_ som er Taylorrekka av første grad til _x^2^_ om _x = 3_.
+
+====

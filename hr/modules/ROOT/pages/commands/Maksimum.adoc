@@ -1,0 +1,58 @@
+= Maksimum naredba
+:page-en: commands/Max
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Maksimum[ <broj a>, <broj b> ]::
+  Izračunava maksimum danih brojeva _a_ i _b_.
+Maksimum[ <lista> ]::
+  Izračunava maksimum brojeva iz liste.
+
+[EXAMPLE]
+====
+
+`++Maksimum[{-2, 12, -23, 17, 15}]++` daje _17_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Maksimum[12, 15]++` daje _15_.
+
+====
+
+[NOTE]
+====
+
+Ako se unos sastoji od podataka koji nisu numerički, tada naredba Maksimum uzima brojeve koji su pridruženi tim
+objektima. Na primjer, Maksimum[<lista dužina>] će dati maksiumalnu duljinu dužine.
+
+====
+
+Maksimum[ <interval> ]::
+  Daje gornju granicu intervala, npr. `++Maksimum[2 < x < 3]++` daje 3. Jednako je za otvorene i zatvorene intervale.
+Maksimum[ <funkcija>, <početna vrijednost x>, <završna vrijednost x> ]::
+  Daje točku iz danog intervala u kojoj funkcija postiže najveću vrijednost. Funkcija treba imati samo jednu takvu točku
+  unutar zadanog intervala.
+
+[NOTE]
+====
+
+Pogledajte još i xref:/commands/Ekstrem.adoc[naredbu Ekstrem] i xref:/tools/Ispitivač_funkcije.adoc[alat Ispitivač
+funkcije].
+
+====
+
+== CAS prikaz
+
+Maksimum[ <broj a>, <broj b> ]::
+  Izračunava maksimum danih brojeva _a_ i _b_.
+Maksimum[ <lista> ]::
+  Izračunava maksimum brojeva iz liste.
+
+[EXAMPLE]
+====
+
+`++Maksimum[sqrt(2), sqrt(3)]++` daje stem:[\sqrt\{3}].
+
+====

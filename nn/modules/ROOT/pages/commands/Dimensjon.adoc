@@ -1,0 +1,51 @@
+= Dimensjon Kommando
+:page-en: commands/Dimension
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Dimensjon[ <Vektor> ]::
+  Gjev dimensjonen til vektoren.
+Dimensjon[ <Matrise> ]::
+  Gjev dimensjonen til matrisa.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Dimension[{{1, 2}, {3, 4}, {5, 6}}]++` gjev _\{3, 2}_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Dimensjon[{1, 2, 0, -4, 3}]++` gjev _5_.
+
+====
+
+== CAS-delen
+
+Dimensjon[ <Vektor> ]::
+  Gjev dimensjonen til vektoren. Kan også verte brukt når ein eller fleire av elementa i vektoren er udefinerte.
+Dimensjon[ <Matrise> ]::
+  Gjev dimensjonen til matrisa. Kan også verte brukt når ein eller fleire av elementa i matrisa er udefinerte.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Dimensjon[{{a, b}, {c, d}, {e, f}}]++` gjev _\{3, 2}_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Dimensjon[{a, 2, 0, -b, 3}]++` gjev _5_.
+
+====

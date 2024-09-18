@@ -1,0 +1,66 @@
+= SetInn Kommando
+:page-en: commands/Insert
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+SetInn[ <Liste L1>, <Liste L2>, <Posisjon> ]::
+  Set inn alle element frå _L1_ inn i _L2_ på den gjevne posisjonen.
+
+[EXAMPLE]
+====
+
+*Døme:* `++SetInn[{11, 12}, {1, 2, 3, 4, 5}, 3]++` plasserer elementa i _L1_ frå element tre (og følgjande) i _L2_ og
+gjev lista _\{1, 2, 11, 12, 3, 4, 5}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Dersom posisjonen er eit negativt tal vert han rekna frå høgre.
+
+[EXAMPLE]
+====
+
+*Døme:* `++SetInn[{11, 12}, {1, 2, 3, 4, 5}, -2]++` plasserer elementa i _L1_ frå nest siste element (og følgjande) i
+_L2_ og gjev lista _\{1, 2, 3, 4, 11, 12, 5}_.
+
+====
+
+====
+
+SetInn[ <Objekt>, <Liste>, <Posisjon> ]::
+  Set objektet inn i lista på den gjevne posisjonen.
+
+[EXAMPLE]
+====
+
+*Døme:* `++SetInn[x^2, {1, 2, 3, 4, 5}, 3]++` plasserer _x^2^_ som element nummer tre og gjev lista _\{1, 2, x^2^, 3, 4,
+5}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Dersom posisjonen er eit negativt tal vert han rekna frå høgre.
+
+[EXAMPLE]
+====
+
+*Døme:* `++SetInn[x^2, {1, 2, 3, 4, 5}, -1]++` plasserer _x^2^_ som siste element og gjev lista _\{1, 2, 3, 4, 5,
+x^2^}_.
+
+====
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Elementa til objektet/lista som skal verte sett inn treng ikkje vere av same datatype som elementa i lista dei vert
+sett inn i.
+* Sjå også kommandoane xref:/commands/LeggTil.adoc[LeggTil] og xref:/commands/SetSaman.adoc[SetSaman].
+
+====

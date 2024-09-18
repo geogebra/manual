@@ -1,0 +1,41 @@
+= Nullpunkt Kommando
+:page-en: commands/Root
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Nullpunkt[ <Polynom> ]::
+  Gjev alle nullpunkta til funksjonen numerisk som skjeringspunkt mellom grafen til funksjonen og _x_-aksen.
+Nullpunkt[ <Funksjon>, <Tal a> ]::
+  Gjev eit av nullpunkta til funksjonen. Kommandoen finn nullpunktet numerisk ved bruk av Newton sin metode med
+  startverdi _a_.
+Nullpunkt[ <Funksjon>, <Tal a>, <Tal b> ]::
+  Gjev eit av nullpunkta til funksjonen i intervallet [_a_, _b_]. Kommandoen finn nullpunktet ved bruk av den numeriske
+  algoritma https://en.wikipedia.org/wiki/nn:Regula_falsi[regula falsi].
+
+[EXAMPLE]
+====
+
+*Døme:* `++Nullpunkt[x^2 - 2]++` gjev _A = (-1.41, 0)_ og _B = (1.41, 0)_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Kommandoen er eigentleg berre ein variant av kommandoen xref:/commands/Løys.adoc[Løys].
+* Sjå også kommandoen xref:/commands/NullpunktIntervall.adoc[NullpunktIntervall].
+
+====
+
+== CAS-delen
+
+Nullpunkt[ <Polynom> ]::
+  Gjev den eksakte _x_-verdien til alle nullpunkta til funksjonen.
+
+[EXAMPLE]
+====
+
+*Døme:* `++Nullpunkt[x^2 - 2]++` gjev stem:[\\{x = \sqrt\{2}, x = -\sqrt\{2}\}].
+
+====

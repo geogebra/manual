@@ -1,0 +1,35 @@
+= VrijemeSada naredba
+:page-en: commands/GetTime
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+VrijemeSada[]::
+  Vraća listu poput _\{546, 49, 17, 13, 28, 6, 2012, "Lipanj", "Četvrtak", 5}_, tj. tekuće vrijeme i datum prema
+  redoslijedu:
+  millisekunde, sekunde, minute, sati (0-23), datum (dan u mjesecu), mjesec (1-12), godina, mjesec (kao tekst), dan (kao
+  tekst), dan u tjednu (1 = Nedjelja, 2 = Ponedjeljak, itd).
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Tekst koji slijedi odnosi se na mogućnosti koje su podržane samo u inačici
+http://wiki.geogebra.org/en/Release_Notes_GeoGebra_4.2[GeoGebra 4.2 Beta].
+
+'''''
+
+VrijemeSada[<format>]::
+  gdje je _format_ tekst, zadan kao jedan od sljedećih znakova ispred kojih je kosa crta (\):
+  d, D, j, l, N, S, w, z, W, F, m, M, n, t, L, Y, y, a, A, g, G, h, H, i, s, U - objašnjenje tih znakova se nalazi na
+  adresi http://php.net/manual/en/function.date.php
+
+[EXAMPLE]
+====
+
+Unos `++VrijemeSada[ "Današnji  datum je \l  \j\S  \F \Y"]++` dat će tekst _Današnji datum je Ponedjeljak 23. Srpanj
+2012_
+
+====
+
+|===

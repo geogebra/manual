@@ -1,0 +1,26 @@
+= PoissonovaRazdioba naredba
+:page-en: commands/Poisson
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+PoissonovaRazdioba[ <očekivanje λ> ]::
+  Daje stupčasti graf https://en.wikipedia.org/wiki/Poisson_distribution[Poissonove razdiobe] s zadanom vrijednošću
+  očekivanja λ.
+PoissonovaRazdioba[ <očekivanje λ>, <kumulacija - logička vrijednost> ]::
+  Daje stupčasti graf Poissonove razdiobe ako je _kumulacija - logička vrijednost = false_.
+  Daje stupčasti graf kumulativne Poissonove razdiobe ako je _kumulacija - logička vrijednost = true_.
+  Prvi parametar jednak je gore opisanom.
+PoissonovaRazdioba[ <očekivanje λ>, <vrijednost varijable v>, <kumulacija - logička vrijednost> ]::
+  Neka je X slučajna Poissonova varijabla.
+  Daje P( X = _v_) ako je _kumulacija - logička vrijednost_ = false.
+  Daje P( X ≤ _v_) ako je _kumulacija - logička vrijednost_ = true.
+  Prvi parametar jednak je gore opisanom.
+
+== CAS prikaz
+
+xref:/CAS_prikaz.adoc[CAS prikaz] podržava samo sljedeću sintaksu:
+
+PoissonovaRazdioba[ <očekivanje λ>, <vrijednost varijable v>, <kumulacija - logička vrijednost> ]::
+  Neka je X slučajna Poissonova varijabla.
+  Daje P( X = _v_) ako je _kumulacija - logička vrijednost_ = false.
+  Daje P( X ≤ _v_) ako je _kumulacija - logička vrijednost_ = true.
+  Prvi parametar jednak je gore opisanom.

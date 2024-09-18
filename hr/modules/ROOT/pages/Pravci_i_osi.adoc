@@ -1,0 +1,36 @@
+= Pravci i osi
+:page-en: Lines_and_Axes
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+== Pravci
+
+Pravce možete upisati u traku za unos kao linearnu jednadžbu po _x_ i _y_ ili u paramatarskom obliku. U oba slučaja u
+jednadžbi možete korisiti i prethodno definirane varijable (npr. brojeve, točke, vektore).
+
+[NOTE]
+====
+
+Ispred jednadžbe možete zadati oznaku pravca, odvojenu dvotočkom.
+
+====
+
+[EXAMPLE]
+====
+
+* Upišite `++g: 3x + 4y = 2++` kako biste zadali pravac _g_ preko linearne jednadžbe.
+* Zadajte pravac u parametarskom obliku ovako: `++g: X = (-5, 5) + t (4, -3)++`
+* Definirajte parametre _m_ = 2 i _b_ = -1. Tada upišite jednadžbu `++h: y = m*x + b++` kako biste dobili pravac _h_ u
+eksplicitnom zapisu.
+
+====
+
+== Osi
+
+U naredbama možemo dohvatiti obje koordinatne osi koristeći nazive _xOs_ i _yOs_.
+
+[EXAMPLE]
+====
+
+Naredba `++Okomica[A, xOs]++` konstruira pravac okomit na os x koji prolazi zadanom točkom A.
+
+====

@@ -1,0 +1,32 @@
+= Umnožak naredba
+:page-en: commands/Product
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Umnožak[ <lista brojeva> ]::
+  Izračunava umnožak svih brojeva liste.
+Umnožak[ <lista brojeva>, <broj elemenata n> ]::
+  Izračunava umnožak prvih _n_ brojeva iz liste.
+
+== CAS prikaz
+
+U xref:/CAS_prikaz.adoc[CAS prikazu] podržana je samo sljedeća sintaksa:
+
+Umnožak[ <lista izraza> ]::
+  Izračunava umnožak svih elemenata liste.
+Umnožak[ <izraz>, <varijabla>, <početni indeks>, <krajnji indeks> ]::
+  Izračunava umnožak svih izraza koji se dobivaju zamjenom zadane varijable cijelim brojevima od _početnog indeksa_ do
+  _krajnjeg indeksa_.
+
+[EXAMPLE]
+====
+
+`++Umnožak[x + 1,  x,  2, 3]++` daje _12_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Umnožak[{1, 2, x}]++` daje _2x_.
+
+====

@@ -1,0 +1,30 @@
+= PascalovaRazdioba naredba
+:page-en: commands/Pascal
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+PascalovaRazdioba[ <broj povoljnih događaja>, <vjerojatnost povoljnog događaja> ]::
+  Daje stupčasti graf http://mathworld.wolfram.com/NegativeBinomialDistribution.html[Paskalove razdiobe].
+  _Parametri:_
+  _broj povoljnih događaja_: broj nezavisnih Bernoullijevih pokusa koji trebaju biti uspješni
+  _vjerojatnost povoljnog događaja_: vjerojatnost da će se ostvariti povoljni događaj u jednom pokusu
+
+PascalovaRazdioba[ <broj povoljnih događaja>, <vjerojatnost povoljnog događaja>, <kumulacija - logička vrijednost> ]::
+  Daje stupčasti graf Paskalove razdiobe ako je _kumulacija - logička vrijednost_ = false.
+  Daje stupčasti graf kumulativne Paskalove razdiobe ako je _kumulacija - logička vrijednost_ = true.
+  Ostala dva parametra jednaka su gore opisanima.
+PascalovaRazdioba[ <broj povoljnih događaja>, <vjerojatnost povoljnog događaja>, <vrijednost varijable>, <kumulacija -
+logička vrijednost> ]::
+  Neka je X slučajna Paskalova varijabla.
+  Daje P( X = _v_) kada je _kumulacija - logička vrijednost_ = false.
+  Daje P( X ≤ _v_) kada je _kumulacija - logička vrijednost_ = true.
+  Ostala dva parametra jednaka su gore opisanima.
+
+== CAS prikaz
+
+xref:/CAS_prikaz.adoc[CAS prikaz] podržava samo ovu sintaksu:
+
+PascalovaRazdioba[ <broj povoljnih događaja>, <vjerojatnost povoljnih događaja>, <vrijednost varijable>, <kumulacija -
+logička vrijednost> ]::
+  Neka je X slučajna Paskalova varijabla.
+  Daje P( X = _v_) kada je _kumulacija - logička vrijednost_ = false.
+  Daje P( X ≤ _v_) kada je _kumulacija - logička vrijednost_ = true.

@@ -1,0 +1,28 @@
+= TGjennomsnitt2Estimat Kommando
+:page-en: commands/TMean2Estimate
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+TGjennomsnitt2Estimat[ <Liste med utvalsdata 1>, <Liste med utvalsdata 2>, <Nivå>, <Boolsk gruppert> ]::
+  Finn eit T-konfidensintervallestimat for differansen mellom to populasjonsgjennomsnitt ved å bruke dei to gjevne
+  listene med utvalsdata og det gjevne konfidensnivået.
+  * Dersom _Boolsk gruppert = true_, vert det lagt til grunn at variansen til populasjonane er lik og standardavvika til
+  utvala vert kombinert i berekninga.
+  * Dersom _Boolsk gruppert =false_, vert det ikkje lagt til grunn at variansen til populasjonane er lik og
+  standardavvika til utvala vert ikkje kombinert i berekninga.
+  Resultatet vert gjeve som ei liste på forma _\{nedre konfidensgrense, øvre konfidensgrense}_.
+TGjennomsnitt2Estimat[ <Utvalsgjennomsnitt 1>, <Utvals-standardavvik 1>, <Utvalsstorsleik 1>, <Utvalsgjennomsnitt 2>,
+<Utvals-standardavvik 2>, <Utvalsstorleik 2>, <Nivå>, <Boolsk gruppert> ]::
+  Finn eit T-konfidensintervallestimat for differansen mellom to populasjonsgjennomsnitt ved å bruke dei gjevne
+  utvalsgjennomsnitta, standardavvika, utvalsstorleikane og det gjevne konfidensnivået.
+  * Dersom _Boolsk gruppert = true_, vert det lagt til grunn at variansen til populasjonane er lik og standardavvika til
+  utvala vert kombinert i berekninga.
+  * Dersom _Boolsk gruppert =false_, vert det ikkje lagt til grunn at variansen til populasjonane er lik og
+  standardavvika til utvala vert ikkje kombinert i berekninga.
+  Resultatet vert gjeve som ei liste på forma _\{nedre konfidensgrense, øvre konfidensgrense}_.
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoen xref:/commands/TGjennomsnittEstimat.adoc[TGjennomsnittEstimat].
+
+====

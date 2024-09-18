@@ -1,0 +1,22 @@
+= Boge Kommando
+:page-en: commands/Arc
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Boge[ <Sirkel>, <Punkt A>, <Punkt B> ]::
+  Returnerer sirkelbogen mellom punkta _A_ og _B_ på sirkelen.
+Boge[ <Ellipse>, <Punkt A>, <Punkt B> ]::
+  Returnerer ellipsebogen mellom punkta _A_ og _B_ på ellipsa.
+Boge[ <Sirkel>, <Tal t~1~>, <Tal t~2~> ]::
+  Returnerer sirkelbogen mellom parameterverdiane _t~1~_ og _t~2~_ på sirkelen.
+Boge[ <Ellipse>, <Tal t~1~>, <Tal t~2~> ]::
+  Returnerer ellipsebogen mellom parameterverdiane _t~1~_ og _t~2~_ på ellipsa.
+
+[NOTE]
+====
+
+*Merk:* Internt er desse parameterframstillingane brukt:
+
+* Sirkel: _(r cos(t), r sin(t))_ der _r_ er radiusen til sirkelen.
+* Ellipse: _(a cos(t), b sin(t))_ der _a_ og _b_ er lengden på den store og den vesle halvaksen til ellipsa.
+
+====

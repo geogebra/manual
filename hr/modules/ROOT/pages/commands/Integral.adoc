@@ -1,0 +1,74 @@
+= Integral naredba
+:page-en: commands/Integral
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Integral[ <funkcija> ]::
+  Daje neodređeni integral zadane funkcije u odnosu na glavnu varijablu.
+Integral[ <funkcija>, <varijabla> ]::
+  Daje parcijalni neodređeni integral zadane funkcije u odnosu na zadanu varijablu.
+Integral[ <funkcija>, <početna vrijednost a>, <završna vrijednost b> ]::
+  Izračunava određeni integral zadane funkcije, u odnosu na glavnu varijablu, na intervalu [_a , b_].
+Integral[ <funkcija>, <početna vrijednost a>, <završna vrijednost b>, <izvrši - logička vrijednost> ]::
+  Izračunava određeni integral zadane funkcije, u odnosu na glavnu varijablu, na intervalu [_a , b_] i crta odgovarajuću
+  površinu ako je _izvrši - logička vrijednost = true_. U slučaju da je _izvrši - logička vrijednost = false_
+  odgovarajuća se površina crta, ali se vrijednost integrala ne izračunava.
+
+[EXAMPLE]
+====
+
+`++Integral[x³+3x y, x]++` ydaje _(x² (x² + 6y)) / 4_ .
+
+====
+
+[EXAMPLE]
+====
+
+`++Integral[x³]++` daje _x⁴ / 4_ .
+
+====
+
+[NOTE]
+====
+
+Ova naredba crta i površinu između grafa funkcije i x-osi.
+
+====
+
+== CAS prikaz
+
+Integral[ <funkcija> ]::
+  Daje neodređeni integral zadane funkcije u odnosu na glavnu varijablu.
+Integral[ <funkcija>, <varijabla> ]::
+  Daje parcijalni neodređeni integral zadane funkcije u odnosu na zadanu varijablu.
+Integral[ <funkcija>, <početna vrijednost a>, <krajnja vrijednost b> ]::
+  Izračunava određeni integral zadane funkcije, u odnosu na glavnu varijablu, na intervalu [_a , b_].
+Integral[ <funkcija>, <varijabla>, <početna vrijednost a>, <krajnja vrijednost b> ]::
+  Izračunava određeni integral zadane funkcije, u odnosu na zadanu varijablu, na intervalu [_a , b_].
+
+[EXAMPLE]
+====
+
+`++Integral[cos(t), t, a, b]++` daje _sin(b) - sin(a)_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Integral[cos(x), a, b]++` daje sin(b) - sin(a).
+
+====
+
+[EXAMPLE]
+====
+
+`++Integral[cos(a t), t]++` daje _sin(a t)/a+c2_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Integral[cos(x)]++` daje _sin(x)+c1_.
+
+====

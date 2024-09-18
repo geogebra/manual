@@ -1,0 +1,37 @@
+= Transponer Kommando
+:page-en: commands/Transpose
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Transponer[ <Matrise> ]::
+  Finn den transponerte av matrisa.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Transponer[{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}]++` gjev matrisa stem:[\begin\{pmatrix}1&4&7\\ 2&5&8\\
+3&6&9\end\{pmatrix}].
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoane xref:/commands/Determinant.adoc[Determinant] og xref:/commands/Invers.adoc[Invers].
+
+====
+
+== CAS-delen
+
+Transponer[ <Matrise> ]::
+  Finn den transponerte av matrisa. Matrisa kan også innehalde udefinerte variablar.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Transponer[{{a, b}, {c, d}}]++` gjev matrisa stem:[\begin\{pmatrix}a&c\\b&d\end\{pmatrix}].
+
+====

@@ -1,0 +1,50 @@
+= TekstFormulom naredba
+:page-en: commands/FormulaText
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+TekstFormulom[ <objekt> ]::
+  Prikazuje formulu objekta kao xref:/LaTeX.adoc[LaTeX] tekst.
+TekstFormulom[ <objekt>, <zamjena varijabli - logička vrijednost> ]::
+  Prikazuje formulu objekta kao LaTeX tekst. Zamjena varijabli - logička vrijednost određuje hoće li se vrijednost
+  varijable u formuli objekta zamijeniti iznosom (_true_) ili će u tekstu biti prikazan naziv varijable (_false_).
+
+[EXAMPLE]
+====
+
+Ako je _a = 2_ i _f(x) = a x^2^_, tada
+
+* `++TekstFormulom[f, true]++` daje _2 x^2^_ (kao LaTeX tekst)
+* `++TekstFormulom[f, false]++` daje _a x^2^_ (kao LaTeX tekst).
+
+====
+
+[EXAMPLE]
+====
+
+Ako je _a = 2_ i _f(x) = a x^2^_, tada `++TekstFormulom[f]++` daje _2 x ^2^_ (kao LaTeX tekst).
+
+====
+
+[NOTE]
+====
+
+Zadano je da se varijable zamjenjuju vrijednostima.
+
+====
+
+TekstFormulom[ <objekt>, <zamjena varijabli - logička vrijednost>, <pokaži naziv – logička vrijednost> ]::
+  Prikazuje formulu objekta kao LaTeX tekst. Zamjena varijabli - logička vrijednost određuje hoće li se vrijednost
+  varijable u formuli objekta zamijeniti iznosom (_true_) ili će u tekstu biti prikazan naziv varijable (_false_).
+  Pokaži naziv – logička vrijednost određuje hoće li se naziv objekta prikazati u tekstu (_true_) ili neće (_false_).
+
+[EXAMPLE]
+====
+
+Ako je _a = 2_ i _f(x) = a x^2^_, tada
+
+* `++TekstFormulom[f, true, true]++` daje _f(x)=2 x^2^_ (kao LaTeX tekst)
+* `++TekstFormulom[f, false, false]++` daje _a x^2^_ (kao LaTeX tekst)
+* `++TekstFormulom[f, true,false]++` daje _2 x^2^_ (kao LaTeX tekst)
+* `++TekstFormulom[f, false, true]++` daje _f(x) = a x^2^_ (kao LaTeX tekst).
+
+====

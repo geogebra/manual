@@ -1,0 +1,71 @@
+= Kompleksni brojevi
+:page-en: Complex_Numbers
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+GeoGebra ne podržava kompleksne brojeve izravno, ali vi možete koristiti točke koje će simulirati operacije s
+kompleksnim brojevima.
+
+[EXAMPLE]
+====
+
+Ako upišete kompleksni broj 3 + 4i u traku za unos dobit ćete točku (3, 4) u grafičkom prikazu. U algebarskom prozoru
+koordinate ove točke bit će prikazane kao 3 + 4i
+
+====
+
+[NOTE]
+====
+
+Možete u
+
+====
+
+Ako varijabla _i_ još nije definirana, ona će biti prepoznata kao uređeni par i = (0, 1) ili kompleksni broj 0 + 1i. To
+znači da možete koristiti varijablu i kako biste upisali kompleksni broj u traku za unos (npr., q = 3 + 4i).
+
+[EXAMPLE]
+====
+
+zbrajanja i oduzimanja:
+
+* (2 + 1i) + (1 – 2i) daje kompleksni broj 3 – 1i.
+* (2 + 1i) - (1 – 2i) daje kompleksni broj 1 + 3i.
+
+====
+
+[EXAMPLE]
+====
+
+množenja i dijeljenja:
+
+* (2 + 1i) * (1 – 2i) daje kompleksni broj 4 – 3i.
+* (2 + 1i) / (1 – 2i) daje kompleksni broj 0 + 1i.
+
+====
+
+[NOTE]
+====
+
+Uobičajeno množenje (2, 1)*(1, -2) daje skalarni umnožak dviju točaka (dvaju vektora).
+
+====
+
+Možete koristiti sljedeće naredbe i xref:/Preddefinirane_funkcije_i_operatori.adoc[predefinirane operatore]:
+
+* `++x(z)++` daje realni dio kompleksnog broja _z_
+* `++y(z)++` daje imaginarni dio kompleksnog broja _z_
+* `++abs(z)++` ili `++Duljina[z]++` daju apsolutnu vrijednost komplesksnog broja _z_
+* `++arg(z)++` or `++Kut[z]++` daju argument komplesksnog broja _z_
+* `++konjugirano(z)++` or `++Zrcaljenje[z,xOs]++` daju konjugirani broj kompleksnog broja _z_
+
+GeoGebra u izrazima prepoznaje realne i kompleksne brojeve.
+
+[EXAMPLE]
+====
+
+* 3 + (4 + 5i) daje kompleksni broj 7 + 5i.
+* 3 - (4 + 5i) daje kompleksni broj -1 - 5i.
+* 3 / (0 + 1i) daje kompleksni broj 0 - 3i.
+* 3 * (1 + 2i) daje kompleksni broj 3 + 6i.
+
+====

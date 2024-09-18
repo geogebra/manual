@@ -1,0 +1,42 @@
+= Uprosti Naredba
+:page-en: commands/Simplify
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+Uprosti[ <Funkcija> ]::
+  pojednostavljuje/sređuje analitički izraz date funkcije, ukoliko je to moguće.
+Uprosti[ <Tekst> ]::
+  nastoji da urediti tekst izraza uklanjanjem ponovljenih negativnih vrijednosti itd.
+
+[EXAMPLE]
+====
+
+Za _a=b=c=-1_ `++Uprosti["f(x) = " + a + "x² + " + b + "x + " + c]++` daje _f(x)=-x^2 - x - 1_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Uprosti[x + x + x]++` daje funkciju _f(x) = 3x_.
+
+====
+
+[NOTE]
+====
+
+Naredba xref:/LaTexFormula_Naredba.adoc[LaTexFormula] obično daje bolje i jednostavnije rezultate.
+
+====
+
+== CAS Syntax
+
+Uprosti[ <Funkcija> ]::
+  pojednostavljuje/sređuje analitički izraz date funkcije, ukoliko je to moguće. Nedefinirane promjenljive, također mogu
+  biti uključene u članove analitičkog izraza.
+
+[EXAMPLE]
+====
+
+`++Uprosti[3 x + 4 x + a x]++` daje _x (a + 7)_.
+
+====

@@ -1,0 +1,41 @@
+= Geometrisk stad Verktøy
+:page-en: tools/Locus
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Vel eit punkt _B_ som avheng av eit anna punkt _A_. Trykk so på _A_ for å lage kurva for den geometriske staden
+(lokusen) til punkt _B_.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* Skriv inn `++f(x) = x^2 – 2 x – 1++` i xref:/Inntastingsfelt.adoc[inntastingsfeltet] og trykk [.kcode]#Enter#.
+* Plasser eit nytt punkt _A_ på _x_-aksen (sjå verktøyet image:Tool_New_Point.gif[Tool New
+Point.gif,width=32,height=32]xref:/tools/Nytt_punkt.adoc[Nytt punkt] eller kommandoen xref:/commands/Punkt.adoc[Punkt]).
+* Lag eit punkt `++B = (x(A), f'(x(A)))++` som avheng av _A_.
+* Vel verktøyet image:Tool_Locus.gif[Tool Locus.gif,width=32,height=32] og trykk først på _B_ so på _A_.
+* Dra punkt _A_ langs _x_-aksen for å sjå punkt _B_ flytte seg langs kurva.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Punkt _A_ må vere eit punkt på eit objekt (til dømes ei linje, eit linjestykke/intervall, sirkel).
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoen xref:/commands/GeometriskStad.adoc[GeometriskStad].
+
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Varsel,title="Varsel",width=18,height=18] *Varsel*: |Ein geometrisk stad er udefinert når det
+avhengige punktet er eit resultat av kommandoen xref:/commands/Punkt.adoc[Punkt] med to parametrar, eller kommandoen
+xref:/commands/StiParameter.adoc[StiParameter].
+|===

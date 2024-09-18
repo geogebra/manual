@@ -1,0 +1,44 @@
+= OkomitVektor naredba
+:page-en: commands/PerpendicularVector
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+OkomitVektor[ <pravac> ]::
+  Daje okomiti vektor u odnosu na zadani pravac.
+OkomitVektor[ <dužina> ]::
+  Daje vektor okomit na zadanu dužinu, jednake duljine.
+OkomitVektor[ <vektor> ]::
+  Daje vektor koji je okomit na zadani vektor.
+
+[NOTE]
+====
+
+Vektor s koordinatama _(a, b)_ ima okomiti vektor _(- b, a)_.
+
+====
+
+[NOTE]
+====
+
+Pravac jednadžbe _ax + by = c_ ima okomiti vektor _(a, b)_.
+
+====
+
+== CAS prikaz
+
+OkomitVektor[ <vektor> ]::
+  Daje vektor koji je okomit na zadani vektor.
+
+[EXAMPLE]
+====
+
+* `++OkomitVektor[(3, 2)]++` daje vektor _\{-2, 3}_.
+* `++OkomitVektor[(a, b)]++` daje vektor _\{-b, a}_.
+
+====
+
+[NOTE]
+====
+
+Pogledajte još i naredbu xref:/commands/JediničniOkomitVektor.adoc[JediničniOkomitVektor].
+
+====

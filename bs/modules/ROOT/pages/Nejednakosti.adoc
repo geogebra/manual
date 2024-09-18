@@ -1,0 +1,23 @@
+= Nejednakosti
+:page-en: Inequalities
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+GeoGebra podržava nejednakosti s jednom ili dvije promjenljive. Nema ograničenje broja nejednakosti koje se vide u
+xref:/Algebarski_Prikaz.adoc[algebarskom prikazu], ali samo specijalne nejednakosti bit će prikazane na
+xref:/Radna_površ.adoc[radnoj površi]:
+
+* polinomne nejednakosti s jednom promjenljivom, npr. _x^3 > x + 1_ or _y^2>y_,
+* kvadratne nejednakosti s dvije pomjenljive npr. _x^2 + y^2 + x*y ≤ 4_,
+* nejednačine linearne po jednoj promjenljivoj, npr. _2x > sin(y)_ ili _y < sqrt(x)_.
+
+Da bi naznačili nejednakost koristimo standardne simbole <, >, ≤, ≥. Simboli <= i => također su validni.
+
+Unija i presjek također su podržani pa će, npr. biti nacrtan presjek__(x>y)&&(x+y<3)__.
+
+Ukoliko želimo da rješenje nejednakosti prikažemo kao jedan ili više intervala na x-osi, treba označiti _Prikaži na
+x-osi_ u kartici _Osobine_ dijaloškog okvira xref:/Osobine_Dijaloški_okvir.adoc[Osobine] date nejednakosti.
+
+Nejednakosti su slične funkcijama, pa možemo testirati zadovoljavaju li _x_ i _y_ nejednakost _a_ tako što ćemo ukucati
+_a(x,y)_ u xref:/Traka_za_Unos.adoc[traku za unos]. Također, validna je i sintaksa _a(A)_ za tačku _A_ . Tačka A može
+biti ograničena na region zadane nejednakosti upotrebom naredbe xref:/TačkaU_Naredba.adoc[TačkaU]. Za nejednakost _b_ s
+jednom promjenljivom, npr. _x_, Tačka[b] dat će tačku ograničenu na onaj dio x-ose koji zadovoljava nejednakost _b_.

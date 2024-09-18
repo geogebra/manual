@@ -1,0 +1,92 @@
+= Maks Kommando
+:page-en: commands/Max
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Maks[ <Tal a>, <Tal b> ]::
+  Gjev det største av tala _a_ og _b_.
+Maks[ <Liste av tal> ]::
+  Gjev det største av tala i lista.
+Maks[ <Intervall> ]::
+  Gjev øvre grense for intevallet.
+Maks[ <Funksjon>, <Tal a>, <Tal b> ]::
+  Finn punktet som maksimerer funksjonen på intervallet [_a_, _b_]. Funksjonen kan kun ha eit maksimum på intervallet.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Maks[2 < x < 3]++` gjev _3_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Maks[{-2, 12, -23, 17, 15}]++` gjev _17_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Maks[12, 15]++` gjev _15_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Opne og lukka intervall vert handsama likt.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Dersom elementa i lista består av ikke-numeriske objekt vil *Maks[]* bruke tala som er assosiert med desse
+objekta. Til dømes vil *Maks[<Liste av segment>]* gje den største segmentlengda.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Sjå også verktøyet image:Tool_Maximum.gif[Tool Maximum.gif,width=32,height=32] xref:/tools/Maksimum.adoc[Maksimum] for
+bruk i xref:/Rekneark.adoc[reknearket].
+* Sjå også kommandoane xref:/commands/Ekstremalpunkt.adoc[Ekstremalpunkt], xref:/commands/Min.adoc[Min] og verktøyet
+image:Tool_Function_Inspector.gif[Tool Function Inspector.gif,width=32,height=32]
+xref:/tools/Funksjonsanalyse.adoc[Funksjonsanalyse].
+
+====
+
+== CAS-delen
+
+Maks[ <Tal a>, <Tal b> ]::
+  Gjev den største av tala _a_ og _b_.
+Maks[ <Liste av tal> ]::
+  Gjev det største av tala i lista.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Maks[{-2, 12, -23, 17, 15}]++` gjev _17_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Maks[12, 15]++` gjev _15_.
+
+====

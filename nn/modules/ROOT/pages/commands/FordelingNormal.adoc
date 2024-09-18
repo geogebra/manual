@@ -1,0 +1,72 @@
+= FordelingNormal Kommando
+:page-en: commands/Normal
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+FordelingNormal[ <Gjennomsnitt μ>, <Standardavvik σ>, x ]::
+  Lagar https://en.wikipedia.org/wiki/nn:Sannsynstettleiksfunksjon[sannsynstettleiksfunksjonen] til
+  https://en.wikipedia.org/wiki/nn:Normalfordeling[normalfordelinga] med parametrar _μ, σ_.
+FordelingNormal[ <Gjennomsnitt μ>, <Standardavvik σ>, <Variabelverdi v> ]::
+  Finn verdien av den https://en.wikipedia.org/wiki/no:Kumulativ_fordelingsfunksjon[kumulative fordelingsfunksjonen] til
+  normalfordelinga ved _v_. Det vil seie sannsynet _P(X≤v)_ der _X_ er ein normalfordelt stokastisk variabel med
+  parametrar _μ, σ_.
+FordelingNormal[ <Gjennomsnitt μ>, <Standardavvik σ>, x, <Boolsk kumulativ> ]::
+  La _X_ vere ein normalfordelt stokastisk variabel med parametrar _μ, σ_.
+  * Dersom _kumulativ = false_ vert
+  https://en.wikipedia.org/wiki/nn:Sannsynstettleiksfunksjon[sannsynstettleiksfunksjonen] til _X_ returnert.
+  * Dersom _kumulativ = true_ vert den https://en.wikipedia.org/wiki/no:Kumulativ_fordelingsfunksjon[kumulative
+  fordelingsfunksjonen] til _X_ returnert.
+
+[NOTE]
+====
+
+*Merk:* Dette tilsvarar å finne _Φ((x – μ) / σ)_ for _v_, der _Φ_ er den kumulative fordelingsfunksjonen til
+standard-normalfordelinga _N(0,1)_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Sjå også verktøyet image:Tool_Probability_Calculator.gif[Tool Probability Calculator.gif,width=32,height=32]
+xref:/tools/Sannsynskalkulator.adoc[Sannsynskalkulator].
+* Sjå også kommandoane xref:/commands/InversNormalfordeling.adoc[InversNormalfordeling] og
+xref:/commands/TilfeldigNormalfordeling.adoc[TilfeldigNormalfordeling].
+* Sjå også kommandoane for dei andre kontinuerlege sannsynsfordelingane xref:/commands/Erlang.adoc[Erlang],
+xref:/commands/FordelingCauchy.adoc[Fordeling Cauchy], xref:/commands/FordelingF.adoc[FordelingF],
+xref:/commands/FordelingGamma.adoc[FordelingGamma], xref:/commands/FordelingT.adoc[FordelingT],
+xref:/commands/FordelingWeibull.adoc[FordelingWeibull], xref:/commands/KjiKvadrat.adoc[KjiKvadrat],
+xref:/commands/LogNormal.adoc[LogNormal], xref:/commands/Logistisk.adoc[Logistisk],
+xref:/commands/Trekantfordeling.adoc[Trekantfordeling] og xref:/commands/Uniform.adoc[Uniform].
+* Sjå også kommandoane for dei diskrete sannsynsfordelingane xref:/commands/FordelingBernoulli.adoc[FordelingBernoulli],
+xref:/commands/FordelingBinomial.adoc[FordelingBinomial],
+xref:/commands/FordelingHypergeometrisk.adoc[FordelingHypergeometrisk],
+xref:/commands/FordelingPascal.adoc[FordelingPascal], xref:/commands/FordelingPoisson.adoc[FordelingPoisson] og
+xref:/commands/Zipf.adoc[Zipf].
+
+====
+
+== CAS-delen
+
+FordelingNormal[ <Gjennomsnitt μ>, <Standardavvik σ>, <Variabelverdi v> ]::
+  Finn verdien av den https://en.wikipedia.org/wiki/no:Kumulativ_fordelingsfunksjon[kumulative fordelingsfunksjonen] til
+  normalfordelinga ved _v_. Det vil seie sannsynet _P(X≤v)_ der _X_ er ein normalfordelt stokastisk variabel med
+  parametrar _μ, σ_.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++FordelingNormal[2, 0.5, 1]++` gjev stem:[\frac\{\sqrt\{2}}\{\sqrt\{\pi }e²}].
+
+====
+
+[NOTE]
+====
+
+*Merk:* Dette tilsvarar å finne _Φ((x – μ) / σ)_ for _v_, der _Φ_ er den kumulative fordelingsfunksjonen til
+standard-normalfordelinga _N(0,1)_.
+
+====

@@ -1,0 +1,52 @@
+= PlassNummer Kommando
+:page-en: commands/IndexOf
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+PlassNummer[ <Objekt>, <Liste> ]::
+  Finn den første plasseringa objektet har i lista.
+PlassNummer[ <Objekt>, <Liste>, <Tal a> ]::
+  Gjer det same som kommandoen over, men starter søket ved elementet som har plassnummer _a_.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++PlassNummer[5, {1, 3, 5, 2, 5, 4}, 3]++` gjev 3.
+* `++PlassNummer[5, {1, 3, 5, 2, 5, 4}, 4]++` gjev 5.
+* `++PlassNummer[5, {1, 3, 5, 2, 5, 4}, 6]++` gjev _udefinert_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++PlassNummer[5, {1, 3, 5, 2, 5, 4}]++` gjev 3.
+
+====
+
+PlassNummer[ <Tekst T1>, <Tekst T2> ]::
+  Finn den første plasseringa av tekst _T1_ i tekst _T2_.
+PlassNummer[ <Tekst T1>, <Tekst T2>, <Tal a ]::
+  Gjer det same som kommandoen over, men starter søket ved elementet som har plassnummer _a_.
+
+[EXAMPLE]
+====
+
+*Døme:* `++PlassNummer["Ge", "GeoGebra", 2]++` gjev 4.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++PlassNummer["Ge", "GeoGebra"]++` gjev 1.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Dersom objektet eller teksten ikkje vert funne vert _udefinert_ returnert .
+
+====

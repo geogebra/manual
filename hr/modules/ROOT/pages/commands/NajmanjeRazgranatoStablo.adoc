@@ -1,0 +1,17 @@
+= NajmanjeRazgranatoStablo naredba
+:page-en: commands/MinimumSpanningTree
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+NajmanjeRazgranatoStablo[ <lista točaka> ]::
+  Daje https://en.wikipedia.org/wiki/Euclidean_minimum_spanning_tree[najmanje razgranato stablo] iz potpunog grafa koje
+  spaja zadane vrhove pri čemu je težinska vrijednost brida _(u,v)_ jednaka Euklidskoj udaljenosti između _u_ i _v_.
+  Izlazni objekt je xref:/commands/Lokus.adoc[lokus].
+
+[EXAMPLE]
+====
+
+Neka su zadane točke `++A=(-2, 1), B=(1, 3), C=(1, 1), D=(3, 1), E=(4, -2), F=(1, -2), G=(2, -1), H=(-1, 1)++`. Naredba
+`++NajmanjeRazgranatoStablo[A, B, C, D, E, F, G, H]++` daje pomoćni objekt _lokus1_ koji ima 7 grana, pa će naredba
+`++Duljina[lokus1]++` dati vrijednost 14.
+
+====

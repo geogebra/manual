@@ -1,0 +1,28 @@
+= UtvalStandardavvikX Kommando
+:page-en: commands/SampleSDX
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+UtvalStandardavvikX[ <Liste med punkt> ]::
+  Finn utvalsstandardavviket (også kalla https://en.wikipedia.org/wiki/nn:Standardavvik[det empiriske standardavviket])
+  til _x_-koordinatane til punkta i lista.
+
+[EXAMPLE]
+====
+
+*Døme:* `++UtvalStandardavvikX[(1, 2), (2, 4), (3, 6)]++` gjev 1.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Jo fleire element det er i lista desto meir likt vert resultatet med det ein får frå kommandoen
+xref:/commands/StandardavvikX.adoc[StandardavvikX]. Grunnen til dette er at det einaste som skil dei to statistiske
+storleikane er at utvalsstandardavviket har _N - 1_ i nemnaren, medan standardavviket har _N_, der _N_ er talet på
+element i lista.
+* Sjå også kommandoane xref:/commands/UtvalStandardavvik.adoc[UtvalStandardavvik] og
+xref:/commands/UtvalStandardavvikY.adoc[UtvalStandardavvikY].
+
+====

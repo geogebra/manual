@@ -1,0 +1,53 @@
+= Vel Kommando
+:page-en: commands/Take
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Vel[ <Liste L>, <Startposisjon m> ]::
+  Gjev ei ny liste som inneheld alle elementa frå og med posisjon _m_ og ut lista.
+Vel[ <Tekst>, <Startposisjon m> ]::
+  Gjev ein ny tekst som inneheld alle teikna frå og med posisjon _m_ og ut teksten.
+Vel[ <Liste L>, <Tal m>, <Tal n> ]::
+  Gjev ei ny liste som inneheld alle elementa frå og med posisjon _m_ til og med _n_ i _L_.
+Vel[ <Tekst>, <Tal m>, <Tal n> ]::
+  Gjev ein ny tekst som inneheld alle teikna frå og med posisjon _m_ til og med _n_ i den opphavlege teksten.
+
+[EXAMPLE]
+====
+
+*Døme:* `++Vel["GeoGebra", 3, 6]++` gjev teksten _oGeb_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++Vel[{2, 4, 3, 7, 4}, 3, 4]++` gjev _\{3, 7}_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++Vel["GeoGebra", 3]++` gjev teksten _oGebra_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:* `++Vel[{2, 4, 3, 7, 4}, 3]++` gjev _\{3, 7, 4}_.
+
+====
+
+== CAS-delen
+
+Vel[ <Liste L>, <Tal m>, <Tal n> ]::
+  Gjev ei ny liste som inneheld alle elementa frå og med posisjon _m_ til og med _n_ i _L_. Lista kan også innehalde
+  udefinerte variablar.
+
+[EXAMPLE]
+====
+
+*Døme:* `++Vel[{1, 2, a, 4, 5}, 2, 4]++` gjev _\{2, a, 4}_.
+
+====

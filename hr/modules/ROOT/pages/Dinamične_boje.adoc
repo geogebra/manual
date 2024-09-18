@@ -1,0 +1,53 @@
+= Dinamične boje
+:page-en: Dynamic_Colors
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+U GeoGebri možete mijenjati boje objekata na kartici Boja xref:/Dijaloški_okvir_Svojstva.adoc[dijaloškog okvira
+Svojstva]. Međutim, boje objekta možete mijenjati i dinamički: Otvorite dijaloški okvir Svojstva određenog objekta kojem
+želite mijenjati boje i otvorite karticu Dodatno. Tamo se nalazi odjeljak Dinamične boje s tekstualnim poljima za
+komponente boje Crvena, Zelena, i Plava.
+
+[NOTE]
+====
+
+U svako tekstualno polje možete unijeti funkciju s vrijednostima na intervalu [0, 1].
+
+====
+
+[EXAMPLE]
+====
+
+* Konstruirajte tri xref:/tools/Klizač.adoc[klizača] a, b, i c s intervalima od 0 do 1.
+* Konstruirajte mnogokut na čiju će boju utjecati vrijednosti klizača.
+* Otvorite xref:/Dijaloški_okvir_Svojstva.adoc[dijaloški okvir Svojstva] za taj mnogokut i unesite nazive klizača u
+tekstualna polja za komponente boje.
+* Zatvorite dijaloški okvir Svojstva i mijenjajte vrijednosti klizača kako biste istražili na koji način promjena
+vrijednosti pojedine komponente utječe na boju mnogokuta.
+
+[NOTE]
+====
+
+Također možete i animirati klizače s različitim brzinama kako bi se boje mijenjale automatski.
+
+====
+
+====
+
+Odjeljak Dinamične boje sadrži i tekstualno polje koje vam omogućava izmjenu prozirnosti odabranog objekta. Možete
+unijeti broj u intervalu [0,1] (gdje 0 znači prozirno a 1 znači 100% neprozirno), ali i naziv klizača pa ćete postići
+dinaminku prozirnost. Brojevi izvan zadanog intervala će se ignorirati.
+
+== RGB / HSV / HSL
+
+Za neke dinamične boje je ponekad preporučljivo koristiti drugačiji model boja. Tada, umjesto zadanog
+https://en.wikipedia.org/wiki/RGB[RGB] odaberite ili https://en.wikipedia.org/wiki/HSL_and_HSV[HSV] ili
+https://en.wikipedia.org/wiki/HSL_and_HSV[HSL] model iz padajuće liste na dnu odjeljka Dinamične boje kartice Dodatno
+xref:/Dijaloški_okvir_Svojstva.adoc[dijaloškog okvira Svojstva].
+
+[EXAMPLE]
+====
+
+Kako biste postigli da točka _A_ poprima sve dugine boje dok ju pomičete lijevo desno, prebacite na HSV model i
+postavite Zasićenje i Vrijednost na 1 a Nijansu na `++x(A)++`.
+
+====

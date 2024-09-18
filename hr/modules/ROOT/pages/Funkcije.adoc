@@ -1,0 +1,60 @@
+= Funkcije
+:page-en: Functions
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Za unos funkcije prethodno trebate definirati varijable kojećete koristiti (npr. brojeve, točke, vektore) ali takožer i
+druge funkcije.
+
+[EXAMPLE]
+====
+
+* Funkcija f: `++f(x) = 3 x^3 – x^2++`
+* Funkcija g: `++g(x) = tan(f(x))++`
+* Bezimena funkcija: `++sin(3 x) + tan(x)++`
+
+====
+
+[NOTE]
+====
+
+Sve dostupne preddefinirane funkcije (kao na primjer. sin, cos, tan) opisane su u poglavlju
+xref:/Preddefinirane_funkcije_i_operatori.adoc[Preddefinirane funkcije i operatori].
+
+====
+
+U GeoGebri je moguće koristiti i naredbe za računanje, na primjer, xref:/commands/Integral.adoc[integrala] i
+xref:/commands/Derivacija.adoc[derivacije] funkcije. Možete koristiti naredbu xref:/commands/Ako.adoc[Ako] za
+definiranje xref:/commands/Ako.adoc[uvjetne funkcije].
+
+[NOTE]
+====
+
+Možete također koristiti naredbe f'(x) ili f''(x), … za računanje derivacija prethodno definirane funkcije f(x).
+
+====
+
+[EXAMPLE]
+====
+
+Funkcija _f_ definirana je sa `++f(x) = 3 x^3 – x^2++`. Tada možete utipkati `++g(x) = cos(f' (x + 2))++` i dobiti
+funkciju _g_.
+
+====
+
+Nadalje, funkcije se mogu pomicati za vektor (pogledajte naredbu xref:/commands/Translacija.adoc[Translacija]), a
+nezavisne funkcije mogu se i pomicati pomoću miša koristeći alat image:Tool_Move.gif[Tool Move.gif,width=32,height=32]
+xref:/tools/Pomicanje.adoc[Pomicanje]. Ostale naredbe xref:/commands/Transformacija_naredbe.adoc[Transformacija] mogu se
+primjenjivati na funkcije, no u većini slučajeva rezultat neće biti funkcija već krivulja.
+
+== Ograničenje funkcije na interval
+
+Kako biste ograničili funkciju na interval [a, b], možete koristiti naredbu xref:/commands/Funkcija.adoc[Funkcija] ili
+xref:/commands/Ako.adoc[Ako].
+
+[EXAMPLE]
+====
+
+Obje naredbe `++Ako[x≥3 ∧ x≤5,x^2]++` i `++Funkcija[x^2,3,5]++` definiraju ograničenje (restrikciju) funkcije _x^2^_ na
+interval [3,5]
+
+====

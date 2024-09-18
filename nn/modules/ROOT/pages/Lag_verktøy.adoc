@@ -1,0 +1,46 @@
+= Lag verktøy
+:page-en: Tool_Creation_Dialog
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Først må du lage den konstruksjonen som verktøyet skal kunne lage seinare. Gå så til
+xref:/Verktøymeny.adoc[Verktøy-menyen] og trykk på image:Menu_Create_Tool.png[Menu Create Tool.png,width=16,height=16]
+_Lag nytt verktøy_ for å opne dialogboksen. Her må du fylle inn kva som skal vere ut-objekt, inn-objekt, og namnet og
+ikonet som verktøyet skal ha.
+
+[EXAMPLE]
+====
+
+*Døme:* Lag eit kvadratverktøy som lager kvadrat ved at du vel to eksisterande punkt i
+xref:/Grafikkfelt.adoc[grafikkfeltet].
+
+* Lag eit kvadrat ved å starte med to punkt _A_ og _B_. Lag dei andre hjørnepunkta og bind dei saman med verktøyet
+image:Tool_Polygon.gif[Tool Polygon.gif,width=32,height=32] xref:/tools/Mangekant.adoc[Mangekant] for å få kvadratet
+Mangekant1.
+* Vel image:Menu_Create_Tool.png[Menu Create Tool.png,width=16,height=16] _Lag nytt verktøy_ frå Verktøy-menyen.
+* Spesifiser kva som er ut-objekt: Trykk på kvadratet eller vel det frå nedtrekksmenyen. Spesifiser også sidene til
+kvadratet som ut-objekt.
+* Spesifiser inn-objekt: GeoGebra vil automatisk foreslå inn-objekt (her: punkt _A_ og _B_) Du kan også endre inn-objekt
+ved å trykke på dei eller velje dei frå nedtrekksmenyen.
+* Spesifiser namn på verktøy og samsvarande kommando for det nye verktøyet.
+
+[NOTE]
+====
+
+*Merk:* Verktøynamnet vil verte vist i xref:/Verktøylinje.adoc[verktøylinja] i GeoGebra, medan kommandonamnet kan verte
+brukt i xref:/Inntastingsfelt.adoc[inntastingsfeltet].
+
+====
+
+* Du kan også skrive inn tekst som skal verte vist som hjelp for verktøyet.
+* Du kan også velje eit bilde frå datamaskina som ikon for verktøyet. GeoGebra vil automastisk endre størrelsen på
+bildet slik at det passar på verktøylinja.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Ut-objekt frå verktøy er ikkje flyttbare, sjølvom dei er definert som `++Punkt[<Sti>]++`. Dersom du treng eit
+flyttbart objekt kan du definere ei liste med kommandoar og bruke den med kommandoen xref:/commands/Utfør.adoc[Utfør].
+
+====

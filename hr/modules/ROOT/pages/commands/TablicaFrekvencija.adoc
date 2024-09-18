@@ -1,0 +1,43 @@
+= TablicaFrekvencija naredba
+:page-en: commands/FrequencyTable
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+TablicaFrekvencija[ <lista neobrađenih podataka L> ]::
+  Daje tablicu (u obliku teksta) tako da prvi stupac sadrži sortiranu listu jedinstvenih elemenata iz liste _L_ a drugi
+  stupac sadrži broj pojavljivanja odgovarajuće vrijednosti u prvom stupcu. Lista _L_ traba sadržavati brojeve ili
+  tekst.
+
+TablicaFrekvencija[ <kumulacija - logička vrijednost>, <lista neobrađenih podataka L> ]::
+  Ako je _kumulacija - logička vrijednost = false_, daje jednaku tablicu kao i TablicaFrekvencija[ <L> ]
+  Ako je _kumulacija - logička vrijednost = true_, daje tablicu čiji je prvi stupac jednak kao i kod TablicaFrekvencija[
+  <L> ] a drugi stupac sadrži kumulativne frekvencije vrijednosti iz prvog stupca.
+
+TablicaFrekvencija[ <lista granica razreda>, <lista neobrađenih podataka L> ]::
+  Daje tablicu (u obliku teksta) tako da prvi stupac sadrži intervale (razrede), a drugi stupac sadrži broj elemenata iz
+  _L_ koji pripadaju odgovarajućem razredu iz prvog stupca. Svi intervali osim zadnjeg su oblika [a, b). Posljednji
+  interval je oblika [a, b].
+
+TablicaFrekvencija[ <kumulacija - logička vrijednost>, <lista granica razreda>, <lista neobrađenih podataka> ]::
+  Ako je _kumulacija - logička vrijednost = false_, daje jednaku tablicu kao i TablicaFrekvencija[ <lista granica
+  razreda>, <lista neobrađenih podataka> ]
+  Ako je _kumulacija - logička vrijednost = true_, daje tablicu kojoj je prvi stupac jednak kao i kod
+  TablicaFrekvencija[ <lista neobrađenih podataka L> ] a drugi stupac sadrži kumulativne frekvencije odgovarajućih
+  vrijednosti iz prvog stupca.
+
+TablicaFrekvencija[ <lista granica razreda>, <lista neobrađenih podataka>, <koristi gustoću - logička vrijednost>,
+<skala gustoće> (opcionalno) ]::
+  Daje tablicu (u obliku teksta) tako da prvi stupac sadrži intervale (razrede) a drugi stupac sadrži frekvencije kao i
+  odgovarajuća xref:/commands/Histogram.adoc[Histogram naredba].
+
+TablicaFrekvencija[ <kumulacija - logička vrijednost>, <lista granica razreda>, <lista neobrađenih podataka>, <koristi
+gustoću – logička vrijednost>, <skala gustoće> (opcionalno) ]::
+  Daje tablicu (u obliku teksta) tako da prvi stupac sadrži intervale (razrede), a drugi stupac sadrži frekvencije kao i
+  odgovarajuća xref:/commands/Histogram.adoc[Histogram naredba].
+
+[NOTE]
+====
+
+Ova je naredba slična kao xref:/commands/Frekvencija.adoc[Frekvencija naredba] i xref:/commands/Histogram.adoc[Histogram
+naredba]. Članci o ovim naredbama sadrže neke odgovarajuće primjere.
+
+====

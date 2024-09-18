@@ -1,0 +1,39 @@
+= JediničniVektor naredba
+:page-en: commands/UnitVector
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+JediničniVektor[ <vektor> ]::
+  Daje vektor duljine 1, jednakog smjera i orijentacije kao i zadani vektor.
+JediničniVektor[ <pravac> ]::
+  Daje vektor smjera zadanog pravca duljine 1.
+JediničniVektor[ <dužina> ]::
+  Daje vektor smjera zadane dužine duljine 1.
+
+[EXAMPLE]
+====
+
+`++JediničniVektor[3x + 4y = 5]++` daje _stem:[\begin\{pmatrix}0.8\\-0.6\end\{pmatrix}]_.
+
+====
+
+[EXAMPLE]
+====
+
+Neka je _v=stem:[\begin\{pmatrix}3\\4\end\{pmatrix}]. `++JediničniVektor[v]++` daje_
+stem:[\begin\{pmatrix}0.6\\0.8\end\{pmatrix}]__.__
+
+====
+
+== CAS prikaz
+
+JediničniVektor[ <vektor> ]::
+  Daje vektor duljine 1, jednakog smjera i orijentacije kao i zadani vektor.
+
+[EXAMPLE]
+====
+
+* `++JediničniVektor[{a, b}]++` daje _\{stem:[\frac\{a}\{\sqrt\{a^\{2} + b^\{2}}}], stem:[\frac\{b}\{\sqrt\{a^\{2} +
+b^\{2}}}]}_.
+* `++JediničniVektor[{2, 4, 4}]++` daje _\{stem:[\frac\{1}\{3}], stem:[\frac\{2}\{3}], stem:[\frac\{2}\{3}]}_.
+
+====

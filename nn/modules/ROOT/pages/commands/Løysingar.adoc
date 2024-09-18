@@ -1,0 +1,54 @@
+= Løysingar Kommando
+:page-en: commands/Solutions
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Denne kommandoen er tilgjengeleg berre i xref:/CAS_delen.adoc[CAS-delen].
+
+Løysingar[ <Likning> ]::
+  Løyser likninga for hovedvariabelen og gjev ei liste med alle løysingane.
+Løysingar[ <Likning>, <Variabel> ]::
+  Løyser likninga for den gjevne variabelen og gjev ei liste med alle løysingane.
+Løysingar[ <Liste med likningar>, <Liste med variablar> ]::
+  Løyser settet av likningar for dei gjevne ukjente variablane og gjev ei liste med alle løysingane.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++Løysingar[{x = 4 x + y , y + x = 2}, {x, y}]++` gjev _\{\{-1, 3}}_, som er den einaste løysinga av _x = 4x + y_ and
+_y + x = 2_. Løysinga vert vist som stem:[\begin\{pmatrix} -1&3 \end\{pmatrix}].
+** `++Løysingar[{2a^2 + 5a + 3 = b, a + b = 3}, {a, b}]++` gjev _\{\{0, 3}, \{-3, 6}}_. Løysinga vert vist som
+stem:[\begin\{pmatrix} 0&3\\ -3&6 \end\{pmatrix}].
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Løysingar[x * a^2 = 4a, a]++` gjev stem:[\\{\frac\{4}\{x},0\}], som er løysingane av _x a^2^ = 4a_.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Løysingar[x^2 = 4x]++` gjev _\{4, 0}_, som er løysingane av _x^2^ = 4x_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Høgre sida kan verte utelatt i kvar av syntaksane over. Dersom høgre sida manglar vert ho sett lik 0.
+* Sjå også kommandoane xref:/commands/Løys.adoc[Løys] , xref:/commands/CLøys.adoc[CLøys],
+xref:/commands/CLøysingar.adoc[CLøysingar], xref:/commands/NLøys.adoc[NLøys] og
+xref:/commands/NLøysingar.adoc[NLøysingar]
+
+====

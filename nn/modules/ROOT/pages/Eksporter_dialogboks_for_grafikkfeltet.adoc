@@ -1,0 +1,66 @@
+= Eksporter dialogboks for grafikkfeltet
+:page-en: Export_Graphics_Dialog
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+GeoGebra let deg eksportere grafikkfeltet som ei bildefil. Det gjer du ved å gå til xref:/Filmeny.adoc[Fil-menyen] og
+velje _Eksporter_ og så image:Image-x-generic.png[Image-x-generic.png,width=16,height=16] _Grafikkfelt som bilde (png,
+eps)..._ eller ved å trykke [.kcode]#Ctrl# + [.kcode]#Shift# + [.kcode]#P# (Mac OS: [.kcode]#Cmd# + [.kcode]#Shift# +
+[.kcode]#P#). Dette opnar dialogboksen for eksport av bilder.
+
+Denne dialogboksen let deg lage ei bildefil frå xref:/Grafikkfelt.adoc[grafikkfeltet] og lagre fila på datamaskina di
+eller sende ho til utklippstavla. Du kan velje format, skala, oppløysing og om bildet skal vere gjennomsiktig.
+
+[NOTE]
+====
+
+*Merk:* Dersom du lagar to punkt kalla _Export_1_ og _Export_2_ vil desse definere det rektangelet som vert eksportert,
+elles vil heile den synlege delen av grafikkfeltet verte eksportert.
+
+====
+
+Du kan eksportere bildet med eit av dei følgjande filformata:
+
+PNG – Portable Network Graphics::
+  Dette er eit punktgrafikkformat. Desto høgare oppløysinga (dpi) er, desto betre vert kvaliteten (300dpi er vanlegvis
+  nok). PNG-filer bør ikkje verte skalert fleire gongar for å unngå tap i kvalitet.
+  PNG-filer er godt egna til å bruke på websider (html) eller i tekstdokument.
+
+[NOTE]
+====
+
+*Merk:* Når du sett inn ei PNG-fil i eit tekstdokument må du sikre deg at storleiken vert sett til 100 % for å unngå at
+skaleringa (i cm) vert endra.
+
+====
+
+EPS – Encapsulated Postscript::
+  Dette er eit vektorgrafikkformat. EPS-filer kan verte skalert uten tap av kvalitet.
+  EPS-filer er godt egna til å bruke i vektorgrafikkprogram (til dømes Corel Draw og Inkscape) eller i program som
+  brukar til dømes xref:/LaTeX.adoc[LaTeX].
+  Oppløysinga til EPS-filer er alltid 72dpi. Denne verdien vert berre brukt til å finne den eigentlege storleiken til
+  bildet i cm og har ingen effekt på bildekvaliteten.
+
+[NOTE]
+====
+
+*Merk:* Det er ikkje mogleg med gjennomsiktige objekt med EPS-formatet.
+
+====
+
+PDF – Portable Document Format::
+  (sjå EPS-formatet)
+
+[NOTE]
+====
+
+*Merk:* I SVG og PDF kan du eksportere tekst som redigerbar tekst eller form. Då vert teksten lagra som vanleg tekst
+(som let deg endre teksten i til dømes Inkscape) eller som Bézier-kurver (som garanterer at teksten ser lik ut uansett
+om den korrekte fonten er installert eller ikkje).
+
+====
+
+SVG – Scalable Vector Graphic::
+  (sjå EPS-formatet)
+
+EMF – Enhanced Metafile::
+  (sjå EPS-formatet)

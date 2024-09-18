@@ -1,0 +1,37 @@
+= SetSaman Kommando
+:page-en: commands/Join
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+SetSaman[ <Liste med lister> ]::
+  Set saman under-listene til ei lenger liste.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++SetSaman[{{1, 2}}]++` gjev lista _\{1, 2}_.
+* `++SetSaman[{{1, 2, 3}, {3, 4}, {8, 7}}]++` gjev lista _\{1, 2, 3, 3, 4, 8, 7}_.
+
+====
+
+SetSaman[ <Liste>, <Liste>, ... ]::
+  Set saman to (eller fleire) lister til ei liste.
+
+[EXAMPLE]
+====
+
+*Døme:* `++SetSaman[{5, 4, 3}, {1, 2, 3}]++` gjev lista _\{5, 4, 3, 1, 2, 3}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:*
+
+* Listene treng ikkje innehalde element av same datatype.
+* Rekkefølgja på elementa vert ikkje endra når den nye lista vert laga.
+* Sjå også kommandoane xref:/commands/LeggTil.adoc[LeggTil] og xref:/commands/SetInn.adoc[SetInn].
+
+====

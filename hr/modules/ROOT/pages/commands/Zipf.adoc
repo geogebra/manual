@@ -1,0 +1,28 @@
+= Zipf naredba
+:page-en: commands/Zipf
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Zipf[ <broj elemenata>, <eksponent> ]::
+  Daje stupčasti graf https://en.wikipedia.org/wiki/Zipf%27s_law[Zipf razdiobe].
+  _Parametri:_
+  _broj elemenata_: broj elemenata čiji rang ispitujemo
+  _eksponent_: eksponent koji opisuje razdiobu
+
+Zipf[ <broj elemenata>, <eksponent>, <kumulacija - logička vrijednost> ]::
+  Daje stupčasti graf Zipf razdiobe ako je _kumulacija - logička vrijednost_ = false.
+  Daje graf kumulativne Paskalove razdiobe ako je _kumulacija - logička vrijednost_ = true.
+  Prva dva parametra su jednaka gore opisanima.
+Zipf[ <broj elemenata>, <eksponent>, <vrijednost varijable>, <kumulacija - logička vrijednost> ]::
+  Neka je X Zipf slučajna varijabla.
+  Daje P( X = _v_) ako je _kumulacija - logička vrijednost_ = false.
+  Daje P( X ≤ _v_) ako je _kumulacija - logička vrijednost_ = true.
+  Prva dva parametra su jednaka gore opisanima.
+
+== CAS prikaz
+
+xref:/CAS_prikaz.adoc[CAS prikaz] podržava samo sljedeću sintaksu:
+
+Zipf[ <broj elemenata>, <eksponent>, <vrijednost varijable>, <kumulacija - logička vrijednost> ]::
+  Neka je X Zipf slučajna varijabla.
+  Daje P( X = _v_) ako je _kumulacija - logička vrijednost_ = false.
+  Daje P( X ≤ _v_) ako je _kumulacija - logička vrijednost_ = true.

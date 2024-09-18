@@ -1,0 +1,39 @@
+= Ulike Kommando
+:page-en: commands/Unique
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Ulike[ <Liste L> ]::
+  Gjev ei liste med elementa i _L_ i stigande rekkefølgje. Kvart unikt element vert berre tatt med ein gong. Kommandoen
+  kan verte brukt både for tal og tekst.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++Ulike[{1, 2, 4, 1, 4}]++` gjev _\{1, 2, 4}_.
+* `++Ulike[{"a", "b", "Hallo", "Hallo"}]++` gjev _\{"Hallo", "a", "b"}_.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoen xref:/commands/Frekvens.adoc[Frekvens] som gjev talet på førekomstar for kvart unikt element
+i _L_.
+
+====
+
+== CAS-delen
+
+Ulike[ <Liste L> ]::
+  Gjev ei liste der kvart element frå _L_ opptrer berre ein gong.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Ulike[{1, x, x, 1, a}]++` gjev _\{1, x, a}_.
+
+====

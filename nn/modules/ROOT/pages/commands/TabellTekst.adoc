@@ -1,0 +1,75 @@
+= TabellTekst Kommando
+:page-en: commands/TableText
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+TabellTekst[ <Liste>, <Liste>, ... ]::
+  Lagar ein tekst som inneheld ein tabell med elementa i listene.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++TabellTekst[{x^2, 4}, {x^3, 8}, {x^4, 16}]++` lagar ein tabell som eit tekstobjekt. Tabellen har tre rader og to
+kolonnar og inneheld venstrejusterte element.
+* `++TabellTekst[Følgje[i^2, i, 1, 10]]++` lagar ein tabell med ei rad som eit tekstobjekt. Alle elementa er
+venstrejusterte.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Som standard vert kvar ny liste til ein rad i tabellen og alle element vert venstrejusterte.
+
+====
+
+TabellTekst[ <Liste>, <Liste>, ..., <Justering av tekst> ]::
+  Lagar ein tekst som inneheld ein tabell med elementa i listene. _Justering av tekst_ avgjer orientering og justering
+  av tabellteksten.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++TabellTekst[{1,2,3,4},{1,4,9,16},"v"]++` gjev ein tabell med to kolonnar og fire rader, der elementa er
+venstrejusterte.
+* `++TabellTekst[{1,2,3,4},{1,4,9,16},"h"]++` gjev ein tabell med fire kolonnar og to rader, der elementa er
+venstrejusterte.
+* `++TabellTekst[{11.2,123.1,32423.9,"234.0"},"vr"]++` gjev ein tabell med ei rad, der elementa er høgrejusterte.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Moglege verdiar er: "vl", "vc", "vr", "v", "h", "hl", "hc", "hr". Som standard vert "hl" brukt.
+
+* "v" = vertikal orientering, det vil seie at listene vert kolonnar
+* "h" = horisontal orientering, det vil seie at listene vert rader
+* "l" = venstrejustering av element
+* "r" = høgrejustering av element
+* "c" = sentrering av element
+
+====
+
+[NOTE]
+====
+
+*Merk:* For å lage klammer rundt tabellteksten skriv du "||||", "||", "\{}", "[]" eller "()" inn i "Justering av tekst".
+Horisontale linjer vert spesifisert med "_" og vertikale linjer med "|".
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* `++TabellTekst[{{1,2},{3,4}},"c()"]++`
+* `++TabellTekst[{{1,2},{3,4}},"c|_"]++`
+* `++TabellTekst[{{1,2},{3,4}},"c||"]++`
+* `++TabellTekst[{{1,2},{3,4}},"c||||"]++`.
+
+====

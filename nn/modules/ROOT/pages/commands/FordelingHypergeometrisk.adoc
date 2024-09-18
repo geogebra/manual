@@ -1,0 +1,81 @@
+= FordelingHypergeometrisk Kommando
+:page-en: commands/HyperGeometric
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+FordelingHypergeometrisk[ <Populasjonsstorleik>, <Tal på treff>, <Utvalsstorleik> ]::
+  Returner eit søylediagram for den https://en.wikipedia.org/wiki/no:Hypergeometrisk_fordeling[hypergeometriske
+  fordelinga].
+  Parametrar:
+  _Populasjonsstorleik_: det totale talet på element i populasjonen, (t.d. talet på kular i ein urne).
+  _Tal på treff_: talet på element i populasjonen som gjev suksess, (t.d. talet på kvite kular i urna).
+  _Utvalsstorleik_: talet på element som vert trekt ut, (t.d. talet på kular som blir trekt ut frå urna).
+
+Søylediagrammet viser sannsynsfunksjonen for talet på suksess i utvalet, (t.d. sannsynet på at akkurat to kvite kular
+blir trekt).
+
+FordelingHypergeometrisk[ <Populasjonsstorleik>, <Tal på treff>, <Utvalsstorleik>, <Boolsk kumulativ> ]
+
+Dersom _kumulativ = false_ vert det returnert eit søylediagram for den hypergeometriske fordelinga.
+
+Dersom _kumulativ = true_ vert det returnert eit søylediagram for den kumulative hypergeometriske fordelinga.
+
+FordelingHypergeometrisk[ <Populasjonsstorleik>, <Tal på treff>, <Utvalsstorleik>, <Variabelverdi v>, <Boolsk kumulativ>
+]
+
+La _X_ vere ein tilfeldig hypergeometrisk fordelt stokastisk variabel.
+
+* Dersom _kumulativ = false_ vert _P(X = v)_ returnert.
+* Dersom _kumulativ = true_ vert _P(X ≤ v)_ returnert.
+
+[NOTE]
+====
+
+*Merk:*
+
+* Sjå også verktøyet image:Tool_Probability_Calculator.gif[Tool Probability Calculator.gif,width=32,height=32]
+xref:/tools/Sannsynskalkulator.adoc[Sannsynskalkulator].
+* Sjå også kommandoen xref:/commands/InversHypergeometrisk.adoc[InversHypergeometrisk].
+* Sjå også kommandoane for dei andre diskrete sannsynsfordelingane
+xref:/commands/FordelingBernoulli.adoc[FordelingBernoulli], xref:/commands/FordelingBinomial.adoc[FordelingBinomial],
+xref:/commands/FordelingPascal.adoc[FordelingPascal], xref:/commands/FordelingPoisson.adoc[FordelingPoisson] og
+xref:/commands/Zipf.adoc[Zipf].
+* Sjå også kommandoane for dei kontinuerlege sannsynsfordelingane xref:/commands/Erlang.adoc[Erlang],
+xref:/commands/FordelingCauchy.adoc[Fordeling Cauchy], xref:/commands/FordelingF.adoc[FordelingF],
+xref:/commands/FordelingGamma.adoc[FordelingGamma], xref:/commands/FordelingNormal.adoc[FordelingNormal],
+xref:/commands/FordelingT.adoc[FordelingT], xref:/commands/FordelingWeibull.adoc[FordelingWeibull],
+xref:/commands/KjiKvadrat.adoc[KjiKvadrat], xref:/commands/LogNormal.adoc[LogNormal],
+xref:/commands/Logistisk.adoc[Logistisk], xref:/commands/Trekantfordeling.adoc[Trekantfordeling] og
+xref:/commands/Uniform.adoc[Uniform].
+
+====
+
+== CAS-delen
+
+FordelingHypergeometrisk[ <Populasjonsstorleik>, <Tal på treff>, <Utvalsstorleik>, <Variabelverdi v>, <Boolsk kumulativ>
+]::
+  La _X_ vere ein tilfeldig hypergeometrisk fordelt stokastisk variabel.
+  * Dersom _kumulativ = false_ vert _P(X = v)_ returnert.
+  * Dersom _kumulativ = true_ vert _P(X ≤ v)_ returnert.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+Anta at du vel to ballar frå ei ekse med ti ballar utan å leggje tilbake. To av dei ti ballanei eska er kvite.
+
+* `++FordelingHypergeometrisk[10, 2, 2, 0, false]++` gjev stem:[\frac\{28}\{45}], som er sannsynet for å velje null
+kvite ballar.
+* `++FordelingHypergeometrisk[10, 2, 2, 1, false]++`gjev stem:[\frac\{16}\{45}], som er sannsynet for å velje ein kvit
+ball.
+* `++FordelingHypergeometrisk[10, 2, 2, 2, false]++` gjev stem:[\frac\{1}\{45}], som er sannsynet for å velje to kvite
+ballar.
+* `++FordelingHypergeometrisk[10, 2, 2, 3, false]++` gjev _0_, som er sannsynet for å velje tre kvite ballar.
+* `++FordelingHypergeometrisk[10, 2, 2, 0, true]++` gjev stem:[\frac\{28}\{45}], som er sannsynet for å velje null
+(eller færre) kvite ballar.
+* `++FordelingHypergeometrisk[10, 2, 2, 1, true]++` gjev stem:[\frac\{44}\{45}], som er sannsynet for å velje ein eller
+færre kvite ballar.
+* `++FordelingHypergeometrisk[10, 2, 2, 2, true]++` gjev _1_, som er sannsynet for å velje to eller færre kvite ballar.
+* `++FordelingHypergeometrisk[10, 2, 2, 3, true]++` gjev _1_, som er sannsynet for å velje tre eller færre kvite ballar.
+
+====

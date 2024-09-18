@@ -1,0 +1,61 @@
+= NZS Naredba
+:page-en: commands/LCM
+ifdef::env-github[:imagesdir: /bs/modules/ROOT/assets/images]
+
+NZS[ <Broj>, <Broj> ]::
+  izračunava najmanji zajednički sadržalac/višekratnik brojeva.
+NZS[ <Lista brojeva> ]::
+  izračunava najmanji zajednički sadržalac/višekratnik niza brojeva.
+
+[EXAMPLE]
+====
+
+`++NZS[{12, 30, 18}]++` je _180_.
+
+====
+
+[EXAMPLE]
+====
+
+`++NZS[12, 15]++` je _60_.
+
+====
+
+== CAS Sintaksa
+
+NZS[ <Broj>, <Broj> ]::
+  izračunava najmanji zajednički sadržalac/višekratnik brojeva.
+NZS[ <Lista brojeva> ]::
+  izračunava najmanji zajednički sadržalac/višekratnik niza brojeva.
+NZS[ <Polinom>, <Polinom> ]::
+  izračunava najmanji zajednički sadržalac/višekratnik polinoma.
+NZS[ <Lista polinoma> ]::
+  izračunava najmanji zajednički sadržalac/višekratnik niza polinoma.
+
+[EXAMPLE]
+====
+
+`++NZS[{x^2 + 4 x + 4, x^2 - x - 6, x³ - 4x² - 3x + 18}]++` daje _x⁴ - 2x³ - 11x² + 12x + 36_.
+
+====
+
+[EXAMPLE]
+====
+
+`++NZS[x^2 + 4 x + 4, x^2 - x - 6]++` daje _x³ + x² - 8x - 12_.
+
+====
+
+[EXAMPLE]
+====
+
+`++NZS[{12, 30, 18}]++` je _180_.
+
+====
+
+[EXAMPLE]
+====
+
+`++NZS[12, 15]++` je _60_.
+
+====

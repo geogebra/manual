@@ -1,0 +1,62 @@
+= Funkcija naredba
+:page-en: commands/Function
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Funkcija[ <funkcija>, <početna vrijednost a>, <završna vrijednost b> ]::
+  Proizvodi graf zadane funkcije na intervalu "[a, b]" koja nije definirana izvan "[a, b]".
+
+[EXAMPLE]
+====
+
+`++f(x) = Funkcija [x^2, -1, 1]++` crta graf funkcije x^2^ na intervalu [-1, 1]. Ako poslije utipkate
+`++g(x) = 2 f(x)++` dobiti ćete funkciju _g(x) = 2 x^2^_, ali ne i njenu restrikciju na intervalu "[-1, 1]".
+
+====
+
+[NOTE]
+====
+
+Ova funkcija se koristi samo za prikazivanje grafa na zadanom intervalu. Za restrikciju domene funkcije ili korištenje u
+xref:/commands/Niz.adoc[naredbi Niz], koristite uvjetnu naredbu xref:/commands/Ako.adoc[Ako], npr.
+`++f(x) = Ako[-1 < x < 1, x²]++`.
+
+====
+
+Funkcija[<lista brojeva>]::
+  Napravit će slijedeću funkciju: prva dva broja određuju početni i završnu vrijednost za _x_. Ostali brojevi
+  predstavljaju umetnute _y_-vrijednosti funkcije na jednakim udaljenostima između početne i završne vrijednost.
+
+[EXAMPLE]
+====
+
+`++Funkcija[{2, 4, 0, 1, 0, 1, 0}]++` daje trokutasti val između _x=2_ i _x=4_.
+`++Funkcija[{-3, 3, 0, 1, 2, 3, 4, 5}]++` daje pravac s nagibom _=1_ između _x=-3_ i _x=3_.
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Tekst koji slijedi odnosi se na mogućnosti koje su podržane samo u inačici
+http://wiki.geogebra.org/en/Release_Notes_GeoGebra_5.0[GeoGebra 5.0 Beta].
+
+'''''
+
+Funkcija[ <izraz>, <varijabla 1>, <početna vrijednost>, <završna vrijednost>, <varijabla 2>, <početna vrijednost>,
+<završna vrijednost> ]::
+  Prikazuje restrikciju površine zadane funkcijom dviju varijabli u 3D prostoru.
+
+[EXAMPLE]
+====
+
+Izraz `++a(x, y) = x + 0y++`kreira funkciju dviju varijabli čiji je graf u 3D prostoru *[.underline]#ravnina#* _z_ =
+_a_(_x_, _y_) = _x_.(( `++Funkcija[u, u, 0, 3, v, 0, 2] ++` kreira funkciju dviju varijabli _b_(_u_, _v_) = _u_, čiji je
+graf u 3D prostoru *[.underline]#pravokutnik#* Mnogokut[(0, 0, 0), (3, 0, 3), (3, 2, 3), (0, 2, 0)] pripadajući ravnini
+_z_ = _a_(_x_,_y_) = _x_.
+
+====
+
+|===

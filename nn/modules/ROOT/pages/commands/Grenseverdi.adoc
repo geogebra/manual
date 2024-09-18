@@ -1,0 +1,64 @@
+= Grenseverdi Kommando
+:page-en: commands/Limit
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+Grenseverdi[ <Funksjon f>, <Tal t> ]::
+  Finn grenseverdien til funksjonen _f_ når verdien _t_ vert sett inn for hovedvariabelen i funksjonen.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Grenseverdi[(x^2 + x) /  x^2, +∞]++` gjev _1_ .
+
+====
+
+[NOTE]
+====
+
+*Merk:* Ikkje alle grenser kan verte funne av GeoGebra, så _udefinert_ vil verte returnert både i dei tilfella og når
+det korrekte resultatet er udefinert.
+
+====
+
+[NOTE]
+====
+
+*Merk:* Sjå også kommandoane xref:/commands/Asymptote.adoc[Asymptote], xref:/commands/GrenseOver.adoc[GrenseOver] og
+xref:/commands/GrenseUnder.adoc[GrenseUnder].
+
+====
+
+== CAS-delen
+
+Grenseverdi[ <Uttrykk f>, <Verdi t> ]::
+  Finn grenseverdien til uttrykket _f_ når verdien _t_ vert sett inn for hovedvariabelen i funksjonen.
+Grenseverdi[ <Uttrykk f>, <Variabel v>, <Verdi t> ]::
+  Finn grenseverdien til uttrykket _f_ når verdien _t_ vert sett inn for variabelen _v_ i funksjonen.
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Grenseverdi[a sin(v) / v, v, 0]++` gjev _a_ .
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+`++Grenseverdi[a sin(x) / x, 0]++` gjev _a_ .
+
+====
+
+[NOTE]
+====
+
+*Merk:* Ikkje alle grenseverdiar kan verte funne av GeoGebra, så _?_ vil verte returnert både i dei tilfella og når det
+korrekte resultatet er udefinert.
+
+====

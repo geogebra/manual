@@ -1,0 +1,44 @@
+= CRiješi naredba
+:page-en: commands/CSolve
+ifdef::env-github[:imagesdir: /hr/modules/ROOT/assets/images]
+
+Ova je naredba dostupna samo u xref:/CAS_prikaz.adoc[CAS prikazu].
+
+CRiješi[ <jednadžba> ]::
+  Riješit će zadanu jednadžbu u odnosu na glavnu nepoznanicu i dat će listu svih rješenja, uključujući i kompleksne
+  brojeve.
+CRiješi[ <jednadžba>, <varijabla> ]::
+  Riješit će zadanu jednadžbu u odnosu na zadanu nepoznanicu i dat će listu svih rješenja, uključujući i kompleksne
+  brojeve.
+CRiješi[ <lista jednadžbi>, <lista varijabli> ]::
+  Riješit će sustav jednadžbi u odnosu na zadane nepoznanice i dat će listu svih rješenja, uključujući i kompleksne
+  brojeve.
+
+[EXAMPLE]
+====
+
+`++CRiješi[{y^2 = x - 1, x = 2 * y - 1}, {x, y}]++` daje _\{\{x = 1 + 2 ί, y = 1 + ί}, \{x = 1 - 2 ί, y = 1 - ί}}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++CRiješi[a^2 = -1, a]++` daje _\{a = ί, a = -ί}_, kompleksna rješenja od _a^2^ = -1_.
+
+====
+
+[EXAMPLE]
+====
+
+`++CRiješi[x^2 = -1]++` daje listu _\{x = ί, x = -ί}_.
+
+====
+
+[NOTE]
+====
+
+* Imaginarna jedinica ί se dobiva pritiskom tipki [.kcode]#ALT # + [.kcode]# i#.
+* Pogledajte još i naredbe xref:/commands/CRješenja.adoc[CRješenja] i xref:/commands/Riješi.adoc[Riješi].
+
+====

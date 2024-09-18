@@ -1,0 +1,45 @@
+= Linjer og aksar
+:page-en: Lines_and_Axes
+ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
+
+== Linjer
+
+Du kan skrive inn ei linje i xref:/Inntastingsfelt.adoc[inntastingsfeltet] anten som ei lineær likning i _x_ og _y_
+eller på parametrisk form. I begge tilfella kan tidlegare definerte variablar (t.d. tal, punkt og vektorar) verte brukt
+i likninga.
+
+[NOTE]
+====
+
+*Merk:* Du kan gi linja eit namn ved å skrive inn namnet etterfylgt av eit kolon før du skriv inn likninga.
+
+====
+
+[EXAMPLE]
+====
+
+*Døme:*
+
+* Skriv `++g: 3x + 4y = 2++` for å skrive inn ei linje _g_ som ei lineær likning.
+* Skriv `++g: X = (-5, 5) + t (4, -3)++` for å skrive inn ei linje _g_ på parametrisk form.
+* Definer parametrane _m_ = 2 og _b_ = -1. Skriv inn likninga `++h: y = m*x + b++` for å få ei linje _h_ på form gjeve
+av stigningstal og skjeringspunkt med _y_-aksen.
+
+====
+
+== Aksar
+
+Dei to koordinataksane er tilgjengelege som kommandoar ved namna _xAkse_ og _yAkse_.
+
+[EXAMPLE]
+====
+
+*Døme:* Kommandoen `++NormalLinje[A, xAxis]++` konstruerer normallinja på _x_-aksen gjennom det gjevne punktet _A_.
+
+====
+
+== Å få parametrane til ei linje
+
+Dersom ei linje står på standardform (l: ax+yb=c) kan du få parametrane _a_ og _b_ ved høvesvis å bruke `++x(l)++` og
+`++y(l)++`. Skjeringspunktet med _y_-aksen er gjeve av `++l(0)++`, medan stignigstalet er gjeve av funksjonen
+`++Stigning[l]++`.
