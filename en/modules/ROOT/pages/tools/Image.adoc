@@ -2,49 +2,43 @@
 :page-en: tools/Image
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
-This tool allows you to insert an image into the image:16px-Menu_view_graphics.svg.png[Menu view
-graphics.svg,width=16,height=16] xref:/Graphics_View.adoc[Graphics View].
-
-When you select the image:20px-Mode_image.svg.png[Mode image.svg,width=20,height=20] _Image_ tool, a dialog box appears that allows you to select the image file saved on your device. On mobile and web versions, you can also import images from the camera.
+Activate the image:20px-Mode_image.svg.png[Mode image.svg,width=20,height=20] _Image_ tool to open a dialog window that allows to browse the content of your device and select the image file that will be inserted in the image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Graphics_View.adoc[Graphics View]. On mobile and Web versions it is also possible to import live images from the camera.
 
 [NOTE]
 ====
 
 * Transparent https://en.wikipedia.org/wiki/GIF[GIF] and https://en.wikipedia.org/wiki/Portable_Network_Graphics[PNG]
-files are supported, but for PNGs you may need to edit them first so that they have an alpha channel (for example using
+files are supported, but for PNGs it is necessary to make sure that they have an alpha channel (for example if editing is made using
 http://www.irfanview.com/[IrfanView], save using the PNGOUT plugin and choose *RGB+Alpha*)
 * Inserted images will be auxiliary objects by default.
 
 ====
 
-== Properties of Images
+== Position and Properties of Images
 
-The position of an image may be absolute on screen or relative to the coordinate system. You can specify this on tab
-_Position_ of the image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+The position of an image can be absolute on screen or relative to the coordinate system: this setting can be specified in the _Position_ tab of the image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
 xref:/Properties_Dialog.adoc[Properties Dialog] of the image.
 
-You may specify up to three corner points of the image on tab _Position_ of the
-image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Properties Dialog_. This gives you the flexibility
-to scale, rotate, and even distort images (see also xref:/commands/Corner.adoc[Corner] command).
+GeoGebra creates automatically 2 points at the bottom corners of the image, that can be used to place and resize the image. These points are defined in the settings as:
 
-* _Corner 1_: position of the lower left corner of the image
-* _Corner 2_: position of the lower right corner of the image
+* _Corner 1_: position of the bottom left corner of the image
+* _Corner 2_: position of the bottom right corner of the image
 
-[NOTE]
-====
-
-This corner may only be set if _Corner 1_ was set before. It controls the width of the image.
-
-====
+You can specify up to three corner points of the image in the _Position_ tab of the
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Properties Dialog_ of the image. This gives you the flexibility
+to scale, rotate, and distort images (see also the xref:/commands/Corner.adoc[Corner] command). Besides the previous ones, it is possible to define the
 
 * _Corner 4_: position of the upper left corner of the image
 
+
 [NOTE]
 ====
 
-This corner may only be set if _Corner 1_ was set before. It controls the height of the image.
+_Corner 2_ controls the width of the image, and _Corner 4_ controls the height of the image. Both of them can be set only if _Corner 1_ has been set before.
 
 ====
+
 
 [EXAMPLE]
 ====
@@ -52,19 +46,18 @@ This corner may only be set if _Corner 1_ was set before. It controls the height
 Create three points _A_, _B_, and _C_ and insert an image into the image:16px-Menu_view_graphics.svg.png[Menu view
 graphics.svg,width=16,height=16] _Graphics View_ to explore the effects of the corner points.
 
-* Set point _A_ as the first and point _B_ as the second corner of your image. By dragging points _A_ and _B_ in
-image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22] _Move__ mode you can change the width of the image.
+* Set point _A_ as the first and point _B_ as the second corner of your image. Activate the 
+image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22] _Move_ tool and drag points _A_ and _B_ to change the width of the image.
 * Now, remove point _B_ as the second corner of the image. Set point _A_ as the first and point _C_ as the fourth corner
 and explore how dragging the points now influences the height of the image.
-* Finally, you may set all three corner points and see how dragging the points distorts your image.
+* Finally, set all three corner points and see how dragging the points distorts your image.
 
 ====
 
 [EXAMPLE]
 ====
 
-In order to attach your image to a point _A_, and set its width to 3 and its height to 4 units, you could do the
-following:
+In order to attach your image to a point _A_, and set its size (e.g. width = 3 and height = 4 units):
 
 * Set _Corner 1_ to _A_
 * Set _Corner 2_ to _A + (3, 0)_
@@ -75,28 +68,26 @@ following:
 [NOTE]
 ====
 
-If you now drag point _A_ in image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22] xref:/tools/Move.adoc[Move]
-mode, the size of your image does not change.
+If you activate the image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22] _Move_ tool and drag point _A_, the size of your image does not change.
 
 ====
 
-You may specify an image as a _Background_ image on tab _Basic_ of the
-image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Properties Dialog_. A background image lies behind
-the coordinate axes and cannot be selected any more.
+You may specify an image as a _Background_ image in the _Basic_ tab of the
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Properties Dialog_ of the image. A background image lies behind
+the coordinate axes and becomes non selectable.
 
 [NOTE]
 ====
 
-In order to change the background setting of an image, you may open the
-image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Properties Dialog_ by selecting
+In order to change the background setting of an image, open the
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Properties Dialog_ of the image by selecting
 image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Object Properties_ from the
 image:16px-Menu-edit.svg.png[Menu-edit.svg,width=16,height=16] xref:/Edit_Menu.adoc[Edit Menu].
-In the web version, check Show _Auxiliary Objects_ in the image:16px-Menu_view_algebra.svg.png[Menu view
-algebra.svg,width=16,height=16]Algebra View properties, select the image in the image:16px-Menu_view_algebra.svg.png[Menu view
-algebra.svg,width=16,height=16]Algebra View, and open the _properties_ dialog.
+In the Web version and the apps, it is necessary to check the _Show Auxiliary Objects_ option in the image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] _Algebra View_ properties first, so the image is displayed in the list of objects in the _Algebra View_, then select the image in the image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16]Algebra View, and open its _Properties_ dialog.
 
 ====
 
-The _Transparency_ of an image can be changed in order to see objects or axes that lie behind the image. You can set the
-transparency of an image by specifying a _Filling_ value between 0 % and 100 % on tab _Style_ of the
-image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Properties Dialog_.
+The _Opacity_ of an image can be changed in order to see objects or axes that lie behind the image: use the slider to specify an _Opacity_ value between 0 and 100 in the _Color_ tab of the
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Properties Dialog_ of the image.
