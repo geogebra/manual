@@ -1,0 +1,43 @@
+= Limit 指令
+:page-en: commands/Limit
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Limit[ <Function>, <Value> ]::
+
+== CAS 視窗
+
+Limit[ <Function>, <Value> ]::
+Limit[ <Function f>, <Value t> ]::
+  Computes https://en.wikipedia.org/wiki/Limit_of_a_function[limit] of function _f_ for given value of function variable
+  (may be infinity).
+
+== CAS Syntax
+
+Limit[ <Expression f>, <Value t> ]::
+  Computes the limit of function _f_ for _x = t_.
+Limit[ <Expression f>, <Variable v>, <Value t> ]::
+  Computes limit of multivariate function _f_ for _v = t_.
+
+[EXAMPLE]
+====
+
+
+`++Limit[a sin(v)/v, v, 0]++` yields _a_ .
+
+====
+
+[EXAMPLE]
+====
+
+
+`++Limit[a sin(x)/x, 0]++` yields _a_ .
+
+====
+
+[NOTE]
+====
+See also xref:/s_index_php?title=Asymptote_Command_action=edit_redlink=1.adoc[Asymptote Command],
+xref:/s_index_php?title=LimitAbove_Command_action=edit_redlink=1.adoc[LimitAbove Command] and
+xref:/s_index_php?title=LimitBelow_Command_action=edit_redlink=1.adoc[LimitBelow Command].
+
+====

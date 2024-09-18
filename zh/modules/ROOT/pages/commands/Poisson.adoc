@@ -1,0 +1,32 @@
+= Poisson 指令
+:page-en: commands/Poisson
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Poisson[ <Mean> ]::
+Poisson[ <Mean>, <Boolean Cumulative> ]::
+Poisson[ <Mean>, <Variable Value>, <Boolean Cumulative> ]::
+
+== CAS 視窗
+
+Poisson[ <Mean> ]::
+Poisson[ <Mean λ> ]::
+  Returns a bar graph of a https://en.wikipedia.org/wiki/Poisson_distribution[Poisson distribution] with given mean λ.
+Poisson[ <Mean λ>, <Boolean Cumulative> ]::
+  Returns a bar graph of a Poisson distribution when _Cumulative = false_.
+  Returns a bar graph of a cumulative Poisson distribution when _Cumulative = true_.
+  The first parameter is same as above.
+Poisson[ <Mean λ>, <Variable Value v>, <Boolean Cumulative> ]::
+  Let X be a Poisson random variable.
+  Returns P( X = _v_) when _Cumulative_ = false.
+  Returns P( X ≤ _v_) when _Cumulative_ = true.
+  First parameter is same as above.
+
+== CAS Specific Syntax
+
+In xref:/CAS_View.adoc[CAS View] only one syntax is supported:
+
+Poisson[ <Mean λ>, <Variable Value v>, <Boolean Cumulative> ]::
+  Let X be a Poisson random variable.
+  Returns P( X = _v_) when _Cumulative_ = false.
+  Returns P( X ≤ _v_) when _Cumulative_ = true.
+  First parameter is same as above.

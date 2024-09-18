@@ -1,0 +1,113 @@
+= 矩陣
+:page-en: Matrices
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+GeoGebra 支援實數**矩陣**（matrix），將矩陣的每一列作為元素，以二維xref:/串列.adoc[串列]來儲存矩陣。
+
+[EXAMPLE]
+====
+ 在 GeoGebra 中，用 \{\{1, 2, 3}, \{4, 5, 6}, \{7, 8, 9}} 表示一個 3x3 矩陣 stem:[\begin\{pmatrix}1&2&3\\
+4&5&6\\ 7&8&9 \end\{pmatrix}]
+
+====
+
+要在 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] **xref:/繪圖區.adoc[繪圖區]**用
+LaTeX 格式顯示一個矩陣，可以使用
+xref:/commands/FormulaText.adoc[FormulaText_指令]，或從**代數區**拖曳一個矩陣物件放到*繪圖區*。
+
+[EXAMPLE]
+====
+ 在xref:/指令列.adoc[指令列]輸入 `++FormulaText({{1, 2, 3}, {4, 5, 6}, {7, 8, 9}})++` 會產生一個 LaTeX
+格式的矩陣。
+
+====
+
+== 取用矩陣的元素
+
+想要取用串列的特定元素（element），您可以使用 xref:/commands/Element.adoc[Element_指令]或下列範例中的簡化語法：
+
+[EXAMPLE]
+====
+ 假設矩陣 `++matrix={{1, 2}, {3, 4}}++`，則：
+
+* `++matrix(1, 1)++` 取出第一列第一行的元素：_1_。
+* `++matrix(2, 2)++`、`++matrix(-1,2)++`、`++matrix(2,-1)++` 和 `++matrix(-1,-1)++`
+等指令都是取出第二列第二行的元素：_4_。
+* 一般來說，`++matrix(i, j)++`（ _i_ 和 _j_ 為整數）會取出矩陣第 _i_ 列第 _j_ 行的元素。
+
+====
+
+== 矩陣運算
+
+矩陣運算實際上是**以串列來做運算**，所以才有下列的語法與計算結果。
+
+[NOTE]
+====
+某些語法的運算方式在數學領域內並不成立。
+
+====
+
+=== 加法與減法
+
+* `++Matrix1 + Matrix2++`：將兩個同階矩陣相對應的元素相加。
+* `++Matrix1 – Matrix2++`：將兩個同階矩陣相對應的元素相減。
+
+=== 乘法與除法
+
+* `++Matrix * Number++`：將矩陣 _Matrix_ 的每一個元素乘上 _Number_。
+* `++Matrix1 * Matrix2++`：利用矩陣乘法計算出一個新的矩陣。
+
+[EXAMPLE]
+====
+ \{\{1, 2}, \{3, 4}, \{5, 6}} * \{\{1, 2, 3}, \{4, 5, 6}} 計算出矩陣 \{\{9, 12, 15}, \{19, 26, 33}, \{29, 40,
+51}}。
+
+====
+
+[NOTE]
+====
+_Matrix1_ 的行數與 _Matrix2_ 的列數必須相等，才能進行矩陣乘法運算。
+
+====
+
+* `++2x2 Matrix * Point（或 Vector）++`：對一個點 _Point_（或向量 _Vector_）左乘一個矩陣 _Matrix_。
+
+[EXAMPLE]
+====
+ \{\{1, 2}, \{3, 4}} * (3, 4) 產生點 _A_ = (11, 25)。
+
+====
+
+* `++3x3 Matrix * Point（或 Vector）++`：對一個點 _Point_（或向量 _Vector_）左乘一個矩陣 _Matrix_。
+
+[EXAMPLE]
+====
+ \{\{1, 2, 3}, \{4, 5, 6}, \{0, 0, 1}} * (1, 2) 產生點 A = (8, 20)。
+
+====
+
+[NOTE]
+====
+上述為一個仿射轉換（affine transformation）的特例，其中使用齊次坐標（homogeneous coordinate）：點為 (x, y,
+1)，而向量為 (x, y, 0)。所以此範例的運算等同於：`++{{1, 2, 3}, {4, 5, 6}, {0, 0, 1}} * {1, 2, 1}++`。
+
+====
+
+* `++Matrix1 / Matrix2++`：將矩陣 _Matrix1_ 的每一個元素除以矩陣 _Matrix2_ 中每一個相對應的元素。
+
+[NOTE]
+====
+GeoGebra 也接受這樣的語法：`++Matrix1 * Matrix2 ^(-1)++`。
+
+====
+
+== 其他運算
+
+在xref:/s_index_php?title=矩陣指令_action=edit_redlink=1.adoc[矩陣指令]頁面有條列出一系列與矩陣相關的指令，像是：
+
+* xref:/commands/Determinant.adoc[Determinant](Matrix)：計算矩陣 _Matrix_ 的行列式（determinant）的值。
+* xref:/commands/Invert.adoc[Invert](Matrix)：計算矩陣 _Matrix_ 的反矩陣（inverse matrix）。
+* xref:/commands/Transpose.adoc[Transpose](Matrix)：找出矩陣 _Matrix_ 的轉置（transpose）矩陣。
+* xref:/commands/ApplyMatrix.adoc[ApplyMatrix](Matrix,Object)：用矩陣 _Matrix_ 對物件 _Object_ 套用仿射轉換。
+* xref:/commands/ReducedRowEchelonForm.adoc[ReducedRowEchelonForm](Matrix)：將矩陣 _Matrix_ 轉化為簡化列梯形式（reduced
+row-echelon form）。

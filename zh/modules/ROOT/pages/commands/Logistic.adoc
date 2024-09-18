@@ -1,0 +1,31 @@
+= Logistic 指令
+:page-en: commands/Logistic
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Logistic[ <Mean>, <Scale>, x ]::
+Logistic[ <Mean>, <Scale>, x, <Boolean Cumulative> ]::
+Logistic[ <Mean>, <Scale>, <Variable Value> ]::
+Logistic[ <Mean μ>, <Scale s>, x ]::
+  Creates probability density function (pdf) of https://en.wikipedia.org/wiki/Logistic_distribution[logistic
+  distribution] with parameters _μ, s_.
+Logistic[ <Mean μ>, <Scale s>, x, <Boolean Cumulative> ]::
+  If _Cumulative_ is true, creates cumulative distribution function of logistic distribution, otherwise creates pdf of
+  logistic distribution.
+Logistic[ <Mean μ>, <Scale s>, <Variable Value v> ]::
+  Calculates the value of cumulative distribution function of logistic distribution at _v_, i.e. the probability
+  _P(X≤v)_ where _X_ is a random variable with logistic distribution given by parameters _μ, s_.
+
+[NOTE]
+====
+Returns the probability for a given _x_-coordinate's value (or area under the logistic distribution curve to
+the left of the given _x_-coordinate).
+
+====
+
+== CAS Syntaxes
+
+In xref:/CAS_View.adoc[CAS View] only following syntax is supported:
+
+Logistic[ <Mean μ>, <Scale s>, <Variable Value v>]::
+  Calculates the value of cumulative distribution function of logistic distribution at _v_, i.e. the probability
+  _P(X≤v)_ where _X_ is a random variable with log-normal distribution given by parameters _μ, s_.

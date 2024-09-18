@@ -1,0 +1,33 @@
+= 곡률 명령
+:page-en: commands/Curvature
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+Curvature( <Point>, <Function> )::
+  Calculates the curvature of the function in the given point.
+Curvature( <Point>, <Curve> )::
+  Calculates the curvature of the curve in the given point.
+Curvature( <Point>, <Object> )::
+  Yields the curvature of the object (function, curve, conic) in the given point.
+
+[EXAMPLE]
+====
+
+* `++Curvature((0 ,0), x^2)++` yields _2_
+* `++Curvature((0, 0), Curve(cos(t), sin(2t), t, 0, π))++` yields _0_
+* `++Curvature((-1, 0), Conic({1, 1, 1, 2, 2, 3}))++` yields _2_
+
+====
+
+[EXAMPLE]
+====
+
+`++Curvature((0, 0), Curve(cos(t), sin(2t), t, 0, π))++` yields _0_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Curvature((0 ,0), x^2)++` yields _2_.
+
+====

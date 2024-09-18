@@ -1,0 +1,59 @@
+= 점과 벡터
+:page-en: Points_and_Vectors
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+점과 벡터는 xref:/입력창.adoc[입력창]을 통하여 데카르트 좌표나 극좌표로 입력할 수 있다 (xref:/숫자와_각.adoc[숫자와 각]
+참조). 점은 image:Tool_New_Point.gif[Tool New Point.gif,width=32,height=32] xref:/tools/점.adoc[점 도구],
+image:Tool_Vector_from_Point.gif[Tool Vector from Point.gif,width=32,height=32]
+xref:/tools/점으로부터의_벡터.adoc[점으로부터의 벡터 도구], image:Tool_Vector_between_Two_Points.gif[Tool Vector between
+Two Points.gif,width=32,height=32] xref:/tools/두_점_사이의_벡터.adoc[두 점 사이의 벡터 도구] 및 다양한
+xref:/명령.adoc[명령]을 사용하여 만들 수 있다.
+
+[NOTE]
+====
+
+일반적으로 대문자 이름은 점을 나타내며, 소문자 이름은 벡터를 나타낸다. 이것은 변경될 수 있다.
+
+====
+
+[EXAMPLE]
+====
+
+* 데카르트 좌표로 한 점 P 나 벡터 v 를 입력하려면, `++P = (1, 0) 또는 v = (0, 5)++` 와 같이 입력한다.
+* 극좌표를 사용하려면, `++P = (1; 0°)++` 또는 `++v = (5; 90°)++` 와 같이 입력한다.
+
+====
+
+[NOTE]
+====
+
+극좌표에서는 세미콜론(;)을 사용해야 한다. 만일 도(°) 기호를 사용하지 않으면, 지오지브라는 라디안으로 각을 취급한다.
+
+====
+
+== 연산
+
+지오지브라에서는 점과 벡터로 연산을 수행할 수 있다.
+
+[EXAMPLE]
+====
+
+* `++M = (A + B) / 2++` 를 입력창에 입력하면, 두 점 A, B의 중점 M을 구할 수 있다.
+* `++length = sqrt(v * v)++` 를 사용하여, 벡터 __v__의 길이를 계산할 수 있다.
+* _A = (a, b)_ 에 대하여, `++A + 1++` 를 입력하면, __(a + 1, b + 1)__를 얻을 수 있다. _A_ 가 xref:/복소수.adoc[복소수]
+_a+bί_ 일 때, `++A+1++` 를 입력하면, _a + 1 + bί_ 를 얻는다.
+
+====
+
+== 벡터의 외적
+
+두 점 또는 벡터에 대하여, `++(a, b) ⊗ (c, d)++` 를 입력하면, _(a, b, 0) ⊗ (c, d, 0)_ 의 z-좌표 값을 얻는다. 비슷한
+문법이 리스트에도 적용되지만, 그러한 경우 결과는 리스트이다.
+
+[EXAMPLE]
+====
+
+* `++{1, 2} ⊗ {4, 5}++` 의 결과는 _\{0, 0, -3}_ 이다.
+* `++{1, 2, 3} ⊗ {4, 5, 6}++` 의 결과는 _\{3, 6, -3}_ 이다.
+
+====

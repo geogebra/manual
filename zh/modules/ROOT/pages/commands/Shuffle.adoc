@@ -1,0 +1,29 @@
+= Shuffle 指令
+:page-en: commands/Shuffle
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Shuffle( <串列> )::
+  將 <串列> 中的元素亂序之後回傳。
+
+[NOTE]
+====
+您可點選 image:16px-Menu-view.svg.png[Menu-view.svg,width=16,height=16]
+**xref:/檢視功能表.adoc[檢視]**功能表中的*重算所有亂數*（或按下 [.kcode]#F9#）將此串列重新亂序。
+
+====
+
+請參閱 xref:/commands/RandomElement.adoc[RandomElement_指令]和 xref:/commands/RandomBetween.adoc[RandomBetween_指令]。
+
+== CAS 語法
+
+Shuffle( <串列> )::
+  將 <串列> 中的元素亂序之後回傳。
+
+[EXAMPLE]
+====
+
+
+* `++Shuffle({3, 5, 1, 7, 3})++` 可能會回傳 _\{5, 1, 3, 3, 7}_。
+* `++Shuffle(Sequence(20))++` 將整數 1 到 20 亂序之後回傳。
+
+====

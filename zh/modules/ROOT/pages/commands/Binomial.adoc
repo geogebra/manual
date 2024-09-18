@@ -1,0 +1,29 @@
+= Binomial 指令
+:page-en: commands/BinomialDist
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Binomial[ <Number of Trials>, <Probability of Success> ]::
+  Returns a bar graph of a https://en.wikipedia.org/wiki/Binomial_distribution[Binomial distribution].
+  _Parameters:_
+  _Number of Trials_: number of independent Bernoulli trials
+  _Probability of Success_: probability of success in one trial
+
+Binomial[ <Number of Trials>, <Probability of Success>, <Boolean Cumulative> ]::
+  Returns a bar graph of a Binomial distribution when _Cumulative_ = false.
+  Returns a bar graph of a cumulative Binomial distribution when _Cumulative_ = true.
+  First two parameters are same as above.
+
+Binomial[ <Number of Trials>, <Probability of Success>, <Variable Value v>, <Boolean Cumulative> ]::
+  Let X be a Binomial random variable.
+  Returns P( X = _v_) when _Cumulative_ = false.
+  Returns P( X ≤ _v_) when _Cumulative_ = true.
+  First two parameters are same as above.
+
+== CAS Specific Syntax
+
+In xref:/CAS_View.adoc[CAS View] only one syntax is allowed:
+
+Binomial[ <Number of Trials>, <Probability of Success>, <Variable Value v>, <Boolean Cumulative> ]::
+  Let X be a Binomial random variable.
+  Returns P( X = _v_) when _Cumulative_ = false.
+  Returns P( X ≤ _v_) when _Cumulative_ = true.

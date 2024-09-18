@@ -1,0 +1,27 @@
+= NIntegral 명령
+:page-en: commands/NIntegral
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+NIntegral( <Function>, <Start x-Value>, <End x-Value> )::
+  Computes (numerically) the definite integral stem:[\int_a^bf(x)\mathrm\{d}x] of the given function _f_, from _a_
+  (_Start x-Value_) to _b_ (_End x-Value_).
+
+[EXAMPLE]
+====
+
+`++NIntegral(ℯ^(-x^2), 0, 1)++` yields _0.75_.
+
+====
+
+[EXAMPLE]
+====
+
+In the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View] the following syntax can also be used:
+
+NIntegral( <Function>, <Variable>, <Start Value>, <End Value> )::
+  Computes (numerically) the definite integral stem:[\int_a^bf(t)\mathrm\{d}x] of the given function _f_, from _a_
+  (_Start value_) to _b_ (_End value_), with respect to the given variable.
+  `++NIntegral(ℯ^(-a^2), a, 0, 1)++` yields _0.75_.
+
+====

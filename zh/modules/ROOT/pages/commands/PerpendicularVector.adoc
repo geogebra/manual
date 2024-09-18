@@ -1,0 +1,53 @@
+= PerpendicularVector 指令
+:page-en: commands/PerpendicularVector
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+PerpendicularVector[ <Line> ]::
+PerpendicularVector[ <Segment> ]::
+PerpendicularVector[ <Vector> ]::
+
+== CAS 視窗
+
+PerpendicularVector[ <Line> ]::
+PerpendicularVector[Line]::
+  Returns the perpendicular vector of the line.
+PerpendicularVector[Segment]::
+  Returns the perpendicular vector of the segment with the same length.
+PerpendicularVector[Vector v]::
+  Returns the perpendicular vector of the given vector.
+
+[NOTE]
+====
+A vector with coordinates _(a, b)_ has the perpendicular vector _(-b, a)_.
+
+====
+
+[NOTE]
+====
+A line with equation _ax + by = c_ has the perpendicular vector _(a, b)_.
+
+====
+
+== CAS Syntax
+
+PerpendicularVector[Vector v]::
+  Returns the perpendicular vector of the given vector.
+
+[EXAMPLE]
+====
+
+
+* `++PerpendicularVector[(3, 2)]++` yields the vector _\{-2, 3}_.
+* `++PerpendicularVector[(a, b)]++` yields the vector _\{-b, a}_.
+
+====
+
+[NOTE]
+====
+
+*備註：*
+
+See also xref:/s_index_php?title=UnitPerpendicularVector_Command_action=edit_redlink=1.adoc[UnitPerpendicularVector
+Command].
+
+====

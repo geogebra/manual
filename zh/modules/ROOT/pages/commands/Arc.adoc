@@ -1,0 +1,19 @@
+= Arc 指令
+:page-en: commands/Arc
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Arc[Conic, Point A, Point B]::
+  Returns a conic section arc between two points _A_ and _B_ on the circle or ellipse _c_. For other conics is the
+  result undefined.
+Arc[Conic, Number t1, Number t2]::
+  Returns a conic section arc between two parameter values _t1_ and _t2_ on the circle or ellipse. For other conics is
+  the result undefined.
+
+[NOTE]
+====
+Internally the following parametric forms are used:
+
+* Circle: _(r cos(t), r sin(t))_ where _r_ is the circle's radius.
+* Ellipse: _(a cos(t), b sin(t))_ where _a_ and _b_ are the lengths of the semimajor and semiminor axes.
+
+====

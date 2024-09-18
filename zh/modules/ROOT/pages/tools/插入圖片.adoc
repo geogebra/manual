@@ -1,0 +1,104 @@
+= 插入圖片 工具
+:page-en: tools/Image
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+此項工具可讓您插入一張圖片到 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/繪圖區.adoc[繪圖區]中。
+
+首先，從**動作物件工具箱**（工具列上右邊數來第二個）中點選 image:20px-Mode_image.svg.png[Mode
+image.svg,width=20,height=20] **插入圖片**工具
+image:Special-Objects-Tools.png[Special-Objects-Tools.png,width=792,height=483]
+
+接著，從下列選擇一種方式來指定圖片的位置：
+
+* 在 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+**繪圖區**點按來指定圖片左下角的位置。
+* 點選某個點物件作為圖片左下角的位置。
+
+然後，會跳出開啟檔案的視窗，讓您從電腦中的資料夾選擇圖片。
+
+[NOTE]
+====
+
+*備註：*
+
+* 在 GeoGebra 桌機版環境中，在點選 image:20px-Mode_image.svg.png[Mode image.svg,width=20,height=20]
+**插入圖片**工具後，可以運用快捷鍵 [.kcode]#Alt# 加上滑鼠左鍵或觸控點按動作，直接將電腦剪貼簿中的圖片直接插入到
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] **繪圖區**中。
+* 支援透明的 https://zh.wikipedia.org/wiki/GIF[GIF] 和 https://zh.wikipedia.org/wiki/PNG[PNG] 圖檔，然而 PNG
+檔可能要先經過編輯（例如使用 http://www.irfanview.com/[IrfanView]，運用 PNGOUT 擴充功能並選擇 *RGB+Alpha*）確保它們包含
+https://zh.wikipedia.org/wiki/%E9%98%BF%E5%B0%94%E6%B3%95%E9%80%9A%E9%81%93[alpha 通道]。
+* 插入的圖片在預設情況下會作為輔助物件。
+
+====
+
+== 圖片的屬性
+
+圖片可以被放置在螢幕上的絕對位置，或是在坐標系統上的相對位置。您可以在圖片
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/屬性.adoc[屬性對話窗]的**位置**分頁更改此項設定。
+
+在 image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+**屬性對話窗**的**位置**分頁最多可指定三個圖片的頂點（corner
+point）位置，提供彈性讓您能伸縮、旋轉，甚至是將圖片變形（請參閱 xref:/commands/Corner.adoc[Corner_指令]）。
+
+* *頂點 1*：圖片左下角的位置。
+* *頂點 2*：圖片右下角的位置。
+
+[NOTE]
+====
+必須先設定過**頂點 1** 才能設定此頂點，它會影響圖片的寬度。
+
+====
+
+* *頂點 4*：圖片左上角的位置。
+
+[NOTE]
+====
+必須先設定過**頂點 1** 才能設定此頂點，它會影響圖片的高度。
+
+====
+
+[EXAMPLE]
+====
+ 建立三點 _A_、_B_、_C_ 並插入一張圖片到 image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] *繪圖區*，探討各頂點對圖片的影響。
+
+* 將 _A_ 點設為圖片的**頂點 1**，而 _B_ 點設為**頂點 2**。利用 image:22px-Mode_move.svg.png[Mode
+move.svg,width=22,height=22] **移動**工具拖曳 _A_、_B_ 兩點，可改變圖片的寬度。
+* 現在，移除圖片**頂點 2** 中的 _B_ 點。維持**頂點 1** 為 _A_ 點，並將 _C_ 點設為**頂點
+4**。拖曳這兩點會發現它們影響圖片的高度。
+* 最後，維持**頂點 1** 為 _A_ 且**頂點 4** 為 _C_，再次將 _B_ 點設為**頂點 2**，並觀察拖曳這些點如何造成圖片的變形。
+
+====
+
+[EXAMPLE]
+====
+ 為了將圖片依附於一點 _A_，並設定寬度為 3、高度為 4，您可以這樣做：
+
+* 將**頂點 1** 設為 _A_。
+* 將**頂點 2** 設為 _A + (3, 0)_。
+* 將**頂點 4** 設為 _A + (0, 4)_。
+
+[NOTE]
+====
+現在如果利用 image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22]
+**xref:/tools/移動.adoc[移動]**工具拖曳 _A_ 點，會發現圖片的尺寸不會改變。
+
+====
+
+====
+
+您可以在圖片 image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+**屬性**視窗的**基本**分頁，指定為*背景圖*。背景圖會被放置在坐標軸和格線的後面，且再也無法從圖面上選取。
+
+[NOTE]
+====
+若要更改背景圖的設定，可以從代數區顯示**輔助物件**，開啟那張背景圖的
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] **屬性**視窗。
+
+====
+
+可以更改圖片的**透明度**，以便看到圖片後方的物件或坐標軸。在圖片
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] **屬性**視窗的**樣式**分頁，指定 0 % 到 100 %
+的**填滿**值可以設定圖片的透明度。

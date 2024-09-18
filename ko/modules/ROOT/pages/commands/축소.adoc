@@ -1,0 +1,37 @@
+= 축소 명령
+:page-en: commands/ZoomOut
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+ZoomOut( <Scale Factor> )::
+  Zooms the image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/s_index_php?title=Graphics_View_action=edit_redlink=1.adoc[Graphics View] out by given factor with respect to
+  current zoom, center of the screen is used as center point for the zoom.
+ZoomOut( <Scale Factor>, <Center Point> )::
+  Zooms the image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/s_index_php?title=Graphics_View_action=edit_redlink=1.adoc[Graphics View] out by given factor with respect to
+  current zoom, second parameter specifies center point for the zoom.
+
+[EXAMPLE]
+====
+
+`++ZoomOut(2, (0, 0))++`
+
+====
+
+[EXAMPLE]
+====
+
+`++ZoomOut(2)++` zooms the view out.
+
+====
+
+[NOTE]
+====
+
+* `++ZoomOut(t)++` and `++ZoomOut(t, A)++` are equivalent to `++ZoomIn(1/t)++` and `++ZoomIn(1/t, A)++` respectively.
+* If multiple _Graphics Views_ are present, the active one is used.
+* See also xref:/s_index_php?title=ZoomIn_Command_action=edit_redlink=1.adoc[ZoomIn],
+xref:/s_index_php?title=SetActiveView_Command_action=edit_redlink=1.adoc[SetActiveView],
+xref:/s_index_php?title=Pan_Command_action=edit_redlink=1.adoc[Pan] commands.
+
+====

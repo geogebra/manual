@@ -1,0 +1,45 @@
+= 真假值
+:page-en: Boolean_values
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+您可以在 _GeoGebra_ 中使用**真假值**（Boolean value，也稱**布林值**） _true_ 和
+_false_。只要在xref:/指令列.adoc[指令列]輸入並按下 [.kcode]#Enter# 鍵即可建立**真假值**物件，例如：`++a = true++` 或
+`++b = false++`。
+
+== 勾選框和方向鍵
+
+新建的**真假值**物件可用**勾選框**的形式顯現在 image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/繪圖區.adoc[繪圖區]（請參閱 image:22px-Mode_showcheckbox.svg.png[Mode
+showcheckbox.svg,width=22,height=22] *xref:/tools/勾選框.adoc[勾選框]工具*）。在
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] xref:/代數區.adoc[代數區]
+點選完一個真假值之後，您可以使用方向鍵或空白鍵來切換真假值（請參閱xref:/動畫.adoc[手動調整]）。
+
+[NOTE]
+====
+您也可以將**真假值**作為數值（0 或
+1）來使用。舉例來說，將**數值滑桿**的**速度**設定為一個**真假值**物件，可讓您利用**勾選框**來開始或暫停動畫。在使用勾選框開始動畫的情況下，image:16px-Menu_view_graphics.svg.png[Menu
+view graphics.svg,width=16,height=16]
+**繪圖區**左下角並不會出現開始或暫停的動畫按鈕，除非有其他速度為固定值的數值滑桿同時存在。
+
+====
+
+== 運算
+
+您可在 _GeoGebra_ 中使用下列真假值運算和條件式，輸入時可從指令列旁邊的符號清單點選，或是透過鍵盤輸入：
+
+[cols=",,,,",options="header",]
+|===
+|運算 |符號清單 |鍵盤輸入 |範例 |適用的物件類型
+|等於 |≟ |== |a ≟ b 或 a == b |a, b：數值、點、直線、圓錐曲線、函數（運算區）、平面
+|不等於 |≠ |!= |a ≠ b 或 a != b |a, b：數值、點、直線、圓錐曲線、函數（運算區）、平面
+|小於 | |< |a < b |a, b：數值
+|大於 | |> |a > b |a, b：數值
+|小於或等於 |≤ |<= |a ≤ b 或 a <= b |a, b：數值
+|大於或等於 |≥ |>= |a ≥ b 或 a >= b |a, b：數值
+|且（合取） |∧ |&& |a ∧ b 或 a && b |a, b：真假值
+|或（析取） |∨ ||| |a ∨ b 或 a || b |a, b：真假值
+|非（否定） |¬ |! |¬a 或 !a |a, b：真假值
+|平行 |∥ | |a ∥ b |a, b：直線
+|垂直 |⊥ | |a ⊥ b |a, b：直線
+|屬於 |∈ | |a ∈ list1 |a：數值，list1：數值串列
+|===

@@ -1,0 +1,48 @@
+= Polygon 指令
+:page-en: commands/Polygon
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Polygon( <點>, ..., <點> )::
+  以這些 <點> 作為頂點建立一個多邊形（polygon）。
+Polygon( <點>, <點>, <頂點數 __n__> )::
+  以兩個 <點> 連成的線段作為其中一邊，建立一個正 _n_ 邊形。
+Polygon( <點集> )::
+  以 <點集> 中的點作為頂點建立一個多邊形。
+Polygon( <點>, <點>, <頂點數 __n__>, <方向> )::
+  以兩個 <點> 連成的線段作為其中一邊並指定 <方向>，建立一個正 _n_ 邊形。
+
+[EXAMPLE]
+====
+ `++Polygon({(0, 0), (2, 1), (1, 3)})++` 產生一個三角形（triangle）。
+
+====
+
+[EXAMPLE]
+====
+ `++Polygon((1, 1), (4, 1), 6)++` 產生一個正六邊形（regular hexagon）。
+
+====
+
+[EXAMPLE]
+====
+ `++Polygon((1, 1), (3, 0), (3, 2), (0, 4))++` 產生一個四邊形（quadrilateral）。
+
+====
+
+[NOTE]
+====
+
+*備註：*
+
+* 此語法較適用於 3D 繪圖區。
+* <方向> 可以是一個平面或向量，在情況允許時建立的正多邊形會平行此平面，或以此向量作為正多邊形的法向量。
+
+====
+
+[NOTE]
+====
+請參閱 image:24px-Mode_polygon.svg.png[Mode polygon.svg,width=24,height=24]
+xref:/tools/多邊形.adoc[多邊形]工具和 image:24px-Mode_regularpolygon.svg.png[Mode regularpolygon.svg,width=24,height=24]
+xref:/tools/正多邊形.adoc[正多邊形]工具。
+
+====

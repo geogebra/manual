@@ -1,0 +1,27 @@
+= 부분분수 명령
+:page-en: commands/PartialFractions
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+PartialFractions( <Function> )::
+  Yields, if possible, the https://en.wikipedia.org/wiki/Partial_fraction[partial fraction] of the given function for
+  the main function variable. The graph of the function is plotted in the image:16px-Menu_view_graphics.svg.png[Menu
+  view graphics.svg,width=16,height=16] xref:/s_index_php?title=Graphics_View_action=edit_redlink=1.adoc[Graphics View].
+
+[EXAMPLE]
+====
+
+`++PartialFractions(x^2 / (x^2 - 2x + 1))++` yields _1 + stem:[\frac\{1}\{(x - 1)²}] + stem:[\frac\{2}\{x-1}]_.
+
+====
+
+[EXAMPLE]
+====
+
+In the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View] you can also use the following syntax:
+
+PartialFractions( <Function>, <Variable> )::
+  Yields, if possible, the partial fraction of the given function for the given function variable.
+  `++PartialFractions(a^2 / (a^2 - 2a + 1), a)++` yields _1 + stem:[\frac\{1}\{(a - 1)²}] + stem:[\frac\{2}\{(a-1)}]_.
+
+====

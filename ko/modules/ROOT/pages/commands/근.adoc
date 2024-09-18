@@ -1,0 +1,45 @@
+= 근 명령
+:page-en: commands/Solutions
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+== CAS Syntax
+
+Solutions( <Equation> )::
+  Solves a given equation for the main variable and returns a list of all solutions.
+Solutions( <Equation>, <Variable> )::
+  Solves an equation for a given unknown variable and returns a list of all solutions.
+Solutions( <List of Equations>, <List of Variables> )::
+  Solves a set of equations for a given set of unknown variables and returns a list of all solutions.
+
+[EXAMPLE]
+====
+
+* `++Solutions({x = 4 x + y , y + x = 2}, {x, y})++` yields _\{\{-1, 3}}_, the sole solution of _x = 4x + y_ and _y + x
+= 2_, displayed as stem:[\begin\{pmatrix}-1&3\end\{pmatrix}].
+* `++Solutions({2a^2 + 5a + 3 = b, a + b = 3}, {a, b})++` yields _\{\{-3, 6}, \{0, 3}}_, displayed as
+stem:[\begin\{pmatrix}-3&6\\0&3\end\{pmatrix}].
+
+====
+
+[EXAMPLE]
+====
+
+`++Solutions(x * a^2 = 4a, a)++` yields \{stem:[\frac\{4}\{x},0]}, the solutions of _xa^2^ = 4a_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Solutions(x^2 = 4x)++` yields _\{0, 4}_, the solutions of _x^2^ = 4x_.
+
+====
+
+[NOTE]
+====
+
+* Sometimes you need to do some manipulation to allow the automatic solver to work, for example
+`++ Solutions(TrigExpand(sin(5/4 π + x) - cos(x - 3/4 π) = sqrt(6) * cos(x) - sqrt(2))) ++`
+* See also xref:/s_index_php?title=Solve_Command_action=edit_redlink=1.adoc[Solve Command].
+
+====

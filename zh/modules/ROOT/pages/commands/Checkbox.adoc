@@ -1,0 +1,19 @@
+= Checkbox 指令
+:page-en: commands/Checkbox
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Checkbox( )::
+  建立一個xref:/動作物件.adoc[勾選框]。
+Checkbox( <標籤文字> )::
+  建立一個勾選框並指定 <xref:/物件名稱與標籤.adoc[標籤文字]>。
+Checkbox( <串列> )::
+  建立一個勾選框，若取消勾選會隱藏 <串列> 中的所有物件。
+Checkbox( <標籤文字>, <串列> )::
+  建立一個勾選框並指定 <標籤文字>，若取消勾選會隱藏 <串列> 中的所有物件。
+
+[EXAMPLE]
+====
+ 已知有 _A_、_B_ 兩點。`++c = Checkbox({A,B})++` 會建立勾選框 _c_。當 _c_ 有被勾選時，_A_ 和 _B_
+會顯示，取消勾選時會被隱藏。
+
+====

@@ -1,0 +1,28 @@
+= Hyperbola 指令
+:page-en: commands/Hyperbola
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Hyperbola[ <Focal Point>, <Focal Point>, <Semimajor Axis Length> ]::
+Hyperbola[ <Focal Point>, <Focal Point>, <Segment> ]::
+Hyperbola[ <Point>, <Point>, <Point> ]::
+Hyperbola[Point F, Point G, Number a]::
+  Creates a hyperbola with focal points _F_ and _G_ and semimajor axis length _a_.
+
+[NOTE]
+====
+Condition: _0 < 2a < Distance[F, G]_
+
+====
+
+Hyperbola[Point F, Point G, Segment s]::
+  Creates a hyperbola with focal points _F_ and _G_ where the length of the semimajor axis equals the length of segment
+  _s_.
+
+Hyperbola[Point F, Point G, Point A]::
+  Creates a hyperbola with foci _F_ and _G_ passing through point _A_.
+
+[NOTE]
+====
+See also xref:/s_index_php?title=Hyperbola_Tool_action=edit_redlink=1.adoc[Hyperbola] tool .
+
+====

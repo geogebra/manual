@@ -1,0 +1,49 @@
+= 文字
+:page-en: Texts
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+有幾種方式可以輕鬆地建立文字（text）物件：使用 xref:/commands/Text.adoc[Text_指令]、image:24px-Mode_text.svg.png[Mode
+text.svg,width=24,height=24] xref:/tools/插入文字.adoc[插入文字]工具，或直接從 image:16px-Menu_view_algebra.svg.png[Menu
+view algebra.svg,width=16,height=16] xref:/代數區.adoc[代數區]拖曳某個物件到 image:16px-Menu_view_graphics.svg.png[Menu
+view graphics.svg,width=16,height=16]
+xref:/繪圖區.adoc[繪圖區]。另一種給**進階使用者**的方式（詳述於下方），是直接在xref:/指令列.adoc[指令列]中輸入。
+
+== 名詞解釋
+
+靜態文字::
+  不依賴任何數學物件，且通常不受圖面更動所影響。
+
+動態文字::
+  包含某些物件的值，在圖面上更動這些物件的時候，它們的值也會跟著改變。
+
+混合文字::
+  混合了靜態和動態文字。要建立一個混合文字物件，先輸入這段文字的靜態部分（例如：點 _A_
+  為）。接著，將文字游標移到要顯示動態文字的地方，從物件**清單**點選想要插入的物件值。
+
+== 透過指令列輸入
+
+文字物件也可以透過指令列建立。在這樣的情況下，要考慮到輸入語法必須區分靜態和動態部分。
+
+[cols=",",options="header",]
+|===
+|輸入 |描述
+|"這是一段靜態文字" |靜態文字
+|""A |動態文字（若 _A_ 點存在）
+|"點 A = " + A |兩個部分組合而成的混合文字，使用到 _A_ 點的值
+|"a = " + a + "cm" |三個部分組合而成的混合文字，使用到數值 _a_
+|===
+
+[NOTE]
+====
+
+*備註：*
+在一個混合文字內，靜態部分必須放在一對雙引號（"）之間。不同部分（靜態或動態）可利用加號（+）連結成一個完整的文字物件。在
+4.0 版以後，加號（+）也可以省略。
+
+====
+
+[NOTE]
+====
+文字物件也可以使用 xref:/LaTeX.adoc[LaTeX] 來排版數學式。
+
+====

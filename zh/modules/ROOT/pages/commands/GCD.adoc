@@ -1,0 +1,83 @@
+= GCD 指令
+:page-en: commands/GCD
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+GCD[ <Number>, <Number> ]::
+GCD[ <List of Numbers> ]::
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:64px-Globe.png[Globe.png,width=64,height=64]
+
+a|
+此項指令在不同的英語地區有不同的拼字：
+
+* GCD (US)  
+* HCF (UK + Aus)  
+
+|===
+
+GCD[Number a, Number b]::
+  Calculates the greatest common divisor of numbers _a_ and _b_.
+GCD[List of Numbers]::
+  Calculates the greatest common divisor of the list of numbers.
+
+[EXAMPLE]
+====
+
+
+`++GCD[{12, 30, 18}]++` yields _6_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++GCD[12, 15]++` yields _3_.
+
+====
+
+== CAS Syntax
+
+GCD[ <Number , Number> ]::
+  Calculates the greatest common divisor of the two numbers .
+GCD[ <List of Numbers> ]::
+  Calculates the greatest common divisor of the list of numbers.
+GCD[ <Polynomial>, <Polynomial> ]::
+  Calculates the greatest common divisor of the two polynomials.
+GCD[ <List of Polynomials> ]::
+  Calculates the greatest common divisor of the list of polynomials.
+
+[EXAMPLE]
+====
+
+
+`++GCD[{x^2 + 4 x + 4, x^2 - x - 6, x³ - 4x² - 3x + 18}]++` yields _x + 2_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++GCD[x^2 + 4 x + 4, x^2 - x - 6]++` yields _x + 2_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++GCD[{12, 30, 18}]++` yields _6_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++GCD[12, 15]++` yields _3_.
+
+====

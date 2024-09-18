@@ -1,0 +1,30 @@
+= 코시분포 명령
+:page-en: commands/Cauchy
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+Cauchy( <Median>, <Scale>, x )::
+  Creates cumulative density function (cdf) of https://en.wikipedia.org/wiki/Cauchy_distribution[Cauchy distribution].
+Cauchy( <Median>, <Scale>, x, <Boolean Cumulative>)::
+  If _Cumulative_ is true, creates cumulative distribution function of Cauchy distribution, otherwise creates pdf of
+  Cauchy distribution.
+Cauchy( <Median>, <Scale>, <Variable Value> )::
+  Calculates the value of cumulative distribution function of Cauchy distribution at _Variable Value_ _v_, i.e. the
+  probability _P(X ≤ v)_ where _X_ is a random variable with Cauchy given by parameters _Median_ and _Scale_.
+
+[NOTE]
+====
+
+Returns the probability for a given _x_-coordinate's value (or area under the Cauchy distribution curve to the left of
+the given _x_-coordinate).
+
+====
+
+[EXAMPLE]
+====
+
+`++Cauchy(1, 2, 3)++` yields _0.75_ in the image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/s_index_php?title=Algebra_View_action=edit_redlink=1.adoc[Algebra View] and
+_stem:[\frac\{3}\{4}]_ in the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View].
+
+====

@@ -1,0 +1,28 @@
+= Object 指令
+:page-en: commands/Object
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Object[ <Name of Object as Text> ]::
+
+Object[Name of Object as Text]::
+  Returns the object for a given name. The result is always a dependent object.
+
+[NOTE]
+====
+The _Object_ command is the opposite of the
+xref:/s_index_php?title=Name_Command_action=edit_redlink=1.adoc[Name] command.
+
+====
+
+[EXAMPLE]
+====
+ If points _A1_, _A2_, ... , _A20_ exist and slider _n = 2_, then `++Object["A" + n]++` gives you a copy of
+point _A2_.
+
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[注意,title="注意",width=18,height=18] *注意*: |Object command cannot be used in
+xref:/s_index_php?title=Custom_tools_action=edit_redlink=1.adoc[Custom tools]
+|===

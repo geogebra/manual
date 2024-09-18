@@ -1,0 +1,26 @@
+= 셀 명령
+:page-en: commands/Cell
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+Cell( <Column>, <Row> )::
+  Returns copy of xref:/s_index_php?title=Spreadsheet_View_action=edit_redlink=1.adoc[spreadsheet] cell in given column
+  and row.
+
+[EXAMPLE]
+====
+
+`++Cell(2, 1)++` returns copy of B1.
+
+====
+
+[NOTE]
+====
+
+* By default the cells in spreadsheet cells are
+xref:/s_index_php?title=Free_Dependent_and_Auxiliary_Objects_action=edit_redlink=1.adoc[auxiliary] and in such case this
+command returns auxiliary object as well.
+* You must make sure that the cells you refer to are *earlier* in the
+image:16px-Menu_view_construction_protocol.svg.png[Menu view construction protocol.svg,width=16,height=16]
+xref:/s_index_php?title=Construction_Protocol_action=edit_redlink=1.adoc[Construction Protocol] than this command.
+
+====

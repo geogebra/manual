@@ -1,0 +1,18 @@
+= HistogramRight 指令
+:page-en: commands/HistogramRight
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+HistogramRight[ <List of Class Boundaries>, <List of Heights> ]::
+HistogramRight[ <List of Class Boundaries>, <List of Raw Data>, <Use Density> , <Density Scale Factor> (optional) ]::
+HistogramRight[ <Boolean Cumulative>, <List of Class Boundaries>, <List of Raw Data>, <Use Density> , <Density Scale
+Factor> (optional) ]::
+HistogramRight[ <List of Class Boundaries B>, <List of Heights H> ]::
+  Same as `++Histogram[B,H]++`
+HistogramRight[ <List of Class Boundaries B>, <List of Raw Data D>, <Boolean Use Density> , <Density Scale Factor f>
+(optional) ]::
+  Same as `++Histogram[B,D,Use Density, f]++`, except that if a datum is equal to the right border of a class, it is
+  counted in this class and not in the next one.
+HistogramRight[ <Boolean Cumulative>, <List of Class Boundaries B>, <List of Raw Data D>, <Boolean Use Density> ,
+<Density Scale Factor f> (optional) ]::
+  Same as `++Histogram[Cumulative, B,D,Use Density, f]++`, except that if a datum is equal to the right border of a
+  class, it is counted in this class and not in the next one.

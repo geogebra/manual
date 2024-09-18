@@ -1,0 +1,26 @@
+= UpdateConstruction 指令
+:page-en: commands/UpdateConstruction
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+UpdateConstruction( )::
+  重新計算所有物件（亂數重新生成）。等同於快捷鍵 [.kcode]#F9# 或 [.kcode]#Ctrl# + [.kcode]#R#。
+
+[NOTE]
+====
+如果您想要刷新視區（例如：從 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/繪圖區.adoc[繪圖區]清除xref:/物件的移動蹤跡.adoc[物件的移動蹤跡]），可改用指令 `++ZoomIn(1)++`，等同於快捷鍵
+[.kcode]#Ctrl# + [.kcode]#F#。假如您正在使用兩個繪圖區，可能還需要先使用
+xref:/commands/SetActiveView.adoc[SetActiveView(1)] 或 xref:/commands/SetActiveView.adoc[SetActiveView(2)]。
+
+====
+
+UpdateConstruction( <次數 n> )::
+  執行指令 `++UpdateConstruction()++` _n_ 次。
+
+[EXAMPLE]
+====
+
+
+`++UpdateConstruction(2)++` 會更新構圖兩次（例如用在：將擲骰子的幾次結果記錄在試算表）
+
+====

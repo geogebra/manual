@@ -1,0 +1,49 @@
+= CSolve 指令
+:page-en: commands/CSolve
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+此指令只能用在xref:/運算區.adoc[運算區]。
+
+CSolve[ <Equation> ]::
+  Solves a given equation for the variable x and returns a list of all solutions, allowing for complex solutions.
+CSolve[ <Equation>, <Variable> ]::
+  Solves an equation for a given unknown variable and returns a list of all solutions, allowing for complex solutions.
+CSolve[ <List of Equations>, <List of Variables> ]::
+  Solves a set of equations for a given set of unknown variables and returns a list of all solutions, allowing for
+  complex solutions.
+
+[EXAMPLE]
+====
+
+
+`++CSolve[{y^2 = x - 1, x = 2 * y - 1}, {x, y}]++` yields _\{\{x = 1 + 2 ί, y = 1 + ί}, \{x = 1 - 2 ί, y = 1 - ί}}_, the
+complex solutions of _y^2^ = x_ and _x = 2 * y - 1_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++CSolve[a^2 = -1, a]++` yields _\{a = ί, a = -ί}_, the complex solutions of _a^2^ = -1_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++CSolve[x^2 = -1]++` yields _\{x = ί, x = -ί}_, the complex solutions of _x^2^ = -1_.
+
+====
+
+[NOTE]
+====
+
+*備註：*
+
+* The complex ί is obtained by pressing [.kcode]#ALT # + [.kcode]# i#.
+* See also xref:/s_index_php?title=CSolutions_Command_action=edit_redlink=1.adoc[CSolutions Command] and
+xref:/s_index_php?title=Solve_Command_action=edit_redlink=1.adoc[Solve Command].
+
+====

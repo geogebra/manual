@@ -1,0 +1,17 @@
+= 제곱오차의합 명령
+:page-en: commands/SumSquaredErrors
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+SumSquaredErrors( <List of Points>, <Function> )::
+  Calculates the sum of squared errors, SSE, between the y-values of the points in the list and the function values of
+  the x-values in the list.
+
+[EXAMPLE]
+====
+
+If we have a list of points `++L={(1, 2), (3, 5),(2, 2), (5, 2), (5, 5)}++` and have calculated for example:
+`++f(x)=FitPoly(L,1)++` and `++g(x)=FitPoly(L,2)++`. `++SumSquaredErrors(L,f)++` yields _9_ and
+`++SumSquaredErrors(L,g)++` yields _6.99_, and therefore we can see, that _g(x)_ offers the best fit, in the sense of
+the least sum of squared errors (Gauss).
+
+====

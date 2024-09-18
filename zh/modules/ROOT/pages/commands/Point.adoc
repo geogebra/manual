@@ -1,0 +1,42 @@
+= Point 指令
+:page-en: commands/Point
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Point( <物件> )::
+  建立一個依附在 <物件> 上的新點，並以此物件作為移動xref:/幾何物件.adoc[路徑]，讓點可沿著此物件移動。
+Point( <物件>, <參數> )::
+  建立一個依附在 <物件> 上的新點，並以給定的https://wiki.geogebra.org/en/PathParameter_Command[路徑
+  <參數>]，決定點在物件上的位置。
+
+[EXAMPLE]
+====
+ 下圖顯示出圓上的點與其參數之間的關係（圓為 `++c: x^2 + y^2 = 1++`）
+
+如果我們輸入： `++Point(c, 0.4)++`，則會得到圖中的 P 點。
+
+image:Path_Parameter_Circle.png[Path Parameter Circle.png,width=271,height=210]
+
+反過來說，如果我們輸入：`++PathParameter(P)++`，則會傳回參數 0.4。
+
+====
+
+Point( <點>, <向量> )::
+  在參考 <點> 以方向 <向量> 平移後的位置上新建一點。
+Point( <串列> )::
+  將指定 <串列> 轉為一點。
+
+[EXAMPLE]
+====
+ `++ Point({1, 2})++` 結果為 _(1, 2)_.
+
+====
+
+[NOTE]
+====
+
+*備註：*
+
+* 請參閱 image:Tool_New_Point.gif[Tool New Point.gif,width=32,height=32]**xref:/tools/新點.adoc[新點]工具**。
+* 請參閱**xref:/點與向量.adoc[點與向量]**
+
+====

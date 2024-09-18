@@ -1,0 +1,66 @@
+= 串列 指令
+:page-en: commands/List_Commands
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+== 集合運算
+
+[width="100%",cols="25%,25%,25%,25%",options="header",]
+|===
+|符號╱指令 |意義 |範例 |說明
+|∈ |屬於 |`++2 ∈ {1, 2, 3}++` 為 true |用於判斷某元素有沒有在集合裡面
+
+|⊆ |包含於或等於 |`++{1, 2} ⊆ {1, 2, 3}++` 為 true a|
+注意：若 A=\{1,2}、B=\{2,1}，
+
+`++A==B++` 為 false
+
+`++A⊆B && B⊆A++` 為 true
+
+|⊂ |包含於但不等於 |`++{1, 2} ⊂ {1, 2}++` 為 false |
+
+|\ |差集 |`++{1, 2, 3, 4, 5}\{1, 2, 3}++` 得 \{4, 5} |
+
+|xref:/commands/Union.adoc[Union] |聯集 |`++ Union[{1, 2, 3, 4}, {3, 4, 5, 6}]++` 得 \{1, 2, 3, 4, 5, 6} |
+
+|xref:/commands/Intersection.adoc[Intersection] |交集 |`++ Intersection[{1, 2, 3, 4}, {3, 4, 5, 6}]++` 得 \{3, 4}
+|請勿與 xref:/commands/Intersect.adoc[Intersect] 指令混淆
+
+|xref:/commands/KeepIf.adoc[KeepIf] |子集 |`++  KeepIf[x<3, {1, 2, 3, 4, 1, 5, 6}]++` 得 \{1, 2, 1} a|
+此指令若用於數列，則可使用以 x 為變數的任意限制條件。
+
+但若用於其他物件的序列，則只能用：
+
+`++x==<固定物件>++`或`++x!=<固定物件>++`
+
+這兩種形式的條件。
+
+|===
+
+== 集合指令
+
+* xref:/commands/Append.adoc[Append]
+* xref:/commands/Classes.adoc[Classes]
+* xref:/commands/Element.adoc[Element]
+* xref:/commands/First.adoc[First]
+* xref:/commands/Frequency.adoc[Frequency]
+* xref:/commands/IndexOf.adoc[IndexOf]
+* xref:/commands/Insert.adoc[Insert]
+* xref:/commands/Intersect.adoc[Intersect]
+* xref:/commands/Intersection.adoc[Intersection]
+* xref:/commands/IterationList.adoc[IterationList]
+* xref:/commands/Join.adoc[Join]
+* xref:/commands/Last.adoc[Last]
+* xref:/commands/PointList.adoc[PointList]
+* xref:/commands/Product.adoc[Product]
+* xref:/commands/RandomElement.adoc[RandomElement]
+* xref:/commands/RemoveUndefined.adoc[RemoveUndefined]
+* xref:/commands/Reverse.adoc[Reverse]
+* xref:/commands/RootList.adoc[RootList]
+* xref:/commands/SelectedElement.adoc[SelectedElement]
+* xref:/commands/SelectedIndex.adoc[SelectedIndex]
+* xref:/commands/Sequence.adoc[Sequence]
+* xref:/commands/Sort.adoc[Sort]
+* xref:/commands/Take.adoc[Take]
+* xref:/commands/Union.adoc[Union]
+* xref:/commands/Unique.adoc[Unique]
+* xref:/commands/Zip.adoc[Zip]

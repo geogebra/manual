@@ -1,0 +1,23 @@
+= SelectObjects 指令
+:page-en: commands/SelectObjects
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+SelectObjects( )::
+  取消選取所有已選取的物件。
+SelectObjects( <物件>, <物件>, ... )::
+  取消選取所有物件，並選取參數中所條列的 <物件>。這些 <物件> 必須帶有xref:/物件名稱與標籤.adoc[名稱]。
+
+[EXAMPLE]
+====
+
+
+* 已知有 _A_、_B_、_C_ 三點。`++SelectObjects(A, B, C)++` 會選取 _A_、_B_、_C_ 三點。
+* 指令 `++SelectObjects(Midpoint(A, B))++` 不會產生效果，此外還會取消選取所有已選取的物件。
+
+====
+
+[NOTE]
+====
+此指令現在能取消正在進行的拖曳動作（主要用在程式腳本）。
+
+====

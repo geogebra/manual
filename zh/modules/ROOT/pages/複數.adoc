@@ -1,0 +1,80 @@
+= 複數
+:page-en: Complex_Numbers
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+GeoGebra 其實並沒有直接支援複數物件，但可以利用xref:/點與向量.adoc[點]來模擬複數的相關運算。
+
+[EXAMPLE]
+====
+ 若您在指令列輸入複數 3 + 4ί，會發現 image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] **xref:/繪圖區.adoc[繪圖區]**產生一個點 (3, 4)。但這個點在
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] **xref:/代數區.adoc[代數區]**會以 3 + 4ί
+表示。
+
+====
+
+[NOTE]
+====
+您可將任何點改成以複數形式顯示在 image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+*代數區*。開啟點的 image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+*xref:/屬性.adoc[屬性]對話窗*，並從**代數**分頁的**坐標**清單中選取**複數**即可。
+
+====
+
+在xref:/指令列.adoc[指令列]輸入時，可以從符號箱內選取虛數單位 ί ，或是使用快捷鍵 [.kcode]#Alt# + [.kcode]#i#。除非您是在
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+**xref:/運算區.adoc[運算區]**輸入，或是您之前已經定義過變數 i ，否則預設情況下，變數 i 會被認為是有序數對 i = (0,
+1)或複數 0 + 1ί 。也就是說，您可以在**指令列**使用變數 i 來輸入複數（例如：q = 3 + 4i），但不適用於
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] *運算區*。
+
+[EXAMPLE]
+====
+ 加法與減法：
+
+* `++(2 + 1ί) + (1 – 2ί)++` 算出複數 3 – 1ί 。
+* `++(2 + 1ί) - (1 – 2ί)++` 算出複數 1 + 3ί 。
+
+====
+
+[EXAMPLE]
+====
+ 乘法與除法：
+
+* `++(2 + 1ί) * (1 – 2ί)++` 算出複數 4 – 3ί 。
+* `++(2 + 1ί) / (1 – 2ί)++` 算出複數 0 + 1ί 。
+
+====
+
+[NOTE]
+====
+若是輸入 `++(2, 1)*(1, -2)++` 則是計算兩個向量的內積。
+
+====
+
+也可以使用下列指令和xref:/內建函數與運算子.adoc[內建函數]：
+
+* `++x(w)++` 或 `++real(w)++` 取得複數 _w_ 的實部。
+* `++y(w)++` 或 `++imaginary(w)++` 取得複數 _w_ 的虛部。
+* `++abs(w)++` 或 `++Length[w]++` 計算複數 _w_ 的絕對值。
+* `++arg(w)++` 或 `++Angle[w]++` 計算複數 _w_ 的幅角。
+
+[NOTE]
+====
+arg(w) 算出來的值介於 -180° 和 180° 之間，然而 Angle[w] 算出來的值是介於 0° 和 360° 之間。
+
+====
+
+* `++conjugate(w)++` 或 `++Reflect[w,xAxis]++` 求出複數 _w_ 的共軛複數。
+
+GeoGebra 也能處理混合xref:/數值與角度.adoc[實數]和複數的運算式。
+
+[EXAMPLE]
+====
+
+
+* `++3 + (4 + 5ί)++` 算出複數 7 + 5ί 。
+* `++3 - (4 + 5ί)++` 算出複數 -1 - 5ί 。
+* `++3 / (0 + 1ί)++` 算出複數 0 - 3ί 。
+* `++3 * (1 + 2ί)++` 算出複數 3 + 6ί 。
+
+====

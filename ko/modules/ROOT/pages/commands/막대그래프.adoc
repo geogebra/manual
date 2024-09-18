@@ -1,0 +1,81 @@
+= 막대그래프 명령
+:page-en: commands/BarChart
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+BarChart( <List of Data>, <List of Frequencies> )::
+  Creates a bar chart using the list of data with corresponding frequencies.
+
+[EXAMPLE]
+====
+
+* `++BarChart({10, 11, 12, 13, 14}, {5, 8, 12, 0, 1})++`
+* `++BarChart({5, 6, 7, 8, 9}, {1, 0, 12, 43, 3})++`
+* `++BarChart({0.3, 0.4, 0.5, 0.6}, {12, 33, 13, 4})++`
+
+====
+
+[NOTE]
+====
+
+The numbers in the list of raw data need to be arranged in increasing order.
+
+====
+
+BarChart( <List of Raw Data>, <Width of Bars>, <Vertical Scale Factor (optional)> )::
+  Creates a bar chart using the given raw data; the bars have the given width and the height of the bars depends on the
+  vertical scale factor.
+
+[EXAMPLE]
+====
+
+* `++BarChart({1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5}, 1)++`
+* `++BarChart({1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5}, 1, 2)++`
+
+====
+
+BarChart( <List of Data> , <List of Frequencies>, <Width of Bars> )::
+  Creates a bar chart using the list of data and corresponding frequencies; the bars have width _w_.
+
+[EXAMPLE]
+====
+
+* `++BarChart({10, 11, 12, 13, 14}, {5, 8, 12, 0, 1}, 0.5)++` leaves gaps between bars.
+* `++BarChart({10, 11, 12, 13, 14}, {5, 8, 12, 0, 1}, 0)++` produces a line graph.
+
+====
+
+BarChart( <Start Value>, <End Value>, <List of Heights> )::
+  Creates a bar chart over the given interval: the number of bars is determined by the length of the list, whose
+  elements are the heights of the bars.
+BarChart( <Start Value>, <End Value> , <Expression>, <Variable>, <From Number>, <To Number> )::
+  Creates a bar chart over the given interval (Start Value, End Value), that calculates the bars’ heights using the
+  expression whose variable _k_ varies from number _c_ to number _d_.
+BarChart( <Start Value>, <End Value>, <Expression>, <Variable>, <From Number>, <To Number>, <Step Width> )::
+  Creates a bar chart over the given interval (Start Value, End Value), the bars’ heights are calculated using the given
+  expression in which the variable _k_ varies from number _c_ to number _d_ using step width _s_.
+
+[EXAMPLE]
+====
+
+If _p = 0.1_, _q = 0.9_, and _n = 10_ are numbers, then
+`++BarChart(-0.5, n + 0.5, BinomialCoefficient(n,k) * p^k * q^(n-k), k, 0, n)++` gives you a bar chart in the interval
+[_-0.5, n+0.5_]. The heights of the bars depend on the probabilities calculated using the given expression.
+
+====
+
+[EXAMPLE]
+====
+
+`++BarChart(10, 20, {1, 2, 3, 4, 5})++` gives you a bar chart with five bars of specified height in the interval [10,
+20].
+
+====
+
+[NOTE]
+====
+
+It is possible to specify a different color/filling for each bar in the
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/s_index_php?title=Object_Properties_action=edit_redlink=1.adoc[Object Properties].
+
+====

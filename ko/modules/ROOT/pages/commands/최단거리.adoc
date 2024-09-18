@@ -1,0 +1,10 @@
+= 최단거리 명령
+:page-en: commands/ShortestDistance
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+ShortestDistance( <List of Segments>, <Start Point>, <End Point>, <Boolean Weighted> )::
+  Finds shortest path between start point and endpoint in a https://en.wikipedia.org/wiki/Graph_(mathematics)[graph]
+  given by list of segments. If weighted is false,
+  https://en.wikipedia.org/wiki/Weighted_graph#Weighted_graphs_and_networks[weight] of each edge is supposed to be 1
+  (i.e. we are looking for the path with least number of edges), otherwise it is the length of given segment (we are
+  looking for the geometrically shortest path).

@@ -1,0 +1,27 @@
+= SetLabelMode 指令
+:page-en: commands/SetLabelMode
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+SetLabelMode( <物件>, <數值> )::
+  根據下列表格更改 <物件> 的xref:/物件名稱與標籤.adoc[標籤模式]。
+
+[NOTE]
+====
+
+*備註：*
+
+* 若填入表格中以外的數值將會被視為 0。
+* 物件的標籤模式預設是**名稱**。
+* 對於數值 3 和 9，若物件的**標籤文字**欄位空白，會使用物件的**名稱**作為標籤文字。
+
+====
+
+[cols=",",options="header",]
+|===
+|數值 |模式
+|0 |名稱
+|1 |名稱與數值
+|2 |數值
+|3 |xref:/物件名稱與標籤.adoc[標籤文字]
+|9 |xref:/物件名稱與標籤.adoc[標籤文字]與數值
+|===

@@ -1,0 +1,127 @@
+= 串列
+:page-en: Lists
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+使用大括號（花括號）即可建立幾個物件（例如：點、線段、圓）的**串列**（list）。
+
+[EXAMPLE]
+====
+
+
+* 輸入 `++L = {A, B, C}++` 可建立一個串列，其中包含了三個已定義過的點 _A_、_B_、_C_。
+* 輸入 `++L = {(0, 0), (1, 1), (2, 2)}++` 會產生包含這三點的串列，但這三點並不會有名稱。
+* 使用 `++..++` 語法可以建立連續整數串列：例如 `++-5..5++` 會建立串列 \{_-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5_}。
+
+====
+
+[NOTE]
+====
+
+*備註：*
+
+* 預設情況下，串列中的元素並不會顯示在 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/繪圖區.adoc[繪圖區]。
+* 串列物件本身也可以被引入到串列運算（此文後續會談到）或xref:/commands/串列.adoc[串列指令]之中。
+* *點串列*（list of points）也被稱作**點集**。
+
+====
+
+== 取用串列的元素
+
+想要取用串列的特定元素（element），您可以使用 xref:/commands/Element.adoc[Element_指令]或下列範例中的簡化語法：
+
+[EXAMPLE]
+====
+ 假設串列 `++list = {1, 2, 3, 4, 5}++`，則：
+
+* `++list(1)++` 取出此串列的第一個元素：_1_
+* `++list(2)++` 取出此串列的第二個元素：_2_
+* .../...
+* `++list(-1)++` 取出此串列的最後一個元素：_5_
+* `++list(-5)++` 取出此串列的第一個元素：_1_
+* `++list(0)++` 或是 `++list(k)++` 其中 k > 5 或 k < -5，都會傳回**無定義**（通常以 ? 顯示）
+
+====
+
+== 比對串列
+
+您可透過下列語法和指令，來比對兩個串列中的物件：
+
+* `++List1 == List2++`：以有序https://zh.wikipedia.org/wiki/%E5%A4%9A%E5%85%83%E7%BB%84[多元組]（ordered
+tuple）的觀點來判斷兩串列是否相等，並傳回 _true_ 或 _false_。
+* `++List1 != List2++`：以有序多元組的觀點來判斷兩串列是否不相等，並傳回 _true_ 或 _false_。
+* `++Unique(list1) == Unique(list2)++` 或
+`++list1 \ list2 == {}++`：以https://zh.wikipedia.org/wiki/%E9%9B%86%E5%90%88_(%E6%95%B0%E5%AD%A6)[集合]（set）的觀點來判斷兩串列是否相等（亦即重複的元素會被忽略，且元素間沒有順序分別），並傳回
+_true_ 或 _false_。
+* `++Sort(list1) == Sort(list2)++`：以https://zh.wikipedia.org/wiki/%E5%A4%9A%E9%87%8D%E9%9B%86[多重集]（multiset）的觀點來判斷兩串列是否相等（亦即元素間沒有順序分別），並傳回
+_true_ 或 _false_。
+
+也請參閱 xref:/commands/Unique.adoc[Unique] 和 xref:/commands/Sort.adoc[Sort] 指令。
+
+== 串列運算子
+
+`++<Object> ∈ <List>++`：如果物件 _Object_ 是串列 _List_ 的其中一個元素，傳回 _true_。
+
+`++<List1> ⊆ <List2>++`：如果串列 _List1_ 是串列 _List2_ 的子集（subset），傳回 _true_。
+
+`++<List1> ⊂ <List2>++`：如果串列 _List1_ 是串列 _List2_ 的嚴格子集（strict subset），傳回 _true_。
+
+`++<List1> \ <List2>++`：建立串列 _List1_ 和 _List2_ 的差集（set difference）。
+
+== 對串列使用內建函數與運算子
+
+若套用xref:/內建函數與運算子.adoc[內建函數與運算子]到串列上，運算完的結果將會儲存到新的串列。
+
+=== 加法與減法
+
+* `++List1 + List2++`：將兩串列互相對應的元素相加。
++
+[NOTE]
+====
+兩串列的長度必須相同。
+
+====
+* `++List + Number++`：將串列 _List_ 的每一個元素加上 _Number_。
+* `++List1 – List2++`：將串列 _List1_ 的每一個元素減去串列 _List2_ 中每一個相對應的元素。
++
+[NOTE]
+====
+兩串列的長度必須相同。
+
+====
+* `++List – Number++`：將串列 _List_ 的每一個元素減去 _Number_。
+
+=== 乘法與除法
+
+* `++List1 * List2++`：將兩串列互相對應的元素相乘。
++
+[NOTE]
+====
+兩串列的長度必須相同。若兩串列可視為兩個可乘（compatible）的矩陣，則套用矩陣乘法。
+
+====
+* `++List * Number++`：將串列 _List_ 的每一個元素乘上 _Number_。
+* `++List1 / List2++`: 將串列 _List1_ 的每一個元素除以串列 _List2_ 中每一個相對應的元素。
++
+[NOTE]
+====
+兩串列的長度必須相同。
+
+====
+* `++List / Number++`：將串列 _List_ 的每一個元素除以 _Number_。
+* `++Number / List++`: 將 _Number_ 除以串列 _List_ 的每一個元素。
+
+[NOTE]
+====
+也請參閱xref:/點與向量.adoc[外積]。
+
+====
+
+=== 其他範例
+
+* `++List ^ 2++`：將串列 _List_ 的每一個元素平方。
+* `++2 ^ List++`：以串列 _List_ 中的元素為指數，建立一個以 2 為底的次方串列。
+* `++List1 ^ List2++`：建立 _a^b_ 的串列，其中 _a_ 和 _b_ 分別對應串列 _List1_ 和 _List2_ 之中的元素。
+* `++sin(List)++`：對串列 _List_ 中的每一個元素套用 sine 函數。
+
+使用者自定義的xref:/函數.adoc[函數]也能以相同方式套用。

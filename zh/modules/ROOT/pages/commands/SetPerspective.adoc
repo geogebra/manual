@@ -1,0 +1,101 @@
+= SetPerspective 指令
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+SetPerspective( <文字> )
+
+更改版面配置與**視區**的顯示狀態。<文字>
+參數可以是完整的版面配置描述、要變更的單一視區描述，或是其中一個標準格局的代碼。
+
+== 完整的版面配置描述
+
+可使用表示式來描述視區位置，以更改整體的版面配置。每個**視區**的代表字母如下表。視區的水平排列以相對應的字母並排表示，垂直排列以除號
+`++ /++` 表示。
+
+[cols=",",options="header",]
+|===
+|字母 |視區
+|A |image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] xref:/代數區.adoc[代數區]
+
+|B |image:18px-Menu_view_probability.svg.png[Menu view probability.svg,width=18,height=18]
+xref:/機率計算機.adoc[機率計算機]
+
+|C |image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/運算區.adoc[運算區]
+
+|D |image:16px-Menu_view_graphics2.svg.png[Menu view graphics2.svg,width=16,height=16] xref:/繪圖區.adoc[副繪圖區]
+
+|G |image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/繪圖區.adoc[主繪圖區]
+
+|L |image:16px-Menu_view_construction_protocol.svg.png[Menu view construction protocol.svg,width=16,height=16]
+xref:/構圖按本.adoc[構圖按本]
+
+|P |image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/屬性.adoc[屬性]
+
+|R |資料分析（僅限桌機版）
+
+|S |image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] xref:/試算表.adoc[試算表]
+
+|T |image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=16,height=16]
+xref:/3D_繪圖區.adoc[3D 繪圖區]
+|===
+
+[EXAMPLE]
+====
+  
+
+* `++SetPerspective("G")++` 只有顯示 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+*繪圖區*。
+* `++SetPerspective("AGS")++` 顯示 image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+*代數區*、image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] **繪圖區**和
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] *試算表*，並水平排列。
+* `++SetPerspective("S/G")++` 顯示 image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] **試算表**和 image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] *繪圖區*，**試算表**在上而**繪圖區**在下。
+* `++SetPerspective("S/(GA)")++` 與前一個範例相似，但螢幕的下半部分由 image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] **繪圖區**在左且 image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] **代數區**在右的方式構成。
+
+====
+
+== 變更單一視區
+
+在**視區**名稱（字母）前加上符號 `+++++` 或 `++-++`，可開啟或關閉單一*視區*。若是用在 GeoGebra 經典版以外的
+App（例如：繪圖計算機），可使用 `++Tools++` 和 `++Table++` 來代表**工具**和**表格**側欄分頁。
+
+[EXAMPLE]
+====
+  
+
+* `++SetPerspective("+D")++` 在目前的版面配置右方插入**副繪圖區**。
+* `++SetPerspective("-D")++` 從目前的版面配置移除**副繪圖區**。
+* `++SetPerspective("+Tools")++` 在繪圖計算機中開啟側欄並切換到**工具**分頁。
+* `++SetPerspective("+Table")++` 在繪圖計算機中開啟側欄並切換到**表格**分頁。
+* `++SetPerspective("-Tools")++` 在繪圖計算機中關閉側欄（無論目前是在哪一個分頁）。
+
+====
+
+== 標準格局
+
+也可以用一個包含單一數值的文字來使用內建的xref:/格局.adoc[格局]：
+
+[cols=",",options="header",]
+|===
+|文字 |格局
+|"1" |代數
+|"2" |幾何
+|"3" |試算表
+|"4" |運算
+|"5" |3D 繪圖
+|"6" |機率
+|===
+
+以上這些大致分別對應到 "AG"、"G"、"SG"、"CG"、"AT" 和
+"B"，但也有可能會影響xref:/指令列.adoc[指令列]的顯示和xref:/工具列.adoc[工具列]的內容。
+
+[NOTE]
+====
+
+*備註：*
+
+* 請參閱 xref:/commands/SetActiveView.adoc[SetActiveView] 指令。
+
+====

@@ -1,0 +1,33 @@
+= Invert 指令
+:page-en: commands/Invert
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Invert[ <Matrix> ]::
+
+== CAS 視窗
+
+Invert[ <Matrix> ]::
+Invert[Matrix]::
+  Inverts the given matrix.
+  === CAS Syntax
+  Invert[Matrix];;
+    Inverts the given matrix.
+    [EXAMPLE]
+
+  ====
+
+  *範例：*
+
+  `++Invert[{{a, b}, {c, d}}]++` gives you the inverse matrix stem:[ \begin\{pmatrix} \frac\{d}\{a* d- b* c} &
+  \frac\{-b}\{a* d- b* c}\\ \frac\{-c}\{a* d- b* c}& \frac\{a}\{ a* d- b* c} \end\{pmatrix} ].
+
+  ====
+
+[EXAMPLE]
+====
+
+
+`++Invert[{{1, 2}, {3, 4}}]++` gives you the inverse matrix stem:[ \begin\{pmatrix} -2 & 1\\ 1.5 & -0.5 \end\{pmatrix}
+].
+
+====

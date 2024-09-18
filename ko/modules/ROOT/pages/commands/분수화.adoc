@@ -1,0 +1,32 @@
+= 분수화 명령
+:page-en: commands/FractionText
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+FractionText( <Number> )::
+  Converts the number to a fraction, which is displayed as a (LaTeX) text object in the ([File:Menu view
+  graphics.svg|link=|16px)] xref:/s_index_php?title=Graphics_View_action=edit_redlink=1.adoc[Graphics View].
+FractionText( <Point> )::
+  Displays the coordinates of the point as fractions in the image:16px-Menu_view_graphics.svg.png[Menu view
+  graphics.svg,width=16,height=16] xref:/s_index_php?title=Graphics_View_action=edit_redlink=1.adoc[Graphics View].
+
+[EXAMPLE]
+====
+
+If _A=(1.33,0.8)_ is a point, then `++FractionText(A)++` gives you the coordinates _stem:[ \left( \frac\{133}\{100}
+,\frac\{4}\{5} \right) ]_ as a text.
+
+====
+
+[EXAMPLE]
+====
+
+If _a: y = 1.5 x + 2_ is a line, then `++FractionText(Slope(a))++` gives you the fraction _3/2_ as a text.
+
+====
+
+[NOTE]
+====
+
+See also xref:/s_index_php?title=SurdText_Command_action=edit_redlink=1.adoc[SurdText] command.
+
+====

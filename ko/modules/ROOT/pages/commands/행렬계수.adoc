@@ -1,0 +1,25 @@
+= 행렬계수 명령
+:page-en: commands/MatrixRank
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+MatrixRank( <Matrix> )::
+  Returns the https://en.wikipedia.org/wiki/Rank_(linear_algebra)[rank] of given matrix.
+
+[EXAMPLE]
+====
+
+* `++MatrixRank({{2, 2}, {1, 1}})++` yields _1_.
+* `++MatrixRank({{1, 2}, {3, 4}})++` yields _2_.
+* Let `++A = {{1, 2, 3}, {1, 1, 1}, {2, 2, 2}}++` be a 3x3-matrix. `++MatrixRank(A)++` yields _2_.
+
+====
+
+[EXAMPLE]
+====
+
+In the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View] this command also works with undefined variables.
+
+`++MatrixRank({{1, 2}, {k*1,  k*2}})++` yields _1_.
+
+====

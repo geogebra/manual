@@ -1,0 +1,43 @@
+= Text 指令
+:page-en: commands/Text
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Text[〈物件〉]::
+  此指令會產生一個「xref:/文字.adoc[文字]」物件。
+
+[NOTE]
+====
+此指令相當於 `++Text[〈物件〉, true]++`，請參考下一個指令格式。
+
+====
+
+Text[〈物件〉,〈代入變數值〉]::
+  * 〈代入變數值〉的預設值為「true」，因此 `++Text[〈物件〉, true]++` 的效果與 `++Text[〈物件〉]++` 一模一樣。
+  * 〈代入變數值〉如果設為「true」，則會將文字內容所含的變數先轉換為數值後再顯示，如果設為「false」，則只顯示變數名稱。
+
+[EXAMPLE]
+====
+
+
+====
+
+[cols=",,",options="header",]
+|===
+|物件設定 |Text[obj] |Text[obj, false]
+|obj = 3 |3 |obj
+|obj: y = x^2^ |y = x^2^ |y = x^2^
+|A=(0,0)B=(1,0)obj=Circle[A,B] |x^2^ + y^2^ = 1 |Circle[A,B]
+|a=2b=3c=6obj: a x + b y = c |2 x + 3 y = 6 |a x + b y = c
+|a = 2 obj = a^2^ - 3a + 2 |0 |a^2^ - 3a + 2
+|===
+
+Text[〈物件〉, 〈文字位置〉, 〈代入變數值〉, 〈含 LaTeX 數學式〉]::
+  * 〈文字位置〉是文字方塊的「左上角」，必須是一個點座標。
+  * 如果文字內容中含有 xref:/LaTeX.adoc[LaTeX] 數學式，則〈含 LaTeX 數學式〉必須設為「true」。
+
+[EXAMPLE]
+====
+ 假設 `++n = 3++`，則 `++Text["\frac{1}{" + (2^n) + "}", A, true, true]++`
+會得到「stem:[\frac\{1}\{8}]」的文字方塊，它的左上角會對齊 A 點。
+
+====

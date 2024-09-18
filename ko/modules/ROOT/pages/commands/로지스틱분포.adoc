@@ -1,0 +1,22 @@
+= 로지스틱분포 명령
+:page-en: commands/Logistic
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+Logistic( <Mean>, <Scale>, x )::
+  Creates cumulative density function (cdf) of https://en.wikipedia.org/wiki/Logistic_distribution[logistic
+  distribution] with parameters mean _μ_ and scale _s_.
+Logistic( <Mean>, <Scale>, x, <Boolean Cumulative> )::
+  If _Cumulative_ is true, creates cumulative distribution function of logistic distribution, otherwise creates pdf of
+  logistic distribution.
+Logistic( <Mean>, <Scale>, <Variable Value> )::
+  Calculates the value of cumulative distribution function of logistic distribution at variable value _v_, i.e. the
+  probability _P(X ≤ v)_ where _X_ is a random variable with logistic distribution given by parameters mean _μ_ and
+  scale _s_.
+
+[NOTE]
+====
+
+Returns the probability for a given _x_-coordinate's value (or area under the logistic distribution curve to the left of
+the given _x_-coordinate).
+
+====

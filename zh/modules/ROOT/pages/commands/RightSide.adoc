@@ -1,0 +1,37 @@
+= RightSide 指令
+:page-en: commands/RightSide
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+此指令只能用在xref:/運算區.adoc[運算區]。
+
+RightSide[ <Equation> ]::
+RightSide[ \{ <Equation> } ]::
+RightSide[ <Equation> ]::
+  Returns the right-hand side of the equation.
+RightSide[ \{ <Equation> } ]::
+  Returns the right-hand sides of the equations.
+
+[EXAMPLE]
+====
+
+
+`++RightSide[{a^2 + b^2 = c^2, x + 2 = 3x + 1}]++` yields _\{c^2^, 3x + 1}_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++RightSide[x + 2 = 3x + 1]++` yields _3x + 1_.
+
+====
+
+[NOTE]
+====
+
+*備註：*
+
+See also xref:/s_index_php?title=LeftSide_Command_action=edit_redlink=1.adoc[LeftSide Command].
+
+====

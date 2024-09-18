@@ -1,0 +1,69 @@
+= Length 指令
+:page-en: commands/Length
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Length( <物件> )::
+  產生 <物件> 的長度。
+
+[EXAMPLE]
+====
+
+
+* `++Length( <向量> )++` 產生此 <向量> 的長度。
+* `++Length( <點> )++` 產生此 <點> 的位置向量長度。
+* `++Length( <串列> )++` 產生此 <串列> 的長度，亦即此 <串列> 中元素的個數。
+* `++Length( <文字> )++` 產生此 <文字> 的字元個數（譯註：不論全半形）。
+* `++Length( <軌跡> )++` 回傳組成此 <軌跡> 的點個數。若要取得軌跡本身的長度，可使用
+xref:/commands/Perimeter.adoc[Perimeter_指令]。returns the number of points that the given locus is made up of. Use
+xref:/Perimeter_Command.adoc[Perimeter](Locus) to get the length of the locus itself. For details see the article about
+xref:/s_index_php?title=First_Command_action=edit_redlink=1.adoc[First Command].
+* `++Length( <圓弧> )++` returns the _arc length_ (i.e. just the length of the curved section) of an arc or sector.
+
+====
+
+Length( <Function>, <Start x-Value>, <End x-Value> )::
+  Yields the length of the function graph in the given interval.
+Length( <Function>, <Start Point>, <End Point> )::
+  Yields the length of the function graph between the two points.
+Length( <Curve>, <Start t-Value>, <End t-Value> )::
+  Yields the length of the curve between the two values *of the parameter*.
+Length( <Curve>, <Start Point>, <End Point> )::
+  Yields the length of the curve between the two points that lie on the curve.
+
+[EXAMPLE]
+====
+ `++Length(2x, 0, 1)++` returns _2.236067977_, about stem:[\sqrt\{5}].
+
+====
+
+[NOTE]
+====
+If the given points do not lie on the function graph, their x‐coordinates are used to determine the interval.
+
+====
+
+== CAS Syntax
+
+Length( <Function>, <Start x-Value>, <End x-Value> )::
+  Calculates the length of a function graph between the two points.
+Length( <Function>, <Variable>, <Start x-Value>, <End x-Value> )::
+  Calculates the length of a function graph from _Start Point_ to _End Point_.
+
+[EXAMPLE]
+====
+ `++Length(2 a, a,  0, 1)++` yields stem:[\sqrt\{5}].
+
+====
+
+[EXAMPLE]
+====
+ `++Length(2 x, 0, 1)++` yields stem:[\sqrt\{5}].
+
+====
+
+[NOTE]
+====
+See also image:22px-Mode_distance.svg.png[Mode distance.svg,width=22,height=22]
+xref:/s_index_php?title=Distance_or_Length_Tool_action=edit_redlink=1.adoc[Distance or Length] tool.
+
+====

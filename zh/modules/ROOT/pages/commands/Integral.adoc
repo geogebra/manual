@@ -1,0 +1,80 @@
+= Integral 指令
+:page-en: commands/Integral
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Integral[ <Function> ]::
+Integral[ <Function>, <Start x-Value>, <End x-Value> ]::
+Integral[ <Function>, <Start x-Value>, <End x-Value>, < Boolean Evaluate> ]::
+
+== CAS 視窗
+
+Integral[ <Function> ]::
+Integral[ <Function>, <Start x-Value>, <End x-Value> ]::
+Integral[ <Function>, <Start x-Value>, <End x-Value>, < Boolean Evaluate> ]::
+Integral[Function]::
+  Yields the indefinite integral for the given function.
+Integral[ <Function>, <Variable> ]::
+  Returns the partial integral of the function with respect to the variable.
+Integral[Function, Number a, Number b]::
+  Returns the definite integral of the function in the interval [_a , b_].
+
+[EXAMPLE]
+====
+
+
+`++Integral[x³+3x y, x]++` yields _(x² (x² + 6y)) / 4_ .
+
+====
+
+[EXAMPLE]
+====
+
+
+`++Integral[x³]++` yields _x⁴ / 4_ .
+
+====
+
+[NOTE]
+====
+This command also shadows the area between the function graph of _f_ and the _x_-axis.
+
+====
+
+Integral[Function, Number a, Number b, Boolean Evaluate]::
+  Returns the definite integral of the function in the interval [_a , b_] and shadows the related area when _Evaluate =
+  true_. In case _Evaluate = false_ the related area is shaded but the integral value is not calculated.
+
+== CAS Syntax
+
+Integral[ Function f]::
+  Yields the indefinite integral for the given function.
+Integral[Function f, Variable t]::
+  Indefinite integral with respect to variable _t_.
+Integral[Function, Number a, Number b]::
+  Returns the definite integral of the function in the interval [_a , b_].
+Integral[Function f, Variable t, Number a, Number b]::
+  Definite integral from _a_ to _b_ with respect to variable _t_.
+
+[EXAMPLE]
+====
+ `++Integral[cos(t), t, a, b]++` returns sin(b) - sin(a).
+
+====
+
+[EXAMPLE]
+====
+ `++Integral[cos(x), a, b]++` returns sin(b) - sin(a).
+
+====
+
+[EXAMPLE]
+====
+ `++Integral[cos(a t), t]++` returns sin(a t)/a+c2.
+
+====
+
+[EXAMPLE]
+====
+ `++Integral[cos(x)]++` returns sin(x)+c1.
+
+====

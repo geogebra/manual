@@ -1,0 +1,66 @@
+= NSolve 명령
+:page-en: commands/NSolve
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+이 명령은 오직 xref:/CAS_창.adoc[CAS 창] 에서만 작동합니다..
+
+== CAS Syntax
+
+This command is only available in the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View].
+
+NSolve( <Equation> )::
+  Attempts (numerically) to find a solution for the equation for the main variable. For non-polynomials you should
+  always specify a starting value (see below).
+NSolve( <Equation>, <Variable> )::
+  Attempts (numerically) to find a solution of the equation for the given unknown variable. For non-polynomials you
+  should always specify a starting value (see below).
+NSolve( <Equation>, <Variable = starting value> )::
+  Finds numerically the list of solutions to the given equation for the given unknown variable with its starting value.
+
+[EXAMPLE]
+====
+
+* `++NSolve(cos(x) = x, x = 0)++` yields _\{x = 0.74}_
+* `++NSolve(a^4 + 34a^3 = 34, a = 3)++` yields _\{a = 0.99}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++NSolve(a^4 + 34a^3 = 34, a)++` yields _\{a = -34, a = 0.99}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++NSolve(x^6 - 2x + 1 = 0)++` yields _\{x = 0.51, x = 1}_.
+
+====
+
+NSolve( <List of Equations>, <List of Variables> )::
+  Attempts (numerically) to find a solution of the set of equations for the given set of unknown variables.
+
+[EXAMPLE]
+====
+
+`++NSolve({pi / x = cos(x - 2y), 2 y - pi = sin(x)}, {x = 3, y = 1.5})++` yields _\{x = 3.14, y = 1.57}_.
+
+====
+
+[NOTE]
+====
+
+* If you don't give a starting point like _a=3_ or _\{x = 3, y = 1.5}_ the numerical algorithm may find it hard to find
+a solution (and giving a starting point doesn't guarantee that a solution will be found)
+* The number of decimals depends on the choosen in
+xref:/s_index_php?title=Options_Menu_action=edit_redlink=1.adoc[global rounding].
+* NSolve won't work for functions that are asymptotic to the x-axis or other extreme examples. They can often be
+reformulated though.
+* NSolve will work only if the function is continuous!
+* See also xref:/s_index_php?title=Solve_Command_action=edit_redlink=1.adoc[Solve Command] and
+xref:/s_index_php?title=NSolutions_Command_action=edit_redlink=1.adoc[NSolutions Command].
+
+====

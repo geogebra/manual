@@ -1,0 +1,18 @@
+= RunClickScript 指令
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+RunClickScript( <物件> )::
+  （如果有的話）執行 <物件> 的 OnClick 程式腳本。
+
+[EXAMPLE]
+====
+ 若有兩點 _A_ 和 _B_。設定 _B_ 的 _OnClick_ 程式腳本為 `++SetValue(B,(1,1))++`，設定 _A_ 的 _OnClick_ 程式腳本為
+`++RunClickScript(B)++`。當按下 _A_ 點時，會將 _B_ 點移動到 (1,1)。
+
+====
+
+[NOTE]
+====
+請參閱 xref:/commands/RunUpdateScript.adoc[RunUpdateScript_指令]。
+
+====

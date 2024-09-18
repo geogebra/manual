@@ -1,0 +1,41 @@
+= Degree 指令
+:page-en: commands/Degree
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Degree[ <Polynomial> ]::
+Degree[ <Polynomial> ]::
+  Gives the https://en.wikipedia.org/wiki/en:degree_of_a_polynomial[degree of a polynomial].
+
+[EXAMPLE]
+====
+
+
+`++Degree[x^4 + 2 x^2]++` yields _4_.
+
+====
+
+== CAS Syntax
+
+Degree[ <Polynomial> ]::
+  Gives the https://en.wikipedia.org/wiki/en:degree_of_a_polynomial[degree of a polynomial].
+
+[EXAMPLE]
+====
+
+
+* `++Degree[x^4 + 2 x^2]++` yields _4_,
+* `++Degree[x^4 y^3 + 2 x^2 y^3]++` yields _7_.
+
+====
+
+Degree[ <Polynomial>, <Variable> ]::
+  Gives the degree of a polynomial in the given variable.
+
+[EXAMPLE]
+====
+
+
+* `++Degree[x^4 y^3 + 2 x^2 y^3, x]++` yields _4_,
+* `++Degree[x^4 y^3 + 2 x^2 y^3, y]++` yields _3_.
+
+====

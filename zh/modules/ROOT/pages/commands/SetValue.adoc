@@ -1,0 +1,31 @@
+= SetValue 指令
+:page-en: commands/SetValue
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+SetValue( <真假值>, <0|1> )::
+  設定一個真假值或勾選框的狀態：1 = true、0 = false。
+
+[EXAMPLE]
+====
+ 若 _b_ 是一個真假值，`++SetValue(b,1)++` 會把真假值 _b_ 設為 _true_。
+
+====
+
+SetValue( <物件 A>, <物件 B> )::
+  若 _A_
+  是一個xref:/自變、應變、輔助物件.adoc[自變物件]或是一個依附於xref:/幾何物件.adoc[路徑或區域]的xref:/點與向量.adoc[點]，此指令會將
+  _A_ 的值設定為 _B_ 目前的值（也就是說執行完指令之後，改變 _B_ 並不會影響到 _A_）。
+
+[EXAMPLE]
+====
+ 若 _f_ 為一函數，`++SetValue(f, RandomElement({cos(x), 3x+2, ln(x)}))++` 會以隨機的方式將 f
+定義為串列中的其中一個函數。
+
+====
+
+SetValue( <串列 L>, <數值 n>, <物件> )::
+  此指令將一個自變 <串列 L> 中的第 _n_ 個元素設定為 <物件> 目前的值。_n_ 最多可以設為 ( L 的長度 + 1 )，會直接在 L
+  的最後新增一個元素。
+
+SetValue( <xref:/動作物件.adoc[下拉式選單]>, <數值 n > )::
+  設定下拉式選單中xref:/commands/SelectedIndex.adoc[目前選取元素的索引]為 _n_。

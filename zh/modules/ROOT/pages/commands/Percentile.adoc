@@ -1,0 +1,20 @@
+= Percentile 指令
+:page-en: commands/Percentile
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Percentile[ <List of Numbers>, <Percent> ]::
+Percentile[<List of Numbers>, <Percent>]::
+  Let P equal the given _Percent_.
+  Returns the value that cuts off the first P percent of the number list when the list is sorted in ascending order.
+  _Percent_ must be a number in the interval 0 < P ≤ 1.
+
+[NOTE]
+====
+The commands Quartile and Percentile use different rules and do not always return matching results. For
+example,
+
+Q1[\{1,2,3,4}] = 2
+
+Percentile[\{1,2,3,4}, 0.25] = 1
+
+====

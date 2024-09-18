@@ -1,0 +1,88 @@
+= 物件的命名方式
+:page-en: Naming_Objects
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+在利用xref:/指令列.adoc[指令列]建立物件時，您可以幫物件指定一個特定的名稱：
+
+* xref:/點與向量.adoc[點]：在 GeoGebra
+中，點總是以大寫字母命名。先輸入名稱（例如：A、P），接著輸入等號（=），最後輸入坐標或指令。
+
+[EXAMPLE]
+====
+ `++C = (2, 4)++`、`++P = (1; 180°)++`
+
+====
+
+* xref:/點與向量.adoc[向量]：在 GeoGebra
+中為了與點作區別，向量必須以小寫字母命名。同樣地先輸入名稱（例如：v、u），接著輸入等號（=），最後輸入坐標或指令。
+
+[EXAMPLE]
+====
+ `++v = (1, 3)++`、`++u = (3; 90°)++`
+
+====
+
+* xref:/直線與坐標軸.adoc[直線]、圓與xref:/圓錐曲線.adoc[圓錐曲線]：要命名這些物件時，可以先輸入名稱，接著輸入冒號（:），最後輸入方程式或指令。
+
+[EXAMPLE]
+====
+ `++g: y = x + 3++`、`++c: (x-1)^2 + (y – 2)^2 = 4++`、`++hyp: x^2 – y^2 = 2++`
+
+====
+
+* xref:/函數.adoc[函數]：您可以在函數式或指令的前方指定名稱，例如：`++f(x) =++` 或 `++g(x) =++` 。
+
+[EXAMPLE]
+====
+ `++h(x) = 2 x + 4++`、`++q(x) = x^2++`、`++trig(x) = sin(x)++`
+
+====
+
+[NOTE]
+====
+
+*備註：*
+
+* 若您沒有指定物件的名稱，GeoGebra 會按照字母順序為新物件命名。
+* 您可以利用底線（_）為物件名稱加上索引值。例如：在**指令列**輸入 `++A_1++` 得到 A~1~ 、輸入 `++s_{AB}++` 得到 s~AB~ 。
+
+====
+
+== 保留字
+
+有些單詞在 GeoGebra 裡有特殊意義或作用，通常是內建函數或常數，在為物件命名時，請不要使用它們當作名稱：
+
+....
+x, y, z, xAxis, yAxis, zAxis, abs, sgn, sqrt, exp, log, ln, ld, lg, cos, sin, tan, acos, arcos, arccos, asin, arcsin, atan, arctan, cosh, sinh, tanh, acosh, arcosh, arccosh, asinh, arcsinh, atanh, arctanh, atan2, erf, floor, ceil, round, random, conjugate, arg, gamma, gammaRegularized, beta, betaRegularized, sec, csc, cosec, cot, sech, csch, coth
+....
+
+您可以在**指令列**的符號箱裡面找到下列常數的特殊字元：
+
+* π ：圓周率 pi，快捷鍵為 [.kcode]#Alt# + [.kcode]#p#
+* ℯ ：尤拉數，例如用在指數函數 ℯ^x ，快捷鍵為 [.kcode]#Alt# + [.kcode]#e#
+* ί ：虛數單位，例如用在複數 z = 3 + ί ，快捷鍵為 [.kcode]#Alt# + [.kcode]#i#
+
+假如 e 和 i 沒有被用作物件的名稱，那它們會被視為是常數 ℯ 和 ί 。
+
+== 重新命名物件
+
+要對一個已存在的物件重新命名，最簡單的方式是先點選它，然後直接在鍵盤上（以英數模式）輸入新名稱。
+
+您也可以在此物件的**xref:/快顯功能表.adoc[快顯功能表]**內點選
+image:18px-Menu-edit-rename.svg.png[Menu-edit-rename.svg,width=18,height=18] *重新命名*，或是開啟此物件
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+**xref:/屬性.adoc[屬性]對話窗**的**一般**分頁，在**名稱**欄位輸入新名稱。
+
+[NOTE]
+====
+
+*備註：*
+
+* GeoGebra
+通常會自動解析相依性，也就是說物件名稱在它的定義內也會跟著修正。若腳本內牽涉的物件有被重新命名，您需要自行手動修正腳本內的物件名稱。
+* 若您指定給某個物件的名稱已經被其他物件使用，那麼前一個同名物件的名稱將被更改。例如：如果將 _B_ 點的名稱改為 _A_ 且 _A_
+點已經存在，則原來這個 _A_ 點會被重新命名為 _A~1~_。
+
+====
+
+也請參閱xref:/物件名稱與標籤.adoc[物件名稱與標籤]。

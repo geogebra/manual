@@ -1,0 +1,73 @@
+= Min 指令
+:page-en: commands/Min
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Min[ <Number>, <Number> ]::
+Min[ <List> ]::
+Min[ <Interval> ]::
+Min[ <Function>, <Start x-Value>, <End x-Value> ]::
+Min[ <Number a>, <Number b> ]::
+  Yields the minimum of the given numbers _a_ and _b_.
+Min[ <List of Numbers> ]::
+  Yields the minimum of the numbers within the list.
+
+[EXAMPLE]
+====
+
+
+`++Min[{-2, 12, -23, 17, 15}]++` yields _-23_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++Min[12, 15]++` yields _12_.
+
+====
+
+[NOTE]
+====
+If the input consists of non-numeric objects, then Min[] considers the numbers associated with those objects.
+For example, Min[List of Segments] will yield the minimum segment length.
+
+====
+
+Min[ <Function>, <left-x>, <right-x> ]::
+  Calculates (numerically) the minimum point for function in the given interval. Function should have only one minimum
+  point in the interval.
+
+[NOTE]
+====
+See also xref:/s_index_php?title=Extremum_Command_action=edit_redlink=1.adoc[Extremum Command] and
+xref:/s_index_php?title=Function_Inspector_Tool_action=edit_redlink=1.adoc[Function Inspector Tool].
+
+====
+
+Min[ <Interval> ]::
+  Returns the lower bound of the interval, e.g. `++Min[2 < x < 3]++` returns _2_. It is the same for open and closed
+  intervals.
+
+== CAS Syntax
+
+Min[ <Number a>, <Number b> ]::
+  Yields the minimum of the given numbers _a_ and _b_.
+Min[ <List of Numbers> ]::
+  Yields the minimum of the numbers within the list.
+
+[EXAMPLE]
+====
+
+
+`++Min[{-2, 12, -23, 17, 15}]++` yields _-23_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++Min[12, 15]++` yields _12_.
+
+====

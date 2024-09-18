@@ -1,0 +1,26 @@
+= SigmaXY 명령
+:page-en: commands/SigmaXY
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+SigmaXY( <List of Points> )::
+  Calculates the sum of the products of the _x_- and _y_-coordinates.
+
+[EXAMPLE]
+====
+
+You can work out the covariance of a list of points using `++SigmaXY(list)/Length(list) - MeanX(list) * MeanY(list)++`.
+
+====
+
+SigmaXY( <List of x-coordinates>, <List of y-coordinates> )::
+  Calculates the sum of the products of the _x_- and _y_-coordinates.
+
+[EXAMPLE]
+====
+
+Let `++A = (-3, 4)++`, `++B = (-1, 4)++`, `++C = (-2, 3)++` and `++D = (1, 3)++` be points.
+`++{x(A), x(B), x(C), x(D)}++` yields the x-coordinates of the points in a list _list1 = \{-3, -1, -2, 1}_ and
+`++{y(A), y(B), y(C), y(D)}++` yields the y-coordinates of the points in a list _list2 = \{4, 4, 3, 3}_. Command
+`++SigmaXY(list1, list2)++` yields _a = -19_.
+
+====

@@ -1,0 +1,42 @@
+= 최소제곱다항식 명령
+:page-en: commands/FitPoly
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+FitPoly( <List of Points>, <Degree of Polynomial> )::
+  Calculates the regression polynomial of degree _n_.
+
+[EXAMPLE]
+====
+
+`++FitPoly({(-1, -1), (0, 1), (1, 1), (2, 5)}, 3)++` yields _f(x) = x^3^ - 1 x^2^ + 1_.
+
+====
+
+FitPoly( <Freehand Function>, <Degree of Polynomial> )::
+  Calculates the regression polynomial of degree _n_ for a function drawn by the
+  xref:/s_index_php?title=Freehand_Shape_Tool_action=edit_redlink=1.adoc[Freehand Shape Tool].
+
+== CAS Syntax
+
+FitPoly( <List of Points>, <Degree of Polynomial> )::
+  Calculates the regression polynomial of degree _n_.
+
+[EXAMPLE]
+====
+
+`++FitPoly({(-1, -1), (0, 1), (1, 1), (2, 5)}, 3)++` yields _x^3^ - x^2^ + 1_.
+
+====
+
+[NOTE]
+====
+
+* For order _n_ there must be at least _n + 1_ Points in the list.
+* See also xref:/s_index_php?title=FitExp_Command_action=edit_redlink=1.adoc[FitExp Command],
+xref:/s_index_php?title=FitLog_Command_action=edit_redlink=1.adoc[FitLog Command],
+xref:/s_index_php?title=FitPow_Command_action=edit_redlink=1.adoc[FitPow Command] and
+xref:/s_index_php?title=FitSin_Command_action=edit_redlink=1.adoc[FitSin Command].
+* If you work with big/small numbers, you should consider normalizing them for a more accurate result, see
+xref:/s_index_php?title=Normalize_Command_action=edit_redlink=1.adoc[Normalize Command].
+
+====

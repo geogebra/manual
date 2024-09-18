@@ -1,0 +1,48 @@
+= 추출 명령
+:page-en: commands/Take
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+Take( <List>, <Start Position> )::
+  Returns a list containing the elements from _Start Position_ to the end of the initial list.
+Take( <Text>, <Start Position> )::
+  Returns a text containing the elements from _Start Position_ to the end of the initial text.
+Take( <List>, <Start Position>, <End Position> )::
+  Returns a list containing the elements from _Start Position_ to _End Position_ of the initial list.
+Take( <Text>, <Start Position>, <End Position> )::
+  Returns a text containing the elements from _Start Position_ to _End Position_ of the initial text.
+
+[EXAMPLE]
+====
+
+`++Take("GeoGebra", 3, 6)++` yields the text _oGeb_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Take({2, 4, 3, 7, 4}, 3, 4)++` yields _\{3, 7}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Take("GeoGebra", 3)++` yields the text _oGebra_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Take({2, 4, 3, 7, 4}, 3)++` yields _\{3, 7, 4}_.
+
+====
+
+[NOTE]
+====
+
+In the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View] it works just for lists
+
+====

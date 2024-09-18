@@ -1,0 +1,89 @@
+= Histogram 指令
+:page-en: commands/Histogram
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Histogram[ <List of Class Boundaries>, <List of Heights> ]::
+Histogram[ <List of Class Boundaries>, <List of Raw Data>, <Use Density> , <Density Scale Factor> (optional) ]::
+Histogram[ <Boolean Cumulative>, <List of Class Boundaries>, <List of Raw Data>, <Use Density> , <Density Scale Factor>
+(optional) ]::
+
+Histogram[<List of Class Boundaries>, <List of Heights>]::
+  Creates a histogram with bars of the given heights. The class boundaries determine the width and position of each bar
+  of the histogram.
+
+[EXAMPLE]
+====
+ `++Histogram[{0, 1, 2, 3, 4, 5}, {2, 6, 8, 3, 1}]++` creates a histogram with 5 bars of the given heights. The
+first bar is positioned at the interval [_0, 1_], the second bar is positioned at the interval [_1, 2_], and so on.
+
+====
+
+Histogram[<List of Class Boundaries>, <List of Raw Data>, <Boolean Use Density>, <Density Scale Factor>(optional)]::
+  Creates a histogram using the raw data. The class boundaries determine the width and position of each bar of the
+  histogram and are used to determine how many data elements lie in each class. Bar height is determined as follows
+
+* If _Use Density = true_, height = (Density Scale Factor) * (class frequency) / (class width)
+* If _Use Density = false_, height = class frequency
+
+By default, Use Density = true and Density Scale Factor = 1. This creates a histogram with total area = n, the number of
+data values.
+
+[EXAMPLE]
+====
+ (_Default Histogram_)
+
+`++Histogram[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true]++` creates a histogram with 3 bars, with the
+heights 0.5 (first bar), 0.2 (second bar), and 0.1 (third bar).
+
+This histogram has total area = 0.5*10 + 0.2*10 + 0.1*10 = 8.
+
+====
+
+[EXAMPLE]
+====
+ (_Count Histogram_)
+
+`++Histogram[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, false]++` creates a histogram with 3 bars, with the
+heights 5 (first bar), 2 (second bar), and 1 (third bar). This histogram does not use density scaling and gives bar
+heights that equal the count of values in each class.
+
+====
+
+[EXAMPLE]
+====
+ (_Relative Frequency Histogram_)
+
+`++Histogram[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 10/ 8] ++` creates a histogram with 3 bars, with
+the heights 0.625 (first bar), .25 (second bar), and .125 (third bar). This histogram uses density scaling to give bar
+heights that equal the proportion of values in each class.
+
+If n is the number of data values, and the classes have constant width w, then Density Scale Factor = w/n creates a
+relative histogram.
+
+====
+
+[EXAMPLE]
+====
+ (_Normalized Histogram_)
+
+`++Histogram[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 1/8]  ++` creates a histogram with 3 bars, with
+the heights .0625 (first bar), .025 (second bar), and .0125 (third bar).
+
+This histogram has total area = .0625*10 + .025*10 + .0125*10 = 1.
+
+If n is the number of data values, then Density Scale Factor = 1/n creates a normalized histogram with total area = 1.
+This is useful for fitting a histogram with a density curve.
+
+====
+
+Histogram[ <Boolean Cumulative>, <List of Class Boundaries>, <List of Raw Data>, <Boolean Use Density> , <Density Scale
+Factor> (optional) ]::
+  If Cumulative is true this creates a histogram where each bar height equals the frequency of the class plus the sum of
+  all previous frequencies.
+
+[EXAMPLE]
+====
+ :`++Histogram[true, {10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true]++` creates a histogram with 3
+bars, with the heights 0.5 (first bar), 0.7 (second bar), and 0.8 (third bar).
+
+====

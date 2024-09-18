@@ -1,0 +1,44 @@
+= AttachCopyToView 指令
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+AttachCopyToView( <物件>, <視區 0|1|2> )::
+  若 <視區> 為 0，（會在主繪圖區）建立 <物件> 的應變副本。若 <視區> 為 1 或 2，會在指定的
+  image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  （主、副）xref:/繪圖區.adoc[繪圖區]建立 <物件> 的應變副本，但這些副本的尺寸會是常數。
+AttachCopyToView( <物件>, <視區 0|1|2>, <點 1>, <點 2>, <螢幕點 1>, <螢幕點 2> )::
+  If _View = 0_, a copy of given object is created. For _View = 1_ or _View = 2_ this command creates a dependent copy
+  of given object whose size in given image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/Graphics_View.adoc[Graphics View] is transformed using the affine transform that maps _Point 1_ to a point whose
+  screen coordinates (in pixels) are equal to _Screen Point 1_, and _Point 2_ to a point with screen coordinates equal
+  to _Screen Point 2_.
+
+[EXAMPLE]
+====
+
+
+Let `++poly = Polygon((0, 0), (1, 0), (1, 1), (0, 1))++`. If Graphics View 1 is active,
+`++AttachCopyToView(poly, 1, (0, 0), (1, 1), (0, 0), (100, 100))++` creates a _100px x 100px_ square in the top left
+corner of the Graphics View.
+
+====
+
+[EXAMPLE]
+====
+
+
+令 `++poly = Polygon((0, 0), (1, 0), (1, 1), (0, 1))++`。輸入 `++AttachCopyToView(poly, 1)++`
+會在相同位置建立一個相同尺寸的正方形。
+
+====
+
+[NOTE]
+====
+All points of the object are copied, even if they lie outside the view.
+
+====
+
+[NOTE]
+====
+一旦副本建立後，GeoGebra 會自動在副本物件的定義補上其他四個引數到指令中（請參考下一個語法）。
+
+====

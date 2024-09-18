@@ -1,0 +1,90 @@
+= ZoomIn 指令
+:page-en: commands/ZoomIn
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+ZoomIn( )::
+  將 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/繪圖區.adoc[繪圖區]回復到預設初始位置（*標準比例 1:1*）。
+
+ZoomIn( <縮放倍率> )::
+  將目前的 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/繪圖區.adoc[繪圖區]以指定 <縮放倍率> 進行放大，並以繪圖區的中心點作為縮放中心。
+
+[EXAMPLE]
+====
+
+
+`++ZoomIn(1)++` 不會進行縮放，但會移除圖面上的蹤跡。
+
+`++ZoomIn(2)++` 將圖面放大。
+
+`++ZoomIn(0.5)++` 等同於 `++ZoomOut(2)++`，將圖面縮小。
+
+====
+
+ZoomIn( <縮放倍率>, <中心點> )::
+  將目前的 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/繪圖區.adoc[繪圖區]以指定 <縮放倍率> 進行放大，並以 <中心點> 作為縮放中心。
+
+[EXAMPLE]
+====
+
+
+`++ZoomIn(2, (0, 0))++`
+
+====
+
+ZoomIn( <x 最小值>, <y 最小值>, <x 最大值>, <y 最大值> )::
+  將繪圖區縮放到以頂點 (<x 最小值>, <y 最小值>)、(<x 最大值>, <y 最大值>) 構成的長方形區域。
+
+[EXAMPLE]
+====
+
+
+若 _a_ 是一個數值滑桿，`++ZoomIn(-a, -a, a, a)++` 可以讓滑桿 _a_ 控制縮放區域。
+
+====
+
+[EXAMPLE]
+====
+
+
+`++ZoomIn(0, 1, 5, 6)++`
+
+====
+
+[NOTE]
+====
+如果引入相依的數值物件，會變成是動態的縮放範圍。要避免這樣的狀況，可以使用
+xref:/commands/CopyFreeObject.adoc[CopyFreeObject_指令]。
+
+====
+
+ZoomIn( <x 最小值>, <y 最小值>, <z 最小值>, <x 最大值>, <y 最大值>, <z 最大值> )::
+  將 3D 繪圖區縮放到以頂點 (<x 最小值>, <y 最小值>, <z 最小值>)、(<x 最大值>, <y 最大值>, <z 最大值>) 構成的長方體區域。
+
+[EXAMPLE]
+====
+
+
+`++ZoomIn(-5, -5, -5, 5, 5, 5)++`
+
+====
+
+[NOTE]
+====
+不支援動態控制縮放範圍。
+
+====
+
+[NOTE]
+====
+
+*備註：*
+
+* 在呈現多個 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/繪圖區.adoc[繪圖區]的情況下，此指令會套用在作用中的繪圖區。
+* 請參閱 xref:/commands/ZoomOut.adoc[ZoomOut_指令]、xref:/commands/SetActiveView.adoc[SetActiveView_指令]以及
+xref:/commands/Pan.adoc[Pan_指令]。
+
+====

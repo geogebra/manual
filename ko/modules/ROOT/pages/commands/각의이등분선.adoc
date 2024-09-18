@@ -1,0 +1,37 @@
+= 각의이등분선 명령
+:page-en: commands/AngleBisector
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+AngleBisector( <Line>, <Line> )::
+  Returns both angle bisectors of the lines.
+AngleBisector( <Point>, <Point>, <Point> )::
+  Returns the angle bisector of the angle defined by the three points.
+
+[EXAMPLE]
+====
+
+`++AngleBisector((1, 1), (4, 4), (7, 1))++` yields _a: x = 4_.
+
+====
+
+[EXAMPLE]
+====
+
+`++AngleBisector(x + y = 1, x - y = 2)++` yields _a: x = 1.5_ and _b: y = -0.5_.
+
+====
+
+[NOTE]
+====
+
+The second point is apex of this angle.
+
+====
+
+[NOTE]
+====
+
+See also image:20px-Mode_angularbisector.svg.png[Mode angularbisector.svg,width=20,height=20]
+xref:/s_index_php?title=Angle_Bisector_Tool_action=edit_redlink=1.adoc[Angle Bisector] tool .
+
+====

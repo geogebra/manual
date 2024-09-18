@@ -1,0 +1,63 @@
+= DynamicCoordinates 指令
+:page-en: commands/DynamicCoordinates
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+DynamicCoordinates[ 點 A, x 座標, y 座標 ]
+
+這個指令會產生一個與 A 點有關的新點，其座標為 (x,
+y)。這種新點的怪異之處在於：「當我們以為用滑鼠在拖曳此點時，事實上背後被拖曳的點是 A
+點！」。為何麼要這麼做呢？因為這樣做時，我們可以利用背後被拖曳的 A 點座標來計算這種點的 (x, y)
+座標，因此雖然這種點並非自由點，但卻造成可以任意拖曳它的假象，這樣的特性，非常適用在某些特殊場合。
+
+這種點可說是「自由點」與「應變點」的混血兒，兼具雙方的優點：具有像自由點一樣的自由，卻又像應變點一樣的自律；沒有自由點的不受控制，也不像其他應變點一樣，無法拉動。
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] 提示：* 當利用這種點時，最好把 A
+點xref:/屬性.adoc[隱藏]起來。另外，這種點的 x, y 座標中，至少要有一個是由 A 點算出來的。
+
+====
+
+[EXAMPLE]
+====
+ 只會在「格子點」上跳動的動點：
+
+`++B = DynamicCoordinates[A, round(x(A)), round(y(A))]++`
+
+當你「拖曳 _B_ 點」時（事實上，你拖曳的是 A 點），而且我們假設你將 A 點拖曳到 (1.3, 2.1)，這時 B 點會出現在 (1, 2)。
+
+====
+
+[EXAMPLE]
+====
+ 只會在 sin(x) 函數下方的點：
+
+`++B = DynamicCoordinates[A, x(A), min(y(A),sin(x(A)))]++`
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] 提示：* 這個範例也可以用指令
+xref:/commands/PointIn.adoc[PointIn][ y<sin(x) ] 來達成。
+
+====
+
+[EXAMPLE]
+====
+
+
+* The following examples show other ways to restrain the positions of a point C: let A=Point[xAxis] and B=Point[xAxis].
+Now type in the Input bar: `++DynamicCoordinates[B, Min[x(B),x(A)],0] ++`, and press the Enter key,
+`++ SetVisibleInView[B, 1, false]++`, and press the Enter key, `++SetLayer[C, 1]++`, and press the Enter key. Now, C
+cannot be moved to the right of A.
+* Define A=(1,2). Now, type in the Input bar: `++SetVisibleInView[A, 1, false]++` and press the Enter key,
+`++ B=DynamicCoordinates[A, If[x(A) > 3, 3, If[x(A) < -(3), -3, If[x(A)< 0, round(x(A)), x(A)]]], If[x(A) < 0, 0.5, If[y(A) > 2, 2, If[y(A) <0, 0, y(A)]]]]++`,
+and press the Enter key.
+* This example makes A a sticky point when a point C is dragged near it. Define A=(1,2) and B=(2,3). Now, type in the
+Input bar: `++SetVisibleInView[B, 1, false]++` and press the Enter key,
+`++C=DynamicCoordinates[B, If[Distance[A, B] < 1, x(A), x(B)], If[Distance[A, B] < 1, y(A), y(B)]]++`.
+
+====

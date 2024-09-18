@@ -1,0 +1,61 @@
+= NSolutions 指令
+:page-en: commands/NSolutions
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+此指令只能用在xref:/運算區.adoc[運算區]。
+
+NSolutions[ <Equation> ]::
+NSolutions[ <Equation> ]::
+  Finds a numeric solution for a given equation for the variable x.
+NSolutions[ <Equation>, <Variable> ]::
+  Finds a numeric solution to an equation for a given unknown variable.
+NSolutions[ <List of Equations>, <List of Variables> ]::
+  Finds a numeric solution to a set of equations for a given set of unknown variables.
+
+[EXAMPLE]
+====
+
+
+`++NSolutions[{π / x = cos(x - 2y), 2 y - π = sin(x)}, {x=3, y=1.5}]++` yields _\{3.141592651686591,
+1.570796327746508}_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++NSolutions[a^4 + 34a^3 - 34, a]++` yields _\{0.9904738886662206}_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++NSolutions[cos(x) = x]++` yields _\{0.7390851332151606}_.
+
+====
+
+[NOTE]
+====
+It is optional to give the starting point like _\{x=3, y=1.5}_.
+
+====
+
+[NOTE]
+====
+It is optional to give the starting point like _a=3_.
+
+====
+
+[NOTE]
+====
+
+*備註：*
+
+* π is obtaind by pressing [.kcode]#Alt # + [.kcode]# p#.
+* See also xref:/s_index_php?title=Solutions_Command_action=edit_redlink=1.adoc[Solutions Command] and
+xref:/s_index_php?title=NSolve_Command_action=edit_redlink=1.adoc[NSolve Command].
+
+====

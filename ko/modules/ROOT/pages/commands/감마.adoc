@@ -1,0 +1,21 @@
+= 감마 명령
+:page-en: commands/Gamma
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+Gamma( <Number α>, <Number β>, x )::
+  Creates cumulative density function (cdf) of https://en.wikipedia.org/wiki/Gamma_distribution[gamma distribution] with
+  parameters _α, β_.
+Gamma( <Number α>, <Number β>, x, <Boolean Cumulative> )::
+  If _Cumulative_ is true, creates cumulative distribution function of gamma distribution, otherwise creates pdf of
+  gamma distribution.
+Gamma( <Number α>, <Number β>, <Variable Value v> )::
+  Calculates the value of cumulative distribution function of gamma distribution at _v_, i.e. the probability _P(X≤v)_
+  where _X_ is a random variable with gamma distribution given by parameters _α, β_.
+
+[NOTE]
+====
+
+Returns the probability for a given _x_-coordinate's value (or area under the gamma distribution curve to the left of
+the given _x_-coordinate).
+
+====

@@ -1,0 +1,27 @@
+= 최소제곱사인 명령
+:page-en: commands/FitSin
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+FitSin( <List of Points> )::
+  Calculates the regression curve in the form _a + b sin (c x + d)_.
+
+[EXAMPLE]
+====
+
+`++FitSin({(1, 1), (2, 2), (3, 1), (4, 0), (5, 1), (6, 2)})++` yields _f(x) = 1 + 1 sin (1.57 x - 1.57)_.
+
+====
+
+[NOTE]
+====
+
+* The list should have at least four points, preferably more. The list should cover at least two extremal points. The
+first two local extremal points should not be too different from the absolute extremal points of the curve.
+* See also xref:/s_index_php?title=FitExp_Command_action=edit_redlink=1.adoc[FitExp Command],
+xref:/s_index_php?title=FitLog_Command_action=edit_redlink=1.adoc[FitLog Command],
+xref:/s_index_php?title=FitPoly_Command_action=edit_redlink=1.adoc[FitPoly Command] and
+xref:/s_index_php?title=FitPow_Command_action=edit_redlink=1.adoc[FitPow Command].
+* If you work with big/small numbers, you should consider normalizing them for a more accurate result, see
+xref:/s_index_php?title=Normalize_Command_action=edit_redlink=1.adoc[Normalize Command].
+
+====

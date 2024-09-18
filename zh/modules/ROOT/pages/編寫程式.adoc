@@ -1,0 +1,225 @@
+= 編寫程式
+:page-en: Scripting
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+GeoGebra 支援兩種程式語言 - GGBScript 和 Javascript。我們可以在下列的事件中編寫相對的觸發程序：
+
+* 用滑鼠點選某物件時 (On Click)
+* 某物件數值或屬性變更時 (On Update, ...)
+* 開啟 GeoGebra 檔案時 (ggbOnInit)
+* Javascript 觸發程序 (listener)，詳情請參考
+/s_index_php?title=En:Reference:JavaScript_action=edit_redlink=1.adoc[JavaScript]。
+
+我們可以透過物件xref:/屬性.adoc[屬性]視窗中的「程式」頁面來編寫程式碼。
+
+image:300px-ScriptingTab.png[image,width=300,height=252]
+
+/File:ScriptingTab_png.adoc[]
+
+屬性視窗的「程式」頁
+
+== GGBScript
+
+GGBScript 主要是用 GeoGebra 本身的指令來編寫。
+
+[EXAMPLE]
+====
+
+
+* 假設 a 是一個範圍從 1 到 3 的xref:/數值與角度.adoc[整數]
+* 在命令列中輸入以下的xref:/串列.adoc[集合]：`++colors = {"red", "green", "blue"}++`
+* 進入 _a_ 的xref:/屬性.adoc[屬性]中的「程式」頁面，然後在「On Update」頁面中輸入：`++SetColor[a, Element[colors, a]]++`
+* 最後，調整 a 值就可以改變它的/s_index_php?title=En:Reference:Colors_action=edit_redlink=1.adoc[顏色]。
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] 提示：* 有些指令只能用於 GGBScript
+中，詳情請參閱：xref:/commands/GGB_程式碼.adoc[GGBScript 指令]
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] 提示：*
+有關顏色的名稱與編碼，請參閱：/s_index_php?title=En:Reference:Colors_action=edit_redlink=1.adoc[完整的顏色列表]
+
+====
+
+== JavaScript
+
+JavaScript 是一種常用於網頁中的程式語言。不像 GGBScript 只能依序執行一些 GeoGebra 指令而己，JavaScript 可以使用
+if、while、for 等關鍵字來控制程式的流程。
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] 提示：* 若想進一步瞭解 JavaScript 的語法，請參閱
+https://developer.mozilla.org/en/JavaScript/Guide[developer.mozilla.org]。
+
+====
+
+我們也可以使用一些特別的 JavaScript 函數來作圖，這些函數都是 ggbApplet
+的物件方法，也就是說我們必須使用：`++ggbApplet.method(a, b, ...)++`這樣的語法來呼叫這些函數才行。
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] 提示：* 詳細的函數說明，請參閱
+/s_index_php?title=En:Reference:JavaScript_action=edit_redlink=1.adoc[ggbApplet 物件方法]列表。
+
+====
+
+[EXAMPLE]
+====
+ `++ ++`
+
+`++for(var i =0;i<10;i++) ggbApplet.evalCommand("A_"+i+"=(random()*10,random()*10)"); ++`
+
+這段程式會畫出 10 個點：_A~0~_ 到 _A~9~_，其座標均由亂數產生。
+
+====
+
+GeoGebra 擁有自己的 JavaScript 編譯程式。當我們要將 GeoGebra xref:/匯出網頁.adoc[匯出網頁]時，我們可以選擇要使用
+GeoGebra 自己的編譯程式還是瀏覽器的編譯程式。如果你直接在 HTML 網頁碼中編輯 JavaScript
+的話，記得要先執行：`++ggbApplet = document.applets[0];++` 否則 ggbApplet 物件無法自行啟動。
+
+=== 全域 JavaScript
+
+image:GlobalJavascriptPanel.png[GlobalJavascriptPanel.png,width=417,height=278]
+
+在「xref:/屬性.adoc[屬性]」視窗的「全域 JavaScript」頁面中， 你可以編寫一些 JavaScript
+函數或作一些全域變數設定，GeoGebra 會在載入物件前，先執行這裡的程式碼。 「全域
+JavaScript」頁面不特屬於任何物件，所以不管你打開哪個物件的屬性視窗，都會看到這個頁面。
+
+你也可以在這裡面定義 ggbOnInit() 函數，此函數會在 GeoGebra
+載入所有物件後馬上執行，因此我們常在這個函數中放入一些物件的相關觸發程序(JavaScript listeners)，下面就是一個例子：
+
+[EXAMPLE]
+====
+
+
+....
+function ggbOnInit(){
+    // 當有物件新增（如新增一個點或一條線等）時，就會觸發 onAdd() 函數。
+    ggbApplet.registerAddListener("onAdd");
+}
+
+function onAdd(objName){
+    alert("物件："+objName+" 已新增！");
+}
+....
+
+首先，我們在系統內定的 ggbOnInit() 函數中利用
+/s_index_php?title=En:Reference:JavaScript_action=edit_redlink=1.adoc[registerAddListener]()
+函數指定了一個「新增物件」的觸發程序，這行指令告訴系統：只要有物件新增了，就啟動 onAdd()
+函數，系統同時會將新增物件的名稱丟給這個函數（也就是範例中的 objName，這個名稱不是關鍵字，你也可以用 name、obj
+或其他變數名稱都可以），以方便後續的處理。
+
+onAdd() 函數是使用者自訂的，所以你也可以將函數名稱改為 doSomething()，或其他名稱。
+
+當我們寫好了這段程式，然後將檔案存檔再重新開啟，系統就會載入 ggbOnInit() 函數。之後，假設我們新增了一點 A，onAdd()
+函數就會執行，然後顯示出「物件：A 已新增！」的訊息。
+
+====
+
+除了指定「新增物件」的觸發程序外，我們也可以指定諸如「改名」、「刪除」、「清除全部物件」等等事件的觸發程序，完整的說明請看/s_index_php?title=En:Reference:JavaScript_action=edit_redlink=1.adoc[這裡]。
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] 提示：* JavaScript 函數的啟動順序如下：
+
+全域 JavaScript（ggbOnInit 除外）⇨ 載入物件 ⇨ ggbOnInit() 函數
+
+因此請勿在全域 JavaScript 中直接呼叫 ggbApplet 的物件方法，因為在 GeoGebra 尚未載入物件完成前，ggbApplet
+物件根本就還沒產生，所以也沒辦法呼叫它。
+
+====
+
+[EXAMPLE]
+====
+ 當 GeoGebra 中有物件新增、變更、或刪除時，將其狀態顯示於其他網頁元件上。
+
+* 請看示範網頁：http://www.geogebra.org/source/program/applet/geogebra_applet_java2javascript.htm[ggbApplet 與
+JavaScript 之間的互動]。
+
+====
+
+以下為此網頁的 JavaScript 程式部份：
+
+....
+<script type="text/javascript">
+
+function ggbOnInit() {
+  // 指定「新增物件、刪除物件、變更名稱、清除繪圖區、物件更新」等事件的觸發程序。
+  var applet = document.ggbApplet;
+  applet.registerAddListener("addListener");
+  applet.registerRemoveListener("removeListener");
+  applet.registerRenameListener("renameListener");
+  applet.registerClearListener("clearListener");
+  applet.registerUpdateListener("updateListener");
+}
+
+var strLength = 150;
+function addListener(objName) { 
+  document.listenerForm.textarea1.value = "add: " + objName + "\n" + document.listenerForm.textarea1.value.substring(0, strLength );    
+  printConstructionState();
+}
+
+function removeListener(objName) {
+  document.listenerForm.textarea1.value = "remove: " + objName + "\n" + document.listenerForm.textarea1.value.substring(0, strLength ); 
+  printConstructionState();
+}
+
+function renameListener(oldObjName, newObjName) {
+  document.listenerForm.textarea1.value = "rename: " + objName + "\n" + document.listenerForm.textarea1.value.substring(0, strLength ); 
+  printConstructionState();
+}
+
+function updateListener(objName) {
+  strVal = document.ggbApplet.getValueString(objName);
+  document.listenerForm.textarea2.value = strVal + "\n" + document.listenerForm.textarea2.value.substring(0, strLength );
+}
+
+function clearListener() {
+  document.listenerForm.textarea1.value = "";
+  document.listenerForm.textarea2.value = "";
+  document.listenerForm.textarea1.value = "construction cleared";
+  document.listenerForm.consState.value = "";
+}
+
+function printConstructionState() {
+  var applet = document.ggbApplet;
+  var objNumber = applet.getObjectNumber();
+  var strState = "Number of objects: " + objNumber;
+
+  for (i=0; i < objNumber; i++) {
+    strName = applet.getObjectName(i);
+    strType = applet.getObjectType(strName);
+    strCommand = applet.getCommandString(strName);
+    strState += "\n" + strType + " " + strName + ", " + strCommand;
+  }
+  document.listenerForm.consState.value = strState;
+}
+</script>
+....
+
+=== USB Data Logging (From GeoGebra 4.2)
+
+For logging data from some Vernier USB Data Loggers, eg _Go!Motion_ and _Go!Temp_ one can define a logger listener using
+the registerLoggerListener method. Such listener can look like this:
+
+....
+function logger(value) {
+   var d = value * 1;
+   ggbApplet.evalCommand("(CopyFreeObject[a],"+d+")");
+   ggbApplet.evalCommand("SetValue[a,a+1]");
+}
+....
+
+This script assumes that there is a free number _a_ in the construction. Each time number _d_ is logged, point _(a,d)_
+is constructed and _a_ is increased.

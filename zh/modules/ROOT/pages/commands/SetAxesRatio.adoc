@@ -1,0 +1,22 @@
+= SetAxesRatio 指令
+:page-en: commands/SetAxesRatio
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+SetAxesRatio( <數值 X>, <數值 Y> )::
+  更改作用中 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/繪圖區.adoc[繪圖區]的坐標軸比例，使得 xref:/直線與坐標軸.adoc[_x_ 軸]上的 _X_ 單位與 _y_ 軸上的 _Y_
+  單位具有相同的像素數，且點 (0,0) 保持在此坐標軸上。若使用單位比率（譯註：其中一數值為
+  1），基準軸仍維持單位值，另一軸則依指定數值進行調整。
+
+[EXAMPLE]
+====
+
+
+* `++SetAxesRatio(1,2)++` 固定 _x_ 軸並壓縮 _y_ 軸。
+* `++SetAxesRatio(2,1)++` 固定 _y_ 軸並收縮 _x_ 軸。
+
+====
+
+SetAxesRatio( <數值 X>, <數值 Y>, <數值 Z> )::
+  與上述語法相似，適用於 image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra
+  3Dgraphics.svg,width=16,height=16] xref:/3D_繪圖區.adoc[3D 繪圖區]。

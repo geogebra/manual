@@ -1,0 +1,57 @@
+= Sample 指令
+:page-en: commands/Sample
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Sample[ <List>, <Size> ]::
+Sample[ <List>, <Size>, <With Replacement> ]::
+
+== CAS 視窗
+
+Sample[ <List>, <Size> ]::
+Sample[ <List>, <Size>, <With Replacement> ]::
+Sample[ <List L>, <Size n> ]::
+  Returns list of _n_ randomly chosen elements of _L_; elements can be chosen several times.
+Sample[ <List L>, <Size n>, <Boolean for replacement> ]::
+  Returns list of _n_ randomly chosen elements of _L_. Elements can be chosen several times if and only if the last
+  parameter is true.
+
+[EXAMPLE]
+====
+
+
+`++Sample[{1, 2, 3, 4, 5}, 5, true]++` yields for example _\{2, 3, 3, 4, 5}_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++Sample[{1, 2, 3, 4, 5}, 5]++` yields for example _\{1, 2, 1, 5, 4}_.
+
+====
+
+== CAS Syntax
+
+Sample[ <List L>, <Size n> ]::
+  Returns list of _n_ randomly chosen elements of _L_; elements can be chosen several times.
+Sample[ <List L>, <Size n>, <Boolean for replacement> ]::
+  Returns list of _n_ randomly chosen elements of _L_. Elements can be chosen several times if and only if the last
+  parameter is true.
+
+[EXAMPLE]
+====
+
+
+The list can include lists as well: Let _List1_ be _\{1, 2, 3}_.`++Sample[{List1, 4, 5, 6, 7, 8}, 3, false]++` yields
+for example _\{6, \{1, 2, 3}, 4}_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++Sample[{-5, 2, a, 7, c}, 3]++` yields for example _\{a, 7, -5}_.
+
+====

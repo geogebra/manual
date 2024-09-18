@@ -1,0 +1,57 @@
+= 나머지 명령
+:page-en: commands/Mod
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+Mod( <Dividend Number>, <Divisor Number> )::
+  Yields the remainder when dividend number is divided by divisor number.
+Mod( <Dividend Polynomial>, <Divisor Polynomial> )::
+  Yields the remainder when the dividend polynomial is divided by the divisor polynomial.
+
+[EXAMPLE]
+====
+
+`++Mod(x^3 + x^2 + x + 6, x^2 - 3)++` yields _4 x + 9_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Mod(9, 4)++` yields _1_.
+
+====
+
+[NOTE]
+====
+
+If you want a function to do this, you can define it yourself, e.g. `++mod(x, y) = y (x / y - floor(x / y))++`.
+
+====
+
+== [#나머지_명령_2]####[#.EB.82.98.EB.A8.B8.EC.A7.80_.EB.AA.85.EB.A0.B9_2]##나머지 명령##
+
+나머지(<나누어지는 수>,<나누는 수>)::
+  나누어지는 수를 나누는 수로 나눈 나머지를 나타냅니다.
+나머지(<나누어지는 다항식>,<나누는 다항식>)::
+  나누어지는 다항식을 나누는 다항식으로 나눈 나머지를 나타냅니다.
+
+[EXAMPLE]
+====
+
+`++나머지(x^3 + x^2 + x + 6, x^2 - 3)++`은 __4 x + 9__를 나타냅니다.
+
+====
+
+[EXAMPLE]
+====
+
+`++나머지(9, 4)++`은 __1__을 나타냅니다.
+
+====
+
+[NOTE]
+====
+
+이 과정을 실행하는 함수가 필요하면 직접 정의할 수도 있습니다. 예를 들어, `++mod(x, y) = y (x / y - floor(x / y))++`.
+
+====

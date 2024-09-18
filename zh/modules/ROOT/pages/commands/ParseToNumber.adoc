@@ -1,0 +1,37 @@
+= ParseToNumber 指令
+:page-en: commands/ParseToNumber
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+ParseToNumber( <數值 a>, <定義字串> )::
+  解析 <定義字串> 並將結果存至 <xref:/數值與角度.adoc[數值] __a__>，,使用此指令前數值 _a_
+  必須已定義且為xref:/自變、應變、輔助物件.adoc[自變]物件。
+
+[EXAMPLE]
+====
+ 定義 `++ a = 3++` 與 `++ text1 = "6"++`。`++ ParseToNumber(a, text1)++` 回傳 _a = 6_。
+
+====
+
+[NOTE]
+====
+
+*備註：*
+此為xref:/s_index_php?title=程式碼_指令_action=edit_redlink=1.adoc[程式碼]指令，只能一次性地設定數值。若要將文字物件
+_text1_ 轉換為數值且能動態更新，請使用指令 `++FromBase(text1,10)++`。
+
+====
+
+ParseToNumber( <定義字串> )::
+  解析 <定義字串> 並將結果存至一個新的xref:/數值與角度.adoc[數值]物件。
+
+[EXAMPLE]
+====
+ `++ParseToNumber("1+2+5-pi")++` 建立數值物件 _a = 4.86_。
+
+====
+
+[NOTE]
+====
+請參閱 xref:/commands/ParseToFunction.adoc[ParseToFunction] 指令。
+
+====

@@ -1,0 +1,28 @@
+= Perimeter 指令
+:page-en: commands/Perimeter
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Perimeter( <多邊形> )::
+  回傳 <多邊形> 的周長（perimeter）。
+Perimeter( <圓錐曲線> )::
+  若引入的 <圓錐曲線> 是圓或橢圓，此指令會回傳其周長；否則將會回傳未定義物件。
+Perimeter( <軌跡> )::
+  若引入指令的是有限 <軌跡>，會回傳其近似周長；否則將會回傳未定義物件。
+
+[EXAMPLE]
+====
+ `++Perimeter(x^2 + 2y^2 = 1)++` 產生 _5.4_。
+
+====
+
+[EXAMPLE]
+====
+ `++Perimeter(Polygon((1, 2), (3, 2), (4, 3)))++` 產生 _6.58_。
+
+====
+
+[NOTE]
+====
+請參閱 xref:/commands/Circumference.adoc[Circumference_指令]。
+
+====

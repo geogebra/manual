@@ -1,0 +1,20 @@
+= SetCoords 指令
+:page-en: commands/SetCoords
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+SetCoords( <物件>, <x>, <y> )::
+  更改 xref:/自變、應變、輔助物件.adoc[自變] <物件> 的直角坐標。此指令更動 <物件> 的坐標值，並不會修改 <物件>
+  的定義，因此套用後仍是自變物件。
+
+[NOTE]
+====
+此指令也適用於路徑上或區域內的點。該點會被移動到離指定坐標最接近的位置。
+
+====
+
+[NOTE]
+====
+此指令目前可用在數值滑桿、按鈕、勾選框、輸入欄位、圖片。若**螢幕上的絕對位置**有被勾選，<x>、<y>
+會是以螢幕像素作為單位。
+
+====

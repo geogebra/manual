@@ -1,0 +1,13 @@
+= ApplyMatrix 指令
+:page-en: commands/ApplyMatrix
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+ApplyMatrix[ <xref:/Matrices.adoc[Matrix] M>, <xref:/Geometric_Objects.adoc[Geometric Object] O>]::
+  Transforms the object so that point _P_ of _O_ is mapped to
+
+* point _M*P_ in case M is a 2x2 matrix or
+* point _project(M*(x(P), y(P), 1))_ where _project_ is a projection mapping point _(x,y,z)_ to _(x/z, y/z)_ in case of
+3x3 matrix.
+
+ApplyMatrix[ <Matrix M>, <xref:/Images.adoc[Image] I>]::
+  Applies the same transformation as above to image I.

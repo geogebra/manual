@@ -1,0 +1,36 @@
+= 대상 명령
+:page-en: commands/Object
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+Object( <Name of Object as Text> )::
+  Returns the object for a given name. The result is always a dependent object.
+  [cols=",",]
+  |===
+  |image:18px-Attention.png[경고,title="경고",width=18,height=18] *경고*: |Object command cannot be used in
+  xref:/s_index_php?title=Custom_Tools_action=edit_redlink=1.adoc[Custom Tools]
+  |===
+
+[EXAMPLE]
+====
+
+If points _A1_, _A2_, ... , _A20_ exist and also a slider _n = 2_, then `++Object("A" + n)++` creates a copy of point
+_A2_.
+
+====
+
+[NOTE]
+====
+
+You must make sure that the objects you refer to are *earlier* in the
+image:16px-Menu_view_construction_protocol.svg.png[Menu view construction protocol.svg,width=16,height=16]
+xref:/s_index_php?title=Construction_Protocol_action=edit_redlink=1.adoc[Construction_Protocol] than this command
+
+====
+
+[NOTE]
+====
+
+The *Object* command is the opposite of the xref:/s_index_php?title=Name_Command_action=edit_redlink=1.adoc[Name]
+command.
+
+====

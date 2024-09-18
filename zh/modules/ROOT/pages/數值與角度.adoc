@@ -1,0 +1,90 @@
+= 數值與角度
+:page-en: Numbers_and_Angles
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+== 數值
+
+您可透過在xref:/指令列.adoc[指令列]輸入來建立數值物件。假如您只有輸入一個數字（例如：3），GeoGebra
+會以小寫英文字母來幫它命名。若您想為數值指定名稱，可以先輸入此名稱，接著是等號（=），最後是數值（例如：輸入
+`++r = 5.32++` 即可建立一個小數 _r_）。
+
+[NOTE]
+====
+GeoGebra 中，數值與角度以英文的句號（.）作為小數點。
+
+====
+
+您也可以在運算式中插入常數 π 或是尤拉（Euler）常數
+e，方法是從xref:/指令列.adoc[指令列]旁邊的下拉式選單點選，或使用xref:/鍵盤快速鍵.adoc[快捷鍵]。
+
+[NOTE]
+====
+如果變數 e 尚未用於其他物件的命名，GeoGebra 會將之視為尤拉常數。
+
+====
+
+== 角度
+
+角度可以度（°）或弧度（rad）來輸入。對弧度值來說，常數 π 很有用處，且可以直接輸入 _pi_ 來表示這個常數。
+
+[NOTE]
+====
+您可以利用下列快捷鍵來輸入度的符號（°）或 pi 的符號（π）：
+
+* [.kcode]#Alt# + [.kcode]#O#（Mac OS： [.kcode]#Ctrl# + [.kcode]#O#）可以打出度的符號 °
+* [.kcode]#Alt# + [.kcode]#P#（Mac OS： [.kcode]#Ctrl# + [.kcode]#P#）可以打出 pi 的符號 π
+
+====
+
+[EXAMPLE]
+====
+
+
+* 以度為單位的角度 α：`++α = 60°++`，或使用**度／分／秒**語法：`++α =1°23'45''++`。
+* 以弧度為單位的角度 α：`++α = pi/3 ++`。
+
+====
+
+[NOTE]
+====
+GeoGebra 在程式內部都是使用弧度作計算。度的符號（°）只不過是一個常數 π/180，用來將度轉換為弧度。
+
+====
+
+[EXAMPLE]
+====
+
+
+* 令 `++a = 30++` 為一數值，則 `++α = a°++` 在沒有更改數字的情況下，轉換數值 a 為角度 α = 30°。
+* 若您輸入 `++b = α / °++`，是在沒有更改數字的情況下，將角度 α 轉換回數值 b = 30。
+
+====
+
+[NOTE]
+====
+
+*備註：*
+xref:/自變、應變、輔助物件.adoc[應變]角度可以在**xref:/屬性.adoc[屬性]對話窗**的**一般**分頁指定是否要將角度限制在某些角度範圍內。
+
+====
+
+[EXAMPLE]
+====
+ 輸入 `++a = -450++`，α 為應變角度 `++α = a°++`。若設定角度沒有限制，介於 *-∞ 與 ∞* 之間，則 α = -450°；若介於
+*0° 與 360°* 之間，則 α = 270°。
+
+====
+
+== 自變數值與角度
+
+xref:/自變、應變、輔助物件.adoc[自變]數值與角度在 image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/繪圖區.adoc[繪圖區]中，可用數值滑桿的形式呈現（請參閱
+image:24px-Mode_slider.svg.png[Mode slider.svg,width=24,height=24] xref:/tools/數值滑桿.adoc[數值滑桿]工具）。您也可以在
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+xref:/代數區.adoc[代數區]使用方向鍵調整數值與角度的值（請參閱動畫的xref:/動畫.adoc[手動調整]）。
+
+=== 限制在某個區間
+
+自變數值與角度可被限制在某個區間，在 image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+**xref:/屬性.adoc[屬性]對話窗**的**滑桿**分頁能調整相關設定（也請參閱 image:24px-Mode_slider.svg.png[Mode
+slider.svg,width=24,height=24] xref:/tools/數值滑桿.adoc[數值滑桿]工具）。

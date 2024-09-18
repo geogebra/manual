@@ -1,0 +1,55 @@
+= SetViewDirection 指令
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+SetViewDirection( <方向> )::
+  根據指定的 <方向> 設定 **3D 繪圖區**的視角。
+
+[EXAMPLE]
+====
+ `++SetViewDirection(x + y + z = 1)++`
+
+====
+
+[EXAMPLE]
+====
+ `++SetViewDirection((0, 0, 1))++`
+
+====
+
+[EXAMPLE]
+====
+ `++SetViewDirection(Vector((0, 0, 1)))++`
+
+====
+
+SetViewDirection( )::
+  設定 **3D 繪圖區**的視角到預設位置。
+
+[EXAMPLE]
+====
+ `++SetViewDirection()++`
+
+====
+
+SetViewDirection( <方向>, <動畫？> )::
+  根據指定的 <方向> 設定 **3D 繪圖區**的視角，並決定是否要開啟 <動畫？>。
+
+[EXAMPLE]
+====
+ 假設有一角度數值滑桿 _α_。在 _α_ **屬性**視窗**程式**分頁的 _OnUpdate_ 輸入指令
+`++SetViewDirection(Vector((1; α; -30°)), false)++`，即可透過 _α_ 去旋轉 *3D 繪圖區*。
+
+====
+
+[NOTE]
+====
+
+*備註：*
+
+* 可設定視角方向朝向一條直線、一條線段、一個平面...等等。
+* 假設使用指令 `++SetViewDirection(x + y + z = 1)++` 兩次，會發現有兩種可能的情況（相差
+180°）。想要更精確地指定視角，可以使用指令像是 `++SetViewDirection(Vector((0, 0, 1)))++`。
+* 請參閱 image:24px-Mode_viewinfrontof.png[Mode viewinfrontof.png,width=24,height=24]
+xref:/tools/s_index_php?title=面對指定面_action=edit_redlink=1.adoc[面對指定面]工具。
+
+====

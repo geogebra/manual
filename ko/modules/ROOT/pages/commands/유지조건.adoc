@@ -1,0 +1,32 @@
+= 유지조건 명령
+:page-en: commands/KeepIf
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+KeepIf( <Condition>, <List> )::
+  Creates a new list that only contains those elements of the initial list that fulfil the condition.
+
+[EXAMPLE]
+====
+
+`++KeepIf(x<3, {1, 2, 3, 4, 1, 5, 6})++` returns the new list _\{1, 2, 1}_.
+
+====
+
+[NOTE]
+====
+
+For list of numbers arbitrary condition may be used. For list of other objects one can use only conditions of the form
+`++x==constant++` or `++x!=constant++`.
+
+====
+
+KeepIf( <Condition>, <Variable>, <List> )::
+  This syntax allows a more flexible condition.
+
+[EXAMPLE]
+====
+
+For Points _P, Q, R_ `++KeepIf(x(A) < 3, A, {P, Q, R})++` will filter the points whose _x_-coordinate is less than _3_
+out of the list. The variable _A_ is replaced in turn with _P_ then _Q_ then _R_ for the check.
+
+====

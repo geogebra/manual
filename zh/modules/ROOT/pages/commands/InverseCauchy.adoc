@@ -1,0 +1,9 @@
+= InverseCauchy 指令
+:page-en: commands/InverseCauchy
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+InverseCauchy[ <Median>, <Scale>, <Probability> ]::
+InverseCauchy[ <Median m>, <Scale s>, <Probability p> ]::
+  Computes the inverse of cumulative distribution function of https://en.wikipedia.org/wiki/Cauchy_distribution[Cauchy
+  distribution] at _p_, where the Cauchy distribution is given by median _m_ and scale _s_. In other words, finds _t_
+  such that _P(X≤t)=p_, where X is Cauchy random variable. Probability _p_ must be from [0,1].

@@ -1,0 +1,35 @@
+= 세기조건 명령
+:page-en: commands/CountIf
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+CountIf( <Condition>, <List> )::
+  Counts the number of elements in the list satisfying the condition.
+
+[EXAMPLE]
+====
+
+* `++CountIf(x < 3, {1, 2, 3, 4, 5})++` gives you the number _2_.
+* `++CountIf(x < 3, A1:A10)++`, where _A1:A10_ is a range of cells in the spreadsheet, counts all cells whose values are
+less than _3_.
+
+====
+
+[NOTE]
+====
+
+For list of numbers arbitrary condition may be used. For list of other objects one can use only conditions of the form
+`++x==constant++` or `++x!=constant++`.
+
+====
+
+CountIf( <Condition>, <Variable>, <List> )::
+  As above, using a more flexible syntax.
+
+[EXAMPLE]
+====
+
+Given points _P_, _Q_, _R_ `++CountIf(x(A) < 3, A, {P, Q, R})++` will count only the points whose x-coordinate is less
+than _3_. The variable _A_ is replaced in turn with _P_ then _Q_ then _R_ for the check. Therefore
+`++CountIf(x(A) < 3, A, {(0, 1), (4, 2), (2, 2)})++` yields the number _2_.
+
+====

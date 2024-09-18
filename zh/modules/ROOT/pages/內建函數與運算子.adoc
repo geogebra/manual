@@ -1,0 +1,170 @@
+= 內建函數與運算子
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+要利用xref:/指令列.adoc[指令列]建立數值、座標或方程式，您可使用下列內建的函數與運算子。與邏輯相關的運算子與函數列表請參閱「xref:/真假值.adoc[真假值]」。
+
+[NOTE]
+====
+使用內建函數必須使用圓括號而不是方括號，且函數名稱和圓括號之間不可空白。
+
+====
+
+[cols=",",options="header",]
+|===
+|運算／函數 |指令
+|ℯ （http://zh.wikipedia.org/wiki/E_(数学常数)[尤拉數]） |[.kcode]#Alt# + [.kcode]#e#
+
+|ί （http://zh.wikipedia.org/wiki/虛數單位[虛數單位]） |[.kcode]#Alt# + [.kcode]#i#
+
+|π |[.kcode]#Alt# + [.kcode]#p# 或 pi
+
+|°（https://zh.wikipedia.org/wiki/%E5%BA%A6%E6%95%B8%E7%AC%A6%E8%99%9F[度數符號]） |[.kcode]#Alt# + [.kcode]#o# 或 deg
+
+|加法 |+
+
+|減法 |-
+
+|乘法 |* 或 空白鍵
+
+|內積（純量積） |* 或 空白鍵
+
+|外積（向量積，請參閱xref:/點與向量.adoc[點與向量]） |⊗
+
+|除法 |/
+
+|次方 |^ 或 上標（`++x^2++` 或 `++x2++`）
+
+|階乘 |!
+
+|小括號 |( )
+
+|取點或向量的 _x_ 坐標 |x( )
+
+|取點或向量的 _y_ 坐標 |y( )
+
+|取點或向量的 _z_ 坐標 |z( )
+
+|求複數（空間中的點或向量）的幅角（Argument） |arg( )
+
+|求共軛複數（Conjugate） |conjugate( )
+
+|取複數的xref:/Real_函數.adoc[實部]（Real part） |real( )
+
+|取複數的xref:/Imaginary_函數.adoc[虛部]（Imaginary part） |imaginary( )
+
+|取絕對值（Absolute value） |abs( )
+
+|求空間中點或向量的仰角（Altitude angle） |alt( )
+
+|求正負號（Sign）（回傳 1、0、-1） |sgn( ) 或 sign()
+
+|不大於某數的最大整數（等同高斯符號） |floor( )
+
+|不小於某數的的最小整數 |ceil( )
+
+|（四捨五入）取最近的整數（或至小數點第 _y_ 位） |round(x) 或 round(x, y)
+
+|求平方根（Square root） |sqrt( )
+
+|求立方根（Cubic root） |cbrt( )
+
+|求 _x_ 的 _n_ 次方根 |nroot(x, n)
+
+|隨機（Random）函數（回傳 0 到 1 之間的亂數） |random( )
+
+|自然指數（Exponential）函數（以尤拉數為底） |exp( ) 或 ℯ^x^
+
+|自然對數（Natural logarithm）函數（以尤拉數為底） |ln( )
+
+|對數（Logarithm）函數（以 2 為底） |log2( ) 或 ld( )
+
+|對數（Logarithm）函數（以 10 為底） |log10( ) 或 log( ) 或 lg( )
+
+|對數（Logarithm）函數（以 _b_ 為底） |log(b, x )
+
+|餘弦（Cosine）函數 |cos( )
+
+|正弦（Sine）函數 |sin( )
+
+|正切（Tangent）函數 |tan( )
+
+|正割（Secant）函數 |sec()
+
+|餘割（Cosecant）函數 |csc() 或 cosec()
+
+|餘切（Cotangent）函數 |cot() 或 cotan()
+
+|反餘弦（Arc cosine）函數（以弧度為單位回傳） |acos( ) 或 arccos( )
+
+|反餘弦（Arc cosine）函數（以度為單位回傳） |acosd( )
+
+|反正弦（Arc sine）函數（以弧度為單位回傳） |asin( ) 或 arcsin( )
+
+|反正弦（Arc sine）函數（以度為單位回傳） |asind( )
+
+|反正切（Arc tangent）函數（以弧度為單位回傳，回傳值介於 -π/2 和 π/2 之間） |atan( ) 或 arctan( )
+
+|反正切（Arc tangent）函數（以度為單位回傳，回傳值介於 -90° 和 90° 之間） |atand( )
+
+|https://zh.wikipedia.org/wiki/Atan2[反正切（Arc tangent）函數（以弧度為單位回傳，回傳值介於 -π 和 π 之間）] |atan2(y,
+x)
+
+|https://zh.wikipedia.org/wiki/Atan2[反正切（Arc tangent）函數（以度為單位回傳，回傳值介於 -180° 和 180° 之間）]
+|atan2d(y, x)
+
+|雙曲餘弦（Hyperbolic cosine）函數 |cosh( )
+
+|雙曲正弦（Hyperbolic sine）函數 |sinh( )
+
+|雙曲正切（Hyperbolic tangent）函數 |tanh( )
+
+|雙曲正割（Hyperbolic secant）函數 |sech( )
+
+|雙曲餘割（Hyperbolic cosecant）函數 |csch( )
+
+|雙曲餘切（Hyperbolic cotangent）函數 |coth( ) 或 cotanh()
+
+|反雙曲餘弦（Antihyperbolic cosine）函數 |acosh( ) 或 arccosh( )
+
+|反雙曲正弦（Antihyperbolic sine）函數 |asinh( ) 或 arcsinh( )
+
+|反雙曲正切（Antihyperbolic tangent）函數 |atanh( ) 或 arctanh( )
+
+|http://mathworld.wolfram.com/BetaFunction.html[Beta function] Β(a, b) |beta(a, b)
+
+|http://mathworld.wolfram.com/IncompleteBetaFunction.html[Incomplete beta function] Β(x;a, b) |beta(a, b, x)
+
+|http://mathworld.wolfram.com/RegularizedBetaFunction.html[Incomplete regularized beta function] I(x; a, b)
+|betaRegularized(a, b, x)
+
+|https://en.wikipedia.org/wiki/Gamma_function[Gamma function Γ(x)] |gamma( x)
+
+|(Lower) http://mathworld.wolfram.com/IncompleteGammaFunction.html[incomplete gamma function] γ(a, x) |gamma(a, x)
+
+|(Lower) http://mathworld.wolfram.com/RegularizedGammaFunction.html[incomplete regularized gamma function P(a,x) = γ(a,
+x) / Γ(a)] |gammaRegularized(a, x)
+
+|https://en.wikipedia.org/wiki/Error_function[Gaussian Error Function] |erf(x)
+
+|https://en.wikipedia.org/wiki/Digamma_function[Digamma function] |psi(x)
+
+|The https://en.wikipedia.org/wiki/Polygamma_function[Polygamma function] is the (m+1)th derivative of the natural
+logarithm of the https://en.wikipedia.org/wiki/Gamma_function[Gamma function, gamma(x)] (m=0,1) |polygamma(m, x)
+
+|The http://mathworld.wolfram.com/SineIntegral.html[Sine Integral] function |sinIntegral(x)
+
+|The http://mathworld.wolfram.com/CosineIntegral.html[Cosine Integral] function |cosIntegral(x)
+
+|The http://mathworld.wolfram.com/ExponentialIntegral.html[Exponential Integral] function |expIntegral(x)
+
+|The https://en.wikipedia.org/wiki/Riemann_zeta_function[Riemann-Zeta] function ζ(x) |zeta(x)
+
+|https://en.wikipedia.org/wiki/Lambert_W_function[Lambert's W function] LambertW(x, branch) |LambertW(x, 0), LambertW(x,
+-1)
+|===
+
+[NOTE]
+====
+x( )、y( ) 和 z( ) 可分別用來取得平面上直線一般式的 x 係數、y 係數和常數項。
+
+====

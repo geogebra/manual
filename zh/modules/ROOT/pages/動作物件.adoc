@@ -1,0 +1,67 @@
+= 動作物件
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+在製作帶有xref:/編寫程式.adoc[程式]功能的互動式學習單時，*動作物件*（Action Object）可能會派上用場。
+動作物件有四種類型：
+
+== 勾選框
+
+**勾選框**為**xref:/真假值.adoc[真假值]**的圖像表徵，可以使用 image:22px-Mode_showcheckbox.svg.png[Mode
+showcheckbox.svg,width=22,height=22] **xref:/tools/勾選框.adoc[勾選框]工具**或
+xref:/commands/Checkbox.adoc[Checkbox_指令]來建立。
+
+== 輸入欄位
+
+Input Boxes work as text inputs for xref:/s_index_php?title=Scripting_action=edit_redlink=1.adoc[scripts]. The script is
+triggered by changing text in the Input Box and either pressing enter or leaving the Input Box. The inserted value may
+be accessed using the %0 variable.
+
+[EXAMPLE]
+====
+ Input Box with `++a=a+%0++` in script will increase number _a_ by the entered value. Works only if _a_ is
+xref:/Free_Dependent_and_Auxiliary_Objects.adoc[free].
+
+====
+
+If you want the Input Box to change value of a free object (or redefine dependent object), you may define that object as
+linked. This way you don't have to insert any script. Input Boxes can be created using the
+image:22px-Mode_textfieldaction.svg.png[Mode textfieldaction.svg,width=22,height=22]
+xref:/s_index_php?title=Input_Box_Tool_action=edit_redlink=1.adoc[Input Box Tool] or the
+xref:/InputBox_Command.adoc[InputBox Command].
+
+== 按鈕
+
+*按鈕*（button）是為了通過點按動作來觸發程式腳本。雖然透過點按其他物件（例如：一張xref:/tools/插入圖片.adoc[圖片]）也能觸發程式腳本，但使用按鈕能讓您的學習單更直觀。
+按鈕可以使用 image:22px-Mode_buttonaction.svg.png[Mode buttonaction.svg,width=22,height=22] **[[按鈕_工具]按鈕]工具**或
+xref:/commands/Button.adoc[Button_指令]來建立。
+
+== 下拉式選單
+
+若您想要顯示某個串列的內容，可以整合至**下拉式選單**（drop-down list）：
+
+* 在 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+**xref:/繪圖區.adoc[繪圖區]**中顯示：開啟串列的 image:18px-Menu-options.svg.png[Menu-options.svg,width=18,height=18]
+*xref:/屬性.adoc[屬性]對話窗*，在**一般**分頁勾選「顯示為下拉式選單」。
+* 在 image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+**xref:/試算表.adoc[試算表]**中顯示：您可以在儲存格中輸入一個集合（如：A1=\{1,2,3,4}），然後打開
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+*xref:/設定.adoc[試算表選項]*，並勾選「使用按鈕與勾選框」，這時儲存格就會變為一個下拉式選單。
++
+[NOTE]
+====
+請看以下的影片說明（沒有錄音）：
+
+====
+
+http://www.youtube.com/watch?v=AzCOVnMjEb0[image:YoutubeCombobox.png[YoutubeCombobox.png,width=320,height=195]]
+
+如果在程式中要使用目前下拉式選單所選擇的項目，可以使用 xref:/commands/SelectedIndex.adoc[SelectedIndex] 與
+xref:/commands/SelectedElement.adoc[SelectedElement] 兩個指令。
+
+[EXAMPLE]
+====
+ 要建立一個包含三個函數 `++x+1++`、`++x^2++`、`++sqrt(x)++`的下拉式選單，首先在指令列輸入
+`++L={x+1, x^2,sqrt(x)}++`
+建立一個串列。然後在**代數區**的串列按滑鼠右鍵並點選**屬性**。在跳出的對話窗中勾選「顯示為下拉式選單」。您也可以幫下拉式選單加上標籤文字。若要在**繪圖區**畫上目前選擇的函數圖形，可到指令列輸入：`++SelectedElement(L)++`。
+
+====

@@ -1,0 +1,20 @@
+= KeepIf 指令
+:page-en: commands/KeepIf
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+KeepIf[ <Condition>, <List> ]::
+KeepIf[Condition, List]::
+  Creates a new list that only contains those elements of the initial list that fulfil the condition.
+
+[EXAMPLE]
+====
+ `++KeepIf[x<3, {1, 2, 3, 4, 1, 5, 6}]++` returns the new list _\{1, 2, 1}_.
+
+====
+
+[NOTE]
+====
+For list of numbers arbitrary condition may be used. For list of other objects one can use only conditions of
+the form `++x==constant++` or `++x!=constant++`.
+
+====

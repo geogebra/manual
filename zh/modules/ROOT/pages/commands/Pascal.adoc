@@ -1,0 +1,35 @@
+= Pascal 指令
+:page-en: commands/Pascal
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Pascal[ <Number of Successes>, <Probability of Success> ]::
+Pascal[ <Number of Successes>, <Probability of Success>, <Boolean Cumulative> ]::
+Pascal[ <Number of Successes>, <Probability of Success>, <Variable Value>, <Boolean Cumulative> ]::
+
+== CAS 視窗
+
+Pascal[ <Number of Successes>, <Probability of Success> ]::
+Pascal[ <Number of Successes r>, <Probability of Success p> ]::
+  Returns a bar graph of a http://mathworld.wolfram.com/NegativeBinomialDistribution.html[Pascal distribution].
+  _Parameters:_
+  _Number of Successes_: number of independent Bernoulli trials that must be successful
+  _Probability of Success_: probability of success in one trial
+
+Pascal[ <Number of Successes>, <Probability of Success>, <Boolean Cumulative> ]::
+  Returns a bar graph of a Pascal distribution when _Cumulative_ = false.
+  Returns a bar graph of a cumulative Pascal distribution when _Cumulative_ = true.
+  First two parameters are same as above.
+Pascal[ <Number of Successes>, <Probability of Success>, <Variable Value v>, <Boolean Cumulative> ]::
+  Let X be a Pascal random variable.
+  Returns P( X = _v_) when _Cumulative_ = false.
+  Returns P( X ≤ _v_) when _Cumulative_ = true.
+  First two parameters are same as above.
+
+== CAS Syntax
+
+In xref:/CAS_View.adoc[CAS View] only one syntax is allowed:
+
+Pascal[ <Number of Successes>, <Probability of Success>, <Variable Value v>, <Boolean Cumulative> ]::
+  Let X be a Pascal random variable.
+  Returns P( X = _v_) when _Cumulative_ = false.
+  Returns P( X ≤ _v_) when _Cumulative_ = true.

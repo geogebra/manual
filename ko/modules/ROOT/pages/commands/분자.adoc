@@ -1,0 +1,39 @@
+= 분자 명령
+:page-en: commands/Numerator
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+Numerator( <Function> )::
+  Returns the numerator of the function.
+Numerator( <Number> )::
+  For a rational number returns its numerator. It uses a numerical method, which limits this command to numbers with
+  small denominator. For irrational input the numerator of its
+  xref:/s_index_php?title=ContinuedFraction_Command_action=edit_redlink=1.adoc[continued fraction] is returned.
+
+[EXAMPLE]
+====
+
+`++Numerator((3x² + 1) / (2x - 1))++` yields _f(x) = 3x² + 1_.
+
+====
+
+[NOTE]
+====
+
+See also xref:/s_index_php?title=Denominator_Command_action=edit_redlink=1.adoc[Denominator Command] and
+xref:/s_index_php?title=FractionText_Command_action=edit_redlink=1.adoc[FractionText Command].
+
+====
+
+== CAS Syntax
+
+Numerator( <Expression> )::
+  Returns the numerator of a rational number or expression.
+
+[EXAMPLE]
+====
+
+* `++Numerator(2/3 + 1/15)++` yields _11_.
+* If variables _a, b_ and _c_ haven't been previously defined in GeoGebra, then `++Numerator(a/b)++` yields _a_ and
+`++Numerator(Simplify(a + b/c))++` yields _a c + b_
+
+====

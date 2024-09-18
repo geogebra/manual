@@ -1,0 +1,14 @@
+= 균등분포 명령
+:page-en: commands/Uniform
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+Uniform( <Lower Bound>, <Upper Bound>, x )::
+  Returns the cumulative density function of https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)[uniform
+  distribution] on interval _[lower bound, upper bound]_.
+Uniform( <Lower Bound>, <Upper Bound>, x, <Boolean Cumulative> )::
+  For _Cumulative=false_ returns the probability density function of uniform distribution on interval _[lower bound,
+  upper bound]_.
+  For _Cumulative=true_ returns the cumulative distribution function of the same distribution.
+Uniform( <Lower Bound>, <Upper Bound>, <Variable Value> )::
+  Returns the value of cumulative distribution function at the given variable value _v_ (i.e. P(X < v)) for uniform
+  distribution on interval _[lower bound, upper bound]_

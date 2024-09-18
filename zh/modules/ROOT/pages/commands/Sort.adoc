@@ -1,0 +1,44 @@
+= Sort 指令
+:page-en: commands/Sort
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Sort( <串列> )::
+  對一個數值、文字或點的 <串列> 進行排序。
+
+[EXAMPLE]
+====
+
+
+* `++Sort({3, 2, 1})++` 產生串列 _\{1, 2, 3}_。
+* `++Sort({"pears", "apples", "figs"})++` 以英文字母排序產生一個串列。
+* `++Sort({(3, 2), (2, 5), (4, 1)})++` 產生 _\{(2, 5), (3, 2), (4, 1)}_。
+
+====
+
+[NOTE]
+====
+點串列以 _x_ 坐標作為排序依據。
+
+====
+
+Sort( <值串列>, <鍵串列> )::
+  <值串列> 元素會依據相對應的 <鍵串列> 元素來進行排序。
+
+[EXAMPLE]
+====
+
+
+* 為了將多項式串列 `++list1 = {x^3, x^2, x^6}++` 依據次數（degree）來排序，先建立一個相依的次數串列
+`++list2 = Zip(Degree(a), a, list1)++`。接著輸入 `++ Sort(list1, list2)++` 會產生所求串列 _list3 = \{x^2, x^3, x^6}_。
+* 為了將 stem:[x^\{10}-1] 的複數根按照幅角（argument）順序作為頂點來畫出多邊形，先建立
+`++list1 = {ComplexRoot(x^10-1)}++`，接著使用指令 `++Polygon(Sort(list1, arg(list1)))++` 產生 _poly1 = 2.94_。
+
+====
+
+[NOTE]
+====
+
+*備註：*
+有一種替代方案能對任意物件的串列進行排序，請參閱教學文件「https://wiki.geogebra.org/en/Tutorial:Advanced_List_Sorting[進階串列排序（英文）]」。
+
+====

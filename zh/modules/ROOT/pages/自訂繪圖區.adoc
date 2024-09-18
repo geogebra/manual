@@ -1,0 +1,91 @@
+= 自訂繪圖區
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+要調整 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/繪圖區.adoc[繪圖區]的可見範圍，您可以使用 image:24px-Mode_translateview.svg.png[Mode
+translateview.svg,width=24,height=24]
+xref:/tools/移動繪圖區.adoc[移動繪圖區]工具來拖曳繪圖區，並使用下列方式來進行縮放：
+
+* 您可使用 image:24px-Mode_zoomin.svg.png[Mode zoomin.svg,width=24,height=24] xref:/tools/放大.adoc[放大]工具和
+image:24px-Mode_zoomout.svg.png[Mode zoomout.svg,width=24,height=24] xref:/tools/縮小.adoc[縮小]工具來縮放
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] *繪圖區*。
++
+[NOTE]
+====
+您點按的位置即為縮放中心。
+
+====
+* 您可使用滑鼠滾輪來縮放 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] *繪圖區*。
+* 您可使用快捷鍵 [.kcode]#Ctrl# + [.kcode]#+# 放大和 [.kcode]#Ctrl # + [.kcode]# -# 縮小。
+* 在 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] **繪圖區**的空白處按滑鼠右鍵（Mac
+OS：[.kcode]#Ctrl# + 點按）之後，會跳出快顯功能表讓您進行縮放。
+* 您也可以在 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] **繪圖區**的
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/屬性.adoc[屬性]對話窗內指定 _x_ 軸和 _y_
+軸的範圍（請參閱xref:/.adoc[下方段落]）。
+
+== 顯示或隱藏物件
+
+在 image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+xref:/代數區.adoc[代數區]中，每個物件左方的圖示能看出目前可見狀態（顯示或隱藏）。您可直接點擊小彈珠圖示來更改物件的可見狀態。更多資訊請參閱xref:/物件屬性.adoc[可見狀態]。
+
+== 繪圖區屬性（屬性對話窗）
+
+坐標軸、格線以及其他屬性，可以在 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+**繪圖區**的 image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/屬性.adoc[屬性]對話窗進行調整。在 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+**繪圖區**按下滑鼠右鍵（Mac OS：[.kcode]#Ctrl# + 點按）之後，從跳出的xref:/快顯功能表.adoc[快顯功能表]點選「*繪圖區
+...*」，即可開啟屬性對話窗。
+
+== 自訂坐標軸和格線
+
+若要顯示或隱藏坐標軸和格線，請在繪圖區域按下滑鼠右鍵（Mac OS：[.kcode]#Ctrl# + 點按），並從跳出的快顯功能表點選
+image:20px-Stylingbar_graphicsview_show_or_hide_the_axes.svg.png[Stylingbar graphicsview show or hide the
+axes.svg,width=20,height=20] **坐標軸**或 image:20px-Stylingbar_graphicsview_show_or_hide_the_grid.svg.png[Stylingbar
+graphicsview show or hide the grid.svg,width=20,height=20] *格線*。在
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] **屬性對話窗**能調整更多設定。
+
+* 在**一般**分頁，您可以更改坐標軸線的樣式和顏色，或是更改 _x_ 軸和 _y_
+軸的比例。若想要確保坐標軸的比例不會被任何指令或使用者的操作影響，您可以按下鎖頭圖示來鎖定比例。
+
+* 在 **x軸**和
+**y軸**分頁，可讓您單獨設定坐標軸：設定間距長度、標籤、是否要顯示坐標軸、單位⋯⋯等等。若您想要將兩坐標軸的交會處設在點
+_(a,b)_，可以設定 **x軸**分頁的**交會點**為 _b_，**y軸**分頁的**交會點**為
+_a_。勾選**貼附於邊上**可讓坐標軸線一直貼附於螢幕的下邊界或左邊界附近。如果只想要顯示正 _x_ 軸或正 _y_
+軸區域，您可勾選**只顯示正向**。
+
+* 在**格線**分頁，您可以更改坐標格線的顏色和樣式、指定格線的間距和比例、是否要顯示格線。有四種格線類型可供選擇：主格線、等距線、極坐標、大小格線。
+
+[NOTE]
+====
+
+*備註：*
+
+* 幾乎在任何情況下，您可以按住 [.kcode]#Shift#（在 windows 桌機上也可以改成按住
+[.kcode]#Ctrl#）加上滑鼠拖曳，藉此縮放坐標軸。
+* 坐標軸的範圍可以指定為動態數值，例如：在**一般**分頁，您可以設定 **x 最小**為 `++x(A)++` 且 **y 最小**為
+`++y(A)++`，這樣會讓繪圖區的左下角位置固定在 _A_ 點。然而這樣設定之後，會無法放大或縮小繪圖區。
+
+====
+
+== 開啟導播列
+
+您可在 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+繪圖區**xref:/屬性.adoc[屬性]對話窗**的**一般**分頁，切換顯示「xref:/導播列.adoc[導播列]」按鈕。還可以進一步選擇是否要顯示「播放」按鈕，讓構圖步驟以動畫呈現；或顯示「image:16px-Menu_view_construction_protocol.svg.png[Menu
+view construction protocol.svg,width=16,height=16] xref:/構圖按本.adoc[構圖按本]」按鈕。
+
+== 其他設定
+
+這些設定位於 image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] **屬性對話窗**中**一般**分頁的最下方。
+
+背景色
+
+讓您可以更改 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] **繪圖區**的背景色。
+
+工具提示
+
+讓您選擇是否要顯示 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+**繪圖區**的工具提示。詳情請參閱「xref:/工具提示.adoc[工具提示]」。
+
+顯示滑鼠坐標
+
+選擇是否要在鼠標旁邊顯示滑鼠坐標。

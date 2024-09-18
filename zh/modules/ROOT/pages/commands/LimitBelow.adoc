@@ -1,0 +1,45 @@
+= LimitBelow 指令
+:page-en: commands/LimitBelow
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+LimitBelow[ <Function>, <Value> ]::
+
+== CAS 視窗
+
+LimitBelow[ <Function>, <Value> ]::
+LimitBelow[ <Function>, <Value> ]::
+  Returns left https://en.wikipedia.org/wiki/Limit_of_a_function#One-sided_limits[one-sided limit] of the function for
+  given value of variable.
+
+== CAS Syntax
+
+LimitBelow[ <Expression f>, <Value t> ]::
+  Computes the left one-sided limit of the function _f_ for the given value _t_.
+LimitBelow[ <Expression f>, <Variable v>, <Value t> ]::
+  Computes the left one-sided limit of the multivariate function _f_ for the given value _t_ of the given variable _v_.
+
+[EXAMPLE]
+====
+
+
+`++LimitBelow[1 / a, a, 0]++` yields stem:[-\infty] .
+
+====
+
+[EXAMPLE]
+====
+
+
+`++LimitBelow[1 / x, 0]++` yields stem:[-\infty] .
+
+====
+
+[NOTE]
+====
+
+*備註：*
+
+See also xref:/s_index_php?title=Limit_Command_action=edit_redlink=1.adoc[Limit Command] and
+xref:/s_index_php?title=LimitAbove_Command_action=edit_redlink=1.adoc[LimitAbove Command].
+
+====

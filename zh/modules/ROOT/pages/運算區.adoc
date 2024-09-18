@@ -1,0 +1,235 @@
+= 運算區
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+== [#運算區介面]####[#.E9.81.8B.E7.AE.97.E5.8D.80.E4.BB.8B.E9.9D.A2]##image:24px-Menu_view_cas.svg.png[Menu view cas.svg,width=24,height=24] 運算區介面##
+
+預設情況下，image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]**運算區**會放在
+xref:/繪圖區.adoc[image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16]]**xref:/繪圖區.adoc[繪圖區]**旁邊。上方所顯示的工具列會因為你目前所在的**視區**不同而顯示不同的**工具列**，若你正在編輯**運算區**，則上方所顯示的工具列是「/s_index_php?title=En:CAS_Tools_action=edit_redlink=1.adoc[*運算區工具列*]」；若正在編輯*繪圖區*，則會切換為「/s_index_php?title=En:Graphics_Tools_action=edit_redlink=1.adoc[*繪圖工具列*]」。「復原」、「重複」按鈕放置在視窗的右上角。
+
+[width="100%",cols="100%",]
+|===
+a|
+image:314px-CAS-View.png[CAS-View.png,width=314,height=220]
+
+運算區
+
+|===
+
+雖然 image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16]**運算區**是xref:/格局.adoc[*運算格局*]的一部分，但您仍可根據自己的需求來/s_index_php?title=En:GeoGebra_5_0_Desktop_vs_Web_and_Tablet_App_action=edit_redlink=1.adoc[調整]
+GeoGebra 介面的外觀。
+
+== [#建立物件]####[#.E5.BB.BA.E7.AB.8B.E7.89.A9.E4.BB.B6]##建立物件##
+
+=== 直接輸入
+
+**運算區**讓您能利用 GeoGebra 的代數運算系統 (Computer Algebra System, CAS)
+來進行符號運算。它由數個儲存格組成，而每個儲存格上方為**指令欄**，下方顯示輸出結果。這些**指令欄**的使用方式與一般的**xref:/指令列.adoc[指令列]**幾乎相同，但有以下的差別：
+
+* 您可使用任何未用過的變數名。
++
+[EXAMPLE]
+====
+ 在**指令欄**輸入 `++(a+b)^2++` 後按下 [.kcode]#Enter# 鍵。您將得到 _a²+2ab+b²_ 。
+
+====
+* `++=++` 用於方程式而 `++:=++` 用於設定變數。這表示當您輸入 `++a=2++` 並不會把 2 這個值指定給
+_a_。更多細節請參閱xref:/.adoc[變數設定]。
+* 進行乘法運算時，必須明確地標示乘號。您可以在**xref:/指令列.adoc[指令列]**輸入 `++a(b+c)++` 或 `++a*(b+c)++`，但在
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]**運算區**只能輸入`++a*(b+c)++`。
+
+=== 直接輸入的快捷鍵
+
+您可在 image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16]**運算區**使用下列快捷鍵，來求解或檢查輸入。
+
+[NOTE]
+====
+
+*備註：*
+除了使用這些快捷鍵之外，您也可使用xref:/.adoc[*運算區工具列*]上的/s_index_php?title=En:CAS_Tools_action=edit_redlink=1.adoc[*工具*]。
+
+====
+
+* [.kcode]#Enter#：執行代數運算
+* [.kcode]#Ctrl# + [.kcode]#Enter#：執行數值運算
++
+[EXAMPLE]
+====
+ `++sqrt(2)++` 輸出 _1.41_
+
+====
+* [.kcode]#Alt# + [.kcode]#Enter#：檢查輸入但不執行任何運算
++
+[EXAMPLE]
+====
+ `++b + b++` 仍輸出 _b + b_.
+
+====
+
+[NOTE]
+====
+設定變數時，一定會對右式執行運算，例如：輸入 `++a := 5++`，輸出結果為 5。
+
+====
+
+在 image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16]**運算區**空白**指令欄**使用下列快捷鍵，可快速擷取上個儲存格的輸入或輸出：
+
+* [.kcode]#空白# 鍵：擷取上個儲存格的輸出。
+* `++)++`：擷取上個儲存格的輸出並加上括號。
+* `++=++`：擷取上個儲存格的輸入。
+
+[NOTE]
+====
+您可在輸入的結尾加上分號，則該儲存格不會顯示輸出，例如：`++a := 5;++`。
+
+====
+
+=== 變數設定以及變數與其它視區之間的關聯
+
+您可使用符號 `++:=++` 來設定變數，例如：`++b := 5++`、`++a(n) := 2n + 3++`。
+
+* *釋放變數名稱*：如果要刪除某個變數，可使用 `++Delete[b]++` 指令。
+* *重新定義變數或函數*：您可重新定義變數或函數，但必須在「*原來的儲存格*」操作，否則將被視為新變數，而且系統會自動賦予這個變數新的名稱。
+
+通常，你所定義的變數或函數，都可共用於**運算區**及其他**視區**。例如：
+
+* 若您在**運算區**定義 `++b:=5++`，則您可在其它**視區**使用 _b_ 這個變數。
+* 若您在其他**視區**定義函數 `++f(x)=x^2++`，您也可以在**運算區**使用這個函數。
+
+[NOTE]
+====
+
+*備註：*
+
+設定變數時，系統只會輸出 `++:=++` 右式的運算結果，例如：當您鍵入 `++b:=5++` 只會輸出 _5_。
+
+====
+
+=== 方程式
+
+* 您可使用一般的**等號**來輸入方程式，例如：`++3x + 5 = 7++`。
+* **四則運算**您可對整個方程式做四則運算，這在逐步解方程式時很有用。
++
+[EXAMPLE]
+====
+ 輸入 `++(3x + 5 = 7) - 5++` 會同時對等式的兩邊減去 5。
+
+====
+* *左式或右式*：使用 `++LeftSide[]++` 和 `++RightSide[]++` 指令可傳回方程式的左式或右式。
++
+[EXAMPLE]
+====
+ `++LeftSide[3x + 5 = 7]++` 傳回 _3 x + 5_，`++RightSide[3x + 5 = 7]++` 則傳回 _7_。
+
+====
+
+=== 參照其他列
+
+如果在 image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16]**運算區**要參照其他列，可使用下列兩種方式：
+
+* *靜態參照*：這種參照方式會複製被參照列的輸出結果，但假如被參照列的內容之後有被更動，參照列並*不會自動更新*。
+** `++#++`：複製前一列的輸出結果。
+** `++#5++`：複製第 5 列的輸出結果。
+* *動態參照*：這種參照方式會插入被參照列的連結，若被參照列的內容之後有被更動，參照列*會自動更新*。
+** `++$++`：插入前一列輸出結果的連結。
+** `++$5++`：插入第 5 列輸出結果的連結。
+
+== [#運算區指令]####[#.E9.81.8B.E7.AE.97.E5.8D.80.E6.8C.87.E4.BB.A4]##運算區指令##
+
+image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16]**運算區**有/s_index_php?title=En:CAS_Commands_action=edit_redlink=1.adoc[*運算區專用的指令*]，讓您能在
+image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16]**運算區**建立物件。只要在**指令欄**開始輸入**指令**名稱，GeoGebra
+會跳出**指令**清單供您選擇。
+
+[NOTE]
+====
+詳細清單請參閱「*/s_index_php?title=En:CAS_Commands_action=edit_redlink=1.adoc[運算區指令]*」。
+
+====
+
+[NOTE]
+====
+從 GeoGebra 4.9.170.0 版開始，image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16]**運算區**支援/s_index_php?title=En:CAS_View_Supported_Geometry_Commands_action=edit_redlink=1.adoc[某些**幾何指令**]的代數運算。
+
+====
+
+== [#運算工具列]####[#.E9.81.8B.E7.AE.97.E5.B7.A5.E5.85.B7.E5.88.97]##運算工具列##
+
+/s_index_php?title=En:CAS_Tools_action=edit_redlink=1.adoc[*運算工具列*]提供許多*/s_index_php?title=En:CAS_Tools_action=edit_redlink=1.adoc[運算工具]*，讓您能進行代數運算或數值運算。只要先輸入資料，再用滑鼠點擊對應的**運算工具**即可。
+
+image:315px-Toolbar-CAS.png[Toolbar-CAS.png,width=315,height=32]
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] 提示：*
+您也可以只選擇部分的輸入資料，然後針對它進行運算。
+
+====
+
+[NOTE]
+====
+詳細**工具**清單請參閱「*/s_index_php?title=En:CAS_Tools_action=edit_redlink=1.adoc[運算區工具]*」。
+
+====
+
+== [#快顯功能表]####[#.E5.BF.AB.E9.A1.AF.E5.8A.9F.E8.83.BD.E8.A1.A8]##快顯功能表##
+
+=== 列標頭快顯功能表
+
+在某個列標頭按下滑鼠右鍵（Mac 系統：[.kcode]#Ctrl# + 滑鼠左鍵）即可顯示**快顯功能表**，有下列選項：
+
+* *從上方插入*：於本列上方插入一個空白列。
+* *從下方插入*：於本列下方插入一個空白列。
+* *刪除列*：刪除本列的內容。
+* *轉為文字欄位*：切換為文字欄位，可讓使用者用來插入註解。
+* *複製為LaTeX*
+：複製本列內容到電腦剪貼簿，讓您可在別處貼上，例如：/s_index_php?title=En:Text_action=edit_redlink=1.adoc[文字]物件。（僅適用於桌機版）
+
+[NOTE]
+====
+要將一列以上的內容複製為 LaTeX，可利用 [.kcode]#Ctrl# + 滑鼠左鍵（Mac 系統：[.kcode]#Cmd# +
+滑鼠左鍵）來選擇你想要的列，然後再列標頭上按滑鼠右鍵（Mac 系統：[.kcode]#Ctrl# + 滑鼠左鍵），並選擇**複製為 LaTeX**。
+
+====
+
+=== 儲存格快顯功能表
+
+（僅適用於桌機版）在某個儲存格按下滑鼠右鍵（Mac 系統：[.kcode]#Ctrl# + 滑鼠左鍵）即可顯示**快顯功能表**，有下列選項：
+
+* *複製*：複製儲存格內容到電腦剪貼簿。接著在一個新的儲存格按滑鼠右鍵，即會顯示**貼上**選項。
+* *複製為 LaTeX*：以 LaTex
+格式複製儲存格內容到電腦剪貼簿，如此便可轉貼到某個/s_index_php?title=En:Text_action=edit_redlink=1.adoc[文字]物件或
+LaTeX 編輯器。
+* *複製為 LibreOffice 公式*：以 LibreOffice 公式格式複製儲存格內容到電腦剪貼簿，如此便可轉貼到某個文書處理檔案。
+* *複製為圖片*：以 PNG
+格式複製儲存格內容到電腦剪貼簿，如此便可轉貼到某個/s_index_php?title=En:Image_Tool_action=edit_redlink=1.adoc[圖形]物件或其他文件。
+
+== [#物件的顯示方式]####[#.E7.89.A9.E4.BB.B6.E7.9A.84.E9.A1.AF.E7.A4.BA.E6.96.B9.E5.BC.8F]##物件的顯示方式##
+
+=== 運算區樣式列
+
+xref:/樣式列.adoc[*運算區樣式列*]提供多個按鈕可讓您
+
+* image:16px-Stylingbar_text.svg.png[Stylingbar text.svg,width=16,height=16]
+改變文字樣式（image:16px-Stylingbar_text_bold.svg.png[Stylingbar text bold.svg,width=16,height=16]**粗體**
+或image:16px-Stylingbar_text_italic.svg.png[Stylingbar text italic.svg,width=16,height=16]_斜體_）和
+image:16px-Stylingbar_color_white.svg.png[Stylingbar color white.svg,width=16,height=16]顏色
+* 顯示螢幕小鍵盤（桌機版）
+* 顯示其他 image:16px-Stylingbar_dots.svg.png[Stylingbar
+dots.svg,width=16,height=16]**xref:/視區.adoc[視區]**（線上版和平板版）
+
+=== 在 image:20px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=20,height=20]**繪圖區**顯示運算區物件
+
+在 image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16]**運算區**中，有些物件也能顯示在繪圖區，從該列左邊的圓圈圖標，可知此物件目前在繪圖區是顯示或隱藏。您可在
+image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16]**/s_index_php?title=En:Graphics_View_action=edit_redlink=1.adoc[繪圖區]**中利用
+image:16px-Mode_showhideobject.svg.png[Mode
+showhideobject.svg,width=16,height=16]**顯示／隱藏物件**工具來改變物件的顯示狀態。

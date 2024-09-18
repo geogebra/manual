@@ -1,0 +1,44 @@
+= 다각형 명령
+:page-en: commands/Polygon
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+Polygon( <Point>, ..., <Point> )::
+  Returns a polygon defined by the given points.
+Polygon( <Point>, <Point>, <Number of Vertices> )::
+  Creates a regular polygon with _n_ vertices.
+Polygon( <List of Points> )::
+  Returns a polygon defined by the points in the list.
+Polygon( <Point>, <Point>, <Number of Vertices n>, <Direction> )::
+  Creates a regular polygon with _n_ vertices, and directed by the _direction_ (e.g. a plane to which the polygon will
+  be parallel, if possible).
+
+[EXAMPLE]
+====
+
+`++Polygon({(0, 0), (2, 1), (1, 3)})++` yields a triangle.
+
+====
+
+[EXAMPLE]
+====
+
+`++Polygon((1, 1), (4, 1), 6)++` yields a hexagon.
+
+====
+
+[EXAMPLE]
+====
+
+`++Polygon((1, 1), (3, 0), (3, 2), (0, 4))++` yields a quadrilateral.
+
+====
+
+[NOTE]
+====
+
+See also image:24px-Mode_polygon.svg.png[Mode polygon.svg,width=24,height=24]
+xref:/s_index_php?title=Polygon_Tool_action=edit_redlink=1.adoc[Polygon] and image:24px-Mode_regularpolygon.svg.png[Mode
+regularpolygon.svg,width=24,height=24] xref:/s_index_php?title=Regular_Polygon_Tool_action=edit_redlink=1.adoc[Regular
+Polygon] tools.
+
+====

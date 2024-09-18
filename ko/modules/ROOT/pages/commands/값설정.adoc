@@ -1,0 +1,65 @@
+= 값설정 명령
+:page-en: commands/SetValue
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+SetValue( <Boolean>, <0|1> )::
+  Sets the state of a boolean / check box : 1 = true, 0 = false
+
+[EXAMPLE]
+====
+
+If _b_ is a boolean, `++ SetValue(b,1)++` sets the boolean _b_ as _true_.
+
+====
+
+SetValue( <Object>, <Object> )::
+  Let__A__ be the first and _B_ the second object. If _A_ is a
+  xref:/s_index_php?title=Free_Dependent_and_Auxiliary_Objects_action=edit_redlink=1.adoc[free object] or a
+  xref:/s_index_php?title=Points_and_Vectors_action=edit_redlink=1.adoc[Point] restricted to
+  xref:/s_index_php?title=Geometric_Objects_action=edit_redlink=1.adoc[Path or Region], its value is set to current
+  value of _B_ (i.e. _A_ doesn't change value if _B_ is changed afterwards).
+
+[EXAMPLE]
+====
+
+If _f_ is a function, `++SetValue(f, RandomElement({cos(x), 3x+2, ln(x)}))++` defines, at random, f as being one of the
+functions proposed in the list.
+
+====
+
+SetValue( <List>, <Number>, <Object> )::
+  Let _n_ be the _<Number>_. The command SetValue sets the n-th element of a free list to the current value of the
+  object. Number _n_ can be at most 1 + length of L.
+
+SetValue( <xref:/s_index_php?title=Action_Objects_action=edit_redlink=1.adoc[drop-down list]>, <Number n > )::
+  Set _n_ as xref:/s_index_php?title=SelectedIndex_Command_action=edit_redlink=1.adoc[the index of the selected element]
+  in the drop-down list.
+
+== [#값설정_명령_2]####[#.EA.B0.92.EC.84.A4.EC.A0.95_.EB.AA.85.EB.A0.B9_2]##값설정 명령##
+
+값설정[ <진리값>, <0|1> ]::
+  진리값 또는 체크 상자의 상태를 설정 : 1 = true, 0 = false
+
+[EXAMPLE]
+====
+
+만일 _b_ 가 진리값이면, `++ 값설정[b,1]++` 은 진리값 _b_ 를 _true_ 으로 설정한다.
+
+====
+
+값설정[ <대상>, <대상> ]::
+  _A_ 와 _B_ 를 두 대상이라고 하자. 만일 _A_ 가 xref:/자유로운_대상_의존하는_대상_보조적인_대상.adoc[자유로운 대상] 또는
+  xref:/점과_벡터.adoc[점] 이 restricted to xref:/기하적_대상.adoc[경로 또는 영역]에 제한되면, 그 값은 __B__의
+  현재값으로 설정된다(즉, _B_ 가 나중에 변경되면, _A_ 의 값은 변하지 않는다).
+
+[EXAMPLE]
+====
+
+만일 _f_ 가 함수일 때, `++값설정[f, 랜덤원소[{cos(x), 3x+2, ln(x)}]]++` 는 임의로 f 를 리스트의 원소인 함수 가운데
+하나로 정의한다.
+
+====
+
+값설정[ <리스트>, <수>, <대상> ]::
+  _n_ 을 _<수>_ 라고 하자. 값설정 명령은 대상의 현재값을 자유로운 리스트 L의 n 번째 원소로 설정한다. 수 __n__은 리스트
+  L의 길이보다 최대 1이 클 수 있다.

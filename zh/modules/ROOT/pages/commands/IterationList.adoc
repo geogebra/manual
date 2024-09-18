@@ -1,0 +1,13 @@
+= IterationList 指令
+:page-en: commands/IterationList
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+IterationList[ <Function>, <Start Value>, <Number of Iterations> ]::
+IterationList[Function, Number x0, Number n]::
+  Gives you a list of length _n+1_ whose elements are iterations of the function starting with the value _x0_.
+
+[EXAMPLE]
+====
+ After defining `++f(x) = x^2++` the command `++IterationList[f, 3, 2]++` gives you the list _L = \{3, 9, 81}_.
+
+====

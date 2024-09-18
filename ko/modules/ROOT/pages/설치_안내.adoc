@@ -1,0 +1,76 @@
+= 설치 안내
+:page-en: Installation_Guide
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+:toc:
+
+== 웹스타트
+
+=== 윈도우즈 XP에서 웹스타트 재설치
+
+* 시작 - 실행... 에서 "javaws -viewer"를 입력한 후, 엔터키를 누른다.
+* GeoGebra에서 오른쪽 버튼을 클릭한 후, 삭제한다.
+* 지오지브라 웹스타트를 다시 실행한다.
+
+=== 윈도우즈 7에서 웹스타트 재설치
+
+* 시작 메뉴에서 검색창에 "javaws -viewer"를 입력한 후, 엔터키를 누른다.
+* GeoGebra에서 오른쪽 버튼을 클릭한 후, 삭제한다.
+* 지오지브라 웹스타트를 다시 실행한다.
+
+=== 윈도우즈 비스타에서 웹스타트 재설치
+
+* UAC를 사용하지 않음으로 설정한다.
+* 컴퓨터를 다시 시작한다.
+* 시작 메뉴에서 검색창에 "javaws -viewer"를 입력한 후, 엔터키를 누른다.
+* GeoGebra에서 오른쪽 버튼을 클릭한 후, 삭제한다.
+* 지오지브라 웹스타트를 다시 실행한다.
+* UAC를 사용함으로 설정한다.
+
+=== Mac에서 웹스타트 재설치
+
+* 내 애플리케이션 폴더(my Applications folder)에서 GeoGebra.app를 삭제한다.
+* Java 설정사항 -> 네트워크 -> Cache Files 파일 보기로 가서, GeoGebra.app 파일을 삭제한 후, 지오지브라 웹스타트를 다시
+실행한다.
+
+=== Linux에서 웹스타트 재설치
+
+* 터미널은 연다.
+* javaws -viewer
+* geogebra.jnlp 위에서 오른쪽 버튼을 클릭한 후, 삭제한다.
+* 지오지브라 웹스타트를 다시 실행한다.
+
+== 애플릿 문제
+
+* 자바가 컴퓨터에서 작동하는지 점검한다: http://www.java.com/en/download/help/testvm.xml
+* 시작 메뉴에서 java를 입력하여 자바 제어판을 연다.
+* Java 제어판 -> 일반 -> 임시 인터넷 파일 -> 설정 -> 파일 삭제...
+
+== .ggb 파일을 웹스타트에 연결하기 (윈도우즈)
+
+* 시작 - 실행에서 javaws -verbose -import -shortcut -association http://www.geogebra.org/webstart/geogebra.jnlp 를
+입력한다.
+
+== 오프라인 설치파일의 기존 지오지브라 버전을 삭제할 경우 발생하는 문제해결
+
+* 시작 - 실행 - explorer C:\Program Files\Zero G Registry
+* 노트패드에서 이 파일을 열어 편집: .com.zerog.registry.xml
+* 지오지브라와 연관된 파일 삭제
+
+주: C:\Program Files\Zero G Registry 는 숨겨져 있기 때문에, 일반적으로는 찾을 수 없다.
+
+== 네트워크 설치(윈도우즈)
+
+* 컴퓨터 1대에 설치한다.
+* C:\Program Files\GeoGebra 의 파일을 네트워크에 복사한다.
+* .ggb 와 .ggt 파일을 GeoGebra.exe와 연결한다.
+
+== 기타 오류 메시지
+
+"User Interface Not Supported" 오류 메시지
+
+윈도우즈 사용자 이름에서 특수한 문자가 포함되어 있을 때 발생한다.(예. !, #)
+
+해결책: 다른 사용자 계정을 생성하고,
+http://www.hauser-wenz.de/s9y/index.php?/archives/138-Installer-User-Interface-Mode-Not-Supported.html 를 사용하여
+설치한다.

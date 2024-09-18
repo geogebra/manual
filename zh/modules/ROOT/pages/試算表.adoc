@@ -1,0 +1,207 @@
+= 試算表
+:page-en: Spreadsheet_View
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+== [#試算表介面]####[#.E8.A9.A6.E7.AE.97.E8.A1.A8.E4.BB.8B.E9.9D.A2]##試算表介面##
+
+預設情況下，image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] **試算表**會放在
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+**xref:/繪圖區.adoc[繪圖區]**旁邊。xref:/試算表工具.adoc[*試算表工具列*]位於 GeoGebra 視窗的上方，而
+image:16px-Menu-edit-undo.svg.png[Menu-edit-undo.svg,width=16,height=16] **復原**和
+image:16px-Menu-edit-redo.svg.png[Menu-edit-redo.svg,width=16,height=16] **重複**按鈕則是在右上角。
+
+[width="100%",cols="100%",]
+|===
+a|
+image:314px-Spreadsheet-View.png[Spreadsheet-View.png,width=314,height=220]
+
+試算表
+
+|===
+
+雖然 image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] **試算表**是
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+xref:/格局.adoc[*試算表格局*]的一部分，但您仍可根據自己的需求來xref:/GeoGebra_不同版本的差異.adoc[調整] GeoGebra
+介面的外觀。
+
+=== 自訂 image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] 試算表
+
+可根據個人偏好，自訂 image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+**試算表**的介面
+
+* 開啟 image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] **xref:/設定.adoc[設定對話窗]**並切換至
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] **試算表**頁面（桌機版適用）
+* 開啟 image:16px-Stylingbar_icon_spreadsheet.svg.png[Stylingbar icon spreadsheet.svg,width=16,height=12]
+xref:/樣式列.adoc[*試算表樣式列*]並點選 image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+*設定*（線上版或平板版適用）
+
+在設定對話窗中您可切換下列選項來更改試算表的外觀
+
+* 顯示**xref:/指令列.adoc[指令列]**
+* 顯示**格線**
+* 顯示**欄名**或**列號**
+* 顯示**垂直捲軸**或**水平捲軸**
+
+此外，您可更改 image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] **試算表**的功能
+
+* 允許**使用按鈕與勾選框**或**工具提示**
+* *使用指令前需加「=」號*
+* *使用自動完成*
+
+== [#建立物件]####[#.E5.BB.BA.E7.AB.8B.E7.89.A9.E4.BB.B6]##建立物件##
+
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+**試算表**的每個儲存格都有特定的名稱，讓您能直接參照它們來存取資料。
+
+[EXAMPLE]
+====
+ 位於第 _A_ 欄第 _1_ 列的儲存格被稱作 _A1_。
+
+====
+
+[NOTE]
+====
+儲存格名稱可使用在運算式或**xref:/指令.adoc[指令]**之中作為參照位址，藉此來存取該儲存格的內容。
+
+====
+
+=== 輸入與選取
+
+不只數值，所有類型的xref:/一般物件.adoc[一般物件]和xref:/幾何物件.adoc[幾何物件]皆可放置在**儲存格**中（例如：點坐標、xref:/函數.adoc[函數]、xref:/指令.adoc[指令]）。
+
+如果要在試算表中一次選取多個不相鄰的欄、列或儲存格，可以使用快捷鍵 [.kcode]#Ctrl# + [.kcode]#Click#。
+
+=== 儲存格相對位址
+
+在預設情況下，若複製某個儲存格的內容到其他儲存格，參照位址會隨著目標位置而改變。
+
+[EXAMPLE]
+====
+ 假設 `++A1=1++` 且 `++A2=2++`。在 _B1_ 輸入 `++(A1, A1)++`。複製 _B1_ 至 _B2_（可透過快捷鍵 [.kcode]#Ctrl# +
+[.kcode]#C# 和 [.kcode]#Ctrl# + [.kcode]#V#，或是拖曳儲存格的右下角），會發現 _B2_ 儲存格為 _(A2, A2)_。
+
+====
+
+要避免使用「相對參照」，可在參照位址的欄或列前面加上 `++$++`，改為「絕對參照」。
+
+[NOTE]
+====
+Mac 用戶的複製與貼上xref:/鍵盤快速鍵.adoc[快捷鍵]為 [.kcode]#⌘ Cmd# + [.kcode]#C# 和 [.kcode]#⌘ Cmd# +
+[.kcode]#V#。
+
+====
+
+== [#輸入資料至_試算表]####[#.E8.BC.B8.E5.85.A5.E8.B3.87.E6.96.99.E8.87.B3_.E8.A9.A6.E7.AE.97.E8.A1.A8]##輸入資料至 image:24px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=24,height=24] 試算表##
+
+=== 手動輸入與相關指令，以及記錄功能
+
+除了手動輸入資料至 image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+**試算表**的儲存格以外，也可以使用 xref:/commands/FillColumn.adoc[_FillColumn_]、xref:/commands/FillRow.adoc[_FillRow_]
+或 xref:/commands/FillCells.adoc[_FillCells_] 指令，或是「xref:/物件的移動蹤跡.adoc[*記錄到試算表*]」功能。
+
+=== 從 image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] 代數區複製資料
+
+使用滑鼠從 image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+**xref:/代數區.adoc[代數區]**拖曳到 image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16]
+**試算表**即可複製物件。若您拖曳一個串列，被複製的串列元素將會從您放開滑鼠左鍵的儲存格開始以水平方向依序貼上。若在拖曳的同時按著
+[.kcode]#Shift#
+鍵，當您放開滑鼠左鍵時，會跳出對話窗，讓您選擇貼上的是xref:/自變、應變、輔助物件.adoc[自變或應變]物件，也可以勾選**轉置**選項，以垂直方向貼上物件。
+
+=== 從其他試算表軟體複製資料
+
+您可從其他試算表軟體匯入資料到 GeoGebra image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] *試算表*。
+
+* 選取並複製您想匯入的資料。可使用快捷鍵 [.kcode]#Ctrl# + [.kcode]#C#（Mac 用戶：[.kcode]#⌘ Cmd# +
+[.kcode]#C#）複製資料到電腦的剪貼簿。
+* 開啟 GeoGebra 視窗並顯示 image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+*試算表*。
+* 在您想要放置第一筆資料值的儲存格點一下（例如：儲存格 _A1_）
+* 貼上資料到 image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+*試算表*。可使用快捷鍵 [.kcode]#Ctrl# + [.kcode]#V#（Mac 用戶：[.kcode]#⌘ Cmd# + [.kcode]#V#）貼上資料到儲存格。
+
+=== 從其他檔案格式匯入資料
+
+您可從其他檔案格式匯入資料，像是 ._txt_、._csv_ 和 ._dat_ 檔。在 image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] **試算表**的一個空白儲存格按滑鼠右鍵，點選「*匯入資料檔...*」選項。
+
+[NOTE]
+====
+GeoGebra 以圓點 [.kcode]#.# 作為小數點分隔符號，而以逗點 [.kcode]#,#
+作為段落分隔符號。在匯入前請先確認資料檔是否有符合這些細節。
+
+====
+
+=== 試算表工具列
+
+xref:/試算表工具.adoc[*試算表工具列*]提供許多*xref:/工具.adoc[工具]*，讓您在
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] **試算表**建立物件。
+**xref:/工具列.adoc[工具列]**上的每個按鈕都是「抽屜式」的xref:/工具.adoc[*工具箱*]按鈕，裡面都內含許多其他*xref:/工具.adoc[工具]*。
+在線上版或平板版要打開**工具箱**，直接按**工具列**上的按鈕；而桌機版，則是點選按鈕右下角的紅色小三角形。
+
+image:146px-Toolbar-Spreadsheet.png[Toolbar-Spreadsheet.png,width=146,height=32]
+
+[NOTE]
+====
+
+*備註：*
+**試算表工具列**的**工具**依據其所產生物件的性質以及工具的功能來分類。例如，在「image:16px-Mode_onevarstats.svg.png[One
+Variable Analysis Tool,title="One Variable Analysis Tool",width=16,height=16]
+xref:/試算表工具.adoc[*資料分析類*]」工具箱中有分析資料的*工具*。
+
+====
+
+== [#物件的顯示方式]####[#.E7.89.A9.E4.BB.B6.E7.9A.84.E9.A1.AF.E7.A4.BA.E6.96.B9.E5.BC.8F]##物件的顯示方式##
+
+=== 試算表物件顯示在其他視區
+
+某些輸入在**試算表儲存格**的物件，也會同步顯示在 image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16]
+*xref:/繪圖區.adoc[繪圖區]*（例如：坐標點），且物件名稱會與**儲存格**的位址相同（例如：_A5_、_C1_）。
+
+[NOTE]
+====
+預設情況下，**試算表物件**在 image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+**xref:/代數區.adoc[代數區]**被視為xref:/自變、應變、輔助物件.adoc[*輔助物件*]。您可從**xref:/快顯功能表.adoc[快顯功能表]**勾選「*輔助物件*」，或是在xref:/代數區.adoc[*代數區樣式列*]點選「image:16px-Stylingbar_algebraview_auxiliary_objects.svg.png[Stylingbar
+algebraview auxiliary objects.svg,width=16,height=16]」按鈕，來設定顯示或隱藏*輔助物件*。
+
+====
+
+=== 在其他視區使用試算表的資料
+
+您可藉由下述方式處理**試算表的資料**。選取數個儲存格，並在選取範圍內點擊滑鼠右鍵（Mac 用戶：[.kcode]#⌘ Cmd# +
+滑鼠左鍵）。在彈出的**xref:/快顯功能表.adoc[快顯功能表]**中，進入「*新增*」選單，並選取適當的選項（*串列*、*點集*、*矩陣*、*表格*、**折線圖**或是*運算表*）。
+
+=== 運算表
+
+針對一個雙參數函數，可建立一份**運算表**，其中第一列放置第一個參數的參數值，而第一欄放置第二個參數的參數值。函數的表示式必須輸入至運算表最左上角的儲存格。
+
+在適當的儲存格輸入完函數和參數值之後，用滑鼠框選**運算表**的範圍。接著在選取範圍按下滑鼠右鍵（Mac 用戶：[.kcode]#⌘ Cmd#
++ 滑鼠左鍵），在彈出的**xref:/快顯功能表.adoc[快顯功能表]**中，依序選擇「*新增*」→「*運算表*」。
+
+[EXAMPLE]
+====
+ 設定 `++A1 = x y++`、`++A2 = 1++`、`++A3 = 2++`、`++A4 = 3++`、`++B1 = 1++`、`++C1 = 2++` 以及
+`++D1 = 3++`。用滑鼠框選 _A1:D4_ 儲存格。接著在選取範圍按下滑鼠右鍵（Mac 用戶：[.kcode]#⌘ Cmd# +
+滑鼠左鍵），在彈出的**xref:/快顯功能表.adoc[快顯功能表]**中，依序選擇「*新增*」→「*運算表*」，將產生一個表格，列出函數代值運算後的結果。
+
+====
+
+=== 試算表樣式列
+
+xref:/樣式列.adoc[*試算表樣式列*]提供多個按鈕可讓您
+
+* 顯示／隱藏**xref:/指令列.adoc[指令列]**（桌機版適用）
+* 改變文字樣式為 image:16px-Stylingbar_text_bold.svg.png[Stylingbar text bold.svg,width=16,height=16] **粗體**或
+image:16px-Stylingbar_text_italic.svg.png[Stylingbar text italic.svg,width=16,height=16] _斜體_
+* 設定文字對齊方式為 image:16px-Stylingbar_spreadsheet_align_left.svg.png[Stylingbar spreadsheet align
+left.svg,width=16,height=16] *靠左*、image:16px-Stylingbar_spreadsheet_align_center.svg.png[Stylingbar spreadsheet align
+center.svg,width=16,height=16] **置中**或 image:16px-Stylingbar_spreadsheet_align_right.svg.png[Stylingbar spreadsheet
+align right.svg,width=16,height=16] *靠右*
+* 更改某個儲存格的 image:16px-Stylingbar_color_white.svg.png[Stylingbar color white.svg,width=16,height=16] 背景色
+* 更改儲存格的框線樣式（桌機版適用）
+* 開啟 image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+*xref:/屬性.adoc[屬性對話窗]*（線上版或平板版適用）
+* 在視窗中開啟其他 image:16px-Stylingbar_dots.svg.png[Stylingbar dots.svg,width=16,height=16]
+*xref:/視區.adoc[視區]*（線上版或平板版適用）

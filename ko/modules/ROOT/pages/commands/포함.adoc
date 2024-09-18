@@ -1,0 +1,53 @@
+= 포함 명령
+:page-en: commands/Insert
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+Insert( <Object>, <List>, <Position> )::
+  Inserts the object in the list at the given position.
+Insert( <List>, <List>, <Position> )::
+  Inserts all elements of the first list in the second list at the given position.
+
+[EXAMPLE]
+====
+
+`++Insert({11, 12}, {1, 2, 3, 4, 5}, -2)++` places the elements of the first list at the end of the second list before
+its last element and creates the list _\{1, 2, 3, 4, 11, 12, 5}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Insert({11, 12}, {1, 2, 3, 4, 5}, 3)++` places the elements of the first list at the third (and following)
+position(s) of the second list and creates the list _\{1, 2, 11, 12, 3, 4, 5}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Insert(x^2, {1, 2, 3, 4, 5}, -1)++` places _x^2^_ at the end of the list and creates the list _\{1, 2, 3, 4, 5,
+x^2^}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Insert(x^2, {1, 2, 3, 4, 5}, 3)++` places _x^2^_ at the third position and creates the list _\{1, 2, x^2^, 3, 4, 5}_.
+
+====
+
+[NOTE]
+====
+
+If the position is a negative number, then the position is counted from the right.
+
+====
+
+[NOTE]
+====
+
+If the position is a negative number, then the position is counted from the right.
+
+====

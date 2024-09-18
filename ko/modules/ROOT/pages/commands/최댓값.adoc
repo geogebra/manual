@@ -1,0 +1,84 @@
+= 최댓값 명령
+:page-en: commands/Max
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+Max( <List> )::
+  Returns the maximum of the numbers within the list.
+Max( <Interval> )::
+  Returns the upper bound of the interval.
+Max( <Number>, <Number> )::
+  Returns the maximum of the two given numbers.
+Max( <Function>, <Start x-Value>, <End x-Value> )::
+  Calculates (numerically) the *local* maximum point of the function in the given interval. The function should be
+  continuous and have only one _local_ maximum point in the interval.
+Max(<List of Data>, <List of Frequencies> )::
+  Returns the maximum of the list of data with corresponding frequencies.
+
+[EXAMPLE]
+====
+
+`++Max({1, 2, 3, 4, 5}, {5, 3, 4, 2, 0})++` yields 4, the highest number of the list whose frequency is greater than 0.
+
+====
+
+[EXAMPLE]
+====
+
+`++Max(exp(x)x^2,-3,-1)++` creates the point (-2, 0.54134).
+
+====
+
+[EXAMPLE]
+====
+
+`++Max(12, 15)++` yields _15_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Max(2 < x < 3)++` yields _3_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Max({-2, 12, -23, 17, 15})++` yields _17_.
+
+====
+
+[NOTE]
+====
+
+For polynomials you should use the xref:/s_index_php?title=Extremum_Command_action=edit_redlink=1.adoc[Extremum
+Command].
+
+====
+
+[NOTE]
+====
+
+Open and closed intervals are treated the same.
+
+====
+
+[NOTE]
+====
+
+If the input consists of non-numeric objects, then this command considers the numbers associated with those objects. If
+you have a list of segments for example, the command _Max( <List> )_ will yield the maximum segment length.
+
+====
+
+[NOTE]
+====
+
+* If you want the maximum of two functions `++f(x)++` and `++g(x)++` then you can define
+`++(f(x) + g(x) + abs(f(x) - g(x)))/2++`
+* See also xref:/s_index_php?title=Extremum_Command_action=edit_redlink=1.adoc[Extremum Command],
+xref:/s_index_php?title=Min_Command_action=edit_redlink=1.adoc[Min Command] and
+xref:/s_index_php?title=Function_Inspector_Tool_action=edit_redlink=1.adoc[Function Inspector Tool].
+
+====

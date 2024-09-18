@@ -1,0 +1,34 @@
+= Area 指令
+:page-en: commands/Area
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Area( <點>, ..., <點> )::
+  計算以這些 <點> 圍成的多邊形面積（area）。
+Area( <圓錐曲線> )::
+  計算 <圓錐曲線>（圓或橢圓）的面積。
+Area( <多邊形> )::
+  計算 <多邊形> 的面積。
+
+[EXAMPLE]
+====
+ `++Area(x^2 + y^2 = 2)++` 產生 _6.28_。
+
+====
+
+[EXAMPLE]
+====
+ `++Area((0, 0), (3, 0), (3, 2), (0, 2))++` 產生 _6_。
+
+====
+
+[NOTE]
+====
+
+*備註：*
+
+* 若引入指令的 <多邊形> 是自相交多邊形（self-intersecting polygon），其計算方式為代數面積（algebraic
+area）的絕對值，結果可能會不如預期。
+* 若要計算兩函數圖形之間的面積，必須使用 xref:/commands/IntegralBetween.adoc[IntegralBetween_指令]。
+* 請參閱 image:24px-Mode_area.svg.png[Mode area.svg,width=24,height=24] xref:/tools/面積.adoc[面積]工具。
+
+====

@@ -1,0 +1,36 @@
+= Curve 指令
+:page-en: commands/Curve
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Curve[ f(t), g(t), t, a, b]
+
+這個指令會產生曲線參數式 ( f(t), g(t) ) 的圖形，其中參數 t 的範圍為 a ≤ t ≤ b
+
+[NOTE]
+====
+a 必須小於或等於 b
+
+====
+
+[EXAMPLE]
+====
+ `++Curve[(1-cos(t))*cos(t), (1-cos(t))*sin(t), t, 0, 2π]++`
+
+====
+
+image:Cardioid.png[Cardioid.png,width=98,height=117]
+
+[NOTE]
+====
+參數名稱除了 t 以外，也可以使用其他代號。
+
+====
+
+[EXAMPLE]
+====
+ `++Curve[s, s², s, -1, 1]++`
+
+====
+
+請參閱：xref:/曲線.adoc[曲線]。 /s_index_php?title=En:Manual:Curve_Command_action=edit_redlink=1.adoc[en:Manual:Curve
+Command]

@@ -1,0 +1,121 @@
+= 곱 명령
+:page-en: commands/Product
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+Product( <List of Raw Data> )::
+  Calculates the product of all numbers in the list.
+Product( <List of Numbers>, <Number of Elements> )::
+  Calculates the product of the first _n_ elements in the list.
+Product( <List of Numbers>, <List of Frequencies> )::
+  Calculates the product of all elements in the _list of numbers_ raised to the value given in the _list of frequencies_
+  for each one of them.
+
+[EXAMPLE]
+====
+
+`++Product({20, 40, 50, 60}, {4, 3, 2, 1})++` yields
+__1536000000000000__`++Product({sqrt(2), cbrt(3), sqrt(5), cbrt(-7)}, {4, 3, 2, 3})++` yields _-420_
+
+====
+
+[EXAMPLE]
+====
+
+`++Product({1, 2, 3, 4}, 3)++` yields _6_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Product({2, 5, 8})++` yields _80_.
+
+====
+
+[NOTE]
+====
+
+The two lists must have the same length.
+
+====
+
+== CAS Syntax
+
+Product( <List of Expressions> )::
+  Calculates the product of all elements in the list.
+Product( <Expression>, <Variable>, <Start Index>, <End Index> )::
+  Calculates the product of the expressions that are obtained by replacing the given variable with every integer from
+  _start_ to _end_.
+
+[EXAMPLE]
+====
+
+`++Product(x + 1,  x,  2, 3)++` yields _12_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Product({1, 2, x})++` yields _2x_.
+
+====
+
+== [#곱_명령_2]####[#.EA.B3.B1_.EB.AA.85.EB.A0.B9_2]##곱 명령##
+
+곱[ <원자료의 리스트> ]::
+  수의 리스트의 곱을 계산해줍니다.
+곱[ <수의 리스트>, <원소의 갯수> ]::
+  수의 리스트의 처음 __n__개 원소의 곱을 개산합니다.
+곱[ <수의 리스트>, <도수의 리스트> ]::
+  수의 리스트의 원소들의 도수들 빈도만큼 모두 곱한 값을 구할 수 있습니다.
+
+[EXAMPLE]
+====
+
+* `++곱[ {20, 40, 50, 60}, {4, 3, 2, 1} ]++`를 입력하면 __1536000000000000__를 구할 수 있습니다.
+* `++곱[ {sqrt(2), cbrt(3), sqrt(5), cbrt(-7)}, {4, 3, 2, 3} ] ++`를 입력하면 __-420__을 구할 수 있습니다.
+
+====
+
+[EXAMPLE]
+====
+
+`++곱[ {1, 2, 3, 4}, 3 ]++`를 입력하면 __6__을 구할 수 있습니다.
+
+====
+
+[EXAMPLE]
+====
+
+`++곱[ {2, 5, 8} ]++`를 입력하면 __80__을 구할 수 있습니다.
+
+====
+
+[NOTE]
+====
+
+<수의 리스트>와 <도수의 리스트>의 길이는 동일해야 합니다.
+
+====
+
+=== CAS 창
+
+곱[ <식의 리스트> ]::
+  식의 리스트의 곱을 구할 수 있습니다.
+곱[ <식>, <변수>, <처음 인덱스>, <마지막 인덱스> ]::
+  주어진 변수의 <처음 인덱스> 값에서 <마지막 인덱스> 값까지의 모든 정수를 식에 대입하여 얻은 곱을 계산합니다.
+
+[EXAMPLE]
+====
+
+`++곱[ x+1, x, 2, 3 ]++`를 입력하면 __12__를 구할 수 있습니다.
+
+====
+
+[EXAMPLE]
+====
+
+`++곱[ {1, 2, x} ]++`를 입력하면 __2x__를 구할 수 있습니다.
+
+====

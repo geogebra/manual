@@ -1,0 +1,50 @@
+= Midpoint 指令
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Midpoint( <線段> )::
+  回傳 <線段> 的中點（midpoint）。
+Midpoint( <圓錐曲線> )::
+  回傳 <圓錐曲線> 的中心。
+Midpoint( <區間> )::
+  （以數值形式）回傳 <區間> 的中點。
+Midpoint( <點>, <點> )::
+  回傳兩個 <點> 的中點。
+Midpoint( <二次曲面> )::
+  回傳 <二次曲面>（例如：球、圓錐…等）的中點。
+
+[EXAMPLE]
+====
+ `++Midpoint(x^2 + y^2 + z^2 = 1)++` 產生 _(0, 0, 0)_。
+
+====
+
+[EXAMPLE]
+====
+ `++Midpoint((1, 1), (5, 1))++` 產生 _(3, 1)_。
+
+====
+
+[EXAMPLE]
+====
+ `++Midpoint(2 < x < 4)++` 產生 _3_。
+
+====
+
+[EXAMPLE]
+====
+ `++Midpoin(x^2 + y^2 = 4)++` 產生 _(0, 0)_。
+
+====
+
+[EXAMPLE]
+====
+ 假設 `++s = Segment((1, 1), (1, 5))++`。`++Midpoint(s)++` 產生 _(1, 3)_。
+
+====
+
+[NOTE]
+====
+請參閱 image:24px-Mode_midpoint.svg.png[Mode midpoint.svg,width=24,height=24]
+xref:/tools/中心點.adoc[中心點]工具。
+
+====

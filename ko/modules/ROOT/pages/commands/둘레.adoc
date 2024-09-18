@@ -1,0 +1,31 @@
+= 둘레 명령
+:page-en: commands/Perimeter
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+Perimeter( <Polygon> )::
+  Returns the perimeter of the polygon.
+Perimeter( <Conic> )::
+  If the given conic is a circle or ellipse, this command returns its perimeter. Otherwise the result is undefined.
+Perimeter( <Locus> )::
+  If the given locus is finite, this command returns its approximate perimeter. Otherwise the result is undefined.
+
+[EXAMPLE]
+====
+
+`++Perimeter(x^2 + 2y^2 = 1)++` yields _5.4_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Perimeter(Polygon((1, 2), (3, 2), (4, 3)))++` yields _6.58_.
+
+====
+
+[NOTE]
+====
+
+See also xref:/s_index_php?title=Circumference_Command_action=edit_redlink=1.adoc[Circumference] command.
+
+====

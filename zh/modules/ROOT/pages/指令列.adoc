@@ -1,0 +1,99 @@
+= 指令列
+:page-en: Input_Bar
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+== 指令列和指令欄
+
+在桌機版，「*指令列*」預設是位於視窗的下方。您可利用「*/s_index_php?title=En:View_Menu_action=edit_redlink=1.adoc[檢視]*」選單顯示或隱藏它，也可在視窗內/s_index_php?title=En:GeoGebra_5_0_Desktop_vs_Web_and_Tablet_App_action=edit_redlink=1.adoc[調整它的位置]。
+
+在線上版和平板版，有一個較短的「*指令欄*」直接內嵌於 image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16]**xref:/代數區.adoc[代數區]**下方，因此較長的「*指令列*」預設不會顯示出來。但是您仍可透過「*/s_index_php?title=En:View_Menu_action=edit_redlink=1.adoc[檢視]*」選單，將「*指令列*」打開，「*指令列*」與「*指令欄*」兩者的功能相同。
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:338px-Algebra-View.png[Algebra-View.png,width=338,height=220]
+
+GeoGebra 線上版或平板版
+
+a|
+image:341px-Algebra-View-Desktop.png[Algebra-View-Desktop.png,width=341,height=220]
+
+GeoGebra 桌機版
+
+|===
+
+== 代數輸入和指令
+
+在 image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16]**xref:/代數區.adoc[代數區]**，您可藉由**指令列**輸入或修改物件的代數式（例如：數值、座標、方程式），來建立或/s_index_php?title=En:Redefine_Dialog_action=edit_redlink=1.adoc[重新定義]物件。
+
+[EXAMPLE]
+====
+ 輸入 `++f(x) = x^2++` 會在 image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16]**xref:/代數區.adoc[代數區]**建立函數 _f_，且函數圖形會同時顯示在
+image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16]**/s_index_php?title=En:Graphics_View_action=edit_redlink=1.adoc[繪圖區]**。
+
+====
+
+[NOTE]
+====
+在**指令列**輸入完後記得要按 [.kcode]#Enter# 鍵。
+
+====
+
+此外，您可輸入**/s_index_php?title=En:Commands_action=edit_redlink=1.adoc[指令]**來建立新物件或處理現有物件。更詳細資訊請參閱/s_index_php?title=En:Geometric_Objects_action=edit_redlink=1.adoc[幾何物件]和/s_index_php?title=En:General_Objects_action=edit_redlink=1.adoc[一般物件]。
+
+[EXAMPLE]
+====
+ 輸入 `++A=(1,1)++` 並按下 [.kcode]#Enter# 鍵，將建立座標為 (1, 1)
+的/s_index_php?title=En:Free_Dependent_and_Auxiliary_Objects_action=edit_redlink=1.adoc[自由]點
+_A_。以相同方式建立另一點 `++B=(3,4)++`。接著輸入 `++Line[A, B]++`，即可建立一條穿過 _A_ 點和 _B_ 點的直線。
+
+====
+
+當您在 image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16]**/s_index_php?title=En:Graphics_View_action=edit_redlink=1.adoc[繪圖區]**作圖時，您隨時可以按
+[.kcode]#Enter# 鍵將游標切換到**指令列**，然後直接輸入代數式或指令，而不用透過滑鼠先在**指令列**點一下。
+
+== 顯示輸入紀錄
+
+當游標在**指令列時**，使用鍵盤的 [.kcode]#↑# 及 [.kcode]#↓# 方向鍵，即可瀏覽您先前的輸入紀錄。選擇好紀錄後按下
+[.kcode]#Enter# 鍵，將會複製此紀錄到**指令列**。
+
+== 插入物件的名稱、數值或定義到指令列
+
+*插入物件的名稱*：使用 image:16px-Mode_move.svg.png[Mode
+move.svg,width=16,height=16]**/s_index_php?title=En:Move_Tool_action=edit_redlink=1.adoc[移動工具]**點選您想要在**指令列**插入名稱的物件，接著按下鍵盤上的
+[.kcode]#F5#。
+
+[NOTE]
+====
+T插入的名稱會放在**指令列**游標所在的位置。
+
+====
+
+*插入物件的數值*：如果要插入物件的數值到*指令列*（例如：座標 `++(1, 3)++`、方程式 `++3x – 5y = 12++`），先使用
+image:16px-Mode_move.svg.png[Mode
+move.svg,width=16,height=16]**/s_index_php?title=En:Move_Tool_action=edit_redlink=1.adoc[移動工具]**點選物件，接著按
+[.kcode]#F4# 鍵。
+
+[NOTE]
+====
+插入的數值會放在**指令列**游標所在的位置。
+
+====
+
+*插入物件的定義*：要插入物件的定義（例如：`++A = (4, 2)++`、`++c = Circle[A, B]++`）到**指令列**有兩種方式。
+
+* 使用「[.kcode]#Alt# + 滑鼠左鍵」點選物件，將會清空**指令列**並插入物件的定義。
+* 使用 image:16px-Mode_move.svg.png[Mode
+move.svg,width=16,height=16]**/s_index_php?title=En:Move_Tool_action=edit_redlink=1.adoc[移動工具]**點選您想要的物件，接著按
+[.kcode]#F3# 鍵。
+
+[NOTE]
+====
+兩種方法皆會先清空**指令列**，再插入物件的定義。
+
+====

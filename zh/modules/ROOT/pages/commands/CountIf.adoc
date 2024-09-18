@@ -1,0 +1,24 @@
+= CountIf 指令
+:page-en: commands/CountIf
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+CountIf[ <Condition>, <List> ]::
+CountIf[Condition, List]::
+  Counts the number of elements in the list satisfying the condition.
+
+[EXAMPLE]
+====
+
+
+* `++CountIf[x < 3, {1, 2, 3, 4, 5}]++` gives you the number 2.
+* `++CountIf[x < 3, A1:A10]++`, where _A1:A10_ is a range of cells in the spreadsheet, counts all cells whose values are
+less than 3.
+
+====
+
+[NOTE]
+====
+For list of numbers arbitrary condition may be used. For list of other objects one can use only conditions of
+the form `++x==constant++` or `++x!=constant++`.
+
+====

@@ -1,0 +1,38 @@
+= 최소제곱로그 명령
+:page-en: commands/FitLog
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+FitLog( <List of Points> )::
+  Calculates the logarithmic regression curve.
+
+[EXAMPLE]
+====
+
+`++FitLog({(ℯ, 1), (ℯ^2, 4)})++` yields _-2 + 3 ln(x)_.
+
+====
+
+== CAS Syntax
+
+FitLog( <List of Points> )::
+  Calculates the logarithmic regression curve.
+
+[EXAMPLE]
+====
+
+`++FitLog({(ℯ, 1), (ℯ^2, 4)})++` yields _3 ln(x) - 2_.
+
+====
+
+[NOTE]
+====
+
+* Euler's number ℯ can be obtained by pressing [.kcode]#ALT # + [.kcode]# e#.
+* See also xref:/s_index_php?title=FitExp_Command_action=edit_redlink=1.adoc[FitExp Command],
+xref:/s_index_php?title=FitPoly_Command_action=edit_redlink=1.adoc[FitPoly Command],
+xref:/s_index_php?title=FitPow_Command_action=edit_redlink=1.adoc[FitPow Command] and
+xref:/s_index_php?title=FitSin_Command_action=edit_redlink=1.adoc[FitSin Command].
+* If you work with big/small numbers, you should consider normalizing them for a more accurate result, see
+xref:/s_index_php?title=Normalize_Command_action=edit_redlink=1.adoc[Normalize Command].
+
+====

@@ -1,0 +1,28 @@
+= Determinant 指令
+:page-en: commands/Determinant
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Determinant[ <Matrix> ]::
+  Gives the determinant of the given matrix.
+
+[EXAMPLE]
+====
+
+
+`++Determinant[{{1, 2}, {3, 4}}]++` yields _a = -2_.
+
+====
+
+== CAS Syntax
+
+Determinant[ <Matrix> ]::
+  Gives the determinant of the given matrix. If matrix contains undefined variables, it yields a formula for the
+  determinant.
+
+[EXAMPLE]
+====
+
+
+`++Determinant[{{1, a}, {b, 4}}]++` yields _-a b + 4_.
+
+====

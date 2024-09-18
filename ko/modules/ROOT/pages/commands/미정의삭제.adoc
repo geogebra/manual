@@ -1,0 +1,21 @@
+= 미정의삭제 명령
+:page-en: commands/RemoveUndefined
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+RemoveUndefined( <List> )::
+  Removes undefined objects from a list.
+
+[EXAMPLE]
+====
+
+`++RemoveUndefined(Sequence((-1)^i, i, -3, -1, 0.5))++` removes the second and fourth element of the sequence since
+expressions stem:[(-1)^\{1.5}] and stem:[(-1)^\{2.5}] are undefined and yields list _\{-1, 1, -1}._
+
+====
+
+[NOTE]
+====
+
+See also xref:/s_index_php?title=Remove_Command_action=edit_redlink=1.adoc[Remove Command].
+
+====

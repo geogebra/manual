@@ -1,0 +1,114 @@
+= 정리 명령
+:page-en: commands/Simplify
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+Simplify( <Function> )::
+  Simplifies the terms of the given function, if possible.
+Simplify( <Text> )::
+  Attempts to tidy up text expressions by removing repeated negatives etc.
+
+[EXAMPLE]
+====
+
+For _a_ = _b_ = _c_ = -1 `++Simplify("f(x) = " + a + "x² + " + b + "x + " + c)++` yields the text _f(x) = -x^2^ - x -
+1_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Simplify(x + x + x)++` yields the function _f(x) = 3x_.
+
+====
+
+[NOTE]
+====
+
+The xref:/s_index_php?title=FormulaText_Command_action=edit_redlink=1.adoc[FormulaText Command] normally produces better
+results and is simpler.
+
+====
+
+[NOTE]
+====
+
+This command needs to load the Computer Algebra System, so can be slow on some computers. Try using the
+xref:/s_index_php?title=Polynomial_Command_action=edit_redlink=1.adoc[Polynomial Command] instead.
+
+====
+
+== CAS Syntax
+
+Simplify( <Function> )::
+  Simplifies the terms of the given function, if possible. Undefined variables can be included in the terms.
+
+/s_index_php?title=틀:Examples_action=edit_redlink=1.adoc[틀:Examples]
+
+[NOTE]
+====
+
+See also xref:/s_index_php?title=Factor_Command_action=edit_redlink=1.adoc[Factor Command],
+xref:/s_index_php?title=Assume_Command_action=edit_redlink=1.adoc[Assume Command],
+xref:/s_index_php?title=PartialFractions_Command_action=edit_redlink=1.adoc[PartialFractions Command],
+xref:/s_index_php?title=Expand_Command_action=edit_redlink=1.adoc[Expand Command],
+xref:/s_index_php?title=Polynomial_Command_action=edit_redlink=1.adoc[Polynomial Command].
+
+====
+
+== [#정리_명령_2]####[#.EC.A0.95.EB.A6.AC_.EB.AA.85.EB.A0.B9_2]##정리 명령##
+
+정리[ <함수> ]
+
+주어진 함수를 가능한 간단하게 정리합니다.
+
+정리[ <텍스트> ]
+
+텍스트를 깔끔하게 정리합니다.
+
+[NOTE]
+====
+
+이 명령은 컴퓨터의 대수 시스템을 이용하므로 일부 컴퓨터에서 속도가 느릴 수 있습니다. 대신
+xref:/commands/다항식.adoc[다항식_명령]을 참고하세요.
+
+====
+
+[EXAMPLE]
+====
+
+__a = -1, b = 2, c = -3__일 때, `++정리[ "f(x) = " + a + " x² + " + b + "x + " + c ]++`를 입력하면 텍스트 __f(x) = -x² +
+2x -3__을 구할 수 있다.
+
+====
+
+[EXAMPLE]
+====
+
+====
+
+[NOTE]
+====
+
+xref:/commands/수식.adoc[수식_명령]을 이용하면 더 심플하고 나은 결과를 얻을 수 있습니다.
+
+====
+
+=== CAS 창
+
+정리[ <함수> ]::
+  가능한 경우 주어진 함수를 정리합니다. 정의되지 않은 변수가 포함될 수도 있습니다.
+
+[EXAMPLE]
+====
+
+`++정리[ 3 * x + 4 * x + a * x ]++`를 입력하면 __xa + 7x__를 구할 수 있습니다.
+
+====
+
+[NOTE]
+====
+
+xref:/commands/인수분해.adoc[인수분해_명령]을 참고하세요.
+
+====

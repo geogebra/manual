@@ -1,0 +1,34 @@
+= 반복원소제거 명령
+:page-en: commands/Unique
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+Unique( <List> )::
+  Returns list of elements of the given list in ascending order, repetitive elements are included only once. Works for
+  both a list of numbers and a list of text.
+
+[EXAMPLE]
+====
+
+* `++Unique({1, 2, 4, 1, 4})++` yields _\{1, 2, 4}_.
+* `++Unique({"a", "b", "Hello", "Hello"})++` yields _\{"'Hello", "a", "b"}_.
+
+====
+
+[NOTE]
+====
+
+See also xref:/s_index_php?title=Frequency_Command_action=edit_redlink=1.adoc[Frequency command].
+
+====
+
+== CAS Syntax
+
+Unique( <List> )::
+  Returns a list where each element of the given list occurs only once.
+
+[EXAMPLE]
+====
+
+`++Unique({1, x, x, 1, a})++` yields _\{1, x, a}_.
+
+====

@@ -1,0 +1,44 @@
+= FrequencyTable 指令
+:page-en: commands/FrequencyTable
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+FrequencyTable[ <List of Class Boundaries>, <List of Heights> ]::
+FrequencyTable[ <List of Class Boundaries>, <List of Raw Data>, <Boolean Use Density> , <Density Scale Factor>
+(optional) ]::
+FrequencyTable[ <Boolean Cumulative>, <List of Class Boundaries>, <List of Raw Data>, <Boolean Use Density> , <Density
+Scale Factor> (optional) ]::
+FrequencyTable[ <List of Raw Data L> ]::
+  Returns a table (as text) whose first column contains sorted list of unique elements of _L_ and second column contains
+  the count of the occurrences of value in the first column. List _L_ can be numbers or text.
+
+FrequencyTable[ <Boolean Cumulative C>, <List of Raw Data L>]::
+  If _Cumulative = false_, returns the same table as Frequency[ <L> ]
+  If _Cumulative = true_, returns a table whose first column is the same as in FrequencyTable[L] and the second contains
+  cumulative frequencies of values in the first column.
+
+FrequencyTable[<List of Class Boundaries C>, <List of Raw Data L> ]::
+  Returns a table (as text) whose first column contains intervals (classes) and second column contains the count of
+  numbers in _L_ which belong to the interval in the first column. All intervals except the highest interval are of the
+  form [a, b). The highest interval has the form [a, b].
+
+FrequencyTable[ <Boolean Cumulative>,<List of Class Boundaries C>,<List of Raw Data L>]::
+  If _Cumulative = false_, returns the same table as FrequencyTable[ <List of Class Boundaries>, <List of Raw Data> ]
+  If _Cumulative = true_, returns a table whose first column is the same as in FrequencyTable[L] and the second contains
+  cumulative frequencies of values in the first column.
+
+FrequencyTable[<List of Class Boundaries>, <List of Raw Data>, <Use Density> , <Density Scale Factor> (optional) ]::
+  Returns a table (as text) whose first column contains intervals (classes) and second contains frequencies for the
+  corresponding xref:/s_index_php?title=Histogram_Command_action=edit_redlink=1.adoc[Histogram Command].
+
+FrequencyTable[ <Boolean Cumulative>, <List of Class Boundaries>, <List of Raw Data>, <Use Density> , <Density Scale
+Factor> (optional) ]::
+  Returns a table (as text) whose first column contains intervals (classes) and second contains frequencies for the
+  corresponding xref:/s_index_php?title=Histogram_Command_action=edit_redlink=1.adoc[Histogram Command].
+
+[NOTE]
+====
+This command is similar to xref:/s_index_php?title=Frequency_Command_action=edit_redlink=1.adoc[Frequency
+Command] and xref:/s_index_php?title=Histogram_Command_action=edit_redlink=1.adoc[Histogram Command]. Articles about
+these commands contain some related examples.
+
+====

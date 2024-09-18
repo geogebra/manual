@@ -1,0 +1,84 @@
+= 物件名稱與標籤
+:page-en: Labels_and_Captions
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+在 GeoGebra
+中，每個物件都有專屬的**標籤**（label）。標籤可以是單個或多個文字，甚至是下標。更多細節請參閱「xref:/物件的命名方式.adoc[物件的命名方式]」。
+
+== 顯示或隱藏標籤
+
+您可用不同的方式顯示或隱藏 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+**xref:/繪圖區.adoc[繪圖區]**中物件的標籤：
+
+* 點選 image:22px-Mode_showhidelabel.svg.png[Mode showhidelabel.svg,width=22,height=22]
+**xref:/tools/s_index_php?title=顯示／隱藏標籤_action=edit_redlink=1.adoc[顯示／隱藏標籤]工具**並點按您想要顯示或隱藏標籤的物件。
+* 在物件上開啟xref:/快顯功能表.adoc[快顯功能表]並點選 image:22px-Mode_showhidelabel.svg.png[Mode
+showhidelabel.svg,width=22,height=22] *顯示標籤*。
+* 開啟物件的 image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+*xref:/屬性.adoc[屬性]對話窗*，並在**一般**分頁勾選或取消勾選「顯示標籤」。
+
+== 名稱與數值
+
+In GeoGebra, every object has a unique name that can be used to label the object in the
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Graphics View_. In addition, an object
+can also be labeled using its value or its name and value. You can change this label setting in the
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Properties Dialog_ on tab _Basic_ by selecting the
+corresponding option _Name_, _Value_, or _Name & Value_ from the drop down menu next to the checkbox _Show Label_.
+
+[NOTE]
+====
+The value of a point is its coordinates, while the value of a function is its equation.
+
+====
+
+== 標籤文字
+
+However, sometimes you might want to give several objects the same label, for example, to label the four edges of a
+square _a_. In this case, GeoGebra offers captions for all objects, in addition to the three labeling options mentioned
+above. You can set the caption of an object on tab _Basic_ of the
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Properties Dialog_ by entering the desired caption
+into the text field called "Caption". Afterwards, you can select the labeling option "Caption" from the drop down menu
+next to the checkbox "Show Label".
+
+You can use following placeholders in captions:
+
+[cols=",",options="header",]
+|===
+|Placeholder |Meaning
+|%c |The value of the adjacent spreadsheet cell (to the right), which should be an independent textNot dynamic: i.e. the
+caption won't be updated unless you press [.kcode]#F9# or [.kcode]#Ctrl# + [.kcode]#R#
+
+|%v |Value
+
+|%n |Name
+
+|%d |Description
+
+|%f |Definition
+
+|%x |x coordinate (or x coefficient for the line a x + b y + c = 0)
+
+|%y |y coordinate (or y coefficient for the line a x + b y + c = 0)
+
+|%z |z coordinate (or constant _c' term for the line a x + b y + c = 0)_
+|===
+
+[EXAMPLE]
+====
+ Let A be a point and (1,2) be its coordinates. Setting the caption to "Point %n has coordinates %v" results in
+caption "Point A has coordinates (1,2)"
+
+====
+
+=== 標籤文字中使用 LaTeX
+
+You can also use xref:/LaTeX.adoc[LaTeX] in your labels, enclosing the desired LaTeX command in dollar characters (e.g.
+`++$ x^{2} $++`), and choose from a list of most commonly used Greek letters and operators, just clicking on the little
+box displayed at the end of the _Caption_ field.
+
+[EXAMPLE]
+====
+ If you want to display a nicely formatted math text, use LaTeX in captions, e.g. to display a fraction like
+stem:[ \frac\{a}\{b} ], in the caption field type: *`++$\frac{a}{b}$++`*.
+
+====

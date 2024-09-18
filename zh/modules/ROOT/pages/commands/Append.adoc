@@ -1,0 +1,43 @@
+= Append 指令
+:page-en: commands/Append
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Append( <串列>, <物件> )::
+  將 <物件> 新增到 <串列> 的後面之後產生一個新的串列。
+
+[EXAMPLE]
+====
+ `++Append({1, 2, 3}, 4)++` 建立串列 _\{1, 2, 3, 4}_。
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] 提示：*
+若要在原來的串列後方新增物件但不產生新的串列，可使用 xref:/commands/SetValue.adoc[SetValue_指令]。
+
+[EXAMPLE]
+====
+ 假設 `++A = {1, 2,  3}++`，則：`++SetValue(A, 4, 5)++` 可將 A 的值改為 _\{1, 2, 3, 5}_。
+
+====
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] 提示：* 請勿使用
+`++A=Append(A, 4)++`，否則會出現「循環式定義」的錯誤！
+
+====
+
+Append( <物件>, <串列> )::
+  將 <物件> 新增到 <串列> 的前面之後產生一個新的串列。
+
+[EXAMPLE]
+====
+ `++Append(4, {1, 2, 3})++` 建立串列 _\{4, 1, 2, 3}_。
+
+====

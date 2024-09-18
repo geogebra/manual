@@ -1,0 +1,34 @@
+= RandomBetween 指令
+:page-en: commands/RandomBetween
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+RandomBetween( <最小整數> , <最大整數> )::
+  產生一個數值，介於 <最小整數> 和 <最大整數> 之間（包含這兩個數）。
+RandomBetween( <最小整數> , <最大整數> , <固定> )::
+  產生一個數值，介於 <最小整數> 和 <最大整數> 之間（包含這兩個數）。若 <固定> 設為
+  true（真），僅會在載入檔案或按下復原／重複按鈕時才會更新一次數值。
+
+[EXAMPLE]
+====
+ `++RandomBetween(0, 10, true)++` 產生一個數值，介於 0 和 10 之間（包含這兩個數）。
+
+====
+
+[EXAMPLE]
+====
+ `++RandomBetween(0, 10)++` 產生一個數值，介於 0 和 10 之間（包含這兩個數）。
+
+====
+
+[NOTE]
+====
+按下 [.kcode]#F9# 可看出兩種語法的差異。
+
+====
+
+[NOTE]
+====
+請參閱
+xref:/commands/SetSeed.adoc[SetSeed_指令]、xref:/commands/RandomElement.adoc[RandomElement_指令]、xref:/commands/RandomBinomial.adoc[RandomBinomial_指令]、xref:/commands/RandomNormal.adoc[RandomNormal_指令]、xref:/commands/RandomPoisson.adoc[RandomPoisson_指令]、xref:/commands/RandomUniform.adoc[RandomUniform_指令]。
+
+====

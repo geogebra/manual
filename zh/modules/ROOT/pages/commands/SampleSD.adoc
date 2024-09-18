@@ -1,0 +1,35 @@
+= SampleSD 指令
+:page-en: commands/SampleSD
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+SampleSD[ <List of Numbers> ]::
+
+== CAS 視窗
+
+SampleSD[ <List of Numbers> ]::
+SampleSD[ <List of Numbers> ]::
+  Returns https://en.wikipedia.org/wiki/Standard_deviation#Estimation[sample standard deviation] of given
+  xref:/Lists.adoc[list] of numbers.
+
+[EXAMPLE]
+====
+
+
+`++SampleSD[{1, 2, 3}]++` yields _1_.
+
+====
+
+== CAS Syntax
+
+SampleSD[ <List of Numbers> ]::
+  Returns https://en.wikipedia.org/wiki/Standard_deviation#Estimation[sample standard deviation] of given
+  xref:/Lists.adoc[list] of numbers. If the list contains undefined variables, it yields a formula for the sample
+  standard deviation.
+
+[EXAMPLE]
+====
+
+
+`++SampleSD[{1, 2, a}]++` yields stem:[\frac\{\sqrt\{a²-3a+3}}\{\sqrt\{3}}].
+
+====

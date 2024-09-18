@@ -1,0 +1,42 @@
+= 幾何物件
+:page-en: Geometric_Objects
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+== 幾何物件的類型
+
+GeoGebra 可以處理各種不同的幾何物件：
+
+* xref:/點與向量.adoc[點與向量]
+* xref:/直線與坐標軸.adoc[直線與坐標軸]
+* xref:/圓錐曲線.adoc[圓錐曲線]
+* xref:/函數.adoc[函數]
+* xref:/曲線.adoc[曲線]
+* xref:/不等式.adoc[不等式]
+
+== 路徑
+
+有些物件統稱為**路徑**（path），例如：直線、圓錐曲線、圓弧、多邊形、函數、單變數不等式、區間、點列等。
+
+我們可以利用 xref:/commands/Point.adoc[Point
+指令]來產生路徑上的一個xref:/點與向量.adoc[點]。在路徑上的每個點都擁有一個介於 0 與 1 的參數，您可以利用
+xref:/commands/PathParameter.adoc[PathParameter 指令]來傳回此參數。
+
+[NOTE]
+====
+包含數個路徑的xref:/串列.adoc[串列]也視為廣義的路徑。
+
+====
+
+== 區域
+
+在 GeoGebra 中，我們將多邊形、圓錐曲線、圓弧、雙變數不等式等物件，稱為「區域型」物件。
+
+我們可以利用 xref:/commands/PointIn.adoc[PointIn_指令]或是 image:24px-Mode_pointonobject.svg.png[Mode
+pointonobject.svg,width=24,height=24] **xref:/tools/內點或邊點.adoc[內點或邊點]工具**來產生一個區域的內點。
+
+[NOTE]
+====
+請參閱相關的 image:24px-Mode_attachdetachpoint.svg.png[Mode attachdetachpoint.svg,width=24,height=24]
+*xref:/tools/s_index_php?title=附著／脫離點_action=edit_redlink=1.adoc[附著／脫離點]工具*。
+
+====

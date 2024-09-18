@@ -1,0 +1,159 @@
+= ODE풀기 명령
+:page-en: commands/SolveODE
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+SolveODE( <f'(x, y)> )::
+  Attempts to find the exact solution of the first order ordinary differential equation (ODE)
+  stem:[\frac\{dy}\{dx}(x)=f'(x, y(x))].
+SolveODE( <f'(x, y)>, <Point on f> )::
+  Attempts to find the exact solution of the first order ODE stem:[\frac\{dy}\{dx}(x)=f'(x, y(x))] and use the solution
+  which goes through the given point.
+SolveODE( <f'(x, y)>, <Start x>, <Start y>, <End x>, <Step> )::
+  Solves first order ODE stem:[\frac\{dy}\{dx}=f'(x, y)] numerically with given start point, end and step for _x_.
+
+[EXAMPLE]
+====
+
+`++SolveODE(-x*y, x(A), y(A), 5, 0.1)++` solves stem:[\frac\{dy}\{dx}=-xy] using previously defined _A_ as a starting
+point.
+
+====
+
+[EXAMPLE]
+====
+
+`++SolveODE(y / x, (1, 2))++` yields _y = 2x_.
+
+====
+
+[EXAMPLE]
+====
+
+`++SolveODE(2x / y)++` yields _stem:[\sqrt\{2} \sqrt\{-c_\{1}+x^\{2}}]_, where stem:[c_\{1}] is a constant.
+
+====
+
+[NOTE]
+====
+
+* xref:/s_index_php?title=Length_Command_action=edit_redlink=1.adoc[Length]( <Locus> ) allows you to find out how many
+points are in the computed locus.
+* xref:/s_index_php?title=First_Command_action=edit_redlink=1.adoc[First]( <Locus>, <Number> ) allows you to extract the
+points as a list.
+* To find the "reverse" solution, just enter a negative value for _End x_, for example
+`++SolveODE(-x*y, x(A), y(A), -5, 0.1)++`
+
+====
+
+[NOTE]
+====
+
+stem:[c_\{1}] will be created as an auxiliary object with a corresponding slider.
+
+====
+
+SolveODE( <y'>, <x'>, <Start x>, <Start y>, <End t>, <Step> )::
+  Solves first order ODE stem:[\frac\{dy}\{dx}=\frac\{f(x, y)}\{g(x, y)}] with given start point, maximal value of an
+  internal parameter _t_ and step for _t_. This version of the command may work where the first one fails e.g. when the
+  solution curve has vertical points.
+SolveODE( <b(x)>, <c(x)>, <f(x)>, <Start x>, <Start y>, <Start y'>, <End x>, <Step> )::
+  Solves second order ODE stem:[y'' + b(x) y' + c(x) y = f(x)].
+
+[EXAMPLE]
+====
+
+`++SolveODE(x^2, 2x, 2x^2 + x, x(A), y(A), 0, 5, 0.1)++` solves the second order ODE using previously defined _A_ as a
+starting point.
+
+====
+
+[EXAMPLE]
+====
+
+`++SolveODE(-x, y, x(A), y(A), 5, 0.1)++` solves stem:[\frac\{dy}\{dx}=- \frac\{x}\{y} ] using previously defined _A_ as
+a starting point.
+
+====
+
+[NOTE]
+====
+
+Always returns the result as locus. The algorithms are currently based on
+https://en.wikipedia.org/wiki/Runge-Kutta_methods[Runge-Kutta numeric methods].
+
+====
+
+[NOTE]
+====
+
+To find the "reverse" solution, just enter a negative value for _End t_, for example
+`++SolveODE(-x, y, x(A), y(A), -5, 0.1)++`.
+
+====
+
+[NOTE]
+====
+
+See also xref:/s_index_php?title=SlopeField_Command_action=edit_redlink=1.adoc[SlopeField command].
+
+====
+
+== CAS Syntax
+
+SolveODE( <Equation> )::
+  Attempts to find the exact solution of the first or second order ODE. For first and second derivative of _y_ you can
+  use _y'_ and _y''_ respectively.
+SolveODE( <Equation>, <Point(s) on f> )::
+  Attempts to find the exact solution of the given first or second order ODE which goes through the given point(s).
+SolveODE( <Equation>, <Point(s) on f>, <Point(s) on f'> )::
+  Attempts to find the exact solution of the given first or second order ODE and goes through the given _point(s) on f_
+  and _f'_ goes through the given _point(s) on f'_ .
+SolveODE( <Equation>, <Dependent Variable>, <Independent Variable>, <Point(s) on f> )::
+  Attempts to find the exact solution of the given first or second order ODE which goes through the given point(s).
+SolveODE( <Equation>, <Dependent Variable>, <Independent Variable>, <Point(s) on f>, <Point(s) on f'> )::
+  Attempts to find the exact solution of the given first or second order ODE which goes through the given _point(s) on
+  f_ and _f'_ goes through the given _point(s) on f'_ .
+
+[EXAMPLE]
+====
+
+`++SolveODE(v' = v / w, v,  w, (1, 2), (0, 2))++` yields _v = 2w_.
+
+====
+
+[EXAMPLE]
+====
+
+`++SolveODE(v' = v / w, v,  w, (1, 2))++` yields _v = 2w_.
+
+====
+
+[EXAMPLE]
+====
+
+`++SolveODE(y'' - 3y' + 2 = x, (2, 3), (1, 2))++` yields stem:[ y = \frac\{-9 x^2 e^3 + 30 x e^3 - 32 \{(e^3)}^2 + 138
+e^3 + 32 e^\{3 x} }\{54 e^3} ].
+
+====
+
+[EXAMPLE]
+====
+
+`++SolveODE(y' = y / x, (1, 2))++` yields _y = 2x_.
+
+====
+
+[EXAMPLE]
+====
+
+`++SolveODE(y' = y / x)++` yields _y = c~1~ x_.
+
+====
+
+[NOTE]
+====
+
+For compatibility with input bar, if the first parameter is just an expression without _y'_ or _y''_, it is supposed to
+be right hand side of ODE with left hand side _y'_.
+
+====

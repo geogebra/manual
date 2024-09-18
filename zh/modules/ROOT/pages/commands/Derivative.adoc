@@ -1,0 +1,82 @@
+= Derivative 指令
+:page-en: commands/Derivative
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Derivative[ <Function> ]::
+Derivative[ <Function>, <Number> ]::
+Derivative[ <Curve> ]::
+Derivative[ <Curve>, <Number> ]::
+
+== CAS 視窗
+
+Derivative[ <Function> ]::
+Derivative[ <Function> ]::
+  Returns the derivative of the function.
+Derivative[ <Function>, <Number n> ]::
+  Returns the __n__^th^ derivative of the function.
+Derivative[ <Curve> ]::
+  Returns the derivative of the curve.
+Derivative[ <Curve>, <Number n> ]::
+  Returns the __n__^th^ derivative of the curve.
+
+[NOTE]
+====
+It only works for parametric curves.
+
+====
+
+[NOTE]
+====
+It only works for parametric curves.
+
+====
+
+[NOTE]
+====
+You can use `++f'(x)++` instead of `++Derivative[f]++`, or `++f''(x)++` instead of `++Derivative[f, 2]++`, and
+so on.
+
+====
+
+== CAS Syntax
+
+In xref:/CAS_View.adoc[CAS View] only following syntax is supported:
+
+Derivative[ <Expression f> ]::
+  Returns derivative of _f_ with respect to _x_.
+Derivative[ <Expression f>, <Variable a> ]::
+  Returns derivative of _f_ with respect to _a_.
+Derivative[ <Expression f>, <Variable a>, <Number n> ]::
+  Returns the __n__^th^ derivative of _f_ with respect to _a_.
+
+[EXAMPLE]
+====
+
+
+`++Derivative[a x^3, x, 2]++` yields _6 a x_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++Derivative[a x^3, a]++` yields _x^3^_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++Derivative[a x^3]++` yields _3 a x^2^_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++Derivative[x^2]++` yields _2 x_.
+
+====

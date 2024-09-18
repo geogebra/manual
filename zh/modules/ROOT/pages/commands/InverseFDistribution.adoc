@@ -1,0 +1,10 @@
+= InverseFDistribution 指令
+:page-en: commands/InverseFDistribution
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+InverseFDistribution[ <Numerator Degrees of Freedom>, <Denominator Degrees of Freedom>, <Probability> ]::
+InverseFDistribution[ <Numerator Degrees of Freedom n>, <Denominator Degrees of Freedom d>, <Probability p> ]::
+  Computes the inverse of cumulative distribution function of
+  https://en.wikipedia.org/wiki/F-distribution[F-distribution] at _p_, where the exponential distribution is given by
+  parameters _n, d_. In other words, finds _t_ such that _P(X≤t)=p_, where X is random variable with F-distribution.
+  Probability _p_ must be from [0,1].

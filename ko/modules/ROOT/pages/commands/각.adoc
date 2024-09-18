@@ -1,0 +1,337 @@
+= 각 명령
+:page-en: commands/Angle
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+Angle( <Object> )
+
+* *Conic:* Returns the angle of twist of a conic section’s major axis (see command
+xref:/s_index_php?title=Axes_Command_action=edit_redlink=1.adoc[Axes]).
+
+[EXAMPLE]
+====
+
+`++Angle(x²/4+y²/9=1)++` yields _90°_ or _1.57_ if the default angle unit is _radians_.
+
+====
+
+[NOTE]
+====
+
+It is not possible to change the Angle Unit to Radian in GeoGebra 5.0 Web and Tablet App Version.
+
+====
+
+* *Vector:* Returns the angle between the _x_‐axis and given vector.
+
+[EXAMPLE]
+====
+
+`++Angle(Vector((1, 1)))++` yields _45°_ or the corresponding value in _radians_.
+
+====
+
+* *Point:* Returns the angle between the _x_‐axis and the position vector of the given point.
+
+[EXAMPLE]
+====
+
+`++Angle((1, 1))++` yields _45°_ or the corresponding value in _radians_.
+
+====
+
+* *Number:* Converts the number into an angle (result in [0,360°] or [0,2π] depending on the default angle unit).
+
+[EXAMPLE]
+====
+
+`++Angle(20)++` yields _65.92°_ when the default unit for angles is _degrees_.
+
+====
+
+* *Polygon:* Creates all angles of a polygon in mathematically positive orientation (counter clockwise).
+
+[EXAMPLE]
+====
+
+`++Angle(Polygon((4, 1), (2, 4), (1, 1)))++` yields _56.31°_, _52.13°_ and _71.57°_ or the corresponding values in
+_radians_.
+
+====
+
+[NOTE]
+====
+
+If the polygon was created in counter clockwise orientation, you get the interior angles. If the polygon was created in
+clockwise orientation, you get the exterior angles.
+
+====
+
+Angle( <Vector>, <Vector> )::
+  Returns the angle between two vectors (result in [0,360°] or [0,2π] depending on the default angle unit).
+
+[EXAMPLE]
+====
+
+`++Angle(Vector((1, 1)), Vector((2, 5)))++` yields _23.2°_ or the corresponding value in _radians_.
+
+====
+
+Angle( <Line>, <Line> )::
+  Returns the angle between the direction vectors of two lines (result in [0,360°] or [0,2π] depending on the default
+  angle unit).
+
+[EXAMPLE]
+====
+
+* `++Angle(y = x + 2, y = 2x + 3)++` yields _18.43°_ or the corresponding value in _radians_..
+* `++Angle(Line((-2, 0, 0), (0, 0, 2)), Line((2, 0, 0), (0, 0, 2)))++` yields _90°_ or the corresponding value in
+_radians_.
+
+and in _CAS View_ :
+
+* `++Angle(x + 2,  2x + 3)++` yields stem:[acos \left( 3 \cdot \frac\{\sqrt\{10}}\{10} \right)].
+* Define `++f(x) := x + 2++` and `++g(x) := 2x + 3++` then command `++Angle(f(x), g(x))++` yields stem:[acos \left(3
+\cdot \frac\{\sqrt\{10}}\{10} \right)].
+
+====
+
+Angle( <Line>, <Plane> )::
+  Returns the angle between the line and the plane.
+
+[EXAMPLE]
+====
+
+* `++Angle(Line((1, 2, 3),(-2, -2, 0)), z = 0)++` yields _30.96°_ or the corresponding value in _radians_.
+
+====
+
+Angle( <Plane>, <Plane> )::
+  Returns the angle between the two given planes.
+
+[EXAMPLE]
+====
+
+* `++Angle(2x - y + z = 0, z = 0)++` yields _114.09°_ or the corresponding value in _radians_.
+
+====
+
+Angle( <Point>, <Apex>, <Point> )::
+  Returns the angle defined by the given points (result in [0,360°] or [0,2π] depending on the default angle unit).
+
+[EXAMPLE]
+====
+
+`++Angle((1, 1), (1, 4), (4, 2))++` yields _56.31°_ or the corresponding value in _radians_.
+
+====
+
+Angle( <Point>, <Apex>, <Angle> )::
+  Returns the angle of size _α_ drawn from _point_ with _apex_.
+
+[EXAMPLE]
+====
+
+:*`++Angle((0, 0), (3, 3), 30°)++` yields _30°_ and the point _(1.9, -1.1)_.
+
+====
+
+[NOTE]
+====
+
+The point _Rotate( <Point>, <Angle>, <Apex> )_ is created as well.
+
+====
+
+Angle( <Point>, <Point>, <Point>, <Direction> )::
+  Returns the angle defined by the points and the given _Direction_, that may be a line or a plane (result in [0,360°]
+  or [0,2π] depending on the default angle unit).
+
+[EXAMPLE]
+====
+
+`++Angle((1, -1, 0),(0, 0, 0),(-1, -1, 0), zAxis)++` yields _270°_ and
+`++Angle((-1, -1, 0),(0, 0, 0),(1, -1, 0), zAxis)++` yields _90°_ or the corresponding values in _radians_.
+
+====
+
+[NOTE]
+====
+
+Using a _Direction_ allows to bypass the standard display of angles in 3__D__ which can be set as just [0,180°] or
+[180°,360°], so that given three points _A_, _B_, _C_ in 3__D__ the commands `++Angle(A, B, C)++` and
+`++Angle(C, B, A)++` return their real measure instead of the one restricted to the set intervals.
+
+====
+
+[NOTE]
+====
+
+See also image:20px-Mode_angle.svg.png[Mode angle.svg,width=20,height=20]
+xref:/s_index_php?title=Angle_Tool_action=edit_redlink=1.adoc[Angle] and image:20px-Mode_anglefixed.svg.png[Mode
+anglefixed.svg,width=20,height=20] xref:/s_index_php?title=Angle_with_Given_Size_Tool_action=edit_redlink=1.adoc[Angle
+with Given Size] tools.
+
+====
+
+== [#각_명령_2]####[#.EA.B0.81_.EB.AA.85.EB.A0.B9_2]##각 명령##
+
+각( <대상> )
+
+* *이차곡선:* 이차곡선의 주축이 이루는 각을 반환한다. (https://wiki.geogebra.org/ko/%EC%B6%95_%EB%AA%85%EB%A0%B9[축]
+명령을 참조).
+
+[EXAMPLE]
+====
+
+`++각(x²/4+y²/9=1)++` 은 _90°_ 또는 각이 __라디안__으로 설정된 경우 _1.57_ 의 결과를 얻는다.
+
+====
+
+* *벡터:* __x__축과 주어진 벡터 사이의 각을 반환한다.
+
+[EXAMPLE]
+====
+
+`++각(벡터((1, 1)))++` 은 _45°_ 또는 그에 해당되는 _라디안_ 값을 얻는다.
+
+====
+
+* *점:* __x__축과 주어진 점에 대한 위치 벡터 사이의 각을 반환한다.
+
+[EXAMPLE]
+====
+
+`++각((1, 1))++` 은 _45°_ 또는 그에 해당되는 _라디안_ 값을 얻는다.
+
+====
+
+* *수:* 수를 각도로 변환한다. (기본 각도 단위에 따라 결과는 [0,360°] 또는 [0,2π]의 값으로 얻는다.)
+
+[EXAMPLE]
+====
+
+`++각(20)++` 은 각의 기본 단위가 __각도__일 때 _65.92°_ 이다.
+
+====
+
+* *다각형:* 수학적으로 양의 방향(시계 반대 방향)을 따라 다각형의 모든 각을 생성한다.
+
+[EXAMPLE]
+====
+
+`++각(다각형((4, 1), (2, 4), (1, 1)))++` 은 _56.31°_, _52.13°_, _71.57°_ 또는 그에 해당되는 _라디안_ 값을 얻는다.
+
+====
+
+[NOTE]
+====
+
+만일 다각형이 시계 반대 방향으로 생성된 경우 내각이 표시된다. 만일 다각형이 시계 방향으로 생성된 경우 외각이 표시된다.
+
+====
+
+각( <벡터>, <벡터> )::
+  두 벡터 사이의 각을 반환한다. (기본 각도 단위에 따라 결과는 [0,360°] 또는 [0,2π]의 값으로 얻는다.)
+
+[EXAMPLE]
+====
+
+`++각(벡터((1, 1)), 벡터((2, 5)))++` 는 _23.2°_ 또는 그에 해당되는 _라디안_ 값을 얻는다.
+
+====
+
+각( <직선>, <직선> )::
+  두 직선의 방향 벡터 사이의 각을 반환한다. (기본 각도 단위에 따라 결과는 [0,360°] 또는 [0,2π]의 값으로 얻는다.)
+
+[EXAMPLE]
+====
+
+* `++각(y = x + 2, y = 2x + 3)++` 은 _18.43°_ 또는 그에 해당되는 _라디안_ 값을 얻는다.
+* `++각(직선((-2, 0, 0), (0, 0, 2)), 직선((2, 0, 0), (0, 0, 2)))++` 는 _90°_ 또는 그에 해당되는 _라디안_ 값을 얻는다.
+
+_CAS 창_ :
+
+* `++각(x + 2,  2x + 3)++` 은 stem:[acos \left( 3 \cdot \frac\{\sqrt\{10}}\{10} \right)]을 얻는다.
+* `++f(x) := x + 2++` 와 `++g(x) := 2x + 3++` 를 정의하자. 명령어 `++각(f(x), g(x))++` 은 stem:[acos \left(3 \cdot
+\frac\{\sqrt\{10}}\{10} \right)]를 얻는다.
+
+====
+
+각( <직선>, <평면> )::
+  직선과 평면 사이의 각을 반환한다.
+
+[EXAMPLE]
+====
+
+* `++각(직선((1, 2, 3),(-2, -2, 0)), z = 0)++` 은 _30.96°_ 또는 그에 해당되는 _라디안_ 값을 얻는다.
+
+====
+
+각( <평면>, <평면> )::
+  주어진 두 평면 사이의 각을 반환한다.
+
+[EXAMPLE]
+====
+
+* `++각(2x - y + z = 0, z = 0)++` 은 _114.09°_ 또는 그에 해당되는 _라디안_ 값을 얻는다.
+
+====
+
+각( <점>, <꼭짓점>, <점> )::
+  주어진 점에 의해 정의된 각을 반환한다. (기본 각도 단위에 따라 결과는 [0,360°] 또는 [0,2π]의 값으로 얻는다.)
+
+[EXAMPLE]
+====
+
+`++각((1, 1), (1, 4), (4, 2))++` 은 _56.31°_ 또는 그에 해당되는 _라디안_ 값을 얻는다.
+
+====
+
+각( <점>, <꼭짓점>, <각> )::
+  꼭짓점과 점으로부터 각도만큼 회전된 점을 반환한다.
+
+[EXAMPLE]
+====
+
+:*`++각((0, 0), (3, 3), 30°)++` 은 점 __(1.9, -1.1)__을 얻는다.
+
+====
+
+[NOTE]
+====
+
+__회전( <점>, <각>, <꼭짓점> )__에 의해 생성되는 점은 잘 생성된다.
+
+====
+
+각( <점>, <점>, <점>, <방향> )::
+  직선 또는 평면에서 주어진 __방향__과 점에 의해 정의된 각을 반환한다. (기본 각도 단위에 따라 결과는 [0,360°] 또는
+  [0,2π]의 값으로 얻는다.)
+
+[NOTE]
+====
+
+__방향__을 사용하는 것은 3__차원__에서 [0,180°] 또는 [180°,360°]으로 설정된 각의 표준적인 제시 방식을 우회하도록 하여,
+3__차원__에서 주어진 세 점 _A_, _B_, __C__의 명령어 `++각(A, B, C)++` 와 `++각(C, B, A)++`는 설정된 구간으로 제한된 값
+대신 각의 실측도를 반환한다.
+
+====
+
+[EXAMPLE]
+====
+
+`++각((1, -1, 0),(0, 0, 0),(-1, -1, 0), z축)++` 은 _270°_, `++각((-1, -1, 0),(0, 0, 0),(1, -1, 0), z축)++` 은 _90°_ 또는
+그에 해당되는 _라디안_ 값을 얻는다.
+
+====
+
+[NOTE]
+====
+
+image:20px-Mode_angle.svg.png[Mode angle.svg,width=20,height=20]
+https://wiki.geogebra.org/ko/%EA%B0%81_%EB%8F%84%EA%B5%AC["각 도구"] 와 image:20px-Mode_anglefixed.svg.png[Mode
+anglefixed.svg,width=20,height=20]
+https://wiki.geogebra.org/ko/%EC%A3%BC%EC%96%B4%EC%A7%84_%ED%81%AC%EA%B8%B0%EC%9D%98_%EA%B0%81_%EB%8F%84%EA%B5%AC["주어진
+크기의 각 도구"]를 참고하시오.
+
+====

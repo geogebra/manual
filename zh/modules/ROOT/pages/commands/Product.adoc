@@ -1,0 +1,49 @@
+= Product 指令
+:page-en: commands/Product
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Product[ <List of Numbers> ]::
+Product[ <List of Numbers>, <Number of Elements> ]::
+
+== CAS 視窗
+
+Product[ <List of Numbers> ]::
+Product[ <List of Numbers>, <Number of Elements> ]::
+Product[ <List of Numbers> ]::
+  Calculates the product of all numbers in the list.
+Product[ <List of Numbers>, <Number of Elements>]::
+  Calculates the product of the first _n_ list elements.
+
+[EXAMPLE]
+====
+
+
+`++Product[{1, 2, 3, 4}, 3]++` yields _6_.
+
+====
+
+== CAS Specific Syntax
+
+In xref:/CAS_View.adoc[CAS View] only the following syntax is allowed:
+
+Product[ <List of expressions> ]::
+  Calculates the product of all elements in the list.
+Product[ <Expression>, <Variable>, <Start>, <End> ]::
+  Calculates the product of the expressions that are obtained by replacing the given variable with every integer from
+  _start_ to _end_.
+
+[EXAMPLE]
+====
+
+
+`++Product[x + 1,  x,  2, 3]++` yields _12_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++Product[{1, 2, x}]++` yields _2x_.
+
+====

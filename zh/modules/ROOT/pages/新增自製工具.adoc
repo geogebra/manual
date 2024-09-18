@@ -1,0 +1,51 @@
+= 新增自製工具
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+首先，畫好您的自製工具之後將會產生的圖形。接著在工具功能表中，點選「image:Menu_Create_Tool.png[Menu Create
+Tool.png,width=16,height=16]新增自製工具
+...」來開啟對話窗。您必須依序在**輸出物件**、**輸入物件**和**名稱與圖示**三個頁面填入資料，才能建立您的自製工具。
+
+[EXAMPLE]
+====
+
+此例將建立一個自製工具，當您在繪圖區點選任意三點後，除了產生一個以這三點為頂點的三角形，同時畫出此三角形的外接圓與圓上一點。
+
+* 開啟 GeoGebra 進入xref:/繪圖區.adoc[繪圖區]，並隱藏座標軸。
+* 以「image:Tool_Polygon.gif[Tool Polygon.gif,width=32,height=32]多邊形」工具畫出一任意三角形
+_poly1_。再以「image:Mode_circle3.png[Mode circle3.png,width=32,height=32]圓（過三點）」工具點選三角形 poly1 的三頂點
+_A_、_B_、_C_，產生外接圓 _d_。最後以「image:Mode_point.png[Mode point.png,width=32,height=32]新點」工具在圓 _d_
+上任意處點一下，產生圓上一點 _D_，此時 _D_ 點只能在圓周上移動。
+* 點選工具功能表上的「image:Menu_Create_Tool.png[Menu Create Tool.png,width=16,height=16]新增自製工具 ...」。
+* 指定輸出物件：直接在xref:/繪圖區.adoc[繪圖區]上點選三角形 _poly1_ 、圓 _d_ 和點
+_D_，或是從對話窗的下拉式選單選取。確定三個物件皆有列入後，點選「下一步 >」。
+* 指定輸入物件：GeoGebra 會自動幫您設定好輸入物件（此例為點 _A_、點 _B_、點
+_C_）。您可在此頁面新增或刪除物件，或是更改它們的順序。確認後點選「下一步 >」。
+* 為您的自製工具指定**工具名稱**和**指令名稱**（建議以英文命名）。此例假設工具名稱為「三角形的外接圓」且指令名稱為「ccTool」。除此之外，您可以新增**工具說明**，例如：「在任意處點選三點，即可建立三角形及其外接圓」。或是更改自製工具的圖示。
+
+[NOTE]
+====
+設定的工具名稱和圖示將會顯示在xref:/工具列.adoc[工具列]，而指令名稱可用於xref:/指令列.adoc[指令列]。
+
+====
+
+* 當您要透過滑鼠使用此自製工具時，只要在工具列上點選圖示，並在繪圖區點選任意三點即可建立新物件。若要透過指令使用工具，在xref:/指令列.adoc[指令列]輸入
+`++ccTool[A,B,C]++` 後按下 [.kcode]#Enter# 鍵（若本來不存在 _A_、_B_、_C_ 三點，必須事先建立）。
+
+====
+
+[NOTE]
+====
+
+*備註：*
+使用自製工具產生的物件之中，若含有應變物件，此應變物件無法移動。例如：當您使用上述範例中的自製工具「三角形的外接圓」畫出圖形後，會發現圓上的
+_D_ 點無法移動。要解決此問題，可將自製工具的構圖步驟，以指令形式儲存成串列，並配合使用
+/s_index_php?title=En:Execute_Command_action=edit_redlink=1.adoc[Execute 指令]。
+
+* 在空白xref:/繪圖區.adoc[繪圖區]，以「image:Mode_point.png[Mode point.png,width=32,height=32]新點」工具隨意建立
+_A_、_B_、_C_ 三點。
+* 在xref:/指令列.adoc[指令列]輸入：`++list = {"Polygon[%1,%2,%3]", "d:Circle[%1,%2,%3]", "Point[d]"}++`，按下
+[.kcode]#Enter# 鍵後，建立串列物件儲存指令。
+* 在xref:/指令列.adoc[指令列]輸入：`++Execute[list,A,B,C]++`，按下 [.kcode]#Enter#
+鍵後，會產生與自製工具「三角形的外接圓」相同的圖形，但圓上的 _D_ 點可以移動。
+
+====

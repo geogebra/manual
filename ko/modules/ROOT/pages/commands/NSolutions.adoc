@@ -1,0 +1,64 @@
+= NSolutions 명령
+:page-en: commands/NSolutions
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+이 명령은 오직 xref:/CAS_창.adoc[CAS 창] 에서만 작동합니다..
+
+The following commands are only available in the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View].
+
+NSolutions( <Equation> )::
+  Attempts (numerically) to find a solution for the equation for the main variable. For non-polynomials you should
+  always specify a starting value (see below)
+NSolutions( <Equation>, <Variable> )::
+  Attempts (numerically) to find a solution of the equation for the given unknown variable. For non-polynomials you
+  should always specify a starting value (see below)
+NSolutions( <Equation>, <Variable = starting value> )::
+  Finds numerically the list of solutions to the given equation for the given unknown variable with its starting value.
+
+[EXAMPLE]
+====
+
+* `++NSolutions(cos(x) = x, x = 0)++` yields _\{0.74}_
+* `++NSolutions(a^4 + 34a^3 = 34, a = 3)++` yields the list _\{0.99}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++NSolutions(a^4 + 34a^3 = 34, a)++` yields _\{a = -34.00086498588374, a = 0.9904738885574178}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++NSolutions(x^6 - 2x + 1 = 0)++` yields _\{0.51, 1}_ or _\{0.508660391642, 1}_ (the number of decimals depends on the
+choosen in xref:/s_index_php?title=Options_Menu_action=edit_redlink=1.adoc[global rounding])
+
+====
+
+NSolutions( <List of Equations>, <List of Variables> )::
+  Attempts (numerically) to find a solution of the set of equations for the given set of unknown variables.
+
+[EXAMPLE]
+====
+
+`++NSolutions({pi / x = cos(x - 2y), 2 y - pi = sin(x)}, {x = 3, y = 1.5})++` yields the list _\{3.14, 1.57}_
+
+====
+
+[NOTE]
+====
+
+* If you don't give a starting point like _a=3_ or _\{x = 3, y = 1.5}_ the numerical algorithm may find it hard to find
+a solution (and giving a starting point doesn't guarantee that a solution will be found)
+* The number of decimals depends on the choosen in
+xref:/s_index_php?title=Options_Menu_action=edit_redlink=1.adoc[global rounding].
+* NSolutions won't work for functions that are asymptotic to the x-axis. They can often be reformulated though.
+* NSolutions will work only if the function is continuous
+* See also xref:/s_index_php?title=Solutions_Command_action=edit_redlink=1.adoc[Solutions Command] and
+xref:/s_index_php?title=NSolve_Command_action=edit_redlink=1.adoc[NSolve Command].
+
+====

@@ -1,0 +1,41 @@
+= RandomPolynomial 指令
+:page-en: commands/RandomPolynomial
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+此指令只能用在xref:/運算區.adoc[運算區]。
+
+RandomPolynomial[ <Degree> , <Minimum for Coefficients>, <Maximum for Coefficients> ]::
+RandomPolynomial[ <Variable>, <Degree> , <Minimum for Coefficients>, <Maximum for Coefficients> ]::
+RandomPolynomial[ <Degree d> , <Minimum for Coefficients min>, <Maximum for Coefficients max> ]::
+  Returns a randomly generated polynomial in _x_ of degree _d_, whose (integer) coefficients are in the range from _min_
+  to _max_, both included.
+
+[EXAMPLE]
+====
+
+
+* `++RandomPolynomial[0, 1, 2]++` yields either _1_ or _2_ and
+* `++RandomPolynomial[2, 1, 2]++` yields a random polynomial with a degree of two and only _1_ and _2_ as coefficients,
+for example _2x^2^ + x + 1_.
+
+====
+
+RandomPolynomial[ <Variable Var>, <Degree d> , <Minimum for Coefficients min>, <Maximum for Coefficients max> ]::
+  Returns a randomly generated polynomial in _Var_ of degree _d_, whose (integer) coefficients are in the range from
+  _min_ to _max_, both included.
+
+[EXAMPLE]
+====
+
+
+* `++RandomPolynomial[a, 0, 1, 2]++` yields either _1_ or _2_ and
+* `++RandomPolynomial[a, 2, 1, 2]++` yields a random polynomial with a degree of two and only _1_ and _2_ as
+coefficients, for example _2a^2^ + a + 1_.
+
+====
+
+[NOTE]
+====
+In both cases if _min_ or _max_ are not integers, _round(min)_ and _round(max)_ are used instead.
+
+====

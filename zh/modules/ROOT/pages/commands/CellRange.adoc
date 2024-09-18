@@ -1,0 +1,20 @@
+= CellRange 指令
+:page-en: commands/CellRange
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+CellRange[ <Start Cell>, <End Cell> ]::
+CellRange[Start Cell, End Cell]::
+  Creates a list containing the cell values in this cell range.
+
+[EXAMPLE]
+====
+ Enter the following values into the corresponding spreadsheet cells: `++A1 = 1, A2 = 4, A3 = 9++`. The command
+`++CellRange[A1, A3]++` then gives you the list \{1, 4, 9}.
+
+====
+
+[NOTE]
+====
+You may also use shorter syntax `++A1:A3++`.
+
+====

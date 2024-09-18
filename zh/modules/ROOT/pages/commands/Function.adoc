@@ -1,0 +1,53 @@
+= Function 指令
+:page-en: commands/Function
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Function[函數 f, 數值 a, 數值 b]::
+  此指令會產生跟 f(x) 函數一模一樣的函數，唯一不同的是它的函數圖形只介於 a 與 b 之間。
+
+[EXAMPLE]
+====
+ 畫出 f(x) 介於 -5 與 5 之間的函數圖形。
+
+====
+
+`++ f(x) = x^2 + x + 1 g(x) = Function[f, -5, 5]++`
+
+[NOTE]
+====
+
+*備註：*
+
+* 此例中的 g(x) 與 f(x) 唯一的不同就在於它的「函數圖形只介於 -5 與 5 之間」，其他的功能則完全一樣！比方說你可以計算 g(8)
+或 g(-10) ，雖然 8 和 -10 都不在指定的範圍內。
+* 如果真的要限制函數的變數範圍的話，必須使用 xref:/commands/If.adoc[If
+指令]，用法如下：`++g(x) = If[-5 < x && x < 5, x^2 + x + 1]++`這時如果輸入：`++g(8)++`，那麼就會出現 `++g(8) = 未定義++`
+的訊息。
+* 反過來說，如果我們有： `++f(x) = Function[x^2, -1, 1]++` ，雖然這會限制函數圖形的範圍，這時如果我們輸入：
+`++g(x) = 2 f(x)++` ，那麼 g(x) 的函數圖形並不會限制於 -1 與 1 之間喔！
+
+====
+
+[EXAMPLE]
+====
+ 將函數當作另一個自製工具的「參數」或「引數」。
+
+====
+
+假設我們自己製作的一個工具，叫做 Curve2D，它的語法如下： `++Curve2D[函數 f, 函數 g, 數值 a, 數值 b]++`
+
+這時我們可以使用以下的用法： `++f(x) = 1g(x) = sin(x)Curve2D[f, g, 0, 2]++`
+
+我們也可以直接利用 Function 指令達到相同的效果： `++Curve2D[Function[1, -1, 1], sin(x), 0, 2]++`
+
+[NOTE]
+====
+
+*備註：*
+
+* 上面的例子不能寫成 `++Curve2D[1 , sin(x), 0, 2]++`，因為 GeoGebra 不會知道第一個參數中的「1」是指一個「常數函數」。
+* 雖然上面我們將 Function 指令的「繪圖範圍」設定在 -1 與 1 之間，但這個設定是無關緊要的。
+
+====
+
+/s_index_php?title=En:Manual:Function_Command_action=edit_redlink=1.adoc[en:Manual:Function_Command]

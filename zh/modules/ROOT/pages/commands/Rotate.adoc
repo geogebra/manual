@@ -1,0 +1,43 @@
+= Rotate 指令
+:page-en: commands/Rotate
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Rotate( <物件>, <角度> )::
+  將xref:/幾何物件.adoc[幾何] <物件> 對坐標原點旋轉指定 <角度>。
+Rotate( <物件>, <角度>, <固定點> )::
+  將幾何 <物件> 對 <固定點> 旋轉指定 <角度>。
+Rotate( <物件>, <角度>, <旋轉軸>)::
+  將幾何 <物件> 對 <旋轉軸> 旋轉指定 <角度>。
+Rotate( <物件>, <角度>, <旋轉軸上的固定點>, <旋轉軸或平面的方向 __v__> )::
+  旋轉軸以 _v_ 指定方向，將幾何 <物件> 對 <旋轉軸上的固定點> 旋轉指定 <角度>。
+
+[NOTE]
+====
+
+*備註：*
+
+* 此項指令語法較適用於 3D 繪圖區。
+* 請參閱**歐拉旋轉定理**（https://en.wikipedia.org/wiki/Euler%27s_rotation_theorem[英文]／https://zh.wikipedia.org/wiki/%E6%AD%90%E6%8B%89%E6%97%8B%E8%BD%89%E5%AE%9A%E7%90%86[中文]）。
+
+====
+
+[NOTE]
+====
+此項指令語法較適用於 3D 繪圖區。
+
+====
+
+[NOTE]
+====
+
+*備註：*
+
+* 向量會以它們的始點（initial point）作為旋轉中心，而不是坐標原點。
+* 對多邊形、線段、圓弧…等物件旋轉時，也會連帶建立旋轉後的頂點、端點和（多邊形的）邊。
+* 此指令也可以旋轉圖片物件。
+* 若要旋轉文字物件請使用 xref:/commands/RotateText.adoc[RotateText_指令]。
+* 請參閱 image:24px-Mode_rotatebyangle.svg.png[Mode rotatebyangle.svg,width=24,height=24]
+xref:/tools/旋轉.adoc[旋轉]工具和 image:24px-Mode_rotatearoundline.svg.png[Mode rotatearoundline.svg,width=24,height=24]
+xref:/tools/s_index_php?title=軸轉_action=edit_redlink=1.adoc[軸轉]工具。
+
+====

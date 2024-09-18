@@ -1,0 +1,37 @@
+= LeftSide 指令
+:page-en: commands/LeftSide
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+此指令只能用在xref:/運算區.adoc[運算區]。
+
+LeftSide[ <Equation> ]::
+LeftSide[ \{ <Equation> } ]::
+LeftSide[ <Equation> ]::
+  Returns the left-hand side of the equation.
+LeftSide[ \{ <Equation> } ]::
+  Returns the left-hand sides of the equations.
+
+[EXAMPLE]
+====
+
+
+`++LeftSide[{a^2 + b^2 = c^2, x + 2 = 3x + 1}]++` yields _\{a^2^ + b^2^, x + 2}_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++LeftSide[x + 2 = 3x + 1]++` yields _x + 2_.
+
+====
+
+[NOTE]
+====
+
+*備註：*
+
+See also xref:/s_index_php?title=RightSide_Command_action=edit_redlink=1.adoc[RightSide Command].
+
+====

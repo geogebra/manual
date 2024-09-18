@@ -1,0 +1,16 @@
+= 합집합 명령
+:page-en: commands/Union
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+Union( <List>, <List> )::
+  Joins the two lists and removes elements that appear multiple times.
+Union( <Polygon>, <Polygon> )::
+  Finds the union of the two polygons. Works only for where the polygons are not self-intersecting, and where the union
+  is a single polygon.
+
+[EXAMPLE]
+====
+
+`++Union( {1, 2, 3, 4, 5}, {3, 2, 1, 7} )++` yields `++{1, 2, 3, 4, 5, 7}++`.
+
+====

@@ -1,0 +1,20 @@
+= Cell 指令
+:page-en: commands/Cell
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Cell[ <Column>, <Row> ]::
+Cell[ <Column>, <Row> ]::
+  Returns copy of xref:/Spreadsheet_View.adoc[spreadsheet] cell in given column and row.
+
+[EXAMPLE]
+====
+ `++Cell[2,1]++` returns copy of B1.
+
+====
+
+[NOTE]
+====
+By default the cells in spreadsheet cells are xref:/Free_Dependent_and_Auxiliary_Objects.adoc[auxiliary] and in
+such case this command returns auxiliary object as well.
+
+====

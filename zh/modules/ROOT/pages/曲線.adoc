@@ -1,0 +1,71 @@
+= 曲線
+:page-en: Curves
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+在 GeoGebra 中，曲線有兩種，一種是「xref:/.adoc[參數式]」，另一種為「xref:/.adoc[方程式]」。
+
+== 曲線參數式
+
+image:CardioidTangent.png[曲線與切線,width=114,height=118]
+
+我們可以利用類似 `++Curve[f(t), g(t), t, a, b]++` 的指令來產生曲線參數式，這種曲線可以用
+xref:/commands/Point.adoc[Point] 指令來產生曲線上一點，也可以搭配 xref:/commands/Tangent.adoc[Tangent] 指令來畫切線。
+
+[NOTE]
+====
+
+*備註：*
+
+* 曲線參數式可以當成一般的函數來使用，比方說如果我們有 `++c = Curve[f(t), g(t), t, a, b]++` ，當我們在命令列中輸入
+`++c(3)++` 時，我們會得到一個新的點，座標為 ( f(3), g(3) )。
+* 若要在曲線上新增一點，我們可以利用「新點工具」，也可以使用 xref:/commands/Point.adoc[Point] 指令。
+* 參數區間的起點 a 與終點 b 可以是變數，所以我們也可以用「數值滑桿」來設定這些數值。
+
+====
+
+目前我們還沒有辦法用 GeoGebra 來產生一個通過數個任意給定點的曲線參數式，不過你倒是可以試試
+xref:/commands/Polynomial.adoc[Polynomial] 指令或者是xref:/commands/FitPoly.adoc[FitPoly]
+指令。xref:/commands/Polynomial.adoc[Polynomial]
+指令會畫出恰通過這些點的多項式函數，xref:/commands/FitPoly.adoc[FitPoly]
+指令會畫出掠過這些點的「最佳多項式函數」（不過你得事先指定你要用幾次的多項式來逼近）。
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:PolynomialExample.png[PolynomialExample.png,width=284,height=195]
+
+a|
+image:FitPolyExample.png[FitPolyExample.png,width=284,height=195]
+
+|s=\{A,B,C,D,E}<br />Polynomial[s] |s=\{A,B,C,D,E}<br />FitPoly[s,3]
+|===
+
+== 曲線方程式
+
+我們可以直接在xref:/命令列.adoc[命令列]中輸入曲線方程式（用 x 與 y 當變數的多項方程式）。
+
+[EXAMPLE]
+====
+ `++x^4 + y^3 = 2 x y++`
+
+====
+
+image:ImplicitCurveExample.png[ImplicitCurveExample.png,width=175,height=115]
+
+[NOTE]
+====
+現在我們可以用「新點工具」或 xref:/commands/Point.adoc[Point]
+指令在這類的曲線上畫一個附著其上的動點。不只如此，我們也可以用「切線」工具或 xref:/commands/Tangent.adoc[Tangent]
+指令來畫這類曲線上的切線喔！
+
+====
+
+[EXAMPLE]
+====
+ `++x^3 + y^3 = 1++`
+
+====
+
+image:ImplicitCurveExample2.png[ImplicitCurveExample2.png,width=166,height=111]
+
+/s_index_php?title=En:Curves_action=edit_redlink=1.adoc[en:Curves]

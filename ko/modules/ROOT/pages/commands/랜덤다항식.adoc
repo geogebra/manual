@@ -1,0 +1,41 @@
+= 랜덤다항식 명령
+:page-en: commands/RandomPolynomial
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+RandomPolynomial( <Degree> , <Minimum for Coefficients>, <Maximum for Coefficients> )::
+  Returns a randomly generated polynomial in _x_ of degree _d_, whose (integer) coefficients are in the range from
+  _minimum_ to _maximum_, both included.
+
+[EXAMPLE]
+====
+
+* `++RandomPolynomial(0, 1, 2)++` yields either _1_ or _2_.
+* `++RandomPolynomial(2, 1, 2)++` yields a random polynomial with a degree of two and only _1_ and _2_ as coefficients,
+for example _2x^2^ + x + 1_.
+
+====
+
+== CAS Syntax
+
+The following command is only available in the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View].
+
+RandomPolynomial( <Variable>, <Degree> , <Minimum for Coefficients>, <Maximum for Coefficients> )::
+  Returns a randomly generated polynomial in _Variable_ of degree _d_, whose (integer) coefficients are in the range
+  from _minimum_ to _maximum_, both included.
+
+[EXAMPLE]
+====
+
+* `++RandomPolynomial(a, 0, 1, 2)++` yields either _1_ or _2_.
+* `++RandomPolynomial(a, 2, 1, 2)++` yields a random polynomial with a degree of two and only _1_ and _2_ as
+coefficients, for example _2a^2^ + a + 1_.
+
+====
+
+[NOTE]
+====
+
+In both cases if _minimum_ or _maximum_ are not integers, _round(minimum)_ and _round(maximum)_ are used instead.
+
+====

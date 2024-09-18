@@ -1,0 +1,62 @@
+= 匯出圖檔
+:page-en: Export_Graphics_Dialog
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+從xref:/檔案功能表.adoc[檔案]功能表→「匯出」→「image:Image-x-generic.png[Image-x-generic.png,width=16,height=16]匯出圖檔
+(png, eps) ...」可開啟此對話窗。
+
+鍵盤快捷鍵：[.kcode]#Ctrl# + [.kcode]#Shift# + [.kcode]#U#（Mac 用戶：[.kcode]#⌘ Cmd# + [.kcode]#Shift# + [.kcode]#P#）
+
+此對話窗可讓您將xref:/繪圖區.adoc[繪圖區]另存為圖片檔案。在對話窗中，可挑選圖檔格式、更改圖檔的比例（以 cm
+或像素為單位）與解析度（以 DPI 為單位），以及設定為透明影像。
+
+[NOTE]
+====
+在開啟匯出圖檔對話窗之前，可先用「image:Mode_move.png[Mode
+move.png,width=32,height=32]移動」工具框選特定範圍，則匯出時 GeoGebra
+只會將框選範圍另存成圖檔。若沒有事先框選範圍，則匯出時將會轉存整個xref:/繪圖區.adoc[繪圖區]。
+
+====
+
+[NOTE]
+====
+除了使用滑鼠框選，有一種方式也能限定匯出範圍。利用「image:Mode_point.png[Mode
+point.png,width=32,height=32]新點」工具在預定框選範圍的左上角與右下角（或左下角與右上角）建立兩個點，並將這兩點重新命名為「Export_1」與「Export_2」。匯出時
+GeoGebra 會將這兩點視為框選範圍對角的兩端點。
+
+====
+
+要將繪圖區匯出成圖檔時，您可選擇以下格式：
+
+PNG – http://zh.wikipedia.org/wiki/PNG[可攜式網路圖形]::
+  為點陣圖格式。解析度（DPI）愈高，畫質愈好（通常 300dpi 已經足夠）。PNG
+  圖檔在縮放後會有失真的情況，但它卻非常適合用在網頁（HTML）或是文書處理檔案中。
+
+EPS – http://zh.wikipedia.org/wiki/EPS[Encapsulated Postscript]::
+  為向量圖格式。EPS 圖檔縮放後並不會有失真的情況，非常適合用在向量繪圖軟體（例如：Corel
+  Draw）或專業文字處理系統（例如：/s_index_php?title=En:LaTeX_action=edit_redlink=1.adoc[en:LaTeX]）
+  EPS 圖檔的解析度總是 72dpi，此值只是用來計算圖檔以公分為單位時實際的檔案大小，並不會影響圖檔的品質。
+
+[NOTE]
+====
+EPS 圖檔並不支援 GeoGebra 的透明填滿效果。
+
+====
+
+PDF – http://zh.wikipedia.org/wiki/便携式文档格式[可攜式文件格式]::
+  （請參閱上述的 EPS 格式）
+
+[NOTE]
+====
+在選擇匯出為 SVG 檔或 PDF
+檔時，您可選擇是否勾選「將文字視為向量圖匯出」。若取消勾選，匯出時會將文字儲存為可編輯的文字物件（如此可在 InkScape
+之類的軟體中編輯）；反之，則會將文字儲存為http://zh.wikipedia.org/zh-tw/貝茲曲線[貝茲曲線] (Bézier
+curves)（如此就算沒有安裝字型，還是能表現原來的字型樣貌）。
+
+====
+
+SVG – http://zh.wikipedia.org/wiki/可縮放向量圖形[可縮放向量圖形]::
+  （請參閱上述的 EPS 格式）
+
+EMF – http://zh.wikipedia.org/wiki/WMF[Enhanced Metafile]::
+  （請參閱上述的 EPS 格式）

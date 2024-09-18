@@ -1,0 +1,83 @@
+= Element 指令
+:page-en: commands/Element
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Element( <串列>, <元素編號 n> )::
+  回傳 <串列> 中的第 _n_ 個元素。
+
+[EXAMPLE]
+====
+
+
+`++Element({1, 3, 2}, 2)++` 回傳 _\{1, 3, 2}_ 的第二個元素 _3_。
+
+====
+
+[NOTE]
+====
+在 image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/運算區.adoc[運算區]
+未定義的變數也適用。
+
+[EXAMPLE]
+====
+
+
+`++Element({a, b, c}, 2)++` 回傳 _\{a, b, c}_ 的第二個元素 _b_。
+
+====
+
+====
+
+Element( <矩陣>, <m 列>, <n 行> )::
+  回傳 <矩陣> 中第 _m_ 列第 _n_ 行的元素。
+
+[EXAMPLE]
+====
+
+
+`++Element({{1, 3, 2}, {0, 3, -2}}, 2, 3)++` 回傳 stem:[\begin\{pmatrix}1&3&2\\0&3&-2\end\{pmatrix}] 第 2 列第 3
+行的元素 _-2_。
+
+====
+
+[NOTE]
+====
+在 image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/運算區.adoc[運算區]
+未定義的變數也適用。
+
+[EXAMPLE]
+====
+
+
+`++Element({{a, b, c}, {d, e, f}}, 2, 3)++` 回傳 stem:[\begin\{pmatrix}a&b&c\\d&e&f\end\{pmatrix}] 第 2 列第 3 行的元素
+_f_。
+
+====
+
+====
+
+Element( <串列>, <索引 1>, <索引 2>, ...)::
+  若 <串列> 是 _n_ 維串列，則至多可以指定 _n_ 個索引作為坐標，取出單一元素（或串列）。
+
+[EXAMPLE]
+====
+
+
+假設 _L = \{\{\{1, 2}, \{3, 4}}, \{\{5, 6}, \{7, 8}}}_。
+
+則 `++Element(L, 1, 2, 1)++` 回傳 _3_，`++Element(L, 2, 2)++` 回傳 _\{7, 8}_。
+
+====
+
+[NOTE]
+====
+
+*備註：*
+
+* 此指令用法僅有在串列或矩陣中元素為同一種物件類型（例如：只有數值或只有點）的情況下才能運作。
+* {blank}
++
+請參閱 xref:/commands/First.adoc[First_指令]、xref:/commands/Last.adoc[Last_指令]和
+xref:/commands/RandomElement.adoc[RandomElement_指令]。
+
+====

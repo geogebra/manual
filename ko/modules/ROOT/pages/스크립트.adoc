@@ -1,0 +1,122 @@
+= 스크립트
+:page-en: Scripting
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+스크립트(Script)는 차례대로 실행되는 일련의 명령어 입니다. 지오지브라는 '지오지브라스크립트(GGBScript)'와
+'자바스크립트(Javascript)' 두가지 스크립트 언어를 지원합니다. 실행은 다음 동작에 의해 시작됩니다.
+
+* 특정 객체 클릭
+* 특정 객체 업데이트 (객체의 값 또는 속성의 변경된 경우)
+* 파일 로딩 (자바스크립트의 경우)
+* 자바스크립트 리스너(listeners) (참고: http://wiki.geogebra.org/en/Reference:JavaScript[자바스크립트])
+
+스크립트 탭을 통해 스크립트를 설정할 수도 있습니다. (참고: http://wiki.geogebra.org/en/Properties_Dialog[속성 대화창])
+
+==  지오지브라스크립트 
+
+http://wiki.geogebra.org/en/Input_Bar[입력창]을 이용해 지오지브라 명령어를 구성하는 것과 같이 스크립트를 만들 수
+있습니다. 스크립트가 작동된 후에는 명령어가 순차적으로 실행됩니다.
+
+[EXAMPLE]
+====
+
+* 정수 a를 1에서 3까지(1씩 증가하는) 슬라이더 만들기
+* 입력 : `++ list1 = {"red", "green", "blue"}++`
+* a의 속성에서 스크립트를 `++ SetColor[a, Element[list1, a]]++`로 설정한다.
+* 슬라이드를 움직여 색이 바뀌는 것을 확인한다.
+
+====
+
+*설명:* 슬라이더를 움직일 때마다 업데이트가 됩니다. 그러면, 스크립트에서 호출되는 움직임에 따라 a의 값이 리스트 중 한
+색상을 얻고 슬라이더 a의 색깔을 변화시킵니다.
+
+[NOTE]
+====
+
+*참고:* 명령어는 `++#++`으로 시작합니다.
+
+====
+
+[NOTE]
+====
+
+*힌트:* 스크립트에서만 사용되는 명령어가 있습니다. http://wiki.geogebra.org/en/Scripting_Commands[Scripting Commands]
+페이지를 참조하세요.
+
+====
+
+==  자바스크립트 
+
+자바스크립트는 인터넷에서 많이 사용되는 프로그래밍 언어 입니다. 지오지브라 스크립트와 달리 자바스크립트는 간단한
+명령어로 수행되지는 않지만, `++if, while, for++` 등의 제어문을 사용할 수 있습니다. 일반적인 자바스크립트의 경우
+http://developer.mozilla.org[모질라 사이트]와 같이 좋은 참고 사이트가 있습니다. 자바스크립트를 이용하면 지오지브라의
+구조 자체를 변경할 수 있습니다. 이러한 메서드(method)들은 `++ggbApplet.method_name(parameter, ... , parameter) ++`와
+같이 ggbApplet 객체에 속합니다. 이 메서드들에 대해 자세히 알기 위해서는 다음을 참조하시기 바랍니다. 참조:
+http://wiki.geogebra.org/en/Reference:JavaScript[JavaScript]
+
+[EXAMPLE]
+====
+
+....
+ for(var i=0; i<10 ; i++){
+    ggbApplet.evalCommand("A_"+ i + "=(random()*10, random()*10)");
+}
+....
+
+이 스크립트는 __A~0~__에서 __A~9~__까지 10개의 점을 랜덤으로 좌표상에 생성합니다.
+
+====
+
+[NOTE]
+====
+
+*참고:* 자바스크립트는 상당히 다용도 효용만점이지만, 대부분의 작업은 지오지브라 스크립트로도 가능합니다.(for문과 같은
+반복문을 사용할 것이 아니라면 지오지브라 스크립트의 사용을 권장합니다.)
+
+====
+
+== 글로벌 자바스크립트 
+
+글로벌 자바스크립트는 속성대화창의 스크립트 탭에서 함수를 정의할 수 있으며(단, 변수는 정의할 수 없음) 이 함수는 다른
+스크립트에서 이용가능합니다. 또한, __ggbOnInit()__와 같이 지오지브라가 시작될 때 자동적으로 수행되는 함수를 정의할 수도
+있습니다. __ggbOnInit__함수는 다음과 같이 리스너(listener/프로그램에서 어떤 동작을 받아 들임)를 등록할 때 사용할 수
+있습니다.
+
+[EXAMPLE]
+====
+
+....
+ 
+function onAdd(name){
+     alert("Object " + name + " was added.");
+}
+
+function ggbOnInit(){
+    ggbApplet.registerAddListener("onAdd");
+}
+....
+
+먼저, 함수 __onAdd__를 정의한다. _onAdd_ 함수는 매개변수 __name__에 의해 다른 메시지 창을 보여준다. 이제
+__ggbOnInit__함수를 이용해 지오지브라 파일이 시작될 때 마다 스크립트를 실행하게 하는데, _ggbApplet_ 객체 에서 새로운
+대상이 등록될 때마다 그 대상을 감지하는 리스너 _registerAddListener_ 를 이용하여 _onAdd_ 함수를 시행시킨다. 예를 들어,
+점 A를 새로 만들었을 경우 자동적으로 "Object A was added."라는 메시지 창이 나타난다.
+
+====
+
+또한, 이름 변경하기, 삭제하기, 깨끗히 하기 등의 작업에 리스너(listener)를 사용할 수 있습니다. 리스너의 전체 목록은
+다음을 참고하시기 바랍니다. 참고: http://wiki.geogebra.org/en/Reference:JavaScript[JavaScript]
+
+[NOTE]
+====
+
+*참고:* ggbOnInit 함수 외부에서 ggbApplet 메서드를 사용하면 동작하지 않습니다. 왜냐하면, 지오지브라가 로드되기 전에
+ggbApplet 메서드가 호출되기 때문입니다.
+
+====
+
+== 튜토리얼
+
+* http://wiki.geogebra.org/en/Tutorial:Introduction_to_GeoGebraScript[Introduction_to_GeoGebraScript]
+==  다른 참조 
+
+* http://wiki.geogebra.org/en/Scripting_Commands[Scripting_Commands]

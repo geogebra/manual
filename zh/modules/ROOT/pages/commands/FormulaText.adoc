@@ -1,0 +1,31 @@
+= FormulaText 指令
+:page-en: commands/FormulaText
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+FormulaText[ <Object> ]::
+FormulaText[ <Object>, <Boolean for Substitution of Variables> ]::
+FormulaText[ <Object>, <Boolean for Substitution of Variables>, <Boolean Show Name> ]::
+FormulaText[Object]::
+  Returns the formula for the object as a LaTeX text.
+FormulaText[Object, Boolean]::
+  Returns the formula for the object as LaTeX text. The Boolean variable determines if values are substituted for
+  variables (_true_) or if variable names are shown in the text (_false_).
+
+[EXAMPLE]
+====
+ If _a = 2_ and _f(x) = a x^2^_, then `++FormulaText[f, true]++` returns _2 x^2^_ (as a LaTeX text) and
+`++FormulaText[f, false]++` returns _a x^2^_ (as a LaTeX text).
+
+====
+
+[EXAMPLE]
+====
+ If _a = 2_ and _f(x) = a x^2^_, then `++FormulaText[f]++` returns _2 x^2^_ (as a LaTeX text).
+
+====
+
+[NOTE]
+====
+By default, values are substituted for variables.
+
+====

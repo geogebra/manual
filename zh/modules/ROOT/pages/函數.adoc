@@ -1,0 +1,51 @@
+= 函數
+:page-en: Functions
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+您可將之前曾經定義過的變數（例如：數值、點、向量）或其他函數，引入到新的函數式之中，並輸入到指令列建立新函數。
+
+[EXAMPLE]
+====
+
+
+* 函數 f：`++f(x) = 3 x^3 – x^2++`
+* 函數 g：`++g(x) = tan(f(x))++`
+* 未命名函數：`++sin(3 x) + tan(x)++`
+
+====
+
+[NOTE]
+====
+請參閱「xref:/內建函數與運算子.adoc[內建函數與運算子]」了解所有可用的內建函數。
+
+====
+
+在 GeoGebra 中，您也可以套用指令在函數上，例如：使用 xref:/commands/Integral.adoc[Integral_指令]作積分計算，或是使用
+xref:/commands/Derivative.adoc[Derivative_指令]作微分計算。使用xref:/commands/If.adoc[If_指令]則可以製作xref:/commands/If.adoc[條件函數]。
+
+[NOTE]
+====
+您也可以使用指令 f'(x) 或 f''(x) … 算出已定義函數 f(x) 的導函數。
+
+====
+
+[EXAMPLE]
+====
+ 先定義函數 _f_ 為 `++f(x) = 3 x^3 – x^2++`，接著您可以輸入 `++g(x) = cos(f' (x + 2))++` 來定義函數 _g_。
+
+====
+
+此外，函數可以用向量來平移（請參閱 xref:/commands/Translate.adoc[Translate_指令]），並且可以利用
+image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22]
+**xref:/tools/移動.adoc[移動]工具**來移動某個自變函數圖形。其他xref:/commands/幾何變換.adoc[幾何變換指令]也能套用至函數上，但大多數套用完的結果會是一條曲線而不是一個函數。
+
+== 限制函數在某個區間
+
+若要限制函數在某個區間 [a, b]，您必須使用 xref:/commands/Function.adoc[Function_指令]或是
+xref:/commands/If.adoc[If_指令]。
+
+[EXAMPLE]
+====
+ 輸入 `++If[3<=x<=5,x^2]++` 或是 `++Function[x^2,3,5]++` 都可以定義一個限制在區間 [3,5] 的函數 _x^2^_。
+
+====

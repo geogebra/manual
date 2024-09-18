@@ -1,0 +1,100 @@
+= 표 명령
+:page-en: commands/TableText
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+TableText( <List>, <List>, ... )::
+  Creates a text that contains a table of the list objects.
+
+[EXAMPLE]
+====
+
+* `++TableText({x^2, 4}, {x^3, 8}, {x^4, 16})++` creates a table as a text object with three rows and two columns. All
+items of the table are left aligned.
+* `++TableText(Sequence(i^2, i, 1, 10))++` creates a table as a text object with one row. All items of the table are
+left aligned.
+
+====
+
+[NOTE]
+====
+
+By default, each list is displayed in its own row of the table.
+
+====
+
+TableText( <List>, <List>, ..., <Alignment of Text> )::
+  Creates a text that contains a table of the list objects. The optional text “Alignment of text” controls the
+  orientation and alignment of the table text, as well as the alignment of the separator in decimal values.
+
+[NOTE]
+====
+
+Possible values are "vl", "vc", "vr", "v", "h", "hl", "hc", "hr" and "." or "%" - the default value is "hl".
+
+* "v" = vertical, i. e. lists are columns
+* "h" = horizontal, i. e. lists are rows
+* "l" = left aligned
+* "r" = right aligned
+* "c" = centered
+* "." = aligned on decimal points
+* "a" = like "." but also displays the padding zeros
+* "%" = converted to a percentage, and aligned on decimal points
+* "p" = like "%" but also displays the padding zeros
+
+====
+
+[EXAMPLE]
+====
+
+* `++TableText({1, 2, 3, 4}, {1, 4, 9, 16}, "v")++` creates a text with two columns and four rows whose elements are
+left aligned.
+* `++TableText({1, 2, 3, 4}, {1, 4, 9, 16}, "h")++` creates a text with two rows and four columns whose elements are
+left aligned.
+* `++TableText({11.2, 123.1, 32423.9, "234.0"}, "vr")++` creates a text with one column whose elements are right
+aligned.
+* `++TableText({A1:A10, B1:B10, C1:C10}, "vl")++` creates a text with three columns whose elements (left aligned) are
+the objects in the given _Spreadsheet_ cells.
+* `++TableText({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "v.")++` creates a text whose elements are aligned on
+decimal points image:TabPtDec.png[TabPtDec.png,width=152,height=111]
+* `++TableText({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "v%")++` creates a text whose elements are converted to a
+percentage, and aligned on decimal points image:200px-TableuPourCent.png[TableuPourCent.png,width=200,height=89]
+
+====
+
+https://www.geogebra.org/m/Eq5T3vV3[Online examples by Mike]
+
+It's also possible to insert:
+
+* different types of brackets, using the following symbols ||||, ||, \{}, [] or ()
+* line separators, using the symbol _
+* column separators, using the symbol |
+* different colourings
+
+[EXAMPLE]
+====
+
+* `++TableText({1, 2}, {3, 4}, "c()")++` creates the text stem:[\begin\{pmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{pmatrix} ]
+* `++TableText({1, 2}, {3, 4}, "c|_")++` creates the text
+image:50px-TabellaTesto.png[TabellaTesto.png,width=50,height=56]
+* `++TableText({1, 2}, {3, 4}, "||")++` creates the text stem:[ \begin\{vmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{vmatrix} ]
+* `++TableText({1, 2}, {3, 4}, "||||")++` creates the text stem:[\begin\{Vmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{Vmatrix} ]
+* `++TableText({{"2x+3y=5","5x+8y=12"}},"{v")++` creates the text stem:[ \left\\{\begin\{matrix} 2x+3y=5\\ 5x+8y=12
+\end\{matrix}\right.]
+* `++TableText({{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "-/|_v")++` creates a table with
+border and no separation lines.
+* `++TableText({{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "|11001 _110001 h")++` creates a
+table with border and one separation line to the right of the first column and under the first row of contents. The
+value 1 in the syntax means that there is a separation line between the numbers and the value 0 means that there is no
+separation line or border.
+* `++TableText({{"\blue{0, 1, 2, 3, 4}", "\red{4, 3, 2, 1, 0}"}}, "v")++` creates a table having the objects in the
+first row coloured in blue, the ones in the second row coloured in red.
+
+====
+
+[NOTE]
+====
+
+The xref:/s_index_php?title=Style_Bar_action=edit_redlink=1.adoc[Style Bar] of a _TableText_ object allows the user to
+customize the object's appearance, background and text colour and text style.
+
+====

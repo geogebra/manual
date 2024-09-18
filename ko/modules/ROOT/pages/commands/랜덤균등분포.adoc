@@ -1,0 +1,39 @@
+= 랜덤균등분포 명령
+:page-en: commands/RandomUniform
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+RandomUniform( <Min>, <Max> )::
+  Returns random real number from https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)[uniform distribution]
+  on interval [_min_, _max_].
+RandomUniform( <Min>, <Max>, <Number of Samples n> )::
+  Returns a list of _n_ random real numbers from https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)[uniform
+  distribution] on interval [_min_, _max_].
+
+[EXAMPLE]
+====
+
+`++RandomUniform(0, 1, 3)++` returns a list of three random numbers between _0_ and _1_
+
+====
+
+[EXAMPLE]
+====
+
+`++RandomUniform(0, 1)++` returns a random number between _0_ and _1_
+
+====
+
+[NOTE]
+====
+
+* `++RandomUniform(0,1)++` is equivalent to `++random()++` (see
+xref:/s_index_php?title=Predefined_Functions_and_Operators_action=edit_redlink=1.adoc[Predefined Functions and
+Operators]).
+* See also xref:/s_index_php?title=SetSeed_Command_action=edit_redlink=1.adoc[SetSeed],
+xref:/s_index_php?title=RandomBetween_Command_action=edit_redlink=1.adoc[RandomBetween],
+xref:/s_index_php?title=RandomElement_Command_action=edit_redlink=1.adoc[RandomElement],
+xref:/s_index_php?title=RandomBinomial_Command_action=edit_redlink=1.adoc[RandomBinomial],
+xref:/s_index_php?title=RandomNormal_Command_action=edit_redlink=1.adoc[RandomNormal] ,
+xref:/s_index_php?title=RandomPoisson_Command_action=edit_redlink=1.adoc[RandomPoisson] commands.
+
+====

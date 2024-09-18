@@ -1,0 +1,41 @@
+= 파스칼분포 명령
+:page-en: commands/Pascal
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+Pascal( <n>, <p> )::
+  Returns a bar graph of a https://en.wikipedia.org/wiki/Negative_binomial_distribution[Pascal distribution].
+
+The Pascal distribution models the number of failures before the __n__th success in repeated mutually independent
+Bernoulli trials, each with probability of success _p_.
+
+Pascal( <n>, <p>, <Boolean Cumulative> )::
+  Returns a bar graph of a Pascal distribution when _Cumulative_ = false.
+  Returns a graph of a cumulative Pascal distribution when _Cumulative_ = true.
+  First two parameters are same as above.
+
+Pascal( <n>, <p>, <Variable Value>, <Boolean Cumulative> )::
+  Let X be a Pascal random variable and _v_ the variable value.
+  Returns P( X = _v_) when _Cumulative_ = false.
+  Returns P( X ≤ _v_) when _Cumulative_ = true.
+  First two parameters are same as above.
+
+[EXAMPLE]
+====
+
+If the number of independent Bernoulli trials that must be successful is n = 1, the probability of success in one trial
+is p = stem:[\frac\{1}\{6}], then the probability of 2 failures before the success is given by
+
+`++ Pascal(1, 1/6, 2, false)++` which yields _0.12_ in the image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/s_index_php?title=Algebra_View_action=edit_redlink=1.adoc[Algebra View] and
+_25/216_ in the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View].
+
+====
+
+[NOTE]
+====
+
+This command also works in the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View].
+
+====

@@ -1,0 +1,51 @@
+= Angle 指令
+:page-en: commands/Angle
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Angle[ <Object> ]::
+Angle[ <Vector>, <Vector> ]::
+Angle[ <Line>, <Line> ]::
+Angle[ <Point>, <Apex>, <Point> ]::
+Angle[ <Point>, <Apex>, <Angle> ]::
+
+Angle[Vector v1, Vector v2]::
+  Returns the angle between two vectors _v1_ and _v2_ (between 0 and 360°) .
+Angle[Line g, Line h]::
+  Returns the angle between the direction vectors of two lines _g_ and _h_ (between 0 and 360°) .
+Angle[Point A, Point B, Point C]::
+  Returns the angle enclosed by _BA_ and _BC_ (between 0 and 360°), where point _B_ is the apex.
+Angle[Point A, Point B, Angle α]::
+  Returns the angle of size _α_ drawn from point _A_ with apex _B_.
+Angle[Conic]::
+  Returns the angle of twist of a conic section’s major axis (see command
+  xref:/s_index_php?title=Axes_Command_action=edit_redlink=1.adoc[Axes]) .
+Angle[Vector]::
+  Returns the angle between the _x_‐axis and given vector.
+Angle[Point]::
+  Returns the angle between the _x_‐axis and the position vector of the given point.
+Angle[Number]::
+  Converts the number into an angle (result between 0 and 2pi).
+Angle[Polygon]::
+  Creates all angles of a polygon in mathematically positive orientation (i.e., counter clockwise).
+
+[NOTE]
+====
+See also image:16px-Tool_Angle.gif[Tool Angle.gif,width=16,height=16]
+xref:/s_index_php?title=Angle_Tool_action=edit_redlink=1.adoc[Angle] and image:16px-Tool_Angle_Fixed.gif[Tool Angle
+Fixed.gif,width=16,height=16] xref:/s_index_php?title=Angle_with_Given_Size_Tool_action=edit_redlink=1.adoc[Angle with
+Given Size] tools .
+
+====
+
+[NOTE]
+====
+If the polygon was created in counter clockwise orientation, you get the interior angles. If the polygon was
+created in clockwise orientation, you get the exterior angles.
+
+====
+
+[NOTE]
+====
+The point _Rotate[A, α, B]_ is created as well.
+
+====

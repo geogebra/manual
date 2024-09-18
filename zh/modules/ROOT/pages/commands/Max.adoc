@@ -1,0 +1,73 @@
+= Max 指令
+:page-en: commands/Max
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Max[ <Number>, <Number> ]::
+Max[ <List> ]::
+Max[ <Interval> ]::
+Max[ <Function>, <Start x-Value>, <End x-Value> ]::
+Max[ <Number a>, <Number b> ]::
+  Yields the maximum of the given numbers _a_ and _b_.
+Max[ <List of Numbers> ]::
+  Yields the maximum of the numbers within the list.
+
+[EXAMPLE]
+====
+
+
+`++Max[{-2, 12, -23, 17, 15}]++` yields _17_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++Max[12, 15]++` yields _15_.
+
+====
+
+[NOTE]
+====
+If the input consists of non-numeric objects, then Max[] considers the numbers associated with those objects.
+For example, Max[List of Segments] will yield the maximum segment length.
+
+====
+
+Max[ <Function>, <left-x>, <right-x> ]::
+  Calculates the maximum point for function in the given interval. Function should only have on maximum point in the
+  interval.
+
+[NOTE]
+====
+See also xref:/s_index_php?title=Extremum_Command_action=edit_redlink=1.adoc[Extremum Command] and
+xref:/s_index_php?title=Function_Inspector_Tool_action=edit_redlink=1.adoc[Function Inspector Tool].
+
+====
+
+Max[ <Interval> ]::
+  Returns the upper bound of the interval, e.g. `++Max[2 < x < 3]++` returns 3. It is the same for open and closed
+  intervals.
+
+== CAS Syntax
+
+Max[ <Number a>, <Number b> ]::
+  Yields the maximum of the given numbers _a_ and _b_.
+Max[ <List of Numbers> ]::
+  Yields the maximum of the numbers within the list.
+
+[EXAMPLE]
+====
+
+
+`++Max[{-2, 12, -23, 17, 15}]++` yields _17_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++Max[12, 15]++` yields _15_.
+
+====

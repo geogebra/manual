@@ -1,0 +1,28 @@
+= NIntegral 指令
+:page-en: commands/NIntegral
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+此指令只能用在xref:/運算區.adoc[運算區]。
+
+NIntegral[ <Function>, <Start x-Value>, <End x-Value> ]::
+NIntegral[ <Function>, <Variable>, <Start variable-Value>, <End variable-Value> ]::
+NIntegral[ <Function f>, <Start x-Value a>, <End x-Value b> ]::
+  Computes the definite integral stem:[\int_a^bf(x)\mathrm\{d}x] numerically.
+NIntegral[ <Function f>, <Variable t>, <Start variable-Value a>, <End variable-Value b> ]::
+  Computes the definite integral stem:[\int_a^bf(t)\mathrm\{d}t] numerically.
+
+[EXAMPLE]
+====
+
+
+`++NIntegral[ℯ^(-a^2), a, 0, 1]++` yields _0.746824132812427_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++NIntegral[ℯ^(-x^2), 0, 1]++` yields _0.746824132812427_.
+
+====

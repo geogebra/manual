@@ -1,0 +1,36 @@
+= Cross 指令
+:page-en: commands/Cross
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+此指令只能用在xref:/運算區.adoc[運算區]。
+
+Cross[ <Vector> , <Vector> ]::
+Cross[ <Vector u> , <Vector v> ]::
+  Calculates the https://en.wikipedia.org/wiki/Cross_product[cross product] of _u_ and _v_.
+  If a vector contains undefined variables, it yields a formula for the cross product.
+
+[EXAMPLE]
+====
+
+
+`++Cross[{a, b, c}, {d, e, f}]++` yields _\{b f - c e, -a f + c d, a e - b d}_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++Cross[{1, 3, 2}, {0, 3, -2}]++` yields _\{-12, 2, 3}_.
+
+====
+
+[NOTE]
+====
+
+*備註：*
+
+* In the xref:/Input_Bar.adoc[Input Bar] you can use `++u ⊗ v++`.
+* See also xref:/s_index_php?title=Dot_Command_action=edit_redlink=1.adoc[Dot Command].
+
+====

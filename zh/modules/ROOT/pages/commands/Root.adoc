@@ -1,0 +1,36 @@
+= Root 指令
+:page-en: commands/Root
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Root[ <Polynomial> ]::
+Root[ <Function>, <Initial x-Value> ]::
+Root[ <Function>, <Start x-Value>, <End x-Value> ]::
+Root[ <Polynomial> ]::
+  Yields all roots of the polynomial as intersection points of the function graph and the _x_‐axis.
+Root[ <Function>, <Number a> ]::
+  Yields one root of the function using the initial value _a_ for Newton's method.
+Root[ <Function>, <Number a>, <Number b> ]::
+  Yields one root of the function in the interval [_a, b_] (regula falsi).
+
+== CAS Syntax
+
+Root[ <Polynomial> ]::
+  Yields all roots of the polynomial as intersection points of the function graph and the _x_‐axis.
+
+[EXAMPLE]
+====
+
+
+`++Root[x^3 - 3 * x^2 - 4 * x + 12]++` yields _\{x = 3, x = 2, x = -2}_.
+
+====
+
+[NOTE]
+====
+
+*備註：*
+
+This command is only a special variant of xref:/s_index_php?title=Solve_Command_action=edit_redlink=1.adoc[Solve
+Command].
+
+====

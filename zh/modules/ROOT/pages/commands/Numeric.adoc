@@ -1,0 +1,32 @@
+= Numeric 指令
+:page-en: commands/Numeric
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+此指令只能用在xref:/運算區.adoc[運算區]。
+
+Numeric[ <Expression> ]::
+Numeric[ <Expression>, <significant figures> ]::
+
+此指令只能用在xref:/運算區.adoc[運算區]。
+
+Numeric[ <Expression> ]::
+  Tries to determine a numerical approximation of the given expression. The number of decimals depends on the global
+  rounding you choose in the xref:/Options_Menu.adoc[Options Menu].
+Numeric[ <Expression>, <significant figures> ]::
+  Tries to determine a numerical approximation of the given expression, using the entered number of significant figures.
+
+[EXAMPLE]
+====
+
+
+`++Numeric[sin(1), 20]++` yields _0.84147098480789650665_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++Numeric[3 / 2]++` yields _1.5_.
+
+====

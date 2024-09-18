@@ -1,0 +1,35 @@
+= ZoomOut 指令
+:page-en: commands/ZoomOut
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+ZoomOut( <縮放倍率> )::
+  將目前的 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/繪圖區.adoc[繪圖區]以指定 <縮放倍率> 進行縮小，並以繪圖區的中心點作為縮放中心。
+ZoomOut( <縮放倍率>, <中心點> )::
+  將目前的 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/繪圖區.adoc[繪圖區]以指定 <縮放倍率> 進行縮小，並以 <中心點> 作為縮放中心。
+
+[EXAMPLE]
+====
+ `++ZoomOut(2, (0, 0))++`
+
+====
+
+[EXAMPLE]
+====
+ `++ZoomOut(2)++` 將圖面縮小。
+
+====
+
+[NOTE]
+====
+
+*備註：*
+
+* `++ZoomOut(t)++` 和 `++ZoomOut(t, A)++` 相對等同於 `++ZoomIn(1/t)++` 和 `++ZoomIn(1/t, A)++`。
+* 在呈現多個 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/繪圖區.adoc[繪圖區]的情況下，此指令會套用在作用中的繪圖區。
+* 請參閱 xref:/commands/ZoomIn.adoc[ZoomIn_指令]、xref:/commands/SetActiveView.adoc[SetActiveView_指令]以及
+xref:/commands/Pan.adoc[Pan_指令]。
+
+====

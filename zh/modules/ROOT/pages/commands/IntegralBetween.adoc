@@ -1,0 +1,46 @@
+= IntegralBetween 指令
+:page-en: commands/IntegralBetween
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+IntegralBetween[ <Function>, <Function>, <Start x-Value>, <End x-Value> ]::
+IntegralBetween[ <Function>, <Function>, <Start x-Value>, <End x-Value>, < Boolean Evaluate> ]::
+
+== CAS 視窗
+
+IntegralBetween[ <Function>, <Function>, <Start x-Value>, <End x-Value> ]::
+IntegralBetween[ <Function>, <Function>, <Start x-Value>, <End x-Value>, < Boolean Evaluate> ]::
+IntegralBetween[Function f, Function g, Number a, Number b]::
+  Returns the definite integral of the difference _f(x) ‐ g(x)_ in the interval [_a, b_].
+IntegralBetween[Function f, Function g, Number a, Number b, Boolean Evaluate]::
+  Returns the definite integral of the difference _f(x) ‐ g(x)_ in the interval [_a, b_] and shadows the related area
+  when _Evaluate = true_. In case _Evaluate = false_ the related area is shaded but the integral value is not
+  calculated.
+
+[NOTE]
+====
+This command also shades the area between the function graphs of _f_ and _g_.
+
+====
+
+== CAS Syntax
+
+IntegralBetween[ Function f, Function g, Number a, Number b]::
+  Returns the definite integral of the difference _f(x) ‐ g(x)_ in the interval [_a, b_].
+IntegralBetween[ Function f, Function g, Variable t, Number a, Number b ]::
+  Returns the definite integral of the difference _f ‐ g_ in the interval [_a, b_] with respect to the variable t.
+
+[EXAMPLE]
+====
+
+
+`++IntegralBetween[a * sin(t), a * cos(t), t, π / 4, π * 5 / 4]++` yields stem:[2 \sqrt\{2} a].
+
+====
+
+[EXAMPLE]
+====
+
+
+`++IntegralBetween[sin(x), cos(x), π / 4, π * 5 / 4]++` yields stem:[2 \sqrt\{2}].
+
+====

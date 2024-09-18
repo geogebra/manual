@@ -1,0 +1,43 @@
+= CFactor 指令
+:page-en: commands/CFactor
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+此指令只能用在xref:/運算區.adoc[運算區]。
+
+CFactor[ <Expression> ]::
+  Factorizes a given expression, allowing for complex factors.
+CFactor[ <Expression>, <Variable> ]::
+  Factorizes an expression with respect to a given variable, allowing for complex factors.
+
+[EXAMPLE]
+====
+
+
+`++CFactor[a^2 + x^2, x]++` yields _(x + a ί) (x - a ί)_, the factorization of _a^2^ + x^2^_ with respect to _x_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++CFactor[a^2 + x^2, a]++` yields _(a + x ί) (a - x ί)_, the factorization of _a^2^ + x^2^_ with respect to _a_.
+
+====
+
+[EXAMPLE]
+====
+
+
+`++CFactor[x^2 + 4]++` yields _(x + 2 ί) (x - 2 ί)_, the factorization of _x^2^ + 4_.
+
+====
+
+[NOTE]
+====
+
+*備註：*
+
+See also xref:/s_index_php?title=Factor_Command_action=edit_redlink=1.adoc[Factor Command].
+
+====

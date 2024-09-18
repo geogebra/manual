@@ -1,0 +1,59 @@
+= 우극한 명령
+:page-en: commands/LimitBelow
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+LimitBelow( <Function>, <Value> )::
+  Computes the left https://en.wikipedia.org/wiki/Limit_of_a_function#One-sided_limits[one-sided limit] of the function
+  for the given value of the main function variable.
+
+[EXAMPLE]
+====
+
+`++LimitBelow(1 / x, 0)++` yields stem:[-\infty] .
+
+====
+
+[NOTE]
+====
+
+Not all limits can be calculated by GeoGebra, so _undefined_ will be returned in those cases (as well as when the
+correct result is undefined).
+
+====
+
+== CAS Syntax
+
+LimitBelow( <Expression>, <Value> )::
+  Computes the left one-sided limit of the function for the given value of the main function variable.
+LimitBelow( <Expression>, <Variable>, <Value> )::
+  Computes the left one-sided limit of the multivariate function for the given value of the given function variable.
+
+[EXAMPLE]
+====
+
+`++LimitBelow(1 / a, a, 0)++` yields stem:[-\infty] .
+
+====
+
+[EXAMPLE]
+====
+
+`++LimitBelow(1 / x, 0)++` yields stem:[-\infty] .
+
+====
+
+[NOTE]
+====
+
+Not all limits can be calculated by GeoGebra, so _?_ will be returned in those cases (as well as when the correct result
+is undefined).
+
+====
+
+[NOTE]
+====
+
+See also xref:/s_index_php?title=Limit_Command_action=edit_redlink=1.adoc[Limit Command] and
+xref:/s_index_php?title=LimitAbove_Command_action=edit_redlink=1.adoc[LimitAbove Command].
+
+====

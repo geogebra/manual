@@ -1,0 +1,37 @@
+= 랜덤원소 명령
+:page-en: commands/RandomElement
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+RandomElement( <List> )::
+  Returns randomly chosen element from the xref:/s_index_php?title=Lists_action=edit_redlink=1.adoc[list] (with uniform
+  probability). All elements in the list must be of the same type.
+
+[EXAMPLE]
+====
+
+`++RandomElement({3, 2, -4, 7})++` yields one of _\{-4, 2, 3, 7}_.
+
+====
+
+[EXAMPLE]
+====
+
+In the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View] this command also works with symbolic input.
+
+`++RandomElement({a,b,c,d})++` yields one of _\{a, b, c, d}_.
+
+====
+
+[NOTE]
+====
+
+See also xref:/s_index_php?title=Element_Command_action=edit_redlink=1.adoc[Element Command],
+xref:/s_index_php?title=SetSeed_Command_action=edit_redlink=1.adoc[SetSeed Command],
+xref:/s_index_php?title=RandomBetween_Command_action=edit_redlink=1.adoc[RandomBetween Command],
+xref:/s_index_php?title=RandomBinomial_Command_action=edit_redlink=1.adoc[RandomBinomial Command],
+xref:/s_index_php?title=RandomNormal_Command_action=edit_redlink=1.adoc[RandomNormal Command],
+xref:/s_index_php?title=RandomPoisson_Command_action=edit_redlink=1.adoc[RandomPoisson Command] and
+xref:/s_index_php?title=RandomUniform_Command_action=edit_redlink=1.adoc[RandomUniform Command].
+
+====

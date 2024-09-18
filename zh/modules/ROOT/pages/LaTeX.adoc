@@ -1,0 +1,51 @@
+= LaTeX
+:page-en: LaTeX
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+In GeoGebra you can write formulas as well. To do so, check the box LaTeX formula in the dialog window of the
+image:Tool_Insert_Text.gif[Tool Insert
+Text.gif,width=32,height=32]xref:/s_index_php?title=Insert_Text_Tool_action=edit_redlink=1.adoc[Insert Text Tool] and
+enter your formula in LaTeX syntax.
+
+[NOTE]
+====
+In order to create text that contains a LaTeX formula as well as static text you may enter the static part of
+the text and then add the LaTeX formula in between a set of dollar symbols ($).
+
+====
+
+[EXAMPLE]
+====
+ The length of the diagonal is $\sqrt\{ 2 }$.
+
+====
+
+You can select the syntax for common formula symbols from the drop-down menu next to the LaTeX checkbox. This inserts
+the corresponding LaTeX code into the text field and places the cursor in between a set of curly brackets. The Symbols
+drop-down menu contains a list of common math symbols, Greek letters and operators. If you would like to create dynamic
+text within the formula, you need to select the relating objects from the Objects drop-down list, causing GeoGebra to
+insert their names as well as the syntax for mixed text.
+
+Some important LaTeX commands are explained in following table. Please have a look at any LaTeX documentation for
+further information.
+
+[cols=",",options="header",]
+|===
+|LaTeX input |Result
+|a \cdot b |stem:[a \cdot b]
+|\frac\{a}\{b} |stem:[\frac\{a}\{b}]
+|\sqrt\{x} |stem:[\sqrt\{x}]
+|\sqrt[n]\{x} |stem:[\sqrt[n]\{x}]
+|\vec\{v} |stem:[\vec\{v}]
+|\overline\{AB} |stem:[\overline\{AB}]
+|x^\{2} |stem:[x^\{2}]
+|a_\{1} |stem:[a_\{1}]
+|\sin\alpha + \cos\beta |stem:[\sin\alpha + \cos\beta]
+|\int_\{a}^\{b} x dx |stem:[\int_\{a}^\{b} x dx]
+|\sum_\{i=1}^\{n} i^2 |stem:[\sum_\{i=1}^\{n} i^2]
+|===
+
+== See also
+
+* http://folk.uio.no/knutm/mmcs2008/lshort2e.pdf[The Not So Short Introduction To LaTeX]
+* http://www.tug.org[TeX user group]

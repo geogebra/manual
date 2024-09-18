@@ -1,0 +1,45 @@
+= 자취그리기 명령
+:page-en: commands/Locus
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+Locus( <Point Creating Locus Line Q>, <Point P>)::
+  Returns the locus curve of the point _Q_, which depends on the point _P_.
+Locus( <Point Creating Locus Line Q>, <Slider t>)::
+  Returns the locus curve of the point _Q_, which depends on the values assumed by the slider _t_.
+Locus( <Slopefield>, <Point> )::
+  Returns the locus curve which equates to the slopefield at the given point.
+Locus( <f(x, y)>, <Point> )::
+  Returns the locus curve which equates to the solution of the differential equation stem:[\frac\{dy}\{dx}=f(x,y)] in
+  the given point. The solution is calculated numerically.
+
+[NOTE]
+====
+
+Point _P_ needs to be a point on an object (e. g. line, segment, circle).
+
+====
+
+Loci are specific object types, and appear as
+xref:/s_index_php?title=Free_Dependent_and_Auxiliary_Objects_action=edit_redlink=1.adoc[auxiliary objects]. Besides
+Locus command, they are the result of some
+xref:/s_index_php?title=Discrete_Math_Commands_action=edit_redlink=1.adoc[Discrete Math Commands] and
+xref:/s_index_php?title=SolveODE_Command_action=edit_redlink=1.adoc[SolveODE Command]. Loci are
+xref:/s_index_php?title=Geometric_Objects_action=edit_redlink=1.adoc[paths] and can be used within path-related commands
+such as xref:/s_index_php?title=Point_Command_action=edit_redlink=1.adoc[Point]. Their properties depend on how they
+were obtained, see e.g. xref:/s_index_php?title=Perimeter_Command_action=edit_redlink=1.adoc[Perimeter Command] and
+xref:/s_index_php?title=First_Command_action=edit_redlink=1.adoc[First Command].
+
+[NOTE]
+====
+
+See also image:22px-Mode_locus.svg.png[Mode locus.svg,width=22,height=22]
+xref:/s_index_php?title=Locus_Tool_action=edit_redlink=1.adoc[Locus] tool.
+
+====
+
+[cols=",",]
+|===
+|image:18px-Attention.png[경고,title="경고",width=18,height=18] *경고*: |A locus is undefined when the dependent point
+is the result of a xref:/s_index_php?title=Point_Command_action=edit_redlink=1.adoc[Point Command] with two parameters,
+or a xref:/s_index_php?title=PathParameter_Command_action=edit_redlink=1.adoc[PathParameter Command].
+|===

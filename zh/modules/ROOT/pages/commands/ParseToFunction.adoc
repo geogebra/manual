@@ -1,0 +1,41 @@
+= ParseToFunction 指令
+:page-en: commands/ParseToFunction
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+ParseToFunction( <定義字串> )::
+  解析函數 <定義字串> 並建立相對應的xref:/函數.adoc[函數]。
+
+[EXAMPLE]
+====
+
+
+* `++ ParseToFunction("x^2")++` 建立函數 _f_(_x_) = __x__^2^_。_
+* `++ ParseToFunction("t+2/t")++` 建立函數 _f_(_t_) = _t_ + 2/_t_。
+
+====
+
+ParseToFunction( <函數 f>, <定義字串> )::
+  解析函數 <定義字串> 並將結果存至 <xref:/函數.adoc[函數] __f__>，使用此指令前函數 _f_
+  必須已定義且為xref:/自變、應變、輔助物件.adoc[自變]物件。
+
+[EXAMPLE]
+====
+ 定義 `++ f(x) = 3x² + 2++` 與 `++ text1 = "f(x) = 3x + 1"++`。`++ ParseToFunction(f, text1)++` 回傳 _f(x) = 3x
++ 1_。
+
+====
+
+ParseToFunction( <定義字串>, <變數串列> )::
+  解析函數 <定義字串> 並依據 <變數串列> 指定的變數來建立相對應的xref:/函數.adoc[函數]。
+
+[EXAMPLE]
+====
+ `++ ParseToFunction("2u+3v",{"u", "v"})++` 建立函數 _a(u,v) = 2u + 3v_。
+
+====
+
+[NOTE]
+====
+請參閱 xref:/commands/ParseToNumber.adoc[ParseToNumber] 指令。
+
+====

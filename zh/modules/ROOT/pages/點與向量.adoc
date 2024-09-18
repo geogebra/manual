@@ -1,0 +1,83 @@
+= 點與向量
+:page-en: Points_and_Vectors
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+點與向量能以直角坐標或極坐標（請參閱xref:/數值與角度.adoc[數值與角度]）的形式，透過xref:/指令列.adoc[指令列]輸入來建立。也能使用
+image:24px-Mode_point.svg.png[Mode point.svg,width=24,height=24] **xref:/點工具.adoc[點]工具箱**畫點、使用
+image:24px-Mode_vectorfrompoint.svg.png[Mode vectorfrompoint.svg,width=24,height=24]
+**xref:/tools/s_index_php?title=向量（指定起點、向量）_action=edit_redlink=1.adoc[向量（指定起點、向量）]工具**或
+image:24px-Mode_vector.svg.png[Mode vector.svg,width=24,height=24]
+**xref:/tools/s_index_php?title=向量（過兩點）_action=edit_redlink=1.adoc[向量（過兩點）]工具**建立向量，還有各式各樣的xref:/指令.adoc[指令]可使用。
+
+[NOTE]
+====
+通常使用大寫字母命名點，而用小寫字母命名向量，但這樣的慣例必沒有強制性。
+
+====
+
+[EXAMPLE]
+====
+
+
+* 輸入 `++P = (1, 0)++` 或 `++v = (0, 5)++` 在直角坐標平面建立點 _P_ 或向量 _v_。
+* 輸入 `++P = (1, 0, 2)++` 或 `++v = (0, 5, -1)++` 在直角坐標空間建立點 _P_ 或向量 _v_。
+* 輸入 `++P = (1; 0°)++` 或 `++v = (5; 90°)++` 在極坐標平面建立點 _P_。
+* 以 (ρ, θ, φ) 的形式輸入，例如 `++P = (1; 60°; 30°)++`，在球面坐標空間建立點 _P_。
+* 以儲存格位址命名，即可在 image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+xref:/試算表.adoc[試算表]之中建立一點，例如：`++A2 = (1, 0)++`。
+
+====
+
+[NOTE]
+====
+
+*備註：*
+
+* 在極坐標中必須以分號（;）做區隔，而不是逗號（,）。若您沒有打出度數（°）符號，GeoGebra 會將此角度視為以弧度為單位。
+* 點與向量的直角坐標可以利用xref:/內建函數與運算子.adoc[內建函數] `++x()++` 和 `++y()++`（和空間中的
+`++z()++`）來存取坐標值。
+* 極坐標點 _Q_ 則可以利用 `++abs(Q)++` 和 `++arg(Q)++`（和空間中的 `++alt(Q)++`）來進行存取。
+
+====
+
+[EXAMPLE]
+====
+
+
+* 若 `++P=(1,2)++` 為一點且 `++v=(3,4)++` 為一向量，則 `++x(P)++` 傳回 1 且 `++y(v)++` 傳回 4。
+* `++abs(P)++` 傳回 2.24 且 `++arg(P)++` 傳回 26.57°。
+
+====
+
+== 計算
+
+在 GeoGebra 中，您也可以對點或向量進行計算。
+
+[EXAMPLE]
+====
+
+
+* 您可以輸入 `++M = (A + B) / 2++` 到指令列中，找出 _A_ 和 _B_ 兩個點的中點 _M_。
+* 您可利用 `++length = sqrt(v * v)++` 或 `++length = Length(v)++` 計算向量 _v_ 的**長度**。
+* 您可利用指令 `++Point(v, 0)++` 和 `++Point(v, 1)++` 分別找到向量 _v_ 的**始點**和**終點**坐標。
+* 若 _A = (a, b)_，則 `++A + 1++` 傳回 _(a + 1, b + 1)_。若 _A_ 是一個xref:/複數.adoc[複數] _a+bί_，則 `++A+1++` 傳回 _a
++ 1 + bί_。
+
+====
+
+== 外積
+
+令 _(a, b)_ 和 _(c, d)_ 為兩個點或向量，則 `++(a, b) ⊗ (c, d)++` 傳回向量外積 _(a, b, 0) ⊗ (c, d, 0)_ 的 _z_ 坐標。
+
+令 _(a, b, e)_ 和 _(c, d, f)_ 為兩個點或向量，則 `++(a, b, e) ⊗ (c, d, f)++` 傳回兩向量的外積。
+
+相似的語法也可以用在串列，但傳回來的結果會以串列呈現。
+
+[EXAMPLE]
+====
+
+
+* `++{1, 2} ⊗ {4, 5}++` 傳回 _\{0, 0, -3}_。
+* `++{1, 2, 3} ⊗ {4, 5, 6}++` 傳回 _\{3, 6, -3}_。
+
+====

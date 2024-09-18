@@ -1,0 +1,39 @@
+= ShowAxes 指令
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+ShowAxes( )::
+  在作用中的視區顯示坐標軸。
+ShowAxes( <真假值> )::
+  在作用中的視區顯示或隱藏坐標軸。
+
+[EXAMPLE]
+====
+
+
+* `++ShowAxes(true)++` 在作用中的視區顯示坐標軸。
+* `++ShowAxes(false)++` 在作用中的視區隱藏坐標軸。
+
+====
+
+ShowAxes( <視區>, <真假值> )::
+  在指定的 <視區> 顯示或隱藏坐標軸。其中 1 和 2 分別代表主、副 image:16px-Menu_view_graphics.svg.png[Menu view
+  graphics.svg,width=16,height=16] *繪圖區*，3 代表 image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+  algebra 3Dgraphics.svg,width=16,height=16] *3D 繪圖區*。
+
+[EXAMPLE]
+====
+
+
+* `++ShowAxes(1, true)++` 在主 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+**繪圖區**顯示坐標軸。
+* `++ShowAxes(2, false)++` 在副 image:16px-Menu_view_graphics2.svg.png[Menu view graphics2.svg,width=16,height=16]
+**繪圖區**隱藏坐標軸。
+
+====
+
+[NOTE]
+====
+請參閱 xref:/commands/ShowGrid.adoc[ShowGrid] 指令。若要顯示或隱藏單一坐標軸，請使用
+xref:/commands/SetVisibleInView.adoc[SetVisibleInView] 指令。
+
+====

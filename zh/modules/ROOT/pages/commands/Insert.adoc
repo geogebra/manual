@@ -1,0 +1,51 @@
+= Insert 指令
+:page-en: commands/Insert
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+Insert[ <List>, <List>, <Position> ]::
+Insert[ <Object>, <List>, <Position> ]::
+Insert[Object, List, Position]::
+  Inserts the object in the list at the given position.
+
+[EXAMPLE]
+====
+ `++Insert[x^2, {1, 2, 3, 4, 5}, -1]++` places _x^2^_ at the end of the list and gives you the list _\{1, 2, 3,
+4, 5, x^2^}_.
+
+====
+
+[EXAMPLE]
+====
+ `++Insert[x^2, {1, 2, 3, 4, 5}, 3]++` places _x^2^_ at the third position and gives you the list _\{1, 2, x^2^,
+3, 4, 5}_.
+
+====
+
+[NOTE]
+====
+If the position is a negative number, then the position is counted from the right.
+
+====
+
+Insert[List 1, List 2, Position]::
+  Inserts all elements of _list1_ in _list2_ at the given position.
+
+[EXAMPLE]
+====
+ `++Insert[{11, 12}, {1, 2, 3, 4, 5}, -2]++` places the elements of _list1_ at the end of _list2_ before its
+last element and gives you _\{1, 2, 3, 4, 11, 12, 5}_.
+
+====
+
+[EXAMPLE]
+====
+ `++Insert[{11, 12}, {1, 2, 3, 4, 5}, 3]++` places the elements of _list1_ at the third (and following)
+position(s) of _list2_ and gives you the list _\{1, 2, 11, 12, 3, 4, 5}_.
+
+====
+
+[NOTE]
+====
+If the position is a negative number, then the position is counted from the right.
+
+====

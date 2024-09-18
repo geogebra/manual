@@ -1,0 +1,52 @@
+= 좌변 명령
+:page-en: commands/LeftSide
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+이 명령은 오직 xref:/CAS_창.adoc[CAS 창] 에서만 작동합니다..
+
+LeftSide( <Equation> )::
+  Gives the left-hand side of the simplified equation.
+
+[EXAMPLE]
+====
+
+`++LeftSide(4x = 1 - 3y)++` yields _4x + 3y_.
+
+====
+
+== CAS Syntax
+
+LeftSide( <Equation> )::
+  Gives the left-hand side of the equation.
+LeftSide( <List of Equations> )::
+  Gives the list of the left-hand sides of the equations.
+LeftSide( <List of Equations>, <Index> )::
+  Gives the left-hand side of the equation specified by the index.
+
+[EXAMPLE]
+====
+
+`++LeftSide({a^2 + b^2 = c^2, x + 2 = 3 x + 1}, 1)++` yields stem:[a^2 + b^2].
+
+====
+
+[EXAMPLE]
+====
+
+`++LeftSide({a^2 + b^2 = c^2, x + 2 = 3 x + 1})++` yields stem:[ \left\\{a^2 + b^2, x + 2 \right\} ] .
+
+====
+
+[EXAMPLE]
+====
+
+`++LeftSide(x + 2 = 3 x + 1)++` yields _x + 2_.
+
+====
+
+[NOTE]
+====
+
+See also xref:/s_index_php?title=RightSide_Command_action=edit_redlink=1.adoc[RightSide Command].
+
+====

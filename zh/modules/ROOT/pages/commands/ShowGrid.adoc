@@ -1,0 +1,38 @@
+= ShowGrid 指令
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+ShowGrid( )::
+  在作用中的視區顯示格線。
+ShowGrid( <真假值> )::
+  在作用中的視區顯示或隱藏格線。
+
+[EXAMPLE]
+====
+
+
+* `++ShowGrid(true)++` 在作用中的視區顯示格線。
+* `++ShowGrid(false)++` 在作用中的視區隱藏格線。
+
+====
+
+ShowGrid( <視區>, <真假值> )::
+  在指定的 <視區> 顯示或隱藏格線。其中 1 和 2 分別代表主、副 image:16px-Menu_view_graphics.svg.png[Menu view
+  graphics.svg,width=16,height=16] *繪圖區*，3 代表 image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives
+  algebra 3Dgraphics.svg,width=16,height=16] *3D 繪圖區*。
+
+[EXAMPLE]
+====
+
+
+* `++ShowGrid(1, true)++` 在主 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+**繪圖區**顯示格線。
+* `++ShowGrid(2, false)++` 在副 image:16px-Menu_view_graphics2.svg.png[Menu view graphics2.svg,width=16,height=16]
+**繪圖區**隱藏格線。
+
+====
+
+[NOTE]
+====
+請參閱 xref:/commands/ShowAxes.adoc[ShowAxes] 指令。
+
+====

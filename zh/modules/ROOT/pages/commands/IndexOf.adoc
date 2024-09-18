@@ -1,0 +1,34 @@
+= IndexOf 指令
+:page-en: commands/IndexOf
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+IndexOf[ <Object>, <List> ]::
+IndexOf[ <Object>, <List>, <Start Index> ]::
+IndexOf[ <Text>, <Text>]::
+IndexOf[ <Text>, <Text>, <Start Index> ]::
+IndexOf[ <Object>, <List> ]::
+  Returns position of first occurrence of Object in List, e.g. `++IndexOf[5,{1,3,5,2,5,4}]++` returns 3. When the object
+  is not found, result is _undefined_.
+IndexOf[ <Object>, <List>, <Start Index> ]::
+  Same as above, but the search starts at given index.
+
+[EXAMPLE]
+====
+
+
+* `++IndexOf[5,{1,3,5,2,5,4},3]++` returns 3.
+* `++IndexOf[5,{1,3,5,2,5,4},4]++` returns 5.
+* `++IndexOf[5,{1,3,5,2,5,4},6]++` returns _undefined_.
+
+====
+
+IndexOf[ <Text Needle>, <Text Haystack>]::
+  Returns position of first occurrence of Needle in Haystack, e.g. `++IndexOf["Ge","GeoGebra"]++` returns 1.
+IndexOf[ <Text Needle>, <Text Haystack>, <Start Index> ]::
+  Same as above, but the search starts at given index.
+
+[EXAMPLE]
+====
+ `++IndexOf["Ge","GeoGebra",2]++` returns 4.
+
+====

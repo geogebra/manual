@@ -1,0 +1,25 @@
+= 오른쪽히스토그램 명령
+:page-en: commands/HistogramRight
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+HistogramRight( <List of Class Boundaries>, <List of Heights> )::
+  Same as `++([Histogram Command|Histogram]][<List of Class Boundaries>, <List of Heights>)++`
+
+HistogramRight( <List of Class Boundaries>, <List of Raw Data>, <Boolean Use Density> , <Density Scale Factor>
+(optional) )::
+  Same as
+  `++Histogram(<List of Class Boundaries>, <List of Raw Data>, <Boolean Use Density>, <Density Scale Factor>)++`, except
+  that if a datum is equal to the right border of a class, it is counted in this class and not in the next one.
+
+HistogramRight( <Boolean Cumulative>, <List of Class Boundaries>, <List of Raw Data>, <Boolean Use Density> , <Density
+Scale Factor> (optional) )::
+  Same as
+  `++Histogram(<Boolean Cumulative>, <List of Class Boundaries>, <List of Raw Data>, <Boolean Use Density>, <Density Scale Factor>)++`,
+  except that if a datum is equal to the right border of a class, it is counted in this class and not in the next one.
+
+[NOTE]
+====
+
+By convention this uses the a < x ≤ b rule for each class except for the first class which is a ≤ x ≤ b
+
+====

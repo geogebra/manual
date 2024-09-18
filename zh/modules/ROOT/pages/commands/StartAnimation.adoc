@@ -1,0 +1,27 @@
+= StartAnimation 指令
+:page-en: commands/StartAnimation
+ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+
+StartAnimation( )::
+  啟動所有的動態模擬。
+StartAnimation( <真假值 b> )::
+  如果 b 為 true（真），就啟動動態模擬；若 b 為 false（假），則停止所有動態模擬。
+
+[NOTE]
+====
+雖然 JavaScript 中有 http://wiki.geogebra.org/en/Reference:JavaScript#Automatic_Animation[stopAnimation()]
+這個函數，但在 GGBScript 中並無 StopAnimation() 指令。
+
+====
+
+StartAnimation( <點或數值滑桿>, <點或數值滑桿>, .... )::
+  針對指定的點或數值滑桿，啟動動態模擬。注意：指定的點必須在某個「xref:/幾何物件.adoc[路徑]」上才行。
+StartAnimation( <點或數值滑桿>, <點或數值滑桿>, ...., <真假值 b> )::
+  針對指定的點或數值滑桿，如果 b 為 true（真），就啟動動態模擬；若 b 為
+  false（假），則停止這些指定物件的動態模擬，但注意：如果有其他的點或數值也在動態模擬中，而且沒有在此指令指定的名單內的話，那麼這些物件還是會保持變動。
+
+[NOTE]
+====
+請參閱xref:/動畫.adoc[動畫]。
+
+====

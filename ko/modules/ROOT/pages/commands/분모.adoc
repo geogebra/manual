@@ -1,0 +1,37 @@
+= 분모 명령
+:page-en: commands/Denominator
+ifdef::env-github[:imagesdir: /ko/modules/ROOT/assets/images]
+
+Denominator( <Function> )::
+  Returns the denominator of a function.
+Denominator( <Number> )::
+  For a rational number returns its denominator. It uses a numerical method, which limits this command to numbers with
+  small denominator. For irrational input the denominator of its
+  xref:/s_index_php?title=ContinuedFraction_Command_action=edit_redlink=1.adoc[continued fraction] is returned.
+
+[EXAMPLE]
+====
+
+`++Denominator(5 / (x^2 + 2))++` yields _f(x)=(x^2^ + 2)_.
+
+====
+
+[NOTE]
+====
+
+See also xref:/s_index_php?title=Numerator_Command_action=edit_redlink=1.adoc[Numerator Command] and
+xref:/s_index_php?title=FractionText_Command_action=edit_redlink=1.adoc[FractionText Command].
+
+====
+
+== CAS Syntax
+
+Denominator( <Expression> )::
+  Returns the denominator of a rational number or expression.
+
+[EXAMPLE]
+====
+
+`++Denominator(2 / 3 + 1 / 15)++` yields _15_.
+
+====
