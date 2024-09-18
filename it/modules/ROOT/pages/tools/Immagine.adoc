@@ -2,28 +2,12 @@
 :page-en: tools/Image
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
-Per inserire un'immagine nella image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
-xref:/Vista_Grafici.adoc[vista Grafici], selezionare lo strumento image:20px-Mode_image.svg.png[Mode
-image.svg,width=20,height=20] _Immagine_ nella casella _Strumenti Oggetti speciali_ (terza da destra)
-image:Mode_Image_It.png[Mode Image It.png,width=624,height=328] quindi specificare la posizione dell'immagine in uno dei
-seguenti modi:
+Attivare lo strumento image:20px-Mode_image.svg.png[Mode image.svg,width=20,height=20] _Immagine_ per aprire una finestra di dialogo che constente di selezionare il file dell'immagine che verrà inserita nella image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _vista Grafici_. Nelle versioni web e nelle app per dispositivi mobili è possibile anche importare immagini direttamente dalla videocamera.
 
-* Fare clic nella image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _vista Grafici_ per
-definire la posizione dell'angolo in basso a sinistra dell'immagine
-
-oppure
-
-* Fare clic su un punto per definirlo come angolo in basso a sinistra dell'immagine.
-
-Verrà visualizzata una finestra di dialogo che consente la selezione dell'immagine tra i file salvati nel computer.
 
 [NOTE]
 ====
 
-* Nella versione desktop, dopo avere selezionato lo strumento image:20px-Mode_image.svg.png[Mode
-image.svg,width=20,height=20] _Immagine_, è possibile incollare direttamente nella
-image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _vista Grafici_ un'immagine memorizzata
-negli _Appunti_ con la combinazione [.kcode]#Alt# _clic_.
 * Sono supportati file [https://en.wikipedia.org/wiki/Graphics_Interchange_Format[GIF]] con trasparenza e file
 [https://en.wikipedia.org/wiki/Portable_Network_Graphics[PNG]]; per utilizzare file in formato _PNG_ è necessario
 modificarli in modo che dispongano di un canale alpha. Ad esempio se si utilizza [http://www.irfanview.com/[IrfanView]]
@@ -32,37 +16,32 @@ per la modifica, è necessario salvare utilizzando il plugin PNGOUT, selezionand
 
 ====
 
-== Proprietà delle immagini
+== Posizione e proprietà delle immagini
 
-La posizione di un'immagine nello schermo può essere assoluta o relativa al sistema di coordinate: è possibile
-specificare l'impostazione desiderata nella scheda _Generali_ della
+La posizione di un'immagine può essere assoluta nello schermo o relativa al sistema di coordinate: è possibile
+specificare l'impostazione desiderata nella scheda _Posizione_ della
 image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Finestra_di_dialogo_Proprietà.adoc[finestra
 di dialogo Proprietà] dell'immagine.
 
-Nella scheda _Posizione_ della finestra di dialogo _Proprietà_ è possibile specificare fino a tre "corner"
-dell'immagine: ciò consente la flessibilità necessaria per scalare, ruotare e perfino distorcere le immagini (vedere
-inoltre il comando xref:/commands/Corner.adoc[Corner]).
+GeoGebra crea automaticamente due punti ai due angoli inferiori dell'immagine, che possono essere utilizzati per posizionare e ridimensionare l'immagine, definiti come:
 
 * _Corner 1_: posizione dell'angolo in basso a sinistra dell'immagine
 * _Corner 2_: posizione dell'angolo in basso a destra dell'immagine
 
-[NOTE]
-====
-
-Questo corner, che controlla la larghezza dell'immagine, può essere impostato solo se il _Corner 1_ è stato definito in
-precedenza.
-
-====
+Nella scheda _Posizione_ della finestra di dialogo _Proprietà_ è possibile specificare fino a tre "Corner"
+dell'immagine: ciò consente la flessibilità necessaria per scalare, ruotare ed eventualmente distorcere le immagini (vedere
+inoltre il comando xref:/commands/Corner.adoc[Corner]). Quindi oltre ai precedenti è disponibile la possibilità di definire
 
 * Corner 4: posizione dell'angolo in alto a sinistra dell'immagine
 
 [NOTE]
 ====
 
-Questo corner, che controlla l'altezza dell'immagine, può essere impostato solo se il _Corner 1_ è stato definito in
+Il _Corner 2_ controlla la larghezza dell'immagine e il _Corner 4_ controlla l'altezza dell'immagine. Tali _Corner_ possono essere impostati solo se il _Corner 1_ è stato definito in
 precedenza.
 
 ====
+
 
 [EXAMPLE]
 ====
@@ -70,12 +49,10 @@ precedenza.
 Creare tre punti _A_, _B_ e _C_ e inserire un'immagine nella image:16px-Menu_view_graphics.svg.png[Menu view
 graphics.svg,width=16,height=16] _vista Grafici_ per sperimentare gli effetti dei punti corner.
 
-* Impostare i punti _A_ e _B_ rispettivamente come primo e secondo _corner_ dell'immagine. Trascinando i punti _A_ e _B_
-in modalità image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22] _Muovi_ è possibile modificare la larghezza
-dell'immagine.
+* Impostare i punti _A_ e _B_ rispettivamente come primo e secondo _corner_ dell'immagine. Attivare lo strumento image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22] _Muovi_ e trascinare i punti _A_ e _B_
+per modificare la larghezza dell'immagine.
 * Rimuovere ora il punto _B_ come secondo _corner_ dell'immagine e impostare _A_ come primo _corner_ e _C_ come quarto
-_corner_. Trascinando i punti _A_ e _C_ in modalità image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22]
-_Muovi_ è possibile modificare l'altezza dell'immagine.
+_corner_. Attivare lo strumento image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22] _Muovi_ e trascinare i punti _A_ e _C_ per modificare l'altezza dell'immagine.
 * È infine possibile impostare tutti e tre i punti _corner_ e distorcere l'immagine trascinando tali punti.
 
 ====
@@ -95,12 +72,11 @@ unità):
 [NOTE]
 ====
 
-Trascinando il punto _A_ in modalità image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22]
-xref:/tools/Muovi.adoc[Muovi], le dimensioni dell'immagine rimangono invariate.
+In questo caso, attivando lo strumento image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22] _Muovi_ e trascinando il punto _A_, le dimensioni dell'immagine rimangono invariate.
 
 ====
 
-È inoltre possibile impostare un'immagine come _Sfondo_, nella scheda _Generali_ della
+È possibile impostare un'immagine come _Sfondo_, nella scheda _Generali_ della
 image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Finestra_di_dialogo_Proprietà.adoc[finestra
 di dialogo Proprietà]. Un'immagine di sfondo viene posizionata ad un livello al di sotto degli assi cartesiani, e non
 può essere selezionata con il mouse.
@@ -110,12 +86,14 @@ può essere selezionata con il mouse.
 
 Per modificare le impostazioni di un'immagine di sfondo, aprire la
 image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] finestra di dialogo _Proprietà_ selezionando
-image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Proprietà…_ nel
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Proprietà_ nel
 image:16px-Menu-edit.svg.png[Menu-edit.svg,width=16,height=16] xref:/Menu_Modifica.adoc[menu Modifica].
+
+Nella versione Web e nelle app, innanzitutto selezionare l'opzione _Mostra oggetti ausiliari_ nelle proprietà della image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] _vista Algebra_ per visualizzare l'immagine nell'elenco degli oggetti della _vista Algebra_ quindi selezionare l'immagine e aprire la relativa finestra di dialogo proprietà.
 
 ====
 
-È possibile modificare la _Trasparenza_ di un'immagine, in modo da visualizzare agevolmente gli oggetti o gli assi che
-si trovano al di sotto di essa: nella scheda _Stile_ della
-image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] finestra di dialogo _Proprietà_ è possibile
-specificare una percentuale di _Riempimento_ compresa tra 0 % e 100 %.
+È possibile modificare l'_Opacità_ di un'immagine, in modo da visualizzare gli oggetti o gli assi che
+si trovano al di sotto di essa: nella scheda _Colore_ della
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] finestra di dialogo _Proprietà_ utilizzare lo slider per impostare il valore dell'_Opacità_ tra 0 e 100.
