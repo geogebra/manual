@@ -1,0 +1,80 @@
+= Pontos e Vetores
+ifdef::env-github[:imagesdir: /pt/modules/ROOT/assets/images]
+
+Pontos e vetores podem ser inseridos através do xref:/Campo_de_Entrada.adoc[Campo de Entrada] em Coordenadas Cartesianas
+ou Polares (veja xref:/Números_e_Ângulos.adoc[Números e Ângulos]). Pontos também podem ser criados usando as ferramentas
+image:Tool_New_Point.gif[Tool New Point.gif,width=32,height=32]
+xref:/s_index_php?title=Novo_ponto_action=edit_redlink=1.adoc[Novo ponto], image:Tool_Vector_from_Point.gif[Tool Vector
+from Point.gif,width=32,height=32] xref:/s_index_php?title=Vetor_a_Partir_de_um_Ponto_action=edit_redlink=1.adoc[Vetor a
+Partir de um Ponto], image:Tool_Vector_between_Two_Points.gif[Tool Vector between Two Points.gif,width=32,height=32]
+xref:/s_index_php?title=Vetor_Definido_por_Dois_Pontos_action=edit_redlink=1.adoc[Vetor Definido por Dois Pontos] e uma
+grande variedade de xref:/Comandos.adoc[comandos].
+
+== Cálculos
+
+No GeoGebra, você também pode fazer cálculos com pontos e vetores.
+
+== Produto Vetorial
+
+Dados dois pontos ou dois vetores, `++(a, b) ⊗ (c, d)++` resulta na coordenada z do produto vetorial _(a, b, 0) ⊗ (c, d,
+0)_ como um número único. A mesma sintaxe é válida para listas, mas o resultado, neste caso, é uma lista.
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+
+|Some content was not yet translated.
+|===
+
+[EXAMPLE]
+====
+
+* `++{1, 2} ⊗ {4, 5}++` resulta em _\{0, 0, -3}_
+* `++{1, 2, 3} ⊗ {4, 5, 6}++` resulta em _\{3, 6, -3}_.
+
+====
+
+[EXAMPLE]
+====
+
+* Você pode criar o ponto médio M de dois pontos A e B digitando `++M = (A + B) / 2++` no
+xref:/Campo_de_Entrada.adoc[Campo de Entrada] e pressionando [.kcode]#Enter#.
+* Você pode calcular o comprimento de um vetor "v" digitando `++length = sqrt(v * v)++` no
+xref:/Campo_de_Entrada.adoc[Campo de Entrada] e pressionando [.kcode]#Enter#.
+* Se _A = (a, b)_, então `++A + 1++` resulta em _(a + 1, b + 1)_. Se _A_ é um
+xref:/s_index_php?title=Número_Complexo_action=edit_redlink=1.adoc[Número Complexo] "a+bί", então `++A + 1++` resulta em
+_a + 1 + bί_.
+
+====
+
+[EXAMPLE]
+====
+
+* Para inserir um ponto P ou um vetor v em Coordenadas Cartesianas, você pode digitar `++P = (1, 0) or v = (0, 5)++` no
+Campo de Entrada e pressionar [.kcode]#Enter#.
+* Para inserir o mesmo ponto utilizando Coordenadas Polares, você pode digitar `++P = (1; 0°)++` ou `++v = (5; 90°)++`
+no Campo de Entrada e pressionar [.kcode]#Enter#.
+
+====
+
+[NOTE]
+====
+
+Se você não digitar ° (símbolo de grau para ângulos), o GeoGebra tratará os ângulos como radianos.
+
+====
+
+[NOTE]
+====
+
+você precisa utilizar ; (ponto e vírgula) para separar os atributos em Coordenadas Polares.
+
+====
+
+[NOTE]
+====
+
+Pontos são representados por letras maiúsculas e vetores por letras minúsculas. Esta convenção não é obrigatória.
+
+====

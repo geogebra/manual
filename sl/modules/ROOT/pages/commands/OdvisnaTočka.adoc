@@ -1,0 +1,47 @@
+= OdvisnaTočka ukaz
+:page-en: commands/DynamicCoordinates
+ifdef::env-github[:imagesdir: /sl/modules/ROOT/assets/images]
+
+OdvisnaTočka[ <točka>, <število>, <število> ]::
+  OdvisnaTočka[ Točka A, Število X, Število Y ];;
+    Ukaz postavi točko na koordinati (X, Y). Ta točka je odvisna, a jo lahko premikamo. Kakor hitro jo poskusimo
+    premakniti na mesto s koordinatama (x, y), se tja premakne tudi točka A, preračunavajo se koordinate nove točke.
+    Deluje najbolje, če je točka xref:/s_index_php?title=Object_Properties_action=edit_redlink=1.adoc[vidna]. Vsaj ena
+    od koordinat _X_ in _Y_ seveda mora biti odvisna od _A_.
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+
+|Some content was not yet translated.
+|===
+
+[EXAMPLE]
+====
+
+* `++B=OdvisnaTočka[A,round(x(A)),round(y(A))]++`. Če želimo premakniti točko _B_ v (1.3,2.1) z uporabo orodja
+image:Tool_Move.gif[Tool Move.gif,width=32,height=32]
+xref:/s_index_php?title=Premikanje_action=edit_redlink=1.adoc[Premikanje], dobi točka _A_ koordinati (1.3,2.1) _B_ pa se
+pojavi v (1,2).
+* `++B=OdvisnaTočka[A,x(A),min(y(A),sin(x(A)))]++` ustvari točko pod krivuljo sin(x).
+
+[NOTE]
+====
+
+TočkaV[y<sin(x)] je za ta primer lažja rešitev.
+
+====
+
+* Naslednji primeri kažejo še druge načine za omejitev položaja točke C: vzemimo, da je A=Point[xAxis] točka na osi x,
+kot tudi B=Point[xAxis]. Sedaj pa vnesimo ukaz: `++OdvisnaTočka[B, Min[x(B),x(A)],0] ++`, in potrdimo z Enter,
+`++ DoločiPrikaz[B, 1, false]++`, in še enkrat tipka Enter, `++SetLayer[C, 1]++`, še zadnjič tipka Enter. Sedaj vidimo,
+da točke C ne moremo premakniti desno od A.
+* Definirajmo A=(1,2). Sedaj vnesimo v vnosno vrstico: `++OdvisnaTočka[A, 1, false]++` in potrdimo z Enter,
+`++ B=OdvisnaTočka[A, If[x(A) > 3, 3, If[x(A) < -(3), -3, If[x(A)< 0, round(x(A)), x(A)]]], If[x(A) < 0, 0.5, If[y(A) > 2, 2, If[y(A) <0, 0, y(A)]]]]++`,
+in z Enter zopet potrdimo.
+* Ta primer naredi A za "privlačno" točko, ko se ji s C dovolj približamo. Definirajmo A=(1,2) in B=(2,3). Sedaj vnesimo
+v vnosno vrstico: `++DoločiPrikaz[B, 1, false]++` in potrdimo z Enter,
+`++C=OdvisnaTočka[B, If[Razdalja[A, B] < 1, x(A), x(B)], If[Razdalja[A, B] < 1, y(A), y(B)]]++`.
+
+====

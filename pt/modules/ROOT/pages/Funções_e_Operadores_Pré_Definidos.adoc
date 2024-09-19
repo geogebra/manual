@@ -1,0 +1,141 @@
+= Funções e Operadores Pré-Definidos
+ifdef::env-github[:imagesdir: /pt/modules/ROOT/assets/images]
+
+Para criar números, coordenadas, ou equações usando o xref:/Campo_de_Entrada.adoc[Campo de Entrada], você pode utilizar
+as seguintes funções e operadores pré-definidos. Operadores lógicos e funções estão listados no artigo sobre
+xref:/Valores_Booleanos.adoc[Valores Booleanos].
+
+[cols=",",options="header",]
+|===
+|Operação / Função |Input
+|Adição |+
+
+|Subtração |-
+
+|Multiplicação |* or Space key
+
+|Produto escalar |* or Space key
+
+|Produto vetorial ou determinante (veja xref:/Pontos_e_Vetores.adoc[Pontos e Vetores]) |⊗
+
+|Divisão |/
+
+|Exponenciação |^ or superscript (`++x^2++` or `++x2++`)
+
+|Fatorial |!
+
+|Parênteses |( )
+
+|Coordenada X |x( )
+
+|Coordenada Y |y( )
+
+|Argumento |arg( )
+
+|Conjugado |conjugate( )
+
+|Valor absoluto |abs( )
+
+|Sinal |sgn( ) or sign()
+
+|Raiz quadrada |sqrt( )
+
+|Raiz cúbica |cbrt( )
+
+|Número aleatório entre 0 e 1 |random( )
+
+|Função exponencial |exp( ) or ℯ^x^
+
+|Logaritmo (natural, de base e) |ln( ) or log( )
+
+|Logaritmo na base 2 |ld( )
+
+|Logaritmo na base 10 |lg( )
+
+|Logaritmo de "x" na base "b" |log(b, x )
+
+|Cosseno |cos( )
+
+|Seno |sin( )
+
+|Tangente |tan( )
+
+|Secante |sec()
+
+|Cossecante |cosec()
+
+|Cotangente |cot()
+
+|Arco-cosseno |acos( ) or arccos( )
+
+|Arco-seno |asin( ) or arcsin( )
+
+|Arco-tangente (resultado entre –π/2 e π/2) |atan( ) or arctan( )
+
+|https://en.wikipedia.org/wiki/Atan2[Arco-tangente (resultado entre –π e π)] |atan2(y, x)
+
+|Cosseno hiperbólico |cosh( )
+
+|Seno hiperbólico |sinh( )
+
+|Tangente hiperbólica |tanh( )
+
+|Secante hiperbólica |sech( )
+
+|Cossecante hiperbólica |cosech( )
+
+|Cotangente hiperbólica |coth( )
+
+|Arco cosseno hiperbólico |acosh( ) or arccosh( )
+
+|Arco seno hiperbólico |asinh( ) or arcsinh( )
+
+|Arco tangente hiperbólico |atanh( ) or arctanh( )
+
+|Maior inteiro menor do que ou igual a |floor( )
+
+|Menor inteiro maior do que ou igual a |ceil( )
+
+|Arredondar para o inteiro mais próximo |round( )
+
+|http://mathworld.wolfram.com/BetaFunction.html[Função Beta] Β(a, b) |beta(a, b)
+
+|http://mathworld.wolfram.com/IncompleteBetaFunction.html[Função Beta incompleta] Β(x;a, b) |beta(a, b, x)
+
+|http://mathworld.wolfram.com/RegularizedBetaFunction.html[Função Beta regularizada incompleta] I(x; a, b)
+|betaRegularized(a, b, x)
+
+|https://en.wikipedia.org/wiki/Gamma_function[Função Gama] |gamma( x)
+
+|(Lower) http://mathworld.wolfram.com/IncompleteGammaFunction.html[Função Gama incompleta] γ(a, x) |gamma(a, x)
+
+|(Lower) http://mathworld.wolfram.com/RegularizedGammaFunction.html[Função Gama regularizada incompleta]
+|gammaRegularized(a, x)
+
+|https://en.wikipedia.org/wiki/Error_function[Função Erro (ou Função Erro Gaussiana)] |erf(x)
+|===
+
+[EXAMPLE]
+====
+
+`++Conjugate(17 + 3 * ί)++` resulta em _-3 ί + 17_, que é o conjugado do número complexo _17 + 3 ί_.
+
+Veja xref:/Números_Complexos.adoc[Números Complexos] para mais detalhes.
+
+====
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+
+|Some content was not yet translated.
+|===
+
+[NOTE]
+====
+
+as funções pré-definidas precisam ser inseridas utilizando parênteses. Você não deve inserir um espaço entre o nome da
+função e os parênteses.
+
+====

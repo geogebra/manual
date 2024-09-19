@@ -1,0 +1,76 @@
+= If ukaz
+:page-en: commands/If
+ifdef::env-github[:imagesdir: /sl/modules/ROOT/assets/images]
+
+If[ <pogoj>, <objekt> ]::
+  če je pogoj izpolnjen (ima vrednost true), vrne kopijo objekta, sicer pa vrne nedefiniran objekt.
+
+If[ <pogoj>, <objekt a>, <objekt b> ]::
+  če je pogoj izpolnjen (ima vrednost true), vrne kopijo objekta a, sicer pa vrne objekt b.
+
+[cols=",",]
+|===
+|image:18px-Attention.png[Opozorilo,title="Opozorilo",width=18,height=18] *Opozorilo*: |Oba objekta morata biti istega
+tipa.
+|===
+
+== Odsekoma podane funkcije
+
+Ukaz If lahko uporabimo, da ustvarimo odsekoma podane funkcije. Tako podane funkcije lahko uporabimo kot argumente v
+poljubnem ukazu, ki kot parameter sprejme funkcijo, na primer xref:/commands/Odvod.adoc[Odvod],
+xref:/commands/Integral.adoc[Integral], and xref:/commands/Presečišče.adoc[Presečišče].
+
+[EXAMPLE]
+====
+
+*Primeri:*
+
+* `++f(x) = If[x < 3, sin(x), x^2]++` yields a function that equals _sin(x)_ for _x < 3_ and _x^2^_ for _x ≥ 3_
+* `++f(x) = If[x < 3 ∧ x>0, x^3]++` yields a function that equals _sin(x)_ for x between 0 and 3 and undefined for _x ≥
+3_ or _x ≤ 0_.
+
+====
+
+[NOTE]
+====
+
+Glej razdelek: xref:/Boolove_vrednosti.adoc[Boolove_vrednosti] for the symbols used in conditional statements.
+
+====
+
+[NOTE]
+====
+
+Derivative of *If[condition, f(x), g(x)]* gives *If[condition, f'(x), g'(x)]*. It does not do any evaluation of limits
+at the critical points.
+
+====
+
+== If Command in Scripting
+
+In many programming languages *if* has the meaning "If condition holds, do something; otherwise do something else". In
+GeoGebra, arguments of If are not commands, but values, one of which becomes the value of the result. Therefore if you
+want to e.g. set value of _b_ to 3 provided _a > 2_, correct way to do this is `++SetValue[b,If[a>2,3,b]]++`. The other
+way of nesting SetValue and If is incorrect.
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:Ambox_content.png[image,width=40,height=40]
+
+a|
+Following text is about a feature that is supported only in 5.0 beta version.
+
+'''''
+
+Starting with version 4.2, it is possible to use the *If* command more intuitively.
+
+[EXAMPLE]
+====
+
+Let _n_ be a number, and _A_ a point. The command `++If[Mod[n, 2] == 0, SetCoords[A, n, 0], SetCoords[A, n, 1]]++`
+modifies the coordinates of point _A_ according to the given condition.
+
+====
+
+|===

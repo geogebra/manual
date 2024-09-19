@@ -1,0 +1,60 @@
+= Точки и вектори
+ifdef::env-github[:imagesdir: /mk/modules/ROOT/assets/images]
+
+Points and vectors may be entered via xref:/Поле_за_внес.adoc[Поле за внес] in Cartesian or polar coordinates (see
+xref:/s_index_php?title=Броеви_и_агли_action=edit_redlink=1.adoc[Броеви и агли]). Points can also be created using
+image:Tool_New_Point.gif[Tool New Point.gif,width=32,height=32] xref:/Алатки_за_точка.adoc[Алатки за точка],
+image:Tool_Vector_from_Point.gif[Tool Vector from Point.gif,width=32,height=32] xref:/tools/Вектор_од_точка.adoc[Вектор
+од точка Алатка], image:Tool_Vector_between_Two_Points.gif[Tool Vector between Two Points.gif,width=32,height=32]
+xref:/tools/Вектор_меѓу_две_точки.adoc[Вектор меѓу две точки Алатка] and a variety of xref:/Наредби.adoc[наредби].
+
+[NOTE]
+====
+
+Upper case labels denote points, whereas lower case labels refer to vectors. This convention is not mandatory.
+
+====
+
+[EXAMPLE]
+====
+
+* To enter a point P or a vector v in Cartesian coordinates you may use `++P = (1, 0) or v = (0, 5)++`.
+* In order to use polar coordinates type in `++P = (1; 0°)++` or `++v = (5; 90°)++`.
+
+====
+
+[NOTE]
+====
+
+You need to use a semicolon to separate polar coordinates. If you don’t type the degree symbol, GeoGebra will treat the
+angle as if entered in radians.
+
+====
+
+== Calculations
+
+In GeoGebra, you can also do calculations with points and vectors.
+
+[EXAMPLE]
+====
+
+* You can create the midpoint M of two points A and B by entering `++M = (A + B) / 2++` into the Input Bar.
+* You may calculate the length of a vector _v_ using `++length = sqrt(v * v)++`
+* If _A = (a, b)_, then `++A + 1++` returns _(a + 1, b + 1)_. If _A_ is a
+xref:/s_index_php?title=Комплексни_броеви_action=edit_redlink=1.adoc[комплексен број] _a+bί_, then `++A+1++` returns _a
++ 1 + bί_.
+
+====
+
+== Vector Product
+
+For two points or vectors `++(a, b) ⊗ (c, d)++` returns the z-coordinate of vector product _(a, b, 0) ⊗ (c, d, 0)_ as
+single number. Similar syntax is valid for lists, but the result in such case is a list.
+
+[EXAMPLE]
+====
+
+* `++{1, 2} ⊗ {4, 5}++` returns _\{0, 0, -3}_
+* `++{1, 2, 3} ⊗ {4, 5, 6}++` returns _\{3, 6, -3}_.
+
+====

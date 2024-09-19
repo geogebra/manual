@@ -1,0 +1,43 @@
+= DinamičkeKoordinate naredba
+:page-en: commands/DynamicCoordinates
+ifdef::env-github[:imagesdir: /sr/modules/ROOT/assets/images]
+
+DinamičkeKoordinate[ <Tačka A>, <Number X>, <Number Y> ]::
+  Pravi tačku sa koodinatama (X, Y). Ova tačka je zavisna ali može se pomerati. Kad god pokušate da pomerite novu tačku
+  na koordinate (x,y), tačka _A_ se pomera tamo a koordinate nove tačke se računaju. Najbolje funkcioniše ukoliko tačka
+  _A_ nije xref:/s_index_php?title=Object_Properties_action=edit_redlink=1.adoc[vidljiva] a pomeranje se vrši mišem.
+  Najmanje jedan od _X_ i _Y_ može da zavisi od _A_.
+
+[EXAMPLE]
+====
+
+* `++B = DinamičkeKoordinate[A, round(x(A)), round(y(A))]++`. Kada pokušate da pomerite _B_ do (1.3, 2.1) koristeći
+image:Tool_Move.gif[Tool Move.gif,width=32,height=32] xref:/s_index_php?title=Move_Tool_action=edit_redlink=1.adoc[Move
+Tool], tačka _A_ postaje (1.3, 2.1) a _B_ se pojavljuje na (1,2).
+* `++B = DinamičkeKoordinate[A, x(A), min(y(A), sin(x(A))) ]++` pravi tačku ispod sin(x).
+
+[NOTE]
+====
+
+PointIn[y<sin(x)] je jednostavnije rješenje u ovom slučaju.
+
+====
+
+* Sledeći primeri pokazuju ostale načine na koje se može odrediti tačka C: Neka je A = Tačka[xOsa] i B = tačka[xOsa].
+Sada kucajte u xref:/s_index_php?title=Liniju_unosa_action=edit_redlink=1.adoc[Liniju
+unosa]:`++DinamičkeKoordinate[B, Min[x(B), x(A)], 0]++`, i pritisnite [.kcode]#Enter#
+
+`++SetVisibleInView[B, 1, false]++`, i pritisnite [.kcode]#Enter#
+
+`++SetLayer[C,  1]++`, i pritisnite [.kcode]##Enter##Now, C ne može da se pomera s desne strane tačke A.
+
+* Definišimo A=(1,2). Sada kucajte u xref:/s_index_php?title=Liniju_unosa_action=edit_redlink=1.adoc[Liniju unosa]:
+`++SetVisibleInView[A, 1, false++` i pritisnite
+[.kcode]##Enter##`++ B = DinamičkeKoordinate[A, If[x(A) > 3, 3, If[x(A) < -(3), -3, If[x(A)< 0, round(x(A)), x(A)]]], If[x(A) < 0, 0.5, If[y(A) > 2, 2, If[y(A) <0, 0, y(A)]]]]++`,
+i pritisnite [.kcode]#Enter#,
+* Ovaj primer čini tačku A lepljivom kada se tačka C pomera u njenoj blizini. Define A = (1,2) and B = (2,3). Sada
+kucajte u xref:/s_index_php?title=Liniju_koda_action=edit_redlink=1.adoc[Liniju
+koda]:`++SetVisibleInView[B, 1, false]++` i pritisnite
+[.kcode]##Enter##`++C = DinamičkeKoordinate[B, If[Udaljenost[A, B] < 1, x(A), x(B)], If[Udaljenost[A, B] < 1, y(A), y(B)]]++`.
+
+====

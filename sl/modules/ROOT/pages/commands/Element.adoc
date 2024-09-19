@@ -1,0 +1,87 @@
+= Element ukaz
+:page-en: commands/Element
+ifdef::env-github[:imagesdir: /sl/modules/ROOT/assets/images]
+
+Element[ <seznam>, <število> ]::
+  vrne _n_-ti element iz seznama.
+Element[ <matrika>, <vrstica>, <stolpec> ]::
+  Vrne element matrike v podani vrstici in podanem stolpcu matrike.
+Element[ <seznam>, <indeks1>, <indeks2>, ...]::
+  seznam je _n_- razsežni seznam števil, iz katerega lahko izberemo do _n_ elementov iz seznama, izbranih z ustreznimi
+  koordinatami.
+
+[EXAMPLE]
+====
+
+Dana je matrika _L={{{1, 2}, {3, 4}}, {{5, 6}, {7, 8}}}_. Tedaj `++Element[L, 1, 2, 1]++` vrne _3_,
+`++Element[L, 2, 2]++` pa _{7, 8}_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Element[{{1, 3, 2}, {0, 3, -2}}, 2, 3]++` vrne _-2_, tretji element v drugi vrstici matrike
+stem:[\begin{pmatrix}1&3&2\\0&3&-2\end{pmatrix}].
+
+====
+
+[EXAMPLE]
+====
+
+`++Element[{1, 3, 2}, 2]++` vrne _3_, torej drugi element seznama _{1, 3, 2}_.
+
+====
+
+[NOTE]
+====
+
+Da bi ta ukaz deloval, mora matrika vsebovati elemente iste vrste (na primer le števila, ali le točke)
+
+====
+
+== Sintaksa za CAS (simbolno računanje)
+
+Element[ <seznam>, <število> ]::
+  vrne _n' - ti' element seznama._
+Element[ <matrika>, <vrstica>, <stolpec> ]::
+  Vrne element matrike, ki je na mesti (vrstica, stolpec) v matriki.
+
+[EXAMPLE]
+====
+
+`++Element[{{a, b, c}, {d, e, f}}, 2, 3]++` vrne _f_, tretji element druge vrstice v matriki
+stem:[\begin{pmatrix}a&b&c\\d&e&f\end{pmatrix}].
+
+====
+
+[EXAMPLE]
+====
+
+`++Element[{a, b, c}, 2]++` vrne _b_, drugi element seznama _{a, b, c}_.
+
+====
+
+[NOTE]
+====
+
+Glej tudi xref:/commands/PrviElement.adoc[PrviElement_ukaz], xref:/commands/Zadnji.adoc[Zadnji_ukaz] in
+xref:/commands/NaključniElement.adoc[NaključniElement_ukaz].
+
+====
+
+== CAS pogled
+
+Element[ <seznam>, <mesto elementa> ]::
+
+Element[ <matrika>, <stolpec>, <vrstica> ]::
+
+Element[ <seznam>, <indeks 1>, <indeks 2>, ...]::
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+
+|Some content was not yet translated.
+|===

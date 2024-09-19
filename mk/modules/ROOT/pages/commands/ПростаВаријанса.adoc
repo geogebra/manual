@@ -1,0 +1,20 @@
+= ПростаВаријанса Наредба
+:page-en: commands/SampleVariance
+ifdef::env-github[:imagesdir: /mk/modules/ROOT/assets/images]
+
+ПростаВаријанса[ <листа на броеви> ]::
+  Враќа https://en.wikipedia.org/wiki/Sample_variance#Population_variance_and_sample_variance[ПростаВаријанса] од дадена
+  листа на броеви.
+
+== CAS Статистики
+
+ПростаВаријанса[ <листа на броеви> ]::
+  Враќа https://en.wikipedia.org/wiki/Sample_variance#Population_variance_and_sample_variance[ПростаВаријанса] од дадена
+  листа на броеви. Ако листата содржи недефинирани променливи,тогаш се дава формулата за ПростаВаријанса.
+
+[EXAMPLE]
+====
+
+`++ПростаВаријанса[{x, y, z}]++` дава stem:[\frac\{x² - x y - x z + y² - y z + z²}\{3}].
+
+====
