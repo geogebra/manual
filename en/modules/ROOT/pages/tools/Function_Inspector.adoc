@@ -2,16 +2,52 @@
 :page-en: tools/Function_Inspector
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
+[NOTE]
+====
 The _Function Inspector_ tool is available only in _GeoGebra Classic_.
+====
 
-Activate the tool, then select the function to explore.
+Activate the tool, then select the function to explore. A dialog window with two tabs, *Interval* and *Points*, appears.
 
-The appearing dialog window displays some meaningful information related to the function (min, max, roots, integral, area, mean, length) in the interval specified at the bottom of the _Interval_ tab.
-In the same tab it is possible to set the rounding of the displayed values to the desired number of decimal places or significant figures.
+== Interval Tab
+The Interval tab shows information about the function over the specified interval at the bottom, including the minimum value, maximum value, roots, integral, area, mean, and curve length.
 
-By activating the buttons at the bottom of the _Points_ tab it is possible to:
+== Points Tab
+The Points tab displays a table of values for the function. The corresponding points are displayed on the graph in the 
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Graphics_View.adoc[Graphics View] 
+but are not available as variables in the image:16px-Menu_view_algebra.svg.png[Algebra
+View,title="Algebra View",width=16,height=16] xref:/Algebra_View.adoc[Algebra View].
 
-* View and edit a table of values of the function. The corresponding points are displayed on the graph of the function, but will not be available as variables in the _Algebra View_. In the table of values, for each value of the x-coordinate it is possible to view, besides the y-coordinate displayed by default, also the value of the first derivative, of the second derivative, of the difference, and the curvature of the function at that point. Use the *+* button to select the columns of values to display, and the *x* button to remove a selected column from the table of values. Columns can be ordered by dragging their headers. The x-coordinate at the middle of its column can be edited manually, as well as the steps that specify the distance between two x-values in the table.
-* Display in the _Graphics View_ a draggable point belonging to the graph of the function, its projections over the axes and its coordinates in the tab.
-* Display in the _Graphics View_ the tangent line to the graph of the function at that point.
-* Display in the _Graphics View_ the osculating circle to the graph of the function at that point.
+The Points tab includes the following four buttons, each representing a different operation:
+
+* *Show table of points* +
+A table displaying _y_-coordinates corresponding to 9 _x_-coordinates is shown. The graph in the image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Graphics_View.adoc[Graphics View] displays these 9 points. 
+The point corresponding to the _x_-coordinate in the middle row is highlighted in red on the graph. 
+The _x_-coordinate in the middle of its column can be edited manually in the table or by dragging the red point 
+in the image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Graphics_View.adoc[Graphics View].
+Additionally, the steps that specify the interval between _x_-values can be modified. 
+
+[NOTE]
+====
+In the default table, the _x_-coordinate and _y_-coordinate are displayed. 
+Use the *+* button in the upper right corner to add columns for the values of the first derivative, the second derivative, the difference from the previous column, and the curvature of the function corresponding to the _x_-coordinate. Use the *x* button to remove columns. Reorder columns by dragging their headers.
+====
+
+* *Show x,y position lines* +
+Display the projections of the red point’s x-coordinate and y-coordinate on the axes in the image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Graphics_View.adoc[Graphics View].
+
+* *Show tangent line* +
+Display the tangent line to the graph at the red point in the image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Graphics_View.adoc[Graphics View].
+
+* *Show osculating circle* +
+Display the osculating circle representing the radius of curvature at the red point on the graph in the image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Graphics_View.adoc[Graphics View].
+
+[NOTE]
+====
+Select the icon image:24px-Menu-tools.svg.png[Menu-tools.svg,width=24,height=24] in the upper right corner of the window
+to set the rounding of the displayed values to the desired number of decimal places or significant figures.
+====
