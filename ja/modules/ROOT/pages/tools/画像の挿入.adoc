@@ -2,47 +2,43 @@
 :page-en: tools/Image
 ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
-このツールを使うと，image:16px-Menu_view_graphics.svg.png[Menu view
-graphics.svg,width=16,height=16]xref:/グラフィックスビュー.adoc[グラフィックスビュー]に画像を挿入することができる．
-
 image:20px-Mode_image.svg.png[Mode
-image.svg,width=20,height=20] _画像の挿入_ ツールを選択すると，デバイスに保存されている画像ファイルを選択するダイアログが表示される．モバイル版とWeb版では，カメラから画像を取り込むこともできる．
+image.svg,width=20,height=20] _画像の挿入_ ツールをアクティブにして，デバイス内の画像ファイルをブラウズし，
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]xref:/グラフィックスビュー.adoc[グラフィックスビュー]
+に挿入するファイルを選択する．
+モバイル版とWeb版では，カメラから画像を取り込むこともできる．
 
 [NOTE]
 ====
 
-* 透明な https://ja.wikipedia.org/wiki/Graphics_Interchange_Format[GIF]と https://ja.wikipedia.org/wiki/Portable_Network_Graphics[PNG]ファイルはサポートされているが，PNGファイルの場合は先にアルファチャンネルを含むよう編集する必要がある（例： http://www.irfanview.com/[IrfanView]を使ってPNGOUTプラグインで保存し，**RGB+アルファ**を選択するなど）．
+* 透明な https://ja.wikipedia.org/wiki/Graphics_Interchange_Format[GIF]および https://ja.wikipedia.org/wiki/Portable_Network_Graphics[PNG]ファイルはサポートされているが，PNGファイルの場合はアルファチャンネルを含むように編集する必要がある（例： http://www.irfanview.com/[IrfanView]を使ってPNGOUTプラグインで保存し，**RGB+アルファ**を選択するなど）．
 * 挿入された画像はデフォルトで補助オブジェクトになる．
 
 ====
 
-== 画像のプロパティ
+== 画像の位置とプロパティ
 
 画像の位置は，画面上での絶対位置か，座標系に対する相対位置かのどちらかで，設定は，画像のimage:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
 xref:/プロパティダイアログ.adoc[プロパティダイアログ]の _位置_ タブで行うことができる．
 
-image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _プロパティダイアログ_ の _位置_
-タブでは，画像の隅の点を最大3つまで指定することができる．これにより，画像を拡大・縮小や回転させるだけでなく，変形させることも可能（xref:/commands/Corner.adoc[Corner]
+GeoGebraは画像の下隅に自動的に2つの点を作成する．
+
+* 隅1（画像の左下隅の位置）
+* 隅2（画像の右下隅の位置）
+
+さらに,image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _プロパティダイアログ_ の _位置_
+タブでは，3つ目の点を指定することができる．
+
+* 隅4（画像の左上隅の位置）
+
+[NOTE]
+====
+* これらの点で画像を拡大・縮小や回転させるだけでなく，変形させることも可能（xref:/commands/Corner.adoc[Corner]
 コマンド参照）．
-
-* _隅 1_: 画像の左下隅の位置
-* _隅 2_: 画像の右下隅の位置
-
-[NOTE]
+* 隅2と隅4は，隅1が設定されている場合にのみ設定できる．
 ====
 
-この 隅 は，_隅1_ が定義されている場合にのみ設定できる．画像の幅を制御する．
 
-====
-
-* _隅 4_: 画像の左上隅の位置
-
-[NOTE]
-====
-
-この 隅 は，_隅1_ が定義されている場合にのみ設定できる．画像の高さを制御する．
-
-====
 
 [EXAMPLE]
 ====
@@ -52,7 +48,7 @@ _グラフィックスビュー_ に挿入して，隅の点の効果を調べ�
 
 * image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _プロパティダイアログ_ の _位置_ タブで 点 _A_
 を画像の最初の隅，点 _B_ を画像の2番目の隅に設定する．image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22]
-_移動_ モードで点 _A_ と点 _B_ をドラッグすると，画像の幅を変えることができる．
+_移動_ ツールをアクティブにして，点 _A_ と点 _B_ をドラッグすると，画像の幅を変えることができる．
 * 次に，image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _プロパティダイアログ_ の _位置_
 タブで画像の第2の隅である点 _B_ を削除する．点 _A_ を1つ目，点 _C_
 を4つ目の隅に設定し，これら点をドラッグすることで画像の高さにどのような影響が出るかを調べる．
@@ -63,7 +59,7 @@ _移動_ モードで点 _A_ と点 _B_ をドラッグすると，画像の幅�
 [EXAMPLE]
 ====
 
-画像を点 _A_ に添付し，幅を3，高さを4単位に設定するには，次のようにする：
+画像を点 _A_ に添付し，大きさを設定（例：幅を3単位，高さを4単位）するには，次のようにする：
 
 * _隅 1_ に _A_　を設定する
 * _隅 2_ に _A + (3, 0)_　を設定する
@@ -74,7 +70,7 @@ _移動_ モードで点 _A_ と点 _B_ をドラッグすると，画像の幅�
 [NOTE]
 ====
 
-image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22] xref:/tools/移動.adoc[移動] モードで点 _A_
+image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22] xref:/tools/移動.adoc[移動] ツールをアクティブにして点 _A_
 をドラッグしても，画像のサイズは変わらない．
 
 ====
@@ -88,9 +84,10 @@ _背景画像_ として画像を指定することができる．背景画像�
 画像の背景設定を変更するためには，image:16px-Menu-edit.svg.png[Menu-edit.svg,width=16,height=16]xref:/編集メニュー.adoc[編集メニュー]から
 image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _オブジェクトプロパティ_
 を選択し，画像の image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _プロパティダイアログ_ を開く．
-Web版ではimage:16px-Menu_view_algebra.svg.png[Menu view
-algebra.svg,width=16,height=16]数式ビュー のプロパティで，補助オブジェクトの表示にチェックを入れて，image:16px-Menu_view_algebra.svg.png[Menu view
-algebra.svg,width=16,height=16]数式ビューで画像を選択し，画像の image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _プロパティダイアログ_ を開く．
+Web版とアプリではimage:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16]数式ビュー のプロパティで，_補助オブジェクトの表示_ にチェックを入れて，
+画像が image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] 数式ビュー のオブジェクトリストに表示されるようにしてから画像を選択し， image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _プロパティダイアログ_ を開く．
 
 ====
 
