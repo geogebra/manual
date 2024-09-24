@@ -4,19 +4,37 @@ ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
 
 Division( <Dividend>, <Divisor> )::
   Liefert den Quotienten (ganzzahliger Teil des Ergebnisses) und den Rest der Division der zwei Zahlen.
+
+[EXAMPLE]
+====
+
+`++Division(16, 3)++` ergibt _{5, 1}_.
+
+====
+
 Division( <Dividend Polynom>, <Divisor Polynom> )::
   Liefert den Quotienten und den Rest der Division der zwei Polynome.
 
 [EXAMPLE]
 ====
 
-`++Division[x^2 + 3 x + 1, x - 1]++` ergibt _\{x + 4, 5}_.
+`++Division(x^2 + 3 x + 1, x - 1)++` ergibt _{x + 4, 5}_.
+
+====
+
+[Note]
+====
+
+In der _Algebra-Ansicht_ kann nur eine Variable benutzt werden. Diese wird immer umbenannt in _x_. In der _CAS-Ansicht_ 
+wird auch eine Division mit mehreren Variablen unterstützt.
 
 ====
 
 [EXAMPLE]
 ====
 
-`++Division[16, 3]++` ergibt _\{5, 1}_.
+* `++Division(x^2+y^2, x+y)++` ergibt _{x - y, 2y^2}_.
+* `++Division(x^2+y^2, y+x)++` ergibt _{y - x, 2x^2}_.
+
 
 ====
