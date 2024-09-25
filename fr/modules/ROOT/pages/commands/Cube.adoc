@@ -2,7 +2,7 @@
 :page-en: commands/Cube
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-[NOTE]
+
 ====
 
 *image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] Graphique
@@ -13,18 +13,21 @@ Cube( <Point A>, <Point B>, <Direction> )::
 
 Les autres sommets sont déterminés par la donnée "Direction", à choisir parmi :
 
-. un vecteur, un segment, une demi-droite, une droite *orthogonal(e)* à [AB] ;
-. un polygone dans un plan *parallèle* à [AB] ;
-. un plan *parallèle* à [AB].
-
+* un vecteur, un segment, une demi-droite, une droite *orthogonal(e)* à [AB] ;
+* un polygone dans un plan *parallèle* à [AB] ;
+* un plan *parallèle* à [AB].
++
 Le cube créé a :
 
-. une face d'arête [AB] dans un plan orthogonal au vecteur/segment donné, à la demi-droite/droite donnée ;
-. une face d'arête [AB] dans un plan parallèle à celui du polygone ;
-. une face d'arête [AB] dans un plan parallèle au plan donné.
+* une face d'arête [AB] dans un plan orthogonal au vecteur/segment donné, à la demi-droite/droite donnée ;
+* une face d'arête [AB] dans un plan parallèle à celui du polygone ;
+* une face d'arête [AB] dans un plan parallèle au plan donné.
+ 
+. 
 
 Cube( <Point A>, <Point B>, <Point C>)::
   Crée un cube à partir des trois points d'une face, ces 3 points devant être les sommets consécutifs d'un carré.
+
 
 Cube( <Point A>, <Point B> )::
   Crée un cube ayant le segment *[AB]* comme arête, vous pouvez ensuite le faire pivoter autour de cette arête, en
