@@ -1,0 +1,27 @@
+= Commande Sachant
+:page-en: commands/Assume
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+== CAS Syntax
+
+Sachant( <Condition>, <Expression> )::
+  Evaluates the expression according to the condition
+
+[EXAMPLE]
+====
+
+* `++Sachant(a > 0, Intégrale(exp(-a x), 0, infinity))++` retourne `++1 / a++`.
+* `++Sachant(x>0 && n>0, Résoudre(log(n^2*(x/n)^log(x))=log(x^2), x))++` retourne `++{x = 100, x = n}++`
+* `++Sachant(x<2,Simplifier(sqrt(x-2sqrt(x-1))))++` retourne `++-sqrt(x - 1) + 1++`
+* `++Sachant(x>2,Simplifier(sqrt(x-2sqrt(x-1))))++` retourne `++sqrt(x - 1) - 1++`
+* `++Sachant(k>0, Extremum(k*3*x^2/4-2*x/2))++` retourne par *Évaluer* stem:[ \left\{ \left(\frac{2}{3 k}, -\frac{1}{3 k} \right)\right\} ]
+* `++Sachant(k>0, PointInflection(0.25 k x^3 - 0.5x^2 + k))++` retourne stem:[ \left\{ \left(\frac{2}{3 k}, \frac{27k^{3} - 4}{27 k^{2}} \right) \right\} ]
+
+====
+
+[NOTE]
+====
+
+Voir aussi xref:/commands/Résoudre.adoc[la commande Résoudre].
+
+====
