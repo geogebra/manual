@@ -1,0 +1,28 @@
+= Commande EstFactorisé
+:page-en: commands/IsFactored
+:page-aliases: commands/IsFactorised.adoc
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+
+EstFactorisé( <Polynôme> )::
+  Retourne ''true'' si le polynôme est factorisé sur stem:[\mathbb Q] et ''false'' sinon.
+En général, pour considérer une décomposition polynomiale comme factorisée, le coefficient du terme principal de chaque facteur doit être positif.
+
+[EXAMPLE]
+====
+* `EstFactorisé(x)` retourne _true_ +
+* `EstFactorisé(0.5)` retourne _true_ +
+* `EstFactorisé(5)` retourne _true_ +
+* `EstFactorisé(x^2-1)` retourne _false_ +
+* `EstFactorisé(x^2-2)` retourne _true_ +
+* `EstFactorisé(x(x+1))` retourne _true_ +
+* `EstFactorisé(x(2x+2))` retourne _false_ +
+* `EstFactorisé(x^3-1)` retourne _false_ +
+* `EstFactorisé(x(x/2+1/2))`retourne _false_ +
+* `EstFactorisé((x+1)(x^2-1))+`retourne _false_ +
+* `EstFactorisé(-2x-2)` retourne _false_ +
+* `EstFactorisé(2x+2)` retourne _false_ +
+====
+
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/Foactoriser.adoc[Factoriser] et xref:/commands/FoactoriseIrr.adoc[FactoriseIrr].
