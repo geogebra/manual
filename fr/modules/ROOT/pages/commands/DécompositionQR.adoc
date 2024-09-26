@@ -1,0 +1,20 @@
+= Commande DécompositionQR
+:page-en: commands/QRDecomposition
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+*image:24px-Menu_view_cas.svg.png[Menu view cas.svg,width=24,height=24] uniquement en fenêtre
+xref:/Calcul_formel.adoc[Calcul formel]*
+
+DécompositionQR( <Matrice> )::
+  Calcule la https://fr.wikipedia.org/wiki/D%C3%A9composition_QR[Décomposition QR] de la matrice donnée.
+
+[EXAMPLE]
+====
+
+`++DécompositionQR({{1,2},{3,4}})++` retourne les matrices
+stem:[\begin{pmatrix}1/\sqrt{10}&3/5/\sqrt{10}/5\\3/\sqrt{10}&1/5/\sqrt{10}/5\end{pmatrix}] and
+stem:[\begin{pmatrix}\sqrt{10}&7/5\sqrt{10}\\0&\sqrt{10}/5\end{pmatrix}].
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/DécompositionLU.adoc[DécompositionLU].
