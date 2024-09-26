@@ -1,0 +1,26 @@
+= Commande IntégraleSymbolique
+:page-en: commands/IntegralSymbolic
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+*image:24px-Menu_view_cas.svg.png[Menu view cas.svg,width=24,height=24] uniquement en fenêtre
+xref:/Calcul_formel.adoc[Calcul formel]*
+
+IntégraleSymbolique( <Fonction> )::
+  Retourne une primitive en lien avec la variable principale. La constante d'intégration _c_ n'est pas automatiquement affichée comme curseur.
+
+[EXAMPLE]
+====
+
+`++IntégraleSymbolique(3x^2)++` retourne stem:[x^3+c_{1}].
+
+====
+
+IntégraleSymbolique( <Fonction>, <Variable> )::
+  Retourne une primitive en lien avec la variable priécisée. La constante d'intégration _c_ n'est pas automatiquement affichée comme curseur.
+
+[EXAMPLE]
+====
+
+`++IntégraleSymbolique(x³+3x y, x)++` retourne _stem:[ \frac{1}{4}x^4] + stem:[\frac{3}{2} x² y+c_{1} ]_ .
+
+====
