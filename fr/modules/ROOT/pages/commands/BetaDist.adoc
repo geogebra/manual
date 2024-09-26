@@ -1,0 +1,20 @@
+= Commande BetaDist 
+:page-en: commands/BetaDist
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+BetaDist( <Alpha>, <Beta>, <Nombre Succès> )::
+  Calcule la valeur de la fonction de distribution cumulée d'une https://fr.wikipedia.org/wiki/Loi_b%C3%AAta[Loi Bêta] de paramètres _α, β_ en _v_, 
+ qui est la probabilité _P(X≤v)_ où _X_ est une variable aléatoire d'une distribution Beta de paramètres _α, β_ 
+
+BetaDist( <Alpha>, <Beta>, <Nombre Succès>, <Booléen Cumul> ):: 
+  Si _Cumul_ est _true_, calcule la valeur de la fonction de distribution cumulée d'une distribution Beta  de paramètres _α, β_  en _v_.
+  Si _Cumul_ est _false_, calcule la valeur de la fonction de densité de probabilité(pdf)  de la distribution Beta en _v_.
+
+
+BetaDist(<Alpha>, <Beta>, x, <Booléen Cumul>)::
+  Si _Cumul_ est _true_, crée la fonction de distribution cumulée d'une distribution Beta de paramètres _α, β_ , sinon en crée la fonction de densité de probabilité(pdf).
+
+[NOTE]
+====
+Voir aussi la commande  xref:/commands/InverseBeta.adoc[InverseBeta] command.
+====
