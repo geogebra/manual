@@ -1,0 +1,47 @@
+= Commande Bézout
+:page-en: commands/ExtendedGCD
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+== CAS Syntax
+
+Bézout( <Entier naturel>,<Entier naturel> )::
+  Retourne une liste contenant les coefficients entiers stem:[s, t] de l’identité de Bézout :
+stem:[a*s + b*t =PGCD(a,b)] et LE plus grand diviseur commun aux entiers stem:[a] et stem:[b],
+en utilisant l’ https://fr.wikipedia.org/wiki/Algorithme_d'Euclide_%C3%A9tendu[Algorithme d'Euclide étendu]
+
+
+[EXAMPLE]
+====
+
+`++Bézout(240,46)++` retourne la liste {stem:[-9,47,2]}.
+(L’identité de Bézout étant : stem:[-9\cdot 240+47 \cdot 46=2]).
+
+
+====
+
+Bézout( <Polynôme>, <Polynôme> )::
+  Retourne une liste contenant les coefficients polynomiaux stem:[S(x), T(x)]  de l’identité de Bézout
+pour les polynômes stem:[A(x)*S(x) + B(x)*T(x) = PGCD(A(x),B(x))]et UN plus grand diviseur
+commun aux polynômes stem:[A(x)] et stem:[B(x)]
+
+[NOTE]
+====
+
+Rappel : Le PGCD de polynômes n’est défini qu’à une constante près, PGCD(A(x),B(x)) est
+par convention, le plus grand diviseur unitaire (polynôme non nul dont le coefficient du
+terme de plus haut degré est égal à 1).
+
+==== 
+
+[EXAMPLE]
+====
+
+`++Bézout(x^2-1,x+4)++` retourne {stem:[1,-x+4,15]}. 
+(L’identité de Bézout étant : stem:[1 \cdot (x^2-1) + (-x+4) \cdot (x+4) = 15]).
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/PGCD.adoc[PGCD].
+
+
+
