@@ -1,0 +1,30 @@
+= Commande DécompositionLU
+:page-en: commands/LUDecomposition
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+*image:24px-Menu_view_cas.svg.png[Menu view cas.svg,width=24,height=24] uniquement en fenêtre
+xref:/Calcul_formel.adoc[Calcul formel]*
+
+DécompositionLU( <Matrice> )::
+  Calcule la https://fr.wikipedia.org/wiki/D%C3%A9composition_LU[Décomposition_LU] de la matrice donnée.
+
+[NOTE]
+====
+En algèbre linéaire, la décomposition LU est une méthode de décomposition d'une
+matrice comme produit d'une matrice triangulaire inférieure L (comme lower,
+inférieure en anglais) par une matrice triangulaire supérieure U (comme upper,
+supérieure).
+
+====
+
+
+[EXAMPLE]
+====
+
+`++DécompositionLU({{2,0},{1,1}})++` retourne les matrices
+stem:[\begin{pmatrix}0&1\\1&0\end{pmatrix}],stem:[\begin{pmatrix}1&0\\2&1\end{pmatrix}] and
+stem:[\begin{pmatrix}1&1\\0&-2\end{pmatrix}].
+
+====
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/DécompositionQR.adoc[DécompositionQR].
