@@ -1,0 +1,28 @@
+= Commande RemplacerTout
+:page-en: commands/ReplaceAll
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RemplacerTout( <Texte>, <Texte à rechercher>, <Texte de remplacement> )::
+  Creates a new text containing the given _text_ whose _text to match_ has been replaced with the given _text to
+  replace_.
+
+[EXAMPLE]
+====
+
+`++RemplacerTout("3cos(t)+cos(2y)", "cos", "sin")++` crée le nouveau texte `++"3sin(t)+sin(2y)"++`.
+
+====
+
+[NOTE]
+====
+
+Utilisez la commande xref:/commands/LaTeX.adoc[LaTeX]  pour créer un nouveau texte LaTeX.
+
+====
+
+[EXAMPLE]
+====
+
+`++LaTeX(RemplacerTout("3cos(t)+cos(2y)", "cos", "sin"))++` crée le nouveau texte  LaTeX `++"3sin(t)+sin(2y)"++`.
+
+====
