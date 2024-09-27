@@ -1,0 +1,13 @@
+= Commande CoupeTexte
+:page-en: commands/Split
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+CoupeTexte( <Texte>, <Liste des éléments à couper> )::
+  Crée la liste des textes obtenue en coupant le texte fourni par les séparateurs indiqués (ils ne sont pas inclus dans la liste).
+
+[EXAMPLE]
+====
+
+`++CoupeTexte("3cos(t)cos(2y)", {"cos"})++` retourne `++{"3", "(t)", "(2y)"}++`.
+
+====
