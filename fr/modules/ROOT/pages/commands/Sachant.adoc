@@ -2,7 +2,8 @@
 :page-en: commands/Assume
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
-== CAS Syntax
+*image:24px-Menu_view_cas.svg.png[Menu view cas.svg,width=24,height=24] uniquement en fenêtre
+xref:/Calcul_formel.adoc[Calcul formel]*
 
 Sachant( <Condition>, <Expression> )::
   Évalue l'expression en tenant compte de la condition
@@ -15,13 +16,10 @@ Sachant( <Condition>, <Expression> )::
 * `++Sachant(x<2,Simplifier(sqrt(x-2sqrt(x-1))))++` retourne `++-sqrt(x - 1) + 1++`
 * `++Sachant(x>2,Simplifier(sqrt(x-2sqrt(x-1))))++` retourne `++sqrt(x - 1) - 1++`
 * `++Sachant(k>0, Extremum(k*3*x^2/4-2*x/2))++` retourne par *Évaluer* stem:[ \left\{ \left(\frac{2}{3 k}, -\frac{1}{3 k} \right)\right\} ]
-* `++Sachant(k>0, PointInflection(0.25 k x^3 - 0.5x^2 + k))++` retourne par *Évaluer* stem:[ \left\{ \left(\frac{2}{3 k}, \frac{27k^{3} - 4}{27 k^{2}} \right) \right\} ]
+* `++Sachant(k>0, PointInflexion(0.25 k x^3 - 0.5x^2 + k))++` retourne par *Évaluer* stem:[ \left\{ \left(\frac{2}{3 k}, \frac{27k^{3} - 4}{27 k^{2}} \right) \right\} ]
 
 ====
 
-[NOTE]
-====
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/Résoudre.adoc[Résoudre].
 
-Voir aussi la commande  xref:/commands/Résoudre.adoc[Résoudre].
 
-====
