@@ -1,0 +1,47 @@
+= Commande Type 
+:page-en: commands/Type
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
+Type( <Objet> )::
+
+Pour les coniques et les quadriques, cette commande renvoie un nombre
+représentant le type conique/quadrique selon le tableau ci-dessous.
+Dans ce contexte, une conique (ou quadrique) vide est celle où tous les
+coefficients sont définis, mais la conique (quadrique) ne contient aucun
+point, par ex. x² + y² = – 1.
+Pour les coniques, GeoGebra distingue la droite double (cas particulier des
+droites parallèles de distance 0) et la droite simple (cas particulier du
+cercle de diamètre infini, pouvant résulter d'une inversion de cercle). Pour
+les quadriques, il n'y a pas une telle distinction.
+
+[EXAMPLE]
+====
+
+`++Type(x²+y²=1)++` retourne 4 qui est associé à cercle.
+
+====
+
+[cols=",,",options="header",]
+|===
+|Valeur |Type de conique |Type de quadrique
+|1 |Point |Point
+|2 |Hyperbole dégénérée |
+|3 |Ellipse |Ellipsoïde 
+|4 |Cercle |Sphère
+|5 |Hyperbole |
+|6 |Ensemble vide |Ensemble vide
+|7 |Parabole dégénérée |
+|8 |Droites paralléles |
+|9 |Parabole |Paraboloïde
+|10 |Droite |Droite
+|30 | |Cône
+|31 | |Cylindre
+|33 | |Plan
+|34 | |Plans parallèles
+|35 | |Plans sécants
+|36 | |Hyperboloïde à une nappe
+|37 | |Hyperboloïde à deux nappes
+|38 | |Cylindre parabolique
+|39 | |Cylindre hyperbolique
+|40 | |Paraboloïde hyperbolique
+|===
