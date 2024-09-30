@@ -1,7 +1,7 @@
-const active = 'cs,de,es,fr,it,ja,nl,tr'.split(',');
-
 const fs = require('fs');
 const path = require('path');
+
+const active = fs.readdirSync('.').filter(f=>fs.existsSync(`${f}/modules`));
 
 const directoryPath = path.join(__dirname, 'your-directory'); // replace 'your-directory' with your target directory
 
@@ -29,11 +29,13 @@ function listFilesSync(directory, callback) {
 const simplePath = p => p ? p.split(/pages./)[1].replace('\\', '/') : 'missing.adoc';
 const allEn = [];
 listFilesSync(`en/modules/ROOT/pages`, filePath => allEn.push(simplePath(filePath).replace('.adoc', '')));
+let status = '';
 for (const lang of active) {
     const orphans = [];
     const duplicates = [];
     const translations = {};
     const partials = [];
+    let ok = 0;
     listFilesSync(`${lang}/modules/ROOT/pages`, filePath => {
         const content = fs.readFileSync(filePath, 'utf8');
         const pageEn = content.match(/:page-en:(.*)/);
@@ -53,6 +55,8 @@ for (const lang of active) {
             if (translations[pageEn[1].trim()]) {
               duplicates.push(simplePath(translations[pageEn[1].trim()]));
               duplicates.push(simplePath(filePath));
+            } else if (!content.includes('UnderConstruction.png')){
+              ok++;
             }
             translations[pageEn[1].trim()] = filePath;
         }
@@ -87,4 +91,8 @@ for (const lang of active) {
         + partialList
         + '\n\n== Duplicate translations\n'
         + dupeList, 'utf8');
+    status += `${lang} | ${ok} | ${missing.length} | ${orphans.length} | ${duplicates.length} | ${partials.length}\n`
 }
+
+const readme = fs.readFileSync('README.md', 'utf8').split('---|\n')[0] + "---|\n";
+fs.writeFileSync('README.md', readme + status, 'utf8');
