@@ -69,7 +69,7 @@ for (const lang of active) {
     });
     const missing = [];
     for (const enPage of allEn) {
-      if (!translations[enPage]) {
+      if (!translations[enPage] && enPage != "missing") {
         missing.push(enPage);
       }
     }
@@ -93,7 +93,11 @@ for (const lang of active) {
         + partialList
         + '\n\n== Duplicate translations\n'
         + dupeList, 'utf8');
-    status += `${display} (${lang}) | ${ok} | ${missing.length} | ${orphans.length} | ${duplicates.length} | ${partials.length}\n`
+    status += `| ${display} (${lang}) `.padEnd(25," ");
+    for (const stat of [ok, missing.length, orphans.length, duplicates.length, partials.length]) {
+        status += `| ${stat}`.padEnd(10," ")
+    }
+    status += '|\n';
 }
 
 const readme = fs.readFileSync('README.md', 'utf8').split('---|\n')[0] + "---|\n";
