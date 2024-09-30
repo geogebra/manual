@@ -35,6 +35,8 @@ for (const lang of active) {
     const duplicates = [];
     const translations = {};
     const partials = [];
+    const antora = fs.readFileSync(`${lang}/antora.yml`, 'utf8');
+    const display = antora.split("\n").find(l=>l.includes('display_version')).split(':')[1].trim().replaceAll('\'', '');
     let ok = 0;
     listFilesSync(`${lang}/modules/ROOT/pages`, filePath => {
         const content = fs.readFileSync(filePath, 'utf8');
@@ -91,7 +93,7 @@ for (const lang of active) {
         + partialList
         + '\n\n== Duplicate translations\n'
         + dupeList, 'utf8');
-    status += `${lang} | ${ok} | ${missing.length} | ${orphans.length} | ${duplicates.length} | ${partials.length}\n`
+    status += `${display} (${lang}) | ${ok} | ${missing.length} | ${orphans.length} | ${duplicates.length} | ${partials.length}\n`
 }
 
 const readme = fs.readFileSync('README.md', 'utf8').split('---|\n')[0] + "---|\n";
