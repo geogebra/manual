@@ -1,0 +1,27 @@
+= Comando InversaN
+:page-en: commands/NInvert
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+InversaN( <Función> )::
+Devuelve la inversa de la función sin mostrar su fórmula.
+Para obtener la fórmula utiliza el xref:./Inversa.adoc[Comando Inversa].
+
+[EXAMPLE]
+====
+
+`++InversaN(sen(x))++` devuelve una función _f_ tal que _sen(f(x))=x_ si _-1 < x < 1_.
+
+====
+
+[NOTE]
+====
+
+* No se tienen en cuenta dominio ni recorrido, por ejemplo para  f(x) = x^2^ o f(x) =
+sen(x).
+
+* El comando funciona más velozmente para expresiones con una sola _x_.
+Para que la construcción sea más eficiente podrías acomodar tus funciones y utilizar, por ejemplo,  `InversaN((x+1)^2-1)` en lugar de  `InversaN(x^2+2x)`.
+
+====
+
+
