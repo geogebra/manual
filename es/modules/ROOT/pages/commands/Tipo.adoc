@@ -1,0 +1,41 @@
+= Comado Tipo
+:page-en: commands/Type
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+Tipo( <Objeto> )::
+
+Para cónicas y Cuádricas, este comando devuelve un número que representa el tipo de figura según la siguiente tabla. 
+En este contexto, una _cónica vacía_ (o cuádrica) es aquella cuyos coeficientes están definidos pero no contiene ningún punto,
+por ejemplo: _x_^2^ + _y_^2^ = -1. En el caso de las cónicas, GeoGebra distingue una recta doble (caso particular de rectas paralelas coincidentes) de una recta simple (caso especial de una circunferencia de diámetro infinito, que puede resultar de una inversión). No hay distinciones similares en el caso de las cuádricas.
+
+[EXAMPLE]
+====
+
+`++Tipo(x²+y²=1)++` devuelve 4, que corresponde a una circunferencia.
+
+====
+
+[cols=",,",options="header",]
+|===
+|Valor |Tipo de cónica |Tipo de cuádrica
+|1 |Punto |Punto
+|2 |Rectas secantes |
+|3 |Elipse |Elipsoide
+|4 |Circunferencia |Esfera
+|5 |Hipérbola |
+|6 |Vacía |Vacía
+|7 |Recta doble |
+|8 |Rectas paralelas |
+|9 |Parábola |Paraboloide
+|10 |Recta |Recta
+|30 | |Cono
+|31 | |Cilindro
+|33 | |Plano
+|34 | |Planos paralelos
+|35 | |Planos secantes
+|36 | |Hiperboloide de una hoja
+|37 | |Hiperboloide de dos hojas
+|38 | |Cilindro parabólico
+|39 | |Cilindro hiperbólico
+|40 | |Paraboloide hiperbólico
+|===
