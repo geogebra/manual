@@ -1,0 +1,23 @@
+= Comando EstáFactorizado
+:page-en: commands/IsFactored
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+EstáFactorizado( <Polinomio> )::
+  Devuelve ''true'' si el polinomio está factorizado en stem:[\mathbb Q] y ''false'' en caso contrario. 
+  En general, para que la descomposición del polinomio sea considerada como factorizada, el coeficiente principal de cada factor debe ser positivo.
+
+[EXAMPLE]
+====
+* `EstáFactorizado(x)` devuelve _true_ +
+* `EstáFactorizado(0.5)` devuelve _true_ +
+* `EstáFactorizado(5)` devuelve _true_ +
+* `EstáFactorizado(x^2-1)` devuelve _false_ +
+* `EstáFactorizado(x^2-2)` devuelve _true_ +
+* `EstáFactorizado(x(x+1))` devuelve _true_ +
+* `EstáFactorizado(x(2x+2))` devuelve _false_ +
+* `EstáFactorizado(x^3-1)` devuelve _false_ +
+* `EstáFactorizado(x(x/2+1/2))` devuelve _false_ +
+* `+EstáFactorizado((x+1)(x^2-1))+` devuelve _false_ +
+* `EstáFactorizado(-2x-2)` devuelve _false_ +
+* `EstáFactorizado(2x+2)` devuelve _false_ +
+====
