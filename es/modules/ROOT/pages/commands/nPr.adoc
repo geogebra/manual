@@ -2,58 +2,32 @@
 :page-en: commands/NPr
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:64px-Globe.png[Globe.png,width=64,height=64]
-
-a|
-Las variantes del nombre del comando en español son:
-
-* NúmeroArreglos (Uruguay)  
-* nPr (España y Latinoamérica, salvo Uruguay)  
-
-|===
-
-nPr( <Número (o valor numérico)~_n_~>, <Número (o valor numérico)~_p_~> )::
-  Da por resultado el número de arreglos de _p_ elementos tomados de un conjunto de _n_, en variaciones sin repetición.
-
-[NOTE]
-====
-
-image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Número asociado al de variaciones
-https://es.wikipedia.org/Combinatoria[sin repetición], le suele corresponder en algunas calculadoras la tecla
-[.kcode]#nPr# [.small]####lo que se formula como stem:[P_r^n]
-
-====
+nPr ( <Número n>, <Número r> )::
+  Devuelve el número de permutaciones sin repetición de _r_ elementos tomados de un conjunto de _n_ elementos.
 
 [EXAMPLE]
 ====
 
-*Ejemplos:* *`++nPr[10, 2]++`* da _90_.
+`++nPr(10, 2)++` devuelve _90_.
 
 ====
 
-== xref:/Vista_CAS.adoc[image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] la xref:/Vista_CAS.adoc[Vista C~[.small]#omputación#~A~[.small]#lgebraica#~S~[.small]#imbólica#~]
+== Sintaxis CAS
 
-En esta xref:/Vista_CAS.adoc[vista] se admite la misma sintaxis y la inclusión de literales para operar simbólicamente.
+nPr ( <Número n>, <Número r> )::
+  Devuelve el número de permutaciones sin repetición de _r_ elementos tomados de un conjunto de _n_ elementos.
 
 [EXAMPLE]
 ====
 
-*Ejemplos:* *`++nPr[n, 3]++`* es xref:/tools/Evalúa.adoc[evaluado] como image:Mode_evaluate.png[Mode
-evaluate.png,width=32,height=32]__n³ - 3 n² + 2 n__stem:[\{\frac{\Gamma \left( n + 1 \right)}\{\Gamma \left( n - 2
-\right)} }]**`++nPr[n, k]++`** al xref:/tools/Evalúa.adoc[ser evaluado] resulta image:Mode_evaluate.png[Mode
-evaluate.png,width=32,height=32] stem:[\{\frac{\Gamma \left( n + 1 \right) }\{\Gamma \left( -k + n + 1 \right) }
-}]Siendo stem:[\Gamma \left( n + 1 \right) = n!] equivale a stem:[\frac{n!}\{(n - k)! }]
+* `++nPr(10, 2)++` devuelve _90_.
+* `++nPr(n, 3)++` devuelve _stem:[\frac{n!}{(n-3)!}]_.
 
 ====
-
-'''''
 
 [NOTE]
 ====
 
-Ver también el comando xref:/commands/NúmeroCombinatorio.adoc[NúmeroCombinatorio].
+Ver también el comando xref:/commands/NúmeroCombinatorio.adoc[].
 
 ====
