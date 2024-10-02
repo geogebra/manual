@@ -11,13 +11,13 @@ ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 |xref:/commands/Droite.adoc[Droite]
 
 |xref:/commands/DénominateurCommun.adoc[DénominateurCommun]|xref:/commands/CFactorisation.adoc[CFactorisation] |xref:/commands/Degré.adoc[Degré]
-|xref:/commands/EnPolaires.adoc[EnPolaires] |xref:/commands/Intersection.adoc[Intersection]
+|xref:/commands/EnPoint.adoc[EnPoint] |xref:/commands/Intersection.adoc[Intersection]
 
 |xref:/commands/Développer.adoc[Développer]|xref:/commands/CRésoudre.adoc[CRésoudre] 
-|xref:/commands/Dénominateur.adoc[Dénominateur] | |xref:/commands/Longueur.adoc[Longueur]
+|xref:/commands/Dénominateur.adoc[Dénominateur] |xref:/commands/EnPolaires.adoc[EnPolaires] |xref:/commands/Longueur.adoc[Longueur]
 
 |xref:/commands/Diviseurs.adoc[Diviseurs] |xref:/commands/CSolutions.adoc[CSolutions]
-|xref:/commands/Dérivée.adoc[Dérivée] | |xref:/commands/MilieuCentre.adoc[MilieuCentre]
+|xref:/commands/Dérivée.adoc[Dérivée] |xref:/commands/Objet.adoc[Objet] |xref:/commands/MilieuCentre.adoc[MilieuCentre]
 
 |xref:/commands/Division.adoc[Division] |xref:/commands/DécompositionLU.adoc[DécompositionLU]
 |xref:/commands/DérivéeImplicite.adoc[DérivéeImplicite] | |xref:/commands/Tangente.adoc[Tangente]
@@ -59,7 +59,7 @@ ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
 |xref:/commands/PPCM.adoc[PPCM] | |xref:/commands/Numérateur.adoc[Numérateur] | |
 
-|xref:/commands/PremierPrécédent.adoc[PremierPrécédent] | |xref:/commands/PoinInflexion.adoc[PoinInflexion] | |
+|xref:/commands/PremierPrécédent.adoc[PremierPrécédent] | |xref:/commands/PointInflexion.adoc[PointInflexion] | |
 
 |xref:/commands/PremierSuivant.adoc[PremierSuivant] | |xref:/commands/Polynôme.adoc[Polynôme] | |
 
@@ -88,20 +88,20 @@ ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 [cols=",,,,,",options="header",]
 |===
 |Listes |Logique |Probabilités |Scripts |Statistiques |Vecteurs & Matrices
-|xref:/commands/Ajouter.adoc[Ajouter] |xref:/commands/Si.adoc[Si] |xref:/commands/AléaBinomiale.adoc[AléaBinomiale]
+|xref:/commands/Ajouter.adoc[Ajouter] |xref:/commands/EstDéfini.adoc[EstDéfini] |xref:/commands/AléaBinomiale.adoc[AléaBinomiale]
 |xref:/commands/Effacer.adoc[Effacer] |xref:/commands/AjustExp.adoc[AjustExp]
 |xref:/commands/Déterminant.adoc[Déterminant]
 
-|xref:/commands/Aplatir.adoc[Aplatir] | |xref:/commands/AléaEntreBornes.adoc[AléaEntreBornes] |
+|xref:/commands/Aplatir.adoc[Aplatir] |xref:/commands/EstEntier.adoc[EstEntier]  |xref:/commands/AléaEntreBornes.adoc[AléaEntreBornes] |
 |xref:/commands/AjustLog.adoc[AjustLog] |xref:/commands/Dimension.adoc[Dimension]
 
-|xref:/commands/Derniers.adoc[Derniers] | |xref:/commands/AléaNormale.adoc[AléaNormale] |
+|xref:/commands/Derniers.adoc[Derniers] |xref:/commands/GarderSi.adoc[GarderSi] |xref:/commands/AléaNormale.adoc[AléaNormale] |
 |xref:/commands/AjustPoly.adoc[AjustPoly] |xref:/commands/Identité.adoc[Identité]
 
-|xref:/commands/Elément.adoc[Elément] | |xref:/commands/AléaPoisson.adoc[AléaPoisson] |
+|xref:/commands/Elément.adoc[Elément] | xref:/commands/NbSi.adoc[NbSi] |xref:/commands/AléaPoisson.adoc[AléaPoisson] |
 |xref:/commands/AjustPuissance.adoc[AjustPuissance] |xref:/commands/Inverser.adoc[Inverser]
 
-|xref:/commands/ElémentAuHasard.adoc[ElémentAuHasard] | |xref:/commands/Arrangement.adoc[Arrangement] |
+|xref:/commands/ElémentAuHasard.adoc[ElémentAuHasard] |xref:/commands/Si.adoc[Si]  |xref:/commands/Arrangement.adoc[Arrangement] |
 |xref:/commands/Covariance.adoc[Covariance] |xref:/commands/MatriceEchelonnéeRéduite.adoc[MatriceEchelonnéeRéduite]
 
 | | |xref:/commands/Bernoulli.adoc[Bernoulli] | | |
@@ -175,10 +175,6 @@ xref:/commands/Echantillon.adoc[Echantillon]
 * xref:/commands/Effacer.adoc[Effacer]
 * xref:/commands/Elément.adoc[Elément], xref:/commands/ElémentAuHasard.adoc[ElémentAuHasard]
 * xref:/commands/Elimination.adoc[Elimination]
-* xref:/commands/EnComplexe.adoc[EnComplexe], xref:/commands/EnPoint.adoc[EnPoint],
-xref:/commands/EnPolaires.adoc[EnPolaires]
-* xref:/commands/EstDéfini.adoc[EstDéfini]
-* xref:/commands/EstEntier.adoc[EstEntier]
 * xref:/commands/EstPremier.adoc[EstPremier]
 * xref:/commands/Exponentielle.adoc[Exponentielle]
 * xref:/commands/Extraite.adoc[Extraite]
@@ -186,7 +182,6 @@ xref:/commands/EnPolaires.adoc[EnPolaires]
 * xref:/commands/FDistribution.adoc[FDistribution]
 * xref:/commands/FormeExponentielle.adoc[FormeExponentielle]
 * xref:/commands/Gamma.adoc[Gamma]
-* xref:/commands/GarderSi.adoc[GarderSi]
 * xref:/commands/GroebnerDegInvLex.adoc[GroebnerDegInvLex]
 * xref:/commands/GroebnerLex.adoc[GroebnerLex]
 * xref:/commands/GroebnerLexDeg.adoc[GroebnerLexDeg]
@@ -207,11 +202,9 @@ xref:/commands/EnPolaires.adoc[EnPolaires]
 * xref:/commands/Mélangée.adoc[Mélangée]
 * xref:/commands/MilieuCentre.adoc[MilieuCentre]
 * xref:/commands/Moyenne.adoc[Moyenne/moy]
-* xref:/commands/NbSi.adoc[NbSi]
 * xref:/commands/Nettoyer.adoc[Nettoyer]
 * xref:/commands/Normale.adoc[Normale]
 * xref:/commands/NotationScientifique.adoc[NotationScientifique]
-* xref:/commands/Objet.adoc[Objet]
 * xref:/commands/Pascal.adoc[Pascal]
 * xref:/commands/Perpendiculaire.adoc[Perpendiculaire]
 * xref:/commands/Plage.adoc[Plage]
@@ -230,7 +223,6 @@ xref:/commands/EnPolaires.adoc[EnPolaires]
 * xref:/commands/Sachant.adoc[Sachant]
 * xref:/commands/Segment.adoc[Segment]
 * xref:/commands/Séquence.adoc[Séquence]
-* xref:/commands/Si.adoc[Si]
 * xref:/commands/Somme.adoc[Somme]
 * xref:/commands/Tangente.adoc[Tangente]
 * xref:/commands/TDistribution.adoc[TDistribution]
