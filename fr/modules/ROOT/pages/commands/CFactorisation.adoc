@@ -2,9 +2,6 @@
 :page-en: commands/CFactor
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-[NOTE]
-====
-
 *image:24px-Menu_view_cas.svg.png[Menu view cas.svg,width=24,height=24] uniquement en fenêtre
 xref:/Calcul_formel.adoc[Calcul formel]*
 
@@ -24,22 +21,17 @@ CFactorisation( <Expression>, <Variable v> )::
 [EXAMPLE]
 ====
 
-*Exemples :*  
+`++CFactorisation(v^2 + 4,v)++` retourne _(v + 2ί) (v - 2ί)_ ;
 
-`++CFactorisation(v^2 + 4,v)++` donne _(v + 2ί) (v - 2ί)_ ;
+`++CFactorisation(a^2 + x^2, a)++` retourne _(ί x + a) (- ί x + a)_, la factorisation de _a^2^ + x^2^_ relativement à _a_.
 
-`++CFactorisation(a^2 + x^2, a)++` donne _(ί x + a) (- ί x + a)_, la factorisation de _a^2^ + x^2^_ relativement à _a_.
-
-`++CFactorisation(a^2 + x^2, x)++` donne _(x + ί a) (x - ί a)_, la factorisation de _a^2^ + x^2^_ relativement à _x_.
+`++CFactorisation(a^2 + x^2, x)++` retourne _(x + ί a) (x - ί a)_, la factorisation de _a^2^ + x^2^_ relativement à _x_.
 
 ====
 
-====
 
 [NOTE]
 ====
-
-*Note :*
 
 Cette commande factorise les expressions sur les https://fr.wikipedia.org/Rationnel_de_Gauss[complexes
 rationnels de Gauss]. Pour factoriser sur les nombres rationnels, voir la xref:/commands/Factoriser.adoc[commande
