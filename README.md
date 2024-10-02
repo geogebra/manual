@@ -1,18 +1,9 @@
-# GeoGebra Manual
-
-This repository provides the content of GeoGebra documentation published at https://geogebra.github.io/docs
-
-If you have any suggestions for improvements, feel free to open a pull request in this repository -- you can easily make changes in your browser, GitHub provides a preview of the edited pages.
-
-The templates and layouts used by the documentation site are located in the [GeoGebra docs repository](https://github.com/geogebra/docs).
-
-| language              | ok  | missing | orphans | duplicates | partials |
-|-----------------------|-----|---------|---------|------------|----------|
+# GeoGebra Manual---|
 | босански (bs)          | 144     | 559     | 27      | 0       | 36      |
 | Česky (cs)             | 372     | 211     | 1       | 0       | 156     |
 | Deutsch (de)           | 687     | 52      | 45      | 2       | 0       |
 | English (en)           | 739     | 0       | 0       | 0       | 0       |
-| Español (es)           | 532     | 84      | 159     | 18      | 123     |
+| Español (es)           | 531     | 85      | 158     | 2       | 123     |
 | Français (fr)          | 734     | 5       | 16      | 0       | 0       |
 | Hrvatska (hr)          | 470     | 243     | 35      | 0       | 26      |
 | Magyar (hu)            | 661     | 66      | 23      | 2       | 12      |

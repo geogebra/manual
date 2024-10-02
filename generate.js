@@ -100,5 +100,5 @@ for (const lang of active) {
     status += '|\n';
 }
 
-const readme = fs.readFileSync('README.md', 'utf8').split('---|\n')[0] + "---|\n";
+const readme = fs.readFileSync('README.md', 'utf8').split(/---|\r?\n/)[0] + "---|\n";
 fs.writeFileSync('README.md', readme + status, 'utf8');
