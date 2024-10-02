@@ -1,0 +1,21 @@
+= Comando DistBeta
+:page-en: commands/BetaDist
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+DistBeta( <Número α>, <Número β>, <Valor variable> )::
+  Calcula el valor de la función de distribución acumulada de una https://es.wikipedia.org/wiki/Distribución_beta[DistribuciónBeta] 
+de parámetro _α, β_ en el valor variable _v_, es decir, la probabilidad _P(X≤v)_ siendo _X_ una variable aleatoria de distribución beta
+con parámetros _α_ y _β_
+
+DistBeta( <Número α>, <Número β>, <Valor variable>, <Booleano Acumulada> )::
+  Si _Acumulada_ es _true_, calcula el valor de la función de distribución acumulada de una distribución beta con 
+parámetros _α_ y _β_ en el valor variable _v_. Si _Acumulada_ es _false_, calcula el valor de la función de densidad de la correspondiente distribución beta en _v_.
+
+
+DistBeta(<Número α>, <Número β>, x, <Booleano Acumulada>)::
+  Si _Acumulada_ es _true_, crea la función de distribución acumulada de una distribución beta de parámetros _α_ and _β_, de lo contrario crea la función de densidad de la correspondiente distribución beta.
+
+[NOTE]
+====
+Ver también el comando xref:/commands/BetaInversa.adoc[InverseBeta].
+====
