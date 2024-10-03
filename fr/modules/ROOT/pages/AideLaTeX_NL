@@ -1,0 +1,283 @@
+Tutoriel:LaTeX-aide Polices Boites math [Outils]
+Aller à : navigation, rechercher
+
+GeoGebra utilise JLaTeXMath (un allié très puissant) pour afficher les formules mathématiques (textes et symboles) au moyen de LaTeX. La première chose à se remémorer est que LaTeX travaille sous deux modes mode texte et mode math. Pour écrire du texte, il faut être en mode texte et pour écrire des mathématiques en mode math.
+
+Par défaut, lorsque l'on coche "Formule LaTeX" on entre en mode math (police en italique), si nous entrons du texte (police roman) nous devons basculer en mode texte en frappant :\text{texte texte texte} ou \mbox{texte texte texte}
+Sommaire
+
+    1 Polices
+        1.1 Taille de police
+        1.2 Familles de polices
+        1.3 Polices grasses
+        1.4 Petites Majuscules
+    2 Guillemets
+    3 Espace horizontale
+    4 Boîtes et Couleur (dans les deux modes)
+        4.1 Textes et Formules en couleur
+            4.1.1 Ajouter des Couleurs
+        4.2 Boîtes
+        4.3 Boîtes colorées
+        4.4 Boîtes tournées
+        4.5 Boîtes retournées
+        4.6 Boîtes simulées
+    5 Environnements LATEX
+        5.1 Tableaux
+        5.2 Matrices
+            5.2.1 Matrices avec textes
+        5.3 Équations
+        5.4 Alignements
+        5.5 Disjonctions
+        5.6 Coupures
+        5.7 Multilignes
+
+Polices
+Taille de police
+
+La taille des polices peut être changée globalement avec les commandes suivantes :
+\tiny 	\scriptsize 	\footnotesize 	\small 	\normalsize
+\large 	\Large 	\LARGE 	\huge 	\Huge
+
+La commande \normalsize rebascule la police à sa taille initiale. Si vous voulez combiner différentes tailles de police ajouter les commandes entre accolades {...}.
+
+Voici un exemple de combinaisons de tailles en mode math:
+Exemple: {\scriptsize A}{\footnotesize B}{\small C}{\normalsize D}{\large E}{\Large F}{\LARGE G}{\huge H}{\Huge I} LTX1.PNG
+
+Voici un exemple de combinaisons de tailles en mode mixte texte/math utilisant la commande \oldstylenums{ ...} (seulement en mode math):
+Exemple: \text{{\Huge GeoGebra}, le plus puissant, {\small depuis }}\oldstylenums{ 2001-2012} LTX2fr.PNG
+
+Nous pouvons aussi utiliser, en mode mixte texte/math, la commande : \scalebox{h_scale}[v_scale]{...} où {h_scale} est un nombre positif(négatif) (obligatoire) et [v_scale] est un nombre positif (optionnel), ces nombres pouvant être des curseurs.
+Exemple: \scalebox{2}{\text{{\Huge GeoGebra}, le plus puissant, {\small depuis }}\oldstylenums{ 2001-2012}}LTX3fr.PNG
+Familles de polices
+
+En mode texte nous avons les familles de texte suivantes, nous pouvons les utiliser globalement ou entre accolades {...} : \rm ou {\rm } \sf ou {\sf } \tt ou {\tt } Voici un exemple:
+Exemple: \text{{\rm GeoGebra}{\sf ,le plus puissant}, {\tt depuis }}\oldstylenums{ 2001-2012} LTX4fr.PNG
+
+En mode math nous avons les familles de texte suivantes (mathrm par défaut) :
+\mathcal{ABC} 	\mathrm{abc} 	\mathbf{abc} 	\mathsf{abc} 	\mathit{abc}
+\mathtt{abc} 	\mathfrak{abc} 	\mathbb{ABC} 	\mathscr{ABC}
+Exemple: \mathbb{G}\mathfrak{e}\mathbf{o}\mathsf{G}\mathscr{E}\mathtt{b}\mathit{r}\mathrm{a}
+LTX5.PNG
+Polices grasses
+
+En mode texte utilisez \bf ou {\bf ...} et en mode math utilisez \mathbf{...},
+Exemple: \text{\bf GeoGebra }\mathbf{\sqrt{2012^{2}}}
+LTX6.PNG
+Petites Majuscules
+
+Pour les petites majuscules en mode texte utilisez :\text{{\sc GeoGebra} ou \textsc{GeoGebra}
+Guillemets
+
+Les guillemets doubles droits "..."sont un caractère spécial pour GeoGebra, et ne devraient jamais être utilisés directement en LaTeX. Pour une simple quote en mode texte utilisez : \text{'Simple'} et pour une double quote utilisez :\text{''Double''}
+
+
+Espace horizontale
+
+Pour une espace simple en mode texte utilisez la barre d'espace, pour les autres espaces, nous avons les commandes suivantes :\quad \qquad \hspace{...}
+
+Les commandes \hspace{...} (et \quad, \qquad utilisables aussi en mode math) acceptent les unités de mesures (positives et négatives) suivantes :
+pt 	point 	(1 in = 72.27 pt) 	pc 	pica 	(1 pc = 12 pt)
+in 	inch 	(1 in = 25.4 mm) 	bp 	big point 	(1 in = 72 bp)
+cm 	centimètre 	(1 cm = 10 mm) 	mm 	millimètre
+dd 	didot point 	(1157 dd = 1238 pt) 	sp 	scaled point 	(65536 sp = 1 pt)
+
+En mode math, nous avons les commandes suivantes :
+\, 	une petite espace 	\: 	une moyenne espace 	\; 	une large espace 	\! 	un retrait (les objets sont reculés vers la gauche)
+Boîtes et Couleur (dans les deux modes)
+Textes et Formules en couleur
+
+Les couleurs reconnues directement par JLaTeXMath peuvent être trouvées à http://en.wikibooks.org/wiki/LaTeX/Colors#The_68_standard_colors_known_to_dvips vous pouvez utiliser la commande :\textcolor{couleur}{...}
+Exemple : \text{\textcolor{WildStrawberry}{Geo}\textcolor{blue}{G}\textcolor{red}{ebra}}\,\textcolor{green}{\oldstylenums{4.2}}
+LTX7.PNG
+
+
+Ajouter des Couleurs
+
+Si vous désirez créer une nouvelle couleur, vous pouvez utiliser la commande : \definecolor{macouleur}{rgb}{a,b,c} les nombres a, b et c devant être entre 0 et 1, peuvent être des curseurs, par exemple:
+Exemple :
+\definecolor{a}{rgb}{0.63,0.39,0.17}
+\definecolor{b}{rgb}{0.63,0.17,0.39}
+\definecolor{c}{rgb}{0.39,0.63,0.17}
+\definecolor{d}{rgb}{0.39,0.17,0.63}
+\definecolor{e}{rgb}{0.17,0.63,0.39}
+\definecolor{f}{rgb}{0.17,0.39,0.63}
+\text{\textcolor{a}C\textcolor{b}O\textcolor{c}L\textcolor{d}O\textcolor{e}U\textcolor{f}R}
+LTEX7a.PNG
+Boîtes
+
+Pour de simple boîtes (sans couleurs) utilisez :\boxed{2012\text{ c'est maintenant !} ou \fbox{2012\text{ c'est maintenant !}
+Boîtes colorées
+
+A. Pour une boîte colorée (même couleur pour le bord et l'intérieur) utilisez :\colorbox{red}{2012\text{ c'est maintenant !}
+
+B. Pour une boîte colorée (couleurs différentes pour le bord et l'intérieur) utilisez :\fcolorbox{blue}{red}{2012\text{c'est maintenant !}
+Boîtes tournées
+
+Si vous voulez tourner une boîte (ou ce que vous voulez) utilisez : \rotatebox{angle}{...}
+Exemple : \rotatebox{45}{\fcolorbox{blue}{red}{2012\text{ c'est maintenant !}}
+LTX8fr.PNG
+Boîtes retournées
+
+Si vous voulez retourner une boîte (ou ce que vous voulez) utilisez :\reflectbox{...}
+Exemple : \reflectbox{\fcolorbox{blue}{red}{2012\text{ c'est maintenant !}}
+LTX9fr.PNG
+Boîtes simulées
+
+Parfois il est nécessaire d'avoir ces boîtes simulées pour écrire des systèmes, contrôler la hauteur sous un radical, aligner dans une formule, etc.
+
+Il y a ces trois commandes :
+\phantom{XXX} 	espace aussi haut et large que ces trois X
+\hphantom{XXX} 	espace aussi large que ces trois X, de hauteur 0
+\vphantom{X} 	espace aussi haut que ce X, de largeur 0
+Exemple : \sqrt{b}+\sqrt{\vphantom{b}a}
+LTXa.PNG
+Environnements
+
+JLaTeXMath fournit un certain nombre d'environnements de travail différents. Chaque environnement commence et se termine de la même manière. \begin{environnement}[options]<br/> ...<br/> \end{environnement} Les environnements suivants sont possibles :
+• tabular 	• array 	• matrix (et variants) 	• eqnarray
+• align 	• cases 	• split 	• multline
+Tableaux
+
+Les environnements tabular et array sont similaires, ils peuvent utilisés pour mettre en page des éléments avec des possibilités de lignes horizontales et verticales. Les options sont :
+l 	colonne justifiée à gauche 	c 	colonne centrée 	r 	colonne justifiée à droite
+| 	trait vertical 	|| 	double trait vertical 	& 	séparateur de colonne
+\\ 	commence une nouvelle ligne 	\hline|| trait horizontal
+Exemple :
+\begin{tabular}{| l |c ||r |}
+\hline
+1 & 2 & 3 \\ \hline
+4 & 5 & 6 \\ \hline
+7 & 8 & 9 \\
+\hline
+\end{tabular}
+LTEX1.PNG
+
+
+Un autre exemple , utilisant \multicolumn et array :
+Exemple :
+\begin{array}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{\text{Titre}} \\
+\hline
+x & y\\ \hline
+a & b\\
+c & c\\
+d & e\\ \hline
+\end{array}
+LTEX2fr.PNG
+
+ou
+Exemple :
+\rotatebox{90} { \begin{array}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{\text{Title}} \\
+\hline
+\rotatebox{-90} x & \rotatebox{-90}y\\ \hline
+\rotatebox{-90}a & \rotatebox{-90}b\\
+\rotatebox{-90}c & \rotatebox{-90}c\\ \rotatebox{-90}d & \rotatebox{-90}e\\ \hline
+\end{array}}
+LTEX2bisfr.PNG
+
+
+Si vous voulez ajouter un séparateur de colonne (un + par exemple) et mesurer l'espace (1cm) avant et après, utilisez @{\hspace{1cm}+\hspace{1cm}}:
+Exemple :
+\begin{tabular}{r@{\hspace{1cm}+\hspace{1cm}}l}
+1 & 23 \\
+45 & 678\\
+910& 1112\\
+\end{tabular}
+LTEX3.PNG
+
+
+Si vous voulez présenter proprement une opération posée, avec alignement vertical de la virgule décimale :
+Exemple :
+\begin{tabular}{r@{,}l}
+3&14159\\
+16&2\\
+123&456\\
+\end{tabular}
+LTEX3bfr.PNG
+Matrices
+
+Une matrice de base peut être créée en utilisant l'environnement matrix , la structure est similaire à tabular-array , les entrées sont données par ligne, avec des colonnes séparées par & et une nouvelle ligne séparée par \\. Les matrices sont généralement encadrées (sauf par défaut) de différentes façons, et tant que c'est possible, utilisez les commandes \left and \right . Les environnements prédéfinis contiennent des encadrements :
+pmatrix 	( ) 	bmatrix 	[ ] 	Bmatrix 	{ }
+vmatrix 	| | 	Vmatrix 	|| ||
+Exemple:
+$\mathsf{A}_{m,n} =
+\begin{Vmatrix}
+a_{1,1} &a_{1,2} &\cdots &a_{1,n} \\
+a_{2,1} &a_{2,2} &\cdots &a_{2,n} \\
+\vdots & \vdots & \ddots &\vdots \\
+a_{m,1} &a_{m,2} &\cdots &a_{m,n}
+\end{Vmatrix}$
+LTEX4.PNG
+
+
+Matrices avec textes
+
+Parfois vous voulez écrire une matrice contenant du texte, pour cet environnement vous disposez de smallmatrix, il fonctionne de la même manière que l'environnement matrix, par exemple :
+Exemple:
+\mathsf{M} =
+\left\{ \begin{smallmatrix}
+a&b\\ c&d
+\end{smallmatrix} \right\}
+LTEX5.PNG
+
+
+Équations
+
+L'environnement eqnarray est désigné pour écrire des équations sur plusieurs lignes ou des équations dépassant la largeur d'une ligne, il se comporte comme un tableau à trois colonnes où la première est alignée à droite, la deuxième centrée et la troisième, alignée à gauche. Les équations que nous voulons présenter de cette manière doivent être entre les commandes \begin{eqnarray} et \end{eqnarray}, un exemple :
+Exemple:
+\begin{eqnarray}
+y &=& (x+1)^2 \\
+&=& x^2+2x+1
+\end{eqnarray}
+LTEX6.PNG
+Alignements
+
+L'environnement align ressemble à eqnarray, mais en plus puissant, vous pouvez insérer du texte entre les lignes avec la commande \intertext{...}, par exemple:
+Exemple:
+\begin{align}
+x+y-z &= 1\\
+x-y+z &= 1\\
+\intertext{votre texte}
+2x\hphantom{-y}+z &= 1
+\end{align}
+LTEX7fr.PNG
+Disjonctions
+
+Pour des fonctions par morceaux ou des définitions utilisant des conditions, utilisez l'environnement cases :
+Exemple:
+\left\vert x\right\vert =
+\begin{cases}
+\hphantom{-}x &,\, \text{si }x\geq 0 ,\\
+-x&,\, \text{si }x<0
+\end{cases}
+LTEX8fr.PNG
+Coupures
+
+Pour scinder de longs blocs de math, utilisez l'environnement split :
+Exemple:
+\begin{split}
+a& =b+c-d\\
+& \quad +e-f\\
+& =g+h\\
+& =i
+\end{split}
+LTEX9.PNG
+Multilignes
+
+Pour de multiples lignes de math, utilisez l'environnement multline :
+Exemple:
+\begin{multline}
+\left(a+b+c+d+e\right)^2=a^2+b^2+c^2+d^2+e^2\\
++2ab+2ac+2ad+2ae+2bc+2bd+2be+2cd+2ce+2de
+\end{multline}
+LTEXa.PNG
+
+    Contact us
+        Feedback & Questions
+        office@geogebra.org
+        +43 677 6137 2693
+
+Facebook Twitter Google+ YouTube
