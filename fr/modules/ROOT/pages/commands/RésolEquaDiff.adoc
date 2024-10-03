@@ -5,13 +5,13 @@ ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 *→* *Résolution numérique*
 
 RésolEquaDiff( <f(x,y)>, <x initial>, <y initial>, <x final>, <pas> )::
-  Résout numériquement une équation différentielle d'ordre un : stem:[ \frac{dy}\{dx}=f(x,y)] à partir d'un point donné
+  Résout numériquement une équation différentielle d'ordre un : stem:[ \frac{dy}{dx}=f(x,y)] à partir d'un point donné
   par ses coordonnées, avec un _pas_ donné. Le résultat est un lieu.
 
 [EXAMPLE]
 ====
 
-Pour résoudre l'équation stem:[ \frac{dy}\{dx}=-xy ]
+Pour résoudre l'équation stem:[ \frac{dy}{dx}=-xy ]
 
 en utilisant _A_ comme point de départ, entrez `++RésolEquaDiff(-x*y, x(A), y(A), 5, 0.1)++`.
 
@@ -35,7 +35,7 @@ Pour trouver une solution "rétrograde", affectez simplement une valeur négativ
 ====
 
 RésolEquaDiff( <f(x,y)>, <g(x,y)>, <x initial>, <y initial>, <t final>, <pas> )::
-  Résout numériquement une équation différentielle d'ordre un : stem:[ \frac{dy}\{dx}=\frac{f(x,y)}\{g(x,y)} ] à
+  Résout numériquement une équation différentielle d'ordre un : stem:[ \frac{dy}{dx}=\frac{f(x,y)}{g(x,y)} ] à
   partir d'un point donné par ses coordonnées, valeur maximale d'un paramètre interne _t_ et _pas_ pour _t_. Cette
   variante de la commande peut fonctionner alors que la précédente peut être prise en défaut, par exemple, si la courbe
   solution a des points verticaux.
@@ -45,7 +45,7 @@ RésolEquaDiff( <f(x,y)>, <g(x,y)>, <x initial>, <y initial>, <t final>, <pas> )
 
 *Exemple :*
 
-Pour résoudre l'équation stem:[\frac{dy}\{dx}=- \frac{x}\{y} ]
+Pour résoudre l'équation stem:[\frac{dy}{dx}=- \frac{x}{y} ]
 
 en utilisant _A_ comme point de départ, entrez `++RésolEquaDiff(-x, y, x(A), y(A), 5, 0.1)++`.
 
@@ -117,19 +117,19 @@ RésolÉquaDiff(<Equation différentielle en x,y>)::
 ====
 
 RésolEquaDiff( <Équation différentielle en x,y>, <Point(s) L de f> )::
-  Essaye de trouver la solution exacte de l'équation différentielle d'ordre un ou deux stem:[\frac{dy}\{dx}(x)=f(x,
+  Essaye de trouver la solution exacte de l'équation différentielle d'ordre un ou deux stem:[\frac{dy}{dx}(x)=f(x,
   y(x))] et passant par _L_ (qui est un point ou une liste de points)
 
 [EXAMPLE]
 ====
 
-*Exemples :* `++RésolEquaDiff(y'=y / x,(1,2))++` retourne _y = 2 x_.`++RésolEquaDiff(y''-3y'+2=x,(2,3),(1,2))++`
-retourne stem:[ y = \frac{-9 x^2 e^3 + 30 x e^3 + 32 e^\{3 x} - 32 e^6+ 138 e^3 }\{54 e^3} ] .
+ `++RésolEquaDiff(y'=y / x,(1,2))++` retourne _y = 2 x_.`++RésolEquaDiff(y''-3y'+2=x,(2,3),(1,2))++`
+retourne stem:[ y = \frac{-9 x^2 e^3 + 30 x e^3 + 32 e^{3 x} - 32 e^6+ 138 e^3 }{54 e^3} ] .
 
 ====
 
 RésolEquaDiff( <Équation différentielle en x,y>, <Point(s) L de f>, <Point(s) L' de f'> )::
-  Essaye de trouver la solution exacte de l'équation différentielle d'ordre un ou deux stem:[\frac{dy}\{dx}(x)=f(x,
+  Essaye de trouver la solution exacte de l'équation différentielle d'ordre un ou deux stem:[\frac{dy}{dx}(x)=f(x,
   y(x))] passant par _L_ (qui est un point ou une liste de points) et _f'_ passant par _L'_ (qui est un point ou une
   liste de points)
 
@@ -143,13 +143,11 @@ RésolEquaDiff( <Équation différentielle en x,y>, <Point(s) L de f>, <Point(s)
 ====
 
 RésolEquaDiff( <Équation différentielle en w,v>, <Variable Dépendante v>, < Variable Indépendante w> )::
-  Essaye de trouver la solution exacte de l'équation différentielle d'ordre un ou deux stem:[\frac{dv}\{dw}(w)=f(w,
+  Essaye de trouver la solution exacte de l'équation différentielle d'ordre un ou deux stem:[\frac{dv}{dw}(w)=f(w,
   v(w))].
 
 [EXAMPLE]
 ====
-
-*Exemple :*
 
 `++RésolEquaDiff(v'=v / w, v,  w)++` retourne _v =w c~1~_ .
 
