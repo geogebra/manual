@@ -4,20 +4,26 @@ ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
 Activate the tool, then:
 
-* Select or create two points in the _xOy plane_ to obtain a regular tetrahedron with one edge defined by the two given points, and lying on the _xOy_ plane.
+* Select or create two points in the _xOy plane_ to obtain a regular tetrahedron with one edge defined by the two given points, 
+and lying on the _xOy_ plane. The third vertex will be created automatically to form an equilateral triangle on the xOy plane.
 
 or
 
-* Select two points having the same _z_-coordinate, _z=c_, to obtain a regular tetrahedron with one edge of the base defined by the two given points, and lying on the plane _z = c_. The tetrahedron can be rotated around the specified edge by dragging the third vertex of the base, created automatically.
+* Select or create two points having the same _z_-coordinate, _z=c_, to obtain a regular tetrahedron 
+with one edge of the base defined by the two given points, and lying on the plane _z = c_. 
+The third vertex will be created automatically to form an equilateral triangle on the plane ( _z=c_ ).
 
 or
 
-* Select two points having different z-coordinates to obtain a regular tetrahedron with the edge of one face defined by the two given points and the third vertex of the same face having as _z_-coordinate the average of the _z_-coordinates of the given points. The tetrahedron can be rotated around the specified edge by dragging the third vertex of the base, created automatically.
-
+* Select two points having different z-coordinates to obtain a regular tetrahedron
+with one edge defined by the two given points. The tool will create the third vertex automatically, with a _z_-coordinate that is the average of the _z_-coordinates of the given points. 
 
 [NOTE]
 ====
 
+* The first two points are xref:/Free_Dependent_and_Auxiliary_Objects.adoc[free] points, 
+but the third point is xref:/Free_Dependent_and_Auxiliary_Objects.adoc[dependent]. 
+When dragging the third point, the tetrahedron rotates around the edge defined by the first two points.
 * See also xref:/commands/Tetrahedron.adoc[Tetrahedron] command.
 
 ====
