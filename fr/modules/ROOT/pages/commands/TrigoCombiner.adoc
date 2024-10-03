@@ -19,13 +19,13 @@ TrigoCombiner( <Expression> )::
 
 *Exemples :*
 
-`++TrigoCombiner(sin(x)cos(3x))++` retourne stem:[\{\frac{1}\{2} \sin \left( 4 x \right) - \frac{1}\{2} \sin \left( 2
+`++TrigoCombiner(sin(x)cos(3x))++` retourne stem:[{\frac{1}{2} \sin \left( 4 x \right) - \frac{1}{2} \sin \left( 2
 x \right)}] ;
 
-`++TrigoCombiner(sin(x) + cos(x))++` retourne stem:[ \{\sqrt{2} cos \left( x - \frac{1}\{4} \pi \right)} ], comparez
+`++TrigoCombiner(sin(x) + cos(x))++` retourne stem:[ {\sqrt{2} cos \left( x - \frac{1}{4} \pi \right)} ], comparez
 avec le résultat de la syntaxe suivante ;
 
-`++TrigoCombiner((tan(x) + tan(2x)) / (1 - tan(x) tan(2x)))++` retourne stem:[\frac{1} \{cos(3x)} sin(3x)], comparez
+`++TrigoCombiner((tan(x) + tan(2x)) / (1 - tan(x) tan(2x)))++` retourne stem:[\frac{1}{cos(3x)} sin(3x)], comparez
 avec le résultat de la syntaxe suivante.
 
 ====
@@ -39,7 +39,7 @@ TrigoCombiner( <Expression>, <Fonction cible> )::
 
 *Exemples :*
 
-`++TrigoCombiner(sin(x) + cos(x), sin(x))++` retourne stem:[ \{\sqrt{2} sin \left( x + \frac{1}\{4} \pi \right)} ] ;
+`++TrigoCombiner(sin(x) + cos(x), sin(x))++` retourne stem:[ {\sqrt{2} sin \left( x + \frac{1}{4} \pi \right)} ] ;
 
 `++TrigoSimplifier(TrigoCombiner((tan(x) + tan(2x)) / (1 - tan(x) tan(2x)), tan(x)))++` retourne _tan(3x)_.
 
@@ -55,8 +55,6 @@ Avec la possibilité de travailler en littéral :
 
 [EXAMPLE]
 ====
-
-*Exemple :*
 
 Si les variables _p_ et _q_ ne sont pas définies dans GeoGebra
 
