@@ -8,8 +8,8 @@ TrigoDévelopper( <Expression> )::
 [EXAMPLE]
 ====
 
-`++TrigoDévelopper(tan(x+y))++` retourne stem:[\frac{\frac{sin(x)}\{cos(x)}+\frac{sin(y)}\{cos(y)}}
-\{1-\frac{sin(x)}\{cos(x)} \cdot \frac{sin(y)}\{cos(y)}} ].
+`++TrigoDévelopper(tan(x+y))++` retourne stem:[\frac{\frac{sin(x)}{cos(x)}+\frac{sin(y)}{cos(y)}}
+\{1-\frac{sin(x)}{cos(x)} \cdot \frac{sin(y)}{cos(y)}} ].
 
 ====
 
@@ -20,7 +20,7 @@ TrigoDévelopper( <Expression>, <Fonction cible> )::
 [EXAMPLE]
 ====
 
-*Exemples :* `++TrigoDévelopper(tan(x+y),tan(x))++` retourne stem:[\frac{-tan(x) - tan(y)}\{tan(x) tan(y) - 1}].
+`++TrigoDévelopper(tan(x+y),tan(x))++` retourne stem:[\frac{-tan(x) - tan(y)}{tan(x) tan(y) - 1}].
 
 ====
 
@@ -36,9 +36,9 @@ Mais la forme du résultat peut différer selon le mode utilisé :
 ====
 
 `++TrigoDévelopper(tan(x + y))++` en mode image:32px-Mode_evaluate.svg.png[Mode
-evaluate.svg,width=32,height=32] Évaluer retourne stem:[\frac{\frac{sin(x)}\{cos(x)}+\frac{sin(y)}\{cos(y)}}
-\{1-\frac{sin(x)}\{cos(x)} \cdot \frac{sin(y)}\{cos(y)}} ] en mode image:32px-Mode_numeric.svg.png[Mode
-numeric.svg,width=32,height=32] Numérique retourne stem:[\frac{sin(x) cos(y) + sin(y) cos(x)}\{- sin(x) sin(y) +cos(x)
+evaluate.svg,width=32,height=32] Évaluer retourne stem:[\frac{\frac{sin(x)}{cos(x)}+\frac{sin(y)}{cos(y)}}
+\{1-\frac{sin(x)}{cos(x)} \cdot \frac{sin(y)}{cos(y)}} ] en mode image:32px-Mode_numeric.svg.png[Mode
+numeric.svg,width=32,height=32] Numérique retourne stem:[\frac{sin(x) cos(y) + sin(y) cos(x)}{- sin(x) sin(y) +cos(x)
 cos(y) }] .
 
 ====
@@ -52,10 +52,10 @@ TrigoDévelopper( <Expression>, <Fonction cible>, <Variable cible> )::
 [EXAMPLE]
 ====
 
-*Exemples :* `++TrigoDévelopper(sin(x), sin(x), x/2)++` retourne stem:[2cos \left( \frac{x}\{2} \right) sin \left(
-\frac{x}\{2} \right) ];
+`++TrigoDévelopper(sin(x), sin(x), x/2)++` retourne stem:[2cos \left( \frac{x}{2} \right) sin \left(
+\frac{x}{2} \right) ];
 
-`++TrigoDévelopper(sin(x)/(1+cos(x)), tan(x), x/2)++` retourne stem:[tan \left( \frac{x}\{2} \right)]..
+`++TrigoDévelopper(sin(x)/(1+cos(x)), tan(x), x/2)++` retourne stem:[tan \left( \frac{x}{2} \right)]..
 
 ====
 
@@ -66,8 +66,8 @@ TrigoDévelopper( <Expression>, <Fonction cible>, <Variable cible>, <Variable ci
 [EXAMPLE]
 ====
 
-`++TrigoDévelopper(csc(x)-cot(x)+csc(y)-cot(y), tan(x), x/2, y/2)++` retourne stem:[tan \left( \frac{x}\{2}
-\right) +tan \left( \frac{y}\{2} \right) ].
+`++TrigoDévelopper(csc(x)-cot(x)+csc(y)-cot(y), tan(x), x/2, y/2)++` retourne stem:[tan \left( \frac{x}{2}
+\right) +tan \left( \frac{y}{2} \right) ].
 
 ====
 
