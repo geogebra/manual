@@ -11,8 +11,8 @@ Effectifs( <Liste Données> )::
 [EXAMPLE]
 ====
 
-Validez `++liste1 = {"a", "a", "x", "x", "x", "b"}++`. Puis `++Effectifs(liste1)++` vous obtenez la liste \{
-2, 1, 3 }. Avec `++Unique(liste1)++` vous obtenez la liste \{ "a", "b", "x" }.
+Validez `++liste1 = {"a", "a", "x", "x", "x", "b"}++`. Puis `++Effectifs(liste1)++` vous obtenez la liste {
+2, 1, 3 }. Avec `++Unique(liste1)++` vous obtenez la liste { "a", "b", "x" }.
 
 ====
 
@@ -20,10 +20,11 @@ Validez `++liste1 = {"a", "a", "x", "x", "x", "b"}++`. Puis `++Effectifs(liste1)
 |===
 |image:18px-Attention.png[Attention,title="Attention",width=18,height=18] *Attention*: |Supposons que vous vouliez
 dépouiller une série brute de 50 lancers de 2 dés, réalisés à l'aide, par exemple, du tableur, avec l'instruction
-`++=AléaEntreBornes(1, 6) + AléaEntreBornes(1, 6) ++` dans la plage A1:A50. La commande `++Effectifs(A1:A50)++` ne vous
-retourne que la liste des effectifs pour les valeurs [.underline]#sorties#. Si vous désirez l'effectif correspondant à
-chacune des valeurs possibles de 2 à 12, il vous faut utiliser la syntaxe utilisant les classes, voir ci-dessous, dans
+`++=AléaEntreBornes(1, 6) + AléaEntreBornes(1, 6) ++` dans la plage A1:A50.
+
+La commande `++Effectifs(A1:A50)++` ne vousret ourne que la liste des effectifs pour les valeurs [.underline]#sorties#. Si vous désirez l'effectif correspondant à chacune des valeurs possibles de 2 à 12, il vous faut utiliser la syntaxe utilisant les classes, voir ci-dessous, dans
 notre cas `++ Effectifs(Séquence(k, k, 2, 13), A1:A50) ++`.
+
 |===
 
 Effectifs( <Booléen Cumul>, <Liste Données>)::
@@ -33,9 +34,13 @@ Effectifs( <Booléen Cumul>, <Liste Données>)::
 [EXAMPLE]
 ====
 
-Validez `++liste1 = { 0, 0, 0, 1 , 1, 2 }++`. Puis `++Effectifs(true, liste1)++` vous obtenez la liste \{ 3,
-5, 6 }. ou `++Effectifs(false, liste1)++` vous obtenez la liste \{ 3, 2, 1}. Avec `++Unique(liste1)++` vous obtenez la
-liste \{ 0, 1, 2 } .
+Validez `++liste1 = { 0, 0, 0, 1 , 1, 2 }++`. 
+
+Puis `++Effectifs(true, liste1)++` vous obtenez la liste { 3, 5, 6 }. 
+
+Ou `++Effectifs(false, liste1)++` vous obtenez la liste { 3, 2, 1}.
+
+Avec `++Unique(liste1)++` vous obtenez la liste { 0, 1, 2 } .
 
 ====
 
@@ -46,42 +51,54 @@ Effectifs(<Liste Bornes Classes>, <Liste Données> )::
 [EXAMPLE]
 ====
 
-`++Effectifs({1,2,3},  {1,1,2,3})++` retourne la liste \{ 2, 2 }.
+`++Effectifs({1,2,3},  {1,1,2,3})++` retourne la liste { 2, 2 }.
 
 ====
 
 Effectifs( <Booléen Cumul>,<Liste Bornes Classes>,<Liste Données>)::
+
   Si _Cumul_ = false, retourne la même liste que Effectifs[ <Liste Bornes Classes>,<Liste Données> ] ;
+
   Si _Cumul_ = true, retourne la liste des effectifs cumulés de chacune des classes.
 
 Effectifs(<Liste Bornes Classes>, <Liste Données>, <Densité true|false> , <Echelle> (optionnel) )::
+
   Si _Densité_ = false, retourne la même liste que Effectifs[ <Liste Bornes Classes>,<Liste Données> ] ;
+
   Si _Densité_ = true, retourne la liste des rapports des effectifs de chaque classe à la largeur de la classe.
 
 [EXAMPLE]
 ====
 
-Soit les listes _données=\{1,2,2,2,3,3,4,4,4,4}_ et _bornes=\{0,2,5}_ `++Effectifs(bornes,données,false)++`
-et `++Effectifs(bornes,données)++` retourne la liste \{1, 9} alors que `++Effectifs(bornes,données,true)++` retourne la
-liste \{0.5, 3}.
+Soit les listes _données={1,2,2,2,3,3,4,4,4,4}_ et _bornes={0,2,5}_ 
+
+`++Effectifs(bornes,données,false)++` et `++Effectifs(bornes,données)++` retournent la liste {1, 9} 
+
+alors que `++Effectifs(bornes,données,true)++` retourne la liste {0.5, 3}.
 
 ====
 
-Effectifs( <Booléen Cumul>, <Liste Bornes Classes>, <Liste Données>, <Densité true|false> , <Echelle> (optionnel) )
+Effectifs( <Booléen Cumul>, <Liste Bornes Classes>, <Liste Données>, <Densité true|false> , <Echelle> (optionnel) )::
 
 soit on ne cumule pas, soit on cumule.
 
 Effectifs( <Liste de textes>, <Liste de textes> )::
-  Retourne une matrice de contingences contenant les nombres de valeurs appariées dans les deux listes. Les lignes de la
-  matrice correspondent aux valeurs uniques dans la première liste. Les colonnes correspondent aux valeurs uniques dans
-  la seconde liste. Pour obtenir une liste des valeurs uniques pour chacune des listes, utilisez la commande Unique[
-  <Liste de textes> ].
+  Retourne une matrice de contingences contenant les nombres de valeurs appariées dans les deux listes.
+* Les lignes de la matrice correspondent aux valeurs uniques dans la première liste.
+*Les colonnes correspondent aux valeurs uniques dans la seconde liste. 
+
+Pour obtenir une liste des valeurs uniques pour chacune des listes, utilisez la commande Unique[<Liste de textes> ].
 
 [EXAMPLE]
 ====
 
-Soit les listes..._liste1 = \{"v", "d", "d", "c", "c", "c", "c"}_ et __liste2= \{"v", "d", "v", "v", "c",
-"c", "s"}__**`++Effectifs( liste1, liste2 )++`** retourne la matrice :
+Soit les listes...
+
+_liste1 = {"v", "d", "d", "c", "c", "c", "c"}_ 
+
+et __liste2= {"v", "d", "v", "v", "c", "c", "s"}__
+
+**`++Effectifs( liste1, liste2 )++`** retourne la matrice :
 
 stem:[\begin{pmatrix} 2 & 0 & 1 & 1\\ 0 &1 & 0 &1 \\ 0 & 0 & 0 & 1 \\ \end{pmatrix}]
 
@@ -98,9 +115,9 @@ Voir la commande xref:/commands/TableContingences.adoc[TableContingences].
 
 ====
 
-== [#Explication_détaillée_pour_Effectifs(_liste1,_liste2_)_:]####[#Explication_d.C3.A9taill.C3.A9e_pour_Effectifs.28_liste1.2C_liste2_.29_:]##Explication détaillée pour `++Effectifs( liste1, liste2 )++` :##
+== Explication_détaillée_pour_Effectifs(_liste1,_liste2_)
 
-on a Unique(liste1)= \{"c", "d", "v"} et Unique(liste2)= \{"c", "d", "s", "v"}
+on a Unique(liste1)= {"c", "d", "v"} et Unique(liste2)= {"c", "d", "s", "v"}
 
 Une lecture facilitée des appariements dans le tableau qui suit :
 
@@ -114,7 +131,7 @@ ce qui permet de dresser le tableau de contingences :
 
 [cols=",^,,,,",options="header",]
 |===
-| |Unique(liste1) v \Unique(liste2) > |c |d |s |v
+| |Unique(liste1) v Unique(liste2) > |c |d |s |v
 |2 *c* de liste 1 sont appariés à *c* de liste 2, 1 *c* à *s* et 1 *c* à *v* |*c* |2 |0 |1 |1
 |1 *d* de liste 1 est apparié à *d* de liste 2, 1 *d* de liste 1 à *v* de liste 2 |*d* |0 |1 |0 |1
 |le *v* de liste 1 est apparié à *v* de liste 2 |*v* |0 |0 |0 |1
