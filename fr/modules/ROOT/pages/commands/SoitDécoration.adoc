@@ -3,30 +3,50 @@
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
 SoitDécoration( <Objet>, <Nombre> )::
-  Affecte une "décoration" (voir l'onglet *Style*, dans les propriétés) à l'objet cité (*segment* ou *angle*). Le nombre
-  précise la décoration , selon le tableau ci-dessous.
+  Affecte une "décoration" (voir l'onglet *Style*, dans les propriétés) à l'objet cité (*segment*, *angle*, ou tout *objet* possédant la propriété _Remplissage_). Le nombre précise la décoration , selon le tableau ci-dessous.
 
 Par défaut, un segment n'a pas de marque, un angle est repéré par un arc. Toute utilisation d'une syntaxe
 SoitDécoration( <Objet>, <Nombre> ) non conforme ramène à cette situation par défaut.
 
-[cols=",,",options="header",]
+[cols=",,,",options="header",]
 |===
-|Valeur |Pour un segment |Pour un angle
-|1 |image:24px-D1M.png[D1M.png,width=24,height=23] 1 marque |image:24px-A2A.png[A2A.png,width=24,height=24] 2 arcs
+|Valeur |Pour un segment |Pour un angle|Remplissage
+|0 |Retire la décoration |Retire la décoration |Standard
 
-|2 |image:24px-D2M.png[D2M.png,width=24,height=23] 2 marques |image:24px-A3A.png[A3A.png,width=24,height=23] 3 arcs
+|1 |image:24px-D1M.png[D1M.png,width=24,height=23] 1 marque |image:24px-A2A.png[A2A.png,width=24,height=24] 2 arcs |Hachures
 
-|3 |image:24px-D3M.png[D3M.png,width=24,height=23] 3 marques |image:24px-A1M.png[A1M.png,width=24,height=24] 1 marque
+|2 |image:24px-D2M.png[D2M.png,width=24,height=23] 2 marques |image:24px-A3A.png[A3A.png,width=24,height=23] 3 arcs |Quadrillage
 
-|4 |image:24px-D1C.png[D1C.png,width=24,height=24] 1 chevron |image:24px-A2M.png[A2M.png,width=24,height=24] 2 marques
+|3 |image:24px-D3M.png[D3M.png,width=24,height=23] 3 marques |image:24px-A1M.png[A1M.png,width=24,height=24] 1 marque |Damiers
 
-|5 |image:24px-D2C.png[D2C.png,width=24,height=23] 2 chevrons |image:24px-A2M.png[A2M.png,width=24,height=24] 3 marques
+|4 |image:24px-D1C.png[D1C.png,width=24,height=24] 1 chevron |image:24px-A2M.png[A2M.png,width=24,height=24] 2 marques |Points
+
+|5 |image:24px-D2C.png[D2C.png,width=24,height=23] 2 chevrons |image:24px-A2M.png[A2M.png,width=24,height=24] 3 marques |Nids d'abeille
 
 |6 |image:24px-D3C.png[D3C.png,width=24,height=24] 3 chevrons |image:24px-AOP.png[AOP.png,width=24,height=23]
-orientation +
+orientation + |Briques
 
-|7 | |image:24px-AOM.png[AOM.png,width=24,height=25] orientation -
+|7 | |image:24px-AOM.png[AOM.png,width=24,height=25] orientation - | Cannage
 |===
 
---/s_index_php?title=Utilisateur:Noel_Lambert_action=edit_redlink=1.adoc[Noel Lambert]
-(/Discussion_utilisateur:Noel_Lambert.adoc[discussion]) 4 juillet 2018 à 11:30 (CEST)
+SoitDécoration(<Segment>, <Nombre>, <Nombre>)::
+  Définit l'aspect des extrémités d'un segment Segment(Point1,Point2).
+Pour voir la décoration, il faut cacher les deux points extrémités du segment.
+La décoration des segments peut également être définie dans l'onglet _Style_ de la fenêtre  _Propriétés_ du segment. 
+
+Le premier nombre utilisé définit le style du 1er point de définition du segment, et le deuxième nombre, celui  du 2ème point de définition du segment, comme décrit dans le tableau suivant.
+
+
+[cols=",",options="header",]
+|===
+|Valeur |Décoration
+|0 |Pas de décoration
+|1 |Tiret
+|2 |Carré vide
+|3 |Carré plein
+|4 |Flèche
+|5 |Flèche pleine
+|6 |Disque vide
+|7 |Disque plein
+|===
+
