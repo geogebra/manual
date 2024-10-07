@@ -3,7 +3,31 @@
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
 NahodneMezi [ <Minimum (celé číslo)>, <Maximum (celé číslo)> ]::
-  Vygeneruje náhodné celé číslo ležící v uzavřeném intervalu daném dolní a horní celočíselnou mezí.
+  Vygeneruje náhodné celé číslo ležící v uzavřeném intervalu daném dolní (_minimum_) a horní (_maximum_) celočíselnou mezí.
+
+[EXAMPLE]
+====
+
+`++RandomBetween(0, 10)++` dá celé číslo mezi _0_ a _10_ (včetně)
+
+====
+
+NahodneMezi [ <Minimum (celé číslo)>, <Maximum (celé číslo)> , <Upevnit (pravdivostní hodnota)> ]::
+  Pokud je _Upevnit_ = "true", příkaz generuje náhodné celé číslo mezi _minimum_ a _maximum_ (včetně), jehož hodnota se aktualizuje právě jednou, když je soubor spuštěn nebo obnoven (undo/redo).
+
+[EXAMPLE]
+====
+
+`++RandomBetween(0, 10, true)++` dá celé číslo mezi _0_ a _10_ (včetně)
+
+====
+
+[NOTE]
+====
+
+Stiskněte [.kcode]#F9#, abyste poznali rozdíly mezi těmito dvěma syntaxemi.
+
+====
 
 [NOTE]
 ====
