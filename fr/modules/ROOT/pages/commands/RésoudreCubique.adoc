@@ -2,8 +2,6 @@
 :page-en: commands/SolveCubic
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-[NOTE]
-====
 
 *image:24px-Menu_view_cas.svg.png[Menu view cas.svg,width=24,height=24] uniquement en fenêtre
 xref:/Calcul_formel.adoc[Calcul formel]*
@@ -14,16 +12,18 @@ xref:/Calcul_formel.adoc[Calcul formel]*
 [EXAMPLE]
 ====
 
-*Exemple :*
-
-`++RésoudreCubique(x³ - 1)++` donne \{ 1, stem:[ -\frac{1}\{2} + i \frac{\sqrt{3}}\{2} ] , stem:[ -\frac{1}\{2} - i
-\frac{\sqrt{3}}\{2} ] } .
+`++RésoudreCubique(x³ - 1)++` retourne { 1, stem:[ -\frac{1}{2} + i \frac{\sqrt{3}}{2} ] , stem:[ -\frac{1}{2} - i
+\frac{\sqrt{3}}{2} ] } .
 
 ====
 
-*Note :*
-
-Il vous appartiendra, souvent, de demander la simplification de vos réponses`++RésoudreCubique(x³ + x² + x + 1) ++` ne
-donne pas une réponse _agréable_, alors qu'après simplification, on obtient _\{ -1, i , -i }_ .
+[NOTE]
 
 ====
+
+Il vous appartiendra, souvent, de demander la simplification de vos réponses `++RésoudreCubique(x³ + x² + x + 1) ++` ne
+donne pas une réponse _agréable_, alors qu'après simplification, on obtient _{ -1, i , -i }_ .
+
+Les réponses sont souvent très alambiquées, par ex. `++RésoudreCubique(x³ + x² + x + 2) ++`, pour qui `++Résoudre(x³ + x² + x + 2)++` ou `++CRésoudre(x³ + x² + x + 2)++` peut vous être davantage _lisible_.
+====
+
