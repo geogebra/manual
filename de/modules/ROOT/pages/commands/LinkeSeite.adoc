@@ -8,7 +8,7 @@ LinkeSeite( <Gleichung> )::
 [EXAMPLE]
 ====
 
-`++LinkeSeite[ x + 2 = 3x + 1 ]++` ergibt _x_.
+`++LinkeSeite( 4x = 1 - 3y )++` ergibt _4x + 3y_.
 
 ====
 
@@ -16,29 +16,31 @@ LinkeSeite( <Gleichung> )::
 
 LinkeSeite( <Gleichung> )::
   Gibt die linke Seite der Gleichung an.
+
+[EXAMPLE]
+====
+
+`++LinkeSeite( x + 2 = 3 x + 1 )++` ergibt _x + 2_.
+
+====
+
 LinkeSeite( <Liste von Gleichungen> )::
   Gibt eine Liste der linken Seiten der Gleichungen an.
+
+[EXAMPLE]
+====
+
+`++LinkeSeite({a^2 + b^2 = c^2, x + 2 = 3 x + 1})++` ergibt stem:[ \left\\{a^2 + b^2, x + 2 \right\} ] .
+
+====
+
 LinkeSeite( <Liste von Gleichungen>, <Index> )::
   Gibt die linke Seite der Gleichung an, die durch den Index festgelegt ist.
 
 [EXAMPLE]
 ====
 
-`++LinkeSeite[{a^2 + b^2 = c^2, x + 2 = 3 x + 1}, 1]++` ergibt _stem:[a^2 + b^2]_.
-
-====
-
-[EXAMPLE]
-====
-
-`++LinkeSeite[{a^2 + b^2 = c^2, x + 2 = 3 x + 1}]++` ergibt _stem:[ \left\\{a^2 + b^2, x + 2 \right\} ]_ .
-
-====
-
-[EXAMPLE]
-====
-
-`++LinkeSeite[x + 2 = 3 x + 1]++` ergibt _x + 2_.
+`++LinkeSeite({a^2 + b^2 = c^2, x + 2 = 3 x + 1}, 1)++` ergibt stem:[a^2 + b^2].
 
 ====
 
