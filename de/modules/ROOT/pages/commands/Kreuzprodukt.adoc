@@ -3,12 +3,21 @@
 ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
 
 Kreuzprodukt( <Vektor u>, <Vektor v> )::
-  Berechnet das https://de.wikipedia.org/wiki/Kreuzprodukt[Kreuzprodukt] der Vektoren _u_ und _v_.
+  Berechnet das https://de.wikipedia.org/wiki/Kreuzprodukt[Kreuzprodukt] der Vektoren _u_ und _v_. Anstelle von Vektoren können auch Listen verwendet werden.
 
 [EXAMPLE]
 ====
 
-`++Kreuzprodukt[{1, 3, 2}, {0, 3, -2}]++` liefert _\{-12, 2, 3}_.
+`++Kreuzprodukt((1, 3, 2), (0, 3, -2))++` liefert _(-12, 2, 3)_.
+
+====
+
+Für 2D Vektoren oder Punkte ist das Ergebnis die _z_-Koordinate des Kreuzproduktes.
+
+[EXAMPLE]
+====
+
+`++Kreuzprodukt((1, 2),(4, 5))++` liefert -3.
 
 ====
 
@@ -19,12 +28,12 @@ Kreuzprodukt( <Vektor u>, <Vektor v> )::
 image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_Ansicht.adoc[CAS-Ansicht] in den
 Vektoren unbelegte Variablen vorkommen, dann liefert der Befehl eine Formel für das Kreuzprodukt.
 
+====
+
 [EXAMPLE]
 ====
 
-`++Kreuzprodukt[{a, b, c}, {d, e, f}]++` liefert _\{b f - c e, -a f + c d, a e - b d}_.
-
-====
+`++Kreuzprodukt((a, b, c), (d, e, f))++` liefert _(b f - c e, -a f + c d, a e - b d)_.
 
 ====
 
