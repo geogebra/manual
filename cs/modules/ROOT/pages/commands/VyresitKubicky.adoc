@@ -1,0 +1,20 @@
+= Příkaz VyresitKubicky
+:page-en: commands/SolveCubic
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+== CAS Syntaxe
+
+VyresitKubicky( <Kubický mnohočlen> )::
+  Řeší  https://cs.wikipedia.org/wiki/Kubick%C3%A1_rovnice[kubickou rovnici] a vypíše seznam všech řešení.
+
+[EXAMPLE]
+====
+`++VyresitKubicky(x³ - 1)++` dává { 1, stem:[ \frac{1}{2} (\sqrt{3} i -1) ] , stem:[ \frac{1}{2} (\sqrt{3} (-i) -1)
+] } .
+
+====
+[NOTE]
+====
+Většinou jsou řešení těžkopádná, příkaz `++VyresitKubicky(x³ + x² + x + 2)++` může být nahrazen příkazy`++Vyresit(x³ + x² + x + 2)++`
+nebo `++CVyresit(x³ + x² + x + 2)++.
+====
