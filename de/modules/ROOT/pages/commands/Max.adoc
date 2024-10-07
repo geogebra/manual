@@ -8,7 +8,7 @@ Max( <Liste> )::
 [EXAMPLE]
 ====
 
-`++Max[{-2, 12, -23, 17, 15}]++` berechnet _17_.
+`++Max({-2, 12, -23, 17, 15})++` berechnet _17_.
 
 ====
 
@@ -27,7 +27,7 @@ Max( <Intervall> )::
 [EXAMPLE]
 ====
 
-`++Max[2<x<3]++` ergibt _3_.
+`++Max(2<x<3)++` ergibt _3_.
 
 ====
 
@@ -44,7 +44,7 @@ Max( <Zahl>, <Zahl> )::
 [EXAMPLE]
 ====
 
-`++Max[12, 15]++` berechnet _15_.
+`++Max(12, 15)++` ergibt _15_.
 
 ====
 
@@ -55,7 +55,14 @@ Max( <Funktion>, <Startwert>, <Endwert> )::
 [EXAMPLE]
 ====
 
-`++Max[ x^3 + 2x^2 - 1, -2, 0 ]++` berechnet den Punkt (-1.33, 0.19).
+`++Max( x^3 + 2x^2 - 1, -2, 0 )++` berechnet den Punkt (-1.33, 0.19).
+
+====
+
+[NOTE]
+====
+
+Für Polynome sollte der Befehl xref:/commands/Extremum.adoc[Extremum] verwendet werden.
 
 ====
 
@@ -65,7 +72,7 @@ Max( <Liste von Daten>, <Liste von Häufigkeiten> )::
 [EXAMPLE]
 ====
 
-`++Max[{1, 2, 3, 4, 5}, {5, 3, 4, 2, 0}]++` ergibt 4, die höchste Zahl der ersten Liste, deren Häufigkeit größer als 0
+`++Max({1, 2, 3, 4, 5}, {5, 3, 4, 2, 0})++` ergibt 4, die höchste Zahl der ersten Liste, deren Häufigkeit größer als 0
 ist.
 
 ====
@@ -73,7 +80,22 @@ ist.
 [NOTE]
 ====
 
-Siehe auch die Befehle xref:/commands/Extremum.adoc[Extremum], xref:/commands/Min.adoc[Min] und Werkzeug
+* Möchtest du das Maximum zweier Funktionen _f(x)_ und _g(x)_ berechnen, dann kannst du _(f(x) + g(x) + abs(f(x) - g(x)))/2_ definieren.
+
+* Siehe auch die Befehle xref:/commands/Extremum.adoc[Extremum], xref:/commands/Min.adoc[Min] und Werkzeug
 xref:/tools/Funktionsinspektor.adoc[Funktionsinspektor].
+
+====
+
+== CAS Syntax
+
+Max( <Funktion>, <Startwert>, <Endwert>)::
+  Dieser Syntax liefert das Maximum des geschlossenen Intervals.
+
+[EXAMPLE]
+====
+
+* `++Max(x^2,-1,2)++` ergibt den Punkt _(2,4)_
+* `++Max(-x^2,-1,2)++` ergibt den Punkt _(0,0)_
 
 ====
