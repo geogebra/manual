@@ -2,15 +2,30 @@
 :page-en: commands/NIntegral
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-NIntégrale( <Fonction>, <x min>, <x max> )::
+NIntégrale( <Fonction>)::
+  Trace le graphique de la primitive y=F(x)+c de la fonction donnée, avec une constante d'intégration c = 0. L'équation de la primitive n'est pas affichée dans la vue Algèbre, car elle est calculée numériquement.
+
+
+NIntégrale( <Fonction>, <x initial>, <x final> )::
   Recherche une valeur (approchée) numérique de l'intégrale stem:[\int_a^bf(x)\mathrm{d}x] et dessine l'aire concernée
 
 [EXAMPLE]
-==== 
+====
 
 * `++NIntégrale(x²,0,1)++` retourne _0.33_ ;
 * `++NIntégrale(1/x,1,2)++` retourne _0.693147180559945_ (Option : 15 décimales) ;
 * `++NIntégral(ℯ^(-x), 0, 1)++` retourne _0.632120558828558_.
+
+====
+
+NIntégrale( <Fonction>, <x initial>, <Start y-Value>,<x final> )::
+   Calcule (numériquement) la primitive, prenant la valeur _Start y-Value_ en _x initial_, de la fonction donnée et en trace le graphique à partir de ce point jusqu'à le point final en _x final_.
+
+[EXAMPLE]
+====
+
+`++NIntégrale(sin(x)/x, π, 1, 2π)++` trace le graphique de la primitive stem:[y=F(x)+c] de la fonction _sin_ sur
+l'intervalle [π, 2π]. La valeur de stem:[c] est définie par la condition initiale  (x initial, Start y-Value)=(π, 1).
 
 ====
 
@@ -37,7 +52,7 @@ Existe aussi une syntaxe pour une variable autre que x.
 
 ====
 
-NIntégrale( <Fonction f>, <Variable t>, < de a>, < à b> )::
+NIntégrale( <Fonction>, <Variable>, < Valeur Début>, < Valeur Fin> )::
   Recherche une valeur (approchée) numérique de l'intégrale stem:[\int_a^bf(t)\mathrm{d}t]
 
 [EXAMPLE]
