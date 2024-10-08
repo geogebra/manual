@@ -18,7 +18,7 @@ function listFilesSync(directory, callback) {
         listFilesSync(filePath, callback);
       } else {
         // If the file is not a directory, print its path
-        callback(filePath);
+        callback(filePath, directory);
       }
     });
   } catch (err) {
@@ -38,50 +38,68 @@ for (const lang of active) {
     const antora = fs.readFileSync(`${lang}/antora.yml`, 'utf8');
     const display = antora.split("\n").find(l=>l.includes('display_version')).split(':')[1].trim().replaceAll('\'', '');
     let ok = 0;
-    listFilesSync(`${lang}/modules/ROOT/pages`, filePath => {
+    const links = {};
+    const allPages = [];
+    listFilesSync(`${lang}/modules/ROOT/pages`, (filePath, directory) => {
         const content = fs.readFileSync(filePath, 'utf8');
         const pageEn = content.match(/:page-en:(.*)/);
+        const currentPath = simplePath(filePath);
+        allPages.push(currentPath);
+        if (currentPath == "missing.adoc" || currentPath == "broken.adoc") {
+            return;
+        }
         if (!pageEn || allEn.indexOf(pageEn[1].trim()) == -1) {
             if (lang == "ja" && fs.existsSync(filePath.replace(/ja.modules/,'en/modules'))) {
                 const lines = content.split('\n');
-                const fixedContent = lines[0]+'\n:page-en: '+simplePath(filePath).replace('.adoc','')+'\n'+lines.slice(1).join('\n')
+                const fixedContent = lines[0]+'\n:page-en: '+currentPath.replace('.adoc','')+'\n'+lines.slice(1).join('\n')
                 fs.writeFileSync(filePath, fixedContent, 'utf8')
             }
-            if (simplePath(filePath) != "missing.adoc") {
-                orphans.push(simplePath(filePath));
-            }
+            orphans.push(currentPath);
         } else {
             if (content.includes('UnderConstruction.png')) {
                 partials.push(simplePath(filePath));
             }
             if (translations[pageEn[1].trim()]) {
               duplicates.push(simplePath(translations[pageEn[1].trim()]));
-              duplicates.push(simplePath(filePath));
+              duplicates.push(currentPath);
             } else if (!content.includes('UnderConstruction.png')){
               ok++;
             }
             translations[pageEn[1].trim()] = filePath;
         }
+        const refs = [...content.matchAll(/xref:([^.@]*\.adoc)/g)];
+        (refs || []).forEach(m => {
+            const linkRef = m[1].replace(/^\//, '');
+            const absRef = linkRef.startsWith('./') ? simplePath(directory) + linkRef.substring(1) : linkRef;
+            links[absRef] = links[absRef] || [];
+            links[absRef].push(simplePath(filePath));
+        })
     });
+    for (const page of allPages) {
+      delete(links[page]);
+    }
+
     const nav = fs.readFileSync('en/modules/ROOT/nav.adoc', 'utf8');
     const localNav = nav.replace(/xref:(.+?).adoc/g, function(match, contents) {
             return "xref:" + simplePath(translations[contents]);
     });
     const missing = [];
     for (const enPage of allEn) {
-      if (!translations[enPage] && enPage != "missing") {
+      if (!translations[enPage] && enPage != "missing" && enPage != "broken") {
         missing.push(enPage);
       }
     }
     if (!fs.existsSync(`${lang}/modules/ROOT/nav.adoc`)) {
        fs.writeFileSync(`${lang}/modules/ROOT/nav.adoc`, localNav, 'utf8');
     }
+    const linkify = k=>`\n * xref:${k}[${k.substr(0, k.length - 5)}]`;
+    const indentLinkify = k=>`\n ** xref:${k}[${k.substr(0, k.length - 5)}]`;
     const missingList = !missing.length ? "All clear"
         : missing.map(k=>`\n * xref:en@manual::${k}.adoc[${k}]`).join('');
     const orphanList = !orphans.length ? "All clear"
-        : orphans.map(k=>`\n * xref:${k}[${k.substr(0, k.length - 5)}]`).join('');
+        : orphans.map(linkify).join('');
     const partialList = !partials.length ? "All clear"
-        : partials.map(k=>`\n * xref:${k}[${k.substr(0, k.length - 5)}]`).join('');
+        : partials.map(linkify).join('');
     const dupeList = !duplicates.length ? "All clear"
             : duplicates.map(k=>`\n * xref:${k}[${k.substr(0, k.length - 5)}]`).join('');
     fs.writeFileSync(`${lang}/modules/ROOT/pages/missing.adoc`, '= Translation issues\n'
@@ -93,6 +111,9 @@ for (const lang of active) {
         + partialList
         + '\n\n== Duplicate translations\n'
         + dupeList, 'utf8');
+     fs.writeFileSync(`${lang}/modules/ROOT/pages/broken.adoc`, '= Broken links\n\n'
+        + Object.entries(links).map(([link, sources]) =>
+         `* ${link}:\n ${sources.map(indentLinkify).join("")}\n`).join("") +"\n\n", 'utf8');
     status += `| ${display} (${lang}) `.padEnd(25," ");
     for (const stat of [ok, missing.length, orphans.length, duplicates.length, partials.length]) {
         status += `| ${stat}`.padEnd(10," ")
