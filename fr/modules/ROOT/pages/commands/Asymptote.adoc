@@ -5,12 +5,40 @@ ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 Asymptote( <Hyperbole h> )::
   Les deux asymptotes à l’hyperbole _h_.
 
+[EXAMPLE]
+====
+
+`++Asymptote(x^2 - y^2 /4 = 1)++` retourne les droites _-2x + y = 0_ et _-2x - y = 0_.
+
+====
+
 Asymptote( <Fonction f> )::
   GeoGebra essaye de trouver toutes les équations des asymptotes à stem:[C_f].Il les retourne dans une liste, et les
-  représente.
+  construit.
 
-Il se peut qu'il ne les trouve toutes, en particulier c'est le cas pour les asymptotes parallèles à l'axe des ordonnées
-pour les fonctions non rationnelles, par exemple la fonction logarithme.
+Il se peut qu'il ne les trouve toutes, en particulier c'est le cas pour les asymptotes parallèles à l'axe des ordonnées pour les fonctions non rationnelles, par exemple la fonction logarithme.
+
+[NOTE]
+====
+
+*Cette syntaxe n'est pas implémentée dans les applications Calculatrice Graphique et Géométrie*
+
+====
+
+
+[EXAMPLE]
+====
+
+`++Asymptote((x^3 - 2x^2 - x + 4) / (2x^2 - 2))++` retourne la liste _{y = 0.5x - 1, x = 1, x = -1}_.
+
+====
 
 Asymptote( <Courbe c> )::
   Retourne une liste contenant les équations de toutes les asymptotes à _c_ et les construit.
+
+[EXAMPLE]
+====
+
+`++Asymptote(x^3 + y^3 + y^2 - 3 x = 0)++` retourne la liste _{x + y = -0.33}_.
+
+====
