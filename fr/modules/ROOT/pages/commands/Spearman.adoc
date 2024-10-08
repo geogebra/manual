@@ -3,8 +3,26 @@
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
 Spearman( <Liste Points L> )::
-  Retourne le https://fr.wikipedia.org/Corr%C3%A9lation_de_Spearman[coefficient de corrélation par rangs de
+  Retourne le https://fr.wikipedia.org/wiki/Corr%C3%A9lation_de_Spearman[coefficient de corrélation par rangs de
   Spearman] des abscisses et des ordonnées des points de _L_.
+
+[EXAMPLE]
+====
+
+Soit la `++liste = {(-3, 4), (-1, 4), (-2, 3), (1, 3), (2, 2), (1, 5)}++` de points. 
+
+`++Spearman(list)++` retourne _a = -0.37_.
+
+====
 
 Spearman( <Liste Nombres A>, <Liste Nombres B> )::
   Retourne le coefficient de corrélation par rangs de Spearman pour les listes _A_ et _B_.
+
+[EXAMPLE]
+====
+
+Soit les 2 listes : `++liste1 = {3, 2, 4, 5, 1, 6, 8, 9}++` et `++liste2 = {5, 6, 8, 2, 1, 3, 4, 7}++`.
+
+`++Spearman(liste1, liste2)++` retourne _a = 0.24_.
+
+====
