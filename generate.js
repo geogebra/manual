@@ -49,7 +49,7 @@ for (const lang of active) {
             return;
         }
         if (!pageEn || allEn.indexOf(pageEn[1].trim()) == -1) {
-            if (lang == "ja" && fs.existsSync(filePath.replace(/ja.modules/,'en/modules'))) {
+            if (lang == "nl" && fs.existsSync(filePath.replace(/nl.modules/,'en/modules'))) {
                 const lines = content.split('\n');
                 const fixedContent = lines[0]+'\n:page-en: '+currentPath.replace('.adoc','')+'\n'+lines.slice(1).join('\n')
                 fs.writeFileSync(filePath, fixedContent, 'utf8')
