@@ -8,8 +8,6 @@ AjustPoly(<Liste Points>,<Degré>)::
 [EXAMPLE]
 ====
 
-*Exemple :*
-
 `++AjustPoly({(-1, -1), (0, 1), (1, 1), (2, 5)}, 3)++` retourne _x^3^ - x^2^ + 1_.
 
 ====
@@ -21,14 +19,27 @@ Pour un ordre _n_, la liste doit contenir au moins _n + 1_ points.
 
 ====
 
+AjustPoly( <Fonction à main levée>, <Degré> )::
+Calcule une régression polynomiale de _degré_ donné qui correspond à une fonction dessinée à l'aide de l'outil xref:/tools/MainLevée.adoc[MainLevée]
+
 ____________________________________________________________
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
-Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+Cette commande fonctionne à l'identique dans la fenêtre *Calcul formel* pour la première syntaxe, pas pour la deuxième, même si elle est proposée.
+
+____________________________________________________________
 
 [.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/Ajustement.adoc[Ajustement],
 xref:/commands/AjustExp.adoc[AjustExp], xref:/commands/AjustImplicite.adoc[AjustImplicite],
 xref:/commands/AjustLin.adoc[AjustLin], xref:/commands/AjustLinX.adoc[AjustLinX],
 xref:/commands/AjustLog.adoc[AjustLog], xref:/commands/AjustLogistique.adoc[AjustLogistique],
 xref:/commands/AjustPuissance.adoc[AjustPuissance] et xref:/commands/AjustSin.adoc[AjustSin].
+
+[NOTE]
+
+====
+
+Si vous travaillez avec des nombres grands/petits, vous devriez envisager de les normaliser pour un résultat plus précis, voir la commande xref:/commands/Normaliser.adoc[Normaliser].
+
+====
