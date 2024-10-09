@@ -2,6 +2,11 @@
 :page-en: commands/GroebnerDegRevLex
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+
+*image:24px-Menu_view_cas.svg.png[Menu view cas.svg,width=24,height=24] uniquement en fenêtre
+xref:/Calcul_formel.adoc[Calcul formel]*
+
+
 GroebnerDegInvLex( <Liste Polynômes> )::
   Calcule la base de Groebner de la liste des polynômes selon l'ordre lexicographique inversé avec leur degré des
   variables.
@@ -9,9 +14,8 @@ GroebnerDegInvLex( <Liste Polynômes> )::
 [EXAMPLE]
 ====
 
-*Exemple :*
-
-`++GroebnerDegInvLex({x^3-y-2,x^2+y+1})++` retourne \{stem:[ y^\{2} - x + 3 y + 3, x y + x + y + 2, x^\{2} + y + 1 ]}.
+`++GroebnerDegInvLex({x^3-y-2,x^2+y+1})++` retourne {stem:[ y^{2} - x + 3 y + 3, x y + x + y + 2, x^{2} + y +
+1 ]}.
 
 ====
 
@@ -22,9 +26,8 @@ GroebnerDegInvLex( <Liste Polynômes>, <Liste Variables> )::
 [EXAMPLE]
 ====
 
-*Exemple :*
 
-`++GroebnerDegInvLex({x^3-y-2,x^2+y+1},{y,x})++` retourne \{stem:[ x^\{2} - y, y \; x - x, y^\{2} - y ]}.
+`++GroebnerDegInvLex({x^3-y-2,x^2+y+1},{y,x})++` retourne {stem:[ x^{2} + y + 1, y x + y + x + 2, y^{2} + 3y - x + 3]}.
 
 ====
 
