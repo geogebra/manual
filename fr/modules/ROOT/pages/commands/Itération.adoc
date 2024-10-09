@@ -8,8 +8,6 @@ Itération( <Fonction f>, <Valeur départ stem:[x_0]>, <Nombre n> )::
 [EXAMPLE]
 ====
 
-*Exemples :*
-
 Après avoir défini `++f(x) = x^2++` la commande `++Itération(f, 3, 2)++` retourne _(3^2^)^2^ = 81_;
 
 Après avoir défini `++g(x) = x+7++` la commande `++Itération(g, 3, 4)++` retourne _(((3+7)+7)+7)+7 = 31_ .
@@ -17,9 +15,16 @@ Après avoir défini `++g(x) = x+7++` la commande `++Itération(g, 3, 4)++` reto
 ====
 
 Itération[ <Expression>, <Nom Variable>, ..., <Liste Valeurs départ>, <Nombre d'itérations> ]::
-  Réitère l'expression _n_ fois à partir de la valeur de départ. Le résultat est le dernier élément de la liste
-  retournée par la xref:/commands/ItérationListe.adoc[Commande ItérationListe] avec les mêmes paramètres, consulter la
-  page du manuel concernant cette commande pour exemples et explications.
+  Réitère l'expression _n_ fois à partir de la valeur de départ. 
+
+Le résultat est le dernier élément de la liste retournée par la commande xref:/commands/ItérationListe.adoc[ItérationListe] avec les mêmes paramètres.
+
+[EXAMPLE]
+====
+avec un nombre complexe :
+`++Itération(a² + 1, a, {(1 + ί) / sqrt(2)}, 4)++` retourne stem:[-11-16ί]
+
+====
 
 [NOTE]
 ====
@@ -41,8 +46,6 @@ Avec la possibilité de travailler en littéral.
 
 [EXAMPLE]
 ====
-
-*Exemples :*
 
 Si les variables _a_ et _b_ ne sont pas définies dans GeoGebra :
 
