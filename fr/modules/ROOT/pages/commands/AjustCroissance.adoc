@@ -3,7 +3,20 @@
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
 AjustCroissance(<Liste Points>)::
-  Recherche une fonction de la forme _a*b^x^_ pour les points de la liste.
+  Recherche une fonction de la forme stem:[ a b ^ x ] pour les points de la liste.
 
-(Cette commande est équivalente à la commande xref:/commands/AjustExp.adoc[AjustExp][ <Liste Points>], pour les
+(Cette commande est équivalente à la commande xref:/commands/AjustExp.adoc[AjustExp]( <Liste Points>), pour les
 utilisateurs qui ne connaissent pas la signification de _e_).
+
+[EXAMPLE]
+====
+
+`++AjustCroissance({(0, 1), (2, 3), (4, 3), (6, 4)})++` retourne _1.31_ stem:[ \cdot ] _1.23^x^_.
+
+====
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/Ajustement.adoc[Ajustement],
+xref:/commands/AjustExp.adoc[AjustExp], xref:/commands/AjustImplicite.adoc[AjustImplicite],
+xref:/commands/AjustLin.adoc[AjustLin], xref:/commands/AjustLinX.adoc[AjustLinX],
+xref:/commands/AjustLog.adoc[AjustLog], xref:/commands/AjustLogistique.adoc[AjustLogistique],
+xref:/commands/AjustPuissance.adoc[AjustPuissance] et xref:/commands/AjustSin.adoc[AjustSin].
