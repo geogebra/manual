@@ -9,7 +9,7 @@ xref:/Calcul_formel.adoc[Calcul formel]*
 
 Numérique( <Expression> )::
   Essaye de déterminer une approximation numérique de l'expression donnée. Le nombre de décimales dépend de l'option
-  _Arrondi_ choisie dans le xref:/Menu_Options.adoc[menu Options].
+  _Arrondi_ choisie dans le menu xref:/Menu_Options.adoc[Options].
 
 [EXAMPLE]
 ====
@@ -35,5 +35,23 @@ Numérique( <Expression>, <nombre de chiffres> )::
 Si vous ne précisez pas un nombre suffisant de chiffres vous pouvez obtenir un résultat erroné, ceci est dû au
 problème d' http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html[annulation en virgule flottante (document en
 anglais)]
+====
+[EXAMPLE]
+====
+
+`++Numérique(-500000000/785398163*sin(785398163/500000000)*1258025227.19^2+500000000/785398163*1258025227.19^2,10)++` 
+
+retourne _4096_ (-256 en GGb5?) *MAIS*
+
+
+`++Numérique(-500000000/785398163*sin(785398163/500000000)*1258025227.19^2+500000000/785398163*1258025227.19^2,30)++` 
+
+retourne _0.318309886345536696694580314215_.
+
 
 ====
+
+
+image:Tool_tool.png[Tool tool.png,width=32,height=32] Voir aussi l'*outil*  image:32px-Mode_nsolve.svg.png[Mode nsolve.svg,width=32,height=32] xref:/tools/Outil Numérique.adoc[Numérique].
+
+
