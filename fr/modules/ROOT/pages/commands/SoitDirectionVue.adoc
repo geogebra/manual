@@ -6,17 +6,36 @@ SoitDirectionVue( )::
   Réinitialise la vue.
 
 SoitDirectionVue( <Direction> )::
-  Définit l'orientation de la vue dans la fenêtre 3D en fonction de la direction de l'objet indiqué.
+  Définit l'orientation de la vue dans la fenêtre 3D en fonction de la direction de l'objet indiqué (une ligne, un segment, un plan, etc...)
 
-(vue frontale du plan si _Direction_ est un plan, vue frontale du plan perpendiculaire à la ligne _Direction_ est une
+(vue frontale du plan si _Direction_ est un plan, vue frontale du plan perpendiculaire à _Direction_ si c'est une
 ligne).
+
+[EXAMPLE]
+====
+
+* `++SoitDirectionVue(Vecteur((0, 0, 1)))++`
+* `++SoitDirectionVue((0, 0, 1))++`
+* `++SoitDirectionVue(x + y + z = 1)++`
+
+====
+
+[NOTE]
+====
+
+Si vous faites par exemple `++SoitDirectionVue(x + y + z = 1)++` deux fois, il y a deux résultats possibles et le _second_
+fera pivoter la vue de 180°. Pour éviter toute ambiguïté, utilisez par exemple `++SoitDirectionVue(Vecteur((0, 0, 1)))++`
+====
+
 
 SoitDirectionVue( <Direction>, <Booléen Animation> )::
 
 [EXAMPLE]
 ====
 
-SoitDirectionVue( Vecteur((1;α;-30°)), false ) à insérer dans le script _Par actualisation_ du curseur _α_
+Afin d'obtenir la rotation de la vue 3D, en fonction des valeurs d'un curseur α préalablement créé, utilisez la commande :
+
+`++SoitDirectionVue( Vecteur((1;α;-30°)), false )++` à insérer dans le script _Par actualisation_ du curseur _α_
 
 ====
 
