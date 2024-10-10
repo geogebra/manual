@@ -9,7 +9,7 @@ Courbe( <Expression stem:[e_1]>, <Expression stem:[e_2]>, <Variable t >, <de a>,
 [EXAMPLE]
 ====
 
-`++ Courbe(2 cos(t), 2 sin(t),t,0,2 stem:[\pi]) ++` crée un cercle de rayon 2, de centre l'origine du
+`++ Courbe(2 cos(t), 2 sin(t),t,0,2 π) ++` crée un cercle de rayon 2, de centre l'origine du
 repère.
 
 ====
@@ -19,6 +19,8 @@ repère.
 
 Le nombre _b_ doit être supérieur ou égal au nombre _a_. Les paramètres _a_ et _b_ étant dynamiques vous pouvez
 très bien utiliser des xref:/tools/Curseur.adoc[curseurs].
+
+La variable ne peut être _x_, _y_ ou _z _ !
 
 ====
 
@@ -55,7 +57,7 @@ vous qui avez fixé les bornes), et comme _t_ peut prendre des valeurs négative
 la spirale et sa symétrique par rapport à l'axe des ordonnées, préférez la syntaxe par exemple :
 `++Courbe((t;t), t, 0, 6  π ) ++` ;
 
-`++(t^2,t^3)++` crée la courbe paramétrée dont la définition est stem:[\left\\{ \begin\{array}\{}x = t^\{2}\\ y = t^\{3}
+`++(t^2,t^3)++` crée la courbe paramétrée dont la définition est stem:[\left\{ \begin\{array}\{}x = t^{2}\\ y = t^{3}
 \end\{array}\right\} -10 \le t \le 10 ] mais la commande associée est générée en *Courbe(t², t³, t, -10, 10)* (et ce
 n'est pas vous qui avez fixé les bornes).
 
