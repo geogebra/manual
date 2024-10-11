@@ -2,34 +2,88 @@
 :page-en: commands/Derivative
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-*Dérivée*( <Fonction> )::
-  Calcule la dérivée de la fonction.
-
-*Dérivée*( <Fonction>, <Valeur n> )::
-  Calcule la dérivée _n^ème^ de la fonction._
-
-*Dérivée*( <Courbe> ) +
-*Dérivée*( <Courbe>, <Valeur n> )::
+Dérivée( <Fonction> )::
+  Calcule la dérivée de la _fonction_ par rapport à la variable principale.
 
 [EXAMPLE]
 ====
 
-*Exemple :*
+`++ Dérivée(x^3 + x^2 + x)++` retourne _3x² + 2x + 1_.
 
-`++ Dérivée(Courbe(cos(t),t sin(t),t,0,π),2)++` donne la courbe paramétrique
+====
 
-x = -cos(t) et y = cos(t) + sin(t) (-1) t + cos(t) pour 0 ≤ t ≤ π
+Dérivée( <Courbe> )::
+  Calcule la dérivée de la _courbe_.
 
-avec `++ Simplifier(Dérivée(Courbe(cos(t), t sin(t),t,0,π),2))++` le résultat est _plus beau_ pour
+[EXAMPLE]
+====
 
-y = -t sin(t) + 2cos(t)
+`++ Dérivée(Courbe(cos(t), t sin(t), t, 0, π))++` retourne la courbe _x = -sin(t), y = sin(t) + t cos(t)_
+
+====
+
+
+[NOTE]
+====
+
+Uniquement pour les courbes paramétriques
+
+====
+
+Dérivée( <Fonction>, <Nombre> )::
+  Calcule la dérivée _n^ème^_ de la _fonction_ par rapport à la variable principale, _n_  ayant la valeur de _Nombre_.
+
+[EXAMPLE]
+====
+
+`++ Dérivée(x^3 + x^2 + x, 2)++` retourne _6x + 2_.
+
+====
+
+Dérivée( <Fonction>, <Variable> )::
+  Calcule la dérivée de la _fonction_ par rapport à la _variable_.
+
+[EXAMPLE]
+====
+
+`++ Dérivée(x^3 y^2 + y^2 + xy, y)++` retourne _2x³y + x + 2y_.
+
+====
+
+
+
+Dérivée( <Courbe>, <Nombre> )::
+ Calcule la dérivée _n^ème^_ de la _courbe_ par rapport à la variable principale, _n_  ayant la valeur de _Nombre_.
+
+
+[EXAMPLE]
+====
+
+`++ Dérivée(Courbe(cos(t), t sin(t), t, 0, π), 2)++` retourne la courbe _x = -cos(t), y = cos(t) +sin(t)(-1)t+cos(t)_pour 0 ≤ t ≤ π
+
+
+avec `++ Simplifier(Dérivée(Courbe(cos(t), t sin(t),t,0,π),2))++` le résultat est _plus beau_ pour y = -t sin(t) + 2cos(t) 
+
 
 ====
 
 [NOTE]
 ====
 
-Seulement pour des courbes paramétriques.
+Uniquement pour les courbes paramétriques
+
+====
+
+
+Dérivée( <Fonction>, <Variable>, <Nombre>  )::
+
+ Calcule la dérivée _n^ème^_ de la _fonction_ par rapport à la _variable_, _n_  ayant la valeur de _Nombre_.
+
+[EXAMPLE]
+====
+
+`++ Dérivée(x^3 + 3x y, x, 2)++` retourne _6x_ ;
+`++ Dérivée(x^3 + 3x y, y, 2)++` retourne _0_.
 
 ====
 
@@ -44,17 +98,16 @@ Vous pouvez utiliser `++f'(x)++` à la place de `++Dérivée(f)++`, ou `++f''(x)
 image:20px-Menu_view_cas.svg.png[Menu view cas.svg,width=20,height=20] *Calcul formel* Dans le
 xref:/Calcul_formel.adoc[calcul formel] les seules syntaxes suivantes sont supportées :
 
-Dérivée( <Fonction f> ou <Expression f>)::
-  Calcule la dérivée de la fonction _f_ par rapport à _x_.
-Dérivée( <Fonction f> ou <Expression f>, <Variable a>)::
-  Calcule la dérivée de la fonction _f_ par rapport à _a_.
-Dérivée( <Fonction f> ou <Expression f>, <Variable a>, <Nombre n>)::
-  Calcule la dérivée __n__^ème^ de la fonction _f_ par rapport à _a_.
+Dérivée( <Expression>)::
+  Calcule la dérivée de l'_expression_ par rapport à _x_.
+Dérivée( <Expression>, <Variable>)::
+  Calcule la dérivée de l'_expression_ par rapport à la variable indiquée par _Variable_.
+Dérivée( <Expression>, <Variable>, <Nombre>)::
+  Calcule la dérivée __n__^ème^ de l'_expression_ par rapport à la variable indiquée par _Variable_.
 
 [EXAMPLE]
 ====
-
-*Exemples :* En supposant que avez déclaré la fonction _f_ par `++f(x):=a*x^3++`
+En supposant que avez déclaré la fonction _f_ par `++f(x):=a*x^3++`
 
 * `++Dérivée(x^2)++` donne _2x_.
 * `++Dérivée(f(x))++` donne _3 a x²_.
