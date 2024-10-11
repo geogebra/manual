@@ -8,9 +8,12 @@ TrigoDévelopper( <Expression> )::
 [EXAMPLE]
 ====
 
-`++TrigoDévelopper(tan(x+y))++` retourne stem:[\frac{\frac{sin(x)}{cos(x)}+\frac{sin(y)}{cos(y)}}
-\{1-\frac{sin(x)}{cos(x)} \cdot \frac{sin(y)}{cos(y)}} ].
+`++TrigoDévelopper(tan(x+y))++` retourne stem:[\frac{\frac{\sin(x)}{\cos(x)}+\frac{\sin(y)}{\cos(y)}}
+{1-\frac{\sin(x)}{\cos(x)} \cdot \frac{\sin(y)}{\cos(y)}} ].
 
+
+`++TrigExpand(sin(x)sin(x/3))++` retourne stem:[\frac{1}{2} \; \cos \left( 2 \cdot \frac{x}{3} \right) -
+\frac{1}{2} \; \cos \left( 4 \cdot \frac{x}{3} \right) ].
 ====
 
 TrigoDévelopper( <Expression>, <Fonction cible> )::
@@ -20,7 +23,7 @@ TrigoDévelopper( <Expression>, <Fonction cible> )::
 [EXAMPLE]
 ====
 
-`++TrigoDévelopper(tan(x+y),tan(x))++` retourne stem:[\frac{-tan(x) - tan(y)}{tan(x) tan(y) - 1}].
+`++TrigoDévelopper(tan(x+y),tan(x))++` retourne stem:[\frac{-\tan(x) - \tan(y)}{\tan(x) \tan(y) - 1}].
 
 ====
 
@@ -35,9 +38,13 @@ Mais la forme du résultat peut différer selon le mode utilisé :
 [EXAMPLE]
 ====
 
-`++TrigoDévelopper(tan(x + y))++` en mode image:32px-Mode_evaluate.svg.png[Mode
+`++TrigoDévelopper(tan(x + y))++` 
+
+* en mode image:32px-Mode_evaluate.svg.png[Mode
 evaluate.svg,width=32,height=32] Évaluer retourne stem:[\frac{\frac{sin(x)}{cos(x)}+\frac{sin(y)}{cos(y)}}
-\{1-\frac{sin(x)}{cos(x)} \cdot \frac{sin(y)}{cos(y)}} ] en mode image:32px-Mode_numeric.svg.png[Mode
+\{1-\frac{sin(x)}{cos(x)} \cdot \frac{sin(y)}{cos(y)}} ] 
+
+* en mode image:32px-Mode_numeric.svg.png[Mode
 numeric.svg,width=32,height=32] Numérique retourne stem:[\frac{sin(x) cos(y) + sin(y) cos(x)}{- sin(x) sin(y) +cos(x)
 cos(y) }] .
 
