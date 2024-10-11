@@ -2,7 +2,18 @@
 :page-en: commands/Solve
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-Résoudre( <Équation en x> )::
+[NOTE]
+====
+
+Les commandes *Résoudre* et xref:/commands/Solutions.adoc[Solutions] résolvent symboliquement une équation ou un système d'équations sur les nombres réels.
+
+Pour résoudre des équations numériquement, utilisez xref:/commands/NRésoudre.adoc[NRésoudre]. 
+
+Pour résoudre les équations en nombres complexes, voir xref:/commands/CRésoudre.adoc[CRésoudre].
+
+
+
+Résoudre( <Équation> )::
   Résout une équation (ou un ensemble d'équations) de la variable x et retourne une liste de toutes les solutions.
 
 [EXAMPLE]
@@ -14,7 +25,7 @@ Résoudre( <Équation en x> )::
 
 
 
-[width="100%",cols="50%,50%",]
+[width="100%",cols="20%,80%",]
 |===
 |image:18px-Attention.png[Attention,title="Attention",width=18,height=18] *Attention*: a|
 En cas d'utilisation de fonctions définies par morceaux, utiliser xref:/commands/NRésoudre.adoc[NRésoudre]
@@ -24,15 +35,31 @@ En cas d'utilisation de fonctions définies par morceaux, utiliser xref:/command
 
 `++f(x):= Si(x<=-2,x+6,Si(-2<=x<=2,x² ,-x+6))++`
 
-`++Résoudre($1 = 1)++`
+`++Résoudre(f(x) = 1)++`
 
 affiche *?*, alors que
 
-`++NRésoudre($1 = 1)++`
+`++NRésoudre(f(x) = 1)++`
 
-donne la liste des 4 solutions\{x = -5, x = -1, x = 1, x = 5}.
+donne la liste des 4 solutions {x = -5, x = -1, x = 1, x = 5}.
 
 |===
+
+____________________________________________________________
+
+image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
+
+à la syntaxe précédente, s'ajoutent les syntaxes suivantes :
+
+Résoudre( <Équation en x>, <Condition> )::
+  Résout une équation en x, en respectant la _condition_.
+
+[EXAMPLE]
+====
+
+`++Résoudre(x^2=1, x>0)++` retourne stem:[{x = 1}]
+
+====
 
 Résoudre( <Équation>, <Variable> )::
   Résout une équation (ou un ensemble d'équations) de la variable (ou un ensemble de variables) donnée et retourne une
@@ -55,15 +82,23 @@ Résoudre( <Liste Équations>, <Liste Variables> )::
 
 Autre syntaxe possible : `++Résoudre((2a^2+5a+3=b) && (a+b=3),{a,b})++`
 
+
+`++Résoudre({x = 4 x + y , y + x = 2}, {x, y})++` retourne _(x = -1 y = 3)_, l'unique solution du système stem:[
+\left\{\begin{matrix} x=4x+y \\ y+x=2 \end{matrix}\right. ].
+
 ====
+
+Résoudre( <Équation>, <Variable> , <Liste Conditions>)::
+  Résout une équation de la variable donnée et retourne une liste de toutes les solutions respectant les conditions.
 
 [EXAMPLE]
 ====
 
-`++Résoudre({x = 4 x + y , y + x = 2}, {x, y})++` retourne _(x = -1 y = 3)_, l'unique solution du système stem:[
-\left\\{\begin\{matrix} x=4x+y \\ y+x=2 \end\{matrix}\right. ].
+* `++Résoudre(u *x < a,x, u>0)++` retourne _{x < a / u}_, la solution de _u *x < a_ telle que _u>0_
+* `++Résoudre(u *x < a,x, {u<0, a<0})++` retourne _stem:[{x > \frac{a}{u}}]_.
 
 ====
+
 
 Résoudre( <Liste Équations Paramétriques>, <Liste Variables> )::
   Résout un ensemble d'équations paramétriques pour un ensemble donné de variables et retourne une liste de toutes les
@@ -77,17 +112,7 @@ Résoudre( <Liste Équations Paramétriques>, <Liste Variables> )::
 
 ====
 
-Résoudre( <Équation>, <Variable> , <Liste Conditions>)::
-  Résout l'équation de la variable donnée en prenant en compte les conditions et retourne la liste de toutes les
-  solutions.
 
-[EXAMPLE]
-====
-
-* `++Résoudre(u *x < a,x, u>0)++` retourne _{x < a / u}_, l'unique solution de _u *x < a_ vérifiant _u>0_
-* `++Résoudre(u *x < a,x, {u<0, a<0})++` retourne _{x > a / u}_.
-
-====
 
 [NOTE]
 
@@ -97,15 +122,15 @@ Résoudre( <Équation>, <Variable> , <Liste Conditions>)::
 considéré comme égal à 0.
 * Parfois il vous faudra faire quelques manipulations pour aider l'algorithme de résolution à travailler, par exemple
 `++ Résoudre(TrigoDévelopper(sin(5/4 π+x)-cos(x-3/4 π)=sqrt(6) * cos(x)-sqrt(2))) ++` [.underline]#DEVRAIT# vous éviter
-le message "calcul trop compliqué" au lieu de vous retourner stem:[\mathbf\{ \left\\{ x = 2 \space k_1 \space \pi +
+le message "calcul trop compliqué" au lieu de vous retourner stem:[\mathbf\{ \left\{ x = 2 \space k_1 \space \pi +
 \frac{1}{2} \space \pi, x = 2 \space k_2 \space \pi - \frac{1}{6} \space \pi \right\} }]
 
 ====
+
+____________________________________________________________
 
 [.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/NRésoudre.adoc[NRésoudre],
 xref:/commands/Solutions.adoc[Solutions] , xref:/commands/NSolutions.adoc[NSolutions] ,
 xref:/commands/CRésoudre.adoc[CRésoudre] et xref:/commands/CSolutions.adoc[CSolutions] .
 
-====
 
-https://www.geogebra.org/o/t4qTWGP8[Investigation du comportement RésoudreVsSolutions]
