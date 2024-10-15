@@ -20,8 +20,7 @@ correspondent à des vecteurs. Cette convention n'est pas une obligation.
 
 [EXAMPLE]
 ====
-
-*Exemple :*
+*2D*
 
 * Pour définir un point P ou un vecteur u en coordonnées cartésiennes validez `++P = (1, 0) ou u = (0, 5)++`.
 * Pour définir un point Q ou un vecteur v en coordonnées polaires, validez `++Q = (1; 0°) ou v = (5; 90°)++`.
@@ -34,48 +33,35 @@ _Coordonnées polaires_.
 Les lectures des coordonnées d'un point A (par exemple ) du plan se font par :
 
 * x(A) et y(A) pour les coordonnées cartésiennes,
-* Longueur[A] et Angle[A] pour les coordonnées polaires.
+* Longueur(A) et Angle(A) pour les coordonnées polaires.
 
 [NOTE]
 ====
 
-Vous devez utiliser un point-virgule pour séparer les coordonnées polaires. Si vous ne tapez pas le symbole
-degré, GeoGebra considérera que l’angle est entré en radian.
-
-====
-
-[NOTE]
-====
-
-Vous pouvez définir un point dans une cellule du tableur, sans que la fenêtre de celui-ci soit ouverte, par,
-
-[EXAMPLE]
-====
-
-`++A1 = (1, 0)++`.
-
-====
+Vous devez utiliser un point-virgule pour séparer les coordonnées polaires.
+Si vous ne tapez pas le symbole degré, GeoGebra considérera que l’angle est entré en radian.
 
 ====
 
 [NOTE]
 ====
+
+Vous pouvez définir un point dans une cellule du tableur, sans que la fenêtre de celui-ci soit ouverte, par : `++A1 = (1, 0)++`.
+
+
+====
+
+
 
 *image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] Graphique
 3D*
 
 Un point peut être défini
 
-* par ses 3 coordonnées cartésiennes :
+* par ses 3 coordonnées cartésiennes : `++C=(1,2,3)++`
 
-[EXAMPLE]
-====
 
-`++C=(1,2,3)++`
-
-====
-
-* par ses 3 coordonnées sphériques :
+* par ses 3 coordonnées sphériques : `++A=(1;45°;30°)++`
 
 rayon-longitude-latitude
 
@@ -87,12 +73,7 @@ où ρ désigne la distance du point à l'origine,
 
 et δ la latitude, l'angle depuis le plan xOy (entre -90° et 90°)
 
-[EXAMPLE]
-====
 
-`++A=(1;45°;30°)++`
-
-====
 
 image:300px-Spheriques.PNG[Spheriques.PNG,width=300,height=263]
 
@@ -102,17 +83,16 @@ _Coordonnées sphériques_.
 Les lectures des coordonnées d'un point A (par exemple ) de l'espace se font par :
 
 * x(A) , y(A) et z(A) pour les coordonnées cartésiennes,
-* Longueur[A] , arg(A) et alt(A) pour les coordonnées sphériques. (Quant à Angle[A], elle retourne toujours l'angle
+* Longueur(A) , arg(A) et alt(A) pour les coordonnées sphériques. (Quant à Angle(A), elle retourne toujours l'angle
 (Ox,OA) )
-
+====
 ====
 
+== Calculs
 Dans GeoGebra, vous pouvez aussi faire des calculs avec des points et des vecteurs.
 
 [EXAMPLE]
 ====
-
-*Exemples :*
 
 * Vous pouvez créer le milieu M entre deux points A et B en validant `++M = (A + B) / 2++` dans le champ de saisie.
 * Vous pouvez calculer la norme/longueur d'un vecteur v en validant `++norme = sqrt(v * v)++` dans le champ de saisie.
@@ -123,14 +103,14 @@ Dans GeoGebra, vous pouvez aussi faire des calculs avec des points et des vecteu
 == Produit vectoriel
 
 Pour deux points ou vecteurs `++(a, b) ⊗ (c, d)++` retourne la cote du produit vectoriel _(a, b, 0) ⊗ (c, d, 0)_ en tant
-que simple nombre. Un syntaxe semblable est valide pour des listes, mais dans ce cas, le résultat est une liste.
+que simple nombre.
+
+Un syntaxe semblable est valide pour des listes, mais dans ce cas, le résultat est une liste.
 
 [EXAMPLE]
 ====
 
-*Exemples :*
-
-* `++{1, 2} ⊗ {4, 5}++` retourne _\{0, 0, -3}_
-* `++{1, 2, 3} ⊗ {4, 5, 6}++` retourne _\{3, 6, -3}_.
+* `++{1, 2} ⊗ {4, 5}++` retourne _{0, 0, -3}_
+* `++{1, 2, 3} ⊗ {4, 5, 6}++` retourne _{3, 6, -3}_.
 
 ====
