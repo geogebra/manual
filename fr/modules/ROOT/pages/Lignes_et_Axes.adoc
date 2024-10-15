@@ -16,15 +16,24 @@ Le nom de la droite peut être entré au début dans le champ de saisie, suivi p
 
 [EXAMPLE]
 ====
+*2D*
 
-*Exemple :*
 
-* Validez `++g: 3x + 4y = 2++` pour définir une droite _g_ par une équation cartésienne.
-* Définissez un paramètre t (par ex. `++t = 3++`) avant de définir une droite _g_ sous forme paramétrique en validant
-`++g: X = (-5, 5) + t (4, -3)++`.
+* Validez `++g: 3x + 4y = 2++` pour définir une droite _g_ par une équation cartésienne ;
+* Validez `++g: X = (-5, 5) + t (4, -3)++` pour définir une droite _g_ sous forme paramétrique ;
 * Définissez d’abord les paramètres `++m = 23++` et `++b = -13++`. Vous pouvez ensuite définir une droite _h_ par son
 équation réduite en validant `++h: y = m*x + b++`.
 
+*3D*
+
+* Vous pouvez définir une droite sous forme paramétrique comme ceci:
+** `++g: X = (1, 6, 3) + λ (7, -4, 4)++` ; or via
+** ou via `++g: Droite((1, 6, 3), Vecteur((7, -4, 4)))++`
+
+* Vous pouvez définir une droite comme intersection de 2 plans, avec l'une des 3 saisies équivalentes :
+** `++IntersectionChemins(4x+7y=46,y+z=9)++`
+** `++(4x + 7y = 46, y + z = 9)++`
+** `++7y = 46 - 4x = 7(9 - z)++`
 ====
 
 === réciproquement
@@ -39,8 +48,9 @@ Retrouvez cette information sur : xref:/commands/Coefficients.adoc[Commande Coe
 
 [EXAMPLE]
 ====
+*2D*
 
-*Exemples :* Soit `++d: 3x + 2y - 2 = 0++` :
+Soit `++d: 3x + 2y - 2 = 0++` :
 
 `++x(d)++` retourne 3 ;
 
@@ -59,23 +69,23 @@ Retrouvez cette information sur : xref:/commands/Coefficients.adoc[Commande Coe
 
 Soit les points A(1,2) et B(3,2), en fonction de votre choix, l'équation affichée de la droite (AB) sera :
 
-y = x +1
+ * y = x +1
 
--x + y = 1
+ * -x + y = 1
 
-- 2 x + 2 y - 2 = 0
+ * - 2 x + 2 y - 2 = 0
 
-X = (1,2) + λ (2,2)
+ * X = (1,2) + λ (2,2)
 
 ====
 
 == Axes
 
-Les deux axes de coordonnées sont disponibles dans toutes les commandes en utilisant _axeX_ et _axeY_.
+Les trois axes de coordonnées sont disponibles dans toutes les commandes en utilisant _axeX_, _axeY_ et _axeZ_.
 
 [EXAMPLE]
 ====
 
-La commande `++Perpendiculaire[A, axeX]++` construit la perpendiculaire à l’axe (Ox) passant par A.
+La commande `++Perpendiculaire(A, axeX)++` construit la perpendiculaire à l’axe (Ox) passant par A.
 
 ====
