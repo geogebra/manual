@@ -140,7 +140,7 @@ JLaTeXMath fournit un certain nombre d'environnements de travail différents. Ch
 • align 	• cases 	• split 	• multline
 Tableaux
 
-Les environnements tabular et array sont similaires, ils peuvent utilisés pour mettre en page des éléments avec des possibilités de lignes horizontales et verticales. Les options sont :
+Les environnements tabular et array sont similaires, ils peuvent être utilisés pour mettre en page des éléments avec des possibilités de lignes horizontales et verticales. Les options sont :
 l 	colonne justifiée à gauche 	c 	colonne centrée 	r 	colonne justifiée à droite
 | 	trait vertical 	|| 	double trait vertical 	& 	séparateur de colonne
 \\ 	commence une nouvelle ligne 	\hline|| trait horizontal
@@ -152,7 +152,7 @@ Exemple :
 7 & 8 & 9 \\
 \hline
 \end{tabular}
-LTEX1.PNG
+image:LTEX1.png[LTEX1.png,width=101,height=74]
 
 
 Un autre exemple , utilisant \multicolumn et array :
@@ -166,19 +166,19 @@ a & b\\
 c & c\\
 d & e\\ \hline
 \end{array}
-LTEX2fr.PNG
+image:LTEX2.png[LTEX2.png,width=93,height=112]
 
 ou
 Exemple :
 \rotatebox{90} { \begin{array}{|c|c|}
 \hline
-\multicolumn{2}{|c|}{\text{Title}} \\
+\multicolumn{2}{|c|}{\text{Titre}} \\
 \hline
 \rotatebox{-90} x & \rotatebox{-90}y\\ \hline
 \rotatebox{-90}a & \rotatebox{-90}b\\
 \rotatebox{-90}c & \rotatebox{-90}c\\ \rotatebox{-90}d & \rotatebox{-90}e\\ \hline
 \end{array}}
-LTEX2bisfr.PNG
+image:LTEX2bis.png[LTEX2bis.png,width=106,height=94]
 
 
 Si vous voulez ajouter un séparateur de colonne (un + par exemple) et mesurer l'espace (1cm) avant et après, utilisez @{\hspace{1cm}+\hspace{1cm}}:
@@ -188,7 +188,7 @@ Exemple :
 45 & 678\\
 910& 1112\\
 \end{tabular}
-LTEX3.PNG
+image:LTEX3.png[LTEX3.png,width=138,height=72]
 
 
 Si vous voulez présenter proprement une opération posée, avec alignement vertical de la virgule décimale :
@@ -198,21 +198,23 @@ Exemple :
 16&2\\
 123&456\\
 \end{tabular}
-LTEX3bfr.PNG
+image:LTEX3bis.png[LTEX3bis.png,width=121,height=82]
+
+
 Matrices
 
 Une matrice de base peut être créée en utilisant l'environnement matrix , la structure est similaire à tabular-array , les entrées sont données par ligne, avec des colonnes séparées par & et une nouvelle ligne séparée par \\. Les matrices sont généralement encadrées (sauf par défaut) de différentes façons, et tant que c'est possible, utilisez les commandes \left and \right . Les environnements prédéfinis contiennent des encadrements :
 pmatrix 	( ) 	bmatrix 	[ ] 	Bmatrix 	{ }
 vmatrix 	| | 	Vmatrix 	|| ||
 Exemple:
-$\mathsf{A}_{m,n} =
+\mathsf{A}_{m,n} =
 \begin{Vmatrix}
 a_{1,1} &a_{1,2} &\cdots &a_{1,n} \\
 a_{2,1} &a_{2,2} &\cdots &a_{2,n} \\
 \vdots & \vdots & \ddots &\vdots \\
 a_{m,1} &a_{m,2} &\cdots &a_{m,n}
-\end{Vmatrix}$
-LTEX4.PNG
+\end{Vmatrix}
+image:LTEX4.png[LTEX4.png,width=279,height=116]
 
 
 Matrices avec textes
@@ -223,7 +225,7 @@ Exemple:
 \left\{ \begin{smallmatrix}
 a&b\\ c&d
 \end{smallmatrix} \right\}
-LTEX5.PNG
+image:LTEX5.png[LTEX5.png,width=107,height=49]
 
 
 Équations
@@ -234,7 +236,9 @@ Exemple:
 y &=& (x+1)^2 \\
 &=& x^2+2x+1
 \end{eqnarray}
-LTEX6.PNG
+image:LTEX6.png[LTEX6.png,width=179,height=70]
+
+
 Alignements
 
 L'environnement align ressemble à eqnarray, mais en plus puissant, vous pouvez insérer du texte entre les lignes avec la commande \intertext{...}, par exemple:
@@ -242,10 +246,12 @@ Exemple:
 \begin{align}
 x+y-z &= 1\\
 x-y+z &= 1\\
-\intertext{votre texte}
+\intertext{votre texte}\\
 2x\hphantom{-y}+z &= 1
 \end{align}
-LTEX7fr.PNG
+image:LTEX7.png[LTEX7.png,width=157,height=98]
+
+
 Disjonctions
 
 Pour des fonctions par morceaux ou des définitions utilisant des conditions, utilisez l'environnement cases :
@@ -255,7 +261,9 @@ Exemple:
 \hphantom{-}x &,\, \text{si }x\geq 0 ,\\
 -x&,\, \text{si }x<0
 \end{cases}
-LTEX8fr.PNG
+image:LTEX8.png[LTEX8.png,width=179,height=70]
+
+
 Coupures
 
 Pour scinder de longs blocs de math, utilisez l'environnement split :
@@ -266,7 +274,9 @@ a& =b+c-d\\
 & =g+h\\
 & =i
 \end{split}
-LTEX9.PNG
+image:LTEX9.png[LTEX9.png,width=158,height=105]
+
+
 Multilignes
 
 Pour de multiples lignes de math, utilisez l'environnement multline :
@@ -275,11 +285,5 @@ Exemple:
 \left(a+b+c+d+e\right)^2=a^2+b^2+c^2+d^2+e^2\\
 +2ab+2ac+2ad+2ae+2bc+2bd+2be+2cd+2ce+2de
 \end{multline}
-LTEXa.PNG
+image:LTEXa.png[LTEXa.png,width=505,height=71]
 
-    Contact us
-        Feedback & Questions
-        office@geogebra.org
-        +43 677 6137 2693
-
-Facebook Twitter Google+ YouTube
