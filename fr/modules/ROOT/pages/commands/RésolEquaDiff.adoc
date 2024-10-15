@@ -43,8 +43,6 @@ RésolEquaDiff( <f(x,y)>, <g(x,y)>, <x initial>, <y initial>, <t final>, <pas> )
 [EXAMPLE]
 ====
 
-*Exemple :*
-
 Pour résoudre l'équation stem:[\frac{dy}{dx}=- \frac{x}{y} ]
 
 en utilisant _A_ comme point de départ, entrez `++RésolEquaDiff(-x, y, x(A), y(A), 5, 0.1)++`.
@@ -61,39 +59,32 @@ Le résultat est toujours un lieu. Les algorithmes sont basés sur les méthodes
 
 ====
 
-[NOTE]
-====
 
-Voir aussi la commande xref:/commands/ChampVecteurs.adoc[ChampVecteurs].
 
-====
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/ChampVecteurs.adoc[ChampVecteurs].
+
+
 
 *→* *Résolution formelle*
 
 RésolEquaDiff( <f(x, y)> )::
-  Essaye de trouver la solution exacte de l'équation différentielle d'ordre un stem:[\frac{dy}\{dx}(x)=f(x, y(x))].
+  Essaye de trouver la solution exacte de l'équation différentielle d'ordre un stem:[\frac{dy}{dx}(x)=f(x, y(x))].
 
 [EXAMPLE]
 ====
 
-*Exemple :*
-
-`++RésolEquaDiff(y / x)++` retourne la droite a:y=0
-
-représentative de _f(x) = c~1~ x_ dans laquelle c~1~ = 0,
+`++RésolEquaDiff(y / x)++` retourne la droite a:y=0 représentative de _f(x) = c~1~ x_ dans laquelle c~1~ = 0,
 
 vous pouvez lui affecter une autre valeur, en validant, après coup, par exemple c~1~ = 5 dans le champ de saisie.
 
 ====
 
 RésolEquaDiff( <f(x, y)>, <Point A de f> )::
-  Essaye de trouver la solution exacte de l'équation différentielle d'ordre un stem:[\frac{dy}\{dx}(x)=f(x, y(x))] et
+  Essaye de trouver la solution exacte de l'équation différentielle d'ordre un stem:[\frac{dy}{dx}(x)=f(x, y(x))] et
   utilise la solution passant par _A_.
 
 [EXAMPLE]
 ====
-
-*Exemple :*
 
 `++RésolEquaDiff(y / x,(1,2))++` retourne _f(x) = 2 x_.
 
@@ -110,9 +101,7 @@ RésolÉquaDiff(<Equation différentielle en x,y>)::
 [EXAMPLE]
 ====
 
-*Exemple :*
-
-`++RésolEquaDiff(y'=y / x)++` retourne _stem:[ f(x) = x \space c_\{1}]_ .
+`++RésolEquaDiff(y'=y / x)++` retourne _stem:[ f(x) = x \space c_{1}]_ .
 
 ====
 
@@ -124,7 +113,7 @@ RésolEquaDiff( <Équation différentielle en x,y>, <Point(s) L de f> )::
 ====
 
  `++RésolEquaDiff(y'=y / x,(1,2))++` retourne _y = 2 x_.`++RésolEquaDiff(y''-3y'+2=x,(2,3),(1,2))++`
-retourne stem:[ y = \frac{-9 x^2 e^3 + 30 x e^3 + 32 e^{3 x} - 32 e^6+ 138 e^3 }{54 e^3} ] .
+retourne stem:[ y = \frac{-9 x^2 e^3 + 30 x e^3 - 32 {(e^3)}^2 + 138 e^3 + 32 e^{3 x} }{54 e^3} ].
 
 ====
 
@@ -135,8 +124,6 @@ RésolEquaDiff( <Équation différentielle en x,y>, <Point(s) L de f>, <Point(s)
 
 [EXAMPLE]
 ====
-
-*Exemple :*
 
 `++RésolEquaDiff(y'=y / x,(1,2))++` retourne _y = 2 x_.
 
