@@ -2,14 +2,16 @@
 :page-en: commands/ZoomIn
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+
+Agrandir( )::
+  Restaure xref:/Graphique.adoc[Graphique] à la position initiale par défaut.
+
 Agrandir( <Facteur> )::
   Agrandit le xref:/Graphique.adoc[Graphique] avec le facteur donné, le centre de l'écran étant utilisé comme centre
   d'agrandissement.
 
 [EXAMPLE]
 ====
-
-*Exemples :*
 
 `++Agrandir(1)++` ne fait _rien_ (mais cela provoque la disparition des traces d'objets) ;
 
@@ -26,6 +28,14 @@ Agrandir( <Facteur>, <Centre> )::
 Agrandir( <Min x>, <Min y>, <Max x>, <Max y> )::
   Agrandit le graphique au rectangle construit sur les sommets (Min x, Min y), (Max x,Max y).
   Validez `++ Agrandir(0,0,0,0)++` pour revenir à la normale.
+
+[EXAMPLE]
+====
+
+`++Agrandir(0, 1, 5, 6)++` 
+Si _a_ est un curseur, `++Agrandir(-a, -a, a, a)++` rend l'agrandissement de la vue dépendant du curseur _a_.
+====
+
 
 [NOTE]
 ====
@@ -52,6 +62,13 @@ xref:/tools/Déplacer_Graphique.adoc[Déplacer Graphique] provoquent une réduct
 Si plusieurs xref:/Graphique.adoc[vues graphiques] sont présentes, seule la vue active est impactée.
 
 ====
+
+*image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] Graphique
+3D*
+
+Agrandir( <Min x>, <Min y>, <Min z>, <Max y>, <Max x>, <Max z> )::
+  Agrandit le graphique 3D au cube construit sur les sommets (Min x, Min y, Min z), (Max x,Max y, Max z).
+
 
 == .../...
 
