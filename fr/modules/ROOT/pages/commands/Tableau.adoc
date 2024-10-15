@@ -15,8 +15,6 @@ Par défaut, chaque liste est affichée dans une nouvelle ligne.
 [EXAMPLE]
 ====
 
-*Exemples :*
-
 * `++Tableau({x^2, 4}, {x^3, 8}, {x^4, 16})++` crée un tableau à trois lignes et deux colonnes. Tous les éléments sont
 alignés à gauche.
 * `++Tableau(Séquence(i^2, i, 1, 10))++` crée un tableau à une ligne. Tous les éléments sont alignés à gauche.
@@ -43,20 +41,25 @@ Les valeurs possibles sont "vl", "vc", "vr", "v", "h", "hl", "hc", "hr". Par dé
 L'ajout d'un `++.++` permet un alignement sur le point décimal, d'un `++%++` transforme en pourcentages avec alignement
 sur le point décimal.
 
-L'ajout d'un `++a++` ou d'un `++p++` reprend les options précédentes en complétant l'écriture au
-nombre de décimales. (Le nombre de décimales est celui qui est défini en _Options_)
-`++Tableau({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "v.")++` retourne
-image:TabPtDec.png[TabPtDec.png,width=152,height=111] `++Tableau({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "va")++`
-comme ci-dessus mais en forçant le nombre de décimales à être celui déclaré en _Options_ retourne
-image:Tab_a_Dec.png[Tab a Dec.png,width=252,height=130] pour Options > 3 décimales
-`++Tableau({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "v%")++` retourne
-image:200px-TableuPourCent.png[TableuPourCent.png,width=200,height=89]
-
-`++Tableau({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "vp")++` comme ci-dessus mais en forçant le nombre de décimales
-à être celui déclaré en _Options_
-
 [EXAMPLE]
 ====
+
+L'ajout d'un `++a++` ou d'un `++p++` reprend les options précédentes en complétant l'écriture au
+nombre de décimales. (Le nombre de décimales est celui qui est défini en _Options_)
+
+*`++Tableau({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "v.")++` retourne
+image:TabPtDec.png[TabPtDec.png,width=152,height=111]
+
+*`++Tableau({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "va")++`
+comme ci-dessus mais en forçant le nombre de décimales à être celui déclaré en _Options_ retourne
+image:Tab_a_Dec.png[Tab a Dec.png,width=252,height=130] pour Options > 3 décimales
+
+*`++Tableau({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "v%")++` retourne
+image:200px-TableuPourCent.png[TableuPourCent.png,width=200,height=89]
+
+*`++Tableau({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "vp")++` comme ci-dessus mais en forçant le nombre de décimales
+à être celui déclaré en _Options_
+
 
 Une syntaxe non documentée, permettant d'utiliser un autre séparateur décimal, la virgule en France et la
 monnaie locale €, mais toutes les colonnes sont affectées, il serait bon de pouvoir différentier des colonnes
@@ -69,10 +72,10 @@ quantités/prix
 [EXAMPLE]
 ====
 
-*Exemples :*
-
 * `++Tableau({1,2,3,4},{1,4,9,16},"v")++` crée un tableau à deux colonnes et quatre lignes avec alignement à gauche ;
+
 * `++Tableau({1,2,3,4},{1,4,9,16},"h")++` crée un tableau à quatre colonnes et deux lignes avec alignement à gauche ;
+
 * `++Tableau({11.2,123.1,32423.9,234.0},"vr")++` crée un tableau à une colonne avec alignement à droite.
 
 ====
@@ -86,16 +89,17 @@ et lignes verticales par | dans la chaîne.
 ====
 
 * `++Tableau({1,2},{3,4},"c|_")++` pour le tableau image:50px-TabellaTesto.png[TabellaTesto.png,width=50,height=56] ;
+
 * `++Tableau({1,2},{3,4},"c||||")++` pourstem:[\begin\{Vmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{Vmatrix} ] ;
+
 * `++Tableau({1,2},{3,4},"c()")++` pour stem:[\left( \begin\{array}\{} 1 & 2 \\ 3 & 4 \\ \end\{array} \right) ] ;
+
 * `++Tableau({1,2},{3,4},"c||")++` pour stem:[ \begin\{vmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{vmatrix} ] .
 
 ====
 
 [EXAMPLE]
 ====
-
-*Exemples :*
 
 * `++Tableau({{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "-/|_v")++`
 
