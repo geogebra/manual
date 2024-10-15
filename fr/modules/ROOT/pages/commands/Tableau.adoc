@@ -41,7 +41,9 @@ Les valeurs possibles sont "vl", "vc", "vr", "v", "h", "hl", "hc", "hr". Par dé
 ====
 
 L'ajout d'un `++.++` permet un alignement sur le point décimal, d'un `++%++` transforme en pourcentages avec alignement
-sur le point décimal. L'ajout d'un `++a++` ou d'un `++p++` reprend les options précédentes en complétant l'écriture au
+sur le point décimal.
+
+L'ajout d'un `++a++` ou d'un `++p++` reprend les options précédentes en complétant l'écriture au
 nombre de décimales. (Le nombre de décimales est celui qui est défini en _Options_)
 `++Tableau({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "v.")++` retourne
 image:TabPtDec.png[TabPtDec.png,width=152,height=111] `++Tableau({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "va")++`
@@ -60,8 +62,7 @@ Une syntaxe non documentée, permettant d'utiliser un autre séparateur décimal
 monnaie locale €, mais toutes les colonnes sont affectées, il serait bon de pouvoir différentier des colonnes
 quantités/prix
 
-* `++Tableau({{11, 2.5, 123}, {2.65, 3.57, 10.1}}, "v,.€")++` retourne
-image:TableuMon%C3%A9taire.png[TableuMonétaire.png,width=197,height=88]
+* `++Tableau({{11, 2.5, 123}, {2.65, 3.57, 10.1}}, "v,.€")++` retourne image:TableauMonetaire.png[TableauMonetaire.png,width=197,height=88]
 
 ====
 
@@ -83,8 +84,6 @@ et lignes verticales par | dans la chaîne.
 
 [EXAMPLE]
 ====
-
-*Exemples :*
 
 * `++Tableau({1,2},{3,4},"c|_")++` pour le tableau image:50px-TabellaTesto.png[TabellaTesto.png,width=50,height=56] ;
 * `++Tableau({1,2},{3,4},"c||||")++` pourstem:[\begin\{Vmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{Vmatrix} ] ;
