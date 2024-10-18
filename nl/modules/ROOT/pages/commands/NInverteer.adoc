@@ -1,0 +1,26 @@
+= NInverteer Commando
+:page-en: commands/NInvert
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+NInverteer( <Functie> )::
+Geeft de inverse van de functie zonder de geïnverteerde formule te tonen.
+Wil je de formule, Gerbuik dan xref:./Invert.adoc[Inverteer Commando].
+
+[EXAMPLE]
+====
+
+`++NInverteer(sin(x))++` geeft een functie _f_ zodat _sin(f(x))=x_ voor _-1 < x < 1_.
+
+====
+
+[NOTE]
+====
+
+* Er wordt geen rekening gehouden met domein of bereik, bijvoorbeeld f(x) = x^2^ of f(x) =
+sin(x).
+
+* Dit commando werkt snemmer voor functies met in het voorschrift slechts een veranderlijke _x_.
+Om efficiënter te werken kan je je functies herschillen en bv. `NInverteer((x+1)^2-1)` gebruiken i.p.v `NInverteer(x^2+2x)`.
+
+====
+
