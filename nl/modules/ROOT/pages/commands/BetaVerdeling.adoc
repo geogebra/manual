@@ -1,0 +1,21 @@
+= BetaVerdeling Commando
+:page-en: commands/BetaDist
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+BetaVerdeling( <Getal α>, <Getal β>, <Variabele waarde> )::
+  Berekend de waarde van de cumulatieve verdelingsfunctie van een a https://nl.wikipedia.org/wiki/B%C3%A8taverdeling[Beta verdeling] met parameters _α, β_ en de variabele waarde _v_, 
+  gelijk aan de kans _P(X≤v)_ wwaarbij _X_ een willekeurige variabele is van een beta verdeling met parameters _α_ en _β_
+
+BetaVerdeling( <Getal α>, <Getal β>, <Variabele waarde>, <Booleaans Cumulatief> )::
+  Als _Cumulatief_ is _true_, dan wordt de waarde van de cumulatieve verdeling berekend met parameters _α_ en _β_ voor de variable value _v_. 
+  Als _Cumulative_ is _false_, dan wordt de waarde van de kansdichtheidsfunctie (pdf) berekend van de overeenkomstige beta verdeling voor _v_.
+
+
+BetaVerdeling(<Getal α>, <Getal β>, x, <Booleaans Cumulatief>)::
+  Als _Cumulatief_ is _true_, dan wordt de cumulatieve verdelingsfunctie berekend van een beta verdeling met parameters _α_ en _β_, 
+  anders wordt de kansdichtheidsfunctie (pdf) berekend van de overeenkomstige beta verdeling.
+
+[NOTE]
+====
+Zie ook het commando xref:/commands/InverseBeta.adoc[InverseBeta].
+====
