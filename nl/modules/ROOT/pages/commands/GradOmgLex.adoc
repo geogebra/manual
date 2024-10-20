@@ -1,0 +1,35 @@
+= GroebnerGradOmgLex Command
+:page-en: commands/GroebnerDegRevLex
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+== CAS Syntax
+
+GroebnerGradOmgLex( <Lijst met veeltermen> )::
+  Berekent de Gröbner basis van de lijst met veeltermen volgens de gegradeerde omgekeerde lexicografische volgorde van
+  de variabelen.
+
+[EXAMPLE]
+====
+
+`++GroebnerGradOmgLex({x^3 - y - 2, x^2 + y + 1})++` geeft {stem:[ y^{2} - x + 3 y + 3, x y + x + y + 2, x^{2} + y +
+1 ]}.
+
+====
+
+GroebnerGradOmgLex( <Lijst met veeltermen>, <Lijst met variabelen> )::
+  Berekent de Gröbner basis van de lijst met veeltermen volgens de gegradeerde omgekeerde lexicografische volgorde van
+  de gegeven variabelen.
+
+[EXAMPLE]
+====
+
+`++GroebnerGradOmgLex({x^3 - y - 2, x^2 + y + 1}, {y, x})++` geeft {stem:[ x^{2} + y + 1, y x + y + x + 2, y^{2} + 3y - x + 3]}.
+
+====
+
+[NOTE]
+====
+
+Zie ook xref:/commands/GroebnerLex.adoc[GroebnerLex] and xref:/commands/GroebnerLexGrad.adoc[GroebnerLexDeg] commands.
+
+====
