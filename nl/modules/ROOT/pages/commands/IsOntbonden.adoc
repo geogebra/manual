@@ -1,0 +1,23 @@
+= IsOntbonden Commando
+:page-en: commands/IsFactored
+:page-aliases: commands/IsFactorised.adoc
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+IsOntbonden( <Veelterm> )::
+  Geeft ''waar'' als de veelterm ontbonden is in stem:[\mathbb Q] en ''false'' zoniet. Let op dat bij de ontbinding van de veelterm de coëfficiënt van de hoogstegraadsterm positief is.
+
+[EXAMPLE]
+====
+* `IsOntbonden(x)` geeft _true_ +
+* `IsOntbonden(0.5)` geeft _true_ +
+* `IsOntbonden(5)` geeft _true_ +
+* `IsOntbonden(x^2-1)` geeft _false_ +
+* `IsOntbonden(x^2-2)` geeft _true_ +
+* `IsOntbonden(x(x+1))` geeft _true_ +
+* `IsOntbonden(x(2x+2))` geeft _false_ +
+* `IsOntbonden(x^3-1)` geeft _false_ +
+* `IsOntbonden(x(x/2+1/2))` geeft _false_ +
+* `IsOntbonden((x+1)(x^2-1))+` geeft _false_ +
+* `IsOntbonden(-2x-2)` geeft _false_ +
+* `IsOntbonden(2x+2)` geeft _false_ +
+====
