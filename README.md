@@ -20,9 +20,9 @@ The templates and layouts used by the documentation site are located in the [Geo
 | 日本語 (ja)               | 737     | 0       | 12      | 2       | 2       |
 | Македонски јазик (mk)  | 274     | 392     | 19      | 0       | 73      |
 | Bokmål (nb)            | 529     | 187     | 39      | 0       | 23      |
-| Nederlands (nl)        | 719     | 20      | 12      | 8       | 0       |
+| Nederlands (nl)        | 719     | 20      | 12      | 6       | 0       |
 | Nynorsk (nn)           | 579     | 157     | 38      | 0       | 3       |
-| Język polski (pl)      | 1       | 718     | 1       | 0       | 20      |
+| Język polski (pl)      | 2       | 717     | 1       | 0       | 20      |
 | Português (pt)         | 0       | 739     | 10      | 0       | 0       |
 | Русский язык (ru)      | 0       | 734     | 3       | 0       | 5       |
 | Slovenščina (sl)       | 3       | 726     | 4       | 0       | 10      |
