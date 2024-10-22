@@ -1,13 +1,13 @@
-= ZGemiddelde2Schatting Commando
+= ZSchattingTweeGemiddelden Commando
 :page-en: commands/ZMean2Estimate
 ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
 
-ZSchattingGemiddelde2( <Lijst van de steekproefwaarden 1>, <Lijst van de steekproefwaarden 2>, <stem:[σ_1]>,
+ZSchattingTweeGemiddelden( <Lijst van de steekproefwaarden 1>, <Lijst van de steekproefwaarden 2>, <stem:[σ_1]>,
 <stem:[σ_2]>, <Betrouwbaarheidsniveau stem:[ (1-\alpha) ]> )::
   Berekent een stem:[(1- \alpha) ]-betrouwbaaheidsinterval van het verschil tussen de twee steekproefgemiddelden van de
   twee lijsten met gekende populatiestandaardafwijkingen en gegeven betrouwbaarheidsniveau stem:[ 1-\alpha ].
   Het betrouwbaarheidsinterval wordt gegeven als een lijst van de vorm \{ondergrens, bovengrens}.
-ZSchattingGemiddelde2( <Steekproefgemiddelde 1>, <stem:[σ_1]>, <Steekproefomvang 1>, <Steekproefgemiddelde 2>,
+ZSchattingTweeGemiddelden( <Steekproefgemiddelde 1>, <stem:[σ_1]>, <Steekproefomvang 1>, <Steekproefgemiddelde 2>,
 <stem:[σ_2]>, <Steekproefomvang 2>, <Betrouwbaarheidsniveau stem:[ (1-\alpha) ]> )::
   Berekent een stem:[(1- \alpha)]-betrouwbaaheidsinterval van het verschil tussen de twee steekproefgemiddelden met
   gekende populatiestandaardafwijkingen en met gegeven steekproefgemiddelden en betrouwbaarheidsniveau stem:[1- \alpha
@@ -17,14 +17,14 @@ ZSchattingGemiddelde2( <Steekproefgemiddelde 1>, <stem:[σ_1]>, <Steekproefomvan
 [EXAMPLE]
 ====
 
-`++ZGemiddelde2Schatting(3, sqrt(2) , 8 , 2.5, sqrt(1.75), 8 , 0.95)++` geeft _\{-0.84, 1.84}_.
+`++ZSchattingTweeGemiddelden(3, sqrt(2) , 8 , 2.5, sqrt(1.75), 8 , 0.95)++` geeft _\{-0.84, 1.84}_.
 
 ====
 
 [EXAMPLE]
 ====
 
-`++ZGemiddelde2Schatting({1, 4, 5, 4, 1, 3, 4, 2}, {2, 1, 3, 1, 2, 5, 2, 4}, sqrt(2),  sqrt(1.75), 0.95)++` geeft
+`++ZSchattingTweeGemiddelden({1, 4, 5, 4, 1, 3, 4, 2}, {2, 1, 3, 1, 2, 5, 2, 4}, sqrt(2),  sqrt(1.75), 0.95)++` geeft
 _\{-0.84, 1.84}_.
 
 ====
