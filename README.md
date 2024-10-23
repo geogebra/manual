@@ -9,7 +9,7 @@ The templates and layouts used by the documentation site are located in the [Geo
 | language              | ok  | missing | orphans | duplicates | partials |
 |-----------------------|-----|---------|---------|------------|----------|
 | босански (bs)          | 144     | 559     | 27      | 0       | 36      |
-| Česky (cs)             | 374     | 210     | 1       | 0       | 155     |
+| Česky (cs)             | 375     | 210     | 1       | 0       | 154     |
 | Deutsch (de)           | 687     | 52      | 45      | 2       | 0       |
 | English (en)           | 739     | 0       | 0       | 0       | 0       |
 | Español (es)           | 578     | 39      | 76      | 0       | 122     |
@@ -20,7 +20,7 @@ The templates and layouts used by the documentation site are located in the [Geo
 | 日本語 (ja)               | 737     | 0       | 12      | 2       | 2       |
 | Македонски јазик (mk)  | 274     | 392     | 19      | 0       | 73      |
 | Bokmål (nb)            | 529     | 187     | 39      | 0       | 23      |
-| Nederlands (nl)        | 719     | 20      | 12      | 6       | 0       |
+| Nederlands (nl)        | 719     | 20      | 7       | 4       | 0       |
 | Nynorsk (nn)           | 579     | 157     | 38      | 0       | 3       |
 | Język polski (pl)      | 2       | 717     | 1       | 0       | 20      |
 | Português (pt)         | 0       | 739     | 10      | 0       | 0       |
