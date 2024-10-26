@@ -1,0 +1,26 @@
+= Příkaz NInvertovat
+:page-en: commands/NInvert
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+NInvertovat( <Funkce> )::
+Výstupem je inverzní funkce k argumentu _Funkce_ se zobrazením jejího grafu, ovšem bez uvedení předpisu.
+Pokud chcete získat předpis inverzní funkce, použijte příkaz xref:./Invertovat.adoc[Příkaz Invertovat].
+
+[EXAMPLE]
+====
+
+`++NInvertovat(sin(x))++` dá funkci _f_ takovou, že _sin(f(x))=x_ pro _-1 < x < 1_.
+
+====
+
+[NOTE]
+====
+
+* Při zadávání se nebere v potaz definiční obor či obor hodnot, například pro f(x) = x^2^ nebo f(x) =
+sin(x).
+
+* Příkaz pracuje rychleji pro funkce, jejichž předpis obsahuje pouze jedno _x_.
+Proto pro dosažení větší efektivity můžete předpis funkce nejprve upravit, například místo `NInvertovat((x+1)^2-1)` použít raději `NInvertovat(x^2+2x)`.
+
+====
+
