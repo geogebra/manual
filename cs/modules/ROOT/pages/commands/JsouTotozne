@@ -1,0 +1,28 @@
+= AreEqual Command
+:page-en: commands/AreEqual
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+JsouTotozne( <Objekt>, <Objekt> )::
+  Rozhodne, zda jsou objekty totžné.
+
+Normálně tento příkaz vypočítá výsledek numericky. Toto chování lze změnit použitím příkazu
+xref:/commands/Dokazat.adoc[Dokazat].
+
+[EXAMPLE]
+====
+
+`++JsouTotozne(Kruznice((0, 0),1),x^2+y^2=1)++` Výsledek je _pravda_, protože kružnice mají stejný střed i poloměr.
+
+====
+
+[NOTE]
+====
+
+* `++JsouTotozne(Usecka((1, 2), (3, 4)), Usecka((3, 4), (1, 6)))++` je rozdílné od
+`++Usecka((1, 2), (3, 4)) == Usecka((3, 4), (1, 6))++`, protože druhý příkaz porovnává jen délky.
+* Podívejte se také na příkazy xref:/commands/ProtinajiciSe.adoc[ProtinajiciSe], xref:/commands/Jsou NaKruznici.adoc[JsouNaKruznici],
+xref:/commands/JsouShodne.adoc[JsouKolineární], xref:/commands/JsouShodne.adoc[JsouShodne],
+xref:/commands/JsouKolme.adoc[JsouKolme], xref:/commands/JsouRovnobezne.adoc[JsouRovnobezne],
+xref:/commands/JeTecna.adoc[JeTecna].
+
+====
