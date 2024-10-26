@@ -1,0 +1,26 @@
+= AreCongruent Command
+:page-en: commands/AreCongruent
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+JsouShodne( <Objekt>, <Objekt> )::
+  Rozhodne, zda jsou objekty shodné.
+
+Normálně tento příkaz vypočítá výsledek numericky. Toto chování lze změnit použitím příkazu
+xref:/commands/Dokazat.adoc[Dokazat] command.
+
+[EXAMPLE]
+====
+
+`++JsouShodne(Kruznice((0, 0),1),x^2+y^2=1)++` and `++JsouShodne(Kruznice((1, 1),1),x^2+y^2=1)++`Výsledek je _pravda_, protže tyto dvě kružnice mají stejný poloměr.
+
+====
+
+[NOTE]
+====
+
+Podívejte se také na příkazy xref:/commands/ProtinajiciSe.adoc[ProtinajiciSe], xref:/commands/Jsou NaKruznici.adoc[JsouNaKruznici],
+xref:/commands/JsouShodne.adoc[JsouKolineární], xref:/commands/JsouTotozne.adoc[JsouTotozne],
+xref:/commands/JsouKolme.adoc[JsouKolme], xref:/commands/JsouRovnobezne.adoc[JsouRovnobezne],
+xref:/commands/JeTecna.adoc[JeTecna].
+
+====
