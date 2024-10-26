@@ -1,0 +1,27 @@
+= AreConcurrent Command
+:page-en: commands/AreConcurrent
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+ProtinajiciSe( <Přímka>, <Přímka>, <Přímka> )::
+  Rozhodne, zda se přímky protínají. Pokud jsou přímky rovnoběžné, považuje se za jejich průsečík bod v nekonečnu, a proto tento příkaz v tomto případě vrací _pravda_.
+  
+
+Normálně tento příkaz vypočítá výsledek numericky. Toto chování lze změnit použitím příkazu
+xref:/commands/Dokazat.adoc[Dokazat].
+
+[EXAMPLE]
+====
+
+`++ProtinajiciSe(Primka((1, 2), (3, 4)), Primka((1, 2), (3, 5)), Primka((1, 2), (3, 6)))++` Výsledek je _pravda_, protože bod (1,2) leží na všech třech přímkách.
+
+====
+
+[NOTE]
+====
+
+See also xref:/commands/JsouKolinearni.adoc[JsouKolinearni], xref:/commands/JsouNaKruznici.adoc[JsouNaKruznici],
+xref:/commands/JsouShodne.adoc[JsouShodne], xref:/commands/JsouTotozne.adoc[JsouTotozne],
+xref:/commands/JsouKolme.adoc[JsouKolme], xref:/commands/JsouRovnobezne.adoc[JsouRovnobezne],
+xref:/commands/JeTecna.adoc[JeTecna] commands.
+
+====
