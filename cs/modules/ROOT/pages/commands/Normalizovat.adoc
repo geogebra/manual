@@ -1,0 +1,36 @@
+= Příkaz Normalizovat
+:page-en: commands/Normalize
+:page-aliases: commands/Normalise.adoc
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+
+====
+
+Normalizovat( <Seznam čísel> )::
+  Vrátí seznam čísel, která jsou _normalizovanou_ formou daných čísel (vysvětlení _normalizace_ je uvedeno na konci článku).
+
+[EXAMPLE]
+====
+
+`++Normalizovat({1, 2, 3, 4, 5})++` vrátí _{0, 0.25, 0.5, 0.75, 1}_.
+
+====
+
+Normalizovat( <Seznam bodů> )::
+  Vrátí seznam bodů, které jsou _normalizovanou_ formou daných bodů.
+
+[EXAMPLE]
+====
+
+`++Normalize({(1,5), (2,4), (3,3), (4,2), (5,1)})++` vrátí _{(0,1), (0.25,0.75), (0.5,0.5), (0.75,0.25), (1,0)}_.
+
+====
+
+[NOTE]
+====
+
+* Pokud provádíte výpočty s velkými nebo malými čísly (např. příkazem xref:/commands/RegreseRustu.adoc[RegreseRustu]), potom
+jejich normalizováním můžete předejít chybám daným zaokrouhlováním/přetečením
+* Tento příkaz nelze použít na 3D body.
+* Operace _normalizace_ zobrazí hodnotu _x_ do intervalu [0, 1] prostřednictvím lineární funkce dané předpisem stem:[x \rightarrow \frac{x-Min(list)}{Max(list)-Min(list)}].
+====
