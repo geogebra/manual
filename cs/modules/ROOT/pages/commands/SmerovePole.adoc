@@ -1,0 +1,37 @@
+= Příkaz SmerovePole
+:page-en: commands/SlopeField
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+SmerovePole( <f(x,y)> )::
+  Nakreslí https://cs.wikipedia.org/wiki/Sm%C4%9Brov%C3%A9_pole[směrové pole] diferenciální rovnice
+  stem:[\frac{dy}{dx}=f(x,y)]
+
+[EXAMPLE]
+====
+
+`++SmerovePole(x+y)++` nakreslí směrové pole diferenciální rovnice stem:[\frac{dy}{dx}=x+y]. 
+
+====
+
+SmerovePole( <f(x,y)>, <Číslo n> )::
+  Nakreslí směrové pole diferenciální rovnice stem:[\frac{dy}{dx}=f(x,y)] na mřížce n krát n (pokud je
+  image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Grafický_pohled.adoc[Grafický pohled] čtverec) nebo menší. Výchozí rozměr je 40.
+
+SmerovePole( <f(x,y)>, <Číslo n>, <Násobek délky a> )::
+  Nakreslí směrové pole diferenciální rovnice stem:[\frac{dy}{dx}=f(x,y)]. Násobek délky 0<a≤1 určuje délku úseček.
+
+SmerovePole( <f(x,y)>, <Číslo n>, <Násobek délky a>, <Min x>, <Min y>, <Max x>, <Max y> )::
+  Nakreslí směrové pole diferenciální rovnice stem:[\frac{dy}{dx}=f(x,y)] uvnitř obdélníku zadaného mezemi (namísto vyplnění okna
+  image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/Grafický_pohled.adoc[Grafický pohled])
+
+[NOTE]
+====
+
+* Vyzkoušejte nástroje: image:22px-Mode_translateview.svg.png[Mode translateview.svg,width=22,height=22]
+xref:/tools/Pohybovat_s_nákresnou.adoc[Pohybovat s nákresnou], image:22px-Mode_zoomin.svg.png[Mode
+zoomin.svg,width=22,height=22] xref:/tools/Zvětšit.adoc[Zvětšit], image:22px-Mode_zoomout.svg.png[Mode
+zoomout.svg,width=22,height=22] xref:/tools/Zmenšit.adoc[Zmenšit] a pozorujte, co dělají.
+* Viz také xref:/commands/VyresitODE.adoc[VyresitODE], xref:/commands/MnozinaBodu.adoc[MnozinaBodu],
+xref:/commands/Integral.adoc[Integral]
+====
