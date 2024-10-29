@@ -1,0 +1,21 @@
+= Příkaz Spline
+:page-en: commands/Spline
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Spline( <Seznam bodů> )::
+  Vytvoří kubický  https://cs.wikipedia.org/wiki/Spline[spline] procházející danými body.
+Spline( <Seznam bodů>, <Řád ≥ 3> )::
+  Vytvoří spline daného řádu procházející zadanými body.
+Spline( <Seznam bodů>, <Řád ≥ 3>, <Váhová funkce> )::
+  Vytvoří spline daného řádu procházející zadanými body. Váhová funkce říká, jaký má být rozdíl hodnot _t_ pro body
+   __P__~i~ a __P__~i+1~ vzhledem k jejich rozdílu __P__~i+1~ - __P__~i~ = (_x_, _y_). Chcete-li zadat spline jako "funkci", zadejte `++abs(x)+0*y++`, 
+   pro výchozí spline GeoGebry jsou výchozími hodnotami
+  `++sqrt(x^2+y^2)++`.
+
+[NOTE]
+====
+
+Výchozí váhové hodnoty jsou invariantní vůči transformaci, a zajišťují, že `++Rotace(Spline(Seznam bodů), a)++`
+dává stejný výsledek jako `++Spline(Rotace(Seznam bodů, a))++`.
+
+====
