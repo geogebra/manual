@@ -1,0 +1,34 @@
+= Polecenie Asymptota
+:page-en: commands/Asymptote
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Asymptota( <Stożkowa> )::
+  Zwraca obie asymptoty krzywej stożkowej.
+
+[EXAMPLE]
+====
+
+`++Asymptota(x^2 - y^2 /4 = 1)++` zwraca proste _-2x + y = 0_ i _-2x - y = 0_.
+
+====
+
+Asymptota( <Funkcja> )::
+  GeoGebra spróbuje znaleźć asymptoty funkcji i zwrócić je w formie listy. Może nie znaleźć wszystkich, na przykład asymptot pionowych funkcji 
+niewymiernych, takich jak ln(x). *To polecenie nie jest dostępne w aplikacjach Wykresy i Geometria.*
+
+[EXAMPLE]
+====
+
+`++Asymptota((x^3 - 2x^2 - x + 4) / (2x^2 - 2))++` zwróci listę _{y = 0.5x - 1, x = 1, x = -1}_.
+
+====
+
+Asymptota( <Krzywa Uwikłana> )::
+  Zwraca listę zawierającą wszystkie asymptoty krzywej uwikłanej.
+
+[EXAMPLE]
+====
+
+`++Asymptota(x^3 + y^3 + y^2 - 3 x = 0)++` zwróci listę _{x + y = -0.33}_.
+
+====
