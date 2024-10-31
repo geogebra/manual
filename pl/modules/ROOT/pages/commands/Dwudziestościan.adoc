@@ -1,0 +1,37 @@
+= Polecenie Dwudziestościan
+:page-en: commands/Icosahedron
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Dwudziestościan( <Trójkąt równoboczny> )::
+  Tworzy dwudziestościan foremny, którego ścianą jest dany trójkąt równoboczny.
+
+Dwudziestościan( <Punkt>, <Punkt>, <Kierunek> )::
+  Tworzy dwudziestościan foremny, którego krawędzią jest odcinek łączący oba punkty.
+   Pozostałe wierzchołki są jednoznacznie określone przez podany kierunek, który powinien być:
+  * wektorem, odcinkiem, prostą lub półprostą *prostopadłą* do odcinka, lub
+  * wielokątem albo płaszczyzną *równoległą* do odcinka.
+  Utworzony ośmiościan będzie miał
+  * ścianę z odcinkiem jako krawędzią leżącą na płaszczyźnie prostopadłej do danego wektora/odcinka/prostej/półprostej, lub
+  * ścianę z odcinkiem jako krawędzią leżącą na płaszczyźnie równoległej do wielokąta/płaszczyzny.
+
+Dwudziestościan( <Punkt>, <Punkt>, <Punkt>)::
+  Tworzy dwudziestościan foremny, którego wierzchołkami są dane punkty. Punkty muszą być wierzchołkami trójkąta równobocznego, by ośmiościan był zdefiniowany.
+
+Dwudziestościan( <Punkt>, <Punkt>)::
+  Tworzy dwudziestościan foremny z dwoma (sąsiadującymi) wierzchołkami pierwszej ściany, a trzeci punkt jest automatycznie tworzony na okręgu, aby czworościan mógł obracać się wokół swojej pierwszej krawędzi.
+
+[NOTE]
+====
+
+Dwudziestościan(A, B) jest skróconą formą zapisu Dwudziestościan(A, B, C), gdzie C = Punkt(Okrąg(PunktŚrodkowy(A, B), Odległość(A, B) sqrt(3) /
+2, Odcinek(A, B))).
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenia xref:/commands/Sześcian.adoc[Sześcian], xref:/commands/Czworościan.adoc[Czworościan],
+xref:/commands/Ośmiościan.adoc[Ośmiościan], xref:/commands/Dwunastościan.adoc[Dwunastościan].
+
+====
