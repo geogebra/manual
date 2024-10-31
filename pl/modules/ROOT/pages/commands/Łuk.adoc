@@ -1,0 +1,37 @@
+= Polecenie Łuk
+:page-en: commands/Arc
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Łuk( <Okrąg>, <Punkt M >, <Punkt N> )::
+  Zwraca łuk skierowany (kierunek przeciwny do ruchu wskazówek zegara) danego okręgu, z punktami końcowymi M i N.
+
+Łuk( <Elipsa>, <Point M>, <Point N> )::
+  Zwraca łuk skierowany (kierunek przeciwny do ruchu wskazówek zegara) danej elipsy, z punktami końcowymi M i N.
+
+Łuk( <Okrąg>, <Wartość parametru>, <Wartość parametru> )::
+  Zwraca łuk danego okręgu, którego punkty końcowe są określone przez podane wartości parametru.
+
+[NOTE]
+====
+
+Zastosowane jest równanie parametryczne :Okrąg: (_r_ cos(_t_), _r_ sin(_t_)) gdzie _r_ jest promieniem okręgu.
+
+====
+
+Łuk( <Elipsa>, <Wartość parametru>, <Wartość parametru> )::
+  Zwraca łuk danej elipsy, którego punkty końcowe są określone przez podane wartości parametru.
+
+[NOTE]
+====
+
+Zastosowane jest równanie parametryczne :Elipsa: (_a_ cos(_t_), _b_ sin(_t_)) gdzie _a_ i _b_ są długościami
+półosi wielkiej i półosi małej elipsy.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/ŁukOkręguOpisanego.adoc[ŁukOkręguOpisanego].
+
+====
