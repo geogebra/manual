@@ -1,0 +1,37 @@
+= Ośmiościan
+:page-en: commands/Octahedron
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Ośmiościan( <Trójkąt równoboczny> )::
+ Tworzy ośmiościan foremny, którego ścianą jest dany trójkąt równoboczny.
+
+Ośmiościan( <Punkt>, <Punkt>, <Kierunek> )::
+  Tworzy ośmiościan foremny, którego krawędzią jest odcinek łączący oba punkty.
+   Pozostałe wierzchołki są jednoznacznie określone przez podany kierunek, który powinien być:
+  * wektorem, odcinkiem, prostą lub półprostą *prostopadłą* do odcinka, lub
+  * wielokątem albo płaszczyzną *równoległą* do odcinka.
+  Utworzony ośmiościan będzie miał
+  * ścianę z odcinkiem jako krawędzią leżącą na płaszczyźnie prostopadłej do danego wektora/odcinka/prostej/półprostej, lub
+  * ścianę z odcinkiem jako krawędzią leżącą na płaszczyźnie równoległej do wielokąta/płaszczyzny.
+
+Ośmiościan( <Punkt>, <Punkt>, <Punkt>)::
+  Tworzy ośmiościan foremny, którego wierzchołkami są dane punkty. Punkty muszą być wierzchołkami trójkąta równobocznego, by ośmiościan był zdefiniowany.
+
+Ośmiościan( <Punkt>, <Punkt>)::
+  Tworzy ośmiościan foremny z dwoma (sąsiadującymi) wierzchołkami pierwszej ściany, a trzeci punkt jest automatycznie tworzony na okręgu, aby ośmiościan mógł obracać się wokół swojej pierwszej krawędzi.
+
+[NOTE]
+====
+
+Ośmiościan(A, B) jest skróconą formą zapisy Ośmiościan(A, B, C) with C = Punkt(Okrąg(PunktŚrodkowy(A, B), Odległość(A, B) sqrt(3) / 2,
+Odcinek(A, B))).
+
+====
+
+[NOTE]
+====
+
+See also xref:/commands/Sześcian.adoc[Sześcian], xref:/commands/Czworościan.adoc[Czworościan],
+xref:/commands/Dwudziestościan.adoc[Dwudziestościan], xref:/commands/Dwunastościan.adoc[Dwunastościan] commands.
+
+====
