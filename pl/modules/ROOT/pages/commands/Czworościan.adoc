@@ -1,0 +1,38 @@
+= Polecenie Czworościan
+:page-en: commands/Tetrahedron
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Czworościan( <Trójkąt równoboczny> )::
+  Tworzy czworościan foremny, którego ścianą jest dany trójkąt równoboczny.
+
+Czworościan( <Punkt>, <Punkt>, <Kierunek> )::
+  Tworzy czworościan, którego krawędzią jest odcinek łączący oba punkty.
+   Pozostałe wierzchołki są jednoznacznie określone przez podany kierunek, który powinien być:
+  * wektorem, odcinkiem, prostą lub półprostą *prostopadłą* do odcinka, lub
+  * wielokątem albo płaszczyzną *równoległą* do odcinka.
++
+  Utworzony czworościan będzie miał
+  * ścianę z odcinkiem jako krawędzią leżącą na płaszczyźnie prostopadłej do danego wektora/odcinka/prostej/półprostej, lub
+  * ścianę z odcinkiem jako krawędzią leżącą na płaszczyźnie równoległej do wielokąta/płaszczyzny.
+
+Czworościan( <Punkt>, <Punkt>, <Punkt>)::
+  Tworzy czworościan, którego wierzchołkami są dane punkty. Punkty muszą być wierzchołkami trójkąta równobocznego, by czworościan był zdefiniowany.
+
+Czworościan( <Punkt>, <Punkt>)::
+ tworzy czworościan z dwoma (sąsiadującymi) wierzchołkami pierwszej ściany, a trzeci punkt jest automatycznie tworzony na okręgu, aby czworościan mógł obracać się wokół swojej pierwszej krawędzi.
+
+[NOTE]
+====
+
+Czworościan[A, B] jest skróconą formą zapisu Czworościan(A, B, C), gdzie C = Punkt(Okrąg(PunktŚrodkowy(A, B), Odległość(A, B) sqrt(3) /
+2, Odcinek(A, B))).
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenia xref:/commands/Sześcian.adoc[Sześcian], xref:/commands/Ośmiościan.adoc[Ośmiościan],
+xref:/commands/Dwudziestościan.adoc[Dwudziestościan], xref:/commands/Dwunastościan.adoc[Dwunastościan]s.
+
+====
