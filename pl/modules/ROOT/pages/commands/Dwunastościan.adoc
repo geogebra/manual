@@ -1,0 +1,36 @@
+= Polecenie Dwunastościan
+:page-en: commands/Dodecahedron
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Dwunastościan( <Pięciokąt foremny> )::
+   Tworzy dwunastościan foremny, którego ścianą jest dany pięciokąt foremny.
+
+Dwunastościan( <Punkt>, <Punkt>, <Kierunek> )::
+  Tworzy dwunastościan foremny, którego krawędzią jest odcinek łączący oba punkty.
+   Pozostałe wierzchołki są jednoznacznie określone przez podany kierunek, który powinien być:
+  * wektorem, odcinkiem, prostą lub półprostą *prostopadłą* do odcinka, lub
+  * wielokątem albo płaszczyzną *równoległą* do odcinka.
+  Utworzony dwunastościan będzie miał
+  * ścianę z odcinkiem jako krawędzią leżącą na płaszczyźnie prostopadłej do danego wektora/odcinka/prostej/półprostej, lub
+  * ścianę z odcinkiem jako krawędzią leżącą na płaszczyźnie równoległej do wielokąta/płaszczyzny.
+
+Dwunastościan( <Punkt>, <Punkt>, <Punkt>)::
+  Tworzy dwunastościan foremnyy, którego wierzchołkami są dane punkty. Punkty muszą być kolejnymi wierzchołkami pięciokąta foremnego, by dwunastościan był zdefiniowany.
+
+Dwunastościan( <Punkt>, <Punkt>)::
+  Tworzy dwunastościan foremny z dwoma (sąsiadującymi) wierzchołkami pierwszej ściany, a trzeci punkt jest automatycznie tworzony na okręgu, aby dwunastościan mógł obracać się wokół swojej pierwszej krawędzi.
+[NOTE]
+====
+
+Dwunastościan(A, B) jest skróconą formą zapisu Dwunastościan(A, B, C), gdzie C = Punkt(Okrąg(((1 - sqrt(5)) A + (3 + sqrt(5)) B) /
+4, Odległość(A, B) sqrt(10 + 2sqrt(5)) / 4, Odcinek(A, B))).
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenia xref:/commands/Sześcian.adoc[Sześcian], xref:/commands/Czworościan.adoc[Czworościan],
+xref:/commands/Dwudziestościan.adoc[Dwudziestościan], xref:/commands/Ośmiościan.adoc[Ośmiościan].
+
+====
