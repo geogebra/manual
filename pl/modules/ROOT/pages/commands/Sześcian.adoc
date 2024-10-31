@@ -1,0 +1,37 @@
+= Polecenie Sześcian
+:page-en: commands/Cube
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Sześcian( <Kwadrat> )::
+  Tworzy sześcian, którego ścianą jest dany kwadrat.
+
+Sześcian( <Punkt>, <Punkt>, <Kierunek> )::
+ Tworzy sześcian, którego krawędzią jest odcinek łączący oba punkty.
+  Pozostałe wierzchołki są jednoznacznie określone przez podany kierunek, który powinien być:
+  * wektorem, odcinkiem, prostą lub półprostą *prostopadłą* do odcinka, lub
+  * wielokątem albo płaszczyzną *równoległą* do odcinka.
++  
+Utworzony sześcian będzie miał:
+  * ścianę z odcinkiem jako krawędzią leżącą na płaszczyźnie prostopadłej do danego wektora/odcinka/prostej/półprostej, lub
+  * ścianę z odcinkiem jako krawędzią leżącą na płaszczyźnie równoległej do wielokąta/płaszczyzny.
+
+Sześcian( <Punkt>, <Punkt>, <Punkt>)::
+ Tworzy sześcian z trzema (sąsiadującymi) punktami pierwszej ściany. Punkty muszą być kolejnymi wierzchołkami kwadratu, sześcian był zdefiniowany.
+
+Sześcian( <Punkt>, <Punkt>)::
+  Tworzy sześcian z dwoma (sąsiadującymi) wierzchołkami pierwszej ściany, a trzeci punkt jest automatycznie tworzony na okręgu, aby sześcian mógł obracać się wokół swojej pierwszej krawędzi.
+
+[NOTE]
+====
+
+Sześcian(A, B) jest skróconą formą zapisu Sześcian(A, B, C), gdzie punkt C = Punkt(Okrąg(B, Odległość(A, B), Odcinek(A, B))).
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenia xref:/commands/Czworościan.adoc[Czworościan], xref:/commands/Ośmiościan.adoc[Ośmiościan],
+xref:/commands/Dwudziestościan.adoc[Dwudziestościan], xref:/commands/Dwunastościan.adoc[Dwunastościan].
+
+====
