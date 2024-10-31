@@ -1,0 +1,34 @@
+= Polecenie Pole
+:page-en: commands/Area
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Pole( <Punkt>, ..., <Punkt> )::
+  Oblicza pole wielokąta zdefiniowanego przez dane punkty.
+
+[EXAMPLE]
+====
+
+`++Pole((0, 0), (3, 0), (3, 2), (0, 2))++` daje w wyniku _6_.
+
+====
+
+Pole( <Stożkowa> )::
+  Oblicza pole obszaru ograniczonego krzywą stożkową (okręgiem lub elipsą).
+
+[EXAMPLE]
+====
+
+`++Pole(x^2 + y^2 = 2)++` daje w wyniku _6.28_.
+
+====
+
+Pole( <Wielokąt> )::
+  Oblicza pole wielokąta.
+
+[NOTE]
+====
+
+* dla wielokątów,  obliczana jest wartość bezwzględna pola algebraicznego (co daje nieoczekiwane wyniki dla wielokątów samoprzecinających się)
+* Aby obliczyć pole między wykresami dwóch funkcji, musisz użyć polecenia
+xref:/commands/CałkaPomiędzy.adoc[CałkaPomiędzy].
+* Zobacz także narzędzie image:24px-Mode_area.svg.png[Mode area.svg,width=24,height=24] xref:/tools/Pole.adoc[Pole].
