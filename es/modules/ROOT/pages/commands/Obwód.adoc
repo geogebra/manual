@@ -1,0 +1,33 @@
+= Polecenie Obwód
+:page-en: commands/Perimeter
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Obwód( <Wielokąt> )::
+  Zwraca obwód wielokąta.
+
+[EXAMPLE]
+====
+
+`++Obwód(Wielokąt((1, 2), (3, 2), (4, 3)))++` zwraca w wyniku _6.58_.
+
+====
+
+Obwód( <Stożkowa> )::
+  Jeżeli stożkowa jest okręgiem lub elipsą, polecenie obliczy ich obwód. W przeciwnym wypadku wynik jest niezdefiniowany.
+
+[EXAMPLE]
+====
+
+`++Obwód(x^2 + 2y^2 = 1)++` daje w wyniku _5.4_.
+
+====
+
+Obwód( <Miejsce geometryczne> )::
+
+Jeśli dany miejsce geometryczne jest ograniczone, polecenie zwraca jego przybliżony obwód. W przeciwnym razie wynik jest niezdefiniowany.
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/DługośćKrzywej.adoc[DługośćKrzywej].
+
+====
