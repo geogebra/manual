@@ -1,0 +1,47 @@
+= Polecenie Okrąg
+:page-en: commands/Circle
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Okrąg( <Punkt>, <Promień> )::
+  Tworzy okrąg o danym środku i promieniu.
+Okrąg( <Punkt>, <Odcinek> )::
+  Tworzy okrąg o danym środku, którego promień ma długość równą długości odcinka.
+Okrąg( <Punkt>, <Punkt> )::
+  Tworzy okrąg o danym środku przechodzący przez drugi z danych punktów.
+Okrąg( <Punkt>, <Punkt>, <Punkt> )::
+  Tworzy okrąg przechodzący przez dane punkty (jeśli nie są one współliniowe).
+
+[NOTE]
+====
+
+Zobacz także narzędzia image:20px-Mode_compasses.svg.png[Mode compasses.svg,width=20,height=20] xref:/tools/Cyrkiel.adoc[Cyrkiel],
+image:20px-Mode_circle2.svg.png[Mode circle2.svg,width=20,height=20]
+xref:/tools/Okrąg_o_danym_środku_przechodzący_przez_punkt.adoc[Okrąg o danym środku przechodzący przez punkt],
+image:20px-Mode_circlepointradius.svg.png[Mode circlepointradius.svg,width=20,height=20]
+xref:/tools/Okrąg_o_danym_środku_i_promieniu.adoc.adoc[Okrąg o danym środku i promieniu], and image:20px-Mode_circle3.svg.png[Mode
+circle3.svg,width=20,height=20] xref:/tools/Okrąg_przez_3_punkty.adoc[Okrąg przez 3 punkty].
+
+====
+
+Okrąg( <Prosta>, <Punkt> )::
+  Tworzy okrąg, którego osią jest dana prosta i przechodzący przez dany punkt.
+Okrąg( <Punkt>, <Promień>, <Kierunek> )::
+  Tworzy okrąg o środku w danym punkcie i danym promieniu, którego oś jest równoległa do kierunku, gdy jest on prostą lub wektorem, a prostopadła do kierunku, gdy jest on płaszczyzną.
+
+[EXAMPLE]
+====
+
+`++Okrąg( <Punkt>, <Promień>, <Płaszczyzna> )++` tworzy okrąg równoległy do płaszczyzny z wektorem prostopadłym do płaszczyzny wyznaczającym oś okręgu.
+
+====
+
+Okrąg( <Punkt>, <Punkt>, <Kierunek> )::
+  Tworzy okrąg o środku w danym punkcie, przechodzący przez drugi z danych punktów, którego oś jest równoległa do kierunku.
+
+[NOTE]
+====
+
+Aby uniknąć niejednoznaczności równań prostych/płaszczyzn w 2D i 3D, nie używaj równań takich jak `++x = 0++` or `++y = 0++` do określania _Kierunku_.
+Na przykład, jeśli chcesz, by _Kierunkiem_ była płaszczyzna `++x = 0++`, użyj równania w postaci `++x + 0y + 0z = 0++`.
+
+====
