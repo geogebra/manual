@@ -1,0 +1,70 @@
+= Polecenie Współczynniki
+:page-en: commands/Coefficients
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Współczynniki( <Wielomian> )::
+  Daje w wyniku listę stem:[a_k,a_{k-1},\ldots,a_1, a_0]  wszystkich współczynników wielomianu
+  stem:[a_k x^k+a_{k-1}x^{k-1}+\cdots+a_1 x+a_0].
+
+[EXAMPLE]
+====
+
+`++Współczynniki(x^3 - 3 x^2 + 3 x)++` daje w wyniku _{1, -3, 3, 0}_.
+
+====
+
+[NOTE]
+====
+
+Dla krzywych nie będących wielomianami, uzyskany za pomocą jednego z poleceń regresji np. `++f(x) = RegresjaWykładnicza(l1)++`, polecenie 
+`++Współczynniki(f)++` zwróci listę obliczonych parametrów.
+
+====
+
+Współczynniki( <Stożkowa> )::
+
+Zwraca listę współczynników _a_, _b_, _c_, _d_, _e_, _f_ ogólnego równania krzywej stożkowej: stem:[a\cdot x^2 + b\cdot
+y^2 + c + d\cdot x\cdot y + e\cdot x + f\cdot y = 0]
+
+[NOTE]
+====
+
+Dla prostej zapisanej wzorem _l: ax + by + c = 0_ można uzyskać współczynniki, używając zapisu _x_(_l_),
+_y_(_l_), _z_(_l_).
+
+====
+
+[EXAMPLE]
+====
+
+Dla prostej `++l: 3x + 2y - 2 = 0++`:
+
+
+* `++x(l)++` daje wynik 3
+* `++y(l)++` daje wynik 2
+* `++z(l)++` daje wynik -2
+
+====
+
+== W Widoku CAS
+
+Współczynniki( <Wielomian> )::
+  Zwraca listę wszystkich współczynników wielomianu względem głównej zmiennej.
+
+[EXAMPLE]
+====
+
+`++Współczynniki(x^3 - 3 x^2 + 3 x)++` daje w wyniku _{1, -3, 3, 0}_.
+
+====
+
+Współczynniki( <Wielomian>, <Zmienna> )::
+  Zwraca listę wszystkich współczynników wielomianu względem danej zmiennej.
+
+[EXAMPLE]
+====
+
+* `++Współczynniki(a^3 - 3 a^2 + 3 a, a)++` daje w wyniku _{1, -3, 3, 0}_.
+* `++Współczynniki(a^3 - 3 a^2 + 3 a, x)++` daje w wyniku {__a__³ - 3 __a__² + 3 _a_}.
+
+====
