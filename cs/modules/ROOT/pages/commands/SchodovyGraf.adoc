@@ -1,0 +1,73 @@
+= Příkaz SchodovyGraf
+:page-en: commands/StepGraph
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+SchodovyGraf( <Seznam bodů> )::
+  Nakreslí schodový graf zadaného seznamu bodů. Každý bod je spojen s dalším bodem v seznamu vodorovnou
+  úsečkou.
+
+[EXAMPLE]
+====
+
+`++SchodovyGraf({(1, 1), (3, 2), (4, 5), (5, 7)})++`
+
+====
+
+SchodovyGraf( <Seznam bodů>, <Spojit(logická hodnota)> )::
+ Nakreslí schodový graf zadaného seznamu bodů. Pokud _Spojit = false_, nakreslí se vodorovná úsečka směrem
+k následujícímu bodu bez vykreslení vertikální úsečky.  Pokud _Spojit = true_, pak je každý bod  spojen s dalším bodem v seznamu vodorovnou i svislou úsečkou.
+
+[EXAMPLE]
+====
+
+`++SchodovyGraf({(1, 1), (3, 2), (4, 5), (5, 7)}, true)++`
+
+====
+
+SchodovyGraf( <Seznam x-ových souřadnic>, <Seznam y-ových souřadnic> )::
+  Nakreslí schodový graf bodů zadaných souřadnicemi. Každý bod je spojen horizontální úsečkou s následujícím bodem.
+
+[EXAMPLE]
+====
+
+`++SchodovyGraf({1, 3, 4, 5}, {1, 2, 5, 7})++`
+
+====
+
+SchodovyGraf( <Seznam x-ových souřadnic>, <Seznam y-ových souřadnic>, <Spojit(logická hodnota)> )::
+Nakreslí schodový graf bodů zadaných souřadnicemi. Pokud _Spojit = false_, nakreslí se vodorovná úsečka směrem
+k následujícímu bodu bez vykreslení vertikální úsečky.  Pokud _Spojit = true_, pak je každý bod  spojen s dalším bodem v seznamu vodorovnou i svislou úsečkou.
+
+
+[EXAMPLE]
+====
+
+`++SchodovyGraf({1, 3, 4, 5}, {1, 2, 5, 7}, true)++`
+
+====
+
+SchodovyGraf( <Seznam x-ových souřadnic>, <Seznam y-ových souřadnic>, <Spojit(logická hodnota)>, <Styl> )::
+  Vykreslí schodový graf s volitelným stylem vykreslení bodů
+  Hodnoty Stylu _-2, -1, 0, 1, -1_ určují zobrazení bodů následovně:
+  _0_ = žádné body nejsou zakresleny
+  _1_ = body uzavřeného intervalu vpravo
+  _2_ = body uzavřeného intervalu vpravo, body otevřeného intervalu vlevo
+  _-1_ = body uzavřeného intervalu vlevo
+  _-2_ = body uzavřeného intervalu vlevo, body otevřeného intervalu vpravo
+
+[EXAMPLE]
+====
+
+`++SchodovyGraf({1, 3, 4, 5}, {1, 2, 5, 7}, false, 1)++`
+
+====
+
+SchodovyGraf( <Seznam bodů>, <Spojit(logická hodnota)>, <Styl> )::
+  Vykreslí schodový graf daného seznamu bodů dle pravidel výše.
+
+[EXAMPLE]
+====
+
+`++SchodovyGraf({(1, 1), (3, 2), (4, 5), (5, 7)}, false, 1)++`
+
+====
