@@ -1,0 +1,27 @@
+= Příkaz Valec
+:page-en: commands/Cone
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Kuzel( <Kružnice>, <Výška> )::
+  Vytvoří kužel se zadanou podstavou a výškou.
+Kuzel( <Bod>, <Bod>, <Poloměr> )::
+ Vytvoří kužel s vrcholem (druhý bod), středem kružnice (první bod) a zadaným poloměrem.
+Kuzel( <Bod>, <Vektor>, <Úhel α> )::
+  Vytvoří nekonečný kužel se zadaným bodem jako vrcholem, osou symetrie rovnoběžnou se zadaným vektorem a vrcholovým úhlem 2α.
+
+[NOTE]
+====
+
+Tento příkaz vrátí _není definováno_, jestliže je úhel ≥ stem:[\frac{\pi}{2}].
+
+====
+
+[NOTE]
+====
+
+Podívejte se také na příkaz:/commands/InfiniteCone.adoc[NekonecnyKuzel], nástroj image:24px-Mode_cone.svg.png[Mode
+cone.svg,width=24,height=24] xref:/tools/Kuzel.adoc[Kuzel]  a nástroj image:24px-Mode_conify.svg.png[Mode
+conify.svg,width=24,height=24] xref:/tools/Vytazeni_do_Jehlanu_nebo_Kuzele.adoc[Vytažení do jehlanu nebo kužele], 
+které fungují tak, že přetažením nebo výběrem kružnice a zadáním výšky vytvoří kolmý rotační kužel.
+
+====
