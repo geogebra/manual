@@ -1,0 +1,36 @@
+= Příkaz Krychle
+:page-en: commands/Cube
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Krychle( <Čtverec> )::
+ Vytvoří krychli, která má jako základnu zadaný čtverec.
+
+Krychle( <Bod>, <Bod>, <Směr> )::
+Vytvoří krychli, jejíž hranu tvoří úsečka mezi danými body. Ostatní vrcholy jsou jednoznačně určeny zadaným směrem, který je buď:
+  *vektor, úsečka, přímka, polopřímka *kolmá* na úsečku, nebo
+  * mnohoúhelník, rovina *rovnoběžná* s úsečkou.
++  
+Vytvořená krychle bude mít:
+  * stěnu, ve které je úsečka hranou, v rovině kolmé k zadanému vektoru/úsečce/přímce/polopřímce, nebo
+  * stěnu, ve které je úsečka hranou, v rovině rovnoběžné s mnohoúhelníkem/rovinou.
+
+Krychle( <Bod>, <Bod>, <Bod>)::
+ Vytvoří krychli se třemi (sousedními) body na jedné stěně. Tyto body musí tvořit začátek čtverce, aby byla krychle definována.
+
+Krychle( <Bod>, <Bod>)::
+  Vytvoří krychli se dvěma (sousedními) body na jedné stěně, přičemž třetí bod je automaticky vytvořen na kružnici, aby se krychle mohla otáčet kolem dané hrany.
+
+[NOTE]
+====
+
+`Krychle(A, B)` je zkratkou pro `Krychle(A, B, C)`, kde `C = Bod(Kruznice(B, Vzdalenost(A, B), Usecka(A, B)))`.
+
+====
+
+[NOTE]
+====
+
+Podívejte se také na příkazy: /commands/Ctyrsten.adoc[Ctyrsten], xref:/commands/Osmisten.adoc[Osmisten],
+xref:/commands/Dvacetisten.adoc[Dvacetisten], xref:/commands/Dvanactisten.adoc[Dvanactisten].
+
+====
