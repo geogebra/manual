@@ -1,0 +1,17 @@
+= Příkaz Barycentrum
+:page-en: commands/Barycenter
+:page-aliases: commands/Barycentre.adoc
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+====
+
+Barycentrum( <Seznam bodů>, <Seznam vah> )::
+  Nastaví střed systému bodů v seznamu jako průměr jejich pozic vážený jejich hodnotou pomocí https://cs.wikipedia.org/wiki/Barycentrum[odpovídajícího vzorce].
+
+[EXAMPLE]
+====
+
+* `++Barycenter({(2, 0), (0, 2), (-2, 0), (0, -2)}, {1, 1, 1, 1})++` vrátí bod _A(0, 0)_
+* `++Barycenter({(2, 0), (0, 2), (-2, 0), (0, -2)}, {2, 1, 1, 1})++` vrátí bod _B(0.4, 0)_. _x_-souřadnice tohoto bodu byla vypočítána jako _stem:[ \frac{1}{ 2+1+1+1 }*(2*2+1*0+1*(-2)+1*0)] = stem:[\frac{1}{ 5 }*2] = 0.4_
+
+====
