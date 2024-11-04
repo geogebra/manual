@@ -5,20 +5,33 @@ ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 image:32px-Mode_tangent.svg.png[Mode tangent.svg,width=32,height=32] (code 13), dans la Boîte à outils par défaut
 image:32px-Mode_orthogonal.svg.png[Mode orthogonal.svg,width=32,height=32]
 
-* en sélectionnant un point _A_ sur une représentation graphique de fonction stem:[C_f] ou une conique _c_, sont créées toutes les tangentes à stem:[C_f] ou à _c_ passant par _A_ ;
+Activez cet outil, et sélectionnez successivement, (l'ordre n'a pas d'importance) , dans les fenêtres image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] xref:/Algèbre.adoc[Algèbre] ou image:16px-Menu_view_graphics.svg.png[Menu view graphic.svg,width=16,height=16] xref:/Graphique.adoc[Graphique], deux objets, suivant les *types* : 
+____________________________________________________________
+* un *point* _A_ appartenant à une représentation graphique de *fonction* stem:[C_f] et la courbe elle-même,
+** est créée la tangente à stem:[C_f] en _A_ ;
+* un *point* _A_  n'appartenant pas à la représentation graphique de *fonction* stem:[C_f] mais d'abscisse stem:[x(A)] appartenant à l'ensemble de définition stem:[D_f] de _f_ et la courbe elle-même,
+** est créée la tangente à stem:[C_f] en son point d'ascisse stem:[x(A)], i.e. stem:[(x(A),f(x(A)))] ;
+____________________________________________________________
 
-* en sélectionnant ou créant un point _A_ et une conique _c_, sont créées toutes les tangentes à _c_ passant par _A_ ;
+____________________________________________________________
+* un *point* _A_ appartenant à une *conique* _c_ et cette conique elle-même,
+** est créée la tangente à _c_ en _A_ ;
+* un *point* _A_ n'appartenant pas à une *conique* _c_ et cette conique elle-même,
+** sont créées toutes les tangentes à _c_ passant par _A_ ;
+____________________________________________________________
+____________________________________________________________
+*  une *ligne* _g_ et une *conique* _c_,
+** sont créées toutes les tangentes à _c_ parallèles à _g_ ;
+____________________________________________________________
+____________________________________________________________
+*  *deux coniques*
+** sont créées toutes leurs tangentes communes (jusqu'à 4 ).
 
-* en sélectionnant une ligne _g_ et une conique _c_, sont créées toutes les tangentes à _c_ et parallèles à _g_.
 
-* en sélectionnant un point _A_ et une courbe de fonction _f_, est créée la tangente à la courbe de _f_ en _x = x(A)_.
+*** Mais, à ce jour, pour 2 hyperboles, je n'arrive pas à obtenir directement les 4 ?
 
-* en sélectionnant deux cercles vous créez toutes leurs tangenetes communes.
-
+____________________________________________________________
  
-
-
-
 
 
 
@@ -32,8 +45,11 @@ plutôt qu'une courbe de *fonction*.
 
 
 
-
-
 [.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/Tangente.adoc[Tangente].
 
+___________________________________________________________
 
+image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] *Graphique
+3D* :
+
+Cet outil semble fonctionner à l'identique, pour les 3 dernières situations précédentes, dans tout plan de la fenêtre image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=16,height=16] xref:/Graphique3D.adoc[Graphique 3D].
