@@ -2,6 +2,8 @@
 :page-en: commands/Classes
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Listes.adoc[Commandes Listes] 
+
 Classes( <Liste Données L>, <Début D>, <Largeur Classes l > )::
   Retourne une liste des bornes d'intervalles. La première borne est _D_, la dernière est au moins égale au maximum de
   la liste _L_, les distances entre les bornes étant égales à _l_.
@@ -12,14 +14,14 @@ Classes( <Liste Données L >, <Nombre Classes n> )::
 [EXAMPLE]
 ====
 
-`++Classes({1, 3, 5, 7, 8, 9, 10}, 3)++` donne _\{1, 4, 7, 10}_
+`++Classes({1, 3, 5, 7, 8, 9, 10}, 3)++` donne _{1, 4, 7, 10}_
 
 ====
 
 [EXAMPLE]
 ====
 
-`++Classes({0.1, 0.2, 0.4, 1.1}, 0, 1)++` donne _\{0, 1, 2}_
+`++Classes({0.1, 0.2, 0.4, 1.1}, 0, 1)++` donne _{0, 1, 2}_
 
 ====
 
@@ -30,11 +32,11 @@ Classes( <Liste Données L >, <Nombre Classes n> )::
 
 `++données = {1, 3, 5, 7, 8, 9, 10}++`
 
-`++bornes = Classes(données, 3) ++` retourne \{1, 4, 7, 10}
+`++bornes = Classes(données, 3) ++` retourne {1, 4, 7, 10}
 
 `++regroupements = Ajouter(Compactée(GarderSi(bornes(k) ≤ x  <  bornes(k + 1), données), k, 1…(Longueur(bornes) - 2)), GarderSi(bornes(Longueur(bornes) - 1) ≤ x,données))++`
 
-retourne \{\{1, 3}, \{5}, \{7, 8, 9,10}}
+retourne {{1, 3}, {5}, {7, 8, 9,10}}
 
 ====
 
