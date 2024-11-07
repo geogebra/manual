@@ -2,6 +2,8 @@
 :page-en: commands/Zip
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Listes.adoc[Commandes Listes] 
+
 *Compactée*(<Expression>, <Var1>, <Liste1>, <Var2>, <Liste2>, ...)
 
 Crée une xref:/Listes.adoc[liste] d'objets obtenus par substitution des variables dans l'expression par les éléments des
@@ -15,8 +17,6 @@ des listes.
 [EXAMPLE]
 ====
 
-*Exemples :*
-
 {empty}1) Soit les points P,Q,R,S,T. `++Compactée(MilieuCentre(A,B),A,{P,Q},B,{R,S,T}]++`
 
 retourne une liste contenant les xref:/commands/MilieuCentre.adoc[milieux] des segments _[PR]_ et _[QS]_.
@@ -25,13 +25,13 @@ retourne une liste contenant les xref:/commands/MilieuCentre.adoc[milieux] des s
 
 retourne la liste des points situés dans le disque unité ouvert.
 
-{empty}3) Soit une liste _liste1=\{x^2, x^3, x^6}_ de polynômes. `++Compactée(Degré[a], a, liste1)++`
+{empty}3) Soit une liste _liste1={x^2, x^3, x^6}_ de polynômes. `++Compactée(Degré[a], a, liste1)++`
 
-retourne la liste _\{2, 3, 6}_.
+retourne la liste _{2, 3, 6}_.
 
-{empty}4) Soit une liste _liste1=\{1, 2, 5}_ de nombres. `++Compactée(Simplifier(a*x^(b-1)), a, liste1,b)++`
+{empty}4) Soit une liste _liste1={1, 2, 5}_ de nombres. `++Compactée(Simplifier(a*x^(b-1)), a, liste1,b)++`
 
-retourne la liste _\{1, 2x, 5x²}_.
+retourne la liste _{1, 2x, 5x²}_.
 
 ====
 
@@ -86,8 +86,6 @@ variable citée, ici _2_, par les fonctions données dans la liste, donc _\{3,5}
 
 [NOTE]
 ====
-
-*Note :*
 
 il *me* semble ... qu'il est impossible d'utiliser correctement cette commande avec un outil ayant plusieurs objets
 finaux,
