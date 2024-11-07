@@ -2,10 +2,16 @@
 :page-en: commands/RightSide
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Algèbre.adoc[Commandes Algèbre] 
+
 En mode "direct", une équation est "simplifiée",
 
 * x + 2 = 3x + 1 devient x = 0.5 et`++MembreDroite( x + 2 = 3x + 1 ) ++` retourne la fonction _a(x,y) = 0.5_ ;
 * 4x = 1 - 3y devient 4x + 3y = 1 et`++MembreDroite(4x = 1 - 3y) ++` retourne la fonction _b(x,y) = 1_ .
+
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/MembreGauche.adoc[MembreGauche].
+
 
 ____________________________________________________________
 
@@ -17,34 +23,30 @@ MembreGauche( <(In)Équation> )::
 [EXAMPLE]
 ====
 
-*Exemples :* `++MembreDroite( x + 2 = 3x + 1 )++` donne _3x + 1_ ;
+`++MembreDroite( x + 2 = 3x + 1 )++` retourne _3x + 1_ ;
 
-`++MembreDroite( 4x = 1 - 3y )++` donne _1 - 3y_.
+`++MembreDroite( 4x = 1 - 3y )++` retourne _1 - 3y_.
 
 ====
 
-MembreDroite( \{ <(In)Équation> } )::
+MembreDroite( { <(In)Équation> } )::
   Retourne la liste des membres de droite de chacune des équations de la liste.
 
 [EXAMPLE]
 ====
 
-*Exemple :*
-
-`++MembreDroite({a² + b² = c², x + 2 = 3x + 1})++` donne _\{c², 3x + 1}_.
+`++MembreDroite({a² + b² = c², x + 2 = 3x + 1})++` retourne _\{c², 3x + 1}_.
 
 ====
 
-MembreDroite( \{ <Équation> }, <Indice n> )::
+MembreDroite( { <Équation> }, <Indice n> )::
   Retourne le membre de droite de la _n_-ème équation de la liste.
 
 [EXAMPLE]
 ====
 
-*Exemple :*
-
-`++MembreDroite({a² + b² = c², x + 2 = 3x + 1},1)++` donne _c²_.
+`++MembreDroite({a² + b² = c², x + 2 = 3x + 1},1)++` retourne _c²_.
 
 ====
 
-[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/MembreGauche.adoc[MembreGauche].
+
