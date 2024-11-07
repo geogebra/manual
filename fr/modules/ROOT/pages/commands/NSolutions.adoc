@@ -2,6 +2,8 @@
 :page-en: commands/NSolutions
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Algèbre.adoc[Commandes Algèbre]
+
 NSolutions( <Équation> )::
   Recherche une approximation numérique de la solution de l'équation de la variable _x_ donnée.
 
@@ -18,8 +20,6 @@ NSolutions( <Équation> )::
 [EXAMPLE]
 ====
 
-*Exemple :*
-
 `++NSolutions(cos(x) = x)++` retourne _\{0.739085133215165}_.
 
 ====
@@ -29,8 +29,6 @@ NSolutions( <Équation>, <Variable v> )::
 
 [EXAMPLE]
 ====
-
-*Exemple :*
 
 `++NSolutions(a^4 + 34a^3 - 34, a)++` retourne _\{0.9904738885580846}_.
 
@@ -42,8 +40,6 @@ NSolutions( <Équation>, <Variable v> )::
 
 [EXAMPLE]
 ====
-
-*Exemples :*
 
 * `++NSolutions(cos(x) = x, x = 0)++` donne _\{0.74}_
 * `++NSolutions(a^4 + 34a^3 = 34, a = 3)++` donne la liste _\{-34, 0.99}_. Cet arrondi "-34" peut apparaître très
@@ -57,8 +53,6 @@ NSolutions( <Liste d'équations>, <Liste de Variables> )::
 
 [EXAMPLE]
 ====
-
-*Exemple :*
 
 `++NSolutions({π / x = cos(x - 2y), 2 y - π = sin(x)}, {x=3, y=1.5})++` retourne _\{3.141592651686591,
 1.570796327746508}_.
@@ -77,8 +71,6 @@ décimales)_.
 
 [NOTE]
 ====
-
-*Note :*
 
 * NSolutions ne fonctionnera pas pour les fonctions qui ont l'axe des x comme asymptote. Elles doivent souvent être
 reformulées.
