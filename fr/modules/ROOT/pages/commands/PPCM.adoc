@@ -2,6 +2,8 @@
 :page-en: commands/LCM
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Algèbre.adoc[Commandes Algèbre]
+
 PPCM( <Nombre a>,<Nombre b>)::
   Calcule le plus petit multiple commun à _a_ et à _b_.
 PPCM( <Liste Nombres>)::
@@ -10,18 +12,14 @@ PPCM( <Liste Nombres>)::
 [EXAMPLE]
 ====
 
-*Exemple :*
-
-`++PPCM({12, 30, 18})++` donne _180_.
+`++PPCM({12, 30, 18})++` retourne _180_.
 
 ====
 
 [EXAMPLE]
 ====
 
-*Exemple :*
-
-`++PPCM(12, 15)++` donne _60_.
+`++PPCM(12, 15)++` retourne _60_.
 
 ====
 
@@ -41,17 +39,8 @@ PPCM( <Liste de Polynômes> )::
 [EXAMPLE]
 ====
 
-*Exemple :*
+* `++PPCM(x^2 + 4 x + 4, x^2 - x - 6)++` retourne stem:[x^3 + x^2 - 8 x - 12]
 
-`++PPCM({x^2 + 4 x + 4, x^2 - x - 6, x^3 - 4 x^2 - 3 x + 18})++` donne stem:[x^4 - 2 x^3 - 11 x^2 + 12 x + 36].
-
-====
-
-[EXAMPLE]
-====
-
-*Exemple :*
-
-`++PPCM(x^2 + 4 x + 4, x^2 - x - 6)++` donne stem:[x^3 + x^2 - 8 x - 12].
+* `++PPCM({x^2 + 4 x + 4, x^2 - x - 6, x^3 - 4 x^2 - 3 x + 18})++` retourne stem:[x^4 - 2 x^3 - 11 x^2 + 12 x + 36].
 
 ====
