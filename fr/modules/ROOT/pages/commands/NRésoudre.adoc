@@ -2,6 +2,8 @@
 :page-en: commands/NSolve
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Algèbre.adoc[Commandes Algèbre]
+
 NRésoudre( <Équation> )::
   Recherche une approximation numérique de solutions à l'équation donnée de variable x.
 
@@ -18,8 +20,6 @@ NRésoudre( <Équation> )::
 [EXAMPLE]
 ====
 
-*Exemple :*
-
 `++NRésoudre(cos(x) = x)++` donne _\{x = 0.7390851332152}_ ( Option : 15 décimales).
 
 ====
@@ -29,8 +29,6 @@ NRésoudre( <Équation>, <Variable v> )::
 
 [EXAMPLE]
 ====
-
-*Exemples :*  
 
 * `++NRésoudre(sin(x) = x)++` donne _\{x = 0, x = 4.760636329593 10^^-13^}_ (Option : 15 décimales).
 * `++NRésoudre(a^4+34a^3-34, a)++` donne _\{a = -34, a = 0.99}_.
@@ -53,8 +51,6 @@ NRésoudre( <Equation>, <Variable = valeur départ> )::
 [EXAMPLE]
 ====
 
-*Exemples :*
-
 * `++NRésoudre(cos(x) = x, x = 0)++` donne _\{x = 0.74}_
 * `++NRésoudre(a^4 + 34a^3 = 34, a = 3)++` donne la liste _\{a = 0.99}_.
 
@@ -65,8 +61,6 @@ NRésoudre( <Liste d'équations>, <Liste de Variables> )::
 
 [EXAMPLE]
 ====
-
-*Exemple :*
 
 `++NRésoudre({π / x = cos(x - 2y), 2 y - π = sin(x)}, {x=3, y=1.5})++` donne _\{x = 3.141592651686591, y =
 1.570796327746508}_.
@@ -85,8 +79,6 @@ solution).`++NRésoudre({π / x = cos(x - 2y), 2 y - π = sin(x)}, {x, y})++` do
 
 [NOTE]
 ====
-
-*Note :*
 
 * NRésoudre ne fonctionnera pas pour les fonctions qui ont l'axe des x comme asymptote. Elles doivent souvent être
 reformulées.
