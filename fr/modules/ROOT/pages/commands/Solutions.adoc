@@ -2,15 +2,15 @@
 :page-en: commands/Solutions
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Algèbre.adoc[Commandes Algèbre] 
+
 Solutions( <Équation> )::
   Résout une équation (ou un ensemble d'équations) de la variable x et retourne une liste de toutes les solutions.
 
 [EXAMPLE]
 ====
 
-*Exemple :*
-
-`++Solutions(x^2 = 4x)++` retourne _\{ 4, 0}_, la liste des solutions de l'équation _x^2^ = 4x_.
+`++Solutions(x^2 = 4x)++` retourne _{ 4, 0}_, la liste des solutions de l'équation _x^2^ = 4x_.
 
 ====
 
@@ -24,9 +24,7 @@ Solutions( <Équation> )::
 [EXAMPLE]
 ====
 
-*Exemple :*
-
-`++Solutions(x^2 = 4x)++` retourne _\{ 4, 0}_, la liste des solutions de l'équation _x^2^ = 4x_.
+`++Solutions(x^2 = 4x)++` retourne _{ 4, 0}_, la liste des solutions de l'équation _x^2^ = 4x_.
 
 ====
 
@@ -37,10 +35,7 @@ Solutions( <Équation>, <Variable> )::
 [EXAMPLE]
 ====
 
-*Exemple :*
-
-`++Solutions(x * a^2 = 4a, a)++` retourne stem:[\\{\frac{4}\{x},0\}], la liste des solutions de l'équation _x a^2^ =
-4a_.
+`++Solutions(x * a^2 = 4a, a)++` retourne stem:[{\frac{4}{x},0}], la liste des solutions de l'équation _x a^2^ = 4a_.
 
 ====
 
@@ -48,8 +43,6 @@ Solutions( <Liste d'équations>, <Liste de Variables> )::
 
 [EXAMPLE]
 ====
-
-*Exemples :*
 
 `++Solutions({x = 4 x + y , y + x = 2}, {x, y})++` retourne _( -1 3)_, l'unique solution du système stem:[
 \left\\{\begin\{matrix} x=4x+y \\ y+x=2 \end\{matrix}\right. ].`++Solutions[{2a^2+5a+3=b, a+b=3},{a,b}]++` retourne
