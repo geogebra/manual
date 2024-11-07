@@ -2,17 +2,17 @@
 :page-en: commands/Append
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Listes.adoc[Commandes Listes] 
+
 Ajouter( <Liste>, <Objet> )::
   Crée une nouvelle liste dans laquelle est ajouté l'objet à la fin de la liste initiale.
 
 [EXAMPLE]
 ====
 
-*Exemples :*
+`++Ajouter({1, 2, 3}, 4)++` crée la liste _{1, 2, 3, 4}_;
 
-`++Ajouter({1, 2, 3}, 4)++` crée la liste _\{1, 2, 3, 4}_;
-
-Si était définie `++ liste1={1,2,3}++` alors `++Ajouter(liste1, 4)++` crée la _liste2 = \{1, 2, 3, 4}_.
+Si était définie `++ liste1={1,2,3}++` alors `++Ajouter(liste1, 4)++` crée la _liste2 = {1, 2, 3, 4}_.
 
 ====
 
@@ -42,7 +42,7 @@ d'abord la "copier en objet libre" et ensuite on peut utiliser la commande préc
 ** `++ SoitValeur(liste1,Longueur(liste1)+1,4)++`,
 
 Si était définie `++ liste1={1,2,3}++` alors dans ces 3 cas, le code proposé ne crée pas de liste2, mais modifie _liste1
-= \{1, 2, 3, 4}_.
+= {1, 2, 3, 4}_.
 
 ====
 
@@ -64,7 +64,7 @@ Ajouter( <Objet>, <Liste> )::
 [EXAMPLE]
 ====
 
-`++Ajouter(4, {1, 2, 3})++` crée la liste _\{4, 1, 2, 3}_.
+`++Ajouter(4, {1, 2, 3})++` crée la liste _{4, 1, 2, 3}_.
 
 ====
 
@@ -81,6 +81,6 @@ Avec la possibilité de travailler en littéral.
 
 Les variables _a,b,c_ et _d_ n'étant pas définies dans GeoGebra,
 
-`++liste1:=Ajouter({a,b,c}, d)++` affecte à _liste1_ la valeur \{_a,b,c,d_}.
+`++liste1:=Ajouter({a,b,c}, d)++` affecte à _liste1_ la valeur {_a,b,c,d_}.
 
 ====
