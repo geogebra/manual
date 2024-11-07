@@ -2,6 +2,8 @@
 :page-en: commands/Insert
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Listes.adoc[Commandes Listes] 
+
 Insérer(<Liste>,<Liste>,<Position>)::
   Insère tous les éléments de _Liste 1_ dans _Liste 2_ à la _Position_ donnée.
 
@@ -9,7 +11,7 @@ Insérer(<Liste>,<Liste>,<Position>)::
 ====
 
 `++Insérer({11, 12}, {1, 2, 3, 4, 5}, -2)++` place les éléments de _Liste 1_ avant le dernier élément de
-_Liste 2_ et retourne la liste _\{1, 2, 3, 4, 11, 12, 5}_.
+_Liste 2_ et retourne la liste _{1, 2, 3, 4, 11, 12, 5}_.
 
 ====
 
@@ -17,16 +19,11 @@ _Liste 2_ et retourne la liste _\{1, 2, 3, 4, 11, 12, 5}_.
 ====
 
 `++Insérer({11, 12}, {1, 2, 3, 4, 5}, 3)++` place les éléments de _Liste 1_ à la troisième (et suivantes)
-position(s) de _Liste 2_ et retourne la liste _\{1, 2, 11, 12, 3, 4, 5}_.
+position(s) de _Liste 2_ et retourne la liste _{1, 2, 11, 12, 3, 4, 5}_.
 
 ====
 
-[NOTE]
-====
 
-Si _Position_ est un nombre négatif, alors on compte à partir de la droite.
-
-====
 
 Insérer(<Objet>,<Liste>,<Position>)::
   Insère _Objet_ dans la _Liste_ à la _Position_ donnée.
@@ -34,7 +31,7 @@ Insérer(<Objet>,<Liste>,<Position>)::
 [EXAMPLE]
 ====
 
-`++Insérer(x^2, {1, 2, 3, 4, 5}, -1)++` place _x^2^_ à la fin de la liste et retourne la liste _\{1, 2, 3,
+`++Insérer(x^2, {1, 2, 3, 4, 5}, -1)++` place _x^2^_ à la fin de la liste et retourne la liste _{1, 2, 3,
 4, 5, x^2^}_.
 
 ====
@@ -42,7 +39,7 @@ Insérer(<Objet>,<Liste>,<Position>)::
 [EXAMPLE]
 ====
 
-`++Insérer(x^2, {1, 2, 3, 4, 5}, 3)++` place _x^2^_ à la troisième position et retourne la liste _\{1, 2,
+`++Insérer(x^2, {1, 2, 3, 4, 5}, 3)++` place _x^2^_ à la troisième position et retourne la liste _{1, 2,
 x^2^, 3, 4, 5}_.
 
 ====
