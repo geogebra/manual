@@ -2,10 +2,14 @@
 :page-en: commands/LeftSide
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Algèbre.adoc[Commandes Algèbre] 
+
 En mode "direct", une équation est "simplifiée",
 
 * x + 2 = 3x + 1 devient x = 0.5 et`++MembreGauche( x + 2 = 3x + 1 ) ++` retourne la fonction _a(y,x) = x_ ;
 * 4x = 1 - 3y devient 4x + 3y = 1 et`++MembreGauche(4x = 1 - 3y) ++` retourne la fonction _b(x,y) = 4x + 3y_.
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/MembreDroite.adoc[MembreDroite].
 
 ____________________________________________________________
 
@@ -17,34 +21,30 @@ MembreGauche( <(In)Équation> )::
 [EXAMPLE]
 ====
 
-*Exemples :* `++MembreGauche( x + 2 = 3x + 1 )++` donne _x + 2_ ;
+`++MembreGauche( x + 2 = 3x + 1 )++` retourne _x + 2_ ;
 
-`++MembreGauche( 4x = 1 - 3y )++` donne _4x_.
+`++MembreGauche( 4x = 1 - 3y )++` retourne _4x_.
 
 ====
 
-MembreGauche( \{ <(In)Équation> } )::
+MembreGauche( { <(In)Équation> } )::
   Retourne la liste des membres de gauche de chacune des équations de la liste.
 
 [EXAMPLE]
 ====
 
-*Exemple :*
-
-`++MembreGauche({a² + b² = c², x + 2 = 3x + 1})++` donne _\{a^2^ + b^2^, x + 2}_.
+`++MembreGauche({a² + b² = c², x + 2 = 3x + 1})++` retourne _\{a^2^ + b^2^, x + 2}_.
 
 ====
 
-MembreGauche( \{ <Équation> }, <Indice n> )::
+MembreGauche( { <Équation> }, <Indice n> )::
   Retourne le membre de gauche de la _n_-ème équation de la liste.
 
 [EXAMPLE]
 ====
 
-*Exemple :*
-
-`++MembreGauche({a² + b² = c², x + 2 = 3x + 1},1)++` donne _a^2^ + b^2^_.
+`++MembreGauche({a² + b² = c², x + 2 = 3x + 1},1)++` retourne _a^2^ + b^2^_.
 
 ====
 
-[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/MembreDroite.adoc[MembreDroite].
+
