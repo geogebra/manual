@@ -2,19 +2,19 @@
 :page-en: commands/Reverse
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Listes.adoc[Commandes Listes] 
+
 Retourner( <Liste> )::
   renverse l'ordre des éléments de _Liste_
 
 [EXAMPLE]
 ====
 
-*Exemples :*
+`++Retourner({1, 2, 3})++` crée la liste {_3, 2, 1_} ;
 
-`++Retourner({1,2,3})++` crée la liste \{_3,2,1_} ;
+`++Retourner({(1, 2),(3, 4),(5, 6)})++` crée la liste {_(5, 6), (3, 4), (1, 2)_}
 
-`++Retourner({(1,2),(3,4),(5,6)})++` crée la liste \{_(5,6), (3,4), (1,2)_}
-
-`++Retourner(Aplatir(  {1, 2, {3, 4} }  ))++` crée la liste \{_4,3,2,1_}.
+`++Retourner(Aplatir({1, 2, {3, 4}}))++` crée la liste {_4, 3, 2, 1_}.
 
 ====
 
@@ -29,10 +29,8 @@ Avec la possibilité de travailler en littéral.
 [EXAMPLE]
 ====
 
-*Exemples :*
+`++Retourner({(a, b), (c, d), (e, f)})++` crée la liste__{(e, f), (c,d),(a, b)}__
 
-`++Retourner({(a, b), (c, d), (e, f)})++` crée la liste__\{(e, f), (c,d),(a, b)}__
-
-`++Retourner(Aplatir(  {á, é, {í, ó} }  ))++` crée la liste _\{ó, í, é, á}_.
+`++Retourner(Aplatir(  {á, é, {í, ó} }  ))++` crée la liste _{ó, í, é, á}_.
 
 ====
