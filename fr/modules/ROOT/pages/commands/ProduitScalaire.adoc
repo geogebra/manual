@@ -2,19 +2,19 @@
 :page-en: commands/Dot
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Algèbre.adoc[Commandes Algèbre] 
+
 Pour calculer directement le produit scalaire de deux vecteurs _u_ et _v_ créés, vous pouvez utiliser tout simplement le
 produit _u v_.
 
 [EXAMPLE]
 ====
 
-*Exemples :*
-
 Vous avez créé deux vecteurs du plan stem:[\vec{u}] stem:[\begin{pmatrix}2 \\ 2\end{pmatrix}] et
-stem:[\vec{v}]stem:[\begin{pmatrix}-3 \\ 1\end{pmatrix}], `++ u v++` donne le nombre -4;
+stem:[\vec{v}]stem:[\begin{pmatrix}-3 \\ 1\end{pmatrix}], `++ u v++` retourne le nombre -4;
 
 Vous avez créé deux vecteurs de l'espace stem:[\vec{w}] stem:[\begin{pmatrix}1 \\ 3\\2\end{pmatrix}] et
-stem:[\vec{s} ] stem:[\begin{pmatrix}0 \\ 3\\-2\end{pmatrix} ] , `++ w s++` donne le nombre 5.
+stem:[\vec{s} ] stem:[\begin{pmatrix}0 \\ 3\\-2\end{pmatrix} ] , `++ w s++` retourne le nombre 5.
 
 ====
 
@@ -36,8 +36,8 @@ La création préalable des vecteurs n'est pas nécessaire, on peut utiliser des
 [EXAMPLE]
 ====
 
-*Exemples :* `++ProduitScalaire({2, 2}, {-3, 1})++` donne le nombre -4 ; `++ProduitScalaire({1, 3, 2}, {0, 3, -2})++`
-donne le nombre 5.
+* `++ProduitScalaire({2, 2}, {-3, 1})++` retourne le nombre -4 ; 
+* `++ProduitScalaire({1, 3, 2}, {0, 3, -2})++` retourne le nombre 5.
 
 ====
 
@@ -52,8 +52,8 @@ L'utilisation de cette syntaxe directement dans *_saisie_*, provoque un produit 
 [EXAMPLE]
 ====
 
-*Exemples :* `++ProduitScalaire({2, 2}, {-3, 1})++` donne la liste \{-6, 2} ;
-`++ProduitScalaire({1, 3, 2}, {0, 3, -2})++` donne la liste \{0, 9, -4}.
+* `++ProduitScalaire({2, 2}, {-3, 1})++` retourne la liste {-6, 2} ;
+* `++ProduitScalaire({1, 3, 2}, {0, 3, -2})++` retourne la liste {0, 9, -4}.
 
 ====
 
@@ -66,9 +66,7 @@ Avec la possibilité de travailler en littéral.
 [EXAMPLE]
 ====
 
-*Exemples :*
-
-Vous créez deux vecteurs du plan par `++u := (a, b)++` et `++v := ( a', b')++` `++ProduitScalaire(u,v)++` donne le
+Vous créez deux vecteurs du plan par `++u := (a, b)++` et `++v := ( a', b')++` `++ProduitScalaire(u,v)++` retourne le
 nombre a a' + b b'.
 
 [width="100%",cols="50%,50%",]
@@ -80,6 +78,6 @@ image:Ambox_content.png[image,width=40,height=40]
 |===
 
 Vous créez deux vecteurs de l'espace par `++u := (a, b, c)++` et `++v := ( a', b', c')++` `++ProduitScalaire(u,v)++`
-donne le nombre a a' + b b' + c c'.
+retourne le nombre a a' + b b' + c c'.
 
 ====
