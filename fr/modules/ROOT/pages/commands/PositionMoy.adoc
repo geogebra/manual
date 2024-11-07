@@ -2,6 +2,8 @@
 :page-en: commands/TiedRank
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Listes.adoc[Commandes Listes] 
+
 PositionMoy( <Liste L > )::
   Retourne la liste, dans laquelle le __i__^ème^ élément est la position du __i__^ème^ élément de L lorsqu'elle est
   xref:/commands/Trier.adoc[ordonnée]. Si des éléments sont répétés dans _L_ occupant des positions de _k_ à _l_ dans
@@ -10,8 +12,9 @@ PositionMoy( <Liste L > )::
 [EXAMPLE]
 ====
 
-`++PositionMoy({4, 1, 2, 3, 4, 2})++` retourne \{5.5, 1, 2.5, 4, 5.5, 2.5} . En effet
-`++Trier({4, 1, 2, 3, 4, 2})++` retourne `++ {1, 2, 2, 3, 4, 4}++` et par exemple le _4_ est en position _5_ et _6_,
+`++PositionMoy({4, 1, 2, 3, 4, 2})++` retourne {5.5, 1, 2.5, 4, 5.5, 2.5}.
+
+En effet `++Trier({4, 1, 2, 3, 4, 2})++` retourne `++ {1, 2, 2, 3, 4, 4}++` et par exemple le _4_ est en position _5_ et _6_,
 d'où position moyenne _5.5_
 
 ====
