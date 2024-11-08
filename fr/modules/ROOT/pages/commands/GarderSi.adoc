@@ -2,14 +2,16 @@
 :page-en: commands/KeepIf
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-GarderSi( <Condition>, <Liste> )
+xref:commands/Commandes_Logique.adoc[Commandes Logique]
+
+GarderSi( <Condition>, <Liste> )::
 
 Crée une nouvelle liste contenant uniquement les éléments de la liste initiale vérifiant la condition.
 
 [EXAMPLE]
 ====
 
-`++GarderSi(x<3, {1, 2, 3, 4, 1, 5, 6})++` retourne la nouvelle liste _\{1, 2, 1}_.
+`++GarderSi(x<3, {1, 2, 3, 4, 1, 5, 6})++` retourne la nouvelle liste _{1, 2, 1}_.
 
 ====
 
@@ -23,17 +25,17 @@ Pour une liste d'autres objets vous ne pouvez utiliser que des conditions de typ
 
 ====
 
-GarderSi( <Condition>, <Variable>, <Liste> )
+GarderSi( <Condition>, <Variable>, <Liste> )::
 
 [EXAMPLE]
 ====
 
-*Exemples :*
-
 * Soit les points P, Q et R, `++GarderSi(x(A) < 3, A, {P, Q, R})++` retourne la liste des couples de coordonnées des
-seuls points, parmi les points cités, dont l'abscisse est plus petite que 3.La variable A est remplacée successivement
-par P puis Q puis R pour tester la condition;* Soit une liste _liste1_ de points, si vous désirez ne garder que les
-points situés dans le disque unité ouvert, vous pouvez utiliser :
+seuls points, parmi les points cités, dont l'abscisse est plus petite que 3.
+
+La variable A est remplacée successivement par P, puis Q, puis R pour tester la condition;
+
+* Soit une liste _liste1_ de points, si vous désirez ne garder que les points situés dans le disque unité ouvert, vous pouvez utiliser :
 `++ Nettoyer(Compactée(Si(sqrt(x(A)²+y(A)²)<1,A),A,liste1)) ++`.
 
 ====
