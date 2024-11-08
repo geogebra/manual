@@ -1,0 +1,27 @@
+= Polecenie ŚrodekMasy
+:page-en: commands/Barycenter
+:page-aliases: commands/Barycentre.adoc
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+image:64px-Globe.png[Globe.png,width=64,height=64,role=left] To polecenie ma dwie wersje w języku angielskim:
+
+* Barycenter (US)
+* Barycentre (UK + Aus)
+
+====
+
+ŚrodekMasy( <Lista punktów>, <Lista mas> )::
+  Ustala środek masy układu punktów, definiowany jako średnia ważona ich pozycji oraz przypisanych im wartości mas,
+  przy użyciu https://pl.wikipedia.org/wiki/%C5%9Arodek_masy[odpowiedniego wzoru].
+
+[EXAMPLE]
+====
+
+* `++ŚrodekMasy({(2, 0), (0, 2), (-2, 0), (0, -2)}, {1, 1, 1, 1})++` daje jako wynik punkt _A(0, 0)_
+* `++ŚrodekMasy({(2, 0), (0, 2), (-2, 0), (0, -2)}, {2, 1, 1, 1})++` daje jako wynik punkt _B(0.4, 0)_. Współrzędna x tego punktu została określona 
+przez _stem:[ \frac{1}{ 2+1+1+1 }*(2*2+1*0+1*(-2)+1*0)] = stem:[\frac{1}{ 5 }*2] = 0.4_
+
+====
