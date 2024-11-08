@@ -30,8 +30,7 @@ Retourne le couple _(norme ; angle polaire)_ du vecteur donné
 [EXAMPLE]
 ====
 
-* `++EnPolaires(u)++` retourne un nouveau vecteur _(1.41 ; 45°)_ si u = stem:[ \left( \begin{tabular}1 \\ 1 \\
-\end{tabular} \right) ] ;
+* `++EnPolaires(u)++` retourne un nouveau vecteur _(1.41 ; 45°)_ si u = stem:[\left( \begin{align}1 \\ 1 \end{align} \right) ]  ;
 * Par contre `++EnPolaires({1,1})++` retourne le point _(1.41; 45°)_.
 
 ====
@@ -60,8 +59,7 @@ EnPolaires(<Nombre complexe >)::
 
 * `++EnPolaires(1 + sqrt(3) * ί)++` retourne _(2; stem:[\frac{\pi}{3}])_ qui va être un point lorsque l'on clique la
 pastille de visibilité;alors que
-* `++v:= EnPolaires(1 + sqrt(3) * ί)++` retourne un vecteur v stem:[ \left( \begin{tabular}2 \\ \frac{\pi}{3} \\
-\end{tabular} \right) ] ;
+* `++v:= EnPolaires(1 + sqrt(3) * ί)++` retourne un vecteur v  = stem:[\left( \begin{align}2 \\ \frac{\pi}{3} \end{align} \right) ]  ;
 * `++EnPolaires(A)++` si A=(3,-4), retourne 3 - 4ί , il est nécessaire d'avoir fait une affectation, pour récupérer le
 nombre complexe dans Algèbre.
 
