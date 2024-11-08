@@ -71,14 +71,18 @@ la fonction valant _x^3^_ pour x entre 0 et 3 et *NULLE* pour _x ≤ 0_ ou _x �
 `++  (-1<x<0)(x^3+1)+(0<x<2)(1-x)+!(-1<x<2)(x^2-5)++` retourne la fonction valant stem:[x² - 5], sauf entre -1 et 0, où
 elle vaut stem:[x^{3} +1], et entre 0 et 2, où elle vaut stem:[1-x].
 
-La première syntaxe provoquant l'affichage stem:[h(x) = \begin{cases} \begin{array}{rcl}x^{3}+1 & :& -1< x < 0 \\
+La première syntaxe provoquant l'affichage 
+
+stem:[h(x) = \begin{cases} \begin{array}{rcl}x^{3}+1 & :& -1< x < 0 \\
 1-x & : &0< x<2 \\x^{2} -5 & :& \text{sinon}\end{array}\end{cases} ] dans Algèbre.
 
 * `++u(x) = Si(x < 2, x², x < 5, x, x < 6, (-x) / 7)++` correspond à stem:[u(x) = \left\{\begin{matrix} x²
 \space\space\space\space:\space\space x < 2\\x\space\space\space\space : \space\space x < 5\\ -
 \frac{x}{7}\space\space : \space\space x < 6 \end{matrix}\right. ] dans Algèbre
 
-* `++f(x) =Si(x<-1,x²,-1<=x<=1,1,-x²+2)++` retourne la fonction par morceaux stem:[f(x) = \begin{cases} \begin{array}{rcl}x^{2} & :& x < -1 \\
+* `++f(x) =Si(x<-1,x²,-1<=x<=1,1,-x²+2)++` retourne la fonction par morceaux 
+
+stem:[f(x) = \begin{cases} \begin{array}{rcl}x^{2} & :& x < -1 \\
 1 & : &-1 \leq x \leq 1 \\-x^{2} + 2 & :& \text{sinon}\end{array}\end{cases} ].
 
 ====
