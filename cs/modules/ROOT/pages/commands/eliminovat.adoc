@@ -1,0 +1,22 @@
+= Příkaz Eliminovat
+:page-en: commands/Eliminate
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+== CAS Syntax
+
+Eliminovat( <Seznam polynomů>, <Seznam proměnných> )::
+  Pro systém algebraických rovnic definovaných pomocí polynomů vypočítá ekvivalentní systém rovnic eliminováním všech proměnných v daném seznamu.
+
+[EXAMPLE]
+====
+
+`++Eliminovat({x^2 + x, y^2 - x}, {x})++` dává {stem:[ y^{4} + y^{2} ]}.
+
+====
+
+[NOTE]
+====
+
+Viz také xref:/commands/GroebnerLexDeg.adoc[příkaz GroebnerLexDeg].
+
+====
