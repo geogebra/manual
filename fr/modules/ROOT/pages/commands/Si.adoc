@@ -2,6 +2,8 @@
 :page-en: commands/If
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Logique.adoc[Commandes Logique]
+
 Si( <Condition>, <Objet> )::
   retourne une copie de l’objet si la condition prend la valeur _true_ (vrai), et un objet non défini si elle prend la
   valeur _false_ (faux).
@@ -34,7 +36,7 @@ toutes les autres valeurs de _a_ elle retourne "Moi".
 
 ====
 
-[cols=",",]
+[width="100%",cols="12%,88%",]
 |===
 |image:18px-Attention.png[Attention,title="Attention",width=18,height=18] *Attention*: |Les objets doivent être du même
 type.
@@ -50,12 +52,10 @@ xref:/commands/Intégrale.adoc[Intégrale], et xref:/commands/Intersection.adoc[
 [EXAMPLE]
 ====
 
-*Exemples :*
-
 * `++f(x) = S(x < 3, sin(x), x^2)++` ou `++f(x) = (x < 3) sin(x) +(x>=3) x^2 ++` retourne la fonction valant _sin(x)_
 pour _x < 3_ et _x^2^_ pour _x ≥ 3_
 
-La première syntaxe provoquant l'affichage stem:[f(x) = \left\\{\begin\{matrix} sin( x ) \space\space : \space x < 3\\
+La première syntaxe provoquant l'affichage stem:[f(x) = \left\{\begin\{matrix} sin( x ) \space\space : \space x < 3\\
 x^\{2}\space\space\space\space\space\space\space\space\space\space : \space \text\{sinon} \end\{matrix}\right. ] dans
 Algèbre.
 
@@ -64,20 +64,44 @@ ou _x ≥ 3_, avec pour affichage dans _Algèbre_ : x³ ((0 < x) ∧ (x < 3)), 
 _Saisie_, vous obtenez la fonction valant _x^3^_ pour x entre 0 et 3 et *NULLE* pour _x ≤ 0_ ou _x ≥ 3_, une syntaxe
 plus simple `++g(x) = x^3, 0 < x <3++` retournant la fonction valant _x^3^_ pour x entre 0 et 3 et non définie pour _x ≤
 0_ ou _x ≥ 3_, avec pour affichage dans _Algèbre_ : x³, (0 < x < 3)
-** à ne pas confondre avec `++g(x) = x^3 (0 < x <3)++` avec pour affichage dans _Algèbre_ : x³ (0 < x < 3), vous obtenez
+
+* à ne pas confondre avec `++g(x) = x^3 (0 < x <3)++` avec pour affichage dans _Algèbre_ : x³ (0 < x < 3), vous obtenez
 la fonction valant _x^3^_ pour x entre 0 et 3 et *NULLE* pour _x ≤ 0_ ou _x ≥ 3_
 * `++h(x) = Si(-1  <  x  <  0, x³ + 1, 0  <  x  <  2, 1 - x, x² - 5)++` ou
 `++  (-1<x<0)(x^3+1)+(0<x<2)(1-x)+!(-1<x<2)(x^2-5)++` retourne la fonction valant stem:[x² - 5], sauf entre -1 et 0, où
-elle vaut stem:[x^\{3} +1], et entre 0 et 2, où elle vaut stem:[1-x].
+elle vaut stem:[x^{3} +1], et entre 0 et 2, où elle vaut stem:[1-x].
 
-La première syntaxe provoquant l'affichage stem:[h(x) = \left\\{\begin\{matrix} x^\{3} + 1
-\space\space\space\space:\space\space -1 < x < 0\\ 1 - x\space : \space\space 0 < x < 2\\ x^\{2} - 5\space\space :
-\space\space\text\{sinon} \end\{matrix}\right. ] dans Algèbre. [.small]#_(Le rendu LaTeX n'est pas génial dans le
+La première syntaxe provoquant l'affichage stem:[h(x) = \left\{\begin{matrix} x^{3} + 1
+\space\space\space\space:\space\space -1 < x < 0\\ 1 - x\space : \space\space 0 < x < 2\\ x^{2} - 5\space\space :
+\space\space\text\{sinon} \end{matrix}\right. ] dans Algèbre. [.small]#_(Le rendu LaTeX n'est pas génial dans le
 wiki)_#
 
-* `++u(x) = Si(x < 2, x², x < 5, x, x < 6, (-x) / 7)++` correspond à stem:[h(x) = \left\\{\begin\{matrix} x²
+* `++u(x) = Si(x < 2, x², x < 5, x, x < 6, (-x) / 7)++` correspond à stem:[h(x) = \left\{\begin{matrix} x²
 \space\space\space\space:\space\space x < 2\\x\space\space\space\space : \space\space x < 5\\ -
-\frac{x}\{7}\space\space : \space\space x < 6 \end\{matrix}\right. ] dans Algèbre
+\frac{x}{7}\space\space : \space\space x < 6 \end{matrix}\right. ] dans Algèbre
+
+* `++f(x) =If(x<-1,x²,-1<=x<=1,1,-x²+2)++` yields the piecewise function stem:[f(x) = \begin{cases} \begin{array}{rcl}x^{2} & :& x < -1 \\
+1 & : &-1 \leq x \leq 1 \\-x^{2} + 2 & :& \text{otherwise}\end{array}\end{cases} ].
+
+====
+
+==Fonctions conditionnelles à plusieurs variables.
+
+La commande *Si* peut être aussi utilisée pour définir des fonctions conditionnelles à plusieurs variables. 
+
+Dans ce cas, la définition de tous les morceaux doit contenir toutes les variables.
+
+[EXAMPLE]
+====
+
+Soit `++ValCurseur = 1++` un curseur à valeurs dans l'intervalle [1,3].
+
+La commande
+`++f(x,y,a,b,c) = Si(ValCurseur==1, x + 0y +a + 0b + c, ValCurseur==2, 0x+ y^2 + 0a +2b +0c, x + y + 0a + b +0c)++` retourne
+la fonction valant _x+a+c_ si le curseur vaut 1, _y^2^ + 2b_ s'il vaut 2, and _x + y + b_ s'il vaut 3.
+
+====
+
 
 ====
 
