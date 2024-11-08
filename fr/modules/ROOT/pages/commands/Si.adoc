@@ -52,12 +52,11 @@ xref:/commands/Intégrale.adoc[Intégrale], et xref:/commands/Intersection.adoc[
 [EXAMPLE]
 ====
 
-* `++f(x) = S(x < 3, sin(x), x^2)++` ou `++f(x) = (x < 3) sin(x) +(x>=3) x^2 ++` retourne la fonction valant _sin(x)_
+* `++f(x) = Si(x < 3, sin(x), x^2)++` ou `++f(x) = (x < 3) sin(x) +(x>=3) x^2 ++` retourne la fonction valant _sin(x)_
 pour _x < 3_ et _x^2^_ pour _x ≥ 3_
 
-La première syntaxe provoquant l'affichage stem:[f(x) = \left\{\begin\{matrix} sin( x ) \space\space : \space x < 3\\
-x^\{2}\space\space\space\space\space\space\space\space\space\space : \space \text\{sinon} \end\{matrix}\right. ] dans
-Algèbre.
+La première syntaxe provoquant l'affichage stem:[h(x) = \begin{cases} \begin{array}{rcl}sin(x) & :&  x < 3 \\
+x^{2} & :& \text{sinon}\end{array}\end{cases}] dans Algèbre.
 
 * `++g(x) = Si(0 < x ∧ x<3, x^3)++` retourne la fonction valant _x^3^_ pour x entre 0 et 3 et non définie pour _x ≤ 0_
 ou _x ≥ 3_, avec pour affichage dans _Algèbre_ : x³ ((0 < x) ∧ (x < 3)), *MAIS* si vous validez cette écriture dans
@@ -71,21 +70,20 @@ la fonction valant _x^3^_ pour x entre 0 et 3 et *NULLE* pour _x ≤ 0_ ou _x �
 `++  (-1<x<0)(x^3+1)+(0<x<2)(1-x)+!(-1<x<2)(x^2-5)++` retourne la fonction valant stem:[x² - 5], sauf entre -1 et 0, où
 elle vaut stem:[x^{3} +1], et entre 0 et 2, où elle vaut stem:[1-x].
 
-La première syntaxe provoquant l'affichage stem:[h(x) = \left\{\begin{matrix} x^{3} + 1
-\space\space\space\space:\space\space -1 < x < 0\\ 1 - x\space : \space\space 0 < x < 2\\ x^{2} - 5\space\space :
-\space\space\text\{sinon} \end{matrix}\right. ] dans Algèbre. [.small]#_(Le rendu LaTeX n'est pas génial dans le
-wiki)_#
+La première syntaxe provoquant l'affichage stem:[h(x) = \begin{cases} \begin{array}{rcl}x^{3}+1 & :& -1< x < 0 \\
+1-x & : &0< x<2 \\x^{2} -5 & :& \text{sinon}\end{array}\end{cases} 
+ dans Algèbre.
 
-* `++u(x) = Si(x < 2, x², x < 5, x, x < 6, (-x) / 7)++` correspond à stem:[h(x) = \left\{\begin{matrix} x²
+* `++u(x) = Si(x < 2, x², x < 5, x, x < 6, (-x) / 7)++` correspond à stem:[u(x) = \left\{\begin{matrix} x²
 \space\space\space\space:\space\space x < 2\\x\space\space\space\space : \space\space x < 5\\ -
 \frac{x}{7}\space\space : \space\space x < 6 \end{matrix}\right. ] dans Algèbre
 
-* `++f(x) =If(x<-1,x²,-1<=x<=1,1,-x²+2)++` yields the piecewise function stem:[f(x) = \begin{cases} \begin{array}{rcl}x^{2} & :& x < -1 \\
-1 & : &-1 \leq x \leq 1 \\-x^{2} + 2 & :& \text{otherwise}\end{array}\end{cases} ].
+* `++f(x) =Si(x<-1,x²,-1<=x<=1,1,-x²+2)++` retourne la fonction par morceaux stem:[f(x) = \begin{cases} \begin{array}{rcl}x^{2} & :& x < -1 \\
+1 & : &-1 \leq x \leq 1 \\-x^{2} + 2 & :& \text{sinon}\end{array}\end{cases} ].
 
 ====
 
-==Fonctions conditionnelles à plusieurs variables.
+== Fonctions conditionnelles à plusieurs variables.
 
 La commande *Si* peut être aussi utilisée pour définir des fonctions conditionnelles à plusieurs variables. 
 
@@ -102,8 +100,6 @@ la fonction valant _x+a+c_ si le curseur vaut 1, _y^2^ + 2b_ s'il vaut 2, and _x
 
 ====
 
-
-====
 
 [NOTE]
 ====
@@ -122,9 +118,9 @@ image:Ambox_content.png[image,width=40,height=40]
 "propre" des limites au niveau du point "critique".
 |===
 
-== La commande *Si* dans les Scripts
+== La commande Si dans les Scripts.
 
-La commande Si peut être utilisée dans les scripts pour accomplir différentes actions sous certaines conditions.
+La commande *Si* peut être utilisée dans les scripts pour accomplir différentes actions sous certaines conditions.
 
 [EXAMPLE]
 ====
