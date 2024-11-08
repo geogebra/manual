@@ -59,13 +59,14 @@ La première syntaxe provoquant l'affichage stem:[h(x) = \begin{cases} \begin{ar
 x^{2} & :& \text{sinon}\end{array}\end{cases}] dans Algèbre.
 
 * `++g(x) = Si(0 < x ∧ x<3, x^3)++` retourne la fonction valant _x^3^_ pour x entre 0 et 3 et non définie pour _x ≤ 0_
-ou _x ≥ 3_, avec pour affichage dans _Algèbre_ : x³ ((0 < x) ∧ (x < 3)), *MAIS* si vous validez cette écriture dans
-_Saisie_, vous obtenez la fonction valant _x^3^_ pour x entre 0 et 3 et *NULLE* pour _x ≤ 0_ ou _x ≥ 3_, une syntaxe
+ou _x ≥ 3_, avec pour affichage dans _Algèbre_ : stem:[x³ ((0 < x) ∧ (x < 3))],  une syntaxe
 plus simple `++g(x) = x^3, 0 < x <3++` retournant la fonction valant _x^3^_ pour x entre 0 et 3 et non définie pour _x ≤
-0_ ou _x ≥ 3_, avec pour affichage dans _Algèbre_ : x³, (0 < x < 3)
+0_ ou _x ≥ 3_, avec pour affichage dans _Algèbre_ : stem:[x³, (0 < x < 3)]
 
-* à ne pas confondre avec `++g(x) = x^3 (0 < x <3)++` avec pour affichage dans _Algèbre_ : x³ (0 < x < 3), vous obtenez
+* Attention ! À ne pas confondre avec `++g(x) = x^3 (0 < x <3)++` (*sans le séparateur virgule*) avec pour affichage dans _Algèbre_ : stem:[x³ (0 < x < 3)], vous obtenez
 la fonction valant _x^3^_ pour x entre 0 et 3 et *NULLE* pour _x ≤ 0_ ou _x ≥ 3_
+
+
 * `++h(x) = Si(-1  <  x  <  0, x³ + 1, 0  <  x  <  2, 1 - x, x² - 5)++` ou
 `++  (-1<x<0)(x^3+1)+(0<x<2)(1-x)+!(-1<x<2)(x^2-5)++` retourne la fonction valant stem:[x² - 5], sauf entre -1 et 0, où
 elle vaut stem:[x^{3} +1], et entre 0 et 2, où elle vaut stem:[1-x].
