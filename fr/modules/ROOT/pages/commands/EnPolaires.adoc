@@ -2,6 +2,8 @@
 :page-en: commands/ToPolar
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_GeoGebra.adoc[Commandes GeoGebra] 
+
 EnPolaires(<Nombre complexe >)::
   Retourne le couple _(module ; argument)_ de l'écriture sous forme trigonométrique du nombre complexe donné.
 
@@ -14,28 +16,33 @@ dans Propriétés... Algèbre.
 [EXAMPLE]
 ====
 
-*Exemples :*
-
 * `++EnPolaires(1 + sqrt(3) * ί)++` retourne le point _(2; 60°)_ ou _(2 ; 1.05 rad)_ selon l'unité d'angles choisie ;
 * `++EnPolaires(A)++` retourne, si A=(3,-4), _(5 ; 306.87°)_ ou _(5 ; -0.93 rad)_, selon l'unité d'angles choisie .
 
 ====
 
-EnPolaires(<Vecteur >)
+EnPolaires(<Vecteur >)::
 
 Retourne le couple _(norme ; angle polaire)_ du vecteur donné
 
 [EXAMPLE]
 ====
 
-*Exemples :*
-
-* `++EnPolaires(u)++` retourne un nouveau vecteur _(1.41 ; 45°)_ si u = stem:[ \left( \begin\{tabular}\{}1 \\ 1 \\
-\end\{tabular} \right) ] ;
+* `++EnPolaires(u)++` retourne un nouveau vecteur _(1.41 ; 45°)_ si u = stem:[ \left( \begin{tabular}{}1 \\ 1 \\
+\end{tabular} \right) ] ;
 * Par contre `++EnPolaires({1,1})++` retourne le point _(1.41; 45°)_.
 
 ====
 
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/EnPoint.adoc[EnPoint],
+xref:/commands/EnComplexe.adoc[EnComplexe] et xref:/commands/FormeExponentielle.adoc[FormeExponentielle].
+
+[NOTE]
+====
+
+L'imaginaire ί est obtenu en pressant [.kcode]#ALT# + [.kcode]#i#.
+
+====
 ____________________________________________________________
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
@@ -49,12 +56,10 @@ EnPolaires(<Nombre complexe >)::
 [EXAMPLE]
 ====
 
-*Exemples :*
-
-* `++EnPolaires(1 + sqrt(3) * ί)++` retourne _(2; stem:[\frac{\pi}\{3}])_ qui va être un point lorsque l'on clique la
+* `++EnPolaires(1 + sqrt(3) * ί)++` retourne _(2; stem:[\frac{\pi}{3}])_ qui va être un point lorsque l'on clique la
 pastille de visibilité;alors que
-* `++v:= EnPolaires(1 + sqrt(3) * ί)++` retourne un vecteur v stem:[ \left( \begin\{tabular}\{}2 \\ \frac{\pi}\{3} \\
-\end\{tabular} \right) ] ;
+* `++v:= EnPolaires(1 + sqrt(3) * ί)++` retourne un vecteur v stem:[ \left( \begin{tabular}{}2 \\ \frac{\pi}{3} \\
+\end{tabular} \right) ] ;
 * `++EnPolaires(A)++` si A=(3,-4), retourne 3 - 4ί , il est nécessaire d'avoir fait une affectation, pour récupérer le
 nombre complexe dans Algèbre.
 
@@ -66,17 +71,9 @@ EnPolaires(<Vecteur >)::
 ====
 
 `++v:=EnPolaires(u)++` ou `++EnPolaires({1,1})++` retourne le vecteur stem:[ \left(
-\begin\{tabular}\{}\sqrt{2} \\ \frac{\pi}\{4} \\ \end\{tabular} \right) ] si u = stem:[ \left( \begin\{tabular}\{}1 \\
-1 \\ \end\{tabular} \right) ] .
+\begin{tabular}{}\sqrt{2} \\ \frac{\pi}{4} \\ \end\{tabular} \right) ] si u = stem:[ \left( \begin{tabular}{}1 \\
+1 \\ \end{tabular} \right) ] .
 
 ====
 
-[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/EnPoint.adoc[EnPoint],
-xref:/commands/EnComplexe.adoc[EnComplexe] et xref:/commands/FormeExponentielle.adoc[FormeExponentielle].
 
-[NOTE]
-====
-
-L'imaginaire ί est obtenu en pressant [.kcode]#ALT# + [.kcode]#i#.
-
-====
