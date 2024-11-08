@@ -2,13 +2,13 @@
 :page-en: commands/CountIf
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Logique.adoc[Commandes Logique]
+
 NbSi( <Condition c>, <Liste L> )::
   Nombre des éléments de liste _L_ vérifiant la condition _c_.
 
 [EXAMPLE]
 ====
-
-*Exemple :*
 
 * `++NbSi(x<3,{1,2,3,4,5}) ++` donne le nombre 2.
 * `++NbSi(x<3,A1:A10)++`, où _A1:A10_ est une plage de cellules du tableur, compte toutes les cellules dont la valeur
@@ -36,7 +36,7 @@ par ex. pour les points P, Q, R
 
 va vous retourner le nombre de ces points dont l'abscisse est plus petite que 3.
 
-La variable A est remplacée successivement par P puis Q puis R pour tester la condition.
+La variable A est remplacée successivement par P, puis Q, puis R pour tester la condition.
 
 `++NbSi(x(A) < 3, A, {(0, 1), (4, 2), (2, 2)})++` donne _2_.
 
