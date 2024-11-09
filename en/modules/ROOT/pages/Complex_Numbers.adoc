@@ -2,15 +2,14 @@
 :page-en: Complex_Numbers
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
-GeoGebra does not support complex numbers directly, but you may use xref:/Points_and_Vectors.adoc[points] to simulate
-operations with complex numbers.
+GeoGebra does not support complex numbers directly, but you can use xref:/Points_and_Vectors.adoc[points and vectors] to display complex numbers in the plane and perform algebraic operations with complex numbers.
 
 [EXAMPLE]
 ====
 
-If you enter the complex number 3 + 4ί into the Input Bar, you get the point (3, 4) in the
+When entering the complex number 3 + 4ί into the Input Bar, the point (3, 4) is displayed in the
 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Graphics_View.adoc[Graphics
-View]. This point’s coordinates are shown as 3 + 4ί in the image:16px-Menu_view_algebra.svg.png[Menu view
+View]. The complex number is shown in rectangular form as 3 + 4ί in the image:16px-Menu_view_algebra.svg.png[Menu view
 algebra.svg,width=16,height=16] xref:/Algebra_View.adoc[Algebra View].
 
 ====
@@ -25,11 +24,11 @@ the point and select _Complex Number_ from the list of Coordinates formats on ta
 
 ====
 
-The imaginary unit ί can be chosen from the symbol box in the xref:/Input_Bar.adoc[Input Bar] or written using
-[.kcode]#Alt# + [.kcode]#i#. Unless you are typing the input in image:16px-Menu_view_cas.svg.png[Menu view
-cas.svg,width=16,height=16] xref:/CAS_View.adoc[CAS View] or you defined variable i previously, variable i is recognized
-as the ordered pair i = (0, 1) or the complex number 0 + 1ί. This also means, that you can use this variable i in order
-to type complex numbers into the _Input Bar_ (e.g. q = 3 + 4i), but not in the CAS.
+Unless you are in the image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] xref:/CAS_View.adoc[CAS View] or you have previously defined a variable named _i_, entering _i_ is recognized
+as the ordered pair _i_ = (0, 1) or the complex number 0 + 1ί. This means that you can use _i_ to enter complex numbers into the _Input Bar_ (e.g. _w_ = 3 + 4 _i_) of the _Algebra View_.
+In the CAS View use the shortcut [.kcode]#Alt# + [.kcode]#i#. to enter the imaginary unit ί.
+
 
 [EXAMPLE]
 ====
@@ -61,8 +60,8 @@ The following commands and xref:/Predefined_Functions_and_Operators.adoc[predefi
 
 * `++x(w)++` or `++real(w)++` return the real part of the complex number _w_
 * `++y(w)++` or `++imaginary(w)++` return the imaginary part of the complex number _w_
-* `++abs(w)++` or `++Length[w]++` return the absolute value of the complex number _w_
-* `++arg(w)++` or `++Angle[w]++` return the argument of the complex number _w_
+* `++abs(w)++` or `++Length(w)++` return the absolute value of the complex number _w_
+* `++arg(w)++` or `++Angle(w)++` return the argument of the complex number _w_
 
 [NOTE]
 ====
@@ -71,7 +70,7 @@ arg(w) is a number between -180° and 180°, while Angle[w] returns values betwe
 
 ====
 
-* `++conjugate(w)++` or `++Reflect[w,xAxis]++` return the conjugate of the complex number _w_
+* `++conjugate(w)++` or `++Reflect(w,xAxis)++` return the conjugate of the complex number _w_
 
 GeoGebra also recognizes expressions involving xref:/Numbers_and_Angles.adoc[real] and complex numbers.
 
