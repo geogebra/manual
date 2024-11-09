@@ -5,16 +5,20 @@ ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 Per creare una lista contenente vari oggetti (ad es. punti, segmenti, circonferenze) si utilizzano le parentesi graffe.
 Per inserire le parentesi graffe da tastiera italiana sono disponibili i seguenti tasti di scelta rapida:
 
-* graffa aperta \{ : [.kcode]#MAIUSC# + [.kcode]#ALT# + [.kcode]#è#
+* graffa aperta { : [.kcode]#MAIUSC# + [.kcode]#ALT# + [.kcode]#è#
 * graffa chiusa } : [.kcode]#MAIUSC# + [.kcode]#ALT# + [.kcode]#*# .
+
+
 
 [EXAMPLE]
 ====
 
 * `++L = {A, B, C}++` crea la lista contenente i punti _A_, _B_ e _C_ precedentemente definiti.
-* `++L = {(0, 0), (1, 1), (2, 2)}++` crea i tre punti senza nome immessi, e la lista contenente tali punti
+* `++L = {(0, 0), (1, 1), (2, 2)}++` crea i tre punti senza nome presenti nella lista e la lista contenente tali punti
 * Per ottenere rapidamente una lista di interi successivi, è possibile utilizzare la sintassi rapida `++..++`: ad
-esempio `++-5..5++` crea la lista \{_-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5_}.
+esempio `++-5..5++` crea la lista {_-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5_}.
+* Quando un gruppo rettangolare di celle del foglio di calcolo contiene dati, è possibile utilizzare la sintassi rapida `++:++` per creare la lista dei dati contenuti nella porzione del foglio di calcolo definita dalla prima e seconda cella inserite. La lista verrà riempita per colonne, ad esempio `++A1:A5++` crea la lista contenente i dati delle celle _++{A1, A2, A3, A4, A5}++_ e `++A1:B5++` crea la lista contenente i dati delle celle _++{A1, A2, A3, A4, A5, B1, B2, B3, B4, B5}++_.
+
 
 ====
 
@@ -25,6 +29,7 @@ esempio `++-5..5++` crea la lista \{_-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5_}.
 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Vista_Grafici.adoc[vista Grafici]
 * È possibile fare operazioni tra liste, o utilizzare le liste come argomenti negli appositi
 xref:/commands/Comandi_Liste.adoc[comandi dedicati alle liste].
+* L'utilizzo di liste come argomenti dei comandi o le operazioni tra liste funzionano correttamente solo se le liste contengono oggetti dello stesso tipo (ad es. liste di punti, liste di numeri, etc...)
 
 ====
 
@@ -40,7 +45,6 @@ Sia `++lista = {1, 2, 3, 4, 5}++`, allora:
 
 * `++lista(1)++` restituisce il primo elemento della lista: _1_
 * `++lista(2)++` restituisce il secondo elemento della lista: _2_
-** .../...
 * `++lista(-1)++` restituisce l'ultimo elemento della lista: _5_
 * `++lista(-5)++` restituisce il primo elemento della lista: _1_
 * `++lista(0)++` restituisce _non definito_, come pure la sintassi `++lista(k)++` per k > 5 o k < -5
@@ -56,9 +60,9 @@ uguali, e restituisce il risultato _true_ oppure _false_.
 * _lista1_ `++!=++` _lista2_: verifica se le due liste sono n-uple ordinate diverse, e restituisce il risultato _true_
 oppure _false_.
 * `++Unico[lista1] == Unico[lista2]++` oppure `++lista1 \ lista2 == {}++` : verifica se le due liste rappresentano
-insiemi uguali (cioè vengono ignorati sia l'ordine degli elementi, che gli elementi ripetuti)
+insiemi uguali (cioè vengono ignorati sia l'ordine degli elementi, che gli elementi ripetuti) e restituisce _true_ o _false_.
 * `++Ordina[lista1] == Ordina[lista2]++`: Verifica se le due liste rappresentano
-https://it.wikipedia.org/wiki/Multiinsieme[multiinsiemi] uguali (cioè viene ignorato l'ordine degli elementi)
+https://it.wikipedia.org/wiki/Multiinsieme[multiinsiemi] uguali (cioè viene ignorato l'ordine degli elementi) e restituisce _true_ o _false_.
 
 Vedere anche i comandi xref:/commands/Unico.adoc[Unico] e xref:/commands/Ordina.adoc[Ordina].
 
@@ -93,7 +97,7 @@ Le due liste devono avere la stessa lunghezza.
 Le due liste devono avere la stessa lunghezza.
 
 ====
-* _lista_ `++–++` numero: sottrae il numero indicato da ogni elemento della lista.
+* _lista_ `++–++` _numero_: sottrae il numero indicato da ogni elemento della lista.
 
 === Prodotto e divisione
 
