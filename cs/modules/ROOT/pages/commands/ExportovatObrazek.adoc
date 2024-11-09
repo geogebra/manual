@@ -3,13 +3,13 @@
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
 ExportovatObrazek( <Vlastnost>, <Hodnota>, <Vlastnost>, <Hodnota>, ... )::
-  Exportuje obrázek aktuálně aktivního zobrazení (nebo zobrazení určeného parametrem „view“).
+  Exportuje obrázek aktuálního zobrazení v okně (nebo zobrazení v okně určeného parametrem „view“).
 
 [NOTE]
 ====
 
 * _Vlastnosti_ použité v syntaxi příkazu, uvedené v následujících příkladech, musí být zadány v angličtině.
-* _Hodnoty_ související se zobrazením, které bude uloženo jako obrázek, jsou:
+* _Hodnoty_ související se zobrazením v okně, které bude uloženo jako obrázek, jsou:
 
 * 1 pro image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Nákresna_
 * 2 pro image:16px-Menu_view_graphics2.svg.png[Menu view graphics2.svg,width=16,height=16] _Nákresna_ 2
@@ -22,7 +22,7 @@ ExportovatObrazek( <Vlastnost>, <Hodnota>, <Vlastnost>, <Hodnota>, ... )::
 
 * `++ExportovatObrazek("scale", 5)++`
 
-Zobrazí vyskakovací okno aktuálního zobrazení, aby uživatel mohl kliknout pravým tlačítkem -> Uložit obrázek jako...
+Zobrazí vyskakovací menu aktuálního zobrazení, aby uživatel mohl kliknout pravým tlačítkem -> Uložit obrázek jako...
 
 * `++ExportovatObrazek("filename", "image.png")++`
 
@@ -30,7 +30,6 @@ Uloží aktuální zobrazení jako soubor s názvem „image.png“
 
 * `++ExportovatObrazek("filename", "image.png", "view", 2)++`
 
-Saves a file called "image.png" of Graphics View 2
 Uloží zobrazení Grafika 2 jako soubor s názvem „image.png“
 
 * `++ExportovatObrazek("filename", "image.png", "view", -1)++`
@@ -39,56 +38,53 @@ Uloží zobrazení Grafický náhled 3D jako soubor s názvem „image.png“
 
 * `++ExportovatObrazek("filename", "image.png", "dpi", 300)++`
 
-Uloží aktuální zobrazení jako soubor s názvem „image.png“ v rozlišení 300 dpi (bodů na palec)
+Uloží aktuální zobrazení jako soubor s názvem „image.png“ v rozlišení 300 dpi (300 bodů na palec)
 
 * `++ExportovatObrazek("filename", "image.png", "scale", 2)++`
 
-Saves a file called "image.png" of the current view at scale 2 (ie twice nominal screen resolution)
+Uloží aktuální zobrazení jako soubor s názvem „image.png“ v měřítku 2 (tj. dvojnásobné nominální rozlišení obrazovky)
 
 * `++ExportovatObrazek("filename", "image.png", "scalecm", 2, "dpi", 600)++`
 
-Saves a file called "image.png" of the current view at 600 dpi at a scale 1 unit = 2 cm
+Uloží aktuální zobrazení jako soubor s názvem „image.png“ s rozlišením 600 dpi v měřítku, kde 1 jednotka = 2 cm
 
 * `++ExportovatObrazek("filename", "image.png", "width", 1000)++`
 
-Saves a file called "image.png" of the current view with width = 1000 pixels
+Uloží aktuální zobrazení jako soubor s názvem „image.png“ se šířkou 1000 pixelů
 
 * `++ExportovatObrazek("filename", "image.png", "height", 1000)++`
 
-Saves a file called "image.png" of the current view with height = 1000 pixels
+Uloží aktuální zobrazení jako soubor s názvem „image.png“ s výškou 1000 pixelů
 
 * `++ExportovatObrazek("filename", "image.png", "transparent", true)++`
 
-Saves a transparent PNG file called "image.png"
+Uloží soubor PNG s průhledným pozadím s názvem „image.png“
 
-Setting the “transparent” property as _false_ saves also background images.
+Nastavení vlastnosti “transparent” na _false_ uloží také pozadí.
 
 * `++ExportovatObrazek("filename", "image.svg", "type", "svg")++`
 
-Saves a file called "image.svg" of the current view in SVG format
+Uloží aktuální zobrazení jako soubor ve formátu SVG s názvem „image.svg“
 
 * `++ExportovatObrazek("filename", "image.gif", "type", "gif", "slider", a, "loop", true, "time", 200, "width", 400)++`
 
-Saves a looping animated GIF of the current view controlled by slider "a" with 200ms between frames. *Keep the width and
-number of slider steps small*
+Uloží smyčkovaný animovaný GIF aktuálního zobrazení, ovládaný posuvníkem „a“ s prodlevou 200 ms mezi snímky. *Ponechejte malou šířku a nízký počet kroků posuvníku.*
 
 * `++ExportovatObrazek("filename", "image.gif", "type", "gif", "view", -1, "rotate", 360°, "slider", a, "loop", true, "time", 200)++`
 
-Saves a looping animated GIF of the current view controlled by slider "a" with 200ms between frames and rotates the view
-360° during the animation. *Keep the size of the view and the number of steps small*
+Uloží smyčkovaný animovaný GIF aktuálního zobrazení, ovládaný posuvníkem „a“ s prodlevou 200 ms mezi snímky a otočením zobrazení o 360° během animace. *Ponechejte malou velikost okna a nízký počet kroků posuvníku.*
 
 * `++ExportovatObrazek("type", "pdf", "filename", "test.pdf")++`
 
-Creates a PDF of the current view (or a 2-page PDF if Graphics View 2 is open)
+Vytvoří PDF aktuálního zobrazení (nebo 2stránkové PDF, pokud je otevřeno okno Nákresna 2)
 
 * `++ExportovatObrazek("type", "pdf", "filename", "test.pdf", "slider", n)++`
 
-Creates a *multi-page* PDF of the current view where each page corresponds to one step of the slider "n"
+Vytvoří *vícestránkové* PDF aktuálního zobrazení, kde každá stránka odpovídá jednomu kroku posuvníku „n“
 
 * `++pic1 = ExportovatObrazek("view", 2, "corner", A, "corner2", B)++`
 
-Creates a GeoGebra image of View 2 and puts it in the view with position defined by `++A++` and `++B++`
-
+Vytvoří obrázek zobrazení Grafika 2 v GeoGebře a umístí jej v okně na pozici definovanou body `++A++` and `++B++`
 ====
 
 [NOTE]
