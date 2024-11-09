@@ -2,23 +2,23 @@
 :page-en: Complex_Numbers
 ifdef::env-github[:imagesdir: /it/modules/ROOT/assets/images]
 
-GeoGebra non supporta direttamente i numeri complessi, ma utilizzando xref:/Punti_e_vettori.adoc[punti o vettori] è
-possibile simulare le operazioni con i numeri complessi.
+GeoGebra non supporta direttamente i numeri complessi, ma utilizzando xref:/Punti_e_vettori.adoc[punti e vettori] è
+possibile visualizzare i numeri complessi e calcolare esprressioni algebriche contenenti i numeri complessi.
 
 [EXAMPLE]
 ====
 
-Digitando nella barra di inserimento il numero complesso 3 + 4ί , si ottiene nella
+Digitando nella barra di inserimento l'espressione 3 + 4ί , si ottiene nella
 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _vista Grafici_ il punto (3, 4), le cui
 coordinate sono visualizzate nella image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _vista
-Algebra_ come 3 + 4ί .
+Algebra_ in forma algebrica come 3 + 4ί .
 
 ====
 
 [NOTE]
 ====
 
-Per definire un numero come numero complesso nella image:16px-Menu_view_algebra.svg.png[Menu view
+Per definire un punto come numero complesso nella image:16px-Menu_view_algebra.svg.png[Menu view
 algebra.svg,width=16,height=16] xref:/Vista_Algebra.adoc[vista Algebra], aprire la
 image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Finestra_di_dialogo_Proprietà.adoc[finestra
 di dialogo Proprietà] del punto e selezionare _Numero complesso_ dall'elenco dei formati di _Coordinate_ contenuto nella
@@ -26,12 +26,9 @@ scheda _Algebra_.
 
 ====
 
-L'unità immaginaria _ί_ può essere selezionata nella casella dei simboli alla destra della barra di inserimento, o
-digitata direttamente utilizzando la combinazione di tasti [.kcode]#Alt# + [.kcode]#i#. Se la variabile non è stata
-precedentemente definita, anche la lettera _i_ viene riconosciuta automaticamente come la coppia ordinata (0, 1), ovvero
-il numero complesso 0 + 1ί. Ciò significa dunque che è possibile utilizzare la variabile _i_ per definire numeri
-complessi direttamente, digitando nella barra di inserimento ad es. q = 3 + 4i, tranne che nella
-image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _vista CAS_, in cui è necessario utilizzare
+Se la variabile _i_ non è stata precedentemente definita o non si è in _Vista CAS_, la lettera _i_ viene riconosciuta automaticamente come la coppia ordinata (0, 1), ovvero
+il numero complesso 0 + 1ί. Ciò significa che è possibile utilizzare la variabile _i_ per definire i numeri complessi direttamente, digitando nella barra di inserimento ad es. _w_ = 3 + 4 _i_, tranne che nella
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _vista CAS_, in cui è necessario utilizzare la combinazione 
 [.kcode]#Alt# + [.kcode]#i#.
 
 [EXAMPLE]
@@ -66,8 +63,8 @@ complessi:
 
 * `++x(w)++` o `++partereale(w)++` restituiscono la parte reale del numero complesso _w_
 * `++y(w)++` o `++parteimmaginaria(w)++` restituiscono la parte immaginaria del numero complesso _w_
-* `++abs(w)++` o `++Lunghezza[w]++` restituiscono il modulo del numero complesso _w_
-* `++arg(w)++` o `++Angolo[w]++` restituiscono l'argomento del numero complesso _w_
+* `++abs(w)++` o `++Lunghezza(w)++` restituiscono il modulo del numero complesso _w_
+* `++arg(w)++` o `++Angolo(w)++` restituiscono l'argomento del numero complesso _w_
 
 [NOTE]
 ====
@@ -76,7 +73,7 @@ arg(w) è un valore compreso tra -180° e 180°, mentre Angolo[w] restituisce va
 
 ====
 
-* `++coniugato(w)++` o `++Simmetrico[w,asseX]++` restituiscono il coniugato del numero complesso _w_
+* `++coniugato(w)++` o `++Simmetrico(w,asseX)++` restituiscono il coniugato del numero complesso _w_
 
 GeoGebra inoltre riconosce le espressioni contenenti numeri xref:/Numeri_e_angoli.adoc[reali] e complessi.
 
