@@ -10,20 +10,20 @@ Foyer( <Conique c> )::
 [EXAMPLE]
 ====
 
-pour la parabole dont une équation est stem:[y= (x-3)²+5] `++Foyer(y= (x-3)²+5)++` vous retourne le point _(3, 5.25)_ ;
+Pour la parabole dont une équation est stem:[y=(x-3)²+5] `++Foyer(y= (x-3)²+5)++` vous retourne le point _(3, 5.25)_ ;
 
-pour l'ellipse dont une équation est stem:[\frac{x²}{ 5 } +\frac{ (y - 1)² }{ 1 } = 1 ],
-`++Foyer( x² / 5 + (y - 1)² / 1 = 1 )++` vous retourne les 2 points _(-2, 1)_ et _(2, 1)_ ;
+Pour l'ellipse dont une équation est stem:[\frac{x²}{5} +\frac{(y - 1)²}{1} = 1],
+`++Foyer( x²/5 + (y - 1)²/1 = 1 )++` vous retourne les 2 points _(-2, 1)_ et _(2, 1)_ ;
 
-pour l'hyperbole dont une équation est stem:[\frac{x²}{ 5 } -\frac{ (y - 1)² }{ 1 } = 1 ],
-`++Foyer( x² / 5 - (y - 1)² / 1 = 1 )++` vous retourne les 2 points _(-2.45, 1)_ et _(2.45, 1)_.
+Pour l'hyperbole dont une équation est stem:[\frac{x²}{5} -\frac{(y - 1)²}{1} = 1],
+`++Foyer( x²/5 - (y - 1)²/1 = 1 )++` vous retourne les 2 points _(-2.45, 1)_ et _(2.45, 1)_.
 
 ====
 
 [NOTE]
 ====
 
-pour un cercle, la commande retourne 2 fois le centre :-)
+Pour un cercle, la commande retourne 2 fois le centre :-).
 
 ====
 
@@ -33,12 +33,12 @@ image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul f
 
 Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
 
-Mais pour avoir tous les foyers, il faut entourer la commande de [.kcode]#{# et [.kcode]#}#.
+Mais pour avoir tous les foyers, il faut écrire la commande entre accolades [.kcode]#{# et [.kcode]#}#.
 
 [EXAMPLE]
 ====
 
-* `++Foyer( x² / 5 + (y - 1)² / 1 = 1 )++` vous retourne *le* point _(-2, 1)_
-* `++{Foyer( x² / 5 + (y - 1)² / 1 = 1 )}++` vous retourne la liste de points {_(-2, 1)_ , _(2, 1)_}.
+* `++Foyer( x²/5 + (y - 1)²/1 = 1 )++` vous retourne *le* point _(-2, 1)_
+* `++{Foyer( x²/5 + (y - 1)²/1 = 1 )}++` vous retourne la *liste* de points {_(-2, 1)_ , _(2, 1)_}.
 
 ====
