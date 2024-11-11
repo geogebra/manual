@@ -1,0 +1,32 @@
+= Polecenie Klasy
+:page-en: commands/Classes
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Klasy( <Lista danych>, <Start>, <Szerokość klas> )::
+  Podaje listę granic klas. Pierwsza granica (min) jest równa _Start_, ostatnia granica (max) będzie co najmniej równa maksymalnej wartości
+_Listy danych_, a granice będą równomiernie rozłożone między min a max.
+
+[EXAMPLE]
+====
+
+`++Klasy({0.1, 0.2, 0.4, 1.1}, 0, 1)++` daje w wyniku {0, 1, 2}
+
+====
+
+Klasy( <Lista danych>, <Liczba klas> )::
+  Podaje listę granic klas. Pierwsza granica (min) jest równa minimum _Listy danych_, ostatnia granica (max) będzie co najmniej równa maksimum
+_Listy danych_ a granice będą równomiernie rozłożone między min a max.
+
+[EXAMPLE]
+====
+
+`++Klasy({1, 3, 5, 7, 8, 9, 10}, 3)++` daje w wyniku {1, 4, 7, 10}
+
+====
+
+[NOTE]
+====
+
+Zgodnie z konwencją stosuje się regułę a ≤ x < b dla każdej klasy z wyjątkiem ostatniej klasy, dla której obowiązuje reguła a ≤ x ≤ b.
+
+====
