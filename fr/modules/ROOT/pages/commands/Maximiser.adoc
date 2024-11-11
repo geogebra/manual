@@ -2,12 +2,39 @@
 :page-en: commands/Maximize
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Optimisation.adoc[Commandes Optimisation]
+
 Maximiser( <Nombre lié>, <Nombre libre> )::
   Calcule le nombre libre qui donne une valeur maximale au nombre lié. Le nombre libre doit être un curseur et
   l'intervalle qui lui est associé servira d'intervalle de recherche. La relation doit être *continue* et avoir un seul
-  point de maximum local dans l'intervalle. Si la construction est compliquée, cette commande pourrait échouer ou
+  point de maximum _local_ dans l'intervalle. Si la construction est compliquée, cette commande pourrait échouer ou
   s'arrêter pour éviter d'utiliser trop de temps de processeur.
 
-Maximiser( <Nombre lié>, <Point sur chemin> )
+[EXAMPLE]
+====
+
+Soit _a_ un curseur dans [0,10] et _t1_ le triangle rectangle de sommets _C_=(_a_, 0), _A_=(0, 0) et_B_=(0,10 - _a_).
+`++Maximiser(t1,a)++` retourne 5, la valeur de _a_ telle que l'aire de _t1_ soit maximale.
+
+====
+
+
+Maximiser( <Nombre lié>, <Point sur chemin> )::
+Calcule la position du point qui donne une valeur maximale au nombre lié. Le point doit appartenir à un chemin qui sera utilisé comme intervalle de recherche.
+La relation doit être *continue* et avoir un seul point de maximum _local_ dans l'intervalle. Si la construction est compliquée, cette commande pourrait échouer ou
+  s'arrêter pour éviter d'utiliser trop de temps de processeur.
+
+[EXAMPLE]
+====
+
+Soit un cercle _c_ , _C_ un point lui appartenant et _D_ un point ne lui appartenant pas. Pour _f_ = Segment(C,D), `++Maximiser(f,C)++` crée le point de _c_ le plus éloigné de _D_.
+
+====
+
+
 
 [.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/Minimiser.adoc[Minimiser].
+
+
+
+
