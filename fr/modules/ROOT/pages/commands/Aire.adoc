@@ -2,9 +2,18 @@
 :page-en: commands/Area
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie] 
+
 Aire( <Point A>, <Point B>, <Point C>, ...)::
   Calcule l'aire (algébrique – donc attention si vous avez un polygone croisé) du polygone défini par les points donnés
   _A_, _B_, _C_,…
+
+[EXAMPLE]
+====
+
+`++Aire((0, 0), (3, 0), (3, 2), (0, 2))++` retourne _6_.
+
+====
 
 Aire( <Polygone> )::
   Calcule l'aire du polygone indiqué,
@@ -13,12 +22,18 @@ Aire( <Polygone> )::
 Aire( <Conique c> )::
   Calcule l'aire délimitée par la conique fermée _c_ (cercle ou ellipse).
 
+[EXAMPLE]
+====
+
+`++Aire(x^2 + y^2 = 2)++` retourne _6.28_.
+
+====
+
 [NOTE]
 ====
 
 *Aire( <Arc de cercle> )* : Calcule l'aire du domaine délimité par l'arc de cercle et la corde qui le sous-tend ;
 
-.
 
 *Aire( <Secteur circulaire> )* : Calcule l'aire du secteur circulaire indiqué,
 
@@ -39,6 +54,7 @@ xref:/commands/IntégraleDomaine.adoc[IntégraleDomaine].
 
 
 
+_____________________________________________________________
 
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
@@ -46,8 +62,10 @@ image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul f
 Cette commande fonctionne à l'identique dans la fenêtre Calcul formel , mais sans la possibilité d'effectuer du calcul
 littéral.
 
+_____________________________________________________________
 
 
+_____________________________________________________________
 
 
 image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] *Graphique
