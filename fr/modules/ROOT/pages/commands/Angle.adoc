@@ -2,7 +2,10 @@
 :page-en: commands/Angle
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-[width="100%",cols="50%,50%",]
+
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie] 
+
+[width="100%",cols="12%,88%",]
 |===
 |image:18px-Attention.png[Attention,title="Attention",width=18,height=18] *Attention*: a|
 Dans tout ce qui suit, les exemples sont données pour la configuration par défaut
@@ -13,26 +16,48 @@ Dans tout ce qui suit, les exemples sont données pour la configuration par déf
 
 |===
 
-Angle( <Objet> )
+Angle( <Objet> )::
 
 * Angle(<Point A>) : Angle entre l’axe (Ox) et le vecteur stem:[\overrightarrow{OA}] (L'angle est dessiné à l'origine
 du repère).
+[EXAMPLE]
+====
+
+`++Angle((1, 1))++` retourne _45°_.
+
+====
 * Angle(<Vecteur stem:[\vec{v}]>) : Angle entre l’axe (Ox) et le vecteur stem:[\vec{v}] (L'angle est dessiné à
 l'origine du vecteur).
+====
+
+`++Angle(Vecteur(1, 1)))++` retourne _45°_.
+
+====
 * Angle(<Conique c>) : Angle de l’axe principal de la conique _c_ par rapport à l’axe (Ox) (voir la commande
 xref:/commands/Axes.adoc[Axes]).
 
 [EXAMPLE]
 ====
 
-`++Angle(x²/4+y²/9=1)++` retourne _90°_ ou _1.57 rad_.
+`++Angle(x²/4+y²/9=1)++` retourne _90°_ .
 
 ====
 
 * Angle(<Nombre n>) : Convertit le nombre _n_ en un angle (le résultat entre 0 et (360°|2 stem:[\pi])) suivant l'unité
 choisie.
-* Angle(Polygone poly): Tous les angles intérieurs du polygone direct _poly_ (Les angles sont dessinés.).
+[EXAMPLE]
+====
 
+`++Angle(20)++` retourne _65.92°_.
+
+====
+* Angle(Polygone poly): Tous les angles intérieurs du polygone direct _poly_ (Les angles sont dessinés.).
+[EXAMPLE]
+====
+
+`++Angle(Polygone((4, 1), (2, 4), (1, 1)))++` retourne _56.31°_, _52.13°_ et _71.57°_.
+
+====
 Voir la nouvelle commande *xref:/commands/AnglesIntérieurs.adoc[AnglesIntérieurs]*
 
 [NOTE]
@@ -61,8 +86,8 @@ Angle( <Droite g>, <Droite h> )::
 [EXAMPLE]
 ====
 
-`++Angle(y = -0.5x + 2,3y -x= 6)++` retourne _45°_ ou _0.79 rad_.
-
+* `++Angle(y = -0.5x + 2,3y -x= 6)++` retourne _45°_.
+* `++Angle(Droite((-2, 0, 0), (0, 0, 2)), Droite((2, 0, 0), (0, 0, 2)))++` retourne _90°_
 ====
 
 Angle( <Point A>, <Sommet B>, <Point C > )::
@@ -78,6 +103,13 @@ Angle( <Point A>, <Sommet B>, <Point C > )::
 Angle( <Point A>, <Sommet B>, <Angle α> )::
   Dessine un angle _α_ à partir de _A_ ayant pour sommet _B_.
 
+[EXAMPLE]
+====
+
+`++Angle((1, 1), (2, 1+stem:[\sqrt(3)]), 60°)++` retourne _α=90°_ et A=(3.1).
+
+====
+
 [NOTE]
 ====
 
@@ -89,6 +121,7 @@ image:Tool_tool.png[Tool tool.png,width=32,height=32] Voir les *outils* associé
 angle.svg,width=32,height=32] xref:/tools/Angle.adoc[Angle] et image:32px-Mode_anglefixed.svg.png[Mode
 anglefixed.svg,width=32,height=32] xref:/tools/Angle_de_mesure_donnée.adoc[Angle_de_mesure_donnée].
 
+_____________________________________________________________
 image:View-cas24.png[View-cas24.png,width=22,height=22] *Calcul formel* :
 
 Cette commande fonctionne à l'identique dans la fenêtre Calcul formel aux différences suivantes :
@@ -108,6 +141,11 @@ un *nombre* (donc un angle ne saurait être dessiné).
 `++Angle((-1, 1), (2, 4), (5, 1))++` retourne stem:[ \frac{1}{2} \; \pi ] (_1.57_ dans la fenêtre
 Algèbre).
 
+* `++Angle(x + 2,  2x + 3)++` yields stem:[acos \left( 3 \cdot \frac{\sqrt{10}}{10} \right)].
+* Define `++f(x) := x + 2++` and `++g(x) := 2x + 3++` then command `++Angle(f(x), g(x))++` yields stem:[acos \left(3
+\cdot \frac{\sqrt{10}}{10} \right)].
+
+
 ====
 
 _____________________________________________________________
@@ -125,9 +163,9 @@ image:View-cas24.png[View-cas24.png,width=22,height=22] *Calcul formel* :
 
 ====
 
-[NOTE]
-====
 
+
+_____________________________________________________________
 *image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] Graphique
 3D*
 
@@ -160,4 +198,3 @@ Soit dans Graphique 3D les points : `++A=(1,-1,0) ++` ; `++B=(0,0,0)++` et `++
 *Angle( <Droite>, <Droite> )* ne définit et dessine un angle que si les deux droites sont sécantes, lorsqu'elles sont
 parallèles, l'angle est défini, de valeur _0_.
 
-====
