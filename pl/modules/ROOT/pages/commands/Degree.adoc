@@ -1,0 +1,38 @@
+= Polecenie Stopień
+:page-en: commands/Degree
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Stopień( <Wielomian> )::
+  Zwraca https://pl.wikipedia.org/wiki/Stopie%C5%84_wielomianu[stopień wielomianu] (względem głównej zmiennej).
+
+[EXAMPLE]
+====
+
+`++Stopień(x^4 + 2 x^2)++` daje w wyniku _4_
+
+====
+
+== W Widoku CAS
+
+Stopień( <Wielomian> )::
+  Zwraca https://pl.wikipedia.org/wiki/Stopie%C5%84_wielomianu[stopień wielomianu] (względem głównej zmiennej lub
+  https://pl.wikipedia.org/wiki/Jednomian[jednomianu]).
+
+[EXAMPLE]
+====
+
+* `++Stopień(x^4 + 2 x^2)++`  daje w wyniku _4_
+* `++Stopień(x^6 y^3 + 2 x^2 y^3)++`  daje w wyniku _9_
+
+====
+
+Stopień( <Wielomian>, <Zmienna> )::
+  Zwraca stopień wielomianu względem danej zmiennej.
+
+[EXAMPLE]
+====
+
+* `++Stopień(x^4 y^3 + 2 x^2 y^3, x)++`  daje w wyniku _4_
+* `++Stopień(x^4 y^3 + 2 x^2 y^3, y)++`  daje w wyniku _3_
+
+====
