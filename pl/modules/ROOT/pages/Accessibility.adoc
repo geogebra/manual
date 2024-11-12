@@ -1,0 +1,64 @@
+= Dostosowanie
+:page-en: Accessibility
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+Aby zobaczyć przykłady apletów, pokazujących dostosowanie GeoGebry dla różnych grup użytkowników i uzyskać więcej informacji, zobacz https://www.geogebra.org/m/r2EF8uRx[GeoGebra Accessibility (ang.)].
+
+====
+
+Projektując aplety, ważne jest, aby umożliwić (w miarę możliwości) dostęp do nich wszystkim uczniom.
+
+:toc:
+
+== Rozmiar czcionki, Kolor & Kontrast
+
+Ważne jest wykorzystanie dużych czcionek o dobrym kontraście. Wybierz większy rozmiar czcionki w Ustawienia -> Rozmiar czcionki zanim zaczniesz projektować 
+swój aplet. Możesz także użyć skrótu klawiaturowego [.kcode]#Ctrl# + [.kcode]#2# aby powiększyć wszystkie czcionki i pogrubić wszystkie linie.
+[.kcode]#Ctrl# + [.kcode]#3# zmieni domyślne ustawienia dla wszystkich nowych obiektów na czarne i nie wypełnione.
+
+Najlepiej używaj ciemnych kolorów na białym tle i grubych linii. Czysta
+https://snook.ca/technical/colour_contrast/colour.html#fg=FF0000,bg=FFFFFF[czerwień] i
+https://snook.ca/technical/colour_contrast/colour.html#fg=00FF00,bg=FFFFFF[zieleń] nie mają zbyt dobrego kontrastu, więc lepiej używać ich ciemniejszych wersji,
+np. https://snook.ca/technical/colour_contrast/colour.html#fg=0000FF,bg=FFFFFF[niebieskiego],
+https://snook.ca/technical/colour_contrast/colour.html#fg=226600,bg=FFFFFF[ciemnozielonego],
+https://snook.ca/technical/colour_contrast/colour.html#fg=990033,bg=FFFFFF[ciemnoczerwonego]
+
+Jeśli używasz kolorów do odróżnienia obiektów o podobnym wyglądzie, rozważ również zastosowanie linii przerywanych dla jednego z nich.
+Możesz także znaleźć strony internetowe, na których sprawdzisz, czy Twój schemat kolorów jest odpowiedni, na przykład https://www.vischeck.com/
+
+== Suwaki
+
+Utwórz suwaki tak długie, jak to możliwe, aby były użyteczne dla uczniów, których umiejętności motoryczne są słabsze. 
+Rozważ dodanie przycisków „zmniejsz” i „zwiększ” na każdym końcu suwaka.
+
+== Skróty klawiszowe
+
+Sczniowie mogą używać klawisza [.kcode]#Tab#aby przemieszczać się między obiektami na zaprojektowanym przez Ciebie aplecie. Ważne jest, by
+*odznaczyć opcję "Wybór dozwolony"* w Ustawieniach obiektu -> Zaawansowane dla obiektów, których nie chcesz, aby były wybierane. 
+W wersji desktopowej istnieje skrót klawiaturowy [.kcode]#Ctrl# + [.kcode]#Shift# + [.kcode]#D#, który przełącza tę właściwość dla obiektów
+*innych niż* Przyciski / Suwaki / Pola wyboru / Punkty / Pola tekstowe.
+
+Klawisze strzałek [.kcode]#Left#, [.kcode]#Right#, [.kcode]#Up#, [.kcode]#Down# mogą być używane do przesuwania suwaków i punktów po ich zaznaczeniu.
+
+[.kcode]#Space# może być używana do aktywacji przycisku, przełączania pola wyboru lub uruchamiania/zatrzymywania animacji suwaka.
+
+[.kcode]#Escape# może być użyty do opuszczenia apletu, a [.kcode]#Enter#, aby do niego powrócić (przydatne, jeśli na jednej stronie masz kilka apletów GeoGebry).
+
+Klawisze [.kcode]#+# and [.kcode]#−# mogą być używane do przesuwania punktu po ścieżce (np. po okręgu).
+
+Aplety GeoGebra są również w pełni przystosowane do obsługi dotykowej, więc uczniowie mogą, jeśli to konieczne, korzystać z nich na dużym tablecie.
+
+== Podpowiedzi
+
+Możesz ustawić niestandardowe podpowiedzi dla niektórych obiektów, używając właściwości _Opis_.
+J: xref:/Tooltips.adoc[Podpowiedzi]
+
+== Zapisywanie ekranu
+
+Możesz dołączyć do Widoków Grafiki teksty, które będą będą widoczne podczas zapisywania ekranu.
+
+Jeśli stworzysz w GeoGebrze teksty o nazwach `++altText++`, `++altText2++`, `++altText3D++` będą one dołączane odpowiednio do
+Widoku Grafiki, Widoku Grafiki 2 i Widoku Grafiki 3D.
