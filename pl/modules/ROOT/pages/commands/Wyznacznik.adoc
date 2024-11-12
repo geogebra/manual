@@ -1,0 +1,25 @@
+= Polecenie Wyznacznik
+:page-en: commands/Determinant
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Wyznacznik( <Macierz> )::
+  Oblicza wyznacznik danej macierzy.
+
+[EXAMPLE]
+====
+
+`++Wyznacznik({{1, 2}, {3, 4}})++` daje w wyniku _a = -2_.
+
+====
+
+== Specyficzna składnia CAS
+
+Wyznacznik( <Macierz> )::
+  Oblicza wyznacznik macierzy. Jeśli macierz zawiera niezdefiniowane zmienne, zwraca wzór na wyznacznik.
+
+[EXAMPLE]
+====
+
+`++Wyznacznik({{1, a}, {b, 4}})++` daje w wyniku _-a b + 4_.
+
+====
