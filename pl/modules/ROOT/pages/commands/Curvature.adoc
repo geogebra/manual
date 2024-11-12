@@ -1,0 +1,16 @@
+= Polecenie Krzywizna
+:page-en: commands/Curvature
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+
+Krzywizna( <Point>, <Obiekt> )::
+  Daje w wyniku krzywiznę obiektu (funkcji, krzywej, krzywej stożkowej) w danym punkcie.
+
+[EXAMPLE]
+====
+
+* `++Krzywizna((0 ,0), x^2)++` daje w wyniku _2_
+* `++Krzywizna((0, 0), Krzywa(cos(t), sin(2t), t, 0, π))++` daje w wyniku _0_
+* `++Krzywizna((-1, 0), KrzywaStożkowa({1, 1, 1, 2, 2, 3}))++` daje w wyniku _2_
+
+====
