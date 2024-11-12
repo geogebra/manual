@@ -1,0 +1,40 @@
+= Polecenie DzielenieZResztą
+:page-en: commands/Division
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+DzielenieZResztą( <Liczba>, <Liczba> )::
+  Zwraca iloraz całkowity (całkowitą część ilorazu) oraz resztę z dzielenia dwóch liczb.
+
+[EXAMPLE]
+====
+
+`++DzielenieZResztą(16, 3)++` daje w wyniku _{5, 1}_.
+
+====
+
+DzielenieZResztą( <Wielomian>, <Wielomian> )::
+  Zwraca iloraz oraz resztę z dzielenia dwóch wielomianów.
+
+[EXAMPLE]
+====
+
+`++DzielenieZResztą(x^2 + 3 x + 1, x - 1)++` daje w wyniku _{x + 4, 5}_.
+
+====
+
+[NOTE]
+====
+
+W _Widoku Algebry_ można używać tylko jednej zmiennej, która zawsze zostanie zamieniona na _x_. W _Widoku CAS_
+obsługiwane jest także dzielenie wielomianów wielu zmiennych.
+
+====
+
+[EXAMPLE]
+====
+
+* `++DzielenieZResztą(x^2+y^2, x+y)++`daje w wyniku _{x - y, 2y^2}_.
+* `++DzielenieZResztą(x^2+y^2, y+x)++` daje w wyniku _{y - x, 2x^2}_.
+
+
+====
