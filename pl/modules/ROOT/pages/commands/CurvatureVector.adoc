@@ -1,0 +1,15 @@
+= Polecenie WektorKrzywizny
+:page-en: commands/CurvatureVector
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+WektorKrzywizny( <Punkt>, <Obiekt> )::
+  Daje w wyniku wektor krzywizny obiektu (funkcja, krzywa, krzywa stożkowa) w danym punkcie.
+
+[EXAMPLE]
+====
+
+* `++WektorKrzywizny((0, 0), x^2)++` daje w wyniku wektor _(0, 2)_
+* `++WektorKrzywizny((0, 0), Curve(cos(t), sin(2t), t, 0, π))++` daje w wyniku wektor _(0, 0)_
+* `++WektorKrzywizny((-1, 0), Conic({1, 1, 1, 2, 2, 3}))++` daje w wyniku wektor _(0, -2)_
+
+====
