@@ -1,0 +1,35 @@
+= Polecenie LiczJeżeli
+:page-en: commands/CountIf
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+LiczJeżeli( <Warunek>, <Lista> )::
+  Zlicza ilość elementów listy spełniających dany warunek.
+
+[EXAMPLE]
+====
+
+* `++LiczJeżeli(x < 3, {1, 2, 3, 4, 5})++` daje w wyniku liczbę _2_.
+* `++LiczJeżeli(x < 3, A1:A10)++`, gdzie _A1:A10_ to zakres komórek w Widoku Arkusza, zlicza wszystkie komórki, których wartość jest
+mniejsza od _3_.
+
+====
+
+[NOTE]
+====
+
+Dla listy liczb można użyć dowolnego warunku. Dla listy innych obiektów można używać tylko warunków w formie
+`++x==constant++` lub `++x!=constant++`.
+
+====
+
+LiczJeżeli( <Warunek>, <Zmienna>, <Lista> )::
+  Jak wyżej, z użyciem bardziej elastycznej składni.
+
+[EXAMPLE]
+====
+
+Dla danych punktów _P_, _Q_, _R_ `++LiczJeżeli(x(A) < 3, A, {P, Q, R})++`  zliczy punkty, których x-owa współrzędna jest mniejsza od _3_. 
+Zmienna _A_ jest podczas sprawdzania kolejno zastępowana przez _P_ then _Q_ then _R_. Zatem
+`++LiczJeżeli(x(A) < 3, A, {(0, 1), (4, 2), (2, 2)})++` daje w wyniku liczbę _2_.
+
+====
