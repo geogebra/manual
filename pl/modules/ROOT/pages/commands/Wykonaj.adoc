@@ -1,0 +1,42 @@
+= Polecenie Wykonaj
+:page-en: commands/Execute
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+Polecenie _Wykonaj_ command działa tylko wtedy, gdy *polecenia na liście są napisane w języku angielskim (US)*, niezależnie od wybranego języka interfejsu GeoGebry. 
+
+====
+
+Wykonaj( <Lista Tekstów> )::
+  Wykonuje listę poleceń wprowadzonych jako teksty.
+
+
+[EXAMPLE]
+====
+
+* `++Wykonaj({"A=(1,1)","B=(3,3)","C = Midpoint(A, B)"})++` tworzy punkty _A, B_ i ich punkt środkowy _C_.
+* `++Wykonaj(Join({"f_{1} = 1", "f_{2} = 1"}, Sequence("f_{"+(i + 2) + "} = f_{" + (i+1) + "} + f_{"+ i +"}", i, 1, 10)))++`
+tworzy ciąg dziesięciu pierwszych elementów https://pl.wikipedia.org/wiki/Ci%C4%85g_Fibonacciego[ciągu Fibonacciego].
+
+====
+
+Wykonaj( <Lista Tekstów>, <Parametr>, ... , <Parametr> )::
+Użyj symboli zastępczych %1, %2 itd. jako argumentów poleceń w liście. Symbole zastępcze zostaną odpowiednio zastąpione parametrami użytymi w poleceniu _Wykonaj_. Można określić do dziewięciu parametrów. Po podstawieniu wynikowe skrypty zostaną wykonane.
+
+
+[EXAMPLE]
+====
+
+`++Wykonaj({"Segment(%1,%2)","Midpoint(%1,%2)"}, A, B)++` tworzy odcinek _AB_ i jego środek.
+
+====
+
+[NOTE]
+====
+
+Jeśli znak cudzysłowu (`++"++`) nie jest dostępny na twojej klawiaturze, użyj wirtualnej klawiatury GeoGebry lub polecenia `++UnikodNaLiterę(34)++`
+
+====
+
