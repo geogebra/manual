@@ -1,0 +1,15 @@
+= Polecenie 
+:page-en: commands/DataFunction
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+FunkcjaZDanych( <Lista Liczb>, <Lista Liczb> )::
+  Zwraca funkcję, która łączy punkty (x~1~, y~1~), (x~2~, y~2~),...,(x~n~, y~n~), gdzie {x~1~, ..., x~n~}, {y~1~,
+  ..., y~n~} są listami wejściowymi. Pomiędzy tymi punktami stosowana jest interpolacja liniowa. Ta komenda jest używana przez sensory.
+
+[EXAMPLE]
+====
+
+* `++FunkcjaZDanych({0, 1, 2, 4}, {0, 1, 4, 16})++` daje w wyniku funkcję, której wykresem jest łamana o wierzchołkach (0, 0), (1,1), (2, 4), (4,
+16).
+
+====
