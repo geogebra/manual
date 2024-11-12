@@ -1,0 +1,47 @@
+= Polecenie Elipsa
+:page-en: commands/Ellipse
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Elipsa( <Ognisko>, <Ognisko>, <Półoś główna> )::
+  Tworzy elipsę z danymi dwoma ogniskami i długością półosi głównej.
+
+[EXAMPLE]
+====
+
+`++Elipsa((0, 1), (1, 1), 1)++` daje w wyniku _12x² + 16y² - 12x - 32y = -7_.
+
+====
+
+[NOTE]
+====
+
+Jeśli warunek: _2*długość półosi głownej > odległość między ogniskami_ nie jest spełniony, otrzymamy hiperbolę.
+
+====
+
+Elipsa( <Ognisko>, <Ognisko>, <Odcinek> )::
+  Tworzy elipsę z danymi dwoma ogniskami, dla której długość półsi głównej jest równa długości danego odcinka.
+
+[EXAMPLE]
+====
+
+Niech _s = Odcinek\((0,1), (2,1))_ : `++Elipsa((0, 1), (2, 1), s)++` daje w wyniku _3x² + 4y² - 6x - 8y = 5_.
+
+====
+
+Elipsa( <Ognisko>, <Ognisko>, <Punkt> )::
+  Tworzy elipsę z danymi dwoma ogniskami przechodzącą przez dany punkt.
+
+[EXAMPLE]
+====
+
+`++Elipsa((0, 1), (2, 1), (1,2))++` daje w wyniku _1x² + 2y² - 2x - 4y = -1_.
+
+====
+
+[NOTE]
+====
+
+Zobacz także narzędzie image:24px-Mode_ellipse3.svg.png[Mode ellipse3.svg,width=24,height=24] xref:/tools/Elipsa.adoc[Elipsa].
+
+====
