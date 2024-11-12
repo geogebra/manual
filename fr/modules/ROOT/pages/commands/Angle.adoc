@@ -151,7 +151,7 @@ un *nombre* (donc un angle ne saurait être dessiné).
 `++Angle((-1, 1), (2, 4), (5, 1))++` retourne stem:[ \frac{1}{2} \; \pi ]
 
 * `++Angle(x + 2,  2x + 3)++` ou 
-* `++f(x) := x + 2++` ; `++g(x) := 2x + 3++` ; `++Angle(f(x), g(x))++` retoournent stem:[cos^{-1} \left( 3 \cdot \frac{\sqrt{10}}{10} \right)].
+* `++f(x) := x + 2++` ; `++g(x) := 2x + 3++` ; `++Angle(f(x), g(x))++` retournent stem:[cos^{-1} \left( 3 \cdot \frac{\sqrt{10}}{10} \right)].
  
 * `++Angle[x + 2,  -x + 3]++`. ou
 * `++f(x) := x + 2++` ; `++g(x) := -x + 3++` ; `++Angle[f(x) , g(x)]++` retournent stem:[\frac{1}{2} \space \Pi].
@@ -183,29 +183,28 @@ fenêtre Graphique 3D.
 
 avec en plus :
 
-* *Angle( <Plan>, <Plan> )::
+Angle( <Plan>, <Plan> )::
   Retourne l'angle entre les 2 plans.
 
 [EXAMPLE]
 ====
 
-* `++Angle(2x - y + z = 0, z = 0)++` retourne _114.09°_.
+`++Angle(2x - y + z = 0, z = 0)++` retourne _114.09°_.
 
 ====
 
-* *Angle( <Ligne>, <Plan> )::
+Angle( <Ligne>, <Plan> )::
   Retourne l'angle entre la ligne et le plan.
 
 [EXAMPLE]
 ====
 
-* `++Angle(Segment((1, 2, 3),(-2, -2, 0)), z = 0)++` retourne _30.96°_.
+`++Angle(Segment((1, 2, 3),(-2, -2, 0)), z = 0)++` retourne _30.96°_.
 
 ====
 
 
-* *Angle( <Point>, <Point>, <Point>, <Direction>)*
-
+Angle( <Point>, <Point>, <Point>, <Direction>)::
   Retourne l'angle défini par les points et la _Direction_ indiquée, (une ligne ou un plan).
 
 [EXAMPLE]
