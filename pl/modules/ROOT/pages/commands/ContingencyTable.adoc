@@ -1,0 +1,49 @@
+= Polecenie TablicaWielodzielcza
+:page-en: commands/ContingencyTable
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+TablicaWielodzielcza( <Lista tekstów>, <Lista tekstów> )::
+  Tworzy https://pl.wikipedia.org/wiki/Tabela_krzy%C5%BCowa[tabelę wielodzieczą] na podstawie dwóch list. Unikalne 
+wartości z pierwszej listy są używane jako etykiety wierszy w tabeli. Unikalne wartości  z drugiej listy są używane jako etykiety kolumn w tabeli..
+
+TablicaWielodzielcza( <Lista tekstów>, <Lista tekstów>, <Opcje> )::
+   Tworzy https://pl.wikipedia.org/wiki/Tabela_krzy%C5%BCowa[tabelę wielodzieczą] na podstawie dwóch list, które
+  są opisane powyżej. Tekst _Opcje_ definiuje wyświetlanie opcjonalnych obliczeń w tabeli.
+
+[NOTE]
+====
+
+Możliwe wartości parametru _Options_ to "|", "_", "+", "e", "k", "=".
+
+* "|" = pokaż rozkład procentowy dla kolumn
+* "_" = pokaż rozkład procentowy dla wierszy
+* "+" = pokaż rozkład procentowy dla całej tabeli
+* "e" = pokaż oczekiwane liczebności
+* "k" = pokaż rozkład Chi-kwadrat
+* "=" = pokaż wyniki testu Chi-kwadrat
+
+====
+
+TablicaWielodzielcza( <Lista Wartości Wierszy>, <Lista Wartości Kolumn>, <Tablica Częstości> )::
+ Tworzy https://pl.wikipedia.org/wiki/Tabela_krzy%C5%BCowa[tabelę wielodzieczą] używając podanej listy etykiet wierszy, 
+etykiet kolumn oraz odpowiadającej im tablicy częstości.
+
+[EXAMPLE]
+====
+
+`++TablicaWielodzielcza({"Mężczyźni","Kobiety"},{"Praworęczni", "Leworęczni"},{{43,9},{44,4}})++` tworzy odpowiednią
+tablicę wielodzielczą.
+
+====
+
+TablicaWielodzielcza( <Lista Wartości Wierszy>, <Lista Wartości Kolumn> <Tablica Częstości>, <Opcje> )::
+  Tworzy https://pl.wikipedia.org/wiki/Tabela_krzy%C5%BCowa[tabelę wielodzieczą]używając podanej listy etykiet wierszy, 
+etykiet kolumn oraz odpowiadającej im tablicy częstości. TTekst _Opcje_ definiujący wyświetlanie opcjonalnych obliczeń w tabeli, jak opisano powyżej.
+
+[EXAMPLE]
+====
+
+`++TablicaWielodzielcza({"Mężczyźni","Kobiety"},{"Praworęczni", "Leworęczni"},{{43,9},{44,4}},"_")++` daje w wyniku odpowiadającą
+tablicę wielodzielcza pokazującą rozkład procentowy dla wierszy.
+
+====
