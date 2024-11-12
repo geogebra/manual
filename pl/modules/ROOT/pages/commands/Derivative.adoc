@@ -1,0 +1,118 @@
+= Polecenie Pochodna
+:page-en: commands/Derivative
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Pochodna( <Funkcja> )::
+  Zwraca pochodną funkcji względem głównej zmiennej.
+
+[EXAMPLE]
+====
+
+`++Pochodna(x^3 + x^2 + x)++` daje w wyniku _3x² + 2x + 1_.
+
+====
+
+Pochodna( <Funkcja>, <Liczba> )::
+  Zwraca __n-tą__ pochodną funkcji względem głównej zmiennej, gdzie _n_ jest równe <Liczba>.
+
+[EXAMPLE]
+====
+
+`++Pochodna(x^3 + x^2 + x, 2)++` daje w wyniku _6x + 2_.
+
+====
+
+Pochodna( <Funkcja>, <Zmienna> )::
+  Zwraca pochodną cząstkową funkcji względem podanej zmiennej.
+
+[EXAMPLE]
+====
+
+`++Pochodna(x^3 y^2 + y^2 + xy, y)++` daje w wyniku _2x³y + x + 2y_.
+
+====
+
+Pochodna( <Funkcja>, <Zmienna>, <Liczba> )::
+ Zwraca __n-tą__ pochodną cząstkową funkcji względem podanej zmiennej, gdzie _n_ jest równe <Liczba>.
+
+[EXAMPLE]
+====
+
+`++Derivative(x^3 + 3x y, x, 2)++` daje w wyniku _6x_.
+
+====
+
+Pochodna( <Krzywa> )::
+  Zwraca pochodną krzywej.
+
+[EXAMPLE]
+====
+
+`++Pochodna(Krzywa(cos(t), t sin(t), t, 0, π))++` daje w wyniku krzywą _x = -sin(t), y = sin(t) + t cos(t)_.
+
+====
+
+[NOTE]
+====
+
+To działa tylko dla krzywych parametrycznych.
+
+====
+
+Pochodna( <Krzywa>, <Liczba> )::
+
+Zwraca __n-tą__ pochodną krzywej, gdzie _n_ jest równe <Liczba>.
+
+[EXAMPLE]
+====
+
+`++Pochodna(Krzywa(cos(t), t sin(t), t, 0, π), 2)++` daje w wyniku krzywą _x = -cos(t), y = 2cos(t) - t sin(t)_.
+
+====
+
+[NOTE]
+====
+
+To działa tylko dla krzywych parametrycznych.
+
+====
+
+[NOTE]
+====
+
+Możesz używać `++f'(x)++` zamiast `++Pochodna(f)++` oraz `++f''(x)++` zamiast `++Pochodna(f, 2)++`, itd.
+
+====
+
+== W Widoku CAS
+
+Pochodna( <Wyrażenie> )::
+  Zwraca pochodną z wyrażenia względem głównej zmiennej.
+
+[EXAMPLE]
+====
+
+`++Pochodna(x^2)++` daje w wyniku _2x_.
+
+====
+
+Pochodna( <Wyrażenie>, <Zmienna> )::
+  Zwraca pochodną z wyrażenia względem danej zmiennej.
+
+[EXAMPLE]
+====
+
+`++Pochodna(a x^3, a)++` daje w wyniku _x³_.
+
+====
+
+Pochodna( <Wyrażenie>, <Zmienna>, <Liczba> )::
+  Zwraca __n-tą__ dpochodną z wyrażenia względem danej zmiennej, gdzie _n_ jest równe <Liczba>.
+
+[EXAMPLE]
+====
+
+* `++Pochodna(y x^3, x, 2)++` daje w wyniku _6xy_.
+* `++Pochodna(x³ + 3x y, x, 2)++` daje w wyniku _6x_.
+
+====
