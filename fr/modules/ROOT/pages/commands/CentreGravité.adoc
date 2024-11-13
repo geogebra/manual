@@ -2,6 +2,8 @@
 :page-en: commands/Centroid
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie] 
+
 CentreGravité( <Polygone> )::
   Construit le centre de gravité du polygone.
 
@@ -37,9 +39,16 @@ stem:[G_{y} = \frac{1}{6 Α} \sum_{i=0}^{n-1} {(y_{i} + y_{i+1})(x_{i} y_{i+1} -
 parallélogrammes, polygones réguliers.
 
 |===
+[EXAMPLE]
+=====
+Soit 4 points A = (1, 4), B = (-2, 2), C = (-1, -1) et D = (6, 3).
 
+`++Polygone(A, B, C, D)++` retourne _q1 = 19_.
 
+`++CentreGravité(q1)++` crée le point _E =  (1.22807, 1.90351)_ 
 
+*Alors* que `++Barycentre({A, B, C, D}, {1, 1, 1, 1})++` crée le point _F = (1, 2)_
+====
 ___________________________________________________________
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
