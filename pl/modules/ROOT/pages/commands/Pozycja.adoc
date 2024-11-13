@@ -1,0 +1,52 @@
+= Polecenie Pozycja
+:page-en: commands/IndexOf
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Pozycja( <Obiekt>, <Lista> )::
+  Zwraca pozycję pierwszego wystąpienia obiektu w liście.
+
+[EXAMPLE]
+====
+
+`++Pozycja(5, {1, 3, 5, 2, 5, 4})++` daje w wyniku _3_.
+
+====
+
+[NOTE]
+====
+
+Gdy obiekt nie zostanie znaleziony, wynik jest _niezdefiniowany_.
+
+====
+
+Pozycja( <Obiekt>, <Lista>, <Pozycja Startowa> )::
+  Tak samo jak powyżej, ale wyszukiwanie rozpoczyna się od podanej pozycji startowej.
+
+[EXAMPLE]
+====
+
+* `++Pozycja(5, {1, 3, 5, 2, 5, 4}, 3)++` daje w wyniku _3_.
+* `++Pozycja(5, {1, 3, 5, 2, 5, 4}, 4)++` daje w wyniku _5_.
+* `++Pozycja(5, {1, 3, 5, 2, 5, 4}, 6)++` daje w wyniku _niezdefiniowany_.
+
+====
+
+Pozycja( <Tekst>, <Tekst> )::
+  Określa pozycję, na której pierwszy tekst pojawia się po raz pierwszy w drugim tekście.
+
+[EXAMPLE]
+====
+
+`++Pozycja("Ge", "GeoGebra")++` daje w wyniku _1_.
+
+====
+
+Pozycja( <Tekst>, <Tekst>, <Pozycja Startowa> )::
+  Tak samo jak powyżej, ale wyszukiwanie rozpoczyna się od podanej pozycji startowej.
+
+[EXAMPLE]
+====
+
+`++Pozycja("Ge", "GeoGebra",2)++` daje w wyniku _4_.
+
+====
