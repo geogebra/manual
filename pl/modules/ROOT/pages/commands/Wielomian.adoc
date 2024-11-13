@@ -1,0 +1,52 @@
+= Polecenie Wielomian
+:page-en: commands/Polynomial
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Wielomian( <Funkcja> )::
+  Zwraca rozwiniętą funkcję wielomianową.
+
+[EXAMPLE]
+====
+
+`++Wielomian((x - 3)^2)++` daje w wyniku _x^2^ - 6x + 9_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Wielomian(y^2+(x+y)^2)++` daje w wyniku _x^2^+2xy+2y^2^_.
+
+====
+
+Wielomian( <Lista Punktów> )::
+  Tworzy wielomian interpolacyjny stopnia _n-1_ przechodzący przez podane _n_ punktów.
+
+[EXAMPLE]
+====
+
+`++Wielomian({(1, 1), (2, 3), (3, 6)})++` daje w wyniku _0.5 x^2^ + 0.5 x_.
+
+====
+
+== Specyficzna składnia CAS
+
+Wielomian( <Funkcja> )::
+  Rozwija funkcję i zapisuje ją jako wielomian zmiennej x (grupując współczynniki).
+
+[EXAMPLE]
+====
+
+`++Wielomian((x - 3)^2 + (a + x)^2)++` daje w wyniku _2 x^2^ + (2a - 6) x + a^2^ + 9_.
+
+====
+
+Wielomian( <Funkcja>, <Zmienna> )::
+  Rozwija funkcję i zapisuje ją jako wielomian danej zmiennej (grupując współczynniki).
+
+[EXAMPLE]
+====
+
+`++Wielomian((x - 3)^2 + (a + x)^2, a)++` daje w wyniku _a^2^ + 2 x a + 2 x^2^ - 6 x + 9_.
+
+====
