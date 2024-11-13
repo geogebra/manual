@@ -2,22 +2,40 @@
 :page-en: commands/Cubic
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-Cubique(<Point A>,<Point B>,<Point C>,<Index n>)::
-  construit la _n_-ème http://bernard.gibert.pagesperso-orange.fr/ctc.html[cubique] du triangle _ABC_.
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie] 
 
+Cubique(<Point A>,<Point B>,<Point C>,<Index n>)::
+  Construit la _n_-ème http://bernard.gibert.pagesperso-orange.fr/ctc.html[cubique] du triangle _ABC_.
+
+[EXAMPLE]
+====
+
+Soit _A = (0, 1)_, _B = (2, 1)_ et _C = (1, 2)_. 
+`++Cubique(A, B, C, 2)++` crée la courbe implicite
+
+_-x³ + 3x² + 5x y² - 14x y + 7x - 5y² + 14y = 9_.
+
+====
+
+[NOTE]
+====
+
+Cette commande est en développement, l'ensemble des index _n_ suit l'évolution.
+
+====
 == Quelques cubiques courantes
 
-[cols=",",options="header",]
+[width=100%, cols="> 1,5", options= "header"]
 |===
 |Index n |Cubique
-|1 |Cubique de Neuberg
-|2 |Cubique de Thomson
-|3 |Cubique de McCay
-|4 |Cubique de Darboux
-|5 |Cubique de Napoleon/Feuerbach
-|7 |Cubique de Lucas
-|17 |1^ère^ cubique de Brocard
-|18 |2^nde^ cubique de Brocard
+| 1|Cubique de Neuberg
+| 2|Cubique de Thomson
+| 3|Cubique de McCay
+| 4|Cubique de Darboux
+| 5|Cubique de Napoleon/Feuerbach
+| 7|Cubique de Lucas
+|17|1^ère^ cubique de Brocard
+|18|2^nde^ cubique de Brocard
 |===
 
 ____________________________________________________________
@@ -27,10 +45,10 @@ image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul f
 Cette commande fonctionne à l'identique dans la fenêtre Calcul formel , mais sans la possibilité d'effectuer du calcul
 littéral.
 
-________________________________________________________________
+____________________________________________________________
 
+
+____________________________________________________________
 image:View-graphics3DNOT.png[View-graphics3DNOT.png,width=22,height=22] Version 5.0 *Graphique 3D* :
 
-À ce jour, cette commande ne fonctionne pas dans la fenêtre Graphique 3D
-
-GGB/GGB-2162
+À ce jour, cette commande ne fonctionne pas dans la fenêtre Graphique 3D.
