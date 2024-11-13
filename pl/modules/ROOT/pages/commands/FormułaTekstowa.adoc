@@ -1,0 +1,53 @@
+= Polecenie FormułaTekstowa
+:page-en: commands/FormulaText
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+FormułaTekstowa( <Obiekt> )::
+  Zwraca formułę definiującą obiekt jako tekst LaTeX. Domyślnie wartości są podstawiane za zmienne.
+
+[EXAMPLE]
+====
+
+Niech _a = 2_ i _f(x) = a x^2^_. `++FormułaTekstowa(f)++` daje w wyniku _2 x^2^_ (jako tekst LaTeX).
+
+====
+
+[NOTE]
+====
+
+W GeoGebrze Classic 5, polecenie `++FormułaTekstowa($1)++` zwraca zawartość komórki 1 w Widoku CAS jako tekst LaTeX.
+
+====
+
+
+FormułaTekstowa( <Obiekt>, <Wartość logiczna do zastępowania zmiennych> )::
+
+  Zwraca formułę definiującą obiekt jako tekst LaTeX. Wartość logiczna określa, czy wartości są podstawiane za zmienne
+  (_true_), czy w tekście wyświetlane są nazwy zmiennych (_false_).
+
+[EXAMPLE]
+====
+
+Niech _a = 2_ i _f(x) = a x^2^_.
+
+`++FormułaTekstowa(f, true)++` daje w wyniku _2 x^2^_ (jako tekst LaTeX).
+
+`++FormułaTekstowa(f, false)++` daje w wyniku _a x^2^_ (jako tekst LaTeX).
+
+====
+
+FormułaTekstowa( <Obiekt>, <Wartość logiczna do zastępowania zmiennych>, <Wartość logiczna do pokazywania nazwy> )::
+ Zwraca formułę definiującą obiekt jako tekst LaTeX. Pierwsza wartość logiczna określa, czy wartości są podstawiane za zmienne 
+(_true_), czy wyświetlane są nazwy zmiennych (_false_); druga wartość logiczna określa, czy nazwa obiektu jest wyświetlana w tekście
+(_true_), czy nie (_false_).
+
+[EXAMPLE]
+====
+
+Niech _a = 2_ i _f(x) = a x^2^_.
+
+`++FormułaTekstowa(f, true, true)++` daje w wyniku _f(x) = 2 x^2^_ (jako tekst LaTeX).
+
+`++FormulaText(f, false, false)++` daje w wyniku _a x^2^_ (jako tekst LaTeX).
+
+====
