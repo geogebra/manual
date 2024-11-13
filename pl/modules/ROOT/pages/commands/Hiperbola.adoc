@@ -1,0 +1,49 @@
+= Polecenie Hiperbola
+:page-en: commands/Hyperbola
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Hiperbola( <Ognisko>, <Ognisko>, <Półoś główna> )::
+  Tworzy hiperbolę o danych ogniskach i długości półosi głównej.
+
+[EXAMPLE]
+====
+
+`++Hiperbola((0, -4), (2, 4), 1)++` daje w wyniku _-8xy - 15y² + 8y = -16_.
+
+====
+
+[NOTE]
+====
+
+Jeżeli warunek: _0 < 2*długość półosi głównej < odległość między ogniskami_ nie jest spełniony, otrzymamy elipsę.
+
+====
+
+Hiperbola( <Ognisko>, <Ognisko>, <Odcinek> )::
+
+Tworzy hiperbolę o danych ogniskach, której długość półosi głównej jest równa długości odcinka.
+
+[EXAMPLE]
+====
+
+Niech `++a = Odcinek((0,1), (2,1))++`. `++Hiperbola((4, 1), (-2, 1), a)++` daje w wyniku _-5x² + 4y² + 10x - 8y = -19_ .
+
+====
+
+Hiperbola( <Ognisko>, <Ognisko>, <Punkt> )::
+ Tworzy hiperbolę o danych ogniskach przechodzącą przez dany punkt.
+
+[EXAMPLE]
+====
+
+`++Hiperbola((1, 1), (2, 1), (-2,-4))++` daje w wyniku _-2.69x² + 1.30y² + 8.07x - 2.62y = 4.52_ .
+
+====
+
+[NOTE]
+====
+
+Zobacz także narzędzie image:24px-Mode_hyperbola3.svg.png[Mode hyperbola3.svg,width=24,height=24]
+xref:/tools/Hiperbola.adoc[Hiperbola].
+
+====
