@@ -1,0 +1,52 @@
+= Polecenie LewaStrona
+:page-en: commands/LeftSide
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+LeftSide( <Równanie> )::
+  Zwraca lewą stronę uproszczonego równania.
+
+[EXAMPLE]
+====
+
+`++LewaStrona(4x = 1 - 3y)++` daje w wyniku _4x + 3y_.
+
+====
+
+== Specyficzna Składnia CAS
+
+LewaStrona( <Równanie> )::
+  Zwraca lewą stronę równania.
+
+[EXAMPLE]
+====
+
+`++LewaStrona(x + 2 = 3 x + 1)++` daje w wyniku _x + 2_.
+
+====
+
+LewaStrona( <Lista Równań> )::
+  Zwraca listę lewych stron równań.
+
+[EXAMPLE]
+====
+
+`++LewaStrona({a^2 + b^2 = c^2, x + 2 = 3 x + 1})++` daje w wyniku stem:[ \left\{a^2 + b^2, x + 2 \right\} ] .
+
+====
+
+LewaStrona( <Lista Równań>, <Indeks> )::
+  Zwraca lewą stronę równania określonego przez indeks.
+
+[EXAMPLE]
+====
+
+`++LewaStrona({a^2 + b^2 = c^2, x + 2 = 3 x + 1}, 1)++` daje w wyniku stem:[a^2 + b^2].
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/PrawaStrona.adoc[PrawaStrona].
+
+====
