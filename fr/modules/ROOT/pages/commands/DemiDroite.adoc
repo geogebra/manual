@@ -2,16 +2,26 @@
 :page-en: commands/Ray
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie] 
+
 DemiDroite( <Origine A>, <Point B> )::
   Crée une demi-droite d'origine le point _A_ et passant par le point _B_.
 
 DemiDroite( <Origine A>, <Vecteur v> )::
   Crée une demi-droite d'origine le point _A_ admettant le vecteur _stem:[\vec{v} ]_ pour vecteur directeur.
 
+[NOTE]
+====
+Lors du calcul des intersections avec d'autres objets, seules les intersections situées sur la demi-droite sont prises en compte.
+
+Pour changer cela, vous pouvez activer "Autoriser les points d'intersection extérieurs" dans l'onglet _Basique_ du xref:/Dialogue_Propriétés.adoc[Dialogue Propriétés].
+====
+
 image:Tool_tool.png[Tool tool.png,width=32,height=32] Voir l' *outil* associé : image:32px-Mode_ray.svg.png[Mode
 ray.svg,width=32,height=32] xref:/tools/Demi_droite.adoc[Demi-droite].
 
-____________________________________________________________
+_____________________________________________________________
+
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
@@ -19,6 +29,10 @@ Cette commande fonctionne à l'identique dans la fenêtre Calcul formel , mais s
 littéral.
 
 _____________________________________________________________
+
+
+_____________________________________________________________
+
 
 image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] *Graphique
 3D* :
