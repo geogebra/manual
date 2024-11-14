@@ -2,14 +2,16 @@
 :page-en: commands/Polynomial
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Calculs_et_Fonctions.adoc[Commandes Calculs et Fonctions] 
+
 Polynôme( <Fonction> )::
   Retourne l’écriture polynomiale développée de la fonction f.
 
 [EXAMPLE]
 ====
 
-`++Polynôme((x-3)2)++` retourne _x^2^ - 6x + 9_.
-
+* `++Polynôme((x-3)²)++` retourne _x² - 6x + 9_.
+* `++Polynôme(y²+(x+y)²)++` retourne _x²+2xy+2y²_.
 ====
 
 Polynôme( <Liste Points> )::
@@ -18,7 +20,7 @@ Polynôme( <Liste Points> )::
 [EXAMPLE]
 ====
 
-`++Polynôme({(1, 1), (2, 3), (3, 6)})++` retourne _0.5 x^2^ + 0.5 x_.
+`++Polynôme({(1, 1), (2, 3), (3, 6)})++` retourne _0.5 x² + 0.5 x_.
 
 ====
 
@@ -40,14 +42,8 @@ Polynôme( <Fonction>, <Variable> )::
 [EXAMPLE]
 ====
 
-`++Polynôme((x - 3)^2 + (a + x)^2, a)++` retourne _a^2^ + 2 x a + 2 x^2^ - 6 x + 9_.
-
-====
-
-[EXAMPLE]
-====
-
-`++Polynôme((x - 3)^2 + (a + x)^2)++` retourne _2 x^2^ + (2a - 6) x + a^2^ + 9_.
+* `++Polynôme((x - 3)² + (a + x)²)++` retourne _2 x² + (2a - 6) x + a² + 9_.
+* `++Polynôme((x - 3)² + (a + x)², a)++` retourne _a² + 2 x a + 2 x² - 6 x + 9_.
 
 ====
 
