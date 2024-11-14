@@ -2,6 +2,8 @@
 :page-en: commands/Direction
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie] 
+
 Direction( <Ligne d> )::
   Retourne le vecteur directeur de la ligne _d_.
 
@@ -15,14 +17,14 @@ Direction( <Ligne d> )::
 [NOTE]
 ====
 
-*Note :*
-
 *`++Direction(Droite(A,B))++`est équivalente à `++Vecteur(A,B)++` * Une droite d’équation _ax + by = c_ se voit
 attribuer pour vecteur directeur le vecteur stem:[u= \begin{pmatrix} b \\ -a \end{pmatrix} ].
 
 ====
 
-____________________________________________________________
+
+_____________________________________________________________
+
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
@@ -31,10 +33,15 @@ littéral.
 
 _____________________________________________________________
 
+
+_____________________________________________________________
+
+
 image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] *Graphique
 3D* :
 
-Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D
+Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D.
 
-même si la syntaxe n'est pas proposée, on peut ajouter *Direction( <Plan> )* Elle crée l'[.underline]#opposé# de
-`++VecteurUnitaireOrthogonal(<Plan>)++`
+Même si la syntaxe n'est pas proposée, on peut ajouter *Direction( <Plan> )*
+
+Elle crée l'[.underline]#opposé# de `++VecteurUnitaireOrthogonal(<Plan>)++`.
