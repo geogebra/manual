@@ -1,0 +1,52 @@
+= Polecenie PrawaStrona
+:page-en: commands/RightSide
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+PrawaStrona( <Równanie> )::
+  Zwraca prawą stronę uproszczonego równania.
+
+[EXAMPLE]
+====
+
+`++PrawaStrona(x + 2 = 3x + 1)++` daje w wyniku _0.5_
+
+====
+
+== Specyficzna Składnia CAS
+
+PrawaStrona( <Równanie> )::
+  Zwraca prawą stronę równania.
+
+[EXAMPLE]
+====
+
+`++PrawaStrona(x + 3 = 3 x + 1)++` daje w wyniku _3 x + 1_.
+
+====
+
+PrawaStrona( <Lista Równań> )::
+  Zwraca listę prawych stron równań.
+
+[EXAMPLE]
+====
+
+`++PrawaStrona({a^2 + b^2 = c^2, x + 2 = 3x + 1})++` daje w wyniku _{c^2^, 3x + 1}_.
+
+====
+
+PrawaStrona( <Lista Równań>, <Indeks> )::
+  Zwraca prawą stronę równania określonego przez indeks.
+
+[EXAMPLE]
+====
+
+`++RightSide({a^2 + b^2 = c^2, x + 2 = 3 x + 1}, 1)++` daje w wyniku stem:[c^2].
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/LewaStrona.adoc[LewaStrona].
+
+====
