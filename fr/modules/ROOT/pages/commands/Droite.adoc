@@ -2,6 +2,8 @@
 :page-en: commands/Line
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie] 
+
 Droite( <Point A>, <Point B> )::
   Crée la droite (AB) passant par les points _A_ et _B_, de vecteur directeur B-A
 
@@ -57,13 +59,16 @@ ____________________________________________________________
 
 Pour l'équation d'une droite
 
-* en Graphique 2D il a 4 écritures possibles :
-*** y = ax + b ; 
-*** ax + by = c ;
-*** ax + by + c = 0 et
-*** paramétrique X = A + λ ^stem:[ \overrightarrow{AB}]^
+image:32px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=32,height=32] en Graphique 2D il a 4 écritures possibles :
 
-ainsi les saisies `++y=2x-3++`, `++2x-y=3++`, `++2x-y-3=0++` et `++X=(0,-3)+λ (1,2)++` construiront la même droite.
+ainsi les 4 saisies suivantes construiront la même droite.
+
+[cols=",,,",options="header",]
+|===
+|y = ax + b        |ax + by = c   |ax + by + c = 0   |X = A + λ ^stem:[ \overrightarrow{AB}]^
+|`++y=2x-3++`|`++2x-y=3++`|`++2x-y-3=0++`|`++X=(0,-3)+λ (1,2)++`
+|===
+ainsi les 4 saisies ci-dessus construiront la même droite.
 
 [cols="12%,88%",]
 |===
@@ -71,17 +76,23 @@ ainsi les saisies `++y=2x-3++`, `++2x-y=3++`, `++2x-y-3=0++` et `++X=(0,-3)+λ (
 espace entre λ et le vecteur directeur choisi.
 |===
 
-* en Graphique 3D il n'y a que l'écriture paramétrique X = A + λ ^stem:[ \overrightarrow{AB}]^.
+image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] en Graphique 3D il n'y a(urait?) que l'écriture paramétrique X = A + λ ^stem:[ \overrightarrow{AB}]^.
 
 ainsi la saisie `++X=(1,1,1)+ λ (1,2,3)++` construira une droite dans Graphique 3D.
 
-Mais aussi depuis la version 332, avant le brexit, vous pouvez utiliser une syntaxe utilisée de l'autre côté du channel
-la saisie `++x-1=y-2=(z-3)/2++` (qui sera transformée en définition en _IntersectionChemins[x-1+0z=y-2,x-1=(z-3)/(2)]_)
-construira la droite d'équation _f: X = (-0.58, 0.42, -0.17) + λ (0.5, 0.5, 1)_ ayant pour description "Droite
-d'intersection de x-1+0z=y-2 et x-1=(z-3)/2"
+MAIS aussi depuis la version 332, avant le brexit, vous pouvez utiliser une syntaxe utilisée de l'autre côté du channel
+
+la saisie `++x-1=y-2=(z-3)/2++` (qui construira la droite d'équation _f: X = (-0.58, 0.42, -0.17) + λ (0.5, 0.5, 1)_ ayant pour description "Droite d'intersection de x-1+0z=y-2 et x-1=(z-3)/2"
 
 la saisie `++ r=(2+3t) (1,0,0)+(4+3t) (0,1,0) +(7+t) (0,0,1) ++` ou plus simplement `++ (2+3t,4+3t,7+t) ++` construit la
 droite d'équation paramétrique _X = (2, 4, 7) + t (3, 3, 1)_
 
-4 saisies différentes pour une même droite de Graphique 3D `++IntersectionChemins(4x+7y=46,y+z=9)++`
-`++(4x + 7y = 46, y + z = 9)++` `++7y = 46 - 4x = 7(9 - z)++` `++ X = (1, 6, 3) + λ (7, -4, 4) ++`
+4 saisies différentes pour une même droite de Graphique 3D
+[cols=",,,",]
+|===
+|`++IntersectionChemins(4x+7y=46,y+z=9)++`|`++(4x+7y=46, y+z=9)++`|
+ `++7y= 46-4x=7(9-z)++`|`++ X = (1, 6, 3) + λ (7, -4, 4) ++`
+|===
+
+
+Mais les affichages dans Algèbre varient _X = (1, 6, 3) + λ (7, -4, 4)_ , ou _X = (-1.67901, 7.53086, 1.46914) + λ (7, -4, 4)_, ou _X = (-1.67901, 7.53086, 1.46914) + λ (49, -28, 28)_. 
