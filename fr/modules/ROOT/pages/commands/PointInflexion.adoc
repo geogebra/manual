@@ -2,6 +2,8 @@
 :page-en: commands/InflectionPoint
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:/commands/Commandes_Calculs_et_Fonctions.adoc[Commandes Calculs et Fonctions].
+
 PointInflexion( <Polynôme p> )::
   Tous les points d’inflexion de la courbe représentative du polynôme _p_.
 
@@ -9,5 +11,23 @@ PointInflexion( <Polynôme p> )::
 ====
 
 `++PointInflexion(x^3)++` retourne _(0, 0)_.
+
+====
+
+
+
+_____________________________________________________________
+
+
+image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
+
+
+PointInflexion( <Fonction> )::
+  Tous les points d’inflexion de la courbe représentative de la fonction (où c'est possible) dans une liste.
+
+[EXAMPLE]
+====
+
+ `++PointInflexion(x exp(-x))++`retourne stem:[ \left\{ \left(2, \frac{2}{\textit{e}^{2}} \right) \right\} ].
 
 ====
