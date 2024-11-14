@@ -7,13 +7,13 @@ xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie]
 Distance( <Point A>, <Objet O> )::
   Retourne la (plus courte) distance entre le point _A_ et l'objet.
 
-  Fonctionne avec des points, des segments, des droites, des coniques et des courbes implicites.
+Fonctionne avec des points, des segments, des droites, des coniques et des courbes implicites.
 
-  `++Distance( <Point A>, <Point B>)++` retourne la Distance _AB_.
-  `++Distance( <Point A>, <Droite g>)++` retourne la Distance du point _A_ à une ligne _g_.
+* `++Distance( <Point A>, <Point B>)++` retourne la Distance _AB_.
+* `++Distance( <Point A>, <Droite g>)++` retourne la Distance du point _A_ à une ligne _g_.
 
-  `++Distance( <Point A>, <Droite g>)++` retourne la Distance du point _A_ au point xref:commands/PointPlusProche.adoc[PointPlusProche(g,A)].
-  `++Distance( <Point A>, <Fonction g>)++` retourne la Distance du point _A_ au point xref:commands/PointPlusProche.adoc[PointPlusProche(f,A)].
+* `++Distance( <Point A>, <Droite g>)++` retourne la Distance du point _A_ au point xref:commands/PointPlusProche.adoc[PointPlusProche(g,A)].
+* `++Distance( <Point A>, <Fonction g>)++` retourne la Distance du point _A_ au point xref:commands/PointPlusProche.adoc[PointPlusProche(f,A)].
 
 [EXAMPLE]
 ====
@@ -51,7 +51,7 @@ fois surprenantes avec la possibilité de travailler en littéral :
 [EXAMPLE]
 ====
 
-`++Distance((a,b),(c,d))++` retourne stem:[\sqrt{ \left(a - c \right)^\{2} + \left(b - d \right)^\{2}}].
+`++Distance((a,b),(c,d))++` retourne stem:[\sqrt{ \left(a - c \right)^{2} + \left(b - d \right)^{2}}].
 
 ====
 _____________________________________________________________
@@ -67,7 +67,7 @@ Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D.
 [EXAMPLE]
 ====
 
-* `++Distance((2, 1, 2), (1, 3, 0)) ++` retourne _3_
+* `++Distance((2, 1, 2), (1, 3, 0)) ++` retourne _3_.
 * Soit _a: X = (-4, 0, 0) + λ*(4, 3, 0)_ et _b: X = (0, 0, 0) + λ*(0.8, 0.6, 0)_.  `++Distance(a, b)++` retourne _2.4_
 ====
 
