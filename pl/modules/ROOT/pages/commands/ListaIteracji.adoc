@@ -1,0 +1,63 @@
+= Polecenie ListaIteracji
+:page-en: commands/IterationList
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+ListaIteracji( <Funkcja>, <Wartość Początkowa>, <Liczba Iteracji> )::
+  Zwraca listę o długości _n+1_ (_n_ = liczba iteracji) której elementy są kolejnymi iteracjami funkcji, zaczynając od wartości początkowej.
+
+[EXAMPLE]
+====
+
+Po zdefiniowaniu `++f(x) = x^2++` polecenie `++ListaIteracji(f, 3, 2)++` daje w wyniku listę _{3, 9, 81}_.
+
+====
+
+Możesz również użyć tego polecenia do zdefiniowania ciągu, w którym _a~k+1~_ zależy od _a~k~_ and _k_. Jeśli funkcja wejściowa _f_
+jest funkcją dwóch zmiennych, a wartość początkowa to lista dwóch liczb _{s, a~s~}_, wtedy lista wynikowa składa się 
+z liczb _a~s~_,_a~s+1~_,....,_a~s+n~_ gdzie dla _k>s_ mamy _a~k+1~=f(k, a~k~)_.
+
+[EXAMPLE]
+====
+
+Zdefiniuj `++f(k,a)=(k+1)*a++`, co odpowiada rekurencyjnej definicji silni. Polecenie
+`++ListaIteracji(f, {3, 6}, 4)++` daje w wyniku listę _{6, 24, 120, 720, 5040}_.
+
+====
+
+ListaIteracji( <Wyrażenie>, <Zmienne>, ..., <Wartość Początkowa>, <Liczba Iteracji> )::
+  Zwraca listę o długości _n+1_ (_n_ = liczba iteracji)  której elementy są kolejnymi iteracjami wyrażenia, zaczynając od podanej wartości początkowej. W każdej iteracji 
+zmienne w wyrażeniu są zastępowane ostatnimi elementami listy. Powinno być co najmniej tyle wartości początkowych, ile jest zmiennych, w przeciwnym razie wynik jest _niezdefiniowany_.
+
+[EXAMPLE]
+====
+
+Niech _A_, _B_ będą punktami. Polecenie `++ListaIteracji(PunktŚrodkowy(A, C), C, {B}, 3)++` oblicza wartości __C__~0~ =
+_B_,   __C__~1~ = PunktŚrodkowy(_A_, __C__~0~),   __C__~2~ = PunktŚrodkowy(_A_, __C__~1~),   __C__~3~ = PunktŚrodkowy(_A_,
+__C__~2~) i daje w wyniku listę {__C__~0~, __C__~1~, __C__~2~, __C__~3~}. Zatem dla _A_ = (0,0) i _B_ = (8,0) wynikiem będzie lista
+{(8,0), (4,0), (2,0), (1,0)}.
+
+====
+
+[EXAMPLE]
+====
+
+Niech _f_~0~, _f_~1~ będą liczbami. `++ListaIteracji(a + b, a, b, {f_0, f_1}, 5)++` na początku listy wynikowej wstawi
+wartości z listy podanej jako wartość początkowa. Następnie wartości są obliczane wg wzoru __f__~2~ = __f__~0~ + __f__~1~,   __f__~3~ = __f__~1~
++ __f__~2~,   __f__~4~ = __f__~2~ + __f__~3~,   __f__~5~ = __f__~3~ + __f__~4~. Zatem dla _f_~0~ = _f_~1~ = 1 wynikiem będzie
+lista {1, 1, 2, 3, 5, 8}.
+
+====
+
+[NOTE]
+====
+
+Obecnie w Widoku CAS obsługiwana jest tylko pierwsza składnia
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/Iteracja.adoc[Iteracja].
+
+====
