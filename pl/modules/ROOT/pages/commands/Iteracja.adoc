@@ -1,0 +1,33 @@
+= Polecenie Iteracja
+:page-en: commands/Iteration
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Iteracja( <Funkcja>, <Wartość Początkowa>, <Liczba Iteracji> )::
+  Wykonuje funkcję _n_ razy (_n_ = liczba iteracji) rozpoczynając od danej wartości początkowej..
+
+[EXAMPLE]
+====
+
+* Po zdefiniowaniu `++f(x) = x^2++` polecenie `++Iteracja(f, 3, 2)++` daje w wyniku (3^2^)^2^ = 81.
+* _Powtarzane dodawania: Aby uzyskać wielokrotne dodawanie 7 do liczby 3, zdefiniuj `++g(x) = x + 7++`, wtedy
+`++Iteracja(g, 3, 4)++` daje w wyniku (((3+7) +7) +7) +7 = 31.
+
+====
+
+Iteracja( <Wyrażenie>, <Zmienne>, ..., <Wartość Początkowa>, <Liczba Iteracji> )::
+  Powtarza wyrażenie _n_ razy  (_n_ = liczba iteraci) rozpoczynając od danej wartości początkowej. Wynik jest ostatnim elementem
+  listy tworzonej przez polecenie of xref:/commands/ListaIteracji.adoc[ListaIteracji], z tymi samymi parametrami.
+
+[EXAMPLE]
+====
+
+ `++Iteracja(a^2+1,a,{(1+ί)/(sqrt(2))},5)++` przeprowadzi powtarzaną iterację na liczbie zespolonej.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/ListaIteracji.adoc[ListaIteracji], aby uzyskać więcej szczegółów.
+
+====
