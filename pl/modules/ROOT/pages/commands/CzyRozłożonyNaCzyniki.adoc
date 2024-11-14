@@ -1,0 +1,34 @@
+= Polecenie CzyRozłożonyNaCzyniki
+:page-en: commands/IsFactored
+:page-aliases: commands/IsFactorised.adoc
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+image:64px-Globe.png[Globe.png,width=64,height=64,role=left]
+
+To polecenie ma dwie wersje w języku angielskim:
+
+* IsFactored (US)
+* IsFactorised (UK + Aus)
+
+====
+
+CzyRozłożonyNaCzyniki( <Wielomian> )::
+  Daje w wyniku ''true'' jeśli wielomian jest rozłożony na czynniki w stem:[\mathbb Q] i ''false'' w przeciwnym wypadku. Ogólnie, aby uznać rozkład wielomianu za rozłożony na czynniki, współczynnik wyrazu wiodącego każdego czynnika musi być dodatni.
+
+[EXAMPLE]
+====
+* `CzyRozłożonyNaCzyniki(x)` daje w wyniku _true_ +
+* `CzyRozłożonyNaCzyniki(0.5)` daje w wyniku _true_ +
+* `CzyRozłożonyNaCzyniki(5)` daje w wyniku _true_ +
+* `CzyRozłożonyNaCzyniki(x^2-1)` daje w wyniku _false_ +
+* `CzyRozłożonyNaCzyniki(x^2-2)` daje w wyniku _true_ +
+* `CzyRozłożonyNaCzyniki(x(x+1))` daje w wyniku _true_ +
+* `CzyRozłożonyNaCzyniki(x(2x+2))` daje w wyniku _false_ +
+* `CzyRozłożonyNaCzyniki(x^3-1)` daje w wyniku _false_ +
+* `CzyRozłożonyNaCzyniki(x(x/2+1/2))` daje w wyniku _false_ +
+* `+CzyRozłożonyNaCzyniki((x+1)(x^2-1))+` daje w wyniku _false_ +
+* `CzyRozłożonyNaCzyniki(-2x-2)` daje w wyniku _false_ +
+* `CzyRozłożonyNaCzyniki(2x+2)` daje w wyniku _false_ +
+====
