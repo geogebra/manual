@@ -2,50 +2,48 @@
 :page-en: commands/Distance
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie] 
+
 Distance( <Point A>, <Objet O> )::
-  Retourne la (plus courte) distance entre le point _A_ et l'objet. Fonctionne avec des points, des segments, des
-  droites, des coniques et des courbes implicites.
+  Retourne la (plus courte) distance entre le point _A_ et l'objet.
+
+  Fonctionne avec des points, des segments, des droites, des coniques et des courbes implicites.
+
+  `++Distance( <Point A>, <Point B>)++` retourne la Distance _AB_.
+  `++Distance( <Point A>, <Droite g>)++` retourne la Distance du point _A_ à une ligne _g_.
+
+  `++Distance( <Point A>, <Droite g>)++` retourne la Distance du point _A_ au point xref:commands/PointPlusProche.adoc[PointPlusProche(g,A)].
+  `++Distance( <Point A>, <Fonction g>)++` retourne la Distance du point _A_ au point xref:commands/PointPlusProche.adoc[PointPlusProche(f,A)].
 
 [EXAMPLE]
 ====
 
-*Exemples :*
-
-Distance( <Point A>, <Point B>)::
-  Distance _AB_.
-Distance( <Point A>, <Ligne g>)::
-  Distance d’un point _A_ à une ligne _g_.
-
-====
-
-[NOTE]
-====
-
-Dans GeoGebra 4.0 *Distance[Point A, Fonction]* donnait la distance entre _A_ et _(x(A),f(x(A)))_. En GeoGebra
-4.4 la commande retournera la plus courte distance du point à la courbe de la fonction (surtout polynomiale).
-
-====
-
-[NOTE]
-====
-
-Dans GeoGebra 3.2 *Distance[Point A, Segment]* donnait la distance à la droite contenant le segment. Depuis
-GeoGebra 4.0 la commande retourne la distance au segment lui-même.
+`++ Distance((2, 1), x² + (y - 1)² = 1)++` retourne _1_
 
 ====
 
 Distance( <Ligne g>, <Ligne h>)::
   Distance des lignes parallèles _g_ et _h_.
+  [.underline]#La distance entre deux droites sécantes vaudra 0.#
 
-[NOTE]
+
+[EXAMPLE]
 ====
 
-La distance entre deux droites sécantes vaudra 0. Cette commande prend son sens pour les droites parallèles.
+* `++Distance(y = x + 3, y = x + 1)++` retourne _1.41_
+* `++Distance(y = 3x + 1, y = x + 1)++` retourne _0_
+
 
 ====
+
+
+
+
 
 image:Tool_tool.png[Tool tool.png,width=32,height=32] Voir l' *outil* associé : image:32px-Mode_distance.svg.png[Mode
 distance.svg,width=32,height=32] xref:/tools/Distance_ou_Longueur.adoc[Distance_ou_Longueur].
+
+_____________________________________________________________
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* : des écritures de résultats des
 fois surprenantes avec la possibilité de travailler en littéral :
@@ -56,10 +54,33 @@ fois surprenantes avec la possibilité de travailler en littéral :
 `++Distance((a,b),(c,d))++` retourne stem:[\sqrt{ \left(a - c \right)^\{2} + \left(b - d \right)^\{2}}].
 
 ====
+_____________________________________________________________
+
 
 _____________________________________________________________
 
 image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] *Graphique
 3D* :
 
-Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D
+Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D.
+
+[EXAMPLE]
+====
+
+* `++Distance((2, 1, 2), (1, 3, 0)) ++` retourne _3_
+* Soit _a: X = (-4, 0, 0) + λ*(4, 3, 0)_ et _b: X = (0, 0, 0) + λ*(0.8, 0.6, 0)_.  `++Distance(a, b)++` retourne _2.4_
+====
+
+et il convient d'ajouter :
+
+Distance( <Plan>, <Plan> )::
+  Distance des planss parallèles.
+   [.underline]#La distance entre deux plans sécants vaudra 0.#
+
+[EXAMPLE]
+====
+
+Soit _eq1: x + y + 2z = 1_ et _eq2: 2x + 2y +4z = -2_,  `++Distance(eq1, eq2)++` retourne _0.82_
+
+====
+
