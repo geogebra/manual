@@ -1,0 +1,38 @@
+= Polecenie PołączListy
+:page-en: commands/Join
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+PołączListy( <Lista>, <Lista>, ... )::
+  Łączy dwie lub więcej list.
+
+[EXAMPLE]
+====
+
+`++PołączListy({5, 4, 3}, {1, 2, 3})++` tworzy listę _{5, 4, 3, 1, 2, 3}_.
+
+====
+
+[NOTE]
+====
+
+Nowa lista zawiera wszystkie elementy list początkowych, nawet jeśli się powtarzają. Elementy nowej listy nie są sortowane.
+
+====
+
+PołączListy( <Lista List> )::
+  Łączy podlisty w jedną dłuższą listę.
+
+[EXAMPLE]
+====
+
+* `++PołączListy({{1, 2}})++` tworzy listę _{1, 2}_.
+* `++PołączListy({{1, 2, 3}, {3, 4}, {8, 7}})++` ctworzy listę _{1, 2, 3, 3, 4, 8, 7}_.
+
+====
+
+[NOTE]
+====
+
+Nowa lista zawiera wszystkie elementy list początkowych, nawet jeśli się powtarzają. Elementy nowej listy nie są sortowane.
+
+====
