@@ -1,0 +1,43 @@
+= Polecenie OkrągStyczny
+:page-en: commands/OsculatingCircle
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+OkrągStyczny( <Punkt>, <Funkcja> )::
+  Zwraca okrąg styczny do wykresu funkcji w danym punkcie.
+
+[EXAMPLE]
+====
+
+`++OkrągStyczny((0, 0), x^2)++` daje w wyniku _x² + y² - y = 0_.
+
+====
+
+OkrągStyczny( <Punkt>, <Krzywa> )::
+  Zwraca okrąg styczny do krzywej w danym punkcie.
+
+[EXAMPLE]
+====
+
+`++OkrągStyczny((1, 0), Krzywa(cos(t), sin(2t), t, 0, 2π))++` daje w wyniku _x² + y² + 6x = 7_.
+
+====
+
+OkrągStyczny( <Punkt>, <Obiekt> )::
+  Zwraca okrąg styczny obiektu (funkcja, krzywa, krzywa stożkowa) w danym punkcie.
+
+[EXAMPLE]
+====
+
+* `++OkrągStyczny((0, 0), x^2)++` daje w wyniku _x² + y² - y = 0_
+* `++OkrągStyczny((1, 0), Krzywa(cos(t), sin(2t), t, 0, 2π))++` daje w wyniku _x² + y² + 6x = 7_
+* `++OkrągStyczny((-1, 0), KrzywaStożkowa({1, 1, 1, 2, 2, 3}))++` daje w wyniku _x² + y² + 2x + 1y = -1_
+
+====
+
+[NOTE]
+====
+
+* To polecenie dotyczy wyłącznie obiektów 2D. Dla obiektów 3D możesz stworzyć narzędzie niestandardowe, na przykład
+https://www.geogebra.org/m/tan7dxjt
+
+====
