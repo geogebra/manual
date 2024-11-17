@@ -1,9 +1,9 @@
-= NSolveODE Command
+= Příkaz NVyresitODE
 :page-en: commands/NSolveODE
-ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
-NSolveODE( <List of Derivatives>, <Initial x-coordinate>, <List of Initial y-coordinates>, <Final x-coordinate> )::
-  Solves (numerically) the system of differential equations
+NSolveODE( <Seznam derivací>, <Počáteční souřadnice x>, <Seznam počátečních souřadnic y>, <Koncová souřadnice x> )::
+  Řeší (numericky) soustavu diferenciálních rovnic.
 
 [EXAMPLE]
 ====
@@ -14,9 +14,9 @@ NSolveODE( <List of Derivatives>, <Initial x-coordinate>, <List of Initial y-coo
 
 `++h'(t, f, g, h) = -t h + 3t g + 2f + t++`
 
-`++NSolveODE({f', g', h'}, 0, {1,2,-2}, 10)++`
+`++NVyresitODE({f', g', h'}, 0, {1,2,-2}, 10)++`
 
-`++NSolveODE({f', g', h'}, 0, {1,2,-2}, -5)++` (solves the system backwards in time).
+`++NVyresitODE({f', g', h'}, 0, {1,2,-2}, -5)++` (řeší soustavu zpětně v čase).
 
 ====
 
@@ -39,42 +39,42 @@ NSolveODE( <List of Derivatives>, <Initial x-coordinate>, <List of Initial y-coo
 
 `++x40 = -1.5++`
 
-`++NSolveODE({x1', x2', x3', x4'}, 0, {x10, x20, x30, x40}, 20)++`
+`++NVyresitODE({x1', x2', x3', x4'}, 0, {x10, x20, x30, x40}, 20)++`
 
 ====
 
 [EXAMPLE]
 ====
 
-Pendulum:
+Kyvadlo:
 
 `++g = 9.8++`
 
 `++l = 2++`
 
-`++a = 5++` (starting location)
+`++a = 5++` (počáteční poloha)
 
-`++b = 3++` (starting force)
+`++b = 3++` (počáteční síla)
 
 `++y1'(t, y1, y2) = y2++`
 
 `++y2'(t, y1, y2) = (-g) / l sin(y1) ++`
 
-`++NSolveODE({y1', y2'}, 0, {a, b}, 20) ++`
+`++NVyresitODE({y1', y2'}, 0, {a, b}, 20) ++`
 
-`++len = Length(numericalIntegral1) ++`
+`++del = Delka(numerickyIntegral1) ++`
 
-`++c = Slider(0, 1, 1 / len, 1, 100, false, true, true, false) ++`
+`++c = Posuvnik(0, 1, 1 / del, 1, 100, false, true, true, false) ++`
 
-`++x1 = l sin(y(Point(numericalIntegral1, c))) ++`
+`++x1 = l sin(y(Bod(numerickyIntegral1, c))) ++`
 
-`++y1 = -l cos(y(Point(numericalIntegral1, c))) ++`
+`++y1 = -l cos(y(Bod(numerickyIntegral1, c))) ++`
 
 `++A = (x1, y1) ++`
 
-`++Segment((0, 0), A)++`
+`++Usecka((0, 0), A)++`
 
-`++StartAnimation()++`
+`++StartAnimace()++`
 
 ====
 
