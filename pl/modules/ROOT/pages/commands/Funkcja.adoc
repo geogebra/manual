@@ -1,0 +1,37 @@
+= Polecenie Funkcja
+:page-en: commands/Function
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Funkcja( <Lista Liczb> )::
+  Daje następującą funkcję: pierwsze dwie liczby określają początkową wartość x i końcową wartość x. 
+Pozostałe liczby to wartości y funkcji dla x rozmieszczonych pomiędzy nimi w równych odległościach.
+
+[EXAMPLE]
+====
+
+* `++Funkcja[{2, 4, 0, 1, 0, 1, 0}]++` eneruje falę trójkątną pomiędzy _x = 2_ i _x = 4_.
+* `++Funkcja[{-3, 3, 0, 1, 2, 3, 4, 5}]++` daje funkcję liniową o współczynniku kierunkowym_= 1_ między _x = -3_ i _x = 3_.
+
+====
+
+Funkcja(<Funkcja>, <Wartość początkowa x>, <Wartość końcowa x>)::
+  Ogranicza wizualizację wykresu danej funkcji do przedziału [_Wartość początkowa x_, _Wartość końcowa x_].
+
+[EXAMPLE]
+====
+
+* `++Funkcja(x + 2, 1, 2)++` ogranicza wizualizację wykresu _y_ = _x_ + 2 do przedziału [1, 2].
+====
+
+Funkcja( <Wyrażenie>, <Zmienna parametryczna 1>, <Wartość początkowa>, <Wartość końcowa>, <Zmienna parametryczna 2>, <Wartość początkowa>, <Wartość końcowa> )::
+  Ogranicza wizualizację powierzchni będącej wykresem funkcji dwóch zmienny w przestrzeni 3D.
+
+[EXAMPLE]
+====
+
+Wyrażenie `++a(x, y) = x + 0y++` tworzy funkcję dwóch zmiennych, której wykresem w przestrzeni 3D jest
+*[.underline]#płaszczyzna#* _z_ = _a_(_x_, _y_) = _x_. Polecenie `++Funkcja[u, u, 0, 3, v, 0, 2] ++` tworzy funkcję dwóch
+zmiennych _b_(_u_, _v_) = _u_, której wykresem w przestrzeni 3D jest *[.underline]#prostokąt#* Wielokąt[(0, 0, 0), (3, 0, 3),
+(3, 2, 3), (0, 2, 0)] zawarty w płaszczyźnie _z_ = _a_(_x_,_y_) = _x_.
+
+====
