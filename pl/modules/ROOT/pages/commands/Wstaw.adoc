@@ -1,0 +1,55 @@
+= Polecenie Wstaw
+:page-en: commands/Insert
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Wstaw( <Obiekt>, <Lista>, <Pozycja> )::
+  Wstawia obiekt na podanej pozycji w liście.
+
+[EXAMPLE]
+====
+
+`++Wstaw(x^2, {1, 2, 3, 4, 5}, 3)++` wstawia _x^2^_ na trzeciej pozycji i tworzy listę _{1, 2, x^2^, 3, 4, 5}_.
+
+====
+
+[NOTE]
+====
+
+Jeśli pozycja jest liczbą ujemną, to jest liczona od końca.
+
+====
+
+[EXAMPLE]
+====
+
+`++Wstaw(x^2, {1, 2, 3, 4, 5}, -1)++` wstawia _x^2^_ na koniec listy i tworzy listę _{1, 2, 3, 4, 5,
+x^2^}_.
+
+====
+
+
+Wstaw( <Lista>, <Lista>, <Pozycka> )::
+  Wstawia wszystkie elementy pierwszej listy do drugiej listy na podanej pozycji.
+
+[EXAMPLE]
+====
+
+`++Wstaw({11, 12}, {1, 2, 3, 4, 5}, 3)++` wstawia wszystkie elementy pierwszej listy na trzeciej pozycji (i następnych pozycjach)
+do drugiej listy i tworzy listę _{1, 2, 11, 12, 3, 4, 5}_.
+
+====
+
+[NOTE]
+====
+
+Jeśli pozycja jest liczbą ujemną, to jest liczona od końca.
+
+====
+
+[EXAMPLE]
+====
+
+`++Wstaw({11, 12}, {1, 2, 3, 4, 5}, -2)++` wstawia wszystkie elementy pierwszej listy na końcu drugiej listy, przed jej ostatnim elementem, i tworzy nową listę _{1, 2, 3, 4, 11, 12, 5}_.
+
+====
+
