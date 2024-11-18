@@ -1,0 +1,22 @@
+= Polecenie ZSystemuLiczenia
+:page-en: commands/FromBase
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+ZSystemuLiczenia( "<Liczba jako tekst>", <Podstawa Systemu> )::
+  Konwertuje daną liczbę z systemu liczbowego o danej https://en.wikipedia.org/wiki/Radix[podstawie] na system dziesiętny. Podstawa musi być z zakresu od _2_ do _36_.
+  Liczba musi być liczbą całkowitą.
+
+[EXAMPLE]
+====
+
+* `++ZSystemuLiczenia("FF", 16)++` daje w wyniku 255.
+* `++ZSystemuLiczenia("100000000", 2)++` daje w wyniku 256.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/NaSystemLiczenia.adoc[NaSystemLiczenia].
+
+====
