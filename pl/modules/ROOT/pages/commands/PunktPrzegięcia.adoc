@@ -1,0 +1,25 @@
+= Polecenie PunktPrzegięcia
+:page-en: commands/InflectionPoint
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+PunktPrzegięcia( <Wielomian> )::
+  Zwraca  wszystkie punkty przegięcia wielomianu jako punkty na wykresie funkcji.
+
+[EXAMPLE]
+====
+
+`++PunktPrzegięcia[x^3]++` daje w wyniku _(0, 0)_.
+
+====
+
+== Specyficzna składnia CAS
+
+PunktPrzegięcia( <Funkcja> )::
+  Zwraca (o ile to możliwe) listę wszystkich punkty przegięcia funkcji.
+
+[EXAMPLE]
+====
+
+`++PunktPrzegięcia[x exp(-x)]++` daje w wyniku stem:[ \left\{ \left(2, \frac{2}{\textit{e}^{2}} \right) \right\} ].
+
+====
