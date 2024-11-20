@@ -18,22 +18,21 @@ Výsledný osmistěn bude potom mít:
 Osmisten( <Bod>, <Bod>, <Bod>)::
   Vytvoří osmistěn s uvedenými třemi body jako vrcholy první stěny. Body proto musí tvořit rovnostranný trojúhelník, aby jimi byl definován osmistěn.
 
-Octahedron( <Bod>, <Bod>)::
-  Creates an octahedron with the two points of the first face, and the third point automatically created on a circle, so
-  that the octahedron can rotate around its first edge.
+Osmisten( <Bod>, <Bod>)::
+  Vytvoří osmistěn s danými dvěma body jako vrcholy první stěny, jejíž třetí vrchol je automaticky umístěn na kružnici tak, že je možné osmistěnem kolem jeho první hrany otáčet.
 
 [NOTE]
 ====
 
-Octahedron(A, B) is a shortcut for Octahedron(A, B, C) with C = Point(Circle(Midpoint(A, B), Distance(A, B) sqrt(3) / 2,
-Segment(A, B))).
+Osmisten(A, B) je zkrácenou verzí příkazu Osmisten(A, B, C), kde C = Bod(Kruznice(StredSoumernosti(A, B), Vzdalenost(A, B) sqrt(3) / 2,
+Usecka(A, B))).
 
 ====
 
 [NOTE]
 ====
 
-See also xref:/commands/Cube.adoc[Cube], xref:/commands/Tetrahedron.adoc[Tetrahedron],
-xref:/commands/Icosahedron.adoc[Icosahedron], xref:/commands/Dodecahedron.adoc[Dodecahedron] commands.
+Viz též příkazy xref:/commands/Krychle.adoc[Krychle], xref:/commands/Tetrahedron.adoc[Tetrahedron],
+xref:/commands/Icosahedron.adoc[Icosahedron], xref:/commands/Dodecahedron.adoc[Dodecahedron].
 
 ====
