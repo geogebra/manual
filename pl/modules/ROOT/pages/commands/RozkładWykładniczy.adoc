@@ -1,0 +1,37 @@
+= Polecenie RozkładWykładniczy
+:page-en: commands/Exponential
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RozkładWykładniczy( <Lambda>, <Liczba sukcesów> )::
+  Oblicza wartość dystrybuanty (funkcji rozkładu skumulowanego) rozkładu wykładniczego dla _liczby sukcesów v_, czyli prawdopodobieństwo _P(X ≤ v)_ 
+  gdzie _X_ jest zmienną losową o https://pl.wikipedia.org/wiki/Rozk%C5%82ad_wyk%C5%82adniczy[rozkładzie
+  wykładniczym] zdefiniowanym przez parametr _lambda_.
+
+[NOTE]
+====
+
+Ta składnia zwraca prawdopodobieństwo dla danej wartości, czyli pole pod krzywą rozkładu wykładniczego na lewo od podanej współrzędnej _x_.
+
+====
+
+RozkładWykładniczy( <Lambda>, <Liczba sukcesów>, <Czy Skumulowany> )::
+  Jeśli _Czy Skumulowany = true_, oblicza wartość dystrybuanty (funkcji rozkładu skumulowanego) rozkładu wykładniczego dla danego parametru _lambda_ danej _liczby sukcesów_. 
+W przeciwnym razie oblicza wartość funkcji gęstości rozkładu dla danej _liczby sukcesów_.
+
+RozkładWykładniczy( <Lambda>, x, <Czy Skumulowany> )::
+  Jeśli _Czy Skumulowany = true_, tworzy funkcję dystrybuanty (cdf) rozkładu wykładniczego dla podanego parametru _lambda_, w przeciwnym razie tworzy funkcję gęstości prawdopodobieństwa (pdf) tego rozkładu.
+
+
+
+== Specyficzna składnia CAS
+
+RozkładWykładniczy( <Lambda>, <Liczba sukcesów> )::
+  Oblicza wartość dystrybuanty (funkcji rozkładu skumulowanego) rozkładu wykładniczego dla _liczby sukcesów v_, tj. prawdopodobieństwo
+  _P(X ≤ v)_ gdzie _X_ jest zmienną losową o rozkładzie wykładniczym z parametrem _lambda_.
+
+[EXAMPLE]
+====
+
+`++RozkładWykładniczy(2, 1)++` daje w wyniku _stem:[1 - \frac{1}{e^{2} } ]_ i w przybliżeniu wynosi _0.86_.
+
+====
