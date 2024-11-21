@@ -30,56 +30,56 @@ _vista Grafici_ 3D
 Visualizza un popup della Vista corrente, in modo che sia possibile selezionare -> Salva immagine come... con un clic
 sul tasto destro del mouse
 
-* `++EsportaImmagine("filename", "image.png")++`
+* `++EsportaImmagine("filename", "immmagine.png")++`
 
-Salva un file immagine della Vista corrente, con nome "image.png"
+Salva un file immagine della Vista corrente, con nome "immmagine.png"
 
-* `++EsportaImmagine("filename", "image.png", "view", 2)++`
+* `++EsportaImmagine("filename", "immmagine.png", "view", 2)++`
 
-Salva un file immagine della vista Grafici 2, con nome "image.png"
+Salva un file immagine della vista Grafici 2, con nome "immmagine.png"
 
-* `++EsportaImmagine("filename", "image.png", "view", -1)++`
+* `++EsportaImmagine("filename", "immmagine.png", "view", -1)++`
 
-Salva un file immagine della vista 3D, con nome "image.png"
+Salva un file immagine della vista 3D, con nome "immmagine.png"
 
-* `++EsportaImmagine("filename", "image.png", "dpi", 300)++`
+* `++EsportaImmagine("filename", "immmagine.png", "dpi", 300)++`
 
-Salva un file immagine della Vista corrente, con nome "image.png", a 300 dpi (dot-per-inch)
+Salva un file immagine della Vista corrente, con nome "immmagine.png", a 300 dpi (dot-per-inch)
 
-* `++EsportaImmagine("filename", "image.png", "scale", 2)++`
+* `++EsportaImmagine("filename", "immmagine.png", "scale", 2)++`
 
-Salva un file immagine della Vista corrente, con nome "image.png" e scala 2 (cioè al doppio della risoluzione nominale
+Salva un file immagine della Vista corrente, con nome "immmagine.png" e scala 2 (cioè al doppio della risoluzione nominale
 dello schermo)
 
-* `++EsportaImmagine("filename", "image.png", "scalecm", 2, "dpi", 600)++`
+* `++EsportaImmagine("filename", "immmagine.png", "scalecm", 2, "dpi", 600)++`
 
-Salva un file immagine della Vista corrente, con nome "image.png" a 600dpi e scala con 1 unità = 2 cm
+Salva un file immagine della Vista corrente, con nome "immmagine.png" a 600dpi e scala con 1 unità = 2 cm
 
-* `++EsportaImmagine("filename", "image.png", "width", 1000)++`
+* `++EsportaImmagine("filename", "immmagine.png", "width", 1000)++`
 
-Salva un file immagine della Vista corrente, con nome "image.png" e larghezza = 1000 pixels
+Salva un file immagine della Vista corrente, con nome "immmagine.png" e larghezza = 1000 pixels
 
-* `++EsportaImmagine("filename", "image.png", "height", 1000)++`
+* `++EsportaImmagine("filename", "immmagine.png", "height", 1000)++`
 
-Salva un file immagine della Vista corrente, con nome "image.png" e altezza = 1000 pixels
+Salva un file immagine della Vista corrente, con nome "immmagine.png" e altezza = 1000 pixels
 
-* `++EsportaImmagine("filename", "image.png", "transparent", true)++`
+* `++EsportaImmagine("filename", "immmagine.png", "transparent", true)++`
 
-Salva un file immagine della Vista corrente in formato PNG trasparente, con nome "image.png".
+Salva un file immagine della Vista corrente in formato PNG trasparente, con nome "immmagine.png".
 
 Impostando la proprietà “transparent” come _false_ vengono salvate anche le immagini di sfondo.
 
-* `++EsportaImmagine("filename", "image.svg", "type", "svg")++`
+* `++EsportaImmagine("filename", "immmagine.svg", "type", "svg")++`
 
-Salva un file immagine della Vista corrente in formato SVG, con nome "image.png"
+Salva un file immagine della Vista corrente in formato SVG, con nome "immmagine.png"
 
-* `++EsportaImmagine("filename", "image.gif", "type", "gif", "slider", a, "loop", true, "time", 200, "width", 400)++`
+* `++EsportaImmagine("filename", "immmagine.gif", "type", "gif", "slider", a, "loop", true, "time", 200, "width", 400)++`
 
 Salva una GIF animata a ciclo continuo della vista corrente. L'animazione è controllata da uno slider "a", con un
 ritardo di 200ms tra i fotogrammi. *È necessario mantenere piccole le dimensioni della GIF e il numero di passi dello
 slider*
 
-* `++EsportaImmagine("filename", "image.gif", "type", "gif", "view", -1, "rotate", 360°, "slider", a, "loop", true, "time", 200)++`
+* `++EsportaImmagine("filename", "immmagine.gif", "type", "gif", "view", -1, "rotate", 360°, "slider", a, "loop", true, "time", 200)++`
 
 Salva una GIF animata a ciclo continuo della vista corrente. L'animazione è controllata da uno slider "a", con un
 ritardo di 200ms tra i fotogrammi e ruota la vista di 360° durante l'animazione. *È necessario mantenere piccole le
@@ -87,11 +87,11 @@ dimensioni della GIF e il numero di passi dello slider*
 
 * `++EsportaImmagine("type", "pdf", "filename", "test.pdf")++`
 
-Crea un PDF della _Vista_ corrente (o un PDF di 2 pagine se è aperta anche la _Vista Grafici_ 2)
+Crea un PDF con nome "test.pdf" della _Vista_ corrente (o un PDF di 2 pagine se è aperta anche la _Vista Grafici_ 2)
 
 * `++EsportaImmagine("type", "pdf", "filename", "test.pdf", "slider", n)++`
 
-Crea un PDF *multi-pagina* della _Vista_ corrente in cui ogni pagina corrisponde a un passo dello slider "n"
+Crea un PDF *multi-pagina* della _Vista_ corrente con nome "test.pdf", in cui ogni pagina corrisponde a un passo dello slider "n"
 
 * `++pic1 = EsportaImmagine("view", 2, "corner", A, "corner2", B)++`
 
@@ -113,8 +113,8 @@ veloce e di dimensioni minori rispetto a quello con GIF animate
 * Nelle viste Grafici 2D questa sintassi consente di ottenere un file esportato in scala di grigi
 `++"grayscale", true++` (solo formato PNG)
 * Nella vista _Grafici 3D_ sono supportati esclusivamente i formati di tipo bitmap (ad es. png, gif). In GeoGebra
-Classico 5 è possibile utilizzare la seguente sintassi per ottenere un'immagine ad alta risoluzione:
-`++EsportaImmagine("filename", "c:\Users\<utente>\AppData\image.png", "view", -1, "width", 2000)++`. Sostituire
+Classico 5 è possibile utilizzare la seguente sintassi per ottenere un'immagine ad alta risoluzione con nome "immagine.png":
+`++EsportaImmagine("filename", "c:\Users\<utente>\AppData\immagine.png", "view", -1, "width", 2000)++`. Sostituire
 *<utente>* con il proprio nome utente di Windows.
 
 ====
