@@ -1,0 +1,46 @@
+= Polecenie Minimalizuj
+:page-en: commands/Minimize
+:page-aliases: commands/Minimise.adoc
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+image:64px-Globe.png[Globe.png,width=64,height=64,role=left]
+
+To polecenie ma dwie wersje w języku angielskim:
+
+* Minimize (US)
+* Minimise (UK + Aus)
+
+====
+
+Minimalizuj( <Liczba Zależna>, <Liczba Swobodna> )::
+  Oblicza wartość zmiennej niezależnej (tzw. liczby swobodnej), która daje minimalną wartość liczby zależnej. Liczba swobodna 
+musi być suwakiem, a przedział suwaka zostanie wykorzystany jako przedział poszukiwań.  Relacja powinna być ciągła i mieć tylko jeden _lokalny_  punkt minimalny w danym przedziale. 
+Jeśli konstrukcja jest zbyt skomplikowana, polecenie może zwrócić ?, 
+aby uniknąć nadmiernego obciążenia procesora.
+
+[EXAMPLE]
+====
+Niech _a_ będzie suwakiem z zakresem [0,10], a _t1_ trójkątem prostokątnym z wierzchołkami _C_ = (_a_, 0), _A_ = (0, 0) i _B_ = (0,10 - _a_). Polecenie `++Minimalizuj(t1, a)++` daje wynik 0, 
+wartość _a_ dla której pole trójkąta _t1_ jest najmniejsze (gdy trójkąt degeneruje się do odcinka).
+====
+
+Minimalizuj( <Liczba Zależna>, <PunktNaŚcieżce> )::
+COblicza pozycję punktu, który daje minimalną wartość liczby zależnej. Punkt musi leżeć na ścieżce, a ścieżka będzie używana jako przedział poszukiwań.  
+Relacja powinna być ciągła i mieć tylko jeden lokalny punkt maksymalny w danym przedziale. 
+Jeśli konstrukcja jest zbyt skomplikowana, polecenie może zwrócić ? w celu uniknięcia nadmiernego obciążenia procesora.
+
+[EXAMPLE]
+====
+
+iech _c_ będzie okręgiem, _C_ punktem należącym do tego okręgu, a _D_ punktem leżącym poza okręgiem. Jeśli `++f = Odcinek(C,D)++`, polecenie `++Minimalizuj(f,C)++` tworzy punkt na okręgu _c_ który leży w najmniejszej odległości od _D_.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/Maksymalizuj.adoc[Maksymalizuj].
+
+====
