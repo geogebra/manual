@@ -1,0 +1,20 @@
+= Polecenie RozkładBeta
+:page-en: commands/BetaDist
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+BetaDist( <Alfa>, <Beta>, <Liczba sukcesów> )::
+  Oblicza wartość funkcji rozkładu skumulowanego dla https://pl.wikipedia.org/wiki/Rozk%C5%82ad_beta[rozkładu Beta] z parametrami _α, β_ dla danej liczby sukcesów _v_, 
+czyli prawdopodobieństwo _P(X≤v)_ gdzie _X_ jest zmienną losową o rozkładzie Beta z parametrami _α_ i _β_
+
+BetaDist( <Alfa>, <Beta>, <Liczba sukcesów>, <Czy Skumulowany> )::
+  Jeśli _Czy Skumulowany_ jest _true_, oblicza wartość funkcji rozkładu skumulowanego (cdf) dla rozkładu Beta z parametrami _α_ i _β_ dla danej liczby sukcesów _v_. 
+Jeśli _Czy Skumulowany_ is _false_, oblicza wartość funkcji gęstości prawdopodobieństwa (pdf) dla odpowiadającego rozkładu Beta  dla danej liczby sukcesów _v_.
+
+
+BetaDist(<Alfa>, <Beta>, x, <Czy Skumulowany>)::
+  If _Czy Skumulowany_ jest _true_, tworzy funkcję rozkładu skumulowanego (CDF) dla rozkładu Beta z parametrami _α_ i _β_, W przeciwnym razie tworzy funkcję gęstości prawdopodobieństwa (pdf) dla odpowiadającego rozkładu Beta.
+
+[NOTE]
+====
+Zobacz także polecenie xref:/commands/OdwrotnyBeta.adoc[OdwrotnyBeta].
+====
