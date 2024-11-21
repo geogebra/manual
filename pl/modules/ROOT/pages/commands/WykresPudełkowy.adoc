@@ -1,0 +1,23 @@
+= Polecenie WykresPudełkowy
+:page-en: commands/BoxPlot
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+WykresPudełkowy( PrzesunięcieY, SkalaY, Lista Surowych Danych )::
+  Tworzy wykres pudełkowy na podstawie podanych surowych danych, którego pozycja pionowa w układzie współrzędnych jest kontrolowana przez zmienną
+  _PrzesunięcieY_ a wysokość jest zależna od współczynnika _SkalaY_.
+
+[EXAMPLE]
+====
+
+`++WykresPudełkowy(0, 1, {2, 2, 3, 4, 5, 5, 6, 7, 7, 8, 8, 8, 9})++`
+
+====
+
+WykresPudełkowy( PrzesunięcieY, SkalaY, Wartość Początkowa, PierwszyKwartyl, Mediana, TrzeciKwartyl, Wartość Końcowa )::
+  Tworzy wykres pudełkowy dla podanych danych statystycznych w przedziale (_Wartość Początkowa, Wartość Końcowa_).
+WykresPudełkowy( <PrzesunięcieY>, <SkalaY>, <Lista Surowych Danych>, <CzyUwzględniaćSkrajne> )::
+ To pozwala na przedstawienie wartości odstających jako "X" zamiast uwzględniania ich w wykresie pudełkowym. Dla tego polecenia,
+  https://pl.wikipedia.org/wiki/Obserwacja_odstaj%C4%85ca[obserwacja odstająca] to dane leżące poniżej _Q1 - 1.5 * (Q3 - Q1)_ lub powyżej _Q3 + 1.5 * (Q3 -
+  Q1)_ (https://pl.wikipedia.org/wiki/Rozst%C4%99p_%C4%87wiartkowy[zobacz Rozstęp ćwiartkowy]).
+WykresPudełkowy( <PrzesunięcieY>, <SkalaY>, <Lista Danych>, <Lista Częstości>, <CzyUwzględniaćSkrajne> )::
+  To polecenie umożliwia łatwe przedstawienie danych z tabeli częstości w formie wykresu pudełkowego.
