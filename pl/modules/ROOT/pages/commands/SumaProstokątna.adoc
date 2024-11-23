@@ -1,0 +1,19 @@
+= Polecenie SumaProstokątna
+:page-en: commands/RectangleSum
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+SumaProstokątna( <Funkcja>, <Wartość początkowa x>, <Wartość końcowa x>, <Liczba Prostokątów>, <Położenie pierwszego> )::
+  Oblicza sumę pól prostokątów o wysokości z lewej strony, pomiędzy _Wartość początkowa x_ i _Wartość końcowa x_ zaczynającą się od ułamka
+   _d - Położenie pierwszego_ (0 ≤ _d_ ≤ 1) każdego przedziału, używając _n_ prostokątów.
+  Gdy _d_ = 0 polecenie jest równoważne do polecenia xref:/commands/SumaLewa.adoc[SumaLewa], gdy _d_ = 1 polecenie oblicza
+  sumę prawostronną danej funkcji.
+
+[NOTE]
+====
+
+* To polecenie rysuje również prostokąty odpowiadające danej sumie.
+* Polecenie to zostało zaprojektowane jako pomoc wizualna, więc nie zapewnia dokładnych wyników, jeśli liczba prostokątów jest zbyt duża.
+* Zobacz także polecenia: xref:/commands/SumaGórna.adoc[SumaGórna], xref:/commands/SumaDolna.adoc[SumaDolna],
+xref:/commands/SumaLewa.adoc[SumaLewa] i xref:/commands/SumaTrapezowa.adoc[SumaTrapezowa].
+
+====
