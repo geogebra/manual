@@ -1,0 +1,35 @@
+= Polecenie SumaTrapezowa
+:page-en: commands/TrapezoidalSum
+:page-aliases: commands/TrapeziumSum.adoc
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+image:64px-Globe.png[Globe.png,width=64,height=64,role=left]
+
+To polecenie ma dwie wersje w języku angielskim:
+
+* TrapezoidalSum (US)
+* TrapeziumSum (UK + Aus)
+
+====
+
+TrapezoidalSum( <Funkcja>, <Wartość początkowa x>, <Wartość końcowa x>, <Liczba Trapezów> )::
+  Oblicza sumę trapezową funkcji w przedziale [_Wartość początkowa x, Wartość końcowa x_] używając _n_ trapezów.
+
+[EXAMPLE]
+====
+
+`++SumaTrapezowa(x^2, -2, 3, 5)++` daje w wyniku _12.5_.
+
+====
+
+[NOTE]
+====
+
+To polecenie rysuje również trapezy odpowiadające sumie trapezowej.
+* Polecenie to zostało zaprojektowane jako pomoc wizualna, więc nie zapewnia dokładnych wyników, jeśli liczba trapezów jest zbyt duża.
+* Zobacz także polecenie: xref:/commands/SumaDolna.adoc[SumaDolna], xref:/commands/SumaLewa.adoc[SumaLewa],
+xref:/commands/SumaProstokątna.adoc[SumaProstokątna] and xref:/commands/SumaGórna.adoc[SumaGórna].
+
+====
