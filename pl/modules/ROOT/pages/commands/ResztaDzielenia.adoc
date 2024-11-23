@@ -1,0 +1,30 @@
+= Polecenie ResztaDzielenia
+:page-en: commands/Mod
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+ResztaDzielenia( <Liczba>, <Liczba> )::
+  Zwraca resztę z dzielenia pierwszej liczby przez drugą.
+
+[EXAMPLE]
+====
+
+`++ResztaDzielenia(9, 4)++` daje w wyniku _1_.
+
+====
+
+ResztaDzielenia( <Wielomian>, <Wielomian> )::
+  Zwraca resztę z dzielenia pierwszego wielomianu przez drugi.
+
+[EXAMPLE]
+====
+
+`++ResztaDzielenia(x^3 + x^2 + x + 6, x^2 - 3)++` daje w wyniku _4 x + 9_.
+
+====
+
+[NOTE]
+====
+
+Dla funkcji musisz zdefiniować to samodzielnie, np. `++ResztaDzielenia(x, y) = y (x / y - floor(x / y))++`.
+
+====
