@@ -1,0 +1,27 @@
+= Polecenie ZamieńWszystko
+:page-en: commands/ReplaceAll
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+ZamieńWszystko( <Tekst>, <Dopasowany tekst>, <Tekst do zastąpienia> )::
+  Tworzy nowy tekst zawierający podany _Tekst_, w którym _Dopasowany tekst_ został zastąpiony podanym _Tekstem do zastąpienia_.
+
+[EXAMPLE]
+====
+
+`++ZamieńWszystko("3cos(t)+cos(2y)", "cos", "sin")++` creates the new text `++"3sin(t)+sin(2y)"++`.
+
+====
+
+[NOTE]
+====
+
+Użyj polecenia xref:/commands/FormułaTekstowa.adoc[FormułaTekstowa], by utworzyć tekst w LaTeX.
+
+====
+
+[EXAMPLE]
+====
+
+`++FormulaText(ZamieńWszystko("3cos(t)+cos(2y)", "cos", "sin"))++` tworzy nowy tekst w LaTeX `++"3sin(t)+sin(2y)"++`.
+
+====
