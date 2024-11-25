@@ -1,0 +1,81 @@
+= Polecenie Częstość
+:page-en: commands/Frequency
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Częstość( <Lista Surowych Danych> )::
+ Zwraca listę z liczbą wystąpień każdej unikalnej wartości w podanej liście danych. Wejściowa lista może zawierać 
+liczby lub tekst. Lista jest posortowana w porządku rosnącym według unikalnych wartości. Aby uzyskać listę 
+odpowiadających im unikalnych wartości, użyj polecenia xref:/commands/BezPowtórzeń.adoc[BezPowtórzeń].
+
+[EXAMPLE]
+====
+
+Niech `++l1 = { "a", "a", "x", "x", "x", "b" }++`. `++Częstość(l1)++` daje w wyniku listę _{ 2, 1, 3 }_.
+`++BezPowtórzeń(list1)++` daje w wyniku listę _{ "a", "b", "x" }_.
+
+====
+
+Częstość( <Czy Skumulowany>, <Lista Surowych Danych> )::
+  Jeśli _Czy Skumulowany_ = _false_, zwraca w wyniku taką samą listę jak polecenie Częstość( <Lista Surowych Danych> )
+  Jeśli _Czy Skumulowany_ = _true_, zwraca listę skumulowanych częstości dla Częstość( <Lista Surowych Danych> ).
+
+[EXAMPLE]
+====
+
+Niech `++l1 = { 0, 0, 0, 1, 1, 2 }++`. `++Częstość(true, l1)++` daje w wyniku listę _{ 3, 5, 6 }_.
+`++Częstość(false, l1)++` daje w wyniku listę _{ 3, 2, 1}_. `++BezPowtórzeń(list1)++` daje w wyniku listę _{ 0, 1, 2 }_.
+
+====
+
+Częstość( <Lista Granic Klas>, <Lista Surowych Danych> )::
+  Zwraca listę liczebności wartości z podanej listy danych, które mieszczą się w przedziałach [a, b), gdzie
+  _a_ i _b_ to wszystkie pary kolejnych liczb z podanej listy granic klas. Najwyższy przedział ma postać [a, b].
+
+[EXAMPLE]
+====
+
+`++Częstość({1, 2, 3},  {1, 1, 2, 3})++` daje w wyniku listę _{ 2, 2 }_.
+
+====
+
+Częstość( <Lista Tekstów>, <Lista Tekstów> )::
+  Zwraca tablicę wielodzielczą zawierającą liczności sparowanych wartości z dwóch list. Wiersze macierzy 
+odpowiadają unikalnym wartościom z pierwszej listy, a kolumny unikalnym wartościom z drugiej listy. 
+Aby uzyskać listę unikalnych wartości dla każdej z list, użyj polecenia  xref:/commands/BezPowtórzeń.adoc[BezPowtórzeń].
+
+[EXAMPLE]
+====
+
+Niech `++l1 = {"a", "b", "b", "c", "c", "c", "c"}++` i `++l2 =  {"a", "b", "a", "a", "c", "c", "d"}++`. Wtedy
+`++Częstość(l1, l2)++` daje w wyniku tablicę stem:[\begin{pmatrix} 1 & 0 & 0 & 0\\ 1 &1 & 0 &0 \\ 1 & 0 & 2 & 1 \\
+\end{pmatrix}]
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/TablicaWielodzielcza.adoc[TablicaWielodzielcza].
+
+====
+
+Częstość( <Czy Skumulowany>, <Lista Granic Klas>,<Lista Surowych Danych> )::
+  Jeśli _Czy Skumulowany_ = _false_, zwraca w wyniku taką samą listę jak polecenie Częstość( <Lista Granic Klas>, <Lista Surowych Danych> )
+  Jeśli _Czy Skumulowany_ = _true_, zwraca listę skumulowanych częstości dla for Częstość( <Lista Granic Klas>, <Lista Surowych Danych> )
+
+Częstość( <Lista Granic Klas>, <Lista Surowych Danych>, <Czy Użyć Gęstości> , <Czynnik Skalujący Gęstości (opcjonalnie)>)::
+  Zwraca listę częstości dla odpowiadającego polecenia xref:/commands/Histogram.adoc[Histogram].
+  Jeśli _Czy Użyć Gęstości_ = _false_, zwraca w wyniku taką samą listę jak polecenie Częstość( <Lista Granic Klas>, <Lista Surowych Danych> )
+  Jeśli _Czy Użyć Gęstości_ = _true_, zwraca listę częstości dla każdej klasy.
+
+[EXAMPLE]
+====
+
+Niech `++data = {1, 2, 2, 2, 3, 3, 4, 4, 4, 4}++` będzie listą surowych danych i `++classes={0, 2, 5}++` będzie listą granic klas.
+Wtedy oba polecenia `++Częstość(classes, data, false)++` i `++Częstość(classes, data)++` zwracają listę _{1,
+9}_, podczas gdy `++Częstość(classes, data, true)++` zwraca listę _{0.5, 3}_.
+
+====
+
+Częstość( <Czy Skumulowany>, <Lista Granic Klas>, <Lista Surowych Danych>, <Czy Użyć Gęstościy> , <Czynnik Skalujący Gęstości (opcjonalnie)> )::
+  Zwraca listę częstości dla odpowiadającego polecenia xref:/commands/Histogram.adoc[Histogram].
