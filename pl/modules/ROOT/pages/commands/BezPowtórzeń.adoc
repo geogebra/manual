@@ -1,0 +1,34 @@
+= Polecenie BezPowtórzeń
+:page-en: commands/Unique
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+BezPowtórzeń( <Lista> )::
+  Zwraca listę elementów podanej listy w porządku rosnącym, przy czym powtarzające się elementy są uwzględniane tylko raz. 
+  Działa zarówno dla list liczb, jak i list tekstowych.
+
+[EXAMPLE]
+====
+
+* `++BezPowtórzeń({1, 2, 4, 1, 4})++` daje w wyniku _{1, 2, 4}_.
+* `++BezPowtórzeń({"a", "b", "Hello", "Hello"})++` daje w wyniku _{"'Hello", "a", "b"}_.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/Częstość.adoc[Częstość].
+
+====
+
+== Specyficzna składnia CAS
+
+BezPowtórzeń( <Lista> )::
+  Zwraca listę, w której każdy element z podanej listy występuje tylko raz.
+
+[EXAMPLE]
+====
+
+`++BezPowtórzeń({1, x, x, 1, a})++` daje w wyniku _{1, x, a}_.
+
+====
