@@ -90,17 +90,12 @@ Vytvoří obrázek zobrazení Grafika 2 v GeoGebře a umístí jej v okně na po
 [NOTE]
 ====
 
-* In GeoGebra Classic 5 if there is no `++filename++` parameter the image will be copied to the Clipboard. In the Chrome
-browser you can specify `++"clipboard", true++`
-* To crop an export, make the Points `++Export_1++` and `++Export_2++` to define the rectangle to crop (*These also crop
-the exports from the menus eg File -> Export Image*)
-* Some syntaxes aren't supported in GeoGebra 5 Classic
-* In Chrome, you can try the experimental syntax `++"type", "webm"++` to get a faster & smaller export than with
-animated GIFs
-* For the 2D Graphics Views you can try this syntax to get a monochrome export `++"grayscale", true++` (PNG format only)
-* For the 3D Graphics View, only bitmaps (eg png, gif) are supported. In GeoGebra Classic 5 you can try this to get a
-high-resolution output
-`++ExportovatObrazek("filename", "c:\Users\<username>\AppData\image.png", "view", -1, "width", 2000)++`. Change *<username>*
-to your Windows username
+
+* Pokud není v GeoGebře Classic 5 zadán parametr `++filename++`, bude obrázek zkopírován do schránky. V prohlížeči Chrome můžete zadat ++"clipboard", true++`.
+* Pro oříznutí exportu vytvořte body `++Export_1++` a `++Export_2++`, které definují obdélník k oříznutí (*Tyto body také ořezávají exporty přes nabídku, např. Soubor -> Exportovat obrázek*).
+* Některé syntaxe nejsou podporovány v GeoGebře Classic 5.
+* V prohlížeči Chrome můžete vyzkoušet experimentální syntaxi `++"type", "webm"++` pro rychlejší a menší export než u animovaných GIFů.
+* Pro 2D zobrazení (Nákresnu a Nákresnu 2) můžete použít tuto syntaxi pro export v monochromatickém režimu: `++"grayscale", true++` (pouze ve formátu PNG).
+* Pro 3D zobrazení (Grafický náhled 3D) jsou podporovány pouze bitmapové formáty (např. PNG, GIF). V GeoGebře Classic 5 můžete použít tuto syntaxi pro získání výstupu ve vysokém rozlišení: `++ExportovatObrazek("filename", "c:\Users\<username>\AppData\image.png", "view", -1, "width", 2000)++`. Změňte *<username>* na své uživatelské jméno ve Windows.
 
 ====
