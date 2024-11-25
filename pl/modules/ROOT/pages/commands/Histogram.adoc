@@ -1,0 +1,100 @@
+= Polecenie Histogram
+:page-en: commands/Histogram
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Histogram( <Lista Granic Klas>, <Lista Wysokości> )::
+  Tworzy histogram z słupkami o podanych wysokościach. Granice klas określają szerokość i pozycję każdego słupka histogramu.
+
+[EXAMPLE]
+====
+
+`++Histogram({0, 1, 2, 3, 4, 5}, {2, 6, 8, 3, 1})++` tworzy histogram z 5 słupkami o danych wysokościach. Pierwszy słupek
+znajduje się nad przedziałem [_0, 1_], drugi nad przedziałem [_1, 2_], i tak dalej.
+
+====
+
+Histogram( <Lista Granic Klas>, <Lista Surowych Danych>, <Czy Uzyć Gęstości>, <Czynnik Skalujący Gęstości (opcjonalnie)> )::
+  Tworzy histogram używając surowych danych. Granice klas określają szerokość i pozycję każdego słupka histogramu i są używane 
+do określenia, ile elementów danych mieści się w każdej klasie. Wysokość słupka jest określana w następujący sposób:
+
+* Jeśli _Czy Uzyć Gęstości = true_, wysokość = (Czynnik Skalujący Gęstości) * (częstość klasy) / (szerokość klasy)
+* Jeśli _Czy Uzyć Gęstości = false_, wysokość = częstość klasy
+
+Domyślnie Czy Uzyć Gęstości = true i Czynnik Skalujący Gęstości = 1. To tworzy histogram o całkowitym polu równym area = n, równym liczebności danych.
+
+[NOTE]
+====
+
+Wszystkie elementy surowych danych muszą mieścić się w przedziałach określonym przez granice klas, w przeciwnym razie zostanie zwrócony wynik “niezdefiniowany”.
+
+====
+
+[NOTE]
+====
+
+Zgodnie z konwencją stosowana jest zasada a ≤ x < b dla każdej klasy z wyjątkiem ostatniej, dla której obowiązuje zasada a ≤ x ≤ b
+
+====
+
+[EXAMPLE]
+====
+
+(_Histogram domyślny_)
+
+`++Histogram({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true)++` Tworzy histogram z trzema słupkami o wysokościach: 
+0.5 (pierwszy słupek), 0.2 (drugi słupek) i 0.1 (trzeci słupek).
+
+Całkowite pole powierzchni histogramu = 0.5*10 + 0.2*10 + 0.1*10 = 8.
+
+====
+
+[EXAMPLE]
+====
+
+(_Histogram liczności_)
+
+`++Histogram({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, false)++` tworzy histogram z trzema słupkami o wysokościach:
+5 (pierwszy słupek), 2 (drugi słupek) i 1 (trzeci słupek). Ten histogram nie wykorzystuje skalowania gęstości i podaje wysokości
+słupków odpowiadające liczbie wartości w każdej klasie.
+
+====
+
+[EXAMPLE]
+====
+
+(_Histogram częstości względnych_)
+
+`++Histogram({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 10/ 8)++` Tworzy histogram z trzema słupkami o wysokościach: 
+0.625 (pierwszy słupek), 0.25 (drugi słupek) i 0.125 (trzeci słupek). Ten histogram wykorzystuje skalowanie gęstości, aby wysokości 
+słupków odpowiadały proporcji wartości w każdej klasie.
+
+Jeśli n to liczba surowych danych, a klasy mają stałą szerokość w, wówczas Czynnik Skalujący Gęstości = w/n tworzy histogram względny.
+
+====
+
+[EXAMPLE]
+====
+
+(_Histogram znormalizowany_)
+
+`++Histogram({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 1/8)++` tworzy histogram z trzema słupkami o wysokościach: 
+0.0625 (pierwszy słupek), 0.025 (drugi słupek) i 0.0125 (trzeci słupek).
+
+Całkowite pole powierzchni histogramu = .0625*10 + .025*10 + .0125*10 = 1.
+
+Jeśli n liczba surowych danych, wówczas Czynnik Skalujący Gęstości = 1/n tworzy histogram znormalizowany o całkowitym polu powierzchni = 1.
+Jest to przydatne do dopasowania histogramu do krzywej gęstości.
+
+====
+
+Histogram( <Czy Skumulowany>, <Lista Granic Klas>, <Lista Surowych Danych>, <Czy Uzyć Gęstości>, <Czynnik Skalujący Gęstości (opcjonalnie)> )::
+  Jeśli _Czy Skumulowany=true_ tworzony jest histogram, w którym wysokość każdego słupka równa jest częstości danej klasy powiększonej 
+o sumę wszystkich wcześniejszych częstości.
+
+[EXAMPLE]
+====
+
+ `++Histogram(true, {10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true)++` tworzy histogram z trzema słupkami o wysokościach: 
+0.5 (pierwszy słupek), 0.7 (drugi słupek) i 0.8 (trzeci słupek).
+
+====
