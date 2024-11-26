@@ -1,0 +1,21 @@
+= Polecenie RozkładGamma
+:page-en: commands/Gamma
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RozkładGamma( <Alfa>, <Beta>, <Liczba Sukcesów> )::
+  Oblicza wartość funkcji dystrybuanty (cdf) https://pl.wikipedia.org/wiki/Rozk%C5%82ad_gamma[ rozkładu Gamma ] dla _liczby sukcesów v_, czyli prawdopodobieństwo
+_P(X ≤ v)_ gdzie _X_ jest zmienną losową o rozkładzie Gamma zdefiniowanym przez parametry _alfa_ i _beta_.
+
+[NOTE]
+====
+
+Ta składnia zwraca prawdopodobieństwo dla danej wartości, czyli pole pod krzywą rozkładu Gamma na lewo od podanej współrzędnej _x_.
+
+====
+
+
+RozkładGamma( <Alpha>, <Beta>, <Liczba Sukcesów>, <Czy Skumulowany> )::
+  Jeśli Czy Skumulowany = true_, oblicza wartość funkcji dystrybuanty (cdf) rozkładu Gamma dla podanych _alpha_ i _beta_ oraz _liczby sukcesów_, w przeciwnym razie oblicza funkcję gęstości prawdopodobieństwa rozkładu przy danej _liczby sukcesów_.
+
+RozkładGamma( <Alfa>, <Beta>, x, <Czy Skumulowany> )::
+  Jeśli Czy Skumulowany = true_, tworzy funkcję dystrybuanty (cdf) rozkładu Gamma dla podanych _alpha_ i _beta_,w przeciwnym razie tworzy funkcję gęstości prawdopodobieństwa (PDF) tego rozkładu.
