@@ -2,27 +2,29 @@
 :page-en: commands/Length
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie]
+
 Longueur( <Objet> )::
   Retourne la longueur de l'objet.
-
-* Longueur( <Point A> ) : Retourne la longueur _OA_ ;
-* Longueur( <Vecteur> ) : Retourne la norme de _Vecteur_ ;
-* Longueur(<Liste>) : Retourne la longueur, c’est-à-dire le nombre d’éléments de _Liste_ ;
-* Longueur( <Texte> ): Retourne le nombre de caractères de _Texte_ ;
-* Longueur( <Lieu> ): Retourne le nombre de points constituant le _Lieu_,
+[EXAMPLE]
+====
+* `++Longueur( <Point A> )++`: Retourne la longueur _OA_ ;
+* `++Longueur( <Vecteur> )++` : Retourne la norme de _Vecteur_ ;
+* `++Longueur(<Liste>)++` : Retourne la longueur, c’est-à-dire le nombre d’éléments de _Liste_ ;
+* `++Longueur( <Texte> )++`: Retourne le nombre de caractères de _Texte_ ;
+* `++Longueur( <Lieu> )++`: Retourne le nombre de points constituant le _Lieu_,
 ** Utilisez la commande xref:/commands/Périmètre.adoc[Périmètre][Lieu] pour obtenir la longueur du lieu lui-même ;
-* Longueur( <Arc> ):Retourne la longueur de _Arc_, qui n'est rien d'autre que sa 'valeur' pour GeoGebra ;
-* Longueur( <Secteur> ) :Retourne la longueur de l'arc définissant _Secteur_, sa 'valeur' pour GeoGebra étant son aire.
+* `++Longueur( <Arc> )++`: Retourne la longueur de _Arc_, qui n'est rien d'autre que sa 'valeur' pour GeoGebra ;
+* `++Longueur( <Secteur> )++` : Retourne la longueur de l'arc définissant _Secteur_, sa 'valeur' pour GeoGebra étant son aire.
 
-* Longueur(f) avec f(x)=mainlevée(x) retourne le nombre de points servant à construire la courbe.
+* `++Longueur(tracé1)++` avec tracé1 construit par l'outil image:32px-Mode_pen.svg.png[Mode pen.svg,width=32,height=32] xref:tools/Stylo.adoc[Stylo] retourne le nombre de points servant à construire la courbe.
+====
 
 Longueur(<Fonction>, <Nombre x1>, <Nombre x2> )::
   Retourne la longueur de l’arc de la courbe de la fonction sur l’intervalle [_x1, x2_].
 
 [EXAMPLE]
 ====
-
-*Exemple :*
 
 `++Longueur(2x, 0, 1)++` retourne 2.23606797749979, valeur approchée de stem:[\sqrt{5}].
 
@@ -65,22 +67,11 @@ Longueur( <Fonction>, <Variable a>, <Nombre t1>, <Nombre t2> )::
 
 [EXAMPLE]
 ====
-
-*Exemple :*
-
-`++Longueur(2 a, a,  0, 1)++` retourne stem:[\sqrt{5}].
+* `++Longueur(2 x, 0, 1)++` retourne stem:[\sqrt{5}].
+* `++Longueur(2 a, a,  0, 1)++` retourne stem:[\sqrt{5}].
 
 ====
-
-[EXAMPLE]
-====
-
-*Exemple :*
-
-`++Longueur(2 x, 0, 1)++` retourne stem:[\sqrt{5}].
-
-====
-
+____________________________________________________________
 _____________________________________________________________
 
 image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] *Graphique
