@@ -1,0 +1,21 @@
+= Polecenie HistogramPrawy
+:page-en: commands/HistogramRight
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+HistogramPrawy( <Lista Granic Klas>, <Lista wysokości> )::
+  Wynik taki sam jak w poleceniu `++Histogram(<Lista Granic Klas>>, <Lista wysokości>)++` (zobacz polecenie xref:./Histogram.adoc[Histogram]).
+
+HistogramPrawy( <Lista Granic Klas>, <Lista Surowych Danych>, <Czy Uzyć Gęstości>, <Czynnik Skalujący Gęstości (opcjonalnie)> )::
+   Wynik taki sam jak w poleceniu
+  `++Histogram(<Lista Granic Klas>,<Lista Surowych Danych>, <Czy Uzyć Gęstości>, <Czynnik Skalujący Gęstości>)++`, z tym 
+że jeśli dana jest równa prawej granicy klasy, jest liczona do tej klasy, a nie do następnej.
+
+HistogramPrawy( <Czy Skumulowany>, <Lista Granic Klas>, <Lista Surowych Danych>, <Czy Uzyć Gęstości>, <Czynnik Skalujący Gęstości (opcjonalnie)> )::
+  Wynik taki sam jak w poleceniu
+  `++Histogram(<Czy Skumulowany>, <Lista Granic Klas>, <Lista Surowych Danych>, <Czy Uzyć Gęstości>, <Czynnik Skalujący Gęstości>)++`,
+  że jeśli dana jest równa prawej granicy klasy, jest liczona do tej klasy, a nie do następnej.
+
+[NOTE]
+====
+
+BZgodnie z konwencją używana jest zasada a < x ≤ b dla każdej klasy, z wyjątkiem pierwszej klasy, dla której obowiązuje zasada a ≤ x ≤ b
