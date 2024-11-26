@@ -1,0 +1,43 @@
+= Polecenie Weź
+:page-en: commands/Take
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Weź( <Lista>, <PozycjaPoczątkowa> )::
+  Zwraca listę zawierającą elementy od _Pozycji Początkowej_ do końca listy.
+
+[EXAMPLE]
+====
+
+`++Weź({2, 4, 3, 7, 4}, 3)++` daje w wyniku _{3, 7, 4}_.
+
+====
+
+Weź( <Tekst>, <PozycjaPoczątkowa> )::
+ Zwraca tekst zawierający elementy od _Pozycji Początkowej_ do końca tekstu.
+
+[EXAMPLE]
+====
+
+`++Weź("GeoGebra", 3)++` daje w wyniku tekst _oGebra_.
+
+====
+
+Weź( <Lista>, <PozycjaPoczątkowa>, <PozycjaKońcowa> )::
+  Zwraca listę zawierającą elementy od _Start Position_ do _Pozycji Końcowej_ danej listy.
+
+[EXAMPLE]
+====
+
+`++Weź({2, 4, 3, 7, 4}, 3, 4)++` daje w wyniku _{3, 7}_.
+
+====
+
+Weź( <Tekst>, <PozycjaPoczątkowa>, <PozycjaKońcowa> )::
+  Zwraca tekst zawierający elementy od _Pozycji Początkowej_ _Pozycji Końcowej_ danego tekstu.
+
+[EXAMPLE]
+====
+
+`++Weź("GeoGebra", 3, 6)++` daje w wyniku tekst _oGeb_.
+
+====
