@@ -1,0 +1,40 @@
+= Polecenie WielokątCzęstości
+:page-en: commands/FrequencyPolygon
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+Wielokąt częstotości to wykres liniowy tworzony poprzez połączenie wszystkich środkowych punktów górnych krawędzi słupków histogramu. 
+W związku z tym sposób użycia tego polecenia jest taki sam, jak sposób użycia polecenie xref:/commands/Histogram.adoc[Histogram].
+
+====
+
+WielokątCzęstości(<Lista Granic Klas>, <Lista Wysokości> )::
+  Tworzy wielokąt częstości z wierzchołkami na określonych wysokościach. Granice klas określają współrzędną x każdego wierzchołka.
+
+[EXAMPLE]
+====
+
+`++WielokątCzęstości({0, 1, 2, 3, 4, 5}, {2, 6, 8, 3, 1})++` tworzy odpowiadający danym wykres liniowy..
+
+====
+
+WielokątCzęstości( <Lista Granic Klas>, <Lista Surowych Danych>, <Czy Uzyć Gęstości>, <Czynnik Skalujący Gęstości (opcjonalnie)> )::
+  Tworzy wielokąt częstości przy użyciu danych surowych. Granice klas określają współrzędne x wierzchołków i służą do ustalenia, 
+ile elementów danych mieści się w każdej klasie. Współrzędna y wierzchołka jest obliczana w następujący sposób:
+  * Jeśli _Czy Uzyć Gęstości = true_, wysokość = (Czynnik Skalujący Gęstości) * (częstość klasy) / (szerokość klasy)
+* Jeśli _Czy Uzyć Gęstości = false_, wysokość = częstość klasy
+
+Domyślnie _Czy Uzyć Gęstości = true_ i _Czynnik Skalujący Gęstości = 1_.
+
+WielokątCzęstości( <Czy Skumulowany>, <Lista Granic Klas>, <Lista Surowych Danych>, <Czy Uzyć Gęstości>, <Czynnik Skalujący Gęstości (opcjonalnie)> )::
+  Jeśli _Czy Skumulowany = true_ tworzony jest wielokąt częstości, w którym współrzędna y każdego wierzchołka jest równa częstotości danej klasy powiększonej 
+o sumę wszystkich wcześniejszych częstości.
+
+[NOTE]
+====
+
+Więcej przykładów można znaleźć w opisie polecenia xref:/commands/Histogram.adoc[Histogram].
+
+====
