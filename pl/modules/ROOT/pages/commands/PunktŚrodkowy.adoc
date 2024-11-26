@@ -1,0 +1,61 @@
+= Polecenie PunktŚrodkowy
+:page-en: commands/Midpoint
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+PunktŚrodkowy( <Odcinek> )::
+  Zwraca środek danego odcinka.
+
+[EXAMPLE]
+====
+
+Niech `++s = Odcinek((1, 1), (1, 5))++`. `++PunktŚrodkowy(s)++` daje w wyniku _(1, 3)_.
+
+====
+
+PunktŚrodkowy( <Srożkowa> )::
+  Zwraca środek krzywej stożkowej.
+
+[EXAMPLE]
+====
+
+`++PunktŚrodkowy(x^2 + y^2 = 4)++` daje w wyniku _(0, 0)_.
+
+====
+
+PunktŚrodkowy( <Przedział> )::
+  Zwraca środek przedziału (jako liczbę).
+
+[EXAMPLE]
+====
+
+`++PunktŚrodkowy(2 < x < 4)++` daje w wyniku _3_.
+
+====
+
+PunktŚrodkowy( <Punkt>, <Punkt> )::
+  Zwraca środek odcinka, którego końcami są dane punkty.
+
+[EXAMPLE]
+====
+
+`++PunktŚrodkowy((1, 1), (5, 1))++` daje w wyniku _(3, 1)_.
+
+====
+
+PunktŚrodkowy( <Kwadryka> )::
+  Zwraca środek danej kwadryki (np. sfery, stożka, itp.)
+
+[EXAMPLE]
+====
+
+`++PunktŚrodkowy(x^2 + y^2 + z^2 = 1)++` daje w wyniku _(0, 0, 0)_.
+
+====
+
+[NOTE]
+====
+
+Zobacz także narzędzie image:24px-Mode_midpoint.svg.png[Mode midpoint.svg,width=24,height=24]
+xref:/tools/Środek.adocŚrodek].
+
+====
