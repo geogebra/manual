@@ -2,6 +2,8 @@
 :page-en: commands/PerpendicularBisector
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie]
+
 Médiatrice( <Point A>, <Point B> )::
   Médiatrice du segment _[AB]_.
 
@@ -17,26 +19,30 @@ image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul f
 
 Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
 
-avec la possibilité de travailler en littéral : Les variables _a_, _b_, _c_ et _d_ n'étant pas définies dans GeoGebra,
-`++Médiatrice((a, b),(c,d))++` retourne : stem:[y = \frac{-a + c}\{b - d} x + \frac{a^\{2} + b^\{2} - c^\{2} - d^\{2}
-} \{2 b - 2 d}] on peut alors s'interroger sur cette formule littérale, ne semblant avoir de sens que si b ≠ d !
+avec la possibilité de travailler en littéral : 
+Les variables _a_, _b_, _c_ et _d_ n'étant pas définies dans GeoGebra,
 
-`++Médiatrice((a, b),(c,b))++` quant à elle, retourne sans problème : stem:[x = \frac{a + c}\{2}].
+`++Médiatrice((a, b),(c,d))++` retourne : stem:[y = \frac{-a + c}{b - d} x + \frac{a^{2} + b^{2} - c^{2} - d^{2}
+} {2 b - 2 d}] on peut alors s'interroger sur cette formule littérale, ne semblant avoir de sens que si b ≠ d !
+
+`++Médiatrice((a, b),(c,b))++` quant à elle, retourne sans problème : stem:[x = \frac{1}{2}a+\frac{1}{2}c].
+____________________________________________________________
+
 
 ________________________________________________________________
 
-[NOTE]
-====
+
 
 *image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] Graphique
 3D*
+[NOTE]
+====
+Il est bien évident que pour des points 3D n'existe pas *une* Médiatrice alors, il vous faut, utiliser
 
-Il est bien évident que pour des points 3D n'existe pas *une* Médiatrice alors, il vous faut, utiliser *Médiatrice(
-<Point A>, <Point B>, <Direction> )*
+Médiatrice(<Point A>, <Point B>, <Direction> )::
 
 * si _Direction_ est un plan, vous obtiendrez, la médiatrice parallèle à ce plan,
-* si _Direction_ est un vecteur, la médiatrice dans le plan passant par A et B et orthogonal au vecteur donné.
-
+* si _Direction_ est un vecteur ou une ligne (donc aussi les axes), la médiatrice dans le plan passant par A et B et orthogonal au vecteur donné ou ligne donnée.
+====
 [.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/PlanMédiateur.adoc[PlanMédiateur].
 
-====
