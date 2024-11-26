@@ -1,0 +1,16 @@
+= Polecenie RozkładJednostajny
+:page-en: commands/Uniform
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RozkładJednostajny( <Granica Dolna>, <Granica Górna>, <Liczba Sukcesów> )::
+  Oblicza wartość dystrybuanty (funkcji rozkładu skumulowanego) dla rozkładu jednostajnego dla _liczby sukcesów v_, czy oblicza
+  prawdopodobieństwo _P(X ≤ v)_ gdzie _X_ jest zmienną losową o rozkładzie jednostajnym w przedziale [_granica dolna_, _granica górna_].
+
+
+RozkładJednostajny( <Granica Dolna>, <Granica Górna>, <Liczba Sukcesów>, <Czy Skumulowany> )::
+  Jeśli _Czy Skumulowany = true_, blicza wartość dystrybuanty https://pl.wikipedia.org/wiki/Rozk%C5%82ad_jednostajny_ci%C4%85g%C5%82y[rozkładu
+  jednostajnego] dla danej _liczby sukcesów_ w przedziale [_granica dolna_, _granica górna_], w przeciwnym razie oblicza wartość funkcji gęstości prawdopodobieństwa rozkładu dla danej _liczby sukcesów_.
+
+RozkładJednostajny( <Granica Dolna>, <Granica Górna>, x, <Czy Skumulowany> )::
+  If _Czy Skumulowany = true_, tworzy funkcję dystrybuanty dla rozkładu jednostajnego w przedziale [_granica dolna_, _granica górna_], w przeciwnym razie tworzy funkcję gęstości prawdopodobieństwa dla rozkładu jednostajnego w przedziale [_granica dolna_, _granica górna_].
+
