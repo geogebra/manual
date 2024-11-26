@@ -1,0 +1,25 @@
+= Polecenie CałkaNieoznaczona
+:page-en: commands/IntegralSymbolic
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+== Specyficzna składnia CAS
+
+CałkaNieoznaczona(<Funkcja>)::
+  Zwraca całkę nieoznaczoną z funkcji względem głównej zmiennej. Stała całkowania _c_ nie jest automatycznie wyświetlana jako suwak.
+
+[EXAMPLE]
+====
+
+`++CałkaNieoznaczona(3x^2)++` daje w wyniku stem:[x^3+c_{1}].
+
+====
+
+CałkaNieoznaczona(<Funkcja>, <Zmienna>)::
+  Zwraca cząstkową całkę nieoznaczoną z funkcji względem danej zmiennej. Stała całkowania _c_ nie jest automatycznie wyświetlana jako suwak.
+
+[EXAMPLE]
+====
+
+`++CałkaNieoznaczona(x³+3x y, x)++` daje w wyniku _stem:[ \frac{1}{4}x^4] + stem:[\frac{3}{2} x² y+c_{1} ]_ .
+
+====
