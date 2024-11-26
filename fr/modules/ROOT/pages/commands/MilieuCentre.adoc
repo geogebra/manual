@@ -2,11 +2,23 @@
 :page-en: commands/Midpoint
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie]
+
 MilieuCentre( <Point A>, <Point B> )::
   Milieu des points _A_ et _B_, ie du segment _[AB]_.
 
+[EXAMPLE]
+====
+`++MilieuCentre( (1,1),(5,1))++`  retourne _(3,1)_.
+====
+
 MilieuCentre( <Segment s> )::
   Milieu du segment _s_.
+
+[EXAMPLE]
+====
+Soit `++s = Segment((1,1),(5,1))++`, alors `++MilieuCentre(s)++`  retourne _(3,1)_.
+====
 
 MilieuCentre(<Intervalle>)::
   Centre de l'intervalle (en tant que nombre).
@@ -14,13 +26,16 @@ MilieuCentre(<Intervalle>)::
 [EXAMPLE]
 ====
 
-`++MilieuCentre(3<=x<=8) ++` donne le nombre 5.5
+`++MilieuCentre(3<=x<=8) ++` retourne le nombre _5.5_
 
 ====
 
 MilieuCentre( <Conique c> )::
   Centre de la conique _c_. (Identique à la commande xref:/commands/Centre.adoc[Centre(<Conique c>)]).
-
+[EXAMPLE]
+====
+`++MilieuCentre( x²+y²=4)++`  retourne _(0,0)_.
+====
 image:Tool_tool.png[Tool tool.png,width=32,height=32] Voir l' *outil* associé : image:Mode_midpoint.png[Mode
 midpoint.png,width=32,height=32] xref:/tools/Milieu_ou_centre.adoc[Milieu ou centre].
 
@@ -37,16 +52,24 @@ Vous avez la possibilité de travailler en littéral,
 
 si les variables _a_, _b_, _c_, _d_, _e_ et _f_ n'ont pas été définies,
 
-`++ MilieuCentre((a,b),(c,d)) ++` donne stem:[ \left(\frac{a + c}\{2}, \frac{b + d}\{2} \right)]
+`++ MilieuCentre((a,b),(c,d)) ++` donne stem:[ \left(\frac{a + c}{2}, \frac{b + d}{2} \right)]
 
-`++ MilieuCentre((a,b,c),(d,e,f)) ++` donne stem:[ \left(\frac{a + d}\{2}, \frac{b + e}\{2}, \frac{c + f}\{2}
+`++ MilieuCentre((a,b,c),(d,e,f)) ++` donne stem:[ \left(\frac{a + d}{2}, \frac{b + e}{2}, \frac{c + f}{2}
 \right)]
 
 ====
-
+____________________________________________________________
 _____________________________________________________________
 
 image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] *Graphique
 3D* :
 
-Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D
+Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D,
+avec en plus MilieuCentre(<Qadrique>)::
+[EXAMPLE]
+====
+`++ MilieuCentre(x² - y² - z² - 4x - 2y = -2 ) ++` qui retourne _(2,-1,0)_.
+
+(L'écriture de l'hyperboloïde à 2 nappes `++ (x-2)²-(y+1)²-z²=1++` ayant été développée,
+voir la propriété pour Équation dans l'onglet Algèbre).
+====
