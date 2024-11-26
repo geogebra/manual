@@ -2,7 +2,9 @@
 :page-en: commands/Locus
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-Lieu( <Point Courant Lieu Q>, <Point P> )::
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie]
+
+Lieu( <Point créant le lieu>, <Point> )::
   Retourne le lieu du point _Q_ qui dépend du point _P_.
 
 [NOTE]
@@ -12,24 +14,23 @@ Le point _P_ doit être un point sur un objet (droite, segment, cercle, …).
 
 ====
 
-Lieu( <Point Courant Lieu Q>, <Curseur t> )::
+Lieu( <Point créant le lieu>, <Curseur> )::
   Retourne le lieu du point _Q_ qui dépend des valeurs du curseur _t_.
 
-Les lieux sont des objets spéciaux.
 
-De plus pour la commande Lieu, des résultats proviennent de commandes de
-xref:/commands/Commandes_Maths_discrètes.adoc[Maths_discrètes] ou xref:/commands/RésolEquaDiff.adoc[RésolEquaDiff].
+Les lieux sont des xref:/Objets_géométriques.adoc[chemins] et apparaissent comme des objets auxiliaires.
 
-Les lieux sont des xref:/Objets_géométriques.adoc[chemins] et peuvent être utilisés par les commandes gérant des chemins
-comme xref:/commands/Point.adoc[Point].
+Ils peuvent être utilisés par les commandes gérant des chemins comme xref:/commands/Point.adoc[Point].
 
-Leurs propriétés dépendent de la manière dont ils ont été obtenus, voir par ex. les commandes
-xref:/commands/Périmètre.adoc[Périmètre] et xref:/commands/Premiers.adoc[Premiers].
+En plus de la commande Lieu, ils sont parfois le résultat de certaines xref:/commands/Commandes_Maths_discrètes.adoc[commandes Maths discrètes] et de la commande xref:/commands/RésolEquaDiff.adoc[RésolEquaDiff].
+
+Leurs propriétés dépendent de la manière dont ils ont été obtenus, voir par ex. les commandes xref:/commands/Périmètre.adoc[Périmètre] et xref:/commands/Premiers.adoc[Premiers].
+
 
 image:Tool_tool.png[Tool tool.png,width=32,height=32] Voir l' *outil* associé : image:Tool_Locus.gif[Tool
 Locus.gif,width=32,height=32]xref:/tools/Lieu.adoc[Lieu] .
 
-[cols=",",]
+[width=100 %, cols="12 %,88 %",]
 |===
 |image:18px-Attention.png[Attention,title="Attention",width=18,height=18] *Attention*: |Un lieu n'est pas défini lorsque
 le point dépendant est construit par la commande xref:/commands/Point.adoc[Point] avec deux paramètres ou la commande
@@ -39,5 +40,5 @@ xref:/commands/ParamètreChemin.adoc[ParamètreChemin].
 Lieu( <Champ vectoriel>, <Point> )::
   Retourne la courbe engendrée par le champ vectoriel et passant par le point donné .
 Lieu( <f(x, y)>, <Point> )::
-  Retourne la courbe représentant la solution de l'équation différentielle stem:[\frac{dy}\{dx}=f(x,y)]. La solution
-  est déterminée numériquement.
+  Retourne la courbe représentant la solution de l'équation différentielle stem:[\frac{dy}{dx}=f(x,y)].
+  La solution est déterminée numériquement.
