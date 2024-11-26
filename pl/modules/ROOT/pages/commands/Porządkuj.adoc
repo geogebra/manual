@@ -1,0 +1,37 @@
+= Polecenie Porządkuj
+:page-en: commands/Sort
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Porządkuj( <Lista> )::
+  Sortuje listę liczb, tekstów lub punktów.
+
+[EXAMPLE]
+====
+
+* `++Porządkuj({3, 2, 1})++` daje w wyniku listę _{1, 2, 3}_.
+* `++Porządkuj({"pears", "apples", "figs"})++` daje w wyniku listę elementów posortowanych alfabetycznie.
+* `++Porządkuj({(3, 2), (2, 5), (4, 1)}) ++`daje w wyniku _{(2, 5), (3, 2), (4, 1)}_.
+
+====
+
+[NOTE]
+====
+
+Listy punktów są porządkowane względem współrzędnej _x_.
+
+====
+
+Porządkuj( <Wartości>, <Klucze> )::
+  Sortuje pierwszą listę _Wartości_ zgodnie z odpowiadającą drugą listą _Klucze_.
+
+[EXAMPLE]
+====
+
+* Aby posortować listę wielomianów `++l1 = {x^3, x^2, x^6}++` według stopnia , należy utworzyć zależną listę stopni (degrees). 
+Każdy element tej listy powinien reprezentować stopień odpowiadającego mu wielomianu. Oto, jak można to zrobić:
+`++l2 = ZmiennaNaListę(Stopień(a), a, l1)++`. Wówczas `++ Porządkuj(l1, l2)++` daje w wyniku listę _l3 = {x^2, x^3, x^6}_.
+* Aby narysować wielokąt mający za wierzchołki pierwiastki zespolone stem:[x^{10}-1], posortowane według ich argumentów,
+utwórz `++l1 = {PierwiastekZespolony(x^10-1)}++`, i użyj polecenia `++Wielomian(Porządkuj(l1, arg(l1)))++`. Polecenie to 
+utworzy wielokąt _wielokąt1 = 2.94_.
+
+====
