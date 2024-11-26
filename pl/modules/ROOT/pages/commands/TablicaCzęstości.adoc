@@ -1,0 +1,66 @@
+= Polecenie TablicaCzęstości
+:page-en: commands/FrequencyTable
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+TablicaCzęstości( <Lista Surowych Danych> )::
+  Zwraca tabelę (jako tekst), której pierwsza kolumna zawiera posortowaną listę unikalnych elementów listy _L_, 
+a druga kolumna zawiera liczbę wystąpień wartości z pierwszej kolumny. Lista _L_ może zawierać liczby lub tekst.
+
+TablicaCzęstości( <Czy Skumulowany>, <Lista Surowych Danych> )::
+  Jeśli _Czy Skumulowany = false_, zwraca tę samą tabelę co polecenie Częstość( <Lista Surowych Danych> )
+  Jeśli _Czy Skumulowany = true_, zwraca tabelę, której pierwsza kolumna jest taka sama jak w poleceniu TablicaCzęstości( <Lista Surowych Danych> ), a
+  druga zawiera skumulowane częstości wartości z pierwszej kolumny.
+
+TablicaCzęstości( <Lista Granic Klas>, <Lista Surowych Danych> )::
+  Zwraca tabelę (w postaci tekstu), której pierwsza kolumna zawiera przedziały (klasy), a druga kolumna zawiera liczbę liczb 
+z _Listy Surowych Danych_, które należą do przedziału w pierwszej kolumnie. wszystkie przedziały z wyjątkiem najwyższego mają
+  postać [a, b). Najwyższy przedział ma postać [a, b].
+
+TablicaCzęstości( <Czy Skumulowany>, <Lista Granic Klas>, <Lista Surowych Danych> )::
+  Jeśli _Czy Skumulowany = false_, zwraca tę samą tabelę co polecenie as TablicaCzęstości( <Lista Granic Klas>, <Lista Surowych Danych> )
+  Jeśli _Czy Skumulowanye = true_, zwraca tabelę, której pierwsza kolumna jest taka sama jak w poleceniu TablicaCzęstości( <Lista Surowych Danych> ), a
+  druga zawiera skumulowane częstości wartości z pierwszej kolumny.
+
+TablicaCzęstości( <Lista Granic Klas>, <Lista Surowych Danych>, <Czy Uzyć Gęstości>, <Czynnik Skalujący Gęstości (opcjonalnie)> )::
+  Zwraca tabelę (w postaci tekstu), której pierwsza kolumna zawiera przedziały (klasy), a druga zawiera częstotliwości dla odpowiadającego polecenia 
+xref:/commands/Histogram.adoc[Histogram].
+
+TablicaCzęstości( <Czy Skumulowany>, <Lista Granic Klas>, <Lista Surowych Danych>, <Czy Uzyć Gęstości>, <Czynnik Skalujący Gęstości (opcjonalnie)> )::
+   Zwraca tabelę (w postaci tekstu), której pierwsza kolumna zawiera przedziały (klasy), a druga zawiera częstotliwości dla odpowiadającego polecenia
+  corresponding xref:/commands/Histogram.adoc[Histogram].
+
+TablicaCzęstości( <Lista Surowych Danych>,<Czynnik Skalujący Gęstości (opcjonalnie)> )::
+  Zwraca tabelę (jako tekst) której pierwsza kolumna *Wartość* zawiera posortowaną listę unikalnych elementów z _<Listy Surowych Danych>_,
+a druga kolumna *Częstotliwość* zawiera liczbę wystąpień wartości w pierwszej kolumnie pomnożoną przez
+  _<Czynnik Skalujący Gęstościr>_. Lista może zawierać liczby lub tekst.
+
+[EXAMPLE]
+====
+
+`++TablicaCzęstości({"red", "red", "green", "green", "blue"}, 5)++` zwraca tabelę z pierwszą kolumną _Wartość_ z danymi
+blue, green, red (w porządku alfabetycznym) i drugą kolumnę _Częstotliwość_ z danymi 5, 10, 10.
+
+====
+
+[EXAMPLE]
+====
+
+`++TablicaCzęstości({1, 1, 1, 2, 2, 3, 3, 4, 5}, 2)++` zwraca tabelę z pierwszą kolumną _Wartość_ z danymi 1, 2, 3, 4,
+5 i drugą kolumnę _Częstotliwość_ z danymi 6, 4, 4, 2, 2.
+
+====
+
+[NOTE]
+====
+
+Na liście liczba 1 pojawia się trzy razy, więc liczba wystąpień 1 (=3) musi zostać pomnożona przez współczynnik skali 2, 
+aby uzyskać wartość 6 w drugiej kolumnie.
+====
+
+[NOTE]
+====
+
+To polecenie jest podobne do xref:/commands/Częstość.adoc[Częstość] i xref:/commands/Histogram.adoc[Histogram]. 
+Artykuły na temat tych poleceń zawierają kilka powiązanych przykładów.
+
+====
