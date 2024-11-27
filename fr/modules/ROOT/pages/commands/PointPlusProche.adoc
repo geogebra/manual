@@ -2,6 +2,8 @@
 :page-en: commands/ClosestPoint
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie] 
+
 PointPlusProche( <Chemin C>, <Point A> )::
   Retourne le point du xref:/Objets_géométriques.adoc[chemin] _C_ qui soit le plus proche du point _A_.
 
@@ -9,23 +11,39 @@ PointPlusProche( <Chemin C>, <Point A> )::
 ====
 
 Cette commande utilisée pour des xref:/Fonctions.adoc[fonctions] surtout polynomiales, retourne le point le
-plus proche et non plus le point de la courbe représentative de même ordonnée
+plus proche.
 
 ====
 
-PointPlusProche[ <Droite>, <Droite> ]::
+PointPlusProche( <Droite>, <Droite> )::
   Retourne
 
-* _non défini_ si les deux droites sont parallèles ;
+* _?_ si les deux droites du plan sont parallèles ;
 * leur point d'intersection, si elles sont sécantes ;
 
-[NOTE]
-====
+____________________________________
 
 *image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] Graphique
 3D*
 
-* le point de la première droite qui soit le plus proche de la seconde droite (attention donc à l'ordre de vos
-paramètres).
+Si les 2 droites *ne sont pas coplanaires*, alors 
 
+PointPlusProche( <Droite>, <Droite> )::
+  Retourne le point de la première droite qui soit le plus proche de la seconde droite.
+
+  (attention donc à l'ordre de vos paramètres).
+[EXAMPLE]
 ====
+Avec les données suivantes :
+
+`++A = (1, 2, 4)++`, `++B = (1, 3, 2)++`, `++C = (2, 2, 2)++` et `++D = (3, 2, 1)++`
+
+`++f = Droite(A, B)++` et `++g = Droite(C, D)++`
+
+
+`++PointPlusProche(f, g)++` retourne _E=(1, 2.33, 3.33)_ 
+
+alors que `++PointPlusProche(g, f)++` retourne _F=(0.83, 2, 3.17)_
+====
+
+
