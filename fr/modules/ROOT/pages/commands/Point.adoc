@@ -2,16 +2,11 @@
 :page-en: commands/Point
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie]
+
 Point( <xref:/Objets_géométriques.adoc[Chemin]> )::
   Retourne un point sur l'objet géométrique . Ce point peut être déplacé tout le long du chemin.
 
-[NOTE]
-====
-
-*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :* Il n'est pas interdit d'aller jeter un œil sur
-/Tutoriel:ParamètreChemin_et_Médiatrice.adoc[Tutoriel:ParamètreChemin_et_Médiatrice].
-
-====
 
 Point( <xref:/Objets_géométriques.adoc[Chemin]>, <Paramètre> )::
   Retourne un point sur l'objet géométrique de xref:/commands/ParamètreChemin.adoc[Paramètre] donné.
@@ -20,15 +15,19 @@ Point( <Point A>, <Vecteur stem:[\vec{u}]> )::
   Construit le translaté de _A_ dans la translation de vecteur stem:[\vec{u}]
 
 Point( Liste )::
-  Convertit une liste contenant 2|3 nombres en un Point 2D|3D, par exemple : Point( \{1, 2} )
+  Convertit une liste contenant 2|3 nombres en un Point 2D|3D.
 
-[NOTE]
+[EXAMPLE]
 ====
+
+`++ Point({1, 2})++` retourne le point _(1, 2)_.
+
 
 *image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :* Une utilisation avec Séquence() :
 `++Séquence(Segment(Point({0, n}), Point({1, n + 0})), n, 0, 9, 1)++`.
-
 ====
+
+
 
 image:Tool_tool.png[Tool tool.png,width=32,height=32] Voir l' *outil* associé : image:32px-Mode_point.svg.png[Mode
 point.svg,width=32,height=32] xref:/tools/Point.adoc[Point] .
@@ -39,9 +38,15 @@ image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul f
 
 Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
 
+____________________________________________________________
 _____________________________________________________________
 
 image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] *Graphique
 3D* :
 
 Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D
+_____________________________________________________________
+[NOTE]
+====
+Voir aussi xref:/Points_et_Vecteurs.adoc[Points et Vecteurs]
+====
