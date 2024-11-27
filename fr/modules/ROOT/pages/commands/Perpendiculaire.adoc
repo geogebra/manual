@@ -2,43 +2,92 @@
 :page-en: commands/PerpendicularLine
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie] 
+
+image:32px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=32,height=32] *en Graphique 2D, avec des objets 2D* :
+
 Perpendiculaire( <Point A>, <Droite d> )::
   Perpendiculaire par _A_ à la ligne _d_.
 
-[NOTE]
+[EXAMPLE]
 ====
 
-*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :* Pour des objets 3D un troisième argument est
-ajouté pour préciser le "contexte" : si *Graphique* (i.e. 2D) est active, le plan _z=0_ est ajouté comme troisième
-argument, si *Graphique 3D* est active, c'est _Espace_ qui est ajouté. Voir
-`++Perpendiculaire(  <Point A>, <Ligne d> , <Contexte> )++` ci-dessous.
+Soit une droite `++c: -3x + 4y = -6++` et un point `++A = (-2, -3)++`.
+
+`++Perpendiculaire(A, c)++` retourne la droite _d_:-4__x__ - 3__y__ = 17.
 
 ====
+
 
 Perpendiculaire( <Point A>, <Segment s> )::
   Perpendiculaire par _A_ au segment _s_.
 
+[EXAMPLE]
+====
+
+Soit _c_ le segment [AB] avec _A_ = (-3, 3) et _B_ = (0, 1).
+
+`++Perpendiculaire(A, c)++` retourne la droite _d: -3x + 2y = 15_.
+
+====
+
 Perpendiculaire( <Point A>, <Vecteur stem:[\vec{v}]> )::
   Droite passant par A et orthogonale à stem:[\vec{v}].
+
+[EXAMPLE]
+====
+
+Soit `++u = Vecteur((5, 3), (1, 1))++` et `++A = (-2, 0)++` un point.
+
+`++Perpendiculaire(A, u)++`  retourne la droite _c: 2x+ y = -4_.
+
+====
 
 image:Tool_tool.png[Tool tool.png,width=32,height=32] Voir l' *outil* associé : image:32px-Mode_orthogonal.svg.png[Mode
 orthogonal.svg,width=32,height=32] xref:/tools/Perpendiculaire.adoc[Perpendiculaire].
 
-________________________________________________________________
 
-image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
-Cette commande fonctionne à l'identique dans la fenêtre Calcul formel, avec la possibilité de travailler en littéral :
-Les variables _a_, _b_, _m_ et _n_ n'étant pas définies dans GeoGebra, `++Perpendiculaire((m, n),y=a x +b)++` retourne :
-stem:[y = -\frac{1}\{a} x + \frac{a n + m}\{a}] on peut alors s'interroger sur cette formule littérale, ne semblant
-avoir de sens que si a ≠ 0 ! `++Perpendiculaire((m, n),y=b) ++` quant à elle, retourne sans problème : stem:[x = m]
+Panachage image:32px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=32,height=32] *Graphique 2D*,image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] *Graphique 3D avec des objets 3D* :
+
+[EXAMPLE]
+====
+Soit les points `++O=(0, 0, 0)++`, `++A=(1, 1, 1)++` et `++B=(1, 2, 3)++`, et la droite `++f=Droite(O, A)++`.
+
+image:32px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=32,height=32] *Graphique 2D* active :
+`++Perpendiculaire(B, f)++` retourne la droite g:X=(1, 2, 3) + λ(1, -1, 0) ;
+
+de Définition : Perpendiculaire(B, f, PlanxOy) ;
+
+de Description : Droite passant par B perpendiculaire à f et parallèle à PlanxOy.
+
+
+image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] *Graphique 3D*  active :
+`++Perpendiculaire(B, f)++` retourne la droite h:X=(1, 2, 3) + λ(-0.71, 0, 0.71) ;
+
+de Définition : Perpendiculaire(B, f, Espace) ;
+
+de Description : Perpendiculaire à f passant par B.
+
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] 
+Idée :* Pour des objets 3D un troisième argument est ajouté pour préciser le "contexte" : 
+
+si *Graphique* (i.e. 2D) est active, le plan _PlanxOy_ est ajouté comme troisième argument, 
+
+si *Graphique 3D* est active, c'est _Espace_ qui est ajouté.
+
+Voir `++Perpendiculaire(  <Point A>, <Ligne d> , <Contexte> )++` ci-dessous.
+
+
+
 
 _____________________________________________________________
 
 image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] *Graphique
 3D* :
 
-Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D
+Fonctionnement dans la fenêtre Graphique 3D
 
 Perpendiculaire( <Point A>, <Droite d> )::
   Perpendiculaire par _A_ à la ligne _d_, *si* _A_ [.underline]#n'appartient pas à# _d_
@@ -47,8 +96,10 @@ Il convient d'ajouter les syntaxes :
 
 Perpendiculaire( <Point A>, <Plan p> )::
   Droite perpendiculaire au plan _p_, passant par le point _A_.
+
 Perpendiculaire( <Ligne d> , <Ligne f> )::
   Droite perpendiculaire commune aux lignes _d_ et _f_.
+
 Perpendiculaire( <Point A>, <Direction 1> , <Direction 2> )::
   si _Direction 1 = Ligne d_ et _Direction 2 = Ligne f_ , vous créez la droite orthogonale aux lignes _d_ et _f_,
   parallèle par _A_ à leur perpendiculaire commune.
@@ -73,3 +124,19 @@ point A est sur la droite de départ.
 image:Tool_tool.png[Tool tool.png,width=32,height=32] Voir l' *outil* associé : (Noter la modification d'icône)
 image:Mode_orthogonalthreed.png[Mode orthogonalthreed.png,width=32,height=32]
 xref:/tools/Perpendiculaire.adoc[Orthogonale].
+
+
+
+_____________________________________________________________
+
+_____________________________________________________________
+image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel, avec la possibilité de travailler en littéral :
+Les variables _a_, _b_, _m_ et _n_ n'étant pas définies dans GeoGebra, 
+
+`++Perpendiculaire((m, n),y=a x +b)++` retourne :
+stem:[y = -\frac{1}{a} x + \frac{a n + m}{a}], on peut alors s'interroger sur cette formule littérale, ne semblant
+avoir de sens que si a ≠ 0 !
+
+`++Perpendiculaire((m, n),y=b) ++` quant à elle, retourne sans problème : stem:[x = m]
