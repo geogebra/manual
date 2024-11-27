@@ -1,0 +1,45 @@
+= Polecenie NotacjaWykładnicza
+:page-en: commands/ScientificText
+:page-aliases: commands/StandardForm.adoc
+:page-aliases: commands/S
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+image:64px-Globe.png[Globe.png,width=64,height=64, role=left]
+
+To polecenie ma dwie różne wersje w języku angielskim:
+
+* StandardForm (UK)
+* ScientificText (US + Aus)
+
+====
+
+NotacjaWykładnicza( <Liczba> )::
+  Tworzy tekst wyświetlający podaną liczbę w https://pl.wikipedia.org/wiki/Notacja_naukowa[notacji wykładniczej].
+
+
+[NOTE]
+====
+
+Tekst jest umieszczony tak, że jego lewy górny narożnik (Narożnik 4) znajduje się w początku układu współrzędnych.
+
+====
+
+[EXAMPLE]
+====
+
+`++NotacjaWykładnicza(0.002)++` daje w wyniku _2 × 10^-3^._
+
+====
+
+NotacjaWykładnicza( <Liczba>, <Dokładność> )::
+  Tworzy tekst wyświetlający podaną liczbę w https://pl.wikipedia.org/wiki/Notacja_naukowa[notacji wykładniczej], zaokrąglony do liczby cyfr 
+znaczących określonej przez *Dokładność*.
+
+[EXAMPLE]
+====
+
+`++NotacjaWykładnicza(e,5)++` daje w wyniku _2.7183 × 10^0^._
+
+====
