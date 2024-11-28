@@ -1,0 +1,43 @@
+= Polecenie Typ
+:page-en: commands/Type
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Typ( <Obiekt> )::
+
+Dla stożkowych i kwadryk, to polecenie zwraca liczbę reprezentującą typ krzywej stożkowej/kwadryki zgodnie z poniższą tabelą. 
+W tym kontekście _pusta stożkowa_ (lub kwadryka) o taka, której współczynniki są określone, ale która nie zawiera żadnego rzeczywistego
+punktu, np. _x_^2^ + _y_^2^ = -1. Dla krzywych stożkowych GeoGebra rozróżnia linię podwójną (szczególny przypadek linii równoległych o 
+zerowej odległości) i linię pojedynczą (szczególny przypadek okręgu o nieskończonej średnicy, może wynikać z inwersji okręgu). 
+W przypadku kwadryk takiego rozróżnienia nie ma.
+
+[EXAMPLE]
+====
+
+`++Typ(x²+y²=1)++` daje w wyniku 4 co oznacza okrąg.
+
+====
+
+[cols=",,",options="header",]
+|===
+|Wartość |Typ stożkowej |Typ kwadryki
+|1 |Pojedynczy punkt |Pojedynczy punkt
+|2 |Przecinające się proste |
+|3 |Elipsa |Elipsoida
+|4 |Okrąg |Sfera
+|5 |Hiperbola |
+|6 |Pusta |Pusta
+|7 |Podwójna prosta |
+|8 |Parallel lines |
+|9 |Parabola |Paraboloida
+|10 |Prosta |Prosta
+|30 | |Stożek
+|31 | |Walec
+|33 | |Płaszczyna
+|34 | |Płaszczyzny równoległe
+|35 | |Płaszczyzny przecinające się
+|36 | |Hiperboloida jednopowłokowa
+|37 | |Hiperboloida dwupowłokowa
+|38 | |Walec paraboliczny
+|39 | |Walec hiperboliczny
+|40 | |Hyperbolic paraboloid
+|===
