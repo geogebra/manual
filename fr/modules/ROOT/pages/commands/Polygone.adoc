@@ -38,6 +38,7 @@ ____________________________________________________________
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
 Cette commande fonctionne à l'identique dans la fenêtre Calcul formel, 
+
 mais sans la possibilité d'effectuer du calcul littéral.
 ____________________________________________________________
 _____________________________________________________________
@@ -47,11 +48,13 @@ image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphi
 
 Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D
 
-En veillant à l'utilisation de la syntaxe Polygone( <Point A>, <Point B>, <Nombre Sommets > )::
+En veillant à l'utilisation de la syntaxe
+
+Polygone( <Point A>, <Point B>, <Nombre Sommets > )::
 
 * telle quelle, il faut que A et B aient la même cote, et vous obtiendrez un polygone régulier dans le plan contenant
-(AB) et parallèle au plan xOy. Le paramètre PlanxOy étant ajouté à la commande.
-* sinon, A et B étant repérés dans un plan _a_, précisez le, Polygone( <Point A>, <Point B>, <Nombre Sommets >,a ) et vous
+(AB) et parallèle au plan xOy. Le paramètre _PlanxOy_ étant ajouté à la commande.
+* sinon, A et B étant "repérés" dans un plan _a_, précisez le, Polygone( <Point A>, <Point B>, <Nombre Sommets >,a ) et vous
 obtiendrez un polygone régulier dans le plan _a_.
 
 Polygone( <Point>, <Point>, <Nombre Sommets>, <Direction> )::
@@ -65,7 +68,7 @@ Soit les points `++A = (-1, -1, 0)++` et `++B = (1, -1, 0)++`.
 
 La commande `++Polygone(A, B, 5, y = 0)++` posera un pentagone régulier vertical sur le plan xOy.
 
-[cols=",",]
+[width=100%, cols="12%,88%",]
 |===
 |image:18px-Attention.png[Attention,title="Attention",width=18,height=18] *Attention*: |Il y a *orientation*, pour
 `++Polygone(B,A, 5, y = 0)++`, le pentagone sera *sous* le plan xOy.
@@ -77,8 +80,11 @@ La commande `++Polygone(A, B, 5, y = 0)++` posera un pentagone régulier vertica
 ====
 
 
-Soit le plan _a_ dont une équation est `++a:x+2y+3z=6++`Le vecteur (5,-1,-1) est "parallèle" à ce plan. La commande
-`++Polygone((0, 0, 0), (5, -1, -1), 4, a)++` crée un carré dans un plan parallèle au plan _a_, dont 2 sommets
+Soit le plan _a_ dont une équation est `++a:x+2y+3z=6++`
+
+(Le vecteur (5,-1,-1) est "parallèle" à ce plan).
+
+La commande `++Polygone((0, 0, 0), (5, -1, -1), 4, a)++` crée un carré dans un plan parallèle au plan _a_, dont 2 sommets
 consécutifs ont pour coordonnées (0, 0, 0) et (5, -1, -1).
 
 ====
