@@ -2,31 +2,43 @@
 :page-en: commands/Radius
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie]
+
+La syntaxe proposée Rayon( <Conique> ) n'est pas appropriée::
+
 Rayon( <Cercle c> )::
   Rayon du cercle _c_.
+
+Si vous validez la commande Rayon, pour une conique n'étant pas un cercle, vous obtiendrez *?*.
+
+[EXAMPLE]
+====
+
+* Retourne le rayon d'un cercle c (par ex. c:(x - 1)² + (y - 1)² = 9) `++Rayon(c)++` retourne _a = 3_.
+* Retourne le rayon d'un cercle donné par son équation `++Rayon((x - 2)² + (y - 2)² = 16)++` retourne _a = 4_.
+
+====
 
 ____________________________________________________________
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
-Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel,
 
-Si les variables _a_, _b_, _u_ et _v_ ne sont pas définies `++Rayon(Cercle((a,b),(u,v)))++` retourne stem:[
-\sqrt{a^\{2} - 2 \space a \space u + b^\{2} - 2 \space b \space v + u^\{2} + v^\{2} }]
+avec la possibilité de travailler en littéral.
+
+Si les variables _a_, _b_, _u_ et _v_ ne sont pas définies
+`++Rayon(Cercle((a,b),(u,v)))++`
+retourne stem:[\sqrt{a^{2} - 2 \space a \space u + b^{2} - 2 \space b \space v + u^{2} + v^{2} }]
 
 [NOTE]
 ====
 
-*Note :*
-
-* Si vous validez la commande Rayon, pour une conique n'étant pas un cercle,
-** dans le champ de saisie, vous obtiendrez *non défini*, ce qui est correct ;
-** mais, à ce jour, en Calcul formel, vous obtiendrez *0*, ce qui l'est beaucoup moins !
 * Si vous validez, en Calcul formel, la commande Rayon pour une sphère, par ex. :
-`++g = (x - 2)² + (y + 3)² + z² = 25 ++` , vous obtiendrez stem:[\sqrt{- z ^2 +25}]
+`++g = (x - 2)² + (y + 3)² + z² = 25 ++` , vous obtiendrez stem:[\sqrt{|z ^2 - 25|}]
 
 ====
-
+____________________________________________________________
 _____________________________________________________________
 
 image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] *Graphique
@@ -34,4 +46,6 @@ image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphi
 
 Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D
 
-et même si ce n'est proposé, vous pouvez aussi utiliser Rayon( <Sphère> ).
+et même si ce n'est proposé, vous pouvez aussi utiliser 
+
+Rayon( <Sphère> ):: .
