@@ -2,15 +2,33 @@
 :page-en: commands/Polygon
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie]
+
 Polygone( <Point A>,<Point B>,<Point C>, ... )::
   Polygone défini par les points donnés _A_, _B_, _C_ …
+[EXAMPLE]
+====
 
+`++Polygone((1, 1), (3, 0), (3, 2), (0, 4))++` retourne un quadrilatère.
+
+====
 Polygone( <Point A>, <Point B>, <Nombre Sommets > )::
   Polygone régulier à _n_ sommets (points _A_ et _B_ inclus - un côté étant (_AB_)).
+[EXAMPLE]
+====
 
+`++Polygone((1, 1), (4, 1), 6)++` retourne un hexagone.
+
+====
 Polygone(<Liste Points>)::
   Polygone défini par les points de la liste.
 
+[EXAMPLE]
+====
+
+`++Polygone({(0, 0), (2, 1), (1, 3)})++` retourne un triangle.
+
+====
 image:Tool_tool.png[Tool tool.png,width=32,height=32] Voir les *outils* associés : image:32px-Mode_polygon.svg.png[Mode
 polygon.svg,width=32,height=32] xref:/tools/Polygone.adoc[Polygone] et image:32px-Mode_regularpolygon.svg.png[Mode
 regularpolygon.svg,width=32,height=32] xref:/tools/Polygone_régulier.adoc[Polygone régulier].
@@ -19,9 +37,9 @@ ____________________________________________________________
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
-Cette commande fonctionne à l'identique dans la fenêtre Calcul formel , mais sans la possibilité d'effectuer du calcul
-littéral.
-
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel, 
+mais sans la possibilité d'effectuer du calcul littéral.
+____________________________________________________________
 _____________________________________________________________
 
 image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] *Graphique
@@ -29,11 +47,11 @@ image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphi
 
 Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D
 
-En veillant à l'utilisation de la syntaxe Polygone( <Point A>, <Point B>, <Nombre Sommets > ) :
+En veillant à l'utilisation de la syntaxe Polygone( <Point A>, <Point B>, <Nombre Sommets > )::
 
 * telle quelle, il faut que A et B aient la même cote, et vous obtiendrez un polygone régulier dans le plan contenant
-(AB) et parallèle au plan xOy;
-* sinon, A et B étant dans un plan _a_, précisez le, Polygone( <Point A>, <Point B>, <Nombre Sommets >,a ) et vous
+(AB) et parallèle au plan xOy. Le paramètre PlanxOy étant ajouté à la commande.
+* sinon, A et B étant repérés dans un plan _a_, précisez le, Polygone( <Point A>, <Point B>, <Nombre Sommets >,a ) et vous
 obtiendrez un polygone régulier dans le plan _a_.
 
 Polygone( <Point>, <Point>, <Nombre Sommets>, <Direction> )::
@@ -42,8 +60,6 @@ Polygone( <Point>, <Point>, <Nombre Sommets>, <Direction> )::
 
 [EXAMPLE]
 ====
-
-*Exemple :*
 
 Soit les points `++A = (-1, -1, 0)++` et `++B = (1, -1, 0)++`.
 
@@ -60,7 +76,6 @@ La commande `++Polygone(A, B, 5, y = 0)++` posera un pentagone régulier vertica
 [EXAMPLE]
 ====
 
-*Exemple :*
 
 Soit le plan _a_ dont une équation est `++a:x+2y+3z=6++`Le vecteur (5,-1,-1) est "parallèle" à ce plan. La commande
 `++Polygone((0, 0, 0), (5, -1, -1), 4, a)++` crée un carré dans un plan parallèle au plan _a_, dont 2 sommets
