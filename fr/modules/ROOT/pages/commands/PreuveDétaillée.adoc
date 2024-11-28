@@ -2,6 +2,8 @@
 :page-en: commands/ProveDetails
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie]
+
 PreuveDétaillée( <Expression booléenne> )::
   Retourne quelques détails sur le résultat d'une preuve automatisée du caractère _vraie_ ou _fausse_ en général de
   l'expression booléenne.
@@ -35,18 +37,31 @@ Nous définissons un triangle de sommets _A_, _B_ et _C_, et définissons `++D=M
 `++E=MilieuCentre(A,C)++`, `++p=Droite(A,B)++`, `++q=Droite(D,E)++`. La commande `++PreuveDétaillée(p∥q)++` retourne
 {true}. Cela signifie que si le diagramme peut être construit, alors la _droite des milieux_ (DE) du triangle est
 parallèle au côté [AB].
-
+====
+[EXAMPLE]
+====
 Soit le segment [AB] appelé _a_, et son milieu `++C=MilieuCentre(A,B)++`, et sa médiatrice `++b=Médiatrice(A,B)++`,
-`++D=Intersection(a,b)++`. `++PreuveDétaillée(C==D)++` retourne {true,{"SontÉgaux(A,B)"}} : ce qui précise que si les
-points _A_ et _B_ sont différents, alors les points _C_ et _D_ sont confondus.
+`++D=Intersection(a,b)++`. 
 
+`++PreuveDétaillée(C==D)++` retourne {true,{"SontÉgaux(A,B)"}} : 
+
+ce qui précise que si les points _A_ et _B_ sont différents, alors les points _C_ et _D_ sont confondus.
+====
+[EXAMPLE]
+====
 Soit le segment [AB] appelé _f_, un point _C_ quelconque de la droite (AB), et soit `++g=Segment(B, C)++` et
-`++h=Segment(A, C)++`, `++PreuveDétaillée(f==g+h)++` retourne {true, {"f+h=g", "h=g+f"}} : ce qui précise que si ni
-stem:[f+h=g], ni stem:[h=g+f], alors stem:[f=g+h]
+`++h=Segment(A, C)++`, 
 
+`++PreuveDétaillée(f==g+h)++` retourne {true, {"f+h=g", "h=g+f"}} : 
+
+ce qui précise que si ni stem:[f+h=g], ni stem:[h=g+f], alors stem:[f=g+h]
+====
+[EXAMPLE]
+====
 Nous définissons un quadrilatère de sommets _A_, _B_, __C__et _D_, et définissons les milieux _E_, _F_, _G_ et _H_ de
-ses côtés, puis `++f=Segment(E, F)++` et `++g=Segment(G, H)++` La commande `++PreuveDétaillée(SontÉgaux(f,g))++`
-retourne la liste {true} .
+ses côtés, puis `++f=Segment(E, F)++` et `++g=Segment(G, H)++` 
+
+La commande `++PreuveDétaillée(SontÉgaux(f,g))++` retourne la liste {true} .
 
 ====
 
@@ -66,7 +81,10 @@ Or, en cas de polygone dégénéré par une superposition des points B et D, les
 [NOTE]
 ====
 
-Voir aussi la commande xref:/commands/Prouver.adoc[Prouver], la page xref:/Valeurs_booléennes.adoc[Valeurs
-booléennes] et pour les curieux, la page https://github.com/kovzol/gg-art-doc/tree/master/pdf/francais.pdf[GeoGebra Fonctionnalités de Raisonnement automatisé : Un tutoriel]
+Voir aussi la commande xref:/commands/Prouver.adoc[Prouver], 
+
+la page xref:/Valeurs_booléennes.adoc[Valeurs booléennes]
+
+et pour les curieux, la page https://github.com/kovzol/gg-art-doc/tree/master/pdf/francais.pdf[GeoGebra Fonctionnalités de Raisonnement automatisé : Un tutoriel]
 
 ====
