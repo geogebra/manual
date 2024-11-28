@@ -2,24 +2,28 @@
 :page-en: commands/Vertex
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie]
+
 Sommet( <Conique c > )::
   Retourne tous les sommets de la conique _c_.
 
 Sommet( <Inéquations> )::
-  Retourne le point d'intersection des frontières
+  Retourne le(s) point(s) d'intersection des frontières.
+
+On peut récupérer tous les points dans une xref:/Listes.adoc[liste], utilisez `++{Sommet(<Objet>)}++` en écrivant la commande entre accolades [.kcode]#{# et [.kcode]#}#.
+
+
 
 [EXAMPLE]
 ====
 
-*Exemples :*
-
 `++Sommet((x + y < 3) && (x - y > 1))++` retourne le point (2,1) ;
 
-`++{Sommet((x + y < 3)∧(x - y > 1)&&(y>-2))}++` retourne la liste de points \{(2, 1), (5, -2), (-1, -2)} ;
+`++{Sommet((x + y < 3)∧(x - y > 1)&&(y>-2))}++` retourne la liste de points {(2, 1), (5, -2), (-1, -2)} ;
 
 `++Sommet((y > x²) ∧ (y < x))++` retourne les deux points (0, 0) et (1, 1) ;
 
-`++{Sommet((y > x²) ∧ (y < x))}++` retourne la liste de points \{(0, 0), (1, 1)} .
+`++{Sommet((y > x²) ∧ (y < x))}++` retourne la liste de points {(0, 0), (1, 1)} .
 
 ====
 
@@ -29,22 +33,16 @@ Sommet( <Polygone poly > )::
 Sommet( <Polygone poly>, <Numéro n >)::
   Retourne le n^ème^ sommet du polygone _poly_.
 
-[NOTE]
-====
-
-Pour récupérer tous les sommets du polygone/de la conique/de l'inéquation sous forme de
-xref:/Listes.adoc[liste], utilisez `++{Sommet(<Objet>)}++`.
-
-====
 
 Sommet( <Segment>, <Numéro n >)::
   (n = 1 ou 2) Retourne la n^ème^ extrémité du segment.
 
-équivaut à Point(<Segment>, <paramètre>) avec paramètre=0 ou 1
+équivaut à *Point(<Segment>, <paramètre>)* avec paramètre=0 ou 1
+_____________________________________________________________
+image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* : 
 
-image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* : La commande Sommet ne retourne
-que le 1er sommet, utiliser `++{Sommet(<Objet>)}++` pour les obtenir tous.
-
+La commande Sommet ne retourne que le 1er sommet, utiliser `++{Sommet(<Objet>)}++` pour les obtenir tous.
+_____________________________________________________________
 _____________________________________________________________
 
 image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] *Graphique
@@ -52,4 +50,4 @@ image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphi
 
 Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D
 
-en ce qui concerne polygones et coniques
+sauf en ce qui concerne les inéquations.
