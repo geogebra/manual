@@ -2,12 +2,18 @@
 :page-en: commands/Prove
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie]
+
 Prouver( <Expression booléenne> )::
   Détermine si l'expression booléenne donnée est en général vraie ou fausse.
 
 Normalement, GeoGebra détermine si une xref:/Valeurs_booléennes.adoc[expression booléenne] est _vraie_ ou non
-numériquement. La commande `++Prouver++` utilise, quant à elle, des méthodes de calcul formel pour déterminer si une
-affirmation est _vraie_ ou _fausse_ en général.Si GeoGebra ne peut déterminer la réponse, le résultat est _non défini_.
+numériquement.
+
+La commande `++Prouver++` utilise, quant à elle, des méthodes de calcul formel pour déterminer si une
+affirmation est _vraie_ ou _fausse_ en général.
+
+Si GeoGebra ne peut déterminer la réponse, le résultat est _non défini_.
 
 [EXAMPLE]
 ====
@@ -16,27 +22,25 @@ Nous définissons trois points libres, `++A=(1,2)++`, `++B=(3,4)++` et `++C=(5,6
 commande `++SontAlignés(A,B,C)++` retourne _true_, parce qu'un test numérique effectué sur les coordonnées actuelles des
 trois points autorise de l'affirmer. En utilisant `++Prouver(SontAlignés(A,B,C))++` vous obtenez _false_ comme réponse,
 car, dans le cas général, trois points ne sont pas alignés.
-
+====
+[EXAMPLE]
+====
 Nous définissons un triangle de sommets _A_, _B_ et _C_, et définissons `++D=MilieuCentre(B,C)++`,
 `++E=MilieuCentre(A,C)++`, `++p=Droite(A,B)++`, `++q=Droite(D,E)++`. Dans la situation actuelle, les deux commandes
 `++p∥q++` et `++Prouver(p∥q)++` retournent _true_, car, tous les élèves sortant de collège doivent le savoir, la "droite
 des milieux" de deux côtés d'un triangle est parallèle au troisième côté.
 
-Voir une version interactive de cet https://www.geogebra.org/m/vhZETdtd[exemple].
 
 ====
 
 [NOTE]
 ====
 
-Voir aussi la commande xref:/commands/PreuveDétaillée.adoc[PreuveDétaillée], la page
-xref:/Valeurs_booléennes.adoc[Valeurs booléennes] 
+Voir aussi la commande xref:/commands/PreuveDétaillée.adoc[PreuveDétaillée]
+
+La page xref:/Valeurs_booléennes.adoc[Valeurs booléennes] 
 
 et pour les curieux, la page https://github.com/kovzol/gg-art-doc/tree/master/pdf/francais.pdf[GeoGebra Fonctionnalités de Raisonnement automatisé : Un tutoriel]
-
-
-
-_Forbidden_   http://dev.geogebra.org/trac/wiki/TheoremProving[détails techniques des algorithmes].
 
 ====
 
