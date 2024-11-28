@@ -2,18 +2,41 @@
 :page-en: commands/Sector
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie]
+
 Secteur( <Conique c>, <Point A>, <Point B> )::
-  Secteur entre les deux points _A_ et _B_ de la conique _c_ (Cercle ou Ellipse).
+  Secteur entre les deux points _A_ et _B_ de la conique _c_ (Cercle ou Ellipse), et affiche sn aire dans Algèbre.
+
+[EXAMPLE]
+====
+
+* Soit `++c: x^2 + 2y^2 = 8++` une ellipse, `++D = (-2.83, 0)++` et `++E = (0, -2)++` deux points de cette ellipse.
+
+** `++Secteur(c, D, E)++` retourne un secteur d'aire _d = 4.44_.
+
+* Soit `++c: x^2 + y^2 = 9++` un cercle, `++A = (3, 0)++` et `++B = (0, 3)++` deux points de ce cercle.
+
+** `++Secteur(c, A, B)++` retourne un secteur d'aire _d = 7.07_
+
+====
 
 Secteur( <Conique c>, <Valeur Paramètre t~1~>, <Valeur Paramètre t~2~> )::
-  Secteur de la conique _c_ déterminé par les deux valeurs t~1~ et t~2~ du paramètre.
+  Secteur de la conique _c_ déterminé par les deux valeurs t~1~ et t~2~ du paramètre entre _0_ et _2π_.
+
+[EXAMPLE]
+====
+
+Soit `++c: x^2 + y^2 = 9++` un cercle. `++Secteur(c, 0, 3/4 π)++` retourne un secteur d'aire _d = 10.6_
+
+====
+
 
 [width="100%",cols="50%,50%",]
 |===
 a|
 image:Ambox_content.png[image,width=40,height=40]
 
-|Donne bien un disque plein entre 0° et 360°, mais un ensemble vide entre α +0° et α + 360°.
+|Donne bien un disque plein entre 0° et 360°, un secteur entre α +0° et 360° mais un ensemble vide entre α +0° et α + 360°.
 |===
 
 [NOTE]
@@ -30,8 +53,10 @@ ____________________________________________________________
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
-Cette commande fonctionne à l'identique dans la fenêtre Calcul formel , mais sans la possibilité d'effectuer du calcul
-littéral.
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel ,
+
+mais sans la possibilité d'effectuer du calcul littéral.
+____________________________________________________________
 
 _____________________________________________________________
 
