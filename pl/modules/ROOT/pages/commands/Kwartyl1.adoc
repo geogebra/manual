@@ -1,0 +1,30 @@
+= Polecenie Kwartyl1
+:page-en: commands/Quartile1
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Kwartyl1( <Lista Surowych Danych> )::
+  Określa dolny kwartyl elementów listy.
+
+[EXAMPLE]
+====
+
+`++Kwartyl1({1, 2, 3, 4})++` daje w wyniku _1.5_.
+
+====
+
+Kwartyl1( <Lista Liczb, <Lista Częstości> )::
+  Określa dolny kwartyl elementów listy, uwzględniając ich częstości.
+
+[EXAMPLE]
+====
+
+`++Kwartyl1({1, 2, 3, 4}, {3, 2, 4, 2))++` daje w wyniku _1_.
+
+====
+
+[NOTE]
+====
+
+eoGebra używa metody *Moore'a i McCabe'a (2002)* do obliczania kwartyli, zobacz https://mathworld.wolfram.com/Quartile.html
+
+====
