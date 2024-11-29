@@ -1,7 +1,7 @@
 = Comando Resuelve
 :page-en: commands/Solve
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
-:stem:
+
 
 [width="100%",cols="50%,50%",]
 |===
@@ -41,6 +41,15 @@ Resuelve( <Ecuación>, <Variable> )::
   Resuelve la ecuación dada para la variable indeterminada indicada y da por resultado una lista con todas las
   soluciones.
 
+[EXAMPLE]
+====
+
+`++Resuelve(x * a^2 = 4a, a)++` da por resultado {stem:[a = \frac{4}{x}, a = 0]}, que son las soluciones de _xa^2^ =
+4a_.
+
+====
+
+
 
 Resuelve( <Lista de ecuaciones>, <Lista de Variables> )::
   Resuelve un sistema de ecuaciones para las variables indicadas y da por resultado una lista con todas las soluciones.
@@ -56,13 +65,6 @@ sistema formado por las ecuaciones _x = 4x + y_ y _y + x = 2_.
 
 ====
 
-[EXAMPLE]
-====
-
-`++Resuelve[x * a^2 = 4a, a]++` da por resultado \{stem:[a = \frac{4}\{x}, a = 0]}, que son las soluciones de _xa^2^ =
-4a_.
-
-====
 
 
 
