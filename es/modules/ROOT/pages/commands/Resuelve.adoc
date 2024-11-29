@@ -50,7 +50,6 @@ Resuelve( <Ecuación>, <Variable> )::
 ====
 
 
-
 Resuelve( <Lista de ecuaciones>, <Lista de Variables> )::
   Resuelve un sistema de ecuaciones para las variables indicadas y da por resultado una lista con todas las soluciones.
 
@@ -66,8 +65,6 @@ sistema formado por las ecuaciones _x = 4x + y_ y _y + x = 2_.
 ====
 
 
-
-
 Resuelve( <Ecuación>, <Variable> , <Lista de condiciones>)::
   Resuelve una ecuación en las indeterminadas indicadas con una lista de condiciones y devuelve una lista con todas las
   soluciones.
@@ -77,8 +74,8 @@ Resuelve( <Ecuación>, <Variable> , <Lista de condiciones>)::
 
 *Ejemplos:*
 
-* `++Resuelve[u *x < a,x, u>0]++` da por resultado _\{x < a / u}_, la solución para _u *x < a_ asumiendo que _u>0_
-* `++Resuelve[u *x < a,x, {u<0, a<0}]++` da por resultado _\{x > a / u}_.
+* `++Resuelve(u *x < a,x, u>0)++` da por resultado _{x < a / u}_, la solución para _u *x < a_ asumiendo que _u>0_
+* `++Resuelve(u *x < a,x, {u<0, a<0})++` da por resultado _{x > a / u}_.
 
 ====
 
@@ -89,7 +86,7 @@ Resuelve( <Lista de ecuaciones paramétricas>, <Lista de Variables> )::
 [EXAMPLE]
 ====
 
-* `++Resuelve[{(x, y) = (3, 2) + t*(5, 1), (x, y) = (4, 1) + s*(1, -1)}, {x, y, t, s}]++` da por resultado _\{\{x = 3, y
+* `++Resuelve({(x, y) = (3, 2) + t*(5, 1), (x, y) = (4, 1) + s*(1, -1)}, {x, y, t, s})++` da por resultado _{{x = 3, y
 = 2, t = 0, s = -1}}_.
 
 ====
@@ -100,6 +97,6 @@ Resuelve( <Lista de ecuaciones paramétricas>, <Lista de Variables> )::
 * El miembro derecho de las ecuaciones (en cualquiera de las sintaxis indicadas más arriba) puede omitirse. En caso de
 faltar dicho miembro, se considera como 0.
 * En ocasiones, puede ser necesario que realices ciertas manipulaciones para que el comando funcione. Por ejemplo
-`++ Resuelve[TrigDesarrolla[sen(5/4 π + x) - cos(x - 3/4 π) = sqrt(6) * cos(x) - sqrt(2)]]++`.
+`++ Resuelve(TrigDesarrolla(sen(5/4 π + x) - cos(x - 3/4 π) = sqrt(6) * cos(x) - sqrt(2)))++`.
 * Para funciones definidas por tramos, deberás utilizar el comando xref:/commands/SolucionesN.adoc[SolucionesN]
 ====
