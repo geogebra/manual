@@ -1,0 +1,47 @@
+= Polecenie UstawWidokKierunku
+:page-en: commands/SetViewDirection
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+UstawWidokKierunku( <Kierunek> )::
+  Ustawia kierunek orientacji Widoku 3D w zależności od podanego obiektu.
+
+[EXAMPLE]
+====
+
+* `++UstawWidokKierunku(Wektor((0, 0, 1)))++`
+* `++UstawWidokKierunku((0, 0, 1))++`
+* `++UstawWidokKierunku(x + y + z = 1)++`
+
+====
+
+UstawWidokKierunku( )::
+   Ustawia kierunek orientacji Widoku 3D na domyślny.
+
+[EXAMPLE]
+====
+
+`++UstawWidokKierunku()++`
+
+====
+
+UstawWidokKierunku( <Kierunek>, <zmienna logiczna na animację> )::
+  Ustawia kierunek orientacji widoku 3D w zależności od podanego obiektu, z opcjonalną animacją.
+
+[EXAMPLE]
+====
+
+Aby uzyskać obrót widoku 3D w zależności od wartości wcześniej utworzonego suwaka _α_, użyj polecenia
+`++UstawWidokKierunku(Wektor((1; α; -30°)), false)++` w zakładce _Po zmianie_ ustawień Skrypty suwaka _α_.
+
+====
+
+[NOTE]
+====
+
+* Kierunkiem może być prosta, odcinek, płaszczyzna, itp.
+* Jeśli wykonasz np `++UstawWidokKierunku(x + y + z = 1)++` dwa razy, istnieją dwie możliwe opcje, a _druga_ 
+z nich obróci widok o 180°. Aby uniknąć niejednoznaczności, użyj np. `++UstawWidokKierunku(Wektor((0, 0, 1)))++`
+* Zobacz także narzędzie image:24px-Mode_viewinfrontof.png[Mode viewinfrontof.png,width=24,height=24]
+xref:/tools/Zobacz_przed.adoc[Zobacz przed].
+
+====
