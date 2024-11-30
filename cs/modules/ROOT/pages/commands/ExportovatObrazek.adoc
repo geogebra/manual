@@ -1,0 +1,101 @@
+= Příkaz ExportovatObrazek
+:page-en: commands/ExportImage
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+ExportovatObrazek( <Vlastnost>, <Hodnota>, <Vlastnost>, <Hodnota>, ... )::
+  Exportuje obrázek aktuálního zobrazení v okně (nebo zobrazení v okně určeného parametrem „view“).
+
+[NOTE]
+====
+
+* _Vlastnosti_ použité v syntaxi příkazu, uvedené v následujících příkladech, musí být zadány v angličtině.
+* _Hodnoty_ související se zobrazením v okně, které bude uloženo jako obrázek, jsou:
+
+* 1 pro image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Nákresna_
+* 2 pro image:16px-Menu_view_graphics2.svg.png[Menu view graphics2.svg,width=16,height=16] _Nákresna_ 2
+* -1 pro image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=16,height=16] _Grafický náhled 3D_
+
+====
+
+[EXAMPLE]
+====
+
+* `++ExportovatObrazek("scale", 5)++`
+
+Zobrazí vyskakovací menu aktuálního zobrazení, aby uživatel mohl kliknout pravým tlačítkem -> Uložit obrázek jako...
+
+* `++ExportovatObrazek("filename", "image.png")++`
+
+Uloží aktuální zobrazení jako soubor s názvem „image.png“
+
+* `++ExportovatObrazek("filename", "image.png", "view", 2)++`
+
+Uloží zobrazení Grafika 2 jako soubor s názvem „image.png“
+
+* `++ExportovatObrazek("filename", "image.png", "view", -1)++`
+
+Uloží zobrazení Grafický náhled 3D jako soubor s názvem „image.png“
+
+* `++ExportovatObrazek("filename", "image.png", "dpi", 300)++`
+
+Uloží aktuální zobrazení jako soubor s názvem „image.png“ v rozlišení 300 dpi (300 bodů na palec)
+
+* `++ExportovatObrazek("filename", "image.png", "scale", 2)++`
+
+Uloží aktuální zobrazení jako soubor s názvem „image.png“ v měřítku 2 (tj. dvojnásobné nominální rozlišení obrazovky)
+
+* `++ExportovatObrazek("filename", "image.png", "scalecm", 2, "dpi", 600)++`
+
+Uloží aktuální zobrazení jako soubor s názvem „image.png“ s rozlišením 600 dpi v měřítku, kde 1 jednotka = 2 cm
+
+* `++ExportovatObrazek("filename", "image.png", "width", 1000)++`
+
+Uloží aktuální zobrazení jako soubor s názvem „image.png“ se šířkou 1000 pixelů
+
+* `++ExportovatObrazek("filename", "image.png", "height", 1000)++`
+
+Uloží aktuální zobrazení jako soubor s názvem „image.png“ s výškou 1000 pixelů
+
+* `++ExportovatObrazek("filename", "image.png", "transparent", true)++`
+
+Uloží soubor PNG s průhledným pozadím s názvem „image.png“
+
+Nastavení vlastnosti “transparent” na _false_ uloží také pozadí.
+
+* `++ExportovatObrazek("filename", "image.svg", "type", "svg")++`
+
+Uloží aktuální zobrazení jako soubor ve formátu SVG s názvem „image.svg“
+
+* `++ExportovatObrazek("filename", "image.gif", "type", "gif", "slider", a, "loop", true, "time", 200, "width", 400)++`
+
+Uloží smyčkovaný animovaný GIF aktuálního zobrazení, ovládaný posuvníkem „a“ s prodlevou 200 ms mezi snímky. *Ponechejte malou šířku a nízký počet kroků posuvníku.*
+
+* `++ExportovatObrazek("filename", "image.gif", "type", "gif", "view", -1, "rotate", 360°, "slider", a, "loop", true, "time", 200)++`
+
+Uloží smyčkovaný animovaný GIF aktuálního zobrazení, ovládaný posuvníkem „a“ s prodlevou 200 ms mezi snímky a otočením zobrazení o 360° během animace. *Ponechejte malou velikost okna a nízký počet kroků posuvníku.*
+
+* `++ExportovatObrazek("type", "pdf", "filename", "test.pdf")++`
+
+Vytvoří PDF aktuálního zobrazení (nebo 2stránkové PDF, pokud je otevřeno okno Nákresna 2)
+
+* `++ExportovatObrazek("type", "pdf", "filename", "test.pdf", "slider", n)++`
+
+Vytvoří *vícestránkové* PDF aktuálního zobrazení, kde každá stránka odpovídá jednomu kroku posuvníku „n“
+
+* `++pic1 = ExportovatObrazek("view", 2, "corner", A, "corner2", B)++`
+
+Vytvoří obrázek zobrazení Grafika 2 v GeoGebře a umístí jej v okně na pozici definované body `++A++` a `++B++`
+====
+
+[NOTE]
+====
+
+
+* Pokud není v GeoGebře Classic 5 zadán parametr `++filename++`, bude obrázek zkopírován do schránky. V prohlížeči Chrome můžete zadat `++"clipboard", true++`.
+* Pro oříznutí exportu vytvořte body `++Export_1++` a `++Export_2++`, které definují obdélník k oříznutí (*Tyto body také ořezávají exporty přes nabídku, např. Soubor -> Exportovat obrázek*).
+* Některé syntaxe nejsou podporovány v GeoGebře Classic 5.
+* V prohlížeči Chrome můžete vyzkoušet experimentální syntaxi `++"type", "webm"++` pro rychlejší a menší export než u animovaných GIFů.
+* Pro 2D zobrazení (Nákresnu a Nákresnu 2) můžete použít tuto syntaxi pro export v monochromatickém režimu: `++"grayscale", true++` (pouze ve formátu PNG).
+* Pro 3D zobrazení (Grafický náhled 3D) jsou podporovány pouze bitmapové formáty (např. PNG, GIF). V GeoGebře Classic 5 můžete použít tuto syntaxi pro získání výstupu ve vysokém rozlišení: `++ExportovatObrazek("filename", "c:\Users\<username>\AppData\image.png", "view", -1, "width", 2000)++`. Změňte *<username>* na své uživatelské jméno ve Windows.
+
+====
