@@ -1,0 +1,42 @@
+= Příkaz SoucasnaHodnota
+:page-en: commands/PresentValue
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+SoucasnaHodnota( <Sazba>, <Počet období>, <Splátka>, <Budoucí hodnota (volitelně)>, <Typ (volitelný)> )::
+  Vrátí celkovou hodnotu všech plateb investice.
+
+* *<Sazba>* Úroková sazba za období.
+* *<Počet období>* Celkový počet splátek úvěru.
+* *<Splátka>* Částka placená v každém období.
+* *<Budoucí hodnota (volitelně)>* Hotovostní zůstatek, kterého chcete dosáhnout po poslední splátce. Pokud nezadáte budoucí hodnotu, předpokládá se, že je 0.
+* *<Typ (volitelný)>* Udává, kdy jsou platby splatné. Pokud nezadáte hodnotu nebo zadáte 0, platba je splatná na konci období. Pokud zadáte 1, je splatná na začátku období.
+
+[EXAMPLE]
+====
+
+`++SoucasnaHodnota(12%/12, 4*12, -100, 5000, 0)++` dává současnou hodnotu ve výši 696.06.
+
+`++SoucasnaHodnota(12%/12, 4*12, -100, 5000, 1)++` dává současnou hodnotu ve výši 734.07.
+
+====
+[NOTE]
+====
+
+Ujistěte se, že jednotky použité pro `++<Sazba>++` a `++<Počet období>++` jsou konzistentní. 
+Pokud například provádíte měsíční platby na čtyřletý úvěr s roční úrokovou sazbou 12%, použijte 12%/12 jako úrokovou sazbu a 4*12 jako počet splátek.
+====
+
+[NOTE]
+====
+
+Pro všechny argumenty platí, že hotovost vyplacená je reprezentována zápornými čísly a hotovost přijatá kladnými čísly.
+
+====
+
+[NOTE]
+====
+
+Viz také příkazy xref:/commands/Platba.adoc[Platba], xref:/commands/PocetObdobi.adoc[PocetObdobi], xref:/commands/UrokovaMira.adoc[UrokovaMira] a
+xref:/commands/BudouciHodnota.adoc[BudouciHodnota].
+
+====
