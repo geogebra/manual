@@ -1,0 +1,42 @@
+= FutureValue Command
+:page-en: commands/FutureValue
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+BudouciHodnota( <Sazba>, <Počet období>, <Splátka>, <Současná hodnota (volitelná)>, <Typ (volitelný)> )::
+   Vrátí budoucí hodnotu investice na základě pravidelných, konstantních plateb a konstantní úrokové sazby.
+
+
+
+* *<Sazba>* Úroková sazba za období.
+* *<Počet období>* Celkový počet platebních období anuity.
+* *<Splátka>* Částka placená v každém období.
+* *<Současná hodnota (volitelná)>* Celková současná hodnota série budoucích plateb. Pokud žádnou hodnotu nezadáte, předpokládá se, že je 0.
+* *<Typ (volitelný)>* Udává, kdy jsou platby splatné. Pokud nezadáte hodnotu nebo zadáte 0, platba je splatná na konci období. Pokud zadáte 1, je splatná na začátku období.
+
+[EXAMPLE]
+====
+
+`++BudouciHodnota(10%/12, 15, -200, 0, 1)++` dává budoucí hodnotu 3207.99.
+
+====
+
+[NOTE]
+====
+
+Ujistěte se, že jednotky použité pro `++<Sazba>++` a `++<Počet období>++` jsou konzistentní. 
+Pokud například provádíte měsíční platby na čtyřletý úvěr s roční úrokovou sazbou 10 %, použijte 10%/12 jako úrokovou sazbu a 4*12 jako počet plateb.
+====
+
+[NOTE]
+====
+
+
+Pro všechny argumenty platí, že hotovost vyplacená je reprezentována zápornými čísly a hotovost přijatá kladnými čísly.
+====
+
+[NOTE]
+====
+
+Viz také příkazy xref:/commands/Platba.adoc[Platba], xref:/commands/UrokovaMira.adoc[UrokovaMira], xref:/commands/SoucasnaHodnota.adoc[SoucasnaHodnota] a xref:/commands/PocetObdobi.adoc[PocetObdobi].
+
+====
