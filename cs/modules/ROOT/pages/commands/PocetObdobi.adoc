@@ -1,0 +1,42 @@
+= Příkaz PocetObdobi
+:page-en: commands/Periods
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+PocetObdobi( <Sazba>, <Splátka>, <Současná hodnota>, <Budoucí hodnota (volitelně)>, <Typ (volitelný)> )::
+  Vrátí počet období anuity na základě pravidelných, pevných plateb a pevné úrokové sazby.
+
+* *<Sazba>* Úroková sazba za období.
+* *<Splátka>* Částka placená v každém období.
+* *<Současná hodnota>* Celková současná hodnota série budoucích plateb. 
+* *<Budoucí hodnota (volitelně)>* Hotovostní zůstatek, kterého chcete dosáhnout po poslední splátce. Pokud nezadáte budoucí hodnotu, předpokládá se, že je 0.
+* *<Typ (volitelný)>* Udává, kdy jsou platby splatné. Pokud nezadáte hodnotu nebo zadáte 0, platba je splatná na konci období. Pokud zadáte 1, je splatná na začátku období.
+
+[EXAMPLE]
+====
+
+`++PocetObdobi(10%/12, -200, -400, 10000)++` dává počet plateb, který vychází na 39.98.
+
+`++PocetObdobi(10%/12, -200, -400, 10000, 1)++` dává počet plateb, který vychází na 39.7.
+
+====
+
+[NOTE]
+====
+
+Pokud provádíte měsíční platby při roční úrokové sazbě 10%, použijte 10%/12 pro `++<Sazba>++`.
+
+====
+
+[NOTE]
+====
+
+Pro všechny argumenty platí, že hotovost vyplacená je reprezentována zápornými čísly a hotovost přijatá kladnými čísly.
+
+====
+
+[NOTE]
+====
+
+Viz také příkazy xref:/commands/Platba.adoc[Platba], xref:/commands/UrokovaMira.adoc[UrokovaMira], xref:/commands/SoucasnaHodnota.adoc[SoucasnaHodnota] a xref:/commands/BudouciHodnota.adoc[BudouciHodnota].
+
+====
