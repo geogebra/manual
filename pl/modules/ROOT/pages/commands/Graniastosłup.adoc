@@ -1,0 +1,42 @@
+= Polecenie Graniastosłup
+:page-en: commands/Prism
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Graniastosłup( <Punkt>, <Punkt>, ... )::
+  Tworzy graniastosłup zdefiniowany przez dane punkty.
+
+[EXAMPLE]
+====
+
+`++Graniastosłup(A, B, C, D)++` tworzy graniastosłup, którego podstawami są trójkąty ABC i DEF. Wektory AD, BE, CF są równe.
+
+====
+
+Graniastosłup( <Wielokąt>, <Punkt> )::
+  Tworzy graniastosłup, którego dolną podstawą jest dany wielokąt, a punkt jest pierwszym wierzchołkiem górnej podstawy.
+
+[EXAMPLE]
+====
+
+`++Graniastosłup(wielokąt1, A)++` tworzy graniastosłup, którego dolną podstawą jest _wielokąt1_, a punkt _A_ jest pierwszym wierzchołkiem górnej podstawy.
+
+====
+
+Graniastosłup( <Wielokąt>, <Wysokość> )::
+  Tworzy graniastosłup, którego dolną podstawą jest dany wielokąt o danej wysokości.
+
+[EXAMPLE]
+====
+
+`++Graniastosłup(wielokąt1, 3)++` tworzy graniastosłup, którego podstawą jest _wielokąt1_, a wysokość graniastosłupa jest równa 3.
+
+====
+
+[NOTE]
+====
+
+Zobacz także narzędzia image:24px-Mode_prism.svg.png[Mode prism.svg,width=24,height=24] xref:/tools/Graniastosłup.adoc[Graniastosłup] i
+image:24px-Mode_extrusion.svg.png[Mode extrusion.svg,width=24,height=24]
+xref:/tools/Utwórz_graniastosłup.adoc[Utwórz graniastosłup]s.
+
+====
