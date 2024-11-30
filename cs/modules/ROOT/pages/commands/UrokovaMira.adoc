@@ -1,0 +1,41 @@
+= Příkaz UrokovaMira
+:page-en: commands/Rate
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+UrokovaMira( <Počet období>, <Splátka>, <Současná hodnota>, <Budoucí hodnota (volitelně)>, <Typ (volitelný)>, <Odhad (volitelně)> )::
+  Vrátí úrokovou sazbu za jedno období anuity.
+
+* *<Počet období>* Celkový počet splátek úvěru.
+* *<Splátka>* Částka placená v každém období.
+* *<Současná hodnota>* Celková současná hodnota série budoucích plateb.
+* *<Budoucí hodnota (volitelně)>* Hotovostní zůstatek, kterého chcete dosáhnout po poslední splátce. Pokud nezadáte budoucí hodnotu, předpokládá se, že je 0.
+* *<Typ (volitelný)>* Udává, kdy jsou platby splatné. Pokud nezadáte hodnotu nebo zadáte 0, platba je splatná na konci období. Pokud zadáte 1, je splatná na začátku období.
+* *<Odhad (volitelně)>* Váš odhad, jaká bude úroková míra.
+
+[EXAMPLE]
+====
+
+`++UrokovaMira(5*12, -300, 10000)++` dává měsíční úrokovou míru ve výši 0.02 (2%).
+
+====
+
+[NOTE]
+====
+
+Pokud provádíte měsíční platby na pětiletý úvěr, použijte 5*12 pro `++<Počet období>++`.
+====
+
+[NOTE]
+====
+
+Pro všechny argumenty platí, že hotovost vyplacená je reprezentována zápornými čísly a hotovost přijatá kladnými čísly.
+
+====
+
+[NOTE]
+====
+
+Viz také příkazy xref:/commands/Platba.adoc[Platba], xref:/commands/PocetObdobi.adoc[PocetObdobi],
+xref:/commands/SoucasnaHodnota.adoc[SoucasnaHodnota] and xref:/commands/BudouciHodnota.adoc[BudouciHodnota].
+
+====
