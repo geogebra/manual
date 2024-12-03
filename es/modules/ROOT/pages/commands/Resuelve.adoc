@@ -1,16 +1,7 @@
 = Comando Resuelve
-:page-revisar:
 :page-en: commands/Solve
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]
-
-|Página en proceso de traducción.
-|===
 
 [NOTE]
 ====
@@ -34,7 +25,7 @@ Resuelve( <Ecuación en x> )::
 
 ====
 
-== Sintaxis para la vista CAS
+== Sintaxis CAS
 Los siguientes comandos solamente están disponibles en la image:16px-Menu_view_cas.svg.png[Menu view
 cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[Vista CAS].
 
@@ -45,35 +36,29 @@ Resuelve( <Ecuación>, <Variable> )::
 [EXAMPLE]
 ====
 
-`++Resuelve(x * a^2 = 4a, a)++` da por resultado {stem:[a = \frac{4}{x}, a = 0]}, que son las soluciones de _xa^2^ =
-4a_.
+`++Resuelve(x * a^2 = 4a, a)++` da por resultado {stem:[a = \frac{4}{x}, a = 0]}.
 
 ====
 
 
-Resuelve( <Lista de ecuaciones>, <Lista de Variables> )::
+Resuelve( <Lista de ecuaciones>, <Lista de variables> )::
   Resuelve un sistema de ecuaciones para las variables indicadas y da por resultado una lista con todas las soluciones.
 
 [EXAMPLE]
 ====
 
-*Ejemplos:*
-
-* `++Resuelve({x = 4 x + y , y + x = 2}, {x, y})++` da por resultado _{ {x = -1, y = 3} }_, que es la única solución del
-sistema formado por las ecuaciones _x = 4x + y_ y _y + x = 2_.
-* `++Resuelve({2a^2 + 5a + 3 = b, a + b = 3}, {a, b})++` da por resultado _{ {a = 0, b = 3}, {a = -3, b = 6} }_.
+* `++Resuelve({x = 4 x + y , y + x = 2}, {x, y})++` da por resultado _{{x = -1, y = 3}}_.
+* `++Resuelve({2a^2 + 5a + 3 = b, a + b = 3}, {a, b})++` da por resultado _{{a = 0, b = 3}, {a = -3, b = 6}}_.
 
 ====
 
 
 Resuelve( <Ecuación>, <Variable> , <Lista de condiciones>)::
-  Resuelve una ecuación en las indeterminadas indicadas con una lista de condiciones y devuelve una lista con todas las
+  Resuelve una ecuación en las variables indicadas con una lista de condiciones y devuelve una lista con todas las
   soluciones.
 
 [EXAMPLE]
 ====
-
-*Ejemplos:*
 
 * `++Resuelve(u *x < a,x, u>0)++` da por resultado _{x < a / u}_, la solución para _u *x < a_ asumiendo que _u>0_
 * `++Resuelve(u *x < a,x, {u<0, a<0})++` da por resultado _{x > a / u}_.
@@ -81,7 +66,7 @@ Resuelve( <Ecuación>, <Variable> , <Lista de condiciones>)::
 ====
 
 Resuelve( <Lista de ecuaciones paramétricas>, <Lista de Variables> )::
-  Resuelve un sistema de ecuaciones paramétricas para un conjunto dado de indeterminadas y devuelve una lista con todas
+  Resuelve un sistema de ecuaciones paramétricas para un conjunto dado de variables y devuelve una lista con todas
   las soluciones.
 
 [EXAMPLE]
@@ -95,9 +80,9 @@ Resuelve( <Lista de ecuaciones paramétricas>, <Lista de Variables> )::
 [NOTE]
 ====
 
-* El miembro derecho de las ecuaciones (en cualquiera de las sintaxis indicadas más arriba) puede omitirse. En caso de
+* El segundo miembro de las ecuaciones (en cualquiera de las sintaxis indicadas más arriba) puede omitirse. En caso de
 faltar dicho miembro, se considera como 0.
-* En ocasiones, puede ser necesario que realices ciertas manipulaciones para que el comando funcione. Por ejemplo
+* En ocasiones, puede ser necesario realizar ciertas manipulaciones para que el comando funcione. Por ejemplo
 `++ Resuelve(TrigDesarrolla(sen(5/4 π + x) - cos(x - 3/4 π) = sqrt(6) * cos(x) - sqrt(2)))++`.
-* Para funciones definidas por tramos, deberás utilizar el comando xref:/commands/SolucionesN.adoc[SolucionesN]
+* Para funciones definidas por intervalos, debe utilizarse el comando xref:/commands/SolucionesN.adoc[SolucionesN]
 ====
