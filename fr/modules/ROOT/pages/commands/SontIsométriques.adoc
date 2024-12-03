@@ -2,6 +2,8 @@
 :page-en: commands/AreCongruent
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie]
+
 SontIsométriques( <Objet>, <Objet> )::
   Détermine si les objets sont "isométriques".
 
@@ -10,11 +12,20 @@ Pour des segments, cela se restreint donc à savoir s'ils ont même longueur.
 [EXAMPLE]
 ====
 
-`++SontIsométriques(Segment((1, 2), (3, 4)), Segment((3, 4), (1, 6)])++` retourne _true_ . Cette commande
-équivaut à l'opération booléenne xref:/Valeurs_booléennes.adoc[égal], `++Segment((1,2),(3,4)) ≟ Segment((3,4),(1,6))++`
-(les deux segments sont de même longueur).Ne pas confondre avec
-`++SontÉgaux(Segment((1, 2), (3, 4)), Segment((3, 4), (1, 6)])++` qui retourne _false_, les deux segments sont de même
+`++SontIsométriques(Segment((1, 2), (3, 4)), Segment((3, 4), (1, 6)])++` retourne _true_ .
+
+Cette commande équivaut à l'opération booléenne xref:/Valeurs_booléennes.adoc[égal], `++Segment((1,2),(3,4)) ≟ Segment((3,4),(1,6))++`
+(les deux segments sont de même longueur).
+
+Ne pas confondre avec `++SontÉgaux(Segment((1, 2), (3, 4)), Segment((3, 4), (1, 6)])++` qui retourne _false_, les deux segments sont de même
 longueur mais ne sont pas un même segment.
+
+====
+
+[EXAMPLE]
+====
+
+`++SontIsométriques(Cercle((0, 0),1),x^2+y^2=1)++` ou `++SontIsométriques(Cercle((1, 1),1),x^2+y^2=1)++` retourne _true_ car chaque fois, les deux cercles ont le même rayon (même si leur centre peut différer).
 
 ====
 
