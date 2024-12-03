@@ -2,63 +2,100 @@
 :page-en: commands/Tangent
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-Je vous invite à consulter ce GGbRecueil
-https://www.geogebra.org/material/show/id/rXZQnJW4[image:64px-GGbBook.png[GGbBook.png,width=64,height=67]] *Tangente(s)
-et "graphique"*.
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie]
+
 
 Tangente( <Point A>, <Conique c> )::
   (Toutes les) tangentes à _c_ passant par _A_.
 
-Tangente( <Point A>, <Fonction f> )::
-  Tangente à stem:[C_f] en _x = x(A)_
-  https://www.geogebra.org/material/show/id/rXZQnJW4[image:32px-GGbBook.png[GGbBook.png,width=32,height=34]].
+[EXAMPLE]
+====
+`++Tangente((5, 4), 4x^2 + 4y^2 = 20)++` retourne les droites d'équation _5.14834x - 3.08133y = 13.41641_ et _1.87605x - 5.69916y = -13.41641_.
 
-[NOTE]
+`++Tangente((5, 4), 4x^2 - 5y^2 = 20)++` retourne les droites d'équation _4.96101x - 3.03899y = 12.64911_ et  _2.1501x - 5.8499y = -12.64911_.
+
+`++Tangente((5, 4), 4x^2 - 5y^2 = 20)++` retourne la droite d'équation _x - y = 1_.
+
 ====
 
-_x(A)_ l'abscisse du point _A_.
+Tangente( <Point A>, <Fonction f> )::
+  Tangente à stem:[C_f] en _x = x(A)_ (_x(A)_ est l'abscisse du point _A_).
+  
+[EXAMPLE]
+====
+
+`++Tangente((1, 0), x^2)++` retourne la droite d'équation _y = 2x - 1_.
 
 ====
 
 Tangente( <Point A>, <Courbe implicite c> )::
   (Toutes les) tangentes à _c_ passant par _A_
-  https://www.geogebra.org/material/show/id/rXZQnJW4[image:32px-GGbBook.png[GGbBook.png,width=32,height=34]].
+
 
 Tangente( <Point A>, <Courbe g> )::
   Tangente à la courbe _g_ au point _A_.
+
+[EXAMPLE]
+====
+
+`++Tangente((0.5, 0.5), Courbe(cos(t), sin(t), t, 0, π))++` retourne la droite d'équation _y = -1x + 1.41421_.
+
+====
 
 [NOTE]
 ====
 
 valable pour "spline"Tangente( < Point A>, <Spline s> ) : Tangente à la spline _s_ au point _A_.
+====
 
 [EXAMPLE]
 ====
 
-Soit `++A=(0,1)++`, `++B=(2,5)++` et `++C=(0,4)++` trois points. `++Tangente(A,Spline([A,B,C})) ++` donne
+Soit `++A=(0,1)++`, `++B=(2,5)++` et `++C=(0,4)++` trois points. `++Tangente(A,Spline({A,B,C})) ++` retourne la droite d'équation
 _y=1.5x+1_.
 
 ====
 
-====
 
 [NOTE]
 ====
 
 Si le point A n’est pas sur la courbe, alors vous obtenez la tangente au point M de la courbe tel que la
 distance AM soit minimale.
-https://www.geogebra.org/material/show/id/rXZQnJW4[image:32px-GGbBook.png[GGbBook.png,width=32,height=34]]
+
+Ainsi `++Tangente((2, 2), Courbe(cos(t), sin(t), t, 0, π))++` retourne comme `++Tangente((0.5, 0.5), Courbe(cos(t), sin(t), t, 0, π))++` la droite d'équation _y = -1x + 1.41421_.
 
 ====
 
 Tangente( <Abscisse a>, <Fonction f> )::
   Tangente à stem:[C_f] au point d'abscisse _a_.
 
+[EXAMPLE]
+====
+
+`++Tangente(1, x^2)++` retourne la droite d'équation _y = 2x - 1_.
+
+==== 
+
 Tangente( <Ligne >, <Conique c> )::
   (Toutes les) tangentes à _c_ parallèles à la droite _d_ ou au segment _s_.
 
+[EXAMPLE]
+====
+
+`++Tangente(y = 4, x^2 + y^2 = 4)++` retourne les droites d'équation _y = 2_ et _y = -2_.
+
+====
+
 Tangente( <Conique>, <Conique> )::
-  Toutes les tangentes communes aux deux coniques.
+  Toutes (max 4) les tangentes communes aux deux coniques.
+
+[EXAMPLE]
+====
+
+`++Tangente(x^2 + y^2 = 4, (x - 6)^2 + y^2 = 4)++` retourne les quatre droites d'équation _1.33333x + 1.49071y = 4_ , _-1.33333x - 1.49071y = 4_ , _y = 2_ ,  et _y = -2_.
+
+====
 
 ____________________________________________________________
 
