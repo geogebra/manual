@@ -1,47 +1,35 @@
 = LaTeX
-:page-revisar: prioritario
 :page-en: LaTeX
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]
-
-|Página en proceso de traducción.
-|===
-
-En GeoGebra también se pueden escribir fórmulas LaTeX.Para hacerlo, hay que tildar la casilla [.kcode]#Fórmula
-*_LaTeX_*# que aparece en la ventana de diálogo de la herramienta xref:/Textos.adoc[image:32px-Mode_text.svg.png[Mode
-text.svg,width=32,height=32]] xref:/tools/Texto.adoc[Texto] y anotar la fórmula según la sintaxis de *_LaTeX_*.
+En GeoGebra también se pueden escribir fórmulas. Para hacerlo, hay que tildar la casilla Fórmula LaTeX que aparece en la ventana de diálogo de la herramienta image:24px-Mode_text.svg.png[Mode text.svg,width=24,height=24]
+xref:/tools/Texto.adoc[Texto] y escribir la fórmula según la sintaxis de LaTeX.
 
 [NOTE]
 ====
 
-Para crear un texto que contenga una formula *_LaTeX_* así como xref:/Textos.adoc[texto] xref:/Textos.adoc[estático], se
-presentan alternativas:
-
-* ingresar la parte estática del texto y luego se añade la fórmula LaTeX entre un juego de símbolos de pesos ($).
-* incluir el texto en \text\{}.
+Para crear un texto que contenga una formula LaTeX así como texto, se puede ingresar el texto dentro de \text{} mientras _Fórmula LaTeX_ esté activada.
 
 ====
 
 [EXAMPLE]
 ====
 
-*Ejemplos:*
+`++\text{La longitud de la diagonal es } \sqrt{ 2 }++`
 
-* Desde la xref:/Barra_de_Entrada.adoc[Barra de
-Entrada]...*`++LaTeX["\text{La longitud de la diagonal es } \sqrt{ 2 }"]++`*
-* Si se estuviera xref:/tools/Texto.adoc[insertando texto], con *Fórmula LaaTeX* tildado:
+====
 
-* *`++"La longitud de la diagonal es $\sqrt{ 2 }$"++`* para anotar:*_La longitud de la diagonal es_ stem:[\sqrt{ 2 }]*
-* *`++\text{La longitud de la diagonal es } \sqrt{ 2 }++`*
-* *`++\mbox{ La longitud de la diagonal es } \sqrt{2)++`*
-* Si se desea el texto recuadrado...*`++"\fbox{ \mbox{La longitud de la diagonal es { \sqrt{2} }"++`*
+[NOTE]
+====
 
-* También se puede emplear la xref:/commands/FórmulaTexto.adoc[FórmulaTexto] para anotar la fórmula entrecomillada como
-en:*`++FórmulaTexto["\text{La longitud de la diagonal es } \sqrt{ 2 }"]++`*
+También se puede emplear el xref:/commands/FórmulaTexto.adoc[comando FórmulaTexto] para ingresar la fórmula entre comillas.
+
+====
+
+[EXAMPLE]
+====
+
+`++FórmulaTexto["\text{La longitud de la diagonal es } \sqrt{ 2 }"]++`
 
 ====
 
