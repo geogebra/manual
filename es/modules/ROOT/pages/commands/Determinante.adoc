@@ -2,54 +2,25 @@
 :page-en: commands/Determinant
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]
-
-|Página en proceso de traducción.
-|===
-
 Determinante( <Matriz> )::
   Da por resultado el determinante de la matriz.
 
 [EXAMPLE]
 ====
 
-`++a = Determinante({{1, 2}, {3, 4}})++` da por resultado el número _-2_.
+`++Determinante({{1, 2}, {3, 4}})++` da por resultado _a = -2_.
 
 ====
 
-[NOTE]
-====
+== Sintaxis CAS
 
-El comando opera de modo análogo en la xref:/Vista_CAS.adoc[image:24px-Menu_view_cas.svg.png[Menu view
-cas.svg,width=24,height=24]]__xref:/Vista_CAS.adoc[Vista CAS]__.
+Determinante( <Matriz> )::
+  Da por resultado el determinante de la matriz. Si la matriz contiene variables no definidas, se obtiene una fórmula para el determinante.
 
-====
-
-== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS *C*[.small]#~omputación~# *A*[.small]#~lgebraica~# *S*[.small]#~imbólica~#]
-Admitiendo literales en operaciones simbólicas, en esta xref:/Vista_CAS.adoc[vista], el comando obra del modo ya
-descripto.
-Si las variables a y b no estuvieran definidas en GeoGebra:
 
 [EXAMPLE]
 ====
 
 `++Determinante({{1, a}, {b, 4}})++` da por resultado _-a b + 4_
 
-====
-
-[NOTE]
-====
-
-image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Cuando la matriz contiene variables a las que no se
-les ha asignado valor, el resultado es la fórmula correspondiente.
-
-====
-
-[NOTE]
-====
-
-Ver también el comando xref:/commands/RangoMatriz.adoc[RangoMatriz]
 ====
