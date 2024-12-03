@@ -2,27 +2,27 @@
 :page-en: commands/MatrixRank
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Vecteurs_et_Matrices.adoc[Commandes Vecteurs et Matrices]
+
 Rang( <Matrice> )::
-  Retourne le https://fr.wikipedia.org/Rang_(math%C3%A9matiques)#Rang_d.27une_matrice[rang] de la matrice
+  Retourne le https://fr.wikipedia.org/wiki/Rang_(math%C3%A9matiques)#Rang_d.27une_matrice[rang] de la matrice
   donnée.
 
 [EXAMPLE]
 ====
 
-*Exemples :*
-
-* `++Rang({{2, 2}, {1, 1}})++`donne _1_
+* `++Rang({{2, 2}, {1, 1}})++` retourne _1_
 
 [NOTE]
 ====
 
-Ne pas confondre avec `++Dimension({{2, 2}, {1, 1}}) ++` qui donne _\{2 , 2}_ ;
+Ne pas confondre avec `++Dimension({{2, 2}, {1, 1}}) ++` qui retourne _{2 , 2}_ ;
 
 ====
 
-* `++Rang({{1, 2}, {3, 4}})++` donne _2_ ;
-* `++Rang({{1,2,3},{0,1,0},{0,0,1}})++` donne _3_.
-
+* `++Rang({{1, 2}, {3, 4}})++` retourne _2_ ;
+* Soit m1 la matrice 3 stem:[ \times] 3 stem:[\begin{pmatrix}1&2&3\\ 0&1&0\\ 0&0&2 \end{pmatrix}] alors `++Rang({m1)++` retourne _3_.
+* Soit m2 la matrice 3 stem:[ \times] 3 stem:[\begin{pmatrix}1&2&3\\ 1&1&1\\ 2&2&2 \end{pmatrix}] alors `++Rang({m2)++` retourne _2_ 
 ====
 
 ____________________________________________________________
@@ -30,3 +30,16 @@ ____________________________________________________________
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
 Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+avec des "possibilités de travailler en littéral".
+
+====
+
+[EXAMPLE]
+====
+Si les variables _k_, _m_ et _n_ ne sont pas définies dans GeoGebra
+
+`++Rang({{1, 2}, {k, 2*k}})++` retourne _1_, OK;
+
+`++Rang{{1, 2}, {m, n}}++` retourne _2_ , à discuter ...
+====
