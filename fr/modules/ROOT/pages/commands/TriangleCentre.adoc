@@ -2,6 +2,8 @@
 :page-en: commands/TriangleCenter
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie]
+
 TriangleCentre(<Point A>,<Point B>,<Point C>,<Index n>)::
   retourne le _n_-ème http://faculty.evansville.edu/ck6/encyclopedia/ETC.html[centre] du triangle _ABC_. Fonctionne pour
   n<3054.
@@ -19,38 +21,32 @@ TriangleCentre(<Point A>,<Point B>,<Point C>,<Index n>)::
 
 |4 |Orthocentre
 
-|5 |https://fr.wikipedia.org/Cercle_d%27Euler[Centre du cercle d'Euler] (cercle des neuf points)
+|5 |https://fr.wikipedia.org/wiki/Cercle_d%27Euler[Centre du cercle d'Euler] (cercle des neuf points)
 
-|6 |https://fr.wikipedia.org/Sym%C3%A9diane#Point_de_Lemoine[Point de Lemoine]
+|6 |https://fr.wikipedia.org/wiki/Sym%C3%A9diane#Point_de_Lemoine[Point de Lemoine]
 
-|7 |https://fr.wikipedia.org/Cercles_inscrit_et_exinscrits_d%27un_triangle#Point_de_Gergonne[Point de Gergonne]
+|7 |https://fr.wikipedia.org/wiki/Cercles_inscrit_et_exinscrits_d%27un_triangle#Point_de_Gergonne[Point de Gergonne]
 
-|8 |https://fr.wikipedia.org/Cercles_inscrit_et_exinscrits_d%27un_triangle#Point_de_Nagel[Point de Nagel]
+|8 |https://fr.wikipedia.org/wiki/Cercles_inscrit_et_exinscrits_d%27un_triangle#Point_de_Nagel[Point de Nagel]
 
-|13 |https://fr.wikipedia.org/Point_de_Fermat[Point de Fermat d'un triangle dont les angles sont inférieurs à
+|13 |https://fr.wikipedia.org/wiki/Point_de_Fermat[Point de Fermat d'un triangle dont les angles sont inférieurs à
 120°]
 |===
 
-[NOTE]
-====
 
-*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :* Les 3 médianes d'un triangle ABC le partagent en
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] http://revue.sesamath.net/spip.php?article683[Idée :]* Les 3 médianes d'un triangle ABC le partagent en
 6 petits triangles. Les 6 centres des cercles circonscrits à ces triangles sont *cocycliques*. Ils appartiennent au
-cercle de Lamoen dont le centre peut être obtenu par `++ TriangleCentre(A,B,C,1153)++`Illustration sur
-https://www.geogebra.org/m/HEx3vJR2[FT_NLambert].
+cercle de Lamoen dont le centre peut être obtenu par `++ TriangleCentre(A,B,C,1153)++`.  
 
-====
 
-[NOTE]
-====
 
-*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :* Les 6 centres des cercles passant par les
-sommets d'un triangle et tangents à ses médianes centre de gravité sont *cocycliques*. Ils appartiennent au cercle de
-Dao Thanh Oai dont le centre *pourrait* être obtenu par `++ TriangleCentre(A,B,C,5569)++`Ce qui n'est pas
-(actuellement ?) possible dans GeoGebra ! Pas d'importance, on va faire faire les calculs par le CAS.Illustration sur
-https://www.geogebra.org/m/RCB3h2Ys[FT_NLambert].
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] http://revue.sesamath.net/spip.php?article705[Idée :]* Les 6 centres des cercles passant par les
+sommets d'un triangle et tangents à ses médianes en son centre de gravité sont *cocycliques*. Ils appartiennent au cercle de
+Dao Thanh Oai dont le centre *pourrait* être obtenu par `++ TriangleCentre(A,B,C,5569)++`Ce qui n'est 
+(actuellement ?) possible dans GeoGebra ! Pas d'importance, on va faire faire les calculs par le CAS..
 
-====
+
 
 ____________________________________________________________
 
