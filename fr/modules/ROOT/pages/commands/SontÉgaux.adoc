@@ -2,6 +2,8 @@
 :page-en: commands/AreEqual
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie]
+
 SontÉgaux( <Objet>, <Objet> )::
   Détermine si les objets sont "égaux".
 
@@ -11,19 +13,21 @@ commande xref:/commands/Prouver.adoc[Prouver].
 [EXAMPLE]
 ====
 
-*Exemple :*
+`++SontÉgaux(Segment((1, 2), (3, 4)), Segment((3, 4), (1, 6)])++` retourne _false_ . 
 
-`++SontÉgaux(Segment((1, 2), (3, 4)), Segment((3, 4), (1, 6)])++` retourne _false_ . Ne pas confondre cette commande
-avec l'opération booléenne xref:/Valeurs_booléennes.adoc[égal], ainsi `++Segment((1,2),(3,4)) ≟ Segment((3,4),(1,6))++`
-retourne _true_ (les deux segments sont de même longueur).Cette dernière correspond à
-`++SontIsométriques(Segment((1, 2), (3, 4)), Segment((3, 4), (1, 6))++`
+Ne pas confondre cette commande avec l'opération booléenne xref:/Valeurs_booléennes.adoc[égal], ainsi 
+
+`++Segment((1,2),(3,4)) ≟ Segment((3,4),(1,6))++` retourne _true_ (les deux segments sont de même longueur).
+
+Cette dernière correspond à `++SontIsométriques(Segment((1, 2), (3, 4)), Segment((3, 4), (1, 6))++`
 
 [NOTE]
 ====
 
 L'outil xref:/tools/Relation.adoc[Relation] ou la commande xref:/commands/Relation.adoc[Relation] différentient
-égalité de segments et égalité de longueurs de segments. image:Relation.PNG[Relation.PNG,width=329,height=157] et en
-pressant sur le bouton "Plus ..." image:Relation2.PNG[Relation2.PNG,width=336,height=215]
+égalité de segments et égalité de longueurs de segments. 
+
+image:Relation.PNG[Relation.PNG,width=329,height=157] et en pressant sur le bouton "Plus ..." image:Relation2.PNG[Relation2.PNG,width=336,height=215]
 
 ====
 
@@ -31,8 +35,6 @@ pressant sur le bouton "Plus ..." image:Relation2.PNG[Relation2.PNG,width=336,he
 
 [EXAMPLE]
 ====
-
-*Exemple :*
 
 `++SontÉgaux(Cercle((0, 0),1),x^2+y^2=1)++` retourne _true_ car les 2 objets correspondent à "deux" cercles de même
 centre et même rayon.
