@@ -29,57 +29,39 @@ También se puede emplear el xref:/commands/FórmulaTexto.adoc[comando FórmulaT
 [EXAMPLE]
 ====
 
-`++FórmulaTexto["\text{La longitud de la diagonal es } \sqrt{ 2 }"]++`
+`++FórmulaTexto("\text{La longitud de la diagonal es } \sqrt{ 2 }")++`
 
 ====
 
 [NOTE]
 ====
 
-Se puede simplemente obtener un texto *_LaTeX_* conteniendo el valor de un objeto listado en la
-xref:/Vista_Algebraica.adoc[Vista Algebraica] arrastrándolo desde allí y depositándolo en la posición deseada de la
-xref:/Vista_Gráfica.adoc[Vista Gráfica] .
+Se puede simplemente obtener un texto LaTeX conteniendo el valor de un objeto listado en la image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+xref:/Vista_Algebraica.adoc[Vista Algebraica] arrastrándolo desde allí y soltándolo en la posición deseada de la image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Vista_Gráfica.adoc[Vista Gráfica].
 
 ====
 
-== Seleccionando Símbolos
+Se puede encontrar la sintaxis de los símbolos de fórmulas comunes, en el menú desplegable
+que aparece junto la casilla de verificación de LaTeX (versión de escritorio de GeoGebra) o en el menú _Avanzado_ debajo del campo de entrada (versión web y aplicaciones para tabletas de GeoGebra). Esto inserta el código LaTeX correspondiente en el campo de texto y coloca el cursor entre un conjunto de llaves. El menú desplegable de Símbolos contiene una lista de símbolos matemáticos comunes, letras griegas y operadores. Si se quiere crear texto dinámico dentro de la fórmula, es necesario seleccionar los objetos relacionados desde la lista desplegable de image:16px-GeoGebra_48.png[GeoGebra
+48.png,width=16,height=16] Objetos, lo que provoca que GeoGebra inserte sus nombres, así como la sintaxis para texto mixto.
 
-Se pueden seleccionar los símbolos más usuales en la sintaxis de las formulas más habituales, desde el menú desplegable
-que aparece a la derecha de la casilla de *_LaTeX_*.Esto intercala los códigos de *_LaTeX_* correspondientes en el campo
-de texto y deja ubicado el cursor entre un juego de llaves.Si se quiere crear un xref:/Textos.adoc[texto dinámico] con
-la formula, basta un _clic_ sobre un objeto para que GeoGebra inserte su nombre así como la sintaxis para el
-xref:/Textos.adoc[texto mixto].
+Algunos comandos importantes de LaTeX están explicados en la siguiente tabla. Se puede consultar la documentación de LaTeX para obtener más información.
 
-El menú que se despliega dentro de la *Caja de Diálogo* de image:Mode_text.png[Mode
-text.png,width=32,height=32]xref:/tools/Texto.adoc[Texto], sea para seleccionar los símbolos matemáticos más usuales o
-las letras griegas o los operadores, hace muy sencilla la tarea de establecer una fórmula adecuada y prolija.
-
-Para crear un xref:/Textos.adoc[texto dinámico] con las fórmulas, se precisa seleccionar los objetos relacionados de la
-lista desplegable de Objetos, de modo que GeoGebra inserte sus nombres además de la sintaxis del xref:/Textos.adoc[texto
-mixto] en juego.
-
-Algunos comandos importantes de *_LaTeX_* aparecen en la siguiente tabla. Revisando cualquier documento sobre *_LaTeX_*
-se obtiene más información sobre el tema
-
-[width="100%",cols="20%,20%,20%,20%,20%",options="header",]
+[cols=",",options="header",]
 |===
-|Entrada LaTeX |Resultado | |Entrada LaTeX |Resultado
-|a \cdot b |stem:[a \cdot b] | |x^\{2} |stem:[x^\{2}]
-|\frac{a}{b} |stem:[\frac{a}{b}] | |a_\{1} |stem:[a_\{1}]
-|\sqrt{x} |stem:[\sqrt{x}] | |\sin\alpha + \cos\beta |stem:[\sin\alpha + \cos\beta]
-|\sqrt[n]{x} |stem:[\sqrt[n]{x}] | |\int_\{a}^\{b} x dx |stem:[\int_\{a}^\{b} x dx]
-|\vec{v} |stem:[\vec{v}] | |\sum_\{i=1}^\{n} i^2 |stem:[\sum_\{i=1}^\{n} i^2]
-|\overline{AB} |stem:[\overline{AB}] | |\{a \choose b} |stem:[ \left( \begin\{array}\{} a \\ b \end\{array} \right) ]
-|\bgcolor\{00ff00} \{ABCD} a|
-....
-ABCD
-....
-
-| |\fgcolor\{ff0000}\{abcd} a|
-....
-abcd
-....
-
+|LaTeX input |Result
+|a \cdot b |stem:[a \cdot b]
+|\frac{a}{b} |stem:[\frac{a}{b}]
+|\sqrt{x} |stem:[\sqrt{x}]
+|\sqrt[n]{x} |stem:[++\sqrt[n]{x}++]
+|\vec{v} |stem:[\vec{v}]
+|\overline{AB} |stem:[\overline{AB}]
+|x^{2} |stem:[x^{2}]
+|a_{1} |stem:[a_{1}]
+|\sin\alpha + \cos\beta |stem:[\sin\alpha + \cos\beta]
+|\int_{a}^{b} x dx |stem:[\int_{a}^{b} x dx]
+|\sum_{i=1}^{n} i^2 |stem:[\sum_{i=1}^{n} i^2]
 |===
 
 == Nominaciones _Distinguidas_
