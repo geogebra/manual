@@ -2,25 +2,29 @@
 :page-en: commands/TriangleCurve
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie] 
+
 TriangleCourbe( <Point P>,<Point Q>,<Point R>,<Équation en A,B,C>)::
   crée un polynôme implicite, dont l'équation en
-  https://fr.wikipedia.org/Coordonn%C3%A9es_barycentriques[coordonnées barycentriques] relativement aux points
+  https://fr.wikipedia.org/wiki/Coordonn%C3%A9es_barycentriques[coordonnées barycentriques] relativement aux points
   P, Q,R est donnée par les quatre paramètres; les coordonnées barycentriques sont relatives à A,B,C.
 
 [EXAMPLE]
 ====
 
-*Exemples :*
+Soit trois points _P_, _Q_,et _R_;
 
-Si _P,Q,R_ sont les points, `++TriangleCourbe(P,Q,R,(A-B)*(B-C)*(C-A)=0)++` vous retourne une cubique constituée des
-médianes du triangle _PQR_. `++TriangleCourbe(A,B,C,A*C=1/8)++` crée une hyperbole telle que la tangente passant par A
-ou C à cette hyperbole partage le triangle ABC en deux parties de même aire.
+`++TriangleCourbe(P, Q, R, (A-B)*(B-C)*(C-A)=0)++` vous retourne une cubique constituée des
+médianes du triangle _PQR_. 
 
-`++TriangleCourbe(A, B, C, A² + B² + C² - 2B C - 2C A - 2A B = 0)++` crée l'ellipse inscrite de
-https://fr.wikipedia.org/Ellipse_de_Steiner[Steiner], ellipse tangente à chacun des côtés du triangle en leur
+`++TriangleCourbe(P, Q, R, A*C=1/8)++` crée une hyperbole telle que la tangente passant par P
+ou R à cette hyperbole partage le triangle _PQR_ en deux parties de même aire.
+
+`++TriangleCourbe(P, Q, R, A² + B² + C² - 2B C - 2C A - 2A B = 0)++` crée l'ellipse inscrite de
+https://fr.wikipedia.org/wiki/Ellipse_de_Steiner[Steiner], ellipse tangente à chacun des côtés du triangle  _PQR_ en leur
 milieu ;
 
-et `++TriangleCourbe(A, B, C, B C + C A + A B = 0)++` en crée l'ellipse de Steiner circonscrite.
+et `++TriangleCourbe(P, Q, R, B C + C A + A B = 0)++` en crée l'ellipse de Steiner circonscrite.
 
 ====
 
