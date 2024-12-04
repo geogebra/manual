@@ -2,15 +2,15 @@
 :page-en: commands/UnitPerpendicularVector
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Vecteurs_et_Matrices.adoc[Commandes Vecteurs et Matrices] 
+
 VecteurUnitaireOrthogonal( <Droite d> )::
   Vecteur orthogonal unitaire à la droite _d_.
 
 [EXAMPLE]
 ====
 
-*Exemple :*
-
-`++VecteurUnitaireOrthogonal(3x + 4y = 5)++` crée le vecteur de coordonnées
+`++VecteurUnitaireOrthogonal(3x + 4y = 5)++` retourne le vecteur de coordonnées
 _stem:[\begin{pmatrix}0.6\\0.8\end{pmatrix}]_.
 
 ====
@@ -18,13 +18,17 @@ _stem:[\begin{pmatrix}0.6\\0.8\end{pmatrix}]_.
 VecteurUnitaireOrthogonal( <Segment> )::
   Vecteur orthogonal unitaire au segment _s_.
 
+[EXAMPLE]
+====
+
+Soit s = Segment((1,1), (4,5)), VecteurUnitaireOrthogonal(s) retourne le vecteur de coordonnées _stem:[\begin{pmatrix}-0.8\\0.6\end{pmatrix}]_.
+====
+
 VecteurUnitaireOrthogonal( <Vecteur stem:[\vec{v}] > )::
   Vecteur orthogonal unitaire au vecteur stem:[\vec{v}].
 
 [EXAMPLE]
 ====
-
-*Exemple :*
 
 Soit le vecteur _v_ de coordonnées stem:[\begin{pmatrix}3\\4\end{pmatrix}].
 
@@ -47,25 +51,26 @@ VecteurUnitaireOrthogonal( <Plan p> )::
 [NOTE]
 ====
 
-*Note :*
-
 Pour un plan dont une équation cartésienne est a x+ b y +c z = k,
 
 en désignant par stem:[ n=\sqrt{a²+b²+c²}], la commande retourne le vecteur stem:[\begin{pmatrix}\frac{a}{n} \\
 \frac{ b}{n} \\ \frac{ c}{n}\end{pmatrix}]
 
 ====
-
+_____________________________________________________________
 ____________________________________________________________
 
-image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* : Ne fonctionne qu'avec des
-vecteurs. Il n'y a pas besoin d'avoir défini le vecteur au préalable. Le rendu des résultats est meilleur, et on peut
-travailler en littéral.
+image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
+
+Ne fonctionne qu'avec des vecteurs.
+
+Il n'y a pas besoin d'avoir défini le vecteur au préalable.
+
+Le rendu des résultats est meilleur, et on peut travailler en littéral.
 
 [EXAMPLE]
 ====
 
-*Exemples :*
 
 Soit le vecteur _v_ de coordonnées stem:[\begin{pmatrix}3\\4\end{pmatrix}].
 
@@ -73,7 +78,10 @@ Soit le vecteur _v_ de coordonnées stem:[\begin{pmatrix}3\\4\end{pmatrix}].
 
 mais, vous pouvez aussi saisir directement `++VecteurUnitaireOrthogonal((3,4)).++`
 
-`++VecteurUnitaireOrthogonal((a, b))++` retourne (stem:[-\frac{b}{\sqrt{a² + b²}}], stem:[\frac{a}{\sqrt{a² +
-b²}}] ).
+Si les variables _a_ et _b_ ne sont pas déjà définies dans GeoGebra :
+
+`++VecteurUnitaireOrthogonal((a, b))++` retourne  _stem:[\begin{pmatrix} -\frac{b}{\sqrt{a² + b²}} \\\frac{a}{\sqrt{a² + b²}}\end{pmatrix}]_
 
 ====
+____________________________________________________________
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/VecteurOrthogonal.adoc[VecteurOrthogonal].
