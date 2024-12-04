@@ -2,10 +2,13 @@
 :page-en: commands/Invert
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Vecteurs_et_Matrices.adoc[Commandes Vecteurs et Matrices] 
+
 [NOTE]
 ====
 
 En mode Examen, la commande `++Inverser( <Fonction> )++` est désactivée si le Calcul formel n'est pas autorisé.
+
 Mais une nouvelle commande `++NInverser( <Fonction> )++` peut être utilisée.
 
 ====
@@ -16,17 +19,15 @@ Inverser( <Matrice> )::
 [EXAMPLE]
 ====
 
-*Exemple :*
-
-`++Inverser({{1, 2}, {3, 4}})++` retourne stem:[\left(\begin\{array}-2 & 1\\1.5 & -0.5\end\{array} \right)], la matrice
-inverse de stem:[\left(\begin\{array}1 & 2\\3 & 4\end\{array} \right)].
+`++Inverser({{1, 2}, {3, 4}})++` retourne stem:[\left(\begin{array}-2 & 1\\1.5 & -0.5\end{array} \right)], la matrice
+inverse de stem:[\left(\begin{array}1 & 2\\3 & 4\end{array} \right)].
 
 ====
 
 Inverser( <Fonction> )::
   Retourne la fonction réciproque de la _Fonction_ donnée .
 
-[width="100%",cols="50%,50%",]
+[width="100%",cols="12%,88%",]
 |===
 |image:18px-Attention.png[Attention,title="Attention",width=18,height=18] *Attention*: a|
 Hors Calcul formel, l'écriture de la fonction ne doit faire apparaître qu'une fois la variable _x_, de plus, ne sont
@@ -37,11 +38,12 @@ pris en compte ni ensemble de définition, ni ensemble image, par exemple pour f
 [EXAMPLE]
 ====
 
-*Exemple :*
+La fonction carrée n'est pas bijective sur stem:[ \R ], mais vous n'aurez pas de message d'erreur, 
 
-La fonction carrée n'est pas bijective sur stem:[ \R ], mais vous n'aurez pas de message d'erreur, `++Inverser(x²)++`,
-vous retournera la fonction, définie sur [0 ; + stem:[ \infty ][ par stem:[g(x) = \sqrt x ]; de même,
-`++Inverser(sin(x))++`, vous retournera la fonction, définie sur [-1 ; + 1] par stem:[h(x) = arcsin(x). ]
+`++Inverser(x²)++`, 
+vous retournera la fonction, définie sur [0 ; + stem:[ \infty ][ par stem:[g(x) = \sqrt{x} ] ;
+
+de même, `++Inverser(sin(x))++`, vous retournera la fonction, définie sur [-1 ; + 1] par stem:[h(x) = arcsin(x)].
 
 ====
 
@@ -50,8 +52,6 @@ retourner une fonction _nondéfini_, mais d'autres commandes peuvent vous aider�
 
 [EXAMPLE]
 ====
-
-*Exemples :*
 
 Les deux commandes
 
@@ -63,7 +63,7 @@ retournent les fonctions réciproques.
 
 ====
 
-{empty}[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/NInverser.adoc[NInverser]
+
 
 ____________________________________________________________
 
@@ -78,25 +78,27 @@ Inverser( <Matrice> )::
 [EXAMPLE]
 ====
 
-*Exemple :*
 
-`++Inverser({{a, b}, {c, d}})++` retourne stem:[\left(\begin\{array}\frac{d}\{ad- bc} & \frac{-b}\{ad- bc}\\
-\frac{-c}\{ad- bc}& \frac{a}{ ad- bc}\end\{array} \right)], la matrice inverse de stem:[\left(\begin\{array}a & b\\c
-& d\end\{array} \right)].
+`++Inverser({{a, b}, {c, d}})++` retourne stem:[\left(\begin{array}\frac{d}{ad- bc} & \frac{-b}{ad- bc}\\
+\frac{-c}{ad- bc}& \frac{a}{ ad- bc}\end\{array} \right)], la matrice inverse de stem:[\left(\begin{array}a & b\\c
+& d\end{array} \right)].
 
 ====
 
-Inverser( <Fonction> )
+Inverser( <Fonction> )::
 
 Ici, l'accès est facilité, ainsi, sans qu'il soit besoin de commandes supplémentaires :
 
 [EXAMPLE]
 ====
 
-*Exemples :*
 
-`++Inverser((x + 1) / (x + 2))++` retourne stem:[\frac{-2x+1}\{x-1} ] et
+`++Inverser((x + 1) / (x + 2))++` retourne stem:[\frac{-2x+1}{x-1} ] et
 
-`++Inverser(x^2 + 2 x + 1)++` retourne stem:[ \sqrt x - 1 ].
+`++Inverser(x^2 + 2 x + 1)++` retourne stem:[ \sqrt{ x - 1} ].
 
 ====
+____________________________________________________________
+
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/NInverser.adoc[NInverser], xref:/commands/ValeursPropres.adoc[ValeursPropres], xref:/commands/VecteursPropres.adoc[VecteursPropres], xref:/commands/DVS.adoc[DVS], xref:/commands/Transposer.adoc[Transposer], xref:/commands/JordanDiagonalisation.adoc[JordanDiagonalisation].
