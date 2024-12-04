@@ -2,21 +2,25 @@
 :page-en: commands/Dimension
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Vecteurs_et_Matrices.adoc[Commandes Vecteurs et Matrices] 
+
 Dimension( <Objet> )::
   Retourne la dimension de l'objet.
 
 [EXAMPLE]
 ====
 
-*Exemples :*
-
-La saisie de
-
 `++Dimension(A)++` retourne _2_ si _A_ est un point du plan ; `++Dimension(u)++` retourne _2_ si _u_ est un vecteur du
-plan ; `++Dimension(matrice1)++` retourne _\{3,2}_ si _matrice1_ est la matrice stem:[\left( \begin\{array}\{} 1 & 2 \\
-3 & 4 \\ 5 & 6 \\\end\{array} \right) ] ; `++Dimension((1,2))++` retourne _2_ ; `++Dimension({1,2})++` retourne _2_ ;
+plan ;
 
-`++Dimension({{1, 2}, {3, 4}, {5, 6}})++` retourne _\{3,2}_.
+`++Dimension((1,2))++` retourne _2_ ; `++Dimension({1,2})++` retourne _2_ ;
+
+Dimension({1, 2, 0, -4, 3}) retourne _5_ ;
+
+`++Dimension(matrice1)++` retourne _{3,2}_ si _matrice1_ est la matrice stem:[\left( \begin\{array}\{} 1 & 2 \\
+3 & 4 \\ 5 & 6 \\\end\{array} \right) ] ; 
+
+`++Dimension({{1, 2}, {3, 4}, {5, 6}})++` retourne _{3,2}_.
 
 ====
 
@@ -24,16 +28,16 @@ ____________________________________________________________
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
-Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel,
 
-mais vous pouvez aussi travailler en littéral, si les variables "a", "b", "c", "d", "e" et "f" ne sont pas déjà définies
-dans GeoGebra :
+mais vous pouvez aussi travailler en littéral.
+
 
 [EXAMPLE]
 ====
 
-*Exemples :*
+si les variables _a_, _b_, _c_, _d_, _e_ et _f_ ne sont pas déjà définies dans GeoGebra :
 
-`++Dimension({a,b})++` retourne _2_ ; `++Dimension({{a, b}, {c, d}, {e, f}})++` retourne _\{3, 2}_.
+`++Dimension({a,b})++` retourne _2_ ; `++Dimension({{a, b}, {c, d}, {e, f}})++` retourne _{3, 2}_.
 
 ====
