@@ -2,6 +2,8 @@
 :page-en: commands/UnitVector
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Vecteurs_et_Matrices.adoc[Commandes Vecteurs et Matrices]
+
 VecteurUnitaire( <objet> )::
 
 * si _objet_ est un vecteur, crée le vecteur unitaire de même direction et même sens que le vecteur donné ;
@@ -10,46 +12,61 @@ VecteurUnitaire( <objet> )::
 [EXAMPLE]
 ====
 
-*Exemples :
 
-* Soit le vecteur _v_ de coordonnées _stem:[\begin{pmatrix}3\\4\end{pmatrix}]_. `++VecteurUnitaire(v)++`crée
+* Soit le vecteur _v_ de coordonnées _stem:[\begin{pmatrix}3\\4\end{pmatrix}]_. `++VecteurUnitaire(v)++` crée
 le vecteur de coordonnées _stem:[\begin{pmatrix}0.6\\0.8\end{pmatrix}]_.
 
 `++VecteurUnitaire(3x + 4y = 5)++` crée le vecteur de coordonnées _stem:[\begin{pmatrix}0.8\\-0.6\end{pmatrix}]_
 
+
+
+* Soit le segment _s_ = `++Segment((1,1),(4,5))++` ,  `++VecteurUnitaire(s)++` crée le vecteur de coordonnées _stem:[\begin{pmatrix}0.6\\0.8\end{pmatrix}]_ .
+
+.
 ====
 
 
 
-==  *Graphique 3D* :
-image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32]
+
+_____________________________________________________________
+image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] *Graphique
+3D* :
 
 Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D
 
 [EXAMPLE]
 ====
 
-`++VecteurUnitaire((2, 4, 4))++` retourne (stem:[\frac{1}{3},\frac{2}{3},\frac{2}{3}]).
+`++VecteurUnitaire((2, 4, 4))++` retourne le vecteur de coordonnées  _stem:[\begin{pmatrix}0.33\\0.67\\0.67\end{pmatrix}]_ (Option 2 décimales).
 
 ====
 
+_____________________________________________________________
 
+_____________________________________________________________
 
-==  *Calcul formel* :
+image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
-image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32]
+Cette commande ne fonctionne qu'avec des vecteurs.
 
-Ne fonctionne qu'avec des vecteurs. Il n'y a pas besoin d'avoir défini le vecteur au préalable. Le rendu des résultats
-est meilleur, et on peut travailler en littéral.
+Il n'y a pas besoin d'avoir défini le vecteur au préalable.
+
+Le rendu des résultats est meilleur, et on peut travailler en littéral.
 
 [EXAMPLE]
 ====
 
-*Exemples :* Soit le vecteur _v_ de coordonnées stem:[\begin{pmatrix}3\\4\end{pmatrix}].`++VecteurUnitaire(v)++` crée
-le vecteur de coordonnées __stem:[\left( \frac{3}{5} , \frac{4}{5} \right)]__mais, vous pouvez aussi saisir
-directement `++VecteurUnitaire((3,4))++``
+Soit le vecteur _v_ de coordonnées stem:[\begin{pmatrix}3\\4\end{pmatrix}].`++VecteurUnitaire(v)++` crée
+le vecteur de coordonnées _stem:[\left( \frac{3}{5} , \frac{4}{5} \right)]_
+mais, vous pouvez aussi saisir directement `++VecteurUnitaire((3,4))++`` 
 
-++VecteurUnitaire((a, b))++` retourne (stem:[ \frac{a}{\sqrt{a^{2} +
+`++VecteurUnitaire((2, 4, 4))++` retourne _(stem:[\frac{1}{3}], stem:[\frac{2}{3}], stem:[\frac{2}{3}])_.
+
+
+Si les variables _a_ et _b_ ne sont pas déjà définies dans GeoGebra
+
+`++VecteurUnitaire((a, b))++` retourne (stem:[ \frac{a}{\sqrt{a^{2} +
 b^{2}}}], stem:[\frac{b}{\sqrt{a^{2} + b^{2}}} ] ).
+
 
 ====
