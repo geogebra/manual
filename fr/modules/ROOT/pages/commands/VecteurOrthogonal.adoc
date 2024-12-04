@@ -2,22 +2,39 @@
 :page-en: commands/PerpendicularVector
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Vecteurs_et_Matrices.adoc[Commandes Vecteurs et Matrices] 
+
 VecteurOrthogonal( <Droite d> )::
   Vecteur orthogonal à la droite _d_.
+[EXAMPLE]
+====
 
+Soit la droite _d_ définie par `++Droite((1, 4), (5, -3))++` ,  `++VecteurOrthogonal(d)++` retourne le vecteur _u=stem:[\begin{pmatrix}7 \\ 4\end{pmatrix}]_.
+
+====
 [NOTE]
 ====
 
-Une droite ayant pour équation _ax + by = c_ admettra stem:[\begin{pmatrix}a \\ b\end{pmatrix}] _comme
-vecteur orthogonal._
+Une droite ayant pour équation _ax + by = c_ admet _stem:[\begin{pmatrix}a \\ b\end{pmatrix}] _ comme
+vecteur orthogonal.
 
 ====
 
 VecteurOrthogonal( <Segment s> )::
-  Vecteur orthogonal au segment _s_.
+  Vecteur orthogonal au segment _s_, de norme la longueur du segment.
+
+[EXAMPLE]
+====
+
+Soit le segment _f_ défini par `++Segment((1, 2), (4, 6))++` de longueur _5_, `++VecteurOrthogonal(f)++` retourne le vecteur _u=stem:[\begin{pmatrix}-4 \\ 3 \end{pmatrix}]_ de norme _5_.
+
+====
 
 VecteurOrthogonal( <Vecteur stem:[\vec{v}] > )::
   Vecteur orthogonal au vecteur stem:[\vec{v}].
+
+Un vecteur de coordonnées stem:[\begin{pmatrix}a \\ b \end{pmatrix}] _admet stem:[\begin{pmatrix}-b \\ a
+\end{pmatrix}]_ comme vecteur orthogonal.
 
 [EXAMPLE]
 ====
@@ -27,13 +44,24 @@ crée le vecteur de coordonnées stem:[\begin{pmatrix}-2 \\ 3 \end{pmatrix}].
 
 ====
 
+
 [NOTE]
 ====
 
-Un vecteur de coordonnées stem:[\begin{pmatrix}a \\ b \end{pmatrix}] _admettra stem:[\begin{pmatrix}-b \\ a
-\end{pmatrix}]_ comme vecteur orthogonal.
+Lorsqu'un point est inscrit dans la définition de la droite/du segment ou du vecteur, le représentant créé du vecteur orthogonal aura pour origine ce point, sinon son origine sera l'origine du repère, i.e. le point (0, 0).
+
+
+
+[EXAMPLE]
+====
+
+* Si le point A: _(1, 4)_ et le point B: _(5, -3)_ déterminent la droite _d_= `++Droite(A, B)++`,`++VecteurOrthogonal(d)++` prendra son origine en A.
+
+* Soit la droite _f_ définie par `++Droite((1, 4), (5, -3))++`, `++VecteurOrthogonal(f)++` prendra son origine en (0, 0).
 
 ====
+====
+
 
 _____________________________________________________________
 
@@ -43,16 +71,11 @@ image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphi
 VecteurOrthogonal( <Plan p> )::
   Vecteur orthogonal au plan _p_.
 
-[NOTE]
-====
-
-*Note :*
-
 Pour un plan dont une équation cartésienne est a x+ b y +c z = k, la commande retourne le vecteur
-stem:[\begin{pmatrix}a \\ b \\ c\end{pmatrix}]
+stem:[\begin{pmatrix}a \\ b \\ c\end{pmatrix}] ayant pour origine le point (0, 0, 0).
 
-====
-
+`++VecteurOrthogonal(PlanxOy)++` retourne le vecteur _u=stem:[\begin{pmatrix}0 \\ 0  \\ 1\end{pmatrix}]_ .
+_____________________________________________________________
 _____________________________________________________________
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* Ne fonctionne que pour les
@@ -60,7 +83,11 @@ vecteurs. Avec la possibilité de travailler en littéral.
 
 [EXAMPLE]
 ====
+Si les variables _a_ et _b_ ne sont pas déjà définies dans GeoGebra,
 
-`++VecteurOrthogonal((a, b))++` crée le vecteur de coordonnées _(-b, a)_.
+`++VecteurOrthogonal((a, b))++` crée le vecteur de coordonnées _stem:[\begin{pmatrix}-b \\ a \end{pmatrix}]_.
 
 ====
+_____________________________________________________________
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/VecteurUnitaireOrthogonal.adoc[VecteurUnitaireOrthogonal].
