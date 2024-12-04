@@ -2,13 +2,15 @@
 :page-en: commands/Determinant
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Vecteurs_et_Matrices.adoc[Commandes Vecteurs et Matrices] 
+
 Déterminant( <Matrice> )::
   Retourne le déterminant de la matrice.
 
 [EXAMPLE]
 ====
 
-`++Déterminant({{1, 2}, {3, 4}})++` vous donne le nombre _a = -2_.
+`++Déterminant({{1, 2}, {3, 4}})++` retourne le nombre _a = -2_.
 
 ====
 
@@ -23,9 +25,14 @@ Avec, en plus, la possibilité de travailler en littéral :
 [EXAMPLE]
 ====
 
-*Exemple :*
 
-Si les variables a et b ne sont pas définies dans GeoGebra
+
+Si les variables _a_, _b_, _c_ et _d_ ne sont pas définies dans GeoGebra
+
+Soit _M_ := stem:[\begin{pmatrix}a&b\\ c&d \end{pmatrix}], on retrouve la formule de calcul :
+
+`++Déterminant(M})++` retourne _a d - b c_.
+
 
 `++Déterminant({{1, a}, {b, 4}})++` retourne _-a b + 4_.
 
