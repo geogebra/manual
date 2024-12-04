@@ -2,6 +2,8 @@
 :page-en: commands/ReducedRowEchelonForm
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Vecteurs_et_Matrices.adoc[Commandes Vecteurs et Matrices]
+
 MatriceEchelonnéeRéduite( <Matrice> )::
   Retourne l'écriture sous forme https://fr.wikipedia.org/wiki/Matrice_%C3%A9chelonn%C3%A9e[échelonnée réduite] de la
   matrice.
@@ -11,10 +13,15 @@ MatriceEchelonnéeRéduite( <Matrice> )::
 
 `++MatriceEchelonnéeRéduite({{1,6,4},{2,8,9},{4,5,6}})++` retourne la matrice stem:[ \begin{pmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1  \end{pmatrix}].
 
+`++MatriceEchelonnéeRéduite({{2, 10, 11, 4}, {2, -5, -6, 12}, {2, 5, 3, 2}})`++ retourne la matrice stem:[ \begin{pmatrix} 1 & 0 & 0 & 5\\ 0 & 1 & 0 & -2.8 \\ 0 & 0 & 1 & 2  \end{pmatrix}].
 ====
 
 ____________________________________________________________
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
-Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel.
+
+Avec des effets d'écriture, le deuxième exemple précédent :
+
+`++MatriceEchelonnéeRéduite({{2, 10, 11, 4}, {2, -5, -6, 12}, {2, 5, 3, 2}})`++ retourne la matrice stem:[ \begin{pmatrix} 1 & 0 & 0 & 5\\ 0 & 1 & 0 & stem:[\frac{-14}{5] \\ 0 & 0 & 1 & 2  \end{pmatrix}].
