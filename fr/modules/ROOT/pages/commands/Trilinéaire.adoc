@@ -2,11 +2,13 @@
 :page-en: commands/Trilinear
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie]
+
 Trilinéaire( <Point A>,<Point B>,<Point C>,<Nombre u>, <Nombre v>, <Nombre w>)::
-  crée un point dont les coordonnées trilinéaires relativement au triangle _ABC_ sont _u : v : w_.
+  crée un point dont les https://fr.wikipedia.org/wiki/Coordonn%C3%A9es_trilin%C3%A9aires[coordonnées trilinéaires] relativement au triangle _ABC_ sont _u : v : w_.
 
 Les distances de ce point aux côtés a, b et c du triangle étant (|ku|,|kv|,|kw|) où k =stem:[\frac{2
-Aire(ABC)}\{au+bv+cw}].
+Aire(ABC)}{au+bv+cw}].
 
 == Quelques exemples :
 
@@ -19,7 +21,7 @@ Aire(ABC)}\{au+bv+cw}].
 
 |C |0 |0 |1
 
-|Centre cercle circonscrit |cos(stem:[\hat\{A}]) |cos(stem:[\hat\{B}]) |cos(stem:[\hat\{C}])
+|Centre cercle circonscrit |cos(stem:[\hat{A}]) |cos(stem:[\hat{B}]) |cos(stem:[\hat{C}])
 
 |Centre cercle inscrit |1 |1 |1
 
@@ -29,8 +31,8 @@ Aire(ABC)}\{au+bv+cw}].
 
 |Centre du cercle exinscrit tangent à [AB] |1 |1 |-1
 
-|Centre de gravité |stem:[\frac{1}\{a}] |stem:[\frac{1}\{b}] |stem:[\frac{1}\{c}]
+|Centre de gravité |stem:[\frac{1}{a}] |stem:[\frac{1}{b}] |stem:[\frac{1}{c}]
 
-|Orthocentre |cos(stem:[\hat\{B}]) cos(stem:[\hat\{C}]) |cos(stem:[\hat\{A}]) cos(stem:[\hat\{C}])
-|cos(stem:[\hat\{A}])cos(stem:[\hat\{B}])
+|Orthocentre |cos(stem:[\hat{B}]) cos(stem:[\hat{C}]) |cos(stem:[\hat{A}]) cos(stem:[\hat{C}])
+|cos(stem:[\hat{A}])cos(stem:[\hat{B}])
 |===
