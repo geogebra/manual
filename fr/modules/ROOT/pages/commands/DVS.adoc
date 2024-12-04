@@ -2,6 +2,8 @@
 :page-en: commands/SVD
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Vecteurs_et_Matrices.adoc[Commandes Vecteurs et Matrices]
+
 DVS( <Matrice (réelle)> )::
   Retourne la https://fr.wikipedia.org/wiki/D%C3%A9composition_en_valeurs_singuli%C3%A8res[Décomposition en
   valeurs_singulières] de la matrice réelle donnée(sous forme de liste de 3 matrices).
@@ -9,29 +11,43 @@ DVS( <Matrice (réelle)> )::
 [EXAMPLE]
 ====
 
-*Exemples :* `++DVS({{1,2},{3,4}})++`
+`++DVS({{1,2},{3,4}})++`
 
-donne la liste \{\{\{-0.4,-0.91},\{-0.91,0.4}},\{\{5.46,0},\{0,0.37}},\{\{-0.58,0.82},\{-0.82,-0.58}}} correspondant aux
-3 matrices stem:[ Ma= \left(\begin\{array}\{}-0.4&-0.91\\-0.91&0.4\\\end\{array}\right) ], stem:[
-Mb=\left(\begin\{array}\{}5.46&0\\0&0.37\\\end\{array}\right)] et stem:[Mc =
-\left(\begin\{array}\{}-0.58&0.82\\-082&-0.58\\\end\{array}\right)] telles que `++ Ma * Mb * Transposer(Mc) ++` redonne
-la matrice de départ stem:[ \left(\begin\{array}\{}1&2\\3&4\\\end\{array}\right)].La "présentation" des résultats entre
-image:20px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=20,height=20]Algèbre et
+retourne la liste {{{-0.4,-0.91},{-0.91,0.4}},{{5.46,0},{0,0.37}},{{-0.58,0.82},{-0.82,-0.58}}} correspondant aux
+3 matrices stem:[ Ma= \left(\begin{array}{rr}-0.4&-0.91\\-0.91&0.4\\\end{array}\right) ], stem:[
+Mb=\left(\begin{array}{rr}5.46&0\\0&0.37\\\end{array}\right)] et stem:[Mc =
+\left(\begin{array}{rr}-0.58&0.82\\-082&-0.58\\\end{array}\right)] telles que `++ Ma * Mb * Transposer(Mc) ++` redonne
+la matrice de départ stem:[ \left(\begin{array}{rr}1&2\\3&4\\\end{array}\right)].
+
+La "présentation" des résultats entre image:20px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=20,height=20]Algèbre et
 image:20px-Menu_view_cas.svg.png[Menu view cas.svg,width=20,height=20]Calcul formel peut différer, ainsi
 `++DVS({{3, 1, 1}, {-1, 3, 1}})++` retourne dans image:20px-Menu_view_cas.svg.png[Menu view
-cas.svg,width=20,height=20]CAS stem:[ \left(\begin\{array}\{}-0.71&0.71\\0.71&0.71\\\end\{array}\right) ], stem:[
-\left(\begin\{array}\{}3.16&0\\0&3.46\\\end\{array}\right)],
-stem:[\left(\begin\{array}\{}-0.89&0.41\\0.45&0.82\\0&0.41\\\end\{array}\right)], alors que la liste retournéeen
-image:20px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=20,height=20]Algèbre est \{\{\{0.71,0.71},
-\{0.71,-0.71}}, \{\{3.46,0}, \{0,3.16}}, \{\{0.41,0.89}, \{0.82,-0.45}, \{0.41,0}}} correspondant à stem:[
-\left(\begin\{array}\{}0.71&0.71\\0.71&-0.71\\\end\{array}\right) ], stem:[
-\left(\begin\{array}\{}3.46&0\\0&3.16\\\end\{array}\right)],
-stem:[\left(\begin\{array}\{}0.41&0.89\\0.82&-0.45\\0.41&0\\\end\{array}\right)].
+cas.svg,width=20,height=20]CAS stem:[ \left(\begin{array}{rr}-0.71&0.71\\0.71&0.71\\\end{array}\right) ], stem:[
+\left(\begin{array}{rr}3.16&0\\0&3.46\\\end{array}\right)],
+stem:[\left(\begin{array}{rr}-0.89&0.41\\0.45&0.82\\0&0.41\\\end{array}\right)], alors que la liste retournéeen
+image:20px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=20,height=20]Algèbre est {{{0.71,0.71},
+{0.71,-0.71}}, {{3.46,0}, {0,3.16}}, {{0.41,0.89}, {0.82,-0.45}, {0.41,0}}} correspondant à stem:[
+\left(\begin{array}{rr}0.71&0.71\\0.71&-0.71\\\end{array}\right) ], stem:[
+\left(\begin{array}{rr}3.46&0\\0&3.16\\\end{array}\right)],
+stem:[\left(\begin{array}{rr}0.41&0.89\\0.82&-0.45\\0.41&0\\\end{array}\right)].
 
 ====
 
-pour Wolframalpha :stem:[\left(\begin\{array}\{}\frac{1}\{\sqrt{2}}&
--\frac{1}\{\sqrt{2}}\\\frac{1}\{\sqrt{2}}&\frac{1}\{\sqrt{2}}\\\end\{array}\right)] ,
-stem:[\left(\begin\{array}\{}2 \sqrt{3}& 0& 0\\0&\sqrt{10}& 0\\\end\{array}\right)] ,
-stem:[\left(\begin\{array}\{}\frac{1}\{\sqrt{6}} &-\frac{2}\{\sqrt{5}}&
--\frac{1}\{\sqrt{30}}\\\sqrt{\frac{2}\{3}}&\frac{1}\{\sqrt{5}}&-\sqrt{\frac{2}\{15}}\\\frac{1}\{\sqrt{6}}&0&\sqrt{\frac{5}\{6}}\\\end\{array}\right)]
+pour Wolframalpha :stem:[\left(\begin{array}{rr}\frac{1}{\sqrt{2}}&
+-\frac{1}{\sqrt{2}}\\\frac{1}{\sqrt{2}}&\frac{1}{\sqrt{2}}\\\end{array}\right)] ,
+stem:[\left(\begin{array}{rr}2 \sqrt{3}& 0& 0\\0&\sqrt{10}& 0\\\end{array}\right)] ,
+stem:[\left(\begin{array}{rr}\frac{1}{\sqrt{6}} &-\frac{2}{\sqrt{5}}&
+-\frac{1}{\sqrt{30}}\\\sqrt{\frac{2}{3}}&\frac{1}{\sqrt{5}}&-\sqrt{\frac{2}{15}}\\\frac{1}{\sqrt{6}}&0&\sqrt{\frac{5}{6}}\\\end{array}\right)]
+
+____________________________________________________________
+
+image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel.
+
+Comme signalé ci-dessus : La "présentation" des résultats entre image:20px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=20,height=20]Algèbre et
+image:20px-Menu_view_cas.svg.png[Menu view cas.svg,width=20,height=20]Calcul formel peut différer.
+____________________________________________________________
+
+
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/ValeursPropres.adoc[ValeursPropres], xref:/commands/VecteursPropres.adoc[VecteursPropres], xref:/commands/Inverser.adoc[Inverser], xref:/commands/Transposer.adoc[Transposer], xref:/commands/JordanDiagonalisation.adoc[JordanDiagonalisation].
