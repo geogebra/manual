@@ -2,6 +2,8 @@
 :page-en: commands/Tetrahedron
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_3D.adoc[Commandes 3D]
+====
 
 *image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] Graphique
 3D*
@@ -11,15 +13,15 @@ Tétraèdre( <Point A>, <Point B>, <Direction> )::
 
 Les autres sommets sont déterminés par la donnée "Direction", à choisir parmi :
 
-. un vecteur, un segment, une demi-droite, une droite *orthogonal(e)* à [AB] ;
-. un polygone dans un plan *parallèle* à [AB] ;
-. un plan *parallèle* à [AB].
+* un vecteur, un segment, une demi-droite, une droite *orthogonal(e)* à [AB] ;
+* un polygone dans un plan *parallèle* à [AB] ;
+* un plan *parallèle* à [AB].
 
 Le tétraèdre créé a :
 
-. une face d'arête [AB] dans un plan orthogonal au vecteur/segment donné, à la demi-droite/droite donnée ;
-. une face d'arête [AB] dans un plan parallèle à celui du polygone ;
-. une face d'arête [AB] dans un plan parallèle au plan donné.
+* une face d'arête [AB] dans un plan orthogonal au vecteur/segment donné, à la demi-droite/droite donnée ;
+* une face d'arête [AB] dans un plan parallèle à celui du polygone ;
+* une face d'arête [AB] dans un plan parallèle au plan donné.
 
 .
 
@@ -30,12 +32,13 @@ Tétraèdre( <Point A>, <Point B>, <Point C>)::
 Tétraèdre( <Point A>, <Point B> )::
   Crée un tétraèdre régulier convexe ayant le segment *[AB]* comme arête, vous pouvez ensuite le faire pivoter autour de
   cette arête, en déplaçant à la souris le 1er point _C_ supplémentaire créé.
-  Cette syntaxe est un raccourci de la commande précédente, avec [.underline]#C = Point(Cercle(MilieuCentre(A,
-  B), Distance(A, B) sqrt(3) / 2, Segment(A, B)))#.
+  
+Cette syntaxe est un raccourci de la commande précédente, avec 
+[.underline]#C = Point(Cercle(MilieuCentre(A,  B), Distance(A, B) sqrt(3) / 2, Segment(A, B)))#.
 
 image:Tool_tool.png[Tool tool.png,width=32,height=32] Voir l' *outil* associé : image:32px-Mode_tetrahedron.svg.png[Mode
 tetrahedron.svg,width=32,height=32] xref:/tools/Tétraèdre_régulier.adoc[Tétraèdre régulier].
 
 [.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/Cube.adoc[Cube], xref:/commands/Octaèdre.adoc[Octaèdre],
 xref:/commands/Icosaèdre.adoc[Icosaèdre], xref:/commands/Dodécaèdre.adoc[Dodécaèdre] .
-
+====
