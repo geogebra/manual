@@ -2,31 +2,36 @@
 :page-en: commands/Surface
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_3D.adoc[Commandes 3D] 
+
+====
 Surface( <Fonction>, <Angle >)::
   représente la surface de révolution engendrée par la fonction tournant autour de l'axe des abscisses.
+  Par ex. * `++Surface(sqrt(x),360°)++` *.
 
-[EXAMPLE]
-====
-
-*Exemple :*
-
-* `++Surface(sqrt(x),360°)++`.
-
-====
-
-Surface( <Courbe>, <Angle>, <Ligne> )
-
-https://www.geogebra.org/m/W4KykTeW[un exemple]
+Surface( <Courbe>, <Angle>, <Ligne> )::
+  représente la surface de révolution engendrée par la courbe tournant autour de la ligne d'angle à partir de 0°.
+  https://www.geogebra.org/m/W4KykTeW[un exemple]
 
 Surface( <Expression e1>, <Expression e2 >, <Expression e3>, <Variable 1>, <de>, <à>, <Variable 2>, <de>, <à> )::
   Représente, dans la fenêtre 3D, la surface cartésienne définie paramétriquement par les points
   dont les coordonnées _x_, _y_ et _z_ sont définies respectivement par les expressions _e1_, _e2_, _e3_
   dépendant de deux paramètres, variant chacun dans l'intervalle [_de_, _à_] indiqué.
 
-[EXAMPLE]
+_________________________________________
+* La valeur finale " _à_ " pour chacun des paramètres doit être supérieure ou égale à la valeur initiale " _de_ "
+relative, et, toutes deux, doivent être finies.
+* Il n'est pas possible d'utiliser _x_, _y_, _z_ comme paramètres.
+* Treillage :
+    en choisissant une valeur différente de 0, dans les
+    Propriétés > Style > Épaisseur du trait
+    vous pouvez faire apparaître un treillage de la surface concernée.
+_________________________________________
+
 ====
 
-*Exemples :*
+[EXAMPLE]
+====
 
 * `++Surface(2 sin(t) * sin(v), sin(v), cos(v), t, 0, 2π, v, -π, π)++`
 
@@ -38,37 +43,10 @@ crée la surface associée dans la fenêtre Graphique 3D.
 
 crée le tore engendré par un cercle de rayon _r_ dont le centre tourne autour de l'axe des _z_ à une distance _R_;
 
-* {blank}
-** _curseur_ étant un curseur entre 0 et 2 π, vous pouvez faire évoluer à votre rythme la construction
+* _curseur_ étant un curseur entre 0 et 2 π, vous pouvez faire évoluer à votre rythme la construction
 
 `++Surface((R + r cos(u)) cos(v) , (R + r cos(u)) sin(v) , r sin(u),u,0,2 π ,v,0, curseur)++`.
 
 ====
 
 
-[NOTE]
-
-====
-
-*Notes :*
-
-* La valeur finale " _à_ " pour chacun des paramètres doit être supérieure ou égale à la valeur initiale " _de_ "
-relative, et, toutes deux, doivent être finies.
-* Il n'est pas possible d'utiliser _x_, _y_, _z_ comme paramètres.
-
-
-"*Treillage*"
-
-en choisissant une valeur différente de 0, dans les
-
-Propriétés > Style > Épaisseur du trait
-
-vous pouvez faire apparaître un treillage de la surface concernée.
-
-
-
-*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :* à suivre en beta "*Treillage 2D en polaires*"
-
-`++a = Surface((ρ/5 cos((θ 5)°), ρ/5 sin((θ 5)°)), ρ, 5, 10, θ, 3, 6)++`
-
-====
