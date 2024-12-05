@@ -2,8 +2,8 @@
 :page-en: commands/Dodecahedron
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-
-
+xref:commands/Commandes_3D.adoc[Commandes 3D]
+====
 
 *image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] Graphique
 3D*
@@ -13,15 +13,15 @@ Dodécaèdre( <Point A>, <Point B>, <Direction> )::
 
 Les autres sommets sont déterminés par la donnée "Direction", à choisir parmi :
 
-. un vecteur, un segment, une demi-droite, une droite *orthogonal(e)* à [AB] ;
-. un polygone dans un plan *parallèle* à [AB] ;
-. un plan *parallèle* à [AB].
+* un vecteur, un segment, une demi-droite, une droite *orthogonal(e)* à [AB] ;
+* un polygone dans un plan *parallèle* à [AB] ;
+* un plan *parallèle* à [AB].
 
 Le dodécaèdre créé a :
 
-. une face d'arête [AB] dans un plan orthogonal au vecteur/segment donné, à la demi-droite/droite donnée ;
-. une face d'arête [AB] dans un plan parallèle à celui du polygone ;
-. une face d'arête [AB] dans un plan parallèle au plan donné.
+* une face d'arête [AB] dans un plan orthogonal au vecteur/segment donné, à la demi-droite/droite donnée ;
+* une face d'arête [AB] dans un plan parallèle à celui du polygone ;
+* une face d'arête [AB] dans un plan parallèle au plan donné.
 
 .
 
@@ -32,9 +32,10 @@ Dodécaèdre( <Point A>, <Point B>, <Point C>)::
 Dodécaèdre( <Point A>, <Point B> )::
   Crée un dodécaèdre régulier convexe ayant le segment *[AB]* comme arête, vous pouvez ensuite le faire pivoter autour
   de cette arête, en déplaçant à la souris le 1er point _C_ supplémentaire créé.
-  Cette syntaxe est un raccourci de la commande précédente, avec [.underline]#C = Point(Cercle(((1 - sqrt(5)) A
-  + (3 + sqrt(5)) B) / 4, Distance(A, B) sqrt(10 + 2sqrt(5)) / 4, Segment(A, B))#.
 
+Cette syntaxe est un raccourci de la commande précédente, 
+avec [.underline]#C = Point(Cercle(((1 - sqrt(5)) A+ (3 + sqrt(5)) B)/4, Distance(A, B) sqrt(10 + 2sqrt(5))/4, Segment(A, B))#.
+====
 [.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/Cube.adoc[Cube], xref:/commands/Octaèdre.adoc[Octaèdre],
 xref:/commands/Icosaèdre.adoc[Icosaèdre], xref:/commands/Tétraèdre.adoc[Tétraèdre] .
 
