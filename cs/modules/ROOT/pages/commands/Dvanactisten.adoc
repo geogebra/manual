@@ -2,18 +2,18 @@
 :page-en: commands/Dodecahedron
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
-Dodecahedron( <Regular pentagon> )::
-   Creates a dodecahedron having the given regular pentagon as base.
+Dvanactisten( <Pravidelný pětiúhelník> )::
+   Vytvoří dvanáctistěn, jehož základnou je daný pravidelný pětiúhelník.
 
-Dodecahedron( <Point>, <Point>, <Direction> )::
-  Creates a dodecahedron having the segment between two points as an edge.
-  The other vertices are univocally determined by the given direction, that needs to be:
-  * a vector, a segment, a line, a ray *orthogonal* to the segment, or
-  * a polygon, a plane *parallel* to the segment.
+Dvanactisten( <Bod>, <Bod>, <Směr> )::
+  Vytvoří dvanáctistěn, jehož jednou hranou je úsečka daná uvedenými dvěma body.
+  Další vrcholy jsou pak jednoznačně určeny daným směrem, který je třeba zadat jako:
+  * vektor, úsečku, přímku, či polopřímku, vždy *kolmo* k uvedené úsečce, nebo
+  * mnohoúhelník, či rovinu, *rovnoběžně* s úsečkou (hranou).
 + 
-The created dodecahedron will have:
-  * a face with the segment as an edge in a plane orthogonal to the given vector/segment/line/ray, or
-  * a face with the segment as an edge in a plane parallel to the polygon/plane.
+Výsledný dvanáctistěn bude potom mít:
+  * stěnu s danou úsečkou jako hranou v rovině kolmé k vektoru/úsečce/přímce/polopřímce, nebo
+  * stěnu s danou úsečkou jako hranou v rovině rovnoběžné s mnohoúhelníkem/rovinou.
 
 Dodecahedron( <Point>, <Point>, <Point>)::
   Creates a dodecahedron with three (adjacent) points of the first face. The points have to start a regular pentagon for
