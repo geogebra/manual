@@ -5,36 +5,35 @@ ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 Dvacetisten( <Rovnostranný trojúhelník> )::
   Vytvoří dvacetistěn, jehož základnou je daný rovnostranný trojúhelník.
 
-Dvacetisten( <Bod>, <Bod>, <Bod> )::
-  Creates an icosahedron having the segment between the two points as an edge.
-  The other vertices are univocally determined by the given direction, that needs to be:
-  * a vector, a segment, a line, a ray *orthogonal* to the segment, or
-  * a polygon, a plane *parallel* to the segment.
+Dvacetisten( <Bod>, <Bod>, <Směr> )::
+  Vytvoří dvacetistěn, jehož jednou hranou je úsečka daná uvedenými dvěma body.
+  Další vrcholy jsou pak jednoznačně určeny daným směrem, který je třeba zadat jako:
+  * vektor, úsečku, přímku, či polopřímku, vždy kolmo k uvedené úsečce, nebo
+  * mnohoúhelník, či rovinu, rovnoběžně s úsečkou (hranou).
 +
-The created icosahedron will have:
-  * a face with the segment as an edge in a plane orthogonal to the given vector/segment/line/ray, or
-  * a face with the segment as an edge in a plane parallel to the polygon/plane.
+Výsledný dvacetistěn bude potom mít:
+  * stěnu s danou úsečkou jako hranou v rovině kolmé k vektoru/úsečce/přímce/polopřímce, nebo
+  * stěnu s danou úsečkou jako hranou v rovině rovnoběžné s mnohoúhelníkem/rovinou.
 
-Icosahedron( <Point>, <Point>, <Point>)::
-  Creates an icosahedron with the three points of the first face. The points have to draw an equilateral triangle for
-  the icosahedron to be defined.
+Dvacetisten( <Bod>, <Bod>, <Bod>)::
+  Vytvoří dvacetistěn s uvedenými třemi body jako vrcholy první stěny. Body proto musí tvořit rovnostranný trojúhelník, aby jimi byl definován dvacetistěn. 
 
-Icosahedron( <Point>, <Point>)::
-  Creates an icosahedron with the two points of the first face, and the third point automatically created on a circle,
-  so that the icosahedron can rotate around its first edge.
-
-[NOTE]
-====
-
-Icosahedron(A, B) is a shortcut for Icosahedron(A, B, C) with C = Point(Circle(Midpoint(A, B), Distance(A, B) sqrt(3) /
-2, Segment(A, B))).
-
-====
+Dvacetisten( <Bod>, <Bod>)::
+  Vytvoří dvacetistěn s danými dvěma body jako vrcholy první stěny, jejíž třetí vrchol je automaticky umístěn na kružnici tak, že je možné dvacetistěnem kolem jeho první hrany
+  otáčet.
 
 [NOTE]
 ====
 
-See also xref:/commands/Cube.adoc[Cube], xref:/commands/Tetrahedron.adoc[Tetrahedron],
-xref:/commands/Octahedron.adoc[Octahedron], xref:/commands/Dodecahedron.adoc[Dodecahedron] commands.
+Dvacetisten(A, B) je zkrácenou verzí příkazu Dvacetisten(A, B, C), kde C = Bod(Kruznice(StredSoumernosti(A, B), Vzdalenost(A, B) sqrt(3) /
+2, Usecka(A, B))).
+
+====
+
+[NOTE]
+====
+
+Viz též příkazy xref:/commands/Krychle.adoc[Krychle], xref:/commands/Ctyrsten.adoc[Ctyrsten],
+xref:/commands/Osmisten.adoc[Osmisten], xref:/commands/Dodecahedron.adoc[Dodecahedron] commands.
 
 ====
