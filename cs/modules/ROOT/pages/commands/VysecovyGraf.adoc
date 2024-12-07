@@ -1,0 +1,33 @@
+= Příkaz VysecovyGraf
+:page-en: commands/PieChart
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+VysecovyGraf(< Seznam četností >)::
+  Vytvoří výsečový (koláčový) graf dle daného seznamu četností. Celý kruh (koláč) představuje 100 %, jednotlivé četnosti jsou znázorněny 
+jeho výsečemi odpovídajících velikostí.
+
+[EXAMPLE]
+====
+
+`++VysecovyGraf({20, 15, 40, 5, 10, 20})++` vytvoří výsečový graf dle výchozích parametrů, tj. se středem (0,0) a poloměrem 3.
+
+====
+
+VysecovyGraf(< Seznam četností >, < Střed >, < Poloměr >)::
+  Vytvoří výsečový graf s daným středem a poloměrem dle daného seznamu četností. Celý kruh představuje 100 %, jednotlivé četnosti jsou znázorněny 
+jeho výsečemi odpovídajících velikostí.
+
+[EXAMPLE]
+====
+
+`++VysecovyGraf({20, 15, 40, 5, 10, 20},(3,3),5)++` vytvoří výsečový graf se středem (3,3) a poloměrem 5.
+
+====
+
+[NOTE]
+====
+
+Barvy jednotlivých výsečí grafu je možné změnit na kartě _Barva_ dialogového okna _Nastavení_, na které je pro tento účel umístěno tlačítko pro volbu výseče.
+Na kartě _Styl_ je pak možno měnit výplně jednotlivých výsečí, opět s použitím tlačítka volby výseče.
+
+====
