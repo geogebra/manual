@@ -1,0 +1,27 @@
+= Příkaz Rovina
+:page-en: commands/Plane
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Rovina( <Mnohoúhelník> )::
+  Vytvoří rovinu, jejíž součástí je daný mnohoúhelník.
+Plane( <Conic> )::
+  Creates the plane containing the conic.
+Plane( <Point>, <Plane> )::
+  Creates the plane through the given point, parallel to the given plane.
+Plane( <Point>, <Line> )::
+  Creates the plane through the given point and line.
+Plane( <Line> , <Line> )::
+  Creates the plane through the lines (that must be intersecting or parallel to each other).
+Plane( <Point>, <Point>, <Point> )::
+  Creates the plane through the given points.
+Plane( <Point>, <Vector>, <Vector> )::
+  Creates the plane through the given point and having as normal vector the cross product of the given vectors (that must not be collinear).
+
+[NOTE]
+====
+
+See also image:24px-Mode_planethreepoint.svg.png[Mode planethreepoint.svg,width=24,height=24]
+xref:/tools/Plane_through_3_Points.adoc[Plane through 3 Points] and image:24px-Mode_plane.svg.png[Mode
+plane.svg,width=24,height=24] xref:/tools/Plane.adoc[Plane] tools.
+
+====
