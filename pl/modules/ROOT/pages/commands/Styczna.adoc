@@ -1,0 +1,98 @@
+= Polecenie Styczna
+:page-en: commands/Tangent
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Styczna( <Punkt>, <Stożkowa> )::
+  Tworzy (wszystkie) styczne do krzywej stożkowej przechodzące przez dany punkt.
+
+[EXAMPLE]
+====
+
+`++Styczna((5, 4), 4x^2 - 5y^2 = 20)++` daje w wyniku _x - y = 1_.
+
+====
+
+Styczna( <Punkt>, <Funkcja> )::
+  Tworzy styczną do wykresu funkcji dla _x = x(A)_.
+
+[EXAMPLE]
+====
+
+`++Styczna((1, 0), x^2)++` daje w wyniku _y = 2x - 1_.
+
+====
+
+[NOTE]
+====
+
+_x(A)_  to współrzędna _x_ danego punktu _A_.
+
+====
+
+Styczna( <Punkt na krzywej>, <Krzywa> )::
+  Tworzy styczną do krzywej w danym punkcie.
+
+[EXAMPLE]
+====
+
+`++Styczna((0, 1), Krzywa(cos(t), sin(t), t, 0, π))++` daje w wyniku _y = 1_.
+
+====
+
+Styczna( <Wartość x>, <Funkcja> )::
+  Tworzy styczną do wykresu funkcji dla _Wartości x_.
+
+[EXAMPLE]
+====
+
+`++Styczna(1, x^2)++` daje w wyniku _y = 2x - 1_.
+
+====
+
+Styczna( <Prosta>, <Stożkowa> )::
+  Tworzy (wszystkie) styczne do krzywej stożkowej, które są równoległe do danej prostej.
+
+[EXAMPLE]
+====
+
+`++Styczna(y = 4, x^2 + y^2 = 4)++` daje w wyniku _y = 2_ i _y = -2_.
+
+====
+
+Styczna( <Okrąg>, <Okrąg> )::
+  Tworzy wspólne styczne obu okręgów (maksymalnie 4).
+
+[EXAMPLE]
+====
+
+`++Styczna(x^2 + y^2 = 4, (x - 6)^2 + y^2 = 4)++` daje w wyniku _y = 2_, _y = -2_, _1.49x + 1.67y = 4.47_ i _-1.49x + 1.67y =
+-4.47_.
+
+====
+
+Styczna( <Punkt>, <Krzywa Sklejona> )::
+  Tworzy styczną do krzywej sklejonej w danym punkcie.
+
+[EXAMPLE]
+====
+
+Niech _A = (0, 1)_, _B = (4, 4)_ i _C = (0, 4)_. `++Styczna(A, KrzywaSklejona({A, B, C}))++` daje w wyniku prostą _a_: _y_ = _0.59x + 1_.
+
+====
+
+Styczna( <Punkt>, <Krzywa uwikłana> )::
+  Tworzy styczne do krzywej uwikłanej przechodzące przez dany punkt.
+
+[EXAMPLE]
+====
+
+`++Styczna((1,1), x^2+y^2=1))++` daje w wyniku proste _x=1_ i _y=1_.
+
+====
+
+[NOTE]
+====
+
+Zobacz także narzędzie image:24px-Mode_tangent.svg.png[Mode tangent.svg,width=24,height=24] xref:/tools/Styczne.adoc[Styczne].
+
+====
