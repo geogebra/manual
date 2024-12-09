@@ -1,70 +1,49 @@
 = Nueva herramienta
-:page-revisar: prioritario
 :page-en: Tool_Creation_Dialog
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-En primer lugar, es preciso elaborar la construcción que la herramienta debe poder trazar a posteriori.En el
-xref:/Menú_de_Herramientas.adoc[menú] de xref:/Herramientas.adoc[Herramientas] basta un _clic_ sobre
-image:Menu_Create_Tool.png[Menu Create Tool.png,width=16,height=16] xref:/Propias.adoc[_Nueva herramienta_] para abrir
-el correspondiente cuadro de diálogo.
-
-Ahora se precisa, para crear efectivamente la herramienta, completar los datos en las tres pestañas:
-
-* [.kcode]#Objetos de salida#,
-* [.kcode]#Objetos de entrada# y
-* [.kcode]#Nombre e Icono#
-
-== Receta de xref:/Herramientas.adoc[herramienta] _Cuadrada_
+Primero, se debe crear la construcción que la herramienta deberá ser capaz de realizar posteriormente.
+En el image:18px-Menu-tools.svg.png[Menu-tools.svg,width=18,height=18] xref:/Menú_de_Herramientas.adoc[menú de Herramientas],
+se debe seleccionar la opción image:18px-Menu-tools-new.svg.png[Menu-tools-new.svg,width=18,height=18] _Crear una nueva herramienta_
+para abrir el cuadro de diálogo correspondiente. A continuación, es necesario completar las tres pestañas:
+_Objetos de salida_, _Objetos de entrada_ y _Nombre e ícono_, con el fin de crear la herramienta personalizada.
 
 [EXAMPLE]
 ====
 
-Receta para crear una xref:/Herramientas.adoc[herramienta] _Cuadrada_ que trazará un cuadrado con dos _clic_ sucesivos
-en dos posiciones vacías de la xref:/Vista_Gráfica.adoc[Vista Gráfica] (que establecerán los puntos vértices de una de
-sus diagonales).
+Para crear una herramienta _Cuadrado_ que trazará un cuadrado al hacer clic en dos puntos existentes
+o en dos lugares vacíos en la image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Vista_Gráfica.adoc[Vista Gráfica]:
 
-* Construir un cuadrado empezando por dos puntos A y B que den lugar a los otros dos vértices para que al conectarlos,
-con la herramienta xref:/tools/Polígono.adoc[image:32px-Mode_polygon.svg.png[Mode polygon.svg,width=32,height=32]]
-xref:/tools/Polígono.adoc[Polígono], procuren el cuadrado deseado.Basta con indicar el
-xref:/tools/Medio_o_Centro.adoc[image:32px-Mode_midpoint.svg.png[Mode midpoint.svg,width=32,height=32]]
-xref:/tools/Medio_o_Centro.adoc[Punto medio o Centro] entre los dos marcados y llevar adelante las maniobras necesarias
-para que el ambos giren un ángulo recto alrededor de tal centro.
-* Seleccionar image:Menu_Create_Tool.png[Menu Create Tool.png,width=16,height=16] xref:/Propias.adoc[Nueva Herramienta]
-en el menú xref:/Menú_de_Herramientas.adoc[correspondiente].
-* Especificar en [.kcode]#Objetos de salida# al cuadrado con un _clic_ para seleccionarlo, o elegirlo en el menú que se
-descuelga a partir de la flechita derecha del campo de entrada correspondiente.
-* Además del _clic_ sobre el cuadrado o de su selección del menú descolgable, también deben especificarse sus lados como
-_Objetos de salida_.
-* Especificar los [.kcode]#Objetos de entrada#: GeoGebra automáticamente especifica los _Objetos de entrada_ (en este
-caso, los puntos A y B).También puede modificarse la selección de los objetos de entrada usando el menú desplegado o
-eligiéndolos con un _clic_ que los señale en la construcción
-* Anotar el _Nombre_ de la herramienta’ y el del xref:/Comandos.adoc[comando] para esta que se está creando.
+* Se debe construir un cuadrado comenzando con dos puntos A y B.
+Luego, se deben construir los otros vértices y conectarlos utilizando la
+herramienta image:22px-Mode_polygon.svg.png[Mode polygon.svg,width=22,height=22] Polígono para obtener el cuadrado polígono1.
+* Seleccionar image:18px-Menu-tools-new.svg.png[Menu-tools-new.svg,width=18,height=18] _Crear una nueva herramienta_
+en el image:18px-Menu-tools.svg.png[Menu-tools.svg,width=18,height=18] _menú de Herramientas_.
+* Especificar los Objetos de salida: se debe hacer clic en el cuadrado o seleccionarlo del menú desplegable.
+Además, se deben especificar los lados del cuadrado como Objetos de salida.
+* Especificar los Objetos de entrada: GeoGebra especifica los Objetos de entrada automáticamente (en este caso: los puntos A y B).
+También es posible modificar la selección de los objetos de entrada utilizando el menú desplegable o haciendo clic en ellos en la construcción.
+* Especificar el Nombre de la herramienta y el Nombre del comando para la nueva herramienta.
 
 ====
 
 [NOTE]
 ====
 
-image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: El _Nombre_ de la herramienta aparecerá en la
-correspondiente xref:/Barra_de_Herramientas.adoc[_barra_] y el del nuevo comando que se le ha asociado podrá emplearse
-en la xref:/Barra_de_Entrada.adoc[Entrada] como uno más de los “propios” de GeoGebra.
+El Nombre de la herramienta aparecerá en la xref:/Barra_de_Herramientas.adoc[Barra de Herramientas] de GeoGebra,
+mientras que el Nombre del comando podrá utilizarse en la xref:/Barra_de_Entrada.adoc[Barra de Entrada] de GeoGebra.
 
-====
-
-[NOTE]
-====
-
-*Notas:*
-
-* Además, se puede anotar el texto que orienta y se expone en la xref:/Barra_de_Herramientas.adoc[Ayuda de la Barra de
+* También se puede ingresar un texto para que aparezca en la xref:/Barra_de_Herramientas.adoc[Ayuda de la Barra de
 Herramientas].
-* También puede elegirse una imagen para que represente el ícono de la herramienta.GeoGebra se ocupa de escalarla para
-que se ajuste al nuevo botón de la Barra.
-+
+* También se puede seleccionar una imagen desde la computadora para el ícono de la Barra de Herramientas.
+GeoGebra ajusta automáticamente el tamaño de la imagen para que se adapte al botón de la Barra de Herramientas.
 
-'''''
-* Las salidas de las herramientas no son trasladables aún que se hubieran definido como **`++Punto[ <Recorrido> ]++`**En
-caso de precisarse salidas trasladables, se puede recurrir al comando xref:/commands/Ejecuta.adoc[Ejecuta] sobre la
-lista de los que deben emplearse.
+====
+
+[NOTE]
+====
+
+Los resultados de la herramienta no son movibles, incluso si están definidos como `++Punto[<Recorrido>]++`.
+En caso de necesitar una salida movible, se puede definir una lista de comandos y utilizarla con el xref:/Ejecuta.adoc[Comando Ejecuta].
 
 ====
