@@ -1,0 +1,24 @@
+= Comando DescomposiciónQR
+:page-en: commands/QRDecomposition
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+== Sintaxis CAS
+
+DescomposiciónQR( <Matriz> )::
+  Calcula la https://es.wikipedia.org/wiki/Factorizaci%C3%B3n_QR[descomposición QR] de la matriz dada.
+
+[EXAMPLE]
+====
+
+`++DescomposiciónQR({{1,2},{3,4}})++` devuelve las matrices
+stem:[\begin{pmatrix}\frac{1}{\sqrt{10}}&\frac{3/5}{\sqrt{10}/5}\\\frac{3}{\sqrt{10}}&-\frac{1/5}{\sqrt{10}/5}\end{pmatrix}] y
+stem:[\begin{pmatrix}\sqrt{10}&7/5\sqrt{10}\\0&\sqrt{10}/5\end{pmatrix}].
+
+====
+
+[NOTE]
+====
+
+Ver también el comando xref:/commands/LUDecomposition.adoc[DescomposiciónLU].
+
+====
