@@ -42,5 +42,16 @@ Vous pouvez aussi contraindre les points à rester dans une _région_ (polygone,
 ) en utilisant la commande xref:/commands/PointDans.adoc[PointDans] ou l'outil image:Mode_pointonobject.png[Mode
 pointonobject.png,width=32,height=32] xref:/tools/Point_sur_Objet.adoc[Point sur Objet].
 
+[EXAMPLE]
+====
+Contraintes dans un rectangle via des curseurs :
+
+Soit deux curseurs _EnX_ de[-7 ; 7] et _EnY_ de [-5 ; 5] ;
+
+* Le point `++M = (EnX, EnY)++` sera contraint à se déplacer uniquement dans le rectangle `++Polygone((-7,-5),(7,-5),(7,5),(-7,5))++` ;
+* Le point `++N = (EnX + 4, EnY + 3)++` sera contraint à se déplacer uniquement dans le rectangle `++Polygone((-3, -2), (11, -2), (11, 8), (-3, 8))++`.
+====
+
+
 image:Tool_tool.png[Tool tool.png,width=32,height=32] Voir l' *outil* associé : image:Mode_attachdetachpoint.png[Mode
 attachdetachpoint.png,width=32,height=32] xref:/tools/Lier_Libérer_Point.adoc[Lier/Libérer Point].
