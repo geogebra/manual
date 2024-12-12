@@ -2,8 +2,23 @@
 :page-en: commands/Shear
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Transformations.adoc[Commandes Transformations]
+
 Transvection( <Objet>, <Ligne l>, <Rapport> )::
   Transforme l'objet de sorte que les points de la ligne _l_ restent invariants et les points à une distance _d_ de la
-  ligne _l_ sont déplacés d'une distance _d x rapport_ parallèlement à la ligne (les sens de déplacement sont différents
-  suivant les demi-plans déterminés par _l_). L'image d'une figure par transvection a la même aire que la figure
-  initiale.
+  ligne _l_ sont déplacés d'une distance _stem:[d \times rapport]_ parallèlement à la ligne. 
+  (Les sens de déplacement sont différents suivant les demi-plans déterminés par _l_).
+
+L'image d'une figure par transvection a la même aire que la figure initiale.
+
+[EXAMPLE]
+====
+
+Soit le triangle `++t = Polygone((1,1),(4,1),(4,4))++` (rectangle isocèle d'aire 4.5) et la droite `++d =Droite((1,1),(4,4))++` support de son hypoténuse.
+
+Alors `++Transvection(t, d, 2/3)++`  retourne le triangle de sommets (1,1), (3,0) et (4,4) d'aire 4.5 :
+
+* Les 2 sommets (1,1) et (4,4) portés par _d_ sont restés invariants ;
+* Le sommet (4,1) étant à une distance stem:[\frac{3 \sqrt{2}{2}] de _d_ sera déplacé de stem:[\frac{3 \sqrt{2}{2} \times \frac{3}{2} = \sqrt{2}], ce qui correspond à un déplacement de (-1, -1).
+
+====
