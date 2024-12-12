@@ -2,18 +2,18 @@
 :page-en: commands/Rotate
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Transformations.adoc[Commandes Transformations]
+
 Rotation( <Objet>, <Angle φ> )::
   Tourne l'xref:/Objets_géométriques.adoc[objet géométrique] ou l'image d’un angle φ autour de l’origine du repère.
 
 [EXAMPLE]
 ====
 
-*Exemples :*
-
-* Rotation(Point A,Angle φ) Tourne le point _A_ d’un angle φ autour de l’origine du repère.
-* Rotation(Ligne g,Angle φ) Tourne la ligne _g_ d’un angle φ autour de l’origine du repère.
-* Rotation(Conique c,Angle φ) Tourne la conique _c_ d’un angle φ autour de l’origine du repère.
-* Rotation(Polygone poly,Angle φ) Tourne le polygone _poly_ d’un angle φ autour de l’origine du repère.
+* *Rotation(Point A,Angle φ)* : Tourne le point _A_ d’un angle φ autour de l’origine du repère.
+* *Rotation(Ligne g,Angle φ)* : Tourne la ligne _g_ d’un angle φ autour de l’origine du repère.
+* *Rotation(Conique c,Angle φ)* : Tourne la conique _c_ d’un angle φ autour de l’origine du repère.
+* *Rotation(Polygone poly,Angle φ)* : Tourne le polygone _poly_ d’un angle φ autour de l’origine du repère.
 
 ====
 
@@ -25,11 +25,12 @@ Dans la construction de l'image d'un polygone, segment ou arc, les images des so
 
 ====
 
-[cols=",",]
+[width=100 %, cols="12 %,88 %",]
 |===
 |image:18px-Attention.png[Attention,title="Attention",width=18,height=18] *Attention*: |Un vecteur n'est jamais tourné
-autour de l’origine du repère ou d'un point quelconque, seulement autour de son point *Origine* : Rotation(Vecteur
-stem:[\overrightarrow{AB}],Angle φ) : Tourne le vecteur stem:[\overrightarrow{AB}] d’un angle φ autour du point *_A_*.
+autour de l’origine du repère ou d'un point quelconque, seulement autour de son point *Origine* : 
+
+Rotation(Vecteur stem:[\overrightarrow{AB}],Angle φ) : Tourne le vecteur stem:[\overrightarrow{AB}] d’un angle φ autour du point *_A_*.
 |===
 
 Rotation( <Objet>, <Angle φ >, <Point> )::
@@ -38,17 +39,16 @@ Rotation( <Objet>, <Angle φ >, <Point> )::
 [EXAMPLE]
 ====
 
-*Exemples :*
-
-* Rotation(Point A,Angle φ,Point B) Tourne le point _A_ d’un angle φ autour de _B_.
-* Rotation(Ligne g,Angle φ,Point B) Tourne la ligne _g_ d’un angle φ autour de _B_.
-* Rotation(Conique c,Angle φ,Point B) Tourne la conique _c_ d’un angle φ autour du point _B_.
-* Rotation(Polygone poly,Angle φ,Point B) Tourne le polygone _poly_ d’un angle φ autour du point B.
+* *Rotation(Point A,Angle φ,Point B)* : Tourne le point _A_ d’un angle φ autour de _B_.
+* *Rotation(Ligne g,Angle φ,Point B)* : Tourne la ligne _g_ d’un angle φ autour de _B_.
+* *Rotation(Conique c,Angle φ,Point B)* : Tourne la conique _c_ d’un angle φ autour du point _B_.
+* *Rotation(Polygone poly,Angle φ,Point B)* : Tourne le polygone _poly_ d’un angle φ autour du point B.
 
 ====
 
 [NOTE]
 ====
+La commande agit sur les images.
 
 *image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :* Pour tourner des textes utilisez la commande
 xref:/commands/TexteTourné.adoc[TexteTourné].
@@ -58,19 +58,17 @@ xref:/commands/TexteTourné.adoc[TexteTourné].
 image:Tool_tool.png[Tool tool.png,width=32,height=32] Voir l' *outil* associé :
 image:32px-Mode_rotatebyangle.svg.png[Mode rotatebyangle.svg,width=32,height=32] xref:/tools/Rotation.adoc[Rotation].
 
-[NOTE]
-====
 
+______________________________________
 *image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] Graphique
 3D*
 
 Il va être question, ici, uniquement de rotation axiale.
 
-Rotation( <Objet>, <Angle φ>, <Axe de Rotation>)
+Rotation( <Objet>, <Angle φ>, <Axe de Rotation>)::
+ Tourne l'xref:/Objets_géométriques.adoc[objet géométrique] d’un angle φ autour de l'axe de rotation choisi.
 
-Tourne l'xref:/Objets_géométriques.adoc[objet géométrique] d’un angle φ autour de l'axe de rotation choisi.
-
-Rotation( <Objet>, <Angle>, <Point sur Axe>, <Direction Axe> )
+Rotation( <Objet>, <Angle>, <Point sur Axe>, <Direction Axe> )::
 
 Rotation( <Objet>, <Angle>, <Point sur Axe>, <Plan> )
 
@@ -78,4 +76,3 @@ image:Tool_tool.png[Tool tool.png,width=32,height=32] Voir l' *outil* associé 
 image:32px-Mode_rotatearoundline.svg.png[Mode rotatearoundline.svg,width=32,height=32]
 xref:/tools/Rotation_axiale.adoc[Rotation axiale].
 
-====
