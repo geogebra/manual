@@ -2,22 +2,27 @@
 :page-en: commands/Translate
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Transformations.adoc[Commandes Transformations]
+
+
 Translation( <xref:/Objets_géométriques.adoc[Objet géométrique]>, <Vecteur stem:[\vec{u}]> ]::
   Translaté de l'objet par la translation de vecteur stem:[\vec{u}]
 
-Translation(<Point A>,<Vecteur stem:[\vec{u}]>) : Translaté du point _A_ par la translation de vecteur stem:[\vec{u}].
+====
+`++Translation(<Point A>,<Vecteur stem:[\vec{u}]>)++` : Translaté du point _A_ par la translation de vecteur stem:[\vec{u}].
 
-Translation(<Ligne g>,<Vecteur stem:[\vec{u}]>) : Translatée de la ligne _g_ par la translation de vecteur
+`++Translation(<Ligne g>,<Vecteur stem:[\vec{u}]>)++` : Translatée de la ligne _g_ par la translation de vecteur
 stem:[\vec{u}].
 
-Translation(<Conique c>,<Vecteur stem:[\vec{u}]>) : Translatée de la conique _c_ par la translation de
+`++Translation(<Conique c>,<Vecteur stem:[\vec{u}]>)++` : Translatée de la conique _c_ par la translation de
 vecteurstem:[\vec{u}].
 
-Translation<Fonct f>,<Vecteur stem:[\vec{u}]>) : Translatée de la courbe de _f_ par la translation de vecteur
+`++Translation<Fonct f>,<Vecteur stem:[\vec{u}]>)++` : Translatée de la courbe de _f_ par la translation de vecteur
 stem:[\vec{u}].
 
-Translation(<Polygone poly,<Vecteur stem:[\vec{u}]>) : Translaté de _poly_ par la translation de vecteur
+`++Translation(<Polygone poly,<Vecteur stem:[\vec{u}]>)++` : Translaté de _poly_ par la translation de vecteur
 stem:[\vec{u}].
+====
 
 [NOTE]
 ====
@@ -35,3 +40,30 @@ Translation(<Vecteur stem:[\vec{u}]>,<Point P>)::
 image:Tool_tool.png[Tool tool.png,width=32,height=32] Voir l' *outil* associé :
 image:32px-Mode_translatebyvector.svg.png[Mode translatebyvector.svg,width=32,height=32]
 xref:/tools/Translation.adoc[Translation].
+
+_____________________________________________________________
+
+
+image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel , avec la possibilité d'effectuer du calcul
+littéral.
+
+[EXAMPLE]
+====
+Les variables _a_, _b_, _c_ et _d_ n'étant pas déjà définies dans GGb :
+
+`++Translation((a, b), (c, d)++` retourne  (a + c, b + d)
+====
+_____________________________________________________________
+
+
+_____________________________________________________________
+
+
+image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] *Graphique
+3D* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D
+
+
