@@ -1,0 +1,75 @@
+= Polecenie WykresSchodkowy
+:page-en: commands/StepGraph
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+WykresSchodkowy( <Lista Punktów> )::
+  Rysuje wykres schodkowy dla danej listy punktów. Każdy punkt jest połączony z następnym punktem na liście za pomocą poziomego odcinka.
+
+[EXAMPLE]
+====
+
+`++WykresSchodkowy({(1, 1), (3, 2), (4, 5), (5, 7)})++`
+
+====
+
+WykresSchodkowy( <Lista Punktów>, <Czy Łączyć> )::
+   Rysuje wykres schodkowy dla danej listy punktów. Jeśli _Czy Łączyć = false_, rysowany jest poziomy odcinek linii w kierunku współrzędnej x 
+następnego punktu, ale pionowy odcinek linii nie jest rysowany. Jeśli _Czy Łączyć = true_, każdy punkt jest połączony 
+z następnym punktem na liście za pomocą poziomego i pionowego odcinka linii.
+
+[EXAMPLE]
+====
+
+`++WykresSchodkowy({(1, 1), (3, 2), (4, 5), (5, 7)}, true)++`
+
+====
+
+WykresSchodkowy( <Lista współrzędnych x>, <Lista współrzędnych y> )::
+  Rysuje wykres schodkowy dla listy punktów utworzonej z podanych list współrzędnych. Każdy punkt jest połączony z następnym punktem 
+na liście za pomocą poziomego odcinka linii.
+
+[EXAMPLE]
+====
+
+`++WykresSchodkowy({1, 3, 4, 5}, {1, 2, 5, 7})++`
+
+====
+
+WykresSchodkowy( <Lista współrzędnych x>, <Lista współrzędnych y>, <Czy Łączyć> )::
+  Rysuje wykres schodkowy dla listy punktów utworzonej z podanych list współrzędnych. 
+Jeśli _Czy Łączyć = false_, rysowany jest poziomy odcinek linii w kierunku współrzędnej x 
+następnego punktu, ale pionowy odcinek linii nie jest rysowany. Jeśli _Czy Łączyć = true_, każdy punkt jest połączony 
+z następnym punktem na liście za pomocą poziomego i pionowego odcinka linii.
+
+[EXAMPLE]
+====
+
+`++WykresSchodkowy({1, 3, 4, 5}, {1, 2, 5, 7}, true)++`
+
+====
+
+WykresSchodkowy( <Lista współrzędnych x>, <Lista współrzędnych y>, <Czy Łączyć>, <Styl Punktu> )::
+  Rysuje wykres schodkowy zgodnie z powyższym opisem.
+  Styl punktu może przyjmować wartości _-2, -1, 0, 1, -1_ określające styl rysowania punktow zgodnie z poniższym opisem:
+  _0_ = punkty nie są rysowane
+  _1_ = punkty zamalowane rysowane są po prawej
+  _2_ = punkty zamalowane rysowane są po prawej, a niezamalowane po lewej
+  _-1_ = punkty zamalowane rysowane są po lewej
+  _-2_ = punkty zamalowane rysowane są po lewej, a niezamalowane po prawej
+
+[EXAMPLE]
+====
+
+`++WykresSchodkowy({1, 3, 4, 5}, {1, 2, 5, 7}, false, 1)++`
+
+====
+
+WykresSchodkowy( <Lista Punktów>, <Czy Łączyć>, <Styl Punktu> )::
+  Rysuje wykres schodkowy zgodnie z powyższym opisem.
+
+[EXAMPLE]
+====
+
+`++WykresSchodkowy({(1, 1), (3, 2), (4, 5), (5, 7)}, false, 1)++`
+
+====
