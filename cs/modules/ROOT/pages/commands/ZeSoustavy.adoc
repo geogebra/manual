@@ -1,0 +1,21 @@
+= Příkaz ZeSoustavy
+:page-en: commands/FromBase
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+ZeSoustavy( <Číslo>, <Soustava> )::
+  Převede zadané číslo z určené https://en.wikipedia.org/wiki/Radix[soustavy] do desítkové soustavy. Soustava musí být v rozmezí od 2 do 36. Číslo musí být celé číslo.
+
+[EXAMPLE]
+====
+
+* `++ZeSoustavy("FF", 16)++` vrátí 255.
+* `++ZeSoustavy("100000000", 2)++` vrátí 256.
+
+====
+
+[NOTE]
+====
+
+Viz také příkazy xref:/commands/ToBase.adoc[DoSoustavy]
+
+====
