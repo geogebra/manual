@@ -22,7 +22,7 @@ The templates and layouts used by the documentation site are located in the [Geo
 | Bokmål (nb)            | 529     | 187     | 39      | 0       | 23      |
 | Nederlands (nl)        | 719     | 20      | 0       | 2       | 0       |
 | Nynorsk (nn)           | 579     | 157     | 38      | 0       | 3       |
-| Język polski (pl)      | 206     | 516     | 1       | 0       | 17      |
+| Język polski (pl)      | 207     | 515     | 1       | 0       | 17      |
 | Português (pt)         | 0       | 739     | 10      | 0       | 0       |
 | Русский язык (ru)      | 0       | 734     | 3       | 0       | 5       |
 | Slovenščina (sl)       | 3       | 726     | 4       | 0       | 10      |
