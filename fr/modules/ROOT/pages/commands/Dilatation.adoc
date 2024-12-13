@@ -9,6 +9,12 @@ Dilatation( <Objet >, <Vecteur stem:[\overrightarrow{AB} ]>)::
   Les points de la droite (D), perpendiculaire en l'origine _A_ du vecteur à (AB), sont invariants, la distance des
   autres points à la droite (D) étant multipliée par la norme AB du vecteur donné.
 
+[EXAMPLE]
+====
+Soit _A =(1, 2)_, _B=(5, 5)_ et _C=(4, -2)_  (ce point C appartient à la perpendiculaire en A à la droite d=Droite(A, B))
+En définissant `++u=Vecteur(A, B)++`, et`++t1=Polygone(A,B,C)++` la validation de `++Dilatation(t1,u)++` retourne le triangle A'B'C', avec A'= A, C'= C et B' tel que AB' = 5 AB.
+=====` 
+
 Dilatation( <([Objets géométriques | Objet)]>, <Ligne>, <Rapport k> )::
   L'objet est dilaté perpendiculairement à la _Ligne_ :
   Tout point M de l'objet, de projeté orthogonal H sur la _Ligne_, a pour image le point M' tel que stem:[\overrightarrow{HM'}] = k stem:[\overrightarrow{HM}]
