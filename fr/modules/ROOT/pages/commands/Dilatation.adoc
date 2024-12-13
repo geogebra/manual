@@ -13,7 +13,7 @@ Dilatation( <Objet >, <Vecteur stem:[\overrightarrow{AB} ]>)::
 ====
 Soit _A =(1, 2)_, _B=(5, 5)_ et _C=(4, -2)_  (ce point C appartient à la perpendiculaire en A à la droite d=Droite(A, B))
 En définissant `++u=Vecteur(A, B)++`, et`++t1=Polygone(A,B,C)++` la validation de `++Dilatation(t1,u)++` retourne le triangle A'B'C', avec A'= A, C'= C et B' tel que AB' = 5 AB.
-=====` 
+==== 
 
 Dilatation( <([Objets géométriques | Objet)]>, <Ligne>, <Rapport k> )::
   L'objet est dilaté perpendiculairement à la _Ligne_ :
@@ -28,3 +28,11 @@ ________________________________________________________________
 image:View-graphics3DNOT.png[View-graphics3DNOT.png,width=22,height=22] Version 5.2.869 *Graphique 3D* :
 
 À ce jour, cette commande ne fonctionne pas dans la fenêtre Graphique 3D
+
+________________________________________________________________
+_____________________________________________________________
+
+
+image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
+
+image:Ambox_content.png[Ambox_content.png,width=32,height=32] À ce jour, cette commande présente un dysfonctionnement, le vecteur créé par `++u=:Vecteur(A, B)++` ne sera pas considéré comme d'origine _A_ mais _O_, ce qui déplacera la droite (D) de la définition donnée au départ.
