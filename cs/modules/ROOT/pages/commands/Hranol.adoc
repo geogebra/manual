@@ -1,0 +1,42 @@
+= Příkaz Hranol
+:page-en: commands/Prism
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Hranol( <Bod>, <Bod>, ... )::
+  Zobrazí hranol definovaný danými body.
+
+[EXAMPLE]
+====
+
+`++Hranol(A, B, C, D)++` zobrazí hranol se základnou ABC a horní podstavou DEF. Vektory AD, BE, CF jsou si rovny.
+
+====
+
+Hranol( <Mnohoúhelník>, <Bod> )::
+  Zobrazí hranol, který má jako podstavu daný mnohoúhelník a jako první vrchol horní podstavy daný bod.
+
+[EXAMPLE]
+====
+
+`++Hranol(poly1, A)++` zobrazí hranol se základnou _poly1_ a vrcholem horní podstavy _A_.
+
+====
+
+Hranol( <Mnohoúhelník>, <Hodnota výšky> )::
+  Zobrazí kolmý hranol dané výšky s daným mnohoúhelníkem jako bází.
+
+[EXAMPLE]
+====
+
+`++Hranol(poly1, 3)++` zobrazí hranol s bází _poly1_ a výškou 3.
+
+====
+
+[NOTE]
+====
+
+Viz též nástroje image:24px-Mode_prism.svg.png[Mode prism.svg,width=24,height=24] xref:/tools/Prism.adoc[Prism] and
+image:24px-Mode_extrusion.svg.png[Mode extrusion.svg,width=24,height=24]
+xref:/tools/Extrude_to_Prism_or_Cylinder.adoc[Extrude to Prism].
+
+====
