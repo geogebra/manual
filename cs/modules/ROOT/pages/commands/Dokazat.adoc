@@ -5,24 +5,21 @@ ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 Dokazat( <Pravdivostní hodnota> )::
   Sdělí, zda je vložený výraz s pravdivostní hodnotou (tzv. booleovský výraz nabývající hodnoty _true_ nebo _false_) obecně pravdivý či nepravdivý.
 
-Normálně GeoGebra rozhoduje o pravdivosti xref:/Pravdivostní_hodnoty.adoc[booleovského výrazu], tj. zda je jeho hodnota _true_ nebo _false_, pomocí numerického výpočtu. Příkaz _Dokazat_ však pro vyhodnocení toho, zda má vložený booleovský výraz hodnotu _true_ nebo _false_, používá https://en.wikipedia.org/wiki/Symbolic_computation[symbolické metody] výpočtu. Jeho závěr má tak obecnou povahu. Pokud GeoGebra nemůže takto o odpovědi rozhodnout, jako výsledek uvede _undefined_.
+Normálně GeoGebra rozhoduje o pravdivosti xref:/Pravdivostní_hodnoty.adoc[booleovského výrazu], tj. zda je jeho hodnota _true_ nebo _false_, pomocí numerického výpočtu. Příkaz _Dokazat_ však pro vyhodnocení toho, zda má vložený booleovský výraz hodnotu _true_ nebo _false_, používá https://en.wikipedia.org/wiki/Symbolic_computation[symbolické metody] výpočtu. Jeho závěr má tak obecnou povahu. Pokud GeoGebra nemůže takto o odpovědi rozhodnout, jako výsledek uvede _nedefinovaný_ (_undefined_).
 
 [EXAMPLE]
 ====
 
-We define three free points, `++A=(1,2)++`, `++B=(3,4)++`, `++C=(5,6)++`. The command `++AreCollinear(A,B,C)++` yields
-_true_, since a numerical check is used on the current coordinates of the points. Using `++Prove(AreCollinear(A,B,C))++`
-you will get _false_ as an answer, since the three points are not collinear in general, i.e. when we change the points.
+Uvažujme tři body, `++A=(1,2)++`, `++B=(3,4)++`, `++C=(5,6)++`. Příkaz `++JsouKolinearni(A,B,C)++` vrátí hodnotu _true_, protože  provedl numerické ověření kolinearity této konkrétní trojice bodů. Při použití příkazu `++Dokazat(JsouKolinearni(A,B,C))++`
+však obdržíme výsledek _false_, protože tři body nejsou obecně kolineární. Konkrétní zadání je tak příkazem _Dokazat_ bráno jako příklad obecného problému kolinearity tří bodů, který posuzuje.
 
 ====
 
 [EXAMPLE]
 ====
 
-Let us define a triangle with vertices _A_, _B_ and _C_, and define `++D=MidPoint(B,C)++`, `++E=MidPoint(A,C)++`,
-`++p=Line(A,B)++`, `++q=Line(D,E)++`. Now both `++p∥q++` and `++Prove(p∥q)++` yield _true_, since a midline of a
-triangle will always be parallel to the appropriate side. See also https://www.geogebra.org/m/vhZETdtd[interactive
-version of this example].
+Pro trojúhelník daný vrcholy _A_, _B_ a _C_, definujme `++D=StredSoumernosti(B,C)++`, `++E=StredSoumernosti(A,C)++`,
+`++p=Primka(A,B)++`, `++q=Primka(D,E)++`. V tomto případě jak příkaz `++p∥q++`, tak i příkaz `++Prove(p∥q)++` uvede výsledek _true_, protože střední příčka trojúhelníku je vždy rovnoběžná s protilehlou stranou. Viz též https://www.geogebra.org/m/vhZETdtd[interaktivní ilustrace tohoto příkladu].
 
 ====
 
