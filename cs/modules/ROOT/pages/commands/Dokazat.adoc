@@ -2,13 +2,10 @@
 :page-en: commands/Prove
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
-Prove( <Boolean Expression> )::
-  Returns whether the given boolean expression is true or false in general.
+Dokazat( <Pravdivostní hodnota> )::
+  Sdělí, zda je vložený výraz s pravdivostní hodnotou (tzv. booleovský výraz nabývající hodnoty _true_ nebo _false_) obecně pravdivý či nepravdivý.
 
-Normally, GeoGebra decides whether a xref:/Boolean_values.adoc[boolean expression] is true or not by using numerical
-computations. However, the Prove command uses https://en.wikipedia.org/wiki/Symbolic_computation[symbolic methods] to
-determine whether a statement is _true_ or _false_ in general. If GeoGebra cannot determine the answer, the result is
-_undefined_.
+Normálně GeoGebra rozhoduje o pravdivosti xref:/Pravdivostní_hodnoty.adoc[booleovského výrazu], tj. zda je jeho hodnota _true_ nebo _false_, pomocí numerického výpočtu. Příkaz _Dokazat_ však pro vyhodnocení toho, zda má vložený booleovský výraz hodnotu _true_ nebo _false_, používá https://en.wikipedia.org/wiki/Symbolic_computation[symbolické metody] výpočtu. Jeho závěr má tak obecnou povahu. Pokud GeoGebra nemůže takto o odpovědi rozhodnout, jako výsledek uvede _undefined_.
 
 [EXAMPLE]
 ====
