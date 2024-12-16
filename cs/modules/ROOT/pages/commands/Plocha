@@ -1,0 +1,31 @@
+= Příkaz Plocha
+:page-en: commands/Surface
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Plocha( <Výraz>, <Výraz>, <Výraz>, <Parametr proměnné 1>, <Počáteční hodnota>, <Koncová hodnota>, <Parametr proměnné 2>, <Počáteční hodnota>, <Koncová hodnota> )::
+
+Plocha zadaná parametrickými rovnicemi, tj. funkcemi dvou proměnných pro souřadnice _x_ (první _<Výraz>_), _y_ (druhý
+_<Výraz>_) a _z_ (třetí _<Výraz>_). Pro zadání obdélníkové oblasti definičního oboru parametrů použijeme dvakrát _<Parametr proměnné>_ se zadaným intervalem [_<Počáteční hodnota>_, _<Koncová hodnota>_].
+
+[EXAMPLE]
+====
+
+Nechť _r_ a _R_ jsou dvě kladná reálná čísla:
+`++Plocha((R + r cos( u)) cos(v) , (R + r cos( u)) sin(v) , r sin(u ), u, 0, 2 π , v, 0, 2 π)++` zadává anuloid vzniklý rotací kružnice s poloměrem _r_ kolem souřadnicové osy _z_.
+Vzdálenost středu rotující kružnice od osy rotace _z_ je číslo_R_.
+
+====
+
+[NOTE]
+====
+
+* _Koncová hodnota_ musí být větší než _Počáteční hodnota_ a obě hranice intervalu musí být konečné.
+* Písmena_x, y_ a _z_ není možné používat pro označení parametrů plochy. Doporučujeme používat písmena _u_ a _v_.
+
+====
+
+Plocha( <Funkce>, <Úhel> )::
+  Rotační plocha, vzniklá otáčením zadané _Funkce_ okolo souřadnicové osy _x_. _Úhel_ určuje část plochy v intervalu od nuly po danou hodnotu. Pro celou plochu zadejte úhel `2*pi`.
+
+Plocha( <Křivka>, <Úhel>, <Přímka>)::
+  Rotační plocha, vzniklá rotací _Křivky_ o daný  _Úhel_ okolo osy _Přímka_.
