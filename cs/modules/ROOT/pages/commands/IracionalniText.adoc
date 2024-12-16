@@ -1,0 +1,51 @@
+= Příkaz IracionalniText
+:page-en: commands/SurdText
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+
+IracionalniText( <Číslo> )::
+  Vytvoří text reprezentující zadané _Číslo_ ve tvaru stem:[\frac{a+b\sqrt{c}}{d}].
+
+[EXAMPLE]
+====
+
+* `++IracionalniText(2.414213562373095)++` vytvoří text _stem:[1 + \sqrt{2}]_
+* `++IracionalniText(2.439230484541326)++` vytvoří text _stem:[\frac{7+3 \sqrt{3} }{5}]_
+
+====
+
+IracionalniText( <Bod> )::
+  Vytvoří text reprezentující souřadnice daného bodu ve tvaru stem:[\frac{a+b\sqrt{c}}{d}].
+
+[EXAMPLE]
+====
+
+`++IracionalniText((2.414213562373095, 1.414213562373095))++` vytvoří text _(stem:[1 + \sqrt{2}, \sqrt{2})]_
+
+====
+
+IracionalniText( <Číslo>, <Seznam> )::
+  Vytvoří textovou reprezentaci čísla přepsanou jako násobek konstant v seznamu. Pokud je seznam prázdný, příkaz použije přednastavený seznam konstant.
+
+[EXAMPLE]
+====
+
+* `++IracionalniText(3.718281828459045, {exp(1)})++` vytvoří text _stem:[e + 1]_
+* `++IracionalniText(5.382332347441762, {sqrt(2), sqrt(3), sqrt(5)})++` vytvoří text _stem:[ \sqrt{5} + \sqrt{3} + \sqrt{2}]_
+* `++IracionalniText(1.693147180559945, {ln(2)})++` vytvoří text _stem:[ \ln(2) + 1]_
+
+====
+
+
+
+[NOTE]
+====
+
+* Pro použití tohoto příkazu v objektu _Text_ je třeba zaškrtnout práci v prostředí *_LaTeX vzorec_* v
+ image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Properties_Dialog.adoc[Properties Dialog].
+* Protože tento příkaz pracuje se zaokrouhleným desetinným číslem na vstupu, může být výsledek v některých případech v nepoužitelném tvaru.
+* Pokud nebude vhodné číslo nalezeno, příkaz vrátí původní číslo na vstupu, např. příkaz `++SurdText(1.23456789012345)++` vrátí _1.23456789012345_.
+
+* Viz také xref:/commands/ZlomekText.adoc[ZlomekText] a příkaz xref:/commands/ScientificText.adoc[ScientificText].
+
+====
