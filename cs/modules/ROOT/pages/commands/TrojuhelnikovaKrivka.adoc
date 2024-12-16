@@ -1,0 +1,34 @@
+= Příkaz TrojuhelnikovaKrivka
+:page-en: commands/TriangleCurve
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+TrojuhelnikovaKrivka( <Bod P>, <Bod Q>, <Bod R>, <Rovnice v proměnných A, B, C> )::
+  Vytvoří křivku implicitně zadanou v tzv.
+  https://en.wikipedia.org/wiki/Barycentric_coordinate_system_(mathematics)[barycentrických souřadnicích], jako množinu kombinací bodů
+_P_, _Q_, _R_ zadanou rovnicí v proměnných _A_, _B_, _C_.
+
+[EXAMPLE]
+====
+
+Nechť jsou dány bofy _P_, _Q_, _R_ , příkaz `++TrojuhelnikovaKrivka(P, Q, R, (A - B)*(B - C)*(C - A) = 0)++` sestrojí singulární kubiku rozpadlou na tři přímky - těžnice trojúhelníku
+_PQR_.
+
+====
+
+[EXAMPLE]
+====
+
+`++TrojuhelnikovaKrivka(A, B, C, A*C = 1/8)++` sestrojí hyperbolu, která se dotýká dvou těžnic a rozděluje trojúhelník na části s poměrem ploch 1:4.
+
+====
+
+[EXAMPLE]
+====
+
+`++TrojuhelnikovaKrivka(A, B, C, A² + B² + C² - 2B C - 2C A - 2A B = 0)++` vytvoří Steinerovu elipsu vepsanou trojúhelníku _ABC_, viz
+https://en.wikipedia.org/wiki/Steiner_inellipse[Steiner inellipse (EN)], a
+`++TrojuhelnikovaKrivka(A, B, C, B C + C A + A B = 0)++` vytvoří Steinerovu elipsu opsanou trojúhelníku _ABC_, viz https://en.wikipedia.org/wiki/Steiner_ellipse[Steiner
+circumellipse (EN)].
+
+====
+
