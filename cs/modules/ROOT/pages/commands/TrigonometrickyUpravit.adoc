@@ -1,0 +1,42 @@
+= Příkaz TrigonometrickyUpravit
+:page-en: commands/TrigCombine
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+TrigonometrickyUpravit( <Výraz> )::
+  Upraví součin trigonometrických členů do součtů nebo kombinuje součty trigonometrických členů do výrazu obsahujícího pouze trigonometrickou funkci.
+
+[EXAMPLE]
+====
+
+* `++TrigonometrickyUpravit(sin(x) cos(3x))++` vrací stem:[\frac{1}{2} \sin \left( 4 x \right) - \frac{1}{2} \sin \left( 2 x \right)]
+* `++TrigonometrickyUpravit(sin(x) + cos(x))++` vrací stem:[\sqrt{2} \cos \left( x - \frac{1}{4} \pi \right)].
+
+====
+
+TrigonometrickyUpravit( <Výraz>, <Cílová funkce> )::
+  Sloučí členy trigonometrického výrazu do ekvivalentního výrazu, který obsahuje pouze zadanou cílovou funkci.
+
+[EXAMPLE]
+====
+
+`++TrigonometrickyUpravit(sin(x) + cos(x), sin(x))++` dává stem:[\sqrt{2} \sin \left( x + \frac{1}{4} \pi \right)].
+
+====
+
+[NOTE]
+====
+
+* V prostředí image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_View.adoc[CAS View] mohou být používány i nedefinované proměnné.
+
+
++
+[EXAMPLE]
+====
+
+`++TrigonometrickyUpravit(sin(p) cos(3p))++` dává stem:[\frac{1}{2} \sin \left( 4 p \right) - \frac{1}{2} \sin \left( 2 p \right)].
+
+====
+
+* Viz také příkazy xref:/commands/TrigonometrickyRozsirit.adoc[TrigonometrickyRozsirit] a xref:/commands/TrigonometrickyZjednodusit.adoc[TrigonometrickyZjednodusit].
+
+====
