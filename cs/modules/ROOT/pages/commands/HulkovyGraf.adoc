@@ -1,0 +1,46 @@
+= Příkaz HulkovyGraf
+:page-en: commands/StickGraph
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+HulkovyGraf( <Seznam bodů> )::
+  Nakreslí hůlkový (úsečkový) graf zadaných bodů. Pro každý bod je nakreslena svislá úsečka od osy x k tomuto bodu.
+
+[EXAMPLE]
+====
+
+`++HulkovyGraf({(1, 1), (3, 2), (4, 5), (5, 7)})++`
+
+====
+
+HulkovyGraf( <Seznam bodů>, <Horizontální(logická hodnota)> )::
+  Nakreslí hůlkový (úsečkový) graf zadaných bodů. Pokud je _Horizontální = true_, potom jsou úsečky vykresleny vodorovně
+od osy _y_ k daným bodům. Přednastavenou hodnotou je _Horizontální = false_, která vykreslí úsečky svislé.
+
+[EXAMPLE]
+====
+
+`++HulkovyGraf({(1, 1), (3, 2), (4, 5), (5, 7)}, false)++`
+
+====
+
+HulkovyGraf( <Seznam x-ových souřadnic>, <Seznam y-ových souřadnic> )::
+  Nakreslí hůlkový (úsečkový) graf zadaných bodů. Pro každý bod je nakreslena svislá úsečka od osy x k tomuto bodu.
+
+[EXAMPLE]
+====
+
+`++HulkovyGraf({1, 3, 4, 5}, {1, 2, 5, 7})++`
+
+====
+
+HulkovyGraf( <Seznam x-ových souřadnic>, <Seznam y-ových souřadnic>, <Horizontální(logická hodnota)> )::
+  Nakreslí hůlkový (úsečkový) graf zadaných bodů. Pro každý bod je nakreslena svislá úsečka od osy x k tomuto bodu.
+ Pokud je _Horizontální = true_, potom jsou úsečky vykresleny vodorovně 
+od osy _y_ k daným bodům. Přednastavenou hodnotou je _Horizontální = false_, která vykreslí úsečky svislé.
+
+[EXAMPLE]
+====
+
+`++HulkovyGraf({1, 3, 4, 5}, {1, 2, 5, 7}, true)++`
+
+====
