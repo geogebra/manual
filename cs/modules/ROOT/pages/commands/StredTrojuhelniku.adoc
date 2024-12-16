@@ -1,0 +1,33 @@
+= Příkaz StredTrojuhelniku
+:page-en: commands/TriangleCenter
+:page-aliases: commands/TrinagleCentre.adoc
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+
+StredTrojuhelniku( <Bod>, <Bod>, <Bod>, <Číslo n> )::
+  Sestrojí _n_-tý střed trojúhelníku _ABC_ podle klasifikace Clarka Kimberlinga v knize https://en.wikipedia.org/wiki/Encyclopedia_of_Triangle_Centers[Encyclopedia of Triangle Centers]. 
+Číslo _n_ musí být menší než 3054.
+
+[EXAMPLE]
+====
+
+Nechť jsou dány body _A = (1, -2)_, _B = (6, 1)_ a _C = (4, 3)_. `++StredTrojuhelniku(A, B, C, 2)++` sestrojí těžiště _D = (3.67,
+0.67)_ trojuhelniku _ABC_.
+
+====
+
+== Významné typy středů trojúhelníku
+
+[cols=",",options="header",]
+|===
+|Číslo n |Střed
+|1 |Střed https://cs.wikipedia.org/wiki/Kru%C5%BEnice_vepsan%C3%A1[kružnice vepsané]
+|2 |Těžiště 
+|3 |Střed https://cs.wikipedia.org/wiki/Kru%C5%BEnice_opsan%C3%A1[kružnice opsané]
+|4 |Ortocentrum, průsečík https://cs.wikipedia.org/wiki/Troj%C3%BAheln%C3%ADk#V%C3%BD%C5%A1ka[výšek]
+|5 |Střed https://cs.wikipedia.org/wiki/Kru%C5%BEnice_dev%C3%ADti_bod%C5%AF[kružnice devíti bodů]
+|6 |Lemoinův bod, těžiště úpatnicového trojúhelníku, střed https://cs.wikipedia.org/wiki/Lemoinova_kru%C5%BEnice[Lemoinovy kružnice]
+|7 | https://cs.wikipedia.org/wiki/Kru%C5%BEnice_vepsan%C3%A1#Gergonn%C5%AFv_bod[Gergonnův bod]
+|8 |https://en.wikipedia.org/wiki/Nagel_point[Nagel point]
+|13 | https://en.wikipedia.org/wiki/Fermat_point[Fermatův bod]
+|===
