@@ -7,7 +7,7 @@ xref:/commands/Commandes_Calculs_et_Fonctions.adoc[Commandes Calculs et Fonction
 Coefficients( <Polynôme> )::
   Retourne la liste des coefficients du polynôme.
 
-Pour le polynôme stem:[a_kx^k+a_{k-1}x^{k-1}+\cdots+a_1x+a_0] retourne la liste \{stem:[a_k, a_{k-1},
+Pour le polynôme stem:[a_kx^k+a_{k-1}x^{k-1}+\cdots+a_1x+a_0] retourne la liste {stem:[a_k, a_{k-1},
 \ldots,a_1,a_0]}
 
 [EXAMPLE]
@@ -80,7 +80,7 @@ n'est pas proposé,
 
 `++Coefficients( x^2 + 2y^2+ 3 + 4xy+ 5x + 6y = 0)++` retourne bien la liste {1, 2, 3, 4, 5, 6}
  
-Mais si on veut du littéral, l'équation de la conique est traités comme un polynôme en _x_ :
+Mais si on veut du littéral, l'équation de la conique est traitée comme un polynôme en _x_ :
 
 `++Coefficients(ax^2 + by^2 + c + dxy+ ex +fy = 0)++` retourne {a, yd + e, by² + yf + c}.
 
@@ -113,6 +113,6 @@ image:Ambox_content.png[image,width=40,height=40]
 
 |Pour une conique _c3D_ de l'espace, `++Coefficients( c3D )++` vous retourne bien une liste _{a,b,c,d,e,f}_,
 
-mais, si vous désirez faire marche arrière, `++Conique( a,b,c,d,e,f )++`ne vous retournera pas la conique précédente, mais une
+mais, si vous désirez faire marche arrière, `++Conique( a,b,c,d,e,f )++` ne vous retournera pas la conique précédente, mais une
 conique du plan xOy.
 |===
