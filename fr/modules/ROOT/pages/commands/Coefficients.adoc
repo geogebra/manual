@@ -2,18 +2,18 @@
 :page-en: commands/Coefficients
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:/commands/Commandes_Calculs_et_Fonctions.adoc[Commandes Calculs et Fonctions].
+
 Coefficients( <Polynôme> )::
   Retourne la liste des coefficients du polynôme.
 
-Pour le polynôme stem:[a_kx^k+a_\{k-1}x^\{k-1}+\cdots+a_1x+a_0] retourne la liste \{stem:[a_k, a_\{k-1},
+Pour le polynôme stem:[a_kx^k+a_{k-1}x^{k-1}+\cdots+a_1x+a_0] retourne la liste \{stem:[a_k, a_{k-1},
 \ldots,a_1,a_0]}
 
 [EXAMPLE]
 ====
 
-*Exemple :*
-
-`++Coefficients(x^3 - 3 x^2 + 3 x)++` retourne _\{1, -3, 3, 0}_, la liste de tous les coefficients de stem:[x^3 - 3 x^2
+`++Coefficients(x^3 - 3 x^2 + 3 x)++` retourne _{1, -3, 3, 0}_, la liste de tous les coefficients de stem:[x^3 - 3 x^2
 + 3 x].
 
 ====
@@ -28,7 +28,7 @@ coefficients calculés pour l'ajustement.
 ====
 
 Coefficients( <Conique> )::
-  Pour la conique stem:[a\cdot x^2+b\cdot y^2+c+d\cdot x\cdot y+e\cdot x+f\cdot y=0] retourne la liste _\{a,b,c,d,e,f}_.
+  Pour la conique stem:[a\cdot x^2+b\cdot y^2+c+d\cdot x\cdot y+e\cdot x+f\cdot y=0] retourne la liste _{a,b,c,d,e,f}_.
 
 [NOTE]
 ====
@@ -40,6 +40,7 @@ l'aide des syntaxes stem:[x(d), y(d), z(d)].
 
 Pour un plan dont l'équation est sous la forme stem:[p: ax + by + cz = d] il est possible d'obtenir les coefficients à
 l'aide des syntaxes stem:[x(v), y(v), z(v)]; v ayant été préalablement créé par `++ v=VecteurOrthogonal(p)++`.
+====
 
 [EXAMPLE]
 ====
@@ -54,7 +55,6 @@ Soit `++d: 3x + 2y - 2 = 0++` :
 
 ====
 
-====
 
 ____________________________________________________________
 
@@ -70,13 +70,21 @@ Coefficients( <Polynôme> , <Variable> )::
 [EXAMPLE]
 ====
 
-*Exemples :*
-
-* `++Coefficients(a^3 - 3 a^2 + 3 a, a)++` retourne _\{1, -3, 3, 0}_, la liste de tous les coefficients du polynôme en
+* `++Coefficients(a^3 - 3 a^2 + 3 a, a)++` retourne _{1, -3, 3, 0}_, la liste de tous les coefficients du polynôme en
 _a_ stem:[a^3 - 3 a^2 + 3 a], et
-* `++Coefficients(a^3 - 3 a^2 + 3 a, x)++` retourne _\{stem:[a^3 - 3 a^2 + 3 a]}_.
+* `++Coefficients(a^3 - 3 a^2 + 3 a, x)++` retourne _{stem:[a^3 - 3 a^2 + 3 a]}_.
 
 ====
+Coefficients( <Conique> )::
+n'est pas proposé,
+
+`++Coefficients( x^2 + 2y^2+ 3 + 4xy+ 5x + 6y = 0)++` retourne bien la liste {1, 2, 3, 4, 5, 6}
+ 
+Mais si on veut du littéral, l'équation de la conique est traités comme un polynôme en _x_ :
+
+`++Coefficients(ax^2 + by^2 + c + dxy+ ex +fy = 0)++` retourne {a, yd + e, by² + yf + c}.
+
+____________________________________________________________
 
 _____________________________________________________________
 
@@ -93,17 +101,18 @@ La saisie de
 `++x² + 2y² + 3z² + 4x y +5x z +  6y z + 7x + 8y + 9z + 10 = 0++` créera l'hyperboloïde à une nappe _a: x² + 2y² + 3z² +
 4x y + 5x z + 6y z + 7x + 8y + 9z = -10_
 
-`++Coefficients( a )++` retournera la liste _\{1, 2, 3, 10, 4, 5, 6, 7, 8, 9}_ (Bien noter la position du terme constant
+`++Coefficients( a )++` retournera la liste _{1, 2, 3, 10, 4, 5, 6, 7, 8, 9}_ (Bien noter la position du terme constant
 voyageur ;-) :-) )
 
 ====
 
-[width="100%",cols="50%,50%",]
+[width="100%",cols="12%,88%",]
 |===
 a|
 image:Ambox_content.png[image,width=40,height=40]
 
-|Pour une conique _c3D_ de l'espace, `++Coefficients( c3D )++` vous retourne bien une liste _\{a,b,c,d,e,f}_, mais, si
-vous désirez faire marche arrière, `++Conique( a,b,c,d,e,f )++`ne vous retournera pas la conique précédente, mais une
+|Pour une conique _c3D_ de l'espace, `++Coefficients( c3D )++` vous retourne bien une liste _{a,b,c,d,e,f}_,
+
+mais, si vous désirez faire marche arrière, `++Conique( a,b,c,d,e,f )++`ne vous retournera pas la conique précédente, mais une
 conique du plan xOy.
 |===
