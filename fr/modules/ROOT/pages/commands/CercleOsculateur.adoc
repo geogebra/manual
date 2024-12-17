@@ -2,13 +2,13 @@
 :page-en: commands/OsculatingCircle
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-CercleOsculateur( <Point>, <Objet> )::
+xref:/commands/Commandes_Calculs_et_Fonctions.adoc[Commandes Calculs et Fonctions].
+
+CercleOsculateur( <Point>, <Objet 2D> )::
   Crée le cercle osculateur de l'objet (fonction, courbe ou conique) en son point donné
 
 [EXAMPLE]
 ====
-
-*Exemples :*
 
 * `++CercleOsculateur((0, 0), x^2)++` crée le cercle d'équation _x² + y² - y = 0_
 * `++CercleOsculateur((1, 0),Courbe(cos(t), sin(2t), t,0,2π))++`crée le cercle d'équation _x² + y² + 6x = 7_
@@ -21,3 +21,19 @@ ____________________________________________________________
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
 Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+____________________________________________________________
+
+
+
+
+_____________________________________________________________
+
+
+image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] *Graphique
+3D* :
+
+
+
+La commande `++CercleOsculateur()++`est seulement implémentée pour les objets 2D. 
+
+En 3D, vous pouvez créer un outil utilisateur, voir par exemple le fichier partagé https://www.geogebra.org/m/tan7dxjt[3D osculating circle]
