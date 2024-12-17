@@ -29,11 +29,11 @@ repère.
 
 Voir xref:/Courbes.adoc[Courbes] pour plus de détails.
 
-[NOTE]
-====
+_____________________________________________________________
 
-*image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] Graphique
-3D* Interviennent ici 3 expressions
+
+image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] *Graphique
+3D* : Interviennent ici 3 expressions
 
 Courbe( <Expression stem:[e_1]> , <Expression stem:[e_2]> , <Expression stem:[e_3]> , <Variable t> , <de a> , <à b> )::
   Construit dans l'espace cartésien la courbe paramétrée, de paramètre t variant dans l’intervalle [_a_ ; _b_] ,
@@ -46,9 +46,11 @@ Courbe( <Expression stem:[e_1]> , <Expression stem:[e_2]> , <Expression stem:[e_
 `++Courbe(cos(t), sin(t), t, t, 0, 10π)++` crée une spirale 3d .
 
 ====
+_____________________________________________________________
 
 
-==Saisie directe d'une courbe paramétrée.
+
+== Saisie directe d'une courbe paramétrée.
 
 `++(t,t)++` crée la droite d'équation _X = (0, 0) + t (1, 1)_ sous forme paramétrique, bien sûr par clic droit vous
 pouvez faire apparaître l'équation y=x ; `++(t,t²)++` crée la conique (parabole) d'équation _y=x²_ ;
@@ -62,4 +64,6 @@ la spirale et sa symétrique par rapport à l'axe des ordonnées, préférez la 
 `++(t^2,t^3)++` crée la courbe paramétrée dont la définition est stem:[{\begin{array}{c}\left. \begin{array}{c}{x=t^2\\y=t^3}\end{array} \right\}  \end{array}}−10≤t≤10] mais la commande associée est générée en *Courbe(t², t³, t, -10, 10)* (et ce n'est pas vous qui avez fixé les bornes).
 
 il en est de même si vous reprenez l'exemple de la spirale `++(cos(t), sin(t), t)++` elle correspondra alors à
-Courbe(cos(t), sin(t), t, t, -10, 10)
+Courbe(cos(t), sin(t), t, t, 0, 2π)
+
+ou pour ce nouvel exemple `++(1+cos(t),sin(t),2sin(t/2))++` que GeoGebra ne sait encore pas trouver comme intersection de la sphère `++Sphère((0, 0, 0), 2)++` et du cylindre `++CylindreInfini(X=(1,0,0)+ λ (0,0,1),1)++`
