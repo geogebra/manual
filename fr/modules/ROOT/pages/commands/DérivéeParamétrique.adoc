@@ -2,6 +2,8 @@
 :page-en: commands/ParametricDerivative
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:/commands/Commandes_Calculs_et_Fonctions.adoc[Commandes Calculs et Fonctions].
+
 DérivéeParamétrique(<Courbe x=x(t), y=y(t)>)::
   Retourne une nouvelle xref:/Courbes.adoc[courbe paramétrée] définie par _stem:[ \left( x(t), \frac{y'(t)}{ x'(t)}
   \right) ]_.
@@ -9,8 +11,26 @@ DérivéeParamétrique(<Courbe x=x(t), y=y(t)>)::
 [EXAMPLE]
 ====
 
-`++DérivéeParamétrique(Courbe(2t, t², t, 0, 10))++` retourne la courbe paramétrée _(x(t) = 2t, y(t) = t)_.
+`++DérivéeParamétrique(Courbe(2t, t², t, 0, 10))++` retourne la courbe paramétrée _(x(t) = 2t, y(t) = t)_ :  stem:[\left.\begin{array}{lll}x = 2 \; t\\ y = \frac{2 \; t}{2} \end{array}\right\} \; 0 \le t \le 10]
+
+
 La courbe passée en argument à la commande est associée à la fonction _f(x)=stem:[ \frac{x²}{4}]_, et le résultat est
 la dérivée de cette fonction: _f'(x)=stem:[ \frac{x}{2}]._
+
+====
+
+
+_____________________________________________________________
+
+
+image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
+
+Il n'est pas retourné une courbe paramétrée !
+
+[EXAMPLE]
+====
+
+`++DérivéeParamétrique(Courbe(2t, t², t, 0, 10))++` retourne la droite dont une équation est stem:[eq1: \, x - 2 \; y = 0]
+
 
 ====
