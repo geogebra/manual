@@ -2,13 +2,15 @@
 :page-en: commands/Degree
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-*Degré*(<Polynôme>)::
-  Calcule le degré de _Polynôme_.
+xref:/commands/Commandes_Calculs_et_Fonctions.adoc[Commandes Calculs et Fonctions].
+
+Degré(<Polynôme>)::
+  Calcule le degré de _Polynôme_ en fonction de la variable principale.
 
 [EXAMPLE]
 ====
 
-`++Degré(x^4+2x^2)++` donne _4_.
+`++Degré(x^4+2x^2)++` retourne _4_.
 
 ====
 
@@ -16,20 +18,23 @@ ____________________________________________________________
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
-Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+Pour Degré(<Polynôme>)::
+  Calcule le https://fr.wikipedia.org/wiki/Degr%C3%A9_d%27un_polyn%C3%B4me[degré de _Polynôme_] en fonction de la variable principale ou d'un https://fr.wikipedia.org/wiki/Mon%C3%B4me_(math%C3%A9matiques)[monôme].
+[EXAMPLE]
+====
+`++Degré(x^6 y^3 + 2 x^2 y^3)++` retourne _9_
+====
 
-Avec, en plus, choix possible du nom de la variable :
+Il peut donc être judicieux de profiter du choix possible du nom de la variable :
 
-*Degré*(<Polynôme>,<Variable>)::
+Degré(<Polynôme>,<Variable>)::
 
 [EXAMPLE]
 ====
 
-*Exemples :*
-
-* `++Degré(a^3 - 3 a^2 + 3 a, a)++` donne _3_ ;
-* `++Degré(a^3 - 3 a^2 + 3 a, x)++` donne _0_ ;
-* `++Degré(x^4 y^3 + 2 x^2 y^3, x)++` donne _4_ ;
-* `++Degré(x^4 y^3 + 2 x^2 y^3, y)++` donne _3_.
+* `++Degré(a^3 - 3 a^2 + 3 a, a)++` retourne _3_ ;
+* `++Degré(a^3 - 3 a^2 + 3 a, x)++` retourne _0_ ;
+* `++Degré(x^4 y^3 + 2 x^2 y^3, x)++` retourne _4_ ;
+* `++Degré(x^4 y^3 + 2 x^2 y^3, y)++` retourne _3_.
 
 ====
