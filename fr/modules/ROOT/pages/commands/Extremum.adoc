@@ -2,6 +2,8 @@
 :page-en: commands/Extremum
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:/commands/Commandes_Calculs_et_Fonctions.adoc[Commandes Calculs et Fonctions].
+
 Extremum( <Polynôme f> )::
   Tous les extremums locaux du polynôme _f_ (en tant que points).
 
@@ -13,13 +15,13 @@ dans xref:/Graphique.adoc[Graphique].
 
 ====
 
-\{Extremum( <Polynôme f> )}::
+{Extremum( <Polynôme f> )}::
   Tous les extremums locaux du polynôme _f_ (en tant que liste de points).
 
 [EXAMPLE]
 ====
 
-`++{Extremum(x³ + 3x² - 9x - 9)}++` crée les extremums locaux (liste) _\{(-3, 18),(1, -14)}_ et les dessine
+`++{Extremum(x³ + 3x² - 9x - 9)}++` crée les extremums locaux (liste) _{(-3, 18),(1, -14)}_ et les dessine
 dans xref:/Graphique.adoc[Graphique].
 
 ====
@@ -52,8 +54,9 @@ liste de points
 
 [EXAMPLE]
 ====
-
-*Exemples :* `++Extremum(x²)++` vous retournera \{(0, 0)}`++Extremum(x³ + 3x² - 9x - 9)++` vous retournera \{(-3, 18),
-(1, -14)}.
-
+* `++Extremum(x²)++` vous retournera _{(0, 0)}_.
+ 
+* `++Extremum(x³ + 3x² - 9x - 9)++` vous retournera _{(-3, 18),(1, -14)}_.
+* `++Sachant(x>0,Extremum(x³ + 3x² - 9x - 9))`++ ne vous retournera que _{(1, -14)}_.
 ====
+ 
