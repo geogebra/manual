@@ -2,6 +2,8 @@
 :page-en: commands/Derivative
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:/commands/Commandes_Calculs_et_Fonctions.adoc[Commandes Calculs et Fonctions].
+
 Dérivée( <Fonction> )::
   Calcule la dérivée de la _fonction_ par rapport à la variable principale.
 
@@ -64,6 +66,8 @@ Dérivée( <Courbe>, <Nombre> )::
 
 avec `++ Simplifier(Dérivée(Courbe(cos(t), t sin(t),t,0,π),2))++` le résultat est _plus beau_ pour y = -t sin(t) + 2cos(t) 
 
+stem:[\left.\begin{array}{lll}x = -\operatorname{cos} \left( t \right)\\ y = -t \; \operatorname{sin} \left( t \right) + 2 \; \operatorname{cos} \left( t \right) \end{array}\right\} \; 0 \le t \le \pi]
+
 
 ====
 
@@ -94,7 +98,7 @@ Vous pouvez utiliser `++f'(x)++` à la place de `++Dérivée(f)++`, ou `++f''(x)
 `++Dérivée(f, 2)++`, et ainsi de suite.
 
 ====
-
+__________________________________________________________
 image:20px-Menu_view_cas.svg.png[Menu view cas.svg,width=20,height=20] *Calcul formel* Dans le
 xref:/Calcul_formel.adoc[calcul formel] les seules syntaxes suivantes sont supportées :
 
@@ -109,9 +113,9 @@ Dérivée( <Expression>, <Variable>, <Nombre>)::
 ====
 En supposant que avez déclaré la fonction _f_ par `++f(x):=a*x^3++`
 
-* `++Dérivée(x^2)++` donne _2x_.
-* `++Dérivée(f(x))++` donne _3 a x²_.
-* `++Dérivée(f(x), a)++` donne _x³_.
-* `++Dérivée(f(x), x, 2)++` donne _6 a x_.
+* `++Dérivée(x^2)++` retourne _2x_.
+* `++Dérivée(f(x))++` retourne _3 a x²_.
+* `++Dérivée(f(x), a)++` retourne _x³_.
+* `++Dérivée(f(x), x, 2)++` retourne _6 a x_.
 
 ====
