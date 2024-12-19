@@ -2,8 +2,12 @@
 :page-en: commands/NIntegral
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:/commands/Commandes_Calculs_et_Fonctions.adoc[Commandes Calculs et Fonctions].
+
 NIntégrale( <Fonction>)::
-  Trace le graphique de la primitive y=F(x)+c de la fonction donnée, avec une constante d'intégration c = 0. L'équation de la primitive n'est pas affichée dans la vue Algèbre, car elle est calculée numériquement.
+  Trace le graphique de la primitive y=F(x)+c de la fonction donnée, avec une constante d'intégration *c = 0*.
+
+L'équation de la primitive n'est pas affichée dans la vue Algèbre, car elle est calculée numériquement.
 
 
 NIntégrale( <Fonction>, <x initial>, <x final> )::
@@ -25,7 +29,9 @@ NIntégrale( <Fonction>, <x initial>, <Start y-Value>,<x final> )::
 ====
 
 `++NIntégrale(sin(x)/x, π, 1, 2π)++` trace le graphique de la primitive stem:[y=F(x)+c] de la fonction _sin_ sur
-l'intervalle [π, 2π]. La valeur de stem:[c] est définie par la condition initiale  (x initial, Start y-Value)=(π, 1).
+l'intervalle [π, 2π].
+
+La valeur de stem:[c] est définie par la condition initiale  (x initial, Start y-Value)=(π, 1).
 
 ====
 
@@ -36,7 +42,9 @@ image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul f
 Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
 
 Mais la réponse, en cas d'affectation, ne sera notifiée que par un nombre dans Algèbre, pas d'aire dans Graphique.
-Existe aussi une syntaxe pour une variable autre que x.
+
+
+*Existe aussi une syntaxe pour une variable autre que x.*
 
 [EXAMPLE]
 ====
