@@ -2,6 +2,8 @@
 :page-en: commands/Numerator
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:/commands/Commandes_Calculs_et_Fonctions.adoc[Commandes Calculs et Fonctions].
+
 Numérateur(<Fonction>)::
   Retourne le numérateur de la fonction.
 
@@ -28,17 +30,16 @@ d'http://www.geogebra.org/material/simple/id/2350111[illustration].
 ====
 
 Pour une méthode numérique rapide (tant que les nombres ne sont pas trop gros), vous pouvez utiliser dans
-[.kcode]#Saisie :#: `++DénominateurCommun(a, a) ++` pour récupérer le dénominateur et
+[.kcode]#Saisie :# `++DénominateurCommun(a, a) ++` pour récupérer le dénominateur et
 `++ round(a * DénominateurCommun (a, a)) ++` pour récupérer le numérateur.
 
 [EXAMPLE]
 ====
 
-*Exemples :*
 
-`++ DénominateurCommun(2/3, 2/3) ++` donne _3_ ;
+`++ DénominateurCommun(2/3, 2/3) ++` retourne _3_ ;
 
-`++ round(2/3 DénominateurCommun(2/3, 2/3)) ++` donne _2_.
+`++ round(2/3 DénominateurCommun(2/3, 2/3)) ++` retourne _2_.
 
 ====
 
@@ -53,17 +54,17 @@ Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
 
 Avec, en plus, la possibilité de travailler avec un nombre rationnel ou une expression.
 
-*Numérateur*( <Expression> )::
+Numérateur( <Expression> )::
   Retourne le dénominateur d'un nombre rationnel ou d'une expression [littérale].
 
 [EXAMPLE]
 ====
 
-*Exemples :*
-
 * `++Numérateur(4/7)++` retourne _4_ ;
-* `++Numérateur(2/3+1/15)++` retourne _11_.Les variables _a, b_ et _c_ n'étant pas définies dans GeoGebra ;
-* `++Numérateur(a/b)++` retourne _a_ ;
-* `++Numérateur(a + b/c)++` retourne _a c + b_.
+* `++Numérateur(2/3+1/15)++` retourne _11_.
+
+* Les variables _a, b_ et _c_ n'étant pas déjà définies dans GeoGebra ;
+** `++Numérateur(a/b)++` retourne _a_ ;
+** `++Numérateur(a + b/c)++` retourne _a c + b_.
 
 ====
