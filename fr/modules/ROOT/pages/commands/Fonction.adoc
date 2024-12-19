@@ -2,16 +2,20 @@
 :page-en: commands/Function
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:/commands/Commandes_Calculs_et_Fonctions.adoc[Commandes Calculs et Fonctions].
+
 Fonction( <Fonction>, <x min>, <x max> )::
   Dessine le graphique de la restriction de _f_ à l'intervalle [_a_, _b_].
 
 [NOTE]
 ====
 
-Cette commande *n'est qu'une commande de représentation*. Pour restreindre l'ensemble de définition, créez une
-fonction définie avec des conditions à l'aide de la xref:/commands/Si.adoc[commande Si], par ex.
-`++f(x) = Si(-1 < x && x < 1, x²)++`, ou un "raccourci" `++f(x)=x²,(-1<x<1)++`. *Attention !* Si vous oubliez la virgule
-`++,++` dans ce raccourci, la fonction créée est définie sur stem:[IR] ! (nulle en dehors de ]-1,1[) .
+Cette commande *n'est qu'une commande de représentation*.
+
+Pour restreindre l'ensemble de définition, créez une fonction définie avec des conditions à l'aide de la xref:/commands/Si.adoc[commande Si], par ex.
+`++f(x) = Si(-1 < x && x < 1, x²)++`, ou un "raccourci" `++f(x)=x²,(-1<x<1)++`.
+
+*Attention !* Si vous oubliez la virgule `++,++` dans ce raccourci, la fonction créée est définie sur stem:[IR] ! (nulle en dehors de ]-1,1[) .
 
 ====
 
@@ -24,7 +28,7 @@ x^2^_ comme attendu, l'ensemble de définition de g n'est pas l'intervalle [_-1_
 
 ====
 
-[cols=",",]
+[width=100%, cols="12%,88%",]
 |===
 |image:18px-Attention.png[Attention,title="Attention",width=18,height=18] *Attention*: |Cette commande ne fonctionne pas
 avec les Outils Utilisateurs. Utilisez la xref:/commands/Si.adoc[commande Si] comme ci-dessus.
@@ -39,14 +43,11 @@ Fonction(<Liste Nombres>)::
 [EXAMPLE]
 ====
 
-*Exemples :* `++Fonction({2,4,0,1,0,1,0})++` définit une fonction en dents de scie sur l'intervalle [2 ;
-4] ;`++Fonction({-3,3,0,1,2,3,4,5})++` définit une fonction linéaire de coefficient directeur 1 sur l'intervalle [-3 ;
-3].
+* `++Fonction({2,4,0,1,0,1,0})++` définit une fonction en dents de scie sur l'intervalle [2 ;4] ;
+* `++Fonction({-3,3,0,1,2,3,4,5})++` définit une fonction linéaire de coefficient directeur 1 sur l'intervalle [-3 ; 3].
+==== 
 
-====
-
-[NOTE]
-====
+________________________________________________________
 
 *image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] Graphique
 3D*
@@ -57,13 +58,14 @@ Fonction( <Expression>, <Variable 1>, <de>, <à>, < Variable 2>, <de>, <à> )::
 [EXAMPLE]
 ====
 
-*Exemples :*
 
-En validant `++a(x, y) = x ++` vous définissez une fonction à deux variables qui va être représentée dans l'espace par
-le *[.underline]#plan#* d'équation z=a(x,y)=x. En validant `++Fonction(u,u,0,3,v,0,2) ++` vous définissez une fonction à
+* En validant `++a(x, y) = x ++` vous définissez une fonction à deux variables qui va être représentée dans l'espace par
+le *[.underline]#plan#* d'équation z=a(x,y)=x.
+
+* En validant `++Fonction(u,u,0,3,v,0,2) ++` vous définissez une fonction à
 deux variables b(u, v) = u qui va être représentée dans l'espace par le *[.underline]#seul rectangle#* Polygone((0, 0,
 0), (3, 0, 3), (3, 2, 3), (0, 2, 0)) du plan d'équation z=a(x,y)=x.
 
 ====
 
-====
+
