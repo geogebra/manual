@@ -29,15 +29,15 @@ xref:/commands/FractionContinue.adoc[FractionContinue].
 ====
 
 Pour une méthode numérique rapide (tant que les nombres ne sont pas trop grands), vous pouvez utiliser dans
-[.kcode]#Saisie :#: `++DénominateurCommun(a, a) ++` pour récupérer le dénominateur et
+[.kcode]#Saisie :#  `++DénominateurCommun(a, a) ++` pour récupérer le dénominateur et
 `++ round(a * DénominateurCommun(a, a)) ++` pour récupérer le numérateur.
 
 [EXAMPLE]
 ====
 
-`++ DénominateurCommun(2/3, 2/3) ++` donne _3_ ;
+`++ DénominateurCommun(2/3, 2/3) ++` retourne _3_ ;
 
-`++ round(2/3 DénominateurCommun(2/3, 2/3)) ++` donne _2_.
+`++ round(2/3 DénominateurCommun(2/3, 2/3)) ++` retourne _2_.
 
 ====
 
@@ -60,8 +60,9 @@ Dénominateur( <Expression> )::
 
 * `++Dénominateur(4/7)++` retourne _7_ ;
 * `++Dénominateur(2/3+1/15)++` retourne _15_.
-* Les variables _a,b, c,_ et _d_ n'étant pas définies dans GeoGebra ;
 
-`++Dénominateur(a/b +c/d)++` retourne _b d_
+
+* Les variables _a,b, c,_ et _d_ n'étant pas définies dans GeoGebra ;
+  `++Dénominateur(a/b +c/d)++` retourne _b d_
 
 ====
