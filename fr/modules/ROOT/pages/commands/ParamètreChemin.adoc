@@ -8,12 +8,20 @@ xref:/commands/Commandes_Calculs_et_Fonctions.adoc[Commandes Calculs et Fonction
 ParamètreChemin( <Point sur Chemin> )::
   Retourne le paramètre (i.e. un nombre entre 0 et 1) du point appartenant à un xref:/Objets_géométriques.adoc[chemin].
 
+[EXAMPLE]
+====
+
+Soit la courbe de `++f(x) = x² + x - 1++` et  _A_ un point de ses points de coordonnées (1,1) (vous pouvez créer un tel point en utilisant l'outil image:32px-Mode_pointonobject.svg.png[Mode pointonobject.svg,width=24,height=24] xref:/tools/Point_sur_Objet.adoc[Point sur Objet]  ou en validant successivement les commandes `++A=Point(f)++`, `++SoitCoordonnées(A,1,1)++` ). Alors `++ParamètreChemin(A)++` retourne _a = 0.47_.
+
+====
+
 Dans le tableau suivant stem:[f(x)=\frac{x}{1+|x|}] est une fonction utilisée pour lier tout nombre réel à
 l'intervalle [-1,1] et stem:[\phi(X,A,B)=\frac{\overrightarrow{AX}\cdot\overrightarrow{AB}}{|AB|^2}] est une
 application de la droite (AB) dans les réels qui envoie A sur 0 et B sur 1.
 
 [cols=",",]
 |===
+
 |Droite (AB) |stem:[\frac{f(\phi(X,A,B))+1}{2}]
 
 |Demi-droite [AB) |stem:[f(\phi(X,A,B))]
