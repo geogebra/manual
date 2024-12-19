@@ -2,28 +2,27 @@
 :page-en: commands/IntegralBetween
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:/commands/Commandes_Calculs_et_Fonctions.adoc[Commandes Calculs et Fonctions].
+
 IntégraleDomaine( <Fonction f>, <Fonction g>, <x min>, <x max> )::
-  Retourne l’intégrale définie de la différence _f(x) - g(x)_ sur l’intervalle [_min ; max_].
+  * Retourne l’intégrale définie de la différence _f(x) - g(x)_ sur l’intervalle [_min ; max_] ;
+
+ * et dessine aussi la surface entre les courbes représentatives de _f_ et de _g_.
 
 [EXAMPLE]
 ====
-
-*Exemple :*
 
 `++IntégraleDomaine(sin(x), cos(x), π / 4, π * 5 / 4)++` retourne _2.83_ (_option 2 décimales_).
 
 ====
 
-[NOTE]
-====
-
-Cette commande dessine aussi la surface entre les courbes représentatives de _f_ et de _g_.
-
-====
 
 IntégraleDomaine( <Fonction f>, <Fonction g>, <x min>, <x max>, < true|false Calcul> )::
-  C'est la précédente si _Calcul = true_, si _Calcul = false_ la surface est dessinée mais son aire n'est pas calculée
-  (mais *! valeur affichée = 0* dans Algèbre).
+  * C'est la précédente si _Calcul = true_,
+
+  * si _Calcul = false_ la surface est dessinée mais son aire n'est pas calculée
+
+  * (mais *! valeur affichée = ?* dans Algèbre).
 
 ____________________________________________________________
 
@@ -37,8 +36,6 @@ littéral, ou avec une autre variable déclarée en 3ème paramètre :
 [EXAMPLE]
 ====
 
-*Exemple :*
-
 `++IntégraleDomaine(sin(x), cos(x), π / 4, π * 5 / 4)++` retourne stem:[2 \sqrt{2}].
 
 ====
@@ -49,9 +46,8 @@ IntégraleDomaine( <Fonction f>, <Fonction g>, <Variable t>, <Nombre a>, <Nombre
 
 [EXAMPLE]
 ====
+Si la variable _k_ n'est pas déjà définie dans GeoGebra :
 
-*Exemple :*
-
-`++IntégraleDomaine(a * sin(t), a * cos(t), t, π / 4, π * 5 / 4)++` retourne stem:[2 \sqrt{2} a].
+`++IntégraleDomaine(k * sin(t), k * cos(t), t, π / 4, π * 5 / 4)++` retourne stem:[2 \sqrt{2} k].
 
 ====
