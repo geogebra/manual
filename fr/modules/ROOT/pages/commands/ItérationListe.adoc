@@ -2,22 +2,24 @@
 :page-en: commands/IterationList
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:/commands/Commandes_Calculs_et_Fonctions.adoc[Commandes Calculs et Fonctions].
+
 ItérationListe( <Fonction f>, <Valeur départ stem:[x_0]>, <Nombre n> )::
   Liste _L_ de longueur _n+1_ dont les éléments sont les images itératives par _f_ de la valeur stem:[x_0].
 
 [EXAMPLE]
 ====
 
-*Exemples :*
 
-* Après avoir défini `++f(x) = x^2++` la commande `++ItérationListe(f, 3, 2)++` retourne la liste _L = \{3, 9, 81}_
-(c'est-à-dire _\{3,3^2^,(3^2^)^2^}_).
-* on peut utiliser cette commande pour définir une suite récurrente où _a~k+1~_ dépend de _a~k~_ et _k_. À partir d'une
-fonction _f_ de deux variables avec comme Valeur départ une liste de deux nombres__\{s, a~s~}__, la liste créée sera
+* Après avoir défini `++f(x) = x^2++` la commande `++ItérationListe(f, 3, 2)++` retourne la liste _L = {3, 9, 81}_
+(c'est-à-dire _{3,3^2^,(3^2^)^2^}_).
+
+* On peut utiliser cette commande pour définir une suite récurrente où _a~k+1~_ dépend de _a~k~_ et _k_. À partir d'une
+fonction _f_ de deux variables avec comme Valeur départ une liste de deux nombres__{s, a~s~}__, la liste créée sera
 celle des valeurs _a~s~_, _a~s+1~_ ,....,_a~s+n~_ dans laquelle pour _k>s_ on a _a~k+1~=f(k, a~k~)_.
 
-Après avoir défini `++f(k,a)=(k+1)*a++`, qui correspond à la définition récursive de factorielle. La commande
-`++ItérationListe(f, {3, 6}, 4)++` retournera la liste _\{6, 24, 120, 720, 5040}_
+* Après avoir défini `++f(k,a)=(k+1)*a++`, qui correspond à la définition récursive de factorielle. La commande
+`++ItérationListe(f, {3, 6}, 4)++` retournera la liste _{6, 24, 120, 720, 5040}_
 
 ====
 
@@ -30,32 +32,31 @@ ItérationListe( <Expression>, <Nom Variable>, ..., <Liste Valeurs départ>, <No
 [EXAMPLE]
 ====
 
-*Exemples :* Soit A et B deux points. Alors `++ItérationListe(MilieuCentre(A, C), C,{B},3)++` calcule
+Soit A et B deux points. Alors `++ItérationListe(MilieuCentre(A, C), C,{B},3)++` calcule
 
 * C~0~=B ;
 * C~1~=MilieuCentre(A, C~0~) ;
 * C~2~=MilieuCentre(A, C~1~) ;
 * C~3~=MilieuCentre(A, C~2~)
 
-et retourne \{C~0~, C~1~, C~2~, C~3~}. Ainsi pour `++A=(0,0)++` et `++B=(8,0)++` le résultat sera \{(8,0), (4,0), (2,0),
+et retourne {C~0~, C~1~, C~2~, C~3~}. Ainsi pour `++A=(0,0)++` et `++B=(8,0)++` le résultat sera {(8,0), (4,0), (2,0),
 (1,0)}.
 
 ====
 
-{empty}[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/Itération.adoc[Itération]
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/Itération.adoc[Itération].
 
-[NOTE]
-====
+
 
 *image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :* Utilisation avec des suites numériques
 
 * [.underline]#Suites arithmétiques a(n+1) = a(n) + r#
 
-avec par exemple a(0) = 1 et r = 3 `++ItérationListe(x+3, 1, 4)++` retourne _\{1, 4, 7, 10, 13}_
+avec par exemple a(0) = 1 et r = 3 `++ItérationListe(x+3, 1, 4)++` retourne _{1, 4, 7, 10, 13}_
 
 * [.underline]#Suites géométriques g(n+1) = q x g(n)#
 
-avec par exemple g(0) = 1 et q = 3 `++ItérationListe(3x, 1, 4)++` retourne _\{1, 3, 9, 27, 81}_
+avec par exemple g(0) = 1 et q = 3 `++ItérationListe(3x, 1, 4)++` retourne _{1, 3, 9, 27, 81}_
 
 * [.underline]#Suite de Fibonnacci :#
 
@@ -67,24 +68,24 @@ deux valeurs de départ. Ensuite les valeurs sont calculées comme suit :
 * f~4~=f~2~+f~3~ ;
 * f~5~=f~3~+f~4~.
 
-et retourne \{f~0~, f~1~, f~2~, f~3~, f~4~, f~5~ }. Ainsi pour `++f_0=1++` et `++f_1=1++` le résultat sera
-\{1,1,2,3,5,8}.
+et retourne {f~0~, f~1~, f~2~, f~3~, f~4~, f~5~ }. Ainsi pour `++f_0=1++` et `++f_1=1++` le résultat sera
+{1,1,2,3,5,8}.
 
 * [.underline]#Suites de Collatz ou Syracuse :#
 
-`++ItérationListe(Si(floor(x / 2) ≟ x / 2, x / 2, 3x + 1), 14, 8)++` retourne _\{14, 7, 22, 11, 34, 17, 52, 26, 13}_ les
+`++ItérationListe(Si(floor(x / 2) ≟ x / 2, x / 2, 3x + 1), 14, 8)++` retourne _{14, 7, 22, 11, 34, 17, 52, 26, 13}_ les
 _8_ premiers termes de cette suite de premier terme _14_
 
 * [.underline]#Suites récurrentes avec présence de _n_ dans la formule :#
 
-🦁Soit la suite \{7, 71, 712, 7123, 71234, 712345}, une interprétation : le premier terme, u~0~, est 7, le suivant, u~1~,
+🦁 Soit la suite {7, 71, 712, 7123, 71234, 712345}, une interprétation : le premier terme, u~0~, est 7, le suivant, u~1~,
 10 fois 7 augmenté de 1, le suivant du suivant, u~2~, 10 fois 71 augmenté de 2 .../...
 
 on va *définir* une fonction de 2 variables f(n,x) ([.underline]#*le _n_ étant la 1ère*#) `++f(n, x) = 10x + n ++`et la
 validation de `++ItérationListe(f, {1, 7}, 5)++` exécutant les itérations de la fonction _f_ à partir de __n__=*1* pour
 une valeur d'image de départ de *7*, retournera la liste des 6 nombres présentés.
 
-====
+
 
 ____________________________________________________________
 
