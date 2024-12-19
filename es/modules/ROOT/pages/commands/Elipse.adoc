@@ -2,7 +2,7 @@
 :page-en: commands/Ellipse
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-Elipse( <Punto (Foco)>, <Punto (Foco)>, <Longitud del Semieje mayor> )::
+Elipse( <Foco>, <Foco>, <Longitud del semieje mayor> )::
   Crea una elipse con los focos indicados y la longitud indicada para el semieje mayor.
 
 [EXAMPLE]
@@ -19,9 +19,19 @@ Si la condición: _2*longitud del semieje mayor > Distancia entre los focos_ no 
 
 ====
 
-Elipse( <Punto (Foco)>, <Punto (Foco)>, <Segmento (semieje mayor> )::
-  Crea una elipse cuyos focos son los puntos dados, y cuyo semieje mayor tiene una longitud igual a la del segmento.
-Elipse( <Punto (Foco)>, <Punto (Foco)>, <Punto (en la elipse)> )::
+Elipse( <Foco>, <Foco>, <Segmento> )::
+  Crea una elipse cuyos focos son los puntos dados, y cuyo semieje mayor tiene una longitud igual a la del segmento dado.
+
+
+[EXAMPLE]
+====
+
+Sea _s = Segmento\((0,1), (2,1))_ : `++Elipse((0, 1), (2, 1), s)++` da por resultado _3x² + 4y² - 6x - 8y = 5_.
+
+====
+
+
+Elipse( <Foco>, <Foco>, <Punto> )::
   Crea una elipse cuyos focos son los dos primeros puntos indicados y que pasa por el tercero de ellos.
 
 [EXAMPLE]
@@ -31,16 +41,10 @@ Elipse( <Punto (Foco)>, <Punto (Foco)>, <Punto (en la elipse)> )::
 
 ====
 
-[EXAMPLE]
-====
-
-Sea _s = Segmento((0,1), (2,1))_ : `++Elipse((0, 1), (2, 1), s)++` da por resultado _3x² + 4y² - 6x - 8y = 5_.
-
-====
 
 [NOTE]
 ====
 
-Ver también image:24px-Mode_ellipse3.svg.png[Mode ellipse3.svg,width=24,height=24] xref:/tools/Elipse.adoc[Elipse].
+Ver también la herramienta image:24px-Mode_ellipse3.svg.png[Mode ellipse3.svg,width=24,height=24] xref:/tools/Elipse.adoc[Elipse].
 
 ====
