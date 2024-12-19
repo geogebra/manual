@@ -1,47 +1,28 @@
 = Comando SumaDivisores
-:page-revisar: urgente
 :page-en: commands/DivisorsSum
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]
-
-|Página en proceso de traducción.
-|===
-
-*SumaDivisores*[ <Número> ]::
-  Da por resultado la suma de todos los factores positivos del número, incluyéndolo.
+SumaDivisores( <Número> )::
+  Da por resultado la suma de todos los divisores positivos del número, incluyéndolo.
 
 [EXAMPLE]
 ====
 
-`++SumaDivisores[15]++` da _24_, la suma de todos los divisores positivos de _15_, incluyéndolo -(_1, 3, 5, 15_)- siendo
-*_24 = 1 + 3 + 5 + 15_*.
+`++SumaDivisores(15)++` da _24_, la suma _1 + 3 + 5 + 15_.
 
 ====
 
-== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+== Sintaxis CAS
 
-Opera en esta xref:/Vista_CAS.adoc[vista] del modo ya descripto.
+SumaDivisores( <Número> )::
+  Da por resultado la suma de todos los divisores positivos del número, incluyéndolo.
 
 [EXAMPLE]
 ====
 
-*Ejemplos:*
-*`++SumaDivisores[ Producto[ Coeficientes[ PolinomioAleatorio[4, 2, 11]]]] ñ / (sqrt(-5 + round(random())))++`* da un
-resultado aleatorio como stem:[\{-\frac{24192 ñ ί}\{\sqrt{5} }
-}]**`++SumaDivisores[Producto[ñ!/(ñ - 1)!,ñ,2, 2+Resto[round(10 random()), 5]]]++`** da la suma de todos los divisores
-positivos del número aleatorio correspondiente.
-
-'''''
-
-[.small]#Si la suma fuera _60_ habría que averiguar cuál pudo haber sido el número azarosamente seleccionado.#
+`++SumaDivisores(15)++` da _24_, la suma _1 + 3 + 5 + 15_.
 
 ====
-
-'''''
 
 [NOTE]
 ====
