@@ -1,15 +1,15 @@
 = Números Complejos
-:page-revisar: urgente
 :page-en: Complex_Numbers
-ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-GeoGebra no soporta números complejos directamente, pero se pueden utilizar xref:/Puntos_y_Vectores.adoc[puntos] para simular las operaciones con complejos.
+GeoGebra no soporta números complejos directamente, pero se pueden utilizar xref:/Puntos_y_Vectores.adoc[puntos y vectores] para simular las operaciones con complejos.
 
 [EXAMPLE]
 ====
+
 Si se introduce el número complejo 3 + 4ί en la Barra de entrada se obtendrá el punto (3, 4) en la
 image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Vista_Gráfica.adoc[]. 
-Las coordenadas de este punto se muestran como 3 + 4ί en la image:16px-Menu_view_algebra.svg.png[Menu view
+El número complejo se muestra en notación binómica como 3 + 4ί en la image:16px-Menu_view_algebra.svg.png[Menu view
 algebra.svg,width=16,height=16] xref:/Vista_Algebraica.adoc[].
 
 ====
@@ -17,69 +17,70 @@ algebra.svg,width=16,height=16] xref:/Vista_Algebraica.adoc[].
 [NOTE]
 ====
 
-You can display any point as a complex number in the image:16px-Menu_view_algebra.svg.png[Menu view
-algebra.svg,width=16,height=16] _Algebra View_. Open the
-image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Properties_Dialog.adoc[Properties Dialog] for
-the point and select _Complex Number_ from the list of Coordinates formats on tab _Algebra_.
+Se puede mostrar cualquier punto como un número complejo en la image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] _Vista Algebraica_.
+Se puede abrir el image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Cuadro_de_Propiedades.adoc[Cuadro de Propiedades] del punto y se selecciona _Número complejo_
+en la lista de formatos de Coordenadas en la pestaña _Álgebra_.
 
 ====
 
-The imaginary unit ί can be chosen from the symbol box in the xref:/Input_Bar.adoc[Input Bar] or written using
-[.kcode]#Alt# + [.kcode]#i#. Unless you are typing the input in image:16px-Menu_view_cas.svg.png[Menu view
-cas.svg,width=16,height=16] xref:/CAS_View.adoc[CAS View] or you defined variable i previously, variable i is recognized
-as the ordered pair i = (0, 1) or the complex number 0 + 1ί. This also means, that you can use this variable i in order
-to type complex numbers into the _Input Bar_ (e.g. q = 3 + 4i), but not in the CAS.
+A menos que se esté en la image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[Vista CAS] o se haya definido previamente una variable llamada
+_i_, al ingresar _i_ se reconoce como el par ordenado _i_ = (0, 1) o el número complejo 0 + 1ί.
+Esto significa que se puede usar _i_ para ingresar números complejos en la
+_Barra de entrada_ (por ejemplo, _w_ = 3 + 4 _i_) de la _Vista Algebraica_.
+En la Vista CAS, se puede utilizar el atajo [.kcode]#Alt# + [.kcode]#i# para ingresar la unidad imaginaria ί.
 
 [EXAMPLE]
 ====
-Addition and subtraction:
+Adición y sustracción:
 
-* `++(2 + 1ί) + (1 – 2ί)++` gives you the complex number 3 – 1ί.
-* `++(2 + 1ί) - (1 – 2ί)++` gives you the complex number 1 + 3ί.
+* `++(2 + 1ί) + (1 – 2ί)++` devuelve el número complejo 3 – 1ί.
+* `++(2 + 1ί) - (1 – 2ί)++` devuelve el número complejo 1 + 3ί.
 
 ====
 
 [EXAMPLE]
 ====
 
-Multiplication and division:
+Multiplicación y división:
 
-* `++(2 + 1ί) * (1 – 2ί)++` gives you the complex number 4 – 3ί.
-* `++(2 + 1ί) / (1 – 2ί)++` gives you the complex number 0 + 1ί.
+* `++(2 + 1ί) * (1 – 2ί)++` devuelve el número complejo 4 – 3ί.
+* `++(2 + 1ί) / (1 – 2ί)++` devuelve el número complejo 0 + 1ί.
 
 ====
 
 [NOTE]
 ====
 
-The usual multiplication `++(2, 1)*(1, -2)++` gives you the scalar product of the two vectors.
+La multiplicación usual `++(2, 1)*(1, -2)++` devuelve el producto escalar de los dos vectores.
 
 ====
 
-The following commands and xref:/Predefined_Functions_and_Operators.adoc[predefined operators] can also be used:
+También se pueden utilizar los siguientes comandos y xref:/Operadores_y_Funciones_Predefinidas.adoc[operadores predefinidas]:
 
-* `++x(w)++` or `++real(w)++` return the real part of the complex number _w_
-* `++y(w)++` or `++imaginary(w)++` return the imaginary part of the complex number _w_
-* `++abs(w)++` or `++Length[w]++` return the absolute value of the complex number _w_
-* `++arg(w)++` or `++Angle[w]++` return the argument of the complex number _w_
+* `++x(w)++` o `++real(w)++` devuelve la parte real del número complejo _w_
+* `++y(w)++` o `++imaginaria(w)++` devuelve la parte imaginaria del número complejo _w_
+* `++abs(w)++` o `++Longitud(w)++` devuelve el valor absoluto del número complejo _w_
+* `++arg(w)++` o `++Ángulo(w)++` devuelve el argumento del número complejo _w_
 
 [NOTE]
 ====
 
-arg(w) is a number between -180° and 180°, while Angle[w] returns values between 0° and 360°.
+arg(w) es un número entre -180° y 180°, mientras que Ángulo(w) devuelve valores entre 0° y 360°.
 
 ====
 
-* `++conjugate(w)++` or `++Reflect[w,xAxis]++` return the conjugate of the complex number _w_
+* `++conjugado(w)++` o `++Refleja(w,EjeX)++` devuelve el conjugado del número complejo _w_
 
-GeoGebra also recognizes expressions involving xref:/Numbers_and_Angles.adoc[real] and complex numbers.
+GeoGebra también reconoce expresiones que involucran números xref:/Números_y_Ángulos.adoc[reales] y complejos.
 
 [EXAMPLE]
 ====
 
-* `++3 + (4 + 5ί)++` gives you the complex number 7 + 5ί.
-* `++3 - (4 + 5ί)++` gives you the complex number -1 - 5ί.
-* `++3 / (0 + 1ί)++` gives you the complex number 0 - 3ί.
-* `++3 * (1 + 2ί)++` gives you the complex number 3 + 6ί.
+* `++3 + (4 + 5ί)++` da el número complejo 7 + 5ί.
+* `++3 - (4 + 5ί)++` da el número complejo -1 - 5ί.
+* `++3 / (0 + 1ί)++` da el número complejo 0 - 3ί.
+* `++3 * (1 + 2ί)++` da el número complejo 3 + 6ί.
 
 ====
