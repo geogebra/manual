@@ -9,7 +9,7 @@ PathParameter( <Point On Path> )::
 [EXAMPLE]
 ====
 
-Let `++f(x) = x² + x - 1++` and and _A_ is a point attached to this function with coordinates (1,1) (you can create such point using the point on object tool or `A=Point(f)`, `SetCoords(A,1,1)` commands). Then `++PathParameter(A)++` yields _a
+Let `++f(x) = x² + x - 1++` and  _A_ is a point attached to this function with coordinates (1,1) (you can create such point using the point on object tool or `A=Point(f)`, `SetCoords(A,1,1)` commands). Then `++PathParameter(A)++` yields _a
 = 0.47_.
 
 ====
@@ -20,17 +20,16 @@ which sends A to 0 and B to 1.
 
 [cols=",",]
 |===
+
 |Line AB |stem:[\frac{f(\phi(X,A,B))+1}2]
 
 |Ray AB |stem:[f(\phi(X,A,B))]
 
 |Segment AB |stem:[\phi(X,A,B)]
 
-|Circle with center _C_ and radius _r_ |Point stem:[X=C+(r\cdot cos(\alpha),r\cdot sin(\alpha))], where
-stem:[\alpha\in(-\pi,\pi)] has path parameter stem:[\frac{\alpha+\pi}{2\pi}]
+|Circle with center _C_ and radius _r_ |Point stem:[X=C+(r\cdot cos(\alpha),r\cdot sin(\alpha))], where stem:[\alpha\in \]-\pi,\pi\]] has path parameter stem:[\frac{\alpha+\pi}{2\pi}]
 
-|Ellipse with center _C_ and semiaxes stem:[\vec{a}], stem:[\vec{b}] |Point stem:[X=C+\vec{a}\cdot
-cos(\alpha)+\vec{b}\cdot sin(\alpha)], where stem:[\alpha\in(-\pi,\pi)] has path parameter
+|Ellipse with center _C_ and semiaxes stem:[\vec{a}], stem:[\vec{b}] |Point stem:[X=C+ \vec{a} \cdot cos(\alpha) + \vec{b} \cdot sin(\alpha) ] , where stem:[\alpha\in \]-\pi,\pi\]] has path parameter
 stem:[\frac{\alpha+\pi}{2\pi}]
 
 |Hyperbola |Point stem:[X = C \pm \vec{a} ·cosh(t) + \vec{b} ·sinh(t)] has path parameter stem:[ \frac{f(t)+1}{4}]
