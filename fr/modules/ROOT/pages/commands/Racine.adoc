@@ -2,13 +2,13 @@
 :page-en: commands/Root
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:/commands/Commandes_Calculs_et_Fonctions.adoc[Commandes Calculs et Fonctions].
+
 Racine( <Polynôme f> )::
-  *Toutes* les racines du polynôme _f_ (en tant que points). (_même si Racine est au singulier_)
+  *Toutes* les racines du polynôme _f_ (en tant que points d'intersection de la courbe représentative avec l'axe des abscisses). (_même si Racine est au singulier_)
 
 [EXAMPLE]
 ====
-
-*Exemple :*
 
 `++Racine(x^3 - 3 * x^2 - 4 * x + 12)++` crée les trois points (-2,0),(2,0) et (3,0).
 
@@ -23,21 +23,16 @@ Racine( <Fonction f>, <x min>, <x max>)::
 [EXAMPLE]
 ====
 
-*Exemple :*
+Soit f(x)=stem:[\frac{sin(x)}{x} ]
 
-Soit f(x)=stem:[\frac{sin(x)}\{x} ]
+`++Racine(f)`++ retourne le point d'intersection le pjus à gauche dans la vue graphique.
 
-Racine(f) provoque un message d'erreur *Argument illégal*
+`++Racine(f,2)++` retourne A=(π,0) (la première racine rencontrée à partir de 2)
 
- 
+`++Racine(f,2,7)++` fera de même
 
-*Mais* Racine(f,2) donne A=(π,0) (la première racine rencontrée à partir de 2)
+`++Racine(f,4,7)++` retourne C=(6.28,0) (la première racine rencontrée à partir de 4)
 
-Racine(f,2,5) fera de même
-
-Racine(f,4,7) donne C=(6.28,0) (la première racine rencontrée à partir de 4)
-
-Racine(f,2,7) donne D=__non défini__ (parce qu'il y a 2 solutions sur cet intervalle).
 
 ====
 
@@ -54,9 +49,7 @@ Racine( <Polynôme f> )::
 [EXAMPLE]
 ====
 
-*Exemple :*
-
-`++Racine(x^3 - 3 * x^2 - 4 * x + 12)++` donne la liste des trois racines _\{x = 3, x = 2, x = -2}_.
+`++Racine(x^3 - 3 * x^2 - 4 * x + 12)++` retourne la liste des trois racines _{x = 3, x = 2, x = -2}_.
 
 ====
 
@@ -65,19 +58,10 @@ Racine(fonction) n'est pas proposée, mais si on reprend l'exemple précédent, 
 [EXAMPLE]
 ====
 
-*Exemple :*
-
 Soit f(x)=stem:[\frac{sin(x)}\{x} ]
 
-Racine(f) donne la liste stem:[\{x = k_1 π}]
+Racine(f) retourne la liste stem:[\{x = k_1 π}]
 
-Racine(f,2) donne (π,0) (la première racine rencontrée à partir de 2)
-
-Racine(f,2,5) fera de même
-
-Racine(f,4,7) donne B=(6.28,0) (la première racine rencontrée à partir de 4)
-
-Racine(f,2,7) par contre, de nouveau, donne (?,?) (parce qu'il y a 2 solutions sur cet intervalle).
 
 ====
 
@@ -87,5 +71,7 @@ Racine(f,2,7) par contre, de nouveau, donne (?,?) (parce qu'il y a 2 solutions s
 Cette commande n'est qu'une variante spéciale de la commande xref:/commands/Résoudre.adoc[Résoudre].
 
 ====
+
+____________________________________________________________
 
 [.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/Racines.adoc[Racines].
