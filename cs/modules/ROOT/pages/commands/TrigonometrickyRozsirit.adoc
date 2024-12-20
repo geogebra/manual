@@ -1,0 +1,76 @@
+= Příkaz TrigonometrickyRozsirit
+:page-en: commands/TrigExpand
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+TrigonometrickyRozsirit( <Výraz> )::
+  Převede trigonometrické funkce součtu proměnných na trigonometrické funkce jedné proměnné nebo rozloží součin trigonometrických funkcí na lineární výrazy.
+
+[EXAMPLE]
+====
+
+`++TrigonometrickyRozsirit(tan(x + y))++` dává stem:[\frac{\frac{\sin(x)}{\cos(x)}+\frac{\sin(y)}{\cos(y)}}
+{1-\frac{\sin(x)}{\cos(x)} \cdot \frac{\sin(y)}{\cos(y)}} ].
+
+
+`++TrigonometrickyRozsirit(sin(x)sin(x/3))++` dává stem:[\frac{1}{2} \; \cos \left( 2 \cdot \frac{x}{3} \right) -
+\frac{1}{2} \; \cos \left( 4 \cdot \frac{x}{3} \right) ].
+
+====
+
+TrigonometrickyRozsirit( <Výraz>, <Cílová funkce> )::
+  Převede trigonometrické funkce součtu proměnných na výrazy obsahující (pokud je to možné) danou cílovou funkci jedné proměnné.
+
+[EXAMPLE]
+====
+
+`++TrigonometrickyRozsirit(tan(x + y), tan(x))++` dává stem:[\frac{-\tan(x) - \tan(y)}{\tan(x) \tan(y) - 1}].
+
+====
+
+== CAS Syntax
+
+CAS syntaxe může zobrazovat jiné výsledky, v závislosti na výstupním módu:
+
+[EXAMPLE]
+====
+
+`++TrigonometrickyRozsirit(tan(x + y))++` v image:32px-Mode_evaluate.svg.png[Mode evaluate.svg,width=32,height=32] _Evaluate_ mode
+dává stem:[\frac{\frac{\sin(x)}{\cos(x)}+\frac{\sin(y)}{\cos(y)}} {1-\frac{\sin(x)}{\cos(x)} \cdot
+\frac{\sin(y)}{\cos(y)}} ] v image:32px-Mode_numeric.svg.png[Mode numeric.svg,width=32,height=32] _Numeric_ mode gives
+stem:[\frac{\sin(x) \cos(y) + \sin(y) \cos(x)}{- \sin(x) \sin(y) +\cos(x) \cos(y) }] .
+
+====
+
+Následující příkazy jsou dostupné jen v image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/CAS_pohled.adoc[prostředí CAS]:
+
+TrigonometrickyRozsirit( <Výraz>, <Cílová funkce>, <Cílová proměnná> )::
+  Převede trigonometrické funkce součtu proměnných na výrazy obsahující (pokud je to možné) danou cílovou funkci a proměnnou.
+
+[EXAMPLE]
+====
+
+* `++TrigonometrickyRozsirit(sin(x), sin(x), x/2)++` dává stem:[2\cos \left( \frac{x}{2} \right) \sin \left( \frac{x}{2} \right) ]
+* `++TrigonometrickyRozsirit(sin(x)/(1+cos(x)), tan(x), x/2)++` dává stem:[\tan \left( \frac{x}{2} \right)].
+
+====
+
+TrigonometrickyRozsirit( <Výraz>, <Cílová funkce>, <Cílová proměnná>, <Cílová proměnná> )::
+  Převede trigonometrické funkce součtu proměnných na výrazy obsahující (pokud je to možné) danou cílovou funkci a proměnné.
+
+
+[EXAMPLE]
+====
+
+`++TrigonometrickyRozsirit(csc(x) - cot(x) + csc(y) - cot(y), tan(x), x/2, y/2)++` dává stem:[\tan \left( \frac{x}{2} \right) +\tan
+\left( \frac{y}{2} \right) ].
+
+====
+
+[NOTE]
+====
+
+Viz také xref:/commands/TrigonometrickyZjednodusit.adoc[TrigonometrickyZjednodusit Command] a xref:/commands/TrigonometrickyUpravit.adoc[Trigonometricky
+Upravit].
+
+====
