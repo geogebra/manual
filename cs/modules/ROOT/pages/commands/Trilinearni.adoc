@@ -1,0 +1,34 @@
+= Příkaz Trilinearni
+:page-en: commands/Trilinear
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Trilinearni( <Bod>, <Bod>, <Bod>, <Číslo>, <Číslo>, <Číslo> )::
+  creates a point whose https://en.wikipedia.org/wiki/Trilinear_coordinates[trilinear coordinates] are the given numbers
+  with respect to triangle with given points.
+
+== Příklady
+
+[cols=",,,",options="header",]
+|===
+|Bod |<Číslo> |<Číslo> |<Číslo>
+|A |1 |0 |0
+
+|B |0 |1 |0
+
+|C |0 |0 |1
+
+|Střed kružnice opsané |cos(stem:[\hat{A}]) |cos(stem:[\hat{B}]) |cos(stem:[\hat{C}])
+
+|Střed kružnice vepsané |1 |1 |1
+
+|Střed kružnice připsané k [BC] |-1 |1 |1
+
+|Střed kružnice připsané k [AC] |1 |-1 |1
+
+|Střed kružnice připsané k [AB] |1 |1 |-1
+
+|Těžiště |stem:[\frac{1}{a}] |stem:[\frac{1}{b}] |stem:[\frac{1}{c}]
+
+|Ortocentrum |cos(stem:[\hat{B}]) cos(stem:[\hat{C}]) |cos(stem:[\hat{A}]) cos(stem:[\hat{C}])
+|cos(stem:[\hat{A}])cos(stem:[\hat{B}])
+|===
