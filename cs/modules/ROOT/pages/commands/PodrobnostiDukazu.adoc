@@ -2,13 +2,13 @@
 :page-en: commands/ProveDetails
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
-ProveDetails( <Boolean Expression> )::
-  Returns some details of the result of the automated proof.
+PodrobnostiDukazu( <Pravdivostní hodnota> )::
+  Poskytne určité detailnější informace o výsledku automatického důkazu pravdivosti vloženého výrazu s pravdivostní hodnotou  (tzv. booleovského výrazu nabývajícího hodnoty _true_ nebo _false_).
 
-Normally, GeoGebra decides whether a xref:/Boolean_values.adoc[boolean expression] is true or not by using numerical
-computations. However, the ProveDetails command uses https://en.wikipedia.org/wiki/Symbolic_computation[symbolic methods]
-to determine whether a statement is true or false in general. This command works like the
+Normálně GeoGebra rozhoduje o pravdivosti xref:/Pravdivostní_hodnoty.adoc[booleovského výrazu], tj. zda je jeho hodnota _true_ nebo _false_, pomocí numerického výpočtu. Příkaz _PodrobnostiDukazu_ však pro vyhodnocení toho, zda má vložený booleovský výraz hodnotu _true_ nebo _false_, používá https://en.wikipedia.org/wiki/Symbolic_computation[symbolické metody] výpočtu. Zabývá se tak obecnou platností výrazem postihnuté vlastnosti. This command works like the
 xref:/commands/Prove.adoc[Prove] command, but also returns some details of the result as a xref:/Lists.adoc[list]:
+
+Jeho závěr má tak obecnou povahu. Pokud GeoGebra nemůže takto o odpovědi rozhodnout, jako výsledek uvede _nedefinovaný_ (_undefined_).
 
 * An empty list *{}* if GeoGebra cannot determine the answer.
 * A list with one element: *{false}*, if the statement is not true in general.
