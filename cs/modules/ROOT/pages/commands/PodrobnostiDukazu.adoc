@@ -10,10 +10,9 @@ Normálně GeoGebra rozhoduje o pravdivosti xref:/Pravdivostní_hodnoty.adoc[boo
 * Prázdný seznam *{}*, pokud GeoGebra nemůže určit odpověď.
 * Seznam s jedním prvkem: *{false}*, pokud tvrzení není obecně pravdivé.
 * Seznam s jedním prvkem: *{true}*, pokud je předmětné tvrzení vždy pravdivé (ve všech případech, na které může být daný obrázek modifikován).
-* Seznam s více prvky, obsahující booleovské hodnoty _true_ a another list for some so-called _non-degeneracy
-conditions_, if the statement is true under certain conditions, e.g. {true, {"AreCollinear(A,B,C),AreEqual(C,D)"}}.
-This means that if none of the conditions are true (and the diagram can be constructed), then the statement will be
-true.
+* Seznam s více prvky, konkrétně obsahující booleovskou hodnotu _true_ spolu s dalším seznamem pro tzv. _nedegenerativní podmínky_ (_non-degeneracy
+conditions_), pokud je tvrzení pravdivé za určitých podmínek, např. {true, {"JsouKolinearni(A,B,C),JsouTotozne(C,D)"}}.
+Konkrétně to znamená, že pokud není splněna žádná z uvedených podmínek (a obrázek může být sestrojen), předmětné tvrzení je pravdivé.
 * A list *{true,{"..."}}*, if the statement is true under certain conditions, but these conditions cannot be
 translated to human readable form for some reasons.
 
