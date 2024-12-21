@@ -5,15 +5,12 @@ ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 PodrobnostiDukazu( <Booleovský výraz> )::
   Poskytne detailnější informace o výsledku automatického důkazu obecné pravdivosti tvrzení vloženého ve formě booleovského výrazu, tj. výrazu nabývajícího hodnoty _true_ nebo _false_.
 
-Normálně GeoGebra rozhoduje o pravdivosti xref:/Pravdivostní_hodnoty.adoc[booleovského výrazu], tj. zda je jeho hodnota _true_ nebo _false_, pomocí numerického výpočtu. Příkaz _PodrobnostiDukazu_ však pro vyhodnocení toho, zda má vložený booleovský výraz hodnotu _true_ nebo _false_, používá https://en.wikipedia.org/wiki/Symbolic_computation[symbolické metody] výpočtu. Zabývá se tak obecnou platností vlastnosti, které se výraz týká. Příkaz funguje stejně jako příkaz xref:/commands/Dokazat.adoc[Dokazat], akorát navíc vypíše nějaké detailnější informace o svém výsledku formou   command, but also returns some details of the result as a xref:/Lists.adoc[list]:
+Normálně GeoGebra rozhoduje o pravdivosti xref:/Pravdivostní_hodnoty.adoc[booleovského výrazu], tj. zda je jeho hodnota _true_ nebo _false_, pomocí numerického výpočtu. Příkaz _PodrobnostiDukazu_ však pro vyhodnocení toho, zda má vložený booleovský výraz hodnotu _true_ nebo _false_, používá https://en.wikipedia.org/wiki/Symbolic_computation[symbolické metody] výpočtu. Zabývá se tak obecnou platností vlastnosti, které se výraz týká. Příkaz funguje stejně jako příkaz xref:/commands/Dokazat.adoc[Dokazat], akorát navíc vypíše nějaké detailnější informace o svém výsledku formou xref:/Seznamy.adoc[seznamu] takto:
 
-Jeho závěr má tak obecnou povahu. Pokud GeoGebra nemůže takto o odpovědi rozhodnout, jako výsledek uvede _nedefinovaný_ (_undefined_).
-
-* An empty list *{}* if GeoGebra cannot determine the answer.
-* A list with one element: *{false}*, if the statement is not true in general.
-* A list with one element: *{true}*, if the statement is always true (in all cases when the diagram can be
-constructed).
-* A list with more elements, containing the boolean value _true_ and another list for some so-called _non-degeneracy
+* Prázdný seznam *{}*, pokud GeoGebra nemůže určit odpověď.
+* Seznam s jedním prvkem: *{false}*, pokud tvrzení není obecně pravdivé.
+* Seznam s jedním prvkem: *{true}*, pokud je předmětné tvrzení vždy pravdivé (ve všech případech, na které může být daný obrázek modifikován).
+* Seznam s více prvky, obsahující booleovské hodnoty _true_ a another list for some so-called _non-degeneracy
 conditions_, if the statement is true under certain conditions, e.g. {true, {"AreCollinear(A,B,C),AreEqual(C,D)"}}.
 This means that if none of the conditions are true (and the diagram can be constructed), then the statement will be
 true.
@@ -54,7 +51,7 @@ the simplest set would be the empty set.
 ====
 
 Viz též příkaz xref:/commands/Dokazat.adoc[Dokazat], xref:/Pravdivostní_hodnoty.adoc[Pravdivostní hodnoty] a článek
-https://github.com/kovzol/gg-art-doc/tree/master/pdf/english.pdf[GeoGebra Automated Reasoning Tools: A Tutorial] and
+https://github.com/kovzol/gg-art-doc/tree/master/pdf/english.pdf[GeoGebra Automated Reasoning Tools: A Tutorial] a
 http://dev.geogebra.org/trac/wiki/TheoremProving[technical details of the algorithms].
 
 ====
