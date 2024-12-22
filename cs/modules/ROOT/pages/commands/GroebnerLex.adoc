@@ -1,0 +1,29 @@
+= Příkaz GroebnerLex
+:page-en: commands/GroebnerLex
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+== CAS Syntax
+GroebnerLex( <Seznam polynomů> )::
+   Vypočítá Gröbnerovu bázi pro seznam polynomů vzhledem k lexikografickému uspořádání proměnných (také známého jako _lexikografické_ (_lex_), _čisté lexikografické_ uspořádání (_plex_ nebo _pure lexical_))
+
+[EXAMPLE]
+====
+
+`++GroebnerLex({x^3-y-2,x^2+y+1})++` dává {stem:[ y^{3} + 4 y^{2} + 7 y + 5, x - y^{2} - 3 y - 3 ]}.
+
+====
+GroebnerLex( <Seznam polynomů>, <Seznam proměnných> )::
+  Vypočítá Gröbnerovu bázi pro seznam polynomů vzhledem k lexikografickému uspořádání zadaných proměnných  (také známého jako _lexikografické_ (_lex_), _čisté lexikografické_ uspořádání (_plex_ nebo _pure lexical_)).
+[EXAMPLE]
+====
+
+`++GroebnerLex({x^3-y-2,x^2+y+1},{y,x})++` dává {stem:[ -x^{3} - x^{2} + 1, -y - x^{2} - 1 ]}.
+
+====
+
+[NOTE]
+====
+
+Viz také příkazy xref:/commands/GroebnerDegRevLex.adoc[GroebnerDegRevLex] a xref:/commands/GroebnerLexDeg.adoc[GroebnerLexDeg].
+
+====
