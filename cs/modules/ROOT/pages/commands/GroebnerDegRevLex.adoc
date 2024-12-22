@@ -1,0 +1,35 @@
+= Příkaz GroebnerDegRevLex
+:page-en: commands/GroebnerDegRevLex
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+== CAS Syntax
+GroebnerDegRevLex( <Seznam polynomů> )::
+Vypočítá Gröbnerovu bázi pro seznam polynomů vzhledem k uspořádání proměnných podle stupňového reverzního lexikografického pořadí
+(také známého jako _stupňové reverzní lexikografické uspořádání_ (_total degree reverse lexicographic ordering_), _reverzní lexikografické uspořádání_ (_degrevlex_) nebo _stupňové reverzní lexikografické uspořádání_ (_grevlex_)).
+ 
+
+
+[EXAMPLE]
+====
+
+`++GroebnerDegRevLex({x^3 - y - 2, x^2 + y + 1})++` dává {stem:[ y^{2} - x + 3 y + 3, x y + x + y + 2, x^{2} + y +
+1 ]}.
+
+====
+GroebnerDegRevLex( <Seznam polynomů>, <Seznam proměnných> )::
+
+Vypočítá Gröbnerovu bázi pro seznam polynomů vzhledem k stupňovému reverznímu lexikografickému uspořádání zadaných proměnných
+(také známého jako _stupňové reverzní lexikografické uspořádání_ (_total degree reverse lexicographic ordering_), _reverzní lexikografické uspořádání_ (_degrevlex_) nebo _stupňové reverzní lexikografické uspořádání_ (_grevlex_)).
+[EXAMPLE]
+====
+
+`++GroebnerDegRevLex({x^3 - y - 2, x^2 + y + 1}, {y, x})++` dává {stem:[ x^{2} + y + 1, y x + y + x + 2, y^{2} + 3y - x + 3]}.
+
+====
+
+[NOTE]
+====
+
+Viz také příkazy xref:/commands/GroebnerLex.adoc[GroebnerLex] a xref:/commands/GroebnerLexDeg.adoc[GroebnerLexDeg].
+
+====
