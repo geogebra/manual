@@ -1,0 +1,35 @@
+= Příkaz ExtendedGCD
+:page-en: commands/ExtendedGCD
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+== CAS Syntax
+
+ExtendedGCD( <Celé číslo>, <Celé číslo>)::
+  Vrátí seznam obsahující celočíselné koeficienty stem:[s, t] z Bézoutovy identity stem:[as+bt= NSD(a,b)] a největší společný dělitel (NSD) zadaných čísel stem:[a] a stem:[b].
+  Výsledky jsou vypočítány pomocí rozšířeného Euklidova algoritmu https://cs.wikipedia.org/wiki/Roz%C5%A1%C3%AD%C5%99en%C3%BD_Eukleid%C5%AFv_algoritmus[Rozšířený Eukleidův algoritmus].
+
+[EXAMPLE]
+====
+
+`++ExtendedGCD(240,46)++` dává {stem:[-9,47,2]}. (Dosazením výsledku do Bézoutovy identity získáme: stem:[-9
+\cdot 240+47 \cdot 46=2]).
+
+====
+ExtendedGCD( <Polynom>, <Polynom>)::
+  Vrátí seznam obsahující koeficienty polynomů stem:[S(x), T(x)] z Bézoutovy identity pro polynomy stem:[A(x)S(x) + B(x)T(x) = NSD(A(x), B(x))] a největší společný dělitel (NSD) zadaných polynomů stem:[A(x)] a stem:[B(x)].
+  Výsledky jsou vypočítány pomocí rozšířeného Euklidova algoritmu.
+
+[EXAMPLE]
+====
+
+`++ExtendedGCD(x^2-1,x+4)++` dává {stem:[1,-x+4,15]}. (Dosazením výsledku do Bézoutovy identity pro polynomy získáme: stem:[1 \cdot (x^2-1) + (-x+4) \cdot (x+4) = 15]).
+
+====
+
+[NOTE]
+====
+
+* NSD dvou polynomů není jednoznačný (je jednoznačný až na skalární násobek).
+* Viz také příkaz xref:/commands/NSD.adoc[NSD].
+
+====
