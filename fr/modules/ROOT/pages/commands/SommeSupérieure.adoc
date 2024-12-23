@@ -2,8 +2,15 @@
 :page-en: commands/UpperSum
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:/commands/Commandes_Calculs_et_Fonctions.adoc[Commandes Calculs et Fonctions].
+
 SommeSupérieure( <Fonction f>, <Nombre a>, <Nombre b>, <Nombre n> )::
   Approximation supérieure de l’intégrale de _f_ sur l’intervalle [_a; b_] par _n_ rectangles.
+
+[EXAMPLE]
+====
+`++SommeSupérieure(x^2, -2, 4, 6)++` retourne _35_.
+==== 
 
 [NOTE]
 ====
@@ -12,7 +19,16 @@ Cette commande dessine aussi les rectangles.Cette commande est conçue comme une
 pas de réponse précise si le nombre de rectangles est trop grand.
 
 ====
+_____________________________________________________________
 
+
+image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel , mais sans la possibilité d'effectuer du calcul
+littéral.
+
+Validez une affectation, ou cliquez a posteriori sur la pastille de visibilité.
+_____________________________________________________________
 [.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/SommeInférieure.adoc[SommeInférieure],
 xref:/commands/SommeGauche.adoc[SommeGauche], xref:/commands/SommeRectangles.adoc[SommeRectangles] et
 xref:/commands/SommeTrapèzes.adoc[SommeTrapèzes].
