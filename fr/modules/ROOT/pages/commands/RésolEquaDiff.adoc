@@ -2,7 +2,9 @@
 :page-en: commands/SolveODE
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-*→* *Résolution numérique*
+xref:/commands/Commandes_Calculs_et_Fonctions.adoc[Commandes Calculs et Fonctions].
+
+== *Résolution numérique*
 
 RésolEquaDiff( <f(x,y)>, <x initial>, <y initial>, <x final>, <pas> )::
   Résout numériquement une équation différentielle d'ordre un : stem:[ \frac{dy}{dx}=f(x,y)] à partir d'un point donné
@@ -65,7 +67,7 @@ Le résultat est toujours un lieu. Les algorithmes sont basés sur les méthodes
 
 
 
-*→* *Résolution formelle*
+== *Résolution formelle*
 
 RésolEquaDiff( <f(x, y)> )::
   Essaye de trouver la solution exacte de l'équation différentielle d'ordre un stem:[\frac{dy}{dx}(x)=f(x, y(x))].
@@ -89,7 +91,7 @@ RésolEquaDiff( <f(x, y)>, <Point A de f> )::
 `++RésolEquaDiff(y / x,(1,2))++` retourne _f(x) = 2 x_.
 
 ====
-
+___________________________________________________
 image:20px-Menu_view_cas.svg.png[Menu view cas.svg,width=20,height=20] *Calcul formel*
 
 Seules les syntaxes suivantes sont autorisées .
@@ -142,15 +144,16 @@ RésolEquaDiff( <Équation différentielle en w,v>, <Variable Dépendante v>, < 
 
 ====
 
-RésolEquaDiff( <Équation différentielle en w,v>, <Variable Dépendante v>, <Variable Indépendante w>, <Point(s) L de f>
-)::
+RésolEquaDiff( <Équation différentielle en w,v>, <Variable Dépendante v>, <Variable Indépendante w>, <Point(s) L de f> )::
   Combine les paramètres des deuxième et quatrième syntaxes.
 
-RésolEquaDiff( <Équation différentielle en w,v>, <Variable Dépendante v>, <Variable Indépendante w>, <Point(s) L de f>,
-<Point(s) L' de f'> )::
+RésolEquaDiff( <Équation différentielle en w,v>, <Variable Dépendante v>, <Variable Indépendante w>, <Point(s) L de f>, <Point(s) L' de f'> )::
   Combine les paramètres des troisième et quatrième syntaxes.
 
+___________________________________________________
+
 [NOTE]
+
 ====
 
 Pour la compatibilité avec le champ de saisie, si le premier paramètre est seulement une expression sans _y'_
