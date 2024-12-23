@@ -2,6 +2,8 @@
 :page-en: commands/LeftSum
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:/commands/Commandes_Calculs_et_Fonctions.adoc[Commandes Calculs et Fonctions].
+
 SommeGauche( <Fonction>, <x min>, <x max>, <Nombre Rectangles> )::
   Calcule une approximation de l'intégrale de la fonction _f_ sur l'intervalle [_a_, _b_] à l'aide de _n_ rectangles.
 
@@ -9,6 +11,11 @@ SommeGauche( <Fonction>, <x min>, <x max>, <Nombre Rectangles> )::
 xref:/commands/SommeInférieure.adoc[Commande SommeInférieure] et xref:/commands/SommeSupérieure.adoc[Commande
 SommeSupérieure])
 
+[EXAMPLE]
+====
+
+SommeGauche(x^2 + 1, 0, 2, 4) retourne _3.75_
+====
 [NOTE]
 ====
 
@@ -16,6 +23,17 @@ Cette commande dessine les rectangles. Cette commande est conçue comme une aide
 réponse précise si le nombre de rectangles est trop grand.
 
 ====
+
+_____________________________________________________________
+
+
+image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel , mais sans la possibilité d'effectuer du calcul
+littéral.
+
+Validez une affectation, ou cliquez a posteriori sur la pastille de visibilité.
+_____________________________________________________________
 
 [.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/SommeRectangles.adoc[SommeRectangles] et
 xref:/commands/SommeTrapèzes.adoc[SommeTrapèzes] en plus des 2 autres commandes citées ci-dessus.
