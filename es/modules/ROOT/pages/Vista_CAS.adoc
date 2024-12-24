@@ -47,13 +47,12 @@ cas.svg,width=16,height=16] _Vista CAS_ solo es válido `++a*(b+c)++`.
 
 === Atajos de teclado para la entrada directa
 
-En la image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Vista CAS_ de GeoGebra Escritorio (para
-Windows) están disponibles los siguientes atajos para evaluar o controlar lo que se ingresa:
+En la image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Vista CAS_ de la versión de escritorio de GeoGebra están disponibles los siguientes atajos para evaluar o controlar lo que se ingresa:
 
 [NOTE]
 ====
 
-En lugar de utilizar estos atajos es posible recurrir a las xref:/tools/Herramientas_CAS.adoc[herramientas] correspondientes
+En lugar de utilizar estos atajos es posible recurrir a las xref:/tools/Herramientas_CAS.adoc[_herramientas_] correspondientes
 en la _Barra de herramientas de la Vista CAS_.
 
 ====
@@ -64,7 +63,7 @@ en la _Barra de herramientas de la Vista CAS_.
 ====
 
 * Las asignaciones son evaluadas siempre. Por ejemplo, `++a := 5++`
-* Se concluye la salida con un punto y coma al final de la entrada como, por ejemplo, `++a := 5;++`
+* Se puede suprimir la salida con un punto y coma al final de la entrada como, por ejemplo, `++a := 5;++`
 
 ====
 
@@ -72,33 +71,32 @@ en la _Barra de herramientas de la Vista CAS_.
 
 Las asignaciones requieren la notación `++:= ++`. Por ejemplo: `++b := 5++` o `++a(n) := 2n + 3++`.
 
-* Para liberar un nombre de variable se utiliza el comando `++Elimina(b)++`. Por ejemplo, `++Elimina(b)++` libera la
-variable _b_.
-* La redefinición de una variable o función debe realizarse *en la misma celda* en que fue creada. De lo contrario será
-considerada como un nuevo objeto y se le cambiará el nombre automáticamente a la variable o función previa.
+* _Liberar un nombre_: se debe utilizar el comando `++Elimina(b)++` para liberar nuevamente un nombre de variable.
+* _Redefinir una variable o función_: Se puede redefinir una variable o función, pero debe hacerse *en la misma celda*;
+de lo contrario, será tratada como una nueva variable y renombrada automáticamente.
 
 Las variables y funciones están siempre compartidas entre la image:16px-Menu_view_cas.svg.png[Menu view
-cas.svg,width=16,height=16] _Vista CAS_ y demás _vistas_ de GeoGebra, mientras sea posible. Por ejemplo:
+cas.svg,width=16,height=16] _Vista CAS_ y demás _Vistas_ de GeoGebra, mientras sea posible. Por ejemplo:
 
 * Si se define `++b:=5++` en la image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Vista CAS_ se
-puede usar _b_ en cualquier otra vista de GeoGebra.
-* Si se ha definido la función `++f(x)=x^2++` en otra _vista_, se puede usar tal función también en la
+puede usar _b_ en cualquier otra _Vista_ de GeoGebra.
+* Si se ha definido la función `++f(x)=x^2++` en otra _Vista_, se puede usar tal función también en la
 image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Vista CAS_.
 
 [NOTE]
 ====
 
-La salida será siempre la expresión que se ingresa a la derecha del signo *`++:=++`*. Por ejemplo: cuando se ingresa
+La salida será siempre la expresión que se ingresa *después* del signo `++:=++`. Por ejemplo: cuando se ingresa
 `++b:=5++` la salida es _5_. No obstante, para evitar confusiones la salida muestra _b := 5_.
 
 ====
 
 === Ecuaciones
 
-Las ecuaciones se escriben usando simplemente el signo igual, por ejemplo: `++3x + 5 = 7++`.
+* Las ecuaciones se escriben usando simplemente el signo _igual_, por ejemplo: `++3x + 5 = 7++`.
 
-* Se pueden realizar operaciones sobre ambos miembros de una ecuación, lo cual resulta útil para resolver ecuaciones
-paso a paso.
+* _Operaciones aritméticas_: Es posible realizar operaciones aritméticas con ecuaciones, lo cual resulta útil para la resolución manual de ecuaciones.
+
 +
 [EXAMPLE]
 ====
@@ -106,7 +104,8 @@ paso a paso.
 `++(3x + 5 = 7) - 5++` resta 5 a ambos miembros de la ecuación.
 
 ====
-* Se puede extraer un solo miembro de una ecuación con los comandos `++PrimerMiembro()++` o `++SegundoMiembro()++`.
+
+* _Extraer un miembro_: Se puede extraer un solo miembro de una ecuación con los comandos `++PrimerMiembro()++` o `++SegundoMiembro()++`.
 +
 [EXAMPLE]
 ====
@@ -120,21 +119,18 @@ paso a paso.
 Se puede hacer referencia a otras filas de la image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
 _Vista CAS_ de dos maneras:
 
-* Referencias *estáticas* de fila: El contenido de la fila se copia en nueva fila, que *no* es actualizada si la fila
-_referida_ es modificada a posteriori.
-** `++#++` copia la salida previa
-** `++#5++` copia la salida de la fila 5
-
-* Referencias *dinámicas* de fila: El contenido de la fila se copia en nueva fila, que *no* es actualizada si la fila
-_referida_ es modificada a posteriori.
-** `++$++` copia la salida previa
-** `++$5++` copia la salida de la fila 5
+* Las *referencias estáticas de fila* copian la salida y *no se actualizará* si la fila _referenciada_ se modifica posteriormente.
+** `++#++`: Copia la salida previa
+** `++#5++`: Copia la salida de la fila 5
+* Las *referencias dinámicas de fila* insertan una referencia a otra fila en lugar de la salida actual, por lo que *se actualizará* si la fila _referenciada_ se modifica posteriormente.
+** `++$++`: Inserta una referencia a la salida anterior.
+** `++$5++`: Inserta una referencia a la salida de la fila 5.
 
 == [#Comandos_CAS]#Comandos CAS#
 
-GeoGeobra ofrece una amplia variedad de _xref:/commands/Comandos_CAS.adoc[comandos]_ que pueden utilizarse para crear
+GeoGebra ofrece una amplia variedad de _xref:/commands/Comandos_CAS.adoc[Comandos CAS]_ que pueden utilizarse para crear
 objetos en la image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Vista CAS_. Basta con comenzar a
-escribir el nombre de un _comando_ en la _línea de entrada_ para que GeoGebra ofrezca una lista de comandos para
+escribir el nombre de un _comando_ en la _línea de entrada_ para que GeoGebra ofrezca una lista de _comandos_ para
 seleccionar.
 
 [NOTE]
@@ -147,14 +143,14 @@ La lista completa de _comandos_ está disponible en la sección xref:/commands/C
 [NOTE]
 ====
 
-A partir de GeoGebra 5 es posible utilizar algunos xref:/Geométricos_en_Vista_Algebraica_CAS.adoc[comandos
-_geométricos_] en la image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Vista CAS_.
+A partir de GeoGebra 5 es posible utilizar algunos xref:/commands/Comandos_geométricos_compatibles_con_la_Vista_CAS.adoc[_comandos
+geométricos_] en la image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Vista CAS_.
 
 ====
 
 == [#Barra_de_Herramientas_CAS]#Barra de Herramientas CAS#
 
-La xref:/Herramientas_CAS.adoc[barra de herramientas CAS] ofrece un repertorio de herramientas que pueden ser accionadas
+La xref:/tools/Herramientas_CAS.adoc[_Barra de herramientas CAS_] ofrece un repertorio de herramientas que pueden ser accionadas
 con el ratón y sirven para evaluar expresiones ingresadas y realizar cálculos. Inmediatamente después de ingresada la
 expresión se debe hacer clic en la _herramienta CAS_ correspondiente para aplicarla a lo ingresado.
 
@@ -163,24 +159,24 @@ xref:/Herramientas_CAS.adoc[image:315px-Toolbar-CAS.png[Toolbar-CAS.png,width=31
 [NOTE]
 ====
 
-*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Aviso:* Si se selecciona un fragmento del texto
-ingresado, la herramienta se aplicará solamente a esa parte.
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Aviso:* En GeoGebra Clásico 5 es posible seleccionar
+parte del texto de entrada para aplicar la operación solo a esa parte seleccionada. Esta función no está disponible actualmente en Classic 6.
 
 ====
 
 [NOTE]
 ====
 
-La lista completa de _herramientas_ está disponible en la sección _xref:/Herramientas_CAS.adoc[Herramientas CAS]_.
+La lista completa de _herramientas_ está disponible en la sección _xref:/tools/Herramientas_CAS.adoc[Herramientas CAS]_.
 
 ====
 
-== [#Menús_contextuales]####[#Men.C3.BAs_contextuales]##Menús contextuales##
+== [#Menús_contextuales]#Menús contextuales#
 
 === Menú contextual del encabezado de filas
 
-Al hacer clic derecho (MacOS [.kcode]##Ctrl##+clic) en el encabezado de una fila se despliega un _menú contextual_ con
-las siguientes opciones.
+Al hacer clic derecho en la versión de escritorio de GeoGebra (MacOS [.kcode]##Ctrl##+clic) en el encabezado de una fila se despliega un _menú contextual_ con
+las siguientes opciones:
 
 * *Inserta arriba*: Inserta una fila vacía sobre la seleccionada.
 * *Inserta debajo*: Inserta una fila vacía debajo de la seleccionada.
