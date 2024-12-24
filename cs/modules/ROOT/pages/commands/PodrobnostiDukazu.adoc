@@ -11,26 +11,23 @@ Normálně GeoGebra rozhoduje o pravdivosti xref:/Pravdivostní_hodnoty.adoc[boo
 * Seznam s jedním prvkem: *{false}*, pokud tvrzení není obecně pravdivé.
 * Seznam s jedním prvkem: *{true}*, pokud je předmětné tvrzení vždy pravdivé (ve všech případech, na které může být daný obrázek modifikován).
 * Seznam s více prvky, konkrétně obsahující booleovskou hodnotu _true_ spolu s dalším seznamem pro tzv. _nedegenerativní podmínky_ (_non-degeneracy
-conditions_), pokud je tvrzení pravdivé za určitých podmínek, např. {true, {"JsouKolinearni(A,B,C),JsouTotozne(C,D)"}}.
-Konkrétně to znamená, že pokud není splněna žádná z uvedených podmínek (a obrázek může být sestrojen), předmětné tvrzení je pravdivé.
-* A list *{true,{"..."}}*, if the statement is true under certain conditions, but these conditions cannot be
-translated to human readable form for some reasons.
+conditions_), pokud je tvrzení pravdivé za určitých podmínek. Příkladem takového výstupu je seznam {true, {"JsouKolinearni(A,B,C),JsouTotozne(C,D)"}}, jehož význam je takový, že pokud není splněna žádná z uvedených podmínek "JsouKolinearni(A,B,C),JsouTotozne(C,D)" (a příslušná geometrická konfigurace může být zobrazena), předmětné tvrzení je pravdivé.
+* Seznam ve tvaru *{true,{"..."}}*, pokud je tvrzení pravdivé za určitých podmínek, které však nelze z nějakých důvodů vyjádřit člověku srozumitelnou formou.
 
 [EXAMPLE]
 ====
 
-Let us define a triangle with vertices _A_, _B_ and _C_, and define `++D=MidPoint(B,C)++`, `++E=MidPoint(A,C)++`,
-`++p=Line(A,B)++`, `++q=Line(D,E)++`. Now `++ProveDetails(p∥q)++` returns {true}, which means that if the diagram can
-be constructed, then the midline _DE_ of the triangle is parallel to the side _AB_.
+Nechť jsou pro trojúhelník s vrcholy _A_, _B_, _C_ definovány body `++D=StredSoumernosti(B,C)++`, `++E=StredSoumernosti(A,C)++` a přímky
+`++p=Primka(A,B)++`, `++q=Primka(D,E)++`. Potom příkaz `++PodrobnostiDukazu(p∥q)++` vrátí {true}, což znamená, že pokud lze sestrojit obrázek, střední příčka _DE_ uvažovaného trojúhelníku je rovnoběžná se stranou _AB_.
 
 ====
 
 [EXAMPLE]
 ====
 
-Let _AB_ be the segment _a_, and define `++C=MidPoint(A,B)++`, `++b=PerpendicularBisector(A,B)++`,
-`++D=Intersect(a,b)++`. Now `++ProveDetails(C==D)++` returns {true,{"AreEqual(A,B)"}}: it means that if the points _A_
-and _B_ differ, then the points _C_ and _D_ will coincide.
+Pro úsečku _AB_ označenou _a_ definujme `++C=StredSoumernosti(A,B)++`, `++b=OsaUsecky(A,B)++`,
+`++D=Prusecik(a,b)++`. Nyní příkaz `++PodrobnostiDukazu(C==D)++` vrátí {true,{"JsouTotozne(A,B)"}}, což znamená, že pokud jsou body _A_
+a _B_ různé, potom body _C_ a _D_ splývají, tj. jsou totožné.
 
 ====
 
