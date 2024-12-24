@@ -2,16 +2,16 @@
 :page-en: commands/Spline
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:/commands/Commandes_Calculs_et_Fonctions.adoc[Commandes Calculs et Fonctions].
+
 Spline( <Liste de Points> )::
   Crée une cubique, définie par morceaux, passant par tous les points.
 
 Spline( <Liste de Points>, <Degré ≥ 3> )::
-  Crée une https://fr.wikipedia.org/Spline[spline], du degré indiqué, passant par tous les points.
+  Crée une https://fr.wikipedia.org/wiki/Spline[spline], du degré indiqué, passant par tous les points.
 
 [NOTE]
 ====
-
-*Note :*
 
 Le résultat de la commande `++Spline() ++` est une courbe.
 
@@ -21,24 +21,41 @@ cubiques comme des fonctions t-> x et t-> y.
 
 ====
 
+
+
+
+
+Spline( <Liste de Points>, <Degré ≥ 3>, <Fonction de poids> )::
+
+Nous avons maintenant une syntaxe qui vous permet de choisir votre propre mappage des points.
+La _Fonction de poids_, appelée ici _f_, est une fonction en x et y. Elle détermine quelle doit être la différence des valeurs t pour les points stem:[P_i] et stem:[P_{i+1}] étant donné qu'est définie  stem:[P_{i+1}-P_i=f(x,y)].
+
+* Pour obtenir la spline que vous attendez de l'algorithme "fonction" vous devez utiliser _abs(x)+0*y_, 
+* Pour obtenir la spline par défaut de GeoGebra, vous pouvez utiliser _sqrt(x^2 + y^2)_. Vous pouvez également essayer _0x+0y+1_.
+
+L'avantage de la distance euclidienne est que le résultat se comporte bien par rapport aux transformations : Rotation(Spline(liste), a)
+donne la même résultat que Spline(Rotation(list, a)). La fonction _0x+0y+1_ a également cette propriété.
+
+
+
+
+Vous povez débuter avec ce fichier qui présente une approche manuelle :
+https://beta.geogebra.org/classic/yDR3sKNW
+
+_____________________________________________________________
+
+
+image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel , mais sans la possibilité d'effectuer du calcul
+littéral.
+
+Validez une affectation, ou cliquez a posteriori sur la pastille de visibilité.
+_____________________________________________________________
+
 _____________________________________________________________
 
 image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] *Graphique
 3D* :
 
 Cette commande fonctionne à l'identique dans la fenêtre Graphique 3D
-
-== [#==]####[#.3D.3D]##==##
-
-Spline( <Liste de Points>, <Degré ≥ 3>, <Fonction de poids> )
-
-In the beta version we now have a syntax that lets you chose your own mapping from points to the parameter. The syntax
-is Spline[list of points, degree,function in x and y]. The last parameter says what should be the difference of t values
-for point P_i and P_\{i+1} given that their P_\{i+1}-P_i=(x,y). To get the spline you expect from "function" algorithm
-you should use abs(x)+0*y, to get the GeoGebra's default spline you can use sqrt(x^2+y^2). You can also try 0x+0y+1. The
-advantage of euclidian distance is that the result behaves nicely with respect to transformations: rotate(spline(list))
-gives the same as spline(rotate(list)). The function 0x+0y+1 has this property also
-
-You can start with this file that shows the "manual" approach:
-
-https://beta.geogebra.org/o/yDR3sKNW
