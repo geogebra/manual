@@ -2,6 +2,8 @@
 :page-en: commands/TrigSimplify
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:/commands/Commandes_Calculs_et_Fonctions.adoc[Commandes Calculs et Fonctions].
+
 TrigoSimplifier( <Expression> )::
   Retourne (théoriquement) une expression simplifiée, ce qui n'est pas toujours le cas en dehors de la fenêtre Calcul
   formel.
@@ -30,6 +32,16 @@ image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul f
 Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
 
 Ici tout nom de variable **est admis**.
+
+[EXAMPLE]
+====
+
+`++f(α):= TrigoSimplifier(sin(α)^2 - cos(α)^2 + 1 )++` crée la fonction stem:[f(α) := 2 sin²(α)] ;
+
+`++g(β):= TrigoSimplifier(1-sin(β)^2)++` crée la fonction stem:[g(β) := cos²(β)].
+
+====
+
 ____________________________________________________________
 [.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/TrigoDévelopper.adoc[TrigoDévelopper] et
 xref:/commands/TrigoCombiner.adoc[TrigoCombiner].
