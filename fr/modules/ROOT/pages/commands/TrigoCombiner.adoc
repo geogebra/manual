@@ -2,6 +2,8 @@
 :page-en: commands/TrigCombine
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:/commands/Commandes_Calculs_et_Fonctions.adoc[Commandes Calculs et Fonctions].
+
 [NOTE]
 ====
 
@@ -16,8 +18,6 @@ TrigoCombiner( <Expression> )::
 
 [EXAMPLE]
 ====
-
-*Exemples :*
 
 `++TrigoCombiner(sin(x)cos(3x))++` retourne stem:[{\frac{1}{2} \sin \left( 4 x \right) - \frac{1}{2} \sin \left( 2
 x \right)}] ;
@@ -37,11 +37,10 @@ TrigoCombiner( <Expression>, <Fonction cible> )::
 [EXAMPLE]
 ====
 
-*Exemples :*
 
 `++TrigoCombiner(sin(x) + cos(x), sin(x))++` retourne stem:[ {\sqrt{2} sin \left( x + \frac{1}{4} \pi \right)} ] ;
 
-`++TrigoSimplifier(TrigoCombiner((tan(x) + tan(2x)) / (1 - tan(x) tan(2x)), tan(x)))++` retourne _tan(3x)_.
+`++TrigoSimplifier(TrigoCombiner((tan(x) + tan(2x)) / (1 - tan(x) tan(2x)), tan(x)))++` retourne stem:[tan(3x)].
 
 ====
 
@@ -56,11 +55,12 @@ Avec la possibilité de travailler en littéral :
 [EXAMPLE]
 ====
 
-Si les variables _p_ et _q_ ne sont pas définies dans GeoGebra
+Si les variables _p_ et _q_ ne sont pas déjà définies dans GeoGebra :
 
-`++TrigoSimplifier(TrigoCombiner((tan(p) + tan(q)) / (1 - tan(p) tan(q)), tan(x)))++` retourne _tan(p + q)_.
+`++TrigoSimplifier(TrigoCombiner((tan(p) + tan(q)) / (1 - tan(p) tan(q)), tan(x)))++` retourne stem:[tan(p + q)].
 
 ====
 
+____________________________________________________________
 [.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/TrigoDévelopper.adoc[TrigoDévelopper] et
 xref:/commands/TrigoSimplifier.adoc[TrigoSimplifier].
