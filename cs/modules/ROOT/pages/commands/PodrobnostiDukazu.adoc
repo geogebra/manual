@@ -34,14 +34,11 @@ a _B_ různé, potom body _C_ a _D_ splývají, tj. jsou totožné.
 [EXAMPLE]
 ====
 
-Let _AB_ be the segment _a_, and define `++l=Line(A,B)++`. Let _C_ be an arbitrary point on line _l_, moreover let
-`++b=Segment(B,C)++`, `++c=Segment(A,C)++`. Now `++ProveDetails(a==b+c)++` returns {true,{"a+b==c", "b==a+c"}}: it
-means that if neither stem:[a+b=c], nor stem:[b=a+c], then stem:[a=b+c].
+Spolu s úsečkou _AB_ označenou _a_ je definována přímka `++l=Line(A,B)++`. Nechť _C_ je libovolný bod na přímce _l_, pro který jsou definovány úsečky `++b=Segment(B,C)++`, `++c=Segment(A,C)++`. Potom příkaz `++ProveDetails(a==b+c)++` vrátí {true,{"a+b==c", "b==a+c"}}, což znamená, že pokud neplatí stem:[a+b=c], ani stem:[b=a+c], potom je pravda, že stem:[a=b+c].
 
 ====
 
-It is possible that the list of the non-degeneracy conditions is not the simplest possible set. For the above example,
-the simplest set would be the empty set.
+Může se stát, že uvedený seznam nedegenerativních podmínek není nejjednodušší možný.
 
 [NOTE]
 ====
