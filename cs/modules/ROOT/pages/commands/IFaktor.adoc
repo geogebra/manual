@@ -1,0 +1,44 @@
+= Příkaz IFactor
+:page-en: commands/IFactor
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+IFaktor( <Polynom> )::
+  Faktorizuje v rámci iracionálních čísel.
+
+[EXAMPLE]
+====
+
+`++IFactor(x^2 + x - 1)++` gives stem:[ \left( x + \frac{-\sqrt{5} + 1}{2} \right) \left( x + \frac{\sqrt{5} +
+1}{2} \right)]
+
+====
+
+== CAS Syntax
+
+IFaktor( <Výraz> )::
+  Faktorizuje v rámci iracionálních čísel.
+
+[EXAMPLE]
+====
+
+`++IFactor(x^2 + x - 1)++` vrátí stem:[ \left( x + \frac{-\sqrt{5} + 1}{2} \right) \left( x + \frac{\sqrt{5} +
+1}{2} \right)]
+
+====
+
+IFaktor( <Výraz>, <Proměnná> )::
+  Faktorizuje v rámci iracionálních čísel vzhledem k zadané proměnné.
+[EXAMPLE]
+====
+
+`++IFactor(a^2 + a - 1, a)++` vrátí stem:[ \left( a + \frac{-\sqrt{5} + 1}{2} \right) \left( a + \frac{\sqrt{5} +
+1}{2} \right)]
+
+====
+
+[NOTE]
+====
+
+Viz také příkaz xref:/commands/CIFactor.adoc[CIFactor].
+
+====
