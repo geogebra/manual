@@ -1,0 +1,24 @@
+= Příkaz IntegralSymbolicky
+:page-en: commands/IntegralSymbolic
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+== CAS Syntax
+
+IntegralSymbolicky( <Číslo> )::
+  Vrátí neurčitý symbolický integrál podle hlavní proměnné. Konstanta integrace _c_ není automaticky zobrazena jako posuvník.
+[EXAMPLE]
+====
+
+`++IntegralSymbolicky(3x^2)++` dává stem:[x^3+c_{1}].
+
+====
+
+IntegralSymbolicky( <Číslo>, <Proměnná> )::
+  Vrátí parciální symbolický integrál podle zadané proměnné. Konstanta integrace _c_ není automaticky zobrazena jako posuvník.
+
+[EXAMPLE]
+====
+
+`++IntegralSymbolicky(x³+3x y, x)++` dává _stem:[ \frac{1}{4}x^4] + stem:[\frac{3}{2} x² y+c_{1} ]_ .
+
+====
