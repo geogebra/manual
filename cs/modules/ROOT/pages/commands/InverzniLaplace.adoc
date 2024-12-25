@@ -1,0 +1,34 @@
+= Příkaz InverzniLaplace
+:page-en: commands/InverseLaplace
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+== CAS Syntax
+
+InverzniLaplace( <Číslo> )::
+  Vrátí https://en.wikipedia.org/wiki/Inverse_Laplace_transform[inverzní Laplaceovu transformaci] dané funkce.
+ 
+[EXAMPLE]
+====
+
+`++ InverzniLaplace[1/(1+t^2)]++` vrátí stem:[\mathbf{ sin(t)} ].
+
+====
+
+InverzniLaplace( <Číslo>, <Proměnná> )::
+  Vrátí inverzní Laplaceovu transformaci funkce vzhledem k zadané proměnné.
+
+[EXAMPLE]
+====
+
+`++InverzniLaplace[ exp(- a*b),a]++` vrátí stem:[\mathbf{Dirac(a-b)}]
+
+`++InverzniLaplace[ exp(- a*b),b]++` vrátí stem:[\mathbf{Dirac(b-a)}]
+
+====
+
+[NOTE]
+====
+
+Viz také příkaz xref:/commands/Laplace.adoc[Laplace].
+
+====
