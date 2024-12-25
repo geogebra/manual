@@ -2,41 +2,40 @@
 :page-en: commands/Pyramid
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
-Pyramid( <Point>, <Point>, ...)::
-  Returns a pyramid defined by the given points.
+Jehlan( <Bod>, <Bod>, ...)::
+  Vytvoří jehlan, který je definovaný danými body.
 
 [EXAMPLE]
 ====
 
-`++Pyramid(A, B, C, D)++` creates the pyramid with base _ABC_ and apex _D_.
+`++Jehlan(A, B, C, D)++` vytvoří jehlan se základnou _ABC_ a hlavním vrcholem _D_.
 
 ====
 
-Pyramid( <Polygon>, <Point> )::
-  Creates a pyramid with the given polygon as base and the point as apex.
+Jehlan( <Mnohoúhelník>, <Bod> )::
+  Vytvoří jehlan, jehož základnou je daný mnohúhelník a hlavním vrcholem daný bod.
 
 [EXAMPLE]
 ====
 
-`++Pyramid(poly1, A)++` creates a pyramid with base _poly1_ and apex _A_.
+`++Jehlan(poly1, A)++` vytvoří jehlan se základnou _poly1_ a hlavním vrcholem _A_.
 
 ====
 
-Pyramid( <Polygon>, <Height> )::
-  Returns a centered pyramid defined by the polygon as base and given height.
+Jehlan( <Mnohoúhelník>, <Výška> )::
+  Vytvoří kolmý jehlan dané výšky, jehož základnou je daný mnohoúhelník (kolmým jehlanem rozumíme jehlan, jehož tělesová výška má patu v těžišti základny).
 
 [EXAMPLE]
 ====
 
-`++Pyramid(poly1, 3)++` creates a centered pyramid with base _poly1_ and height 3.
+`++Jehlan(poly1, 3)++` vytvoří kolmý jehlan se základnou _poly1_ a výškou 3.
 
 ====
 
 [NOTE]
 ====
 
-See also image:24px-Mode_pyramid.svg.png[Mode pyramid.svg,width=24,height=24] xref:/tools/Pyramid.adoc[Pyramid] and
-image:24px-Mode_conify.svg.png[Mode conify.svg,width=24,height=24] xref:/tools/Extrude_to_Pyramid_or_Cone.adoc[Extrude
-to Pyramid] tools.
+Viz též nástroje image:24px-Mode_pyramid.svg.png[Mode pyramid.svg,width=24,height=24] xref:/tools/Pyramid.adoc[Pyramid] a image:24px-Mode_conify.svg.png[Mode conify.svg,width=24,height=24] xref:/tools/Extrude_to_Pyramid_or_Cone.adoc[Extrude
+to Pyramid].
 
 ====
