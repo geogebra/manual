@@ -1,0 +1,28 @@
+= Příkaz JordanovaDiagonalizace
+:page-en: commands/JordanDiagonalization
+:page-aliases: commands/JordanDiagonalisation.adoc
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+
+== CAS Syntax
+
+JordanovaDiagonalizace( <Matice> )::
+  Rozloží zadanou matici do tvaru _S J S⁻¹_, kde _J_ je v https://mathworld.wolfram.com/JordanCanonicalForm.html[Jordanově kanonickém tvaru].
+
+[EXAMPLE]
+====
+
+`++JordanovaDiagonalizace({{1, 2}, {3, 4}})++` dává stem:[ \left(\begin{array}{}\sqrt{33} - 3&-\sqrt{33} -
+3\\6&6\\\end{array}\right) ], stem:[ \left(\begin{array}{}\frac{\sqrt{33} + 5}{2}&0\\0&\frac{-\sqrt{33} +
+5}{2}\\\end{array}\right) ]
+
+====
+
+[NOTE]
+====
+
+* Viz také příkazy xref:/commands/VlastniCisla.adoc[VlastniCisla], xref:/commands/VlastniVektory.adoc[VlastniVektory],
+xref:/commands/SVD.adoc[SVD], xref:/commands/Invertovat.adoc[Invertovat],
+xref:/commands/Transponovat.adoc[Transponovat].
+
+====
