@@ -1,0 +1,42 @@
+= Příkaz Typ
+:page-en: commands/Type
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Typ( <Objekt> )::
+
+V případě kuželoseček a kvadrik tento příkaz vrátí číslo představující typ kuželosečky/kvadriky podle níže uvedené tabulky.
+V tomto kontextu je _prázdná kuželosečka_ (nebo kvadrika) taková, jejíž koeficienty jsou definovány, ale která neobsahuje žádné reálné body.
+např. _x_^2^ + _y_^2^ = -1. U kuželoseček rozlišuje GeoGebra dvojitou přímku (rovnoběžné přímky se vzdáleností 0) a jednoduchou přímku (zvláštní případ kružnice s nekonečným průměrem, 
+může být výsledkem inverze kružnice).
+
+[EXAMPLE]
+====
+
+`++Typ(x²+y²=1)++` vrací číslo 4, což znamená kružnici.
+
+====
+
+[cols=",,",options="header",]
+|===
+|Hodnota |Typ kuželosečky |Typ kvadriky
+|1 |Bod |Bod
+|2 |Různoběžné přímky |
+|3 |Elipsa |Elipsoid
+|4 |Kružnice |Koule
+|5 |Hyperbola |
+|6 |Prázdná |Prázdná
+|7 |Dvojitá přímka |
+|8 |Rovnoběžné přímky |
+|9 |Parabola |Paraboloid
+|10 |Přímka |Přímka
+|30 | |Kužel
+|31 | |Válec
+|33 | |Rovina
+|34 | |Rovnoběžné roviny
+|35 | |Různoběžné roviny
+|36 | |Jednodílný hyperboloid
+|37 | |Dvoudílný hyperboloid
+|38 | |Parabolický válec
+|39 | |Hyperbolický válec
+|40 | |Hyperbolický paraboloid
+|===
