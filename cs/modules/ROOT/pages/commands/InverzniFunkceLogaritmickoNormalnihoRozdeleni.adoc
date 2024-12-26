@@ -1,0 +1,16 @@
+= Příkaz InverzniFunkceLogaritmickoNormalnihoRozdeleni
+:page-en: commands/InverseLogNormal
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+InverzniFunkceLogaritmickoNormalnihoRozdeleni( <Střední hodnota>, <Směrodatná odchylka>, <Pravděpodobnost> )::
+  Vypočítá inverzní kumulativní distribuční funkci https://cs.wikipedia.org/wiki/Logaritmicko-norm%C3%A1ln%C3%AD_rozd%C4%9Blen%C3%AD[logaritmicko-normálního rozdělení] při pravděpodobnosti _p_, kde logaritmicko-normální 
+  rozdělení je definováno zadanými parametry _střední hodnoty_ a _směrodatné odchylky_.
+  Jinými slovy, najde hodnotu _t_, pro kterou platí _P(X ≤ t) = p_, kde _X_ je náhodná veličina s logaritmicko-normálním rozdělením. Pravděpodobnost _p_ musí být hodnota v uzavřeném intervalu [_0, 1_].
+
+[EXAMPLE]
+====
+
+* `++InverzniFunkceLogaritmickoNormalnihoRozdeleni(10, 20, 1/3)++` vrátí _3.997_.
+* `++InverzniFunkceLogaritmickoNormalnihoRozdeleni(1000, 2, 1)++` vrátí stem:[ \infty ].
+
+====
