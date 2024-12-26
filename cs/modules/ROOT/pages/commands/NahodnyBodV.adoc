@@ -1,0 +1,26 @@
+= Příkaz NahodnyBodV
+:page-en: commands/RandomPointIn
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+NahodnyBodV( <Oblast> )::
+
+Vytvoří bod náhodně umístěný v dané oblasti, kterou může být mnohoúhelník nebo uzavřená kuželosečka.
+
+NahodnyBodV( <Seznam bodů> )::
+
+Vytvoří bod náhodně umístěný v mnohoúhelníku, jehož vrcholy jsou dané body.
+
+[EXAMPLE]
+====
+
+Příkazy `++NahodnyBodV(Mnohouhelnik(A,B,C))++` a `++NahodnyBodV(A,B,C)++` mají stejný výsledek, náhodný bod v trojúhelníku ABC.
+
+Pro generování náhodných bodů z daného seznamu použijte příkaz xref:/commands/NahodnyPrvek.adoc[NahodnyPrvek].
+
+
+====
+
+
+NahodnyBodV( <xMin>, <xMax>, <yMin>, <yMax> )::
+
+Vytvoří náhodný bod, jehož x-souřadnice náleží do intervalu [xMin,xMax] a y-souřadnice náleži do [yMin, yMax].
