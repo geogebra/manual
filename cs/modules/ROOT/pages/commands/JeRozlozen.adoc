@@ -1,0 +1,24 @@
+= Příkaz JeRozlozen
+:page-en: commands/IsFactored
+:page-aliases: commands/IsFactorised.adoc
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+JeRozlozen( <Polynom> )::
+  Vrátí „true“, pokud je polynom faktorizován v stem:[\mathbb Q] (v racionálních číslech) a „false“ v opačném případě.
+  Obecně platí, že pro to, aby byl rozklad polynomu považován za faktorizovaný, musí být koeficient vedoucího členu každého činitele kladný.
+
+[EXAMPLE]
+====
+* `JeRozlozen(x)` dává _true_ +
+* `JeRozlozen(0.5)` dává _true_ +
+* `JeRozlozen(5)` dává _true_ +
+* `JeRozlozen(x^2-1)` dává _false_ +
+* `JeRozlozen(x^2-2)` dává _true_ +
+* `JeRozlozen(x(x+1))` dává _true_ +
+* `JeRozlozen(x(2x+2))` dává _false_ +
+* `JeRozlozen(x^3-1)` dává _false_ +
+* `JeRozlozen(x(x/2+1/2))` dává _false_ +
+* `JeRozlozen((x+1)(x^2-1))+` dává _false_ +
+* `JeRozlozen(-2x-2)` dává _false_ +
+* `JeRozlozen(2x+2)` dává _false_ +
+====
