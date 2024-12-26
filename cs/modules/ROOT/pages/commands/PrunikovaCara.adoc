@@ -2,14 +2,59 @@
 :page-en: commands/IntersectPath
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
+
+PrunikovaCara( <Přímka>, <Mnohoúhelník> )::
+  Vytvoří úsečku, která je průnikem přímky a mnohoúhelníku.
+
+[EXAMPLE]
+====
+
+`++PrunikovaCara(a, t1)++` vytvoří úsečku mezi průsečíky přímky _a_ s trojúhelníkem _t1_.
+
+====
+
+
 PrunikovaCara( <Mnohoúhelník>, <Mnohoúhelník> )::
-  Určí a v grafu vyznačí průnik (překrytí) dvou zadaných mnohoúhelníků. Funguje pouze pro mnohoúhelníky, které samy sebe
-  neprotínají a jejichž sjednocením je jednoduchý mnohoúhelník.
+  Určí a v grafu vyznačí průnik (překrytí) dvou zadaných mnohoúhelníků.
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+[EXAMPLE]
+====
 
-|Some content was not yet translated.
-|===
+`++PrunikovaCara(t1, ct1)++` vytvoří nový mnohoúhelník, který je průnikem trojúhelníku _t1_ a čtyřúhelníku _ct1_.
+
+====
+
+[NOTE]
+====
+
+Nový mnohoúhelník může být čtyřúhelník, pětiúhelník nebo šestiúhelník. To závisí na poloze vrcholů prvku
+daných mnohoúhelníků.
+
+====
+
+PrunikovaCara( <Rovina>, <Mnohoúhelník> )::
+  Průnik roviny a mnohoúhelníku.
+
+[EXAMPLE]
+====
+
+`++PrunikovaCara(a, t1)++` vytvoří v rovině _a_ úsečku, která je průnikem roviny a trojúhelníku _t1_.
+
+====
+
+PrunikovaCara( <Rovina>, <Kvadrika> )::
+  Rovinný řez kvadriky. Obecně je průnikovou křivkou roviny a kvadratické plochy (kulová plocha, válcová plocha, kuželová plocha, atd.) kuželosečka.
+
+[EXAMPLE]
+====
+
+`++PrunikovaCara(a, koule)++` vytvoří kružnici, která je řezem kulové plochy _koule_ a roviny _a_.
+
+====
+
+[NOTE]
+====
+
+Viz také příkazy xref:/commands/Prunik.adoc[Prunik] and xref:/commands/PrunikovaKuzelosecka.adoc[PrunikovaKuzelosecka].
+
+====
