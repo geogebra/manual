@@ -1,0 +1,24 @@
+= Příkaz QRRozklad
+:page-en: commands/QRDecomposition
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+== CAS syntaxe
+
+QRRozklad( <Matice> )::
+  Vypočítá https://en.wikipedia.org/wiki/QR_decomposition[QR rozklad] dané matice.
+
+[EXAMPLE]
+====
+
+`++QRRozklad({{1,2},{3,4}})++` vrátí matice
+stem:[\begin{pmatrix}\frac{1}{\sqrt{10}}&\frac{3/5}{\sqrt{10}/5}\\\frac{3}{\sqrt{10}}&-\frac{1/5}{\sqrt{10}/5}\end{pmatrix}] a
+stem:[\begin{pmatrix}\sqrt{10}&7/5\sqrt{10}\\0&\sqrt{10}/5\end{pmatrix}].
+
+====
+
+[NOTE]
+====
+
+Viz též příkaz :/commands/LURozklad.adoc[LURozklad].
+
+====
