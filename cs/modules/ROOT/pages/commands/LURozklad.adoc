@@ -1,0 +1,24 @@
+= Příkaz LURozklad
+:page-en: commands/LUDecomposition
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+== CAS syntaxe
+
+LURozklad( <Matice> )::
+  Vypočítá https://en.wikipedia.org/wiki/LU_decomposition[LU rozklad] dané matice.
+
+[EXAMPLE]
+====
+
+`++LURozklad({{2,0},{1,1}})++` vrátí matice
+stem:[\begin{pmatrix}0&1\\1&0\end{pmatrix}],stem:[\begin{pmatrix}1&0\\2&1\end{pmatrix}] a
+stem:[\begin{pmatrix}1&1\\0&-2\end{pmatrix}].
+
+====
+
+[NOTE]
+====
+
+Viz též příkaz xref:/commands/QRRozklad.adoc[QRRozklad] command.
+
+====
