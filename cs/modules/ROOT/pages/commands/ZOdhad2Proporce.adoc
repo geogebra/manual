@@ -12,7 +12,9 @@ ZProportion2Estimate( <Proporce vzorku 1 >, <Velikost vzorku 1>, <Proporce vzork
 [EXAMPLE]
 ====
 Máme dvě hrací kostky a zkoumáme, jestli je šance padnutí "šestky" u obou stejná. První kostkou jsme házeli 20 x a šestka padla ve čtyřech pokusech. Druhou kostkou jsme házeli
-30 x, šestka padla pětkrát. Poměry p1 = 4/20, p2 =5/30 jsou velmi blízké,  _p1 - p2 = 0.03_. Příkaz 
+30 x, šestka padla pětkrát. Poměry _p1_ = 4/20, _p2_ =5/30 jsou velmi blízké,  _p1 - p2 = 0.03_. 
+
+Příkaz 
 `++ ZOdhad2Proporce( 4/20, 20, 5/30, 30,0.95)  ++` vypíše interval spolehlivosti pro rozdíl _p1 - p2_ 
 ve tvaru seznamu `++{-0.19, 0.25}++`.
 ====
