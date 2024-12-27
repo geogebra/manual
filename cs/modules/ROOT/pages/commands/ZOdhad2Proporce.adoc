@@ -1,0 +1,29 @@
+= Příkaz ZOdhad2Proporce
+:page-en: commands/ZProportion2Estimate
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+ZProportion2Estimate( <Proporce vzorku 1 >, <Velikost vzorku 1>, <Proporce vzorku 2>, <Velikost vzorku 2>, <Hladina spolehlivosti> )::
+  Vypočítá interval spolehlivosti Z testu pro rozdíl poměrného zastoupení znaku ve dvou vzorcích, tzv. Z-testu o proporci. Zadáme zjištěné poměry ve dvou vzorcích, počet pokusů(velikost vzorku) 
+  a hladinu spolehlivosti.
+  Hladina spolehlivosti (1 - hladina významnosti) je je statistická míra procenta výsledků testu, u nichž lze 
+  očekávat, že se budou nacházet v určitém rozmezí. Například úroveň spolehlivosti 95 % znamená, že výsledek pravděpodobně splní očekávání v 95 % případů.
+  Výsledkem příkazu je seznam _{dolní hranice, horní hranice}_ intervalu spolehlivosti.
+
+[EXAMPLE]
+====
+Máme dvě hrací kostky a zkoumáme, jestli je šance padnutí "šestky" u obou stejná. První kostkou jsme házeli 20 x a šestka padla ve čtyřech pokusech. Druhou kostkou jsme házeli
+30 x, šestka padla pětkrát. Poměry p1 = 4/20, p2 =5/30 jsou velmi blízké,  _p1 - p2 = 0.03_. Příkaz 
+`++ ZOdhad2Proporce( 4/20, 20, 5/30, 30,0.95)  ++` vypíše interval spolehlivosti pro rozdíl _p1 - p2_ 
+ve tvaru seznamu `++{-0.19, 0.25}++`.
+====
+
+
+[NOTE]
+====
+
+Z-test pro porovnání dvou podílů je statistická metoda používaná k vyhodnocení, zda se podíl určité charakteristiky významně 
+liší mezi dvěma nezávislými vzorky. Tento test využívá vlastnosti, že výběrové podíly  jsou asymptoticky normální, viz. https://en.wikipedia.org/wiki/Two-proportion_Z-test[Two-proportion Z test].
+
+====
+
+
