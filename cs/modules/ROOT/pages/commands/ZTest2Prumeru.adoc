@@ -1,0 +1,18 @@
+= Příkaz ZTest2Prumeru
+:page-en: commands/ZMean2Test
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+ZTest2Prumeru( <Seznam dat 1>, <σ1>, <Seznam dat 2>, <σ2>, <Konec> )::
+  Provede https://cs.wikipedia.org/wiki/Z-test[Z test] pro rozdíl populačních průměrů ze zadaných seznamů dat a směrodatných odchylek. 
+Předpokládáme, že data pocházejí z normálního rozdělení a směrodatné odchylky známe.Pokud je musíme odhadovat, je nutné použít https://cs.wikipedia.org/wiki/T-test[T-test]. 
+Poslední parametr _Konec_ určuje, zda formulujeme jednostranné nebo oboustranné testy. 
+_Konec_ může mít hodnoty "<", ">" , "≠", které určují následující hypotézy: +
+  "<" = rozdíl průměrů < 0 +
+  ">" = rozdíl průměrů > 0 +
+  "≠" = rozdíl průměrů ≠ 0
+
+Výsledky příkazu jsou ve tvaru seznamu {p-hodnota, Z test statistika}.
+
+ZTest2Prumeru( <Průměr vzorku 1 >, <σ1>, <Velikost vzorku 1>, <Průměr vzorku 2 >, <σ2>, <Velikost vzorku 2>, <Konec> )::
+  Provede https://cs.wikipedia.org/wiki/Z-test[Z test] rozdílů průměrů dvou populací ze zadaných průměrů, směrodatných odchylek a počtu hodnot datových souborů (vzorků). 
+_Konec_ je definovýn výše.
