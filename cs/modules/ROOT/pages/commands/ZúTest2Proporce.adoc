@@ -3,7 +3,7 @@
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
 ZúTest2Proporce( <Proporce vzorku 1>, <Velikost vzorku 1>, <Proporce vzorku 2>, <Velikost vzorku 2>, <Konec> )::
-  Vypočítá P-hodnotu dvouvýběrového Z-testu o proporci, která testuje nulovou hypotézu, že jsou proporce _p1, p2_ ve dvou vzorcích stejné. Zadáváme zjištěné proporce (poměry)
+  Vypočítá P-hodnotu dvouvýběrového Z-testu o proporci, který testuje nulovou hypotézu, že jsou proporce _p1, p2_ ve dvou vzorcích stejné. Zadáváme zjištěné proporce (poměry)
 _p1, p2_ a počet naměřených hodnot. Poslední parametr _Konec_ určuje, zda formulujeme oboustranný nebo jednostranný test.
  V uvozovkách zvolíme jeden ze znaků  "<", ">" , "≠", které specifikují alternativní hypotézu následovně:
 
@@ -16,14 +16,19 @@ Příkaz vypíše výsledek ve tvaru seznamu {P-hodnota, Z test statistika}. Č�
 
 [EXAMPLE]
 ====
+
 Máme dvě hrací kostky a zkoumáme, jestli je šance padnutí "šestky" u obou stejná. První kostkou jsme házeli 20 x a šestka padla ve čtyřech pokusech. Druhou kostkou jsme házeli
-30 x, šestka padla pětkrát. Poměry _p1_ = 4/20, _p2_ =5/30 jsou velmi blízké,  _p1 - p2 = 0.03_. Příkaz 
-`++ ZúTest2Proporce( 4/20, 20, 5/30, 30, ">") ++` vypíše _P hodnotu_ proporčního Z-testu a Z statistiku jako seznam `++{0.38, 0.3}++`. Vysoká P-hodnota znamená, že šance 
+30 x, šestka padla pětkrát. Poměry _p1_ = 4/20, _p2_ =5/30 jsou velmi blízké,  _p1 - p2 = 0.03_. 
+
+Příkaz 
+`++ ZúTest2Proporce( 4/20, 20, 5/30, 30, ">") ++` vypíše _P hodnotu_ a Z statistiku jako seznam `++{0.38, 0.3}++`. Vysoká P-hodnota znamená, že šance 
 na padnutí šestky jsou u obou kostek srovnatelné. 
 
 Pokud by se na druhé kostce ze třicetí hodů podařilo získat šestku jenom jednou, vyjde P-hodnota 0.03, což je číslo menší než obvyklá hladina významnosti 0.05 a 
 můžeme formulovat závěr, že jsou kostky  prokazatelně rozdílné.
+
 `++ ZúTest2Proporce( 4/20, 20, 1/30, 30, ">") ++`  vrací seznam `++{0.03, 1.92}++`.
+
 ====
 
 
