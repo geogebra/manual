@@ -1,0 +1,23 @@
+= Příkaz ZTest2Prumeru
+:page-en: commands/ZMean2Estimate
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+ZTest2Prumeru( <Seznam dat 1>, <Seznam dat 2>, <σ1>, <σ2>, <Hladina spolehlivosti> )::
+ Vypočítá  interval spolehlivosti xref:/https://cs.wikipedia.org/wiki/Z-test[_Z_ testu] odhadu rozdílu mezi dvěma populačními průměry na základě zadaných výběrových dat,
+  směrodatné odchylky a _hladiny spolehlivosti_ (1 - hladina významnosti). Hladiny spolehlivosti je statistická míra procenta výsledků testu, u nichž lze 
+  očekávat, že se budou nacházet v určitém rozmezí. Například úroveň spolehlivosti 95 % znamená, že výsledek pravděpodobně splní očekávání v 95 % případů.
+  Výsledky jsou vráceny ve formě seznamu jako {dolní mez, horní mez} intervalu spolehlivosti.
+
+
+[EXAMPLE]
+====
+
+Nechť jsou dány dva seznamy dat: `++data1 = {1, 4, 5, 4, 1, 3, 4, 2}++`, `++data2 = {2, 1, 3, 1, 2, 5, 2, 4}++`. Směrodatná odchylka prvního vzorku je
+ `++σ_1 = sqrt(2)++`, směrodatná odchylka druhého seznamu _data2_ je `++σ_2  = sqrt(1.75)++` a hladinu spolehlivosti zadáme 0.75. 
+`++ZTest2Prumeru(data1, data2, σ_1,  σ_2, 0.75)++` vrátí seznam _l1 = {-0.29, 1.29}_.
+
+====
+
+ZTest2Prumeru( <Průměr dat 1>, <σ1>, <Velikost vzorku 1>, <Průměr dat 2 >, <σ2>, <Velikost vzorku 2>, <Hladina spolehlivosti>)::
+  Vypočítá interval spolehlivosti _Z_ testu odhadu rozdílu mezi dvěma  průměry na základě průměrů vzorků dat, směrodatných odchylek _σ1, σ2_, počtů hodnot ve vzorcích dat a _Hladiny spolehlivosti_.
+  Výsledky jsou vráceny ve formě seznamu jako {dolní mez, horní mez} intervalu spolehlivosti.
