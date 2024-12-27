@@ -1,0 +1,36 @@
+= Příkaz ZTestPrumeru
+:page-en: commands/ZMeanTest
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+ZTestPrumeru( <Seznam dat>, <σ>, <Předpokládaný průměr>, <Konec> )::
+  Provede jednovýběrový https://cs.wikipedia.org/wiki/Z-test[Z test] předpokládaného průměru populace z daného seznamu dat a směrodatné odchylky.
+Nulová hypotéza testuje rovnost průměru populace s předpokládaným průměrem. Parametr _Konec_ určuje, zda testujeme jednostranně, nebo oboustranně.
+  _Konec_ může nabývat tři možné hodnoty "<", ">" , "≠", které určují alternativní hypotézy:
+
+  "<" = průměr populace < _Předpokládaný průměr_
+  ">" = průměr populace > _Předpokládaný průměr_
+  "≠" = průměr populace ≠ _Předpokládaný průměr_
+
+Výsledek je vypsán jako seznam {P-hodnota, Z statistika}. Čím je P-hodnota menší, tím průkazněji zamítneme nulovou hypotézu o rovnosti průměrů.
+
+ZTestPrumeru( <Průměr vzorku>, <σ>, <Velikost vzorku>, <Předpokládaný průměr>, <Konec> )::
+   Provede jednovýběrový https://cs.wikipedia.org/wiki/Z-test[Z test] předpokládaného průměru populace z průměru vzorku, směrodatné odchylky a počtu pokusů.
+_Předpokládaný průměr_ a _Konec_ mají stejný význam jako u předcházejícího příkladu.
+ Výsledek je vypsán jako seznam {P-hodnota, Z statistika}.
+
+[EXAMPLE]
+====
+Testujeme, zda se IQ obyvatel našeho města liší od celosvětového průměru 100. https://cs.wikipedia.org/wiki/Inteligen%C4%8Dn%C3%AD_kvocient[Inteligenční kvocient] 
+má střední hodnotu 100 a směrodatnou odchylku 15. Na základě testů 200 obyvatel jsme získali průměrnou hodnotu 102. 
+
+`++ ZTestPrumeru(102, 15, 200, 100, "≠") ++`  vrací seznam {0.059, 1.886}. P-hodnota 0.059 je větší než 0.05, tedy na této hladině významnosti se neprokázalo, že by se průměr IQ obyvatel města
+lišil od celosvětového průměru.
+
+====
+
+[NOTE]
+====
+
+Z-test je statistický test, při němž za předpokladu nulové hypotézy má testová statistika normální rozdělení se známou směrodatnou odchylkou. Pokud směrodatnou odchylku předem neznáme, ale odhadujeme z dat, tak se používá Studentův t-test, leda by počet pozorování byl tak velký (udává se aspoň 30), že rozdíl mezi oběma typy testu je prakticky zanedbatelný, viz. https://cs.wikipedia.org/wiki/Z-test[Z-test].
+
+====
