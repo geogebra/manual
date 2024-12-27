@@ -1,0 +1,20 @@
+= Příkaz ZStredniOdhad
+:page-en: commands/ZMeanEstimate
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+ZStredniOdhad( <Seznam dat>, <σ>, <Hladina spolehlivosti> )::
+  Vypočítá _Z_ interval spolehlivosti průměru populace z daného seznamu dat, směrodatné odchylky
+  a hladiny významnosti.
+  Výsledek je ve tvaru seznamu {dolní limit, horní limit} intervalu spolehlivosti.
+
+ZStredniOdhad( <Průměr vzorku>, <σ>, <Velikost vzorku>, <Hladina spolehlivosti> )::
+  Vypočítá _Z_ interval spolehlivosti průměru populace z průměru vzorku, počtu pokusů (velikost vzorku), směrodatné odchylky
+  a hladiny významnosti.
+ Výsledek je ve tvaru seznamu {dolní limit, horní limit} intervalu spolehlivosti.
+
+[NOTE]
+====
+
+Z-test je statistický test, při němž za předpokladu nulové hypotézy má testová statistika normální rozdělení se známou směrodatnou odchylkou. Pokud směrodatnou odchylku předem neznáme, ale odhadujeme z dat, tak se používá Studentův t-test, leda by počet pozorování byl tak velký (udává se aspoň 30), že rozdíl mezi oběma typy testu je prakticky zanedbatelný, viz. https://cs.wikipedia.org/wiki/Z-test[Z-test].
+
+====
