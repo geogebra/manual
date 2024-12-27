@@ -1,0 +1,35 @@
+= Příkaz ZTestProporce
+:page-en: commands/ZProportionTest
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+ZTestProporce( <Proporce vzorku>, <Velikost vzorku>, <Předpokládaná proporce>, <Konec> )::
+  Provede jednovýběrový _Z_ test proporce z poměru zastoupení sledovaného znaku a počtu pozorování (velikosti vzorku). Nulová hypotéza testuje, zda je 
+proporce vzorku rovna předpokládané proporci. Poslední parametr _Konec_ určuje, zda testujeme jednostranně, nebo oboustranně. Možné hodnoty jsou
+ "<", ">" , "≠" určují  alternativní hypotézy následovně:
+
+  "<" = proporce vzorku < předpokládaná proporce
+  ">" = proporce vzorku > předpokládaná proporce
+  "≠" = proporce vzorku ≠ předpokládaná proporce
+
+Výsledky jsou vypsány ve formě {P-hodnota, Z testová statistika}. Čím menší je P-hodnota, tím průkazněji zamítáme nulovou hypotézu, že se proporce vzorku rovná
+předpokládané proporci.
+
+[EXAMPLE]
+====
+
+Zkoumáme, zda je šance padnutí "šestky" rovna 1/6. Kostkou jsme házeli 30 x a šestka padla ve čtyřech pokusech.
+
+Příkaz 
+`++ZTestProporce(4/30, 30, 1/6, "≠")++` vypíše P-hodnotu a Z statistiku
+ve tvaru seznamu `++{0.624, -0.49}++`. P-hodnota 0.624 je vyšší než obvyklá hladina významnosti 0.05, tedy teoretická hodnota 1/6 nebyla naším pokusem vyvrácena.
+
+====
+
+
+[NOTE]
+====
+
+Z-test pro  podíl je statistická metoda používaná k vyhodnocení, zda se podíl určité charakteristiky významně 
+liší od předpokládané hodnoty. Tento test využívá vlastnosti, že výběrové podíly  jsou asymptoticky normální, viz. https://en.wikipedia.org/wiki/Two-proportion_Z-test[Two-proportion Z test].
+
+====
