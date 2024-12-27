@@ -1,0 +1,23 @@
+= Příkaz ZOdhadProporce
+:page-en: commands/ZProportionEstimate
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+ZOdhadProporce( <Proporce vzorku >, <Velikost vzorku >, <Hladina spolehlivosti> )::
+  Vypočítá interval spolehlivosti pro proporce (poměr) sledovaného znaku ve vzorku.
+  Výsledky jsou vypsány ve formě seznamu {dolní hranice, horní hranice} intervalu spolehlivosti.
+
+Hladina spolehlivosti je statistická míra procenta výsledků testu, u nichž lze 
+  očekávat, že se budou nacházet v určitém rozmezí. Například 95 % interval spolehlivosti znamená, že výsledky pokusů budou v daném intervalu v 95 % případů.
+
+[EXAMPLE]
+====
+
+Házíme hrací kostkou a počítáme, kolikrát se podařilo hodit šestku. Při třiceti hodech šestka padla pětkrát. Interval spolehlivosti pro pravděpodobnost "šestky" bude mít
+ve svém středu relativní četnost p = 5/30, což je i teoretická hodnota pravděpodobnosti hodu šestky na spravedlivé kostce. Čím větší bude rozsah vzorku, tím budeme mít 
+přesnější odhad a tím užší bude interval spolehlivosti.
+
+Příkaz 
+`++ ZOdhadProporce( 5/30, 30, 0.95) ++` vypíše interval spolehlivosti pro poměr _p_ 
+ve tvaru seznamu `++{0.162, 0.171}++`.
+
+====
