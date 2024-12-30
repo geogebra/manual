@@ -1,0 +1,30 @@
+= Příkaz MAD
+:page-en: commands/MAD
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+MAD( <Seznam zdrojových dat> )::
+  Vypočítá https://en.wikipedia.org/wiki/Average_absolute_deviation[průměrnou absolutní odchylku] čísel v seznamu. 
+
+[EXAMPLE]
+====
+
+`++MAD({1, 2, 3, 4, 5})++` dává _1.2_
+
+====
+
+MAD( <Seznam čísel>, <Seznam četností> )::
+  Vypočítá váženou _průměrnou absolutní odchylku_ zadaných čísel.
+
+[EXAMPLE]
+====
+
+`++MAD({20, 40, 41, 42, 40, 54}, {20, 6, 4, 5, 2})++` dává _5.79_
+
+====
+
+[NOTE]
+====
+
+Viz také příkaz xref:/commands/SO.adoc[SO].
+
+====
