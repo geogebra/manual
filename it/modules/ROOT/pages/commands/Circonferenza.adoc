@@ -34,14 +34,6 @@ Circonferenza(Punto, Raggio, Direzione)::
   Genera la circonferenza con centro e raggio assegnati, e asse parallelo alla _direzione_ indicata, che può essere una
   retta, un vettore o un piano.
 
-[EXAMPLE]
-====
-
-`++Circonferenza(Punto, Raggio, Piano)++` restituisce una circonferenza parallela al piano e avente come asse il vettore
-perpendicolare al piano.
-
-====
-
 Circonferenza(Punto, Punto, Direzione)::
   Genera la circonferenza con centro nel primo punto, passante per il secondo punto indicato e asse parallelo alla
   _direzione_ indicata.
@@ -52,5 +44,16 @@ Circonferenza(Punto, Punto, Direzione)::
 Non utilizzare `++x = 0++` oppure `++y = 0++` per la _Direzione_, in quanto tali equazioni possono rappresentare rette
 in 2D e piani in 3D, determinando ambiguità nella definizione. Per specificare ad esempio il piano `++x = 0++`,
 utilizzare un'espressione del tipo `++x + 0y + 0z = 0++`
+
+====
+
+[NOTE]
+====
+
+Vedere anche gli strumenti xref:/tools/Circonferenza_dati_l_asse_e_un_punto.adoc[image:24px-Mode_circleaxispoint.svg.png[Mode
+circleaxispoint.svg,width=24,height=24]] xref:/tools/Circonferenza_dati_l_asse_e_un_punto.adoc[Circonferenza - asse e punto]
+e xref:/tools/Circonferenza_dati_centro_raggio_e_direzione.adoc[image:24px-Mode_circlepointradiusdirection.svg.png[Mode
+circlepointradiusdirection.svg,width=24,height=24]]
+xref:/tools/Circonferenza_dati_centro_raggio_e_direzione.adoc[Circonferenza - centro, raggio e direzione].
 
 ====
