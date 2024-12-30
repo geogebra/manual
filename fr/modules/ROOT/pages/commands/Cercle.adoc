@@ -53,17 +53,18 @@ Précisions pour _Direction_
 
 Pour utiliser un vecteur normal par ses coordonnées, il est nécessaire d'utiliser la commande Vecteur()
 
-[EXAMPLE]
-====
 
 `++Cercle((1,1,1),2,Vecteur((1,1,1)))++`.
 
-====
+
 
 Si _Direction_ est une ligne ou un vecteur, elle définira l'axe du cercle,
 
 s'il s'agit d'un plan (défini, donné par une équation), le cercle sera dans le plan passant par le centre donné et
 parallèle au plan donné .
+
+Afin d'éviter l'ambiguïté des notations ligne/plan  en 2D et 3D, n'utilisez pas d'équations telles que _x = 0_ ou _y = 0_ pour _Direction_. 
+Par exemple, vous souhaitez que _Direction_ soit le plan _x = 0_, utilisez plutôt une expression telle que _x + 0y + 0z = 0_.
 
 ====
 
