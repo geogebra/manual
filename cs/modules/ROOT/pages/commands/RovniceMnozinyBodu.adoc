@@ -1,0 +1,42 @@
+= Příkaz RovniceMnozinyBodu
+:page-en: commands/LocusEquation
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+RovniceMnozinyBodu( <Místo> )::
+  Vypočítá rovnici množiny bodů (místo) a vykreslí ji jako implicitní křivku.
+RovniceMnozinyBodu( <Bod množiny bodů>, <Pohyblivý bod> )::
+  Vypočítá rovnici množiny bodů pomocí zadaných bodů: bodu _Q_ množiny a pohyblivého bodu _P_, a vykreslí ji jako implicitní křivku.
+
+[EXAMPLE]
+====
+
+Postup pro konstrukci paraboly jako množiny bodů: Vytvořte volné body _A_ a _B_, a přímku _d_, která těmito body prochází (řídicí přímka paraboly).
+Vytvořte volný bod _F_ jako ohnisko paraboly. Vytvořte bod _P_ na přímce _d_ (_P_ je pohyblivý bod), vytvořte přímku _p_ kolmou k _d_ a procházející bodem _P_.
+Vytvořte přímku _b_ jako osu úsečky _FP_. Nakonec vytvořte bod _Q_ (bod definující množinu bodů) jako průsečík přímek _p_ a _b_.
+Příkaz `++RovniceMnozinyBodu(Q,P)++` najde přesnou rovnici této množiny bodů a vykreslí ji.
+
+====
+
+RovniceMnozinyBodu( <Pravdivostní hodnota>, <Pohyblivý bod> )::
+  Vypočítá množinu bodů pohyblivého bodu tak, aby byla splněna daná logická podmínka.
+
+[EXAMPLE]
+====
+
+`++RovniceMnozinyBodu(JsouKolinearni(A, B, C), A)++` pro volné body _A_, _B_, _C_ vypočítá množinu pozic bodu _A_, při kterých jsou body _A_, _B_, _C_ kolineární — tedy přímku procházející body _B_ a C__.__
+
+====
+
+[NOTE]
+====
+
+* Množina bodů musí být vytvořena z bodu (ne z posuvníku).
+* Funguje pouze pro omezenou množinu geometrických míst, tj. s použitím bodů, přímek, kružnic a kuželoseček. (Polopřímky a úsečky budou považovány za nekonečné přímky.)
+* Pokud je množina bodů příliš složitá, vrátí hodnotu „nedefinováno“.
+* Pokud množina bodů neexistuje, implicitní křivka je prázdná množina 0=1.
+* Pokud je množina bodů celá rovina, pak je implicitní křivka dána rovnicí 0=0.
+* Výpočet se provádí pomocí https://en.wikipedia.org/wiki/Gr%C3%B6bner_basis[Gröbnerových bází], takže se někdy mohou objevit dodatečné větve křivky, které nebyly součástí původní množiny bodů.
+* Další informace a příklady naleznete na https://www.geogebra.org/m/KZVzqVEM[geogebra.org]. K dispozici je také https://www.geogebra.org/m/mbXQuvUV[sbírka příkladů implicitních množin bodů].
+* Viz také příkaz xref:/commands/MnozinaBodu.adoc[MnozinaBodu] a materiál https://github.com/kovzol/gg-art-doc/tree/master/pdf/english.pdf[GeoGebra Automated Reasoning Tools: A Tutorial].
+
+====
