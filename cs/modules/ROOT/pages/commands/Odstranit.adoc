@@ -2,13 +2,13 @@
 :page-en: commands/Remove
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
-Remove( <List>, <List> )::
-  Removes objects from the first list each time they appear in the second list.
+Odstranit( <Seznam>, <Seznam> )::
+  Odstraní objekty z prvního seznamu pokaždé, když se objeví ve druhém seznamu.
 
 [EXAMPLE]
 ====
 
-`++Remove({1,3,4,4,9},{1,4,5})++` yields list `++{3,4,9}++`.
+`++Odstranit({1,3,4,4,9},{1,4,5})++` vrátí seznam `++{3,4,9}++`.
 
 ====
 
@@ -17,7 +17,7 @@ Remove( <List>, <List> )::
 
 * {blank}
 +
-See also xref:/commands/RemoveUndefined.adoc[RemoveUndefined Command].
-* You can also type `++{1,3,4,4,9} \ {1,4,5}++` if you want the set-theoretic difference .
+Viz též příkaz xref:/commands/OdstranitNedefinovane.adoc[OdstranitNedefinovane].
+* Pro výpočet rozdílu dle teorie množin můžete psát `++{1,3,4,4,9} \ {1,4,5}++`.
 
 ====
