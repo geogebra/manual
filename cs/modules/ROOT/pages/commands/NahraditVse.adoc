@@ -2,27 +2,26 @@
 :page-en: commands/ReplaceAll
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
-ReplaceAll( <Text>, <Text to Match>, <Text to Replace> )::
-  Creates a new text containing the given _text_ whose _text to match_ has been replaced with the given _text to
-  replace_.
+NahraditVse( <Text>, <Hledaný text>, <Náhrada> )::
+  Vytvoří nový text obsahující daný _text_, jehož část _hledaný text_ byla nahrazena danou _náhradou_.
 
 [EXAMPLE]
 ====
 
-`++ReplaceAll("3cos(t)+cos(2y)", "cos", "sin")++` creates the new text `++"3sin(t)+sin(2y)"++`.
+`++NahraditVse("3cos(t)+cos(2y)", "cos", "sin")++` vytvoří nový text `++"3sin(t)+sin(2y)"++`.
 
 ====
 
 [NOTE]
 ====
 
-Use the xref:/commands/FormulaText.adoc[FormulaText] command to create a LaTeX text.
+Pro vytvoření textu ve formátu LaTeX použijte příkaz xref:/commands/LaTeX.adoc[LaTeX].
 
 ====
 
 [EXAMPLE]
 ====
 
-`++FormulaText(ReplaceAll("3cos(t)+cos(2y)", "cos", "sin"))++` creates the new LaTeX text `++"3sin(t)+sin(2y)"++`.
+`++LaTeX(NahraditVse("3cos(t)+cos(2y)", "cos", "sin"))++` vytvoří nový text `++"3sin(t)+sin(2y)"++` ve formátu LaTeX.
 
 ====
