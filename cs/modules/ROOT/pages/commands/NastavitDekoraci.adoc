@@ -2,22 +2,20 @@
 :page-en: commands/SetDecoration
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
-SetDecoration( <Object>, <Number> )::
-  Sets the decoration of the given object (see also the _Style_ tab in the _Properties_ window of the object). The
-  object must be an angle, a segment or a "fillable object". The second argument in the command is the numeric code of
-  the decoration / fill-style, as described in the following table.
+NastavitDekoraci( <Objekt>, <Číslo> )::
+  Nastaví vizuální podobu daného objektu (viz též karta _Styl_ v okně _Nastavení_, u verze GeoGebra Klasik 5 je dostupné volbou _Vlastnosti_). Objektem musí být úhel, úsečka nebo libovolný "vyplnitelný objekt". Druhým parametrem příkazu je číselný kód vzhledu (dekorace) objektu / stylu výplně, dle následující tabulky.
 
 [cols=",,,",options="header",]
 |===
-|Value |Segment decoration |Angle decoration |Fill-style
-|0 |Remove decoration |Remove decoration |Solid fill
-|1 |One tick |Two arcs |Hatched
-|2 |Two ticks |Three arcs |Cross-hatched
-|3 |Three ticks |One tick |Chessboard
-|4 |One arrow |Two ticks |Dotted
-|5 |Two arrows |Three ticks |Honeycomb
-|6 |Three arrows |Clockwise arrow |Brick
-|7 |(None) |Anticlockwise arrow |Weave pattern
+|hodnota |vzhled úsečky |vzhled úhlu |styl výplně
+|0 |žádná dekorace |žádná dekorace |souvislá výplň
+|1 |jedno přeškrtnutí |dva obloučky |šrafování
+|2 |dvě přeškrtnutí |tři obloučky |dvojité šrafování
+|3 |tři přeškrtnutí |jedno přeškrtnutí |šachovnice
+|4 |jedna šipka |dvě přeškrtnutí |tečky
+|5 |dvě šipky |tři přeškrtnutí |plástev
+|6 |tři šipky |šipka proti směru hodin |cihly
+|7 |bez dekorace |šipka ve směru hodin |pletivo
 |===
 
 SetDecoration(<Segment>, <Number>, <Number>)::
