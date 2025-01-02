@@ -3,20 +3,24 @@
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
 RegreseExponencialni( <Seznam bodů> )::
-  === CAS pohled
-  RegreseExponencialni( <Seznam bodů> );;
-  [width="100%",cols="50%,50%",]
-  |===
-  a|
-  image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+  Vypočítá exponenciální regresní křivku ve tvaru _aℯ^bx^_.
 
-  |Some content was not yet translated.
-  |===
+[EXAMPLE]
+====
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+`++RegreseExponencialni({(0, 1), (2, 3), (4, 3), (6, 4)})++` dává _1.31ℯ^0.21x^_.
 
-|Some content was not yet translated.
-|===
+====
+
+[NOTE]
+====
+
+* Pokud chcete výsledek ve tvaru stem:[ a b ^ x ] použijte příkaz xref:/commands/RegreseRustu.adoc[RegreseRustu].
+* Můžete použít přímo aproximaci metodou nejmenších čtverců pomocí příkazu `++RegreseFunkce(<Seznam bodů>, a*exp(b*x))++`
+* Eulerovu konstanta ℯ lze napsat pomocí kláves [.kcode]#ALT# + [.kcode]#e#.
+* Viz také příkazy xref:/commands/RegreseFunkce.adoc[RegreseFunkce], xref:/commands/RegreseRustu.adoc[RegreseRustu], xref:/commands/Regrese.adoc[Regrese],
+xref:/commands/RegreseX.adoc[RegreseX], xref:/commands/RegreseLogaritmicka.adoc[RegreseLogaritmicka],
+xref:/commands/RegreseLogisticka.adoc[RegreseLogisticka], xref:/commands/RegresePolynomialni.adoc[RegresePolynomialni], xref:/commands/RegreseMocninna.adoc[RegreseMocninna]
+a xref:/commands/RegreseSin.adoc[RegreseSin].
+
+====
