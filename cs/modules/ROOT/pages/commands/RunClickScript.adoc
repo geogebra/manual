@@ -2,20 +2,19 @@
 :page-en: commands/RunClickScript
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
-RunClickScript( <Object> )::
-  Runs the click script associated with the Object (if it has one).
+RunClickScript( <Objekt> )::
+  Spustí skript se statusem _Po kliknutí_, který je asociován s daným objektem (pokud je pro tento objekt takový skript definován).
 
 [EXAMPLE]
 ====
 
-Let _A_ and _B_ be points. The _OnClick_ script for _B_ is `++SetValue(B,(1,1))++`. Setting the _OnClick_ script of _A_
-as `++RunClickScript(B)++`, moves point _B_ to (1,1) when point _A_ is clicked.
+Nechť _A_ a _B_ jsou body. U bodu _B_ je skript _Po kliknutí_ definován příkazem `++NastavitHodnotu(B,(1,1))++` a u bodu _A_ příkazem `++RunClickScript(B)++`. Potom kliknutí na bod _A_ přemístí bod _B_ do pozice (1,1).
 
 ====
 
 [NOTE]
 ====
 
-See also xref:/commands/RunUpdateScript.adoc[RunUpdateScript] command.
+Viz též příkaz xref:/commands/RunUpdateScript.adoc[RunUpdateScript].
 
 ====
