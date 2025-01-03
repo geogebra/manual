@@ -8,7 +8,7 @@ NastavitDekoraci( <Objekt>, <Číslo> )::
 [cols=",,,",options="header",]
 |===
 |hodnota |vzhled úsečky |vzhled úhlu |styl výplně
-|0 |žádná dekorace |žádná dekorace |souvislá výplň
+|0 |bez dekorace |žádná dekorace |souvislá výplň
 |1 |jedno přeškrtnutí |dva obloučky |šrafování
 |2 |dvě přeškrtnutí |tři obloučky |dvojité šrafování
 |3 |tři přeškrtnutí |jedno přeškrtnutí |šachovnice
@@ -19,19 +19,17 @@ NastavitDekoraci( <Objekt>, <Číslo> )::
 |===
 
 NastavitDekoraci(<Úsečka>, <Číslo>, <Číslo>)::
-  Nastaví podobu konců úsečky, v pořadí dle její definice. Aby bylo zvolené vizuální pojetí konců úsečky vidět, je třeba skrýt její krajní body, tj. body kterými je definovaná. The segment decoration can also be set in the _Style_ tab of the
-  _Properties_ window of the segment. The first number used as command parameter defines the style of the line segment
-  start, and the second number sets the style of the line segment end, as described in the following table.
+  Nastaví podobu konců úsečky, v pořadí použitém při její definici. Aby bylo zvolené vizuální pojetí konců úsečky vidět, je třeba skrýt její krajní body, tj. body kterými je definovaná. Vzhled úsečky může být nastaven také na kartě _Styl_ v okně _Nastavení_ dostupném v odpovídající kontextové nabídce. První z čísel, která jsou použita jako parametry příkazu, definuje podobu začátku úsečky, druhé z nich pak definuje podobu jejího konce, dosazením příslušné hodnoty dle následující tabulky.
 
 [cols=",",options="header",]
 |===
-|Value |Decoration
-|0 |No decoration
-|1 |vertical bar
-|2 |empty square
-|3 |filled square
-|4 |arrow
-|5 |filled arrow
-|6 |empty dot
-|7 |filled dot
+|hodnota |vzhled
+|0 |bez dekorace
+|1 |kolmá čárka
+|2 |prázdný čtvereček
+|3 |plný čtvereček
+|4 |šipka
+|5 |plná šipka
+|6 |prázdný kroužek
+|7 |plný kroužek
 |===
