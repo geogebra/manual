@@ -2,39 +2,38 @@
 :page-en: commands/SetImage
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
-SetImage( <Object>, <Image> )::
-  Fills the given object with an image. 
+NastavitObrazek( <Objekt>, <Obrázek> )::
+  Vyplní daný objekt uvedeným obrázkem. 
 
 [NOTE]
 ====
 
-The object needs to allow filling, e.g. polygons, closed conics, buttons…
+Objekt musí být vyplnitelný, např. mnohoúhelník, uzavřená kuželosečka, tlačítka apod.
 
 ====
 
-SetImage( <Object>, <Text> )::
-  Fills the object with one of the GeoGebra’s predefined action images, identified by the texts listed below.
+NastavitObrazek( <Objekt>, <Text> )::
+  Vyplní objekt jedním z předdefinovaných symbolů pro různé akce, které se volají hesly (texty) uvedenými v tabulce níže.
    
 
 [EXAMPLE]
 ====
 
-`++SetImage(button1,"pause")++` shows the GeoGebra’s predefined  Pause icon on button1.
+`++NastavitObrazek(tlačítko1,"pause")++` zobrazí na tlačítko1 předdefinovaný symbol pro pauzu.
 
 ====
 
 [NOTE]
 ====
-The current version of the command supports only button objects. The names of the images (Text parameter) need
-to be enclosed in " ".
+Aktuální verze příkazu funguje pouze pro objekt _tlačítko_. Název symbolu (parametr _text_) musí být uvedený v uvozovkách " ".
 
 ====
 
-GeoGebra’s predefined action images
+Předdefinované symboly akcí GeoGebry
 
 [width="100%",cols="50%,50%",options="header",]
 |===
-|Text |Image
+|text |symbol
 |pause a|
 image:20px-Pause.svg.png[link,width=20,height=20]
 
