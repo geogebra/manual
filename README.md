@@ -9,7 +9,7 @@ The templates and layouts used by the documentation site are located in the [Geo
 | language              | ok  | missing | orphans | duplicates | partials |
 |-----------------------|-----|---------|---------|------------|----------|
 | босански (bs)          | 144     | 559     | 27      | 0       | 36      |
-| Česky (cs)             | 519     | 68      | 2       | 0       | 152     |
+| Česky (cs)             | 521     | 66      | 2       | 0       | 152     |
 | Deutsch (de)           | 687     | 52      | 45      | 2       | 0       |
 | English (en)           | 739     | 0       | 0       | 0       | 0       |
 | Español (es)           | 601     | 30      | 71      | 0       | 108     |
