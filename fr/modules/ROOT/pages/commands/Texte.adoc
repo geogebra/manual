@@ -2,6 +2,8 @@
 :page-en: commands/Text
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Textes.adoc[Commandes Textes]
+
 Texte( <Objet> )::
   Retourne la formule pour l’objet en tant qu'xref:/Textes.adoc[objet texte] .
 
@@ -25,8 +27,6 @@ Texte( <Objet>, <Booléen pour Substitution Variables> )::
 
 [EXAMPLE]
 ====
-
-*Exemple :*
 
 Si _a = 2_ et _c = a^2^_, alors
 
@@ -57,13 +57,35 @@ Texte( <Objet>, <Point>, <Booléen pour Substitution Variables>, <Booléen pour 
 [EXAMPLE]
 ====
 
-*Exemple :*
-
 `++Séquence(Texte("" +Si(i==-1,"- \sqrt{2}",Si[i==0,"0",Si(i==1,"\sqrt {2}", (i) + "\sqrt {2}"))), (i sqrt(2), 0) + (0, -0.5), true, true], i, ceil(x(Coin(1))/sqrt(2)), floor(x(Coin(2))/sqrt(2)))++`
 
 positionne les étiquettes d'une graduation de l'axe des abscisses avec une unité de stem:[\sqrt{2}] obtenue par
 
 `++Séquence(Segment( (i sqrt(2), -0.1) ,(i sqrt(2), +0.1)], i, ceil(x(Coin(1))/sqrt(2)), floor(x(Coin(2))/sqrt(2)))++`.
+
+====
+
+
+Texte( <Objet>, <Point>, <Booléen pour Substitution Variables>, <Booléen pour la formule LaTeX>, <Alignement horizontal -1|0|1> )::
+
+
+Texte( <Objet>, <Point>, <Booléen pour Substitution Variables>, <Booléen pour la formule LaTeX>, <Alignement horizontal -1|0|1>, <Alignement vertical -1|0|1> )::
+
+Crée un texte contenant la formule de l'objet donné à la position donnée (_Point_).
+
+La première variable booléenne détermine si les valeurs sont substituées aux variables (_true_) ou si les noms des variables sont affichés dans le texte (_false_).
+
+Si la deuxième variable booléenne est true, le texte est rendu à l'aide de LaTeX.
+
+Les valeurs -1, 0, 1 définissent l'alignement horizontal et vertical, décalant le texte de la position par défaut respectivement comme suit :
+
+* -1 : décalage horizontal vers la gauche / décalage vertical vers le bas
+* 0 : centre l'objet texte horizontalement / verticalement au point donné
+* 1 : décalage horizontal vers la droite / décalage vertical vers le haut
+
+[EXAMPLE]
+====
+Si a = 2 et c = a^2, alors  `++Texte(c, (2, 1), true, true, -1, 0)++` crée le texte LaTeX "4" à gauche du point (2, 1), et aligné verticalement avec lui.
 
 ====
 
