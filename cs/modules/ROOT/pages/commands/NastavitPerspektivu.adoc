@@ -30,10 +30,10 @@ xref:/Zápis_konstrukce.adoc[Zápis konstrukce]
 
 |P |image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Dialog_Vlastnosti.adoc[Nastavení]
 
-|R |Data analysis (Desktop only)
+|R |Analýza dat (pouze pro desktopové verze)
 
 |S |image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
-xref:/Spreadsheet_View.adoc[Spreadsheet]
+xref:/Tabulka.adoc[Tabulka]
 
 |T |image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=16,height=16]
 xref:/3D_Graphics_View.adoc[3D Graphics]
@@ -42,22 +42,20 @@ xref:/3D_Graphics_View.adoc[3D Graphics]
 [EXAMPLE]
 ====
 
-* `++SetPerspective("G")++` makes only the image:16px-Menu_view_graphics.svg.png[Menu view
-graphics.svg,width=16,height=16] _Graphics View_ visible
-* `++SetPerspective("AGS")++` makes image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
-_Algebra_, image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Graphics_ and
-image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Spreadsheet View_ visible,
-aligned horizontally
-* `++SetPerspective("S/G")++` makes image:16px-Menu_view_spreadsheet.svg.png[Menu view
-spreadsheet.svg,width=16,height=16] _Spreadsheet_ and image:16px-Menu_view_graphics.svg.png[Menu view
-graphics.svg,width=16,height=16] _Graphics View_ visible with _Spreadsheet_ on top and _Graphics View_ below
-* `++SetPerspective("S/(GA)")++` is similar as above, the bottom part of the screen consists of
-image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Graphics View_ on the left and
-image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _Algebra View_ on the right
+* `++NastavitPerspektivu("G")++` zobrazí pouze image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Nákresnu_
+* `++NastavitPerspektivu("AGS")++` zobrazí v horizontálním uspořádání image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+_Algebraické okno_, image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Nákresnu_ a
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Tabulku_, v daném pořadí
+* `++NastavitPerspektivu("S/G")++` zobrezí ve vertikálním uspořádání image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Tabulku_ a image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Nákresnu_, _Tabulku_ nahoře a _Nákresnu_ dole
+* `++NastavitPerspektivu("S/(GA)")++` uspořádá okno GeoGebry tak, že nahoře je _Tabulka_ a pod ní jsou vedle sebe umístěné vlevo image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Nákresna_ a vpravo
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _Algebraické okno_
 
 ====
 
-== Single view change
+== Nastavení jediného náhledu
 
 To open or close individual _Views_, add the symbols `+++++` or `++-++` before the _View_ name (letter), respectively.
 In apps other than GeoGebra Classic (e.g. the Graphing Calculator) you can also use `++Tools++` and `++Table++`for the
