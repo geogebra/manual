@@ -1,0 +1,45 @@
+= Polecenie WykresOdcinkowy
+:page-en: commands/StickGraph
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+WykresOdcinkowy( <Lista Punktów> )::
+  Rysuje wykres słupkowy dla podanych punktów. Dla każdego punktu rysowany jest pionowy odcinek od osi x do danego punktu.
+
+[EXAMPLE]
+====
+
+`++WykresOdcinkowy({(1, 1), (3, 2), (4, 5), (5, 7)})++`
+
+====
+
+WykresOdcinkowy( <Lista Punktów>, <Czy Poziomo> )::
+  Rysuje wykres słupkowy dla podanych punktów. Jeśli _Czy Poziomo = true_, rysowane są poziome odcinki od osi y do każdego punktu.
+  Jeśli _Czy Poziomo = false_, rysowane są pionowe odcinki od osi x do każdego punktu.
+
+[EXAMPLE]
+====
+
+`++WykresOdcinkowy({(1, 1), (3, 2), (4, 5), (5, 7)}, false)++`
+
+====
+
+WykresOdcinkowy( <Lista współrzędnych x>, <Lista współrzędnych y> )::
+  Rysuje wykres słupkowy punktów utworzonych z dwóch list współrzędnych. Dla każdego punktu rysowany jest pionowy odcinek od osi x do danego punktu.
+
+[EXAMPLE]
+====
+
+`++WykresOdcinkowy({1, 3, 4, 5}, {1, 2, 5, 7})++`
+
+====
+
+WykresOdcinkowy( <Lista współrzędnych x>, <Lista współrzędnych y>, <Czy Poziomo> )::
+  Rysuje wykres słupkowy punktów utworzonych z dwóch list współrzędnych. Jeśli _Czy Poziomo = true_, rysowane są poziome odcinki od osi y do każdego punktu.
+  Jeśli _Czy Poziomo = false_, rysowane są pionowe odcinki od osi x do każdego punktu.
+
+[EXAMPLE]
+====
+
+`++WykresOdcinkowy({1, 3, 4, 5}, {1, 2, 5, 7}, true)++`
+
+====
