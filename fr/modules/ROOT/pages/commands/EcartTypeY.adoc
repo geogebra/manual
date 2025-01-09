@@ -2,13 +2,25 @@
 :page-en: commands/SDY
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Statistiques.adoc[Commandes Statistiques]
+
 EcartTypeY( <Liste Points> )::
-  Retourne l'https://fr.wikipedia.org/%C3%89cart_type[écart type] des ordonnées des
+  Retourne l'https://fr.wikipedia.org/wiki/%C3%89cart_type[écart type] des ordonnées des
   xref:/Points_et_Vecteurs.adoc[points] de la xref:/Listes.adoc[liste] donnée.
 
 [EXAMPLE]
 ====
 
-`++EcartTypeY({(5, 1), (7, 7)})++` retourne _3_.
+`++EcartTypeY({(1, 1), (2, 2), (3, 1), (3, 3), (4, 2), (3, -1)}) ++` retourne _1.25_ (=stem:[\frac{ \sqrt{14}}{3}].
 
 ====
+____________________________________________________________
+
+image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+
+(Mais sans afficher les valeurs exactes et Sans possibilité de travailler en littéral)
+____________________________________________________________
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/EcartTypeX.adoc[EcartTypeX].
