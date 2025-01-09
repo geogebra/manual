@@ -2,8 +2,17 @@
 :page-en: commands/FitLogistic
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Statistiques.adoc[Commandes Statistiques]
+
 AjustLogistique( <Liste Points> )::
   Recherche une courbe de régression sous la forme stem:[\frac{a}{1+b e^{-kx}}].
+
+[EXAMPLE]
+====
+
+`++AjustLogistique({(-6, 2), (0, 2), (3, 4), (3.4, 8)})++` retourne stem:[ \frac{1.98}{1 - 0.03 e^{1x}}].
+
+====
 
 [NOTE]
 ====
