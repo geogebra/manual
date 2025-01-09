@@ -1,0 +1,14 @@
+= Polecenie SumaBłędówKwadratowych
+:page-en: commands/SumSquaredErrors
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+SumaBłędówKwadratowych( <Lista Punktów>, <Funkcja> )::
+  Oblicza sumę kwadratów błędów (SSE) pomiędzy współrzędnymi y punktów z listy a wartościami funkcji dla odpowiadających im wwartości x punktó z listy.
+
+[EXAMPLE]
+====
+
+Dla danej listy punktów `++L={(1, 2), (3, 5),(2, 2), (5, 2), (5, 5)}++` obliczymy:
+`++f(x)=RegresjaWielomianowa(L,1)++` and `++g(x)=RegresjaWielomianowa(L,2)++`. `++SumaBłędówKwadratowych(L,f)++` daje w wyniku _9_ a
+`++SumaBłędówKwadratowych(L,g)++` daje w wyniku _6.99_, i dlatego możemy zauważyć, że _g(x)_ zapewnia najlepsze dopasowanie w sensie najmniejszej sumy kwadratów błędów (Gauss).
+====
