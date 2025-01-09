@@ -2,23 +2,25 @@
 :page-en: commands/SampleSD
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-eType( <Liste de données brutes> )::
-  Calcule l'https://fr.wikipedia.org/%C3%89cart_type#.C3.89cart_type_empirique[écart-type empirique] de la
+xref:commands/Commandes_Statistiques.adoc[Commandes Statistiques]
+
+eType( <Série brute> )::
+  Calcule l'https://fr.wikipedia.org/wiki/%C3%89cart_type#.C3.89cart_type_empirique[écart-type empirique] de la
   xref:/Listes.adoc[liste] de nombres donnée.
 
 [EXAMPLE]
 ====
 
-`++eType(1, 2, 3)++` ou `++eType({1, 2, 3})++` donne _1_.
+`++eType(1, 2, 3)++` ou `++eType({1, 2, 3})++` retourne _1_.
 
 ====
 
-eType( <Liste des valeurs>, <Liste des effectifs> )::
+eType( <Liste Nombres>, <Liste Effectifs> )::
 
 [EXAMPLE]
 ====
 
-`++eType({1, 2, 3, 4, 9},{3,2,2,2,1})++` donne _2.4_.
+`++eType({1, 2, 3, 4, 9},{3,2,2,2,1})++` retourne _2.4_.
 
 ====
 
@@ -33,12 +35,10 @@ Avec parfois, l'écriture de la valeur exacte, et la possibilité de travailler 
 [EXAMPLE]
 ====
 
-*Exemple :*
-
-`++eType({1, 2, 2})++` donne stem:[\frac{\sqrt{3}}\{3} ] et non _0.58_ comme le résultat d'une saisie dans Algèbre.
+`++eType({1, 2, 2})++` retourne stem:[\frac{\sqrt{3}}{3} ] et non _0.58_ comme le résultat d'une saisie dans Algèbre.
 
 Si la variable _a_ n'est pas définie dans GeoGebra
 
-`++eType({1, 2, a})++` donne stem:[\frac{\sqrt{a²-3a+3}}\{\sqrt{3}}].
+`++eType({1, 2, a})++` retourne stem:[\frac{\sqrt{a² - 3a + 3}}{\sqrt{3}}].
 
 ====
