@@ -2,15 +2,15 @@
 :page-en: commands/Shuffle
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Statistiques.adoc[Commandes Statistiques]
+
 Mélangée( <Liste L> )::
   retourne une liste avec les mêmes éléments que ceux de la liste _L_ mais dans un ordre aléatoire.
 
 [EXAMPLE]
 ====
 
-*Exemples :*
-
-`++Mélangée({3, 5, 1, 7, 3})++` retourne par exemple _\{5, 1, 3, 3, 7}_ ;
+`++Mélangée({3, 5, 1, 7, 3})++` retourne par exemple _{5, 1, 3, 3, 7}_ ;
 
 `++Mélangée(Séquence(20))++` retourne la liste des 20 premiers entiers dans un ordre aléatoire.
 
@@ -31,4 +31,10 @@ ____________________________________________________________
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
-Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel.
+
+Avec la possibilité de travailler en littéral :
+
+Si les variables _a_, _b_, _c_, _d_, et _e_ ne sont pas déjà définies dans GeoGebra
+
+`++Mélangée({a,b,c,d,e})++` retourne par exemple _{c, d, b, a, e}_  
