@@ -2,25 +2,35 @@
 :page-en: commands/Sample
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Statistiques.adoc[Commandes Statistiques]
+
 Echantillon( <Liste L>, <Taille n> )::
   Retourne une liste de _n_ éléments choisis au hasard parmi ceux de la liste _L_, chacun de ces éléments pouvant être
   élu plusieurs fois.
 
+_n_ peut donc être plus grand que `++Longueur(L)++`.
+
 [EXAMPLE]
 ====
-
-*Exemple :*
-
-`++Echantillon({1, 2, 3, 4, 5}, 5)++` retourne par exemple _liste1 = \{1, 2, 1, 5, 4}_.
+`++Echantillon({1, 2, 3, 4, 5}, 5)++` retourne par exemple _liste1 = {1, 2, 1, 5, 4}_.
 
 ====
 
 Echantillon( <Liste>, <Taille>, false )::
-  Retourne une liste de _n_ éléments choisis au hasard parmi ceux de la liste _L_, chacun de ces éléments NE pouvant
+  Retourne une liste de _n_ éléments choisis au hasard parmi ceux de la liste _L_, chacun de ces éléments *NE* pouvant
   être élu qu'une seule fois.
 
+Dans ce cas, _n_ *NE* peut donc être strictement plus grand que `++Longueur(L)++`.
+
+Si _n_ est égal à `++Longueur(L)++`, alors on a un résultat équivalent à `++Mélangée(<Liste>)++`.
 ____________________________________________________________
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
-Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel.
+
+De plus, la liste donnée peut contenir différents types d'objets :
+
+* `++Echantillon({-5, 2, a, 7, c}, 3)++` retourne par exemple _{a, 7, -5}_.
+* Et la liste peut contenir aussi des listes : Soit _Liste1_ la liste _{1, 2, 3}_: `++Echantillon({Liste1, 4, 5, 6, 7, 8}, 3, false)++` retourne par exemple _{6, {1, 2, 3}, 4}_.
+
