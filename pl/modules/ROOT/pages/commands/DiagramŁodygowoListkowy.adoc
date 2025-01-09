@@ -1,0 +1,25 @@
+= Polecenie DiagramŁodygowoListkowy
+:page-en: commands/StemPlot
+:page-aliases: commands/StemAndLeaf.adoc
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+image:64px-Globe.png[Globe.png,width=64,height=64,role=left]
+
+To polecenie ma dwie wersje w języku angielskim:
+
+* StemPlot (US)
+* StemAndLeaf (UK + Aus)
+
+====
+
+DiagramŁodygowoListkowy( <Lista> )::
+  Zwraca wykres łodygowy dla podanej listy liczb. Wartości odstające są usuwane z wykresu i wymieniane osobno.
+Wartość odstająca jest definiowana jako wartość poza przedziałem [ Q1 - 1.5 (Q3 - Q1) , Q3 + 1.5 (Q3 - Q1) ].
+
+DiagramŁodygowoListkowy( <Lista>, <Regulacja -1|0|1> )::
+  Zwraca wykres łodygowy dla podanej listy liczb.
+  Jeśli _Regulacja_ = -1 domyślna jednostka łodygi jest dzielona przez 10.
+  Jeśli _Regulacja_ = 0 nic nie zostaje zmienione.
+  Jeśli _Regulacja_ = 1 domyślna jednostka łodygi jest mnożona przez 10.
