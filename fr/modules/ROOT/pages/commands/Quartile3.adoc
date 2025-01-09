@@ -2,8 +2,10 @@
 :page-en: commands/Quartile3
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-Quartile3( <Liste Nombres> )::
-  Détermine le troisième quartile des éléments de la liste.
+xref:commands/Commandes_Statistiques.adoc[Commandes Statistiques]
+
+Quartile3( <Série brute> )::
+  Détermine le troisième quartile des éléments de la liste _Série brute_.
 
 [EXAMPLE]
 ====
@@ -19,15 +21,23 @@ Quartile3( <Liste Nombres>, <Liste Effectifs> )::
 ====
 
 GeoGebra utilise la méthode *Moore & McCabe (2002)* pour calculer les quartiles, voir
-https://mathworld.wolfram.com/Quartile.html
+https://mathworld.wolfram.com/Quartile.html[Quartile]
 
 ====
 
-[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/Quartile1.adoc[Quartile1], xref:/commands/Centile.adoc[Centile] et
-xref:/commands/Médiane.adoc[Médiane].
+[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/Quartile1.adoc[Quartile1], xref:/commands/Centile.adoc[Centile] et xref:/commands/Médiane.adoc[Médiane].
 
 ____________________________________________________________
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
-Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel, avec la possibilité de travailler en littéral ... 
+
+[EXAMPLE]
+====
+Les variables _a_, _b_, _c_ et _d_ n'étant pas déjà définies dans GeoGebra :
+
+* `++Quartile3({a,b,c,d})++` retourne _c_ ;
+* `++Quartile3({a,b,b,b,b,c,c,d})++` retourne _b_.
+
+====
