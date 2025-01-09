@@ -2,11 +2,19 @@
 :page-en: commands/SampleSDY
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Statistiques.adoc[Commandes Statistiques]
+
 EcartTypeEchantillonY( <Liste Points> )::
-  Retourne l'https://fr.wikipedia.org/%C3%89cart_type#.C3.89cart_type_empirique[écart-type empirique] des
+  Retourne l'https://fr.wikipedia.org/wiki/%C3%89cart_type#.C3.89cart_type_empirique[écart-type empirique] des
   ordonnées des xref:/Points_et_Vecteurs.adoc[points] de la xref:/Listes.adoc[liste] de points donnée.
 
-{empty}[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/EcartTypeEchantillonX.adoc[EcartTypeEchantillonX]
+[EXAMPLE]
+====
+
+`++EcartTypeEchantillonY({(1,0),(2,2),(4,3),(5,4)})++` retourne _1.71_ (=stem:[\sqrt{\frac{105}{6}}]) alors que
+`++EcartTypeY({(1,0),(2,2),(4,3),(5,4)})++` retourne _1.48_ (=stem:[\sqrt{\frac{35}{4}}]).
+
+====
 
 ____________________________________________________________
 
@@ -14,4 +22,7 @@ image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul f
 
 Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
 
-(Sans possibilité de travailler en littéral)
+(Mais sans afficher les valeurs exactes et Sans possibilité de travailler en littéral)
+____________________________________________________________
+
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/EcartTypeEchantillonX.adoc[EcartTypeEchantillonX].
