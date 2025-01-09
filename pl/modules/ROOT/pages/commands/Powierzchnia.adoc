@@ -1,0 +1,31 @@
+= Polecenie Powierzchnia
+:page-en: commands/Surface
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Powierzchnia( <Wyrażenie>, <Wyrażenie>, <Wyrażenie>, <Zmienna Parametryczna 1>, <Wartość Początkowa>, <Wartość Końcowa>, <Zmienna Parametryczna 2>, <Wartość Początkowa>, <Wartość Końcowa> )::
+
+Tworzy zdefiniowaną parametrycznie powierzchnię,  gdzie pierwsze _<Wyrażenie>_ opisuje współrzędną x, drugie współrzędną y, a trzecie współrzędną z, używając dwóch _<Zmiennych Parametrycznych>_ 
+określonych w przedziałach [_<Wartość Początkowa>_, _<Wartość Końcowa>_].
+
+[EXAMPLE]
+====
+
+Niech _r_ i _R_ będą dwoma dodatnimi liczbami rzeczywistymi:
+`++Powierzchnia((R + r cos( u)) cos(v) , (R + r cos( u)) sin(v) , r sin(u ), u, 0, 2 π , v, 0, 2 π)++` tworzy torus
+generowany przez okrąg o promieniu _r_, którego środek obraca się wokół osi Z w odległości _R_.
+
+====
+
+[NOTE]
+====
+
+* _Wartość Końcowa_ musi być większa lub równa _Wartości Końcowej_ i obie muszą być skończone.
+* _x, y_ i _z_ nie mogą być używane jako nazwy zmiennych parametrycznych.
+
+====
+
+Powierzchnia( <Funkcja>, <Kąt> )::
+  Tworzy powierzchnię obrotową, obracając wykres danej _Funkcji_ od 0 do danego _Kąta_ wokół osi X.
+
+Powierzchnia( <Krzywa>, <Kąt>, <Prosta>)::
+  Tworzy powierzchnię obrotową, obracając _Krzywą_ from 0 od 0 do danego _Kąta_ wokół danej _Prostej_.
