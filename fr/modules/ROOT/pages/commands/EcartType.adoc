@@ -2,13 +2,15 @@
 :page-en: commands/SD
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Statistiques.adoc[Commandes Statistiques]
+
 eTypeP( <Liste de données brutes> )::
   Calcule l'écart-type des nombres de la liste.
 
 [EXAMPLE]
 ====
 
-`++eTypeP(1, 2, 3, 4, 5)++` ou `++eTypeP({1, 2, 3, 4, 5})++` donne _1,41_ (arrondi à 2 décimales).
+`++eTypeP(1, 2, 3, 4, 5)++` ou `++eTypeP({1, 2, 3, 4, 5})++` retourne _1,41_ (arrondi à 2 décimales).
 
 ====
 
@@ -17,7 +19,7 @@ eTypeP( <Liste des valeurs>, <Liste des effectifs> )::
 [EXAMPLE]
 ====
 
-`++eTypeP({1, 2, 3, 4, 9},{3,2,2,2,1})++` donne _2.28_ (arrondi à 2 décimales).
+`++eTypeP({1, 2, 3, 4, 9},{3,2,2,2,1})++` retourne _2.28_ (arrondi à 2 décimales).
 
 ====
 
@@ -28,42 +30,38 @@ N'est pas proposée, mais semble tout à fait opérationnelle :
 
 eTypeP( <Liste Bornes Classes>, <Liste Effectifs> )::
   Calcule l'écart-type des centres des classes pondérés par les effectifs associés.
-  Liste Bornes Classes a 1 élément de plus que Liste Effectifs .
+  Liste Bornes Classes a 1 élément de plus que Liste Effectifs.
 
-[EXAMPLE]
+`++eTypeP({20, 30, 40, 50}, {3, 9, 12})++` retourne _6.96_ (arrondi à 2 décimales).
 ====
 
-*Exemple :*
 
-`++eTypeP({20, 30, 40, 50}, {3, 9, 12})++` donne _6.96_ (arrondi à 2 décimales).
-
-====
-
-====
 
 ____________________________________________________________
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
-Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel ;
+
+(sauf la syntaxe marginale _eTypeP( <Liste Bornes Classes>, <Liste Effectifs> )_ .)
 
 Avec parfois, l'écriture de la valeur exacte,et la possibilité de travailler en littéral.
 
 [EXAMPLE]
 ====
 
-*Exemples :*
 
-`++eTypeP({1, 2, 3, 4, 5})++`donne _stem:[\sqrt{2}]_ ;
+* `++eTypeP({1, 2, 3, 4, 5})++` retourne  _stem:[\sqrt{2}]_ ;
 
-Si les variables _a_ et _b_ ne sont pas définies dans GeoGebra :
+* `++eTypeP({1, 2, 3, 4, 5}, {5,  4, 3, 2, 1})++` retourne stem:[\frac{\sqrt{14}}{3}]
 
-`++eTypeP({a-b,a+b}) ++` donne | b | ;
+* Si les variables _a_ et _b_ ne sont pas définies dans GeoGebra :
 
-`++eTypeP({-3 + 2 x, -1- 4 x, -2 + 5 x^2})++` donne le xref:/tools/Évaluer.adoc[résultat littéral]
-image:Mode_evaluate.png[Mode evaluate.png,width=32,height=32] stem:[\frac{\sqrt{25x⁴ + 10x³ + 28x² - 18x + 3}
-\sqrt{2} } \{ 3 }].
+`++eTypeP({a-b,a+b}) ++` retourne | b | ;
+
+`++eTypeP({-3 + 2 x, -1- 4 x, -2 + 5 x^2})++` retourne le xref:/tools/Évaluer.adoc[résultat littéral]
+image:Mode_evaluate.png[Mode evaluate.png,width=32,height=32] stem:[\sqrt{25 \; x^{4} + 10 \; x^{3} + 28 \; x^{2} - 18 \; x + 3} \cdot \frac{\sqrt{2}}{3}].
 
 ====
-
+____________________________________________________________
 [.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/Moyenne.adoc[Moyenne].
