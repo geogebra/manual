@@ -2,10 +2,12 @@
 :page-en: commands/TTest2
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Statistiques.adoc[Commandes Statistiques]
+
 TTest2( <Liste Données Échantillon 1>, <Liste Données Échantillon 2>, <Valeur critique>, <Booléen sondé> )::
   Réalise un t-test de la différence des moyennes de deux populations à partir de la donnée d'échantillons
 
-'Valeur critique _prend une des trois options : "<", ">" , "≠". Ceci spécifie l'hypothèse alternative comme suit :_
+_Valeur critique_ prend une des trois options : "<", ">" , "≠". Ceci spécifie l'hypothèse alternative comme suit :
 
 "<" = différence des moyennes des populations < 0
 
@@ -13,15 +15,12 @@ TTest2( <Liste Données Échantillon 1>, <Liste Données Échantillon 2>, <Valeu
 
 "≠" = différence des moyennes des populations ≠ 0
 
-Si _sondé_ = true, alors les variances des populations sont supposées égales et les écarts-type d'échantillon sont
-combinés dans les calculs.
+Si _sondé_ = true, alors les variances des populations sont supposées égales et les écarts-type d'échantillon sont combinés dans les calculs.
 
-Si _sondé_ = false, alors les variances des populations ne sont pas supposées égales et les écarts-type d'échantillon ne
-sont pas combinés.
+Si _sondé_ = false, alors les variances des populations ne sont pas supposées égales et les écarts-type d'échantillon ne sont pas combinés.
 
-Le résultat est retourné sous la forme d'une liste : \{valeur P, test T}.
+Le résultat est retourné sous la forme d'une liste : {valeur P, test T}.
 
 variante :
 
-TTest2( <Moy Éch1 >, <É-Type Éch1 >, <Taille Éch1>, <Moy Éch2 >, <É-Type Éch2 >, <Taille Éch2>, <Valeur critique>,
-<Booléen sondé>)
+TTest2( <Moy Éch1 >, <É-Type Éch1 >, <Taille Éch1>, <Moy Éch2 >, <É-Type Éch2 >, <Taille Éch2>, <Valeur critique>, <Booléen sondé>)::
