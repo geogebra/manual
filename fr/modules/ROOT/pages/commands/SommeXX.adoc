@@ -2,22 +2,20 @@
 :page-en: commands/SigmaXX
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Statistiques.adoc[Commandes Statistiques]
+
 SommeXX( <Liste Nombres> )::
   Calcule la somme des carrés des nombres de la liste donnée.
 
 [EXAMPLE]
 ====
 
-*Exemple :*
-
-`++SommeXX({1,2,3})++` donne _14_ (1²+2²+3²=1+4+9).
+`++SommeXX({1,2,3})++` retourne 1²+2²+3²=1+4+9 c.-à-d. _14_ .
 
 ====
 
 [NOTE]
 ====
-
-*Note :*
 
 Ainsi la variance de la liste est `++SommeXX(liste)/Longueur(liste) - Moyenne(liste)^2++`.
 
@@ -29,9 +27,7 @@ SommeXX( <Liste Points> )::
 [EXAMPLE]
 ====
 
-*Exemple :*
-
-`++SommeXX({(1,2),(2,-5),(3,36)})++` donne _14_ (1²+2²+3²=1+4+9).
+`++SommeXX({(1,2),(2,-5),(3,36)})++` retourne 1²+2²+3²=1+4+9  c.-à-d. _14_.
 
 ====
 
@@ -41,9 +37,7 @@ SommeXX( <Liste Nombres>, <Liste Effectifs> )::
 [EXAMPLE]
 ====
 
-*Exemple :*
-
-`++SommeXX({1,2},{3,2})++` donne _11_ (1²x3+2²x2=3+8).
+`++SommeXX({1,2},{3,2})++` retourne 1²x3+2²x2=3+8 c.-à-d. _11_.
 
 ====
 
@@ -51,4 +45,4 @@ ____________________________________________________________
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
-Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel, mais sans la possibilité d'effectuer du calcul littéral.
