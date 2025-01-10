@@ -2,6 +2,8 @@
 :page-en: commands/Sum
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Statistiques.adoc[Commandes Statistiques]
+
 Somme( <Liste> )::
   Calcul de la somme de tous les éléments de la liste.
 
@@ -10,11 +12,11 @@ Somme( <Liste> )::
 
 *Exemples :*
 
-* `++Somme({1, 2, 3})++` vous retourne le nombre _a = 6_.
-* `++Somme({x^2, x^3})++` vous retourne _f(x) = x^2^ + x^3^_.
-* `++Somme(Séquence(i,i,1,100))++` vous retourne le nombre _a = 5050_.
-* `++Somme({(1, 2), (2, 3)})++` vous retourne le point _A = (3, 5)_.
-* `++Somme({"a","b","c"})++` vous retourne le texte _"abc"_.
+* `++Somme({1, 2, 3})++` retourne le nombre _a = 6_.
+* `++Somme({x^2, x^3})++` retourne la fonction _f(x) = x^2^ + x^3^_.
+* `++Somme(Séquence(i,i,1,100))++` retourne le nombre _a = 5050_.
+* `++Somme({(1, 2), (2, 3)})++` retourne le point _A = (3, 5)_.
+* `++Somme({"a","b","c"})++` retourne le texte _"abc"_.
 
 ====
 
@@ -31,7 +33,7 @@ Somme( <Liste>,< Nombre Eléments n> )::
 [EXAMPLE]
 ====
 
-`++Somme({1, 2, 3, 4, 5, 6}, 4)++` vous retourne le nombre _a = 10_.
+`++Somme({1, 2, 3, 4, 5, 6}, 4)++` retourne le nombre _a = 10_.
 
 ====
 
@@ -41,10 +43,10 @@ Somme( <Liste Nombres>, <Liste Effectifs> )::
 [EXAMPLE]
 ====
 
-`++Somme({1,2,3},{4,5,6})++` vous retourne le nombre _a = 32_ (_1*4+2*5+3*6_).
+`++Somme({1,2,3},{4,5,6})++` retourne le nombre _a = 32_ (_1*4+2*5+3*6_).
 
 ====
-
+_____________________________________________________
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel*
 
 Somme( <Liste> )::
@@ -59,15 +61,13 @@ Si ces nombres ne sont pas définis dans GeoGebra, vous obtenez une formule litt
 ====
 
 Somme(<Expression f(t)>,<Variable t>,<Valeur initiale a>,<Valeur finale b>)::
-  Calcul de la somme stem:[\sum_\{t=a}^\{b}f(t)]. Valeur finale peut être l'infini.
+  Calcul de la somme stem:[\sum_{t=a}^{b}f(t)]. Valeur finale peut être l'infini.
 
 [EXAMPLE]
 ====
 
-*Exemples :*
-
-* `++Somme(i^2, i, 1, 3)++` vous retourne _14_.
-* `++Somme(r^i, i, 0, n)++` vous retourne _stem:[\frac{r^\{n} r- 1}\{r - 1}]_.
-* `++Somme((1/3)^i, i, 0, ∞)++` vous retourne _stem:[\frac{3}\{2}]_.
+* `++Somme(i^2, i, 1, 3)++` retourne _14_.
+* `++Somme(r^i, i, 0, n)++` retourne _stem:[\frac{r^{n + 1}}{r - 1} - \frac{1}{r - 1}]_.
+* `++Somme((1/3)^i, i, 0, ∞)++` retourne _stem:[\frac{3}{2}]_.
 
 ====
