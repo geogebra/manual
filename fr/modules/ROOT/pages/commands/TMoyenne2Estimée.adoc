@@ -2,17 +2,20 @@
 :page-en: commands/TMean2Estimate
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Statistiques.adoc[Commandes Statistiques]
+
 TMoyenne2Estimée( <Liste Données 1>, <Liste Données 2>, <Valeur critique>, <Booléen sondé> )::
   Calcule un intervalle de confiance au seuil _Niveau_ de confiance, de l'estimation de la différences des moyennes de
   deux populations à partir d'échantillons.
-  Si _sondé_ = true, alors les variances des populations sont supposées égales et les écarts-type d'échantillon sont
+  
+Si _sondé_ = true, alors les variances des populations sont supposées égales et les écarts-type d'échantillon sont
   combinés dans les calculs.
-  Si _sondé_ = false, alors les variances des populations ne sont pas supposées égales et les écarts-type d'échantillon
+  
+Si _sondé_ = false, alors les variances des populations ne sont pas supposées égales et les écarts-type d'échantillon
   ne sont pas combinés.
 
-Le résultat est retourné sous la forme d'une liste : \{borne inférieure, borne supérieure}.
+Le résultat est retourné sous la forme d'une liste : {borne inférieure, borne supérieure}.
 
 variante :
 
-TMoyenne2Estimée( <Moy Éch1 >, <É-Type Éch1 >, <Taille Éch1>, <Moy Éch2 >, <É-Type Éch2 >, <Taille Éch2>, <Moyenne
-attendue>, <Valeur critique>, <Booléen sondé>)
+TMoyenne2Estimée( <Moy Éch1 >, <É-Type Éch1 >, <Taille Éch1>, <Moy Éch2 >, <É-Type Éch2 >, <Taille Éch2>, <Moyenne attendue>, <Valeur critique>, <Booléen sondé>)::
