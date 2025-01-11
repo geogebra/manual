@@ -2,13 +2,19 @@
 :page-en: commands/NormalQuantilePlot
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-NormaleQuantile( <Liste Données>)::
-  Crée un nuage de points "quantile normal" à partir de la liste brute des données et dessine une droite d'ajustement
-  https://fr.wikipedia.org/_Droite_de_Henry[Droite_de_Henry]. Les points ont pour abscisses les valeurs de
-  _Liste Données_ et pour ordonnées leur score normal (Z-score) attendu.
+xref:commands/Commandes_Stats_Graphiques.adoc[Commandes Stats Graphiques]
+
+NormaleQuantile( <Série brute>)::
+  Crée un nuage de points "quantile normal" à partir de la liste _Série brute_ des données et dessine une droite d'ajustement
+  https://fr.wikipedia.org/wiki/Droite_de_Henry[Droite_de_Henry].
+
+Les points ont pour abscisses les valeurs de _Liste Données_ et pour ordonnées leur score normal (Z-score) attendu. Plus précisément, les valeurs y sont calculées à l’aide de l’estimation de Filliben
 
 Si la variable étudiée est gaussienne, la dernière donnée de la liste résultat "devrait" être la longueur du segment de
-Henry d'extrémités : (Min(<Liste Données>),(Min(<Liste Données>)-Moyenne(<Liste Données>))/EcartType(<Liste Données>))
-et (Max(<Liste Données>),(Max(<Liste Données>)-Moyenne(<Liste Données>))/EcartType(<Liste Données>))
+Henry d'extrémités : 
+
+(Min(<Liste Données>),(Min(<Liste Données>)-Moyenne(<Liste Données>))/EcartType(<Liste Données>)) et 
+
+(Max(<Liste Données>),(Max(<Liste Données>)-Moyenne(<Liste Données>))/EcartType(<Liste Données>))
 
 de droite support d'équation y = (x - Moyenne(<Liste Données>))/EcartType(<Liste Données>).
