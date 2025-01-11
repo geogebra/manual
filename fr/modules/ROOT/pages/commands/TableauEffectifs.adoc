@@ -2,6 +2,8 @@
 :page-en: commands/FrequencyTable
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Stats_Graphiques.adoc[Commandes Stats Graphiques]
+
 TableauEffectifs( <Liste Données L> )::
   Retourne un tableau (en tant que texte) dans lequel la première colonne contient une liste triée des éléments de _L_
   sans répétition, et la seconde le nombre d'occurrences de chacune des valeurs de la première colonne.Les éléments de
@@ -30,10 +32,9 @@ TableauEffectifs(<Booléen Cumul>, <Liste Données L> )::
 
 même principe que ci-dessus, pour :
 
-TableauEffectifs( <Booléen Cumul>,<Liste Bornes Classes C >, <Liste Données L>)
+TableauEffectifs( <Booléen Cumul>,<Liste Bornes Classes C >, <Liste Données L>)::
 
-TableauEffectifs( <Booléen Cumul>,<Liste Bornes Classes C >, <Liste Données L>, <Densité True|False> , <Echelle
-(optionnel)> )
+TableauEffectifs( <Booléen Cumul>,<Liste Bornes Classes C >, <Liste Données L>, <Densité True|False> , <Echelle (optionnel)> )::
 
 [NOTE]
 ====
@@ -56,19 +57,11 @@ TableauEffectifs( <Liste Données>,<Echelle (optionnelle)> )::
 [EXAMPLE]
 ====
 
-*Exemple :*
-
 `++TableauEffectifs( {1, 1, 1, 2, 2, 3, 3, 4, 5} )++` retourne un tableau dont la première colonne _Valeur_ présente les
 entrées : 1, 2, 3 ,4 et 5 et la seconde _Effectifs_ les valeurs 3, 2 ,2, 1 et 1.
 
 image:TabEffEff.png[TabEffEff.png,width=132,height=118]
 
-[NOTE]
-====
-
-Dans la liste apparaît trois fois le _1_ .
-
-====
 
 ====
 
@@ -78,7 +71,6 @@ Dans la liste apparaît trois fois le _1_ .
 [EXAMPLE]
 ====
 
-*Exemple :*
 
 `++TableauEffectifs( {1, 1, 1, 2, 2, 3, 3, 4, 5} ,1/9)++` retourne un tableau dont la première colonne _Valeur_ présente
 les entrées : 1, 2, 3 ,4 et 5 et la seconde _Fréquences_ les résultats de 3/9, 2/9 ,2/9, 1/9 et 1/9, arrondis au nombre
@@ -86,12 +78,9 @@ de décimales choisi dans _Options > Arrondi_.
 
 image:TabEffFreq.png[TabEffFreq.png,width=144,height=118]
 
-[NOTE]
-====
 
 Dans _1/9_, le _9_ est le nombre d'éléments de la liste .
 
-====
 
 ====
 
@@ -102,20 +91,17 @@ _<Echelle>_
 [EXAMPLE]
 ====
 
-*Exemple :*
 
 `++TableauEffectifs( {1, 1, 1, 2, 2, 3, 3, 4, 5}, 2 )++` retourne un tableau dont la première colonne _Valeur_ présente
 les entrées : 1, 2, 3 ,4 et 5 et la seconde _Résultats_ les valeurs 6, 4 ,4, 2 et 2.
 
 image:TabEffRes.png[TabEffRes.png,width=136,height=113]
 
-[NOTE]
-====
+
 
 Dans la liste apparaît trois fois le _1_ , et le nombre d’occurrences de _1_ (=3) a été multiplié par le
 facteur d'échelle _2_ pour devenir la valeur _6_ de la seconde colonne.
 
-====
 
 ====
 
@@ -124,7 +110,6 @@ Les éléments de la liste peuvent être des nombres ou des chaînes de caractè
 [EXAMPLE]
 ====
 
-*Exemple :*
 
 `++TableauEffectifs( {"Rouge", "Rouge",  "Bleu", "Bleu","Blanc","Rouge"} )++` retourne un tableau dont la première
 colonne _Valeur_ présente les entrées : Blanc, Bleu et Rouge, (ordre alphabétique) et la seconde _Effectifs_ les valeurs
@@ -133,3 +118,9 @@ colonne _Valeur_ présente les entrées : Blanc, Bleu et Rouge, (ordre alphabé
 image:TabEffEffTxt.png[TabEffEffTxt.png,width=130,height=88]
 
 ====
+_____________________________________________________________
+
+
+image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel , mais sans la possibilité d'effectuer du calcul littéral.
