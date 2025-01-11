@@ -4,7 +4,7 @@ ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
 NastavitPerspektivu( <Text> )::
 
-Nastaví viditelnost a rozložení dílčích prostředí GeoGebry, tzv. _náhledů_. Parametr _Text_ je buď kompletním symbolickým popisem požadovaného rozložení (perspektivy), nebo symbolickým popisem jednoho konkrétního _náhledu_, který chceme nastavit, nebo identifikačním číslem jednoho ze standardních uspořádání okna GeoGebry (tj. jedné konkrétní perspektivy).
+Nastaví viditelnost a rozložení dílčích prostředí GeoGebry, tzv. _náhledů_. Parametr _Text_ je buď kompletním symbolickým popisem požadovaného rozložení (perspektivy), symbolickým popisem jednoho konkrétního _náhledu_, který chceme nastavit, nebo identifikačním číslem jednoho ze standardních uspořádání okna GeoGebry (tj. jedné konkrétní perspektivy).
 
 == Kompletní popis rozložení 
 
@@ -55,20 +55,19 @@ image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _
 
 ====
 
-== Nastavení pro jeden náhled
+== Nastavení jednoho náhledu
 
 Pro zobrazení nebo skrytí individuálního _náhledu_ přidejte před jeho jméno (písmeno) symbol `+++++` nebo `++-++`, v daném pořadí.
-In apps other than GeoGebra Classic (e.g. the Graphing Calculator) you can also use `++Tools++` and `++Table++`for the
-tools and table of values.
+V aplikacích GeoGebry jiných než GeoGebra Klasik (tj. např. Grafický Kalkulátor) je možné pro zobrazení náhledů nástrojů a tabulky použít také hesla `++Tools++` a `++Table++`.
 
 [EXAMPLE]
 ====
 
-* `++SetPerspective("+D")++` adds _Graphics View_ 2 to the currently displayed ones, on the right
-* `++SetPerspective("-D")++` removes _Graphics View_ 2 from the currently displayed ones
-* `++SetPerspective("+Tools")++` opens the sidebar in Graphing Calculator and switches it to tools tab
-* `++SetPerspective("+Table")++` opens the sidebar in Graphing Calculator and switches it to table of values
-* `++SetPerspective("-Tools")++` closes the sidebar in Graphing Calculater, no matter which tab is selected
+* `++NastavitPerspektivu("+D")++` přidá k aktuálně zobrazeným náhledům zprava _Nákresnu 2_
+* `++NastavitPerspektivu("-D")++` z aktuálně zobrazených náhledů odebere _Nákresnu 2_
+* `++NastavitPerspektivu("+Tools")++` v Grafickém kalkulátoru otevře postranní panel s nabídkou nástrojů
+* `++NastavitPerspektivu("+Table")++` v Grafickém kalkulátoru otevře postranní panel s tabulkou
+* `++NastavitPerspektivu("-Tools")++` zavře postranní panel Grafického kalkulátoru bez ohledu na obsah v něm zobrazený
 
 ====
 
