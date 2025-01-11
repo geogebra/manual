@@ -2,7 +2,30 @@
 :page-en: commands/ResidualPlot
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Stats_Graphiques.adoc[Commandes Stats Graphiques]
+
 Résidus( <Liste Points L>, <Fonction f> )::
   Retourne une liste de points dont les abscisses sont celles des éléments de L et les ordonnées sont les résidus
-  relativement à _f_. Si le _i^ème^_ élément de L est le point _(a,b)_ alors le _i^ème^_ élément de la liste résultante
-  est _(a,b-f(a))_.
+  relativement à _f_.
+
+Si le _i^ème^_ élément de L est le point _(a,b)_ alors le _i^ème^_ élément de la liste résultante est _(a,b-f(a))_.
+
+[EXAMPLE]
+====
+
+Soit la liste de points :
+
+`++liste = {(-1, 1), (-0.51, 2), (0, 0.61), (0.51, -1.41), (0.54, 1.97), (1.11, 0.42), (1.21, 2.53), (-0.8, -0.12)}++` et
+
+la fonction défine par : `++f(x) = x^5 + x^4 - x - 1++`. 
+
+La validation de  `++Résidus(liste, f )++` retourne _1 = {(-1, 1), (-0.51, 2.46), (0, 1.61), (0.51, 0), (0.54, 3.38), (1.11, -0.66), (1.21, 0), (-0.8, 0)}_ et crée les points correspondants dans image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Graphique.adoc[Graphique].
+
+====
+_____________________________________________________________
+
+
+image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel , mais sans la possibilité d'effectuer du calcul
+littéral.
