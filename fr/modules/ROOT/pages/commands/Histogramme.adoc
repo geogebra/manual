@@ -43,28 +43,58 @@ bornes sinon l'histogramme sera “non défini”.
 [EXAMPLE]
 ====
 
-(_Histogramme par défaut_ )`++Histogramme({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true)++` crée
-un histogramme à 3 barres de hauteurs : 0.5 (1ère barre), 0.2 (2ème), et 0.1 (3ème).L'aire totale de l'histogramme est
-0.5*10 + 0.2*10 + 0.1*10 = 8.
+(_Histogramme par défaut_ )
+
+`++Histogramme({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true)++` 
+
+crée un histogramme à 3 barres de hauteurs : 0.5 (1ère barre), 0.2 (2ème), et 0.1 (3ème).
+
+L'aire totale de l'histogramme est 0.5*10 + 0.2*10 + 0.1*10 = 8.
 
 ====
 
 [EXAMPLE]
 ====
 
-(_Histogramme de dénombrement_ )`++Histogramme({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, false)++`
-crée un histogramme à 3 barres de hauteurs : 5 (1ère barre), 2 (2ème), et 1(3ème). Cet histogramme ne prend pas en
-compte la densité, les hauteurs des barres sont les effectifs de chacune des classes.
+(_Histogramme de dénombrement_ )
+
+`++Histogramme({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, false)++`
+
+crée un histogramme à 3 barres de hauteurs : 5 (1ère barre), 2 (2ème), et 1(3ème).
+
+Cet histogramme ne prend pas en compte la densité, les hauteurs des barres sont les effectifs de chacune des classes.
 
 ====
 
 [EXAMPLE]
 ====
 
-(_Histogramme normalisé_)`++Histogramme({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 1/8)  ++`
-crée un histogramme à 3 barres de hauteurs : .0625 (1ère barre), .025 (2ème), et .0125 (3ème) . L'aire totale de
-l'histogramme est = .0625*10 + .025*10 + .0125*10 = 1.Si _n_ est le nombre de données, alors Echelle = _1/n_ crée un
-histogramme normalisé d'aire totale = 1. C'est utile pour ajuster un histogramme avec une courbe de densité.
+(Histogramme de fréquence relative)
+
+`++Histogramme({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 10/ 8) ++`
+
+crée un histogramme à 3 barres de hauteurs : .625 (1ère barre), .25 (2ème), et .125 (3ème).
+
+Cet histogramme utilise une mise à l'échelle de densité pour donner des hauteurs de barres égales à la proportion de valeurs dans chaque classe.
+
+Si n est le nombre de valeurs de données et que les classes ont une largeur constante w, alors le facteur d'échelle de densité = w/n crée un histogramme relatif.
+====
+
+
+[EXAMPLE]
+====
+
+(_Histogramme normalisé_)
+
+`++Histogramme({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 1/8)  ++`
+
+crée un histogramme à 3 barres de hauteurs : .0625 (1ère barre), .025 (2ème), et .0125 (3ème).
+
+L'aire totale de l'histogramme est = .0625*10 + .025*10 + .0125*10 = 1.
+
+Si _n_ est le nombre de données, alors Echelle = _1/n_ crée un histogramme normalisé d'aire totale = 1.
+
+C'est utile pour ajuster un histogramme avec une courbe de densité.
 
 ====
 
@@ -73,9 +103,9 @@ Histogramme(<Booléen Cumul>,<Liste Bornes Classes>,<Liste Données>,<Densité T
 
 [EXAMPLE]
 ====
+`++Histogramme(true, {10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true)++`
 
-*Exemple :* :`++Histogramme(true, {10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true)++`crée un histogramme à 3
-barres de hauteurs : 0.5 (1ère barre), 0.7 (2ème), et 0.8 (3ème) .
+crée un histogramme à 3 barres de hauteurs : 0.5 (1ère barre), 0.7 (2ème), et 0.8 (3ème) .
 
 ====
 
