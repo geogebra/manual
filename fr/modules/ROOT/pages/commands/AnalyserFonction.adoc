@@ -2,6 +2,8 @@
 :page-en: commands/ParseToFunction
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Scripts.adoc[ Commandes Scripts]
+
 AnalyserFonction( <Fonction f>, <Chaîne> )::
   Analyse la syntaxe de la chaîne de caractères et affecte le résultat à la xref:/Fonctions.adoc[fonction] _f_. La
   fonction _f_ doit être définie et xref:/Objets_libres_dépendants_ou_auxiliaires.adoc[libre] avant de solliciter cette
@@ -10,12 +12,32 @@ AnalyserFonction( <Fonction f>, <Chaîne> )::
 [EXAMPLE]
 ====
 
-*Exemple :*
-
 Soit la fonction f définie par `++ f(x) = 3x² + 2++` et la chaîne de caractères définie par `++ texte1 = "3x + 1"++`.
 
 `++ AnalyserFonction(f, texte1)++` retourne _f(x) = 3x + 1_.
 
 ====
+
+== Autres syntaxes (non proposées dans l'_Aide Saisie_ )
+
+AnalyserFonction( <Chaîne> )::
+
+[EXAMPLE]
+====
+
+* `++ AnalyserFonction("x^2")++` crée la fonction _f_(_x_) = __x__^2^_._
+* `++ AnalyserFonction("t+2/t")++` crée la fonction _f_(_t_) = _t_ + 2/_t_.
+
+====
+
+AnalyserFonction( <Chaîne>, <Liste Variables> )::
+
+[EXAMPLE]
+====
+
+`++ AnalyserFonction("2u+3v",{"u", "v"})++` crée la fonction _a(u,v) = 2u + 3v_.
+
+====
+
 
 [.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/AnalyserNombre.adoc[AnalyserNombre].
