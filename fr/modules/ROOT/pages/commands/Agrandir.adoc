@@ -2,6 +2,7 @@
 :page-en: commands/ZoomIn
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Scripts.adoc[ Commandes Scripts]
 
 Agrandir( )::
   Restaure xref:/Graphique.adoc[Graphique] à la position initiale par défaut.
@@ -33,6 +34,7 @@ Agrandir( <Min x>, <Min y>, <Max x>, <Max y> )::
 ====
 
 `++Agrandir(0, 1, 5, 6)++` 
+
 Si _a_ est un curseur, `++Agrandir(-a, -a, a, a)++` rend l'agrandissement de la vue dépendant du curseur _a_.
 ====
 
@@ -62,12 +64,13 @@ xref:/tools/Déplacer_Graphique.adoc[Déplacer Graphique] provoquent une réduct
 Si plusieurs xref:/Graphique.adoc[vues graphiques] sont présentes, seule la vue active est impactée.
 
 ====
-
+________________________________________________
 *image:32px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=32,height=32] Graphique
 3D*
 
 Agrandir( <Min x>, <Min y>, <Min z>, <Max y>, <Max x>, <Max z> )::
   Agrandit le graphique 3D au cube construit sur les sommets (Min x, Min y, Min z), (Max x,Max y, Max z).
+________________________________________________
 
 
 == .../...
@@ -76,4 +79,6 @@ Agrandir( <Min x>, <Min y>, <Min z>, <Max y>, <Max x>, <Max z> )::
 
 Créer une fonction f avec un point A sur sa courbe représentative, ainsi que la tangente en A à la courbe et un bouton
 avec le code `++Agrandir(2,A)++` pour visualiser que la courbe et la tangente semblent confondues pour un fort
-agrandissement.(Retour à l'_Affichage normal_ par [.kcode]#Ctrl# + [.kcode]#M#)
+agrandissement.
+
+(Retour à l'_Affichage normal_ par [.kcode]#Ctrl# + [.kcode]#M# ).
