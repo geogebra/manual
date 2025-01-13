@@ -1,0 +1,39 @@
+= Polecenie WykresPunktowy
+:page-en: commands/DotPlot
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+WykresPunktowy( <Lista Surowych Danych> )::
+  Zwraca wykres kropkowy dla podanej listy danych, a także listę punktów tego wykresu. Jeśli wartość _n_ pojawia się
+  na liście danych surowych _k_ razy, zwrócona lista zawiera punkty _(n, 1), (n, 2), ..., (n, k)_.
+
+[EXAMPLE]
+====
+
+`++WykresPunktowy({2, 5, 3, 4, 3, 5, 3})++` daje w wyniku _{(2, 1), (3, 1), (3, 2), (3, 3), (4, 1), (5, 1), (5, 2)}_.
+
+====
+
+WykresPunktowy( <Lista Surowych Danych>, <Wstaw Punkty Blisko Siebie (opcjonalnie)>, <Współczynnik Skalujący (opcjonalnie)> )::
+ Zwraca wykres kropkowy dla podanej listy danych, a także listę punktów tego wykresu. Jeśli wartość _n_ pojawia się
+  na liście danych surowych _k_ razy, zwrócona lista zawiera punkty _(n, 1), (n, 2), ..., (n, k)_.
+  Jeśli wybierzesz _Współczynnik Skalujący s_, zwrócona lista zawiera punkty _(n, 1s), (n, 2s), ..., (n, ks)_.
+  _Wstaw Punkty Blisko Siebie_ jest wartością logiczną (true lub false): Jeśli wybierzesz _true_, punkty (które znajdują się blisko siebie) zostaną ułożone 
+  jeden na drugim. Jeśli wybierzesz _false_, rezulata będzie taki sam, jakbyś nie używał parametru _Wstaw Punkty Blisko Siebie (opcjonalnie)_.
+
+Polecenie WykresPunktowy działa także dla listy tekstów.
+
+[EXAMPLE]
+====
+
+`++WykresPunktowy({"Red", "Red", "Red", "Blue", "Blue"})++` daje w wyniku _{(1, 1), (1, 2), (2, 1), (2, 2), (2, 3)}_.
+
+====
+
+[NOTE]
+====
+
+Jeśli użyjesz listy tekstowej, polecenie WykresPunktowy,  uporządkuje wynik w alfabetycznie. (np. _Blue_ występuje dwa razy,
+_Red_ trzy razy i B jest w alfabecie przed R, więc dostaniemy punkty _(1, 1), (1, 2)_ dla _Blue_ i _(2, 1), (2, 2), (2,
+3)_ dla _Red_.) Porządek ten nie uwzględnia polskich znaków.
+
+====
