@@ -1,0 +1,34 @@
+= Polecenie Trójliniowy
+:page-en: commands/Trilinear
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Trójliniowy( <Punkt>, <Punkt>, <Punkt>, <Liczba>, <Liczba>, <Liczba> )::
+  tworzy punkt, którego https://en.wikipedia.org/wiki/Trilinear_coordinates[współrzędne trójliniowe (ang.)] są określonymi liczbami 
+względem trójkąta o zadanych wierzchołkach.
+
+== Some examples
+
+[cols=",,,",options="header",]
+|===
+|Punkt |<Liczba> |<Liczba> |<Liczba>
+|A |1 |0 |0
+
+|B |0 |1 |0
+
+|C |0 |0 |1
+
+|Środek okręgu opisanego |cos(stem:[\hat{A}]) |cos(stem:[\hat{B}]) |cos(stem:[\hat{C}])
+
+|Środek okręgu wpisanego |1 |1 |1
+
+|Środek okręgu dopisanego stycznego do [BC] |-1 |1 |1
+
+|Środek okręgu dopisanego stycznego do [AC] |1 |-1 |1
+
+|Środek okręgu dopisanego stycznego do [AB] |1 |1 |-1
+
+|Centroid |stem:[\frac{1}{a}] |stem:[\frac{1}{b}] |stem:[\frac{1}{c}]
+
+|Ortocentrum |cos(stem:[\hat{B}]) cos(stem:[\hat{C}]) |cos(stem:[\hat{A}]) cos(stem:[\hat{C}])
+|cos(stem:[\hat{A}])cos(stem:[\hat{B}])
+|===
