@@ -1,0 +1,19 @@
+= Polecenie TestŚredniej
+:page-en: commands/ZMeanTest
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+ZMeanTest( <Lista Danych z Próby>, <σ>, <Średnia Hipotetyczna>, <Ogon> )::
+  Wykonuje jednostronny https://pl.wikipedia.org/wiki/Test_Z[Test Z] dla średniej populacji, wykorzystując podaną listę danych próbki 
+  oraz odchylenie standardowe populacji. _Średnia Hipotetyczna_ to średnia populacji założona w hipotezie zerowej.
+  _Ogon_ może przyjmować wartości "<", ">" , "≠". Określają one hipotezę alternatywną w następujący sposób:
+
+  "<" = średnia populacji < _Średnia Hipotetyczna_
+  ">" = średnia populacji > _Średnia Hipotetyczna_
+  "≠" = średnia populacji ≠ _Średnia Hipotetyczna_
+
+Wyniki są zwracane w postaci listy: {wartość prawdopodobieństwa, statystyka Z-testu}.
+
+TestŚredniej( <Średnia z Próbki>, <σ>, <Liczność Próbki>, <Średnia Hipotetyczna>, <Ogon> )::
+  dla średniej populacji, wykorzystując podane statystyki próbki oraz odchylenie standardowe populacji.
+_Średnia Hipotetyczna_ i _Ogon_ są zdefiniowane jak powyżej.
+  Wyniki są zwracane w postaci listy: {wartość prawdopodobieństwa, statystyka Z-testu}.
