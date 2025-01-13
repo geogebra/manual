@@ -2,10 +2,15 @@
 :page-en: commands/AttachCopyToView
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Scripts.adoc[ Commandes Scripts]
+
 AttacherCopieAVue( <Objet>, <Vue 0|1|2> )::
-  Si _Vue = 0_, une copie de l' objet cité est crée.
-  Si _Vue = 1_ ou 2 cette commande crée une copie dépendante de l' objet cité dont la taille dans la vue
-  xref:/Graphique.adoc[Graphique] citée est constante.
+  * Si _Vue = 0_, une copie de l' objet cité est crée.
+
+  * Si _Vue = 1_ cette commande crée une copie dépendante de l' objet cité dont la taille dans la vue image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Graphique.adoc[Graphique] citée est constante.
+
+  * Si _Vue = 2_ et que **Grahique2 est affichée**, crée une copie dépendante de l' objet cité dont la taille dans la vue image:16px-Menu_view_graphics2.svg.png[Menu view
+graphics2.svg,width=16,height=16] xref:/Graphique/#_seconde_fen%C3%AAtre_graphique.adoc[Graphique 2] citée est constante.
 
 *image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :* `++AttacherCopieAVue( image1, 1 )++` crée dans xref:/Graphique.adoc[Graphique] une copie de _image1_ qui ne changera pas de taille lors de zooms
 
@@ -13,7 +18,7 @@ AttacherCopieAVue( <Objet>, <Vue 0|1|2> )::
 [NOTE]
 ====
 
-Dès que la copie est crée, quatre autres arguments sont ajoutés à la définition de la commande .
+Dès que la copie est créée, quatre autres arguments sont ajoutés à la définition de la commande.
 
 ====
 
@@ -27,7 +32,7 @@ AttacherCopieAVue( <Objet>, <Vue 0|1|2>, <Point 1>, <Point 2>, <Écran Point 1>,
 ====
 
 Si la première vue graphique est active,
-`++AttacherCopieAVue(Polygone((0,0),(1,0),(1,1),(0,1)),1,(0,0),(1,1),(0,0),(100,100)) ++`crée un carré 100px x 100px
+`++AttacherCopieAVue(Polygone((0,0),(1,0),(1,1),(0,1)),1,(0,0),(1,1),(0,0),(100,100))++` crée un carré 100px x 100px
 dans le coin supérieur gauche de Graphique 1.
 
 ====
