@@ -1,0 +1,30 @@
+= Polecenie RozkładWeibulla
+:page-en: commands/Weibull
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RozkładWeibulla( <Kształt>, <Skala>, <Liczba Sukcesów> )::
+  Oblicza funkcję dystrybucji skumulowanej (CDF) rozkładu Weibulla dla _wartości zmiennej v_, tj. oblicza prawdopodobieństwo
+   _P(X ≤ v)_ gdzie _X_ jest zmienną losową o rozkładzie Weibulla zdefiniowanym przez podane parametry _Kształt_ u _Skala_.
+
+[EXAMPLE]
+====
+
+* `++RozkładWeibulla(0.5, 1, 0)++` daje w wyniku _0_.
+* `++RozkładWeibulla(0.5, 1, 1)++` daje w wyniku _stem:[1 - \frac{1} { e } ]._
+
+====
+
+[NOTE]
+====
+
+Ta składnia zwraca prawdopodobieństwo dla podanej wartości, czyli pole pod krzywą rozkładu Weibulla na lewo od podanej współrzędnej _x_.
+
+====
+
+RozkładWeibulla( <Kształt>, <Skala>, <Liczba Sukcesów>, <Czy Skumulowany> )::
+  Jeśli Czy Skumulowany = true_, oblicza funkcję dystrybucji skumulowanej (CDF) rozkładu Weibulla dla podanych parametrów _Kształt_ i _Skala_ w podanej _wartości zmiennej_. W przeciwnym razie oblicza  w tej _wartości zmiennej_.
+
+RozkładWeibulla( <Kształt>, <Skala>, x, <Czy Skumulowany> )::
+ Jeśli Czy Skumulowany = true_, tworzy funkcję dystrybucji skumulowanej (CDF) rozkładu Weibulla dla podanych parametrów _Kształt_ i _Skala_. W przeciwnym razie tworzy funkcję gęstości prawdopodobieństwa (PDF) rozkładu.
+
+
