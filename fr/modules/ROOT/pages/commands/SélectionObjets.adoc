@@ -2,6 +2,8 @@
 :page-en: commands/SelectObjects
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Scripts.adoc[ Commandes Scripts]
+
 SélectionObjets()::
   Annule la sélection de tous les objets sélectionnés.
 
@@ -11,15 +13,19 @@ SélectionObjets(<Objet>,<Objet>, ... )::
 [NOTE]
 ====
 
-Tous les paramètres doivent être des objets xref:/Étiquettes_et_Légendes.adoc[nommés] (par ex.
-`++SélectionObjets(MilieuCentre(A,B))++` ne va pas fonctionner).
+Tous les paramètres doivent être des objets xref:/Étiquettes_et_Légendes.adoc[nommés] 
+
+(par ex. `++SélectionObjets(MilieuCentre(A,B))++` ne va pas fonctionner).
 
 ====
 
 [NOTE]
 ====
 
-Cette commande annule maintenant tout déplacement en cours (utile dans les scripts). Déplacer un point A de
-script par actualisation `++Si(A==(1,1), SélectionObjets())++`, la cible (1,1) atteinte, il ne devrait plus se déplacer.
+Cette commande annule tout déplacement en cours (utile dans les scripts).
+
+Déplacer un point _A_ possédant comme **script par actualisation** `++Si(A==(1,1), SélectionObjets())++`,
+
+lorsque la cible (1,1) est atteinte, A n'est plus sélectionné, il ne doit plus se déplacer avant nouvelle sélection.
 
 ====
