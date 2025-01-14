@@ -2,6 +2,8 @@
 :page-en: commands/SetBackgroundColor
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Scripts.adoc[ Commandes Scripts]
+
 SoitCouleurAPlan( <Objet>, <Rouge>, <Vert>, <Bleu> )::
   Modifie la couleur d'arrière-plan de l'objet nommé. Ceci pour des textes, champs textes ou des cellules du tableur.
 
@@ -29,7 +31,7 @@ La référence de couleur est fournie en tant que xref:/Textes.adoc[texte] étan
 [NOTE]
 ====
 
-Si vous utilisez cette commande dans un GeoGebraScript, vous devez utiliser les noms de couleur en anglais.
+Si vous utilisez cette commande dans un GeoGebraScript, vous devez utiliser les noms de couleur en **anglais**.
 
 ====
 
@@ -41,12 +43,12 @@ Une https://www.toutes-les-couleurs.com/code-couleur-html.php[page] de codes (pa
 [EXAMPLE]
 ====
 
-SoitCouleurAPlan(texte1, "#80FF0000") définit la couleur de l'arrière-plan du _texte1_ à _Rouge_ avec une
+`++SoitCouleurAPlan(texte1, "#80FF0000")++` définit la couleur de l'arrière-plan du _texte1_ à _Rouge_ avec une
 opacité à _50%_
 
 ====
 
-SoitCouleurAPlan( "couleur" ) +
+SoitCouleurAPlan( "couleur" )::
 SoitCouleurAPlan(<Rouge>, <Vert>, <Bleu> )::
   Si aucun objet n'est précisé, c'est alors la couleur d'arrière-plan de la fenêtre graphique active qui est modifiée.
 
