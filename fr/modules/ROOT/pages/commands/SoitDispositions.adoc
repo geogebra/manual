@@ -2,13 +2,15 @@
 :page-en: commands/SetPerspective
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Scripts.adoc[ Commandes Scripts]
+
 SoitDispositions( <Texte> )::
 
 Détermine l' _Aspect_ de la fenêtre GeoGebra ainsi que les fenêtres affichées. Le paramètre _Texte_ décrit l' _Aspect_
 désiré. Il doit être une expression valide.Les fenêtres sont repérées par des lettres, le partage vertical est codifié
 par la concaténation des lettres, le partage horizontal est signifié par le caractère [.kcode]#/#.
 
-[cols=",",options="header",]
+[cols="12%,88%",options="header",]
 |===
 |Lettre |Fenêtre
 |"A" |image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] xref:/Algèbre.adoc[Algèbre]
@@ -29,10 +31,10 @@ xref:/Protocole_de_construction.adoc[Protocole de construction]
 
 |"R" |Analyse des données (Desktop uniquement)
 
-|S |image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+|"S" |image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
 xref:/Tableur.adoc[Tableur]
 
-|T |image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=16,height=16]
+|"T" |image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=16,height=16]
 xref:/Graphique_3D.adoc[Graphique 3D]
 |===
 
@@ -60,7 +62,7 @@ graphics.svg,width=16,height=16]_Graphique_ et image:16px-Menu_view_algebra.svg.
 À la place de ces expressions , vous pouvez aussi utiliser un texte ne contenant qu'un seul chiffre pour obtenir l'une
 des dispositions prédéfinies du xref:/Menu_Associations.adoc[Menu Associations] :
 
-[cols=",",options="header",]
+[cols="12%,88%",options="header",]
 |===
 |Texte |Association
 |"1" |Algèbre (& Graphique)
@@ -78,16 +80,28 @@ l'affichage du champ de xref:/Saisie.adoc[Saisie] et le contenu de la xref:/Barr
 == Modifier simplement une fenêtre
 
 Pour ouvrir ou fermer individuellement des _fenêtres_, ajoutez les symboles `+++++` ou `++-++` devant la lettre de référence de la _fenêtre_.
-Dans les applications autres que GeoGebra Classique (par ex. la Calculatrice Graphique ) vous pouvez aussi utiliser `++Tools++` et `++Table++` pour la boîte à outils ou le tableau de valeurs.
 
 [EXAMPLE]
 ====
 
 * `++SoitDispositions("+D")++` ajoute _Graphique 2_ à la droite de la fenêtre ouverte ;
-* `++SoitDispositions("-D")++` retire _Graphique 2_ de l'affichage ;
+* `++SoitDispositions("-D")++` retire _Graphique 2_ de l'affichage.
+
+====
+______________________________________________
+_____________________________________________________
+Dans les applications autres que GeoGebra Classique (par ex. la Calculatrice Graphique ) vous pouvez aussi utiliser `++Tools++` et `++Table++` pour la boîte à outils ou le tableau de valeurs.
+
+[EXAMPLE]
+====
+
 * `++SoitDispositions("+Tools")++` ouvre le panneau latéral avec les outils ;
 * `++SoitDispositions("+Table")++` ouvre le panneau latéral avec le tableau de valeurs ;
 * `++SoitDispositions("-Tools")++` ferme le panneau latéral, quel que soit l'onglet actif.
 
 ====
 
+
+
+_____________________________________________________
+______________________________________________
