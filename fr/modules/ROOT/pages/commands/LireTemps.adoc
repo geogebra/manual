@@ -2,15 +2,18 @@
 :page-en: commands/GetTime
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Scripts.adoc[ Commandes Scripts]
+
 LireTemps()::
-  Retourne une liste telle que _{624, 55, 25, 21, 8, 10, 2024, "Octobre", "Mardi", 3} _, ie la date et l'heure
+  Retourne une liste telle que _{958, 3, 5, 10, 14, 1, 2025, "Janvier", "Mardi", 3} _, c.-à-d. la date et l'heure
   actuelle dans cet ordre :
+
   millisecondes, secondes, minutes, heures (0-23), date, mois (1-12), année, mois (en texte), jour (en texte), numéro du
   jour (1 = Dimanche, 2 = Lundi, etc)
 
 LireTemps(<Format>)::
   où _Format_ est un Texte, dont les caractères, cités dans le tableau ci-dessous, vont être remplacés par leur valeur,
-  lorsqu'ils sont précédés d'un antislash [.kcode]#\#.
+  lorsqu'ils sont précédés d'une contre-oblique [.kcode]#\#.
 
 [width="99%",cols="20%,16%,16%,16%,16%,16%",]
 |===
@@ -45,7 +48,7 @@ http://php.net/manual/en/function.date.php[page].
 [EXAMPLE]
 ====
 
-`++LireTemps("La date est \l, \j \F \Y")++` vous écrit le texte _La date est Mardi, 8 Octobre 2024_
+`++LireTemps("La date est \l, \j \F \Y")++` crée le texte _"La date est Mardi, 14 Janvier 2025"_
 
 ====
 
