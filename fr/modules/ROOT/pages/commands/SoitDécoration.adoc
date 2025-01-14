@@ -2,13 +2,18 @@
 :page-en: commands/SetDecoration
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Scripts.adoc[ Commandes Scripts]
+
 SoitDécoration( <Objet>, <Nombre> )::
-  Affecte une "décoration" (voir l'onglet *Style*, dans les propriétés) à l'objet cité (*segment*, *angle*, ou tout *objet* possédant la propriété _Remplissage_). Le nombre précise la décoration , selon le tableau ci-dessous.
+  Affecte une "décoration" (voir l'onglet *Style*, dans les propriétés) à l'objet cité (*segment*, *angle*, ou tout *objet* possédant la propriété _Remplissage_).
 
-Par défaut, un segment n'a pas de marque, un angle est repéré par un arc. Toute utilisation d'une syntaxe
-SoitDécoration( <Objet>, <Nombre> ) non conforme ramène à cette situation par défaut.
+Le nombre précise la décoration , selon le tableau ci-dessous.
 
-[cols=",,,",options="header",]
+Par défaut, un segment n'a pas de marque, un angle est repéré par un arc.
+
+Toute utilisation d'une syntaxe `++SoitDécoration( <Objet>, <Nombre> )++` non conforme ramène à cette situation par défaut.
+
+[width=100%, cols="10%,30%,30%,30%",options="header",]
 |===
 |Valeur |Pour un segment |Pour un angle|Remplissage
 |0 |Retire la décoration |Retire la décoration |Standard
@@ -24,9 +29,9 @@ SoitDécoration( <Objet>, <Nombre> ) non conforme ramène à cette situation par
 |5 |image:24px-D2C.png[D2C.png,width=24,height=23] 2 chevrons |image:24px-A2M.png[A2M.png,width=24,height=24] 3 marques |Nids d'abeille
 
 |6 |image:24px-D3C.png[D3C.png,width=24,height=24] 3 chevrons |image:24px-AOP.png[AOP.png,width=24,height=23]
-orientation + |Briques
+orientation **$\circlearrowleft$** |Briques
 
-|7 | |image:24px-AOM.png[AOM.png,width=24,height=25] orientation - | Cannage
+|7 | |image:24px-AOM.png[AOM.png,width=24,height=25] orientation **$\circlearrowright$** | Cannage
 |===
 
 SoitDécoration(<Segment>, <Nombre>, <Nombre>)::
@@ -37,7 +42,7 @@ La décoration des segments peut également être définie dans l'onglet _Style_
 Le premier nombre utilisé définit le style du 1er point de définition du segment, et le deuxième nombre, celui  du 2ème point de définition du segment, comme décrit dans le tableau suivant.
 
 
-[cols=",",options="header",]
+[width=100%, cols="12%,88%",options="header",]
 |===
 |Valeur |Décoration
 |0 |Pas de décoration
@@ -49,4 +54,6 @@ Le premier nombre utilisé définit le style du 1er point de définition du segm
 |6 |Disque vide
 |7 |Disque plein
 |===
+
+image:SDecoSeg.png[SDecoSeg.png,width=292,height=332]
 
