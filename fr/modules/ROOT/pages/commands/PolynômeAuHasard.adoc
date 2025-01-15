@@ -2,6 +2,8 @@
 :page-en: commands/RandomPolynomial
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Probabilités.adoc[ Commandes Probabilités]
+
 PolynômeAuHasard( <Degré d> , <Minimum pour les Coefficients min>, <Maximum pour les Coefficients max> )::
   Retourne un polynôme en _x_ de degré égal à _d_ dont les coefficients entiers appartiennent à l'intervalle [_min_ ;
   _max_].
@@ -33,9 +35,11 @@ PolynômeAuHasard(<Variable var >,<Degré d> ,<Minimum pour les Coefficients min
 Si la variable _a_ n'est pas définie ;
 
 * `++PolynômeAuHasard(a,2, 1, 2)++` retourne un polynôme de degré _2_ et avec seulement _1_ ou _2_ comme coefficients,
-par ex. _2a^2^ + x + 1_ ;
+par ex. _2a^2^ + a + 1_ ;
 
-Si la variable _a_ est définie , vous allez obtenir l'image de sa valeur, par un polynôme au hasard.
+**Mais** si la variable _a_ est définie, `++PolynômeAuHasard(a,2, 1, 2)++` 
+
+* se comporte comme `++PolynômeAuHasard(2, 1, 2)++` et retourne par ex. _2x^2^ + x + 1_.
 
 ====
 
