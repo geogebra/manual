@@ -2,9 +2,10 @@
 :page-en: commands/InverseNormal
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Probabilités.adoc[ Commandes Probabilités]
+
 InverseNormale(<Moyenne μ>,<Ecart-type σ>,<Probabilité p >)::
-  Calcule _Φ^-1^(p) * σ + μ_ où _Φ ^-1^_ désigne la réciproque de la fonction de densité cumulée _Φ_ associée à
-  _N(0,1)_.
+  Calcule stem:[\Phi^{-1}(P) \cdot \sigma + \mu ] où stem:[\Phi^{-1}] désigne la réciproque de la fonction de densité cumulée stem:[\Phi] associée à _N(0,1)_.
 
 [NOTE]
 ====
@@ -20,4 +21,4 @@ ____________________________________________________________
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
-Vous pouvez l'utiliser pour construire une fonction `++f(x):=InverseNormale(0,1,x)++`
+Vous pouvez l'utiliser pour construire une fonction `++f(x):=InverseNormale(0,1,x)++`  (? Ne fonctionne plus en 5.2.871, ni 6.0.873)
