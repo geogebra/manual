@@ -2,38 +2,37 @@
 :page-en: commands/ShowAxes
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
-ShowAxes( )::
-  Shows the axes in the active View.
-ShowAxes( <Boolean> )::
-  Shows/hides the axes in the active View.
+ZobrazitOsy( )::
+  Zobrazí osy v aktivním náhledu (2D či 3D).
+ZobrazitOsy( <Boolean> )::
+  Zobrazí/skryje osy v aktivním náhledu, dle hodnoty parametru _Boolean_ (true/false).
 
 [EXAMPLE]
 ====
 
-* `++ShowAxes(true)++` shows the axes in the active View.
-* `++ShowAxes(false)++` hides the axes in the active View.
+* `++ZobrazitOsy(true)++` zobrazí osy v aktivním náhledu.
+* `++ZobrazitOsy(false)++` skryje osy v aktivním náhledu.
 
 ====
 
-ShowAxes( <View>, <Boolean> )::
-  Shows/hides the axes in the image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Graphics
-  View_ specified by the number 1 or 2 (or 3 for image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra
-  3Dgraphics.svg,width=16,height=16] _3D View_) .
+ZobrazitOsy( <Náhled>, <Boolean> )::
+  Zobrazí/skryje osy v image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Nákresně_ specifikované číslem 1 nebo 2 (nebo 3 pro image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra
+  3Dgraphics.svg,width=16,height=16] _Grafický náhled 3D_) .
 
 [EXAMPLE]
 ====
 
-* `++ShowAxes(1, true)++` shows the axes in image:16px-Menu_view_graphics.svg.png[Menu view
-graphics.svg,width=16,height=16] _Graphics View_.
-* `++ShowAxes(2, false)++` hides the axes in image:16px-Menu_view_graphics2.svg.png[Menu view
-graphics2.svg,width=16,height=16] _Graphics 2 View_.
+* `++ZobrazitOsy(1, true)++` zobrazí osy v image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Nákresně_.
+* `++ZobrazitOsy(2, false)++` skryje osy v image:16px-Menu_view_graphics2.svg.png[Menu view
+graphics2.svg,width=16,height=16] _Nákresně 2_.
 
 ====
 
 [NOTE]
 ====
 
-See also xref:/commands/ShowGrid.adoc[ShowGrid command]. To show / hide a single axis please use
+Viz též příkaz xref:/commands/ZobrazitMrizku.adoc[ZobrazitMrizku]. To show / hide a single axis please use
 xref:/commands/SetVisibleInView.adoc[SetVisibleInView Command].
 
 ====
