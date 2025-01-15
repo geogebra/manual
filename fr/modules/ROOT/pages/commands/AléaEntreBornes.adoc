@@ -2,6 +2,8 @@
 :page-en: commands/RandomBetween
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Probabilités.adoc[ Commandes Probabilités]
+
 AléaEntreBornes( <Entier minimum a>, <Entier maximum b> )::
   Retourne un nombre entier aléatoire de l'intervalle [_a ; b_].
 
@@ -21,7 +23,10 @@ xref:/Opérateurs_et_fonctions_pré_définies.adoc[random()] soit un réel de [0
 
 ====
 
-AléaEntreBornes( <Entier minimum a>, <Entier maximum b>, <Booléen> )::
+AléaEntreBornes( <Entier Minimum>, <Entier Maximum>, <Nombre de tirages> )::
+  Retourne une liste de _Nombre de tirages_ nombres entiers aléatoires de l'intervalle [_a ; b_].
+
+AléaEntreBornes( <Entier  a>, <Entier maximum b>, <Booléen> )::
   Si _Booléen_ = "true", est créé un nombre entier aléatoire de l'intervalle [_a ; b_], qui n'est actualisé qu'une fois
   (au chargement du fichier ou aussi par action sur Annuler/Refaire).
 
