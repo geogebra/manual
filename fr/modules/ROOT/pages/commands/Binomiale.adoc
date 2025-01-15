@@ -2,11 +2,15 @@
 :page-en: commands/BinomialDist
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Probabilités.adoc[ Commandes Probabilités]
+
 Binomiale( <Nombre d'essais>, <Probabilité du Succès> )::
-  Retourne l'histogramme représentant la https://fr.wikipedia.org/_Loi_binomiale[loi binomiale].
-  _Paramètres:_
-  _Nombre d'essais_: nombre d'épreuves indépendantes de Bernoulli ;
-  _Probabilité du Succès_: probabilité du succès de chacune des épreuves.
+  Retourne l'histogramme représentant la https://fr.wikipedia.org/wiki/Loi_binomiale[loi binomiale].
+  
+_Paramètres:_
+
+ _Nombre d'essais_: nombre d'épreuves indépendantes de Bernoulli ;
+ _Probabilité du Succès_: probabilité du succès de chacune des épreuves.
 
 Binomiale( <Nombre d'essais>, <Probabilité du Succès>, <Booléen Cumul> )::
   Retourne l'histogramme représentant la loi binomiale si _Booléen Cumul_ = false ;
@@ -29,6 +33,8 @@ retournant _0.77175_ .
 il s'agit du calcul : Binomiale(10, 0.2,1,false)+Binomiale(10, 0.2,2,false)+Binomiale(10,
 0.2,3,false) = stem:[\frac{524288}{1953125} + \frac{589824}{1953125} +\frac{393216}{ 1953125} =
 \frac{1507328}{1953125} \approx 0.77175 ].
+
+_________________________________________________________
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
@@ -64,11 +70,13 @@ Supposons que vous transfériez trois paquets de données sur une ligne défectu
 
 et
 
-Binomiale( <Nombre d'essais>, <Probabilité du Succès>, Liste des valeurs)
+Binomiale( <Nombre d'essais>, <Probabilité du Succès>, Liste des valeurs)::
 
 [EXAMPLE]
 ====
 
-`++Binomiale(10, 0.2, {1,2,3})++` retourne stem:[\frac{1507328}{1953125}], qui est équivalent à `++Binomiale(10, 0.2, 1, false)++` + `++Binomiale(10, 0.2, 2, false)++` + `++Binomiale(10, 0.2, 3, false)++`
+`++Binomiale(10, 0.2, {1,2,3})++` retourne stem:[\frac{1507328}{1953125}],
+
+qui est équivalent à `++Binomiale(10, 0.2, 1, false)++` + `++Binomiale(10, 0.2, 2, false)++` + `++Binomiale(10, 0.2, 3, false)++`
 
 ====
