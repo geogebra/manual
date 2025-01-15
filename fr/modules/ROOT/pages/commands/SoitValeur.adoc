@@ -14,8 +14,7 @@ SoitValeur( <Objet A>, <Objet B> )::
 [EXAMPLE]
 ====
 
-If _f_ is a function, `++SetValue(f, RandomElement({cos(x), 3x+2, ln(x)}))++` defines, at random, f as being one of the
-functions proposed in the list.
+Soit _f_ une fonction, `++SoitValeur(f, ElémentAuHasard({cos(x), 3x+2, ln(x)}))++` assigne à _f_ aléatoirement une définition de la liste.
 
 ====
 SoitValeur( <Liste L>, <Nombre n >, <Objet O> )::
@@ -26,8 +25,7 @@ SoitValeur( <xref:/Objets_InterAction.adoc[Liste déroulante]>, <Nombre n > )::
   Définit _n_ comme xref:/commands/PositionSélectionnée.adoc[position sélectionnée] dans la liste déroulante.
 
 SoitValeur( <Objet Dépendant>, ? )::
-  C'est une syntaxe spéciale pour assigner à un objet indépendant la valeur  that will set a dependent object to undefined without needing to fully redefine it using
-  `++=++`.
+  C'est une syntaxe spéciale pour assigner à un objet indépendant la valeur `++?++` plutôt que de la redéfinir en utilisant  `++=++`.
 
 == Commandes *Si* et *SoitValeur* dans les Scripts
 
