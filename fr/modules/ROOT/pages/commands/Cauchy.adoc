@@ -2,14 +2,14 @@
 :page-en: commands/Cauchy
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Probabilités.adoc[ Commandes Probabilités]
+
 Cauchy( <Médiane m>, <Échelle e >, <Valeur Variable v> )::
-  Calcule la valeur de la fonction cumulée de la loi de Cauchy en _v_, i.e. la probabilité _P(X≤v)_ où _X_ est une
+  Calcule la valeur de la fonction cumulée de la loi de Cauchy en _v_, c.-à-d.  la probabilité _P(X≤v)_ où _X_ est une
   variable aléatoire suivant une loi de Cauchy de paramètres _m_ et _e_.
 
 [EXAMPLE]
 ====
-
-*Exemple :*
 
 `++Cauchy(1, 2, 3)++` retourne _0.75_.
 
@@ -24,11 +24,11 @@ gauche de l'abscisse donnée).
 ====
 
 Cauchy( <Médiane m>, <Échelle e>, <Valeur Variable v>, <Booléen Cumul> )::
-  Si _Cumul_ est true, crée la fonction densité cumulée de probabilité de la loi de Cauchy, sinon crée la fonction
-  densité de probabilité de la loi de Cauchy.
+  * Si _Cumul_ est true, crée la fonction densité cumulée de probabilité de la loi de Cauchy,
+* sinon crée la fonction densité de probabilité de la loi de Cauchy.
 
 Cauchy( <Médiane m >, <Échelle e>, x, <Booléen Cumul> )::
-  Crée la fonction densité de probabilité de la https://fr.wikipedia.org/Loi_de_Cauchy[loi de Cauchy] de
+  Crée la fonction densité de probabilité de la https://fr.wikipedia.org/wiki/Loi_de_Cauchy[loi de Cauchy] de
   paramètres _m_ et _e_.
 
 [.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/InverseCauchy.adoc[InverseCauchy] .
@@ -44,8 +44,6 @@ avec une _meilleure_ écriture des résulats.
 [EXAMPLE]
 ====
 
-*Exemple :*
-
-`++Cauchy(1, 2, 3)++` retourne _stem:[\frac{3}\{4}]_.
+`++Cauchy(1, 2, 3)++` retourne _stem:[\frac{3}{4}]_.
 
 ====
