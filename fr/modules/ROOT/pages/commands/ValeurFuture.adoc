@@ -2,6 +2,8 @@
 :page-en: commands/FutureValue
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Financières.adoc[ Commandes Financières]
+
 ValeurFuture( <Taux>, <Nombre de Périodes>, <Paiement>, <Valeur Actuelle (optionnelle)>, <Type (optionnel)> )::
   Calcule la valeur acquise par la valeur actuelle placée au taux périodique constant donné pendant le nombre de
   périodes indiqué.
@@ -24,8 +26,6 @@ sommes perçues par des valeurs positives.
 [EXAMPLE]
 ====
 
-*Exemples :*
-
 1) Si on dépose aujourd'hui une somme de 48335 € sur un livret à 2,5% garanti, quel sera le capital obtenu au bout de 15
 ans ?
 
@@ -36,14 +36,13 @@ bout de 5 ans ?
 
 `++ValeurFuture(0.015/12, 5*12, -100)++` retourne _6226.69_ €
 
-[NOTE]
-====
+
 
 Voir l'exemple réciproque avec xref:/commands/ValeurActuelle.adoc[ValeurActuelle].
 
 ====
 
-====
+
 
 [NOTE]
 ====
@@ -54,6 +53,5 @@ comme nombre de périodes.
 
 ====
 
-[.kcode]#Saisie :# Voir aussi les *commandes* : xref:/commands/Commandes_Financières.adoc[Toutes les commandes
-financières], les autres : xref:/commands/Paiement.adoc[Paiement], xref:/commands/Périodes.adoc[Périodes],
+[.kcode]#Saisie :# Voir aussi les *commandes* :  xref:/commands/Paiement.adoc[Paiement], xref:/commands/Périodes.adoc[Périodes],
 xref:/commands/Taux.adoc[Taux], xref:/commands/ValeurActuelle.adoc[ValeurActuelle].
