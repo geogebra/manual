@@ -2,8 +2,10 @@
 :page-en: commands/LogNormal
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-LogNormale( <Moyenne μ>, <Écart-Type σ>, < Valeur Variable v> )::
-  Calcule la valeur de la fonction cumulée de la loi log-normale en _v_, i.e. la probabilité _P(X≤v)_ où _X_ est une
+xref:commands/Commandes_Probabilités.adoc[ Commandes Probabilités]
+
+LogNormale( <Moyenne μ>, <Écart-Type σ>, <Valeur variable v> )::
+  Calcule la valeur de la fonction cumulée de la loi log-normale en _v_, c.-à-d. la probabilité _P(X≤v)_ où _X_ est une
   variable aléatoire suivant une loi log-normale de paramètres _μ, σ_.
 
 [NOTE]
@@ -13,14 +15,14 @@ Retourne la probabilité pour une valeur donnée d'abscisse (ou l'aire sous la c
 gauche de l'abscisse donnée).
 
 ====
-
-LogNormale( <Moyenne μ>, <Écart-Type σ>, < Valeur Variable v> , <Booléen Cumul>)::
-  Si _Cumul_ est true, calcule la valeur de la fonction densité cumulée de probabilité de la loi log-normale en _v_,
-  sinon calcule la valeur de la fonction densité de probabilité de la loi log-normale en _v_.
-
+ 
+LogNormale( <Moyenne μ>, <Écart-Type σ>, <Valeur variable v> , <Booléen Cumul>)::
+  * Si _Cumul_ est true, calcule la valeur de la fonction densité cumulée de probabilité de la loi log-normale en _v_,
+  * sinon calcule la valeur de la fonction densité de probabilité de la loi log-normale en _v_.
+ 
 LogNormale( <Moyenne μ>, <Écart-Type σ>, x, <Booléen Cumul> )::
   Si _Cumul_ est _false_, crée la fonction densité de probabilité de la
-  https://fr.wikipedia.org/Loi_log-normale[loi log-normale] de paramètres _μ, σ_, sinon en crée la fonction
+  https://fr.wikipedia.org/wiki/Loi_log-normale[loi log-normale] de paramètres _μ, σ_, sinon en crée la fonction
   densité cumulée de probabilité.
 
 [.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/InverseLogNormale.adoc[InverseLogNormale] .
