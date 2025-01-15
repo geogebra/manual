@@ -2,8 +2,10 @@
 :page-en: commands/Gamma
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-Gamma( <Alpha α>, <Beta β>, <Valeur Variable v> )::
-  Calcule la valeur de la fonction cumulée de la loi gamma en _v_, i.e. la probabilité _P(X≤v)_ où _X_ est une variable
+xref:commands/Commandes_Probabilités.adoc[ Commandes Probabilités]
+
+Gamma( <Alpha α>, <Beta β>, <Nombre succès v> )::
+  Calcule la valeur de la fonction cumulée de la loi gamma en _v_, c.-à-d.  la probabilité _P(X≤v)_ où _X_ est une variable
   aléatoire suivant une loi gamma de paramètres _α, β_.
 
 [EXAMPLE]
@@ -21,22 +23,18 @@ de l'abscisse donnée).
 
 ====
 
-Gamma( <Alpha α>, <Beta β>, <Valeur Variable v>, <Booléen Cumul> )::
-  Si _Cumul_ est _true_, calcule la valeur de la fonction densité cumulée de probabilité de la loi gamma, sinon calcule
-  la valeur de la fonction densité de probabilité de la loi gamma.
+Gamma( <Alpha α>, <Beta β>, <Nombre succès v>, <Booléen Cumul> )::
+  * Si _Cumul_ est _true_, calcule la valeur de la fonction densité cumulée de probabilité de la loi gamma,
+* sinon calcule la valeur de la fonction densité de probabilité de la loi gamma.
 
 Gamma( <Alpha α >, <Beta β>, x, <Booléen Cumul> )::
-  Si _Cumul_ est _true_, crée la fonction densité cumulée de probabilité de la
-  https://fr.wikipedia.org/Distribution_Gamma[loi gamma] de paramètres _α, β_, sinon en crée la fonction densité
-  de probabilité .
+  * Si _Cumul_ est _true_, crée la fonction densité cumulée de probabilité de la
+  https://fr.wikipedia.org/wiki/Distribution_Gamma[loi gamma] de paramètres _α, β_,
+* sinon en crée la fonction densité de probabilité .
 
-[NOTE]
-====
 
-*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :* Les réponses peuvent faire appel aux
-https://fr.wikipedia.org/Fonction_gamma_incompl%C3%A8te[fonctions gamma_incomplètes].
 
-====
+
 
 [.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/InverseGamma.adoc[InverseGamma] .
 
@@ -48,10 +46,13 @@ Cette commande fonctionne à l'identique dans la fenêtre Calcul formel
 
 aux présentations des résultats près.
 
+
+Les réponses peuvent faire appel aux https://fr.wikipedia.org/wiki/Fonction_gamma_incompl%C3%A8te[fonctions gamma_incomplètes].
+
 [EXAMPLE]
 ====
 
-`++Gamma(1,2,3)++` retourne _stem:[P(1,\frac{3}\{2})]_ où _P_ désigne la fonction gamma incomplète
+`++Gamma(1,2,3)++` retourne _stem:[P(1,\frac{3}{2})]_ où _P_ désigne la fonction gamma incomplète
 régularisée.
 
 ====
