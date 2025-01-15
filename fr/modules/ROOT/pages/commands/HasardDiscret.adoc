@@ -2,6 +2,8 @@
 :page-en: commands/RandomDiscrete
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Probabilités.adoc[ Commandes Probabilités]
+
 HasardDiscret( <Liste Valeurs>, <Liste Effectifs> )::
 
 Retourne l'une des valeurs, au hasard, parmi celles de _Liste Valeurs_ en prenant en compte la pondération déterminée
@@ -12,6 +14,14 @@ par _Liste Effectifs_.
 
 Il semble évident que les deux listes doivent être de même longueur.
 
-Si ce n'est le cas, le résultat est _nondéfini_.
+Si ce n'est le cas, le résultat est _nondéfini_  affiché "?".
 
+Si la somme des valeurs (dans le cas de fréquences) de la seconde liste peut ne pas valoir 1, puisque elles sont normalisées.
 ====
+
+_____________________________________________________________
+
+
+image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
+
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel , mais sans la possibilité d'effectuer du calcul littéral.
