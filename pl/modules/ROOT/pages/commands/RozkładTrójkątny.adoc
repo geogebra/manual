@@ -1,0 +1,29 @@
+= Polecenie RozkładTrójkątny
+:page-en: commands/Triangular
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RozkładTrójkątny( <Granica Dolna>, <Granica Górna>, <Moda>, <Liczba Sukcesów> )::
+  Oblicza dystrybuantę (funkcję rozkładu skumulowanego) rozkładu trójkątnego dla zmiennej _liczby sukcesów v_, czyli oblicza
+  prawdopodobieństwo _P(X ≤ v)_ gdzie _X_ jest zmienną losową o rozkładzie trójkątnym w przedziale [_Dolna Granica_, _Górna Granica_] z określona _modą_.
+
+[EXAMPLE]
+====
+
+`++RozkładTrójkątny(0, 5, 2, 2)++` daje w wyniku _0.4_.
+
+====
+
+[NOTE]
+====
+
+Ta składnia zwraca prawdopodobieństwo dla podanej wartości, czyli pole pod krzywą rozkładu trójkątnego na lewo od danej współrzędnej _x_.
+
+====
+
+RozkładTrójkątny( <Granica Dolna>, <Granica Górna>, <Moda>, <Liczba Sukcesów>, <Czy Skumulowany> )::
+  Jeśli _Czy Skumulowany = true_, oblicza dystrybuantę (funkcję rozkładu skumulowanego) dla https://pl.wikipedia.org/wiki/Rozk%C5%82ad_tr%C3%B3jk%C4%85tny[rozkładu trójkątnego]
+  z określona _modą_ dla danej _Liczby Sukcesów_ w przedziale [_Dolna Granica_, _Górna Granica_]. W przeciwnym razie oblicza funkcję gęstości rozkładu dla danej _Liczby Sukcesów_.
+
+RozkładTrójkątny( <Granica Dolna>, <Granica Górna>, <Moda>, x, <Czy Skumulowany> )::
+ Jeśli _Czy Skumulowany = true_, tworzy dystrybuantę (funkcję rozkładu skumulowanego) rozkładu trójkątnego z podaną _modą_ w przedziale [_Dolna Granica_, _Górna Granica_].
+W przeciwnym razie tworzy funkcję gęstości prawdopodobieństwa rozkładu trójkątnego z podaną modą w przedziale [_Dolna Granica_, _Górna Granica_].
