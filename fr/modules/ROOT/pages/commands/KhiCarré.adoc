@@ -2,8 +2,10 @@
 :page-en: commands/ChiSquared
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-KhiCarré( <Degré de liberté d>, <Valeur Variable v> )::
-  Calcule la valeur de la fonction cumulée de la loi du khi-carré en _v_, i.e. la probabilité _P(X≤v)_ où _X_ est une
+xref:commands/Commandes_Probabilités.adoc[ Commandes Probabilités]
+
+KhiCarré( <Degré de liberté d>, <Nombre Succès v> )::
+  Calcule la valeur de la fonction cumulée de la loi du khi-carré en _v_,c.-à-d. la probabilité _P(X≤v)_ où _X_ est une
   variable aléatoire suivant une loi du khi-carré avec _d_ degrés de liberté.
 
 [NOTE]
@@ -14,28 +16,29 @@ gauche de l'abscisse donnée).
 
 ====
 
-KhiCarré( <Degré de liberté>, <Valeur Variable v>, <Booléen Cumul> )::
-  Si _Cumul_ est _true_, calcule la valeur de la fonction densité cumulée de probabilité de la loi du khi-carré, sinon
-  calcule la valeur de la fonction densité de probabilité de la loi du khi-carré.
+KhiCarré( <Degré de liberté>, <Nombre Succès v>, <Booléen Cumul> )::
+  * Si _Cumul_ est _true_, calcule la valeur de la fonction densité cumulée de probabilité de la loi du khi-carré,
+* sinon calcule la valeur de la fonction densité de probabilité de la loi du khi-carré.
 
 KhiCarré( <Degré de liberté d >, x )::
-  Crée la fonction densité de probabilité de la https://fr.wikipedia.org/Loi_du_%CF%87%C2%B2[loi du khi-carré]
+  Crée la fonction densité de probabilité de la https://fr.wikipedia.org/wiki/Loi_du_%CF%87%C2%B2[loi du khi-carré]
   avec _d_ degrés de liberté.
 
 [.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/InverseKhiCarré.adoc[InverseKhiCarré] .
 
-image:View-cas24.png[View-cas24.png,width=22,height=22] *Calcul formel* Seule la syntaxe suivante est utilisable dans
-xref:/Calcul_formel.adoc[Calcul formel] :
+_____________________________________________________________
 
-KhiCarré( <Degré de liberté d>, <Valeur Variable v> )::
+
+image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
+
+
+KhiCarré( <Degré de liberté d>, <Variable v> )::
 
 [EXAMPLE]
 ====
 
-*Exemples :*
-
 `++KhiCarré(4, 3)++` en validant ou en cliquant sur le bouton image:Mode_evaluate.png[Mode
-evaluate.png,width=32,height=32] (Évaluer), retourne la valeur exacte stem:[\gamma(2, \frac{3}\{2})] où stem:[\gamma]
+evaluate.png,width=32,height=32] (Évaluer), retourne la valeur exacte stem:[\gamma(2, \frac{3}{2})] où stem:[\gamma]
 désigne la fonction gamma incomplète ;
 
 `++KhiCarré(4, 3)++` en cliquant sur le bouton image:Mode_numeric.png[Mode numeric.png,width=32,height=32] (Numérique),
