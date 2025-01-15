@@ -2,11 +2,13 @@
 :page-en: commands/FDistribution
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Probabilités.adoc[ Commandes Probabilités]
+
 FDistribution( <Degré liberté Numérateur n>, <Degré liberté Dénominateur d>, <Valeur Variable v> )::
-  Calcule la valeur de la fonction cumulée de la loi de Fisher en _v_, i.e. la probabilité _P(X≤v)_ où _X_ est une
+  Calcule la valeur de la fonction cumulée de la loi de Fisher en _v_, c.-à-d. la probabilité _P(X≤v)_ où _X_ est une
   variable aléatoire suivant une loi de Fisher de paramètres _n, d_.
   ;FDistribution( <Degré liberté Numérateur n>, <Degré liberté Dénominateur d>, x ) : Crée la fonction densité de
-  probabilité de la https://fr.wikipedia.org/Loi_de_Fisher[loi de Fisher] de paramètres _n, d_.
+  probabilité de la https://fr.wikipedia.org/wiki/Loi_de_Fisher[loi de Fisher] de paramètres _n, d_.
 
 [NOTE]
 ====
@@ -17,12 +19,12 @@ gauche de l'abscisse donnée).
 ====
 
 FDistribution( <Degré liberté Numérateur n>, <Degré liberté Dénominateur d>, <Valeur Variable v> , <Booléen Cumul> )::
-  Si _Cumul_ est _true_, calcule la valeur de la fonction densité cumulée de probabilité de la loi de Fisher, sinon
-  calcule la valeur de la fonction densité de probabilité de la loi de Fisher.
+  * Si _Cumul_ est _true_, calcule la valeur de la fonction densité cumulée de probabilité de la loi de Fisher,
+* sinon calcule la valeur de la fonction densité de probabilité de la loi de Fisher.
 
 FDistribution( <Degré liberté Numérateur n>, <Degré liberté Dénominateur d>, x, <Booléen Cumul> )::
-  Si _Cumul_ est _true_, crée la fonction densité cumulée de probabilité de la loi de Fisher, sinon en crée la fonction
-  densité de probabilité.
+  * Si _Cumul_ est _true_, crée la fonction densité cumulée de probabilité de la loi de Fisher,
+* sinon en crée la fonction densité de probabilité.
 
 [.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/InverseFDistribution.adoc[InverseFDistribution].
 
@@ -31,4 +33,4 @@ ____________________________________________________________
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* : Seule la syntaxe suivante
 serait utilisable :
 
-FDistribution( <Degré liberté Numérateur n>, <Degré liberté Dénominateur d>, x )
+FDistribution( <Degré liberté Numérateur n>, <Degré liberté Dénominateur d>, x )::
