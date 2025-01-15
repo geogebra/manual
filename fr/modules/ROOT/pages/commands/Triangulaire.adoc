@@ -2,8 +2,10 @@
 :page-en: commands/Triangular
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-Triangulaire( <Borne inférieure min>, <Borne supérieure max>, <Mode mod>, < Valeur Variable v> )::
-  Calcule la valeur de la fonction cumulée de la loi triangulaire en _v_, i.e. la probabilité _P(X≤v)_ où _X_ est une
+xref:commands/Commandes_Probabilités.adoc[ Commandes Probabilités]
+
+Triangulaire( <Borne inférieure min>, <Borne supérieure max>, <Mode mod>, < Nombre Succès v > )::
+  Calcule la valeur de la fonction cumulée de la loi triangulaire en _Nombre Succès_, c.-à-d.  la probabilité _P(X≤v)_ où _X_ est une
   variable aléatoire suivant une loi triangulaire de paramètres _min, max, mod_.
 
 [NOTE]
@@ -14,19 +16,19 @@ gauche de l'abscisse donnée).
 
 ====
 
-Triangulaire( <Borne inférieure min>, <Borne supérieure max>, <Mode mod>, , <Valeur Variable>, <Booléen Cumul> )::
+Triangulaire( <Borne inférieure min>, <Borne supérieure max>, <Mode mod>, , < Nombre Succès >, <Booléen Cumul> )::
   Si _Cumul_ est _true_, calcule la valeur de la fonction densité cumulée de probabilité de la loi triangulaire, sinon
   calcule la valeur de la fonction densité de probabilité de la loi triangulaire.
 
 Triangulaire( <Borne inférieure min>, <Borne supérieure max>, <Mode mod>, x, <Booléen Cumul> )::
   Si _Cumul_ est _true_, crée la fonction densité cumulée de probabilité de la
-  https://fr.wikipedia.org/Loi_triangulaire[loi triangulaire] de paramètres _min, max, mod_, sinon en crée la
+  https://fr.wikipedia.org/wiki/Loi_triangulaire[loi triangulaire] de paramètres _min, max, mod_, sinon en crée la
   fonction densité de probabilité.
 
-____________________________________________________________
+
+_____________________________________________________________
+
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
-Seule la syntaxe suivante est utilisable dans xref:/Calcul_formel.adoc[Calcul formel] :
-
-Triangulaire( <Borne inférieure min>, <Borne supérieure max>, <Mode mod>, < Valeur Variable v> )
+Cette commande fonctionne à l'identique dans la fenêtre Calcul formel , mais sans la possibilité d'effectuer du calcul littéral.
