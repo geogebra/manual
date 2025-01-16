@@ -2,40 +2,43 @@
 :page-en: commands/Zipf
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Probabilités.adoc[ Commandes Probabilités]
+
 Zipf( <Nombre d'éléments>, <Exposant> )::
-  Retourne un histogramme représentant une https://fr.wikipedia.org/Loi_de_Zipf[loi de Zipf].
-  _Paramètres:_
-  _Nombre d'éléments_: nombre d'éléments dont on étudie le rang ;
-  _Exposant_: exposant caractérisant la distribution.
+  Retourne un histogramme représentant une https://fr.wikipedia.org/wiki/Loi_de_Zipf[loi de Zipf].
+  
+* _Paramètres:_
+  ** _Nombre d'éléments_: nombre d'éléments dont on étudie le rang ;
+  ** _Exposant_: exposant caractérisant la distribution.
 
 Zipf( <Nombre d'éléments>, <Exposant>, <Booléen Cumul> )::
-  Retourne un histogramme représentant une loi de Zipf si _Cumul = false_
-  Retourne un histogramme représentant une loi de Zipf si _Cumul = true_.
-  Les deux premiers paramètres sont les mêmes que ci-dessus.
+  * Retourne un histogramme représentant une loi de Zipf si _Cumul = false_
+  * Retourne un histogramme représentant une loi de Zipf si _Cumul = true_.
+ 
+Les deux premiers paramètres sont les mêmes que ci-dessus.
 
 Zipf( <Nombre d'éléments>, <Exposant>, <ValeurVariable v>, <Booléen Cumul> )::
   Soit X une variable aléatoire suivant une loi de Zipf.
-  Retourne P( X = _v_) si _Cumul = false_ ;
-  Retourne P( X ≤ _v_) si _Cumul = true_.
-  Les deux premiers paramètres sont les mêmes que ci-dessus.
+  * Retourne P( X = _v_) si _Cumul = false_ ;
+  * Retourne P( X ≤ _v_) si _Cumul = true_.
+  
+Les deux premiers paramètres sont les mêmes que ci-dessus.
 
-[NOTE]
-====
+[.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/InverseZipf.adoc[InverseZipf].
 
-Voir aussi la commande xref:/commands/InverseZipf.adoc[InverseZipf].
 
-====
 
 ____________________________________________________________
 
-image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* : Seule la syntaxe suivante est
-utilisable dans xref:/Calcul_formel.adoc[Calcul formel] :
+image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* : 
+
+Seule la syntaxe suivante serait utilisable dans xref:/Calcul_formel.adoc[Calcul formel] :
 
 Zipf( <Nombre d'éléments>, <Exposant>, <Valeur Variable >, <Booléen Cumul> )::
 
 [EXAMPLE]
 ====
 
-`++Zipf( 10, 1 , 5, false)++` retourne _stem:[\frac{504}\{7381}]_.
+`++Zipf( 10, 1 , 5, false)++` retourne _stem:[\frac{504}{7381}]_.
 
 ====
