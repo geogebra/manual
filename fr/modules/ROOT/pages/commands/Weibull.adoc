@@ -2,14 +2,14 @@
 :page-en: commands/Weibull
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Probabilités.adoc[ Commandes Probabilités]
+
 Weibull( <Forme k >, <Échelle λ>, <Valeur Variable v> )::
-  Calcule la valeur de la fonction cumulée de la loi de Weibull en _v_, i.e. la probabilité _P(X≤v)_ où _X_ est une
+  Calcule la valeur de la fonction cumulée de la loi de Weibull en _v_, c.-à-d. la probabilité _P(X≤v)_ où _X_ est une
   variable aléatoire suivant une loi de Weibull de paramètres _k, λ_.
 
 [EXAMPLE]
 ====
-
-*Exemples :*
 
 * `++Weibull( 0.5, 1, 0)++` retourne _0_.
 * `++Weibull( 0.5, 1, 1)++` retourne _0.63._ (_Option 2 décimales_)
@@ -25,13 +25,14 @@ gauche de l'abscisse donnée).
 ====
 
 Weibull( <Forme k >, <Échelle λ>, <Valeur Variable>, <Booléen Cumul> )::
-  Si _Cumul_ est _true_, calcule la valeur de la fonction densité cumulée de probabilité de la loi de Weibull de
-  paramètres _k, λ_, sinon calcule la valeur de la fonction densité de probabilité.
+  * Si _Cumul_ est _true_, calcule la valeur de la fonction densité cumulée de probabilité de la loi de Weibull de
+  paramètres _k, λ_ 
+* sinon calcule la valeur de la fonction densité de probabilité.
 
 Weibull( <Forme k >, <Échelle λ>, x, <Booléen Cumul> )::
-  Si _Cumul_ est _true_, crée la fonction densité cumulée de probabilité de la
-  https://fr.wikipedia.org/Distribution_de_Weibull[loi de Weibull] de paramètres _k, λ_, sinon en crée la
-  fonction densité de probabilité.
+   * Si _Cumul_ est _true_, crée la fonction densité cumulée de probabilité de la
+  https://fr.wikipedia.org/wiki/Distribution_de_Weibull[loi de Weibull] de paramètres _k, λ_,
+* sinon en crée la fonction densité de probabilité.
 
 [.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/InverseWeibull.adoc[InverseWeibull].
 
@@ -46,9 +47,7 @@ avec une écriture _exacte_ des résulats .
 [EXAMPLE]
 ====
 
-*Exemples :*
-
 * `++Weibull( 0.5, 1, 0)++` retourne _0_.
-* `++Weibull( 0.5, 1, 1)++` retourne _stem:[1 - \frac{1} \{ e } ]._
+* `++Weibull( 0.5, 1, 1)++` retourne _stem:[1 - \frac{1}{ e } ]._
 
 ====
