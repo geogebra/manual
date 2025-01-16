@@ -2,8 +2,10 @@
 :page-en: commands/TDistribution
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:commands/Commandes_Probabilités.adoc[ Commandes Probabilités]
+
 TDistribution( <Degré Liberté d>, <Valeur Variable v> )::
-  Calcule la valeur de la fonction cumulée de la loi de Student en _v_, i.e. la probabilité _P(X≤v)_ où _X_ est une
+  Calcule la valeur de la fonction cumulée de la loi de Student en _v_, c.-à-d.  la probabilité _P(X≤v)_ où _X_ est une
   variable aléatoire suivant une loi de Student avec _d_ degrés de liberté.
 
 [NOTE]
@@ -15,18 +17,18 @@ gauche de l'abscisse donnée).
 ====
 
 TDistribution( <Degré Liberté d>, <Valeur Variable v> , <Booléen Cumul> )::
-  Si _Cumul_ est _true_, calcule la valeur de la fonction densité cumulée de probabilité de la loi de Student, sinon
-  calcule la valeur de la fonction densité de probabilité de la loi de Student.
+  * Si Cumul_ est _true_, calcule la valeur de la fonction densité cumulée de probabilité de la loi de Student,
+* sinon calcule la valeur de la fonction densité de probabilité de la loi de Student.
 
 TDistribution( <Degré Liberté d>, x, <Booléen Cumul> )::
-  Si _Cumul_ est _true_, crée la fonction densité cumulée de probabilité de la
-  https://fr.wikipedia.org/Loi_de_Student[loi de Student] avec _d_ degrés de liberté, sinon en crée la fonction
-  densité de probabilité.
+  * Si _Cumul_ est _true_, crée la fonction densité cumulée de probabilité de la
+  https://fr.wikipedia.org/wiki/Loi_de_Student[loi de Student] avec _d_ degrés de liberté,
+* sinon en crée la fonction densité de probabilité.
 
 ____________________________________________________________
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
-Seule la syntaxe suivante est utilisable dans xref:/Calcul_formel.adoc[Calcul formel] :
+Seule la syntaxe suivante serait utilisable dans xref:/Calcul_formel.adoc[Calcul formel] :
 
-TDistribution( <Degré Liberté d>, <Valeur Variable> )
+TDistribution( <Degré Liberté d>, <Valeur Variable> )::
