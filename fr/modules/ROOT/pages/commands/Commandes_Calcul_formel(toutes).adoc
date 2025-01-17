@@ -6,7 +6,7 @@ ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 _______________________________________________
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* 
 
-Ces commandes ne fonctionnent pas (à ce jour) hors de la fenêtre *Calcul formel*.
+Ces commandes ne fonctionnent pas (à ce jour) **en dehors** de la fenêtre *Calcul formel*.
 
 [cols=",,"]
 |===
@@ -38,7 +38,10 @@ Il serait peut-être plus simple de citer les commandes qui ne sont pas proposé
 
 Les commandes **3D**  
 
-xref:/commands/Cube.adoc[Cube], xref:/commands/Dodécaèdre.adoc[Dodécaèdre], xref:/commands/Icosaèdre.adoc[Icosaèdre], xref:/commands/Octaèdre.adoc[Octaèdre] et xref:/commands/Tétraèdre.adoc[Tétraèdre] retournent uniquement le volume du solide, sans provoquer son affichage.
+xref:/commands/Cube.adoc[Cube], xref:/commands/Dodécaèdre.adoc[Dodécaèdre], xref:/commands/Icosaèdre.adoc[Icosaèdre], xref:/commands/Octaèdre.adoc[Octaèdre] xref:/commands/Prisme.adoc[Prisme], xref:/commands/Pyramide.adoc[Pyramide] et xref:/commands/Tétraèdre.adoc[Tétraèdre] retournent uniquement le volume du solide, sans provoquer son affichage.
+
+xref:/commands/Patron.adoc[Patron] retourne uniquement l'aire du patron, sans provoquer son affichage.
+
 
 
 xref:/commands/Plan.adoc[Plan] Plan( <Point >, <Point >, <Point> ) fonctionne ; Mais ce jour, Plan( <Polygone > ) et Plan( <Conique > ) sont en échec.
@@ -74,27 +77,28 @@ _______________________________________________
 |xref:/commands/FacteursPremiers.adoc[FacteursPremiers] |xref:/commands/Finaux.adoc[Finaux]
 |xref:/commands/ElémentsSimples.adoc[ElémentsSimples] | |xref:/commands/Longueur.adoc[Longueur]
 
-|xref:/commands/FactoriseIrr.adoc[FactoriseIrr] |
+|xref:/commands/FactoriseIrr.adoc[FactoriseIrr] |xref:/commands/Hauteur.adoc[Hauteur]
 |xref:/commands/Extremum.adoc[Extremum] | |xref:/commands/Médiatrice.adoc[Médiatrice]
 
-|xref:/commands/Factoriser.adoc[Factoriser] |
+|xref:/commands/Factoriser.adoc[Factoriser] |xref:/commands/InterConique.adoc[InterConique]
 |xref:/commands/Facteurs.adoc[Facteurs] | |xref:/commands/MilieuCentre.adoc[MilieuCentre]
 
-|xref:/commands/FormeCanonique.adoc[FormeCanonique] |
+|xref:/commands/FormeCanonique.adoc[FormeCanonique] |xref:/commands/PlanMédiateur.adoc[PlanMédiateur]
 |xref:/commands/Fonction.adoc[Fonction] | |xref:/commands/Perpendiculaire.adoc[Perpendiculaire]
 
-|xref:/commands/ListeDiviseurs.adoc[ListeDiviseurs] |
+|xref:/commands/ListeDiviseurs.adoc[ListeDiviseurs] |xref:/commands/PlanOrthogonal.adoc[PlanOrthogonal]
 |xref:/commands/Intégrale.adoc[Intégrale] | |xref:/commands/Point.adoc[Point]
 
-|xref:/commands/Max.adoc[Max] |
+|xref:/commands/Max.adoc[Max] |xref:/commands/Sphère.adoc[Sphère]
 |xref:/commands/IntégraleDomaine.adoc[IntégraleDomaine] | |xref:/commands/Rayon.adoc[Rayon]
 
-|xref:/commands/MembreDroite.adoc[MembreDroite] |
+|xref:/commands/MembreDroite.adoc[MembreDroite] |xref:/commands/Surface.adoc[Surface]
 |xref:/commands/Itération.adoc[Itération]|  |xref:/commands/Segment.adoc[Segment]
 
-|xref:/commands/MembreGauche.adoc[MembreGauche] | 
+|xref:/commands/MembreGauche.adoc[MembreGauche] | xref:/commands/SurfaceLatérale.adoc[SurfaceLatérale]
 |xref:/commands/ItérationListe.adoc[ItérationListe] | |xref:/commands/Tangente.adoc[Tangente]
 
+|xref:/commands/MembreDroite.adoc[MembreDroite] |xref:/commands/Volume.adoc[Volume]
 |xref:/commands/Min.adoc[Min] |
 |xref:/commands/LimDroite.adoc[LimDroite]
 | |
@@ -219,7 +223,7 @@ _______________________________________________
 
 
 * xref:/commands/EstPremier.adoc[EstPremier]
-* xref:/commands/Exponentielle.adoc[Exponentielle]
+
 
 
 * xref:/commands/GroebnerDegInvLex.adoc[GroebnerDegInvLex]
@@ -231,12 +235,9 @@ _______________________________________________
 * xref:/commands/Ligne.adoc[Ligne]
 * xref:/commands/NotationScientifique.adoc[NotationScientifique]
 * xref:/commands/Plage.adoc[Plage]
-* xref:/commands/Plan.adoc[Plan]
 
 * xref:/commands/Texte.adoc[Texte]
-* xref:/commands/Translation.adoc[Translation]
-* 
-* 
+ 
 
 == 
 
@@ -473,9 +474,4 @@ _______________________________________________
 ** xref:/commands/UnicodeEnLettre.adoc[UnicodeEnLettre]
 ** xref:/commands/UnicodeEnTexte.adoc[UnicodeEnTexte]
 ** xref:/commands/Dilatation.adoc[Dilatation]
-** xref:/commands/Homothétie.adoc[Homothétie]
-** xref:/commands/Rotation.adoc[Rotation]
-** xref:/commands/Symétrie.adoc[Symétrie]
-** xref:/commands/Translation.adoc[Translation]
-** xref:/commands/Transvection.adoc[Transvection]
 ** xref:/commands/AppliquerMatrice.adoc[AppliquerMatrice]
