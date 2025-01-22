@@ -1,0 +1,15 @@
+= Příkaz Datova Funkce
+:page-en: commands/DataFunction
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+DatovaFunkce( <Seznam čísel>, <Seznam čísel> )::
+  Vrací funkci, která propojuje body (x~1~, y~1~), (x~2~, y~2~),...,(x~n~, y~n~), kde {x~1~, ..., x~n~}, {y~1~,
+  ..., y~n~} ajsou vstupní seznamy. K propojení bodů je použita lineární interpolace. Tento příkaz je využíván Senzory.
+
+[EXAMPLE]
+====
+
+* `++DataFunction({0, 1, 2, 4}, {0, 1, 4, 16})++` vrátí funkci, která prochází body (0, 0), (1,1), (2, 4), (4,
+16).
+
+====
