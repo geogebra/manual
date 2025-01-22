@@ -1,0 +1,35 @@
+= Příkaz RetezovyZlomek
+:page-en: commands/ContinuedFraction
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+RetezovyZlomek( <Číslo> )::
+  Vytvoří https://cs.wikipedia.org/wiki/Řetězový_zlomek[řetězový zlomek] aproximující zadané číslo. Výsledkem je 
+  xref:/Texts.adoc[textový objekt] v LaTexu. Zlomek je vypočítán numericky s přesností 10^-8^.
+
+[EXAMPLE]
+====
+
+`++RetezovyZlomek(5.45)++` vrátí _stem:[5 + \frac{1}{ 2+ \frac{1}{4+ \frac{1}{ 1+ \frac{1}{ 1 } } } }]_
+
+====
+
+RetezovyZlomek( <Číslo>, <Řád> )::
+  Vytvoří řetězový zlomek aproximující zadané číslo. Počet podílů je menší nebo roven úrovni _Řád_, ale nikdy nepřesáhne počet podílů potřebných k dosažení numerické přesnosti 10^-8^.
+
+[EXAMPLE]
+====
+
+`++RetezovyZlomek(5.45, 3)++` vrátí _stem:[5 + \frac{1}{ 2+ \frac{1}{4+ ... } }]_
+
+====
+
+RetezovyZlomek( <Číslo>, <Řád> (volitelný), <Zkrácený zápis - true/false> )::
+  Vytvoří řetězový zlomek aproximující zadané číslo. Pokud je uveden parametr _Řád_ počet podílů je menší nebo roven této úrovni, ale nikdy nepřesáhne počet podílů potřebných k dosažení numerické přesnosti 10^-8^. Když je parametr _Zkrácený zápis - true/false_ nastaven na _true_,  text ve formátu LaTeX používá zkrácenou syntaxi a obsahuje seznam celočíselných částí řetězového zlomku.
+
+[EXAMPLE]
+====
+
+* `++RetezovyZlomek(5.45, true)++` vrátí [_5; 2, 4, 1, 1_]
+* `++RetezovyZlomek(5.45, 3, true)++` vrátí [_5; 2, 4, ..._]
+
+====
