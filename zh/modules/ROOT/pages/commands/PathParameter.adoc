@@ -30,8 +30,8 @@ image:Bulbgraph.png[Bulbgraph.png,width=44,height=54] 你知道如何紀錄一�
 
 下表中用到兩個函數：
 
-* stem:[f(x)=\frac\{x}\{1+|x|}] 將 (-∞, +∞) 映至 (-1,1)
-* stem:[\phi(X,A,B)=\frac\{\overrightarrow\{XA}\cdot\overrightarrow\{AB}}\{|AB|^2}] 將直線 AB 上的點 X 映至實數，其中 A
+* stem:[f(x)=\frac{x}{1+|x|}] 將 (-∞, +∞) 映至 (-1,1)
+* stem:[\phi(X,A,B)=\frac{\overrightarrow\{XA}cdot\overrightarrow\{AB}}\{|AB|^2}] 將直線 AB 上的點 X 映至實數，其中 A
 對應到 0、B 對應到 1。
 
 [cols=",",]
@@ -42,25 +42,25 @@ image:Bulbgraph.png[Bulbgraph.png,width=44,height=54] 你知道如何紀錄一�
 
 |線段 AB |stem:[\phi(X,A,B)]
 
-|圓 (圓心為 C 半徑為 r ) |點 stem:[X=C+r(\cos\alpha,\sin\alpha)] 的參數為 stem:[\frac\{\alpha+\pi}\{2\pi}]，其中
+|圓 (圓心為 C 半徑為 r ) |點 stem:[X=C+r(\cos\alpha,\sin\alpha)] 的參數為 stem:[\frac{\alpha+\pi}{2\pi}]，其中
 stem:[\alpha\in(-\pi,\pi)]
 
 |橢圓 (中心為 C 半向徑為 stem:[\vec\{a}], stem:[\vec\{b}]) |點 stem:[X=C+(\cos\alpha)\vec\{a} +(\sin\alpha)\vec\{b}]
-的參數為 stem:[\frac\{\alpha+\pi}\{2\pi}]，其中 stem:[\alpha\in(-\pi,\pi)]
+的參數為 stem:[\frac{\alpha+\pi}{2\pi}]，其中 stem:[\alpha\in(-\pi,\pi)]
 
 |雙曲線 |
 
 |拋物線 (頂點為 V 軸向為 stem:[\vec\{v}]) |點 stem:[V+p\cdot t^2\cdot \vec\{v}+p\cdot t \cdot \vec\{v}^\{\perp}]
 的參數為 stem:[\frac\{f(t)+1}2]
 
-|折線 A~1~...A~n~ |若 X 在 A~k~A~k+1~ 上，則其參數為 stem:[\frac\{k-1+\phi(X,A,B)}\{n}]
+|折線 A~1~...A~n~ |若 X 在 A~k~A~k+1~ 上，則其參數為 stem:[\frac{k-1+\phi(X,A,B)}{n}]
 
-|多邊形 A~1~...A~n~ |若 X 在 A~k~A~k+1~ 上 (假設 A~n+1~=A~1~)，則其參數為 stem:[\frac\{k-1+\phi(X,A,B)}\{n+1}]
+|多邊形 A~1~...A~n~ |若 X 在 A~k~A~k+1~ 上 (假設 A~n+1~=A~1~)，則其參數為 stem:[\frac{k-1+\phi(X,A,B)}{n+1}]
 
 |路徑集合 L=\{p~1~,...,p~n~} |若 X 在 p~k~ 上，且 X 相對於 p~k~ 的參數為 t 的話，則相對於 L 的參數為
-stem:[\frac\{k-1+t}\{n}]
+stem:[\frac{k-1+t}{n}]
 
-|點集 L=\{A~1~,...,A~n~} |A~k~ 的路徑參數為 stem:[\frac\{k-1}\{n}]。指令 Point[L,t] 會得到 stem:[A_\{\lfloor
+|點集 L=\{A~1~,...,A~n~} |A~k~ 的路徑參數為 stem:[\frac{k-1}{n}]。指令 Point[L,t] 會得到 stem:[A_\{\lfloor
 tn\rfloor+1}]。
 
 |軌跡 |

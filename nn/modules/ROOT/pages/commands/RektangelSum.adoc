@@ -5,7 +5,7 @@ ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
 RektangelSum[ <Funksjon f>, <Tal a>, <Tal b>, <Tal på rektangel n>, <Posisjon for rektangelstart d> ]::
   Kommandoen gjev ei tilnærming til arealet under grafen til funksjonen. Intervallet [_a_, _b_] vert delt opp i _n_
   delintervall med breidde _(a - b)/n_. I kvart delintervall vert det teikna eit rektangel med breidde lik
-  intervallbreidda og høgde bestemt av funksjonsverdien for ein _x_-verdi lik: stem:[x_0 + (a-b)\frac\{d}\{n}], der
+  intervallbreidda og høgde bestemt av funksjonsverdien for ein _x_-verdi lik: stem:[x_0 + (a-b)\frac{d}{n}], der
   stem:[x_0] er _x_-verdien til starten på intervallet. Kommandoen finn summen av areala til alle rektangla.
 
 [EXAMPLE]
@@ -22,7 +22,7 @@ Høgda til det andre rektangelet er stem:[f(0+2\cdot0.6)=f(1.2)=1.2^2+3\cdot 1.2
 
 Arealet som vert returnert er: stem:[2(2.24+9.04)=22.56].
 
-Det eksakte svaret gjeve av `++Integral[f, -2, 2]]++` er 21.33 (evt. stem:[\frac\{64}\{3}] i CAS-delen).
+Det eksakte svaret gjeve av `++Integral[f, -2, 2]]++` er 21.33 (evt. stem:[\frac{64}{3}] i CAS-delen).
 
 ====
 

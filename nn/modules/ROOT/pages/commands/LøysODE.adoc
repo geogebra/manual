@@ -4,15 +4,15 @@ ifdef::env-github[:imagesdir: /nn/modules/ROOT/assets/images]
 
 LøysODE[ <f'(x y)> ]::
   Prøver å finne den eksakte løysinga av den ordinære differensiallikninga av første orden
-  stem:[\frac\{dy}\{dx}(x)=f'(x, y(x))].
+  stem:[\frac{dy}{dx}(x)=f'(x, y(x))].
 LøysODE[ <f'(x y)>, <Punkt på f> ]::
   Prøver å finne den eksakte løysinga av den ordinære differensiallikninga av første orden
-  stem:[\frac\{dy}\{dx}(x)=f'(x, y(x))] der løysinga går gjennom det gjevne punktet.
+  stem:[\frac{dy}{dx}(x)=f'(x, y(x))] der løysinga går gjennom det gjevne punktet.
 LøysODE[ <f'(x y)>, <Start x~0~>, <Start y~0~>, <Slutt x~1~>, <Steg s> ]::
-  Løyser den første ordens ordinære differensiallikninga stem:[\frac\{dy}\{dx}=f'(x,y)] numerisk med startpunkt _(x~0~,
+  Løyser den første ordens ordinære differensiallikninga stem:[\frac{dy}{dx}=f'(x,y)] numerisk med startpunkt _(x~0~,
   y~0~)_, sluttverdi _x~1~_ for _x_ og steglengde _s_ for _x_.
 LøysODE[ <f(x,y)>, <g(x,y)>, <Start x~0~>, <Start y~0~>, <Slutt t>, <Steg s> ]::
-  Løyser den første ordens ordinære differensiallikninga stem:[\frac\{dy}\{dx}=\frac\{f(x,y)}\{g(x,y)}] numerisk med
+  Løyser den første ordens ordinære differensiallikninga stem:[\frac{dy}{dx}=\frac{f(x,y)}{g(x,y)}] numerisk med
   startpunkt _(x~0~, y~0~)_, maksimal verdi for ein intern parameter _t_ og steglengde _s_ for _t_. Denne versjonen av
   kommandoen kan virke der den førre versjonen feiler, til dømes når løysingskurva har vertikale punkt.
 LøysODE[ <b(x)>, <c(x)>, <f(x)>, <Start x>, <Start y>, <Start y'>, <Slutt x>, <Steg>]::
@@ -23,7 +23,7 @@ LøysODE[ <b(x)>, <c(x)>, <f(x)>, <Start x>, <Start y>, <Start y'>, <Slutt x>, <
 
 *Døme:*
 
-`++LøysODE[-x, y, x(A), y(A), 5, 0.1]++` løyser stem:[\frac\{dy}\{dx}=- \frac\{x}\{y} ] ved å bruke eit tidlegare
+`++LøysODE[-x, y, x(A), y(A), 5, 0.1]++` løyser stem:[\frac{dy}{dx}=- \frac{x}{y} ] ved å bruke eit tidlegare
 definert punkt _A_ som startpunkt.
 
 ====
@@ -33,7 +33,7 @@ definert punkt _A_ som startpunkt.
 
 *Døme:*
 
-`++LøysODE[-x*y, x(A), y(A), 5, 0.1]++` løyser stem:[\frac\{dy}\{dx}=-xy] ved å bruke eit tidlegare definert punkt _A_
+`++LøysODE[-x*y, x(A), y(A), 5, 0.1]++` løyser stem:[\frac{dy}{dx}=-xy] ved å bruke eit tidlegare definert punkt _A_
 som startpunkt.
 
 ====
@@ -102,17 +102,17 @@ xref:/commands/GeometriskStad.adoc[geometriske staden].
 == CAS-delen
 
 LøysODE[ <Likning> ]::
-  Prøver å finne den eksakte løysinga av den ordinære differensiallikninga av første orden stem:[\frac\{dy}\{dx}(x)=f(x,
+  Prøver å finne den eksakte løysinga av den ordinære differensiallikninga av første orden stem:[\frac{dy}{dx}(x)=f(x,
   y(x))]. For første- og andrederiverte av _y_ kan du bruke _y'_ og _y''_.
 LøysODE[ <Likning y'=f(x, y)>, <Punkt L på f> ]::
   Prøver å finne den eksakte løysinga av den første eller andre ordens ordinære differensiallikninga
-  stem:[\frac\{dy}\{dx}(x)=f(x, y(x))] som går gjennom punktet (eller lista med punkt) _L_.
+  stem:[\frac{dy}{dx}(x)=f(x, y(x))] som går gjennom punktet (eller lista med punkt) _L_.
 LøysODE[ <y'=f(x, y)>, <Punkt L på f>, <Punkt L' på f'> ]::
   Prøver å finne den eksakte løysinga av den første eller andre ordens ordinære differensiallikninga
-  \frac\{dy}\{dx}(x)=f(x, y(x))\) og går gjennom punktet (eller lista med punkt) _L_ og _f'_ går gjennom punktet (eller
+  \frac{dy}{dx}(x)=f(x, y(x))\) og går gjennom punktet (eller lista med punkt) _L_ og _f'_ går gjennom punktet (eller
   lista med punkt) _L'_ .
 LøysODE[ <Likning v'=f(u,v)>, <Avhengig variabel v>, <Uavhengig variabel w> ]::
-  Prøver å finne den eksakte løysinga av den ordinære differensiallikninga av første orden stem:[\frac\{dv}\{dw}(w)=f(w,
+  Prøver å finne den eksakte løysinga av den ordinære differensiallikninga av første orden stem:[\frac{dv}{dw}(w)=f(w,
   v(w))].
 LøysODE[ <Likning v'=f(u,v)>, <Avhengig variabel v>, <Uavhengig variabel w>, <Punkt L på f> ]::
   Kombinerer parametrar frå syntaks nummer to og fire.
