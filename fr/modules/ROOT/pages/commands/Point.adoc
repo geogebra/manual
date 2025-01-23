@@ -4,12 +4,16 @@ ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
 xref:commands/Commandes_Géométrie.adoc[Commandes Géométrie]
 
-Point( <xref:/Objets_géométriques.adoc[Chemin]> )::
+Point( <xref:/Objets_géométriques.adoc[Objet]> )::
   Retourne un point sur l'objet géométrique . Ce point peut être déplacé tout le long du chemin.
 
 
-Point( <xref:/Objets_géométriques.adoc[Chemin]>, <Paramètre> )::
+Point( <xref:/Objets_géométriques.adoc[Objet]>, <Paramètre> )::
   Retourne un point sur l'objet géométrique de xref:/commands/ParamètreChemin.adoc[Paramètre] donné.
+
+====
+Si _Objet_ est un Segment ou un Vecteur dans Graphique `++Point(Objet,0)++` en retourne l'origine, `++Point(Objet,1)++` l'extrémité.
+====
 
 Point( <Point A>, <Vecteur stem:[\vec{u}]> )::
   Construit le translaté de _A_ dans la translation de vecteur stem:[\vec{u}]
