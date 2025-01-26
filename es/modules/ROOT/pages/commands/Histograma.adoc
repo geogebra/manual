@@ -1,149 +1,100 @@
 = Comando Histograma
 :page-en: commands/Histogram
-:page-revisar: urgente
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]
+Histograma( <Lista de límites de clases>, <Lista de alturas> )::
+  Crea un histograma con barras de las alturas dadas. Los límites de clases determinan
+  el ancho y posición de cada barra del histograma.
 
-|Página en proceso de traducción.
-|===
+[EXAMPLE]
+====
 
-Histograma( [.small]##<##Lista~límites~de clases~~>[.small]##, <##Lista~alturas~[.small]##>## )::
-  Crea un https://es.wikipedia.org/Histograma[histograma] (https://en.wikipedia.org/wiki/Histogram[_histogram_] en
-  inglés) sobre los intervalos listados, con barras acorde a las alturas. Los extremos de límites de clases determinan
-  el ancho y posición de cada barra.
+`++Histograma({0, 1, 2, 3, 4, 5}, {2, 6, 8, 3, 1})++` crea un histograma con 5 barras de las alturas dadas. La primera barra
+es posicionada en el intervalo [_0, 1_], la segunda barra es posicionada en el intervalo [_1, 2_], y así sucesivamente.
+
+====
+
+Histograma( <Lista de límites de clases>, <Lista de datos brutos>, <Usar Densidad o no>(true/false), <Factor de escala de densidad>(opcional) )::
+  Crea un histograma utilizando los datos brutos. Los límites de clases determinan el ancho y la posición de cada
+  barra del histograma y se utilizan para determinar cuántos elementos de datos pertenecen a cada clase. La altura de la barra se determina de la siguiente manera:
+
+* Si _Usar Densidad o no = true_, altura = (Factor de escala de densidad) * (frecuencia de clase) / (ancho de clase)
+* Si _Usar Densidad o no = false_, altura = frecuencia de clase
+
+Por defecto, Usar Densidad o no = true y Factor de escala de densidad = 1. Esto crea un histograma con un área total = n, el número de valores de datos.
 
 [NOTE]
 ====
 
-Debe verificarse la siguiente condición:__*Longitud[<Lista Alturas>] = Longitud[<Lista de Límites de Clases>]* - 1__****
+Todos los elementos de los datos brutos deben estar dentro del intervalo de los límites de clase; de lo contrario, se devolverá "indefinido".
+
+====
+
+[NOTE]
+====
+
+Por convención, se utiliza la regla a ≤ x < b para cada clase, excepto para la última clase, donde se aplica a ≤ x ≤ b.
 
 ====
 
 [EXAMPLE]
 ====
 
-*`++Histograma[{0, 1, 2, 3, 4, 5}, {2, 6, 8, 3, 1}]++`* crea un histograma de cinco barras de las alturas
-especificadas:la primera está ubicada en el intervalo [_0, 1_]la segunda, en [_1, 2_] y así sucesivamente.
+(_Histograma predeterminado_)
 
-====
+`++Histograma({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true)++` crea un histograma con 3 barras, con las
+alturas 0.5 (primera barra), 0.2 (segunda barra), y 0.1 (tercera barra).
 
-Histograma( <Lista~límites~de clase~~>, <Lista~datos brutos~>, <Usar densidad o no~(true/false)~>, <Factor~escala de
-densidad~> (opcional) )::
-  Crea un https://es.wikipedia.org/Histograma[histograma] de la lista de datos brutos sobre los intervalos
-  listados.Los extremos del límites de clases determinan ancho y posición de cada barra y la cantidad de datos de cada
-  clase. Se denomina _frecuencia de clase_ a la cantidad de datos brutos respecto de cada clase.La altura de cada barra
-  se determina como se explica a continuación:
-  * Si __Usar Densidad~Booleana~ = falso^false^__altura= frecuencia de clase
-  * Si _Usar Densidad~Booleana~ = cierto^true^_ la altura respecto de la frecuencia de clase queda afectada por la
-  siguiente razón:
-  altura = frecuencia de clase ~*~ stem:[\frac{Factor_\{densidad}}\{ancho_\{de} clase}]
-
-[EXAMPLE]
-====
-
-*`++Histograma[{1, 2, 3, 4}, {1.0, 1.1, 1.1, 1.2, 1.7, 2.2, 2.5, 4.0}]++`* crea un histograma de tres barras (de 1 a 2;
-2 a 3 y 3 a 4), cada una de las cuales tendrá las siguientes alturas:Primera barra: 5^[.small]#(de `++1.0++` a `++1.7++`
-_caen_ en primera clase, 5 datos)#^Segunda barra: 2^[.small]#(`++2.2++` y `++2.5++` _caen_ en la segunda clase)#^Tercera
-barra: 1^[.small]#(solo `++4.0++` _cae_ en la tercera clase)#^
-
-====
-
-[NOTE]
-====
-
-image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Por omisión:*Booleana~Uso de Densidad~* = _true_
-(cierto)*Factor~Escala de Densidad~* = _1_.Esto crea un https://es.wikipedia.org/Histograma[histograma] con un
-área total = n, el número de valores de los datos.
+Este histograma tiene un área total = 0.5*10 + 0.2*10 + 0.1*10 = 8.
 
 ====
 
 [EXAMPLE]
 ====
 
-*Ejemplos:* __Histograma por Omisión__**`++Histograma[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, 1 > 0]++`**
-crea un histograma con tres barras, de alturas 0.5 (la primera), 0.2 (la segunda), y 0.1 (la tercera).Este histograma
-tiene un área total = 0.5*10 + 0.2*10 + 0.1*10 = 8.__Histograma de
-Conteo__**`++Histograma[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, 1 < 0]++`** crea un
-https://es.wikipedia.org/Histograma[histograma] con tres barras, de alturas 5 (la primera), 2 (la segunda) y 1
-(la tercera).Este histograma no emplea la densidad de escala y determina barras cuyas alturas son iguales al conteo de
-valores en cada clase.__Histograma de Frecuencia
-Relativa__**`++Histograma[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, 1 < 0,  10 / 8 ]++`** crea un histograma
-de tres barras, de alturas 5/8 (la primera), 2/8 (la segunda) y 1/8 (la tercera).Este
-https://es.wikipedia.org/Histograma[histograma] emplea la escala para determinar barras cuyas alturas terminan
-siendo iguales a la proporción de valores en cada clase.
+(_Histograma de conteo_)
 
-====
-
-[NOTE]
-====
-
-Todos los elementos de la _Lista de Datos Brutos_ deben estar dentro del intervalo de los límites de clase o el
-histograma resultará “indefinido”.
+`++Histograma({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, false)++` crea un histograma con 3 barras, con las
+alturas 5 (primera barra), 2 (segunda barra), y 1 (tercera barra). Este histograma no utiliza el escalado de densidad y
+asigna alturas a las barras que equivalen al conteo de valores en cada clase.
 
 ====
 
 [EXAMPLE]
 ====
 
-__Histograma Normalizado__**`++Histograma[{10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, 1 > 0, 1/8] ++`** crea un
-histograma con tres barras de alturas 0.0625 (la primera), 0.025 (la segunda) y 0.0125 (la tercera).
+(_Histograma de frecuencia relativa_)
+
+`++Histograma({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 10/ 8)++` crea un histograma con 3 barras, con
+las alturas 0.625 (primera barra), 0.25 (segunda barra), y 0.125 (tercera barra). Este histograma utiliza el escalado de densidad
+para asignar alturas a las barras que representan la proporción de valores en cada clase.
+
+Si n es el número de valores de datos y las clases tienen un ancho constante w, entonces Factor de escala de densidad = w/n crea un histograma relativo.
 
 ====
-
-[NOTE]
-====
-
-image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Este histograma tiene un área total = 0.0625*10 +
-0.025*10 + 0.0125*10 = 1.Si _n_ es el número de datos, entonces el _Factor de escala_ = 1/ n crea un histograma
-normalizado de un área total = 1. Esto resulta útil para ajustar un histograma según una curva de densidad.
-
-====
-
-[NOTE]
-====
-
-Cuando el comando Histograma se divide o multiplica por un número, la altura de cada barra se divide o multiplica por
-tal número. En este caso el comando Histograma se dividió por el número de valores de los datos.
-
-====
-
-Histograma( <Acumulada o no~true/false~>, <Lista~límites~de clase~~>, <Lista~datos brutos~>, <Usar densidad o
-no~true/false~> , <Factor~escala de densidad~> (opcional) )::
-  Si la _Acumulativa_ es verdadera se crea un histograma donde la altura de cada barra iguala la frecuencia de la clase
-  más las de las previas.
 
 [EXAMPLE]
 ====
 
-*Ejemplos:* *`++Histograma[2 > 0, {10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, 0 < 1]++`* crea un
-https://es.wikipedia.org/Histograma[histograma] con tres barras de alturas 0.5 (la primera), '0.7 (la segunda) y
-0.8 (la tercera).
+(_Histograma normalizado_)
 
-'''''
+`++Histograma({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 1/8)++` crea un histograma con 3 barras, con las
+alturas .0625 (primera barra), .025 (segunda barra), y .0125 (tercera barra).
 
-La figura ilustra, a continuación, varios ejemplos _animados_
+Este histograma tiene un área total = .0625*10 + .025*10 + .0125*10 = 1.
 
-====
-
-image:Histogramas_V.gif[Histogramas V.gif,width=431,height=374]
-
-[NOTE]
-====
-
-image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Por convención se emplea la regla *_a < x ≤ b_* para
-cada clase excepto para la primera para la cual se estipula *_a ≤ x ≤ b_*
+Si n es el número de valores de datos, entonces Factor de escala de densidad = 1/n crea un histograma normalizado con un área total = 1.
+Esto es útil para ajustar un histograma con una curva de densidad.
 
 ====
 
-'''''
+Histograma( <Acumulada>(true/false), <Lista de límites de clases>, <Lista de datos brutos>, <Usar Densidad o no>(true/false), <Factor de escala de densidad>(opcional) )::
+  Si Acumulada es verdadera (_true_), se crea un histograma donde la altura de cada barra es igual a la frecuencia de la clase más la suma de todas las frecuencias anteriores.
 
-[NOTE]
+[EXAMPLE]
 ====
 
-Ver también el comando xref:/commands/HistogramaDerecha.adoc[HistogramaDerecha].
+ `++Histograma(true, {10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true)++` crea un histograma con 3 barras, con
+las alturas 0.5 (primera barra), 0.7 (segunda barra), y 0.8 (tercera barra).
 
 ====
