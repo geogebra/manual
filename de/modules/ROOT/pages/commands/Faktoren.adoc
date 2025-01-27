@@ -3,14 +3,14 @@
 ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
 
 Faktoren( <Polynom> )::
-  Liefert eine Liste von Listen _\{Faktor, Exponent}_, die die einzelnen Faktoren des Polynoms enthält. Das Produkt
+  Liefert eine Liste von Listen _{Faktor, Exponent}_, die die einzelnen Faktoren des Polynoms enthält. Das Produkt
   dieser Faktoren potenziert mit dem entsprechenden _Exponent_ entspricht dem gegebenen Polynom. Die Faktoren werden
   aufsteigend nach dem Grad sortiert.
 
 [EXAMPLE]
 ====
 
-`++Faktoren[x^8 - 1]++` liefert _\{\{x^4 + 1, 1}, \{x^2 + 1, 1}, \{x + 1, 1}, \{x - 1, 1}}_.
+`++Faktoren[x^8 - 1]++` liefert _{{x^4^ + 1, 1}, {x^2^ + 1, 1}, {x + 1, 1}, {x - 1, 1}}_.
 
 ====
 
@@ -23,13 +23,13 @@ Nicht alle diese Faktoren sind über den reellen Zahlen irreduzibel.
 
 Faktoren( <Zahl> )::
   Führt eine https://de.wikipedia.org/wiki/Primfaktorzerlegung[Primfaktorzerlegung] durch, d.h. liefert eine Liste
-  von Listen _\{Primzahl, Exponent}_, die die einzelnen Primfaktoren der Zahl enthält. Die Primzahlen werden in
+  von Listen _{Primzahl, Exponent}_, die die einzelnen Primfaktoren der Zahl enthält. Die Primzahlen werden in
   aufsteigender Reihenfolge sortiert.
 
 [EXAMPLE]
 ====
 
-* `++Faktoren[1024]++` liefert _\{\{2, 10}}_.
+* `++Faktoren[1024]++` liefert _{{2, 10}}_.
 
 ====
 
@@ -51,8 +51,8 @@ zurückgegeben.
 [EXAMPLE]
 ====
 
-`++Faktoren[a^8 - 1]++` liefert stem:[\left( \begin\{array}\{} a - 1 & 1 \\ a +1 & 1 \\a^2 + 1& 1 \\a^4 + 1& 1 \\
-\end\{array} \right)].
+`++Faktoren[a^8 - 1]++` liefert stem:[\left( \begin{array} a - 1 & 1 \\ a +1 & 1 \\a^2 + 1& 1 \\a^4 + 1& 1 \\
+\end{array} \right)].
 
 ====
 
