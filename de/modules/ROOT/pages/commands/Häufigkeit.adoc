@@ -10,8 +10,8 @@ Häufigkeit( <Liste von Rohdaten> )::
 [EXAMPLE]
 ====
 
-Geben Sie `++Liste1 = { "a", "a", "x", "x", "x", "b" }++` ein. `++Häufigkeit[Liste1]++` erzeugt die Liste _\{ 2, 1, 3
-}_. `++Einzigartig[Liste1]++` erzeugt die Liste _\{ "a", "b", "x" }_.
+Geben Sie `++Liste1 = { "a", "a", "x", "x", "x", "b" }++` ein. `++Häufigkeit[Liste1]++` erzeugt die Liste _{ 2, 1, 3
+}_. `++Einzigartig[Liste1]++` erzeugt die Liste _{ "a", "b", "x" }_.
 
 ====
 
@@ -22,8 +22,8 @@ Häufigkeit( <Wahrheitswert kumulativ>, <Liste von Rohdaten> )::
 [EXAMPLE]
 ====
 
-Geben Sie `++Liste1 = { 0, 0, 0, 1 , 1, 2 }++` ein. `++Häufigkeit[true, Liste1]++` erzeugt die Liste _\{ 3, 5, 6 }_.
-`++Häufigkeit[false, Liste1]++` erzeugt die Liste _\{ 3, 2, 1}_. `++Einzigartig[Liste1]++` erzeugt die Liste _\{ 0, 1, 2
+Geben Sie `++Liste1 = { 0, 0, 0, 1 , 1, 2 }++` ein. `++Häufigkeit[true, Liste1]++` erzeugt die Liste _{ 3, 5, 6 }_.
+`++Häufigkeit[false, Liste1]++` erzeugt die Liste _{ 3, 2, 1}_. `++Einzigartig[Liste1]++` erzeugt die Liste _{ 0, 1, 2
 }_.
 
 ====
@@ -36,7 +36,7 @@ Häufigkeit( <Liste von Klassenbereichen>, <Liste von Rohdaten> )::
 [EXAMPLE]
 ====
 
-Die Eingabe `++Häufigkeit[{1,2,3},  {1,1,2,3}]++` erzeugt die Liste _\{ 2, 2 }_.
+Die Eingabe `++Häufigkeit[{1,2,3},  {1,1,2,3}]++` erzeugt die Liste _{ 2, 2 }_.
 
 ====
 
@@ -78,11 +78,10 @@ Häufigkeit( <Liste von Klassenbereichen>, <Liste von Rohdaten>, <Wahrheitswert 
 
 Die Eingabe `++Daten = {1, 2, 2, 2, 3, 3, 4, 4, 4, 4}++` erzeugt die Liste der Rohdaten und die Eingabe
 `++Klassen={0, 2, 5}++` die Liste von Klassenbereichen. Die Befehle `++Häufigkeit[Klassen, Daten, false]++` und
-`++Häufigkeit[Klassen, Daten]++` erzeugen beide die Liste _\{1, 9}_, aber `++Häufigkeit[Klassen, Daten, true]++` erzeugt
-die Liste _\{0.5, 3}_.
+`++Häufigkeit[Klassen, Daten]++` erzeugen beide die Liste _{1, 9}_, aber `++Häufigkeit[Klassen, Daten, true]++` erzeugt
+die Liste _{0.5, 3}_.
 
 ====
 
-Häufigkeit( <Wahrheitswert kumulativ>, <Liste von Klassenbereichen>, <Liste von Rohdaten>, <Wahrheitswert Dichte> ,
-<Skalierungsfaktor> (optional) )::
+Häufigkeit( <Wahrheitswert kumulativ>, <Liste von Klassenbereichen>, <Liste von Rohdaten>, <Wahrheitswert Dichte>, <Skalierungsfaktor> (optional) )::
   Erzeugt eine Häufigkeitsliste für den entsprechenden xref:/commands/Histogramm.adoc[Histogramm-Befehl].

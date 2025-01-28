@@ -8,7 +8,7 @@ Iterationsliste( <Funktion>, <Startwert>, <Anzahl der Iterationen n> )::
 [EXAMPLE]
 ====
 
-Nach der Definition der Funktion `++f(x) = x^2++` liefert der Befehl `++Iterationsliste[f, 3, 2]++` die Liste _\{3, 9,
+Nach der Definition der Funktion `++f(x) = x^2++` liefert der Befehl `++Iterationsliste[f, 3, 2]++` die Liste _{3, 9,
 81}_.
 
 ====
@@ -21,10 +21,10 @@ Iterationsliste( <Ausdruck>, <Variablen>, <Startwert>, <Anzahl n>)::
 [EXAMPLE]
 ====
 
-Seien _f__0, _f__1 Zahlen. `++Iterationsliste[a + b, a, b, {f_0, f_1},5]++` weist den ersten zwei Werten der
-resultierenden Liste die Startwerte zu. Danach werden die Werte als __f__~2~ = __f__~0~ + __f__~1~,   __f__~3~ =
-__f__~1~ + __f__~2~,   __f__~4~ = __f__~2~ + __f__~3~,   __f__~5~ = __f__~3~ + __f__~4~ berechnet. D.h. für _f__0 =
-_f__1 = 1 wird das Ergebnis \{1, 1, 2, 3, 5, 8} sein.
+Seien _f~0~_, _f~1~_ Zahlen. `++Iterationsliste[a + b, a, b, {f_0, f_1},5]++` weist den ersten zwei Werten der
+resultierenden Liste die Startwerte zu. Danach werden die Werte als _f~2~_ = _f~0~_ + _f~1~_,   _f~3~_ =
+_f~1~_ + _f~2~_,   _f~4~_ = _f~2~_ + _f~3~_,   _f~5~_ = _f~3~_ + _f~4~_ berechnet. D.h. für _f~0~_ =
+_f~1~_ = 1 wird das Ergebnis _{1, 1, 2, 3, 5, 8}_ sein.
 
 ====
 
@@ -32,9 +32,9 @@ _f__1 = 1 wird das Ergebnis \{1, 1, 2, 3, 5, 8} sein.
 ====
 
 Seien _A_ und _B_ Punkte. Der Befehl `++Iterationsliste[Mittelpunkt[A, C], C, {B}, 3]++` berechnet intern die Werte
-__C__~0~ = _B_,   __C__~1~ = _Mittelpunkt_[_A_, __C__~0~],   __C__~2~ = _Mittelpunkt_[_A_, __C__~1~],   __C__~3~ =
-_Mittelpunkt_[_A_, __C__~2~] und liefert \{__C__~0~, __C__~1~, __C__~2~, __C__~3~}. D.h. für _A_ = (0,0) und _B_ = (8,0)
-wird das Ergebnis \{(8,0), (4,0), (2,0), (1,0)} sein.
+_C~0~_ = _B_,   _C~1~_ = _Mittelpunkt_[_A_, _C~0~_],   _C~2~_ = _Mittelpunkt_[_A_, _C~1~_],   _C~3~_ =
+_Mittelpunkt_[_A_, _C~2~_] und liefert {_C~0~_, _C~1~_, _C~2~_, _C~3~_}. D.h. für _A_ = (0,0) und _B_ = (8,0)
+wird das Ergebnis _{(8,0), (4,0), (2,0), (1,0)}_ sein.
 
 ====
 
