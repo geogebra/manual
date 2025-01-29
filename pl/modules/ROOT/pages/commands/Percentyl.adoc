@@ -1,0 +1,30 @@
+= Polecenie Percentyl
+:page-en: commands/Percentile
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Percentyl( <Lista Liczb>, <Procent> )::
+  Niech _P_ będzie wartością parametru _Procent_.
+  Polecenie zwraca wartość, która oddziela początkowe _P_ procent z _Listy Liczb_, gdy lista jest uporządkowana
+  rosnąco. _Procent_ musi być liczbą z pprzedziału _0 < P ≤ 1_.
+
+[EXAMPLE]
+====
+
+`++Percentyl({1, 2, 3, 4}, 0.25)++` daje w wyniku _1.25_.
+
+====
+
+[NOTE]
+====
+
+Polecenia xref:/commands/Kwartyl1.adoc[Kwartyl1] i Percentyl stosują różne zasady wyznaczania wartości i nie zawsze zwracają zgodne wyniki.
+
+====
+
+[EXAMPLE]
+====
+
+`++Kwartyl1({1, 2, 3, 4})++` daje w wyniku _1.5_, natomiast `++Percentyl({1, 2, 3, 4}, 0.25)++` zwraca wartość _1.25_.
+
+====
+
