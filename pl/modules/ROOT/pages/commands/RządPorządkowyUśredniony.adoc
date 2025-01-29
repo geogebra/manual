@@ -1,0 +1,23 @@
+= RządPorządkowyUśredniony
+:page-en: commands/TiedRank
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RządPorządkowyUśredniony( <Lista> )::
+ Zwraca listę, której i-ty element jest rangą i-tego elementu listy L (ranga elementu to jego pozycja w
+  xref:/commands/Porządkuj.adoc[Porządkuj](L)). Jeśli w liście _L_  znajduje się więcej równych elementów, które zajmują pozycje od _k_ do _l_ in
+  Sort[L], tym elementom przypisywana jest średnia rang od _k_ do _l_.
+
+[EXAMPLE]
+====
+
+* `++RządPorządkowyUśredniony({4, 1, 2, 3, 4, 2})++` daje w wyniku {5.5, 1, 2.5, 4, 5.5, 2.5}.
+* `++RządPorządkowyUśredniony({3, 2, 2, 1})++` daje w wyniku {4, 2.5, 2.5, 1}.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/RządPorządkowy.adoc[RządPorządkowy]
+
+====
