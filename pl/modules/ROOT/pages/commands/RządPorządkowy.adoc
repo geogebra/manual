@@ -1,0 +1,22 @@
+= Polecenie RządPorządkowy
+:page-en: commands/OrdinalRank
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RządPorządkowy( <Lista> )::
+  Zwraca listę, której i-ty element jest rangą i-tego elementu listy L (ranga elementu to jego pozycja w
+  xref:/commands/Porządkuj.adoc[Porządkuj](L)). Jeśli w liście _L_  znajduje się więcej równych elementów, które zajmują pozycje od _k_ do _l_ in
+  Sort[L], rangi od _k_ do _l_ są przypisane do tych elementów.
+
+[EXAMPLE]
+====
+
+* `++RządPorządkowy({4, 1, 2, 3, 4, 2})++` daje w wyniku _{5, 1, 2, 4, 6, 3}_
+* `++RządPorządkowy({3, 2, 2, 1})++` daje w wyniku _{4, 2, 3, 1}_
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie: xref:/commands/RządPorządkowyUśredniony.adoc[RządPorządkowyUśredniony]
+====
