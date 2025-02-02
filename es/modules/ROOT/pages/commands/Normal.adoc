@@ -1,33 +1,32 @@
 = Comando Normal
-:page-revisar: prioritario
 :page-en: commands/Normal
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-Normal( <Media>, <Desviación estándar>, x )::
-  Crea la función de distribución acumulada de la https://es.wikipedia.org/Distribuci%C3%B3n_normal[distribución
-  normal].
-
-Normal( <Media μ>, <Desviación estándar σ>, x, <Acumulada (true/false)> )::
-  Si _Acumulada_ es verdadero, crea la función de distribución acumulada de la distribución normal de media μ y
-  desviación σ, de lo contrario crea su función de densidad de probabilidad.
-Normal( <Media μ>, <Desviación estándar σ>, <Variable __v__> )::
-  Evalúa la función stem:[\Phi \left(\frac{x- \mu}\{\sigma} \right) ] en _v_ donde _Φ_ es la función de distribución
-  acumulada _N(0,1)_ de media _μ_ y desviación estándar _σ_.
-
-[NOTE]
-====
-
-Devuelve la probabilidad para un valor dado de _x_ (o el área bajo la curva de la distribución normal a la izquierda del
-valor dado de _x_).
-
-====
+Normal( <Media>, <Desviación estándar>, <Valor> )::
+  Se evalúa la función stem:[\Phi \left(\frac{x- \mu}{\sigma} \right) ] en el _valor v_,
+  donde _Φ_ es la función de distribución acumulada de _N(0,1)_ con _media μ_ y _desviación estándar σ_.
 
 [EXAMPLE]
 ====
 
 `++Normal(2, 0.5, 1)++` devuelve _0.02_ en la xref:/Vista_Algebraica.adoc[image:16px-Menu_view_algebra.svg.png[Menu view
-algebra.svg,width=16,height=16]] xref:/Vista_Algebraica.adoc[Vista Algebraica] y stem:[\frac{erf(-\sqrt{2})+1}\{2}] en
+algebra.svg,width=16,height=16]] xref:/Vista_Algebraica.adoc[Vista Algebraica] y stem:[\frac{erf(-\sqrt{2})+1}{2}] en
 la xref:/Vista_CAS.adoc[image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]]
 xref:/Vista_CAS.adoc[Vista CAS].
 
 ====
+
+[NOTE]
+====
+
+Esta sintaxis devuelve la probabilidad en un valor dado, es decir, el área bajo la curva de la distribución normal a la izquierda de la coordenada _x_ dada.
+
+====
+
+Normal( <Media>, <Desviación estándar>, <Valor>, <Acumulada (true/false)> )::
+  Si _Acumulada_ es _verdadera_, se evalúa la función de distribución acumulada de una https://es.wikipedia.org/wiki/Distribuci%C3%B3n_normal[distribución normal] con la _media_
+  y la _desviación estándar_ dadas en el _valor_ proporcionado; de lo contrario, se evalúa la función de densidad de probabilidad de la distribución en el _valor_.
+
+Normal( <Media>, <Desviación estándar>, x, <Acumulada (true/false)> )::
+  Si _Acumulada_ es _verdadera_, se crea la función de distribución acumulada (FDA) de una distribución normal con la _media_
+  y la _desviación estándar_ dadas; de lo contrario, se crea la función de densidad de probabilidad (FDP) de la distribución.
