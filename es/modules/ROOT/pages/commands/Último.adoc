@@ -1,23 +1,36 @@
 = Comando Último
-:page-revisar: prioritario
 :page-en: commands/Last
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
 Último( <Lista> )::
   Devuelve una nueva lista que contiene el último elemento de la lista inicial.
-Último( <Lista>, <Número de elementos> )::
-  Devuelve una nueva lista que contiene solamente los últimos _n_ elementos de la lista inicial.
-Último( <Texto> )::
-  Devuelve el último carácter de un texto.
-Último( <Text0> , <Número de elementos> )::
-  Devuelve los últimos _n_ caracteres de un texto.
 
 [EXAMPLE]
 ====
 
-`++Último("Hola", 2)++` devuelve _"la"_.
+`++Último({1, 4, 3})++` devuelve _{3}_.
 
 ====
+
+[NOTE]
+====
+
+Para obtener solo el último elemento utiliza `++Elemento({1, 4, 3}, 3)++`.
+
+====
+
+Último( <Lista>, <Número de elementos> )::
+  Devuelve una nueva lista que contiene solamente los últimos _n_ elementos de la lista inicial.
+
+[EXAMPLE]
+====
+
+`++Último({1, 4, 3}, 2)++` devuelve _{4, 3}_.
+
+====
+
+Último( <Texto> )::
+  Devuelve el último carácter de un texto.
 
 [EXAMPLE]
 ====
@@ -26,24 +39,13 @@ ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
 ====
 
-[EXAMPLE]
-====
-
-`++Último({1, 4, 3}, 2)++` devuelve _\{4, 3}_.
-
-====
+Último( <Texto> , <Número de elementos> )::
+  Devuelve los últimos _n_ caracteres de un texto.
 
 [EXAMPLE]
 ====
 
-`++Último({1, 4, 3})++` devuelve _\{3}_.
-
-====
-
-[NOTE]
-====
-
-Para obtener solo el último elemento utiliza `++Elemento({1, 4, 3}, 3)++`.
+`++Último("Hola", 2)++` devuelve _"la"_.
 
 ====
 
