@@ -1,27 +1,26 @@
 = Comando UniformeAleatorio
-:page-revisar: prioritario
 :page-en: commands/RandomUniform
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
 UniformeAleatorio( <Mínimo>, <Máximo> )::
   Da por resultado un número real aleatorio a partir de una
-  https://es.wikipedia.org/Distribuci%C3%B3n_uniforme_continua[distribución uniforme] en el intervalo [_Mínimo_,
+  https://es.wikipedia.org/wiki/Distribuci%C3%B3n_uniforme_continua[distribución uniforme] en el intervalo [_Mínimo_,
   _Máximo_].
-UniformeAleatorio( <mínimo>, <Máximo>, <Número de muestras __n__> )::
-  Da por resultado una lista de _n_ números reales aleatorios de una [:w:es:Distribución uniforme continua|distribución
-  uniforme] en el intervalo [_Mínimo_, _Máximo_].
-
-[EXAMPLE]
-====
-
-`++UniformeAleatorio(0, 1, 3)++` da por resultado una lista de tres números aleatorios entre _0_ y 1__.__
-
-====
 
 [EXAMPLE]
 ====
 
 `++UniformeAleatorio(0, 1)++` da por resultado un número aleatorio entre _0_ y _1_.
+
+====
+
+UniformeAleatorio( <Mínimo>, <Máximo>, <Número de muestras> )::
+  Da por resultado una lista de _n_ números reales aleatorios de una https://es.wikipedia.org/wiki/Distribuci%C3%B3n_uniforme_continua[distribución uniforme] en el intervalo [_Mínimo_, _Máximo_].
+
+[EXAMPLE]
+====
+
+`++UniformeAleatorio(0, 1, 3)++` da por resultado una lista de tres números aleatorios entre _0_ y _1_.
 
 ====
 
