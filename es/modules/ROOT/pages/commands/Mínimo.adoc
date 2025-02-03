@@ -1,44 +1,32 @@
 = Comando Mínimo
-:page-revisar: prioritario
 :page-en: commands/Min
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]
+Mínimo( <Lista> )::
+  Devuelve el mínimo de los números que se encuentran en la lista.
 
-|Página en proceso de traducción.
-|===
+[EXAMPLE]
+====
 
-Mínimo[ <Lista> ]::
-  Da por resultado el número menor de los que se encuentran en la lista.
-Mínimo[ <Intervalo> ]::
+`++Mínimo({-2, 12, -23, 17, 15})++` da por resultado _-23_.
+
+====
+
+[NOTE]
+====
+
+Si la entrada consta de objetos que no son números, este comando considera los números asociados con esos objetos. Por
+ejemplo, si la lista contiene segmentos, el comando _Mínimo( <Lista> )_ devolverá la longitud mínima de los segmentos.
+
+====
+
+Mínimo( <Intervalo> )::
   Da por resultado el límite inferior del intervalo.
-Mínimo[ <Número>, <Número> ]::
-  Da por resultado el mínimo valor entre los dos dados.
-Mínimo[ <Función>, <Extremo inferior del intervalo>, <Extremos superior del intervalo> ]::
-  Calcula el punto correspondiente al mínimo de la función en el intervalo dado. La función debiera ser continua y tener
-  un único mínimo local en el intervalo.
 
 [EXAMPLE]
 ====
 
-`++Mínimo[12, 15]++` da por resultado _12_.
-
-====
-
-[EXAMPLE]
-====
-
-`++Mínimo[2 < x < 3]++` da por resultado _2_.
-
-====
-
-[EXAMPLE]
-====
-
-`++Mínimo[{-2, 12, -23, 17, 15}]++` da por resultado _-23_.
+`++Mínimo(2 < x < 3)++` da por resultado _2_.
 
 ====
 
@@ -49,44 +37,63 @@ Para los intervalos abiertos y cerrados, el resultado es el mismo.
 
 ====
 
-[NOTE]
-====
-
-Si la entrada consta de objetos que no son números, este comando considera los números asociados con esos objetos. Por
-ejemplo, si la lista contiene segmentos, el comando _Mínimo[ <Lista> ]_ devolverá el segmento de menor longitud.
-
-====
-
-[NOTE]
-====
-
-Para funciones polinómicas, utiliza el xref:/commands/Extremo.adoc[Comando Extremo].
-
-====
-
-Mínimo[<Lista de datos>, <Lista de Frecuencias> ]
-
-Da por resultado el valor mínimo de la lista de datos cuya frecuencia es no nula.
+Mínimo( <Número>, <Número> )::
+  Da por resultado el mínimo valor entre los dos dados.
 
 [EXAMPLE]
 ====
 
-`++Mínimo[{1, 2, 3, 4, 5}, {0, 3, 4, 2, 3}]++` da por resultado 2, el valor más peequeño entre aquellos cuya frecuencia
+`++Mínimo(12, 15)++` da por resultado _12_.
+
+====
+
+Mínimo( <Función>, <Extremo inferior del intervalo>, <Extremos superior del intervalo> )::
+  Calcula (numéricamente) el punto correspondiente al mínimo *local* de la función en el intervalo dado. La función debe ser continua y tener
+  un único mínimo _local_ en el intervalo (y ningún máximo local).
+
+[EXAMPLE]
+====
+
+`++Mínimo(exp(x) x^3,-4,-2)++` crea el punto _(-3, -1.34425)_.
+
+====
+
+[NOTE]
+====
+
+Para funciones polinómicas, utiliza el comando xref:/commands/Extremo.adoc[Extremo].
+
+====
+
+Mínimo(<Lista de datos>, <Lista de frecuencias> )::
+  Da por resultado el valor mínimo de la lista de datos con las frecuencias correspondientes.
+
+[EXAMPLE]
+====
+
+`++Mínimo({1, 2, 3, 4, 5}, {0, 3, 4, 2, 3})++` da por resultado _2_, el valor más pequeño entre aquellos cuya frecuencia
 es mayor a 0.
 
 ====
 
-[EXAMPLE]
-====
-
-`++Mínimo[exp(x) x^3,-4,-2]++` crea el punto (-3, -1.34425).
-
-====
-
 [NOTE]
 ====
 
-Ver también xref:/commands/Extremo.adoc[Comando Extremo], xref:/commands/Máximo.adoc[Comando Máximo] y
+* Si se quiere el mínimo de dos funciones `++f(x)++` y `++g(x)++`, se puede definir `++(f(x) + g(x) - abs(f(x) - g(x)))/2++`
+* Ver también los comandos xref:/commands/Extremo.adoc[Extremo], xref:/commands/Máximo.adoc[Máximo] y la
 xref:/tools/Inspección_de_funciones.adoc[Herramienta de Inspección de funciones].
+
+====
+
+== Sintaxis CAS
+
+Mínimo( <Función>, <Extremo inferior del intervalo>, <Extremos superior del intervalo> )::
+  A diferencia de la Vista Algebraica, esta sintaxis devuelve el mínimo en el intervalo, incluyendo los extremos.
+
+[EXAMPLE]
+====
+
+* `++Mínimo(x^2,-1,2)++` devuelve el punto _(0,0)_
+* `++Mínimo(-x^2,-1,2)++` devuelve el punto _(2,-4)_
 
 ====
