@@ -1,44 +1,32 @@
 = Comando Máximo
-:page-revisar: prioritario
 :page-en: commands/Max
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]
+Máximo( <Lista> )::
+  Devuelve el máximo de los números que se encuentran en la lista.
 
-|Página en proceso de traducción.
-|===
+[EXAMPLE]
+====
 
-Máximo[ <Lista> ]::
-  Da por resultado el número mayor de los que se encuentran en la lista.
-Máximo[ <Intervalo> ]::
+`++Máximo({-2, 12, -23, 17, 15})++` da por resultado _17_.
+
+====
+
+[NOTE]
+====
+
+Si la entrada consta de objetos que no son números, este comando considera los números asociados con esos objetos. Por
+ejemplo, si la lista contiene segmentos, el comando _Máximo( <Lista> )_ devolverá la longitud máxima de los segmentos.
+
+====
+
+Máximo( <Intervalo> )::
   Da por resultado el límite superior del intervalo.
-Máximo[ <Número>, <Número> ]::
-  Da por resultado el máximo valor entre los dos dados.
-Máximo[ <Función>, <Extremo inferior del intervalo>, <Extremos superior del intervalo> ]::
-  Calcula el punto correspondiente al máximo de la función en el intervalo dado. La función debiera ser continua y tener
-  un único máximo local en el intervalo.
 
 [EXAMPLE]
 ====
 
-`++Máximo[12, 15]++` da por resultado _15_.
-
-====
-
-[EXAMPLE]
-====
-
-`++Máximo[2 < x < 3]++` da por resultado _3_.
-
-====
-
-[EXAMPLE]
-====
-
-`++Máximo[{-2, 12, -23, 17, 15}]++` da por resultado _17_.
+`++Máximo(2 < x < 3)++` da por resultado _3_.
 
 ====
 
@@ -49,44 +37,63 @@ Para los intervalos abiertos y cerrados el resultado es el mismo.
 
 ====
 
-[NOTE]
-====
-
-Si la entrada consta de objetos que no son números, este comando considera los números asociados con esos objetos. Por
-ejemplo, si la lista contiene segmentos, el comando _Máximo[ <Lista> ]_ devolverá el segmento de mayor longitud.
-
-====
-
-[NOTE]
-====
-
-Para funciones polinómicas, utiliza el xref:/commands/Extremo.adoc[Comando Extremo].
-
-====
-
-Máximo[<Lista de datos>, <Lista de Frecuencias> ]
-
-Da por resultado el valor máximo de la lista de datos cuya frecuencia es no nula.
+Máximo( <Número>, <Número> )::
+  Da por resultado el máximo valor entre los dos dados.
 
 [EXAMPLE]
 ====
 
-`++Máximo[{1, 2, 3, 4, 5}, {5, 3, 4, 2, 0}]++` da por resultado 4, el valor más alto entre aquellos cuya frecuencia es
+`++Máximo(12, 15)++` da por resultado _15_.
+
+====
+
+Máximo( <Función>, <Extremo inferior del intervalo>, <Extremo superior del intervalo> )::
+  Calcula (numéricamente) el punto correspondiente al máximo *local* de la función en el intervalo dado. La función debe ser continua y tener
+  un único máximo _local_ en el intervalo (y ningún mínimo local).
+
+[EXAMPLE]
+====
+
+`++Máximo(exp(x)x^2,-3,-1)++` crea el punto (-2, 0.54134).
+
+====
+
+[NOTE]
+====
+
+Para funciones polinómicas, utiliza el comando xref:/commands/Extremo.adoc[Extremo].
+
+====
+
+Máximo(<Lista de datos>, <Lista de frecuencias> )
+  Da por resultado el valor máximo de la lista de datos con las frecuencias correspondientes.
+
+[EXAMPLE]
+====
+
+`++Máximo({1, 2, 3, 4, 5}, {5, 3, 4, 2, 0})++` da por resultado _4_, el valor más alto entre aquellos cuya frecuencia es
 mayor a 0.
 
 ====
 
-[EXAMPLE]
-====
-
-`++Máximo[exp(x)x^2,-3,-1]++` crea el punto (-2, 0.54134).
-
-====
-
 [NOTE]
 ====
 
-Ver también xref:/commands/Extremo.adoc[Comando Extremo], xref:/commands/Mínimo.adoc[Comando Mínimo] y
+* Si se quiere el máximo de dos funciones `++f(x)++` y `++g(x)++`, se puede definir `++(f(x) + g(x) + abs(f(x) - g(x)))/2++`
+* Ver también los comandos xref:/commands/Extremo.adoc[Extremo], xref:/commands/Mínimo.adoc[Mínimo] y la 
 xref:/tools/Inspección_de_funciones.adoc[Herramienta de Inspección de funciones].
+
+====
+
+== Sintaxis CAS
+
+Máximo( <Función>, <Extremo inferior del intervalo>, <Extremo superior del intervalo> )::
+  A diferencia de la Vista Algebraica, esta sintaxis devuelve el máximo en el intervalo, incluyendo los extremos.
+
+[EXAMPLE]
+====
+
+* `++Máximo(x^2,-1,2)++` devuelve el punto _(2,4)_
+* `++Máximo(-x^2,-1,2)++` devuelve el punto _(0,0)_
 
 ====
