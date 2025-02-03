@@ -1,15 +1,14 @@
 = Comando Elemento
 :page-en: commands/Element
-:page-revisar: prioritario
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-Elemento( <Lista>, <Posición del elemento __n__> )::
+Elemento( <Lista>, <Número (posición)> )::
   Da por resultado el elemento _n_-ésimo de la lista.
 
 [EXAMPLE]
 ====
 
-`++Elemento({1, 3, 2}, 2)++` da _3_, el segundo elemento de _\{1, 3, 2}_.
+`++Elemento({1, 3, 2}, 2)++` da _3_, el segundo elemento de _{1, 3, 2}_.
 
 ====
 
@@ -19,12 +18,12 @@ Elemento( <Lista>, <Posición del elemento __n__> )::
 En la xref:/Vista_CAS.adoc[image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]]
 xref:/Vista_CAS.adoc[Vista CAS] pueden utilizarse variables indefinidas.
 
+====
+
 [EXAMPLE]
 ====
 
-`++Elemento({a, b, c}, 2)++` da _b_, el segundo elemento de _\{a, b, c}_.
-
-====
+`++Elemento({a, b, c}, 2)++` da _b_, el segundo elemento de _{a, b, c}_.
 
 ====
 
@@ -45,6 +44,8 @@ stem:[\begin{pmatrix}1&3&2\\0&3&-2\end{pmatrix}].
 En la xref:/Vista_CAS.adoc[image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]]
 xref:/Vista_CAS.adoc[Vista CAS] pueden utilizarse variables indefinidas.
 
+====
+
 [EXAMPLE]
 ====
 
@@ -53,17 +54,16 @@ stem:[\begin{pmatrix}a&b&c\\d&e&f\end{pmatrix}].
 
 ====
 
-====
-
-Elemento( <Lista>, <Índice1>, <Índice2>, ... )::
+Elemento( <Lista>, <Índice 1>, <Índice 2>, ... )::
   A partir de una lista de dimensión _n_, se pueden especificar hasta _n_ índices para obtener el elemento (o lista de
   elementos) en las coordenadas indicadas.
-  Entonces `++Elemento(L, 1, 2, 1)++` da por resultado _3_, `++Elemento(L, 2, 2)++` da por resultado _\{7, 8}_.
 
 [EXAMPLE]
 ====
 
-Consideremos _L = \{\{\{1, 2}, \{3, 4}}, \{\{5, 6}, \{7,8}}}_.
+Consideremos _L = {{{1, 2}, {3, 4}}, {{5, 6}, {7, 8}}}_.
+
+Entonces `++Elemento(L, 1, 2, 1)++` da por resultado _3_, `++Elemento(L, 2, 2)++` da por resultado _{7, 8}_.
 
 ====
 
