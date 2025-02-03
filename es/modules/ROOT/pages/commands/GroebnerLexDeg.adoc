@@ -1,11 +1,10 @@
 = Comando GroebnerLexDeg
 :page-en: commands/GroebnerLexDeg
-:page-revisar: prioritario
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
 == Sintaxis CAS
 
-GroebnerLexDeg( <Lista de Polinomios> )::
+GroebnerLexDeg( <Lista de polinomios> )::
   Establece las bases Gröbner de la lista de polinomios con respecto al orden de grado léxico-gráfico de las variables
   (también conocido como _grlex_, _tgrado_, _lexgrado_, _orden total de grado léxico-gráfico_ o _eliminación por
   orden_).
@@ -13,12 +12,11 @@ GroebnerLexDeg( <Lista de Polinomios> )::
 [EXAMPLE]
 ====
 
-`++GroebnerLexGrado[{x^3 - y - 2,x^2 + y + 1}]++` da por resultado:\{stem:[-y^\{2} + x - 3 y - 3, -x y - x - y - 2,
-x^\{2} + y + 1]}.
+`++GroebnerLexDeg({x^3 - y - 2,x^2 + y + 1})++` da por resultado {stem:[ -y^{2} + x - 3 y - 3, -x y - x - y - 2, x^{2} + y + 1]}.
 
 ====
 
-GroebnerLexDeg( <Lista de Polinomios>, <Lista de Variables> )::
+GroebnerLexDeg( <Lista de polinomios>, <Lista de variables> )::
   Establece las bases Gröbner de la lista de polinomios con respecto al orden de grado léxico-gráfico de las variables
   indicadas (también conocido como _grlex_, _tgrado_, _lexgrado_, _orden total de grado léxico-gráfico_ o _eliminación
   por orden_).
@@ -26,8 +24,7 @@ GroebnerLexDeg( <Lista de Polinomios>, <Lista de Variables> )::
 [EXAMPLE]
 ====
 
-`++GroebnerLexGrado[{x^3 - y - 2,x^2 + y + 1},{y, x}]++` da por resultado:\{stem:[x^\{2} + y + 1, -y x - y - x - 2,
-y^\{2} + 3 y - x + 3 ]}
+`++GroebnerLexDeg({x^3 - y - 2,x^2 + y + 1},{y, x})++` da por resultado {stem:[ x^{2} + y + 1, -y x - y - x - 2, y^{2} + 3 y - x + 3 ]}.
 
 ====
 
