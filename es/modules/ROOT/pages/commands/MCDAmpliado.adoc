@@ -1,43 +1,38 @@
 = Comando MCDAmpliado
-:page-revisar: prioritario
 :page-en: commands/ExtendedGCD
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-== CAS Syntax
+== Sintaxis CAS
 
-ExtendedGCD( <Integer>,<Integer> )::
-  Returns a list containing the integer coefficients stem:[s, t] of Bézout's identity stem:[as+bt= GCD(a,b)] and the
-  greatest common divisor of the given integers stem:[a] and stem:[b].
-  Results are calculated by applying the https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm[Extended Euclidean
-  algorithm].
+MCDAmpliado( <Entero>,<Entero> )::
+  Devuelve una lista que contiene los coeficientes enteros stem:[s, t] de la identidad de Bézout, stem:[as+bt= MCD(a,b)],
+  y el máximo común divisor de los enteros dados stem:[a] y stem:[b]. Los resultados se calculan aplicando el https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm[algoritmo de Euclides extendido].
 
 [EXAMPLE]
 ====
 
-`++ExtendedGCD(240,46)++` yields {stem:[-9,47,2]}. (Plugging the result into the Bézout's identity we have: stem:[-9
+`++MCDAmpliado(240,46)++` devuelve {stem:[-9,47,2]}. (Sustituyendo el resultado en la identidad de Bézout se obtiene: stem:[-9
 \cdot 240+47 \cdot 46=2]).
 
 ====
 
-ExtendedGCD( <Polynomial>, <Polynomial> )::
-  Returns a list containing the polynomial coefficients stem:[S(x), T(x)] of Bézout's identity for polynomials
-  stem:[A(x)S(x) + B(x)T(x) = GCD(A(x), B(x))] and the greatest common divisor of the given polynomialsstem:[A(x)] and
-  stem:[B(x)].
-  Results are calculated by applying the https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm[Extended Euclidean
-  algorithm].
+MCDAmpliado( <Polinomio>, <Polinomio> )::
+  Devuelve una lista que contiene los coeficientes polinómicos stem:[S(x), T(x)] de la identidad de Bézout para polinomios,
+  stem:[A(x)S(x) + B(x)T(x) = MCD(A(x), B(x))], y el máximo común divisor de los polinomios dados stem:[A(x)] y stem:[B(x)].
+  Los resultados se calculan aplicando el https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm[algoritmo de Euclides extendido].
 
 [EXAMPLE]
 ====
 
-`++ExtendedGCD(x^2-1,x+4)++` yields {stem:[1,-x+4,15]}. (Plugging the result into the Bézout's identity for polynomials
-we have: stem:[1 \cdot (x^2-1) + (-x+4) \cdot (x+4) = 15]).
+`++MCDAmpliado(x^2-1,x+4)++` devuelve {stem:[1,-x+4,15]}. (Sustituyendo el resultado en la identidad de Bézout para polinomios
+se obtiene: stem:[1 \cdot (x^2-1) + (-x+4) \cdot (x+4) = 15]).
 
 ====
 
 [NOTE]
 ====
 
-* The GCD of two polynomials is not unique (it's unique up to a scalar multiple).
-* See also xref:/commands/GCD.adoc[GCD Command].
+* El MCD de dos polinomios no es único (es único hasta un múltiplo escalar).
+* Ver también el comando xref:/commands/MCD.adoc[MCD].
 
 ====
