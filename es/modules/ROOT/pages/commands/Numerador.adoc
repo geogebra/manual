@@ -1,35 +1,34 @@
 = Comando Numerador
-:page-revisar: prioritario
 :page-en: commands/Numerator
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]
-
-|Página en proceso de traducción.
-|===
-
 Numerador( <Función> )::
-  Establece el numerador de la función.
+  Devuelve el numerador de la función.
 
 [EXAMPLE]
 ====
 
-*`++Numerador[(x² + 1)/(2x-1)]++`* crea la función _x² + 1_.
+`++Numerador((3x² + 1) / (2x - 1))++` devuelve _f(x) = 3x² + 1_.
 
 ====
 
 Numerador( <Número> )::
-  Para un número racional, retorna su numerador. Utiliza un método numérico que limita el comando a números con un
-  denominador pequeño. Si la entrada en un número irracional, se obtiene el numerador de su _fracción continua_.
+  Para un número racional, devuelve su numerador (simplificado). Utiliza un método numérico que limita el comando a números con un
+  denominador pequeño. Si la entrada es un número irracional, se obtiene el numerador de su xref:/commands/FracciónContinua.adoc[fracción continua].
+
+[EXAMPLE]
+====
+
+* `++Numerador(5 / 3)++` devuelve _5_.
+* `++Numerador(10 / 6)++` devuelve _5_.
+* `++Numerador(15 / 3)++` devuelve _5_.
+
+====
 
 [NOTE]
 ====
 
-Ver también xref:/commands/Denominador.adoc[Comando Denominador] y xref:/commands/TextoFracción.adoc[Comando
-TextoFracción].
+Ver también los comandos xref:/commands/Denominador.adoc[Denominador] y xref:/commands/TextoFracción.adoc[TextoFracción].
 
 ====
 
@@ -41,10 +40,8 @@ Numerador( <Expresión> )::
 [EXAMPLE]
 ====
 
-*Ejemplos:*
-
-* `++Numerador[2/3 + 1/15]++` da por resultado _11_.
-* Si las variables _a, b_ y _c_ no han sido definidas previamente en GeoGebra, entonces `++Numerador[a/b]++` da por
-resultado _a_ y `++Numerador[Simplifica[a + b/c]]++` da por resultado _a c + b_
+* `++Numerador(2/3 + 1/15)++` da por resultado _11_.
+* Si las variables _a, b_ y _c_ no han sido definidas previamente en GeoGebra, entonces `++Numerador(a/b)++` da por
+resultado _a_ y `++Numerador(Simplifica(a + b/c))++` da por resultado _a c + b_
 
 ====
