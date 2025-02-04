@@ -1,12 +1,19 @@
 = Comando AleatorioEntre
-:page-revisar: prioritario
 :page-en: commands/RandomBetween
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-AleatorioEntre( <Mínimo> , <Máximo> )::
-  Genera un número entero aleatorio entre el mínimo y el máximo (inclusive).
-AleatorioEntre( <Mínimo> , <Máximo> , <Fijo o no (true/false)> )::
-  Si el último parámetro se indica como _verdadero_ = "true", se genera un número entero aleatorio entre el _mínimo_ y
+AleatorioEntre( <Mínimo (entero)> , <Máximo (entero)> )::
+  Genera un número entero aleatorio entre el _mínimo_ y el _máximo_ (inclusive).
+
+[EXAMPLE]
+====
+
+`++AleatorioEntre(0, 10)++` devuelve un número entre _0_ y _10_ (inclusive)
+
+====
+
+AleatorioEntre( <Mínimo (entero)> , <Máximo (entero)> , <Fijo o no (true/false)> )::
+  Si el último parámetro se indica como _verdadero_ (_true_), se genera un número entero aleatorio entre el _mínimo_ y
   el _máximo_ (inclusive), que se actualiza solamente una vez (cuando el archivo es cargado y también al
   deshacer/rehacer).
 
@@ -17,24 +24,28 @@ AleatorioEntre( <Mínimo> , <Máximo> , <Fijo o no (true/false)> )::
 
 ====
 
+[NOTE]
+====
+
+Se puede presionar [.kcode]#F9# para ver la diferencia entre las dos sintaxis.
+
+====
+
+AleatorioEntre( <Mínimo (entero)> , <Máximo (entero)> , <Número de muestras> )::
+  Genera una lista de números enteros aleatorios entre el _mínimo_ y el _máximo_ (inclusive). El número de enteros aleatorios en la
+  lista es el _número de muestras_.
+
 [EXAMPLE]
 ====
 
-`++AleatorioEntre(0, 10)++` devuelve un número entre _0_ y _10_ (inclusive)
+`++AleatorioEntre(0, 10, 5)++` devuelve _{1,3,4,8,2}_, o _{7,5,6,1,7}_, etc.
 
 ====
 
 [NOTE]
 ====
 
-Presiona [.kcode]#F9# para ver la diferencia entre las dos sintaxis.
-
-====
-
-[NOTE]
-====
-
-Ver también xref:/commands/FijaSemilla.adoc[FijaSemilla], xref:/commands/ElementoAleatorio.adoc[ElementoAleatorio],
+Ver también los comandos xref:/commands/FijaSemilla.adoc[FijaSemilla], xref:/commands/ElementoAleatorio.adoc[ElementoAleatorio],
 xref:/commands/BinomialAleatorio.adoc[BinomialAleatorio], xref:/commands/NormalAleatorio.adoc[NormalAleatorio],
 xref:/commands/PoissonAleatorio.adoc[PoissonAleatorio], xref:/commands/UniformeAleatorio.adoc[UniformeAleatorio].
 
