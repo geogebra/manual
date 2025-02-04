@@ -1,50 +1,30 @@
 = Comando RangoMatriz
-:page-revisar: prioritario
 :page-en: commands/MatrixRank
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]
-
-|Página en proceso de traducción.
-|===
-
 RangoMatriz( <Matriz> )::
-  Da por resultado el https://es.wikipedia.org/Rango_de_una_matriz[rango] de la matriz indicada.
+  Da por resultado el https://es.wikipedia.org/wiki/Rango_(%C3%A1lgebra_lineal)[rango] de la matriz indicada.
 
 [EXAMPLE]
 ====
 
-*Ejemplos:* *`++RangoMatriz[{{1, 2}, {3, 4}}]++`* da por resultado __2__**`++RangoMatriz[{{2, 2}, {1, 1}}]++`** da por
-resultado _1_
+* `++RangoMatriz({{2, 2}, {1, 1}})++` devuelve _1_.
+* `++RangoMatriz({{1, 2}, {3, 4}})++` devuelve _2_.
+* Sea `++A = {{1, 2, 3}, {1, 1, 1}, {2, 2, 2}}++` una matriz de dimensoón 3x3. `++RangoMatriz(A)++` devuelve _2_.
 
 ====
 
 [NOTE]
 ====
 
-image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: No confundir
-con:*`++Dimensión[ { {2, 2}, {1, 1}]++`* que da por resultado _\{_ _2 , 2_ _}_
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Aviso:* En la image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[Vista CAS], este comando también funciona con variables indefinidas.
 
 ====
-
-== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
-
-En esta xref:/Vista_CAS.adoc[vista] se admite la misma sintaxis pudiendo incluirse literales en operaciones simbólicas.
 
 [EXAMPLE]
 ====
 
-*Ejemplos:* *`++RangoMatriz++`*[\{\{a~1~1~~ , a~1~2~~}, \{ a~2~1~~, a~2~2~~ }} ] da por resultado
-__2__**`++RangoMatriz++`**[\{\{a~1~1~~ , a~1~2~~}, \{k a~1~1~~, k a~1~2~~ }} ] da por resultado _1_
-
-====
-
-[NOTE]
-====
-
-Ver también el comando xref:/commands/Determinante.adoc[Determinante].
+`++RangoMatriz({{1, 2}, {k*1,  k*2}})++` devuelve _1_.
 
 ====
