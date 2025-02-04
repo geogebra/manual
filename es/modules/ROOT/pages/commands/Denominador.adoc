@@ -1,27 +1,27 @@
 = Comando Denominador
 :page-en: commands/Denominator
-:page-revisar: prioritario
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]
-
-|Página en proceso de traducción.
-|===
-
 Denominador( <Función> )::
-  Da por resultado el denominador de una función racional.
-Denominador( <Número> )::
-  Devuelve el denominador canónico de un número racional. Como se calcula con un método numérico, esta función está
-  limitada a números con denominadores pequeños. Si se aplica a un número irracional, devuelve el denominador de su
-  xref:/commands/FracciónContinua.adoc[fracción continua]
+  Devuelve el denominador de la función.
 
 [EXAMPLE]
 ====
 
-*`++Denominador[5 / (x²+2) ]++`* crea la función _f(x)=(x²+2)_.
+`++Denominador(5 / (x^2 + 2))++` devuelve _f(x)=(x^2^ + 2)_.
+
+====
+
+Denominador( <Número> )::
+  Para un número racional, devuelve su denominador (simplificado). Utiliza un método numérico que limita el comando a números con un
+  denominador pequeño. Si la entrada es un número irracional, se obtiene el denominador de su xref:/commands/FracciónContinua.adoc[fracción continua].
+
+[EXAMPLE]
+====
+
+* `++Denominador(5 / 3)++` devuelve _3_.
+* `++Denominador(10 / 6)++` devuelve _3_.
+* `++Denominador(15 / 3)++` devuelve _1_.
 
 ====
 
@@ -35,11 +35,11 @@ Ver también los comandos xref:/commands/Numerador.adoc[Numerador] y xref:/comma
 == Sintaxis CAS
 
 Denominador( <Expresión> )::
-  Devuelve el denominador canónico de un número racional o de una expresión racional.
+  Da por resultado el numerador de un número racional o expresión.
 
 [EXAMPLE]
 ====
 
-`++Denominador[2 / 3 + 1 / 15]++` da por resultado _15_.
+`++Denominador(2 / 3 + 1 / 15)++` devuelve _15_.
 
 ====
