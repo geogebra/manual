@@ -27,21 +27,21 @@ Löse( <Liste von Gleichungen>, <Liste von Variablen> )::
 
 * `++Löse[{x = 4 x + y , y + x = 2}, {x, y}]++` liefert _( x = -1, y = 3 )_, die einzige Lösung von _x = 4x + y_ und _y
 + x = 2_.
-* `++Löse[{2a^2 + 5a + 3 = b, a + b = 3}, {a, b}]++` liefert _\{\{a = 0, b = 3}, \{a = -3, b = 6}}_.
+* `++Löse[{2a^2 + 5a + 3 = b, a + b = 3}, {a, b}]++` liefert _{{a = 0, b = 3}, {a = -3, b = 6}}_.
 
 ====
 
 [EXAMPLE]
 ====
 
-`++Löse[x * a^2 = 4a, a]++` berechnet \{stem:[a = \frac{4}\{x}, a = 0]}.
+`++Löse[x * a^2 = 4a, a]++` berechnet stem:[\left\{a = \frac{4}{x}, a = 0\right\}].
 
 ====
 
 [EXAMPLE]
 ====
 
-`++Löse[x^2 = 4x]++` berechnet _\{x = 4, x = 0}_.
+`++Löse[x^2 = 4x]++` berechnet _{x = 4, x = 0}_.
 
 ====
 
@@ -52,8 +52,8 @@ Löse( <Gleichung>, <Variable>, <Liste von Annahmen> )::
 [EXAMPLE]
 ====
 
-* `++Löse[u *x < a,x, u>0]++` liefert _\{x < a / u}_, die einzige Lösung für _u *x < a_ unter der Annahme _u>0_
-* `++Löse[u *x < a,x, {u<0, a<0}]++` liefert _\{x > a / u}_.
+* `++Löse[u *x < a,x, u>0]++` liefert _{x < a / u}_, die einzige Lösung für _u *x < a_ unter der Annahme _u>0_
+* `++Löse[u *x < a,x, {u<0, a<0}]++` liefert _{x > a / u}_.
 
 ====
 
@@ -64,7 +64,7 @@ Löse( <Liste von parametrischen Gleichungen>, <Liste von Variablen> )::
 [EXAMPLE]
 ====
 
-* `++Löse[{(x, y) = (3, 2) + t*(5, 1), (x, y) = (4, 1) + s*(1, -1)}, {x, y, t, s}]++` liefert _\{\{x = 3, y = 2, t = 0,
+* `++Löse[{(x, y) = (3, 2) + t*(5, 1), (x, y) = (4, 1) + s*(1, -1)}, {x, y, t, s}]++` liefert _{{x = 3, y = 2, t = 0,
 s = -1}}_.
 
 ====
