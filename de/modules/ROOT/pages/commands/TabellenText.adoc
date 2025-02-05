@@ -57,7 +57,7 @@ Mögliche Eingaben sind "vl", "vc", "vr", "v", "h", "hl", "hc", "hr" .../... . S
 
 Folgende Zeichen können ebenfalls eingefügt werden:
 
-* verschiedene Arten von Klammern ||||, ||, \{}, [] oder ()
+* verschiedene Arten von Klammern ||||, ||, +{}+, [] oder ()
 * Zeilentrennungszeichen _
 * Spaltentrennungszeichen |
 * verschiedener Färbung
@@ -65,16 +65,16 @@ Folgende Zeichen können ebenfalls eingefügt werden:
 [EXAMPLE]
 ====
 
-* `++TabellenText[{1, 2}, {3, 4}, "c()"]++` erzeugt den Text stem:[\begin{pmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end{pmatrix}
+* `++TabellenText[{1, 2}, {3, 4}, "c()"]++` erzeugt den Text stem:[\begin{pmatrix}{} 1 & 2 \\ 3 & 4 \\ \end{pmatrix}
 ]
 * `++TabellenText[{1, 2}, {3, 4}, "c|_"]++` erzeugt den Text
 image:50px-TabellaTesto.png[TabellaTesto.png,width=50,height=56]
-* `++TabellenText[{1, 2}, {3, 4}, "||"]++` erzeugt den Text stem:[ \begin\{vmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{vmatrix}
+* `++TabellenText[{1, 2}, {3, 4}, "||"]++` erzeugt den Text stem:[ \begin{vmatrix}{} 1 & 2 \\ 3 & 4 \\ \end{vmatrix}
 ]
-* `++TabellenText[{1, 2}, {3, 4}, "||||"]++` erzeugt den Text stem:[\begin\{Vmatrix}\{} 1 & 2 \\ 3 & 4 \\ \end\{Vmatrix}
+* `++TabellenText[{1, 2}, {3, 4}, "||||"]++` erzeugt den Text stem:[\begin{Vmatrix}{} 1 & 2 \\ 3 & 4 \\ \end{Vmatrix}
 ]
-* `++TabellenText[{{"2x+3y=5","5x+8y=12"}},"{v"]++` erzeugt den Text stem:[ \left\\{\begin\{matrix} 2x+3y=5\\ 5x+8y=12
-\end\{matrix}\right.]
+* `++TabellenText[{{"2x+3y=5","5x+8y=12"}},"{v"]++` erzeugt den Text stem:[ \left\{\begin{matrix} 2x+3y=5\\ 5x+8y=12
+\end{matrix}\right.]
 * `++TabellenText[{{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "-/|_v"]++` erzeugt eine
 Tabelle mit Rahmen und ohne Trennlinien.
 * `++TabellenText[{{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "|11001 _110001 h"]++` erzeugt
