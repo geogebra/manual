@@ -1,23 +1,12 @@
 = Comando ResuelveNEDO
-:page-revisar: prioritario
 :page-en: commands/NSolveODE
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]
-
-|Página en proceso de traducción.
-|===
-
-ResuelveNEDO( <Lista de derivadas>, <valor inicial de x>, <Lista de valores iniciales de y>, <valor final de -x> )::
-  Resuelve numéricamente) el sistema de ecuaciones diferenciales
+ResuelveNEDO( <Lista de derivadas>, <Valor inicial de x>, <Lista de valores iniciales de y>, <Valor final de x> )::
+  Resuelve (numéricamente) el sistema de ecuaciones diferenciales
 
 [EXAMPLE]
 ====
-
-*Ejemplos:*
 
 `++f'(t, f, g, h) = g ++`
 
@@ -25,11 +14,14 @@ ResuelveNEDO( <Lista de derivadas>, <valor inicial de x>, <Lista de valores inic
 
 `++h'(t, f, g, h) = -t h + 3t g + 2f + t++`
 
-`++ResuelveNEDO[{f', g', h'}, 0, {1,2,-2}, 10]++`
+`++ResuelveNEDO({f', g', h'}, 0, {1,2,-2}, 10)++`
 
-`++ResuelveNEDO[{f', g', h'}, 0, {1,2,-2}, -5]++` (resuelve el sistema de inversa de tiempo).
+`++ResuelveNEDO({f', g', h'}, 0, {1,2,-2}, -5)++` (resuelve el sistema hacia atrás en el tiempo).
 
-'''''
+====
+
+[EXAMPLE]
+====
 
 `++x1'(t, x1, x2, x3, x4) = x2++`
 
@@ -37,7 +29,7 @@ ResuelveNEDO( <Lista de derivadas>, <valor inicial de x>, <Lista de valores inic
 
 `++x3'(t, x1, x2, x3, x4) = x4++`
 
-`++x4'(t, x1, x2, x3, x4) = -8x1 + sin(t) x2 - 3x3 + t^2++`
+`++x4'(t, x1, x2, x3, x4) = -8x1 + sen(t) x2 - 3x3 + t^2++`
 
 `++x10 = -0.4++`
 
@@ -47,11 +39,14 @@ ResuelveNEDO( <Lista de derivadas>, <valor inicial de x>, <Lista de valores inic
 
 `++x40 = -1.5++`
 
-`++ResuelveNEDO[{x1', x2', x3', x4'}, 0, {x10, x20, x30, x40}, 20]++`
+`++ResuelveNEDO({x1', x2', x3', x4'}, 0, {x10, x20, x30, x40}, 20)++`
 
-'''''
+====
 
-Péndulo
+[EXAMPLE]
+====
+
+Péndulo:
 
 `++g = 9.8++`
 
@@ -63,33 +58,27 @@ Péndulo
 
 `++y1'(t, y1, y2) = y2++`
 
-`++y2'(t, y1, y2) = (-g) / l sin(y1) ++`
+`++y2'(t, y1, y2) = (-g) / l sen(y1) ++`
 
-`++ResuelveNEDO[{y1', y2'}, 0, {a, b}, 20] ++`
+`++ResuelveNEDO({y1', y2'}, 0, {a, b}, 20) ++`
 
-`++len = Longitud[IntegralNumérica1] ++`
+`++len = Longitud(IntegralNumérica1) ++`
 
-`++c = Deslizador[0, 1, 1 / len, 1, 100, false, true, true, false] ++`
+`++c = Deslizador(0, 1, 1 / len, 1, 100, false, true, true, false) ++`
 
-`++x1 = l seno(y(Punto[IntegralNumérica1, c])) ++`
+`++x1 = l sen(y(Punto(IntegralNumérica1, c))) ++`
 
-`++y1 = -l cos(y(Punto[IntegralNumérica1, c])) ++`
+`++y1 = -l cos(y(Punto(IntegralNumérica1, c))) ++`
 
 `++A = (x1, y1) ++`
 
-`++Segmento[(0, 0), A]++`
+`++Segmento((0, 0), A)++`
 
-`++IniciaAnimación[]++`
+`++IniciaAnimación()++`
 
 ====
 
-**
-
-== Péndulo
-
-**
-
-[[ggbContainerdf1e9bcbe5f1aaaae4dae68e9d42b7df]][NOTE]
+[NOTE]
 ====
 
 Ver también los comandos xref:/commands/ResuelveEDO.adoc[ResuelveEDO] y
