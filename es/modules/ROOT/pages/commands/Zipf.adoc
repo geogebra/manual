@@ -1,51 +1,28 @@
 = Comando Zipf
-:page-revisar: prioritario
 :page-en: commands/Zipf
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-Zipf( <Número de Elementos>, <Exponente> )::
-  Establece un gráfico de barras de una https://es.wikipedia.org/Ley_de_Zipf[_distribución Zipf_] (en inglés,
-  https://en.wikipedia.org/wiki/Zipf%27s_law[_Zipf distribution_]).
-  _Parámetros:_
-  _Número de Elementos_... cuyo rango se estudiará
-  _Exponente_... caracterizando la distribución
+Zipf( <Número de elementos>, <Exponente> )::
+  Establece un gráfico de barras de una https://es.wikipedia.org/wiki/Ley_de_Zipf[distribución Zipf].
+  Parámetros:
+  * _Número de elementos_: número de elementos cuyo rango se estudiará
+  * _Exponente_: exponente que caracteriza la distribución
 
-Zipf( <Número de Elementos>, <Exponente>, <Acumulada o no~Booleana true/false~> )::
-  Si el valor _booleano_ es falso^_false_^, establece y xref:/Vista_Gráfica.adoc[grafica] el histograma correspondiente
-  a la https://es.wikipedia.org/Funci%C3%B3n_de_densidad_de_probabilidad[*_fdp_*, **_f_**unción de **_d_**ensidad
-  de **_p_**robabilidad] de la https://es.wikipedia.org/Ley_de_Zipf[_distribución Zipf_] y del diagrama
-  escalonado https://es.wikipedia.org/Funci%C3%B3n_Distribuici%C3%B3n_Acumulada[acumulativo] de
-  https://es.wikipedia.org/Ley_de_Zipf[Zipf], en caso contrario.
+Zipf( <Número de elementos>, <Exponente>, <Acumulada (true/false)> )::
+  Si el valor _Acumulada_ es falso (_false_), devuelve un gráfico de barras de una _distribución Zipf_.
+  Si el valor _Acumulada_ es verdadero (_true_), devuelve un gráfico de una distribución Zipf acumulada. Los dos primeros parámetros son iguales a los de arriba.
 
-Zipf( <Número de Elementos>, <Exponente>, <Valor Variable>, <Acumulada o no~Booleana true/false~> )
+Zipf( <Número de elementos>, <Exponente>, <Valor>, <Acumulada (true/false)> )::
+  Sea X una variable aleatoria de una distribución Zipf. Los dos primeros parámetros son iguales a los de arriba.
+  * Devuelve P( X = _v_) cuando _Acumulada_ es falso (_false_).
+  * Devuelve P( X ≤ _v_) cuando _Acumulada_ es verdadero (_true_).
 
-Siendo X una https://es.wikipedia.org/Variable_aleatoria[variable aleatoria] de una
-https://es.wikipedia.org/Ley_de_Zipf[_distribución Zipf_]...
-
-* cuando el parámetro booleano es falso, el resultado es P( X = _v_)
-* cuando es verdadero, P( X ≤ _v_).
-
-== xref:/Vista_CAS.adoc[image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]] xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
-
-En esta xref:/Vista_CAS.adoc[vista] obra de modo análogo al descripto la siguiente variante de sintaxis:
-
-Zipf( <Número de Elementos>, <Exponente>, <Valor Variable>, <Acumulada o no~Booleana true/false~> )
-
-'''''
 
 [EXAMPLE]
 ====
 
-*Ejemplos:* *`++Zipf[ 10, 1 , 5, false]++`* ingresado...
-
-* desde la xref:/Barra_de_Entrada.adoc[Barra de Entrada] da por resultado 0.07
-* en la xref:/Vista_CAS.adoc[Vista CAS] da el xref:/tools/Valor_Numérico.adoc[valor numérico]
-image:Mode_numeric.png[Mode numeric.png,width=32,height=32] __0.07__^decimales según
-xref:/Menú_de_Opciones.adoc[Redondeo] fijado^ y al xref:/tools/Evalúa.adoc[evaluarlo] image:Mode_evaluate.png[Mode
-evaluate.png,width=32,height=32] __stem:[\frac{504}\{7381}]__El siguiente boceto ilustra _animadamente_ la operatoria
-del comando según los valores aleatorios de sus parámetros, incluyendo la variable _booleana_ que determina si el
-diagrama resultante será un histograma o uno escalonado acumulativo.
+`++Zipf(10, 1 , 5, false)++` devuelve _0.07_ en la image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] _Vista Algebraica_ y _stem:[\frac{504}{7381}]_ en la
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Vista CAS_.
 
 ====
-
-image:Zipf_1.gif[Zipf 1.gif,width=431,height=535]
