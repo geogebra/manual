@@ -1,116 +1,91 @@
 = Comando VectorNormal
-:page-revisar: prioritario
 :page-en: commands/PerpendicularVector
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-VectorNormal( <Dirección (vector, recta, semirrecta o segmento)> )::
-  Establece el vector perpendicular a la dirección determinada por la recta (o por la semirrecta o por el segmento o
-  incluso, el vector dado).
-
-[NOTE]
-====
-
-Una recta con ecuación _ax + by = c_ establece stem:[\begin{pmatrix}a \\ b\end{pmatrix}] _como vector perpendicular._
-
-====
+VectorNormal( <Lado (semi/recta o segmento)> )::
+  Devuelve uno de los vectores perpendiculares a la dirección determinada por la recta (o por la semirrecta o por el segmento dado).
 
 [EXAMPLE]
 ====
 
-Siendo `++j := Recta[ (1, 4), (5, -3)]++` `++VectorNormal[ j ]++` crea el vector _u=(7, 4)_ perpendicular a la recta
-_j_.
+Sea `++Recta((1, 4), (5, -3))++` la recta _j_. `++VectorNormal(j)++` devuelve el vector _u=(7, 4)_.
+
+====
+
+[NOTE]
+====
+
+Las componentes del vector perpendicular a una recta de ecuación _ax + by = c_ son _(a, b)_.
 
 ====
 
 VectorNormal( <Segmento> )::
-  Establece el vector perpendicular al segmento con la misma longitud.
+  Devuelve uno de los vectores perpendiculares al segmento, con la misma longitud.
 
 [EXAMPLE]
 ====
 
-Siendo `++k := Segmento[ (3, 2), (14, 5) ]++`, *`++VectorNormal[ k ]++`* crea _u=(-3, 11)_ como vector perpendicular a
-^_stem:[\vec{k}]_^.
+Sea `++Segmento((3, 2), (14, 5))++` el segmento _k_. `++VectorNormal(k)++` devuelve el vector _u=(-3, 11)_.
 
 ====
 
 VectorNormal( <Vector> )::
-  Establece el vector perpendicular al dado.
+  Devuelve uno de los vectores perpendiculares al vector dado.
+
+[EXAMPLE]
+====
+
+Sea `++Vector((-12, 8))++` el vector _u_. `++VectorNormal(u)++` devuelve el vector _v=(-8, -12)_.
+
+====
 
 [NOTE]
 ====
 
-Un vector de coordenadas stem:[\begin{pmatrix}a \\ b \end{pmatrix}] _tienen a stem:[\begin{pmatrix}-b \\ a
-\end{pmatrix}]_ como el perpendicular.
+Si un punto está especificado en la definición de la recta, segmento, o vector, el vector perpendicular tendrá dicho punto como origen.
+De lo contrario, el origen será (0, 0).
 
 ====
 
 [EXAMPLE]
 ====
 
-Siendo _stem:[\begin{pmatrix}3 \\ 2 \end{pmatrix}]_ el vector ^stem:[\vec{v}]^`++VectorNormal[(3, 2)]++` crea el de
-coordenadas stem:[\begin{pmatrix}-2 \\ 3 \end{pmatrix}]stem:[ - 2\choose 3].
+* Si el punto A es _(1, 4)_ y el punto B es _(5, -3)_, sea `++Recta(A, B)++` la recta _i_,`++VectorNormal(i)++` tendrá su origen en A.
+
+* Sea `++Recta((1, 4), (5, -3))++` la recta _j_. `++VectorNormal(j)++` tendrá su origen en (0, 0).
 
 ====
 
 [NOTE]
 ====
 
-Un vector de coordenadas stem:[\begin{pmatrix}a \\ b \end{pmatrix}] _tienen a stem:[\begin{pmatrix}-b \\ a
-\end{pmatrix}]_ como vector ortogonal.
-
-====
-
-*xref:/Vista_3D.adoc[Vista 3D]*
-
-VectorNormal( <Plano> )::
-  Establece el vector perpendicular al plano.
-
-[NOTE]
-====
-
-Para un plano determinado por la ecuación cartesiana *_a x+ b y +c z = k_*, el resultado es el vector
-stem:[\begin{pmatrix}a \\ b \\ c\end{pmatrix}]
-
-====
-
-== xref:/Vista_CAS.adoc[image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]]xref:/commands/Comandos_Específicos_CAS_(Cálculo_Avanzado).adoc[En] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
-
-En esta xref:/Vista_CAS.adoc[vista] se admite la misma sintaxis pudiendo incluirse literales en operaciones simbólicas.
-
-VectorNormal( <Vector> )::
-  Establece el vector perpendicular al dado.
-
-[NOTE]
-====
-
-Cuando los datos dados incluyen variables sin valor asignado, el resultado es la fórmula del vector perpendicular
-correspondiente.Dado el vector de coordenadas stem:[\begin{pmatrix}a \\ b \end{pmatrix}],
-*`++VectorNormal[(a, b)]++`*, crea el vector _stem:[\begin{pmatrix}-b \\ a \end{pmatrix}]_.
+En la image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Vista_CAS.adoc[Vista CAS], las variables
+indefinidas también son permitidas.
 
 ====
 
 [EXAMPLE]
 ====
 
-*`++VectorNormal[(3, 2)]++`* da el vector _\{-2, 3}_
+`++VectorNormal((a, b))++` devuelve el vector _{-b, a}_.
 
 ====
 
 VectorNormal( <Plano> )::
-  Crea un vector ortogonal al plano indicado.
-
+  Crea un vector perpendicular al plano con origen en (0, 0, 0).
 
 [EXAMPLE]
 ====
 
-`++VectorNormal[ Plano_xOy ]++` establece el vector perpendicular _u=(0, 0, 1)_ del plano xOy.
+`++VectorNormal(xOyPlane)++` devuelve el vector perpendicular _u=(0, 0, 1)_ al plano xOy.
 
 ====
-
-'''''
 
 [NOTE]
 ====
 
-Ver también el comando xref:/commands/VectorNormalUnitario.adoc[VectorNormalUnitario]
+Ver también el comando xref:/commands/VectorNormalUnitario.adoc[VectorNormalUnitario].
+
 ====
+
+
