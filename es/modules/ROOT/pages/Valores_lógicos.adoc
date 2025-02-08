@@ -1,77 +1,52 @@
 = Valores lógicos
-:page-revisar: prioritario
 :page-en: Boolean_values
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-Pueden emplearse las variables lógicas o _booleanas_ cierto - *_`++true++`_* - y falso - *_`++false++`_* - en
-GeoGebra. Basta ingresar en la xref:/Barra_de_Entrada.adoc[Barra de Entrada]:
+Pueden emplearse las variables lógicas o _booleanas_ verdadero (_true_) o falso (_false_) en
+GeoGebra. Basta ingresar, por ejemplo, `++a = true++` o `++b = false++` en la xref:/Barra_de_Entrada.adoc[Barra de Entrada]
+y presionar la tecla [.kcode]#Intro#. Con las variables _booleanas_ se puede definir la xref:/Visibilidad_condicional.adoc[visibilidad condicional]
+de un objeto.
 
-* _`++a := true++`_ y pulsar [.kcode]#Enter# o
-* _`++b := false++`_ y pulsar [.kcode]#Enter# ([.kcode]#Intro# en otros teclados).
+== Casilla de verificación y teclas de flecha
 
-== Casilla a Tildar y Teclas Flecha
-
-Las variables _booleanas_ libres pueden exponerse como casillas a tildar en la xref:/Vista_Gráfica.adoc[Vista Gráfica].
-
-[NOTE]
-====
-
-Ver herramienta xref:/tools/Casilla_de_Control.adoc[image:32px-Mode_showcheckbox.svg.png[Mode
-showcheckbox.svg,width=32,height=32]] xref:/tools/Casilla_de_Control.adoc[Casilla de Control para Exponer / Ocultar
-Objetos].
-
-====
-
-Apelando a las teclas-flecha se pueden cambiar las variables lógicas o _booleanas_ también en la
-xref:/Vista_Algebraica.adoc[Vista Algebraica].
+Las variables _booleanas_ libres pueden exponerse como casillas de verificación en la image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Vista_Gráfica.adoc[Vista Gráfica] (ver herramienta image:22px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=22,height=22]
+xref:/tools/Casilla_de_verificación.adoc[Casilla de verificación]). Luego de seleccionar una variable _booleana_ en la image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/Vista_Algebraica.adoc[Vista Algebraica], se pueden utilizar las teclas de flecha para modificar el valor de
+la variable _booleana_ (ver xref:/Animación.adoc[Animación manual]).
 
 [NOTE]
 ====
 
-También pueden usarse variables _booleanas_ como números, 0 o 1 acorde a su valor de verdad: 0^_false_^ ó 1^_true_^
+También es posible utilizar variables _booleanas_ como números (valor 0 o 1). Esto permite usar una casilla de verificación
+como velocidad dinámica de un deslizador animado, lo que posibilita iniciar y detener la animación.
+En este caso, el botón de animación solo se muestra en la image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+_Vista Gráfica_ si también existe un deslizador animado con velocidad estática (es decir, no dinámica).
 
 ====
 
-[NOTE]
-====
+== Operaciones
 
-image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: Esto permite usar un casillero como medio de
-asignación de velocidad dinámica de un deslizador animado.El valor _cierto_ como 1, controlaría el inicio y _false_, en
-tanto 0, detener la animación.En este caso, el botón de animación solo aparecerá en la xref:/Vista_Gráfica.adoc[Vista
-Gráfica] cuando hubiera también un deslizador animado con velocidad estática (es decir. no-dinámica).
-
-====
-
-[NOTE]
-====
-
-Ver xref:/Animación.adoc[Animación Manual]
-
-====
-
-== Operaciones Booleanas
-
-Las variables, operadores lógicos y condiciones _booleanas_ pueden...
-
-* seleccionarse de la tabla de símbolos desplegable con un _clic_ sobre el stem:[\fbox{α}] a la derecha de la
-xref:/Barra_de_Entrada.adoc[Barra de Entrada]
-* ingresándolas usando el teclado.
-
-Se pueden usar en GeoGebra operaciones como las que figuran en la siguiente tabla:
+Se pueden utilizar las siguientes operaciones para variables _booleanas_ y condiciones en GeoGebra,
+ya sea seleccionándolas de la lista junto a la Barra de Entrada o ingresándolas mediante el teclado:
 
 [cols=",,,,",options="header",]
 |===
-|Operación |Lista |Teclado |Ejemplo |Tipos de Objetos
-|Igual |≟ |== |a ≟ b o a == b |números, puntos, rectas, cónicas a, b
-|Desigual |≠ |!= |a ≠ b o a != b |números, puntos, rectas, cónicas a, b
-|Menor que |< |< |a < b |números a, b
-|Mayor que |> |> |a > b |números a, b
-|Menor o igual a |≤ |<= |a ≤ b o a <= b |números a, b
-|Mayor o igual a |≥ |>= |a ≥ b o a >= b |números a, b
-|.Y. |∧ |&& |a ∧ b o a && b |Booleanas a, b
-|.O. |∨ |\|\| |a ∨ b o a \|\| b |Booleanas a, b
-|No |¬ |! |¬a o !a |Booleana a
+|Operación |Lista |Teclado |Ejemplo |Tipos de objetos
+|Igual |≟ |== |a ≟ b o a == b |números, puntos, rectas, cónicas, funciones (se necesita CAS), planos, a, b
+|Distinto |≠ |!= |a ≠ b o a != b |números, puntos, rectas, cónicas, funciones (se necesita CAS), planos a, b
+|Menor que | |< |a < b |números a, b
+|Mayor que | |> |a > b |números a, b
+|Menor o igual que |≤ |<= |a ≤ b o a <= b |números a, b
+|Mayor o igual que |≥ |>= |a ≥ b o a >= b |números a, b
+|Y |∧ |&& |a ∧ b o a && b |_booleanos_ a, b
+|O |∨ | \|\| |a ∨ b o a \|\| b |_booleanos_ a, b
+|No |¬ |! |¬a o !a |_booleano_ a
+|O exclusivo | |[.kcode]##Alt##[.kcode]##+## |a ⊕ b |_booleanos_ a, b
+|Implicación |→ |-> |a -> b |_booleanos_ a, b
 |Paralela |∥ | |a ∥ b |rectas a, b
 |Perpendicular |⊥ | |a ⊥ b |rectas a, b
 |Pertenece a |∈ | |a ∈ lista1 |número a, lista de números lista1
+|Subconjunto |⊆ | |lista1 ⊆ lista2 |listas lista1 y lista2
+|Subconjunto propio |⊂ | |lista1 ⊂ lista2 |listas lista1 y lista2
 |===
