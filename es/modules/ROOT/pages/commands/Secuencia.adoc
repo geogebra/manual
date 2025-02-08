@@ -1,85 +1,81 @@
 = Comando Secuencia
-:page-revisar: prioritario
 :page-en: commands/Sequence
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-Secuencia( <Expresión>, <Variable __k__>, <Valor inicial __a__>, <Valor final __b__> )::
-  Devuelve la lista de todos los objetos creados al evaluar la expresión mientras el índice _k_ varía en el rango del
-  valor inicial _a_ al valor final _b_.
+Secuencia( <Valor final> )::
+  Crea una lista de números enteros consecutivos desde 1 hasta el valor final indicado.
 
 [EXAMPLE]
 ====
 
-*Ejemplos:*
-
-* `++ Secuencia((2, k), k, 1, 5)++` crea una lista de puntos de abscisa 2 y ordenadas de valores sucesivos en el rango
-de 1 a 5: _\{(2, 1), (2, 2), (2, 3), (2, 4), (2, 5)}_
-* `++Secuencia(x^k, k, 1, 10)++` crea la lista \{_x, x², x³, x⁴, x⁵, x⁶, x⁷, x⁸, x⁹, x¹⁰_}
+* `++Secuencia(4)++` crea la lista _{1, 2, 3, 4}_.
+* `++2^Secuencia(4)++` crea la lista _{2, 4, 8, 16}_.
 
 ====
 
-Secuencia( <Expresión>, <Variable __k__>, <Valor inicial __a__>, <Valor final __b__>, <Incremento> )::
-  Devuelve la lista de todos los objetos creados al evaluar la expresión mientras el índice _k_ varía en el rango del
-  valor inicial _a_ al valor final _b_ con el incremento dado.
+Secuencia( <Valor inicial>, <Valor final> )::
+  Crea la lista de números enteros consecutivos desde el _Valor inicial_ hasta el _Valor final_ (ya sea creciente o decreciente).
 
 [EXAMPLE]
 ====
 
-*Ejemplos:*
-
-* `++ Secuencia[(2, k), k, 1, 3, 0.5]++` crea una lista de puntos de abscisa 2 cuyas ordenadas varían de 1 a 3 con un
-incremento de 0.5: _\{(2, 1), (2, 1.5), (2, 2), (2, 2.5), (2, 3)}_
-* `++Secuencia(x^k, k, 1, 10, 2) ++` crea la lista \{_x, x³, x⁵, x⁷, x⁹_}
-
-====
-
-Secuencia( <Valor Final> )
-
-Crea la lista de números enteros de 1 hasta el valor final indicado.
-
-[EXAMPLE]
-====
-
-*Ejemplos:*
-
-* `++Secuencia(4)++` crea la lista _\{1, 2, 3, 4}_.
-* `++2^Secuencia(4)++` crea la lista _\{2, 4, 8, 16}_.
+* `++Secuencia(7,13)++` crea la lista {_7, 8, 9, 10, 11, 12, 13_}
+* `++Secuencia(18,14)++` crea la lista {_18, 17, 16, 15, 14_}
+* `++Secuencia(-5, 5)++` crea la lista {_-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5_}.
 
 ====
 
 [NOTE]
 ====
 
-Como los parámetros _a_ y _b_ son dinámicos, pueden utilizarse xref:/tools/Deslizador.adoc[deslizadores] en ambos casos
-precedentes.
+Esta sintaxis puede simplificarse aún más: en lugar de usar, por ejemplo `++Secuencia(7,13)++`,
+es posible obtener el mismo resultado escribiendo en la barra de entrada `++7..13++` .
 
 ====
 
-Secuencia( <Valor inicial __k__>, <Valor final __n__> )::
-  Crea la lista de números enteros de _k_ a _n_ (ya sea creciente o decreciente).
+Secuencia( Valor inicial>, <Valor final>, <Incremento> )::
+  Crea una lista de números enteros desde el _Valor inicial_ hasta el _Valor final_ utilizando el _Incremento_ dado.
 
 [EXAMPLE]
 ====
 
-*Ejemplos:*
+* `++Secuencia(7,13,2)++` crea la lista {7, 9, 11, 13}
+* `++Secuencia(7,13,4)++` crea la lista {7, 11}
 
-* `++ Secuencia(7,13)++` creates the list \{_7, 8, 9, 10, 11, 12, 13_}
-* `++ Secuencia(18,14)++` creates the list \{_18, 17, 16, 15, 14_}
-* `++ Secuencia(-5, 5)++` creates the list \{_-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5_}.
+====
+
+Secuencia( <Expresión>, <Variable>, <Valor inicial>, <Valor final> )::
+  Devuelve una lista de objetos creados al evaluar la _Expresión_ mientras la _Variable_ toma todos los valores consecutivos
+  desde el _Valor inicial_ hasta el _Valor final_.
+
+[EXAMPLE]
+====
+
+* `++Secuencia((2, k), k, 1, 5)++` crea una lista de puntos cuyas ordenadas varían de 1 a 5: _{(2, 1), (2, 2),
+(2, 3), (2, 4), (2, 5)}_
+* `++Secuencia(x^k, k, 1, 10)++` crea la lista {_x, x², x³, x⁴, x⁵, x⁶, x⁷, x⁸, x⁹, x¹⁰_}
+
+====
+
+Secuencia( <Expresión>, <Variable>, <Valor inicial>, <Valor final>, <Incremento> )::
+  Devuelve una lista de objetos creados al evaluar la _Expresión_ mientras la _Variable_ toma los valores 
+  desde el _Valor inicial_ hasta el _Valor final_, utilizando el _Incremento_ dado.
+
+[EXAMPLE]
+====
+
+* `++Secuencia((2, k), k, 1, 3, 0.5)++` crea una lista de puntos cuyas ordenadas varían de 1 a 3 con un
+incremento de _0.5_: _{(2, 1), (2, 1.5), (2, 2), (2, 2.5), (2, 3)}_
+* `++Secuencia(x^k, k, 1, 10, 2)++` crea la lista {_x, x³, x⁵, x⁷, x⁹_}.
+
+====
 
 [NOTE]
 ====
 
-Esta sintaxis puede simplificarse, en lugar de utilizar por ejemplo `++ Secuencia(7,13)++` puede obtenerse ingresando en
-la barra de entrada `++7..13++` .
+* Dado que los parámetros _a_ y _b_ son dinámicos, también se pueden utilizar xref:/tools/Deslizador.adoc[deslizadores] en ambos casos anteriores.
+
+* Ver xref:/Listas.adoc[listas] para más información sobre operaciones con listas.
 
 ====
 
-====
-
-[NOTE]
-====
-
-Ver xref:/Listas.adoc[listas] para más información.
-
-====
