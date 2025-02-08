@@ -1,27 +1,24 @@
 = Comando ResuelveCúbica
-:page-revisar: prioritario
 :page-en: commands/SolveCubic
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-== xref:/Vista_CAS.adoc[image:18px-Menu_view_cas.svg.png[Menu view cas.svg,width=18,height=18]] xref:/commands/Comandos_Exclusivos_CAS_(Cálculo_Avanzado).adoc[De] xref:/Vista_CAS.adoc[Vista CAS **C**~[.small]#omputación#~**A**~[.small]#lgebraica#~**S**~[.small]#imbólica#~]
+== Sintaxis CAS
 
-ResuelveCúbica[ <Polinomio Cúbico> ]::
-  Resuelve dado y da por resultado la lista de todas las raíces, reales o
+ResuelveCúbica( <Polinomio cúbico> )::
+  Devuelve una lista con todas las raíces del https://en.wikipedia.org/wiki/Cubic_function[polinomio cúbico] dado.
 
 [EXAMPLE]
 ====
 
-`++ResuelveCúbica[x³ - 1]++` da por resultado:\{ 1, stem:[ -\frac{1}\{2} + i \frac{\sqrt{3}}\{2} ] , stem:[
--\frac{1}\{2} - i \frac{\sqrt{3}}\{2} ] } .
+`++ResuelveCúbica(x³ - 1)++` devuelve { 1, stem:[ \frac{1}{2} (\sqrt{3} i -1) ] , stem:[ \frac{1}{2} (\sqrt{3} (-i) -1)
+] } .
 
 ====
-
-'''''
 
 [NOTE]
 ====
 
-Suele ser necesario simplificar la respuesta manualmente, como en el caso de `++ResuelveCúbica[x³ + x² + x + 1]++`.que
-solo tras la simplificación da una respuesta _elegante_ como _\{ -1, i , -i }_ .
+A menudo, las respuestas pueden ser muy complejas. Por ejemplo, en el caso de `++ResuelveCúbica(x³ + x² + x + 2)++`, que
+puede ser más conveniente utilizar `++Resuelve(x³ + x² + x + 2)++` o `++ResoluciónC(x³ + x² + x + 2)++`.
 
 ====
