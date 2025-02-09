@@ -1,27 +1,13 @@
 = Comando DiagramaTalloHojas
-:page-revisar: prioritario
 :page-en: commands/StemPlot
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:24px-UnderConstruction.png[UnderConstruction.png,width=24,height=24]
+DiagramaTalloHojas( <Lista> )::
+  Devuelve un diagrama de tallo de la lista de números proporcionada. Los valores atípicos se eliminan del gráfico
+  y se listan por separado. Se define como valor atípico aquel que se encuentra fuera del intervalo [ Q1 - 1.5 (Q3 - Q1) , Q3 + 1.5 (Q3 - Q1) ].
 
-|Página en proceso de traducción.
-|===
-
-*DiagramaTalloHojas*[ <Lista> ]::
-  Establece el https://es.wikipedia.org/Diagrama_de_tallos_y_hojas[diagrama Tallo Hojas] de la lista de números
-  dada. Los valores atípicos, que se descartan del diagrama, se listan por separado.
-  Se descarta todo valor atípico (fuera del siguiente intervalo:*[* xref:/commands/Cuartil1.adoc[_Cuartil1_] - 1.5 (
-  xref:/commands/Cuartil3.adoc[_Cuartil1_] - xref:/commands/Cuartil1.adoc[_Cuartil1_] ),
-  xref:/commands/Cuartil3.adoc[_Cuartil3_] + 1.5 ( xref:/commands/Cuartil3.adoc[_Cuartil3_] -
-  xref:/commands/Cuartil1.adoc[_Cuartil1_] ) *]*
-
-*DiagramaTalloHojas*[ <Lista>, <Ajuste -1|0|1> ]::
-  Establece el https://es.wikipedia.org/Diagrama_de_tallos_y_hojas[diagrama Tallo Hojas] de la lista de números
-  dada.
-  Si _Ajuste_ = -1 la unidad por omisión del diagrama se divide por 10
-  Si _Ajuste_ = 0 no hay modificaciones
-  Si _Ajuste_ = 1 la unidad por omisión se multiplica por 10
+DiagramaTalloHojas( <Lista>, <Ajuste (-1|0|1)> )::
+  Devuelve un diagrama de tallo de la lista de números proporcionada.
+  Si _Ajuste_ = -1, la unidad de tallo predeterminada se divide por 10.
+  Si _Ajuste_ = 0, no se realizan cambios.
+  Si _Ajuste_ = 1, la unidad de tallo predeterminada se multiplica por 10.
