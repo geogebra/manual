@@ -9,10 +9,10 @@ The templates and layouts used by the documentation site are located in the [Geo
 | language              | ok  | missing | orphans | duplicates | partials |
 |-----------------------|-----|---------|---------|------------|----------|
 | босански (bs)          | 144     | 559     | 27      | 0       | 36      |
-| Česky (cs)             | 538     | 49      | 2       | 0       | 152     |
+| Česky (cs)             | 541     | 46      | 2       | 0       | 152     |
 | Deutsch (de)           | 687     | 52      | 45      | 2       | 0       |
 | English (en)           | 739     | 0       | 0       | 0       | 0       |
-| Español (es)           | 634     | 26      | 70      | 0       | 79      |
+| Español (es)           | 636     | 26      | 70      | 0       | 77      |
 | Français (fr)          | 739     | 0       | 15      | 0       | 0       |
 | Hrvatska (hr)          | 470     | 243     | 35      | 0       | 26      |
 | Magyar (hu)            | 661     | 66      | 23      | 2       | 12      |
