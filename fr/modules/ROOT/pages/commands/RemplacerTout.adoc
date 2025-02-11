@@ -12,18 +12,16 @@ RemplacerTout( <Texte>, <Texte à rechercher>, <Texte de remplacement> )::
 
 `++RemplacerTout("3cos(t)+cos(2y)", "cos", "sin")++` crée le nouveau texte `++"3sin(t)+sin(2y)"++`.
 
-====
 
-[NOTE]
-====
 
 Utilisez la commande xref:/commands/LaTeX.adoc[LaTeX]  pour créer un nouveau texte LaTeX.
 
-====
-
-[EXAMPLE]
-====
 
 `++LaTeX(RemplacerTout("3cos(t)+cos(2y)", "cos", "sin"))++` crée le nouveau texte  LaTeX `++" 3sin(t)+sin(2y) "++`.
 
+====
+
+====
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :* Passer de la liste des facteurs premiers à l'écriture de leur produit :
+`++LaTeX(RemplacerTout(Texte(FacteursPremiers(42)), ", ", "\\times"))++`  vous retournera _stem:[2 \times 3 \times 7]_.
 ====
