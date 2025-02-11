@@ -1,34 +1,36 @@
 = Visibilidad condicional
-:page-revisar: prioritario
 :page-en: Conditional_Visibility
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-Además de decidir, sencillamente si se exponen u ocultan ciertos objetos, se puede también establecer el régimen de
-visibilidad en función de ciertas condiciones.Por ejemplo, hacer depender la aparición de un objeto en pantalla según
-esté o no tildada cierta casilla o según su posición en la xref:/Vista_Gráfica.adoc[Vista Gráfica] o si un
-xref:/tools/Deslizador.adoc[deslizador] cambia a cierto valor _equis_.
+Además de decidir, sencillamente si se exponen u ocultan ciertos objetos, se puede también establecer el estado de
+visibilidad en función de ciertas condiciones. Por ejemplo, hacer depender la aparición de un objeto en pantalla según
+esté o no tildada cierta casilla de control ubicada en la image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Vista_Gráfica.adoc[Vista Gráfica] o si un xref:/tools/Deslizador.adoc[deslizador] se modifica a cierto valor.
 
-== Condicionalidad para Exponer u Ocultar Objetos Existentes
+== Condicionalidad para exponer u ocultar objetos existentes
 
-Puede emplearse la image:Mode_showcheckbox.png[Mode showcheckbox.png,width=32,height=32]
-xref:/tools/Casilla_de_Control.adoc[Casilla de Control] para crear una casilla que controle la visibilidad de uno o más
-objetos existentes en pantalla. Alternativamente, también puede crearse una xref:/Valores_Lógicos.adoc[variable
-_Booleana_] (como `++b = true++`) usando la xref:/Barra_de_Entrada.adoc[Barra de Entrada] y haciéndola visible como
-casillero en la xref:/Vista_Gráfica.adoc[Vista Gráfica] al cambiar su estado de visibilidad (por ejemplo, usando la
-herramienta image:Mode_showhideobject.png[Mode showhideobject.png,width=32,height=32]
-xref:/tools/Objeto_(in)visible.adoc[Objeto (in)visible] o el xref:/Menú_contextual.adoc[Menú Contextual]).Para usar la
-variable Booleana como una condición para la visibilidad de ciertos objetos, puede ser necesario seguir las etapas
+Puede emplearse la herramienta image:24px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=24,height=24]
+xref:/tools/Casilla_de_control.adoc[Casilla de control] para crear una casilla que controle la visibilidad de uno o más
+objetos existentes en pantalla.
+
+Alternativamente, también puede crearse una xref:/Valores_Lógicos.adoc[variable
+_booleana_] (como `++b = true++`) usando la xref:/Barra_de_Entrada.adoc[Barra de Entrada] y haciéndola visible como
+una casilla de control en la image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Vista Gráfica_ al cambiar su estado de visibilidad (por ejemplo, usando la
+herramienta image:24px-Mode_showhideobject.svg.png[Mode showhideobject.svg,width=24,height=24]
+xref:/tools/Mostrar_Ocultar_objeto.adoc[Mostrar/Ocultar objeto] o el xref:/Menú_contextual.adoc[Menú Contextual]). Para usar la
+variable _booleana_ como una condición para la visibilidad de ciertos objetos, puede ser necesario seguir las etapas
 descriptas a continuación.
 
-== Cambiando la Visibilidad de Objetos Recién Creados
+== Cambiando la visibilidad de objetos recién creados
 
-En el xref:/Cuadro_de_Propiedades.adoc[Cuadro de Propiedades], puede anotarse una condición que establezca la
-visibilidad de un objeto en la pestaña _Avanzado_.
+En el image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Cuadro_de_Propiedades.adoc[Cuadro de Propiedades],
+puede ingresarse una condición que establezca la visibilidad de un objeto en la pestaña _Avanzado_.
 
 [NOTE]
 ====
 
-Se pueden seleccionar los operadores lógicos (como., ≠, ≥, ˄, ‖) de la lista desplegable para crear la formulación de
+Se pueden seleccionar los xref:/Valores_lógicos.adoc[operadores lógicos] (como., ≠, ≥, ˄, ‖) de la lista desplegable para crear la formulación de
 las condiciones.
 
 ====
@@ -36,13 +38,10 @@ las condiciones.
 [EXAMPLE]
 ====
 
-*Ejemplos:*
-
-* Si a es un deslizador, entonces el planteo condicional a < 2 significa que el correspondiente objeto solo va a
-exponerse en la xref:/Vista_Gráfica.adoc[Vista Gráfica] si el valor del deslizador es menor que 2.
-* Si b es una xref:/Valores_Lógicos.adoc[variable _Booleana_], puede usarse _b_ como la sentencia de una condición.El
-correspondiente objeto va a exponerse cuando el valor de _b_ sea verdadero - _true_ - y ocultarse, cuando sea falso -
-_false_ -.
+* Si _a_ es un deslizador, entonces el planteo condicional _a_ < 2 significa que el correspondiente objeto solo va a
+exponerse en la image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Vista Gráfica_ si el valor del deslizador es menor que 2.
+* Si _b_ es una variable _booleana_, puede usarse _b_ como la sentencia de una condición. El
+correspondiente objeto va a exponerse cuando el valor de _b_ sea verdadero (_true_) y ocultarse, cuando sea falso (_false_).
 * Si g y h son dos rectas y se quisiera que se expusiera un texto cuando fuesen paralelas, podría usarse g ‖ h como
 cláusula condicional para el texto.
 
@@ -51,10 +50,6 @@ cláusula condicional para el texto.
 [NOTE]
 ====
 
-Ver también...
-
-* el comando xref:/commands/Visibilidad.adoc[Visibilidad]
-* el ejemplo de la sección de un xref:/Tutoriales.adoc[Tutorial] en que se aplica la
-/s_index_php?title=Tutorial:Visibilidad_Condicional_y_Secuencias_action=edit_redlink=1.adoc[Visibilidad Condicional].
+Ver también el comando xref:/commands/Visibilidad.adoc[Visibilidad]
 
 ====
