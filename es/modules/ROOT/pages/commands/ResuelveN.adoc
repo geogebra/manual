@@ -1,0 +1,65 @@
+= Comando ResuelveN
+:page-en: commands/NSolve
+ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+ResuelveN( <Ecuación> )::
+  Se intenta encontrar (numéricamente) una solución para la ecuación en la variable principal.
+  Para ecuaciones no polinómicas, siempre se debe especificar un valor inicial (ver más adelante).
+
+[EXAMPLE]
+====
+
+`++ResuelveN(x^6 - 2x + 1 = 0)++` devuelve _{x = 0.51, x = 1}_.
+
+====
+
+== Sintaxis CAS
+
+Estas sintaxis solo están disponibles en la image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/Vista_CAS.adoc[Vista CAS].
+
+ResuelveN( <Ecuación>, <Variable> )::
+  Se intenta encontrar (numéricamente) una solución para la ecuación en la variable indicada.
+  Para ecuaciones no polinómicas, siempre se debe especificar un valor inicial (ver más adelante).
+
+[EXAMPLE]
+====
+
+`++ResuelveN(a^4 + 34a^3 = 34, a)++` devuelve _{a = -34, a = 0.99}_.
+
+====
+
+ResuelveN( <Ecuación>, <Variable = valor inicial> )::
+  Se encuentra numéricamente la lista de soluciones de la ecuación dada para la variable desconocida especificada, junto con su valor inicial.
+
+[EXAMPLE]
+====
+
+* `++ResuelveN(cos(x) = x, x = 0)++` devuelve _{x = 0.74}_
+* `++ResuelveN(a^4 + 34a^3 = 34, a = 3)++` devuelve _{a = 0.99}_.
+
+====
+
+ResuelveN( <Lista de ecuaciones>, <Lista de variables> )::
+  Se intenta encontrar (numéricamente) una solución de la lista de ecuaciones para la lista de variables indicadas.
+
+[EXAMPLE]
+====
+
+`++ResuelveN({pi / x = cos(x - 2y), 2 y - pi = sen(x)}, {x = 3, y = 1.5})++` devuelve _{x = 3.14, y = 1.57}_.
+
+====
+
+[NOTE]
+====
+
+* Si no se proporciona un punto de inicio, como _a = 3_ o _{x = 3, y = 1.5}_, el algoritmo numérico puede tener dificultades
+para encontrar una solución (y proporcionar un punto de inicio no garantiza que se encuentre una solución).
+* El número de decimales con que se expresan las soluciones es el establecido en la opción Redondeo que se encuentra en
+el xref:/Menú_de_Opciones.adoc[Menú de Opciones].
+* El comando no opera correctamente con funciones que tienen al eje x como asíntota. Por otra parte, en general pueden
+reformularse.
+* Solo funciona si las funciones son continuas.
+* Ver también los comandos xref:/commands/Resuelve.adoc[Resuelve] y xref:/commands/SolucionesN.adoc[SolucionesN]
+
+====
