@@ -1,24 +1,22 @@
 = Comando Coordenadas
-:page-revisar: prioritario
 :page-en: commands/SetCoords
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
 Coordenadas( <Objeto>, <x>, <y> )::
-  Cambia las coordenadas cartesianas de un objeto xref:/Objetos_libres_dependientes_y_auxiliares.adoc[libre] según los
-  valores de abscisa y ordenada indicados. Este comando utiliza los valores de las coordenadas, no su definición, por lo
-  cual el objeto permanece libre.
+  Cambia las coordenadas cartesianas de objetos xref:/Objetos_libres_dependientes_y_auxiliares.adoc [libres] en una Vista 2D
+  según las coordenadas dadas. Este comando utiliza los valores de las coordenadas, no sus definiciones, por lo que el objeto permanece libre.
+
+Coordenadas( <Objeto>, <x>, <y>, <z> )::
+  Cambia las coordenadas cartesianas de objetos xref:/Objetos_libres_dependientes_y_auxiliares.adoc [libres] en una Vista 3D
+  según las coordenadas dadas. Este comando utiliza los valores de las coordenadas, no sus definiciones, por lo que el objeto permanece libre.
 
 [NOTE]
 ====
 
-Este comando funciona para puntos en recorridos y regiones. El punto será movido a la posición más cercana posible.
+* Este comando funciona para puntos en recorridos y regiones. El punto será movido a la posición más cercana posible.
 
-====
+* También funciona con Deslizadores, Botones, Casillas de control, Cajas de entrada e Imágenes.
 
-[NOTE]
-====
-
-También funciona con Deslizadores, Botones, Cajas de verificación, Cajas de entrada e Imágenes. Si "Posición absoluta en
-pantalla" está seleccionado, entonces _x_, _y_ se consideran en píxeles.
+* Si la opción "Posición absoluta en pantalla" está seleccionada, entonces _x_, _y_ y _z_ se consideran en pixeles.
 
 ====
