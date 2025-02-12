@@ -1,37 +1,35 @@
 = Textos
-:page-revisar: prioritario
 :page-en: Texts
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-Los objetos de texto pueden crearse tanto con los xref:/commands/Comandos_de_Texto.adoc[Comandos de Texto] como con la
-herramienta de xref:/tools/Texto.adoc[image:32px-Mode_text.svg.png[Mode text.svg,width=32,height=32]]
-xref:/tools/Texto.adoc[Texto] o, incluso, arrastrando un objeto desde la xref:/Vista_Algebraica.adoc[Vista Algebraica] a
-la xref:/Vista_Gráfica.adoc[Gráfica]. Otra alternativa, para usuarios avanzados, es ingresar texto entrecomillado
+Los objetos de texto pueden crearse tanto con los comandos de xref:/commands/Texto.adoc[Texto] como con la
+herramienta de insertar image:24px-Mode_text.svg.png[Mode text.svg,width=24,height=24]
+xref:/tools/Texto.adoc[Texto] o, incluso, arrastrando un objeto desde la image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+xref:/Vista_Algebraica.adoc[Vista Algebraica] a la image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Vista_Gráfica.adoc[Vista Gráfica]. Otra alternativa "para usuarios avanzados", es ingresar texto entrecomillado
 directamente en la xref:/Barra_de_Entrada.adoc[Barra de Entrada] tal como se describe con mayor detalle más adelante.
 
-== Texto Estático
+== Términos
 
-No depende de ningún objeto matemático y no suele afectarlo ningún cambio de la construcción.
+Texto estático::
+  No depende de ningún objeto matemático y no suele afectarlo ningún cambio de la construcción.
 
-== Texto Dinámico
+Texto dinámico::
+  Es el que contiene valores de objetos y se modifica y adapta automáticamente frente a sus cambios.
 
-Es el que contiene valores de objetos y se modifica y adapta automáticamente frente a sus cambios.
+Texto mixto::
+  Es una combinación de texto estático y dinámico. Para crear un texto mixto, debe ingresarse la parte estática del texto
+  utilizando el teclado (por ejemplo: Punto A =) y añadir la sección dinámica con un clic sobre el objeto cuyo valor se desea exponer.
 
-== Texto Mixto
+== Entrada mediando la Barra de Entrada
 
-Es una combinación de texto estático y dinámico.
-
-Para crear un texto mixto, debe anotarse el sector estático usando el teclado (por ejemplo: Punto A =) y añadir la
-sección dinámica con un clic sobre el objeto cuyo valor se desea exponer (el punto A, en el caso de este ejemplo).
-
-Sintetizando...
+Los textos también pueden crearse utilizando la Barra de Entrada. En este caso, se debe tener en cuenta la sintaxis que separa las partes dinámicas y estáticas.
 
 [NOTE]
 ====
 
-*Notas:* GeoGebra automáticamente incorpora y añade la sintaxis necesaria`++("Punto A = " + A )++`El modo de crear
-textos mixtos consiste, entonces, en colocar comillas en torno a la parte estática del texto y el signo más (+) para
-conectar las diferentes partes del texto.
+GeoGebra agrega automáticamente la sintaxis necesaria para crear un texto mixto: comillas alrededor de la parte estática del texto
+y el signo de más (+) para conectar las diferentes partes del texto, por ejemplo, "Punto A = " + A.
 
 ====
 
@@ -44,30 +42,27 @@ conectar las diferentes partes del texto.
 |"a = " + a + "cm" |Texto mixto en tres partes, usando el valor del número a
 |===
 
-::
+[NOTE]
+====
 
-  '''''
+Si ya existe un objeto con el nombre xx y se desea crear un texto estático utilizando dicho nombre,
+es necesario ingresarlo entre comillas ("xx"). De lo contrario, GeoGebra generará automáticamente un texto dinámico
+que mostrará el valor del objeto xx en lugar de su nombre. Sin embargo, se puede escribir cualquier texto que no coincida
+con el nombre de un objeto existente sin necesidad de usar comillas.
+
+====
 
 [NOTE]
 ====
 
-image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: *Fórmulas xref:/LaTeX.adoc[LaTeX]*: Los objetos de
-texto de notación matemática pueden ingresarse apelando a xref:/LaTeX.adoc[LaTeX].
+Dentro de un texto mixto, la parte estática debe estar entre comillas. Las diferentes partes del texto
+(por ejemplo, las partes estáticas y dinámicas) pueden unirse utilizando el signo de más (+). Desde la versión 4.0, el uso de este símbolo no es obligatorio.
 
 ====
 
 [NOTE]
 ====
 
-*Notas:* Si ya existiera un objeto denominado xx y se deseara crear un texto estático usando ese nombre, sería preciso
-anotarlo entre comillas (de este modo: "xx").De no hacerlo así, en lugar de mostrar ese nombre, GeoGebra automáticamente
-crearía un texto dinámico, el del valor del objeto xx.Por el contrario, puede anotarse cualquier texto que no coincida
-con el nombre de un objeto existente, sin hacer la distinción implicada en las comillas.
-
-'''''
-
-Dentro de un texto mixto, cualquier sección estática precisa entrecomillarse y los diferentes tramos, estáticos y
-dinámicos, concatenarse usando el signo más (“+”) aunque desde la versión de GeoGebra 4.0, el signo + no es
-necesariamente requerido.
+Los objetos de texto también pueden utilizar xref:/LaTeX.adoc[LaTeX] para la representación de expresiones matemáticas.
 
 ====
