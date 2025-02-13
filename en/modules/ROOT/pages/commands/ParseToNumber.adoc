@@ -2,7 +2,7 @@
 :page-en: commands/ParseToNumber
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
-ParseToNumber( <Number>, <Text> )::
+ParseToNumber( <Number>, <String> )::
   Parses the text and stores the result to a xref:/Numbers_and_Angles.adoc[number] _a_, which must be defined and
   xref:/Free_Dependent_and_Auxiliary_Objects.adoc[free] before the command is used.
 
@@ -18,16 +18,6 @@ Define `++ a = 3++` and `++ text1 = "6"++`. `++ ParseToNumber(a, text1)++` retur
 
 This is a xref:/commands/Scripting_Commands.adoc[scripting command] which only sets the value of a number once. To
 convert a text _text1_ into a number which is updated dynamically, use xref:/commands/FromBase.adoc[FromBase](text1,10).
-
-====
-
-ParseToNumber( <Text> )::
-  Parses the text and stores the result to a xref:/Numbers_and_Angles.adoc[number].
-
-[EXAMPLE]
-====
-
-`++ParseToNumber("1+2+5-pi")++` creates the number _a = 4.86_.
 
 ====
 
