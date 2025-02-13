@@ -1,5 +1,4 @@
 = Comando TextoVertical
-:page-revisar: prioritario
 :page-en: commands/VerticalText
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
@@ -7,5 +6,29 @@ TextoVertical( <Texto> )::
   Da por resultado el xref:/Textos.adoc[texto] rotado 90° en sentido antihorario. Se utiliza xref:/LaTeX.adoc[LaTeX]
   para generar el resultado.
 
+[NOTE]
+====
+
+* El texto debe estar encerrado entre dobles comillas `++"++`.
+* El texto se rota de manera que la esquina superior izquierda (también conocida como Esquina 4) del cuadro que lo contiene se coloque en el origen del sistema de coordenadas.
+
+====
+
+[EXAMPLE]
+====
+
+`++TextoVertical("a = 5")++` crea el texto LaTeX "_a_ = 5" mostrado verticalmente, con su esquina superior izquierda en (0,0)
+
+====
+
 TextoVertical( <Texto>, <Punto> )::
-  Permite ubicar el texto a partir del punto indicado.
+  Crea en el punto dado un xref:/Textos.adoc[texto] en formato xref:/LaTeX.adoc[LaTeX], con el texto proporcionado girado 90° en sentido antihorario.
+
+[EXAMPLE]
+====
+
+`++TextoVertical("GeoGebra", (6, 6))++` crea el texto LaTeX "_GeoGebra_" mostrado verticalmente, con su esquina superior izquierda en (6,6)
+
+
+====
+
