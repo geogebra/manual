@@ -1,10 +1,16 @@
 = Comando Texto
-:page-revisar: prioritario
 :page-en: commands/Text
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
 Texto( <Objeto> )::
-  Devuelve la fórmula del objeto como un xref:/Textos.adoc[_texto_].
+  Devuelve la fórmula del objeto como un xref:/Textos.adoc[texto].
+
+[EXAMPLE]
+====
+
+Si _a = 2_ y _c = a^2^_, entonces `++Texto(c)++` da por resultado el texto _"4"_.
+
+====
 
 [NOTE]
 ====
@@ -13,14 +19,7 @@ Por omisión, cada variable es sustituida por su respectivo valor.
 
 ====
 
-[EXAMPLE]
-====
-
-Si _a = 2_ y _c = a^2^_, entonces `++Texto(c)++` da por resultado el texto "4".
-
-====
-
-Texto( <Objeto>, <True/False para sustitución de sariables> )::
+Texto( <Objeto>, <Sustituye las variables (true/false)> )::
   Devuelve la fórmula del objeto como un texto. La variable lógica (_true/false_) determina si las variables se
   sustituyen por sus respectivos valores (_true_) o se muestran sus nombres en el texto (_false_).
 
@@ -29,8 +28,8 @@ Texto( <Objeto>, <True/False para sustitución de sariables> )::
 
 Si _a = 2_ y _c = a^2^_, entonces
 
-* `++Texto(c, true)++` devuelve el texto "4".
-* `++Texto(c, false)++` devuelve el texto "_a^2^_"
+* `++Texto(c, true)++` devuelve el texto _"4"_.
+* `++Texto(c, false)++` devuelve el texto _"a^2^"_.
 
 ====
 
@@ -40,11 +39,11 @@ Texto( <Objeto>, <Punto> )::
 [EXAMPLE]
 ====
 
-`++Texto("hola", (2, 3))++` devuelve el texto _"hola"_ en la posición _(2, 3)_
+`++Texto("hola", (2, 3))++` devuelve el texto _"hola"_ en la posición _(2, 3)_.
 
 ====
 
-Texto( <Objeto>, <Punto>, <True/False para sustitución de variables> )::
+Texto( <Objeto>, <Punto>, <Sustituye las variables (true/false)> )::
   Devuelve la fórmula del objeto como un texto, en la posición dada por el punto. La variable lógica (_true/false_)
   determina si las variables se sustituyen por sus respectivos valores (_true_) o se muestran sus nombres en el texto
   (_false_).
@@ -52,11 +51,11 @@ Texto( <Objeto>, <Punto>, <True/False para sustitución de variables> )::
 [EXAMPLE]
 ====
 
-Si _a = 2_ y _c = a^2^_, entonces `++Texto(c, (2, 1), true)++` devuelve el texto _"4"_ en la posición _(2, 1)_
+Si _a = 2_ y _c = a^2^_, entonces `++Texto(c, (2, 1), true)++` devuelve el texto _"4"_ en la posición _(2, 1)_.
 
 ====
 
-Texto( <Objeto>, <Punto>, <True/False para sustitución de variables>, <True/False para fórmula LaTeX> )::
+Texto( <Objeto>, <Punto>, <Sustituye las variables (true/false)>, <Valor lógico para fórmula LaTeX> )::
   Devuelve la fórmula del objeto como un texto, en la posición dada por el punto. La primera variable lógica
   (_true/false_) determina si las variables se sustituyen por sus respectivos valores (_true_) o se muestran sus nombres
   en el texto (_false_). Si la segunda variable lógica es verdadera (_true_), el texto se genera utilizando
@@ -65,13 +64,11 @@ Texto( <Objeto>, <Punto>, <True/False para sustitución de variables>, <True/Fal
 [EXAMPLE]
 ====
 
-Si _a = 2_ y _c = a^2^_, entonces `++Texto(c, (2, 1), true, true)++` devuelve el texto LaTeX _"4"_ en la posición _(2,
-1)_
+Si _a = 2_ y _c = a^2^_, entonces `++Texto(c, (2, 1), true, true)++` devuelve el texto LaTeX _"4"_ en la posición _(2, 1)_.
 
 ====
 
-Texto( <Objeto>, <Punto>, <True/False para sustitución de variables>, <True/False para fórmula LaTeX>, <Alineación
-horizontal [-1,0,1], Alineación vertical [-1,0,1] )::
+Texto( <Objeto>, <Punto>, <Sustituye las variables (true/false)>, <Valor lógico para fórmula LaTeX>, <Alineación horizontal -1|0|1>, <Alineación vertical -1|0|1> )::
   Devuelve la fórmula del objeto como un texto, en la posición dada por el punto. La primera variable lógica
   (_true/false_) determina si las variables se sustituyen por sus respectivos valores (_true_) o se muestran sus nombres
   en el texto (_false_). Si la segunda variable lógica es verdadera (_true_), el texto se genera utilizando
@@ -92,7 +89,6 @@ de _(2, 1)_, verticalmente alineado con el punto.
 [NOTE]
 ====
 
-Ver también la herramienta xref:/tools/Texto.adoc[image:24px-Mode_text.svg.png[Mode text.svg,width=24,height=24]]
-xref:/tools/Texto.adoc[Texto].
+Ver también la herramienta image:22px-Mode_text.svg.png[Mode text.svg,width=22,height=22] xref:/tools/Texto.adoc[Texto].
 
 ====
