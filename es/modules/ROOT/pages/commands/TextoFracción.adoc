@@ -1,31 +1,46 @@
 = Comando TextoFracción
-:page-revisar: prioritario
 :page-en: commands/FractionText
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
 TextoFracción( <Número> )::
   Convierte el número en una fracción, que se muestra como un objeto de texto (generado con LaTeX) en la
-  xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+  image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
   xref:/Vista_Gráfica.adoc[Vista Gráfica].
 
 [EXAMPLE]
 ====
 
-Si _a: y = 1.5 x + 2_ es una recta, `++TextoFracción(Pendiente(a))++` devuelve un texto con la fracción
-stem:[\frac{3}\{2}].
+Si _a: y = 1.5 x + 2_ es una recta, `++TextoFracción(Pendiente(a))++` devuelve un texto LaTeX con la fracción
+stem:[\frac{3}{2}].
 
 ====
 
 TextoFracción( <Punto> )::
-  Muestra las coordenadas del punto como fracciones, en la
-  xref:/Vista_Gráfica.adoc[image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]]
+  Convierte las coordenadas del punto dado en fracciones, que se muestran como un objeto de texto (generado con LaTeX) en la
+  image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
   xref:/Vista_Gráfica.adoc[Vista Gráfica].
 
 [EXAMPLE]
 ====
 
-*Ejemplos:* Si _P=(1.33,0.8)_ es un punto, `++TextoFracción(P)++` devuelve un texto con las coordenadas stem:[ \left(
-\frac{133}\{100} ,\frac{4}\{5} \right) ].
+Dado el punto _A=(1.33,0.8)_, `++TextoFracción(A)++` crea el texto LaTeX _stem:[ \left( \frac{133}{100} ,\frac{4}{5}
+\right) ]_.
+
+====
+
+TextoFracción( <Número>, <Una sola fracción>)::
+  Crea y expone en la image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/Vista_Gráfica.adoc[Vista Gráfica] un texto LaTeX que contiene la representación en fracción del número dado.
+  El valor booleano _Una sola fracción_ determina la posición de un posible signo negativo en la fracción. Si es verdadero (_true_), el signo de
+  menos se mostrará en el numerador; si es falso (_false_), el signo de menos se mostrará delante de la fracción.
+
+[EXAMPLE]
+====
+
+Dado el número _n = -0.8_ , entonces:
+
+* `++TextoFracción(n, true)++` crea el texto LaTeX stem:[\frac{- 4}{5}].
+* `++TextoFracción(n, false)++` crea el texto LaTeX stem:[-\frac{4}{5}].
 
 ====
 
