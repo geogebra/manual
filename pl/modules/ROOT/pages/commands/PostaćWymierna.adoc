@@ -1,0 +1,35 @@
+= Polecenie PostaćWymierna
+:page-en: commands/Rationalize
+:page-aliases: commands/Rationalise.adoc
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+image:64px-Globe.png[Globe.png,width=64,height=64,role=left]
+
+To polecenie ma dwie wersje w języku angielskim:
+
+* Rationalize (US)
+* Rationalise (UK + Aus)
+
+====
+
+== Specyficzna składnia CAS
+
+UłamekWłaściwy( <Liczba> )::
+  Tworzy ułamek z danej _Liczby_, i usuwa niewymierność z mianownika, jeśli zawiera on pierwiastek kwadratowy.
+
+[EXAMPLE]
+====
+
+* `++UłamekWłaściwy(3.5)++` daje w wyniku stem:[\frac{7}{2}].
+* `++UłamekWłaściwy(1/sqrt(2))++` daje w wyniku stem:[\frac{\sqrt{2} }{2}].
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/UłamekWłaściwy.adoc[UłamekWłaściwy].
+
+====
