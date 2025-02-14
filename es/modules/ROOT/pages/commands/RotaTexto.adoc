@@ -1,47 +1,24 @@
 = Comando RotaTexto
-:page-revisar: prioritario
 :page-en: commands/RotateText
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-*RotaTexto*[ <Texto>, <Angulo> ]::
-  Da por resultado el texto dado que queda expuesto, por xref:/LaTeX.adoc[LaTeX] y aparece rotado por el ángulo
-  indicado.
+RotaTexto( <Texto>, <Ángulo de rotación (en sentido antihorario)> )::
+  Crea un nuevo texto xref:/LaTeX.adoc[LaTeX], rotado según el ángulo dado.
 
 [NOTE]
 ====
 
-image:18px-Bulbgraph.png[Bulbgraph.png,width=18,height=22]Atención: El ángulo se asume indicado en radianes a menos que
-se explicite el símbolo de grados *°*.
-
-====
-
-[NOTE]
-====
-
-El texto......debe entrecomillarse empleando el signo correspondiente `++ " ++`...rota en torno a la esquina superior
-izquierda (la que se identifica con el número 4) del recuadro que lo contiene
+* El texto debe estar encerrado entre comillas `++"++`.
+* El texto se rota alrededor de la esquina superior izquierda (también conocida como Esquina 4) del cuadro que lo contiene y se coloca en el origen del sistema de coordenadas.
+* La configuración predeterminada para el ángulo es en radianes. Se debe utilizar el símbolo de grado `++°++` para ángulos de rotación medidos en grados.
 
 ====
 
 [EXAMPLE]
 ====
 
-*RotaTexto*["a = 5", *45°*]
+* `++RotaTexto("a = 5", 45°)++`
 
-====
-
-image:Rotando.gif[Rotando.gif,width=210,height=222]
-
-'''''
-
-El boceto ilustra _animadamente_ el xref:/commands/TextoVertical.adoc[texto vertical] rotando a medida que cambia el
-valor del ángulo correspondiente.
-
-'''''
-
-[NOTE]
-====
-
-Ver también el comando xref:/commands/TextoVertical.adoc[TextoVertical].
+* Si se quiere posicionar el texto "GeoGebra" en el punto (6, 6), rotado un ángulo de 42°, se puede utilizar el comando `++Texto(RotaTexto("GeoGebra", 42°), (6, 6),true,true)++`
 
 ====
