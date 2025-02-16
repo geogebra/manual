@@ -1,10 +1,9 @@
 = Comando TextoANúmero
-:page-revisar: prioritario
 :page-en: commands/ParseToNumber
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
 TextoANúmero( <Número>, <Texto> )::
-  Convierto el texto en un xref:/Números_y_Ángulos.adoc[número] y lo guarda en _a_, que debe ser un objeto
+  Convierte el texto en un xref:/Números_y_Ángulos.adoc[número] y lo guarda en _a_, que debe ser un objeto
   xref:/Objetos_libres_dependientes_y_auxiliares.adoc[libre] previamente definido.
 
 [EXAMPLE]
@@ -17,11 +16,25 @@ Sean `++ a = 3++` y `++ texto1 = "6"++`. `++ TextoANúmero(a, texto1)++` devuelv
 [NOTE]
 ====
 
-*Notas:*
-
-* Este es un xref:/commands/Comandos_de_Guiones_Scripting.adoc[comando de guion] que establece el valor del número por
-una sola vez. Para convertirse el texto _texto1_ en un número que se actualice dinámicamente, utiliza
+Este es un xref:/commands/Comandos_de_Guiones_Scripting.adoc[comando de guión] que establece el valor del número por
+una sola vez. Para convertirse el texto _texto1_ en un número que se actualice dinámicamente, se puede utilizar
 xref:/commands/DesdeBase.adoc[DesdeBase](texto1,10).
+
+====
+
+TextoANúmero( <Texto> )::
+  Convierte el texto y guarda el resultado en un xref:/Números_y_Ángulos.adoc[número].
+
+[EXAMPLE]
+====
+
+`++TextoANúmero("1+2+5-pi")++` crea el número _a = 4.86_.
+
+====
+
+[NOTE]
+====
+
 * Ver también el comando xref:/commands/TextoAFunción.adoc[TextoAFunción].
 
 ====
