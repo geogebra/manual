@@ -1,43 +1,47 @@
 = Herramienta de Análisis de Regresión de dos variables
-:page-revisar: prioritario
 :page-en: tools/Two_Variable_Regression_Analysis
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-Tras seleccionar dos columnas con números asociados de a pares en la xref:/Hoja_de_Cálculo.adoc[hoja de cálculo], un
-_clic_ en el botón image:Tool_Two_Variable_Regression_Analysis.gif[Tool Two Variable Regression
-Analysis.gif,width=32,height=32], abre la caja de diálogo para crear gráficos y cálculos estadísticos de dos-variables a
-partir de esos datos. De los cuatro paneles que se presentan:
-
-* uno es estadístico,
-* otro es el de datos y
-* los dos restantes son los gráficos.
-
-La caja de diálogo se abre con un diagrama de dispersión de los datos seleccionados.El menú desplegable bajo el gráfico
-permite seleccionar otros tipos de gráficos de diferentes modelos de regresión para los datos.Al escoger un modelo se
-traza su gráfico en la cuadrícula correspondiente, con su ecuación debajo.
-
-[.small]##
-
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:Ambox_content.png[image,width=40,height=40]
-
-|http://lokar.fmf.uni-lj.si/www/GeoGebra4/Spreadsheet/two_variable/two_variable.htm[Pantallazo que ilustra y explica
-cómo opera la herramienta]
-|===
+Para abrir la ventana de diálogo de la Fuente de Datos, debe seleccionarse un conjunto de celdas en la hoja de cálculo y hacer clic en la herramienta.
+Puede utilizarse el ícono image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] en la parte superior derecha de la ventana para refinar
+la descripción del tipo de datos seleccionados, luego se debe presionar el botón _Analizar_ para iniciar el análisis de los datos y mostrar los datos y gráficos relevantes.
+En el menú desplegable debajo del gráfico, seleccione un modelo de regresión para los datos. El gráfico del modelo seleccionado se trazará en el gráfico y su ecuación se mostrará debajo.
 
 [NOTE]
 ====
 
-Un _clic_ derecho sobre la zona gráfica permite copiar su contenido al portapapeles o exportarlo con formato de imagen.
+En la versión web, el gráfico se muestra sin presionar el botón _Analizar_.
 
 ====
+
+== Paneles del diálogo de análisis de datos
+* *Mostrar estadísticas* +
+Muestra una tabla de estadísticas básicas, como la media y desviación estándar.
+
+* *Mostrar datos* +
+Permite seleccionar / deseleccionar los datos analizados
+
+* *Segunda Vista Gráfica* +
+Muestra otro gráfico de los mismos datos.
+
+* *Intercambiar* los datos del eje vertical (eje Y) y el eje horizontal (eje X).
+
+== Opciones del gráfico
+* Se puede utilizar la lista desplegable sobre el gráfico mostrado para alternar entre el diagrama de dispersión y el diagrama residual de los datos actuales.
+* Se puede seleccionar el ícono image:Export16.png[Export16.png,width=16,height=16] para acceder a las siguientes opciones adicionales:
+ ** Copiar en image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] Vista Gráfica
+ ** Copiar al portapapeles (solo en la versión de escritorio de GeoGebra)
+ ** Exportar como imagen (En la versión de escritorio, se abre un diálogo para elegir el formato de imagen. En la versión web, el gráfico se exporta como archivo .png).
+* Se puede cambiar la configuración y la visualización del gráfico según el análisis deseado seleccionando el ícono de opciones (versión de escritorio) o el ícono image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] (aplicaciones web).
 
 [NOTE]
 ====
 
-Al abrir la caja de diálogo por primera vez, solo un panel gráfico está disponible El *_menú de opciones_* da acceso a
-los restantes.
+En la versión de escritorio de GeoGebra, se puede arrastrar y soltar para crear una copia dinámica de un gráfico en la Vista Gráfica
+o transferir una imagen del gráfico actual a otras aplicaciones que acepten imágenes. Al pasar el mouse cerca de la parte superior de la ventana del gráfico,
+el cursor cambiará a un ícono de mano. Debe arrastrarse el puntero del mouse hacia la image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Vista_Gráfica.adoc[Vista
+Gráfica] 1 o 2 para crear una copia dinámica del gráfico actual. Cualquier cambio en los datos analizados se aplicará tanto al gráfico original
+como a la copia. Si el gráfico se arrastra a una aplicación distinta a GeoGebra, el gráfico exportado será estático (una captura del gráfico de GeoGebra)
+y no se actualizará cuando los datos de GeoGebra sean modificados o actualizados.
 
 ====
