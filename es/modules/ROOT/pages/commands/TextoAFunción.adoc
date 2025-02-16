@@ -1,7 +1,17 @@
 = Comando TextoAFunción
-:page-revisar: prioritario
 :page-en: commands/ParseToFunction
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
+
+TextoAFunción( <Texto> )::
+  Analiza el texto que contiene la definición de la función y crea la xref:/Funciones.adoc[función] correspondiente.
+
+[EXAMPLE]
+====
+
+* `++ TextoAFunción("x^2")++` crea la función _f_(_x_) = __x__^2^_._
+* `++ TextoAFunción("t+2/t")++` crea la función _f_(_t_) = _t_ + 2/_t_.
+
+====
 
 TextoAFunción( <Función> , <Texto> )::
   Analiza la cadena de texto y almacena el resultado en la xref:/Funciones.adoc[función] indicada, digamos _f_, que debe
@@ -12,6 +22,16 @@ TextoAFunción( <Función> , <Texto> )::
 
 Sean `++ f(x) = 3x² + 2++` y `++ texto1 = "f(x) = 3x + 1"++`. Entonces `++TextoAFunción(f, texto1)++` redefine la
 función f como _f(x) = 3x + 1_.
+
+====
+
+TextoAFunción( <Texto>, <Lista de variables> )::
+  Analiza el texto que contiene la definición de la función y crea la xref:/Funciones.adoc[función] correspondiente de las variables definidas en la lista.
+
+[EXAMPLE]
+====
+
+`++ TextoAFunción("2u+3v",{"u", "v"})++` crea la función _a(u,v) = 2u + 3v_.
 
 ====
 
