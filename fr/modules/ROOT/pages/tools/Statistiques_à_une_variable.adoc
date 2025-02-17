@@ -2,6 +2,10 @@
 :page-en: tools/One_Variable_Analysis
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:/Tableur.adoc[Outils Tableur]
+
+
+________
 *Cet xref:/tools/Outils_Tableur.adoc[outil] n'est accessible que lorsque la fenêtre
 image:32px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=32,height=32] xref:/Tableur.adoc[Tableur] est
 ouverte.*
@@ -10,24 +14,83 @@ image:32px-Mode_onevarstats.svg.png[Mode onevarstats.svg,width=32,height=32] (co
 défaut image:32px-Mode_onevarstats.svg.png[Mode onevarstats.svg,width=32,height=32]
 
 Sélectionner une plage de cellules ou de colonnes contenant des données numériques dans le tableur. Cliquer ensuite sur
-le bouton image:32px-Mode_onevarstats.svg.png[Mode onevarstats.svg,width=32,height=32] de l'outil. Une fenêtre de
-dialogue s'ouvre pour créer des graphiques et calculer des indicateurs statistiques à une variable à partir des données.
+le bouton image:32px-Mode_onevarstats.svg.png[Mode onevarstats.svg,width=32,height=32] de l'outil.
 
-La fenêtre de dialogue possède quatre zones : à l'ouverture, n'en apparaissent, en général que deux, la zone des
-indicateurs et une zone graphique. En utilisant le menu déroulant *Options* on peut afficher la zone de données et un
-second graphique.
 
-[NOTE]
+1) Une première fenêtre de dialogue "Source des données" s'ouvre pour créer des graphiques et calculer des indicateurs statistiques à une variable à partir des données, lorsque vous demandez l' [.kcode]#Analyse#.
+
+* La "main" vous permet d' "Ajouter la sélection", en fait, il s'agit de remplacer par une nouvelle sélection.
+
+* En cliquant sur le bouton des image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]  Options de cette fenêtre, vous pouvez préciser :
+** si vos données sont des _Nombres_ ou des _Textes_ ;
+** s'il s'agit de _Données brutes_ , de _Données avec Effectifs_ ou de _Classes et Effectifs_ ;
+** si vous désirez _Utiliser l'entête comme titre_ .
+
+Ensuite, cliquer [.kcode]#Analyse#. 
+
+2) Une seconde fenêtre **Analyse des données** de dialogue possèdant quatre zones : 
+
+à l'ouverture,  une zone graphique qui vous propose _Histogramme_ , _Barres_ , _Boite à Moustaches_ , _Nuage Points_ , _Arbre tige-feuille_ et _Quantile Loi Normale_ . 
+
+_Histogramme_ et _Arbre tige-feuille_ peuvent être paramétrés en utilisant le curseur/les boutons situés à droite de la liste déroulante.
+
+Les quatre icônes affichées dans le bandeau supérieur de la gauche vers la droite ont pour action :
+
+* *Afficher la source de données :* +
+    Refait afficher la première fenêtre ;
+
+* *Afficher Statistiques :* +
+    Entre autres : _Moyenne_ , _Min_ et _Max_ , _Médiane_ , 1er et 3ème _Quartile_ ;
+    Maais aussi, la liste déroulante vous propose : _Z Test d'une moyenne_ , _T Test d'une moyenne_ ,  _Z Moyenne attendue_   et  _T Estimation d'une moyenne_  .
+
+* *Afficher Données :* +
+    Permet de déselectionner certaines données ;
+
+* *Afficher 2d Graphique :* +
+    Comme son intitulé l'indique, ouvre une autre fenêtre graphique, nous permettant de comparer 2 représentations de la même série.
+
+Ces 3 derniers boutons sont des bascules d'affichage de la fenêtre associée.
+
+
+NOTE]
 ====
 
 Cliquer droit sur la zone graphique pour la copier dans le presse-papiers ou l'exporter dans un format image.
 
 ====
+________
+
 
 [NOTE]
 ====
 
-*image:32px-Youtube.png[Note,title="Note",width=32,height=32] Vidéo Prise en mains :*
-http://www.youtube.com/watch?v=SCso6mCdfS4&feature=youtu.be[Données et effectifs].
+In the web version, the graph is automatically displayed without pressing the _Analyze_ button.
+
+====
+
+
+
+
+
+
+
+
+
+
+* Select the image:Export16.png[Export16.png,width=16,height=16] icon to access the following further options:
+ ** Copy to  image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]Graphics View
+ ** Copy to Clipboard (GeoGebra Desktop only)
+ ** Export as Picture (In the Desktop version, a dialog opens to choose the picture format. In the Web version, the graph is exported as a .png image file).
+* Change the graph settings and display depending on the desired analysis by selecting the _Options_ icon (Desktop version) or the image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] icon (Web version and apps). 
+
+
+
+[NOTE]
+====
+
+In GeoGebra desktop version, use drag-and-drop to create a dynamic copy of a plot in the Graphics View or transfer a picture of the current plot to other applications that accept images. 
+When hovering the mouse near the top of the plot window, the cursor changes to a hand icon. Drag the mouse pointer to image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Graphics_View.adoc[Graphics
+View] 1 or 2 to create a dynamic copy of the current plot. Any change in the analyzed data will be applied to both the original and copied plots. 
+If the plot is dragged into an application other than GeoGebra, the exported plot will be static—a snapshot of the GeoGebra plot—and will not be updated when GeoGebra data are updated or modified.
 
 ====
