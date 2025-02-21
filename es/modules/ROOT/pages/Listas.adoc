@@ -1,176 +1,144 @@
 = Listas
-:page-revisar: prioritario
 :page-en: Lists
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-Usando llaves pueden crearse listas que incluyan varios objetos, como...
-
-* puntos
-* segmentos
-* circunferencias... y otros
+Usando llaves pueden crearse listas que incluyan varios objetos (por ejemplo, puntos, segmentos, circunferencias).
 
 [EXAMPLE]
 ====
 
-*Ejemplos:*
-
-* `++L = {A, B, C}++` establece una lista de tres puntos definidos previamente A, B, y C.
+* `++L = {A, B, C}++` da una lista de tres puntos definidos previamente _A_, _B_, y _C_.
 * `++L = {(0, 0), (1, 1), (2, 2)}++` produce una lista de los puntos ingresados sin nominar.
+* La corta sintaxis `++..++` crea una lista de enteros consecutivos. Por ejemplo, `++-5..5++` crea la lista _++{-5, -4, -3, -2,
+-1, 0, 1, 2, 3, 4, 5}++_.
+* Cuando un conjunto rectangular de celdas en la hoja de cálculo está lleno con datos, la corta sintaxis `++:++` crea
+la lista de los datos contenidos en la porción de la hoja de cálculo definida por la primera y última celda dadas. La lista se llena por columnas,
+por ejemplo, `++A1:A5++` crea la lista que contiene los datos _++{A1, A2, A3, A4, A5}++_ y `++A1:B5++` crea la lista que contiene los datos _++{A1, A2, A3, A4, A5, B1, B2, B3, B4, B5}++_.
 
 ====
 
 [NOTE]
 ====
 
-Por omisión, los elementos de las listas así creadas no se exponen en la xref:/Vista_Gráfica.adoc[Vista Gráfica].
+* Por omisión, los elementos de las listas así creadas no se exponen en la image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Vista_Gráfica.adoc[Vista Gráfica].
+* Las listas también pueden utilizarse como argumentos en operaciones con listas (mencionadas más adelante en este artículo)
+o en los xref:/commands/Comandos_de_Lista.adoc[comandos de lista].
+* Las listas deben contener objetos del mismo tipo (por ejemplo, listas de números, listas de puntos...), de lo contrario,
+las operaciones con listas o su uso como argumentos en comandos pueden producir resultados no confiables.
 
 ====
 
-== Gráficos [.small]##a##listados
+== Acceso a los elementos de las listas
 
-Encuadrando un conjunto de xref:/Objetos.adoc[objetos] expuestos en la xref:/Vista_Gráfica.adoc[Vista Gráfica] mientras
-se mantiene pulsada la tecla [.kcode]#Alt#, la lista de todo lo incluido deviene entrada.
+Para acceder a elementos específicos de una lista, se puede utilizar el comando xref:/commands/Elemento.adoc[Elemento]
+o la sintaxis simplificada mostrada en el siguiente ejemplo:
 
-'''''
-
-Si los xref:/Objetos.adoc[objetos] se van escogiendo de la xref:/Vista_Algebraica.adoc[Vista Algebraica], puede
-desplazarse lo sombreado hasta la xref:/Barra_de_Entrada.adoc[entrada] para crear la lista. Pulsando [.kcode]#Ctrl# se
-puede incluir algún otro xref:/Objetos.adoc[objeto] para incorporarlo a lo ya sombreado.
-
-== Elemento por Elemento
-
-Para acceder a cierto elemento de la lista en particular, puede emplearse el comando
-xref:/commands/Elemento.adoc[Elemento] o los paréntesis de modo adecuado.Las listas pueden usarse como argumentos en
-operaciones (como se menciona más adelante) o con xref:/commands/Comandos_de_Lista.adoc[Comandos de Listas].
-
-== Comparar Listas de Objetos
-
-Pueden compararse dos listas de objetos empleando la siguiente sintaxis y comandos:
-
-* `++Lista1 == Lista2++` Controla si las dos listas son iguales como https://es.wikipedia.org/Tupla[tuplas]
-ordenadas y brinda como resultado de salida verdadero (_true_) o falso (_false_).
-* `++Lista1 != Lista2++` Controla si las dos listas son desiguales como https://es.wikipedia.org/Tupla[tuplas]
-ordenadas y opera del mismo modo que la anterior pero en sentido contrario (_false_ cuando son iguales y viceversa)
-* `++Único[lista1] == Único[lista2]++` o `++{lista1} \ {lista2} == {}++` Controla si sendas listas son iguales en tanto
-conjuntos (es decir, ignorando los elementos repetidos así como el orden en que se disponen)
-* `++Ordena[lista1] == Ordena[lista2]++` Controla si sendas listas son iguales en tanto
-https://es.wikipedia.org/Multiconjunto[multiconjunto] (es decir, ignorando el orden de los elementos).
-
-[NOTE]
+[EXAMPLE]
 ====
+
+Sea `++lista = {1, 2, 3, 4, 5}++`, entonces:
+
+* `++lista(1)++` devuelve el primer elemento de la lista: _1_
+* `++lista(2)++` devuelve el segundo elemento de la lista: _2_
+* .../...
+* `++lista(-1)++` devuelve el último elemento de la lista: _5_
+* `++lista(-5)++` devuelve el primer elemento de la lista: _1_
+* `++lista(0)++` devuelve _indefinido_, al igual que `++lista(k)++` para k > 5 o k < -5
+
+====
+
+== Comparación de listas de objetos
+
+Se pueden comparar dos listas de objetos utilizando las siguientes sintaxis y comandos:
+
+* `++Lista1 == Lista2++`: verifica si las dos listas son iguales como https://es.wikipedia.org/wiki/Tupla[tuplas] ordenadas
+y devuelve _true_ (verdadero) o _false_ (falso).
+* `++Lista1 != Lista2++`: verifica si las dos listas son distintas como tuplas ordenadas
+y devuelve _true_ (verdadero) o _false_ (falso).
+* `++Único(lista1) == Único(lista2)++` o `++lista1 \ lista2 == {}++` : verifica si las dos listas son iguales como conjuntos (es decir,
+todos los elementos repetidos son ignorados, así como el orden de los elementos) y da por resultado _true_ (verdadero) o _false_ (falso).
+* `++Ordena(lista1) == Ordena(lista2)++`: verifica si las dos listas son iguales como
+https://es.wikipedia.org/wiki/Multiconjunto[multiconjuntos] (es decir, el orden de los elementos es ignorado)
+y da por resultado _true_ (verdadero) o _false_ (falso).
 
 Ver también los comandos xref:/commands/Único.adoc[Único] y xref:/commands/Ordena.adoc[Ordena].
 
+== Operadores de listas
+
+`++<Objeto> ∈ <Lista>++`: devuelve _true_ (verdadero) si _Objeto_ es un elemento de la _Lista_
+
+`++<Lista1> ⊆ <Lista2>++`: devuelve _true_ (verdadero) si _Lista1_ es un subconjunto de _Lista2_
+
+`++<Lista1> ⊂ <Lista2>++`: devuelve _true_ (verdadero) si _Lista1_ es un subconjunto propio de _Lista2_
+
+`++<Lista1> \ <Lista2>++`: crea el conjunto diferencia de _Lista1_ y _Lista2_
+
+== Aplicar operaciones y funciones predefinidas a listas
+
+Si se aplican xref:/Operadores_y_Funciones_Predefinidas.adoc[Operadores y funciones predefinidas] a listas,
+siempre se obtendrá una nueva lista como resultado.
+
+=== Adición y sustracción
+
+* `++Lista1 + Lista2++`: suma los elementos correspondientes de las dos listas.
++
+[NOTE]
 ====
 
-== Operaciones con Listas
+Las dos listas deben tener la misma longitud.
 
-* `++<Objeto> ∈ <Lista>++` controla si el objeto es un elemento de la lista indicada
-* `++<Lista> ⊆ <Lista>++` controla si una lista es subconjunto de la otra
-* `++<Lista> ⊂ <Lista>++` controla si una lista es estricto subconjunto de la otra
-* `++<Lista> \ <Lista>++` conjunto diferencia
+====
 
-=== Aplicar xref:/Operadores_y_Funciones_Predefinidas.adoc[Operaciones Predefinidas y Funciones] a las Listas
+* `++Lista + Número++`: suma el _Número_ a cada elemento de la _Lista_.
+* `++Lista1 – Lista2++`: resta los elementos de _Lista2_ de los elementos correspondientes de _Lista1_.
++
+[NOTE]
+====
 
-Cada vez que se aplican xref:/Operadores_y_Funciones_Predefinidas.adoc[operaciones predefinidas y/o funciones] a listas,
-se obtiene como resultado, una nueva lista.
+Las listas deben tener la misma longitud.
 
-=== Sumas y Restas
+====
 
-* `++Lista + <número>++` Suma el _número_ a cada uno de los elementos de la lista.
-* `++Lista – <número>++` Resta el _número_ a cada uno de los elementos de la lista.
+* `++Lista – Número++`: resta el _Número_ de cada elemento de la _Lista_.
 
-=== Multiplicación y División
+=== Multiplicación y división
 
-* `++Lista * <número>++` Multiplica por el _número_, cada uno de los elementos de la lista.
-* `++Lista / <número>++` Divide cada elemento de la lista, por el _número_.
-* `++<número> / Lista++` Divide el _número_ por cada elemento de la lista.
+* `++Lista1 * Lista2++`: multiplica los elementos correspondientes de las los listas.
++
+[NOTE]
+====
 
-=== Operando con más de una lista
+Las listas deben tener la misma longitud. Si las dos listas son matrices conformables, se obtiene la matriz producto.
 
-* En las siguientes operaciones, comparaciones, sumas o restas y multiplicaciones o divisiones, cuando aparece
-involucrado dos o más listas, se requiere que tengan la misma longitud (el mismo número de elementos).
+====
 
-=== Sumando y Restando Listas
+* `++Lista * Número++`: multiplica cada elemento de la _Lista_ por el _Número_ dado.
+* `++Lista1 / Lista2++`: divide los elementos de la _Lista1_ entre los elementos correspondientes de la _Lista2_.
++
+[NOTE]
+====
 
-* `++Lista1 + Lista2++` Suma uno a uno, cada par de elementos correspondientes de una y otra lista..
-* `++Lista1 – Lista2++` Resta los elementos de la segunda lista a cada uno de os correspondientes de la primera.
+Las dos listas deben tener la misma longitud.
 
-=== Producto de Listas
+====
 
-* `++Lista1 * Lista2++` Multiplica uno a uno, cada par de elementos correspondientes de una y otra lista.
-
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:Ambox_content.png[image,width=40,height=40]
-
-a|
-Si sendas listas fueran matrices compatibles, se emplea la multiplicación de
-matrices.`++{1, 2,3}* {{1,0,0},{0,1,0},{0,0,1}} ++` da por resultado el producto de listas:
-
-stem:[\left(\begin\{array}\{rrr}1&0&0\\0&2&0\\0&0&3\\ \end\{array}\right)]
-
-Por otro lado:`++{{1, 2,3}}* {{1,0,0},{0,1,0},{0,0,1}} ++`da por resultado un producto de matrices:
-
-stem:[\left(\begin\{array}\{rrr}1&2&3\\ \end\{array}\right)]
-
-|===
-
-=== División entre Listas
-
-* `++Lista1 / Lista2++` Divide uno a uno, cada uno de los elementos de la primera lista por los correspondientes de la
-segunda.
+* `++Lista / Número++`: divide cada elemento de la _Lista_ entre el _Número_.
+* `++Número / Lista++`: divide el _Número_ entre cada elemento de la _Lista_.
 
 [NOTE]
 ====
 
-En todos los casos, sendas listas deben tener igual longitud.En el último anotado, si las dos listas son matrices
-compatibles, se emplea la multiplicación de matrices.
+Ver también xref:/Puntos_y_Vectores.adoc[vector producto].
 
 ====
 
-* `++Lista / Número++` Divide cada elemento de la lista por el número .
-* `++Número / Lista++` Divide el número por cada elemento de la lista.
+=== Otros ejemplos
 
-[NOTE]
-====
+* `++Lista ^ 2++`: eleva al cuadrado cada elemento de la _Lista_.
+* `++2 ^ Lista++`: crea un lista de potencias de dos, usando los elementos de la _Lista_ como exponentes.
+* `++Lista1 ^ Lista2++`: crea una lista que contiene elementos de la forma _a^b_, donde _a_ y _b_ son elementos correspondientes a la _Lista1_ y la
+_Lista2_.
+* `++sen(Lista)++`: applica la función seno a cada elemento de la _Lista_.
 
-Ver también xref:/Puntos_y_Vectores.adoc[Producto Vectorial].
-
-====
-
-=== Otros Ejemplos
-
-Ejemplos usando funciones:
-
-* `++Lista^2++` Eleva al cuadrado cada elemento de la lista.
-* `++2^Lista++` Crea la lista de potencias de dos con los exponentes de la lista.
-* `++Lista1^Lista2++` Crea una lista de _a^b_, donde _a_ y _b_ son los elementos de la _Lista1_ y _Lista2_
-respectivamente.
-* `++sin(Lista)++` Aplica la función seno a cada elemento de la lista
-
-Las xref:/Funciones.adoc[funciones] creadas por los usuarios pueden aplicarse también y del mismo modo.
-
-=== Intercambios entre registro xref:/Vista_Algebraica.adoc[algebraico] y el de xref:/Hoja_de_Cálculo.adoc[Hoja de Cálculo]=
-
-[EXAMPLE]
-====
-
-Siendo *l_a := `++Secuencia[BinomialAleatorio[3, 0.1], ñ, 1, 1000, Mínimo[Máximo[AleatorioEntre[1, exF], 1], 1]]++`* la
-_lista_ de registro xref:/Vista_Algebraica.adoc[algebraico], copiando a la xref:/Hoja_de_Cálculo.adoc[Hoja de Cálculo],
-sendas [.mw-selflink .selflink]#listas# _l~o~_ y _l~f~_ definidas como:*l~o~ := `++Ordena[Único[la]]++`* y *l~f~ :=
-`++Zip[CuentaSi[x ≟ ñ, l_a], ñ, {0,1,2,3}]++`*, cundo se selecciona el rango de celdas en que se volcaron ambas listas y
-se crea la correspondiente xref:/Matrices.adoc[matriz], se obtiene una dinámica y aleatoriamente cambiante con cada
-pulsación de [.kcode]#F9#
-
-====
-
-'''''
-
-[NOTE]
-====
-
-Ver también el artículo sobre xref:/Matrices.adoc[Matrices].
-
-====
+Las xref:/Funciones.adoc[funciones] definidas por el usuario se pueden aplicar de la misma manera.
