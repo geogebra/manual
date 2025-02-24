@@ -1,73 +1,93 @@
 = Herramientas personalizadas
-:page-revisar: prioritario
 :page-en: tools/Custom_Tools
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
-== Transformaciones
+GeoGebra Clásico permite crear herramientas de construcción personalizadas basadas en una construcción existente.
 
-Las /Comentarios:Núm_HerramientasES.adoc[herramientas] de transformación suelen estar agrupadas, por omisión, en la
-/Categoría:Iconos.adoc[Barra] bajo el ícono image:23px-Mode_mirroratline.svg.png[Mode
-mirroratline.svg,width=23,height=23].Pueden incluirse adicionales cuando está abierta la
-xref:/Vista_3D.adoc[image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra
-3Dgraphics.svg,width=16,height=16]] xref:/Vista_3D.adoc[Vista gráfica 3D].A continuación, se organizan en un cuadro que
-muestra las diferencias entre las que se despliegan al estar la xref:/Vista_Gráfica.adoc[Gráfica 2[.kcode]##D##] activa
-y las que se descuelgan cuando lo está la /s_index_php?title=Manual:Vista_3D_action=edit_redlink=1.adoc[3[.kcode]##D##]
-y luego se listan las más usuales::
+Una vez creada, la herramienta personalizada se puede activar haciendo clic en el ícono correspondiente o
+utilizando el comando relacionado en la xref:/Barra_de_Entrada.adoc[Barra de Entrada].
 
-[cols=",",options="header",]
-|===
-|xref:/Vista_Gráfica.adoc[Gráfica 2D activa] |/s_index_php?title=Manual:Vista_3D_action=edit_redlink=1.adoc[Gráfica 3D
-activa]
-|xref:/tools/Simetría_Axial.adoc[image:23px-Mode_mirroratline.svg.png[Mode mirroratline.svg,width=23,height=23]]
-xref:/tools/Simetría_Axial.adoc[Simetría Axial]
-|xref:/tools/Simetría_Especular.adoc[image:23px-Mode_mirroratplane.svg.png[Mode mirroratplane.svg,width=23,height=23]]
-xref:/tools/Simetría_Especular.adoc[Simetría Especular]
+Todas las herramientas se guardan automáticamente en el archivo de GeoGebra en el que fueron creadas.
 
-|xref:/tools/Simetría_Central.adoc[image:23px-Mode_mirroratpoint.svg.png[Mode mirroratpoint.svg,width=23,height=23]]
-xref:/tools/Simetría_Central.adoc[Simetría Central]
-|xref:/tools/Simetría_Axial.adoc[image:23px-Mode_mirroratline.svg.png[Mode mirroratline.svg,width=23,height=23]]
-xref:/tools/Simetría_Axial.adoc[Simetría Axial]
+[NOTE]
+====
 
-|xref:/tools/Inversión.adoc[image:23px-Mode_mirroratcircle.svg.png[Mode mirroratcircle.svg,width=23,height=23]]
-xref:/tools/Inversión.adoc[Inversión] |xref:/tools/Simetría_Central.adoc[image:23px-Mode_mirroratpoint.svg.png[Mode
-mirroratpoint.svg,width=23,height=23]] xref:/tools/Simetría_Central.adoc[Simetría Central]
+Las salidas de una herramienta no se pueden mover, por lo que no pueden arrastrarse con el mouse, incluso si están definidas
+como objetos en un recorrido. Si se necesita una salida que pueda moverse, se debe definir en su lugar una lista de comandos
+y utilízarla con el comando xref:/commands/Ejecuta.adoc[Ejecuta].
 
-|image:23px-Mode_rotatebyangle.svg.png[Mode rotatebyangle.svg,width=23,height=23]
-/s_index_php?title=Comentarios:Herramienta_Despliegue_action=edit_redlink=1.adoc[Rotación]
-|xref:/tools/Rotación_Axial.adoc[image:23px-Mode_rotatearoundline.svg.png[Mode rotatearoundline.svg,width=23,height=23]]
-xref:/tools/Rotación_Axial.adoc[Rotación Axial]
+====
 
-|xref:/tools/Traslación.adoc[image:23px-Mode_translatebyvector.svg.png[Mode translatebyvector.svg,width=23,height=23]]
-xref:/tools/Traslación.adoc[Traslación] |xref:/tools/Traslación.adoc[image:23px-Mode_translatebyvector.svg.png[Mode
-translatebyvector.svg,width=23,height=23]] xref:/tools/Traslación.adoc[Traslación]
+== Creación de herramientas personalizadas
 
-|xref:/tools/Homotecia.adoc[image:23px-Mode_dilatefrompoint.svg.png[Mode dilatefrompoint.svg,width=23,height=23]]
-xref:/tools/Homotecia.adoc[Homotecia] |xref:/tools/Homotecia.adoc[image:23px-Mode_dilatefrompoint.svg.png[Mode
-dilatefrompoint.svg,width=23,height=23]] xref:/tools/Homotecia.adoc[Homotecia]
-|===
+Primero, se debe crear la construcción que se desea guardar como herramienta
+y luego debe seleccionarse image:16px-Menu-tools-new.svg.png[Menu-tools-new.svg,width=16,height=16]
+xref:/Nueva_herramienta.adoc[Crear una nueva herramienta] en el image:16px-Menu-tools.svg.png[Menu-tools.svg,width=16,height=16]
+xref:/Menú_de_Herramientas.adoc[Menú de Herramientas].
 
-== Listado
+En la ventana de diálogo que aparece, deben seleccionarse los _Objetos de salida_ y los _Objetos de entrada_ de las listas
+desplegables disponibles, para luego asignar un _Nombre_ a la herramienta.
 
-xref:/tools/Simetría_Axial.adoc[image:23px-Mode_mirroratline.svg.png[Mode mirroratline.svg,width=23,height=23]]
-xref:/tools/Simetría_Axial.adoc[Simetría Axial]
+GeoGebra asignará automáticamente el mismo nombre al _Comando_ que permitirá usar la herramienta en la barra de entrada. El nombre del comando puede personalizarse.
 
-xref:/tools/Simetría_Central.adoc[image:23px-Mode_mirroratpoint.svg.png[Mode mirroratpoint.svg,width=23,height=23]]
-xref:/tools/Simetría_Central.adoc[Simetría Central]
+Se puede ingresar un conjunto breve de instrucciones en el cuadro de _Ayuda de la herramienta_ (opcional) y
+cargar un archivo de imagen para el ícono de la herramienta (opcional).
 
-xref:/tools/Inversión.adoc[image:23px-Mode_mirroratcircle.svg.png[Mode mirroratcircle.svg,width=23,height=23]]
-xref:/tools/Inversión.adoc[Inversión]^[.small]#[.small]#Refleja Objeto en Circunferencia##^
+Por último, se debe seleccionar _Concluido_ para completar la creación de la herramienta personalizada.
 
-image:23px-Mode_rotatebyangle.svg.png[Mode rotatebyangle.svg,width=23,height=23]
-/s_index_php?title=Comentarios:Herramienta_Despliegue_action=edit_redlink=1.adoc[Rotación]
+== Guardar herramientas personalizadas
 
-xref:/tools/Traslación.adoc[image:23px-Mode_translatebyvector.svg.png[Mode translatebyvector.svg,width=23,height=23]]
-xref:/tools/Traslación.adoc[Traslación]
+Cuando se guarda una construcción como un archivo .ggb, todas las herramientas personalizadas creadas en la construcción se guardan en ella.
+Para guardar las herramientas en archivo(s) separado(s), se debe utilizar el diálogo xref:/Gestión_de_herramientas.adoc[Gestión de herramientas],
+seleccionando image:16px-Menu-tools.svg.png[Menu-tools.svg,width=16,height=16] _Gestión de herramientas_ en el
+image:16px-Menu-tools.svg.png[Menu-tools.svg,width=16,height=16] xref:/Menú_de_Herramientas.adoc[Menú de Herramientas].
 
-xref:/tools/Homotecia.adoc[image:23px-Mode_dilatefrompoint.svg.png[Mode dilatefrompoint.svg,width=23,height=23]]
-xref:/tools/Homotecia.adoc[Homotecia]
+[NOTE]
+====
 
-xref:/tools/Simetría_Especular.adoc[image:23px-Mode_mirroratplane.svg.png[Mode mirroratplane.svg,width=23,height=23]]
-xref:/tools/Simetría_Especular.adoc[Simetría Especular]^[.small]#GG 5.0#^
+Las herramientas personalizadas se guardarán como archivos .ggt, para distinguirlas de archivos estándar de GeoGebra (.ggb).
 
-xref:/tools/Rotación_Axial.adoc[image:23px-Mode_rotatearoundline.svg.png[Mode rotatearoundline.svg,width=23,height=23]]
-xref:/tools/Rotación_Axial.adoc[Rotación Axial]^[.small]#GG 5.0#^
+====
+
+== Acceso a las herramientas personalizadas
+
+Luego de crear una herramienta personalizada, cuando se abre un nuevo archivo GeoGebra seleccionando image:16px-Menu-file-new.svg.png[Menu-file-new.svg,width=16,height=16]
+_Nuevo_ en el image:16px-Menu-file.svg.png[Menu-file.svg,width=16,height=16] xref:/Menú_Archivo.adoc[Menú Archivo],
+el ícono de la herramienta será visible en la barra de herramientas de GeoGebra. Sin embargo, si se abre una nueva ventana de GeoGebra seleccionando
+image:Menu_New.png[Menu New.png,width=16,height=16] _Nueva ventana_ en el image:16px-Menu-file.svg.png[Menu-file.svg,width=16,height=16] _Menú Archivo_,
+o si se abre GeoGebra luego de reiniciar la computadora, la herramienta personalizada ya no será parte de la barra de herramientas.
+
+Para tener una herramienta personalizada que esté siempre visible en la barra de herramientas de GeoGebra,
+se debe guardar la configuración actual seleccionando 
+image:16px-Menu-file-save.svg.png[Menu-file-save.svg,width=16,height=16] _Guardar la configuración_ en el
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Menú_de_Opciones.adoc[Menú de Opciones].
+
+[NOTE]
+====
+
+Para quitar una herramienta personalizada de la barra de herramientas, debe seleccionarse image:16px-Menu-tools-customize.svg.png[Menu-tools-customize.svg,width=16,height=16]
+_Confección de barra personal_ en el image:16px-Menu-tools.svg.png[Menu-tools.svg,width=16,height=16] _Menú de Herramientas_.
+Luego, se debe seleccionar la herramienta personalizada que se desea eliminar de la lista mostrada a la izquierda y presionar el botón _Eliminar_
+(versión de escritorio de GeoGebra) o arrastrar y soltar hacia el lado derecho (versión web de GeoGebra y aplicaciones).
+Se debe guardar la configuración después de eliminar la herramienta personalizada.
+
+====
+
+== Importar herramientas personalizadas
+
+Cuando una herramienta personalizada se guarda en la computadora (como un archivo .ggt), se puede importarla dentro de cualquier archivo GeoGebra
+en cualquier momento seleccionando image:16px-Menu-file-open.svg.png[Menu-file-open.svg,width=16,height=16] _Abrir_ en el
+image:16px-Menu-file.svg.png[Menu-file.svg,width=16,height=16] _Menú Archivo_ y seleccionando el archivo de la herramienta personalizada.
+
+[NOTE]
+====
+
+* Abrir un archivo de herramienta GeoGebra (.ggt) en GeoGebra no afecta la construcción: solamente hace parte esta herramienta
+de la barra de herramientas de GeoGebra actual.
+* También se puede cargar el archivo .ggt arrastrándolo desde el administrador de archivos de la computadora y soltándolo dentro de la ventana de GeoGebra.
+
+====
+
+
+
+
