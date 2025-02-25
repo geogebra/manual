@@ -44,3 +44,21 @@ Asymptote( <Courbe c> )::
 `++Asymptote(x^3 + y^3 + y^2 - 3 x = 0)++` retourne la liste _{x + y = -0.33}_.
 
 ====
+__________________________________________________________
+image:20px-Menu_view_cas.svg.png[Menu view cas.svg,width=20,height=20] *Calcul formel*
+
+Cette commande fonctionne presque à l'identique dans *Calcul formel* :
+
+Pour Asymptote( <Hyperbole h> ), il vous faut placer la commande entre accolades [.kcode]#{#  et [.kcode]#}#  afin de récupérer la liste des 2 asymptotes.
+
+[EXAMPLE]
+====
+
+
+`++{Asymptote(x^2 - y^2 /4 = 1)}++` retourne la liste des droites {_-2x + y = 0_, _-2x - y = 0_}.
+
+alors que
+
+`++Asymptote(x^2 - y^2 /4 = 1)++` ne retourne qu'une seule équation de droite _-2x + y = 0_.
+====
+__________________________________________________________
