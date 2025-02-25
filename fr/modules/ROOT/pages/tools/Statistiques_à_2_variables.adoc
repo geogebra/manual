@@ -2,6 +2,11 @@
 :page-en: tools/Two_Variable_Regression_Analysis
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
+xref:tools/Outils_Tableur.adoc[Outils Tableur]
+
+
+________
+
 *Cet xref:/tools/Outils_Tableur.adoc[outil] n'est accessible que lorsque la fenêtre
 image:32px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=32,height=32] xref:/Tableur.adoc[Tableur] est
 ouverte.*
@@ -9,19 +14,79 @@ ouverte.*
 image:32px-Mode_twovarstats.svg.png[Mode twovarstats.svg,width=32,height=32] (code 2021), dans la Boîte à outils par
 défaut image:32px-Mode_onevarstats.svg.png[Mode onevarstats.svg,width=32,height=32]
 
-Sélectionner deux colonnes contenant des données numériques appariées dans le tableur.Cliquer ensuite sur le bouton
-image:32px-Mode_twovarstats.svg.png[Mode twovarstats.svg,width=32,height=32] de l'outil. Une fenêtre de dialogue s'ouvre
+Sélectionner deux colonnes contenant des données numériques appariées dans le tableur.
+
+Cliquer ensuite sur le bouton image:32px-Mode_twovarstats.svg.png[Mode twovarstats.svg,width=32,height=32] de l'outil. Une fenêtre de dialogue s'ouvre
 pour créer des graphiques et calculer des indicateurs statistiques à deux variables à partir des données.
 
-La fenêtre de dialogue possède quatre zones : à l'ouverture, n'apparaît, en général que le graphique _Nuage_ de points
-représentant les données sélectionnées. En utilisant le menu déroulant *Options* on peut faire afficher la zone des
-indicateurs, la zone de données et un second graphique. En utilisant le menu déroulant pour le modèle d'ajustement, on
-peut choisir parmi un certain nombre de modèles de régression, dès qu'un modèle est choisi, sa représentation graphique
-et son équation sont affichées.
+1) **Ensuite en version 5** Une "première" fenêtre de dialogue "Source des données" s'ouvre pour créer des graphiques et calculer des indicateurs statistiques à deux variables à partir des données, lorsque vous demandez l' [.kcode]#Analyse#.
 
-[NOTE]
-====
+* La "main" image:Arrow_cursor_grabbing.png[Arrow cursor grabbing.png,width=32,height=32] vous permet d' "Ajouter la sélection", en fait, il s'agit de remplacer par une nouvelle sélection.
 
+* En cliquant sur le bouton des image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]  Options de cette fenêtre, vous pouvez préciser :
+** si vos données sont des _Nombres_ ou des _Textes_ ;
+** si vous désirez _Utiliser l'entête comme titre_ .
+
+**Enfin ,  en version 5** cliquer [.kcode]#Analyse#. 
+
+2) Une "seconde" fenêtre **Analyse des données** de dialogue possèdant quatre zones : 
+
+
+**En version 6**, vous arrivez directement à cette fenêtre :
+
+à l'ouverture,  une zone graphique qui vous propose  _Nuage _ ou _Résidus_ . 
+
+Les cinq icônes affichées dans le bandeau supérieur de la gauche vers la droite ont pour action :
+
+* image:Arrow_cursor_grabbing.png[Arrow cursor grabbing.png,width=32,height=32] *Afficher la source de données :* +
+    Refait afficher la première fenêtre ;
+
+* image:20px-Stylingbar_variable_analysis_statistics.svg.png[20px-Stylingbar variable analysis statistics.svg,width=32,height=32] *Afficher Statistiques :* +
+    Entre autres : _MoyenneX_ et _MoyenneY_ , _Sx_ et _Sy_ , _nCov_ ;
+    Maais aussi, la liste déroulante vous propose : _Z Test d'une moyenne_ , _T Test d'une moyenne_ ,  _Z Moyenne attendue_   et  _T Estimation d'une moyenne_  .
+
+* image:20px-Stylingbar_variable_analysis_data.svg.png[20px-Stylingbar variable analysis data.svg,width=32,height=32] *Afficher Données :* +
+    Permet de déselectionner certaines données ;
+
+* image:20px-Stylingbar_variable_analysis_2plot.svg.png[20px-Stylingbar variable analysis 2plot.svg,width=32,height=32] *Afficher 2d Graphique :* +
+    Comme son intitulé l'indique, ouvre une autre fenêtre graphique, nous permettant de comparer 2 représentations de la même série.
+
+* [.kcode]#X→Y# pour choisir la méthode d'affectation des coordonnées _x_ et _y_ des points. X→Y signifie que les données de la première ligne/colonne de la sélection seront les abscisses des points et celles de la seconde, les ordonnées ; et viceversa pour Y→X. 
+
+Ces 4 derniers boutons sont des bascules d'affichage de la fenêtre associée.
+
+
+En bas de cette fenêtre, un menu déroulant pour le Modèle d'ajustement, on peut choisir Aucun/parmi les modèles d'ajustement : _Linéaire_, _Log_, _Polynôme_ , puissance, exponentiel, _Puissance_, _Sinus_ et _Logistique_. 
+
+* Changer les paramètres du  graphique et l'affichage selon l'analyse désirée via l'icône  _Options_ (Version Desktop) ou le  image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] Menu_options (Version Web version et apps). À droite de cette fenêtre, dans l'onglet _Nuage_ on peut choisir de relier les points, dans l'onglet _Graphe_ on peut choisir d'_Afficher Grille_ et _Dimensions automatiques_
+
+
+________
+== Graphique
+________
 Cliquer droit sur la zone graphique pour la copier dans le presse-papiers ou l'exporter dans un format image.
 
-====
+ou
+
+
+* Sélectionner  image:Export16.png[Export16.png,width=16,height=16] pour accéder aux options suivantes :
+ ** Copier vers  image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]Graphique
+ ** Copier dans Presse-papiers (Uniquement GeoGebra Desktop)
+ ** Export en Image (En version 5, un dialogue permettra de choisir le format, en version 6, le graphique est exporté en un fichier *.png).
+
+________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
