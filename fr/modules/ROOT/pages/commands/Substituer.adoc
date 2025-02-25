@@ -30,12 +30,15 @@ avec image:32px-Mode_numeric.svg.png[Mode numeric.svg,width=32,height=32] Numér
 
 ====
 
-Substituer( <Expression>, <Liste Substitution> )::
-  Remplace dans l'_expression_ chacune des variables de la liste par la variable ou le nombre que vous lui affectez.
+Substituer( <Expression>, <''Liste'' Substitution> )::
+  Remplace dans l'_expression_ chacune des variables de la ''liste'' par la variable ou le nombre que vous lui affectez.
 
 [EXAMPLE]
 ====
 
-`++Substituer(2x + 3y - z, {x=a, y=2, z=b})++` retourne _2a - b + 6_.
+`++Substituer(2x + 3y - z, {x=a, y=2, z=b})++` retourne _2a - b + 6_ ;
 
+ou
+
+`++Substituer(2x + 3y - z, x=a, y=2, z=b)++` retourne _2a - b + 6_.
 ====
