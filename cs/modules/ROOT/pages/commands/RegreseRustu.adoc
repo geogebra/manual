@@ -3,11 +3,22 @@
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
 RegreseRustu( <Seznam bodů> )::
+  Vypočítá funkci ve tvaru stem:[ a b ^ x ] pro body v seznamu. (Velmi podobné příkazu
+  xref:/commands/RegreseExponencialni.adoc[RegreseExponencialni][ <Seznam bodů> ],  pouze v mírně odlišném tvaru).
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+[EXAMPLE]
+====
 
-|Some content was not yet translated.
-|===
+`++RegreseRustu({(0, 1), (2, 3), (4, 3), (6, 4)})++` dává _1.31_ stem:[ \cdot ] _1.23^x^_.
+
+====
+
+[NOTE]
+====
+
+* Můžete provést přímé proložení metodou nejmenších čtverců pomocí `++RegreseFunkce(list, a*b^x)++`
+* Viz také příkazy xref:/commands/RegreseFunkce.adoc[RegreseFunkce], xref:/commands/RegreseExponencialni.adoc[RegreseExponencialni], xref:/commands/Příkaz Regrese.adoc[Příkaz Regrese],
+xref:/commands/RegreseX.adoc[RegreseX], xref:/commands/RegreseLogaritmicka.adoc[RegreseLogaritmicka],
+xref:/commands/RegreseLogisticka.adoc[RegreseLogisticka], xref:/commands/RegresePolynomialni.adoc[RegresePolynomialni], xref:/commands/RegreseMocninna.adoc[RegreseMocninna]
+a xref:/commands/RegreseSin.adoc[RegreseSin]
+====
