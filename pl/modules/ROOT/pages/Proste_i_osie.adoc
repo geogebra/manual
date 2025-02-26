@@ -1,0 +1,53 @@
+= Proste i osie
+:page-en: Lines_and_Axes
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+== Proste
+
+Możesz utworzyć prostą wpisując równanie liniowe zmiennych _x_ i _y_ lub w formie parametrycznej w polu wprowadzania. 
+W obu przypadkach w równaniu można używać wcześniej zdefiniowanych obiektów (np. liczb, punktów, wektorów).
+
+[NOTE]
+====
+
+Możesz wprowadzić nazwę prostej wpisując ją przed równaniem uzupełnioną o dwukropek.
+
+====
+
+[EXAMPLE]
+====
+
+2D
+
+* Wpisz `++g: 3x + 4y = 2++`, aby utworzyć prostą _g_ za pomocą równania liniowego.
+* Możesz utworzyć prostą używając równania parametrycznego, np. `++g: X = (-5, 5) + t (4, -3)++`
+* Jeśli zdefiniujsze parametry _m_ = 2 i _b_ = -1, możesz wprowadzić równanie `++h: y = m*x + b++`, by otrzymać prostą _h_ 
+w postaci kierunkowej.
+
+====
+
+[EXAMPLE]
+====
+
+3D
+
+* Możesz wprowadzić prostą w postaci parametrycznej w następujący sposób:
+** `++g: X = (1, 6, 3) + λ (7, -4, 4)++` lub za pomocą polecenia
+** `++g: Prosta[(1, 6, 3), Wektor[(7, -4, 4)]]++`
+* Możesz wprowadzić prostą jako przecięcie dwóch płaszczyzn, używając jednego z trzech równoważnych sposobów:
+** `++PrzecięcieŚcieżek[4x+7y=46,y+z=9]++`
+** `++(4x + 7y = 46, y + z = 9)++`
+** `++7y = 46 - 4x = 7(9 - z)++`
+
+====
+
+== Osie
+
+Dwie osie współrzędnych są dostępne w poleceniach pod nazwami _OśX_ i _OśY_.
+
+[EXAMPLE]
+====
+
+Polecenie `++Prostopadła[A, OśX]++` tworzy prostą prostopadłą do osi X przechodzącą przez punkt A.
+
+====
