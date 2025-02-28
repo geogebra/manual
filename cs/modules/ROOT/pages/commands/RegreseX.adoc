@@ -3,11 +3,32 @@
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
 RegreseX( <Seznam bodů> )::
+  Vypočítá regresní přímku vyjadřující závislost _x_ na _y_ pro dané body.
+  
+[EXAMPLE]
+====
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+`++RegreseX({(-1, 3), (2, 1), (3, 4), (5, 3), (6, 5)})++` dává _1.1x - 0.1_.
 
-|Some content was not yet translated.
-|===
+====
+
+== CAS Syntax
+
+RegreseX( <Seznam bodů> )::
+  Vypočítá regresní přímku vyjadřující závislost _x_ na _y_ pro dané body.
+
+[EXAMPLE]
+====
+
+`++RegreseX({(-1, 3), (2, 1), (3, 4), (5, 3), (6, 5)})++` dává _1.1x - 0.1_.
+
+====
+
+[NOTE]
+====
+
+* Viz také nástroj image:24px-Mode_fitline.svg.png[Mode fitline.svg,width=24,height=24] xref:/tools/Lineární_regrese.adoc[Lineární regrese] a příkaz xref:/commands/Regrese.adoc[Regrese]
+* Pokud pracujete s velmi velkými nebo malými čísly, měli byste je normalizovat pro přesnější výsledek, viz příkaz
+xref:/commands/Normalizovat.adoc[Normalizovat].
+
+====
