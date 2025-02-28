@@ -3,20 +3,34 @@
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
 RegreseLogaritmicka( <Seznam bodů> )::
-  === CAS pohled
-  RegreseLogaritmicka( <Seznam bodů> );;
-  [width="100%",cols="50%,50%",]
-  |===
-  a|
-  image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+  Vypočítá logaritmickou regresní křivku.
 
-  |Some content was not yet translated.
-  |===
+[EXAMPLE]
+====
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+`++RegreseLogaritmicka({(ℯ, 1), (ℯ^2, 4)})++` dává _-2 + 3 ln(x)_.
 
-|Some content was not yet translated.
-|===
+====
+
+== CAS Syntax
+
+RegreseLogaritmicka( <Seznam bodů> )::
+  Vypočítá logaritmickou regresní křivku.
+
+[EXAMPLE]
+====
+
+`++RegreseLogaritmicka({(ℯ, 1), (ℯ^2, 4)})++` dává _3 ln(x) - 2_.
+
+====
+
+[NOTE]
+====
+
+* Eulerovo číslo ℯ lze napsat pomocí kláves [.kcode]#ALT# + [.kcode]#e#.
+* Viz také příkazy xref:/commands/RegreseExponencialni.adoc[RegreseExponencialni], xref:/commands/RegresePolynomialni.adoc[RegresePolynomialni],
+xref:/commands/RegreseMocninna.adoc[RegreseMocninna] a xref:/commands/RegreseSin.adoc[RegreseSin].
+* Pokud pracujete s velmi velkými nebo malými čísly, měli byste je normalizovat pro přesnější výsledek, viz příkaz
+xref:/commands/Normalizovat.adoc[Normalizovat].
+
+====
