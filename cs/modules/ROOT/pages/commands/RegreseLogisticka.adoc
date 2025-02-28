@@ -3,11 +3,24 @@
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
 RegreseLogisticka [ <Seznam bodů> ]::
+  Vypočítá regresní křivku ve tvaru stem:[\frac{a}{1+b e^{-kx}}].
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
 
-|Some content was not yet translated.
-|===
+[EXAMPLE]
+====
+
+`++RegreseLogisticka({(-6, 2), (0, 2), (3, 4), (3.4, 8)})++` dává stem:[ \frac{1.98}{1 - 0.03 e^{1x}}].
+
+====
+
+[NOTE]
+====
+
+* První a poslední bod by měl být poměrně blízko křivky. Seznam by měl obsahovat alespoň 3 body, ideálně více.
+* Viz také příkazy xref:/commands/RegreseFunkce.adoc[RegreseFunkce], xref:/commands/RegreseExponencialni.adoc[RegreseExponencialni], xref:/commands/RegreseRustu.adoc[RegreseRustu],
+xref:/commands/Regrese.adoc[Regrese], xref:/commands/RegreseX.adoc[RegreseX], xref:/commands/RegreseLogaritmicka.adoc[RegreseLogaritmicka],
+xref:/commands/RegresePolynomialni.adoc[RegresePolynomialni], xref:/commands/RegreseMocninna.adoc[RegreseMocninna] a xref:/commands/RegreseSin.adoc[RegreseSin].
+* Pokud pracujete s velmi velkými nebo malými čísly, měli byste je normalizovat pro přesnější výsledek, viz příkaz
+xref:/commands/Normalizovat.adoc[Normalizovat].
+
+====
