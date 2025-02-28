@@ -1,0 +1,17 @@
+= Polecenie OdwrotnyLogistyczny
+:page-en: commands/InverseLogistic
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+OdwrotnyLogistyczny( <Średnia>, <Skala>, <Prawdopodobieństwo> )::
+  Oblicza odwrotność dystrybuanty (CDF)
+  https://pl.wikipedia.org/wiki/Rozk%C5%82ad_logistyczny[rozkładu logistycznego] dla prawdopodobieństwa _p_, gdzie 
+  rozkład logistyczny jest określony przez podane parametry _średnia_ i _skala_.
+  Innymi słowy, znajduje wartość _t_ taką, że _P(X ≤ t) = p_, gdzie _X_ jest zmienną losową o rozkładzie logistycznym.
+  Prawdopodobieństwo _p_ musi być wartością z przedziału domkniętego [0,1].
+
+[EXAMPLE]
+====
+
+`++OdwrotnyLogistyczny(100, 2, 1)++` daje w wyniku _stem:[ \infty ]_.
+
+====
