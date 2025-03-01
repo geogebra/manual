@@ -3,20 +3,37 @@
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
 RegresePolynomialni [ <Seznam bodů>, <Stupeň polynomu> ]::
-  === CAS pohled
-  RegresePolynomialni [ <Seznam bodů>, <Stupeň polynomu> ];;
-  [width="100%",cols="50%,50%",]
-  |===
-  a|
-  image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+  Vypočítá polynomický regresní model daného _stupně_, který nejlépe prokládá zadané _body_.
 
-  |Some content was not yet translated.
-  |===
+[EXAMPLE]
+====
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+`++RegresePolynomialni({(-1, -1), (0, 1), (1, 1), (2, 5)}, 3)++` dává _f(x) = x^3^ - 1 x^2^ + 1_.
 
-|Some content was not yet translated.
-|===
+====
+
+RegresePolynomialni( <Funkce od ruky>, <Stupeň polynomu> )::
+  Vypočítá polynomický regresní model daného stupně, který odpovídá funkci nakreslené pomocí nástroje xref:/tools/Objekt_od_ruky.adoc[Objekt od ruky].
+
+[NOTE]
+====
+
+* Aby bylo možné získat polynom stupně _n_, musí seznam obsahovat alespoň _n_ + 1 bodů.
+* Viz také příkazy xref:/commands/RegreseExponencialni.adoc[RegreseExponencialni], xref:/commands/RegreseLogaritmicka.adoc[RegreseLogaritmicka],
+xref:/commands/RegreseMocninna.adoc[RegreseMocninna] a xref:/commands/RegreseSin.adoc[RegreseSin].
+* Pokud pracujete s velmi velkými nebo malými čísly, měli byste je normalizovat pro přesnější výsledek, viz příkaz
+xref:/commands/Normalizovat.adoc[Normalizovat].
+
+====
+
+== CAS Syntax
+
+RegresePolynomialni [ <Seznam bodů>, <Stupeň polynomu> ]::
+  Vypočítá polynomický regresní model daného _stupně_, který nejlépe prokládá zadané _body_.
+
+[EXAMPLE]
+====
+
+`++RegresePolynomialni({(-1, -1), (0, 1), (1, 1), (2, 5)}, 3)++` dává _x^3^ - x^2^ + 1_.
+
+====
