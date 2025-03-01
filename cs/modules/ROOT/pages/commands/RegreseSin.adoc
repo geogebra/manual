@@ -3,20 +3,22 @@
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
 RegreseSin( <Seznam bodů> )::
-  === CAS pohled
-  RegreseSin( <Seznam bodů> );;
-  [width="100%",cols="50%,50%",]
-  |===
-  a|
-  image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+  Vypočítá regresní křivku ve tvaru _a + b sin (c x + d)_. 
 
-  |Some content was not yet translated.
-  |===
+[EXAMPLE]
+====
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+`++RegreseSin({(1, 1), (2, 2), (3, 1), (4, 0), (5, 1), (6, 2)})++` dává _f(x) = 1 + 1 sin (1.57 x - 1.57)_.
 
-|Some content was not yet translated.
-|===
+====
+
+[NOTE]
+====
+
+* Seznam by měl obsahovat alespoň čtyři body, ideálně více. Měl by zahrnovat alespoň dva extrémní body. První dva lokální extrémní body by se neměly příliš lišit od globálních extrémních bodů křivky.
+* Viz také příkazy xref:/commands/RegreseExponencialni.adoc[RegreseExponencialni], xref:/commands/RegreseLogaritmicka.adoc[RegreseLogaritmicka],
+xref:/commands/RegresePolynomialni.adoc[RegresePolynomialni] a xref:/commands/RegreseMocninna.adoc[RegreseMocninna].
+* Pokud pracujete s velmi velkými nebo malými čísly, měli byste je normalizovat pro přesnější výsledek, viz příkaz
+xref:/commands/Normalizovat.adoc[Normalizovat].
+
+====
