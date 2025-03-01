@@ -2,21 +2,35 @@
 :page-en: commands/FitPow
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
-RegreseMocninna [ <Seznam bodů> ]::
-  === CAS pohled
-  RegreseMocninna [ <Seznam bodů> ];;
-  [width="100%",cols="50%,50%",]
-  |===
-  a|
-  image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+RegreseMocninna ( <Seznam bodů> )::
+ Vypočítá regresní křivku ve tvaru _a x^b^_.
 
-  |Some content was not yet translated.
-  |===
+[EXAMPLE]
+====
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+`++RegreseMocninna({(1, 1), (3, 2), (7, 4)})++` dává _f(x) = 0.97 x^0.71^_.
 
-|Some content was not yet translated.
-|===
+====
+
+== CAS Syntax
+
+RegreseMocninna ( <Seznam bodů> )::
+  Vypočítá regresní křivku ve tvaru _a x^b^_.
+
+[EXAMPLE]
+====
+
+`++RegreseMocninna({(1, 1), (3, 2), (7, 4)})++` dává _0.97 x^0.71^_.
+
+====
+
+[NOTE]
+====
+
+* Všechny použité body musí ležet v prvním kvadrantu souřadnicového systému.
+* Viz také příkazy xref:/commands/RegreseExponencialni.adoc[RegreseExponencialni], xref:/commands/RegreseLogaritmicka.adoc[RegreseLogaritmicka],
+xref:/commands/RegresePolynomialni.adoc[RegresePolynomialni] a xref:/commands/RegreseSin.adoc[RegreseSin].
+* Pokud pracujete s velmi velkými nebo malými čísly, měli byste je normalizovat pro přesnější výsledek, viz příkaz
+xref:/commands/Normalizovat.adoc[Normalizovat].
+
+====
