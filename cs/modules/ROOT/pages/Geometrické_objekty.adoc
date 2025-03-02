@@ -4,27 +4,27 @@ ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
 GeoGebra pracuje s mnoha typy geometrických objektů
 
-* xref:/s_index_php?title=Points_and_Vectors_action=edit_redlink=1.adoc[Body a vektory]
-* xref:/s_index_php?title=Lines_and_Axes_action=edit_redlink=1.adoc[Přímky a osy]
-* xref:/s_index_php?title=Conic_sections_action=edit_redlink=1.adoc[Kuželosečky]
-* xref:/s_index_php?title=Functions_action=edit_redlink=1.adoc[Funkce]
-* xref:/s_index_php?title=Curves_action=edit_redlink=1.adoc[Křivky]
-* xref:/s_index_php?title=Inequalities_action=edit_redlink=1.adoc[Nerovnice]
-* xref:/s_index_php?title=Intervals_action=edit_redlink=1.adoc[Intervaly]
+* xref:/Body_a_vektory.adoc[Body a vektory]
+* xref:/Přímky_a_osy.adoc[Přímky a osy]
+* xref:/Kuželosečky.adoc[Kuželosečky]
+* xref:/Funkce.adoc[Funkce]
+* xref:/Křivky.adoc[Křivky]
+* xref:/Nerovnice.adoc[Nerovnice]
+* xref:/Intervaly.adoc[Intervaly]
 
 == Cesty
 
-Některé z výše zmiňovaných objektů (přímky, kuželosečky, oblouky, mnohoúhelníky, funkce, nerovnosti jedné proměnné,
-intervaly, seznamy bodů) jsou nazývány _cesty_. Můžeme nastavit
-xref:/s_index_php?title=Points_and_Vectors_action=edit_redlink=1.adoc[bod] tak, aby náležel cestě (trajektorii) pomocí
-xref:/commands/Bod.adoc[Příkaz_Bod]. Každý bod na cestě má parametr cesty, což jsou čísla ze škály od 0 do 1. Abychom
-získali tento parametr, můžeme použít
-xref:/s_index_php?title=PathParameter_Command_action=edit_redlink=1.adoc[PathParameter Command].
+Některé z výše zmiňovaných objektů (přímky, kuželosečky, oblouky, mnohoúhelníky, funkce, nerovnice jedné proměnné,
+intervaly, seznamy bodů) můžou být používány jako tzv. _cesty_. Obecně, zadáme-li  bod v nákresně, můžeme s ním pohybovat všemi směry, zadáme-li ale bod na _cestě_, je nadále možné pohybovat bodem jen po této _cestě_. V jakékoliv poloze bude bod prvkem zvoleného objektu. Bod na _cestě_ zadáme nejjednodušejí přímo v nákresně nástrojem
+ image:24px-Mode_pointonobject.svg.png[Mode pointonobject.svg,width=24,height=24] xref:/tools/Bod_na_objektu.adoc[Bod na objektu], nebo pomocí příkazů xref:/commands/BodV.adoc[BodV] i 
+xref:/commands/Bod.adoc[Bod]. Zadáním volitelného _parametru cesty_  v intervalu [0,1] určíme barycentrické souřadnice bodu vzhledem k začátku a konci _cesty_, poté již ale nebude možné s bodem po cestě pohybovat. Aktuální hodnotu parametru cesty
+získáme příkazem xref:/commands/ParametrCesty.adoc[ParametrCesty].
 
 == Oblasti
 
-Bod můžeme připojit k _oblasti_ (mnohoúhelník, kuželosečka, oblouk, nerovnosti dvou proměnných) pomocí
-xref:/commands/BodV.adoc[Příkaz BodV] nebo xref:/tools/Bod_na_objektu.adoc[Nástroj Bod_na_objektu].
+Bod můžeme připojit k _oblasti_ (mnohoúhelník, kuželosečka, oblouk, nerovnosti dvou proměnných) pomocí příkazu
+xref:/commands/BodV.adoc[BodV] nebo image:24px-Mode_pointonobject.svg.png[Mode
+pointonobject.svg,width=24,height=24] xref:/tools/Bod_na_objektu.adoc[Nástroj Bod na objektu].
 
 
 
