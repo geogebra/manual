@@ -1,0 +1,81 @@
+= Nástroj Obrázek
+:page-en: tools/Image
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Tento nástroj umožňuje vložit obrázek na nákresnu. Po kliknutí na nástroj image:20px-Mode_image.svg.png[Mode image.svg,width=20,height=20] _Obrázek_ se zobrazí dialogové okno Otevřít, kde vybereme obrázek ze složek uložených v počítači. V mobilní a webové verzi je také možné importovat obrázky z fotoaparátu počítače nebo tabletu.
+
+Umístění obrázku zadáte jedním z následujících způsobů:
+
+* Kliknutím na nákresnu určíme umístění levého dolního rohu obrázku.
+* Kliknutím na bod určíme umístění levého dolního rohu obrázku.
+
+
+== Vlastnosti obrázků
+
+Umístění obrázku může být absolutní, tedy v mřížce nebo relativní v soustavě souřadné. To můžeme nastavit v záložce
+_Pozice_ dialogového okna  image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]xref:/Dialog_Vlastnosti.adoc[_Vlastnosti_] objektu obrázku.
+
+Můžeme specifikovat až tři rohové body obrázku v záložce Pozice v dialogu Vlastnosti. To nám umožňuje přizpůsobit
+měřítko a otáčet či dokonce deformovat obrázek (viz také příkaz
+xref:/command/RohovyBod.adoc[RohovyBod]).
+
+* Roh 1: pozice levého dolního rohu obrázku
+* Roh 2: pozice pravého dolního rohu obrázku
+
+* Roh 4: pozice levého horního rohu
+
+Obrázek můžeme nastavit také jako _Obrázek na pozadí_ v záložce
+_Základní_ dialogového okna  image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]xref:/Dialog_Vlastnosti.adoc[_Vlastnosti_] objektu obrázku. Obrázek na pozadí je umístěn za
+osami soustavy a nelze na něj kliknout myší.
+
+
+Abyste viděli objekty nebo osy, které se nacházejí za obrázkem, můžete změnit _Neprůhlednost_ obrázku: pomocí posuvníku zadejte hodnotu _Neprůhlednosti_ v rozmezí 0 až 100 na kartě _Barva_ okna
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Vlastnosti_ obrázku.
+
+[EXAMPLE]
+====
+
+Vytvoříme tři body A, B, a C a vyzkoušíme si možnosti rohových bodů.
+
+* Označme bod A jako první a roh B jako druhý roh našeho obrázku. Při pohybování body A a B v režimu
+image:Tool_Move.gif[Tool Move.gif,width=32,height=32] Ukazovátko můžeme vyzkoušet jejich efekt.
+* Nyní odstraníme bod B, tedy druhý roh obrázku. Označíme bod A jako první a bod C jako čtvrtý roh a vyzkoušíme, jak
+můžeme ovlivnit obrázek při pohybování jednotlivými body.
+* Nakonec můžeme označit všechny tři rohové body a pozorovat, jak se obrázek při pohybování body zdeformuje.
+
+====
+
+
+[EXAMPLE]
+====
+
+Už jsme viděli, jak ovlivnit pozici a velikost obrázku. Pokud chceme svůj obrázek připojit k bodu A a nastavit jeho
+šířku na 3 a výšku na 4 jednotky, můžeme postupovat takto:
+
+* Označte Roh 1 jako A
+* Označte Roh 2 jako A + (3, 0)
+* Označte Roh 4 jako A + (0, 4)
+
+====
+
+
+
+[NOTE]
+====
+
+Pokud nyní budeme pohybovat bodem A v režimu image:Tool_Move.gif[Tool Move.gif,width=32,height=32]xref:/Ukazovátko.adoc[_Ukazovátko_], velikost našeho obrázku se nezmění.
+
+====
+
+
+[NOTE]
+====
+
+Jsou podporovány průhledné soubory [https://en.wikipedia.org/wiki/Graphics_Interchange_Format[GIF]] a
+[https://en.wikipedia.org/wiki/Portable_Network_Graphics[PNG]] , ale u PNG souborů může být nutné je nejdříve upravit,
+protože používají alfa kanál (například použití v https://www.irfanview.com/[IrfanView]], uložíme pomocí PNGOUT pluginu
+a vybereme *RGB+Alpha*)
+
+====
+
+
