@@ -2,45 +2,63 @@
 :page-en: Curves
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
-V GeoGebře jsou dva typy křivek.
+Algebraické reprezentace křivek můžeme do  xref:/Vstupní_pole.adoc[vstupního
+pole] zadat parametricky i implicitně. Navíc, GeoGebra podporuje kartézskou i polární soustavu souřadnic. 
 
 == Parametrické křivky
 
-Parametrické křivky ve tvaru a(t)=(f(t),g(t)), kde _t_ je reálný parametr nabývající hodnot v určitém rozmezí, mohou být
-tvořeny pomocí xref:/commands/Krivka.adoc[příkazu Krivka]. Mohou být užívány v xref:/commands/Tecna.adoc[příkazu Tecna]
-a xref:/commands/Bod.adoc[příkazu Bod].
+Parametrické křivky ve tvaru _a(t)_ = _(f(t), g(t))_ , kde _t_ je reálný parametr nabývající hodnot v určitém rozmezí, můžeme zadat dvojím způsobem:
+
+* přikazem xref:/commands/Krivka.adoc[Krivka] nebo
+* zapsáním parametrického systému bodů  do _vstupního pole_, tj.`++(t^2,t^3)++`.
+
+Příkaz xref:/commands/Krivka.adoc[Krivka] umožňuje použití libovolného písmene jako parametru, stejně jako intervalu. Při vektorovém zápisu `++(t^2,t^3)++` musíme parametr označit písmenem `++t++`.
+
+Pro parametricky zadané křivky můžete použít následující  příkazy: xref:/commands/Tecna.adoc[Tecna],
+xref:/commands/Bod.adoc[Bod], xref:/commands/Prusecik.adoc[Prusecik], xref:/commands/Derivace.adoc[Derivace],
+xref:/commands/Length.adoc[Delka], xref:/commands/Krivost.adoc[Krivost],
+xref:/commands/VektorKrivosti.adoc[VektorKrivosti] a xref:/commands/OskulacniKruznice.adoc[OskulacniKruznice].
 
 Vytvořit parametrickou křivku procházející danými body není možné. Můžeme ale zkusit např. příkaz
 xref:/commands/RegresePolynomialni.adoc[RegresePolynomialni], abychom získali funkci procházející těmito body.
 
-== Implicitní křivky
-
-Implicitní křivky jsou polynomy s proměnnými _x_ a _y_. Mohou být zadávány přímo do xref:/Vstupní_pole.adoc[vstupního
-pole].
-
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
-
-|Some content was not yet translated.
-|===
-
-[EXAMPLE]
-====
-
-x^4+y^3=2x*y
-
-====
 
 [NOTE]
 ====
 
-* Parametrické křivky mohou být používány s předem definovanými funkcemi a aritmetickými operacemi. Například zadáme-li
-`++c(3)++`, dostaneme bod na parametrické pozici 3 na křivce _c_.
+* Parametrické křivky mohou být používány s předem definovanými funkcemi a aritmetickými operacemi. Například příkaz `++c=krivka(1+t,t^2, t,-1,1) ++`
+vykreslí část paraboly od bodu _c_(-1) = (0, 1) do bodu _c_(1) = (2, 1). Zadáme-li do _vstupního pole_
+`++c(3)++`, dostaneme bod _c_(3) = (4, 9) na křivce _c_.
 * Pomocí myši můžeme také umístit bod na křivku pomocí nástroje image:Tool_New_Point.gif[Tool New
 Point.gif,width=32,height=32] xref:/tools/Nový_bod.adoc[Nový bod] nebo příkazu xref:/commands/Bod.adoc[Bod]. Protože
 jsou konečné body _a_ a _b_ dynamické, můžeme použít i posuvník (viz nástroj image:Tool_Slider.gif[Tool
 Slider.gif,width=32,height=32] xref:/tools/Posuvník.adoc[Posuvník]).
 
 ====
+
+== Implicitní křivky
+
+Implicitní křivky jsou polynomy s proměnnými _x_ a _y_. Mohou být zadávány přímo do xref:/Vstupní_pole.adoc[vstupního
+pole]. Příkaz xref:/commands/ImplicitniKrivka.adoc[ImplicitniKrivka] navíc umožňuje interpolaci stem:[\frac{n(n+3)}2] implicitně zadanou algebraickou křivkou stupně stem:[n].
+
+
+[EXAMPLE]
+====
+
+`++x^4 + y^3 = 2xy++`
+
+====
+
+== Křivky v polárních souřadnicích
+
+Pro zadání křivky xref:/https://en.wikipedia.org/wiki/Quadrifolium[quadrifolium] v polárních souřadnicích můžeme použít jeden z následujících(ekvivalentních) zápisů:
+
+
+[EXAMPLE]
+====
+
+`++ρ=sin(2 θ)++`, nebo `++sin(2 θ)++`, nebo `++f(t)=(sin(2*t); t)++`, nebo `++(sin(2*t); t)++`, nebo
+`++f(t)=(sin(2*t); t), 0< t < pi++`, nebo `++(sin(2*t); t), 0 < t < pi++`, nebo `++Krivka[(sin(2*t); t), t, 0, 2pi]++`.
+
+====
+
