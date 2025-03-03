@@ -27,8 +27,7 @@ Normal( <Mean>, <Standard Deviation>, <Variable Value>, <Boolean Cumulative> )::
   If _Cumulative = true_, evaluates the cumulative distribution function of a https://en.wikipedia.org/wiki/Normal_distribution[normal distribution] with given _mean_ and _standard deviation_ at the given _variable value_, otherwise it evaluates the probability density function of the distribution at _variable value_.
 
 Normal( <Mean>, <Standard Deviation>, <Variable Value u> , <Variable Value v>)::
- Computes the probability of normal random variable with given mean and standard deviation being in interval [u,v], in other words 
- `Normal(m,s,u,v) == Normal(m,s,v,true)-Normal(m,s,u,true)` 
+ Computes the probability of a normal random variable in the interval [_u_, _v_], given the mean and the standard deviation. In other words, this command syntax is equivalent to calculating `Normal(m,s,u,v) == Normal(m,s,v,true)-Normal(m,s,u,true)` 
 
 Normal( <Mean>, <Standard Deviation>, x, <Boolean Cumulative> )::
  If _Cumulative = true_, creates the cumulative density function (cdf) of a normal distribution with given _mean_ and _standard deviation_, otherwise it creates the probability density function (pdf) of the distribution.
