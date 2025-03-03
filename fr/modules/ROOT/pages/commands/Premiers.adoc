@@ -10,16 +10,12 @@ Premiers(<Liste>)::
 [EXAMPLE]
 ====
 
-`++Premiers({1,2,3})++` donne _\{1}_.
-
-====
-
-[NOTE]
-====
+`++Premiers({1,2,3})++` retourne _{1}_.
 
 Pour obtenir le premier élément lui-même,utilisez par ex. la commande xref:/commands/Elément.adoc[Elément].
-
 ====
+
+
 
 Premiers(<Liste>,<Nombre n>)::
   Retourne la liste contenant uniquement les _n_ premiers éléments de _Liste_.
@@ -27,20 +23,25 @@ Premiers(<Liste>,<Nombre n>)::
 [EXAMPLE]
 ====
 
-`++Premiers({1,2,3},2)++` donne _{1,2}_.
+`++Premiers({1,2,3},2)++` retourne _{1,2}_.
 
 ====
 
 Premiers( <Texte> )::
   Retourne le premier caractère du _Texte_.
+[EXAMPLE]
+====
 
+`++Premiers("Bonjour")++` retourne _"B"_ .
+
+====
 Premiers( <Texte> , <Nombre n > )::
   Retourne les _n_ premiers caractères du _Texte_.
 
 [EXAMPLE]
 ====
 
-`++Premiers("Hello",2)++` donne _"He"_ .
+`++Premiers("Bonjour",2)++` retourne _"Bo"_ .
 
 ====
 
@@ -69,7 +70,7 @@ avec la possibilité de travailler en littéral,
 ====
 si "a", "b", "c", "d" et "e" ne sont pas définies dans GeoGebra, :
 
-`++Premiers({a, b, c, d, e},3)++` donne _{a, b, c}_ .
+`++Premiers({a, b, c, d, e},3)++` retourne _{a, b, c}_ .
 
 ====
 
