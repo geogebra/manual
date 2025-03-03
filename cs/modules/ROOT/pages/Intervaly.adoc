@@ -1,0 +1,24 @@
+= Intervaly
+:page-en: Intervals
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Interval je množina reálných čísel, které leží mezi dvěma určenými čísly, která se označují jako meze intervalu. 
+Chcete-li vytvořit interval, zadejte např. `++2 < x < 3++` do  xref:/Vstupní_pole.adoc[_Vstupního pole_]. Interval v předchozím příkladu je otevřený, to znamená, že neobsahuje své meze 2 a 3. 
+Obdobně zadáváme uzavřené (`++2 ≤ x ≤ 3++`) a polouzavřené (`++2 ≤ x < 3++`) intervaly.
+
+
+[NOTE]
+====
+
+Viz  xref:/Booleovské_hodnoty.adoc[Booleovské hodnoty].
+
+====
+
+Pro zjištění, zda číslo _c_ patří do intervalu _r_ zapište do _vstupního pole_ `++r(c)++`. Výsledkem bude Booleovská hodnota. Zobecněním intervalů jsou xref:/Nerovnice.adoc[nerovnice].
+
+== Příkazy pro intervaly
+
+* Příkazy xref:/commands/Min.adoc[Min], xref:/commands/Max.adoc[Max], xref:/commands/Stred.adoc[Stred] vrací pro interval _[a,b]_
+čísla _a_, _b_ a střed stem:[\frac{a+b}2]. Stejný výsledek dostaneme pro otevřené i polouzavřené intervaly (infimum, resp. supremum).
+* Příkaz xref:/commands/Bod.adoc[Bod] vytvoří pohyblivý xref:/Body_a_vektory.adoc[bod], jehož souřadnice _x_ náleží intervalu a souřadnice _y_ je 0.
+* xref:/commands/BodV.adoc[BodV] vytvoří bod, jehož souřadnice _x_ náleží intervalu, zatímco souřadnici _y_ můžeme libovolně měnit.
