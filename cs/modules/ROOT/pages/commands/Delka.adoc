@@ -10,14 +10,14 @@ Delka( <Objekt> )::
 
 * `++Delka( <Vektor> )++` vypočíta velikost vektoru.
 * `++Delka( <Bod> )++` vypočítá velikost polohového bodu vektoru, tedy eukleidovskou vzdálenost bodu od počátku.
-* `++Delka( <Seznam> )++` vrátí délku seznamu, tj. počet jeho prvků
-* `++Delka( <Text> )++` počet znaků v textu
+* `++Delka( <Seznam> )++` vrátí délku seznamu, tj. počet jeho prvků.
+* `++Delka( <Text> )++` počet znaků v textu.
 * `++Delka( <Množina bodů> )++` vrátí aktuální počet bodů, jimiž je určeno geometrické místo bodů. Množina bodů může být např. trajektorie zvoleného bodu při změně posuvníku. Počet bodů je závislý na měřítku nákresny, použitím nástrojů _Zvětšit/Zmenšit_ se změní. Pro určení délky křivky vyzkoušejte příkaz xref:/commands/Obvod.adoc[Obvod].
 * `++Delka( <Kruhový Oblouk> )++` vypočítá délku kruhového oblouku, tj. přímo hodnotu, kterou je oblouk reprezentován v _Algebraickém okně_.
 
 ====
 
-Delka( <Funkce>, <Počáteční hodnota x>, <Koncová hodnota y> )::
+Delka( <Funkce>, <Počáteční hodnota x>, <Koncová hodnota x> )::
   Vypočítá délku křivky, která je částí grafu funkce.
 
 [EXAMPLE]
@@ -37,162 +37,39 @@ Pokud dané body neleží na grafu funkce, jsou por určení intervalu použité
 
 ====
 
-Delka( <Krivka>, <Počáteční hodnota parametru>, <Koncová hodnota parametru> )::
-  Yields the length of the curve between the two values *of the parameter*.
-Length( <Curve>, <Start Point>, <End Point> )::
-  Yields the length of the curve between the two points that lie on the curve.
+Delka( <Křivka>, <Počáteční hodnota parametru>, <Koncová hodnota parametru> )::
+  Délka křivky odpovídající zadanému intervalu *parametru*.
+Delka( <Křivka>, <Počáteční bod>, <Koncový bod> )::
+  Délka oblouku křivky mezi dvěma body.
 
 
 
-== CAS Syntax
+== CAS Syntaxe
 
-Length( <Function>, <Start x-Value>, <End x-Value> )::
+Delka( <Funkce>, <Počáteční hodnota x>, <Koncová hodnota x> )::
   Calculates the length of a function graph between the two points.
 
 [EXAMPLE]
 ====
 
-`++Length(2 x, 0, 1)++` yields stem:[\sqrt{5}].
+`++Delka(2 x, 0, 1)++` dává stem:[\sqrt{5}].
 
 ====
 
-Length( <Function>, <Variable>, <Start x-Value>, <End x-Value> )::
+Delka( <Function>, <Variable>, <Start x-Value>, <End x-Value> )::
   Calculates the length of a function graph from _Start x-value_ to _End x-value_.
 
 [EXAMPLE]
 ====
 
-`++Length(2 a, a,  0, 1)++` yields stem:[\sqrt{5}].
+`++Delka(2 a, a,  0, 1)++` yields stem:[\sqrt{5}].
 
 ====
 
 [NOTE]
 ====
 
-See also image:22px-Mode_distance.svg.png[Mode distance.svg,width=22,height=22]
-xref:/tools/Distance_or_Length.adoc[Distance or Length] tool.
-
-====
-
-
-Delka( <Vektor> )
-
-Dostaneme délku vektoru.
-
-Delka( <Bod> )
-
-Dostaneme délku polohového vektoru daného bodu .
-
-Delka( <Funkce>, <Počáteční hodnota x>, <Koncová hodnota x> )
-
-Dostaneme délku grafu funkce na intervalu [_x1, x2_].
-
-Delka( <Funkce>, <Počáteční Bod>, <Koncový Bod> )
-
-Dostaneme délku grafu funkce mezi body _A_ a _B_.
-
-Delka( <Křivka>, <Počáteční hodnota x>, <Koncová hodnota x> )
-
-Dostaneme délku křivky mezi hodnotami parametru _t1_ a _t2_.
-
-Delka( <Křivka>, <Počáteční Bod>, <Koncový Bod> )
-
-Dostaneme délku křivky _c_ mezi body _A_ a _B_ , které na křivce leží.
-
-Delka( <Seznam> )
-
-Dostaneme délku seznamu, což je počet prvků na seznamu.
-
-Delka( <Text> )
-
-Dostaneme počet znaků daného textu.
-
-Delka( <Místo> )
-
-Dostaneme počet bodů, které tvoří dané místo. Pro skutečnou délku místa používáme příkaz
-xref:/s_index_php?title=Perimeter_Command_action=edit_redlink=1.adoc[Perimeter][Locus]. Viz také článek o
-xref:/s_index_php?title=First_Command_action=edit_redlink=1.adoc[First Command].
-
-== CAS pohled
-
-Delka( <Funkce>, <Počátek-x>, <Konec-x> )::
-  Vypočítá délku grafu funkce od bodu x=__t1__ k bodu x=__t2__.
-Delka( <Funkce>, <Proměnná>, <Počáteční Bod>, <Koncový Bod> )::
-  Vypočítá délku grafu od bodu a=__t1__ k bodu a=__t2__.
-Delka( <Křivka>, <Počátek-x>, <Konec-x> )::
-  Delka( <Křivka>, <Proměnná>, <Počáteční Bod>, <Koncový Bod> );;
-  [width="100%",cols="50%,50%",]
-  |===
-  a|
-  image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
-
-  |Some content was not yet translated.
-  |===
-
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
-
-|Some content was not yet translated.
-|===
-
-[EXAMPLE]
-====
-
-`++Delka[2 a, a,  0, 1]++` dostaneme stem:[\sqrt{5}].
-
-====
-
-[EXAMPLE]
-====
-
-`++Delka[2 x, 0, 1]++` dostaneme stem:[\sqrt{5}].
-
-====
-
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:Ambox_content.png[image,width=40,height=40]
-
-a|
-Následující text pojednává o vlastnosti, která je podporována pouze v
-/s_index_php?title=En:Release_Notes_GeoGebra_4_2_action=edit_redlink=1.adoc[GeoGebra 4.2 Beta].
-
-'''''
-
-Delka( <Oblouk> )::
-  Dostaneme *délku oblouku* (t.j. pouze délku zahnuté části) oblouku nebo výseče.
-
-|===
-
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
-
-|Some content was not yet translated.
-|===
-
-[EXAMPLE]
-====
-
-`++Delka[2x, 0, 1]++` dostaneme 2.23606797749979, přibližně stem:[\sqrt{5}].
-
-====
-
-[NOTE]
-====
-
-Viz také nástroj image:Tool_Distance.gif[Tool Distance.gif,width=32,height=32]
-xref:/s_index_php?title=Distance_or_Length_Tool_action=edit_redlink=1.adoc[Distance or Length] .
-
-====
-
-[NOTE]
-====
-
-Pokud dané body neleží na grafu funkce, je interval určen jejich x-ovými souřadnicemi.
+viz také nástroj image:22px-Mode_distance.svg.png[Mode distance.svg,width=22,height=22]
+xref:/tools/Vzdálenost.adoc[Vzdálenost].
 
 ====
