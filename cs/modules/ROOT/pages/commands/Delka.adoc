@@ -2,6 +2,79 @@
 :page-en: commands/Length
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
+Delka( <Objekt> )::
+  Vypočítá délku objektu. Objektem může být vektor, křivka, graf funkce, text nebo seznam.
+
+[EXAMPLE]
+====
+
+* `++Delka( <Vektor> )++` vypočíta velikost vektoru.
+* `++Delka( <Bod> )++` vypočítá velikost polohového bodu vektoru, tedy eukleidovskou vzdálenost bodu od počátku.
+* `++Delka( <Seznam> )++` vrátí délku seznamu, tj. počet jeho prvků
+* `++Delka( <Text> )++` počet znaků v textu
+* `++Delka( <Množina bodů> )++` vrátí aktuální počet bodů, jimiž je určeno geometrické místo bodů. Množina bodů může být např. trajektorie zvoleného bodu při změně posuvníku. Počet bodů je závislý na měřítku nákresny, použitím nástrojů _Zvětšit/Zmenšit_ se změní. Pro určení délky křivky vyzkoušejte příkaz xref:/commands/Obvod.adoc[Obvod].
+* `++Delka( <Kruhový Oblouk> )++` vypočítá délku kruhového oblouku, tj. přímo hodnotu, kterou je oblouk reprezentován v _Algebraickém okně_.
+
+====
+
+Delka( <Funkce>, <Počáteční hodnota x>, <Koncová hodnota y> )::
+  Vypočítá délku křivky, která je částí grafu funkce.
+
+[EXAMPLE]
+====
+
+`++Delka(2x, 0, 1)++` vrátí _2.236067977_, tj. přeponu _c_ v pravoúhlém trojúhelníku s odvěsnami 2 a 1 stem:[c=\sqrt{5}].
+
+====
+
+Delka( <Funkce>, <Počáteční bod>, <Koncový bod> )::
+  Délka grafu funkce mezi dvěma body.
+
+[NOTE]
+====
+
+Pokud dané body neleží na grafu funkce, jsou por určení intervalu použité jejich _x_-ové souřadnice.
+
+====
+
+Delka( <Krivka>, <Počáteční hodnota parametru>, <Koncová hodnota parametru> )::
+  Yields the length of the curve between the two values *of the parameter*.
+Length( <Curve>, <Start Point>, <End Point> )::
+  Yields the length of the curve between the two points that lie on the curve.
+
+
+
+== CAS Syntax
+
+Length( <Function>, <Start x-Value>, <End x-Value> )::
+  Calculates the length of a function graph between the two points.
+
+[EXAMPLE]
+====
+
+`++Length(2 x, 0, 1)++` yields stem:[\sqrt{5}].
+
+====
+
+Length( <Function>, <Variable>, <Start x-Value>, <End x-Value> )::
+  Calculates the length of a function graph from _Start x-value_ to _End x-value_.
+
+[EXAMPLE]
+====
+
+`++Length(2 a, a,  0, 1)++` yields stem:[\sqrt{5}].
+
+====
+
+[NOTE]
+====
+
+See also image:22px-Mode_distance.svg.png[Mode distance.svg,width=22,height=22]
+xref:/tools/Distance_or_Length.adoc[Distance or Length] tool.
+
+====
+
+
 Delka( <Vektor> )
 
 Dostaneme délku vektoru.
