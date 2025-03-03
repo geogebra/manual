@@ -1,0 +1,51 @@
+= Booleovské hodnoty
+:page-en: Boolean_values
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+V programu GeoGebra můžete používat booleovské proměnné _true_ a _false_. Stačí napsat například `++a = true++` nebo
+`++b = false++` do xref:/Vstupní_pole.adoc[vstupního pole] a stisknout klávesu [.kcode]#Enter#. U logických proměnných
+můžete např. definovat xref:/Podmíněná_viditelnost.adoc[podmíněnou viditelnost] objektu.
+
+
+== Zaškrtávací políčko (check box)
+
+Volné booleovské proměnné je možné použít jako zaškrtávací políčka v image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Nákresna.adoc[Nákresně] (viz nástroj
+image:22px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=22,height=22]xref:/tools/Zaškrtávací_políčko_pro_zobrazení_skrytí_objektu.adoc[Zaškrtávací políčko]). 
+
+Hodnoty booleovských proměnných můžeme měnit šipkami z klávesnice. Nejprve vyberte booleovskou proměnnou v image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/Algebra_View.adoc[algebraickém okně] a potom použijte šipky pro změnu hodnoty proměnné (viz xref:/Animace.adoc[Animace]).
+
+[NOTE]
+====
+Booleovskou proměnnou můžete zadat i jako čísla (hodnota 0 nebo 1). Díky tomuto zadání lze použít zaškrtávací políčko jako dynamickou rychlost animovaného posuvníku, který spustí a zastavit animaci. V tomto případě se tlačítko animace zobrazí pouze v image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Nákresně_, pokud je zde i 
+animovaný posuvník se statickou (tj. nedynamickou) rychlostí.
+
+====
+
+== Operace
+
+Pro logické proměnné a podmínky můžete v programu GeoGebra použít následující operace, a to buď výběrem z nabídky.
+ze seznamu vedle vstupního panelu nebo je zadáte pomocí klávesnice:
+
+[cols=",,,,",options="header",]
+|===
+|Operace |Symbol |Klávesnice |Příklad |Typ objektu
+|Rovnost |≟ |== |a ≟ b or a == b |čísla, body, přímky, kuželosečky, funkce (CAS), roviny
+|Nerovnost |≠ |!= |a ≠ b or a != b |body, přímky, kuželosečky, funkce (CAS), roviny
+|Menší než | |< |a < b |čísla a, b
+|Věší než | |> |a > b |čísla a, b
+|Menší nebo rovno |≤ |<= |a ≤ b or a <= b |čísla a, b
+|Větší nebo rovno |≥ |>= |a ≥ b or a >= b |čísla a, b
+|AND |∧ |&& |a ∧ b or a && b |booleovské proměnné a, b
+|OR |∨ | \|\| |a ∨ b or a \|\| b |booleovské proměnné a, b
+|Not |¬ |! |¬a or !a |booleovská proměnná a
+|Exclusive or | |[.kcode]##Alt##[.kcode]##+## |a ⊕ b |booleovské proměnné a, b
+|Implikace |→ |-> |a -> b |booleovské proměnné a, b
+|Rovnoběžnost |∥ | |a ∥ b |přímky a, b
+|Kolmost |⊥ | |a ⊥ b |přímky a, b
+|Náležet |∈ | |a ∈ list1 |číslo a, seznam čísel list1
+|Podmnožina |⊆ | |list1 ⊆ list2 |seznamy list1 a list2
+|Vlastní podmnožina |⊂ | |list1 ⊂ list2 |seznamy list1 a list2
+|===
+
