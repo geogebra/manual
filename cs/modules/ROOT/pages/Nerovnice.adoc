@@ -1,0 +1,23 @@
+= Nerovnice
+:page-en: Inequalities
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+GeoGebra podporuje nerovnice jedné nebo dvou proměnných. Neexistují omezení pro zadání nerovnic
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] xref:/Algebraické_okno.adoc[Algebraickém okně],
+ale v image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]xref:/Nákresna.adoc[Nákresně] lze vykreslit pouze některé typy nerovnic:
+
+
+* polynomiální nerovnice jedné proměnné, např. _x^3 > x + 1_ nebo _y^2>y_,
+* kvadratické nerovnice dvou proměnných, např. _x^2 + y^2 + x*y ≤ 4_,
+* nerovnice lineární v alespoň jedné proměnné, např. _2x > sin(y)_ nebo _y < sqrt(x)_.
+
+Jsou podporovány symboly ostré i neostré nerovnosti <, >, ≤, ≥, <= a =>, je možné zadat i konjunkci (logické "a") a disjunkci (logické "nebo"), např. _(x>y)&&(x+y<3)_.
+
+Pro zobrazení intervalů řešení nerovnice jen na  souřadnicové ose _x_ namísto rovinné oblasti, zaškrtněte  _Zobrazit na ose x_
+v záložce _Styl_ dialogového okna image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Dialog_Vlastnosti.adoc[_Vlastnosti_] pro danou nerovnici. (Tento nástroj nefunguje pro všechny typy nerovnic.)
+
+Do nerovnic můžeme dosazovat podobně jako do funkcí. Zkoušku, zda hodnoty _x_ a _y_ vyhovují dané nerovnici _a_ provedeme zápisem `++a(x,y)++` do
+xref:/Vstupní_pole.adoc[_Vstupního pole_], pokud _A_ je bod, můžeme použít syntaxi `++a(A)++`. 
+
+Oblast řešení nerovnice je geometrický objekt, můžeme zadat obecný dynamický bod, který se bude pohybovat jen v této oblasti pomocí nástroje nebo příkazu
+ xref:/commands/BodV.adoc[BodV]. Například, pro nerovnici _b_ v proměnné _x_, vytvoří příkaz `++Bod(b)++` na ose _x_ bod, kterým je možné pohybovat jen v intervalu řešení nerovnice _b_.
