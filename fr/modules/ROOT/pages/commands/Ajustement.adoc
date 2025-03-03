@@ -9,10 +9,10 @@ Ajustement( <Liste Points>, <Liste Fonctions> )::
 
 [EXAMPLE]
 ====
+* `++ Ajustement({(-2, 3), (0, 1), (2, 1), (2, 3)}, {x^2, x})++` retourne _0.625x² - 0.25x_ (Option : 3 décimales).
 
-Avec _L={A,B,C,...}, f(x)=1, g(x)=x, h(x)=e^x, F={f,g,h}_
-
-la commande `++ Ajustement(L,F)++` recherche une fonction sous la forme _a + b x + c e^x^_ pour les points de la liste.
+* Avec _L={A,B,C,...}, f(x)=1, g(x)=x, h(x)=e^x, F={f,g,h}_,
+la commande `++Ajustement(L,F)++` recherche une fonction sous la forme _a + b x + c e^x^_ pour les points de la liste.
 
 ====
 
@@ -20,6 +20,11 @@ Ajustement( <Liste Points>, <Fonction> )::
   Recherche une fonction par la méthode des moindres carrés pour les points de la liste. La fonction doit dépendre de un
   ou plusieurs curseurs, ils seront utilisés comme valeur de départ du paramètre à optimiser. L'itération non-linéaire
   peut ne pas converger, mais un ajustement des curseurs pour un meilleur point de départ peut l'y aider.
+[EXAMPLE]
+====
+Soit un curseur _a_ de -5 à 5 avec 1 comme incrément. `++ Ajustement({(-2, 3), (0, 1), (2, 1), (2, 3)}, a + x^2)++` retourne _-1 + x²_.
+====
+
 
 [width=100%, cols="50%,50%", options= "header"]
 
