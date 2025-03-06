@@ -28,6 +28,21 @@ Validez dans le champ de saisie `++LateX[{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}]++` .
 
 ====
 
+== Accéder aux termes d'une matrice.
+
+Pour accéder à un terme particulier d'une matrice vous pouvez utiliser la commande xref:/commands/Elément.adoc[Elément] ou une syntaxe simplifiée comme présenté dans l'exemple ci-dessous :
+
+[EXAMPLE]
+====
+
+Soit la matrice `++M={{1, 2}, {3, 4}}++`, alors :
+
+* `++M(1, 1) ++` retourne le premier élément de la première ligne : _1_
+* `++M(2, 2)++`, `++M(-1,2)++`, `++M(2,-1) ++` et `++M(-1,-1) ++` retournent toutes le second élément de la seconde ligne : _4_.
+* En général, `++M(i, j) ++`, où _i_ et _j_ sont des entiers, retourne l'élément de la matrice en stem:[i^{ème}] ligne et  stem:[j^{ème}] colonne.
+
+====
+
 == Opérations sur les matrices
 
 === Addition et soustraction :
@@ -109,12 +124,12 @@ stem:[\begin{pmatrix}-1&-6&5\\-1&7&0\\-6&6&7\\ \end{pmatrix} ]
 
 voir aussi la section xref:/commands/Commandes_Vecteurs_et_Matrices.adoc[Commandes Vecteurs_et_Matrices]
 
-* xref:/commands/Déterminant.adoc[Déterminant][Matrice]: Calcule le déterminant de la matrice donnée ;
-* xref:/commands/Inverser.adoc[Inverser][Matrice]: Inverse la matrice donnée ;
-* xref:/commands/Transposer.adoc[Transposer][Matrice]: Transpose la matrice donnée ;
-* xref:/commands/AppliquerMatrice.adoc[AppliquerMatrice][Matrice,Objet]: Applique la transformation affine associée à la
+* xref:/commands/Déterminant.adoc[Déterminant](Matrice) : Calcule le déterminant de la matrice donnée ;
+* xref:/commands/Inverser.adoc[Inverser](Matrice) : Inverse la matrice donnée ;
+* xref:/commands/Transposer.adoc[Transposer](Matrice) : Transpose la matrice donnée ;
+* xref:/commands/AppliquerMatrice.adoc[AppliquerMatrice](Matrice,Objet) : Applique la transformation affine associée à la
 matrice donnée à l'objet ;
-* xref:/commands/MatriceEchelonnéeRéduite.adoc[MatriceEchelonnéeRéduite][Matrice]: Convertit la matrice donnée en une
+* xref:/commands/MatriceEchelonnéeRéduite.adoc[MatriceEchelonnéeRéduite](Matrice): Convertit la matrice donnée en une
 matrice échelonnée réduite.
 
 == Interaction image:20px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=20,height=20]Algèbre <=> image:20px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=20,height=20]Tableur
