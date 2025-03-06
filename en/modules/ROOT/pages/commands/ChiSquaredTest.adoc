@@ -21,9 +21,8 @@ Results are returned in list form as _{Probability value, chi-squared test stati
 ChiSquaredTest( <Observed List>, <Expected List> )::
   Performs a https://en.wikipedia.org/wiki/Goodness_of_fit[Goodness of Fit test] that compares the given list of observed
   counts against the given list of expected counts. To compute the probability, _n_-1 degrees of freedom are assumed,
-  where _n_ is the number of elements in each list.
+  where _n_ is the number of elements in each list. For lists of different sizes the result is undefined.
   Results are returned in list form as _{Probability value, chi-squared test statistic}_.
-  For lists of different sizes the result is undefined.
 
 [EXAMPLE]
 ====
@@ -35,9 +34,8 @@ ChiSquaredTest( <Observed List>, <Expected List> )::
 ChiSquaredTest( <Observed Matrix>, <Expected Matrix> )::
   Performs a https://en.wikipedia.org/wiki/Chi-squared_test[chi-squared test] that compares the given matrix of observed
   counts against the given matrix of expected counts. To compute the probability, stem:[(r-1)\cdot(c-1)] degrees of freedom are assumed,
-  where _r_ and _c_ are the number of rows and columns in each matric.
+  where _r_ and _c_ are the number of rows and columns in each matrix. For matrices of different size the result is undefined.
   Results are returned in list form as _{Probability value, chi-squared test statistic}_.
-  For matrices of different size the result is undefined.
 
 [EXAMPLE]
 ====
@@ -52,8 +50,9 @@ ChiSquaredTest( <List>, <List>, <Degrees of Freedom> )
   Results are returned in list form as _{Probability value, chi-squared test statistic}_.
   For lists of different sizes the result is undefined.
 
-ChiSquaredTest( <Matrix>, <Matrix>, <Degrees of Freedom> )
-  Performs a https://en.wikipedia.org/wiki/Chi-squared_test[chi-squared test] that compares the given matrix of observed
-  counts against the given matrix of expected counts, using a specific number of degrees of freedom.
-  Results are returned in list form as _{Probability value, chi-squared test statistic}_.
-  For matrices of different size the result is undefined.
+[EXAMPLE]
+====
+
+`++ChiSquaredTest({1, 2, 3, 4}, {3, 2, 4, 2}, 2)++` yields _{0.17, 3.58}_.
+
+====
