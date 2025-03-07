@@ -1,0 +1,20 @@
+= Polecenie OdwrotnyNormalny
+:page-en: commands/InverseNormal
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+OdwrotnyNormalny( <Średnia>, <Odchylenie Standardowe>, <Prawdopodobieństwo> )::
+  Oblicza wartość wyrażenia stem:[\Phi^{-1}(P) \cdot \sigma + \mu ] dla podanego prawdopodobieństwa _P_, gdzie stem:[\Phi^{-1}] to funkcja odwrotna dystrybuanty _Φ_ dla rozkładu normalnego _N(0,1)_, zdefiniowanego przez podane parametry: _średnia_ i _odchylenie standardowe_.
+
+[NOTE]
+====
+
+Zwraca współrzędną x punktu, dla którego dana wartość prawdopodobieństwa (pole powierzchni) znajduje się po lewej stronie pod krzywą rozkładu normalnego.
+
+====
+
+[EXAMPLE]
+====
+
+`++OdwrotnyNormalny(50, 2, 0.9)++` daje w wyniku 52.56, co oznacza 90. percentyl rozkładu normalnego o średniej 50 i odchyleniu standardowym 2.
+
+====
