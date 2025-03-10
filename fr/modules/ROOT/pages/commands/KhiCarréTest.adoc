@@ -23,8 +23,12 @@ Les résultats sont transmis sous forme d'une liste : _{ https://fr.wikipedia.o
 
 KhiCarréTest( <Liste des valeurs observées>, <Liste des valeurs attendues> )::
   Réalise un test de qualité de l'ajustement qui compare la liste donnée des valeurs observées à la liste des valeurs
-  attendues.
-  Les résultats sont transmis sous forme d'une liste : _{Probabilité, statistique test KhiCarré}_.
+  attendues. Pour calculer la probabilité, on suppose n-1 degrés de liberté, où _n_ est le nombre d'éléments dans chaque liste.
+
+Pour des listes de tailles différentes, le résultat est _indéfini_ (retourne ?).
+
+Les résultats sont transmis sous forme d'une liste : _{Probabilité, statistique test KhiCarré}_.
+
 [EXAMPLE]
 ====
 
@@ -32,10 +36,28 @@ KhiCarréTest( <Liste des valeurs observées>, <Liste des valeurs attendues> )::
 
 ====
 
+KhiCarréTest( <Liste>, <Liste>, <Degrés de Liberté> )::
+**(Version > 6.0.878)** Réalise un test de qualité de l'ajustement qui compare la liste donnée des valeurs observées à la liste des valeurs
+  attendues en utilisant le nombre de degrés de liberté précisé.
+
+Pour des listes de tailles différentes, le résultat est _indéfini_ (retourne ?).
+
+Les résultats sont transmis sous forme d'une liste : _{Probabilité, statistique test KhiCarré}_.
+
+[EXAMPLE]
+====
+
+`++KhiCarréTest({1, 2, 3, 4}, {3, 2, 4, 2}, 2)++` retourne _{0.17, 3.58}_.
+
+====
+
 
 KhiCarréTest( <Matrice des valeurs observées>, <Matrice des valeurs attendues> )::
-  Réalise un test du KhiCarré qui compare la matrice donnée des valeurs observées à la matrice des valeurs attendues.
-  Les résultats sont transmis sous forme d'une liste : _{Probabilité, statistique test KhiCarré}_.
+  Réalise un test du KhiCarré qui compare la matrice donnée des valeurs observées à la matrice des valeurs attendues. Pour calculer la probabilité, on suppose (l−1)⋅(c−1) degrés de liberté, où l et c sont le nombre de lignes et de colonnes dans chaque matrice.
+
+Pour des matrices de tailles différentes, le résultat est _indéfini_ (retourne ?).
+  
+Les résultats sont transmis sous forme d'une liste : _{Probabilité, statistique test KhiCarré}_.
 
 [EXAMPLE]
 ====
