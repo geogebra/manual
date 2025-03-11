@@ -10,6 +10,13 @@ ____________________________________
 Plan( <Point >, <Point >, <Point> )::
   Crée le plan contenant les points.
 
+[EXAMPLE]
+====
+Les commandes `++Plan((0,0,-1), (3,2,0), (0,1,3))++` (et  `++Plan((0,0,-1), (1,0,-2),(0,1,3))++` ) retournent les d'équations : _7x - 12y + 3z = -3_ (et  _x - 4y + z = -1_), évidemment 2 plans distincts.
+
+_Voir le comportement par défaut en CAS ci-dessous._
+====
+
 Plan( <Point >, <Ligne> )::
   Crée le plan contenant le point et la ligne donnés.
 
@@ -17,7 +24,15 @@ Plan( <Point A>, <Vecteur u>, <Vecteur v> )::
   Crée le plan contenant le point _A_ et de vecteurs directeurs _u_ et _v_
   (à condition, bien sûr, qu'ils ne soient pas colinéaires).
 
-_Cette commande est transformée automatiquement en_ `++PlanOrthogonal(E, Vecteur(u ⊗ v))++`
+_Cette commande est transformée automatiquement en_ `++PlanOrthogonal(E, Vecteur(u ⊗ v))++` avec création du vecteur u ⊗ v.
+
+[EXAMPLE]
+====
+Les commandes `++Plan((0,0,-1),Vecteur((3,2,0)),Vecteur((0,1,3)))++` ou  `++Plan((0,0,-1),Vecteur((1,0,-2)),Vecteur((0,1,3)))++` retournent les vecteurs
+stem:[\begin{pmatrix}6\\-9\\3\end{pmatrix}] ou  stem:[\begin{pmatrix}2\\-3\\1\end{pmatrix}] mais les plans créés (confondus, les deux vecteurs étant colinéaires) ont la même équation : _2x - 3y + z = -1_ . 
+
+_Voir le comportement par défaut en CAS ci-dessous._
+====
 
 Plan( <Ligne>, <Ligne> )::
   Crée le plan contenant les deux lignes données (à condition, bien sûr, qu'elles soient coplanaires).
@@ -42,6 +57,13 @@ _____________________________________________________________
 
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
-Plan( <Point >, <Point >, <Point> ) fonctionne ;
+Plan( <Point >, <Point >, <Point> ) fonctionne, image:Ambox_content.png[image,width=20,height=20] **ET ELLE SE SUBSTITUE À Plan( <Point A>, <Vecteur u>, <Vecteur v> )** ;
+
+[EXAMPLE]
+====
+Les commandes `++Plan((0,0,-1),Vecteur((3,2,0)),Vecteur((0,1,3)))++` ou  `++Plan((0,0,-1),Vecteur((1,0,-2)),Vecteur((0,1,3)))++` créent deux plans distincts
+ x * 7 + y (-12) + z * 3 = -3 ou  x + y (-4) + z = -1
+_7x - 12y + 3z = -3_ (et  _x - 4y + z = -1_) sont les équations retournées par les commandes `++Plan((0,0,-1), (3,2,0), (0,1,3))++` (et  `++Plan((0,0,-1), (1,0,-2),(0,1,3))++` ).
+====
 
 Mais ce jour, Plan( <Polygone > ) et Plan( <Conique > ) sont en échec.
