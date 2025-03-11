@@ -4,7 +4,7 @@ ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
 Non seulement vous pouvez afficher ou cacher certains objets, mais vous pouvez aussi faire dépendre cette propriété
 d’une certaine condition. Par exemple, vous désirez qu’un objet n’apparaisse sur l’écran que si vous cochez une case
-placée dans la vue xref:/Graphique.adoc[Graphique] ou que si un xref:/tools/Curseur.adoc[curseur] prend une certaine
+placée dans la vue image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Graphique.adoc[Graphique] ou que si un xref:/tools/Curseur.adoc[curseur] prend une certaine
 valeur.
 
 == Affichage conditionnel d’objets existants
@@ -15,15 +15,15 @@ ou plusieurs objets existants.
 
 Une alternative est de créer une xref:/Valeurs_booléennes.adoc[variable booléenne] (par ex., `++b = true++`) en
 utilisant le Champ de xref:/Saisie.adoc[Saisie] et de la faire afficher en tant que case à cocher dans la vue
-xref:/Graphique.adoc[Graphique] en changeant sa visibilité (par ex., en utilisant le mode
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Graphique.adoc[Graphique] en changeant sa visibilité (par ex., en utilisant le mode
 image:Mode_showhideobject.png[Mode showhideobject.png,width=32,height=32] xref:/tools/Afficher_cacher_l_objet.adoc[Outil
-Afficher/cacher_l'objet] ou le xref:/Menu_contextuel.adoc[Menu_contextuel]). Pour utiliser cette variable booléenne
-comme condition pour l’affichage ou non de certains objets, vous devez suivre les étapes décrites ci-dessous.
+Afficher/cacher l'objet] ou le xref:/Menu_contextuel.adoc[Menu contextuel]). Une case à cocher
+n'est qu'une _variable booléenne_ visible. Pour utiliser cette variable booléenne comme condition pour l’affichage ou non de certains objets, vous devez suivre les étapes décrites ci-dessous.
 
 == Modifier la visibilité d’un objet nouvellement créé
 
-Dans le xref:/Dialogue_Propriétés.adoc[Dialogue_Propriétés], vous pouvez entrer une condition pour l’affichage d’un
-objet dans l’onglet ‘Avancé’.
+Dans le xref:/Dialogue_Propriétés.adoc[Dialogue Propriétés], vous pouvez entrer une condition pour l’affichage d’un
+objet dans l’onglet _Avancé_.
 
 [NOTE]
 ====
@@ -36,16 +36,14 @@ déroulante pour définir vos conditions.
 [EXAMPLE]
 ====
 
-*Exemples :*
-
-* Si a est un curseur, alors la condition a<2 signifie que l’objet correspondant n’est seulement visible dans la vue
-Graphique que si la valeur du curseur est strictement plus petite que 2.
+* Si a est un curseur, alors la condition a<2 signifie que l’objet correspondant n’est seulement visible dans la vue image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Graphique.adoc[Graphique] que si la valeur du curseur est _strictement plus petite que 2_.
 
 * Si b est une variable booléenne, vous pouvez utiliser b comme condition. L’objet correspondant ne sera visible que si
 la valeur de b est _true_ et ne sera pas visible si la valeur de b est _false_.
 
 * Si g et h sont deux "lignes" et que vous désirez afficher un texte uniquement si les lignes sont parallèles, vous
-pouvez utiliser gstem:[\parallel]h comme condition pour le texte.
+pouvez utiliser _gstem:[\parallel]h_ comme condition pour le texte.
 
 ====
 
