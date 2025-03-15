@@ -1,0 +1,39 @@
+= Polecenie UstawDekorację
+:page-en: commands/SetDecoration
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+UstawDekorację( <Obiekt>, <Liczba> )::
+  Ustawia dekorację podanego obiektu (zobacz także zakładkę _Styl_ w oknie _Ustawienia_ obiektu). 
+  Obiektem musi być kąt, odcinek lub obiekt, dla którego można zastosować wypełnienie.
+Drugi argument polecenia to kod liczbowy określający dekorację lub styl wypełnienia, zgodnie z poniższą tabelą:
+
+[cols=",,,",options="header",]
+|===
+|Wartość |Dekoracja dla odcinka |Dekoracja dla kąta |Styl wypełnienia
+|0 |Brak dekoracji |Brak dekoracji |Wypełnienie jednolite
+|1 |Jeden znacznik |Dwa łuki |Zakreskowanie
+|2 |Dwa znaczniki |Trzy łuki |Kratka
+|3 |Trzy znaczniki |Jeden znacznik |Szachownica
+|4 |Jedna strzałka |Dwa znaczniki |Wykropkowanie
+|5 |Dwie strzałki |Trzy znaczniki |Plaster miodu
+|6 |Trzy strzałki |Strzałka zgodna z ruchem wskazówek zegara |Cegiełka
+|7 |(Brak zastosowania) |Strzałka przeciwnie do ruchu wskazówek zegara |Plecionka
+|===
+
+UstawDekorację(<Odcinek>, <Liczba>, <Liczba>)::
+  Ustawia wygląd początku i końca odcinka. Aby zobaczyć dekorację, konieczne jest ukrycie punktów, które definiują wierzchołki odcinka. 
+Dekorację odcinka można również ustawić w zakładce _Styl_ w oknie _Ustawienia_ odcinka. 
+Pierwsza liczba w poleceniu określa styl początku odcinka, a druga liczba ustawia styl końca odcinka, zgodnie z poniższą tabelą:
+
+[cols=",",options="header",]
+|===
+|Wartość |Dekoracja
+|0 |Brak dekoracji
+|1 |prostopadłe odcinki
+|2 |puste kwadraty
+|3 |wypełnione kwadraty
+|4 |strzałki
+|5 |strzałki z wypełnionymi grotami
+|6 |puste kółka
+|7 |wypełnione kółka
+|===
