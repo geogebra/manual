@@ -1,0 +1,27 @@
+= Polecenie RozkładZipfa
+:page-en: commands/Zipf
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RozkładZipfa( <Liczba Elementów>, <Wykładnik> )::
+  Zwraca wykres słupkowy przedstawiający https://pl.wikipedia.org/wiki/Prawo_Zipfa[rozkład Zipfa].
+  Parametry:
+  _Liczba Elementów_: liczba elementów, których rangę badamy,
+  _Wykładnik_: wykładnik charakteryzujący rozkład.
+RozkładZipfa( <Liczba Elementów>, <Wykładnik> , <Czy Skumulowany> )::
+  Zwraca wykres słupkowy przedstawiający _rozkład Zipfa_, gdy _Czy Skumulowany_ = false.
+  Zwraca wykres skumulowanego rozkładu Zipfa, gdy _Czy Skumulowany_ = true.
+ Pierwsze dwa parametry są takie same jak powyżej.
+RozkładZipfa( <Liczba Elementów>, <Wykładnik> , <Liczba sukcesów>, <Czy Skumulowany> )::
+  Niech X będzie zmienną losową o rozkładzie Zipfa, a v oznacza _Liczbę Sukcesów_
+  Zwraca P( X = _v_), gdy _Czy Skumulowany_ = false.
+  Zwraca P( X ≤ _v_), gdy _Czy Skumulowany_ = true.
+  Pierwsze dwa parametry są takie same jak powyżej.
+
+[EXAMPLE]
+====
+
+`++RozkładZipfa(10, 1 , 5, false)++` zwraca wartość _0.07_ w image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] _Widoku Algebry_ i _stem:[\frac{504}{7381}]_ w
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Widoku CAS_.
+
+====
