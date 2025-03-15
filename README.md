@@ -13,7 +13,7 @@ The templates and layouts used by the documentation site are located in the [Geo
 | Deutsch (de)           | 687     | 52      | 45      | 2       | 0       |
 | English (en)           | 739     | 0       | 0       | 0       | 0       |
 | Español (es)           | 661     | 21      | 64      | 0       | 57      |
-| Français (fr)          | 739     | 0       | 14      | 0       | 0       |
+| Français (fr)          | 739     | 0       | 13      | 0       | 0       |
 | Hrvatska (hr)          | 470     | 243     | 35      | 0       | 26      |
 | Magyar (hu)            | 661     | 66      | 23      | 2       | 12      |
 | Italiano (it)          | 739     | 0       | 14      | 0       | 0       |
