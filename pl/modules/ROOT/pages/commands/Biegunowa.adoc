@@ -1,0 +1,31 @@
+= Polecenie Biegunowa
+:page-en: commands/Polar
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Biegunowa( <Punkt>, <Stożkowa> )::
+  Tworzy biegunową danego punktu względem podanej krzywej stożkowej.
+
+[EXAMPLE]
+====
+
+`++Biegunowa((0,2), y = x^2 - 3x + 5)++` tworzy prostą 1.5__x__ + 0.5__y__ = 4
+
+====
+
+[NOTE]
+====
+
+Zobacz także narzędzie image:24px-Mode_polardiameter.svg.png[Mode polardiameter.svg,width=24,height=24]
+xref:/tools/Biegunowa_lub_prosta_zwierająca_średnicę.adoc[Biegunowa lub prosta zawierająca średnicę].
+
+====
+
+Biegunowa(<Prosta>, <Stożkowa>)::
+ worzy biegun (punkt) odpowiadający danej prostej (biegunowej) i krzywej stożkowej.
+
+[EXAMPLE]
+====
+
+`++Polar(1.5x+0.5y=4, y = x^2 - 3x + 5)++` tworzy punkt _(0, 2)_
+
+====
