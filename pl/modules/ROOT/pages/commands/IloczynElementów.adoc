@@ -1,0 +1,77 @@
+= Polecenie IloczynElementów
+:page-en: commands/Product
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+IloczynElementów( <Lista Surowych Danych> )::
+  Oblicza iloczyn wszystkich liczb z listy.
+
+[EXAMPLE]
+====
+
+`++IloczynElementów({2, 5, 8})++` daje w wyniku _80_.
+
+====
+
+IloczynElementów( <Lista Liczb>, <Liczba Elementów> )::
+  Oblicza iloczyn pierwszych _n_ elementów listy.
+
+[EXAMPLE]
+====
+
+`++IloczynElementów({1, 2, 3, 4}, 3)++` daje w wyniku _6_.
+
+====
+
+IloczynElementów( <Lista Liczb>, <Lista Częstości> )::
+  Oblicza iloczyn wszystkich elementów z _listy liczb_ podniesionych do potęgi wartości podanych w _liście częstości_
+  dla każdego z nich.
+
+[EXAMPLE]
+====
+
+* `++IloczynElementów({20, 40, 50, 60}, {4, 3, 2, 1})++` daje w wyniku __1536000000000000__
+* `++IloczynElementów({sqrt(2), cbrt(3), sqrt(5), cbrt(-7)}, {4, 3, 2, 3})++` daje w wyniku _-420_
+
+====
+
+[NOTE]
+====
+
+Obie listy muszą mieć taką samą długość.
+
+====
+
+IloczynElementów( <Wyrażenie>, <Zmienna>, <Wartość Początkowa>, <Wartość Końcowa> )::
+  Oblicza iloczyn wyrażeń otrzymanych poprzez podstawienie za daną zmienną każdej liczby całkowitej z podanego zakresu od
+  _wartości początkowej_ do _wartości końcowej_.
+
+[EXAMPLE]
+====
+
+* `++IloczynElementów(k, k,  1, 7)++` daje w wyniku 5040
+* `++IloczynElementów(x + k,  k,  2, 3)++` daje w wyniku _f_(_x_)=(_x_ + 2)(_x_ + 3).
+
+====
+
+== Specyficzna składnia CAS
+
+IloczynElementów( <Lista Wyrażeń> )::
+ Oblicza iloczyn wszystkich liczb z listy.
+
+[EXAMPLE]
+====
+
+`++IloczynElementów({1, 2, x})++` daje w wyniku _2x_.
+
+====
+
+IloczynElementów( <Wyrażenie>, <Zmienna>, <Pozycja Początkowa>, <Koniec> )::
+  Oblicza iloczyn wyrażeń otrzymanych poprzez podstawienie za daną zmienną każdej liczby całkowitej z podanego zakresu od
+  _pozycji początkowej_ do _końca_.
+
+[EXAMPLE]
+====
+
+`++IloczynElementów(x + 1,  x,  2, 3)++` daje w wyniku _12_.
+
+====
