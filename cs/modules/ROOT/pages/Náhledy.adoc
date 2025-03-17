@@ -2,51 +2,66 @@
 :page-en: Views
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
-GeoGebra nabízí tři různé náhledy na matematické objekty:
-xref:/s_index_php?title=Graphics_View_action=edit_redlink=1.adoc[Graphics View] (dostupná ve třech různých oknech),
-numerické xref:/s_index_php?title=Algebra_View_action=edit_redlink=1.adoc[Algebra View] a
-xref:/s_index_php?title=Spreadsheet_View_action=edit_redlink=1.adoc[Spreadsheet View].
+== Co jsou náhledy
 
-Umožňují nám zobrazovat matematické objekty třemi různými způsoby: graficky (např. body, grafy funkcí), algebraicky
-(např. souřadnice bodů, rovnice) a v buňkách tabulky.
+GeoGebra poskytuje různé _Náhledy_ pro matematické objekty, které jsou zobrazovány v různých reprezentacích (např. 
+algebraické a grafické) a jsou dynamicky propojeny. To znamená, že pokud upravíte objekt v kterémkoli _Náhledu_, 
+jeho reprezentace v ostatních _Náhledech_ se automaticky přizpůsobí těmto změnám, pokud je to možné.
 
-Odkazy na všechny reprezentace jednoho objektu jsou dynamické a automaticky se přizpůsobují změnám, které jsou provedeny
-na kterékoliv z jejich reprezentací, ať již byly vytvořeny jakýmkoliv způsobem.
+Je možné přizpůsobit polohu a rozměry _Náhledu_ na obrazovce vašeho zařízení přetažením myší (verze 5) nebo výběrem 
+nabídky _Zobrazení_ a následným přetažením ikony v pravém horním rohu zobrazení, které chcete přesunout (verze 6).
 
-image:Views.png[Views.png,width=599,height=352]
-
-== Formátovací panel
-
-Každý náhled má svůj vlastní formátovací panel, který můžeme zpřístupnit přes tlačítko Přepnout formátovací panel v
-pravé horní části náhledu (vedle tlačítka zavřít). Tento formátovací panel nabízí rychlý přístup k formátování
-vlastností. Pro více informací viz oddělení o formátovacích panelech v daných náhledech:
-
-* xref:/s_index_php?title=Graphics_View_action=edit_redlink=1.adoc[Graphics View]
-* xref:/s_index_php?title=Algebra_View_action=edit_redlink=1.adoc[Algebra View]
-* xref:/s_index_php?title=Spreadsheet_View_action=edit_redlink=1.adoc[Spreadsheet View]
-* xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View]
+== Hlavní Náhledy
 
 [width="100%",cols="50%,50%",]
 |===
-a|
-image:Ambox_content.png[image,width=40,height=40]
+|image:270px-Algebra-View.png[Algebra-View.png,width=270,height=176] a|
+image:24px-Menu_view_algebra.svg.png[Algebra View,title="Algebra View",width=24,height=24]
+xref:/Algebra_View.adoc[*_Algebra View_*]:
+
+Algebraic representations of objects are displayed and can be entered directly using the (virtual) keyboard (e.g.
+coordinates of points, equations).
+
+|image:270px-Graphics-View-empty.png[Graphics-View-empty.png,width=270,height=203] a|
+image:24px-Menu_view_graphics.png[Graphics View,title="Graphics View",width=24,height=24]
+xref:/Graphics_View.adoc[*_Graphics View_*]:
+
+Mathematical objects can be constructed with your mouse or by using a touch pad and changed dynamically afterwards.
 
 a|
-Následující text pojednává o vlastnosti, která je podporována pouze v
-/s_index_php?title=En:Release_Notes_GeoGebra_4_2_action=edit_redlink=1.adoc[GeoGebra 4.2 Beta].
+image:270px-3D-Graphics-View.png[3D-Graphics-View.png,width=270,height=189]
 
-'''''
+a|
+image:24px-Perspectives_algebra_3Dgraphics.svg.png[3D Graphics View,title="3D Graphics View",width=24,height=24]
+xref:/3D_Graphics_View.adoc[*_3D Graphics View_*]:
 
-Navíc máme k dispozici xref:/s_index_php?title=CAS_View_action=edit_redlink=1.adoc[CAS View], který uživateli umožňuje
-provádět numerické i symbolické výpočty a podporuje základní algebraické operace včetně derivování, integrování, řešení
-rovnic, řešení diferenciálních rovnic a další.
+Three dimensional mathematical objects can be constructed and changed dynamically.
+
+a|
+image:270px-Spreadsheet-View.png[Spreadsheet-View.png,width=270,height=189]
+
+a|
+image:24px-Menu_view_spreadsheet.svg.png[Spreadsheet View,title="Spreadsheet View",width=24,height=24]
+xref:/Spreadsheet_View.adoc[*_Spreadsheet View_*]:
+
+You can work with data and explore statistical concepts.
+
+a|
+image:270px-CAS-View.png[CAS-View.png,width=270,height=189]
+
+a|
+image:24px-Menu_view_cas.svg.png[CAS View,title="CAS View",width=24,height=24] xref:/CAS_View.adoc[*_CAS View_*]:
+
+GeoGebra's Computer Algebra System can be used for numerical and symbolic computations.
 
 |===
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+== Other Display Features
 
-|Some content was not yet translated.
-|===
+image:24px-Menu_view_construction_protocol.svg.png[Menu view construction protocol.svg,width=24,height=24]
+xref:/Construction_Protocol.adoc[*_Construction Protocol_*]: This interactive list of your construction steps allows you
+to redo your construction step by step.
+
+image:24px-Menu_view_probability.svg.png[Menu view probability.svg,width=24,height=24]
+xref:/Probability_Calculator.adoc[*_Probability Calculator_*]: Allows you to easily calculate and graph probability
+distributions.
