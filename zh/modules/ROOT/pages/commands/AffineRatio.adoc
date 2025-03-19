@@ -1,6 +1,12 @@
 = AffineRatio 指令
 :page-en: commands/AffineRatio
-ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
-AffineRatio[Point A, Point B, Point C]::
-  Returns the affine ratio λ of three collinear points _A_, _B_, and _C_, where _C = A + λ * AB_.
+AffineRatio( <点A>, <点B>, <点C> )::
+  返回三个共线点 _A_、_B_ 和 _C_ 的仿射比 _λ_，其中 _C = A + λ * AB_。
+[EXAMPLE]
+====
+
+`++AffineRatio((-1, 1), (1, 1), (4, 1))++` 输出： _2.5_
+
+====
