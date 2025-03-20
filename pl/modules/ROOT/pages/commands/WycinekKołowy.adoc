@@ -1,0 +1,43 @@
+= Polecenie WycinekKołowy
+:page-en: commands/Sector
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+WycinekKołowy( <Stożkowa>, <Punkt>, <Punkt> )::
+  Tworzy wycinek między dwoma punktami na krzywej stożkowej i oblicza jego pole powierzchni.
+
+[EXAMPLE]
+====
+
+* Dana jest elipsa `++c: x^2 + 2y^2 = 8++`, oraz `++D = (-2.83, 0)++` i `++E = (0, -2)++` dwa punkty na elipsie.
+`++WycinekKołowy(c, D, E)++` daje w wyniku _d = 4.44_.
+* Dany jest okrąg `++c: x^2 + y^2 = 9++, oraz `++A = (3, 0)++` i `++B = (0, 3)++` dwa punkty na okręgu.
+`++WycinekKołowy(c, A, B)++` yields _d = 7.07_
+
+====
+
+[NOTE]
+====
+
+Polecenie działa tylko dla elips i okręgów.
+
+====
+
+WycinekKołowy( <Stożkowa>, <WartośćParametru>, <WartośćParametru> )::
+  Tworzy wycinek między dwoma wartościami parametru z zakresu od _0_ do _2π_ krzywej stożkowej i oblicza jego pole powierzchni.
+
+[EXAMPLE]
+====
+
+Dany jest okrąg `++c: x^2 + y^2 = 9++`. `++WycinekKołowy(c, 0, 3/4 π)++` daje w wyniku _d = 10.6_
+
+====
+
+[NOTE]
+====
+
+Używane są następujące postacie parametryczne:
+
+* Okrąg: _(r cos(t), r sin(t))_, gdzie _r_ to promień okręgu.
+* Elipsa: _(a cos(t), b sin(t))_, gdzie _a_ i _b_ są odpowiednio długościami półosi wielkiej i małej elipsy.
+
+====
