@@ -2,50 +2,69 @@
 :page-en: LaTeX
 ifdef::env-github[:imagesdir: /zh/modules/ROOT/assets/images]
 
-In GeoGebra you can write formulas as well. To do so, check the box LaTeX formula in the dialog window of the
-image:Tool_Insert_Text.gif[Tool Insert
-Text.gif,width=32,height=32]xref:/s_index_php?title=Insert_Text_Tool_action=edit_redlink=1.adoc[Insert Text Tool] and
-enter your formula in LaTeX syntax.
+在 GeoGebra 中，您也可以编写公式。为此，请在图像:24px-Mode_text.svg.png[Mode text.svg,width=24,height=24] xref:/tools/文本.adoc[文本工具] 的对话框窗口中勾选“LaTeX 公式”选项，并以 LaTeX 语法输入您的公式。
 
 [NOTE]
 ====
-In order to create text that contains a LaTeX formula as well as static text you may enter the static part of
-the text and then add the LaTeX formula in between a set of dollar symbols ($).
+
+为了创建包含 LaTeX 公式以及文本的内容，您可以将文本放在 \text{} 内，同时启用 _LaTeX 公式_ 功能。
 
 ====
 
 [EXAMPLE]
 ====
- The length of the diagonal is $\sqrt\{ 2 }$.
+
+`++\text{斜边的长度是 } \sqrt{ 2 }++`
 
 ====
 
-You can select the syntax for common formula symbols from the drop-down menu next to the LaTeX checkbox. This inserts
-the corresponding LaTeX code into the text field and places the cursor in between a set of curly brackets. The Symbols
-drop-down menu contains a list of common math symbols, Greek letters and operators. If you would like to create dynamic
-text within the formula, you need to select the relating objects from the Objects drop-down list, causing GeoGebra to
-insert their names as well as the syntax for mixed text.
+[NOTE]
+====
 
-Some important LaTeX commands are explained in following table. Please have a look at any LaTeX documentation for
-further information.
+您还可以使用 xref:/commands/FormulaText.adoc[FormulaText命令] 在引号中输入公式。
+
+====
+
+[EXAMPLE]
+====
+
+`++FormulaText["\text{斜边的长度是 } \sqrt{ 2 }"]++`
+
+====
+
+[NOTE]
+====
+
+您可以通过将 image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] xref:/Algebra_View.adoc[代数视图] 中列出的对象拖动到 image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Graphics_View.adoc[图形视图] 的选定位置，轻松获取包含该对象值的 LaTeX 文本。
+
+====
+
+您可以从 LaTeX 复选框旁边的下拉菜单（GeoGebra 桌面版）或输入框下方的 _高级_ 菜单（GeoGebra 网页版和平板应用版）中找到常见公式符号的语法。这会将相应的 LaTeX 代码插入到文本框中，并将光标放置在一组大括号之间。符号下拉菜单包含常见数学符号、希腊字母和运算符的列表。如果您想在公式中创建动态文本，您需要从 image:16px-GeoGebra_48.png[GeoGebra 48.png,width=16,height=16] 对象下拉列表中选择相关对象，这将使 GeoGebra 插入它们的名称以及混合文本的语法。
+
+以下表格解释了一些重要的 LaTeX 命令。如需更多信息，请参阅任何 LaTeX 文档。
 
 [cols=",",options="header",]
 |===
-|LaTeX input |Result
+|LaTeX 输入 |输出
 |a \cdot b |stem:[a \cdot b]
 |\frac{a}{b} |stem:[\frac{a}{b}]
-|\sqrt\{x} |stem:[\sqrt\{x}]
-|\sqrt[n]\{x} |stem:[\sqrt[n]\{x}]
-|\vec\{v} |stem:[\vec\{v}]
-|\overline\{AB} |stem:[\overline\{AB}]
-|x^\{2} |stem:[x^\{2}]
-|a_\{1} |stem:[a_\{1}]
+|\sqrt{x} |stem:[\sqrt{x}]
+|\sqrt[n]{x} |stem:[++\sqrt[n]{x}++]
+|\vec{v} |stem:[\vec{v}]
+|\overline{AB} |stem:[\overline{AB}]
+|x^{2} |stem:[x^{2}]
+|a_{1} |stem:[a_{1}]
 |\sin\alpha + \cos\beta |stem:[\sin\alpha + \cos\beta]
-|\int_\{a}^\{b} x dx |stem:[\int_\{a}^\{b} x dx]
-|\sum_\{i=1}^\{n} i^2 |stem:[\sum_\{i=1}^\{n} i^2]
+|\int_{a}^{b} x dx |stem:[\int_{a}^{b} x dx]
+|\sum_{i=1}^{n} i^2 |stem:[\sum_{i=1}^{n} i^2]
 |===
 
-== See also
+也可以使用语法 `++\ce, \mathchoice, \mskip, \lower, \raise, \mkern++` 来输入格式良好的化学公式。
 
-* http://folk.uio.no/knutm/mmcs2008/lshort2e.pdf[The Not So Short Introduction To LaTeX]
-* http://www.tug.org[TeX user group]
+更多信息请参考 https://mhchem.github.io/MathJax-mhchem/[此文档]。
+
+== 另请参阅
+
+* https://gking.harvard.edu/files/lshort2.pdf[LaTeX 简明指南]
+* https://www.tug.org[TeX 用户组]
