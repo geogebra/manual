@@ -1,0 +1,20 @@
+= Polecenie KrzywaSklejana
+:page-en: commands/Spline
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+KrzywaSklejana( <Lista Punktów> )::
+  Tworzy https://pl.wikipedia.org/wiki/Funkcja_sklejana[krzywą sklejaną] stopnia drugiego przechodzącą przez wszystkie punkty z listy.
+KrzywaSklejana( <Lista Punktów>, <Stopień ≥ 3> )::
+  Tworzy krzywą sklejaną danego stopnia przechodzącą przez punkty z listy.
+KrzywaSklejana( <Lista Punktów>, <Stopień ≥ 3>, <Funkcja Wagowa> )::
+  Tworzy krzywą sklejaną danego stopnia przechodzącą przez punkty z listy. Funkcja wagowa określa, jaka powinna być różnica wartości _t_
+ dla punktów __P__~i~ i __P__~i+1~ biorąc pod uwagę ich różnicę __P__~i+1~ - __P__~i~ = (_x_, _y_). Aby uzyskać krzywą sklejaną
+  zgodny z algorytmem funkcji parametrycznej użyj funkcję wagową `++abs(x)+0*y++`. Aby uzyskać krzywą sklejaną domyślną dla GeoGebry użyj funkcję wagową `++sqrt(x^2+y^2)++`.
+
+[NOTE]
+====
+
+Wybór wartości domyślnej sprawia, że wynik zachowuje się poprawnie podczas transformacji, zapewniając, że `++Obrót(KrzywaSklejana(lista), a)++`
+daje ten sam wynik co `++KrzywaSklejana(Obrót(lista, a))++`.
+
+====
