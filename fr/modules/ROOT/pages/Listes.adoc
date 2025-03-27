@@ -38,9 +38,26 @@ graphics.svg,width=16,height=16] xref:/Graphique.adoc[Graphique], en les intégr
 de sélection, la touche [.kcode]#Alt# étant maintenue enfoncée pendant la création du rectangle à l'aide du bouton droit
 pressé.
 
-Pour accéder à des éléments particuliers d'une liste, vous pouvez utiliser la xref:/commands/Elément.adoc[commande
-Elément]. Les listes peuvent être utilisées comme arguments dans les opérations avec des listes (voir plus loin dans
+Les listes peuvent être utilisées comme arguments dans les opérations avec des listes (voir plus loin dans
 cette page) ou dans des xref:/commands/Commandes_Listes.adoc[commandes Listes].
+
+== Accéder aux éléments
+
+Pour accéder à des éléments particuliers d'une liste, vous pouvez utiliser la commande xref:/commands/Elément.adoc[Elément] ou des syntaxes simplifiées comme dans l'exemple ci-dessous :
+
+[EXAMPLE]
+====
+
+Soit `++liste = {1, 2, 3, 4, 5}++`, alors :
+
+* `++liste(1)++` donne le premier élément de la liste : _1_
+* `++liste(2)++` donne le deuxième élément de la liste : _2_
+* .../...
+* `++liste(-1)++` donne le dernier élément de la liste : _5_
+* `++liste(-5)++` donne le premier élément de la liste : _1_
+* `++liste(0)++` donne  _?_ (non défini) , de même que `++liste(k)++` pour k > 5 ou k < -5
+
+====
 
 == Comparer des listes d'objets
 
@@ -50,9 +67,9 @@ Vous pouvez comparer deux listes d’objets :
 ou _false_, selon le cas ;
 * `++liste1 != liste2 ++` : Vérifie si les deux listes d'éléments dans l'ordre donné sont différentes et vous répond
 _true_ ou _false_, selon le cas ;
-* `++Trier[liste1] == Trier[liste2] ++` : Vérifie si les deux listes de nombres (ou points) sont constituées des mêmes
+* `++Trier(liste1) == Trier(liste2) ++` : Vérifie si les deux listes de nombres (ou points) sont constituées des mêmes
 nombres (ou points), l'ordre n'est pas pris en compte, et vous répond _true_ ou _false_, selon le cas ;
-* `++Unique[liste1] == Unique[liste2] ++` : Vérifie si les deux listes de nombres sont constituées des mêmes nombres,
+* `++Unique(liste1) == Unique(liste2) ++` : Vérifie si les deux listes de nombres sont constituées des mêmes nombres,
 ordre et répétitions ne sont pas pris en compte, et vous répond _true_ ou _false_, selon le cas.
 
 == Opérateurs sur les listes
@@ -72,35 +89,18 @@ comme résultat.
 
 === Addition et soustraction
 
-* `++liste1 + liste2++` : Additionne les éléments correspondants des deux listes ;
+* `++liste1 + liste2++` : Additionne les éléments correspondants des deux listes ** de même longueur** ;
 +
-[NOTE]
-====
 
-Les deux listes doivent avoir la même longueur.
-
-====
 * `++Liste + Nombre++` : Additionne _Nombre_ à chacun des éléments de _Liste_ ;
-* `++liste1 – liste2++` : Soustrait les éléments _liste2_ aux éléments correspondants _liste1_ ;
+* `++liste1 – liste2++` : Soustrait les éléments _liste2_ aux éléments correspondants _liste1_, **les 2 listes de même longueur** ;
 +
-[NOTE]
-====
 
-Les deux listes doivent avoir la même longueur.
-
-====
 * `++Liste – Nombre++` : Soustrait _Nombre_ à chacun des éléments de _Liste_.
 
 === Multiplication et division
 
-* `++liste1 * liste2++` : Multiplie les éléments correspondants des deux listes ;
-+
-[NOTE]
-====
-
-Les deux listes doivent avoir la même longueur.
-
-====
+* `++liste1 * liste2++` : Multiplie les éléments correspondants des deux listes ** de même longueur** ;
 +
 [NOTE]
 ====
@@ -115,14 +115,11 @@ stem:[\left(\begin{array}{}1&2&3\\ \end{array}\right)] (produit de matrices)
 ====
 
 * `++Liste *  Nombre++` : Multiplie chacun des éléments de _Liste_ par _Nombre_ ;
-* `++liste1/liste2++` : Divise les éléments de _liste1_ par les éléments correspondants de _liste2_ ;
-+
-[NOTE]
-====
 
-Les deux listes doivent avoir la même longueur.
 
-====
+* `++liste1/liste2++` : Divise les éléments de _liste1_ par les éléments correspondants de _liste2_, **les 2 listes de même longueur** ;
++ 
+
 * `++Liste/ Nombre++` : Divise chacun des éléments de _Liste_ par _Nombre_ ;
 * `++Nombre/Liste++` : Divise _Nombre_ par chacun des éléments de _Liste_.
 
