@@ -25,7 +25,24 @@ SoitValeur( <xref:/Objets_InterAction.adoc[Liste déroulante]>, <Nombre n > )::
   Définit _n_ comme xref:/commands/PositionSélectionnée.adoc[position sélectionnée] dans la liste déroulante.
 
 SoitValeur( <Objet Dépendant>, ? )::
-  C'est une syntaxe spéciale pour assigner à un objet indépendant la valeur `++?++` plutôt que de la redéfinir en utilisant  `++=++`.
+  C'est une syntaxe spéciale pour assigner à un objet dépendant la valeur `++?++` plutôt que de la redéfinir en utilisant  `++=++`.
+
+== Script et Nom de l'objet
+
+Utilisée dans un script, la commande peut utiliser %0 pour récupérer le nom de l'objet sélectionné.
+
+[EXAMPLE]
+====
+Un exemple qui vaut ce qu'il vaut ;-). Supposons que, pour un certain nombre de points du plan, vous ayez indiqué le Script GeoGebra Par Clic :
+
+`++SoitValeur(%0,(x(%0),0))++`
+
+_Désolé,, on ne peut faire un "coller" qu'un point après l'autre, la sélection multiple ne donnant pas accès au Dialogue Script._
+
+Chaque fois que vous cliquez sur un point ainsi traité, il va prendre la place de son projeté sur l'axe des abscisses.
+
+_Rien ne vous empêche de l'en retirer après._
+====
 
 == Commandes *Si* et *SoitValeur* dans les Scripts
 
@@ -36,6 +53,8 @@ Dans GeoGebra les arguments de *Si* ne sont pas des commandes, mais des valeurs,
 Par conséquent, si vous désirez par exemple que _b_ prenne la valeur 2 si la condition _a > 2_ est réalisée, la méthode
 correcte pour ce faire est `++SoitValeur(b,Si(a>2,2,b))++`. Toute autre manière d'imbriquer SoitValeur et Si est
 incorrecte.
+
+
 
 == SoitValeur et objets libres
 
