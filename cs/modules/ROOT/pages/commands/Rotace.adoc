@@ -3,19 +3,31 @@
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
 Rotace( <Objekt>, <Úhel> )::
-  Rotace( <Objekt>, <Úhel>, <Bod> );;
-  [width="100%",cols="50%,50%",]
-  |===
-  a|
-  image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
 
-  |Some content was not yet translated.
-  |===
+Otáčí xref:/Geometrické_objekty.adoc[Geometrické objekty] o daný úhel kolem počátku soustavy souřadné.
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+Rotace( <Objekt>, <Úhel>, <Bod> )::
 
-|Some content was not yet translated.
-|===
+Otáčí geometrické objekty o daný úhel kolem daného bodu.
+
+Rotace( <Objekt>, <Úhel>, <Osa rotace>)::
+
+Otáčí geometrické objekty o daný úhel kolem dané osy rotace.
+
+Rotace( <Objekt>, <Úhel>, <Bod na ose>, <Směr osy nebo Rovina> )::
+
+Otáčí geometrický objekt o daný úhel kolem osy definované daným bodem a směrem osy nebo rovinou.
+
+[POZNÁMKA]
+====
+
+* Vektory nejsou otáčeny okolo počátku soustavy souřadné, ale podle počátečního bodu vektoru.
+* Při otáčení mnohoúhelníku, úsečky, oblouku atd. jsou také vytvořeny obrazy vrcholů / koncových 
+bodů a stran (v případě mnohoúhelníku).
+* Tento příkaz otáčí také obrázky.
+* Pro otočení textu použijte příkaz xref:/commands/OtocitText.adoc[OtocitText].
+* Podívejte se také na nástroj image:24px-Mode_rotatebyangle.svg.png[Mode rotatebyangle.svg,width=24,height=24]
+xref:/tools/Otočení_o_úhel.adoc[Otočení o úhel] a image:24px-Mode_rotatearoundline.svg.png[Mode
+rotatearoundline.svg,width=24,height=24] xref:/tools/Otočení_kolem_přímky.adoc[Otočení kolem přímky].
+
+====
