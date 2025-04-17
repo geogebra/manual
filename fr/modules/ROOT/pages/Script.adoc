@@ -2,29 +2,38 @@
 :page-en: Scripting
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-GeoGebra supporte deux langages pour les scripts -- GGBScript et Javascript. Un script est une suite d'actions qui
-peuvent être déclenchées en :
+Un script est une suite de commandes qui seront exécutées l'une après l'autre.
 
-* cliquant sur, ou actualisant, un objet particulier ;
-* chargeant le fichier (dans le cas de Javascript) ;
-* utilisant des écouteurs Javascript (voir /Référence:JavaScript.adoc[Référence:JavaScript])
+GeoGebra supporte deux langages pour les scripts -- GGBScript et Javascript. 
 
-Vous pouvez définir ce script dans la fenêtre d'écriture du xref:/Dialogue_Propriétés.adoc[dialogue Propriétés].
+Vous pouvez définir les scripts dans l'onglet _Script_ du image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Dialogue_Propriétés.adoc[Dialogue Propriétés] de l'objet auquel vous voulez attacher un script.
+
+image:Ambox_content.png[image,width=20,height=20] Le _Dialogue Propriétés_ doit être fermé pour qu'un script puisse être exécuté !
+
+Les différents objets supportent des différents types de scripts dont l'exécution peut être déclenchée en :
+
+* cliquant sur un objet particulier (onglet _Par Clic_) ;
+* actualisant un objet particulier (quand sa valeur ou ses propriétés sont modifiées) (onglet _Par Actualisation_) ;
+* changeant le contenu d'un Champtexte (onglet _En cas de changement_) ;
+* relachant le bouton de la souris (ou éloignant le doigt de l'écran) après le déplacement d'un objet (onglet _En Fin Glisser_);
+* chargeant le fichier (onglet _JavaScript global_) ;
+* utilisant des écouteurs Javascript (see xref:en@reference::/GeoGebra_Apps_API.adoc[références API ])
+
+Pour un ChampTexte, la différence entre _Par Actualisation_ et _En cas de changement_ et que si le script est défini dans l'onglet _Par Actualisation_, il n'est exécuté que lorsque l'on quitte le champ texte (en cliquant par exemple sur un autre objet ou dans _Graphique_, etc...), alors que si le script est défini dans l'onglet _En cas de changement_, il est exécuté aussitôt que le contenu du champ texte varie, alors que le pointeur est toujours dans le champ texte.
+
 
 == GGBScript
 
-Vous pouvez créer des scripts constitués de commandes GeoGebra.
+Vous pouvez créer des scripts constitués de commandes GeoGebra comme vous les auriez utilisées dans xref:/Saisie.adoc[Saisie].
+
+Après le déclenchement du script, chaque commande est exécutée, dans l ordre dans lequel elles sont écrites, de manière séquentielle.
 
 [EXAMPLE]
 ====
-
-*Exemple :*
-
 * _n_ est un xref:/tools/Curseur.adoc[curseur] à valeurs entières entre 1 et 3
 * `++liste1 = {"rouge", "vert", "bleu"}++`
-* dans les propriétés de _n_, définir dans l'onglet "Script"/"Par Actualisation" `++SoitCouleur[n, liste1(n)]++`
+* dans les propriétés de _n_, définir dans l'onglet "Script"/"Par Actualisation" `++SoitCouleur(n, liste1(n))++`
 * en modifiant la valeur du curseur _n_ vous changez sa couleur.
-
 ====
 
 [NOTE]
@@ -34,8 +43,7 @@ Utliser `++#++` pour introduire un commentaire.
 
 ====
 
-Vous trouverez les commandes dédiées aux scripts dans cette page xref:/commands/Commandes_Scripts.adoc[Commandes
-Scripts].
+Vous trouverez les commandes dédiées aux scripts dans cette page xref:/commands/Commandes_Scripts.adoc[Commandes Scripts].
 
 == JavaScript
 
