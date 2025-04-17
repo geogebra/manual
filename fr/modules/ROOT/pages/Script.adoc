@@ -17,7 +17,7 @@ Les différents objets supportent des différents types de scripts dont l'exécu
 * changeant le contenu d'un Champtexte (onglet _En cas de changement_) ;
 * relachant le bouton de la souris (ou éloignant le doigt de l'écran) après le déplacement d'un objet (onglet _En Fin Glisser_);
 * chargeant le fichier (onglet _JavaScript global_) ;
-* utilisant des écouteurs Javascript (see xref:en@reference::/GeoGebra_Apps_API.adoc[références API ])
+* utilisant des écouteurs Javascript (voir xref:en@reference::/GeoGebra_Apps_API.adoc[références API])
 
 Pour un ChampTexte, la différence entre _Par Actualisation_ et _En cas de changement_ et que si le script est défini dans l'onglet _Par Actualisation_, il n'est exécuté que lorsque l'on quitte le champ texte (en cliquant par exemple sur un autre objet ou dans _Graphique_, etc...), alors que si le script est défini dans l'onglet _En cas de changement_, il est exécuté aussitôt que le contenu du champ texte varie, alors que le pointeur est toujours dans le champ texte.
 
@@ -35,6 +35,8 @@ Après le déclenchement du script, chaque commande est exécutée, dans l ordre
 * dans les propriétés de _n_, définir dans l'onglet "Script"/"Par Actualisation" `++SoitCouleur(n, liste1(n))++`
 * en modifiant la valeur du curseur _n_ vous changez sa couleur.
 ====
+*Explications :* Chaque fois que le curseur est modifié une actualisation est créée. Ainsi, pour chaque variation le script est appelé et la valeur de _n_ est utilisée pour sélectionner une couleur de la liste et changer la couleur du curdeur _n_.
+
 
 [NOTE]
 ====
@@ -42,8 +44,8 @@ Après le déclenchement du script, chaque commande est exécutée, dans l ordre
 Utliser `++#++` pour introduire un commentaire.
 
 ====
-
-Vous trouverez les commandes dédiées aux scripts dans cette page xref:/commands/Commandes_Scripts.adoc[Commandes Scripts].
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Hint:* Certaines commandes ne peuvent être utilisées que dans les scripts,
+vous en trouverez la liste dans cette page xref:/commands/Commandes_Scripts.adoc[Commandes Scripts].
 
 == JavaScript
 
@@ -54,12 +56,10 @@ précieux sur https://developer.mozilla.org/en/JavaScript/Guide[developer.mozill
 utiliser des méthodes spéciales JavaScript qui vous permettent de modifier la construction. Ces méthodes appartiennent à
 l'objet ggbApplet , ce qui signifie que vous devez l'appeler sous la forme
 `++ggbApplet.méthode_nom(paramètre,..,paramètre)++`. Pour une liste complète de ces méthodes voir
-/Référence:JavaScript.adoc[Référence:JavaScript].
+xref:en@reference::/GeoGebra_Apps_API.adoc[références API].
 
 [EXAMPLE]
 ====
-
-*Exemple :*
 
 ....
 for(var i =0;i<10;i++) 
@@ -69,13 +69,17 @@ for(var i =0;i<10;i++)
 Ce script crée 10 points _A~0~_ à _A~9~_ ayant des coordonnées aléatoires.
 
 ====
+[NOTE]
+====
 
+Les scripts avec JavaScript sont très polyvalents, mais de nombreuses tâches peuvent également être réalisées à l'aide du GGbScript plus simple.
+====
 === Global JavaScript
 
 Dans l'onglet "JavaScript global" de l'onglet "Script" du xref:/Dialogue_Propriétés.adoc[dialogue Propriétés] vous
 pouvez définir quelques fonctions, ou faire quelques affectations qui doivent être réalisées avant que la construction
 ne soit chargée. Vous pouvez aussi définir la fonction _ggbOnInit()_, qui est appelée automatiquement une fois que la
-construction est chargée. La fonction _ggbOnInit()_ peut être utilisé pour enregistrer des écouteurs, comme vu
+construction est chargée. La fonction _ggbOnInit()_ peut être utilisée pour enregistrer des écouteurs, comme vu
 ci-dessous.:
 
 [EXAMPLE]
@@ -100,7 +104,7 @@ nommée par ex. _A_, un message "L'objet A a été ajouté" va apparaître.
 ====
 
 Vous pouvez aussi utiliser des écouteurs pour des actions telles que Renommer, Supprimer. La liste complète est
-consultable dans /Référence:JavaScript.adoc[Référence:JavaScript].
+consultable dans xref:en@reference::/GeoGebra_Apps_API.adoc[références API].
 
 [NOTE]
 ====
