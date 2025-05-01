@@ -2,33 +2,32 @@
 :page-en: commands/Normal
 ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
 
-Normaal( <Gemiddelde>, <Standaardafwijking>, x )::
-  Geeft de cumulatieve kansdichtheidsfunctie (cdf) van een normale verdeling.
-Normaal( <Gemiddelde>, <Standaardafwijking>, x, <Logisch Cumulatief> )::
-  Als _Cumulatief_ = true, creëert het de cumulatieve kansdichtheidsfunctie (cdfp) van een normale verdeling met
-  gemiddelde _μ_ en standaardafwijking _σ_, anders creëert het de kansdichtheidsfunctie (pdf) van de normale verdeling.
 Normaal( <Gemiddelde>, <Standaardafwijking>, <Variabele waarde> )::
-  Berekent de functie stem:[\Phi \left(\frac{x- \mu}\{\sigma} \right) ] voor een waarde _v_ waarbij _Φ_ de cumulatieve
-  dichtheidsfunctie is voor _N(0,1)_ met gemiddelde _μ_ en standaardafwijking _σ_.
+  Berekent de functiewaarde van stem:[\Phi \left(\frac{x- \mu}{\sigma} \right) ] voor de _variabele waarde v_, waarbij _Φ_ de cumulatieve
+  distributiefunctie is van _N(0,1)_ met gegeven _gemiddelde μ_ en _standaardafwijking σ_.
 
-[NOTE]
-====
-
-Je berekent m.a.w. de kans dat een variabele kleiner is dan een gegeven _x_-waarde (of de oppervlakte onder de grafiek
-van de kansdichtheidsfunctie links van de gegeven _x_-coördinaat).
-
-====
-
-== CAS venster
-
-Normaal( <Gemiddelde>, <Standaardafwijking>, <Toevalsveranderlijke> )
-
-Berekent de functie stem:[\Phi \left(\frac{x- \mu}\{\sigma} \right) ]waarbij _Φ_ de cumulatieve dichtheidsfunctie is
-voor _N(0,1)_ met gemiddelde __μ__en standaardafwijking _σ_.
 
 [EXAMPLE]
 ====
 
-`++Normaal[2, 0.5, 1]++` geeft stem:[\frac{-erf(2/\sqrt{2})+1}\{2}].
+`++Normaal(2, 0.5, 1)++` geeft _0.02_ in het image:16px-Menu_view_algebra.svg.png[links=,width=16,height=16]
+xref:/Algebra_View.adoc[algebravenster] en stem:[\frac{erf(-\sqrt{2})+1}{2}] in the
+image:16px-Menu_view_cas.svg.png[links=,width=16,height=16] xref:/CAS_View.adoc[CAS venster].
 
 ====
+
+[NOTE]
+====
+
+Deze syntax berekent de kans voor de gegeven waarde, m.a.w. de oppervlakte onder de normale dichtheidsfunctie links van de gegeven given _x_-coördinaat.
+
+====
+
+Normaal( <Gemiddelde>, <Standaardafwijking>, <Variabele waarde>, <Booleaans cumulatief> )::
+  Als _Cumulatief = true_ wordt de cumulatieve dichtheidsfunctie berekend met gegeven _gemiddelde_ en _standaardafwijking_ voor de gegeven _variabele waarde_, anders de kansdichtheidsfunctie voor de gegeven _variabele waarde_.
+
+Normaal( <Gemiddelde m>, <Standaardafwijking s>, <Variabele waarde u> , <Variabele waarde v>)::
+ Berekent de kans dan dat een willekeurige variabele in het interval [_u_, _v_] ligt, gegeven het gemiddelde en standaardafwijking. M.a.w., de syntax `Normaal(_m_, _s_, _u_, _v_)` komt overeen met `Normaal(_m_, _s_, _v_, true) - Normaal(_m_, _s_, _u_, true)` 
+
+Normaal( <Gemiddelde>, <Standaardafwijking>, x, <Booleaans cumulatief> )::
+ Als _Cumulatief = true_ wordt de cumulatieve dichtheidsfunctie (cdf) gecreëerd van een a normale verdeling met gegeven _gemiddelde_ and _standaardafwijking_, anders de kansdichtheidsfunctie (pdf) van de verdeling.
