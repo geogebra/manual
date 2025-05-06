@@ -6,7 +6,7 @@ ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 == [#Spreadsheet_View_User_Interface]#Spreadsheet View User Interface#
 
 V původním nastavení je okno image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Tabulky_ otevřené vedle image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
-_xref:/Nákresna.adoc[nákresny]_. xref:/tools/Nástroje_tabulky.adoc[_Nástroje tabulky_] jsou
+_xref:/Nákresna.adoc[nákresny]_. xref:/Nástroje_tabulky.adoc[_Nástroje tabulky_] jsou
 zobrazeny v horní části okna. Ikony
 image:16px-Menu-edit-undo.svg.png[Menu-edit-undo.svg,width=16,height=16]image:16px-Menu-edit-redo.svg.png[Menu-edit-redo.svg,width=16,height=16]
 _Zpět / Znovu_ jsou v pravém horním rohu.
@@ -35,7 +35,7 @@ image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Nastavení
 
 V zobrazeném dialogu můžete měnit rozvržení zobrazení tabulky
 
-* Zobrazit _xref:/Input_Bar.adoc[Vstupní pole]_
+* Zobrazit _xref:/Vstupní_pole.adoc[Vstupní pole]_
 * Zobrazit _Mřížku_
 * Zobrazit _záhlaví řádků a sloupců_
 * Zobrazit _svislý a vodorovný scrollovací panel_
@@ -44,69 +44,66 @@ V zobrazeném dialogu můžete měnit rozvržení zobrazení tabulky
 
 == [#Vytvoření_matematických_objektů]#Vytvoření matematických objektů#
 
-In GeoGebra’s image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Spreadsheet View_
-every cell has a specific name that allows you to directly address each cell.
+Každá buňka image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _tabulky_ má své unikátní jméno, na které se můžete odkazovat v příkazech i nástrojích GeoGebry.
 
 [EXAMPLE]
 ====
 
-The cell in column _A_ and row _1_ is named _A1_.
+Buňka ve sloupci _A_ a řádku _1_ má jméno _A1_.
 
 ====
 
 [NOTE]
 ====
 
-These cell names can be used in expressions and _xref:/Commands.adoc[Commands]_ in order to address the content of the
-corresponding cell.
+Jména buněk mohou být použita v _xref:/Příkazy.adoc[příkazech]_ pro adresování na jejich obsah.
 
 ====
 
-=== Direct Input, Selection and Commands
+=== Přímý vstup, výběr a příkazy
 
-In the _Spreadsheet Cells_ you can enter not only numbers, but all types of xref:/General_Objects.adoc[General Objects]
-and xref:/Geometric_Objects.adoc[Geometric Objects] that are supported by GeoGebra (e.g. coordinates of points,
-xref:/Functions.adoc[Functions], xref:/Commands.adoc[Commands]).
+Do buněk tabulky nemusíte zadávat jenom čísla, obsahem mohou být všechny typy xref:/Obecné_objekty.adoc[obecných objektů]
+a xref:/Geometrické_objekty.adoc[geometrických objektů]  (tj. souřadnice bodů,
+xref:/Funkce.adoc[funkce], xref:/Příkazy.adoc[příkazy]).
 
 To select non adjacent columns or cells in the spreadsheet, use the shortcut [.kcode]#Ctrl# + [.kcode]#Click#.
 
-=== Relative Cell Names
+=== Relativní jména buněk
 
-If you copy content from one cell to another, by default all references are changed accordingly to the target position.
+Poud zkopírujete obsah jedné buňky do jiné, všechny adresy na související buňky budou změněny podle adresy cílové buňky.
 
 [EXAMPLE]
 ====
 
-Let `++A1=1++`, `++A2=2++`. In _B1_ put `++(A1, A1)++`. By copying _B1_ to _B2_ (either via [.kcode]#Ctrl# +
-[.kcode]#C#, [.kcode]#Ctrl# + [.kcode]#V# or by dragging the cell corner) you get _(A2, A2)_ in _B2_.
+Nechť `++A1=1++`, `++A2=2++`. Do buňky _B1_ zadáme `++(A1, A1)++`. Kopírováním buňky _B1_ do _B2_ (např. pomocí [.kcode]#Ctrl# +
+[.kcode]#C#, [.kcode]#Ctrl# + [.kcode]#V# nabo táhnutím za roh buňky) dostaneme _(A2, A2)_ v buňce _B2_.
 
 ====
 
-To prevent this behavior, you can insert `++$++` before the column and/or row of the referenced cell.
+Pokud chcete zabránit tomuto posunu adres, zapište `++$++` před sloupec nebo řádek odkazované buňky (absolutní jména).
 
 [NOTE]
 ====
 
-On Mac OS the Copy & Paste xref:/Keyboard_Shortcuts.adoc[shortcuts] are [.kcode]#Cmd# + [.kcode]#C# and [.kcode]#Cmd# +
+Na  Mac OS mají Copy & Paste úpravy xref:/Klávesové_zkratky.adoc[klávesové zkratky]  [.kcode]#Cmd# + [.kcode]#C# and [.kcode]#Cmd# +
 [.kcode]#V#
 
 ====
 
-== [#Input_Data_into_the_Spreadsheet_View]#Input Data into the image:24px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=24,height=24] Spreadsheet View#
+== [#Input_Data_into_the_Spreadsheet_View]#Zadávání vstupních dat do image:24px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=24,height=24] tabulky#
 
-=== Manual Entry, Commands, and Tracing
+=== Manuální vstup, příkazy a trasování
 
-Besides manually adding entries into the image:16px-Menu_view_spreadsheet.svg.png[Menu view
-spreadsheet.svg,width=16,height=16] _Spreadsheet View_ cells, you may use the commands
-xref:/commands/FillColumn.adoc[_FillColumn_], xref:/commands/FillRow.adoc[_FillRow_] or
-xref:/commands/FillCells.adoc[_FillCells_]. You can also enter data by using the feature xref:/Tracing.adoc[_Tracing to
-Spreadsheet_].
+Kromě manuálního zadávání čísel do buněk image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _tabulky_, můžete použít příkazy
+xref:/commands/NaplnitSloupec.adoc[_NaplnitSloupec_], xref:/commands/NaplnitRadek.adoc[_NaplnitRadek_] nebo
+xref:/commands/FillCells.adoc[_NaplnitBunky_]. Můžete také vložit data pomocí xref:/Trasování.adoc[_Trasování_].
 
-=== Copy Data from the image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] Algebra View
+=== Kopírování dat z image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] algebraického okna
 
 With a simple drag and drop operation it is also possible to copy objects from the
-image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _xref:/Algebra_View.adoc[Algebra View]_
-to the image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Spreadsheet View_. If you
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _xref:/Algebraické_okno.adoc[Algebraické okno]_
+to the image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Tabulka_. If you
 drag a list, its elements will be pasted horizontally, starting from the cell in which you release the left mouse button
 or touchscreen. Pressing the [.kcode]#Shift# key while dragging opens a dialog window when the mouse button is released,
 allowing you to choose whether the pasted objects will be xref:/Free_Dependent_and_Auxiliary_Objects.adoc[Free or
