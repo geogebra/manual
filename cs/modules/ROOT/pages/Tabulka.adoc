@@ -142,7 +142,7 @@ GeoGebra užívá tečku [.kcode]#.# jako oddělovač desetinných míst, zatím
 
 === Nástrojová lišta tabulky
 
-xref:/tools/Formátovací_panel.adoc/#/tabulka[_Formátovací panel_] obsahuje nejrůznější _xref:/Nástroje.adoc[nástroje]_, které umožňují vytvořit objekty v image:16px-Menu_view_spreadsheet.svg.png[Menu view
+xref:/tools/Nástroje_tabulky.adoc[_Nástroje tabulky_] obsahuje nejrůznější _xref:/Nástroje.adoc[nástroje]_, které umožňují vytvořit objekty v image:16px-Menu_view_spreadsheet.svg.png[Menu view
 spreadsheet.svg,width=16,height=16] _Tabulce_. Každá ikona  v _xref:/Nástrojová_lišta.adoc[nástrojové liště]_ reprezentuje jednu sadu
 xref:/Nástroje.adoc[_nástrojů_]. Pro otevření sady
 _nástrojů_ klikněte na ikonu jejího reprezentanta v _Nástrojové liště tabulky_ (GeoGebra pro  web a tablety) nebo na malou šipku v jejím pravéh dolním rohu (GeoGebra Desktop).
@@ -152,9 +152,9 @@ image:146px-Toolbar-Spreadsheet.png[Spreadsheet Tools,title="Spreadsheet Tools",
 [NOTE]
 ====
 
-The _Tools_ of the _Spreadsheet View Toolbar_ are organized by the nature of resulting objects or their functionality.
-For example, you will find _Tools_ that analyze data in the image:16px-Mode_onevarstats.svg.png[One Variable Analysis
-Tool,title="One Variable Analysis Tool",width=16,height=16] xref:/tools/Spreadsheet_Tools.adoc[_Data Analysis Toolbox_].
+_Nástroje_  jsou uspořádány podle povahy výsledných objektů nebo jejich funkcí.
+Například _Nástroje_, které analyzují data, najdete v image:16px-Mode_onevarstats.svg.png[One Variable Analysis
+Tool,title="One Variable Analysis Tool",width=16,height=16] xref:/tools/Nástroje_tabulky.adoc[_nástrojích tabulky_].
 
 ====
 
@@ -170,55 +170,49 @@ Název grafické reprezentace objektu je dán adresou buňky, ve které byl vytv
 ====
 
 Objekty _Tabulky_ jsou klasifikovány jako xref:/Volné_závislé_a_pomocné_objekty.adoc[_pomocné objekty_]
-v image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _xref:/Algebraické_okno.adoc[Algebraickém okně]_. You can show or hide these _Auxiliary Objects_ by selecting _Auxiliary Objects_ from the
-_xref:/Context_Menu.adoc[Context Menu]_ or by clicking on the
+v image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _xref:/Algebraické_okno.adoc[Algebraickém okně]_. 
+
+_Pomocné objekty_ můžete zobrazit v _Algebraickém okně_, když zaškrtnete položku_Pomocné objekty_ v
+_xref:/Context_Menu.adoc[kontextovém menu]_ nebo klikněte na
 image:16px-Stylingbar_algebraview_auxiliary_objects.svg.png[Stylingbar algebraview auxiliary
-objects.svg,width=16,height=16] icon in the xref:/Algebra_View.adoc[_Algebra View Style Bar_]
+objects.svg,width=16,height=16] ikonu na xref:/Algebraické_okno.adoc[_nástrojové liště Algebraického okna_].
 
 ====
 
-=== Using Spreadsheet Data in other _Views_
+=== Používání objektů z _Tabulky_ v jiných prostředích
 
-You may process the _Spreadsheet Data_ by selecting multiple cells and right-clicking (Mac OS: [.kcode]#Cmd#-clicking)
-on the selection. In the appearing _xref:/Context_Menu.adoc[Context Menu]_, choose the submenu _Create_ and select the
-appropriate option (_List_, _List of points_, _Matrix_, _Table_, _Polyline_ and _Operation table_).
+Data z _Tabulky_ můžete zpracovat tak, že vyberete více buněk a kliknete pravým tlačítkem myši (Mac OS: [.kcode]#Cmd#-kliknutí). V zobrazeném _xref:/Kontextové_menu.adoc[Kontextovém menu]_ zvolte podnabídku _Vytvořit_ a vyberte
+příslušnou možnost (_Seznam_, _Seznam bodů_, _Matice_, _Tabulka_, _Lomená čára_ a _Operační tabulka_).
 
-=== Operation Table
 
-For a function with two parameters you can create an _Operation Table_ with values of the first parameter written in the
-top row and values of second parameter written in the left column. The function itself must be entered in the top left
-cell.
+=== Tabulka hodnot funkce dvou proměnných
 
-After entering the function and the parameter values in the appropriate cells, select the rectangular area of the
-desired _Operation Table_ with the mouse. Then, right click (Mac OS: [.kcode]#Cmd#-click) on the selection and choose
-option _Create > Operation Table_ of the appearing _xref:/Context_Menu.adoc[Context Menu]_.
+Pro funkci dvou proměnných můžeme vytvořit _operační tabulku_ hodnot, kde první proměnná je v záhlaví sloupců a druhá proměnná v záhlaví řádků. Samotná funkce musí být vložena v levém horním rohu.
+
+Po zápisu funkce a hodnot proměnných _x_ a _y_ vyberte myší obdélníkovou oblast kterou chcete vyplnit _operační tabulkou_. Potom pravou myškou  (Mac OS: [.kcode]#Cmd#-click) vyberte nabídku _Vytvořit > Operační tabulka_ ze zobrazeného _xref:/Kontextové_menu.adoc[kontextového menu]_.
 
 [EXAMPLE]
 ====
 
-Let `++A1 = x y++`, `++A2 = 1++`, `++A3 = 2++`, `++A4 = 3++`, `++B1 = 1++`, `++C1 = 2++` and `++D1 = 3++`. Select cells
-_A1:D4_ with the mouse. Then, right click (Mac OS: [.kcode]#Cmd#-click) on the selection and choose _Create > Operation
-Table_ in the _xref:/Context_Menu.adoc[Context Menu]_ to create a table containing the results of substitution of the
-inserted values in the given function.
+Nechť `++A1 = x y++`, `++A2 = 1++`, `++A3 = 2++`, `++A4 = 3++`, `++B1 = 1++`, `++C1 = 2++` a `++D1 = 3++`. Vyberte myší
+_A1:D4_ a pravou myškou (Mac OS: [.kcode]#Cmd#-click) zobrazte kontextové menu, z něhož vyberete _Vytvořit > Operační tabulka_. GeoGebra vytvoří tabulku, jejíž buňky jsou vyplněny hodnotami funkce `++z = xy ++` po dosazení za proměnné _x_ a _y_.
 
 ====
 
-=== Spreadsheet View Style Bar
+=== Formátovací lišta tabulky
 
-The xref:/Style_Bar.adoc[_Spreadsheed View Style Bar_] provides buttons to
+xref:/Formátovací_lišta.adoc[_Formátovací lišta tabulky_] obsahuje tlačítka
 
-* show / hide the _xref:/Input_Bar.adoc[Input Bar]_ (GeoGebra Desktop)
-* change the text style to image:16px-Stylingbar_text_bold.svg.png[Stylingbar text bold.svg,width=16,height=16] *bold*
-or image:16px-Stylingbar_text_italic.svg.png[Stylingbar text italic.svg,width=16,height=16] _italic_
-* set the text alignment to image:16px-Stylingbar_spreadsheet_align_left.svg.png[Stylingbar spreadsheet align
-left.svg,width=16,height=16] _left_, image:16px-Stylingbar_spreadsheet_align_center.svg.png[Stylingbar spreadsheet align
-center.svg,width=16,height=16] _center_, or image:16px-Stylingbar_spreadsheet_align_right.svg.png[Stylingbar spreadsheet
-align right.svg,width=16,height=16] _right_
-* change the image:16px-Stylingbar_color_white.svg.png[Stylingbar color white.svg,width=16,height=16] background color
-of a cell
-* change the cell borders (GeoGebra Desktop)
-* open the image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _xref:/Properties_Dialog.adoc[Properties
-Dialog]_ (GeoGebra Web and Tablet Apps)
-* display additional image:16px-Stylingbar_dots.svg.png[Stylingbar dots.svg,width=16,height=16]
-xref:/Views.adoc[_Views_] in the GeoGebra window (GeoGebra Web and Tablet Apps)
+* ukázat / skrýt _xref:/Vstupní_pole.adoc[Vstupní pole]_ (GeoGebra Desktop)
+* změnit řez písma na image:16px-Stylingbar_text_bold.svg.png[Stylingbar text bold.svg,width=16,height=16] *tučné*
+nebo image:16px-Stylingbar_text_italic.svg.png[Stylingbar text italic.svg,width=16,height=16] _kurzívu_
+* změnit zarovnání textu na image:16px-Stylingbar_spreadsheet_align_left.svg.png[Stylingbar spreadsheet align
+left.svg,width=16,height=16] _levé_, image:16px-Stylingbar_spreadsheet_align_center.svg.png[Stylingbar spreadsheet align
+center.svg,width=16,height=16] _na střed_, nebo image:16px-Stylingbar_spreadsheet_align_right.svg.png[Stylingbar spreadsheet
+align right.svg,width=16,height=16] _pravé_
+* změnit barvu pozadí image:16px-Stylingbar_color_white.svg.png[Stylingbar color white.svg,width=16,height=16] buňky
+* změnit ohraničení buňky (GeoGebra Desktop)
+* otevřít image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _xref:/Dialog_Vlastnosti.adoc[Dialog Vlastnosti]_ (GeoGebra pro web a tablety)
+* zobrazit další image:16px-Stylingbar_dots.svg.png[Stylingbar dots.svg,width=16,height=16]
+xref:/Pohledy.adoc[_pohledy_] v okně GeoGebry (GeoGebra pro web a tablety)
 
