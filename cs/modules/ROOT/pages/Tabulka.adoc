@@ -3,7 +3,7 @@
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
 
-== [#Spreadsheet_View_User_Interface]#Spreadsheet View User Interface#
+== [#Spreadsheet_View_User_Interface]#Uživatelské rozhraní tabulky#
 
 V původním nastavení je okno image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Tabulky_ otevřené vedle image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
 _xref:/Nákresna.adoc[nákresny]_. xref:/Nástroje_tabulky.adoc[_Nástroje tabulky_] jsou
@@ -97,40 +97,41 @@ Na  Mac OS mají Copy & Paste úpravy xref:/Klávesové_zkratky.adoc[klávesové
 Kromě manuálního zadávání čísel do buněk image:16px-Menu_view_spreadsheet.svg.png[Menu view
 spreadsheet.svg,width=16,height=16] _tabulky_, můžete použít příkazy
 xref:/commands/NaplnitSloupec.adoc[_NaplnitSloupec_], xref:/commands/NaplnitRadek.adoc[_NaplnitRadek_] nebo
-xref:/commands/FillCells.adoc[_NaplnitBunky_]. Můžete také vložit data pomocí xref:/Trasování.adoc[_Trasování_].
+xref:/commands/NaplnitBunku.adoc[_NaplnitBunku_]. Můžete také vložit data pomocí xref:/Trasování.adoc[_Trasování_].
 
 === Kopírování dat z image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] algebraického okna
 
-With a simple drag and drop operation it is also possible to copy objects from the
-image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _xref:/Algebraické_okno.adoc[Algebraické okno]_
-to the image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Tabulka_. If you
-drag a list, its elements will be pasted horizontally, starting from the cell in which you release the left mouse button
-or touchscreen. Pressing the [.kcode]#Shift# key while dragging opens a dialog window when the mouse button is released,
-allowing you to choose whether the pasted objects will be xref:/Free_Dependent_and_Auxiliary_Objects.adoc[Free or
-Dependent], as well as to choose the vertical placement of the copied objects (check option _Transpose_).
 
-=== Copy Data from Other Spreadsheet Software
+Jednoduchým přetažením lze také kopírovat objekty z image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _xref:/Algebraické_okno.adoc[Algebraického okna]_
+do image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Tabulky_. Pokud
+přetáhnete seznam, jeho prvky se vloží vodorovně, počínaje buňkou, ve které jste uvolnili levé tlačítko myši
+nebo dotykovou obrazovku. Stisknutím klávesy [.kcode]#Shift# při přetahování se po uvolnění tlačítka myši otevře dialogové okno umožňující zvolit, zda vložené objekty budou xref:/Volné_závislé_a_pomocné_objekty.adoc[volné nebo závislé], a také zvolit vertikální umístění kopírovaných objektů (zaškrtněte možnost _Transponovat_).
 
-GeoGebra allows you to import data from other spreadsheet software into the
-image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Spreadsheet View_.
 
-* Select and copy the data you want to import. For example, you may use the keyboard shortcut [.kcode]#Ctrl# +
-[.kcode]#C# (Mac OS: [.kcode]#Cmd# + [.kcode]#C#) in order to copy the data to your computer’s clipboard.
-* Open a GeoGebra window and show the image:16px-Menu_view_spreadsheet.svg.png[Menu view
-spreadsheet.svg,width=16,height=16] _Spreadsheet View_.
-* Click on the spreadsheet cell that should contain the first data value (e.g. cell _A1_)
-* Paste the data from your computer’s clipboard into GeoGebra’s image:16px-Menu_view_spreadsheet.svg.png[Menu view
-spreadsheet.svg,width=16,height=16] _Spreadsheet View_. For example, you may select a cell and use the keyboard shortcut
-[.kcode]#Ctrl# + [.kcode]#V# (Mac OS: [.kcode]#Cmd# + [.kcode]#V#) in order to paste the data into the highlighted
-spreadsheet cell.
 
-.
+=== Kopírování dat z jinýk tabulkových editorů
 
-=== Import Data Files from other Applications
+GeoGebra umožňuje import tabulek z jiných software do prostředí
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Tabulky_.
 
-You can also import data from other applications, if stored using ._txt_, ._csv_ and ._dat_ formats. Simply right click
-on a free cell of the image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
-_Spreadsheet View_, then choose the _Import Data File..._ option.
+* Vyberte a zkopírujte data, která chcete importovat. Například pomocí klávesové zkratky [.kcode]#Ctrl# +
+[.kcode]#C# (Mac OS: [.kcode]#Cmd# + [.kcode]#C#) zkopírujete vybrané buňky do schránky vašeho počítače.
+* Otevřete v GeoGebře prostředí image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Tabulka_.
+* Klikněte na buňku tabulky, která má obsahovat první hodnotu importovaných dat (např. buňka _A1_)
+* Vložte data do prostředí image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Tabulky_ v GeoGebře. Například můžete vybrat první buňku a použít klávesovou zkratku
+[.kcode]#Ctrl# + [.kcode]#V# (Mac OS: [.kcode]#Cmd# + [.kcode]#V#). Tím se vloží celý obsah schránky do tabulky jejíž prvním řádkem a sloupcem je vybraná buňka.
+
+
+
+=== Import dat ve formátech .txt, .csv a .dat
+
+Můžete také importovat data z jiných aplikací, pokud jsou uložena ve formátech ._txt_, ._csv_ a ._dat_. Stačí kliknout pravým tlačítkem myši
+na volnou buňku image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+_Tabulky_ a poté vybrat možnost _Importovat datový soubor_.
+
+
 
 [NOTE]
 ====
