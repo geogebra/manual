@@ -1,19 +1,82 @@
-= Uživatelské nástroje
+= Vlastní nástroje uživatele
 :page-en: tools/Custom_Tools
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
 
-|Some content was not yet translated.
-|===
+GeoGebra Classic umožňuje vytvářet vlastní konstrukční nástroje na základě existující konstrukce. 
 
-* xref:/tools/Zobrazit_skrýt_popis.adoc[Zobrazit / skrýt popis]
-* xref:/tools/Zmenšit.adoc[Zmenšit]
-* xref:/tools/Zvětšit.adoc[Zvětšit]
-* xref:/tools/Zrušit_objekt.adoc[Zrušit objekt]
-* xref:/tools/Pohybovat_s_nákresnou.adoc[Pohybovat s nákresnou]
-* xref:/tools/Zobrazit_skrýt_objekt.adoc[Zobrazit / skrýt objekt]
-* xref:/tools/Kopírovat_formát.adoc[Kopírovat formát]
+Po vytvoření lze vlastní nástroj aktivovat kliknutím na související ikonu nebo pomocí souvisejícího příkazu ve xref:/Vstupní_pole.adoc[Vstupním_poli].
+
+Všechny nástroje jsou automaticky uloženy v souboru GeoGebry, ve kterém byly vytvořeny.
+
+
+[NOTE]
+====
+
+Výstupy nástroje nejsou pohyblivé, proto je nelze přetáhnout myší, i když jsou definovány jako objekty
+na cestě. V případě, že potřebujete pohyblivý výstup, definujte místo něj seznam příkazů a ten aktivujte  příkazem
+xref:/commands/Vykonat.adoc[Vykonat].
+
+====
+
+== Vytvoření uživatelského nástroje
+
+Proveďte konstrukci, kterou chcete uložit jako nový nástroj, potom zvolte image:16px-Menu-tools-new.svg.png[Menu-tools-new.svg,width=16,height=16]
+xref:/Tvorba_Nástroje.adoc[Vytvořit nový nástroj] v image:16px-Menu-tools.svg.png[Menu-tools.svg,width=16,height=16]
+xref:/Menu_Nástroje.adoc[Menu Nástroje].
+
+V zobrazeném dialogovém okně vyberte z dostupných rozevíracích seznamů _Výstupní objekty_ a _Vstupní objekty_ a poté nástroji přiřaďte _Název_.
+
+GeoGebra automaticky přiřadí stejný název i _příkazu_, který vám umožní nástroj používat ve vstupním panelu. Název příkazu lze přizpůsobit.
+
+Do pole _Nápověda k nástroji_ zadejte stručné pokyny (nepovinné) a nahrajte soubor s obrázkem pro ikonu nástroje (nepovinné).
+
+Výběrem možnosti _Ukončit_ dokončete vytvoření vlastního nástroje.
+
+== Uložení uživatelského nástroje
+
+Pokud uložíte konstrukci jako .ggb file, všechny vaše uživatelské nástroje budou do tohoto souboru atomaticky uloženy. Pokud chcete uložit jen uživatelské nástroje do zvláštního souboru, použijte
+the xref:/Tool_Manager_Dialog.adoc[Tool Manager Dialog] zvolením image:16px-Menu-tools.svg.png[Menu-tools.svg,width=16,height=16] _Manage Tools_ v menu
+image:16px-Menu-tools.svg.png[Menu-tools.svg,width=16,height=16] xref:/Menu_Nástroje.adoc[Nástroje].
+
+[NOTE]
+====
+
+Vlastní nástroje se ukládají jako soubory .ggt, aby se odlišily od standardních souborů GeoGebra (.ggb).
+
+====
+
+== Použití uživatelského nástroje
+
+Po vytvoření uživatelského nástroje jej máte k dispozici i v jiných souborech.Pokud otevřetenový soubor GeoGebry zvolením image:16px-Menu-file-new.svg.png[Menu-file-new.svg,width=16,height=16]
+_Nový_ in the image:16px-Menu-file.svg.png[Menu-file.svg,width=16,height=16] xref:/Menu_Soubor.adoc[Menu Soubor], ikona nástroje bude viditelná v nástrojové liště. Pokud ale otevřete nové okno zvolením image:Menu_New.png[Menu New.png,width=16,height=16] _Nové okno_ v menu
+image:16px-Menu-file.svg.png[Menu-file.svg,width=16,height=16] _Okno_, nebo restartujete počítač, nebude váš nástroj již na nástrojové liště.
+
+Abyste měli váš nástroj vždy k dispozici, uložte aktuální nastavení zvolením
+image:16px-Menu-file-save.svg.png[Menu-file-save.svg,width=16,height=16] _Uložit nastavení_ z menu
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Menu_Nastavení.adoc[Nastavení].
+
+[NOTE]
+====
+
+Pro odstranění vašeho nástroje z lišty zvolte image:16px-Menu-tools-customize.svg.png[Menu-tools-customize.svg,width=16,height=16] _Nastavit panel nástrojů_ z menu
+image:16px-Menu-tools.svg.png[Menu-tools.svg,width=16,height=16] _Nástroje_. Poté vyberte uživatelský nástroj, který chcete odstranit z nástrojové lišty a klikněte na _Odstranit_ (GeoGebra desktop), nebo přetáhněte nástroj do pravého seznamu (GeoGebra pro web a tablety). Nezapomeňte _Uložit nastavení_ v menu _Nastavení_.
+
+====
+
+== Importování uživatelských nástrojů
+
+Pokud je váš uživatelský nástroj uložen do počítače (jako soubor .ggt ), můžete jej importovat do jakéhokoliv souboru GeoGebry zvolením image:16px-Menu-file-open.svg.png[Menu-file-open.svg,width=16,height=16] _Otevřít_ v menu
+image:16px-Menu-file.svg.png[Menu-file.svg,width=16,height=16] _Soubor_, a vybráním souboru .ggt s nástrojem.
+
+[NOTE]
+====
+
+* Otevření souboru nástroje GeoGebra (.ggt) v programu GeoGebra nemá vliv na konstrukci: pouze se tento nástroj stane součástí
+aktuálního panelu nástrojů GeoGebra.
+* Soubor .ggt můžete načíst také tak, že jej přetáhnete ze Správce souborů počítače na okno programu GeoGebra.
+
+====
+
+
+Pro seznam nástrojů Nákresny se podívejte na stránku xref:/tools/Grafické_nástroje.adoc[Grafické nástroje].
