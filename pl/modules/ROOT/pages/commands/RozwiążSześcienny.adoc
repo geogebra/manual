@@ -1,0 +1,24 @@
+= Polecenie RozwiążSześcienny
+:page-en: commands/SolveCubic
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+== Specyficzna składnia CAS
+
+RozwiążSześcienny( <Wielomian sześcienny> )::
+  Rozwiązuje podany https://en.wikipedia.org/wiki/Cubic_function[wielomian sześcienny] i zwraca listę wszystkich jego rozwiązań.
+
+[EXAMPLE]
+====
+
+`++RozwiążSześcienny(x³ - 1)++` daje w wyniku { 1, stem:[ \frac{1}{2} (\sqrt{3} i -1) ] , stem:[ \frac{1}{2} (\sqrt{3} (-i) -1)
+] } .
+
+====
+
+[NOTE]
+====
+
+Często odpowiedzi są bardzo złożone, np. `++RozwiążSześcienny(x³ + x² + x + 2)++` w takim przypadku lepiej może zadziałać `++Rozwiąż(x³ + x² + x + 2)++`
+lub `++ZRozwiąż(x³ + x² + x + 2)++`.
+
+====
