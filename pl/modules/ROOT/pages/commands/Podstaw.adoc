@@ -1,0 +1,30 @@
+= Polecenie Podstaw
+:page-en: commands/Substitute
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+== Specyficzna składnia CAS
+
+Podstaw( <Wyrażenie>, <Z>, <Na> )::
+  Zastępuje w _wyrażeniu_ wszystkie wystąpienia _Z_ na _Na_ i oblicza wynik po podstawieniu zmiennych odpowiednimi wartościami.
+
+[EXAMPLE]
+====
+
+* `++Podstaw((3 m - 3)^2 - (m + 3)^2, m, a)++` daje w wyniku _8 a^2^ - 24 a_.
+
+* `++Podstaw((3 m - 3)^2 - (m + 3)^2, m, 2)++` daje w wyniku _-16_.
+
+
+====
+
+Podstaw( <Wyrażenie>, <Lista Podstawień> )::
+  Zastępuje w _wyrażeniu_ każde wystąpienie zmiennych z _listy podstawień_ odpowiadającymi wyrażeniami lub wartościami, a następnie wykonuje obliczenia.
+
+[EXAMPLE]
+====
+
+* `++Podstaw(2x + 3y - z, {x = a, y = 2, z = b})++` daje w wyniku _2a - b + 6_.
+
+* `++Podstaw(2x + 3y - z, x = a, y = 2, z = b)++` daje w wyniku _2a - b + 6_.
+
+====
