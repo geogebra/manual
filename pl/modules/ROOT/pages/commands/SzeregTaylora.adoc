@@ -1,0 +1,46 @@
+= Polecenie SzeregTaylora
+:page-en: commands/TaylorPolynomial
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+SzeregTaylora( <Funkcja>, <Wartość x>, <Stopień> )::
+  Tworzy rozwinięcie w szereg Taylora podanej funkcji w punkcie _Wartość x_ do zadanego stopnia.
+
+[EXAMPLE]
+====
+
+`++SzeregTaylora(x^2, 3, 1)++` zwraca _9 + 6 (x - 3)_, czyli rozwinięcie w szereg Taylora funkcji _x^2^_ w punkcie _x = 3_ do stopnia _1_.
+
+====
+
+== Specyficzna składnia CAS
+
+SzeregTaylora( <Wyrażenie>, <Wartość x>, <Stopień> )::
+  worzy rozwinięcie w szereg Taylora podanego wyrażenia w punkcie _Wartość x_ do zadanego stopnia.
+
+[EXAMPLE]
+====
+
+`++SzeregTaylora(x^2, a, 1)++` zwraca  _a^2^ + 2a (x - a)_, czyli rozwinięcie w szereg Taylora wyrażenia _x^2^_ w punkcie _x = a_ do stopnia _1_.
+
+====
+
+SzeregTaylora( <Wyrażenie>, <Zmienna>, <Liczba sukcesów>, <Stopień> )::
+ Tworzy rozwinięcie w szereg Taylora podanego wyrażenia względem podanej zmiennej w punkcie _Liczba sukcesów_ do zadanego stopnia.
+
+[EXAMPLE]
+====
+
+* `++SzeregTaylora(x^3 sin(y), x, 3, 2)++` zwraca _27 sin(y) + 27 sin(y) (x - 3) + 9 sin(y) (x - 3)^2^_, czyli rozwinięcie w szereg Taylora 
+względem _x_ wyrażenia _x^3^ sin(y)_ w punkcie _x = 3_ do stopnia _2_.
+* `++SzeregTaylora(x^3 sin(y), y, 3, 2)++` zwraca _x^3^ sin(3) + x^3^ cos(3) (y - 3) - x^3^ stem:[\frac{sin(3) }{2}]
+(y - 3)^2^_, czyli rozwinięcie w szereg Taylora 
+względem _y_ wyrażenia _x^3^ sin(y)_ w punkcie _y = 3_ do stopnia _2_.
+
+====
+
+[NOTE]
+====
+
+Stopień musi być liczbą całkowitą większą lub równą zeru.
+
+====
