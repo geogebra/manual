@@ -2,10 +2,79 @@
 :page-en: Object_Properties
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+Následující vlastnosti mohou být nastaveny v image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Dialog_Vlastnosti/.adoc[Dialogu Vlatnosti].
 
-|Some content was not yet translated.
-|===
+== Viditelnost
+
+Můžete různými způsoby zobrazit či skrýt objekty v image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Nakresna.adoc[Nákresně].
+
+* Pro zobrazení nebo skrytí objektu můžete použít nástroj image:20px-Mode_showhideobject.svg.png[Mode showhideobject.svg,width=20,height=20]
+xref:/tools/Zobrazit_skrýt_objekt/.adoc[Zobrazit_/_skrýt objekt].
+* Otevřete xref:/Kontextové_menu.adoc[Kontextové menu] a pro změnu viditelnosti vyberte image:20px-Mode_showhideobject.svg.png[Mode
+showhideobject.svg,width=20,height=20] _Zobrazit objekt_ vybraného objektu.
+* V image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] xref:/Algebraické_okno.adoc[Algebraickém
+okně] je vlevo od objektu ikona viditelnosti (zobrazit nebo skrýt). Pro změnu viditelnosti objektu můžete přímo kliknout na kulatou ikonu.
+* Pro zobrazení a skrytí jednoho nebo více objektů můžete také využít nástroj image:20px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=20,height=20]
+xref:/tools/Zaškrtávací_políčko_pro_zobrazení_skrytí_objektu.adoc[Zaškrtávací_políčko_pro_zobrazení_skrytí_objektu].
+
+[POZNÁMKA]
+====
+
+Jestliže chcete v image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+_Algebraickém okně_ mít objket "neviditelný", udělejte ho jako xref:/Volné_závislé_a_pomocné_objekty.adoc[Pomocný].
+
+====
+
+== Fixed objects
+
+You can define an object to be fixed via image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+_Properties Dialog_. Fixed objects (both xref:/Free_Dependent_and_Auxiliary_Objects.adoc[free and dependent]) cannot be
+moved. To stop an object being selected / deleted you can uncheck its "Selection Allowed" option in the Advanced Tab.
+
+== Filling
+
+For closed xref:/Curves.adoc[Curves] and xref:/Geometric_Objects.adoc[regions] you can specify filling using the _Style_
+tab of image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Object properties dialog_. There are three
+types of filling:
+
+Standard::
+  Fills the object by color specified in the _Color_ tab. The same color is used to draw border of that object. Using
+  _Style_ tab you can define opacity -- e.g. Conics have by default opacity 0 which means they are transparent.
+Hatching::
+  The object is hatched, angle of hatches and distance between them can be specified. Thickness of hatches equals the
+  thickness of object's border.
+Cross-hatching::
+  The object is cross-hatched (available angle for hatches: 0° - 45°) and the distance between lines can be specified.
+  Thickness of hatches equals the thickness of object's border.
+Chessboard::
+  Fills the object using a chessboard pattern (available angle for squares: 0° - 45°). The squares' heights can be
+  specified.
+Dots::
+  Fills the object using a dotted pattern, distance between dots can be specified.
+Honeycomb::
+  Fills the object using a honeycomb pattern, distance between the cells can be specified.
+Bricks::
+  Fills the object using a brick pattern, angles and bricks' heights can be specified.
+Weaving::
+  Fills the object using a weaving pattern, angles and spacing can be specified.
+Symbol::
+  Fills the object using a special symbol chosen from a list, distance between symbols can be specified.
+Image::
+  You can specify location of image on the local disc. The image is repeated periodically, its size is fixed in pixels
+  and top left corner is aligned to the top left corner of the view.
+
+[NOTE]
+====
+
+You can also check the _Inverse filling_ box to fill with the selected pattern the whole
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Graphics View_, except the selected
+object.
+
+====
+
+== Advanced properties
+
+Advanced properties such as xref:/Dynamic_Colors.adoc[Dynamic Colors] and xref:/Conditional_Visibility.adoc[Conditional
+Visibility] are listed in article xref:/Advanced_Features.adoc[Advanced Features].
