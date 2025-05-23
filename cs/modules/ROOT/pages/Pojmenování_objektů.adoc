@@ -2,10 +2,85 @@
 :page-en: Naming_Objects
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+Můžete přiřadit určitý název objektu při jeho vytváření pomocí xref:/Vstupní_pole.adoc[Vstupní pole]:
 
-|Some content was not yet translated.
-|===
+* xref:/Body_a_vektory.adoc[Body]: V GeoGebře se body vždy pojmenovávají velkými písmeny. Stačí zadat název (např. A, P) a za něj rovnítko před souřadnicemi nebo příkazy.
+
+[PŘÍKLAD]
+====
+
+`++C = (2, 4)++`, `++ P = (1; 180°)++`
+
+====
+
+* xref:/Body_a_vektory.adoc[Vectory]: Aby bylo možné rozlišit body a vektory, musí mít vektory v GeoGebře název malými písmeny. Opět napište název (např. v, u) a rovnítko před souřadnicemi nebo příkazy.
+
+[PŘÍKLAD]
+====
+
+`++v = (1, 3)++`, `++ u = (3; 90°)++`
+
+====
+
+* xref:/Přímky_a_osy.adoc[Přímky], kružnice  a xref:/Kuželosečky.adoc[Kuželosečky]: Tyto objekty lze pojmenovat tak, že před jejich rovnicí nebo příkazem uvedete název a dvojtečku.
+
+[PŘÍKLAD]
+====
+
+`++g: y = x + 3++`, `++c: (x-1)^2 + (y – 2)^2 = 4++`, `++hyp: x^2 – y^2 = 2++`
+
+====
+
+* xref:/Funkce.adoc[Funkce]: Funkce můžete pojmenovat tak, že napíšete např. `++f(x) =++` or `++g(x) =++` před rovnici nebo příkaz funkce.
+
+[PŘÍKLAD]
+====
+
+`++h(x) = 2 x + 4++`, `++q(x) = x^2, trig(x) = sin(x)++`
+
+====
+
+[PŘÍKLAD]
+====
+
+* Pokud objektu ručně nepřiřadíte název, GeoGebra automaticky přiřazuje nové názvy podle abecedy.
+* Indexy v názvech objektů můžete vytvářet pomocí podtržítka. Například A~1~ se zadává jako `++A_1++`
+a s~AB~ jako as `++s_{AB}++` ve the _Vstupním poli_.
+
+====
+
+== Vyhrazené názvy
+
+Toto jsou názvy, které nelze použít pro objekty: x, y, z, xAxis, yAxis, zAxis, abs, sgn, sqrt, exp, log, ln, ld, lg, cos,
+sin, tan, acos, arcos, arccos, asin, arcsin, atan, arctan, cosh, sinh, tanh, acosh, arcosh, arccosh, asinh, arcsinh,
+atanh, arctanh, atan2, erf, floor, ceil, round, random, conjugate, arg, gamma, gammaRegularized, beta, betaRegularized,
+sec, csc, cosec, cot, sech, csch, coth
+
+Ve výběru symbolů ve _Vstupním poli_ najdete speciální znaky pro následující konstanty:
+
+* π - kruhová konstanta (pi), lze také napsat pomocí [.kcode]#Alt# + [.kcode]#p#
+* ℯ - Eulerovo číslo, např. pro exponenciální funkci ℯ^x, lze také napsat pomocí  [.kcode]#Alt# + [.kcode]#e#
+* ί - imaginární jednotka, např. pro komplexní čísla jako z = 3 + ί, lze také napsat pomocí  [.kcode]#Alt# +
+[.kcode]#i#
+
+Pokud názvy proměnných e a i ještě nejsou použity, GeoGebra je z praktických důvodů automaticky chápe jako ℯ a ί.
+
+== Přejmenování objektů
+
+Nejjednodušší způsob, jak změnit název existujícího objektu, je jej vybrat a začít psát nový název.
+
+Objekt můžete také přejmenovat výběrem možnosti
+image:18px-Menu-edit-rename.svg.png[Menu-edit-rename.svg,width=18,height=18] _Přejmenovat_ v
+xref:/Kontextové_menu.adoc[Kontextovém menu] objektu nebo otevřením okna
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Dialog_Vlastnosti.adoc[Dialogu Vlastnosti]
+a zadáním nového názvu do pole _Název_ na kartě _Základní_.
+
+[POZNÁMKA]
+====
+
+* Závislosti jsou obvykle automaticky vyřešeny: to znamená, že název objektu se změní i v jeho definici. Skripty, které používají přejmenovaný objekt, je však třeba upravit ručně.
+* Pokud přiřadíte objektu název, který už používá jiný objekt, bude tento druhý objekt automaticky přejmenován. Např. pokud přejmenujete bod _B_ na _A_ a bod _A_ už existuje, původní bod _A_ bude přejmenován na _A~1~_.
+
+====
+
+Podívejte se také na xref:/Štítky_a_popisky.adoc[Štítky a popisky].
