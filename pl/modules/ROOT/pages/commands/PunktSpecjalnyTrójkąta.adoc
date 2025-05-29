@@ -1,0 +1,41 @@
+= Polecenie PunktSpecjalnyTrójkąta
+:page-en: commands/TriangleCenter
+:page-aliases: commands/TrinagleCentre.adoc
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+image:64px-Globe.png[Globe.png,width=64,height=64,role=left]
+
+To polecenie ma dwie wersje w języku angielski,:
+
+* TriangleCenter (US)
+* TriangleCentre (UK + Aus)
+
+====
+
+PunktSpecjalnyTrójkąta( <Punkt>, <Punkt>, <Punkt>, <Liczba> )::
+  zwraca _n_-ty https://en.wikipedia.org/wiki/Triangle_center[punkt specjalny] trójkąta _ABC_. Działa dla _n < 3054_.
+
+[EXAMPLE]
+====
+
+Niech _A = (1, -2)_, _B = (6, 1)_ and _C = (4, 3)_. `++PunktSpecjalnyTrójkąta(A, B, C, 2)++` daje w wyniku środek ciężkości (centroid) _D = (3.67,
+0.67)_ trójkąta _ABC_.
+
+====
+
+== Niektóre powszechnie znane punkty specjalne trójkąta
+
+[cols=",",options="header",]
+|===
+|1 |Środek okręgu wpisanego
+|2 |Środek ciężkości (centroid)
+|3 |Środek okręgu opisanego
+|4 |Ortocentrum
+|5 |Środek okręgu dziewięciu punktów
+|6 |Punkt symedialny
+|7 |Punkt Gergonne’a
+|8 |Punkt Nagela
+|13 |Pierwszy środek izogoniczny
+|===
