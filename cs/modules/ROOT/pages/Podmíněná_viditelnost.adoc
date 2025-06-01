@@ -2,10 +2,47 @@
 :page-en: Conditional_Visibility
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+Kromě pouhého zobrazení nebo skrytí určitých objektů můžete také nastavit jejich viditelnost v závislosti na určité podmínce. Například chcete, aby se objekt zobrazil na obrazovce, pokud zaškrtnete políčko umístěné v
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Graphics_View.adoc[Nákresně] nebo když změníte  xref:/tools/Posuvník.adoc[posuvník] na určitou hodnotu.
 
-|Some content was not yet translated.
-|===
+== Podmíněné zobrazení nebo skrytí zkonstruovaných objektů
+
+Můžete použít image:24px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=24,height=24]
+xref:/tools/Zaškrtávací_políčko.adoc[Zaškrtávací políčko], které bude kontrolovat viditelnost jednoho nebo více objektů v nákresně
+
+Alternativně můžete vytvořit xref:/Booleovská_proměnná.adoc[booleovskou proměnnou] (např. `++b = true++`) zadáním do
+xref:/Vstupní_pole.adoc[Vstupního pole], změnit její viditelnost v image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Nákresně_ (např. pomocí nástroje 
+image:24px-Mode_showhideobject.svg.png[Mode showhideobject.svg,width=24,height=24]
+xref:/tools/Zobrazit_skrýt_objekt.adoc[Zobrazit / skrýt Objekt] nebo užitím xref:/Contextové_menu.adoc[kontextového menu]). Na zaškrtávací políčko se můžeme dívat jako na viditelnou _Booleovskou proměnnou_. Chcete-li tuto booleovskou proměnnou použít jako podmínku pro viditelnost
+určitých objektů, je třeba postupovat podle níže popsaných kroků.
+
+== Nastavení podmínky zobrazení objektu
+
+V image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Dialog_Vlastnosti.adoc[Dialogu Vlastnosti], v záložce _Pro pokročilé_, zapište podmínku pro viditelnost objektu (např. `++b ++`, pokud je _b_ booleovská proměnná, nebo `++r > 10 ++` pro již existující číslo r).
+
+[NOTE]
+====
+
+Pro zápis podmínek můžete vybírat xref:/Booleovské_hodnoty.adoc[logické operátory] (např. ≠, ≥, ˄, ‖) ze seznamu, který otevřete kliknutím na α na konci vstupního pole.
+
+====
+
+[EXAMPLE]
+====
+
+* Pokud je _a_ posuvník, potom podmínka  _a < 2_ znamená, že objekt bude zobrazen v 
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Nákresně_ jen, pokud bude aktuální hodnota posuvníku _a_ menší než 2.
+* Pokud je _b_ booleovská proměnná, můžete napsat samotné _b_ jako podmínku viditelnosti. Odpovídající objekt je viditelný, pokud je hodnota _b_ true, pro _b = false_ je objekt skrytý.
+* Pokud jsou _g_ a _h_ dvě přímky, můžete nastavit text, který se bude zobrazovat, pokud jsou rovnoběžné. Do podmínky zobrazení textu zapište _g
+‖ h_.
+
+====
+
+[NOTE]
+====
+
+Viz také příkaz xref:/commands/NastavitViditelnostVOkne.adoc[NastavitViditelnostVOkne] .
+
+====
+
