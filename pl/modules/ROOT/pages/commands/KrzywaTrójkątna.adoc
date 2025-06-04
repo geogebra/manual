@@ -1,0 +1,41 @@
+= Polecenie KrzywaTrójkątna
+:page-en: commands/TriangleCurve
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+KrzywaTrójkątna( <Punkt P>, <Punkt Q>, <Punkt R>, <Równanie z A, B, C> )::
+  Tworzy wielomianową krzywą zadaną równaniem w https://pl.wikipedia.org/wiki/Wsp%C3%B3%C5%82rz%C4%99dne_barycentryczne_(matematyka)[współrzędnych barycentrycznych] względem punktów _P_, _Q_, _R_ które są podane jako pierwszy, drugi i trzeci parametr; 
+współrzędne barycentryczne oznaczane są jako _A_, _B_, _C_.
+
+
+[EXAMPLE]
+====
+
+Jeśli _P_, _Q_, _R_ są punktami, `++KrzywaTrójkątna(P, Q, R, (A - B)*(B - C)*(C - A) = 0)++` tworzy krzywą stopnia drugiego złożoną z prostych
+zawierających środkowe trójkąta _PQR_.
+
+====
+
+[EXAMPLE]
+====
+
+`++KrzywaTrójkątna(A, B, C, A*C = 1/8)++` tworzy hiperbolę, której styczne przechodzące przez punkt _A_ albo punkt _C_, dzielą
+trójkąt _ABC_ na dwie części o równych polach.
+
+====
+
+[EXAMPLE]
+====
+
+`++KrzywaTrójkątna(A, B, C, A² + B² + C² - 2B C - 2C A - 2A B = 0)++` tworzy
+https://en.wikipedia.org/wiki/Steiner_inellipse[elipsę wpisaną Steinera] dla trójkąta _ABC_, a
+`++KrzywaTrójkątna(A, B, C, B C + C A + A B = 0)++` tworzy https://en.wikipedia.org/wiki/Steiner_ellipse[elipsę opisaną Steinera] dla tójkąta _ABC_.
+
+====
+
+[NOTE]
+====
+
+Jeżeli punkty wejściowe noszą nazwy _A_, _B_ lub _C_, nie możemy w taki przypadku używać w równaniach np. _x(A)_, ponieważ _A_
+jest interpretowane jako współrzędna barycentryczna.
+
+====
