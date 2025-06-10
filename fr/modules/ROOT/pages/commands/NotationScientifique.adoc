@@ -14,6 +14,8 @@ NotationScientifique( <Nombre> )::
 `++NotationScientifique(0.002)++` retourne _2 × 10^-3^._
 
 ====
+Le texte est placé avec le coin supérieur gauche (coin 4) de sa boîte à l'origine du système de coordonnées.
+
 
 NotationScientifique( <Nombre>, <Précision> )::
   Retourne le texte où le nombre est écrit en notation scientifique, en prenant en compte nombre de chiffres
@@ -28,10 +30,10 @@ NotationScientifique( <Nombre>, <Précision> )::
 ________________________________________
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
-* par saisie directe `++NotationScientifique(0.002)++` affiche dans le CAS 2 × 10^-3^ mais la pastille d'affichage est
+* par saisie directe `++NotationScientifique(0.002)++` affiche dans le CAS 2 · 10^-3^ mais la pastille d'affichage est
 inopérante, il vous faut glisser/déposer du CAS dans Graphique pour créer le texte associé ;
-* par affectation `++texte:=NotationScientifique(0.002)++` affiche dans le CAS texte := 2 × 10^-3^ qui est considéré
-comme un nombre, voir l'affichage dans Algèbre.
+* par affectation `++texte:=NotationScientifique(0.002)++` affiche dans le CAS texte := 2 · 10^-3^ qui est considéré
+comme un nombre, voir l'affichage dans Algèbre (texte = 0 avec l'option 2 décimales !).
 ________________________________________
 [NOTE]
 ====
