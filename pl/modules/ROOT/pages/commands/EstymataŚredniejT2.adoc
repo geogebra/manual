@@ -1,0 +1,14 @@
+= Polecenie EstymataŚredniejT2
+:page-en: commands/TMean2Estimate
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+EstymataŚredniejT2( <Lista Danych z Próby 1>, <Lista Danych z Próby 2>, <Poziom Ufności>, <Czy Wspólne Wariancje> )::
+  Oblicza przedział ufności _t_ dla różnicy między dwiema średnimi populacyjnymi na podstawie podanych zestawów danych próbek oraz _poziomu ufności_.
+  Jeśli _Czy Wspólne Wariancje_ = true, przyjmuje się, że wariancje populacji są równe i odchylenia standardowe próbek są łączone w obliczeniach.
+  If _Czy Wspólne Wariancje_ = false,  nie zakłada się równości wariancji populacji i odchylenia standardowe próbek nie są łączone.
+  Wynik zwracany jest w postaci listy: _{dolna granica ufności, górna granica ufności}_.
+
+EstymataŚredniejT2( <Średnia z Próby 1>, <Odchylenie Standardowe z Próby 1>, <Liczność Próby 1>, <Średnia z Próby 2>, <Odchylenie Standardowe z Próby 2>, <Liczność Próby 2>, <Poziom Ufności>, <Czy Wspólne Wariancje> )::
+  przedział ufności _t_ dla różnicy między dwiema średnimi populacyjnymi na podstawie podanych statystyk próbki oraz _poziomu ufności_. Parametr _Czy Wspólne Wariancje_ jest zdefiniowany jak powyżej. 
+Wynik zwracany jest w postaci listy: _{dolna granica ufności, górna granica ufności}_.
+
