@@ -1,0 +1,42 @@
+= Polecenie RozkładT
+:page-en: commands/TDistribution
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RozkładT( <Liczba Stopni Swobody>, <Liczba Sukcesów> )::
+  Oblicza dystrybuantę (funkcję rozkładu skumulowanego) rozkładu t-Studenta w punkcie v, czyli wyznacza 
+prawdopodobieństwo _P(X ≤ v)_ gdzie _X_ jest zmienną losową o rozkładzie t-Studenta z podaną _liczbą stopni swobody_.
+
+[EXAMPLE]
+====
+
+`++RozkładT(10, 0)++` daje w wyniku _0.5_.
+
+====
+
+[NOTE]
+====
+
+Polecenie zwraca prawdopodobieństwo dla danej wartości, czyli pole pod krzywą rozkładu t-Studenta na lewo od podanej współrzędnej x.
+
+
+====
+RozkładT( <Liczba Stopni Swobody>, <Liczba Sukcesów>, <Czy Skumulowany> )::
+  Jeśli _Czy Skumulowany = true_, oblicza dystrybuantę (funkcję rozkładu skumulowanego) rozkładu t-Studenta z podaną _liczbą stopni swobody_ dla danej _liczby sukcesów_,  w przeciwnym razie oblicza wartość funkcji gęstości rozkładu w tym punkcie.
+
+
+RozkładT( <Liczba Stopni Swobody>, x, <Czy Skumulowany> )::
+  Jeśli _Czy Skumulowany = true_, tworzy dystrybuantę (CDF)  https://pl.wikipedia.org/wiki/Rozk%C5%82ad_Studenta[rozkładu t-Studenta] z podaną _liczbą stopni swobody_, w przeciwnym razie tworzy funkcję gęstości prawdopodobieństwa (PDF) tego rozkładu.
+
+
+== Specyficzna składnia CAS
+
+RozkładT( <Liczba Stopni Swobody>, <Liczba Sukcesów> )::
+  EOblicza dystrybuantę (funkcję rozkładu skumulowanego) rozkładu t-Studenta w punkcie v, czyli wyznacza 
+prawdopodobieństwo _P(X ≤ v)_ gdzie _X_ jest zmienną losową o rozkładzie t-Studenta z podaną _liczbą stopni swobody_.
+
+[EXAMPLE]
+====
+
+`++RozkładT(10, 0)++` daje w wyniku _0.5_.
+
+====
