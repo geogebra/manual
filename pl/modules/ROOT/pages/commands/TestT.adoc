@@ -1,0 +1,30 @@
+= Polecenie TestT
+:page-en: commands/TTest
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+TestT( <Lista Danych z Próby>, <Średnia Hipotetyczna>, <Ogon> )::
+  Wykonuje jednopróbkowy test t dla średniej populacyjnej na podstawie podanej listy danych próbki. _Średnia Hipotetyczna_ is the
+ to średnia populacyjna przyjęta w hipotezie zerowej. Parametr _Ogon_ może przyjmować wartości "<", ">" , "≠", co określa hipotezę alternatywną w następujący sposób: +
+  "<" = średnia populacyjna < _Średnia Hipotetyczna_ +
+  ">" = średnia populacyjna > _Średnia Hipotetyczna_ +
+  "≠" = średnia populacyjna ≠ _Średnia Hipotetyczna_
+
+Wynik zwracany jest w postaci listy: _{Pawdopodobieństwo, Statystyka testu T}_.
+
+[EXAMPLE]
+====
+
+`++TestT({1, 2, 3, 4, 5}, 3, "<")++` daje w wyniku _{0.5, 0}_.
+
+====
+
+TestT( <Średnia z Próby>, <Odchylenie Standardowe z Próby>, <Liczność Próby>, <Średnia Hipotetyczna>, <Ogon> )::
+   Wykonuje jednopróbkowy test t dla średniej populacyjnej na podstawie podanych statystyk próbki. _Średnia Hipotetyczna_ i _Ogon_
+  są zdefiniowane jak powyżej. Wynik zwracany jest w postaci listy: _{Pawdopodobieństwo, Statystyka testu T}_.
+
+[EXAMPLE]
+====
+
+`++TestT(4, 1, 12, 4, "≠")++` daje w wyniku _{1, 0}_.
+
+====
