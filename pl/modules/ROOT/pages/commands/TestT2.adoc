@@ -1,0 +1,20 @@
+= Polecenie TestT2
+:page-en: commands/TTest2
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+TestT2( <Lista Danych z Próby 1>, <Lista Danych z Próby 2>, <Ogon>, <Czy Wspólne Wariancje> )::
+  Wykonuje test t dla różnicy między dwiema średnimi populacyjnymi, korzystając z podanych list danych próbki. 
+Parametr Tail może przyjmować następujące wartości: "<", ">" , "≠" które określają odpowiednie hipotezy alternatywne: +
+  "<" = różnica między średnimi populacyjnymi < 0 +
+  ">" = różnica między średnimi populacyjnymi > 0 +
+  "≠" = różnica między średnimi populacyjnymi ≠ 0
+
+Jeśli _Czy Wspólne Wariancje_ = true, to zakłada się, że wariancje populacji są równe, a odchylenia standardowe próbki są łączone w obliczeniach.
+
+Jeśli _Czy Wspólne Wariancje_ = false,  to nie zakłada się równości wariancji populacji, a odchylenia standardowe próbki nie są łączone.
+
+Wynik zwracany jest w postaci listy: _{Pawdopodobieństwo, Statystyka testu T}_.
+
+TestT2( <Średnia z Próby 1>, <Odchylenie Standardowe z Próby 1>, <Liczność Próby 1>, <Średnia z Próby 2>, <Odchylenie Standardowe z Próby 2>,<Liczność Próby 2>, <Ogon>, <Czy Wspólne Wariancje> )::
+  Wykonuje test t dla różnicy między dwiema średnimi populacyjnymi, korzystając z podanych statystyk próbek. Paramtry _Ogon_ i
+  _Czy Wspólne Wariancje_ zdefionowane są jak powyżej. Wynik zwracany jest w postaci listy: _{Pawdopodobieństwo, Statystyka testu T}_.
