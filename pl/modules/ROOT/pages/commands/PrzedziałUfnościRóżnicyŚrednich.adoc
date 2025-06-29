@@ -1,0 +1,22 @@
+= Polecenie PrzedziałUfnościRóżnicyŚrednich
+:page-en: commands/ZMean2Estimate
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+PrzedziałUfnościRóżnicyŚrednich( <Lista Danych z Próby 1>, <Lista Danych z Próby 2>, <σ1>, <σ2>, <Poziom ufności> )::
+  Oblicza przedział ufności _Z_ dla estymacji różnicy między dwiema średnimi populacyjnymi, używając podanych danych próbnych, 
+odchyleń standardowych populacji oraz _poziomu ufności_.
+ Wyniki są zwracane w formie listy jako {dolna granica ufności, górna granica ufności}.
+
+[EXAMPLE]
+====
+
+Mamy dwie listy danych  `++lista1 = {1, 4, 5, 4, 1, 3, 4, 2}++`, `++lista2 = {2, 1, 3, 1, 2, 5, 2, 4}++`. Odchylenie standardowe dla
+ lista1 to `++σ_1 = sqrt(2)++`, a odchylenie standardowe dla lista2 to `++σ_2  = sqrt(1.75)++`. Poziom ufności
+jest równy 0.75. `++PrzedziałUfnościRóżnicyŚrednich(lista1, lista2, σ_1,  σ_2, 0.75)++` daje w wyniku _lista3 = {-0.29, 1.29}_.
+
+====
+
+PrzedziałUfnościRóżnicyŚrednich( <Średnia Próby 1>, <σ1>, <Liczność Próby 1>, <Średnia Próby 2 >, <σ2>, <Liczność Próby 2>, <Poziom ufności>)::
+  Oblicza przedział ufności _Z_ dla estymacji różnicy między dwiema średnimi populacyjnymi, używając podanych średnich z prób, 
+odchyleń standardowych populacji oraz _poziomu ufności_.
+  Wyniki są zwracane w formie listy jako {dolna granica ufności, górna granica ufności}.
