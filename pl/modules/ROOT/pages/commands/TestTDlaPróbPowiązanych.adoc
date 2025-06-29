@@ -1,0 +1,20 @@
+= Polecenie TestTDlaPróbPowiązanych
+:page-en: commands/TTestPaired
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+TestTDlaPróbPowiązanych( <Lista Danych z Próby 1>, <Lista Danych z Próby 2>, <Ogon> )::
+ Wykonuje test t dla prób zależnych (test par) przy użyciu podanych list sparowanych danych próbnych. Parametr _ogon_ może przyjmować wartości "<", ">" , "≠" 
+które określają następujące hipotezy alternatywne: +
+  "<" = μ < 0 +
+  ">" = μ > 0 +
+  "≠" = μ ≠ 0 +
+  ( μ to średnia różnica par w populacji)
+
+Wynik zwracany jest w postaci listy: _{Pawdopodobieństwo, Statystyka testu T}_.
+
+[EXAMPLE]
+====
+
+`++TestTDlaPróbPowiązanych({1, 2, 3, 4, 5}, {1, 1, 3, 5, 5}, "<")++` daje w wyniku _{0.5, 0}_.
+
+====
