@@ -1,0 +1,13 @@
+= Polecenie TestProporcji
+:page-en: commands/ZProportionTest
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+TestProporcji( <Proporcja z Próby>, <Liczność Próby>, <Hipotetyczna Proporcja>, <Ogon> )::
+  Wykonuje jednostronny test _Z_ proporcji na podstawie podanych statystyk z próby. _Hipotetyczna Proporcja_ to
+  proporcja populacyjna przyjęta w hipotezie zerowej. Parametr _Ogon_ przyjmuje możliwe wartości: "<", ">" , "≠", które 
+określają hipotezę alternatywną w następujący sposób: +
+  "<" = proporcja populacyjna < _Hipotetyczna Proporcja_ +
+  ">" = proporcja populacyjna > _Hipotetyczna Proporcja_ +
+  "≠" = proporcja populacyjna ≠ _Hipotetyczna Proporcja_
+
+Wyniki są zwracane w postaci listy: {wartość p, statystyka testu Z}.
