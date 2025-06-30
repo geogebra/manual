@@ -1,0 +1,16 @@
+= Polecenie TestRóżnicyŚrednich
+:page-en: commands/ZMean2Test
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+TestRóżnicyŚrednich( <Lista Danych z Próby 1>, <σ1>, <Lista Danych z Próby 2>, <σ2>, <Ogon> )::
+ Wykonuje https://pl.wikipedia.org/wiki/Test_Z[test Z] różnicy między dwiema średnimi populacyjnymi, używając podanych list danych prób 
+i odchyleń standardowych populacji. Parametr _Ogon_ przyjmuje możliwe wartości "<", ">" , "≠" które odpowiadają następującym hipotezom alternatywnym: +
+  "<" = różnica średnich populacyjnych < 0 +
+  ">" = różnica średnich populacyjnych > 0 +
+  "≠" = różnica średnich populacyjnych ≠ 0
+
+Wyniki są zwracane w postaci listy: {wartość p, statystyka testu Z}.
+
+TestRóżnicyŚrednich( <Średnia z Próby 1 >, <σ1>, <Liczność Próby 1>, <Średnia z Próby 2 >, <σ2>, <Liczność Próby 2>, <Ogon> )::
+Wykonuje test Z różnicy między dwiema średnimi populacyjnymi, używając podanych statystyk prób i odchyleń standardowych populacji. 
+Parametr _Ogon_ jest zdefiniowany jak powyżej.
