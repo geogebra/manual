@@ -2,38 +2,86 @@
 :page-en: commands/ZoomIn
 ifdef::env-github[:imagesdir: /pl/modules/ROOT/assets/images]
 
-PrzybliżWidok[ <Czynnik Skalujący> ]::
-  Przybliża Widok Grafiki stosując czynnik skalujący w odniesieniu do aktualnego przybliżenia, środek ekranu jest
-  używany jako punkt centralny dla powiększenia. Przykład: PrzybliżWidok[1] nie zmienia niczego. PrzybliżWidok[2]
-  przybliża widok grafiki dwukrotnie, PrzybliżWidok[0.5] jest równoważne OddalWidok[2] i oddala widok dwukrotnie
-  PrzybliżWidok[ <Czynnik Skalujący>, <Punkt Środkowy> ];;
-    Przybliża Widok Grafiki stosując czynnik skalujący w odniesieniu do aktualnego przybliżenia, drugi parametr (punkt)
-    jest używany jako punkt centralny dla powiększenia.
-      PrzybliżWidok[ <Min x>, <Min y>, <Max x>, <Max y> ]::
-      Powiększa Widok Grafiki, aby można było zobaczyć prostokąt określony przez wierzchołki (Min x, Min y), (Max x, Max
-      y). Jeśli którykolwiek z tych parametrów jest zależny, granice widoku są dynamiczne (np. jeśli a jest suwakiem,
-      PrzybliżWidok [-a,-a, a, a] sprawia, że przybliżenie widoku odbywa się w zależności od suwaka a) . Aby tego
-      uniknąć, należy użyć polecenia KopiujObiektSwobodny Uwaga: Jeśli wiele Widoków Grafiki jest widocznych, dotyczy to
-      aktywnego widoku.
-      [width="100%",cols="50%,50%",]
-    |===
-    a|
-    image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+PrzybliżWidok( )::
+  Przywraca image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/Widok_Grafiki.adoc[Widok Grafiki] do domyślnej pozycji początkowej.
 
-    |Some content was not yet translated.
-    |===
-  [width="100%",cols="50%,50%",]
-  |===
-  a|
-  image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+PrzybliżWidok( <Czynnik Skalujący> )::
+  Powiększa/przybliża image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/Widok_Grafiki.adoc[Widok Grafiki] o podany współczynnik względem bieżącego powiększenia, 
+przy czym środek ekranu jest używany jako punkt odniesienia dla powiększenia.
 
-  |Some content was not yet translated.
-  |===
+[EXAMPLE]
+====
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+`++PrzybliżWidok(1)++` nie zmienia widoku, ale usuwa ślady.
 
-|Some content was not yet translated.
-|===
+`++PrzybliżWidok(2)++` powiększa dwukrotnie widok.
+
+`++PrzybliżWidok(0.5)++` jest równoważne poleceniu `++ZoomOut(2)++`, tzn. pomniejsza widok dwukrotnie.
+
+====
+
+PrzybliżWidok( <Czynnik Skalujący>, <Punkt - Centrum Widoku> )::
+  Powiększa/przybliża image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/Widok_Grafiki.adoc[Widok Grafiki] o podany współczynnik względem bieżącego powiększenia, 
+ przy czym drugi parametr określa punkt środkowy powiększenia.
+
+[EXAMPLE]
+====
+
+`++PrzybliżWidok(2, (0, 0))++`
+
+====
+
+PrzybliżWidok( <Min x>, <Min y>, <Max x>, <Max y> )::
+  Powiększa widok grafiki do prostokąta określonego przez wierzchołki (Min x, Min y), (Max x, Max y).
+
+[EXAMPLE]
+====
+
+`++PrzybliżWidok(0, 1, 5, 6)++`
+
+====
+
+[NOTE]
+====
+
+Jeśli którykolwiek z tych parametrów jest zależny, granice widoku stają się dynamiczne.
+Aby uniknąć tego zachowania, użyj polecenia xref:/commands/KopiujObiektSwobodny.adoc[KopiujObiektSwobodny].
+
+====
+
+[EXAMPLE]
+====
+
+Jeśli _a_ jest suwakiem, `++PrzybliżWidok(-a, -a, a, a)++` sprawia, że powiększenie widoku zależy od suwaka _a_.
+
+====
+
+PrzybliżWidok( <Min x>, <Min y>, <Min z>, <Max x>, <Max y>, <Max z> )::
+  Powiększa widok grafiki 3D do prostopadłościanu określonego przez wierzchołki (Min x, Min y, Min z), (Max x, Max y, Max z).
+
+[EXAMPLE]
+====
+
+`++PrzybliżWidok(-5, -5, -5, 5, 5, 5)++`
+
+====
+
+[NOTE]
+====
+
+Dynamiczne zachowanie znane z wersji 2D nie jest obsługiwane.
+
+====
+
+[NOTE]
+====
+
+* Jeżeli używamy wielu image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Widok_Grafiki.adoc[Widoków Grafiki], polecenie działa dla tego, który jest aktywny.
+* Zobacz także polecenia xref:/commands/OddalWidok.adoc[OddalWidok], xref:/commands/UstawAktywnyWidok.adoc[UstawAktywnyWidok],
+xref:/commands/PrzesuńWidokGrafiki.adoc[PrzesuńWidokGrafiki].
+
+====
