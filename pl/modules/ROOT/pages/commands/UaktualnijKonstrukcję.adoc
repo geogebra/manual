@@ -1,16 +1,27 @@
-= UaktualnijKonstrukcję Polecenie
+= Polecenie UaktualnijKonstrukcję
 :page-en: commands/UpdateConstruction
 ifdef::env-github[:imagesdir: /pl/modules/ROOT/assets/images]
 
-UaktualnijKonstrukcję[]::
-  Przelicza wszystkie obiekty (liczby losowe są regenerowane ponownie). Działa tak samo jak F9 lub Ctrl + R. Jeśli
-  chcesz, aby odświeżyć widok (np. w celu usunięcia śladów w Widoku Grafiki) można użyć PrzybliżWidok, które działa jak
-  Ctrl + F.
+UaktualnijKonstrukcję( )::
+  Przelicza wszystkie obiekty (liczby losowe są generowane na nowo). Działa tak samo jak klawisz [.kcode]#F9# albo kombinacja klawiszy [.kcode]#Ctrl# + [.kcode]#R#.
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+[NOTE]
+====
 
-|Some content was not yet translated.
-|===
+Jeśli chcesz odświeżyć widok np. usunąć xref:/Ślady.adoc[ślady] w
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Widok_Grafiki.adoc[Widoku
+Grafiki]) można też użyć `++ZoomIn(1)++` albo kombunacji klawiszy [.kcode]#Ctrl# + [.kcode]#F#. Możliwe, że będzie potrzebne użycie polecenia
+xref:/commands/UstawAktywnyWidok.adoc[UstawAktywnyWidok(1)] albo xref:/commands/UstawAktywnyWidok.adoc[UstawAktywnyWidok(2)],  aby najpierw aktywować widok, który ma być uaktualniony, 
+jeżeli używasz dwóch Widoków Grafiki.
+
+====
+
+UaktualnijKonstrukcję( <Ilość powtórzeń> )::
+  Wykonuje polecenie `++UaktualnijKonstrukcję()++` podaną liczbę razy.
+
+[EXAMPLE]
+====
+
+`++UaktualnijKonstrukcję(2)++` uaktualnia konstrukcję dwukrotnie (np. w celu zapisania kilku rzutów kostką do arkusza kalkulacyjnego).
+
+====
