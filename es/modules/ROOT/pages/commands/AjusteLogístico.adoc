@@ -3,12 +3,13 @@
 ifdef::env-github[:imagesdir: /es/modules/ROOT/assets/images]
 
 AjusteLogístico( <Lista de Puntos> )::
-  Calcula la curva de regresión de la forma a/(1 + b e^(-kx)).
+  Calcula la curva de regresión de la forma stem:[\frac{a}{1+b e^{-kx}}].
+
 
 [EXAMPLE]
 ====
 
-`++AjusteLogístico({(-6, 2), (0, 2), (3, 4), (3.4, 8)})++` da por resultado stem:[ \frac{1.98}\{1 - 0.03 e^\{1x}}].
+`++AjusteLogístico({(-6, 2), (0, 2), (3, 4), (3.4, 8)})++` da por resultado stem:[ \frac{1.98}{1 - 0.03 e^{1x}}].
 
 ====
 
