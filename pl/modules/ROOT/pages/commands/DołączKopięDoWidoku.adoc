@@ -1,0 +1,47 @@
+= Polecenie DołączKopięDoWidoku
+:page-en: commands/AttachCopyToView
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+DołączKopięDoWidoku( <Obiekt>, <Widok 0|1|2> )::
+  Jeśli _Widok = 0_, tworzona jest kopia danego obiektu. Dla _Widok = 1_ lub _Widok = 2_ polecenie to tworzy zależną kopię danego obiektu, 
+której rozmiar w danym image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/Widok_Grafiki.adoc[Widoku Grafiki] jest stały.
+
+[EXAMPLE]
+====
+
+Niech `++wielokąt = Wielokąt((0, 0), (1, 0), (1, 1), (0, 1))++`. Jeśli Widok Grafiki 1 jest aktywny, `++DołączKopięDoWidoku(wielokąt, 1)++`
+tworzy kwadrat o tym samym rozmiarze i położeniu.
+
+====
+
+[NOTE]
+====
+
+Po utworzeniu kopii do definicji polecenia zostają dodane cztery dodatkowe argumenty.
+
+====
+
+DołączKopięDoWidoku( <Obiekt>, <Widok 0|1|2>, <Punkt 1>, <Punkt 2>, <Punkt na ekranie 1>, <Punkt na ekranie 2> )::
+
+ Jeśli _Widok = 0_, tworzona jest kopia danego obiektu. Dla _Widok = 1_ lub _Widok = 2_ polecenie to tworzy zależną kopię danego obiektu,
+której rozmiar w danym image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Widok_Grafiki.adoc[Widoku Grafiki] jest przekształcany za pomocą przekształcenia afinicznego, które odwzorowuje _Punkt 1_  na punkt 
+o współrzędnych ekranowych (w pikselach) równych _Punktowi na ekranie 1_, a _Punkt 2_ na punkt o współrzędnych ekranowych równych
+_Punktowi na ekranie 2_.
+
+[EXAMPLE]
+====
+
+Niech `++wielokąt = Wielokąt((0, 0), (1, 0), (1, 1), (0, 1))++`. Jeśli Widok Grafiki 1 jest aktywny,
+`++DołączKopięDoWidoku(wielokąt, 1, (0, 0), (1, 1), (0, 0), (100, 100))++` tworzy kwadrat o wymiarach _100px x 100px_ w lewym górnym narożniku
+Widoku Grafiki.
+
+====
+
+[NOTE]
+====
+
+Kopiowane są wszystkie punkty obiektu, nawet jeśli znajdują się poza widokiem.
+
+====
