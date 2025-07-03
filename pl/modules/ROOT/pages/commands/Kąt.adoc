@@ -1,0 +1,167 @@
+= Polecenie Kąt
+:page-en: commands/Angle
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Kąt( <Obiekt> )
+
+* *Krzywa stożkowa:* Zwraca kąt między osią wielką krzywej stożkowej i osią OX (zobacz polecenie xref:/commands/Osie.adoc[Osie]).
+
+[EXAMPLE]
+====
+
+`++Kąt(x²/4+y²/9=1)++` daje w wyniku _90°_ lub _1.57_ jeśli domyślną jednostką kąta jest _radian_.
+
+====
+
+[NOTE]
+====
+
+Nie można zmienić jednostki kąta na radiany w wersji GeoGebra 5.0 Web oraz w aplikacji na tablet.
+
+====
+
+* *Wector:* Zwraca kąt między osią _x_ i danym wektorem.
+
+[EXAMPLE]
+====
+
+`++Kąt(Wector((1, 1)))++` daje w wyniku _45°_ lub odpowiadającą wartość w _radianach_.
+
+====
+
+* *Punkt:* Zwraca kąt między osią _x_ i wektorem położenia danego punktu.
+
+[EXAMPLE]
+====
+
+`++Kąt((1, 1))++` daje w wyniku _45°_ lub odpowiadającą wartość w _radianach_.
+
+====
+
+* *Liczba:* Przekształca liczbę na kąt (wynik w zakresie [0, 360°] lub [0, 2π] w zależności od domyślnej jednostki kąta).
+
+[EXAMPLE]
+====
+
+`++Kąt(20)++` daje w wyniku _65.92°_, gdy domyślną jednostką kąta jest _stopień_.
+
+====
+
+* *Wielokąt:* Tworzy wszystkie kąty wielokąta w matematycznie dodatniej orientacji (przeciwnie do ruchu wskazówek zegara).
+
+[EXAMPLE]
+====
+
+`++Kąt(Wielokąt((4, 1), (2, 4), (1, 1)))++` daje w wyniku _56.31°_, _52.13°_ i _71.57°_ lub odpowiadającą wartość w _radianach_.
+
+====
+
+[NOTE]
+====
+
+Jeśli wielokąt został utworzony w orientacji przeciwniej do ruchu wskazówek zegara, otrzymasz kąty wewnętrzne. 
+Jeśli wielokąt został utworzony zgodnie z ruchem wskazówek zegara, otrzymasz ich dopełnienia.
+====
+
+Kąt( <Wektor>, <Wektor> )::
+  Zwraca kąt między dwoma wektorami (wynik w zakresie [0, 360°] lub [0, 2π] w zależności od domyślnej jednostki kąta).
+
+[EXAMPLE]
+====
+
+`++Kąt(Wektor((1, 1)), Wektor((2, 5)))++` daje w wyniku _23.2°_ lub odpowiadającą wartość w _radianach_.
+
+====
+
+Kąt( <Prosta>, <Prosta> )::
+  Zwraca kąt między wektorami kierunkowymi dwóch prostych (wynik w zakresie [0, 360°] lub [0, 2π] w zależności od domyślnej jednostki kąta).
+
+[EXAMPLE]
+====
+
+* `++Kąt(y = x + 2, y = 2x + 3)++` daje w wyniku _18.43°_ lub odpowiadającą wartość w _radianach_.
+* `++Kąt(Prosta((-2, 0, 0), (0, 0, 2)), Prosta((2, 0, 0), (0, 0, 2)))++` daje w wyniku _90°_ lub odpowiadającą wartość w _radianach_.
+
+i w _Widoku CAS_ :
+
+* `++Kąt(x + 2,  2x + 3)++` daje w wyniku stem:[acos \left( 3 \cdot \frac{\sqrt{10}}{10} \right)].
+* Jeśli `++f(x) := x + 2++` i `++g(x) := 2x + 3++`, wówczas polecenie `++Kąt(f(x), g(x))++` daje w wyniku stem:[acos \left(3
+\cdot \frac{\sqrt{10}}{10} \right)].
+
+====
+
+Kąt( <Prosta>, <Płaszczyzna> )::
+  Zwraca kąt pomiędzy prostą i płaszczyzną.
+
+[EXAMPLE]
+====
+
+* `++Kąt(Prosta((1, 2, 3),(-2, -2, 0)), z = 0)++` daje w wyniku _30.96°_ lub odpowiadającą wartość w _radianach_.
+
+====
+
+Kąt( <Płaszczyzna>, <Płaszczyzna> )::
+  Zwraca kąt pomiędzy dwoma płaszczyznami.
+
+[EXAMPLE]
+====
+
+* `++Kąt(2x - y + z = 0, z = 0)++` daje w wyniku _114.09°_ lub odpowiadającą wartość w _radianach_.
+
+====
+
+Kąt( <Punkt>, <Wierzchołek>, <Punkt> )::
+  Zwraca kąt zdefiniowany przez dane punkty (wynik w zakresie [0, 360°] lub [0, 2π] w zależności od domyślnej jednostki kąta).
+
+[EXAMPLE]
+====
+
+`++Kąt((1, 1), (1, 4), (4, 2))++` daje w wyniku _56.31°_ lub odpowiadającą wartość w _radianach_.
+
+====
+
+Kąt( <Punkt>, <Wierzchołek>, <Kąt> )::
+  Zwraca kąt o mierze _α_ i danym _wierzchołku_, którego ramię początkowe przechodzi przez dany _punkt_.
+
+[EXAMPLE]
+====
+
+* `++Kąt((0, 0), (3, 3), 30°)++` daje w wyniku _30°_ i punkt _(1.9, -1.1)_.
+
+====
+
+[NOTE]
+====
+
+Punkt _Obrót( <Punkt>, <Kąt>, <Wierzchołek> )_ zostaje również utworzony.
+
+====
+
+Kąt( <Punkt>, <Punkt>, <Punkt>, <Kierunek> )::
+  Zwraca kąt określony przez punkty oraz dany _Kierunek_, którym może być prosta lub płaszczyzna 
+(wynik w zakresie [0, 360°] lub [0, 2π] w zależności od domyślnej jednostki kąta).
+
+[EXAMPLE]
+====
+
+`++Kąt((1, -1, 0),(0, 0, 0),(-1, -1, 0), zAxis)++` daje w wyniku _270°_ i
+`++Kąt((-1, -1, 0),(0, 0, 0),(1, -1, 0), zAxis)++` daje w wyniku _90°_ lub odpowiadającą wartość w _radianach_.
+
+====
+
+[NOTE]
+====
+
+Użycie _Kierunku_ pozwala ominąć standardowy sposób wyświetlania kątów w _Widoku 3D_ który może być ustawiony jako tylko [0,180°] lub
+[180°,360°]. Dla danych punktów _A_, _B_, _C_ in _Widoku 3D_ polecenia `++Kąt(A, B, C)++` i
+`++Kąt(C, B, A)++` zwracają ich rzeczywistą miarę zamiast wartości ograniczonych do tych przedziałów.
+
+====
+
+[NOTE]
+====
+
+Zobacz także narzędzia image:20px-Mode_angle.svg.png[Mode angle.svg,width=20,height=20] xref:/tools/Kąt.adoc[Kąt] and
+image:20px-Mode_anglefixed.svg.png[Mode anglefixed.svg,width=20,height=20] xref:/tools/Kąt_o_danej_mierze_Size.adoc[Kąt o danej mierze].
+
+====
