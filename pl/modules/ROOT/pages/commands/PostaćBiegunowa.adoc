@@ -1,0 +1,36 @@
+= Polecenie PostaćBiegunowa
+:page-en: commands/ToPolar
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+PostaćBiegunowa( <Wektor> )::
+  Przekształca wektor na jego współrzędne biegunowe.
+
+[EXAMPLE]
+====
+
+`++PostaćBiegunowa({1, sqrt(3)})++` daje w wyniku _(2; 60°)_ w image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/Widok_Algebry.adoc[Widoku Algebry] i _(2; stem:[\frac{\pi}{3}])_ w 
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Widok_CAS.adoc[Widoku CAS].
+
+====
+
+PostaćBiegunowa( <Liczba Zespolona> )::
+  Przekształca liczbę zespoloną na jej współrzędne biegunowe.
+
+[EXAMPLE]
+====
+
+`++PostaćBiegunowa(1 + sqrt(3) * ί)++` daje w wyniku _(2; 60°)_ w image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/Widok_Algebry.adoc[Widoku Algebry] i _(2; stem:[\frac{\pi}{3}])_ w
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Widok_CAS.adoc[Widoku CAS].
+
+====
+
+[NOTE]
+====
+
+* Jednostkę zespoloną ί uzyskasz, naciskając kombinację klawiszy [.kcode]#ALT# + [.kcode]#i#.
+* Zobacz także polecenia xref:/commands/WektorJakoLiczbaZespolona.adoc[WektorJakoLiczbaZespolona], xref:/commands/PostaćWykładnicza.adoc[PostaćWykładnicza]
+i xref:/commands/ZespolonaJakoPunkt.adoc[ZespolonaJakoPunkt].
+
+====
