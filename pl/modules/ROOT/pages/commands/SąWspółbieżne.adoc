@@ -1,0 +1,25 @@
+= Polecenie SąWspółbieżne
+:page-en: commands/AreConcurrent
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+SąWspółbieżne( <Prosta>, <Prosta>, <Prosta> )::
+  Sprawdza, czy proste są współbieżne. Jeśli proste są równoległe, uznaje się, że mają punkt wspólny w nieskończoności,
+  dlatego polecenie zwraca w takim przypadku wynik _true_.
+
+Zazwyczaj to polecenie oblicza wynik numerycznie. Można to zmienić używając polecenia
+xref:/commands/Udowodnij.adoc[Udowodnij].
+
+[EXAMPLE]
+====
+
+`++SąWspółbieżne(Prosta((1, 2), (3, 4)), Prosta((1, 2), (3, 5)), Prosta((1, 2), (3, 6)))++` daje w wyniku _true_ ponieważ te trzy proste przecinają się w punkcie (1,2).
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenia xref:/commands/SąWspółliniowe.adoc[SąWspółliniowe], xref:/commands/SąPrzystające.adoc[SąPrzystające], xref:/commands/LeżąNaOkręgu.adoc[LeżąNaOkręgu],
+xref:/commands/SąRówne.adoc[SąRówne], xref:/commands/SąRównoległe.adoc[SąRównoległe], xref:/commands/SąProstopadłe.adoc[SąProstopadłe], xref:/commands/JestStyczną.adoc[JestStyczną].
+
+====
