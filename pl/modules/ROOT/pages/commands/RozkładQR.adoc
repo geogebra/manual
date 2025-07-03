@@ -1,0 +1,24 @@
+= Polecenie RozkładQR
+:page-en: commands/QRDecomposition
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+== Specyficzna składnia CAS
+
+RozkładQR( <Matrix> )::
+  Oblicza https://pl.wikipedia.org/wiki/Rozk%C5%82ad_QR[rozkład QR] dla danej macierzy.
+
+[EXAMPLE]
+====
+
+`++RozkładQR({{1,2},{3,4}})++` zwraca macierze
+stem:[\begin{pmatrix}\frac{1}{\sqrt{10}}&\frac{3/5}{\sqrt{10}/5}\\\frac{3}{\sqrt{10}}&-\frac{1/5}{\sqrt{10}/5}\end{pmatrix}] i
+stem:[\begin{pmatrix}\sqrt{10}&7/5\sqrt{10}\\0&\sqrt{10}/5\end{pmatrix}].
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/RozkładLU.adoc[RozkładLU].
+
+====
