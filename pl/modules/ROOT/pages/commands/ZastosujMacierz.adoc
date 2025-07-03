@@ -1,0 +1,39 @@
+= Polecenie ZastosujMacierz
+:page-en: commands/ApplyMatrix
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+ZastosujMacierz( <xref:/Macierze.adoc[Macierz]>, <xref:/Obiekty_Geometryczne.adoc[Obiekt]> )::
+  Przekształca obiekt _O_ w taki sposób, że punkt _P_ należący do _O_ zostaje odwzorowany na:
+
+* punkt _M*P_, jeśli _P_ jest punktem _2D_, a _M_ jest macierzą 2 x 2
+* point _projekcja(M*(x(P), y(P), 1))_,  jeśli_P_ jest punktem _2D_, a _M_ jest macierzą 3 x 3: _projekcja_ przekształca
+punkt _(x, y, z)_ na _(x/z, y/z)_.
+* punkt _M*P_, jeśli _P_ jest punktem _3D_, a _M_ jest macierzą 3 x 3
+* point _N*P_, jeśli _P_ jest punktem _3D_, a _M_ jest macierzą 2 x 2: macierz _N_ to _uzupełnienie do rzędu 3_ macierzy _M_:
+given _M_ = stem:[\begin{pmatrix}a&b\\ c&d \end{pmatrix}] then _N_ = stem:[\begin{pmatrix}a&b&0\\ c&d&0\\0&0&1
+\end{pmatrix}]
+
+[EXAMPLE]
+====
+
+Niech `++M={{cos(π/2),-sin(π/2)}, {sin(π/2), cos(π/2)}}++` będzie macierzą transformacji, a `++u = (2,1)++` danym wektorem
+(obiektem). `++ZastosujMacierz(M,u)++` daje w wyniku wektor _u'=(-1,2)_, czyli wynik matematycznie dodatniego obrotu wektora _u_ o kąt 90° 
+(przeciwnie do ruchu wskazówek zegara).
+
+====
+
+[EXAMPLE]
+====
+
+Dana jest macierz `++M={{1,1,0},{0,1,1},{1,0,1}}++` i wektor `++u=(2,1)++`. `++ZastosujMacierz(M,u)++` daje w wyniku wektor
+_u'=(1,0.67)_. W rzeczywistości: stem:[\begin{pmatrix}1&1&0\\ 0&1&1\\1&0&1 \end{pmatrix}] stem:[\begin{pmatrix}2\\ 1\\1
+\end{pmatrix}] = stem:[\begin{pmatrix}3\\ 2\\3 \end{pmatrix}], a (3/3 = 1, 2/3 ≈ 0.67) (zaokrąglając do dwóch miejsc po przecinku)
+
+====
+
+[NOTE]
+====
+
+Polecenie działa również dla kwadryk i xref:../tools/Obraz.adoc[obrazów].
+
+====
