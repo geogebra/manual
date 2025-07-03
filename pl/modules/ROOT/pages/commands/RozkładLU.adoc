@@ -1,0 +1,24 @@
+= Polecenie RozkładLU
+:page-en: commands/LUDecomposition
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+== Specyficzna składnia CAS
+
+RozkładLU( <Macierz> )::
+  Oblicza https://pl.wikipedia.org/wiki/Metoda_LU[rozkład LU] dla danej macierzy.
+
+[EXAMPLE]
+====
+
+`++RozkładLU({{2,0},{1,1}})++` zwraca macierze
+stem:[\begin{pmatrix}0&1\\1&0\end{pmatrix}],stem:[\begin{pmatrix}1&0\\2&1\end{pmatrix}] i
+stem:[\begin{pmatrix}1&1\\0&-2\end{pmatrix}].
+
+====
+
+[NOTE]
+====
+
+Zobacz polecenie xref:/commands/RozkładQR.adoc[RozkładQR].
+
+====
