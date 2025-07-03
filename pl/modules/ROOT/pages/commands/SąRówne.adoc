@@ -1,0 +1,28 @@
+= Polecenie SąRówne
+:page-en: commands/AreEqual
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+SąRówne( <Obiekt>, <Obiekt> )::
+  Sprawdza, czy pbiekty są równe (identyczne).
+
+Zazwyczaj to polecenie oblicza wynik numerycznie. Można to zmienić używając polecenia
+xref:/commands/Udowodnij.adoc[Udowodnij].
+
+[EXAMPLE]
+====
+
+`++SąRówne(Okrąg((0, 0),1),x^2+y^2=1)++` daje w wyniku _true_ ponieważ te dwa okręgi mają taki sam środek i promień.
+
+====
+
+[NOTE]
+====
+
+* `++SąRówne(Odcinek((1, 2), (3, 4)), Odcinek((3, 4), (1, 6)))++` różni się od
+`++Odcinek((1, 2), (3, 4)) == Odcinek((3, 4), (1, 6))++` ponieważ to drugie polecenie porównuje jedynie długości odcinków.
+* Zobacz także polecenia xref:/commands/SąWspółliniowe.adoc[SąWspółliniowe], xref:/commands/SąWspółbieżne.adoc[SąWspółbieżne],
+xref:/commands/SąPrzystające.adoc[SąPrzystające], xref:/commands/LeżąNaOkręgu.adoc[LeżąNaOkręgu],
+xref:/commands/SąRównoległe.adoc[SąRównoległe], xref:/commands/SąProstopadłe.adoc[SąProstopadłe],
+xref:/commands/JestStyczną.adoc[JestStyczną].
+
+====
