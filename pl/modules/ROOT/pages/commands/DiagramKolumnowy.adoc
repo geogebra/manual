@@ -1,0 +1,80 @@
+= Polecenie DiagramKolumnowy
+:page-en: commands/BarChart
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+DiagramKolumnowy( <Lista Danych>, <Lista Częstości> )::
+  Tworzy wykres kolumnowy na podstawie listy danych z odpowiadającymi im częstościami.
+
+[EXAMPLE]
+====
+
+* `++DiagramKolumnowy({10, 11, 12, 13, 14}, {5, 8, 12, 0, 1})++`
+* `++DiagramKolumnowy({5, 6, 7, 8, 9}, {1, 0, 12, 43, 3})++`
+* `++DiagramKolumnowy({0.3, 0.4, 0.5, 0.6}, {12, 33, 13, 4})++`
+
+====
+
+[NOTE]
+====
+
+Liczby na liście danych surowych muszą być uporządkowane rosnąco.
+
+====
+
+DiagramKolumnowy( <Lista Surowych Danych>, <Szerokość Kolumn>, <Pionowy Czynnik Skalujący (opcjonalnie)> )::
+  Tworzy wykres kolumnowy na podstawie podanych danych surowych; kolumny mają określoną szerokość, a ich wysokość zależy od pionowego czynnika skalującego.
+[EXAMPLE]
+====
+
+* `++DiagramKolumnowy({1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5}, 1)++`
+* `++DiagramKolumnowy({1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 5, 5, 5, 5}, 1, 2)++`
+
+====
+
+DiagramKolumnowy( <Lista Danych>, <Lista Częstości>, <Szerokość Kolumn> )::
+  Tworzy wykres kolumnowy na podstawie listy danych i odpowiadających im częstości. Szerokość kolumn jest określona.
+
+[EXAMPLE]
+====
+
+* `++DiagramKolumnowy({10, 11, 12, 13, 14}, {5, 8, 12, 0, 1}, 0.5)++` pozostawia odstępy między kolumnami..
+* `++DiagramKolumnowy({10, 11, 12, 13, 14}, {5, 8, 12, 0, 1}, 0)++` tworzy wykres liniowy.
+
+====
+
+DiagramKolumnowy( <Wartość Początkowa>, <Wartość Końcowa>, <Lista Wysokości> )::
+  Tworzy wykres kolumnowy na zadanym przedziale: liczba kolumn jest określona 
+przez długość listy, której elementy odpowiadają wysokościom kolumn.
+
+[EXAMPLE]
+====
+
+`++DiagramKolumnowy(10, 20, {1, 2, 3, 4, 5})++`Tworzy wykres kolumnowy z pięcioma kolumnami o określonych wysokościach w przedziale [10, 20].
+
+====
+
+DiagramKolumnowy( <Wartość Początkowa>, <Wartość Końcowa>, <Wyrażenie>, <Zmienna>, <Od Liczby>, <Do Liczby> )::
+  Tworzy wykres kolumnowy w przedziale [_Wartość Początkowa_, _Wartość Końcowa_], obliczając wysokości kolumn na podstawie wyrażenia zadanej
+   _Zmiennej_ w przedziale [_Od Liczby_, _Do Liczby_].
+
+[EXAMPLE]
+====
+
+Dane są liczby _p = 0.1_, _q = 0.9_, i _n = 10_. Wówczas
+`++DiagramKolumnowy(-0.5, n + 0.5, SymbolNewtona(n,k) * p^k * q^(n-k), k, 0, n)++` tworzy wykres kolumnowy w przedziale
+[_-0.5, n+0.5_]. Wysokości kolumn zależą od prawdopodobieństw obliczanych na podstawie podanego wyrażenia.
+
+====
+
+DiagramKolumnowy( <Wartość Początkowa>, <Wartość Końcowa>, <Wyrażenie>, <Zmienna>, <Od Liczby>, <Do Liczby>, <Długość Kroku> )::
+  Tworzy wykres kolumnowy w przedziale [_Wartość Początkowa_, _Wartość Końcowa_], obliczając wysokości kolumn na podstawie wyrażenia zadanej
+ _Zmiennej_ w przedziale [_Od Liczby_, _Do Liczby_] z daną _Długością Kroku_.
+
+
+[NOTE]
+====
+
+Można określić inny kolor lub wypełnienie dla każdej kolumny w
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Ustawienia_Obiektu.adoc[Ustawieniach Obiektu].
+
+====
