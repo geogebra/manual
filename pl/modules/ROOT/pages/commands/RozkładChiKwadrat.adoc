@@ -1,0 +1,32 @@
+= Polecenie RozkładChiKwadrat
+:page-en: commands/ChiSquared
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RozkładChiKwadrat( <Liczba Stopni Swobody>, <Liczba Sukcesów> )::
+  Oblicza wartość dystrybuanty rozkładu chi-kwadrat w punkcie _liczba sukcesów_ _v_, 
+czyli prawdopodobieństwo _P(X ≤ v)_ gdzie _X_ jest zmienną losową o rozkładzie chi-kwadrat z daną _liczby stopni swobody_.
+
+[EXAMPLE]
+====
+
+`++RozkładChiKwadrat(4, 3)++` daje w wyniku stem:[\gamma\left(2, \frac{3}{2}\right)], co w przybliżeniu wynosi _0.44_.
+
+====
+
+[NOTE]
+====
+
+Ta składnia zwraca prawdopodobieństwo dla danej wartości współrzędnej _x_, czyli pole pod krzywą rozkładu chi-kwadrat na lewo od zadanej współrzędnej _x_.
+
+====
+
+RozkładChiKwadrat( <Liczba Stopni Swobody>, <Liczba Sukcesów>, <Czy Skumulowany> )::
+  Jeśli _Czy Skumulowany = true_, obliczana jest wartość dystrybuanty rozkładu chi-kwadrat o danej _liczbie stopni swobody_ w punkcie _liczba sukcesów_, 
+w przeciwnym razie obliczana jest wartość funkcji gęstości prawdopodobieństwa (PDF) tego rozkładu w punkcie _liczba sukcesów_.
+
+RozkładChiKwadrat( <Liczba Stopni Swobody>, x, <Czy Skumulowany> )::
+  Jeśli _Czy Skumulowany = true_, tworzona jest dystrybuanta (CDF)  https://pl.wikipedia.org/wiki/Rozk%C5%82ad_chi_kwadrat[rozkładu chi-kwadrat]
+stopni swobody, w przeciwnym razie tworzona jest funkcja gęstości prawdopodobieństwa (PDF) tego rozkładu.
+
+
+
