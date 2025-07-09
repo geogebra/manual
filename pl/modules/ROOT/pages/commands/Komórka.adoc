@@ -1,0 +1,23 @@
+= Polecenie Komórka
+:page-en: commands/Cell
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Komórka( <Kolumna>, <Wiersz> )::
+  Zwraca kopię komórki xref:/Widok_Arkusza.adoc[arkusza] o danej kolumnie i wierszu.
+
+[EXAMPLE]
+====
+
+`++Komórka(2, 1)++` zwraca kopię komórki B1.
+
+====
+
+[NOTE]
+====
+
+* Domyślnie komórki w arkuszu kalkulacyjnym są xref:/Obiekty_Swobodne_Zależne_i_Pomocnicze.adoc[obiektami pomocniczymi], i w takim przypadku to polecenie zwraca również obiekt pomocniczy.
+* Musisz upewnić się, że komórki, do których się odwołujesz, znajdują się *wcześniej* w
+image:16px-Menu_view_construction_protocol.svg.png[Menu view construction protocol.svg,width=16,height=16]
+xref:/Protokół_Konstrukcji.adoc[Protokole Konstrukcji] niż to polecenie.
+
+====
