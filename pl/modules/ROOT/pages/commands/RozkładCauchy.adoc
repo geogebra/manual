@@ -1,0 +1,37 @@
+= Polecenie RozkładCauchy
+:page-en: commands/Cauchy
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RozkładCauchy( <Mediana>, <Skala>, <Liczba sukcesów> )::
+ Oblicza wartość dystrybuanty (CDF) dla danej _wartości zmiennej v_ https://pl.wikipedia.org/wiki/Rozk%C5%82ad_Cauchy%E2%80%99ego[rozkładu Cauchy’ego], 
+czyli prawdopodobieństwo _P(X≤v)_, gdzie _X_ jest zmienną losową o rozkładzie Cauchy’ego z zadanymi parametrami: _mediana_ i _skala_.
+
+[EXAMPLE]
+====
+
+`++RozkładCauchy(1, 2, 3)++` daje w wyniku _0.75_ w image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/Widok_Algebry.adoc[Widoku Algebry] i _stem:[\frac{3}{4}]_ w 
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Widok_CAS.adoc[Widoku CAS].
+
+====
+
+[NOTE]
+====
+
+Ta składnia zwraca prawdopodobieństwo dla danej wartości, czyli pole pod krzywą rozkładu Cauchy’ego na lewo od zadanej współrzędnej _x_.
+
+====
+
+RozkładCauchy( <Mediana>, <Skala>, <Liczba sukcesów>, <Czy Skumulowany>)::
+  Jeśli _Czy Skumulowany_ ma wartość _true_, obliczana jest wartość dystrybuanty rozkładu Cauchy’ego w punkcie _Liczba sukcesów_, 
+w przeciwnym razie obliczana jest wartość funkcji gęstości prawdopodobieństwa (PDF) w punkcie _Liczba sukcesów_ dla rozkładu Cauchy’ego o zadanych parametrach: _mediana_ i _skala_.
+
+
+RozkładCauchy( <Mediana>, <Skala>, x, <Czy Skumulowany>)::
+  Jeśli _Czy Skumulowany_ ma wartość _true_, tworzona jest dystrybuanta rozkładu Cauchy’ego; w przeciwnym razie tworzona jest funkcja gęstości prawdopodobieństwa (PDF) rozkładu Cauchy’ego o zadanych parametrach: _mediana_ i _skala_.
+
+
+
+
+
+
