@@ -1,0 +1,27 @@
+= Polecenie Załóż
+:page-en: commands/Assume
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+== Specyficzna składnia CAS
+
+Assume( <Warunek>, <Wyrażenie> )::
+  Evaluates the expression according to the condition
+
+[EXAMPLE]
+====
+
+* `++Załóż(a > 0, Całka(exp(-a x), 0, infinity))++` daje w wyniku `++1 / a++`.
+* `++Załóż(x>0 && n>0, Rozwiąż(log(n^2*(x/n)^lg(x))=log(x^2), x))++` daje w wyniku `++{x = 100, x = n}++`
+* `++Załóż(x<2,Uprość(sqrt(x-2sqrt(x-1))))++` daje w wyniku `++-sqrt(x - 1) + 1++`
+* `++Assume(x>2,Uprość(sqrt(x-2sqrt(x-1))))++` daje w wyniku `++sqrt(x - 1) - 1++`
+* `++Załóż(k>0, Ekstremum(k*3*x^2/4-2*x/2))++` daje w wyniku stem:[ \left\{ \left(\frac{2}{3 k}, -\frac{1}{3 k} \right)\right\} ]
+* `++Załóż(k>0, PunktPrzegięcia(0.25 k x^3 - 0.5x^2 + k))++` daje w wyniku stem:[ \left\{ \left(\frac{2}{3 k}, \frac{27k^{3} - 4}{27 k^{2}} \right) \right\} ]
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/Rozwiąż.adoc[Rozwiąż].
+
+====
