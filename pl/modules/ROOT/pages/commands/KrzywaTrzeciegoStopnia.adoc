@@ -1,0 +1,36 @@
+= Polecenie KrzywaTrzeciegoStopnia
+:page-en: commands/Cubic
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+KrzywaTrzeciegoStopnia( <Punkt>, <Punkt>, <Punkt>, <Liczba> )::
+  Zwraca n-tą https://bernard-gibert.pagesperso-orange.fr/ctc.html[krzywą trzeciego stopnia] trójkąta _ABC_.
+
+[EXAMPLE]
+====
+
+Niech _A = (0, 1)_, _B = (2, 1)_ i _C = (1, 2)_. `++KrzywaTrzeciegoStopnia(A, B, C, 2)++` zwraca krzywą opisaną równaniem: _-x³ + 3x² + 5x y² -
+14x y + 7x - 5y² + 14y = 9_.
+
+====
+
+[NOTE]
+====
+
+Komenda jest w fazie rozwoju, a zbiór obsługiwanych indeksów _n_ może ulegać zmianie.
+
+====
+
+== Przykładowe krzywe trzeciego stopnia trójkąta
+
+[cols=",",options="header",]
+|===
+|Liczba n |Krzywa trzeciego stopnia
+|1 |Krzywa Neuberga
+|2 |Krzywa Thomsona
+|3 |Krzywa McCay
+|4 |Krzywa Darboux
+|5 |Krzywa Napoleona/Feuerbacha
+|7 |Krzywa Lucasa
+|17 |Pierwsza krzywa Brocarda
+|18 |Druga krzywa Brocarda
+|===
