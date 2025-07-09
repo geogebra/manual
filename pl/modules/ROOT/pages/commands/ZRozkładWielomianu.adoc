@@ -1,0 +1,45 @@
+= Polecenie ZRozkładWielomianu
+:page-en: commands/CFactor
+:page-aliases: commands/CFactorise.adoc
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+image:64px-Globe.png[Globe.png,width=64,height=64,role=left] To polecenie ma dwie wersje w języku angielskim:
+
+* CFactor (US)
+* CFactorise (UK + Aus)
+
+====
+
+== Specyficzna składnia CAS
+
+ZRozkładWielomianu( <Wyrażenie> )::
+  Rozkłada podane wyrażenie na czynniki, dopuszczając czynniki zespolone.
+
+[EXAMPLE]
+====
+
+`++ZRozkładWielomianu(x^2 + 4)++` daje w wyniku _(x + 2 ί) (x - 2 ί)_, rozkład na czynniki _x^2^ + 4_.
+
+====
+
+ZRozkładWielomianu( <Wyrażenie>, <Zmienna> )::
+  Rozkłada wyrażenie na czynniki względem podanej zmiennej, dopuszczając czynniki zespolone.
+
+[EXAMPLE]
+====
+
+* `++ZRozkładWielomianu(a^2 + x^2, a)++` daje w wyniku _(ί x + a) (- ί x + a)_, rozkład na czynniki _a^2^ + x^2^_ względem zmiennej _a_.
+* `++ZRozkładWielomianu(a^2 + x^2, x)++` daje w wyniku _(x + ί a) (x - ί a)_, rozkład na czynniki _a^2^ + x^2^_ względem zmiennej _x_.
+
+====
+
+[NOTE]
+====
+
+To polecenie rozkłada wyrażenia na czynniki w https://pl.wikipedia.org/wiki/Cia%C5%82o_Gaussa[ciele liczb zespolonych wymiernych]. 
+Aby dokonać rozkładu w ciele liczb wymiernych, zobacz polecenie xref:/commands/RozkładNaCzynniki.adoc[RozkładNaCzynniki].
+
+====
