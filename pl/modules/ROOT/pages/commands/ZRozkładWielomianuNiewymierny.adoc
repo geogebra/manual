@@ -1,0 +1,34 @@
+= Polecenie ZRozkładWielomianuNiewymierny
+:page-en: commands/CIFactor
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+== Specyficzna składnia CAS
+
+ZRozkładWielomianuNiewymierny( <Wyrażenie> )::
+  Rozkłada wyrażenie na czynniki w ciele liczb zespolonych niewymiernych.
+
+[EXAMPLE]
+====
+
+`++ZRozkładWielomianuNiewymierny(x^2 + x + 1)++` zwraca stem:[ \left( x + \frac{-ί \sqrt{3} + 1}{2} \right) \left( x + \frac{ί \sqrt{3}
++ 1}{2} \right)]
+
+====
+
+ZRozkładWielomianuNiewymierny( <Wyrażenie>, <Zmienna> )::
+  Rozkłada wyrażenie na czynniki w ciele liczb zespolonych niewymiernych względem podanej zmiennej.
+
+[EXAMPLE]
+====
+
+`++ZRozkładWielomianuNiewymierny(a^2 + a + 1, a)++` zwraca stem:[ \left( a + \frac{-ί \sqrt{3} + 1}{2} \right) \left( a + \frac{ί
+\sqrt{3} + 1}{2} \right)]
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/RozkładWielomianuNiewymierny.adoc[RozkładWielomianuNiewymierny].
+
+====
