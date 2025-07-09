@@ -1,0 +1,17 @@
+= Polecenie NajbliższyPunkt
+:page-en: commands/ClosestPoint
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+NajbliższyPunkt( <Ścieżka>, <Punkt> )::
+  Zwraca nowy punkt na xref:/Obiekty_Geometryczne.adoc[ścieżce], który znajduje się najbliżej danego punktu.
+
+[NOTE]
+====
+
+Dla xref:/Funkcje.adoc[funkcji], polecenie to wykorzystuje teraz punkt najbliższy (zamiast punktu o tej samej współrzędnej x). 
+Najlepiej działa to dla wielomianów; dla innych funkcji algorytm numeryczny jest mniej stabilny.
+
+====
+
+NajbliższyPunkt( <Prosta>, <Prosta> )::
+  Zwraca nowy punkt na pierwszej prostej, który znajduje się najbliżej drugiej prostej.
