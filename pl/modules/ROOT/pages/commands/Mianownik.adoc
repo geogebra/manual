@@ -1,0 +1,46 @@
+= Polecenie Mianownik
+:page-en: commands/Denominator
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Mianownik( <Funkcja> )::
+  Zwraca mianownik funkcji.
+
+[EXAMPLE]
+====
+
+`++Denominator(5 / (x^2 + 2))++` daje w wyniku _f(x)=(x^2^ + 2)_.
+
+====
+
+Mianownik( <Liczba> )::
+  Dla liczby wymiernej zwraca jej (uproszczony) mianownik. Używa metody numerycznej, co ogranicza działanie polecenia do liczb z niewielkim mianownikiem. 
+Dla argumentu niewymiernego zwracany jest mianownik jego xref:/commands/UłamekŁańcuchowy.adoc[ułamka łańcuchowego].
+
+[EXAMPLE]
+====
+
+* `++Mianownik(5 / 3)++` daje w wyniku 3.
+* `++Mianownik(10 / 6)++` daje w wyniku 3.
+* `++Mianownik(15 / 3)++` daje w wyniku 1.
+
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenia xref:/commands/Licznik.adoc[Licznik] i xref:/commands/UłamekJakoTekst.adoc[UłamekJakoTekst].
+
+====
+
+== Specyficzna składnia CAS
+
+Mianownik( <Wyrażenie> )::
+  Zwraca mianownik liczby wymiernej lub wyrażenia.
+
+[EXAMPLE]
+====
+
+`++Mianownik(2 / 3 + 1 / 15)++` daje w wyniku _15_.
+
+====
