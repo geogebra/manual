@@ -1,0 +1,64 @@
+= Polecenie Narożnik
+:page-en: commands/Corner
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Narożnik( <Liczba> )::
+  Dla liczb _n = 1, 2, 3, 4_ tworzy punkt w rogu image:16px-Menu_view_graphics.svg.png[Menu view
+  graphics.svg,width=16,height=16] xref:/Widok_Grafiki.adoc[Widoku Grafiki], dla _n = 5_ zwraca punkt o współrzędnych _(w, h)_, gdzie
+  _w_ i _h_ to szerokość i wysokość Widoku Grafiki w pikselach.
+Zawsze używa pierwszego image:16px-Menu_view_graphics1.svg.png[Menu view graphics1.svg,width=16,height=16] xref:/Widok_Grafiki.adoc[Widoku Grafiki], nawet jeśli aktywny jest drugi.
+
+[NOTE]
+====
+
+Polecenie  Narożnik( <Liczba> ) nie działa wewnątrz innych poleceń. Zamiast tego utwórz np. `++C_1 = Narożnik(1)++` i używaj tej zmiennej.
+
+====
+
+Narożnik( <Widok Grafiki>, <Liczba> )::
+  Tworzy punkt w rogu image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  Widoku Grafiki (1, 2), który nigdy nie jest widoczny w tym widoku.
+Obsługiwane wartości liczby _n_ to _1, 2, 3, 4_ oraz _5_, jak wyżej.
+
+[NOTE]
+====
+
+Polecenie Narożnik( <Widok Grafiki>, <Liczba> ) nie działa wewnątrz innych poleceń. Zamiast tego utwórz np. `++C_1 = Narożnik(1)++` i używaj tej zmiennej.
+
+====
+
+[NOTE]
+====
+
+Użyj  `++-1++`, aby uzyskać narożniki image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra
+3Dgraphics.svg,width=16,height=16] xref:/Widok_Grafiki_3D.adoc[Widoku Grafiki 3D] (możliwe wartości parametru
+_Licznba_: od 1 do 8).  Dodatkowo:
+
+* `++Narożnik(-1,9)++` zwraca punkt (_w_, _h_, 0), gdzie _w_ i _h_ to szerokość i wysokość Widoku Grafiki 3D w pikselach
+
+* `++Narożnik(-1,10)++` zwraca punkt (_w_, _h_, 0), gdzie _w_ i _h_ to szerokość i wysokość głównego okna w pikselach
+
+* `++Narożnik(-1,11)++` zwraca kierunek widoku (dla rzutów równoległych) lub pozycję oka (np. dla rzutowania perspektywicznego)
+
+* `++Narożnik(-1,12)++` zwraca kierunek od lewej do prawej strony ekranu
+
+* `++Narożnik(-1,13)++` zwraca skale dla osi _x_, _y_ i _z_.
+
+====
+
+
+Narożnik( <Obraz>, <Liczba> )::
+  Tworzy punkt w narożniku obrazu (liczba _n_ = 1, 2, 3, 4).
+
+Narożnik( <Tekst>, <Liczba> )::
+  Tworzy punkt w narożniku tekstu (liczba _n_ = 1, 2, 3, 4).
+
+[NOTE]
+====
+
+* `++Narożnik( <Tekst>, <Liczba> )++` nie działa wewnątrz poleceń xref:/commands/Ciąg.adoc[Ciąg] lub
+xref:/commands/ZmiennaNaListę.adoc[ZmiennaNaListę]. Dodatkowo należy odznaczyć opcję _Położenie bezwzględna na ekranie_
+
+* Numeracja narożników zaczyna się od lewego dolnego rogu w kierunku przeciwnym do ruchu wskazówek zegara.
+
+====
