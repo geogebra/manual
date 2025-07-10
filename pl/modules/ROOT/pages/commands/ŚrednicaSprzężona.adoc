@@ -1,0 +1,24 @@
+= Polecenie ŚrednicaSprzężona
+:page-en: commands/ConjugateDiameter
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+ŚrednicaSprzężona( <Prosta>, <Stożkowa> )::
+  Zwraca  https://pl.wikipedia.org/wiki/%C5%9Arednice_sprz%C4%99%C5%BCone[średnicę sprzężoną] z średnicą równoległą do danej prostej (dla danej krzywej stożkowej).
+
+[EXAMPLE]
+====
+
+`++ŚrednicaSprzężona(-4x + 5y = -2, x^2 + 4 y^2 + 2x - 8y + 1 = 0)++` daje w wyniku prostą 5__x__ + 16__y__ = 11
+
+====
+
+ŚrednicaSprzężona( <Wektor>, <Stożkowa> )::
+  Zwraca  https://pl.wikipedia.org/wiki/%C5%9Arednice_sprz%C4%99%C5%BCone[średnicę sprzężoną] z średnicą równoległą do danego wektora 
+  (dla danej krzywej stożkowej).
+
+[EXAMPLE]
+====
+
+Dany jest wektor _u_ = (4,1). Wówczas `++ŚrednicaSprzężona(u, x^2 + 4 y^2 + 2x - 8y + 1 = 0)++` daje w wyniku prostą _x_ + _y_ = 0
+
+====
