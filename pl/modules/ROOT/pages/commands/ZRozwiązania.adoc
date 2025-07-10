@@ -1,0 +1,44 @@
+= Polecenia ZRozwiązania
+:page-en: commands/CSolutions
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+== Specyficzna składnia CAS
+
+ZRozwiązania( <Równanie> )::
+  Rozwiązuje podane równanie względem głównej zmiennej i zwraca listę wszystkich rozwiązań, uwzględniając także rozwiązania zespolone.
+
+[EXAMPLE]
+====
+
+`++ZRozwiązania(x^2 = -1)++` daje w wyniku _{ί, -ί}_, zespolone rozwiązanie równania _x^2^ = -1_.
+
+====
+
+ZRozwiązania( <Równanie>, <Zmienna> )::
+  Rozwiązuje równanie względem podanej zmiennej i zwraca listę wszystkich rozwiązań, uwzględniając także rozwiązania zespolone.
+
+[EXAMPLE]
+====
+
+`++ZRozwiązania(a^2 = -1, a)++` daje w wyniku _{ί, -ί}_, zespolone rozwiązanie równania _a^2^ = -1_.
+
+====
+
+ZRozwiązania( <Lista Równań>, <Lista Zmiennych> )::
+ Rozwiązuje układ równań względem podanych zmiennych i zwraca listę wszystkich rozwiązań, uwzględniając także rozwiązania zespolone.
+
+[EXAMPLE]
+====
+
+`++ZRozwiązania({y^2 = x - 1, x = 2 * y - 1}, {x, y})++` daje w wyniku stem:[\begin{pmatrix}1 + 2 ί&1 + ί\\1 - 2 ί&1 -
+ί\end{pmatrix}], zespolone rozwiązanie układu równań _y^2^ = x - 1_ i _x = 2 * y - 1_.
+
+====
+
+[NOTE]
+====
+
+* Jednostkę zespoloną ί uzyskamy naciskając kombinację klawiszy [.kcode]#ALT# + [.kcode]#i#.
+* Zobacz także polecenia xref:/commands/ZRozwiąż.adoc[ZRozwiąż] i xref:/commands/Rozwiązania.adoc[Rozwiązania].
+
+====
