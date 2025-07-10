@@ -1,0 +1,32 @@
+= Polecenie Usuń
+:page-en: commands/Delete
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Usuń( <Obiekt> )::
+  Usuwa obiekt i wszystkie obiekty od niego zależne.
+
+[EXAMPLE]
+====
+
+Dany jest punkt _P_, suwak _s_ i _a=Odcinek(P, s)_. Polecenie `++Usuń(s)++` usunie suwak _s_ i odcinek _a_, ale nie usunie z konstrukcji punktu _P_, ponieważ punkt ten nie jest zależny od suwaka _s_.
+
+====
+
+== Specyficzna składnia CAS
+
+Usuń( <Obiekt> )::
+  Usuwa obiekt oraz wszystkie obiekty od niego zależne w GeoGebrze, a także usuwa wszelkie wartości powiązane z obiektem w Widoku CAS.
+
+[EXAMPLE]
+====
+
+Dany jest punkt _P_, suwak _s_ i _a=Odcinek(P, s)_. Polecenie `++Usuń(s)++` usunie suwak _s_ i odcinek _a_, ale nie usunie z konstrukcji punktu _P_, ponieważ punkt ten nie jest zależny od suwaka _s_.
+
+====
+
+[NOTE]
+====
+
+Zobacz także narzędzie image:24px-Mode_delete.svg.png[Mode delete.svg,width=24,height=24] xref:/tools/Usuń.adoc[Usuń].
+
+====
