@@ -1,0 +1,59 @@
+= Polecenie PrzecięcieŚcieżek
+:page-en: commands/IntersectPath
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+PrzecięcieŚcieżek( <Prosta>, <Wielokąt> )::
+  Tworzy ścieżkę przecięcia między prostą a wielokątem.
+
+[EXAMPLE]
+====
+
+`++PrzecięcieŚcieżek(a, t1)++` tworzy odcinek łączący punkty przecięcia prostej  _a_ i
+wielokąta _t1_.
+
+====
+
+PrzecięcieŚcieżek( <Wielokąt>, <Wielokąt> )::
+  Tworzy wielokąt będący częścią wspólną dwóch podanych wielokątów.
+
+[EXAMPLE]
+====
+
+`++PrzecięcieŚcieżek(wielokątl, t1)++` tworzy nowy wielokąt będący częścią wspólną dwóch podanych wielokątów.
+
+====
+
+[NOTE]
+====
+
+Nowy wielokąt może być czworokątem, pięciokątem lub sześciokątem – w zależności od położenia wierzchołków podanych wielokątów.
+
+====
+
+PrzecięcieŚcieżek( <Płaszczyzna>, <Wielokąt> )::
+  Tworzy ścieżkę przecięcia między płaszczyzną a wielokątem.
+
+[EXAMPLE]
+====
+
+`++PrzecięcieŚcieżek(a, t1)++` tworzy odcinek łączący punkty przecięcia płaszczyzny _a_ i
+wielokąta _t1_ w płaszczyźnie tego wielokąta.
+
+====
+
+PrzecięcieŚcieżek( <Płaszczyzna>, <Kwadryka> )::
+  Tworzy ścieżkę przecięcia między płaszczyzną a kwadryką.
+
+[EXAMPLE]
+====
+
+`++PrzecięcieŚcieżek(a, sfera)++` tworzy okrąg będący przecięciem płaszczyzny _a_ i kwadryki _sfera_.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenia xref:/commands/Przecięcie.adoc[Przecięcie] i xref:/commands/PrzecięcieStożkowych.adoc[PrzecięcieStożkowych].
+
+====
