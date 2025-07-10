@@ -1,0 +1,45 @@
+= Polecenie RozkładWielomianuNiewymierny
+:page-en: commands/IFactor
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RozkładWielomianuNiewymierny( <Wielomian> )::
+  Factors over the irrationals.
+
+[EXAMPLE]
+====
+
+`++RozkładWielomianuNiewymierny(x^2 + x - 1)++` daje w wyniku stem:[ \left( x + \frac{-\sqrt{5} + 1}{2} \right) \left( x + \frac{\sqrt{5} +
+1}{2} \right)]
+
+====
+
+== Specyficzna składnia CAS
+
+RozkładWielomianuNiewymierny( <Wyrażenie> )::
+  Rozkłada na czynniki z użyciem liczb niewymiernych.
+
+[EXAMPLE]
+====
+
+`++RozkładWielomianuNiewymierny(x^2 + x - 1)++` zwraca stem:[ \left( x + \frac{-\sqrt{5} + 1}{2} \right) \left( x + \frac{\sqrt{5} +
+1}{2} \right)]
+
+====
+
+RozkładWielomianuNiewymierny( <Wyrażenie>, <Zmienna> )::
+ Rozkłada na czynniki z użyciem liczb niewymiernych względem danej zmiennej.
+
+[EXAMPLE]
+====
+
+`++RozkładWielomianuNiewymierny(a^2 + a - 1, a)++` zwraca stem:[ \left( a + \frac{-\sqrt{5} + 1}{2} \right) \left( a + \frac{\sqrt{5} +
+1}{2} \right)]
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/ZRozkładWielomianuNiewymierny.adoc[ZRozkładWielomianuNiewymierny].
+
+====
