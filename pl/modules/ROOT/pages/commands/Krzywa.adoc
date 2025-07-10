@@ -1,0 +1,35 @@
+= Polecenie Krzywa
+:page-en: commands/Curve
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Krzywa( <Wyrażenie>, <Wyrażenie>, <Zmienna - Parametr>, <Wartość Początkowa>, <Wartość Końcowa> )::
+  Zwraca kartezjańską xref:/Krzywe.adoc[krzywą parametryczną] dla danego wyrażenia _x_(pierwsze <Wyrażenie>) oraz wyrażenia 
+  _y_ (drugie <Wyrażenie>) (z użyciem zmiennej parametrycznej) w danym przedziale [_Wartość Początkowa_, _Wartość Końcowa_].
+
+[EXAMPLE]
+====
+
+`++Krzywa(2 cos(t), 2 sin(t), t, 0, 2π)++` tworzy okrąg o promieniu _2_, którego środkiem jest początek ukłądu współrzędnych.
+
+====
+
+Krzywa( <Wyrażenie> , <Wyrażenie> , <Wyrażenie> , <Zmienna - Parametr> , <Wartość Początkowa>, <Wartość Końcowa> )::
+  Zwraca  trójwymiarową kartezjańską krzywą parametryczną dla danego wyrażenia _x_(pierwsze <Wyrażenie>), wyrażenia _y_ (drugie <Wyrażenie>) 
+oraz wyrażenia _z_ (trzecie <Wyrażenie>) (z użyciem zmiennej parametrycznej) w danym przedziale [_Wartość Początkowa_, _Wartość Końcowa_].
+
+[EXAMPLE]
+====
+
+`++Krzywa(cos(t), sin(t), t, t, 0, 10π)++` tworzy trójwymiarową spiralę.
+
+====
+
+[NOTE]
+====
+
+* _Wartość Końcowa_ musi być większa lub równa _Wartości Początkowej_ i obie muszą być skończone.
+* _x_, _y_ i _z_ nie mogą być używane jako zmienne parametryczne.
+* Zobacz  xref:/Krzywe.adoc[Krzywe], aby uzyskać więcej informacji. Zobacz także polecenia xref:/commands/Pochodna.adoc[Pochodna] i
+xref:/commands/PochodnaParametryczna.adoc[PochodnaParametryczna].
+
+====
