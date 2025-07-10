@@ -1,0 +1,21 @@
+= Polecenie UstawStosunekSkali
+:page-en: commands/SetAxesRatio
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+UstawStosunekSkali( <Liczba>, <Liczba> )::
+  Zmienia stosunek jednostek osi w aktywnym image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/Widok_Grafiki.adoc[Widoku Grafiki] tak, aby jednostki X na  xref:/Proste_i_sie.adoc[osi _x_] odpowiadały 
+tej samej liczbie pikseli co jednostki Y na osi y, a punkt (0,0) pozostał na swoich współrzędnych. 
+Jeśli używany jest jednostkowy stosunek, odpowiednia oś zostaje ustalona z wartością jednostki, a druga jest dostosowywana zgodnie z tym ustawieniem.
+
+[EXAMPLE]
+====
+
+* `++UstawStosunekSkali(1,2)++` ustala jednostkę osi _x_ i zmniejsza jednostkę osi _y_.
+* `++UstawStosunekSkali(2,1)++` ustala jednostkę osi _y_ i zmniejsza jednostkę osi _x_.
+
+====
+
+UstawStosunekSkali( <Liczba>, <Liczba>, <Liczba> )::
+  Podobnie jak w powyższej składni, działa również w image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra
+  3Dgraphics.svg,width=16,height=16] xref:/Widok_Grafiki_3D.adoc[Widoku Grafiki 3D].
