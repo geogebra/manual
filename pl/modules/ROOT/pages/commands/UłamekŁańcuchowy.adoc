@@ -1,0 +1,36 @@
+= Polecenie UłamekŁańcuchowy
+:page-en: commands/ContinuedFraction
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+UłamekŁańcuchowy( <Liczba> )::
+  Tworzy https://en.wikipedia.org/wiki/Continued_fraction[ułamek okresowy], który aproksymuje podaną liczbę. Wynikiem jest 
+  xref:/Teksty.adoc[obiekt tekstowy] w formacie LaTeX. Ułamek jest obliczany numerycznie z dokładnością do 10^-8^.
+
+[EXAMPLE]
+====
+
+`++UłamekŁańcuchowy(5.45)++` daje w wyniku _stem:[5 + \frac{1}{ 2+ \frac{1}{4+ \frac{1}{ 1+ \frac{1}{ 1 } } } }]_
+
+====
+
+UłamekŁańcuchowy( <Liczba>, <Poziom> )::
+  Tworzy ułamek okresowy, który aproksymuje podaną liczbę. Liczba ilorazów jest mniejsza lub równa _Poziom_, ale nigdy nie przekracza liczby ilorazów potrzebnych do osiągnięcia dokładności numeryczne 10^-8^.
+
+[EXAMPLE]
+====
+
+`++UłamekŁańcuchowy(5.45, 3)++` daje w wyniku _stem:[5 + \frac{1}{ 2+ \frac{1}{4+ ... } }]_
+
+====
+
+UłamekŁańcuchowy( <Number>, <Poziom> (opcjonalnie), <Skrót> )::
+  Tworzy ułamek okresowy, który aproksymuje podaną liczbę. Jeśli parametr _Poziom_ został podany, liczba ilorazów jest mniejsza lub równa _Poziom_, ale nigdy nie przekracza liczby ilorazów potrzebnych do osiągnięcia dokładności numeryczne 10^-8^.
+Gdy _skrót_ ma wartość _true_, tekst LaTeX używa skróconej składni i zawiera listę części całkowitych ułamka łańcuchowego.
+
+[EXAMPLE]
+====
+
+* `++UłamekŁańcuchowy(5.45, true)++` daje w wyniku [_5; 2, 4, 1, 1_]
+* `++UłamekŁańcuchowy(5.45, 3, true)++` daje w wyniku [_5; 2, 4, ..._]
+
+====
