@@ -1,0 +1,34 @@
+= Warstwy
+:page-en: Layers
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+W GeoGebrze warstwy służą do określenia, który obiekt zostanie zaznaczony lub przeciągnięty, 
+gdy użytkownik kliknie w miejsce, gdzie znajduje się wiele obiektów jednocześnie.
+
+====
+
+Domyślnie wszystkie obiekty są rysowane na warstwie 0, która jest w zasadzie warstwą tła
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Widok_Grafiki.adoc[Widoku
+Grafiki]. Dostępnych jest łącznie 10 warstw (od 0 do 9), a obiekty na warstwach o wyższych numerach 
+  są rysowane nad obiektami z warstw o niższych numerach.
+
+UKorzystając z zakładki _Zaawansowane_ w xref:/Okno_Ustawień_Obiektu.adoc[w oknie dialogowym Ustawienia], możesz zmienić warstwę 
+  danego obiektu (do wyboru warstwy od 0 do 9). Po przypisaniu któremukolwiek obiektowi warstwy innej niż 0 (np. warstwy 3), 
+wszystkie nowe obiekty będą rysowane na warstwie o najwyższym numerze, który został użyty dla jakiegokolwiek obiektu.
+
+[NOTE]
+====
+
+Po zaznaczeniu obiektu (obiektów) w wersji desktopowej GeoGebry możesz zaznaczyć wszystkie obiekty znajdujące się na tej samej warstwie, 
+wybierając z menu Edycja opcję _Zaznacz bieżącą warstwę_ (skrót klawiszowy: [.kcode]#Ctrl# + [.kcode]#L#). Ta opcja menu jest 
+dostępna tylko wtedy, gdy wszystkie zaznaczone obiekty znajdują się na tej samej warstwie.
+
+====
+
+== Dalsze zastosowanie warstw:
+
+* Podczas eksportu do SVG obiekty są grupowane według warstw.
+* Warstwami można sterować za pomocą interfejsu JavaScript dla xref:/Zapisz_jako_Aktywność.adoc[apletów GeoGebry].
