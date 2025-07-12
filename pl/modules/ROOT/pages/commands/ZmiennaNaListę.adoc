@@ -1,0 +1,50 @@
+= Polecenie ZmiennaNaListę
+:page-en: commands/Zip
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+ZmiennaNaListę( Wyrażenie>, <Zmienna1>, <Lista1>, <Zmienna2>, <Lista2>,...)::
+  Tworzy xref:/Listy.adoc[listę] poprzez podstawienie zmiennych w wyrażeniu odpowiednimi elementami z podanych list.
+Jeśli liczba zmiennych odpowiada liczbie list, każda zmienna pobiera wartości z odpowiadającej jej listy.
+Jeśli liczba zmiennych przekracza liczbę list o jeden, ostatnia zmienna przyjmuje wartości 1, 2, 3, ..., k, 
+gdzie k to długość najkrótszej z list. Długość wynikowej listy to minimum długości wejściowych list.
+
+[EXAMPLE]
+====
+
+Dane są punkty P, Q, R, S. `++ZmiennaNaListę(PunktŚrodkowy(A, B), A, {P, Q}, B, {R, S})++` zwraca listę zawierającą
+xref:/commands/PunktŚrodkowy.adoc[środki] odcinków _PR_ i _QS_.
+
+====
+
+[EXAMPLE]
+====
+
+Dane jest lista wielomianów _list1={x^2, x^3, x^6}_. `++ZmiennaNaListę(Stopień(a), a, list1)++` zwraca listę _{2, 3, 6}_.
+
+====
+
+[EXAMPLE]
+====
+
+Dane jest lista liczb _list1={1, 2, 5}_. `++ZmiennaNaListę(Uprość(a*x^(b-1)), a, list1,b)++` zwraca listę _{1, 2x,
+5x²}_.
+
+====
+
+[EXAMPLE]
+====
+
+Zmienne mogą być także funkcjami: `++ZmiennaNaListę(f(2), f, {x+1,x+3})++` zwraca listę _{3, 5}_.
+
+====
+
+[NOTE]
+====
+
+Wszystkie elementy listy muszą być tego samego typu.
+
+====
+
+
+
+
