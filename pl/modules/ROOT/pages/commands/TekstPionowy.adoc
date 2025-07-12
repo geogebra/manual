@@ -1,0 +1,36 @@
+= Polecenie TekstPionowy
+:page-en: commands/VerticalText
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+TekstPionowy( <Tekst> )::
+  Tworzy xref:/Teksty.adoc[tekst] xref:/LaTeX.adoc[LaTeX], zawierający podany tekst obrócony o 90° przeciwnie do ruchu wskazówek zegara.
+
+[NOTE]
+====
+
+* Tekst musi być ujęty w podwójny cudzysłów `++"++`.
+* Tekst jest obrócony w taki sposób, że lewy górny róg (znany również jako Narożnik 4) ramki, w której się znajduje, jest umieszczony w początku układu współrzędnych.
+
+====
+
+[EXAMPLE]
+====
+
+* `++TekstPionowy("a = 5")++` tworzy tekst LaTeX "_a_ = 5" wyświetlany pionowo, którego lewy górny narożnik znajduje się w (0,0).
+
+====
+
+TekstPionowy( <Tekst>, <Punkt> )::
+ Tworzy w danym punkcie xref:/Teksty.adoc[tekst] xref:/LaTeX.adoc[LaTeX], zawierający podany tekst obrócony o 90° przeciwnie do ruchu wskazówek zegara.
+
+
+[EXAMPLE]
+====
+
+* `++TekstPionowy("GeoGebra", (6, 6))++` tworzy tekst LaTeX "_GeoGebra_" wyświetlany pionowo, którego lewy górny narożnik znajduje się w (6,6)
+
+
+====
+
+
+
