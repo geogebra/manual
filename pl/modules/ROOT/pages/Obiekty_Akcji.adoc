@@ -1,0 +1,63 @@
+= Obiekty akcji
+:page-en: Action_Objects
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+W interaktywnych apletach ze xref:/Skrypty.adoc[skryptami]  przydatne mogą być obiekty akcji. Istnieją cztery ich typy:
+
+== Pola wyboru
+
+Pola wyboru są graficznymi reprezentacjami xref:/Wartości_boolowskie.adoc[wartości boolowskich (logicznych)]. Zobacz narzędzie
+image:22px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=22,height=22] xref:/tools/Pole_Wyboru.adoc[Pole
+wyboru], aby uzyskać więcej informacji. Pola wyboru można tworzyć za pomocą wspomnianego narzędzia lub polecenia
+xref:/commands/PoleWyboru.adoc[PoleWyboru].
+
+== Pola tekstowe
+
+Pola tekstowe służą do wprowadzania danych do xref:/Skrypty.adoc[skryptów].Skrypt uruchamia się po zmianie tekstu w polu 
+i naciśnięciu Enter lub opuszczeniu pola wejściowego. Wprowadzoną wartość można odczytać za pomocą zmiennej %0.
+
+[EXAMPLE]
+====
+
+Pole tekstowe ze skryptem _Przy kliknięciu_ `++a=a+%0++` zwiększa liczbę _a_ o wprowadzoną wartość. Działa tylko wtedy, gdy _a_ jest
+xref:/Obiekty_Swobodne_Zależne_i_Pomocnicze.adoc[obiektem swobodnym].
+
+====
+
+Jeśli chcesz, aby pole wejściowe zmieniało wartość wolnego obiektu (lub redefiniowało obiekt zależny), możesz zdefiniować ten obiekt jako 
+powiązany z danym polem tekstowym. Dzięki temu nie musisz wpisywać żadnego skryptu. Pole tekstowe możesz utworzyć używając narzędzia
+image:22px-Mode_textfieldaction.svg.png[Mode textfieldaction.svg,width=22,height=22] xref:/tools/Wstaw_Pole_Tekstowe.adoc[Wstaw
+Pole tekstowe] lub polecenia xref:/commands/PoleTekstowe.adoc[PoleTekstowe].
+
+== Przyciski
+
+Przyciski służą do uruchamiania skryptów po ich kliknięciu. Chociaż skrypty mogą być uruchamiane również poprzez kliknięcie dowolnego innego obiektu
+(np. xref:/tools/Obraz.adoc[obrazu]), użycie przycisków sprawia, że arkusz staje się bardziej intuicyjny w obsłudze. Przyciski możemy
+tworzyć na pomocą narzędzia image:22px-Mode_buttonaction.svg.png[Mode buttonaction.svg,width=22,height=22]
+xref:/tools/Przycisk.adoc[Przycisk] lub polecenia the xref:/commands/Przycisk.adoc[Przycisk].
+
+== Listy rozwijalne
+
+Jeśli chcesz wyświetlić zawartość listy w formie rozwijanej:
+
+* w image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Widok_Grafiki.adoc[Widoku Grafiki]: zaznacz opcję _Wyświetl jako lista rozwijalna_ w zakładce _Podstawowe_ 
+image:18px-Menu-options.svg.png[Menu-options.svg,width=18,height=18] xref:/Okno_Ustawień_Obiektu.adoc[okna _Ustawienia_] dla
+wybranej listy.
+* w image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+xref:/Widok_Arkusza.adoc[Widoku Arkusza]: wprowadź listę do komórki, a następnie zaznacz opcję _Używaj Przycisków
+i Pól Wyboru_ w image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+_ustawianiach Widoku Arkusza_.
+
+Wybrany element listy rozwijanej można uzyskać za pomocą poleceń xref:/commands/ZaznaczonyWskaźnik.adoc[ZaznaczonyWskaźnik] i
+xref:/commands/ZaznaczonyElement.adoc[ZaznaczonyElement].
+
+[EXAMPLE]
+====
+
+Aby utworzyć listę rozwijaną z trzema funkcjami: `++x+1++`, `++x^2++`, `++sqrt(x)++`, utwórz najpierw listą wpisując
+`++L={x+1, x^2,sqrt(x)}++` w polu wprowadzania. Następnie klikniej listę prawym przyciskiem w _Widoku Algebry_ i wybierz _Ustawienia_. 
+Zaznacz opcję _Wyświetl jako lista rozwijalna_ w wyświetlonym oknie. Możesz również dodać opis, który opisuje listę.
+Aby narysować w _Widoku Grafiki_  wykres aktualnie wybranej funkcji, wpisz polecenie `++ZaznaczonyElement(L)++` w polu wprowadzania.
+
+====
