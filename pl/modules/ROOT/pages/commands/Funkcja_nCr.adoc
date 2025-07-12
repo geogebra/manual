@@ -1,0 +1,46 @@
+= Funkcja nCr
+:page-en: nCr_Function
+:page-aliases: commands/BinomialCoefficient.adoc
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+To polecenie jest automatycznie uzupełniane w polu wprowadzania jako `nCr(n, r)`.
+
+====
+
+nCr( <n>, <r> )::
+  Oblicza symbol Newtona (współczynnik dwumianowy) n nad r stem:[ n \choose r ], tzn. czyli liczbę sposobów wyboru _r_ elementów spośród dostępnych _n_ 
+bez powtórzeń (kombinacje).   Jako alias można również użyć polecenia `SymbolNewtona(n, r)`.
+
+
+[EXAMPLE]
+====
+
+`++nCr(5, 3)++` daje w wyniku _10_.
+
+====
+
+[NOTE]
+====
+
+W image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Widok_CAS.adoc[Widoku CAS] można używać zmiennych 
+jako argumentów polecenia – w takim przypadku polecenie zwraca wzór ogólny na symbol Newtona (współczynnik dwumianowy).
+
+====
+
+[EXAMPLE]
+====
+
+`++nCr(n, 3)++` daje w wyniku stem:[\frac{n^3 - 3 n^2 + 2 n}{6}].
+
+====
+
+
+[NOTE]
+====
+
+Zobacz także xref:/Funkcja_nPr.adoc[ funkcję nPr].
+
+====
