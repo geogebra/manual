@@ -1,0 +1,35 @@
+= Polecenie Wierzchołek
+:page-en: commands/Vertex
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Wierzchołek( <Stożkowa> )::
+  Zwraca wszystkie wierzchołki danej krzywej stożkowej.
+
+Wierzchołek( <Nierówność> )::
+  Zwraca punkty przecięcia brzegów obszaru określonego przez nierówność.
+
+[EXAMPLE]
+====
+
+* `++Wierzchołek((x + y < 3) && (x - y > 1))++` zwraca punkt  _A = (2, 1)_.
+* `++{Wierzchołek((x + y < 3) ∧ (x - y > 1) && (y > - 2))}++` zwraca listę _list1 = {(2, 1), (5, -2), (-1, -2)}_.
+* `++Wierzchołek((y > x²) ∧ (y < x))++` zwraca dwa punkty _A = (0, 0)_ and _B = (1, 1)_.
+* `++{Wierzchołek((y > x²) ∧ (y < x))}++` zwraca listę _list1 = {(0, 0), (1, 1)}_.
+
+====
+
+Wierzchołek( <wielokąt> )::
+  Zwraca (wszystkie) wierzchołki wielokąta.
+
+Wierzchołek( <wielokąt>, <Indeks> )::
+  Zwraca wierzchołek wielokąta o numerze _indeks_.
+
+[NOTE]
+====
+
+ToAby uzyskać xref:/Listy.adoc[listę] wierzchołków obiektu typu wielokąt / stożkowa / nierówność, użyj składni: `++{Wierzchołek(Obiekt)}++`.
+
+====
+
+Wierzchołek( <Odcinek>, <Indeks> )::
+  Zwraca punkt początkowy (dla Indeks = 1) lub końcowy (dla Indeks = 2) odcinka.
