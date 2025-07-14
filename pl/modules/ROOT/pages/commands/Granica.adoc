@@ -1,0 +1,57 @@
+= Polecenie Granica
+:page-en: commands/Limit
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Granica( <Funkcja>, <Wartość> )::
+  Oblicza https://pl.wikipedia.org/wiki/Granica_funkcji[granicę] funkcji dla podanej wartości głównej 
+zmiennej funkcji. (Wynikiem może być również nieskończoność.)
+
+[EXAMPLE]
+====
+
+`++Granica((x^2 + x) /  x^2, +∞)++` daje w wyniku _1_.
+
+====
+
+[NOTE]
+====
+
+Nie wszystkie granice mogą zostać obliczone przez GeoGebrę, więc w takich przypadkach (jak również wtedy, 
+gdy poprawny wynik jest nieokreślony) zostanie zwrócone _niezdefiniowane_.
+
+====
+
+== Specyficzna składnia CAS
+
+Granica( <Wyrażenie>, <Wartość> )::
+ Oblicza granicę wyrażenia dla podanej wartości głównej zmiennej funkcji.
+
+[EXAMPLE]
+====
+
+`++Granica(a sin(x) / x, 0)++` daje w wyniku _a_.
+
+====
+
+Granica( <Wyrażenie>, <Zmienna>, <Wartość> )::
+  Oblicza granicę wyrażenia dla podanej wartości danej zmiennej funkcji.
+
+[EXAMPLE]
+====
+
+`++Granica(a sin(v) / v, v, 0)++` daje w wyniku _a_.
+
+====
+
+[NOTE]
+====
+
+* Nie wszystkie granice mogą zostać obliczone przez GeoGebrę, więc w takich przypadkach (jak również wtedy, 
+gdy poprawny wynik jest niezdefiniowany) zostanie zwrócone _?_ .
+* Jeśli chcesz obliczyć granicę xref:/commands/Jeżeli.adoc[funkcji określonej przedziałami], musisz użyć
+xref:/commands/GranicaPrawostronna.adoc[GranicaPrawostronna] lub xref:/commands/LimitBelow.adoc[LimitBelow], np. 
+`++GranicaPrawostronna(Jeżeli(x>1, x^2, -2x), 1)++`
+* Zobacz także polecenia xref:/commands/Asymptota.adoc[Asymptota], xref:/commands/GranicaPrawostronna.adoc[GranicaPrawostronna] i
+xref:/commands/GranicaLewostronna.adoc[GranicaLewostronna].
+
+====
