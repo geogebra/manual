@@ -1,0 +1,59 @@
+= Polecenie GranicaLewostronna
+:page-en: commands/LimitBelow
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+GranicaLewostronna( <Funkcja>, <Wartość> )::
+  Oblicza https://pl.wikipedia.org/wiki/Granica_jednostronna[granicę lewostronną] funkcji 
+dla podanej wartości głównej zmiennej funkcji.
+
+[EXAMPLE]
+====
+
+`++GranicaLewostronna(1 / x, 0)++` daje w wyniku stem:[-\infty] .
+
+====
+
+[NOTE]
+====
+
+Nie wszystkie granice mogą zostać obliczone przez GeoGebrę, więc w takich przypadkach (jak również wtedy,
+gdy poprawny wynik jest nieokreślony) zostanie zwrócone _niezdefiniowane_.
+
+====
+
+== Specyficzna składnia CAS
+
+GranicaLewostronna( <<Wyrażenie>, <Wartość> )::
+  Oblicza granicę lewostronną wyrażenia dla podanej wartości głównej zmiennej wyrażenia.
+
+[EXAMPLE]
+====
+
+`++GranicaLewostronna(1 / x, 0)++` daje w wyniku stem:[-\infty] .
+
+====
+
+GranicaLewostronna( <Wyrażenie>, <Zmienna>, <Wartość> )::
+  Oblicza granicę lewostronną wyrażenia dla podanej wartości danej zmiennej wyrażenia.
+
+[EXAMPLE]
+====
+
+`++GranicaLewostronna(1 / a, a, 0)++` daje w wyniku stem:[-\infty] .
+
+====
+
+[NOTE]
+====
+
+Nie wszystkie granice mogą zostać obliczone przez GeoGebrę, więc w takich przypadkach (jak również wtedy, 
+gdy poprawny wynik jest niezdefiniowany) zostanie zwrócone _?_.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenia xref:/commands/Granica.adoc[Granica] i xref:/commands/GranicaPrawostronna.adoc[GranicaPrawostronna].
+
+====
