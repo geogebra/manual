@@ -1,0 +1,102 @@
+= Polecenia Min
+:page-en: commands/Min
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Min( <Lista> )::
+  Zwraca najmniejszą liczbę z listy.
+
+[EXAMPLE]
+====
+
+`++Min({-2, 12, -23, 17, 15})++` daje w wyniku _-23_.
+
+====
+
+[NOTE]
+====
+
+Jeśli dane wejściowe składają się z obiektów nienumerycznych, polecenie to uwzględnia liczby powiązane z tymi obiektami. 
+Na przykład, jeśli masz listę odcinków, polecenie Min(<Lista>) zwróci długość najkrótszego odcinka.
+
+====
+
+Min( <Interval> )::
+
+Zwraca dolną granicę przedziału.
+
+[EXAMPLE]
+====
+
+`++Min(2 < x < 3)++` daje w wyniku _2_ .
+
+====
+[NOTE]
+====
+
+Przedziały otwarte i domknięte nie są rozróżniane.
+
+====
+
+
+Min( <Number>, <Number> )::
+
+Zwraca mniejszą z dwóch podanych liczb.
+
+[EXAMPLE]
+====
+
+`++Min(12, 15)++` daje w wyniku _12_.
+
+====
+
+
+Min( <Funkcja>, <Wartość początkowa x>, <Wartość końcowa x> )::
+  Oblicza (numerycznie) *lokalne* funkcji w podanym przedziale. Funkcja powinna być ciągła i mieć
+ tylko jedno minimum _lokalne_ w tym przedziale (i żadnego lokalnego maksimum).
+
+[EXAMPLE]
+====
+
+`++Min(exp(x) x^3,-4,-2)++` tworzy punkt (-3, -1.34425) .
+
+====
+
+[NOTE]
+====
+
+Dla wielomianów powinieneś użyć polecenia the xref:/commands/Ekstremum.adoc[Ekstremum].
+
+====
+
+Min( <Lista Danych>, <Lista Częstości> )::
+  Zwraca najmniejszą wartość z listy danych z uwzględnieniem odpowiadających im częstości.
+
+[EXAMPLE]
+====
+
+`++Min({1, 2, 3, 4, 5}, {0, 3, 4, 2, 3})++` daje w wyniku 2, najmniejszą liczbę z pierwszej listy, której częstość jest większa niż 0.
+
+====
+
+[NOTE]
+====
+
+* Jeśli chcesz uzyskać minimum dwóch funkcji `++f(x)++` i `++g(x)++, możesz zdefiniować
+`++(f(x) + g(x) - abs(f(x) - g(x)))/2++`
+* Zobacz także polecenia xref:/commands/Max.adoc[Max], xref:/commands/Ekstremum.adoc[Ekstremum Command] i narzędzie
+xref:/tools/Badanie_własności_funkcji.adoc[Badanie własności funkcji].
+
+====
+
+== Specyficzna składnia CAS
+
+Min( <Funkcja>, <Wartość początkowa x>, <Wartość końcowa x> )::
+ W przeciwieństwie do Widoku Algebry, ta składnia zwróci minimum w przedziale, uwzględniając końce przedziału.
+
+[EXAMPLE]
+====
+
+* `++Min(x^2,-1,2)++` daje w wyniku punkt _(0,0)_.
+* `++Min(-x^2,-1,2)++` daje w wyniku punkt _(2,-4)_.
+
+====
