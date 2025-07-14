@@ -24,7 +24,7 @@ gdy poprawny wynik jest nieokreślony) zostanie zwrócone _niezdefiniowane_.
 == Specyficzna składnia CAS
 
 Granica( <Wyrażenie>, <Wartość> )::
- Oblicza granicę wyrażenia dla podanej wartości głównej zmiennej funkcji.
+ Oblicza granicę wyrażenia dla podanej wartości głównej zmiennej wyrażenia.
 
 [EXAMPLE]
 ====
@@ -34,7 +34,7 @@ Granica( <Wyrażenie>, <Wartość> )::
 ====
 
 Granica( <Wyrażenie>, <Zmienna>, <Wartość> )::
-  Oblicza granicę wyrażenia dla podanej wartości danej zmiennej funkcji.
+  Oblicza granicę wyrażenia dla podanej wartości danej zmiennej wyrażenia.
 
 [EXAMPLE]
 ====
@@ -49,7 +49,7 @@ Granica( <Wyrażenie>, <Zmienna>, <Wartość> )::
 * Nie wszystkie granice mogą zostać obliczone przez GeoGebrę, więc w takich przypadkach (jak również wtedy, 
 gdy poprawny wynik jest niezdefiniowany) zostanie zwrócone _?_ .
 * Jeśli chcesz obliczyć granicę xref:/commands/Jeżeli.adoc[funkcji określonej przedziałami], musisz użyć
-xref:/commands/GranicaPrawostronna.adoc[GranicaPrawostronna] lub xref:/commands/LimitBelow.adoc[LimitBelow], np. 
+xref:/commands/GranicaPrawostronna.adoc[GranicaPrawostronna] lub xref:/commands/GranicaLewostronna.adoc[GranicaLewostronna], np. 
 `++GranicaPrawostronna(Jeżeli(x>1, x^2, -2x), 1)++`
 * Zobacz także polecenia xref:/commands/Asymptota.adoc[Asymptota], xref:/commands/GranicaPrawostronna.adoc[GranicaPrawostronna] i
 xref:/commands/GranicaLewostronna.adoc[GranicaLewostronna].
