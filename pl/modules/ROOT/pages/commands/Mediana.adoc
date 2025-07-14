@@ -1,0 +1,33 @@
+= Polecenie Mediana
+:page-en: commands/Median
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Mediana( <Lista Surowych Danych> )::
+  Określa medianę elementów listy.
+
+[EXAMPLE]
+====
+
+* `++Mediana({1, 2, 3})++` daje w wyniku _2_.
+* `++Mediana({1, 1, 8, 8})++` daje w wyniku _4.5_.
+
+====
+
+Mediana( <Lista Liczb>, <Lista Częstości> )::
+  Oblicza medianę ważoną elementów listy.
+
+[EXAMPLE]
+====
+
+* `++Mediana({1, 2, 3}, {4, 1, 3})++` daje w wyniku _1.5_.
+* `++Mediana({1, 2, 3, 4}, {6, 1, 3, 6})++` daje w wyniku _3_.
+
+====
+
+[NOTE]
+====
+
+* Jeśli długość podanej listy jest parzysta, zwracana jest średnia arytmetyczna dwóch środkowych elementów.
+* Zobacz także polecenie xref:/commands/Średnia.adoc[Średnia].
+
+====
