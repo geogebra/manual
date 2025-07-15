@@ -1,0 +1,39 @@
+= Polecenie DiagonalizacjaJordana
+:page-en: commands/JordanDiagonalization
+:page-aliases: commands/JordanDiagonalisation.adoc
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+image:64px-Globe.png[Globe.png,width=64,height=64, role=left]
+
+To polecenie ma dwie wersje w języku angielskim:
+
+* JordanDiagonalization (US)
+* JordanDiagonalisation (UK + Aus)
+
+====
+
+== Specyficzna składnia CAS
+
+DiagonalizacjaJordana( <Macierz> )::
+  Rozkłada daną macierz do postaci S J S⁻¹ gdzie J jest w 
+  https://mathworld.wolfram.com/JordanCanonicalForm.html[kanonicznej postaci Jordana].
+
+[EXAMPLE]
+====
+
+`++DiagonalizacjaJordana({{1, 2}, {3, 4}})++` daje w wyniku stem:[ \left(\begin{array}{}\sqrt{33} - 3&-\sqrt{33} -
+3\\6&6\\\end{array}\right) ], stem:[ \left(\begin{array}{}\frac{\sqrt{33} + 5}{2}&0\\0&\frac{-\sqrt{33} +
+5}{2}\\\end{array}\right) ]
+
+====
+
+[NOTE]
+====
+
+* Zobacz także polecenia xref:/commands/WartościWłasne.adoc[WartościWłasne], xref:/commands/WektoryWłasne.adoc[WektoryWłasne],
+xref:/commands/RozkładWgWartościOsobliwych.adoc[RozkładWgWartościOsobliwych], xref:/commands/Odwrotność.adoc[Odwrotność],
+xref:/commands/Transpozycja.adoc[Transpozycja].
+
+====
