@@ -1,0 +1,25 @@
+= Przedziały
+:page-en: Intervals
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Przedział to zbiór liczb zawartych między dolną a górną granicą. Aby utworzyć przedział, wpisz np. `++2 < x < 3++` w
+xref:/Pole_Wprowadzania.adoc[polu wprowadzania]. Przedział w powyższym przykładzie jest otwarty. Możesz również zdefiniować przedziały domknięte (`++2 ≤ x ≤ 3++`)
+oraz półotwarte (`++2 ≤ x < 3++`).
+
+[NOTE]
+====
+
+Zobacz także xref:/Wartości_boolowskie.adoc[Wartości boolowskie].
+
+====
+
+Aby sprawdzić, czy liczba _c_ należy do przedziału _r_ wpisz w polu wprowadzania `++r(c)++`. Wynikiem będzie wartość
+boolowska (logiczna). Uogólnieniem przedziałów są xref:/Nierówności.adoc[nierówności].
+
+== Polecenia dla przedziałów
+
+* Polecenia xref:/commands/Min.adoc[Min], xref:/commands/Max.adoc[Max], xref:/commands/PunktŚrodkowy.adoc[PunktŚrodkowy] dla przedziału 
+o dolnej granicy _a_ i górnej granicy _b_ zwracają odpowiednio liczby _a_, _b_ oraz stem:[\frac{a+b}2].
+Wynik nie zależy od tego, czy przedział jest otwarty, domknięty czy półotwarty.
+* Polecenie xref:/commands/Punkt.adoc[Punkt] zwraca ruchomy xref:/Punkty_i_Wektory.adoc[punkt], którego współrzędna x należy do danego przedziału, a współrzędna y wynosi 0.
+* Polecenie xref:/commands/PunktWewnętrzny.adoc[PunktWewnętrzny] zwraca ruchomy punkt, którego współrzędna x należy do danego przedziału, natomiast współrzędna y może być dowolna.
