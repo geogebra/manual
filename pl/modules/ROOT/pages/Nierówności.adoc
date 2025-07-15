@@ -1,0 +1,24 @@
+= Nierówności
+:page-en: Inequalities
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+GeoGebra obsługuje nierówności z jedną lub dwiema zmiennymi. Nie ma ograniczeń co do wyświetlania nierówności w
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] xref:/Widok_Algebry.adoc[Widoku Algebry],
+ale tylko określone typy nierówności mogą być rysowane w image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Widok_Grafiki.adoc[Widoku Grafiki]:
+
+* nierówności wielomianowe z jedną zmienną, np. _x^3 > x + 1_ lub _y^2>y_,
+* nierówności kwadratowe z dwiema zmiennymi, np. _x^2 + y^2 + x*y ≤ 4_,
+* nierówności liniowe dla jednej ze zmiennych, np. _2x > sin(y)_ lub _y < sqrt(x)_.
+
+Do zapisu znaków nierówności można używać symboli <, >, ≤, ≥. . Obsługiwane są także symbole <= i =>. 
+Dla nierówności obsługiwane są również koniunkcja (iloczyn logiczny) i alternatywa (suma logiczna), np. możemy wyświetlić _(x>y)&&(x+y<3)_.
+
+Aby pokazać rozwiązanie nierówności jako jeden lub kilka przedziałów na osi x, zaznacz opcję _Pokaż na osi x_
+w zakładce _Styl_ image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Okno_Ustawień_Obiektu.adoc[okna dialogowego Ustawienia] dla nierówności. (Nie działa to dla każdej nierówności.)
+
+Nierówności są podobne do funkcji. Można sprawdzić, czy dane wartości _x_ i _y_ spełniają nierówność _a_ wpisując `++a(x,y)++` w
+the xref:/Pole_Wprowadzania.adoc[polu wprowadzania]. Gdy _A_ jest punktem, oprawna jest również składnia `++a(A)++`. 
+Punkt można ograniczyć do obszaru określonego przez nierówność za pomocą polecenia  xref:/commands/PunktWewnętrzny.adoc[PunktWewnętrzny]. 
+Dla nierówności _b_ z jedną zmienną, np. _x_, `++Punkt(b)++` tworzy punkt ograniczony do tej części osi x, która spełnia nierówność _b_.
