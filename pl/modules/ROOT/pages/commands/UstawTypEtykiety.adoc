@@ -1,0 +1,25 @@
+= Polecenie UstawTypEtykiety
+:page-en: commands/SetLabelMode
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+UstawTypEtykiety( <Obiekt>, <Liczba> )::
+  Zmienia typ etykiety danego obiektu zgodnie z poniższą tabelą.
+
+[NOTE]
+====
+
+* Liczby całkowite inne niż te wymienione w tabeli są traktowane jako 0.
+* Domyślną opcją dla etykiety obiektu jest _Nazwa_.
+* Dla opcji 3 i 9, jeśli pole _Opis_ jest puste, jako opis używana jest _Nazwa_ obiektu.
+
+====
+
+[cols=",",options="header",]
+|===
+|Liczba |Typ
+|0 |Nazwa
+|1 |Nazwa + Wartość
+|2 |Wartość
+|3 |xref:/Etykiety_i_Opisy.adoc[Opis]
+|9 |xref:/Etykiety_i_Opisy.adoc[Opis] + Wartość
+|===
