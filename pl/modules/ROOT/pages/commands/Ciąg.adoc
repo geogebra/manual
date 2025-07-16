@@ -1,0 +1,86 @@
+= Polecenie Ciąg
+:page-en: commands/Sequence
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+
+Ciąg( <Wartość Końcowa> )::
+
+Tworzy listę liczb całkowitych od 1 do danej _wartości końcowej_.
+
+[EXAMPLE]
+====
+
+* `++Ciąg(4)++` tworzy listę _{1, 2, 3, 4}_.
+* `++2^Ciąg(4)++` tworzy listę _{2, 4, 8, 16}_.
+
+====
+
+
+Ciąg( <Wartość Początkowa>, <Wartość Końcowa> )::
+  Tworzy listę liczb całkowitych od _wartości początkowej_ do _wartości końcowej_ (rosnącą lub malejącą).
+
+[EXAMPLE]
+====
+
+* `++Ciąg(7,13)++` tworzy listę {_7, 8, 9, 10, 11, 12, 13_}
+* `++Ciąg(18,14)++` tworzy listę {_18, 17, 16, 15, 14_}
+* `++Ciąg(-5, 5)++` tworzy listę {_-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5_}.
+
+====
+
+[NOTE]
+====
+
+Tę składnię można jeszcze bardziej uprościć: zamiast używać np. formalnego zapisu `++Ciąg(7,13)++`
+, ten sam rezultat można uzyskać, wpisując w polu wprowadzania `++7..13++` .
+
+
+====
+
+Ciąg( <Wartość Początkowa>, <Wartość Końcowa>, <Krok> )::
+   Tworzy listę liczb całkowitych od _wartości początkowej_ do _wartości końcowej_ używając podanego _kroku_.
+
+[EXAMPLE]
+====
+
+* `++Ciąg(7,13,2)++` tworzy listę {7, 9, 11, 13}
+* `++Ciąg(7,13,4)++` tworzy listę {7, 11}
+
+====
+
+Ciąg( <Wyrażenie>, <Zmienna>, <Wartość Początkowa>, <Wartość Końcowa> )::
+  Zwraca listę obiektów utworzonych przy użyciu podanego _wyrażenia_ oraz _zmiennej_ 
+który przyjmuje wartości od _wartości początkowej_ do _wartości końcowej_.
+
+[EXAMPLE]
+====
+
+* `++Ciąg((2, k), k, 1, 5)++` tworzy listę punktów, których współrzędna _y_ przyjmuje wartości od 1 do 5: _{(2, 1), (2, 2),
+(2, 3), (2, 4), (2, 5)}_
+* `++Ciąg(x^k, k, 1, 10)++` tworzy listę {_x, x², x³, x⁴, x⁵, x⁶, x⁷, x⁸, x⁹, x¹⁰_}
+
+====
+
+Ciąg( <Wyrażenie>, <Zmienna>, <Wartość Początkowa>, <Wartość Końcowa>, <Krok> )::
+  Zwraca listę obiektów utworzonych przy użyciu podanego _wyrażenia_ oraz _zmiennej_ 
+który przyjmuje wartości od _wartości początkowej_ do _wartości końcowej_ używając podanego _kroku_.
+
+[EXAMPLE]
+====
+
+* `++Ciąg((2, k), k, 1, 3, 0.5)++` tworzy listę punktów, których współrzędna _y_ przyjmuje wartości od 1 do 3 z
+krokiem _0.5_: _{(2, 1), (2, 1.5), (2, 2), (2, 2.5), (2, 3)}_
+* `++Ciąg(x^k, k, 1, 10, 2)++` tworzy listę  {_x, x³, x⁵, x⁷, x⁹_}.
+
+====
+
+
+[NOTE]
+====
+
+* Ponieważ parametry _wartość początkowa_ i _wartość końcowa_ są dynamiczne możesz
+w obu przypadkach użyć zmiennych reprezentowanych przez xref:/tools/Suwak.adoc[suwaki].
+
+* Zobacz xref:/Listy.adoc[Listy], aby uzyskać więcej informacji na temat operacji na listach.
+
+====
