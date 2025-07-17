@@ -1,0 +1,65 @@
+= Polecenie WspółrzędneDynamiczne
+:page-en: commands/DynamicCoordinates
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+WspółrzędneDynamiczne( <Punkt>, <WspółrzędnaX>, <WspółrzędnaY> )::
+  Tworzy nowy punkt o podanych współrzędnych: punkt ten jest zależny, ale można go przesuwać. Za każdym razem, 
+gdy spróbujesz przesunąć ten nowy punkt do współrzędnych (x, y), wskazany punkt zostaje tam przeniesiony, a współrzędne 
+nowego punktu są odpowiednio obliczane. Działa najlepiej, gdy wskazany punkt nie jest xref:/Ustawienia_Obiektu.adoc[widoczny] 
+a przeciąganie odbywa się za pomocą myszy. Przynajmniej jedna z podanych współrzędnych powinna zależeć od wskazanego punktu.
+
+[EXAMPLE]
+====
+
+* Dany jest punkt _A_ i `++B = WspółrzędneDynamiczne(A, round(x(A)), round(y(A)))++`. Gdy spróbujesz przesunąć _B_ na (1.3,
+2.1) za pomocą narządzia image:20px-Mode_move.svg.png[Mode move.svg,width=20,height=20]xref:/tools/Przesuń.adoc[Przesuń], punkt _A_
+zostanie przeniesiony na (1.3, 2.1), a _B_ pojawi się w (1,2).
+* `++B = WspółrzędneDynamiczne(A, x(A), min(y(A), sin(x(A))))++` tworzy punkt leżący poniżej krzywej sinus(x).
+
+[NOTE]
+====
+
+W tym przypadku prostszym rozwiązaniem jest: `++PunktWewnętrzny(y < sin(x))++`.
+
+====
+
+Inne przykłady ograniczania pozycji punktu _C_:
+
+* Niech `++A = Punkt(OśX)++` i `++B = Punkt(OśX)++`.
+
+Następnie wpisz kolejno w xref:/Pole_Wprowadzania.adoc[polu wprowadzania]:
+
+`++WspółrzędneDynamiczne(B, Min(x(B), x(A)), 0)++` i naciśnij [.kcode]#Enter#
+
+`++UstawCzyWidocznyWWidoku(B, 1, false)++` i naciśnij [.kcode]#Enter#
+
+`++UstawWarstwę(C,  1)++` i naciśnij [.kcode]#Enter#
+
+Teraz punkt _C_ nie może zostać przesunięty na prawo od punktu _A_.
+
+* Zdefiniuj `++A=(1, 2)++`.
+
+Następnie wpisz kolejno w xref:/Pole_Wprowadzania.adoc[polu wprowadzania]:
+
+`++UstawCzyWidocznyWWidoku(A, 1, false)++` i naciśnij [.kcode]#Enter#
+
+`++B = WspółrzędneDynamiczne(A, Jeżeli(x(A) > 3, 3, Jeżeli(x(A) < -3, -3, Jeżeli(x(A) < 0, round(x(A)), x(A)))), Jeżeli(x(A) < 0, 0.5, Jeżeli(y(A) > 2, 2, Jeżeli(y(A) < 0, 0, y(A)))))++`
+i naciśnij [.kcode]#Enter#
+
+* Ten przykład sprawia, że punkt _A_ przyciąga”, gdy inny punkt _C_ jest przeciągany w jego pobliże.
+Zdefiniuj `++A = (1, 2)++` i `++B = (2, 3)++`.
+
+Następnie wpisz kolejno w xref:/Pole_Wprowadzania.adoc[polu wprowadzania]:
+
+`++UstawCzyWidocznyWWidoku(B, 1, false)++` i naciśnij [.kcode]#Enter#
+
+`++C = WspółrzędneDynamiczne(B, Jeżeli(Odległość(A, B) < 1, x(A), x(B)), Jeżeli(Odległość(A, B) < 1, y(A), y(B)))++`.
+
+====
+
+WspółrzędneDynamiczne( <Punkt>, <WspółrzędnaX>, <WspółrzędnaY>, <WspółrzędnaZ> )::
+  Tworzy nowy punkt 3D o podanych współrzędnych: punkt ten jest zależny, ale można go przesuwać. 
+Gdy spróbujesz przesunąć ten punkt do współrzędnych (x, y, z), wskazany punkt zostaje tam przeniesiony, a współrzędne 
+nowego punktu są odpowiednio obliczane. Działa najlepiej, gdy wskazany punkt nie jest xref:/Ustawienia_Obiektu.adoc[widoczny] 
+a przeciąganie odbywa się za pomocą myszy. Przynajmniej jedna z podanych współrzędnych powinna zależeć od wskazanego punktu.
+
