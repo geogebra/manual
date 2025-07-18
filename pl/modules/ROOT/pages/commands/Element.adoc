@@ -1,0 +1,81 @@
+= Polecenie Element
+:page-en: commands/Element
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Element( <Lista>, <NumerElementu> )::
+  Zwraca element listy o podanym _numerze_.
+
+[EXAMPLE]
+====
+
+`++Element({1, 3, 2}, 2)++` daje w wyniku _3_, drugi element listy _{1, 3, 2}_.
+
+====
+
+[NOTE]
+====
+
+W image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Widok_CAS.adoc[Widoku CAS] 
+można również używać niezdefiniowanych zmiennych.
+
+====
+
+[EXAMPLE]
+====
+
+`++Element({a, b, c}, 2)++` daje w wyniku _b_, drugi element listy _{a, b, c}_.
+
+====
+
+
+Element( <Macierz>, <Wiersz>, <Kolumna> )::
+ Zwraca element macierzy znajdujący się w podanym wierszu i kolumnie.
+
+[EXAMPLE]
+====
+
+`++Element({{1, 3, 2}, {0, 3, -2}}, 2, 3)++` daje w wyniku _-2_, trzeci element z drugiego wiersza macierzy
+stem:[\begin{pmatrix}1&3&2\\0&3&-2\end{pmatrix}].
+
+====
+
+[NOTE]
+====
+
+W image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Widok_CAS.adoc[Widoku CAS] 
+można również używać niezdefiniowanych zmiennych.
+
+====
+
+[EXAMPLE]
+====
+
+`++Element({{a, b, c}, {d, e, f}}, 2, 3)++` daje w wyniku _f_, trzeci element z drugiego wiersza macierzy
+stem:[\begin{pmatrix}a&b&c\\d&e&f\end{pmatrix}].
+
+====
+
+
+
+Element( <Lista>, <Indeks1>, <Indeks2>, ...)::
+  Jeśli lista jest _n_-wymiarowa, można podać do n indeksów, aby uzyskać element (lub listę elementów) o podanych współrzędnych.
+
+[EXAMPLE]
+====
+
+Niech _L = {{{1, 2}, {3, 4}}, {{5, 6}, {7, 8}}}_.
+
+Wówczas `++Element(L, 1, 2, 1)++` daje w wyniku _3_, `++Element(L, 2, 2)++` daje w wyniku _{7, 8}_.
+
+====
+
+[NOTE]
+====
+
+* To polecenie działa tylko wtedy, gdy lista lub macierz zawiera elementy jednego typu (np. tylko liczby lub tylko punkty).
+* {blank}
++
+Zobacz także polecenia xref:/commands/Pierwszy.adoc[Pierwszy], xref:/commands/Ostatni.adoc[Ostatni] i
+xref:/commands/ElementLosowy.adoc[ElementLosowy].
+
+====
