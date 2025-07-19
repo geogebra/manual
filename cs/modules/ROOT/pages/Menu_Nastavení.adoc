@@ -2,42 +2,27 @@
 :page-en: Options_Menu
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
-Základní nastavení mohou být změněny v menu Nastavení.
+V menu _Nastavení_ měníte globální parametry chování GeoGebry: zaokrouhlování, popisky objektů, velikost písma, jazyk, předvolby Algebraického okna i Nákresny. Pokročilými nástroji můžete změnit zobrazení pravého úhlu, jednotky úhlů, zobrazení souřadnic bodů a nastavení vyskakovací nápovědy a virtuální klávesnice.
 
-== Algebraické popisy
+[NOTE]
+====
 
-Pomocí této položky můžeme nastavit, jak bude objekt reprezentován v
-xref:/s_index_php?title=Algebra_View_action=edit_redlink=1.adoc[Algebra View]. Existují tři možnosti
+Pro změnu vlastností objektů použijte the xref:/Kontextové_menu.adoc[Kontextové menu] nebo
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Dialog_Vlastnosti.adoc[Dialog Vlastnosti].
 
-Hodnota::
-  zobrazit hodnotu objektu v daném okamžiku.
-Defince::
-  zobrazit jednoduchý popis objektu, např. "Průnik _a_ a _b_."
-Příkaz::
-  zobrazit příkaz, který byl použit pro vytvoření objektu, např "Průnik[a,b]".
+====
 
-== image:Menu_Point_Capturing.gif[Menu Point Capturing.gif,width=16,height=16] Přichytnout body
-
-Tato položka menu nabízí čtyři různé možnosti pro body:
-
-Automaticky::
-  v případě, že je mřížka nebo souřadnice zobrazena, zapne přichytávání bodů, v případě, že jsou mřížka i souřadnice
-  skryty, přichytávání bodů vypne.
-Přichytit k mřížce::
-  v případě, že ke bod blízko k průsečíku přímek mřížky, bude k němu přichycen.
-Zafixovat souřadnicovou síť::
-  bod bude možné umístit jen na průsečík os mřížky.
-Vypnuto::
-  na bod nebude aplikováno žádné přichytávání.
 
 == Zaokrouhlování
 
-Tato položka menu nám umožňuje nastavit množství desetinných míst nebo nenulových číslic, které bude zobrazeno.
+Tato položka menu nám umožňuje nastavit počet zobrazených desetinných míst nebo nenulových číslic.
+V nastavení xref:/Algebraické_okno.adoc[Algebraického okna] můžete změnit Algebraický popis a například místo čísla reprezentujícího úsečku bude v Algebraickém okně vypsán příkaz, který byl pro konstrukci úsečky použit. Existují celkem tři možnosti: Hodnota (např. "f = 1.41"), Popis (např. "f = Úsečka[A,B]") a Definice (např "f = Usecka(A,B)").
+
 
 == image:Tool_Show_Hide_Label.gif[Tool Show Hide Label.gif,width=32,height=32] Popisovat
 
-Můžeme specifikovat, zda bude nově vytvořený objekt uobrazen nebo ne. Můžeme volit mezi Všechny nové objekty, Žádné nové
-objekty, Pouze nové body nebo Automaticky.
+Můžeme specifikovat, zda bude nově vytvořený objekt zobrazen nebo ne. Můžeme volit mezi _Všechny nové objekty_, _Žádné nové
+objekty_, _Pouze nové body_ nebo _Automaticky_. Nastavení _Automaticky_ zobrazí popisky nově vzniklých objektů v případě, že je xref:/Algebraické_okno.adoc[Algebraické okno] zobrazeno.
 
 == image:Menu_Font.png[Menu Font.png,width=16,height=16] Velikost písma
 
@@ -48,9 +33,9 @@ Tato položka menu určuje velikost písma v popiscích a textu v bodech (pt).
 GeoGebra je mnohojazyčná a umožňuje nám měnit nastavení jazyka. To ovlivňuje všechny názvy všech vstupních příkazů a
 výstupů.
 
-== image:Menu_Properties.png[Menu Properties.png,width=16,height=16] Nastavení...
+== image:Menu_Properties.png[Menu Properties.png,width=16,height=16] Pro pokročilé...
 
-Tato položka menu otevře xref:/s_index_php?title=Settings_Dialog_action=edit_redlink=1.adoc[Settings Dialog].
+Tato položka menu otevře xref:/Dialog_Předvolby.adoc[Dialog Předvolby].
 
 == image:Menu_Save.png[Menu Save.png,width=16,height=16] Uložit nastavení
 
@@ -61,59 +46,10 @@ menu Nastavení, současné nastavení Nástrojové lišty a nákresny.
 
 Pomocí této položky můžeme obnovit původní nastavení GeoGebry.
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
-
-|Some content was not yet translated.
-|===
 
 [NOTE]
 ====
 
-Tento dialog také můžeme otevřít kliknutím (Mac OS: Ctrl‐kliknutí) na
-xref:/s_index_php?title=Graphics_View_action=edit_redlink=1.adoc[Graphics View] nebo
-xref:/s_index_php?title=Spreadsheet_View_action=edit_redlink=1.adoc[Spreadsheet View] a zvolením _Nákresna ..._ v prvním
-případě nebo _Možnosti tabulkového procesoru_ v druhém.
-
-====
-
-[NOTE]
-====
-
-Ať používámé kterýkoliv jazyk, ikona glóbu nás zavede zpátky do menu Jazyk. Názvy všech jazyků jsou uobrazeny v
-Angličtině.
-
-====
-
-[NOTE]
-====
-
-Používáme-li GeoGebru při prezentování, bude pro diváky jednodušší přečíst text, popisky a algebraický vstup,
-zvětšíme-li velikosti písma.
-
-====
-
-[NOTE]
-====
-
-Nastavení Automaticky zobrazí popisky nově vzniklých objektů v případě, že je Algebraické okno zobrazeno.
-
-====
-
-[NOTE]
-====
-
-Jsou-li možnosti _Přichytit k mřížce_ a _Zafixovat souřadnicovou síť_ zvoleny, zůstávají aktivní i v případě, že je
-mřížka skrytá.
-
-====
-
-[NOTE]
-====
-
-Pro změnu nastavení objektu použijeme xref:/s_index_php?title=Context_Menu_action=edit_redlink=1.adoc[Context Menu] a
-xref:/s_index_php?title=Properties_Dialog_action=edit_redlink=1.adoc[Properties Dialog].
+Používáme-li GeoGebru při prezentování,  doporučujeme zvětšit velikost písma.
 
 ====
