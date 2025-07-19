@@ -1,0 +1,33 @@
+= Příkaz SdruzenyPrumer
+:page-en: commands/ConjugateDiameter
+ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
+
+Vytvoří průměr kuželosečky https://kdm.karlin.mff.cuni.cz/diplomky/vera.setmanukova.dp/?page=prumeryE&pprumery=1[sdružený] k průměru daného směru.
+
+SdruzenyPrumer( <Vektor>, <Kuželosečka> )::
+  Vytvoří průměr dané kuželosečky sdružený k průměru této kuželosečky, který je rovnoběžný se zadaným vektorem.
+
+[EXAMPLE]
+====
+
+`++SdruzenyPrumer(-4x + 5y = -2, x^2 + 4 y^2 + 2x - 8y + 1 = 0)++` sestrojí přímku 5__x__ + 16__y__ = 11
+
+====
+
+SdruzenyPrumer( <Primka>, <Kuželosečka> )::
+  Vytvoří průměr dané kuželosečky sdružený k průměru této kuželosečky, který je rovnoběžný se zadanou přímkou.
+
+[EXAMPLE]
+====
+
+Nechť _u_ = (4,1) je vektor. Potom příkaz `++SdruzenyPrumer(u, x^2 + 4 y^2 + 2x - 8y + 1 = 0)++` sestrojí přímku _x_ + _y_ = 0
+
+====
+
+
+[NOTE]
+====
+
+GeoGebra Applet ilustrující https://www.geogebra.org/m/Akkw3NfH[sdružené průměry elipsy].
+
+====
