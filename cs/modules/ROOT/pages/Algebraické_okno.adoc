@@ -2,20 +2,69 @@
 :page-en: Algebra_View
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
-Prostřednictvím xref:/Vstupní_pole.adoc[vstupního řádku (Vstup:)] je možné do GeoGebry přímo vkládat algebraické výrazy.
-Po stisknutí klávesy Enter se zde zapsaný algebraický výraz objeví v [.mw-selflink .selflink]#Algebraickém okně#,
-zatímco jeho grafická reprezentace se automaticky zobrazí na Nákresně v xref:/Grafický_pohled.adoc[Grafickém pohledu].
+
+== [#Algebra_View_User_Interface]#image:24px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=24,height=24] Uživatelské rozhraní algebraického okna#
+
+Ve výchozím nastavení je image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _Algebraické okno_ otevřené
+nalevo od image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+_xref:/Nákresna.adoc[Nákresny]_. _xref:/Vstupní_pole.adoc[Vstupní pole]_ je zobrazeno na dolním okraji (GeoGebra Desktop), nebo je součástí
+the image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _Algebraického okna_ (GeoGebra pro web a tablety).  xref:/tools/Formátovací_panel.adoc[_Formátovací panel] nákresny_ je v horizontální liště nad nákresnou. 
+Tlačítka
+image:16px-Menu-edit-undo.svg.png[Menu-edit-undo.svg,width=16,height=16]image:16px-Menu-edit-redo.svg.png[Menu-edit-redo.svg,width=16,height=16]
+_Zpět / Znovu_ najdete také v horním okraji okna aplikace.
+
+[width="100%",cols="100%",]
+|===
+a|
+image:350px-Algebra-View.png[Algebra-View.png,width=350,height=228]
+
+GeoGebra pro web a tablety
+
+a|
+image:350px-Algebra-View-Desktop.png[Algebra-View-Desktop.png,width=350,height=226]
+
+GeoGebra Desktop
+
+|===
+
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _Algebraické okno_ je jedním z
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] xref:/Prostředí.adoc[_prostředí_] GeoGebry, můžete změnit jeho uživatelské rozhraní a nastavení podle svých potřeb.
+
+== [#Creating_Mathematical_Objects]#Vyvoření matematických objektů#
+
+
+Prostřednictvím xref:/Vstupní_pole.adoc[Vstupního pole] je možné do GeoGebry přímo vkládat algebraické výrazy a příkazy pro konstrukci geometrických objektů.
+Po stisknutí klávesy Enter se zde zapsaný algebraický výraz objeví v _Algebraickém okně_,
+zatímco jeho grafická reprezentace se automaticky zobrazí na Nákresně v xref:/Nákresna.adoc[Nákresně].
 
 [EXAMPLE]
 ====
 
-Zadáním _f(x) = x^2_ dostaneme předpis funkce f v Algebraickém okně a její graf na Nákresně Grafického pohledu.
+Zadáním  `++f(x) = x^2++`   dostaneme předpis funkce f v Algebraickém okně a současně její graf na Nákresně grafického pohledu.
 
 ====
 
+GeoGebra nabízí širokou škálu xref:/Příkazy.adoc[příkazů], které je možné zadat do
+xref:/Vstupní_pole.adoc[vstupního pole]. Stačí začít psát název příkazu do vstupního řádku nebo vstupního pole a GeoGebra vám nabídne seznam příkazů, které odpovídají vašemu zadání. Pro nápovědu můžeme v desktopové aplikaci
+stisknout klávesu F1, online kalulátory při psaní příkazu zobrazují ikonku "?".
+
 V Algebraickém okně jsou matematické objekty organizovány jako volné objekty nebo jako závislé objekty. Pokud vytvoříme
-nový objekt zcela bez použití již vytvořených objektů, bude zařazen jako volný objekt. Pokud k vytvoření nového objektu
-využijeme již existujících objektů, bude tento objekt označen jako závislý.
+nový objekt bez použití již vytvořených objektů, bude zařazen jako volný objekt. Pokud k vytvoření nového objektu
+využijeme již existujících objektů, bude tento objekt označen jako závislý. Více na stránce xref:/Volné_závislé_a_pomocné_objekty.adoc[Volné, závislé a pomocné objekty]
+
+== Formátovací panel
+
+xref:/Formátovací_panel.adoc[Formátovací panel] Algebraického okna umožňuje zobrazit pomocné objekty, změnit třídění a Algebraické popisy objektů.
+
+* image:16px-Stylingbar_algebraview_auxiliary_objects.svg.png[Stylingbar algebraview auxiliary
+objects.svg,width=16,height=16] Pomocné objekty:přepnutím tohoto tlačítka zobrazíme či skryjeme
+  xref:/Volné_závislé_a_pomocné_objekty.adoc[Pomocné objekty].
+
+* image:16px-Stylingbar_algebraview_sort_objects_by.svg.png[Stylingbar algebraview sort objects
+by.svg,width=16,height=16]
+Seřadit objekty podle: Když je toto tlačítko zapnutém objekty jsou roztříděné podle typu (např.
+  xref:/Body_a_vektory.adoc[Body], xref:/Přímky_a_osy.adoc[Přímky], …), v opačném případě jsou rozděleny na
+  xref:/Volné_závislé_a_pomocné_objekty.adoc[Volné, závislé a pomocné objekty].
 
 [NOTE]
 ====
@@ -38,21 +87,3 @@ automaticky přizpůsobí provedeným změnám.
 
 Po dvojitém kliknutí na xref:/Volné_závislé_a_pomocné_objekty.adoc[závislý objekt] v Algebraickém okně se objeví
 dialogové okno, v němž je možné objekt xref:/Dialog_předefinovat.adoc[předefinovat].
-
-GeoGebra rovněž nabízí širokou škálu xref:/Příkazy.adoc[příkazů], které je možné zadat do
-xref:/Vstupní_pole.adoc[vstupního řádku (Vstup:)]. Přehled všech příkazů se otevře po kliknutí na příslušné tlačítko
-napravo od Vstupního řádku. Po výběru příkazu z tohoto seznamu (nebo po jeho přímém napsání do Vstupního řádku) můžeme
-stisknout klávesu F1 pro získání informací o syntaxi příkazu.
-
-== Formátovací panel
-
-Tento xref:/Náhledy.adoc[Formátovací panel] obsahuje dvě tlačítka.
-
-([Image::
-  Auxiliary.png)] Pomocné objekty:přepnutím tohoto tlačítka zobrazíme či skryjeme
-  xref:/Volné_závislé_a_pomocné_objekty.adoc[Pomocné objekty].
-
-([Image::
-  Tree.png)] Třídit objekty dle typu: Když je toto tlačítko zapnutém objekty jsou roztříděné podle typu (např.
-  xref:/Body_a_vektory.adoc[Body], xref:/Přímky_a_osy.adoc[Přímky], …), v opačném případě jsou rozděleny na
-  xref:/Volné_závislé_a_pomocné_objekty.adoc[Volné, závislé a pomocné objekty].
