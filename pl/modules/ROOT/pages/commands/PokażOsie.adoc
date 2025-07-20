@@ -1,0 +1,39 @@
+= Polecenie PokażOsie
+:page-en: commands/ShowAxes
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+PokażOsie( )::
+  Wyświetla osie w aktywnym widoku.
+PokażOsie( <Wartość Logiczna> )::
+  Wyświetla/ukrywa osie w aktywnym widoku.
+
+[EXAMPLE]
+====
+
+* `++PokażOsie(true)++` wyświetla osie w aktywnym widoku.
+* `++PokażOsie(false)++` ukrywa osie w aktywnym widoku.
+
+====
+
+PokażOsie( <Widok>, <Wartość Logiczna> )::
+  Wyświetla/ukrywa osie w image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Widoku
+  Grafiki_ określonym przez numer 1 lub 2 (albo 3 dla image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra
+  3Dgraphics.svg,width=16,height=16] _Widoku Grafiki 3D_) .
+
+[EXAMPLE]
+====
+
+* `++PokażOsie(1, true)++` wyświetla osie w image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Widoku Grafiki_.
+* `++PokażOsie(2, false)++` ukrywa osie w image:16px-Menu_view_graphics2.svg.png[Menu view
+graphics2.svg,width=16,height=16] _Widoku Grafiki 2_.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/PokażSiatkę.adoc[PokażSiatkę]. Aby wyświetlić / ukryć pojedynczą oś użyj polecenia
+xref:/commands/UstawCzyWidocznyWWidoku.adoc[UstawCzyWidocznyWWidoku].
+
+====
