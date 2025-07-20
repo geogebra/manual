@@ -1,0 +1,29 @@
+= Polecenie Przetasuj
+:page-en: commands/Shuffle
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Przetasuj( <Lista> )::
+  Zwraca listę złożoną z tych samych elementów ustawionych w losowym porządku.
+
+[NOTE]
+====
+
+Możesz zmienić porządek utworzonej listy za pomocą polecenia _Przelicz_ w image:16px-Menu-view.svg.png[Menu-view.svg,width=16,height=16]
+xref:/Menu_Widok.adoc[Menu Widok] (lub naciśnij [.kcode]#F9#).
+
+====
+
+Zobacz także polecenia xref:/commands/ElementLosowy.adoc[ElementLosowy] i xref:/commands/LosowaCałkowita.adoc[LosowaCałkowita].
+
+== Specyficzna składnia CAS
+
+Przetasuj( <Lista> )::
+  Zwraca listę złożoną z tych samych elementów ustawionych w losowym porządku.
+
+[EXAMPLE]
+====
+
+* `++Przetasuj({3, 5, 1, 7, 3})++` może na przykład dać w wyniku _++{5, 1, 3, 3, 7}++_.
+* `++Przetasuj(Ciąg(20))++` tworzy listę 20 kolejnych liczb w losowym porządku.
+
+====
