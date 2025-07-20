@@ -1,0 +1,38 @@
+= Polecenie PokażSiatkę
+:page-en: commands/ShowGrid
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+PokażSiatkę( )::
+  Wyświetla siatkę w aktywnym widoku.
+PokażSiatkę( <Wartość Logiczna> )::
+  Pokazuje/ukrywa siatkę w aktywnym widoku.
+
+[EXAMPLE]
+====
+
+* `++PokażSiatkę(true)++` wyświetla siatkę w aktywnym widoku.
+* `++PokażSiatkę(false)++` ukrywa siatkę w aktywnym widoku.
+
+====
+
+PokażSiatkę( <Widok>, <Wartość Logiczna> )::
+  Pokazuje/ukrywa siatkę w image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Widoku
+  Grafiki_ określonym numerem 1 lub 2 (albo 3 dla image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra
+  3Dgraphics.svg,width=16,height=16] _Widoku Grafiki 3D_).
+
+[EXAMPLE]
+====
+
+* `++PokażSiatkę(1, true)++` wyświetla siatkę w image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Widoku Grafikie_.
+* `++PokażSiatkę(2, false)++` ukrywa siatkę w image:16px-Menu_view_graphics2.svg.png[Menu view
+graphics2.svg,width=16,height=16] _Widoku Grafiki 2_.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/PokażOsie.adoc[PokażOsie].
+
+====
