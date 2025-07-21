@@ -1,0 +1,58 @@
+= Polecenie Ostatni
+:page-en: commands/Last
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Ostatni( <Lista> )::
+  Tworzy nową listę zawierającą ostatni element podanej listy.
+
+[EXAMPLE]
+====
+
+`++Ostatni({1, 4, 3})++` daje w wyniku listę _{3}_.
+
+====
+
+[NOTE]
+====
+
+Aby uzyskać ostatni element jako wartość, można użyć: `++Element({1, 4, 3}, 3)++`.
+
+====
+
+Ostatni( <Lista>, <Liczba Elementów> )::
+Tworzy nową listę zawierającą ostatnie _n_ elementów z podanej listy.
+
+[EXAMPLE]
+====
+
+`++Ostatni({1, 4, 3}, 2)++` daje w wyniku listę _{4, 3}_.
+
+====
+
+
+Ostatni( <Tekst> )::
+  Zwraca ostatni znak w danym tekście.
+
+[EXAMPLE]
+====
+
+`++Ostatni("Hello")++` daje w wyniku _"o"_.
+
+====
+
+Ostatni( <Tekst> , <Liczba Elementów> )::
+ Zwraca ostatnie _n_ znaków z danego tekstu.
+
+[EXAMPLE]
+====
+
+`++Ostatni("Hello", 2)++` daje w wyniku _"lo"_.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/Pierwszy.adoc[Pierwszy].
+
+====
