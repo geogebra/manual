@@ -1,0 +1,30 @@
+= Polecenie RządMacierzy
+:page-en: commands/MatrixRank
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RządMacierzy( <Macierz> )::
+ Zwraca https://pl.wikipedia.org/wiki/Rz%C4%85d_macierzy[rząd] danej macierzy.
+
+[EXAMPLE]
+====
+
+* `++RządMacierzy({{2, 2}, {1, 1}})++` daje w wyniku _1_.
+* `++RządMacierzy({{1, 2}, {3, 4}})++` daje w wyniku _2_.
+* Niech `++A = {{1, 2, 3}, {1, 1, 1}, {2, 2, 2}}++` będzie macierzą 3x3. `++RządMacierzy(A)++` daje w wyniku _2_.
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Wskazówka:* W image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] xref:/Widok_CAS.adoc[Widoku CAS] to polecenie działa również z niezdefiniowanymi zmiennymi.
+
+====
+
+[EXAMPLE]
+====
+
+`++RządMacierzy({{1, 2}, {k*1,  k*2}})++` daje w wyniku _1_.
+
+====
