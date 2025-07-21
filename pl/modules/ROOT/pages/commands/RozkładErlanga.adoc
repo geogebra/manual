@@ -1,0 +1,22 @@
+= Polecenie RozkładErlanga
+:page-en: commands/Erlang
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RozkładErlanga( <Kształt>, <Wskaźnik>, <Liczba Sukcesów> )::
+  Oblicza wartość dystrybuanty (funkcji rozkładu skumulowanego) https://pl.wikipedia.org/wiki/Rozk%C5%82ad_Erlanga[rozkładu Erlanga] dla _liczby sukcesów v_, tzn.
+  prawdopodobieństwo _P(X ≤ v)_, gdzie _X_ jest zmienną losową o rozkładzie Erlanga z parametrami _kształt_ i _wskaźnik_.
+
+[NOTE]
+====
+
+Ta składnia zwraca prawdopodobieństwo dla danej wartości, czyli pole pod krzywą rozkładu Erlanga na lewo od zadanej wartości _x_.
+
+====
+
+RozkładErlanga( <Kształt>, <Wskaźnik>, <Liczba Sukcesów>, <Czy Skumulowany> )::
+  Jeżeli _Czy Skumulowany = true_, obliczana jest wartość funkcji dystrybuanty (cdf) rozkładu Erlanga z parametrami _kształt_ i _wskaźnik_ dla podanej _liczby sukcesów_. 
+W przeciwnym razie obliczana jest wartość funkcji gęstości prawdopodobieństwa (pdf) dla podanej _liczby sukcesów_.
+
+RozkładErlanga( <Kształt>, <Wskaźnik>, x, <Czy Skumulowany> )::
+  Jeżeli _Czy Skumulowany = true_, tworzy funkcję dystrybuanty (cdf) rozkładu Erlanga z parametrami _kształt_ i _wskaźnik_.
+W przeciwnym razie tworzy funkcję gęstości prawdopodobieństwa (pdf) tego rozkładu.
