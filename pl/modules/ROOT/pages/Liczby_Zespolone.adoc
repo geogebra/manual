@@ -1,0 +1,85 @@
+= Liczby zespolone
+:page-en: Complex_Numbers
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+GeoGebra nie obsługuje liczb zespolonych bezpośrednio, ale możesz używać xref:/Punkty_i_Wektory.adoc[punktów i wektorów] 
+do wyświetlania liczb zespolonych na płaszczyźnie oraz wykonywania działań algebraicznych na liczbach zespolonych.
+
+[EXAMPLE]
+====
+
+Po wpisaniu liczby zespolonej 3 + 4ί w polu wprowadzania, w image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] 
+xref:/Widok_Grafiki.adoc[Widoku Grafiki] zostanie wyświetlony punkt (3, 4). Liczba zespolona zostanie wyświetlona w postaci algebraicznej jako 3 + 4ί w image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/Widok_Algebry.adoc[Widoku Algebry].
+
+====
+
+[NOTE]
+====
+
+W image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _Widoku_Algebry_ jako liczbę zespoloną
+możesz wyświetlić dowolny punkt. Wystarczy otworzyć 
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Okno_Ustawień_Obiektu.adoc[ustawienia] punktu
+i wybrać _Liczba zespolona_ z listy formatów współrzędnych (opcja Współrzędne:) w zakładce _Algebra_.
+
+====
+
+O ile nie jesteś w image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] xref:/Widok_CAS.adoc[Widoku CAS] lub wcześniej nie została zdefiniowana zmienna o nazwie _i_, wpisanie  _i_ zostanie rozpoznane jako para 
+uporządkowana _i_ = (0, 1) lub liczba zespolona 0 + 1ί. Oznacza to, że możesz używać _i_ do wprowadzania liczb zespolonych w _polu wprowadzania_ (np. _w_ = 3 + 4 _i_) w _Widoku Algebry_.
+W Widoku CAS, aby wprowadzić jednostkę urojoną ί, użyj skrótu klawiszowego [.kcode]#Alt# + [.kcode]#i#.
+
+
+[EXAMPLE]
+====
+Dodawanie i odejmowanie:
+
+* `++(2 + 1ί) + (1 – 2ί)++` daje w wyniku liczbę zespoloną 3 – 1ί.
+* `++(2 + 1ί) - (1 – 2ί)++` daje w wyniku liczbę zespoloną 1 + 3ί.
+
+====
+
+[EXAMPLE]
+====
+
+Mnożenie i dzielenie:
+
+* `++(2 + 1ί) * (1 – 2ί)++` daje w wyniku liczbę zespoloną 4 – 3ί.
+* `++(2 + 1ί) / (1 – 2ί)++` daje w wyniku liczbę zespoloną 0 + 1ί.
+
+====
+
+[NOTE]
+====
+
+Zwykłe mnożenie `++(2, 1)*(1, -2)++` daje iloczyn skalarny dwóch wektorów.
+
+====
+
+Można również używać następujących xref:/Predefiniowane_Funkcje_i_Operatory.adoc[predefiniowanych funkcji i operatorów]:
+
+* `++x(w)++` lub `++real(w)++` zwraca część rzeczywistą liczby zespolonej _w_
+* `++y(w)++` lub `++imaginary(w)++` zwraca część urojoną liczby zespolonej _w_
+* `++abs(w)++` lub `++Długość(w)++` zwraca moduł (wartość bezwzględną) liczby zespolonej _w_
+* `++arg(w)++` lub `++Kąt(w)++` zwraca argument liczby zespolonej _w_
+
+[NOTE]
+====
+
+arg(w) zwraca wynik pomiędzy -180° a 180°, a polecenie Kąt[w] zwraca wartość pomiędzy 0° i 360°.
+
+====
+
+* `++conjugate(w)++` lub `++Symetria(w,OśX)++` zwraca sprzężenie liczby zespolonej _w_
+
+GeoGebra rozpoznaje również wyrażenia z udziałem liczb xref:/Liczby_i_Kąty.adoc[rzeczywistych] i zespolonych.
+
+[EXAMPLE]
+====
+
+* `++3 + (4 + 5ί)++` daje w wyniku liczbę zespoloną 7 + 5ί.
+* `++3 - (4 + 5ί)++` daje w wyniku liczbę zespoloną -1 - 5ί.
+* `++3 / (0 + 1ί)++` daje w wyniku liczbę zespoloną 0 - 3ί.
+* `++3 * (1 + 2ί)++` daje w wyniku liczbę zespoloną 3 + 6ί.
+
+====
