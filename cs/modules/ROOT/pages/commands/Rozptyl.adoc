@@ -2,21 +2,35 @@
 :page-en: commands/Variance
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
+Rozptyl( <Seznam zdrojových dat> )::
+  Vypočítá https://cs.wikipedia.org/wiki/Rozptyl_(statistika)[rozptyl] zdrojového datového souboru.
+
+[EXAMPLE]
+====
+
+`++Rozptyl({1, 2, 3})++` yields _0.67_.
+
+====
+
+Rozptyl( <Seznam čísel>, <Seznam četností> )::
+  Vypočítá https://cs.wikipedia.org/wiki/Rozptyl_(statistika)[rozptyl] datového souboru, pro každou hodnotu je zadána její četnost.
+
+[EXAMPLE]
+====
+
+`++Rozptyl({1, 2, 3} , {1, 2, 1})++` dává výsledek _0.5_.
+
+====
+
+== CAS Syntax
+
 Rozptyl( <Seznam čísel> )::
-  === CAS pohled
-  Rozptyl( <Seznam čísel> );;
-  [width="100%",cols="50%,50%",]
-  |===
-  a|
-  image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+  Vypočítá https://cs.wikipedia.org/wiki/Rozptyl_(statistika)[rozptyl] seznamu čísel. Pokud seznam obsahuje nedefinovanou proměnnou _p_, vrací vzorec pro výpočet rozptylu _v(p)_.
 
-  |Some content was not yet translated.
-  |===
+[EXAMPLE]
+====
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+`++Rozptyl({1, 2, a})++` dává výsledek _stem:[\frac{2}{9} a^{2} - \frac{2}{3} a + \frac{2}{3}]_.
 
-|Some content was not yet translated.
-|===
+====
+
