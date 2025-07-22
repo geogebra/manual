@@ -1,0 +1,32 @@
+= Polecenie RozkładF
+:page-en: commands/FDistribution
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RozkładF( <Stopnie Swobody Licznika>, <Stopnie Swobody Mianownika>, <Liczba Sukcesów> )::
+  Oblicza wartość dystrybuanty (funkcji rozkładu skumulowanego) https://pl.wikipedia.org/wiki/Rozk%C5%82ad_F_Snedecora[rozkładu F] dla _liczby sukcesów v_, tzn. prawdopodobieństwo
+  _P(X≤v)_ gdzie _X_  jest zmienną losową o rozkładzie F z podanymi _stopniami swobody licznika_ i _mianownika_.
+
+[NOTE]
+====
+
+Ta składnia zwraca prawdopodobieństwo dla danej wartości, czyli pole pod krzywą rozkładu F na lewo od podanej współrzędnej _x_.
+
+====
+
+
+RozkładF( <Stopnie Swobody Licznika>, <Stopnie Swobody Mianownika>, <Liczba Sukcesów>, <Czy Skumulowany> )::
+ Jeśli _Czy Skumulowany = true_, oblicza wartość dystrybuanty (cdf) rozkładu F z danymi _stopniami swobody licznika_ i _mianownika_ oraz _liczby sukcesów_. 
+W przeciwnym razie oblicza wartość funkcji gęstości prawdopodobieństwa (pdf) rozkładu F dla tej _liczby sukcesów_.
+
+RozkładF( <Stopnie Swobody Licznika>, <Stopnie Swobody Mianownika>, x, <Czy Skumulowany> )::
+  Jeśli _Czy Skumulowany = true_,, tworzy funkcję dystrybuanty (cdf) rozkładu F z danymi _stopniami swobody licznika_ i _mianownika_.
+W przeciwnym przypadku tworzy funkcję gęstości prawdopodobieństwa (pdf) tego rozkładu.
+
+
+[NOTE]
+====
+
+Ta komenda jest dostępna również w  image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/Widok_CAS.adoc[Widoku CAS].
+
+====
