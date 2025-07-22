@@ -3,19 +3,29 @@
 ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
 Vektor( <Bod> )::
-  Vektor( <Počáteční Bod>, <Koncový Bod> );;
-  [width="100%",cols="50%,50%",]
-  |===
-  a|
-  image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+ Sestrojí https://cs.wikipedia.org/wiki/Polohov%C3%BD_vektor[polohový vektor] daného bodu.
 
-  |Some content was not yet translated.
-  |===
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+[EXAMPLE]
+====
 
-|Some content was not yet translated.
-|===
+`++Vektor((3, 2))++` dává _u = stem:[\begin{pmatrix}3\\2\end{pmatrix}]_.
+
+====
+
+Vektor( <Počáteční bod>, <Koncový bod> )::
+  Vytvoří https://www.matweb.cz/vektory/[vektor] z počátečního bodu do koncového bodu.
+
+[EXAMPLE]
+====
+
+`++Vektor((1, 1), (3, 4))++` dává _u = stem:[\begin{pmatrix}2\\3\end{pmatrix}]_.
+
+====
+
+[NOTE]
+====
+
+Viz také nástroj image:24px-Mode_vector.svg.png[Mode vector.svg,width=24,height=24] xref:/tools/Vektor.adoc[Vektor].
+
+====
