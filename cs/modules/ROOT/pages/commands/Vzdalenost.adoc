@@ -4,10 +4,52 @@ ifdef::env-github[:imagesdir: /cs/modules/ROOT/assets/images]
 
 Vzdalenost( <Bod>, <Objekt> )::
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+  Určí nejkratší https://cs.wikipedia.org/wiki/Vzd%C3%A1lenost#Obecn%C3%A9_matematick%C3%A9_zaveden%C3%AD[vzdálenost] mezi bodem a objektem.
 
-|Some content was not yet translated.
-|===
+[EXAMPLE]
+====
+
+* `++ Vzdalenost((2, 1), x^2 + (y - 1)^2 = 1)++` dává _1_
+* `++Vzdalenost((2, 1, 2), (1, 3, 0)) ++` dává _3_
+* Nechť _f_ je funkce a _A_ je bod. `++Vzdalenost(A, f)++` vrací vzdálenost mezi bodem _A_ a `++NejblizsiBod(f, A)++`.
+
+====
+
+[NOTE]
+====
+
+The command works for points, segments, lines, conics, functions, and implicit curves. For functions, it uses a
+numerical algorithm which works better for polynomials. 
+
+====
+
+Vzdalenost( <Přímka>, <Přímka> )::
+ Vrací vzdálenost dvou přímka. Vzdálenost různoběžek je 0, https://www.matweb.cz/vzdalenost-primek/[vzdálenost dvou rovnoběžných přímek] měříme na společné kolmici, ve 3D prostředí můžete určovat i vzdálenost dvou https://cs.wikipedia.org/wiki/Mimob%C4%9B%C5%BEka[mimoběžných přímek]. Tu měříme na nejkratší příčce mimoběžek, tj. přímce, která obě mimoběžky protíná a je k nim kolmá.
+
+[EXAMPLE]
+====
+
+* `++Vzdalenost(y = x + 3, y = x + 1)++` dává _1.41_
+* `++Vzdalenost(y = 3x + 1, y = x + 1)++` dává _0_
+* Nechť _a: X = (-4, 0, 0) + λ*(4, 3, 0)_ a _b: X = (0, 0, 0) + λ*(0.8, 0.6, 0)_.  `++Vzdalenost(a, b)++` dává _2.4_
+
+====
+
+
+Vzdalenost( <Rovina>, <Rovina> )::
+  Vypočítá vzdálenost dvou rovin. Vzdálenost různoběžných rovin je 0, vzdálenost dvou rovnoběžných rovin měříme na společné kolmici. Můžeme ji zjistit také tak, že zvolíme libovolný bod v jedné rovině a určíme jeho vzdálenost od druhé roviny.
+
+[EXAMPLE]
+====
+
+Let _eq1: x + y + 2z = 1_ and _eq2: 2x + 2y + 4z = -2_.  `++Vzdalenost(eq1, eq2)++` dává _0.82_
+
+====
+
+[NOTE]
+====
+
+Viz také nástroj image:22px-Mode_distance.svg.png[Mode distance.svg,width=20,height=20]
+xref:/tools/Vzdálenost.adoc[Vzdálenost].
+
+====
