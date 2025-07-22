@@ -1,0 +1,24 @@
+= Polecenie ZaznaczObiekty
+:page-en: commands/SelectObjects
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+ZaznaczObiekty( )::
+  Usuwa zaznaczenie wszystkich aktualnie zaznaczonych obiektów.
+ZaznaczObiekty( <Obiekt>, <Obiekt>, ... )::
+  Usuwa zaznaczenie wszystkich obiektów i zaznacza tylko te, które zostały podane jako parametry. 
+  Wszystkie argumenty muszą mieć xref:/Etykiety_i_Opisy.adoc[nazwę] (być już utworzone).
+
+[EXAMPLE]
+====
+
+* Dane są punkty _A_, _B_ i _C_. `++ZaznaczObiekty(A, B, C)++` zaznacza punkty _A_, _B_ i _C_.
+* Polecenie `++ZaznaczObiekty(Midpoint(A, B))++` nie działa. Taki zapis tylko odznaczy wszystkie obiekty.
+
+====
+
+[NOTE]
+====
+
+Polecenie anuluje każdą trwającą operację przeciągania (jest to przydatne w skryptach).
+
+====
