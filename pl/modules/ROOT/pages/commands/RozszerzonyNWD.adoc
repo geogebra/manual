@@ -1,0 +1,39 @@
+= Polecenie RozszerzonyNWD
+:page-en: commands/ExtendedGCD
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+== Specyficzna składnia CAS
+
+RozszerzonyNWD( <Liczba Całkowita>,<Liczba Całkowita> )::
+  Zwraca listę zawierającą współczynniki całkowite stem:[s, t] równania Bézouta: stem:[as+bt= GCD(a,b)] 
+oraz największy wspólny dzielnik podanych liczb całkowitych stem:[a] i stem:[b].
+  Wyniki są obliczane za pomocą https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm[rozszerzonego algorytmu Euklidesa.].
+
+[EXAMPLE]
+====
+
+`++RozszerzonyNWD(240,46)++` daje w wyniku {stem:[-9,47,2]}. (Podstawiając do równania Bézouta otrzymamy: stem:[-9
+\cdot 240+47 \cdot 46=2]).
+
+====
+
+RozszerzonyNWD( <Wielomian>, <Wielomian> )::
+  Zwraca listę zawierającą współczynniki wielomianowe stem:[S(x), T(x)] równania Bézouta dla wielomianów:
+  stem:[A(x)S(x) + B(x)T(x) = GCD(A(x), B(x))] oraz największy wspólny dzielnik podanych wielomianów stem:[A(x)] i stem:[B(x)].
+   Wyniki są obliczane za pomocą https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm[rozszerzonego algorytmu Euklidesa.].
+
+[EXAMPLE]
+====
+
+`++RozszerzonyNWD(x^2-1,x+4)++` daje w wyniku {stem:[1,-x+4,15]}. (Podstawiając do równania Bézouta dla wielomianów
+otrzymamy: stem:[1 \cdot (x^2-1) + (-x+4) \cdot (x+4) = 15]).
+
+====
+
+[NOTE]
+====
+
+* Największy wspólny dzielnik wielomianów nie jest jednoznaczny (jest określony z dokładnością do mnożnika skalarnego).
+* Zobacz także polecenie xref:/commands/NWD.adoc[NWD].
+
+====
