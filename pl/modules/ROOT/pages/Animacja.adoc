@@ -1,0 +1,87 @@
+= Animacja
+:page-en: Animation
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+== Animacja automatyczna
+
+GeoGebra umożliwia animowanie nie tylko swobodnych liczb i/lub kątów jednocześnie, ale również punktów zależnych, które są 
+ograniczone do obiektów (odcinków, prostych, funkcji, krzywych itp.). Aby swobodne liczby/kąty mogły być automatycznie animowane, 
+muszą być wyświetlone jako suwaki w image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Widok_Grafiki.adoc[Widoku Grafiki].
+
+Jeśli chcesz animować swobodny liczbę, kąt lub punkt zależny w GeoGebrze, wybierz opcję _Animacja_ w xref:/Menu_Kontekstowe.adoc[menu kontekstowym] 
+tej liczby, kąta lub punktu. Aby zatrzymać animację, odznacz _Animacja_ w tym samym menu.
+
+[NOTE]
+====
+
+Po rozpoczęciu animacji wolnej liczby, kąta lub punktu zależnego, w lewym dolnym rogu
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Widoku Grafiki_ pojawia się przycisk animacji. Umożliwia on
+image:18px-Nav_pause_circle.svg.png[Nav pause circle.svg,width=18,height=18] zatrzymanie lub
+image:18px-Nav_play_circle.svg.png[Nav play circle.svg,width=18,height=18] wznowienie odtwarzania animacji.
+
+====
+
+W image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Okno_Ustawień_Obiektu.adoc[oknie Ustawienia], w zakładce 
+_Suwak_, możesz zmienić sposób działania animacji:
+
+OMożesz kontrolować _szybkość_ animacji.
+
+[NOTE]
+====
+
+Prędkość 1 oznacza, że animacja przechodzi przez cały zakres suwaka w ok. 10 sekund.
+
+====
+
+Możesz także ustawić sposób powtarzania cyklu animacji:
+
+⇔ _Oscylacjag_::
+  Animacja naprzemiennie zwiększa i zmniejsza wartość suwaka.
+⇒ _Powiększenie_::
+  Wartość suwaka zawsze rośnie. Po osiągnięciu wartości maksymalnej wraca do minimalnej i cykl się powtarza.
+⇐ _Pomniejszenie_::
+  Wartość suwaka zawsze maleje. Po osiągnięciu wartości minimalnej wraca do maksymalnej.
+⇒ _Powiększenie_ (_Raz_)::
+  Wartość suwaka rośnie, a po osiągnięciu wartości maksymalnej animacja się zatrzymuje.
+
+[NOTE]
+====
+
+Podczas trwania automatycznej animacji GeoGebra pozostaje w pełni funkcjonalna, co pozwala na dokonywanie zmian w konstrukcji bez przerywania animacji.
+
+====
+
+== Animacja ręczna
+
+Aby ręcznie zmieniać wartość liczby, kąta lub pozycję punktu w sposób ciągły, wybierz narzędzie image:20px-Mode_move.svg.png[Mode
+move.svg,width=20,height=20]xref:/tools/Przesuń.adoc[Przesuń]. Następnie kliknij swobodną liczbę, kąt lub punkt zależny i naciśnij klawisz
+[.kcode]#+# lub [.kcode]#–# albo klawisze strzałek na klawiaturze. Przytrzymanie jednego z tych klawiszy uruchamia ręczną animację.
+
+[EXAMPLE]
+====
+
+Jeśli współrzędne punktu zależą od liczby _t_ np. P = (2 t, t), punkt będzie poruszał się po prostej, gdy _t_
+będzie się stale zmieniać.
+
+====
+
+[NOTE]
+====
+
+Możesz ustawić krok suwaka w zakładce _Suwak_ w
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Ustawieniach_ obiektu.
+
+====
+
+== Skróty klawiszowe
+
+* [.kcode]#Shift# + strzałka – krok co 0,1 jednostki
+* [.kcode]#Ctrl# + strzałka – krok co 10 jednostek
+* [.kcode]#Alt# + strzałka – krok co 100 jednostek
+
+[NOTE]
+====
+
+Punkt znajdujący się na prostej można również przesuwać wzdłuż tej prostej za pomocą klawiszy [.kcode]#+# lub [.kcode]#–# key.
+
+====
