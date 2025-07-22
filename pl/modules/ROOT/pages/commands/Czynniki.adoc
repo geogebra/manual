@@ -1,0 +1,59 @@
+= Polecenie Czynniki
+:page-en: commands/Factors
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Czynniki( <Wielomian> )::
+  Tworzy listę list typu _{czynnik, wykładnik}_ tak, aby iloczyn wszystkich tych czynników podniesionych 
+do odpowiadających im wykładników był równy danemu wielomianowi.
+Czynniki są uporządkowane według stopnia w kolejności rosnącej.
+[EXAMPLE]
+====
+
+`++Czynniki(x^8 - 1)++` daje w wyniku _{{x - 1, 1}, {x + 1, 1}, {x^2 + 1, 1}, {x^4 + 1, 1}}_.
+
+====
+
+[NOTE]
+====
+
+Nie wszystkie z czynników są nierozkładalne w zbiorze liczb rzeczywistych.
+
+====
+
+Czynniki( <Liczba> )::
+  Tworzy macierz typu stem:[\left( \begin{array}{ll} pierwsza_1 & wykładnik_1 \\ pierwsza_2 & wykładnik_2 \\pierwsza_3 &
+  wykładnik_3 \\ \end{array} \right) ] tak, aby iloczyn wszystkich tych liczb pierwszych podniesionych do 
+odpowiadających im _wykładników_ był równy danej liczbie. Liczby pierwsze są uporządkowane w kolejności rosnącej.
+
+[EXAMPLE]
+====
+
+* `++Czynniki(1024)++` daje w wyniku _( 2 10 )_, ponieważ stem:[1024 = 2^{10}].
+* `++Czynniki(42)++` daje w wyniku stem:[\left( \begin{array}{ll} 2 & 1 \\ 3 & 1 \\7 & 1 \\ \end{array} \right) ], ponieważ
+stem:[42 = 2^1・3^1・7^1].
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenia xref:/commands/CzynnikiPierwsze.adoc[CzynnikiPierwsze] i xref:/commands/RozkładNaCzynniki.adoc[RozkładNaCzynniki].
+
+====
+
+[NOTE]
+====
+
+W image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Widok_CAS.adoc[Widoku CAS]
+niezdefiniowane zmienne mogą być używane jako dane wejściowe, a wyniki zwracane są jako poprawne macierze.
+
+====
+
+[EXAMPLE]
+====
+
+`++Factors(a^8 - 1)++` daje w wyniku stem:[\left( \begin{array}{cc} a - 1 & 1 \\ a +1 & 1 \\a^2 + 1& 1 \\a^4 + 1& 1 \\
+\end{array} \right)].
+
+
+====
