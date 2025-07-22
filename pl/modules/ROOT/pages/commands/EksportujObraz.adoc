@@ -1,0 +1,108 @@
+= Polecenie EksportujObraz
+:page-en: commands/ExportImage
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+EksportujObraz( <Własność>, <Wartość>, <Własność>, <Wartość>, ... )::
+ Eksportuje obraz aktualnie aktywnego widoku (lub widoku określonego przez parametr „view”).
+
+[NOTE]
+====
+
+* _Własności_ używane w składni polecenia, wymienione w poniższych przykładach, muszą być wprowadzone w języku angielskim.
+* _Wartości_ związane z widokiem, który zostanie zapisany jako obraz, to:
+
+* 1 dla image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Widoku Grafiki_
+* 2 dla image:16px-Menu_view_graphics2.svg.png[Menu view graphics2.svg,width=16,height=16] _Widoku Grafiki 2_
+* -1 dla image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=16,height=16] _Widoku Grafiki 3D_
+
+====
+
+[EXAMPLE]
+====
+
+* `++EksportujObraz("scale", 5)++`
+
+Wyświetla wyskakujące okienko z bieżącym widokiem, aby użytkownik mógł kliknąć prawym przyciskiem myszy -> Zapisz obraz jako...
+
+* `++EksportujObraz("filename", "image.png")++`
+
+Zapisuje bieżący widok w pliku o nazwie "image.png".
+
+* `++EksportujObraz("filename", "image.png", "view", 2)++`
+
+Zapisuje Widok Grafiki 2 w pliku o nazwie "image.png".
+
+* `++EksportujObraz("filename", "image.png", "view", -1)++`
+
+Zapisuje Widok Grafiki 3D w pliku o nazwie "image.png".
+
+* `++EksportujObraz("filename", "image.png", "dpi", 300)++`
+
+Zapisuje bieżący widok w pliku o nazwie "image.png" w rozdzielczości 300 dpi (punktów na cal).
+
+* `++EksportujObraz("filename", "image.png", "scale", 2)++`
+
+Zapisuje bieżący widok w pliku o nazwie "image.png" w skali 2 (czyli dwukrotnej nominalnej rozdzielczości ekranu).
+
+* `++EksportujObraz("filename", "image.png", "scalecm", 2, "dpi", 600)++`
+
+Zapisuje bieżący widok w pliku o nazwie "image.png" w rozdzielczości 600 dpi w skali 1 jednostka = 2 cm.
+
+* `++EksportujObraz("filename", "image.png", "width", 1000)++`
+
+Zapisuje bieżący widok w pliku o nazwie "image.png", którego szerokość jest równa 1000 pikseli.
+
+* `++EksportujObraz("filename", "image.png", "height", 1000)++`
+
+Zapisuje bieżący widok w pliku o nazwie "image.png", którego wysokość jest równa 1000 pikseli.
+
+* `++EksportujObraz("filename", "image.png", "transparent", true)++`
+
+Zapisuje bieżący widok w pliku o nazwie "image.png" z przezroczystym tłem.
+
+Własność “transparent” z wartością _false_ zapisze w obrazie również tło.
+
+* `++EksportujObraz("filename", "image.svg", "type", "svg")++`
+
+SZapisuje bieżący widok w pliku o nazwie "image.svg" w formacie SVG.
+
+* `++EksportujObraz("filename", "image.gif", "type", "gif", "slider", a, "loop", true, "time", 200, "width", 400)++`
+
+Zapisuje bieżący widok jako zapętlony animowany GIF  sterowanego suwakiem "a" z odstępem 200 ms między klatkami.
+*Zachowaj niewielką szerokość i liczbę kroków suwaka*
+
+* `++EksportujObraz("filename", "image.gif", "type", "gif", "view", -1, "rotate", 360°, "slider", a, "loop", true, "time", 200)++`
+
+Zapisuje bieżący widok jako zapętlony animowany GIF  sterowanego suwakiem "a" z odstępem 200 ms między klatkami i obraca widok o 360° podczas animacji.
+*Zachowaj niewielką szerokość i liczbę kroków suwaka*
+
+* `++EksportujObraz("type", "pdf", "filename", "test.pdf")++`
+
+Tworzy plik PDF zawierający bieżący widok (lub plik PDF zawierający dwie strony, jeśli otwarty jest także Widok Grafiki 2)
+
+* `++EksportujObraz("type", "pdf", "filename", "test.pdf", "slider", n)++`
+
+Tworzy *wielostronicowy* plik PDF zawierający bieżący widok, gdzie każda strona odpowiada jednemu krokowi suwaka "n".
+
+* `++pic1 = EksportujObraz("view", 2, "corner", A, "corner2", B)++`
+
+Wstawia jako obraz Widok Grafiki 2 i umieszcza go w widoku w pozycji określonej przez punkty `++A++` and `++B++`
+
+====
+
+[NOTE]
+====
+
+* W GeoGebra Classic 5, jeśli nie podano parametru nazwy pliku, obraz zostanie skopiowany do schowka. 
+W przeglądarce Chrome można określić własność `++"clipboard", true++`
+* Aby przyciąć eksportowany obraz, należy utworzyć punkty `++Export_1++` i `++Export_2++` które definiują prostokąt przycięcia 
+(*ma to również zastosowanie do eksportów z menu, np. Plik -> Eksportuj obraz*)
+* Niektóre składnie nie są obsługiwane w GeoGebra Classic 5.
+* W Chrome można wypróbować eksperymentalną składnię `++"type", "webm"++`, aby uzyskać szybszy i mniejszy eksport niż w przypadku animowanych GIF-ów.
+* Dla Widoków Grafiki 2D można użyć składni `++"grayscale", true++`, aby uzyskać obraz w skali szarości (tylko dla formatu PNG).
+* Dla Widoku Grafiki 3D obsługiwane są tylko bitmapy (np. png, gif). W GeoGebra Classic 5 można spróbować następującego polecenia,
+aby uzyskać eksport w wysokiej rozdzielczości:
+`++EksportujObraz("filename", "c:\Users\<username>\AppData\image.png", "view", -1, "width", 2000)++`. Zmień *<username>*
+na nazwę swojego użytkownika Windows.
+
+====
