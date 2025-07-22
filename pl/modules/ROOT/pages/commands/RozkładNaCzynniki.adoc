@@ -1,0 +1,66 @@
+= Polecenie RozkładNaCzynniki
+:page-en: commands/Factor
+:page-aliases: commands/Factorise.adoc
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+image:64px-Globe.png[Globe.png,width=64,height=64,role=left] To polecenie ma dwie wersje w języku angielskim:
+
+* Factor (US)
+* Factorise (UK + Aus)
+
+====
+
+RozkładNaCzynniki( <Wielomian> )::
+  Rozkłada wielomian na czynniki.
+
+[EXAMPLE]
+====
+
+`++RozkładNaCzynniki(x^2 + x - 6)++` daje w wyniku _(x - 2) (x + 3)_.
+
+====
+
+[NOTE]
+====
+
+To polecenie wymaga załadowania systemu algebry komputerowej (CAS), więc może działać wolniej na niektórych komputerach.
+
+====
+
+== Specyficzna składnia CAS
+
+W image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Widok_CAS.adoc[Widoku CAS]
+możesz również użyć następujących składni:
+
+RozkładNaCzynniki( <Liczba> )::
+  Rozkłada liczbę na czynniki pierwsze.
+
+[EXAMPLE]
+====
+
+`++RozkładNaCzynniki(360)++` daje w wyniku _2³ 3² 5_.
+
+====
+
+RozkładNaCzynniki( <Wyrażenie>, <Zmienna> )::
+  Rozkłada wyrażenie na czynniki względem podanej zmiennej.
+
+[EXAMPLE]
+====
+
+* `++RozkładNaCzynniki(x^2 - y^2, x)++` daje w wyniku _(x - y) (x + y)_, rozkład _x^2^ - y^2^_ względem zmiennej _x_,
+* `++RozkładNaCzynniki(x^2 - y^2, y)++` daje w wyniku _-(y - x) (y + x)_, rozkład _x^2^ - y^2^_ względem zmiennej _y_.
+
+====
+
+[NOTE]
+====
+
+To polecenie rozkłada wyrażenia na czynniki w zbiorze https://pl.wikipedia.org/wiki/Liczby_wymierne[liczb wymiernych]. 
+Aby dokonać rozkładu w zbiorze liczb niewymiernych rzeczywistych, zobacz polecenie xref:/commands/RozkładWielomianuNiewymierny.adoc[RozkładWielomianuNiewymierny]. 
+Aby dokonać rozkładu w zbiorze liczb zespolonych, zobacz polecenia xref:/commands/ZRozkładWielomianu.adoc[ZRozkładWielomianu] i xref:/commands/ZRozkładWielomianuNiewymierny.adoc[ZRozkładWielomianuNiewymierny].
+
+====
