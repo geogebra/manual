@@ -1,0 +1,51 @@
+= Wartości boolowskie (logiczne)
+:page-en: Boolean_values
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+W GeoGebrze możesz używać zmiennych boolowskich _true_ (prawda) i _false_ (fałsz). Wystarczy wpisać np. `++a = true++` lub
+`++b = false++` w xref:/Pole_Wprowadzania.adoc[polu wprowadzania] i nacisnąć klawisz [.kcode]#Enter# key. Dzięki zmiennym boolowskim
+można np. określić xref:/Widoczność_Warunkowa.adoc[warunkową widoczność] obiektu.
+
+== Pole wyboru i klawisze strzałek
+
+swobodne zmienne boolowskie mogą być wyświetlane jako pola wyboru image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Widok_Grafiki.adoc[Widoku Grafikie] (zobacz narzędzie
+image:22px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=22,height=22]xref:/tools/Pole_Wyboru.adoc[Pole wyboru]). 
+Po wybraniu zmiennej boolowskiej w image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/Widok_Algebry.adoc[Widoku Algebry] można zmieniać jej wartość za pomocą klawiszy 
+strzałek (zobacz xref:/Animacja.adoc[Animacja ręczna]).
+
+[NOTE]
+====
+
+Możesz również używać zmiennych boolowskich jak liczb (o wartościach 0 lub 1). Pozwala to np. używać pola wyboru jako dynamicznego sterowania prędkością animowanego suwaka, 
+umożliwiając w ten sposób uruchamianie i zatrzymywanie animacji. W takim przypadku przycisk animacji pojawia się w
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Widoku Grafiki_ tylko wtedy, 
+gdy istnieje suwak animowany ze statyczną (tj. niezmienną) prędkością.
+
+====
+
+== Operatory
+
+Można stosować następujące operatory logiczne i warunki, wybierając je z klawiatury ekranowej lub wpisując z klawiatury:
+
+[cols=",,,,",options="header",]
+|===
+|Operator |Symbol |Klawiatura |Przykład |Typy obiektów
+|Równość |≟ |== |a ≟ b lub a == b |liczby, punkty, proste, stożkowe, funkcje (potrzebny CAS), płaszczyzny a, b
+|Nierówność |≠ |!= |a ≠ b lub a != b |liczby, punkty, proste, stożkowe, funkcje (potrzebny CAS), płaszczyzny a, b
+|Mniejsze niż | |< |a < b |liczby a, b
+|Większe niż | |> |a > b |liczby a, b
+|Mniejsze lub równe |≤ |<= |a ≤ b or a <= b |liczby a, b
+|Większe lub równe |≥ |>= |a ≥ b or a >= b |liczby a, b
+|I (koniunkcja)|∧ |&& |a ∧ b or a && b |zmienne boolowskie a, b
+|LUB (alternatywa) |∨ | \|\| |a ∨ b or a \|\| b |zmienne boolowskie a, b
+|NIE (negacja) |¬ |! |¬a or !a |zmienna boolowska a
+|XOR (alternatywa wykluczająca) | |[.kcode]##Alt##[.kcode]##+## |a ⊕ b |zmienne boolowskie a, b
+|Implikacja |→ |-> |a -> b |zmienne boolowskie a, b
+|Równoległość |∥ | |a ∥ b |proste a, b
+|Prostopadłość |⊥ | |a ⊥ b |proste a, b
+|Należy do |∈ | |a ∈ lista1 |liczba a, lista liczb lista1
+|Podzbiór |⊆ | |lista1 ⊆ lista2 |listy lista1 i lista2
+|Podzbiór właściwy |⊂ | |lista1 ⊂ lista2 |listy lista1 i lista2
+|===
