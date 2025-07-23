@@ -1,0 +1,68 @@
+= Polecenie Pierwszy
+:page-en: commands/First
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Pierwszy( <Lista> )::
+  Tworzy nową listę zawierającą pierwszy element danej listy.
+  
+[EXAMPLE]
+====
+
+`++Pierwszy({1, 4, 3})++` daje w wyniku _{1}_.
+
+====
+
+[NOTE]
+====
+
+Aby uzyskać pierwszy element listy, użyj `++Element({1, 4, 3}, 1)++`.
+
+====
+
+Pierwszy( <Lista>, <Liczba Elementów> )::
+
+Tworzy nową listę zawierającą podaną liczbę początkowych elementów listy.
+
+[EXAMPLE]
+====
+
+`++Pierwszy({1, 4, 3}, 2)++` daje w wyniku _{1, 4}_.
+
+====
+
+
+Pierwszy( <Tekst> )::
+  Zwraca pierwszy znak tekstu.
+
+[EXAMPLE]
+====
+
+`++Pierwszy("Hello")++` daje w wyniku _"H"_.
+
+====
+
+Pierwszy( <Tekst> , <Liczba Elementów> )::
+  Zwraca podanę liczbę początkowych znaków tekstu.
+
+[EXAMPLE]
+====
+
+`++First("Hello",2)++` daje w wyniku _"He"_.
+
+====
+
+Pierwszy( <Miejsce Geometryczne>, <Liczba Elementów> )::
+  To polecenie jest przydatne dla:
+  * miejsc geometrycznych generowanych przez polecenie xref:/commands/NRozwiążRPN.adoc[NRozwiążRPN] - zwraca listę 
+punktów, które zostały utworzone w pierwszych _n_ krokach numerycznego algorytmu rozwiązywania równań różniczkowych.
+  * miejsc geometrycznych generowanych za pomocą poleceń xref:/commands/NajkrótszaDroga.adoc[NajkrótszaDroga],
+  xref:/commands/Komiwojażer.adoc[Komiwojażer], xref:/commands/DiagramVoronoja.adoc[DiagramVoronoja],
+  xref:/commands/MinimalneDrzewoRozpinające.adoc[MinimalneDrzewoRozpinające] i xref:/commands/OtoczkaWypukła.adoc[OtoczkaWypukła] 
+ - zwraca wierzchołki grafu.
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/Ostatni.adoc[Ostatni].
+
+====
