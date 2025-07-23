@@ -1,0 +1,67 @@
+= Polecenie NWD
+:page-en: commands/GCD
+:page-aliases: commands/HCF.adoc
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+image:64px-Globe.png[Globe.png,width=64,height=64,role=left]
+
+To polecenie ma dwie wersje w języku angielskim:
+
+* GCD (US)
+* HCF (UK + Aus)
+
+====
+
+NWD( <Liczba>, <Liczba> )::
+  Oblicza największy wspólny dzielnik dwóch liczb.
+
+[EXAMPLE]
+====
+
+`++NWD(12, 15)++` daje w wyniku _3_.
+
+====
+
+NWD( <Lista Liczb> )::
+  Oblicza największy wspólny dzielnik listy liczb.
+
+[EXAMPLE]
+====
+
+`++NWD({12, 30, 18})++` daje w wyniku _6_.
+
+====
+
+== Specyficzna składnia CAS
+W image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] xref:/Widok_CAS.adoc[Widoku CAS] możesz również użyć następującej składni:
+
+
+NWD( <Wielomian>, <Wielomian> )::
+  Oblicza największy wspólny dzielnik dwóch wielomianów.
+
+[EXAMPLE]
+====
+
+`++NWD(x^2 + 4 x + 4, x^2 - x - 6)++` daje w wyniku _x + 2_.
+
+====
+
+NWD( <Lista Wielomianów> )::
+  Oblicza największy wspólny dzielnik listy wielomianów.
+
+[EXAMPLE]
+====
+
+`++GCD({x^2 + 4 x + 4, x^2 - x - 6, x^3 - 4 x^2 - 3 x + 18})++` daje w wyniku _x + 2_.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenia xref:/commands/NWW.adoc[NWW] i xref:/commands/RozszerzonyNWD.adoc[RozszerzonyNWD].
+
+====
