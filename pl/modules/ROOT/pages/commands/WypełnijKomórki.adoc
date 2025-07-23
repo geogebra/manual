@@ -1,0 +1,39 @@
+= Polecenie WypełnijKomórki
+:page-en: commands/FillCells
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+WypełnijKomórki( <Zakres Komórek>, <Obiekt> )::
+  Kopiuje wartość/równanie itp. obiektu do podanego zakresu komórek. Obiekty tworzone w komórkach są
+  xref:/Obiekty_Swobodne_Zależne_i_Pomocnicze.adoc[obiektami swobodnymi], tzn. są niezależne od obiektu.
+
+[NOTE]
+====
+
+* _Zakres Komórek_ należy wprowadzić w następujący sposób: np. _B2:D5_.
+* _Obiekt_ może być dowolny, np.: _3_, _LosowaCałkowita(0, 10)_, _Okrąg(A, B)_.
+* Komórki opisuje się za pomocą litery kolumny i numeru wiersza, np.: _B2_.
+
+====
+
+WypełnijKomórki( <Komórka>, <Lista> )::
+  Kopiuje wartości z listy, pierwszą do danej komórki, a następne do komórek na prawo od niej. Obiekty tworzone w komórkach są 
+xref:/Obiekty_Swobodne_Zależne_i_Pomocnicze.adoc[obiektami swobodnymi], tzn. są niezależne od listu.
+
+WypełnijKomórki( <Komórka>, <Macierz> )::
+   Kopiuje wartości z macierzy do arkusza. Lewy górny narożnik macierzy zostaje wstawiony do danej komórki.
+  Obiekty tworzone w komórkach są xref:/Obiekty_Swobodne_Zależne_i_Pomocnicze.adoc[obiektami swobodnymi], tzn. są niezależne od macierzy.
+
+[NOTE]
+====
+
+Zobacz także polecenia xref:/commands/WypełnijWiersz.adoc[WypełnijWiersz] i xref:/commands/WypełnijKolumnę.adoc[WypełnijKolumnę].
+
+====
+
+[NOTE]
+====
+
+Możesz użyć polecenia `++WypełnijKomórki(komórka, Transpozycja({lista}))++`, aby wypełnić pionowo. Dodatkowe klamry przekształcają listę w macierz.
+Zapis: `++{lista}++`
+
+====
