@@ -1,0 +1,49 @@
+= Polecenie UłamekJakoTekst
+:page-en: commands/FractionText
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+UłamekJakoTekst( <Liczba> )::
+  Tworzy i wyświetla w image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/Widok_Grafiki.adoc[Widoku Grafiki] tekst LaTeX zawierający ułamek odpowiadający podanej liczbie.
+
+[EXAMPLE]
+====
+
+Dana jest prosta _a: y = 1.5 x + 2_, `++UłamekJakoTekst(Nachylenie(a))++` tworzy tekst LaTeX stem:[\frac{3}{2}].
+
+====
+
+UłamekJakoTekst( <Punkt> )::
+  Tworzy i wyświetla w image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/Widok_Grafiki.adoc[Widoku Grafiki] tekst LaTeX zawierający współrzędne podanego punktu w postaci ułamków.
+
+[EXAMPLE]
+====
+
+Dany jest punkt _A=(1.33,0.8)_, `++UłamekJakoTekst(A)++` tworzy tekst LaTeX _stem:[ \left( \frac{133}{100} ,\frac{4}{5}
+\right) ]_.
+
+====
+
+UłamekJakoTekst( <Liczba>, <Czy Ujemny Licznik>)::
+  Tworzy i wyświetla w image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:/Widok_Grafiki.adoc[Widoku Grafiki] tekst LaTeX zawierający ułamek odpowiadający podanej liczbie.
+  Parametr _Czy Ujemny Licznik_ określa pozycję ewentualnego znaku minus. 
+  Jeśli  wynosi _true_, minus jest wyświetlany w liczniku, dla _false_ minus jest wyświetlany przed ułamkiem.
+
+[EXAMPLE]
+====
+
+Dana jest liczba _n = -0.8_. Wówczas
+
+* `++UłamekJakoTekst(n, true)++` tworzy tekst LaTeX stem:[\frac{- 4}{5}].
+* `++UłamekJakoTekst(n, false)++` tworzy tekst LaTeX stem:[-\frac{4}{5}].
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/NiewymiernaPostać.adoc[NiewymiernaPostać].
+
+====
