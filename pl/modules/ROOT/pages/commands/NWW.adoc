@@ -1,0 +1,59 @@
+= Polecenie NWW
+:page-en: commands/LCM
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+UK English: LCM = lowest common multiple
+
+NWW( <Liczba>, <Liczba> )::
+  Oblicza najwmniejszą wspólną wielokrotność dwóch liczb.
+  
+[EXAMPLE]
+====
+
+`++NWW(12, 15)++` daje w wyniku _60_.
+
+====
+
+NWW( <Lista Liczb> )::
+  Oblicza najwmniejszą wspólną wielokrotność liczb z listy.
+
+[EXAMPLE]
+====
+
+`++NWW({12, 30, 18})++` daje w wyniku _180_.
+
+====
+
+== Specyficzna składnia CAS
+
+W image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] xref:/Widok_CAS.adoc[Widoku CAS] możesz również użyć następującej składni:
+
+
+NWW( <Wielomian>, <Wielomian> )::
+  Oblicza najwmniejszą wspólną wielokrotność dwóch wielomianów.
+
+[EXAMPLE]
+====
+
+`++NWW(x^2 + 4 x + 4, x^2 - x - 6)++` daje w wyniku stem:[x^3 + x^2 - 8 x - 12].
+
+====
+
+NWW( <Lista Wielomianów> )::
+
+  Oblicza najwmniejszą wspólną wielokrotność wielomianów z listy.
+
+[EXAMPLE]
+====
+
+`++NWW({x^2 + 4 x + 4, x^2 - x - 6, x^3 - 4 x^2 - 3 x + 18})++` daje w wyniku stem:[x^4 - 2 x^3 - 11 x^2 + 12 x + 36].
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/NWD.adoc[NWD].
+
+====
