@@ -1,0 +1,134 @@
+= Lists
+:page-en: Lists
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Za pomocą nawiasów klamrowych _{}_ możesz utworzyć _listę_ złożoną z kilku obiektów (np. punktów, odcinków, okręgów).
+
+[EXAMPLE]
+====
+
+* `++L = {A, B, C}++` tworzy listę składającą się z trzech wcześniej utworzonych punktów _A_, _B_, i _C_.
+* `++L = {(0, 0), (1, 1), (2, 2)}++` tworzy listę zawierającą te punkty i jednocześnie tworzy te punkty w GeoGebrze bez nadawania im nazwy.
+* Skrócony zapis `++..++` tworzy listę kolejnych liczb całkowitych: np. `++-5..5++` tworzy listę _++{-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5}++_.
+* Jeśli prostokątny obszar komórek w arkuszu kalkulacyjnym jest wypełniony danymi, skrócona składnia `++:++` 
+tworzy listę z danych zawartych w zakresie od pierwszej do ostatniej wskazanej komórki. Dane są pobierane kolumnami, 
+np. `++A1:A5++` tworzy listę zawierającą wartości komórek _++{A1, A2, A3, A4, A5}++_, a `++A1:B5++` tworzy listę zawierającą wartości komórek _++{A1, A2, A3, A4, A5, B1, B2, B3, B4, B5}++_.
+
+====
+
+[NOTE]
+====
+
+* Domyślnie elementy listy nie są wyświetlane w image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Widok_Grafiki.adoc[Widoku Grafiki].
+* Listy mogą być używane jako argumenty w operacjach na listach (opisanych dalej) lub w 
+xref:/commands/Listy_Polecenia.adoc[Listy Polecenia].
+* Listy muszą zawierać obiekty tego samego typu (np. llisty liczb, listy punktów), w przeciwnym razie operacje na listach lub użycie list jako argumentów może dawać nieprawidłowe wyniki.
+
+====
+
+
+== Dostęp do elementów listy
+
+Aby uzyskać dostęp do konkretnych elementów listy, możesz użyć polecenia xref:/commands/Element.adoc[Element] lub uproszczonej składni:
+
+[EXAMPLE]
+====
+
+Dana jest lista `++l1 = {1, 2, 3, 4, 5}++`, wówczas:
+
+* `++l1(1)++` zwraca pierwszy element: _1_
+* `++l1(2)++` zwraca drugi element: _2_
+* .../...
+* `++l1(-1)++` zwraca ostatni element: _5_
+* `++l1(-5)++` zwraca pierwszy element: _1_
+* `++l1(0)++` oraz `++list(k)++` dla k > 5 lub k < -5 zwraca _niezdefiniowany_
+
+====
+
+== Porównywanie list obiektów
+
+Możesz porównywać dwie listy obiektów za pomocą następujących składni i poleceń:
+
+* `++Lista1 == Lista2++`: sprawdza, czy listy są równe jako https://pl.wikipedia.org/wiki/Krotka_(struktura_danych)[uporządkowane ciągi (krotki)] i daje w wyniku _true_ lub _false_.
+* `++Lista1 != Lista2++`: sprawdza, czy listy są różne jako uporządkowane ciągi i daje w wyniku _true_ lub _false_.
+* `++BezPowtórzeń(Lista1) == BezPowtórzeń(Lista2)++` lub `++Lista1 \ Lista2 == {}++` : porównuje listy jako zbiory 
+(ignorując powtórzenia i kolejność elementów) i daje w wyniku _true_ lub _false_.
+* `++Porządkuj(Lista1) == Porządkuj(Lista2)++`: porównuje listy jako
+https://pl.wikipedia.org/wiki/Multizbi%C3%B3r[multizbiory] (ignorując kolejność, ale uwzględniając powtórzenia) i daje w wyniku _true_ lub _false_.
+
+Zobacz także polecenia xref:/commands/BezPowtórzeń.adoc[BezPowtórzeń] i xref:/commands/Sortuj.adoc[Sortuj].
+
+== Operatory działające na listach
+
+`++<Obiekt> ∈ <Lista>++`: daje w wyniku _true_, jeśli _Obiekt_ jest elementem _Lista_
+
+`++<Lista1> ⊆ <Lista2>++`: daje w wyniku _true_, jeśli _Lista1_ jest podzbiorem _Lista2_
+
+`++<Lista1> ⊂ <Lista2>++`: daje w wyniku _true_, jeśli _Lista1_ jest podzbiorem właściwym _Lista2_
+
+`++<Lista1> \ <Lista2>++`: tworzy różnicę zbiorów _Lista1_ i _Lista2_
+
+== Stosowanie dla list predefiniowanych operatorów i funkcji
+
+Jeśli zastosujesz xref:/Predefiniowane_Funkcje_i_Operatory.adoc[predefiniowane funkcje i operatory] dla list, 
+jako wynik otrzymasz nową listę.
+
+=== Dodawanie i odejmowanie
+
+* `++Lista1 + Lista2++`: dodaje odpowiadające sobie elementy list.
++
+[NOTE]
+====
+
+Obie listy muszą mieć taką samą długość.
+
+====
+* `++Lista + Liczba++`: dodaje _Liczbę_ do każdego elementu _Listy_.
+* `++Lista1 – Lista2++`: odejmuje element _Lista2_ od odpowiadającego mu elementu  _Lista1_.
++
+[NOTE]
+====
+
+Obie listy muszą mieć taką samą długość.
+
+====
+* `++Lista – Liczba++`: odejmuje _Liczbę_ od każdego elementu _Listy_.
+
+=== Mnożenie i dzielenie
+
+* `++Lista1 * Lista2++`: mnoży odpowiadające sobie elementy obu list.
++
+[NOTE]
+====
+
+Obie listy muszą mieć taką samą długość. Jeśli obie listy są macierzami, ma zastosowanie mnożenie macierzy.
+
+====
+* `++Lista * Liczba++`: mnoży każdy element _Listy_ przez daną _Liczbę_.
+* `++Lista1 / Lista2++`: dzieli element _Lista1_ przez odpowiadający mu element _Lista2_.
++
+[NOTE]
+====
+
+Obie listy muszą mieć taką samą długość.
+
+====
+* `++Lista / Liczba++`: dzieli każdy element _Listy_ przez _Liczbę_.
+* `++Liczba / Lista++`: dzieli _Liczbę_ przez każdy element _Listy_.
+
+[NOTE]
+====
+
+Zobacz także xref:/Punkty_i_Wektory.adoc[Iloczyn wektorowy].
+
+====
+
+=== Inne przykłady
+
+* `++Lista ^ 2++`: lista kwadratów elementów _Listy_.
+* `++2 ^ List++`: tworzy listę potęg liczby 2, używając elementów _Listy_ jako ich wykładniki.
+* `++Lista1 ^ Lista2++`: tworzy listę elementów postac _a^b_, gdzie _a_ i _b_ to odpowiadające sobie elementy _Lista1_ i _Lista2_.
+* `++sin(Lista)++`: oblicza wartość funkcji sinus dla każdego elementu _Listy_.
+
+W ten sam sposób mogą być używanie xref:/Funkcje.adoc[funkcje] utworzone przez użytkownika.
