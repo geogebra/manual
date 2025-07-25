@@ -1,0 +1,67 @@
+= Teksty
+:page-en: Texts
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Obiekty tekstowe można łatwo tworzyć za pomocą polecenia xref:/commands/Tekst.adoc[Tekst] lub narzędzia image:24px-Mode_text.svg.png[Mode
+text.svg,width=24,height=24] xref:/tools/Wstaw_tekst.adoc[Wstaw tekst], , a także poprzez przeciągnięcie obiektu z
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] xref:/Widok_Algebra.adoc[Widoku Algebry] do
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Widok_Grafiki.adoc[Widoku
+Grafiki]. Innym sposobem *dla bardziej zaawansowanych użytkowników* (opisanym poniżej) jest wpisanie tekstu bezpośrednio w xref:/Pole_Wprowadzania.adoc[polu wprowadzania].
+
+== Pojęcia
+
+Tekst statyczny::
+ nie zależy od żadnych obiektów matematycznych i zazwyczaj nie zmienia się przy zmianach w konstrukcji.
+
+Tekst dynamiczny::
+  zawiera wartości obiektów, które automatycznie dostosowują się do zmian tych obiektów.
+
+Tekst mieszany::
+  to połączenie tekstu statycznego i dynamicznego. Aby utworzyć tekst mieszany, możesz wpisać część statyczną 
+  z klawiatury (np. Punkt A =). Następnie kliknij obiekt, którego wartość ma być wyświetlona jako część dynamiczna.
+
+== Tworzenie tekstów za pomocą pola wprowadzania
+
+Teksty można również tworzyć za pomocą pola wprowadzania. W takim przypadku należy uwzględnić odpowiednią składnię, 
+która oddziela części dynamiczne i statyczne.
+
+[NOTE]
+====
+
+GeoGebra automatycznie dodaje odpowiednią składnię ("Punkt A = " + A ) , potrzebną do utworzenia tekstu mieszanego: cudzysłowy 
+wokół części statycznej oraz znak plus  (+) do łączenia poszczególnych części tekstu.
+
+====
+
+[cols=",",options="header",]
+|===
+|Wpis |Opis
+|To jest tekst statyczny |Tekst statyczny
+|A |Tekst dynamiczny (jeśli istnieje punkt A)
+|"Punkt A = " + A |Dwuczęściowy tekst mieszany z wartością punktu A
+|"a = " + a + "cm" |Trzyczęściowy tekst mieszany z wartością liczby a
+|===
+
+[NOTE]
+====
+
+Jeśli obiekt o nazwie xx już istnieje, a chcesz utworzyć tekst statyczny zawierający nazwę tego obiektu, 
+musisz wpisać ją w cudzysłowie ("xx"). W przeciwnym razie GeoGebra automatycznie utworzy tekst dynamiczny, 
+który zwróci wartość obiektu xx, a nie jego nazwę. Możesz jednak wpisywać dowolny tekst, który nie jest nazwą 
+istniejącego obiektu, bez użycia cudzysłowów.
+
+====
+
+[NOTE]
+====
+
+W tekście mieszanym część statyczna musi być umieszczona w cudzysłowie. Różne części tekstu (np. statyczne i dynamiczne) 
+można łączyć znakiem (+). Od wersji 4.0 znak + nie jest obowiązkowy.
+====
+
+[NOTE]
+====
+
+Obiekty tekstowe mogą także korzystać z xref:/LaTeX.adoc[LaTeX-u] do formatowania zapisu matematycznego.
+
+====
