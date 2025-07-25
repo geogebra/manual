@@ -1,0 +1,126 @@
+= Macierze
+:page-en: Matrices
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+GeoGebra obsługuje macierze o elementach rzeczywistych, które są reprezentowane jako lista xref:/Listy.adoc[list], 
+gdzie każda podlista zawiera jeden wiersz macierzy..
+
+[EXAMPLE]
+====
+
+W GeoGebrze, `{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}` reprezentuje macierz 3x3 stem:[\begin{pmatrix}1&2&3\\ 4&5&6\\ 7&8&9
+\end{pmatrix}]
+
+====
+
+Aby wyświetlić macierz przy użyciu formatu LaTeX w image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Widok_Grafiki.adoc[Widoku Grafiki], użyj polecenia xref:./commands/FormułaTekstowa.adoc[FormułaTekstowa]
+lub przeciągnij definicję macierzy z _Widoku Algebry View_ do _Widoku Grafiki_.
+
+[EXAMPLE]
+====
+
+Wpisz w xref:/Pole_Wprowadzania.adoc[polu wprowadzania] polecenie `++FormułaTekstowa[{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}]++`, aby wyświetlić
+macierz przy użyciu formatu LaTeX.
+
+====
+
+== Dostęp do elementów macierzy
+
+Toby uzyskać dostęp do konkretnego elementu macierzy, możesz użyć polecenia xref:/commands/Element.adoc[Element] lub uproszczonej składni
+przedstawionej na poniższych przykładach:
+
+[EXAMPLE]
+====
+
+Dana jest macierz `++m1={{1, 2}, {3, 4}}++`, wówczas:
+
+* `++m1(1, 1) ++` zwraca pierwszy element pierwszego wiersza macierzy: _1_
+* `++m1(2, 2)++`, `++m1(-1,2)++`, `++m1(2,-1) ++` i `++m1(-1,-1) ++` wszystkie zapisy
+zwracają drugi element drugiego wiersza macierzy: _4_.
+* Ogólnie: `++m1(i, j) ++`, gdzie _i_ i _j_ to liczby całkowite, zwraca element z
+_i-tego_ wiersza i  _j-tej_ kolumny.
+
+====
+
+== Operacje na macierzach
+
+Operacje na macierzach są realizowane jako _operacje na listach_, więc następujące składnie dają opisane efekty.
+
+[NOTE]
+====
+
+Niektóre operacje mogą mieć inne znaczenie w algebrze macierzy niż zwykłe działania na listach.
+
+====
+
+=== Dodawanie i odejmowanie
+
+* `++Macierz1 + Macierz2++`: dodaje odpowiadające sobie elementy dwóch macierzy o tych samych rozmiarach.
+* `++Macierz1 – Macierz2++`: odejmuje odpowiadające sobie elementy macierzy o tych samych rozmiarach.
+
+=== Mnożenie i dzielenie
+
+* `++Macierz * Liczba++`: mnoży każdy element _Macierzy_ przez daną _Liczbę_.
+* `++Macierz1 * Macierz2++`: wykonuje mnożenie macierzy.
+
+[EXAMPLE]
+====
+
+{{1, 2}, {3, 4}, {5, 6}} * {{1, 2, 3}, {4, 5, 6}} daje w wyniku macierz {{9, 12, 15}, {19, 26, 33}, {29, 40,
+51}}.
+
+====
+
+[NOTE]
+====
+
+TWiersze pierwszej macierzy i kolumny drugiej muszą mieć tyle samo elementów.
+
+====
+
+* `++Macierz 2x2 * Punkt (lub Wektor)++`: multiplies the _Macierz_ by the given _Punkt / Wektor_ and yields a point.
+
+[EXAMPLE]
+====
+
+`{{1, 2}, {3, 4}} * (3, 4)` yields the point _A_ = (11, 25).
+
+====
+
+* `++Macierz 3x3 *  Punkt (lub Wektor)++`: mnoży _Macierz_ przez dany _Punkt / Wektor_ i jako wynik zwraca punkt.
+
+[EXAMPLE]
+====
+
+`{{1, 2, 3}, {4, 5, 6}, {0, 0, 1}} * (1, 2)` daje w wyniku punkt A = (8, 20).
+
+====
+
+[NOTE]
+====
+
+Jest to szczególny przypadek przekształcenia afinicznego, w którym stosuje się współrzędne jednorodne: (x, y, 1) dla punktu i (x,
+y, 0) dla wektora. Zatem powyższy przykład jest równoważny działaniu: `++{{1, 2, 3}, {4, 5, 6}, {0, 0, 1}} * {1, 2, 1}++`.
+
+====
+
+* `++Macierz1 / Macierz2++`: Dzieli każdy element _Macierz1_ przez odpowiadający mu element _Macierz2_.
+
+[NOTE]
+====
+
+Dodatkowo, GeoGebra obsługuje składnię `++Macierz1 * Macierz2 ^(-1)++`.
+
+====
+
+== Inne operacje
+
+Sekcja xref:/commands/Wektory_i_Macierze_Polecenia.adoc[Macierze Polecenia] zawiera listę wszystkich dostępnych poleceń 
+związanych z macierzami, takich jak:
+
+* xref:/commands/Wyznacznik.adoc[Wyznacznik](Macierz): oblicza wyznacznik danej macierzy.
+* xref:/commands/Odwrotność.adoc[Odwrotność](Macierz): tworzy nową macierz będącą odwrotnością danej macierzy.
+* xref:/commands/Transpozycja.adoc[Transpozycja](Macierz): tworzy nową macierz będącą transpozycją danej macierzy.
+* xref:/commands/ZastosujMacierz.adoc[ZastosujMacierz](Macierz,Obiekt): stosuje przekształcenie afiniczne określone przez macierz na obiekcie.
+* xref:/commands/PostaćSchodkowaZredukowana.adoc[PostaćSchodkowaZredukowana](Macierz): tworzy nową macierz będącą postaciąschodkową zredukowaną danej macierzy.
