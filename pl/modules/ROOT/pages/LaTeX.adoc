@@ -1,0 +1,81 @@
+= LaTeX
+:page-en: LaTeX
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+W GeoGebrze możesz również wpisywać wzory matematyczne. Aby to zrobić, zaznacz opcję Formuła LaTeX  w oknie dialogowym narzędzia
+image:24px-Mode_text.svg.png[Mode text.svg,width=24,height=24] xref:/tools/Wstaw_tekst.adoc[Wstaw tekst] i wpisz wzór w składni LaTeX.
+
+[NOTE]
+====
+
+Aby utworzyć tekst zawierający zarówno formułę LaTeX, jak i zwykły tekst, możesz wpisać tekst wewnątrz polecenia \text{}, gdy opcja
+_Formuła LaTeX_ jest aktywna.
+
+====
+
+[EXAMPLE]
+====
+
+`++\text{Długość przekątnej wynosi  } \sqrt{ 2 }++`
+
+====
+
+[NOTE]
+====
+
+Możesz także użyć polecenia xref:/commands/FormułaTekstowa.adoc[FormułaTekstowa], aby wstawić wzór ujęty w cudzysłów.
+
+====
+
+[EXAMPLE]
+====
+
+`++FormułaTekstowa["\text{Długość przekątnej wynosi } \sqrt{ 2 }"]++`
+
+====
+
+[NOTE]
+====
+
+Możesz łatwo uzyskać tekst LaTeX zawierający wartość obiektu z 
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] xref:/Widok_Algebry.adoc[Widoku Algebry] 
+przeciągając ten obiekt z image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _Widoku Algebry_
+i upuszczając go w wybranym miejscu image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Widok_Grafiki.adoc[Widoku Grafiki] .
+
+====
+
+Składnię często używanych symboli matematycznych można znaleźć w menu rozwijanym obok pola wyboru LaTeX (w wersji GeoGebra Desktop) 
+lub w menu Zaawansowane pod polem wprowadzania (w wersjach GeoGebra Web i na tablety). 
+Spowoduje to wstawienie odpowiedniego kodu LaTeX do pola tekstowego i ustawienie kursora pomiędzy nawiasami klamrowymi. 
+Menu rozwijane Symbole zawiera listę najczęściej używanych symboli matematycznych, liter greckich i operatorów. 
+Aby utworzyć dynamiczny tekst wewnątrz formuły, należy wybrać odpowiednie obiekty z listy rozwijanej image:16px-GeoGebra_48.png[GeoGebra
+48.png,width=16,height=16] Obiekty, możesz wstawić wtedy ich nazwy oraz odpowiednią składnię do tekstu mieszanego.
+
+Niektóre ważne polecenia LaTeX są wyjaśnione w poniższej tabeli. Po więcej informacji zajrzyj do dowolnej dokumentacji LaTeX.
+
+[cols=",",options="header",]
+|===
+|Wpis LaTeX |Rezultat
+|a \cdot b |stem:[a \cdot b]
+|\frac{a}{b} |stem:[\frac{a}{b}]
+|\sqrt{x} |stem:[\sqrt{x}]
+|\sqrt[n]{x} |stem:[++\sqrt[n]{x}++]
+|\vec{v} |stem:[\vec{v}]
+|\overline{AB} |stem:[\overline{AB}]
+|x^{2} |stem:[x^{2}]
+|a_{1} |stem:[a_{1}]
+|\sin\alpha + \cos\beta |stem:[\sin\alpha + \cos\beta]
+|\int_{a}^{b} x dx |stem:[\int_{a}^{b} x dx]
+|\sum_{i=1}^{n} i^2 |stem:[\sum_{i=1}^{n} i^2]
+|===
+
+Możliwe jest również wpisywanie estetycznie sformatowanych wzorów chemicznych, używając składni takich jak: 
+`++\ce, \mathchoice, \mskip, \lower, \raise, \mkern++`.
+
+Proszę zapoznać się z tym https://mhchem.github.io/MathJax-mhchem/[dokumentem (ang.)], aby uzyskać więcej informacji.
+
+== Zobacz także
+
+* https://gking.harvard.edu/files/lshort2.pdf[The Not So Short Introduction To LaTeX (Niezbyt krótkie wprowadzenie do LaTeX-a)]
+* https://www.tug.org[TeX user group (Grupa użytkowników TeX)]
