@@ -1,0 +1,28 @@
+= Polecenie RegresjaLogistyczna
+:page-en: commands/FitLogistic
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RegresjaLogistyczna( <Lista Punktów> )::
+  Oblicza krzywą regresji w postaci: stem:[\frac{a}{1+b e^{-kx}}].
+
+
+[EXAMPLE]
+====
+
+`++RegresjaLogistyczna({(-6, 2), (0, 2), (3, 4), (3.4, 8)})++` daje w wyniku stem:[ \frac{1.98}{1 - 0.03 e^{1x}}].
+
+====
+
+[NOTE]
+====
+
+* Punkty początkowy i końcowy powinny być dość blisko dopasowanej krzywej. Lista powinna zawierać co najmniej 3 punkty, a najlepiej więcej.
+* Zobacz także polecenia xref:/commands/Regresja.adoc[Regresja], 
+xref:/commands/RegresjaWykładnicza.adoc[RegresjaWykładnicza], xref:/commands/RegresjaWzrostuWykładniczego.adoc[RegresjaWzrostuWykładniczego],
+xref:/commands/RegresjaY.adoc[RegresjaY], xref:/commands/RegresjaX.adoc[RegresjaX], xref:/commands/RegresjaLogarytmiczna.adoc[RegresjaLogarytmiczna],
+xref:/commands/RegresjaWielomianowa.adoc[RegresjaWielomianowa], xref:/commands/RegresjaPotęgowa.adoc[RegresjaPotęgowa]
+i xref:/commands/RegresjaSinusoidalna.adoc[RegresjaSinusoidalna].
+* Jeśli pracujesz z bardzo dużymi lub bardzo małymi liczbami, warto je znormalizować dla uzyskania dokładniejszych wyników — zobacz polecenie
+xref:/commands/Normalizuj.adoc[Normalizuj].
+
+====
