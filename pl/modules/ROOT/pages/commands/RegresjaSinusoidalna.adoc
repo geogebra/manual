@@ -1,0 +1,25 @@
+= Polecenie RegresjaSinusoidalna
+:page-en: commands/FitSin
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RegresjaSinusoidalna( <List of Points> )::
+  Oblicza krzywą regresji w postaci: _a + b sin (c x + d)_.
+
+[EXAMPLE]
+====
+
+`++RegresjaSinusoidalna({(1, 1), (2, 2), (3, 1), (4, 0), (5, 1), (6, 2)})++` daje w wyniku _f(x) = 1 + 1 sin (1.57 x - 1.57)_.
+
+====
+
+[NOTE]
+====
+
+* Lista punktów powinna zawierać co najmniej cztery punkty, najlepiej więcej. Lista powinna obejmować co najmniej dwa punkty ekstremum. 
+Pierwsze dwa lokalne ekstrema nie powinny znacząco odbiegać od wartości ekstremalnych całej krzywej.
+* Zobacz także polecenia xref:/commands/RegresjaWykładnicza.adoc[RegresjaWykładnicza], xref:/commands/RegresjaLogarytmiczna.adoc[RegresjaLogarytmiczna],
+xref:/commands/RegresjaWielomianowa.adoc[RegresjaWielomianowa] i xref:/commands/RegresjaPotęgowa.adoc[RegresjaPotęgowa].
+* Jeśli pracujesz z bardzo dużymi lub bardzo małymi liczbami, warto je znormalizować dla uzyskania dokładniejszych 
+wyników — zobacz polecenie xref:/commands/Normalizuj.adoc[Normalizuj].
+
+====
