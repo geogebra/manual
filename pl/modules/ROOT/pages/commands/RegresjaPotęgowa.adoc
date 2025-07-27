@@ -1,0 +1,36 @@
+= Polecenie RegresjaPotęgowa
+:page-en: commands/FitPow
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RegresjaPotęgowa( <Lista Punktów> )::
+  Oblicza krzywą regresji w postaci: _a x^b^_.
+
+[EXAMPLE]
+====
+
+`++RegresjaPotęgowa({(1, 1), (3, 2), (7, 4)})++` tworzy krzywą regresji _f(x) = 0.97 x^0.71^_.
+
+====
+
+== Specyficzna składnia CAS Syntax
+
+RegresjaPotęgowa( <Lista Punktów> )::
+  Oblicza krzywą regresji w postaci: _a x^b^_.
+
+[EXAMPLE]
+====
+
+`++RegresjaPotęgowa({(1, 1), (3, 2), (7, 4)})++` daje w wyniku _0.97 x^0.71^_.
+
+====
+
+[NOTE]
+====
+
+* Wszystkie punkty muszą znajdować się w pierwszej ćwiartce układu współrzędnych.
+*  Zobacz także polecenia xref:/commands/RegresjaWykładnicza.adoc[RegresjaWykładnicza], xref:/commands/RegresjaLogarytmiczna.adoc[RegresjaLogarytmiczna],
+xref:/commands/RegresjaWielomianowa.adoc[RegresjaWielomianowa] i xref:/commands/RegresjaSinusoidalna.adoc[RegresjaSinusoidalna].
+* Jeśli pracujesz z bardzo dużymi lub bardzo małymi liczbami, warto je znormalizować dla uzyskania dokładniejszych 
+wyników — zobacz polecenie xref:/commands/Normalizuj.adoc[Normalizuj].
+
+====
