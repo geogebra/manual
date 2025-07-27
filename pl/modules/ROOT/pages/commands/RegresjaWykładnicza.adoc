@@ -1,0 +1,27 @@
+= Polecenie RegresjaWykładnicza
+:page-en: commands/FitExp
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RegresjaWykładnicza( <Lista Punktów> )::
+  Oblicza wykładniczą krzywą regresji w postaci _aℯ^bx^_.
+
+[EXAMPLE]
+====
+
+`++RegresjaWykładnicza({(0, 1), (2, 3), (4, 3), (6, 4)})++` daje w wyniku _1.31ℯ^0.21x^_.
+
+====
+
+[NOTE]
+====
+
+* Jeśli chcesz uzyskać wynik w postaci stem:[ a b ^ x ] użyj polecenia xref:/commands/RegresjaWzrostuWykładniczego.adoc[RegresjaWzrostuWykładniczego].
+* Można także przeprowadzić bezpośrednie dopasowanie metodą najmniejszych kwadratów za pomocą polecenia `++Regresja(lista, a*exp(b*x))++`
+* Liczbę Eulera ℯ można wprowadzić za pomocą skrótu klwiszowego [.kcode]#ALT# + [.kcode]#e#.
+* Zobacz także polecenia xref:/commands/Regresja.adoc[Regresja], 
+xref:/commands/RegresjaWzrostuWykładniczego.adoc[RegresjaWzrostuWykładniczego],
+xref:/commands/RegresjaY.adoc[RegresjaY], xref:/commands/RegresjaX.adoc[RegresjaX], xref:/commands/RegresjaLogarytmiczna.adoc[RegresjaLogarytmiczna],
+xref:/commands/RegresjaLogistyczna.adoc[RegresjaLogistyczna], xref:/commands/RegresjaWielomianowa.adoc[RegresjaWielomianowa], xref:/commands/RegresjaPotęgowa.adoc[RegresjaPotęgowa]
+and xref:/commands/RegresjaSinusoidalna.adoc[RegresjaSinusoidalna].
+
+====
