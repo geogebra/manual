@@ -1,0 +1,42 @@
+= Polecenie RegresjaWielomianowa
+:page-en: commands/FitPoly
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RegresjaWielomianowa( <Lista Punktów>, <Stopień Wielomianu> )::
+  Oblicza model regresji wielomianowej o zadanym _stopniu_, który dopasowuje się do podanych _punktów_.
+
+[EXAMPLE]
+====
+
+`++RegresjaWielomianowa({(-1, -1), (0, 1), (1, 1), (2, 5)}, 3)++` daje w wyniku _f(x) = x^3^ - 1 x^2^ + 1_.
+
+====
+
+RegresjaWielomianowa( <Funkcja Odręczna>, <Stopień Wielomianu> )::
+  Oblicza model regresji wielomianowej o zadanym _stopniu_, który dopasowuje się 
+do funkcji narysowanej za pomocą narzędzia xref:/tools/Kształt_Odręczny.adoc[Kształt Odręczny].
+
+[NOTE]
+====
+
+* Aby uzyskać wielomian stopnia _n_ , lista musi zawierać co najmniej _n_ + 1 punktów.
+* Zobacz także xref:/commands/RegresjaWykładnicza.adoc[RegresjaWykładnicza], xref:/commands/RegresjaLogarytmiczna.adoc[RegresjaLogarytmiczna],
+xref:/commands/RegresjaPotęgowa.adoc[RegresjaPotęgowa] i xref:/commands/RegresjaSinusoidalna.adoc[RegresjaSinusoidalna].
+* Jeśli pracujesz z bardzo dużymi lub bardzo małymi liczbami, warto je znormalizować dla uzyskania dokładniejszych wyników 
+  — zobacz polecenie xref:/commands/Normalizuj.adoc[Normalizuj].
+
+====
+
+== Specyficzna składnia CAS
+
+RegresjaWielomianowa( <Lista Punktów>, <Stopień Wielomianu> )::
+  Oblicza model regresji wielomianowej o zadanym _stopniu_, który dopasowuje się do podanych _punktów_.
+
+[EXAMPLE]
+====
+
+`++RegresjaWielomianowa({(-1, -1), (0, 1), (1, 1), (2, 5)}, 3)++` daje w wyniku _x^3^ - x^2^ + 1_.
+
+====
+
+
