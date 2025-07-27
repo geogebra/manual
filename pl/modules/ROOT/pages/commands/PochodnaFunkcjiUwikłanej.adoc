@@ -1,0 +1,42 @@
+= Polecenie PochodnaFunkcjiUwikłanej
+:page-en: commands/ImplicitDerivative
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+PochodnaFunkcjiUwikłanej( <f(x, y)> )::
+  Gives the https://pl.wikipedia.org/wiki/Funkcja_uwik%C5%82ana[implicit derivative] of the given expression.
+
+[EXAMPLE]
+====
+
+`++ImplicitDerivative(x + 2 y)++` yields _-0.5_.
+
+====
+
+== CAS Syntax
+
+PochodnaFunkcjiUwikłanej( <f(x, y)> )::
+  Zwraca https://pl.wikipedia.org/wiki/Funkcja_uwik%C5%82ana[pochodną funkcji uwikłanej] opisanej wyrażeniem f(x,y).
+
+[EXAMPLE]
+====
+
+`++PochodnaFunkcjiUwikłanej(x + 2 y)++` daje w wyniku _-stem:[\frac{1}{2}]_.
+
+====
+
+PochodnaFunkcjiUwikłanej( <Wyrażenie>, <Zmienna Zależna>, <Zmienna Niezależna> )::
+  Zwraca https://pl.wikipedia.org/wiki/Funkcja_uwik%C5%82ana[pochodną funkcji uwikłanej] opisanej wyrażeniem.
+
+[EXAMPLE]
+====
+
+`++PochodnaFunkcjiUwikłanej(x^2 + y^2, y, x)++` daje w wyniku _-stem:[\frac{x}{y}]_.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/Pochodna.adoc[Pochodna].
+
+====
