@@ -1,0 +1,46 @@
+= Polecenie Wielokąt
+:page-en: commands/Polygon
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Wielokąt( <Punkt>, ..., <Punkt> )::
+  Zwraca wielokąt zdefiniowany przez podane punkty.
+
+[EXAMPLE]
+====
+
+`++Wielokąt((1, 1), (3, 0), (3, 2), (0, 4))++` daje w wyniku czworokąt.
+
+====
+
+Wielokąt( <Punkt>, <Punkt>, <Liczba wierzchołków> )::
+  Tworzy wielokąt foremny o daje _liczbie wierzchołków_.
+
+[EXAMPLE]
+====
+
+`++Wielokąt((1, 1), (4, 1), 6)++` daje w wyniku sześciokąt.
+
+====
+
+Wielokąt( <Lista Punktów> )::
+   Zwraca wielokąt zdefiniowany przez punkty z listy.
+
+[EXAMPLE]
+====
+
+`++Wielokąt({(0, 0), (2, 1), (1, 3)})++` daje w wyniku trójkąt.
+
+====
+
+Wielokąt( <Punkt>, <Punkt>, <Liczba wierzchołków>, <Kierunek> )::
+  Tworzy wielokąt foremny o daje _liczbie wierzchołków_, skierowany zgodnie z podanym _kierunkiem_ (np. płaszczyzną, do której 
+  jeżeli to możliwe, wielokąt będzie równoległy).
+
+[NOTE]
+====
+
+Zobacz także narzędzia image:24px-Mode_polygon.svg.png[Mode polygon.svg,width=24,height=24] xref:/tools/Wielokąt.adoc[Wielokąt] i
+image:24px-Mode_regularpolygon.svg.png[Mode regularpolygon.svg,width=24,height=24]
+xref:/tools/Wielokąt_foremny.adoc[Wielokąt foremny].
+
+====
