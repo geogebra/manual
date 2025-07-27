@@ -1,0 +1,37 @@
+= Polecenie RegresjaLogarytmiczna
+:page-en: commands/FitLog
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RegresjaLogarytmiczna( <Lista Punktów> )::
+  Oblicza logarytmiczną krzywą regresji.
+
+[EXAMPLE]
+====
+
+`++RegresjaLogarytmiczna({(ℯ, 1), (ℯ^2, 4)})++` daje w wyniku _-2 + 3 ln(x)_.
+
+====
+
+== Specyficzna składnia CAS
+
+RegresjaLogarytmiczna( <Lista Punktów> )::
+  Oblicza logarytmiczną krzywą regresji.
+
+[EXAMPLE]
+====
+
+`++RegresjaLogarytmiczna({(ℯ, 1), (ℯ^2, 4)})++` daje w wyniku _3 ln(x) - 2_.
+
+====
+
+[NOTE]
+====
+
+* Liczbę Eulera ℯ można wprowadzić za pomocą skrótu klawiszowego [.kcode]#ALT# + [.kcode]#e#.
+* Zobacz także polecenia 
+xref:/commands/RegresjaWykładnicza.adoc[RegresjaWykładnicza], xref:/commands/RegresjaWielomianowa.adoc[RegresjaWielomianowa], xref:/commands/RegresjaPotęgowa.adoc[RegresjaPotęgowa]
+i xref:/commands/RegresjaSinusoidalna.adoc[RegresjaSinusoidalna].
+* Jeśli pracujesz z bardzo dużymi lub bardzo małymi liczbami, warto je znormalizować dla uzyskania dokładniejszych wyników 
+— zobacz polecenie xref:/commands/Normalizuj.adoc[Normalizuj].
+
+====
