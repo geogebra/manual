@@ -1,0 +1,44 @@
+= Polecenie Łamana
+:page-en: commands/Polyline
+:page-revisar:
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Łamana( <Lista Punktów> )::
+  Tworzy łamaną otwartą (czyli połączony ciąg odcinków), której początek znajduje się w pierwszym 
+punkcie listy, a koniec w ostatnim.
+
+[NOTE]
+====
+
+Długość łamanej wyświetlana jest w image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/Widok_Algebra.adoc[Widoku Algebry].
+
+====
+
+Łamana( <Punkt>, ..., <Punkt> )::
+  Tworzy łamaną otwartą (czyli połączony ciąg odcinków), której początek to pierwszy wprowadzony punkt, 
+a koniec – ostatni.
+
+[NOTE]
+====
+
+* Długość łamanej wyświetlana jest w image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/Widok_Algebra.adoc[Widoku Algebry].
+* Możliwe jest również utworzenie łamanej nieciągłej
+
+====
+[EXAMPLE]
+====
+
+`++Łamana((1, 3), (4, 3), (?,?), (6, 2), (4, -2), (2, -2))++` daje w wyniku wartość _9.47_ w
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _Widoku Algebry_, i odpowiadającą
+jej łamaną w image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Widoku Grafiki_.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/Wielokąt.adoc[Wielokąt].
+
+====
