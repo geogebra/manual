@@ -1,0 +1,24 @@
+= Polecenie RegresjaWzrostuWykładniczego
+:page-en: commands/FitGrowth
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RegresjaWzrostuWykładniczego( <Lista Punktów> )::
+  Dopasowuje do punktów z listy funkcję w postaci stem:[ a b ^ x ]. 
+  (Very similar to xref:/commands/RegresjaWykładnicza.adoc[RegresjaWykładnicza]( <Lista Punktów> )], lecz w nieco innej formie).
+
+[EXAMPLE]
+====
+
+`++RegresjaWzrostuWykładniczego({(0, 1), (2, 3), (4, 3), (6, 4)})++` daje w wyniku _1.31_ stem:[ \cdot ] _1.23^x^_.
+
+====
+
+[NOTE]
+====
+
+* Można także przeprowadzić bezpośrednie dopasowanie metodą najmniejszych kwadratów za pomocą `++Regresja(lista, a*b^x)++`
+* Zobacz także polecenia xref:/commands/Regresja.adoc[Regresja], xref:/commands/RegresjaWykładnicza.adoc[RegresjaWykładnicza], 
+xref:/commands/RegresjaY.adoc[RegresjaY], xref:/commands/RegresjaX.adoc[RegresjaX], xref:/commands/RegresjaLogarytmiczna.adoc[RegresjaLogarytmiczna],
+xref:/commands/RegresjaLogistyczna.adoc[RegresjaLogistyczna], xref:/commands/RegresjaWielomianowa.adoc[RegresjaWielomianowa], xref:/commands/RegresjaPotęgowa.adoc[RegresjaPotęgowa]
+i xref:/commands/RegresjaSinusoidalna.adoc[RegresjaSinusoidalna].
+====
