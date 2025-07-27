@@ -1,0 +1,49 @@
+= Polecenie Licznik
+:page-en: commands/Numerator
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Licznik( <Funkcja> )::
+  Zwraca licznik danej funkcji.
+
+[EXAMPLE]
+====
+
+`++Licznik((3x² + 1) / (2x - 1))++` daje w wyniku _f(x) = 3x² + 1_.
+
+====
+
+Licznik( <Liczba> )::
+  Dla liczby wymiernej zwraca jej (uproszczony) licznik. Używana jest metoda numeryczna, dlatego polecenie działa 
+tylko dla liczb o małym mianowniku. W przypadku liczby niewymiernej zwracany jest licznik jej rozwinięcia 
+w xref:/commands/UłamekŁańcuchowy.adoc[ułamek łańcuchowy].
+
+[EXAMPLE]
+====
+
+* `++Licznik(5 / 3)++` daje w wyniku 5.
+* `++Licznik(10 / 6)++` daje w wyniku 5.
+* `++Licznik(15 / 3)++` daje w wyniku 5.
+
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenia xref:/commands/Mianownik.adoc[Mianownik] i xref:/commands/UłamekJakoTekst.adoc[UłamekJakoTekst].
+
+====
+
+== Specyficzna składnia CAS
+
+Licznik( <Wyrażenie> )::
+  Zwraca licznik liczby wymiernej lub wyrażenia.
+
+[EXAMPLE]
+====
+
+* `++Licznik(2/3 + 1/15)++` daje w wyniku _11_.
+* Jeżeli zmienne _a, b_ i _c_ nie zostały wcześniej zdefiniowane w GeoGebrze, polecenie `++Licznik(a/b)++` daje w wyniku _a_, a
+`++Licznik(Uprość(a + b/c))++` daje w wyniku _a c + b_
+
+====
