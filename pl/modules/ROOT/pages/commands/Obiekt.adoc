@@ -1,0 +1,28 @@
+= Polecenie Obiekt
+:page-en: commands/Object
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+*To polecenie jest przestarzałe – jego użycie w nowych plikach nie jest wspierane.*
+
+Obiekt( <Nazwa Obiektu Jako Tekst> )::
+  Zwraca obiekt o podanej nazwie. Wynikiem zawsze jest obiekt zależny.
+
+[EXAMPLE]
+====
+
+Jeżeli istnieją punkty _A1_, _A2_, ... , _A20_ oraz suwak _n = 2_, polecenie `++Obiekt("A" + n)++` tworzy kopię punktu
+_A2_.
+
+====
+
+[NOTE]
+====
+
+* Polecenie *Obiekt* działa odwrotnie niż polecenie xref:/commands/Nazwa.adoc[Nazwa].
+
+* Polecenia Obiekt nie można używać przy tworzeniu xref:/tools/Narzędzia_niestandardowe.adoc[narzędzi niestandardowych].
+
+* Upewnij się, że obiekty, do których się odwołujesz, znajdują się *wcześniej* w 
+  image:16px-Menu_view_construction_protocol.svg.png[Menu view construction protocol.svg,width=16,height=16] xref:/Protokół_Konstrukcji.adoc[Protokole konstrukcji].
+
+====
