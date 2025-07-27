@@ -1,0 +1,35 @@
+= Polecenia RegresjaX
+:page-en: commands/FitLineX
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RegresjaX( <Lista Punktów> )::
+  Oblicza linię regresji typu _x_ względem _y_ dla podanej listy punktów.
+  
+[EXAMPLE]
+====
+
+`++RegresjaX({(-1, 3), (2, 1), (3, 4), (5, 3), (6, 5)})++` daje w wyniku _1.1x - 0.1_.
+
+====
+
+== Specyficzna składnia CAS
+
+RegresjaX( <Lista Punktów> )::
+  Oblicza linię regresji typu _x_ względem _y_ dla podanej listy punktów.
+
+[EXAMPLE]
+====
+
+`++RegresjaX({(-1, 3), (2, 1), (3, 4), (5, 3), (6, 5)})++` daje w wyniku _1.1x - 0.1_.
+
+====
+
+[NOTE]
+====
+
+* Zobacz także narzędzie image:24px-Mode_fitline.svg.png[Mode fitline.svg,width=24,height=24] xref:/tools/Linia_trendu.adoc[Linia
+trendu] i polecenie xref:/commands/RegresjaY.adoc[RegresjaY]
+* Jeśli pracujesz z bardzo dużymi lub bardzo małymi liczbami, warto je znormalizować dla uzyskania dokładniejszych wyników — zobacz polecenie
+xref:/commands/Normalizuj.adoc[Normalizuj].
+
+====
