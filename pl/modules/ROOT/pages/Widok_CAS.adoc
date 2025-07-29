@@ -1,0 +1,227 @@
+= Widok CAS
+:page-en: CAS_View
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+== [#CAS_View_User_Interface]#image:24px-Menu_view_cas.svg.png[Menu view cas.svg,width=24,height=24] Interfejs użytkownika Widoku CAS#
+
+Domyślnie, image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Widok CAS_ jest otwierany obok
+image:16px-Menu_view_graphics.svg.png[Graphics View,title="Graphics View",width=16,height=16]
+_xref:/Widok_Grafiki.adoc[Widoku Grafiki]_. W zależności od tego, który z tych dwóch _Widoków_ jest aktywny, u góry okna GeoGebry wyświetlany jest
+xref:/tools/Narzędzia_Widoku_CAS.adoc[_pasek narzędzi Widoku CAS_] lub xref:/tools/Narzędzia_Widoku_Grafiki.adoc[_pasek narzędzi Widoku Grafiki_], z przyciskami
+image:16px-Menu-edit-undo.svg.png[Menu-edit-undo.svg,width=16,height=16]image:16px-Menu-edit-redo.svg.png[Menu-edit-redo.svg,width=16,height=16]
+_Cofnij / Ponów_ w prawym górnym rogu.
+
+[width="100%",cols="100%",]
+|===
+a|
+image:314px-CAS-View.png[CAS-View.png,width=314,height=220]
+
+Widok CAS
+
+|===
+
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Widok CAS_ jest częścią układu widoków o
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Widoki.adoc[_tej samej nazwie_],
+chociaż możesz xref:/GeoGebra_5_0_porównanie_wersji_desktopowej_webowej_i_na_tablet.adoc[zmienić układ] 
+interfejsu użytkownika GeoGebry zgodnie ze swoimi potrzebami.
+
+== [#Tworzenie_obiektów_matematycznych]#Tworzenie obiektów matematycznych#
+
+=== Wprowadzanie bezpośrednie
+
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Widok CAS_ umożliwia korzystanie z CAS GeoGebry
+(Computer Algebra System - systemu algebry komputerowej) do obliczeń symbolicznych. Składa się z komórek zawierających _pole wprowadzania_ u góry 
+i wyświetlanie wyników na dole. Można korzystać z _pole wprowadzania Widoku CAS_ podobnie jak z normalnego _xref:/Pole_Wprowadzania.adoc[pola wprowadzania]_,
+z następującymi różnicami:
+
+* Można używać zmiennych, którym nie przypisano żadnej wartości.
+* `++=++` używane jest do równań, a `++:=++` do przypisania wartości. Oznacza to, że wpisanie `++a=2++` nie przypisze wartości
+2 do _a_. Szczegóły w xref:/.adoc[sekcji o przypisaniach wartości].
+* Mnożenie musi być oznaczone jawnie. Podczas gdy w _xref:/Pole_Wprowadzania.adoc[polu wprowadzania]_ można używać zarówno
+`++a(b+c)++`, jak i `++a*(b+c)++`, w image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] _Widoku CAS_ poprawna jest tylko postać `++a*(b+c)++`.
+
+=== Skróty klawiszowe dla wprowadzania bezpośredniego
+
+W image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Widoku CAS_ GeoGebry Desktop,
+poniższe skróty klawiaturowe pomagają w ocenie lub sprawdzeniu wprowadzonego wyrażenia.
+
+[NOTE]
+====
+
+Zamiast skrótów klawiszowych możesz również użyć odpowiednich xref:/tools/Narzędzia_Widoku_CAS.adoc[_narzędzi_] z
+xref:/.adoc[_paska narzędzi Widoku CAS_].
+
+====
+
+* [.kcode]#Enter#: Oblicza wprowadzone wyrażenie (symbolicznie lub numerycznie).
+
+
+[NOTE]
+====
+
+* Przypisania są zawsze wykonywane, np. `++a := 5++`
+* Można pominąć wyświetlanie wyniku, kończąc wyrażenie średnikiem, np.  `++a := 5;++`
+
+.
+
+====
+
+=== Przypisywanie zmiennych i połączenie z innymi widokami
+
+Można używać składni `++:=++` do przypisywania wartości, np. `++b := 5++`, `++a(n) := 2n + 3++`.
+
+* _Zwalnianie nazwy zmiennej_: Użyj `++Usuń(b)++`, aby zwolnić nazwę zmiennej.
+* _Zmiana definicji zmiennej lub funkcji_: Można przedefiniować zmienną lub funkcję, ale należy to zrobić w *tej samej komórce* 
+– inaczej zostanie potraktowana jako nowa zmienna i automatycznie przemianowana.
+
+Zmiennie i funkcje, jeśli to możliwe, są współdzielone między image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] _Widokiem CAS_ a innymi _Widokami_. Na przykład:
+
+* Jeśli zdefiniowałeś `++b:=5++` w image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Widoku CAS_,
+możesz użyć _b_ w innych _Widokach_ GeoGebry.
+* Jeśli zdefiniowałeś funkcję `++f(x)=x^2++` w innym _Widocku_, możesz jej używać również w
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Widoku CAS_.
+
+[NOTE]
+====
+
+Wynikiem zawsze będzie wyrażenie *po* `++:=++`, np. jeśli wpiszesz `++b:=5++` wynikiem będzie _5_.
+Dla jasności zostanie również wyświetlone _b := 5_.
+
+====
+
+=== Równania
+
+* Możesz pisać równania, używając zwykłego znaku _równości_, np. `++3x + 5 = 7++`.
+* _Działania arytmetyczne_: Można wykonywać działania arytmetyczne na równaniach, co jest przydatne przy ręcznym rozwiązywaniu równań.
++
+[EXAMPLE]
+====
+
+`++(3x + 5 = 7) - 5++` odejmuje 5 od obu stron równania.
+
+====
+
+* _Wyodrębnianie stron_: Można wyodrębnić lewą lub prawą stronę równania za pomocą poleceń
+`++LewaStrona()++` i `++PrawaStrona[]++`.
++
+[EXAMPLE]
+====
+
+`++LewaStrona(3x + 5 = 7)++` zwraca _3 x + 5_, a `++PrawaStrona[3x + 5 = 7]++` zwraca _7_
+
+====
+
+=== Odwołania do wierszy
+
+Można odwoływać się do innych wierszy image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Widoku CAS_ 
+na dwa sposoby:
+
+* *Statyczne odwołania do wierszy*: kopiują wynik i *nie są aktualizowane*, jeśli dany wiersz zostanie później zmieniony
+** `++#++`: Kopiuje poprzedni wynik
+** `++#5++`: Kopiuje wynik z wiersza 5
+* *Dynamiczne odwołania do wierszy*: wstawiają odniesienie do innego wiersza zamiast samego wyniku i *są 
+aktualizowane* przy zmianie wiersza, do którego się _odwołujemy_.
+** `++$++`: Wstawia odniesienie do poprzedniego wyniku.
+** `++$5++`: Wstawia odniesienie do wyniku z wiersza 5.
+
+== [#Polecenia_Widoku_CAS]#Polecenia Widoku CAS#
+
+GeoGebra oferuje również szeroką gamę _xref:/commands/Polecenia_Specyficzne_dla_Widoku_CAS.adoc[poleceń Widoku CAS]_ , które można używać do tworzenia obiektów w
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _tym Widoku_. Po prostu zacznij wpisywać nazwę 
+ _polecenia_ w _polu wprowadzania_, a GeoGebra zaproponuje listę pasujących _poleceń_.
+
+[NOTE]
+====
+
+Pełną listę _poleceń_ znajdziesz w sekcji xref:/commands/Polecenia_Specyficzne_dla_Widoku_CAS.adoc[Polecenia Widoku CAS].
+
+====
+
+[NOTE]
+====
+
+Od wersji GeoGebry 5.0 image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Widok CAS_
+obsługuje dokładne wersje xref:/commands/Polecenia_Geometryczne_Obsługiwane_w_Widoku_CAS.adoc[niektórych _poleceń geometrycznych_]
+
+====
+
+.
+
+== [#Pasek_narzędzi_Widoku_CAS]#Pasek narzędzi Widoku CAS#
+
+xref:/tools/Narzędzia_Widoku_CAS.adoc[_Pasek narzędzi Widoku CAS_] zawiera _xref:/tools/Narzędzia_Widoku_CAS.adoc[zestaw narzędzi]_ umożliwiających
+wykonywanie obliczeń symbolicznych i numerycznych. Wystarczy wprowadzić dane, a następnie wybrać odpowiednie _narzędzie_, aby je zastosować.
+
+xref:/tools/CAS_Tools.adoc[image:315px-Toolbar-CAS.png[Toolbar-CAS.png,width=315,height=32]]
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Uwaga:* W GeoGebrze Classic 5 można zaznaczyć część tekstu 
+wejściowego, aby zastosować operację tylko do zaznaczonego fragmentu. Funkcja ta nie jest dostępna w Classic 6.
+
+====
+
+[NOTE]
+====
+
+Pełną listę _narzędzi_ znajdziesz w sekcji _xref:/tools/Narzędzia_Widoku_CAS.adoc[Narzędzia Widoku CAS]_.
+
+====
+
+== [#Menu_kontekstowe]#Menu kontekstowe#
+
+=== Menu kontekstowe nagłówka wiersza
+
+W GeoGebrze Desktop kliknij prawym przyciskiem myszy (MacOS: [.kcode]#Ctrl#-kliknięcie) nagłówek wiersza, aby wyświetlić 
+_menu kontekstowe_ z opcjami:
+
+* *Wstaw powyżej*: Wstawia pusty wiersz powyżej bieżącego
+* *Wstaw poniżej*: Wstawia pusty wiersz poniżej bieżącego.
+* *Usuń wiersz*: Usuwa zawartość bieżącego wiersza.
+* *Tekst*: Przełącza między bieżącym wynikiem a tekstem wyświetlającym wynik, co umożliwia dodanie komentarza.
+* *Kopiuj jako LaTeX* (GeoGebra Desktop): opiuje zawartość bieżącego wiersza do schowka, umożliwiając wklejenie np. do obiektu xref:/Teksty.adoc[tekstowego].
+
+[NOTE]
+====
+
+TAby skopiować więcej niż jeden wiersz jako LaTeX, zaznacz wiersze za pomocą [.kcode]#Ctrl#-kliknięcie (MacOS:
+[.kcode]#Cmd#-kliknięcie), następnie kliknij prawym przyciskiem (MacOS: [.kcode]#Ctrl#-kliknięcie) nagłówek wiersza i wybierz _Kopiuj jako LaTeX_.
+
+====
+
+=== Menu kontekstowe komórki
+
+IW GeoGebrze Desktop kliknij prawym przyciskiem myszy (MacOS: [.kcode]#Ctrl#-kliknięcie) komórkę Widoku CAS, aby wyświetlić menu kontekstowe z opcjami:
+
+* *Kopiuj*: Kopiuje zawartość komórki do schowka. Możesz później kliknąć prawym przyciskiem w nową komórkę, aby wykorzystać opcję *Wklej*.
+* *Kopiuj jako LaTeX*: Kopiuje zawartość komórki w formacie LaTeX do schowka, do wklejenia np. w obiekcie
+xref:/Tekty.adoc[tekstowym] lub w edytorze LaTeX.
+* *Kopiuj jako wzór LibreOffice*: Kopiuje zawartość komórki w formacie wzoru LibreOffice do schowka, który
+można wkleić w edytorze tekstu tego pakietu.
+* *kopiuj jako Obrazek*: Kopiuje zawartość komórki jako  
+xref:/tools/Obraz.adoc[obraz] PNG do schowka, do wklejenia np. w dokumencie tekstowym.
+
+== [#Wyświetlanie_obiektów_matematycznych]#Wyświetlanie obiektów matematycznych#
+
+=== xref:/Pasek_Stylu.adoc[Pasek stylu Widoku CAS]
+
+xref:/Pasek_Stylu.adoc[_Pasek stylu Widoku CAS_] zawiera przyciski pozwalające na
+
+* image:16px-Stylingbar_text.svg.png[Stylingbar text.svg,width=16,height=16] zmianę stylu tekstu
+(image:16px-Stylingbar_text_bold.svg.png[Stylingbar text bold.svg,width=16,height=16] *pogrubienie*,
+image:16px-Stylingbar_text_italic.svg.png[Stylingbar text italic.svg,width=16,height=16] _kursywa_) i
+image:16px-Stylingbar_color_white.svg.png[Stylingbar color white.svg,width=16,height=16] kolor,
+* wyświetlenie image:16px-Cas-keyboard.png[Cas-keyboard.png,width=16,height=16]  wirtualnej klawiatury (GeoGebra Desktop)
+* wyświetlenie dodatkowych image:16px-Stylingbar_dots.svg.png[Stylingbar dots.svg,width=16,height=16]
+xref:/Widoki.adoc[_Widoków_] w oknie GeoGebry (GeoGebra Web i aplikacje tabletowe)
+
+=== Wyświetlanie obiektów CAS w image:20px-Menu_view_graphics.svg.png[Graphics View,title="Graphics View",width=20,height=20] _Widoku Grafiki_
+
+W image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Widoku CAS_, ikona po lewej stronie każdego wiersza pokazuje bieżący 
+stan widoczności obiektu zdefiniowanego w tym wierszu (jeśli to możliwe). Możesz kliknąć 
+image:16px-Mode_showhideobject.svg.png[Mode showhideobject.svg,width=16,height=16] _Pokaż / Ukryj obiekt_, aby zmienić jego widoczność w
+image:16px-Menu_view_graphics.svg.png[Graphics View,title="Graphics View",width=16,height=16]
+_xref:/Widok_Grafiki.adoc[Widoku Grafiki]_.
