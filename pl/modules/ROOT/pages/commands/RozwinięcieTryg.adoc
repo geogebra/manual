@@ -1,0 +1,75 @@
+= Polecenie RozwinięcieTryg
+:page-en: commands/TrigExpand
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RozwinięcieTryg( <Wyrażenie> )::
+  Rozwija funkcje trygonometryczne sumy zmiennych do funkcji trygonometrycznych jednej zmiennej lub rozwija iloczyny funkcji trygonometrycznych do wyrażeń liniowych.
+
+[EXAMPLE]
+====
+
+`++RozwinięcieTryg(tan(x + y))++` zwraca stem:[\frac{\frac{\sin(x)}{\cos(x)}+\frac{\sin(y)}{\cos(y)}}
+{1-\frac{\sin(x)}{\cos(x)} \cdot \frac{\sin(y)}{\cos(y)}} ].
+
+
+`++RozwinięcieTryg(sin(x)sin(x/3))++` zwraca stem:[\frac{1}{2} \; \cos \left( 2 \cdot \frac{x}{3} \right) -
+\frac{1}{2} \; \cos \left( 4 \cdot \frac{x}{3} \right) ].
+
+====
+
+RozwinięcieTryg( <Wyrażenie>, <Funkcja Dolecowa> )::
+  Rozwija funkcje trygonometryczne sumy zmiennych do wyrażeń zawierających (jeśli to możliwe) daną funkcję trygonometryczną jednej zmiennej.
+
+[EXAMPLE]
+====
+
+`++RozwinięcieTryg(tan(x + y), tan(x))++` zwraca stem:[\frac{-\tan(x) - \tan(y)}{\tan(x) \tan(y) - 1}].
+
+====
+
+== Specyficzna składnia CAS
+
+Składnie CAS mogą dawać różne wyniki, w zależności od wybranego trybu wyjściowego:
+
+[EXAMPLE]
+====
+
+`++RozwinięcieTryg(tan(x + y))++` w obliczeniach image:32px-Mode_evaluate.svg.png[Mode evaluate.svg,width=32,height=32] _symbolicznych_ 
+zwraca stem:[\frac{\frac{\sin(x)}{\cos(x)}+\frac{\sin(y)}{\cos(y)}} {1-\frac{\sin(x)}{\cos(x)} \cdot
+\frac{\sin(y)}{\cos(y)}} ], a w obliczeniach image:32px-Mode_numeric.svg.png[Mode numeric.svg,width=32,height=32] _numerycznych_ zwraca
+stem:[\frac{\sin(x) \cos(y) + \sin(y) \cos(x)}{- \sin(x) \sin(y) +\cos(x) \cos(y) }] .
+
+====
+
+Poniższe polecenia są dostępne tylko w image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/Widok_CAS.adoc[Widoku CAS]:
+
+RozwinięcieTryg( <Wyrażenie>, <Funkcja Dolecowa>, <Zmienna Docelowa> )::
+  Rozwija wyrażenia trygonometryczne do wyrażeń zawierających (jeśli to możliwe) tylko wskazaną funkcję trygonometryczną i zmienną.
+
+[EXAMPLE]
+====
+
+* `++RozwinięcieTryg(sin(x), sin(x), x/2)++` zwraca stem:[2\cos \left( \frac{x}{2} \right) \sin \left( \frac{x}{2} \right) ]
+* `++RozwinięcieTryg(sin(x)/(1+cos(x)), tan(x), x/2)++` zwraca stem:[\tan \left( \frac{x}{2} \right)].
+
+====
+
+RozwinięcieTryg( <Wyrażenie>, <Funkcja Dolecowa>, <Zmienna Docelowa>, <Zmienna Docelowa> )::
+  Rozwija wyrażenia trygonometryczne do wyrażeń zawierających (jeśli to możliwe) tylko wskazaną funkcję trygonometryczną oraz zmienne.
+
+
+[EXAMPLE]
+====
+
+`++RozwinięcieTryg(csc(x) - cot(x) + csc(y) - cot(y), tan(x), x/2, y/2)++` zwraca stem:[\tan \left( \frac{x}{2} \right) +\tan
+\left( \frac{y}{2} \right) ].
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenia xref:/commands/UprośćTryg.adoc[UprośćTryg] i xref:/commands/ZwińTryg.adoc[ZwińTryg].
+
+====
