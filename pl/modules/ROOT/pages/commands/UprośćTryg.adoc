@@ -1,0 +1,44 @@
+= Polecenie UprośćTryg
+:page-en: commands/TrigSimplify
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+UprośćTryg( <Wyrażenie> )::
+  Upraszcza podane wyrażenie trygonometryczne.
+
+[EXAMPLE]
+====
+
+* `++UprośćTryg(1 - sin(x)^2)++` zwraca _cos²(x)_.
+* `++UprośćTryg(sin(x)^2 - cos(x)^2 + 1)++` zwraca _2 sin²(x)_.
+
+====
+
+[NOTE]
+====
+
+To polecenie działa tylko dla zmiennych "x", "y" i "z" w image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/Widok_Algebry.adoc[Widoku Algebry].
+
+====
+
+== Specyficzna składnia CAS
+
+UprośćTryg( <Wyrażenie> )::
+  Upraszcza podane wyrażenie trygonometryczne.
+
+[EXAMPLE]
+====
+
+* `++UprośćTryg(1 - sin(x)^2)++` zwraca _cos²(x)_
+* `++UprośćTryg(sin(x)^2 - cos(x)^2 + 1)++` zwraca _2 sin²(x)_.
+
+====
+
+[NOTE]
+====
+
+* To polecenie działa dla wszystkich zmiennych w image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/Widok_CAS.adoc[Widoku CAS].
+* Zobacz także polecenia xref:/commands/RozwinięcieTryg.adoc[RozwinięcieTryg] i xref:/commands/ZwińTryg.adoc[ZwińTryg].
+
+====
