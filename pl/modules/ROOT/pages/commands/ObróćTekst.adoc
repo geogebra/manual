@@ -1,0 +1,25 @@
+= Polecenie ObróćTekst
+:page-en: commands/RotateText
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+ObróćTekst( <Text>, <Angle> )::
+  Tworzy nowy tekst w formacie xref:/LaTeX.adoc[LaTeX], obrócony o podany kąt.
+
+[NOTE]
+====
+
+* Tekst musi być ujęty w podwójne cudzysłowy `++"++`.
+* Tekst jest obracany względem lewego górnego rogu (znanego również jako Narożnik 4) ramki, która go zawiera, i umieszczany w początku układu współrzędnych.
+* omyślnie kąt podawany jest w radianach. Aby użyć stopni, należy dodać symbol stopnia `++°++`.
+
+====
+
+[EXAMPLE]
+====
+
+* `++ObróćTekst("a = 5", 45°)++`
+
+* Jeśli chcesz umieścić tekst "GeoGebra", obrócony o 42°, w punkcie (6,6), użyj polecenia `++Tekst(ObróćTekst("GeoGebra", 42°), (6, 6),true,true)++`
+
+====
+
