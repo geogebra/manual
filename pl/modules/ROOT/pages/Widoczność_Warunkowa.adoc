@@ -1,0 +1,54 @@
+= Widoczność warunkowa
+:page-en: Conditional_Visibility
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Oprócz prostego pokazywania lub ukrywania określonych obiektów, możesz również uzależnić ich widoczność od pewnego warunku. 
+Na przykład możesz chcieć, aby obiekt pojawił się na ekranie po zaznaczeniu pola wyboru umieszczonego w
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Widok_Grafiki.adoc[Widoku Grafiki]
+lub po ustawieniu xref:/tools/Suwak.adoc[suwaka] a określoną wartość.
+
+== Warynkowe wyświtelanie istniejących obiektów
+
+Możesz użyć narzędzia image:24px-Mode_showcheckbox.svg.png[Mode showcheckbox.svg,width=24,height=24]
+xref:/tools/Pole_Wyboru.adoc[Pole wyboru], aby utworzyć takie pole wyboru sterujące widocznością jednego lub 
+kilku istniejących obiektów na ekranie.
+
+Alternatywnie, możesz również utworzyć xref:/Wartości_boolowskie.adoc[zmienną boolowską (logiczną)] (np. `++b = true++`) używając
+xref:/Pole_Wprowadzania.adoc[pola wprowadzania]i sprawić, by była widoczna jako pole wyboru w image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Widoku Grafiki_ (np. używając narzędzia
+image:24px-Mode_showhideobject.svg.png[Mode showhideobject.svg,width=24,height=24]
+xref:/tools/Pokaż_Ukryj_obiekt.adoc[Pokaż/Ukryj obiekt] lub xref:/Menu_Kontekstowe.adoc[menu kontekstowego]). Pole wyboru jest zatem 
+widoczną _zmienną boolowską_. Aby użyć tej zmiennej logicznej jako warunku widoczności dla określonych obiektów, należy wykonać kroki opisane poniżej.
+
+== Zmiana widoczności nowo tworzonych obiektów
+
+W image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Okno_Ustawień_Obiektu.adoc[oknie
+Ustawień obiektu], możesz w zakładce _Zaawansowane_ wpisać warunek dla widoczności obiektu.
+
+[NOTE]
+====
+
+Możesz wybierać xref:/Wartości_boolowskie.adoc[operatory logiczne] (np. ≠, ≥, ˄, ‖) z listy po prawej stronie pola wprowadzania, 
+aby tworzyć własne warunki logiczne.
+
+====
+
+[EXAMPLE]
+====
+
+* Jeśli a jest suwakiem, to warunek a < 2 oznacza, że dany obiekt będzie widoczny w
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Widoku Grafiki_ tylko wtedy, gdy wartość 
+suwaka będzie mniejsza niż 2.
+* Jeśli b jest zmienną boolowską, możesz użyć b jako warunku logicznego. Dany obiekt będzie widoczny, gdy wartość b wynosi 
+true, i ukryty, gdy b wynosi false.
+* Jeżeli g i h są dwiema prostymi i chcesz, aby tekst był wyświetlany tylko wtedy, gdy te proste są równoległe, możesz użyć warunku g
+‖ h jako warunku wyświetlania tekstu.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/UstawCzyWidocznyWWidoku.adoc[UstawCzyWidocznyWWidoku].
+
+====
