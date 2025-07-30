@@ -1,0 +1,42 @@
+= Polecenie ZwińTryg
+:page-en: commands/TrigCombine
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+ZwińTryg( <Wyrażenie> )::
+  Łączy iloczyny wyrażeń trygonometrycznych w sumy lub sumy wyrażeń trygonometrycznych w wyrażenia zawierające tylko jedną funkcję trygonometryczną.
+
+[EXAMPLE]
+====
+
+* `++ZwińTryg(sin(x) cos(3x))++` zwraca stem:[\frac{1}{2} \sin \left( 4 x \right) - \frac{1}{2} \sin \left( 2 x \right)]
+* `++ZwińTryg(sin(x) + cos(x))++` zwraca stem:[\sqrt{2} \cos \left( x - \frac{1}{4} \pi \right)].
+
+====
+
+ZwińTryg( <Wyrażenie>, <Funkcja Docelowa> )::
+  Łączy składniki wyrażenia trygonometrycznego w równoważne wyrażenie zawierające tylko wskazaną funkcję trygonometryczną.
+
+[EXAMPLE]
+====
+
+`++ZwińTryg(sin(x) + cos(x), sin(x))++` zwraca stem:[\sqrt{2} \sin \left( x + \frac{1}{4} \pi \right)].
+
+====
+
+[NOTE]
+====
+
+* W image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Widok_CAS.adoc[Widoku CAS] 
+można również używać niezdefiniowanych zmiennych.
+
++
+[EXAMPLE]
+====
+
+`++ZwińTryg(sin(p) cos(3p))++` zwraca stem:[\frac{1}{2} \sin \left( 4 p \right) - \frac{1}{2} \sin \left( 2 p \right)].
+
+====
+
+* Zobacz także polecenia xref:/commands/RozwinięcieTryg.adoc[RozwinięcieTryg] i xref:/commands/UprośćTryg.adoc[UprośćTryg].
+
+====
