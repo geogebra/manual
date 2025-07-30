@@ -1,0 +1,30 @@
+= Polecenie RozkładWgWartościOsobliwych
+:page-en: commands/SVD
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RozkładWgWartościOsobliwych( <Macierz> )::
+  Zwraca https://pl.wikipedia.org/wiki/Rozk%C5%82ad_wed%C5%82ug_warto%C5%9Bci_osobliwych[rozkład według wartości osobliwych] macierzy (jako
+  listę trzech macierzy).
+
+[EXAMPLE]
+====
+
+`++RozkładWgWartościOsobliwych({{3, 1, 1}, {-1, 3, 1}})++` daje w wyniku listę zawierającą macierze stem:[
+\left(\begin{array}{rr}-0.71&0.71\\0.71&0.71\\\end{array}\right) ], stem:[
+\left(\begin{array}{rr}3.16&0\\0&3.46\\\end{array}\right)],
+stem:[\left(\begin{array}{rr}-0.89&0.41\\0.45&0.82\\0&0.41\\\end{array}\right)].
+
+====
+
+[NOTE]
+====
+
+* To polecenie jest również obsługiwane w image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+  xref:/Widok_CAS.adoc[Widoku CAS]. Kolejność liczb w wyniku może się różnić między
+  image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _Widokiem Algebry_ i
+  image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] _Widokiem CAS_.
+* Zobacz także polecenia xref:/commands/WartościWłasne.adoc[WartościWłasne], xref:/commands/WektoryWłasne.adoc[WektoryWłasne],
+  xref:/commands/Odwrotność.adoc[Odwrotność], xref:/commands/Transpozycja.adoc[Transpozycja],
+  xref:/commands/DiagonalizacjaJordana.adoc[DiagonalizacjaJordana].
+
+====
