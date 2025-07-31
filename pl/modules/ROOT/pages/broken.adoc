@@ -21,6 +21,7 @@
  ** xref:Panel_Boczny.adoc[Panel_Boczny]
  ** xref:Panel_Boczny.adoc[Panel_Boczny]
  ** xref:Podstawowe_widoki.adoc[Podstawowe_widoki]
+ ** xref:Protokół_Konstrukcji.adoc[Protokół_Konstrukcji]
  ** xref:Teksty.adoc[Teksty]
  ** xref:Warstwy.adoc[Warstwy]
  ** xref:Wartości_boolowskie.adoc[Wartości_boolowskie]
@@ -153,6 +154,8 @@
  ** xref:commands/Ciąg.adoc[commands/Ciąg]
  ** xref:commands/Suwak.adoc[commands/Suwak]
  ** xref:commands/Suwak.adoc[commands/Suwak]
+ ** xref:commands/WykresAnimowany.adoc[commands/WykresAnimowany]
+ ** xref:commands/WykresAnimowany.adoc[commands/WykresAnimowany]
  ** xref:tools/Obiekty_Akcji_Narzędzia.adoc[tools/Obiekty_Akcji_Narzędzia]
  ** xref:tools/Przesuń.adoc[tools/Przesuń]
 * commands/Sortuj.adoc:
@@ -170,14 +173,8 @@
  ** xref:commands/DiagonalizacjaJordana.adoc[commands/DiagonalizacjaJordana]
  ** xref:commands/Funkcje_i_Obliczenia_Polecenia.adoc[commands/Funkcje_i_Obliczenia_Polecenia]
  ** xref:commands/Polecenia_Specyficzne_dla_Widoku_CAS.adoc[commands/Polecenia_Specyficzne_dla_Widoku_CAS]
- ** xref:commands/WartościWłasne.adoc[commands/WartościWłasne]
- ** xref:commands/WektoryWłasne.adoc[commands/WektoryWłasne]
- ** xref:commands/Wektory_i_Macierze_Polecenia.adoc[commands/Wektory_i_Macierze_Polecenia]
-* commands/Transpozycja.adoc:
- 
- ** xref:Macierze.adoc[Macierze]
- ** xref:commands/DiagonalizacjaJordana.adoc[commands/DiagonalizacjaJordana]
- ** xref:commands/Polecenia_Specyficzne_dla_Widoku_CAS.adoc[commands/Polecenia_Specyficzne_dla_Widoku_CAS]
+ ** xref:commands/RozkładWgWartościOsobliwych.adoc[commands/RozkładWgWartościOsobliwych]
+ ** xref:commands/Transpozycja.adoc[commands/Transpozycja]
  ** xref:commands/WartościWłasne.adoc[commands/WartościWłasne]
  ** xref:commands/WektoryWłasne.adoc[commands/WektoryWłasne]
  ** xref:commands/Wektory_i_Macierze_Polecenia.adoc[commands/Wektory_i_Macierze_Polecenia]
@@ -407,6 +404,7 @@
 * Menu_Widok.adoc:
  
  ** xref:Podręcznik.adoc[Podręcznik]
+ ** xref:Protokół_Konstrukcji.adoc[Protokół_Konstrukcji]
  ** xref:Widok_Grafiki_3D.adoc[Widok_Grafiki_3D]
  ** xref:commands/Przetasuj.adoc[commands/Przetasuj]
  ** xref:Ślady.adoc[Ślady]
@@ -463,13 +461,6 @@
 * Eksport_jako_LaTeX_(PGF_PSTricks).adoc:
  
  ** xref:Podręcznik.adoc[Podręcznik]
-* Protokół_Konstrukcji.adoc:
- 
- ** xref:Podstawowe_widoki.adoc[Podstawowe_widoki]
- ** xref:commands/Komórka.adoc[commands/Komórka]
- ** xref:commands/KrokKonstrukcji.adoc[commands/KrokKonstrukcji]
- ** xref:commands/KrokKonstrukcji.adoc[commands/KrokKonstrukcji]
- ** xref:commands/Obiekt.adoc[commands/Obiekt]
 * commands/Przecięcie.adoc:
  
  ** xref:Polecenia.adoc[Polecenia]
@@ -500,6 +491,12 @@
 * tools/Łamana.adoc:
  
  ** xref:Proste_Narzędzia.adoc[Proste_Narzędzia]
+* Pasek_Nawigacji.adoc:
+ 
+ ** xref:Protokół_Konstrukcji.adoc[Protokół_Konstrukcji]
+ ** xref:Protokół_Konstrukcji.adoc[Protokół_Konstrukcji]
+ ** xref:Protokół_Konstrukcji.adoc[Protokół_Konstrukcji]
+ ** xref:commands/UstawKrokKonstrukcji.adoc[commands/UstawKrokKonstrukcji]
 * commands/Max.adoc:
  
  ** xref:Przedziały.adoc[Przedziały]
@@ -717,13 +714,6 @@
  ** xref:commands/Algebra_Polecenia.adoc[commands/Algebra_Polecenia]
  ** xref:commands/Polecenia_Ograniczone_do_Widoku_CAS.adoc[commands/Polecenia_Ograniczone_do_Widoku_CAS]
  ** xref:commands/Polecenia_Specyficzne_dla_Widoku_CAS.adoc[commands/Polecenia_Specyficzne_dla_Widoku_CAS]
-* commands/RozkładWgWartościOsobliwych.adoc:
- 
- ** xref:commands/DiagonalizacjaJordana.adoc[commands/DiagonalizacjaJordana]
- ** xref:commands/Polecenia_Specyficzne_dla_Widoku_CAS.adoc[commands/Polecenia_Specyficzne_dla_Widoku_CAS]
- ** xref:commands/WartościWłasne.adoc[commands/WartościWłasne]
- ** xref:commands/WektoryWłasne.adoc[commands/WektoryWłasne]
- ** xref:commands/Wektory_i_Macierze_Polecenia.adoc[commands/Wektory_i_Macierze_Polecenia]
 * commands/MiejsceGeometryczne.adoc:
  
  ** xref:commands/DiagramVoronoja.adoc[commands/DiagramVoronoja]
@@ -809,25 +799,10 @@
  
  ** xref:commands/Funkcje_i_Obliczenia_Polecenia.adoc[commands/Funkcje_i_Obliczenia_Polecenia]
  ** xref:commands/Polecenia_Specyficzne_dla_Widoku_CAS.adoc[commands/Polecenia_Specyficzne_dla_Widoku_CAS]
-* commands/RozwinięcieTryg.adoc:
- 
- ** xref:commands/Funkcje_i_Obliczenia_Polecenia.adoc[commands/Funkcje_i_Obliczenia_Polecenia]
- ** xref:commands/Polecenia_Ograniczone_do_Widoku_CAS.adoc[commands/Polecenia_Ograniczone_do_Widoku_CAS]
-* commands/UprośćTryg.adoc:
- 
- ** xref:commands/Funkcje_i_Obliczenia_Polecenia.adoc[commands/Funkcje_i_Obliczenia_Polecenia]
- ** xref:commands/Polecenia_Ograniczone_do_Widoku_CAS.adoc[commands/Polecenia_Ograniczone_do_Widoku_CAS]
-* commands/ZwińTryg.adoc:
- 
- ** xref:commands/Funkcje_i_Obliczenia_Polecenia.adoc[commands/Funkcje_i_Obliczenia_Polecenia]
- ** xref:commands/Polecenia_Ograniczone_do_Widoku_CAS.adoc[commands/Polecenia_Ograniczone_do_Widoku_CAS]
 * commands/Nazwa.adoc:
  
  ** xref:commands/GeoGebra_Polecenia.adoc[commands/GeoGebra_Polecenia]
  ** xref:commands/Obiekt.adoc[commands/Obiekt]
-* commands/WykresAnimowany.adoc:
- 
- ** xref:commands/GeoGebra_Polecenia.adoc[commands/GeoGebra_Polecenia]
 * commands/LosowyPunktW.adoc:
  
  ** xref:commands/Geometria_Polecenia.adoc[commands/Geometria_Polecenia]
@@ -964,9 +939,6 @@
  
  ** xref:commands/Przekształcenia_Polecenia.adoc[commands/Przekształcenia_Polecenia]
  ** xref:tools/Przesuń_wokół_punktu.adoc[tools/Przesuń_wokół_punktu]
-* commands/Rozciągnięcie.adoc:
- 
- ** xref:commands/Przekształcenia_Polecenia.adoc[commands/Przekształcenia_Polecenia]
 * tools/Przesuń_Obiekt_o_wektor.adoc:
  
  ** xref:commands/Przesunięcie.adoc[commands/Przesunięcie]
@@ -977,10 +949,6 @@
  
  ** xref:commands/RegresjaX.adoc[commands/RegresjaX]
  ** xref:commands/RegresjaY.adoc[commands/RegresjaY]
-* commands/CzytajTekst.adoc:
- 
- ** xref:commands/Skrypty_Polecenia.adoc[commands/Skrypty_Polecenia]
- ** xref:commands/Tekst_Polecenia.adoc[commands/Tekst_Polecenia]
 * commands/UstawKolor.adoc:
  
  ** xref:commands/Skrypty_Polecenia.adoc[commands/Skrypty_Polecenia]
@@ -995,9 +963,6 @@
  ** xref:commands/Skrypty_Polecenia.adoc[commands/Skrypty_Polecenia]
  ** xref:commands/UstawAktywnyWidok.adoc[commands/UstawAktywnyWidok]
 * commands/UstawWartość.adoc:
- 
- ** xref:commands/Skrypty_Polecenia.adoc[commands/Skrypty_Polecenia]
-* commands/UstawWspółrzędne.adoc:
  
  ** xref:commands/Skrypty_Polecenia.adoc[commands/Skrypty_Polecenia]
 * commands/ZagrajDźwięk.adoc:
@@ -1048,15 +1013,9 @@
  
  ** xref:commands/Tekst_Polecenia.adoc[commands/Tekst_Polecenia]
  ** xref:commands/UłamekJakoTekst.adoc[commands/UłamekJakoTekst]
-* commands/ObróćTekst.adoc:
- 
- ** xref:commands/Tekst_Polecenia.adoc[commands/Tekst_Polecenia]
 * commands/TabelaZTekstem.adoc:
  
  ** xref:commands/Tekst_Polecenia.adoc[commands/Tekst_Polecenia]
-* Pasek_Nawigacji.adoc:
- 
- ** xref:commands/UstawKrokKonstrukcji.adoc[commands/UstawKrokKonstrukcji]
 * Proste_i_sie.adoc:
  
  ** xref:commands/UstawStosunekSkali.adoc[commands/UstawStosunekSkali]
