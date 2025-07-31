@@ -1,0 +1,57 @@
+= Krzywe
+:page-en: Curves
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+GeoGebra obsługuje następujące typy krzywych:
+
+== Krzywe parametryczne
+
+Krzywe parametryczne postaci _a(t)_ = _(f(t), g(t))_, gdzie _t_ jest rzeczywistym parametrem o określonym zakresie, można tworzyć:
+
+* używając polecenia xref:/commands/Krzywa.adoc[Krzywa], lub
+* wpisując wyrażenie bezpośrednio w _polu wprowadzania_, np.`++(t^2,t^3)++`.
+
+Krzywe parametryczne mogą być używane jako argumenty w następujących poleceniach: xref:/commands/Styczna.adoc[Styczna],
+xref:/commands/Punkt.adoc[Punkt], xref:/commands//Przecięcie.adoc[/Przecięcie], xref:/commands/Pochodna.adoc[Pochodna],
+xref:/commands/Długość.adoc[Długość], xref:/commands/Krzywizna.adoc[Krzywizna],
+xref:/commands/WektorKrzywizny.adoc[WektorKrzywizny] i xref:/commands/OkrągStyczny.adoc[OkrągStyczny].
+
+[NOTE]
+====
+
+* Krzywe parametryczne mogą być również wykorzystywane z predefiniowanymi funkcjami i operacjami arytmetycznymi. Na przykład, wpisanie `++c(3)++`
+zwróci punkt odpowiadający parametrowi 3 na krzywej _c_.
+* Możesz także umieścić punkt na krzywej, używając narzędzia image:24px-Mode_point.svg.png[Mode point.svg,width=24,height=24]
+xref:/tools/Punkt.adoc[Punkt] lub polecenia xref:/commands/Punkt.adoc[Punkt]. Ponieważ _a_ i _b_ - granice przedziału na którym określony jest paramter, są dynamiczne, 
+możesz także użyć zmiennych prezentowanych w postaci suwaków (zobacz narzędzie image:24px-Mode_slider.svg.png[Mode slider.svg,width=24,height=24]
+xref:/tools/Suwak.adoc[Suwak]).
+
+====
+
+Nie można stworzyć krzywej parametrycznej przechodzącej przez dane punkty. Można jednak spróbować np. polecenia
+xref:/commands/RegresjaWielomianowa.adoc[RegresjaWielomianowa], aby uzyskać funkcję przechodzącą przez te punkty.
+
+== Krzywe w układzie współrzędnych biegunowych
+
+Aby narysować krzywą zdefiniowaną w współrzędnych biegunowych, można użyć jednej z następujących (równoważnych) składni:
+
+[EXAMPLE]
+====
+
+`++ρ=sin(2 θ)++`, lub `++sin(2 θ)++`, lub `++f(t)=(sin(2*t); t)++`, lub `++(sin(2*t); t)++`, lub
+`++f(t)=(sin(2*t); t), 0< t < pi++`, lub `++(sin(2*t); t), 0 < t < pi++`, lub `++Krzywa((sin(2*t); t), t, 0, 2pi)++`.
+
+====
+
+== Krzywe uwikłane
+
+Krzywe uwikłane są wielomianami zmiennych _x_ i _y_. Można je wprowadzać bezpośrednio za pomocą
+xref:/Pole_Wprowadzania.adoc[pola wprowadzania]. Polecenie xref:/commands/KrzywaUwikłana.adoc[KrzywaUwikłana] tworzy krzywą uwikłaną
+przechodzącą przez listę punktów.
+
+[EXAMPLE]
+====
+
+`++x^4 + y^3 = 2xy++`
+
+====
