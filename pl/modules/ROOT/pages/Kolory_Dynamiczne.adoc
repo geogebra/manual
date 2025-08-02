@@ -1,0 +1,59 @@
+= Kolory dynamiczne
+:page-en: Dynamic_Colors
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+W GeoGebrze możesz zmieniać kolor obiektów, korzystając z zakładki _Kolor_ w 
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Okno_Ustawień_Obiektu.adoc[oknie Ustawień obiektu].
+Kolor obiektu może być również ustawiony, jako zmieniający się dynamicznie: otwórz
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _okno Ustawień_ obiektu, którego kolor
+chcesz zdefiniować, następnie wybierz zakładkę _Zaawansowane_. Sekcja _Kolory dynamiczne_ zawiera trzy pola tekstowe, 
+w których możesz wprowadzić podstawowe składowe koloru: _Czerwony_, _Zielony_, i _Niebieski_.
+
+[NOTE]
+====
+
+* Wartości RGB dla kolorów podstawowych są wyświetlane po prawej stronie pola _Podgląd_ w zakładce _Kolor_ 
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _okna Ustawień_.
+* Dynamiczne kolory mogą być również zdefiniowane poprzez funkcję zwracającą wartości z przedziału [0,1].
+
+====
+
+[EXAMPLE]
+====
+
+* Utwórz trzy xref:/tools/Suwak.adoc[suwaki] a, b, i c z zakresem od 0 do 1.
+* Utwórz wielokąt, którego kolor będzie dynamicznie powiązany z wartościami suwaków.
+* Otwórz image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Ustawienia_ wielokąta
+i wpisz nazwy suwaków w pola _Czerwony_, _Zielony_, i _Niebieski_.
+* Zamknij the image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _okno Ustawień_ i zmieniaj 
+wartości suwaków, aby zobaczyć, jak każda składowa koloru wpływa na końcowy kolor wielokąta.
+
+[NOTE]
+====
+
+Możesz również xref:/Animacja.adoc[animować]  suwaki z różnymi prędkościami, aby zobaczyć, 
+jak kolor wielokąta zmienia się automatycznie.
+
+====
+
+====
+
+Sekcja _Kolory dynamiczne_ zawiera także pole pozwalające zmienić _Przezroczystość_ wybranego
+obiektu. Możesz wprowadzić liczbę z [0,1] (gdzie 0 oznacza przezroczystość, a 1 zupełną nieprzezroczystość), 
+jak również użyć suwaka, aby uzyskać dynamiczną przezroczystość. Liczby spoza przedziału [0,1] będą ignorowane.
+
+== RGB / HSV / HSL
+
+Niektóre sposoby dynamicznego kolorowania można uzyskać, używając innego modelu kolorów. Poza domyślnym modelem
+https://pl.wikipedia.org/wiki/RGB[RGB], GeoGebra oferuje dwa dodatkowe modele: https://pl.wikipedia.org/wiki/HSV_(grafika)[HSV]
+i https://pl.wikipedia.org/wiki/HSL[HSL], które można wybrać z rozwijanej listy znajdującej się na dole sekcji
+_Kolory dynamiczne_ zakładki _Zaawansowane_ w
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _oknie Ustawień_.
+
+[EXAMPLE]
+====
+
+Aby utworzyć punkt _A_ przy przesuwaniu w lewo i w prawo przyjmował kolejne kolory tęczy, przełącz model kolorów na _HSV_, a potem ustaw
+_Nasycenie_ i _Wartość_ na 1, a _Odcień_ na `++x(A)++`.
+
+====
