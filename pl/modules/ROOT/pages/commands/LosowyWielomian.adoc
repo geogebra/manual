@@ -1,0 +1,42 @@
+= Polecenie LosowyWielomian
+:page-en: commands/RandomPolynomial
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+LosowyWielomian( <Stopień wielomianu> , <minimalna wartość współczynnika>, <maksymalna wartość współczynnika> )::
+  Zwraca losowo wygenerowany wielomian zmiennej _x_, stopnia _d_, którego (całkowite) współczynniki przyjmują wartości od
+  _minimalna wartość współczynnika_ do _maksymalna wartość współczynnika_ (włącznie).
+
+[EXAMPLE]
+====
+
+* `++LosowyWielomian(0, 1, 2)++` zwraca _1_ lub _2_.
+* `++LosowyWielomian(2, 1, 2)++` zwraca losowy wielomian stopnia 2, którego współczynniki to tylko _1_ lub _2_,
+na przykład _2x^2^ + x + 1_.
+
+====
+
+== Specyficzna składnia CAS
+
+Poniższe polecenie jest dostępne tylko w image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/Widok_CAS.adoc[Widoku CAS].
+
+LosowyWielomian( <Zmienna>, <Stopień wielomianu> , <minimalna wartość współczynnika>, <maksymalna wartość współczynnika> )::
+  Zwraca losowo wygenerowany wielomian danej _zmiennej_, stopnia _d_, którego (całkowite) współczynniki przyjmują wartości od
+  _minimalna wartość współczynnika_ do _maksymalna wartość współczynnika_ (włącznie).
+
+[EXAMPLE]
+====
+
+* `++LosowyWielomian(a, 0, 1, 2)++` zwraca _1_ lub _2_.
+* `++LosowyWielomian(a, 2, 1, 2)++` zwraca losowy wielomian zmiennej a, stopnia 2, którego współczynniki to tylko _1_ lub _2_,
+na przykład _2a^2^ + a + 1_.
+
+====
+
+[NOTE]
+====
+
+W obu przypadkach, jeśli _minimalna wartość współczynnika_ lub _maksymalna wartość współczynnika_ nie są całkowite,
+zostaną użyte _round(minimalna wartość współczynnika)_ and _round(maksymalna wartość współczynnika)_.
+
+====
