@@ -1,0 +1,26 @@
+= Polecenie LosowyPunktW
+:page-en: commands/RandomPointIn
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+LosowyPunktW( <Obszar> )::
+
+Tworzy losowy punkt wewnątrz zadanego wielokąta lub zamkniętej krzywej stożkowej.
+
+LosowyPunktW( <Lista Punktów> )::
+
+Zwraca losowy punkt wewnątrz wielokąta o zadanych wierzchołkach.
+
+[EXAMPLE]
+====
+
+`++LosowyPunktW(Wielokąt(A,B,C))++` oraz `++LosowyPunktW(A,B,C)++` zwracają losowy punkt wewnątrz trójkąta ABC.
+
+Aby uzyskać losowy punkt należący do listy, użyj polecenia xref:/commands/ElementLosowy.adoc[ElementLosowy].
+
+
+====
+
+
+LosowyPunktW( <xMin>, <xMax>, <yMin>, <yMax> )::
+
+Tworzy losowy punkt, którego współrzędna x pochodzi z przedziału [xMin,xMax], a współrzędna y z przedziału [yMin, yMax].
