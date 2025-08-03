@@ -1,0 +1,40 @@
+= Polecenie ElementLosowy
+:page-en: commands/RandomElement
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+ElementLosowy( <Lista> )::
+  Zwraca losowo wybrany element z xref:/Listy.adoc[listy] (z równym prawdopodobieństwem). 
+Wszystkie elementy listy muszą być tego samego typu.
+
+[EXAMPLE]
+====
+
+`++ElementLosowy({3, 2, -4, 7})++` zwraca jeden z elementów listy _{-4, 2, 3, 7}_.
+
+====
+
+[NOTE]
+====
+
+*image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Uwaga:* W image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] xref:/Widok_CAS.adoc[Widoku CAS] to polecenie działa również z danymi symbolicznymi.
+
+====
+
+[EXAMPLE]
+====
+
+`++ElementLosowy({a,b,c,d})++` zwraca jeden z elementów listy _{a, b, c, d}_.
+
+====
+
+
+
+[NOTE]
+====
+
+Zobacz także polecenia xref:/commands/Element.adoc[Element], xref:/commands/UstawPunktStartowyGeneratoraLosowego.adoc[UstawPunktStartowyGeneratoraLosowego], 
+xref:/commands/LosowaCałkowita.adoc[LosowaCałkowita], xref:/commands/LosowaDwumianowy.adoc[LosowaDwumianowy], xref:/commands/LosowaNormalny.adoc[LosowaNormalny],
+xref:/commands/LosowaPoisson.adoc[LosowaPoisson], xref:/commands/LosowaJednostajny.adoc[LosowaJednostajny].
+
+====
