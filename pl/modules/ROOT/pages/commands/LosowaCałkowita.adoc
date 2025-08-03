@@ -1,0 +1,51 @@
+= Polecenie LosowaCałkowita
+:page-en: commands/RandomBetween
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+LosowaCałkowita( <Minimum Całkowite> , <Maximum Całkowite> )::
+  Generuje losową liczbę całkowitą pomiędzy _minimum_ a _maximum_ (włącznie).
+
+[EXAMPLE]
+====
+
+`++LosowaCałkowita(0, 10)++` daje w wyniku liczbę pomiędzy _0_ a _10_ (włącznie).
+
+====
+
+LosowaCałkowita( <Minimum Całkowite> , <Maximum Całkowite> , <CzyZablokowane> )::
+  Jeśli _CzyZablokowane_ = "true", generuje losową liczbę całkowitą pomiędzy _minimum_ a _maximum_ (włącznie), 
+która jest ustalana tylko raz (przy wczytaniu pliku oraz przy operacjach Cofnij/Ponów).
+
+[EXAMPLE]
+====
+
+`++LosowaCałkowita(0, 10, true)++` daje w wyniku liczbę pomiędzy _0_ a _10_ (włącznie)
+
+====
+
+[NOTE]
+====
+
+Naciśnij [.kcode]#F9#, aby zobaczyć różnicę między tymi dwiema składniami.
+
+====
+
+LosowaCałkowita( <Minimum Całkowite> , <Maximum Całkowite>, <Ilość próbek> )::
+  Generuje listę losowych liczb całkowitych pomiędzy _minimum_ a _maximum_ (włącznie). 
+  Liczba elementów na liście odpowiada _ilości próbek_.
+
+[EXAMPLE]
+====
+
+`++LosowaCałkowita(0, 10, 5)++` daje w wyniku {1,3,4,8,2} lub {7,5,6,1,7}, itp.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenia xref:/commands/UstawPunktStartowyGeneratoraLosowego.adoc[UstawPunktStartowyGeneratoraLosowego], xref:/commands/ElementLosowy.adoc[ElementLosowy],
+xref:/commands/LosowaDwumianowy.adoc[LosowaDwumianowy], xref:/commands/LosowaNormalny.adoc[LosowaNormalny],
+xref:/commands/LosowaPoisson.adoc[LosowaPoisson], xref:/commands/LosowaJednostajny.adoc[LosowaJednostajny].
+
+====
