@@ -1,0 +1,20 @@
+= Polecenie WykresRezydualny
+:page-en: commands/ResidualPlot
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+WykresRezydualny( <Lista Punktów>, <Funkcja> )::
+  Zwraca listę punktów, których współrzędne x są takie same jak współrzędne x punktów z podanej listy, natomiast współrzędne
+  y to różnice między współrzędnymi y punktów z listy a wartościami funkcji _f_ w odpowiadających im współrzędnych x.
+  Jeśli _i_-tym elementem danej listy jest punkt _(a,b)_, to _i_-tym elementem wyniku będzie punkt _(a,b-f(a))_.
+
+[EXAMPLE]
+====
+
+Dana jest lista punktów
+`++l1 = {(-1, 1), (-0.51, 2), (0, 0.61), (0.51, -1.41), (0.54, 1.97), (1.11, 0.42), (1.21, 2.53), (-0.8, -0.12)}++` 
+i funkcja `++f(x) = x^5 + x^4 - x - 1++`. Polecenie `++WykresRezydualny(l1, f )++` zwraca listę
+_l2 = {(-1, 1), (-0.51, 2.46), (0, 1.61), (0.51, 0), (0.54, 3.38), (1.11, -0.66), (1.21, 0), (-0.8, 0)}_ i tworzy
+tworzy odpowiadające jej elementom punkty w image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Widok_Grafiki.adoc[Widoku Grafiki].
+
+====
