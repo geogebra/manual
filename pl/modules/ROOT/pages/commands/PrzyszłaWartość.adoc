@@ -1,0 +1,44 @@
+= Polecenie PrzyszłaWartość
+:page-en: commands/FutureValue
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+PrzyszłaWartość( <Stopa>, <Liczba Okresów>, <Płatność>, <Wartość Bieżąca (opcjonalnie)>, <Typ (opcjonalnie)> )::
+  Zwraca wartość przyszłą inwestycji opartą na okresowych, stałych płatnościach i stałej stopie procentowej.
+
+* *<Stopa>* Stopa procentowa dla okresu.
+* *<Liczba Okresów>* Całkowita liczba okresów płatności w okresie spłaty.
+* *<Płatność>* Kwota płacona w każdym okresie.
+* *<Wartość Bieżąca (opcjonalnie)>* Łączna kwota, na jaką obecnie wyceniane są przyszłe płatności. Jeśli nie podasz wartości, 
+przyjmowana jest jako 0.
+* *<Typ (opcjonalnie)>* Określa, kiedy należne są płatności. Jeśli nie podasz wartości lub podasz 0, płatność przypada 
+na koniec okresu. Jeśli podasz 1, przypada na początek okresu.
+[EXAMPLE]
+====
+
+`++PrzyszłaWartość(10%/12, 15, -200, 0, 1)++` zwraca przyszłą wartość 3207.99.
+
+====
+
+[NOTE]
+====
+
+Upewnij się, że stosujesz spójne jednostki dla `++<Stopy>++` i `++<Liczby Okresów>++`. Jeśli dokonujesz miesięcznych 
+płatności z tytułu czteroletniego kredytu przy rocznej stopie procentowej 10%, użyj 10%/12 jako stopy oraz  4*12 jako liczby
+okresów.
+
+====
+
+[NOTE]
+====
+
+Dla wszystkich argumentów, wypłaty gotówki przedstawiane są jako liczby ujemne, a wpływy gotówki jako liczby dodatnie.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenia xref:/commands/Rata.adoc[Rata], xref:/commands/Stopa.adoc[Stopa], xref:/commands/WartośćBieżąca.adoc[WartośćBieżąca] 
+i xref:/commands/Okresy.adoc[Okresy].
+
+====
