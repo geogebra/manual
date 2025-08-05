@@ -1,0 +1,46 @@
+= Polecenie Rata
+:page-en: commands/Payment
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Rata( <Stopa>, <Liczba Okresów>, <Wartość Bieżąca>, <Wartość Przyszła (opcjonalnie)>, <Typ (opcjonalnie)> )::
+  Oblicza wysokość raty kredytu przy założeniu stałych płatności i stałej stopy procentowej.
+
+* *<Stopa>* Stopa procentowa dla okresu.
+* *<Liczba Okresów>* Łączna liczba rat kredytu.
+* *<Wartość Bieżąca>* Łączna kwota, na jaką obecnie wyceniane są przyszłe płatności.
+* *<Wartość Przyszła (opcjonalnie)>* Saldo gotówki, które chcesz osiągnąć po dokonaniu ostatniej płatności. 
+  Jeśli nie podasz wartości przyszłej, przyjmowana jest jako 0.
+* *<Typ (opcjonalnie)>* Określa, kiedy należne są płatności. Jeśli nie podasz wartości lub podasz 0, 
+płatność przypada na koniec okresu. Jeśli podasz 1, przypada na początek okresu.
+
+[EXAMPLE]
+====
+
+`++Rata(6%/12, 10, 10000, 0,1)++`daje miesięczną ratę kredytu w wysokości -1022.59.
+====
+
+[NOTE]
+====
+
+Upewnij się, że stosujesz spójne jednostki dla `++<Stopy>++`  i `++<Liczby Okresów>++`. Jeśli dokonujesz miesięcznych 
+płatności z tytułu czteroletniego kredytu przy rocznej stopie procentowej 6%, użyj 6%/12 for rate and 4*12 jako stopy 
+oraz 4*12 jako liczby okresów.
+
+====
+
+
+
+[NOTE]
+====
+
+Dla wszystkich argumentów, wypłaty gotówki przedstawiane są jako liczby ujemne, a wpływy gotówki jako liczby dodatnie.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenia xref:/commands/Stopa.adoc[Stopa], xref:/commands/Okresy.adoc[Okresy], xref:/commands/WartośćBieżąca.adoc[WartośćBieżąca] 
+i xref:/commands/PrzyszłaWartość.adoc[PrzyszłaWartość].
+
+====
