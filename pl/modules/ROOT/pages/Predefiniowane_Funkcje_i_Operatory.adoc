@@ -1,0 +1,175 @@
+= Predefiniowane funkcje i operatory
+:page-en: Predefined_Functions_and_Operators
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Aby tworzyć liczby, współrzędne lub równania przy użyciu xref:/Pole_Wprowadzania.adoc[pola wprowadzania], można korzystać 
+z poniższych predefiniowanych funkcji i operacji. Operatory i funkcje logiczne opisano w artykule o
+xref:/Wartości_boolowskie.adoc[wartościach boolowskich].
+
+[NOTE]
+====
+
+Funkcje predefiniowane należy wpisywać z nawiasami okrągłymi. Nie wolno wstawiać spacji między nazwą funkcji a nawiasami.
+
+====
+
+[cols=",",options="header",]
+|===
+|Operator / Funkcja |Wprowadzanie
+|ℯ (https://pl.wikipedia.org/wiki/Podstawa_logarytmu_naturalnego[Liczba Euler'a]) |[.kcode]#Alt# + [.kcode]#e#
+
+|ί (https://pl.wikipedia.org/wiki/Jednostka_urojona[Jednostka urojona]) |[.kcode]#Alt# + [.kcode]#i#
+
+|π |[.kcode]#Alt# + [.kcode]#p# lub pi
+
+|° (https://pl.wikipedia.org/wiki/Stopie%C5%84_(symbol)[Symbol stopnia]) |[.kcode]#Alt# + [.kcode]#o# lub deg
+
+|Dodawanie |+
+
+|Odejmowanie |-
+
+|Mnożenie |* lub Spacja
+
+|Iloczyn skalarny |* lub Spacja
+
+|Iloczyn wektorowy(zobacz xref:/Punkty_i_Wektory.adoc[Punkty i wektory]) |⊗
+
+|Dzielenie |/
+
+|Potęgowanie |^ lub indeks górny (`++x^2++` lub `++x2++`)
+
+|Silnia |!
+
+|xref:/Funkcja_nPr.adoc[nPr] | nPr(n, r)
+
+|Nawiasy okrągłe |( )
+
+|Współrzędna x |x( )
+
+|Współrzędna y |y( )
+
+|Współrzędna z |z( )
+
+|Argument (działa także dla punktów/wektorów 3D) |arg( )
+
+|Sprzężenie zespolone |conjugate( )
+
+|xref:/Funkcja_real.adoc[Część rzeczywista] |real( )
+
+|xref:/Funkcja_imaginary.adoc[Część urojona] |imaginary( )
+
+|Wartość bezwzględna |abs( )
+
+|Kąt elewacji - podniesienia (dla punktów/wektorów 3D) |alt( )
+
+|Znak liczby |sgn( ) lub sign()
+
+|Największa liczba całkowita mniejsza lub równa danej |floor( )
+
+|Najmniększa liczba całkowita większa lub równa danej |ceil( )
+
+|Zaokrąglenie do najbliższej liczby całkowitej (lub do y miejsc po przecinku) |round(x) lub round(x, y)
+
+|Pierwiastek kwadratowy |sqrt( )
+
+|Pierwiastek sześcienny |cbrt( )
+
+|Pierwiastek n-tego stopnia z x |nroot(x, n)
+
+|Liczba losowa od 0 do 1 |random( )
+
+|Funkcja wykładnicza o podstawie 𝑒 |exp( ) or ℯ^x^
+
+|Logarytm (naturalny, o podstawie e) |ln( )
+
+|Logarytm o podstawie 2 |log₂() lub ld( )
+
+|Logarytm o podstawie 10 |log₁₀( ) lub log( ) lub lg( )
+
+|Logarytm z _x_ o podstawie _b_ |log(b, x )
+
+|Cosinus |cos( )
+
+|Sinus |sin( )
+
+|Tangens |tan( )
+
+|Secans |sec()
+
+|Cosecans |csc() lub cosec()
+
+|Cotangens |cot() lub cotan()
+
+|Arcus cosinus (odpowiedź w radianach) |acos( ) lub arccos( )
+
+|Arcus cosine (odpowiedź w stopniach) |acosd( )
+
+|Arcus sinus (odpowiedź w radianach) |asin( ) lub arcsin( )
+
+|Arcus sinus (odpowiedź w stopniach) |asind( )
+
+|Arcus tangens (odpowiedź w radianach, od -π/2 di π/2) |atan( ) lub arctan( )
+
+|Arcus tangens (odpowiedź w stopniach, od -90° do 90°) |atand( )
+
+|https://en.wikipedia.org/wiki/Atan2[Arcus tangent (odpowiedź w radianach, od -π do π)] |atan2(y, x)
+
+|https://en.wikipedia.org/wiki/Atan2[Arcus tangent (odpowiedź w stopniach, od -180° do 180°)] |atan2d(y, x)
+
+|Cosinus hiperboliczny |cosh( )
+
+|Simus hiperboliczny |sinh( )
+
+|Tangens hiperboliczny |tanh( )
+
+|Secans hiperboliczny|sech( )
+
+|HCosecans hiperboliczny |csch( )
+
+|Cotangens hiperboliczny |coth( ) or cotanh()
+
+|Arcus cosinus hiperboliczny |acosh( ) lub arccosh( )
+
+|Arcus sinus hiperboliczny |asinh( ) lub arcsinh( )
+
+|Arcus tangens hiperboliczny |atanh( ) lub arctanh( )
+
+|https://mathworld.wolfram.com/BetaFunction.html[Funkcja Beta] Β(a, b) |beta(a, b)
+
+|https://mathworld.wolfram.com/IncompleteBetaFunction.html[Niezupełna funkcja bet] Β(x;a, b) |beta(a, b, x)
+
+|https://mathworld.wolfram.com/RegularizedBetaFunction.html[Uregulowana niezupełna funkcja beta] I(x; a, b)
+|betaRegularized(a, b, x)
+
+|https://pl.wikipedia.org/wiki/Funkcja_%CE%93[Funkcja Gamma Γ(x)] |gamma( x)
+
+|(Lower) https://mathworld.wolfram.com/IncompleteGammaFunction.html[(Dolna) niezupełna funkcja gamma] γ(a, x) |gamma(a, x)
+
+|(Lower) https://mathworld.wolfram.com/RegularizedGammaFunction.html[(Dolna) uregulowana niezupełna funkcja gamma P(a,x) = γ(a,
+x) / Γ(a)] |gammaRegularized(a, x)
+
+|https://pl.wikipedia.org/wiki/Funkcja_b%C5%82%C4%99du[Funkcja błędu Gaussa] |erf(x)
+
+|https://en.wikipedia.org/wiki/Digamma_function[Funkcja digamma] |psi(x)
+
+|https://en.wikipedia.org/wiki/Polygamma_function[Funkcja poligamma] - pochodna rzędu m+1 logarytmu naturalnego 
+ https://pl.wikipedia.org/wiki/Funkcja_%CE%9[funkcji gamma, gamma(x)] (m=0,1) |polygamma(m, x)
+
+|https://mathworld.wolfram.com/SineIntegral.html[Całka sinusowa] |sinIntegral(x)
+
+|https://mathworld.wolfram.com/CosineIntegral.html[Całka cosinusowa] |cosIntegral(x)
+
+|https://mathworld.wolfram.com/ExponentialIntegral.html[Całka wykładnicza] |expIntegral(x)
+
+|https://pl.wikipedia.org/wiki/Funkcja_dzeta_Riemanna[Funkcja ζ Riemanna] ζ(x) |zeta(x)
+
+|https://pl.wikipedia.org/wiki/Funkcja_W_Lamberta[Funkcja W Lamberta] LambertW(x, branch) |LambertW(x, 0), LambertW(x,
+-1)
+|===
+
+[NOTE]
+====
+
+Operatory x, y, z można wykorzystać do uzyskania odpowiednich współczynników prostej.
+
+====
