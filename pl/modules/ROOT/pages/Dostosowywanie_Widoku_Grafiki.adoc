@@ -1,0 +1,101 @@
+= Dostosowywanie Widoku Grafiki
+:page-en: Customizing_the_Graphics_View
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Aby dopasować widoczną część image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Widok_Grafiki.adoc[Widoku Grafiki], możesz go przesunąć używając narzędzia
+image:24px-Mode_translateview.svg.png[Mode translateview.svg,width=24,height=24]
+xref:/tools/Przemieszczaj_obszar_roboczy.adoc[Przemieszczaj obszar roboczy] oraz skorzystać z następujących sposobów powiększania/pomniejszania:
+
+* Możesz użyć narzędzi image:24px-Mode_zoomin.svg.png[Mode zoomin.svg,width=24,height=24] xref:/tools/Przybliż.adoc[Przybliż] 
+i image:24px-Mode_zoomout.svg.png[Mode zoomout.svg,width=24,height=24] xref:/tools/Oddal.adoc[Oddal]
+aby zmieniać powiększenie w image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Widoku
+Grafiki_.
++
+[NOTE]
+====
+
+Pozycja kliknięcia określa środek powiększenia.
+
+====
+* Aby zmienić powiększenie image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Widoku Grafiki_ możesz także użyć rolki przewijania myszy.
+* Dostępne są także skróty klawiszowe: powiększenie - [.kcode]#Ctrl# + [.kcode]#+# i pomniejszenie - [.kcode]#Ctrl# + [.kcode]#-#.
+* Po kliknięciu prawym przyciskiem myszy (Mac OS: Ctrl-kliknięcie) w puste miejsce w image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Widoku Grafiki_, pojawi się menu kontekstowe, które umożliwia zmianę powiększenia.
+* Możesz także określić zakres osi _x_ i _y_-axis w
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Okno_Ustawień_Obiektu.adoc[oknie Ustawień] 
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Widoku Grafiki_ (patrz
+xref:/.adoc[poniżej]).
+
+== Pokazywanie i ukrywanie obiektów
+
+W image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] xref:/Widok_Algebry.adoc[Widoku Algebry],
+kółko po lewej stronie każdego obiektu pokazuje jego bieżący stan widoczności (widoczny lub ukryty). Możesz kliknąć
+to kółko, aby zmienić status widoczności obiektu. Więcej informacji znajdziesz w artykule o
+xref:/Ustawienia_Obiektu.adoc[widoczności].
+
+== Ustawienia Widoku Grafiki (okno Ustawień)
+
+Osie współrzędnych, siatka i inne właściwości mogą być dostosowywane za pomocą
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Okno_Ustawień_Obiektu.adoc[okna Ustawień]
+the image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Widoku Grafiki_. Po kliknięciu 
+prawym przyciskiem myszy (Mac OS: Ctrl-kliknięcie) w image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+_Widoku Grafiki_, możesz otworzyć to okno, wybierając z xref:/Menu_Kontekstowe.adoc[menu kontekstowego] pozycję _Widok Grafiki..._.
+
+== Dostosowywanie osi współrzędnych i siatki
+
+Aby pokazać lub ukryć osie i siatkę, kliknij prawym przyciskiem myszy (Mac OS: Ctrl-kliknięcie) w obszar _Widoku Grafiki_ i wybierz opcję
+items image:20px-Stylingbar_graphicsview_show_or_hide_the_axes.svg.png[Stylingbar graphicsview show or hide the
+axes.svg,width=20,height=20] _Osie_ lub image:20px-Stylingbar_graphicsview_show_or_hide_the_grid.svg.png[Stylingbar
+graphicsview show or hide the grid.svg,width=20,height=20] _Siatka_ z menu kontekstowego. Dalsze ustawienia dostępne są w
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _oknie Ustawienia_.
+
+* W zakładce _Podstawowe_ możesz np. zmienić styl linii i kolor osi współrzędnych, a także ustawić stosunek między osiami. 
+Aby upewnić się, że stosunek osi nie może zostać zmieniony żadnym poleceniem lub działaniem użytkownika, możesz go zablokować ikoną kłódki.
+
+* Kliknięcie zakładek _OśX_ i _OśY_ umożliwia indywidualne dostosowanie osi: ustawienie odległości między zaznaczonymi wartościami, etykietowanie, widoczność osi, 
+jednostki i inne opcje. Jeśli chcesz, aby punkt przecięcia osi miał współrzędne _(a,b)_, ustaw parametr _Przecięcie
+w:_ dla _osi X_ na _b_ i dla _osi Y_ na _a_. Opcja _Trzymaj się krawędzi_ oznacza, że osie pozostają blisko odpowiednioe dolnej lub lewej krawędzi ekranu. 
+Aby rysować tylko część osi na prawo lub do góry od przecięcia osi, możesz zaznaczyć _Tylko wartości dodatnie_.
+
+* W zakładce _Siatka_, możesz zmienić kolor i styl linii siatki, ustawić odległość i stosunek linii siatki, a także widoczność siatki. 
+Dostępne są trzy rodzaje siatek: kartezjańska, biegunowa i izometryczna.
+
+[NOTE]
+====
+
+* Skalowanie osi jest możliwe w każdym trybie poprzez przytrzymanie klawisza [.kcode]#Shift#-key (PC: także [.kcode]#Ctrl#-key)
+podczas przeciągania osi.
+* Zakres osi może być nadawany dynamicznie, np. w zakadce _Podstawowe_ możesz ustawić _xMin_ na `++x(A)++` i _yMin_ na
+`++y(A)++`, aby upewnić się, że lewy dolny róg widoku pozostaje w punkcie _A_. W takim ustawieniu widok nie może być powiększany.
+
+====
+
+== Wyświetlanie paska nawigacji
+
+Możesz dodać do image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Widoku Grafiki_ 
+xref:/Pasek_Nawigacji.adoc[Pasek nawigacji etapów konstrukcji] włączając go w zakładce
+_Podstawowe_ w image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _oknie Ustawień_. Możesz także 
+dodać _Przycisk odtwarzania_ aby animować kroki konstrukcji, oraz
+image:16px-Menu_view_construction_protocol.svg.png[Menu view construction protocol.svg,width=16,height=16]
+xref:/Protokół_Konstrukcji.adoc[Przycisk otwarcie okna protokołu konstrukcji].
+
+== Inne ustawienia
+
+Ustawienia te znajdują się w ostatniej części zakładki _Podstawowe_ w
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _oknie Ustawień_.
+
+Kolot tła
+
+Pozwala zmienić kolor tła w image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Widoku Grafiki_.
+
+Podpowiedzi
+
+Pozwalają ustawić sposób działania podpowiedzi w image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Widoku Grafiki_. Szczegóły znajdziesz w artykule o xref:/Podpowiedzi.adoc[podpowiedziach].
+
+Pokaż Współrzędne Kursora Myszki
+
+Umożliwia wyświetlanie współrzędnych myszy obok kursora myszy.
