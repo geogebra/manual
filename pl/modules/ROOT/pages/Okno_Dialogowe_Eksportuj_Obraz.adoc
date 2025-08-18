@@ -1,0 +1,77 @@
+= Okno dialogowe Eksportuj obraz
+:page-en: Export_Graphics_Dialog
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+Poniższe informacje dotyczą wyłącznie *GeoGebra Classic 5*. Dla nowszych wersji zobacz polecenie
+xref:/commands/EksportujObraz.adoc[EksportujObraz()].
+
+====
+
+Okno to jest dostępne poprzez podmenu _Eksportuj_ w xref:/Menu_Plik.adoc[menu Plik] (
+image:Image-x-generic.png[Image-x-generic.png,width=16,height=16] Widok Grafiki jako obraz (png, eps)….)
+
+Sktór klawiszowy: [.kcode]#Ctrl# + [.kcode]#Shift# + [.kcode]#U# (Mac OS: [.kcode]#Cmd# + [.kcode]#Shift# + [.kcode]#U#)
+
+To okno dialogowe pozwala zapisać image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Widok_Grafiki.adoc[Widok Grafiki] GeoGebry jako plik graficzny na komputerze. 
+W wyświetlonym oknie możesz wybrać _format_ pliku graficznego, zmienić _skalę_ (w cm) i _rozdzielczość_ (w dpi) obrazu oraz ustawić obraz jako _przezroczysty_.
+
+
+[NOTE]
+====
+
+Jeśli utworzysz punkty o nazwach _Export_1_ i _Export_2_, to one zdefiniują prostokąt przeznaczony do eksportu. 
+W przeciwnym razie eksportowana będzie tylko widoczna część image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Widoku Grafiki_.
+
+====
+
+Eksportując image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Widok Grafiki_ możesz
+wybrać następujące formaty plików graficznych:
+
+PNG – https://pl.wikipedia.org/wiki/Portable_Network_Graphics[Portable Network Graphics]::
+  Jest to format grafiki rastrowej. Im wyższa rozdzielczość (dpi), tym lepsza jakość (zwykle wystarcza 300 dpi). 
+  Plików PNG nie należy później skalować, aby uniknąć utraty jakości. Pliki PNG dobrze nadają się do wykorzystania na stronach 
+  internetowych (HTML) i w edytorach tekstu.
+
+[NOTE]
+====
+
+Za każdym razem, gdy wstawiasz plik PNG do dokumentu tekstowego (menu Wstaw → Obraz z pliku), upewnij się, 
+że rozmiar jest ustawiony na 100%. W przeciwnym razie ustawiona skala (w cm) zostanie zmieniona.
+
+====
+
+EPS – https://pl.wikipedia.org/wiki/Encapsulated_PostScript[Encapsulated Postscript]::
+  Jest to format grafiki wektorowej. Obrazy EPS mogą być skalowane bez utraty jakości. Pliki EPS dobrze nadają się do pracy 
+w programach graficznych obsługujących grafikę wektorową (np. Corel Draw) oraz w profesjonalnych systemach składu tekstu (np.
+  xref:/LaTeX.adoc[LaTeX]).
+  Rozdzielczość grafiki EPS jest zawsze równa 72 dpi. Ta wartość służy wyłącznie do obliczenia rzeczywistego rozmiaru obrazu 
+w centymetrach i nie ma wpływu na jakość obrazu.
+[NOTE]
+====
+
+Efekt przezroczystości w wypełnionych wielokątach lub krzywych stożkowych nie jest możliwy w formacie EPS. Obiekty mogą być 
+jedynie w 100% nieprzezroczyste albo całkowicie przezroczyste.
+
+====
+
+PDF – https://pl.wikipedia.org/wiki/Portable_Document_Format[Portable Document Format]::
+  (zobacz opis formatu EPS powyżej)
+
+[NOTE]
+====
+
+W eksporcie do SVG i PDF masz możliwość eksportowania tekstu jako edytowalnego tekstu lub jako kształtów. Tekst zapisywany jest 
+wtedy jako tekst (umożliwia edycję np. w InkScape) lub jako krzywe Béziera (gwarantuje taki sam wygląd tekstu nawet wtedy, 
+gdy właściwa czcionka nie jest zainstalowana).
+
+====
+
+SVG – https://pl.wikipedia.org/wiki/Scalable_Vector_Graphics[Scalable Vector Graphic]::
+  (zobacz opis formatu EPS powyżej)
+
+EMF – https://pl.wikipedia.org/wiki/Windows_Metafile[Enhanced Metafile]::
+  (zobacz opis formatu EPS powyżej)
