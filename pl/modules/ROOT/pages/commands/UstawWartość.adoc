@@ -1,0 +1,37 @@
+= Polecenie UstawWartość
+:page-en: commands/SetValue
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+UstawWartość( <Wartość Logiczna>, <0|1> )::
+  Ustawia stan wartości logicznej / pola wyboru: 1 = true (prawda), 0 = false (fałsz).
+
+[EXAMPLE]
+====
+
+Jeśli _b_ jest wartością logiczną, wówczas `++ UstawWartość(b,1)++` ustawia wartość logiczną _b_ na _true_ (prawdę).
+
+====
+
+UstawWartość( <Obiekt>, <Obiekt> )::
+  Niech _A_ będzie pierwszym, a _B_ drugim obiektem. Jeśli _A_ jest xref:/Obiekty_Swobodne_Zależne_i_Pomocnicze.adoc[obiektem
+  swobodnym] lub xref:/Punkty_i_Wektory.adoc[punktem] ograniczonym do xref:/Obiekty_Geometryczne.adoc[ścieżki lub obszaru], 
+jego wartość zostaje ustawiona na bieżącą wartość _B_ (tzn. wartość _A_ nie zmienia się później, gdy zmienia się _B_).
+
+[EXAMPLE]
+====
+
+Jeśli _f_ jest funkcją, `++UstawWartość(f, ElementLosowy({cos(x), 3x+2, ln(x)}))++` losowo definiuje
+_f_ jako jedną z funkcji podanych na liście.
+
+====
+
+UstawWartość( <Lista>, <Liczba>, <Obiekt> )::
+  Niech _n_ będzie _<Liczbą>_. Polecenie UstawWartość ustawia n-ty element swobodnej listy na bieżącą wartość obiektu.
+  Liczba _n_ nie może przekraczać wartości 1 + długość listy.
+
+UstawWartość( <Obiekt Zależny>, ? )::
+  Jest to specjalna składnia, która ustawia obiekt zależny jako niezdefiniowany, bez potrzeby jego pełnego przedefiniowania przy użyciu operatora
+  `++=++`.
+
+UstawWartość( <xref:/Obiekty_Akcji.adoc[Lista rozwijalna]>, <Liczba n > )::
+  Ustawia _n_ jako xref:/commands/ZaznaczonyWskaźnik.adoc[indeks wybranego elementu] w liście rozwijanej.
