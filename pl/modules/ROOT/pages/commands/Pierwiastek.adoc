@@ -1,0 +1,54 @@
+= Polecenie Pierwiastek
+:page-en: commands/Root
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Pierwiastek( <Wielomian> )::
+  Zwraca wszystkie pierwiastki wielomianu jako punkty przecięcia wykresu funkcji z osią _x_.
+
+[EXAMPLE]
+====
+
+`++Pierwiastek(0.1*x^2 - 1.5*x + 5)++` daje w wyniku _A = (5, 0)_ and _B = (10, 0)_.
+
+====
+
+Pierwiastek( <Funkcja>, <Wartość x Początkowa> )::
+  Zwraca jeden pierwiastek funkcji, korzystając z podanej wartości początkowej _a_ w metodzie iteracyjnej numerycznej.
+
+[EXAMPLE]
+====
+
+`++Pierwiastek(0.1*x^2 - 1.5*x + 5, 6)++` daje w wyniku _A = (5, 0)_.
+
+====
+
+Pierwiastek( <Funkcja>, <Wartość początkowa x>, <Wartość końcowa x> )::
+  Niech _a_ to _Wartość początkowa x_, a _b_ to _Wartość końcowa x_ . To polecenie zwraca jeden pierwiastek funkcji w przedziale
+  [_a, b_] wyznaczony za pomocą metody iteracyjnej numerycznej.
+
+[EXAMPLE]
+====
+
+`++Pierwiastek(0.1x² - 1.5x + 5, 8, 13)++` daje w wyniku _A = (10, 0)_.
+
+====
+
+== Specyficzna składnia CAS
+
+Pierwiastek( <Wielomian> )::
+  Zwraca wszystkie pierwiastki wielomianu w postaci listy.
+
+[EXAMPLE]
+====
+
+`++Pierwiastek(x^3 - 3 * x^2 - 4 * x + 12)++` daje w wyniku _{x = -2, x = 2, x = 3}_.
+
+====
+
+[NOTE]
+====
+
+W image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Widok_CAS.adoc[Widoku CAS], 
+polecenie to jest specjalną wersją polecenia xref:/commands/Rozwiąż.adoc[Rozwiąż].
+
+====
