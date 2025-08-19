@@ -1,0 +1,58 @@
+= Funkcje
+:page-en: Functions
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Aby wprowadzić funkcję, możesz używać wcześniej zdefiniowanych zmiennych (np. liczb, punktów, wektorów), jak również innych funkcji.
+
+[EXAMPLE]
+====
+
+* Funkcja f: `++f(x) = 3 x^3 – x^2++`
+* Funkcja g: `++g(x) = tan(f(x))++`
+* Funkcja bez nazwy: `++sin(3 x) + tan(x)++`
+
+====
+
+[NOTE]
+====
+
+AWszystkie dostępne predefiniowane funkcje (np. sin, cos, tan) są opisane w sekcji
+xref:/Predefiniowane_Funkcje_i_Operatory.adoc[Predefiniowane Funkcje i Operatory].
+
+====
+
+W GeoGebra możesz także używać poleceń, aby uzyskać np. the xref:/commands/Całka.adoc[całkę] i
+xref:/commands/Pochodna.adoc[pochodną] funkcji. Możesz użyć polecenia xref:/commands/Jeżeli.adoc[Jeżeli], 
+aby uzyskać funkcje warunkowe.
+
+[NOTE]
+====
+
+Możesz także używać zapisów f'(x) or f''(x), … aby uzyskać pochodne wcześniej zdefiniowanej funkcji f(x).
+
+====
+
+[EXAMPLE]
+====
+
+Zdefiniuj funkcję _f_ jako `++f(x) = 3 x^3 – x^2++`. Następnie możesz wpisać `++g(x) = cos(f' (x + 2))++`, aby uzyskać funkcję _g_.
+
+====
+
+Ponadto funkcje mogą być przesuwane za pomocą wektora (zobacz polecenie xref:/commands/Przesunięcie.adoc[Przesunięcie]) a funkcje
+będącymi obiektami swobodnymi możesz przesuwać za pomocą narzędzia image:22px-Mode_move.svg.png[Mode
+move.svg,width=22,height=22]xref:/tools/Przesuń.adoc[Przesuń]. Inne
+xref:/commands/Przekształcenia_Polecenia.adoc[polecenie przekształceń] także można stosować do fukcji, 
+lecz w większości przypadków wynik nie jest funkcją, lecz krzywą.
+
+== Ograniczenie funkcji do przedziału
+
+Aby ograniczyć funkcję do przedziału [a, b], należy użyć polecenia xref:/commands/Funkcja.adoc[Funkcja]
+albo xref:/commands/Jeżeli.adoc[Jeżeli].
+
+[EXAMPLE]
+====
+
+`++Jeżeli[3<=x<=5,x^2]++` i `++Funkcja[x^2,3,5]++` definiują tę samą funkcję _x^2^_ ograniczoną do przedziału [3,5]
+
+====
