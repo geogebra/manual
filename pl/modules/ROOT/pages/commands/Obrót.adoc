@@ -1,0 +1,32 @@
+= Polecenie Obrót
+:page-en: commands/Rotate
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Obrót( <Obiekt>, <Kąt> )::
+
+Obraca xref:/Obiekty_Geometryczne.adoc[obiekt geometryczny] o podany kąt wokół początku układu współrzędnych.
+
+Obrót( <Obiekt>, <Kąt>, <Punkt> )::
+
+Obraca obiekt geometryczny o podany kąt wokół zadanego punktu.
+
+Obrót( <Obiekt>, <Kąt>, <Oś obrotu>)::
+
+Obraca obiekt geometryczny o podany kąt wokół wskazanej osi obrotu.
+
+Obrót( <Obiekt>, <Kąt>, <Punkt na osi>, <Oś kierunku lub Płaszczyzna> )::
+
+Obraca obiekt geometryczny o podany kąt wokół osi zdefiniowanej przez zadany punkt i kierunek osi lub płaszczyznę.
+
+[NOTE]
+====
+
+* Wektory nie są obracane wokół początku układu współrzędnych, lecz wokół swojego punktu początkowego.
+* W przypadku obrotu wielokąta, odcinka, łuku itp. tworzony jest także obraz jego wierzchołków / końców, a w przypadku wielokąta również boków.
+* To polecenie obraca także obrazy.
+* Aby obrócić tekst użyj polecenia xref:/commands/ObróćTekst.adoc[ObróćTekst].
+* Zobacz także narzędzia image:24px-Mode_rotatebyangle.svg.png[Mode rotatebyangle.svg,width=24,height=24]
+xref:/tools//Obrót_wokół_punktu.adoc[Obrót wokół punktu] i image:24px-Mode_rotatearoundline.svg.png[Mode
+rotatearoundline.svg,width=24,height=24] xref:/tools/Obrót_wokół_prostej.adoc[Obrót wokół prostej].
+
+====
