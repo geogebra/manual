@@ -2,8 +2,8 @@
 :page-en: commands/Exponential
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
-RozkładWykładniczy( <Lambda>, <Liczba sukcesów> )::
-  Oblicza wartość dystrybuanty (funkcji rozkładu skumulowanego) rozkładu wykładniczego dla _liczby sukcesów v_, czyli prawdopodobieństwo _P(X ≤ v)_ 
+RozkładWykładniczy( <Lambda>, <Wartość Zmiennej> )::
+  Oblicza wartość dystrybuanty (funkcji rozkładu skumulowanego) rozkładu wykładniczego dla _wartości zmiennej v_, czyli prawdopodobieństwo _P(X ≤ v)_ 
   gdzie _X_ jest zmienną losową o https://pl.wikipedia.org/wiki/Rozk%C5%82ad_wyk%C5%82adniczy[rozkładzie
   wykładniczym] zdefiniowanym przez parametr _lambda_.
 
@@ -14,9 +14,9 @@ Ta składnia zwraca prawdopodobieństwo dla danej wartości, czyli pole pod krzy
 
 ====
 
-RozkładWykładniczy( <Lambda>, <Liczba sukcesów>, <Czy Skumulowany> )::
-  Jeśli _Czy Skumulowany = true_, oblicza wartość dystrybuanty (funkcji rozkładu skumulowanego) rozkładu wykładniczego dla danego parametru _lambda_ danej _liczby sukcesów_. 
-W przeciwnym razie oblicza wartość funkcji gęstości rozkładu dla danej _liczby sukcesów_.
+RozkładWykładniczy( <Lambda>, <Wartość Zmiennej>, <Czy Skumulowany> )::
+  Jeśli _Czy Skumulowany = true_, oblicza wartość dystrybuanty (funkcji rozkładu skumulowanego) rozkładu wykładniczego dla danego parametru _lambda_ danej _wartości zmiennej_. 
+W przeciwnym razie oblicza wartość funkcji gęstości rozkładu dla danej _wartości zmiennej_.
 
 RozkładWykładniczy( <Lambda>, x, <Czy Skumulowany> )::
   Jeśli _Czy Skumulowany = true_, tworzy funkcję dystrybuanty (cdf) rozkładu wykładniczego dla podanego parametru _lambda_, w przeciwnym razie tworzy funkcję gęstości prawdopodobieństwa (pdf) tego rozkładu.
@@ -25,8 +25,8 @@ RozkładWykładniczy( <Lambda>, x, <Czy Skumulowany> )::
 
 == Specyficzna składnia CAS
 
-RozkładWykładniczy( <Lambda>, <Liczba sukcesów> )::
-  Oblicza wartość dystrybuanty (funkcji rozkładu skumulowanego) rozkładu wykładniczego dla _liczby sukcesów v_, tj. prawdopodobieństwo
+RozkładWykładniczy( <Lambda>, <Wartość Zmiennej> )::
+  Oblicza wartość dystrybuanty (funkcji rozkładu skumulowanego) rozkładu wykładniczego dla _wartości zmiennej v_, tj. prawdopodobieństwo
   _P(X ≤ v)_ gdzie _X_ jest zmienną losową o rozkładzie wykładniczym z parametrem _lambda_.
 
 [EXAMPLE]
