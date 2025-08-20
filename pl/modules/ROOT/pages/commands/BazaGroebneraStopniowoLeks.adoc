@@ -1,0 +1,34 @@
+= Polecenie BazaGroebneraStopniowoLeks
+:page-en: commands/GroebnerLexDeg
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+== Specyficzna składania CAS
+
+BazaGroebneraStopniowoLeks( <Lista Wielomianów> )::
+  Oblicza bazę Gröbnera dla listy wielomianów względem uporządkowania leksykograficznego stopniowanego zmiennych
+(w języku angielskim to uporządkowanie określane jest _grlex_, _tdeg_, _lexdeg_, _total degree lexicographic ordering_ lub _elimination ordering_).
+
+[EXAMPLE]
+====
+
+`++BazaGroebneraStopniowoLeks({x^3 - y - 2, x^2 + y + 1})++` daje w wyniku {stem:[ -y^{2} + x - 3 y - 3, -x y - x - y - 2, x^{2} + y + 1]}.
+
+====
+
+BazaGroebneraStopniowoLeks( <Lista Wielomianów>, <Lista Zmiennych> )::
+  Oblicza bazę Gröbnera dla listy wielomianów względem uporządkowania leksykograficznego stopniowanego dla podanej listy zmiennych
+(w języku angielskim to uporządkowanie określane jest _grlex_, _tdeg_, _lexdeg_, _total degree lexicographic ordering_ lub _elimination ordering_).
+
+[EXAMPLE]
+====
+
+`++BazaGroebneraStopniowoLeks({x^3 - y -2, x^2 + y + 1},{y, x})++` daje w wyniku {stem:[ x^{2} + y + 1, -y x - y - x - 2, y^{2} + 3 y - x + 3 ]}.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenia xref:/commands/BazaGroebneraStopniowoOdwrotnieLeks.adoc[BazaGroebneraStopniowoOdwrotnieLeks] i xref:/commands/BazaGroebneraLeks.adoc[BazaGroebneraLeks].
+
+====
