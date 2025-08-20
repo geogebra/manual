@@ -2,8 +2,8 @@
 :page-en: commands/FDistribution
 ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
 
-RozkładF( <Stopnie Swobody Licznika>, <Stopnie Swobody Mianownika>, <Liczba Sukcesów> )::
-  Oblicza wartość dystrybuanty (funkcji rozkładu skumulowanego) https://pl.wikipedia.org/wiki/Rozk%C5%82ad_F_Snedecora[rozkładu F] dla _liczby sukcesów v_, tzn. prawdopodobieństwo
+RozkładF( <Stopnie Swobody Licznika>, <Stopnie Swobody Mianownika>, <Wartość Zmiennej> )::
+  Oblicza wartość dystrybuanty (funkcji rozkładu skumulowanego) https://pl.wikipedia.org/wiki/Rozk%C5%82ad_F_Snedecora[rozkładu F] dla _wartości zmiennej v_, tzn. prawdopodobieństwo
   _P(X≤v)_ gdzie _X_  jest zmienną losową o rozkładzie F z podanymi _stopniami swobody licznika_ i _mianownika_.
 
 [NOTE]
@@ -14,9 +14,9 @@ Ta składnia zwraca prawdopodobieństwo dla danej wartości, czyli pole pod krzy
 ====
 
 
-RozkładF( <Stopnie Swobody Licznika>, <Stopnie Swobody Mianownika>, <Liczba Sukcesów>, <Czy Skumulowany> )::
- Jeśli _Czy Skumulowany = true_, oblicza wartość dystrybuanty (cdf) rozkładu F z danymi _stopniami swobody licznika_ i _mianownika_ oraz _liczby sukcesów_. 
-W przeciwnym razie oblicza wartość funkcji gęstości prawdopodobieństwa (pdf) rozkładu F dla tej _liczby sukcesów_.
+RozkładF( <Stopnie Swobody Licznika>, <Stopnie Swobody Mianownika>, <Wartość Zmiennej>, <Czy Skumulowany> )::
+ Jeśli _Czy Skumulowany = true_, oblicza wartość dystrybuanty (cdf) rozkładu F z danymi _stopniami swobody licznika_ i _mianownika_ oraz _wartości zmiennej_. 
+W przeciwnym razie oblicza wartość funkcji gęstości prawdopodobieństwa (pdf) rozkładu F dla tej _wartości zmiennej_.
 
 RozkładF( <Stopnie Swobody Licznika>, <Stopnie Swobody Mianownika>, x, <Czy Skumulowany> )::
   Jeśli _Czy Skumulowany = true_,, tworzy funkcję dystrybuanty (cdf) rozkładu F z danymi _stopniami swobody licznika_ i _mianownika_.
