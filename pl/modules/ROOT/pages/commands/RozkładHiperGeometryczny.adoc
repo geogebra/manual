@@ -1,0 +1,60 @@
+= Polecenie RozkładHiperGeometryczny
+:page-en: commands/HyperGeometric
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RozkładHiperGeometryczny( <Liczność Populacji>, <Liczba Sukcesów>, <Liczność Próbki>)::
+  Zwraca wykres słupkowy https://pl.wikipedia.org/wiki/Rozk%C5%82ad_hipergeometryczny[rozkładu hipergeometrycznego].
+
+[EXAMPLE]
+====
+
+Parameters:
+
+* _Liczność Populacji_: liczba kul w urnie
+* _Liczba Sukcesów_: liczba białych kul w urnie
+* _Liczność Próbki_: liczba kul losowanych z urny
+
+Próba losowa jest powtarzalnie pobierana z urny, bez zwracania. `++RozkładHiperGeometryczny(100, 50, 5)++` generuje wykres słupkowy pokazujący rozkład prawdopodobieństwa liczby białych kul w próbie.
+
+====
+
+RozkładHiperGeometryczny( <Liczność Populacji>, <Liczba Sukcesów>, <Liczność Próbki>, <Czy Skumulowany> )::
+  Jeśli _Czy Skumulowany = false_ zwraca wykres słupkowy rozkładu hipergeometrycznego, w przeciwnym przypadku zwraca wykres funkcji dystrybuanty (skumulowanego rozkładu hipergeometrycznego).
+  Trzy pierwsze parametry są takie same jak powyżej.
+
+RozkładHiperGeometryczny( <Liczność Populacji>, <Liczba Sukcesów>, <Liczność Próbki>, <Wartość Zmiennej>, <Czy Skumulowany> )::
+  Nbędzie zmienną losową o rozkładzie hipergeometrycznym, a v wartością zmiennej. Pierwsze trzy parametry są takie same jak powyżej.
+  * Gdy _Czy Skumulowany = false_, zwraca P( X = _v_) 
+  * Gdy _Czy Skumulowany = true_, zwraca P( X ≤ _v_)
+
+ 
+[EXAMPLE]
+====
+
+Zakładamy, że losujesz dwie kule z urny zawierającej 10 kul, z czego 2 są białe, bez zwracania.
+
+* `++RozkładHiperGeometryczny(10, 2, 2, 0, false)++` daje w wyniku stem:[\frac{28}{45}], the probability of selecting zero white balls,
+* `++RozkładHiperGeometryczny(10, 2, 2, 1, false)++` daje w wyniku stem:[\frac{16}{45}], the probability of selecting one white ball,
+* `++RozkładHiperGeometryczny(10, 2, 2, 2, false)++` daje w wyniku stem:[\frac{1}{45}], the probability of selecting both white balls,
+* `++RozkładHiperGeometryczny(10, 2, 2, 3, false)++` daje w wyniku _0_, the probability of selecting three white balls.
+* `++RozkładHiperGeometryczny(10, 2, 2, 0, true)++` daje w wyniku stem:[\frac{28}{45}], the probability of selecting zero (or less)
+white balls,
+* `++RozkładHiperGeometryczny(10, 2, 2, 1, true)++` daje w wyniku stem:[\frac{44}{45}], the probability of selecting one or less white
+balls,
+* `++RozkładHiperGeometryczny(10, 2, 2, 2, true)++` daje w wyniku _1_, the probability of selecting two or less white balls and
+* `++RozkładHiperGeometryczny(10, 2, 2, 3, true)++` daje w wyniku _1_, the probability of selecting three or less white balls.
+
+====
+
+== Specyficzna składnia CAS
+
+In the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/CAS_View.adoc[CAS View] you can use
+only the following syntax:
+
+RozkładHiperGeometryczny( <Liczność Populacji>, <Liczba Sukcesów>, <Liczność Próbki>, <Liczba Sukcesów>, <Czy Skumulowany> )::
+  Let X be a Hypergeometric random variable and v the variable value.  The first three parameters are the same as above.
+ * When _Czy Skumulowany = false_ it returns P( X = _v_) 
+  * When _Czy Skumulowany = true_ it returns P( X ≤ _v_)
+
+
+
