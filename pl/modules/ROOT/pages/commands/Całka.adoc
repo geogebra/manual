@@ -1,0 +1,77 @@
+= Polecenie Całka
+:page-en: commands/Integral
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Całka( <Funkcja> )::
+  Zwraca całkę nieoznaczoną względem głównej zmiennej.
+
+[EXAMPLE]
+====
+
+`++Całka(x³)++` daje w wyniku _stem:[\frac{1}{4}x^4]_ .
+
+====
+
+Całka( <Funkcja>, <Zmienna> )::
+  Zwraca całkę cząstkową względem podanej zmiennej.
+
+[EXAMPLE]
+====
+
+`++Całka(x³+3x y, x)++` daje w wyniku _stem:[\frac{1}{4}x^4+\frac{3}{2}x^2 y]_ .
+
+====
+
+Całka( <Funkcja>, <Wartość początkowa x>, <Wartość końcowa x> )::
+  Zwraca całkę oznaczoną na przedziale _[Wartość początkowa x , Wartość końcowa x]_ względem głównej zmiennej.
+
+[EXAMPLE]
+====
+
+`++Całka(x³, 1, 2)++` daje w wyniku 3.75.
+
+====
+
+[NOTE]
+====
+
+Polecenie to dodatkowo zacienia obszar między wykresem funkcji _f_ a osią _x_.
+
+====
+
+Całka( <Funkcja>, <Wartość początkowa x>, <Wartość Końcowa x>, <Wartość Logiczna> )::
+  Zwraca całkę oznaczoną funkcji na przedziale _[Wartość początkowa x , Wartość końcowa x]_ względem głównej zmiennej
+  i zacienia obszar między wykresem funkcji a osią x, jeśli _Wartość Logiczna_ jest równa _true_. W przypadku, gdy _Wartość Logiczna_ jest równa _false_ obszar zostaje
+  zacieniowany, ale wartość całki nie jest obliczana.
+
+== Specyficzna składnia CAS
+
+W image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Widok_CAS.adoc[Widoku CAS] jako dane wejściowe można stosować także zmienne niezdefiniowane.
+
+[EXAMPLE]
+====
+
+`++Całka(cos(a t), t)++` daje w wyniku stem:[\frac{sin(a t)}{a} + c_1].
+
+====
+
+Całka( <Funkcja>, <Zmienna>, <Wartość Początkowa>, <Wartość Końcowa> )::
+ Zwraca całkę oznaczoną na przedziale [_Wartość Początkowa_ , _Wartość Końcowa_] względem podanej zmiennej.
+
+[EXAMPLE]
+====
+
+`++Całka(cos(t), t, a, b)++` daje w wyniku stem:[- sin(a) + sin(b)].
+
+====
+
+[NOTE]
+====
+
+* Wynik nie zawsze jest ciągły, np. `++Całka(floor(x))++`, całka z funkcji ⌊x⌋. 
+W takim przypadku można zdefiniować własną funkcję, np. `++F(x)=(floor(x)² - floor(x))/2 + x floor(x) - floor(x)²++`,
+czyli funkcję stem:[\frac{⌊x⌋² - ⌊x⌋}{2} + x \cdot⌊x⌋ - ⌊x⌋²]
+* W niektórych wersjach GeoGebry stosowany jest algorytm numeryczny, dlatego całkowanie aż do asymptoty lub podobnych przypadków, np. 
+`++Całka(ln(x), 0, 1)++` może nie działać. W takim przypadku spróbuj `++Całka(ln(x), 0, 1, false)++`
+
+====
