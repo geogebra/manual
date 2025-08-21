@@ -1,0 +1,15 @@
+= Polecenie PochodnaParametryczna
+:page-en: commands/ParametricDerivative
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+PochodnaParametryczna( <Krzywa> )::
+  Zwraca nową xref:/Krzywe.adoc[krzywą parametryczną] postaci _stem:[ \left( x(t), \frac{y'(t)}{ x'(t)} \right) ]_.
+
+[EXAMPLE]
+====
+
+`++PochodnaParametryczna(Krzywa(2t, t², t, 0, 10))++` zwraca krzywą parametryczną _(x(t) = 2t, y(t) = t)_. 
+Krzywa podana jako argument polecenia odpowiada funkcji _f(x) = stem:[ \frac{x²}{4}]_, 
+a wynik jest pochodną tej funkcji: _f'(x) = stem:[ \frac{x}{2}]._
+
+====
