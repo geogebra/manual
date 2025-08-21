@@ -1,0 +1,45 @@
+= Polecenie Normalizuj
+:page-en: commands/Normalize
+:page-aliases: commands/Normalise.adoc
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+image:64px-Globe.png[Globe.png,width=64,height=64,role=left]
+
+To polecenie ma dwie wersje w języku angielskim:
+
+* Normalize (US)
+* Normalise (UK + Aus)
+
+====
+
+Normalizuj( <Lista Liczb> )::
+  Zwraca listę zawierającą _znormalizowaną_ postać podanych liczb.
+
+[EXAMPLE]
+====
+
+`++Normalizuj({1, 2, 3, 4, 5})++` zwraca _{0, 0.25, 0.5, 0.75, 1}_.
+
+====
+
+Normalizuj( <Lista Punktów> )::
+  Zwraca listę zawierającą _znormalizowaną_ postać podanych punktów.
+
+[EXAMPLE]
+====
+
+`++Normalizuj({(1,5), (2,4), (3,3), (4,2), (5,1)})++` zwraca _{(0,1), (0.25,0.75), (0.5,0.5), (0.75,0.25), (1,0)}_.
+
+====
+
+[NOTE]
+====
+
+* Jeśli przeprowadzasz obliczenia z bardzo dużymi lub bardzo małymi liczbami (np. przy użyciu polecenia 
+xref:/commands/RegresjaWzrostuWykładniczego.adoc[RegresjaWzrostuWykładniczego]), normalizacja może pomóc uniknąć błędów zaokrągleń lub przepełnienia.
+* To polecenie nie dotyczy punktów 3D.
+* Operacja _normalizacji_ odwzorowuje wartość _x_ na przedział [0, 1] przy pomocy funkcji liniowej stem:[x \rightarrow \frac{x-Min(list)}{Max(list)-Min(list)}].
+
+====
