@@ -1,0 +1,98 @@
+= Polecenie Przecięcie
+:page-en: commands/Intersect
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Przecięcie( <Obiekt>, <Obiekt> )::
+  Zwraca punkty przecięcia dwóch obiektów.
+
+[EXAMPLE]
+====
+
+* Niech `++a: -3x + 7y = -10++` będzie prostą, a `++c: x^2 + 2y^2 = 8++` elipsą. `++Przecięcie(a, c)++` zwraca punkty przecięcia
+ prostej i elipsy _E_ = (-1.02, -1,87) i _F_ = (2.81, -0.22).
+* `++Przecięcie(y = x + 3, Krzywa(t, 2t, t, 0, 10))++` daje w wyniku __A__=(3,6).
+* `++Przecięcie(Krzywa(2s, 5s, s,-10, 10), Krzywa(t, 2t, t, -10, 10))++` daje w wyniku __A__=(0,0).
+
+====
+
+Przecięcie( <Obiekt>, <Obiekt>, <Indeks Punktu Przecięcia> )::
+  Zwraca n-ty punkt przecięcia dwóch obiektów. Każdy z obiektów musi być prostą, krzywą stożkową, funkcją wielomianową 
+lub krzywą uwikłaną.
+
+[EXAMPLE]
+====
+
+Niech `++a(x) = x^3 + x^2 - x++` będzie funkcją, a `++b: -3x + 5y = 4++` prostą. `++Przecięcie(a, b, 2)++` zwraca punkt przecięcia
+_C_ = (-0.43, 0.54) wykresu funkcji i prostej.
+
+====
+
+Przecięcie( <Obiekt>, <Obiekt>, <Punkt Początkowy> )::
+  Zwraca punkt przecięcia dwóch obiektów za pomocą numerycznej metody iteracyjnej, korzystając z punktu początkowego.
+
+[EXAMPLE]
+====
+
+Niech `++a(x) = x^3 + x^2 - x++` będzie funkcją, `++b: -3x + 5y = 4++` prostą, a _C_ = (0, 0.8) punktem początkowym.
+`++Przecięcie(a, b, C)++` zwraca punkt przecięcia _D_ = (-0.43, 0.54) wykresu funkcji i prostej wyznaczony numerycznie
+za pomocą metody iteracyjnej.
+
+====
+
+Przecięcie( <Funkcja>, <Funkcja>, <Wartość początkowa x>, <Wartość końcowa x> )::
+ Numerycznie wyznacza punkty przecięcia wykresów dwóch funkcji w podanym przedziale.
+
+[EXAMPLE]
+====
+
+Niech `++f(x) = x^3 + x^2 - x++` i `++g(x) = 4 / 5 + 3 / 5 x++` to dwie funkcje. `++Przecięcie(f, g, -1, 2)++` zwraca
+punkty przecięcia _A_ = (-0.43, 0.54) i _B_ = (1.1, 1.46) wykresów dwóch funkcji w przedziale [ -1, 2 ].
+
+====
+
+Przecięcie( <Krzywa 1>, <Krzywa 2>, <Parameter 1>, <Parameter 2> )::
+  Znajduje jeden punkt przecięcia, korzystając z numerycznej metody iteracyjnej rozpoczynającej od podanych parametrów.
+
+[EXAMPLE]
+====
+
+Niech `++a = Krzywa(cos(t), sin(t), t, 0, π)++` i `++b = Krzywa(cos(t) + 1, sin(t), t, 0, π)++`.
+`++Przecięcie(a, b, 0, 2)++` zwraca punkt przecięcia _A = (0.5, 0.87)_.
+
+====
+
+== Specyficzna składnia CAS
+
+Przecięcie( <Funkcja>, <Funkcja> )::
+  Zwraca listę punktów przecięcia dwóch obiektów.
+
+[EXAMPLE]
+====
+
+Niech `++f(x):= x^3 + x^2 - x++` i `++g(x):= x++` to dwie funkcje. `++Przecięcie(f(x), g(x))++` 
+zwraca listę punktów przecięcia: _{(1, 1), (0, 0), (-2, -2)}_ wykresów tych funkcji.
+
+====
+
+Przecięcie( <Obiekt>, <Obiekt> )::
+
+[EXAMPLE]
+====
+
+* `++Przecięcie( <Prosta> , <Obiekt> )++` tworzy punkt(y) przecięcia prostej z płaszczyzną, odcinkiem, wielokątem, krzywą stożkową itp.
+* `++Przecięcie( <Płaszczyzna> , <Obiekt> )++` tworzy punkt(y) przecięcia płaszczyzny z odcinkiem, wielokątem, krzywą stożkową itp.
+* `++Przecięcie( <Stożkowa>, <Stożkowa> )++` tworzy punkt(y) przecięcia dwóch krzywych stożkowych.
+* `++Przecięcie( <Płaszczyzna>, <Płaszczyzna> )++` tworzy prostą przecięcia dwóch płaszczyzn.
+* `++Przecięcie( <Płaszczyzna>, <Wielościan> )++` tworzy wielokąt(y) przecięcia płaszczyzny i wielościanu.
+* `++Przecięcie( <Sfera>, <Sfera> )++` tworzy okrąg przecięcia dwóch sfer.
+* `++Przecięcie( <Płaszczyzna>, <Kwadryka> )++`tworzy krzywą stożkową przecięcia płaszczyzny i kwadryki (sfera, stożek, walec itd.).
+====
+
+[NOTE]
+====
+
+* Aby uzyskać wszystkie punkty przecięcia w postaci listy, można użyć np. `++{Przecięcie(a,b)}++`
+* Zobacz także polecenia xref:/commands/PrzecięcieStożkowych.adoc[PrzecięcieStożkowych] i xref:/commands/PrzecięcieŚcieżek.adoc[PrzecięcieŚcieżek].
+* Zobacz także narzędzie image:22px-Mode_intersect.svg.png[Mode intersect.svg,width=22,height=22] xref:/tools/Przecięcie_dwóch_obiektów.adoc[Przecięcie dwóch obiektów].
+
+====
