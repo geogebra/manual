@@ -1,0 +1,56 @@
+= Polecenie Odwrotność
+:page-en: commands/Invert
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Odwrotność( <Macierz> )::
+  Zwraca odwrotność macierzy.
+
+[EXAMPLE]
+====
+
+`++Odwrotność({{1, 2}, {3, 4}})++` daje w wyniku stem:[\begin{pmatrix}-2 & 1\\1.5 & -0.5\end{pmatrix}], macierz odwrotną do
+stem:[\begin{pmatrix}1 & 2\\3 & 4\end{pmatrix}].
+
+====
+
+[NOTE]
+====
+
+* W image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Widok_CAS.adoc[Widoku CAS] można stosować również zmienne nieokreślone.
+
+====
+
+[EXAMPLE]
+====
+
+`++Odwrotność({{a, b}, {c, d}})++` daje w wyniku stem:[\begin{pmatrix}\frac{d}{ad- bc} & \frac{-b}{ad- bc}\\\frac{-c}{ad-
+bc}& \frac{a}{ad- bc}\end{pmatrix}], macierz odwrotną do stem:[\begin{pmatrix}a & b\\c & d\end{pmatrix}].
+
+====
+
+
+Odwrotność( <Funkcja> )::
+  Zwraca funkcję odwrotną do danej.
+
+[EXAMPLE]
+====
+
+`++Odwrotność(sin(x))++` daje w wyniku _asin(x)_.
+
+====
+
+[NOTE]
+====
+
+* Przy wyznaczaniu odwrotności nie są brane pod uwagę dziedzina i przeciwdziedzina, np. dla for f(x) = x^2^ lub f(x) = sin(x).
+
+* Polecenie działa szybciej dla funkcji zawierających tylko jedną zmienną _x_.
+Aby zwiększyć wydajność konstrukcji, warto przekształcić funkcję, np. użyć `NInvert((x+1)^2-1)` zamiast `NInvert(x^2+2x)`.
+
+* Zobacz także polecenia xref:./NOdwrotność.adoc[NOdwrotność], xref:./WartościWłasne.adoc[WartościWłasne], xref:./WektoryWłasne.adoc[WektoryWłasne],
+xref:./RozkładWgWartościOsobliwych.adoc[RozkładWgWartościOsobliwych], xref:/commands/Transpozycja.adoc[Transpozycja], xref:./DiagonalizacjaJordana.adoc[DiagonalizacjaJordana]
+
+====
+
+
+
