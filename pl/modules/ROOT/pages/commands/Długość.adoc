@@ -1,0 +1,77 @@
+= Polecenie Długość
+:page-en: commands/Length
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Długość( <Obiekt> )::
+  Zwraca długość obiektu.
+
+[EXAMPLE]
+====
+
+* `++Długość( <Wektor> )++` zwraca długość wektora.
+* `++Długość( <Punkt> )++` zwraca długość wektora wodzącego danego punktu.
+* `++Długość( <Lista> )++` zwraca długość listy, czyli liczbę elementów w liście.
+* `++Długość( <Tekst> )++` zwraca liczbę znaków w tekście.
+* `++Długość( <Miejsce geometryczne> )++` zwraca liczbę punktów, z których zbudowane jest miejsce geometryczne.
+Aby uzyskać długość samego miejsca geometrycznego, użyj polecenia xref:/commands/Obwód.adoc[Obwód](Miejsce geometryczne). 
+Aby uzyskać więcej szczegółów patrz artykuł o poleceniu xref:/commands/Pierwszy.adoc[Pierwszy].
+* `++Długość( <Łuk> )++` zwraca _długość łuku_ (tj. tylko długość zakrzywionej części) łuku lub wycinka kołowego.
+
+====
+
+Długość( <Funkcja>, <Wartość początkowa x>, <Wartość końcowa x> )::
+  Zwraca długość wykresu funkcji w danym przedziale.
+
+[EXAMPLE]
+====
+
+`++Długość(2x, 0, 1)++` zwraca _2.236067977_, przybliżenie stem:[\sqrt{5}].
+
+====
+
+Długość( <Function>, <Punkt początkowy>, <Punkt końcowy> )::
+  Zwraca długość wykresu funkcji pomiędzy dwoma punktami.
+
+[NOTE]
+====
+
+Jeśli podane punkty nie leżą na wykresie funkcji, do wyznaczenia przedziału używane są ich współrzędne x.
+
+====
+
+Długość( <Krzywa>, <Wartość początkowa t>, <Wartość końcowa t> )::
+  Zwraca długość krzywej pomiędzy dwiema wartościami *parametru*.
+Długość( <Krzywa>, <Punkt początkowy>, <Punkt końcowy> )::
+  Zwraca długość krzywej pomiędzy dwoma punktami leżącymi na tej krzywej.
+
+
+
+== Specyficzna składnia CAS
+
+Długość( <Funkcja>, <Wartość początkowa x>, <Wartość końcowa x> )::
+  Zwraca długość wykresu funkcji w danym przedziale.
+
+[EXAMPLE]
+====
+
+`++Długość(2 x, 0, 1)++` daje w wyniku stem:[\sqrt{5}].
+
+====
+
+Długość( <Funkcja>, <Zmienna>, <Wartość początkowa x>, <Wartość końcowa x> )::
+   Zwraca długość wykresu funkcji od _Wartość początkowa x_ do _Wartość końcowa x_ dla danej zmiennej.
+
+[EXAMPLE]
+====
+
+`++Długość(2 a, a,  0, 1)++` daje w wyniku stem:[\sqrt{5}].
+
+====
+
+[NOTE]
+====
+
+Zobacz także narzędzie image:22px-Mode_distance.svg.png[Mode distance.svg,width=22,height=22]
+xref:/tools/Odległość_lub_długość.adoc[Odległość lub długość].
+
+====
