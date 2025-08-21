@@ -1,0 +1,30 @@
+= Polecenie ŚrednieOdchylenieBezwzględne
+:page-en: commands/MAD
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+ŚrednieOdchylenieBezwzględne( <Lista Liczba> )::
+  Oblicza https://pl.wikipedia.org/wiki/Odchylenie_bezwzgl%C4%99dne[średnie odchylenie bezwzględne] dla liczb z listy.
+
+[EXAMPLE]
+====
+
+`++ŚrednieOdchylenieBezwzględne({1, 2, 3, 4, 5})++` daje w wyniku _1.2_
+
+====
+
+ŚrednieOdchylenieBezwzględne( <Lista Liczba>, <Lista Częstości> )::
+  Oblicza ważone _średnie odchylenie bezwzględne_ dla podanych liczb.
+
+[EXAMPLE]
+====
+
+`++ŚrednieOdchylenieBezwzględne({20, 40, 41, 42, 40, 54}, {20, 6, 4, 5, 2})++` daje w wyniku _5.79_
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/OdchylenieStandardowe.adoc[OdchylenieStandardowe].
+
+====
