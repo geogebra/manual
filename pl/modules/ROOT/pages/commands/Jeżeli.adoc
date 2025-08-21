@@ -1,0 +1,107 @@
+= Polecenie Jeżeli
+:page-en: commands/If
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Jeżeli( <Warunek>, <Wtedy> )::
+  Zwraca kopię obiektu _Wtedy_ jeśli warunek jest spełniony (_true_), a obiekt niezdefiniowany, jeśli warunek jest fałszywy
+  (_false_).
+
+[EXAMPLE]
+====
+
+* Niech _n_ = 3. `++Jeżeli(n==3, x + y = 4)++` daje w wyniku prostą _x_ + _y_ = 4, ponieważ warunek dla liczby _n_ jest spełniony.
+* Niech _n_ = 4. `++Jeżeli(n==3, x + y = 4)++` tworzy obiekt niezdefiniowany, ponieważ warunek dla liczby _n_ nie jest spełniony.
+
+====
+
+Jeżeli( <Warunek>, <Wtedy>, <W przeciwnym wypadku> )::
+  Zwraca kopię obiektu _Wtedy_ jeśli warunek jest spełniony (_true_), oraz kopię obiektu _W przeciwnym wypadku_ jeśli warunek jest fałszywy
+  (_false_). *Oba obiekty muszą być tego samego typu.*
+
+[EXAMPLE]
+====
+
+Dana jest liczba _n_. `++Jeżeli(n==3, x + y = 4, x - y = 4)++` daje w wyniku prostą _x_ + _y_ = 4, gdy _n_ = 3, i prostą _x_ - _y_ = 4
+dla wszystkich _n_ różnych od 3.
+
+====
+
+Jeżeli( <Warunek 1>, <Wtedy 1>, <Warunek 2>, <Wtedy 2>, ... , <W przeciwnym wypadku (opcjonalnie)> )::
+  YZwraca kopię "Wtedy 1", gdy spełniowny jest "Warunek 1", "Wtedy 2", gdy spełniowny jest "Warunek 2" itd. Jeśli żaden warunek nie 
+jest spełniony i podano część "W przeciwnym wypadku", polecenie zwraca kopię "W przeciwnym wypadku". W przeciwnym razie zwracany jest obiekt niezdefiniowany.
+
+[EXAMPLE]
+====
+
+`++Jeżeli(a ≟ 1, "Matthew", a ≟ 2,"Larry", a ≟ 3, "Vivian", "Alex")++`, gdy __a__=1 zwraca tekst "Matthew", dla
+__a__=2' tekst "Larry", dla __a__=3 "Vivian", a dla pozostałych wartości _a_ wynikiem jest "Alex".
+
+====
+
+== Funkcje warunkowe
+
+Polecenie *Jeżeli* może być używane do tworzenia funkcji warunkowych. Mogą one być następnie argumentami innych poleceń, 
+takich jak xref:/commands/Pochodna.adoc[Pochodna], xref:/commands/Całka.adoc[Całka] czy xref:/commands/Przecięcie.adoc[Przecięcie].
+
+[EXAMPLE]
+====
+
+* `++f(x) = Jeżeli(x < 3, sin(x), x^2)++` zwraca funkcję, która przyjmuje wartość _sin(x)_ dla _x < 3_ i _x^2^_ dla _x ≥3_.
+* `++f(x) = Jeżeli(0 <= x <= 3, sin(x))++` zwraca funkcję, która przyjmuje wartość _sin(x)_ dla x od 0 do 3 (i niezdefioniowaną poza tym przedziałem).
+
+[NOTE]
+====
+
+Można zastosować krótszy zapis `++f(x) = sin(x), 0 <= x <= 3++`
+
+====
+
+* `++f(x) =Jeżeli(x<-1,x²,-1<=x<=1,1,-x²+2)++` zwraca funkcję warunkową stem:[f(x) = \begin{cases} \begin{array}{rcl}x^{2} & :& x < -1 \\
+1 & : &-1 \leq x \leq 1 \\-x^{2} + 2 & :& \text{otherwise}\end{array}\end{cases} ].
+
+====
+
+== Funkcje warunkowe wielu zmiennych
+
+Polecenie *Jeżeli* może być również używane do tworzenia funkcji warunkowych wielu zmiennych. 
+W takim przypadku każda część funkcji musi zawierać wszystkie zmienne.
+
+[EXAMPLE]
+====
+
+Niech `++s = 1++` będzie suwakiem w przedziale [1,3]. Polecenie
+`++f(x,y,a,b,c) = Jeżeli(s==1, x + 0y +a + 0b + c, s==2, 0x+ y^2 + 0a +2b +0c, x + y + 0a + b +0c)++` zwraca
+funkcję wielu zmiennych _x+a+c_, gdy suwak przyjmuje wartość 1, _y^2^ + 2b_, gdy suwak przyjmuje wartość 2, i _x +
+y + b_, gdy suwak przyjmuje wartość 3.
+
+====
+
+[NOTE]
+====
+
+* Pochodną funkcji określonej poleceniem Jeżeli(warunek, f(x), g(x))_ jest Jeżeli(warunek, f'(x), g'(x))_. 
+Nie są jednak obliczane granice w punktach krytycznych.
+* Zobacz sekcję xref:/Wartości_boolowskie.adoc[Wartości boolowskie], aby poznać symbole używane w wyrażeniach warunkowych.
+
+====
+
+== Polecenie Jeżeli w skryptach
+
+Polecenie *Jeżeli* może być używane w skryptach do wykonywania różnych akcji w zależności od spełnienia warunków.
+
+[EXAMPLE]
+====
+
+Dana jest liczba _n_ i punkt _A_. Polecenie `++Jeżeli(ResztaDzielenia(n, 7) == 0, UstawWspółrzędne(A, n, 0), UstawWspółrzędne(A, n, 1))++`
+modyfikuje współrzędne punktu _A_ w zależności od warunku. Łatwiej można to zapisać jako:
+`++ UstawWspółrzędne(A, n, Jeżeli(ResztaDzielenia(n, 7) == 0,0,1))++`.
+
+====
+
+[NOTE]
+====
+
+Argumenty polecenia *Jeżeli* muszą być obiektami lub xref:/commands/Skrypty_Polecenia.adoc[poleceniami z grupy skrypty], a nie przypisaniami. Zapis
+`++b = Jeżeli(a > 1, 2, 3)++` jest poprawny, a _b = 2_ lub _b = 3_ nie mogą występować jako parametry w *Jeżeli*.
+
+====
