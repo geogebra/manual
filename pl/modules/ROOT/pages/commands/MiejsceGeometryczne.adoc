@@ -1,0 +1,41 @@
+= Polecenie MiejsceGeometryczne
+:page-en: commands/Locus
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+MiejsceGeometryczne( <Punkt Krzywej Domyślnej Q>, <Punkt P>)::
+  Zwraca miejsce geometryczne punktu _Q_, który zależy od punktu _P_.
+
+[NOTE]
+====
+
+Punkt _P_musi być punktem na obiekcie (np. prostej, odcinku, okręgu).
+
+====
+
+
+MiejsceGeometryczne( <Punkt Krzywej Domyślnej Q>, <Suwak t>)::
+  Zwraca miejsce geometryczne punktu _Q_, które zależy od wartości przyjmowanych przez suwak _t_.
+MiejsceGeometryczne( <Pole Kierunków>, <Punkt> )::
+  Zwraca krzywą miejsca geometrycznego, która odpowiada polu kierunkowemu w danym punkcie.
+MiejsceGeometryczne( <f(x, y)>, <Punkt> )::
+  Zwraca krzywą miejsca geometrycznego, która odpowiada rozwiązaniu równania różniczkowego stem:[\frac{dy}{dx}=f(x,y)] w danym punkcie.
+Rozwiązanie jest obliczane numerycznie.
+
+
+Miejsca geometryczne są specjalnym typem obiektów i pojawiają się jako xref:/Obiekty_Swobodne_Zależne_i_Pomocnicze.adoc[obiekty pomocnicze].
+Poza poleceniem MiejsceGeometryczne, powstają również w wyniku działania niektórych poleceń z kategorii xref:/commands/Matematyka_dyskretna_Polecenia.adoc[Matematyka dyskretna]
+i polecenia xref:/commands/RozwiążRównanieRóżniczkoweZwyczajne.adoc[RozwiążRównanieRóżniczkoweZwyczajne]. Miejsca geometryczne są traktowane jako xref:/Obiekty_Geometryczne.adoc[ścieżki], 
+dzięki czemu można ich używać w poleceniach związanych ze ścieżkami (np. xref:/commands/Punkt.adoc[Punkt]). 
+Właściwości miejsca geometrycznego zależą od sposobu jego utworzenia. Zobacz np. polecenia xref:/commands/Obwód.adoc[Obwód] i xref:/commands/Pierwszy.adoc[Pierwszy].
+
+[NOTE]
+====
+
+Zobacz także narzędzie image:22px-Mode_locus.svg.png[Mode locus.svg,width=22,height=22] xref:/tools/MiejsceGeometryczne.adoc[MiejsceGeometryczne].
+
+====
+
+image:18px-Attention.png[Warning,title="Warning",width=18,height=18] *Ostrzeżenie*
+
+Miejsce geometryczne jest niezdefiniowane, gdy punkt zależny został utworzony przy użyciu polecenia xref:/commands/Punkt.adoc[Punkt] z dwoma parametrami lub
+xref:/commands/ParametrKrzywej.adoc[ParametrKrzywej].
