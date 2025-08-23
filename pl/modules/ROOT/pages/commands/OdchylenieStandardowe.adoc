@@ -1,0 +1,87 @@
+= Polecenie OdchylenieStandardowe
+:page-en: commands/SD
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+OdchylenieStandardowe( <Lista Surowych Danych> )::
+  Oblicza https://pl.wikipedia.org/wiki/Odchylenie_standardowe[odchylenie standardowe] liczb z listy.
+
+[NOTE]
+====
+
+To polecenie ma także równoważną składnię `stdevp( <Lista Surowych Danych> )`.
+
+====
+
+[EXAMPLE]
+====
+
+* `++OdchylenieStandardowe({1, 2, 3, 4, 5})++` daje w wyniku _1.41_
+
+* `++stdevp({1, 2, 3, 4, 5})++` daje w wyniku _1.41_
+
+====
+
+OdchylenieStandardowe( <Lista Liczb>, <Lista Częstości> )::
+  Oblicza ważone _odchylenie standardowe_ danych liczb.
+
+[NOTE]
+====
+
+To polecenie ma także równoważną składnię `stdevp( <Lista Liczb>, <Lista Częstości> )`.
+
+====
+
+[EXAMPLE]
+====
+
+* `++OdchylenieStandardowe({1, 2, 3, 4, 5}, {5, 4, 3, 2, 1})++` daje w wyniku _1.25_
+* `++stdevp({1, 2, 3, 4, 5}, {5, 4, 3, 2, 1})++` daje w wyniku _1.25_
+
+====
+
+== Specyficzna składnia CAS Syntax
+
+OdchylenieStandardowe( <Lista Surowych Danych> )::
+  Oblicza _odchylenie standardowe_ liczb z listy.
+
+[NOTE]
+====
+
+To polecenie ma także równoważną składnię `stdevp( <Lista Surowych Danych> )`.
+
+====
+
+[EXAMPLE]
+====
+
+* `++OdchylenieStandardowe({1, 2, 3, 4, 5})++` daje w wyniku stem:[\sqrt{2}].
+* `++stdevp({1, 2, 3, 4, 5})++` daje w wyniku stem:[\sqrt{2}].
+* `++OdchylenieStandardowe({-3 + 2 x, -1- 4 x, -2 + 5 x^2})++` daje w xref:/tools/Symbolicznie.adoc[wyniku] stem:[ \sqrt{2}
+\frac{\sqrt{25x⁴ + 10x³ + 28x² - 18x + 3} } { 3 } ].
+
+====
+
+OdchylenieStandardowe( <Lista Liczb>, <Lista Częstości> )::
+  Oblicza ważone _odchylenie standardowe_ danych liczb.
+
+[NOTE]
+====
+
+To polecenie ma także równoważną składnię `stdevp( <Lista Liczb>, <Lista Częstości> )`.
+
+====
+
+[EXAMPLE]
+====
+
+* `++OdchylenieStandardowe({1, 2, 3, 4, 5}, {5, 4, 3, 2, 1})++` daje w wyniku stem:[\frac{\sqrt{14}}{3}]
+* `++stdevp({1, 2, 3, 4, 5}, {5, 4, 3, 2, 1})++` daje w wyniku stem:[\frac{\sqrt{14}}{3}]
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/Średnia.adoc[Średnia].
+
+====
