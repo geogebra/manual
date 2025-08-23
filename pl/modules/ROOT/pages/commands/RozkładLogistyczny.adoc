@@ -1,0 +1,23 @@
+= Polecenie RozkładLogistyczny
+:page-en: commands/Logistic
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RozkładLogistyczny( <Średnia>, <Skala>, <Wartość Zmiennej> )::
+  Oblicza dystrybuantę (funkcję rozkładu skumulowanego) https://pl.wikipedia.org/wiki/Rozk%C5%82ad_logistyczny[rozkładu logistycznego] dla wartości zmiennej _v_, 
+  tzn. wyznacza prawdopodobieństwo _P(X ≤ v)_ gdzie _X_ jest zmienną losową o rozkładzie logistycznym określonym przez podane parametry _średnia_ i _skala_.
+
+[NOTE]
+====
+
+Ta składnia zwraca prawdopodobieństwo dla danej wartości, czyli pole pod krzywą rozkładu logistycznego na lewo od podanej współrzędnej _x_.
+====
+
+RozkładLogistyczny( <Średnia>, <Skala>, <Wartość Zmiennej>, <Czy Skumulowany> )::
+ Jeśli _Czy Skumulowany = true_,oblicza dystrybuantę rozkładu logistycznego o podanej _średniej_ i _skali_ dla danej _wartości zmiennej_. 
+W przeciwnym wypadku oblicza gęstość prawdopodobieństwa tego rozkładu w podanej wartości.
+
+RozkładLogistyczny( <Średnia>, <Skala>, x, <Czy Skumulowany> )::
+ Jeśli _Czy Skumulowany= true_, tworzy dystrybuantę (cdf) rozkładu logistycznego o podanej _średniej_ i _skali_. 
+W przeciwnym razie tworzy funkcję gęstości prawdopodobieństwa (pdf) tego rozkładu.
+
+
