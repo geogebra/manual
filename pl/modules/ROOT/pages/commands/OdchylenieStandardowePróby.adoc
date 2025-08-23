@@ -1,0 +1,56 @@
+= Polecenie OdchylenieStandardowePróby
+:page-en: commands/SampleSD
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+OdchylenieStandardowePróby( <Lista Surowych Danych> )::
+  Zwraca https://pl.wikipedia.org/wiki/Odchylenie_standardowe[odchylenie standardowe próby] dla danej
+  xref:/Listy.adoc[listy] liczb.
+
+[NOTE]
+====
+
+To polecenie ma również równoważną składnię: `stdev( <Lista Surowych Danych> )`.
+
+====
+
+[EXAMPLE]
+====
+
+* `++OdchylenieStandardowePróby({1, 2, 3})++` daje w wyniku _1_.
+
+* `++stdev({1, 2, 3})++` daje w wyniku _1_.
+
+====
+
+OdchylenieStandardowePróby( <Lista Liczba>, <Lista Częstości> )::
+  Zwraca https://pl.wikipedia.org/wiki/Odchylenie_standardowe[odchylenie standardowe próby] dla liczb z _listy_z uwzględnieniem określonych częstości.
+
+[NOTE]
+====
+
+To polecenie ma również równoważną składnię: `stdev( <Lista Liczba>, <Lista Częstości> )`.
+
+====
+
+[EXAMPLE]
+====
+
+* `++OdchylenieStandardowePróby({1, 2, 3, 4},{1, 1, 1, 2})++` daje w wyniku _1.3_.
+* `++stdev({1, 2, 3, 4},{1, 1, 1, 2})++` daje w wyniku _1.3_.
+====
+
+[NOTE]
+====
+
+Jeśli lista zawiera niezdefiniowane zmienne w image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Widok_CAS.adoc[Widoku CAS], 
+ato polecenie zwraca wzór na _odchylenie standardowe próby_.
+
+====
+
+[EXAMPLE]
+====
+
+`++OdchylenieStandardowePróby({1, 2, a})++` daje w wyniku stem:[\frac{\sqrt{a²-3a+3}}{\sqrt{3}}].
+
+====
+
