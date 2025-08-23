@@ -1,0 +1,35 @@
+= Polecenie Próba
+:page-en: commands/Sample
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Próba( <Lista>, <Liczność> )::
+  Zwraca listę _n_ losowo wybranych elementów z listy; elementy mogą się powtarzać.
+
+[EXAMPLE]
+====
+
+`++Próba({1, 2, 3, 4, 5}, 5)++` daje w wyniku na przykład _lista1 = {1, 2, 1, 5, 4}_.
+
+====
+
+Próba( <Lista>, <Liczność>, <Czy z Powtórzeniami> )::
+  Zwraca listę _n_ losowo wybranych elementów z listy. Elementy mogą się powtarzać tylko wtedy, gdy ostatni parametr ma wartość true.
+
+[EXAMPLE]
+====
+
+`++Próba({1, 2, 3, 4, 5}, 5, true)++` daje w wyniku na przykład _lista1 = {2, 3, 3, 4, 5}_.
+
+====
+
+[NOTE]
+====
+
+W image:16px-Menu_view_cas.svg.png[Menu view
+cas.svg,width=16,height=16] xref:/Widok_CAS.adoc[Widoku CAS] lista wejściowa może zawierać różne typy obiektów:
+
+* `++Próba({-5, 2, a, 7, c}, 3)++` daje w wyniku na przykład _{a, 7, -5}_.
+* Lista może zawierać także listy: Niech _Lista1_ be _{1, 2, 3}_: `++Próba({Lista1, 4, 5, 6, 7, 8}, 3, false)++` 
+daje w wyniku na przykład _{6, {1, 2, 3}, 4}_.
+
+====
