@@ -1,0 +1,23 @@
+= Polecenie RozkładLogarytmicznoNormalny
+:page-en: commands/LogNormal
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RozkładLogarytmicznoNormalny( <Średnia>, <Odchylenie Standardowe>, <Wartość Zmiennej> )::
+  Oblicza dystrybuantę (funkcję rozkładu skumulowanego) rozkładu logarytmiczno-normalnego w podanej _wartości zmiennej_, tzn. wyznacza 
+prawdopodobieństwo _P(X ≤ v)_ gdzie _X_ est zmienną losową o rozkładzie logarytmiczno-normalnym określonym przez podane parametry _średnia_ i _odchylenie standardowe_.
+
+RozkładLogarytmicznoNormalny( <Średnia>, <Odchylenie Standardowe>, <Wartość Zmiennej>, <Czy Skumulowany> )::
+  Jeśli _Czy Skumulowany = true_, oblicza dystrybuantę rozkładu logarytmiczno-normalnego o podanej _średniej_ i _odchyleniu standardowym_ w danej _wartości zmiennej_. 
+  W przeciwnym wypadku oblicza gęstość prawdopodobieństwa tego rozkładu dla danej _wartości zmiennej_.
+
+RozkładLogarytmicznoNormalny( <Średnia>, <Odchylenie Standardowe>, x, <Czy Skumulowany> )::
+  Jeśli _Czy Skumulowany = true_, tworzy dystrybuantę (cdf) rozkładu logarytmiczno-normalnego o podanej _średniej_ i _odchyleniu standardowym_. 
+  W przeciwnym razie tworzy funkcję gęstości prawdopodobieństwa (pdf) tego rozkładu.
+
+
+[NOTE]
+====
+
+Ta składnia zwraca prawdopodobieństwo dla danej wartości, czyli pole pod krzywą rozkładu logarytmiczno-normalnego na lewo od podanej współrzędnej _x_.
+
+====
