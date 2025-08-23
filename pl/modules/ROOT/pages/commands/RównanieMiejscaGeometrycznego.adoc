@@ -1,0 +1,48 @@
+= LocusEquation Command
+:page-en: commands/LocusEquation
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RównanieMiejscaGeometrycznego( <Miejsce Geometryczne> )::
+ Oblicza równanie miejsca geometrycznego i rysuje je jako krzywą uwikłaną.
+RównanieMiejscaGeometrycznego( <Punkt Miejsca Geometrycznego>, <Ruchomy Punkt> )::
+  Oblicza równanie miejsca geometrycznego, wykorzystując punkt miejsca geometrycznego _Q_ i ruchomy punkt _P_ i rysuje je jako krzywą uwikłaną.
+
+[EXAMPLE]
+====
+
+Przykład konstrukcji paraboli jako miejsca geometrycznego: utwórz dowolne punkty _A_ i _B_ oraz prostą _d_ przechodzącą przez nie 
+(to będzie kierownica paraboli). Utwórz dowolny punkt _F_ jako ognisko. Następnie utwórz punkt _P_ na prostej _d_ (ruchomy punkt), a potem 
+prostą _p_ jako prostą prostopadłą do _d_ przechodzącą przez _P_. Następnie utwórz prostą _b_ symetralną odcinka
+_FP_. Wreszcie punkt _Q_ (punkt miejsca geometrycznego) to punkt przecięcia prostych _p_ i _b_.
+Polecenie `++LocusEquation(Q,P)++` znajdzie i narysuje dokładne równanie tego miejsca geometrycznego.
+
+====
+
+RównanieMiejscaGeometrycznego( <Wyrażenie logiczne>, <Ruchomy punkt> )::
+  Oblicza miejsce geometryczne punktu swobodnego, dla którego warunek logiczny jest spełniony.
+
+[EXAMPLE]
+====
+
+`++RównanieMiejscaGeometrycznego(SąWspółliniowe(A, B, C), A)++` dla punktów swobodnych _A_, _B_, _C_ oblicza zbiór położeń punktu _A_ dla
+których _A_, _B_ i _C_ są współliniowe,czyli prostą przechodzącą przez _B_ i C__.__
+
+====
+
+[NOTE]
+====
+
+* Miejsce geometryczne musi być tworzone z punktu (nie ze suwaka).
+* Działa tylko dla ograniczonego zestawu miejsc geometrycznych, tj. z użyciem punktów, prostych, okręgów, stożkowych. 
+  (Półproste i odcinki są traktowane jako proste).
+* Jeśli miejsce jest zbyt skomplikowane, wynikiem będzie obiekt 'niezdefiniowany'.
+*Jeśli miejsce geometryczne nie istnieje, krzywa implicit będzie zbiorem pustym 0=1.
+* Jeśli miejscem geometrycznym jest cała płaszczyzna, krzywa uwikłana będzie miała równanie 0=0.
+* Obliczenia wykonywane są przy użyciu https://pl.wikipedia.org/wiki/Baza_Gr%C3%B6bnera[baz Gröbnera], więc czasami mogą pojawić 
+  się dodatkowe gałęzie krzywej, których nie było w oryginalnym miejscu geometrycznym.
+* Więcej informacji i przykładów można znaleźć na stronie https://www.geogebra.org/m/KZVzqVEM[geogebra.org]. Dostępna jest także
+https://www.geogebra.org/m/mbXQuvUV[kolekcja przykładów miejsc geometrycznych w postaci krzywych uwikłanych].
+* Zobacz także polecenie xref:/commands/MiejsceGeometryczne.adoc[MiejsceGeometryczne] i
+https://github.com/kovzol/gg-art-doc/tree/master/pdf/english.pdf[Narzędzia Automatycznego Rozumowania w GeoGebrze: Samouczek (ang.)].
+
+====
