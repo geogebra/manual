@@ -1,0 +1,102 @@
+= Polecenie Max
+:page-en: commands/Max
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Max( <Lista> )::
+  Zwraca największą liczbę z listy.
+
+[EXAMPLE]
+====
+
+`++Max({-2, 12, -23, 17, 15})++` daje w wyniku _17_.
+
+====
+
+[NOTE]
+====
+
+Jeśli dane wejściowe zawierają obiekty nienumeryczne, polecenie bierze pod uwagę liczby z nimi związane.
+Na przykład, dla listy odcinków _Max( <Lista> )_ zwróci długość najdłuższego odcinka.
+
+====
+
+Max( <Przedział> )::
+
+Zwraca górną granicę przedziału.
+
+[EXAMPLE]
+====
+
+`++Max(2 < x < 3)++` daje w wyniku _3_.
+
+====
+
+[NOTE]
+====
+
+Przedziały otwarte i domknięte są traktowane tak samo.
+
+====
+
+Max( <Number>, <Number> )::
+
+Zwraca większą z dwóch podanych liczb.
+
+[EXAMPLE]
+====
+
+`++Max(12, 15)++` daje w wyniku _15_.
+
+====
+
+
+Max( <Funkcja>, <Wartość początkowa x>, <Wartość końcowa x> )::
+  Numerycznie oblicza *lokalne* maksimum funkcji w zadanym przedziale. Funkcja powinna być ciągła i mieć w przedziale tylko jedno _lokalne_ maksimum (oraz brak lokalnego minimum).  
+
+
+[EXAMPLE]
+====
+
+`++Max(exp(x)x^2,-3,-1)++` tworzy punkt (-2, 0.54134).
+
+====
+
+[NOTE]
+====
+
+Dla wielomianów należy używać polecenia xref:/commands/Ekstremum.adoc[Ekstremum].
+
+====
+
+Max(<Lista Danych>, <Lista Częstości> )::
+  Zwraca maksimum z listy danych z uwzględnieniem odpowiadających im częstości.
+
+[EXAMPLE]
+====
+
+`++Max({1, 2, 3, 4, 5}, {5, 3, 4, 2, 0})++` daje w wyniku 4, czyli największą liczbę z listy, której częstość jest większa od 0.
+
+====
+
+[NOTE]
+====
+
+* Jeśli chcesz znaleźć maksimum dwóch funkcji `++f(x)++` i `++g(x)++` możesz je zdefiniować jako
+`++(f(x) + g(x) + abs(f(x) - g(x)))/2++`
+* Zobacz także polecenia xref:/commands/Ekstremum.adoc[Ekstremum], xref:/commands/Min.adoc[Min] oraz narzędzie
+xref:/tools/Badanie_własności_funkcji.adoc[Badanie własności funkcji].
+
+====
+
+== Specyficzna składnia CAS
+
+Max( <Funkcja>, <Wartość początkowa x>, <Wartość końcowa x> )::
+  W przeciwieństwie do Widoku Algebry, ta składnia zwraca maksimum w przedziale, włącznie z końcami przedziału.
+
+[EXAMPLE]
+====
+
+* `++Max(x^2,-1,2)++` daje w wyniku punkt _(2,4)_
+* `++Max(-x^2,-1,2)++` daje w wyniku punkt _(0,0)_
+
+====
