@@ -1,0 +1,76 @@
+= Polecenie UstawKolor
+:page-en: commands/SetColor
+:page-aliases: commands/SetColour.adoc
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+image:64px-Globe.png[Globe.png,width=64,height=64,role=left]
+
+To polecenie ma dwie wersje w języku angielskim:
+
+* SetColor (US)
+* SetColour (UK + Aus)
+
+====
+
+UstawKolor( <Obiekt>, <Czerwony>, <Zielony>, <Niebieski> )::
+  Zmienia kolor podanego obiektu. Parametry czerwony, zielony i niebieski określają ilość odpowiedniego składnika barwy, gdzie 0 oznacza minimum, 
+a 1 maksimum. Liczba _t_wykraczająca poza ten przedział jest odwzorowywana do niego za pomocą funkcji
+  stem:[2\left|\frac{t}2-\mathrm round\left(\frac{t}2\right)\right|].
+UstawKolor( <Obiekt>, <Kolor> )::
+  Zmienia kolor podanego obiektu. Kolor wprowadza się jako xref:/Teksty.adoc[tekst], który może być:
+  * angielską nazwą koloru (patrz xref:en@reference::/Colors.adoc[lista kolorów]). Niektóre z nich mogą być używane także w językach narodowych 
+i są wymienione poniżej.
+
+[NOTE]
+====
+
+Jeśli używasz tego polecenia w GeoGebraScript, musisz korzystać z angielskich nazw kolorów.
+
+====
+
+* ciągiem szesnastkowym w formacie #AARRGGBB lub #RRGGBB, gdzie _AA_ określa przezroczystość (od 01 – pełna przezroczystość, do FF
+– pełna nieprzezroczystość), _RR_ określa składnik czerwony, _GG_ - składnik zielony _BB_ - składnik niebieski.
+
+[EXAMPLE]
+====
+
+`++UstawKolor(tekst1, "#80FF0000")++` ustawia kolor istniejącego _tekst1_ na czerwony z 50% przezroczystością.
+
+====
+
+* Czarny
+* Grafitowy
+* Szary
+* Ciemnoniebieski
+* Niebieski
+* Ciemnozielony
+* Zielony
+* Bordowy
+* Karmazynowy
+* Czerwony
+* Fuksja
+* Indygo
+* Fioletowy
+* Brązowy
+* Pomarańczowy
+* Złoty
+* Limonkowy
+* Cyjan
+* Turkusowy
+* Jasnoniebieski
+* Akwamarynowy
+* Srebrny
+* Jasnoszary
+* Różowy
+* Fiołkowy
+* Żółty
+* Jasnożółty
+* Jasnopomarańczowy
+* Jasnofiołkowy
+* Jasnofioletowy
+* Jasnozielony
+* Biały
+
+ 
