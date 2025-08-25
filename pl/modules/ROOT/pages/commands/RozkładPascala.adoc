@@ -1,0 +1,40 @@
+= Polecenie RozkładPascala
+:page-en: commands/Pascal
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RozkładPascala( <n>, <p> )::
+  Zwraca wykres słupkowy https://pl.wikipedia.org/wiki/Rozk%C5%82ad_Pascala[rozkładu Pascala].
+
+Rozkład Pascala modeluje liczbę niepowodzeń przed __n__-tym sukcesem w powtarzanych, wzajemnie niezależnych próbach Bernoulliego, 
+z prawdopodobieństwem sukcesu _p_ w każdej próbie.
+
+RozkładPascala( <n>, <p>, <Czy Skumulowany> )::
+  Zwraca wykres słupkowy rozkładu Pascala, gdy _Czy Skumulowany_ = false.
+  Zwraca wykres skumulowanego rozkładu Pascala, gdy _Czy Skumulowany_ = true.
+  Pierwsze dwa parametry są takie same jak powyżej.
+
+RozkładPascala( <n>, <p>, <Wartość Zmiennej>, <Czy Skumulowany> )::
+  Niech X będzie zmienną losową o rozkładzie Pascala, a _v_ wartością zmiennej.
+  Zwraca P( X = _v_), gdy _Czy Skumulowany_ = false.
+  Zwraca P( X ≤ _v_), gdy _Czy Skumulowany_ = true.
+  Pierwsze dwa parametry są takie same jak powyżej.
+
+[EXAMPLE]
+====
+
+Jeśli liczba niezależnych prób Bernoulliego, które muszą zakończyć się sukcesem, wynosi n = 1, a prawdopodobieństwo sukcesu w jednej próbie to
+p = stem:[\frac{1}{6}], to prawdopodobieństwo 2 niepowodzeń przed sukcesem wyraża się jako:
+
+`++ RozkładPascala(1, 1/6, 2, false)++` co daje _0.12_ w image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/Widok_Algebry.adoc[Widoku Algebry] i _25/216_ w
+image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Widok_CAS.adoc[Widoku CAS].
+
+====
+
+[NOTE]
+====
+
+To polecenie działa również w image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/Widok_CAS.adoc[Widoku CAS].
+
+====
