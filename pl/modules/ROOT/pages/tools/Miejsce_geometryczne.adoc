@@ -1,0 +1,32 @@
+= Narzędzie Miejsce geometryczne
+:page-en: tools/Locus
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Mając punkt _B_ zależny od innego punktu _A_ należącego do obiektu geometrycznego (np. prostej, odcinka, okręgu), aktywuj narzędzie, a następnie wybierz punkt _B_ i punkt _A_, 
+aby wygenerować miejsce geometryczne punktu _B_, gdy _A_ porusza się wzdłuż swojego ograniczenia.
+
+[EXAMPLE]
+====
+
+* Wpisz `++f(x) = x^2 – 2 x – 1++` w _polu wprowadzani_ i naciśnij [.kcode]#Enter# key.
+* Umieść punkt _A_ na osi _x_ (patrz narzędzie image:22px-Mode_point.svg.png[Mode point.svg,width=22,height=22]
+xref:/tools/Punkt.adoc[Punkt] tool lub polecenie xref:/commands/Punkt.adoc[Punkt]).
+* Utwórz punkt `++B = (x(A), f'(x(A)))++` zależny od punktu _A_.
+* Wybierz narzędzie image:22px-Mode_locus.svg.png[Mode locus.svg,width=22,height=22] _Miejsce geometryczne_ i kolejno wybierz punkt
+_B_ i punkt _A_, aby utworzyć miejsce geometryczne.
+* Przeciągnij punkt _A_ wzdłuż osi _x_, aby zobaczyć, jak punkt _B_ porusza się wzdłuż miejsca geometrycznego.
+
+====
+
+[WARNING]
+====
+Miejsce geometryczne będzie _niezdefiniowane_, jeśli punkt zależny został zdefiniowany za pomocą polecenia xref:/commands/Punkt.adoc[Punkt] z dwoma parametrami 
+lub polecenia the xref:/commands/ParametrKrzywej.adoc[ParametrKrzywej].
+====
+
+[NOTE]
+====
+
+* Zobacz także polecenie xref:/commands/MiejsceGeometryczne.adoc[MiejsceGeometryczne].
+
+====
