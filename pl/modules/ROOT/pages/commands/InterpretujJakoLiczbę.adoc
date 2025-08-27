@@ -1,0 +1,39 @@
+= Polecenie InterpretujJakoLiczbę
+:page-en: commands/ParseToNumber
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+InterpretujJakoLiczbę( <Liczba>, <Tekst> )::
+  Analizuje tekst i zapisuje wynik do xref:/Numbers_and_Angles.adoc[liczby] _a_, która musi być zdefiniowana i
+  xref:/Obiekty_Swobodne_Zależne_i_Pomocnicze.adoc[swobodna] przed użyciem polecenia.
+
+[EXAMPLE]
+====
+
+Zdefiniuj `++ a = 3++` i `++ tekst1 = "6"++`. `++ InterpretujJakoLiczbę(a, tekst1)++` zwraca _a = 6_.
+
+====
+
+[NOTE]
+====
+
+Jest to xref:/commands//Skrypty_Polecenia.adoc[polecenie skryptowe] które ustawia wartość liczby tylko raz. 
+Aby przekonwertować tekst _tekst1_ na liczbę aktualizowaną dynamicznie, użyj xref:/commands/ZSystemuLiczenia.adoc[ZSystemuLiczenia](tekst1,10).
+
+====
+
+InterpretujJakoLiczbę( <Tekst> )::
+  Analizuje tekst i zapisuje wynik do xref:/Liczby_i_Kąty.adoc[liczby].
+
+[EXAMPLE]
+====
+
+`++InterpretujJakoLiczbę("1+2+5-pi")++` tworzy liczbę _a = 4.86_.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/InterpretujJakoFunkcję.adoc[InterpretujJakoFunkcję].
+
+====
