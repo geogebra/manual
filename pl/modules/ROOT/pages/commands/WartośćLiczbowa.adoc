@@ -1,0 +1,52 @@
+= Polecenie WartośćLiczbowa
+:page-en: commands/Numeric
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+== Specyficzna składnia CAS
+
+WartośćLiczbowa( <Wyrażenie> )::
+  Próbuje obliczyć przybliżenie numeryczne podanego wyrażenia. Liczba miejsc po przecinku zależy 
+od ogólnego zaokrąglenia wybranego w xref:/Menu_Ustawienia.adoc[menu Ustawienia].
+
+[EXAMPLE]
+====
+
+`++WartośćLiczbowa(3 / 2)++` daje w wyniku _1.5_.
+
+====
+
+WartośćLiczbowa( <Wyrażenie>, <Cyfry Znaczące> )::
+  Próbuje obliczyć przybliżenie numeryczne podanego wyrażenia, używając podanej liczby cyfr znaczących.
+
+[EXAMPLE]
+====
+
+`++WartośćLiczbowa(sin(1), 20)++` daje w wyniku _0.84147098480789650665_.
+
+====
+
+[NOTE]
+====
+
+Jeśli nie podasz wystarczającej liczby cyfr, możesz otrzymać pozornie błędny wynik z powodu
+http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html[przybliżeń w arytmetyce zmiennoprzecinkowej.].
+
+====
+
+[EXAMPLE]
+====
+
+`++WartośćLiczbowa(-500000000/785398163*sin(785398163/500000000)*1258025227.19^2+500000000/785398163*1258025227.19^2,10)++` zwróci
+_4096_, ale
+`++WartośćLiczbowa(-500000000/785398163*sin(785398163/500000000)*1258025227.19^2+500000000/785398163*1258025227.19^2,30)++` zwróci
+_0.318309886345536696694580314215_.
+
+
+====
+
+[NOTE]
+====
+
+Zobacz także narzędzie image:24px-Mode_numeric.svg.png[width=24,height=24] xref:/tools/Wartość_liczbowa.adoc[Wartość liczbowa].
+
+====
