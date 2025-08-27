@@ -1,0 +1,42 @@
+= Polecenie InterpretujJakoFunkcję
+:page-en: commands/ParseToFunction
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+InterpretujJakoFunkcję( <Tekst> )::
+  Analizuje tekst zawierający definicję funkcji i tworzy odpowiadającą mu xref:/Funkcje.adoc[funkcję].
+
+[EXAMPLE]
+====
+
+* `++ InterpretujJakoFunkcję("x^2")++` tworzy funkcję _f_(_x_) = __x__^2^_._
+* `++ InterpretujJakoFunkcję("t+2/t")++` tworzy funkcję _f_(_t_) = _t_ + 2/_t_.
+
+====
+
+InterpretujJakoFunkcję( <Funkcja>, <Tekst> )::
+  Analizuje ciąg znaków i zapisuje wynik do xref:/Funkcje.adoc[funkcji] _f_, która musi być zdefiniowana i
+  xref:/Obiekty_Swobodne_Zależne_i_Pomocnicze.adoc[swobodna] przed użyciem polecenia.
+
+[EXAMPLE]
+====
+
+Zdefiniuj `++ f(x) = 3x² + 2++` i `++ tekst1 = "f(x) = 3x + 1"++`. `++ InterpretujJakoFunkcję(f, tekst1)++` zwraca _f(x) = 3x +1_.
+
+====
+
+InterpretujJakoFunkcję( <Tekst>, <Lista Zmiennych> )::
+  Analizuje tekst zawierający definicję funkcji i tworzy odpowiadającą mu xref:/Funkcje.adoc[funkcję] wielu zmiennych określonych w liście.
+
+[EXAMPLE]
+====
+
+`++ InterpretujJakoFunkcję("2u+3v",{"u", "v"})++` tworzy funkcję _a(u,v) = 2u + 3v_.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/InterpretujJakoLiczbę.adoc[InterpretujJakoLiczbę].
+
+====
