@@ -1,0 +1,25 @@
+= Polecenie NOdwrotność
+:page-en: commands/NInvert
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+NOdwrotność( <Funkcja> )::
+Zwraca funkcję odwrotną do podanej, bez wyświetlania jej jawnego wzoru. 
+Jeśli chcesz uzyskać wzór, użyj zamiast tego polecenia xref:./Odwrotność.adoc[Odwrotność].
+
+[EXAMPLE]
+====
+
+`++NOdwrotność(sin(x))++` daje w wyniku funkcję _f_ taką, że _sin(f(x))=x_ dla _-1 < x < 1_.
+
+====
+
+[NOTE]
+====
+
+*Nie są uwzględniane dziedzina ani zbiór wartości, na przykład dla f(x) = x^2^ lub f(x) = sin(x).
+
+* Polecenie działa szybciej dla funkcji, które zawierają tylko jedną zmienną _x_.
+Aby zwiększyć wydajność konstrukcji, możesz przekształcić swoje funkcje i użyć np. `NOdwrotność((x+1)^2-1)` zamiast `NOdwrotność(x^2+2x)`.
+
+====
+
