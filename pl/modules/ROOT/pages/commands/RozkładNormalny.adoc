@@ -1,0 +1,40 @@
+= Polecenie RozkładNormalny
+:page-en: commands/Normal
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RozkładNormalny( <Średnia>, <Odchylenie Standardowe>, <Wartość Zmiennej> )::
+  Oblicza funkcję stem:[\Phi \left(\frac{x- \mu}{\sigma} \right) ] dla _wartości zmiennej v_, gdzie _Φ_ jest 
+dystrybuantą rozkładu normalnego standaryzowanego _N(0,1)_, przy zadanej średniej μ_ i odchyleniu standardowym σ_.
+
+
+[EXAMPLE]
+====
+
+`++RozkładNormalny(2, 0.5, 1)++` daje w wyniku _0.02_ w image:16px-Menu_view_algebra.svg.png[links=,width=16,height=16]
+xref:/Widok_Algebry.adoc[Widoku Algebry] i stem:[\frac{erf(-\sqrt{2})+1}{2}] w
+image:16px-Menu_view_cas.svg.png[links=,width=16,height=16] xref:/Widok_CAS.adoc[Widoku CAS].
+
+====
+
+[NOTE]
+====
+
+Ta składnia zwraca prawdopodobieństwo dla danej wartości, czyli pole pod krzywą rozkładu normalnego na lewo od podanej współrzędnej _x_.
+
+====
+
+RozkładNormalny( <Średnia>, <Odchylenie Standardowe>, <Wartość Zmiennej>, <Czy Skumulowany> )::
+  Jeśli _Czy Skumulowany = true_, oblicza dystrybuantę https://pl.wikipedia.org/wiki/Rozk%C5%82ad_normalny[rozkładu normalnego] 
+o zadanej _średniej_ i _odchyleniu standardowym_ w podanej _wartości zmiennej_.
+W przeciwnym razie oblicza funkcję gęstości prawdopodobieństwa tego rozkładu w danej _wartości zmiennej_.
+
+RozkładNormalny( <Średnia>, <Odchylenie Standardowe>, <Wartość Zmiennej u> , <Wartość Zmiennej v>)::
+ Oblicza prawdopodobieństwo zmiennej losowej o rozkładzie normalnym w przedziale [_u_, _v_], dla zadanej średniej i odchylenia standardowego. 
+Innymi słowy, składnia `RozkładNormalny(_m_, _s_, _u_, _v_)` jest równoważna `RozkładNormalny(_m_, _s_, _v_, true) - RozkładNormalny(_m_, _s_, _u_, true)` 
+
+RozkładNormalny( <Średnia>, <Odchylenie Standardowe>, x, <Czy Skumulowany> )::
+ Jeśli _Czy Skumulowany = true_, tworzy dystrybuantę (CDF) rozkładu normalnego o zadanej _średniej_ i _odchyleniu standardowym_, 
+w przeciwnym razie tworzy funkcję gęstości prawdopodobieństwa (PDF) tego rozkładu.
+
+
+
