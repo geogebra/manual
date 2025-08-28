@@ -1,0 +1,62 @@
+= Polecenie SumaElementów
+:page-en: commands/Sum
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+SumaElementów( <Lista> )::
+  Oblicza sumę wszystkich elementów listy.
+
+[EXAMPLE]
+====
+
+* `++SumaElementów({1, 2, 3})++` daje w wyniku liczbę _a = 6_.
+* `++SumaElementów({x^2,  x^3})++` daje w wyniku _f(x) = x^2^ + x^3^_.
+* `++SumaElementów(Sequence(i, i, 1, 100))++` yields liczbę _a = 5050_.
+* `++SumaElementów({(1, 2), (2, 3)})++` daje w wyniku punkt _A = (3, 5)_.
+* `++SumaElementów({"a", "b", "c"})++` daje w wyniku tekst _"abc"_.
+
+====
+
+SumaElementów( <Lista>, <Liczba Elementów> )::
+  Oblicza sumę pierwszych _n_ elementów listy.
+
+[EXAMPLE]
+====
+
+`++Sum({1, 2, 3, 4, 5, 6}, 4)++` daje w wyniku liczbę _a = 10_.
+
+====
+
+SumaElementów( <Lista>, <Lista Częstości> )::
+  Zwraca sumę podanej listy wartości, uwzględniając odpowiadające im częstotliwości.
+
+[EXAMPLE]
+====
+
+`++SumaElementów({1, 2, 3, 4, 5}, {3, 2, 4, 4, 1})++` zwraca _a = 40_.
+
+====
+
+[NOTE]
+====
+
+* To polecenie działa dla liczb, punktów, wektorów, tekstów i funkcji.
+* Listy muszą zawierać obiekty tego samego typu.
+
+====
+
+== Specyficzna składnia CAS
+
+Poniższe polecenie działa tylko w image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/Widok_CAS.adoc[Widoku CAS].
+
+SumaElementów( <Wyrażenie>, <Zmienna>, <Wartość Początkowa>, <Wartość Końcowa> )::
+  Oblicza sumę: stem:[\sum_{t=Start Value}^{End Value}f(t)]. Wartość końcowa może być także nieskończonością.
+
+[EXAMPLE]
+====
+
+* `++SumaElementów(n^2, n, 1, 3)++` daje w wyniku _14_.
+* `++SumaElementów(r^k, k, 0, n)++` daje w wyniku _stem:[\frac{r^{n+1} }{r - 1} - \frac{1}{r - 1}]_.
+* `++SumaElementów((1/3)^n, n, 0, ∞)++` daje w wyniku _stem:[\frac{3}{2}]_.
+
+====
