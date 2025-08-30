@@ -1,0 +1,40 @@
+= Polecenie Udowodnij
+:page-en: commands/Prove
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Udowodnij( <Wyrażenie logiczne> )::
+  Zwraca informację, czy podane wyrażenie logiczne jest prawdziwe lub fałszywe w ogólnym przypadku.
+
+Zazwyczaj GeoGebra sprawdza, czy wyrażenie logiczne jest prawdziwe, wykorzystując obliczenia numeryczne. 
+Jednak polecenie Udowodnij używa https://pl.wikipedia.org/wiki/Obliczenia_symboliczne[metod symbolicznych], 
+aby określić, czy dane stwierdzenie jest _prawdziwe_ lub _fałszywe_ w ogólnym przypadku.
+determine whether a statement is _true_ or _false_ in general. 
+Jeśli GeoGebra nie potrafi ustalić odpowiedzi, wynik będzie _niezdefiniowany_.
+
+[EXAMPLE]
+====
+
+Zdefiniujmy trzy punkty `++A=(1,2)++`, `++B=(3,4)++`, `++C=(5,6)++`. Polecenie `++SąWspółliniowe(A,B,C)++` zwraca
+_true_, , ponieważ sprawdzenie numeryczne potwierdza współliniowość przy aktualnych współrzędnych punktów. 
+Jednak `++Udowodnij(SąWspółliniowe(A,B,C))++` zwróci _false_, ponieważ trzy punkty nie są współliniowe
+w ogólnym przypadku, tzn. po zmianie ich położenia.
+
+====
+
+[EXAMPLE]
+====
+
+Niech _A_, _B_ i _C_ będą wierzchołkami tójkątami. Zdefiniujmy `++D=PunktŚrodkowy(B,C)++`, `++E=PunktŚrodkowy(A,C)++`,
+`++p=Prosta(A,B)++`, `++q=Prosta(D,E)++`. Wtedy zarówno `++p∥q++`, jak i `++Udowodnij(p∥q)++` zwraca _true_, ponieważ odcinek
+łączący środki boków w trójkącie jest zawsze równoległy do trzeciego boku. Zobacz także https://www.geogebra.org/m/vhZETdtd[interaktywną
+wersję tego przykładu].
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/UdowodnijSzczegółowo.adoc[UdowodnijSzczegółowo] oraz xref:/Wartości_boolowskie.adoc[artykuł o wartościcha boolowskich]
+i https://github.com/kovzol/gg-art-doc/tree/master/pdf/english.pdf[Narzędzia automatycznego wnioskowania w GeoGebrze: samouczek (ang.)].
+
+====
