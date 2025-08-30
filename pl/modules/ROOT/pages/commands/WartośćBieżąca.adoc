@@ -1,0 +1,46 @@
+= Polecenie WartośćBieżąca
+:page-en: commands/PresentValue
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+WartośćBieżąca( <Stopa>, <Liczba Okresów>, <Płatność>, <Wartość Przyszła (opcjonalnie)>, <Typ (opcjonalnie)> )::
+  Zwraca łączną wartość bieżącą inwestycji/pożyczki.
+
+* *<Stopa>* – stopa procentowa za okres.
+* *<Liczba Okresów>* – łączna liczba płatności dla inwestycji/pożyczki.
+* *<Płatność>* – kwota płacona w każdym okresie rozliczeniowym.
+* *<Wartość Przyszła (opcjonalnie)>* – saldo gotówki, które chcesz uzyskać po ostatniej płatności. 
+Jeśli nie podasz wartości przyszłej, przyjmowana jest wartość 0.
+* *<Typ (opcjonalnie)>* – wskazuje, kiedy płatności są należne. Jeśli nie podasz wartości lub wpiszesz 0, płatność 
+jest należna na końcu okresu. Jeśli wpiszesz 1, płatność jest należna na początku okresu.
+
+[EXAMPLE]
+====
+
+`++WartośćBieżąca(12%/12, 4*12, -100, 5000, 0)++` zwraca wartość bieżącą równą 696.06.
+
+`++WartośćBieżąca(12%/12, 4*12, -100, 5000, 1)++` zwraca wartość bieżącą równą 734.07.
+
+====
+[NOTE]
+====
+
+Należy zachować spójność jednostek dla parametrów `++<Stopa>++` i `++<Liczba Okresów>++`. 
+Jeśli płatności są miesięczne dla czteroletniej inwestycji/pożyczki przy rocznej stopie 12 procent, jako <Stopę> wpisz 12%/12, a 4*12 jako
+<Liczba Okresów>.
+
+====
+
+[NOTE]
+====
+
+Dla wszystkich argumentów: gotówka wypłacana oznaczana jest liczbami ujemnymi, a gotówka otrzymywana – liczbami dodatnimi.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenia xref:/commands/Rata.adoc[Rata], xref:/commands/Okresy.adoc[Okresy], xref:/commands/Stopa.adoc[Stopa] i
+xref:/commands/PrzyszłaWartość.adoc[PrzyszłaWartość].
+
+====
