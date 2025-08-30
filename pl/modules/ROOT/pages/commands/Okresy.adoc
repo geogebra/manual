@@ -1,0 +1,46 @@
+= Polecenie Okresy
+:page-en: commands/Periods
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Okresy( <Stopa>, <Płatność>, <Wartość Bieżąca>, <Wartość przyszła (opcjonalnie)>, <Typ (opcjonalnie)> )::
+  Zwraca liczbę okresów dla renty opartej na okresowych, stałych płatnościach i stałej stopie procentowej.
+
+* *<Stopa>* - stopa procentowa za okres.
+* *<Płatność>* - rata w każdym okresie.
+* *<Wartość Bieżąca>* – łączna kwota, jaką warta jest dziś seria przyszłych płatności.
+* *<Wartość przyszła (opcjonalnie)>* – saldo gotówki, które chcesz uzyskać po ostatniej płatności. 
+  Jeśli nie podasz wartości przyszłej, przyjmowana jest wartość 0.
+* *<Typ (opcjonalnie)>* – wskazuje, kiedy płatności są należne. Jeśli nie podasz wartości lub wpiszesz 0, 
+płatność jest należna na końcu okresu. Jeśli wpiszesz 1, płatność jest należna na początku okresu.
+
+[EXAMPLE]
+====
+
+`++Okresy(10%/12, -200, -400, 10000)++` zwraca liczbę płatności równą 39.98.
+
+`++Okresy(10%/12, -200, -400, 10000, 1)++` zwraca liczbę płatności równą 39.7.
+
+====
+
+[NOTE]
+====
+
+Jeśli płatności są miesięczne, a roczna stopa procentowa wynosi 10%, wpisz jako `++<Stopa>++` 10%/12.
+
+
+====
+
+[NOTE]
+====
+
+Dla wszystkich argumentów: gotówka wypłacana oznaczana jest liczbami ujemnymi, a gotówka otrzymywana – liczbami dodatnimi.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenia xref:/commands/Rata.adoc[Rata], xref:/commands/Stopa.adoc[Stopa], xref:/commands/WartośćBieżąca.adoc[WartośćBieżąca]
+i xref:/commands/PrzyszłaWartość.adoc[PrzyszłaWartość].
+
+====
