@@ -1,0 +1,43 @@
+= Polecenie Stopa
+:page-en: commands/Rate
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Stopa( <Liczba Okresów>, <Płatność>, <Wartość Bieżąca>, <Wartość Przyszła (opcjonalnie))>, <Typ (opcjonalnie)>, <Zgadnij (opcjonalnie)> )::
+ Zwraca stopę procentową na jeden okres rozliczeniowy dla an pożyczki.
+
+* *<Liczba Okresów>* – łączna liczba płatności dla pożyczki.
+* *<Płatność>* – kwota płacona w każdym okresie rozliczeniowym.
+* *<Wartość Bieżąca>* – łączna kwota, jaką warta jest dziś seria przyszłych płatności.
+* *<Wartość Przyszła (opcjonalnie)>* – saldo gotówki, które chcesz uzyskać po ostatniej płatności. Jeśli nie podasz wartości przyszłej, 
+przyjmowana jest wartość 0.
+* *<Typ (opcjonalnie)>* – wskazuje, kiedy płatności są należne. Jeśli nie podasz wartości lub wpiszesz 0, płatność jest należna 
+na końcu okresu. Jeśli wpiszesz 1, płatność jest należna na początku okresu.
+* *<Zgadnij (opcjonalnie)>* – Twoje przypuszczenie, jakiej wielkości będzie stopa procentowa (ułatwia obliczenia).
+
+[EXAMPLE]
+====
+
+`++Stopa(5*12, -300, 10000)++` zwraca stopę miesięczną 0.02 (2%).
+
+====
+
+[NOTE]
+====
+
+Jeśli spłacasz pożyczkę przez pięć lat z płatnościami miesięcznymi, użyj dla `++<Liczba okresów>++` liczby 5*12.
+====
+
+[NOTE]
+====
+
+Dla wszystkich argumentów: gotówka wypłacana oznaczana jest liczbami ujemnymi, a gotówka otrzymywana – liczbami dodatnimi.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenia xref:/commands/Rata.adoc[Rata], xref:/commands/Okresy.adoc[Okresy],
+xref:/commands/WartośćBieżąca.adoc[WartośćBieżąca] i xref:/commands/PrzyszłaWartość.adoc[PrzyszłaWartość].
+
+====
