@@ -1,0 +1,64 @@
+= Polecenie NRozwiązania
+:page-en: commands/NSolutions
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+NRozwiązania( <Równanie> )::
+  Próbuje (numerycznie) znaleźć rozwiązanie równania względem głównej zmiennej.
+Dla równań niebędących wielomianami należy zawsze podać wartość początkową (patrz niżej).
+
+[EXAMPLE]
+====
+
+`++NRozwiązania(x^6 - 2x + 1 = 0)++` zwraca _{0.51, 1}_ lub _{0.508660391642, 1}_ (liczba miejsc po przecinku zależy 
+od ustawienia xref:/Menu_Ustawienia.adoc[ogólnego zaokrąglenia])
+
+====
+
+== Specyficzna składnia CAS
+
+Poniższe składnie są dostępne tylko w image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/Widok_CAS.adoc[Widoku CAS].
+
+NRozwiązania( <Równanie>, <Zmienna> )::
+  Próbuje (numerycznie) znaleźć rozwiązanie równania względem podanej niewiadomej.
+Dla równań niebędących wielomianami należy zawsze podać wartość początkową (patrz niżej).
+
+[EXAMPLE]
+====
+
+`++NRozwiązania(a^4 + 34a^3 = 34, a)++` zwraca _{a = -34.00086498588374, a = 0.9904738885574178}_.
+
+====
+
+NRozwiązania( <Równanie>, <Zmienna = wartość początkowa> )::
+  Numerycznie znajduje listę rozwiązań danego równania względem podanej niewiadomej, rozpoczynając od wskazanej wartości początkowej.
+
+[EXAMPLE]
+====
+
+* `++NRozwiązania(cos(x) = x, x = 0)++` zwraca listę _{0.74}_
+* `++NRozwiązania(a^4 + 34a^3 = 34, a = 3)++` zwraca listę _{0.99}_.
+
+====
+
+NRozwiązania( <Lista Równań>, <Lista Zmiennych> )::
+  Próbuje (numerycznie) znaleźć rozwiązanie układu równań względem podanego zestawu niewiadomych.
+
+[EXAMPLE]
+====
+
+`++NRozwiązania({pi / x = cos(x - 2y), 2 y - pi = sin(x)}, {x = 3, y = 1.5})++` zwraca listę _{3.14, 1.57}_
+
+====
+
+[NOTE]
+====
+
+* Jeśli nie podasz punktu startowego _a=3_ lub _{x = 3, y = 1.5}_, algorytm numeryczny może mieć trudność 
+  ze znalezieniem rozwiązania (a nawet podanie punktu startowego nie gwarantuje jego znalezienia).
+* Liczba  miejsc po przecinku zależy od ustawienia xref:/Menu_Ustawienia.adoc[ogólnego zaokrąglenia].
+* NRozwiązania nie działa dla funkcji asymptotycznych względem osi x. Często jednak można je odpowiednio przekształcić.
+* NRozwiązania działa tylko wtedy, gdy funkcja jest ciągła.
+* Zobacz także polecenia xref:/commands/Rozwiązania.adoc[Rozwiązania] i xref:/commands/NRozwiąż.adoc[NRozwiąż].
+
+====
