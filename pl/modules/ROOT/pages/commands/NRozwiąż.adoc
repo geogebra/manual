@@ -1,0 +1,64 @@
+= Polecenie NRozwiąż
+:page-en: commands/NSolve
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+NRozwiąż( <Równanie> )::
+  Próbuje (numerycznie) znaleźć rozwiązanie równania względem głównej zmiennej.
+Dla równań niebędących wielomianami należy zawsze podać wartość początkową (patrz niżej).
+
+[EXAMPLE]
+====
+
+`++NRozwiąż(x^6 - 2x + 1 = 0)++` daje w wyniku _{x = 0.51, x = 1}_.
+
+====
+
+== Specyficzna składnia CAS
+
+Poniższe składnie są dostępne tylko w image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/Widok_CAS.adoc[Widoku CAS].
+
+
+NRozwiąż( <Równanie>, <Zmienna> )::
+  Próbuje (numerycznie) znaleźć rozwiązanie równania względem podanej niewiadomej.
+Dla równań niebędących wielomianami należy zawsze podać wartość początkową (patrz niżej).
+
+[EXAMPLE]
+====
+
+`++NRozwiąż(a^4 + 34a^3 = 34, a)++` daje w wyniku _{a = -34, a = 0.99}_.
+
+====
+
+NRozwiąż( <Equation>, <Variable = starting value> )::
+  Finds numerically the list of solutions to the given equation for the given unknown variable with its starting value.
+
+[EXAMPLE]
+====
+
+* `++NRozwiąż(cos(x) = x, x = 0)++` daje w wyniku _{x = 0.74}_
+* `++NRozwiąż(a^4 + 34a^3 = 34, a = 3)++` daje w wyniku _{a = 0.99}_.
+
+====
+
+NRozwiąż( <Równanie>, <Zmienna = wartość początkowa> )::
+  Numerycznie znajduje listę rozwiązań danego równania względem podanej niewiadomej, rozpoczynając od wskazanej wartości początkowej.
+
+[EXAMPLE]
+====
+
+`++NRozwiąż({pi / x = cos(x - 2y), 2 y - pi = sin(x)}, {x = 3, y = 1.5})++` daje w wyniku _{x = 3.14, y = 1.57}_.
+
+====
+
+[NOTE]
+====
+
+* Jeśli nie podasz punktu startowego (np. _a=3_ lub _{x = 3, y = 1.5}_, algorytm numeryczny może mieć trudność ze 
+  znalezieniem rozwiązania (a nawet podanie punktu startowego nie gwarantuje jego znalezienia).
+* Liczba  miejsc po przecinku zależy od ustawienia xref:/Menu_Ustawienia.adoc[ogólnego zaokrąglenia].
+* NRozwiąż nie działa dla funkcji asymptotycznych względem osi x ani w innych skrajnych przypadkach. Często jednak można je odpowiednio przekształcić.
+* NRozwiąż działa tylko wtedy, gdy funkcja jest ciągła!
+* Zobacz także polecenia xref:/commands/Rozwiąż.adoc[Rozwiąż] i xref:/commands/NRozwiązania.adoc[NRozwiązania].
+
+====
