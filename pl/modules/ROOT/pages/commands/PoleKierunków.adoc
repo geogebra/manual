@@ -1,0 +1,39 @@
+= Polecenie PoleKierunków
+:page-en: commands/SlopeField
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+PoleKierunków( <f(x,y)> )::
+  Rysuje https://en.wikipedia.org/wiki/Slope_field[pole kierunków] równania różniczkowego
+  stem:[\frac{dy}{dx}=f(x,y)]
+
+[EXAMPLE]
+====
+
+`++PoleKierunków(x+y)++` rysuje pole kierunków równania różniczkowego stem:[\frac{dy}{dx}=x+y]. 
+
+====
+
+PoleKierunków( <f(x,y)>, <Liczba n> )::
+  Rysuje pole kierunków równania różniczkowego stem:[\frac{dy}{dx}=f(x,y)] na siatce n × n (jeśli
+  image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Widok_Grafiki.adoc[Widok
+  Grafiki] jest kwadratem) lub na mniejszej siatce, jeśli nie. Domyślna wartość to 40.
+
+PoleKierunków( <f(x,y)>, <Liczba n>, <Mnożnik Długości a> )::
+  Rysuje pole kierunków równania różniczkowego stem:[\frac{dy}{dx}=f(x,y)]. Mnożnik długości 0<a≤1 określa długość odcinków.
+
+PoleKierunków( <f(x,y)>, <Liczba n>, <Mnożnik Długości a>, <Min x>, <Min y>, <Max x>, <Max y> )::
+  Rysuje pole kierunków równania różniczkowego stem:[\frac{dy}{dx}=f(x,y)] wewnątrz zadanego prostokąta 
+(zamiast wypełniać cały image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+  xref:Widok_Grafiki.adoc[Widok Grafiki])
+
+[NOTE]
+====
+
+* Użyj następujących narzędzi: image:22px-Mode_translateview.svg.png[Mode translateview.svg,width=22,height=22]
+xref:/tools/Przemieszczaj_obszar_roboczy.adoc[Przemieszczaj obszar roboczy], image:22px-Mode_zoomin.svg.png[Mode
+zoomin.svg,width=22,height=22] xref:/tools/Przybliż.adoc[Przybliż], image:22px-Mode_zoomout.svg.png[Mode
+zoomout.svg,width=22,height=22] xref:/tools/Oddal.adoc[Oddal] i obserwuj efekt.
+
+* Zobacz także polecenia xref:/commands/RozwiążRównanieRóżniczkoweZwyczajne.adoc[RozwiążRównanieRóżniczkoweZwyczajne], 
+xref:/commands/MiejsceGeometryczne.adoc[MiejsceGeometryczne] i xref:/commands/Całka.adoc[Całka].
+====
