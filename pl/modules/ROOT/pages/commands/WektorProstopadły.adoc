@@ -1,0 +1,83 @@
+= Polecenie WektorProstopadły
+:page-en: commands/PerpendicularVector
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+WektorProstopadły( <Prosta> )::
+  Zwraca jeden z wektorów prostopadłych do danej prostej.
+
+[EXAMPLE]
+====
+
+Niech `++j = Prosta((1, 4), (5, -3))++`. `++WektorProstopadły(j)++` daje w wyniku wektor _u=(7, 4)_.
+
+====
+
+[NOTE]
+====
+
+Współrzędne wektora prostopadłego do prostej o równaniu _ax + by = c_ to _(a, b)_.
+
+====
+
+WektorProstopadły( <Odcinek> )::
+  Zwraca jeden z wektorów prostopadłych do danego odcinka, o tej samej długości.
+
+[EXAMPLE]
+====
+
+Niech `++k = Odcinek((3, 2), (14, 5))++`. `++WektorProstopadły(k)++` daje w wyniku wektor _u=(-3, 11)_.
+
+====
+
+WektorProstopadły( <Wektor> )::
+  Zwraca jeden z wektorów prostopadłych do podanego wektora.
+
+[EXAMPLE]
+====
+
+Niech `++u = Wektor((-12, 8))++`. `++WektorProstopadły(u)++` daje w wyniku wektor _v=(-8, -12)_.
+====
+
+[NOTE]
+====
+
+Jeżeli w definicji prostej, odcinka lub wektora został określony punkt, to wektor prostopadły będzie wychodził z tego punktu. W przeciwnym razie jego początkiem będzie (0, 0).
+
+====
+
+[EXAMPLE]
+====
+
+* Dany jest punkt _A = (1, 4)_ i _B = (5, -3)_, oraz `++i = Prosta(A, B)++`,`++WektorProstopadły(i)++` będzie zaczynał się w punkcie A.
+
+* Dana jest prosta `++j = Prosta((1, 4), (5, -3))++`. `++WektorProstopadły(j)++` będzie zaczynał się w punkcie (0, 0).
+
+====
+[NOTE]
+====
+W image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Widok_CAS.adoc[Widoku CAS] dozwolone są także zmienne niezdefinione.
+====
+
+[EXAMPLE]
+====
+
+`++WektorProstopadły((a, b))++` daje w wyniku wektor _{-b, a}_.
+
+====
+
+WektorProstopadły( <Płaszczyzna> )::
+  Tworzy wektor prostopadły do danej płaszczyzny, o początku w punkcie (0,0,0).
+
+[EXAMPLE]
+====
+
+`++WektorProstopadły(płaszczyznaxOy)++` daje w wyniku wektor _u=(0, 0, 1)_ prostopadły do płaszczyzny xOy.
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/WersorProstopadły.adoc[WersorProstopadły].
+
+====
