@@ -1,0 +1,55 @@
+= Polecenie ParametrKrzywej
+:page-en: commands/PathParameter
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+ParametrKrzywej( <Punkt na Krzywej> )::
+  Zwraca parametr (tj. liczbę z zakresu od _0_ do _1_) punktu, który należy do
+  xref:/Obiekty_Geometryczne.adoc[ścieżki].
+
+[EXAMPLE]
+====
+
+Niech `++f(x) = x² + x - 1++` i  _A_ będzie punktem należącym do tej funkcji o współrzędnych (1,1) (taki punkt można utworzyć przy użyciu narzędzia Punkt na Obiekcie 
+lub poleceń `A=Punkt(f)`, `UstawWspółrzędne(A,1,1)`). Wówczas `++ParametrKrzywej(A)++` daje w wyniku _a = 0.47_.
+
+====
+
+W poniższej tabeli: stem:[f(x)=\frac{x}{1+|x|}] jest funkcją odwzorowującą wszystkie liczby rzeczywiste na przedział (-1,1), a
+stem:[\phi(X,A,B)=\frac{\overrightarrow{AX}\cdot\overrightarrow{AB}}{|AB|^2}] jest odwzorowaniem liniowym z prostej AB na liczby rzeczywiste, 
+które przekształca A na 0 i B na 1.
+
+[cols=",",]
+|===
+
+|Prosta AB |stem:[\frac{f(\phi(X,A,B))+1}2]
+
+|Półprosta AB |stem:[f(\phi(X,A,B))]
+
+|Odcinek AB |stem:[\phi(X,A,B)]
+
+|Okrąg o środku _C_ i promień _r_ |Punkt stem:[X=C+(r\cdot cos(\alpha),r\cdot sin(\alpha))], gdzie stem:[\alpha\in \]-\pi,\pi\]] ma parametr ścieżki stem:[\frac{\alpha+\pi}{2\pi}]
+
+|Elipsa o środku _C_ i półosiach stem:[\vec{a}], stem:[\vec{b}] |Punkt stem:[X=C+ \vec{a} \cdot cos(\alpha) + \vec{b} \cdot sin(\alpha) ] , gdzie stem:[\alpha\in \]-\pi,\pi\]] ma parametr ścieżki
+stem:[\frac{\alpha+\pi}{2\pi}]
+
+|Hiperbola |Punkt stem:[X = C \pm \vec{a} ·cosh(t) + \vec{b} ·sinh(t)] ma parametr ścieżki stem:[ \frac{f(t)+1}{4}]
+or stem:[\frac{f(t)+3}{4}]
+
+|Parabola o wierzchołku V i kierunku osi stem:[\vec{v}]. |Punkt stem:[V+\frac{1}{2}p\cdot t^2\cdot
+\vec{v}+p\cdot t \cdot \vec{v}^{\perp}] ma parametr ścieżki stem:[\frac{f(t)+1}2].
+
+|Łamana A~1~...A~n~ |Jeśli X leży na A~k~A~k+1~, parametrem ścieżki _X_ jest stem:[\frac{k-1+\phi(X,A,B)}{n-1}]
+
+|Wielokąt A~1~...A~n~ |Jeśli X leży na A~k~A~k+1~ (using A~n+1~=A~1~), parametrem ścieżki _X_ jest
+stem:[\frac{k-1+\phi(X,A,B)}{n}]
+
+|Lista ścieżek L={p~1~,...,p~n~} |Jeśli X leży na p~k~ i parametrem ścieżki X w.r.t. p~k~ jest _t_, parametr ścieżki _X_
+w.r.t._L_ jest stem:[\frac{k-1+t}{n}]
+
+|Lista punktów L={A~1~,...,A~n~} |Parametrem ścieżki A~k~ jest stem:[\frac{k-1}{n}]. Punkt[L,t] zwraca
+stem:[A_{\lfloor tn\rfloor+1}].
+
+|Miejsce geometryczne |
+
+|Wielomian uwikłany |Brak dostępnej formuły.
+|===
