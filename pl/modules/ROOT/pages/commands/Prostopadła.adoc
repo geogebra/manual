@@ -1,0 +1,66 @@
+= Polecenie Prostopadła
+:page-en: commands/PerpendicularLine
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Prostopadła( <Punkt>, <Prosta> )::
+  Tworzy prostą przechodzącą przez punkt i prostopadłą do danej prostej.
+
+[EXAMPLE]
+====
+
+Dana jest prosta `++c: -3x + 4y = -6++` i punkt `++A = (-2, -3)++`. `++Prostopadła(A, c)++` daje w wyniku prostą _d_:
+-4__x__ - 3__y__ = 17.
+
+====
+
+[NOTE]
+====
+
+Dla obiektów 3D do tego polecenia dodawany jest trzeci argument określający kontekst: jeśli aktywny jest widok 2D, jako trzeci argument używana jest płaszczyzna _z=0_, 
+jeśli aktywny jest widok 3D, używana jest _przestrzeń_. Szczegóły: patrz Prostopadła( <Punkt>, <Prosta>, <Kontekst>) poniżej.
+
+====
+
+Prostopadła( <Punkt>, <Odcinek> )::
+
+Tworzy prostą przechodzącą przez punkt i prostopadłą do danego odcinka.
+
+[EXAMPLE]
+====
+
+Niech _c_ będzie odcinkiem łączącym punkty _A_ = (-3, 3) i _B_ = (0, 1). `++Prostopadła(A, c)++`daje w wyniku
+prostą _d: -3x + 2y = 15_.
+
+====
+
+
+Prostopadła( <Punkt>, <Wektor> )::
+  Tworzy prostą przechodzącą przez punkt i prostopadłą do danego wektora.
+
+[EXAMPLE]
+====
+
+Dany jest wektor `++u = Wektor((5, 3), (1, 1))++` i punkt `++A = (-2, 0)++`. `++Prostopadła(A, u)++` 
+daje w wyniku prostą _c: 2x + y = -4_.
+
+====
+
+Prostopadła( <Punkt>, <Płaszczyzna> )::
+  Tworzy prostą prostopadłą do płaszczyzny przechodzącą przez dany punkt.
+Prostopadła( <Prosta> , <Prosta> )::
+  Tworzy prostą prostopadłą do danych prostych, przechodzącą przez ich punkt przecięcia.
+Prostopadła( <Punkt>, <Kierunek>, <Kierunek> )::
+  Tworzy prostą prostopadłą do danych kierunków (mogą to być proste lub wektory), przechodzącą przez dany punkt.
+Prostopadła( <Punkt>, <Prosta>, <Kontekst> )::
+  Tworzy prostą prostopadłą do prostej, przechodzącą przez punkt – w zależności od kontekstu:
+  * Prostopadła( <Punkt>, <Prosta>, <Płaszczyzna> ) tworzy prostą prostopadłą do danej prostej przez punkt i równoległą do płaszczyzny.
+  * Prostopadła( <Punkt>, <Prosta>, space ) tworzy prostą prostopadłą do danej prostej przez punkt. Obie proste mają punkt przecięcia.
+Jeśli jednak punkt leży na prostej w przestrzeni 3D, polecenie zwraca niezdefiniowany.
+
+[NOTE]
+====
+
+Zobacz także narzędzie image:22px-Mode_linebisector.svg.png[Mode linebisector.svg,width=22,height=22]
+xref:/tools/Proste_prostopadłe.adoc[Proste prostopadłe].
+
+====
