@@ -1,0 +1,82 @@
+= Narzędzia niestandardowe
+:page-en: tools/Custom_Tools
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+GeoGebra Classic pozwala tworzyć własne narzędzia na podstawie istniejącej konstrukcji. 
+
+Po utworzeniu narzędzie niestandardowe można aktywować, klikając odpowiednią ikonę lub wpisując powiązane polecenie 
+w xref:/Pole_Wprowadzania.adoc[polu wprowadzania]. 
+
+Wszystkie narzędzia są automatycznie zapisywane w pliku GeoGebra, w którym zostały utworzone.
+
+[NOTE]
+====
+
+Wyniki działania narzędzia nie są ruchome, dlatego nie można ich przeciągać myszką, nawet jeśli zostały zdefiniowane 
+jako obiekty na ścieżce. Jeśli potrzebny jest ruchomy wynik, zamiast tego zdefiniuj listę poleceń i użyj jej jako parametr polecenia
+xref:/commands/Wykonaj.adoc[Wykonaj].
+
+====
+
+== Tworzenie narzędzi niestandardowych
+
+Utwórz konstrukcję, którą chcesz zapisać jako narzędzie, a następnie wybierz image:16px-Menu-tools-new.svg.png[Menu-tools-new.svg,width=16,height=16]
+xref:/Okno_Dialogowe_Utwórz_nowe_narzędzie.adoc[Utwórz nowe narzędzia] w image:16px-Menu-tools.svg.png[Menu-tools.svg,width=16,height=16]
+xref:/Menu_Narzędzia.adoc[Menu Narzędzia].
+
+W wyświetlonym oknie dialogowym wybierz _Obiekty Wyjścia_ i _Obiekty Wejścia_ z dostępnych list rozwijanych, a następnie nadaj narzędziu _nazwę_.
+
+GeoGebra automatycznie przypisze tę samą nazwę _poleceniu_, które umożliwi korzystanie z narzędzia na pasku wprowadzania. Nazwę polecenia może być inna niż nazwa narzędzia.
+
+Wpisz krótki opis w polu _Pomoc do narzędzia_ (opcjonalnie) i dodaj plik graficzny jako _ikonę narzędzia_ (opcjonalnie). 
+
+Kliknij _Zakończ_, aby dokończyć tworzenie narzędzia niestandardowego.
+
+== Zapisywanie narzędzi niestandardowych
+
+Podczas zapisywania konstrukcji jako pliku .ggb, wszystkie utworzone w niej narzędzia niestandardowe są w nim przechowywane. Aby zapisać narzędzia w osobnym pliku (plikach), 
+użyj okna dialogowego xref:/Okno_Dialogowe_Menedżer_narzędzi.adoc[Menedżer narzędzi] wybierając image:16px-Menu-tools.svg.png[Menu-tools.svg,width=16,height=16] _Menedżer narzędzi_ w
+image:16px-Menu-tools.svg.png[Menu-tools.svg,width=16,height=16] xref:/Menu_Narzędzia.adoc[Menu Narzędzia].
+
+[NOTE]
+====
+
+Narzędzia niestandardowe zostaną zapisane jako pliki .ggt, aby odróżnić je od standardowych plików GeoGebry (.ggb).
+
+====
+
+== Dostęp do narzędzi niestandardowych
+
+Po utworzeniu narzędzia niestandardowego, podczas otwierania nowego pliku GeoGebra poprzez opcję image:16px-Menu-file-new.svg.png[Menu-file-new.svg,width=16,height=16]
+_Nowy_ w image:16px-Menu-file.svg.png[Menu-file.svg,width=16,height=16] xref:/Menu_Plik.adoc[Menu Plik], ikona narzędzia będzie widoczna na pasku narzędzi GeoGebra. 
+Jednak jeśli otworzysz nowe okno GeoGebra poprzez image:Menu_New.png[Menu New.png,width=16,height=16] _Nowe okno_ w
+image:16px-Menu-file.svg.png[Menu-file.svg,width=16,height=16] _Menu Plik_ lub uruchomisz GeoGebrę ponownie po restarcie komputera, 
+twoje narzędzie niestandardowe nie będzie już częścią paska narzędzi.
+
+Aby narzędzie niestandardowe było zawsze widoczne na pasku narzędzi GeoGebra, zapisz swoje bieżące ustawienia, wybierając
+image:16px-Menu-file-save.svg.png[Menu-file-save.svg,width=16,height=16] _Zapisz Ustawienia_ w
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Menu_Ustawienia.adoc[Menu Ustawienia].
+
+[NOTE]
+====
+
+Aby usunąć narzędzie niestandardowe z paska narzędzi, wybierz image:16px-Menu-tools-customize.svg.png[Menu-tools-customize.svg,width=16,height=16] _Dostosuj pasek narzędzi_ w
+image:16px-Menu-tools.svg.png[Menu-tools.svg,width=16,height=16] _Menu Narzędzia_. Następnie wybierz narzędzie z listy po lewej i naciśnij przycisk
+_Usuń_ (GeoGebra desktop) albo przeciągnij je na prawą stronę (GeoGebra Web i inne aplikacje). Nie zapomnij zapisać ustawień po usunięciu narzędzia.
+
+====
+
+== Importowanie narzędzi niestandardowych
+
+Gdy narzędzie niestandardowe jest zapisane na komputerze (jako plik .ggt),możesz je zaimportować do dowolnego pliku GeoGebra w dowolnym momencie, wybierając 
+image:16px-Menu-file-open.svg.png[Menu-file-open.svg,width=16,height=16] _Otwórz_ w
+image:16px-Menu-file.svg.png[Menu-file.svg,width=16,height=16] _Menu Plik_ i wybierając plik narzędzia.
+
+[NOTE]
+====
+
+* Otworzenie pliku narzędzia (.ggt) w programie GeoGebra nie wpływa na twoją konstrukcję: jedynie dodaje to narzędzie do bieżącego paska narzędzi GeoGebra.
+
+* Możesz też załadować plik .ggt przeciągając go z menedżera plików komputera i upuszczając w oknie GeoGebry.
+
+====
