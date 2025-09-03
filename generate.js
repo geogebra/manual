@@ -7,7 +7,7 @@ const directoryPath = path.join(__dirname, 'your-directory'); // replace 'your-d
 
 function listFilesSync(directory, callback) {
   try {
-    const files = fs.readdirSync(directory);
+    const files = fs.readdirSync(directory).sort();
 
     files.forEach((file) => {
       const filePath = path.join(directory, file);
@@ -40,6 +40,7 @@ for (const lang of active) {
     let ok = 0;
     const links = {};
     const allPages = [];
+    const images = {};
     listFilesSync(`${lang}/modules/ROOT/pages`, (filePath, directory) => {
         const content = fs.readFileSync(filePath, 'utf8');
         const pageEn = content.match(/:page-en:(.*)/);
@@ -74,11 +75,29 @@ for (const lang of active) {
             links[absRef] = links[absRef] || [];
             links[absRef].push(simplePath(filePath));
         })
+        const imageRefs = [...content.matchAll(/image:([^:\[]+)\[/g)];
+        (imageRefs || []).forEach(m => {
+            const absRef = m[1];
+            images[absRef] = images[absRef] || [];
+            images[absRef].push(simplePath(filePath));
+        })
     });
     for (const page of allPages) {
       delete(links[page]);
     }
 
+    listFilesSync(`${lang}/modules/ROOT/assets/images`, (filePath, directory) => {
+        delete(images[filePath.substring(directory.length + 1)]);
+    })
+    if (Object.keys(images).length) {
+      listFilesSync(`en/modules/ROOT/assets/images`, (filePath, directory) => {
+           const fn = filePath.substring(directory.length + 1);
+           if (images[fn]) {
+             fs.copyFileSync(filePath, `${lang}/modules/ROOT/assets/images/${fn}`);
+             delete(images[fn]);
+           }
+      })
+    }
     const nav = fs.readFileSync('en/modules/ROOT/nav.adoc', 'utf8');
     const localNav = nav.replace(/xref:(.+?).adoc/g, function(match, contents) {
             return "xref:" + simplePath(translations[contents]);
@@ -94,6 +113,9 @@ for (const lang of active) {
     }
     const linkify = k=>`\n * xref:${k}[${k.substr(0, k.length - 5)}]`;
     const indentLinkify = k=>`\n ** xref:${k}[${k.substr(0, k.length - 5)}]`;
+    const listBroken = links => Object.entries(links)
+        .map(([link, sources]) => `* ${link}:\n ${sources.map(indentLinkify).join("")}\n`)
+        .join("")
     const missingList = !missing.length ? "All clear"
         : missing.map(k=>`\n * xref:en@manual::${k}.adoc[${k}]`).join('');
     const orphanList = !orphans.length ? "All clear"
@@ -112,8 +134,7 @@ for (const lang of active) {
         + '\n\n== Duplicate translations\n'
         + dupeList, 'utf8');
      fs.writeFileSync(`${lang}/modules/ROOT/pages/broken.adoc`, '= Broken links\n\n'
-        + Object.entries(links).map(([link, sources]) =>
-         `* ${link}:\n ${sources.map(indentLinkify).join("")}\n`).join("") +"\n\n", 'utf8');
+        + listBroken(links) + "\n\n" + listBroken(images), 'utf8');
     status += `| ${display} (${lang}) `.padEnd(25," ");
     for (const stat of [ok, missing.length, orphans.length, duplicates.length, partials.length]) {
         status += `| ${stat}`.padEnd(10," ")
