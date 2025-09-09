@@ -1,0 +1,91 @@
+= Polecenie Tekst
+:page-en: commands/Text
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Tekst( <Obiekt> )::
+  Tworzy xref:/Tekty.adoc[tekst] zawierający formułę podanego obiektu.
+
+[EXAMPLE]
+====
+
+Jeśli _a = 2_ i _c = a^2^_, wówczas `++Tekst(c)++` tworzy tekst _"4"_.
+
+====
+
+[NOTE]
+====
+
+Domyślnie wartości są podstawiane za odpowiadające im zmienne.
+
+====
+
+Tekst( <Obiekt>, <Czy zastępować zmienne> )::
+  Tworzy tekst zawierający formułę podanego obiektu. Wartość boolowska _Czy zastępować zmienne_ określa, czy wartości są podstawiane za zmienne (_true_), 
+czy w tekście wyświetlane są nazwy zmiennych (_false_).
+
+[EXAMPLE]
+====
+
+Jeśli _a = 2_ i _c = a^2^_, wówczas
+
+* `++Tekst(c, true)++` tworzy tekst _"4"_, a
+* `++Tekst(c, false)++` tworzy tekst _"a^2^"_.
+
+====
+
+Tekst( <Obiekt>, <Punkt> )::
+  Tworzy tekst zawierający formułę podanego obiektu w określonym położeniu (punkcie).
+
+[EXAMPLE]
+====
+
+`++Tekst("witaj", (2, 3))++` tworzy tekst _"witaj"_ w punkcie _(2, 3)_.
+
+====
+
+Tekst( <Obiekt>, <Punkt>, <Czy zastępować zmienne> )::
+ Tworzy tekst zawierający formułę podanego obiektu w określonym położeniu (punkcie).  
+Wartość boolowska _Czy zastępować zmienne_ określa, czy wartości są podstawiane za zmienne (_true_), czy w tekście wyświetlane są nazwy zmiennych (_false_).
+
+[EXAMPLE]
+====
+
+Jeśli _a = 2_ i _c = a^2^_, wówczas `++Tekst(c, (2, 1), true)++` tworzy tekst _"4"_ w punkcie _(2, 1)_.
+
+====
+
+Tekst( <Obiekt>, <Punkt>, <Czy zastępować zmienne>, <Czy formuła LaTeX> )::
+   Tworzy tekst zawierający formułę podanego obiektu w określonym położeniu (punkcie).  
+Wartość boolowska _Czy zastępować zmienne_ określa, czy wartości są podstawiane za zmienne (_true_), czy w tekście wyświetlane są nazwy zmiennych (_false_).
+  Jeśli wartość boolowska _Czy formuła LaTeX_ wynosi _true_, tekst jest renderowany przy użyciu xref:/LaTeX.adoc[LaTeX-a].
+
+[EXAMPLE]
+====
+
+Jeśli _a = 2_ i _c = a^2^_, wówczas `++Tekst(c, (2, 1), true, true)++` tworzy tekst LaTeX _"4"_ w punkcie _(2, 1)_.
+
+====
+
+Tekst( <Obiekt>, <Punkt>, <Czy zastępować zmienne>, <Czy formuła LaTeX>, <Wyrównanie w poziomie [-1|0|1]>, <Wyrównanie w pionie [-1|0|1]> )::
+   Tworzy tekst zawierający formułę podanego obiektu w określonym położeniu (punkcie).  
+Wartość boolowska _Czy zastępować zmienne_ określa, czy wartości są podstawiane za zmienne (_true_), czy w tekście wyświetlane są nazwy zmiennych (_false_).
+  Jeśli wartość boolowska _Czy formuła LaTeX_ wynosi _true_, tekst jest renderowany przy użyciu xref:/LaTeX.adoc[LaTeX-a]. 
+Wartości -1, 0, 1 określają wyrównanie w poziomie i w pionie, przesuwając tekst względem domyślnej pozycji w następujący sposób:
+  * -1: przesunięcie w lewo (w poziomie) / w dół (w pionie)
+  * 0: wyśrodkowanie względem punktu (w poziomie / w pionie)
+  * 1: przesunięcie w prawo (w poziomie) / w górę (w pionie)
+
+[EXAMPLE]
+====
+
+Jeśli _a = 2_ i _c = a^2^_, wówczas `++Tekst(c, (2, 1), true, true, -1, 0)++` tworzy tekst LaTeX _"4"_ po lewej stronie punktu
+_(2, 1)_, który w pionie jest wyśrodkowany względem punktu.
+
+====
+
+[NOTE]
+====
+
+Zobacz także narzędzie image:22px-Mode_text.svg.png[Mode text.svg,width=22,height=22] xref:/tools/Wstaw_tekst.adoc[Wstaw tekst].
+
+====
