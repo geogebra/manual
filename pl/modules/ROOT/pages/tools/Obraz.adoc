@@ -1,0 +1,93 @@
+= Narzędzie Obraz
+:page-en: tools/Image
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Gdy aktywujemy narzędzie image:20px-Mode_image.svg.png[Mode image.svg,width=20,height=20] _Obraz_, otwiera się okno dialogowe, 
+które umożliwia przeglądanie zawartości urządzenia i wybór pliku obrazu do wstawienia w image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Widok_Grafiki.adoc[Widoku Grafiki]. W wersjach mobilnych i webowych możliwe jest również importowanie obrazów z aparatu.
+
+[NOTE]
+====
+
+* Obsługiwane są przezroczyste pliki https://pl.wikipedia.org/wiki/Graphics_Interchange_Format[GIF] i https://pl.wikipedia.org/wiki/Portable_Network_Graphics[PNG]
+jednak w przypadku PNG należy upewnić się, że posiadają kanał alfa (np. jeśli edycja odbywa się w
+http://www.irfanview.com/[IrfanView], należy zapisać plik za pomocą wtyczki PNGOUT i wybrać tryb *RGB+Alpha*)
+* Wstawione obrazy będą domyślnie obiektami pomocniczymi.
+
+====
+
+== Położenie i właściwości obrazów
+
+Położenie obrazu może być absolutna na ekranie lub względna względem układu współrzędnych: ustawienie to można określić w zakładce _Położenie_ w image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Okno_Ustawień_Obiektu.adoc[oknie Ustawienia] obrazu.
+
+GeoGebra automatycznie tworzy 2 punkty w dolnych rogach obrazu, które można wykorzystać do ustawienia i zmiany rozmiaru obrazu. Punkty te są definiowane w ustawieniach jako:
+
+* _Narożnik 1_: położenie lewego dolnego rogu obrazu
+* _Narożnik 2_: położenie prawego dolnego rogu obrazu
+
+W zakładce _Położenie_ w image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+xref:/Okno_Ustawień_Obiektu.adoc[oknie Ustawienia] możesz określić do trzech narożników obrazu. Daje to możliwość skalowania, obracania i zniekształcania obrazów 
+(zobacz polecenie xref:/commands/Narożnik.adoc[Narożnik]). Oprócz powyższych, można zdefiniować:
+
+* _Narożnik 4_: położenie lewego górnego rogu obrazu
+
+
+[NOTE]
+====
+
+_Narożnik 2_ kontroluje szerokość obrazu, a _Narożnik 4_ kontroluje wysokość obrazu. Oba mogą być ustawione tylko wtedy, gdy wcześniej został określony _Narożnik 1_.
+
+====
+
+
+[EXAMPLE]
+====
+
+Utwórz trzy punkty _A_, _B_, i _C_, a następnie wstaw obraz w image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Widoku Grafiki_, aby zbadać efekty zmiany narożników obrazu.
+
+* Ustaw punkt _A_ jako pierwszy, a punkt _B_ jako drugi narożnik twojego obrazu. Używając narzędzia
+image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22] _Przesuń_ zmieniaj położenie punktów _A_ i _B_, by zmienić szerokość obrazu.
+* Następnie usuń punkt _B_ z ustawienia Narożnik 2 w zakładce _Położenie_. Ustaw punkt _A_ jako pierwszy, a punkt _C_ jako czwarty narożnik obrazu
+i sprawdź, jak zmiana położenia punktów wpływa na wysokość obrazu.
+* Na końcu ustaw wszystkie trzy narożniki i zobacz, jak zmiana położenia punktów zniekształca obraz.
+
+====
+
+[EXAMPLE]
+====
+
+Aby przypisać obraz do punktu _A_ i ustawić jego rozmiar (np. szerokość = 3 i wysokość = 4 jednostki):
+
+* Ustaw _Narożnik 1_ na _A_
+* Ustaw _Narożnik 2_ na _A + (3, 0)_
+* Ustaw _Narożnik 4_ na _A + (0, 4)_
+
+====
+
+[NOTE]
+====
+
+Jeżeli za pomocą narzędzia image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22] _Przesuń_ zmienisz położenie punkty _A_, rozmiar obrazu nie zmieni się.
+
+====
+
+Możesz określić obraz jako _Obraz w tle_ w zakładce _Podstawowe_ okna dialogowego
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Ustawienia_ obrazu. Obraz w tle znajduje się za osiami układu współrzędnych i nie można go zaznaczyć.
+
+[NOTE]
+====
+
+Aby zmienić ustawienie obrazu w tle, otwórz
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _okno Ustawienia_ obrazu wybierając
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Opcje_ z
+image:16px-Menu-edit.svg.png[Menu-edit.svg,width=16,height=16] xref:/Menu_Edycja.adoc[menu Edycja].
+W wersji webowej i aplikacjach mobilnych konieczne jest najpierw zaznaczenie opcji _Pokaż / Obiekty pomocnicze_ w ustawieniach image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] _Widoku Algebry_, a, aby obraz został wyświetlony na liście obiektów w tym widoku. Możemy wówczas wybrać obraz w image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] _Widoku Algebry_ i otworzyć okno _Ustawienia_.
+
+====
+
+_Przezroczystość_ obrazu można zmieniać, aby zobaczyć obiekty lub osie znajdujące się za nim: użyj w tym celu suwaka _Przezroczystość_ w zakładce _Kolor_ 
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _okna Ustawienia_ obrazu, aby określić wartość przezroczystości w zakresie od 0 do 100.
