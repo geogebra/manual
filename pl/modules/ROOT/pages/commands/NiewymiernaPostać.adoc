@@ -1,0 +1,50 @@
+= Polecenie NiewymiernaPostać
+:page-en: commands/SurdText
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+NiewymiernaPostać( <Punkt> )::
+  Tworzy tekstową reprezentację punktu, z współrzędnymi w postaci stem:[\frac{a+b\sqrt{c}}{d}].
+
+[EXAMPLE]
+====
+
+`++NiewymiernaPostać((2.414213562373095, 1.414213562373095))++` tworzy tekst _(stem:[1 + \sqrt{2}, \sqrt{2})]_
+
+====
+
+NiewymiernaPostać( <Liczba> )::
+  Tworzy tekstową reprezentację liczby w postaci stem:[\frac{a+b\sqrt{c}}{d}].
+
+[EXAMPLE]
+====
+
+* `++NiewymiernaPostać(2.414213562373095)++` tworzy tekst _stem:[1 + \sqrt{2}]_
+* `++SurdText(2.439230484541326)++` tworzy tekst _stem:[\frac{7+3 \sqrt{3} }{5}]_
+
+====
+
+NiewymiernaPostać( <Liczba>, <Lista> )::
+  Tworzy tekstową reprezentację liczby, przekształcając ją jako wielokrotność stałych zawartych w liście. Jeśli lista jest pusta, 
+polecenie używa listy popularnych stałych.
+
+[EXAMPLE]
+====
+
+* `++NiewymiernaPostać(3.718281828459045, {exp(1)})++` tworzy tekst _stem:[e + 1]_
+* `++NiewymiernaPostać(5.382332347441762, {sqrt(2), sqrt(3), sqrt(5)})++` tworzy tekst _stem:[ \sqrt{5} + \sqrt{3} + \sqrt{2}]_
+* `++NiewymiernaPostać(1.693147180559945, {ln(2)})++` tworzy tekst _stem:[ \ln(2) + 1]_
+
+====
+
+
+
+[NOTE]
+====
+
+* Aby użyć tego polecenia, dla obiektu tekstowego w zakładce _Tekst_ image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Okno_Ustawień_Obiektu.adoc[okna Ustawień] musi być włączona opcja *_Formuła LaTeX_*.
+* Ponieważ to polecenie działa na zaokrąglonej liczbie dziesiętnej jako danych wejściowych, w niektórych przypadkach może dać nieoczekiwany wynik.
+* Jeśli nie można znaleźć odpowiedniej postaci, zwracana jest liczba. Na przykład polecenie `++NiewymiernaPostać(1.23456789012345)++` zwraca _1.23456789012345_.
+
+* Zobacz także polecenia xref:/commands/UłamekJakoTekst.adoc[UłamekJakoTekst] i xref:/commands/NotacjaWykładnicza.adoc[NotacjaWykładnicza].
+
+====
