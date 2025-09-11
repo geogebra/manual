@@ -1,0 +1,57 @@
+= Polecenie UdowodnijSzczegółowo
+:page-en: commands/ProveDetails
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+UdowodnijSzczegółowo( <Wyrażenie logiczne> )::
+  Returns some details of the result of the automated proof.
+
+Zazwyczaj GeoGebra decyduje, czy dane xref:/Wartości_boolowskie.adoc[wyrażenie logiczne (boolowkie)] jest prawdziwe, czy fałszywe, używając obliczeń numerycznych. 
+Jednak polecenie UdowodnijSzczegółowo wykorzystuje https://pl.wikipedia.org/wiki/Obliczenia_symboliczne[metody symboliczne]
+o określenia, czy dane stwierdzenie jest ogólnie prawdziwe czy fałszywe. To polecenie działa podobnie jak polecenie
+xref:/commands/Udowodnij.adoc[Udowodnij], ale dodatkowo zwraca szczegóły wyniku w postaci xref:/Listy.adoc[listy]:
+
+* Pustą listę *{}*, jeśli GeoGebra nie może określić odpowiedzi.
+* Listę z jednym elementem: *{false}*, jeśli stwierdzenie nigdy nie jest prawdziwe.
+* Listę z jednym elementem: *{true}*, jeśli stwierdzenie jest zawsze prawdziwe (we wszystkich przypadkach, gdy konstrukcja jest możliwa).
+* Listę z większą liczbą elementów, zawierającą wartość logiczną _true_ oraz inną listę tzw. _warunków niedegeneracji (nieosobliwych)_, 
+jeśli stwierdzenie jest prawdziwe tylko pod pewnymi warunkami, np. {true, {"SąWspółliniowe(A,B,C),SąRówne(C,D)"}}.
+Oznacza to, że jeśli żaden z warunków nie jest spełniony (i konstrukcja jest możliwa), to stwierdzenie będzie prawdziwe.
+* Listę *{true,{"..."}}*, jeśli stwierdzenie jest prawdziwe pod pewnymi warunkami, ale z jakichś powodów tych warunków nie da się zapisać w sposób czytelny dla człowieka.
+
+[EXAMPLE]
+====
+
+Zdefiniujmy trójkąt o wierzchołkach _A_, _B_ i _C_. Niech `++D=PunktŚrodkowy(B,C)++`, `++E=PunktŚrodkowy(A,C)++`,
+`++p=Prosta(A,B)++`, `++q=Prosta(D,E)++`. Wówczas `++UdowodnijSzczegółowo(p∥q)++` zwraca {true}, co oznacza, że jeśli konstrukcja jest możliwa, 
+to prosta _DE_ jest równoległa do boku _AB_.
+
+====
+
+[EXAMPLE]
+====
+
+Dany jest odcinek _AB_ o nazwie _a_. Zdefiniujmy `++C=PunktŚrodkowy(A,B)++`, `++b=SymetralnaOdcinka(A,B)++`,
+`++D=Przecięcie(a,b)++`. Wówczas `++UdowodnijSzczegółowo(C==D)++` zwraca {true,{"SąRówne(A,B)"}}: oznacza to, że jeśli punkty _A_
+i _B_ są różne, to punkty _C_ i _D_ będą się pokrywać.
+
+====
+
+[EXAMPLE]
+====
+
+Dany jest odcinek _AB_ o nazwie _a_. Zdefiniujmy `++l=Prosta(A,B)++`. Niech _C_ będzie dowolnym punktem na proste _l_, dodatkowo niech
+`++b=Odcinek(B,C)++`, `++c=Odcinek(A,C)++`. Wówczas `++UdowodnijSzczegółowo(a==b+c)++` zwraca {true,{"a+b==c", "b==a+c"}}: 
+oznacza to, że jeśli nie zachodzą równości stem:[a+b=c] i stem:[b=a+c], prawdziwa jest równość stem:[a=b+c].
+
+====
+
+Możliwe jest, że lista warunków niedegeneracji nie jest najprostsza z możliwych. Dla powyższego przykładu najprostszym zestawem byłby zbiór pusty.
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/Udowodnij.adoc[Udowodnij]  oraz xref:/Wartości_boolowskie.adoc[artykuł o wartościach boolowskich],
+https://github.com/kovzol/gg-art-doc/tree/master/pdf/english.pdf[Narzędzia automatycznego wnioskowania w GeoGebrze: samouczek (ang.)] i
+http://dev.geogebra.org/trac/wiki/TheoremProving[opis szczegółów technicznych algorytmów].
+
+====
