@@ -1,0 +1,100 @@
+= Polecenie UstawPerspektywę
+:page-en: commands/SetPerspective
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+UstawPerspektywę( <Tekst> )::
+
+Zmienia układ i widoczność _widoków_. Parametr tekstowy to pełny opis układu, opis pojedynczego widoku, który chcesz zmienić, 
+albo identyfikator jednej z widoków standardowych.
+
+== Pełny opis układu
+
+Aby zmienić cały układ, możesz opisać pozycje widoków za pomocą wyrażenia. _Widoki_ reprezentowane są przez zmienne (litery): 
+układ poziomy _Widoków_ reprezentowany jest przez zestawienie liter obok siebie, a układ pionowy przez symbol dzielenia `++ /++`.
+
+[cols=",",options="header",]
+|===
+|Litera |Widok
+|A |image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] xref:/Widok_Algebry.adoc[Widok Algebry]
+
+|B |image:18px-Menu_view_probability.svg.png[Menu view probability.svg,width=18,height=18]
+xref:/Kalkulator_Prawdopodobieństwa.adoc[Kalkulator Prawdopodobieństwa]
+
+|C |image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16] xref:/Widok_CAS.adoc[Widok CAS]
+
+|D |image:16px-Menu_view_graphics2.svg.png[Menu view graphics2.svg,width=16,height=16] xref:/Widok_Grafiki.adoc[Widok Grafiki 2]
+
+|G |image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Widok_Grafiki.adoc[Widok Grafiki]
+
+|L |image:16px-Menu_view_construction_protocol.svg.png[Menu view construction protocol.svg,width=16,height=16]
+xref:/Protokół_Konstrukcji.adoc[Protokół Konstrukcji]
+
+|P |image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Okno_Ustawień_Obiektu.adoc[Ustawienia]
+
+|R |Analiza danych (tylko wersja Desktop)
+
+|S |image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+xref:/Widok_Arkusza.adoc[Widok Arkusza]
+
+|T |image:16px-Perspectives_algebra_3Dgraphics.svg.png[Perspectives algebra 3Dgraphics.svg,width=16,height=16]
+xref:/Widok_Grafiki_3D.adoc[Widok Grafiki 3D]
+|===
+
+[EXAMPLE]
+====
+
+* `++UstawPerspektywę("G")++` powoduje, że widoczny jest tylko image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Widok Grafiki_.
+* `++UstawPerspektywę("AGS")++` powoduje, że image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+_Widok Algebry_, image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Widok Grafiki_ i
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Widok Arkusza_ są widoczne i ułożone poziomo.
+* `++UstawPerspektywę("S/G")++` powoduje, że widoczne są image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Widok Arkusza_ i image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Widok Grafiki_, gdzie _Widok Arkusza_ znajduje się na górze, a _Widok Grafiki_ na dole.
+* `++UstawPerspektywę("S/(GA)")++` podobnie jak powyżej, ale dolna część ekranu składa się z
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Widoku Grafikie_ po lewej i
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _Widoku Algebry_ po prawej stronie.
+
+====
+
+== Zmiana pojedynczego widoku
+
+Aby otworzyć lub zamknąć pojedyncze _Widoki_, dodaj przed nazwą _Widoku_ (literą) odpowiednio symbol `+++++` lub `++-++`.
+W aplikacjach innych niż GeoGebra Classic (np. Pakiet kalkulatorów) można również używać `++Tools++` i `++Table++`
+dla narzędzi i tabeli wartości.
+
+[EXAMPLE]
+====
+
+* `++UstawPerspektywę("+D")++` dodaje _Widok Grafiki_ 2 do aktualnie wyświetlanych, z prawej strony.
+* `++UstawPerspektywę("-D")++` usuwa _Widok Grafiki_  2 z aktualnie wyświetlanych.
+* `++UstawPerspektywę("+Tools")++` otwiera panel boczny w Pakiecie kalkulatorów i przełącza go na zakładkę narzędzi.
+* `++UstawPerspektywę("+Table")++` otwiera panel boczny w Pakiecie kalkulatorów i przełącza go na na tabelę wartości.
+* `++UstawPerspektywę("-Tools")++` zamyka panel boczny w Pakiecie kalkulatorów, niezależnie od wybranej zakładki.
+
+====
+
+== Widoki standardowe
+
+Możesz też użyć tekstu zawierającego jedną cyfrę, aby włączyć jeden z predefiniowanych widoków (dostępnych w Menu Widoki):
+
+[cols=",",options="header",]
+|===
+|Tekst |Widoki
+|"1" |Wykresy
+|"2" |Geometria
+|"3" |Arkusz
+|"4" |CAS
+|"5" |Grafika 3D
+|"6" |Prawdopodobieństwo
+|===
+
+Te Widoki w przybliżeniu odpowiadają odpowiednio układom "AG", "G", "SG", "CG", "AT" and "B" respectively, ale mogą również wpływać na wyświetlanie 
+xref:/Pole_Wprowadzania.adoc[pola wprowadzania] i zawartości of xref:/Pasek_Narzędzi.adoc[paska narzędzi].
+
+[NOTE]
+====
+
+* See also xref:/commands/SetActiveView.adoc[SetActiveView] command.
+
+====
