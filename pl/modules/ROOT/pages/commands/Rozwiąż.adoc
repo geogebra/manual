@@ -1,0 +1,92 @@
+= Polecenie Rozwiąż
+:page-en: commands/Solve
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+Polecenia *Rozwiąż* i xref:/commands/Rozwiązania.adoc[Solutions] rozwiązują równanie lub układ równań symbolicznie w zbiorze liczb rzeczywistych. 
+Aby rozwiązać równania numerycznie, użyj polecenia xref:/commands/NRozwiąż.adoc[NRozwiąż]. 
+Do rozwiązywania równań w zbiorze liczb zespolonych służy polecenie xref:/commands/ZRozwiąż.adoc[ZRozwiąż].
+
+====
+
+
+
+Rozwiąż( <Równianie x> )::
+  Rozwiązuje podane równanie względem głównej zmiennej i zwraca listę wszystkich rozwiązań.
+
+[EXAMPLE]
+====
+
+`++Rozwiąż(x^2 = 4x)++` zwraca _{x = 4, x = 0}_, czyli rozwiązania _x^2^ = 4x_.
+
+====
+
+== Specyficzna składnia CAS
+
+Poniższe polecenia są dostępne tylko w image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/Widok_CAS.adoc[Widoku CAS].
+
+Rozwiąż( <Równianie>, <Zmienna> )::
+  Rozwiązuje równanie względem podanej zmiennej i zwraca listę wszystkich rozwiązań.
+
+[EXAMPLE]
+====
+
+`++Rozwiąż(x * a^2 = 4a, a)++` zwraca {stem:[a = \frac{4}{x}, a = 0]}.
+
+====
+
+Rozwiąż( <Równianie x>, <Założenie> )::
+ Rozwiązuje równanie względem x przy danym założeniu.
+
+[EXAMPLE]
+====
+
+`++Rozwiąż(x^2=1, x>0)++` zwraca stem:[{x = 1}]
+
+====
+
+Rozwiąż( <Lista Równań>, <Lista Zmiennych> )::
+  Rozwiązuje układ równań względem podanego zestawu zmiennych i zwraca listę wszystkich rozwiązań.
+
+[EXAMPLE]
+====
+
+* `++Rozwiąż({x = 4 x + y , y + x = 2}, {x, y})++` zwraca _{{ x = -1, y = 3 }}_
+* `++Rozwiąż({2a^2 + 5a + 3 = b, a + b = 3}, {a, b})++` zwraca _{{a = 0, b = 3}, {a = -3, b = 6}}_.
+
+====
+
+Rozwiąż( <Równianie>, <Zmienna> , <Lista założeń>)::
+ Rozwiązuje równanie względem podanej zmiennej z uwzględnieniem listy założeń i zwraca listę wszystkich rozwiązań.
+
+[EXAMPLE]
+====
+
+* `++Rozwiąż(u *x < a,x, u>0)++` zwraca _{x < a / u}_, rozwiązanie _u *x < a_ przy założeniu _u>0_
+* `++Rozwiąż(u *x < a,x, {u<0, a<0})++` zwraca _{x > a / u}_.
+
+====
+
+Rozwiąż( <Lista równań parametrycznych>, <Lista Zmiennych> )::
+  Rozwiązuje układ równań parametrycznych względem podanego zestawu zmiennych i zwraca listę wszystkich rozwiązań.
+
+[EXAMPLE]
+====
+
+* `++Rozwiąż({(x, y) = (3, 2) + t*(5, 1), (x, y) = (4, 1) + s*(1, -1)}, {x, y, t, s})++` zwraca _{{x = 3, y = 2, t = 0,
+s = -1}}_.
+
+====
+
+[NOTE]
+====
+
+* Prawą stronę równań (we wszystkich powyższych składniach) można pominąć. Jeśli prawa strona jest pominięta, traktowana jest jako 0.
+* Czasami konieczne jest wcześniejsze przekształcenie wyrażenia, aby automatyczny solver mógł znaleźć rozwiązanie, na przykład:
+`++ Rozwiąż(RozwinięcieTryg(sin(5/4 π + x) - cos(x - 3/4 π) = sqrt(6) * cos(x) - sqrt(2)))++`.
+* Dla funkcji określonej na przedziałach należy użyć polecenia xref:/commands/NRozwiąż.adoc[NRozwiąż]
+
+====
