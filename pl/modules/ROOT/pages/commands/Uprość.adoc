@@ -1,0 +1,62 @@
+= Polecenie Uprość
+:page-en: commands/Simplify
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Uprość( <Funkcja> )::
+  Jeśli to możliwe, upraszcza zapis funkcji.
+
+[EXAMPLE]
+====
+
+`++Uprość(x + x + x)++` daje w wyniku funkcję _f(x) = 3x_.
+
+====
+
+Uprość( <Tekst> )::
+  Próbuje uporządkować wyrażenia tekstowe, usuwając powtórzone znaki minus itp.
+
+[EXAMPLE]
+====
+
+Dla _a_ = _b_ = _c_ = -1 `++Uprość("f(x) = " + a + "x² + " + b + "x + " + c)++` daje w wyniku tekst _f(x) = -x^2^ - x -
+1_.
+
+====
+
+[NOTE]
+====
+
+Lepsze i prostsze wyniki daje zazwyczaj polecenie xref:/commands/FormułaTekstowa.adoc[FormułaTekstowa].
+
+====
+
+[NOTE]
+====
+
+To polecenie wymaga załadowania systemu algebry komputerowej (CAS), więc na niektórych komputerach może działać wolno. Jako alternatywy spróbuj użyć polecenia
+xref:/commands/Wielomian.adoc[Wielomian].
+
+====
+
+== Specyficzna składnia CAS
+
+Uprość( <Funkcja> )::
+  Jeśli to możliwe, upraszcza zapis funkcji. W wyrażeniach mogą występować niezdefiniowane zmienne.
+
+[EXAMPLE]
+====
+
+* `++Uprość(3 * x + 4 * x + a * x)++` yields `++ a x + 7x++`.
+* `++Załóż(x<2,Uprość(sqrt(x-2sqrt(x-1))))++` daje w wyniku `++-sqrt(abs(x - 1)) + 1++`
+* `++Załóż(x>2,Uprość(sqrt(x-2sqrt(x-1))))++` daje w wyniku `++sqrt(x - 1) + 1++`
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenia xref:/commands/RozkładNaCzynniki.adoc[RozkładNaCzynniki], xref:/commands/Załóż.adoc[Załóż],
+xref:/commands/UłamkiProste.adoc[UłamkiProste], xref:/commands/Rozwinięcie.adoc[Rozwinięcie],
+xref:/commands/Wielomian.adoc[Wielomian].
+
+====
