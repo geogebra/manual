@@ -1,0 +1,58 @@
+= Polecenie Rozwiązania
+:page-en: commands/Solutions
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+Od wersji 823 to polecenie działa tak samo jak polecenie xref:/commands/Rozwiąż.adoc[Rozwiąż], z wyjątkiem formatu wyniku: 
+polecenie _Rozwiązania_ zwraca listę wartości, a polecenie _Rozwiąż_ zwraca listę równań postaci
+_nazwa zmiennej = wartość_.
+
+====
+
+Rozwiązania( <Równanie> )::
+  Rozwiązuje podane równanie względem głównej zmiennej i zwraca listę wszystkich rozwiązań.
+
+[EXAMPLE]
+====
+
+`++Rozwiązania(x^2 = 4x)++` zwraca _{0, 4}_.
+
+====
+
+
+== Specyficzna składnia CAS
+
+
+Rozwiązania( <Równanie>, <Zmienna> )::
+ Rozwiązuje równanie względem podanej zmiennej i zwraca listę wszystkich rozwiązań.
+
+[EXAMPLE]
+====
+
+`++Rozwiązania(x * a^2 = 4a, a)++` zwraca {stem:[\frac{4}{x},0]}.
+
+====
+
+Rozwiązania( <Lista Równań>, <Lista Zmiennych> )::
+  Rozwiązuje układ równań względem podanego zestawu zmiennych i zwraca listę wszystkich rozwiązań.
+
+[EXAMPLE]
+====
+
+* `++Rozwiązania({x = 4 x + y , y + x = 2}, {x, y})++` zwraca _{{-1, 3}}_, czyli jedyne rozwiązanie układu równań _x = 4x + y_ i _y + x
+= 2_, wyświetlone jako stem:[\begin{pmatrix}-1&3\end{pmatrix}].
+* `++Rozwiązania({2a^2 + 5a + 3 = b, a + b = 3}, {a, b})++` zwraca _{{-3, 6}, {0, 3}}_, wyświetlone jako
+stem:[\begin{pmatrix}-3&6\\0&3\end{pmatrix}].
+
+====
+
+[NOTE]
+====
+
+* Czasami konieczne jest wcześniejsze przekształcenie wyrażenia, aby automatyczny solver mógł znaleźć rozwiązanie, na przykład:
+`++ Rozwiązania(RozwinięcieTryg(sin(5/4 π + x) - cos(x - 3/4 π) = sqrt(6) * cos(x) - sqrt(2))) ++`
+* Zobacz także polecenie xref:/commands/Rozwiąż.adoc[Rozwiąż].
+
+====
