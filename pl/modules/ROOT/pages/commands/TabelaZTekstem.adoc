@@ -1,0 +1,120 @@
+= Polecenie TabelaZTekstem
+:page-en: commands/TableText
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+TabelaZTekstem( <Lista>, <Lista>, ... )::
+  Tworzy tekst zawierający tabelę z list obiektów.
+
+[EXAMPLE]
+====
+
+* `++TabelaZTekstem({x^2, 4}, {x^3, 8}, {x^4, 16})++` tworzy tabelę jako obiekt tekstowy z trzema wierszami i dwiema kolumnami. Wszystkie elementy tabeli są wyrównane do lewej.
+
+* `++TabelaZTekstem(Ciąg(i^2, i, 1, 10))++` tworzy tabelę jako obiekt tekstowy z jednym wierszem. Wszystkie elementy tabeli są wyrównane do lewej.
+====
+
+[NOTE]
+====
+
+Domyślnie każda lista jest wyświetlana w osobnym wierszu tabeli.
+
+====
+
+TabelaZTekstem( <Lista>, <Lista>, ..., <Wyrównanie Tekstu> )::
+   Tworzy tekst zawierający tabelę z list obiektów. Opcjonalny parametr “Wyrównanie Tekstu”kontroluje orientację 
+i wyrównanie tekstu w tabeli, a także wyrównanie separatora w wartościach dziesiętnych.
+
+[NOTE]
+====
+
+Możliwe wartości to "vl", "vc", "vr", "v", "h", "hl", "hc", "hr" i "." lub "%" - wartość domyślna to "hl".
+
+* "v" = pionowo, tzn. listy są kolumnami
+* "h" = poziomo, tzn. listy są wierszami
+* "l" = wyrównanie do lewej
+* "r" = wyrównanie do prawej
+* "c" = wyśrodkowanie
+* "." = wyrównanie do separatora dziesiętnego
+* "a" = jak ".", ale wyświetla również zera dopełniające
+* "%" = konwersja na procenty i wyrównanie do separatora dziesiętnego
+* "p" = jak "%", ale wyświetla również zera dopełniające
+
+====
+
+[EXAMPLE]
+====
+
+* `++TabelaZTekstem({1, 2, 3, 4}, {1, 4, 9, 16}, "v")++` tworzy tekst z dwiema kolumnami i czterema wierszami, których elementy są wyrównane do lewej.
+* `++TabelaZTekstem({1, 2, 3, 4}, {1, 4, 9, 16}, "h")++` tworzy tekst z dwoma wierszami i czterema kolumnami, których elementy są wyrównane do lewej.
+* `++TabelaZTekstem({11.2, 123.1, 32423.9, "234.0"}, "vr")++` tworzy tekst z jedną kolumną, którego elementy są wyrównane do prawej.
+* `++TabelaZTekstem({A1:A10, B1:B10, C1:C10}, "vl")++` (wyrównane do lewej) są obiektami z podanych komórek _Widoku Arkusza_.
+* `++TabelaZTekstem({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "v.")++` tworzy tekst, którego elementy są wyrównane do separatora dziesiętnego 
+image:TabPtDec.png[TabPtDec.png,width=152,height=111]
+* `++TabelaZTekstem({{2011.56, 2, 3.7, 4}, {1, 4.2, 9, 16.365}}, "v%")++` tworzy tekst, którego elementy są przekształcone na procenty i wyrównane 
+do separatora dziesiętnego image:200px-TableuPourCent.png[TableuPourCent.png,width=200,height=89]
+
+====
+
+TabelaZTekstem( <Lista>, <Lista>, ..., <Wyrównanie Tekstu>, <Minimalna szerokość komórki>)::
+  Tworzy tekst zawierający tabelę z list obiektów, z podanym wyrównaniem i szerokością komórki (w pikselach).
+
+[EXAMPLE]
+====
+
+`++TabelaZTekstem({x², 4}, {x³, 8}, {x⁴, 16}, "c", 50)++` tworzy tabelę z trzema wierszami i dwiema kolumnami. Wszystkie elementy w tabeli 
+są wyśrodkowane, a szerokość komórki wynosi 50 px.
+
+====
+
+TabelaZTekstem( <Lista>, <Lista>, ..., <Wyrównanie Tekstu>, <Minimalna szerokość komórki>, <Minimalna wysokość komórki>)::
+  Tworzy tekst zawierający tabelę z list obiektów, z podanym wyrównaniem oraz szerokością i wysokością komórki (w pikselach).
+
+[EXAMPLE]
+====
+
+`++TabelaZTekstem({{"left", "center", "right"}, {"l", "c", "r"}}, "lcr", 45, 80)++` tworzy tabelę z dwoma wierszami i trzema kolumnami. 
+Wszystkie elementy w tabeli mają różne wyrównanie. Każda komórka tabeli ma szerokość 45 px i wysokość 80 px.
+
+====
+
+[NOTE]
+====
+
+_Szerokość_ i _wysokość_ obiektu utworzonego za pomocą polecenia _TabelaZTekstem_ zależą od ustawienia rozmiaru czcionki.
+
+====
+
+Można również wstawić:
+
+* różne typy nawiasów, używając następujących symboli ||||, ||, {}, [] or ()
+* separatory wierszy, używając symbolu _
+* separatory kolumn, używając symbolu |
+* różne kolory
+
+[EXAMPLE]
+====
+
+* `++TabelaZTekstem({1, 2}, {3, 4}, "c()")++` tworzy tekst stem:[\begin{pmatrix}{} 1 & 2 \\ 3 & 4 \\ \end{pmatrix} ]
+* `++TabelaZTekstem({1, 2}, {3, 4}, "c|_")++` tworzy tekst
+image:50px-TabellaTesto.png[TabellaTesto.png,width=50,height=56]
+* `++TabelaZTekstem({1, 2}, {3, 4}, "||")++` tworzy tekst stem:[ \begin{vmatrix}{} 1 & 2 \\ 3 & 4 \\ \end{vmatrix} ]
+* `++TabelaZTekstem({1, 2}, {3, 4}, "||||")++` tworzy tekst stem:[\begin{Vmatrix}{} 1 & 2 \\ 3 & 4 \\ \end{Vmatrix} ]
+* `++TabelaZTekstem({{"2x+3y=5","5x+8y=12"}},"{v")++` tworzy tekst stem:[ \left\{\begin{matrix} 2x+3y=5\\ 5x+8y=12
+\end{matrix}\right.]
+* `++TabelaZTekstem({{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "-/|_v")++` tworzy tabelę z obramowaniem i bez linii podziału.
+* `++TabelaZTekstem({{1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4}}, "|11001 _110001 h")++` tworzy tabelę z obramowaniem oraz 
+jedną linią podziału na prawo od pierwszej kolumny i pod pierwszym wierszem zawartości. W tej składni wartość 1 oznacza, że istnieje linia podziału 
+między liczbami, a wartość 0 oznacza brak linii podziału lub obramowania.
+* `++TabelaZTekstem({{"\blue{0, 1, 2, 3, 4}", "\red{4, 3, 2, 1, 0}"}}, "v")++` tworzy tabelę, w której obiekty w pierwszym wierszu są pokolorowane 
+na niebiesko, a w drugim wierszu na czerwono.
+
+====
+
+[NOTE]
+====
+
+xref:/Pasek_Stylu.adoc[Pasek stylu] obiektu utworzonego za pomocą polecenia _TabelaZTekstem_ pozwala dostosować wygląd obiektu, kolor tła, kolor oraz styl tekstu.
+
+====
+
+https://www.geogebra.org/m/Eq5T3vV3[Przykłady online autorstwa Mike’a]
