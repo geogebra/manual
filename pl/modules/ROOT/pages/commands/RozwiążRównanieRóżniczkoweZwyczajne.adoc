@@ -1,0 +1,170 @@
+= Polecenie RozwiążRównanieRóżniczkoweZwyczajne
+:page-en: commands/SolveODE
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+RozwiążRównanieRóżniczkoweZwyczajne( <f'(x, y)> )::
+  Próbuje znaleźć dokładne rozwiązanie równania różniczkowego zwyczajnego rzędu pierwszego
+  stem:[\frac{dy}{dx}(x)=f'(x, y(x))].
+
+[EXAMPLE]
+====
+
+`++RozwiążRównanieRóżniczkoweZwyczajne(2x / y)++` zwraca _stem:[\sqrt{2} \sqrt{-c_{1}+x^{2}}]_, gdzie stem:[c_{1}] jest stałą.
+
+====
+
+[NOTE]
+====
+
+stem:[c_{1}] zostanie utworzona jako obiekt pomocniczy z odpowiadającym jej suwakiem.
+
+====
+
+RozwiążRównanieRóżniczkoweZwyczajne( <f'(x, y)>, <Punkt na f> )::
+
+Próbuje znaleźć dokładne rozwiązanie różniczkowego zwyczajnego stem:[\frac{dy}{dx}(x)=f'(x, y(x))] 
+i zwraca rozwiązanie przechodzące przez dany punkt (problem Cauchy'ego).
+
+[EXAMPLE]
+====
+
+`++RozwiążRównanieRóżniczkoweZwyczajne(y / x, (1, 2))++` zwraca _y = 2x_.
+
+====
+
+
+
+RozwiążRównanieRóżniczkoweZwyczajne( <f'(x, y)>, <Start x>, <Start y>, <Koniec x>, <Krok> )::
+  Rozwiązuje numerycznie równanie różniczkowe zwyczajne rzędu pierwszego stem:[\frac{dy}{dx}=f'(x, y)] z podanym punktem startowym, końcem i krokiem dla _x_.
+
+[EXAMPLE]
+====
+
+`++RozwiążRównanieRóżniczkoweZwyczajne(-x*y, x(A), y(A), 5, 0.1)++` rozwiązuje stem:[\frac{dy}{dx}=-xy] używając wcześniej zdefiniowanego 
+punktu _A_ jako punktu startowego.
+====
+
+[NOTE]
+====
+
+* xref:/commands/Długość.adoc[Długość]( <Miejsce Geometryczne> ) pozwala sprawdzić, ile punktów zawiera obliczone miejsce geometryczne.
+* xref:/commands/Pierwszy.adoc[Pierwszy]( <Miejsce Geometryczne>, <Liczba> ) pozwala wyodrębnić punkty jako listę.
+* Aby znaleźć rozwiązanie "wsteczne", wystarczy podać ujemną wartość parametru _Koniec x_, na przykład
+`++RozwiążRównanieRóżniczkoweZwyczajne(-x*y, x(A), y(A), -5, 0.1)++`
+
+====
+
+RozwiążRównanieRóżniczkoweZwyczajne( <y'>, <x'>, <Start x>, <Start y>, <Koniec t>, <Krok> )::
+  Rozwiązuje równanie różniczkowe zwyczajne rzędu pierwszego stem:[\frac{dy}{dx}=\frac{f(x, y)}{g(x, y)}] z podanym punktem startowym, 
+  maksymalną wartością wewnętrznego parametru _t_ i krokiem dla _t_. Ta wersja polecenia może działać tam, gdzie pierwsza zawodzi, 
+np. gdy krzywa rozwiązania ma punkty, w których krzywa ma styczną pionową.
+
+[EXAMPLE]
+====
+
+`++RozwiążRównanieRóżniczkoweZwyczajne(-x, y, x(A), y(A), 5, 0.1)++` rozwiązuje stem:[\frac{dy}{dx}=- \frac{x}{y} ], 
+używając wcześniej zdefiniowanego punktu _A_ jako punktu startowego.
+
+====
+
+[NOTE]
+====
+
+Aby znaleźć rozwiązanie "wsteczne", wystarczy podać ujemną wartość parametru _Koniec t_, na przykład
+`++RozwiążRównanieRóżniczkoweZwyczajne(-x, y, x(A), y(A), -5, 0.1)++`.
+
+====
+
+RozwiążRównanieRóżniczkoweZwyczajne( <b(x)>, <c(x)>, <f(x)>, <Start x>, <Start y>, <Start y'>, <Koniec x>, <Krok> )::
+
+Rozwiązuje równanie różniczkowe zwyczajne rzędu drugiego stem:[y'' + b(x) y' + c(x) y = f(x)].
+
+[EXAMPLE]
+====
+
+`++RozwiążRównanieRóżniczkoweZwyczajne(x^2, 2x, 2x^2 + x, x(A), y(A), 0, 5, 0.1)++` rozwiązuje równanie różniczkowe zwyczajne rzędu drugiego 
+używając wcześniej zdefiniowanego punktu _A_ jako punktu startowego.
+
+====
+
+
+
+[NOTE]
+====
+
+Zawsze zwraca wynik jako miejsce geometryczne. Zastosowane algorytmy opierają się obecnie na
+https://pl.wikipedia.org/wiki/Algorytm_Rungego-Kutty[metodach numerycznych Rungego–Kutty].
+
+====
+
+[NOTE]
+====
+
+Zobacz także polecenie xref:/commands/PoleKierunków.adoc[PoleKierunków].
+
+====
+
+== Specyficzna składnia CAS
+
+RozwiążRównanieRóżniczkoweZwyczajne( <Równanie> )::
+  Próbuje znaleźć dokładne rozwiązanie równania różniczkowego zwyczajnego rzędu pierwszego lub drugiego. Dla pierwszej i drugiej pochodnej _y_ 
+można użyć odpowiednio _y'_ i _y''_.
+
+[EXAMPLE]
+====
+
+`++RozwiążRównanieRóżniczkoweZwyczajne(y' = y / x)++` yields _y = c~1~ x_.
+
+====
+
+RozwiążRównanieRóżniczkoweZwyczajne( <Równanie>, <Punkt(y) na f> )::
+  Próbuje znaleźć dokładne rozwiązanie danego równania różniczkowego zwyczajnego rzędu pierwszego lub drugiego, 
+które przechodzi przez podany punkt lub listę punktów.
+
+[EXAMPLE]
+====
+
+`++RozwiążRównanieRóżniczkoweZwyczajne(y' = y / x, (1, 2))++` zwraca _y = 2x_.
+
+====
+
+RozwiążRównanieRóżniczkoweZwyczajne( <Równanie>, <Punkt(y) na f>, <Punkt(y) na f'> )::
+  Próbuje znaleźć dokładne rozwiązanie danego równania różniczkowego zwyczajnego rzędu pierwszego lub drugiego, które przechodzi przez dany _punkt (lub listę punktów) na f_,
+  a _f'_ przechodzi przez dany _punkt (lub listę punktów) na f'_.
+
+[EXAMPLE]
+====
+
+`++RozwiążRównanieRóżniczkoweZwyczajne(y'' - 3y' + 2 = x, (2, 3), (1, 2))++` daje w wyniku stem:[ y = \frac{-9 x^2 e^3 + 30 x e^3 - 32 {(e^3)}^2 + 138
+e^3 + 32 e^{3 x} }{54 e^3} ].
+
+====
+
+RozwiążRównanieRóżniczkoweZwyczajne( <Równanie>, <Zmienna Zależna>, <Zmienna Niezależna>, <Punkt(y) na f> )::
+  Próbuje znaleźć dokładne rozwiązanie danego równania różniczkowego zwyczajnego rzędu pierwszego lub drugiego, które przechodzi przez dany punkt (lub listę punktów).
+
+[EXAMPLE]
+====
+
+`++RozwiążRównanieRóżniczkoweZwyczajne(v' = v / w, v,  w, (1, 2))++` zwraca _v = 2w_.
+
+====
+
+RozwiążRównanieRóżniczkoweZwyczajne( <Równanie>, <Zmienna Zależna>, <Zmienna Niezależna>, <Punkt(y) na f>, <Punkt(y) na f'> )::
+  Próbuje znaleźć dokładne rozwiązanie danego równania różniczkowego zwyczajnego rzędu pierwszego lub drugiego, które przechodzi przez dany _punkt (lub listę punktów) na f_,
+  a _f'_ przechodzi przez dany _punkt (lub listę punktów) na f'_.
+
+[EXAMPLE]
+====
+
+`++RozwiążRównanieRóżniczkoweZwyczajne(v' = v / w, v,  w, (1, 2), (0, 2))++` zwraca _v = 2w_.
+
+====
+
+[NOTE]
+====
+
+Dla zgodności z polem wprowadzania, jeśli pierwszy parametr jest jedynie wyrażeniem bez _y'_ lub _y''_, it is supposed to
+zakłada się, że jest to prawa strona równania różniczkowego zwyczajnego z lewą stroną _y'_.
+
+====
