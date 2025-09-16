@@ -1,0 +1,46 @@
+= Okno Utwórz nowe narzędzie
+:page-en: Tool_Creation_Dialog
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Najpierw utwórz konstrukcję, którą Twoje narzędzie ma później odtwarzać. W
+image:18px-Menu-tools.svg.png[Menu-tools.svg,width=18,height=18] xref:/Menu_Narzędzia.adoc[menu Narzędzia], wybierz
+image:18px-Menu-tools-new.svg.png[Menu-tools-new.svg,width=18,height=18] _Utwórz nowe narzędzie_, aby otworzyć 
+odpowiednie okno dialogowe. Następnie musisz uzupełnić trzy zakładki: _Obiekty Wyjścia_, _Obiekty Wejścia_, and _Nazwa i Ikona_
+, aby utworzyć własne narzędzie.
+
+[EXAMPLE]
+====
+
+Utwórz narzędzie *Kwadrat*, które tworzy kwadrat po kliknięciu dwóch istniejących punktów lub dwóch pustych miejsc w
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Widok_Grafiki.adoc[Widoku Grafiki].
+
+* Skonstruuj kwadrat, zaczynając od dwóch punktów A i B. Skonstruuj pozostałe wierzchołki i połącz je używając narzędzia
+image:22px-Mode_polygon.svg.png[Mode polygon.svg,width=22,height=22] Wielokąt, aby utworzyć wielokąt q1.
+* Wybierz image:18px-Menu-tools-new.svg.png[Menu-tools-new.svg,width=18,height=18] _Utwórz nowe narzędzie_ w
+image:18px-Menu-tools.svg.png[Menu-tools.svg,width=18,height=18] _menu Narzędzia_.
+* Określ Obiekty Wyjścia: Kliknij na kwadrat lub wybierz go z rozwijanej listy. Jako obiekty wyjściowe wybierz także boki kwadratu.
+* Określ Obiekty Wejścia: GeoGebra automatycznie wskaże obiekty wejściowe (tutaj: punkty A i B). Możesz również zmodyfikować 
+  wybór obiektów wejściowych, korzystając z rozwijanego menu lub klikając je w swojej konstrukcji.
+* Określ Nazwę narzędzia oraz Nazwę polecenia dla nowego narzędzia.
+
+[NOTE]
+====
+
+Ikona i nazwa narzędzia pojawi się na xref:/Pasek_Narzędzi.adoc[pasku narzędzi], a nazwę polecenia można używać w
+xref:/Pole_Wprowadzania.adoc[polu wprowadzania].
+
+====
+
+* Możesz także wprowadzić tekst, który zostanie wyświetlony w xref:/Pasek_Narzędzi.adoc[pomocy paska narzędzi].
+* Możesz również wybrać obraz z własnego komputera jako ikonę paska narzędzi. GeoGebra automatycznie zmienia rozmiar obrazu, 
+aby dopasować go do przycisku na pasku narzędzi.
+
+====
+
+[NOTE]
+====
+
+Obiekty wyjściowe narzędzia nie są ruchome, nawet jeśli zostały zdefiniowane jako `++Punkt(<Ścieżka>)++`. 
+Jeśli potrzebujesz ruchomego wyniku, możesz zdefiniować listę poleceń i użyć jej w poleceniu xref:/commands/Wykonaj.adoc[Wykonaj].
+
+====
