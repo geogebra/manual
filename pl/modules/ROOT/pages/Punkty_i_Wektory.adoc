@@ -1,0 +1,79 @@
+= Punkty i wektory
+:page-en: Points_and_Vectors
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Punkty i wektory można wprowadzać za pomocą xref:/Pole_Wprowadzania.adoc[polu wprowadzania] używając współrzędnych kartezjańskich lub biegunowych (zobacz
+xref:/Liczby_i_Kąty.adoc[Liczby i kąty]).Punkty mogą być również tworzone za pomocą image:24px-Mode_point.svg.png[Mode
+point.svg,width=24,height=24] xref:/tools/Punkt_Narzędzia.adoc[narzędzi z kategorii Punkt], a wektory – za pomocą narzędzi
+image:24px-Mode_vectorfrompoint.svg.png[Mode vectorfrompoint.svg,width=24,height=24]
+xref:/tools/Wektor_z_punktu.adoc[Wektor z punktu] lub the image:24px-Mode_vector.svg.png[Mode
+vector.svg,width=24,height=24] xref:/tools/Wektor_między_dwoma_punktami.adoc[Wektor między dwoma punktami] oraz różnych xref:/Polecenia.adoc[poleceń].
+
+[NOTE]
+====
+
+Etykiety pisane wielką literą oznaczają punkty, natomiast pisane małą literą odnoszą się do wektorów. Ta konwencja nie jest obowiązkowa.
+
+====
+
+[EXAMPLE]
+====
+
+* Aby wprowadzić punkt _P_ lub wektor _v_ za pomocą współrzędnych kartezjańskich na płaszczyźnie, wpisz `++P = (1, 0)++` lub `++v = (0, 5)++`.
+* Aby wprowadzić punkt _P_ lub wektor _v_ za pomocą współrzędnych kartezjańskich w przestrzeni, wpisz `++P = (1, 0, 2)++` lub `++v = (0, 5, -1)++`.
+* Aby wprowadzić punkt _P_ za pomocą współrzędnych biegunowych, wpisz `++P = (1; 0°)++` lub `++v = (5; 90°)++`.
+* Aby wprowadzić punkt _P_ za pomocą współrzędnych sferycznych, należy podać trzy współrzędne w postaci (ρ, θ, φ), np.
+`++P = (1; 60°; 30°)++`.
+* Aby wprowadzić punkt w image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+xref:/Widok_Arkusza.adoc[Widoku Arkusza], należy nazwać go używając adresu komórki, np.: `++A2 = (1, 0)++`
+
+====
+
+[NOTE]
+====
+
+* Do oddzielania współrzędnych biegunowych trzeba używać średnika. Jeśli nie wpiszesz symbolu stopnia, GeoGebra potraktuje kąt tak, jakby został podany w radianach.
+* Współrzędne punktów i wektorów można odczytywać przy użyciu xref:/Predefiniowane_Funkcje_i_Operatory.adoc[predefiniowanych
+funkcji] `++x()++` i `++y()++` (oraz `++z()++` dla punktów 3D).
+* Współrzędne biegunowe punktu _Q_ można uzyskać używając `++abs(Q)++` i `++arg(Q)++` (a także `++alt(Q)++` dla punktów 3D).
+
+====
+
+[EXAMPLE]
+====
+
+* Dany jest punkt `++P=(1,2)++` i wektor `++v=(3,4)++`, wówczas `++x(P)++` zwraca 1, a `++y(v)++` zwraca 4.
+* `++abs(P)++` zwraca 2.24, a `++arg(P)++` zwraca 63.43°.
+
+====
+
+== Obliczenia
+
+W GeoGebrze można również wykonywać obliczenia z punktami i wektorami.
+
+[EXAMPLE]
+====
+
+* Możesz utworzyć środek M odcinka wyznaczonego przez dwa punkty wpisując w polu wprowadzania `++M = (A + B) / 2++`.
+* Możesz obliczyć _długość_ wektora _v_ wpisując `++długość = sqrt(v * v)++` lub `++długość = Długość(v)++`
+* Możesz uzyskać współrzędne _punktu początkowego i końcowego_ wektora _v_ odpowiednio za pomocą poleceń `++Punkt(v, 0) ++`
+i `++Punkt(v, 1) ++`.
+* Jeśli _A = (a, b)_, wówczas `++A + 1++` zwraca _(a + 1, b + 1)_. Jeśli _A_ jest xref:/Liczby_Zespolone.adoc[liczbą zespoloną]
+_a+bί_, wówczas `++A+1++` zwraca _a + 1 + bί_.
+
+====
+
+== Iloczyn wektorowy
+
+Niech _(a, b)_ i _(c, d)_ będą dwoma punktami lub wektorami. Wówczas `++(a, b) ⊗ (c, d)++` zwraca współrzędną _z_ iloczynu wektorowego
+_(a, b, 0) ⊗ (c, d, 0)_ jako pojedynczą liczbę.
+
+Podobna składnia obowiązuje dla list, ale w takim przypadku wynik również jest listą.
+
+[EXAMPLE]
+====
+
+* `++{1, 2} ⊗ {4, 5}++` zwraca _{0, 0, -3}_
+* `++{1, 2, 3} ⊗ {4, 5, 6}++` zwraca _{3, 6, -3}_.
+
+====
