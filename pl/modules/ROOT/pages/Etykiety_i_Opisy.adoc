@@ -1,0 +1,84 @@
+= Etykiety i opisy
+:page-en: Labels_and_Captions
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+W GeoGebrze każdy obiekt ma swoją unikalną *nazwę*. Nazwa może się składać z jednej lub większej liczby liter, ewentualnie z indeksem dolnym. 
+Szczegóły znajdziesz w sekcji xref:/Nazywanie_Obiektów.adoc[Nazywanie obiektów].
+
+== Wyświetlanie i ukrywanie etykiet
+
+Możesz pokazywać lub ukrywać etykiety obiektów w image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Widok_Grafiki.adoc[Widoku Grafiki] na różne sposoby:
+
+* Wybierz narzędzie image:22px-Mode_showhidelabel.svg.png[Mode showhidelabel.svg,width=22,height=22]
+xref:/tools//Pokaż_Ukryj_etykietę.adoc[Pokaż / Ukryj etykietę] i wskaż obiekt, którego etykietę chcesz wyświetlić lub ukryć.
+* Otwórz xref:/Menu_Kontekstowe.adoc[menu kontekstowe] dla wybranego obiektu i zaznacz opcję
+image:22px-Mode_showhidelabel.svg.png[Mode showhidelabel.svg,width=22,height=22] _Pokaż etykietę_.
+* Otwórz image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Okno_Ustawień_Obiektu.adoc[okno
+Ustawienia] dla danego obiektu i w zakładce _Podstawowe_ zaznacz lub odznacz pole wyboru _Pokaż etykietę_.
+
+== Nazwa i wartość
+
+W GeoGebrze każdy obiekt ma unikalną nazwę, która może być używana jako jego etykieta w
+image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] _Widoku Grafiki_. 
+Dodatkowo obiekt może być etykietowany za pomocą swojej wartości lub nazwy i wartości. 
+Możesz zmienić te ustawienia etykietowania w image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _oknie Ustawienia_ w zakładce _Podstawowe_ 
+wybierając odpowiednią opcję _Nazwa_, _Wartość_, lub _Nazwa i Wartość_ z listy rozwijanej obok pola wyboru _Pokaż etykietę_.
+
+[NOTE]
+====
+
+Wartością punktu są jego współrzędne, natomiast wartością funkcji jest jej równanie.
+
+====
+
+== Opis
+
+Czasami możesz chcieć przypisać kilku obiektom tę samą etykietę, np. oznaczyć cztery krawędzie kwadratu literą _a_. 
+W takim przypadku GeoGebra, oprócz trzech wymienionych wyżej opcji etykietowania, oferuje dla wszystkich obiektów. _Opis_. 
+W zakładce _Podstawowe_  image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _okna Ustawienia_ wpisz odpowiedni tekst w polu
+"Opis". Następnie możesz wybrać opcję etykietowania "Opis" z listy rozwijanej obok pola wyboru _Pokaż etykietę_.
+
+W podpisach możesz używać następujących symboli zastępczych:
+
+[cols=",",options="header",]
+|===
+|Symbol |Znaczenie
+|%c |Wartość sąsiedniej komórki arkusza kalkulacyjnego (po prawej), która powinna być niezależnym tekstem. Niedy­namiczne: podpis nie zostanie zaktualizowany, dopóki nie naciśniesz [.kcode]#F9# lub [.kcode]#Ctrl# + [.kcode]#R#
+
+|%v |Wartość
+
+|%n |Nazwa
+
+|%d |Opis
+
+|%f |Definicja
+
+|%x |Współrzędna _x_ (lub współczynnik przy zmiennej _x_ w równaniu prostej a x + b y + c = 0)
+
+|%y |Współrzędna _y_ (lub współczynnik przy zmiennej _y_ w równaniu prostej a x + b y + c = 0)
+
+|%z |Współrzędna _z_ (lub wyraz wolny _c_ w równaniu prostej a x + b y + c = 0)_
+|===
+
+[EXAMPLE]
+====
+
+Niech _A_ będzie punktem o współrzędnych (1,2). Ustawienie opisu "Punkt %n ma współrzędne %v" daje opis
+"Punkt A ma współrzędne (1,2)"
+
+====
+
+=== LaTeX w opisach
+
+Możesz również używać w etykietach zapisu xref:/LaTeX.adoc[LaTeX], umieszczając odpowiednią komendę między znakami dolara (np.
+`++$ x^{2} $++`), Dostępna jest także lista najczęściej używanych liter greckich i operatorów, którą można wstawić klikając 
+małe okienko wyświetlane na końcu pola _Opis_.
+
+[EXAMPLE]
+====
+
+Używaj w opisach zapisu LaTeX, jeśli chcesz wyświetlić estetycznie sformatowany tekst matematyczny, np. Na przykład, aby wyświetlić ułamek stem:[
+\frac{a}{b} ], wpisz w poli Opis: *`++$\frac{a}{b}$++`*.
+
+====
