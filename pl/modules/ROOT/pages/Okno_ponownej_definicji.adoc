@@ -1,0 +1,66 @@
+= Okno ponownej definicji obiektu
+:page-en: Redefine_Dialog
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Redefiniowanie obiektów to bardzo wszechstronny sposób na modyfikowanie konstrukcji. Należy jednak pamiętać, 
+że może to również zmienić kolejność kroków konstrukcji w image:16px-Menu_view_construction_protocol.svg.png[Menu view construction
+protocol.svg,width=16,height=16] xref:/Protokół_Konstrukcji.adoc[Protokole konstrukcji].
+
+[NOTE]
+====
+
+Obiekt, którego definicję chcemy zmienić może zależeć tylko od obiektów zdefiniowanych wcześniej w konstrukcji, dlatego czasem konieczne 
+jest zmienienie kolejności elementów w image:16px-Menu_view_construction_protocol.svg.png[Menu view construction
+protocol.svg,width=16,height=16] xref:/Protokół_Konstrukcji.adoc[Protokole konstrukcji].
+
+====
+
+W GeoGebrze obiekt można przedefiniować na różne sposoby
+
+* Wybierz narzędzie image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22]xref:/tools/Przesuń.adoc[Przesuń] i kliknij dwukrotnie 
+dany obiekt w image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16]
+xref:/Widok_Algebry.adoc[Widoku Algebry].
+** Dla obiektów swobodnych otworzy się pole edycji, w którym można bezpośrednio zmienić algebraiczną reprezentację obiektu. 
+Aby zatwierdzić zmiany, naciśnij klawisz [.kcode]#Enter#.
+** Dla obiektów zależnych otworzy się okno dialogowe Przedefiniuj, które pozwala na przedefiniowanie obiektu.
+* Wybierz narzędzie image:22px-Mode_move.svg.png[Mode move.svg,width=22,height=22]xref:/tools/Przesuń.adoc[Przesuń] i kliknij dwukrotnie 
+dany obiekt w image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+xref:/Widok_Grafiki.adoc[Widoku Grafiki]. Spowoduje to otwarcie okna dialogowego Przedefiniuj i umożliwi redefiniowanie obiektu.
+* Zmień dowolny obiekt, wpisując jego nazwę i nową definicję w xref:/Pole_Wprowadzania.adoc[polu wprowadzania].
+* Otwórz image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Okno_Ustawień_Obiektu.adoc[okno
+Ustawienia] obiektu i zmień jego definicję w zakładce _Podstawowe_.
+
+[NOTE]
+====
+
+Nie można zmieniać definicji obiektów osadzonych. Aby to zrobić, trzeba najpierw wyłączyć opcję _Osadź obiekt_ w zakładce _Podstawowe_ 
+ image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _okna Ustawienia_ obiektu.
+
+====
+
+[NOTE]
+====
+
+Możesz też redefiniować istniejące obiekty bezpośrednio w _polu wprowadzania_. Np. wpisz `++a:Odcinek[A, B]++`, aby przedefiniować `++a++` na
+odcinek.
+
+====
+
+== Przykłady
+
+[EXAMPLE]
+====
+
+Aby umieścić istniejący punkt swobodny A na istniejącej proste h, kliknij dwukrotnie punkt A,
+otworzyć okno dialogowe Przedefiniuj. Następnie zmień definicję na `++Punkt[h]++` w wyświetlonym polu tekstowym i naciśnij
+[.kcode]#Enter#. Aby usunąć punkt A z tej prostej i ponownie uczynić go swobodnym, przedefiniuj go, nadając mu współrzędne niezależne od innych obiektów, np. (1, 2).
+
+====
+
+[EXAMPLE]
+====
+
+Innym przykładem jest zmiana prostej h przechodzącej przez dwa punkty A i B w odcinek. Otwórz okno dialogowe Przedefiniuj dla
+prostej h i zmień definicję z `++Prosta[A, B]++` na `++Odcinek[A, B]++`
+
+====
