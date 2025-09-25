@@ -1,0 +1,92 @@
+= Nazywanie obiektów
+:page-en: Naming_Objects
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+Możesz przypisać nazwę obiektowi podczas jego tworzenia, korzystając z xref:/Pole_Wprowadzania.adoc[pola wprowadzania]:
+
+* xref:/Punkty_i_Wektory.adoc[Punkty]: W GeoGebrze punkty są zawsze nazywane wielkimi literami. Wystarczy wpisać nazwę (np. A, P) 
+oraz znak równości przed współrzędnymi lub poleceniami.
+
+[EXAMPLE]
+====
+
+`++C = (2, 4)++`, `++ P = (1; 180°)++`
+
+====
+
+* xref:/Punkty_i_Wektory.adoc[Wektory]:Aby odróżnić punkty od wektorów, wektory w GeoGebrze muszą mieć nazwy zapisane małymi literami. 
+Ponownie wpisz nazwę (np. v, u) oraz znak równości przed współrzędnymi lub poleceniami.
+
+[EXAMPLE]
+====
+
+`++v = (1, 3)++`, `++ u = (3; 90°)++`
+
+====
+
+* xref:/Proste_i_osie.adoc[Proste], okręgi i xref:/Krzywe_stożkowe.adoc[krzywe stożkowe]: Tym obiektom można nadać nazwę, 
+wpisując ją oraz dwukropek przed równaniem lub poleceniem.
+
+[EXAMPLE]
+====
+
+`++g: y = x + 3++`, `++c: (x-1)^2 + (y – 2)^2 = 4++`, `++hyp: x^2 – y^2 = 2++`
+
+====
+
+* xref:/Funkcje.adoc[Funkcje]: Funkcje można nazywać, wpisując np. `++f(x) =++` lub `++g(x) =++` przed równaniem funkcji 
+lub poleceniem, za pomocą którego ją tworzymy.
+
+[EXAMPLE]
+====
+
+`++h(x) = 2 x + 4++`, `++q(x) = x^2, trig(x) = sin(x)++`
+
+====
+
+[NOTE]
+====
+
+* Jeśli nie nadasz obiektowi nazwy ręcznie, GeoGebra przypisze nowe nazwy obiektom w kolejności alfabetycznej.
+*Możesz tworzyć indeksy w nazwach obiektów, używając podkreślenia. Na przykład wpisując w _polu wprowadzania_ `++A_1++` otrzymamy A~1~,
+a `++s_{AB}++` otrzymamy s~AB~.
+
+====
+
+== Nazwy zarezerwowane
+
+To są nazwy, których nie możesz używać dla obiektów: x, y, z, OśX, OśY, OśZ, abs, sgn, sqrt, exp, log, ln, ld, lg, cos,
+sin, tan, acos, arcos, arccos, asin, arcsin, atan, arctan, cosh, sinh, tanh, acosh, arcosh, arccosh, asinh, arcsinh,
+atanh, arctanh, atan2, erf, floor, ceil, round, random, conjugate, arg, gamma, gammaRegularized, beta, betaRegularized,
+sec, csc, cosec, cot, sech, csch, coth
+
+Na liście symboli _pola wprowadzania_ znajdziesz znaki specjalne dla następujących stałych:
+
+* π - stała pi, którą można też wpisać za pomocą [.kcode]#Alt# + [.kcode]#p#
+* ℯ - stała Eulera, występująca np. w funkcji wykładniczej ℯ^x, którą można też wpisać za pomocą [.kcode]#Alt# + [.kcode]#e#
+* ί - jednostka urojona, np. dla liczb zespolonych takich jak z = 3 + ί, którą można też wpisać za pomocą [.kcode]#Alt# +
+[.kcode]#i#
+
+Jeśli nazwy zmiennych e oraz i nie są jeszcze używane, dla wygody są one automatycznie odczytywane odpowiednio jako ℯ albo ί.
+
+== Zmiana nazw obiektów
+
+Najprostszym sposobem zmiany nazwy istniejącego obiektu jest jego zaznaczenie i wpisanie nowej nazwy.
+
+Możesz także zmienić nazwę obiektu, wybierając opcję
+image:18px-Menu-edit-rename.svg.png[Menu-edit-rename.svg,width=18,height=18] _Zmień nazwę_ w
+xref:/Menu_Kontekstowe.adoc[menu kontekstowym] obiektu lub otwierając
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Okno_Ustawień_Obiektu.adoc[okno Ustawień]
+obiektu wpisując nową nazwę w polu _Nazwa_ w zakładce _Podstawowe_.
+
+[NOTE]
+====
+
+* Zależności są zazwyczaj rozwiązywane automatycznie: oznacza to, że nazwa obiektu zmienia się również w jego definicji. 
+Skrypty odwołujące się do obiektów, które otrzymały nową nazwę, trzeba jednak poprawić ręcznie.
+* Jeśli przypiszesz obiektowi nazwę już używaną przez inny obiekt, nazwa tego drugiego zostanie zmieniona,
+np. jeśli zmienisz nazwę punktu _B_ na _A_, a punkt _A_ już istnieje, to pierwotny punkt _A_ otrzyma nową nazwę _A~1~_.
+
+====
+
+Zobacz także  xref:/Etykiety_i_Opisy.adoc[Etykiety i opisy].
