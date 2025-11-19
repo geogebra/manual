@@ -42,3 +42,14 @@ ou
 
 `++Substituer(2x + 3y - z, x=a, y=2, z=b)++` retourne _2a - b + 6_.
 ====
+
+Influence des outils :
+
+[width=100%, cols=",,,,", options= "header"]
+|===
+|Syntaxe|image:32px-Mode_evaluate.svg.png[Mode evaluate.svg,width=32,height=32] *Évaluer*|image:32px-Mode_numeric.svg.png[Mode numeric.svg,width=32,height=32] *Numérique*|image:32px-Mode_keepinput.svg.png[Mode keepinput.svg,width=32,height=32] *Conserver la saisie*|
+|Substituer(3x+4,{x=7})|stem:[$\rightarrow$]  25|stem:[$\approx$]  25|stem:[$\checkmark$]  3·7+4|
+|Substituer(3x+5,{x=x+y})|stem:[$\rightarrow$]  3 x + 3 y +5|stem:[$\approx$]  3 x + 3 y +5|stem:[$\checkmark$]  3 (x + y) + 5|
+|Substituer(x²+36,{x=-1})|stem:[$\rightarrow$]  37|stem:[$\approx$]  37|stem:[$\checkmark$]  (-1)² + 36|
+|===
+
