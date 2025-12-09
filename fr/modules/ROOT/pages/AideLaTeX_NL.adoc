@@ -1,9 +1,15 @@
-Tutoriel:LaTeX-aide Polices Boites math [Outils]
+= LaTeX-aide Polices Boites math [Outils]
+:sectnums:
+
+ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
+
 
 
 GeoGebra utilise JLaTeXMath (un allié très puissant) pour afficher les formules mathématiques (textes et symboles) au moyen de LaTeX. La première chose à se remémorer est que LaTeX travaille sous deux modes mode texte et mode math. Pour écrire du texte, il faut être en mode texte et pour écrire des mathématiques en mode math.
 
 Par défaut, lorsque l'on coche "Formule LaTeX" on entre en mode math (police en italique), si nous entrons du texte (police roman) nous devons basculer en mode texte en frappant :\text{texte texte texte} ou \mbox{texte texte texte}
+
+
 Sommaire
 
     1 Polices
@@ -31,8 +37,9 @@ Sommaire
         5.6 Coupures
         5.7 Multilignes
 
-Polices
-Taille de police
+== Polices
+
+=== Taille de police
 
 La taille des polices peut être changée globalement avec les commandes suivantes :
 \tiny 	\scriptsize 	\footnotesize 	\small 	\normalsize
@@ -41,39 +48,62 @@ La taille des polices peut être changée globalement avec les commandes suivant
 La commande \normalsize rebascule la police à sa taille initiale. Si vous voulez combiner différentes tailles de police ajouter les commandes entre accolades {...}.
 
 Voici un exemple de combinaisons de tailles en mode math:
-Exemple: {\scriptsize A}{\footnotesize B}{\small C}{\normalsize D}{\large E}{\Large F}{\LARGE G}{\huge H}{\Huge I} LTX1.PNG
+[EXAMPLE]
+====
+{\scriptsize A}{\footnotesize B}{\small C}{\normalsize D}{\large E}{\Large F}{\LARGE G}{\huge H}{\Huge I} image:LTX1.PNG[LTX1.PNG,width=139,height=38]
+====
 
 Voici un exemple de combinaisons de tailles en mode mixte texte/math utilisant la commande \oldstylenums{ ...} (seulement en mode math):
-Exemple: \text{{\Huge GeoGebra}, le plus puissant, {\small depuis }}\oldstylenums{ 2001-2012} LTX2fr.PNG
+
+[EXAMPLE]
+==== 
+\text{{\Huge GeoGebra}, le plus puissant, {\small depuis }}\oldstylenums{ 2001-2012}  image:LTX2fr.PNG[LTX2fr.PNG,width=432,height=41]
+====
 
 Nous pouvons aussi utiliser, en mode mixte texte/math, la commande : \scalebox{h_scale}[v_scale]{...} où {h_scale} est un nombre positif(négatif) (obligatoire) et [v_scale] est un nombre positif (optionnel), ces nombres pouvant être des curseurs.
-Exemple: \scalebox{2}{\text{{\Huge GeoGebra}, le plus puissant, {\small depuis }}\oldstylenums{ 2001-2012}}LTX3fr.PNG
-Familles de polices
+
+[EXAMPLE]
+====
+\scalebox{2}{\text{{\Huge GeoGebra}, le plus puissant, {\small depuis }}\oldstylenums{ 2001-2012}}image:LTX3fr.PNG[LTX3fr.PNG,width=858,height=70]
+====
+
+=== Familles de polices
 
 En mode texte nous avons les familles de texte suivantes, nous pouvons les utiliser globalement ou entre accolades {...} : \rm ou {\rm } \sf ou {\sf } \tt ou {\tt } Voici un exemple:
-Exemple: \text{{\rm GeoGebra}{\sf ,le plus puissant}, {\tt depuis }}\oldstylenums{ 2001-2012}
-stem:[\text{{\rm GeoGebra}{\sf ,le plus puissant}, {\tt depuis }}\oldstylenums{ 2001-2012}]
-LTX4fr.PNG
+
+[EXAMPLE]
+====
+\text{{\rm GeoGebra}{\sf ,le plus puissant}, {\tt depuis }}\oldstylenums{ 2001-2025} image:LTX4fr.PNG[LTX4fr.PNG,width=331,height=24]
+====
 
 En mode math nous avons les familles de texte suivantes (mathrm par défaut) :
 \mathcal{ABC} 	\mathrm{abc} 	\mathbf{abc} 	\mathsf{abc} 	\mathit{abc}
 \mathtt{abc} 	\mathfrak{abc} 	\mathbb{ABC} 	\mathscr{ABC}
-Exemple: \mathbb{G}\mathfrak{e}\mathbf{o}\mathsf{G}\mathscr{E}\mathtt{b}\mathit{r}\mathrm{a}
-LTX5.PNG
-Polices grasses
+[EXAMPLE]
+====
+\mathbb{G}\mathfrak{e}\mathbf{o}\mathsf{G}\mathscr{E}\mathtt{b}\mathit{r}\mathrm{a} image:LTX5.PNG[LTX5.PNG,width=76,height=24]
+====
+
+=== Polices grasses
 
 En mode texte utilisez \bf ou {\bf ...} et en mode math utilisez \mathbf{...},
-Exemple: \text{\bf GeoGebra }\mathbf{\sqrt{2012^{2}}}
-LTX6.PNG
-Petites Majuscules
+[EXAMPLE]
+====
+\text{\bf GeoGebra }\mathbf{\sqrt{2012^{2}}}image:LTX6.PNG[LTX6.PNG,width=150,height=29]
+====
+
+
+=== Petites Majuscules
 
 Pour les petites majuscules en mode texte utilisez :\text{{\sc GeoGebra} ou \textsc{GeoGebra}
-Guillemets
+
+
+== Guillemets
 
 Les guillemets doubles droits "..."sont un caractère spécial pour GeoGebra, et ne devraient jamais être utilisés directement en LaTeX. Pour une simple quote en mode texte utilisez : \text{'Simple'} et pour une double quote utilisez :\text{''Double''}
 
 
-Espace horizontale
+== Espace horizontale
 
 Pour une espace simple en mode texte utilisez la barre d'espace, pour les autres espaces, nous avons les commandes suivantes :\quad \qquad \hspace{...}
 
@@ -85,208 +115,342 @@ dd 	didot point 	(1157 dd = 1238 pt) 	sp 	scaled point 	(65536 sp = 1 pt)
 
 En mode math, nous avons les commandes suivantes :
 \, 	une petite espace 	\: 	une moyenne espace 	\; 	une large espace 	\! 	un retrait (les objets sont reculés vers la gauche)
-Boîtes et Couleur (dans les deux modes)
-Textes et Formules en couleur
+
+
+== Boîtes et Couleur (dans les deux modes)
+
+=== Textes et Formules en couleur
 
 Les couleurs reconnues directement par JLaTeXMath peuvent être trouvées à http://en.wikibooks.org/wiki/LaTeX/Colors#The_68_standard_colors_known_to_dvips vous pouvez utiliser la commande :\textcolor{couleur}{...}
-Exemple : \text{\textcolor{WildStrawberry}{Geo}\textcolor{blue}{G}\textcolor{red}{ebra}}\,\textcolor{green}{\oldstylenums{4.2}}
-LTX7.PNG
 
+[EXAMPLE]
+====
+\text{\textcolor{WildStrawberry}{Geo}\textcolor{blue}{G}\textcolor{red}{ebra}}\,\textcolor{green}{\oldstylenums{4.2}}image:LTX7.PNG[LTX7.PNG,width=97,height=29]
+====
 
-Ajouter des Couleurs
+==== Ajouter des Couleurs
 
 Si vous désirez créer une nouvelle couleur, vous pouvez utiliser la commande : \definecolor{macouleur}{rgb}{a,b,c} les nombres a, b et c devant être entre 0 et 1, peuvent être des curseurs, par exemple:
-Exemple :
+
+[EXAMPLE]
+====
 \definecolor{a}{rgb}{0.63,0.39,0.17}
 \definecolor{b}{rgb}{0.63,0.17,0.39}
 \definecolor{c}{rgb}{0.39,0.63,0.17}
 \definecolor{d}{rgb}{0.39,0.17,0.63}
 \definecolor{e}{rgb}{0.17,0.63,0.39}
 \definecolor{f}{rgb}{0.17,0.39,0.63}
-\text{\textcolor{a}C\textcolor{b}O\textcolor{c}L\textcolor{d}O\textcolor{e}U\textcolor{f}R}
-LTEX7a.PNG
-Boîtes
+\text{\textcolor{a}C\textcolor{b}O\textcolor{c}L\textcolor{d}O\textcolor{e}U\textcolor{f}R} image:LTEX7a.PNG[LTEX7a.PNG,width=113,height=37]
+====
+
+=== Boîtes
 
 Pour de simple boîtes (sans couleurs) utilisez :\boxed{2012\text{ c'est maintenant !} ou \fbox{2012\text{ c'est maintenant !}
-Boîtes colorées
+
+
+=== Boîtes colorées
 
 A. Pour une boîte colorée (même couleur pour le bord et l'intérieur) utilisez :\colorbox{red}{2012\text{ c'est maintenant !}
 
 B. Pour une boîte colorée (couleurs différentes pour le bord et l'intérieur) utilisez :\fcolorbox{blue}{red}{2012\text{c'est maintenant !}
-Boîtes tournées
+
+=== Boîtes tournées
 
 Si vous voulez tourner une boîte (ou ce que vous voulez) utilisez : \rotatebox{angle}{...}
-Exemple : \rotatebox{45}{\fcolorbox{blue}{red}{2012\text{ c'est maintenant !}}
-LTX8fr.PNG
-Boîtes retournées
+
+[EXAMPLE]
+====
+\rotatebox{45}{\fcolorbox{blue}{red}{2012\text{ c'est maintenant !}} image:LTX8fr.PNG[LTX8fr.PNG,width=134,height=139]
+====
+
+=== Boîtes retournées
 
 Si vous voulez retourner une boîte (ou ce que vous voulez) utilisez :\reflectbox{...}
-Exemple : \reflectbox{\fcolorbox{blue}{red}{2012\text{ c'est maintenant !}}
-LTX9fr.PNG
-Boîtes simulées
+[EXAMPLE]
+====
+\reflectbox{\fcolorbox{blue}{red}{2012\text{ c'est maintenant !}} image:LTX9fr.PNG[LTX9fr.PNG,width=169,height=31]
+====
+
+=== Boîtes simulées
 
 Parfois il est nécessaire d'avoir ces boîtes simulées pour écrire des systèmes, contrôler la hauteur sous un radical, aligner dans une formule, etc.
 
 Il y a ces trois commandes :
+
 \phantom{XXX} 	espace aussi haut et large que ces trois X
+
 \hphantom{XXX} 	espace aussi large que ces trois X, de hauteur 0
+
 \vphantom{X} 	espace aussi haut que ce X, de largeur 0
-Exemple : \sqrt{b}+\sqrt{\vphantom{b}a}
-LTXa.PNG
-Environnements
+
+[EXAMPLE]
+====
+\sqrt{b}+\sqrt{\vphantom{b}a}  image:LTXa.PNG[LTXa.PNG,width=65,height=27]
+====
+
+
+== Environnements
 
 JLaTeXMath fournit un certain nombre d'environnements de travail différents. Chaque environnement commence et se termine de la même manière. \begin{environnement}[options]<br/> ...<br/> \end{environnement} Les environnements suivants sont possibles :
 • tabular 	• array 	• matrix (et variants) 	• eqnarray
 • align 	• cases 	• split 	• multline
-Tableaux
+
+=== Tableaux
 
 Les environnements tabular et array sont similaires, ils peuvent être utilisés pour mettre en page des éléments avec des possibilités de lignes horizontales et verticales. Les options sont :
 l 	colonne justifiée à gauche 	c 	colonne centrée 	r 	colonne justifiée à droite
 | 	trait vertical 	|| 	double trait vertical 	& 	séparateur de colonne
 \\ 	commence une nouvelle ligne 	\hline|| trait horizontal
-Exemple :
-\begin{tabular}{| l |c ||r |}
-\hline
-1 & 2 & 3 \\ \hline
-4 & 5 & 6 \\ \hline
-7 & 8 & 9 \\
-\hline
-\end{tabular}
-image:LTEX1.png[LTEX1.png,width=101,height=74]
 
+
+[EXAMPLE]
+====
+\begin{tabular}{| l |c ||r |}
+
+\hline
+
+1 & 2 & 3 \\ \hline
+
+4 & 5 & 6 \\ \hline
+
+7 & 8 & 9 \\
+
+\hline
+
+\end{tabular}
+
+image:LTEX1.png[LTEX1.png,width=101,height=74]
+====
 1 seule accolade à droite
 stem:[{\begin{array}{c}\left. \begin{array}{c}{x=t^2\\y=t^3}\end{array} \right\}  \end{array}}−10≤t≤10]
 
 
 Un autre exemple , utilisant \multicolumn et array :
-Exemple :
+[EXAMPLE]
+====
+
 \begin{array}{|c|c|}
+
 \hline
+
 \multicolumn{2}{|c|}{\text{Titre}} \\
+
 \hline
+
 x & y\\ \hline
+
 a & b\\
+
 c & c\\
+
 d & e\\ \hline
+
 \end{array}
+
 image:LTEX2.png[LTEX2.png,width=93,height=112]
 
 ou
-Exemple :
-\rotatebox{90} { \begin{array}{|c|c|}
-\hline
-\multicolumn{2}{|c|}{\text{Titre}} \\
-\hline
-\rotatebox{-90} x & \rotatebox{-90}y\\ \hline
-\rotatebox{-90}a & \rotatebox{-90}b\\
-\rotatebox{-90}c & \rotatebox{-90}c\\ \rotatebox{-90}d & \rotatebox{-90}e\\ \hline
-\end{array}}
-image:LTEX2bis.png[LTEX2bis.png,width=106,height=94]
+[EXAMPLE]
+====
 
+\rotatebox{90} { \begin{array}{|c|c|}
+
+\hline
+
+\multicolumn{2}{|c|}{\text{Titre}} \\
+
+\hline
+
+\rotatebox{-90} x & \rotatebox{-90}y\\ \hline
+
+\rotatebox{-90}a & \rotatebox{-90}b\\
+
+\rotatebox{-90}c & \rotatebox{-90}c\\ \rotatebox{-90}d & \rotatebox{-90}e\\ \hline
+
+\end{array}}
+
+image:LTEX2bis.png[LTEX2bis.png,width=106,height=94]
+====
 
 Si vous voulez ajouter un séparateur de colonne (un + par exemple) et mesurer l'espace (1cm) avant et après, utilisez @{\hspace{1cm}+\hspace{1cm}}:
-Exemple :
-\begin{tabular}{r@{\hspace{1cm}+\hspace{1cm}}l}
-1 & 23 \\
-45 & 678\\
-910& 1112\\
-\end{tabular}
-image:LTEX3.png[LTEX3.png,width=138,height=72]
 
+[EXAMPLE]
+====
+
+\begin{tabular}{r@{\hspace{1cm}+\hspace{1cm}}l}
+
+1 & 23 \\
+
+45 & 678\\
+
+910& 1112\\
+
+\end{tabular}
+
+image:LTEX3.png[LTEX3.png,width=138,height=72]
+====
 
 Si vous voulez présenter proprement une opération posée, avec alignement vertical de la virgule décimale :
-Exemple :
+
+[EXAMPLE]
+====
 \begin{tabular}{r@{,}l}
+
 3&14159\\
+
 16&2\\
+
 123&456\\
+
 \end{tabular}
+
 image:LTEX3bis.png[LTEX3bis.png,width=121,height=82]
+====
 
 
-Matrices
+=== Matrices
 
 Une matrice de base peut être créée en utilisant l'environnement matrix , la structure est similaire à tabular-array , les entrées sont données par ligne, avec des colonnes séparées par & et une nouvelle ligne séparée par \\. Les matrices sont généralement encadrées (sauf par défaut) de différentes façons, et tant que c'est possible, utilisez les commandes \left and \right . Les environnements prédéfinis contiennent des encadrements :
 pmatrix 	( ) 	bmatrix 	[ ] 	Bmatrix 	{ }
 vmatrix 	| | 	Vmatrix 	|| ||
-Exemple:
+
+[EXAMPLE]
+====
+
 \mathsf{A}_{m,n} =
+
 \begin{Vmatrix}
+
 a_{1,1} &a_{1,2} &\cdots &a_{1,n} \\
+
 a_{2,1} &a_{2,2} &\cdots &a_{2,n} \\
+
 \vdots & \vdots & \ddots &\vdots \\
+
 a_{m,1} &a_{m,2} &\cdots &a_{m,n}
+
 \end{Vmatrix}
+
 image:LTEX4.png[LTEX4.png,width=279,height=116]
+====
 
 
-Matrices avec textes
+==== Matrices avec textes
 
 Parfois vous voulez écrire une matrice contenant du texte, pour cet environnement vous disposez de smallmatrix, il fonctionne de la même manière que l'environnement matrix, par exemple :
-Exemple:
+
+[EXAMPLE]
+====
 \mathsf{M} =
+
 \left\{ \begin{smallmatrix}
+
 a&b\\ c&d
+
 \end{smallmatrix} \right\}
+
 image:LTEX5.png[LTEX5.png,width=107,height=49]
+====
 
 
-Équations
+=== Équations
 
 L'environnement eqnarray est désigné pour écrire des équations sur plusieurs lignes ou des équations dépassant la largeur d'une ligne, il se comporte comme un tableau à trois colonnes où la première est alignée à droite, la deuxième centrée et la troisième, alignée à gauche. Les équations que nous voulons présenter de cette manière doivent être entre les commandes \begin{eqnarray} et \end{eqnarray}, un exemple :
-Exemple:
+
+[EXAMPLE]
+====
+
 \begin{eqnarray}
+
 y &=& (x+1)^2 \\
+
 &=& x^2+2x+1
+
 \end{eqnarray}
+
 image:LTEX6.png[LTEX6.png,width=179,height=70]
+====
 
-
-Alignements
+=== Alignements
 
 L'environnement align ressemble à eqnarray, mais en plus puissant, vous pouvez insérer du texte entre les lignes avec la commande \intertext{...}, par exemple:
-Exemple:
+
+[EXAMPLE]
+====
+
 \begin{align}
+
 x+y-z &= 1\\
+
 x-y+z &= 1\\
+
 \intertext{votre texte}\\
+
 2x\hphantom{-y}+z &= 1
+
 \end{align}
+
 image:LTEX7.png[LTEX7.png,width=157,height=98]
+====
 
-
-Disjonctions
+=== Disjonctions
 
 Pour des fonctions par morceaux ou des définitions utilisant des conditions, utilisez l'environnement cases :
-Exemple:
+
+[EXAMPLE]
+====
+
 \left\vert x\right\vert =
+
 \begin{cases}
+
 \hphantom{-}x &,\, \text{si }x\geq 0 ,\\
+
 -x&,\, \text{si }x<0
+
 \end{cases}
+
 image:LTEX8.png[LTEX8.png,width=179,height=70]
+====
 
 
-Coupures
+=== Coupures
 
 Pour scinder de longs blocs de math, utilisez l'environnement split :
-Exemple:
+
+[EXAMPLE]
+====
+
 \begin{split}
+
 a& =b+c-d\\
+
 & \quad +e-f\\
+
 & =g+h\\
+
 & =i
+
 \end{split}
+
 image:LTEX9.png[LTEX9.png,width=158,height=105]
+====
 
-
-Multilignes
+=== Multilignes
 
 Pour de multiples lignes de math, utilisez l'environnement multline :
-Exemple:
+
+[EXAMPLE]
+====
+
 \begin{multline}
+
 \left(a+b+c+d+e\right)^2=a^2+b^2+c^2+d^2+e^2\\
+
 +2ab+2ac+2ad+2ae+2bc+2bd+2be+2cd+2ce+2de
+
 \end{multline}
+
 image:LTEXa.png[LTEXa.png,width=505,height=71]
+====
 
