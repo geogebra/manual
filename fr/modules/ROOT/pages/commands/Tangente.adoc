@@ -10,13 +10,13 @@ Tangente( <Point A>, <Conique c> )::
 
 [EXAMPLE]
 ====
-`++Tangente((5, 4), 4x^2 + 4y^2 = 20)++` retourne les droites d'équation _5.14834x - 3.08133y = 13.41641_ et _1.87605x - 5.69916y = -13.41641_.
+`++Cercle : Tangente((5, 4), 4x^2 + 4y^2 = 20)++` retourne les droites d'équation _5.14834x - 3.08133y = 13.41641_ et _1.87605x - 5.69916y = -13.41641_.
 
-`++Tangente((5, 4), 4x^2 - 5y^2 = 20)++` retourne les droites d'équation _4.96101x - 3.03899y = 12.64911_ et  _2.1501x - 5.8499y = -12.64911_.
+`++Ellipse : Tangente((5, 4), 4x^2 + 5y^2 = 20)++` retourne les droites d'équation _4.96101x - 3.03899y = 12.64911_ et  _2.1501x - 5.8499y = -12.64911_.
 
-`++Tangente((5, 4), 4x^2 - 5y^2 = 20)++` retourne la droite d'équation _x - y = 1_.
+`++Hyperbole : Tangente((5, 4), 4x^2 - 5y^2 = 20)++` retourne la droite d'équation _x - y = 1_.
 
-====
+==== 
 
 Tangente( <Point A>, <Fonction f> )::
   Tangente à stem:[C_f] en _x = x(A)_ (_x(A)_ est l'abscisse du point _A_).
@@ -28,44 +28,59 @@ Tangente( <Point A>, <Fonction f> )::
 
 ====
 
+Tangente( <Point A>, <Courbe g> )::
+  Si le point A appartient à la courbe, tangente à la courbe _g_ au point _A_ ;
+
+  Sinon, tangente à la courbe en son point le plus proche du point A.
+
+[EXAMPLE]
+====
+
+`++Tangente((0, 1), Courbe(cos(t), sin(t), t, 0, π))++` retourne la droite d'équation _y = 1_, tangente à la courbe au point (0, 1) ;
+
+`++Tangente((2, 2), Courbe(cos(t), sin(t), t, 0, π))++` ou ++Tangente((0.5, 0.5), Courbe(cos(t), sin(t), t, 0, π))++` retournent la droite d'équation _y = -1x + 1.41_, tangente à la courbe au point (0.71, 0.71) soit stem:[(\frac{\sqrt{2}{2}, \frac{\sqrt{2}{2})]
+====
+
+
+
 Tangente( <Point A>, <Courbe implicite c> )::
   (Toutes les) tangentes à _c_ passant par _A_
 
-
-Tangente( <Point A>, <Courbe g> )::
-  Tangente à la courbe _g_ au point _A_.
-
 [EXAMPLE]
 ====
 
-`++Tangente((0.5, 0.5), Courbe(cos(t), sin(t), t, 0, π))++` retourne la droite d'équation _y = -1x + 1.41421_.
+`++Tangente((1, 2),x^4+y^3=2 x y)++` retourne les 4 droites d'équation :
+
+_-17.54214x - 6.69982y = -30.94178_ ;
+
+_-1.15344x - 0.03433y = -1.22209_ ;
+
+_-1.42302x + 0.83287y = 0.24272_ et 
+
+_-2.49494x + 2.03449y = 1.57404_ 
+
 
 ====
 
 [NOTE]
 ====
 
-valable pour "spline"Tangente( < Point A>, <Spline s> ) : Tangente à la spline _s_ au point _A_.
-====
+valable pour "spline"
+
+Tangente( < Point A>, <Spline s> ) :: 
+Tangente à la spline _s_ au point _A_.
 
 [EXAMPLE]
 ====
 
-Soit `++A=(0,1)++`, `++B=(2,5)++` et `++C=(0,4)++` trois points. `++Tangente(A,Spline({A,B,C})) ++` retourne la droite d'équation
-_y=1.5x+1_.
+Soit les trois points `++A = (0, 1)++`, `++B = (4, 4)++` et `++C = (0, 4)++`.
+
+`++Tangente(A, Spline({A, B, C}))++` retourne la droite a: y = 0.59x + 1.
 
 ====
 
-
-[NOTE]
 ====
 
-Si le point A n’est pas sur la courbe, alors vous obtenez la tangente au point M de la courbe tel que la
-distance AM soit minimale.
-
-Ainsi `++Tangente((2, 2), Courbe(cos(t), sin(t), t, 0, π))++` retourne comme `++Tangente((0.5, 0.5), Courbe(cos(t), sin(t), t, 0, π))++` la droite d'équation _y = -1x + 1.41421_.
-
-====
 
 Tangente( <Abscisse a>, <Fonction f> )::
   Tangente à stem:[C_f] au point d'abscisse _a_.
@@ -93,7 +108,15 @@ Tangente( <Conique>, <Conique> )::
 [EXAMPLE]
 ====
 
-`++Tangente(x^2 + y^2 = 4, (x - 6)^2 + y^2 = 4)++` retourne les quatre droites d'équation _1.33333x + 1.49071y = 4_ , _-1.33333x - 1.49071y = 4_ , _y = 2_   et _y = -2_.
+`++Tangente(x^2 + y^2 = 4, (x - 6)^2 + y^2 = 4)++` retourne les quatre droites d'équation :
+
+_1.33333x + 1.49071y = 4_ ;
+
+_-1.33333x - 1.49071y = 4_ ;
+
+_y = 2_   et
+
+_y = -2_.
 
 ====
 
