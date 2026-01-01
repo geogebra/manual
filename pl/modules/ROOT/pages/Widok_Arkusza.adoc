@@ -1,0 +1,228 @@
+= Widok Arkusza
+:page-en: Spreadsheet_View
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+== [#Interfejs_użytkownika_Widoku_Arkusza]#Interfejs użytkownika Widoku Arkusza#
+
+Domyślnie image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Widok 
+Arkusza_ jest otwierany obok image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+_xref:/Graphics_View.adoc[Widoku Grafiki]_. xref:/tools/Spreadsheet_Tools.adoc[_Pasek narzędzi Widoku Arkusza_] jest
+wyświetlany u góry okna GeoGebry, a przyciski
+image:16px-Menu-edit-undo.svg.png[Menu-edit-undo.svg,width=16,height=16]image:16px-Menu-edit-redo.svg.png[Menu-edit-redo.svg,width=16,height=16]
+_Cofnij / Ponów_ znajdują się w prawym górnym rogu okna.
+
+[width="100%",cols="100%",]
+|===
+a|
+image:314px-Spreadsheet-View.png[Spreadsheet-View.png,width=314,height=220]
+
+Widok Arkusza
+
+|===
+
+The image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Widok Arkusza_ jest częścią
+predefiniowanego widoku image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+xref:/Widoki.adoc[_Arkusz_], chociaż możesz
+xref:/GeoGebra_5_0_porównanie_wersji_desktopowej_webowej_i_na_tablet.adoc[zmienić układ interfejsu] użytkownika GeoGebry zgodnie z własnymi potrzebami.
+
+=== Dostosowywanie image:24px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=24,height=24] Widoku Arkusza
+
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Widok Arkusza_ można dostosować do własnych preferencji poprzez:
+
+* otwarcie image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]
+_xref:/Okno_Dialogowe_Ustawienia.adoc[okna Ustawienia]_ i wybranie opcji
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Arkusz_ (GeoGebra Desktop)
+* otwarcie image:16px-Stylingbar_icon_spreadsheet.svg.png[Stylingbar icon spreadsheet.svg,width=16,height=12]
+xref:/Pasek_Stylu.adoc[_paska stylu Widoku Arkusza_] i wybranie opcji
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _Ustawienia_ (GeoGebra Web i wersje mobilne)
+
+W wyświetlonym oknie dialogowym możesz zmienić układ, decydując, czy chcesz wyświetlać:
+
+* _xref:/Pole_Wprowadzania.adoc[pole wprowadzania]_
+* _linie siatki_
+* nagłówki _kolumn_ lub _wierszy_
+* paski przewijania _pionowy_ lub _poziomy_
+
+Dodatkowo możesz zmienić zachowanie image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Widoku Arkusza_ poprzez:
+
+* zezwolenie na użycie _przycisków_ i _pól wyboru_ oraz _podpowiedzi_
+* wymaganie znaku _"=" przed poleceniami_
+* używanie _autouzupełniania_
+
+== [#Tworzenie_obiektów_matematycznych]#Tworzenie obiektów matematycznych#
+
+W GeoGebrze image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] każda komórka _Widoku Arkusza_
+ma swoją nazwę, co pozwala na bezpośrednie odwoływanie się do niej.
+
+[EXAMPLE]
+====
+
+Komórka w kolumnie _A_ i wierszu _1_ ma nazwę _A1_.
+
+====
+
+[NOTE]
+====
+
+Nazwy komórek mogą być używane w wyrażeniach i _xref:/Polecenia.adoc[poleceniach]_w celu odwoływania się do zawartości odpowiedniej komórki.
+====
+
+=== Wprowadzanie danych, zaznaczanie i polecenia
+
+W _komórkach Widoku Arkusza_ możesz wprowadzać nie tylko liczby, lecz także wszystkie typy xref:/Obiekty_Ogólne.adoc[obiektów ogólnych]
+i xref:/Obiekty_Geometryczne.adoc[geometrycznych] obsługiwanych przez GeoGebrę (np. współrzędne punktów,
+xref:/Funkcje.adoc[funkcje], xref:/Polecenia.adoc[polecenia]).
+
+Aby zaznaczyć nieprzylegające do siebie kolumny lub komórki, użyj skrótu [.kcode]#Ctrl# + [.kcode]#kliknięcie#.
+
+=== Względne nazwy komórek
+
+Podczas kopiowania zawartości jednej komórki do innej, domyślnie wszystkie odwołania są odpowiednio zmieniane względem położenia docelowego.
+
+[EXAMPLE]
+====
+
+Niech `++A1=1++`, `++A2=2++`. W _B1_ wpisz `++(A1, A1)++`. Po skopiowaniu _B1_ do _B2_ (za pomocą [.kcode]#Ctrl# +
+[.kcode]#C#, [.kcode]#Ctrl# + [.kcode]#V# ub przeciągnięcia rogu komórki) otrzymasz _(A2, A2)_ w _B2_.
+
+====
+
+Aby zapobiec temu zachowaniu, możesz wstawić znak `++$++` przed oznaczeniem kolumny i/lub wiersza komórki, do której się odwołujesz.
+
+[NOTE]
+====
+
+W systemie Mac OS xref:/Skróty_Klawiszowe.adoc[skróty] kopiowania i wklejania to [.kcode]#Cmd# + [.kcode]#C# oraz [.kcode]#Cmd# +
+[.kcode]#V#
+
+====
+
+== [#Wprowadzanie_danych_do_Widoku_Arkusza]#Wprowadzanie danych do image:24px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=24,height=24] Widoku Arkusza#
+
+=== Wprowadzanie ręczne, polecenia i śledzenie
+
+Oprócz ręcznego wpisywania danych do komórek image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Widoku Arkusza_ arkusza kalkulacyjnego możesz używać poleceń
+xref:/commands/WypełnijKolumnę.adoc[_WypełnijKolumnę_], xref:/commands/WypełnijWiersz.adoc[_WypełnijWiersz_] lub
+xref:/commands/WypełnijKomórki.adoc[_WypełnijKomórki_]. Możesz także wprowadzać dane, korzystając z funkcji xref:/Ślady.adoc[_Zapisz do arkusza kalkulacyjnego_].
+
+=== Kopiowanie danych z image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] Widoku Algebry
+
+Za pomocą prostego przeciągania i upuszczania można kopiować obiekty z
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _xref:/Widok_Algebry.adoc[Widoku Algebry]_
+do image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Widoku Arkusza_. Jeśli
+przeciągniesz listę, jej elementy zostaną wklejone poziomo, począwszy od komórki, w której zwolnisz lewy przycisk myszy lub dotyk ekranu. 
+Przytrzymanie klawisza [.kcode]#Shift# podczas przeciągania powoduje wyświetlenie okna dialogowego po zwolnieniu przycisku myszy, umożliwiającego wybór, 
+czy wklejone obiekty mają być xref:/Free_Dependent_and_Auxiliary_Objects.adoc[swobodne lub zależne],
+oraz wybór orientacji wklejania (opcja _Transpozycja_).
+
+=== Kopiowanie danych z innych arkuszy kalkulacyjnych
+
+GeoGebra umożliwia import danych z innych programów arkuszy kalkulacyjnych do
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Widoku Arkusza_.
+
+* Zaznacz i skopiuj dane do schowka systemowego, które chcesz zaimportować (np. skrót [.kcode]#Ctrl# +
+[.kcode]#C# w Mac OS: [.kcode]#Cmd# + [.kcode]#C#).
+* Otwórz okno GeoGebry i wyświetl image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Widok Arkusza_.
+* Kliknij komórkę, która ma zawierać pierwszą wartość danych (np. komórkę _A1_)
+* Wklej dane ze schowka systemowego do image:16px-Menu_view_spreadsheet.svg.png[Menu view
+spreadsheet.svg,width=16,height=16] _Widoku Arkusza_ (np. skrót
+[.kcode]#Ctrl# + [.kcode]#V# w Mac OS: [.kcode]#Cmd# + [.kcode]#V#).
+
+.
+
+=== Importowanie plików danych z innych aplikacji
+
+Możesz również importować dane z innych aplikacji zapisane w formatach ._txt_, ._csv_ oraz ._dat_. Wystarczy kliknąć prawym przyciskiem myszy 
+pustą komórkę image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16]
+_Widoku Arkusza_, i wybrać opcję _Importuj plik danych..._.
+
+[NOTE]
+====
+
+GeoGebra używa kropki [.kcode]#.# jako separatora dziesiętnego oraz przecinka [.kcode]#,# jako separatora pól. Przed importem upewnij się, że plik danych jest zgodny z tymi ustawieniami.
+
+====
+
+=== Pasek narzędzi Widoku Arkusza
+
+xref:/tools/Narzędzia_Widoku_Arkusza.adoc[_Pasek narzędzie Widoku Arkusza_] udostępnia zestaw _xref:/Narzędzia.adoc[narzędzi]_ umożliwiających tworzenie obiektów w 
+image:16px-Menu_view_spreadsheet.svg.png[Menu view spreadsheet.svg,width=16,height=16] _Widoku Arkusza_. Każda ikona na _xref:/Pasek_Narzędzi.adoc[pasku narzędzi]_ reprezentuje
+xref:/Narzędzia.adoc[_zestaw narzędzi_] zawierający powiązane _xref:/Narzędzia.adoc[narzędzia]_. Aby otworzyć:
+_zestaw narzędzi_, kliknij domyślne _narzędzie_ widoczne na _pasku narzędzi Widoku Arkusza_ (GeoGebra Web
+i aplikacje mobilne), albo kliknij małą strzałkę w prawym dolnym rogu ikony _narzędzia_ (GeoGebra Desktop).
+
+image:146px-Toolbar-Spreadsheet.png[Spreadsheet Tools,title="Spreadsheet Tools",width=146,height=32]
+
+[NOTE]
+====
+
+_Narzędzia_  _Widoku Arkusza_ są uporządkowane według rodzaju tworzonych obiektów lub ich funkcjonalności.
+Przykładowo, _narzędzia_ do analizy danych znajdują się w xref:/tools/Narzędzia_Widoku_Arkusza.adoc[_zestawie Analiza danych_]
+i są reprezentowane przez ikonę narzędzia image:16px-Mode_onevarstats.svg.png[One Variable Analysis
+Tool,title="One Variable Analysis Tool",width=16,height=16] _Analiza Jednej Zmiennej_.
+
+====
+
+== [#Wyświetlanie_obiektów_matematycznych]#Wyświetlanie obiektów matematycznych#
+
+=== Wyświetlanie obiektów Widoku Arkusza w innych widokach
+
+Jeśli to możliwe, GeoGebra natychmiast wyświetla graficzną reprezentację obiektu wprowadzonego w _komórce
+Widoku Arksuza_ w image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16]
+_xref:/Widok_Grafiki.adoc[Widoku Grafiki]_. Nazwa obiektu jest taka sama jak nazwa _komórki_, w której został utworzony (np. _A5_, _C1_).
+
+[NOTE]
+====
+
+Domyślnie, _obiekty Widoku Arkusza_ są klasyfikowane jako xref:/Obiekty_Swobodne_Zależne_i_Pomocnicze.adoc[_obiekty pomocnicze_]
+w image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _xref:/Widok_Algebry.adoc[Widoku Algebry]_. 
+Można je pokazywać lub ukrywać, wybierając _Obiekty pomocnicze_ w
+_xref:/Menu_Kontekstowe.adoc[menu kontekstowym]_ lub klikając
+image:16px-Stylingbar_algebraview_auxiliary_objects.svg.png[Stylingbar algebraview auxiliary
+objects.svg,width=16,height=16] ikonę w xref:/Widok_Algebry.adoc[_pasku stylu Widoku Algebry_]
+
+====
+
+=== Wykorzystywanie danych z Arkusza w innych _widokach_
+
+Dane z arkusza można przetwarzać, zaznaczając wiele komórek i klikając prawym przyciskiem myszy (Mac OS: [.kcode]#Cmd#-kliknięcie)
+zaznaczenie. W wyświetlonym _xref:/Menu_Kontekstowe.adoc[menu kontekstowym]_, wybierz podmenu _Utwórz_ , a następnie odpowiednią opcję
+(_Lista_, _Lista punktów_, _Macierz_, _Tabela_, _Łamana_ albo _Tabela operacji_).
+
+=== Tabela operacji
+
+Dla funkcji z dwoma parametrami można utworzyć _tabelę operacji_, w której wartości pierwszego parametru są wpisane w górnym wierszu, 
+a wartości drugiego parametru – w lewej kolumnie. Sama funkcja musi być wpisana w lewym górnym rogu tabeli.
+
+Po wpisaniu funkcji i wartości parametrów zaznacz prostokątny obszar przyszłej _tabeli operacji_ , a następnie kliknij prawym przyciskiem myszy (w Mac OS: [.kcode]#Cmd#-kliknięcie) 
+i wybierz opcję _Utwórz > Tabela operacji_ w wyświetlonym _xref:/Menu_Kontekstowe.adoc[menu kontekstowym]_.
+
+[EXAMPLE]
+====
+
+Niech `++A1 = x y++`, `++A2 = 1++`, `++A3 = 2++`, `++A4 = 3++`, `++B1 = 1++`, `++C1 = 2++` oraz `++D1 = 3++`. Zaznacz komórki
+_A1:D4_. Potem kliknij je prawym klawiszem (Mac OS: [.kcode]#Cmd#-kliknięcie)i wybierz opcję _Utwórz > Tabela operacji_ 
+w wyświetlonym _xref:/Menu_Kontekstowe.adoc[menu kontekstowym]_, aby utworzyć to create utworzyć tabelę z wynikami podstawiania wartości do danej funkcji.
+
+====
+
+=== Pasek stylu Widoku Arkusza
+
+xref:/Style_Bar.adoc[_Pasek stylu Widoku Arkusza_] umożliwia:
+
+* wyświetlanie i ukrywanie _xref:/Pole_Wprowadzania.adoc[pola wprowadzania]_ (GeoGebra Desktop)
+* zmianę stylu tekstu na to image:16px-Stylingbar_text_bold.svg.png[Stylingbar text bold.svg,width=16,height=16] *pogrubiony*
+lub image:16px-Stylingbar_text_italic.svg.png[Stylingbar text italic.svg,width=16,height=16] _kursywę_
+* ustawienie wyrównania tekstu: image:16px-Stylingbar_spreadsheet_align_left.svg.png[Stylingbar spreadsheet align
+left.svg,width=16,height=16] _do lewej_, image:16px-Stylingbar_spreadsheet_align_center.svg.png[Stylingbar spreadsheet align
+center.svg,width=16,height=16] _do środka_, lub image:16px-Stylingbar_spreadsheet_align_right.svg.png[Stylingbar spreadsheet
+align right.svg,width=16,height=16] _do prawej_
+* zmianę image:16px-Stylingbar_color_white.svg.png[Stylingbar color white.svg,width=16,height=16] koloru tła komórki
+* zmianę obramowania komórek (GeoGebra Desktop)
+* otwarcie image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] _xref:/Okno_Ustawień_Obiektu.adoc[okna
+Ustawienia]_ (GeoGebra Web i wersje mobilne)
+* wyświetlenie dodatkowych image:16px-Stylingbar_dots.svg.png[Stylingbar dots.svg,width=16,height=16]
+xref:/Podstawowe_widoki.adoc[_widoków_] w oknie GeoGebry (GeoGebra Web i wersje mobilne)
