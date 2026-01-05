@@ -1,0 +1,116 @@
+= Pole wprowadzania
+:page-en: Input_Bar
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+== Pole wprowadzania klasyczne i w Widoku Algebry
+
+W GeoGebra Desktop _pole wprowadzania_ jest domyślnie umieszczony na dole okna GeoGebry. Możesz go wyświetlić lub ukryć
+za pomocą xref:/Menu_Widok.adoc[menu Widok] albo xref:/GeoGebra_5_0_porównanie_wersji_desktopowej_webowej_i_na_tablet.adoc[zmienić jego 
+położenie] w oknie GeoGebry.
+
+W GeoGebra Web i aplikacjach mobilnych _pole wprowadzania_ jest zintegrowane bezpośrednio z
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] xref:/Widok_Algebra.adoc[Widokiem Algebry].
+Dlatego klasyczne _pole wprowadzania_ nie jest domyślnie wyświetlane, jeśli image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] _Widok Algebry_ jest częścią okna GeoGebry. Klasyczne pole wprowadzania można jednak wyświetlić za pomocą
+using the image:16px-Menu-view.svg.png[Menu-view.svg,width=16,height=16] _menu Widok_, zastępując to, które było w _Widoku Algebry_.
+
+Oba _pola wprowadzania_ (klasyczne i w Widoku Algebry) oferują w GeoGebrze te same funkcjonalności. Jednak _pole wprowadzania
+w Widoku Algebry_ ma dodatkowo _edytor równań_, który ułatwia wpisywanie równań i wyrażeń.
+
+[width="100%",cols="50%,50%",]
+|===
+a|
+image:323px-Algebra-View.png[Algebra-View.png,width=323,height=210]
+
+GeoGebra Web i aplikacje mobilne
+
+a|
+image:325px-Algebra-View-Desktop.png[Algebra-View-Desktop.png,width=325,height=210]
+
+GeoGebra Desktop
+
+|===
+
+== Pole wprowadzania i polecenia
+
+_Pole wprowadzania_ umożliwia bezpośrednie tworzenie i xref:/Redefine_Dialog.adoc[redefiniowanie]obiektów matematycznych w
+image:16px-Menu_view_algebra.svg.png[Menu view algebra.svg,width=16,height=16] _Widoku Algebry_ poprzez wpisywanie lub 
+modyfikowanie ich postaci algebraicznych (np. wartości, współrzędnych, równań).
+
+[EXAMPLE]
+====
+
+Wpisanie `++f(x) = x^2++` tworzy funkcję _f_ w image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] _Widoku Algebry_oraz jej wykres w image:16px-Menu_view_graphics.svg.png[Menu
+view graphics.svg,width=16,height=16] xref:/Widok_Grafiki.adoc[Widoku Grafiki].
+
+====
+
+[NOTE]
+====
+
+Po wpisaniu wyrażenia algebraicznego w _polu wprowadzania_ zawsze naciśnij klawisz [.kcode]#Enter#.
+
+====
+
+Dodatkowo możesz wpisywać xref:/Polecenia.adoc[polecenia], aby łatwo tworzyć nowe obiekty lub pracować z już istniejącymi.
+Więcej informacji znajdziesz w sekcjach xref:/Obiekty_Geometryczne.adoc[Obiekty geometryczne] oraz xref:/Obiekty_Ogólne.adoc[Obiekty ogólne].
+
+[EXAMPLE]
+====
+
+Wpisując `++A=(1,1)++` i naciskając [.kcode]#Enter# utworzysz xref:/Obiekty_Swobodne_Zależne_i_Pomocnicze.adoc[swobodny]
+punkt _A_ o współrzędnych (1, 1). W analogiczny sposób utwórz punkt swobodny `++B=(3,4)++`. Gdy wpiszesz
+`++Prosta(A, B)++`, utworzysz prostą xref:/Obiekty_Swobodne_Zależne_i_Pomocnicze.adoc[zależną] przechodzącą przez punkty _A_ i _B_.
+
+====
+
+Możesz w dowolnym momencie przełączać aktywność między _polem wprowadzania_ i image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] _Widokiem Grafiki_, naciskając klawisz [.kcode]#Enter#. Pozwala to wpisywać wyrażenia i polecenia 
+bez konieczności klikania w _pole wprowadzania_.
+
+== Wyświetlanie historii wprowadzania
+
+Po umieszczeniu kursora w _polu wprowadzania_ możesz używać klawiszy [.kcode]#↑# (strzałka w górę) i [.kcode]#↓# (strzałka w dół), 
+aby krok po kroku przeglądać wcześniejsze wpisy. Naciśnij [.kcode]#Enter# , aby przenieść wybrany wcześniejszy wpis z powrotem do
+_pola wprowadzania_.
+
+== Wstawianie nazwy, wartości lub definicji obiektu do pola wprowadzania (GeoGebra Desktop)
+
+*Wstawianie nazwy obiektu*: Aktywuj narzędzie image:20px-Mode_move.svg.png[Mode
+move.svg,width=20,height=20]xref:/tools/Przesuń.adoc[Przesuń] i zaznacz obiekt, którego nazwę chcesz wstawić do
+_pola wprowadzania_.Następnie naciśnij klawisz [.kcode]#F5#.
+
+[NOTE]
+====
+
+Nazwa obiektu zostanie dopisana do wyrażenia, które było wpisane w _polu wprowadzania_ przed naciśnięciem klawisza [.kcode]#F5#.
+
+====
+
+*Wstawianie wartości obiektu*: Aby wstawić wartość obiektu (np. współrzędne punktu `++(1, 3)++`lub równanie
+`++3x – 5y = 12++`) do _pola wprowadzania_, aktywuj narzędzie image:20px-Mode_move.svg.png[Mode
+move.svg,width=20,height=20] __Przesuń__i kliknij obiekt, którego wartość chcesz wstawić.
+TNastępnie naciśnij klawisz [.kcode]#F4#.
+
+[NOTE]
+====
+
+Wartość obiektu zostanie dopisana do wyrażenia, które było wpisane w _polu wprowadzania_ przed naciśnięciem klawisza [.kcode]#F4#.
+
+====
+
+*Wstawianie definicji obiektu*: Istnieją dwa sposoby wstawienia definicji obiektu (np. `++A = (4, 2)++`,
+`++c = Okrąg(A, B)++`) do _pola wprowadzania_.
+
+* Przytrzymaj klawisz [.kcode]#Alt# i kliknij obiekt – definicja obiektu zostanie wstawiona, a wcześniejsza zawartość 
+_pola wprowadzania_ zostanie usunięta.
+* Aktywuj narzędzie image:20px-Mode_move.svg.png[Mode move.svg,width=20,height=20] _xref:/tools/Przesuń.adoc[Przesuń]_ i
+zaznacz obiekt, którego definicję chcesz wprowadziać do _pola wprowadzania_, a następnie naciśnij klawisz [.kcode]#F3#.
+
+[NOTE]
+====
+
+Definicja obiektu zastępuje wyrażenie, które było wpisane w _polu wprowadzania_ przed naciśnięciem klawisza [.kcode]#F3#.
+
+====
