@@ -11,24 +11,36 @@ image:32px-Mode_slider.svg.png[Mode slider.svg,width=32,height=32]
 ====
 
 Dans GeoGebra, un curseur n’est rien d’autre qu’une illustration graphique xref:/Nombres_et_Angles.adoc[d’un
-nombre ou d’un angle libre]. Vous pouvez aisément créer un curseur à partir de n’importe quel nombre ou
-angle libre en affichant cet objet dans image:16px-Menu_view_graphics.svg.png[Menu view
-graphics.svg,width=16,height=16]xref:/Graphique.adoc[Graphique] (voir son xref:/Menu_contextuel.adoc[Menu_contextuel] ;
-ou l'outil image:32px-Mode_showhideobject.svg.png[Mode showhideobject.svg,width=32,height=32]
-xref:/tools/Afficher_cacher_l_objet.adoc[Afficher/Cacher Objet]).
+nombre libre ou d’un angle libre]. 
+
+En version 5 : Vous pouvez aisément créer un curseur à partir de n’importe quel nombre libre ou
+angle libre, présent dans image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/Algèbre.adoc[Algèbre] en affichant cet objet dans image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16]xref:/Graphique.adoc[Graphique] (en cliquant simplement sur sa pastille de visibilité située à sa gauche,ou dans son xref:/Menu_contextuel.adoc[Menu_contextuel] _Afficher l'objet_;
+ou via l'outil image:32px-Mode_showhideobject.svg.png[Mode showhideobject.svg,width=32,height=32] xref:/tools/Afficher_cacher_l_objet.adoc[Afficher/Cacher l'objet]).
+
+En version 6, et applications : Après avoir créé un nombre libre ou un angle libre dans image:16px-Menu_view_algebra.svg.png[Menu view
+algebra.svg,width=16,height=16] xref:/Algèbre.adoc[Algèbre], ouvrez  le menu image:16px-Stylingbar_dots.svg.png[16px-Stylingbar_dots.svg.png,width=16,height=16] mini-hamburger, à droite dans le champ de saisie, pour activer _Créer Curseur_ (qui basculera en _Supprimer le curseur_)
 
 ====
 
-Cliquez sur une place vide dans la vue image:16px-Menu_view_graphics.svg.png[Menu view
-graphics.svg,width=16,height=16]xref:/Graphique.adoc[Graphique] pour y créer un curseur pour un nombre ou un angle. Une
-fenêtre s’ouvre pour y préciser le _Nom_, l’_Intervalle_ [_min_ ; _max_] et l’_Incrément_ pour le nombre ou l’angle,
-ainsi que l’_Orientation_ et la _Largeur_ du curseur (en pixel), et sa _Vitesse_ et son style d'_Animation_.
+Activez l'outil image:32px-Mode_slider.svg.png[Mode slider.svg,width=32,height=32], puis cliquez ou tapez sur une place vide dans la vue image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16]xref:/Graphique.adoc[Graphique] pour y créer un curseur pour un nombre ou un angle.
 
-[NOTE]
+
+Une fenêtre de dialogue s’ouvre pour y préciser :
+
+* s’il s’agit d’un _Nombre_, d’un _Angle_ ou d’un _Entier_, s’il est _Aléatoire_, son _Intervalle_ : [_min_ ; _max_] et son _Incrément_ ; 
+
+* Dans l’onglet « Curseur » : s’il est _fixé_, ainsi que son orientation (_horizontal_ / _vertical_) 
+** si un curseur est _fixé_ tout clic dessus fera varier sa valeur.
+
+
+* et Dans l’onglet «  d'Animation » sa _Vitesse_ et son mode d'animation  _Répéter_ : stem:[\Leftrightarrow] _Alterné_ / stem:[\Rightarrow] _Croissant_ / stem:[\Leftarrow] _Décroissant_ / stem:[\Rightarrow] _Une fois (croissant)_
+ 
 ====
 
-Les paramètres _min_, _max_, _Incrément_ et _Vitesse_ sont dynamiques, vous pouvez utiliser des
-[.mw-selflink .selflink]#curseurs#.
+Les paramètres _min_, _max_, _Incrément_ et _Vitesse_ sont dynamiques, vous pouvez utiliser des [.mw-selflink .selflink]#curseurs#.
 
 ====
 
@@ -46,9 +58,8 @@ l’incrément en utilisant les raccourcis claviers suivants :
 La position du curseur peut être absolue dans la vue image:16px-Menu_view_graphics.svg.png[Menu view
 graphics.svg,width=16,height=16]xref:/Graphique.adoc[Graphique] (cela signifie que le curseur n’est pas affecté par le
 zoom, mais reste toujours dans la partie visible de la vue image:16px-Menu_view_graphics.svg.png[Menu view
-graphics.svg,width=16,height=16]xref:/Graphique.adoc[Graphique]) ou relative au repère de coordonnées (voir
-image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] les xref:/Dialogue_Propriétés.adoc[Dialogue
-Propriétés] du nombre ou angle correspondant).
+graphics.svg,width=16,height=16]xref:/Graphique.adoc[Graphique]) ou relative au repère de coordonnées (Ce paramètre peut être modifié ultérieurement dans la boîte de dialogue
+image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]  xref:/Dialogue_Propriétés.adoc[Propriétés] du nombre ou angle correspondant).
 
 [NOTE]
 ====
@@ -66,15 +77,31 @@ l'animation d'un curseur.
 
 == Curseurs fixés
 
-Comme tous les autres objets, les curseurs peuvent être xref:/Propriétés_d_un_objet.adoc[fixés]. Pour déplacer un
-curseur fixé : 
+Les curseurs créés avec l'Outil image:32px-Mode_slider.svg.png[Mode slider.svg,width=32,height=32] *Curseur*
+ne sont pas fixés par défaut. Comme tous les autres objets, ils peuvent être xref:/Propriétés_d_un_objet.adoc[fixés].
+
+Sélectionnez le menu contextuel ou le dialogue image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]  xref:/Dialogue_Propriétés.adoc[Propriétés] pour modifier ce paramètre et fixer le curseur.
+
+Une fois fixé, le curseur reste déplaçable. 
+
+
+Pour déplacer un curseur fixé :
+
+Sur un écran tactile :  Activez l'outil image:32px-Mode_slider.svg.png[Mode slider.svg,width=32,height=32] Curseur et faites glisser le curseur ;
+
+Sur un écran non tactile :
 
 * quand l'outil image:32px-Mode_move.svg.png[Mode move.svg,width=32,height=32] xref:/tools/Déplacer.adoc[Déplacer] 
 est sélectionné, vous pouvez le glisser à l'aide du bouton droit de la souris ; 
 * quand l'outil image:32px-Mode_slider.svg.png[Mode slider.svg,width=32,height=32] *Curseur* est sélectionné, 
 vous pouvez utiliser aussi bien le bouton droit que le gauche. 
 
-Les curseurs créés avec l'Outil image:32px-Mode_slider.svg.png[Mode slider.svg,width=32,height=32] *Curseur*
-sont fixés par défaut. Vous pouvez en modifier la valeur par un simple clic dessus.
+== Propriétés d’un curseur :
+ 
+En plus des propriétés déjà citées ci-dessus, dans image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16]  xref:/Dialogue_Propriétés.adoc[Propriétés], vous pouvez aussi définir
+
+* _Style Point_ : _Taille_ et _Couleur_ ;
+* _Style du trait_ : _Largeur_, _Épaisseur du trait_, _Couleur_ et _Opacité Tracé_
+
 
 [.kcode]#Saisie :# Voir aussi la *commande* : xref:/commands/Curseur.adoc[Curseur].
