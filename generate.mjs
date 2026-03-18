@@ -115,7 +115,7 @@ for (const lang of active) {
 
         try {
           const svg = await MathJax.tex2svgPromise(formulaTrimmed, {
-            display: true,
+            display: false,
           });
           const output = MathJax.startup.adaptor.serializeXML(svg);
           if (!output || output.includes("error")) {
