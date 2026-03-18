@@ -87,8 +87,12 @@ Tableau( <Liste>, <Liste>, ..., <Alignement>, <Largeur min cellule>, <Hauteur mi
 minimales des cellules du tableau.
 [EXAMPLE]
 ====
-* Tableau({x², 4}, {x³, 8}, {x⁴, 16}, "c", 50) crée un tableau à 3 lignes et 2 colonnes. Tous les contenus des cellules sont centrés et la largeur d'une cellule est de 50 px.
-stem:[{\begin{array}{C{50.0}C{50.0}}x^{2}&4 \\ x^{3}&8 \\ x^{4}&16 \\ \end{array}}]
+* Tableau({x², 4}, {x³, 8}, {x⁴, 16}, "c", 50) crée un tableau à 3 lignes et 2 colonnes. Tous les contenus des cellules sont centrés et la largeur d'une cellule est de 50 px. 
+"{\begin{array}{C{50.0}C{50.0}}x^{2}&4 \\ x^{3}&8 \\ x^{4}&16 \\ \end{array}}"
+
+image:puissance.png[puissance.png,width=183,height=140]
+
+
 
 * Tableau({{"Gauche", "Centré", "Droite"}, {"G", "C", "D"}}, "lcr", 45, 80) crée un tableau à 2 lignes et 3 colonnes. Tous les contenus des cellules ont une justification différente. Chaque cellule a une larguer de 45 px et une hauteur de 80 px. image:TableauLH.png[TableauLH.png,width=158,height=118]
 ====
@@ -236,8 +240,8 @@ image:TableauCouleursTableur.png[TableauCouleursTableur.png,width=150,height=109
 
 Sinon, possibilité de se créer des tableaux en LaTeX avec "tabular"
 
-stem:[\begin{tabular}{cc} \multicolumn{2}{c}{\text{Carré}}\\ \hline x & \textcolor{blue}{x^2} \\ 1 & \textcolor{blue}{1} \\ 2 & \textcolor{blue}{4}\\ 3 & \textcolor{blue}{9}
-\end{tabular}]
+"\begin{tabular}{cc} \multicolumn{2}{c}{\text{Carré}}\\ \hline x & \textcolor{blue}{x^2} \\ 1 & \textcolor{blue}{1} \\ 2 & \textcolor{blue}{4}\\ 3 & \textcolor{blue}{9}
+\end{tabular}"
 
 image:TabularCarreBleu.png[TabularCarreBleu.png,width=129,height=162]
 
