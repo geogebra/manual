@@ -22,7 +22,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
-      - run: node generate.js
+      - run: npm ci
+      - run: node generate.mjs
       # Other steps that change files in the repository go here
       # …
 
