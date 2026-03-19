@@ -52,6 +52,7 @@ for (const lang of active) {
   const allPages = [];
   const images = {};
   const unparsedFormulas = {};
+  let texIssues = 0;
   await listFilesSync(
     `${lang}/modules/ROOT/pages`,
     async (filePath, directory) => {
@@ -125,6 +126,7 @@ for (const lang of active) {
           const formulaAdoc = `\`++${formulaTrimmed}++\``;
           unparsedFormulas[formulaAdoc] = unparsedFormulas[formulaAdoc] || [];
           unparsedFormulas[formulaAdoc].push(simplePath(filePath));
+          texIssues++;
         }
       }
     },
@@ -221,6 +223,7 @@ for (const lang of active) {
     orphans.length,
     duplicates.length,
     partials.length,
+    texIssues,
   ]) {
     status += `| ${stat}`.padEnd(10, " ");
   }
