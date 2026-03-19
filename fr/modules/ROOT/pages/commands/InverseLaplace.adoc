@@ -12,14 +12,20 @@ xref:/Calcul_formel.adoc[Calcul formel]*
 InverseLaplace( <Fonction> )::
   Retourne la transformée réciproque de Laplace de la fonction donnée.
 
-InverseLaplace( <Fonction>, <Variable> )
+[EXAMPLE]
+====
+
+`++ InverseLaplace(1/(1+t^2))++` retourne stem:[\mathbf{ sin(t)} ].
+
+====
+
+
+InverseLaplace( <Fonction>, <Variable> )::
 
 Retourne la transformée réciproque de Laplace de la fonction donnée de la variable indiquée.
 
 [EXAMPLE]
 ====
-
-*Exemples :*
 
 `++InverseLaplace( exp(- a*b),a)++` retourne stem:[\mathbf{Dirac(a-b)}] ;
 
@@ -29,9 +35,3 @@ Retourne la transformée réciproque de Laplace de la fonction donnée de la var
 
 Voir aussi la commande xref:/commands/Laplace.adoc[Laplace] .
 
-[EXAMPLE]
-====
-
-`++ InverseLaplace(1/(1+t^2))++` retourne stem:[\mathbf{ sin(t)} ].
-
-====
