@@ -17,7 +17,7 @@ The templates and layouts used by the documentation site are located in the [Geo
 | Hrvatska (hr)          | 470     | 244     | 35      | 0       | 26      | 34      |
 | Magyar (hu)            | 661     | 67      | 23      | 2       | 12      | 0       |
 | Italiano (it)          | 740     | 0       | 14      | 0       | 0       | 0       |
-| 日本語 (ja)               | 737     | 1       | 12      | 2       | 2       | 38      |
+| 日本語 (ja)               | 737     | 1       | 12      | 2       | 2       | 0       |
 | Македонски јазик (mk)  | 274     | 393     | 19      | 0       | 73      | 20      |
 | Bokmål (nb)            | 529     | 188     | 39      | 0       | 23      | 57      |
 | Nederlands (nl)        | 719     | 21      | 0       | 2       | 0       | 0       |
