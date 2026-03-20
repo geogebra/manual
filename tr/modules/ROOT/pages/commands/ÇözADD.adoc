@@ -28,7 +28,7 @@ stem:[\frac{dy}{dx}=-xy] denklemini çözer.
 [EXAMPLE]
 ====
 
-`++ÇözADD(2x / y)++` komutu _stem:[\sqrt{2} \sqrt{-c_\{1}+x^\{2}}]_ sonucunu verir, burada stem:[c_\{1}] bir sabittir.
+`++ÇözADD(2x / y)++` komutu _stem:[\sqrt{2} \sqrt{-c_{1}+x^{2}}]_ sonucunu verir, burada stem:[c_{1}] bir sabittir.
 
 ====
 
@@ -46,12 +46,12 @@ kaldığını öğrenme imkanı verir.
 [NOTE]
 ====
 
-stem:[c_\{1}] karşılık gelen bir sürgü ile yardımcı nesne olarak oluşturulacaktır.
+stem:[c_{1}] karşılık gelen bir sürgü ile yardımcı nesne olarak oluşturulacaktır.
 
 ====
 
 ÇözADD( <y'>, <x'>, <Başlangıç x>, <Başlangıç y>, <Bitiş t>, <Adım> )::
-  Birinci dereceden stem:[\frac{dy}{dx}=\frac{f(x, y)}\{g(x, y)}] ADD'ni dahili bir t parametresinin başlangıç
+  Birinci dereceden stem:[\frac{dy}{dx}=\frac{f(x, y)}{g(x, y)}] ADD'ni dahili bir t parametresinin başlangıç
   noktası, en büyük değeri ve adım değerini kullanarak çözer. Komutun bu versiyonu ilk komutun çalışmadığı örneğin çözüm
   eğrisinin düşey noktalarının olduğu durumlarda çalışabilir.
 ÇözADD( <b(x)>, <c(x)>, <f(x)>, <Başlangıç x>, <Başlangıç y>, <Başlangıç y'>, <Bitiş x>, <Adım> )::
@@ -68,7 +68,7 @@ kullanarak bu ikinci dereceden ADD çözer.
 [EXAMPLE]
 ====
 
-`++ÇözADD(-x, y, x(A), y(A), 5, 0.1)++` komutu stem:[\frac{dy}{dx}=- \frac{x}\{y} ] denklemini önceden tanımlı _A_
+`++ÇözADD(-x, y, x(A), y(A), 5, 0.1)++` komutu stem:[\frac{dy}{dx}=- \frac{x}{y} ] denklemini önceden tanımlı _A_
 noktasını başlangıç noktası gibi kullanarak çözer.
 
 ====

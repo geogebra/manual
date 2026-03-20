@@ -27,5 +27,5 @@ The templates and layouts used by the documentation site are located in the [Geo
 | Русский язык (ru)      | 0       | 735     | 3       | 0       | 5       | 0       |
 | Slovenščina (sl)       | 3       | 727     | 4       | 0       | 10      | 0       |
 | Српски (sr)            | 4       | 736     | 5       | 0       | 0       | 0       |
-| Türkçe (tr)            | 145     | 314     | 194     | 2       | 281     | 62      |
+| Türkçe (tr)            | 145     | 314     | 194     | 2       | 281     | 0       |
 | 简体中文 (zh)              | 344     | 396     | 60      | 0       | 0       | 41      |
