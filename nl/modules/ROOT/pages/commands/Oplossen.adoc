@@ -2,45 +2,89 @@
 :page-en: commands/Solve
 ifdef::env-github[:imagesdir: /nl/modules/ROOT/assets/images]
 
-== CAS venster
+[NOTE]
+====
 
-Oplossen( <Vergelijking in x> )::
-  Lost een gegeven vergelijking op en geeft een lijst van alle oplossingen.
-Oplossen( <Vergelijking>, <Variabele> )::
-  Lost een gegeven vergelijking op naar een gegeven variabele en geeft een lijst van alle oplossingen.
-Oplossen( <Stelsel van vergelijkingen>, <Lijst met variabelen> )::
-  Lost een stelsel van vergelijkingen op naar de gegeven variabelen en geeft een lijst van alle oplossingen.
+De commando's *Oplossen* en xref:/commands/Opkossingen.adoc[Oplossingen] lossen een vergelijking of een stelsel van vergelijkingen symbolisch op voor reële getallen. Om vergelijkingen numeriek op te lossen, gebruik je het commando xref:/commands/NOplossingen.adoc[NOplossingen]. 
+Voor vergelijkingen met complexe getallen zie het commando xref:/commands/COplossen.adoc[COplossen Command].
+
+====
+
+
+
+Oplossen( <vergelijking in x> )::
+  Lost een gegeven vergelijking op naar de hoofdveranderlijke en creëert een lijst met alle oplossingen.
 
 [EXAMPLE]
 ====
 
-* `++Oplossen({x = 4 x + y , y + x = 2}, {x, y})++` geeft _( x = -1, y = 3 )_, de enige oplossing van _x = 4x + y_ and
-_y + x = 2_
+`++Oplossen(x^2 = 4x)++` geeft _{x = 4, x = 0}_, de oplossingen van _x^2^ = 4x_.
+
+====
+
+== CAS 
+
+Volgende commando's zijn enkel beschikbaar in het image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/CAS_View.adoc[CAS venster].
+
+Oplossen( <Vergelijking>, <Variabele> )::
+  Lost een vergelijking op naar een gegeven onbekende en creëert een lijst met alle oplossingen.
+
+[EXAMPLE]
+====
+
+`++Oplossen(x * a^2 = 4a, a)++` geeft _{a = 4/x, a = 0}_.
+
+====
+
+Oplossen( <Vergelijking in x>, <Voorwaarde> )::
+  Lost een vergelijking op in x, rekening houdend met de voorwaarde.
+
+[EXAMPLE]
+====
+
+`++Oplossen(x^2=1, x>0)++` geeft _{x = 1}_.
+
+====
+
+Oplossen( <Lijst met vergelijkingen>, <Lijst met variabelen> )::
+  Lost een stelsel van vergelijkingen op naar een lijst met variabelen creëert een lijst met alle oplossingen.
+
+[EXAMPLE]
+====
+
+* `++Oplossen({x = 4 x + y , y + x = 2}, {x, y})++` geeft _{ x = -1, y = 3 }_
 * `++Oplossen({2a^2 + 5a + 3 = b, a + b = 3}, {a, b})++` geeft _{{a = 0, b = 3}, {a = -3, b = 6}}_.
 
 ====
 
+Oplossen( <Vergelijking>, <Variabele> , <Lijst met voorwaarden>)::
+  Lost een vergelijking op naar een gegeven variabele met een lijst van voorwaarden en creëert een lijst met alle oplossingen.
+
 [EXAMPLE]
 ====
 
-* `++Oplossen(x^2 = 4x)++` geeft _{x = 4, x = 0}_, de oplossingen van _x^2^ = 4x_.
+* `++Oplossen(u *x < a,x, u>0)++` geeft _{x < a / u}_, de oplossing van _u *x < a_ met als voorwaarde _u>0_
+* `++Oplossen(u *x < a,x, {u<0, a<0})++` geeft _{x > a / u}_.
+
 ====
 
+Oplossen( <Lijst met parametervergelijkingen>, <Lijst met variabelen> )::
+  Lost een stelsel van parametervergelijkingn op naar een gegeven lijst met variabelen en creëert een lijst met alle oplossingen.
+
+[EXAMPLE]
+====
+
+* `++Oplossen({(x, y) = (3, 2) + t*(5, 1), (x, y) = (4, 1) + s*(1, -1)}, {x, y, t, s})++` geeft _{x = 3, y = 2, t = 0,
+s = -1}_.
+
+====
 
 [NOTE]
 ====
 
-* Het rechterlid van vergelijkingen kan je weglaten indien het gelijk is aan 0.
-
-====
-
-Oplossen( <Stelsel van parametervergelijkingen>, <Lijst met variabelen> )::
-  Lost een stelsel van vergelijkingen op naar de gegeven variabelen en geeft een lijst van alle oplossingen.
-
-[EXAMPLE]
-====
-
-* `++Oplossen({(x, y) = (3, 2) + t (5, 1), (x, y) = (4, 1) + s (1, -1)}, {x, y, t, s})++` geeft _{{x = 3, y = 2, t =
-0, s = -1}}_.
-
+* Het rechterlid van vergelijkingen (in in alle bovenstaande syntaxes) mag je weglaten. Staat er geen rechterlid, dan wordt het verwerkt als 0.
+* Soms moet je hier en daar wat aanpassen om de automatische solver zijn werk te laten doen, bijvoorbeeld
+`++ Oplossen(GoniometrieWerkuit(sin(5/4 π + x) - cos(x - 3/4 π) = sqrt(6) * cos(x) - sqrt(2)))++`.
+* Voor functies met meervoudig voorschrift moet je het commando xref:/commands/NOplossen.adoc[NOplossen] gebruiken.
 ====
