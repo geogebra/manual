@@ -52,7 +52,7 @@ for (const lang of active) {
   const allPages = [];
   const images = {};
   const unparsedFormulas = {};
-  let texIssues = 0;
+  let issues = 0;
   await listFilesSync(
     `${lang}/modules/ROOT/pages`,
     async (filePath, directory) => {
@@ -98,6 +98,7 @@ for (const lang of active) {
           : linkRef;
         links[absRef] = links[absRef] || [];
         links[absRef].push(simplePath(filePath));
+        issues++;
       });
       const imageRefs = [...content.matchAll(/image:([^:\[]+)\[/g)];
       (imageRefs || []).forEach((m) => {
@@ -126,7 +127,6 @@ for (const lang of active) {
           const formulaAdoc = `\`++${formulaTrimmed}++\``;
           unparsedFormulas[formulaAdoc] = unparsedFormulas[formulaAdoc] || [];
           unparsedFormulas[formulaAdoc].push(simplePath(filePath));
-          texIssues++;
         }
       }
     },
@@ -223,7 +223,8 @@ for (const lang of active) {
     orphans.length,
     duplicates.length,
     partials.length,
-    texIssues,
+    [].concat(Object.values(links), Object.values(images), Object.values(unparsedFormulas))
+      .reduce((x,y)=>y.length+x, 0),
   ]) {
     status += `| ${stat}`.padEnd(10, " ");
   }
