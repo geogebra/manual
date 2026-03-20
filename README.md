@@ -8,17 +8,17 @@ The templates and layouts used by the documentation site are located in the [Geo
 
 | language              | ok  | missing | orphans | duplicates | partials | TeX issues |
 |-----------------------|-----|---------|---------|------------|----------|------------|
-| босански (bs)          | 144     | 560     | 27      | 0       | 36      | 13      |
-| Česky (cs)             | 615     | 18      | 2       | 4       | 107     | 37      |
+| босански (bs)          | 144     | 560     | 27      | 0       | 36      | 0       |
+| Česky (cs)             | 615     | 18      | 2       | 4       | 107     | 0       |
 | Deutsch (de)           | 687     | 53      | 45      | 2       | 0       | 0       |
 | English (en)           | 740     | 0       | 0       | 0       | 0       | 0       |
 | Español (es)           | 661     | 22      | 64      | 0       | 57      | 0       |
 | Français (fr)          | 740     | 0       | 14      | 0       | 0       | 0       |
-| Hrvatska (hr)          | 470     | 244     | 35      | 0       | 26      | 34      |
+| Hrvatska (hr)          | 470     | 244     | 35      | 0       | 26      | 0       |
 | Magyar (hu)            | 661     | 67      | 23      | 2       | 12      | 0       |
 | Italiano (it)          | 740     | 0       | 14      | 0       | 0       | 0       |
 | 日本語 (ja)               | 737     | 1       | 12      | 2       | 2       | 0       |
-| Македонски јазик (mk)  | 274     | 393     | 19      | 0       | 73      | 20      |
+| Македонски јазик (mk)  | 274     | 393     | 19      | 0       | 73      | 0       |
 | Bokmål (nb)            | 529     | 188     | 39      | 0       | 23      | 57      |
 | Nederlands (nl)        | 719     | 21      | 0       | 2       | 0       | 0       |
 | Nynorsk (nn)           | 579     | 158     | 38      | 0       | 3       | 55      |
