@@ -28,4 +28,4 @@ The templates and layouts used by the documentation site are located in the [Geo
 | Slovenščina (sl)       | 3       | 726     | 3       | 0       | 11      | 60      |
 | Српски (sr)            | 4       | 736     | 5       | 0       | 0       | 81      |
 | Türkçe (tr)            | 179     | 274     | 119     | 68      | 287     | 351     |
-| 简体中文 (zh)              | 364     | 376     | 38      | 0       | 0       | 1129    |
+| 简体中文 (zh)              | 363     | 376     | 38      | 0       | 1       | 1129    |

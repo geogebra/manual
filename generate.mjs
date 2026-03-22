@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import MathJax from "mathjax";
-
+import AsciiDoctor from '@asciidoctor/core'
 const active = fs.readdirSync(".").filter((f) => fs.existsSync(`${f}/modules`));
 
 async function listFilesSync(directory, callback) {
@@ -25,6 +25,7 @@ async function listFilesSync(directory, callback) {
   }
 }
 
+const asciidoctor = AsciiDoctor();
 const simplePath = (p) =>
   p ? p.split(/pages./)[1].replace("\\", "/") : "missing.adoc";
 const allEn = [];
@@ -52,6 +53,7 @@ for (const lang of active) {
   const allPages = [];
   const images = {};
   const unparsedFormulas = {};
+  const asciiDocIssues = {};
   let issues = 0;
   await listFilesSync(
     `${lang}/modules/ROOT/pages`,
@@ -60,6 +62,17 @@ for (const lang of active) {
       const pageEn = content.match(/:page-en:(.*)/);
       const currentPath = simplePath(filePath);
       allPages.push(currentPath);
+      const loggerManager = asciidoctor.LoggerManager
+      const memoryLogger = asciidoctor.MemoryLogger.create()
+      loggerManager.setLogger(memoryLogger)
+      asciidoctor.convert(content);
+      const messages = memoryLogger.getMessages();
+      for (const msg of messages) {
+        const msgText = msg.getText();
+        asciiDocIssues[msgText] = asciiDocIssues[msgText] || [];
+        asciiDocIssues[msgText].push(simplePath(filePath));
+        issues++;
+      }
       if (currentPath == "missing.adoc" || currentPath == "broken.adoc") {
         return;
       }
@@ -213,7 +226,10 @@ for (const lang of active) {
       listBroken(images) +
       "\n\n" +
       "== Broken formulas\n" +
-      listBroken(unparsedFormulas),
+      listBroken(unparsedFormulas) +
+      "\n\n" +
+      "== AsciiDoc issues\n" +
+      listBroken(asciiDocIssues),
     "utf8",
   );
   status += `| ${display} (${lang}) `.padEnd(25, " ");
