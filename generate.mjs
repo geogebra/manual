@@ -54,7 +54,6 @@ for (const lang of active) {
   const images = {};
   const unparsedFormulas = {};
   const asciiDocIssues = {};
-  let issues = 0;
   await listFilesSync(
     `${lang}/modules/ROOT/pages`,
     async (filePath, directory) => {
@@ -71,7 +70,6 @@ for (const lang of active) {
         const msgText = msg.getText();
         asciiDocIssues[msgText] = asciiDocIssues[msgText] || [];
         asciiDocIssues[msgText].push(simplePath(filePath));
-        issues++;
       }
       if (currentPath == "missing.adoc" || currentPath == "broken.adoc") {
         return;
@@ -111,7 +109,6 @@ for (const lang of active) {
           : linkRef;
         links[absRef] = links[absRef] || [];
         links[absRef].push(simplePath(filePath));
-        issues++;
       });
       const imageRefs = [...content.matchAll(/image:([^:\[]+)\[/g)];
       (imageRefs || []).forEach((m) => {
@@ -239,7 +236,7 @@ for (const lang of active) {
     orphans.length,
     duplicates.length,
     partials.length,
-    [].concat(Object.values(links), Object.values(images), Object.values(unparsedFormulas))
+    [].concat(Object.values(links), Object.values(images), Object.values(unparsedFormulas), Object.values(asciiDocIssues))
       .reduce((x,y)=>y.length+x, 0),
   ]) {
     status += `| ${stat}`.padEnd(10, " ");

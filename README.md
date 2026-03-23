@@ -9,14 +9,14 @@ The templates and layouts used by the documentation site are located in the [Geo
 | language              | ok  | missing | orphans | duplicates | partials | issues |
 |-----------------------|-----|---------|---------|------------|----------|--------|
 | босански (bs)          | 144     | 560     | 27      | 0       | 36      | 322     |
-| Česky (cs)             | 615     | 18      | 2       | 2       | 107     | 100     |
+| Česky (cs)             | 615     | 18      | 1       | 0       | 107     | 50      |
 | Deutsch (de)           | 690     | 50      | 6       | 0       | 0       | 3       |
 | English (en)           | 740     | 0       | 0       | 0       | 0       | 6       |
 | Español (es)           | 663     | 20      | 60      | 0       | 57      | 755     |
-| Français (fr)          | 740     | 0       | 14      | 0       | 0       | 0       |
+| Français (fr)          | 740     | 0       | 14      | 0       | 0       | 3       |
 | Hrvatska (hr)          | 475     | 238     | 27      | 4       | 27      | 97      |
 | Magyar (hu)            | 662     | 66      | 22      | 2       | 12      | 28      |
-| Italiano (it)          | 740     | 0       | 14      | 0       | 0       | 39      |
+| Italiano (it)          | 740     | 0       | 14      | 0       | 0       | 34      |
 | 日本語 (ja)               | 737     | 1       | 12      | 2       | 2       | 12      |
 | Македонски јазик (mk)  | 278     | 389     | 15      | 0       | 73      | 307     |
 | Bokmål (nb)            | 530     | 187     | 36      | 0       | 23      | 58      |
