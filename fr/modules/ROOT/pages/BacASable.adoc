@@ -3,3 +3,232 @@
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
 
+Accessibilité
+
+La suite calculatrice GeoGebra est conçue dans un souci d'accessibilité ! Grâce à la prise en charge des lecteurs d'écran et à la navigation au clavier, elle répond aux normes WCAG 2.2 AA et s'efforce d'atteindre la norme AAA lorsque cela est possible. L'accessibilité est un effort continu et nous améliorons constamment l'expérience utilisateur sur l'ensemble de nos applications.
+ 
+
+ 
+
+Sur cette page, vous trouverez des informations sur les sujets d'accessibilité suivants :
+
+    Lecteurs d'écran
+
+    Support du Braille
+
+    Navigation au Clavier
+
+    Raccourcis Clavier
+
+    Saisie dans Algèbre
+
+        Saisie Simple
+
+        Saisie Avancée
+
+        Caractères Spéciaux
+
+        Symboles
+
+        Fonctions
+    Outils et Commandes
+
+
+Lecteurs d'écran
+
+Pour une expérience optimale, nous vous recommandons d'utiliser l'une des configurations suivantes :
+
+    Navigateur Chrome avec NVDA ou JAWS
+
+    Navigateur Safari ou Chrome avec VoiceOver
+
+💡 Pour être sûr d'entendre exactement ce que vous tapez, configurez votre lecteur d'écran pour qu'il annonce chaque caractère :
+
+    NVDA:  Preferences → Settings → Keyboard → ☑ Speak typed characters 
+
+    Jaws: Utilities → Settings Center → Typing Echo → ☑ Characters
+
+    VoiceOver: Utility → Verbosity → Text → While typing speak: Characters
+
+Supprt du Braille
+
+Lors de l'utilisation de GeoGebra Calculator Suite avec un afficheur braille, basculez l'affichage algébrique en mode Notation linéaire à l'aide du raccourci clavier Ctrl + D. Ce raccourci permet de faire défiler les modes d'affichage algébrique : Valeur, Description, Définition, Notation linéaire.
+
+Le mode de notation linéaire est optimisé pour la lecture et la modification de données algébriques sur des afficheurs braille. Dans ce mode, la saisie semi-automatique (par exemple, les parenthèses automatiques) est désactivée afin de vous garantir un contrôle total sur vos saisies.
+
+💡 Note: Dans la calculatrice graphique, les étiquettes sont ajoutées automatiquement à toutes les lignes, sauf si vous les saisissez manuellement. L'étiquetage suit une convention simple : les nombres et les calculs numériques sont étiquetés par ordre alphabétique en minuscules, en commençant par a ; les points sont étiquetés par ordre alphabétique en majuscules, en commençant par A ; les fonctions sont étiquetées par ordre alphabétique en minuscules, en commençant par f. Pour saisir des étiquettes manuellement, commencez une nouvelle entrée algébrique comme ceci : a = 3+5, A = (1,1) ou f(x) = x+1.
+ 
+
+Navigation au Clavier
+
+💡 Use Tab and Shift + Tab as your main navigation keys. The arrow keys are reserved for moving objects in the 2D coordinate plane, moving the coordinate plane, and changing values. Cycling through the menu items will still work using the arrow keys.
+Windows / Mac OS 	Action
+Tab 	Navigate the Calculator, select next object
+Shift + Tab 	Navigate the Calculator backwards, select previous object
+Space 	Press buttons, open / close menus, toggle menu items.
+When a number (slider) is selected, space will start / stop the animation of the slider.
+Enter 	Edit objects, confirm input
+Arrows 	
+
+Increase and decrease the value of sliders, move points and other objects up and down, left and right.
+
+Inside menus: cycle through menu items
+Win: Ctrl + Arrows 
+Mac: Ctrl + Shift + Arrows 	x10 speed multiplier
+Increase and decrease values, move objects 10 times faster
+Shift + Arrows 	x0.1 speed multiplier
+Increase and decrease values, move objects 10 times slower
+Win: Alt + Arrows 
+Mac: Option + Arrows 	x100 speed multiplier
+Plus or Minus 	Move points along paths
+Menu key or Shift + F10 	Open context menus 
+Backspace or Delete 	Delete selected object
+Ctrl + A, then Delete 	Delete all objects (to clear calculator)
+Escape 	Leave the Calculator
+Keyboard Shortcuts
+Windows / Mac OS 	Action
+Ctrl + Shift + A 	Show / Hide Algebra Window
+Ctrl + Shift + 1 	Show / Hide Graphics Window
+Ctrl + Shift + U 	Show / Hide Table Window
+Ctrl + D 	Switch Value / Description / Definition / Linear Notation mode in Algebra Window
+/ 	Show / Hide selected object
+Ctrl + Z 	Undo
+Note: works only if Undo / Redo is enabled in App configuration
+Ctrl + Y 
+or Ctrl + Shift + Z 	Redo
+Note: works only if Undo / Redo is enabled in App configuration
+Ctrl + Minus 	Zoom out
+Note: works only if Zoom is enabled in App configuration
+Ctrl + Plus 	Zoom in
+Note: works only if Zoom is enabled in App configuration
+F3 	Copy definition of selected object to the Input Bar
+F4 	Copy value of selected object to the Input Bar
+F5 	Copy name of selected object to the Input Bar
+
+💡 The shortcut F4 can be used to read, copy or reuse the output of a calculation. Type F4 to copy the value to the input bar, then Ctrl+A to select the complete output, and Ctrl + C to copy. Now you can easily paste the output in linear notation into other apps like Word or Google Doc.
+Algebra Input
+
+💡 All functions available on the on-screen keyboard can be easily accessed using your physical keyboard. Enter your number, calculation, function, or equation into the Input Bar and press Enter to confirm.
+
+GeoGebra's Input Bar
+
+GeoGebra Input Bar
+Simple Input
+
+Try the following examples and experience a smooth and user-friendly input behaviour:
+Input 	Result
+  2 	will create a number. You can choose "create slider" from the context menu so that you can change this number easily.
+  3 + 5 	will calculate 3 + 5 and output 8
+  1 / 4 	will create the fraction 14
+  x^2 	will create the quadratic function x2 and show it in the Graphing Window
+
+ 
+
+All your inputs will be labeled automatically. If you prefer, you can also enter labels yourself:
+ 
+Input 	Result
+  a = 2 	will create the number 2 and assign it to the variable a
+  f(x) = x^2 	will create the quadratic function x2 and assign it to the function name f(x)
+
+ 
+
+You can use these labels to re-use values and functions associated with them:
+Input 	Result
+  f + b 	will output x2+8, and add a new label g(x)
+
+💡 Press Enter on your keyboard to edit an existing row in the Algebra Window.
+Advanced Input
+
+When typing more advanced expressions using exponents, fractions or similar, there are a few things to keep in mind:
+Brackets and Expressions
+
+GeoGebra has a syntax help, which adds invisible brackets in the background. The cursor stays within an expression until the expression is closed by typing a bracket or pressing the Right Arrow key. The syntax help will also automatically add a closing bracket when an opening bracket is typed.
+
+Press the Right Arrow key to move the cursor out of the exponent or fraction and back in line. Here are some examples:
+Typed Input 	Interpretation 	Note
+x ^ 2 + 1 	x2+1 	Cursor stays in the exponent.
+x ^ 2 <Right Arrow> + 1 	x2+1 	Pressing the Right Arrow key will move the cursor out of the exponent.
+ 1 / 4 + x 	 14+x 	 Cursor stays in the denominator.
+1 / 4 <Right Arrow> + x 	14+x 	Pressing the Right Arrow key will move the cursor out of the denominator.
+
+💡You can also use the right bracket to get out of an exponent, fraction or similar.
+
+💡 When using brackets, the close bracket will be added automatically. You can still type it, which will replace the automatic one. Or you can navigate past it by pressing the Right Arrow key.
+Spaces and Multiplications
+
+GeoGebra interprets spaces as multiplications. That's why in some cases it will make a difference if you add a space to your expression, especially if you paste it into GeoGebra. Here are some examples:
+Pasted Input 	Interpretation 	Note
+1/8*pi 	(1/8)*pi 	GeoGebra follows the order of operations, which means pi is not part of the denominator.
+1/8 pi 	(1/8)*pi 	GeoGebra interprets the space before pi as a multiplication, which results in the same input as above.
+1/8pi 	1/(8*pi) 	Without space or multiplication, GeoGebra interprets 8pi as a single expression and therefore puts pi into the denominator.
+Copy & Paste
+
+Use brackets deliberately when copy & pasting expressions into the Input Bar. GeoGebra interprets pasted input as linear notation without syntax help. Here are some examples:
+Pasted Input 	Interpretation
+2^(3/4) 	23/4
+2^3/4 	234
+sqrt 4^2+9
+  	√42+9
+sqrt(4^2+9) 	√42+9
+sin pi-1/8pi 	sin(π)−18π
+sin(pi-1/8pi) 	sin(π−18π)
+Special Characters
+Input 	Character
+Win: Alt + a / b / d / …
+Mac: Option + a / b / d / … 	Greek letters α, β, δ, …
+e 	Euler ℯ 
+i 	Imaginary unit i 
+pi 	Pi π
+inf 	Infinity ∞
+Symbols
+Input 	Character
+^ 	Superscript, to the power of
+_ 	Subscript
+/ 	Fraction
+!= 	Not-equal-to ≠
+<= 	Less-than-or-equal-to ≤
+>= 	Greater-than-or-equal-to ≥
+== 	Is-equal-to ≟
+&& 	Logical AND
+|| 	Logical OR
+! 	Logical NOT
+Functions
+Input 	Function
+sqrt(x) 	Square-root (√) of x
+nroot(x,n) 	Nth Root of x
+abs(x) 	Absolute value of x
+sin(x) 	Sine of x
+cos(x) 	Cosine of x
+tan(x) 	Tangent of x
+ln(x) 	Natural logarithm of x
+log(x) 	Logarithm of x
+log(b,x) 	Logarithm with base b of x
+floor(x) 	Floor function of x
+ceil(x) 	Ceiling function of x
+Tools and Commands
+
+In GeoGebra Math Apps, every Tool has a corresponding Command that creates the exact same object, providing flexibility in how you interact with the app. Essentially, Tools are visual representations of mathematical Commands.
+
+To use Commands, simply start typing your desired action into the Input Bar. GeoGebra Commands are intuitive and typically named according to their mathematical function. Once you type three letters, the automatic syntax help will appear, guiding you to the correct Command and its parameters.
+
+Note: The syntax help is not fully accessible yet, but improvements are underway. Meanwhile, you can find a comprehensive list of commands, including syntax help, in the GeoGebra Manual.
+
+Try the following examples to get started with Commands:
+Type 	Function
+Roots(f) 	Roots of function f
+Extremum(f) 	Extremum of function f
+Derivative(f) 	Derivative of function f (CAS Calculator)
+Integral(f) 	Integral of function f
+Intersect(f,g) 	Intersection point(s) of functions f and g
+Line(A,B) 	Line through points A and B
+Feedback
+
+Accessibility is important to us! We know there's always room for improvement, and your feedback is important to us. Please contact us at accessibility@geogebra.org with any accessibility related questions or comments to help us provide the best possible experience for everyone. For any other questions please visit the GeoGebra Forum.
+
+ 
+
+Dutch Visio logo
+
+A special thank-you to Visio for sharing their accessibility expertise with us. Their thoughtful guidance has helped us make meaningful improvements as we continue working toward more inclusive experiences for all users.
+
+
