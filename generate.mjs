@@ -172,6 +172,16 @@ for (const lang of active) {
     if (!translations[enPage] && enPage != "missing" && enPage != "broken") {
       missing.push(enPage);
     }
+    if (!translations[enPage] && enPage == "commands/All_Commands" && fs.existsSync('../geogebra/source/shared/common-jre/')) {
+      const translations = fs.readFileSync(`../geogebra/source/shared/common-jre/src/main/resources/org/geogebra/common/jre/properties/menu_${lang}.properties`, 'utf8');
+      const map = Object.fromEntries(translations.split("\n").map(l => l.trim()).filter(l => l && !l.startsWith("#")).map(l => l.split("=").map(p => p.trim())));
+      const heading = map['AllCommands']
+      if (heading) {
+        const content = `=${heading}\n:page-en: commands/All_Commands\n`;
+        console.log(`${lang}/modules/ROOT/pages/commands/${heading.replaceAll(' ','_')}.adoc`);
+        fs.writeFileSync(`${lang}/modules/ROOT/pages/commands/${heading.replaceAll(' ','_')}.adoc`, content);
+      }
+    }
   }
   if (!fs.existsSync(`${lang}/modules/ROOT/nav.adoc`)) {
     fs.writeFileSync(`${lang}/modules/ROOT/nav.adoc`, localNav, "utf8");
