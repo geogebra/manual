@@ -1,0 +1,63 @@
+= Accessibility
+:page-en: Accessibility
+ifdef::env-github[:imagesdir: /en/modules/ROOT/assets/images]
+
+[NOTE]
+====
+
+Voorbeelden en informatie over toegankelijkheid vind je op https://www.geogebra.org/m/pczzqwpm[GeoGebra toegankelijkheid].
+
+====
+
+Wanneer je applets ontwerpt, is het belangrijk dat ze (zoveel mogelijk) toegankelijk zijn voor iedereen.
+
+:toc:
+
+== Lettergrootte, kleur & contrast
+
+Het is belangrijk grote lettergroottes te gebruiken met een groot contrast. Selecteer voor je start aan je applet een grote lettergrootte in Algemeen -> Lettergrootte. Je kan ook de sneltoets [.kcode]#Ctrl# + [.kcode]#2# gebruiken om alle lettertypes groter te maken 
+en alle lijnen dikker. [.kcode]#Ctrl# + [.kcode]#3# Zet de basiskleur voor objecten in zwart en ongevuld.
+
+Gebruik donkere kleuren op een witte achtergrond en gebruik dikke lijnen. Puur
+https://snook.ca/technical/colour_contrast/colour.html#fg=FF0000,bg=FFFFFF[Rood] en
+https://snook.ca/technical/colour_contrast/colour.html#fg=00FF00,bg=FFFFFF[Groen] hebben been goed contrast.
+Je gebruikt dus beter meer donkere versies, zoals https://snook.ca/technical/colour_contrast/colour.html#fg=0000FF,bg=FFFFFF[Blauw],
+https://snook.ca/technical/colour_contrast/colour.html#fg=226600,bg=FFFFFF[Donkergroen],
+https://snook.ca/technical/colour_contrast/colour.html#fg=990033,bg=FFFFFF[Donkerrood]
+
+Gebruik je kleuren om lijntypes te onderscheiden, gebruik dan best ook verschillende lijntypes.
+Er zijn ook websites waarop je kan controleren of je kleurschema goed is, bijvoorbeeld https://www.vischeck.com/
+
+== Schuifknoppen
+
+Maak schuifknoppen zo lang mogelijk zodat ook leerlingen met een minder goede motoriek ze kunnen gebruiken. 
+Overweeg bijkomende knoppen "afname" en "toename" aan beide zijden van de de schuifknop.
+
+== Sneltoetsen
+
+Leerlingen kunnen [.kcode]#Tab# gebruiken om rond te fietsen langs de objecten in het werkblad dat je creëerde. Het is belangrijg dat je
+*uncheck "Selectie Toegestaan" uitvinkt in de Instellingen -> Geavanceerd voor de objecten die je niet-selecteerbaar wil. Er is een
+keyboard sneltoets [.kcode]#Ctrl# + [.kcode]#Shift# + [.kcode]#D# in de offline versie waarmee je de eigenschap kan omschakelen
+*behalve voor* Knoppen / Schuifknoppen / Aanvinkvakjes / Punten / Invulvakken.
+
+Met de pijltoetsen [.kcode]#Links#, [.kcode]#Rechts#, [.kcode]#Omhoog#, [.kcode]#Omlaag# Kan je geselecteerde schuifknoppen en punten bewegen.
+
+[.kcode]#Spacie# kan je gebruiken om een Actieknop te activeren, een aanvinkvakje te (de)selecteren or of de animatie van een schuifknop te starten/stoppen.
+
+[.kcode]#Escape# kan je gebruiken om een applet te verlaten en [.kcode]#Enter# om er terug in te gaan (handig als er meerdere GeoGebra
+applets op één pagina staan)
+
+[.kcode]#+# and [.kcode]#−# kan je gebruiken om een punt te verplaatsen op een pad (b.v. op een cirkel of een rechte)
+
+GeoGebra Applets zijn ook volledig aanraakgevoelig, zodat je ze eventueel ook kan gebruiken op een speciaal groot tablet.
+
+== Tips
+
+Je kan in een label handige tips toevoegen voor somige objecten
+
+== Schermlezers
+
+Je kan tekst toevoegen in het tekenvenster zodat hij leesbaar is voor tekstlezers.
+
+Creëer je een tekstobject in GeoGebra met de namen `++altText++`, `++altText2++`, `++altText3D++` dan worden ze toegevoegd aan respectievelijk
+het Tekenvenster 1, Tekenvenster 2 en het 3D-trekenvenster.
