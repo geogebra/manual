@@ -7,6 +7,7 @@ ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
 *image:24px-Menu_view_cas.svg.png[Menu view cas.svg,width=24,height=24] uniquement en fenêtre
 xref:/Calcul_formel.adoc[Calcul formel]*
+====
 
 Laplace( <Fonction> )::
   Retourne la transformée de Laplace de la fonction donnée.
@@ -14,25 +15,23 @@ Laplace( <Fonction> )::
 [EXAMPLE]
 ====
 
-`++ Laplace(sin(t))++` retourne stem:[\mathbf\{\frac{1}\{t^\{2} + 1}} ] .
+`++ Laplace(sin(t))++` retourne stem:[\mathbf{\frac{1}{t^{2} + 1}} ] .
 
 ====
 
-Laplace( <Fonction>, <Variable> )
+Laplace( <Fonction>, <Variable> )::
 
 Retourne la transformée de Laplace de la fonction donnée de la variable indiquée.
 
 [EXAMPLE]
 ====
 
-*Exemples :*
+`++Laplace(sin(a*t),t)++` retourne stem:[\mathbf{\frac{a}{a^{2} + t^{2}}}] ;
 
-`++Laplace(sin(a*t),t)++` retourne stem:[\mathbf\{\frac{a}{a^\{2} + t^\{2}}}] ;
-
-`++Laplace(sin(a*t),a)++` retourne stem:[\mathbf\{\frac{t}\{a^\{2} + t^\{2}}}] .
+`++Laplace(sin(a*t),a)++` retourne stem:[\mathbf{\frac{t}{a^{2} + t^{2}}}] .
 
 ====
 
 Voir aussi la commande xref:/commands/InverseLaplace.adoc[InverseLaplace] .
 
-====
+

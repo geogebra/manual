@@ -2,27 +2,29 @@
 :page-en: Labels_and_Captions
 ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 
-Dans GeoGebra, chaque objet possède une unique *étiquette*. Pour l'étiquetage vous pouvez choisir un ou plusieurs
-caractères, avec la possibilité de mettre des indices. Pour plus de détails, voir
+Dans GeoGebra, chaque objet possède une unique *étiquette*. 
+
+Pour l'étiquetage vous pouvez choisir un ou plusieurs caractères, avec la possibilité de mettre des indices. Pour plus de détails, voir
 xref:/Appellation_des_objets.adoc[Appellation des objets].
 
 == Afficher/Cacher les étiquettes
 
-Vous pouvez afficher ou cacher les étiquettes des objets dans la vue graphique de différentes manières :
+Vous pouvez afficher ou cacher les étiquettes des objets dans image:16px-Menu_view_graphics.svg.png[Menu view
+graphics.svg,width=16,height=16] xref:/Graphique.adoc[Graphique] de différentes manières :
 
 * Sélectionnez image:Tool_Show_Hide_Label.gif[Tool Show Hide Label.gif,width=32,height=32]
 l'xref:/tools/Afficher_cacher_l_étiquette.adoc[outil Afficher/cacher l'étiquette] et clique sur l'objet dont vous voulez
 afficher ou cacher l'étiquette.
 * Ouvrez le xref:/Menu_contextuel.adoc[menu contextuel] de l'objet voulu et sélectionnez
 image:Tool_Show_Hide_Label.gif[Tool Show Hide Label.gif,width=32,height=32] Afficher l'étiquette.
-* Ouvrez le xref:/Dialogue_Propriétés.adoc[Dialogue Propriétés] pour l'objet voulu et cochez ou non la case 'Afficher
+* Ouvrez le dialogue image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Dialogue_Propriétés.adoc[Propriétés] pour l'objet voulu et cochez ou non la case 'Afficher
 l'étiquette :' dans l'onglet 'Basique'.
 
 == Nom et Valeur
 
 Dans GeoGebra, chaque objet possède un unique nom qui peut être utilisé pour étiqueter l'objet dans la vue graphique. De
 plus, un objet peut aussi être étiqueté en utilisant sa valeur, son nom et sa valeur, ou aussi à l'aide d'une légende.
-Vous pouvez définir la configuration dans l'onglet 'Basique' du dialogue 'Propriétés' en choisissant l'option désirée
+Vous pouvez définir la configuration dans l'onglet 'Basique' du dialogue image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Dialogue_Propriétés.adoc[Propriétés]  en choisissant l'option désirée
 dans la liste déroulante à droite de la case 'Afficher l'étiquette :' .
 
 [NOTE]
@@ -37,14 +39,13 @@ représentative.
 
 Cependant, il vous arrive parfois de vouloir donner la même étiquette à plusieurs objets, par exemple, appeler ‘a’ les
 quatre côtés d’un carré. Dans ce cas, GeoGebra vous offre la possibilité des légendes pour tous les objets en plus des
-trois options d’étiquetage décrites ci-dessus. Vous pouvez définir la légende d’un objet dans l’onglet ‘Basique’ du
-Dialogue Propriétés en entrant la légende voulue dans le champ ‘Légende’. Ensuite, vous pouvez choisir l’option
+trois options d’étiquetage décrites ci-dessus. Vous pouvez définir la légende d’un objet dans l’onglet ‘Basique’ du dialogue image:16px-Menu-options.svg.png[Menu-options.svg,width=16,height=16] xref:/Dialogue_Propriétés.adoc[Propriétés]  en entrant la légende voulue dans le champ ‘Légende’. Ensuite, vous pouvez choisir l’option
 d’étiquetage ‘Légende’ dans la liste déroulante à droite de la case 'Afficher l'étiquette :' .
 
 [NOTE]
 ====
 
-Le champ Légende admet les *substituts* %n (nom) et %v (valeur), ainsi vous pouvez valider une telle légende
+Le champ Légende admettant des *substituts* tels que  %n (nom) et %v (valeur), vous pouvez valider la légende
 pour un point : « Le point %n a pour coordonnées %v », son nom et ses coordonnées seront affichées dans la légende, cela
 permet d’ajouter du texte par rapport à l’option Nom&Valeur.
 
@@ -101,12 +102,16 @@ stem:[ M(z_{1})].
 
 Les *substituts* utilisables dans les légendes :
 
-[cols=",,",options="header",]
+[width=100%, cols="20%,40%,40%", options= "header"]
 |===
 |substitut |affichage |(alternative)
-|%c |*(à partir de la version 4.2.27.0)* La valeur de la cellule adjacente à droite dans le tableur, qui devrait être un
-texte indépendant Non dynamique : à savoir la légende ne sera pas mise à jour, sauf si vous appuyez sur [.kcode]#F9# ou
-[.kcode]#Ctrl# + [.kcode]#R# |
+|%c |La valeur de la cellule adjacente à droite dans le tableur, 
+
+qui devrait être un texte indépendant Non dynamique : 
+
+à savoir la légende ne sera pas mise à jour, 
+
+sauf si vous appuyez sur [.kcode]#F9# ou [.kcode]#Ctrl# + [.kcode]#R# | 
 
 |%n |Nom | 
 
@@ -120,7 +125,9 @@ texte indépendant Non dynamique : à savoir la légende ne sera pas mise à jo
 
 |%y |ordonnée pour un point |coefficient _b_ pour une droite d'équation a x + b y + c = 0
 
-|%z |cote (GGb5) |coefficient _c_ pour une droite d'équation a x + b y + c = 0
+|%z |cote pour un point en 3D |coefficient _c_ pour une droite d'équation a x + b y + c = 0
+
+
 |===
 
 [NOTE]

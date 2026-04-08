@@ -30,7 +30,7 @@ Sort( <值串列>, <鍵串列> )::
 
 * 為了將多項式串列 `++list1 = {x^3, x^2, x^6}++` 依據次數（degree）來排序，先建立一個相依的次數串列
 `++list2 = Zip(Degree(a), a, list1)++`。接著輸入 `++ Sort(list1, list2)++` 會產生所求串列 _list3 = \{x^2, x^3, x^6}_。
-* 為了將 stem:[x^\{10}-1] 的複數根按照幅角（argument）順序作為頂點來畫出多邊形，先建立
+* 為了將 stem:[x^{10}-1] 的複數根按照幅角（argument）順序作為頂點來畫出多邊形，先建立
 `++list1 = {ComplexRoot(x^10-1)}++`，接著使用指令 `++Polygon(Sort(list1, arg(list1)))++` 產生 _poly1 = 2.94_。
 
 ====

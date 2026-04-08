@@ -11,20 +11,20 @@ https://es.wikipedia.org/C%C3%A1lculo_simb%C3%B3lico[métodos simbólicos] para 
 verdadera o falsa en general. Este comando opera como el comando xref:/commands/Demuestra.adoc[Demuestra], pero también
 devuelve algunos detalles del resultado como una xref:/Listas.adoc[lista]:
 
-* Una lista vacía *\{}* si GeoGebra no puede determinar la respuesta.
-* Una lista con un elemento: *\{false}*, si la proposición no es verdadera en general.
-* Una lista con un elemento: *\{true}*, si la proposición es siempre verdadera.
+* Una lista vacía *{}* si GeoGebra no puede determinar la respuesta.
+* Una lista con un elemento: *{false}*, si la proposición no es verdadera en general.
+* Una lista con un elemento: *{true}*, si la proposición es siempre verdadera.
 * Una lista con más elementos, que contiene el valor booleano _true_ y otra lista que podría denominarse de _condiciones
-de no degeneramiento_, si la proposición es verdadera bajo ciertas condiciones, p. ej. \{true, \{_SonColineales(A,B,C),
+de no degeneramiento_, si la proposición es verdadera bajo ciertas condiciones, p. ej. {true, {_SonColineales(A,B,C),
 SonIguales(C,D)_}}. Esto significa que si ninguna de las condiciones es verdadera, entonces la proposición es verdadera.
-* Una lista *\{true,\{"..."}}* si la proposición es verdadera bajo ciertas condiciones, pero estas condiciones no pueden
+* Una lista *{true,{"..."}}* si la proposición es verdadera bajo ciertas condiciones, pero estas condiciones no pueden
 ser expresadas de forma comprensible para el usuario por alguna razón.
 
 [EXAMPLE]
 ====
 
 Sea _AB_ el segmento _a_, y se define `++l=Recta(A,B)++`. Sea _C_ un punto cualquiera en la recta _l_, además sea
-`++b=Segmento(B,C)++`, `++c=Segmento(A,C)++`. Entonces `++DemuestraDetalle(a==b+c)++` devuelve \{true,\{"a+b==c",
+`++b=Segmento(B,C)++`, `++c=Segmento(A,C)++`. Entonces `++DemuestraDetalle(a==b+c)++` devuelve {true,{"a+b==c",
 "b==a+c"}}: lo que significa que si ni stem:[a+b=c], ni stem:[b=a+c], entonces stem:[a=b+c].
 
 ====
@@ -33,7 +33,7 @@ Sea _AB_ el segmento _a_, y se define `++l=Recta(A,B)++`. Sea _C_ un punto cualq
 ====
 
 Sea _AB_ el segmento _a_, y se define `++C=PuntoMedio(A,B)++`, `++b=Mediatriz(A,B)++`, `++D=Interseca(a,b)++`. Entonces
-`++DemuestraDetalles(C==D)++` devuelve \{true,\{"SonIguales(A,B)"}}: esto significa que si los puntos _A_ y _B_ son
+`++DemuestraDetalles(C==D)++` devuelve {true,{"SonIguales(A,B)"}}: esto significa que si los puntos _A_ y _B_ son
 diferentes, entonces los puntos _C_ y _D_ coinciden.
 
 ====
@@ -42,7 +42,7 @@ diferentes, entonces los puntos _C_ y _D_ coinciden.
 ====
 
 Definamos el triángulo de vértices _A_, _B_ y _C_, y definamos `++D=PuntoMedio(B,C)++`, `++E=PuntoMedio(A,C)++`,
-`++p=Recta(A,B)++`, `++q=Recta(D,E)++`. En este caso `++ DemuestraDetalles(p∥q)++` devuelve \{true}, lo cual significa
+`++p=Recta(A,B)++`, `++q=Recta(D,E)++`. En este caso `++ DemuestraDetalles(p∥q)++` devuelve {true}, lo cual significa
 que si la cosntrucción puede ser realizada, entonces recta _DE_ es paralela al lado _AB_.
 
 ====

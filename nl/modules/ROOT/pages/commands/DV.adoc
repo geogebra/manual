@@ -41,7 +41,7 @@ behoren.
 ====
 
 DV( <y'>, <x'>, <Begin x>, <Begin y>, <Eind t>, <Stap> )::
-  Lost de DV stem:[\frac{dy}{dx}=\frac{f(x, y)}\{g(x, y)}] op, met een gegeven with given beginpunt, maximale waarde
+  Lost de DV stem:[\frac{dy}{dx}=\frac{f(x, y)}{g(x, y)}] op, met een gegeven with given beginpunt, maximale waarde
   van een interne parameter _t_ en stap voor _t_. Deeze versie van het commando kan werken wanneer de eerste versie niet
   werkt, bijvoorbeeld bij een oplossingsgrafiek met verticale punten.
 DV( <b(x)>, <c(x)>, <f(x)>, <Begin x>, <Begin y>, <Begin y'>, <Eind x>, <Stap> )::
@@ -57,7 +57,7 @@ DV( <b(x)>, <c(x)>, <f(x)>, <Begin x>, <Begin y>, <Begin y'>, <Eind x>, <Stap> )
 [EXAMPLE]
 ====
 
-`++DV(-x, y, x(A), y(A), 5, 0.1)++` lost stem:[\frac{dy}{dx}=- \frac{x}\{y} ] op met al beginpunt _A_.
+`++DV(-x, y, x(A), y(A), 5, 0.1)++` lost stem:[\frac{dy}{dx}=- \frac{x}{y} ] op met al beginpunt _A_.
 
 ====
 
@@ -118,8 +118,8 @@ DV( <Vergelijking>, <Afhankelijke variabele>, <Onafhankelijke variabele>, <Punt(
 [EXAMPLE]
 ====
 
-`++DV(y'' - 3y' + 2 = x, (2, 3), (1, 2))++` geeft stem:[ y = \frac{-9 x^2 e^3 + 30 x e^3 - 32 \{(e^3)}^2 + 138 e^3 + 32
-e^\{3 x} }\{54 e^3} ].
+`++DV(y'' - 3y' + 2 = x, (2, 3), (1, 2))++` geeft stem:[ y = \frac{-9 x^2 e^3 + 30 x e^3 - 32 {(e^3)}^2 + 138 e^3 + 32
+e^{3 x} }{54 e^3} ].
 
 ====
 

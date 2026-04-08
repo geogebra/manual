@@ -6,26 +6,26 @@ If you have any suggestions for improvements, feel free to open a pull request i
 
 The templates and layouts used by the documentation site are located in the [GeoGebra docs repository](https://github.com/geogebra/docs).
 
-| language              | ok  | missing | orphans | duplicates | partials |
-|-----------------------|-----|---------|---------|------------|----------|
-| босански (bs)          | 144     | 560     | 27      | 0       | 36      |
-| Česky (cs)             | 615     | 18      | 2       | 4       | 107     |
-| Deutsch (de)           | 687     | 53      | 45      | 2       | 0       |
-| English (en)           | 740     | 0       | 0       | 0       | 0       |
-| Español (es)           | 661     | 22      | 64      | 0       | 57      |
-| Français (fr)          | 740     | 0       | 13      | 0       | 0       |
-| Hrvatska (hr)          | 470     | 244     | 35      | 0       | 26      |
-| Magyar (hu)            | 661     | 67      | 23      | 2       | 12      |
-| Italiano (it)          | 739     | 1       | 14      | 0       | 0       |
-| 日本語 (ja)               | 737     | 1       | 12      | 2       | 2       |
-| Македонски јазик (mk)  | 274     | 393     | 19      | 0       | 73      |
-| Bokmål (nb)            | 529     | 188     | 39      | 0       | 23      |
-| Nederlands (nl)        | 719     | 21      | 0       | 2       | 0       |
-| Nynorsk (nn)           | 579     | 158     | 38      | 0       | 3       |
-| Język polski (pl)      | 730     | 10      | 1       | 0       | 0       |
-| Português (pt)         | 0       | 740     | 10      | 0       | 0       |
-| Русский язык (ru)      | 0       | 735     | 3       | 0       | 5       |
-| Slovenščina (sl)       | 3       | 727     | 4       | 0       | 10      |
-| Српски (sr)            | 4       | 736     | 5       | 0       | 0       |
-| Türkçe (tr)            | 145     | 314     | 194     | 2       | 281     |
-| 简体中文 (zh)              | 344     | 396     | 60      | 0       | 0       |
+| language              | ok  | missing | orphans | duplicates | partials | issues |
+|-----------------------|-----|---------|---------|------------|----------|--------|
+| босански (bs)          | 145     | 560     | 27      | 0       | 36      | 322     |
+| Česky (cs)             | 616     | 18      | 1       | 0       | 107     | 49      |
+| Deutsch (de)           | 691     | 50      | 6       | 0       | 0       | 1       |
+| English (en)           | 741     | 0       | 0       | 0       | 0       | 3       |
+| Español (es)           | 663     | 21      | 32      | 0       | 57      | 770     |
+| Français (fr)          | 741     | 0       | 15      | 0       | 0       | 4       |
+| Hrvatska (hr)          | 476     | 238     | 27      | 4       | 27      | 97      |
+| Magyar (hu)            | 663     | 66      | 22      | 2       | 12      | 28      |
+| Italiano (it)          | 741     | 0       | 14      | 0       | 0       | 31      |
+| 日本語 (ja)               | 738     | 1       | 12      | 2       | 2       | 12      |
+| Македонски јазик (mk)  | 279     | 389     | 15      | 0       | 73      | 307     |
+| Bokmål (nb)            | 531     | 187     | 36      | 0       | 23      | 56      |
+| Nederlands (nl)        | 721     | 20      | 0       | 2       | 0       | 533     |
+| Nynorsk (nn)           | 584     | 154     | 33      | 0       | 3       | 59      |
+| Język polski (pl)      | 741     | 0       | 1       | 0       | 0       | 129     |
+| Português (pt)         | 1       | 739     | 9       | 0       | 1       | 41      |
+| Русский язык (ru)      | 1       | 735     | 3       | 0       | 5       | 70      |
+| Slovenščina (sl)       | 4       | 726     | 3       | 0       | 11      | 55      |
+| Српски (sr)            | 5       | 736     | 5       | 0       | 0       | 81      |
+| Türkçe (tr)            | 180     | 274     | 119     | 68      | 287     | 252     |
+| 简体中文 (zh)              | 363     | 377     | 38      | 0       | 1       | 818     |
