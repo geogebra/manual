@@ -11,7 +11,7 @@ The templates and layouts used by the documentation site are located in the [Geo
 | босански (bs)          | 145     | 560     | 27      | 0       | 36      | 322     |
 | Česky (cs)             | 616     | 18      | 1       | 0       | 107     | 49      |
 | Deutsch (de)           | 691     | 50      | 6       | 0       | 0       | 1       |
-| English (en)           | 741     | 0       | 0       | 0       | 0       | 3       |
+| English (en)           | 741     | 0       | 0       | 0       | 0       | 2       |
 | Español (es)           | 663     | 21      | 32      | 0       | 57      | 770     |
 | Français (fr)          | 741     | 0       | 15      | 0       | 0       | 4       |
 | Hrvatska (hr)          | 476     | 238     | 27      | 4       | 27      | 97      |
