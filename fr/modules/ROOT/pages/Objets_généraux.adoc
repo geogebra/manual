@@ -10,53 +10,117 @@ En plus des xref:/Objets_géométriques.adoc[Objets géométriques] GeoGebra per
 * xref:/Listes.adoc[Listes]
 * xref:/Matrices.adoc[Matrices]
 * xref:/Textes.adoc[Textes]
+
+__________________________________________________________
+
+
+Les objets *textes* peuvent être créés en utilisant la commande xref:/commands/Texte.adoc[Texte] ou l'outil
+image:32px-Mode_text.svg.png[Mode text.svg,width=32,height=32] xref:/tools/Texte.adoc[Texte].
+
+Ou en tirant un objet de la fenêtre Algèbre dans la fenêtre Graphique.
+
+Ou encore en validant un texte _statique_ entre guillemets directement dans xref:/Saisie.adoc[Saisie].
+
+Un texte statique::
+  ne doit dépendre d’un quelconque objet mathématique et n’est en général pas affecté par des modifications de la
+  construction
+
+Un texte dynamique::
+  contient des valeurs d’objets qui vont être actualisées à la suite de toute modification de ces objets.
+
+Un texte mixte::
+  est un mélange de texte statique et de texte dynamique.
+
+Afin de créer un texte dynamique vous pouvez entrer la partie statique du texte au clavier (par ex., Point A =). Ensuite
+cliquez sur l’objet dont vous voulez l’affichage de la valeur dans le texte.
+
+
+====
+
+GeoGebra ajoute automatiquement la syntaxe ("Point A = " + A ) pour créer votre texte mixte : guillemets autour
+de la partie statique et un symbole « + » pour relier les différentes parties du texte.
+
+====
+
+[cols=",",options="header",]
+|===
+|Saisie |Description
+|Ceci est un texte statique |Texte statique.
+|A |Texte dynamique (si le point A existe).
+|"Point A = " + A |texte mixte en 2 parties utilisant la donnée du point A.
+|"a = " + a + "cm" |texte mixte en 3 parties utilisant la valeur du nombre (longueur du segment) a
+|===
+
+
+====
+
+Si un objet nommé xx existe déjà et que vous essayez de créer un texte statique utilisant ce nom d’objet, vous
+devez l’entrer entre guillemets ("xx"). Sinon, GeoGebra va créer automatiquement un texte dynamique vous donnant la
+valeur de l’objet xx à la place de son nom. Cependant, vous pouvez taper tout texte n’utilisant pas de nom d’objets
+existants sans guillemets.
+
+====
+
+
+====
+
+À l’intérieur d’un texte mixte, la partie statique doit être entre guillemets. Les différentes parties du texte
+(par ex., parties statique et dynamique) doivent être reliées par le symbole plus (+). Depuis la 4.0, le symbole (+)
+n'est plus obligatoire.
+
+====
+
+Les objets *textes* peuvent aussi utiliser xref:/LaTeX.adoc[LaTeX] pour l'écriture des formules scientifiques.
+
+__________________________________________________________
+
 * xref:/Images.adoc[Images]
 __________________________________________________________
-   GeoGebra vous permet d'intégrer, gérer, manipuler des *images* (formats acceptés : jpg, jpeg, png, gif, ou bmp ).
+GeoGebra vous permet d'intégrer, gérer, manipuler des *images* (formats acceptés : jpg, jpeg, png, gif, ou bmp ).
 
-   *>* en utilisant l'outil image:32px-Mode_image.svg.png[Mode image.svg,width=32,height=32] xref:/tools/Image.adoc[Image]
-   vous permet d'ajouter une image stockée sur votre ordinateur dans la vue Graphique.
+*>* en utilisant l'outil image:32px-Mode_image.svg.png[Mode image.svg,width=32,height=32] xref:/tools/Image.adoc[Image]
+vous permet d'ajouter une image stockée sur votre ordinateur dans la vue Graphique.
 
-   Dans ce mode, le raccourci clavier _Alt-clic_ permet de coller directement l’image contenue dans votre presse-papiers.
+Dans ce mode, le raccourci clavier _Alt-clic_ permet de coller directement l’image contenue dans votre presse-papiers.
 
-   *>* ou le sous-menu Éditer > Insérer Image depuis > Fichier ou > Presse-papiers, (voire même > Webcam pour l'application
+*>* ou le sous-menu Éditer > Insérer Image depuis > Fichier ou > Presse-papiers, (voire même > Webcam pour l'application
 Chrome)
 
-   *>* ou tout simplement par "Glisser-Déposer".
+*>* ou tout simplement par "Glisser-Déposer".
 
-   *>* Vous pouvez aussi intégrer les icônes des outils GeoGebra par la commande xref:/commands/IcôneOutil.adoc[IcôneOutil]
-   (pour les codes, voir par exemple xref:/NuméroOutils.adoc[ici])
+*>* Vous pouvez aussi intégrer les icônes des outils GeoGebra par la commande xref:/commands/IcôneOutil.adoc[IcôneOutil]
+(pour les codes, voir par exemple xref:/NuméroOutils.adoc[ici])
+
 
 ====
-
-   `++IcôneOutil[26]++` déposera l'image image:32px-Mode_image.svg.png[Mode image.svg,width=32,height=32] dans
+`++IcôneOutil[26]++` déposera l'image image:32px-Mode_image.svg.png[Mode image.svg,width=32,height=32] dans
 la vue Graphique.
-
 ====
 
-   La propriété xref:/Propriétés_d_un_objet.adoc[Style > Remplir] de certains objets (polygone, ellipse, lieu, bouton)
+
+La propriété xref:/Propriétés_d_un_objet.adoc[Style > Remplir] de certains objets (polygone, ellipse, lieu, bouton)
 permet de les remplir par une image
 
-   *>* proposée par GeoGebra pour un bouton à choisir dans 
+*>* proposée par GeoGebra pour un bouton à choisir dans 
 
-   image:ImgBoutons.png[ImgBoutons.png,width=152,height=260]
+image:ImgBoutons.png[ImgBoutons.png,width=152,height=260]
 
-   *>* stockée sur votre ordinateur.
+*>* stockée sur votre ordinateur.
 
-   Les xref:/Transformations.adoc[transformations] du plan agissent sur les images.
+Les xref:/Transformations.adoc[transformations] du plan agissent sur les images.
 
-   ainsi
-   `++Exécute[{"Reflect[image1, Corner[image1,1] ]","Reflect[image1, Line[Corner[image1,1],Corner[image1,2] ]]","Reflect[image1, Line[Corner[image1,1],Corner[image1,4] ]]"}]++`
-   vous crée un bloc de 4 images, votre 'image1' et ses transformées par symétrie pour son coin inférieur gauche, pour son
-   côté inférieur et pour son côté gauche. image:4x26.PNG[4x26.PNG,width=253,height=86]
+ainsi
+`++Exécute[{"Reflect[image1, Corner[image1,1] ]","Reflect[image1, Line[Corner[image1,1],Corner[image1,2] ]]","Reflect[image1, Line[Corner[image1,1],Corner[image1,4] ]]"}]++`
+vous crée un bloc de 4 images, votre 'image1' et ses transformées par symétrie pour son coin inférieur gauche, pour son
+côté inférieur et pour son côté gauche. image:4x26.PNG[4x26.PNG,width=253,height=86]
 
-   En retour, le menu xref:/Exporter_Graphique.adoc[Exporter], vous permet de créer une image de votre construction :
+En retour, le menu xref:/Exporter_Graphique.adoc[Exporter], vous permet de créer une image de votre construction :
 
-   * Graphique en tant qu'image (png, eps) ... au format png, EPS, PDF, SVG, EMF ;
-   * Graphique en GIF animé ... (Lorsque la construction dynamique dépend d'un curseur.) ;
-   * Graphique vers Presse-papiers ;
-   * Graphique vers PSTricks ... ;
-   * Graphique vers PGF/TikZ ... ;
-   * Graphique vers Asymptote ...
+* Graphique en tant qu'image (png, eps) ... au format png, EPS, PDF, SVG, EMF ;
+* Graphique en GIF animé ... (Lorsque la construction dynamique dépend d'un curseur.) ;
+* Graphique vers Presse-papiers ;
+* Graphique vers PSTricks ... ;
+* Graphique vers PGF/TikZ ... ;
+* Graphique vers Asymptote ...
 
 __________________________________________________________
