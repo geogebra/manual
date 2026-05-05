@@ -90,7 +90,34 @@ x) |Fct Gamma incomplète régularisée P(a,x) = γ(a, x) / Γ(a) |gammaRegulari
 
 |xref:/Fonction_PartieImaginaire.adoc[Partie imaginaire] |Im( ) |image:Im.PNG[Im.PNG,width=152,height=68]
 
-|xref:/Fonction_PartieFractionnaire.adoc[Partie fractionnaire] |PartieFractionnaire(x)
+|xref:/Fonction_PartieFractionnaire.adoc[Partie fractionnaire]
+
+PartieFractionnaire( <Expression> )::
+  Retourne _ce qu'il y a derrière la virgule, affecté du signe_.
+
+*Pour des expressions positives* :
+
+`++PartieFractionnaire(6/5)++` retourne
+
+* stem:[\frac{1}{5}] dans Calcul formel ;
+* *0.2* dans Algèbre.
+
+`++PartieFractionnaire(1/5+3/2+2)++` retourne
+
+* stem:[\frac{7}{10}] dans Calcul formel ;
+* *0.7* dans Algèbre.
+
+*Pour des expressions négatives* :
+
+`++PartieFractionnaire(-6/5)++` retourne
+
+* stem:[-\frac{1}{5}] dans Calcul formel ;
+* *-0.2* dans Algèbre.
+
+à ne pas confondre avec notre fonction *mantisse m(x) = x - E(x)*
+
+qui retournerait *0.8* car -0.2 = -1 + 0.8.
+|PartieFractionnaire(x)
 |image:PartieFractionnaire.png[PartieFractionnaire.png,width=147,height=64]
 
 |xref:/Fonction_NRacine.adoc[Racine n ^ème^]
