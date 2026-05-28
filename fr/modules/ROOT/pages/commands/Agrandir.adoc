@@ -5,11 +5,10 @@ ifdef::env-github[:imagesdir: /fr/modules/ROOT/assets/images]
 xref:commands/Commandes_Scripts.adoc[ Commandes Scripts]
 
 Agrandir( )::
-  Restaure xref:/Graphique.adoc[Graphique] à la position initiale par défaut.
+  Restaure image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Graphique.adoc[Graphique] à la position initiale par défaut.
 
-Agrandir( <Facteur> )::
-  Agrandit le xref:/Graphique.adoc[Graphique] avec le facteur donné, le centre de l'écran étant utilisé comme centre
-  d'agrandissement.
+Agrandir( <Facteur> ):: 
+  Agrandit image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Graphique.adoc[Graphique] avec le facteur donné, le centre de l'écran étant utilisé comme centre d'agrandissement.
 
 [EXAMPLE]
 ====
@@ -23,9 +22,13 @@ Agrandir( <Facteur> )::
 ====
 
 Agrandir( <Facteur>, <Centre> )::
-  Agrandit le xref:/Graphique.adoc[Graphique] avec le facteur donné, le second paramètre précisant le centre
-  d'agrandissement.
+  Agrandit image:16px-Menu_view_graphics.svg.png[Menu view graphics.svg,width=16,height=16] xref:/Graphique.adoc[Graphique] avec le facteur donné, le second paramètre précisant le centre d'agrandissement.
+[EXAMPLE]
+====
 
+`++Agrandir(2, (0, 0))++`
+
+====
 Agrandir( <Min x>, <Min y>, <Max x>, <Max y> )::
   Agrandit le graphique au rectangle construit sur les sommets (Min x, Min y), (Max x,Max y).
   Validez `++ Agrandir(0,0,0,0)++` pour revenir à la normale.
@@ -34,7 +37,17 @@ Agrandir( <Min x>, <Min y>, <Max x>, <Max y> )::
 ====
 
 `++Agrandir(0, 1, 5, 6)++` 
+====
 
+[NOTE]
+====
+Si l'un de ces paramètres est dépendant ou possède une étiquette, les limites de la vue deviennent dynamiques.
+Pour éviter ce comportement, utiliser la commande xref:/commands/CopierObjetLibre.adoc[CopierObjetLibre].
+
+====
+
+[EXAMPLE]
+====
 Si _a_ est un curseur, `++Agrandir(-a, -a, a, a)++` rend l'agrandissement de la vue dépendant du curseur _a_.
 ====
 
@@ -70,6 +83,14 @@ ________________________________________________
 
 Agrandir( <Min x>, <Min y>, <Min z>, <Max y>, <Max x>, <Max z> )::
   Agrandit le graphique 3D au cube construit sur les sommets (Min x, Min y, Min z), (Max x,Max y, Max z).
+
+
+[NOTE]
+====
+
+Le dynamisme possible en version 2D ne l'est pas en 3D.
+
+====
 ________________________________________________
 
 
