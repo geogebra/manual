@@ -63,8 +63,10 @@ Max( <Fonction>, <x min>, <x max> )::
 [NOTE]
 ====
 
-La fonction doit être continue sur l'intervalle et n'y avoir qu'un seul maximum local.Pour les fonctions
-polynomiales, il est conseillé d'utiliser la commande xref:/commands/Extremum.adoc[Extremum]
+La fonction doit être continue et définie sur son ensemble de définition classique, (des restrictions ne doivent pas lui être appliquées) et n'avoir, sur l'intervalle, qu'un seul _maximum local_  et pas de minimum local.
+
+
+Pour les fonctions polynomiales, il est conseillé d'utiliser la commande xref:/commands/Extremum.adoc[Extremum]
 ====
 
 Max( <Liste données>, <Liste effectifs> )::
@@ -99,4 +101,18 @@ Seules les deux premières syntaxes sont acceptées :
 Max( <Nombre a>, <Nombre b> )
 
 Max( <Liste> )
+
+Max( <Fonction>, <x min>, <x max> )::
+ À la différence de ci-dessus , cette syntaxe retourne le maximum sur l'intervalle, incluant les points d'extémités. 
+
+La fonction doit être continue et définie sur son ensemble de définition classique, (des restrictions ne doivent pas lui être appliquées) et n'avoir, sur l'intervalle, qu'un seul _maximum local_  et pas de minimum local.
+
+[EXAMPLE]
+====
+
+* `++Max(x^2,-1,2)++` retourne le point _(2,4)_
+* `++Max(-x^2,-1,2)++` retourne le point _(0,0)_
+
+====
+
 ____________________________________________________________
