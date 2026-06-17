@@ -1,0 +1,42 @@
+= ErweiterterGGT (Befehl)
+:page-en: commands/ExtendedGCD
+ifdef::env-github[:imagesdir: /de/modules/ROOT/assets/images]
+
+== CAS-Ansicht
+
+ErweiterterGGT( <ganze Zahl>, <ganze Zahl> )::
+  Liefert eine Liste mit den ganzzahligen Koeffizienten stem:[s, t] der Bézout-Identität stem:[as+bt= GGT(a,b)] und dem
+  größten gemeinsamen Teiler der gegebenen ganzen Zahlen stem:[a] und stem:[b].
+  Die Ergebnisse werden durch Anwendung des https://de.wikipedia.org/wiki/Erweiterter_euklidischer_Algorithmus[Erweiterten
+  euklidischen Algorithmus] berechnet.
+
+[EXAMPLE]
+====
+
+`++ErweiterterGGT(240,46)++` liefert {stem:[-9,47,2]}. (Eingesetzt in die Bézout-Identität ergibt sich: stem:[-9
+\cdot 240+47 \cdot 46=2]).
+
+====
+
+ErweiterterGGT( <Polynom>, <Polynom> )::
+  Liefert eine Liste mit den Polynomkoeffizienten stem:[S(x), T(x)] der Bézout-Identität für Polynome
+  stem:[A(x)S(x) + B(x)T(x) = GGT(A(x), B(x))] und dem größten gemeinsamen Teiler der gegebenen Polynome stem:[A(x)] und
+  stem:[B(x)].
+  Die Ergebnisse werden durch Anwendung des https://de.wikipedia.org/wiki/Erweiterter_euklidischer_Algorithmus[Erweiterten
+  euklidischen Algorithmus] berechnet.
+
+[EXAMPLE]
+====
+
+`++ErweiterterGGT(x^2-1,x+4)++` liefert {stem:[1,-x+4,15]}. (Eingesetzt in die Bézout-Identität für Polynome ergibt
+sich: stem:[1 \cdot (x^2-1) + (-x+4) \cdot (x+4) = 15]).
+
+====
+
+[NOTE]
+====
+
+* Der GGT zweier Polynome ist nicht eindeutig (er ist eindeutig bis auf ein skalares Vielfaches).
+* Siehe auch den Befehl xref:/commands/GGT.adoc[GGT].
+
+====
