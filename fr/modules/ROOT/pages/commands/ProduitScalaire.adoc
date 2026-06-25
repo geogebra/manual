@@ -27,11 +27,23 @@ ProduitScalaire( <Vecteur> ou  liste, <Vecteur> ou liste )::
 `++ProduitScalaire((2, 2), (-3, 1))++` retourne _-4_  ; 
 ou après saisie de `++u=(2, 2)++` et de `++v=(-3, 1)++` `++ProduitScalaire(u, v)++` retourne _-4_ .
 
+mais aussi :
+`++ProduitScalaire({2, 2}, {-3, 1})++` retourne _-4_
+
+Il s'agit de la somme des produits terme à terme, les 2 listes *doivent avoir la même longueur* sinon le résultat est "non défini" :  _?_ .
+
+`++ProduitScalaire({1, 2, 3, 4, 5}, {1, 2, 3, 4, 5})++` retourne _55_
+
+comme le ferait `++Somme({1, 2, 3, 4, 5}²)++`
+
+`++ProduitScalaire({1, 2, 4, -6}, {2, 1, 0.5, 1})++` retourne _0_
+
+comme le ferait `++Somme({1, 2, 4, -6} {2, 1, 0.5, 1})++`
 ====
 _______________________________________________
 image:32px-Menu_view_cas.svg.png[Menu view cas.svg,width=32,height=32] *Calcul formel* :
 
-La création préalable des vecteurs n'est pas nécessaire, on peut utiliser des *listes* de coordonnées
+
 
 [EXAMPLE]
 ====
