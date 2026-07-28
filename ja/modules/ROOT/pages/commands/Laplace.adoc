@@ -2,30 +2,45 @@
 :page-en: commands/Laplace
 ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
-このコマンドは xref:/CASビュー.adoc[CAS View] でのみ利用できます。.
+このコマンドは xref:/CASビュー.adoc[CAS View] でのみ利用できます.
 
-Laplace[ <関数> ]::
-  Laplace[ <関数>, <変数> ];;
-    Laplace[ <関数>, <変数>, <変数> ]::
-      [width="100%",cols="50%,50%",]
-    |===
-    a|
-    image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+Laplace( <関数> )::
 
-    |Some content was not yet translated.
-    |===
-  [width="100%",cols="50%,50%",]
-  |===
-  a|
-  image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+与えられた関数の https://ja.wikipedia.org/wiki/%E3%83%A9%E3%83%97%E3%83%A9%E3%82%B9%E5%A4%89%E6%8F%9B[ラプラス変換] を返します．
 
-  |Some content was not yet translated.
-  |===
+[EXAMPLE]
+====
 
-[width="100%",cols="50%,50%",]
-|===
-a|
-image:48px-UnderConstruction.png[UnderConstruction.png,width=48,height=48]
+`++ Laplace(sin(t))++` 出力： stem:[\mathbf{\frac{1}{s^{2} + 1}} ]
 
-|Some content was not yet translated.
-|===
+====
+Laplace( <関数>, <変数> );;
+与えられた関数を，指定した変数についてラプラス変換した結果を返します．
+
+[EXAMPLE]
+====
+
+`++Laplace(sin(a*t),t)++` 出力： stem:[\mathbf{\frac{a}{a^{2} + t^{2}}}]
+
+`++Laplace(sin(a*t),a)++` 出力： stem:[\mathbf{\frac{t}{a^{2} + t^{2}}}]
+
+====
+
+Laplace( <関数>, <変数1>, <変数2> )::
+与えられた関数を，指定した変数1についてラプラス変換し，その結果を変数2で表したものを返します．
+
+[EXAMPLE]
+====
+
+`++Laplace(sin(a*t),t,s)++` 出力： stem:[\mathbf{\frac{a}{a^{2} + s^{2}}}]
+
+`++Laplace(sin(a*t),a,b)++` 出力： stem:[\mathbf{\frac{t}{b^{2} + t^{2}}}]
+
+====
+
+[NOTE]
+====
+
+こちらも参照 xref:/commands/InverseLaplace.adoc[InverseLaplace] コマンド.
+
+====
