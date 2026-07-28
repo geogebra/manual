@@ -2,5 +2,12 @@
 :page-en: commands/Difference
 ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
-Difference( <多角形>, <多角形> )::
-  2つの多角形の差を見つける．この機能は多角形が自己交差していない場合にのみ適用される．
+Difference( <多角形A>, <多角形B> )::
+  角形Aから多角形Bを取り除いた部分（A − B）を返す．
+
+[NOTE]
+====
+
+この機能は，多角形が自己交差しておらず，かつ A − B の結果が「穴のない単純な多角形」になる場合にのみ適用できる．
+
+====
