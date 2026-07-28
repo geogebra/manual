@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import MathJax from "mathjax";
-import AsciiDoctor from '@asciidoctor/core'
+import { convert, LoggerManager, MemoryLogger } from "@asciidoctor/core";
 const active = fs.readdirSync(".").filter((f) => fs.existsSync(`${f}/modules`));
 
 async function listFilesSync(directory, callback) {
@@ -25,7 +25,6 @@ async function listFilesSync(directory, callback) {
   }
 }
 
-const asciidoctor = AsciiDoctor();
 const simplePath = (p) =>
   p ? p.split(/pages./)[1].replace("\\", "/") : "missing.adoc";
 const allEn = [];
@@ -61,10 +60,10 @@ for (const lang of active) {
       const pageEn = content.match(/:page-en:(.*)/);
       const currentPath = simplePath(filePath);
       allPages.push(currentPath);
-      const loggerManager = asciidoctor.LoggerManager
-      const memoryLogger = asciidoctor.MemoryLogger.create()
-      loggerManager.setLogger(memoryLogger)
-      asciidoctor.convert(content);
+      const loggerManager = LoggerManager;
+      const memoryLogger = MemoryLogger.create();
+      loggerManager.setLogger(memoryLogger);
+      convert(content);
       const messages = memoryLogger.getMessages();
       for (const msg of messages) {
         const msgText = msg.getText();
@@ -172,14 +171,32 @@ for (const lang of active) {
     if (!translations[enPage] && enPage != "missing" && enPage != "broken") {
       missing.push(enPage);
     }
-    if (!translations[enPage] && enPage == "commands/All_Commands" && fs.existsSync('../geogebra/source/shared/common-jre/')) {
-      const translations = fs.readFileSync(`../geogebra/source/shared/common-jre/src/main/resources/org/geogebra/common/jre/properties/menu_${lang}.properties`, 'utf8');
-      const map = Object.fromEntries(translations.split("\n").map(l => l.trim()).filter(l => l && !l.startsWith("#")).map(l => l.split("=").map(p => p.trim())));
-      const heading = map['AllCommands']
+    if (
+      !translations[enPage] &&
+      enPage == "commands/All_Commands" &&
+      fs.existsSync("../geogebra/source/shared/common-jre/")
+    ) {
+      const translations = fs.readFileSync(
+        `../geogebra/source/shared/common-jre/src/main/resources/org/geogebra/common/jre/properties/menu_${lang}.properties`,
+        "utf8",
+      );
+      const map = Object.fromEntries(
+        translations
+          .split("\n")
+          .map((l) => l.trim())
+          .filter((l) => l && !l.startsWith("#"))
+          .map((l) => l.split("=").map((p) => p.trim())),
+      );
+      const heading = map["AllCommands"];
       if (heading) {
         const content = `=${heading}\n:page-en: commands/All_Commands\n`;
-        console.log(`${lang}/modules/ROOT/pages/commands/${heading.replaceAll(' ','_')}.adoc`);
-        fs.writeFileSync(`${lang}/modules/ROOT/pages/commands/${heading.replaceAll(' ','_')}.adoc`, content);
+        console.log(
+          `${lang}/modules/ROOT/pages/commands/${heading.replaceAll(" ", "_")}.adoc`,
+        );
+        fs.writeFileSync(
+          `${lang}/modules/ROOT/pages/commands/${heading.replaceAll(" ", "_")}.adoc`,
+          content,
+        );
       }
     }
   }
@@ -246,8 +263,14 @@ for (const lang of active) {
     orphans.length,
     duplicates.length,
     partials.length,
-    [].concat(Object.values(links), Object.values(images), Object.values(unparsedFormulas), Object.values(asciiDocIssues))
-      .reduce((x,y)=>y.length+x, 0),
+    []
+      .concat(
+        Object.values(links),
+        Object.values(images),
+        Object.values(unparsedFormulas),
+        Object.values(asciiDocIssues),
+      )
+      .reduce((x, y) => y.length + x, 0),
   ]) {
     status += `| ${stat}`.padEnd(10, " ");
   }
