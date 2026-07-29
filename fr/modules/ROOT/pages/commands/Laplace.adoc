@@ -31,6 +31,18 @@ Retourne la transformée de Laplace de la fonction donnée de la variable indiqu
 `++Laplace(sin(a*t),a)++` retourne stem:[\mathbf{\frac{t}{a^{2} + t^{2}}}] .
 
 ====
+Laplace( <Fonction>, <Variable>, <Variable> )::
+
+Rentourne la transformée de Laplace de la fonction donnée par rapport à la variable d'origine, exprimée en fonction de la variable transformée.
+
+[EXAMPLE]
+====
+
+`++Laplace(sin(a*t),t, s)++` retourne stem:[\mathbf{\frac{a}{a^{2} + s^{2}}}] ;
+
+`++Laplace(sin(a*t),a, b)++` retourne stem:[\mathbf{\frac{t}{b^{2} + t^{2}}}] .
+
+====
 
 Voir aussi la commande xref:/commands/InverseLaplace.adoc[InverseLaplace] .
 
