@@ -3,7 +3,7 @@
 ifdef::env-github[:imagesdir: /ja/modules/ROOT/assets/images]
 
 Polynomial( <関数> )::
-  展開した多項式関数を返す．
+  多項式関数の式を展開し，その結果を簡略化する．
 
 [EXAMPLE]
 ====
@@ -15,7 +15,14 @@ Polynomial( <関数> )::
 [EXAMPLE]
 ====
 
-`++Polynomial(y^2+(x+y)^2)++` 出力： _x^2^+2xy+2x^2^_.
+`++Polynomial(y^2+(x+y)^2)++` 出力： _x^2^ + 2xy + 2y^2^_.
+
+====
+
+[EXAMPLE]
+====
+
+`++Polynomial(2x³ - 1 x² + 0x + 4)++` 出力： _2x³ - x² + 4_.
 
 ====
 
