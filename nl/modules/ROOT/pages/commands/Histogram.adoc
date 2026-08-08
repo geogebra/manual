@@ -51,7 +51,7 @@ De klassen zijn van het type [a, b [ behalve de laatste klasse. Die is van het t
 `++Histogram({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true)++` creëert een histogram met 3 staven, met als
 hoogtes 0.5 (eerste staaf met f1=5 gedeeld door klassenbreedte 10), 0.2 (tweede staaf), en 0.1 (derde staaf).
 
-Dit histogram heeft als totale oppervlakte = 0.5*10 + 0.2*10 + 0.1*10 = 8.
+Dit histogram heeft als totale oppervlakte = 0.5*10 + 0.2*10 + 0.1*10 = 8. Deze waarde lees je af in het algebravenster. 
 
 ====
 
@@ -62,7 +62,7 @@ Dit histogram heeft als totale oppervlakte = 0.5*10 + 0.2*10 + 0.1*10 = 8.
 
 `++Histogram({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, false)++` creëert een histogram met 3 staven, met als
 hoogtes 5 (eerste staaf), 2 (tweede staaf), en 1 (derde staaf). Dit histogram past geen herschaling toe en de hoogte van
-de staven is gelijk aan de frequenties van de waarden in elke klasse.
+de staven is gelijk aan de frequenties van de waarden in elke klasse. In het algebravenster lees je het totaal aantal waarden af.
 
 ====
 
@@ -73,7 +73,7 @@ de staven is gelijk aan de frequenties van de waarden in elke klasse.
 
 `++Histogram({10, 20, 30, 40}, {10, 11, 11, 12, 18, 20, 25, 40}, true, 10/ 8)++` creëert een histogram met 3 staven, met
 als hoogtes 0.625 (eerste staaf), 0.25 (tweede staaf), en 0.125 (derde staaf). Dit histogram past een dichtheidsschaling
-toe om de staafhoogtes te laten overeenstemmen met de relatieve frequentie van elke klasse.
+toe om de staafhoogtes te laten overeenstemmen met de relatieve frequentie van elke klasse. Je leest 1 af als waarde van het histogram.
 
 Als n = het aantal waarnemingsgetallen en de klassen hebben een constante breedte w, dan creëert *dichtheidsschaalfactor
 = w/n een relatief histogram* .
@@ -99,7 +99,7 @@ Histogram( <Logisch Cumulatief>, <Lijst met klassengrenzen>, <Lijst met waarnemi
 Gebruiksdichtheid>, <Dichtheidsschaalfactor (optioneel)> )
 
 Als Cumulatief = true creëert het een histogram waarvan de hoogte van elke staaf gelijk is aan de cumulatieve frequentie
-van de klasse.
+van de klasse. In dit geval heeft het bijhorende getal in het algebravenster geen statistische betekenis.
 
 [EXAMPLE]
 ====
