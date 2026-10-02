@@ -61,6 +61,12 @@ vous qui avez fixé les bornes), et comme _t_ peut prendre des valeurs négative
 la spirale et sa symétrique par rapport à l'axe des ordonnées, préférez la syntaxe par exemple :
 `++Courbe((t;t), t, 0, 6  π ) ++` ;
 
+Remarque : `++(t;t)++` ne crée pas la courbe polaire d'équation r(t)=t mais t=r(t).
+
+Si on écrit `++(t;t/2)++`, cela donne r(t/2)=t au lieu de r(t)=t/2 comme attendu, et la courbe en genre de limaçon obtenue n'est pas la même. De plus cette manière d'écrire en polaire n'est pas habituelle.
+
+On doit alors écrire `++(t/2;t)++` pour obtenir r(t)=t/2 .
+
 `++(t^2,t^3)++` crée la courbe paramétrée dont la définition est stem:[{\begin{array}{c}\left. \begin{array}{c}{x=t^2\\y=t^3}\end{array} \right\}  \end{array}}−10≤t≤10] mais la commande associée est générée en *Courbe(t², t³, t, -10, 10)* (et ce n'est pas vous qui avez fixé les bornes).
 
 il en est de même si vous reprenez l'exemple de la spirale `++(cos(t), sin(t), t)++` elle correspondra alors à
