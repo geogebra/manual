@@ -14,6 +14,17 @@ Percentile( <List of Numbers>, <Percent> )::
 
 ====
 
+Percentile( <List of Numbers>, <List of Frequencies>, <Percent> )::
+  Same as above, but each number in the _list of numbers_ is counted as many times as given by the corresponding
+  element of the _list of frequencies_.
+
+[EXAMPLE]
+====
+
+`++Percentile({1, 2, 3}, {1, 2, 3}, 0.5)++` yields _2.5_, the same as `++Percentile({1, 2, 2, 3, 3, 3}, 0.5)++`.
+
+====
+
 [NOTE]
 ====
 
