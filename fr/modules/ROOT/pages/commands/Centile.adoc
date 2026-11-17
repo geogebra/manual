@@ -16,6 +16,16 @@ _Pourcentage_ doit vérifier: 0 < P ≤ 1.
 
 ====
 
+Centile( <Liste Nombres>, <Liste Effectifs>, <Pourcentage P> )::
+  Comme ci-dessus, mais chaque nombre de _liste nombres_ est compté autant de fois que l'élément correspondant de _liste effectifs_.
+
+[EXAMPLE]
+====
+
+`++Centile({1, 2, 3}, {1, 2, 3}, 0.5)++` retourne _2.5_, comme le fait `++Centile({1, 2, 2, 3, 3, 3}, 0.5)++`.
+
+====
+
 [NOTE]
 ====
 
