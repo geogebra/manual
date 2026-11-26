@@ -28,9 +28,13 @@ image:18px-Attention.png[Attention,title="Attention",width=18,height=18] *Attent
 
 
 === en coordonnées polaires :
-C'est un cas particulier des courbes paramétrées par un angle θ, courbe r(θ)=f(θ) ou  Courbe(f(t);t),t,0,2pi)".
+C'est un cas particulier des courbes paramétrées par un angle θ, courbe r(θ)=f(θ) ou  Courbe(f(t);t),t,0,2pi). 
 
 où chaque point est repéré par sa distance r(θ) à l'origine et son angle polaire θ. 
+
+Par ex. pour créer la courbe r(t) = t/2 on pourra saisir `++Courbe((t/2;t),t,0,2π)++`
+
+
 
 (Raccourci clavier pour θ [.kcode]#alt# [.kcode]#t#, ou utiliser la table des symboles à droite de [.kcode]#Saisie#.)
 
@@ -57,15 +61,15 @@ Pour représenter une telle courbe, il est possible d'utiliser les différentes 
 
 Dans Algèbre stem:[(t^2;t^3) (0 \leq t \leq 2π)].
 
-Vous tracera la spirale de définition `++Courbe(t²; t³), t, 0, 2π)++`.  un copie par [.kcode]#f_4#  dans [.kcode]#Saisie# retournera `++((cos(t³) t², sin(t³) t²))++` .
+Vous tracera la spirale de définition `++Courbe(t²; t³), t, 0, 2π)++`.  un copie par [.kcode]#f4#  dans [.kcode]#Saisie# retournera `++((cos(t³) t², sin(t³) t²))++` .
 
 image:18px-Attention.png[Attention,title="Attention",width=18,height=18] *Attention*:  il s'agit bien d'un point-virgule [.kcode]#;#  et non pas d'une virgule [.kcode]#,#  ! Voir ci-dessus les cartésiennes.
 
 *image:18px-Bulbgraph.png[Note,title="Note",width=18,height=22] Idée :* Pour revenir à "une écriture habituelle" d'une fonction polaire :
 
-On a 0 = t³ soit t = stem:[0^{1/3}] et donc r(0) = stem:[0^{2/3}], 
+On a θ = t³ soit t = stem:[θ^{1/3}] et donc r(θ) = stem:[θ^{2/3}], 
 
-Mais attention la saisie brutale de (0^{2/3};0) ne vous donnera qu'une partie de la spirale car par défaut 0 sera limité à 2π,
+Mais attention la saisie brutale de (θ^{2/3};θ) ne vous donnera qu'une partie de la spirale car par défaut θ sera limité à 2π,
 
 vous ne pouvez éviter la commande Courbe [.kcode]#Saisie# `++Courbe((θ^(2 / 3); θ), θ, 0, (2π)³)++`
 ====
@@ -85,7 +89,7 @@ Il n'est pas possible de créer une courbe paramétrée passant par des points d
 ex. la commande xref:/commands/AjustPoly.adoc[AjustPoly] pour obtenir une fonction dont la courbe représentative passe
 par ces points.
 ====
-====
+
 
 == Courbes implicites
 
