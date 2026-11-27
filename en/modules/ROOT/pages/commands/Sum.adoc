@@ -44,11 +44,6 @@ Sum( <List>, <List of Frequencies> )::
 
 ====
 
-== CAS Syntax
-
-The following command works only in the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
-xref:/CAS_View.adoc[CAS View].
-
 Sum( <Expression>, <Variable>, <Start Value>, <End Value> )::
   Calculates the sum of the expressions that are obtained by replacing the given variable with every integer from the given start to the given end values.
 
@@ -57,5 +52,22 @@ Sum( <Expression>, <Variable>, <Start Value>, <End Value> )::
 
 * `++Sum(n^2, n, 1, 3)++` yields _14_.
 * `++Sum(x + k, k, 1, 3)++` yields the function _f(x) = 3x + 6_.
+
+====
+
+== CAS Syntax
+
+The following command works only in the image:16px-Menu_view_cas.svg.png[Menu view cas.svg,width=16,height=16]
+xref:/CAS_View.adoc[CAS View].
+
+Sum( <Expression>, <Variable>, <Start Value>, <End Value> )::
+  Computes the sum stem:[\sum_{t=Start Value}^{End Value}f(t)]. End value can also be infinity.
+
+[EXAMPLE]
+====
+
+* `++Sum(n^2, n, 1, 3)++` yields _14_.
+* `++Sum(r^k, k, 0, n)++` yields _stem:[\frac{r^{n+1} }{r - 1} - \frac{1}{r - 1}]_.
+* `++Sum((1/3)^n, n, 0, Infinity)++` yields _stem:[\frac{3}{2}]_.
 
 ====
